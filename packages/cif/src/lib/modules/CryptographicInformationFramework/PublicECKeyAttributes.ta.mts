@@ -38,33 +38,41 @@ import { PublicKeyOperations, _decode_PublicKeyOperations, _encode_PublicKeyOper
  */
 export
 class PublicECKeyAttributes {
+    /**
+     * @summary `value`.
+     * @description
+     * `ObjectValue` of `ECPublicKeyChoice` or a card-specific EC public
+     * key. ISO/IEC 7816-15:2016 §8.5.3.
+     * @public
+     * @readonly
+     */
+    public readonly value: ObjectValue<ECPublicKeyChoice>;
+    /**
+     * @summary `keyInfo`.
+     * @description
+     * If present, overrides `CIAInfo.supportedAlgorithms` referenced by
+     * `CommonKeyAttributes.algReference`. Omit when available by other
+     * means. ISO/IEC 7816-15:2016 §8.4.2.
+     * @public
+     * @readonly
+     */
+    public readonly keyInfo?: OPTIONAL<KeyInfo<Parameters, PublicKeyOperations>>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `value`.
-         * @description
-         * `ObjectValue` of `ECPublicKeyChoice` or a card-specific EC public
-         * key. ISO/IEC 7816-15:2016 §8.5.3.
-         * @public
-         * @readonly
-         */
-        readonly value: ObjectValue<ECPublicKeyChoice>,
-        /**
-         * @summary `keyInfo`.
-         * @description
-         * If present, overrides `CIAInfo.supportedAlgorithms` referenced by
-         * `CommonKeyAttributes.algReference`. Omit when available by other
-         * means. ISO/IEC 7816-15:2016 §8.4.2.
-         * @public
-         * @readonly
-         */
-        readonly keyInfo?: OPTIONAL<KeyInfo<Parameters, PublicKeyOperations>>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        value: ObjectValue<ECPublicKeyChoice>,
+        keyInfo?: OPTIONAL<KeyInfo<Parameters, PublicKeyOperations>>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.value = value;
+        this.keyInfo = keyInfo;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a PublicECKeyAttributes

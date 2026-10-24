@@ -52,43 +52,51 @@ import {
  *
  */
 export class UnitEventNotificationDisabler {
+  /**
+   * @summary `referrerEndpointIRI`.
+   * @description
+   *
+   * Local endpoint IRI (disable callbacks to the local
+   * application) or a master's IRI (disable `unitEvent`
+   * notifications to that master). X.1083 §18.7.2.1.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly referrerEndpointIRI: EndpointIRI;
+  /**
+   * @summary `bspProductUuid`.
+   * @description
+   *
+   * Product UUID of the BSP whose unit events are disabled.
+   * X.1083 §18.7.2.2.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly bspProductUuid: BioAPI_UUID;
+  /**
+   * @summary `unitEventTypes`.
+   * @description
+   *
+   * Event types that are disabled. Shall never indicate that
+   * all unit-event notifications are enabled. X.1083
+   * §18.7.2.3.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly unitEventTypes: BioAPI_UNIT_EVENT_TYPE_MASK;
+
   constructor(
-    /**
-     * @summary `referrerEndpointIRI`.
-     * @description
-     *
-     * Local endpoint IRI (disable callbacks to the local
-     * application) or a master's IRI (disable `unitEvent`
-     * notifications to that master). X.1083 §18.7.2.1.
-     *
-     * @public
-     * @readonly
-     */
-    readonly referrerEndpointIRI: EndpointIRI,
-    /**
-     * @summary `bspProductUuid`.
-     * @description
-     *
-     * Product UUID of the BSP whose unit events are disabled.
-     * X.1083 §18.7.2.2.
-     *
-     * @public
-     * @readonly
-     */
-    readonly bspProductUuid: BioAPI_UUID,
-    /**
-     * @summary `unitEventTypes`.
-     * @description
-     *
-     * Event types that are disabled. Shall never indicate that
-     * all unit-event notifications are enabled. X.1083
-     * §18.7.2.3.
-     *
-     * @public
-     * @readonly
-     */
-    readonly unitEventTypes: BioAPI_UNIT_EVENT_TYPE_MASK
-  ) {}
+    referrerEndpointIRI: EndpointIRI,
+    bspProductUuid: BioAPI_UUID,
+    unitEventTypes: BioAPI_UNIT_EVENT_TYPE_MASK
+  ) {
+    this.referrerEndpointIRI = referrerEndpointIRI;
+    this.bspProductUuid = bspProductUuid;
+    this.unitEventTypes = unitEventTypes;
+  }
 
   /**
    * @summary Restructures an object into a UnitEventNotificationDisabler

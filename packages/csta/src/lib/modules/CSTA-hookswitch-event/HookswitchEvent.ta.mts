@@ -43,45 +43,55 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class HookswitchEvent {
+    /**
+     * @summary `device`.
+     * @description
+     *
+     * Device whose hookswitch changed.
+     * @public
+     * @readonly
+     */
+    public readonly device: SubjectDeviceID;
+    /**
+     * @summary `hookswitch`.
+     * @description
+     *
+     * Hookswitch that changed.
+     * @public
+     * @readonly
+     */
+    public readonly hookswitch: HookswitchID;
+    /**
+     * @summary `hookswitchOnHook`.
+     * @description
+     *
+     * TRUE = on-hook; FALSE = off-hook.
+     * @public
+     * @readonly
+     */
+    public readonly hookswitchOnHook: BOOLEAN;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `device`.
-         * @description
-         *
-         * Device whose hookswitch changed.
-         * @public
-         * @readonly
-         */
-        readonly device: SubjectDeviceID,
-        /**
-         * @summary `hookswitch`.
-         * @description
-         *
-         * Hookswitch that changed.
-         * @public
-         * @readonly
-         */
-        readonly hookswitch: HookswitchID,
-        /**
-         * @summary `hookswitchOnHook`.
-         * @description
-         *
-         * TRUE = on-hook; FALSE = off-hook.
-         * @public
-         * @readonly
-         */
-        readonly hookswitchOnHook: BOOLEAN,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        device: SubjectDeviceID,
+        hookswitch: HookswitchID,
+        hookswitchOnHook: BOOLEAN,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.device = device;
+        this.hookswitch = hookswitch;
+        this.hookswitchOnHook = hookswitchOnHook;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a HookswitchEvent

@@ -70,50 +70,66 @@ import {
  *
  */
 export class MSBindArgument {
+    /**
+     * @summary `initiator_name`.
+     * @public
+     * @readonly
+     */
+    public readonly initiator_name: ORAddressAndOrDirectoryName;
+    /**
+     * @summary `initiator_credentials`.
+     * @public
+     * @readonly
+     */
+    public readonly initiator_credentials: InitiatorCredentials;
+    /**
+     * @summary `security_context`.
+     * @public
+     * @readonly
+     */
+    public readonly security_context?: OPTIONAL<SecurityContext>;
+    /**
+     * @summary `fetch_restrictions`.
+     * @public
+     * @readonly
+     */
+    public readonly fetch_restrictions?: OPTIONAL<Restrictions>;
+    /**
+     * @summary `ms_configuration_request`.
+     * @public
+     * @readonly
+     */
+    public readonly ms_configuration_request?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `ua_registration_identifier`.
+     * @public
+     * @readonly
+     */
+    public readonly ua_registration_identifier?: OPTIONAL<RegistrationIdentifier>;
+    /**
+     * @summary `bind_extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly bind_extensions?: OPTIONAL<MSExtensions>;
+
     constructor(
-        /**
-         * @summary `initiator_name`.
-         * @public
-         * @readonly
-         */
-        readonly initiator_name: ORAddressAndOrDirectoryName,
-        /**
-         * @summary `initiator_credentials`.
-         * @public
-         * @readonly
-         */
-        readonly initiator_credentials: InitiatorCredentials,
-        /**
-         * @summary `security_context`.
-         * @public
-         * @readonly
-         */
-        readonly security_context?: OPTIONAL<SecurityContext>,
-        /**
-         * @summary `fetch_restrictions`.
-         * @public
-         * @readonly
-         */
-        readonly fetch_restrictions?: OPTIONAL<Restrictions>,
-        /**
-         * @summary `ms_configuration_request`.
-         * @public
-         * @readonly
-         */
-        readonly ms_configuration_request?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `ua_registration_identifier`.
-         * @public
-         * @readonly
-         */
-        readonly ua_registration_identifier?: OPTIONAL<RegistrationIdentifier>,
-        /**
-         * @summary `bind_extensions`.
-         * @public
-         * @readonly
-         */
-        readonly bind_extensions?: OPTIONAL<MSExtensions>
-    ) {}
+        initiator_name: ORAddressAndOrDirectoryName,
+        initiator_credentials: InitiatorCredentials,
+        security_context?: OPTIONAL<SecurityContext>,
+        fetch_restrictions?: OPTIONAL<Restrictions>,
+        ms_configuration_request?: OPTIONAL<BOOLEAN>,
+        ua_registration_identifier?: OPTIONAL<RegistrationIdentifier>,
+        bind_extensions?: OPTIONAL<MSExtensions>
+    ) {
+        this.initiator_name = initiator_name;
+        this.initiator_credentials = initiator_credentials;
+        this.security_context = security_context;
+        this.fetch_restrictions = fetch_restrictions;
+        this.ms_configuration_request = ms_configuration_request;
+        this.ua_registration_identifier = ua_registration_identifier;
+        this.bind_extensions = bind_extensions;
+    }
 
     /**
      * @summary Restructures an object into a MSBindArgument

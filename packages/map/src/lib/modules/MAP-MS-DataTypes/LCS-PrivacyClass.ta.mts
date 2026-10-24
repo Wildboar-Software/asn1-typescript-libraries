@@ -59,102 +59,122 @@ import { SS_Code, _decode_SS_Code, _encode_SS_Code } from "../MAP-SS-Code/SS-Cod
  */
 export
 class LCS_PrivacyClass {
+    /**
+     * @summary `ss_Code`.
+     * @description
+     *
+     * Privacy-exception class SS-Code (clause 7.6.4.1). (3GPP TS 29.002
+     * V19.1.0 clauses 7.6.3.62 and 7.6.3.63)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ss_Code: SS_Code;
+    /**
+     * @summary `ss_Status`.
+     * @description
+     *
+     * Provisioned SS-Status of this privacy-exception class. (3GPP TS
+     * 29.002 V19.1.0 clauses 7.6.3.63 and 7.6.3.17)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ss_Status: Ext_SS_Status;
+    /**
+     * @summary `notificationToMSUser`.
+     * @description
+     *
+     * May be sent only for callSessionRelated and callSessionUnrelated
+     * SS-codes. If not received for those codes, 3GPP TS 23.271 defaults
+     * apply. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly notificationToMSUser?: OPTIONAL<NotificationToMSUser>;
+    /**
+     * @summary `externalClientList`.
+     * @description
+     *
+     * Call/session unrelated (and related if the visited node supports LCS
+     * Release 4 or later). For a pre-R4 visited node, only
+     * callSessionUnrelated. (3GPP TS 29.002 V19.1.0 clauses 17.7.1 and
+     * 7.6.3.64)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly externalClientList?: OPTIONAL<ExternalClientList>;
+    /**
+     * @summary `plmnClientList`.
+     * @description
+     *
+     * May be sent only for SS-code plmnoperator. (3GPP TS 29.002 V19.1.0
+     * clauses 17.7.1 and 7.6.3.65)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly plmnClientList?: OPTIONAL<PLMNClientList>;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary `ext_externalClientList`.
+     * @description
+     *
+     * Only if the visited node supports LCS Release 4 or later, the user
+     * specified more than 5 clients, and White Book SCCP is used. (3GPP TS
+     * 29.002 V19.1.0 clause 17.7.1)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ext_externalClientList?: OPTIONAL<Ext_ExternalClientList>;
+    /**
+     * @summary `serviceTypeList`.
+     * @description
+     *
+     * May be sent only for SS-code serviceType and if the visited node
+     * supports LCS Release 5 or later. (3GPP TS 29.002 V19.1.0 clauses
+     * 17.7.1 and 7.6.3.65D)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly serviceTypeList?: OPTIONAL<ServiceTypeList>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `ss_Code`.
-         * @description
-         *
-         * Privacy-exception class SS-Code (clause 7.6.4.1). (3GPP TS 29.002
-         * V19.1.0 clauses 7.6.3.62 and 7.6.3.63)
-         *
-         * @public
-         * @readonly
-         */
-        readonly ss_Code: SS_Code,
-        /**
-         * @summary `ss_Status`.
-         * @description
-         *
-         * Provisioned SS-Status of this privacy-exception class. (3GPP TS
-         * 29.002 V19.1.0 clauses 7.6.3.63 and 7.6.3.17)
-         *
-         * @public
-         * @readonly
-         */
-        readonly ss_Status: Ext_SS_Status,
-        /**
-         * @summary `notificationToMSUser`.
-         * @description
-         *
-         * May be sent only for callSessionRelated and callSessionUnrelated
-         * SS-codes. If not received for those codes, 3GPP TS 23.271 defaults
-         * apply. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
-         *
-         * @public
-         * @readonly
-         */
-        readonly notificationToMSUser?: OPTIONAL<NotificationToMSUser>,
-        /**
-         * @summary `externalClientList`.
-         * @description
-         *
-         * Call/session unrelated (and related if the visited node supports LCS
-         * Release 4 or later). For a pre-R4 visited node, only
-         * callSessionUnrelated. (3GPP TS 29.002 V19.1.0 clauses 17.7.1 and
-         * 7.6.3.64)
-         *
-         * @public
-         * @readonly
-         */
-        readonly externalClientList?: OPTIONAL<ExternalClientList>,
-        /**
-         * @summary `plmnClientList`.
-         * @description
-         *
-         * May be sent only for SS-code plmnoperator. (3GPP TS 29.002 V19.1.0
-         * clauses 17.7.1 and 7.6.3.65)
-         *
-         * @public
-         * @readonly
-         */
-        readonly plmnClientList?: OPTIONAL<PLMNClientList>,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary `ext_externalClientList`.
-         * @description
-         *
-         * Only if the visited node supports LCS Release 4 or later, the user
-         * specified more than 5 clients, and White Book SCCP is used. (3GPP TS
-         * 29.002 V19.1.0 clause 17.7.1)
-         *
-         * @public
-         * @readonly
-         */
-        readonly ext_externalClientList?: OPTIONAL<Ext_ExternalClientList>,
-        /**
-         * @summary `serviceTypeList`.
-         * @description
-         *
-         * May be sent only for SS-code serviceType and if the visited node
-         * supports LCS Release 5 or later. (3GPP TS 29.002 V19.1.0 clauses
-         * 17.7.1 and 7.6.3.65D)
-         *
-         * @public
-         * @readonly
-         */
-        readonly serviceTypeList?: OPTIONAL<ServiceTypeList>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        ss_Code: SS_Code,
+        ss_Status: Ext_SS_Status,
+        notificationToMSUser?: OPTIONAL<NotificationToMSUser>,
+        externalClientList?: OPTIONAL<ExternalClientList>,
+        plmnClientList?: OPTIONAL<PLMNClientList>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        ext_externalClientList?: OPTIONAL<Ext_ExternalClientList>,
+        serviceTypeList?: OPTIONAL<ServiceTypeList>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.ss_Code = ss_Code;
+        this.ss_Status = ss_Status;
+        this.notificationToMSUser = notificationToMSUser;
+        this.externalClientList = externalClientList;
+        this.plmnClientList = plmnClientList;
+        this.extensionContainer = extensionContainer;
+        this.ext_externalClientList = ext_externalClientList;
+        this.serviceTypeList = serviceTypeList;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a LCS_PrivacyClass

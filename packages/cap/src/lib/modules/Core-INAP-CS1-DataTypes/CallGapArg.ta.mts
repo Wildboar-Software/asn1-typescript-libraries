@@ -39,38 +39,50 @@ import { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "
  */
 export
 class CallGapArg {
+    /**
+     * @summary `gapCriteria`.
+     * @public
+     * @readonly
+     */
+    public readonly gapCriteria: GapCriteria;
+    /**
+     * @summary `gapIndicators`.
+     * @public
+     * @readonly
+     */
+    public readonly gapIndicators: GapIndicators;
+    /**
+     * @summary `controlType`.
+     * @public
+     * @readonly
+     */
+    public readonly controlType?: OPTIONAL<ControlType>;
+    /**
+     * @summary `gapTreatment`.
+     * @public
+     * @readonly
+     */
+    public readonly gapTreatment?: OPTIONAL<GapTreatment>;
+    /**
+     * @summary `extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<ExtensionField[]>;
+
     constructor (
-        /**
-         * @summary `gapCriteria`.
-         * @public
-         * @readonly
-         */
-        readonly gapCriteria: GapCriteria,
-        /**
-         * @summary `gapIndicators`.
-         * @public
-         * @readonly
-         */
-        readonly gapIndicators: GapIndicators,
-        /**
-         * @summary `controlType`.
-         * @public
-         * @readonly
-         */
-        readonly controlType?: OPTIONAL<ControlType>,
-        /**
-         * @summary `gapTreatment`.
-         * @public
-         * @readonly
-         */
-        readonly gapTreatment?: OPTIONAL<GapTreatment>,
-        /**
-         * @summary `extensions`.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<ExtensionField[]>
-    ) {}
+        gapCriteria: GapCriteria,
+        gapIndicators: GapIndicators,
+        controlType?: OPTIONAL<ControlType>,
+        gapTreatment?: OPTIONAL<GapTreatment>,
+        extensions?: OPTIONAL<ExtensionField[]>
+    ) {
+        this.gapCriteria = gapCriteria;
+        this.gapIndicators = gapIndicators;
+        this.controlType = controlType;
+        this.gapTreatment = gapTreatment;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a CallGapArg

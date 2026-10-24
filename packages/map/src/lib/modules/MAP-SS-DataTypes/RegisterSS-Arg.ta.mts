@@ -41,97 +41,117 @@ import { NoReplyConditionTime, _decode_NoReplyConditionTime, _encode_NoReplyCond
  */
 export
 class RegisterSS_Arg {
+    /**
+     * @summary `ss_Code`.
+     * @description
+     *
+     * SS or set of SS as in 3GPP TS 22.004 (3GPP TS 29.002 V19.1.0 clause
+     * 7.6.4.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ss_Code: SS_Code;
+    /**
+     * @summary `basicService`.
+     * @description
+     *
+     * Bearer or teleservice group (3GPP TS 29.002 V19.1.0 clauses
+     * 7.6.4.38–7.6.4.39).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly basicService?: OPTIONAL<BasicServiceCode>;
+    /**
+     * @summary `forwardedToNumber`.
+     * @description
+     *
+     * Forwarded-to number (clause 7.6.2.22).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly forwardedToNumber?: OPTIONAL<AddressString>;
+    /**
+     * @summary `forwardedToSubaddress`.
+     * @description
+     *
+     * Forwarded-to subaddress (clause 7.6.2.23).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly forwardedToSubaddress?: OPTIONAL<ISDN_SubaddressString>;
+    /**
+     * @summary `noReplyConditionTime`.
+     * @description
+     *
+     * No-reply timer for CFNRy, 5..30 s (3GPP TS 29.002 V19.1.0 clauses
+     * 7.6.4.7 and 17.7.4).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly noReplyConditionTime?: OPTIONAL<NoReplyConditionTime>;
+    /**
+     * @summary `defaultPriority`.
+     * @description
+     *
+     * Default eMLPP priority.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly defaultPriority?: OPTIONAL<EMLPP_Priority>;
+    /**
+     * @summary `nbrUser`.
+     * @description
+     *
+     * Multicall bearers for the user.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly nbrUser?: OPTIONAL<MC_Bearers>;
+    /**
+     * @summary `longFTN_Supported`.
+     * @description
+     *
+     * Long Forwarded-to Number supported.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly longFTN_Supported?: OPTIONAL<NULL>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `ss_Code`.
-         * @description
-         *
-         * SS or set of SS as in 3GPP TS 22.004 (3GPP TS 29.002 V19.1.0 clause
-         * 7.6.4.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly ss_Code: SS_Code,
-        /**
-         * @summary `basicService`.
-         * @description
-         *
-         * Bearer or teleservice group (3GPP TS 29.002 V19.1.0 clauses
-         * 7.6.4.38–7.6.4.39).
-         *
-         * @public
-         * @readonly
-         */
-        readonly basicService?: OPTIONAL<BasicServiceCode>,
-        /**
-         * @summary `forwardedToNumber`.
-         * @description
-         *
-         * Forwarded-to number (clause 7.6.2.22).
-         *
-         * @public
-         * @readonly
-         */
-        readonly forwardedToNumber?: OPTIONAL<AddressString>,
-        /**
-         * @summary `forwardedToSubaddress`.
-         * @description
-         *
-         * Forwarded-to subaddress (clause 7.6.2.23).
-         *
-         * @public
-         * @readonly
-         */
-        readonly forwardedToSubaddress?: OPTIONAL<ISDN_SubaddressString>,
-        /**
-         * @summary `noReplyConditionTime`.
-         * @description
-         *
-         * No-reply timer for CFNRy, 5..30 s (3GPP TS 29.002 V19.1.0 clauses
-         * 7.6.4.7 and 17.7.4).
-         *
-         * @public
-         * @readonly
-         */
-        readonly noReplyConditionTime?: OPTIONAL<NoReplyConditionTime>,
-        /**
-         * @summary `defaultPriority`.
-         * @description
-         *
-         * Default eMLPP priority.
-         *
-         * @public
-         * @readonly
-         */
-        readonly defaultPriority?: OPTIONAL<EMLPP_Priority>,
-        /**
-         * @summary `nbrUser`.
-         * @description
-         *
-         * Multicall bearers for the user.
-         *
-         * @public
-         * @readonly
-         */
-        readonly nbrUser?: OPTIONAL<MC_Bearers>,
-        /**
-         * @summary `longFTN_Supported`.
-         * @description
-         *
-         * Long Forwarded-to Number supported.
-         *
-         * @public
-         * @readonly
-         */
-        readonly longFTN_Supported?: OPTIONAL<NULL>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        ss_Code: SS_Code,
+        basicService?: OPTIONAL<BasicServiceCode>,
+        forwardedToNumber?: OPTIONAL<AddressString>,
+        forwardedToSubaddress?: OPTIONAL<ISDN_SubaddressString>,
+        noReplyConditionTime?: OPTIONAL<NoReplyConditionTime>,
+        defaultPriority?: OPTIONAL<EMLPP_Priority>,
+        nbrUser?: OPTIONAL<MC_Bearers>,
+        longFTN_Supported?: OPTIONAL<NULL>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.ss_Code = ss_Code;
+        this.basicService = basicService;
+        this.forwardedToNumber = forwardedToNumber;
+        this.forwardedToSubaddress = forwardedToSubaddress;
+        this.noReplyConditionTime = noReplyConditionTime;
+        this.defaultPriority = defaultPriority;
+        this.nbrUser = nbrUser;
+        this.longFTN_Supported = longFTN_Supported;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a RegisterSS_Arg

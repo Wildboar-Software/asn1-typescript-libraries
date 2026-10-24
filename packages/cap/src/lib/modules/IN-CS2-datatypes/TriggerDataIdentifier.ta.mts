@@ -36,26 +36,34 @@ import { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "
  */
 export
 class TriggerDataIdentifier {
+    /**
+     * @summary `triggerID`.
+     * @public
+     * @readonly
+     */
+    public readonly triggerID: EventTypeBCSM;
+    /**
+     * @summary `profileIdentifier`.
+     * @public
+     * @readonly
+     */
+    public readonly profileIdentifier: ProfileIdentifier;
+    /**
+     * @summary `extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<ExtensionField[]>;
+
     constructor (
-        /**
-         * @summary `triggerID`.
-         * @public
-         * @readonly
-         */
-        readonly triggerID: EventTypeBCSM,
-        /**
-         * @summary `profileIdentifier`.
-         * @public
-         * @readonly
-         */
-        readonly profileIdentifier: ProfileIdentifier,
-        /**
-         * @summary `extensions`.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<ExtensionField[]>
-    ) {}
+        triggerID: EventTypeBCSM,
+        profileIdentifier: ProfileIdentifier,
+        extensions?: OPTIONAL<ExtensionField[]>
+    ) {
+        this.triggerID = triggerID;
+        this.profileIdentifier = profileIdentifier;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a TriggerDataIdentifier

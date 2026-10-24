@@ -100,143 +100,169 @@ import {
  *
  */
 export class NotifyGUIStateEvent_RequestParams {
+  /**
+   * @summary `subscriberEndpointIRI`.
+   * @description
+   *
+   * Endpoint IRI of the secondary GUI handler. BioAPI `NULL`
+   * is rewritten to the local endpoint IRI (X.1083 §15.3).
+   * X.1083 §16.26.5.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly subscriberEndpointIRI: EndpointIRI;
+  /**
+   * @summary `guiEventSubscriptionUuid`.
+   * @description
+   *
+   * UUID of the secondary GUI-event subscription that shall
+   * receive this event. Required. C `NULL` is unconvertible
+   * (clause 19). X.1083 §16.26.5, §8.5.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly guiEventSubscriptionUuid: BioAPI_UUID;
+  /**
+   * @summary `bspProductUuid`.
+   * @description
+   *
+   * Product UUID of the BSP that originated the GUI event.
+   * Converted from BioAPI `BSPUuid` via clause 25. X.1083
+   * §16.26.5.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly bspProductUuid: BioAPI_UUID;
+  /**
+   * @summary `unitID`.
+   * @description
+   *
+   * Unit that originated the GUI state event. Forwarded from
+   * the primary callback. X.1083 §16.26.5.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly unitID: BioAPI_UNIT_ID;
+  /**
+   * @summary `operation`.
+   * @description
+   *
+   * GUI operation from the primary state callback. Forwarded
+   * to the secondary handler. X.1083 §16.26.5.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly operation: BioAPI_GUI_OPERATION;
+  /**
+   * @summary `suboperation`.
+   * @description
+   *
+   * GUI suboperation from the primary state callback.
+   * Forwarded to the secondary handler. X.1083 §16.26.5.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly suboperation: BioAPI_GUI_SUBOPERATION;
+  /**
+   * @summary `purpose`.
+   * @description
+   *
+   * BIR purpose from the primary state callback. Forwarded
+   * to the secondary handler. X.1083 §16.26.5.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly purpose: BioAPI_BIR_PURPOSE;
+  /**
+   * @summary `moment`.
+   * @description
+   *
+   * GUI moment from the primary state callback. Forwarded
+   * to the secondary handler. X.1083 §16.26.5.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly moment: BioAPI_GUI_MOMENT;
+  /**
+   * @summary `resultCode`.
+   * @description
+   *
+   * Result code from the primary state callback. Forwarded
+   * to the secondary handler. X.1083 §16.26.5.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly resultCode: BioAPI_RETURN;
+  /**
+   * @summary `enrollSampleIndex`.
+   * @description
+   *
+   * Enroll-sample index from the primary state callback.
+   * Forwarded to the secondary handler. X.1083 §16.26.5.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly enrollSampleIndex: SignedInt;
+  /**
+   * @summary `bitmaps`.
+   * @description
+   *
+   * Optional GUI bitmaps from the primary state callback.
+   * C `NULL` ↔ absent (clause 19). X.1083 §16.26.5.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly bitmaps?: OPTIONAL<BioAPI_GUI_BITMAP_ARRAY>;
+  /**
+   * @summary `text`.
+   * @description
+   *
+   * Prompt or status text from the primary callback. C
+   * `NULL` ↔ absent (X.1083 §15.2). X.1083 §16.26.5.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly text?: OPTIONAL<UTF8String>;
+
   constructor(
-    /**
-     * @summary `subscriberEndpointIRI`.
-     * @description
-     *
-     * Endpoint IRI of the secondary GUI handler. BioAPI `NULL`
-     * is rewritten to the local endpoint IRI (X.1083 §15.3).
-     * X.1083 §16.26.5.
-     *
-     * @public
-     * @readonly
-     */
-    readonly subscriberEndpointIRI: EndpointIRI,
-    /**
-     * @summary `guiEventSubscriptionUuid`.
-     * @description
-     *
-     * UUID of the secondary GUI-event subscription that shall
-     * receive this event. Required. C `NULL` is unconvertible
-     * (clause 19). X.1083 §16.26.5, §8.5.
-     *
-     * @public
-     * @readonly
-     */
-    readonly guiEventSubscriptionUuid: BioAPI_UUID,
-    /**
-     * @summary `bspProductUuid`.
-     * @description
-     *
-     * Product UUID of the BSP that originated the GUI event.
-     * Converted from BioAPI `BSPUuid` via clause 25. X.1083
-     * §16.26.5.
-     *
-     * @public
-     * @readonly
-     */
-    readonly bspProductUuid: BioAPI_UUID,
-    /**
-     * @summary `unitID`.
-     * @description
-     *
-     * Unit that originated the GUI state event. Forwarded from
-     * the primary callback. X.1083 §16.26.5.
-     *
-     * @public
-     * @readonly
-     */
-    readonly unitID: BioAPI_UNIT_ID,
-    /**
-     * @summary `operation`.
-     * @description
-     *
-     * GUI operation from the primary state callback. Forwarded
-     * to the secondary handler. X.1083 §16.26.5.
-     *
-     * @public
-     * @readonly
-     */
-    readonly operation: BioAPI_GUI_OPERATION,
-    /**
-     * @summary `suboperation`.
-     * @description
-     *
-     * GUI suboperation from the primary state callback.
-     * Forwarded to the secondary handler. X.1083 §16.26.5.
-     *
-     * @public
-     * @readonly
-     */
-    readonly suboperation: BioAPI_GUI_SUBOPERATION,
-    /**
-     * @summary `purpose`.
-     * @description
-     *
-     * BIR purpose from the primary state callback. Forwarded
-     * to the secondary handler. X.1083 §16.26.5.
-     *
-     * @public
-     * @readonly
-     */
-    readonly purpose: BioAPI_BIR_PURPOSE,
-    /**
-     * @summary `moment`.
-     * @description
-     *
-     * GUI moment from the primary state callback. Forwarded
-     * to the secondary handler. X.1083 §16.26.5.
-     *
-     * @public
-     * @readonly
-     */
-    readonly moment: BioAPI_GUI_MOMENT,
-    /**
-     * @summary `resultCode`.
-     * @description
-     *
-     * Result code from the primary state callback. Forwarded
-     * to the secondary handler. X.1083 §16.26.5.
-     *
-     * @public
-     * @readonly
-     */
-    readonly resultCode: BioAPI_RETURN,
-    /**
-     * @summary `enrollSampleIndex`.
-     * @description
-     *
-     * Enroll-sample index from the primary state callback.
-     * Forwarded to the secondary handler. X.1083 §16.26.5.
-     *
-     * @public
-     * @readonly
-     */
-    readonly enrollSampleIndex: SignedInt,
-    /**
-     * @summary `bitmaps`.
-     * @description
-     *
-     * Optional GUI bitmaps from the primary state callback.
-     * C `NULL` ↔ absent (clause 19). X.1083 §16.26.5.
-     *
-     * @public
-     * @readonly
-     */
-    readonly bitmaps?: OPTIONAL<BioAPI_GUI_BITMAP_ARRAY>,
-    /**
-     * @summary `text`.
-     * @description
-     *
-     * Prompt or status text from the primary callback. C
-     * `NULL` ↔ absent (X.1083 §15.2). X.1083 §16.26.5.
-     *
-     * @public
-     * @readonly
-     */
-    readonly text?: OPTIONAL<UTF8String>
-  ) {}
+    subscriberEndpointIRI: EndpointIRI,
+    guiEventSubscriptionUuid: BioAPI_UUID,
+    bspProductUuid: BioAPI_UUID,
+    unitID: BioAPI_UNIT_ID,
+    operation: BioAPI_GUI_OPERATION,
+    suboperation: BioAPI_GUI_SUBOPERATION,
+    purpose: BioAPI_BIR_PURPOSE,
+    moment: BioAPI_GUI_MOMENT,
+    resultCode: BioAPI_RETURN,
+    enrollSampleIndex: SignedInt,
+    bitmaps?: OPTIONAL<BioAPI_GUI_BITMAP_ARRAY>,
+    text?: OPTIONAL<UTF8String>
+  ) {
+    this.subscriberEndpointIRI = subscriberEndpointIRI;
+    this.guiEventSubscriptionUuid = guiEventSubscriptionUuid;
+    this.bspProductUuid = bspProductUuid;
+    this.unitID = unitID;
+    this.operation = operation;
+    this.suboperation = suboperation;
+    this.purpose = purpose;
+    this.moment = moment;
+    this.resultCode = resultCode;
+    this.enrollSampleIndex = enrollSampleIndex;
+    this.bitmaps = bitmaps;
+    this.text = text;
+  }
 
   /**
    * @summary Restructures an object into a NotifyGUIStateEvent_RequestParams

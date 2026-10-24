@@ -37,32 +37,38 @@ import { EEAttributes, _decode_EEAttributes, _encode_EEAttributes } from "../ISO
  */
 export
 class GetEventEnrollmentAttributes_Response {
+    /**
+     * @summary `listOfEEAttributes`.
+     * @description
+     *
+     * Zero or more enrollment attribute records, in listed order.
+     *
+     * [ISO 9506-1:2003 §21.4.1.2.1]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly listOfEEAttributes: EEAttributes[];
+    /**
+     * @summary `moreFollows`.
+     * @description
+     *
+     * True if more enrollments remain. Default false.
+     *
+     * [ISO 9506-1:2003 §21.4.1.2.2]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly moreFollows?: OPTIONAL<BOOLEAN>;
+
     constructor (
-        /**
-         * @summary `listOfEEAttributes`.
-         * @description
-         *
-         * Zero or more enrollment attribute records, in listed order.
-         *
-         * [ISO 9506-1:2003 §21.4.1.2.1]
-         *
-         * @public
-         * @readonly
-         */
-        readonly listOfEEAttributes: EEAttributes[],
-        /**
-         * @summary `moreFollows`.
-         * @description
-         *
-         * True if more enrollments remain. Default false.
-         *
-         * [ISO 9506-1:2003 §21.4.1.2.2]
-         *
-         * @public
-         * @readonly
-         */
-        readonly moreFollows?: OPTIONAL<BOOLEAN>
-    ) {}
+        listOfEEAttributes: EEAttributes[],
+        moreFollows?: OPTIONAL<BOOLEAN>
+    ) {
+        this.listOfEEAttributes = listOfEEAttributes;
+        this.moreFollows = moreFollows;
+    }
 
     /**
      * @summary Restructures an object into a GetEventEnrollmentAttributes_Response

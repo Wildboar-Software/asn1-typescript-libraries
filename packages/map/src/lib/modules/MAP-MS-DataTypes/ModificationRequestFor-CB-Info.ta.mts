@@ -40,85 +40,103 @@ import { Password, _decode_Password, _encode_Password } from "../MAP-SS-DataType
  */
 export
 class ModificationRequestFor_CB_Info {
+    /**
+     * @summary `ss_Code`.
+     * @description
+     *
+     * SS-Code of the supplementary service (clause 7.6.4.1). (3GPP TS
+     * 29.002 V19.1.0 clause 7.6.3.82)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ss_Code: SS_Code;
+    /**
+     * @summary `basicService`.
+     * @description
+     *
+     * Extensible basic service group to which the modification applies.
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.3.82)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly basicService?: OPTIONAL<Ext_BasicServiceCode>;
+    /**
+     * @summary `ss_Status`.
+     * @description
+     *
+     * SS-Status of the supplementary service (clause 7.6.4.2). (3GPP TS
+     * 29.002 V19.1.0 clause 7.6.3.82)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ss_Status?: OPTIONAL<Ext_SS_Status>;
+    /**
+     * @summary `password`.
+     * @description
+     *
+     * Call-barring password. (3GPP TS 29.002 V19.1.0 clause 7.6.3.82)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly password?: OPTIONAL<Password>;
+    /**
+     * @summary `wrongPasswordAttemptsCounter`.
+     * @description
+     *
+     * Wrong-password attempts counter. (3GPP TS 29.002 V19.1.0 clause
+     * 17.7.1)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly wrongPasswordAttemptsCounter?: OPTIONAL<WrongPasswordAttemptsCounter>;
+    /**
+     * @summary `modifyNotificationToCSE`.
+     * @description
+     *
+     * Activate or deactivate notification to the CSE. (3GPP TS 29.002
+     * V19.1.0 clauses 7.6.3.82 and 8.11.4)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly modifyNotificationToCSE?: OPTIONAL<ModificationInstruction>;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `ss_Code`.
-         * @description
-         *
-         * SS-Code of the supplementary service (clause 7.6.4.1). (3GPP TS
-         * 29.002 V19.1.0 clause 7.6.3.82)
-         *
-         * @public
-         * @readonly
-         */
-        readonly ss_Code: SS_Code,
-        /**
-         * @summary `basicService`.
-         * @description
-         *
-         * Extensible basic service group to which the modification applies.
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.3.82)
-         *
-         * @public
-         * @readonly
-         */
-        readonly basicService?: OPTIONAL<Ext_BasicServiceCode>,
-        /**
-         * @summary `ss_Status`.
-         * @description
-         *
-         * SS-Status of the supplementary service (clause 7.6.4.2). (3GPP TS
-         * 29.002 V19.1.0 clause 7.6.3.82)
-         *
-         * @public
-         * @readonly
-         */
-        readonly ss_Status?: OPTIONAL<Ext_SS_Status>,
-        /**
-         * @summary `password`.
-         * @description
-         *
-         * Call-barring password. (3GPP TS 29.002 V19.1.0 clause 7.6.3.82)
-         *
-         * @public
-         * @readonly
-         */
-        readonly password?: OPTIONAL<Password>,
-        /**
-         * @summary `wrongPasswordAttemptsCounter`.
-         * @description
-         *
-         * Wrong-password attempts counter. (3GPP TS 29.002 V19.1.0 clause
-         * 17.7.1)
-         *
-         * @public
-         * @readonly
-         */
-        readonly wrongPasswordAttemptsCounter?: OPTIONAL<WrongPasswordAttemptsCounter>,
-        /**
-         * @summary `modifyNotificationToCSE`.
-         * @description
-         *
-         * Activate or deactivate notification to the CSE. (3GPP TS 29.002
-         * V19.1.0 clauses 7.6.3.82 and 8.11.4)
-         *
-         * @public
-         * @readonly
-         */
-        readonly modifyNotificationToCSE?: OPTIONAL<ModificationInstruction>,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        ss_Code: SS_Code,
+        basicService?: OPTIONAL<Ext_BasicServiceCode>,
+        ss_Status?: OPTIONAL<Ext_SS_Status>,
+        password?: OPTIONAL<Password>,
+        wrongPasswordAttemptsCounter?: OPTIONAL<WrongPasswordAttemptsCounter>,
+        modifyNotificationToCSE?: OPTIONAL<ModificationInstruction>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.ss_Code = ss_Code;
+        this.basicService = basicService;
+        this.ss_Status = ss_Status;
+        this.password = password;
+        this.wrongPasswordAttemptsCounter = wrongPasswordAttemptsCounter;
+        this.modifyNotificationToCSE = modifyNotificationToCSE;
+        this.extensionContainer = extensionContainer;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a ModificationRequestFor_CB_Info

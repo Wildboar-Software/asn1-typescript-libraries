@@ -109,271 +109,323 @@ import { CallLinkageData, _decode_CallLinkageData, _encode_CallLinkageData } fro
  */
 export
 class DivertedEvent {
+    /**
+     * @summary `connection`.
+     * @description
+     *
+     * Mandatory. Connection that was diverted.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly connection: ConnectionID;
+    /**
+     * @summary `divertingDevice`.
+     * @description
+     *
+     * Mandatory. Device the call left.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly divertingDevice: SubjectDeviceID;
+    /**
+     * @summary `newDestination`.
+     * @description
+     *
+     * Mandatory. Device the call was diverted to.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly newDestination: SubjectDeviceID;
+    /**
+     * @summary `callingDevice`.
+     * @description
+     *
+     * Optional. Calling device. May change after transfer, forwarding, or
+     * conference (FR 4).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly callingDevice: OPTIONAL<CallingDeviceID>;
+    /**
+     * @summary `calledDevice`.
+     * @description
+     *
+     * Optional. Originally called device. Use with `lastRedirectionDevice`
+     * and `cause` when Diverted is not sent to all monitors (§6.7.6, FR 2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly calledDevice: OPTIONAL<CalledDeviceID>;
+    /**
+     * @summary `lastRedirectionDevice`.
+     * @description
+     *
+     * Mandatory. Previously known redirected-from device. Used with `cause`
+     * to track diverted calls when Diverted is not sent to all monitors
+     * (§6.7.6).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly lastRedirectionDevice: RedirectionDeviceID;
+    /**
+     * @summary `localConnectionInfo`.
+     * @description
+     *
+     * Device-type monitors only (§9.5.2, §12.2.17).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly localConnectionInfo: OPTIONAL<LocalConnectionState>;
+    /**
+     * @summary `correlatorData`.
+     * @description
+     *
+     * Conditional. Present when correlator data is associated with the call
+     * (§12.2.10).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly correlatorData: OPTIONAL<CorrelatorData>;
+    /**
+     * @summary `userData`.
+     * @description
+     *
+     * Conditional. Present when user data is sent and supported (§12.2.30).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly userData: OPTIONAL<UserData>;
+    /**
+     * @summary `cause`.
+     * @description
+     *
+     * Mandatory. Valid values are listed in Table 17-164.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly cause: EventCause;
+    /**
+     * @summary `servicesPermitted`.
+     * @description
+     *
+     * Device-type monitors only (§9.5.2, §12.2.25). Mandatory if Dynamic
+     * Feature Availability is supported.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly servicesPermitted?: OPTIONAL<ServicesPermitted>;
+    /**
+     * @summary `mediaCallCharacteristics`.
+     * @description
+     *
+     * Optional media class and characteristics (§12.2.20).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mediaCallCharacteristics?: OPTIONAL<MediaCallCharacteristics>;
+    /**
+     * @summary `callCharacteristics`.
+     * @description
+     *
+     * Optional high-level call characteristics (§12.2.4).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly callCharacteristics?: OPTIONAL<CallCharacteristics>;
+    /**
+     * @summary `connectionInfo`.
+     * @description
+     *
+     * Optional connection information. Omitted values are
+     * switching-function specific (§12.2.8).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly connectionInfo?: OPTIONAL<ConnectionInformation>;
+    /**
+     * @summary `networkCallingDevice`.
+     * @description
+     *
+     * Optional. Original calling device from the network, external incoming
+     * only. Does not change while `associatedCallingDevice` remains.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly networkCallingDevice?: OPTIONAL<NetworkCallingDeviceID>;
+    /**
+     * @summary `networkCalledDevice`.
+     * @description
+     *
+     * Optional. Original called device from the network, external incoming
+     * only. Does not change while `associatedCallingDevice` remains.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly networkCalledDevice?: OPTIONAL<NetworkCalledDeviceID>;
+    /**
+     * @summary `associatedCallingDevice`.
+     * @description
+     *
+     * Conditional. NID of the calling device for external incoming calls.
+     * Mandatory then; omitted otherwise.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly associatedCallingDevice?: OPTIONAL<AssociatedCallingDeviceID>;
+    /**
+     * @summary `associatedCalledDevice`.
+     * @description
+     *
+     * Conditional. NID of the called device for external outgoing
+     * (mandatory); optional for external incoming.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly associatedCalledDevice?: OPTIONAL<AssociatedCalledDeviceID>;
+    /**
+     * @summary `callLinkageData`.
+     * @description
+     *
+     * Conditional. Mandatory if call linkage is supported (§12.2.5).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly callLinkageData?: OPTIONAL<CallLinkageData>;
+    /**
+     * @summary `subjectOfCall`.
+     * @description
+     *
+     * Optional subject or intent (§12.2.27).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly subjectOfCall?: OPTIONAL<SubjectOfCall>;
+    /**
+     * @summary `messageInfo`.
+     * @description
+     *
+     * Optional message contents associated with the call.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly messageInfo?: OPTIONAL<MessageInfo>;
+    /**
+     * @summary `languagePreferences`.
+     * @description
+     *
+     * Optional preferred language(s) (§12.2.16).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly languagePreferences?: OPTIONAL<LanguagePreferences>;
+    /**
+     * @summary `deviceHistory`.
+     * @description
+     *
+     * Optional devices previously associated with the call (redirecting,
+     * transferring, clearing).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly deviceHistory?: OPTIONAL<DeviceHistory>;
+    /**
+     * @summary `locationInfo`.
+     * @description
+     *
+     * Optional location information for devices in the call.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly locationInfo?: OPTIONAL<LocationInfoList>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional `CSTACommonArguments` carrying the security and privateData
+     * parameters from the ECMA-269 event table.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `connection`.
-         * @description
-         *
-         * Mandatory. Connection that was diverted.
-         *
-         * @public
-         * @readonly
-         */
-        readonly connection: ConnectionID,
-        /**
-         * @summary `divertingDevice`.
-         * @description
-         *
-         * Mandatory. Device the call left.
-         *
-         * @public
-         * @readonly
-         */
-        readonly divertingDevice: SubjectDeviceID,
-        /**
-         * @summary `newDestination`.
-         * @description
-         *
-         * Mandatory. Device the call was diverted to.
-         *
-         * @public
-         * @readonly
-         */
-        readonly newDestination: SubjectDeviceID,
-        /**
-         * @summary `callingDevice`.
-         * @description
-         *
-         * Optional. Calling device. May change after transfer, forwarding, or
-         * conference (FR 4).
-         *
-         * @public
-         * @readonly
-         */
-        readonly callingDevice: OPTIONAL<CallingDeviceID>,
-        /**
-         * @summary `calledDevice`.
-         * @description
-         *
-         * Optional. Originally called device. Use with `lastRedirectionDevice`
-         * and `cause` when Diverted is not sent to all monitors (§6.7.6, FR 2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly calledDevice: OPTIONAL<CalledDeviceID>,
-        /**
-         * @summary `lastRedirectionDevice`.
-         * @description
-         *
-         * Mandatory. Previously known redirected-from device. Used with `cause`
-         * to track diverted calls when Diverted is not sent to all monitors
-         * (§6.7.6).
-         *
-         * @public
-         * @readonly
-         */
-        readonly lastRedirectionDevice: RedirectionDeviceID,
-        /**
-         * @summary `localConnectionInfo`.
-         * @description
-         *
-         * Device-type monitors only (§9.5.2, §12.2.17).
-         *
-         * @public
-         * @readonly
-         */
-        readonly localConnectionInfo: OPTIONAL<LocalConnectionState>,
-        /**
-         * @summary `correlatorData`.
-         * @description
-         *
-         * Conditional. Present when correlator data is associated with the call
-         * (§12.2.10).
-         *
-         * @public
-         * @readonly
-         */
-        readonly correlatorData: OPTIONAL<CorrelatorData>,
-        /**
-         * @summary `userData`.
-         * @description
-         *
-         * Conditional. Present when user data is sent and supported (§12.2.30).
-         *
-         * @public
-         * @readonly
-         */
-        readonly userData: OPTIONAL<UserData>,
-        /**
-         * @summary `cause`.
-         * @description
-         *
-         * Mandatory. Valid values are listed in Table 17-164.
-         *
-         * @public
-         * @readonly
-         */
-        readonly cause: EventCause,
-        /**
-         * @summary `servicesPermitted`.
-         * @description
-         *
-         * Device-type monitors only (§9.5.2, §12.2.25). Mandatory if Dynamic
-         * Feature Availability is supported.
-         *
-         * @public
-         * @readonly
-         */
-        readonly servicesPermitted?: OPTIONAL<ServicesPermitted>,
-        /**
-         * @summary `mediaCallCharacteristics`.
-         * @description
-         *
-         * Optional media class and characteristics (§12.2.20).
-         *
-         * @public
-         * @readonly
-         */
-        readonly mediaCallCharacteristics?: OPTIONAL<MediaCallCharacteristics>,
-        /**
-         * @summary `callCharacteristics`.
-         * @description
-         *
-         * Optional high-level call characteristics (§12.2.4).
-         *
-         * @public
-         * @readonly
-         */
-        readonly callCharacteristics?: OPTIONAL<CallCharacteristics>,
-        /**
-         * @summary `connectionInfo`.
-         * @description
-         *
-         * Optional connection information. Omitted values are
-         * switching-function specific (§12.2.8).
-         *
-         * @public
-         * @readonly
-         */
-        readonly connectionInfo?: OPTIONAL<ConnectionInformation>,
-        /**
-         * @summary `networkCallingDevice`.
-         * @description
-         *
-         * Optional. Original calling device from the network, external incoming
-         * only. Does not change while `associatedCallingDevice` remains.
-         *
-         * @public
-         * @readonly
-         */
-        readonly networkCallingDevice?: OPTIONAL<NetworkCallingDeviceID>,
-        /**
-         * @summary `networkCalledDevice`.
-         * @description
-         *
-         * Optional. Original called device from the network, external incoming
-         * only. Does not change while `associatedCallingDevice` remains.
-         *
-         * @public
-         * @readonly
-         */
-        readonly networkCalledDevice?: OPTIONAL<NetworkCalledDeviceID>,
-        /**
-         * @summary `associatedCallingDevice`.
-         * @description
-         *
-         * Conditional. NID of the calling device for external incoming calls.
-         * Mandatory then; omitted otherwise.
-         *
-         * @public
-         * @readonly
-         */
-        readonly associatedCallingDevice?: OPTIONAL<AssociatedCallingDeviceID>,
-        /**
-         * @summary `associatedCalledDevice`.
-         * @description
-         *
-         * Conditional. NID of the called device for external outgoing
-         * (mandatory); optional for external incoming.
-         *
-         * @public
-         * @readonly
-         */
-        readonly associatedCalledDevice?: OPTIONAL<AssociatedCalledDeviceID>,
-        /**
-         * @summary `callLinkageData`.
-         * @description
-         *
-         * Conditional. Mandatory if call linkage is supported (§12.2.5).
-         *
-         * @public
-         * @readonly
-         */
-        readonly callLinkageData?: OPTIONAL<CallLinkageData>,
-        /**
-         * @summary `subjectOfCall`.
-         * @description
-         *
-         * Optional subject or intent (§12.2.27).
-         *
-         * @public
-         * @readonly
-         */
-        readonly subjectOfCall?: OPTIONAL<SubjectOfCall>,
-        /**
-         * @summary `messageInfo`.
-         * @description
-         *
-         * Optional message contents associated with the call.
-         *
-         * @public
-         * @readonly
-         */
-        readonly messageInfo?: OPTIONAL<MessageInfo>,
-        /**
-         * @summary `languagePreferences`.
-         * @description
-         *
-         * Optional preferred language(s) (§12.2.16).
-         *
-         * @public
-         * @readonly
-         */
-        readonly languagePreferences?: OPTIONAL<LanguagePreferences>,
-        /**
-         * @summary `deviceHistory`.
-         * @description
-         *
-         * Optional devices previously associated with the call (redirecting,
-         * transferring, clearing).
-         *
-         * @public
-         * @readonly
-         */
-        readonly deviceHistory?: OPTIONAL<DeviceHistory>,
-        /**
-         * @summary `locationInfo`.
-         * @description
-         *
-         * Optional location information for devices in the call.
-         *
-         * @public
-         * @readonly
-         */
-        readonly locationInfo?: OPTIONAL<LocationInfoList>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional `CSTACommonArguments` carrying the security and privateData
-         * parameters from the ECMA-269 event table.
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        connection: ConnectionID,
+        divertingDevice: SubjectDeviceID,
+        newDestination: SubjectDeviceID,
+        callingDevice: OPTIONAL<CallingDeviceID>,
+        calledDevice: OPTIONAL<CalledDeviceID>,
+        lastRedirectionDevice: RedirectionDeviceID,
+        localConnectionInfo: OPTIONAL<LocalConnectionState>,
+        correlatorData: OPTIONAL<CorrelatorData>,
+        userData: OPTIONAL<UserData>,
+        cause: EventCause,
+        servicesPermitted?: OPTIONAL<ServicesPermitted>,
+        mediaCallCharacteristics?: OPTIONAL<MediaCallCharacteristics>,
+        callCharacteristics?: OPTIONAL<CallCharacteristics>,
+        connectionInfo?: OPTIONAL<ConnectionInformation>,
+        networkCallingDevice?: OPTIONAL<NetworkCallingDeviceID>,
+        networkCalledDevice?: OPTIONAL<NetworkCalledDeviceID>,
+        associatedCallingDevice?: OPTIONAL<AssociatedCallingDeviceID>,
+        associatedCalledDevice?: OPTIONAL<AssociatedCalledDeviceID>,
+        callLinkageData?: OPTIONAL<CallLinkageData>,
+        subjectOfCall?: OPTIONAL<SubjectOfCall>,
+        messageInfo?: OPTIONAL<MessageInfo>,
+        languagePreferences?: OPTIONAL<LanguagePreferences>,
+        deviceHistory?: OPTIONAL<DeviceHistory>,
+        locationInfo?: OPTIONAL<LocationInfoList>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.connection = connection;
+        this.divertingDevice = divertingDevice;
+        this.newDestination = newDestination;
+        this.callingDevice = callingDevice;
+        this.calledDevice = calledDevice;
+        this.lastRedirectionDevice = lastRedirectionDevice;
+        this.localConnectionInfo = localConnectionInfo;
+        this.correlatorData = correlatorData;
+        this.userData = userData;
+        this.cause = cause;
+        this.servicesPermitted = servicesPermitted;
+        this.mediaCallCharacteristics = mediaCallCharacteristics;
+        this.callCharacteristics = callCharacteristics;
+        this.connectionInfo = connectionInfo;
+        this.networkCallingDevice = networkCallingDevice;
+        this.networkCalledDevice = networkCalledDevice;
+        this.associatedCallingDevice = associatedCallingDevice;
+        this.associatedCalledDevice = associatedCalledDevice;
+        this.callLinkageData = callLinkageData;
+        this.subjectOfCall = subjectOfCall;
+        this.messageInfo = messageInfo;
+        this.languagePreferences = languagePreferences;
+        this.deviceHistory = deviceHistory;
+        this.locationInfo = locationInfo;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a DivertedEvent

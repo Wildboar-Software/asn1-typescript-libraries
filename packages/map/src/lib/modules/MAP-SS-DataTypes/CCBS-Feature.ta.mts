@@ -33,54 +33,66 @@ import { CCBS_Index, _decode_CCBS_Index, _encode_CCBS_Index } from "../MAP-SS-Da
  */
 export
 class CCBS_Feature {
+    /**
+     * @summary `ccbs_Index`.
+     * @description
+     *
+     * Index 1..5 of the CCBS request.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ccbs_Index?: OPTIONAL<CCBS_Index>;
+    /**
+     * @summary `b_subscriberNumber`.
+     * @description
+     *
+     * B-subscriber ISDN number.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly b_subscriberNumber?: OPTIONAL<ISDN_AddressString>;
+    /**
+     * @summary `b_subscriberSubaddress`.
+     * @description
+     *
+     * B-subscriber subaddress.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly b_subscriberSubaddress?: OPTIONAL<ISDN_SubaddressString>;
+    /**
+     * @summary `basicServiceGroup`.
+     * @description
+     *
+     * Basic service group.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly basicServiceGroup?: OPTIONAL<BasicServiceCode>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `ccbs_Index`.
-         * @description
-         *
-         * Index 1..5 of the CCBS request.
-         *
-         * @public
-         * @readonly
-         */
-        readonly ccbs_Index?: OPTIONAL<CCBS_Index>,
-        /**
-         * @summary `b_subscriberNumber`.
-         * @description
-         *
-         * B-subscriber ISDN number.
-         *
-         * @public
-         * @readonly
-         */
-        readonly b_subscriberNumber?: OPTIONAL<ISDN_AddressString>,
-        /**
-         * @summary `b_subscriberSubaddress`.
-         * @description
-         *
-         * B-subscriber subaddress.
-         *
-         * @public
-         * @readonly
-         */
-        readonly b_subscriberSubaddress?: OPTIONAL<ISDN_SubaddressString>,
-        /**
-         * @summary `basicServiceGroup`.
-         * @description
-         *
-         * Basic service group.
-         *
-         * @public
-         * @readonly
-         */
-        readonly basicServiceGroup?: OPTIONAL<BasicServiceCode>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        ccbs_Index?: OPTIONAL<CCBS_Index>,
+        b_subscriberNumber?: OPTIONAL<ISDN_AddressString>,
+        b_subscriberSubaddress?: OPTIONAL<ISDN_SubaddressString>,
+        basicServiceGroup?: OPTIONAL<BasicServiceCode>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.ccbs_Index = ccbs_Index;
+        this.b_subscriberNumber = b_subscriberNumber;
+        this.b_subscriberSubaddress = b_subscriberSubaddress;
+        this.basicServiceGroup = basicServiceGroup;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a CCBS_Feature

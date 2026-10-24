@@ -37,21 +37,25 @@ import {
  *
  */
 export class QueryGUIEventSubscriptions_RequestParams {
+  /**
+   * @summary `bspProductUuid`.
+   * @description
+   *
+   * Product UUID of the BSP whose secondary GUI-event
+   * subscriptions (those that have a GUI event subscription
+   * UUID) are returned. Converted from BioAPI `BSPUuid`
+   * via clause 25. X.1083 §16.24.5.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly bspProductUuid: BioAPI_UUID;
+
   constructor(
-    /**
-     * @summary `bspProductUuid`.
-     * @description
-     *
-     * Product UUID of the BSP whose secondary GUI-event
-     * subscriptions (those that have a GUI event subscription
-     * UUID) are returned. Converted from BioAPI `BSPUuid`
-     * via clause 25. X.1083 §16.24.5.
-     *
-     * @public
-     * @readonly
-     */
-    readonly bspProductUuid: BioAPI_UUID
-  ) {}
+    bspProductUuid: BioAPI_UUID
+  ) {
+    this.bspProductUuid = bspProductUuid;
+  }
 
   /**
    * @summary Restructures an object into a QueryGUIEventSubscriptions_RequestParams

@@ -32,14 +32,18 @@ import {
  *
  */
 export class IPMAssemblyInstructions {
+    /**
+     * @summary `assembly_instructions`.
+     * @public
+     * @readonly
+     */
+    public readonly assembly_instructions: BodyPartReferences;
+
     constructor(
-        /**
-         * @summary `assembly_instructions`.
-         * @public
-         * @readonly
-         */
-        readonly assembly_instructions: BodyPartReferences
-    ) {}
+        assembly_instructions: BodyPartReferences
+    ) {
+        this.assembly_instructions = assembly_instructions;
+    }
 
     /**
      * @summary Restructures an object into a IPMAssemblyInstructions

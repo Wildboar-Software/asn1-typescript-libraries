@@ -48,26 +48,34 @@ import {
  *
  */
 export class LastTraceInformation {
+    /**
+     * @summary `arrival_time`.
+     * @public
+     * @readonly
+     */
+    public readonly arrival_time: ArrivalTime;
+    /**
+     * @summary `converted_encoded_information_types`.
+     * @public
+     * @readonly
+     */
+    public readonly converted_encoded_information_types: OPTIONAL<ConvertedEncodedInformationTypes>;
+    /**
+     * @summary `report_type`.
+     * @public
+     * @readonly
+     */
+    public readonly report_type: ReportType;
+
     constructor(
-        /**
-         * @summary `arrival_time`.
-         * @public
-         * @readonly
-         */
-        readonly arrival_time: ArrivalTime,
-        /**
-         * @summary `converted_encoded_information_types`.
-         * @public
-         * @readonly
-         */
-        readonly converted_encoded_information_types: OPTIONAL<ConvertedEncodedInformationTypes>,
-        /**
-         * @summary `report_type`.
-         * @public
-         * @readonly
-         */
-        readonly report_type: ReportType
-    ) {}
+        arrival_time: ArrivalTime,
+        converted_encoded_information_types: OPTIONAL<ConvertedEncodedInformationTypes>,
+        report_type: ReportType
+    ) {
+        this.arrival_time = arrival_time;
+        this.converted_encoded_information_types = converted_encoded_information_types;
+        this.report_type = report_type;
+    }
 
     /**
      * @summary Restructures an object into a LastTraceInformation

@@ -47,26 +47,34 @@ import {
  *
  */
 export class GlobalDomainIdentifier {
+    /**
+     * @summary `country_name`.
+     * @public
+     * @readonly
+     */
+    public readonly country_name: CountryName;
+    /**
+     * @summary `administration_domain_name`.
+     * @public
+     * @readonly
+     */
+    public readonly administration_domain_name: AdministrationDomainName;
+    /**
+     * @summary `private_domain_identifier`.
+     * @public
+     * @readonly
+     */
+    public readonly private_domain_identifier?: OPTIONAL<PrivateDomainIdentifier>;
+
     constructor(
-        /**
-         * @summary `country_name`.
-         * @public
-         * @readonly
-         */
-        readonly country_name: CountryName,
-        /**
-         * @summary `administration_domain_name`.
-         * @public
-         * @readonly
-         */
-        readonly administration_domain_name: AdministrationDomainName,
-        /**
-         * @summary `private_domain_identifier`.
-         * @public
-         * @readonly
-         */
-        readonly private_domain_identifier?: OPTIONAL<PrivateDomainIdentifier>
-    ) {}
+        country_name: CountryName,
+        administration_domain_name: AdministrationDomainName,
+        private_domain_identifier?: OPTIONAL<PrivateDomainIdentifier>
+    ) {
+        this.country_name = country_name;
+        this.administration_domain_name = administration_domain_name;
+        this.private_domain_identifier = private_domain_identifier;
+    }
 
     /**
      * @summary Restructures an object into a GlobalDomainIdentifier

@@ -37,32 +37,42 @@ import { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "
  */
 export
 class AssistRequestInstructionsArg {
+    /**
+     * @summary `correlationID`.
+     * @public
+     * @readonly
+     */
+    public readonly correlationID: CorrelationID;
+    /**
+     * @summary `iPAvailable`.
+     * @public
+     * @readonly
+     */
+    public readonly iPAvailable?: OPTIONAL<IPAvailable>;
+    /**
+     * @summary `iPSSPCapabilities`.
+     * @public
+     * @readonly
+     */
+    public readonly iPSSPCapabilities?: OPTIONAL<IPSSPCapabilities>;
+    /**
+     * @summary `extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<ExtensionField[]>;
+
     constructor (
-        /**
-         * @summary `correlationID`.
-         * @public
-         * @readonly
-         */
-        readonly correlationID: CorrelationID,
-        /**
-         * @summary `iPAvailable`.
-         * @public
-         * @readonly
-         */
-        readonly iPAvailable?: OPTIONAL<IPAvailable>,
-        /**
-         * @summary `iPSSPCapabilities`.
-         * @public
-         * @readonly
-         */
-        readonly iPSSPCapabilities?: OPTIONAL<IPSSPCapabilities>,
-        /**
-         * @summary `extensions`.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<ExtensionField[]>
-    ) {}
+        correlationID: CorrelationID,
+        iPAvailable?: OPTIONAL<IPAvailable>,
+        iPSSPCapabilities?: OPTIONAL<IPSSPCapabilities>,
+        extensions?: OPTIONAL<ExtensionField[]>
+    ) {
+        this.correlationID = correlationID;
+        this.iPAvailable = iPAvailable;
+        this.iPSSPCapabilities = iPSSPCapabilities;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a AssistRequestInstructionsArg

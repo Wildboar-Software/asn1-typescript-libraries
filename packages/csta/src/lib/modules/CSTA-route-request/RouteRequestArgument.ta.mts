@@ -90,199 +90,243 @@ import { CorrelatorData, _decode_CorrelatorData, _encode_CorrelatorData } from "
  */
 export
 class RouteRequestArgument {
+    /**
+     * @summary `crossRefIdentifier`.
+     * @description
+     *
+     * SF-allocated per-call dialogue ID. Unique within the
+     * registration (or sub-domain if registration is not used).
+     * @public
+     * @readonly
+     */
+    public readonly crossRefIdentifier: RouteingCrossRefID;
+    /**
+     * @summary `routeRegisterReqID`.
+     * @description
+     *
+     * Mandatory if registration is supported; otherwise absent.
+     * @public
+     * @readonly
+     */
+    public readonly routeRegisterReqID: OPTIONAL<RouteRegisterReqID>;
+    /**
+     * @summary `currentRoute`.
+     * @description
+     *
+     * Current destination of the call.
+     * @public
+     * @readonly
+     */
+    public readonly currentRoute: CalledDeviceID;
+    /**
+     * @summary `callingDevice`.
+     * @description
+     *
+     * Calling device, if known.
+     * @public
+     * @readonly
+     */
+    public readonly callingDevice?: OPTIONAL<CallingDeviceID>;
+    /**
+     * @summary `routeingDevice`.
+     * @description
+     *
+     * Routeing device at which the call arrived.
+     * @public
+     * @readonly
+     */
+    public readonly routeingDevice?: OPTIONAL<SubjectDeviceID>;
+    /**
+     * @summary `routedCall`.
+     * @description
+     *
+     * Connection of the call being routed.
+     * @public
+     * @readonly
+     */
+    public readonly routedCall?: OPTIONAL<ConnectionID>;
+    /**
+     * @summary `routeSelAlgorithm`.
+     * @description
+     *
+     * Hint about how CF should select a route, if provided.
+     * @public
+     * @readonly
+     */
+    public readonly routeSelAlgorithm?: OPTIONAL<SelectValue>;
+    /**
+     * @summary `associatedCallingDevice`.
+     * @description
+     *
+     * Associated calling device, if known.
+     * @public
+     * @readonly
+     */
+    public readonly associatedCallingDevice?: OPTIONAL<AssociatedCallingDeviceID>;
+    /**
+     * @summary `associatedCalledDevice`.
+     * @description
+     *
+     * Associated called device, if known.
+     * @public
+     * @readonly
+     */
+    public readonly associatedCalledDevice?: OPTIONAL<AssociatedCalledDeviceID>;
+    /**
+     * @summary `priority`.
+     * @description
+     *
+     * TRUE if the call is a priority call.
+     * @public
+     * @readonly
+     */
+    public readonly priority?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `replyTimeout`.
+     * @description
+     *
+     * How long CF may take to respond.
+     * @public
+     * @readonly
+     */
+    public readonly replyTimeout?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `correlatorData`.
+     * @description
+     *
+     * Correlator data associated with the call.
+     * @public
+     * @readonly
+     */
+    public readonly correlatorData?: OPTIONAL<CorrelatorData>;
+    /**
+     * @summary `mediaCallCharacteristics`.
+     * @description
+     *
+     * Media class of the call, bound to this dialogue (§6.7.8.5).
+     * @public
+     * @readonly
+     */
+    public readonly mediaCallCharacteristics?: OPTIONAL<MediaCallCharacteristics>;
+    /**
+     * @summary `callCharacteristics`.
+     * @description
+     *
+     * Call characterisation bits.
+     * @public
+     * @readonly
+     */
+    public readonly callCharacteristics?: OPTIONAL<CallCharacteristics>;
+    /**
+     * @summary `routeCallInfo`.
+     * @description
+     *
+     * Connection information for the routed call.
+     * @public
+     * @readonly
+     */
+    public readonly routeCallInfo?: OPTIONAL<ConnectionInformation>;
+    /**
+     * @summary `callLinkageData`.
+     * @description
+     *
+     * Call/thread linkage identifiers.
+     * @public
+     * @readonly
+     */
+    public readonly callLinkageData?: OPTIONAL<CallLinkageData>;
+    /**
+     * @summary `subjectOfCall`.
+     * @description
+     *
+     * Subject/topic associated with the call.
+     * @public
+     * @readonly
+     */
+    public readonly subjectOfCall?: OPTIONAL<SubjectOfCall>;
+    /**
+     * @summary `messageInfo`.
+     * @description
+     *
+     * Message information associated with the call.
+     * @public
+     * @readonly
+     */
+    public readonly messageInfo?: OPTIONAL<MessageInfo>;
+    /**
+     * @summary `languagePreferences`.
+     * @description
+     *
+     * Language preferences associated with the call.
+     * @public
+     * @readonly
+     */
+    public readonly languagePreferences?: OPTIONAL<LanguagePreferences>;
+    /**
+     * @summary `deviceHistory`.
+     * @description
+     *
+     * Device-history entries for the call.
+     * @public
+     * @readonly
+     */
+    public readonly deviceHistory?: OPTIONAL<DeviceHistory>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `crossRefIdentifier`.
-         * @description
-         *
-         * SF-allocated per-call dialogue ID. Unique within the
-         * registration (or sub-domain if registration is not used).
-         * @public
-         * @readonly
-         */
-        readonly crossRefIdentifier: RouteingCrossRefID,
-        /**
-         * @summary `routeRegisterReqID`.
-         * @description
-         *
-         * Mandatory if registration is supported; otherwise absent.
-         * @public
-         * @readonly
-         */
-        readonly routeRegisterReqID: OPTIONAL<RouteRegisterReqID>,
-        /**
-         * @summary `currentRoute`.
-         * @description
-         *
-         * Current destination of the call.
-         * @public
-         * @readonly
-         */
-        readonly currentRoute: CalledDeviceID,
-        /**
-         * @summary `callingDevice`.
-         * @description
-         *
-         * Calling device, if known.
-         * @public
-         * @readonly
-         */
-        readonly callingDevice?: OPTIONAL<CallingDeviceID>,
-        /**
-         * @summary `routeingDevice`.
-         * @description
-         *
-         * Routeing device at which the call arrived.
-         * @public
-         * @readonly
-         */
-        readonly routeingDevice?: OPTIONAL<SubjectDeviceID>,
-        /**
-         * @summary `routedCall`.
-         * @description
-         *
-         * Connection of the call being routed.
-         * @public
-         * @readonly
-         */
-        readonly routedCall?: OPTIONAL<ConnectionID>,
-        /**
-         * @summary `routeSelAlgorithm`.
-         * @description
-         *
-         * Hint about how CF should select a route, if provided.
-         * @public
-         * @readonly
-         */
-        readonly routeSelAlgorithm?: OPTIONAL<SelectValue>,
-        /**
-         * @summary `associatedCallingDevice`.
-         * @description
-         *
-         * Associated calling device, if known.
-         * @public
-         * @readonly
-         */
-        readonly associatedCallingDevice?: OPTIONAL<AssociatedCallingDeviceID>,
-        /**
-         * @summary `associatedCalledDevice`.
-         * @description
-         *
-         * Associated called device, if known.
-         * @public
-         * @readonly
-         */
-        readonly associatedCalledDevice?: OPTIONAL<AssociatedCalledDeviceID>,
-        /**
-         * @summary `priority`.
-         * @description
-         *
-         * TRUE if the call is a priority call.
-         * @public
-         * @readonly
-         */
-        readonly priority?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `replyTimeout`.
-         * @description
-         *
-         * How long CF may take to respond.
-         * @public
-         * @readonly
-         */
-        readonly replyTimeout?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `correlatorData`.
-         * @description
-         *
-         * Correlator data associated with the call.
-         * @public
-         * @readonly
-         */
-        readonly correlatorData?: OPTIONAL<CorrelatorData>,
-        /**
-         * @summary `mediaCallCharacteristics`.
-         * @description
-         *
-         * Media class of the call, bound to this dialogue (§6.7.8.5).
-         * @public
-         * @readonly
-         */
-        readonly mediaCallCharacteristics?: OPTIONAL<MediaCallCharacteristics>,
-        /**
-         * @summary `callCharacteristics`.
-         * @description
-         *
-         * Call characterisation bits.
-         * @public
-         * @readonly
-         */
-        readonly callCharacteristics?: OPTIONAL<CallCharacteristics>,
-        /**
-         * @summary `routeCallInfo`.
-         * @description
-         *
-         * Connection information for the routed call.
-         * @public
-         * @readonly
-         */
-        readonly routeCallInfo?: OPTIONAL<ConnectionInformation>,
-        /**
-         * @summary `callLinkageData`.
-         * @description
-         *
-         * Call/thread linkage identifiers.
-         * @public
-         * @readonly
-         */
-        readonly callLinkageData?: OPTIONAL<CallLinkageData>,
-        /**
-         * @summary `subjectOfCall`.
-         * @description
-         *
-         * Subject/topic associated with the call.
-         * @public
-         * @readonly
-         */
-        readonly subjectOfCall?: OPTIONAL<SubjectOfCall>,
-        /**
-         * @summary `messageInfo`.
-         * @description
-         *
-         * Message information associated with the call.
-         * @public
-         * @readonly
-         */
-        readonly messageInfo?: OPTIONAL<MessageInfo>,
-        /**
-         * @summary `languagePreferences`.
-         * @description
-         *
-         * Language preferences associated with the call.
-         * @public
-         * @readonly
-         */
-        readonly languagePreferences?: OPTIONAL<LanguagePreferences>,
-        /**
-         * @summary `deviceHistory`.
-         * @description
-         *
-         * Device-history entries for the call.
-         * @public
-         * @readonly
-         */
-        readonly deviceHistory?: OPTIONAL<DeviceHistory>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        crossRefIdentifier: RouteingCrossRefID,
+        routeRegisterReqID: OPTIONAL<RouteRegisterReqID>,
+        currentRoute: CalledDeviceID,
+        callingDevice?: OPTIONAL<CallingDeviceID>,
+        routeingDevice?: OPTIONAL<SubjectDeviceID>,
+        routedCall?: OPTIONAL<ConnectionID>,
+        routeSelAlgorithm?: OPTIONAL<SelectValue>,
+        associatedCallingDevice?: OPTIONAL<AssociatedCallingDeviceID>,
+        associatedCalledDevice?: OPTIONAL<AssociatedCalledDeviceID>,
+        priority?: OPTIONAL<BOOLEAN>,
+        replyTimeout?: OPTIONAL<INTEGER>,
+        correlatorData?: OPTIONAL<CorrelatorData>,
+        mediaCallCharacteristics?: OPTIONAL<MediaCallCharacteristics>,
+        callCharacteristics?: OPTIONAL<CallCharacteristics>,
+        routeCallInfo?: OPTIONAL<ConnectionInformation>,
+        callLinkageData?: OPTIONAL<CallLinkageData>,
+        subjectOfCall?: OPTIONAL<SubjectOfCall>,
+        messageInfo?: OPTIONAL<MessageInfo>,
+        languagePreferences?: OPTIONAL<LanguagePreferences>,
+        deviceHistory?: OPTIONAL<DeviceHistory>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.crossRefIdentifier = crossRefIdentifier;
+        this.routeRegisterReqID = routeRegisterReqID;
+        this.currentRoute = currentRoute;
+        this.callingDevice = callingDevice;
+        this.routeingDevice = routeingDevice;
+        this.routedCall = routedCall;
+        this.routeSelAlgorithm = routeSelAlgorithm;
+        this.associatedCallingDevice = associatedCallingDevice;
+        this.associatedCalledDevice = associatedCalledDevice;
+        this.priority = priority;
+        this.replyTimeout = replyTimeout;
+        this.correlatorData = correlatorData;
+        this.mediaCallCharacteristics = mediaCallCharacteristics;
+        this.callCharacteristics = callCharacteristics;
+        this.routeCallInfo = routeCallInfo;
+        this.callLinkageData = callLinkageData;
+        this.subjectOfCall = subjectOfCall;
+        this.messageInfo = messageInfo;
+        this.languagePreferences = languagePreferences;
+        this.deviceHistory = deviceHistory;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a RouteRequestArgument

@@ -49,41 +49,49 @@ import {
  *
  */
 export class SEPAbort {
+  /**
+   * @summary `invocationId`.
+   * @description
+   *
+   * Invocation concerned, when applicable. ITU-T Rec. X.832
+   * (04/95) §7.1.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly invocationId: OPTIONAL<InvocationId>;
+  /**
+   * @summary `itemIdentifier`.
+   * @description
+   *
+   * Present only when the abort follows receipt of a
+   * SETransfer. ITU-T Rec. X.832 (04/95) §7.1.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly itemIdentifier: OPTIONAL<_Element>;
+  /**
+   * @summary `problemCode`.
+   * @description
+   *
+   * Why the SEPM aborted: general, transfer, or abort
+   * problem. ITU-T Rec. X.832 (04/95) §6.4, §7.1.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly problemCode: ProblemCode;
+
   constructor(
-    /**
-     * @summary `invocationId`.
-     * @description
-     *
-     * Invocation concerned, when applicable. ITU-T Rec. X.832
-     * (04/95) §7.1.
-     *
-     * @public
-     * @readonly
-     */
-    readonly invocationId: OPTIONAL<InvocationId>,
-    /**
-     * @summary `itemIdentifier`.
-     * @description
-     *
-     * Present only when the abort follows receipt of a
-     * SETransfer. ITU-T Rec. X.832 (04/95) §7.1.
-     *
-     * @public
-     * @readonly
-     */
-    readonly itemIdentifier: OPTIONAL<_Element>,
-    /**
-     * @summary `problemCode`.
-     * @description
-     *
-     * Why the SEPM aborted: general, transfer, or abort
-     * problem. ITU-T Rec. X.832 (04/95) §6.4, §7.1.
-     *
-     * @public
-     * @readonly
-     */
-    readonly problemCode: ProblemCode
-  ) {}
+    invocationId: OPTIONAL<InvocationId>,
+    itemIdentifier: OPTIONAL<_Element>,
+    problemCode: ProblemCode
+  ) {
+    this.invocationId = invocationId;
+    this.itemIdentifier = itemIdentifier;
+    this.problemCode = problemCode;
+  }
 
   /**
    * @summary Restructures an object into a SEPAbort

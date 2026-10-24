@@ -25,20 +25,26 @@ import {
  *
  */
 export class NoticeReference {
+    /**
+     * @summary `organization`.
+     * @public
+     * @readonly
+     */
+    public readonly organization: DisplayText;
+    /**
+     * @summary `noticeNumbers`.
+     * @public
+     * @readonly
+     */
+    public readonly noticeNumbers: INTEGER[];
+
     constructor(
-        /**
-         * @summary `organization`.
-         * @public
-         * @readonly
-         */
-        readonly organization: DisplayText,
-        /**
-         * @summary `noticeNumbers`.
-         * @public
-         * @readonly
-         */
-        readonly noticeNumbers: INTEGER[]
-    ) {}
+        organization: DisplayText,
+        noticeNumbers: INTEGER[]
+    ) {
+        this.organization = organization;
+        this.noticeNumbers = noticeNumbers;
+    }
 
     /**
      * @summary Restructures an object into a NoticeReference

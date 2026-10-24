@@ -40,41 +40,49 @@ import {
  *
  */
 export class SPKM_REQ {
+    /**
+     * @summary `requestToken`.
+     * @description
+     *
+     * Signed or MACed `Req-contents`. Typical use is a true signature;
+     * MAC is for anonymity or cached-context re-establishment.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly requestToken: REQ_TOKEN;
+    /**
+     * @summary `certif_data`.
+     * @description
+     *
+     * Initiator's certs/CRL so the target need not fetch them. How a
+     * Name is resolved to certificates is a local matter.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly certif_data?: OPTIONAL<CertificationData>;
+    /**
+     * @summary `auth_data`.
+     * @description
+     *
+     * Kerberos-style authorization data (RFC 1510). Optional; not
+     * interpreted by SPKM itself.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly auth_data?: OPTIONAL<AuthorizationData>;
+
     constructor(
-        /**
-         * @summary `requestToken`.
-         * @description
-         *
-         * Signed or MACed `Req-contents`. Typical use is a true signature;
-         * MAC is for anonymity or cached-context re-establishment.
-         *
-         * @public
-         * @readonly
-         */
-        readonly requestToken: REQ_TOKEN,
-        /**
-         * @summary `certif_data`.
-         * @description
-         *
-         * Initiator's certs/CRL so the target need not fetch them. How a
-         * Name is resolved to certificates is a local matter.
-         *
-         * @public
-         * @readonly
-         */
-        readonly certif_data?: OPTIONAL<CertificationData>,
-        /**
-         * @summary `auth_data`.
-         * @description
-         *
-         * Kerberos-style authorization data (RFC 1510). Optional; not
-         * interpreted by SPKM itself.
-         *
-         * @public
-         * @readonly
-         */
-        readonly auth_data?: OPTIONAL<AuthorizationData>
-    ) {}
+        requestToken: REQ_TOKEN,
+        certif_data?: OPTIONAL<CertificationData>,
+        auth_data?: OPTIONAL<AuthorizationData>
+    ) {
+        this.requestToken = requestToken;
+        this.certif_data = certif_data;
+        this.auth_data = auth_data;
+    }
 
     /**
      * @summary Restructures an object into a SPKM_REQ

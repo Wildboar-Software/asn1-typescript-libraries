@@ -31,20 +31,26 @@ import {
  *
  */
 export class TpsAddedToTpPool {
+    /**
+     * @summary `tpPool`.
+     * @public
+     * @readonly
+     */
+    public readonly tpPool: ObjectInstance;
+    /**
+     * @summary `tps`.
+     * @public
+     * @readonly
+     */
+    public readonly tps: ObjectInstance[];
+
     constructor(
-        /**
-         * @summary `tpPool`.
-         * @public
-         * @readonly
-         */
-        readonly tpPool: ObjectInstance,
-        /**
-         * @summary `tps`.
-         * @public
-         * @readonly
-         */
-        readonly tps: ObjectInstance[]
-    ) {}
+        tpPool: ObjectInstance,
+        tps: ObjectInstance[]
+    ) {
+        this.tpPool = tpPool;
+        this.tps = tps;
+    }
 
     /**
      * @summary Restructures an object into a TpsAddedToTpPool

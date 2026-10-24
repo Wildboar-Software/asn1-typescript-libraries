@@ -45,26 +45,34 @@ import {
  *
  */
 export class AutoModifyRegistrationParameter {
+    /**
+     * @summary `entry_class`.
+     * @public
+     * @readonly
+     */
+    public readonly entry_class: OPTIONAL<EntryClass>;
+    /**
+     * @summary `filter`.
+     * @public
+     * @readonly
+     */
+    public readonly filter: OPTIONAL<Filter>;
+    /**
+     * @summary `modifications`.
+     * @public
+     * @readonly
+     */
+    public readonly modifications: EntryModification[];
+
     constructor(
-        /**
-         * @summary `entry_class`.
-         * @public
-         * @readonly
-         */
-        readonly entry_class: OPTIONAL<EntryClass>,
-        /**
-         * @summary `filter`.
-         * @public
-         * @readonly
-         */
-        readonly filter: OPTIONAL<Filter>,
-        /**
-         * @summary `modifications`.
-         * @public
-         * @readonly
-         */
-        readonly modifications: EntryModification[]
-    ) {}
+        entry_class: OPTIONAL<EntryClass>,
+        filter: OPTIONAL<Filter>,
+        modifications: EntryModification[]
+    ) {
+        this.entry_class = entry_class;
+        this.filter = filter;
+        this.modifications = modifications;
+    }
 
     /**
      * @summary Restructures an object into a AutoModifyRegistrationParameter

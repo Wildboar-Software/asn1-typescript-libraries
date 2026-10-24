@@ -62,108 +62,127 @@ import {
  *
  */
 export class TbpDataTransferServer extends AadServer {
+    /**
+     * @summary `invokeID`.
+     * @description
+     *
+     * Optional. SIZE (6): ASCII `REQ` or `RSP` then numerals `000`–`127`
+     * from the protected protocol. Distinct from AVMP/CASP INTEGER
+     * InvokeID.
+     *
+     * @public
+     * @readonly
+     */
+    public override readonly invokeID: OPTIONAL<InvokeID>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `assoID`.
+     * @description
+     *
+     * Association identifier for the association to which this WrPDU
+     * belongs.
+     *
+     * @public
+     * @readonly
+     */
+    public override readonly assoID: AssoID; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `time`.
+     * @description
+     *
+     * UTC GeneralizedTime of creation.
+     *
+     * @public
+     * @readonly
+     */
+    public override readonly time: TimeStamp; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `seq`.
+     * @description
+     *
+     * Per-direction server sequence. First data-transfer WrPDU of the
+     * association is `0`, then +1; wraps to `0` at 2147483647. Replay/loss
+     * detection. Not used on handshake.
+     *
+     * @public
+     * @readonly
+     */
+    public override readonly seq: SequenceNumber; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `reqRekey`.
+     * @description
+     *
+     * DEFAULT FALSE. TRUE = server wants the client to rekey. Must not be
+     * TRUE if a client rekey is outstanding without `changedKey`
+     * confirmation.
+     *
+     * @public
+     * @readonly
+     */
+    public override readonly reqRekey: OPTIONAL<BOOLEAN>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `changedKey`.
+     * @description
+     *
+     * DEFAULT FALSE. TRUE = server accepted the client's rekey. This
+     * WrPDU still uses the old keys; subsequent server PDUs use the new.
+     * Must not be TRUE unless a client rekey is outstanding.
+     *
+     * @public
+     * @readonly
+     */
+    public override readonly changedKey: OPTIONAL<BOOLEAN>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `encInvoke`.
+     * @description
+     *
+     * Symmetric-key dyn parms (e.g. AES-CBC IV of 16 octets). Present if
+     * encryption is required and the algorithm has dyn parms; otherwise
+     * absent.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly encInvoke: OPTIONAL<AlgoInvoke>;
+    /**
+     * @summary `conf`.
+     * @description
+     *
+     * `clear` if confidentiality is not required (plain WrappedProt);
+     * `protected` if required (ENCIPHERED PrPDU). TS alternative is
+     * `protected_`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly conf: TbpDataTransferServer_conf;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `invokeID`.
-         * @description
-         *
-         * Optional. SIZE (6): ASCII `REQ` or `RSP` then numerals `000`–`127`
-         * from the protected protocol. Distinct from AVMP/CASP INTEGER
-         * InvokeID.
-         *
-         * @public
-         * @readonly
-         */
-        override readonly invokeID: OPTIONAL<InvokeID> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `assoID`.
-         * @description
-         *
-         * Association identifier for the association to which this WrPDU
-         * belongs.
-         *
-         * @public
-         * @readonly
-         */
-        override readonly assoID: AssoID /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `time`.
-         * @description
-         *
-         * UTC GeneralizedTime of creation.
-         *
-         * @public
-         * @readonly
-         */
-        override readonly time: TimeStamp /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `seq`.
-         * @description
-         *
-         * Per-direction server sequence. First data-transfer WrPDU of the
-         * association is `0`, then +1; wraps to `0` at 2147483647. Replay/loss
-         * detection. Not used on handshake.
-         *
-         * @public
-         * @readonly
-         */
-        override readonly seq: SequenceNumber /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `reqRekey`.
-         * @description
-         *
-         * DEFAULT FALSE. TRUE = server wants the client to rekey. Must not be
-         * TRUE if a client rekey is outstanding without `changedKey`
-         * confirmation.
-         *
-         * @public
-         * @readonly
-         */
-        override readonly reqRekey: OPTIONAL<BOOLEAN> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `changedKey`.
-         * @description
-         *
-         * DEFAULT FALSE. TRUE = server accepted the client's rekey. This
-         * WrPDU still uses the old keys; subsequent server PDUs use the new.
-         * Must not be TRUE unless a client rekey is outstanding.
-         *
-         * @public
-         * @readonly
-         */
-        override readonly changedKey: OPTIONAL<BOOLEAN> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `encInvoke`.
-         * @description
-         *
-         * Symmetric-key dyn parms (e.g. AES-CBC IV of 16 octets). Present if
-         * encryption is required and the algorithm has dyn parms; otherwise
-         * absent.
-         *
-         * @public
-         * @readonly
-         */
-        readonly encInvoke: OPTIONAL<AlgoInvoke>,
-        /**
-         * @summary `conf`.
-         * @description
-         *
-         * `clear` if confidentiality is not required (plain WrappedProt);
-         * `protected` if required (ENCIPHERED PrPDU). TS alternative is
-         * `protected_`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly conf: TbpDataTransferServer_conf,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
+        invokeID: OPTIONAL<InvokeID>,
+        assoID: AssoID,
+        time: TimeStamp,
+        seq: SequenceNumber,
+        reqRekey: OPTIONAL<BOOLEAN>,
+        changedKey: OPTIONAL<BOOLEAN>,
+        encInvoke: OPTIONAL<AlgoInvoke>,
+        conf: TbpDataTransferServer_conf,
+        _unrecognizedExtensionsList: _Element[] = []
     ) {
         super(invokeID, assoID, time, seq, reqRekey, changedKey);
+        this.invokeID = invokeID;
+        this.assoID = assoID;
+        this.time = time;
+        this.seq = seq;
+        this.reqRekey = reqRekey;
+        this.changedKey = changedKey;
+        this.encInvoke = encInvoke;
+        this.conf = conf;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
     }
 
     /**

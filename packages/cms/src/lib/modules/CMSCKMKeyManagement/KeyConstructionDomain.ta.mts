@@ -40,26 +40,34 @@ import {
  *
  */
 export class KeyConstructionDomain {
+    /**
+     * @summary `domainName`.
+     * @public
+     * @readonly
+     */
+    public readonly domainName: DomainName;
+    /**
+     * @summary `domainMaintenanceLevel`.
+     * @public
+     * @readonly
+     */
+    public readonly domainMaintenanceLevel: DomainMaintenanceLevel;
+    /**
+     * @summary `domainParams`.
+     * @public
+     * @readonly
+     */
+    public readonly domainParams?: OPTIONAL<DomainParams>;
+
     constructor(
-        /**
-         * @summary `domainName`.
-         * @public
-         * @readonly
-         */
-        readonly domainName: DomainName,
-        /**
-         * @summary `domainMaintenanceLevel`.
-         * @public
-         * @readonly
-         */
-        readonly domainMaintenanceLevel: DomainMaintenanceLevel,
-        /**
-         * @summary `domainParams`.
-         * @public
-         * @readonly
-         */
-        readonly domainParams?: OPTIONAL<DomainParams>
-    ) {}
+        domainName: DomainName,
+        domainMaintenanceLevel: DomainMaintenanceLevel,
+        domainParams?: OPTIONAL<DomainParams>
+    ) {
+        this.domainName = domainName;
+        this.domainMaintenanceLevel = domainMaintenanceLevel;
+        this.domainParams = domainParams;
+    }
 
     /**
      * @summary Restructures an object into a KeyConstructionDomain

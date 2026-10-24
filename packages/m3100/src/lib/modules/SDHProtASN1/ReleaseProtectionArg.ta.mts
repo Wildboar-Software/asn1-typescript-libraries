@@ -44,26 +44,34 @@ import {
  *
  */
 export class ReleaseProtectionArg {
+    /**
+     * @summary `switchType`.
+     * @public
+     * @readonly
+     */
+    public readonly switchType: SwitchType;
+    /**
+     * @summary `protectionEntity`.
+     * @public
+     * @readonly
+     */
+    public readonly protectionEntity: ProtectionEntity;
+    /**
+     * @summary `otherInfo`.
+     * @public
+     * @readonly
+     */
+    public readonly otherInfo?: OPTIONAL<ManagementExtension[]>;
+
     constructor(
-        /**
-         * @summary `switchType`.
-         * @public
-         * @readonly
-         */
-        readonly switchType: SwitchType,
-        /**
-         * @summary `protectionEntity`.
-         * @public
-         * @readonly
-         */
-        readonly protectionEntity: ProtectionEntity,
-        /**
-         * @summary `otherInfo`.
-         * @public
-         * @readonly
-         */
-        readonly otherInfo?: OPTIONAL<ManagementExtension[]>
-    ) {}
+        switchType: SwitchType,
+        protectionEntity: ProtectionEntity,
+        otherInfo?: OPTIONAL<ManagementExtension[]>
+    ) {
+        this.switchType = switchType;
+        this.protectionEntity = protectionEntity;
+        this.otherInfo = otherInfo;
+    }
 
     /**
      * @summary Restructures an object into a ReleaseProtectionArg

@@ -38,20 +38,26 @@ import {
  *
  */
 export class NNUAMSReasonCodeField {
+    /**
+     * @summary `nn_ua_ms_basic_code`.
+     * @public
+     * @readonly
+     */
+    public readonly nn_ua_ms_basic_code: NNUAMSBasicCodeField;
+    /**
+     * @summary `nn_ua_ms_diagnostic`.
+     * @public
+     * @readonly
+     */
+    public readonly nn_ua_ms_diagnostic?: OPTIONAL<NNUAMSDiagnosticField>;
+
     constructor(
-        /**
-         * @summary `nn_ua_ms_basic_code`.
-         * @public
-         * @readonly
-         */
-        readonly nn_ua_ms_basic_code: NNUAMSBasicCodeField,
-        /**
-         * @summary `nn_ua_ms_diagnostic`.
-         * @public
-         * @readonly
-         */
-        readonly nn_ua_ms_diagnostic?: OPTIONAL<NNUAMSDiagnosticField>
-    ) {}
+        nn_ua_ms_basic_code: NNUAMSBasicCodeField,
+        nn_ua_ms_diagnostic?: OPTIONAL<NNUAMSDiagnosticField>
+    ) {
+        this.nn_ua_ms_basic_code = nn_ua_ms_basic_code;
+        this.nn_ua_ms_diagnostic = nn_ua_ms_diagnostic;
+    }
 
     /**
      * @summary Restructures an object into a NNUAMSReasonCodeField

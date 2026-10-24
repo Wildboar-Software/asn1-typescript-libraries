@@ -32,44 +32,54 @@ import { SMServingNodeAddressList, _decode_SMServingNodeAddressList, _encode_SMS
  */
 export
 class ReportSM_DeliveryStatusRes {
+    /**
+     * @summary `storedMSISDN`.
+     * @description
+     *
+     * MSISDN stored in Message Waiting Data.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly storedMSISDN?: OPTIONAL<ISDN_AddressString>;
+    /**
+     * @summary `extensionContainer`.
+     * @description
+     *
+     * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary `registeredSMServingNodes`.
+     * @description
+     *
+     * Registered SM serving nodes.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly registeredSMServingNodes?: OPTIONAL<SMServingNodeAddressList>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `storedMSISDN`.
-         * @description
-         *
-         * MSISDN stored in Message Waiting Data.
-         *
-         * @public
-         * @readonly
-         */
-        readonly storedMSISDN?: OPTIONAL<ISDN_AddressString>,
-        /**
-         * @summary `extensionContainer`.
-         * @description
-         *
-         * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary `registeredSMServingNodes`.
-         * @description
-         *
-         * Registered SM serving nodes.
-         *
-         * @public
-         * @readonly
-         */
-        readonly registeredSMServingNodes?: OPTIONAL<SMServingNodeAddressList>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        storedMSISDN?: OPTIONAL<ISDN_AddressString>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        registeredSMServingNodes?: OPTIONAL<SMServingNodeAddressList>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.storedMSISDN = storedMSISDN;
+        this.extensionContainer = extensionContainer;
+        this.registeredSMServingNodes = registeredSMServingNodes;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a ReportSM_DeliveryStatusRes

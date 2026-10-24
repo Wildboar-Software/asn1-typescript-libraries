@@ -35,20 +35,26 @@ import {
  *
  */
 export class MessageReference {
+    /**
+     * @summary `user`.
+     * @public
+     * @readonly
+     */
+    public readonly user: OPTIONAL<ORName>;
+    /**
+     * @summary `user_relative_identifier`.
+     * @public
+     * @readonly
+     */
+    public readonly user_relative_identifier: PrintableString;
+
     constructor(
-        /**
-         * @summary `user`.
-         * @public
-         * @readonly
-         */
-        readonly user: OPTIONAL<ORName>,
-        /**
-         * @summary `user_relative_identifier`.
-         * @public
-         * @readonly
-         */
-        readonly user_relative_identifier: PrintableString
-    ) {}
+        user: OPTIONAL<ORName>,
+        user_relative_identifier: PrintableString
+    ) {
+        this.user = user;
+        this.user_relative_identifier = user_relative_identifier;
+    }
 
     /**
      * @summary Restructures an object into a MessageReference

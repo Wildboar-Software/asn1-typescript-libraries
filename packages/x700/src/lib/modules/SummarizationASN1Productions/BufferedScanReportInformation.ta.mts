@@ -76,81 +76,97 @@ import {
  *
  */
 export class BufferedScanReportInformation {
+    /**
+     * @summary `granularityPeriod`.
+     * @description
+     *
+     * Time between successive scans, as in X.739.
+     * Mandatory. X.738 §8.2.2.3.1, §8.10.
+     * @public
+     * @readonly
+     */
+    public readonly granularityPeriod: TimePeriod;
+    /**
+     * @summary `firstScanInitiationTime`.
+     * @description
+     *
+     * Start time of the first scan in the buffer.
+     * Required if `timeStampReportMode` is present with a
+     * non-zero value. X.738 §8.2.2.3.2, A.9.
+     * @public
+     * @readonly
+     */
+    public readonly firstScanInitiationTime: OPTIONAL<GeneralizedTime>;
+    /**
+     * @summary `suspectIntervals`.
+     * @description
+     *
+     * Number of scheduled scans with any attribute
+     * missing or suspect. Default 0. X.738 §8.2.2.3.3,
+     * §8.1.9.3.
+     * @public
+     * @readonly
+     */
+    public readonly suspectIntervals: OPTIONAL<SuspectIntervals>;
+    /**
+     * @summary `bufferedObservationList`.
+     * @description
+     *
+     * One entry per observed object: report-time
+     * attributes, time-ordered scan buffer, and numeric
+     * buffer. Mandatory. X.738 §8.2.2.3.4, Table 4.
+     * @public
+     * @readonly
+     */
+    public readonly bufferedObservationList: BufferedObservationList;
+    /**
+     * @summary `incompleteScan`.
+     * @description
+     *
+     * Present if the scan could not be completed. X.738
+     * §8.2.2.3.5, Table 4 note 2.
+     * @public
+     * @readonly
+     */
+    public readonly incompleteScan?: OPTIONAL<IncompleteScan>;
+    /**
+     * @summary `additionalText`.
+     * @description
+     *
+     * Optional textual extension as in X.733. X.738
+     * §8.2.2.3.6.
+     * @public
+     * @readonly
+     */
+    public readonly additionalText?: OPTIONAL<AdditionalText>;
+    /**
+     * @summary `additionalInformation`.
+     * @description
+     *
+     * Optional structured extension as in X.733. X.738
+     * §8.2.2.3.7.
+     * @public
+     * @readonly
+     */
+    public readonly additionalInformation?: OPTIONAL<AdditionalInformation>;
+
     constructor(
-        /**
-         * @summary `granularityPeriod`.
-         * @description
-         *
-         * Time between successive scans, as in X.739.
-         * Mandatory. X.738 §8.2.2.3.1, §8.10.
-         * @public
-         * @readonly
-         */
-        readonly granularityPeriod: TimePeriod,
-        /**
-         * @summary `firstScanInitiationTime`.
-         * @description
-         *
-         * Start time of the first scan in the buffer.
-         * Required if `timeStampReportMode` is present with a
-         * non-zero value. X.738 §8.2.2.3.2, A.9.
-         * @public
-         * @readonly
-         */
-        readonly firstScanInitiationTime: OPTIONAL<GeneralizedTime>,
-        /**
-         * @summary `suspectIntervals`.
-         * @description
-         *
-         * Number of scheduled scans with any attribute
-         * missing or suspect. Default 0. X.738 §8.2.2.3.3,
-         * §8.1.9.3.
-         * @public
-         * @readonly
-         */
-        readonly suspectIntervals: OPTIONAL<SuspectIntervals>,
-        /**
-         * @summary `bufferedObservationList`.
-         * @description
-         *
-         * One entry per observed object: report-time
-         * attributes, time-ordered scan buffer, and numeric
-         * buffer. Mandatory. X.738 §8.2.2.3.4, Table 4.
-         * @public
-         * @readonly
-         */
-        readonly bufferedObservationList: BufferedObservationList,
-        /**
-         * @summary `incompleteScan`.
-         * @description
-         *
-         * Present if the scan could not be completed. X.738
-         * §8.2.2.3.5, Table 4 note 2.
-         * @public
-         * @readonly
-         */
-        readonly incompleteScan?: OPTIONAL<IncompleteScan>,
-        /**
-         * @summary `additionalText`.
-         * @description
-         *
-         * Optional textual extension as in X.733. X.738
-         * §8.2.2.3.6.
-         * @public
-         * @readonly
-         */
-        readonly additionalText?: OPTIONAL<AdditionalText>,
-        /**
-         * @summary `additionalInformation`.
-         * @description
-         *
-         * Optional structured extension as in X.733. X.738
-         * §8.2.2.3.7.
-         * @public
-         * @readonly
-         */
-        readonly additionalInformation?: OPTIONAL<AdditionalInformation>
-    ) {}
+        granularityPeriod: TimePeriod,
+        firstScanInitiationTime: OPTIONAL<GeneralizedTime>,
+        suspectIntervals: OPTIONAL<SuspectIntervals>,
+        bufferedObservationList: BufferedObservationList,
+        incompleteScan?: OPTIONAL<IncompleteScan>,
+        additionalText?: OPTIONAL<AdditionalText>,
+        additionalInformation?: OPTIONAL<AdditionalInformation>
+    ) {
+        this.granularityPeriod = granularityPeriod;
+        this.firstScanInitiationTime = firstScanInitiationTime;
+        this.suspectIntervals = suspectIntervals;
+        this.bufferedObservationList = bufferedObservationList;
+        this.incompleteScan = incompleteScan;
+        this.additionalText = additionalText;
+        this.additionalInformation = additionalInformation;
+    }
 
     /**
      * @summary Restructures an object into a BufferedScanReportInformation

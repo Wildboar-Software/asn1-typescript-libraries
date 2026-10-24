@@ -44,26 +44,34 @@ import { sha1Identifier } from "../PKIX1-PSS-OAEP-Algorithms-2009/sha1Identifier
  *
  */
 export class RSAES_OAEP_params {
+    /**
+     * @summary `hashFunc`.
+     * @public
+     * @readonly
+     */
+    public readonly hashFunc?: OPTIONAL<HashAlgorithm>;
+    /**
+     * @summary `maskGenFunc`.
+     * @public
+     * @readonly
+     */
+    public readonly maskGenFunc?: OPTIONAL<MaskGenAlgorithm>;
+    /**
+     * @summary `pSourceFunc`.
+     * @public
+     * @readonly
+     */
+    public readonly pSourceFunc?: OPTIONAL<PSourceAlgorithm>;
+
     constructor(
-        /**
-         * @summary `hashFunc`.
-         * @public
-         * @readonly
-         */
-        readonly hashFunc?: OPTIONAL<HashAlgorithm>,
-        /**
-         * @summary `maskGenFunc`.
-         * @public
-         * @readonly
-         */
-        readonly maskGenFunc?: OPTIONAL<MaskGenAlgorithm>,
-        /**
-         * @summary `pSourceFunc`.
-         * @public
-         * @readonly
-         */
-        readonly pSourceFunc?: OPTIONAL<PSourceAlgorithm>
-    ) {}
+        hashFunc?: OPTIONAL<HashAlgorithm>,
+        maskGenFunc?: OPTIONAL<MaskGenAlgorithm>,
+        pSourceFunc?: OPTIONAL<PSourceAlgorithm>
+    ) {
+        this.hashFunc = hashFunc;
+        this.maskGenFunc = maskGenFunc;
+        this.pSourceFunc = pSourceFunc;
+    }
 
     /**
      * @summary Restructures an object into a RSAES_OAEP_params

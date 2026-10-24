@@ -36,84 +36,102 @@ import { LCSLocationInfo, _decode_LCSLocationInfo, _encode_LCSLocationInfo } fro
  */
 export
 class RoutingInfoForLCS_Res {
+    /**
+     * @summary `targetMS`.
+     * @description
+     *
+     * Target subscriber identity.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly targetMS: SubscriberIdentity;
+    /**
+     * @summary `lcsLocationInfo`.
+     * @description
+     *
+     * Serving node for LCS.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly lcsLocationInfo: LCSLocationInfo;
+    /**
+     * @summary `extensionContainer`.
+     * @description
+     *
+     * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary `v_gmlc_Address`.
+     * @description
+     *
+     * Visited GMLC address.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly v_gmlc_Address?: OPTIONAL<GSN_Address>;
+    /**
+     * @summary `h_gmlc_Address`.
+     * @description
+     *
+     * Home GMLC address.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly h_gmlc_Address?: OPTIONAL<GSN_Address>;
+    /**
+     * @summary `ppr_Address`.
+     * @description
+     *
+     * Privacy Profile Register address.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ppr_Address?: OPTIONAL<GSN_Address>;
+    /**
+     * @summary `additional_v_gmlc_Address`.
+     * @description
+     *
+     * Additional visited GMLC address.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly additional_v_gmlc_Address?: OPTIONAL<GSN_Address>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `targetMS`.
-         * @description
-         *
-         * Target subscriber identity.
-         *
-         * @public
-         * @readonly
-         */
-        readonly targetMS: SubscriberIdentity,
-        /**
-         * @summary `lcsLocationInfo`.
-         * @description
-         *
-         * Serving node for LCS.
-         *
-         * @public
-         * @readonly
-         */
-        readonly lcsLocationInfo: LCSLocationInfo,
-        /**
-         * @summary `extensionContainer`.
-         * @description
-         *
-         * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary `v_gmlc_Address`.
-         * @description
-         *
-         * Visited GMLC address.
-         *
-         * @public
-         * @readonly
-         */
-        readonly v_gmlc_Address?: OPTIONAL<GSN_Address>,
-        /**
-         * @summary `h_gmlc_Address`.
-         * @description
-         *
-         * Home GMLC address.
-         *
-         * @public
-         * @readonly
-         */
-        readonly h_gmlc_Address?: OPTIONAL<GSN_Address>,
-        /**
-         * @summary `ppr_Address`.
-         * @description
-         *
-         * Privacy Profile Register address.
-         *
-         * @public
-         * @readonly
-         */
-        readonly ppr_Address?: OPTIONAL<GSN_Address>,
-        /**
-         * @summary `additional_v_gmlc_Address`.
-         * @description
-         *
-         * Additional visited GMLC address.
-         *
-         * @public
-         * @readonly
-         */
-        readonly additional_v_gmlc_Address?: OPTIONAL<GSN_Address>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        targetMS: SubscriberIdentity,
+        lcsLocationInfo: LCSLocationInfo,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        v_gmlc_Address?: OPTIONAL<GSN_Address>,
+        h_gmlc_Address?: OPTIONAL<GSN_Address>,
+        ppr_Address?: OPTIONAL<GSN_Address>,
+        additional_v_gmlc_Address?: OPTIONAL<GSN_Address>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.targetMS = targetMS;
+        this.lcsLocationInfo = lcsLocationInfo;
+        this.extensionContainer = extensionContainer;
+        this.v_gmlc_Address = v_gmlc_Address;
+        this.h_gmlc_Address = h_gmlc_Address;
+        this.ppr_Address = ppr_Address;
+        this.additional_v_gmlc_Address = additional_v_gmlc_Address;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a RoutingInfoForLCS_Res

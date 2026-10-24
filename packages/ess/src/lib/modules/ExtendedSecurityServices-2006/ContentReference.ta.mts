@@ -40,40 +40,48 @@ import {
  *
  */
 export class ContentReference {
+    /**
+     * @summary `contentType`.
+     * @description
+     *
+     * Content type from the referenced `SignedData` ([RFC 2634 §2.11](https://datatracker.ietf.org/doc/html/rfc2634#section-2.11)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly contentType: ContentType;
+    /**
+     * @summary `signedContentIdentifier`.
+     * @description
+     *
+     * `ContentIdentifier` from the referenced `SignedData`'s
+     * `contentIdentifier` attribute (constructed as for receipt requests in
+     * [RFC 2634 §2.7](https://datatracker.ietf.org/doc/html/rfc2634#section-2.7)) ([RFC 2634 §2.11](https://datatracker.ietf.org/doc/html/rfc2634#section-2.11)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly signedContentIdentifier: ContentIdentifier;
+    /**
+     * @summary `originatorSignatureValue`.
+     * @description
+     *
+     * Signature value from the referenced `SignedData` ([RFC 2634 §2.11](https://datatracker.ietf.org/doc/html/rfc2634#section-2.11)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly originatorSignatureValue: OCTET_STRING;
+
     constructor(
-        /**
-         * @summary `contentType`.
-         * @description
-         *
-         * Content type from the referenced `SignedData` ([RFC 2634 §2.11](https://datatracker.ietf.org/doc/html/rfc2634#section-2.11)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly contentType: ContentType,
-        /**
-         * @summary `signedContentIdentifier`.
-         * @description
-         *
-         * `ContentIdentifier` from the referenced `SignedData`'s
-         * `contentIdentifier` attribute (constructed as for receipt requests in
-         * [RFC 2634 §2.7](https://datatracker.ietf.org/doc/html/rfc2634#section-2.7)) ([RFC 2634 §2.11](https://datatracker.ietf.org/doc/html/rfc2634#section-2.11)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly signedContentIdentifier: ContentIdentifier,
-        /**
-         * @summary `originatorSignatureValue`.
-         * @description
-         *
-         * Signature value from the referenced `SignedData` ([RFC 2634 §2.11](https://datatracker.ietf.org/doc/html/rfc2634#section-2.11)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly originatorSignatureValue: OCTET_STRING
-    ) {}
+        contentType: ContentType,
+        signedContentIdentifier: ContentIdentifier,
+        originatorSignatureValue: OCTET_STRING
+    ) {
+        this.contentType = contentType;
+        this.signedContentIdentifier = signedContentIdentifier;
+        this.originatorSignatureValue = originatorSignatureValue;
+    }
 
     /**
      * @summary Restructures an object into a ContentReference

@@ -50,47 +50,57 @@ import { DimensionParamOffer_window, _decode_DimensionParamOffer_window, _encode
  */
 export
 class DimensionParamOffer {
+    /**
+     * @summary `bound`.
+     * @description
+     * Offered `d-bound`: unbounded or an integer limit. X default
+     * unbounded. Explicit addressing is invalid if > bound+1;
+     * < 1 is always invalid. If blocks or fields are used,
+     * x-bound MUST be bounded. ISO/IEC 9040:1997 §18.2.3.
+     * @public
+     * @readonly
+     */
+    public readonly bound?: OPTIONAL<DimensionParamOffer_bound>;
+    /**
+     * @summary `addressing`.
+     * @description
+     * Offered `d-addressing`. Default `"higher only"`. ISO/IEC
+     * 9040:1997 §18.2.3.
+     * @public
+     * @readonly
+     */
+    public readonly addressing?: OPTIONAL<DimensionParamOffer_addressing>;
+    /**
+     * @summary `absolute`.
+     * @description
+     * Offered `d-absolute`. Default `"no"`. ISO/IEC 9040:1997
+     * §18.2.3.
+     * @public
+     * @readonly
+     */
+    public readonly absolute?: OPTIONAL<DimensionParamOffer_absolute>;
+    /**
+     * @summary `window`.
+     * @description
+     * Offered update-window-size. Constrains TEXT/REPEAT-TEXT/
+     * ATTRIBUTE/ERASE lower bound; does not itself cap TEXT
+     * upper bound. ISO/IEC 9040:1997 §18.2.3, §19.1.1.3.
+     * @public
+     * @readonly
+     */
+    public readonly window?: OPTIONAL<DimensionParamOffer_window>;
+
     constructor (
-        /**
-         * @summary `bound`.
-         * @description
-         * Offered `d-bound`: unbounded or an integer limit. X default
-         * unbounded. Explicit addressing is invalid if > bound+1;
-         * < 1 is always invalid. If blocks or fields are used,
-         * x-bound MUST be bounded. ISO/IEC 9040:1997 §18.2.3.
-         * @public
-         * @readonly
-         */
-        readonly bound?: OPTIONAL<DimensionParamOffer_bound>,
-        /**
-         * @summary `addressing`.
-         * @description
-         * Offered `d-addressing`. Default `"higher only"`. ISO/IEC
-         * 9040:1997 §18.2.3.
-         * @public
-         * @readonly
-         */
-        readonly addressing?: OPTIONAL<DimensionParamOffer_addressing>,
-        /**
-         * @summary `absolute`.
-         * @description
-         * Offered `d-absolute`. Default `"no"`. ISO/IEC 9040:1997
-         * §18.2.3.
-         * @public
-         * @readonly
-         */
-        readonly absolute?: OPTIONAL<DimensionParamOffer_absolute>,
-        /**
-         * @summary `window`.
-         * @description
-         * Offered update-window-size. Constrains TEXT/REPEAT-TEXT/
-         * ATTRIBUTE/ERASE lower bound; does not itself cap TEXT
-         * upper bound. ISO/IEC 9040:1997 §18.2.3, §19.1.1.3.
-         * @public
-         * @readonly
-         */
-        readonly window?: OPTIONAL<DimensionParamOffer_window>
-    ) {}
+        bound?: OPTIONAL<DimensionParamOffer_bound>,
+        addressing?: OPTIONAL<DimensionParamOffer_addressing>,
+        absolute?: OPTIONAL<DimensionParamOffer_absolute>,
+        window?: OPTIONAL<DimensionParamOffer_window>
+    ) {
+        this.bound = bound;
+        this.addressing = addressing;
+        this.absolute = absolute;
+        this.window = window;
+    }
 
     /**
      * @summary Restructures an object into a DimensionParamOffer

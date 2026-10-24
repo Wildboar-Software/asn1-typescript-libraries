@@ -36,34 +36,40 @@ import { Unsigned8, _decode_Unsigned8, _encode_Unsigned8 } from "../ISO-9506-MMS
  */
 export
 class GetAlarmSummary_Request_severityFilter {
+    /**
+     * @summary `mostSevere`.
+     * @description
+     *
+     * Upper bound of severity (smaller integer = more
+     * severe). Inclusive.
+     *
+     * [ISO 9506-1:2003 §18.5.1.1.4]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mostSevere: Unsigned8;
+    /**
+     * @summary `leastSevere`.
+     * @description
+     *
+     * Lower bound of severity (larger integer = less
+     * severe). Inclusive.
+     *
+     * [ISO 9506-1:2003 §18.5.1.1.4]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly leastSevere: Unsigned8;
+
     constructor (
-        /**
-         * @summary `mostSevere`.
-         * @description
-         *
-         * Upper bound of severity (smaller integer = more
-         * severe). Inclusive.
-         *
-         * [ISO 9506-1:2003 §18.5.1.1.4]
-         *
-         * @public
-         * @readonly
-         */
-        readonly mostSevere: Unsigned8,
-        /**
-         * @summary `leastSevere`.
-         * @description
-         *
-         * Lower bound of severity (larger integer = less
-         * severe). Inclusive.
-         *
-         * [ISO 9506-1:2003 §18.5.1.1.4]
-         *
-         * @public
-         * @readonly
-         */
-        readonly leastSevere: Unsigned8
-    ) {}
+        mostSevere: Unsigned8,
+        leastSevere: Unsigned8
+    ) {
+        this.mostSevere = mostSevere;
+        this.leastSevere = leastSevere;
+    }
 
     /**
      * @summary Restructures an object into a GetAlarmSummary_Request_severityFilter

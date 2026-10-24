@@ -30,26 +30,34 @@ import * as $ from '@wildboar/asn1/functional';
  *
  */
 export class LinkEndCharacteristics {
+    /**
+     * @summary `endID`.
+     * @public
+     * @readonly
+     */
+    public readonly endID: GraphicString;
+    /**
+     * @summary `loopbackSupported`.
+     * @public
+     * @readonly
+     */
+    public readonly loopbackSupported: BOOLEAN;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `endID`.
-         * @public
-         * @readonly
-         */
-        readonly endID: GraphicString,
-        /**
-         * @summary `loopbackSupported`.
-         * @public
-         * @readonly
-         */
-        readonly loopbackSupported: BOOLEAN,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        endID: GraphicString,
+        loopbackSupported: BOOLEAN,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.endID = endID;
+        this.loopbackSupported = loopbackSupported;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a LinkEndCharacteristics

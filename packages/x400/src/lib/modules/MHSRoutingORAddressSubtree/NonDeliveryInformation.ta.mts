@@ -44,26 +44,34 @@ import {
  *
  */
 export class NonDeliveryInformation {
+    /**
+     * @summary `reason`.
+     * @public
+     * @readonly
+     */
+    public readonly reason: NonDeliveryReasonCode;
+    /**
+     * @summary `diagnostic`.
+     * @public
+     * @readonly
+     */
+    public readonly diagnostic?: OPTIONAL<NonDeliveryDiagnosticCode>;
+    /**
+     * @summary `supplementary_information`.
+     * @public
+     * @readonly
+     */
+    public readonly supplementary_information?: OPTIONAL<SupplementaryInformation>;
+
     constructor(
-        /**
-         * @summary `reason`.
-         * @public
-         * @readonly
-         */
-        readonly reason: NonDeliveryReasonCode,
-        /**
-         * @summary `diagnostic`.
-         * @public
-         * @readonly
-         */
-        readonly diagnostic?: OPTIONAL<NonDeliveryDiagnosticCode>,
-        /**
-         * @summary `supplementary_information`.
-         * @public
-         * @readonly
-         */
-        readonly supplementary_information?: OPTIONAL<SupplementaryInformation>
-    ) {}
+        reason: NonDeliveryReasonCode,
+        diagnostic?: OPTIONAL<NonDeliveryDiagnosticCode>,
+        supplementary_information?: OPTIONAL<SupplementaryInformation>
+    ) {
+        this.reason = reason;
+        this.diagnostic = diagnostic;
+        this.supplementary_information = supplementary_information;
+    }
 
     /**
      * @summary Restructures an object into a NonDeliveryInformation

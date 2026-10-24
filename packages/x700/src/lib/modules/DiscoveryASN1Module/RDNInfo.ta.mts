@@ -42,28 +42,34 @@ import {
  *
  */
 export class RDNInfo {
+    /**
+     * @summary `rdn`.
+     * @description
+     *
+     * RDN that identifies this object relative to its superior in
+     * the discovered tree. ITU-T Rec. X.750 (10/96) §8.3.2.4.
+     * @public
+     * @readonly
+     */
+    public readonly rdn: RelativeDistinguishedName;
+    /**
+     * @summary `moClass`.
+     * @description
+     *
+     * Class of this object. Present when `classRequest` was true.
+     * ITU-T Rec. X.750 (10/96) §8.3.2.3–§8.3.2.4.
+     * @public
+     * @readonly
+     */
+    public readonly moClass?: OPTIONAL<GdmoObjectClass>;
+
     constructor(
-        /**
-         * @summary `rdn`.
-         * @description
-         *
-         * RDN that identifies this object relative to its superior in
-         * the discovered tree. ITU-T Rec. X.750 (10/96) §8.3.2.4.
-         * @public
-         * @readonly
-         */
-        readonly rdn: RelativeDistinguishedName,
-        /**
-         * @summary `moClass`.
-         * @description
-         *
-         * Class of this object. Present when `classRequest` was true.
-         * ITU-T Rec. X.750 (10/96) §8.3.2.3–§8.3.2.4.
-         * @public
-         * @readonly
-         */
-        readonly moClass?: OPTIONAL<GdmoObjectClass>
-    ) {}
+        rdn: RelativeDistinguishedName,
+        moClass?: OPTIONAL<GdmoObjectClass>
+    ) {
+        this.rdn = rdn;
+        this.moClass = moClass;
+    }
 
     /**
      * @summary Restructures an object into a RDNInfo

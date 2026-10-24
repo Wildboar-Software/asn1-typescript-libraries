@@ -50,35 +50,43 @@ import {
  *
  */
 export class ActionErrorInfo {
+  /**
+   * @summary `errorStatus`.
+   * @description
+   *
+   * Which action-level error occurred.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly errorStatus: ActionErrorInfo_errorStatus;
+  /**
+   * @summary `errorInfo`.
+   * @description
+   *
+   * Identifying detail: action type, unknown argument,
+   * or invalid argument value.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly errorInfo: ActionErrorInfo_errorInfo;
+  /**
+   * @summary Extensions that are not recognized.
+   * @public
+   * @readonly
+   */
+  public readonly _unrecognizedExtensionsList: _Element[];
+
   constructor(
-    /**
-     * @summary `errorStatus`.
-     * @description
-     *
-     * Which action-level error occurred.
-     *
-     * @public
-     * @readonly
-     */
-    readonly errorStatus: ActionErrorInfo_errorStatus,
-    /**
-     * @summary `errorInfo`.
-     * @description
-     *
-     * Identifying detail: action type, unknown argument,
-     * or invalid argument value.
-     *
-     * @public
-     * @readonly
-     */
-    readonly errorInfo: ActionErrorInfo_errorInfo,
-    /**
-     * @summary Extensions that are not recognized.
-     * @public
-     * @readonly
-     */
-    readonly _unrecognizedExtensionsList: _Element[] = []
-  ) {}
+    errorStatus: ActionErrorInfo_errorStatus,
+    errorInfo: ActionErrorInfo_errorInfo,
+    _unrecognizedExtensionsList: _Element[] = []
+  ) {
+    this.errorStatus = errorStatus;
+    this.errorInfo = errorInfo;
+    this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+  }
 
   /**
    * @summary Restructures an object into a ActionErrorInfo

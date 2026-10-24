@@ -49,44 +49,52 @@ import {
  *
  */
 export class ObservationScan {
+    /**
+     * @summary `observedObjectInstance`.
+     * @description
+     *
+     * Name of the observed object. Shall be present if
+     * `suppressObjectInstance` is false; omitted if
+     * true. X.738 §8.2.2.1.3, Table 2 note 1.
+     * @public
+     * @readonly
+     */
+    public readonly observedObjectInstance?: OPTIONAL<ObjectInstance>;
+    /**
+     * @summary `attributeMeasureList`.
+     * @description
+     *
+     * Scanned values with identifiers, optional time
+     * stamp and suspect flag. Identifiers of missing
+     * values are indicated (value absent). Omitted if
+     * the scan-attribute list is empty. X.738
+     * §8.2.2.1.3, §8.1.2.3.
+     * @public
+     * @readonly
+     */
+    public readonly attributeMeasureList?: OPTIONAL<AttributeMeasure[]>;
+    /**
+     * @summary `numericValueArray`.
+     * @description
+     *
+     * Numeric values in `numericAttributeIdArray` order,
+     * without identifiers. Missing attributes are
+     * `missingData`. Identifiers can be retrieved from
+     * the scanner. X.738 §8.2.2.1.3, Table 2 C1.
+     * @public
+     * @readonly
+     */
+    public readonly numericValueArray?: OPTIONAL<NumericMeasure[]>;
+
     constructor(
-        /**
-         * @summary `observedObjectInstance`.
-         * @description
-         *
-         * Name of the observed object. Shall be present if
-         * `suppressObjectInstance` is false; omitted if
-         * true. X.738 §8.2.2.1.3, Table 2 note 1.
-         * @public
-         * @readonly
-         */
-        readonly observedObjectInstance?: OPTIONAL<ObjectInstance>,
-        /**
-         * @summary `attributeMeasureList`.
-         * @description
-         *
-         * Scanned values with identifiers, optional time
-         * stamp and suspect flag. Identifiers of missing
-         * values are indicated (value absent). Omitted if
-         * the scan-attribute list is empty. X.738
-         * §8.2.2.1.3, §8.1.2.3.
-         * @public
-         * @readonly
-         */
-        readonly attributeMeasureList?: OPTIONAL<AttributeMeasure[]>,
-        /**
-         * @summary `numericValueArray`.
-         * @description
-         *
-         * Numeric values in `numericAttributeIdArray` order,
-         * without identifiers. Missing attributes are
-         * `missingData`. Identifiers can be retrieved from
-         * the scanner. X.738 §8.2.2.1.3, Table 2 C1.
-         * @public
-         * @readonly
-         */
-        readonly numericValueArray?: OPTIONAL<NumericMeasure[]>
-    ) {}
+        observedObjectInstance?: OPTIONAL<ObjectInstance>,
+        attributeMeasureList?: OPTIONAL<AttributeMeasure[]>,
+        numericValueArray?: OPTIONAL<NumericMeasure[]>
+    ) {
+        this.observedObjectInstance = observedObjectInstance;
+        this.attributeMeasureList = attributeMeasureList;
+        this.numericValueArray = numericValueArray;
+    }
 
     /**
      * @summary Restructures an object into a ObservationScan

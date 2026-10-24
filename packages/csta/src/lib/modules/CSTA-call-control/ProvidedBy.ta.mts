@@ -39,40 +39,48 @@ import { TelUri247Type, _decode_TelUri247Type, _encode_TelUri247Type } from "../
  */
 export
 class ProvidedBy {
+    /**
+     * @summary `dataproviderID`.
+     * @description
+     *
+     * NENA company identifier of the location provider.
+     * ECMA-285 §9.9.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly dataproviderID: NenaCompanyIDType;
+    /**
+     * @summary `telUri`.
+     * @description
+     *
+     * RFC 3966 `tel:` URI; ECMA-285 requires an emergency
+     * number available 24/7. ECMA-285 §9.9.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly telUri: TelUri247Type;
+    /**
+     * @summary `uRL`.
+     * @description
+     *
+     * URL for the location provider. ECMA-285 §9.9.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly uRL: IA5String;
+
     constructor (
-        /**
-         * @summary `dataproviderID`.
-         * @description
-         *
-         * NENA company identifier of the location provider.
-         * ECMA-285 §9.9.
-         *
-         * @public
-         * @readonly
-         */
-        readonly dataproviderID: NenaCompanyIDType,
-        /**
-         * @summary `telUri`.
-         * @description
-         *
-         * RFC 3966 `tel:` URI; ECMA-285 requires an emergency
-         * number available 24/7. ECMA-285 §9.9.
-         *
-         * @public
-         * @readonly
-         */
-        readonly telUri: TelUri247Type,
-        /**
-         * @summary `uRL`.
-         * @description
-         *
-         * URL for the location provider. ECMA-285 §9.9.
-         *
-         * @public
-         * @readonly
-         */
-        readonly uRL: IA5String
-    ) {}
+        dataproviderID: NenaCompanyIDType,
+        telUri: TelUri247Type,
+        uRL: IA5String
+    ) {
+        this.dataproviderID = dataproviderID;
+        this.telUri = telUri;
+        this.uRL = uRL;
+    }
 
     /**
      * @summary Restructures an object into a ProvidedBy

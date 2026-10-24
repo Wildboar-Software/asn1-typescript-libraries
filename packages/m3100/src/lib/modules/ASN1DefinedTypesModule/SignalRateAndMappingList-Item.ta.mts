@@ -39,26 +39,34 @@ import {
  *
  */
 export class SignalRateAndMappingList_Item {
+    /**
+     * @summary `signalRate`.
+     * @public
+     * @readonly
+     */
+    public readonly signalRate: SignalRate;
+    /**
+     * @summary `mappingList`.
+     * @public
+     * @readonly
+     */
+    public readonly mappingList?: OPTIONAL<MappingList>;
+    /**
+     * @summary `wavelength`.
+     * @public
+     * @readonly
+     */
+    public readonly wavelength?: OPTIONAL<WaveLength>;
+
     constructor(
-        /**
-         * @summary `signalRate`.
-         * @public
-         * @readonly
-         */
-        readonly signalRate: SignalRate,
-        /**
-         * @summary `mappingList`.
-         * @public
-         * @readonly
-         */
-        readonly mappingList?: OPTIONAL<MappingList>,
-        /**
-         * @summary `wavelength`.
-         * @public
-         * @readonly
-         */
-        readonly wavelength?: OPTIONAL<WaveLength>
-    ) {}
+        signalRate: SignalRate,
+        mappingList?: OPTIONAL<MappingList>,
+        wavelength?: OPTIONAL<WaveLength>
+    ) {
+        this.signalRate = signalRate;
+        this.mappingList = mappingList;
+        this.wavelength = wavelength;
+    }
 
     /**
      * @summary Restructures an object into a SignalRateAndMappingList_Item

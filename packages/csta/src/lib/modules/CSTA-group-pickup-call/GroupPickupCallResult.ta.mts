@@ -43,51 +43,61 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class GroupPickupCallResult {
+    /**
+     * @summary `pickedCall`.
+     * @description
+     *
+     * Optional. Destination device's connection in the picked
+     * call (Connected).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly pickedCall?: OPTIONAL<ConnectionID>;
+    /**
+     * @summary `pickedCallInfo`.
+     * @description
+     *
+     * Optional connection information for `pickedCall`
+     * (§12.2.8).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly pickedCallInfo?: OPTIONAL<ConnectionInformation>;
+    /**
+     * @summary `callLinkageData`.
+     * @description
+     *
+     * Optional call-linkage identifiers (§12.2.5).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly callLinkageData?: OPTIONAL<CallLinkageData>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional `CSTACommonArguments` carrying the security and
+     * privateData parameters from the ECMA-269 service table.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `pickedCall`.
-         * @description
-         *
-         * Optional. Destination device's connection in the picked
-         * call (Connected).
-         *
-         * @public
-         * @readonly
-         */
-        readonly pickedCall?: OPTIONAL<ConnectionID>,
-        /**
-         * @summary `pickedCallInfo`.
-         * @description
-         *
-         * Optional connection information for `pickedCall`
-         * (§12.2.8).
-         *
-         * @public
-         * @readonly
-         */
-        readonly pickedCallInfo?: OPTIONAL<ConnectionInformation>,
-        /**
-         * @summary `callLinkageData`.
-         * @description
-         *
-         * Optional call-linkage identifiers (§12.2.5).
-         *
-         * @public
-         * @readonly
-         */
-        readonly callLinkageData?: OPTIONAL<CallLinkageData>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional `CSTACommonArguments` carrying the security and
-         * privateData parameters from the ECMA-269 service table.
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        pickedCall?: OPTIONAL<ConnectionID>,
+        pickedCallInfo?: OPTIONAL<ConnectionInformation>,
+        callLinkageData?: OPTIONAL<CallLinkageData>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.pickedCall = pickedCall;
+        this.pickedCallInfo = pickedCallInfo;
+        this.callLinkageData = callLinkageData;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a GroupPickupCallResult

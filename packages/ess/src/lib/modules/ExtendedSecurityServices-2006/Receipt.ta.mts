@@ -50,53 +50,63 @@ import {
  *
  */
 export class Receipt {
+    /**
+     * @summary `version`.
+     * @description
+     *
+     * Syntax version; `v1(1)` for this specification ([RFC 2634 §2.8](https://datatracker.ietf.org/doc/html/rfc2634#section-2.8)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly version: ESSVersion;
+    /**
+     * @summary `contentType`.
+     * @description
+     *
+     * Copied from the `contentType` signed attribute of the original
+     * `SignerInfo` that included the `receiptRequest` ([RFC 2634 §2.4](https://datatracker.ietf.org/doc/html/rfc2634#section-2.4)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly contentType: ContentType;
+    /**
+     * @summary `signedContentIdentifier`.
+     * @description
+     *
+     * Copied from `ReceiptRequest.signedContentIdentifier` of the verified
+     * request ([RFC 2634 §2.4](https://datatracker.ietf.org/doc/html/rfc2634#section-2.4)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly signedContentIdentifier: ContentIdentifier;
+    /**
+     * @summary `originatorSignatureValue`.
+     * @description
+     *
+     * Copied from the signature value of the original `SignerInfo` that
+     * included the `receiptRequest`. Validation compares digests of a
+     * reconstructed `Receipt` containing this value
+     * ([RFC 2634 §2.4](https://datatracker.ietf.org/doc/html/rfc2634#section-2.4); [RFC 2634 §2.6](https://datatracker.ietf.org/doc/html/rfc2634#section-2.6)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly originatorSignatureValue: OCTET_STRING;
+
     constructor(
-        /**
-         * @summary `version`.
-         * @description
-         *
-         * Syntax version; `v1(1)` for this specification ([RFC 2634 §2.8](https://datatracker.ietf.org/doc/html/rfc2634#section-2.8)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly version: ESSVersion,
-        /**
-         * @summary `contentType`.
-         * @description
-         *
-         * Copied from the `contentType` signed attribute of the original
-         * `SignerInfo` that included the `receiptRequest` ([RFC 2634 §2.4](https://datatracker.ietf.org/doc/html/rfc2634#section-2.4)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly contentType: ContentType,
-        /**
-         * @summary `signedContentIdentifier`.
-         * @description
-         *
-         * Copied from `ReceiptRequest.signedContentIdentifier` of the verified
-         * request ([RFC 2634 §2.4](https://datatracker.ietf.org/doc/html/rfc2634#section-2.4)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly signedContentIdentifier: ContentIdentifier,
-        /**
-         * @summary `originatorSignatureValue`.
-         * @description
-         *
-         * Copied from the signature value of the original `SignerInfo` that
-         * included the `receiptRequest`. Validation compares digests of a
-         * reconstructed `Receipt` containing this value
-         * ([RFC 2634 §2.4](https://datatracker.ietf.org/doc/html/rfc2634#section-2.4); [RFC 2634 §2.6](https://datatracker.ietf.org/doc/html/rfc2634#section-2.6)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly originatorSignatureValue: OCTET_STRING
-    ) {}
+        version: ESSVersion,
+        contentType: ContentType,
+        signedContentIdentifier: ContentIdentifier,
+        originatorSignatureValue: OCTET_STRING
+    ) {
+        this.version = version;
+        this.contentType = contentType;
+        this.signedContentIdentifier = signedContentIdentifier;
+        this.originatorSignatureValue = originatorSignatureValue;
+    }
 
     /**
      * @summary Restructures an object into a Receipt

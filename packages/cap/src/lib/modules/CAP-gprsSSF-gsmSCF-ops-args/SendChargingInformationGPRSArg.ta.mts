@@ -34,30 +34,36 @@ import { type SCIGPRSBillingChargingCharacteristics, _decode_SCIGPRSBillingCharg
  */
 export
 class SendChargingInformationGPRSArg {
+    /**
+     * @summary `sCIGPRSBillingChargingCharacteristics`.
+     * @description
+     *
+     * Advice of Charge information: `aOCGPRS` with `aOCInitial`
+     * (CAI elements per 3GPP TS 22.024, sent on Activate PDP
+     * Context Accept or Attach Accept if no tariff switch yet, or
+     * later e.g. QoS/RAI change) and optional `aOCSubsequent`
+     * (`cAIElements` plus `tariffSwitchInterval`). Nested `pDPID`
+     * identifies the PDP Context in a GPRS Session dialogue.
+     * (3GPP TS 29.078 V19.0.0 clause 13.14.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sCIGPRSBillingChargingCharacteristics: SCIGPRSBillingChargingCharacteristics;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `sCIGPRSBillingChargingCharacteristics`.
-         * @description
-         *
-         * Advice of Charge information: `aOCGPRS` with `aOCInitial`
-         * (CAI elements per 3GPP TS 22.024, sent on Activate PDP
-         * Context Accept or Attach Accept if no tariff switch yet, or
-         * later e.g. QoS/RAI change) and optional `aOCSubsequent`
-         * (`cAIElements` plus `tariffSwitchInterval`). Nested `pDPID`
-         * identifies the PDP Context in a GPRS Session dialogue.
-         * (3GPP TS 29.078 V19.0.0 clause 13.14.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly sCIGPRSBillingChargingCharacteristics: SCIGPRSBillingChargingCharacteristics,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        sCIGPRSBillingChargingCharacteristics: SCIGPRSBillingChargingCharacteristics,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.sCIGPRSBillingChargingCharacteristics = sCIGPRSBillingChargingCharacteristics;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a SendChargingInformationGPRSArg

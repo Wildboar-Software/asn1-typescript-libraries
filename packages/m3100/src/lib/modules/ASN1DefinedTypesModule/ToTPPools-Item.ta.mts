@@ -29,20 +29,26 @@ import {
  *
  */
 export class ToTPPools_Item {
+    /**
+     * @summary `tpPoolId`.
+     * @public
+     * @readonly
+     */
+    public readonly tpPoolId: ObjectInstance;
+    /**
+     * @summary `numberOfTPs`.
+     * @public
+     * @readonly
+     */
+    public readonly numberOfTPs: INTEGER;
+
     constructor(
-        /**
-         * @summary `tpPoolId`.
-         * @public
-         * @readonly
-         */
-        readonly tpPoolId: ObjectInstance,
-        /**
-         * @summary `numberOfTPs`.
-         * @public
-         * @readonly
-         */
-        readonly numberOfTPs: INTEGER
-    ) {}
+        tpPoolId: ObjectInstance,
+        numberOfTPs: INTEGER
+    ) {
+        this.tpPoolId = tpPoolId;
+        this.numberOfTPs = numberOfTPs;
+    }
 
     /**
      * @summary Restructures an object into a ToTPPools_Item

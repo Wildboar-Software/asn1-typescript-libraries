@@ -52,60 +52,72 @@ import {
  *
  */
 export class CoordinateShadowUpdateArgumentData {
+    /**
+     * @summary `agreementID`.
+     * @description
+     *
+     * Agreement this coordinate applies to. Unknown →
+     * `invalidAgreementID`; known but inactive → `inactiveAgreement`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly agreementID: AgreementID;
+    /**
+     * @summary `lastUpdate`.
+     * @description
+     *
+     * Supplier's time from the most recent successful update. Absent if
+     * there has never been one, or if a full update is wanted even with
+     * no changes (e.g. recovery). Later than the consumer's view →
+     * `missedPrevious`; earlier → `updateAlreadyReceived`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly lastUpdate: OPTIONAL<Time>;
+    /**
+     * @summary `updateStrategy`.
+     * @description
+     *
+     * Strategy the supplier intends. `noChanges` shall be followed by
+     * `updateShadow` with `RefreshInformation.noRefresh`. Unsupported
+     * → `unsupportedStrategy`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly updateStrategy: CoordinateShadowUpdateArgumentData_updateStrategy;
+    /**
+     * @summary `securityParameters`.
+     * @description
+     *
+     * Required if this argument is signed. `target` is `none`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly securityParameters?: OPTIONAL<SecurityParameters>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `agreementID`.
-         * @description
-         *
-         * Agreement this coordinate applies to. Unknown →
-         * `invalidAgreementID`; known but inactive → `inactiveAgreement`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly agreementID: AgreementID,
-        /**
-         * @summary `lastUpdate`.
-         * @description
-         *
-         * Supplier's time from the most recent successful update. Absent if
-         * there has never been one, or if a full update is wanted even with
-         * no changes (e.g. recovery). Later than the consumer's view →
-         * `missedPrevious`; earlier → `updateAlreadyReceived`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly lastUpdate: OPTIONAL<Time>,
-        /**
-         * @summary `updateStrategy`.
-         * @description
-         *
-         * Strategy the supplier intends. `noChanges` shall be followed by
-         * `updateShadow` with `RefreshInformation.noRefresh`. Unsupported
-         * → `unsupportedStrategy`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly updateStrategy: CoordinateShadowUpdateArgumentData_updateStrategy,
-        /**
-         * @summary `securityParameters`.
-         * @description
-         *
-         * Required if this argument is signed. `target` is `none`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly securityParameters?: OPTIONAL<SecurityParameters>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        agreementID: AgreementID,
+        lastUpdate: OPTIONAL<Time>,
+        updateStrategy: CoordinateShadowUpdateArgumentData_updateStrategy,
+        securityParameters?: OPTIONAL<SecurityParameters>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.agreementID = agreementID;
+        this.lastUpdate = lastUpdate;
+        this.updateStrategy = updateStrategy;
+        this.securityParameters = securityParameters;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a CoordinateShadowUpdateArgumentData

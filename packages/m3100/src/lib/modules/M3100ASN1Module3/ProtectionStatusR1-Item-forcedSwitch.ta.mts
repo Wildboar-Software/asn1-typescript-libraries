@@ -34,20 +34,26 @@ import {
  *
  */
 export class ProtectionStatusR1_Item_forcedSwitch {
+    /**
+     * @summary `switchStatus`.
+     * @public
+     * @readonly
+     */
+    public readonly switchStatus: SwitchStatus;
+    /**
+     * @summary `relatedUnit`.
+     * @public
+     * @readonly
+     */
+    public readonly relatedUnit: FromAndToProtectionUnit;
+
     constructor(
-        /**
-         * @summary `switchStatus`.
-         * @public
-         * @readonly
-         */
-        readonly switchStatus: SwitchStatus,
-        /**
-         * @summary `relatedUnit`.
-         * @public
-         * @readonly
-         */
-        readonly relatedUnit: FromAndToProtectionUnit
-    ) {}
+        switchStatus: SwitchStatus,
+        relatedUnit: FromAndToProtectionUnit
+    ) {
+        this.switchStatus = switchStatus;
+        this.relatedUnit = relatedUnit;
+    }
 
     /**
      * @summary Restructures an object into a ProtectionStatusR1_Item_forcedSwitch

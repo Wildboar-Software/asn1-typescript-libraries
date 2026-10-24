@@ -28,30 +28,36 @@ import * as $ from '@wildboar/asn1/functional';
  *
  */
 export class Ack_error {
+    /**
+     * @summary `code`.
+     * @description
+     *
+     * `ERROR.&code` from `Simple-Message-Errors`. ITU-T Rec.
+     * X.1080.1 (10/2011) module E-health-send-and-ack.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly code: INTEGER;
+    /**
+     * @summary `parameter`.
+     * @description
+     *
+     * `ERROR.&Parameter` for that `code`. ITU-T Rec. X.1080.1
+     * (10/2011) module E-health-send-and-ack.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly parameter: _Element;
+
     constructor(
-        /**
-         * @summary `code`.
-         * @description
-         *
-         * `ERROR.&code` from `Simple-Message-Errors`. ITU-T Rec.
-         * X.1080.1 (10/2011) module E-health-send-and-ack.
-         *
-         * @public
-         * @readonly
-         */
-        readonly code: INTEGER,
-        /**
-         * @summary `parameter`.
-         * @description
-         *
-         * `ERROR.&Parameter` for that `code`. ITU-T Rec. X.1080.1
-         * (10/2011) module E-health-send-and-ack.
-         *
-         * @public
-         * @readonly
-         */
-        readonly parameter: _Element
-    ) {}
+        code: INTEGER,
+        parameter: _Element
+    ) {
+        this.code = code;
+        this.parameter = parameter;
+    }
 
     /**
      * @summary Restructures an object into a Ack_error

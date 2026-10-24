@@ -43,20 +43,26 @@ import {
  *
  */
 export class RegistrationTypes {
+    /**
+     * @summary `standard_parameters`.
+     * @public
+     * @readonly
+     */
+    public readonly standard_parameters?: OPTIONAL<RegistrationTypes_standard_parameters>;
+    /**
+     * @summary `extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<ExtensionType[]>;
+
     constructor(
-        /**
-         * @summary `standard_parameters`.
-         * @public
-         * @readonly
-         */
-        readonly standard_parameters?: OPTIONAL<RegistrationTypes_standard_parameters>,
-        /**
-         * @summary `extensions`.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<ExtensionType[]>
-    ) {}
+        standard_parameters?: OPTIONAL<RegistrationTypes_standard_parameters>,
+        extensions?: OPTIONAL<ExtensionType[]>
+    ) {
+        this.standard_parameters = standard_parameters;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a RegistrationTypes

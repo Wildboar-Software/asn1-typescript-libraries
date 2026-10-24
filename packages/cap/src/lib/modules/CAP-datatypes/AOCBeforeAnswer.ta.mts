@@ -26,32 +26,38 @@ import { AOCSubsequent, _decode_AOCSubsequent, _encode_AOCSubsequent } from "./A
  *
  */
 export class AOCBeforeAnswer {
+    /**
+     * @summary `aOCInitial`.
+     * @description
+     *
+     * CAI elements (3GPP TS 22.024) sent to the MS when Answer is detected
+     * and a tariff switch for CSE control of e-parameters has not yet
+     * occurred. (3GPP TS 29.078 V19.0.0 clause 11.29).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly aOCInitial: CAI_GSM0224;
+    /**
+     * @summary `aOCSubsequent`.
+     * @description
+     *
+     * CAI after a tariff switch for CSE control of e-parameters, or when
+     * Answer is detected and that switch has already occurred.
+     * (3GPP TS 29.078 V19.0.0 clause 11.29).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly aOCSubsequent?: OPTIONAL<AOCSubsequent>;
+
     constructor (
-        /**
-         * @summary `aOCInitial`.
-         * @description
-         *
-         * CAI elements (3GPP TS 22.024) sent to the MS when Answer is detected
-         * and a tariff switch for CSE control of e-parameters has not yet
-         * occurred. (3GPP TS 29.078 V19.0.0 clause 11.29).
-         *
-         * @public
-         * @readonly
-         */
-        readonly aOCInitial: CAI_GSM0224,
-        /**
-         * @summary `aOCSubsequent`.
-         * @description
-         *
-         * CAI after a tariff switch for CSE control of e-parameters, or when
-         * Answer is detected and that switch has already occurred.
-         * (3GPP TS 29.078 V19.0.0 clause 11.29).
-         *
-         * @public
-         * @readonly
-         */
-        readonly aOCSubsequent?: OPTIONAL<AOCSubsequent>,
-    ) {}
+        aOCInitial: CAI_GSM0224,
+        aOCSubsequent?: OPTIONAL<AOCSubsequent>,
+    ) {
+        this.aOCInitial = aOCInitial;
+        this.aOCSubsequent = aOCSubsequent;
+    }
 
     public static _from_object (_o: { [_K in keyof (AOCBeforeAnswer)]: (AOCBeforeAnswer)[_K] }): AOCBeforeAnswer {
         return new AOCBeforeAnswer(_o.aOCInitial, _o.aOCSubsequent);

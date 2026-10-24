@@ -34,20 +34,26 @@ import {
  *
  */
 export class BilateralDomain_domain_private_domain {
+    /**
+     * @summary `administration_domain_name`.
+     * @public
+     * @readonly
+     */
+    public readonly administration_domain_name: AdministrationDomainName;
+    /**
+     * @summary `private_domain_identifier`.
+     * @public
+     * @readonly
+     */
+    public readonly private_domain_identifier: PrivateDomainIdentifier;
+
     constructor(
-        /**
-         * @summary `administration_domain_name`.
-         * @public
-         * @readonly
-         */
-        readonly administration_domain_name: AdministrationDomainName,
-        /**
-         * @summary `private_domain_identifier`.
-         * @public
-         * @readonly
-         */
-        readonly private_domain_identifier: PrivateDomainIdentifier
-    ) {}
+        administration_domain_name: AdministrationDomainName,
+        private_domain_identifier: PrivateDomainIdentifier
+    ) {
+        this.administration_domain_name = administration_domain_name;
+        this.private_domain_identifier = private_domain_identifier;
+    }
 
     /**
      * @summary Restructures an object into a BilateralDomain_domain_private_domain

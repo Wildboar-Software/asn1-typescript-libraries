@@ -32,20 +32,23 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class ServiceChangeProfile {
+    /**
+     * @summary `profileName`.
+     * @description
+     *
+     * Profile name and version, 1 to 67 characters: up to 64 characters of
+     * name, a "/", and two version digits, matching the text encoding
+     * (Annex A).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly profileName: IA5String;
+
     constructor (
-        /**
-         * @summary `profileName`.
-         * @description
-         *
-         * Profile name and version, 1 to 67 characters: up to 64 characters of
-         * name, a "/", and two version digits, matching the text encoding
-         * (Annex A).
-         *
-         * @public
-         * @readonly
-         */
-        readonly profileName: IA5String
+        profileName: IA5String
     ) {
+            this.profileName = profileName;
             if (profileName.length < 1 || profileName.length > 67) {
                 throw new ASN1SizeError("ServiceChangeProfile.profileName violates SIZE constraint");
             }

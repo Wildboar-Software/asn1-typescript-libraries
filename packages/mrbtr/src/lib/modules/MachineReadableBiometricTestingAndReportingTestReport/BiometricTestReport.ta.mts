@@ -36,30 +36,36 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class BiometricTestReport {
+    /**
+     * @summary `contentType`.
+     * @description
+     *
+     * One of `id-testReportTechnology`, `id-testReportScenario`, or
+     * `id-signedTestReport` (Clause 6.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly contentType: OBJECT_IDENTIFIER;
+    /**
+     * @summary `content`.
+     * @description
+     *
+     * Open type constrained by `contentType`: `TestReportTechnology`,
+     * `TestReportScenario`, or `SignedTestReport`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly content: _Element;
+
     constructor (
-        /**
-         * @summary `contentType`.
-         * @description
-         *
-         * One of `id-testReportTechnology`, `id-testReportScenario`, or
-         * `id-signedTestReport` (Clause 6.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly contentType: OBJECT_IDENTIFIER,
-        /**
-         * @summary `content`.
-         * @description
-         *
-         * Open type constrained by `contentType`: `TestReportTechnology`,
-         * `TestReportScenario`, or `SignedTestReport`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly content: _Element
-    ) {}
+        contentType: OBJECT_IDENTIFIER,
+        content: _Element
+    ) {
+        this.contentType = contentType;
+        this.content = content;
+    }
 
     /**
      * @summary Restructures an object into a BiometricTestReport

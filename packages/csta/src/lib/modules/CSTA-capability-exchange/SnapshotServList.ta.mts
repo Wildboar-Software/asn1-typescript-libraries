@@ -42,44 +42,54 @@ import { SnapshotDeviceData, _decode_SnapshotDeviceData, _encode_SnapshotDeviceD
  */
 export
 class SnapshotServList {
+    /**
+     * @summary `snapshotCall`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly snapshotCall: SnapshotCall;
+    /**
+     * @summary `snapshotDevice`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly snapshotDevice: SnapshotDevice;
+    /**
+     * @summary `snapshotCallData`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly snapshotCallData: SnapshotCallData;
+    /**
+     * @summary `snapshotDeviceData`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly snapshotDeviceData: SnapshotDeviceData;
+
     constructor (
-        /**
-         * @summary `snapshotCall`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly snapshotCall: SnapshotCall,
-        /**
-         * @summary `snapshotDevice`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly snapshotDevice: SnapshotDevice,
-        /**
-         * @summary `snapshotCallData`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly snapshotCallData: SnapshotCallData,
-        /**
-         * @summary `snapshotDeviceData`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly snapshotDeviceData: SnapshotDeviceData
-    ) {}
+        snapshotCall: SnapshotCall,
+        snapshotDevice: SnapshotDevice,
+        snapshotCallData: SnapshotCallData,
+        snapshotDeviceData: SnapshotDeviceData
+    ) {
+        this.snapshotCall = snapshotCall;
+        this.snapshotDevice = snapshotDevice;
+        this.snapshotCallData = snapshotCallData;
+        this.snapshotDeviceData = snapshotDeviceData;
+    }
 
     /**
      * @summary Restructures an object into a SnapshotServList

@@ -54,145 +54,175 @@ import { Used_RAT_Type, _decode_Used_RAT_Type, _encode_Used_RAT_Type, _enum_for_
  */
 export
 class LocationInformation5GS {
+    /**
+     * @summary `nrCellGlobalIdentity`.
+     * @description
+     *
+     * NR Cell Global Identity. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly nrCellGlobalIdentity?: OPTIONAL<NR_CGI>;
+    /**
+     * @summary `e_utranCellGlobalIdentity`.
+     * @description
+     *
+     * E-UTRAN Cell Global Identity. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly e_utranCellGlobalIdentity?: OPTIONAL<E_UTRAN_CGI>;
+    /**
+     * @summary `geographicalInformation`.
+     * @description
+     *
+     * Ellipsoid point with uncertainty circle (3GPP TS 23.032). (3GPP TS
+     * 29.002 V19.1.0 clause 17.7.1)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly geographicalInformation?: OPTIONAL<GeographicalInformation>;
+    /**
+     * @summary `geodeticInformation`.
+     * @description
+     *
+     * Calling Geodetic Location (Q.763, 1999), ellipsoid point with
+     * uncertainty circle. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly geodeticInformation?: OPTIONAL<GeodeticInformation>;
+    /**
+     * @summary `amf_address`.
+     * @description
+     *
+     * AMF address as an FQDN. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly amf_address?: OPTIONAL<FQDN>;
+    /**
+     * @summary `trackingAreaIdentity`.
+     * @description
+     *
+     * Tracking Area Identity. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly trackingAreaIdentity?: OPTIONAL<TA_Id>;
+    /**
+     * @summary `currentLocationRetrieved`.
+     * @description
+     *
+     * Shall be present if the location was retrieved after successful
+     * paging. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly currentLocationRetrieved?: OPTIONAL<NULL>;
+    /**
+     * @summary `ageOfLocationInformation`.
+     * @description
+     *
+     * Age of the location estimate. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ageOfLocationInformation?: OPTIONAL<AgeOfLocationInformation>;
+    /**
+     * @summary `vplmnId`.
+     * @description
+     *
+     * Visited PLMN identity. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly vplmnId?: OPTIONAL<PLMN_Id>;
+    /**
+     * @summary `localtimeZone`.
+     * @description
+     *
+     * Local time zone (see 3GPP TS 29.272). (3GPP TS 29.002 V19.1.0 clause
+     * 17.7.1)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly localtimeZone?: OPTIONAL<TimeZone>;
+    /**
+     * @summary `rat_Type`.
+     * @description
+     *
+     * Radio access technology in use. (3GPP TS 29.002 V19.1.0 clause
+     * 17.7.1)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly rat_Type?: OPTIONAL<Used_RAT_Type>;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary `nrTrackingAreaIdentity`.
+     * @description
+     *
+     * NR Tracking Area Identity. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly nrTrackingAreaIdentity?: OPTIONAL<NR_TA_Id>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `nrCellGlobalIdentity`.
-         * @description
-         *
-         * NR Cell Global Identity. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
-         *
-         * @public
-         * @readonly
-         */
-        readonly nrCellGlobalIdentity?: OPTIONAL<NR_CGI>,
-        /**
-         * @summary `e_utranCellGlobalIdentity`.
-         * @description
-         *
-         * E-UTRAN Cell Global Identity. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
-         *
-         * @public
-         * @readonly
-         */
-        readonly e_utranCellGlobalIdentity?: OPTIONAL<E_UTRAN_CGI>,
-        /**
-         * @summary `geographicalInformation`.
-         * @description
-         *
-         * Ellipsoid point with uncertainty circle (3GPP TS 23.032). (3GPP TS
-         * 29.002 V19.1.0 clause 17.7.1)
-         *
-         * @public
-         * @readonly
-         */
-        readonly geographicalInformation?: OPTIONAL<GeographicalInformation>,
-        /**
-         * @summary `geodeticInformation`.
-         * @description
-         *
-         * Calling Geodetic Location (Q.763, 1999), ellipsoid point with
-         * uncertainty circle. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
-         *
-         * @public
-         * @readonly
-         */
-        readonly geodeticInformation?: OPTIONAL<GeodeticInformation>,
-        /**
-         * @summary `amf_address`.
-         * @description
-         *
-         * AMF address as an FQDN. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
-         *
-         * @public
-         * @readonly
-         */
-        readonly amf_address?: OPTIONAL<FQDN>,
-        /**
-         * @summary `trackingAreaIdentity`.
-         * @description
-         *
-         * Tracking Area Identity. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
-         *
-         * @public
-         * @readonly
-         */
-        readonly trackingAreaIdentity?: OPTIONAL<TA_Id>,
-        /**
-         * @summary `currentLocationRetrieved`.
-         * @description
-         *
-         * Shall be present if the location was retrieved after successful
-         * paging. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
-         *
-         * @public
-         * @readonly
-         */
-        readonly currentLocationRetrieved?: OPTIONAL<NULL>,
-        /**
-         * @summary `ageOfLocationInformation`.
-         * @description
-         *
-         * Age of the location estimate. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
-         *
-         * @public
-         * @readonly
-         */
-        readonly ageOfLocationInformation?: OPTIONAL<AgeOfLocationInformation>,
-        /**
-         * @summary `vplmnId`.
-         * @description
-         *
-         * Visited PLMN identity. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
-         *
-         * @public
-         * @readonly
-         */
-        readonly vplmnId?: OPTIONAL<PLMN_Id>,
-        /**
-         * @summary `localtimeZone`.
-         * @description
-         *
-         * Local time zone (see 3GPP TS 29.272). (3GPP TS 29.002 V19.1.0 clause
-         * 17.7.1)
-         *
-         * @public
-         * @readonly
-         */
-        readonly localtimeZone?: OPTIONAL<TimeZone>,
-        /**
-         * @summary `rat_Type`.
-         * @description
-         *
-         * Radio access technology in use. (3GPP TS 29.002 V19.1.0 clause
-         * 17.7.1)
-         *
-         * @public
-         * @readonly
-         */
-        readonly rat_Type?: OPTIONAL<Used_RAT_Type>,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary `nrTrackingAreaIdentity`.
-         * @description
-         *
-         * NR Tracking Area Identity. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
-         *
-         * @public
-         * @readonly
-         */
-        readonly nrTrackingAreaIdentity?: OPTIONAL<NR_TA_Id>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        nrCellGlobalIdentity?: OPTIONAL<NR_CGI>,
+        e_utranCellGlobalIdentity?: OPTIONAL<E_UTRAN_CGI>,
+        geographicalInformation?: OPTIONAL<GeographicalInformation>,
+        geodeticInformation?: OPTIONAL<GeodeticInformation>,
+        amf_address?: OPTIONAL<FQDN>,
+        trackingAreaIdentity?: OPTIONAL<TA_Id>,
+        currentLocationRetrieved?: OPTIONAL<NULL>,
+        ageOfLocationInformation?: OPTIONAL<AgeOfLocationInformation>,
+        vplmnId?: OPTIONAL<PLMN_Id>,
+        localtimeZone?: OPTIONAL<TimeZone>,
+        rat_Type?: OPTIONAL<Used_RAT_Type>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        nrTrackingAreaIdentity?: OPTIONAL<NR_TA_Id>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.nrCellGlobalIdentity = nrCellGlobalIdentity;
+        this.e_utranCellGlobalIdentity = e_utranCellGlobalIdentity;
+        this.geographicalInformation = geographicalInformation;
+        this.geodeticInformation = geodeticInformation;
+        this.amf_address = amf_address;
+        this.trackingAreaIdentity = trackingAreaIdentity;
+        this.currentLocationRetrieved = currentLocationRetrieved;
+        this.ageOfLocationInformation = ageOfLocationInformation;
+        this.vplmnId = vplmnId;
+        this.localtimeZone = localtimeZone;
+        this.rat_Type = rat_Type;
+        this.extensionContainer = extensionContainer;
+        this.nrTrackingAreaIdentity = nrTrackingAreaIdentity;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a LocationInformation5GS

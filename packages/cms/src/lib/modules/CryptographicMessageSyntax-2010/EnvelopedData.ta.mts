@@ -57,69 +57,83 @@ import {
  *
  */
 export class EnvelopedData {
+    /**
+     * @summary `version`.
+     * @description
+     *
+     * Syntax version from originatorInfo, RecipientInfo versions, and
+     * unprotectedAttrs per [RFC 5652 §6.1](https://datatracker.ietf.org/doc/html/rfc5652#section-6.1)
+     * (0, 2, 3, or 4).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly version: CMSVersion;
+    /**
+     * @summary `originatorInfo`.
+     * @description
+     *
+     * Optional certificates and/or CRLs for originator-related paths when
+     * needed (e.g., key agreement) ([RFC 5652 §6.1](https://datatracker.ietf.org/doc/html/rfc5652#section-6.1)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly originatorInfo: OPTIONAL<OriginatorInfo>;
+    /**
+     * @summary `recipientInfos`.
+     * @description
+     *
+     * Per-recipient information; MUST contain at least one `RecipientInfo`
+     * ([RFC 5652 §6.1](https://datatracker.ietf.org/doc/html/rfc5652#section-6.1)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly recipientInfos: RecipientInfos;
+    /**
+     * @summary `encryptedContentInfo`.
+     * @description
+     *
+     * Encrypted content and content-encryption algorithm
+     * ([RFC 5652 §6.1](https://datatracker.ietf.org/doc/html/rfc5652#section-6.1)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly encryptedContentInfo: EncryptedContentInfo;
+    /**
+     * @summary `unprotectedAttrs`.
+     * @description
+     *
+     * Optional unprotected attributes ([RFC 5652 §6.1](https://datatracker.ietf.org/doc/html/rfc5652#section-6.1)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly unprotectedAttrs?: OPTIONAL<Attributes>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `version`.
-         * @description
-         *
-         * Syntax version from originatorInfo, RecipientInfo versions, and
-         * unprotectedAttrs per [RFC 5652 §6.1](https://datatracker.ietf.org/doc/html/rfc5652#section-6.1)
-         * (0, 2, 3, or 4).
-         *
-         * @public
-         * @readonly
-         */
-        readonly version: CMSVersion,
-        /**
-         * @summary `originatorInfo`.
-         * @description
-         *
-         * Optional certificates and/or CRLs for originator-related paths when
-         * needed (e.g., key agreement) ([RFC 5652 §6.1](https://datatracker.ietf.org/doc/html/rfc5652#section-6.1)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly originatorInfo: OPTIONAL<OriginatorInfo>,
-        /**
-         * @summary `recipientInfos`.
-         * @description
-         *
-         * Per-recipient information; MUST contain at least one `RecipientInfo`
-         * ([RFC 5652 §6.1](https://datatracker.ietf.org/doc/html/rfc5652#section-6.1)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly recipientInfos: RecipientInfos,
-        /**
-         * @summary `encryptedContentInfo`.
-         * @description
-         *
-         * Encrypted content and content-encryption algorithm
-         * ([RFC 5652 §6.1](https://datatracker.ietf.org/doc/html/rfc5652#section-6.1)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly encryptedContentInfo: EncryptedContentInfo,
-        /**
-         * @summary `unprotectedAttrs`.
-         * @description
-         *
-         * Optional unprotected attributes ([RFC 5652 §6.1](https://datatracker.ietf.org/doc/html/rfc5652#section-6.1)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly unprotectedAttrs?: OPTIONAL<Attributes>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        version: CMSVersion,
+        originatorInfo: OPTIONAL<OriginatorInfo>,
+        recipientInfos: RecipientInfos,
+        encryptedContentInfo: EncryptedContentInfo,
+        unprotectedAttrs?: OPTIONAL<Attributes>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.version = version;
+        this.originatorInfo = originatorInfo;
+        this.recipientInfos = recipientInfos;
+        this.encryptedContentInfo = encryptedContentInfo;
+        this.unprotectedAttrs = unprotectedAttrs;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a EnvelopedData

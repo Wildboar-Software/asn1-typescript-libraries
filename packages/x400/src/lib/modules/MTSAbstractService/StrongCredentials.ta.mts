@@ -45,32 +45,42 @@ import {
  *
  */
 export class StrongCredentials {
+    /**
+     * @summary `bind_token`.
+     * @public
+     * @readonly
+     */
+    public readonly bind_token?: OPTIONAL<Token>;
+    /**
+     * @summary `certificate`.
+     * @public
+     * @readonly
+     */
+    public readonly certificate?: OPTIONAL<Certificates>;
+    /**
+     * @summary `certificate_selector`.
+     * @public
+     * @readonly
+     */
+    public readonly certificate_selector?: OPTIONAL<CertificateAssertion>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `bind_token`.
-         * @public
-         * @readonly
-         */
-        readonly bind_token?: OPTIONAL<Token>,
-        /**
-         * @summary `certificate`.
-         * @public
-         * @readonly
-         */
-        readonly certificate?: OPTIONAL<Certificates>,
-        /**
-         * @summary `certificate_selector`.
-         * @public
-         * @readonly
-         */
-        readonly certificate_selector?: OPTIONAL<CertificateAssertion>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        bind_token?: OPTIONAL<Token>,
+        certificate?: OPTIONAL<Certificates>,
+        certificate_selector?: OPTIONAL<CertificateAssertion>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.bind_token = bind_token;
+        this.certificate = certificate;
+        this.certificate_selector = certificate_selector;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a StrongCredentials

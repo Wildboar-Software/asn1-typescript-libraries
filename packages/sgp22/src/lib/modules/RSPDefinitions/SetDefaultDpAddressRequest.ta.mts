@@ -29,18 +29,22 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class SetDefaultDpAddressRequest {
+    /**
+     * @summary `defaultDpAddress`.
+     * @description
+     * 
+     * New default SM-DP+ address, as an FQDN. SGP.22 v3.1 §5.7.4.
+     * 
+     * @public
+     * @readonly
+     */
+    public readonly defaultDpAddress: UTF8String;
+
     constructor (
-        /**
-         * @summary `defaultDpAddress`.
-         * @description
-         * 
-         * New default SM-DP+ address, as an FQDN. SGP.22 v3.1 §5.7.4.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly defaultDpAddress: UTF8String
-    ) {}
+        defaultDpAddress: UTF8String
+    ) {
+        this.defaultDpAddress = defaultDpAddress;
+    }
 
     /**
      * @summary Restructures an object into a SetDefaultDpAddressRequest

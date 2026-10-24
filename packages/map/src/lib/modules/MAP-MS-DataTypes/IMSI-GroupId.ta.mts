@@ -32,47 +32,57 @@ import { Local_GroupID, _decode_Local_GroupID, _encode_Local_GroupID } from "../
  */
 export
 class IMSI_GroupId {
+    /**
+     * @summary `group_Service_Id`.
+     * @description
+     *
+     * Group service identifier; values in 3GPP TS 29.272. (3GPP TS 29.002
+     * V19.1.0 clause 17.7.1)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly group_Service_Id: Group_Service_ID;
+    /**
+     * @summary `plmnId`.
+     * @description
+     *
+     * PLMN that defines the local group. (3GPP TS 29.002 V19.1.0 clause
+     * 17.7.1)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly plmnId: PLMN_Id;
+    /**
+     * @summary `local_Group_ID`.
+     * @description
+     *
+     * Operator-defined local group ID (3GPP TS 29.272). (3GPP TS 29.002
+     * V19.1.0 clause 17.7.1)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly local_Group_ID: Local_GroupID;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `group_Service_Id`.
-         * @description
-         *
-         * Group service identifier; values in 3GPP TS 29.272. (3GPP TS 29.002
-         * V19.1.0 clause 17.7.1)
-         *
-         * @public
-         * @readonly
-         */
-        readonly group_Service_Id: Group_Service_ID,
-        /**
-         * @summary `plmnId`.
-         * @description
-         *
-         * PLMN that defines the local group. (3GPP TS 29.002 V19.1.0 clause
-         * 17.7.1)
-         *
-         * @public
-         * @readonly
-         */
-        readonly plmnId: PLMN_Id,
-        /**
-         * @summary `local_Group_ID`.
-         * @description
-         *
-         * Operator-defined local group ID (3GPP TS 29.272). (3GPP TS 29.002
-         * V19.1.0 clause 17.7.1)
-         *
-         * @public
-         * @readonly
-         */
-        readonly local_Group_ID: Local_GroupID,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        group_Service_Id: Group_Service_ID,
+        plmnId: PLMN_Id,
+        local_Group_ID: Local_GroupID,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.group_Service_Id = group_Service_Id;
+        this.plmnId = plmnId;
+        this.local_Group_ID = local_Group_ID;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a IMSI_GroupId

@@ -29,20 +29,26 @@ import { alg_id_sha1 } from "../PKCS-15/alg-id-sha1.va.mjs";
  *
  */
 export class DigestInfoWithDefault {
+    /**
+     * @summary `digestAlg`.
+     * @public
+     * @readonly
+     */
+    public readonly digestAlg: OPTIONAL<AlgorithmIdentifier>;
+    /**
+     * @summary `digest`.
+     * @public
+     * @readonly
+     */
+    public readonly digest: OCTET_STRING;
+
     constructor(
-        /**
-         * @summary `digestAlg`.
-         * @public
-         * @readonly
-         */
-        readonly digestAlg: OPTIONAL<AlgorithmIdentifier>,
-        /**
-         * @summary `digest`.
-         * @public
-         * @readonly
-         */
-        readonly digest: OCTET_STRING
-    ) {}
+        digestAlg: OPTIONAL<AlgorithmIdentifier>,
+        digest: OCTET_STRING
+    ) {
+        this.digestAlg = digestAlg;
+        this.digest = digest;
+    }
 
     /**
      * @summary Restructures an object into a DigestInfoWithDefault

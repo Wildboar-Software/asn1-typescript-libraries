@@ -52,63 +52,75 @@ import {
  *
  */
 export class Verify_ResponseParams {
+  /**
+   * @summary `adaptedBIR`.
+   * @description
+   *
+   * Handle of the adapted BIR, if requested. Absent when
+   * `no-adaptedBIR` was `TRUE`. X.1083 §16.37.6.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly adaptedBIR: OPTIONAL<BioAPI_BIR_HANDLE>;
+  /**
+   * @summary `result`.
+   * @description
+   *
+   * BioAPI `Result` of the verification. Always returned
+   * (no `no-*` flag). X.1083 §16.37.6.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly result: BOOLEAN;
+  /**
+   * @summary `fmrAchieved`.
+   * @description
+   *
+   * Achieved false-match rate, if requested. Absent when
+   * `no-fmrAchieved` was `TRUE`. X.1083 §16.37.6.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly fmrAchieved?: OPTIONAL<BioAPI_FMR>;
+  /**
+   * @summary `payload`.
+   * @description
+   *
+   * Payload output, if requested. Absent when `no-payload`
+   * was `TRUE`. X.1083 §16.37.6.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly payload?: OPTIONAL<BioAPI_DATA>;
+  /**
+   * @summary `auditData`.
+   * @description
+   *
+   * Handle of the audit BIR, if requested. Absent when
+   * `no-auditData` was `TRUE`. X.1083 §16.37.6.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly auditData?: OPTIONAL<BioAPI_BIR_HANDLE>;
+
   constructor(
-    /**
-     * @summary `adaptedBIR`.
-     * @description
-     *
-     * Handle of the adapted BIR, if requested. Absent when
-     * `no-adaptedBIR` was `TRUE`. X.1083 §16.37.6.
-     *
-     * @public
-     * @readonly
-     */
-    readonly adaptedBIR: OPTIONAL<BioAPI_BIR_HANDLE>,
-    /**
-     * @summary `result`.
-     * @description
-     *
-     * BioAPI `Result` of the verification. Always returned
-     * (no `no-*` flag). X.1083 §16.37.6.
-     *
-     * @public
-     * @readonly
-     */
-    readonly result: BOOLEAN,
-    /**
-     * @summary `fmrAchieved`.
-     * @description
-     *
-     * Achieved false-match rate, if requested. Absent when
-     * `no-fmrAchieved` was `TRUE`. X.1083 §16.37.6.
-     *
-     * @public
-     * @readonly
-     */
-    readonly fmrAchieved?: OPTIONAL<BioAPI_FMR>,
-    /**
-     * @summary `payload`.
-     * @description
-     *
-     * Payload output, if requested. Absent when `no-payload`
-     * was `TRUE`. X.1083 §16.37.6.
-     *
-     * @public
-     * @readonly
-     */
-    readonly payload?: OPTIONAL<BioAPI_DATA>,
-    /**
-     * @summary `auditData`.
-     * @description
-     *
-     * Handle of the audit BIR, if requested. Absent when
-     * `no-auditData` was `TRUE`. X.1083 §16.37.6.
-     *
-     * @public
-     * @readonly
-     */
-    readonly auditData?: OPTIONAL<BioAPI_BIR_HANDLE>
-  ) {}
+    adaptedBIR: OPTIONAL<BioAPI_BIR_HANDLE>,
+    result: BOOLEAN,
+    fmrAchieved?: OPTIONAL<BioAPI_FMR>,
+    payload?: OPTIONAL<BioAPI_DATA>,
+    auditData?: OPTIONAL<BioAPI_BIR_HANDLE>
+  ) {
+    this.adaptedBIR = adaptedBIR;
+    this.result = result;
+    this.fmrAchieved = fmrAchieved;
+    this.payload = payload;
+    this.auditData = auditData;
+  }
 
   /**
    * @summary Restructures an object into a Verify_ResponseParams

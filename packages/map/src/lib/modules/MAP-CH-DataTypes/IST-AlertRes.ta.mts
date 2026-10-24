@@ -32,54 +32,66 @@ import { IST_AlertTimerValue, _decode_IST_AlertTimerValue, _encode_IST_AlertTime
  */
 export
 class IST_AlertRes {
+    /**
+     * @summary `istAlertTimer`.
+     * @description
+     *
+     * IST alert timer value.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly istAlertTimer?: OPTIONAL<IST_AlertTimerValue>;
+    /**
+     * @summary `istInformationWithdraw`.
+     * @description
+     *
+     * Withdraw IST information.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly istInformationWithdraw?: OPTIONAL<NULL>;
+    /**
+     * @summary `callTerminationIndicator`.
+     * @description
+     *
+     * Which call activities to terminate.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly callTerminationIndicator?: OPTIONAL<CallTerminationIndicator>;
+    /**
+     * @summary `extensionContainer`.
+     * @description
+     *
+     * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `istAlertTimer`.
-         * @description
-         *
-         * IST alert timer value.
-         *
-         * @public
-         * @readonly
-         */
-        readonly istAlertTimer?: OPTIONAL<IST_AlertTimerValue>,
-        /**
-         * @summary `istInformationWithdraw`.
-         * @description
-         *
-         * Withdraw IST information.
-         *
-         * @public
-         * @readonly
-         */
-        readonly istInformationWithdraw?: OPTIONAL<NULL>,
-        /**
-         * @summary `callTerminationIndicator`.
-         * @description
-         *
-         * Which call activities to terminate.
-         *
-         * @public
-         * @readonly
-         */
-        readonly callTerminationIndicator?: OPTIONAL<CallTerminationIndicator>,
-        /**
-         * @summary `extensionContainer`.
-         * @description
-         *
-         * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        istAlertTimer?: OPTIONAL<IST_AlertTimerValue>,
+        istInformationWithdraw?: OPTIONAL<NULL>,
+        callTerminationIndicator?: OPTIONAL<CallTerminationIndicator>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.istAlertTimer = istAlertTimer;
+        this.istInformationWithdraw = istInformationWithdraw;
+        this.callTerminationIndicator = callTerminationIndicator;
+        this.extensionContainer = extensionContainer;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a IST_AlertRes

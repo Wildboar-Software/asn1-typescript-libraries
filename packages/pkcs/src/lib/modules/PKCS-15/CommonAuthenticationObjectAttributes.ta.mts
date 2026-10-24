@@ -26,20 +26,26 @@ import {
  *
  */
 export class CommonAuthenticationObjectAttributes {
+    /**
+     * @summary `authId`.
+     * @public
+     * @readonly
+     */
+    public readonly authId: Identifier;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `authId`.
-         * @public
-         * @readonly
-         */
-        readonly authId: Identifier,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        authId: Identifier,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.authId = authId;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a CommonAuthenticationObjectAttributes

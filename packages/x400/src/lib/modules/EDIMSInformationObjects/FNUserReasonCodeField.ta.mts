@@ -38,20 +38,26 @@ import {
  *
  */
 export class FNUserReasonCodeField {
+    /**
+     * @summary `fn_user_basic_code`.
+     * @public
+     * @readonly
+     */
+    public readonly fn_user_basic_code: FNUserBasicCodeField;
+    /**
+     * @summary `fn_user_diagnostic`.
+     * @public
+     * @readonly
+     */
+    public readonly fn_user_diagnostic?: OPTIONAL<FNUserDiagnosticField>;
+
     constructor(
-        /**
-         * @summary `fn_user_basic_code`.
-         * @public
-         * @readonly
-         */
-        readonly fn_user_basic_code: FNUserBasicCodeField,
-        /**
-         * @summary `fn_user_diagnostic`.
-         * @public
-         * @readonly
-         */
-        readonly fn_user_diagnostic?: OPTIONAL<FNUserDiagnosticField>
-    ) {}
+        fn_user_basic_code: FNUserBasicCodeField,
+        fn_user_diagnostic?: OPTIONAL<FNUserDiagnosticField>
+    ) {
+        this.fn_user_basic_code = fn_user_basic_code;
+        this.fn_user_diagnostic = fn_user_diagnostic;
+    }
 
     /**
      * @summary Restructures an object into a FNUserReasonCodeField

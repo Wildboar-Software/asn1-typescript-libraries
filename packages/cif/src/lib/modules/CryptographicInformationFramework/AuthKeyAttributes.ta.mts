@@ -35,33 +35,41 @@ import { Identifier, _decode_Identifier, _encode_Identifier } from "../Cryptogra
  */
 export
 class AuthKeyAttributes {
+    /**
+     * @summary `derivedKey`.
+     * @description
+     * TRUE (default): stored key is a derived individual key, a group key,
+     * or a master used to derive individual keys. ISO/IEC 7816-15:2016
+     * §8.9.4.
+     * @public
+     * @readonly
+     */
+    public readonly derivedKey: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `authKeyId`.
+     * @description
+     * `CommonKeyAttributes.iD` of the authentication key (e.g. described in
+     * EF.SKD). ISO/IEC 7816-15:2016 §8.9.4.
+     * @public
+     * @readonly
+     */
+    public readonly authKeyId: Identifier;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `derivedKey`.
-         * @description
-         * TRUE (default): stored key is a derived individual key, a group key,
-         * or a master used to derive individual keys. ISO/IEC 7816-15:2016
-         * §8.9.4.
-         * @public
-         * @readonly
-         */
-        readonly derivedKey: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `authKeyId`.
-         * @description
-         * `CommonKeyAttributes.iD` of the authentication key (e.g. described in
-         * EF.SKD). ISO/IEC 7816-15:2016 §8.9.4.
-         * @public
-         * @readonly
-         */
-        readonly authKeyId: Identifier,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        derivedKey: OPTIONAL<BOOLEAN>,
+        authKeyId: Identifier,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.derivedKey = derivedKey;
+        this.authKeyId = authKeyId;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a AuthKeyAttributes

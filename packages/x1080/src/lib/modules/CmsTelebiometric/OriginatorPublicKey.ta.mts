@@ -38,39 +38,47 @@ import {
  *
  */
 export class OriginatorPublicKey {
+    /**
+     * @summary `algorithm`.
+     * @description
+     *
+     * DH public-key algorithm used. From
+     * `SupportedDHPublicKeyAlgorithms` (extensible; none
+     * mandated).
+     * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.3.3.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly algorithm: AlgorithmIdentifier;
+    /**
+     * @summary `publicKey`.
+     * @description
+     *
+     * Sender's DH public key. A new key pair per message for
+     * ephemeral-static.
+     * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.3.3.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly publicKey: BIT_STRING;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `algorithm`.
-         * @description
-         *
-         * DH public-key algorithm used. From
-         * `SupportedDHPublicKeyAlgorithms` (extensible; none
-         * mandated).
-         * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.3.3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly algorithm: AlgorithmIdentifier,
-        /**
-         * @summary `publicKey`.
-         * @description
-         *
-         * Sender's DH public key. A new key pair per message for
-         * ephemeral-static.
-         * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.3.3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly publicKey: BIT_STRING,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        algorithm: AlgorithmIdentifier,
+        publicKey: BIT_STRING,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.algorithm = algorithm;
+        this.publicKey = publicKey;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a OriginatorPublicKey

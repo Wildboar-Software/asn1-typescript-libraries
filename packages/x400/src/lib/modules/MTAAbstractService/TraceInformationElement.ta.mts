@@ -37,20 +37,26 @@ import {
  *
  */
 export class TraceInformationElement {
+    /**
+     * @summary `global_domain_identifier`.
+     * @public
+     * @readonly
+     */
+    public readonly global_domain_identifier: GlobalDomainIdentifier;
+    /**
+     * @summary `domain_supplied_information`.
+     * @public
+     * @readonly
+     */
+    public readonly domain_supplied_information: DomainSuppliedInformation;
+
     constructor(
-        /**
-         * @summary `global_domain_identifier`.
-         * @public
-         * @readonly
-         */
-        readonly global_domain_identifier: GlobalDomainIdentifier,
-        /**
-         * @summary `domain_supplied_information`.
-         * @public
-         * @readonly
-         */
-        readonly domain_supplied_information: DomainSuppliedInformation
-    ) {}
+        global_domain_identifier: GlobalDomainIdentifier,
+        domain_supplied_information: DomainSuppliedInformation
+    ) {
+        this.global_domain_identifier = global_domain_identifier;
+        this.domain_supplied_information = domain_supplied_information;
+    }
 
     /**
      * @summary Restructures an object into a TraceInformationElement

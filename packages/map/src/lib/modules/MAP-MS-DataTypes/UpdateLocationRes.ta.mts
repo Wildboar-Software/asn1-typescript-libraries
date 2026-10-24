@@ -35,58 +35,70 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
  */
 export
 class UpdateLocationRes {
+    /**
+     * @summary `hlr_Number`.
+     * @description
+     *
+     * ISDN number of an HLR. Mandatory in a successful Update Location,
+     * Update GPRS Location, or Restore Data result.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.2.13).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly hlr_Number: ISDN_AddressString;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary `add_Capability`.
+     * @description
+     *
+     * HLR supports the Automatic Device Detection function.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 8.1.2.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly add_Capability?: OPTIONAL<NULL>;
+    /**
+     * @summary `pagingArea_Capability`.
+     * @description
+     *
+     * HLR supports the Paging Area function. Reported the same for all
+     * subscribers.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 8.1.2.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly pagingArea_Capability?: OPTIONAL<NULL>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `hlr_Number`.
-         * @description
-         *
-         * ISDN number of an HLR. Mandatory in a successful Update Location,
-         * Update GPRS Location, or Restore Data result.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.2.13).
-         *
-         * @public
-         * @readonly
-         */
-        readonly hlr_Number: ISDN_AddressString,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary `add_Capability`.
-         * @description
-         *
-         * HLR supports the Automatic Device Detection function.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 8.1.2.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly add_Capability?: OPTIONAL<NULL>,
-        /**
-         * @summary `pagingArea_Capability`.
-         * @description
-         *
-         * HLR supports the Paging Area function. Reported the same for all
-         * subscribers.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 8.1.2.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly pagingArea_Capability?: OPTIONAL<NULL>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        hlr_Number: ISDN_AddressString,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        add_Capability?: OPTIONAL<NULL>,
+        pagingArea_Capability?: OPTIONAL<NULL>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.hlr_Number = hlr_Number;
+        this.extensionContainer = extensionContainer;
+        this.add_Capability = add_Capability;
+        this.pagingArea_Capability = pagingArea_Capability;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a UpdateLocationRes

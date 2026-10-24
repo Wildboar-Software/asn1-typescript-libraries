@@ -29,20 +29,26 @@ import * as $ from '@wildboar/asn1/functional';
  *
  */
 export class GenericName {
+    /**
+     * @summary `displayFormat`.
+     * @public
+     * @readonly
+     */
+    public readonly displayFormat: IA5String;
+    /**
+     * @summary `typedFormat`.
+     * @public
+     * @readonly
+     */
+    public readonly typedFormat: EXTERNAL;
+
     constructor(
-        /**
-         * @summary `displayFormat`.
-         * @public
-         * @readonly
-         */
-        readonly displayFormat: IA5String,
-        /**
-         * @summary `typedFormat`.
-         * @public
-         * @readonly
-         */
-        readonly typedFormat: EXTERNAL
-    ) {}
+        displayFormat: IA5String,
+        typedFormat: EXTERNAL
+    ) {
+        this.displayFormat = displayFormat;
+        this.typedFormat = typedFormat;
+    }
 
     /**
      * @summary Restructures an object into a GenericName

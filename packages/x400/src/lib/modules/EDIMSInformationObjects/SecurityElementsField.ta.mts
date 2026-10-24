@@ -51,32 +51,42 @@ import {
  *
  */
 export class SecurityElementsField {
+    /**
+     * @summary `original_content`.
+     * @public
+     * @readonly
+     */
+    public readonly original_content?: OPTIONAL<Content>;
+    /**
+     * @summary `original_content_integrity_check`.
+     * @public
+     * @readonly
+     */
+    public readonly original_content_integrity_check?: OPTIONAL<ContentIntegrityCheck>;
+    /**
+     * @summary `edi_application_security_elements`.
+     * @public
+     * @readonly
+     */
+    public readonly edi_application_security_elements?: OPTIONAL<EDIApplicationSecurityElementsField>;
+    /**
+     * @summary `security_extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly security_extensions?: OPTIONAL<SecurityExtensionsField>;
+
     constructor(
-        /**
-         * @summary `original_content`.
-         * @public
-         * @readonly
-         */
-        readonly original_content?: OPTIONAL<Content>,
-        /**
-         * @summary `original_content_integrity_check`.
-         * @public
-         * @readonly
-         */
-        readonly original_content_integrity_check?: OPTIONAL<ContentIntegrityCheck>,
-        /**
-         * @summary `edi_application_security_elements`.
-         * @public
-         * @readonly
-         */
-        readonly edi_application_security_elements?: OPTIONAL<EDIApplicationSecurityElementsField>,
-        /**
-         * @summary `security_extensions`.
-         * @public
-         * @readonly
-         */
-        readonly security_extensions?: OPTIONAL<SecurityExtensionsField>
-    ) {}
+        original_content?: OPTIONAL<Content>,
+        original_content_integrity_check?: OPTIONAL<ContentIntegrityCheck>,
+        edi_application_security_elements?: OPTIONAL<EDIApplicationSecurityElementsField>,
+        security_extensions?: OPTIONAL<SecurityExtensionsField>
+    ) {
+        this.original_content = original_content;
+        this.original_content_integrity_check = original_content_integrity_check;
+        this.edi_application_security_elements = edi_application_security_elements;
+        this.security_extensions = security_extensions;
+    }
 
     /**
      * @summary Restructures an object into a SecurityElementsField

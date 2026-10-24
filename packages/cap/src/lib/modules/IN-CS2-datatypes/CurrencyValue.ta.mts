@@ -31,20 +31,26 @@ import { CurrencyID, _decode_CurrencyID, _encode_CurrencyID } from "../IN-CS2-da
  */
 export
 class CurrencyValue {
+    /**
+     * @summary `currency`.
+     * @public
+     * @readonly
+     */
+    public readonly currency: CurrencyID;
+    /**
+     * @summary `amount`.
+     * @public
+     * @readonly
+     */
+    public readonly amount: INTEGER;
+
     constructor (
-        /**
-         * @summary `currency`.
-         * @public
-         * @readonly
-         */
-        readonly currency: CurrencyID,
-        /**
-         * @summary `amount`.
-         * @public
-         * @readonly
-         */
-        readonly amount: INTEGER
-    ) {}
+        currency: CurrencyID,
+        amount: INTEGER
+    ) {
+        this.currency = currency;
+        this.amount = amount;
+    }
 
     /**
      * @summary Restructures an object into a CurrencyValue

@@ -32,48 +32,58 @@ import {
  *
  */
 export class IdmResult {
+    /**
+     * @summary `invokeID`.
+     * @description
+     *
+     * Shall equal the Request. Unknown / not outstanding ⇒ reject
+     * `unknownInvokeIDResult`. Primary correlation key; responses
+     * are unordered.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly invokeID: INTEGER;
+    /**
+     * @summary `opcode`.
+     * @description
+     *
+     * Shall equal the Request's `opcode`. Mismatch ⇒ reject
+     * `mistypedResultRequest`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly opcode: Code;
+    /**
+     * @summary `result`.
+     * @description
+     *
+     * OPERATION.&ResultType for `opcode`. Malformed ⇒ reject
+     * `mistypedResultRequest`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly result: _Element;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `invokeID`.
-         * @description
-         *
-         * Shall equal the Request. Unknown / not outstanding ⇒ reject
-         * `unknownInvokeIDResult`. Primary correlation key; responses
-         * are unordered.
-         *
-         * @public
-         * @readonly
-         */
-        readonly invokeID: INTEGER,
-        /**
-         * @summary `opcode`.
-         * @description
-         *
-         * Shall equal the Request's `opcode`. Mismatch ⇒ reject
-         * `mistypedResultRequest`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly opcode: Code,
-        /**
-         * @summary `result`.
-         * @description
-         *
-         * OPERATION.&ResultType for `opcode`. Malformed ⇒ reject
-         * `mistypedResultRequest`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly result: _Element,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        invokeID: INTEGER,
+        opcode: Code,
+        result: _Element,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.invokeID = invokeID;
+        this.opcode = opcode;
+        this.result = result;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a IdmResult

@@ -54,80 +54,96 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class RecordMessageArgument {
+    /**
+     * @summary `callToBeRecorded`.
+     * @description
+     *
+     * Connection from which to record (ECMA-269 §26.1.9.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly callToBeRecorded: ConnectionID;
+    /**
+     * @summary `resource`.
+     * @description
+     *
+     * Interactive voice resource. Required when more than one interactive
+     * voice resource exists on the connection.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly resource?: OPTIONAL<ResourceID>;
+    /**
+     * @summary `samplingRate`.
+     * @description
+     *
+     * Sampling rate (ECMA-269 §26.1.9.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly samplingRate?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `encodingAlgorithm`.
+     * @description
+     *
+     * Encoding for the recording (ECMA-269 §26.1.9.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly encodingAlgorithm?: OPTIONAL<EncodingAlgorithm>;
+    /**
+     * @summary `maxDuration`.
+     * @description
+     *
+     * Maximum duration (ECMA-269 §26.1.9.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly maxDuration?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `termination`.
+     * @description
+     *
+     * Conditions that stop recording (ECMA-269 §26.1.9.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly termination?: OPTIONAL<TerminatingConditions>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * CSTACommonArguments carrying the service-table security and
+     * privateData parameters.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `callToBeRecorded`.
-         * @description
-         *
-         * Connection from which to record (ECMA-269 §26.1.9.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly callToBeRecorded: ConnectionID,
-        /**
-         * @summary `resource`.
-         * @description
-         *
-         * Interactive voice resource. Required when more than one interactive
-         * voice resource exists on the connection.
-         *
-         * @public
-         * @readonly
-         */
-        readonly resource?: OPTIONAL<ResourceID>,
-        /**
-         * @summary `samplingRate`.
-         * @description
-         *
-         * Sampling rate (ECMA-269 §26.1.9.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly samplingRate?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `encodingAlgorithm`.
-         * @description
-         *
-         * Encoding for the recording (ECMA-269 §26.1.9.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly encodingAlgorithm?: OPTIONAL<EncodingAlgorithm>,
-        /**
-         * @summary `maxDuration`.
-         * @description
-         *
-         * Maximum duration (ECMA-269 §26.1.9.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly maxDuration?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `termination`.
-         * @description
-         *
-         * Conditions that stop recording (ECMA-269 §26.1.9.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly termination?: OPTIONAL<TerminatingConditions>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * CSTACommonArguments carrying the service-table security and
-         * privateData parameters.
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        callToBeRecorded: ConnectionID,
+        resource?: OPTIONAL<ResourceID>,
+        samplingRate?: OPTIONAL<INTEGER>,
+        encodingAlgorithm?: OPTIONAL<EncodingAlgorithm>,
+        maxDuration?: OPTIONAL<INTEGER>,
+        termination?: OPTIONAL<TerminatingConditions>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.callToBeRecorded = callToBeRecorded;
+        this.resource = resource;
+        this.samplingRate = samplingRate;
+        this.encodingAlgorithm = encodingAlgorithm;
+        this.maxDuration = maxDuration;
+        this.termination = termination;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a RecordMessageArgument

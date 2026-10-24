@@ -26,30 +26,38 @@ import { type Cause, _decode_Cause, _encode_Cause } from "./Cause.ta.mjs";
  *
  */
 export class CallSegmentFailure {
+    /**
+     * @summary `callSegmentID`.
+     * @description
+     *
+     * Released Call Segment. (3GPP TS 29.078 V19.0.0 clause 11.16).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly callSegmentID?: OPTIONAL<CallSegmentID>;
+    /**
+     * @summary `cause`.
+     * @description
+     *
+     * Cause for releasing this Call Segment. gsmSCF may use it to decide
+     * further call handling. (3GPP TS 29.078 V19.0.0 clause 11.16).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly cause?: OPTIONAL<Cause>;
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `callSegmentID`.
-         * @description
-         *
-         * Released Call Segment. (3GPP TS 29.078 V19.0.0 clause 11.16).
-         *
-         * @public
-         * @readonly
-         */
-        readonly callSegmentID?: OPTIONAL<CallSegmentID>,
-        /**
-         * @summary `cause`.
-         * @description
-         *
-         * Cause for releasing this Call Segment. gsmSCF may use it to decide
-         * further call handling. (3GPP TS 29.078 V19.0.0 clause 11.16).
-         *
-         * @public
-         * @readonly
-         */
-        readonly cause?: OPTIONAL<Cause>,
-        readonly _unrecognizedExtensionsList: _Element[] = [],
-    ) {}
+        callSegmentID?: OPTIONAL<CallSegmentID>,
+        cause?: OPTIONAL<Cause>,
+        _unrecognizedExtensionsList: _Element[] = [],
+    ) {
+        this.callSegmentID = callSegmentID;
+        this.cause = cause;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     public static _from_object (_o: { [_K in keyof (CallSegmentFailure)]: (CallSegmentFailure)[_K] }): CallSegmentFailure {
         return new CallSegmentFailure(_o.callSegmentID, _o.cause, _o._unrecognizedExtensionsList);

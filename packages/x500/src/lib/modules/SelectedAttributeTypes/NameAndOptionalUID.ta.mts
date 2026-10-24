@@ -34,35 +34,43 @@ import {
  *
  */
 export class NameAndOptionalUID {
+    /**
+     * @summary `dn`.
+     * @description
+     *
+     * Compared with distinguishedNameMatch.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly dn: DistinguishedName;
+    /**
+     * @summary `uid`.
+     * @description
+     *
+     * Optional. Absent stored `uid` still matches uniqueMemberMatch; if
+     * present, bitStringMatch (no NamedBitList ⇒ trailing zeros count).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly uid?: OPTIONAL<UniqueIdentifier>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `dn`.
-         * @description
-         *
-         * Compared with distinguishedNameMatch.
-         *
-         * @public
-         * @readonly
-         */
-        readonly dn: DistinguishedName,
-        /**
-         * @summary `uid`.
-         * @description
-         *
-         * Optional. Absent stored `uid` still matches uniqueMemberMatch; if
-         * present, bitStringMatch (no NamedBitList ⇒ trailing zeros count).
-         *
-         * @public
-         * @readonly
-         */
-        readonly uid?: OPTIONAL<UniqueIdentifier>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        dn: DistinguishedName,
+        uid?: OPTIONAL<UniqueIdentifier>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.dn = dn;
+        this.uid = uid;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a NameAndOptionalUID

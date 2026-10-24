@@ -31,20 +31,26 @@ import { Cause, _decode_Cause, _encode_Cause } from "../IN-CS2-datatypes/Cause.t
  */
 export
 class GapTreatment_both {
+    /**
+     * @summary `informationToSend`.
+     * @public
+     * @readonly
+     */
+    public readonly informationToSend: InformationToSend;
+    /**
+     * @summary `releaseCause`.
+     * @public
+     * @readonly
+     */
+    public readonly releaseCause: Cause;
+
     constructor (
-        /**
-         * @summary `informationToSend`.
-         * @public
-         * @readonly
-         */
-        readonly informationToSend: InformationToSend,
-        /**
-         * @summary `releaseCause`.
-         * @public
-         * @readonly
-         */
-        readonly releaseCause: Cause
-    ) {}
+        informationToSend: InformationToSend,
+        releaseCause: Cause
+    ) {
+        this.informationToSend = informationToSend;
+        this.releaseCause = releaseCause;
+    }
 
     /**
      * @summary Restructures an object into a GapTreatment_both

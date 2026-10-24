@@ -35,26 +35,34 @@ import {
  *
  */
 export class LoopbackControl {
+    /**
+     * @summary `status`.
+     * @public
+     * @readonly
+     */
+    public readonly status: LoopbackControl_status;
+    /**
+     * @summary `terminationTime`.
+     * @public
+     * @readonly
+     */
+    public readonly terminationTime: UTCTime;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `status`.
-         * @public
-         * @readonly
-         */
-        readonly status: LoopbackControl_status,
-        /**
-         * @summary `terminationTime`.
-         * @public
-         * @readonly
-         */
-        readonly terminationTime: UTCTime,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        status: LoopbackControl_status,
+        terminationTime: UTCTime,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.status = status;
+        this.terminationTime = terminationTime;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a LoopbackControl

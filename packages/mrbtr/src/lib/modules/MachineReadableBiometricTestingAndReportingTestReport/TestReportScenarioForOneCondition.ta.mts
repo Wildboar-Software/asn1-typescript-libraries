@@ -43,72 +43,86 @@ import { TestResult, _decode_TestResult, _encode_TestResult } from "../MachineRe
  */
 export
 class TestReportScenarioForOneCondition {
+    /**
+     * @summary `testCrewInfo`.
+     * @description
+     *
+     * Test crew identity, location, habituation, and statistics
+     * (Clause 6.5.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly testCrewInfo: TestCrewInformation;
+    /**
+     * @summary `levelPolicyAssistance`.
+     * @description
+     *
+     * Effort, decision policy, assistance, and instructional mode.
+     * Policy is specified at the test level and enforced at the
+     * transaction level (Clause 6.5.2, Annex C.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly levelPolicyAssistance: LevelPolicyAssistance;
+    /**
+     * @summary `environInfo`.
+     * @description
+     *
+     * Test-execution environment (Clause 6.5.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly environInfo: EnvironmentalInformation;
+    /**
+     * @summary `dateStarted`.
+     * @description
+     *
+     * Date the test trials started (Clause 6.5.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly dateStarted: OPTIONAL<Date>;
+    /**
+     * @summary `dateEnded`.
+     * @description
+     *
+     * Date the test trials ended (Clause 6.5.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly dateEnded: OPTIONAL<Date>;
+    /**
+     * @summary `testResult`.
+     * @description
+     *
+     * Enrolment, acquisition, verification, and/or identification
+     * results for this condition (Clause 6.5.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly testResult: TestResult[];
+
     constructor (
-        /**
-         * @summary `testCrewInfo`.
-         * @description
-         *
-         * Test crew identity, location, habituation, and statistics
-         * (Clause 6.5.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly testCrewInfo: TestCrewInformation,
-        /**
-         * @summary `levelPolicyAssistance`.
-         * @description
-         *
-         * Effort, decision policy, assistance, and instructional mode.
-         * Policy is specified at the test level and enforced at the
-         * transaction level (Clause 6.5.2, Annex C.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly levelPolicyAssistance: LevelPolicyAssistance,
-        /**
-         * @summary `environInfo`.
-         * @description
-         *
-         * Test-execution environment (Clause 6.5.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly environInfo: EnvironmentalInformation,
-        /**
-         * @summary `dateStarted`.
-         * @description
-         *
-         * Date the test trials started (Clause 6.5.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly dateStarted: OPTIONAL<Date>,
-        /**
-         * @summary `dateEnded`.
-         * @description
-         *
-         * Date the test trials ended (Clause 6.5.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly dateEnded: OPTIONAL<Date>,
-        /**
-         * @summary `testResult`.
-         * @description
-         *
-         * Enrolment, acquisition, verification, and/or identification
-         * results for this condition (Clause 6.5.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly testResult: TestResult[]
-    ) {}
+        testCrewInfo: TestCrewInformation,
+        levelPolicyAssistance: LevelPolicyAssistance,
+        environInfo: EnvironmentalInformation,
+        dateStarted: OPTIONAL<Date>,
+        dateEnded: OPTIONAL<Date>,
+        testResult: TestResult[]
+    ) {
+        this.testCrewInfo = testCrewInfo;
+        this.levelPolicyAssistance = levelPolicyAssistance;
+        this.environInfo = environInfo;
+        this.dateStarted = dateStarted;
+        this.dateEnded = dateEnded;
+        this.testResult = testResult;
+    }
 
     /**
      * @summary Restructures an object into a TestReportScenarioForOneCondition

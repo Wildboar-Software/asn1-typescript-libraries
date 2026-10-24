@@ -44,32 +44,42 @@ import {
  *
  */
 export class CertificationRequestInfo {
+    /**
+     * @summary `version`.
+     * @public
+     * @readonly
+     */
+    public readonly version: CertificationRequestInfo_version;
+    /**
+     * @summary `subject`.
+     * @public
+     * @readonly
+     */
+    public readonly subject: Name;
+    /**
+     * @summary `subjectPKInfo`.
+     * @public
+     * @readonly
+     */
+    public readonly subjectPKInfo: SubjectPublicKeyInfo;
+    /**
+     * @summary `attributes`.
+     * @public
+     * @readonly
+     */
+    public readonly attributes: Attributes;
+
     constructor(
-        /**
-         * @summary `version`.
-         * @public
-         * @readonly
-         */
-        readonly version: CertificationRequestInfo_version,
-        /**
-         * @summary `subject`.
-         * @public
-         * @readonly
-         */
-        readonly subject: Name,
-        /**
-         * @summary `subjectPKInfo`.
-         * @public
-         * @readonly
-         */
-        readonly subjectPKInfo: SubjectPublicKeyInfo,
-        /**
-         * @summary `attributes`.
-         * @public
-         * @readonly
-         */
-        readonly attributes: Attributes
-    ) {}
+        version: CertificationRequestInfo_version,
+        subject: Name,
+        subjectPKInfo: SubjectPublicKeyInfo,
+        attributes: Attributes
+    ) {
+        this.version = version;
+        this.subject = subject;
+        this.subjectPKInfo = subjectPKInfo;
+        this.attributes = attributes;
+    }
 
     /**
      * @summary Restructures an object into a CertificationRequestInfo

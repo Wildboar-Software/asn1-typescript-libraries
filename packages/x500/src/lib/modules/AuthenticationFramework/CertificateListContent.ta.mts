@@ -67,58 +67,78 @@ import {
  *
  */
 export class CertificateListContent {
+    /**
+     * @summary `version`.
+     * @public
+     * @readonly
+     */
+    public readonly version: OPTIONAL<Version>;
+    /**
+     * @summary `signature`.
+     * @public
+     * @readonly
+     */
+    public readonly signature: AlgorithmIdentifier;
+    /**
+     * @summary `issuer`.
+     * @public
+     * @readonly
+     */
+    public readonly issuer: Name;
+    /**
+     * @summary `thisUpdate`.
+     * @public
+     * @readonly
+     */
+    public readonly thisUpdate: Time;
+    /**
+     * @summary `nextUpdate`.
+     * @public
+     * @readonly
+     */
+    public readonly nextUpdate?: OPTIONAL<Time>;
+    /**
+     * @summary `revokedCertificates`.
+     * @public
+     * @readonly
+     */
+    public readonly revokedCertificates?: OPTIONAL<
+            CertificateListContent_revokedCertificates_Item[]
+        >;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+    /**
+     * @summary `crlExtensions`.
+     * @public
+     * @readonly
+     */
+    public readonly crlExtensions?: OPTIONAL<Extensions>;
+
     constructor(
-        /**
-         * @summary `version`.
-         * @public
-         * @readonly
-         */
-        readonly version: OPTIONAL<Version>,
-        /**
-         * @summary `signature`.
-         * @public
-         * @readonly
-         */
-        readonly signature: AlgorithmIdentifier,
-        /**
-         * @summary `issuer`.
-         * @public
-         * @readonly
-         */
-        readonly issuer: Name,
-        /**
-         * @summary `thisUpdate`.
-         * @public
-         * @readonly
-         */
-        readonly thisUpdate: Time,
-        /**
-         * @summary `nextUpdate`.
-         * @public
-         * @readonly
-         */
-        readonly nextUpdate?: OPTIONAL<Time>,
-        /**
-         * @summary `revokedCertificates`.
-         * @public
-         * @readonly
-         */
-        readonly revokedCertificates?: OPTIONAL<
+        version: OPTIONAL<Version>,
+        signature: AlgorithmIdentifier,
+        issuer: Name,
+        thisUpdate: Time,
+        nextUpdate?: OPTIONAL<Time>,
+        revokedCertificates?: OPTIONAL<
             CertificateListContent_revokedCertificates_Item[]
         >,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = [],
-        /**
-         * @summary `crlExtensions`.
-         * @public
-         * @readonly
-         */
-        readonly crlExtensions?: OPTIONAL<Extensions>
-    ) {}
+        _unrecognizedExtensionsList: _Element[] = [],
+        crlExtensions?: OPTIONAL<Extensions>
+    ) {
+        this.version = version;
+        this.signature = signature;
+        this.issuer = issuer;
+        this.thisUpdate = thisUpdate;
+        this.nextUpdate = nextUpdate;
+        this.revokedCertificates = revokedCertificates;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+        this.crlExtensions = crlExtensions;
+    }
 
     /**
      * @summary Restructures an object into a CertificateListContent

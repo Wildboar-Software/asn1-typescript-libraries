@@ -36,17 +36,21 @@ import {
  *
  */
 export class TransitNoticeType {
+  /**
+   * @summary `digitalPostmark`.
+   * @description Receiving Cmail server's postmark
+   * (envelope id, `DELV` type, MIME hash). ITU-T Rec.
+   * X.1341 (09/2015) §8.17.
+   * @public
+   * @readonly
+   */
+  public readonly digitalPostmark: DigitalPostmarkType;
+
   constructor(
-    /**
-     * @summary `digitalPostmark`.
-     * @description Receiving Cmail server's postmark
-     * (envelope id, `DELV` type, MIME hash). ITU-T Rec.
-     * X.1341 (09/2015) §8.17.
-     * @public
-     * @readonly
-     */
-    readonly digitalPostmark: DigitalPostmarkType
-  ) {}
+    digitalPostmark: DigitalPostmarkType
+  ) {
+    this.digitalPostmark = digitalPostmark;
+  }
 
   /**
    * @summary Restructures an object into a TransitNoticeType

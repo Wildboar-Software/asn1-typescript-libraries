@@ -40,44 +40,54 @@ import { Attribute, _decode_Attribute, _encode_Attribute } from "../InformationF
  */
 export
 class DfrEntryList_Item {
+    /**
+     * @summary `upi`.
+     * @description
+     *
+     * UPI of the listed object.
+     * @public
+     * @readonly
+     */
+    public readonly upi: DfrUniquePermanentIdentifier;
+    /**
+     * @summary `class_`.
+     * @description
+     *
+     * Object class.
+     * @public
+     * @readonly
+     */
+    public readonly class_: DfrObjectClass;
+    /**
+     * @summary `ordering_attribute`.
+     * @description
+     *
+     * Key values in OrderingRule order.
+     * @public
+     * @readonly
+     */
+    public readonly ordering_attribute?: OPTIONAL<Attribute[]>;
+    /**
+     * @summary `other_attributes`.
+     * @description
+     *
+     * Additionally selected attributes.
+     * @public
+     * @readonly
+     */
+    public readonly other_attributes?: OPTIONAL<Attribute[]>;
+
     constructor (
-        /**
-         * @summary `upi`.
-         * @description
-         *
-         * UPI of the listed object.
-         * @public
-         * @readonly
-         */
-        readonly upi: DfrUniquePermanentIdentifier,
-        /**
-         * @summary `class_`.
-         * @description
-         *
-         * Object class.
-         * @public
-         * @readonly
-         */
-        readonly class_: DfrObjectClass,
-        /**
-         * @summary `ordering_attribute`.
-         * @description
-         *
-         * Key values in OrderingRule order.
-         * @public
-         * @readonly
-         */
-        readonly ordering_attribute?: OPTIONAL<Attribute[]>,
-        /**
-         * @summary `other_attributes`.
-         * @description
-         *
-         * Additionally selected attributes.
-         * @public
-         * @readonly
-         */
-        readonly other_attributes?: OPTIONAL<Attribute[]>
-    ) {}
+        upi: DfrUniquePermanentIdentifier,
+        class_: DfrObjectClass,
+        ordering_attribute?: OPTIONAL<Attribute[]>,
+        other_attributes?: OPTIONAL<Attribute[]>
+    ) {
+        this.upi = upi;
+        this.class_ = class_;
+        this.ordering_attribute = ordering_attribute;
+        this.other_attributes = other_attributes;
+    }
 
     /**
      * @summary Restructures an object into a DfrEntryList_Item

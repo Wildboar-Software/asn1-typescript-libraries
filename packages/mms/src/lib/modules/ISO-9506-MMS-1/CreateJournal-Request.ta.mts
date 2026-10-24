@@ -32,19 +32,23 @@ import { ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-
  */
 export
 class CreateJournal_Request {
+    /**
+     * @summary `journalName`.
+     * @description
+     *
+     * Name of the Journal to create (VMD, Domain, or AA scope).
+     * ISO 9506-1:2003 §23.1.1.1, §23.6.1.1.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly journalName: ObjectName;
+
     constructor (
-        /**
-         * @summary `journalName`.
-         * @description
-         *
-         * Name of the Journal to create (VMD, Domain, or AA scope).
-         * ISO 9506-1:2003 §23.1.1.1, §23.6.1.1.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly journalName: ObjectName
-    ) {}
+        journalName: ObjectName
+    ) {
+        this.journalName = journalName;
+    }
 
     /**
      * @summary Restructures an object into a CreateJournal_Request

@@ -42,40 +42,48 @@ import { ACBioContentInformation, _decode_ACBioContentInformation, _encode_ACBio
  */
 export
 class BDforDownloadModel {
+    /**
+     * @summary `biometricClientProcess`.
+     * @description
+     *
+     * BSP/BFP, template ID, sample quality, and comparison score from
+     * the client. X.1084 §11.1 Table 3.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly biometricClientProcess: BiometricClientProcess;
+    /**
+     * @summary `digitalSignature`.
+     * @description
+     *
+     * CMS `SignedData` (X9.84) over the biometric process or payload.
+     * Assures integrity of that party's processing. X.1084 §11.1 item 4.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly digitalSignature: SignedData;
+    /**
+     * @summary `aCforBioOnClient`.
+     * @description
+     *
+     * Optional ISO/IEC 24761 ACBio for the client process. X.1084 §11.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly aCforBioOnClient?: OPTIONAL<ACBioContentInformation>;
+
     constructor (
-        /**
-         * @summary `biometricClientProcess`.
-         * @description
-         *
-         * BSP/BFP, template ID, sample quality, and comparison score from
-         * the client. X.1084 §11.1 Table 3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly biometricClientProcess: BiometricClientProcess,
-        /**
-         * @summary `digitalSignature`.
-         * @description
-         *
-         * CMS `SignedData` (X9.84) over the biometric process or payload.
-         * Assures integrity of that party's processing. X.1084 §11.1 item 4.
-         *
-         * @public
-         * @readonly
-         */
-        readonly digitalSignature: SignedData,
-        /**
-         * @summary `aCforBioOnClient`.
-         * @description
-         *
-         * Optional ISO/IEC 24761 ACBio for the client process. X.1084 §11.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly aCforBioOnClient?: OPTIONAL<ACBioContentInformation>
-    ) {}
+        biometricClientProcess: BiometricClientProcess,
+        digitalSignature: SignedData,
+        aCforBioOnClient?: OPTIONAL<ACBioContentInformation>
+    ) {
+        this.biometricClientProcess = biometricClientProcess;
+        this.digitalSignature = digitalSignature;
+        this.aCforBioOnClient = aCforBioOnClient;
+    }
 
     /**
      * @summary Restructures an object into a BDforDownloadModel

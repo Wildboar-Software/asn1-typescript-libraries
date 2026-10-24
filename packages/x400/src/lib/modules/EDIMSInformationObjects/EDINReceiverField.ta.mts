@@ -44,26 +44,34 @@ import {
  *
  */
 export class EDINReceiverField {
+    /**
+     * @summary `edin_receiver_name`.
+     * @public
+     * @readonly
+     */
+    public readonly edin_receiver_name: ORName;
+    /**
+     * @summary `original_edim_identifier`.
+     * @public
+     * @readonly
+     */
+    public readonly original_edim_identifier?: OPTIONAL<EDIMIdentifier>;
+    /**
+     * @summary `first_recipient`.
+     * @public
+     * @readonly
+     */
+    public readonly first_recipient?: OPTIONAL<FirstRecipientField>;
+
     constructor(
-        /**
-         * @summary `edin_receiver_name`.
-         * @public
-         * @readonly
-         */
-        readonly edin_receiver_name: ORName,
-        /**
-         * @summary `original_edim_identifier`.
-         * @public
-         * @readonly
-         */
-        readonly original_edim_identifier?: OPTIONAL<EDIMIdentifier>,
-        /**
-         * @summary `first_recipient`.
-         * @public
-         * @readonly
-         */
-        readonly first_recipient?: OPTIONAL<FirstRecipientField>
-    ) {}
+        edin_receiver_name: ORName,
+        original_edim_identifier?: OPTIONAL<EDIMIdentifier>,
+        first_recipient?: OPTIONAL<FirstRecipientField>
+    ) {
+        this.edin_receiver_name = edin_receiver_name;
+        this.original_edim_identifier = original_edim_identifier;
+        this.first_recipient = first_recipient;
+    }
 
     /**
      * @summary Restructures an object into a EDINReceiverField

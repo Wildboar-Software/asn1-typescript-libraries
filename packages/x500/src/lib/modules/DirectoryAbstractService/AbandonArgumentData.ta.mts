@@ -27,24 +27,30 @@ import {
  *
  */
 export class AbandonArgumentData {
+    /**
+     * @summary `invokeID`.
+     * @description
+     *
+     * InvokeId of the outstanding enquiry to abandon.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly invokeID: InvokeId;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `invokeID`.
-         * @description
-         *
-         * InvokeId of the outstanding enquiry to abandon.
-         *
-         * @public
-         * @readonly
-         */
-        readonly invokeID: InvokeId,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        invokeID: InvokeId,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.invokeID = invokeID;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a AbandonArgumentData

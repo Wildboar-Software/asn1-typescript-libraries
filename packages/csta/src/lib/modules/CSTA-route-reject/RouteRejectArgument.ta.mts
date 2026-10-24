@@ -49,55 +49,67 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class RouteRejectArgument {
+    /**
+     * @summary `crossRefIdentifier`.
+     * @description
+     *
+     * Dialogue for the rejected call.
+     * @public
+     * @readonly
+     */
+    public readonly crossRefIdentifier: RouteingCrossRefID;
+    /**
+     * @summary `routeRegisterReqID`.
+     * @description
+     *
+     * Registration for this dialogue, if registration is used.
+     * @public
+     * @readonly
+     */
+    public readonly routeRegisterReqID?: OPTIONAL<RouteRegisterReqID>;
+    /**
+     * @summary `rejectCause`.
+     * @description
+     *
+     * Why the call is returned to the network: busy, queue-time,
+     * capacity, calendar, or unknown overflow.
+     * @public
+     * @readonly
+     */
+    public readonly rejectCause?: OPTIONAL<RejectCause>;
+    /**
+     * @summary `correlatorData`.
+     * @description
+     *
+     * Correlator data to associate with the call.
+     * @public
+     * @readonly
+     */
+    public readonly correlatorData?: OPTIONAL<CorrelatorData>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `crossRefIdentifier`.
-         * @description
-         *
-         * Dialogue for the rejected call.
-         * @public
-         * @readonly
-         */
-        readonly crossRefIdentifier: RouteingCrossRefID,
-        /**
-         * @summary `routeRegisterReqID`.
-         * @description
-         *
-         * Registration for this dialogue, if registration is used.
-         * @public
-         * @readonly
-         */
-        readonly routeRegisterReqID?: OPTIONAL<RouteRegisterReqID>,
-        /**
-         * @summary `rejectCause`.
-         * @description
-         *
-         * Why the call is returned to the network: busy, queue-time,
-         * capacity, calendar, or unknown overflow.
-         * @public
-         * @readonly
-         */
-        readonly rejectCause?: OPTIONAL<RejectCause>,
-        /**
-         * @summary `correlatorData`.
-         * @description
-         *
-         * Correlator data to associate with the call.
-         * @public
-         * @readonly
-         */
-        readonly correlatorData?: OPTIONAL<CorrelatorData>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        crossRefIdentifier: RouteingCrossRefID,
+        routeRegisterReqID?: OPTIONAL<RouteRegisterReqID>,
+        rejectCause?: OPTIONAL<RejectCause>,
+        correlatorData?: OPTIONAL<CorrelatorData>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.crossRefIdentifier = crossRefIdentifier;
+        this.routeRegisterReqID = routeRegisterReqID;
+        this.rejectCause = rejectCause;
+        this.correlatorData = correlatorData;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a RouteRejectArgument

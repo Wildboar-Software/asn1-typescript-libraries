@@ -35,26 +35,32 @@ import { HookswitchID, _decode_HookswitchID, _encode_HookswitchID } from "../CST
  */
 export
 class HookswitchStatusList_Item {
+    /**
+     * @summary `hookswitch`.
+     * @description
+     *
+     * Hookswitch whose status is reported.
+     * @public
+     * @readonly
+     */
+    public readonly hookswitch: HookswitchID;
+    /**
+     * @summary `hookswitchOnHook`.
+     * @description
+     *
+     * TRUE = on-hook; FALSE = off-hook.
+     * @public
+     * @readonly
+     */
+    public readonly hookswitchOnHook: BOOLEAN;
+
     constructor (
-        /**
-         * @summary `hookswitch`.
-         * @description
-         *
-         * Hookswitch whose status is reported.
-         * @public
-         * @readonly
-         */
-        readonly hookswitch: HookswitchID,
-        /**
-         * @summary `hookswitchOnHook`.
-         * @description
-         *
-         * TRUE = on-hook; FALSE = off-hook.
-         * @public
-         * @readonly
-         */
-        readonly hookswitchOnHook: BOOLEAN
-    ) {}
+        hookswitch: HookswitchID,
+        hookswitchOnHook: BOOLEAN
+    ) {
+        this.hookswitch = hookswitch;
+        this.hookswitchOnHook = hookswitchOnHook;
+    }
 
     /**
      * @summary Restructures an object into a HookswitchStatusList_Item

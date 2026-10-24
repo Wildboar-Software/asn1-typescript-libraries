@@ -39,32 +39,42 @@ import {
  *
  */
 export class PBKDF2_params {
+    /**
+     * @summary `salt`.
+     * @public
+     * @readonly
+     */
+    public readonly salt: PBKDF2_params_salt;
+    /**
+     * @summary `iterationCount`.
+     * @public
+     * @readonly
+     */
+    public readonly iterationCount: INTEGER;
+    /**
+     * @summary `keyLength`.
+     * @public
+     * @readonly
+     */
+    public readonly keyLength?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `prf`.
+     * @public
+     * @readonly
+     */
+    public readonly prf?: OPTIONAL<AlgorithmIdentifier>;
+
     constructor(
-        /**
-         * @summary `salt`.
-         * @public
-         * @readonly
-         */
-        readonly salt: PBKDF2_params_salt,
-        /**
-         * @summary `iterationCount`.
-         * @public
-         * @readonly
-         */
-        readonly iterationCount: INTEGER,
-        /**
-         * @summary `keyLength`.
-         * @public
-         * @readonly
-         */
-        readonly keyLength?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `prf`.
-         * @public
-         * @readonly
-         */
-        readonly prf?: OPTIONAL<AlgorithmIdentifier>
-    ) {}
+        salt: PBKDF2_params_salt,
+        iterationCount: INTEGER,
+        keyLength?: OPTIONAL<INTEGER>,
+        prf?: OPTIONAL<AlgorithmIdentifier>
+    ) {
+        this.salt = salt;
+        this.iterationCount = iterationCount;
+        this.keyLength = keyLength;
+        this.prf = prf;
+    }
 
     /**
      * @summary Restructures an object into a PBKDF2_params

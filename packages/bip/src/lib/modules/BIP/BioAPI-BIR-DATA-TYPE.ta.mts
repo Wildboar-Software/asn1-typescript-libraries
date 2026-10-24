@@ -47,31 +47,37 @@ import {
  *
  */
 export class BioAPI_BIR_DATA_TYPE {
+  /**
+   * @summary `processedLevel`.
+   * @description
+   *
+   * Exactly one of raw / intermediate / processed. Maps to C
+   * `0x01` / `0x02` / `0x04`. X.1083 §15.11.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly processedLevel: BioAPI_BIR_DATA_TYPE_processedLevel;
+  /**
+   * @summary `flags`.
+   * @description
+   *
+   * Four MSBs of the C byte. Bit 0 = encrypted (`0x10`), bit 1 =
+   * signed (`0x20`), bit 3 = index-present (`0x80`). X.1083
+   * §15.11.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly flags: BioAPI_BIR_DATA_TYPE_flags;
+
   constructor(
-    /**
-     * @summary `processedLevel`.
-     * @description
-     *
-     * Exactly one of raw / intermediate / processed. Maps to C
-     * `0x01` / `0x02` / `0x04`. X.1083 §15.11.
-     *
-     * @public
-     * @readonly
-     */
-    readonly processedLevel: BioAPI_BIR_DATA_TYPE_processedLevel,
-    /**
-     * @summary `flags`.
-     * @description
-     *
-     * Four MSBs of the C byte. Bit 0 = encrypted (`0x10`), bit 1 =
-     * signed (`0x20`), bit 3 = index-present (`0x80`). X.1083
-     * §15.11.
-     *
-     * @public
-     * @readonly
-     */
-    readonly flags: BioAPI_BIR_DATA_TYPE_flags
-  ) {}
+    processedLevel: BioAPI_BIR_DATA_TYPE_processedLevel,
+    flags: BioAPI_BIR_DATA_TYPE_flags
+  ) {
+    this.processedLevel = processedLevel;
+    this.flags = flags;
+  }
 
   /**
    * @summary Restructures an object into a BioAPI_BIR_DATA_TYPE

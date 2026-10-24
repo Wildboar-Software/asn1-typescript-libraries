@@ -42,20 +42,26 @@ import {
  *
  */
 export class BioAPI_DTG {
+  /**
+   * @summary `date`.
+   * @public
+   * @readonly
+   */
+  public readonly date: BioAPI_DATE;
+  /**
+   * @summary `time`.
+   * @public
+   * @readonly
+   */
+  public readonly time: BioAPI_TIME;
+
   constructor(
-    /**
-     * @summary `date`.
-     * @public
-     * @readonly
-     */
-    readonly date: BioAPI_DATE,
-    /**
-     * @summary `time`.
-     * @public
-     * @readonly
-     */
-    readonly time: BioAPI_TIME
-  ) {}
+    date: BioAPI_DATE,
+    time: BioAPI_TIME
+  ) {
+    this.date = date;
+    this.time = time;
+  }
 
   /**
    * @summary Restructures an object into a BioAPI_DTG

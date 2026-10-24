@@ -33,20 +33,24 @@ import {
  *
  */
 export class Import_ResponseParams {
+  /**
+   * @summary `constructedBIR`.
+   * @description
+   *
+   * Handle of the constructed BIR on the hosting endpoint.
+   * Maps to BioAPI `ConstructedBIR` (clause 20). X.1083
+   * §16.39.6.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly constructedBIR: BioAPI_BIR_HANDLE;
+
   constructor(
-    /**
-     * @summary `constructedBIR`.
-     * @description
-     *
-     * Handle of the constructed BIR on the hosting endpoint.
-     * Maps to BioAPI `ConstructedBIR` (clause 20). X.1083
-     * §16.39.6.
-     *
-     * @public
-     * @readonly
-     */
-    readonly constructedBIR: BioAPI_BIR_HANDLE
-  ) {}
+    constructedBIR: BioAPI_BIR_HANDLE
+  ) {
+    this.constructedBIR = constructedBIR;
+  }
 
   /**
    * @summary Restructures an object into a Import_ResponseParams

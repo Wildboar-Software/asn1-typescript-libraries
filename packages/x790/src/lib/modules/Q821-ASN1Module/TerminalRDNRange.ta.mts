@@ -30,26 +30,34 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class TerminalRDNRange {
+    /**
+     * @summary `attributeId`.
+     * @public
+     * @readonly
+     */
+    public readonly attributeId: OBJECT_IDENTIFIER;
+    /**
+     * @summary `firstObjectInRange`.
+     * @public
+     * @readonly
+     */
+    public readonly firstObjectInRange: INTEGER;
+    /**
+     * @summary `lastObjectInRange`.
+     * @public
+     * @readonly
+     */
+    public readonly lastObjectInRange: INTEGER;
+
     constructor (
-        /**
-         * @summary `attributeId`.
-         * @public
-         * @readonly
-         */
-        readonly attributeId: OBJECT_IDENTIFIER,
-        /**
-         * @summary `firstObjectInRange`.
-         * @public
-         * @readonly
-         */
-        readonly firstObjectInRange: INTEGER,
-        /**
-         * @summary `lastObjectInRange`.
-         * @public
-         * @readonly
-         */
-        readonly lastObjectInRange: INTEGER
-    ) {}
+        attributeId: OBJECT_IDENTIFIER,
+        firstObjectInRange: INTEGER,
+        lastObjectInRange: INTEGER
+    ) {
+        this.attributeId = attributeId;
+        this.firstObjectInRange = firstObjectInRange;
+        this.lastObjectInRange = lastObjectInRange;
+    }
 
     /**
      * @summary Restructures an object into a TerminalRDNRange

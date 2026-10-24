@@ -56,155 +56,181 @@ import { ZoneCodeList, _decode_ZoneCodeList, _encode_ZoneCodeList } from "../MAP
  */
 export
 class SubscriberData {
+    /**
+     * @summary `msisdn`.
+     * @description
+     *
+     * MSISDN as in 3GPP TS 23.003.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.2.17).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly msisdn?: OPTIONAL<ISDN_AddressString>;
+    /**
+     * @summary `category`.
+     * @description
+     *
+     * Calling-party category of the subscriber.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.3.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly category?: OPTIONAL<Category>;
+    /**
+     * @summary `subscriberStatus`.
+     * @description
+     *
+     * Barring status: service granted or Operator Determined Barring.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.3.7).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly subscriberStatus?: OPTIONAL<SubscriberStatus>;
+    /**
+     * @summary `bearerServiceList`.
+     * @description
+     *
+     * Provisioned bearer services. Exception handling for unsupported
+     * codes: clause 8.8.1.
+     *
+     * (3GPP TS 29.002 V19.1.0 clauses 7.6.3.3 and 8.8.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly bearerServiceList?: OPTIONAL<BearerServiceList>;
+    /**
+     * @summary `teleserviceList`.
+     * @description
+     *
+     * Provisioned teleservices. Exception handling for unsupported codes:
+     * clause 8.8.1.
+     *
+     * (3GPP TS 29.002 V19.1.0 clauses 7.6.3.4 and 8.8.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly teleserviceList?: OPTIONAL<TeleserviceList>;
+    /**
+     * @summary `provisionedSS`.
+     * @description
+     *
+     * Provisioned supplementary-service information.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.3.14).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly provisionedSS?: OPTIONAL<Ext_SS_InfoList>;
+    /**
+     * @summary `odb_Data`.
+     * @description
+     *
+     * ODB general data and ODB HPLMN-specific data.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.3.85).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly odb_Data?: OPTIONAL<ODB_Data>;
+    /**
+     * @summary `roamingRestrictionDueToUnsupportedFeature`.
+     * @description
+     *
+     * Subscriber is not allowed to roam in the current MSC area because a
+     * feature or service is unsupported by the VLR.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.3.13).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly roamingRestrictionDueToUnsupportedFeature?: OPTIONAL<NULL>;
+    /**
+     * @summary `regionalSubscriptionData`.
+     * @description
+     *
+     * Zone Codes defining the regional subscription area.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.3.11).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly regionalSubscriptionData?: OPTIONAL<ZoneCodeList>;
+    /**
+     * @summary `vbsSubscriptionData`.
+     * @description
+     *
+     * Voice Broadcast Service group membership.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.3.40).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly vbsSubscriptionData?: OPTIONAL<VBSDataList>;
+    /**
+     * @summary `vgcsSubscriptionData`.
+     * @description
+     *
+     * Voice Group Call Service group membership.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.3.39).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly vgcsSubscriptionData?: OPTIONAL<VGCSDataList>;
+    /**
+     * @summary `vlrCamelSubscriptionInfo`.
+     * @description
+     *
+     * CAMEL services invoked in the MSC or VLR.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.3.35).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly vlrCamelSubscriptionInfo?: OPTIONAL<VlrCamelSubscriptionInfo>;
+
     constructor (
-        /**
-         * @summary `msisdn`.
-         * @description
-         *
-         * MSISDN as in 3GPP TS 23.003.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.2.17).
-         *
-         * @public
-         * @readonly
-         */
-        readonly msisdn?: OPTIONAL<ISDN_AddressString>,
-        /**
-         * @summary `category`.
-         * @description
-         *
-         * Calling-party category of the subscriber.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.3.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly category?: OPTIONAL<Category>,
-        /**
-         * @summary `subscriberStatus`.
-         * @description
-         *
-         * Barring status: service granted or Operator Determined Barring.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.3.7).
-         *
-         * @public
-         * @readonly
-         */
-        readonly subscriberStatus?: OPTIONAL<SubscriberStatus>,
-        /**
-         * @summary `bearerServiceList`.
-         * @description
-         *
-         * Provisioned bearer services. Exception handling for unsupported
-         * codes: clause 8.8.1.
-         *
-         * (3GPP TS 29.002 V19.1.0 clauses 7.6.3.3 and 8.8.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly bearerServiceList?: OPTIONAL<BearerServiceList>,
-        /**
-         * @summary `teleserviceList`.
-         * @description
-         *
-         * Provisioned teleservices. Exception handling for unsupported codes:
-         * clause 8.8.1.
-         *
-         * (3GPP TS 29.002 V19.1.0 clauses 7.6.3.4 and 8.8.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly teleserviceList?: OPTIONAL<TeleserviceList>,
-        /**
-         * @summary `provisionedSS`.
-         * @description
-         *
-         * Provisioned supplementary-service information.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.3.14).
-         *
-         * @public
-         * @readonly
-         */
-        readonly provisionedSS?: OPTIONAL<Ext_SS_InfoList>,
-        /**
-         * @summary `odb_Data`.
-         * @description
-         *
-         * ODB general data and ODB HPLMN-specific data.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.3.85).
-         *
-         * @public
-         * @readonly
-         */
-        readonly odb_Data?: OPTIONAL<ODB_Data>,
-        /**
-         * @summary `roamingRestrictionDueToUnsupportedFeature`.
-         * @description
-         *
-         * Subscriber is not allowed to roam in the current MSC area because a
-         * feature or service is unsupported by the VLR.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.3.13).
-         *
-         * @public
-         * @readonly
-         */
-        readonly roamingRestrictionDueToUnsupportedFeature?: OPTIONAL<NULL>,
-        /**
-         * @summary `regionalSubscriptionData`.
-         * @description
-         *
-         * Zone Codes defining the regional subscription area.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.3.11).
-         *
-         * @public
-         * @readonly
-         */
-        readonly regionalSubscriptionData?: OPTIONAL<ZoneCodeList>,
-        /**
-         * @summary `vbsSubscriptionData`.
-         * @description
-         *
-         * Voice Broadcast Service group membership.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.3.40).
-         *
-         * @public
-         * @readonly
-         */
-        readonly vbsSubscriptionData?: OPTIONAL<VBSDataList>,
-        /**
-         * @summary `vgcsSubscriptionData`.
-         * @description
-         *
-         * Voice Group Call Service group membership.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.3.39).
-         *
-         * @public
-         * @readonly
-         */
-        readonly vgcsSubscriptionData?: OPTIONAL<VGCSDataList>,
-        /**
-         * @summary `vlrCamelSubscriptionInfo`.
-         * @description
-         *
-         * CAMEL services invoked in the MSC or VLR.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.3.35).
-         *
-         * @public
-         * @readonly
-         */
-        readonly vlrCamelSubscriptionInfo?: OPTIONAL<VlrCamelSubscriptionInfo>
-    ) {}
+        msisdn?: OPTIONAL<ISDN_AddressString>,
+        category?: OPTIONAL<Category>,
+        subscriberStatus?: OPTIONAL<SubscriberStatus>,
+        bearerServiceList?: OPTIONAL<BearerServiceList>,
+        teleserviceList?: OPTIONAL<TeleserviceList>,
+        provisionedSS?: OPTIONAL<Ext_SS_InfoList>,
+        odb_Data?: OPTIONAL<ODB_Data>,
+        roamingRestrictionDueToUnsupportedFeature?: OPTIONAL<NULL>,
+        regionalSubscriptionData?: OPTIONAL<ZoneCodeList>,
+        vbsSubscriptionData?: OPTIONAL<VBSDataList>,
+        vgcsSubscriptionData?: OPTIONAL<VGCSDataList>,
+        vlrCamelSubscriptionInfo?: OPTIONAL<VlrCamelSubscriptionInfo>
+    ) {
+        this.msisdn = msisdn;
+        this.category = category;
+        this.subscriberStatus = subscriberStatus;
+        this.bearerServiceList = bearerServiceList;
+        this.teleserviceList = teleserviceList;
+        this.provisionedSS = provisionedSS;
+        this.odb_Data = odb_Data;
+        this.roamingRestrictionDueToUnsupportedFeature = roamingRestrictionDueToUnsupportedFeature;
+        this.regionalSubscriptionData = regionalSubscriptionData;
+        this.vbsSubscriptionData = vbsSubscriptionData;
+        this.vgcsSubscriptionData = vgcsSubscriptionData;
+        this.vlrCamelSubscriptionInfo = vlrCamelSubscriptionInfo;
+    }
 
     /**
      * @summary Restructures an object into a SubscriberData

@@ -39,84 +39,102 @@ import { ReportingPLMNList, _decode_ReportingPLMNList, _encode_ReportingPLMNList
  */
 export
 class SubscriberLocationReport_Res {
+    /**
+     * @summary `extensionContainer`.
+     * @description
+     *
+     * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary `na_ESRK`.
+     * @description
+     *
+     * NA-ESRK; not with na-ESRD (3GPP TS 29.002 V19.1.0 clause 7.6.11.14).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly na_ESRK?: OPTIONAL<ISDN_AddressString>;
+    /**
+     * @summary `na_ESRD`.
+     * @description
+     *
+     * NA-ESRD; not with na-ESRK (3GPP TS 29.002 V19.1.0 clause 7.6.11.13).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly na_ESRD?: OPTIONAL<ISDN_AddressString>;
+    /**
+     * @summary `h_gmlc_Address`.
+     * @description
+     *
+     * Home GMLC.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly h_gmlc_Address?: OPTIONAL<GSN_Address>;
+    /**
+     * @summary `mo_lrShortCircuitIndicator`.
+     * @description
+     *
+     * MO-LR short circuit (3GPP TS 29.002 V19.1.0 clause 7.6.11.29).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mo_lrShortCircuitIndicator?: OPTIONAL<NULL>;
+    /**
+     * @summary `reportingPLMNList`.
+     * @description
+     *
+     * Reporting PLMN list (3GPP TS 29.002 V19.1.0 clause 7.6.11.30).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly reportingPLMNList?: OPTIONAL<ReportingPLMNList>;
+    /**
+     * @summary `lcs_ReferenceNumber`.
+     * @description
+     *
+     * Deferred MT-LR reference (3GPP TS 29.002 V19.1.0 clause 7.6.11.23).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly lcs_ReferenceNumber?: OPTIONAL<LCS_ReferenceNumber>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `extensionContainer`.
-         * @description
-         *
-         * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary `na_ESRK`.
-         * @description
-         *
-         * NA-ESRK; not with na-ESRD (3GPP TS 29.002 V19.1.0 clause 7.6.11.14).
-         *
-         * @public
-         * @readonly
-         */
-        readonly na_ESRK?: OPTIONAL<ISDN_AddressString>,
-        /**
-         * @summary `na_ESRD`.
-         * @description
-         *
-         * NA-ESRD; not with na-ESRK (3GPP TS 29.002 V19.1.0 clause 7.6.11.13).
-         *
-         * @public
-         * @readonly
-         */
-        readonly na_ESRD?: OPTIONAL<ISDN_AddressString>,
-        /**
-         * @summary `h_gmlc_Address`.
-         * @description
-         *
-         * Home GMLC.
-         *
-         * @public
-         * @readonly
-         */
-        readonly h_gmlc_Address?: OPTIONAL<GSN_Address>,
-        /**
-         * @summary `mo_lrShortCircuitIndicator`.
-         * @description
-         *
-         * MO-LR short circuit (3GPP TS 29.002 V19.1.0 clause 7.6.11.29).
-         *
-         * @public
-         * @readonly
-         */
-        readonly mo_lrShortCircuitIndicator?: OPTIONAL<NULL>,
-        /**
-         * @summary `reportingPLMNList`.
-         * @description
-         *
-         * Reporting PLMN list (3GPP TS 29.002 V19.1.0 clause 7.6.11.30).
-         *
-         * @public
-         * @readonly
-         */
-        readonly reportingPLMNList?: OPTIONAL<ReportingPLMNList>,
-        /**
-         * @summary `lcs_ReferenceNumber`.
-         * @description
-         *
-         * Deferred MT-LR reference (3GPP TS 29.002 V19.1.0 clause 7.6.11.23).
-         *
-         * @public
-         * @readonly
-         */
-        readonly lcs_ReferenceNumber?: OPTIONAL<LCS_ReferenceNumber>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        na_ESRK?: OPTIONAL<ISDN_AddressString>,
+        na_ESRD?: OPTIONAL<ISDN_AddressString>,
+        h_gmlc_Address?: OPTIONAL<GSN_Address>,
+        mo_lrShortCircuitIndicator?: OPTIONAL<NULL>,
+        reportingPLMNList?: OPTIONAL<ReportingPLMNList>,
+        lcs_ReferenceNumber?: OPTIONAL<LCS_ReferenceNumber>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.extensionContainer = extensionContainer;
+        this.na_ESRK = na_ESRK;
+        this.na_ESRD = na_ESRD;
+        this.h_gmlc_Address = h_gmlc_Address;
+        this.mo_lrShortCircuitIndicator = mo_lrShortCircuitIndicator;
+        this.reportingPLMNList = reportingPLMNList;
+        this.lcs_ReferenceNumber = lcs_ReferenceNumber;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a SubscriberLocationReport_Res

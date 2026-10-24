@@ -57,67 +57,79 @@ import { GetAccessControlListAttributes_Response_references_Item, _decode_GetAcc
  */
 export
 class GetAccessControlListAttributes_Response {
+    /**
+     * @summary `name`.
+     * @description
+     *
+     * VMD-specific Identifier of the ACL being returned. Equals the request
+     * name when the Access Control List Name choice was used.
+     * ISO 9506-1:2003 §9.4.1.2.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly name: Identifier;
+    /**
+     * @summary `accessControlListElements`.
+     * @description
+     *
+     * Zero or more Access Control Elements of the returned ACL.
+     * ISO 9506-1:2003 §9.4.1.2.2; ISO 9506-2:2003 §9.4.2.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly accessControlListElements: GetAccessControlListAttributes_Response_accessControlListElements;
+    /**
+     * @summary `vMDuse`.
+     * @description
+     *
+     * True if this ACL is referenced by the VMD's `&accessControl`.
+     * ISO 9506-1:2003 §9.4.1.2.3.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly vMDuse: BOOLEAN;
+    /**
+     * @summary `references`.
+     * @description
+     *
+     * Counts of Controlled Objects: one `objectClass`/`objectCount` pair
+     * per class that has a non-zero count of objects whose `&accessControl`
+     * references this ACL. Omit classes with count zero. ISO 9506-1:2003
+     * §9.4.1.2.4; ISO 9506-2:2003 §9.4.2.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly references: GetAccessControlListAttributes_Response_references_Item[];
+    /**
+     * @summary `accessControlList`.
+     * @description
+     *
+     * Name of the ACL that controls access to this ACL object. Present if
+     * and only if the `aco` parameter CBB has been negotiated.
+     * ISO 9506-1:2003 §9.4.1.2.5; ISO 9506-2:2003 §9.4.2.3.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly accessControlList?: OPTIONAL<Identifier>;
+
     constructor (
-        /**
-         * @summary `name`.
-         * @description
-         *
-         * VMD-specific Identifier of the ACL being returned. Equals the request
-         * name when the Access Control List Name choice was used.
-         * ISO 9506-1:2003 §9.4.1.2.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly name: Identifier,
-        /**
-         * @summary `accessControlListElements`.
-         * @description
-         *
-         * Zero or more Access Control Elements of the returned ACL.
-         * ISO 9506-1:2003 §9.4.1.2.2; ISO 9506-2:2003 §9.4.2.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly accessControlListElements: GetAccessControlListAttributes_Response_accessControlListElements,
-        /**
-         * @summary `vMDuse`.
-         * @description
-         *
-         * True if this ACL is referenced by the VMD's `&accessControl`.
-         * ISO 9506-1:2003 §9.4.1.2.3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly vMDuse: BOOLEAN,
-        /**
-         * @summary `references`.
-         * @description
-         *
-         * Counts of Controlled Objects: one `objectClass`/`objectCount` pair
-         * per class that has a non-zero count of objects whose `&accessControl`
-         * references this ACL. Omit classes with count zero. ISO 9506-1:2003
-         * §9.4.1.2.4; ISO 9506-2:2003 §9.4.2.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly references: GetAccessControlListAttributes_Response_references_Item[],
-        /**
-         * @summary `accessControlList`.
-         * @description
-         *
-         * Name of the ACL that controls access to this ACL object. Present if
-         * and only if the `aco` parameter CBB has been negotiated.
-         * ISO 9506-1:2003 §9.4.1.2.5; ISO 9506-2:2003 §9.4.2.3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly accessControlList?: OPTIONAL<Identifier>
-    ) {}
+        name: Identifier,
+        accessControlListElements: GetAccessControlListAttributes_Response_accessControlListElements,
+        vMDuse: BOOLEAN,
+        references: GetAccessControlListAttributes_Response_references_Item[],
+        accessControlList?: OPTIONAL<Identifier>
+    ) {
+        this.name = name;
+        this.accessControlListElements = accessControlListElements;
+        this.vMDuse = vMDuse;
+        this.references = references;
+        this.accessControlList = accessControlList;
+    }
 
     /**
      * @summary Restructures an object into a GetAccessControlListAttributes_Response

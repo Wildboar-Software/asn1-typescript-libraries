@@ -34,20 +34,26 @@ import {
  *
  */
 export class AliasRedirection {
+    /**
+     * @summary `redirection_address`.
+     * @public
+     * @readonly
+     */
+    public readonly redirection_address: ORAddress;
+    /**
+     * @summary `edit`.
+     * @public
+     * @readonly
+     */
+    public readonly edit?: OPTIONAL<BOOLEAN>;
+
     constructor(
-        /**
-         * @summary `redirection_address`.
-         * @public
-         * @readonly
-         */
-        readonly redirection_address: ORAddress,
-        /**
-         * @summary `edit`.
-         * @public
-         * @readonly
-         */
-        readonly edit?: OPTIONAL<BOOLEAN>
-    ) {}
+        redirection_address: ORAddress,
+        edit?: OPTIONAL<BOOLEAN>
+    ) {
+        this.redirection_address = redirection_address;
+        this.edit = edit;
+    }
 
     /**
      * @summary Restructures an object into a AliasRedirection

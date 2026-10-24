@@ -29,26 +29,34 @@ import * as $ from '@wildboar/asn1/functional';
  *
  */
 export class LockedInCondition {
+    /**
+     * @summary `settingWindowTime`.
+     * @public
+     * @readonly
+     */
+    public readonly settingWindowTime: INTEGER;
+    /**
+     * @summary `releasingWindowTime`.
+     * @public
+     * @readonly
+     */
+    public readonly releasingWindowTime: INTEGER;
+    /**
+     * @summary `hitsCount`.
+     * @public
+     * @readonly
+     */
+    public readonly hitsCount: INTEGER;
+
     constructor(
-        /**
-         * @summary `settingWindowTime`.
-         * @public
-         * @readonly
-         */
-        readonly settingWindowTime: INTEGER,
-        /**
-         * @summary `releasingWindowTime`.
-         * @public
-         * @readonly
-         */
-        readonly releasingWindowTime: INTEGER,
-        /**
-         * @summary `hitsCount`.
-         * @public
-         * @readonly
-         */
-        readonly hitsCount: INTEGER
-    ) {}
+        settingWindowTime: INTEGER,
+        releasingWindowTime: INTEGER,
+        hitsCount: INTEGER
+    ) {
+        this.settingWindowTime = settingWindowTime;
+        this.releasingWindowTime = releasingWindowTime;
+        this.hitsCount = hitsCount;
+    }
 
     /**
      * @summary Restructures an object into a LockedInCondition

@@ -32,26 +32,34 @@ import {
  *
  */
 export class Result_list_Item {
+    /**
+     * @summary `result`.
+     * @public
+     * @readonly
+     */
+    public readonly result: Result;
+    /**
+     * @summary `transfer_syntax_name`.
+     * @public
+     * @readonly
+     */
+    public readonly transfer_syntax_name?: OPTIONAL<Transfer_syntax_name>;
+    /**
+     * @summary `provider_reason`.
+     * @public
+     * @readonly
+     */
+    public readonly provider_reason?: OPTIONAL<Result_list_Item_provider_reason>;
+
     constructor(
-        /**
-         * @summary `result`.
-         * @public
-         * @readonly
-         */
-        readonly result: Result,
-        /**
-         * @summary `transfer_syntax_name`.
-         * @public
-         * @readonly
-         */
-        readonly transfer_syntax_name?: OPTIONAL<Transfer_syntax_name>,
-        /**
-         * @summary `provider_reason`.
-         * @public
-         * @readonly
-         */
-        readonly provider_reason?: OPTIONAL<Result_list_Item_provider_reason>
-    ) {}
+        result: Result,
+        transfer_syntax_name?: OPTIONAL<Transfer_syntax_name>,
+        provider_reason?: OPTIONAL<Result_list_Item_provider_reason>
+    ) {
+        this.result = result;
+        this.transfer_syntax_name = transfer_syntax_name;
+        this.provider_reason = provider_reason;
+    }
 
     /**
      * @summary Restructures an object into a Result_list_Item

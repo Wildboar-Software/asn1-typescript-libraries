@@ -42,34 +42,42 @@ import {
  *
  */
 export class NoSuchAction {
+  /**
+   * @summary `managedObjectClass`.
+   * @description
+   *
+   * Class on which the unknown action was requested.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly managedObjectClass: ObjectClass;
+  /**
+   * @summary `actionType`.
+   * @description
+   *
+   * Action type that is not defined for the class.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly actionType: ActionTypeId;
+  /**
+   * @summary Extensions that are not recognized.
+   * @public
+   * @readonly
+   */
+  public readonly _unrecognizedExtensionsList: _Element[];
+
   constructor(
-    /**
-     * @summary `managedObjectClass`.
-     * @description
-     *
-     * Class on which the unknown action was requested.
-     *
-     * @public
-     * @readonly
-     */
-    readonly managedObjectClass: ObjectClass,
-    /**
-     * @summary `actionType`.
-     * @description
-     *
-     * Action type that is not defined for the class.
-     *
-     * @public
-     * @readonly
-     */
-    readonly actionType: ActionTypeId,
-    /**
-     * @summary Extensions that are not recognized.
-     * @public
-     * @readonly
-     */
-    readonly _unrecognizedExtensionsList: _Element[] = []
-  ) {}
+    managedObjectClass: ObjectClass,
+    actionType: ActionTypeId,
+    _unrecognizedExtensionsList: _Element[] = []
+  ) {
+    this.managedObjectClass = managedObjectClass;
+    this.actionType = actionType;
+    this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+  }
 
   /**
    * @summary Restructures an object into a NoSuchAction

@@ -34,41 +34,49 @@ import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-
  */
 export
 class CreateUnitControl_Request {
+    /**
+     * @summary `unitControl`.
+     * @description
+     *
+     * Name assigned to the new Unit Control object. ISO 9506-1:2003
+     * §13.8.1.1.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly unitControl: Identifier;
+    /**
+     * @summary `domains`.
+     * @description
+     *
+     * Zero or more Domains referenced by `&Domains`. ISO 9506-1:2003
+     * §13.8.1.1.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly domains: Identifier[];
+    /**
+     * @summary `programInvocations`.
+     * @description
+     *
+     * Zero or more Program Invocations referenced by `&ProgramInvocations`.
+     * ISO 9506-1:2003 §13.8.1.1.3.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly programInvocations: Identifier[];
+
     constructor (
-        /**
-         * @summary `unitControl`.
-         * @description
-         *
-         * Name assigned to the new Unit Control object. ISO 9506-1:2003
-         * §13.8.1.1.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly unitControl: Identifier,
-        /**
-         * @summary `domains`.
-         * @description
-         *
-         * Zero or more Domains referenced by `&Domains`. ISO 9506-1:2003
-         * §13.8.1.1.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly domains: Identifier[],
-        /**
-         * @summary `programInvocations`.
-         * @description
-         *
-         * Zero or more Program Invocations referenced by `&ProgramInvocations`.
-         * ISO 9506-1:2003 §13.8.1.1.3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly programInvocations: Identifier[]
-    ) {}
+        unitControl: Identifier,
+        domains: Identifier[],
+        programInvocations: Identifier[]
+    ) {
+        this.unitControl = unitControl;
+        this.domains = domains;
+        this.programInvocations = programInvocations;
+    }
 
     /**
      * @summary Restructures an object into a CreateUnitControl_Request

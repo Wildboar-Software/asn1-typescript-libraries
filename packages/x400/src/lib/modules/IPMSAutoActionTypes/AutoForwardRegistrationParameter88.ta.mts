@@ -46,32 +46,42 @@ import {
  *
  */
 export class AutoForwardRegistrationParameter88 {
+    /**
+     * @summary `filter`.
+     * @public
+     * @readonly
+     */
+    public readonly filter: OPTIONAL<Filter>;
+    /**
+     * @summary `auto_forward_arguments`.
+     * @public
+     * @readonly
+     */
+    public readonly auto_forward_arguments: AutoForwardArguments;
+    /**
+     * @summary `delete_after_auto_forwarding`.
+     * @public
+     * @readonly
+     */
+    public readonly delete_after_auto_forwarding: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `forwarding_information`.
+     * @public
+     * @readonly
+     */
+    public readonly forwarding_information: EncodedForwardingInformation;
+
     constructor(
-        /**
-         * @summary `filter`.
-         * @public
-         * @readonly
-         */
-        readonly filter: OPTIONAL<Filter>,
-        /**
-         * @summary `auto_forward_arguments`.
-         * @public
-         * @readonly
-         */
-        readonly auto_forward_arguments: AutoForwardArguments,
-        /**
-         * @summary `delete_after_auto_forwarding`.
-         * @public
-         * @readonly
-         */
-        readonly delete_after_auto_forwarding: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `forwarding_information`.
-         * @public
-         * @readonly
-         */
-        readonly forwarding_information: EncodedForwardingInformation
-    ) {}
+        filter: OPTIONAL<Filter>,
+        auto_forward_arguments: AutoForwardArguments,
+        delete_after_auto_forwarding: OPTIONAL<BOOLEAN>,
+        forwarding_information: EncodedForwardingInformation
+    ) {
+        this.filter = filter;
+        this.auto_forward_arguments = auto_forward_arguments;
+        this.delete_after_auto_forwarding = delete_after_auto_forwarding;
+        this.forwarding_information = forwarding_information;
+    }
 
     /**
      * @summary Restructures an object into a AutoForwardRegistrationParameter88

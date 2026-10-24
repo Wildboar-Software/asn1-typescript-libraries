@@ -26,18 +26,22 @@ import { _decode_SetNicknameResponse_setNicknameResult, _encode_SetNicknameRespo
  */
 export
 class SetNicknameResponse {
+    /**
+     * @summary `setNicknameResult`.
+     * @description
+     * 
+     * `ok`, `iccidNotFound`, or `undefinedError`. SGP.22 v3.1 §5.7.21.
+     * 
+     * @public
+     * @readonly
+     */
+    public readonly setNicknameResult: SetNicknameResponse_setNicknameResult;
+
     constructor (
-        /**
-         * @summary `setNicknameResult`.
-         * @description
-         * 
-         * `ok`, `iccidNotFound`, or `undefinedError`. SGP.22 v3.1 §5.7.21.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly setNicknameResult: SetNicknameResponse_setNicknameResult
-    ) {}
+        setNicknameResult: SetNicknameResponse_setNicknameResult
+    ) {
+        this.setNicknameResult = setNicknameResult;
+    }
 
     /**
      * @summary Restructures an object into a SetNicknameResponse

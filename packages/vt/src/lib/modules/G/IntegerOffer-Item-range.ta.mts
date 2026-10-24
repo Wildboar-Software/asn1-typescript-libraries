@@ -34,24 +34,30 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class IntegerOffer_Item_range {
+    /**
+     * @summary `minimum`.
+     * @description
+     * Inclusive lower bound. ISO/IEC 9041-1:1997 §12.2.
+     * @public
+     * @readonly
+     */
+    public readonly minimum: INTEGER;
+    /**
+     * @summary `maximum`.
+     * @description
+     * Inclusive upper bound. ISO/IEC 9041-1:1997 §12.2.
+     * @public
+     * @readonly
+     */
+    public readonly maximum: INTEGER;
+
     constructor (
-        /**
-         * @summary `minimum`.
-         * @description
-         * Inclusive lower bound. ISO/IEC 9041-1:1997 §12.2.
-         * @public
-         * @readonly
-         */
-        readonly minimum: INTEGER,
-        /**
-         * @summary `maximum`.
-         * @description
-         * Inclusive upper bound. ISO/IEC 9041-1:1997 §12.2.
-         * @public
-         * @readonly
-         */
-        readonly maximum: INTEGER
-    ) {}
+        minimum: INTEGER,
+        maximum: INTEGER
+    ) {
+        this.minimum = minimum;
+        this.maximum = maximum;
+    }
 
     /**
      * @summary Restructures an object into a IntegerOffer_Item_range

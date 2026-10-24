@@ -33,52 +33,64 @@ import { LSAIdentity, _decode_LSAIdentity, _encode_LSAIdentity } from "../MAP-MS
  */
 export
 class LSAData {
+    /**
+     * @summary `lsaIdentity`.
+     * @description
+     *
+     * LSA identity (3GPP TS 23.003). (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly lsaIdentity: LSAIdentity;
+    /**
+     * @summary `lsaAttributes`.
+     * @description
+     *
+     * Priority / preferential access / active-mode support (3GPP TS
+     * 48.008). (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly lsaAttributes: LSAAttributes;
+    /**
+     * @summary `lsaActiveModeIndicator`.
+     * @description
+     *
+     * Active-mode indication for this LSA. (3GPP TS 29.002 V19.1.0 clause
+     * 7.6.3.56)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly lsaActiveModeIndicator?: OPTIONAL<NULL>;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `lsaIdentity`.
-         * @description
-         *
-         * LSA identity (3GPP TS 23.003). (3GPP TS 29.002 V19.1.0 clause 17.7.1)
-         *
-         * @public
-         * @readonly
-         */
-        readonly lsaIdentity: LSAIdentity,
-        /**
-         * @summary `lsaAttributes`.
-         * @description
-         *
-         * Priority / preferential access / active-mode support (3GPP TS
-         * 48.008). (3GPP TS 29.002 V19.1.0 clause 17.7.1)
-         *
-         * @public
-         * @readonly
-         */
-        readonly lsaAttributes: LSAAttributes,
-        /**
-         * @summary `lsaActiveModeIndicator`.
-         * @description
-         *
-         * Active-mode indication for this LSA. (3GPP TS 29.002 V19.1.0 clause
-         * 7.6.3.56)
-         *
-         * @public
-         * @readonly
-         */
-        readonly lsaActiveModeIndicator?: OPTIONAL<NULL>,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        lsaIdentity: LSAIdentity,
+        lsaAttributes: LSAAttributes,
+        lsaActiveModeIndicator?: OPTIONAL<NULL>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.lsaIdentity = lsaIdentity;
+        this.lsaAttributes = lsaAttributes;
+        this.lsaActiveModeIndicator = lsaActiveModeIndicator;
+        this.extensionContainer = extensionContainer;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a LSAData

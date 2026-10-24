@@ -35,20 +35,26 @@ import {
  *
  */
 export class delete_error_ParameterType {
+    /**
+     * @summary `problems`.
+     * @public
+     * @readonly
+     */
+    public readonly problems: delete_error_ParameterType_problems_Item[];
+    /**
+     * @summary `entries_deleted`.
+     * @public
+     * @readonly
+     */
+    public readonly entries_deleted?: OPTIONAL<SequenceNumber[]>;
+
     constructor(
-        /**
-         * @summary `problems`.
-         * @public
-         * @readonly
-         */
-        readonly problems: delete_error_ParameterType_problems_Item[],
-        /**
-         * @summary `entries_deleted`.
-         * @public
-         * @readonly
-         */
-        readonly entries_deleted?: OPTIONAL<SequenceNumber[]>
-    ) {}
+        problems: delete_error_ParameterType_problems_Item[],
+        entries_deleted?: OPTIONAL<SequenceNumber[]>
+    ) {
+        this.problems = problems;
+        this.entries_deleted = entries_deleted;
+    }
 
     /**
      * @summary Restructures an object into a delete_error_ParameterType

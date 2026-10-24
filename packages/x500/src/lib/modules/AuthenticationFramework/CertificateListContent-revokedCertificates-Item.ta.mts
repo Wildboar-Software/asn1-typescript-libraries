@@ -36,32 +36,42 @@ import {
  *
  */
 export class CertificateListContent_revokedCertificates_Item {
+    /**
+     * @summary `serialNumber`.
+     * @public
+     * @readonly
+     */
+    public readonly serialNumber: CertificateSerialNumber;
+    /**
+     * @summary `revocationDate`.
+     * @public
+     * @readonly
+     */
+    public readonly revocationDate: Time;
+    /**
+     * @summary `crlEntryExtensions`.
+     * @public
+     * @readonly
+     */
+    public readonly crlEntryExtensions?: OPTIONAL<Extensions>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `serialNumber`.
-         * @public
-         * @readonly
-         */
-        readonly serialNumber: CertificateSerialNumber,
-        /**
-         * @summary `revocationDate`.
-         * @public
-         * @readonly
-         */
-        readonly revocationDate: Time,
-        /**
-         * @summary `crlEntryExtensions`.
-         * @public
-         * @readonly
-         */
-        readonly crlEntryExtensions?: OPTIONAL<Extensions>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        serialNumber: CertificateSerialNumber,
+        revocationDate: Time,
+        crlEntryExtensions?: OPTIONAL<Extensions>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.serialNumber = serialNumber;
+        this.revocationDate = revocationDate;
+        this.crlEntryExtensions = crlEntryExtensions;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a CertificateListContent_revokedCertificates_Item

@@ -42,50 +42,60 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class LocationInformationReportArgument {
+    /**
+     * @summary `locCrossRefID`.
+     * @description
+     *
+     * Identifies the location tracking session (ECMA-269 §6.8.4).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly locCrossRefID: LocCrossRefID;
+    /**
+     * @summary `device`.
+     * @description
+     *
+     * Device associated with the location (ECMA-269 §28.1.6.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly device: DeviceID;
+    /**
+     * @summary `locationInfoList`.
+     * @description
+     *
+     * Zero or more LocationInfo (PIDF-LO) records. Omitted when there is
+     * nothing to report (ECMA-269 §28.1.6.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly locationInfoList?: OPTIONAL<LocationInfoList>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * CSTACommonArguments carrying the service-table security and
+     * privateData parameters.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `locCrossRefID`.
-         * @description
-         *
-         * Identifies the location tracking session (ECMA-269 §6.8.4).
-         *
-         * @public
-         * @readonly
-         */
-        readonly locCrossRefID: LocCrossRefID,
-        /**
-         * @summary `device`.
-         * @description
-         *
-         * Device associated with the location (ECMA-269 §28.1.6.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly device: DeviceID,
-        /**
-         * @summary `locationInfoList`.
-         * @description
-         *
-         * Zero or more LocationInfo (PIDF-LO) records. Omitted when there is
-         * nothing to report (ECMA-269 §28.1.6.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly locationInfoList?: OPTIONAL<LocationInfoList>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * CSTACommonArguments carrying the service-table security and
-         * privateData parameters.
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        locCrossRefID: LocCrossRefID,
+        device: DeviceID,
+        locationInfoList?: OPTIONAL<LocationInfoList>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.locCrossRefID = locCrossRefID;
+        this.device = device;
+        this.locationInfoList = locationInfoList;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a LocationInformationReportArgument

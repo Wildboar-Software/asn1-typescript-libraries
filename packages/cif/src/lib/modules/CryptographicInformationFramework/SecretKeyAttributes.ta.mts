@@ -34,24 +34,30 @@ import { ObjectValue, _get_decoder_for_ObjectValue, _get_encoder_for_ObjectValue
  */
 export
 class SecretKeyAttributes {
+    /**
+     * @summary `value`.
+     * @description
+     * Path to an OCTET STRING or a card-specific secret-key representation
+     * (on cards that can perform secret-key ops). ISO/IEC 7816-15:2016
+     * §8.6.2.
+     * @public
+     * @readonly
+     */
+    public readonly value: ObjectValue<OCTET_STRING>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `value`.
-         * @description
-         * Path to an OCTET STRING or a card-specific secret-key representation
-         * (on cards that can perform secret-key ops). ISO/IEC 7816-15:2016
-         * §8.6.2.
-         * @public
-         * @readonly
-         */
-        readonly value: ObjectValue<OCTET_STRING>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        value: ObjectValue<OCTET_STRING>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.value = value;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a SecretKeyAttributes

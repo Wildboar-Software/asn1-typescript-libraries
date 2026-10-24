@@ -34,20 +34,26 @@ import {
  *
  */
 export class sequence_number_error_ParameterType_problems_Item {
+    /**
+     * @summary `problem`.
+     * @public
+     * @readonly
+     */
+    public readonly problem: SequenceNumberProblem;
+    /**
+     * @summary `sequence_number`.
+     * @public
+     * @readonly
+     */
+    public readonly sequence_number: SequenceNumber;
+
     constructor(
-        /**
-         * @summary `problem`.
-         * @public
-         * @readonly
-         */
-        readonly problem: SequenceNumberProblem,
-        /**
-         * @summary `sequence_number`.
-         * @public
-         * @readonly
-         */
-        readonly sequence_number: SequenceNumber
-    ) {}
+        problem: SequenceNumberProblem,
+        sequence_number: SequenceNumber
+    ) {
+        this.problem = problem;
+        this.sequence_number = sequence_number;
+    }
 
     /**
      * @summary Restructures an object into a sequence_number_error_ParameterType_problems_Item

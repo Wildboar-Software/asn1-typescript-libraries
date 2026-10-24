@@ -44,42 +44,50 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class StopCDRTransmissionArgument {
+    /**
+     * @summary `cdrCrossRefID`.
+     * @description
+     *
+     * CDR transmission cross-reference from Start Call Detail Records
+     * Transmission (ECMA-269 §27.1.4).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly cdrCrossRefID: CDRCrossRefID;
+    /**
+     * @summary `cdrTermReason`.
+     * @description
+     *
+     * endOfDataDetected, errorDetected, thresholdReached, or other. Shall
+     * not be provided when the computing function sends this service
+     * (ECMA-269 §27.1.5.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly cdrTermReason?: OPTIONAL<CDRTermReason>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * CSTACommonArguments carrying the service-table security and
+     * privateData parameters.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `cdrCrossRefID`.
-         * @description
-         *
-         * CDR transmission cross-reference from Start Call Detail Records
-         * Transmission (ECMA-269 §27.1.4).
-         *
-         * @public
-         * @readonly
-         */
-        readonly cdrCrossRefID: CDRCrossRefID,
-        /**
-         * @summary `cdrTermReason`.
-         * @description
-         *
-         * endOfDataDetected, errorDetected, thresholdReached, or other. Shall
-         * not be provided when the computing function sends this service
-         * (ECMA-269 §27.1.5.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly cdrTermReason?: OPTIONAL<CDRTermReason>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * CSTACommonArguments carrying the service-table security and
-         * privateData parameters.
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        cdrCrossRefID: CDRCrossRefID,
+        cdrTermReason?: OPTIONAL<CDRTermReason>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.cdrCrossRefID = cdrCrossRefID;
+        this.cdrTermReason = cdrTermReason;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a StopCDRTransmissionArgument

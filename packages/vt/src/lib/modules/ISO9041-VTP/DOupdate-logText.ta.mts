@@ -38,26 +38,32 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class DOupdate_logText {
+    /**
+     * @summary `fdrAttr`.
+     * @description
+     * TRUE (`"yes"`) apply FDR attributes; FALSE (`"no"`) do not.
+     * ISO/IEC 9040:1997 §19.4.2.1.
+     * @public
+     * @readonly
+     */
+    public readonly fdrAttr: BOOLEAN;
+    /**
+     * @summary `prAttrVal`.
+     * @description
+     * Primary-attribute octet string. Repertoire defines the
+     * encoding, as for TEXT. ISO/IEC 9040:1997 §19.4.2.1.
+     * @public
+     * @readonly
+     */
+    public readonly prAttrVal: OCTET_STRING;
+
     constructor (
-        /**
-         * @summary `fdrAttr`.
-         * @description
-         * TRUE (`"yes"`) apply FDR attributes; FALSE (`"no"`) do not.
-         * ISO/IEC 9040:1997 §19.4.2.1.
-         * @public
-         * @readonly
-         */
-        readonly fdrAttr: BOOLEAN,
-        /**
-         * @summary `prAttrVal`.
-         * @description
-         * Primary-attribute octet string. Repertoire defines the
-         * encoding, as for TEXT. ISO/IEC 9040:1997 §19.4.2.1.
-         * @public
-         * @readonly
-         */
-        readonly prAttrVal: OCTET_STRING
-    ) {}
+        fdrAttr: BOOLEAN,
+        prAttrVal: OCTET_STRING
+    ) {
+        this.fdrAttr = fdrAttr;
+        this.prAttrVal = prAttrVal;
+    }
 
     /**
      * @summary Restructures an object into a DOupdate_logText

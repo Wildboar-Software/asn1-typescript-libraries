@@ -37,28 +37,34 @@ import { ParameterValues_terminationEventList_Item_eventId, _decode_ParameterVal
  */
 export
 class ParameterValues_terminationEventList_Item {
+    /**
+     * @summary `event`.
+     * @description
+     * Termination event. Syntax is not defined in 9040; datatypes
+     * come from the VTE-profile used as the initial draft-VTE.
+     * ISO/IEC 9040:1997 §23.4; ISO/IEC 9041-1:1997 §12.5.3.
+     * @public
+     * @readonly
+     */
+    public readonly event: _Element;
+    /**
+     * @summary `eventId`.
+     * @description
+     * Agreed event-id: non-zero positive integer or `"null"`.
+     * Written to a TCO to notify the peer. ISO/IEC 9040:1997
+     * §20.3.1, §23.4.
+     * @public
+     * @readonly
+     */
+    public readonly eventId: ParameterValues_terminationEventList_Item_eventId;
+
     constructor (
-        /**
-         * @summary `event`.
-         * @description
-         * Termination event. Syntax is not defined in 9040; datatypes
-         * come from the VTE-profile used as the initial draft-VTE.
-         * ISO/IEC 9040:1997 §23.4; ISO/IEC 9041-1:1997 §12.5.3.
-         * @public
-         * @readonly
-         */
-        readonly event: _Element,
-        /**
-         * @summary `eventId`.
-         * @description
-         * Agreed event-id: non-zero positive integer or `"null"`.
-         * Written to a TCO to notify the peer. ISO/IEC 9040:1997
-         * §20.3.1, §23.4.
-         * @public
-         * @readonly
-         */
-        readonly eventId: ParameterValues_terminationEventList_Item_eventId
-    ) {}
+        event: _Element,
+        eventId: ParameterValues_terminationEventList_Item_eventId
+    ) {
+        this.event = event;
+        this.eventId = eventId;
+    }
 
     /**
      * @summary Restructures an object into a ParameterValues_terminationEventList_Item

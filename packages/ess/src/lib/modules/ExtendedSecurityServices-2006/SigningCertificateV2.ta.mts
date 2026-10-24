@@ -42,35 +42,41 @@ import {
  *
  */
 export class SigningCertificateV2 {
+    /**
+     * @summary `certs`.
+     * @description
+     *
+     * Sequence of `ESSCertIDv2`. The first MUST identify the signing
+     * certificate used to verify the signature; hash mismatch ⇒ signature
+     * MUST be considered invalid. First entry's encoding SHOULD include
+     * `issuerSerial` (MAY omit if present via `SignerInfo`). Further
+     * certificates limit authorization or path validation; only the signing
+     * cert listed means no such restriction ([RFC 5035 §3](https://datatracker.ietf.org/doc/html/rfc5035#section-3)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly certs: ESSCertIDv2[];
+    /**
+     * @summary `policies`.
+     * @description
+     *
+     * Optional `PolicyInformation` terms the signer asserts apply to the
+     * certificate ([RFC 5035 §3](https://datatracker.ietf.org/doc/html/rfc5035#section-3); policy ASN.1 from
+     * [RFC 3280](https://datatracker.ietf.org/doc/html/rfc3280)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly policies?: OPTIONAL<PolicyInformation[]>;
+
     constructor(
-        /**
-         * @summary `certs`.
-         * @description
-         *
-         * Sequence of `ESSCertIDv2`. The first MUST identify the signing
-         * certificate used to verify the signature; hash mismatch ⇒ signature
-         * MUST be considered invalid. First entry's encoding SHOULD include
-         * `issuerSerial` (MAY omit if present via `SignerInfo`). Further
-         * certificates limit authorization or path validation; only the signing
-         * cert listed means no such restriction ([RFC 5035 §3](https://datatracker.ietf.org/doc/html/rfc5035#section-3)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly certs: ESSCertIDv2[],
-        /**
-         * @summary `policies`.
-         * @description
-         *
-         * Optional `PolicyInformation` terms the signer asserts apply to the
-         * certificate ([RFC 5035 §3](https://datatracker.ietf.org/doc/html/rfc5035#section-3); policy ASN.1 from
-         * [RFC 3280](https://datatracker.ietf.org/doc/html/rfc3280)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly policies?: OPTIONAL<PolicyInformation[]>
-    ) {}
+        certs: ESSCertIDv2[],
+        policies?: OPTIONAL<PolicyInformation[]>
+    ) {
+        this.certs = certs;
+        this.policies = policies;
+    }
 
     /**
      * @summary Restructures an object into a SigningCertificateV2

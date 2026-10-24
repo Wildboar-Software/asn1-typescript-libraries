@@ -33,38 +33,50 @@ import {
  *
  */
 export class DomainParameters {
+    /**
+     * @summary `p`.
+     * @public
+     * @readonly
+     */
+    public readonly p: INTEGER;
+    /**
+     * @summary `g`.
+     * @public
+     * @readonly
+     */
+    public readonly g: INTEGER;
+    /**
+     * @summary `q`.
+     * @public
+     * @readonly
+     */
+    public readonly q: INTEGER;
+    /**
+     * @summary `j`.
+     * @public
+     * @readonly
+     */
+    public readonly j?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `validationParams`.
+     * @public
+     * @readonly
+     */
+    public readonly validationParams?: OPTIONAL<ValidationParams>;
+
     constructor(
-        /**
-         * @summary `p`.
-         * @public
-         * @readonly
-         */
-        readonly p: INTEGER,
-        /**
-         * @summary `g`.
-         * @public
-         * @readonly
-         */
-        readonly g: INTEGER,
-        /**
-         * @summary `q`.
-         * @public
-         * @readonly
-         */
-        readonly q: INTEGER,
-        /**
-         * @summary `j`.
-         * @public
-         * @readonly
-         */
-        readonly j?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `validationParams`.
-         * @public
-         * @readonly
-         */
-        readonly validationParams?: OPTIONAL<ValidationParams>
-    ) {}
+        p: INTEGER,
+        g: INTEGER,
+        q: INTEGER,
+        j?: OPTIONAL<INTEGER>,
+        validationParams?: OPTIONAL<ValidationParams>
+    ) {
+        this.p = p;
+        this.g = g;
+        this.q = q;
+        this.j = j;
+        this.validationParams = validationParams;
+    }
 
     /**
      * @summary Restructures an object into a DomainParameters

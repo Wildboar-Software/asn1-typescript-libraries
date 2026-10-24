@@ -33,41 +33,51 @@ import { Name, _decode_Name, _encode_Name } from "@wildboar/dn";
  *
  */
 export class CertUpdateReq_certs_Item {
+    /**
+     * @summary `subject`.
+     * @description
+     *
+     * Identifies the EE. Unknown → whole-message `unknownSubject` (14.13).
+     * @public
+     * @readonly
+     */
+    public readonly subject: Name;
+    /**
+     * @summary `serialNumber`.
+     * @description
+     *
+     * Identifies the EE cert. Unknown → whole-message `unknownCert` (14.13).
+     * @public
+     * @readonly
+     */
+    public readonly serialNumber: CertificateSerialNumber;
+    /**
+     * @summary `certStatus`.
+     * @description
+     *
+     * Updated CertStatus; must be a valid value.
+     * @public
+     * @readonly
+     */
+    public readonly certStatus: CertStatus;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `subject`.
-         * @description
-         *
-         * Identifies the EE. Unknown → whole-message `unknownSubject` (14.13).
-         * @public
-         * @readonly
-         */
-        readonly subject: Name,
-        /**
-         * @summary `serialNumber`.
-         * @description
-         *
-         * Identifies the EE cert. Unknown → whole-message `unknownCert` (14.13).
-         * @public
-         * @readonly
-         */
-        readonly serialNumber: CertificateSerialNumber,
-        /**
-         * @summary `certStatus`.
-         * @description
-         *
-         * Updated CertStatus; must be a valid value.
-         * @public
-         * @readonly
-         */
-        readonly certStatus: CertStatus,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        subject: Name,
+        serialNumber: CertificateSerialNumber,
+        certStatus: CertStatus,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.subject = subject;
+        this.serialNumber = serialNumber;
+        this.certStatus = certStatus;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a CertUpdateReq_certs_Item

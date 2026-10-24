@@ -36,42 +36,50 @@ import {
  */
 export
 class CollectionFilter {
+    /**
+     * @summary `horizontalMovement`.
+     * @description
+     *
+     * Collect after this many metres of horizontal movement from the last
+     * collection (ECMA-269 §28.1.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly horizontalMovement?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `verticalMovement`.
+     * @description
+     *
+     * Collect after this many metres of vertical movement from the last
+     * collection (ECMA-269 §28.1.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly verticalMovement?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `civicAdressChange`.
+     * @description
+     *
+     * Civic-address change filter (ASN.1 spelling). Spec describes RFC-4776
+     * civic type labels; this encoding is INTEGER (ECMA-269 §28.1.7.1,
+     * ECMA-285 §26.1.7).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly civicAdressChange?: OPTIONAL<INTEGER>;
+
     constructor (
-        /**
-         * @summary `horizontalMovement`.
-         * @description
-         *
-         * Collect after this many metres of horizontal movement from the last
-         * collection (ECMA-269 §28.1.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly horizontalMovement?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `verticalMovement`.
-         * @description
-         *
-         * Collect after this many metres of vertical movement from the last
-         * collection (ECMA-269 §28.1.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly verticalMovement?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `civicAdressChange`.
-         * @description
-         *
-         * Civic-address change filter (ASN.1 spelling). Spec describes RFC-4776
-         * civic type labels; this encoding is INTEGER (ECMA-269 §28.1.7.1,
-         * ECMA-285 §26.1.7).
-         *
-         * @public
-         * @readonly
-         */
-        readonly civicAdressChange?: OPTIONAL<INTEGER>
-    ) {}
+        horizontalMovement?: OPTIONAL<INTEGER>,
+        verticalMovement?: OPTIONAL<INTEGER>,
+        civicAdressChange?: OPTIONAL<INTEGER>
+    ) {
+        this.horizontalMovement = horizontalMovement;
+        this.verticalMovement = verticalMovement;
+        this.civicAdressChange = civicAdressChange;
+    }
 
     /**
      * @summary Restructures an object into a CollectionFilter

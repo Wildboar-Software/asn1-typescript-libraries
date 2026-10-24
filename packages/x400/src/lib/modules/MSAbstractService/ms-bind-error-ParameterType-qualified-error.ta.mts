@@ -33,26 +33,34 @@ import {
  *
  */
 export class ms_bind_error_ParameterType_qualified_error {
+    /**
+     * @summary `bind_problem`.
+     * @public
+     * @readonly
+     */
+    public readonly bind_problem: BindProblem;
+    /**
+     * @summary `supplementary_information`.
+     * @public
+     * @readonly
+     */
+    public readonly supplementary_information?: OPTIONAL<GeneralString>;
+    /**
+     * @summary `bind_extension_errors`.
+     * @public
+     * @readonly
+     */
+    public readonly bind_extension_errors?: OPTIONAL<OBJECT_IDENTIFIER[]>;
+
     constructor(
-        /**
-         * @summary `bind_problem`.
-         * @public
-         * @readonly
-         */
-        readonly bind_problem: BindProblem,
-        /**
-         * @summary `supplementary_information`.
-         * @public
-         * @readonly
-         */
-        readonly supplementary_information?: OPTIONAL<GeneralString>,
-        /**
-         * @summary `bind_extension_errors`.
-         * @public
-         * @readonly
-         */
-        readonly bind_extension_errors?: OPTIONAL<OBJECT_IDENTIFIER[]>
-    ) {}
+        bind_problem: BindProblem,
+        supplementary_information?: OPTIONAL<GeneralString>,
+        bind_extension_errors?: OPTIONAL<OBJECT_IDENTIFIER[]>
+    ) {
+        this.bind_problem = bind_problem;
+        this.supplementary_information = supplementary_information;
+        this.bind_extension_errors = bind_extension_errors;
+    }
 
     /**
      * @summary Restructures an object into a ms_bind_error_ParameterType_qualified_error

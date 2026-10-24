@@ -31,20 +31,26 @@ import { ServiceKey, _decode_ServiceKey, _encode_ServiceKey } from "../IN-CS2-da
  */
 export
 class GapCriteria_calledAddressAndService {
+    /**
+     * @summary `calledAddressValue`.
+     * @public
+     * @readonly
+     */
+    public readonly calledAddressValue: Digits;
+    /**
+     * @summary `serviceKey`.
+     * @public
+     * @readonly
+     */
+    public readonly serviceKey: ServiceKey;
+
     constructor (
-        /**
-         * @summary `calledAddressValue`.
-         * @public
-         * @readonly
-         */
-        readonly calledAddressValue: Digits,
-        /**
-         * @summary `serviceKey`.
-         * @public
-         * @readonly
-         */
-        readonly serviceKey: ServiceKey
-    ) {}
+        calledAddressValue: Digits,
+        serviceKey: ServiceKey
+    ) {
+        this.calledAddressValue = calledAddressValue;
+        this.serviceKey = serviceKey;
+    }
 
     /**
      * @summary Restructures an object into a GapCriteria_calledAddressAndService

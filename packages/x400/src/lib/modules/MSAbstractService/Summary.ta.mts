@@ -45,20 +45,26 @@ import {
  *
  */
 export class Summary {
+    /**
+     * @summary `absent`.
+     * @public
+     * @readonly
+     */
+    public readonly absent?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `present`.
+     * @public
+     * @readonly
+     */
+    public readonly present?: OPTIONAL<Summary_present_Item[]>;
+
     constructor(
-        /**
-         * @summary `absent`.
-         * @public
-         * @readonly
-         */
-        readonly absent?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `present`.
-         * @public
-         * @readonly
-         */
-        readonly present?: OPTIONAL<Summary_present_Item[]>
-    ) {}
+        absent?: OPTIONAL<INTEGER>,
+        present?: OPTIONAL<Summary_present_Item[]>
+    ) {
+        this.absent = absent;
+        this.present = present;
+    }
 
     /**
      * @summary Restructures an object into a Summary

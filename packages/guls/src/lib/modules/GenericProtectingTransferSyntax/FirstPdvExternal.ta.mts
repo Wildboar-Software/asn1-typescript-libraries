@@ -45,42 +45,50 @@ import {
  *
  */
 export class FirstPdvExternal {
+  /**
+   * @summary `externalSAID`.
+   * @description
+   *
+   * Identifies the externally-established security
+   * association (and thereby the transformation). ITU-T Rec.
+   * X.833 (04/95) §6.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly externalSAID: ExternalSAID;
+  /**
+   * @summary `dynamicUnprotParm`.
+   * @description
+   *
+   * Dynamic unprotected parameters of the transformation
+   * implied by `externalSAID`. ITU-T Rec. X.833 (04/95) §6.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly dynamicUnprotParm: OPTIONAL<_Element>;
+  /**
+   * @summary `xformedData`.
+   * @description
+   *
+   * `&XformedDataType` of the transformation implied by
+   * `externalSAID`. ITU-T Rec. X.833 (04/95) §6.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly xformedData: _Element;
+
   constructor(
-    /**
-     * @summary `externalSAID`.
-     * @description
-     *
-     * Identifies the externally-established security
-     * association (and thereby the transformation). ITU-T Rec.
-     * X.833 (04/95) §6.
-     *
-     * @public
-     * @readonly
-     */
-    readonly externalSAID: ExternalSAID,
-    /**
-     * @summary `dynamicUnprotParm`.
-     * @description
-     *
-     * Dynamic unprotected parameters of the transformation
-     * implied by `externalSAID`. ITU-T Rec. X.833 (04/95) §6.
-     *
-     * @public
-     * @readonly
-     */
-    readonly dynamicUnprotParm: OPTIONAL<_Element>,
-    /**
-     * @summary `xformedData`.
-     * @description
-     *
-     * `&XformedDataType` of the transformation implied by
-     * `externalSAID`. ITU-T Rec. X.833 (04/95) §6.
-     *
-     * @public
-     * @readonly
-     */
-    readonly xformedData: _Element
-  ) {}
+    externalSAID: ExternalSAID,
+    dynamicUnprotParm: OPTIONAL<_Element>,
+    xformedData: _Element
+  ) {
+    this.externalSAID = externalSAID;
+    this.dynamicUnprotParm = dynamicUnprotParm;
+    this.xformedData = xformedData;
+  }
 
   /**
    * @summary Restructures an object into a FirstPdvExternal

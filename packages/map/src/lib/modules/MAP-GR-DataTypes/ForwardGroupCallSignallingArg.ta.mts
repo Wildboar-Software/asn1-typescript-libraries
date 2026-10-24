@@ -47,148 +47,178 @@ import { AdditionalInfo, _decode_AdditionalInfo, _encode_AdditionalInfo } from "
  */
 export
 class ForwardGroupCallSignallingArg {
+    /**
+     * @summary `imsi`.
+     * @description
+     *
+     * Service subscriber who established the call and may terminate it
+     * (clause 10.6.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly imsi?: OPTIONAL<IMSI>;
+    /**
+     * @summary `uplinkRequestAck`.
+     * @description
+     *
+     * Positive acknowledgement of an uplink request (clause 10.6.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly uplinkRequestAck?: OPTIONAL<NULL>;
+    /**
+     * @summary `uplinkReleaseIndication`.
+     * @description
+     *
+     * Uplink has become free (clause 10.6.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly uplinkReleaseIndication?: OPTIONAL<NULL>;
+    /**
+     * @summary `uplinkRejectCommand`.
+     * @description
+     *
+     * Negative acknowledgement of an uplink request (clause 10.6.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly uplinkRejectCommand?: OPTIONAL<NULL>;
+    /**
+     * @summary `uplinkSeizedCommand`.
+     * @description
+     *
+     * Uplink is no longer free (clause 10.6.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly uplinkSeizedCommand?: OPTIONAL<NULL>;
+    /**
+     * @summary `uplinkReleaseCommand`.
+     * @description
+     *
+     * Uplink granted to an MS in the Relay MSC area shall be released
+     * (clause 10.6.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly uplinkReleaseCommand?: OPTIONAL<NULL>;
+    /**
+     * @summary `extensionContainer`.
+     * @description
+     *
+     * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary `stateAttributes`.
+     * @description
+     *
+     * Lets Anchor MSC mute/unmute a VGCS talker on a Relay MSC; builds a
+     * GCC message as in 3GPP TS 44.068 (clause 10.6.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly stateAttributes?: OPTIONAL<StateAttributes>;
+    /**
+     * @summary `talkerPriority`.
+     * @description
+     *
+     * See 3GPP TS 43.068 (clause 10.6.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly talkerPriority?: OPTIONAL<TalkerPriority>;
+    /**
+     * @summary `additionalInfo`.
+     * @description
+     *
+     * See 3GPP TS 43.068 (clause 10.6.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly additionalInfo?: OPTIONAL<AdditionalInfo>;
+    /**
+     * @summary `emergencyModeResetCommandFlag`.
+     * @description
+     *
+     * See 3GPP TS 43.068 (clause 10.6.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly emergencyModeResetCommandFlag?: OPTIONAL<NULL>;
+    /**
+     * @summary `sm_RP_UI`.
+     * @description
+     *
+     * Short message TPDU from the Service Centre (clauses 10.6.3 and
+     * 7.6.8).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sm_RP_UI?: OPTIONAL<SignalInfo>;
+    /**
+     * @summary `an_APDU`.
+     * @description
+     *
+     * Notification Data as in 3GPP TS 48.008 (clause 10.6.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly an_APDU?: OPTIONAL<AccessNetworkSignalInfo>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `imsi`.
-         * @description
-         *
-         * Service subscriber who established the call and may terminate it
-         * (clause 10.6.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly imsi?: OPTIONAL<IMSI>,
-        /**
-         * @summary `uplinkRequestAck`.
-         * @description
-         *
-         * Positive acknowledgement of an uplink request (clause 10.6.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly uplinkRequestAck?: OPTIONAL<NULL>,
-        /**
-         * @summary `uplinkReleaseIndication`.
-         * @description
-         *
-         * Uplink has become free (clause 10.6.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly uplinkReleaseIndication?: OPTIONAL<NULL>,
-        /**
-         * @summary `uplinkRejectCommand`.
-         * @description
-         *
-         * Negative acknowledgement of an uplink request (clause 10.6.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly uplinkRejectCommand?: OPTIONAL<NULL>,
-        /**
-         * @summary `uplinkSeizedCommand`.
-         * @description
-         *
-         * Uplink is no longer free (clause 10.6.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly uplinkSeizedCommand?: OPTIONAL<NULL>,
-        /**
-         * @summary `uplinkReleaseCommand`.
-         * @description
-         *
-         * Uplink granted to an MS in the Relay MSC area shall be released
-         * (clause 10.6.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly uplinkReleaseCommand?: OPTIONAL<NULL>,
-        /**
-         * @summary `extensionContainer`.
-         * @description
-         *
-         * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary `stateAttributes`.
-         * @description
-         *
-         * Lets Anchor MSC mute/unmute a VGCS talker on a Relay MSC; builds a
-         * GCC message as in 3GPP TS 44.068 (clause 10.6.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly stateAttributes?: OPTIONAL<StateAttributes>,
-        /**
-         * @summary `talkerPriority`.
-         * @description
-         *
-         * See 3GPP TS 43.068 (clause 10.6.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly talkerPriority?: OPTIONAL<TalkerPriority>,
-        /**
-         * @summary `additionalInfo`.
-         * @description
-         *
-         * See 3GPP TS 43.068 (clause 10.6.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly additionalInfo?: OPTIONAL<AdditionalInfo>,
-        /**
-         * @summary `emergencyModeResetCommandFlag`.
-         * @description
-         *
-         * See 3GPP TS 43.068 (clause 10.6.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly emergencyModeResetCommandFlag?: OPTIONAL<NULL>,
-        /**
-         * @summary `sm_RP_UI`.
-         * @description
-         *
-         * Short message TPDU from the Service Centre (clauses 10.6.3 and
-         * 7.6.8).
-         *
-         * @public
-         * @readonly
-         */
-        readonly sm_RP_UI?: OPTIONAL<SignalInfo>,
-        /**
-         * @summary `an_APDU`.
-         * @description
-         *
-         * Notification Data as in 3GPP TS 48.008 (clause 10.6.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly an_APDU?: OPTIONAL<AccessNetworkSignalInfo>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        imsi?: OPTIONAL<IMSI>,
+        uplinkRequestAck?: OPTIONAL<NULL>,
+        uplinkReleaseIndication?: OPTIONAL<NULL>,
+        uplinkRejectCommand?: OPTIONAL<NULL>,
+        uplinkSeizedCommand?: OPTIONAL<NULL>,
+        uplinkReleaseCommand?: OPTIONAL<NULL>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        stateAttributes?: OPTIONAL<StateAttributes>,
+        talkerPriority?: OPTIONAL<TalkerPriority>,
+        additionalInfo?: OPTIONAL<AdditionalInfo>,
+        emergencyModeResetCommandFlag?: OPTIONAL<NULL>,
+        sm_RP_UI?: OPTIONAL<SignalInfo>,
+        an_APDU?: OPTIONAL<AccessNetworkSignalInfo>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.imsi = imsi;
+        this.uplinkRequestAck = uplinkRequestAck;
+        this.uplinkReleaseIndication = uplinkReleaseIndication;
+        this.uplinkRejectCommand = uplinkRejectCommand;
+        this.uplinkSeizedCommand = uplinkSeizedCommand;
+        this.uplinkReleaseCommand = uplinkReleaseCommand;
+        this.extensionContainer = extensionContainer;
+        this.stateAttributes = stateAttributes;
+        this.talkerPriority = talkerPriority;
+        this.additionalInfo = additionalInfo;
+        this.emergencyModeResetCommandFlag = emergencyModeResetCommandFlag;
+        this.sm_RP_UI = sm_RP_UI;
+        this.an_APDU = an_APDU;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a ForwardGroupCallSignallingArg

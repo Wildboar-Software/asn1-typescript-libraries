@@ -37,26 +37,34 @@ import { ExactOrPattern, _decode_ExactOrPattern, _encode_ExactOrPattern } from "
  */
 export
 class Restriction {
+    /**
+     * @summary `permitted`.
+     * @public
+     * @readonly
+     */
+    public readonly permitted?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `source_type`.
+     * @public
+     * @readonly
+     */
+    public readonly source_type?: OPTIONAL<Restriction_source_type>;
+    /**
+     * @summary `source_name`.
+     * @public
+     * @readonly
+     */
+    public readonly source_name?: OPTIONAL<ExactOrPattern>;
+
     constructor (
-        /**
-         * @summary `permitted`.
-         * @public
-         * @readonly
-         */
-        readonly permitted?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `source_type`.
-         * @public
-         * @readonly
-         */
-        readonly source_type?: OPTIONAL<Restriction_source_type>,
-        /**
-         * @summary `source_name`.
-         * @public
-         * @readonly
-         */
-        readonly source_name?: OPTIONAL<ExactOrPattern>
-    ) {}
+        permitted?: OPTIONAL<BOOLEAN>,
+        source_type?: OPTIONAL<Restriction_source_type>,
+        source_name?: OPTIONAL<ExactOrPattern>
+    ) {
+        this.permitted = permitted;
+        this.source_type = source_type;
+        this.source_name = source_name;
+    }
 
     /**
      * @summary Restructures an object into a Restriction

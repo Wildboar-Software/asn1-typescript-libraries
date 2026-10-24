@@ -36,24 +36,30 @@ import { RIOreference_operations_Item_operation, _decode_RIOreference_operations
  */
 export
 class RIOreference_operations_Item {
+    /**
+     * @summary `recordId`.
+     * @description
+     * Named record within the RIO. ISO/IEC 9041-1:1997 §12.2.
+     * @public
+     * @readonly
+     */
+    public readonly recordId: PrintableString;
+    /**
+     * @summary `operation`.
+     * @description
+     * executeRecord(0) or callRecord(1). ISO/IEC 9041-1:1997 §12.2.
+     * @public
+     * @readonly
+     */
+    public readonly operation: RIOreference_operations_Item_operation;
+
     constructor (
-        /**
-         * @summary `recordId`.
-         * @description
-         * Named record within the RIO. ISO/IEC 9041-1:1997 §12.2.
-         * @public
-         * @readonly
-         */
-        readonly recordId: PrintableString,
-        /**
-         * @summary `operation`.
-         * @description
-         * executeRecord(0) or callRecord(1). ISO/IEC 9041-1:1997 §12.2.
-         * @public
-         * @readonly
-         */
-        readonly operation: RIOreference_operations_Item_operation
-    ) {}
+        recordId: PrintableString,
+        operation: RIOreference_operations_Item_operation
+    ) {
+        this.recordId = recordId;
+        this.operation = operation;
+    }
 
     /**
      * @summary Restructures an object into a RIOreference_operations_Item

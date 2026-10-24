@@ -42,81 +42,97 @@ import { CurrentSecurityContext, _decode_CurrentSecurityContext, _encode_Current
  */
 export
 class SendIdentificationRes {
+    /**
+     * @summary `imsi`.
+     * @description
+     *
+     * IMSI. Present in the first (or only) response of a dialogue; absent
+     * in later responses.
+     *
+     * (3GPP TS 29.002 V19.1.0 clauses 8.1.4 and 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly imsi?: OPTIONAL<IMSI>;
+    /**
+     * @summary `authenticationSetList`.
+     * @description
+     *
+     * Authentication triplets or quintuplets for the subscriber.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly authenticationSetList?: OPTIONAL<AuthenticationSetList>;
+    /**
+     * @summary `currentSecurityContext`.
+     * @description
+     *
+     * Current GSM (Kc, CKSN) or UMTS (CK, IK, KSI) security context.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.7.8).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly currentSecurityContext?: OPTIONAL<CurrentSecurityContext>;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary `lastUsedLtePLMN_Id`.
+     * @description
+     *
+     * PLMN identity of the last used LTE PLMN.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly lastUsedLtePLMN_Id?: OPTIONAL<PLMN_Id>;
+    /**
+     * @summary `mtCallPendingFlag`.
+     * @description
+     *
+     * A mobile-terminated call is pending.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mtCallPendingFlag?: OPTIONAL<NULL>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `imsi`.
-         * @description
-         *
-         * IMSI. Present in the first (or only) response of a dialogue; absent
-         * in later responses.
-         *
-         * (3GPP TS 29.002 V19.1.0 clauses 8.1.4 and 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly imsi?: OPTIONAL<IMSI>,
-        /**
-         * @summary `authenticationSetList`.
-         * @description
-         *
-         * Authentication triplets or quintuplets for the subscriber.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly authenticationSetList?: OPTIONAL<AuthenticationSetList>,
-        /**
-         * @summary `currentSecurityContext`.
-         * @description
-         *
-         * Current GSM (Kc, CKSN) or UMTS (CK, IK, KSI) security context.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.7.8).
-         *
-         * @public
-         * @readonly
-         */
-        readonly currentSecurityContext?: OPTIONAL<CurrentSecurityContext>,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary `lastUsedLtePLMN_Id`.
-         * @description
-         *
-         * PLMN identity of the last used LTE PLMN.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly lastUsedLtePLMN_Id?: OPTIONAL<PLMN_Id>,
-        /**
-         * @summary `mtCallPendingFlag`.
-         * @description
-         *
-         * A mobile-terminated call is pending.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly mtCallPendingFlag?: OPTIONAL<NULL>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        imsi?: OPTIONAL<IMSI>,
+        authenticationSetList?: OPTIONAL<AuthenticationSetList>,
+        currentSecurityContext?: OPTIONAL<CurrentSecurityContext>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        lastUsedLtePLMN_Id?: OPTIONAL<PLMN_Id>,
+        mtCallPendingFlag?: OPTIONAL<NULL>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.imsi = imsi;
+        this.authenticationSetList = authenticationSetList;
+        this.currentSecurityContext = currentSecurityContext;
+        this.extensionContainer = extensionContainer;
+        this.lastUsedLtePLMN_Id = lastUsedLtePLMN_Id;
+        this.mtCallPendingFlag = mtCallPendingFlag;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a SendIdentificationRes

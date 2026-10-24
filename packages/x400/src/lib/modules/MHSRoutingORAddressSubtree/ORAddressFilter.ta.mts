@@ -43,20 +43,26 @@ import {
  *
  */
 export class ORAddressFilter {
+    /**
+     * @summary `attribute_type`.
+     * @public
+     * @readonly
+     */
+    public readonly attribute_type: ORAddressFilter_attribute_type;
+    /**
+     * @summary `pattern`.
+     * @public
+     * @readonly
+     */
+    public readonly pattern: ExtendedRegularExpression;
+
     constructor(
-        /**
-         * @summary `attribute_type`.
-         * @public
-         * @readonly
-         */
-        readonly attribute_type: ORAddressFilter_attribute_type,
-        /**
-         * @summary `pattern`.
-         * @public
-         * @readonly
-         */
-        readonly pattern: ExtendedRegularExpression
-    ) {}
+        attribute_type: ORAddressFilter_attribute_type,
+        pattern: ExtendedRegularExpression
+    ) {
+        this.attribute_type = attribute_type;
+        this.pattern = pattern;
+    }
 
     /**
      * @summary Restructures an object into a ORAddressFilter

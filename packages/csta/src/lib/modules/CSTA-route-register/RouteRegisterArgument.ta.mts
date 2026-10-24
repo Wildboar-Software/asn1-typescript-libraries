@@ -43,38 +43,46 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class RouteRegisterArgument {
+    /**
+     * @summary `routeingDevice`.
+     * @description
+     *
+     * Specific routeing device. Omitted: all routeing devices in
+     * the sub-domain, if supported.
+     * @public
+     * @readonly
+     */
+    public readonly routeingDevice?: OPTIONAL<DeviceID>;
+    /**
+     * @summary `requestedRouteingMediaClass`.
+     * @description
+     *
+     * Media classes of calls this registration should receive.
+     * Matched on Route Request when Route Mode is used.
+     * @public
+     * @readonly
+     */
+    public readonly requestedRouteingMediaClass?: OPTIONAL<MediaClass>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `routeingDevice`.
-         * @description
-         *
-         * Specific routeing device. Omitted: all routeing devices in
-         * the sub-domain, if supported.
-         * @public
-         * @readonly
-         */
-        readonly routeingDevice?: OPTIONAL<DeviceID>,
-        /**
-         * @summary `requestedRouteingMediaClass`.
-         * @description
-         *
-         * Media classes of calls this registration should receive.
-         * Matched on Route Request when Route Mode is used.
-         * @public
-         * @readonly
-         */
-        readonly requestedRouteingMediaClass?: OPTIONAL<MediaClass>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        routeingDevice?: OPTIONAL<DeviceID>,
+        requestedRouteingMediaClass?: OPTIONAL<MediaClass>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.routeingDevice = routeingDevice;
+        this.requestedRouteingMediaClass = requestedRouteingMediaClass;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a RouteRegisterArgument

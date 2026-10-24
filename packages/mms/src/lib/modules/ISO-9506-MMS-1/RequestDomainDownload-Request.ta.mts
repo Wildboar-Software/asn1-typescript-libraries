@@ -40,52 +40,62 @@ import { FileName, _decode_FileName, _encode_FileName } from "../ISO-9506-MMS-1/
  */
 export
 class RequestDomainDownload_Request {
+    /**
+     * @summary `domainName`.
+     * @description
+     *
+     * Domain to download at the server. ISO 9506-1:2003 §11.8.1.1.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly domainName: Identifier;
+    /**
+     * @summary `listOfCapabilities`.
+     * @description
+     *
+     * If present, used as InitiateDownloadSequence capabilities; empty
+     * SEQUENCE OF if empty list. If omitted, not transmitted; capabilities
+     * are then a local matter. ISO 9506-1:2003 §11.8.1.1.2. ISO 9506-2:2003
+     * §11.8.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly listOfCapabilities: OPTIONAL<MMSString[]>;
+    /**
+     * @summary `sharable`.
+     * @description
+     *
+     * True if the Domain may be used by multiple Program Invocations. ISO 9506-1:2003 §11.8.1.1.3.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sharable: BOOLEAN;
+    /**
+     * @summary `fileName`.
+     * @description
+     *
+     * File at the MMS client holding the load data. Missing or inaccessible
+     * file yields Result(-). ISO 9506-1:2003 §11.8.1.1.4.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly fileName: FileName;
+
     constructor (
-        /**
-         * @summary `domainName`.
-         * @description
-         *
-         * Domain to download at the server. ISO 9506-1:2003 §11.8.1.1.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly domainName: Identifier,
-        /**
-         * @summary `listOfCapabilities`.
-         * @description
-         *
-         * If present, used as InitiateDownloadSequence capabilities; empty
-         * SEQUENCE OF if empty list. If omitted, not transmitted; capabilities
-         * are then a local matter. ISO 9506-1:2003 §11.8.1.1.2. ISO 9506-2:2003
-         * §11.8.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly listOfCapabilities: OPTIONAL<MMSString[]>,
-        /**
-         * @summary `sharable`.
-         * @description
-         *
-         * True if the Domain may be used by multiple Program Invocations. ISO 9506-1:2003 §11.8.1.1.3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly sharable: BOOLEAN,
-        /**
-         * @summary `fileName`.
-         * @description
-         *
-         * File at the MMS client holding the load data. Missing or inaccessible
-         * file yields Result(-). ISO 9506-1:2003 §11.8.1.1.4.
-         *
-         * @public
-         * @readonly
-         */
-        readonly fileName: FileName
-    ) {}
+        domainName: Identifier,
+        listOfCapabilities: OPTIONAL<MMSString[]>,
+        sharable: BOOLEAN,
+        fileName: FileName
+    ) {
+        this.domainName = domainName;
+        this.listOfCapabilities = listOfCapabilities;
+        this.sharable = sharable;
+        this.fileName = fileName;
+    }
 
     /**
      * @summary Restructures an object into a RequestDomainDownload_Request

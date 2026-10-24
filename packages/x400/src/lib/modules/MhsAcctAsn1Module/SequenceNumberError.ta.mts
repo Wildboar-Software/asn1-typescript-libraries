@@ -34,14 +34,18 @@ import {
  *
  */
 export class SequenceNumberError {
+    /**
+     * @summary `problems`.
+     * @public
+     * @readonly
+     */
+    public readonly problems: SequenceNumberError_problems_Item[];
+
     constructor(
-        /**
-         * @summary `problems`.
-         * @public
-         * @readonly
-         */
-        readonly problems: SequenceNumberError_problems_Item[]
-    ) {}
+        problems: SequenceNumberError_problems_Item[]
+    ) {
+        this.problems = problems;
+    }
 
     /**
      * @summary Restructures an object into a SequenceNumberError

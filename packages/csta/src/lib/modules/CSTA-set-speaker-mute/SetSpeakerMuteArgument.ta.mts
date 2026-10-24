@@ -40,46 +40,56 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class SetSpeakerMuteArgument {
+    /**
+     * @summary `device`.
+     * @description
+     *
+     * Physical-element DeviceID; other IDs are rejected (ECMA-269 §21 FR
+     * 1).
+     * @public
+     * @readonly
+     */
+    public readonly device: DeviceID;
+    /**
+     * @summary `auditoryApparatus`.
+     * @description
+     *
+     * Auditory apparatus at the device on which to set the feature.
+     * @public
+     * @readonly
+     */
+    public readonly auditoryApparatus: AuditoryApparatusID;
+    /**
+     * @summary `speakerMuteOn`.
+     * @description
+     *
+     * FALSE = speaker activated; TRUE = muted.
+     * @public
+     * @readonly
+     */
+    public readonly speakerMuteOn: BOOLEAN;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `device`.
-         * @description
-         *
-         * Physical-element DeviceID; other IDs are rejected (ECMA-269 §21 FR
-         * 1).
-         * @public
-         * @readonly
-         */
-        readonly device: DeviceID,
-        /**
-         * @summary `auditoryApparatus`.
-         * @description
-         *
-         * Auditory apparatus at the device on which to set the feature.
-         * @public
-         * @readonly
-         */
-        readonly auditoryApparatus: AuditoryApparatusID,
-        /**
-         * @summary `speakerMuteOn`.
-         * @description
-         *
-         * FALSE = speaker activated; TRUE = muted.
-         * @public
-         * @readonly
-         */
-        readonly speakerMuteOn: BOOLEAN,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        device: DeviceID,
+        auditoryApparatus: AuditoryApparatusID,
+        speakerMuteOn: BOOLEAN,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.device = device;
+        this.auditoryApparatus = auditoryApparatus;
+        this.speakerMuteOn = speakerMuteOn;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a SetSpeakerMuteArgument

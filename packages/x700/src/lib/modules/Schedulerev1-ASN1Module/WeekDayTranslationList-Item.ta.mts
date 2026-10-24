@@ -38,31 +38,37 @@ import {
  *
  */
 export class WeekDayTranslationList_Item {
+    /**
+     * @summary `weekDay`.
+     * @description
+     *
+     * Weekday being classified. Shall occur only once in the
+     * list. ITU-T Rec. X.746 (02/00)
+     * [A.4.15](https://www.itu.int/rec/T-REC-X.746-200002-I).
+     * @public
+     * @readonly
+     */
+    public readonly weekDay: WeekDay;
+    /**
+     * @summary `typeOfDay`.
+     * @description
+     *
+     * Category assigned to this weekday unless a date mapping
+     * overrides it. ITU-T Rec. X.746 (02/00)
+     * [A.1.12](https://www.itu.int/rec/T-REC-X.746-200002-I),
+     * A.4.15.
+     * @public
+     * @readonly
+     */
+    public readonly typeOfDay: TypeOfDay;
+
     constructor(
-        /**
-         * @summary `weekDay`.
-         * @description
-         *
-         * Weekday being classified. Shall occur only once in the
-         * list. ITU-T Rec. X.746 (02/00)
-         * [A.4.15](https://www.itu.int/rec/T-REC-X.746-200002-I).
-         * @public
-         * @readonly
-         */
-        readonly weekDay: WeekDay,
-        /**
-         * @summary `typeOfDay`.
-         * @description
-         *
-         * Category assigned to this weekday unless a date mapping
-         * overrides it. ITU-T Rec. X.746 (02/00)
-         * [A.1.12](https://www.itu.int/rec/T-REC-X.746-200002-I),
-         * A.4.15.
-         * @public
-         * @readonly
-         */
-        readonly typeOfDay: TypeOfDay
-    ) {}
+        weekDay: WeekDay,
+        typeOfDay: TypeOfDay
+    ) {
+        this.weekDay = weekDay;
+        this.typeOfDay = typeOfDay;
+    }
 
     /**
      * @summary Restructures an object into a WeekDayTranslationList_Item

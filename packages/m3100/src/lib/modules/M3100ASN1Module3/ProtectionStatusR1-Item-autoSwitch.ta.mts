@@ -40,26 +40,34 @@ import {
  *
  */
 export class ProtectionStatusR1_Item_autoSwitch {
+    /**
+     * @summary `switchStatus`.
+     * @public
+     * @readonly
+     */
+    public readonly switchStatus: SwitchStatus;
+    /**
+     * @summary `relatedUnit`.
+     * @public
+     * @readonly
+     */
+    public readonly relatedUnit: FromAndToProtectionUnit;
+    /**
+     * @summary `autoSwitchReason`.
+     * @public
+     * @readonly
+     */
+    public readonly autoSwitchReason: AutoSwitchReason;
+
     constructor(
-        /**
-         * @summary `switchStatus`.
-         * @public
-         * @readonly
-         */
-        readonly switchStatus: SwitchStatus,
-        /**
-         * @summary `relatedUnit`.
-         * @public
-         * @readonly
-         */
-        readonly relatedUnit: FromAndToProtectionUnit,
-        /**
-         * @summary `autoSwitchReason`.
-         * @public
-         * @readonly
-         */
-        readonly autoSwitchReason: AutoSwitchReason
-    ) {}
+        switchStatus: SwitchStatus,
+        relatedUnit: FromAndToProtectionUnit,
+        autoSwitchReason: AutoSwitchReason
+    ) {
+        this.switchStatus = switchStatus;
+        this.relatedUnit = relatedUnit;
+        this.autoSwitchReason = autoSwitchReason;
+    }
 
     /**
      * @summary Restructures an object into a ProtectionStatusR1_Item_autoSwitch

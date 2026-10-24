@@ -63,56 +63,74 @@ import {
  *
  */
 export class RequestAttribute {
+    /**
+     * @summary `attributeType`.
+     * @public
+     * @readonly
+     */
+    public readonly attributeType: OBJECT_IDENTIFIER;
+    /**
+     * @summary `includeSubtypes`.
+     * @public
+     * @readonly
+     */
+    public readonly includeSubtypes?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `selectedValues`.
+     * @public
+     * @readonly
+     */
+    public readonly selectedValues?: OPTIONAL<_Element[]>;
+    /**
+     * @summary `defaultValues`.
+     * @public
+     * @readonly
+     */
+    public readonly defaultValues?: OPTIONAL<RequestAttribute_defaultValues_Item[]>;
+    /**
+     * @summary `contexts`.
+     * @public
+     * @readonly
+     */
+    public readonly contexts?: OPTIONAL<ContextProfile[]>;
+    /**
+     * @summary `contextCombination`.
+     * @public
+     * @readonly
+     */
+    public readonly contextCombination?: OPTIONAL<ContextCombination>;
+    /**
+     * @summary `matchingUse`.
+     * @public
+     * @readonly
+     */
+    public readonly matchingUse?: OPTIONAL<MatchingUse[]>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `attributeType`.
-         * @public
-         * @readonly
-         */
-        readonly attributeType: OBJECT_IDENTIFIER,
-        /**
-         * @summary `includeSubtypes`.
-         * @public
-         * @readonly
-         */
-        readonly includeSubtypes?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `selectedValues`.
-         * @public
-         * @readonly
-         */
-        readonly selectedValues?: OPTIONAL<_Element[]>,
-        /**
-         * @summary `defaultValues`.
-         * @public
-         * @readonly
-         */
-        readonly defaultValues?: OPTIONAL<RequestAttribute_defaultValues_Item[]>,
-        /**
-         * @summary `contexts`.
-         * @public
-         * @readonly
-         */
-        readonly contexts?: OPTIONAL<ContextProfile[]>,
-        /**
-         * @summary `contextCombination`.
-         * @public
-         * @readonly
-         */
-        readonly contextCombination?: OPTIONAL<ContextCombination>,
-        /**
-         * @summary `matchingUse`.
-         * @public
-         * @readonly
-         */
-        readonly matchingUse?: OPTIONAL<MatchingUse[]>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        attributeType: OBJECT_IDENTIFIER,
+        includeSubtypes?: OPTIONAL<BOOLEAN>,
+        selectedValues?: OPTIONAL<_Element[]>,
+        defaultValues?: OPTIONAL<RequestAttribute_defaultValues_Item[]>,
+        contexts?: OPTIONAL<ContextProfile[]>,
+        contextCombination?: OPTIONAL<ContextCombination>,
+        matchingUse?: OPTIONAL<MatchingUse[]>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.attributeType = attributeType;
+        this.includeSubtypes = includeSubtypes;
+        this.selectedValues = selectedValues;
+        this.defaultValues = defaultValues;
+        this.contexts = contexts;
+        this.contextCombination = contextCombination;
+        this.matchingUse = matchingUse;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a RequestAttribute

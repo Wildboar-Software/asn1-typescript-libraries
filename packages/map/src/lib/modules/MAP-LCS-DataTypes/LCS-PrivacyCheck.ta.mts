@@ -28,34 +28,42 @@ import { PrivacyCheckRelatedAction, _decode_PrivacyCheckRelatedAction, _encode_P
  */
 export
 class LCS_PrivacyCheck {
+    /**
+     * @summary `callSessionUnrelated`.
+     * @description
+     *
+     * Action for call/session unrelated.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly callSessionUnrelated: PrivacyCheckRelatedAction;
+    /**
+     * @summary `callSessionRelated`.
+     * @description
+     *
+     * Optional action for call/session related.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly callSessionRelated?: OPTIONAL<PrivacyCheckRelatedAction>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `callSessionUnrelated`.
-         * @description
-         *
-         * Action for call/session unrelated.
-         *
-         * @public
-         * @readonly
-         */
-        readonly callSessionUnrelated: PrivacyCheckRelatedAction,
-        /**
-         * @summary `callSessionRelated`.
-         * @description
-         *
-         * Optional action for call/session related.
-         *
-         * @public
-         * @readonly
-         */
-        readonly callSessionRelated?: OPTIONAL<PrivacyCheckRelatedAction>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        callSessionUnrelated: PrivacyCheckRelatedAction,
+        callSessionRelated?: OPTIONAL<PrivacyCheckRelatedAction>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.callSessionUnrelated = callSessionUnrelated;
+        this.callSessionRelated = callSessionRelated;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a LCS_PrivacyCheck

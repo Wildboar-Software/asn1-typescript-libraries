@@ -39,32 +39,42 @@ import {
  *
  */
 export class OsiBindResult_normal_mode_parameters {
+    /**
+     * @summary `protocol_version`.
+     * @public
+     * @readonly
+     */
+    public readonly protocol_version: OPTIONAL<OsiBindResult_normal_mode_parameters_protocol_version>;
+    /**
+     * @summary `responding_presentation_selector`.
+     * @public
+     * @readonly
+     */
+    public readonly responding_presentation_selector: OPTIONAL<Presentation_selector>;
+    /**
+     * @summary `pres_context_result_list`.
+     * @public
+     * @readonly
+     */
+    public readonly pres_context_result_list: OsiBindResult_normal_mode_parameters_pres_context_result_list_Item[];
+    /**
+     * @summary `user_data`.
+     * @public
+     * @readonly
+     */
+    public readonly user_data: OsiBindResult_normal_mode_parameters_user_data;
+
     constructor(
-        /**
-         * @summary `protocol_version`.
-         * @public
-         * @readonly
-         */
-        readonly protocol_version: OPTIONAL<OsiBindResult_normal_mode_parameters_protocol_version>,
-        /**
-         * @summary `responding_presentation_selector`.
-         * @public
-         * @readonly
-         */
-        readonly responding_presentation_selector: OPTIONAL<Presentation_selector>,
-        /**
-         * @summary `pres_context_result_list`.
-         * @public
-         * @readonly
-         */
-        readonly pres_context_result_list: OsiBindResult_normal_mode_parameters_pres_context_result_list_Item[],
-        /**
-         * @summary `user_data`.
-         * @public
-         * @readonly
-         */
-        readonly user_data: OsiBindResult_normal_mode_parameters_user_data
-    ) {}
+        protocol_version: OPTIONAL<OsiBindResult_normal_mode_parameters_protocol_version>,
+        responding_presentation_selector: OPTIONAL<Presentation_selector>,
+        pres_context_result_list: OsiBindResult_normal_mode_parameters_pres_context_result_list_Item[],
+        user_data: OsiBindResult_normal_mode_parameters_user_data
+    ) {
+        this.protocol_version = protocol_version;
+        this.responding_presentation_selector = responding_presentation_selector;
+        this.pres_context_result_list = pres_context_result_list;
+        this.user_data = user_data;
+    }
 
     /**
      * @summary Restructures an object into a OsiBindResult_normal_mode_parameters

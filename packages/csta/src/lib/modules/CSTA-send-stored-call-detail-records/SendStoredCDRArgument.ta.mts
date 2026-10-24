@@ -39,42 +39,50 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class SendStoredCDRArgument {
+    /**
+     * @summary `cdrCrossRefID`.
+     * @description
+     *
+     * CDR transmission cross-reference from Start Call Detail Records
+     * Transmission (ECMA-269 §27.1.4).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly cdrCrossRefID: CDRCrossRefID;
+    /**
+     * @summary `timePeriod`.
+     * @description
+     *
+     * Interval (beginningOfCDR, endOfCDR) of recordCreationTime. If
+     * unsupported, all not-yet-transmitted stored records are sent
+     * (ECMA-269 §27.1.3.1 / FR 3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly timePeriod?: OPTIONAL<CDRTimePeriod>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * CSTACommonArguments carrying the service-table security and
+     * privateData parameters.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `cdrCrossRefID`.
-         * @description
-         *
-         * CDR transmission cross-reference from Start Call Detail Records
-         * Transmission (ECMA-269 §27.1.4).
-         *
-         * @public
-         * @readonly
-         */
-        readonly cdrCrossRefID: CDRCrossRefID,
-        /**
-         * @summary `timePeriod`.
-         * @description
-         *
-         * Interval (beginningOfCDR, endOfCDR) of recordCreationTime. If
-         * unsupported, all not-yet-transmitted stored records are sent
-         * (ECMA-269 §27.1.3.1 / FR 3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly timePeriod?: OPTIONAL<CDRTimePeriod>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * CSTACommonArguments carrying the service-table security and
-         * privateData parameters.
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        cdrCrossRefID: CDRCrossRefID,
+        timePeriod?: OPTIONAL<CDRTimePeriod>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.cdrCrossRefID = cdrCrossRefID;
+        this.timePeriod = timePeriod;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a SendStoredCDRArgument

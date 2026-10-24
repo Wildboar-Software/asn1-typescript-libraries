@@ -46,20 +46,26 @@ import {
  *
  */
 export class IpnSecurityResponse {
+    /**
+     * @summary `content_or_arguments`.
+     * @public
+     * @readonly
+     */
+    public readonly content_or_arguments: IpnSecurityResponse_content_or_arguments;
+    /**
+     * @summary `security_diagnostic_code`.
+     * @public
+     * @readonly
+     */
+    public readonly security_diagnostic_code?: OPTIONAL<SecurityDiagnosticCode>;
+
     constructor(
-        /**
-         * @summary `content_or_arguments`.
-         * @public
-         * @readonly
-         */
-        readonly content_or_arguments: IpnSecurityResponse_content_or_arguments,
-        /**
-         * @summary `security_diagnostic_code`.
-         * @public
-         * @readonly
-         */
-        readonly security_diagnostic_code?: OPTIONAL<SecurityDiagnosticCode>
-    ) {}
+        content_or_arguments: IpnSecurityResponse_content_or_arguments,
+        security_diagnostic_code?: OPTIONAL<SecurityDiagnosticCode>
+    ) {
+        this.content_or_arguments = content_or_arguments;
+        this.security_diagnostic_code = security_diagnostic_code;
+    }
 
     /**
      * @summary Restructures an object into a IpnSecurityResponse

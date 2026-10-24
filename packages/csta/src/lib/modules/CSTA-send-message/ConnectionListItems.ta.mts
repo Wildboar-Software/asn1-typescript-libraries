@@ -33,19 +33,23 @@ import { ConnectionID, _decode_ConnectionID, _encode_ConnectionID } from "../CST
  */
 export
 class ConnectionListItems {
+    /**
+     * @summary `connection`.
+     * @description
+     *
+     * Mandatory. Connection created at the calling
+     * device for one destination.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly connection: ConnectionID;
+
     constructor (
-        /**
-         * @summary `connection`.
-         * @description
-         *
-         * Mandatory. Connection created at the calling
-         * device for one destination.
-         *
-         * @public
-         * @readonly
-         */
-        readonly connection: ConnectionID
-    ) {}
+        connection: ConnectionID
+    ) {
+        this.connection = connection;
+    }
 
     /**
      * @summary Restructures an object into a ConnectionListItems

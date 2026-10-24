@@ -38,62 +38,74 @@ import { TimeNotation, _decode_TimeNotation, _encode_TimeNotation } from "../MED
  */
 export
 class ObservedEvent {
+    /**
+     * @summary `eventName`.
+     * @description
+     *
+     * Package and event that was detected.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly eventName: EventName;
+    /**
+     * @summary `streamID`.
+     * @description
+     *
+     * Stream on which the event was detected, when the event is
+     * stream-specific (clause 7.1.17).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly streamID: OPTIONAL<StreamID>;
+    /**
+     * @summary `eventParList`.
+     * @description
+     *
+     * Parameters observed with the event.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly eventParList: EventParameter[];
+    /**
+     * @summary `timeNotation`.
+     * @description
+     *
+     * Detection time, to hundredths of a second (clause 7.1.17). When the
+     * event was buffered under LockStep, the Notify carries the time of
+     * detection, not the time the buffer was drained (clause 7.1.9.4).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly timeNotation?: OPTIONAL<TimeNotation>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @description
+     *
+     * Extension additions this version does not define. Kept so a later
+     * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `eventName`.
-         * @description
-         *
-         * Package and event that was detected.
-         *
-         * @public
-         * @readonly
-         */
-        readonly eventName: EventName,
-        /**
-         * @summary `streamID`.
-         * @description
-         *
-         * Stream on which the event was detected, when the event is
-         * stream-specific (clause 7.1.17).
-         *
-         * @public
-         * @readonly
-         */
-        readonly streamID: OPTIONAL<StreamID>,
-        /**
-         * @summary `eventParList`.
-         * @description
-         *
-         * Parameters observed with the event.
-         *
-         * @public
-         * @readonly
-         */
-        readonly eventParList: EventParameter[],
-        /**
-         * @summary `timeNotation`.
-         * @description
-         *
-         * Detection time, to hundredths of a second (clause 7.1.17). When the
-         * event was buffered under LockStep, the Notify carries the time of
-         * detection, not the time the buffer was drained (clause 7.1.9.4).
-         *
-         * @public
-         * @readonly
-         */
-        readonly timeNotation?: OPTIONAL<TimeNotation>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @description
-         *
-         * Extension additions this version does not define. Kept so a later
-         * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
-         *
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        eventName: EventName,
+        streamID: OPTIONAL<StreamID>,
+        eventParList: EventParameter[],
+        timeNotation?: OPTIONAL<TimeNotation>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.eventName = eventName;
+        this.streamID = streamID;
+        this.eventParList = eventParList;
+        this.timeNotation = timeNotation;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a ObservedEvent

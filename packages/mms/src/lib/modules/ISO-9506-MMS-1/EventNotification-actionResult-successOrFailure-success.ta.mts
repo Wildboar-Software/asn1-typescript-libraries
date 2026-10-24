@@ -39,36 +39,42 @@ import { Response_Detail, _decode_Response_Detail, _encode_Response_Detail } fro
  */
 export
 class EventNotification_actionResult_successOrFailure_success {
+    /**
+     * @summary `confirmedServiceResponse`.
+     * @description
+     *
+     * Result(+) of the confirmed service named in the
+     * Event Action `&confirmedServiceRequest`.
+     *
+     * [ISO 9506-1:2003 §18.3.1.1.8.3]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly confirmedServiceResponse: ConfirmedServiceResponse;
+    /**
+     * @summary `cs_Response_Detail`.
+     * @description
+     *
+     * Companion-standard response detail matching the
+     * confirmed-service choice. Shall not be transmitted
+     * if the value is a tagged type derived from NULL.
+     * Present only if `csr`/`cspi` apply.
+     *
+     * [ISO 9506-2:2003 §18.3.1.1.1]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly cs_Response_Detail?: OPTIONAL<Response_Detail>;
+
     constructor (
-        /**
-         * @summary `confirmedServiceResponse`.
-         * @description
-         *
-         * Result(+) of the confirmed service named in the
-         * Event Action `&confirmedServiceRequest`.
-         *
-         * [ISO 9506-1:2003 §18.3.1.1.8.3]
-         *
-         * @public
-         * @readonly
-         */
-        readonly confirmedServiceResponse: ConfirmedServiceResponse,
-        /**
-         * @summary `cs_Response_Detail`.
-         * @description
-         *
-         * Companion-standard response detail matching the
-         * confirmed-service choice. Shall not be transmitted
-         * if the value is a tagged type derived from NULL.
-         * Present only if `csr`/`cspi` apply.
-         *
-         * [ISO 9506-2:2003 §18.3.1.1.1]
-         *
-         * @public
-         * @readonly
-         */
-        readonly cs_Response_Detail?: OPTIONAL<Response_Detail>
-    ) {}
+        confirmedServiceResponse: ConfirmedServiceResponse,
+        cs_Response_Detail?: OPTIONAL<Response_Detail>
+    ) {
+        this.confirmedServiceResponse = confirmedServiceResponse;
+        this.cs_Response_Detail = cs_Response_Detail;
+    }
 
     /**
      * @summary Restructures an object into a EventNotification_actionResult_successOrFailure_success

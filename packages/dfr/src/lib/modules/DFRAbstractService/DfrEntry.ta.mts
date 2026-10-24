@@ -37,26 +37,32 @@ import { DfrObjectContent, _decode_DfrObjectContent, _encode_DfrObjectContent } 
  */
 export
 class DfrEntry {
+    /**
+     * @summary `attributes`.
+     * @description
+     *
+     * Attributes of this entry, including hierarchy.
+     * @public
+     * @readonly
+     */
+    public readonly attributes: DfrEntryAttributes;
+    /**
+     * @summary `content`.
+     * @description
+     *
+     * Class-specific content (document, group, reference, or SRL).
+     * @public
+     * @readonly
+     */
+    public readonly content: DfrObjectContent;
+
     constructor (
-        /**
-         * @summary `attributes`.
-         * @description
-         *
-         * Attributes of this entry, including hierarchy.
-         * @public
-         * @readonly
-         */
-        readonly attributes: DfrEntryAttributes,
-        /**
-         * @summary `content`.
-         * @description
-         *
-         * Class-specific content (document, group, reference, or SRL).
-         * @public
-         * @readonly
-         */
-        readonly content: DfrObjectContent
-    ) {}
+        attributes: DfrEntryAttributes,
+        content: DfrObjectContent
+    ) {
+        this.attributes = attributes;
+        this.content = content;
+    }
 
     /**
      * @summary Restructures an object into a DfrEntry

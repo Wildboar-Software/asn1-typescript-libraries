@@ -36,44 +36,52 @@ import { ActionRequest, _decode_ActionRequest, _encode_ActionRequest } from "../
  */
 export
 class TransactionRequest {
+    /**
+     * @summary `transactionId`.
+     * @description
+     *
+     * Identifier used to correlate this request with its reply and with any
+     * TransactionPending (clause 8.2.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly transactionId: TransactionId;
+    /**
+     * @summary `actions`.
+     * @description
+     *
+     * Actions to execute, in order. Each action is confined to one context.
+     * On the first failing command that is not marked optional, later
+     * commands in the transaction are not attempted, and the gateway
+     * restores the state from before that command as far as it can (clause
+     * 8).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly actions: ActionRequest[];
+    /**
+     * @summary Extensions that are not recognized.
+     * @description
+     *
+     * Extension additions this version does not define. Kept so a later
+     * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `transactionId`.
-         * @description
-         *
-         * Identifier used to correlate this request with its reply and with any
-         * TransactionPending (clause 8.2.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly transactionId: TransactionId,
-        /**
-         * @summary `actions`.
-         * @description
-         *
-         * Actions to execute, in order. Each action is confined to one context.
-         * On the first failing command that is not marked optional, later
-         * commands in the transaction are not attempted, and the gateway
-         * restores the state from before that command as far as it can (clause
-         * 8).
-         *
-         * @public
-         * @readonly
-         */
-        readonly actions: ActionRequest[],
-        /**
-         * @summary Extensions that are not recognized.
-         * @description
-         *
-         * Extension additions this version does not define. Kept so a later
-         * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
-         *
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        transactionId: TransactionId,
+        actions: ActionRequest[],
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.transactionId = transactionId;
+        this.actions = actions;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a TransactionRequest

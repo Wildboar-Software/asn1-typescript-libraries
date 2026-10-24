@@ -42,44 +42,54 @@ import { PartiallyInService, _decode_PartiallyInService, _encode_PartiallyInServ
  */
 export
 class DeviceMaintEvtsList {
+    /**
+     * @summary `backInService`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this event; omit if the SF does not support it
+     * (ECMA-269 Annex C).
+     */
+    public readonly backInService?: OPTIONAL<BackInService>;
+    /**
+     * @summary `deviceCapsChanged`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this event; omit if the SF does not support it
+     * (ECMA-269 Annex C).
+     */
+    public readonly deviceCapsChanged?: OPTIONAL<DeviceCapsChanged>;
+    /**
+     * @summary `outOfService`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this event; omit if the SF does not support it
+     * (ECMA-269 Annex C).
+     */
+    public readonly outOfService?: OPTIONAL<OutOfService>;
+    /**
+     * @summary `partiallyInService`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this event; omit if the SF does not support it
+     * (ECMA-269 Annex C).
+     */
+    public readonly partiallyInService?: OPTIONAL<PartiallyInService>;
+
     constructor (
-        /**
-         * @summary `backInService`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this event; omit if the SF does not support it
-         * (ECMA-269 Annex C).
-         */
-        readonly backInService?: OPTIONAL<BackInService>,
-        /**
-         * @summary `deviceCapsChanged`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this event; omit if the SF does not support it
-         * (ECMA-269 Annex C).
-         */
-        readonly deviceCapsChanged?: OPTIONAL<DeviceCapsChanged>,
-        /**
-         * @summary `outOfService`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this event; omit if the SF does not support it
-         * (ECMA-269 Annex C).
-         */
-        readonly outOfService?: OPTIONAL<OutOfService>,
-        /**
-         * @summary `partiallyInService`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this event; omit if the SF does not support it
-         * (ECMA-269 Annex C).
-         */
-        readonly partiallyInService?: OPTIONAL<PartiallyInService>
-    ) {}
+        backInService?: OPTIONAL<BackInService>,
+        deviceCapsChanged?: OPTIONAL<DeviceCapsChanged>,
+        outOfService?: OPTIONAL<OutOfService>,
+        partiallyInService?: OPTIONAL<PartiallyInService>
+    ) {
+        this.backInService = backInService;
+        this.deviceCapsChanged = deviceCapsChanged;
+        this.outOfService = outOfService;
+        this.partiallyInService = partiallyInService;
+    }
 
     /**
      * @summary Restructures an object into a DeviceMaintEvtsList

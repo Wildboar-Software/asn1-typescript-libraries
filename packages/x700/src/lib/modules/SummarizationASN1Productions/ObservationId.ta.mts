@@ -48,38 +48,46 @@ import {
  *
  */
 export class ObservationId {
+    /**
+     * @summary `observedObject`.
+     * @description
+     *
+     * Managed object instance to observe. X.738
+     * §8.1.8.2.
+     * @public
+     * @readonly
+     */
+    public readonly observedObject: ObjectInstance;
+    /**
+     * @summary `scanAttributeIdList`.
+     * @description
+     *
+     * Attributes of any type reported with identifiers.
+     * X.738 §8.1.8.2.
+     * @public
+     * @readonly
+     */
+    public readonly scanAttributeIdList?: OPTIONAL<ScanAttributeIdList>;
+    /**
+     * @summary `numericAttributeIdArray`.
+     * @description
+     *
+     * Ordered numeric attributes reported without
+     * identifiers. X.738 §8.1.8.2.
+     * @public
+     * @readonly
+     */
+    public readonly numericAttributeIdArray?: OPTIONAL<NumericAttributeIdArray>;
+
     constructor(
-        /**
-         * @summary `observedObject`.
-         * @description
-         *
-         * Managed object instance to observe. X.738
-         * §8.1.8.2.
-         * @public
-         * @readonly
-         */
-        readonly observedObject: ObjectInstance,
-        /**
-         * @summary `scanAttributeIdList`.
-         * @description
-         *
-         * Attributes of any type reported with identifiers.
-         * X.738 §8.1.8.2.
-         * @public
-         * @readonly
-         */
-        readonly scanAttributeIdList?: OPTIONAL<ScanAttributeIdList>,
-        /**
-         * @summary `numericAttributeIdArray`.
-         * @description
-         *
-         * Ordered numeric attributes reported without
-         * identifiers. X.738 §8.1.8.2.
-         * @public
-         * @readonly
-         */
-        readonly numericAttributeIdArray?: OPTIONAL<NumericAttributeIdArray>
-    ) {}
+        observedObject: ObjectInstance,
+        scanAttributeIdList?: OPTIONAL<ScanAttributeIdList>,
+        numericAttributeIdArray?: OPTIONAL<NumericAttributeIdArray>
+    ) {
+        this.observedObject = observedObject;
+        this.scanAttributeIdList = scanAttributeIdList;
+        this.numericAttributeIdArray = numericAttributeIdArray;
+    }
 
     /**
      * @summary Restructures an object into a ObservationId

@@ -25,20 +25,26 @@ import * as $ from "@wildboar/asn1/functional";
  *
  */
 export class Signcrypted {
+    /**
+     * @summary `name`.
+     * @public
+     * @readonly
+     */
+    public readonly name: OBJECT_IDENTIFIER;
+    /**
+     * @summary `parts`.
+     * @public
+     * @readonly
+     */
+    public readonly parts?: OPTIONAL<_Element>;
+
     constructor(
-        /**
-         * @summary `name`.
-         * @public
-         * @readonly
-         */
-        readonly name: OBJECT_IDENTIFIER,
-        /**
-         * @summary `parts`.
-         * @public
-         * @readonly
-         */
-        readonly parts?: OPTIONAL<_Element>
-    ) {}
+        name: OBJECT_IDENTIFIER,
+        parts?: OPTIONAL<_Element>
+    ) {
+        this.name = name;
+        this.parts = parts;
+    }
 
     /**
      * @summary Restructures an object into a Signcrypted

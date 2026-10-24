@@ -40,44 +40,52 @@ import { AlarmAckRule, _decode_AlarmAckRule, _encode_AlarmAckRule } from "../MMS
  */
 export
 class AlterEventEnrollment_Request {
+    /**
+     * @summary `eventEnrollmentName`.
+     * @description
+     *
+     * Notification enrollment to alter.
+     *
+     * [ISO 9506-1:2003 §21.6.1.1.1]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly eventEnrollmentName: ObjectName;
+    /**
+     * @summary `eventConditionTransitions`.
+     * @description
+     *
+     * Replacement `&ecTransitions`. Omitted: unchanged.
+     *
+     * [ISO 9506-1:2003 §21.6.1.1.2]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly eventConditionTransitions?: OPTIONAL<Transitions>;
+    /**
+     * @summary `alarmAcknowledgmentRule`.
+     * @description
+     *
+     * Replacement `&aaRule`. Omitted: unchanged.
+     *
+     * [ISO 9506-1:2003 §21.6.1.1.3]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly alarmAcknowledgmentRule?: OPTIONAL<AlarmAckRule>;
+
     constructor (
-        /**
-         * @summary `eventEnrollmentName`.
-         * @description
-         *
-         * Notification enrollment to alter.
-         *
-         * [ISO 9506-1:2003 §21.6.1.1.1]
-         *
-         * @public
-         * @readonly
-         */
-        readonly eventEnrollmentName: ObjectName,
-        /**
-         * @summary `eventConditionTransitions`.
-         * @description
-         *
-         * Replacement `&ecTransitions`. Omitted: unchanged.
-         *
-         * [ISO 9506-1:2003 §21.6.1.1.2]
-         *
-         * @public
-         * @readonly
-         */
-        readonly eventConditionTransitions?: OPTIONAL<Transitions>,
-        /**
-         * @summary `alarmAcknowledgmentRule`.
-         * @description
-         *
-         * Replacement `&aaRule`. Omitted: unchanged.
-         *
-         * [ISO 9506-1:2003 §21.6.1.1.3]
-         *
-         * @public
-         * @readonly
-         */
-        readonly alarmAcknowledgmentRule?: OPTIONAL<AlarmAckRule>
-    ) {}
+        eventEnrollmentName: ObjectName,
+        eventConditionTransitions?: OPTIONAL<Transitions>,
+        alarmAcknowledgmentRule?: OPTIONAL<AlarmAckRule>
+    ) {
+        this.eventEnrollmentName = eventEnrollmentName;
+        this.eventConditionTransitions = eventConditionTransitions;
+        this.alarmAcknowledgmentRule = alarmAcknowledgmentRule;
+    }
 
     /**
      * @summary Restructures an object into a AlterEventEnrollment_Request

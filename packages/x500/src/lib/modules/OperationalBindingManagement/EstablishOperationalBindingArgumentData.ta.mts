@@ -67,56 +67,74 @@ import {
  *
  */
 export class EstablishOperationalBindingArgumentData {
+    /**
+     * @summary `bindingType`.
+     * @public
+     * @readonly
+     */
+    public readonly bindingType: OBJECT_IDENTIFIER;
+    /**
+     * @summary `bindingID`.
+     * @public
+     * @readonly
+     */
+    public readonly bindingID: OPTIONAL<OperationalBindingID>;
+    /**
+     * @summary `accessPoint`.
+     * @public
+     * @readonly
+     */
+    public readonly accessPoint: AccessPoint;
+    /**
+     * @summary `initiator`.
+     * @public
+     * @readonly
+     */
+    public readonly initiator: EstablishOperationalBindingArgumentData_initiator;
+    /**
+     * @summary `agreement`.
+     * @public
+     * @readonly
+     */
+    public readonly agreement: _Element;
+    /**
+     * @summary `valid`.
+     * @public
+     * @readonly
+     */
+    public readonly valid?: OPTIONAL<Validity>;
+    /**
+     * @summary `securityParameters`.
+     * @public
+     * @readonly
+     */
+    public readonly securityParameters?: OPTIONAL<SecurityParameters>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `bindingType`.
-         * @public
-         * @readonly
-         */
-        readonly bindingType: OBJECT_IDENTIFIER,
-        /**
-         * @summary `bindingID`.
-         * @public
-         * @readonly
-         */
-        readonly bindingID: OPTIONAL<OperationalBindingID>,
-        /**
-         * @summary `accessPoint`.
-         * @public
-         * @readonly
-         */
-        readonly accessPoint: AccessPoint,
-        /**
-         * @summary `initiator`.
-         * @public
-         * @readonly
-         */
-        readonly initiator: EstablishOperationalBindingArgumentData_initiator,
-        /**
-         * @summary `agreement`.
-         * @public
-         * @readonly
-         */
-        readonly agreement: _Element,
-        /**
-         * @summary `valid`.
-         * @public
-         * @readonly
-         */
-        readonly valid?: OPTIONAL<Validity>,
-        /**
-         * @summary `securityParameters`.
-         * @public
-         * @readonly
-         */
-        readonly securityParameters?: OPTIONAL<SecurityParameters>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        bindingType: OBJECT_IDENTIFIER,
+        bindingID: OPTIONAL<OperationalBindingID>,
+        accessPoint: AccessPoint,
+        initiator: EstablishOperationalBindingArgumentData_initiator,
+        agreement: _Element,
+        valid?: OPTIONAL<Validity>,
+        securityParameters?: OPTIONAL<SecurityParameters>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.bindingType = bindingType;
+        this.bindingID = bindingID;
+        this.accessPoint = accessPoint;
+        this.initiator = initiator;
+        this.agreement = agreement;
+        this.valid = valid;
+        this.securityParameters = securityParameters;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a EstablishOperationalBindingArgumentData

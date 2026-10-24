@@ -68,29 +68,35 @@ import { Domain_instance_definition, _decode_Domain_instance_definition, _encode
  */
 export
 class Domain_instance {
+    /**
+     * @summary `name`.
+     * @description
+     *
+     * Configured object name in the SCI file. ISO 9506-2:2003 Annex B.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly name: Identifier;
+    /**
+     * @summary `definition`.
+     * @description
+     *
+     * Standardized Name OID (`reference`) or inline `details`. ISO
+     * 9506-2:2003 Annex B.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly definition: Domain_instance_definition;
+
     constructor (
-        /**
-         * @summary `name`.
-         * @description
-         *
-         * Configured object name in the SCI file. ISO 9506-2:2003 Annex B.
-         *
-         * @public
-         * @readonly
-         */
-        readonly name: Identifier,
-        /**
-         * @summary `definition`.
-         * @description
-         *
-         * Standardized Name OID (`reference`) or inline `details`. ISO
-         * 9506-2:2003 Annex B.
-         *
-         * @public
-         * @readonly
-         */
-        readonly definition: Domain_instance_definition
-    ) {}
+        name: Identifier,
+        definition: Domain_instance_definition
+    ) {
+        this.name = name;
+        this.definition = definition;
+    }
 
     /**
      * @summary Restructures an object into a Domain_instance

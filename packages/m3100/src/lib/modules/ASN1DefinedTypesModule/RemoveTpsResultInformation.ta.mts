@@ -32,20 +32,26 @@ import {
  *
  */
 export class RemoveTpsResultInformation {
+    /**
+     * @summary `deletedTpPoolOrGTP`.
+     * @public
+     * @readonly
+     */
+    public readonly deletedTpPoolOrGTP: OPTIONAL<ObjectInstance>;
+    /**
+     * @summary `tps`.
+     * @public
+     * @readonly
+     */
+    public readonly tps: ObjectInstance[];
+
     constructor(
-        /**
-         * @summary `deletedTpPoolOrGTP`.
-         * @public
-         * @readonly
-         */
-        readonly deletedTpPoolOrGTP: OPTIONAL<ObjectInstance>,
-        /**
-         * @summary `tps`.
-         * @public
-         * @readonly
-         */
-        readonly tps: ObjectInstance[]
-    ) {}
+        deletedTpPoolOrGTP: OPTIONAL<ObjectInstance>,
+        tps: ObjectInstance[]
+    ) {
+        this.deletedTpPoolOrGTP = deletedTpPoolOrGTP;
+        this.tps = tps;
+    }
 
     /**
      * @summary Restructures an object into a RemoveTpsResultInformation

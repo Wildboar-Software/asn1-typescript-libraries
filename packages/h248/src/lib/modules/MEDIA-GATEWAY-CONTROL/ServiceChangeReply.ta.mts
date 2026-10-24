@@ -32,40 +32,48 @@ import { ServiceChangeResult, _decode_ServiceChangeResult, _encode_ServiceChange
  */
 export
 class ServiceChangeReply {
+    /**
+     * @summary `terminationID`.
+     * @description
+     *
+     * Termination the ServiceChange referred to.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly terminationID: TerminationIDList;
+    /**
+     * @summary `serviceChangeResult`.
+     * @description
+     *
+     * Either an error, or the response parameters. No response parameter is
+     * individually mandatory (Annex A).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly serviceChangeResult: ServiceChangeResult;
+    /**
+     * @summary Extensions that are not recognized.
+     * @description
+     *
+     * Extension additions this version does not define. Kept so a later
+     * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `terminationID`.
-         * @description
-         *
-         * Termination the ServiceChange referred to.
-         *
-         * @public
-         * @readonly
-         */
-        readonly terminationID: TerminationIDList,
-        /**
-         * @summary `serviceChangeResult`.
-         * @description
-         *
-         * Either an error, or the response parameters. No response parameter is
-         * individually mandatory (Annex A).
-         *
-         * @public
-         * @readonly
-         */
-        readonly serviceChangeResult: ServiceChangeResult,
-        /**
-         * @summary Extensions that are not recognized.
-         * @description
-         *
-         * Extension additions this version does not define. Kept so a later
-         * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
-         *
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        terminationID: TerminationIDList,
+        serviceChangeResult: ServiceChangeResult,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.terminationID = terminationID;
+        this.serviceChangeResult = serviceChangeResult;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a ServiceChangeReply

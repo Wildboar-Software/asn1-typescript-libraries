@@ -35,30 +35,36 @@ import { Purpose, _enum_for_Purpose, _decode_Purpose, _encode_Purpose } from "..
  */
 export
 class DataType {
+    /**
+     * @summary `processedLevel`.
+     * @description
+     *
+     * `raw-data`, `intermediate-data`, `processed-data`,
+     * `comparison-score`, or `comparison-result` (Clause 6.4.2.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly processedLevel: ProcessedLevel;
+    /**
+     * @summary `purpose`.
+     * @description
+     *
+     * `reference` (biometric reference) or `sample` (biometric
+     * sample) (Clause 6.4.2.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly purpose?: OPTIONAL<Purpose>;
+
     constructor (
-        /**
-         * @summary `processedLevel`.
-         * @description
-         *
-         * `raw-data`, `intermediate-data`, `processed-data`,
-         * `comparison-score`, or `comparison-result` (Clause 6.4.2.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly processedLevel: ProcessedLevel,
-        /**
-         * @summary `purpose`.
-         * @description
-         *
-         * `reference` (biometric reference) or `sample` (biometric
-         * sample) (Clause 6.4.2.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly purpose?: OPTIONAL<Purpose>
-    ) {}
+        processedLevel: ProcessedLevel,
+        purpose?: OPTIONAL<Purpose>
+    ) {
+        this.processedLevel = processedLevel;
+        this.purpose = purpose;
+    }
 
     /**
      * @summary Restructures an object into a DataType

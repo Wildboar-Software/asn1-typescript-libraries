@@ -37,29 +37,34 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class TimeNotation {
+    /**
+     * @summary `date`.
+     * @description
+     *
+     * Date as eight characters, `yyyymmdd` (Annex A).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly date: IA5String;
+    /**
+     * @summary `time`.
+     * @description
+     *
+     * Time of day as eight characters, `hhmmssss`, with the last two digits
+     * hundredths of a second (Annex A).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly time: IA5String;
+
     constructor (
-        /**
-         * @summary `date`.
-         * @description
-         *
-         * Date as eight characters, `yyyymmdd` (Annex A).
-         *
-         * @public
-         * @readonly
-         */
-        readonly date: IA5String,
-        /**
-         * @summary `time`.
-         * @description
-         *
-         * Time of day as eight characters, `hhmmssss`, with the last two digits
-         * hundredths of a second (Annex A).
-         *
-         * @public
-         * @readonly
-         */
-        readonly time: IA5String
+        date: IA5String,
+        time: IA5String
     ) {
+            this.date = date;
+            this.time = time;
             if (date.length !== 8) {
                 throw new ASN1SizeError("TimeNotation.date violates SIZE constraint");
             }

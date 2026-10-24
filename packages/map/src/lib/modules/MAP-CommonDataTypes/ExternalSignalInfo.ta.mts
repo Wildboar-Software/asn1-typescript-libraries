@@ -40,48 +40,58 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
  */
 export
 class ExternalSignalInfo {
+    /**
+     * @summary `protocolId`.
+     * @description
+     *
+     * Protocol to which `signalInfo` conforms (04.08, 08.06, or ETS 300
+     * 102-1). (3GPP TS 29.002 V19.1.0 clause 7.6.9.7).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly protocolId: ProtocolId;
+    /**
+     * @summary `signalInfo`.
+     * @description
+     *
+     * Concatenated IEs of the indicated protocol (tag and length included).
+     * Structure: clause 7.6.9. (3GPP TS 29.002 V19.1.0 clauses 17.7.8 and
+     * 7.6.9.4).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly signalInfo: SignalInfo;
+    /**
+     * @summary `extensionContainer`.
+     * @description
+     *
+     * Private extensions. Must not be used in MAP version 2. (3GPP TS
+     * 29.002 V19.1.0 clause 17.7.8).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `protocolId`.
-         * @description
-         *
-         * Protocol to which `signalInfo` conforms (04.08, 08.06, or ETS 300
-         * 102-1). (3GPP TS 29.002 V19.1.0 clause 7.6.9.7).
-         *
-         * @public
-         * @readonly
-         */
-        readonly protocolId: ProtocolId,
-        /**
-         * @summary `signalInfo`.
-         * @description
-         *
-         * Concatenated IEs of the indicated protocol (tag and length included).
-         * Structure: clause 7.6.9. (3GPP TS 29.002 V19.1.0 clauses 17.7.8 and
-         * 7.6.9.4).
-         *
-         * @public
-         * @readonly
-         */
-        readonly signalInfo: SignalInfo,
-        /**
-         * @summary `extensionContainer`.
-         * @description
-         *
-         * Private extensions. Must not be used in MAP version 2. (3GPP TS
-         * 29.002 V19.1.0 clause 17.7.8).
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        protocolId: ProtocolId,
+        signalInfo: SignalInfo,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.protocolId = protocolId;
+        this.signalInfo = signalInfo;
+        this.extensionContainer = extensionContainer;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a ExternalSignalInfo

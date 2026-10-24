@@ -35,26 +35,32 @@ import * as $ from '@wildboar/asn1/functional';
  *
  */
 export class Timer {
+    /**
+     * @summary `exponent`.
+     * @description
+     *
+     * Power of ten applied to `mantissa`, range `-62..63`.
+     * @public
+     * @readonly
+     */
+    public readonly exponent: INTEGER;
+    /**
+     * @summary `mantissa`.
+     * @description
+     *
+     * Scale factor, range `0..65535`.
+     * @public
+     * @readonly
+     */
+    public readonly mantissa: INTEGER;
+
     constructor(
-        /**
-         * @summary `exponent`.
-         * @description
-         *
-         * Power of ten applied to `mantissa`, range `-62..63`.
-         * @public
-         * @readonly
-         */
-        readonly exponent: INTEGER,
-        /**
-         * @summary `mantissa`.
-         * @description
-         *
-         * Scale factor, range `0..65535`.
-         * @public
-         * @readonly
-         */
-        readonly mantissa: INTEGER
-    ) {}
+        exponent: INTEGER,
+        mantissa: INTEGER
+    ) {
+        this.exponent = exponent;
+        this.mantissa = mantissa;
+    }
 
     /**
      * @summary Restructures an object into a Timer

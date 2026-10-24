@@ -34,59 +34,71 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
  */
 export
 class PurgeMS_Res {
+    /**
+     * @summary `freezeTMSI`.
+     * @description
+     *
+     * VLR shall freeze the TMSI. Present if the received VLR number matches
+     * the stored VLR number.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 8.1.6.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly freezeTMSI?: OPTIONAL<NULL>;
+    /**
+     * @summary `freezeP_TMSI`.
+     * @description
+     *
+     * SGSN shall freeze the P-TMSI. Present if the received SGSN number
+     * matches the stored SGSN number.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 8.1.6.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly freezeP_TMSI?: OPTIONAL<NULL>;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary `freezeM_TMSI`.
+     * @description
+     *
+     * IWF shall freeze the M-TMSI. Present if the received node number
+     * matches the stored IWF number.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 8.1.6.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly freezeM_TMSI?: OPTIONAL<NULL>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `freezeTMSI`.
-         * @description
-         *
-         * VLR shall freeze the TMSI. Present if the received VLR number matches
-         * the stored VLR number.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 8.1.6.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly freezeTMSI?: OPTIONAL<NULL>,
-        /**
-         * @summary `freezeP_TMSI`.
-         * @description
-         *
-         * SGSN shall freeze the P-TMSI. Present if the received SGSN number
-         * matches the stored SGSN number.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 8.1.6.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly freezeP_TMSI?: OPTIONAL<NULL>,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary `freezeM_TMSI`.
-         * @description
-         *
-         * IWF shall freeze the M-TMSI. Present if the received node number
-         * matches the stored IWF number.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 8.1.6.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly freezeM_TMSI?: OPTIONAL<NULL>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        freezeTMSI?: OPTIONAL<NULL>,
+        freezeP_TMSI?: OPTIONAL<NULL>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        freezeM_TMSI?: OPTIONAL<NULL>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.freezeTMSI = freezeTMSI;
+        this.freezeP_TMSI = freezeP_TMSI;
+        this.extensionContainer = extensionContainer;
+        this.freezeM_TMSI = freezeM_TMSI;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a PurgeMS_Res

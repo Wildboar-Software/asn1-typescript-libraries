@@ -72,44 +72,58 @@ import {
  *
  */
 export class DomainSuppliedInformation implements AdditionalActions {
+    /**
+     * @summary `arrival_time`.
+     * @public
+     * @readonly
+     */
+    public readonly arrival_time: ArrivalTime;
+    /**
+     * @summary `routing_action`.
+     * @public
+     * @readonly
+     */
+    public readonly routing_action: RoutingAction;
+    /**
+     * @summary `attempted_domain`.
+     * @public
+     * @readonly
+     */
+    public readonly attempted_domain?: OPTIONAL<GlobalDomainIdentifier>;
+    /**
+     * @summary `deferred_time`.
+     * @public
+     * @readonly
+     */
+    public readonly deferred_time?: OPTIONAL<DeferredTime>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `converted_encoded_information_types`.
+     * @public
+     * @readonly
+     */
+    public readonly converted_encoded_information_types?: OPTIONAL<ConvertedEncodedInformationTypes>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `other_actions`.
+     * @public
+     * @readonly
+     */
+    public readonly other_actions?: OPTIONAL<OtherActions>; /* REPLICATED_COMPONENT */
+
     constructor(
-        /**
-         * @summary `arrival_time`.
-         * @public
-         * @readonly
-         */
-        readonly arrival_time: ArrivalTime,
-        /**
-         * @summary `routing_action`.
-         * @public
-         * @readonly
-         */
-        readonly routing_action: RoutingAction,
-        /**
-         * @summary `attempted_domain`.
-         * @public
-         * @readonly
-         */
-        readonly attempted_domain?: OPTIONAL<GlobalDomainIdentifier>,
-        /**
-         * @summary `deferred_time`.
-         * @public
-         * @readonly
-         */
-        readonly deferred_time?: OPTIONAL<DeferredTime> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `converted_encoded_information_types`.
-         * @public
-         * @readonly
-         */
-        readonly converted_encoded_information_types?: OPTIONAL<ConvertedEncodedInformationTypes> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `other_actions`.
-         * @public
-         * @readonly
-         */
-        readonly other_actions?: OPTIONAL<OtherActions> /* REPLICATED_COMPONENT */
-    ) {}
+        arrival_time: ArrivalTime,
+        routing_action: RoutingAction,
+        attempted_domain?: OPTIONAL<GlobalDomainIdentifier>,
+        deferred_time?: OPTIONAL<DeferredTime>,
+        converted_encoded_information_types?: OPTIONAL<ConvertedEncodedInformationTypes>,
+        other_actions?: OPTIONAL<OtherActions>
+    ) {
+        this.arrival_time = arrival_time;
+        this.routing_action = routing_action;
+        this.attempted_domain = attempted_domain;
+        this.deferred_time = deferred_time;
+        this.converted_encoded_information_types = converted_encoded_information_types;
+        this.other_actions = other_actions;
+    }
 
     /**
      * @summary Restructures an object into a DomainSuppliedInformation

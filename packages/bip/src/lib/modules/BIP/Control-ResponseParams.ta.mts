@@ -33,19 +33,23 @@ import {
  *
  */
 export class Control_ResponseParams {
+  /**
+   * @summary `outputData`.
+   * @description
+   *
+   * Output payload of the control operation. Maps to OutputData
+   * (clause 20, §15.22). X.1083 Table 56.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly outputData: BioAPI_DATA;
+
   constructor(
-    /**
-     * @summary `outputData`.
-     * @description
-     *
-     * Output payload of the control operation. Maps to OutputData
-     * (clause 20, §15.22). X.1083 Table 56.
-     *
-     * @public
-     * @readonly
-     */
-    readonly outputData: BioAPI_DATA
-  ) {}
+    outputData: BioAPI_DATA
+  ) {
+    this.outputData = outputData;
+  }
 
   /**
    * @summary Restructures an object into a Control_ResponseParams

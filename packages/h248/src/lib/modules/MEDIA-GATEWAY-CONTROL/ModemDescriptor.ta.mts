@@ -37,39 +37,47 @@ import { NonStandardData, _decode_NonStandardData, _encode_NonStandardData } fro
  */
 export
 class ModemDescriptor {
+    /**
+     * @summary `mtl`.
+     * @description
+     *
+     * Modem types requested, in the order given: V.18, V.22, V.22 bis,
+     * V.32, V.32 bis, V.34, V.90, V.91, synchronous ISDN, or an extension.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mtl: ModemType[];
+    /**
+     * @summary `mpl`.
+     * @description
+     *
+     * Modem parameters, encoded as properties.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mpl: PropertyParm[];
+    /**
+     * @summary `nonStandardData`.
+     * @description
+     *
+     * Non-standard modem parameters (Annex A).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly nonStandardData?: OPTIONAL<NonStandardData>;
+
     constructor (
-        /**
-         * @summary `mtl`.
-         * @description
-         *
-         * Modem types requested, in the order given: V.18, V.22, V.22 bis,
-         * V.32, V.32 bis, V.34, V.90, V.91, synchronous ISDN, or an extension.
-         *
-         * @public
-         * @readonly
-         */
-        readonly mtl: ModemType[],
-        /**
-         * @summary `mpl`.
-         * @description
-         *
-         * Modem parameters, encoded as properties.
-         *
-         * @public
-         * @readonly
-         */
-        readonly mpl: PropertyParm[],
-        /**
-         * @summary `nonStandardData`.
-         * @description
-         *
-         * Non-standard modem parameters (Annex A).
-         *
-         * @public
-         * @readonly
-         */
-        readonly nonStandardData?: OPTIONAL<NonStandardData>
-    ) {}
+        mtl: ModemType[],
+        mpl: PropertyParm[],
+        nonStandardData?: OPTIONAL<NonStandardData>
+    ) {
+        this.mtl = mtl;
+        this.mpl = mpl;
+        this.nonStandardData = nonStandardData;
+    }
 
     /**
      * @summary Restructures an object into a ModemDescriptor

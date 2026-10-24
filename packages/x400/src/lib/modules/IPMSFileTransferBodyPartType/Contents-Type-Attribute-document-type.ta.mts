@@ -30,20 +30,26 @@ import {
  *
  */
 export class Contents_Type_Attribute_document_type {
+    /**
+     * @summary `document_type_name`.
+     * @public
+     * @readonly
+     */
+    public readonly document_type_name: Document_Type_Name;
+    /**
+     * @summary `parameter`.
+     * @public
+     * @readonly
+     */
+    public readonly parameter?: OPTIONAL<_Element>;
+
     constructor(
-        /**
-         * @summary `document_type_name`.
-         * @public
-         * @readonly
-         */
-        readonly document_type_name: Document_Type_Name,
-        /**
-         * @summary `parameter`.
-         * @public
-         * @readonly
-         */
-        readonly parameter?: OPTIONAL<_Element>
-    ) {}
+        document_type_name: Document_Type_Name,
+        parameter?: OPTIONAL<_Element>
+    ) {
+        this.document_type_name = document_type_name;
+        this.parameter = parameter;
+    }
 
     /**
      * @summary Restructures an object into a Contents_Type_Attribute_document_type

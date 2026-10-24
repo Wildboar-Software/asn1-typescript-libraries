@@ -39,46 +39,56 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
  */
 export
 class AccessNetworkSignalInfo {
+    /**
+     * @summary `accessNetworkProtocolId`.
+     * @description
+     *
+     * Selects 3GPP TS 48.006 or 3GPP TS 25.413. Unknown values: ignore the
+     * whole sequence. (3GPP TS 29.002 V19.1.0 clauses 17.7.8 and 7.6.9.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly accessNetworkProtocolId: AccessNetworkProtocolId;
+    /**
+     * @summary `signalInfo`.
+     * @description
+     *
+     * One or two concatenated complete 3GPP TS 25.413 or 48.006 messages
+     * (clause 7.6.9.1). Coding: TS 25.413, TS 48.006 and TS 48.008.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly signalInfo: LongSignalInfo;
+    /**
+     * @summary `extensionContainer`.
+     * @description
+     *
+     * Private extensions. (3GPP TS 29.002 V19.1.0 clause 17.7.8).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `accessNetworkProtocolId`.
-         * @description
-         *
-         * Selects 3GPP TS 48.006 or 3GPP TS 25.413. Unknown values: ignore the
-         * whole sequence. (3GPP TS 29.002 V19.1.0 clauses 17.7.8 and 7.6.9.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly accessNetworkProtocolId: AccessNetworkProtocolId,
-        /**
-         * @summary `signalInfo`.
-         * @description
-         *
-         * One or two concatenated complete 3GPP TS 25.413 or 48.006 messages
-         * (clause 7.6.9.1). Coding: TS 25.413, TS 48.006 and TS 48.008.
-         *
-         * @public
-         * @readonly
-         */
-        readonly signalInfo: LongSignalInfo,
-        /**
-         * @summary `extensionContainer`.
-         * @description
-         *
-         * Private extensions. (3GPP TS 29.002 V19.1.0 clause 17.7.8).
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        accessNetworkProtocolId: AccessNetworkProtocolId,
+        signalInfo: LongSignalInfo,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.accessNetworkProtocolId = accessNetworkProtocolId;
+        this.signalInfo = signalInfo;
+        this.extensionContainer = extensionContainer;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a AccessNetworkSignalInfo

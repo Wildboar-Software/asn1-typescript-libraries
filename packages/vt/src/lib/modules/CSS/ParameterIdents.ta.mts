@@ -44,91 +44,111 @@ import { ElementParamIdent, _decode_ElementParamIdent, _encode_ElementParamIdent
  */
 export
 class ParameterIdents {
+    /**
+     * @summary `typeIdentifier`.
+     * @description
+     * Invite `CO-type-identifier` (source of CO semantics).
+     * ISO/IEC 9040:1997 §14, §20.1.1.
+     * @public
+     * @readonly
+     */
+    public readonly typeIdentifier?: OPTIONAL<NULL>;
+    /**
+     * @summary `access`.
+     * @description
+     * Invite `CO-access`. Default `"NSAC"`.
+     * ISO/IEC 9040:1997 §9, §20.1.3.
+     * @public
+     * @readonly
+     */
+    public readonly access?: OPTIONAL<NULL>;
+    /**
+     * @summary `trigger`.
+     * @description
+     * Invite `CO-trigger`. Valid only if `CO-priority` is
+     * `"normal"`. Default `"not selected"`.
+     * ISO/IEC 9040:1997 §20.1.5.
+     * @public
+     * @readonly
+     */
+    public readonly trigger?: OPTIONAL<NULL>;
+    /**
+     * @summary `size`.
+     * @description
+     * Invite `CO-size` (meaning depends on category).
+     * ISO/IEC 9040:1997 §20.2.2.
+     * @public
+     * @readonly
+     */
+    public readonly size?: OPTIONAL<NULL>;
+    /**
+     * @summary `category`.
+     * @description
+     * Invite `CO-category`. Default `"boolean"`.
+     * ISO/IEC 9040:1997 table 9, §20.2.
+     * @public
+     * @readonly
+     */
+    public readonly category?: OPTIONAL<NULL>;
+    /**
+     * @summary `repertoire`.
+     * @description
+     * Invite `CO-repertoire-assignment` (character category).
+     * ISO/IEC 9040:1997 table 9, §20.2.5.
+     * @public
+     * @readonly
+     */
+    public readonly repertoire?: OPTIONAL<NULL>;
+    /**
+     * @summary `priority`.
+     * @description
+     * Invite `CO-priority`. Default `"normal"`.
+     * ISO/IEC 9040:1997 §20.1.4.
+     * @public
+     * @readonly
+     */
+    public readonly priority?: OPTIONAL<NULL>;
+    /**
+     * @summary `structure`.
+     * @description
+     * Invite `CO-structure` (parametric count vs
+     * non-parametric). ISO/IEC 9040:1997 §14.1, §20.1.2.
+     * @public
+     * @readonly
+     */
+    public readonly structure?: OPTIONAL<NULL>;
+    /**
+     * @summary `multiElement`.
+     * @description
+     * Per-element invitations (`CO-element-id` plus
+     * size/category/repertoire). Structured COs FU.
+     * ISO/IEC 9040:1997 §20.2.1.
+     * @public
+     * @readonly
+     */
+    public readonly multiElement?: OPTIONAL<ElementParamIdent[]>;
+
     constructor (
-        /**
-         * @summary `typeIdentifier`.
-         * @description
-         * Invite `CO-type-identifier` (source of CO semantics).
-         * ISO/IEC 9040:1997 §14, §20.1.1.
-         * @public
-         * @readonly
-         */
-        readonly typeIdentifier?: OPTIONAL<NULL>,
-        /**
-         * @summary `access`.
-         * @description
-         * Invite `CO-access`. Default `"NSAC"`.
-         * ISO/IEC 9040:1997 §9, §20.1.3.
-         * @public
-         * @readonly
-         */
-        readonly access?: OPTIONAL<NULL>,
-        /**
-         * @summary `trigger`.
-         * @description
-         * Invite `CO-trigger`. Valid only if `CO-priority` is
-         * `"normal"`. Default `"not selected"`.
-         * ISO/IEC 9040:1997 §20.1.5.
-         * @public
-         * @readonly
-         */
-        readonly trigger?: OPTIONAL<NULL>,
-        /**
-         * @summary `size`.
-         * @description
-         * Invite `CO-size` (meaning depends on category).
-         * ISO/IEC 9040:1997 §20.2.2.
-         * @public
-         * @readonly
-         */
-        readonly size?: OPTIONAL<NULL>,
-        /**
-         * @summary `category`.
-         * @description
-         * Invite `CO-category`. Default `"boolean"`.
-         * ISO/IEC 9040:1997 table 9, §20.2.
-         * @public
-         * @readonly
-         */
-        readonly category?: OPTIONAL<NULL>,
-        /**
-         * @summary `repertoire`.
-         * @description
-         * Invite `CO-repertoire-assignment` (character category).
-         * ISO/IEC 9040:1997 table 9, §20.2.5.
-         * @public
-         * @readonly
-         */
-        readonly repertoire?: OPTIONAL<NULL>,
-        /**
-         * @summary `priority`.
-         * @description
-         * Invite `CO-priority`. Default `"normal"`.
-         * ISO/IEC 9040:1997 §20.1.4.
-         * @public
-         * @readonly
-         */
-        readonly priority?: OPTIONAL<NULL>,
-        /**
-         * @summary `structure`.
-         * @description
-         * Invite `CO-structure` (parametric count vs
-         * non-parametric). ISO/IEC 9040:1997 §14.1, §20.1.2.
-         * @public
-         * @readonly
-         */
-        readonly structure?: OPTIONAL<NULL>,
-        /**
-         * @summary `multiElement`.
-         * @description
-         * Per-element invitations (`CO-element-id` plus
-         * size/category/repertoire). Structured COs FU.
-         * ISO/IEC 9040:1997 §20.2.1.
-         * @public
-         * @readonly
-         */
-        readonly multiElement?: OPTIONAL<ElementParamIdent[]>
-    ) {}
+        typeIdentifier?: OPTIONAL<NULL>,
+        access?: OPTIONAL<NULL>,
+        trigger?: OPTIONAL<NULL>,
+        size?: OPTIONAL<NULL>,
+        category?: OPTIONAL<NULL>,
+        repertoire?: OPTIONAL<NULL>,
+        priority?: OPTIONAL<NULL>,
+        structure?: OPTIONAL<NULL>,
+        multiElement?: OPTIONAL<ElementParamIdent[]>
+    ) {
+        this.typeIdentifier = typeIdentifier;
+        this.access = access;
+        this.trigger = trigger;
+        this.size = size;
+        this.category = category;
+        this.repertoire = repertoire;
+        this.priority = priority;
+        this.structure = structure;
+        this.multiElement = multiElement;
+    }
 
     /**
      * @summary Restructures an object into a ParameterIdents

@@ -38,36 +38,44 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class GetLampModeResult {
+    /**
+     * @summary `lampModeList`.
+     * @description
+     *
+     * One entry per queried lamp.
+     * @public
+     * @readonly
+     */
+    public readonly lampModeList: LampModeList;
+    /**
+     * @summary `lamp`.
+     * @description
+     *
+     * Lamp identifier; also listed per entry in `lampModeList`.
+     * @public
+     * @readonly
+     */
+    public readonly lamp?: OPTIONAL<LampID>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `lampModeList`.
-         * @description
-         *
-         * One entry per queried lamp.
-         * @public
-         * @readonly
-         */
-        readonly lampModeList: LampModeList,
-        /**
-         * @summary `lamp`.
-         * @description
-         *
-         * Lamp identifier; also listed per entry in `lampModeList`.
-         * @public
-         * @readonly
-         */
-        readonly lamp?: OPTIONAL<LampID>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        lampModeList: LampModeList,
+        lamp?: OPTIONAL<LampID>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.lampModeList = lampModeList;
+        this.lamp = lamp;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a GetLampModeResult

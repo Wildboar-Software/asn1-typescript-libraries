@@ -29,20 +29,26 @@ import { ScfID, _decode_ScfID, _encode_ScfID } from "../IN-CS2-datatypes/ScfID.t
  */
 export
 class TraceItem {
+    /**
+     * @summary `scf`.
+     * @public
+     * @readonly
+     */
+    public readonly scf: ScfID;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `scf`.
-         * @public
-         * @readonly
-         */
-        readonly scf: ScfID,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        scf: ScfID,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.scf = scf;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a TraceItem

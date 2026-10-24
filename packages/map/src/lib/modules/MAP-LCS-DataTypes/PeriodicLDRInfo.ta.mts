@@ -34,44 +34,54 @@ import { ReportingOptionMilliseconds, _decode_ReportingOptionMilliseconds, _enco
  */
 export
 class PeriodicLDRInfo {
+    /**
+     * @summary `reportingAmount`.
+     * @description
+     *
+     * 1..maxReportingAmount.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly reportingAmount: ReportingAmount;
+    /**
+     * @summary `reportingInterval`.
+     * @description
+     *
+     * Seconds, 1..maxReportingInterval.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly reportingInterval: ReportingInterval;
+    /**
+     * @summary `reportingOptionMilliseconds`.
+     * @description
+     *
+     * Millisecond reporting; if used, ignore second-based fields.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly reportingOptionMilliseconds?: OPTIONAL<ReportingOptionMilliseconds>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `reportingAmount`.
-         * @description
-         *
-         * 1..maxReportingAmount.
-         *
-         * @public
-         * @readonly
-         */
-        readonly reportingAmount: ReportingAmount,
-        /**
-         * @summary `reportingInterval`.
-         * @description
-         *
-         * Seconds, 1..maxReportingInterval.
-         *
-         * @public
-         * @readonly
-         */
-        readonly reportingInterval: ReportingInterval,
-        /**
-         * @summary `reportingOptionMilliseconds`.
-         * @description
-         *
-         * Millisecond reporting; if used, ignore second-based fields.
-         *
-         * @public
-         * @readonly
-         */
-        readonly reportingOptionMilliseconds?: OPTIONAL<ReportingOptionMilliseconds>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        reportingAmount: ReportingAmount,
+        reportingInterval: ReportingInterval,
+        reportingOptionMilliseconds?: OPTIONAL<ReportingOptionMilliseconds>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.reportingAmount = reportingAmount;
+        this.reportingInterval = reportingInterval;
+        this.reportingOptionMilliseconds = reportingOptionMilliseconds;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a PeriodicLDRInfo

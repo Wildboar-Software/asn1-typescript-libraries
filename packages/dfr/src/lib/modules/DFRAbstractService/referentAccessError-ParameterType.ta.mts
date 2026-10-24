@@ -37,26 +37,32 @@ import { ReferentAccessProblem, _enum_for_ReferentAccessProblem, _decode_Referen
  */
 export
 class referentAccessError_ParameterType {
+    /**
+     * @summary `entry`.
+     * @description
+     *
+     * The reference, as a DfrEntryName or a DOR.
+     * @public
+     * @readonly
+     */
+    public readonly entry: referentAccessError_ParameterType_entry;
+    /**
+     * @summary `problem`.
+     * @description
+     *
+     * What failed about the referent.
+     * @public
+     * @readonly
+     */
+    public readonly problem: ReferentAccessProblem;
+
     constructor (
-        /**
-         * @summary `entry`.
-         * @description
-         *
-         * The reference, as a DfrEntryName or a DOR.
-         * @public
-         * @readonly
-         */
-        readonly entry: referentAccessError_ParameterType_entry,
-        /**
-         * @summary `problem`.
-         * @description
-         *
-         * What failed about the referent.
-         * @public
-         * @readonly
-         */
-        readonly problem: ReferentAccessProblem
-    ) {}
+        entry: referentAccessError_ParameterType_entry,
+        problem: ReferentAccessProblem
+    ) {
+        this.entry = entry;
+        this.problem = problem;
+    }
 
     /**
      * @summary Restructures an object into a referentAccessError_ParameterType

@@ -35,20 +35,26 @@ import {
  *
  */
 export class CBEFFVersion {
+  /**
+   * @summary `cbeff_major`.
+   * @public
+   * @readonly
+   */
+  public readonly cbeff_major: CBEFFVersion_cbeff_major;
+  /**
+   * @summary `cbeff_minor`.
+   * @public
+   * @readonly
+   */
+  public readonly cbeff_minor: CBEFFVersion_cbeff_minor;
+
   constructor(
-    /**
-     * @summary `cbeff_major`.
-     * @public
-     * @readonly
-     */
-    readonly cbeff_major: CBEFFVersion_cbeff_major,
-    /**
-     * @summary `cbeff_minor`.
-     * @public
-     * @readonly
-     */
-    readonly cbeff_minor: CBEFFVersion_cbeff_minor
-  ) {}
+    cbeff_major: CBEFFVersion_cbeff_major,
+    cbeff_minor: CBEFFVersion_cbeff_minor
+  ) {
+    this.cbeff_major = cbeff_major;
+    this.cbeff_minor = cbeff_minor;
+  }
 
   /**
    * @summary Restructures an object into a CBEFFVersion

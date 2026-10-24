@@ -32,54 +32,66 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
  */
 export
 class UU_Data {
+    /**
+     * @summary `uuIndicator`.
+     * @description
+     *
+     * Coded according to ETS 300 356 (clause 17.7.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly uuIndicator?: OPTIONAL<UUIndicator>;
+    /**
+     * @summary `uui`.
+     * @description
+     *
+     * UUI octets according to ETS 300 356, size 1..131.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly uui?: OPTIONAL<UUI>;
+    /**
+     * @summary `uusCFInteraction`.
+     * @description
+     *
+     * UUS / call forwarding interaction.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly uusCFInteraction?: OPTIONAL<NULL>;
+    /**
+     * @summary `extensionContainer`.
+     * @description
+     *
+     * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `uuIndicator`.
-         * @description
-         *
-         * Coded according to ETS 300 356 (clause 17.7.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly uuIndicator?: OPTIONAL<UUIndicator>,
-        /**
-         * @summary `uui`.
-         * @description
-         *
-         * UUI octets according to ETS 300 356, size 1..131.
-         *
-         * @public
-         * @readonly
-         */
-        readonly uui?: OPTIONAL<UUI>,
-        /**
-         * @summary `uusCFInteraction`.
-         * @description
-         *
-         * UUS / call forwarding interaction.
-         *
-         * @public
-         * @readonly
-         */
-        readonly uusCFInteraction?: OPTIONAL<NULL>,
-        /**
-         * @summary `extensionContainer`.
-         * @description
-         *
-         * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        uuIndicator?: OPTIONAL<UUIndicator>,
+        uui?: OPTIONAL<UUI>,
+        uusCFInteraction?: OPTIONAL<NULL>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.uuIndicator = uuIndicator;
+        this.uui = uui;
+        this.uusCFInteraction = uusCFInteraction;
+        this.extensionContainer = extensionContainer;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a UU_Data

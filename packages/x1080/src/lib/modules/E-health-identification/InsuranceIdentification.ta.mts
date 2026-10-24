@@ -44,61 +44,73 @@ import {
  *
  */
 export class InsuranceIdentification {
+    /**
+     * @summary `scheme`.
+     * @description
+     *
+     * `INSURANCE-SCHEME.&id` of the identification scheme.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly scheme: OBJECT_IDENTIFIER;
+    /**
+     * @summary `schemeName`.
+     * @description
+     *
+     * Optional `INSURANCE-SCHEME.&name`. ISO646String is not
+     * necessarily unique.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly schemeName: OPTIONAL<SchemeName>;
+    /**
+     * @summary `manufacturerId`.
+     * @description
+     *
+     * `INSURANCE-SCHEME.&Company`: issuer (name, HQ, company
+     * number, contact).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly manufacturerId: _Element;
+    /**
+     * @summary `insurance`.
+     * @description
+     *
+     * `INSURANCE-SCHEME.&InsuranceType` relative to that company.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly insurance: _Element;
+    /**
+     * @summary `insuranceCert`.
+     * @description
+     *
+     * `INSURANCE-SCHEME.&Certification`: reference number + person
+     * issued to. Signed by the company (contains a PKC).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly insuranceCert: _Element;
+
     constructor(
-        /**
-         * @summary `scheme`.
-         * @description
-         *
-         * `INSURANCE-SCHEME.&id` of the identification scheme.
-         *
-         * @public
-         * @readonly
-         */
-        readonly scheme: OBJECT_IDENTIFIER,
-        /**
-         * @summary `schemeName`.
-         * @description
-         *
-         * Optional `INSURANCE-SCHEME.&name`. ISO646String is not
-         * necessarily unique.
-         *
-         * @public
-         * @readonly
-         */
-        readonly schemeName: OPTIONAL<SchemeName>,
-        /**
-         * @summary `manufacturerId`.
-         * @description
-         *
-         * `INSURANCE-SCHEME.&Company`: issuer (name, HQ, company
-         * number, contact).
-         *
-         * @public
-         * @readonly
-         */
-        readonly manufacturerId: _Element,
-        /**
-         * @summary `insurance`.
-         * @description
-         *
-         * `INSURANCE-SCHEME.&InsuranceType` relative to that company.
-         *
-         * @public
-         * @readonly
-         */
-        readonly insurance: _Element,
-        /**
-         * @summary `insuranceCert`.
-         * @description
-         *
-         * `INSURANCE-SCHEME.&Certification`: reference number + person
-         * issued to. Signed by the company (contains a PKC).
-         *
-         * @public
-         * @readonly
-         */
-        readonly insuranceCert: _Element
-    ) {}
+        scheme: OBJECT_IDENTIFIER,
+        schemeName: OPTIONAL<SchemeName>,
+        manufacturerId: _Element,
+        insurance: _Element,
+        insuranceCert: _Element
+    ) {
+        this.scheme = scheme;
+        this.schemeName = schemeName;
+        this.manufacturerId = manufacturerId;
+        this.insurance = insurance;
+        this.insuranceCert = insuranceCert;
+    }
 
     /**
      * @summary Restructures an object into a InsuranceIdentification

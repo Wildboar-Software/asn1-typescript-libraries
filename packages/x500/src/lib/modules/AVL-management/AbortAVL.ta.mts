@@ -33,34 +33,42 @@ import {
  *
  */
 export class AbortAVL {
+    /**
+     * @summary `invokeID`.
+     * @description
+     *
+     * Same value as in the response being rejected (not a new interaction).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly invokeID: InvokeID;
+    /**
+     * @summary `reason`.
+     * @description
+     *
+     * `noReason` for alerts (e.g. invalid AVL signature); otherwise a diagnostic `AVMP-error`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly reason: AVMP_error;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `invokeID`.
-         * @description
-         *
-         * Same value as in the response being rejected (not a new interaction).
-         *
-         * @public
-         * @readonly
-         */
-        readonly invokeID: InvokeID,
-        /**
-         * @summary `reason`.
-         * @description
-         *
-         * `noReason` for alerts (e.g. invalid AVL signature); otherwise a diagnostic `AVMP-error`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly reason: AVMP_error,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        invokeID: InvokeID,
+        reason: AVMP_error,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.invokeID = invokeID;
+        this.reason = reason;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a AbortAVL

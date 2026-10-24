@@ -31,20 +31,26 @@ import { Interval, _decode_Interval, _encode_Interval } from "../IN-CS2-datatype
  */
 export
 class GapIndicators {
+    /**
+     * @summary `duration`.
+     * @public
+     * @readonly
+     */
+    public readonly duration: Duration;
+    /**
+     * @summary `gapInterval`.
+     * @public
+     * @readonly
+     */
+    public readonly gapInterval: Interval;
+
     constructor (
-        /**
-         * @summary `duration`.
-         * @public
-         * @readonly
-         */
-        readonly duration: Duration,
-        /**
-         * @summary `gapInterval`.
-         * @public
-         * @readonly
-         */
-        readonly gapInterval: Interval
-    ) {}
+        duration: Duration,
+        gapInterval: Interval
+    ) {
+        this.duration = duration;
+        this.gapInterval = gapInterval;
+    }
 
     /**
      * @summary Restructures an object into a GapIndicators

@@ -29,14 +29,18 @@ import {
  *
  */
 export class auto_action_request_error_ParameterType {
+    /**
+     * @summary `problems`.
+     * @public
+     * @readonly
+     */
+    public readonly problems: auto_action_request_error_ParameterType_problems_Item[];
+
     constructor(
-        /**
-         * @summary `problems`.
-         * @public
-         * @readonly
-         */
-        readonly problems: auto_action_request_error_ParameterType_problems_Item[]
-    ) {}
+        problems: auto_action_request_error_ParameterType_problems_Item[]
+    ) {
+        this.problems = problems;
+    }
 
     /**
      * @summary Restructures an object into a auto_action_request_error_ParameterType

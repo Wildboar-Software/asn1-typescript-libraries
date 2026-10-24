@@ -41,27 +41,33 @@ import { RepertoireAssignment_value, _decode_RepertoireAssignment_value, _encode
  */
 export
 class RepertoireAssignment {
+    /**
+     * @summary `type_`.
+     * @description
+     * Repertoire-assignment-type. Absent or `{vt-b-rep-iso2022}`
+     * selects ISO/IEC 2022 designation sequences. Otherwise
+     * `value` is ANY per this OID. ISO/IEC 9040:1997 §18.2.4;
+     * ISO/IEC 9041-1:1997 §12.3.2.
+     * @public
+     * @readonly
+     */
+    public readonly type_: OPTIONAL<OBJECT_IDENTIFIER>;
+    /**
+     * @summary `value`.
+     * @description
+     * Repertoire-assignment-value. ISO/IEC 9040:1997 §18.2.4.
+     * @public
+     * @readonly
+     */
+    public readonly value: RepertoireAssignment_value;
+
     constructor (
-        /**
-         * @summary `type_`.
-         * @description
-         * Repertoire-assignment-type. Absent or `{vt-b-rep-iso2022}`
-         * selects ISO/IEC 2022 designation sequences. Otherwise
-         * `value` is ANY per this OID. ISO/IEC 9040:1997 §18.2.4;
-         * ISO/IEC 9041-1:1997 §12.3.2.
-         * @public
-         * @readonly
-         */
-        readonly type_: OPTIONAL<OBJECT_IDENTIFIER>,
-        /**
-         * @summary `value`.
-         * @description
-         * Repertoire-assignment-value. ISO/IEC 9040:1997 §18.2.4.
-         * @public
-         * @readonly
-         */
-        readonly value: RepertoireAssignment_value
-    ) {}
+        type_: OPTIONAL<OBJECT_IDENTIFIER>,
+        value: RepertoireAssignment_value
+    ) {
+        this.type_ = type_;
+        this.value = value;
+    }
 
     /**
      * @summary Restructures an object into a RepertoireAssignment

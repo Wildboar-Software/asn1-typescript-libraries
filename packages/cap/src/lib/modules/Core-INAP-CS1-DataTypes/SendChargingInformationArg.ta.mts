@@ -35,26 +35,34 @@ import { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "
  */
 export
 class SendChargingInformationArg {
+    /**
+     * @summary `sCIBillingChargingCharacteristics`.
+     * @public
+     * @readonly
+     */
+    public readonly sCIBillingChargingCharacteristics: SCIBillingChargingCharacteristics;
+    /**
+     * @summary `legID`.
+     * @public
+     * @readonly
+     */
+    public readonly legID: LegID;
+    /**
+     * @summary `extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<ExtensionField[]>;
+
     constructor (
-        /**
-         * @summary `sCIBillingChargingCharacteristics`.
-         * @public
-         * @readonly
-         */
-        readonly sCIBillingChargingCharacteristics: SCIBillingChargingCharacteristics,
-        /**
-         * @summary `legID`.
-         * @public
-         * @readonly
-         */
-        readonly legID: LegID,
-        /**
-         * @summary `extensions`.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<ExtensionField[]>
-    ) {}
+        sCIBillingChargingCharacteristics: SCIBillingChargingCharacteristics,
+        legID: LegID,
+        extensions?: OPTIONAL<ExtensionField[]>
+    ) {
+        this.sCIBillingChargingCharacteristics = sCIBillingChargingCharacteristics;
+        this.legID = legID;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a SendChargingInformationArg

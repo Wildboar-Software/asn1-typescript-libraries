@@ -38,20 +38,26 @@ import {
  *
  */
 export class NonBasicParameters {
+    /**
+     * @summary `g3_facsimile`.
+     * @public
+     * @readonly
+     */
+    public readonly g3_facsimile?: OPTIONAL<G3FacsimileNonBasicParameters>;
+    /**
+     * @summary `teletex`.
+     * @public
+     * @readonly
+     */
+    public readonly teletex?: OPTIONAL<TeletexNonBasicParameters>;
+
     constructor(
-        /**
-         * @summary `g3_facsimile`.
-         * @public
-         * @readonly
-         */
-        readonly g3_facsimile?: OPTIONAL<G3FacsimileNonBasicParameters>,
-        /**
-         * @summary `teletex`.
-         * @public
-         * @readonly
-         */
-        readonly teletex?: OPTIONAL<TeletexNonBasicParameters>
-    ) {}
+        g3_facsimile?: OPTIONAL<G3FacsimileNonBasicParameters>,
+        teletex?: OPTIONAL<TeletexNonBasicParameters>
+    ) {
+        this.g3_facsimile = g3_facsimile;
+        this.teletex = teletex;
+    }
 
     /**
      * @summary Restructures an object into a NonBasicParameters

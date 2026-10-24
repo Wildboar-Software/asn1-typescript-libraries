@@ -38,26 +38,34 @@ import {
  */
 export
 class Name_classAndInstance {
+    /**
+     * @summary `managedObjectClass`.
+     * @public
+     * @readonly
+     */
+    public readonly managedObjectClass: ObjectClass;
+    /**
+     * @summary `managedObjectInstance`.
+     * @public
+     * @readonly
+     */
+    public readonly managedObjectInstance: ObjectInstance;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `managedObjectClass`.
-         * @public
-         * @readonly
-         */
-        readonly managedObjectClass: ObjectClass,
-        /**
-         * @summary `managedObjectInstance`.
-         * @public
-         * @readonly
-         */
-        readonly managedObjectInstance: ObjectInstance,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        managedObjectClass: ObjectClass,
+        managedObjectInstance: ObjectInstance,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.managedObjectClass = managedObjectClass;
+        this.managedObjectInstance = managedObjectInstance;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a Name_classAndInstance

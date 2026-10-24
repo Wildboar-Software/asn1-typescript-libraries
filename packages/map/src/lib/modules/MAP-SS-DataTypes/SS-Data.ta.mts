@@ -38,74 +38,90 @@ import { SS_SubscriptionOption, _decode_SS_SubscriptionOption, _encode_SS_Subscr
  */
 export
 class SS_Data {
+    /**
+     * @summary `ss_Code`.
+     * @description
+     *
+     * SS-Code (clause 7.6.4.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ss_Code?: OPTIONAL<SS_Code>;
+    /**
+     * @summary `ss_Status`.
+     * @description
+     *
+     * SS-Status if applicable (clause 7.6.4.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ss_Status?: OPTIONAL<SS_Status>;
+    /**
+     * @summary `ss_SubscriptionOption`.
+     * @description
+     *
+     * Override category or CLI restriction (clauses 7.6.4.4–7.6.4.5).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ss_SubscriptionOption?: OPTIONAL<SS_SubscriptionOption>;
+    /**
+     * @summary `basicServiceGroupList`.
+     * @description
+     *
+     * Basic Service Group codes (clause 7.6.4.40).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly basicServiceGroupList?: OPTIONAL<BasicServiceGroupList>;
+    /**
+     * @summary `defaultPriority`.
+     * @description
+     *
+     * Default eMLPP priority.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly defaultPriority?: OPTIONAL<EMLPP_Priority>;
+    /**
+     * @summary `nbrUser`.
+     * @description
+     *
+     * Multicall bearers.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly nbrUser?: OPTIONAL<MC_Bearers>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `ss_Code`.
-         * @description
-         *
-         * SS-Code (clause 7.6.4.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly ss_Code?: OPTIONAL<SS_Code>,
-        /**
-         * @summary `ss_Status`.
-         * @description
-         *
-         * SS-Status if applicable (clause 7.6.4.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly ss_Status?: OPTIONAL<SS_Status>,
-        /**
-         * @summary `ss_SubscriptionOption`.
-         * @description
-         *
-         * Override category or CLI restriction (clauses 7.6.4.4–7.6.4.5).
-         *
-         * @public
-         * @readonly
-         */
-        readonly ss_SubscriptionOption?: OPTIONAL<SS_SubscriptionOption>,
-        /**
-         * @summary `basicServiceGroupList`.
-         * @description
-         *
-         * Basic Service Group codes (clause 7.6.4.40).
-         *
-         * @public
-         * @readonly
-         */
-        readonly basicServiceGroupList?: OPTIONAL<BasicServiceGroupList>,
-        /**
-         * @summary `defaultPriority`.
-         * @description
-         *
-         * Default eMLPP priority.
-         *
-         * @public
-         * @readonly
-         */
-        readonly defaultPriority?: OPTIONAL<EMLPP_Priority>,
-        /**
-         * @summary `nbrUser`.
-         * @description
-         *
-         * Multicall bearers.
-         *
-         * @public
-         * @readonly
-         */
-        readonly nbrUser?: OPTIONAL<MC_Bearers>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        ss_Code?: OPTIONAL<SS_Code>,
+        ss_Status?: OPTIONAL<SS_Status>,
+        ss_SubscriptionOption?: OPTIONAL<SS_SubscriptionOption>,
+        basicServiceGroupList?: OPTIONAL<BasicServiceGroupList>,
+        defaultPriority?: OPTIONAL<EMLPP_Priority>,
+        nbrUser?: OPTIONAL<MC_Bearers>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.ss_Code = ss_Code;
+        this.ss_Status = ss_Status;
+        this.ss_SubscriptionOption = ss_SubscriptionOption;
+        this.basicServiceGroupList = basicServiceGroupList;
+        this.defaultPriority = defaultPriority;
+        this.nbrUser = nbrUser;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a SS_Data

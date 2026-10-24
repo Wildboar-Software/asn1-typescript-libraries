@@ -35,58 +35,70 @@ import { PDN_GW_Identity, _decode_PDN_GW_Identity, _encode_PDN_GW_Identity } fro
  */
 export
 class PDN_GW_Update {
+    /**
+     * @summary `apn`.
+     * @description
+     *
+     * APN of the PDN connection being updated. Shall be present together
+     * with context ID, or instead of it, in addition to `pdn-gw-Identity`.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly apn?: OPTIONAL<APN>;
+    /**
+     * @summary `pdn_gw_Identity`.
+     * @description
+     *
+     * PDN GW identity. Shall be included; HSS ignores `eps-info` if a
+     * `pdn-gw-update` lacks it. OPTIONAL only for backward compatibility.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly pdn_gw_Identity?: OPTIONAL<PDN_GW_Identity>;
+    /**
+     * @summary `contextId`.
+     * @description
+     *
+     * PDP/EPS context identifier of the PDN connection.
+     *
+     * (3GPP TS 29.002 V19.1.0 clauses 7.6.3.55 and 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly contextId?: OPTIONAL<ContextId>;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `apn`.
-         * @description
-         *
-         * APN of the PDN connection being updated. Shall be present together
-         * with context ID, or instead of it, in addition to `pdn-gw-Identity`.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly apn?: OPTIONAL<APN>,
-        /**
-         * @summary `pdn_gw_Identity`.
-         * @description
-         *
-         * PDN GW identity. Shall be included; HSS ignores `eps-info` if a
-         * `pdn-gw-update` lacks it. OPTIONAL only for backward compatibility.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly pdn_gw_Identity?: OPTIONAL<PDN_GW_Identity>,
-        /**
-         * @summary `contextId`.
-         * @description
-         *
-         * PDP/EPS context identifier of the PDN connection.
-         *
-         * (3GPP TS 29.002 V19.1.0 clauses 7.6.3.55 and 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly contextId?: OPTIONAL<ContextId>,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        apn?: OPTIONAL<APN>,
+        pdn_gw_Identity?: OPTIONAL<PDN_GW_Identity>,
+        contextId?: OPTIONAL<ContextId>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.apn = apn;
+        this.pdn_gw_Identity = pdn_gw_Identity;
+        this.contextId = contextId;
+        this.extensionContainer = extensionContainer;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a PDN_GW_Update

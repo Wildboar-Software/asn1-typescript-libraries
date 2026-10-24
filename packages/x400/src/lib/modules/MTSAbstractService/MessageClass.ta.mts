@@ -80,56 +80,74 @@ import {
  *
  */
 export class MessageClass {
+    /**
+     * @summary `content_types`.
+     * @public
+     * @readonly
+     */
+    public readonly content_types?: OPTIONAL<ContentTypes>;
+    /**
+     * @summary `maximum_content_length`.
+     * @public
+     * @readonly
+     */
+    public readonly maximum_content_length?: OPTIONAL<ContentLength>;
+    /**
+     * @summary `encoded_information_types_constraints`.
+     * @public
+     * @readonly
+     */
+    public readonly encoded_information_types_constraints?: OPTIONAL<EncodedInformationTypesConstraints>;
+    /**
+     * @summary `security_labels`.
+     * @public
+     * @readonly
+     */
+    public readonly security_labels?: OPTIONAL<SecurityContext>;
+    /**
+     * @summary `priority`.
+     * @public
+     * @readonly
+     */
+    public readonly priority?: OPTIONAL<Priority[]>;
+    /**
+     * @summary `objects`.
+     * @public
+     * @readonly
+     */
+    public readonly objects?: OPTIONAL<MessageClass_objects>;
+    /**
+     * @summary `applies_only_to`.
+     * @public
+     * @readonly
+     */
+    public readonly applies_only_to?: OPTIONAL<Restriction[]>;
+    /**
+     * @summary `extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<ExtensionField[]>;
+
     constructor(
-        /**
-         * @summary `content_types`.
-         * @public
-         * @readonly
-         */
-        readonly content_types?: OPTIONAL<ContentTypes>,
-        /**
-         * @summary `maximum_content_length`.
-         * @public
-         * @readonly
-         */
-        readonly maximum_content_length?: OPTIONAL<ContentLength>,
-        /**
-         * @summary `encoded_information_types_constraints`.
-         * @public
-         * @readonly
-         */
-        readonly encoded_information_types_constraints?: OPTIONAL<EncodedInformationTypesConstraints>,
-        /**
-         * @summary `security_labels`.
-         * @public
-         * @readonly
-         */
-        readonly security_labels?: OPTIONAL<SecurityContext>,
-        /**
-         * @summary `priority`.
-         * @public
-         * @readonly
-         */
-        readonly priority?: OPTIONAL<Priority[]>,
-        /**
-         * @summary `objects`.
-         * @public
-         * @readonly
-         */
-        readonly objects?: OPTIONAL<MessageClass_objects>,
-        /**
-         * @summary `applies_only_to`.
-         * @public
-         * @readonly
-         */
-        readonly applies_only_to?: OPTIONAL<Restriction[]>,
-        /**
-         * @summary `extensions`.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<ExtensionField[]>
-    ) {}
+        content_types?: OPTIONAL<ContentTypes>,
+        maximum_content_length?: OPTIONAL<ContentLength>,
+        encoded_information_types_constraints?: OPTIONAL<EncodedInformationTypesConstraints>,
+        security_labels?: OPTIONAL<SecurityContext>,
+        priority?: OPTIONAL<Priority[]>,
+        objects?: OPTIONAL<MessageClass_objects>,
+        applies_only_to?: OPTIONAL<Restriction[]>,
+        extensions?: OPTIONAL<ExtensionField[]>
+    ) {
+        this.content_types = content_types;
+        this.maximum_content_length = maximum_content_length;
+        this.encoded_information_types_constraints = encoded_information_types_constraints;
+        this.security_labels = security_labels;
+        this.priority = priority;
+        this.objects = objects;
+        this.applies_only_to = applies_only_to;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a MessageClass

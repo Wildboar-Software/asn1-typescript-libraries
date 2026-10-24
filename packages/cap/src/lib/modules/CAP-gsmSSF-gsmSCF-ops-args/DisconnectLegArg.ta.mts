@@ -38,43 +38,53 @@ import { LegID, _decode_LegID, _encode_LegID } from "../Core-INAP-CS1-DataTypes/
  */
 export
 class DisconnectLegArg {
+    /**
+     * @summary `legToBeReleased`.
+     * @description
+     *
+     * Call leg to release. Sending Side LegID (gsmSCF → gsmSSF). (3GPP TS
+     * 29.078 V19.0.0 clauses 4.1.5 and 11.15.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly legToBeReleased: LegID;
+    /**
+     * @summary `releaseCause`.
+     * @description
+     *
+     * May be used by the MSC to generate specific tones to the party being
+     * released, or to fill the cause in the release message. (3GPP TS
+     * 29.078 V19.0.0 clause 11.15.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly releaseCause?: OPTIONAL<Cause>;
+    /**
+     * @summary `extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<Extensions>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `legToBeReleased`.
-         * @description
-         *
-         * Call leg to release. Sending Side LegID (gsmSCF → gsmSSF). (3GPP TS
-         * 29.078 V19.0.0 clauses 4.1.5 and 11.15.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly legToBeReleased: LegID,
-        /**
-         * @summary `releaseCause`.
-         * @description
-         *
-         * May be used by the MSC to generate specific tones to the party being
-         * released, or to fill the cause in the release message. (3GPP TS
-         * 29.078 V19.0.0 clause 11.15.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly releaseCause?: OPTIONAL<Cause>,
-        /**
-         * @summary `extensions`.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<Extensions>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        legToBeReleased: LegID,
+        releaseCause?: OPTIONAL<Cause>,
+        extensions?: OPTIONAL<Extensions>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.legToBeReleased = legToBeReleased;
+        this.releaseCause = releaseCause;
+        this.extensions = extensions;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a DisconnectLegArg

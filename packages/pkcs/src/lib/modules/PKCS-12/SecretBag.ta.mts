@@ -23,20 +23,26 @@ import * as $ from "@wildboar/asn1/functional";
  *
  */
 export class SecretBag {
+    /**
+     * @summary `secretTypeId`.
+     * @public
+     * @readonly
+     */
+    public readonly secretTypeId: OBJECT_IDENTIFIER;
+    /**
+     * @summary `secretValue`.
+     * @public
+     * @readonly
+     */
+    public readonly secretValue: _Element;
+
     constructor(
-        /**
-         * @summary `secretTypeId`.
-         * @public
-         * @readonly
-         */
-        readonly secretTypeId: OBJECT_IDENTIFIER,
-        /**
-         * @summary `secretValue`.
-         * @public
-         * @readonly
-         */
-        readonly secretValue: _Element
-    ) {}
+        secretTypeId: OBJECT_IDENTIFIER,
+        secretValue: _Element
+    ) {
+        this.secretTypeId = secretTypeId;
+        this.secretValue = secretValue;
+    }
 
     /**
      * @summary Restructures an object into a SecretBag

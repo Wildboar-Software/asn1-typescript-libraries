@@ -47,63 +47,77 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class AttachMediaServiceResult {
+    /**
+     * @summary `mediaConnection`.
+     * @description
+     *
+     * Connection bound to the media service.
+     * @public
+     * @readonly
+     */
+    public readonly mediaConnection?: OPTIONAL<ConnectionID>;
+    /**
+     * @summary `mediaDevice`.
+     * @description
+     *
+     * Device identifier of the attached media service.
+     * @public
+     * @readonly
+     */
+    public readonly mediaDevice?: OPTIONAL<DeviceID>;
+    /**
+     * @summary `mediaServiceInstanceID`.
+     * @description
+     *
+     * Instance actually attached.
+     * @public
+     * @readonly
+     */
+    public readonly mediaServiceInstanceID?: OPTIONAL<MediaServiceInstanceID>;
+    /**
+     * @summary `mediaConnectionInfo`.
+     * @description
+     *
+     * Connection information of the media connection.
+     * @public
+     * @readonly
+     */
+    public readonly mediaConnectionInfo?: OPTIONAL<ConnectionInformation>;
+    /**
+     * @summary `callLinkageData`.
+     * @description
+     *
+     * Call linkage associated with the resulting call.
+     * @public
+     * @readonly
+     */
+    public readonly callLinkageData?: OPTIONAL<CallLinkageData>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `mediaConnection`.
-         * @description
-         *
-         * Connection bound to the media service.
-         * @public
-         * @readonly
-         */
-        readonly mediaConnection?: OPTIONAL<ConnectionID>,
-        /**
-         * @summary `mediaDevice`.
-         * @description
-         *
-         * Device identifier of the attached media service.
-         * @public
-         * @readonly
-         */
-        readonly mediaDevice?: OPTIONAL<DeviceID>,
-        /**
-         * @summary `mediaServiceInstanceID`.
-         * @description
-         *
-         * Instance actually attached.
-         * @public
-         * @readonly
-         */
-        readonly mediaServiceInstanceID?: OPTIONAL<MediaServiceInstanceID>,
-        /**
-         * @summary `mediaConnectionInfo`.
-         * @description
-         *
-         * Connection information of the media connection.
-         * @public
-         * @readonly
-         */
-        readonly mediaConnectionInfo?: OPTIONAL<ConnectionInformation>,
-        /**
-         * @summary `callLinkageData`.
-         * @description
-         *
-         * Call linkage associated with the resulting call.
-         * @public
-         * @readonly
-         */
-        readonly callLinkageData?: OPTIONAL<CallLinkageData>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        mediaConnection?: OPTIONAL<ConnectionID>,
+        mediaDevice?: OPTIONAL<DeviceID>,
+        mediaServiceInstanceID?: OPTIONAL<MediaServiceInstanceID>,
+        mediaConnectionInfo?: OPTIONAL<ConnectionInformation>,
+        callLinkageData?: OPTIONAL<CallLinkageData>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.mediaConnection = mediaConnection;
+        this.mediaDevice = mediaDevice;
+        this.mediaServiceInstanceID = mediaServiceInstanceID;
+        this.mediaConnectionInfo = mediaConnectionInfo;
+        this.callLinkageData = callLinkageData;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a AttachMediaServiceResult

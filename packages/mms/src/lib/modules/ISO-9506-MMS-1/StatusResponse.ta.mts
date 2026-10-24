@@ -52,42 +52,49 @@ import { StatusResponse_vmdPhysicalStatus, _decode_StatusResponse_vmdPhysicalSta
  */
 export
 class StatusResponse {
+    /**
+     * @summary `vmdLogicalStatus`.
+     * @description
+     *
+     * Value of the VMD `&logicalStatus` (functionality available through
+     * MMS). ISO 9506-1:2003 §7.2.1.9, §10.2.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly vmdLogicalStatus: StatusResponse_vmdLogicalStatus;
+    /**
+     * @summary `vmdPhysicalStatus`.
+     * @description
+     *
+     * Value of the VMD `&physicalStatus` (gross hardware state of all
+     * capabilities). Unrelated to ability to communicate. ISO 9506-1:2003
+     * §7.2.1.11, §10.2.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly vmdPhysicalStatus: StatusResponse_vmdPhysicalStatus;
+    /**
+     * @summary `localDetail`.
+     * @description
+     *
+     * Optional vendor bitstring (`&local-detail`), at most 128 bits;
+     * contents are a local matter. ISO 9506-1:2003 §7.2.1.12, §10.2.3.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly localDetail?: OPTIONAL<BIT_STRING>;
+
     constructor (
-        /**
-         * @summary `vmdLogicalStatus`.
-         * @description
-         *
-         * Value of the VMD `&logicalStatus` (functionality available through
-         * MMS). ISO 9506-1:2003 §7.2.1.9, §10.2.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly vmdLogicalStatus: StatusResponse_vmdLogicalStatus,
-        /**
-         * @summary `vmdPhysicalStatus`.
-         * @description
-         *
-         * Value of the VMD `&physicalStatus` (gross hardware state of all
-         * capabilities). Unrelated to ability to communicate. ISO 9506-1:2003
-         * §7.2.1.11, §10.2.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly vmdPhysicalStatus: StatusResponse_vmdPhysicalStatus,
-        /**
-         * @summary `localDetail`.
-         * @description
-         *
-         * Optional vendor bitstring (`&local-detail`), at most 128 bits;
-         * contents are a local matter. ISO 9506-1:2003 §7.2.1.12, §10.2.3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly localDetail?: OPTIONAL<BIT_STRING>
+        vmdLogicalStatus: StatusResponse_vmdLogicalStatus,
+        vmdPhysicalStatus: StatusResponse_vmdPhysicalStatus,
+        localDetail?: OPTIONAL<BIT_STRING>
     ) {
+        this.vmdLogicalStatus = vmdLogicalStatus;
+        this.vmdPhysicalStatus = vmdPhysicalStatus;
+        this.localDetail = localDetail;
         if (localDetail && localDetail.length > 128) {
             throw new ASN1SizeError("StatusResponse.localDetail violates SIZE constraint");
         }

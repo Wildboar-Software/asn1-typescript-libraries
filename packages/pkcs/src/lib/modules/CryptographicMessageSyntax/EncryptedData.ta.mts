@@ -37,26 +37,34 @@ import {
  *
  */
 export class EncryptedData {
+    /**
+     * @summary `version`.
+     * @public
+     * @readonly
+     */
+    public readonly version: CMSVersion;
+    /**
+     * @summary `encryptedContentInfo`.
+     * @public
+     * @readonly
+     */
+    public readonly encryptedContentInfo: EncryptedContentInfo;
+    /**
+     * @summary `unprotectedAttrs`.
+     * @public
+     * @readonly
+     */
+    public readonly unprotectedAttrs?: OPTIONAL<UnprotectedAttributes>;
+
     constructor(
-        /**
-         * @summary `version`.
-         * @public
-         * @readonly
-         */
-        readonly version: CMSVersion,
-        /**
-         * @summary `encryptedContentInfo`.
-         * @public
-         * @readonly
-         */
-        readonly encryptedContentInfo: EncryptedContentInfo,
-        /**
-         * @summary `unprotectedAttrs`.
-         * @public
-         * @readonly
-         */
-        readonly unprotectedAttrs?: OPTIONAL<UnprotectedAttributes>
-    ) {}
+        version: CMSVersion,
+        encryptedContentInfo: EncryptedContentInfo,
+        unprotectedAttrs?: OPTIONAL<UnprotectedAttributes>
+    ) {
+        this.version = version;
+        this.encryptedContentInfo = encryptedContentInfo;
+        this.unprotectedAttrs = unprotectedAttrs;
+    }
 
     /**
      * @summary Restructures an object into a EncryptedData

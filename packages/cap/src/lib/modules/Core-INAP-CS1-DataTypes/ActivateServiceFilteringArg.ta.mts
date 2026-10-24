@@ -41,44 +41,58 @@ import { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "
  */
 export
 class ActivateServiceFilteringArg {
+    /**
+     * @summary `filteredCallTreatment`.
+     * @public
+     * @readonly
+     */
+    public readonly filteredCallTreatment: FilteredCallTreatment;
+    /**
+     * @summary `filteringCharacteristics`.
+     * @public
+     * @readonly
+     */
+    public readonly filteringCharacteristics: FilteringCharacteristics;
+    /**
+     * @summary `filteringTimeOut`.
+     * @public
+     * @readonly
+     */
+    public readonly filteringTimeOut: FilteringTimeOut;
+    /**
+     * @summary `filteringCriteria`.
+     * @public
+     * @readonly
+     */
+    public readonly filteringCriteria: FilteringCriteria;
+    /**
+     * @summary `startTime`.
+     * @public
+     * @readonly
+     */
+    public readonly startTime?: OPTIONAL<DateAndTime>;
+    /**
+     * @summary `extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<ExtensionField[]>;
+
     constructor (
-        /**
-         * @summary `filteredCallTreatment`.
-         * @public
-         * @readonly
-         */
-        readonly filteredCallTreatment: FilteredCallTreatment,
-        /**
-         * @summary `filteringCharacteristics`.
-         * @public
-         * @readonly
-         */
-        readonly filteringCharacteristics: FilteringCharacteristics,
-        /**
-         * @summary `filteringTimeOut`.
-         * @public
-         * @readonly
-         */
-        readonly filteringTimeOut: FilteringTimeOut,
-        /**
-         * @summary `filteringCriteria`.
-         * @public
-         * @readonly
-         */
-        readonly filteringCriteria: FilteringCriteria,
-        /**
-         * @summary `startTime`.
-         * @public
-         * @readonly
-         */
-        readonly startTime?: OPTIONAL<DateAndTime>,
-        /**
-         * @summary `extensions`.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<ExtensionField[]>
-    ) {}
+        filteredCallTreatment: FilteredCallTreatment,
+        filteringCharacteristics: FilteringCharacteristics,
+        filteringTimeOut: FilteringTimeOut,
+        filteringCriteria: FilteringCriteria,
+        startTime?: OPTIONAL<DateAndTime>,
+        extensions?: OPTIONAL<ExtensionField[]>
+    ) {
+        this.filteredCallTreatment = filteredCallTreatment;
+        this.filteringCharacteristics = filteringCharacteristics;
+        this.filteringTimeOut = filteringTimeOut;
+        this.filteringCriteria = filteringCriteria;
+        this.startTime = startTime;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a ActivateServiceFilteringArg

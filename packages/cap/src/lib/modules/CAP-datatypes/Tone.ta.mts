@@ -26,21 +26,29 @@ import * as $ from "@wildboar/asn1/functional";
  *
  */
 export class Tone {
+    public readonly toneID: INTEGER;
+    /**
+     * @summary `duration`.
+     * @description
+     *
+     * Tone length in seconds; 0 = infinite duration. (3GPP TS 29.078
+     * V19.0.0 clause 5.1)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly duration?: OPTIONAL<INTEGER>;
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        readonly toneID: INTEGER,
-        /**
-         * @summary `duration`.
-         * @description
-         *
-         * Tone length in seconds; 0 = infinite duration. (3GPP TS 29.078
-         * V19.0.0 clause 5.1)
-         *
-         * @public
-         * @readonly
-         */
-        readonly duration?: OPTIONAL<INTEGER>,
-        readonly _unrecognizedExtensionsList: _Element[] = [],
-    ) {}
+        toneID: INTEGER,
+        duration?: OPTIONAL<INTEGER>,
+        _unrecognizedExtensionsList: _Element[] = [],
+    ) {
+        this.toneID = toneID;
+        this.duration = duration;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     public static _from_object (_o: { [_K in keyof (Tone)]: (Tone)[_K] }): Tone {
         return new Tone(_o.toneID, _o.duration, _o._unrecognizedExtensionsList);

@@ -34,17 +34,21 @@ import {
  *
  */
 export class EntitiesType {
+  /**
+   * @summary `entity`.
+   * @description One or more parties (`SIZE(1..MAX)`):
+   * sender, recipients, cc, transit. ITU-T Rec. X.1341
+   * (09/2015) §8.15, Annex B.
+   * @public
+   * @readonly
+   */
+  public readonly entity: EntityType[];
+
   constructor(
-    /**
-     * @summary `entity`.
-     * @description One or more parties (`SIZE(1..MAX)`):
-     * sender, recipients, cc, transit. ITU-T Rec. X.1341
-     * (09/2015) §8.15, Annex B.
-     * @public
-     * @readonly
-     */
-    readonly entity: EntityType[]
-  ) {}
+    entity: EntityType[]
+  ) {
+    this.entity = entity;
+  }
 
   /**
    * @summary Restructures an object into a EntitiesType

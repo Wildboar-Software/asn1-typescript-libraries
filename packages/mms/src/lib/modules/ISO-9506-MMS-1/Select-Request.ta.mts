@@ -37,31 +37,37 @@ import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-
  */
 export
 class Select_Request {
+    /**
+     * @summary `controlling`.
+     * @description
+     *
+     * Controlling PI to select (`&control` = controlling, must be `idle`).
+     * Absent: deselect the current controlling PI. ISO 9506-1:2003
+     * §12.10.1.1.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly controlling?: OPTIONAL<Identifier>;
+    /**
+     * @summary `controlled`.
+     * @description
+     *
+     * Controlled PIs to place under that controlling PI. Present only if
+     * `controlling` is present. ISO 9506-1:2003 §12.10.1.1.2. ISO 9506-2:2003 §12.10.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly controlled?: OPTIONAL<Identifier[]>;
+
     constructor (
-        /**
-         * @summary `controlling`.
-         * @description
-         *
-         * Controlling PI to select (`&control` = controlling, must be `idle`).
-         * Absent: deselect the current controlling PI. ISO 9506-1:2003
-         * §12.10.1.1.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly controlling?: OPTIONAL<Identifier>,
-        /**
-         * @summary `controlled`.
-         * @description
-         *
-         * Controlled PIs to place under that controlling PI. Present only if
-         * `controlling` is present. ISO 9506-1:2003 §12.10.1.1.2. ISO 9506-2:2003 §12.10.
-         *
-         * @public
-         * @readonly
-         */
-        readonly controlled?: OPTIONAL<Identifier[]>
-    ) {}
+        controlling?: OPTIONAL<Identifier>,
+        controlled?: OPTIONAL<Identifier[]>
+    ) {
+        this.controlling = controlling;
+        this.controlled = controlled;
+    }
 
     /**
      * @summary Restructures an object into a Select_Request

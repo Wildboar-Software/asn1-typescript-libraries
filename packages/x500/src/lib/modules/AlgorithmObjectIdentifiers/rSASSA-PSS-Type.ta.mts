@@ -29,26 +29,34 @@ import {
  *
  */
 export class rSASSA_PSS_Type {
+    /**
+     * @summary `hashAlgorithm`.
+     * @public
+     * @readonly
+     */
+    public readonly hashAlgorithm: AlgorithmIdentifier;
+    /**
+     * @summary `saltLength`.
+     * @public
+     * @readonly
+     */
+    public readonly saltLength?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `trailerField`.
+     * @public
+     * @readonly
+     */
+    public readonly trailerField?: OPTIONAL<INTEGER>;
+
     constructor(
-        /**
-         * @summary `hashAlgorithm`.
-         * @public
-         * @readonly
-         */
-        readonly hashAlgorithm: AlgorithmIdentifier,
-        /**
-         * @summary `saltLength`.
-         * @public
-         * @readonly
-         */
-        readonly saltLength?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `trailerField`.
-         * @public
-         * @readonly
-         */
-        readonly trailerField?: OPTIONAL<INTEGER>
-    ) {}
+        hashAlgorithm: AlgorithmIdentifier,
+        saltLength?: OPTIONAL<INTEGER>,
+        trailerField?: OPTIONAL<INTEGER>
+    ) {
+        this.hashAlgorithm = hashAlgorithm;
+        this.saltLength = saltLength;
+        this.trailerField = trailerField;
+    }
 
     /**
      * @summary Restructures an object into a rSASSA_PSS_Type

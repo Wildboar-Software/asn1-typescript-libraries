@@ -34,52 +34,64 @@ import { CliRestrictionOption, _decode_CliRestrictionOption, _encode_CliRestrict
  */
 export
 class ModificationRequestFor_CLIR_Info {
+    /**
+     * @summary `ss_Status`.
+     * @description
+     *
+     * SS-Status of the supplementary service (clause 7.6.4.2). (3GPP TS
+     * 29.002 V19.1.0 clause 7.6.3.82)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ss_Status?: OPTIONAL<Ext_SS_Status>;
+    /**
+     * @summary `cliRestrictionOption`.
+     * @description
+     *
+     * CLIR restriction option. (3GPP TS 29.002 V19.1.0 clause 7.6.3.82)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly cliRestrictionOption?: OPTIONAL<CliRestrictionOption>;
+    /**
+     * @summary `modifyNotificationToCSE`.
+     * @description
+     *
+     * Activate or deactivate notification to the CSE. (3GPP TS 29.002
+     * V19.1.0 clauses 7.6.3.82 and 8.11.4)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly modifyNotificationToCSE?: OPTIONAL<ModificationInstruction>;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `ss_Status`.
-         * @description
-         *
-         * SS-Status of the supplementary service (clause 7.6.4.2). (3GPP TS
-         * 29.002 V19.1.0 clause 7.6.3.82)
-         *
-         * @public
-         * @readonly
-         */
-        readonly ss_Status?: OPTIONAL<Ext_SS_Status>,
-        /**
-         * @summary `cliRestrictionOption`.
-         * @description
-         *
-         * CLIR restriction option. (3GPP TS 29.002 V19.1.0 clause 7.6.3.82)
-         *
-         * @public
-         * @readonly
-         */
-        readonly cliRestrictionOption?: OPTIONAL<CliRestrictionOption>,
-        /**
-         * @summary `modifyNotificationToCSE`.
-         * @description
-         *
-         * Activate or deactivate notification to the CSE. (3GPP TS 29.002
-         * V19.1.0 clauses 7.6.3.82 and 8.11.4)
-         *
-         * @public
-         * @readonly
-         */
-        readonly modifyNotificationToCSE?: OPTIONAL<ModificationInstruction>,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        ss_Status?: OPTIONAL<Ext_SS_Status>,
+        cliRestrictionOption?: OPTIONAL<CliRestrictionOption>,
+        modifyNotificationToCSE?: OPTIONAL<ModificationInstruction>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.ss_Status = ss_Status;
+        this.cliRestrictionOption = cliRestrictionOption;
+        this.modifyNotificationToCSE = modifyNotificationToCSE;
+        this.extensionContainer = extensionContainer;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a ModificationRequestFor_CLIR_Info

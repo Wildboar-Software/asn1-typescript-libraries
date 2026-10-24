@@ -42,54 +42,66 @@ import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressStr
  */
 export
 class ConnectSMSArg {
+    /**
+     * @summary `callingPartysNumber`.
+     * @description
+     *
+     * Sets the Calling Party Number used in the network (originating
+     * address shown to the receiving party).
+     * (3GPP TS 29.078 V19.0.0 clause 12.1.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly callingPartysNumber?: OPTIONAL<SMS_AddressString>;
+    /**
+     * @summary `destinationSubscriberNumber`.
+     * @description
+     *
+     * Destination address to which the SMSC shall route the Short
+     * Message. (3GPP TS 29.078 V19.0.0 clause 12.1.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly destinationSubscriberNumber?: OPTIONAL<CalledPartyBCDNumber>;
+    /**
+     * @summary `sMSCAddress`.
+     * @description
+     *
+     * SMSC address towards which the Short Message shall be routed.
+     * (3GPP TS 29.078 V19.0.0 clause 12.1.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sMSCAddress?: OPTIONAL<ISDN_AddressString>;
+    /**
+     * @summary `extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<Extensions>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `callingPartysNumber`.
-         * @description
-         *
-         * Sets the Calling Party Number used in the network (originating
-         * address shown to the receiving party).
-         * (3GPP TS 29.078 V19.0.0 clause 12.1.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly callingPartysNumber?: OPTIONAL<SMS_AddressString>,
-        /**
-         * @summary `destinationSubscriberNumber`.
-         * @description
-         *
-         * Destination address to which the SMSC shall route the Short
-         * Message. (3GPP TS 29.078 V19.0.0 clause 12.1.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly destinationSubscriberNumber?: OPTIONAL<CalledPartyBCDNumber>,
-        /**
-         * @summary `sMSCAddress`.
-         * @description
-         *
-         * SMSC address towards which the Short Message shall be routed.
-         * (3GPP TS 29.078 V19.0.0 clause 12.1.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly sMSCAddress?: OPTIONAL<ISDN_AddressString>,
-        /**
-         * @summary `extensions`.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<Extensions>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        callingPartysNumber?: OPTIONAL<SMS_AddressString>,
+        destinationSubscriberNumber?: OPTIONAL<CalledPartyBCDNumber>,
+        sMSCAddress?: OPTIONAL<ISDN_AddressString>,
+        extensions?: OPTIONAL<Extensions>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.callingPartysNumber = callingPartysNumber;
+        this.destinationSubscriberNumber = destinationSubscriberNumber;
+        this.sMSCAddress = sMSCAddress;
+        this.extensions = extensions;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a ConnectSMSArg

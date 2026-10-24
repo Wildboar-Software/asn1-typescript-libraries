@@ -34,28 +34,34 @@ import {
  *
  */
 export class IssuerAndSerialNumber {
+    /**
+     * @summary `issuer`.
+     * @description
+     *
+     * Certificate issuer `Name` ([RFC 5652 §10.2.4](https://datatracker.ietf.org/doc/html/rfc5652#section-10.2.4)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly issuer: Name;
+    /**
+     * @summary `serialNumber`.
+     * @description
+     *
+     * Certificate serial number ([RFC 5652 §10.2.4](https://datatracker.ietf.org/doc/html/rfc5652#section-10.2.4)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly serialNumber: CertificateSerialNumber;
+
     constructor(
-        /**
-         * @summary `issuer`.
-         * @description
-         *
-         * Certificate issuer `Name` ([RFC 5652 §10.2.4](https://datatracker.ietf.org/doc/html/rfc5652#section-10.2.4)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly issuer: Name,
-        /**
-         * @summary `serialNumber`.
-         * @description
-         *
-         * Certificate serial number ([RFC 5652 §10.2.4](https://datatracker.ietf.org/doc/html/rfc5652#section-10.2.4)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly serialNumber: CertificateSerialNumber
-    ) {}
+        issuer: Name,
+        serialNumber: CertificateSerialNumber
+    ) {
+        this.issuer = issuer;
+        this.serialNumber = serialNumber;
+    }
 
     /**
      * @summary Restructures an object into a IssuerAndSerialNumber

@@ -65,106 +65,126 @@ import { Journal_Entry_instance_journalVariables_Item, _decode_Journal_Entry_ins
  */
 export
 class Journal_Entry_instance {
+    /**
+     * @summary `journal`.
+     * @description
+     *
+     * Containing Journal instance. ISO 9506-1:2003 §23.1.2.1; ISO
+     * 9506-2:2003 Annex B.1.16.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly journal: Journal_instance;
+    /**
+     * @summary `entry`.
+     * @description
+     *
+     * Server-assigned entry id. ISO 9506-1:2003 §23.1.2.2; ISO 9506-2:2003
+     * Annex B.1.16.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly entry: OCTET_STRING;
+    /**
+     * @summary `clientApplication`.
+     * @description
+     *
+     * Enrolled / originating application. ISO 9506-2:2003 Annex B.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly clientApplication: ApplicationReference;
+    /**
+     * @summary `timeStamp`.
+     * @description
+     *
+     * Creation time of day. ISO 9506-1:2003 §23.1.2.4; ISO 9506-2:2003
+     * Annex B.1.16.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly timeStamp: TimeOfDay;
+    /**
+     * @summary `orderOfReceipt`.
+     * @description
+     *
+     * Order among same-timestamp entries. ISO 9506-1:2003 §23.1.2.5; ISO
+     * 9506-2:2003 Annex B.1.16.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly orderOfReceipt: INTEGER;
+    /**
+     * @summary `informationType`.
+     * @description
+     *
+     * annotation, event-data, or data. ISO 9506-1:2003 §23.1.2.6; ISO
+     * 9506-2:2003 Annex B.1.16.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly informationType: Journal_Entry_instance_informationType;
+    /**
+     * @summary `textComment`.
+     * @description
+     *
+     * annotation comment (0..255). ISO 9506-1:2003 §23.1.2.7; ISO
+     * 9506-2:2003 Annex B.1.16.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly textComment?: OPTIONAL<MMS255String>;
+    /**
+     * @summary `eventTransitionRecord`.
+     * @description
+     *
+     * Event name and resulting state. ISO 9506-1:2003 §23.1.2.8; ISO
+     * 9506-2:2003 Annex B.1.16.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly eventTransitionRecord?: OPTIONAL<Journal_Entry_instance_eventTransitionRecord>;
+    /**
+     * @summary `journalVariables`.
+     * @description
+     *
+     * Tagged values. ISO 9506-1:2003 §23.1.2.9; ISO 9506-2:2003 Annex
+     * B.1.16.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly journalVariables?: OPTIONAL<Journal_Entry_instance_journalVariables_Item[]>;
+
     constructor (
-        /**
-         * @summary `journal`.
-         * @description
-         *
-         * Containing Journal instance. ISO 9506-1:2003 §23.1.2.1; ISO
-         * 9506-2:2003 Annex B.1.16.
-         *
-         * @public
-         * @readonly
-         */
-        readonly journal: Journal_instance,
-        /**
-         * @summary `entry`.
-         * @description
-         *
-         * Server-assigned entry id. ISO 9506-1:2003 §23.1.2.2; ISO 9506-2:2003
-         * Annex B.1.16.
-         *
-         * @public
-         * @readonly
-         */
-        readonly entry: OCTET_STRING,
-        /**
-         * @summary `clientApplication`.
-         * @description
-         *
-         * Enrolled / originating application. ISO 9506-2:2003 Annex B.
-         *
-         * @public
-         * @readonly
-         */
-        readonly clientApplication: ApplicationReference,
-        /**
-         * @summary `timeStamp`.
-         * @description
-         *
-         * Creation time of day. ISO 9506-1:2003 §23.1.2.4; ISO 9506-2:2003
-         * Annex B.1.16.
-         *
-         * @public
-         * @readonly
-         */
-        readonly timeStamp: TimeOfDay,
-        /**
-         * @summary `orderOfReceipt`.
-         * @description
-         *
-         * Order among same-timestamp entries. ISO 9506-1:2003 §23.1.2.5; ISO
-         * 9506-2:2003 Annex B.1.16.
-         *
-         * @public
-         * @readonly
-         */
-        readonly orderOfReceipt: INTEGER,
-        /**
-         * @summary `informationType`.
-         * @description
-         *
-         * annotation, event-data, or data. ISO 9506-1:2003 §23.1.2.6; ISO
-         * 9506-2:2003 Annex B.1.16.
-         *
-         * @public
-         * @readonly
-         */
-        readonly informationType: Journal_Entry_instance_informationType,
-        /**
-         * @summary `textComment`.
-         * @description
-         *
-         * annotation comment (0..255). ISO 9506-1:2003 §23.1.2.7; ISO
-         * 9506-2:2003 Annex B.1.16.
-         *
-         * @public
-         * @readonly
-         */
-        readonly textComment?: OPTIONAL<MMS255String>,
-        /**
-         * @summary `eventTransitionRecord`.
-         * @description
-         *
-         * Event name and resulting state. ISO 9506-1:2003 §23.1.2.8; ISO
-         * 9506-2:2003 Annex B.1.16.
-         *
-         * @public
-         * @readonly
-         */
-        readonly eventTransitionRecord?: OPTIONAL<Journal_Entry_instance_eventTransitionRecord>,
-        /**
-         * @summary `journalVariables`.
-         * @description
-         *
-         * Tagged values. ISO 9506-1:2003 §23.1.2.9; ISO 9506-2:2003 Annex
-         * B.1.16.
-         *
-         * @public
-         * @readonly
-         */
-        readonly journalVariables?: OPTIONAL<Journal_Entry_instance_journalVariables_Item[]>
-    ) {}
+        journal: Journal_instance,
+        entry: OCTET_STRING,
+        clientApplication: ApplicationReference,
+        timeStamp: TimeOfDay,
+        orderOfReceipt: INTEGER,
+        informationType: Journal_Entry_instance_informationType,
+        textComment?: OPTIONAL<MMS255String>,
+        eventTransitionRecord?: OPTIONAL<Journal_Entry_instance_eventTransitionRecord>,
+        journalVariables?: OPTIONAL<Journal_Entry_instance_journalVariables_Item[]>
+    ) {
+        this.journal = journal;
+        this.entry = entry;
+        this.clientApplication = clientApplication;
+        this.timeStamp = timeStamp;
+        this.orderOfReceipt = orderOfReceipt;
+        this.informationType = informationType;
+        this.textComment = textComment;
+        this.eventTransitionRecord = eventTransitionRecord;
+        this.journalVariables = journalVariables;
+    }
 
     /**
      * @summary Restructures an object into a Journal_Entry_instance

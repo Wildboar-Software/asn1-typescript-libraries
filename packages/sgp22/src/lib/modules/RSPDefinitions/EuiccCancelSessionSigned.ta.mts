@@ -31,38 +31,46 @@ import { CancelSessionReason, _decode_CancelSessionReason, _encode_CancelSession
  */
 export
 class EuiccCancelSessionSigned {
+    /**
+     * @summary `transactionId`.
+     * @description
+     * 
+     * Session being cancelled. SGP.22 v3.1 §5.7.14.
+     * 
+     * @public
+     * @readonly
+     */
+    public readonly transactionId: TransactionId;
+    /**
+     * @summary `smdpOid`.
+     * @description
+     * 
+     * SM-DP+ OID from CERT.DPauth.SIG. SGP.22 v3.1 §5.7.14.
+     * 
+     * @public
+     * @readonly
+     */
+    public readonly smdpOid: OBJECT_IDENTIFIER;
+    /**
+     * @summary `reason`.
+     * @description
+     * 
+     * The reason from the request, now signed. SGP.22 v3.1 §5.7.14.
+     * 
+     * @public
+     * @readonly
+     */
+    public readonly reason: CancelSessionReason;
+
     constructor (
-        /**
-         * @summary `transactionId`.
-         * @description
-         * 
-         * Session being cancelled. SGP.22 v3.1 §5.7.14.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly transactionId: TransactionId,
-        /**
-         * @summary `smdpOid`.
-         * @description
-         * 
-         * SM-DP+ OID from CERT.DPauth.SIG. SGP.22 v3.1 §5.7.14.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly smdpOid: OBJECT_IDENTIFIER,
-        /**
-         * @summary `reason`.
-         * @description
-         * 
-         * The reason from the request, now signed. SGP.22 v3.1 §5.7.14.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly reason: CancelSessionReason
-    ) {}
+        transactionId: TransactionId,
+        smdpOid: OBJECT_IDENTIFIER,
+        reason: CancelSessionReason
+    ) {
+        this.transactionId = transactionId;
+        this.smdpOid = smdpOid;
+        this.reason = reason;
+    }
 
     /**
      * @summary Restructures an object into a EuiccCancelSessionSigned

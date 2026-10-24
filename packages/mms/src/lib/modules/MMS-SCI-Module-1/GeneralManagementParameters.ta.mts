@@ -41,38 +41,46 @@ import { GeneralManagementParameters_supportForTime, _decode_GeneralManagementPa
  */
 export
 class GeneralManagementParameters {
+    /**
+     * @summary `localDetail`.
+     * @description
+     *
+     * Implementation-local CIS detail string. ISO 9506-2:2003 Annex B.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly localDetail: MMSString;
+    /**
+     * @summary `supportForTime`.
+     * @description
+     *
+     * Supported time forms. ISO 9506-2:2003 Annex B.2.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly supportForTime: GeneralManagementParameters_supportForTime;
+    /**
+     * @summary `granularityOfTime`.
+     * @description
+     *
+     * Time granularity. ISO 9506-2:2003 Annex B.2.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly granularityOfTime: INTEGER;
+
     constructor (
-        /**
-         * @summary `localDetail`.
-         * @description
-         *
-         * Implementation-local CIS detail string. ISO 9506-2:2003 Annex B.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly localDetail: MMSString,
-        /**
-         * @summary `supportForTime`.
-         * @description
-         *
-         * Supported time forms. ISO 9506-2:2003 Annex B.2.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly supportForTime: GeneralManagementParameters_supportForTime,
-        /**
-         * @summary `granularityOfTime`.
-         * @description
-         *
-         * Time granularity. ISO 9506-2:2003 Annex B.2.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly granularityOfTime: INTEGER
-    ) {}
+        localDetail: MMSString,
+        supportForTime: GeneralManagementParameters_supportForTime,
+        granularityOfTime: INTEGER
+    ) {
+        this.localDetail = localDetail;
+        this.supportForTime = supportForTime;
+        this.granularityOfTime = granularityOfTime;
+    }
 
     /**
      * @summary Restructures an object into a GeneralManagementParameters

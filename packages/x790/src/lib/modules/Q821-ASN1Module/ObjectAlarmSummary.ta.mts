@@ -38,20 +38,26 @@ import {
  */
 export
 class ObjectAlarmSummary {
+    /**
+     * @summary `objectOfReference`.
+     * @public
+     * @readonly
+     */
+    public readonly objectOfReference: ObjectOfReference;
+    /**
+     * @summary `summaryInfo`.
+     * @public
+     * @readonly
+     */
+    public readonly summaryInfo: AlarmSummaryInfo[];
+
     constructor (
-        /**
-         * @summary `objectOfReference`.
-         * @public
-         * @readonly
-         */
-        readonly objectOfReference: ObjectOfReference,
-        /**
-         * @summary `summaryInfo`.
-         * @public
-         * @readonly
-         */
-        readonly summaryInfo: AlarmSummaryInfo[]
-    ) {}
+        objectOfReference: ObjectOfReference,
+        summaryInfo: AlarmSummaryInfo[]
+    ) {
+        this.objectOfReference = objectOfReference;
+        this.summaryInfo = summaryInfo;
+    }
 
     /**
      * @summary Restructures an object into a ObjectAlarmSummary

@@ -38,37 +38,45 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class GetHookswitchStatusArgument {
+    /**
+     * @summary `device`.
+     * @description
+     *
+     * Physical-element DeviceID; other IDs are rejected (ECMA-269 §21 FR
+     * 1).
+     * @public
+     * @readonly
+     */
+    public readonly device: DeviceID;
+    /**
+     * @summary `hookswitch`.
+     * @description
+     *
+     * Hookswitch to query. Absent: all hookswitches.
+     * @public
+     * @readonly
+     */
+    public readonly hookswitch?: OPTIONAL<HookswitchID>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `device`.
-         * @description
-         *
-         * Physical-element DeviceID; other IDs are rejected (ECMA-269 §21 FR
-         * 1).
-         * @public
-         * @readonly
-         */
-        readonly device: DeviceID,
-        /**
-         * @summary `hookswitch`.
-         * @description
-         *
-         * Hookswitch to query. Absent: all hookswitches.
-         * @public
-         * @readonly
-         */
-        readonly hookswitch?: OPTIONAL<HookswitchID>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        device: DeviceID,
+        hookswitch?: OPTIONAL<HookswitchID>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.device = device;
+        this.hookswitch = hookswitch;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a GetHookswitchStatusArgument

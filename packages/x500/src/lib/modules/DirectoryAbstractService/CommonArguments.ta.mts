@@ -84,149 +84,177 @@ import {
  *
  */
 export class CommonArguments {
+    /**
+     * @summary `serviceControls`.
+     * @description
+     *
+     * Absence ≡ empty set of controls. DEFAULT `{}`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly serviceControls?: OPTIONAL<ServiceControls>;
+    /**
+     * @summary `securityParameters`.
+     * @description
+     *
+     * Required if the argument is signed; absence ≡ empty set.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly securityParameters?: OPTIONAL<SecurityParameters>;
+    /**
+     * @summary `requestor`.
+     * @description
+     *
+     * Originator DN. Shall equal the bind DN if one was established, and
+     * the end-entity cert subject if a certification-path is present.
+     * Unreliable for access control if neither is present.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly requestor?: OPTIONAL<DistinguishedName>;
+    /**
+     * @summary `operationProgress`.
+     * @description
+     *
+     * X.518. DUA copies from a ContinuationReference, or uses when
+     * `manageDSAIT` is set. DEFAULT `{nameResolutionPhase notStarted}`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly operationProgress?: OPTIONAL<OperationProgress>;
+    /**
+     * @summary `aliasedRDNs`.
+     * @description
+     *
+     * 1988 compatibility only. Count of RDNs from alias deref on a prior
+     * attempt. Modern DUAs/DSAs shall always omit this; otherwise
+     * alias-to-alias deref would signal an error.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly aliasedRDNs?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `criticalExtensions`.
+     * @description
+     *
+     * Bit N set ⇒ extension identifier N is critical. Bit 0 is unused;
+     * first extension is identifier 1 = bit 1. Unknown critical
+     * extension ⇒ `unavailableCriticalExtension`. Non-critical unknown
+     * extensions are ignored. No required decode order.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly criticalExtensions?: OPTIONAL<BIT_STRING>;
+    /**
+     * @summary `referenceType`.
+     * @description
+     *
+     * X.518. DUA copies from a ContinuationReference, or uses when
+     * `manageDSAIT` is set.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly referenceType?: OPTIONAL<ReferenceType>;
+    /**
+     * @summary `entryOnly`.
+     * @description
+     *
+     * X.518 chaining; DEFAULT TRUE. Not `FamilyGrouping.entryOnly`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly entryOnly?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `exclusions`.
+     * @description
+     *
+     * X.518. DUA copies from a ContinuationReference, or uses when
+     * `manageDSAIT` is set.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly exclusions?: OPTIONAL<Exclusions>;
+    /**
+     * @summary `nameResolveOnMaster`.
+     * @description
+     *
+     * X.518. DEFAULT FALSE. DUA copies from a ContinuationReference, or
+     * uses when `manageDSAIT` is set.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly nameResolveOnMaster?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `operationContexts`.
+     * @description
+     *
+     * Default context assertions for AVAs and selection that lack their
+     * own for that attr+context type. `allContexts` makes all contexts
+     * valid and overrides DSA defaults.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly operationContexts?: OPTIONAL<ContextSelection>;
+    /**
+     * @summary `familyGrouping`.
+     * @description
+     *
+     * DEFAULT `entryOnly`. Used by Compare (scope of compared attrs),
+     * Search (filter groupings), RemoveEntry (what to delete). Ignored
+     * for other operations.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly familyGrouping?: OPTIONAL<FamilyGrouping>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `serviceControls`.
-         * @description
-         *
-         * Absence ≡ empty set of controls. DEFAULT `{}`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly serviceControls?: OPTIONAL<ServiceControls>,
-        /**
-         * @summary `securityParameters`.
-         * @description
-         *
-         * Required if the argument is signed; absence ≡ empty set.
-         *
-         * @public
-         * @readonly
-         */
-        readonly securityParameters?: OPTIONAL<SecurityParameters>,
-        /**
-         * @summary `requestor`.
-         * @description
-         *
-         * Originator DN. Shall equal the bind DN if one was established, and
-         * the end-entity cert subject if a certification-path is present.
-         * Unreliable for access control if neither is present.
-         *
-         * @public
-         * @readonly
-         */
-        readonly requestor?: OPTIONAL<DistinguishedName>,
-        /**
-         * @summary `operationProgress`.
-         * @description
-         *
-         * X.518. DUA copies from a ContinuationReference, or uses when
-         * `manageDSAIT` is set. DEFAULT `{nameResolutionPhase notStarted}`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly operationProgress?: OPTIONAL<OperationProgress>,
-        /**
-         * @summary `aliasedRDNs`.
-         * @description
-         *
-         * 1988 compatibility only. Count of RDNs from alias deref on a prior
-         * attempt. Modern DUAs/DSAs shall always omit this; otherwise
-         * alias-to-alias deref would signal an error.
-         *
-         * @public
-         * @readonly
-         */
-        readonly aliasedRDNs?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `criticalExtensions`.
-         * @description
-         *
-         * Bit N set ⇒ extension identifier N is critical. Bit 0 is unused;
-         * first extension is identifier 1 = bit 1. Unknown critical
-         * extension ⇒ `unavailableCriticalExtension`. Non-critical unknown
-         * extensions are ignored. No required decode order.
-         *
-         * @public
-         * @readonly
-         */
-        readonly criticalExtensions?: OPTIONAL<BIT_STRING>,
-        /**
-         * @summary `referenceType`.
-         * @description
-         *
-         * X.518. DUA copies from a ContinuationReference, or uses when
-         * `manageDSAIT` is set.
-         *
-         * @public
-         * @readonly
-         */
-        readonly referenceType?: OPTIONAL<ReferenceType>,
-        /**
-         * @summary `entryOnly`.
-         * @description
-         *
-         * X.518 chaining; DEFAULT TRUE. Not `FamilyGrouping.entryOnly`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly entryOnly?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `exclusions`.
-         * @description
-         *
-         * X.518. DUA copies from a ContinuationReference, or uses when
-         * `manageDSAIT` is set.
-         *
-         * @public
-         * @readonly
-         */
-        readonly exclusions?: OPTIONAL<Exclusions>,
-        /**
-         * @summary `nameResolveOnMaster`.
-         * @description
-         *
-         * X.518. DEFAULT FALSE. DUA copies from a ContinuationReference, or
-         * uses when `manageDSAIT` is set.
-         *
-         * @public
-         * @readonly
-         */
-        readonly nameResolveOnMaster?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `operationContexts`.
-         * @description
-         *
-         * Default context assertions for AVAs and selection that lack their
-         * own for that attr+context type. `allContexts` makes all contexts
-         * valid and overrides DSA defaults.
-         *
-         * @public
-         * @readonly
-         */
-        readonly operationContexts?: OPTIONAL<ContextSelection>,
-        /**
-         * @summary `familyGrouping`.
-         * @description
-         *
-         * DEFAULT `entryOnly`. Used by Compare (scope of compared attrs),
-         * Search (filter groupings), RemoveEntry (what to delete). Ignored
-         * for other operations.
-         *
-         * @public
-         * @readonly
-         */
-        readonly familyGrouping?: OPTIONAL<FamilyGrouping>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        serviceControls?: OPTIONAL<ServiceControls>,
+        securityParameters?: OPTIONAL<SecurityParameters>,
+        requestor?: OPTIONAL<DistinguishedName>,
+        operationProgress?: OPTIONAL<OperationProgress>,
+        aliasedRDNs?: OPTIONAL<INTEGER>,
+        criticalExtensions?: OPTIONAL<BIT_STRING>,
+        referenceType?: OPTIONAL<ReferenceType>,
+        entryOnly?: OPTIONAL<BOOLEAN>,
+        exclusions?: OPTIONAL<Exclusions>,
+        nameResolveOnMaster?: OPTIONAL<BOOLEAN>,
+        operationContexts?: OPTIONAL<ContextSelection>,
+        familyGrouping?: OPTIONAL<FamilyGrouping>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.serviceControls = serviceControls;
+        this.securityParameters = securityParameters;
+        this.requestor = requestor;
+        this.operationProgress = operationProgress;
+        this.aliasedRDNs = aliasedRDNs;
+        this.criticalExtensions = criticalExtensions;
+        this.referenceType = referenceType;
+        this.entryOnly = entryOnly;
+        this.exclusions = exclusions;
+        this.nameResolveOnMaster = nameResolveOnMaster;
+        this.operationContexts = operationContexts;
+        this.familyGrouping = familyGrouping;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a CommonArguments

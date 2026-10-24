@@ -38,26 +38,34 @@ import { ServiceInteractionIndicators, _decode_ServiceInteractionIndicators, _en
  */
 export
 class ConnectToResourceArg {
+    /**
+     * @summary `resourceAddress`.
+     * @public
+     * @readonly
+     */
+    public readonly resourceAddress: ConnectToResourceArg_resourceAddress;
+    /**
+     * @summary `extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<ExtensionField[]>;
+    /**
+     * @summary `serviceInteractionIndicators`.
+     * @public
+     * @readonly
+     */
+    public readonly serviceInteractionIndicators?: OPTIONAL<ServiceInteractionIndicators>;
+
     constructor (
-        /**
-         * @summary `resourceAddress`.
-         * @public
-         * @readonly
-         */
-        readonly resourceAddress: ConnectToResourceArg_resourceAddress,
-        /**
-         * @summary `extensions`.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<ExtensionField[]>,
-        /**
-         * @summary `serviceInteractionIndicators`.
-         * @public
-         * @readonly
-         */
-        readonly serviceInteractionIndicators?: OPTIONAL<ServiceInteractionIndicators>
-    ) {}
+        resourceAddress: ConnectToResourceArg_resourceAddress,
+        extensions?: OPTIONAL<ExtensionField[]>,
+        serviceInteractionIndicators?: OPTIONAL<ServiceInteractionIndicators>
+    ) {
+        this.resourceAddress = resourceAddress;
+        this.extensions = extensions;
+        this.serviceInteractionIndicators = serviceInteractionIndicators;
+    }
 
     /**
      * @summary Restructures an object into a ConnectToResourceArg

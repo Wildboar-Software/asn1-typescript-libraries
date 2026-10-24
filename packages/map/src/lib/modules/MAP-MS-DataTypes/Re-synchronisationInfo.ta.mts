@@ -32,38 +32,46 @@ import { RAND, _decode_RAND, _encode_RAND } from "../MAP-MS-DataTypes/RAND.ta.mj
  */
 export
 class Re_synchronisationInfo {
+    /**
+     * @summary `rand`.
+     * @description
+     *
+     * Random number used for authentication.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.7.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly rand: RAND;
+    /**
+     * @summary `auts`.
+     * @description
+     *
+     * UMTS resynchronisation token.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.7.6B).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly auts: AUTS;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `rand`.
-         * @description
-         *
-         * Random number used for authentication.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.7.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly rand: RAND,
-        /**
-         * @summary `auts`.
-         * @description
-         *
-         * UMTS resynchronisation token.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.7.6B).
-         *
-         * @public
-         * @readonly
-         */
-        readonly auts: AUTS,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        rand: RAND,
+        auts: AUTS,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.rand = rand;
+        this.auts = auts;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a Re_synchronisationInfo

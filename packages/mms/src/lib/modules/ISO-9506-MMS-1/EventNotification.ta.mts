@@ -66,125 +66,143 @@ import { EventNotification_actionResult, _decode_EventNotification_actionResult,
  */
 export
 class EventNotification {
+    /**
+     * @summary `eventEnrollmentName`.
+     * @description
+     *
+     * `&name` of the Event Enrollment for which this
+     * notification is invoked.
+     *
+     * [ISO 9506-1:2003 §18.3.1.1.1]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly eventEnrollmentName: ObjectName;
+    /**
+     * @summary `eventConditionName`.
+     * @description
+     *
+     * `&name` of the Event Condition referenced by the
+     * enrollment's `&eventCondition`.
+     *
+     * [ISO 9506-1:2003 §18.3.1.1.2]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly eventConditionName: ObjectName;
+    /**
+     * @summary `severity`.
+     * @description
+     *
+     * `&severity` of the referenced Event Condition
+     * (0 most severe, 127 least, 64 normal).
+     *
+     * [ISO 9506-1:2003 §18.3.1.1.3]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly severity: Severity;
+    /**
+     * @summary `currentState`.
+     * @description
+     *
+     * Event Condition `&ecState` after transition
+     * processing. Omitted for `any-to-deleted`, or if the
+     * condition became unavailable (Domain delete or AA
+     * loss).
+     *
+     * [ISO 9506-1:2003 §18.3.1.1.4]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly currentState: OPTIONAL<EC_State>;
+    /**
+     * @summary `transitionTime`.
+     * @description
+     *
+     * Time (time-of-day or Time Sequence Identifier) at
+     * which the transition was detected.
+     *
+     * [ISO 9506-1:2003 §18.3.1.1.5]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly transitionTime: EventTime;
+    /**
+     * @summary `notificationLost`.
+     * @description
+     *
+     * Enrollment `&notificationLost` at transition time.
+     * True: one or more prior notifications for this
+     * enrollment were not issued due to resource limits.
+     * Set false after a successful notification.
+     * Default false.
+     *
+     * [ISO 9506-1:2003 §18.3.1.1.6]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly notificationLost?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `alarmAcknowledgmentRule`.
+     * @description
+     *
+     * Enrollment `&aaRule`. Present only when the Event
+     * Condition is `monitored`. Omitted for
+     * network-triggered conditions. Values: `none`
+     * (ack allowed, no `&ackState` effect), `simple`
+     * (ack allowed; active ack updates `&ackState`),
+     * `ack-active` (active ack required), `ack-all`
+     * (active and idle acks required). Acks are never
+     * required for disabled transitions.
+     *
+     * [ISO 9506-1:2003 §18.3.1.1.7] [ISO 9506-1:2003 §21.1.1.13]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly alarmAcknowledgmentRule?: OPTIONAL<AlarmAckRule>;
+    /**
+     * @summary `actionResult`.
+     * @description
+     *
+     * Result of executing the Event Action referenced by
+     * the enrollment. Omitted if there is no Event
+     * Action, the action became unavailable, or the
+     * transition is `any-to-deleted`.
+     *
+     * [ISO 9506-1:2003 §18.3.1.1.8]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly actionResult?: OPTIONAL<EventNotification_actionResult>;
+
     constructor (
-        /**
-         * @summary `eventEnrollmentName`.
-         * @description
-         *
-         * `&name` of the Event Enrollment for which this
-         * notification is invoked.
-         *
-         * [ISO 9506-1:2003 §18.3.1.1.1]
-         *
-         * @public
-         * @readonly
-         */
-        readonly eventEnrollmentName: ObjectName,
-        /**
-         * @summary `eventConditionName`.
-         * @description
-         *
-         * `&name` of the Event Condition referenced by the
-         * enrollment's `&eventCondition`.
-         *
-         * [ISO 9506-1:2003 §18.3.1.1.2]
-         *
-         * @public
-         * @readonly
-         */
-        readonly eventConditionName: ObjectName,
-        /**
-         * @summary `severity`.
-         * @description
-         *
-         * `&severity` of the referenced Event Condition
-         * (0 most severe, 127 least, 64 normal).
-         *
-         * [ISO 9506-1:2003 §18.3.1.1.3]
-         *
-         * @public
-         * @readonly
-         */
-        readonly severity: Severity,
-        /**
-         * @summary `currentState`.
-         * @description
-         *
-         * Event Condition `&ecState` after transition
-         * processing. Omitted for `any-to-deleted`, or if the
-         * condition became unavailable (Domain delete or AA
-         * loss).
-         *
-         * [ISO 9506-1:2003 §18.3.1.1.4]
-         *
-         * @public
-         * @readonly
-         */
-        readonly currentState: OPTIONAL<EC_State>,
-        /**
-         * @summary `transitionTime`.
-         * @description
-         *
-         * Time (time-of-day or Time Sequence Identifier) at
-         * which the transition was detected.
-         *
-         * [ISO 9506-1:2003 §18.3.1.1.5]
-         *
-         * @public
-         * @readonly
-         */
-        readonly transitionTime: EventTime,
-        /**
-         * @summary `notificationLost`.
-         * @description
-         *
-         * Enrollment `&notificationLost` at transition time.
-         * True: one or more prior notifications for this
-         * enrollment were not issued due to resource limits.
-         * Set false after a successful notification.
-         * Default false.
-         *
-         * [ISO 9506-1:2003 §18.3.1.1.6]
-         *
-         * @public
-         * @readonly
-         */
-        readonly notificationLost?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `alarmAcknowledgmentRule`.
-         * @description
-         *
-         * Enrollment `&aaRule`. Present only when the Event
-         * Condition is `monitored`. Omitted for
-         * network-triggered conditions. Values: `none`
-         * (ack allowed, no `&ackState` effect), `simple`
-         * (ack allowed; active ack updates `&ackState`),
-         * `ack-active` (active ack required), `ack-all`
-         * (active and idle acks required). Acks are never
-         * required for disabled transitions.
-         *
-         * [ISO 9506-1:2003 §18.3.1.1.7] [ISO 9506-1:2003 §21.1.1.13]
-         *
-         * @public
-         * @readonly
-         */
-        readonly alarmAcknowledgmentRule?: OPTIONAL<AlarmAckRule>,
-        /**
-         * @summary `actionResult`.
-         * @description
-         *
-         * Result of executing the Event Action referenced by
-         * the enrollment. Omitted if there is no Event
-         * Action, the action became unavailable, or the
-         * transition is `any-to-deleted`.
-         *
-         * [ISO 9506-1:2003 §18.3.1.1.8]
-         *
-         * @public
-         * @readonly
-         */
-        readonly actionResult?: OPTIONAL<EventNotification_actionResult>
-    ) {}
+        eventEnrollmentName: ObjectName,
+        eventConditionName: ObjectName,
+        severity: Severity,
+        currentState: OPTIONAL<EC_State>,
+        transitionTime: EventTime,
+        notificationLost?: OPTIONAL<BOOLEAN>,
+        alarmAcknowledgmentRule?: OPTIONAL<AlarmAckRule>,
+        actionResult?: OPTIONAL<EventNotification_actionResult>
+    ) {
+        this.eventEnrollmentName = eventEnrollmentName;
+        this.eventConditionName = eventConditionName;
+        this.severity = severity;
+        this.currentState = currentState;
+        this.transitionTime = transitionTime;
+        this.notificationLost = notificationLost;
+        this.alarmAcknowledgmentRule = alarmAcknowledgmentRule;
+        this.actionResult = actionResult;
+    }
 
     /**
      * @summary Restructures an object into a EventNotification

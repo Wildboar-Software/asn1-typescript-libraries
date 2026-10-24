@@ -35,30 +35,36 @@ import { Unsigned16, _decode_Unsigned16, _encode_Unsigned16 } from "../ISO-9506-
  */
 export
 class DefineSemaphore_Request {
+    /**
+     * @summary `semaphoreName`.
+     * @description
+     *
+     * VMD-specific name of the token semaphore to create.
+     * ISO 9506-1:2003 §16.4.1.1.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly semaphoreName: ObjectName;
+    /**
+     * @summary `numberOfTokens`.
+     * @description
+     *
+     * Maximum simultaneous owners. One token is mutual exclusion.
+     * ISO 9506-1:2003 §16.1.5, §16.4.1.1.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly numberOfTokens: Unsigned16;
+
     constructor (
-        /**
-         * @summary `semaphoreName`.
-         * @description
-         *
-         * VMD-specific name of the token semaphore to create.
-         * ISO 9506-1:2003 §16.4.1.1.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly semaphoreName: ObjectName,
-        /**
-         * @summary `numberOfTokens`.
-         * @description
-         *
-         * Maximum simultaneous owners. One token is mutual exclusion.
-         * ISO 9506-1:2003 §16.1.5, §16.4.1.1.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly numberOfTokens: Unsigned16
-    ) {}
+        semaphoreName: ObjectName,
+        numberOfTokens: Unsigned16
+    ) {
+        this.semaphoreName = semaphoreName;
+        this.numberOfTokens = numberOfTokens;
+    }
 
     /**
      * @summary Restructures an object into a DefineSemaphore_Request

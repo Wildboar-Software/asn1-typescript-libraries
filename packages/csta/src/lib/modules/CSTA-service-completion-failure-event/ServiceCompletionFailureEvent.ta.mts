@@ -54,72 +54,88 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class ServiceCompletionFailureEvent {
+    /**
+     * @summary `primaryCall`.
+     * @description
+     *
+     * Connection in the primary call of the failed service.
+     * @public
+     * @readonly
+     */
+    public readonly primaryCall: PrimaryOrSecondaryCall;
+    /**
+     * @summary `secondaryCall`.
+     * @description
+     *
+     * Connection in the secondary call, if the service had one.
+     * @public
+     * @readonly
+     */
+    public readonly secondaryCall: OPTIONAL<PrimaryOrSecondaryCall>;
+    /**
+     * @summary `otherDevsPrimaryCallList`.
+     * @description
+     *
+     * Other devices/connections on the primary call.
+     * @public
+     * @readonly
+     */
+    public readonly otherDevsPrimaryCallList: OPTIONAL<OtherCall[]>;
+    /**
+     * @summary `otherDevsSecondaryCallList`.
+     * @description
+     *
+     * Other devices/connections on the secondary call.
+     * @public
+     * @readonly
+     */
+    public readonly otherDevsSecondaryCallList: OPTIONAL<OtherCall[]>;
+    /**
+     * @summary `mediaCallCharacteristics`.
+     * @description
+     *
+     * Media characteristics of the affected call(s).
+     * @public
+     * @readonly
+     */
+    public readonly mediaCallCharacteristics: OPTIONAL<MediaCallCharacteristics>;
+    /**
+     * @summary `cause`.
+     * @description
+     *
+     * Why completion failed.
+     * @public
+     * @readonly
+     */
+    public readonly cause: EventCause;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `primaryCall`.
-         * @description
-         *
-         * Connection in the primary call of the failed service.
-         * @public
-         * @readonly
-         */
-        readonly primaryCall: PrimaryOrSecondaryCall,
-        /**
-         * @summary `secondaryCall`.
-         * @description
-         *
-         * Connection in the secondary call, if the service had one.
-         * @public
-         * @readonly
-         */
-        readonly secondaryCall: OPTIONAL<PrimaryOrSecondaryCall>,
-        /**
-         * @summary `otherDevsPrimaryCallList`.
-         * @description
-         *
-         * Other devices/connections on the primary call.
-         * @public
-         * @readonly
-         */
-        readonly otherDevsPrimaryCallList: OPTIONAL<OtherCall[]>,
-        /**
-         * @summary `otherDevsSecondaryCallList`.
-         * @description
-         *
-         * Other devices/connections on the secondary call.
-         * @public
-         * @readonly
-         */
-        readonly otherDevsSecondaryCallList: OPTIONAL<OtherCall[]>,
-        /**
-         * @summary `mediaCallCharacteristics`.
-         * @description
-         *
-         * Media characteristics of the affected call(s).
-         * @public
-         * @readonly
-         */
-        readonly mediaCallCharacteristics: OPTIONAL<MediaCallCharacteristics>,
-        /**
-         * @summary `cause`.
-         * @description
-         *
-         * Why completion failed.
-         * @public
-         * @readonly
-         */
-        readonly cause: EventCause,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        primaryCall: PrimaryOrSecondaryCall,
+        secondaryCall: OPTIONAL<PrimaryOrSecondaryCall>,
+        otherDevsPrimaryCallList: OPTIONAL<OtherCall[]>,
+        otherDevsSecondaryCallList: OPTIONAL<OtherCall[]>,
+        mediaCallCharacteristics: OPTIONAL<MediaCallCharacteristics>,
+        cause: EventCause,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.primaryCall = primaryCall;
+        this.secondaryCall = secondaryCall;
+        this.otherDevsPrimaryCallList = otherDevsPrimaryCallList;
+        this.otherDevsSecondaryCallList = otherDevsSecondaryCallList;
+        this.mediaCallCharacteristics = mediaCallCharacteristics;
+        this.cause = cause;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a ServiceCompletionFailureEvent

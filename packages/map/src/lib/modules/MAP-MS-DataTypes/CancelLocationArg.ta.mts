@@ -51,129 +51,153 @@ import { TypeOfUpdate, _decode_TypeOfUpdate, _encode_TypeOfUpdate, _enum_for_Typ
  */
 export
 class CancelLocationArg {
+    /**
+     * @summary `identity`.
+     * @description
+     *
+     * IMSI, or IMSI with LMSI. LMSI shall be included if received from the
+     * VLR. LMSI is not applicable between SGSN and HLR. Value 0000 0000
+     * indicates LMSI is not in use. LMSI shall not be sent to the SGSN
+     * (3GPP TS 29.002 V19.1.0 clauses 8.1.3.3 and 7.6.2.16).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly identity: Identity;
+    /**
+     * @summary `cancellationType`.
+     * @description
+     *
+     * Reason for cancellation. Mandatory when sent to the SGSN or IWF. May
+     * also be sent during inter-VLR location update (3GPP TS 29.002 V19.1.0
+     * clauses 8.1.3.3 and 7.6.3.52).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly cancellationType?: OPTIONAL<CancellationType>;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary `typeOfUpdate`.
+     * @description
+     *
+     * Shall be absent if CancellationType is different from updateProcedure
+     * and initialAttachProcedure (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly typeOfUpdate?: OPTIONAL<TypeOfUpdate>;
+    /**
+     * @summary `mtrf_SupportedAndAuthorized`.
+     * @description
+     *
+     * See 3GPP TS 23.018 and 3GPP TS 23.012 for use and presence. Shall not
+     * be present together with mtrf-SupportedAndNotAuthorized (3GPP TS
+     * 29.002 V19.1.0 clauses 8.1.3.3 and 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mtrf_SupportedAndAuthorized?: OPTIONAL<NULL>;
+    /**
+     * @summary `mtrf_SupportedAndNotAuthorized`.
+     * @description
+     *
+     * See 3GPP TS 23.018 and 3GPP TS 23.012 for use and presence. Shall not
+     * be present together with mtrf-SupportedAndAuthorized (3GPP TS 29.002
+     * V19.1.0 clauses 8.1.3.3 and 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mtrf_SupportedAndNotAuthorized?: OPTIONAL<NULL>;
+    /**
+     * @summary `newMSC_Number`.
+     * @description
+     *
+     * E.164 address of the new VMSC. Shall be present if MTRF Supported And
+     * Authorized is present (3GPP TS 23.018 and TS 23.012) (3GPP TS 29.002
+     * V19.1.0 clause 8.1.3.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly newMSC_Number?: OPTIONAL<ISDN_AddressString>;
+    /**
+     * @summary `newVLR_Number`.
+     * @description
+     *
+     * New VLR number. Shall be present if MTRF Supported And Authorized is
+     * present (3GPP TS 29.002 V19.1.0 clauses 8.1.3.3 and 7.6.2.14).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly newVLR_Number?: OPTIONAL<ISDN_AddressString>;
+    /**
+     * @summary `new_lmsi`.
+     * @description
+     *
+     * LMSI from the new VLR. Shall be present if MTRF Supported And
+     * Authorized is present and the HLR received LMSI in Update Location
+     * from the new VLR (3GPP TS 29.002 V19.1.0 clauses 8.1.3.3 and
+     * 7.6.2.16).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly new_lmsi?: OPTIONAL<LMSI>;
+    /**
+     * @summary `reattach_Required`.
+     * @description
+     *
+     * When present and Cancellation Type is subscription withdraw, the MME
+     * (via IWF) or SGSN shall delete subscription data and request the
+     * UE/MS to initiate immediate re-attach (3GPP TS 23.401 and TS 23.060)
+     * (3GPP TS 29.002 V19.1.0 clause 8.1.3.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly reattach_Required?: OPTIONAL<NULL>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `identity`.
-         * @description
-         *
-         * IMSI, or IMSI with LMSI. LMSI shall be included if received from the
-         * VLR. LMSI is not applicable between SGSN and HLR. Value 0000 0000
-         * indicates LMSI is not in use. LMSI shall not be sent to the SGSN
-         * (3GPP TS 29.002 V19.1.0 clauses 8.1.3.3 and 7.6.2.16).
-         *
-         * @public
-         * @readonly
-         */
-        readonly identity: Identity,
-        /**
-         * @summary `cancellationType`.
-         * @description
-         *
-         * Reason for cancellation. Mandatory when sent to the SGSN or IWF. May
-         * also be sent during inter-VLR location update (3GPP TS 29.002 V19.1.0
-         * clauses 8.1.3.3 and 7.6.3.52).
-         *
-         * @public
-         * @readonly
-         */
-        readonly cancellationType?: OPTIONAL<CancellationType>,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary `typeOfUpdate`.
-         * @description
-         *
-         * Shall be absent if CancellationType is different from updateProcedure
-         * and initialAttachProcedure (3GPP TS 29.002 V19.1.0 clause 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly typeOfUpdate?: OPTIONAL<TypeOfUpdate>,
-        /**
-         * @summary `mtrf_SupportedAndAuthorized`.
-         * @description
-         *
-         * See 3GPP TS 23.018 and 3GPP TS 23.012 for use and presence. Shall not
-         * be present together with mtrf-SupportedAndNotAuthorized (3GPP TS
-         * 29.002 V19.1.0 clauses 8.1.3.3 and 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly mtrf_SupportedAndAuthorized?: OPTIONAL<NULL>,
-        /**
-         * @summary `mtrf_SupportedAndNotAuthorized`.
-         * @description
-         *
-         * See 3GPP TS 23.018 and 3GPP TS 23.012 for use and presence. Shall not
-         * be present together with mtrf-SupportedAndAuthorized (3GPP TS 29.002
-         * V19.1.0 clauses 8.1.3.3 and 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly mtrf_SupportedAndNotAuthorized?: OPTIONAL<NULL>,
-        /**
-         * @summary `newMSC_Number`.
-         * @description
-         *
-         * E.164 address of the new VMSC. Shall be present if MTRF Supported And
-         * Authorized is present (3GPP TS 23.018 and TS 23.012) (3GPP TS 29.002
-         * V19.1.0 clause 8.1.3.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly newMSC_Number?: OPTIONAL<ISDN_AddressString>,
-        /**
-         * @summary `newVLR_Number`.
-         * @description
-         *
-         * New VLR number. Shall be present if MTRF Supported And Authorized is
-         * present (3GPP TS 29.002 V19.1.0 clauses 8.1.3.3 and 7.6.2.14).
-         *
-         * @public
-         * @readonly
-         */
-        readonly newVLR_Number?: OPTIONAL<ISDN_AddressString>,
-        /**
-         * @summary `new_lmsi`.
-         * @description
-         *
-         * LMSI from the new VLR. Shall be present if MTRF Supported And
-         * Authorized is present and the HLR received LMSI in Update Location
-         * from the new VLR (3GPP TS 29.002 V19.1.0 clauses 8.1.3.3 and
-         * 7.6.2.16).
-         *
-         * @public
-         * @readonly
-         */
-        readonly new_lmsi?: OPTIONAL<LMSI>,
-        /**
-         * @summary `reattach_Required`.
-         * @description
-         *
-         * When present and Cancellation Type is subscription withdraw, the MME
-         * (via IWF) or SGSN shall delete subscription data and request the
-         * UE/MS to initiate immediate re-attach (3GPP TS 23.401 and TS 23.060)
-         * (3GPP TS 29.002 V19.1.0 clause 8.1.3.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly reattach_Required?: OPTIONAL<NULL>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        identity: Identity,
+        cancellationType?: OPTIONAL<CancellationType>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        typeOfUpdate?: OPTIONAL<TypeOfUpdate>,
+        mtrf_SupportedAndAuthorized?: OPTIONAL<NULL>,
+        mtrf_SupportedAndNotAuthorized?: OPTIONAL<NULL>,
+        newMSC_Number?: OPTIONAL<ISDN_AddressString>,
+        newVLR_Number?: OPTIONAL<ISDN_AddressString>,
+        new_lmsi?: OPTIONAL<LMSI>,
+        reattach_Required?: OPTIONAL<NULL>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.identity = identity;
+        this.cancellationType = cancellationType;
+        this.extensionContainer = extensionContainer;
+        this.typeOfUpdate = typeOfUpdate;
+        this.mtrf_SupportedAndAuthorized = mtrf_SupportedAndAuthorized;
+        this.mtrf_SupportedAndNotAuthorized = mtrf_SupportedAndNotAuthorized;
+        this.newMSC_Number = newMSC_Number;
+        this.newVLR_Number = newVLR_Number;
+        this.new_lmsi = new_lmsi;
+        this.reattach_Required = reattach_Required;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a CancelLocationArg

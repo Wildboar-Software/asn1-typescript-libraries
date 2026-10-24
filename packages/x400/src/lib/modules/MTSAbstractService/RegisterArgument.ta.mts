@@ -76,56 +76,74 @@ import {
  *
  */
 export class RegisterArgument {
+    /**
+     * @summary `user_name`.
+     * @public
+     * @readonly
+     */
+    public readonly user_name?: OPTIONAL<UserName>;
+    /**
+     * @summary `user_address`.
+     * @public
+     * @readonly
+     */
+    public readonly user_address?: OPTIONAL<UserAddress>;
+    /**
+     * @summary `deliverable_class`.
+     * @public
+     * @readonly
+     */
+    public readonly deliverable_class?: OPTIONAL<DeliverableClass[]>;
+    /**
+     * @summary `default_delivery_controls`.
+     * @public
+     * @readonly
+     */
+    public readonly default_delivery_controls?: OPTIONAL<DefaultDeliveryControls>;
+    /**
+     * @summary `redirections`.
+     * @public
+     * @readonly
+     */
+    public readonly redirections?: OPTIONAL<Redirections>;
+    /**
+     * @summary `restricted_delivery`.
+     * @public
+     * @readonly
+     */
+    public readonly restricted_delivery?: OPTIONAL<RestrictedDelivery>;
+    /**
+     * @summary `retrieve_registrations`.
+     * @public
+     * @readonly
+     */
+    public readonly retrieve_registrations?: OPTIONAL<RegistrationTypes>;
+    /**
+     * @summary `extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<ExtensionField[]>;
+
     constructor(
-        /**
-         * @summary `user_name`.
-         * @public
-         * @readonly
-         */
-        readonly user_name?: OPTIONAL<UserName>,
-        /**
-         * @summary `user_address`.
-         * @public
-         * @readonly
-         */
-        readonly user_address?: OPTIONAL<UserAddress>,
-        /**
-         * @summary `deliverable_class`.
-         * @public
-         * @readonly
-         */
-        readonly deliverable_class?: OPTIONAL<DeliverableClass[]>,
-        /**
-         * @summary `default_delivery_controls`.
-         * @public
-         * @readonly
-         */
-        readonly default_delivery_controls?: OPTIONAL<DefaultDeliveryControls>,
-        /**
-         * @summary `redirections`.
-         * @public
-         * @readonly
-         */
-        readonly redirections?: OPTIONAL<Redirections>,
-        /**
-         * @summary `restricted_delivery`.
-         * @public
-         * @readonly
-         */
-        readonly restricted_delivery?: OPTIONAL<RestrictedDelivery>,
-        /**
-         * @summary `retrieve_registrations`.
-         * @public
-         * @readonly
-         */
-        readonly retrieve_registrations?: OPTIONAL<RegistrationTypes>,
-        /**
-         * @summary `extensions`.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<ExtensionField[]>
-    ) {}
+        user_name?: OPTIONAL<UserName>,
+        user_address?: OPTIONAL<UserAddress>,
+        deliverable_class?: OPTIONAL<DeliverableClass[]>,
+        default_delivery_controls?: OPTIONAL<DefaultDeliveryControls>,
+        redirections?: OPTIONAL<Redirections>,
+        restricted_delivery?: OPTIONAL<RestrictedDelivery>,
+        retrieve_registrations?: OPTIONAL<RegistrationTypes>,
+        extensions?: OPTIONAL<ExtensionField[]>
+    ) {
+        this.user_name = user_name;
+        this.user_address = user_address;
+        this.deliverable_class = deliverable_class;
+        this.default_delivery_controls = default_delivery_controls;
+        this.redirections = redirections;
+        this.restricted_delivery = restricted_delivery;
+        this.retrieve_registrations = retrieve_registrations;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a RegisterArgument

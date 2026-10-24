@@ -29,41 +29,51 @@ import { NatureOfServiceChange, _enum_for_NatureOfServiceChange, _decode_NatureO
  *
  */
 export class DpSpecificInfoAlt_oServiceChangeSpecificInfo {
+    /**
+     * @summary `ext_basicServiceCode`.
+     * @description
+     *
+     * Extended Basic Service Code for SCUDIF calls (3GPP TS 23.172).
+     * (3GPP TS 29.078 V19.0.0 clause 11.18).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ext_basicServiceCode?: OPTIONAL<Ext_BasicServiceCode>;
+    /**
+     * @summary `initiatorOfServiceChange`.
+     * @description
+     *
+     * Initiator of the service change.
+     * (3GPP TS 29.078 V19.0.0 clause 11.18).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly initiatorOfServiceChange?: OPTIONAL<InitiatorOfServiceChange>;
+    /**
+     * @summary `natureOfServiceChange`.
+     * @description
+     *
+     * Nature of the service change. (3GPP TS 29.078 V19.0.0 clause 11.18).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly natureOfServiceChange?: OPTIONAL<NatureOfServiceChange>;
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `ext_basicServiceCode`.
-         * @description
-         *
-         * Extended Basic Service Code for SCUDIF calls (3GPP TS 23.172).
-         * (3GPP TS 29.078 V19.0.0 clause 11.18).
-         *
-         * @public
-         * @readonly
-         */
-        readonly ext_basicServiceCode?: OPTIONAL<Ext_BasicServiceCode>,
-        /**
-         * @summary `initiatorOfServiceChange`.
-         * @description
-         *
-         * Initiator of the service change.
-         * (3GPP TS 29.078 V19.0.0 clause 11.18).
-         *
-         * @public
-         * @readonly
-         */
-        readonly initiatorOfServiceChange?: OPTIONAL<InitiatorOfServiceChange>,
-        /**
-         * @summary `natureOfServiceChange`.
-         * @description
-         *
-         * Nature of the service change. (3GPP TS 29.078 V19.0.0 clause 11.18).
-         *
-         * @public
-         * @readonly
-         */
-        readonly natureOfServiceChange?: OPTIONAL<NatureOfServiceChange>,
-        readonly _unrecognizedExtensionsList: _Element[] = [],
-    ) {}
+        ext_basicServiceCode?: OPTIONAL<Ext_BasicServiceCode>,
+        initiatorOfServiceChange?: OPTIONAL<InitiatorOfServiceChange>,
+        natureOfServiceChange?: OPTIONAL<NatureOfServiceChange>,
+        _unrecognizedExtensionsList: _Element[] = [],
+    ) {
+        this.ext_basicServiceCode = ext_basicServiceCode;
+        this.initiatorOfServiceChange = initiatorOfServiceChange;
+        this.natureOfServiceChange = natureOfServiceChange;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     public static _from_object (_o: { [_K in keyof (DpSpecificInfoAlt_oServiceChangeSpecificInfo)]: (DpSpecificInfoAlt_oServiceChangeSpecificInfo)[_K] }): DpSpecificInfoAlt_oServiceChangeSpecificInfo {
         return new DpSpecificInfoAlt_oServiceChangeSpecificInfo(_o.ext_basicServiceCode, _o.initiatorOfServiceChange, _o.natureOfServiceChange, _o._unrecognizedExtensionsList);

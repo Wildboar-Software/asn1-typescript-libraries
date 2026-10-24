@@ -32,19 +32,23 @@ import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-
  */
 export
 class Reset_Request {
+    /**
+     * @summary `programInvocationName`.
+     * @description
+     *
+     * Program Invocation to reset; must be `stopped`. ISO 9506-1:2003
+     * §12.7.1.1.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly programInvocationName: Identifier;
+
     constructor (
-        /**
-         * @summary `programInvocationName`.
-         * @description
-         *
-         * Program Invocation to reset; must be `stopped`. ISO 9506-1:2003
-         * §12.7.1.1.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly programInvocationName: Identifier
-    ) {}
+        programInvocationName: Identifier
+    ) {
+        this.programInvocationName = programInvocationName;
+    }
 
     /**
      * @summary Restructures an object into a Reset_Request

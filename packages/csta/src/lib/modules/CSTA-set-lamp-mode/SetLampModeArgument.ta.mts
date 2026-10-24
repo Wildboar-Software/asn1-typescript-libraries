@@ -52,67 +52,81 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class SetLampModeArgument {
+    /**
+     * @summary `device`.
+     * @description
+     *
+     * Physical-element DeviceID; other IDs are rejected (ECMA-269 §21 FR
+     * 1).
+     * @public
+     * @readonly
+     */
+    public readonly device: DeviceID;
+    /**
+     * @summary `lamp`.
+     * @description
+     *
+     * LampID of the lamp to control.
+     * @public
+     * @readonly
+     */
+    public readonly lamp: LampID;
+    /**
+     * @summary `lampMode`.
+     * @description
+     *
+     * 0–100: 0 brokenflutter, 1 flutter, 2 off, 3 steady, 4 wink, 5 unused.
+     * 6–100 switching-function specific.
+     * @public
+     * @readonly
+     */
+    public readonly lampMode: LampMode;
+    /**
+     * @summary `lampBrightness`.
+     * @description
+     *
+     * Intensity when on: unspecified/normal (default), dim, or bright.
+     * Visible levels are lamp-dependent.
+     * @public
+     * @readonly
+     */
+    public readonly lampBrightness?: OPTIONAL<LampBrightness>;
+    /**
+     * @summary `lampColor`.
+     * @description
+     *
+     * 0–100: 0 none, 1 red, 2 yellow, 3 green, 4 blue, 5 unused. 6–100
+     * switching-function specific.
+     * @public
+     * @readonly
+     */
+    public readonly lampColor?: OPTIONAL<LampColor>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `device`.
-         * @description
-         *
-         * Physical-element DeviceID; other IDs are rejected (ECMA-269 §21 FR
-         * 1).
-         * @public
-         * @readonly
-         */
-        readonly device: DeviceID,
-        /**
-         * @summary `lamp`.
-         * @description
-         *
-         * LampID of the lamp to control.
-         * @public
-         * @readonly
-         */
-        readonly lamp: LampID,
-        /**
-         * @summary `lampMode`.
-         * @description
-         *
-         * 0–100: 0 brokenflutter, 1 flutter, 2 off, 3 steady, 4 wink, 5 unused.
-         * 6–100 switching-function specific.
-         * @public
-         * @readonly
-         */
-        readonly lampMode: LampMode,
-        /**
-         * @summary `lampBrightness`.
-         * @description
-         *
-         * Intensity when on: unspecified/normal (default), dim, or bright.
-         * Visible levels are lamp-dependent.
-         * @public
-         * @readonly
-         */
-        readonly lampBrightness?: OPTIONAL<LampBrightness>,
-        /**
-         * @summary `lampColor`.
-         * @description
-         *
-         * 0–100: 0 none, 1 red, 2 yellow, 3 green, 4 blue, 5 unused. 6–100
-         * switching-function specific.
-         * @public
-         * @readonly
-         */
-        readonly lampColor?: OPTIONAL<LampColor>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        device: DeviceID,
+        lamp: LampID,
+        lampMode: LampMode,
+        lampBrightness?: OPTIONAL<LampBrightness>,
+        lampColor?: OPTIONAL<LampColor>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.device = device;
+        this.lamp = lamp;
+        this.lampMode = lampMode;
+        this.lampBrightness = lampBrightness;
+        this.lampColor = lampColor;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a SetLampModeArgument

@@ -37,71 +37,85 @@ import { T_BcsmCamelTDPDataList, _decode_T_BcsmCamelTDPDataList, _encode_T_BcsmC
  */
 export
 class T_CSI {
+    /**
+     * @summary `t_BcsmCamelTDPDataList`.
+     * @description
+     *
+     * Terminating BCSM CAMEL TDP data. T-CSI shall not be segmented.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly t_BcsmCamelTDPDataList: T_BcsmCamelTDPDataList;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary `camelCapabilityHandling`.
+     * @description
+     *
+     * CAMEL phase of this CSI: 1-4. Values greater than 4 shall be treated
+     * as CAMEL phase 4.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly camelCapabilityHandling?: OPTIONAL<CamelCapabilityHandling>;
+    /**
+     * @summary `notificationToCSE`.
+     * @description
+     *
+     * Shall not be present when this CSI is sent to VLR, SGSN, or GMSC. May
+     * be included only in ATSI/ATM ack/NSDC.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly notificationToCSE?: OPTIONAL<NULL>;
+    /**
+     * @summary `csi_Active`.
+     * @description
+     *
+     * Shall not be present when this CSI is sent to VLR, SGSN, or GMSC. May
+     * be included only in ATSI/ATM ack/NSDC.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly csi_Active?: OPTIONAL<NULL>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `t_BcsmCamelTDPDataList`.
-         * @description
-         *
-         * Terminating BCSM CAMEL TDP data. T-CSI shall not be segmented.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly t_BcsmCamelTDPDataList: T_BcsmCamelTDPDataList,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary `camelCapabilityHandling`.
-         * @description
-         *
-         * CAMEL phase of this CSI: 1-4. Values greater than 4 shall be treated
-         * as CAMEL phase 4.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly camelCapabilityHandling?: OPTIONAL<CamelCapabilityHandling>,
-        /**
-         * @summary `notificationToCSE`.
-         * @description
-         *
-         * Shall not be present when this CSI is sent to VLR, SGSN, or GMSC. May
-         * be included only in ATSI/ATM ack/NSDC.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly notificationToCSE?: OPTIONAL<NULL>,
-        /**
-         * @summary `csi_Active`.
-         * @description
-         *
-         * Shall not be present when this CSI is sent to VLR, SGSN, or GMSC. May
-         * be included only in ATSI/ATM ack/NSDC.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly csi_Active?: OPTIONAL<NULL>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        t_BcsmCamelTDPDataList: T_BcsmCamelTDPDataList,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        camelCapabilityHandling?: OPTIONAL<CamelCapabilityHandling>,
+        notificationToCSE?: OPTIONAL<NULL>,
+        csi_Active?: OPTIONAL<NULL>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.t_BcsmCamelTDPDataList = t_BcsmCamelTDPDataList;
+        this.extensionContainer = extensionContainer;
+        this.camelCapabilityHandling = camelCapabilityHandling;
+        this.notificationToCSE = notificationToCSE;
+        this.csi_Active = csi_Active;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a T_CSI

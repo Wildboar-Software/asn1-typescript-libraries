@@ -35,26 +35,32 @@ import { LogAttrExtent, _decode_LogAttrExtent, _encode_LogAttrExtent } from "../
  */
 export
 class DOupdate_writeLogAttr {
+    /**
+     * @summary `attributeId`.
+     * @description
+     * Both attribute-id and attribute-value.
+     * ISO/IEC 9040:1997 §19.4.2; ISO/IEC 9041-1:1997 §12.1.
+     * @public
+     * @readonly
+     */
+    public readonly attributeId: AttrId;
+    /**
+     * @summary `logAttrExtent`.
+     * @description
+     * global, address or modal logical extent.
+     * ISO/IEC 9040:1997 §19.4.2.
+     * @public
+     * @readonly
+     */
+    public readonly logAttrExtent: LogAttrExtent;
+
     constructor (
-        /**
-         * @summary `attributeId`.
-         * @description
-         * Both attribute-id and attribute-value.
-         * ISO/IEC 9040:1997 §19.4.2; ISO/IEC 9041-1:1997 §12.1.
-         * @public
-         * @readonly
-         */
-        readonly attributeId: AttrId,
-        /**
-         * @summary `logAttrExtent`.
-         * @description
-         * global, address or modal logical extent.
-         * ISO/IEC 9040:1997 §19.4.2.
-         * @public
-         * @readonly
-         */
-        readonly logAttrExtent: LogAttrExtent
-    ) {}
+        attributeId: AttrId,
+        logAttrExtent: LogAttrExtent
+    ) {
+        this.attributeId = attributeId;
+        this.logAttrExtent = logAttrExtent;
+    }
 
     /**
      * @summary Restructures an object into a DOupdate_writeLogAttr

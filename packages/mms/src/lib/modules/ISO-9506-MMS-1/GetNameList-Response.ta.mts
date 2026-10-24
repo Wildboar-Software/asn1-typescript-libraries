@@ -37,32 +37,38 @@ import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-
  */
 export
 class GetNameList_Response {
+    /**
+     * @summary `listOfIdentifier`.
+     * @description
+     *
+     * Zero or more names, sorted per ISO 9506-1:2003 §5.4.2. Starts at the
+     * first name, or the first after Continue After. ISO 9506-1:2003
+     * §10.5.1.2.1, §10.5.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly listOfIdentifier: Identifier[];
+    /**
+     * @summary `moreFollows`.
+     * @description
+     *
+     * True if further GetNameList requests are needed. Shall be false if
+     * the list is empty or contains the last name. ASN.1 DEFAULT TRUE.
+     * ISO 9506-1:2003 §10.5.1.2.2; ISO 9506-2:2003 §10.5.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly moreFollows?: OPTIONAL<BOOLEAN>;
+
     constructor (
-        /**
-         * @summary `listOfIdentifier`.
-         * @description
-         *
-         * Zero or more names, sorted per ISO 9506-1:2003 §5.4.2. Starts at the
-         * first name, or the first after Continue After. ISO 9506-1:2003
-         * §10.5.1.2.1, §10.5.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly listOfIdentifier: Identifier[],
-        /**
-         * @summary `moreFollows`.
-         * @description
-         *
-         * True if further GetNameList requests are needed. Shall be false if
-         * the list is empty or contains the last name. ASN.1 DEFAULT TRUE.
-         * ISO 9506-1:2003 §10.5.1.2.2; ISO 9506-2:2003 §10.5.
-         *
-         * @public
-         * @readonly
-         */
-        readonly moreFollows?: OPTIONAL<BOOLEAN>
-    ) {}
+        listOfIdentifier: Identifier[],
+        moreFollows?: OPTIONAL<BOOLEAN>
+    ) {
+        this.listOfIdentifier = listOfIdentifier;
+        this.moreFollows = moreFollows;
+    }
 
     /**
      * @summary Restructures an object into a GetNameList_Response

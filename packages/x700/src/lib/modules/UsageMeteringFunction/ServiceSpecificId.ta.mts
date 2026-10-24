@@ -33,29 +33,35 @@ import * as $ from '@wildboar/asn1/functional';
  *
  */
 export class ServiceSpecificId {
+    /**
+     * @summary `service`.
+     * @description
+     *
+     * OID identifying the provider-id syntax
+     * (`UMF-SERVICE.&id`). ITU-T Rec. X.742 (1995)/Cor.2
+     * (02/2000) §4.
+     * @public
+     * @readonly
+     */
+    public readonly service: OBJECT_IDENTIFIER;
+    /**
+     * @summary `serviceSpecificId`.
+     * @description
+     *
+     * Identifier value for `service`. ITU-T Rec. X.742
+     * (1995)/Cor.2 (02/2000) §4.
+     * @public
+     * @readonly
+     */
+    public readonly serviceSpecificId: _Element;
+
     constructor(
-        /**
-         * @summary `service`.
-         * @description
-         *
-         * OID identifying the provider-id syntax
-         * (`UMF-SERVICE.&id`). ITU-T Rec. X.742 (1995)/Cor.2
-         * (02/2000) §4.
-         * @public
-         * @readonly
-         */
-        readonly service: OBJECT_IDENTIFIER,
-        /**
-         * @summary `serviceSpecificId`.
-         * @description
-         *
-         * Identifier value for `service`. ITU-T Rec. X.742
-         * (1995)/Cor.2 (02/2000) §4.
-         * @public
-         * @readonly
-         */
-        readonly serviceSpecificId: _Element
-    ) {}
+        service: OBJECT_IDENTIFIER,
+        serviceSpecificId: _Element
+    ) {
+        this.service = service;
+        this.serviceSpecificId = serviceSpecificId;
+    }
 
     /**
      * @summary Restructures an object into a ServiceSpecificId

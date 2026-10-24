@@ -39,84 +39,102 @@ import { CCBS_Feature, _decode_CCBS_Feature, _encode_CCBS_Feature } from "../MAP
  */
 export
 class RemoteUserFreeArg {
+    /**
+     * @summary `imsi`.
+     * @description
+     *
+     * A-subscriber IMSI.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly imsi: IMSI;
+    /**
+     * @summary `callInfo`.
+     * @description
+     *
+     * Call information.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly callInfo: ExternalSignalInfo;
+    /**
+     * @summary `ccbs_Feature`.
+     * @description
+     *
+     * CCBS feature.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ccbs_Feature: CCBS_Feature;
+    /**
+     * @summary `translatedB_Number`.
+     * @description
+     *
+     * Translated B-number.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly translatedB_Number: ISDN_AddressString;
+    /**
+     * @summary `replaceB_Number`.
+     * @description
+     *
+     * Replace B-number.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly replaceB_Number?: OPTIONAL<NULL>;
+    /**
+     * @summary `alertingPattern`.
+     * @description
+     *
+     * Alerting pattern.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly alertingPattern?: OPTIONAL<AlertingPattern>;
+    /**
+     * @summary `extensionContainer`.
+     * @description
+     *
+     * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `imsi`.
-         * @description
-         *
-         * A-subscriber IMSI.
-         *
-         * @public
-         * @readonly
-         */
-        readonly imsi: IMSI,
-        /**
-         * @summary `callInfo`.
-         * @description
-         *
-         * Call information.
-         *
-         * @public
-         * @readonly
-         */
-        readonly callInfo: ExternalSignalInfo,
-        /**
-         * @summary `ccbs_Feature`.
-         * @description
-         *
-         * CCBS feature.
-         *
-         * @public
-         * @readonly
-         */
-        readonly ccbs_Feature: CCBS_Feature,
-        /**
-         * @summary `translatedB_Number`.
-         * @description
-         *
-         * Translated B-number.
-         *
-         * @public
-         * @readonly
-         */
-        readonly translatedB_Number: ISDN_AddressString,
-        /**
-         * @summary `replaceB_Number`.
-         * @description
-         *
-         * Replace B-number.
-         *
-         * @public
-         * @readonly
-         */
-        readonly replaceB_Number?: OPTIONAL<NULL>,
-        /**
-         * @summary `alertingPattern`.
-         * @description
-         *
-         * Alerting pattern.
-         *
-         * @public
-         * @readonly
-         */
-        readonly alertingPattern?: OPTIONAL<AlertingPattern>,
-        /**
-         * @summary `extensionContainer`.
-         * @description
-         *
-         * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        imsi: IMSI,
+        callInfo: ExternalSignalInfo,
+        ccbs_Feature: CCBS_Feature,
+        translatedB_Number: ISDN_AddressString,
+        replaceB_Number?: OPTIONAL<NULL>,
+        alertingPattern?: OPTIONAL<AlertingPattern>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.imsi = imsi;
+        this.callInfo = callInfo;
+        this.ccbs_Feature = ccbs_Feature;
+        this.translatedB_Number = translatedB_Number;
+        this.replaceB_Number = replaceB_Number;
+        this.alertingPattern = alertingPattern;
+        this.extensionContainer = extensionContainer;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a RemoteUserFreeArg

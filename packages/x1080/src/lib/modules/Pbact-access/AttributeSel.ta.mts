@@ -43,26 +43,32 @@ import {
  *
  */
 export class AttributeSel {
+    /**
+     * @summary `attSelect`.
+     * @description
+     *
+     * All attributes (`allAttr`) or only listed types (`attributes`).
+     * ITU-T Rec. X.1080.0 (2017) Cor.1
+     * [§7.3.3](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly attSelect: AttributeSel_attSelect;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `attSelect`.
-         * @description
-         *
-         * All attributes (`allAttr`) or only listed types (`attributes`).
-         * ITU-T Rec. X.1080.0 (2017) Cor.1
-         * [§7.3.3](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly attSelect: AttributeSel_attSelect,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        attSelect: AttributeSel_attSelect,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.attSelect = attSelect;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a AttributeSel

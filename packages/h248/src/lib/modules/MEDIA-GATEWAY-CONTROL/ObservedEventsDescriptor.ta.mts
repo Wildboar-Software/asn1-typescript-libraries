@@ -37,29 +37,35 @@ import { ObservedEvent, _decode_ObservedEvent, _encode_ObservedEvent } from "../
  */
 export
 class ObservedEventsDescriptor {
+    /**
+     * @summary `requestId`.
+     * @description
+     *
+     * RequestID of the Events descriptor that triggered these events
+     * (clause 7.2.7). Used to correlate the Notify with the request.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly requestId: RequestID;
+    /**
+     * @summary `observedEventLst`.
+     * @description
+     *
+     * Events in the order they were detected.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly observedEventLst: ObservedEvent[];
+
     constructor (
-        /**
-         * @summary `requestId`.
-         * @description
-         *
-         * RequestID of the Events descriptor that triggered these events
-         * (clause 7.2.7). Used to correlate the Notify with the request.
-         *
-         * @public
-         * @readonly
-         */
-        readonly requestId: RequestID,
-        /**
-         * @summary `observedEventLst`.
-         * @description
-         *
-         * Events in the order they were detected.
-         *
-         * @public
-         * @readonly
-         */
-        readonly observedEventLst: ObservedEvent[]
-    ) {}
+        requestId: RequestID,
+        observedEventLst: ObservedEvent[]
+    ) {
+        this.requestId = requestId;
+        this.observedEventLst = observedEventLst;
+    }
 
     /**
      * @summary Restructures an object into a ObservedEventsDescriptor

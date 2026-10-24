@@ -42,33 +42,39 @@ import {
  *
  */
 export class TOsState {
+    /**
+     * @summary `tOInstance`.
+     * @description
+     *
+     * TO instance. Optional if the test invocation id is already a tOName
+     * (independent test identified by the TO DN). ITU-T Rec. X.745 (11/93)
+     * §A.7.2.
+     * [§A.7.2](https://www.itu.int/rec/T-REC-X.745-199311-I)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly tOInstance: OPTIONAL<ObjectInstance>;
+    /**
+     * @summary `testState`.
+     * @description
+     *
+     * TO state (X.731 mapping of 7.3.3). Before-suspend or after-resume,
+     * depending on the request. ITU-T Rec. X.745 (11/93) §9.7.
+     * [§9.7](https://www.itu.int/rec/T-REC-X.745-199311-I)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly testState: TestState;
+
     constructor(
-        /**
-         * @summary `tOInstance`.
-         * @description
-         *
-         * TO instance. Optional if the test invocation id is already a tOName
-         * (independent test identified by the TO DN). ITU-T Rec. X.745 (11/93)
-         * §A.7.2.
-         * [§A.7.2](https://www.itu.int/rec/T-REC-X.745-199311-I)
-         *
-         * @public
-         * @readonly
-         */
-        readonly tOInstance: OPTIONAL<ObjectInstance>,
-        /**
-         * @summary `testState`.
-         * @description
-         *
-         * TO state (X.731 mapping of 7.3.3). Before-suspend or after-resume,
-         * depending on the request. ITU-T Rec. X.745 (11/93) §9.7.
-         * [§9.7](https://www.itu.int/rec/T-REC-X.745-199311-I)
-         *
-         * @public
-         * @readonly
-         */
-        readonly testState: TestState
-    ) {}
+        tOInstance: OPTIONAL<ObjectInstance>,
+        testState: TestState
+    ) {
+        this.tOInstance = tOInstance;
+        this.testState = testState;
+    }
 
     /**
      * @summary Restructures an object into a TOsState

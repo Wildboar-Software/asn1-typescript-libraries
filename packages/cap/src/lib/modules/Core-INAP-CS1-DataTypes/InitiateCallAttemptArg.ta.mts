@@ -39,38 +39,50 @@ import { CallingPartyNumber, _decode_CallingPartyNumber, _encode_CallingPartyNum
  */
 export
 class InitiateCallAttemptArg {
+    /**
+     * @summary `destinationRoutingAddress`.
+     * @public
+     * @readonly
+     */
+    public readonly destinationRoutingAddress: DestinationRoutingAddress;
+    /**
+     * @summary `alertingPattern`.
+     * @public
+     * @readonly
+     */
+    public readonly alertingPattern?: OPTIONAL<AlertingPattern>;
+    /**
+     * @summary `extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<ExtensionField[]>;
+    /**
+     * @summary `serviceInteractionIndicators`.
+     * @public
+     * @readonly
+     */
+    public readonly serviceInteractionIndicators?: OPTIONAL<ServiceInteractionIndicators>;
+    /**
+     * @summary `callingPartyNumber`.
+     * @public
+     * @readonly
+     */
+    public readonly callingPartyNumber?: OPTIONAL<CallingPartyNumber>;
+
     constructor (
-        /**
-         * @summary `destinationRoutingAddress`.
-         * @public
-         * @readonly
-         */
-        readonly destinationRoutingAddress: DestinationRoutingAddress,
-        /**
-         * @summary `alertingPattern`.
-         * @public
-         * @readonly
-         */
-        readonly alertingPattern?: OPTIONAL<AlertingPattern>,
-        /**
-         * @summary `extensions`.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<ExtensionField[]>,
-        /**
-         * @summary `serviceInteractionIndicators`.
-         * @public
-         * @readonly
-         */
-        readonly serviceInteractionIndicators?: OPTIONAL<ServiceInteractionIndicators>,
-        /**
-         * @summary `callingPartyNumber`.
-         * @public
-         * @readonly
-         */
-        readonly callingPartyNumber?: OPTIONAL<CallingPartyNumber>
-    ) {}
+        destinationRoutingAddress: DestinationRoutingAddress,
+        alertingPattern?: OPTIONAL<AlertingPattern>,
+        extensions?: OPTIONAL<ExtensionField[]>,
+        serviceInteractionIndicators?: OPTIONAL<ServiceInteractionIndicators>,
+        callingPartyNumber?: OPTIONAL<CallingPartyNumber>
+    ) {
+        this.destinationRoutingAddress = destinationRoutingAddress;
+        this.alertingPattern = alertingPattern;
+        this.extensions = extensions;
+        this.serviceInteractionIndicators = serviceInteractionIndicators;
+        this.callingPartyNumber = callingPartyNumber;
+    }
 
     /**
      * @summary Restructures an object into a InitiateCallAttemptArg

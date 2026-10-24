@@ -31,18 +31,22 @@ import { ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-
  */
 export
 class DeleteJournal_Request {
+    /**
+     * @summary `journalName`.
+     * @description
+     *
+     * Journal to delete. ISO 9506-1:2003 §23.7.1.1.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly journalName: ObjectName;
+
     constructor (
-        /**
-         * @summary `journalName`.
-         * @description
-         *
-         * Journal to delete. ISO 9506-1:2003 §23.7.1.1.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly journalName: ObjectName
-    ) {}
+        journalName: ObjectName
+    ) {
+        this.journalName = journalName;
+    }
 
     /**
      * @summary Restructures an object into a DeleteJournal_Request

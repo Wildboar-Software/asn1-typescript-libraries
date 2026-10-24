@@ -37,14 +37,18 @@ import {
  *
  */
 export class FetchRestrictionError {
+    /**
+     * @summary `problems`.
+     * @public
+     * @readonly
+     */
+    public readonly problems: FetchRestrictionError_problems_Item[];
+
     constructor(
-        /**
-         * @summary `problems`.
-         * @public
-         * @readonly
-         */
-        readonly problems: FetchRestrictionError_problems_Item[]
-    ) {}
+        problems: FetchRestrictionError_problems_Item[]
+    ) {
+        this.problems = problems;
+    }
 
     /**
      * @summary Restructures an object into a FetchRestrictionError

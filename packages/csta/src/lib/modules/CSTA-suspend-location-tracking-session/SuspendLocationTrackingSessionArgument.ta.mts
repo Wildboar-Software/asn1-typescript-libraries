@@ -36,29 +36,35 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class SuspendLocationTrackingSessionArgument {
+    /**
+     * @summary `locCrossRefID`.
+     * @description
+     *
+     * Identifies the location tracking session (ECMA-269 §6.8.4).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly locCrossRefID: LocCrossRefID;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * CSTACommonArguments carrying the service-table security and
+     * privateData parameters.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `locCrossRefID`.
-         * @description
-         *
-         * Identifies the location tracking session (ECMA-269 §6.8.4).
-         *
-         * @public
-         * @readonly
-         */
-        readonly locCrossRefID: LocCrossRefID,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * CSTACommonArguments carrying the service-table security and
-         * privateData parameters.
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        locCrossRefID: LocCrossRefID,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.locCrossRefID = locCrossRefID;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a SuspendLocationTrackingSessionArgument

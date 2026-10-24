@@ -38,29 +38,35 @@ import { StatisticInformationSet, _decode_StatisticInformationSet, _encode_Stati
  */
 export
 class TestResultEnrol {
+    /**
+     * @summary `failureToEnrolRate`.
+     * @description
+     *
+     * Failure-to-enrol rate (FTE) (Clause 6.4.4.3.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly failureToEnrolRate: REAL;
+    /**
+     * @summary `durationEnrol`.
+     * @description
+     *
+     * Enrolment duration statistics; covers successful and failed
+     * operations (Clause 6.4.4.3.1, Annex C.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly durationEnrol?: OPTIONAL<StatisticInformationSet>;
+
     constructor (
-        /**
-         * @summary `failureToEnrolRate`.
-         * @description
-         *
-         * Failure-to-enrol rate (FTE) (Clause 6.4.4.3.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly failureToEnrolRate: REAL,
-        /**
-         * @summary `durationEnrol`.
-         * @description
-         *
-         * Enrolment duration statistics; covers successful and failed
-         * operations (Clause 6.4.4.3.1, Annex C.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly durationEnrol?: OPTIONAL<StatisticInformationSet>
-    ) {}
+        failureToEnrolRate: REAL,
+        durationEnrol?: OPTIONAL<StatisticInformationSet>
+    ) {
+        this.failureToEnrolRate = failureToEnrolRate;
+        this.durationEnrol = durationEnrol;
+    }
 
     /**
      * @summary Restructures an object into a TestResultEnrol

@@ -40,59 +40,71 @@ import { VersionProduct, _decode_VersionProduct, _encode_VersionProduct } from "
  */
 export
 class NameProduct {
+    /**
+     * @summary `modelName`.
+     * @description
+     *
+     * Identifies the product (Clause 6.4.2.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly modelName: Name;
+    /**
+     * @summary `productCBEFF`.
+     * @description
+     *
+     * If used, shall conform to ISO/IEC 19785-3. For a product
+     * registered with a biometric organization (Clause 6.4.2.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly productCBEFF: OPTIONAL<Product>;
+    /**
+     * @summary `version`.
+     * @description
+     *
+     * Version of the product (Clause 6.4.2.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly version: VersionProduct;
+    /**
+     * @summary `softwareVersion`.
+     * @description
+     *
+     * Version of the product software (Clause 6.4.2.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly softwareVersion: VersionProduct;
+    /**
+     * @summary `firmwareVersion`.
+     * @description
+     *
+     * Version of the product firmware (Clause 6.4.2.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly firmwareVersion: VersionProduct;
+
     constructor (
-        /**
-         * @summary `modelName`.
-         * @description
-         *
-         * Identifies the product (Clause 6.4.2.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly modelName: Name,
-        /**
-         * @summary `productCBEFF`.
-         * @description
-         *
-         * If used, shall conform to ISO/IEC 19785-3. For a product
-         * registered with a biometric organization (Clause 6.4.2.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly productCBEFF: OPTIONAL<Product>,
-        /**
-         * @summary `version`.
-         * @description
-         *
-         * Version of the product (Clause 6.4.2.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly version: VersionProduct,
-        /**
-         * @summary `softwareVersion`.
-         * @description
-         *
-         * Version of the product software (Clause 6.4.2.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly softwareVersion: VersionProduct,
-        /**
-         * @summary `firmwareVersion`.
-         * @description
-         *
-         * Version of the product firmware (Clause 6.4.2.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly firmwareVersion: VersionProduct
-    ) {}
+        modelName: Name,
+        productCBEFF: OPTIONAL<Product>,
+        version: VersionProduct,
+        softwareVersion: VersionProduct,
+        firmwareVersion: VersionProduct
+    ) {
+        this.modelName = modelName;
+        this.productCBEFF = productCBEFF;
+        this.version = version;
+        this.softwareVersion = softwareVersion;
+        this.firmwareVersion = firmwareVersion;
+    }
 
     /**
      * @summary Restructures an object into a NameProduct

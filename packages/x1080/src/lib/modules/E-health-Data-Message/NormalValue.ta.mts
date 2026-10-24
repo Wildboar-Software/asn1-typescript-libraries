@@ -47,28 +47,34 @@ import {
  *
  */
 export class NormalValue {
+    /**
+     * @summary `value`.
+     * @description
+     *
+     * Range, low-limit, or high-limit of the normal interval.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly value: NormalValue_value;
+    /**
+     * @summary `conditions`.
+     * @description
+     *
+     * Optional conditions under which this interval applies.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly conditions?: OPTIONAL<Condition[]>;
+
     constructor(
-        /**
-         * @summary `value`.
-         * @description
-         *
-         * Range, low-limit, or high-limit of the normal interval.
-         *
-         * @public
-         * @readonly
-         */
-        readonly value: NormalValue_value,
-        /**
-         * @summary `conditions`.
-         * @description
-         *
-         * Optional conditions under which this interval applies.
-         *
-         * @public
-         * @readonly
-         */
-        readonly conditions?: OPTIONAL<Condition[]>
-    ) {}
+        value: NormalValue_value,
+        conditions?: OPTIONAL<Condition[]>
+    ) {
+        this.value = value;
+        this.conditions = conditions;
+    }
 
     /**
      * @summary Restructures an object into a NormalValue

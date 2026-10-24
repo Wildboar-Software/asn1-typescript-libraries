@@ -22,20 +22,26 @@ import * as $ from "@wildboar/asn1/functional";
  *
  */
 export class CredentialIdentifier {
+    /**
+     * @summary `idType`.
+     * @public
+     * @readonly
+     */
+    public readonly idType: INTEGER;
+    /**
+     * @summary `idValue`.
+     * @public
+     * @readonly
+     */
+    public readonly idValue: _Element;
+
     constructor(
-        /**
-         * @summary `idType`.
-         * @public
-         * @readonly
-         */
-        readonly idType: INTEGER,
-        /**
-         * @summary `idValue`.
-         * @public
-         * @readonly
-         */
-        readonly idValue: _Element
-    ) {}
+        idType: INTEGER,
+        idValue: _Element
+    ) {
+        this.idType = idType;
+        this.idValue = idValue;
+    }
 
     /**
      * @summary Restructures an object into a CredentialIdentifier

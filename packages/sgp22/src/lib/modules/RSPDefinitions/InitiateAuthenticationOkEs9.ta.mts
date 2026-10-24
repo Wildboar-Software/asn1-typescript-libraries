@@ -37,62 +37,74 @@ import { type Certificate, _decode_Certificate, _encode_Certificate } from "@wil
  */
 export
 class InitiateAuthenticationOkEs9 {
+    /**
+     * @summary `transactionId`.
+     * @description
+     * 
+     * New session id. Unique for the life of this SM-DP+. SGP.22 v3.1
+     * §5.6.1.
+     * 
+     * @public
+     * @readonly
+     */
+    public readonly transactionId: TransactionId;
+    /**
+     * @summary `serverSigned1`.
+     * @description
+     * 
+     * Input to ES10b.AuthenticateServer. SGP.22 v3.1 §5.6.1.
+     * 
+     * @public
+     * @readonly
+     */
+    public readonly serverSigned1: ServerSigned1;
+    /**
+     * @summary `serverSignature1`.
+     * @description
+     * 
+     * Signature over `serverSigned1`, tag `'5F37'`. SGP.22 v3.1 §5.6.1.
+     * 
+     * @public
+     * @readonly
+     */
+    public readonly serverSignature1: OCTET_STRING;
+    /**
+     * @summary `euiccCiPKIdToBeUsed`.
+     * @description
+     * 
+     * CI public key the eUICC must sign with. Taken from
+     * `euiccCiPKIdListForSigning` unless the server cannot support any of
+     * them. SGP.22 v3.1 §5.6.1.
+     * 
+     * @public
+     * @readonly
+     */
+    public readonly euiccCiPKIdToBeUsed: OCTET_STRING;
+    /**
+     * @summary `serverCertificate`.
+     * @description
+     * 
+     * CERT.DPauth.SIG (or CERT.DSauth.SIG on ES11) to give the eUICC.
+     * SGP.22 v3.1 §5.6.1.
+     * 
+     * @public
+     * @readonly
+     */
+    public readonly serverCertificate: Certificate;
+
     constructor (
-        /**
-         * @summary `transactionId`.
-         * @description
-         * 
-         * New session id. Unique for the life of this SM-DP+. SGP.22 v3.1
-         * §5.6.1.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly transactionId: TransactionId,
-        /**
-         * @summary `serverSigned1`.
-         * @description
-         * 
-         * Input to ES10b.AuthenticateServer. SGP.22 v3.1 §5.6.1.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly serverSigned1: ServerSigned1,
-        /**
-         * @summary `serverSignature1`.
-         * @description
-         * 
-         * Signature over `serverSigned1`, tag `'5F37'`. SGP.22 v3.1 §5.6.1.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly serverSignature1: OCTET_STRING,
-        /**
-         * @summary `euiccCiPKIdToBeUsed`.
-         * @description
-         * 
-         * CI public key the eUICC must sign with. Taken from
-         * `euiccCiPKIdListForSigning` unless the server cannot support any of
-         * them. SGP.22 v3.1 §5.6.1.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly euiccCiPKIdToBeUsed: OCTET_STRING,
-        /**
-         * @summary `serverCertificate`.
-         * @description
-         * 
-         * CERT.DPauth.SIG (or CERT.DSauth.SIG on ES11) to give the eUICC.
-         * SGP.22 v3.1 §5.6.1.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly serverCertificate: Certificate
-    ) {}
+        transactionId: TransactionId,
+        serverSigned1: ServerSigned1,
+        serverSignature1: OCTET_STRING,
+        euiccCiPKIdToBeUsed: OCTET_STRING,
+        serverCertificate: Certificate
+    ) {
+        this.transactionId = transactionId;
+        this.serverSigned1 = serverSigned1;
+        this.serverSignature1 = serverSignature1;
+        this.euiccCiPKIdToBeUsed = euiccCiPKIdToBeUsed;
+        this.serverCertificate = serverCertificate;
+    }
 
     /**
      * @summary Restructures an object into a InitiateAuthenticationOkEs9

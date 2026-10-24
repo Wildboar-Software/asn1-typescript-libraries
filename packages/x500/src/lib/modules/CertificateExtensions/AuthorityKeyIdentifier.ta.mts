@@ -47,45 +47,55 @@ import {
  *
  */
 export class AuthorityKeyIdentifier {
+    /**
+     * @summary `keyIdentifier`.
+     * @description
+     *
+     * Unique among this issuer's keys. Preferred selector in path building.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly keyIdentifier?: OPTIONAL<KeyIdentifier>;
+    /**
+     * @summary `authorityCertIssuer`.
+     * @description
+     *
+     * With serial, a preference hint — not a hard identifier. Both present
+     * or both absent.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly authorityCertIssuer?: OPTIONAL<GeneralNames>;
+    /**
+     * @summary `authorityCertSerialNumber`.
+     * @description
+     *
+     * Paired with authorityCertIssuer; both present or both absent.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly authorityCertSerialNumber?: OPTIONAL<CertificateSerialNumber>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `keyIdentifier`.
-         * @description
-         *
-         * Unique among this issuer's keys. Preferred selector in path building.
-         *
-         * @public
-         * @readonly
-         */
-        readonly keyIdentifier?: OPTIONAL<KeyIdentifier>,
-        /**
-         * @summary `authorityCertIssuer`.
-         * @description
-         *
-         * With serial, a preference hint — not a hard identifier. Both present
-         * or both absent.
-         *
-         * @public
-         * @readonly
-         */
-        readonly authorityCertIssuer?: OPTIONAL<GeneralNames>,
-        /**
-         * @summary `authorityCertSerialNumber`.
-         * @description
-         *
-         * Paired with authorityCertIssuer; both present or both absent.
-         *
-         * @public
-         * @readonly
-         */
-        readonly authorityCertSerialNumber?: OPTIONAL<CertificateSerialNumber>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        keyIdentifier?: OPTIONAL<KeyIdentifier>,
+        authorityCertIssuer?: OPTIONAL<GeneralNames>,
+        authorityCertSerialNumber?: OPTIONAL<CertificateSerialNumber>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.keyIdentifier = keyIdentifier;
+        this.authorityCertIssuer = authorityCertIssuer;
+        this.authorityCertSerialNumber = authorityCertSerialNumber;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a AuthorityKeyIdentifier

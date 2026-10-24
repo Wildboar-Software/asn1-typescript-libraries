@@ -36,29 +36,35 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class IORegisterCancelArgument {
+    /**
+     * @summary `ioRegisterReqID`.
+     * @description
+     *
+     * I/O registration to cancel (ECMA-269 §24.1.3.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ioRegisterReqID: IORegisterReqID;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * CSTACommonArguments carrying the service-table security and
+     * privateData parameters.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `ioRegisterReqID`.
-         * @description
-         *
-         * I/O registration to cancel (ECMA-269 §24.1.3.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly ioRegisterReqID: IORegisterReqID,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * CSTACommonArguments carrying the service-table security and
-         * privateData parameters.
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        ioRegisterReqID: IORegisterReqID,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.ioRegisterReqID = ioRegisterReqID;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a IORegisterCancelArgument

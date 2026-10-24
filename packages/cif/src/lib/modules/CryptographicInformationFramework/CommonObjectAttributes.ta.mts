@@ -50,64 +50,77 @@ import { cia_ub_userConsent } from "../CryptographicInformationFramework/cia-ub-
  */
 export
 class CommonObjectAttributes {
+    /**
+     * @summary `label`.
+     * @description
+     * Display name for MMI (e.g. "bank certificate" vs "e-mail
+     * certificate"). ISO/IEC 7816-15:2016 §8.2.8.
+     * @public
+     * @readonly
+     */
+    public readonly label?: OPTIONAL<Label>;
+    /**
+     * @summary `flags`.
+     * @description
+     * `private` requires authentication before access; `modifiable` means
+     * the value may be updated (still after authentication if also
+     * private). Bit `internal` is historical and shall not be used. ISO/IEC
+     * 7816-15:2016 §8.2.8.
+     * @public
+     * @readonly
+     */
+    public readonly flags?: OPTIONAL<CommonObjectFlags>;
+    /**
+     * @summary `authId`.
+     * @description
+     * For a private object, cross-reference to the protecting
+     * authentication object. ISO/IEC 7816-15:2016 §8.2.8.
+     * @public
+     * @readonly
+     */
+    public readonly authId?: OPTIONAL<Identifier>;
+    /**
+     * @summary `userConsent`.
+     * @description
+     * How many times an application may access the object without a new
+     * user consent. 1 means authenticate before every access; 3 means
+     * before the 1st, 4th, 7th, … access. The card may enforce this with
+     * counter objects (ISO/IEC 7816-8). ISO/IEC 7816-15:2016 §8.2.8.
+     * @public
+     * @readonly
+     */
+    public readonly userConsent?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `accessControlRules`.
+     * @description
+     * Fine-grained Boolean conditions per access mode. If a mode has no
+     * rule, that mode is not allowed. If this component is absent, deduce
+     * rules by other means (e.g. FCI). ISO/IEC 7816-15:2016 §8.2.8.
+     * @public
+     * @readonly
+     */
+    public readonly accessControlRules?: OPTIONAL<AccessControlRule[]>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `label`.
-         * @description
-         * Display name for MMI (e.g. "bank certificate" vs "e-mail
-         * certificate"). ISO/IEC 7816-15:2016 §8.2.8.
-         * @public
-         * @readonly
-         */
-        readonly label?: OPTIONAL<Label>,
-        /**
-         * @summary `flags`.
-         * @description
-         * `private` requires authentication before access; `modifiable` means
-         * the value may be updated (still after authentication if also
-         * private). Bit `internal` is historical and shall not be used. ISO/IEC
-         * 7816-15:2016 §8.2.8.
-         * @public
-         * @readonly
-         */
-        readonly flags?: OPTIONAL<CommonObjectFlags>,
-        /**
-         * @summary `authId`.
-         * @description
-         * For a private object, cross-reference to the protecting
-         * authentication object. ISO/IEC 7816-15:2016 §8.2.8.
-         * @public
-         * @readonly
-         */
-        readonly authId?: OPTIONAL<Identifier>,
-        /**
-         * @summary `userConsent`.
-         * @description
-         * How many times an application may access the object without a new
-         * user consent. 1 means authenticate before every access; 3 means
-         * before the 1st, 4th, 7th, … access. The card may enforce this with
-         * counter objects (ISO/IEC 7816-8). ISO/IEC 7816-15:2016 §8.2.8.
-         * @public
-         * @readonly
-         */
-        readonly userConsent?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `accessControlRules`.
-         * @description
-         * Fine-grained Boolean conditions per access mode. If a mode has no
-         * rule, that mode is not allowed. If this component is absent, deduce
-         * rules by other means (e.g. FCI). ISO/IEC 7816-15:2016 §8.2.8.
-         * @public
-         * @readonly
-         */
-        readonly accessControlRules?: OPTIONAL<AccessControlRule[]>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
+        label?: OPTIONAL<Label>,
+        flags?: OPTIONAL<CommonObjectFlags>,
+        authId?: OPTIONAL<Identifier>,
+        userConsent?: OPTIONAL<INTEGER>,
+        accessControlRules?: OPTIONAL<AccessControlRule[]>,
+        _unrecognizedExtensionsList: _Element[] = []
     ) {
+        this.label = label;
+        this.flags = flags;
+        this.authId = authId;
+        this.userConsent = userConsent;
+        this.accessControlRules = accessControlRules;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
         if (userConsent !== undefined) {
             const n = typeof userConsent === "bigint" ? userConsent : BigInt(userConsent);
             if (n < 1n || n > BigInt(cia_ub_userConsent)) {

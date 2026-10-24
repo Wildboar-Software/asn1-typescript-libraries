@@ -55,80 +55,92 @@ import { ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-
  */
 export
 class GetAlarmSummary_Request {
+    /**
+     * @summary `enrollmentsOnly`.
+     * @description
+     *
+     * True: include only monitored conditions that
+     * reference a notification enrollment whose
+     * `&clientApplication` is the requesting client.
+     * Default true.
+     *
+     * [ISO 9506-1:2003 §18.5.1.1.1]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly enrollmentsOnly?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `activeAlarmsOnly`.
+     * @description
+     *
+     * True: only conditions whose `&ecState` is `active`.
+     * False: ignore `&ecState`. Default true.
+     *
+     * [ISO 9506-1:2003 §18.5.1.1.2]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly activeAlarmsOnly?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `acknowledgementFilter`.
+     * @description
+     *
+     * Restrict by enrollment `&ackState`. `not-acked`: at
+     * least one unacknowledged enrollment (`noAckI` or
+     * `noAckA`); `acked`: all referenced enrollments
+     * acknowledged; `all`: ignore ack status. Default
+     * `not-acked`.
+     *
+     * [ISO 9506-1:2003 §18.5.1.1.3]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly acknowledgementFilter?: OPTIONAL<GetAlarmSummary_Request_acknowledgementFilter>;
+    /**
+     * @summary `severityFilter`.
+     * @description
+     *
+     * Inclusive range of Event Condition `&severity`.
+     * Default mostSevere 0, leastSevere 127 (all).
+     *
+     * [ISO 9506-1:2003 §18.5.1.1.4]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly severityFilter?: OPTIONAL<GetAlarmSummary_Request_severityFilter>;
+    /**
+     * @summary `continueAfter`.
+     * @description
+     *
+     * Present when continuing a partial summary. Equal to
+     * the last Event Condition Name in the prior
+     * `listOfAlarmSummary` when that response had
+     * `moreFollows` true. Otherwise omitted.
+     *
+     * [ISO 9506-1:2003 §18.5.1.1.5]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly continueAfter?: OPTIONAL<ObjectName>;
+
     constructor (
-        /**
-         * @summary `enrollmentsOnly`.
-         * @description
-         *
-         * True: include only monitored conditions that
-         * reference a notification enrollment whose
-         * `&clientApplication` is the requesting client.
-         * Default true.
-         *
-         * [ISO 9506-1:2003 §18.5.1.1.1]
-         *
-         * @public
-         * @readonly
-         */
-        readonly enrollmentsOnly?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `activeAlarmsOnly`.
-         * @description
-         *
-         * True: only conditions whose `&ecState` is `active`.
-         * False: ignore `&ecState`. Default true.
-         *
-         * [ISO 9506-1:2003 §18.5.1.1.2]
-         *
-         * @public
-         * @readonly
-         */
-        readonly activeAlarmsOnly?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `acknowledgementFilter`.
-         * @description
-         *
-         * Restrict by enrollment `&ackState`. `not-acked`: at
-         * least one unacknowledged enrollment (`noAckI` or
-         * `noAckA`); `acked`: all referenced enrollments
-         * acknowledged; `all`: ignore ack status. Default
-         * `not-acked`.
-         *
-         * [ISO 9506-1:2003 §18.5.1.1.3]
-         *
-         * @public
-         * @readonly
-         */
-        readonly acknowledgementFilter?: OPTIONAL<GetAlarmSummary_Request_acknowledgementFilter>,
-        /**
-         * @summary `severityFilter`.
-         * @description
-         *
-         * Inclusive range of Event Condition `&severity`.
-         * Default mostSevere 0, leastSevere 127 (all).
-         *
-         * [ISO 9506-1:2003 §18.5.1.1.4]
-         *
-         * @public
-         * @readonly
-         */
-        readonly severityFilter?: OPTIONAL<GetAlarmSummary_Request_severityFilter>,
-        /**
-         * @summary `continueAfter`.
-         * @description
-         *
-         * Present when continuing a partial summary. Equal to
-         * the last Event Condition Name in the prior
-         * `listOfAlarmSummary` when that response had
-         * `moreFollows` true. Otherwise omitted.
-         *
-         * [ISO 9506-1:2003 §18.5.1.1.5]
-         *
-         * @public
-         * @readonly
-         */
-        readonly continueAfter?: OPTIONAL<ObjectName>
-    ) {}
+        enrollmentsOnly?: OPTIONAL<BOOLEAN>,
+        activeAlarmsOnly?: OPTIONAL<BOOLEAN>,
+        acknowledgementFilter?: OPTIONAL<GetAlarmSummary_Request_acknowledgementFilter>,
+        severityFilter?: OPTIONAL<GetAlarmSummary_Request_severityFilter>,
+        continueAfter?: OPTIONAL<ObjectName>
+    ) {
+        this.enrollmentsOnly = enrollmentsOnly;
+        this.activeAlarmsOnly = activeAlarmsOnly;
+        this.acknowledgementFilter = acknowledgementFilter;
+        this.severityFilter = severityFilter;
+        this.continueAfter = continueAfter;
+    }
 
     /**
      * @summary Restructures an object into a GetAlarmSummary_Request

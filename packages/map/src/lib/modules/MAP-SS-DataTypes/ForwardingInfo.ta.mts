@@ -29,34 +29,42 @@ import { ForwardingFeatureList, _decode_ForwardingFeatureList, _encode_Forwardin
  */
 export
 class ForwardingInfo {
+    /**
+     * @summary `ss_Code`.
+     * @description
+     *
+     * SS-Code of the call forwarding service (clause 7.6.4.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ss_Code: OPTIONAL<SS_Code>;
+    /**
+     * @summary `forwardingFeatureList`.
+     * @description
+     *
+     * One item per Basic Service Group (clause 7.6.4.15).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly forwardingFeatureList: ForwardingFeatureList;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `ss_Code`.
-         * @description
-         *
-         * SS-Code of the call forwarding service (clause 7.6.4.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly ss_Code: OPTIONAL<SS_Code>,
-        /**
-         * @summary `forwardingFeatureList`.
-         * @description
-         *
-         * One item per Basic Service Group (clause 7.6.4.15).
-         *
-         * @public
-         * @readonly
-         */
-        readonly forwardingFeatureList: ForwardingFeatureList,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        ss_Code: OPTIONAL<SS_Code>,
+        forwardingFeatureList: ForwardingFeatureList,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.ss_Code = ss_Code;
+        this.forwardingFeatureList = forwardingFeatureList;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a ForwardingInfo

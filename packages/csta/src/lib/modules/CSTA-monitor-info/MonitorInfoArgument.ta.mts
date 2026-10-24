@@ -43,60 +43,72 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class MonitorInfoArgument {
+    /**
+     * @summary `serviceCrossRefID`.
+     * @description
+     *
+     * Associates this segment with the original request. ECMA-269
+     * segmented-response model.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly serviceCrossRefID: ServiceCrossRefID;
+    /**
+     * @summary `segmentID`.
+     * @description
+     *
+     * Segment number; each successive segment increments by one. ECMA-269.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly segmentID: OPTIONAL<INTEGER>;
+    /**
+     * @summary `lastSegment`.
+     * @description
+     *
+     * TRUE if this is the last segment for the serviceCrossRefID. ECMA-269.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly lastSegment: BOOLEAN;
+    /**
+     * @summary `monitorList`.
+     * @description
+     *
+     * Zero or more monitors (cross-ref and monitor object). ECMA-269
+     * §15.1.5.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly monitorList: MonitorList;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * CSTA common arguments (security, private data, timestamps). ECMA-269.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `serviceCrossRefID`.
-         * @description
-         *
-         * Associates this segment with the original request. ECMA-269
-         * segmented-response model.
-         *
-         * @public
-         * @readonly
-         */
-        readonly serviceCrossRefID: ServiceCrossRefID,
-        /**
-         * @summary `segmentID`.
-         * @description
-         *
-         * Segment number; each successive segment increments by one. ECMA-269.
-         *
-         * @public
-         * @readonly
-         */
-        readonly segmentID: OPTIONAL<INTEGER>,
-        /**
-         * @summary `lastSegment`.
-         * @description
-         *
-         * TRUE if this is the last segment for the serviceCrossRefID. ECMA-269.
-         *
-         * @public
-         * @readonly
-         */
-        readonly lastSegment: BOOLEAN,
-        /**
-         * @summary `monitorList`.
-         * @description
-         *
-         * Zero or more monitors (cross-ref and monitor object). ECMA-269
-         * §15.1.5.
-         *
-         * @public
-         * @readonly
-         */
-        readonly monitorList: MonitorList,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * CSTA common arguments (security, private data, timestamps). ECMA-269.
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        serviceCrossRefID: ServiceCrossRefID,
+        segmentID: OPTIONAL<INTEGER>,
+        lastSegment: BOOLEAN,
+        monitorList: MonitorList,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.serviceCrossRefID = serviceCrossRefID;
+        this.segmentID = segmentID;
+        this.lastSegment = lastSegment;
+        this.monitorList = monitorList;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a MonitorInfoArgument

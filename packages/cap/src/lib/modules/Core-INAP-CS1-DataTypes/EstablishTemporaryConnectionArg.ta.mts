@@ -39,38 +39,50 @@ import { ServiceInteractionIndicators, _decode_ServiceInteractionIndicators, _en
  */
 export
 class EstablishTemporaryConnectionArg {
+    /**
+     * @summary `assistingSSPIPRoutingAddress`.
+     * @public
+     * @readonly
+     */
+    public readonly assistingSSPIPRoutingAddress: AssistingSSPIPRoutingAddress;
+    /**
+     * @summary `correlationID`.
+     * @public
+     * @readonly
+     */
+    public readonly correlationID?: OPTIONAL<CorrelationID>;
+    /**
+     * @summary `scfID`.
+     * @public
+     * @readonly
+     */
+    public readonly scfID?: OPTIONAL<ScfID>;
+    /**
+     * @summary `extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<ExtensionField[]>;
+    /**
+     * @summary `serviceInteractionIndicators`.
+     * @public
+     * @readonly
+     */
+    public readonly serviceInteractionIndicators?: OPTIONAL<ServiceInteractionIndicators>;
+
     constructor (
-        /**
-         * @summary `assistingSSPIPRoutingAddress`.
-         * @public
-         * @readonly
-         */
-        readonly assistingSSPIPRoutingAddress: AssistingSSPIPRoutingAddress,
-        /**
-         * @summary `correlationID`.
-         * @public
-         * @readonly
-         */
-        readonly correlationID?: OPTIONAL<CorrelationID>,
-        /**
-         * @summary `scfID`.
-         * @public
-         * @readonly
-         */
-        readonly scfID?: OPTIONAL<ScfID>,
-        /**
-         * @summary `extensions`.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<ExtensionField[]>,
-        /**
-         * @summary `serviceInteractionIndicators`.
-         * @public
-         * @readonly
-         */
-        readonly serviceInteractionIndicators?: OPTIONAL<ServiceInteractionIndicators>
-    ) {}
+        assistingSSPIPRoutingAddress: AssistingSSPIPRoutingAddress,
+        correlationID?: OPTIONAL<CorrelationID>,
+        scfID?: OPTIONAL<ScfID>,
+        extensions?: OPTIONAL<ExtensionField[]>,
+        serviceInteractionIndicators?: OPTIONAL<ServiceInteractionIndicators>
+    ) {
+        this.assistingSSPIPRoutingAddress = assistingSSPIPRoutingAddress;
+        this.correlationID = correlationID;
+        this.scfID = scfID;
+        this.extensions = extensions;
+        this.serviceInteractionIndicators = serviceInteractionIndicators;
+    }
 
     /**
      * @summary Restructures an object into a EstablishTemporaryConnectionArg

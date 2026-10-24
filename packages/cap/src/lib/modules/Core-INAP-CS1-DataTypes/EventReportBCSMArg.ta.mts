@@ -39,38 +39,50 @@ import { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "
  */
 export
 class EventReportBCSMArg {
+    /**
+     * @summary `eventTypeBCSM`.
+     * @public
+     * @readonly
+     */
+    public readonly eventTypeBCSM: EventTypeBCSM;
+    /**
+     * @summary `eventSpecificInformationBCSM`.
+     * @public
+     * @readonly
+     */
+    public readonly eventSpecificInformationBCSM?: OPTIONAL<EventSpecificInformationBCSM>;
+    /**
+     * @summary `legID`.
+     * @public
+     * @readonly
+     */
+    public readonly legID?: OPTIONAL<LegID>;
+    /**
+     * @summary `miscCallInfo`.
+     * @public
+     * @readonly
+     */
+    public readonly miscCallInfo?: OPTIONAL<MiscCallInfo>;
+    /**
+     * @summary `extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<ExtensionField[]>;
+
     constructor (
-        /**
-         * @summary `eventTypeBCSM`.
-         * @public
-         * @readonly
-         */
-        readonly eventTypeBCSM: EventTypeBCSM,
-        /**
-         * @summary `eventSpecificInformationBCSM`.
-         * @public
-         * @readonly
-         */
-        readonly eventSpecificInformationBCSM?: OPTIONAL<EventSpecificInformationBCSM>,
-        /**
-         * @summary `legID`.
-         * @public
-         * @readonly
-         */
-        readonly legID?: OPTIONAL<LegID>,
-        /**
-         * @summary `miscCallInfo`.
-         * @public
-         * @readonly
-         */
-        readonly miscCallInfo?: OPTIONAL<MiscCallInfo>,
-        /**
-         * @summary `extensions`.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<ExtensionField[]>
-    ) {}
+        eventTypeBCSM: EventTypeBCSM,
+        eventSpecificInformationBCSM?: OPTIONAL<EventSpecificInformationBCSM>,
+        legID?: OPTIONAL<LegID>,
+        miscCallInfo?: OPTIONAL<MiscCallInfo>,
+        extensions?: OPTIONAL<ExtensionField[]>
+    ) {
+        this.eventTypeBCSM = eventTypeBCSM;
+        this.eventSpecificInformationBCSM = eventSpecificInformationBCSM;
+        this.legID = legID;
+        this.miscCallInfo = miscCallInfo;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a EventReportBCSMArg

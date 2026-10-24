@@ -39,25 +39,31 @@ import { ProfileArgumValueList_specialProfileArgums_Item_value, _decode_ProfileA
  */
 export
 class ProfileArgumValueList_specialProfileArgums_Item {
+    /**
+     * @summary `identifier`.
+     * @description
+     * Profile-defined argument number. ISO/IEC 9040:1997 §3.3.51.
+     * @public
+     * @readonly
+     */
+    public readonly identifier: INTEGER;
+    /**
+     * @summary `value`.
+     * @description
+     * Chosen boolean, integer, string, or OID. ISO/IEC 9041-1:1997
+     * §12.2.
+     * @public
+     * @readonly
+     */
+    public readonly value: ProfileArgumValueList_specialProfileArgums_Item_value;
+
     constructor (
-        /**
-         * @summary `identifier`.
-         * @description
-         * Profile-defined argument number. ISO/IEC 9040:1997 §3.3.51.
-         * @public
-         * @readonly
-         */
-        readonly identifier: INTEGER,
-        /**
-         * @summary `value`.
-         * @description
-         * Chosen boolean, integer, string, or OID. ISO/IEC 9041-1:1997
-         * §12.2.
-         * @public
-         * @readonly
-         */
-        readonly value: ProfileArgumValueList_specialProfileArgums_Item_value
-    ) {}
+        identifier: INTEGER,
+        value: ProfileArgumValueList_specialProfileArgums_Item_value
+    ) {
+        this.identifier = identifier;
+        this.value = value;
+    }
 
     /**
      * @summary Restructures an object into a ProfileArgumValueList_specialProfileArgums_Item

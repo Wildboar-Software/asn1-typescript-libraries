@@ -38,44 +38,54 @@ import {
  *
  */
 export class ReplaceAvlReq {
+    /**
+     * @summary `invokeID`.
+     * @description
+     *
+     * Pairs this request with `ReplaceAvlRsp`. INTEGER (0..127); unique per pair until the interaction completes.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly invokeID: InvokeID;
+    /**
+     * @summary `old`.
+     * @description
+     *
+     * Serial of the AVL to replace. Absent means the unique local AVL that itself has no `serialNumber`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly old: OPTIONAL<AvlSerialNumber>;
+    /**
+     * @summary `new_`.
+     * @description
+     *
+     * Replacement `CertAVL` (ASN.1 `new`). Subject to the same 13.7 checks as add, including signature.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly new_: CertAVL;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `invokeID`.
-         * @description
-         *
-         * Pairs this request with `ReplaceAvlRsp`. INTEGER (0..127); unique per pair until the interaction completes.
-         *
-         * @public
-         * @readonly
-         */
-        readonly invokeID: InvokeID,
-        /**
-         * @summary `old`.
-         * @description
-         *
-         * Serial of the AVL to replace. Absent means the unique local AVL that itself has no `serialNumber`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly old: OPTIONAL<AvlSerialNumber>,
-        /**
-         * @summary `new_`.
-         * @description
-         *
-         * Replacement `CertAVL` (ASN.1 `new`). Subject to the same 13.7 checks as add, including signature.
-         *
-         * @public
-         * @readonly
-         */
-        readonly new_: CertAVL,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        invokeID: InvokeID,
+        old: OPTIONAL<AvlSerialNumber>,
+        new_: CertAVL,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.invokeID = invokeID;
+        this.old = old;
+        this.new_ = new_;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a ReplaceAvlReq

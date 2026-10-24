@@ -41,44 +41,54 @@ import { ConnectionInformation, _decode_ConnectionInformation, _encode_Connectio
  */
 export
 class OtherCall {
+    /**
+     * @summary `deviceID`.
+     * @description
+     *
+     * Other device on the call.
+     * @public
+     * @readonly
+     */
+    public readonly deviceID: DeviceID;
+    /**
+     * @summary `connectionID`.
+     * @description
+     *
+     * That device's connection.
+     * @public
+     * @readonly
+     */
+    public readonly connectionID: ConnectionID;
+    /**
+     * @summary `localConnectionState`.
+     * @description
+     *
+     * Local connection state, if known.
+     * @public
+     * @readonly
+     */
+    public readonly localConnectionState?: OPTIONAL<LocalConnectionState>;
+    /**
+     * @summary `connectionInfo`.
+     * @description
+     *
+     * Connection information, if provided.
+     * @public
+     * @readonly
+     */
+    public readonly connectionInfo?: OPTIONAL<ConnectionInformation>;
+
     constructor (
-        /**
-         * @summary `deviceID`.
-         * @description
-         *
-         * Other device on the call.
-         * @public
-         * @readonly
-         */
-        readonly deviceID: DeviceID,
-        /**
-         * @summary `connectionID`.
-         * @description
-         *
-         * That device's connection.
-         * @public
-         * @readonly
-         */
-        readonly connectionID: ConnectionID,
-        /**
-         * @summary `localConnectionState`.
-         * @description
-         *
-         * Local connection state, if known.
-         * @public
-         * @readonly
-         */
-        readonly localConnectionState?: OPTIONAL<LocalConnectionState>,
-        /**
-         * @summary `connectionInfo`.
-         * @description
-         *
-         * Connection information, if provided.
-         * @public
-         * @readonly
-         */
-        readonly connectionInfo?: OPTIONAL<ConnectionInformation>
-    ) {}
+        deviceID: DeviceID,
+        connectionID: ConnectionID,
+        localConnectionState?: OPTIONAL<LocalConnectionState>,
+        connectionInfo?: OPTIONAL<ConnectionInformation>
+    ) {
+        this.deviceID = deviceID;
+        this.connectionID = connectionID;
+        this.localConnectionState = localConnectionState;
+        this.connectionInfo = connectionInfo;
+    }
 
     /**
      * @summary Restructures an object into a OtherCall

@@ -49,43 +49,55 @@ import {
  *
  */
 export class BioAPI_GUI_EVENT_SUBSCRIPTION {
+  /**
+   * @summary `subscriberEndpointIRI`.
+   * @description
+   *
+   * Endpoint that subscribed. Local endpoint IRI means the
+   * subscriber is local (C NULL). X.1083 §15.3, §15.36.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly subscriberEndpointIRI: EndpointIRI;
+  /**
+   * @summary `guiEventSubscriptionUuid`.
+   * @public
+   * @readonly
+   */
+  public readonly guiEventSubscriptionUuid: BioAPI_UUID;
+  /**
+   * @summary `guiSelectEventSubscribed`.
+   * @public
+   * @readonly
+   */
+  public readonly guiSelectEventSubscribed: BOOLEAN;
+  /**
+   * @summary `guiStateEventSubscribed`.
+   * @public
+   * @readonly
+   */
+  public readonly guiStateEventSubscribed: BOOLEAN;
+  /**
+   * @summary `guiProgressEventSubscribed`.
+   * @public
+   * @readonly
+   */
+  public readonly guiProgressEventSubscribed: BOOLEAN;
+
   constructor(
-    /**
-     * @summary `subscriberEndpointIRI`.
-     * @description
-     *
-     * Endpoint that subscribed. Local endpoint IRI means the
-     * subscriber is local (C NULL). X.1083 §15.3, §15.36.
-     *
-     * @public
-     * @readonly
-     */
-    readonly subscriberEndpointIRI: EndpointIRI,
-    /**
-     * @summary `guiEventSubscriptionUuid`.
-     * @public
-     * @readonly
-     */
-    readonly guiEventSubscriptionUuid: BioAPI_UUID,
-    /**
-     * @summary `guiSelectEventSubscribed`.
-     * @public
-     * @readonly
-     */
-    readonly guiSelectEventSubscribed: BOOLEAN,
-    /**
-     * @summary `guiStateEventSubscribed`.
-     * @public
-     * @readonly
-     */
-    readonly guiStateEventSubscribed: BOOLEAN,
-    /**
-     * @summary `guiProgressEventSubscribed`.
-     * @public
-     * @readonly
-     */
-    readonly guiProgressEventSubscribed: BOOLEAN
-  ) {}
+    subscriberEndpointIRI: EndpointIRI,
+    guiEventSubscriptionUuid: BioAPI_UUID,
+    guiSelectEventSubscribed: BOOLEAN,
+    guiStateEventSubscribed: BOOLEAN,
+    guiProgressEventSubscribed: BOOLEAN
+  ) {
+    this.subscriberEndpointIRI = subscriberEndpointIRI;
+    this.guiEventSubscriptionUuid = guiEventSubscriptionUuid;
+    this.guiSelectEventSubscribed = guiSelectEventSubscribed;
+    this.guiStateEventSubscribed = guiStateEventSubscribed;
+    this.guiProgressEventSubscribed = guiProgressEventSubscribed;
+  }
 
   /**
    * @summary Restructures an object into a BioAPI_GUI_EVENT_SUBSCRIPTION

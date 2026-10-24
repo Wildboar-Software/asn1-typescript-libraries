@@ -37,32 +37,38 @@ import { VariableAccessSpecification, _decode_VariableAccessSpecification, _enco
  */
 export
 class Read_Request {
+    /**
+     * @summary `specificationWithResult`.
+     * @description
+     *
+     * If true and Result(+) is issued, echo the request's
+     * Variable Access Specification in the response. Default
+     * false. ISO 9506-1:2003 §14.6.1.1.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly specificationWithResult: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `variableAccessSpecification`.
+     * @description
+     *
+     * Variables to read: enumerated list (optional `valt`
+     * alternate access) or a Named Variable List (`vlis`).
+     * ISO 9506-1:2003 §14.6.1.1.2, §14.5.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly variableAccessSpecification: VariableAccessSpecification;
+
     constructor (
-        /**
-         * @summary `specificationWithResult`.
-         * @description
-         *
-         * If true and Result(+) is issued, echo the request's
-         * Variable Access Specification in the response. Default
-         * false. ISO 9506-1:2003 §14.6.1.1.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly specificationWithResult: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `variableAccessSpecification`.
-         * @description
-         *
-         * Variables to read: enumerated list (optional `valt`
-         * alternate access) or a Named Variable List (`vlis`).
-         * ISO 9506-1:2003 §14.6.1.1.2, §14.5.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly variableAccessSpecification: VariableAccessSpecification
-    ) {}
+        specificationWithResult: OPTIONAL<BOOLEAN>,
+        variableAccessSpecification: VariableAccessSpecification
+    ) {
+        this.specificationWithResult = specificationWithResult;
+        this.variableAccessSpecification = variableAccessSpecification;
+    }
 
     /**
      * @summary Restructures an object into a Read_Request

@@ -35,30 +35,36 @@ import { ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-
  */
 export
 class GetAccessControlListAttributes_Request_namedObject {
+    /**
+     * @summary `objectClass`.
+     * @description
+     *
+     * Object class of the object whose `&accessControl` is followed.
+     * ISO 9506-1:2003 §9.4.1.1.3.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly objectClass: ObjectClass;
+    /**
+     * @summary `objectName`.
+     * @description
+     *
+     * The named object whose `&accessControl` is followed. ISO 9506-1:2003
+     * §9.4.1.1.3.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly objectName: ObjectName;
+
     constructor (
-        /**
-         * @summary `objectClass`.
-         * @description
-         *
-         * Object class of the object whose `&accessControl` is followed.
-         * ISO 9506-1:2003 §9.4.1.1.3.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly objectClass: ObjectClass,
-        /**
-         * @summary `objectName`.
-         * @description
-         *
-         * The named object whose `&accessControl` is followed. ISO 9506-1:2003
-         * §9.4.1.1.3.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly objectName: ObjectName
-    ) {}
+        objectClass: ObjectClass,
+        objectName: ObjectName
+    ) {
+        this.objectClass = objectClass;
+        this.objectName = objectName;
+    }
 
     /**
      * @summary Restructures an object into a GetAccessControlListAttributes_Request_namedObject

@@ -30,14 +30,18 @@ import { CalledPartyNumber, _decode_CalledPartyNumber, _encode_CalledPartyNumber
  */
 export
 class EventSpecificInformationBCSM_collectedInfoSpecificInfo {
+    /**
+     * @summary `calledPartyNumber`.
+     * @public
+     * @readonly
+     */
+    public readonly calledPartyNumber: CalledPartyNumber;
+
     constructor (
-        /**
-         * @summary `calledPartyNumber`.
-         * @public
-         * @readonly
-         */
-        readonly calledPartyNumber: CalledPartyNumber
-    ) {}
+        calledPartyNumber: CalledPartyNumber
+    ) {
+        this.calledPartyNumber = calledPartyNumber;
+    }
 
     /**
      * @summary Restructures an object into a EventSpecificInformationBCSM_collectedInfoSpecificInfo

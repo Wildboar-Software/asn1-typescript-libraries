@@ -36,20 +36,26 @@ import {
  *
  */
 export class RemoveCapacityFromTopLinkEndResult {
+    /**
+     * @summary `resultingCapacity`.
+     * @public
+     * @readonly
+     */
+    public readonly resultingCapacity: PointCapacity;
+    /**
+     * @summary `resultingLinkConnections`.
+     * @public
+     * @readonly
+     */
+    public readonly resultingLinkConnections: LinkConnectionList;
+
     constructor(
-        /**
-         * @summary `resultingCapacity`.
-         * @public
-         * @readonly
-         */
-        readonly resultingCapacity: PointCapacity,
-        /**
-         * @summary `resultingLinkConnections`.
-         * @public
-         * @readonly
-         */
-        readonly resultingLinkConnections: LinkConnectionList
-    ) {}
+        resultingCapacity: PointCapacity,
+        resultingLinkConnections: LinkConnectionList
+    ) {
+        this.resultingCapacity = resultingCapacity;
+        this.resultingLinkConnections = resultingLinkConnections;
+    }
 
     /**
      * @summary Restructures an object into a RemoveCapacityFromTopLinkEndResult

@@ -39,21 +39,25 @@ import { CS_AlterEventConditionMonitoring_Request_changeDisplay, _decode_CS_Alte
  */
 export
 class CS_AlterEventConditionMonitoring_Request {
+    /**
+     * @summary `changeDisplay`.
+     * @description
+     *
+     * New `&displayEnhancement`. Omitted: leave display unchanged.
+     * `string`/`index`/`noEnhancement`.
+     *
+     * [ISO 9506-1:2003 §19.6.1.1.5.1]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly changeDisplay?: OPTIONAL<CS_AlterEventConditionMonitoring_Request_changeDisplay>;
+
     constructor (
-        /**
-         * @summary `changeDisplay`.
-         * @description
-         *
-         * New `&displayEnhancement`. Omitted: leave display unchanged.
-         * `string`/`index`/`noEnhancement`.
-         *
-         * [ISO 9506-1:2003 §19.6.1.1.5.1]
-         *
-         * @public
-         * @readonly
-         */
-        readonly changeDisplay?: OPTIONAL<CS_AlterEventConditionMonitoring_Request_changeDisplay>
-    ) {}
+        changeDisplay?: OPTIONAL<CS_AlterEventConditionMonitoring_Request_changeDisplay>
+    ) {
+        this.changeDisplay = changeDisplay;
+    }
 
     /**
      * @summary Restructures an object into a CS_AlterEventConditionMonitoring_Request

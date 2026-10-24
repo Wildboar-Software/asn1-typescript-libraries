@@ -46,116 +46,140 @@ import { Ext_TeleserviceCode, _decode_Ext_TeleserviceCode, _encode_Ext_Teleservi
  */
 export
 class SendGroupCallInfoArg {
+    /**
+     * @summary `requestedInfo`.
+     * @description
+     *
+     * See 3GPP TS 43.068 (clause 10.7A.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly requestedInfo: RequestedInfo;
+    /**
+     * @summary `groupId`.
+     * @description
+     *
+     * See 3GPP TS 43.068 and 43.069. If prefixes are used with group IDs,
+     * the most significant digit contains the prefix (clause 10.7A.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly groupId: Long_GroupId;
+    /**
+     * @summary `teleservice`.
+     * @description
+     *
+     * VBS or VGCS (clause 10.7A.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly teleservice: Ext_TeleserviceCode;
+    /**
+     * @summary `cellId`.
+     * @description
+     *
+     * Initiating service subscriber's current cell (clause 10.7A.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly cellId?: OPTIONAL<GlobalCellId>;
+    /**
+     * @summary `imsi`.
+     * @description
+     *
+     * In the request: call originator. In the response: uplink requesting
+     * subscriber (clause 10.7A.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly imsi?: OPTIONAL<IMSI>;
+    /**
+     * @summary `tmsi`.
+     * @description
+     *
+     * See clause 7.6.2 (clause 10.7A.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly tmsi?: OPTIONAL<TMSI>;
+    /**
+     * @summary `additionalInfo`.
+     * @description
+     *
+     * See 3GPP TS 43.068 (clause 10.7A.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly additionalInfo?: OPTIONAL<AdditionalInfo>;
+    /**
+     * @summary `talkerPriority`.
+     * @description
+     *
+     * See 3GPP TS 43.068 (clause 10.7A.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly talkerPriority?: OPTIONAL<TalkerPriority>;
+    /**
+     * @summary `cksn`.
+     * @description
+     *
+     * See clause 7.6.7 (clause 10.7A.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly cksn?: OPTIONAL<Cksn>;
+    /**
+     * @summary `extensionContainer`.
+     * @description
+     *
+     * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `requestedInfo`.
-         * @description
-         *
-         * See 3GPP TS 43.068 (clause 10.7A.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly requestedInfo: RequestedInfo,
-        /**
-         * @summary `groupId`.
-         * @description
-         *
-         * See 3GPP TS 43.068 and 43.069. If prefixes are used with group IDs,
-         * the most significant digit contains the prefix (clause 10.7A.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly groupId: Long_GroupId,
-        /**
-         * @summary `teleservice`.
-         * @description
-         *
-         * VBS or VGCS (clause 10.7A.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly teleservice: Ext_TeleserviceCode,
-        /**
-         * @summary `cellId`.
-         * @description
-         *
-         * Initiating service subscriber's current cell (clause 10.7A.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly cellId?: OPTIONAL<GlobalCellId>,
-        /**
-         * @summary `imsi`.
-         * @description
-         *
-         * In the request: call originator. In the response: uplink requesting
-         * subscriber (clause 10.7A.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly imsi?: OPTIONAL<IMSI>,
-        /**
-         * @summary `tmsi`.
-         * @description
-         *
-         * See clause 7.6.2 (clause 10.7A.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly tmsi?: OPTIONAL<TMSI>,
-        /**
-         * @summary `additionalInfo`.
-         * @description
-         *
-         * See 3GPP TS 43.068 (clause 10.7A.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly additionalInfo?: OPTIONAL<AdditionalInfo>,
-        /**
-         * @summary `talkerPriority`.
-         * @description
-         *
-         * See 3GPP TS 43.068 (clause 10.7A.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly talkerPriority?: OPTIONAL<TalkerPriority>,
-        /**
-         * @summary `cksn`.
-         * @description
-         *
-         * See clause 7.6.7 (clause 10.7A.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly cksn?: OPTIONAL<Cksn>,
-        /**
-         * @summary `extensionContainer`.
-         * @description
-         *
-         * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        requestedInfo: RequestedInfo,
+        groupId: Long_GroupId,
+        teleservice: Ext_TeleserviceCode,
+        cellId?: OPTIONAL<GlobalCellId>,
+        imsi?: OPTIONAL<IMSI>,
+        tmsi?: OPTIONAL<TMSI>,
+        additionalInfo?: OPTIONAL<AdditionalInfo>,
+        talkerPriority?: OPTIONAL<TalkerPriority>,
+        cksn?: OPTIONAL<Cksn>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.requestedInfo = requestedInfo;
+        this.groupId = groupId;
+        this.teleservice = teleservice;
+        this.cellId = cellId;
+        this.imsi = imsi;
+        this.tmsi = tmsi;
+        this.additionalInfo = additionalInfo;
+        this.talkerPriority = talkerPriority;
+        this.cksn = cksn;
+        this.extensionContainer = extensionContainer;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a SendGroupCallInfoArg

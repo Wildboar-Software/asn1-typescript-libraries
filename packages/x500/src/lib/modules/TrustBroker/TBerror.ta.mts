@@ -39,34 +39,42 @@ import {
  *
  */
 export class TBerror {
+    /**
+     * @summary `code`.
+     * @description
+     *
+     * No value 0. `other`(99) requires `diagnostic`. `pathValidationFailed` and `timeOut` may succeed later.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly code: TBerror_code;
+    /**
+     * @summary `diagnostic`.
+     * @description
+     *
+     * Optional text for client logs/display. Mandatory when `code` is `other`(99).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly diagnostic?: OPTIONAL<UTF8String>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `code`.
-         * @description
-         *
-         * No value 0. `other`(99) requires `diagnostic`. `pathValidationFailed` and `timeOut` may succeed later.
-         *
-         * @public
-         * @readonly
-         */
-        readonly code: TBerror_code,
-        /**
-         * @summary `diagnostic`.
-         * @description
-         *
-         * Optional text for client logs/display. Mandatory when `code` is `other`(99).
-         *
-         * @public
-         * @readonly
-         */
-        readonly diagnostic?: OPTIONAL<UTF8String>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        code: TBerror_code,
+        diagnostic?: OPTIONAL<UTF8String>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.code = code;
+        this.diagnostic = diagnostic;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a TBerror

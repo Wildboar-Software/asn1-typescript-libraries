@@ -57,160 +57,190 @@ import { UserCSGInformation, _decode_UserCSGInformation, _encode_UserCSGInformat
  */
 export
 class LocationInformation {
+    /**
+     * @summary `ageOfLocationInformation`.
+     * @description
+     *
+     * Age of the location estimate. Absent (outside
+     * `locationInformationEPS`) if that IE is present, except the
+     * MAP_NOTE_MM_EVENT LAI exception. (3GPP TS 29.002 V19.1.0 clause
+     * 17.7.1)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ageOfLocationInformation?: OPTIONAL<AgeOfLocationInformation>;
+    /**
+     * @summary `geographicalInformation`.
+     * @description
+     *
+     * Ellipsoid point with uncertainty circle (3GPP TS 23.032). Absent if
+     * `locationInformationEPS` is present (except NOTE-MM-EVENT). (3GPP TS
+     * 29.002 V19.1.0 clause 17.7.1)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly geographicalInformation?: OPTIONAL<GeographicalInformation>;
+    /**
+     * @summary `vlr_number`.
+     * @description
+     *
+     * ISDN number of the serving VLR. (3GPP TS 29.002 V19.1.0 clause
+     * 7.6.2.14)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly vlr_number?: OPTIONAL<ISDN_AddressString>;
+    /**
+     * @summary `locationNumber`.
+     * @description
+     *
+     * Location number as in ITU-T Rec. Q.763. (3GPP TS 29.002 V19.1.0
+     * clause 17.7.1)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly locationNumber?: OPTIONAL<LocationNumber>;
+    /**
+     * @summary `cellGlobalIdOrServiceAreaIdOrLAI`.
+     * @description
+     *
+     * CGI, SAI, or LAI. If `sai-Present` is included, this holds a Service
+     * Area Identity. Shall be absent if `locationInformationEPS` is
+     * present, except both an LAI here and `locationInformationEPS` may
+     * appear in MAP_NOTE_MM_EVENT. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly cellGlobalIdOrServiceAreaIdOrLAI?: OPTIONAL<CellGlobalIdOrServiceAreaIdOrLAI>;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary `selectedLSA_Id`.
+     * @description
+     *
+     * Currently selected localised service area. (3GPP TS 29.002 V19.1.0
+     * clause 17.7.1)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly selectedLSA_Id?: OPTIONAL<LSAIdentity>;
+    /**
+     * @summary `msc_Number`.
+     * @description
+     *
+     * ISDN number of the serving MSC. (3GPP TS 29.002 V19.1.0 clause
+     * 7.6.2.11)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly msc_Number?: OPTIONAL<ISDN_AddressString>;
+    /**
+     * @summary `geodeticInformation`.
+     * @description
+     *
+     * Calling Geodetic Location (Q.763, 1999), ellipsoid point with
+     * uncertainty circle. Absent if `locationInformationEPS` is present
+     * (except NOTE-MM-EVENT). (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly geodeticInformation?: OPTIONAL<GeodeticInformation>;
+    /**
+     * @summary `currentLocationRetrieved`.
+     * @description
+     *
+     * Shall be present if the location was retrieved after successful
+     * paging. Absent outside `locationInformationEPS` if that IE is present
+     * (except NOTE-MM-EVENT). (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly currentLocationRetrieved?: OPTIONAL<NULL>;
+    /**
+     * @summary `sai_Present`.
+     * @description
+     *
+     * `cellGlobalIdOrServiceAreaIdOrLAI` contains a Service Area Identity.
+     * (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sai_Present?: OPTIONAL<NULL>;
+    /**
+     * @summary `locationInformationEPS`.
+     * @description
+     *
+     * EPS location. Should be absent unless
+     * `locationInformationEPS-Supported` was received in RequestedInfo.
+     * (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly locationInformationEPS?: OPTIONAL<LocationInformationEPS>;
+    /**
+     * @summary `userCSGInformation`.
+     * @description
+     *
+     * CSG ID, access mode, and CSG membership indication when access mode
+     * is Hybrid. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly userCSGInformation?: OPTIONAL<UserCSGInformation>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `ageOfLocationInformation`.
-         * @description
-         *
-         * Age of the location estimate. Absent (outside
-         * `locationInformationEPS`) if that IE is present, except the
-         * MAP_NOTE_MM_EVENT LAI exception. (3GPP TS 29.002 V19.1.0 clause
-         * 17.7.1)
-         *
-         * @public
-         * @readonly
-         */
-        readonly ageOfLocationInformation?: OPTIONAL<AgeOfLocationInformation>,
-        /**
-         * @summary `geographicalInformation`.
-         * @description
-         *
-         * Ellipsoid point with uncertainty circle (3GPP TS 23.032). Absent if
-         * `locationInformationEPS` is present (except NOTE-MM-EVENT). (3GPP TS
-         * 29.002 V19.1.0 clause 17.7.1)
-         *
-         * @public
-         * @readonly
-         */
-        readonly geographicalInformation?: OPTIONAL<GeographicalInformation>,
-        /**
-         * @summary `vlr_number`.
-         * @description
-         *
-         * ISDN number of the serving VLR. (3GPP TS 29.002 V19.1.0 clause
-         * 7.6.2.14)
-         *
-         * @public
-         * @readonly
-         */
-        readonly vlr_number?: OPTIONAL<ISDN_AddressString>,
-        /**
-         * @summary `locationNumber`.
-         * @description
-         *
-         * Location number as in ITU-T Rec. Q.763. (3GPP TS 29.002 V19.1.0
-         * clause 17.7.1)
-         *
-         * @public
-         * @readonly
-         */
-        readonly locationNumber?: OPTIONAL<LocationNumber>,
-        /**
-         * @summary `cellGlobalIdOrServiceAreaIdOrLAI`.
-         * @description
-         *
-         * CGI, SAI, or LAI. If `sai-Present` is included, this holds a Service
-         * Area Identity. Shall be absent if `locationInformationEPS` is
-         * present, except both an LAI here and `locationInformationEPS` may
-         * appear in MAP_NOTE_MM_EVENT. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
-         *
-         * @public
-         * @readonly
-         */
-        readonly cellGlobalIdOrServiceAreaIdOrLAI?: OPTIONAL<CellGlobalIdOrServiceAreaIdOrLAI>,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary `selectedLSA_Id`.
-         * @description
-         *
-         * Currently selected localised service area. (3GPP TS 29.002 V19.1.0
-         * clause 17.7.1)
-         *
-         * @public
-         * @readonly
-         */
-        readonly selectedLSA_Id?: OPTIONAL<LSAIdentity>,
-        /**
-         * @summary `msc_Number`.
-         * @description
-         *
-         * ISDN number of the serving MSC. (3GPP TS 29.002 V19.1.0 clause
-         * 7.6.2.11)
-         *
-         * @public
-         * @readonly
-         */
-        readonly msc_Number?: OPTIONAL<ISDN_AddressString>,
-        /**
-         * @summary `geodeticInformation`.
-         * @description
-         *
-         * Calling Geodetic Location (Q.763, 1999), ellipsoid point with
-         * uncertainty circle. Absent if `locationInformationEPS` is present
-         * (except NOTE-MM-EVENT). (3GPP TS 29.002 V19.1.0 clause 17.7.1)
-         *
-         * @public
-         * @readonly
-         */
-        readonly geodeticInformation?: OPTIONAL<GeodeticInformation>,
-        /**
-         * @summary `currentLocationRetrieved`.
-         * @description
-         *
-         * Shall be present if the location was retrieved after successful
-         * paging. Absent outside `locationInformationEPS` if that IE is present
-         * (except NOTE-MM-EVENT). (3GPP TS 29.002 V19.1.0 clause 17.7.1)
-         *
-         * @public
-         * @readonly
-         */
-        readonly currentLocationRetrieved?: OPTIONAL<NULL>,
-        /**
-         * @summary `sai_Present`.
-         * @description
-         *
-         * `cellGlobalIdOrServiceAreaIdOrLAI` contains a Service Area Identity.
-         * (3GPP TS 29.002 V19.1.0 clause 17.7.1)
-         *
-         * @public
-         * @readonly
-         */
-        readonly sai_Present?: OPTIONAL<NULL>,
-        /**
-         * @summary `locationInformationEPS`.
-         * @description
-         *
-         * EPS location. Should be absent unless
-         * `locationInformationEPS-Supported` was received in RequestedInfo.
-         * (3GPP TS 29.002 V19.1.0 clause 17.7.1)
-         *
-         * @public
-         * @readonly
-         */
-        readonly locationInformationEPS?: OPTIONAL<LocationInformationEPS>,
-        /**
-         * @summary `userCSGInformation`.
-         * @description
-         *
-         * CSG ID, access mode, and CSG membership indication when access mode
-         * is Hybrid. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
-         *
-         * @public
-         * @readonly
-         */
-        readonly userCSGInformation?: OPTIONAL<UserCSGInformation>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        ageOfLocationInformation?: OPTIONAL<AgeOfLocationInformation>,
+        geographicalInformation?: OPTIONAL<GeographicalInformation>,
+        vlr_number?: OPTIONAL<ISDN_AddressString>,
+        locationNumber?: OPTIONAL<LocationNumber>,
+        cellGlobalIdOrServiceAreaIdOrLAI?: OPTIONAL<CellGlobalIdOrServiceAreaIdOrLAI>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        selectedLSA_Id?: OPTIONAL<LSAIdentity>,
+        msc_Number?: OPTIONAL<ISDN_AddressString>,
+        geodeticInformation?: OPTIONAL<GeodeticInformation>,
+        currentLocationRetrieved?: OPTIONAL<NULL>,
+        sai_Present?: OPTIONAL<NULL>,
+        locationInformationEPS?: OPTIONAL<LocationInformationEPS>,
+        userCSGInformation?: OPTIONAL<UserCSGInformation>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.ageOfLocationInformation = ageOfLocationInformation;
+        this.geographicalInformation = geographicalInformation;
+        this.vlr_number = vlr_number;
+        this.locationNumber = locationNumber;
+        this.cellGlobalIdOrServiceAreaIdOrLAI = cellGlobalIdOrServiceAreaIdOrLAI;
+        this.extensionContainer = extensionContainer;
+        this.selectedLSA_Id = selectedLSA_Id;
+        this.msc_Number = msc_Number;
+        this.geodeticInformation = geodeticInformation;
+        this.currentLocationRetrieved = currentLocationRetrieved;
+        this.sai_Present = sai_Present;
+        this.locationInformationEPS = locationInformationEPS;
+        this.userCSGInformation = userCSGInformation;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a LocationInformation

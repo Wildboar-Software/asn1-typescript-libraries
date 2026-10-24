@@ -26,20 +26,26 @@ import * as $ from "@wildboar/asn1/functional";
  *
  */
 export class SearchRuleId {
+    /**
+     * @summary `id`.
+     * @public
+     * @readonly
+     */
+    public readonly id: INTEGER;
+    /**
+     * @summary `dmdId`.
+     * @public
+     * @readonly
+     */
+    public readonly dmdId: OBJECT_IDENTIFIER;
+
     constructor(
-        /**
-         * @summary `id`.
-         * @public
-         * @readonly
-         */
-        readonly id: INTEGER,
-        /**
-         * @summary `dmdId`.
-         * @public
-         * @readonly
-         */
-        readonly dmdId: OBJECT_IDENTIFIER
-    ) {}
+        id: INTEGER,
+        dmdId: OBJECT_IDENTIFIER
+    ) {
+        this.id = id;
+        this.dmdId = dmdId;
+    }
 
     /**
      * @summary Restructures an object into a SearchRuleId

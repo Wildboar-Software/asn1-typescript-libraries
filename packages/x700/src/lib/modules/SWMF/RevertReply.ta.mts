@@ -42,29 +42,35 @@ import {
  *
  */
 export class RevertReply {
+    /**
+     * @summary `revertedPatches`.
+     * @description
+     *
+     * Patches that remain applied after the revert (Table 11
+     * "Applied patches"). ITU-T Rec. X.744 (10/96) §8.3.6,
+     * §9.7 Table 11.
+     * @public
+     * @readonly
+     */
+    public readonly revertedPatches: AppliedPatches;
+    /**
+     * @summary `additionalInfo`.
+     * @description
+     *
+     * Management extensions. User in Table 11. ITU-T Rec. X.744
+     * (10/96) §9.7 Table 11.
+     * @public
+     * @readonly
+     */
+    public readonly additionalInfo?: OPTIONAL<ManagementExtension[]>;
+
     constructor(
-        /**
-         * @summary `revertedPatches`.
-         * @description
-         *
-         * Patches that remain applied after the revert (Table 11
-         * "Applied patches"). ITU-T Rec. X.744 (10/96) §8.3.6,
-         * §9.7 Table 11.
-         * @public
-         * @readonly
-         */
-        readonly revertedPatches: AppliedPatches,
-        /**
-         * @summary `additionalInfo`.
-         * @description
-         *
-         * Management extensions. User in Table 11. ITU-T Rec. X.744
-         * (10/96) §9.7 Table 11.
-         * @public
-         * @readonly
-         */
-        readonly additionalInfo?: OPTIONAL<ManagementExtension[]>
-    ) {}
+        revertedPatches: AppliedPatches,
+        additionalInfo?: OPTIONAL<ManagementExtension[]>
+    ) {
+        this.revertedPatches = revertedPatches;
+        this.additionalInfo = additionalInfo;
+    }
 
     /**
      * @summary Restructures an object into a RevertReply

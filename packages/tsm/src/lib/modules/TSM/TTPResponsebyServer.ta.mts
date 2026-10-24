@@ -50,72 +50,86 @@ import { ACBioContentInformation, _decode_ACBioContentInformation, _encode_ACBio
  */
 export
 class TTPResponsebyServer {
+    /**
+     * @summary `bFPSchema`.
+     * @description
+     *
+     * BSP/BFP schema(s) used for this process. X.1084 §11.1 Table 3.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly bFPSchema: BSP_BFP_Schemas;
+    /**
+     * @summary `templateID`.
+     * @description
+     *
+     * Identifies the reference template (issuer, serial, metadata)
+     * for revocation without sending the template. X.1084 §11.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly templateID: TemplateID;
+    /**
+     * @summary `sampleQuality`.
+     * @description
+     *
+     * Quality of the captured sample, `0..100`. X.1084 §11.1 item 3.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sampleQuality: Quality;
+    /**
+     * @summary `score`.
+     * @description
+     *
+     * Comparison score as BioAPI FMR. X.1084 §11.1 item 3.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly score: BioAPI_FMR;
+    /**
+     * @summary `digitalSignature`.
+     * @description
+     *
+     * CMS `SignedData` (X9.84) over the biometric process or payload.
+     * Assures integrity of that party's processing. X.1084 §11.1 item 4.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly digitalSignature: SignedData;
+    /**
+     * @summary `aCforBioOnTTP`.
+     * @description
+     *
+     * ISO/IEC 24761 ACBio for the TTP process. Optional except in
+     * `BDforRefOnTTPforLocalModel`, where Annex A requires it. X.1084
+     * §11.5.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly aCforBioOnTTP?: OPTIONAL<ACBioContentInformation>;
+
     constructor (
-        /**
-         * @summary `bFPSchema`.
-         * @description
-         *
-         * BSP/BFP schema(s) used for this process. X.1084 §11.1 Table 3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly bFPSchema: BSP_BFP_Schemas,
-        /**
-         * @summary `templateID`.
-         * @description
-         *
-         * Identifies the reference template (issuer, serial, metadata)
-         * for revocation without sending the template. X.1084 §11.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly templateID: TemplateID,
-        /**
-         * @summary `sampleQuality`.
-         * @description
-         *
-         * Quality of the captured sample, `0..100`. X.1084 §11.1 item 3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly sampleQuality: Quality,
-        /**
-         * @summary `score`.
-         * @description
-         *
-         * Comparison score as BioAPI FMR. X.1084 §11.1 item 3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly score: BioAPI_FMR,
-        /**
-         * @summary `digitalSignature`.
-         * @description
-         *
-         * CMS `SignedData` (X9.84) over the biometric process or payload.
-         * Assures integrity of that party's processing. X.1084 §11.1 item 4.
-         *
-         * @public
-         * @readonly
-         */
-        readonly digitalSignature: SignedData,
-        /**
-         * @summary `aCforBioOnTTP`.
-         * @description
-         *
-         * ISO/IEC 24761 ACBio for the TTP process. Optional except in
-         * `BDforRefOnTTPforLocalModel`, where Annex A requires it. X.1084
-         * §11.5.
-         *
-         * @public
-         * @readonly
-         */
-        readonly aCforBioOnTTP?: OPTIONAL<ACBioContentInformation>
-    ) {}
+        bFPSchema: BSP_BFP_Schemas,
+        templateID: TemplateID,
+        sampleQuality: Quality,
+        score: BioAPI_FMR,
+        digitalSignature: SignedData,
+        aCforBioOnTTP?: OPTIONAL<ACBioContentInformation>
+    ) {
+        this.bFPSchema = bFPSchema;
+        this.templateID = templateID;
+        this.sampleQuality = sampleQuality;
+        this.score = score;
+        this.digitalSignature = digitalSignature;
+        this.aCforBioOnTTP = aCforBioOnTTP;
+    }
 
     /**
      * @summary Restructures an object into a TTPResponsebyServer

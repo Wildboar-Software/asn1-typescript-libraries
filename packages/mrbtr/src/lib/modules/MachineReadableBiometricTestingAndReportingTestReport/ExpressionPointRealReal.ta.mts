@@ -34,28 +34,34 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class ExpressionPointRealReal {
+    /**
+     * @summary `xValue`.
+     * @description
+     *
+     * Score (or other real) at this CDF point (Clause 6.4.4.3.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly xValue: REAL;
+    /**
+     * @summary `yValue`.
+     * @description
+     *
+     * Proportion of values ≤ `xValue` (Clause 6.4.4.3.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly yValue: REAL;
+
     constructor (
-        /**
-         * @summary `xValue`.
-         * @description
-         *
-         * Score (or other real) at this CDF point (Clause 6.4.4.3.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly xValue: REAL,
-        /**
-         * @summary `yValue`.
-         * @description
-         *
-         * Proportion of values ≤ `xValue` (Clause 6.4.4.3.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly yValue: REAL
-    ) {}
+        xValue: REAL,
+        yValue: REAL
+    ) {
+        this.xValue = xValue;
+        this.yValue = yValue;
+    }
 
     /**
      * @summary Restructures an object into a ExpressionPointRealReal

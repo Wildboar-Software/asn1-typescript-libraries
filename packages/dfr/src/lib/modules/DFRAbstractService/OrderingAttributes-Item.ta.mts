@@ -33,26 +33,32 @@ import { Direction, _enum_for_Direction, _decode_Direction, _encode_Direction } 
  */
 export
 class OrderingAttributes_Item {
+    /**
+     * @summary `attribute`.
+     * @description
+     *
+     * Attribute type; must MATCH FOR ORDERING.
+     * @public
+     * @readonly
+     */
+    public readonly attribute: AttributeType;
+    /**
+     * @summary `direction`.
+     * @description
+     *
+     * ascending or descending.
+     * @public
+     * @readonly
+     */
+    public readonly direction: Direction;
+
     constructor (
-        /**
-         * @summary `attribute`.
-         * @description
-         *
-         * Attribute type; must MATCH FOR ORDERING.
-         * @public
-         * @readonly
-         */
-        readonly attribute: AttributeType,
-        /**
-         * @summary `direction`.
-         * @description
-         *
-         * ascending or descending.
-         * @public
-         * @readonly
-         */
-        readonly direction: Direction
-    ) {}
+        attribute: AttributeType,
+        direction: Direction
+    ) {
+        this.attribute = attribute;
+        this.direction = direction;
+    }
 
     /**
      * @summary Restructures an object into a OrderingAttributes_Item

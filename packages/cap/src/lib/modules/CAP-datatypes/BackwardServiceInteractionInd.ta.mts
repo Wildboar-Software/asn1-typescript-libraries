@@ -24,35 +24,42 @@ import * as $ from "@wildboar/asn1/functional";
  *
  */
 export class BackwardServiceInteractionInd {
+    /**
+     * @summary `conferenceTreatmentIndicator`.
+     * @description
+     *
+     * acceptConferenceRequest `'xxxx xx01'`B; rejectConferenceRequest
+     * `'xxxx xx10'`B. If absent from Connect or ContinueWithArgument, the
+     * CAMEL service does not affect conference treatment.
+     * (3GPP TS 29.078 V19.0.0 clause 5.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly conferenceTreatmentIndicator?: OPTIONAL<OCTET_STRING>;
+    /**
+     * @summary `callCompletionTreatmentIndicator`.
+     * @description
+     *
+     * acceptCallCompletionServiceRequest `'xxxx xx01'`B;
+     * rejectCallCompletionServiceRequest `'xxxx xx10'`B. If absent from
+     * Connect or ContinueWithArgument, the CAMEL service does not affect
+     * call completion treatment. (3GPP TS 29.078 V19.0.0 clause 5.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly callCompletionTreatmentIndicator?: OPTIONAL<OCTET_STRING>;
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `conferenceTreatmentIndicator`.
-         * @description
-         *
-         * acceptConferenceRequest `'xxxx xx01'`B; rejectConferenceRequest
-         * `'xxxx xx10'`B. If absent from Connect or ContinueWithArgument, the
-         * CAMEL service does not affect conference treatment.
-         * (3GPP TS 29.078 V19.0.0 clause 5.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly conferenceTreatmentIndicator?: OPTIONAL<OCTET_STRING>,
-        /**
-         * @summary `callCompletionTreatmentIndicator`.
-         * @description
-         *
-         * acceptCallCompletionServiceRequest `'xxxx xx01'`B;
-         * rejectCallCompletionServiceRequest `'xxxx xx10'`B. If absent from
-         * Connect or ContinueWithArgument, the CAMEL service does not affect
-         * call completion treatment. (3GPP TS 29.078 V19.0.0 clause 5.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly callCompletionTreatmentIndicator?: OPTIONAL<OCTET_STRING>,
-        readonly _unrecognizedExtensionsList: _Element[] = [],
+        conferenceTreatmentIndicator?: OPTIONAL<OCTET_STRING>,
+        callCompletionTreatmentIndicator?: OPTIONAL<OCTET_STRING>,
+        _unrecognizedExtensionsList: _Element[] = [],
     ) {
+        this.conferenceTreatmentIndicator = conferenceTreatmentIndicator;
+        this.callCompletionTreatmentIndicator = callCompletionTreatmentIndicator;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
         if (conferenceTreatmentIndicator !== undefined && conferenceTreatmentIndicator.length !== 1) {
             throw new ASN1SizeError("BackwardServiceInteractionInd.conferenceTreatmentIndicator violates SIZE constraint");
         }

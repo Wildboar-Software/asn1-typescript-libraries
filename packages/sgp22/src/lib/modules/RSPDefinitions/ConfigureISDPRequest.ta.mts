@@ -30,20 +30,24 @@ import { DpProprietaryData, _decode_DpProprietaryData, _encode_DpProprietaryData
  */
 export
 class ConfigureISDPRequest {
+    /**
+     * @summary `dpProprietaryData`.
+     * @description
+     * 
+     * Optional SM-DP+ data stored in the new ISD-P. Longer than 128 octets
+     * including tag and length is `incorrectInputValues`. SGP.22 v3.1
+     * §5.5.2.
+     * 
+     * @public
+     * @readonly
+     */
+    public readonly dpProprietaryData?: OPTIONAL<DpProprietaryData>;
+
     constructor (
-        /**
-         * @summary `dpProprietaryData`.
-         * @description
-         * 
-         * Optional SM-DP+ data stored in the new ISD-P. Longer than 128 octets
-         * including tag and length is `incorrectInputValues`. SGP.22 v3.1
-         * §5.5.2.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly dpProprietaryData?: OPTIONAL<DpProprietaryData>
-    ) {}
+        dpProprietaryData?: OPTIONAL<DpProprietaryData>
+    ) {
+        this.dpProprietaryData = dpProprietaryData;
+    }
 
     /**
      * @summary Restructures an object into a ConfigureISDPRequest

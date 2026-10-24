@@ -54,32 +54,42 @@ import {
  *
  */
 export class FetchArgument {
+    /**
+     * @summary `entry_class`.
+     * @public
+     * @readonly
+     */
+    public readonly entry_class: OPTIONAL<EntryClass>;
+    /**
+     * @summary `item`.
+     * @public
+     * @readonly
+     */
+    public readonly item: FetchArgument_item;
+    /**
+     * @summary `requested_attributes`.
+     * @public
+     * @readonly
+     */
+    public readonly requested_attributes?: OPTIONAL<EntryInformationSelection>;
+    /**
+     * @summary `fetch_extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly fetch_extensions?: OPTIONAL<MSExtensions>;
+
     constructor(
-        /**
-         * @summary `entry_class`.
-         * @public
-         * @readonly
-         */
-        readonly entry_class: OPTIONAL<EntryClass>,
-        /**
-         * @summary `item`.
-         * @public
-         * @readonly
-         */
-        readonly item: FetchArgument_item,
-        /**
-         * @summary `requested_attributes`.
-         * @public
-         * @readonly
-         */
-        readonly requested_attributes?: OPTIONAL<EntryInformationSelection>,
-        /**
-         * @summary `fetch_extensions`.
-         * @public
-         * @readonly
-         */
-        readonly fetch_extensions?: OPTIONAL<MSExtensions>
-    ) {}
+        entry_class: OPTIONAL<EntryClass>,
+        item: FetchArgument_item,
+        requested_attributes?: OPTIONAL<EntryInformationSelection>,
+        fetch_extensions?: OPTIONAL<MSExtensions>
+    ) {
+        this.entry_class = entry_class;
+        this.item = item;
+        this.requested_attributes = requested_attributes;
+        this.fetch_extensions = fetch_extensions;
+    }
 
     /**
      * @summary Restructures an object into a FetchArgument

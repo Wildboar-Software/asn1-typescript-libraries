@@ -36,43 +36,51 @@ import { SecondRequestedEvent, _decode_SecondRequestedEvent, _encode_SecondReque
  */
 export
 class SecondEventsDescriptor {
+    /**
+     * @summary `requestID`.
+     * @description
+     *
+     * Request identifier of the embedded descriptor. Same presence rule as
+     * on `EventsDescriptor`: required when the event list is not empty
+     * (Annex A).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly requestID: OPTIONAL<RequestID>;
+    /**
+     * @summary `eventList`.
+     * @description
+     *
+     * Events detected once this descriptor is active. These are
+     * `SecondRequestedEvent`s, which cannot embed a further Events
+     * descriptor.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly eventList: SecondRequestedEvent[];
+    /**
+     * @summary Extensions that are not recognized.
+     * @description
+     *
+     * Extension additions this version does not define. Kept so a later
+     * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `requestID`.
-         * @description
-         *
-         * Request identifier of the embedded descriptor. Same presence rule as
-         * on `EventsDescriptor`: required when the event list is not empty
-         * (Annex A).
-         *
-         * @public
-         * @readonly
-         */
-        readonly requestID: OPTIONAL<RequestID>,
-        /**
-         * @summary `eventList`.
-         * @description
-         *
-         * Events detected once this descriptor is active. These are
-         * `SecondRequestedEvent`s, which cannot embed a further Events
-         * descriptor.
-         *
-         * @public
-         * @readonly
-         */
-        readonly eventList: SecondRequestedEvent[],
-        /**
-         * @summary Extensions that are not recognized.
-         * @description
-         *
-         * Extension additions this version does not define. Kept so a later
-         * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
-         *
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        requestID: OPTIONAL<RequestID>,
+        eventList: SecondRequestedEvent[],
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.requestID = requestID;
+        this.eventList = eventList;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a SecondEventsDescriptor

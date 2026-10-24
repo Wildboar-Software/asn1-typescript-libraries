@@ -42,20 +42,26 @@ import {
  *
  */
 export class DLExpansion {
+    /**
+     * @summary `dl`.
+     * @public
+     * @readonly
+     */
+    public readonly dl: ORAddressAndOptionalDirectoryName;
+    /**
+     * @summary `dl_expansion_time`.
+     * @public
+     * @readonly
+     */
+    public readonly dl_expansion_time: Time;
+
     constructor(
-        /**
-         * @summary `dl`.
-         * @public
-         * @readonly
-         */
-        readonly dl: ORAddressAndOptionalDirectoryName,
-        /**
-         * @summary `dl_expansion_time`.
-         * @public
-         * @readonly
-         */
-        readonly dl_expansion_time: Time
-    ) {}
+        dl: ORAddressAndOptionalDirectoryName,
+        dl_expansion_time: Time
+    ) {
+        this.dl = dl;
+        this.dl_expansion_time = dl_expansion_time;
+    }
 
     /**
      * @summary Restructures an object into a DLExpansion

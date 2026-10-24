@@ -36,28 +36,34 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class ServerRSAParams {
+    /**
+     * @summary `rsa_modulus`.
+     * @description
+     *
+     * Ephemeral RSA modulus. Annex A constrains INTEGER to `1..65535`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly rsa_modulus: INTEGER;
+    /**
+     * @summary `rsa_exponent`.
+     * @description
+     *
+     * Ephemeral RSA exponent. Annex A constrains INTEGER to `1..65535`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly rsa_exponent: INTEGER;
+
     constructor (
-        /**
-         * @summary `rsa_modulus`.
-         * @description
-         *
-         * Ephemeral RSA modulus. Annex A constrains INTEGER to `1..65535`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly rsa_modulus: INTEGER,
-        /**
-         * @summary `rsa_exponent`.
-         * @description
-         *
-         * Ephemeral RSA exponent. Annex A constrains INTEGER to `1..65535`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly rsa_exponent: INTEGER
-    ) {}
+        rsa_modulus: INTEGER,
+        rsa_exponent: INTEGER
+    ) {
+        this.rsa_modulus = rsa_modulus;
+        this.rsa_exponent = rsa_exponent;
+    }
 
     /**
      * @summary Restructures an object into a ServerRSAParams

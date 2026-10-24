@@ -37,57 +37,69 @@ import { RequestedInfo, _decode_RequestedInfo, _encode_RequestedInfo } from "../
  */
 export
 class AnyTimeInterrogationArg {
+    /**
+     * @summary `subscriberIdentity`.
+     * @description
+     *
+     * IMSI or MSISDN identifying the subscriber. One of IMSI and MSISDN is
+     * used according to 3GPP TS 23.018 / TS 23.078 (3GPP TS 29.002 V19.1.0
+     * clauses 8.11.1.2 and 7.6.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly subscriberIdentity: SubscriberIdentity;
+    /**
+     * @summary `requestedInfo`.
+     * @description
+     *
+     * Information requested (state, location, T-ADS data, MNP, etc.). When
+     * used to the HLR, subscriber state, location, Time Zone or T-ADS data
+     * may be requested; to the GMLC only location; to the NPLR only MNP
+     * information (3GPP TS 29.002 V19.1.0 clauses 8.11.1.1 and 7.6.3.31).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly requestedInfo: RequestedInfo;
+    /**
+     * @summary `gsmSCF_Address`.
+     * @description
+     *
+     * Address of the interrogating gsmSCF (international E.164). The HLR or
+     * GMLC may use it to screen the request. gsmSCF-Address is mandatory
+     * (3GPP TS 29.002 V19.1.0 clauses 8.11.1.2, 8.11.1.3 and 7.6.2.58).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly gsmSCF_Address: ISDN_AddressString;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `subscriberIdentity`.
-         * @description
-         *
-         * IMSI or MSISDN identifying the subscriber. One of IMSI and MSISDN is
-         * used according to 3GPP TS 23.018 / TS 23.078 (3GPP TS 29.002 V19.1.0
-         * clauses 8.11.1.2 and 7.6.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly subscriberIdentity: SubscriberIdentity,
-        /**
-         * @summary `requestedInfo`.
-         * @description
-         *
-         * Information requested (state, location, T-ADS data, MNP, etc.). When
-         * used to the HLR, subscriber state, location, Time Zone or T-ADS data
-         * may be requested; to the GMLC only location; to the NPLR only MNP
-         * information (3GPP TS 29.002 V19.1.0 clauses 8.11.1.1 and 7.6.3.31).
-         *
-         * @public
-         * @readonly
-         */
-        readonly requestedInfo: RequestedInfo,
-        /**
-         * @summary `gsmSCF_Address`.
-         * @description
-         *
-         * Address of the interrogating gsmSCF (international E.164). The HLR or
-         * GMLC may use it to screen the request. gsmSCF-Address is mandatory
-         * (3GPP TS 29.002 V19.1.0 clauses 8.11.1.2, 8.11.1.3 and 7.6.2.58).
-         *
-         * @public
-         * @readonly
-         */
-        readonly gsmSCF_Address: ISDN_AddressString,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        subscriberIdentity: SubscriberIdentity,
+        requestedInfo: RequestedInfo,
+        gsmSCF_Address: ISDN_AddressString,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.subscriberIdentity = subscriberIdentity;
+        this.requestedInfo = requestedInfo;
+        this.gsmSCF_Address = gsmSCF_Address;
+        this.extensionContainer = extensionContainer;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a AnyTimeInterrogationArg

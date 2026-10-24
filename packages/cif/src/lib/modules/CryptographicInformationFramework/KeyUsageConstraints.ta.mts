@@ -38,33 +38,41 @@ import { KeyUsageConstraints_keyUsageConstraintsFlag, _decode_KeyUsageConstraint
  */
 export
 class KeyUsageConstraints {
+    /**
+     * @summary `keyUsageConstraintsFlag`.
+     * @description
+     * `immediateUsage` set: IFD shall not send a C-RP between preparation
+     * and usage on that logical channel. Unset: IFD may send C-RPs on
+     * arbitrary channels. ISO/IEC 7816-15:2016 §8.2.10.
+     * @public
+     * @readonly
+     */
+    public readonly keyUsageConstraintsFlag: KeyUsageConstraints_keyUsageConstraintsFlag;
+    /**
+     * @summary `refOID`.
+     * @description
+     * Optional OID giving further constraint details. ISO/IEC 7816-15:2016
+     * §8.2.10.
+     * @public
+     * @readonly
+     */
+    public readonly refOID?: OPTIONAL<OBJECT_IDENTIFIER>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `keyUsageConstraintsFlag`.
-         * @description
-         * `immediateUsage` set: IFD shall not send a C-RP between preparation
-         * and usage on that logical channel. Unset: IFD may send C-RPs on
-         * arbitrary channels. ISO/IEC 7816-15:2016 §8.2.10.
-         * @public
-         * @readonly
-         */
-        readonly keyUsageConstraintsFlag: KeyUsageConstraints_keyUsageConstraintsFlag,
-        /**
-         * @summary `refOID`.
-         * @description
-         * Optional OID giving further constraint details. ISO/IEC 7816-15:2016
-         * §8.2.10.
-         * @public
-         * @readonly
-         */
-        readonly refOID?: OPTIONAL<OBJECT_IDENTIFIER>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        keyUsageConstraintsFlag: KeyUsageConstraints_keyUsageConstraintsFlag,
+        refOID?: OPTIONAL<OBJECT_IDENTIFIER>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.keyUsageConstraintsFlag = keyUsageConstraintsFlag;
+        this.refOID = refOID;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a KeyUsageConstraints

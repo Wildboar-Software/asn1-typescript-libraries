@@ -42,39 +42,47 @@ import {
  *
  */
 export class SPKM_ERROR {
+    /**
+     * @summary `errorToken`.
+     * @description
+     *
+     * The "token" over which `integrity` is computed.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly errorToken: ERROR_TOKEN;
+    /**
+     * @summary `algId`.
+     * @description
+     *
+     * Algorithm for `integrity`. Signature size advertises RSA modulus
+     * bit length during error-driven negotiation.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly algId: AlgorithmIdentifier;
+    /**
+     * @summary `integrity`.
+     * @description
+     *
+     * Signature or MAC of DER(`ERROR-TOKEN`) per `algId`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly integrity: Integrity;
+
     constructor(
-        /**
-         * @summary `errorToken`.
-         * @description
-         *
-         * The "token" over which `integrity` is computed.
-         *
-         * @public
-         * @readonly
-         */
-        readonly errorToken: ERROR_TOKEN,
-        /**
-         * @summary `algId`.
-         * @description
-         *
-         * Algorithm for `integrity`. Signature size advertises RSA modulus
-         * bit length during error-driven negotiation.
-         *
-         * @public
-         * @readonly
-         */
-        readonly algId: AlgorithmIdentifier,
-        /**
-         * @summary `integrity`.
-         * @description
-         *
-         * Signature or MAC of DER(`ERROR-TOKEN`) per `algId`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly integrity: Integrity
-    ) {}
+        errorToken: ERROR_TOKEN,
+        algId: AlgorithmIdentifier,
+        integrity: Integrity
+    ) {
+        this.errorToken = errorToken;
+        this.algId = algId;
+        this.integrity = integrity;
+    }
 
     /**
      * @summary Restructures an object into a SPKM_ERROR

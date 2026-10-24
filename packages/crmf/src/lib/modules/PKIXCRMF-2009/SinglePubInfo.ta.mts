@@ -38,31 +38,37 @@ import {
  *
  */
 export class SinglePubInfo {
+    /**
+     * @summary `pubMethod`.
+     * @description
+     *
+     * `dontCare`(0), `x500`(1), `web`(2), or `ldap`(3). For
+     * `dontCare`, `pubLocation` MUST be omitted
+     * ([RFC 4211 §6.3](https://datatracker.ietf.org/doc/html/rfc4211#section-6.3)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly pubMethod: SinglePubInfo_pubMethod;
+    /**
+     * @summary `pubLocation`.
+     * @description
+     *
+     * Address for publication; `GeneralName` choice dictated by
+     * `pubMethod` ([RFC 4211 §6.3](https://datatracker.ietf.org/doc/html/rfc4211#section-6.3)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly pubLocation?: OPTIONAL<GeneralName>;
+
     constructor(
-        /**
-         * @summary `pubMethod`.
-         * @description
-         *
-         * `dontCare`(0), `x500`(1), `web`(2), or `ldap`(3). For
-         * `dontCare`, `pubLocation` MUST be omitted
-         * ([RFC 4211 §6.3](https://datatracker.ietf.org/doc/html/rfc4211#section-6.3)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly pubMethod: SinglePubInfo_pubMethod,
-        /**
-         * @summary `pubLocation`.
-         * @description
-         *
-         * Address for publication; `GeneralName` choice dictated by
-         * `pubMethod` ([RFC 4211 §6.3](https://datatracker.ietf.org/doc/html/rfc4211#section-6.3)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly pubLocation?: OPTIONAL<GeneralName>
-    ) {}
+        pubMethod: SinglePubInfo_pubMethod,
+        pubLocation?: OPTIONAL<GeneralName>
+    ) {
+        this.pubMethod = pubMethod;
+        this.pubLocation = pubLocation;
+    }
 
     /**
      * @summary Restructures an object into a SinglePubInfo

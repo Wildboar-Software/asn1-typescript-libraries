@@ -36,32 +36,38 @@ import {
  *
  */
 export class DateTranslationList_Item {
+    /**
+     * @summary `date`.
+     * @description
+     *
+     * Calendar date (`YYYYMMDD`) being classified. May occur
+     * only once in the list. ITU-T Rec. X.746 (02/00)
+     * [A.4.0.2](https://www.itu.int/rec/T-REC-X.746-200002-I).
+     * @public
+     * @readonly
+     */
+    public readonly date: Date;
+    /**
+     * @summary `typeOfDay`.
+     * @description
+     *
+     * Category assigned to this date (`workday`, `weekend`, or
+     * a special day). Takes precedence over the weekday
+     * mapping. ITU-T Rec. X.746 (02/00)
+     * [A.1.12](https://www.itu.int/rec/T-REC-X.746-200002-I),
+     * A.4.0.2.
+     * @public
+     * @readonly
+     */
+    public readonly typeOfDay: TypeOfDay;
+
     constructor(
-        /**
-         * @summary `date`.
-         * @description
-         *
-         * Calendar date (`YYYYMMDD`) being classified. May occur
-         * only once in the list. ITU-T Rec. X.746 (02/00)
-         * [A.4.0.2](https://www.itu.int/rec/T-REC-X.746-200002-I).
-         * @public
-         * @readonly
-         */
-        readonly date: Date,
-        /**
-         * @summary `typeOfDay`.
-         * @description
-         *
-         * Category assigned to this date (`workday`, `weekend`, or
-         * a special day). Takes precedence over the weekday
-         * mapping. ITU-T Rec. X.746 (02/00)
-         * [A.1.12](https://www.itu.int/rec/T-REC-X.746-200002-I),
-         * A.4.0.2.
-         * @public
-         * @readonly
-         */
-        readonly typeOfDay: TypeOfDay
-    ) {}
+        date: Date,
+        typeOfDay: TypeOfDay
+    ) {
+        this.date = date;
+        this.typeOfDay = typeOfDay;
+    }
 
     /**
      * @summary Restructures an object into a DateTranslationList_Item

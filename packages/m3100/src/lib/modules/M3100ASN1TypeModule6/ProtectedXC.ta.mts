@@ -32,26 +32,34 @@ import {
  *
  */
 export class ProtectedXC {
+    /**
+     * @summary `conProtGroup`.
+     * @public
+     * @readonly
+     */
+    public readonly conProtGroup: ObjectInstance;
+    /**
+     * @summary `conProtA`.
+     * @public
+     * @readonly
+     */
+    public readonly conProtA: ObjectInstance;
+    /**
+     * @summary `conProtB`.
+     * @public
+     * @readonly
+     */
+    public readonly conProtB: ObjectInstance;
+
     constructor(
-        /**
-         * @summary `conProtGroup`.
-         * @public
-         * @readonly
-         */
-        readonly conProtGroup: ObjectInstance,
-        /**
-         * @summary `conProtA`.
-         * @public
-         * @readonly
-         */
-        readonly conProtA: ObjectInstance,
-        /**
-         * @summary `conProtB`.
-         * @public
-         * @readonly
-         */
-        readonly conProtB: ObjectInstance
-    ) {}
+        conProtGroup: ObjectInstance,
+        conProtA: ObjectInstance,
+        conProtB: ObjectInstance
+    ) {
+        this.conProtGroup = conProtGroup;
+        this.conProtA = conProtA;
+        this.conProtB = conProtB;
+    }
 
     /**
      * @summary Restructures an object into a ProtectedXC

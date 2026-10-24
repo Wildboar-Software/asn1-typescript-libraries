@@ -28,20 +28,26 @@ import {
  *
  */
 export class Usage {
+    /**
+     * @summary `keyUsage`.
+     * @public
+     * @readonly
+     */
+    public readonly keyUsage?: OPTIONAL<KeyUsage>;
+    /**
+     * @summary `extKeyUsage`.
+     * @public
+     * @readonly
+     */
+    public readonly extKeyUsage?: OPTIONAL<OBJECT_IDENTIFIER[]>;
+
     constructor(
-        /**
-         * @summary `keyUsage`.
-         * @public
-         * @readonly
-         */
-        readonly keyUsage?: OPTIONAL<KeyUsage>,
-        /**
-         * @summary `extKeyUsage`.
-         * @public
-         * @readonly
-         */
-        readonly extKeyUsage?: OPTIONAL<OBJECT_IDENTIFIER[]>
-    ) {}
+        keyUsage?: OPTIONAL<KeyUsage>,
+        extKeyUsage?: OPTIONAL<OBJECT_IDENTIFIER[]>
+    ) {
+        this.keyUsage = keyUsage;
+        this.extKeyUsage = extKeyUsage;
+    }
 
     /**
      * @summary Restructures an object into a Usage

@@ -57,38 +57,50 @@ import {
  *
  */
 export class PerReportDeliveryFields {
+    /**
+     * @summary `subject_submission_identifier`.
+     * @public
+     * @readonly
+     */
+    public readonly subject_submission_identifier: SubjectSubmissionIdentifier;
+    /**
+     * @summary `content_identifier`.
+     * @public
+     * @readonly
+     */
+    public readonly content_identifier?: OPTIONAL<ContentIdentifier>;
+    /**
+     * @summary `content_type`.
+     * @public
+     * @readonly
+     */
+    public readonly content_type?: OPTIONAL<ContentType>;
+    /**
+     * @summary `original_encoded_information_types`.
+     * @public
+     * @readonly
+     */
+    public readonly original_encoded_information_types?: OPTIONAL<OriginalEncodedInformationTypes>;
+    /**
+     * @summary `extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<ExtensionField[]>;
+
     constructor(
-        /**
-         * @summary `subject_submission_identifier`.
-         * @public
-         * @readonly
-         */
-        readonly subject_submission_identifier: SubjectSubmissionIdentifier,
-        /**
-         * @summary `content_identifier`.
-         * @public
-         * @readonly
-         */
-        readonly content_identifier?: OPTIONAL<ContentIdentifier>,
-        /**
-         * @summary `content_type`.
-         * @public
-         * @readonly
-         */
-        readonly content_type?: OPTIONAL<ContentType>,
-        /**
-         * @summary `original_encoded_information_types`.
-         * @public
-         * @readonly
-         */
-        readonly original_encoded_information_types?: OPTIONAL<OriginalEncodedInformationTypes>,
-        /**
-         * @summary `extensions`.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<ExtensionField[]>
-    ) {}
+        subject_submission_identifier: SubjectSubmissionIdentifier,
+        content_identifier?: OPTIONAL<ContentIdentifier>,
+        content_type?: OPTIONAL<ContentType>,
+        original_encoded_information_types?: OPTIONAL<OriginalEncodedInformationTypes>,
+        extensions?: OPTIONAL<ExtensionField[]>
+    ) {
+        this.subject_submission_identifier = subject_submission_identifier;
+        this.content_identifier = content_identifier;
+        this.content_type = content_type;
+        this.original_encoded_information_types = original_encoded_information_types;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a PerReportDeliveryFields

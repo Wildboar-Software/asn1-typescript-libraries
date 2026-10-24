@@ -34,28 +34,34 @@ import {
  *
  */
 export class CertificationData {
+    /**
+     * @summary `certificationPath`.
+     * @description
+     *
+     * Sender's keys/certs and CA path toward the recipient.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly certificationPath?: OPTIONAL<CertificationPath>;
+    /**
+     * @summary `certificateRevocationList`.
+     * @description
+     *
+     * Optional CRL. May be the only component present.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly certificateRevocationList?: OPTIONAL<CertificateList>;
+
     constructor(
-        /**
-         * @summary `certificationPath`.
-         * @description
-         *
-         * Sender's keys/certs and CA path toward the recipient.
-         *
-         * @public
-         * @readonly
-         */
-        readonly certificationPath?: OPTIONAL<CertificationPath>,
-        /**
-         * @summary `certificateRevocationList`.
-         * @description
-         *
-         * Optional CRL. May be the only component present.
-         *
-         * @public
-         * @readonly
-         */
-        readonly certificateRevocationList?: OPTIONAL<CertificateList>
-    ) {}
+        certificationPath?: OPTIONAL<CertificationPath>,
+        certificateRevocationList?: OPTIONAL<CertificateList>
+    ) {
+        this.certificationPath = certificationPath;
+        this.certificateRevocationList = certificateRevocationList;
+    }
 
     /**
      * @summary Restructures an object into a CertificationData

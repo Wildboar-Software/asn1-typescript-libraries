@@ -26,20 +26,26 @@ import {
  *
  */
 export class PBES2_params {
+    /**
+     * @summary `keyDerivationFunc`.
+     * @public
+     * @readonly
+     */
+    public readonly keyDerivationFunc: AlgorithmIdentifier;
+    /**
+     * @summary `encryptionScheme`.
+     * @public
+     * @readonly
+     */
+    public readonly encryptionScheme: AlgorithmIdentifier;
+
     constructor(
-        /**
-         * @summary `keyDerivationFunc`.
-         * @public
-         * @readonly
-         */
-        readonly keyDerivationFunc: AlgorithmIdentifier,
-        /**
-         * @summary `encryptionScheme`.
-         * @public
-         * @readonly
-         */
-        readonly encryptionScheme: AlgorithmIdentifier
-    ) {}
+        keyDerivationFunc: AlgorithmIdentifier,
+        encryptionScheme: AlgorithmIdentifier
+    ) {
+        this.keyDerivationFunc = keyDerivationFunc;
+        this.encryptionScheme = encryptionScheme;
+    }
 
     /**
      * @summary Restructures an object into a PBES2_params

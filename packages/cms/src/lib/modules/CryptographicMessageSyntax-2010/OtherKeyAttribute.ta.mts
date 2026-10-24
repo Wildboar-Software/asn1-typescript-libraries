@@ -24,20 +24,26 @@ import * as $ from "@wildboar/asn1/functional";
  *
  */
 export class OtherKeyAttribute {
+    /**
+     * @summary `keyAttrId`.
+     * @public
+     * @readonly
+     */
+    public readonly keyAttrId: OBJECT_IDENTIFIER;
+    /**
+     * @summary `keyAttr`.
+     * @public
+     * @readonly
+     */
+    public readonly keyAttr: _Element;
+
     constructor(
-        /**
-         * @summary `keyAttrId`.
-         * @public
-         * @readonly
-         */
-        readonly keyAttrId: OBJECT_IDENTIFIER,
-        /**
-         * @summary `keyAttr`.
-         * @public
-         * @readonly
-         */
-        readonly keyAttr: _Element
-    ) {}
+        keyAttrId: OBJECT_IDENTIFIER,
+        keyAttr: _Element
+    ) {
+        this.keyAttrId = keyAttrId;
+        this.keyAttr = keyAttr;
+    }
 
     /**
      * @summary Restructures an object into a OtherKeyAttribute

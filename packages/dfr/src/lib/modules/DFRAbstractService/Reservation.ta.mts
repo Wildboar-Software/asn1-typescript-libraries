@@ -39,36 +39,44 @@ import { ReservationStatus, _enum_for_ReservationStatus, ReservationStatus_uncom
  */
 export
 class Reservation {
+    /**
+     * @summary `reservation_duration`.
+     * @description
+     *
+     * When the reservation ends. Omit for indefinite duration.
+     * @public
+     * @readonly
+     */
+    public readonly reservation_duration: OPTIONAL<GeneralizedTime>;
+    /**
+     * @summary `reservation_level`.
+     * @description
+     *
+     * unreserved .. read-only2. ISO/IEC 10166-1:1991 §8.1.3.2.
+     * @public
+     * @readonly
+     */
+    public readonly reservation_level: ReservationLevel;
+    /**
+     * @summary `reservation_Status`.
+     * @description
+     *
+     * uncommitted (default) or committed. Committed cannot be downgraded
+     * or uncommitted.
+     * @public
+     * @readonly
+     */
+    public readonly reservation_Status?: OPTIONAL<ReservationStatus>;
+
     constructor (
-        /**
-         * @summary `reservation_duration`.
-         * @description
-         *
-         * When the reservation ends. Omit for indefinite duration.
-         * @public
-         * @readonly
-         */
-        readonly reservation_duration: OPTIONAL<GeneralizedTime>,
-        /**
-         * @summary `reservation_level`.
-         * @description
-         *
-         * unreserved .. read-only2. ISO/IEC 10166-1:1991 §8.1.3.2.
-         * @public
-         * @readonly
-         */
-        readonly reservation_level: ReservationLevel,
-        /**
-         * @summary `reservation_Status`.
-         * @description
-         *
-         * uncommitted (default) or committed. Committed cannot be downgraded
-         * or uncommitted.
-         * @public
-         * @readonly
-         */
-        readonly reservation_Status?: OPTIONAL<ReservationStatus>
-    ) {}
+        reservation_duration: OPTIONAL<GeneralizedTime>,
+        reservation_level: ReservationLevel,
+        reservation_Status?: OPTIONAL<ReservationStatus>
+    ) {
+        this.reservation_duration = reservation_duration;
+        this.reservation_level = reservation_level;
+        this.reservation_Status = reservation_Status;
+    }
 
     /**
      * @summary Restructures an object into a Reservation

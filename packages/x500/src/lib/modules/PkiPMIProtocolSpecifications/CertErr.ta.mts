@@ -33,26 +33,34 @@ import {
  *
  */
 export class CertErr {
+    /**
+     * @summary `notOK`.
+     * @public
+     * @readonly
+     */
+    public readonly notOK: CertErr_notOK;
+    /**
+     * @summary `note`.
+     * @public
+     * @readonly
+     */
+    public readonly note?: OPTIONAL<Notifications>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `notOK`.
-         * @public
-         * @readonly
-         */
-        readonly notOK: CertErr_notOK,
-        /**
-         * @summary `note`.
-         * @public
-         * @readonly
-         */
-        readonly note?: OPTIONAL<Notifications>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        notOK: CertErr_notOK,
+        note?: OPTIONAL<Notifications>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.notOK = notOK;
+        this.note = note;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a CertErr

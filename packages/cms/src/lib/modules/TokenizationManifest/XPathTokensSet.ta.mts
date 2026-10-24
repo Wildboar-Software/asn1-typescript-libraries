@@ -34,20 +34,26 @@ import {
  *
  */
 export class XPathTokensSet {
+    /**
+     * @summary `tSP`.
+     * @public
+     * @readonly
+     */
+    public readonly tSP: OPTIONAL<TokenServiceProvider>;
+    /**
+     * @summary `xPathSet`.
+     * @public
+     * @readonly
+     */
+    public readonly xPathSet: XPathSet;
+
     constructor(
-        /**
-         * @summary `tSP`.
-         * @public
-         * @readonly
-         */
-        readonly tSP: OPTIONAL<TokenServiceProvider>,
-        /**
-         * @summary `xPathSet`.
-         * @public
-         * @readonly
-         */
-        readonly xPathSet: XPathSet
-    ) {}
+        tSP: OPTIONAL<TokenServiceProvider>,
+        xPathSet: XPathSet
+    ) {
+        this.tSP = tSP;
+        this.xPathSet = xPathSet;
+    }
 
     /**
      * @summary Restructures an object into a XPathTokensSet

@@ -37,20 +37,26 @@ import {
  *
  */
 export class MessageGroupErrorParameter {
+    /**
+     * @summary `problem`.
+     * @public
+     * @readonly
+     */
+    public readonly problem: MessageGroupProblem;
+    /**
+     * @summary `name`.
+     * @public
+     * @readonly
+     */
+    public readonly name: MessageGroupName;
+
     constructor(
-        /**
-         * @summary `problem`.
-         * @public
-         * @readonly
-         */
-        readonly problem: MessageGroupProblem,
-        /**
-         * @summary `name`.
-         * @public
-         * @readonly
-         */
-        readonly name: MessageGroupName
-    ) {}
+        problem: MessageGroupProblem,
+        name: MessageGroupName
+    ) {
+        this.problem = problem;
+        this.name = name;
+    }
 
     /**
      * @summary Restructures an object into a MessageGroupErrorParameter

@@ -34,25 +34,31 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class GenericKeyAttributes {
+    /**
+     * @summary `keyType`.
+     * @description
+     * Algorithm object identifier from `AllowedAlgorithms`. ISO/IEC
+     * 7816-15:2016 §8.2.13.
+     * @public
+     * @readonly
+     */
+    public readonly keyType: OBJECT_IDENTIFIER;
+    /**
+     * @summary `keyAttr`.
+     * @description
+     * Parameters for that algorithm. ISO/IEC 7816-15:2016 §8.2.13.
+     * @public
+     * @readonly
+     */
+    public readonly keyAttr: _Element;
+
     constructor (
-        /**
-         * @summary `keyType`.
-         * @description
-         * Algorithm object identifier from `AllowedAlgorithms`. ISO/IEC
-         * 7816-15:2016 §8.2.13.
-         * @public
-         * @readonly
-         */
-        readonly keyType: OBJECT_IDENTIFIER,
-        /**
-         * @summary `keyAttr`.
-         * @description
-         * Parameters for that algorithm. ISO/IEC 7816-15:2016 §8.2.13.
-         * @public
-         * @readonly
-         */
-        readonly keyAttr: _Element
-    ) {}
+        keyType: OBJECT_IDENTIFIER,
+        keyAttr: _Element
+    ) {
+        this.keyType = keyType;
+        this.keyAttr = keyAttr;
+    }
 
     /**
      * @summary Restructures an object into a GenericKeyAttributes

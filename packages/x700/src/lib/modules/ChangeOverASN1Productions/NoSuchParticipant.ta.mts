@@ -37,30 +37,36 @@ import {
  *
  */
 export class NoSuchParticipant {
+    /**
+     * @summary `role`.
+     * @description
+     *
+     * Relationship role that was requested (primary, secondary,
+     * backed-up, back-up, or control). ITU-T Rec. X.751 (11/95)
+     * [§8.7.5](https://www.itu.int/rec/T-REC-X.751-199511-I).
+     * @public
+     * @readonly
+     */
+    public readonly role: OBJECT_IDENTIFIER;
+    /**
+     * @summary `objectInstance`.
+     * @description
+     *
+     * Instance named in the action that is not a participant.
+     * ITU-T Rec. X.751 (11/95)
+     * [§8.7.5](https://www.itu.int/rec/T-REC-X.751-199511-I).
+     * @public
+     * @readonly
+     */
+    public readonly objectInstance: ObjectInstance;
+
     constructor(
-        /**
-         * @summary `role`.
-         * @description
-         *
-         * Relationship role that was requested (primary, secondary,
-         * backed-up, back-up, or control). ITU-T Rec. X.751 (11/95)
-         * [§8.7.5](https://www.itu.int/rec/T-REC-X.751-199511-I).
-         * @public
-         * @readonly
-         */
-        readonly role: OBJECT_IDENTIFIER,
-        /**
-         * @summary `objectInstance`.
-         * @description
-         *
-         * Instance named in the action that is not a participant.
-         * ITU-T Rec. X.751 (11/95)
-         * [§8.7.5](https://www.itu.int/rec/T-REC-X.751-199511-I).
-         * @public
-         * @readonly
-         */
-        readonly objectInstance: ObjectInstance
-    ) {}
+        role: OBJECT_IDENTIFIER,
+        objectInstance: ObjectInstance
+    ) {
+        this.role = role;
+        this.objectInstance = objectInstance;
+    }
 
     /**
      * @summary Restructures an object into a NoSuchParticipant

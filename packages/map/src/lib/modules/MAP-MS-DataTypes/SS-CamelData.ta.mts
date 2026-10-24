@@ -33,45 +33,55 @@ import { SS_EventList, _decode_SS_EventList, _encode_SS_EventList } from "../MAP
  */
 export
 class SS_CamelData {
+    /**
+     * @summary `ss_EventList`.
+     * @description
+     *
+     * SS-Codes that trigger CAMEL (ECT, MPTY, CD, CCBS in Phase 3).
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ss_EventList: SS_EventList;
+    /**
+     * @summary `gsmSCF_Address`.
+     * @description
+     *
+     * ISDN number assigned to the gsmSCF. In an IP Multimedia CN, contains
+     * the IM-SSF address when IM-SSF takes the gsmSCF role.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.2.58).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly gsmSCF_Address: ISDN_AddressString;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `ss_EventList`.
-         * @description
-         *
-         * SS-Codes that trigger CAMEL (ECT, MPTY, CD, CCBS in Phase 3).
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly ss_EventList: SS_EventList,
-        /**
-         * @summary `gsmSCF_Address`.
-         * @description
-         *
-         * ISDN number assigned to the gsmSCF. In an IP Multimedia CN, contains
-         * the IM-SSF address when IM-SSF takes the gsmSCF role.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.2.58).
-         *
-         * @public
-         * @readonly
-         */
-        readonly gsmSCF_Address: ISDN_AddressString,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        ss_EventList: SS_EventList,
+        gsmSCF_Address: ISDN_AddressString,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.ss_EventList = ss_EventList;
+        this.gsmSCF_Address = gsmSCF_Address;
+        this.extensionContainer = extensionContainer;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a SS_CamelData

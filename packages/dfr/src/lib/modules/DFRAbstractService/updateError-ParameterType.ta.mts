@@ -33,26 +33,32 @@ import { UpdateProblem, _enum_for_UpdateProblem, _decode_UpdateProblem, _encode_
  */
 export
 class updateError_ParameterType {
+    /**
+     * @summary `entry`.
+     * @description
+     *
+     * Entry that could not be updated.
+     * @public
+     * @readonly
+     */
+    public readonly entry: DfrEntryName;
+    /**
+     * @summary `problem`.
+     * @description
+     *
+     * Why.
+     * @public
+     * @readonly
+     */
+    public readonly problem: UpdateProblem;
+
     constructor (
-        /**
-         * @summary `entry`.
-         * @description
-         *
-         * Entry that could not be updated.
-         * @public
-         * @readonly
-         */
-        readonly entry: DfrEntryName,
-        /**
-         * @summary `problem`.
-         * @description
-         *
-         * Why.
-         * @public
-         * @readonly
-         */
-        readonly problem: UpdateProblem
-    ) {}
+        entry: DfrEntryName,
+        problem: UpdateProblem
+    ) {
+        this.entry = entry;
+        this.problem = problem;
+    }
 
     /**
      * @summary Restructures an object into a updateError_ParameterType

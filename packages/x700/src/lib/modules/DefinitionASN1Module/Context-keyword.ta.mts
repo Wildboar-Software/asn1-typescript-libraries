@@ -40,26 +40,32 @@ import {
  *
  */
 export class Context_keyword {
+    /**
+     * @summary `type_reference`.
+     * @description
+     *
+     * ASN.1 type of the management PDU that defines the context.
+     * @public
+     * @readonly
+     */
+    public readonly type_reference: DefinedType;
+    /**
+     * @summary `field`.
+     * @description
+     *
+     * Identifier of the PDU field to which the parameter applies.
+     * @public
+     * @readonly
+     */
+    public readonly field: Identifier;
+
     constructor(
-        /**
-         * @summary `type_reference`.
-         * @description
-         *
-         * ASN.1 type of the management PDU that defines the context.
-         * @public
-         * @readonly
-         */
-        readonly type_reference: DefinedType,
-        /**
-         * @summary `field`.
-         * @description
-         *
-         * Identifier of the PDU field to which the parameter applies.
-         * @public
-         * @readonly
-         */
-        readonly field: Identifier
-    ) {}
+        type_reference: DefinedType,
+        field: Identifier
+    ) {
+        this.type_reference = type_reference;
+        this.field = field;
+    }
 
     /**
      * @summary Restructures an object into a Context_keyword

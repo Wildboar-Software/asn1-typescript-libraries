@@ -39,26 +39,34 @@ import {
  *
  */
 export class MprInfo_Item {
+    /**
+     * @summary `mprId`.
+     * @public
+     * @readonly
+     */
+    public readonly mprId: EMailMpduIdentifier;
+    /**
+     * @summary `arrivalTime`.
+     * @public
+     * @readonly
+     */
+    public readonly arrivalTime: Time;
+    /**
+     * @summary `processingState`.
+     * @public
+     * @readonly
+     */
+    public readonly processingState: ProcessingState;
+
     constructor(
-        /**
-         * @summary `mprId`.
-         * @public
-         * @readonly
-         */
-        readonly mprId: EMailMpduIdentifier,
-        /**
-         * @summary `arrivalTime`.
-         * @public
-         * @readonly
-         */
-        readonly arrivalTime: Time,
-        /**
-         * @summary `processingState`.
-         * @public
-         * @readonly
-         */
-        readonly processingState: ProcessingState
-    ) {}
+        mprId: EMailMpduIdentifier,
+        arrivalTime: Time,
+        processingState: ProcessingState
+    ) {
+        this.mprId = mprId;
+        this.arrivalTime = arrivalTime;
+        this.processingState = processingState;
+    }
 
     /**
      * @summary Restructures an object into a MprInfo_Item

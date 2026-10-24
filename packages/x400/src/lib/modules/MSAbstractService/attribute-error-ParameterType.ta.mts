@@ -29,14 +29,18 @@ import {
  *
  */
 export class attribute_error_ParameterType {
+    /**
+     * @summary `problems`.
+     * @public
+     * @readonly
+     */
+    public readonly problems: attribute_error_ParameterType_problems_Item[];
+
     constructor(
-        /**
-         * @summary `problems`.
-         * @public
-         * @readonly
-         */
-        readonly problems: attribute_error_ParameterType_problems_Item[]
-    ) {}
+        problems: attribute_error_ParameterType_problems_Item[]
+    ) {
+        this.problems = problems;
+    }
 
     /**
      * @summary Restructures an object into a attribute_error_ParameterType

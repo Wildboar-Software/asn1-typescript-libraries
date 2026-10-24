@@ -43,42 +43,54 @@ import {
  *
  */
 export class RevokedGroup {
+    /**
+     * @summary `certificateIssuer`.
+     * @description
+     *
+     * Omitted = CRL issuer.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly certificateIssuer: OPTIONAL<GeneralName>;
+    /**
+     * @summary `reasonInfo`.
+     * @public
+     * @readonly
+     */
+    public readonly reasonInfo: OPTIONAL<ReasonInfo>;
+    /**
+     * @summary `invalidityDate`.
+     * @public
+     * @readonly
+     */
+    public readonly invalidityDate: OPTIONAL<GeneralizedTime>;
+    /**
+     * @summary `revokedcertificateGroup`.
+     * @public
+     * @readonly
+     */
+    public readonly revokedcertificateGroup: RevokedCertificateGroup;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `certificateIssuer`.
-         * @description
-         *
-         * Omitted = CRL issuer.
-         *
-         * @public
-         * @readonly
-         */
-        readonly certificateIssuer: OPTIONAL<GeneralName>,
-        /**
-         * @summary `reasonInfo`.
-         * @public
-         * @readonly
-         */
-        readonly reasonInfo: OPTIONAL<ReasonInfo>,
-        /**
-         * @summary `invalidityDate`.
-         * @public
-         * @readonly
-         */
-        readonly invalidityDate: OPTIONAL<GeneralizedTime>,
-        /**
-         * @summary `revokedcertificateGroup`.
-         * @public
-         * @readonly
-         */
-        readonly revokedcertificateGroup: RevokedCertificateGroup,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        certificateIssuer: OPTIONAL<GeneralName>,
+        reasonInfo: OPTIONAL<ReasonInfo>,
+        invalidityDate: OPTIONAL<GeneralizedTime>,
+        revokedcertificateGroup: RevokedCertificateGroup,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.certificateIssuer = certificateIssuer;
+        this.reasonInfo = reasonInfo;
+        this.invalidityDate = invalidityDate;
+        this.revokedcertificateGroup = revokedcertificateGroup;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a RevokedGroup

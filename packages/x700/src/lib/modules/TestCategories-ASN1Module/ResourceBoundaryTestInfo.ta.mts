@@ -44,31 +44,37 @@ import {
  *
  */
 export class ResourceBoundaryTestInfo {
+    /**
+     * @summary `resultReportIndicator`.
+     * @description
+     *
+     * Whether to emit a result when a
+     * sequence of events passes (case 1). Optional. X.737 §7.6.6,
+     * §8.1.19.
+     * @public
+     * @readonly
+     */
+    public readonly resultReportIndicator?: OPTIONAL<ResultReportIndicator>;
+    /**
+     * @summary `sequenceOfEvents`.
+     * @description
+     *
+     * Test event(s) to insert or expect.
+     * Cor.2 types this as one SEQUENCE (not SET OF). Optional; may
+     * also be set later via PT-SET. X.737 §7.6.6, §8.1.20; Cor.2
+     * [https://www.itu.int/rec/T-REC-X.737-200002-I].
+     * @public
+     * @readonly
+     */
+    public readonly sequenceOfEvents?: OPTIONAL<SequenceOfEvents>;
+
     constructor(
-        /**
-         * @summary `resultReportIndicator`.
-         * @description
-         *
-         * Whether to emit a result when a
-         * sequence of events passes (case 1). Optional. X.737 §7.6.6,
-         * §8.1.19.
-         * @public
-         * @readonly
-         */
-        readonly resultReportIndicator?: OPTIONAL<ResultReportIndicator>,
-        /**
-         * @summary `sequenceOfEvents`.
-         * @description
-         *
-         * Test event(s) to insert or expect.
-         * Cor.2 types this as one SEQUENCE (not SET OF). Optional; may
-         * also be set later via PT-SET. X.737 §7.6.6, §8.1.20; Cor.2
-         * [https://www.itu.int/rec/T-REC-X.737-200002-I].
-         * @public
-         * @readonly
-         */
-        readonly sequenceOfEvents?: OPTIONAL<SequenceOfEvents>
-    ) {}
+        resultReportIndicator?: OPTIONAL<ResultReportIndicator>,
+        sequenceOfEvents?: OPTIONAL<SequenceOfEvents>
+    ) {
+        this.resultReportIndicator = resultReportIndicator;
+        this.sequenceOfEvents = sequenceOfEvents;
+    }
 
     /**
      * @summary Restructures an object into a ResourceBoundaryTestInfo

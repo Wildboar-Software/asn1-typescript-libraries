@@ -44,27 +44,33 @@ import {
  *
  */
 export class CreateSpecification {
+    /**
+     * @summary `createModifier`.
+     * @description
+     *
+     * WITH-REFERENCE-OBJECT and/or WITH-AUTOMATIC-INSTANCE-NAMING. Omitted
+     * if the CREATE construct has no modifiers.
+     * @public
+     * @readonly
+     */
+    public readonly createModifier?: OPTIONAL<CreateSpecification_createModifier>;
+    /**
+     * @summary `parameter`.
+     * @description
+     *
+     * Name-binding-specific Create error parameters (processing failures).
+     * @public
+     * @readonly
+     */
+    public readonly parameter?: OPTIONAL<TemplateList>;
+
     constructor(
-        /**
-         * @summary `createModifier`.
-         * @description
-         *
-         * WITH-REFERENCE-OBJECT and/or WITH-AUTOMATIC-INSTANCE-NAMING. Omitted
-         * if the CREATE construct has no modifiers.
-         * @public
-         * @readonly
-         */
-        readonly createModifier?: OPTIONAL<CreateSpecification_createModifier>,
-        /**
-         * @summary `parameter`.
-         * @description
-         *
-         * Name-binding-specific Create error parameters (processing failures).
-         * @public
-         * @readonly
-         */
-        readonly parameter?: OPTIONAL<TemplateList>
-    ) {}
+        createModifier?: OPTIONAL<CreateSpecification_createModifier>,
+        parameter?: OPTIONAL<TemplateList>
+    ) {
+        this.createModifier = createModifier;
+        this.parameter = parameter;
+    }
 
     /**
      * @summary Restructures an object into a CreateSpecification

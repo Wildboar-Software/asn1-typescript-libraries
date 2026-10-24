@@ -34,54 +34,66 @@ import { TraceReference2, _decode_TraceReference2, _encode_TraceReference2 } fro
  */
 export
 class DeactivateTraceModeArg {
+    /**
+     * @summary `imsi`.
+     * @description
+     *
+     * Mandatory in a stand-alone operation (clause 9.1.2.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly imsi: OPTIONAL<IMSI>;
+    /**
+     * @summary `traceReference`.
+     * @description
+     *
+     * GSM-only trace reference (clauses 7.6.10.2 and 9.1.2.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly traceReference: TraceReference;
+    /**
+     * @summary `extensionContainer`.
+     * @description
+     *
+     * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary `traceReference2`.
+     * @description
+     *
+     * UMTS trace reference (clauses 7.6.10.2A and 9.1.2.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly traceReference2?: OPTIONAL<TraceReference2>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `imsi`.
-         * @description
-         *
-         * Mandatory in a stand-alone operation (clause 9.1.2.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly imsi: OPTIONAL<IMSI>,
-        /**
-         * @summary `traceReference`.
-         * @description
-         *
-         * GSM-only trace reference (clauses 7.6.10.2 and 9.1.2.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly traceReference: TraceReference,
-        /**
-         * @summary `extensionContainer`.
-         * @description
-         *
-         * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary `traceReference2`.
-         * @description
-         *
-         * UMTS trace reference (clauses 7.6.10.2A and 9.1.2.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly traceReference2?: OPTIONAL<TraceReference2>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        imsi: OPTIONAL<IMSI>,
+        traceReference: TraceReference,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        traceReference2?: OPTIONAL<TraceReference2>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.imsi = imsi;
+        this.traceReference = traceReference;
+        this.extensionContainer = extensionContainer;
+        this.traceReference2 = traceReference2;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a DeactivateTraceModeArg

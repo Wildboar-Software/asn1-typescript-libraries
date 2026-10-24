@@ -27,20 +27,26 @@ import {
  *
  */
 export class DigestInfo {
+    /**
+     * @summary `digestAlgorithm`.
+     * @public
+     * @readonly
+     */
+    public readonly digestAlgorithm: DigestAlgorithmIdentifier;
+    /**
+     * @summary `digest`.
+     * @public
+     * @readonly
+     */
+    public readonly digest: Digest;
+
     constructor(
-        /**
-         * @summary `digestAlgorithm`.
-         * @public
-         * @readonly
-         */
-        readonly digestAlgorithm: DigestAlgorithmIdentifier,
-        /**
-         * @summary `digest`.
-         * @public
-         * @readonly
-         */
-        readonly digest: Digest
-    ) {}
+        digestAlgorithm: DigestAlgorithmIdentifier,
+        digest: Digest
+    ) {
+        this.digestAlgorithm = digestAlgorithm;
+        this.digest = digest;
+    }
 
     /**
      * @summary Restructures an object into a DigestInfo

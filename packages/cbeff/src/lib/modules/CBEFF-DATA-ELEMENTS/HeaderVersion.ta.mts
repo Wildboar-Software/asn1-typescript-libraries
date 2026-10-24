@@ -35,20 +35,26 @@ import {
  *
  */
 export class HeaderVersion {
+  /**
+   * @summary `header_major`.
+   * @public
+   * @readonly
+   */
+  public readonly header_major: HeaderVersion_header_major;
+  /**
+   * @summary `header_minor`.
+   * @public
+   * @readonly
+   */
+  public readonly header_minor: HeaderVersion_header_minor;
+
   constructor(
-    /**
-     * @summary `header_major`.
-     * @public
-     * @readonly
-     */
-    readonly header_major: HeaderVersion_header_major,
-    /**
-     * @summary `header_minor`.
-     * @public
-     * @readonly
-     */
-    readonly header_minor: HeaderVersion_header_minor
-  ) {}
+    header_major: HeaderVersion_header_major,
+    header_minor: HeaderVersion_header_minor
+  ) {
+    this.header_major = header_major;
+    this.header_minor = header_minor;
+  }
 
   /**
    * @summary Restructures an object into a HeaderVersion

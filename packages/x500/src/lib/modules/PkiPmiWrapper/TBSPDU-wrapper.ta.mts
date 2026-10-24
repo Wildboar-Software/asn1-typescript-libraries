@@ -60,67 +60,81 @@ import {
  *
  */
 export class TBSPDU_wrapper {
+    /**
+     * @summary `version`.
+     * @description
+     *
+     * AuthenticationFramework INTEGER Version DEFAULT v1 — not the
+     * X.510 Wrapper BIT STRING Version.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly version: OPTIONAL<Version>;
+    /**
+     * @summary `signatureAlgorithm`.
+     * @description
+     *
+     * Constrained to `SupportedSignatureAlgorithms`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly signatureAlgorithm: AlgorithmIdentifier;
+    /**
+     * @summary `certPath`.
+     * @description
+     *
+     * [0] IMPLICIT PkiPath — required.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly certPath: PkiPath;
+    /**
+     * @summary `signedAttrs`.
+     * @description
+     *
+     * [1] IMPLICIT OPTIONAL. SET SIZE (1..MAX) — empty illegal; only
+     * `contentType` | `messageDigest` (RFC 5652 / PKCS #9).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly signedAttrs: OPTIONAL<SignedAttributes>;
+    /**
+     * @summary `conf`.
+     * @description
+     *
+     * `clear` WrappedPDUInfo vs `protected` EncryptedInfo (DH +
+     * encrypted PDU). TS alternative is `protected_`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly conf: TBSPDU_wrapper_conf;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `version`.
-         * @description
-         *
-         * AuthenticationFramework INTEGER Version DEFAULT v1 — not the
-         * X.510 Wrapper BIT STRING Version.
-         *
-         * @public
-         * @readonly
-         */
-        readonly version: OPTIONAL<Version>,
-        /**
-         * @summary `signatureAlgorithm`.
-         * @description
-         *
-         * Constrained to `SupportedSignatureAlgorithms`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly signatureAlgorithm: AlgorithmIdentifier,
-        /**
-         * @summary `certPath`.
-         * @description
-         *
-         * [0] IMPLICIT PkiPath — required.
-         *
-         * @public
-         * @readonly
-         */
-        readonly certPath: PkiPath,
-        /**
-         * @summary `signedAttrs`.
-         * @description
-         *
-         * [1] IMPLICIT OPTIONAL. SET SIZE (1..MAX) — empty illegal; only
-         * `contentType` | `messageDigest` (RFC 5652 / PKCS #9).
-         *
-         * @public
-         * @readonly
-         */
-        readonly signedAttrs: OPTIONAL<SignedAttributes>,
-        /**
-         * @summary `conf`.
-         * @description
-         *
-         * `clear` WrappedPDUInfo vs `protected` EncryptedInfo (DH +
-         * encrypted PDU). TS alternative is `protected_`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly conf: TBSPDU_wrapper_conf,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        version: OPTIONAL<Version>,
+        signatureAlgorithm: AlgorithmIdentifier,
+        certPath: PkiPath,
+        signedAttrs: OPTIONAL<SignedAttributes>,
+        conf: TBSPDU_wrapper_conf,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.version = version;
+        this.signatureAlgorithm = signatureAlgorithm;
+        this.certPath = certPath;
+        this.signedAttrs = signedAttrs;
+        this.conf = conf;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a TBSPDU_wrapper

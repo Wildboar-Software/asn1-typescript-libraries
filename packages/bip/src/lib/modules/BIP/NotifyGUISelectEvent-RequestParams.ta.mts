@@ -95,147 +95,173 @@ import {
  *
  */
 export class NotifyGUISelectEvent_RequestParams {
+  /**
+   * @summary `subscriberEndpointIRI`.
+   * @description
+   *
+   * Endpoint IRI of the secondary GUI handler. BioAPI `NULL`
+   * `SubscriberEndpointIRI` is rewritten to the local
+   * endpoint IRI (X.1083 §15.3). X.1083 §16.25.5.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly subscriberEndpointIRI: EndpointIRI;
+  /**
+   * @summary `guiEventSubscriptionUuid`.
+   * @description
+   *
+   * UUID of the secondary GUI-event subscription that shall
+   * receive this event. Required (unlike
+   * `subscribeToGUIEvents`, where it is OPTIONAL). C `NULL`
+   * is unconvertible (clause 19). X.1083 §16.25.5, §8.5.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly guiEventSubscriptionUuid: BioAPI_UUID;
+  /**
+   * @summary `bspProductUuid`.
+   * @description
+   *
+   * Product UUID of the BSP that originated the GUI event.
+   * Converted from BioAPI `BSPUuid` via clause 25. X.1083
+   * §16.25.5.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly bspProductUuid: BioAPI_UUID;
+  /**
+   * @summary `unitID`.
+   * @description
+   *
+   * Unit that originated the GUI select event. Forwarded from
+   * the primary callback. X.1083 §16.25.5.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly unitID: BioAPI_UNIT_ID;
+  /**
+   * @summary `enrollType`.
+   * @description
+   *
+   * Enrollment type from the primary GUI select callback.
+   * Forwarded unchanged to the secondary handler. X.1083
+   * §16.25.5.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly enrollType: BioAPI_GUI_ENROLL_TYPE;
+  /**
+   * @summary `operation`.
+   * @description
+   *
+   * GUI operation from the primary select callback.
+   * Forwarded to the secondary handler. X.1083 §16.25.5.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly operation: BioAPI_GUI_OPERATION;
+  /**
+   * @summary `moment`.
+   * @description
+   *
+   * GUI moment from the primary select callback. Forwarded
+   * to the secondary handler. X.1083 §16.25.5.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly moment: BioAPI_GUI_MOMENT;
+  /**
+   * @summary `resultCode`.
+   * @description
+   *
+   * Result code from the primary select callback. Forwarded
+   * to the secondary handler. X.1083 §16.25.5.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly resultCode: BioAPI_RETURN;
+  /**
+   * @summary `maxNumEnrollSamples`.
+   * @description
+   *
+   * Maximum number of enroll samples from the primary select
+   * callback. Forwarded to the secondary handler. X.1083
+   * §16.25.5.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly maxNumEnrollSamples: UnsignedInt;
+  /**
+   * @summary `selectableInstances`.
+   * @description
+   *
+   * Subtype mask of instances the subject may select.
+   * Forwarded from the primary callback; the handler returns
+   * `selectedInstances` on the response. X.1083 §16.25.5.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly selectableInstances: BioAPI_BIR_SUBTYPE_MASK;
+  /**
+   * @summary `capturedInstances`.
+   * @description
+   *
+   * Subtype mask of instances already captured. Forwarded
+   * from the primary callback. X.1083 §16.25.5.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly capturedInstances: BioAPI_BIR_SUBTYPE_MASK;
+  /**
+   * @summary `text`.
+   * @description
+   *
+   * Prompt or status text from the primary callback. C
+   * `NULL` ↔ absent (X.1083 §15.2). X.1083 §16.25.5.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly text?: OPTIONAL<UTF8String>;
+
   constructor(
-    /**
-     * @summary `subscriberEndpointIRI`.
-     * @description
-     *
-     * Endpoint IRI of the secondary GUI handler. BioAPI `NULL`
-     * `SubscriberEndpointIRI` is rewritten to the local
-     * endpoint IRI (X.1083 §15.3). X.1083 §16.25.5.
-     *
-     * @public
-     * @readonly
-     */
-    readonly subscriberEndpointIRI: EndpointIRI,
-    /**
-     * @summary `guiEventSubscriptionUuid`.
-     * @description
-     *
-     * UUID of the secondary GUI-event subscription that shall
-     * receive this event. Required (unlike
-     * `subscribeToGUIEvents`, where it is OPTIONAL). C `NULL`
-     * is unconvertible (clause 19). X.1083 §16.25.5, §8.5.
-     *
-     * @public
-     * @readonly
-     */
-    readonly guiEventSubscriptionUuid: BioAPI_UUID,
-    /**
-     * @summary `bspProductUuid`.
-     * @description
-     *
-     * Product UUID of the BSP that originated the GUI event.
-     * Converted from BioAPI `BSPUuid` via clause 25. X.1083
-     * §16.25.5.
-     *
-     * @public
-     * @readonly
-     */
-    readonly bspProductUuid: BioAPI_UUID,
-    /**
-     * @summary `unitID`.
-     * @description
-     *
-     * Unit that originated the GUI select event. Forwarded from
-     * the primary callback. X.1083 §16.25.5.
-     *
-     * @public
-     * @readonly
-     */
-    readonly unitID: BioAPI_UNIT_ID,
-    /**
-     * @summary `enrollType`.
-     * @description
-     *
-     * Enrollment type from the primary GUI select callback.
-     * Forwarded unchanged to the secondary handler. X.1083
-     * §16.25.5.
-     *
-     * @public
-     * @readonly
-     */
-    readonly enrollType: BioAPI_GUI_ENROLL_TYPE,
-    /**
-     * @summary `operation`.
-     * @description
-     *
-     * GUI operation from the primary select callback.
-     * Forwarded to the secondary handler. X.1083 §16.25.5.
-     *
-     * @public
-     * @readonly
-     */
-    readonly operation: BioAPI_GUI_OPERATION,
-    /**
-     * @summary `moment`.
-     * @description
-     *
-     * GUI moment from the primary select callback. Forwarded
-     * to the secondary handler. X.1083 §16.25.5.
-     *
-     * @public
-     * @readonly
-     */
-    readonly moment: BioAPI_GUI_MOMENT,
-    /**
-     * @summary `resultCode`.
-     * @description
-     *
-     * Result code from the primary select callback. Forwarded
-     * to the secondary handler. X.1083 §16.25.5.
-     *
-     * @public
-     * @readonly
-     */
-    readonly resultCode: BioAPI_RETURN,
-    /**
-     * @summary `maxNumEnrollSamples`.
-     * @description
-     *
-     * Maximum number of enroll samples from the primary select
-     * callback. Forwarded to the secondary handler. X.1083
-     * §16.25.5.
-     *
-     * @public
-     * @readonly
-     */
-    readonly maxNumEnrollSamples: UnsignedInt,
-    /**
-     * @summary `selectableInstances`.
-     * @description
-     *
-     * Subtype mask of instances the subject may select.
-     * Forwarded from the primary callback; the handler returns
-     * `selectedInstances` on the response. X.1083 §16.25.5.
-     *
-     * @public
-     * @readonly
-     */
-    readonly selectableInstances: BioAPI_BIR_SUBTYPE_MASK,
-    /**
-     * @summary `capturedInstances`.
-     * @description
-     *
-     * Subtype mask of instances already captured. Forwarded
-     * from the primary callback. X.1083 §16.25.5.
-     *
-     * @public
-     * @readonly
-     */
-    readonly capturedInstances: BioAPI_BIR_SUBTYPE_MASK,
-    /**
-     * @summary `text`.
-     * @description
-     *
-     * Prompt or status text from the primary callback. C
-     * `NULL` ↔ absent (X.1083 §15.2). X.1083 §16.25.5.
-     *
-     * @public
-     * @readonly
-     */
-    readonly text?: OPTIONAL<UTF8String>
-  ) {}
+    subscriberEndpointIRI: EndpointIRI,
+    guiEventSubscriptionUuid: BioAPI_UUID,
+    bspProductUuid: BioAPI_UUID,
+    unitID: BioAPI_UNIT_ID,
+    enrollType: BioAPI_GUI_ENROLL_TYPE,
+    operation: BioAPI_GUI_OPERATION,
+    moment: BioAPI_GUI_MOMENT,
+    resultCode: BioAPI_RETURN,
+    maxNumEnrollSamples: UnsignedInt,
+    selectableInstances: BioAPI_BIR_SUBTYPE_MASK,
+    capturedInstances: BioAPI_BIR_SUBTYPE_MASK,
+    text?: OPTIONAL<UTF8String>
+  ) {
+    this.subscriberEndpointIRI = subscriberEndpointIRI;
+    this.guiEventSubscriptionUuid = guiEventSubscriptionUuid;
+    this.bspProductUuid = bspProductUuid;
+    this.unitID = unitID;
+    this.enrollType = enrollType;
+    this.operation = operation;
+    this.moment = moment;
+    this.resultCode = resultCode;
+    this.maxNumEnrollSamples = maxNumEnrollSamples;
+    this.selectableInstances = selectableInstances;
+    this.capturedInstances = capturedInstances;
+    this.text = text;
+  }
 
   /**
    * @summary Restructures an object into a NotifyGUISelectEvent_RequestParams

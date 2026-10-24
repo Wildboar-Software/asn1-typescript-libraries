@@ -57,38 +57,50 @@ import {
  *
  */
 export class MessageTokenSignedData {
+    /**
+     * @summary `content_confidentiality_algorithm_identifier`.
+     * @public
+     * @readonly
+     */
+    public readonly content_confidentiality_algorithm_identifier?: OPTIONAL<ContentConfidentialityAlgorithmIdentifier>;
+    /**
+     * @summary `content_integrity_check`.
+     * @public
+     * @readonly
+     */
+    public readonly content_integrity_check?: OPTIONAL<ContentIntegrityCheck>;
+    /**
+     * @summary `message_security_label`.
+     * @public
+     * @readonly
+     */
+    public readonly message_security_label?: OPTIONAL<MessageSecurityLabel>;
+    /**
+     * @summary `proof_of_delivery_request`.
+     * @public
+     * @readonly
+     */
+    public readonly proof_of_delivery_request?: OPTIONAL<ProofOfDeliveryRequest>;
+    /**
+     * @summary `message_sequence_number`.
+     * @public
+     * @readonly
+     */
+    public readonly message_sequence_number?: OPTIONAL<INTEGER>;
+
     constructor(
-        /**
-         * @summary `content_confidentiality_algorithm_identifier`.
-         * @public
-         * @readonly
-         */
-        readonly content_confidentiality_algorithm_identifier?: OPTIONAL<ContentConfidentialityAlgorithmIdentifier>,
-        /**
-         * @summary `content_integrity_check`.
-         * @public
-         * @readonly
-         */
-        readonly content_integrity_check?: OPTIONAL<ContentIntegrityCheck>,
-        /**
-         * @summary `message_security_label`.
-         * @public
-         * @readonly
-         */
-        readonly message_security_label?: OPTIONAL<MessageSecurityLabel>,
-        /**
-         * @summary `proof_of_delivery_request`.
-         * @public
-         * @readonly
-         */
-        readonly proof_of_delivery_request?: OPTIONAL<ProofOfDeliveryRequest>,
-        /**
-         * @summary `message_sequence_number`.
-         * @public
-         * @readonly
-         */
-        readonly message_sequence_number?: OPTIONAL<INTEGER>
-    ) {}
+        content_confidentiality_algorithm_identifier?: OPTIONAL<ContentConfidentialityAlgorithmIdentifier>,
+        content_integrity_check?: OPTIONAL<ContentIntegrityCheck>,
+        message_security_label?: OPTIONAL<MessageSecurityLabel>,
+        proof_of_delivery_request?: OPTIONAL<ProofOfDeliveryRequest>,
+        message_sequence_number?: OPTIONAL<INTEGER>
+    ) {
+        this.content_confidentiality_algorithm_identifier = content_confidentiality_algorithm_identifier;
+        this.content_integrity_check = content_integrity_check;
+        this.message_security_label = message_security_label;
+        this.proof_of_delivery_request = proof_of_delivery_request;
+        this.message_sequence_number = message_sequence_number;
+    }
 
     /**
      * @summary Restructures an object into a MessageTokenSignedData

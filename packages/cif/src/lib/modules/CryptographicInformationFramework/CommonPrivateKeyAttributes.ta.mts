@@ -41,50 +41,62 @@ import { KeyUsageConstraints, _decode_KeyUsageConstraints, _encode_KeyUsageConst
  */
 export
 class CommonPrivateKeyAttributes {
+    /**
+     * @summary `name`.
+     * @description
+     * Owner of the key, as in the corresponding certificate `subject`.
+     * ISO/IEC 7816-15:2016 §8.2.10.
+     * @public
+     * @readonly
+     */
+    public readonly name?: OPTIONAL<Name>;
+    /**
+     * @summary `keyIdentifiers`.
+     * @description
+     * Values that can be matched to external messages to select this key,
+     * or sent to a peer to name the key used. ISO/IEC 7816-15:2016 §8.2.10,
+     * §8.2.4.
+     * @public
+     * @readonly
+     */
+    public readonly keyIdentifiers?: OPTIONAL<CredentialIdentifier[]>;
+    /**
+     * @summary `generalName`.
+     * @description
+     * Additional names for the key owner. ISO/IEC 7816-15:2016 §8.2.10.
+     * @public
+     * @readonly
+     */
+    public readonly generalName?: OPTIONAL<GeneralNames>;
+    /**
+     * @summary `keyUsageConstraints`.
+     * @description
+     * Whether the IFD may issue C-RPs between preparation and usage on the
+     * logical channel (`immediateUsage`). ISO/IEC 7816-15:2016 §8.2.10.
+     * @public
+     * @readonly
+     */
+    public readonly keyUsageConstraints?: OPTIONAL<KeyUsageConstraints>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `name`.
-         * @description
-         * Owner of the key, as in the corresponding certificate `subject`.
-         * ISO/IEC 7816-15:2016 §8.2.10.
-         * @public
-         * @readonly
-         */
-        readonly name?: OPTIONAL<Name>,
-        /**
-         * @summary `keyIdentifiers`.
-         * @description
-         * Values that can be matched to external messages to select this key,
-         * or sent to a peer to name the key used. ISO/IEC 7816-15:2016 §8.2.10,
-         * §8.2.4.
-         * @public
-         * @readonly
-         */
-        readonly keyIdentifiers?: OPTIONAL<CredentialIdentifier[]>,
-        /**
-         * @summary `generalName`.
-         * @description
-         * Additional names for the key owner. ISO/IEC 7816-15:2016 §8.2.10.
-         * @public
-         * @readonly
-         */
-        readonly generalName?: OPTIONAL<GeneralNames>,
-        /**
-         * @summary `keyUsageConstraints`.
-         * @description
-         * Whether the IFD may issue C-RPs between preparation and usage on the
-         * logical channel (`immediateUsage`). ISO/IEC 7816-15:2016 §8.2.10.
-         * @public
-         * @readonly
-         */
-        readonly keyUsageConstraints?: OPTIONAL<KeyUsageConstraints>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        name?: OPTIONAL<Name>,
+        keyIdentifiers?: OPTIONAL<CredentialIdentifier[]>,
+        generalName?: OPTIONAL<GeneralNames>,
+        keyUsageConstraints?: OPTIONAL<KeyUsageConstraints>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.name = name;
+        this.keyIdentifiers = keyIdentifiers;
+        this.generalName = generalName;
+        this.keyUsageConstraints = keyUsageConstraints;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a CommonPrivateKeyAttributes

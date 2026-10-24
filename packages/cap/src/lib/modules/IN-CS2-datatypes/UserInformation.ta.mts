@@ -33,26 +33,34 @@ import { Constraints, _decode_Constraints, _encode_Constraints } from "../IN-CS2
  */
 export
 class UserInformation {
+    /**
+     * @summary `infoToSend`.
+     * @public
+     * @readonly
+     */
+    public readonly infoToSend: InfoToSend;
+    /**
+     * @summary `constraints`.
+     * @public
+     * @readonly
+     */
+    public readonly constraints: Constraints;
+    /**
+     * @summary `errorInfo`.
+     * @public
+     * @readonly
+     */
+    public readonly errorInfo?: OPTIONAL<InfoToSend>;
+
     constructor (
-        /**
-         * @summary `infoToSend`.
-         * @public
-         * @readonly
-         */
-        readonly infoToSend: InfoToSend,
-        /**
-         * @summary `constraints`.
-         * @public
-         * @readonly
-         */
-        readonly constraints: Constraints,
-        /**
-         * @summary `errorInfo`.
-         * @public
-         * @readonly
-         */
-        readonly errorInfo?: OPTIONAL<InfoToSend>
-    ) {}
+        infoToSend: InfoToSend,
+        constraints: Constraints,
+        errorInfo?: OPTIONAL<InfoToSend>
+    ) {
+        this.infoToSend = infoToSend;
+        this.constraints = constraints;
+        this.errorInfo = errorInfo;
+    }
 
     /**
      * @summary Restructures an object into a UserInformation

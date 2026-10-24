@@ -38,26 +38,32 @@ import {
  *
  */
 export class DefinedValue {
+    /**
+     * @summary `module_`.
+     * @description
+     *
+     * ASN.1 module of the value, if needed to disambiguate.
+     * @public
+     * @readonly
+     */
+    public readonly module_: OPTIONAL<Identifier>;
+    /**
+     * @summary `reference`.
+     * @description
+     *
+     * ASN.1 value identifier.
+     * @public
+     * @readonly
+     */
+    public readonly reference: Identifier;
+
     constructor(
-        /**
-         * @summary `module_`.
-         * @description
-         *
-         * ASN.1 module of the value, if needed to disambiguate.
-         * @public
-         * @readonly
-         */
-        readonly module_: OPTIONAL<Identifier>,
-        /**
-         * @summary `reference`.
-         * @description
-         *
-         * ASN.1 value identifier.
-         * @public
-         * @readonly
-         */
-        readonly reference: Identifier
-    ) {}
+        module_: OPTIONAL<Identifier>,
+        reference: Identifier
+    ) {
+        this.module_ = module_;
+        this.reference = reference;
+    }
 
     /**
      * @summary Restructures an object into a DefinedValue

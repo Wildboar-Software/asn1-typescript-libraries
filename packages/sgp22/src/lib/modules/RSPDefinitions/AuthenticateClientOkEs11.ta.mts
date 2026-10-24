@@ -31,29 +31,35 @@ import { EventEntries, _decode_EventEntries, _encode_EventEntries } from "../RSP
  */
 export
 class AuthenticateClientOkEs11 {
+    /**
+     * @summary `transactionId`.
+     * @description
+     * 
+     * ES11 session id. SGP.22 v3.1 §5.8.2.
+     * 
+     * @public
+     * @readonly
+     */
+    public readonly transactionId: TransactionId;
+    /**
+     * @summary `eventEntries`.
+     * @description
+     * 
+     * Zero or more events. Each one names an RSP Server the LPA should
+     * call. SGP.22 v3.1 §5.8.2 and §3.6.2.
+     * 
+     * @public
+     * @readonly
+     */
+    public readonly eventEntries: EventEntries[];
+
     constructor (
-        /**
-         * @summary `transactionId`.
-         * @description
-         * 
-         * ES11 session id. SGP.22 v3.1 §5.8.2.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly transactionId: TransactionId,
-        /**
-         * @summary `eventEntries`.
-         * @description
-         * 
-         * Zero or more events. Each one names an RSP Server the LPA should
-         * call. SGP.22 v3.1 §5.8.2 and §3.6.2.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly eventEntries: EventEntries[]
-    ) {}
+        transactionId: TransactionId,
+        eventEntries: EventEntries[]
+    ) {
+        this.transactionId = transactionId;
+        this.eventEntries = eventEntries;
+    }
 
     /**
      * @summary Restructures an object into a AuthenticateClientOkEs11

@@ -36,26 +36,34 @@ import { ExtensionField_criticality, _enum_for_ExtensionField_criticality, Exten
  */
 export
 class ExtensionField {
+    /**
+     * @summary `type_`.
+     * @public
+     * @readonly
+     */
+    public readonly type_: INTEGER;
+    /**
+     * @summary `criticality`.
+     * @public
+     * @readonly
+     */
+    public readonly criticality: OPTIONAL<ExtensionField_criticality>;
+    /**
+     * @summary `value`.
+     * @public
+     * @readonly
+     */
+    public readonly value: _Element;
+
     constructor (
-        /**
-         * @summary `type_`.
-         * @public
-         * @readonly
-         */
-        readonly type_: INTEGER,
-        /**
-         * @summary `criticality`.
-         * @public
-         * @readonly
-         */
-        readonly criticality: OPTIONAL<ExtensionField_criticality>,
-        /**
-         * @summary `value`.
-         * @public
-         * @readonly
-         */
-        readonly value: _Element,
-    ) {}
+        type_: INTEGER,
+        criticality: OPTIONAL<ExtensionField_criticality>,
+        value: _Element,
+    ) {
+        this.type_ = type_;
+        this.criticality = criticality;
+        this.value = value;
+    }
 
     /**
      * @summary Restructures an object into a ExtensionField

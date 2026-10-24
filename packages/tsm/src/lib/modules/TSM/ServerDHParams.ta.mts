@@ -36,38 +36,46 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class ServerDHParams {
+    /**
+     * @summary `dh_p`.
+     * @description
+     *
+     * DH prime. Annex A constrains INTEGER to `1..65535`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly dh_p: INTEGER;
+    /**
+     * @summary `dh_g`.
+     * @description
+     *
+     * DH generator. Annex A constrains INTEGER to `1..65535`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly dh_g: INTEGER;
+    /**
+     * @summary `dh_Ys`.
+     * @description
+     *
+     * Server DH public value. Annex A constrains INTEGER to `1..65535`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly dh_Ys: INTEGER;
+
     constructor (
-        /**
-         * @summary `dh_p`.
-         * @description
-         *
-         * DH prime. Annex A constrains INTEGER to `1..65535`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly dh_p: INTEGER,
-        /**
-         * @summary `dh_g`.
-         * @description
-         *
-         * DH generator. Annex A constrains INTEGER to `1..65535`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly dh_g: INTEGER,
-        /**
-         * @summary `dh_Ys`.
-         * @description
-         *
-         * Server DH public value. Annex A constrains INTEGER to `1..65535`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly dh_Ys: INTEGER
-    ) {}
+        dh_p: INTEGER,
+        dh_g: INTEGER,
+        dh_Ys: INTEGER
+    ) {
+        this.dh_p = dh_p;
+        this.dh_g = dh_g;
+        this.dh_Ys = dh_Ys;
+    }
 
     /**
      * @summary Restructures an object into a ServerDHParams

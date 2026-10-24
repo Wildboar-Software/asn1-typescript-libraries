@@ -53,73 +53,89 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class TelephonyTonesGeneratedEvent {
+    /**
+     * @summary `connection`.
+     * @description
+     *
+     * Connection on which the tone is generated.
+     * @public
+     * @readonly
+     */
+    public readonly connection: ConnectionID;
+    /**
+     * @summary `toneGenerated`.
+     * @description
+     *
+     * Tone now being generated. Omitted may indicate generation
+     * stopped.
+     * @public
+     * @readonly
+     */
+    public readonly toneGenerated?: OPTIONAL<TelephonyTone>;
+    /**
+     * @summary `toneFrequency`.
+     * @description
+     *
+     * Only when `toneGenerated` is `other`.
+     * @public
+     * @readonly
+     */
+    public readonly toneFrequency?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `toneDuration`.
+     * @description
+     *
+     * Only when `toneGenerated` is `other`.
+     * @public
+     * @readonly
+     */
+    public readonly toneDuration?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `pauseDuration`.
+     * @description
+     *
+     * Only when `toneGenerated` is `other`.
+     * @public
+     * @readonly
+     */
+    public readonly pauseDuration?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `connectionInfo`.
+     * @description
+     *
+     * Connection information for `connection`.
+     * @public
+     * @readonly
+     */
+    public readonly connectionInfo?: OPTIONAL<ConnectionInformation>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `connection`.
-         * @description
-         *
-         * Connection on which the tone is generated.
-         * @public
-         * @readonly
-         */
-        readonly connection: ConnectionID,
-        /**
-         * @summary `toneGenerated`.
-         * @description
-         *
-         * Tone now being generated. Omitted may indicate generation
-         * stopped.
-         * @public
-         * @readonly
-         */
-        readonly toneGenerated?: OPTIONAL<TelephonyTone>,
-        /**
-         * @summary `toneFrequency`.
-         * @description
-         *
-         * Only when `toneGenerated` is `other`.
-         * @public
-         * @readonly
-         */
-        readonly toneFrequency?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `toneDuration`.
-         * @description
-         *
-         * Only when `toneGenerated` is `other`.
-         * @public
-         * @readonly
-         */
-        readonly toneDuration?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `pauseDuration`.
-         * @description
-         *
-         * Only when `toneGenerated` is `other`.
-         * @public
-         * @readonly
-         */
-        readonly pauseDuration?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `connectionInfo`.
-         * @description
-         *
-         * Connection information for `connection`.
-         * @public
-         * @readonly
-         */
-        readonly connectionInfo?: OPTIONAL<ConnectionInformation>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        connection: ConnectionID,
+        toneGenerated?: OPTIONAL<TelephonyTone>,
+        toneFrequency?: OPTIONAL<INTEGER>,
+        toneDuration?: OPTIONAL<INTEGER>,
+        pauseDuration?: OPTIONAL<INTEGER>,
+        connectionInfo?: OPTIONAL<ConnectionInformation>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.connection = connection;
+        this.toneGenerated = toneGenerated;
+        this.toneFrequency = toneFrequency;
+        this.toneDuration = toneDuration;
+        this.pauseDuration = pauseDuration;
+        this.connectionInfo = connectionInfo;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a TelephonyTonesGeneratedEvent

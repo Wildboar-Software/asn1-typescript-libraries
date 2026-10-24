@@ -33,26 +33,34 @@ import { MidCallInfo, _decode_MidCallInfo, _encode_MidCallInfo } from "../IN-CS2
  */
 export
 class EventSpecificInformationBCSM_oMidCallSpecificInfo {
+    /**
+     * @summary `connectTime`.
+     * @public
+     * @readonly
+     */
+    public readonly connectTime?: OPTIONAL<Integer4>;
+    /**
+     * @summary `oMidCallInfo`.
+     * @public
+     * @readonly
+     */
+    public readonly oMidCallInfo?: OPTIONAL<MidCallInfo>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `connectTime`.
-         * @public
-         * @readonly
-         */
-        readonly connectTime?: OPTIONAL<Integer4>,
-        /**
-         * @summary `oMidCallInfo`.
-         * @public
-         * @readonly
-         */
-        readonly oMidCallInfo?: OPTIONAL<MidCallInfo>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        connectTime?: OPTIONAL<Integer4>,
+        oMidCallInfo?: OPTIONAL<MidCallInfo>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.connectTime = connectTime;
+        this.oMidCallInfo = oMidCallInfo;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a EventSpecificInformationBCSM_oMidCallSpecificInfo

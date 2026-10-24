@@ -51,74 +51,90 @@ import { ExtensionValues, _decode_ExtensionValues, _encode_ExtensionValues } fro
  */
 export
 class ServerHello {
+    /**
+     * @summary `server_version`.
+     * @description
+     *
+     * Protocol version the server selects. X.1084 §10.3.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly server_version: ProtocolVersion;
+    /**
+     * @summary `random`.
+     * @description
+     *
+     * Hello random (challenge). X.1084 §10.3.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly random: ServerRandom;
+    /**
+     * @summary `session_id`.
+     * @description
+     *
+     * TLS session identifier (`UINT32` in Annex A). X.1084 §10.3.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly session_id: SessionID;
+    /**
+     * @summary `cipher_suite`.
+     * @description
+     *
+     * Cipher suite the server selects. X.1084 §10.3.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly cipher_suite: CipherSuite;
+    /**
+     * @summary `compression_method`.
+     * @description
+     *
+     * Compression method the server selects. X.1084 §10.3.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly compression_method: CompressionMethod;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+    /**
+     * @summary `server_hello_extension_list`.
+     * @description
+     *
+     * TLS-style hello extensions. X.1084 §10.3.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly server_hello_extension_list: ExtensionValues;
+
     constructor (
-        /**
-         * @summary `server_version`.
-         * @description
-         *
-         * Protocol version the server selects. X.1084 §10.3.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly server_version: ProtocolVersion,
-        /**
-         * @summary `random`.
-         * @description
-         *
-         * Hello random (challenge). X.1084 §10.3.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly random: ServerRandom,
-        /**
-         * @summary `session_id`.
-         * @description
-         *
-         * TLS session identifier (`UINT32` in Annex A). X.1084 §10.3.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly session_id: SessionID,
-        /**
-         * @summary `cipher_suite`.
-         * @description
-         *
-         * Cipher suite the server selects. X.1084 §10.3.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly cipher_suite: CipherSuite,
-        /**
-         * @summary `compression_method`.
-         * @description
-         *
-         * Compression method the server selects. X.1084 §10.3.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly compression_method: CompressionMethod,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = [],
-        /**
-         * @summary `server_hello_extension_list`.
-         * @description
-         *
-         * TLS-style hello extensions. X.1084 §10.3.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly server_hello_extension_list: ExtensionValues
-    ) {}
+        server_version: ProtocolVersion,
+        random: ServerRandom,
+        session_id: SessionID,
+        cipher_suite: CipherSuite,
+        compression_method: CompressionMethod,
+        _unrecognizedExtensionsList: _Element[] = [],
+        server_hello_extension_list: ExtensionValues
+    ) {
+        this.server_version = server_version;
+        this.random = random;
+        this.session_id = session_id;
+        this.cipher_suite = cipher_suite;
+        this.compression_method = compression_method;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+        this.server_hello_extension_list = server_hello_extension_list;
+    }
 
     /**
      * @summary Restructures an object into a ServerHello

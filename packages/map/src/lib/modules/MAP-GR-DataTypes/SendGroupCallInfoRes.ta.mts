@@ -39,84 +39,102 @@ import { Kc, _decode_Kc, _encode_Kc } from "../MAP-MS-DataTypes/Kc.ta.mjs";
  */
 export
 class SendGroupCallInfoRes {
+    /**
+     * @summary `anchorMSC_Address`.
+     * @description
+     *
+     * See 3GPP TS 43.068 and 43.069 (clause 10.7A.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly anchorMSC_Address?: OPTIONAL<ISDN_AddressString>;
+    /**
+     * @summary `asciCallReference`.
+     * @description
+     *
+     * See 3GPP TS 43.068 and 43.069 (clause 10.7A.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly asciCallReference?: OPTIONAL<ASCI_CallReference>;
+    /**
+     * @summary `imsi`.
+     * @description
+     *
+     * Uplink requesting service subscriber (clause 10.7A.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly imsi?: OPTIONAL<IMSI>;
+    /**
+     * @summary `additionalInfo`.
+     * @description
+     *
+     * See 3GPP TS 43.068 (clause 10.7A.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly additionalInfo?: OPTIONAL<AdditionalInfo>;
+    /**
+     * @summary `additionalSubscriptions`.
+     * @description
+     *
+     * See 3GPP TS 43.068 (clause 10.7A.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly additionalSubscriptions?: OPTIONAL<AdditionalSubscriptions>;
+    /**
+     * @summary `kc`.
+     * @description
+     *
+     * See clause 7.6.7 (clause 10.7A.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly kc?: OPTIONAL<Kc>;
+    /**
+     * @summary `extensionContainer`.
+     * @description
+     *
+     * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `anchorMSC_Address`.
-         * @description
-         *
-         * See 3GPP TS 43.068 and 43.069 (clause 10.7A.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly anchorMSC_Address?: OPTIONAL<ISDN_AddressString>,
-        /**
-         * @summary `asciCallReference`.
-         * @description
-         *
-         * See 3GPP TS 43.068 and 43.069 (clause 10.7A.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly asciCallReference?: OPTIONAL<ASCI_CallReference>,
-        /**
-         * @summary `imsi`.
-         * @description
-         *
-         * Uplink requesting service subscriber (clause 10.7A.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly imsi?: OPTIONAL<IMSI>,
-        /**
-         * @summary `additionalInfo`.
-         * @description
-         *
-         * See 3GPP TS 43.068 (clause 10.7A.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly additionalInfo?: OPTIONAL<AdditionalInfo>,
-        /**
-         * @summary `additionalSubscriptions`.
-         * @description
-         *
-         * See 3GPP TS 43.068 (clause 10.7A.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly additionalSubscriptions?: OPTIONAL<AdditionalSubscriptions>,
-        /**
-         * @summary `kc`.
-         * @description
-         *
-         * See clause 7.6.7 (clause 10.7A.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly kc?: OPTIONAL<Kc>,
-        /**
-         * @summary `extensionContainer`.
-         * @description
-         *
-         * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        anchorMSC_Address?: OPTIONAL<ISDN_AddressString>,
+        asciCallReference?: OPTIONAL<ASCI_CallReference>,
+        imsi?: OPTIONAL<IMSI>,
+        additionalInfo?: OPTIONAL<AdditionalInfo>,
+        additionalSubscriptions?: OPTIONAL<AdditionalSubscriptions>,
+        kc?: OPTIONAL<Kc>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.anchorMSC_Address = anchorMSC_Address;
+        this.asciCallReference = asciCallReference;
+        this.imsi = imsi;
+        this.additionalInfo = additionalInfo;
+        this.additionalSubscriptions = additionalSubscriptions;
+        this.kc = kc;
+        this.extensionContainer = extensionContainer;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a SendGroupCallInfoRes

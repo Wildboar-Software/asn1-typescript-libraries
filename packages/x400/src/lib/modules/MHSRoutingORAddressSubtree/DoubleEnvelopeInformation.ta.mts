@@ -46,50 +46,70 @@ import {
  *
  */
 export class DoubleEnvelopeInformation {
+    /**
+     * @summary `envelope_opener`.
+     * @public
+     * @readonly
+     */
+    public readonly envelope_opener: ORAddressAndDirectoryName;
+    /**
+     * @summary `content_confidentiality_algorithm_preference`.
+     * @public
+     * @readonly
+     */
+    public readonly content_confidentiality_algorithm_preference: AlgorithmInformation[];
+    /**
+     * @summary `key_encryption_algorithm_preference`.
+     * @public
+     * @readonly
+     */
+    public readonly key_encryption_algorithm_preference?: OPTIONAL<
+            AlgorithmInformation[]
+        >;
+    /**
+     * @summary `message_origin_algorithm_preference`.
+     * @public
+     * @readonly
+     */
+    public readonly message_origin_algorithm_preference?: OPTIONAL<
+            AlgorithmInformation[]
+        >;
+    /**
+     * @summary `token_signature_algorithm_preference`.
+     * @public
+     * @readonly
+     */
+    public readonly token_signature_algorithm_preference?: OPTIONAL<
+            AlgorithmInformation[]
+        >;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `envelope_opener`.
-         * @public
-         * @readonly
-         */
-        readonly envelope_opener: ORAddressAndDirectoryName,
-        /**
-         * @summary `content_confidentiality_algorithm_preference`.
-         * @public
-         * @readonly
-         */
-        readonly content_confidentiality_algorithm_preference: AlgorithmInformation[],
-        /**
-         * @summary `key_encryption_algorithm_preference`.
-         * @public
-         * @readonly
-         */
-        readonly key_encryption_algorithm_preference?: OPTIONAL<
+        envelope_opener: ORAddressAndDirectoryName,
+        content_confidentiality_algorithm_preference: AlgorithmInformation[],
+        key_encryption_algorithm_preference?: OPTIONAL<
             AlgorithmInformation[]
         >,
-        /**
-         * @summary `message_origin_algorithm_preference`.
-         * @public
-         * @readonly
-         */
-        readonly message_origin_algorithm_preference?: OPTIONAL<
+        message_origin_algorithm_preference?: OPTIONAL<
             AlgorithmInformation[]
         >,
-        /**
-         * @summary `token_signature_algorithm_preference`.
-         * @public
-         * @readonly
-         */
-        readonly token_signature_algorithm_preference?: OPTIONAL<
+        token_signature_algorithm_preference?: OPTIONAL<
             AlgorithmInformation[]
         >,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.envelope_opener = envelope_opener;
+        this.content_confidentiality_algorithm_preference = content_confidentiality_algorithm_preference;
+        this.key_encryption_algorithm_preference = key_encryption_algorithm_preference;
+        this.message_origin_algorithm_preference = message_origin_algorithm_preference;
+        this.token_signature_algorithm_preference = token_signature_algorithm_preference;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a DoubleEnvelopeInformation

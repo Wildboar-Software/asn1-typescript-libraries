@@ -45,53 +45,65 @@ import { MonitorInfo, _decode_MonitorInfo, _encode_MonitorInfo } from "../CSTA-c
  */
 export
 class MonitoringServList {
+    /**
+     * @summary `changeMonitorFilter`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly changeMonitorFilter?: OPTIONAL<ChangeMonitorFilter>;
+    /**
+     * @summary `monitorStart`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly monitorStart?: OPTIONAL<MonitorStart>;
+    /**
+     * @summary `monitorStop`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly monitorStop?: OPTIONAL<MonitorStop>;
+    /**
+     * @summary `getMonitors`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly getMonitors?: OPTIONAL<GetMonitors>;
+    /**
+     * @summary `monitorInfo`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly monitorInfo?: OPTIONAL<MonitorInfo>;
+
     constructor (
-        /**
-         * @summary `changeMonitorFilter`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly changeMonitorFilter?: OPTIONAL<ChangeMonitorFilter>,
-        /**
-         * @summary `monitorStart`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly monitorStart?: OPTIONAL<MonitorStart>,
-        /**
-         * @summary `monitorStop`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly monitorStop?: OPTIONAL<MonitorStop>,
-        /**
-         * @summary `getMonitors`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly getMonitors?: OPTIONAL<GetMonitors>,
-        /**
-         * @summary `monitorInfo`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly monitorInfo?: OPTIONAL<MonitorInfo>
-    ) {}
+        changeMonitorFilter?: OPTIONAL<ChangeMonitorFilter>,
+        monitorStart?: OPTIONAL<MonitorStart>,
+        monitorStop?: OPTIONAL<MonitorStop>,
+        getMonitors?: OPTIONAL<GetMonitors>,
+        monitorInfo?: OPTIONAL<MonitorInfo>
+    ) {
+        this.changeMonitorFilter = changeMonitorFilter;
+        this.monitorStart = monitorStart;
+        this.monitorStop = monitorStop;
+        this.getMonitors = getMonitors;
+        this.monitorInfo = monitorInfo;
+    }
 
     /**
      * @summary Restructures an object into a MonitoringServList

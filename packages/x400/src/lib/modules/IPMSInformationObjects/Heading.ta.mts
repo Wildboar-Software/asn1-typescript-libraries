@@ -135,110 +135,146 @@ import {
  *
  */
 export class Heading {
+    /**
+     * @summary `this_IPM`.
+     * @public
+     * @readonly
+     */
+    public readonly this_IPM: ThisIPMField;
+    /**
+     * @summary `originator`.
+     * @public
+     * @readonly
+     */
+    public readonly originator?: OPTIONAL<OriginatorField>;
+    /**
+     * @summary `authorizing_users`.
+     * @public
+     * @readonly
+     */
+    public readonly authorizing_users?: OPTIONAL<AuthorizingUsersField>;
+    /**
+     * @summary `primary_recipients`.
+     * @public
+     * @readonly
+     */
+    public readonly primary_recipients?: OPTIONAL<PrimaryRecipientsField>;
+    /**
+     * @summary `copy_recipients`.
+     * @public
+     * @readonly
+     */
+    public readonly copy_recipients?: OPTIONAL<CopyRecipientsField>;
+    /**
+     * @summary `blind_copy_recipients`.
+     * @public
+     * @readonly
+     */
+    public readonly blind_copy_recipients?: OPTIONAL<BlindCopyRecipientsField>;
+    /**
+     * @summary `replied_to_IPM`.
+     * @public
+     * @readonly
+     */
+    public readonly replied_to_IPM?: OPTIONAL<RepliedToIPMField>;
+    /**
+     * @summary `obsoleted_IPMs`.
+     * @public
+     * @readonly
+     */
+    public readonly obsoleted_IPMs?: OPTIONAL<ObsoletedIPMsField>;
+    /**
+     * @summary `related_IPMs`.
+     * @public
+     * @readonly
+     */
+    public readonly related_IPMs?: OPTIONAL<RelatedIPMsField>;
+    /**
+     * @summary `subject`.
+     * @public
+     * @readonly
+     */
+    public readonly subject?: OPTIONAL<SubjectField>;
+    /**
+     * @summary `expiry_time`.
+     * @public
+     * @readonly
+     */
+    public readonly expiry_time?: OPTIONAL<ExpiryTimeField>;
+    /**
+     * @summary `reply_time`.
+     * @public
+     * @readonly
+     */
+    public readonly reply_time?: OPTIONAL<ReplyTimeField>;
+    /**
+     * @summary `reply_recipients`.
+     * @public
+     * @readonly
+     */
+    public readonly reply_recipients?: OPTIONAL<ReplyRecipientsField>;
+    /**
+     * @summary `importance`.
+     * @public
+     * @readonly
+     */
+    public readonly importance?: OPTIONAL<ImportanceField>;
+    /**
+     * @summary `sensitivity`.
+     * @public
+     * @readonly
+     */
+    public readonly sensitivity?: OPTIONAL<SensitivityField>;
+    /**
+     * @summary `auto_forwarded`.
+     * @public
+     * @readonly
+     */
+    public readonly auto_forwarded?: OPTIONAL<AutoForwardedField>;
+    /**
+     * @summary `extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<ExtensionsField>;
+
     constructor(
-        /**
-         * @summary `this_IPM`.
-         * @public
-         * @readonly
-         */
-        readonly this_IPM: ThisIPMField,
-        /**
-         * @summary `originator`.
-         * @public
-         * @readonly
-         */
-        readonly originator?: OPTIONAL<OriginatorField>,
-        /**
-         * @summary `authorizing_users`.
-         * @public
-         * @readonly
-         */
-        readonly authorizing_users?: OPTIONAL<AuthorizingUsersField>,
-        /**
-         * @summary `primary_recipients`.
-         * @public
-         * @readonly
-         */
-        readonly primary_recipients?: OPTIONAL<PrimaryRecipientsField>,
-        /**
-         * @summary `copy_recipients`.
-         * @public
-         * @readonly
-         */
-        readonly copy_recipients?: OPTIONAL<CopyRecipientsField>,
-        /**
-         * @summary `blind_copy_recipients`.
-         * @public
-         * @readonly
-         */
-        readonly blind_copy_recipients?: OPTIONAL<BlindCopyRecipientsField>,
-        /**
-         * @summary `replied_to_IPM`.
-         * @public
-         * @readonly
-         */
-        readonly replied_to_IPM?: OPTIONAL<RepliedToIPMField>,
-        /**
-         * @summary `obsoleted_IPMs`.
-         * @public
-         * @readonly
-         */
-        readonly obsoleted_IPMs?: OPTIONAL<ObsoletedIPMsField>,
-        /**
-         * @summary `related_IPMs`.
-         * @public
-         * @readonly
-         */
-        readonly related_IPMs?: OPTIONAL<RelatedIPMsField>,
-        /**
-         * @summary `subject`.
-         * @public
-         * @readonly
-         */
-        readonly subject?: OPTIONAL<SubjectField>,
-        /**
-         * @summary `expiry_time`.
-         * @public
-         * @readonly
-         */
-        readonly expiry_time?: OPTIONAL<ExpiryTimeField>,
-        /**
-         * @summary `reply_time`.
-         * @public
-         * @readonly
-         */
-        readonly reply_time?: OPTIONAL<ReplyTimeField>,
-        /**
-         * @summary `reply_recipients`.
-         * @public
-         * @readonly
-         */
-        readonly reply_recipients?: OPTIONAL<ReplyRecipientsField>,
-        /**
-         * @summary `importance`.
-         * @public
-         * @readonly
-         */
-        readonly importance?: OPTIONAL<ImportanceField>,
-        /**
-         * @summary `sensitivity`.
-         * @public
-         * @readonly
-         */
-        readonly sensitivity?: OPTIONAL<SensitivityField>,
-        /**
-         * @summary `auto_forwarded`.
-         * @public
-         * @readonly
-         */
-        readonly auto_forwarded?: OPTIONAL<AutoForwardedField>,
-        /**
-         * @summary `extensions`.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<ExtensionsField>
-    ) {}
+        this_IPM: ThisIPMField,
+        originator?: OPTIONAL<OriginatorField>,
+        authorizing_users?: OPTIONAL<AuthorizingUsersField>,
+        primary_recipients?: OPTIONAL<PrimaryRecipientsField>,
+        copy_recipients?: OPTIONAL<CopyRecipientsField>,
+        blind_copy_recipients?: OPTIONAL<BlindCopyRecipientsField>,
+        replied_to_IPM?: OPTIONAL<RepliedToIPMField>,
+        obsoleted_IPMs?: OPTIONAL<ObsoletedIPMsField>,
+        related_IPMs?: OPTIONAL<RelatedIPMsField>,
+        subject?: OPTIONAL<SubjectField>,
+        expiry_time?: OPTIONAL<ExpiryTimeField>,
+        reply_time?: OPTIONAL<ReplyTimeField>,
+        reply_recipients?: OPTIONAL<ReplyRecipientsField>,
+        importance?: OPTIONAL<ImportanceField>,
+        sensitivity?: OPTIONAL<SensitivityField>,
+        auto_forwarded?: OPTIONAL<AutoForwardedField>,
+        extensions?: OPTIONAL<ExtensionsField>
+    ) {
+        this.this_IPM = this_IPM;
+        this.originator = originator;
+        this.authorizing_users = authorizing_users;
+        this.primary_recipients = primary_recipients;
+        this.copy_recipients = copy_recipients;
+        this.blind_copy_recipients = blind_copy_recipients;
+        this.replied_to_IPM = replied_to_IPM;
+        this.obsoleted_IPMs = obsoleted_IPMs;
+        this.related_IPMs = related_IPMs;
+        this.subject = subject;
+        this.expiry_time = expiry_time;
+        this.reply_time = reply_time;
+        this.reply_recipients = reply_recipients;
+        this.importance = importance;
+        this.sensitivity = sensitivity;
+        this.auto_forwarded = auto_forwarded;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a Heading

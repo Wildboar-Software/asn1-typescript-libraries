@@ -34,20 +34,26 @@ import {
  *
  */
 export class PathnameandVersion {
+    /**
+     * @summary `pathname`.
+     * @public
+     * @readonly
+     */
+    public readonly pathname: Pathname_Attribute;
+    /**
+     * @summary `file_version`.
+     * @public
+     * @readonly
+     */
+    public readonly file_version?: OPTIONAL<GraphicString>;
+
     constructor(
-        /**
-         * @summary `pathname`.
-         * @public
-         * @readonly
-         */
-        readonly pathname: Pathname_Attribute,
-        /**
-         * @summary `file_version`.
-         * @public
-         * @readonly
-         */
-        readonly file_version?: OPTIONAL<GraphicString>
-    ) {}
+        pathname: Pathname_Attribute,
+        file_version?: OPTIONAL<GraphicString>
+    ) {
+        this.pathname = pathname;
+        this.file_version = file_version;
+    }
 
     /**
      * @summary Restructures an object into a PathnameandVersion

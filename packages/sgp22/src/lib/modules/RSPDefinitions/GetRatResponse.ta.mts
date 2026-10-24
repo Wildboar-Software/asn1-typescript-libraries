@@ -28,18 +28,22 @@ import { RulesAuthorisationTable, _decode_RulesAuthorisationTable, _encode_Rules
  */
 export
 class GetRatResponse {
+    /**
+     * @summary `rat`.
+     * @description
+     * 
+     * The Rules Authorisation Table. SGP.22 v3.1 §2.9.2.
+     * 
+     * @public
+     * @readonly
+     */
+    public readonly rat: RulesAuthorisationTable;
+
     constructor (
-        /**
-         * @summary `rat`.
-         * @description
-         * 
-         * The Rules Authorisation Table. SGP.22 v3.1 §2.9.2.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly rat: RulesAuthorisationTable
-    ) {}
+        rat: RulesAuthorisationTable
+    ) {
+        this.rat = rat;
+    }
 
     /**
      * @summary Restructures an object into a GetRatResponse

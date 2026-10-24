@@ -35,26 +35,32 @@ import { ParameterIdents, _decode_ParameterIdents, _encode_ParameterIdents } fro
  */
 export
 class Identifier_Item {
+    /**
+     * @summary `name`.
+     * @description
+     * `display-object-name`; unique PrintableString in the VTE.
+     * ISO/IEC 9040:1997 §18.1.
+     * @public
+     * @readonly
+     */
+    public readonly name: PrintableString;
+    /**
+     * @summary `idents`.
+     * @description
+     * Invited display-object VTE-parameters. A `NULL` component
+     * means that parameter is invited. ISO/IEC 9041-1:1997 §12.3.1.
+     * @public
+     * @readonly
+     */
+    public readonly idents: ParameterIdents;
+
     constructor (
-        /**
-         * @summary `name`.
-         * @description
-         * `display-object-name`; unique PrintableString in the VTE.
-         * ISO/IEC 9040:1997 §18.1.
-         * @public
-         * @readonly
-         */
-        readonly name: PrintableString,
-        /**
-         * @summary `idents`.
-         * @description
-         * Invited display-object VTE-parameters. A `NULL` component
-         * means that parameter is invited. ISO/IEC 9041-1:1997 §12.3.1.
-         * @public
-         * @readonly
-         */
-        readonly idents: ParameterIdents
-    ) {}
+        name: PrintableString,
+        idents: ParameterIdents
+    ) {
+        this.name = name;
+        this.idents = idents;
+    }
 
     /**
      * @summary Restructures an object into a Identifier_Item

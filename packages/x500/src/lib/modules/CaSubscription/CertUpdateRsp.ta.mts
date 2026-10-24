@@ -37,32 +37,40 @@ import {
  *
  */
 export class CertUpdateRsp {
+    /**
+     * @summary `invokeID`.
+     * @description
+     *
+     * Same value as the corresponding request.
+     * @public
+     * @readonly
+     */
+    public readonly invokeID: InvokeID;
+    /**
+     * @summary `result`.
+     * @description
+     *
+     * `success` if at least one update was processed; `failure` only if no per-item results can be returned.
+     * @public
+     * @readonly
+     */
+    public readonly result: CertUpdateRsp_result;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `invokeID`.
-         * @description
-         *
-         * Same value as the corresponding request.
-         * @public
-         * @readonly
-         */
-        readonly invokeID: InvokeID,
-        /**
-         * @summary `result`.
-         * @description
-         *
-         * `success` if at least one update was processed; `failure` only if no per-item results can be returned.
-         * @public
-         * @readonly
-         */
-        readonly result: CertUpdateRsp_result,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        invokeID: InvokeID,
+        result: CertUpdateRsp_result,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.invokeID = invokeID;
+        this.result = result;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a CertUpdateRsp

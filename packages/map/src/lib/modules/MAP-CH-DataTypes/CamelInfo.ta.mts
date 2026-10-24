@@ -33,54 +33,66 @@ import { SupportedCamelPhases, _decode_SupportedCamelPhases, _encode_SupportedCa
  */
 export
 class CamelInfo {
+    /**
+     * @summary `supportedCamelPhases`.
+     * @description
+     *
+     * Use and presence as in 3GPP TS 23.078 (clause 10.1.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly supportedCamelPhases: SupportedCamelPhases;
+    /**
+     * @summary `suppress_T_CSI`.
+     * @description
+     *
+     * Use and presence as in 3GPP TS 23.078 (clause 10.1.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly suppress_T_CSI?: OPTIONAL<NULL>;
+    /**
+     * @summary `extensionContainer`.
+     * @description
+     *
+     * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary `offeredCamel4CSIs`.
+     * @description
+     *
+     * See clause 7.6.3.36D (clause 10.1.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly offeredCamel4CSIs?: OPTIONAL<OfferedCamel4CSIs>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `supportedCamelPhases`.
-         * @description
-         *
-         * Use and presence as in 3GPP TS 23.078 (clause 10.1.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly supportedCamelPhases: SupportedCamelPhases,
-        /**
-         * @summary `suppress_T_CSI`.
-         * @description
-         *
-         * Use and presence as in 3GPP TS 23.078 (clause 10.1.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly suppress_T_CSI?: OPTIONAL<NULL>,
-        /**
-         * @summary `extensionContainer`.
-         * @description
-         *
-         * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary `offeredCamel4CSIs`.
-         * @description
-         *
-         * See clause 7.6.3.36D (clause 10.1.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly offeredCamel4CSIs?: OPTIONAL<OfferedCamel4CSIs>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        supportedCamelPhases: SupportedCamelPhases,
+        suppress_T_CSI?: OPTIONAL<NULL>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        offeredCamel4CSIs?: OPTIONAL<OfferedCamel4CSIs>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.supportedCamelPhases = supportedCamelPhases;
+        this.suppress_T_CSI = suppress_T_CSI;
+        this.extensionContainer = extensionContainer;
+        this.offeredCamel4CSIs = offeredCamel4CSIs;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a CamelInfo

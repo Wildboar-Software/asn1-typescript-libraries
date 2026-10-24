@@ -37,29 +37,35 @@ import { EC_State, _decode_EC_State, _encode_EC_State } from "../MMS-Object-Modu
  */
 export
 class Journal_Entry_instance_eventTransitionRecord {
+    /**
+     * @summary `name`.
+     * @description
+     *
+     * Configured object name in the SCI file. ISO 9506-2:2003 Annex B.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly name: ObjectName;
+    /**
+     * @summary `currentState`.
+     * @description
+     *
+     * Resulting EC-State. ISO 9506-1:2003 §23.1.2.8; ISO 9506-2:2003 Annex
+     * B.1.16.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly currentState: EC_State;
+
     constructor (
-        /**
-         * @summary `name`.
-         * @description
-         *
-         * Configured object name in the SCI file. ISO 9506-2:2003 Annex B.
-         *
-         * @public
-         * @readonly
-         */
-        readonly name: ObjectName,
-        /**
-         * @summary `currentState`.
-         * @description
-         *
-         * Resulting EC-State. ISO 9506-1:2003 §23.1.2.8; ISO 9506-2:2003 Annex
-         * B.1.16.
-         *
-         * @public
-         * @readonly
-         */
-        readonly currentState: EC_State
-    ) {}
+        name: ObjectName,
+        currentState: EC_State
+    ) {
+        this.name = name;
+        this.currentState = currentState;
+    }
 
     /**
      * @summary Restructures an object into a Journal_Entry_instance_eventTransitionRecord

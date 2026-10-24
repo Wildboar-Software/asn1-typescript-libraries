@@ -33,20 +33,26 @@ import {
  *
  */
 export class ConstructionAlgorithms {
+    /**
+     * @summary `combiner`.
+     * @public
+     * @readonly
+     */
+    public readonly combiner: CombinerAlgorithmIdentifier;
+    /**
+     * @summary `keyEncryptionAlgorithm`.
+     * @public
+     * @readonly
+     */
+    public readonly keyEncryptionAlgorithm: KeyEncryptionAlgorithmIdentifier;
+
     constructor(
-        /**
-         * @summary `combiner`.
-         * @public
-         * @readonly
-         */
-        readonly combiner: CombinerAlgorithmIdentifier,
-        /**
-         * @summary `keyEncryptionAlgorithm`.
-         * @public
-         * @readonly
-         */
-        readonly keyEncryptionAlgorithm: KeyEncryptionAlgorithmIdentifier
-    ) {}
+        combiner: CombinerAlgorithmIdentifier,
+        keyEncryptionAlgorithm: KeyEncryptionAlgorithmIdentifier
+    ) {
+        this.combiner = combiner;
+        this.keyEncryptionAlgorithm = keyEncryptionAlgorithm;
+    }
 
     /**
      * @summary Restructures an object into a ConstructionAlgorithms

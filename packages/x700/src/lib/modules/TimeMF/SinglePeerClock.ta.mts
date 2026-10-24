@@ -37,29 +37,35 @@ import {
  *
  */
 export class SinglePeerClock {
+    /**
+     * @summary `assocNum`.
+     * @description
+     *
+     * Association number for this peer. The rec does not further
+     * specify this field. ITU-T Rec. X.743 (06/98)
+     * [§A.5](https://www.itu.int/rec/T-REC-X.743-199806-I).
+     * @public
+     * @readonly
+     */
+    public readonly assocNum: INTEGER;
+    /**
+     * @summary `assocClock`.
+     * @description
+     *
+     * Network address of the peer. ITU-T Rec. X.743 (06/98)
+     * [§8.3.16](https://www.itu.int/rec/T-REC-X.743-199806-I), A.5.
+     * @public
+     * @readonly
+     */
+    public readonly assocClock: ClockAddress;
+
     constructor(
-        /**
-         * @summary `assocNum`.
-         * @description
-         *
-         * Association number for this peer. The rec does not further
-         * specify this field. ITU-T Rec. X.743 (06/98)
-         * [§A.5](https://www.itu.int/rec/T-REC-X.743-199806-I).
-         * @public
-         * @readonly
-         */
-        readonly assocNum: INTEGER,
-        /**
-         * @summary `assocClock`.
-         * @description
-         *
-         * Network address of the peer. ITU-T Rec. X.743 (06/98)
-         * [§8.3.16](https://www.itu.int/rec/T-REC-X.743-199806-I), A.5.
-         * @public
-         * @readonly
-         */
-        readonly assocClock: ClockAddress
-    ) {}
+        assocNum: INTEGER,
+        assocClock: ClockAddress
+    ) {
+        this.assocNum = assocNum;
+        this.assocClock = assocClock;
+    }
 
     /**
      * @summary Restructures an object into a SinglePeerClock

@@ -33,18 +33,22 @@ import { Signature, _decode_Signature, _encode_Signature } from "../TSM/Signatur
  */
 export
 class CertificateVerify {
+    /**
+     * @summary `signature`.
+     * @description
+     *
+     * Signature over the handshake transcript. X.1084 Annex A.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly signature: Signature;
+
     constructor (
-        /**
-         * @summary `signature`.
-         * @description
-         *
-         * Signature over the handshake transcript. X.1084 Annex A.
-         *
-         * @public
-         * @readonly
-         */
-        readonly signature: Signature
-    ) {}
+        signature: Signature
+    ) {
+        this.signature = signature;
+    }
 
     /**
      * @summary Restructures an object into a CertificateVerify

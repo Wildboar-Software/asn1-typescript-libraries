@@ -49,38 +49,46 @@ import {
  *
  */
 export class InformationSelection {
+    /**
+     * @summary `attributes`.
+     * @description
+     *
+     * All attributes, or a list of `ATTRIBUTE.&id`.
+     * ITU-T Rec. X.1080.0 (2017) Cor.1
+     * [§8.11](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly attributes: InformationSelection_attributes;
+    /**
+     * @summary `infoTypes`.
+     * @description
+     *
+     * Attribute types only, or types and values.
+     * ITU-T Rec. X.1080.0 (2017) Cor.1
+     * [§8.11](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly infoTypes: InformationSelection_infoTypes;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `attributes`.
-         * @description
-         *
-         * All attributes, or a list of `ATTRIBUTE.&id`.
-         * ITU-T Rec. X.1080.0 (2017) Cor.1
-         * [§8.11](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly attributes: InformationSelection_attributes,
-        /**
-         * @summary `infoTypes`.
-         * @description
-         *
-         * Attribute types only, or types and values.
-         * ITU-T Rec. X.1080.0 (2017) Cor.1
-         * [§8.11](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly infoTypes: InformationSelection_infoTypes,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        attributes: InformationSelection_attributes,
+        infoTypes: InformationSelection_infoTypes,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.attributes = attributes;
+        this.infoTypes = infoTypes;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a InformationSelection

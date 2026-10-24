@@ -26,33 +26,41 @@ import { type CalledPartyNumber, _decode_CalledPartyNumber, _encode_CalledPartyN
  *
  */
 export class EventSpecificInformationBCSM_tNoAnswerSpecificInfo {
+    /**
+     * @summary `callForwarded`.
+     * @description
+     *
+     * Present with `forwardingDestinationNumber` when No_Answer is
+     * triggered by call forwarding at GMSC or VMSC. Absent (empty specific
+     * info) if triggered by ISUP release or TNRy expiry.
+     * (3GPP TS 29.078 V19.0.0 clause 11.18).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly callForwarded?: OPTIONAL<NULL>;
+    /**
+     * @summary `forwardingDestinationNumber`.
+     * @description
+     *
+     * Forwarding destination when the event is due to call forwarding.
+     * (3GPP TS 29.078 V19.0.0 clause 11.18).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly forwardingDestinationNumber?: OPTIONAL<CalledPartyNumber>;
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `callForwarded`.
-         * @description
-         *
-         * Present with `forwardingDestinationNumber` when No_Answer is
-         * triggered by call forwarding at GMSC or VMSC. Absent (empty specific
-         * info) if triggered by ISUP release or TNRy expiry.
-         * (3GPP TS 29.078 V19.0.0 clause 11.18).
-         *
-         * @public
-         * @readonly
-         */
-        readonly callForwarded?: OPTIONAL<NULL>,
-        /**
-         * @summary `forwardingDestinationNumber`.
-         * @description
-         *
-         * Forwarding destination when the event is due to call forwarding.
-         * (3GPP TS 29.078 V19.0.0 clause 11.18).
-         *
-         * @public
-         * @readonly
-         */
-        readonly forwardingDestinationNumber?: OPTIONAL<CalledPartyNumber>,
-        readonly _unrecognizedExtensionsList: _Element[] = [],
-    ) {}
+        callForwarded?: OPTIONAL<NULL>,
+        forwardingDestinationNumber?: OPTIONAL<CalledPartyNumber>,
+        _unrecognizedExtensionsList: _Element[] = [],
+    ) {
+        this.callForwarded = callForwarded;
+        this.forwardingDestinationNumber = forwardingDestinationNumber;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     public static _from_object (_o: { [_K in keyof (EventSpecificInformationBCSM_tNoAnswerSpecificInfo)]: (EventSpecificInformationBCSM_tNoAnswerSpecificInfo)[_K] }): EventSpecificInformationBCSM_tNoAnswerSpecificInfo {
         return new EventSpecificInformationBCSM_tNoAnswerSpecificInfo(_o.callForwarded, _o.forwardingDestinationNumber, _o._unrecognizedExtensionsList);

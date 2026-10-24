@@ -89,200 +89,236 @@ import { CallLinkageData, _decode_CallLinkageData, _encode_CallLinkageData } fro
  */
 export
 class DigitsDialedEvent {
+    /**
+     * @summary `dialingConnection`.
+     * @description
+     *
+     * Mandatory. Connection at which the digits were
+     * dialled.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly dialingConnection: ConnectionID;
+    /**
+     * @summary `dialingDevice`.
+     * @description
+     *
+     * Mandatory. Device at which the digits were
+     * dialled.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly dialingDevice: SubjectDeviceID;
+    /**
+     * @summary `dialingSequence`.
+     * @description
+     *
+     * Mandatory. Digits actually dialled (manual or
+     * CSTA). Grouping per event is switching-function
+     * dependent (FR 2, FR 4).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly dialingSequence: DeviceID;
+    /**
+     * @summary `localConnectionInfo`.
+     * @description
+     *
+     * Device-type monitors only (§9.5.2, §12.2.17). For
+     * the dialling device: Initiated.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly localConnectionInfo: OPTIONAL<LocalConnectionState>;
+    /**
+     * @summary `correlatorData`.
+     * @description
+     *
+     * Conditional. Present when correlator data is
+     * associated with the call (§12.2.10).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly correlatorData: OPTIONAL<CorrelatorData>;
+    /**
+     * @summary `cause`.
+     * @description
+     *
+     * Mandatory. Valid values are listed in Table
+     * 17-162: Conference, Consultation, Network
+     * Dialling, Normal, Transfer.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly cause: EventCause;
+    /**
+     * @summary `servicesPermitted`.
+     * @description
+     *
+     * Device-type monitors only (§9.5.2, §12.2.25).
+     * Mandatory if Dynamic Feature Availability is
+     * supported.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly servicesPermitted?: OPTIONAL<ServicesPermitted>;
+    /**
+     * @summary `networkCallingDevice`.
+     * @description
+     *
+     * Optional. Original calling device from the
+     * network, external incoming only. Does not change
+     * while `associatedCallingDevice` remains.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly networkCallingDevice?: OPTIONAL<NetworkCallingDeviceID>;
+    /**
+     * @summary `networkCalledDevice`.
+     * @description
+     *
+     * Optional. Original called device from the
+     * network, external incoming only. Does not change
+     * while `associatedCallingDevice` remains.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly networkCalledDevice?: OPTIONAL<NetworkCalledDeviceID>;
+    /**
+     * @summary `associatedCallingDevice`.
+     * @description
+     *
+     * Conditional. NID of the calling device for
+     * external incoming calls.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly associatedCallingDevice?: OPTIONAL<AssociatedCallingDeviceID>;
+    /**
+     * @summary `associatedCalledDevice`.
+     * @description
+     *
+     * Conditional. NID or associated device for
+     * external outgoing or incoming calls.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly associatedCalledDevice?: OPTIONAL<AssociatedCalledDeviceID>;
+    /**
+     * @summary `dialingConnectionInfo`.
+     * @description
+     *
+     * Optional connection information. Omitted values
+     * are switching-function specific (§12.2.8).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly dialingConnectionInfo?: OPTIONAL<ConnectionInformation>;
+    /**
+     * @summary `callCharacteristics`.
+     * @description
+     *
+     * Optional high-level call characteristics
+     * (§12.2.4).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly callCharacteristics?: OPTIONAL<CallCharacteristics>;
+    /**
+     * @summary `callLinkageData`.
+     * @description
+     *
+     * Optional global call data and thread data
+     * (§12.2.5).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly callLinkageData?: OPTIONAL<CallLinkageData>;
+    /**
+     * @summary `languagePreferences`.
+     * @description
+     *
+     * Optional preferred language(s) (§12.2.16).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly languagePreferences?: OPTIONAL<LanguagePreferences>;
+    /**
+     * @summary `locationInfo`.
+     * @description
+     *
+     * Optional location information for devices in the
+     * call.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly locationInfo?: OPTIONAL<LocationInfoList>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional `CSTACommonArguments` carrying the
+     * security and privateData parameters from the
+     * ECMA-269 event table.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `dialingConnection`.
-         * @description
-         *
-         * Mandatory. Connection at which the digits were
-         * dialled.
-         *
-         * @public
-         * @readonly
-         */
-        readonly dialingConnection: ConnectionID,
-        /**
-         * @summary `dialingDevice`.
-         * @description
-         *
-         * Mandatory. Device at which the digits were
-         * dialled.
-         *
-         * @public
-         * @readonly
-         */
-        readonly dialingDevice: SubjectDeviceID,
-        /**
-         * @summary `dialingSequence`.
-         * @description
-         *
-         * Mandatory. Digits actually dialled (manual or
-         * CSTA). Grouping per event is switching-function
-         * dependent (FR 2, FR 4).
-         *
-         * @public
-         * @readonly
-         */
-        readonly dialingSequence: DeviceID,
-        /**
-         * @summary `localConnectionInfo`.
-         * @description
-         *
-         * Device-type monitors only (§9.5.2, §12.2.17). For
-         * the dialling device: Initiated.
-         *
-         * @public
-         * @readonly
-         */
-        readonly localConnectionInfo: OPTIONAL<LocalConnectionState>,
-        /**
-         * @summary `correlatorData`.
-         * @description
-         *
-         * Conditional. Present when correlator data is
-         * associated with the call (§12.2.10).
-         *
-         * @public
-         * @readonly
-         */
-        readonly correlatorData: OPTIONAL<CorrelatorData>,
-        /**
-         * @summary `cause`.
-         * @description
-         *
-         * Mandatory. Valid values are listed in Table
-         * 17-162: Conference, Consultation, Network
-         * Dialling, Normal, Transfer.
-         *
-         * @public
-         * @readonly
-         */
-        readonly cause: EventCause,
-        /**
-         * @summary `servicesPermitted`.
-         * @description
-         *
-         * Device-type monitors only (§9.5.2, §12.2.25).
-         * Mandatory if Dynamic Feature Availability is
-         * supported.
-         *
-         * @public
-         * @readonly
-         */
-        readonly servicesPermitted?: OPTIONAL<ServicesPermitted>,
-        /**
-         * @summary `networkCallingDevice`.
-         * @description
-         *
-         * Optional. Original calling device from the
-         * network, external incoming only. Does not change
-         * while `associatedCallingDevice` remains.
-         *
-         * @public
-         * @readonly
-         */
-        readonly networkCallingDevice?: OPTIONAL<NetworkCallingDeviceID>,
-        /**
-         * @summary `networkCalledDevice`.
-         * @description
-         *
-         * Optional. Original called device from the
-         * network, external incoming only. Does not change
-         * while `associatedCallingDevice` remains.
-         *
-         * @public
-         * @readonly
-         */
-        readonly networkCalledDevice?: OPTIONAL<NetworkCalledDeviceID>,
-        /**
-         * @summary `associatedCallingDevice`.
-         * @description
-         *
-         * Conditional. NID of the calling device for
-         * external incoming calls.
-         *
-         * @public
-         * @readonly
-         */
-        readonly associatedCallingDevice?: OPTIONAL<AssociatedCallingDeviceID>,
-        /**
-         * @summary `associatedCalledDevice`.
-         * @description
-         *
-         * Conditional. NID or associated device for
-         * external outgoing or incoming calls.
-         *
-         * @public
-         * @readonly
-         */
-        readonly associatedCalledDevice?: OPTIONAL<AssociatedCalledDeviceID>,
-        /**
-         * @summary `dialingConnectionInfo`.
-         * @description
-         *
-         * Optional connection information. Omitted values
-         * are switching-function specific (§12.2.8).
-         *
-         * @public
-         * @readonly
-         */
-        readonly dialingConnectionInfo?: OPTIONAL<ConnectionInformation>,
-        /**
-         * @summary `callCharacteristics`.
-         * @description
-         *
-         * Optional high-level call characteristics
-         * (§12.2.4).
-         *
-         * @public
-         * @readonly
-         */
-        readonly callCharacteristics?: OPTIONAL<CallCharacteristics>,
-        /**
-         * @summary `callLinkageData`.
-         * @description
-         *
-         * Optional global call data and thread data
-         * (§12.2.5).
-         *
-         * @public
-         * @readonly
-         */
-        readonly callLinkageData?: OPTIONAL<CallLinkageData>,
-        /**
-         * @summary `languagePreferences`.
-         * @description
-         *
-         * Optional preferred language(s) (§12.2.16).
-         *
-         * @public
-         * @readonly
-         */
-        readonly languagePreferences?: OPTIONAL<LanguagePreferences>,
-        /**
-         * @summary `locationInfo`.
-         * @description
-         *
-         * Optional location information for devices in the
-         * call.
-         *
-         * @public
-         * @readonly
-         */
-        readonly locationInfo?: OPTIONAL<LocationInfoList>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional `CSTACommonArguments` carrying the
-         * security and privateData parameters from the
-         * ECMA-269 event table.
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        dialingConnection: ConnectionID,
+        dialingDevice: SubjectDeviceID,
+        dialingSequence: DeviceID,
+        localConnectionInfo: OPTIONAL<LocalConnectionState>,
+        correlatorData: OPTIONAL<CorrelatorData>,
+        cause: EventCause,
+        servicesPermitted?: OPTIONAL<ServicesPermitted>,
+        networkCallingDevice?: OPTIONAL<NetworkCallingDeviceID>,
+        networkCalledDevice?: OPTIONAL<NetworkCalledDeviceID>,
+        associatedCallingDevice?: OPTIONAL<AssociatedCallingDeviceID>,
+        associatedCalledDevice?: OPTIONAL<AssociatedCalledDeviceID>,
+        dialingConnectionInfo?: OPTIONAL<ConnectionInformation>,
+        callCharacteristics?: OPTIONAL<CallCharacteristics>,
+        callLinkageData?: OPTIONAL<CallLinkageData>,
+        languagePreferences?: OPTIONAL<LanguagePreferences>,
+        locationInfo?: OPTIONAL<LocationInfoList>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.dialingConnection = dialingConnection;
+        this.dialingDevice = dialingDevice;
+        this.dialingSequence = dialingSequence;
+        this.localConnectionInfo = localConnectionInfo;
+        this.correlatorData = correlatorData;
+        this.cause = cause;
+        this.servicesPermitted = servicesPermitted;
+        this.networkCallingDevice = networkCallingDevice;
+        this.networkCalledDevice = networkCalledDevice;
+        this.associatedCallingDevice = associatedCallingDevice;
+        this.associatedCalledDevice = associatedCalledDevice;
+        this.dialingConnectionInfo = dialingConnectionInfo;
+        this.callCharacteristics = callCharacteristics;
+        this.callLinkageData = callLinkageData;
+        this.languagePreferences = languagePreferences;
+        this.locationInfo = locationInfo;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a DigitsDialedEvent

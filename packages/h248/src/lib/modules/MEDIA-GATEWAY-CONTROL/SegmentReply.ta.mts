@@ -33,50 +33,60 @@ import { SegmentNumber, _decode_SegmentNumber, _encode_SegmentNumber } from "../
  */
 export
 class SegmentReply {
+    /**
+     * @summary `transactionId`.
+     * @description
+     *
+     * Transaction whose segment is being acknowledged.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly transactionId: TransactionId;
+    /**
+     * @summary `segmentNumber`.
+     * @description
+     *
+     * Segment number, 0 to 65535.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly segmentNumber: SegmentNumber;
+    /**
+     * @summary `segmentationComplete`.
+     * @description
+     *
+     * Present when this acknowledgement covers the segment that completed
+     * the reply.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly segmentationComplete?: OPTIONAL<NULL>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @description
+     *
+     * Extension additions this version does not define. Kept so a later
+     * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `transactionId`.
-         * @description
-         *
-         * Transaction whose segment is being acknowledged.
-         *
-         * @public
-         * @readonly
-         */
-        readonly transactionId: TransactionId,
-        /**
-         * @summary `segmentNumber`.
-         * @description
-         *
-         * Segment number, 0 to 65535.
-         *
-         * @public
-         * @readonly
-         */
-        readonly segmentNumber: SegmentNumber,
-        /**
-         * @summary `segmentationComplete`.
-         * @description
-         *
-         * Present when this acknowledgement covers the segment that completed
-         * the reply.
-         *
-         * @public
-         * @readonly
-         */
-        readonly segmentationComplete?: OPTIONAL<NULL>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @description
-         *
-         * Extension additions this version does not define. Kept so a later
-         * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
-         *
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        transactionId: TransactionId,
+        segmentNumber: SegmentNumber,
+        segmentationComplete?: OPTIONAL<NULL>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.transactionId = transactionId;
+        this.segmentNumber = segmentNumber;
+        this.segmentationComplete = segmentationComplete;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a SegmentReply

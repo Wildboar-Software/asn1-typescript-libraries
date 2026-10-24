@@ -39,37 +39,45 @@ import {
  *
  */
 export class TypeAndContextAssertion {
+    /**
+     * @summary `type_`.
+     * @description
+     *
+     * `id-oa-allAttributeTypes` forces evaluation against every attr
+     * type. A TACA whose type is neither the value's type nor a
+     * supertype (nor allAttributeTypes) is TRUE (does not eliminate).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly type_: AttributeType;
+    /**
+     * @summary `contextAssertions`.
+     * @description
+     *
+     * `preference` SEQUENCE: order matters. `all` SET OF: every
+     * assertion TRUE; order irrelevant.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly contextAssertions: TypeAndContextAssertion_contextAssertions;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `type_`.
-         * @description
-         *
-         * `id-oa-allAttributeTypes` forces evaluation against every attr
-         * type. A TACA whose type is neither the value's type nor a
-         * supertype (nor allAttributeTypes) is TRUE (does not eliminate).
-         *
-         * @public
-         * @readonly
-         */
-        readonly type_: AttributeType,
-        /**
-         * @summary `contextAssertions`.
-         * @description
-         *
-         * `preference` SEQUENCE: order matters. `all` SET OF: every
-         * assertion TRUE; order irrelevant.
-         *
-         * @public
-         * @readonly
-         */
-        readonly contextAssertions: TypeAndContextAssertion_contextAssertions,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        type_: AttributeType,
+        contextAssertions: TypeAndContextAssertion_contextAssertions,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.type_ = type_;
+        this.contextAssertions = contextAssertions;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a TypeAndContextAssertion

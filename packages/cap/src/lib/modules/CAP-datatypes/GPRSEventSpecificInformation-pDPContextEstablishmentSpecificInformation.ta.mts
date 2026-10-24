@@ -33,16 +33,34 @@ import { PDPInitiationType, _enum_for_PDPInitiationType, _decode_PDPInitiationTy
  *
  */
 export class GPRSEventSpecificInformation_pDPContextEstablishmentSpecificInformation {
+    public readonly accessPointName?: OPTIONAL<AccessPointName>;
+    public readonly endUserAddress?: OPTIONAL<EndUserAddress>;
+    public readonly qualityOfService?: OPTIONAL<QualityOfService>;
+    public readonly locationInformationGPRS?: OPTIONAL<LocationInformationGPRS>;
+    public readonly timeAndTimeZone?: OPTIONAL<TimeAndTimezone>;
+    public readonly pDPInitiationType?: OPTIONAL<PDPInitiationType>;
+    public readonly secondaryPDP_context?: OPTIONAL<NULL>;
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        readonly accessPointName?: OPTIONAL<AccessPointName>,
-        readonly endUserAddress?: OPTIONAL<EndUserAddress>,
-        readonly qualityOfService?: OPTIONAL<QualityOfService>,
-        readonly locationInformationGPRS?: OPTIONAL<LocationInformationGPRS>,
-        readonly timeAndTimeZone?: OPTIONAL<TimeAndTimezone>,
-        readonly pDPInitiationType?: OPTIONAL<PDPInitiationType>,
-        readonly secondaryPDP_context?: OPTIONAL<NULL>,
-        readonly _unrecognizedExtensionsList: _Element[] = [],
-    ) {}
+        accessPointName?: OPTIONAL<AccessPointName>,
+        endUserAddress?: OPTIONAL<EndUserAddress>,
+        qualityOfService?: OPTIONAL<QualityOfService>,
+        locationInformationGPRS?: OPTIONAL<LocationInformationGPRS>,
+        timeAndTimeZone?: OPTIONAL<TimeAndTimezone>,
+        pDPInitiationType?: OPTIONAL<PDPInitiationType>,
+        secondaryPDP_context?: OPTIONAL<NULL>,
+        _unrecognizedExtensionsList: _Element[] = [],
+    ) {
+        this.accessPointName = accessPointName;
+        this.endUserAddress = endUserAddress;
+        this.qualityOfService = qualityOfService;
+        this.locationInformationGPRS = locationInformationGPRS;
+        this.timeAndTimeZone = timeAndTimeZone;
+        this.pDPInitiationType = pDPInitiationType;
+        this.secondaryPDP_context = secondaryPDP_context;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     public static _from_object (_o: { [_K in keyof (GPRSEventSpecificInformation_pDPContextEstablishmentSpecificInformation)]: (GPRSEventSpecificInformation_pDPContextEstablishmentSpecificInformation)[_K] }): GPRSEventSpecificInformation_pDPContextEstablishmentSpecificInformation {
         return new GPRSEventSpecificInformation_pDPContextEstablishmentSpecificInformation(_o.accessPointName, _o.endUserAddress, _o.qualityOfService, _o.locationInformationGPRS, _o.timeAndTimeZone, _o.pDPInitiationType, _o.secondaryPDP_context, _o._unrecognizedExtensionsList);

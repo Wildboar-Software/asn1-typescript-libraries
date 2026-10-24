@@ -36,26 +36,34 @@ import { EncryptedContent, _decode_EncryptedContent, _encode_EncryptedContent } 
  */
 export
 class EncryptedContentInfo {
+    /**
+     * @summary `contentType`.
+     * @public
+     * @readonly
+     */
+    public readonly contentType: ContentType;
+    /**
+     * @summary `contentEncryptionAlgorithm`.
+     * @public
+     * @readonly
+     */
+    public readonly contentEncryptionAlgorithm: ContentEncryptAlgorithmIdentifier;
+    /**
+     * @summary `encryptedContent`.
+     * @public
+     * @readonly
+     */
+    public readonly encryptedContent: EncryptedContent;
+
     constructor (
-        /**
-         * @summary `contentType`.
-         * @public
-         * @readonly
-         */
-        readonly contentType: ContentType,
-        /**
-         * @summary `contentEncryptionAlgorithm`.
-         * @public
-         * @readonly
-         */
-        readonly contentEncryptionAlgorithm: ContentEncryptAlgorithmIdentifier,
-        /**
-         * @summary `encryptedContent`.
-         * @public
-         * @readonly
-         */
-        readonly encryptedContent: EncryptedContent
-    ) {}
+        contentType: ContentType,
+        contentEncryptionAlgorithm: ContentEncryptAlgorithmIdentifier,
+        encryptedContent: EncryptedContent
+    ) {
+        this.contentType = contentType;
+        this.contentEncryptionAlgorithm = contentEncryptionAlgorithm;
+        this.encryptedContent = encryptedContent;
+    }
 
     /**
      * @summary Restructures an object into a EncryptedContentInfo

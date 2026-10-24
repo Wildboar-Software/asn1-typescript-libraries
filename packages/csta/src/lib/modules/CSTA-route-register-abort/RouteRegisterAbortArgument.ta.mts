@@ -35,27 +35,33 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class RouteRegisterAbortArgument {
+    /**
+     * @summary `routeRegisterReqID`.
+     * @description
+     *
+     * Registration that was aborted.
+     * @public
+     * @readonly
+     */
+    public readonly routeRegisterReqID: RouteRegisterReqID;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `routeRegisterReqID`.
-         * @description
-         *
-         * Registration that was aborted.
-         * @public
-         * @readonly
-         */
-        readonly routeRegisterReqID: RouteRegisterReqID,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        routeRegisterReqID: RouteRegisterReqID,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.routeRegisterReqID = routeRegisterReqID;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a RouteRegisterAbortArgument

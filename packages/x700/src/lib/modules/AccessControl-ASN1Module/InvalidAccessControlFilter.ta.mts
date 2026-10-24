@@ -46,29 +46,35 @@ import {
  *
  */
 export class InvalidAccessControlFilter {
+    /**
+     * @summary `errorId`.
+     * @description
+     *
+     * Why the filter was rejected: `duplicateId`,
+     * `heterogeneousId`, or `invalidId`. X.741 §8.2.1,
+     * A.4.1.
+     * @public
+     * @readonly
+     */
+    public readonly errorId: InvalidAccessControlFilter_errorId;
+    /**
+     * @summary `filter`.
+     * @description
+     *
+     * The CMIS filter in error, if the implementation
+     * supplies it. X.741 §8.2.1, A.4.1.
+     * @public
+     * @readonly
+     */
+    public readonly filter?: OPTIONAL<CMISFilter>;
+
     constructor(
-        /**
-         * @summary `errorId`.
-         * @description
-         *
-         * Why the filter was rejected: `duplicateId`,
-         * `heterogeneousId`, or `invalidId`. X.741 §8.2.1,
-         * A.4.1.
-         * @public
-         * @readonly
-         */
-        readonly errorId: InvalidAccessControlFilter_errorId,
-        /**
-         * @summary `filter`.
-         * @description
-         *
-         * The CMIS filter in error, if the implementation
-         * supplies it. X.741 §8.2.1, A.4.1.
-         * @public
-         * @readonly
-         */
-        readonly filter?: OPTIONAL<CMISFilter>
-    ) {}
+        errorId: InvalidAccessControlFilter_errorId,
+        filter?: OPTIONAL<CMISFilter>
+    ) {
+        this.errorId = errorId;
+        this.filter = filter;
+    }
 
     /**
      * @summary Restructures an object into a InvalidAccessControlFilter

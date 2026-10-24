@@ -33,54 +33,66 @@ import { LocationInfoWithLMSI, _decode_LocationInfoWithLMSI, _encode_LocationInf
  */
 export
 class RoutingInfoForSM_Res {
+    /**
+     * @summary `imsi`.
+     * @description
+     *
+     * Subscriber IMSI.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly imsi: IMSI;
+    /**
+     * @summary `locationInfoWithLMSI`.
+     * @description
+     *
+     * Serving node number(s) and optional LMSI.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly locationInfoWithLMSI: LocationInfoWithLMSI;
+    /**
+     * @summary `extensionContainer`.
+     * @description
+     *
+     * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary `ip_sm_gwGuidance`.
+     * @description
+     *
+     * IP-SM-GW delivery timer guidance.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ip_sm_gwGuidance?: OPTIONAL<IP_SM_GW_Guidance>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `imsi`.
-         * @description
-         *
-         * Subscriber IMSI.
-         *
-         * @public
-         * @readonly
-         */
-        readonly imsi: IMSI,
-        /**
-         * @summary `locationInfoWithLMSI`.
-         * @description
-         *
-         * Serving node number(s) and optional LMSI.
-         *
-         * @public
-         * @readonly
-         */
-        readonly locationInfoWithLMSI: LocationInfoWithLMSI,
-        /**
-         * @summary `extensionContainer`.
-         * @description
-         *
-         * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary `ip_sm_gwGuidance`.
-         * @description
-         *
-         * IP-SM-GW delivery timer guidance.
-         *
-         * @public
-         * @readonly
-         */
-        readonly ip_sm_gwGuidance?: OPTIONAL<IP_SM_GW_Guidance>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        imsi: IMSI,
+        locationInfoWithLMSI: LocationInfoWithLMSI,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        ip_sm_gwGuidance?: OPTIONAL<IP_SM_GW_Guidance>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.imsi = imsi;
+        this.locationInfoWithLMSI = locationInfoWithLMSI;
+        this.extensionContainer = extensionContainer;
+        this.ip_sm_gwGuidance = ip_sm_gwGuidance;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a RoutingInfoForSM_Res

@@ -38,33 +38,39 @@ import { EventTime, _decode_EventTime, _encode_EventTime } from "../MMS-Object-M
  */
 export
 class AlterEventEnrollment_Response {
+    /**
+     * @summary `currentState`.
+     * @description
+     *
+     * EE-State, or `undefined` if the Event Condition is UNDEFINED.
+     *
+     * [ISO 9506-1:2003 §21.6.1.2.1]
+     * [ISO 9506-2:2003 §21.6.2.1]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly currentState: AlterEventEnrollment_Response_currentState;
+    /**
+     * @summary `transitionTime`.
+     * @description
+     *
+     * Time of the last transition used to derive current state.
+     *
+     * [ISO 9506-1:2003 §21.6.1.2.2]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly transitionTime: EventTime;
+
     constructor (
-        /**
-         * @summary `currentState`.
-         * @description
-         *
-         * EE-State, or `undefined` if the Event Condition is UNDEFINED.
-         *
-         * [ISO 9506-1:2003 §21.6.1.2.1]
-         * [ISO 9506-2:2003 §21.6.2.1]
-         *
-         * @public
-         * @readonly
-         */
-        readonly currentState: AlterEventEnrollment_Response_currentState,
-        /**
-         * @summary `transitionTime`.
-         * @description
-         *
-         * Time of the last transition used to derive current state.
-         *
-         * [ISO 9506-1:2003 §21.6.1.2.2]
-         *
-         * @public
-         * @readonly
-         */
-        readonly transitionTime: EventTime
-    ) {}
+        currentState: AlterEventEnrollment_Response_currentState,
+        transitionTime: EventTime
+    ) {
+        this.currentState = currentState;
+        this.transitionTime = transitionTime;
+    }
 
     /**
      * @summary Restructures an object into a AlterEventEnrollment_Response

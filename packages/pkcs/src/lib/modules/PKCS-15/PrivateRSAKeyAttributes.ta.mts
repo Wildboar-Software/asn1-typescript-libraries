@@ -45,32 +45,42 @@ import {
  *
  */
 export class PrivateRSAKeyAttributes {
+    /**
+     * @summary `value`.
+     * @public
+     * @readonly
+     */
+    public readonly value: ObjectValue<RSAPrivateKeyObject>;
+    /**
+     * @summary `modulusLength`.
+     * @public
+     * @readonly
+     */
+    public readonly modulusLength: INTEGER;
+    /**
+     * @summary `keyInfo`.
+     * @public
+     * @readonly
+     */
+    public readonly keyInfo?: OPTIONAL<KeyInfo<NULL, PublicKeyOperations>>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `value`.
-         * @public
-         * @readonly
-         */
-        readonly value: ObjectValue<RSAPrivateKeyObject>,
-        /**
-         * @summary `modulusLength`.
-         * @public
-         * @readonly
-         */
-        readonly modulusLength: INTEGER,
-        /**
-         * @summary `keyInfo`.
-         * @public
-         * @readonly
-         */
-        readonly keyInfo?: OPTIONAL<KeyInfo<NULL, PublicKeyOperations>>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        value: ObjectValue<RSAPrivateKeyObject>,
+        modulusLength: INTEGER,
+        keyInfo?: OPTIONAL<KeyInfo<NULL, PublicKeyOperations>>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.value = value;
+        this.modulusLength = modulusLength;
+        this.keyInfo = keyInfo;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a PrivateRSAKeyAttributes

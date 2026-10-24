@@ -51,32 +51,42 @@ import {
  *
  */
 export class ReportTransferEnvelope {
+    /**
+     * @summary `report_identifier`.
+     * @public
+     * @readonly
+     */
+    public readonly report_identifier: ReportIdentifier;
+    /**
+     * @summary `report_destination_name`.
+     * @public
+     * @readonly
+     */
+    public readonly report_destination_name: ReportDestinationName;
+    /**
+     * @summary `trace_information`.
+     * @public
+     * @readonly
+     */
+    public readonly trace_information: TraceInformation;
+    /**
+     * @summary `extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<ExtensionField[]>;
+
     constructor(
-        /**
-         * @summary `report_identifier`.
-         * @public
-         * @readonly
-         */
-        readonly report_identifier: ReportIdentifier,
-        /**
-         * @summary `report_destination_name`.
-         * @public
-         * @readonly
-         */
-        readonly report_destination_name: ReportDestinationName,
-        /**
-         * @summary `trace_information`.
-         * @public
-         * @readonly
-         */
-        readonly trace_information: TraceInformation,
-        /**
-         * @summary `extensions`.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<ExtensionField[]>
-    ) {}
+        report_identifier: ReportIdentifier,
+        report_destination_name: ReportDestinationName,
+        trace_information: TraceInformation,
+        extensions?: OPTIONAL<ExtensionField[]>
+    ) {
+        this.report_identifier = report_identifier;
+        this.report_destination_name = report_destination_name;
+        this.trace_information = trace_information;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a ReportTransferEnvelope

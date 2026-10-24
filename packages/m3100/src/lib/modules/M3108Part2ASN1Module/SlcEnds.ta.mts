@@ -31,20 +31,26 @@ import {
  *
  */
 export class SlcEnds {
+    /**
+     * @summary `endA`.
+     * @public
+     * @readonly
+     */
+    public readonly endA: LinkEndCharacteristics;
+    /**
+     * @summary `endB`.
+     * @public
+     * @readonly
+     */
+    public readonly endB: LinkEndCharacteristics;
+
     constructor(
-        /**
-         * @summary `endA`.
-         * @public
-         * @readonly
-         */
-        readonly endA: LinkEndCharacteristics,
-        /**
-         * @summary `endB`.
-         * @public
-         * @readonly
-         */
-        readonly endB: LinkEndCharacteristics
-    ) {}
+        endA: LinkEndCharacteristics,
+        endB: LinkEndCharacteristics
+    ) {
+        this.endA = endA;
+        this.endB = endB;
+    }
 
     /**
      * @summary Restructures an object into a SlcEnds

@@ -35,26 +35,34 @@ import {
  *
  */
 export class RecipientKeyIdentifier {
+    /**
+     * @summary `subjectKeyIdentifier`.
+     * @public
+     * @readonly
+     */
+    public readonly subjectKeyIdentifier: SubjectKeyIdentifier;
+    /**
+     * @summary `date`.
+     * @public
+     * @readonly
+     */
+    public readonly date?: OPTIONAL<GeneralizedTime>;
+    /**
+     * @summary `other`.
+     * @public
+     * @readonly
+     */
+    public readonly other?: OPTIONAL<OtherKeyAttribute>;
+
     constructor(
-        /**
-         * @summary `subjectKeyIdentifier`.
-         * @public
-         * @readonly
-         */
-        readonly subjectKeyIdentifier: SubjectKeyIdentifier,
-        /**
-         * @summary `date`.
-         * @public
-         * @readonly
-         */
-        readonly date?: OPTIONAL<GeneralizedTime>,
-        /**
-         * @summary `other`.
-         * @public
-         * @readonly
-         */
-        readonly other?: OPTIONAL<OtherKeyAttribute>
-    ) {}
+        subjectKeyIdentifier: SubjectKeyIdentifier,
+        date?: OPTIONAL<GeneralizedTime>,
+        other?: OPTIONAL<OtherKeyAttribute>
+    ) {
+        this.subjectKeyIdentifier = subjectKeyIdentifier;
+        this.date = date;
+        this.other = other;
+    }
 
     /**
      * @summary Restructures an object into a RecipientKeyIdentifier

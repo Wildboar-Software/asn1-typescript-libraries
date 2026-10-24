@@ -40,20 +40,26 @@ import {
  *
  */
 export class SystemTiming {
+    /**
+     * @summary `sourceType`.
+     * @public
+     * @readonly
+     */
+    public readonly sourceType: SystemTiming_sourceType;
+    /**
+     * @summary `sourceID`.
+     * @public
+     * @readonly
+     */
+    public readonly sourceID?: OPTIONAL<ObjectInstance>;
+
     constructor(
-        /**
-         * @summary `sourceType`.
-         * @public
-         * @readonly
-         */
-        readonly sourceType: SystemTiming_sourceType,
-        /**
-         * @summary `sourceID`.
-         * @public
-         * @readonly
-         */
-        readonly sourceID?: OPTIONAL<ObjectInstance>
-    ) {}
+        sourceType: SystemTiming_sourceType,
+        sourceID?: OPTIONAL<ObjectInstance>
+    ) {
+        this.sourceType = sourceType;
+        this.sourceID = sourceID;
+    }
 
     /**
      * @summary Restructures an object into a SystemTiming

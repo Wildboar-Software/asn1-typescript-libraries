@@ -36,31 +36,37 @@ import { Unsigned32, _decode_Unsigned32, _encode_Unsigned32 } from "../ISO-9506-
  */
 export
 class AlternateAccessSelection_selectAlternateAccess_accessSelection_indexRange {
+    /**
+     * @summary `lowIndex`.
+     * @description
+     *
+     * First selected index; becomes element 0 of the
+     * derived array. ISO 9506-1:2003 §14.3.1.1.3.4.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly lowIndex: Unsigned32;
+    /**
+     * @summary `numberOfElements`.
+     * @description
+     *
+     * Count including Low Index. Zero means from Low
+     * Index through the last defined element.
+     * ISO 9506-1:2003 §14.3.1.1.3.4.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly numberOfElements: Unsigned32;
+
     constructor (
-        /**
-         * @summary `lowIndex`.
-         * @description
-         *
-         * First selected index; becomes element 0 of the
-         * derived array. ISO 9506-1:2003 §14.3.1.1.3.4.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly lowIndex: Unsigned32,
-        /**
-         * @summary `numberOfElements`.
-         * @description
-         *
-         * Count including Low Index. Zero means from Low
-         * Index through the last defined element.
-         * ISO 9506-1:2003 §14.3.1.1.3.4.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly numberOfElements: Unsigned32
-    ) {}
+        lowIndex: Unsigned32,
+        numberOfElements: Unsigned32
+    ) {
+        this.lowIndex = lowIndex;
+        this.numberOfElements = numberOfElements;
+    }
 
     /**
      * @summary Restructures an object into a AlternateAccessSelection_selectAlternateAccess_accessSelection_indexRange

@@ -36,30 +36,36 @@ import { TimeOfDay, _decode_TimeOfDay, _encode_TimeOfDay } from "../ISO-9506-MMS
  */
 export
 class ReadJournal_Request_entryToStartAfter {
+    /**
+     * @summary `timeSpecification`.
+     * @description
+     *
+     * Compared to `&timeStamp` as the resume time.
+     * ISO 9506-1:2003 §23.2.1.1.5.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly timeSpecification: TimeOfDay;
+    /**
+     * @summary `entrySpecification`.
+     * @description
+     *
+     * `&entry` of the qualified entry after which to start.
+     * ISO 9506-1:2003 §23.2.1.1.5.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly entrySpecification: OCTET_STRING;
+
     constructor (
-        /**
-         * @summary `timeSpecification`.
-         * @description
-         *
-         * Compared to `&timeStamp` as the resume time.
-         * ISO 9506-1:2003 §23.2.1.1.5.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly timeSpecification: TimeOfDay,
-        /**
-         * @summary `entrySpecification`.
-         * @description
-         *
-         * `&entry` of the qualified entry after which to start.
-         * ISO 9506-1:2003 §23.2.1.1.5.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly entrySpecification: OCTET_STRING
-    ) {}
+        timeSpecification: TimeOfDay,
+        entrySpecification: OCTET_STRING
+    ) {
+        this.timeSpecification = timeSpecification;
+        this.entrySpecification = entrySpecification;
+    }
 
     /**
      * @summary Restructures an object into a ReadJournal_Request_entryToStartAfter

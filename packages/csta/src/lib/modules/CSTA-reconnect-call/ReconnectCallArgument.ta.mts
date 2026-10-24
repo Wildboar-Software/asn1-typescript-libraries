@@ -38,41 +38,49 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class ReconnectCallArgument {
+    /**
+     * @summary `activeCall`.
+     * @description
+     *
+     * Mandatory. Connection to clear. Initial Alerting,
+     * Connected, Initiated, Fail, or Queued; final Null.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly activeCall: ConnectionID;
+    /**
+     * @summary `heldCall`.
+     * @description
+     *
+     * Mandatory. Held connection to retrieve. Initial Hold;
+     * final Connected.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly heldCall: ConnectionID;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional `CSTACommonArguments` carrying the security and
+     * privateData parameters from the ECMA-269 service table.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `activeCall`.
-         * @description
-         *
-         * Mandatory. Connection to clear. Initial Alerting,
-         * Connected, Initiated, Fail, or Queued; final Null.
-         *
-         * @public
-         * @readonly
-         */
-        readonly activeCall: ConnectionID,
-        /**
-         * @summary `heldCall`.
-         * @description
-         *
-         * Mandatory. Held connection to retrieve. Initial Hold;
-         * final Connected.
-         *
-         * @public
-         * @readonly
-         */
-        readonly heldCall: ConnectionID,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional `CSTACommonArguments` carrying the security and
-         * privateData parameters from the ECMA-269 service table.
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        activeCall: ConnectionID,
+        heldCall: ConnectionID,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.activeCall = activeCall;
+        this.heldCall = heldCall;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a ReconnectCallArgument

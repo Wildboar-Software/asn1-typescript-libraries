@@ -80,76 +80,90 @@ import {
  */
 export
 class MediaCallCharacteristics {
+    /**
+     * @summary `mediaClass`.
+     * @description
+     *
+     * Bitmap of media classes. ECMA-269 §12.2.20.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mediaClass: MediaClass;
+    /**
+     * @summary `connectionRate`.
+     * @description
+     *
+     * Digital data connection rate. Switching-function specific; 0 means
+     * digital data with unknown rate. ECMA-269 §12.2.20.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly connectionRate?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `bitRate`.
+     * @description
+     *
+     * Constant (default) or variable bit rate. Absent means constant.
+     * ECMA-269 §12.2.20.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly bitRate?: OPTIONAL<MediaCallCharacteristics_bitRate>;
+    /**
+     * @summary `delayTolerance`.
+     * @description
+     *
+     * Maximum tolerated media-stream delay. For constant bit rate this is
+     * the actual delay; for variable, the maximum allowed. Absent means
+     * unknown. ECMA-269 §12.2.20.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly delayTolerance?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `switchingSubDomainCCIEType`.
+     * @description
+     *
+     * Type of private call-control IEs in
+     * `switchingSubDomainInformationElements` (ISDN, ATM, ISO-Ethernet TDM,
+     * RSVP, SIP, other). Absent means there are none. ECMA-269 §12.2.20.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly switchingSubDomainCCIEType?: OPTIONAL<MediaCallCharacteristics_switchingSubDomainCCIEType>;
+    /**
+     * @summary `switchingSubDomainInformationElements`.
+     * @description
+     *
+     * Private IEs from the switching sub-domain. Mandatory when
+     * `switchingSubDomainCCIEType` is present; ignore otherwise. ECMA-269
+     * §12.2.20.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly switchingSubDomainInformationElements?: OPTIONAL<OCTET_STRING>;
+
     constructor (
-        /**
-         * @summary `mediaClass`.
-         * @description
-         *
-         * Bitmap of media classes. ECMA-269 §12.2.20.
-         *
-         * @public
-         * @readonly
-         */
-        readonly mediaClass: MediaClass,
-        /**
-         * @summary `connectionRate`.
-         * @description
-         *
-         * Digital data connection rate. Switching-function specific; 0 means
-         * digital data with unknown rate. ECMA-269 §12.2.20.
-         *
-         * @public
-         * @readonly
-         */
-        readonly connectionRate?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `bitRate`.
-         * @description
-         *
-         * Constant (default) or variable bit rate. Absent means constant.
-         * ECMA-269 §12.2.20.
-         *
-         * @public
-         * @readonly
-         */
-        readonly bitRate?: OPTIONAL<MediaCallCharacteristics_bitRate>,
-        /**
-         * @summary `delayTolerance`.
-         * @description
-         *
-         * Maximum tolerated media-stream delay. For constant bit rate this is
-         * the actual delay; for variable, the maximum allowed. Absent means
-         * unknown. ECMA-269 §12.2.20.
-         *
-         * @public
-         * @readonly
-         */
-        readonly delayTolerance?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `switchingSubDomainCCIEType`.
-         * @description
-         *
-         * Type of private call-control IEs in
-         * `switchingSubDomainInformationElements` (ISDN, ATM, ISO-Ethernet TDM,
-         * RSVP, SIP, other). Absent means there are none. ECMA-269 §12.2.20.
-         *
-         * @public
-         * @readonly
-         */
-        readonly switchingSubDomainCCIEType?: OPTIONAL<MediaCallCharacteristics_switchingSubDomainCCIEType>,
-        /**
-         * @summary `switchingSubDomainInformationElements`.
-         * @description
-         *
-         * Private IEs from the switching sub-domain. Mandatory when
-         * `switchingSubDomainCCIEType` is present; ignore otherwise. ECMA-269
-         * §12.2.20.
-         *
-         * @public
-         * @readonly
-         */
-        readonly switchingSubDomainInformationElements?: OPTIONAL<OCTET_STRING>
-    ) {}
+        mediaClass: MediaClass,
+        connectionRate?: OPTIONAL<INTEGER>,
+        bitRate?: OPTIONAL<MediaCallCharacteristics_bitRate>,
+        delayTolerance?: OPTIONAL<INTEGER>,
+        switchingSubDomainCCIEType?: OPTIONAL<MediaCallCharacteristics_switchingSubDomainCCIEType>,
+        switchingSubDomainInformationElements?: OPTIONAL<OCTET_STRING>
+    ) {
+        this.mediaClass = mediaClass;
+        this.connectionRate = connectionRate;
+        this.bitRate = bitRate;
+        this.delayTolerance = delayTolerance;
+        this.switchingSubDomainCCIEType = switchingSubDomainCCIEType;
+        this.switchingSubDomainInformationElements = switchingSubDomainInformationElements;
+    }
 
     /**
      * @summary Restructures an object into a MediaCallCharacteristics

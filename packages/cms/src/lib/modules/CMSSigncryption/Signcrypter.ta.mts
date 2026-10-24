@@ -59,44 +59,58 @@ import {
  *
  */
 export class Signcrypter {
+    /**
+     * @summary `version`.
+     * @public
+     * @readonly
+     */
+    public readonly version: CMSVersion;
+    /**
+     * @summary `side`.
+     * @public
+     * @readonly
+     */
+    public readonly side: SigncrypterIDs;
+    /**
+     * @summary `signcryptedDataAlgorithm`.
+     * @public
+     * @readonly
+     */
+    public readonly signcryptedDataAlgorithm: SigncryptedDataAlgorithmIdentifier;
+    /**
+     * @summary `signcryptionValue`.
+     * @public
+     * @readonly
+     */
+    public readonly signcryptionValue: SigncryptionValue;
+    /**
+     * @summary `signatureInformation`.
+     * @public
+     * @readonly
+     */
+    public readonly signatureInformation?: OPTIONAL<SignatureInformation>;
+    /**
+     * @summary `unsigncryptedAttributes`.
+     * @public
+     * @readonly
+     */
+    public readonly unsigncryptedAttributes?: OPTIONAL<UnSigncryptedAttributes>;
+
     constructor(
-        /**
-         * @summary `version`.
-         * @public
-         * @readonly
-         */
-        readonly version: CMSVersion,
-        /**
-         * @summary `side`.
-         * @public
-         * @readonly
-         */
-        readonly side: SigncrypterIDs,
-        /**
-         * @summary `signcryptedDataAlgorithm`.
-         * @public
-         * @readonly
-         */
-        readonly signcryptedDataAlgorithm: SigncryptedDataAlgorithmIdentifier,
-        /**
-         * @summary `signcryptionValue`.
-         * @public
-         * @readonly
-         */
-        readonly signcryptionValue: SigncryptionValue,
-        /**
-         * @summary `signatureInformation`.
-         * @public
-         * @readonly
-         */
-        readonly signatureInformation?: OPTIONAL<SignatureInformation>,
-        /**
-         * @summary `unsigncryptedAttributes`.
-         * @public
-         * @readonly
-         */
-        readonly unsigncryptedAttributes?: OPTIONAL<UnSigncryptedAttributes>
-    ) {}
+        version: CMSVersion,
+        side: SigncrypterIDs,
+        signcryptedDataAlgorithm: SigncryptedDataAlgorithmIdentifier,
+        signcryptionValue: SigncryptionValue,
+        signatureInformation?: OPTIONAL<SignatureInformation>,
+        unsigncryptedAttributes?: OPTIONAL<UnSigncryptedAttributes>
+    ) {
+        this.version = version;
+        this.side = side;
+        this.signcryptedDataAlgorithm = signcryptedDataAlgorithm;
+        this.signcryptionValue = signcryptionValue;
+        this.signatureInformation = signatureInformation;
+        this.unsigncryptedAttributes = unsigncryptedAttributes;
+    }
 
     /**
      * @summary Restructures an object into a Signcrypter

@@ -45,42 +45,50 @@ import {
  *
  */
 export class AARQ_apdu {
+    /**
+     * @summary `protocol_version`.
+     * @description
+     *
+     * BIT STRING `{version1(0)}`. If this element is
+     * omitted, the default is version 1 (Table 38 note b).
+     * BIT STRING must be primitive (§4.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly protocol_version: OPTIONAL<AARQ_apdu_protocol_version>;
+    /**
+     * @summary `application_context_name`.
+     * @description
+     *
+     * Application context for this dialogue, as an OBJECT
+     * IDENTIFIER. Mandatory (Table 38).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly application_context_name: OBJECT_IDENTIFIER;
+    /**
+     * @summary `user_information`.
+     * @description
+     *
+     * Optional sequence of EXTERNALs identified by a
+     * user-defined abstract syntax name (§4.2.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly user_information?: OPTIONAL<EXTERNAL[]>;
+
     constructor(
-        /**
-         * @summary `protocol_version`.
-         * @description
-         *
-         * BIT STRING `{version1(0)}`. If this element is
-         * omitted, the default is version 1 (Table 38 note b).
-         * BIT STRING must be primitive (§4.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly protocol_version: OPTIONAL<AARQ_apdu_protocol_version>,
-        /**
-         * @summary `application_context_name`.
-         * @description
-         *
-         * Application context for this dialogue, as an OBJECT
-         * IDENTIFIER. Mandatory (Table 38).
-         *
-         * @public
-         * @readonly
-         */
-        readonly application_context_name: OBJECT_IDENTIFIER,
-        /**
-         * @summary `user_information`.
-         * @description
-         *
-         * Optional sequence of EXTERNALs identified by a
-         * user-defined abstract syntax name (§4.2.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly user_information?: OPTIONAL<EXTERNAL[]>
-    ) {}
+        protocol_version: OPTIONAL<AARQ_apdu_protocol_version>,
+        application_context_name: OBJECT_IDENTIFIER,
+        user_information?: OPTIONAL<EXTERNAL[]>
+    ) {
+        this.protocol_version = protocol_version;
+        this.application_context_name = application_context_name;
+        this.user_information = user_information;
+    }
 
     /**
      * @summary Restructures an object into a AARQ_apdu

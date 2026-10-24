@@ -48,38 +48,48 @@ import { CSTAPrivateDataVersionList, _decode_CSTAPrivateDataVersionList, _encode
  */
 export
 class NewACSEUserInformationForCSTA {
+    /**
+     * @summary `cSTAVersion`.
+     * @description Protocol versions offered or selected.
+     * @public
+     * @readonly
+     */
+    public readonly cSTAVersion: CSTAVersion;
+    /**
+     * @summary `cSTAFunctionsRequiredByApplication`.
+     * @description
+     * Phase II functionality this application requires (optional).
+     * @public
+     * @readonly
+     */
+    public readonly cSTAFunctionsRequiredByApplication?: OPTIONAL<CSTAFunctionality>;
+    /**
+     * @summary `cSTAFunctionsThatCanBeSupplied`.
+     * @description
+     * Phase II functionality this application can supply (optional).
+     * @public
+     * @readonly
+     */
+    public readonly cSTAFunctionsThatCanBeSupplied?: OPTIONAL<CSTAFunctionality>;
+    /**
+     * @summary `cSTAPrivateDataVersionList`.
+     * @description Private-data versions for this association.
+     * @public
+     * @readonly
+     */
+    public readonly cSTAPrivateDataVersionList?: OPTIONAL<CSTAPrivateDataVersionList>;
+
     constructor (
-        /**
-         * @summary `cSTAVersion`.
-         * @description Protocol versions offered or selected.
-         * @public
-         * @readonly
-         */
-        readonly cSTAVersion: CSTAVersion,
-        /**
-         * @summary `cSTAFunctionsRequiredByApplication`.
-         * @description
-         * Phase II functionality this application requires (optional).
-         * @public
-         * @readonly
-         */
-        readonly cSTAFunctionsRequiredByApplication?: OPTIONAL<CSTAFunctionality>,
-        /**
-         * @summary `cSTAFunctionsThatCanBeSupplied`.
-         * @description
-         * Phase II functionality this application can supply (optional).
-         * @public
-         * @readonly
-         */
-        readonly cSTAFunctionsThatCanBeSupplied?: OPTIONAL<CSTAFunctionality>,
-        /**
-         * @summary `cSTAPrivateDataVersionList`.
-         * @description Private-data versions for this association.
-         * @public
-         * @readonly
-         */
-        readonly cSTAPrivateDataVersionList?: OPTIONAL<CSTAPrivateDataVersionList>
-    ) {}
+        cSTAVersion: CSTAVersion,
+        cSTAFunctionsRequiredByApplication?: OPTIONAL<CSTAFunctionality>,
+        cSTAFunctionsThatCanBeSupplied?: OPTIONAL<CSTAFunctionality>,
+        cSTAPrivateDataVersionList?: OPTIONAL<CSTAPrivateDataVersionList>
+    ) {
+        this.cSTAVersion = cSTAVersion;
+        this.cSTAFunctionsRequiredByApplication = cSTAFunctionsRequiredByApplication;
+        this.cSTAFunctionsThatCanBeSupplied = cSTAFunctionsThatCanBeSupplied;
+        this.cSTAPrivateDataVersionList = cSTAPrivateDataVersionList;
+    }
 
     /**
      * @summary Restructures an object into a NewACSEUserInformationForCSTA

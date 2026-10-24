@@ -36,32 +36,42 @@ import { DPSpecificCriteria, _decode_DPSpecificCriteria, _encode_DPSpecificCrite
  */
 export
 class BCSMEvent {
+    /**
+     * @summary `eventTypeBCSM`.
+     * @public
+     * @readonly
+     */
+    public readonly eventTypeBCSM: EventTypeBCSM;
+    /**
+     * @summary `monitorMode`.
+     * @public
+     * @readonly
+     */
+    public readonly monitorMode: MonitorMode;
+    /**
+     * @summary `legID`.
+     * @public
+     * @readonly
+     */
+    public readonly legID?: OPTIONAL<LegID>;
+    /**
+     * @summary `dPSpecificCriteria`.
+     * @public
+     * @readonly
+     */
+    public readonly dPSpecificCriteria?: OPTIONAL<DPSpecificCriteria>;
+
     constructor (
-        /**
-         * @summary `eventTypeBCSM`.
-         * @public
-         * @readonly
-         */
-        readonly eventTypeBCSM: EventTypeBCSM,
-        /**
-         * @summary `monitorMode`.
-         * @public
-         * @readonly
-         */
-        readonly monitorMode: MonitorMode,
-        /**
-         * @summary `legID`.
-         * @public
-         * @readonly
-         */
-        readonly legID?: OPTIONAL<LegID>,
-        /**
-         * @summary `dPSpecificCriteria`.
-         * @public
-         * @readonly
-         */
-        readonly dPSpecificCriteria?: OPTIONAL<DPSpecificCriteria>
-    ) {}
+        eventTypeBCSM: EventTypeBCSM,
+        monitorMode: MonitorMode,
+        legID?: OPTIONAL<LegID>,
+        dPSpecificCriteria?: OPTIONAL<DPSpecificCriteria>
+    ) {
+        this.eventTypeBCSM = eventTypeBCSM;
+        this.monitorMode = monitorMode;
+        this.legID = legID;
+        this.dPSpecificCriteria = dPSpecificCriteria;
+    }
 
     /**
      * @summary Restructures an object into a BCSMEvent

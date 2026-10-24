@@ -28,29 +28,35 @@ import * as $ from "@wildboar/asn1/functional";
  *
  */
 export class Wrap_Body {
+    /**
+     * @summary `int_cksum`.
+     * @description
+     *
+     * Integrity checksum, or trailing ciphertext of a combined
+     * encrypt+integrity mode.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly int_cksum: BIT_STRING;
+    /**
+     * @summary `data`.
+     * @description
+     *
+     * Plaintext or ciphertext (confounder + payload + padding).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly data: BIT_STRING;
+
     constructor(
-        /**
-         * @summary `int_cksum`.
-         * @description
-         *
-         * Integrity checksum, or trailing ciphertext of a combined
-         * encrypt+integrity mode.
-         *
-         * @public
-         * @readonly
-         */
-        readonly int_cksum: BIT_STRING,
-        /**
-         * @summary `data`.
-         * @description
-         *
-         * Plaintext or ciphertext (confounder + payload + padding).
-         *
-         * @public
-         * @readonly
-         */
-        readonly data: BIT_STRING
-    ) {}
+        int_cksum: BIT_STRING,
+        data: BIT_STRING
+    ) {
+        this.int_cksum = int_cksum;
+        this.data = data;
+    }
 
     /**
      * @summary Restructures an object into a Wrap_Body

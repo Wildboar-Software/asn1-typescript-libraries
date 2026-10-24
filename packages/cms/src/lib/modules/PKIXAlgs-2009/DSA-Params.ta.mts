@@ -27,26 +27,34 @@ import * as $ from "@wildboar/asn1/functional";
  *
  */
 export class DSA_Params {
+    /**
+     * @summary `p`.
+     * @public
+     * @readonly
+     */
+    public readonly p: INTEGER;
+    /**
+     * @summary `q`.
+     * @public
+     * @readonly
+     */
+    public readonly q: INTEGER;
+    /**
+     * @summary `g`.
+     * @public
+     * @readonly
+     */
+    public readonly g: INTEGER;
+
     constructor(
-        /**
-         * @summary `p`.
-         * @public
-         * @readonly
-         */
-        readonly p: INTEGER,
-        /**
-         * @summary `q`.
-         * @public
-         * @readonly
-         */
-        readonly q: INTEGER,
-        /**
-         * @summary `g`.
-         * @public
-         * @readonly
-         */
-        readonly g: INTEGER
-    ) {}
+        p: INTEGER,
+        q: INTEGER,
+        g: INTEGER
+    ) {
+        this.p = p;
+        this.q = q;
+        this.g = g;
+    }
 
     /**
      * @summary Restructures an object into a DSA_Params

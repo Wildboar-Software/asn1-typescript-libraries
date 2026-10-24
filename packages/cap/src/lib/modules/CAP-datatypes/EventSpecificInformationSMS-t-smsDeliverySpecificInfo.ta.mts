@@ -23,9 +23,13 @@ import * as $ from "@wildboar/asn1/functional";
  *
  */
 export class EventSpecificInformationSMS_t_smsDeliverySpecificInfo {
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        readonly _unrecognizedExtensionsList: _Element[] = [],
-    ) {}
+        _unrecognizedExtensionsList: _Element[] = [],
+    ) {
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     public static _from_object (_o: { [_K in keyof (EventSpecificInformationSMS_t_smsDeliverySpecificInfo)]: (EventSpecificInformationSMS_t_smsDeliverySpecificInfo)[_K] }): EventSpecificInformationSMS_t_smsDeliverySpecificInfo {
         return new EventSpecificInformationSMS_t_smsDeliverySpecificInfo(_o._unrecognizedExtensionsList);

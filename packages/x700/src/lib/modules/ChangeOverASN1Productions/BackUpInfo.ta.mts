@@ -40,52 +40,62 @@ import {
  *
  */
 export class BackUpInfo {
+    /**
+     * @summary `backedUpObjectSpecified`.
+     * @description
+     *
+     * Backed-up object named in the action, if any. ITU-T Rec.
+     * X.751 (11/95)
+     * [§8.7.2](https://www.itu.int/rec/T-REC-X.751-199511-I).
+     * @public
+     * @readonly
+     */
+    public readonly backedUpObjectSpecified?: OPTIONAL<OptionalObject>;
+    /**
+     * @summary `backUpObjectSpecified`.
+     * @description
+     *
+     * Back-up object named in the action, if any. ITU-T Rec.
+     * X.751 (11/95)
+     * [§8.7.2](https://www.itu.int/rec/T-REC-X.751-199511-I).
+     * @public
+     * @readonly
+     */
+    public readonly backUpObjectSpecified?: OPTIONAL<OptionalObject>;
+    /**
+     * @summary `backedUpObjectExisting`.
+     * @description
+     *
+     * Backed-up object actually bound in the relationship, if
+     * any. ITU-T Rec. X.751 (11/95)
+     * [§8.7.2](https://www.itu.int/rec/T-REC-X.751-199511-I).
+     * @public
+     * @readonly
+     */
+    public readonly backedUpObjectExisting?: OPTIONAL<OptionalObject>;
+    /**
+     * @summary `backUpObjectExisting`.
+     * @description
+     *
+     * Back-up object actually bound in the relationship, if any.
+     * ITU-T Rec. X.751 (11/95)
+     * [§8.7.2](https://www.itu.int/rec/T-REC-X.751-199511-I).
+     * @public
+     * @readonly
+     */
+    public readonly backUpObjectExisting?: OPTIONAL<OptionalObject>;
+
     constructor(
-        /**
-         * @summary `backedUpObjectSpecified`.
-         * @description
-         *
-         * Backed-up object named in the action, if any. ITU-T Rec.
-         * X.751 (11/95)
-         * [§8.7.2](https://www.itu.int/rec/T-REC-X.751-199511-I).
-         * @public
-         * @readonly
-         */
-        readonly backedUpObjectSpecified?: OPTIONAL<OptionalObject>,
-        /**
-         * @summary `backUpObjectSpecified`.
-         * @description
-         *
-         * Back-up object named in the action, if any. ITU-T Rec.
-         * X.751 (11/95)
-         * [§8.7.2](https://www.itu.int/rec/T-REC-X.751-199511-I).
-         * @public
-         * @readonly
-         */
-        readonly backUpObjectSpecified?: OPTIONAL<OptionalObject>,
-        /**
-         * @summary `backedUpObjectExisting`.
-         * @description
-         *
-         * Backed-up object actually bound in the relationship, if
-         * any. ITU-T Rec. X.751 (11/95)
-         * [§8.7.2](https://www.itu.int/rec/T-REC-X.751-199511-I).
-         * @public
-         * @readonly
-         */
-        readonly backedUpObjectExisting?: OPTIONAL<OptionalObject>,
-        /**
-         * @summary `backUpObjectExisting`.
-         * @description
-         *
-         * Back-up object actually bound in the relationship, if any.
-         * ITU-T Rec. X.751 (11/95)
-         * [§8.7.2](https://www.itu.int/rec/T-REC-X.751-199511-I).
-         * @public
-         * @readonly
-         */
-        readonly backUpObjectExisting?: OPTIONAL<OptionalObject>
-    ) {}
+        backedUpObjectSpecified?: OPTIONAL<OptionalObject>,
+        backUpObjectSpecified?: OPTIONAL<OptionalObject>,
+        backedUpObjectExisting?: OPTIONAL<OptionalObject>,
+        backUpObjectExisting?: OPTIONAL<OptionalObject>
+    ) {
+        this.backedUpObjectSpecified = backedUpObjectSpecified;
+        this.backUpObjectSpecified = backUpObjectSpecified;
+        this.backedUpObjectExisting = backedUpObjectExisting;
+        this.backUpObjectExisting = backUpObjectExisting;
+    }
 
     /**
      * @summary Restructures an object into a BackUpInfo

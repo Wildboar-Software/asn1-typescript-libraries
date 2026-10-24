@@ -38,36 +38,44 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class SendUserInfoArgument {
+    /**
+     * @summary `existingCall`.
+     * @description
+     *
+     * Connection identifying the call that sends user data.
+     * @public
+     * @readonly
+     */
+    public readonly existingCall: ConnectionID;
+    /**
+     * @summary `userData`.
+     * @description
+     *
+     * User-to-user information to send.
+     * @public
+     * @readonly
+     */
+    public readonly userData: UserData;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `existingCall`.
-         * @description
-         *
-         * Connection identifying the call that sends user data.
-         * @public
-         * @readonly
-         */
-        readonly existingCall: ConnectionID,
-        /**
-         * @summary `userData`.
-         * @description
-         *
-         * User-to-user information to send.
-         * @public
-         * @readonly
-         */
-        readonly userData: UserData,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        existingCall: ConnectionID,
+        userData: UserData,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.existingCall = existingCall;
+        this.userData = userData;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a SendUserInfoArgument

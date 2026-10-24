@@ -42,40 +42,48 @@ import {
  *
  */
 export class NumericMeasure_qualifiedValue {
+    /**
+     * @summary `value`.
+     * @description
+     *
+     * Observed numeric value. X.738 A.9, Table 2.
+     * @public
+     * @readonly
+     */
+    public readonly value: ObservedValue;
+    /**
+     * @summary `timeStamp`.
+     * @description
+     *
+     * Offset forward from the report’s scan initiation
+     * time. Required (with or instead of `suspectFlag`)
+     * when `timeStampReportMode` is 2. X.738 A.9.
+     * @public
+     * @readonly
+     */
+    public readonly timeStamp?: OPTIONAL<TimePeriod>;
+    /**
+     * @summary `suspectFlag`.
+     * @description
+     *
+     * True when integrity of the value is in question.
+     * Default false. At least one of `timeStamp` or this
+     * flag shall be present. X.738 §8.1.8.3, A.9,
+     * Table 2 C3.
+     * @public
+     * @readonly
+     */
+    public readonly suspectFlag?: OPTIONAL<BOOLEAN>;
+
     constructor(
-        /**
-         * @summary `value`.
-         * @description
-         *
-         * Observed numeric value. X.738 A.9, Table 2.
-         * @public
-         * @readonly
-         */
-        readonly value: ObservedValue,
-        /**
-         * @summary `timeStamp`.
-         * @description
-         *
-         * Offset forward from the report’s scan initiation
-         * time. Required (with or instead of `suspectFlag`)
-         * when `timeStampReportMode` is 2. X.738 A.9.
-         * @public
-         * @readonly
-         */
-        readonly timeStamp?: OPTIONAL<TimePeriod>,
-        /**
-         * @summary `suspectFlag`.
-         * @description
-         *
-         * True when integrity of the value is in question.
-         * Default false. At least one of `timeStamp` or this
-         * flag shall be present. X.738 §8.1.8.3, A.9,
-         * Table 2 C3.
-         * @public
-         * @readonly
-         */
-        readonly suspectFlag?: OPTIONAL<BOOLEAN>
-    ) {}
+        value: ObservedValue,
+        timeStamp?: OPTIONAL<TimePeriod>,
+        suspectFlag?: OPTIONAL<BOOLEAN>
+    ) {
+        this.value = value;
+        this.timeStamp = timeStamp;
+        this.suspectFlag = suspectFlag;
+    }
 
     /**
      * @summary Restructures an object into a NumericMeasure_qualifiedValue

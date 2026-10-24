@@ -33,26 +33,32 @@ import { AttributeId, _decode_AttributeId, _encode_AttributeId } from '@wildboar
  *
  */
 export class Parameter {
+    /**
+     * @summary `attributeType`.
+     * @description
+     *
+     * CMIP attribute id (`CMIP-ATTRIBUTE.&id`). X.737 Cor.2.
+     * @public
+     * @readonly
+     */
+    public readonly attributeType: AttributeId;
+    /**
+     * @summary `value`.
+     * @description
+     *
+     * Value syntax `CMIP-ATTRIBUTE.&Value` for that id. X.737 Cor.2.
+     * @public
+     * @readonly
+     */
+    public readonly value: _Element;
+
     constructor(
-        /**
-         * @summary `attributeType`.
-         * @description
-         *
-         * CMIP attribute id (`CMIP-ATTRIBUTE.&id`). X.737 Cor.2.
-         * @public
-         * @readonly
-         */
-        readonly attributeType: AttributeId,
-        /**
-         * @summary `value`.
-         * @description
-         *
-         * Value syntax `CMIP-ATTRIBUTE.&Value` for that id. X.737 Cor.2.
-         * @public
-         * @readonly
-         */
-        readonly value: _Element
-    ) {}
+        attributeType: AttributeId,
+        value: _Element
+    ) {
+        this.attributeType = attributeType;
+        this.value = value;
+    }
 
     /**
      * @summary Restructures an object into a Parameter

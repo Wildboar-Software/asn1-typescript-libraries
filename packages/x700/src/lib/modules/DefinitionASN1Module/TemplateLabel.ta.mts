@@ -45,27 +45,33 @@ import {
  *
  */
 export class TemplateLabel {
+    /**
+     * @summary `localName`.
+     * @description
+     *
+     * Template label within the document (GDMO label).
+     * @public
+     * @readonly
+     */
+    public readonly localName: TemplateName;
+    /**
+     * @summary `documentId`.
+     * @description
+     *
+     * Document that defines the template, if it is not the current
+     * document. Graphic name or document OID.
+     * @public
+     * @readonly
+     */
+    public readonly documentId?: OPTIONAL<TemplateLabel_documentId>;
+
     constructor(
-        /**
-         * @summary `localName`.
-         * @description
-         *
-         * Template label within the document (GDMO label).
-         * @public
-         * @readonly
-         */
-        readonly localName: TemplateName,
-        /**
-         * @summary `documentId`.
-         * @description
-         *
-         * Document that defines the template, if it is not the current
-         * document. Graphic name or document OID.
-         * @public
-         * @readonly
-         */
-        readonly documentId?: OPTIONAL<TemplateLabel_documentId>
-    ) {}
+        localName: TemplateName,
+        documentId?: OPTIONAL<TemplateLabel_documentId>
+    ) {
+        this.localName = localName;
+        this.documentId = documentId;
+    }
 
     /**
      * @summary Restructures an object into a TemplateLabel

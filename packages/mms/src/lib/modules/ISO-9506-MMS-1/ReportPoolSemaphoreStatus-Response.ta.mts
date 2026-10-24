@@ -39,31 +39,37 @@ import { ReportPoolSemaphoreStatus_Response_listOfNamedTokens_Item, _decode_Repo
  */
 export
 class ReportPoolSemaphoreStatus_Response {
+    /**
+     * @summary `listOfNamedTokens`.
+     * @description
+     *
+     * Possibly empty. Each item is free, owned (not hung), or
+     * hung. ISO 9506-1:2003 §16.7.1.2.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly listOfNamedTokens: ReportPoolSemaphoreStatus_Response_listOfNamedTokens_Item[];
+    /**
+     * @summary `moreFollows`.
+     * @description
+     *
+     * True if more named-tokens remain. False if this list holds
+     * the last item or is empty. Default true.
+     * ISO 9506-1:2003 §16.7.1.2.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly moreFollows?: OPTIONAL<BOOLEAN>;
+
     constructor (
-        /**
-         * @summary `listOfNamedTokens`.
-         * @description
-         *
-         * Possibly empty. Each item is free, owned (not hung), or
-         * hung. ISO 9506-1:2003 §16.7.1.2.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly listOfNamedTokens: ReportPoolSemaphoreStatus_Response_listOfNamedTokens_Item[],
-        /**
-         * @summary `moreFollows`.
-         * @description
-         *
-         * True if more named-tokens remain. False if this list holds
-         * the last item or is empty. Default true.
-         * ISO 9506-1:2003 §16.7.1.2.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly moreFollows?: OPTIONAL<BOOLEAN>
-    ) {}
+        listOfNamedTokens: ReportPoolSemaphoreStatus_Response_listOfNamedTokens_Item[],
+        moreFollows?: OPTIONAL<BOOLEAN>
+    ) {
+        this.listOfNamedTokens = listOfNamedTokens;
+        this.moreFollows = moreFollows;
+    }
 
     /**
      * @summary Restructures an object into a ReportPoolSemaphoreStatus_Response

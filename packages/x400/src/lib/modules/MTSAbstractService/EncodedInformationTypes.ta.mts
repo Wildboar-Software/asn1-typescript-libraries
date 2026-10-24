@@ -62,32 +62,42 @@ import {
  *
  */
 export class EncodedInformationTypes implements NonBasicParameters {
+    /**
+     * @summary `built_in_encoded_information_types`.
+     * @public
+     * @readonly
+     */
+    public readonly built_in_encoded_information_types: BuiltInEncodedInformationTypes;
+    /**
+     * @summary `g3_facsimile`.
+     * @public
+     * @readonly
+     */
+    public readonly g3_facsimile?: OPTIONAL<G3FacsimileNonBasicParameters>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `teletex`.
+     * @public
+     * @readonly
+     */
+    public readonly teletex?: OPTIONAL<TeletexNonBasicParameters>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `extended_encoded_information_types`.
+     * @public
+     * @readonly
+     */
+    public readonly extended_encoded_information_types?: OPTIONAL<ExtendedEncodedInformationTypes>;
+
     constructor(
-        /**
-         * @summary `built_in_encoded_information_types`.
-         * @public
-         * @readonly
-         */
-        readonly built_in_encoded_information_types: BuiltInEncodedInformationTypes,
-        /**
-         * @summary `g3_facsimile`.
-         * @public
-         * @readonly
-         */
-        readonly g3_facsimile?: OPTIONAL<G3FacsimileNonBasicParameters> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `teletex`.
-         * @public
-         * @readonly
-         */
-        readonly teletex?: OPTIONAL<TeletexNonBasicParameters> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `extended_encoded_information_types`.
-         * @public
-         * @readonly
-         */
-        readonly extended_encoded_information_types?: OPTIONAL<ExtendedEncodedInformationTypes>
-    ) {}
+        built_in_encoded_information_types: BuiltInEncodedInformationTypes,
+        g3_facsimile?: OPTIONAL<G3FacsimileNonBasicParameters>,
+        teletex?: OPTIONAL<TeletexNonBasicParameters>,
+        extended_encoded_information_types?: OPTIONAL<ExtendedEncodedInformationTypes>
+    ) {
+        this.built_in_encoded_information_types = built_in_encoded_information_types;
+        this.g3_facsimile = g3_facsimile;
+        this.teletex = teletex;
+        this.extended_encoded_information_types = extended_encoded_information_types;
+    }
 
     /**
      * @summary Restructures an object into a EncodedInformationTypes

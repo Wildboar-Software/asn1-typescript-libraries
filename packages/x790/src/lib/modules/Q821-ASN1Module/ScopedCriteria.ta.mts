@@ -45,26 +45,34 @@ import {
  */
 export
 class ScopedCriteria {
+    /**
+     * @summary `baseManagedObject`.
+     * @public
+     * @readonly
+     */
+    public readonly baseManagedObject: ObjectInstance;
+    /**
+     * @summary `scope`.
+     * @public
+     * @readonly
+     */
+    public readonly scope: Scope;
+    /**
+     * @summary `criteria`.
+     * @public
+     * @readonly
+     */
+    public readonly criteria?: OPTIONAL<CMISFilter>;
+
     constructor (
-        /**
-         * @summary `baseManagedObject`.
-         * @public
-         * @readonly
-         */
-        readonly baseManagedObject: ObjectInstance,
-        /**
-         * @summary `scope`.
-         * @public
-         * @readonly
-         */
-        readonly scope: Scope,
-        /**
-         * @summary `criteria`.
-         * @public
-         * @readonly
-         */
-        readonly criteria?: OPTIONAL<CMISFilter>
-    ) {}
+        baseManagedObject: ObjectInstance,
+        scope: Scope,
+        criteria?: OPTIONAL<CMISFilter>
+    ) {
+        this.baseManagedObject = baseManagedObject;
+        this.scope = scope;
+        this.criteria = criteria;
+    }
 
     /**
      * @summary Restructures an object into a ScopedCriteria

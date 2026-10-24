@@ -42,64 +42,78 @@ import {
  *
  */
 export class TokenContent {
+    /**
+     * @summary `algorithm`.
+     * @description
+     *
+     * Signature algorithm of this token.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly algorithm: AlgorithmIdentifier;
+    /**
+     * @summary `name`.
+     * @description
+     *
+     * Intended recipient.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly name: DistinguishedName;
+    /**
+     * @summary `time`.
+     * @description
+     *
+     * Expiry.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly time: Time;
+    /**
+     * @summary `random`.
+     * @description
+     *
+     * Should differ for each unexpired token.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly random: BIT_STRING;
+    /**
+     * @summary `response`.
+     * @description
+     *
+     * Challenge-response derived from `random`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly response?: OPTIONAL<BIT_STRING>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `algorithm`.
-         * @description
-         *
-         * Signature algorithm of this token.
-         *
-         * @public
-         * @readonly
-         */
-        readonly algorithm: AlgorithmIdentifier,
-        /**
-         * @summary `name`.
-         * @description
-         *
-         * Intended recipient.
-         *
-         * @public
-         * @readonly
-         */
-        readonly name: DistinguishedName,
-        /**
-         * @summary `time`.
-         * @description
-         *
-         * Expiry.
-         *
-         * @public
-         * @readonly
-         */
-        readonly time: Time,
-        /**
-         * @summary `random`.
-         * @description
-         *
-         * Should differ for each unexpired token.
-         *
-         * @public
-         * @readonly
-         */
-        readonly random: BIT_STRING,
-        /**
-         * @summary `response`.
-         * @description
-         *
-         * Challenge-response derived from `random`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly response?: OPTIONAL<BIT_STRING>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        algorithm: AlgorithmIdentifier,
+        name: DistinguishedName,
+        time: Time,
+        random: BIT_STRING,
+        response?: OPTIONAL<BIT_STRING>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.algorithm = algorithm;
+        this.name = name;
+        this.time = time;
+        this.random = random;
+        this.response = response;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a TokenContent

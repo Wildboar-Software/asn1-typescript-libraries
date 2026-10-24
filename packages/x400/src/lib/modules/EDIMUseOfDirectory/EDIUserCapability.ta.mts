@@ -38,20 +38,26 @@ import {
  *
  */
 export class EDIUserCapability {
+    /**
+     * @summary `edi_bodypart_type`.
+     * @public
+     * @readonly
+     */
+    public readonly edi_bodypart_type?: OPTIONAL<EDIBodyPartType>;
+    /**
+     * @summary `edi_processable_document`.
+     * @public
+     * @readonly
+     */
+    public readonly edi_processable_document?: OPTIONAL<EDIProcessableDocument>;
+
     constructor(
-        /**
-         * @summary `edi_bodypart_type`.
-         * @public
-         * @readonly
-         */
-        readonly edi_bodypart_type?: OPTIONAL<EDIBodyPartType>,
-        /**
-         * @summary `edi_processable_document`.
-         * @public
-         * @readonly
-         */
-        readonly edi_processable_document?: OPTIONAL<EDIProcessableDocument>
-    ) {}
+        edi_bodypart_type?: OPTIONAL<EDIBodyPartType>,
+        edi_processable_document?: OPTIONAL<EDIProcessableDocument>
+    ) {
+        this.edi_bodypart_type = edi_bodypart_type;
+        this.edi_processable_document = edi_processable_document;
+    }
 
     /**
      * @summary Restructures an object into a EDIUserCapability

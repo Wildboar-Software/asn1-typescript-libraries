@@ -27,64 +27,77 @@ import * as $ from "@wildboar/asn1/functional";
  *
  */
 export class Burst {
+    /**
+     * @summary `numberOfBursts`.
+     * @description
+     *
+     * Number of bursts that form the burst list.
+     * (3GPP TS 29.078 V19.0.0 clause 11.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly numberOfBursts?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `burstInterval`.
+     * @description
+     *
+     * Interval between successive bursts, in 100 ms units.
+     * (3GPP TS 29.078 V19.0.0 clause 5.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly burstInterval?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `numberOfTonesInBurst`.
+     * @description
+     *
+     * Number of tones played in each burst.
+     * (3GPP TS 29.078 V19.0.0 clause 11.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly numberOfTonesInBurst?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `toneDuration`.
+     * @description
+     *
+     * How long each tone is played, in 100 ms units.
+     * (3GPP TS 29.078 V19.0.0 clause 5.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly toneDuration?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `toneInterval`.
+     * @description
+     *
+     * Interval between successive tones in a burst, in 100 ms units.
+     * (3GPP TS 29.078 V19.0.0 clause 5.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly toneInterval?: OPTIONAL<INTEGER>;
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `numberOfBursts`.
-         * @description
-         *
-         * Number of bursts that form the burst list.
-         * (3GPP TS 29.078 V19.0.0 clause 11.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly numberOfBursts?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `burstInterval`.
-         * @description
-         *
-         * Interval between successive bursts, in 100 ms units.
-         * (3GPP TS 29.078 V19.0.0 clause 5.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly burstInterval?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `numberOfTonesInBurst`.
-         * @description
-         *
-         * Number of tones played in each burst.
-         * (3GPP TS 29.078 V19.0.0 clause 11.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly numberOfTonesInBurst?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `toneDuration`.
-         * @description
-         *
-         * How long each tone is played, in 100 ms units.
-         * (3GPP TS 29.078 V19.0.0 clause 5.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly toneDuration?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `toneInterval`.
-         * @description
-         *
-         * Interval between successive tones in a burst, in 100 ms units.
-         * (3GPP TS 29.078 V19.0.0 clause 5.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly toneInterval?: OPTIONAL<INTEGER>,
-        readonly _unrecognizedExtensionsList: _Element[] = [],
+        numberOfBursts?: OPTIONAL<INTEGER>,
+        burstInterval?: OPTIONAL<INTEGER>,
+        numberOfTonesInBurst?: OPTIONAL<INTEGER>,
+        toneDuration?: OPTIONAL<INTEGER>,
+        toneInterval?: OPTIONAL<INTEGER>,
+        _unrecognizedExtensionsList: _Element[] = [],
     ) {
+        this.numberOfBursts = numberOfBursts;
+        this.burstInterval = burstInterval;
+        this.numberOfTonesInBurst = numberOfTonesInBurst;
+        this.toneDuration = toneDuration;
+        this.toneInterval = toneInterval;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
         if (numberOfBursts !== undefined && (typeof numberOfBursts === "bigint" ? (numberOfBursts < 1n || numberOfBursts > 3n) : (numberOfBursts < 1 || numberOfBursts > 3))) {
             throw new ASN1OverflowError("Burst.numberOfBursts violates INTEGER constraint");
         }

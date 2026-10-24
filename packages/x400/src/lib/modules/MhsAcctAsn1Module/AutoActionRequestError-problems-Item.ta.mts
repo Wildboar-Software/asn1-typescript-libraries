@@ -34,20 +34,26 @@ import {
  *
  */
 export class AutoActionRequestError_problems_Item {
+    /**
+     * @summary `problem`.
+     * @public
+     * @readonly
+     */
+    public readonly problem: AutoActionRequestProblem;
+    /**
+     * @summary `type_`.
+     * @public
+     * @readonly
+     */
+    public readonly type_: AutoActionType;
+
     constructor(
-        /**
-         * @summary `problem`.
-         * @public
-         * @readonly
-         */
-        readonly problem: AutoActionRequestProblem,
-        /**
-         * @summary `type_`.
-         * @public
-         * @readonly
-         */
-        readonly type_: AutoActionType
-    ) {}
+        problem: AutoActionRequestProblem,
+        type_: AutoActionType
+    ) {
+        this.problem = problem;
+        this.type_ = type_;
+    }
 
     /**
      * @summary Restructures an object into a AutoActionRequestError_problems_Item

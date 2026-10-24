@@ -40,30 +40,36 @@ import { CSTAPrivateData, _decode_CSTAPrivateData, _encode_CSTAPrivateData } fro
  */
 export
 class PrivateEvent {
+    /**
+     * @summary `security`.
+     * @description
+     *
+     * Timestamp, sequence number, and security information (ECMA-269
+     * §29.3.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly security: OPTIONAL<CSTASecurityData>;
+    /**
+     * @summary `privateData`.
+     * @description
+     *
+     * Vendor-defined event information. CSTA does not specify the contents
+     * (ECMA-269 §9.4.1 / §29.3.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly privateData: CSTAPrivateData;
+
     constructor (
-        /**
-         * @summary `security`.
-         * @description
-         *
-         * Timestamp, sequence number, and security information (ECMA-269
-         * §29.3.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly security: OPTIONAL<CSTASecurityData>,
-        /**
-         * @summary `privateData`.
-         * @description
-         *
-         * Vendor-defined event information. CSTA does not specify the contents
-         * (ECMA-269 §9.4.1 / §29.3.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly privateData: CSTAPrivateData
-    ) {}
+        security: OPTIONAL<CSTASecurityData>,
+        privateData: CSTAPrivateData
+    ) {
+        this.security = security;
+        this.privateData = privateData;
+    }
 
     /**
      * @summary Restructures an object into a PrivateEvent

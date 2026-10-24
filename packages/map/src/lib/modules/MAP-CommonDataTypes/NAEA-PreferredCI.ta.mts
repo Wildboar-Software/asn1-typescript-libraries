@@ -33,35 +33,43 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
  */
 export
 class NAEA_PreferredCI {
+    /**
+     * @summary `naea_PreferredCIC`.
+     * @description
+     *
+     * Preferred NAEA carrier identification code. (3GPP TS 29.002 V19.1.0
+     * clauses 17.7.8 and 7.6.2.34).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly naea_PreferredCIC: NAEA_CIC;
+    /**
+     * @summary `extensionContainer`.
+     * @description
+     *
+     * Private extensions. (3GPP TS 29.002 V19.1.0 clause 17.7.8).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `naea_PreferredCIC`.
-         * @description
-         *
-         * Preferred NAEA carrier identification code. (3GPP TS 29.002 V19.1.0
-         * clauses 17.7.8 and 7.6.2.34).
-         *
-         * @public
-         * @readonly
-         */
-        readonly naea_PreferredCIC: NAEA_CIC,
-        /**
-         * @summary `extensionContainer`.
-         * @description
-         *
-         * Private extensions. (3GPP TS 29.002 V19.1.0 clause 17.7.8).
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        naea_PreferredCIC: NAEA_CIC,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.naea_PreferredCIC = naea_PreferredCIC;
+        this.extensionContainer = extensionContainer;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a NAEA_PreferredCI

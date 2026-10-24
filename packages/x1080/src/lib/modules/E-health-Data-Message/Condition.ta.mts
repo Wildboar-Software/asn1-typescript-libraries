@@ -32,28 +32,34 @@ import * as $ from '@wildboar/asn1/functional';
  *
  */
 export class Condition {
+    /**
+     * @summary `id`.
+     * @description
+     *
+     * `CONDITION.&id` from the extensible `Conditions` set.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly id: OBJECT_IDENTIFIER;
+    /**
+     * @summary `value`.
+     * @description
+     *
+     * Value of `CONDITION.&Type` for that id.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly value: _Element;
+
     constructor(
-        /**
-         * @summary `id`.
-         * @description
-         *
-         * `CONDITION.&id` from the extensible `Conditions` set.
-         *
-         * @public
-         * @readonly
-         */
-        readonly id: OBJECT_IDENTIFIER,
-        /**
-         * @summary `value`.
-         * @description
-         *
-         * Value of `CONDITION.&Type` for that id.
-         *
-         * @public
-         * @readonly
-         */
-        readonly value: _Element
-    ) {}
+        id: OBJECT_IDENTIFIER,
+        value: _Element
+    ) {
+        this.id = id;
+        this.value = value;
+    }
 
     /**
      * @summary Restructures an object into a Condition

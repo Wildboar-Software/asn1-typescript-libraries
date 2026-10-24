@@ -52,68 +52,82 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class SetRingerStatusArgument {
+    /**
+     * @summary `device`.
+     * @description
+     *
+     * Physical-element DeviceID; other IDs are rejected (ECMA-269 §21 FR
+     * 1).
+     * @public
+     * @readonly
+     */
+    public readonly device: DeviceID;
+    /**
+     * @summary `ringer`.
+     * @description
+     *
+     * Ringer to set.
+     * @public
+     * @readonly
+     */
+    public readonly ringer: RingerID;
+    /**
+     * @summary `ringMode`.
+     * @description
+     *
+     * `ringing` or `not ringing`. `ringPattern` is mandatory when this is
+     * ringing.
+     * @public
+     * @readonly
+     */
+    public readonly ringMode?: OPTIONAL<RingMode>;
+    /**
+     * @summary `ringPattern`.
+     * @description
+     *
+     * Device-specific pattern. Valid only when `ringMode` is ringing; does
+     * not affect later call-related ringing.
+     * @public
+     * @readonly
+     */
+    public readonly ringPattern?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `ringVolume`.
+     * @description
+     *
+     * Absolute 0–100 (0 silence, 100 max; 1–99 device-specific) or
+     * increment/decrement by a switch-specified step. Loudness is
+     * ringer-specific.
+     * @public
+     * @readonly
+     */
+    public readonly ringVolume?: OPTIONAL<Volume>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `device`.
-         * @description
-         *
-         * Physical-element DeviceID; other IDs are rejected (ECMA-269 §21 FR
-         * 1).
-         * @public
-         * @readonly
-         */
-        readonly device: DeviceID,
-        /**
-         * @summary `ringer`.
-         * @description
-         *
-         * Ringer to set.
-         * @public
-         * @readonly
-         */
-        readonly ringer: RingerID,
-        /**
-         * @summary `ringMode`.
-         * @description
-         *
-         * `ringing` or `not ringing`. `ringPattern` is mandatory when this is
-         * ringing.
-         * @public
-         * @readonly
-         */
-        readonly ringMode?: OPTIONAL<RingMode>,
-        /**
-         * @summary `ringPattern`.
-         * @description
-         *
-         * Device-specific pattern. Valid only when `ringMode` is ringing; does
-         * not affect later call-related ringing.
-         * @public
-         * @readonly
-         */
-        readonly ringPattern?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `ringVolume`.
-         * @description
-         *
-         * Absolute 0–100 (0 silence, 100 max; 1–99 device-specific) or
-         * increment/decrement by a switch-specified step. Loudness is
-         * ringer-specific.
-         * @public
-         * @readonly
-         */
-        readonly ringVolume?: OPTIONAL<Volume>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        device: DeviceID,
+        ringer: RingerID,
+        ringMode?: OPTIONAL<RingMode>,
+        ringPattern?: OPTIONAL<INTEGER>,
+        ringVolume?: OPTIONAL<Volume>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.device = device;
+        this.ringer = ringer;
+        this.ringMode = ringMode;
+        this.ringPattern = ringPattern;
+        this.ringVolume = ringVolume;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a SetRingerStatusArgument

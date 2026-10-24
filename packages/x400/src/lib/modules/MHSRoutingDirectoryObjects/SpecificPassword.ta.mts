@@ -40,26 +40,34 @@ import {
  *
  */
 export class SpecificPassword {
+    /**
+     * @summary `routing_collective_name`.
+     * @public
+     * @readonly
+     */
+    public readonly routing_collective_name: RoutingCollectiveName;
+    /**
+     * @summary `this_mta_password`.
+     * @public
+     * @readonly
+     */
+    public readonly this_mta_password: Password;
+    /**
+     * @summary `calling_mta_password`.
+     * @public
+     * @readonly
+     */
+    public readonly calling_mta_password: Password;
+
     constructor(
-        /**
-         * @summary `routing_collective_name`.
-         * @public
-         * @readonly
-         */
-        readonly routing_collective_name: RoutingCollectiveName,
-        /**
-         * @summary `this_mta_password`.
-         * @public
-         * @readonly
-         */
-        readonly this_mta_password: Password,
-        /**
-         * @summary `calling_mta_password`.
-         * @public
-         * @readonly
-         */
-        readonly calling_mta_password: Password
-    ) {}
+        routing_collective_name: RoutingCollectiveName,
+        this_mta_password: Password,
+        calling_mta_password: Password
+    ) {
+        this.routing_collective_name = routing_collective_name;
+        this.this_mta_password = this_mta_password;
+        this.calling_mta_password = calling_mta_password;
+    }
 
     /**
      * @summary Restructures an object into a SpecificPassword

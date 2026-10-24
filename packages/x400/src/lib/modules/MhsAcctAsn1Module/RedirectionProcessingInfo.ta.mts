@@ -40,26 +40,34 @@ import {
  *
  */
 export class RedirectionProcessingInfo {
+    /**
+     * @summary `redirection_reason`.
+     * @public
+     * @readonly
+     */
+    public readonly redirection_reason: RedirectionReason;
+    /**
+     * @summary `original`.
+     * @public
+     * @readonly
+     */
+    public readonly original?: OPTIONAL<ORName>;
+    /**
+     * @summary `redirected_to`.
+     * @public
+     * @readonly
+     */
+    public readonly redirected_to?: OPTIONAL<ORName>;
+
     constructor(
-        /**
-         * @summary `redirection_reason`.
-         * @public
-         * @readonly
-         */
-        readonly redirection_reason: RedirectionReason,
-        /**
-         * @summary `original`.
-         * @public
-         * @readonly
-         */
-        readonly original?: OPTIONAL<ORName>,
-        /**
-         * @summary `redirected_to`.
-         * @public
-         * @readonly
-         */
-        readonly redirected_to?: OPTIONAL<ORName>
-    ) {}
+        redirection_reason: RedirectionReason,
+        original?: OPTIONAL<ORName>,
+        redirected_to?: OPTIONAL<ORName>
+    ) {
+        this.redirection_reason = redirection_reason;
+        this.original = original;
+        this.redirected_to = redirected_to;
+    }
 
     /**
      * @summary Restructures an object into a RedirectionProcessingInfo

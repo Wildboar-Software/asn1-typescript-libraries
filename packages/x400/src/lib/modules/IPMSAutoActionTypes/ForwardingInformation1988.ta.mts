@@ -41,26 +41,34 @@ import {
  *
  */
 export class ForwardingInformation1988 {
+    /**
+     * @summary `auto_forwarding_comment`.
+     * @public
+     * @readonly
+     */
+    public readonly auto_forwarding_comment?: OPTIONAL<AutoForwardComment>;
+    /**
+     * @summary `ia5_cover_note`.
+     * @public
+     * @readonly
+     */
+    public readonly ia5_cover_note?: OPTIONAL<IA5TextBodyPart>;
+    /**
+     * @summary `this_ipm_prefix`.
+     * @public
+     * @readonly
+     */
+    public readonly this_ipm_prefix?: OPTIONAL<PrintableString>;
+
     constructor(
-        /**
-         * @summary `auto_forwarding_comment`.
-         * @public
-         * @readonly
-         */
-        readonly auto_forwarding_comment?: OPTIONAL<AutoForwardComment>,
-        /**
-         * @summary `ia5_cover_note`.
-         * @public
-         * @readonly
-         */
-        readonly ia5_cover_note?: OPTIONAL<IA5TextBodyPart>,
-        /**
-         * @summary `this_ipm_prefix`.
-         * @public
-         * @readonly
-         */
-        readonly this_ipm_prefix?: OPTIONAL<PrintableString>
-    ) {}
+        auto_forwarding_comment?: OPTIONAL<AutoForwardComment>,
+        ia5_cover_note?: OPTIONAL<IA5TextBodyPart>,
+        this_ipm_prefix?: OPTIONAL<PrintableString>
+    ) {
+        this.auto_forwarding_comment = auto_forwarding_comment;
+        this.ia5_cover_note = ia5_cover_note;
+        this.this_ipm_prefix = this_ipm_prefix;
+    }
 
     /**
      * @summary Restructures an object into a ForwardingInformation1988

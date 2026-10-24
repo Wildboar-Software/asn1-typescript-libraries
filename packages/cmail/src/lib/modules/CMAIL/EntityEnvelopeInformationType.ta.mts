@@ -49,37 +49,45 @@ import {
  *
  */
 export class EntityEnvelopeInformationType {
+  /**
+   * @summary `bodyEnvelopeInformation`.
+   * @description Hashes of the unciphered and ciphered
+   * ENVELOPE, plus Message-ID. XER name
+   * `BodyEnvelopeInformation`. ITU-T Rec. X.1341 (09/2015)
+   * Annex B.
+   * @public
+   * @readonly
+   */
+  public readonly bodyEnvelopeInformation: ContentEnvelopeInformationType;
+  /**
+   * @summary `entity`.
+   * @description Recipient `Entity` copied from the
+   * notice of deposit; `Response` emptied on `RETR`, then
+   * filled by the recipient. ITU-T Rec. X.1341 (09/2015)
+   * §9.2–§9.3.
+   * @public
+   * @readonly
+   */
+  public readonly entity: EntityType;
+  /**
+   * @summary `entityChallenge`.
+   * @description Secret question plus signature for the
+   * reception challenge. ITU-T Rec. X.1341 (09/2015)
+   * §9.2–§9.3, Figure A.6.
+   * @public
+   * @readonly
+   */
+  public readonly entityChallenge: EntityChallengeType;
+
   constructor(
-    /**
-     * @summary `bodyEnvelopeInformation`.
-     * @description Hashes of the unciphered and ciphered
-     * ENVELOPE, plus Message-ID. XER name
-     * `BodyEnvelopeInformation`. ITU-T Rec. X.1341 (09/2015)
-     * Annex B.
-     * @public
-     * @readonly
-     */
-    readonly bodyEnvelopeInformation: ContentEnvelopeInformationType,
-    /**
-     * @summary `entity`.
-     * @description Recipient `Entity` copied from the
-     * notice of deposit; `Response` emptied on `RETR`, then
-     * filled by the recipient. ITU-T Rec. X.1341 (09/2015)
-     * §9.2–§9.3.
-     * @public
-     * @readonly
-     */
-    readonly entity: EntityType,
-    /**
-     * @summary `entityChallenge`.
-     * @description Secret question plus signature for the
-     * reception challenge. ITU-T Rec. X.1341 (09/2015)
-     * §9.2–§9.3, Figure A.6.
-     * @public
-     * @readonly
-     */
-    readonly entityChallenge: EntityChallengeType
-  ) {}
+    bodyEnvelopeInformation: ContentEnvelopeInformationType,
+    entity: EntityType,
+    entityChallenge: EntityChallengeType
+  ) {
+    this.bodyEnvelopeInformation = bodyEnvelopeInformation;
+    this.entity = entity;
+    this.entityChallenge = entityChallenge;
+  }
 
   /**
    * @summary Restructures an object into a EntityEnvelopeInformationType

@@ -35,20 +35,26 @@ import {
  *
  */
 export class RegisterResult_non_empty_result {
+    /**
+     * @summary `registered_information`.
+     * @public
+     * @readonly
+     */
+    public readonly registered_information?: OPTIONAL<RegisterArgument>;
+    /**
+     * @summary `extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<ExtensionField[]>;
+
     constructor(
-        /**
-         * @summary `registered_information`.
-         * @public
-         * @readonly
-         */
-        readonly registered_information?: OPTIONAL<RegisterArgument>,
-        /**
-         * @summary `extensions`.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<ExtensionField[]>
-    ) {}
+        registered_information?: OPTIONAL<RegisterArgument>,
+        extensions?: OPTIONAL<ExtensionField[]>
+    ) {
+        this.registered_information = registered_information;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a RegisterResult_non_empty_result

@@ -76,62 +76,82 @@ import {
  *
  */
 export class OpBindingErrorParam implements CommonResultsSeq {
+    /**
+     * @summary `problem`.
+     * @public
+     * @readonly
+     */
+    public readonly problem: OpBindingErrorParam_problem;
+    /**
+     * @summary `bindingType`.
+     * @public
+     * @readonly
+     */
+    public readonly bindingType?: OPTIONAL<OBJECT_IDENTIFIER>;
+    /**
+     * @summary `agreementProposal`.
+     * @public
+     * @readonly
+     */
+    public readonly agreementProposal?: OPTIONAL<_Element>;
+    /**
+     * @summary `retryAt`.
+     * @public
+     * @readonly
+     */
+    public readonly retryAt?: OPTIONAL<Time>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+    /**
+     * @summary `securityParameters`.
+     * @public
+     * @readonly
+     */
+    public readonly securityParameters?: OPTIONAL<SecurityParameters>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `performer`.
+     * @public
+     * @readonly
+     */
+    public readonly performer?: OPTIONAL<DistinguishedName>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `aliasDereferenced`.
+     * @public
+     * @readonly
+     */
+    public readonly aliasDereferenced?: OPTIONAL<BOOLEAN>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `notification`.
+     * @public
+     * @readonly
+     */
+    public readonly notification?: OPTIONAL<Attribute[]>; /* REPLICATED_COMPONENT */
+
     constructor(
-        /**
-         * @summary `problem`.
-         * @public
-         * @readonly
-         */
-        readonly problem: OpBindingErrorParam_problem,
-        /**
-         * @summary `bindingType`.
-         * @public
-         * @readonly
-         */
-        readonly bindingType?: OPTIONAL<OBJECT_IDENTIFIER>,
-        /**
-         * @summary `agreementProposal`.
-         * @public
-         * @readonly
-         */
-        readonly agreementProposal?: OPTIONAL<_Element>,
-        /**
-         * @summary `retryAt`.
-         * @public
-         * @readonly
-         */
-        readonly retryAt?: OPTIONAL<Time>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = [],
-        /**
-         * @summary `securityParameters`.
-         * @public
-         * @readonly
-         */
-        readonly securityParameters?: OPTIONAL<SecurityParameters> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `performer`.
-         * @public
-         * @readonly
-         */
-        readonly performer?: OPTIONAL<DistinguishedName> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `aliasDereferenced`.
-         * @public
-         * @readonly
-         */
-        readonly aliasDereferenced?: OPTIONAL<BOOLEAN> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `notification`.
-         * @public
-         * @readonly
-         */
-        readonly notification?: OPTIONAL<Attribute[]> /* REPLICATED_COMPONENT */
-    ) {}
+        problem: OpBindingErrorParam_problem,
+        bindingType?: OPTIONAL<OBJECT_IDENTIFIER>,
+        agreementProposal?: OPTIONAL<_Element>,
+        retryAt?: OPTIONAL<Time>,
+        _unrecognizedExtensionsList: _Element[] = [],
+        securityParameters?: OPTIONAL<SecurityParameters>,
+        performer?: OPTIONAL<DistinguishedName>,
+        aliasDereferenced?: OPTIONAL<BOOLEAN>,
+        notification?: OPTIONAL<Attribute[]>
+    ) {
+        this.problem = problem;
+        this.bindingType = bindingType;
+        this.agreementProposal = agreementProposal;
+        this.retryAt = retryAt;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+        this.securityParameters = securityParameters;
+        this.performer = performer;
+        this.aliasDereferenced = aliasDereferenced;
+        this.notification = notification;
+    }
 
     /**
      * @summary Restructures an object into a OpBindingErrorParam

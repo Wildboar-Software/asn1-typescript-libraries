@@ -41,31 +41,37 @@ import {
  *
  */
 export class BFPRegistrationEvent_NotificationParams {
+  /**
+   * @summary `bfpSchema`.
+   * @description
+   *
+   * BFP schema as registered (or updated) in the slave
+   * registry. X.1083 §16.61.2.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly bfpSchema: BioAPI_BFP_SCHEMA;
+  /**
+   * @summary `update`.
+   * @description
+   *
+   * `TRUE` if this replaces an existing registration of the
+   * same BFP product UUID at that endpoint; `FALSE` if it is a
+   * new registration. X.1083 §16.61.3.1, §16.61.5.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly update: BOOLEAN;
+
   constructor(
-    /**
-     * @summary `bfpSchema`.
-     * @description
-     *
-     * BFP schema as registered (or updated) in the slave
-     * registry. X.1083 §16.61.2.
-     *
-     * @public
-     * @readonly
-     */
-    readonly bfpSchema: BioAPI_BFP_SCHEMA,
-    /**
-     * @summary `update`.
-     * @description
-     *
-     * `TRUE` if this replaces an existing registration of the
-     * same BFP product UUID at that endpoint; `FALSE` if it is a
-     * new registration. X.1083 §16.61.3.1, §16.61.5.
-     *
-     * @public
-     * @readonly
-     */
-    readonly update: BOOLEAN
-  ) {}
+    bfpSchema: BioAPI_BFP_SCHEMA,
+    update: BOOLEAN
+  ) {
+    this.bfpSchema = bfpSchema;
+    this.update = update;
+  }
 
   /**
    * @summary Restructures an object into a BFPRegistrationEvent_NotificationParams

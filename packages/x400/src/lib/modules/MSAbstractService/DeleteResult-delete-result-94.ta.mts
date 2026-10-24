@@ -35,20 +35,26 @@ import {
  *
  */
 export class DeleteResult_delete_result_94 {
+    /**
+     * @summary `entries_deleted`.
+     * @public
+     * @readonly
+     */
+    public readonly entries_deleted?: OPTIONAL<SequenceNumber[]>;
+    /**
+     * @summary `delete_result_extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly delete_result_extensions?: OPTIONAL<MSExtensions>;
+
     constructor(
-        /**
-         * @summary `entries_deleted`.
-         * @public
-         * @readonly
-         */
-        readonly entries_deleted?: OPTIONAL<SequenceNumber[]>,
-        /**
-         * @summary `delete_result_extensions`.
-         * @public
-         * @readonly
-         */
-        readonly delete_result_extensions?: OPTIONAL<MSExtensions>
-    ) {}
+        entries_deleted?: OPTIONAL<SequenceNumber[]>,
+        delete_result_extensions?: OPTIONAL<MSExtensions>
+    ) {
+        this.entries_deleted = entries_deleted;
+        this.delete_result_extensions = delete_result_extensions;
+    }
 
     /**
      * @summary Restructures an object into a DeleteResult_delete_result_94

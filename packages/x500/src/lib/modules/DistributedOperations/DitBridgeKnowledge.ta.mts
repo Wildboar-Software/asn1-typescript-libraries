@@ -33,35 +33,43 @@ import {
  *
  */
 export class DitBridgeKnowledge {
+    /**
+     * @summary `domainLocalID`.
+     * @description
+     *
+     * Human-readable id of that DIT. Not a DN.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly domainLocalID: OPTIONAL<UnboundedDirectoryString>;
+    /**
+     * @summary `accessPoints`.
+     * @description
+     *
+     * MasterAndShadowAccessPoints of the other DIT. Required; SIZE
+     * (1..MAX).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly accessPoints: MasterAndShadowAccessPoints;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `domainLocalID`.
-         * @description
-         *
-         * Human-readable id of that DIT. Not a DN.
-         *
-         * @public
-         * @readonly
-         */
-        readonly domainLocalID: OPTIONAL<UnboundedDirectoryString>,
-        /**
-         * @summary `accessPoints`.
-         * @description
-         *
-         * MasterAndShadowAccessPoints of the other DIT. Required; SIZE
-         * (1..MAX).
-         *
-         * @public
-         * @readonly
-         */
-        readonly accessPoints: MasterAndShadowAccessPoints,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        domainLocalID: OPTIONAL<UnboundedDirectoryString>,
+        accessPoints: MasterAndShadowAccessPoints,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.domainLocalID = domainLocalID;
+        this.accessPoints = accessPoints;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a DitBridgeKnowledge

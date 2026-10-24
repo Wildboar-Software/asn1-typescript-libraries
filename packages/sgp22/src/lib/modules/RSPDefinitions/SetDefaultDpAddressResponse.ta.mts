@@ -26,18 +26,22 @@ import { _decode_SetDefaultDpAddressResponse_setDefaultDpAddressResult, _encode_
  */
 export
 class SetDefaultDpAddressResponse {
+    /**
+     * @summary `setDefaultDpAddressResult`.
+     * @description
+     * 
+     * `ok` or `undefinedError`. SGP.22 v3.1 §5.7.4.
+     * 
+     * @public
+     * @readonly
+     */
+    public readonly setDefaultDpAddressResult: SetDefaultDpAddressResponse_setDefaultDpAddressResult;
+
     constructor (
-        /**
-         * @summary `setDefaultDpAddressResult`.
-         * @description
-         * 
-         * `ok` or `undefinedError`. SGP.22 v3.1 §5.7.4.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly setDefaultDpAddressResult: SetDefaultDpAddressResponse_setDefaultDpAddressResult
-    ) {}
+        setDefaultDpAddressResult: SetDefaultDpAddressResponse_setDefaultDpAddressResult
+    ) {
+        this.setDefaultDpAddressResult = setDefaultDpAddressResult;
+    }
 
     /**
      * @summary Restructures an object into a SetDefaultDpAddressResponse

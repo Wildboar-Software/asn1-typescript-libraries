@@ -44,46 +44,56 @@ import {
  *
  */
 export class FamilyEntry {
+    /**
+     * @summary `rdn`.
+     * @description
+     *
+     * RDN of this family member relative to its immediate superior.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly rdn: RelativeDistinguishedName;
+    /**
+     * @summary `information`.
+     * @description
+     *
+     * SEQUENCE OF (order from the member). Empty if no attrs selected.
+     * `infoTypes` applies here, not to the carrier.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly information: FamilyEntry_information_Item[];
+    /**
+     * @summary `family_info`.
+     * @description
+     *
+     * Nested families SEQUENCE SIZE (1..MAX). Split by structural OC of
+     * immediately subordinate members.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly family_info?: OPTIONAL<FamilyEntries[]>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `rdn`.
-         * @description
-         *
-         * RDN of this family member relative to its immediate superior.
-         *
-         * @public
-         * @readonly
-         */
-        readonly rdn: RelativeDistinguishedName,
-        /**
-         * @summary `information`.
-         * @description
-         *
-         * SEQUENCE OF (order from the member). Empty if no attrs selected.
-         * `infoTypes` applies here, not to the carrier.
-         *
-         * @public
-         * @readonly
-         */
-        readonly information: FamilyEntry_information_Item[],
-        /**
-         * @summary `family_info`.
-         * @description
-         *
-         * Nested families SEQUENCE SIZE (1..MAX). Split by structural OC of
-         * immediately subordinate members.
-         *
-         * @public
-         * @readonly
-         */
-        readonly family_info?: OPTIONAL<FamilyEntries[]>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        rdn: RelativeDistinguishedName,
+        information: FamilyEntry_information_Item[],
+        family_info?: OPTIONAL<FamilyEntries[]>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.rdn = rdn;
+        this.information = information;
+        this.family_info = family_info;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a FamilyEntry

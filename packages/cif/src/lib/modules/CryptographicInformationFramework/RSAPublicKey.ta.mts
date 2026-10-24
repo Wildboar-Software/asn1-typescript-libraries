@@ -33,24 +33,30 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class RSAPublicKey {
+    /**
+     * @summary `modulus`.
+     * @description
+     * RSA modulus n. ISO/IEC 7816-15:2016 §8.5.2.
+     * @public
+     * @readonly
+     */
+    public readonly modulus: INTEGER;
+    /**
+     * @summary `publicExponent`.
+     * @description
+     * RSA public exponent e. ISO/IEC 7816-15:2016 §8.5.2.
+     * @public
+     * @readonly
+     */
+    public readonly publicExponent: INTEGER;
+
     constructor (
-        /**
-         * @summary `modulus`.
-         * @description
-         * RSA modulus n. ISO/IEC 7816-15:2016 §8.5.2.
-         * @public
-         * @readonly
-         */
-        readonly modulus: INTEGER,
-        /**
-         * @summary `publicExponent`.
-         * @description
-         * RSA public exponent e. ISO/IEC 7816-15:2016 §8.5.2.
-         * @public
-         * @readonly
-         */
-        readonly publicExponent: INTEGER
-    ) {}
+        modulus: INTEGER,
+        publicExponent: INTEGER
+    ) {
+        this.modulus = modulus;
+        this.publicExponent = publicExponent;
+    }
 
     /**
      * @summary Restructures an object into a RSAPublicKey

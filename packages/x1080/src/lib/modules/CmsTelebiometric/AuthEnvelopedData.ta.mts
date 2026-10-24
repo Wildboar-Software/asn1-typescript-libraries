@@ -63,79 +63,93 @@ import {
  *
  */
 export class AuthEnvelopedData {
+    /**
+     * @summary `version`.
+     * @description
+     *
+     * Always `v0` (RFC 5083).
+     * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.4.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly version: CMSVersion;
+    /**
+     * @summary `recipientInfos`.
+     * @description
+     *
+     * Exactly one recipient. `kari` or `kekri` (`kekri` uses a
+     * CEK retained from a prior `envelopedData` exchange).
+     * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.4.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly recipientInfos: RecipientInfos;
+    /**
+     * @summary `authEncryptedContentInfo`.
+     * @description
+     *
+     * Encrypted content (`EncryptedContentInfo`, B.3.5).
+     * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.4.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly authEncryptedContentInfo: EncryptedContentInfo;
+    /**
+     * @summary `authAttrs`.
+     * @description
+     *
+     * Attributes under authentication, when present. Set is
+     * `AuthAttributes` (extensible `{...}`).
+     * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.4.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly authAttrs: OPTIONAL<Attributes>;
+    /**
+     * @summary `mac`.
+     * @description
+     *
+     * Message authentication code value.
+     * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.4.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mac: MessageAuthenticationCode;
+    /**
+     * @summary `unauthAttrs`.
+     * @description
+     *
+     * Same attribute types as `unprotectedAttrs`
+     * (`aa-CEKReference`, `aa-CEKMaxDecrypts`,
+     * `aa-KEKDerivationAlg`). May be absent if this is the last
+     * message of the session in this direction.
+     * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.4.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly unauthAttrs?: OPTIONAL<Attributes>;
+
     constructor(
-        /**
-         * @summary `version`.
-         * @description
-         *
-         * Always `v0` (RFC 5083).
-         * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.4.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly version: CMSVersion,
-        /**
-         * @summary `recipientInfos`.
-         * @description
-         *
-         * Exactly one recipient. `kari` or `kekri` (`kekri` uses a
-         * CEK retained from a prior `envelopedData` exchange).
-         * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.4.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly recipientInfos: RecipientInfos,
-        /**
-         * @summary `authEncryptedContentInfo`.
-         * @description
-         *
-         * Encrypted content (`EncryptedContentInfo`, B.3.5).
-         * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.4.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly authEncryptedContentInfo: EncryptedContentInfo,
-        /**
-         * @summary `authAttrs`.
-         * @description
-         *
-         * Attributes under authentication, when present. Set is
-         * `AuthAttributes` (extensible `{...}`).
-         * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.4.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly authAttrs: OPTIONAL<Attributes>,
-        /**
-         * @summary `mac`.
-         * @description
-         *
-         * Message authentication code value.
-         * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.4.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly mac: MessageAuthenticationCode,
-        /**
-         * @summary `unauthAttrs`.
-         * @description
-         *
-         * Same attribute types as `unprotectedAttrs`
-         * (`aa-CEKReference`, `aa-CEKMaxDecrypts`,
-         * `aa-KEKDerivationAlg`). May be absent if this is the last
-         * message of the session in this direction.
-         * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.4.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly unauthAttrs?: OPTIONAL<Attributes>
-    ) {}
+        version: CMSVersion,
+        recipientInfos: RecipientInfos,
+        authEncryptedContentInfo: EncryptedContentInfo,
+        authAttrs: OPTIONAL<Attributes>,
+        mac: MessageAuthenticationCode,
+        unauthAttrs?: OPTIONAL<Attributes>
+    ) {
+        this.version = version;
+        this.recipientInfos = recipientInfos;
+        this.authEncryptedContentInfo = authEncryptedContentInfo;
+        this.authAttrs = authAttrs;
+        this.mac = mac;
+        this.unauthAttrs = unauthAttrs;
+    }
 
     /**
      * @summary Restructures an object into a AuthEnvelopedData

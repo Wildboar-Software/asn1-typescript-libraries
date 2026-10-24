@@ -50,82 +50,98 @@ import { CallLinkageData, _decode_CallLinkageData, _encode_CallLinkageData } fro
  */
 export
 class SnapshotDeviceResponseInfo {
+    /**
+     * @summary `connectionIdentifier`.
+     * @description
+     *
+     * Connection of this call at the device. ECMA-269 §16.1.4.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly connectionIdentifier: ConnectionID;
+    /**
+     * @summary `endpointDevice`.
+     * @description
+     *
+     * DeviceID of the endpoint associated with the connection. ECMA-269
+     * §16.1.4.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly endpointDevice: OPTIONAL<SubjectDeviceID>;
+    /**
+     * @summary `localCallState`.
+     * @description
+     *
+     * Compound, simple, or unknown call state. ECMA-269 §6.1.4, §16.1.4.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly localCallState: CallState;
+    /**
+     * @summary `servicesPermitted`.
+     * @description
+     *
+     * Mandatory if Dynamic Feature Availability is supported. ECMA-269
+     * §16.1.4, §12.2.25.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly servicesPermitted?: OPTIONAL<ServicesPermitted>;
+    /**
+     * @summary `mediaServiceInfoList`.
+     * @description
+     *
+     * Media services bound to this connection. ECMA-269 §16.1.4.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mediaServiceInfoList?: OPTIONAL<DeviceMediaInfoList>;
+    /**
+     * @summary `mediaCallCharacteristics`.
+     * @description
+     *
+     * Media class of the call (not connection flow). ECMA-269 §16.1.4,
+     * §12.2.20.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mediaCallCharacteristics?: OPTIONAL<MediaCallCharacteristics>;
+    /**
+     * @summary `callLinkageData`.
+     * @description
+     *
+     * Global call / thread linkage for this call. ECMA-269 §16.1.4,
+     * §12.2.5.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly callLinkageData?: OPTIONAL<CallLinkageData>;
+
     constructor (
-        /**
-         * @summary `connectionIdentifier`.
-         * @description
-         *
-         * Connection of this call at the device. ECMA-269 §16.1.4.
-         *
-         * @public
-         * @readonly
-         */
-        readonly connectionIdentifier: ConnectionID,
-        /**
-         * @summary `endpointDevice`.
-         * @description
-         *
-         * DeviceID of the endpoint associated with the connection. ECMA-269
-         * §16.1.4.
-         *
-         * @public
-         * @readonly
-         */
-        readonly endpointDevice: OPTIONAL<SubjectDeviceID>,
-        /**
-         * @summary `localCallState`.
-         * @description
-         *
-         * Compound, simple, or unknown call state. ECMA-269 §6.1.4, §16.1.4.
-         *
-         * @public
-         * @readonly
-         */
-        readonly localCallState: CallState,
-        /**
-         * @summary `servicesPermitted`.
-         * @description
-         *
-         * Mandatory if Dynamic Feature Availability is supported. ECMA-269
-         * §16.1.4, §12.2.25.
-         *
-         * @public
-         * @readonly
-         */
-        readonly servicesPermitted?: OPTIONAL<ServicesPermitted>,
-        /**
-         * @summary `mediaServiceInfoList`.
-         * @description
-         *
-         * Media services bound to this connection. ECMA-269 §16.1.4.
-         *
-         * @public
-         * @readonly
-         */
-        readonly mediaServiceInfoList?: OPTIONAL<DeviceMediaInfoList>,
-        /**
-         * @summary `mediaCallCharacteristics`.
-         * @description
-         *
-         * Media class of the call (not connection flow). ECMA-269 §16.1.4,
-         * §12.2.20.
-         *
-         * @public
-         * @readonly
-         */
-        readonly mediaCallCharacteristics?: OPTIONAL<MediaCallCharacteristics>,
-        /**
-         * @summary `callLinkageData`.
-         * @description
-         *
-         * Global call / thread linkage for this call. ECMA-269 §16.1.4,
-         * §12.2.5.
-         *
-         * @public
-         * @readonly
-         */
-        readonly callLinkageData?: OPTIONAL<CallLinkageData>
-    ) {}
+        connectionIdentifier: ConnectionID,
+        endpointDevice: OPTIONAL<SubjectDeviceID>,
+        localCallState: CallState,
+        servicesPermitted?: OPTIONAL<ServicesPermitted>,
+        mediaServiceInfoList?: OPTIONAL<DeviceMediaInfoList>,
+        mediaCallCharacteristics?: OPTIONAL<MediaCallCharacteristics>,
+        callLinkageData?: OPTIONAL<CallLinkageData>
+    ) {
+        this.connectionIdentifier = connectionIdentifier;
+        this.endpointDevice = endpointDevice;
+        this.localCallState = localCallState;
+        this.servicesPermitted = servicesPermitted;
+        this.mediaServiceInfoList = mediaServiceInfoList;
+        this.mediaCallCharacteristics = mediaCallCharacteristics;
+        this.callLinkageData = callLinkageData;
+    }
 
     /**
      * @summary Restructures an object into a SnapshotDeviceResponseInfo

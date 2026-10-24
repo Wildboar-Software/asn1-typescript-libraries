@@ -24,36 +24,44 @@ import * as $ from "@wildboar/asn1/functional";
  *
  */
 export class AUTHEN_ENCRYPT<ToBeAuth, ToBeEnciphered> {
+    /**
+     * @summary `aad`.
+     * @description
+     *
+     * Prose: mandatory (unlike RFC 5084). 2020 ASN.1/TS: OPTIONAL tagged
+     * [0]. Wrapper data-transfer uses AAD.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly aad: OPTIONAL<ToBeAuth>;
+    /**
+     * @summary `encr`.
+     * @description
+     *
+     * Ciphertext of encoded `ToBeEnciphered` (not a nested ENCIPHERED
+     * unless the parameter says so). Required; tagged [1].
+     *
+     * @public
+     * @readonly
+     */
+    public readonly encr: ToBeEnciphered;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `aad`.
-         * @description
-         *
-         * Prose: mandatory (unlike RFC 5084). 2020 ASN.1/TS: OPTIONAL tagged
-         * [0]. Wrapper data-transfer uses AAD.
-         *
-         * @public
-         * @readonly
-         */
-        readonly aad: OPTIONAL<ToBeAuth>,
-        /**
-         * @summary `encr`.
-         * @description
-         *
-         * Ciphertext of encoded `ToBeEnciphered` (not a nested ENCIPHERED
-         * unless the parameter says so). Required; tagged [1].
-         *
-         * @public
-         * @readonly
-         */
-        readonly encr: ToBeEnciphered,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        aad: OPTIONAL<ToBeAuth>,
+        encr: ToBeEnciphered,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.aad = aad;
+        this.encr = encr;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a AUTHEN_ENCRYPT

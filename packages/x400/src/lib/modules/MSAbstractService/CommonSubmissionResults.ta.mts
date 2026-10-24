@@ -44,26 +44,34 @@ import {
  *
  */
 export class CommonSubmissionResults {
+    /**
+     * @summary `created_entry`.
+     * @public
+     * @readonly
+     */
+    public readonly created_entry?: OPTIONAL<SequenceNumber>;
+    /**
+     * @summary `auto_action_error_indication`.
+     * @public
+     * @readonly
+     */
+    public readonly auto_action_error_indication?: OPTIONAL<AutoActionErrorIndication>;
+    /**
+     * @summary `ms_submission_result_extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly ms_submission_result_extensions?: OPTIONAL<MSExtensions>;
+
     constructor(
-        /**
-         * @summary `created_entry`.
-         * @public
-         * @readonly
-         */
-        readonly created_entry?: OPTIONAL<SequenceNumber>,
-        /**
-         * @summary `auto_action_error_indication`.
-         * @public
-         * @readonly
-         */
-        readonly auto_action_error_indication?: OPTIONAL<AutoActionErrorIndication>,
-        /**
-         * @summary `ms_submission_result_extensions`.
-         * @public
-         * @readonly
-         */
-        readonly ms_submission_result_extensions?: OPTIONAL<MSExtensions>
-    ) {}
+        created_entry?: OPTIONAL<SequenceNumber>,
+        auto_action_error_indication?: OPTIONAL<AutoActionErrorIndication>,
+        ms_submission_result_extensions?: OPTIONAL<MSExtensions>
+    ) {
+        this.created_entry = created_entry;
+        this.auto_action_error_indication = auto_action_error_indication;
+        this.ms_submission_result_extensions = ms_submission_result_extensions;
+    }
 
     /**
      * @summary Restructures an object into a CommonSubmissionResults

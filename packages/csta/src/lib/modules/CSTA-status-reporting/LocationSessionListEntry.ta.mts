@@ -34,29 +34,35 @@ import { DeviceID, _decode_DeviceID, _encode_DeviceID } from "../CSTA-device-ide
  */
 export
 class LocationSessionListEntry {
+    /**
+     * @summary `locCrossRefID`.
+     * @description
+     *
+     * Cross-reference assigned when the session was created. ECMA-269
+     * §28.1.12.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly locCrossRefID: LocCrossRefID;
+    /**
+     * @summary `locDevice`.
+     * @description
+     *
+     * DeviceID of the tracked resource. ECMA-269 §28.1.12.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly locDevice: DeviceID;
+
     constructor (
-        /**
-         * @summary `locCrossRefID`.
-         * @description
-         *
-         * Cross-reference assigned when the session was created. ECMA-269
-         * §28.1.12.
-         *
-         * @public
-         * @readonly
-         */
-        readonly locCrossRefID: LocCrossRefID,
-        /**
-         * @summary `locDevice`.
-         * @description
-         *
-         * DeviceID of the tracked resource. ECMA-269 §28.1.12.
-         *
-         * @public
-         * @readonly
-         */
-        readonly locDevice: DeviceID
-    ) {}
+        locCrossRefID: LocCrossRefID,
+        locDevice: DeviceID
+    ) {
+        this.locCrossRefID = locCrossRefID;
+        this.locDevice = locDevice;
+    }
 
     /**
      * @summary Restructures an object into a LocationSessionListEntry

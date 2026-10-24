@@ -65,116 +65,154 @@ import { RedirectionInformation, _decode_RedirectionInformation, _encode_Redirec
  */
 export
 class InitialDPArg {
+    /**
+     * @summary `serviceKey`.
+     * @public
+     * @readonly
+     */
+    public readonly serviceKey: ServiceKey;
+    /**
+     * @summary `calledPartyNumber`.
+     * @public
+     * @readonly
+     */
+    public readonly calledPartyNumber?: OPTIONAL<CalledPartyNumber>;
+    /**
+     * @summary `callingPartyNumber`.
+     * @public
+     * @readonly
+     */
+    public readonly callingPartyNumber?: OPTIONAL<CallingPartyNumber>;
+    /**
+     * @summary `callingPartysCategory`.
+     * @public
+     * @readonly
+     */
+    public readonly callingPartysCategory?: OPTIONAL<CallingPartysCategory>;
+    /**
+     * @summary `cGEncountered`.
+     * @public
+     * @readonly
+     */
+    public readonly cGEncountered?: OPTIONAL<CGEncountered>;
+    /**
+     * @summary `iPSSPCapabilities`.
+     * @public
+     * @readonly
+     */
+    public readonly iPSSPCapabilities?: OPTIONAL<IPSSPCapabilities>;
+    /**
+     * @summary `iPAvailable`.
+     * @public
+     * @readonly
+     */
+    public readonly iPAvailable?: OPTIONAL<IPAvailable>;
+    /**
+     * @summary `locationNumber`.
+     * @public
+     * @readonly
+     */
+    public readonly locationNumber?: OPTIONAL<LocationNumber>;
+    /**
+     * @summary `originalCalledPartyID`.
+     * @public
+     * @readonly
+     */
+    public readonly originalCalledPartyID?: OPTIONAL<OriginalCalledPartyID>;
+    /**
+     * @summary `extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<ExtensionField[]>;
+    /**
+     * @summary `highLayerCompatibility`.
+     * @public
+     * @readonly
+     */
+    public readonly highLayerCompatibility?: OPTIONAL<HighLayerCompatibility>;
+    /**
+     * @summary `serviceInteractionIndicators`.
+     * @public
+     * @readonly
+     */
+    public readonly serviceInteractionIndicators?: OPTIONAL<ServiceInteractionIndicators>;
+    /**
+     * @summary `additionalCallingPartyNumber`.
+     * @public
+     * @readonly
+     */
+    public readonly additionalCallingPartyNumber?: OPTIONAL<AdditionalCallingPartyNumber>;
+    /**
+     * @summary `forwardCallIndicators`.
+     * @public
+     * @readonly
+     */
+    public readonly forwardCallIndicators?: OPTIONAL<ForwardCallIndicators>;
+    /**
+     * @summary `bearerCapability`.
+     * @public
+     * @readonly
+     */
+    public readonly bearerCapability?: OPTIONAL<BearerCapability>;
+    /**
+     * @summary `eventTypeBCSM`.
+     * @public
+     * @readonly
+     */
+    public readonly eventTypeBCSM?: OPTIONAL<EventTypeBCSM>;
+    /**
+     * @summary `redirectingPartyID`.
+     * @public
+     * @readonly
+     */
+    public readonly redirectingPartyID?: OPTIONAL<RedirectingPartyID>;
+    /**
+     * @summary `redirectionInformation`.
+     * @public
+     * @readonly
+     */
+    public readonly redirectionInformation?: OPTIONAL<RedirectionInformation>;
+
     constructor (
-        /**
-         * @summary `serviceKey`.
-         * @public
-         * @readonly
-         */
-        readonly serviceKey: ServiceKey,
-        /**
-         * @summary `calledPartyNumber`.
-         * @public
-         * @readonly
-         */
-        readonly calledPartyNumber?: OPTIONAL<CalledPartyNumber>,
-        /**
-         * @summary `callingPartyNumber`.
-         * @public
-         * @readonly
-         */
-        readonly callingPartyNumber?: OPTIONAL<CallingPartyNumber>,
-        /**
-         * @summary `callingPartysCategory`.
-         * @public
-         * @readonly
-         */
-        readonly callingPartysCategory?: OPTIONAL<CallingPartysCategory>,
-        /**
-         * @summary `cGEncountered`.
-         * @public
-         * @readonly
-         */
-        readonly cGEncountered?: OPTIONAL<CGEncountered>,
-        /**
-         * @summary `iPSSPCapabilities`.
-         * @public
-         * @readonly
-         */
-        readonly iPSSPCapabilities?: OPTIONAL<IPSSPCapabilities>,
-        /**
-         * @summary `iPAvailable`.
-         * @public
-         * @readonly
-         */
-        readonly iPAvailable?: OPTIONAL<IPAvailable>,
-        /**
-         * @summary `locationNumber`.
-         * @public
-         * @readonly
-         */
-        readonly locationNumber?: OPTIONAL<LocationNumber>,
-        /**
-         * @summary `originalCalledPartyID`.
-         * @public
-         * @readonly
-         */
-        readonly originalCalledPartyID?: OPTIONAL<OriginalCalledPartyID>,
-        /**
-         * @summary `extensions`.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<ExtensionField[]>,
-        /**
-         * @summary `highLayerCompatibility`.
-         * @public
-         * @readonly
-         */
-        readonly highLayerCompatibility?: OPTIONAL<HighLayerCompatibility>,
-        /**
-         * @summary `serviceInteractionIndicators`.
-         * @public
-         * @readonly
-         */
-        readonly serviceInteractionIndicators?: OPTIONAL<ServiceInteractionIndicators>,
-        /**
-         * @summary `additionalCallingPartyNumber`.
-         * @public
-         * @readonly
-         */
-        readonly additionalCallingPartyNumber?: OPTIONAL<AdditionalCallingPartyNumber>,
-        /**
-         * @summary `forwardCallIndicators`.
-         * @public
-         * @readonly
-         */
-        readonly forwardCallIndicators?: OPTIONAL<ForwardCallIndicators>,
-        /**
-         * @summary `bearerCapability`.
-         * @public
-         * @readonly
-         */
-        readonly bearerCapability?: OPTIONAL<BearerCapability>,
-        /**
-         * @summary `eventTypeBCSM`.
-         * @public
-         * @readonly
-         */
-        readonly eventTypeBCSM?: OPTIONAL<EventTypeBCSM>,
-        /**
-         * @summary `redirectingPartyID`.
-         * @public
-         * @readonly
-         */
-        readonly redirectingPartyID?: OPTIONAL<RedirectingPartyID>,
-        /**
-         * @summary `redirectionInformation`.
-         * @public
-         * @readonly
-         */
-        readonly redirectionInformation?: OPTIONAL<RedirectionInformation>
-    ) {}
+        serviceKey: ServiceKey,
+        calledPartyNumber?: OPTIONAL<CalledPartyNumber>,
+        callingPartyNumber?: OPTIONAL<CallingPartyNumber>,
+        callingPartysCategory?: OPTIONAL<CallingPartysCategory>,
+        cGEncountered?: OPTIONAL<CGEncountered>,
+        iPSSPCapabilities?: OPTIONAL<IPSSPCapabilities>,
+        iPAvailable?: OPTIONAL<IPAvailable>,
+        locationNumber?: OPTIONAL<LocationNumber>,
+        originalCalledPartyID?: OPTIONAL<OriginalCalledPartyID>,
+        extensions?: OPTIONAL<ExtensionField[]>,
+        highLayerCompatibility?: OPTIONAL<HighLayerCompatibility>,
+        serviceInteractionIndicators?: OPTIONAL<ServiceInteractionIndicators>,
+        additionalCallingPartyNumber?: OPTIONAL<AdditionalCallingPartyNumber>,
+        forwardCallIndicators?: OPTIONAL<ForwardCallIndicators>,
+        bearerCapability?: OPTIONAL<BearerCapability>,
+        eventTypeBCSM?: OPTIONAL<EventTypeBCSM>,
+        redirectingPartyID?: OPTIONAL<RedirectingPartyID>,
+        redirectionInformation?: OPTIONAL<RedirectionInformation>
+    ) {
+        this.serviceKey = serviceKey;
+        this.calledPartyNumber = calledPartyNumber;
+        this.callingPartyNumber = callingPartyNumber;
+        this.callingPartysCategory = callingPartysCategory;
+        this.cGEncountered = cGEncountered;
+        this.iPSSPCapabilities = iPSSPCapabilities;
+        this.iPAvailable = iPAvailable;
+        this.locationNumber = locationNumber;
+        this.originalCalledPartyID = originalCalledPartyID;
+        this.extensions = extensions;
+        this.highLayerCompatibility = highLayerCompatibility;
+        this.serviceInteractionIndicators = serviceInteractionIndicators;
+        this.additionalCallingPartyNumber = additionalCallingPartyNumber;
+        this.forwardCallIndicators = forwardCallIndicators;
+        this.bearerCapability = bearerCapability;
+        this.eventTypeBCSM = eventTypeBCSM;
+        this.redirectingPartyID = redirectingPartyID;
+        this.redirectionInformation = redirectionInformation;
+    }
 
     /**
      * @summary Restructures an object into a InitialDPArg

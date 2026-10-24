@@ -42,45 +42,55 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class AutoAnswerEvent {
+    /**
+     * @summary `invokingDevice`.
+     * @description
+     *
+     * Device whose auto-answer status changed.
+     * @public
+     * @readonly
+     */
+    public readonly invokingDevice: SubjectDeviceID;
+    /**
+     * @summary `autoAnswerOn`.
+     * @description
+     *
+     * FALSE = disabled; TRUE = enabled.
+     * @public
+     * @readonly
+     */
+    public readonly autoAnswerOn: BOOLEAN;
+    /**
+     * @summary `numberOfRings`.
+     * @description
+     *
+     * Rings before a call is auto-answered.
+     * @public
+     * @readonly
+     */
+    public readonly numberOfRings?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `invokingDevice`.
-         * @description
-         *
-         * Device whose auto-answer status changed.
-         * @public
-         * @readonly
-         */
-        readonly invokingDevice: SubjectDeviceID,
-        /**
-         * @summary `autoAnswerOn`.
-         * @description
-         *
-         * FALSE = disabled; TRUE = enabled.
-         * @public
-         * @readonly
-         */
-        readonly autoAnswerOn: BOOLEAN,
-        /**
-         * @summary `numberOfRings`.
-         * @description
-         *
-         * Rings before a call is auto-answered.
-         * @public
-         * @readonly
-         */
-        readonly numberOfRings?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        invokingDevice: SubjectDeviceID,
+        autoAnswerOn: BOOLEAN,
+        numberOfRings?: OPTIONAL<INTEGER>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.invokingDevice = invokingDevice;
+        this.autoAnswerOn = autoAnswerOn;
+        this.numberOfRings = numberOfRings;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a AutoAnswerEvent

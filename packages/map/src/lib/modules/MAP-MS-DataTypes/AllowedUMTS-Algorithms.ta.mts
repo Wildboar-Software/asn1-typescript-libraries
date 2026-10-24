@@ -32,42 +32,52 @@ import { PermittedIntegrityProtectionAlgorithms, _decode_PermittedIntegrityProte
  */
 export
 class AllowedUMTS_Algorithms {
+    /**
+     * @summary `integrityProtectionAlgorithms`.
+     * @description
+     *
+     * Permitted integrity protection algorithms as in 3GPP TS 25.413 (3GPP
+     * TS 29.002 V19.1.0 clauses 7.6.6.14 and 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly integrityProtectionAlgorithms?: OPTIONAL<PermittedIntegrityProtectionAlgorithms>;
+    /**
+     * @summary `encryptionAlgorithms`.
+     * @description
+     *
+     * Permitted encryption algorithms as in 3GPP TS 25.413 (3GPP TS 29.002
+     * V19.1.0 clauses 7.6.6.14 and 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly encryptionAlgorithms?: OPTIONAL<PermittedEncryptionAlgorithms>;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `integrityProtectionAlgorithms`.
-         * @description
-         *
-         * Permitted integrity protection algorithms as in 3GPP TS 25.413 (3GPP
-         * TS 29.002 V19.1.0 clauses 7.6.6.14 and 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly integrityProtectionAlgorithms?: OPTIONAL<PermittedIntegrityProtectionAlgorithms>,
-        /**
-         * @summary `encryptionAlgorithms`.
-         * @description
-         *
-         * Permitted encryption algorithms as in 3GPP TS 25.413 (3GPP TS 29.002
-         * V19.1.0 clauses 7.6.6.14 and 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly encryptionAlgorithms?: OPTIONAL<PermittedEncryptionAlgorithms>,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        integrityProtectionAlgorithms?: OPTIONAL<PermittedIntegrityProtectionAlgorithms>,
+        encryptionAlgorithms?: OPTIONAL<PermittedEncryptionAlgorithms>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.integrityProtectionAlgorithms = integrityProtectionAlgorithms;
+        this.encryptionAlgorithms = encryptionAlgorithms;
+        this.extensionContainer = extensionContainer;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a AllowedUMTS_Algorithms

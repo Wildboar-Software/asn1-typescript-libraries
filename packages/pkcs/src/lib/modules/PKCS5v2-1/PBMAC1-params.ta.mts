@@ -26,20 +26,26 @@ import {
  *
  */
 export class PBMAC1_params {
+    /**
+     * @summary `keyDerivationFunc`.
+     * @public
+     * @readonly
+     */
+    public readonly keyDerivationFunc: AlgorithmIdentifier;
+    /**
+     * @summary `messageAuthScheme`.
+     * @public
+     * @readonly
+     */
+    public readonly messageAuthScheme: AlgorithmIdentifier;
+
     constructor(
-        /**
-         * @summary `keyDerivationFunc`.
-         * @public
-         * @readonly
-         */
-        readonly keyDerivationFunc: AlgorithmIdentifier,
-        /**
-         * @summary `messageAuthScheme`.
-         * @public
-         * @readonly
-         */
-        readonly messageAuthScheme: AlgorithmIdentifier
-    ) {}
+        keyDerivationFunc: AlgorithmIdentifier,
+        messageAuthScheme: AlgorithmIdentifier
+    ) {
+        this.keyDerivationFunc = keyDerivationFunc;
+        this.messageAuthScheme = messageAuthScheme;
+    }
 
     /**
      * @summary Restructures an object into a PBMAC1_params

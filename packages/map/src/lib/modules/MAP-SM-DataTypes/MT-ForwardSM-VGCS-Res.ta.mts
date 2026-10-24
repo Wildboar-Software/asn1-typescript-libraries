@@ -36,65 +36,79 @@ import { DispatcherList, _decode_DispatcherList, _encode_DispatcherList } from "
  */
 export
 class MT_ForwardSM_VGCS_Res {
+    /**
+     * @summary `sm_RP_UI`.
+     * @description
+     *
+     * Optional TPDU.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sm_RP_UI?: OPTIONAL<SignalInfo>;
+    /**
+     * @summary `dispatcherList`.
+     * @description
+     *
+     * Up to 5 dispatcher ISDN addresses.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly dispatcherList?: OPTIONAL<DispatcherList>;
+    /**
+     * @summary `ongoingCall`.
+     * @description
+     *
+     * Call is ongoing.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ongoingCall?: OPTIONAL<NULL>;
+    /**
+     * @summary `extensionContainer`.
+     * @description
+     *
+     * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary `additionalDispatcherList`.
+     * @description
+     *
+     * Absent if dispatcherList is absent or has fewer than 5 addresses
+     * (clause 17.7.6).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly additionalDispatcherList?: OPTIONAL<AdditionalDispatcherList>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `sm_RP_UI`.
-         * @description
-         *
-         * Optional TPDU.
-         *
-         * @public
-         * @readonly
-         */
-        readonly sm_RP_UI?: OPTIONAL<SignalInfo>,
-        /**
-         * @summary `dispatcherList`.
-         * @description
-         *
-         * Up to 5 dispatcher ISDN addresses.
-         *
-         * @public
-         * @readonly
-         */
-        readonly dispatcherList?: OPTIONAL<DispatcherList>,
-        /**
-         * @summary `ongoingCall`.
-         * @description
-         *
-         * Call is ongoing.
-         *
-         * @public
-         * @readonly
-         */
-        readonly ongoingCall?: OPTIONAL<NULL>,
-        /**
-         * @summary `extensionContainer`.
-         * @description
-         *
-         * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary `additionalDispatcherList`.
-         * @description
-         *
-         * Absent if dispatcherList is absent or has fewer than 5 addresses
-         * (clause 17.7.6).
-         *
-         * @public
-         * @readonly
-         */
-        readonly additionalDispatcherList?: OPTIONAL<AdditionalDispatcherList>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        sm_RP_UI?: OPTIONAL<SignalInfo>,
+        dispatcherList?: OPTIONAL<DispatcherList>,
+        ongoingCall?: OPTIONAL<NULL>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        additionalDispatcherList?: OPTIONAL<AdditionalDispatcherList>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.sm_RP_UI = sm_RP_UI;
+        this.dispatcherList = dispatcherList;
+        this.ongoingCall = ongoingCall;
+        this.extensionContainer = extensionContainer;
+        this.additionalDispatcherList = additionalDispatcherList;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a MT_ForwardSM_VGCS_Res

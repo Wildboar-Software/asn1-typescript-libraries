@@ -41,38 +41,46 @@ import {
  *
  */
 export class SetArgument_modificationList_Item {
+  /**
+   * @summary `modifyOperator`.
+   * @description
+   *
+   * Default `replace`. See `ModifyOperator`.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly modifyOperator: OPTIONAL<ModifyOperator>;
+  /**
+   * @summary `attributeId`.
+   * @description
+   *
+   * Attribute to modify (`CMIP-ATTRIBUTE.&id`).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly attributeId: AttributeId;
+  /**
+   * @summary `attributeValue`.
+   * @description
+   *
+   * New value. Absent for `setToDefault`.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly attributeValue?: OPTIONAL<_Element>;
+
   constructor(
-    /**
-     * @summary `modifyOperator`.
-     * @description
-     *
-     * Default `replace`. See `ModifyOperator`.
-     *
-     * @public
-     * @readonly
-     */
-    readonly modifyOperator: OPTIONAL<ModifyOperator>,
-    /**
-     * @summary `attributeId`.
-     * @description
-     *
-     * Attribute to modify (`CMIP-ATTRIBUTE.&id`).
-     *
-     * @public
-     * @readonly
-     */
-    readonly attributeId: AttributeId,
-    /**
-     * @summary `attributeValue`.
-     * @description
-     *
-     * New value. Absent for `setToDefault`.
-     *
-     * @public
-     * @readonly
-     */
-    readonly attributeValue?: OPTIONAL<_Element>
-  ) {}
+    modifyOperator: OPTIONAL<ModifyOperator>,
+    attributeId: AttributeId,
+    attributeValue?: OPTIONAL<_Element>
+  ) {
+    this.modifyOperator = modifyOperator;
+    this.attributeId = attributeId;
+    this.attributeValue = attributeValue;
+  }
 
   /**
    * @summary Restructures an object into a SetArgument_modificationList_Item

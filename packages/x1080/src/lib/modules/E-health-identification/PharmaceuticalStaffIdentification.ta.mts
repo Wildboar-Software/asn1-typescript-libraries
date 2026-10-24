@@ -42,53 +42,63 @@ import {
  *
  */
 export class PharmaceuticalStaffIdentification {
+    /**
+     * @summary `scheme`.
+     * @description
+     *
+     * `MEDICAL-STAFF-SCHEME.&id` of the identification scheme.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly scheme: OBJECT_IDENTIFIER;
+    /**
+     * @summary `schemeName`.
+     * @description
+     *
+     * Optional `MEDICAL-STAFF-SCHEME.&name`. ISO646String is not
+     * necessarily unique.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly schemeName: OPTIONAL<SchemeName>;
+    /**
+     * @summary `medicalStaffId`.
+     * @description
+     *
+     * `MEDICAL-STAFF-SCHEME.&Identification` of the pharmaceutical
+     * professional. Typically unique number, name, and category
+     * or role.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly medicalStaffId: _Element;
+    /**
+     * @summary `qualifications`.
+     * @description
+     *
+     * Optional `MEDICAL-STAFF-SCHEME.&Qualifications`. Typically
+     * signed by known authorities; type often includes public-key
+     * certificates. Definition of qualifications is out of scope.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly qualifications?: OPTIONAL<_Element>;
+
     constructor(
-        /**
-         * @summary `scheme`.
-         * @description
-         *
-         * `MEDICAL-STAFF-SCHEME.&id` of the identification scheme.
-         *
-         * @public
-         * @readonly
-         */
-        readonly scheme: OBJECT_IDENTIFIER,
-        /**
-         * @summary `schemeName`.
-         * @description
-         *
-         * Optional `MEDICAL-STAFF-SCHEME.&name`. ISO646String is not
-         * necessarily unique.
-         *
-         * @public
-         * @readonly
-         */
-        readonly schemeName: OPTIONAL<SchemeName>,
-        /**
-         * @summary `medicalStaffId`.
-         * @description
-         *
-         * `MEDICAL-STAFF-SCHEME.&Identification` of the pharmaceutical
-         * professional. Typically unique number, name, and category
-         * or role.
-         *
-         * @public
-         * @readonly
-         */
-        readonly medicalStaffId: _Element,
-        /**
-         * @summary `qualifications`.
-         * @description
-         *
-         * Optional `MEDICAL-STAFF-SCHEME.&Qualifications`. Typically
-         * signed by known authorities; type often includes public-key
-         * certificates. Definition of qualifications is out of scope.
-         *
-         * @public
-         * @readonly
-         */
-        readonly qualifications?: OPTIONAL<_Element>
-    ) {}
+        scheme: OBJECT_IDENTIFIER,
+        schemeName: OPTIONAL<SchemeName>,
+        medicalStaffId: _Element,
+        qualifications?: OPTIONAL<_Element>
+    ) {
+        this.scheme = scheme;
+        this.schemeName = schemeName;
+        this.medicalStaffId = medicalStaffId;
+        this.qualifications = qualifications;
+    }
 
     /**
      * @summary Restructures an object into a PharmaceuticalStaffIdentification

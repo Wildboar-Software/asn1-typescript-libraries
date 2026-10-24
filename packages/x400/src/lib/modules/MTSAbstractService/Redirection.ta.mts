@@ -39,20 +39,26 @@ import {
  *
  */
 export class Redirection {
+    /**
+     * @summary `intended_recipient_name`.
+     * @public
+     * @readonly
+     */
+    public readonly intended_recipient_name: IntendedRecipientName;
+    /**
+     * @summary `redirection_reason`.
+     * @public
+     * @readonly
+     */
+    public readonly redirection_reason: RedirectionReason;
+
     constructor(
-        /**
-         * @summary `intended_recipient_name`.
-         * @public
-         * @readonly
-         */
-        readonly intended_recipient_name: IntendedRecipientName,
-        /**
-         * @summary `redirection_reason`.
-         * @public
-         * @readonly
-         */
-        readonly redirection_reason: RedirectionReason
-    ) {}
+        intended_recipient_name: IntendedRecipientName,
+        redirection_reason: RedirectionReason
+    ) {
+        this.intended_recipient_name = intended_recipient_name;
+        this.redirection_reason = redirection_reason;
+    }
 
     /**
      * @summary Restructures an object into a Redirection

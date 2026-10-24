@@ -91,26 +91,64 @@ import {
  * @class
  */
 export class AlarmSynchronizationData {
+    public readonly alarmManagedObjectClass: ObjectClass;
+    public readonly alarmManagedObjectInstance: ObjectInstance;
+    public readonly eventTime: OPTIONAL<EventTime>;
+    public readonly eventType: EventTypeId;
+    public readonly probableCause: ProbableCause;
+    public readonly specificProblems: OPTIONAL<SpecificProblems>;
+    public readonly perceivedSeverity: PerceivedSeverity;
+    public readonly backedUpStatus?: OPTIONAL<BackedUpStatus>;
+    public readonly backUpObject?: OPTIONAL<ObjectInstance>;
+    public readonly trendIndication?: OPTIONAL<TrendIndication>;
+    public readonly thresholdInfo?: OPTIONAL<ThresholdInfo>;
+    public readonly notificationIdentifier?: OPTIONAL<NotificationIdentifier>;
+    public readonly correlatedNotifications?: OPTIONAL<CorrelatedNotifications>;
+    public readonly stateChangeDefinition?: OPTIONAL<AttributeValueChangeDefinition>;
+    public readonly monitoredAttributes?: OPTIONAL<MonitoredAttributes>;
+    public readonly proposedRepairActions?: OPTIONAL<ProposedRepairActions>;
+    public readonly additionalText?: OPTIONAL<AdditionalText>;
+    public readonly additionalInformation?: OPTIONAL<AdditionalInformation>;
+
     constructor(
-        readonly alarmManagedObjectClass: ObjectClass,
-        readonly alarmManagedObjectInstance: ObjectInstance,
-        readonly eventTime: OPTIONAL<EventTime>,
-        readonly eventType: EventTypeId,
-        readonly probableCause: ProbableCause,
-        readonly specificProblems: OPTIONAL<SpecificProblems>,
-        readonly perceivedSeverity: PerceivedSeverity,
-        readonly backedUpStatus?: OPTIONAL<BackedUpStatus>,
-        readonly backUpObject?: OPTIONAL<ObjectInstance>,
-        readonly trendIndication?: OPTIONAL<TrendIndication>,
-        readonly thresholdInfo?: OPTIONAL<ThresholdInfo>,
-        readonly notificationIdentifier?: OPTIONAL<NotificationIdentifier>,
-        readonly correlatedNotifications?: OPTIONAL<CorrelatedNotifications>,
-        readonly stateChangeDefinition?: OPTIONAL<AttributeValueChangeDefinition>,
-        readonly monitoredAttributes?: OPTIONAL<MonitoredAttributes>,
-        readonly proposedRepairActions?: OPTIONAL<ProposedRepairActions>,
-        readonly additionalText?: OPTIONAL<AdditionalText>,
-        readonly additionalInformation?: OPTIONAL<AdditionalInformation>
-    ) {}
+        alarmManagedObjectClass: ObjectClass,
+        alarmManagedObjectInstance: ObjectInstance,
+        eventTime: OPTIONAL<EventTime>,
+        eventType: EventTypeId,
+        probableCause: ProbableCause,
+        specificProblems: OPTIONAL<SpecificProblems>,
+        perceivedSeverity: PerceivedSeverity,
+        backedUpStatus?: OPTIONAL<BackedUpStatus>,
+        backUpObject?: OPTIONAL<ObjectInstance>,
+        trendIndication?: OPTIONAL<TrendIndication>,
+        thresholdInfo?: OPTIONAL<ThresholdInfo>,
+        notificationIdentifier?: OPTIONAL<NotificationIdentifier>,
+        correlatedNotifications?: OPTIONAL<CorrelatedNotifications>,
+        stateChangeDefinition?: OPTIONAL<AttributeValueChangeDefinition>,
+        monitoredAttributes?: OPTIONAL<MonitoredAttributes>,
+        proposedRepairActions?: OPTIONAL<ProposedRepairActions>,
+        additionalText?: OPTIONAL<AdditionalText>,
+        additionalInformation?: OPTIONAL<AdditionalInformation>
+    ) {
+        this.alarmManagedObjectClass = alarmManagedObjectClass;
+        this.alarmManagedObjectInstance = alarmManagedObjectInstance;
+        this.eventTime = eventTime;
+        this.eventType = eventType;
+        this.probableCause = probableCause;
+        this.specificProblems = specificProblems;
+        this.perceivedSeverity = perceivedSeverity;
+        this.backedUpStatus = backedUpStatus;
+        this.backUpObject = backUpObject;
+        this.trendIndication = trendIndication;
+        this.thresholdInfo = thresholdInfo;
+        this.notificationIdentifier = notificationIdentifier;
+        this.correlatedNotifications = correlatedNotifications;
+        this.stateChangeDefinition = stateChangeDefinition;
+        this.monitoredAttributes = monitoredAttributes;
+        this.proposedRepairActions = proposedRepairActions;
+        this.additionalText = additionalText;
+        this.additionalInformation = additionalInformation;
+    }
 
     public static _from_object(
         _o: { [_K in keyof AlarmSynchronizationData]: AlarmSynchronizationData[_K] }

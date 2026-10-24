@@ -34,20 +34,26 @@ import {
  *
  */
 export class MTABindResult_authenticated {
+    /**
+     * @summary `responder_name`.
+     * @public
+     * @readonly
+     */
+    public readonly responder_name: MTAName;
+    /**
+     * @summary `responder_credentials`.
+     * @public
+     * @readonly
+     */
+    public readonly responder_credentials: ResponderCredentials;
+
     constructor(
-        /**
-         * @summary `responder_name`.
-         * @public
-         * @readonly
-         */
-        readonly responder_name: MTAName,
-        /**
-         * @summary `responder_credentials`.
-         * @public
-         * @readonly
-         */
-        readonly responder_credentials: ResponderCredentials
-    ) {}
+        responder_name: MTAName,
+        responder_credentials: ResponderCredentials
+    ) {
+        this.responder_name = responder_name;
+        this.responder_credentials = responder_credentials;
+    }
 
     /**
      * @summary Restructures an object into a MTABindResult_authenticated

@@ -38,70 +38,84 @@ import { ServiceKey, _decode_ServiceKey, _encode_ServiceKey } from "../MAP-MS-Da
  */
 export
 class SMS_CAMEL_TDP_Data {
+    /**
+     * @summary `sms_TriggerDetectionPoint`.
+     * @description
+     *
+     * SMS CAMEL trigger detection point.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sms_TriggerDetectionPoint: SMS_TriggerDetectionPoint;
+    /**
+     * @summary `serviceKey`.
+     * @description
+     *
+     * Identifies CAMEL service logic in the gsmSCF.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly serviceKey: ServiceKey;
+    /**
+     * @summary `gsmSCF_Address`.
+     * @description
+     *
+     * ISDN number assigned to the gsmSCF. In an IP Multimedia CN, contains
+     * the IM-SSF address when IM-SSF takes the gsmSCF role.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.2.58).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly gsmSCF_Address: ISDN_AddressString;
+    /**
+     * @summary `defaultSMS_Handling`.
+     * @description
+     *
+     * Default handling if the gsmSCF does not respond for this SMS CAMEL
+     * TDP.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly defaultSMS_Handling: DefaultSMS_Handling;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `sms_TriggerDetectionPoint`.
-         * @description
-         *
-         * SMS CAMEL trigger detection point.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly sms_TriggerDetectionPoint: SMS_TriggerDetectionPoint,
-        /**
-         * @summary `serviceKey`.
-         * @description
-         *
-         * Identifies CAMEL service logic in the gsmSCF.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly serviceKey: ServiceKey,
-        /**
-         * @summary `gsmSCF_Address`.
-         * @description
-         *
-         * ISDN number assigned to the gsmSCF. In an IP Multimedia CN, contains
-         * the IM-SSF address when IM-SSF takes the gsmSCF role.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.2.58).
-         *
-         * @public
-         * @readonly
-         */
-        readonly gsmSCF_Address: ISDN_AddressString,
-        /**
-         * @summary `defaultSMS_Handling`.
-         * @description
-         *
-         * Default handling if the gsmSCF does not respond for this SMS CAMEL
-         * TDP.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly defaultSMS_Handling: DefaultSMS_Handling,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        sms_TriggerDetectionPoint: SMS_TriggerDetectionPoint,
+        serviceKey: ServiceKey,
+        gsmSCF_Address: ISDN_AddressString,
+        defaultSMS_Handling: DefaultSMS_Handling,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.sms_TriggerDetectionPoint = sms_TriggerDetectionPoint;
+        this.serviceKey = serviceKey;
+        this.gsmSCF_Address = gsmSCF_Address;
+        this.defaultSMS_Handling = defaultSMS_Handling;
+        this.extensionContainer = extensionContainer;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a SMS_CAMEL_TDP_Data

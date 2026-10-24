@@ -30,30 +30,36 @@ import { MSRadioAccessCapability, _decode_MSRadioAccessCapability, _encode_MSRad
  */
 export
 class GPRSMSClass {
+    /**
+     * @summary `mSNetworkCapability`.
+     * @description
+     *
+     * MS Network Capability of the GPRS MS (3GPP TS 29.002 V19.1.0 clause
+     * 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mSNetworkCapability: MSNetworkCapability;
+    /**
+     * @summary `mSRadioAccessCapability`.
+     * @description
+     *
+     * MS Radio Access Capability of the GPRS MS (3GPP TS 29.002 V19.1.0
+     * clause 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mSRadioAccessCapability?: OPTIONAL<MSRadioAccessCapability>;
+
     constructor (
-        /**
-         * @summary `mSNetworkCapability`.
-         * @description
-         *
-         * MS Network Capability of the GPRS MS (3GPP TS 29.002 V19.1.0 clause
-         * 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly mSNetworkCapability: MSNetworkCapability,
-        /**
-         * @summary `mSRadioAccessCapability`.
-         * @description
-         *
-         * MS Radio Access Capability of the GPRS MS (3GPP TS 29.002 V19.1.0
-         * clause 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly mSRadioAccessCapability?: OPTIONAL<MSRadioAccessCapability>
-    ) {}
+        mSNetworkCapability: MSNetworkCapability,
+        mSRadioAccessCapability?: OPTIONAL<MSRadioAccessCapability>
+    ) {
+        this.mSNetworkCapability = mSNetworkCapability;
+        this.mSRadioAccessCapability = mSRadioAccessCapability;
+    }
 
     /**
      * @summary Restructures an object into a GPRSMSClass

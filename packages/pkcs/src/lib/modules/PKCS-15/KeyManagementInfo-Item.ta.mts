@@ -28,20 +28,26 @@ import {
  *
  */
 export class KeyManagementInfo_Item {
+    /**
+     * @summary `keyId`.
+     * @public
+     * @readonly
+     */
+    public readonly keyId: Identifier;
+    /**
+     * @summary `keyInfo`.
+     * @public
+     * @readonly
+     */
+    public readonly keyInfo: KeyManagementInfo_Item_keyInfo;
+
     constructor(
-        /**
-         * @summary `keyId`.
-         * @public
-         * @readonly
-         */
-        readonly keyId: Identifier,
-        /**
-         * @summary `keyInfo`.
-         * @public
-         * @readonly
-         */
-        readonly keyInfo: KeyManagementInfo_Item_keyInfo
-    ) {}
+        keyId: Identifier,
+        keyInfo: KeyManagementInfo_Item_keyInfo
+    ) {
+        this.keyId = keyId;
+        this.keyInfo = keyInfo;
+    }
 
     /**
      * @summary Restructures an object into a KeyManagementInfo_Item

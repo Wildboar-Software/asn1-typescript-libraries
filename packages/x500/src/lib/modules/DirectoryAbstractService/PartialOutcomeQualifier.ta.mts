@@ -63,90 +63,108 @@ import {
  *
  */
 export class PartialOutcomeQualifier {
+    /**
+     * @summary `limitProblem`.
+     * @description
+     *
+     * Partial results are an arbitrary selection.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly limitProblem?: OPTIONAL<LimitProblem>;
+    /**
+     * @summary `unexplored`.
+     * @description
+     *
+     * SET SIZE (1..MAX) of ContinuationReference.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly unexplored?: OPTIONAL<ContinuationReference[]>;
+    /**
+     * @summary `unavailableCriticalExtensions`.
+     * @description
+     *
+     * DEFAULT FALSE.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly unavailableCriticalExtensions?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `unknownErrors`.
+     * @description
+     *
+     * SET SIZE (1..MAX).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly unknownErrors?: OPTIONAL<_Element[]>;
+    /**
+     * @summary `queryReference`.
+     * @description
+     *
+     * Opaque; DUA copies into the next `PagedResultsRequest`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly queryReference?: OPTIONAL<OCTET_STRING>;
+    /**
+     * @summary `overspecFilter`.
+     * @description
+     *
+     * Present if `checkOverspecified` and the result is empty because the
+     * filter was overspecified.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly overspecFilter?: OPTIONAL<Filter>;
+    /**
+     * @summary `notification`.
+     * @description
+     *
+     * SEQUENCE SIZE (1..MAX).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly notification?: OPTIONAL<Attribute[]>;
+    /**
+     * @summary `entryCount`.
+     * @description
+     *
+     * How many would have been returned if size/admin limit not hit;
+     * ignored if `subentries`. Tag [10] not used.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly entryCount?: OPTIONAL<PartialOutcomeQualifier_entryCount>;
+
     constructor(
-        /**
-         * @summary `limitProblem`.
-         * @description
-         *
-         * Partial results are an arbitrary selection.
-         *
-         * @public
-         * @readonly
-         */
-        readonly limitProblem?: OPTIONAL<LimitProblem>,
-        /**
-         * @summary `unexplored`.
-         * @description
-         *
-         * SET SIZE (1..MAX) of ContinuationReference.
-         *
-         * @public
-         * @readonly
-         */
-        readonly unexplored?: OPTIONAL<ContinuationReference[]>,
-        /**
-         * @summary `unavailableCriticalExtensions`.
-         * @description
-         *
-         * DEFAULT FALSE.
-         *
-         * @public
-         * @readonly
-         */
-        readonly unavailableCriticalExtensions?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `unknownErrors`.
-         * @description
-         *
-         * SET SIZE (1..MAX).
-         *
-         * @public
-         * @readonly
-         */
-        readonly unknownErrors?: OPTIONAL<_Element[]>,
-        /**
-         * @summary `queryReference`.
-         * @description
-         *
-         * Opaque; DUA copies into the next `PagedResultsRequest`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly queryReference?: OPTIONAL<OCTET_STRING>,
-        /**
-         * @summary `overspecFilter`.
-         * @description
-         *
-         * Present if `checkOverspecified` and the result is empty because the
-         * filter was overspecified.
-         *
-         * @public
-         * @readonly
-         */
-        readonly overspecFilter?: OPTIONAL<Filter>,
-        /**
-         * @summary `notification`.
-         * @description
-         *
-         * SEQUENCE SIZE (1..MAX).
-         *
-         * @public
-         * @readonly
-         */
-        readonly notification?: OPTIONAL<Attribute[]>,
-        /**
-         * @summary `entryCount`.
-         * @description
-         *
-         * How many would have been returned if size/admin limit not hit;
-         * ignored if `subentries`. Tag [10] not used.
-         *
-         * @public
-         * @readonly
-         */
-        readonly entryCount?: OPTIONAL<PartialOutcomeQualifier_entryCount>
-    ) {}
+        limitProblem?: OPTIONAL<LimitProblem>,
+        unexplored?: OPTIONAL<ContinuationReference[]>,
+        unavailableCriticalExtensions?: OPTIONAL<BOOLEAN>,
+        unknownErrors?: OPTIONAL<_Element[]>,
+        queryReference?: OPTIONAL<OCTET_STRING>,
+        overspecFilter?: OPTIONAL<Filter>,
+        notification?: OPTIONAL<Attribute[]>,
+        entryCount?: OPTIONAL<PartialOutcomeQualifier_entryCount>
+    ) {
+        this.limitProblem = limitProblem;
+        this.unexplored = unexplored;
+        this.unavailableCriticalExtensions = unavailableCriticalExtensions;
+        this.unknownErrors = unknownErrors;
+        this.queryReference = queryReference;
+        this.overspecFilter = overspecFilter;
+        this.notification = notification;
+        this.entryCount = entryCount;
+    }
 
     /**
      * @summary Restructures an object into a PartialOutcomeQualifier

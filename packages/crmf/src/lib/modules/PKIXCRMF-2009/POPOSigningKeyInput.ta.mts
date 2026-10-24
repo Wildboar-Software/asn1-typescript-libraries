@@ -45,33 +45,39 @@ import {
  *
  */
 export class POPOSigningKeyInput {
+    /**
+     * @summary `authInfo`.
+     * @description
+     *
+     * `sender`: authenticated identity previously established for
+     * the subject. `publicKeyMAC`: password-based MAC over the
+     * DER-encoded public key when no authenticated `GeneralName`
+     * exists ([RFC 4211 §4.1](https://datatracker.ietf.org/doc/html/rfc4211#section-4.1)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly authInfo: POPOSigningKeyInput_authInfo;
+    /**
+     * @summary `publicKey`.
+     * @description
+     *
+     * Copy of the public key from the certificate template; MUST
+     * be exactly the same value as in the template
+     * ([RFC 4211 §4.1](https://datatracker.ietf.org/doc/html/rfc4211#section-4.1)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly publicKey: SubjectPublicKeyInfo;
+
     constructor(
-        /**
-         * @summary `authInfo`.
-         * @description
-         *
-         * `sender`: authenticated identity previously established for
-         * the subject. `publicKeyMAC`: password-based MAC over the
-         * DER-encoded public key when no authenticated `GeneralName`
-         * exists ([RFC 4211 §4.1](https://datatracker.ietf.org/doc/html/rfc4211#section-4.1)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly authInfo: POPOSigningKeyInput_authInfo,
-        /**
-         * @summary `publicKey`.
-         * @description
-         *
-         * Copy of the public key from the certificate template; MUST
-         * be exactly the same value as in the template
-         * ([RFC 4211 §4.1](https://datatracker.ietf.org/doc/html/rfc4211#section-4.1)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly publicKey: SubjectPublicKeyInfo
-    ) {}
+        authInfo: POPOSigningKeyInput_authInfo,
+        publicKey: SubjectPublicKeyInfo
+    ) {
+        this.authInfo = authInfo;
+        this.publicKey = publicKey;
+    }
 
     /**
      * @summary Restructures an object into a POPOSigningKeyInput

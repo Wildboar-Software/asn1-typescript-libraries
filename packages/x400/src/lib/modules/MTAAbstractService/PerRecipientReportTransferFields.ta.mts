@@ -72,50 +72,66 @@ import {
  *
  */
 export class PerRecipientReportTransferFields {
+    /**
+     * @summary `actual_recipient_name`.
+     * @public
+     * @readonly
+     */
+    public readonly actual_recipient_name: ActualRecipientName;
+    /**
+     * @summary `originally_specified_recipient_number`.
+     * @public
+     * @readonly
+     */
+    public readonly originally_specified_recipient_number: OriginallySpecifiedRecipientNumber;
+    /**
+     * @summary `per_recipient_indicators`.
+     * @public
+     * @readonly
+     */
+    public readonly per_recipient_indicators: PerRecipientIndicators;
+    /**
+     * @summary `last_trace_information`.
+     * @public
+     * @readonly
+     */
+    public readonly last_trace_information: LastTraceInformation;
+    /**
+     * @summary `originally_intended_recipient_name`.
+     * @public
+     * @readonly
+     */
+    public readonly originally_intended_recipient_name?: OPTIONAL<OriginallyIntendedRecipientName>;
+    /**
+     * @summary `supplementary_information`.
+     * @public
+     * @readonly
+     */
+    public readonly supplementary_information?: OPTIONAL<SupplementaryInformation>;
+    /**
+     * @summary `extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<ExtensionField[]>;
+
     constructor(
-        /**
-         * @summary `actual_recipient_name`.
-         * @public
-         * @readonly
-         */
-        readonly actual_recipient_name: ActualRecipientName,
-        /**
-         * @summary `originally_specified_recipient_number`.
-         * @public
-         * @readonly
-         */
-        readonly originally_specified_recipient_number: OriginallySpecifiedRecipientNumber,
-        /**
-         * @summary `per_recipient_indicators`.
-         * @public
-         * @readonly
-         */
-        readonly per_recipient_indicators: PerRecipientIndicators,
-        /**
-         * @summary `last_trace_information`.
-         * @public
-         * @readonly
-         */
-        readonly last_trace_information: LastTraceInformation,
-        /**
-         * @summary `originally_intended_recipient_name`.
-         * @public
-         * @readonly
-         */
-        readonly originally_intended_recipient_name?: OPTIONAL<OriginallyIntendedRecipientName>,
-        /**
-         * @summary `supplementary_information`.
-         * @public
-         * @readonly
-         */
-        readonly supplementary_information?: OPTIONAL<SupplementaryInformation>,
-        /**
-         * @summary `extensions`.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<ExtensionField[]>
-    ) {}
+        actual_recipient_name: ActualRecipientName,
+        originally_specified_recipient_number: OriginallySpecifiedRecipientNumber,
+        per_recipient_indicators: PerRecipientIndicators,
+        last_trace_information: LastTraceInformation,
+        originally_intended_recipient_name?: OPTIONAL<OriginallyIntendedRecipientName>,
+        supplementary_information?: OPTIONAL<SupplementaryInformation>,
+        extensions?: OPTIONAL<ExtensionField[]>
+    ) {
+        this.actual_recipient_name = actual_recipient_name;
+        this.originally_specified_recipient_number = originally_specified_recipient_number;
+        this.per_recipient_indicators = per_recipient_indicators;
+        this.last_trace_information = last_trace_information;
+        this.originally_intended_recipient_name = originally_intended_recipient_name;
+        this.supplementary_information = supplementary_information;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a PerRecipientReportTransferFields

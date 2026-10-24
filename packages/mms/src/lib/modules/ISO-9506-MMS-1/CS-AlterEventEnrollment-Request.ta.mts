@@ -38,20 +38,24 @@ import { CS_AlterEventEnrollment_Request_changeDisplay, _decode_CS_AlterEventEnr
  */
 export
 class CS_AlterEventEnrollment_Request {
+    /**
+     * @summary `changeDisplay`.
+     * @description
+     *
+     * Replacement `&displayEnhancement`. Omitted: leave display unchanged.
+     *
+     * [ISO 9506-2:2003 §21.6.3]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly changeDisplay?: OPTIONAL<CS_AlterEventEnrollment_Request_changeDisplay>;
+
     constructor (
-        /**
-         * @summary `changeDisplay`.
-         * @description
-         *
-         * Replacement `&displayEnhancement`. Omitted: leave display unchanged.
-         *
-         * [ISO 9506-2:2003 §21.6.3]
-         *
-         * @public
-         * @readonly
-         */
-        readonly changeDisplay?: OPTIONAL<CS_AlterEventEnrollment_Request_changeDisplay>
-    ) {}
+        changeDisplay?: OPTIONAL<CS_AlterEventEnrollment_Request_changeDisplay>
+    ) {
+        this.changeDisplay = changeDisplay;
+    }
 
     /**
      * @summary Restructures an object into a CS_AlterEventEnrollment_Request

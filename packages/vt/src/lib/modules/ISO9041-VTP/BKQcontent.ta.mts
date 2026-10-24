@@ -49,35 +49,43 @@ import { BKQcontent_stuser_Item, _decode_BKQcontent_stuser_Item, _encode_BKQcont
  */
 export
 class BKQcontent {
+    /**
+     * @summary `standard`.
+     * @description
+     * Display and logical pointers. ISO/IEC 9041-1:1997
+     * §6.5, §6.6.
+     * @public
+     * @readonly
+     */
+    public readonly standard?: OPTIONAL<BKQcontent_standard>;
+    /**
+     * @summary `profile`.
+     * @description
+     * Profile-defined tagged octets (ISO/IEC 9040:1997
+     * VT-information). ISO/IEC 9041-1:1997 §6.5, §6.6.
+     * @public
+     * @readonly
+     */
+    public readonly profile?: OPTIONAL<BKQcontent_profile_Item[]>;
+    /**
+     * @summary `stuser`.
+     * @description
+     * User-defined tagged octets (ISO/IEC 9040:1997
+     * VT-information). ISO/IEC 9041-1:1997 §6.5, §6.6.
+     * @public
+     * @readonly
+     */
+    public readonly stuser?: OPTIONAL<BKQcontent_stuser_Item[]>;
+
     constructor (
-        /**
-         * @summary `standard`.
-         * @description
-         * Display and logical pointers. ISO/IEC 9041-1:1997
-         * §6.5, §6.6.
-         * @public
-         * @readonly
-         */
-        readonly standard?: OPTIONAL<BKQcontent_standard>,
-        /**
-         * @summary `profile`.
-         * @description
-         * Profile-defined tagged octets (ISO/IEC 9040:1997
-         * VT-information). ISO/IEC 9041-1:1997 §6.5, §6.6.
-         * @public
-         * @readonly
-         */
-        readonly profile?: OPTIONAL<BKQcontent_profile_Item[]>,
-        /**
-         * @summary `stuser`.
-         * @description
-         * User-defined tagged octets (ISO/IEC 9040:1997
-         * VT-information). ISO/IEC 9041-1:1997 §6.5, §6.6.
-         * @public
-         * @readonly
-         */
-        readonly stuser?: OPTIONAL<BKQcontent_stuser_Item[]>
-    ) {}
+        standard?: OPTIONAL<BKQcontent_standard>,
+        profile?: OPTIONAL<BKQcontent_profile_Item[]>,
+        stuser?: OPTIONAL<BKQcontent_stuser_Item[]>
+    ) {
+        this.standard = standard;
+        this.profile = profile;
+        this.stuser = stuser;
+    }
 
     /**
      * @summary Restructures an object into a BKQcontent

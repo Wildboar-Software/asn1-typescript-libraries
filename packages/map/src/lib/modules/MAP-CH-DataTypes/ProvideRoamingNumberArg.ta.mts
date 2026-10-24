@@ -67,275 +67,331 @@ import { SupportedCamelPhases, _decode_SupportedCamelPhases, _encode_SupportedCa
  */
 export
 class ProvideRoamingNumberArg {
+    /**
+     * @summary `imsi`.
+     * @description
+     *
+     * Called subscriber IMSI.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly imsi: IMSI;
+    /**
+     * @summary `msc_Number`.
+     * @description
+     *
+     * MSC number.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly msc_Number: ISDN_AddressString;
+    /**
+     * @summary `msisdn`.
+     * @description
+     *
+     * MSISDN if provided.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly msisdn?: OPTIONAL<ISDN_AddressString>;
+    /**
+     * @summary `lmsi`.
+     * @description
+     *
+     * LMSI if available.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly lmsi?: OPTIONAL<LMSI>;
+    /**
+     * @summary `gsm_BearerCapability`.
+     * @description
+     *
+     * GSM bearer capability.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly gsm_BearerCapability?: OPTIONAL<ExternalSignalInfo>;
+    /**
+     * @summary `networkSignalInfo`.
+     * @description
+     *
+     * Network signalling info.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly networkSignalInfo?: OPTIONAL<ExternalSignalInfo>;
+    /**
+     * @summary `suppressionOfAnnouncement`.
+     * @description
+     *
+     * Use and presence as in 3GPP TS 23.078.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly suppressionOfAnnouncement?: OPTIONAL<SuppressionOfAnnouncement>;
+    /**
+     * @summary `gmsc_Address`.
+     * @description
+     *
+     * GMSC address.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly gmsc_Address?: OPTIONAL<ISDN_AddressString>;
+    /**
+     * @summary `callReferenceNumber`.
+     * @description
+     *
+     * Use and presence as in 3GPP TS 23.078, Use and presence as in 3GPP TS
+     * 23.079 and Use and presence as in 3GPP TS 23.018.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly callReferenceNumber?: OPTIONAL<CallReferenceNumber>;
+    /**
+     * @summary `or_Interrogation`.
+     * @description
+     *
+     * Use and presence as in 3GPP TS 23.079.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly or_Interrogation?: OPTIONAL<NULL>;
+    /**
+     * @summary `extensionContainer`.
+     * @description
+     *
+     * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary `alertingPattern`.
+     * @description
+     *
+     * Use and presence as in 3GPP TS 23.018 and 3GPP TS 23.078.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly alertingPattern?: OPTIONAL<AlertingPattern>;
+    /**
+     * @summary `ccbs_Call`.
+     * @description
+     *
+     * See 3GPP TS 23.093.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ccbs_Call?: OPTIONAL<NULL>;
+    /**
+     * @summary `supportedCamelPhasesInInterrogatingNode`.
+     * @description
+     *
+     * CAMEL phases in the interrogating node.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly supportedCamelPhasesInInterrogatingNode?: OPTIONAL<SupportedCamelPhases>;
+    /**
+     * @summary `additionalSignalInfo`.
+     * @description
+     *
+     * See 3GPP TS 23.081 and 23.088.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly additionalSignalInfo?: OPTIONAL<Ext_ExternalSignalInfo>;
+    /**
+     * @summary `orNotSupportedInGMSC`.
+     * @description
+     *
+     * OR not supported in GMSC.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly orNotSupportedInGMSC?: OPTIONAL<NULL>;
+    /**
+     * @summary `pre_pagingSupported`.
+     * @description
+     *
+     * Use and presence as in 3GPP TS 23.018.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly pre_pagingSupported?: OPTIONAL<NULL>;
+    /**
+     * @summary `longFTN_Supported`.
+     * @description
+     *
+     * Long FTN supported.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly longFTN_Supported?: OPTIONAL<NULL>;
+    /**
+     * @summary `suppress_VT_CSI`.
+     * @description
+     *
+     * Use and presence as in 3GPP TS 23.078.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly suppress_VT_CSI?: OPTIONAL<NULL>;
+    /**
+     * @summary `offeredCamel4CSIsInInterrogatingNode`.
+     * @description
+     *
+     * CAMEL4 CSIs in the interrogating node.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly offeredCamel4CSIsInInterrogatingNode?: OPTIONAL<OfferedCamel4CSIs>;
+    /**
+     * @summary `mtRoamingRetrySupported`.
+     * @description
+     *
+     * Use and presence as in 3GPP TS 23.018 and 3GPP TS 23.012.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mtRoamingRetrySupported?: OPTIONAL<NULL>;
+    /**
+     * @summary `pagingArea`.
+     * @description
+     *
+     * Paging area.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly pagingArea?: OPTIONAL<PagingArea>;
+    /**
+     * @summary `callPriority`.
+     * @description
+     *
+     * eMLPP call priority.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly callPriority?: OPTIONAL<EMLPP_Priority>;
+    /**
+     * @summary `mtrf_Indicator`.
+     * @description
+     *
+     * MT Roaming Forwarding indicator.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mtrf_Indicator?: OPTIONAL<NULL>;
+    /**
+     * @summary `oldMSC_Number`.
+     * @description
+     *
+     * Old MSC number for MT Roaming Forwarding.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly oldMSC_Number?: OPTIONAL<ISDN_AddressString>;
+    /**
+     * @summary `lastUsedLtePLMN_Id`.
+     * @description
+     *
+     * Last used LTE PLMN.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly lastUsedLtePLMN_Id?: OPTIONAL<PLMN_Id>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `imsi`.
-         * @description
-         *
-         * Called subscriber IMSI.
-         *
-         * @public
-         * @readonly
-         */
-        readonly imsi: IMSI,
-        /**
-         * @summary `msc_Number`.
-         * @description
-         *
-         * MSC number.
-         *
-         * @public
-         * @readonly
-         */
-        readonly msc_Number: ISDN_AddressString,
-        /**
-         * @summary `msisdn`.
-         * @description
-         *
-         * MSISDN if provided.
-         *
-         * @public
-         * @readonly
-         */
-        readonly msisdn?: OPTIONAL<ISDN_AddressString>,
-        /**
-         * @summary `lmsi`.
-         * @description
-         *
-         * LMSI if available.
-         *
-         * @public
-         * @readonly
-         */
-        readonly lmsi?: OPTIONAL<LMSI>,
-        /**
-         * @summary `gsm_BearerCapability`.
-         * @description
-         *
-         * GSM bearer capability.
-         *
-         * @public
-         * @readonly
-         */
-        readonly gsm_BearerCapability?: OPTIONAL<ExternalSignalInfo>,
-        /**
-         * @summary `networkSignalInfo`.
-         * @description
-         *
-         * Network signalling info.
-         *
-         * @public
-         * @readonly
-         */
-        readonly networkSignalInfo?: OPTIONAL<ExternalSignalInfo>,
-        /**
-         * @summary `suppressionOfAnnouncement`.
-         * @description
-         *
-         * Use and presence as in 3GPP TS 23.078.
-         *
-         * @public
-         * @readonly
-         */
-        readonly suppressionOfAnnouncement?: OPTIONAL<SuppressionOfAnnouncement>,
-        /**
-         * @summary `gmsc_Address`.
-         * @description
-         *
-         * GMSC address.
-         *
-         * @public
-         * @readonly
-         */
-        readonly gmsc_Address?: OPTIONAL<ISDN_AddressString>,
-        /**
-         * @summary `callReferenceNumber`.
-         * @description
-         *
-         * Use and presence as in 3GPP TS 23.078, Use and presence as in 3GPP TS
-         * 23.079 and Use and presence as in 3GPP TS 23.018.
-         *
-         * @public
-         * @readonly
-         */
-        readonly callReferenceNumber?: OPTIONAL<CallReferenceNumber>,
-        /**
-         * @summary `or_Interrogation`.
-         * @description
-         *
-         * Use and presence as in 3GPP TS 23.079.
-         *
-         * @public
-         * @readonly
-         */
-        readonly or_Interrogation?: OPTIONAL<NULL>,
-        /**
-         * @summary `extensionContainer`.
-         * @description
-         *
-         * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary `alertingPattern`.
-         * @description
-         *
-         * Use and presence as in 3GPP TS 23.018 and 3GPP TS 23.078.
-         *
-         * @public
-         * @readonly
-         */
-        readonly alertingPattern?: OPTIONAL<AlertingPattern>,
-        /**
-         * @summary `ccbs_Call`.
-         * @description
-         *
-         * See 3GPP TS 23.093.
-         *
-         * @public
-         * @readonly
-         */
-        readonly ccbs_Call?: OPTIONAL<NULL>,
-        /**
-         * @summary `supportedCamelPhasesInInterrogatingNode`.
-         * @description
-         *
-         * CAMEL phases in the interrogating node.
-         *
-         * @public
-         * @readonly
-         */
-        readonly supportedCamelPhasesInInterrogatingNode?: OPTIONAL<SupportedCamelPhases>,
-        /**
-         * @summary `additionalSignalInfo`.
-         * @description
-         *
-         * See 3GPP TS 23.081 and 23.088.
-         *
-         * @public
-         * @readonly
-         */
-        readonly additionalSignalInfo?: OPTIONAL<Ext_ExternalSignalInfo>,
-        /**
-         * @summary `orNotSupportedInGMSC`.
-         * @description
-         *
-         * OR not supported in GMSC.
-         *
-         * @public
-         * @readonly
-         */
-        readonly orNotSupportedInGMSC?: OPTIONAL<NULL>,
-        /**
-         * @summary `pre_pagingSupported`.
-         * @description
-         *
-         * Use and presence as in 3GPP TS 23.018.
-         *
-         * @public
-         * @readonly
-         */
-        readonly pre_pagingSupported?: OPTIONAL<NULL>,
-        /**
-         * @summary `longFTN_Supported`.
-         * @description
-         *
-         * Long FTN supported.
-         *
-         * @public
-         * @readonly
-         */
-        readonly longFTN_Supported?: OPTIONAL<NULL>,
-        /**
-         * @summary `suppress_VT_CSI`.
-         * @description
-         *
-         * Use and presence as in 3GPP TS 23.078.
-         *
-         * @public
-         * @readonly
-         */
-        readonly suppress_VT_CSI?: OPTIONAL<NULL>,
-        /**
-         * @summary `offeredCamel4CSIsInInterrogatingNode`.
-         * @description
-         *
-         * CAMEL4 CSIs in the interrogating node.
-         *
-         * @public
-         * @readonly
-         */
-        readonly offeredCamel4CSIsInInterrogatingNode?: OPTIONAL<OfferedCamel4CSIs>,
-        /**
-         * @summary `mtRoamingRetrySupported`.
-         * @description
-         *
-         * Use and presence as in 3GPP TS 23.018 and 3GPP TS 23.012.
-         *
-         * @public
-         * @readonly
-         */
-        readonly mtRoamingRetrySupported?: OPTIONAL<NULL>,
-        /**
-         * @summary `pagingArea`.
-         * @description
-         *
-         * Paging area.
-         *
-         * @public
-         * @readonly
-         */
-        readonly pagingArea?: OPTIONAL<PagingArea>,
-        /**
-         * @summary `callPriority`.
-         * @description
-         *
-         * eMLPP call priority.
-         *
-         * @public
-         * @readonly
-         */
-        readonly callPriority?: OPTIONAL<EMLPP_Priority>,
-        /**
-         * @summary `mtrf_Indicator`.
-         * @description
-         *
-         * MT Roaming Forwarding indicator.
-         *
-         * @public
-         * @readonly
-         */
-        readonly mtrf_Indicator?: OPTIONAL<NULL>,
-        /**
-         * @summary `oldMSC_Number`.
-         * @description
-         *
-         * Old MSC number for MT Roaming Forwarding.
-         *
-         * @public
-         * @readonly
-         */
-        readonly oldMSC_Number?: OPTIONAL<ISDN_AddressString>,
-        /**
-         * @summary `lastUsedLtePLMN_Id`.
-         * @description
-         *
-         * Last used LTE PLMN.
-         *
-         * @public
-         * @readonly
-         */
-        readonly lastUsedLtePLMN_Id?: OPTIONAL<PLMN_Id>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        imsi: IMSI,
+        msc_Number: ISDN_AddressString,
+        msisdn?: OPTIONAL<ISDN_AddressString>,
+        lmsi?: OPTIONAL<LMSI>,
+        gsm_BearerCapability?: OPTIONAL<ExternalSignalInfo>,
+        networkSignalInfo?: OPTIONAL<ExternalSignalInfo>,
+        suppressionOfAnnouncement?: OPTIONAL<SuppressionOfAnnouncement>,
+        gmsc_Address?: OPTIONAL<ISDN_AddressString>,
+        callReferenceNumber?: OPTIONAL<CallReferenceNumber>,
+        or_Interrogation?: OPTIONAL<NULL>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        alertingPattern?: OPTIONAL<AlertingPattern>,
+        ccbs_Call?: OPTIONAL<NULL>,
+        supportedCamelPhasesInInterrogatingNode?: OPTIONAL<SupportedCamelPhases>,
+        additionalSignalInfo?: OPTIONAL<Ext_ExternalSignalInfo>,
+        orNotSupportedInGMSC?: OPTIONAL<NULL>,
+        pre_pagingSupported?: OPTIONAL<NULL>,
+        longFTN_Supported?: OPTIONAL<NULL>,
+        suppress_VT_CSI?: OPTIONAL<NULL>,
+        offeredCamel4CSIsInInterrogatingNode?: OPTIONAL<OfferedCamel4CSIs>,
+        mtRoamingRetrySupported?: OPTIONAL<NULL>,
+        pagingArea?: OPTIONAL<PagingArea>,
+        callPriority?: OPTIONAL<EMLPP_Priority>,
+        mtrf_Indicator?: OPTIONAL<NULL>,
+        oldMSC_Number?: OPTIONAL<ISDN_AddressString>,
+        lastUsedLtePLMN_Id?: OPTIONAL<PLMN_Id>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.imsi = imsi;
+        this.msc_Number = msc_Number;
+        this.msisdn = msisdn;
+        this.lmsi = lmsi;
+        this.gsm_BearerCapability = gsm_BearerCapability;
+        this.networkSignalInfo = networkSignalInfo;
+        this.suppressionOfAnnouncement = suppressionOfAnnouncement;
+        this.gmsc_Address = gmsc_Address;
+        this.callReferenceNumber = callReferenceNumber;
+        this.or_Interrogation = or_Interrogation;
+        this.extensionContainer = extensionContainer;
+        this.alertingPattern = alertingPattern;
+        this.ccbs_Call = ccbs_Call;
+        this.supportedCamelPhasesInInterrogatingNode = supportedCamelPhasesInInterrogatingNode;
+        this.additionalSignalInfo = additionalSignalInfo;
+        this.orNotSupportedInGMSC = orNotSupportedInGMSC;
+        this.pre_pagingSupported = pre_pagingSupported;
+        this.longFTN_Supported = longFTN_Supported;
+        this.suppress_VT_CSI = suppress_VT_CSI;
+        this.offeredCamel4CSIsInInterrogatingNode = offeredCamel4CSIsInInterrogatingNode;
+        this.mtRoamingRetrySupported = mtRoamingRetrySupported;
+        this.pagingArea = pagingArea;
+        this.callPriority = callPriority;
+        this.mtrf_Indicator = mtrf_Indicator;
+        this.oldMSC_Number = oldMSC_Number;
+        this.lastUsedLtePLMN_Id = lastUsedLtePLMN_Id;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a ProvideRoamingNumberArg

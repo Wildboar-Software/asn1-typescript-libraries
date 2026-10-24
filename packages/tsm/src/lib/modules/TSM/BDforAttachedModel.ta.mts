@@ -45,51 +45,61 @@ import { ACBioContentInformation, _decode_ACBioContentInformation, _encode_ACBio
  */
 export
 class BDforAttachedModel {
+    /**
+     * @summary `templateData`.
+     * @description
+     *
+     * Reference template as `XtsmTemplate` (X.1089 biometric
+     * certificate). X.1084 §11.3, §11.5.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly templateData: XtsmTemplate;
+    /**
+     * @summary `sampleData`.
+     * @description
+     *
+     * Captured sample as BioAPI BIR (includes BSP/device info).
+     * [ISO/IEC 19784-1]; X.1084 §11.3–§11.4.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sampleData: SampleData;
+    /**
+     * @summary `digitalSignature`.
+     * @description
+     *
+     * CMS `SignedData` (X9.84) over the biometric process or payload.
+     * Assures integrity of that party's processing. X.1084 §11.1 item 4.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly digitalSignature: SignedData;
+    /**
+     * @summary `aCforBioOnClient`.
+     * @description
+     *
+     * Optional ISO/IEC 24761 ACBio for the client process. X.1084 §11.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly aCforBioOnClient?: OPTIONAL<ACBioContentInformation>;
+
     constructor (
-        /**
-         * @summary `templateData`.
-         * @description
-         *
-         * Reference template as `XtsmTemplate` (X.1089 biometric
-         * certificate). X.1084 §11.3, §11.5.
-         *
-         * @public
-         * @readonly
-         */
-        readonly templateData: XtsmTemplate,
-        /**
-         * @summary `sampleData`.
-         * @description
-         *
-         * Captured sample as BioAPI BIR (includes BSP/device info).
-         * [ISO/IEC 19784-1]; X.1084 §11.3–§11.4.
-         *
-         * @public
-         * @readonly
-         */
-        readonly sampleData: SampleData,
-        /**
-         * @summary `digitalSignature`.
-         * @description
-         *
-         * CMS `SignedData` (X9.84) over the biometric process or payload.
-         * Assures integrity of that party's processing. X.1084 §11.1 item 4.
-         *
-         * @public
-         * @readonly
-         */
-        readonly digitalSignature: SignedData,
-        /**
-         * @summary `aCforBioOnClient`.
-         * @description
-         *
-         * Optional ISO/IEC 24761 ACBio for the client process. X.1084 §11.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly aCforBioOnClient?: OPTIONAL<ACBioContentInformation>
-    ) {}
+        templateData: XtsmTemplate,
+        sampleData: SampleData,
+        digitalSignature: SignedData,
+        aCforBioOnClient?: OPTIONAL<ACBioContentInformation>
+    ) {
+        this.templateData = templateData;
+        this.sampleData = sampleData;
+        this.digitalSignature = digitalSignature;
+        this.aCforBioOnClient = aCforBioOnClient;
+    }
 
     /**
      * @summary Restructures an object into a BDforAttachedModel

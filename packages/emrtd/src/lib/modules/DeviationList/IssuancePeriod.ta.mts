@@ -32,22 +32,28 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class IssuancePeriod {
+    /**
+     * Start of the issuance dates, as `GeneralizedTime`.
+     * @summary `firstIssued`.
+     * @public
+     * @readonly
+     */
+    public readonly firstIssued: GeneralizedTime;
+    /**
+     * End of the issuance dates, as `GeneralizedTime`.
+     * @summary `lastIssued`.
+     * @public
+     * @readonly
+     */
+    public readonly lastIssued: GeneralizedTime;
+
     constructor (
-        /**
-         * Start of the issuance dates, as `GeneralizedTime`.
-         * @summary `firstIssued`.
-         * @public
-         * @readonly
-         */
-        readonly firstIssued: GeneralizedTime,
-        /**
-         * End of the issuance dates, as `GeneralizedTime`.
-         * @summary `lastIssued`.
-         * @public
-         * @readonly
-         */
-        readonly lastIssued: GeneralizedTime
-    ) {}
+        firstIssued: GeneralizedTime,
+        lastIssued: GeneralizedTime
+    ) {
+        this.firstIssued = firstIssued;
+        this.lastIssued = lastIssued;
+    }
 
     /**
      * @summary Restructures an object into a IssuancePeriod

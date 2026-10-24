@@ -40,40 +40,48 @@ import {
  *
  */
 export class PatientIdentification {
+    /**
+     * @summary `scheme`.
+     * @description
+     *
+     * `PATIENT-SCHEME.&id` of the identification scheme.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly scheme: OBJECT_IDENTIFIER;
+    /**
+     * @summary `schemeName`.
+     * @description
+     *
+     * Optional `PATIENT-SCHEME.&name`. ISO646String is not
+     * necessarily unique.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly schemeName: OPTIONAL<SchemeName>;
+    /**
+     * @summary `patientId`.
+     * @description
+     *
+     * `PATIENT-SCHEME.&Identification` of the patient within that
+     * scheme. Typically unique number + name.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly patientId: _Element;
+
     constructor(
-        /**
-         * @summary `scheme`.
-         * @description
-         *
-         * `PATIENT-SCHEME.&id` of the identification scheme.
-         *
-         * @public
-         * @readonly
-         */
-        readonly scheme: OBJECT_IDENTIFIER,
-        /**
-         * @summary `schemeName`.
-         * @description
-         *
-         * Optional `PATIENT-SCHEME.&name`. ISO646String is not
-         * necessarily unique.
-         *
-         * @public
-         * @readonly
-         */
-        readonly schemeName: OPTIONAL<SchemeName>,
-        /**
-         * @summary `patientId`.
-         * @description
-         *
-         * `PATIENT-SCHEME.&Identification` of the patient within that
-         * scheme. Typically unique number + name.
-         *
-         * @public
-         * @readonly
-         */
-        readonly patientId: _Element
-    ) {}
+        scheme: OBJECT_IDENTIFIER,
+        schemeName: OPTIONAL<SchemeName>,
+        patientId: _Element
+    ) {
+        this.scheme = scheme;
+        this.schemeName = schemeName;
+        this.patientId = patientId;
+    }
 
     /**
      * @summary Restructures an object into a PatientIdentification

@@ -47,56 +47,68 @@ import { Token, _decode_Token, _encode_Token } from "../DOR-definition/Token.ta.
  */
 export
 class DOR {
+    /**
+     * @summary `ae_identifier`.
+     * @description
+     *
+     * AE that holds the value. Mandatory for DFR produce and consume
+     * operations (ISO/IEC 10031-2 comment in the ASN.1).
+     * @public
+     * @readonly
+     */
+    public readonly ae_identifier: OPTIONAL<AE_Identifier>;
+    /**
+     * @summary `local_reference`.
+     * @description
+     *
+     * Pointer to the value in that AE.
+     * @public
+     * @readonly
+     */
+    public readonly local_reference: Local_reference;
+    /**
+     * @summary `data_object_type`.
+     * @description
+     *
+     * Abstract/transfer syntax of the referenced value. For a
+     * DFR-Reference, a DfrObjectClassID. ISO/IEC 10166-1:1991 §6.3.3.1.
+     * @public
+     * @readonly
+     */
+    public readonly data_object_type: OBJECT_IDENTIFIER;
+    /**
+     * @summary `quality_of_service`.
+     * @description
+     *
+     * QoS of this reference (ISO/IEC 10031-2).
+     * @public
+     * @readonly
+     */
+    public readonly quality_of_service?: OPTIONAL<Quality_of_Service>;
+    /**
+     * @summary `token`.
+     * @description
+     *
+     * Optional access token for a remote referent. Absent in
+     * DfrReferenceContent. ISO/IEC 10166-1:1991 §6.3.3.
+     * @public
+     * @readonly
+     */
+    public readonly token?: OPTIONAL<Token>;
+
     constructor (
-        /**
-         * @summary `ae_identifier`.
-         * @description
-         *
-         * AE that holds the value. Mandatory for DFR produce and consume
-         * operations (ISO/IEC 10031-2 comment in the ASN.1).
-         * @public
-         * @readonly
-         */
-        readonly ae_identifier: OPTIONAL<AE_Identifier>,
-        /**
-         * @summary `local_reference`.
-         * @description
-         *
-         * Pointer to the value in that AE.
-         * @public
-         * @readonly
-         */
-        readonly local_reference: Local_reference,
-        /**
-         * @summary `data_object_type`.
-         * @description
-         *
-         * Abstract/transfer syntax of the referenced value. For a
-         * DFR-Reference, a DfrObjectClassID. ISO/IEC 10166-1:1991 §6.3.3.1.
-         * @public
-         * @readonly
-         */
-        readonly data_object_type: OBJECT_IDENTIFIER,
-        /**
-         * @summary `quality_of_service`.
-         * @description
-         *
-         * QoS of this reference (ISO/IEC 10031-2).
-         * @public
-         * @readonly
-         */
-        readonly quality_of_service?: OPTIONAL<Quality_of_Service>,
-        /**
-         * @summary `token`.
-         * @description
-         *
-         * Optional access token for a remote referent. Absent in
-         * DfrReferenceContent. ISO/IEC 10166-1:1991 §6.3.3.
-         * @public
-         * @readonly
-         */
-        readonly token?: OPTIONAL<Token>
-    ) {}
+        ae_identifier: OPTIONAL<AE_Identifier>,
+        local_reference: Local_reference,
+        data_object_type: OBJECT_IDENTIFIER,
+        quality_of_service?: OPTIONAL<Quality_of_Service>,
+        token?: OPTIONAL<Token>
+    ) {
+        this.ae_identifier = ae_identifier;
+        this.local_reference = local_reference;
+        this.data_object_type = data_object_type;
+        this.quality_of_service = quality_of_service;
+        this.token = token;
+    }
 
     /**
      * @summary Restructures an object into a DOR

@@ -50,38 +50,50 @@ import {
  *
  */
 export class ProtectedPassword {
+    /**
+     * @summary `signature`.
+     * @public
+     * @readonly
+     */
+    public readonly signature: SIGNATURE;
+    /**
+     * @summary `time1`.
+     * @public
+     * @readonly
+     */
+    public readonly time1?: OPTIONAL<UTCTime>;
+    /**
+     * @summary `time2`.
+     * @public
+     * @readonly
+     */
+    public readonly time2?: OPTIONAL<UTCTime>;
+    /**
+     * @summary `random1`.
+     * @public
+     * @readonly
+     */
+    public readonly random1?: OPTIONAL<BIT_STRING>;
+    /**
+     * @summary `random2`.
+     * @public
+     * @readonly
+     */
+    public readonly random2?: OPTIONAL<BIT_STRING>;
+
     constructor(
-        /**
-         * @summary `signature`.
-         * @public
-         * @readonly
-         */
-        readonly signature: SIGNATURE,
-        /**
-         * @summary `time1`.
-         * @public
-         * @readonly
-         */
-        readonly time1?: OPTIONAL<UTCTime>,
-        /**
-         * @summary `time2`.
-         * @public
-         * @readonly
-         */
-        readonly time2?: OPTIONAL<UTCTime>,
-        /**
-         * @summary `random1`.
-         * @public
-         * @readonly
-         */
-        readonly random1?: OPTIONAL<BIT_STRING>,
-        /**
-         * @summary `random2`.
-         * @public
-         * @readonly
-         */
-        readonly random2?: OPTIONAL<BIT_STRING>
-    ) {}
+        signature: SIGNATURE,
+        time1?: OPTIONAL<UTCTime>,
+        time2?: OPTIONAL<UTCTime>,
+        random1?: OPTIONAL<BIT_STRING>,
+        random2?: OPTIONAL<BIT_STRING>
+    ) {
+        this.signature = signature;
+        this.time1 = time1;
+        this.time2 = time2;
+        this.random1 = random1;
+        this.random2 = random2;
+    }
 
     /**
      * @summary Restructures an object into a ProtectedPassword

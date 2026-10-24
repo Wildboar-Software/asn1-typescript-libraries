@@ -61,65 +61,79 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class AgentBusyEvent {
+    /**
+     * @summary `agentDevice`.
+     * @description
+     *
+     * Device at which the agent entered Busy.
+     * @public
+     * @readonly
+     */
+    public readonly agentDevice: SubjectDeviceID;
+    /**
+     * @summary `agentID`.
+     * @description
+     *
+     * Required if multiple agentIDs exist at the agent device.
+     * @public
+     * @readonly
+     */
+    public readonly agentID?: OPTIONAL<AgentID>;
+    /**
+     * @summary `acdGroup`.
+     * @description
+     *
+     * Present iff the event is associated with ACD group activity
+     * (§6.1.1.6.5); otherwise absent.
+     * @public
+     * @readonly
+     */
+    public readonly acdGroup?: OPTIONAL<DeviceID>;
+    /**
+     * @summary `pendingAgentState`.
+     * @description
+     *
+     * Next state after Busy ends: Working After Call, Not Ready, Ready, or
+     * Null. Required if the SF delays that transition.
+     * @public
+     * @readonly
+     */
+    public readonly pendingAgentState?: OPTIONAL<PendingAgentState>;
+    /**
+     * @summary `cause`.
+     * @description
+     *
+     * Reason for the event.
+     * @public
+     * @readonly
+     */
+    public readonly cause?: OPTIONAL<EventCause>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `agentDevice`.
-         * @description
-         *
-         * Device at which the agent entered Busy.
-         * @public
-         * @readonly
-         */
-        readonly agentDevice: SubjectDeviceID,
-        /**
-         * @summary `agentID`.
-         * @description
-         *
-         * Required if multiple agentIDs exist at the agent device.
-         * @public
-         * @readonly
-         */
-        readonly agentID?: OPTIONAL<AgentID>,
-        /**
-         * @summary `acdGroup`.
-         * @description
-         *
-         * Present iff the event is associated with ACD group activity
-         * (§6.1.1.6.5); otherwise absent.
-         * @public
-         * @readonly
-         */
-        readonly acdGroup?: OPTIONAL<DeviceID>,
-        /**
-         * @summary `pendingAgentState`.
-         * @description
-         *
-         * Next state after Busy ends: Working After Call, Not Ready, Ready, or
-         * Null. Required if the SF delays that transition.
-         * @public
-         * @readonly
-         */
-        readonly pendingAgentState?: OPTIONAL<PendingAgentState>,
-        /**
-         * @summary `cause`.
-         * @description
-         *
-         * Reason for the event.
-         * @public
-         * @readonly
-         */
-        readonly cause?: OPTIONAL<EventCause>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        agentDevice: SubjectDeviceID,
+        agentID?: OPTIONAL<AgentID>,
+        acdGroup?: OPTIONAL<DeviceID>,
+        pendingAgentState?: OPTIONAL<PendingAgentState>,
+        cause?: OPTIONAL<EventCause>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.agentDevice = agentDevice;
+        this.agentID = agentID;
+        this.acdGroup = acdGroup;
+        this.pendingAgentState = pendingAgentState;
+        this.cause = cause;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a AgentBusyEvent

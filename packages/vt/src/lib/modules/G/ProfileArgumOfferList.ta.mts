@@ -45,26 +45,32 @@ import { ParamOfferList, _decode_ParamOfferList, _encode_ParamOfferList } from "
  */
 export
 class ProfileArgumOfferList {
+    /**
+     * @summary `specialProfileArgums`.
+     * @description
+     * Arguments that do not map 1:1 onto VTE-parameters; identifiers
+     * come from the profile specification. ISO/IEC 9040:1997 §3.3.51.
+     * @public
+     * @readonly
+     */
+    public readonly specialProfileArgums?: OPTIONAL<ProfileArgumOfferList_specialProfileArgums_Item[]>;
+    /**
+     * @summary `vteParams`.
+     * @description
+     * Offered display/control/device objects and delivery-control.
+     * ISO/IEC 9040:1997 §3.3.50; ISO/IEC 9041-1:1997 §12.2.
+     * @public
+     * @readonly
+     */
+    public readonly vteParams?: OPTIONAL<ParamOfferList>;
+
     constructor (
-        /**
-         * @summary `specialProfileArgums`.
-         * @description
-         * Arguments that do not map 1:1 onto VTE-parameters; identifiers
-         * come from the profile specification. ISO/IEC 9040:1997 §3.3.51.
-         * @public
-         * @readonly
-         */
-        readonly specialProfileArgums?: OPTIONAL<ProfileArgumOfferList_specialProfileArgums_Item[]>,
-        /**
-         * @summary `vteParams`.
-         * @description
-         * Offered display/control/device objects and delivery-control.
-         * ISO/IEC 9040:1997 §3.3.50; ISO/IEC 9041-1:1997 §12.2.
-         * @public
-         * @readonly
-         */
-        readonly vteParams?: OPTIONAL<ParamOfferList>
-    ) {}
+        specialProfileArgums?: OPTIONAL<ProfileArgumOfferList_specialProfileArgums_Item[]>,
+        vteParams?: OPTIONAL<ParamOfferList>
+    ) {
+        this.specialProfileArgums = specialProfileArgums;
+        this.vteParams = vteParams;
+    }
 
     /**
      * @summary Restructures an object into a ProfileArgumOfferList

@@ -38,46 +38,56 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class SetMessageWaitingIndicatorArgument {
+    /**
+     * @summary `device`.
+     * @description
+     *
+     * Physical-element DeviceID; other IDs are rejected (ECMA-269 §21 FR
+     * 1).
+     * @public
+     * @readonly
+     */
+    public readonly device: DeviceID;
+    /**
+     * @summary `messageWaitingOn`.
+     * @description
+     *
+     * FALSE = off; TRUE = on.
+     * @public
+     * @readonly
+     */
+    public readonly messageWaitingOn: BOOLEAN;
+    /**
+     * @summary `deviceForMessage`.
+     * @description
+     *
+     * Device where the message is waiting.
+     * @public
+     * @readonly
+     */
+    public readonly deviceForMessage?: OPTIONAL<DeviceID>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `device`.
-         * @description
-         *
-         * Physical-element DeviceID; other IDs are rejected (ECMA-269 §21 FR
-         * 1).
-         * @public
-         * @readonly
-         */
-        readonly device: DeviceID,
-        /**
-         * @summary `messageWaitingOn`.
-         * @description
-         *
-         * FALSE = off; TRUE = on.
-         * @public
-         * @readonly
-         */
-        readonly messageWaitingOn: BOOLEAN,
-        /**
-         * @summary `deviceForMessage`.
-         * @description
-         *
-         * Device where the message is waiting.
-         * @public
-         * @readonly
-         */
-        readonly deviceForMessage?: OPTIONAL<DeviceID>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        device: DeviceID,
+        messageWaitingOn: BOOLEAN,
+        deviceForMessage?: OPTIONAL<DeviceID>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.device = device;
+        this.messageWaitingOn = messageWaitingOn;
+        this.deviceForMessage = deviceForMessage;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a SetMessageWaitingIndicatorArgument

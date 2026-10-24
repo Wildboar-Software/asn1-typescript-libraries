@@ -39,20 +39,26 @@ import {
  *
  */
 export class RelatedStoredFile_Item {
+    /**
+     * @summary `file_identifier`.
+     * @public
+     * @readonly
+     */
+    public readonly file_identifier: FileIdentifier;
+    /**
+     * @summary `relationship`.
+     * @public
+     * @readonly
+     */
+    public readonly relationship?: OPTIONAL<Relationship>;
+
     constructor(
-        /**
-         * @summary `file_identifier`.
-         * @public
-         * @readonly
-         */
-        readonly file_identifier: FileIdentifier,
-        /**
-         * @summary `relationship`.
-         * @public
-         * @readonly
-         */
-        readonly relationship?: OPTIONAL<Relationship>
-    ) {}
+        file_identifier: FileIdentifier,
+        relationship?: OPTIONAL<Relationship>
+    ) {
+        this.file_identifier = file_identifier;
+        this.relationship = relationship;
+    }
 
     /**
      * @summary Restructures an object into a RelatedStoredFile_Item

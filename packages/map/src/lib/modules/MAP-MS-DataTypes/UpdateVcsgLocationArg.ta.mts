@@ -38,68 +38,82 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
  */
 export
 class UpdateVcsgLocationArg {
+    /**
+     * @summary `imsi`.
+     * @description
+     *
+     * International Mobile Subscriber Identity as in 3GPP TS 23.003.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.2.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly imsi: IMSI;
+    /**
+     * @summary `msisdn`.
+     * @description
+     *
+     * MSISDN as in 3GPP TS 23.003.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.2.17).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly msisdn?: OPTIONAL<ISDN_AddressString>;
+    /**
+     * @summary `vlr_Number`.
+     * @description
+     *
+     * ISDN number of a VLR.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.2.14).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly vlr_Number?: OPTIONAL<ISDN_AddressString>;
+    /**
+     * @summary `sgsn_Number`.
+     * @description
+     *
+     * ISDN number of an SGSN. In EPS, may be an IWF number.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.2.38).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sgsn_Number?: OPTIONAL<ISDN_AddressString>;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `imsi`.
-         * @description
-         *
-         * International Mobile Subscriber Identity as in 3GPP TS 23.003.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.2.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly imsi: IMSI,
-        /**
-         * @summary `msisdn`.
-         * @description
-         *
-         * MSISDN as in 3GPP TS 23.003.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.2.17).
-         *
-         * @public
-         * @readonly
-         */
-        readonly msisdn?: OPTIONAL<ISDN_AddressString>,
-        /**
-         * @summary `vlr_Number`.
-         * @description
-         *
-         * ISDN number of a VLR.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.2.14).
-         *
-         * @public
-         * @readonly
-         */
-        readonly vlr_Number?: OPTIONAL<ISDN_AddressString>,
-        /**
-         * @summary `sgsn_Number`.
-         * @description
-         *
-         * ISDN number of an SGSN. In EPS, may be an IWF number.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.2.38).
-         *
-         * @public
-         * @readonly
-         */
-        readonly sgsn_Number?: OPTIONAL<ISDN_AddressString>,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        imsi: IMSI,
+        msisdn?: OPTIONAL<ISDN_AddressString>,
+        vlr_Number?: OPTIONAL<ISDN_AddressString>,
+        sgsn_Number?: OPTIONAL<ISDN_AddressString>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.imsi = imsi;
+        this.msisdn = msisdn;
+        this.vlr_Number = vlr_Number;
+        this.sgsn_Number = sgsn_Number;
+        this.extensionContainer = extensionContainer;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a UpdateVcsgLocationArg

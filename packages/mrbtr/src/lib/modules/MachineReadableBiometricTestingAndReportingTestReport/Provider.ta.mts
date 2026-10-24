@@ -39,52 +39,62 @@ import { RoleProvider, _enum_for_RoleProvider, _decode_RoleProvider, _encode_Rol
  */
 export
 class Provider {
+    /**
+     * @summary `nameProvider`.
+     * @description
+     *
+     * Provider name. Clause 6.4.2.2 cites ISO/IEC 9592-2 for `Name`;
+     * Annex A imports `Name` from ITU-T X.501 InformationFramework.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly nameProvider: Name;
+    /**
+     * @summary `typeProvider`.
+     * @description
+     *
+     * `non-profit`, `university`, `corporation`, `individual`, or
+     * `government` (Clause 6.4.2.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly typeProvider: TypeProvider;
+    /**
+     * @summary `roleProvider`.
+     * @description
+     *
+     * `manufacturer` (design or creation), `reseller` (packages or
+     * resells), `integrator` (may combine components into one
+     * atomic component), or `other` (Clause 6.4.2.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly roleProvider: RoleProvider;
+    /**
+     * @summary `contactInformation`.
+     * @description
+     *
+     * Email, postal address, or phone (Clause 6.4.2.2, Annex B.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly contactInformation?: OPTIONAL<VisibleString>;
+
     constructor (
-        /**
-         * @summary `nameProvider`.
-         * @description
-         *
-         * Provider name. Clause 6.4.2.2 cites ISO/IEC 9592-2 for `Name`;
-         * Annex A imports `Name` from ITU-T X.501 InformationFramework.
-         *
-         * @public
-         * @readonly
-         */
-        readonly nameProvider: Name,
-        /**
-         * @summary `typeProvider`.
-         * @description
-         *
-         * `non-profit`, `university`, `corporation`, `individual`, or
-         * `government` (Clause 6.4.2.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly typeProvider: TypeProvider,
-        /**
-         * @summary `roleProvider`.
-         * @description
-         *
-         * `manufacturer` (design or creation), `reseller` (packages or
-         * resells), `integrator` (may combine components into one
-         * atomic component), or `other` (Clause 6.4.2.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly roleProvider: RoleProvider,
-        /**
-         * @summary `contactInformation`.
-         * @description
-         *
-         * Email, postal address, or phone (Clause 6.4.2.2, Annex B.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly contactInformation?: OPTIONAL<VisibleString>
-    ) {}
+        nameProvider: Name,
+        typeProvider: TypeProvider,
+        roleProvider: RoleProvider,
+        contactInformation?: OPTIONAL<VisibleString>
+    ) {
+        this.nameProvider = nameProvider;
+        this.typeProvider = typeProvider;
+        this.roleProvider = roleProvider;
+        this.contactInformation = contactInformation;
+    }
 
     /**
      * @summary Restructures an object into a Provider

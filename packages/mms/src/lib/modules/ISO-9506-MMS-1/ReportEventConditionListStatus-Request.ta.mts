@@ -37,32 +37,38 @@ import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-
  */
 export
 class ReportEventConditionListStatus_Request {
+    /**
+     * @summary `eventConditionListName`.
+     * @description
+     *
+     * List whose member statuses are reported.
+     *
+     * [ISO 9506-1:2003 §22.7.1.1.1]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly eventConditionListName: ObjectName;
+    /**
+     * @summary `continueAfter`.
+     * @description
+     *
+     * Identifier of the Event Condition after which to resume.
+     *
+     * [ISO 9506-1:2003 §22.7.1.1.2]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly continueAfter?: OPTIONAL<Identifier>;
+
     constructor (
-        /**
-         * @summary `eventConditionListName`.
-         * @description
-         *
-         * List whose member statuses are reported.
-         *
-         * [ISO 9506-1:2003 §22.7.1.1.1]
-         *
-         * @public
-         * @readonly
-         */
-        readonly eventConditionListName: ObjectName,
-        /**
-         * @summary `continueAfter`.
-         * @description
-         *
-         * Identifier of the Event Condition after which to resume.
-         *
-         * [ISO 9506-1:2003 §22.7.1.1.2]
-         *
-         * @public
-         * @readonly
-         */
-        readonly continueAfter?: OPTIONAL<Identifier>
-    ) {}
+        eventConditionListName: ObjectName,
+        continueAfter?: OPTIONAL<Identifier>
+    ) {
+        this.eventConditionListName = eventConditionListName;
+        this.continueAfter = continueAfter;
+    }
 
     /**
      * @summary Restructures an object into a ReportEventConditionListStatus_Request

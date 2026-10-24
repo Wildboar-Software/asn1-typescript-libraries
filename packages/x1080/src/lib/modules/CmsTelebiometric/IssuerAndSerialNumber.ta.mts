@@ -41,31 +41,37 @@ import {
  *
  */
 export class IssuerAndSerialNumber {
+    /**
+     * @summary `issuer`.
+     * @description
+     *
+     * Distinguished name of the issuing CA; equals `issuer` of
+     * the PKC in question.
+     * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.3.3.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly issuer: DistinguishedName;
+    /**
+     * @summary `serialNumber`.
+     * @description
+     *
+     * Serial number of the PKC in question.
+     * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.3.3.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly serialNumber: CertificateSerialNumber;
+
     constructor(
-        /**
-         * @summary `issuer`.
-         * @description
-         *
-         * Distinguished name of the issuing CA; equals `issuer` of
-         * the PKC in question.
-         * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.3.3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly issuer: DistinguishedName,
-        /**
-         * @summary `serialNumber`.
-         * @description
-         *
-         * Serial number of the PKC in question.
-         * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.3.3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly serialNumber: CertificateSerialNumber
-    ) {}
+        issuer: DistinguishedName,
+        serialNumber: CertificateSerialNumber
+    ) {
+        this.issuer = issuer;
+        this.serialNumber = serialNumber;
+    }
 
     /**
      * @summary Restructures an object into a IssuerAndSerialNumber

@@ -42,27 +42,33 @@ import { ColourAssignment_value, _decode_ColourAssignment_value, _encode_ColourA
  */
 export
 class ColourAssignment {
+    /**
+     * @summary `type_`.
+     * @description
+     * Colour-assignment-type. Modal until the next `type` in the
+     * same list. Absent or `{vt-b-colour-iso6429}` selects
+     * ISO/IEC 6429 English colour names. ISO/IEC 9040:1997
+     * §18.2.5; ISO/IEC 9041-1:1997 §12.3.2.
+     * @public
+     * @readonly
+     */
+    public readonly type_: OPTIONAL<OBJECT_IDENTIFIER>;
+    /**
+     * @summary `value`.
+     * @description
+     * Colour-assignment-value. ISO/IEC 9040:1997 §18.2.5.
+     * @public
+     * @readonly
+     */
+    public readonly value: ColourAssignment_value;
+
     constructor (
-        /**
-         * @summary `type_`.
-         * @description
-         * Colour-assignment-type. Modal until the next `type` in the
-         * same list. Absent or `{vt-b-colour-iso6429}` selects
-         * ISO/IEC 6429 English colour names. ISO/IEC 9040:1997
-         * §18.2.5; ISO/IEC 9041-1:1997 §12.3.2.
-         * @public
-         * @readonly
-         */
-        readonly type_: OPTIONAL<OBJECT_IDENTIFIER>,
-        /**
-         * @summary `value`.
-         * @description
-         * Colour-assignment-value. ISO/IEC 9040:1997 §18.2.5.
-         * @public
-         * @readonly
-         */
-        readonly value: ColourAssignment_value
-    ) {}
+        type_: OPTIONAL<OBJECT_IDENTIFIER>,
+        value: ColourAssignment_value
+    ) {
+        this.type_ = type_;
+        this.value = value;
+    }
 
     /**
      * @summary Restructures an object into a ColourAssignment

@@ -34,18 +34,22 @@ import { Opaque, _decode_Opaque, _encode_Opaque } from "../TSM/Opaque.ta.mjs";
  */
 export
 class Signature_dsa {
+    /**
+     * @summary `sha_hash`.
+     * @description
+     *
+     * 20-octet SHA-1 digest. X.1084 Annex A.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sha_hash: Opaque;
+
     constructor (
-        /**
-         * @summary `sha_hash`.
-         * @description
-         *
-         * 20-octet SHA-1 digest. X.1084 Annex A.
-         *
-         * @public
-         * @readonly
-         */
-        readonly sha_hash: Opaque
-    ) {}
+        sha_hash: Opaque
+    ) {
+        this.sha_hash = sha_hash;
+    }
 
     /**
      * @summary Restructures an object into a Signature_dsa

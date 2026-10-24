@@ -33,40 +33,48 @@ import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-
  */
 export
 class AddToUnitControl_Request {
+    /**
+     * @summary `unitControl`.
+     * @description
+     *
+     * Unit Control whose constituent lists are extended. ISO 9506-1:2003
+     * §13.9.1.1.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly unitControl: Identifier;
+    /**
+     * @summary `domains`.
+     * @description
+     *
+     * Zero or more Domains to add to `&Domains`. ISO 9506-1:2003
+     * §13.9.1.1.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly domains: Identifier[];
+    /**
+     * @summary `programInvocations`.
+     * @description
+     *
+     * Zero or more Program Invocations to add to `&ProgramInvocations`. ISO 9506-1:2003 §13.9.1.1.3.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly programInvocations: Identifier[];
+
     constructor (
-        /**
-         * @summary `unitControl`.
-         * @description
-         *
-         * Unit Control whose constituent lists are extended. ISO 9506-1:2003
-         * §13.9.1.1.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly unitControl: Identifier,
-        /**
-         * @summary `domains`.
-         * @description
-         *
-         * Zero or more Domains to add to `&Domains`. ISO 9506-1:2003
-         * §13.9.1.1.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly domains: Identifier[],
-        /**
-         * @summary `programInvocations`.
-         * @description
-         *
-         * Zero or more Program Invocations to add to `&ProgramInvocations`. ISO 9506-1:2003 §13.9.1.1.3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly programInvocations: Identifier[]
-    ) {}
+        unitControl: Identifier,
+        domains: Identifier[],
+        programInvocations: Identifier[]
+    ) {
+        this.unitControl = unitControl;
+        this.domains = domains;
+        this.programInvocations = programInvocations;
+    }
 
     /**
      * @summary Restructures an object into a AddToUnitControl_Request

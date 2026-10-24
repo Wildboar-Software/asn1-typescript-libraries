@@ -41,46 +41,56 @@ import {
  *
  */
 export class AccessPoint {
+    /**
+     * @summary `ae_title`.
+     * @description
+     *
+     * DSA's Name. Ignored for LDAP servers.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ae_title: Name;
+    /**
+     * @summary `address`.
+     * @description
+     *
+     * PresentationAddress. For IDM/DSP-over-TCP, ignore pSelector /
+     * sSelector / tSelector. LDAP: those selectors ignored too.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly address: PresentationAddress;
+    /**
+     * @summary `protocolInformation`.
+     * @description
+     *
+     * SET SIZE (1..MAX). Ignored for LDAP. Empty SET illegal; omit
+     * instead.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly protocolInformation?: OPTIONAL<ProtocolInformation[]>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `ae_title`.
-         * @description
-         *
-         * DSA's Name. Ignored for LDAP servers.
-         *
-         * @public
-         * @readonly
-         */
-        readonly ae_title: Name,
-        /**
-         * @summary `address`.
-         * @description
-         *
-         * PresentationAddress. For IDM/DSP-over-TCP, ignore pSelector /
-         * sSelector / tSelector. LDAP: those selectors ignored too.
-         *
-         * @public
-         * @readonly
-         */
-        readonly address: PresentationAddress,
-        /**
-         * @summary `protocolInformation`.
-         * @description
-         *
-         * SET SIZE (1..MAX). Ignored for LDAP. Empty SET illegal; omit
-         * instead.
-         *
-         * @public
-         * @readonly
-         */
-        readonly protocolInformation?: OPTIONAL<ProtocolInformation[]>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        ae_title: Name,
+        address: PresentationAddress,
+        protocolInformation?: OPTIONAL<ProtocolInformation[]>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.ae_title = ae_title;
+        this.address = address;
+        this.protocolInformation = protocolInformation;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a AccessPoint

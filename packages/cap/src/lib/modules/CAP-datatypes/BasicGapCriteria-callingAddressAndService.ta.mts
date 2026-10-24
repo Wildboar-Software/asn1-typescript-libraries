@@ -22,33 +22,41 @@ import { type ServiceKey, _decode_ServiceKey, _encode_ServiceKey } from "../Core
  *
  */
 export class BasicGapCriteria_callingAddressAndService {
+    /**
+     * @summary `callingAddressValue`.
+     * @description
+     *
+     * Leading digits of the calling party number. Incomplete numbers
+     * allowed. For call forwarding, the address to gap is the redirecting
+     * number placed in InitialDP.
+     * (3GPP TS 29.078 V19.0.0 clauses 5.1 and 11.5).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly callingAddressValue: Digits;
+    /**
+     * @summary `serviceKey`.
+     * @description
+     *
+     * Service Key that must also match for gapping to apply.
+     * (3GPP TS 29.078 V19.0.0 clause 11.5).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly serviceKey: ServiceKey;
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `callingAddressValue`.
-         * @description
-         *
-         * Leading digits of the calling party number. Incomplete numbers
-         * allowed. For call forwarding, the address to gap is the redirecting
-         * number placed in InitialDP.
-         * (3GPP TS 29.078 V19.0.0 clauses 5.1 and 11.5).
-         *
-         * @public
-         * @readonly
-         */
-        readonly callingAddressValue: Digits,
-        /**
-         * @summary `serviceKey`.
-         * @description
-         *
-         * Service Key that must also match for gapping to apply.
-         * (3GPP TS 29.078 V19.0.0 clause 11.5).
-         *
-         * @public
-         * @readonly
-         */
-        readonly serviceKey: ServiceKey,
-        readonly _unrecognizedExtensionsList: _Element[] = [],
-    ) {}
+        callingAddressValue: Digits,
+        serviceKey: ServiceKey,
+        _unrecognizedExtensionsList: _Element[] = [],
+    ) {
+        this.callingAddressValue = callingAddressValue;
+        this.serviceKey = serviceKey;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     public static _from_object (_o: { [_K in keyof (BasicGapCriteria_callingAddressAndService)]: (BasicGapCriteria_callingAddressAndService)[_K] }): BasicGapCriteria_callingAddressAndService {
         return new BasicGapCriteria_callingAddressAndService(_o.callingAddressValue, _o.serviceKey, _o._unrecognizedExtensionsList);

@@ -40,72 +40,86 @@ import { SMS_CAMEL_TDP_DataList, _decode_SMS_CAMEL_TDP_DataList, _encode_SMS_CAM
  */
 export
 class SMS_CSI {
+    /**
+     * @summary `sms_CAMEL_TDP_DataList`.
+     * @description
+     *
+     * SMS CAMEL TDP data. Shall be present in SMS-CSI; in the first segment
+     * if segmented.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sms_CAMEL_TDP_DataList?: OPTIONAL<SMS_CAMEL_TDP_DataList>;
+    /**
+     * @summary `camelCapabilityHandling`.
+     * @description
+     *
+     * CAMEL phase of this CSI: 1-4. Values greater than 4 shall be treated
+     * as CAMEL phase 4.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly camelCapabilityHandling?: OPTIONAL<CamelCapabilityHandling>;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary `notificationToCSE`.
+     * @description
+     *
+     * Shall not be present when this CSI is sent to VLR, SGSN, or GMSC. May
+     * be included only in ATSI/ATM ack/NSDC.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly notificationToCSE?: OPTIONAL<NULL>;
+    /**
+     * @summary `csi_Active`.
+     * @description
+     *
+     * Shall not be present when this CSI is sent to VLR, SGSN, or GMSC. May
+     * be included only in ATSI/ATM ack/NSDC.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly csi_Active?: OPTIONAL<NULL>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `sms_CAMEL_TDP_DataList`.
-         * @description
-         *
-         * SMS CAMEL TDP data. Shall be present in SMS-CSI; in the first segment
-         * if segmented.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly sms_CAMEL_TDP_DataList?: OPTIONAL<SMS_CAMEL_TDP_DataList>,
-        /**
-         * @summary `camelCapabilityHandling`.
-         * @description
-         *
-         * CAMEL phase of this CSI: 1-4. Values greater than 4 shall be treated
-         * as CAMEL phase 4.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly camelCapabilityHandling?: OPTIONAL<CamelCapabilityHandling>,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary `notificationToCSE`.
-         * @description
-         *
-         * Shall not be present when this CSI is sent to VLR, SGSN, or GMSC. May
-         * be included only in ATSI/ATM ack/NSDC.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly notificationToCSE?: OPTIONAL<NULL>,
-        /**
-         * @summary `csi_Active`.
-         * @description
-         *
-         * Shall not be present when this CSI is sent to VLR, SGSN, or GMSC. May
-         * be included only in ATSI/ATM ack/NSDC.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly csi_Active?: OPTIONAL<NULL>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        sms_CAMEL_TDP_DataList?: OPTIONAL<SMS_CAMEL_TDP_DataList>,
+        camelCapabilityHandling?: OPTIONAL<CamelCapabilityHandling>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        notificationToCSE?: OPTIONAL<NULL>,
+        csi_Active?: OPTIONAL<NULL>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.sms_CAMEL_TDP_DataList = sms_CAMEL_TDP_DataList;
+        this.camelCapabilityHandling = camelCapabilityHandling;
+        this.extensionContainer = extensionContainer;
+        this.notificationToCSE = notificationToCSE;
+        this.csi_Active = csi_Active;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a SMS_CSI

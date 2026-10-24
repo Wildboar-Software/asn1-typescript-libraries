@@ -31,44 +31,54 @@ import { OccurrenceInfo, _decode_OccurrenceInfo, _encode_OccurrenceInfo, _enum_f
  */
 export
 class AreaEventInfo {
+    /**
+     * @summary `areaDefinition`.
+     * @description
+     *
+     * List of areas.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly areaDefinition: AreaDefinition;
+    /**
+     * @summary `occurrenceInfo`.
+     * @description
+     *
+     * oneTimeEvent or multipleTimeEvent.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly occurrenceInfo?: OPTIONAL<OccurrenceInfo>;
+    /**
+     * @summary `intervalTime`.
+     * @description
+     *
+     * Minimum interval between area reports in seconds (1..32767).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly intervalTime?: OPTIONAL<IntervalTime>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `areaDefinition`.
-         * @description
-         *
-         * List of areas.
-         *
-         * @public
-         * @readonly
-         */
-        readonly areaDefinition: AreaDefinition,
-        /**
-         * @summary `occurrenceInfo`.
-         * @description
-         *
-         * oneTimeEvent or multipleTimeEvent.
-         *
-         * @public
-         * @readonly
-         */
-        readonly occurrenceInfo?: OPTIONAL<OccurrenceInfo>,
-        /**
-         * @summary `intervalTime`.
-         * @description
-         *
-         * Minimum interval between area reports in seconds (1..32767).
-         *
-         * @public
-         * @readonly
-         */
-        readonly intervalTime?: OPTIONAL<IntervalTime>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        areaDefinition: AreaDefinition,
+        occurrenceInfo?: OPTIONAL<OccurrenceInfo>,
+        intervalTime?: OPTIONAL<IntervalTime>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.areaDefinition = areaDefinition;
+        this.occurrenceInfo = occurrenceInfo;
+        this.intervalTime = intervalTime;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a AreaEventInfo

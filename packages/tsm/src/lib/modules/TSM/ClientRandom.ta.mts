@@ -37,29 +37,35 @@ import { Opaque, _decode_Opaque, _encode_Opaque } from "../TSM/Opaque.ta.mjs";
  */
 export
 class ClientRandom {
+    /**
+     * @summary `gmt_unix_time`.
+     * @description
+     *
+     * GMT Unix time in seconds, as in TLS Random. X.1084 Annex A.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly gmt_unix_time: UINT32;
+    /**
+     * @summary `random_bytes`.
+     * @description
+     *
+     * Cryptographic random octets (28 for client, 57 for server in
+     * Annex A). X.1084 Annex A.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly random_bytes: Opaque;
+
     constructor (
-        /**
-         * @summary `gmt_unix_time`.
-         * @description
-         *
-         * GMT Unix time in seconds, as in TLS Random. X.1084 Annex A.
-         *
-         * @public
-         * @readonly
-         */
-        readonly gmt_unix_time: UINT32,
-        /**
-         * @summary `random_bytes`.
-         * @description
-         *
-         * Cryptographic random octets (28 for client, 57 for server in
-         * Annex A). X.1084 Annex A.
-         *
-         * @public
-         * @readonly
-         */
-        readonly random_bytes: Opaque
-    ) {}
+        gmt_unix_time: UINT32,
+        random_bytes: Opaque
+    ) {
+        this.gmt_unix_time = gmt_unix_time;
+        this.random_bytes = random_bytes;
+    }
 
     /**
      * @summary Restructures an object into a ClientRandom

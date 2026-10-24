@@ -50,58 +50,70 @@ import {
  *
  */
 export class SigncryptedData {
+    /**
+     * @summary `version`.
+     * @description
+     *
+     * Syntax version number (ITU-T X.894 | ISO/IEC 24824-4 clause 7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly version: CMSVersion;
+    /**
+     * @summary `contentInformation`.
+     * @description
+     *
+     * Processing mode OID and optional content (ITU-T X.894 | ISO/IEC 24824-4 clause 7.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly contentInformation: ContentInformation;
+    /**
+     * @summary `certificates`.
+     * @description
+     *
+     * Optional certificates to help validate signcrypter public keys (ITU-T X.894 | ISO/IEC 24824-4 clause 7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly certificates: OPTIONAL<Certificates>;
+    /**
+     * @summary `crls`.
+     * @description
+     *
+     * Optional CRLs for signcrypter certificates (ITU-T X.894 | ISO/IEC 24824-4 clause 7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly crls: OPTIONAL<CRLs>;
+    /**
+     * @summary `signcrypters`.
+     * @description
+     *
+     * Per-recipient signcrypter information; at least one (ITU-T X.894 | ISO/IEC 24824-4 clause 7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly signcrypters: Signcrypters;
+
     constructor(
-        /**
-         * @summary `version`.
-         * @description
-         *
-         * Syntax version number (ITU-T X.894 | ISO/IEC 24824-4 clause 7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly version: CMSVersion,
-        /**
-         * @summary `contentInformation`.
-         * @description
-         *
-         * Processing mode OID and optional content (ITU-T X.894 | ISO/IEC 24824-4 clause 7.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly contentInformation: ContentInformation,
-        /**
-         * @summary `certificates`.
-         * @description
-         *
-         * Optional certificates to help validate signcrypter public keys (ITU-T X.894 | ISO/IEC 24824-4 clause 7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly certificates: OPTIONAL<Certificates>,
-        /**
-         * @summary `crls`.
-         * @description
-         *
-         * Optional CRLs for signcrypter certificates (ITU-T X.894 | ISO/IEC 24824-4 clause 7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly crls: OPTIONAL<CRLs>,
-        /**
-         * @summary `signcrypters`.
-         * @description
-         *
-         * Per-recipient signcrypter information; at least one (ITU-T X.894 | ISO/IEC 24824-4 clause 7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly signcrypters: Signcrypters
-    ) {}
+        version: CMSVersion,
+        contentInformation: ContentInformation,
+        certificates: OPTIONAL<Certificates>,
+        crls: OPTIONAL<CRLs>,
+        signcrypters: Signcrypters
+    ) {
+        this.version = version;
+        this.contentInformation = contentInformation;
+        this.certificates = certificates;
+        this.crls = crls;
+        this.signcrypters = signcrypters;
+    }
 
     /**
      * @summary Restructures an object into a SigncryptedData

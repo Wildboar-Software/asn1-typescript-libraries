@@ -65,121 +65,143 @@ import {
  *
  */
 export class CertTemplate {
+    /**
+     * @summary `version`.
+     * @description
+     *
+     * MUST be 2 if supplied; SHOULD be omitted
+     * ([RFC 4211 §5](https://datatracker.ietf.org/doc/html/rfc4211#section-5)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly version?: OPTIONAL<Version>;
+    /**
+     * @summary `serialNumber`.
+     * @description
+     *
+     * MUST be omitted; assigned by the CA during certificate
+     * creation ([RFC 4211 §5](https://datatracker.ietf.org/doc/html/rfc4211#section-5)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly serialNumber?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `signingAlg`.
+     * @description
+     *
+     * MUST be omitted; assigned by the CA during certificate
+     * creation ([RFC 4211 §5](https://datatracker.ietf.org/doc/html/rfc4211#section-5)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly signingAlg?: OPTIONAL<AlgorithmIdentifier>;
+    /**
+     * @summary `issuer`.
+     * @description
+     *
+     * Normally omitted. Set to the desired CA when an RA serves
+     * more than one CA ([RFC 4211 §5](https://datatracker.ietf.org/doc/html/rfc4211#section-5)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly issuer?: OPTIONAL<Name>;
+    /**
+     * @summary `validity`.
+     * @description
+     *
+     * Normally omitted. May request a future start or specific
+     * expiry (e.g. matching an existing cert for cross-certification).
+     * If present, at least one of `notBefore` / `notAfter` MUST be
+     * specified ([RFC 4211 §5](https://datatracker.ietf.org/doc/html/rfc4211#section-5)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly validity?: OPTIONAL<OptionalValidity>;
+    /**
+     * @summary `subject`.
+     * @description
+     *
+     * Suggested name for the requestor; normally a name previously
+     * issued to the requestor by the CA ([RFC 4211 §5](https://datatracker.ietf.org/doc/html/rfc4211#section-5)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly subject?: OPTIONAL<Name>;
+    /**
+     * @summary `publicKey`.
+     * @description
+     *
+     * Public key for which the certificate is created. MUST be
+     * filled in if the requestor generates its own key; omitted if
+     * the RA/CA generates the key ([RFC 4211 §5](https://datatracker.ietf.org/doc/html/rfc4211#section-5)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly publicKey?: OPTIONAL<SubjectPublicKeyInfo>;
+    /**
+     * @summary `issuerUID`.
+     * @description
+     *
+     * MUST be omitted; deprecated in the certificate profile
+     * ([RFC 4211 §5](https://datatracker.ietf.org/doc/html/rfc4211#section-5)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly issuerUID?: OPTIONAL<UniqueIdentifier>;
+    /**
+     * @summary `subjectUID`.
+     * @description
+     *
+     * MUST be omitted; deprecated in the certificate profile
+     * ([RFC 4211 §5](https://datatracker.ietf.org/doc/html/rfc4211#section-5)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly subjectUID?: OPTIONAL<UniqueIdentifier>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Extensions the requestor wants in the certificate (e.g. key
+     * usage) ([RFC 4211 §5](https://datatracker.ietf.org/doc/html/rfc4211#section-5)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<Extensions>;
+
     constructor(
-        /**
-         * @summary `version`.
-         * @description
-         *
-         * MUST be 2 if supplied; SHOULD be omitted
-         * ([RFC 4211 §5](https://datatracker.ietf.org/doc/html/rfc4211#section-5)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly version?: OPTIONAL<Version>,
-        /**
-         * @summary `serialNumber`.
-         * @description
-         *
-         * MUST be omitted; assigned by the CA during certificate
-         * creation ([RFC 4211 §5](https://datatracker.ietf.org/doc/html/rfc4211#section-5)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly serialNumber?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `signingAlg`.
-         * @description
-         *
-         * MUST be omitted; assigned by the CA during certificate
-         * creation ([RFC 4211 §5](https://datatracker.ietf.org/doc/html/rfc4211#section-5)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly signingAlg?: OPTIONAL<AlgorithmIdentifier>,
-        /**
-         * @summary `issuer`.
-         * @description
-         *
-         * Normally omitted. Set to the desired CA when an RA serves
-         * more than one CA ([RFC 4211 §5](https://datatracker.ietf.org/doc/html/rfc4211#section-5)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly issuer?: OPTIONAL<Name>,
-        /**
-         * @summary `validity`.
-         * @description
-         *
-         * Normally omitted. May request a future start or specific
-         * expiry (e.g. matching an existing cert for cross-certification).
-         * If present, at least one of `notBefore` / `notAfter` MUST be
-         * specified ([RFC 4211 §5](https://datatracker.ietf.org/doc/html/rfc4211#section-5)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly validity?: OPTIONAL<OptionalValidity>,
-        /**
-         * @summary `subject`.
-         * @description
-         *
-         * Suggested name for the requestor; normally a name previously
-         * issued to the requestor by the CA ([RFC 4211 §5](https://datatracker.ietf.org/doc/html/rfc4211#section-5)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly subject?: OPTIONAL<Name>,
-        /**
-         * @summary `publicKey`.
-         * @description
-         *
-         * Public key for which the certificate is created. MUST be
-         * filled in if the requestor generates its own key; omitted if
-         * the RA/CA generates the key ([RFC 4211 §5](https://datatracker.ietf.org/doc/html/rfc4211#section-5)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly publicKey?: OPTIONAL<SubjectPublicKeyInfo>,
-        /**
-         * @summary `issuerUID`.
-         * @description
-         *
-         * MUST be omitted; deprecated in the certificate profile
-         * ([RFC 4211 §5](https://datatracker.ietf.org/doc/html/rfc4211#section-5)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly issuerUID?: OPTIONAL<UniqueIdentifier>,
-        /**
-         * @summary `subjectUID`.
-         * @description
-         *
-         * MUST be omitted; deprecated in the certificate profile
-         * ([RFC 4211 §5](https://datatracker.ietf.org/doc/html/rfc4211#section-5)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly subjectUID?: OPTIONAL<UniqueIdentifier>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Extensions the requestor wants in the certificate (e.g. key
-         * usage) ([RFC 4211 §5](https://datatracker.ietf.org/doc/html/rfc4211#section-5)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<Extensions>
-    ) {}
+        version?: OPTIONAL<Version>,
+        serialNumber?: OPTIONAL<INTEGER>,
+        signingAlg?: OPTIONAL<AlgorithmIdentifier>,
+        issuer?: OPTIONAL<Name>,
+        validity?: OPTIONAL<OptionalValidity>,
+        subject?: OPTIONAL<Name>,
+        publicKey?: OPTIONAL<SubjectPublicKeyInfo>,
+        issuerUID?: OPTIONAL<UniqueIdentifier>,
+        subjectUID?: OPTIONAL<UniqueIdentifier>,
+        extensions?: OPTIONAL<Extensions>
+    ) {
+        this.version = version;
+        this.serialNumber = serialNumber;
+        this.signingAlg = signingAlg;
+        this.issuer = issuer;
+        this.validity = validity;
+        this.subject = subject;
+        this.publicKey = publicKey;
+        this.issuerUID = issuerUID;
+        this.subjectUID = subjectUID;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a CertTemplate

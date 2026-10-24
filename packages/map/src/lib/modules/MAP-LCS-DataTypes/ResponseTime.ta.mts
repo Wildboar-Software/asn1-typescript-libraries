@@ -27,24 +27,30 @@ import { ResponseTimeCategory, _decode_ResponseTimeCategory, _encode_ResponseTim
  */
 export
 class ResponseTime {
+    /**
+     * @summary `responseTimeCategory`.
+     * @description
+     *
+     * lowdelay or delaytolerant.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly responseTimeCategory: ResponseTimeCategory;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `responseTimeCategory`.
-         * @description
-         *
-         * lowdelay or delaytolerant.
-         *
-         * @public
-         * @readonly
-         */
-        readonly responseTimeCategory: ResponseTimeCategory,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        responseTimeCategory: ResponseTimeCategory,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.responseTimeCategory = responseTimeCategory;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a ResponseTime

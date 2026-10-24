@@ -33,29 +33,37 @@ import {
  */
 export
 class DisplayAttributeList {
+    /**
+     * @summary `physicalBaseRowNumber`.
+     * @description Physical display base row.
+     * @public
+     * @readonly
+     */
+    public readonly physicalBaseRowNumber?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `physicalBaseColumnNumber`.
+     * @description Physical display base column.
+     * @public
+     * @readonly
+     */
+    public readonly physicalBaseColumnNumber?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `offset`.
+     * @description Display offset.
+     * @public
+     * @readonly
+     */
+    public readonly offset?: OPTIONAL<INTEGER>;
+
     constructor (
-        /**
-         * @summary `physicalBaseRowNumber`.
-         * @description Physical display base row.
-         * @public
-         * @readonly
-         */
-        readonly physicalBaseRowNumber?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `physicalBaseColumnNumber`.
-         * @description Physical display base column.
-         * @public
-         * @readonly
-         */
-        readonly physicalBaseColumnNumber?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `offset`.
-         * @description Display offset.
-         * @public
-         * @readonly
-         */
-        readonly offset?: OPTIONAL<INTEGER>
-    ) {}
+        physicalBaseRowNumber?: OPTIONAL<INTEGER>,
+        physicalBaseColumnNumber?: OPTIONAL<INTEGER>,
+        offset?: OPTIONAL<INTEGER>
+    ) {
+        this.physicalBaseRowNumber = physicalBaseRowNumber;
+        this.physicalBaseColumnNumber = physicalBaseColumnNumber;
+        this.offset = offset;
+    }
 
     /**
      * @summary Restructures an object into a DisplayAttributeList

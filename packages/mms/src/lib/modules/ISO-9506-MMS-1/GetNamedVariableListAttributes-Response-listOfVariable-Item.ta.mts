@@ -37,31 +37,37 @@ import { AlternateAccess, _decode_AlternateAccess, _encode_AlternateAccess } fro
  */
 export
 class GetNamedVariableListAttributes_Response_listOfVariable_Item {
+    /**
+     * @summary `variableSpecification`.
+     * @description
+     *
+     * NAMED, UNNAMED, or SINGLE as stored.
+     * ISO 9506-1:2003 §14.13.1.2.2.1, §14.13.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly variableSpecification: VariableSpecification;
+    /**
+     * @summary `alternateAccess`.
+     * @description
+     *
+     * Omit if `&accessMethod` is missing (full access);
+     * otherwise that access description (`valt`).
+     * ISO 9506-1:2003 §14.13.1.2.2.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly alternateAccess?: OPTIONAL<AlternateAccess>;
+
     constructor (
-        /**
-         * @summary `variableSpecification`.
-         * @description
-         *
-         * NAMED, UNNAMED, or SINGLE as stored.
-         * ISO 9506-1:2003 §14.13.1.2.2.1, §14.13.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly variableSpecification: VariableSpecification,
-        /**
-         * @summary `alternateAccess`.
-         * @description
-         *
-         * Omit if `&accessMethod` is missing (full access);
-         * otherwise that access description (`valt`).
-         * ISO 9506-1:2003 §14.13.1.2.2.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly alternateAccess?: OPTIONAL<AlternateAccess>
-    ) {}
+        variableSpecification: VariableSpecification,
+        alternateAccess?: OPTIONAL<AlternateAccess>
+    ) {
+        this.variableSpecification = variableSpecification;
+        this.alternateAccess = alternateAccess;
+    }
 
     /**
      * @summary Restructures an object into a GetNamedVariableListAttributes_Response_listOfVariable_Item

@@ -37,26 +37,34 @@ import {
  *
  */
 export class PKCS15Token {
+    /**
+     * @summary `version`.
+     * @public
+     * @readonly
+     */
+    public readonly version: PKCS15Token_version;
+    /**
+     * @summary `keyManagementInfo`.
+     * @public
+     * @readonly
+     */
+    public readonly keyManagementInfo: OPTIONAL<KeyManagementInfo>;
+    /**
+     * @summary `pkcs15Objects`.
+     * @public
+     * @readonly
+     */
+    public readonly pkcs15Objects: PKCS15Objects[];
+
     constructor(
-        /**
-         * @summary `version`.
-         * @public
-         * @readonly
-         */
-        readonly version: PKCS15Token_version,
-        /**
-         * @summary `keyManagementInfo`.
-         * @public
-         * @readonly
-         */
-        readonly keyManagementInfo: OPTIONAL<KeyManagementInfo>,
-        /**
-         * @summary `pkcs15Objects`.
-         * @public
-         * @readonly
-         */
-        readonly pkcs15Objects: PKCS15Objects[]
-    ) {}
+        version: PKCS15Token_version,
+        keyManagementInfo: OPTIONAL<KeyManagementInfo>,
+        pkcs15Objects: PKCS15Objects[]
+    ) {
+        this.version = version;
+        this.keyManagementInfo = keyManagementInfo;
+        this.pkcs15Objects = pkcs15Objects;
+    }
 
     /**
      * @summary Restructures an object into a PKCS15Token

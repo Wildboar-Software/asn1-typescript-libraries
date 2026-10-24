@@ -41,38 +41,44 @@ import { DirectoryEntry, _decode_DirectoryEntry, _encode_DirectoryEntry } from "
  */
 export
 class FileDirectory_Response {
+    /**
+     * @summary `listOfDirectoryEntry`.
+     * @description
+     *
+     * Ordered list of zero or more entries
+     * matching File Specification, omitting those
+     * before and at Continue After. Order is
+     * required so Continue After is well-defined
+     * even if that file no longer exists.
+     *
+     * [ISO 9506-1:2003 Annex D, D.8.1.2.1]
+     * [ISO 9506-2:2003 Annex D, D.7.2.1]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly listOfDirectoryEntry: DirectoryEntry[];
+    /**
+     * @summary `moreFollows`.
+     * @description
+     *
+     * True if selected files were not included.
+     * False if the list is empty. Default false.
+     *
+     * [ISO 9506-1:2003 Annex D, D.8.1.2.2]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly moreFollows?: OPTIONAL<BOOLEAN>;
+
     constructor (
-        /**
-         * @summary `listOfDirectoryEntry`.
-         * @description
-         *
-         * Ordered list of zero or more entries
-         * matching File Specification, omitting those
-         * before and at Continue After. Order is
-         * required so Continue After is well-defined
-         * even if that file no longer exists.
-         *
-         * [ISO 9506-1:2003 Annex D, D.8.1.2.1]
-         * [ISO 9506-2:2003 Annex D, D.7.2.1]
-         *
-         * @public
-         * @readonly
-         */
-        readonly listOfDirectoryEntry: DirectoryEntry[],
-        /**
-         * @summary `moreFollows`.
-         * @description
-         *
-         * True if selected files were not included.
-         * False if the list is empty. Default false.
-         *
-         * [ISO 9506-1:2003 Annex D, D.8.1.2.2]
-         *
-         * @public
-         * @readonly
-         */
-        readonly moreFollows?: OPTIONAL<BOOLEAN>
-    ) {}
+        listOfDirectoryEntry: DirectoryEntry[],
+        moreFollows?: OPTIONAL<BOOLEAN>
+    ) {
+        this.listOfDirectoryEntry = listOfDirectoryEntry;
+        this.moreFollows = moreFollows;
+    }
 
     /**
      * @summary Restructures an object into a FileDirectory_Response

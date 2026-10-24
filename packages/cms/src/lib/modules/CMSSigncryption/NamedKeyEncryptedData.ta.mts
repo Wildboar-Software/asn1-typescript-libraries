@@ -43,32 +43,42 @@ import {
  *
  */
 export class NamedKeyEncryptedData {
+    /**
+     * @summary `version`.
+     * @public
+     * @readonly
+     */
+    public readonly version: CMSVersion;
+    /**
+     * @summary `keyName`.
+     * @public
+     * @readonly
+     */
+    public readonly keyName: OPTIONAL<OCTET_STRING>;
+    /**
+     * @summary `encryptedContentInfo`.
+     * @public
+     * @readonly
+     */
+    public readonly encryptedContentInfo: EncryptedContentInfo;
+    /**
+     * @summary `unprotectedAttrs`.
+     * @public
+     * @readonly
+     */
+    public readonly unprotectedAttrs?: OPTIONAL<Attributes>;
+
     constructor(
-        /**
-         * @summary `version`.
-         * @public
-         * @readonly
-         */
-        readonly version: CMSVersion,
-        /**
-         * @summary `keyName`.
-         * @public
-         * @readonly
-         */
-        readonly keyName: OPTIONAL<OCTET_STRING>,
-        /**
-         * @summary `encryptedContentInfo`.
-         * @public
-         * @readonly
-         */
-        readonly encryptedContentInfo: EncryptedContentInfo,
-        /**
-         * @summary `unprotectedAttrs`.
-         * @public
-         * @readonly
-         */
-        readonly unprotectedAttrs?: OPTIONAL<Attributes>
-    ) {}
+        version: CMSVersion,
+        keyName: OPTIONAL<OCTET_STRING>,
+        encryptedContentInfo: EncryptedContentInfo,
+        unprotectedAttrs?: OPTIONAL<Attributes>
+    ) {
+        this.version = version;
+        this.keyName = keyName;
+        this.encryptedContentInfo = encryptedContentInfo;
+        this.unprotectedAttrs = unprotectedAttrs;
+    }
 
     /**
      * @summary Restructures an object into a NamedKeyEncryptedData

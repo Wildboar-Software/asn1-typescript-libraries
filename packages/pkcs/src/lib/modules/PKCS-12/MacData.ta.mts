@@ -32,26 +32,34 @@ import {
  *
  */
 export class MacData {
+    /**
+     * @summary `mac`.
+     * @public
+     * @readonly
+     */
+    public readonly mac: DigestInfo;
+    /**
+     * @summary `macSalt`.
+     * @public
+     * @readonly
+     */
+    public readonly macSalt: OCTET_STRING;
+    /**
+     * @summary `iterations`.
+     * @public
+     * @readonly
+     */
+    public readonly iterations?: OPTIONAL<INTEGER>;
+
     constructor(
-        /**
-         * @summary `mac`.
-         * @public
-         * @readonly
-         */
-        readonly mac: DigestInfo,
-        /**
-         * @summary `macSalt`.
-         * @public
-         * @readonly
-         */
-        readonly macSalt: OCTET_STRING,
-        /**
-         * @summary `iterations`.
-         * @public
-         * @readonly
-         */
-        readonly iterations?: OPTIONAL<INTEGER>
-    ) {}
+        mac: DigestInfo,
+        macSalt: OCTET_STRING,
+        iterations?: OPTIONAL<INTEGER>
+    ) {
+        this.mac = mac;
+        this.macSalt = macSalt;
+        this.iterations = iterations;
+    }
 
     /**
      * @summary Restructures an object into a MacData

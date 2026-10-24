@@ -36,26 +36,32 @@ import { AttributeType, _decode_AttributeType, _encode_AttributeType } from "../
  */
 export
 class EntryModification_add_values_from {
+    /**
+     * @summary `source`.
+     * @description
+     *
+     * Where to take values from.
+     * @public
+     * @readonly
+     */
+    public readonly source: SourceEntry;
+    /**
+     * @summary `attribute_selection`.
+     * @description
+     *
+     * Which multi-valued types; omit for all.
+     * @public
+     * @readonly
+     */
+    public readonly attribute_selection?: OPTIONAL<AttributeType[]>;
+
     constructor (
-        /**
-         * @summary `source`.
-         * @description
-         *
-         * Where to take values from.
-         * @public
-         * @readonly
-         */
-        readonly source: SourceEntry,
-        /**
-         * @summary `attribute_selection`.
-         * @description
-         *
-         * Which multi-valued types; omit for all.
-         * @public
-         * @readonly
-         */
-        readonly attribute_selection?: OPTIONAL<AttributeType[]>
-    ) {}
+        source: SourceEntry,
+        attribute_selection?: OPTIONAL<AttributeType[]>
+    ) {
+        this.source = source;
+        this.attribute_selection = attribute_selection;
+    }
 
     /**
      * @summary Restructures an object into a EntryModification_add_values_from

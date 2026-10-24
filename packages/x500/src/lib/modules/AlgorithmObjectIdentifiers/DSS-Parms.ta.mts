@@ -27,32 +27,42 @@ import * as $ from "@wildboar/asn1/functional";
  *
  */
 export class DSS_Parms {
+    /**
+     * @summary `p`.
+     * @public
+     * @readonly
+     */
+    public readonly p: INTEGER;
+    /**
+     * @summary `q`.
+     * @public
+     * @readonly
+     */
+    public readonly q: INTEGER;
+    /**
+     * @summary `g`.
+     * @public
+     * @readonly
+     */
+    public readonly g: INTEGER;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `p`.
-         * @public
-         * @readonly
-         */
-        readonly p: INTEGER,
-        /**
-         * @summary `q`.
-         * @public
-         * @readonly
-         */
-        readonly q: INTEGER,
-        /**
-         * @summary `g`.
-         * @public
-         * @readonly
-         */
-        readonly g: INTEGER,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        p: INTEGER,
+        q: INTEGER,
+        g: INTEGER,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.p = p;
+        this.q = q;
+        this.g = g;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a DSS_Parms

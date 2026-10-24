@@ -42,30 +42,36 @@ import {
  *
  */
 export class ListMembershipReply {
+    /**
+     * @summary `completeness`.
+     * @description
+     *
+     * Whether `membership` is known complete, known incomplete, or
+     * unknown. ITU-T Rec. X.749 (08/97)
+     * [§8.4.1](https://www.itu.int/rec/T-REC-X.749-199708-I).
+     * @public
+     * @readonly
+     */
+    public readonly completeness: Completeness;
+    /**
+     * @summary `membership`.
+     * @description
+     *
+     * Names of objects that satisfy the membership (or direct-
+     * membership) criteria. ITU-T Rec. X.749 (08/97)
+     * [§8.4.1](https://www.itu.int/rec/T-REC-X.749-199708-I).
+     * @public
+     * @readonly
+     */
+    public readonly membership: Membership;
+
     constructor(
-        /**
-         * @summary `completeness`.
-         * @description
-         *
-         * Whether `membership` is known complete, known incomplete, or
-         * unknown. ITU-T Rec. X.749 (08/97)
-         * [§8.4.1](https://www.itu.int/rec/T-REC-X.749-199708-I).
-         * @public
-         * @readonly
-         */
-        readonly completeness: Completeness,
-        /**
-         * @summary `membership`.
-         * @description
-         *
-         * Names of objects that satisfy the membership (or direct-
-         * membership) criteria. ITU-T Rec. X.749 (08/97)
-         * [§8.4.1](https://www.itu.int/rec/T-REC-X.749-199708-I).
-         * @public
-         * @readonly
-         */
-        readonly membership: Membership
-    ) {}
+        completeness: Completeness,
+        membership: Membership
+    ) {
+        this.completeness = completeness;
+        this.membership = membership;
+    }
 
     /**
      * @summary Restructures an object into a ListMembershipReply

@@ -156,122 +156,162 @@ import {
  *
  */
 export class Heading {
+    /**
+     * @summary `this_EDIM`.
+     * @public
+     * @readonly
+     */
+    public readonly this_EDIM: ThisEDIMField;
+    /**
+     * @summary `originator`.
+     * @public
+     * @readonly
+     */
+    public readonly originator?: OPTIONAL<OriginatorField>;
+    /**
+     * @summary `recipients`.
+     * @public
+     * @readonly
+     */
+    public readonly recipients?: OPTIONAL<RecipientsField>;
+    /**
+     * @summary `edin_receiver`.
+     * @public
+     * @readonly
+     */
+    public readonly edin_receiver?: OPTIONAL<EDINReceiverField>;
+    /**
+     * @summary `responsibility_forwarded`.
+     * @public
+     * @readonly
+     */
+    public readonly responsibility_forwarded?: OPTIONAL<ResponsibilityForwarded>;
+    /**
+     * @summary `edi_bodypart_type`.
+     * @public
+     * @readonly
+     */
+    public readonly edi_bodypart_type?: OPTIONAL<EDIBodyPartType>;
+    /**
+     * @summary `incomplete_copy`.
+     * @public
+     * @readonly
+     */
+    public readonly incomplete_copy?: OPTIONAL<IncompleteCopyField>;
+    /**
+     * @summary `expiry_time`.
+     * @public
+     * @readonly
+     */
+    public readonly expiry_time?: OPTIONAL<ExpiryTimeField>;
+    /**
+     * @summary `related_messages`.
+     * @public
+     * @readonly
+     */
+    public readonly related_messages?: OPTIONAL<RelatedMessagesField>;
+    /**
+     * @summary `obsoleted_EDIMs`.
+     * @public
+     * @readonly
+     */
+    public readonly obsoleted_EDIMs?: OPTIONAL<ObsoletedEDIMsField>;
+    /**
+     * @summary `edi_application_security_elements`.
+     * @public
+     * @readonly
+     */
+    public readonly edi_application_security_elements?: OPTIONAL<EDIApplicationSecurityElementsField>;
+    /**
+     * @summary `cross_referencing_information`.
+     * @public
+     * @readonly
+     */
+    public readonly cross_referencing_information?: OPTIONAL<CrossReferencingInformationField>;
+    /**
+     * @summary `edi_message_type`.
+     * @public
+     * @readonly
+     */
+    public readonly edi_message_type?: OPTIONAL<EDIMessageTypeField>;
+    /**
+     * @summary `service_string_advice`.
+     * @public
+     * @readonly
+     */
+    public readonly service_string_advice?: OPTIONAL<ServiceStringAdviceField>;
+    /**
+     * @summary `syntax_identifier`.
+     * @public
+     * @readonly
+     */
+    public readonly syntax_identifier?: OPTIONAL<SyntaxIdentifierField>;
+    /**
+     * @summary `interchange_sender`.
+     * @public
+     * @readonly
+     */
+    public readonly interchange_sender?: OPTIONAL<InterchangeSenderField>;
+    /**
+     * @summary `date_and_time_of_preparation`.
+     * @public
+     * @readonly
+     */
+    public readonly date_and_time_of_preparation?: OPTIONAL<DateAndTimeOfPreparationField>;
+    /**
+     * @summary `application_reference`.
+     * @public
+     * @readonly
+     */
+    public readonly application_reference?: OPTIONAL<ApplicationReferenceField>;
+    /**
+     * @summary `heading_extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly heading_extensions?: OPTIONAL<HeadingExtensionsField>;
+
     constructor(
-        /**
-         * @summary `this_EDIM`.
-         * @public
-         * @readonly
-         */
-        readonly this_EDIM: ThisEDIMField,
-        /**
-         * @summary `originator`.
-         * @public
-         * @readonly
-         */
-        readonly originator?: OPTIONAL<OriginatorField>,
-        /**
-         * @summary `recipients`.
-         * @public
-         * @readonly
-         */
-        readonly recipients?: OPTIONAL<RecipientsField>,
-        /**
-         * @summary `edin_receiver`.
-         * @public
-         * @readonly
-         */
-        readonly edin_receiver?: OPTIONAL<EDINReceiverField>,
-        /**
-         * @summary `responsibility_forwarded`.
-         * @public
-         * @readonly
-         */
-        readonly responsibility_forwarded?: OPTIONAL<ResponsibilityForwarded>,
-        /**
-         * @summary `edi_bodypart_type`.
-         * @public
-         * @readonly
-         */
-        readonly edi_bodypart_type?: OPTIONAL<EDIBodyPartType>,
-        /**
-         * @summary `incomplete_copy`.
-         * @public
-         * @readonly
-         */
-        readonly incomplete_copy?: OPTIONAL<IncompleteCopyField>,
-        /**
-         * @summary `expiry_time`.
-         * @public
-         * @readonly
-         */
-        readonly expiry_time?: OPTIONAL<ExpiryTimeField>,
-        /**
-         * @summary `related_messages`.
-         * @public
-         * @readonly
-         */
-        readonly related_messages?: OPTIONAL<RelatedMessagesField>,
-        /**
-         * @summary `obsoleted_EDIMs`.
-         * @public
-         * @readonly
-         */
-        readonly obsoleted_EDIMs?: OPTIONAL<ObsoletedEDIMsField>,
-        /**
-         * @summary `edi_application_security_elements`.
-         * @public
-         * @readonly
-         */
-        readonly edi_application_security_elements?: OPTIONAL<EDIApplicationSecurityElementsField>,
-        /**
-         * @summary `cross_referencing_information`.
-         * @public
-         * @readonly
-         */
-        readonly cross_referencing_information?: OPTIONAL<CrossReferencingInformationField>,
-        /**
-         * @summary `edi_message_type`.
-         * @public
-         * @readonly
-         */
-        readonly edi_message_type?: OPTIONAL<EDIMessageTypeField>,
-        /**
-         * @summary `service_string_advice`.
-         * @public
-         * @readonly
-         */
-        readonly service_string_advice?: OPTIONAL<ServiceStringAdviceField>,
-        /**
-         * @summary `syntax_identifier`.
-         * @public
-         * @readonly
-         */
-        readonly syntax_identifier?: OPTIONAL<SyntaxIdentifierField>,
-        /**
-         * @summary `interchange_sender`.
-         * @public
-         * @readonly
-         */
-        readonly interchange_sender?: OPTIONAL<InterchangeSenderField>,
-        /**
-         * @summary `date_and_time_of_preparation`.
-         * @public
-         * @readonly
-         */
-        readonly date_and_time_of_preparation?: OPTIONAL<DateAndTimeOfPreparationField>,
-        /**
-         * @summary `application_reference`.
-         * @public
-         * @readonly
-         */
-        readonly application_reference?: OPTIONAL<ApplicationReferenceField>,
-        /**
-         * @summary `heading_extensions`.
-         * @public
-         * @readonly
-         */
-        readonly heading_extensions?: OPTIONAL<HeadingExtensionsField>
-    ) {}
+        this_EDIM: ThisEDIMField,
+        originator?: OPTIONAL<OriginatorField>,
+        recipients?: OPTIONAL<RecipientsField>,
+        edin_receiver?: OPTIONAL<EDINReceiverField>,
+        responsibility_forwarded?: OPTIONAL<ResponsibilityForwarded>,
+        edi_bodypart_type?: OPTIONAL<EDIBodyPartType>,
+        incomplete_copy?: OPTIONAL<IncompleteCopyField>,
+        expiry_time?: OPTIONAL<ExpiryTimeField>,
+        related_messages?: OPTIONAL<RelatedMessagesField>,
+        obsoleted_EDIMs?: OPTIONAL<ObsoletedEDIMsField>,
+        edi_application_security_elements?: OPTIONAL<EDIApplicationSecurityElementsField>,
+        cross_referencing_information?: OPTIONAL<CrossReferencingInformationField>,
+        edi_message_type?: OPTIONAL<EDIMessageTypeField>,
+        service_string_advice?: OPTIONAL<ServiceStringAdviceField>,
+        syntax_identifier?: OPTIONAL<SyntaxIdentifierField>,
+        interchange_sender?: OPTIONAL<InterchangeSenderField>,
+        date_and_time_of_preparation?: OPTIONAL<DateAndTimeOfPreparationField>,
+        application_reference?: OPTIONAL<ApplicationReferenceField>,
+        heading_extensions?: OPTIONAL<HeadingExtensionsField>
+    ) {
+        this.this_EDIM = this_EDIM;
+        this.originator = originator;
+        this.recipients = recipients;
+        this.edin_receiver = edin_receiver;
+        this.responsibility_forwarded = responsibility_forwarded;
+        this.edi_bodypart_type = edi_bodypart_type;
+        this.incomplete_copy = incomplete_copy;
+        this.expiry_time = expiry_time;
+        this.related_messages = related_messages;
+        this.obsoleted_EDIMs = obsoleted_EDIMs;
+        this.edi_application_security_elements = edi_application_security_elements;
+        this.cross_referencing_information = cross_referencing_information;
+        this.edi_message_type = edi_message_type;
+        this.service_string_advice = service_string_advice;
+        this.syntax_identifier = syntax_identifier;
+        this.interchange_sender = interchange_sender;
+        this.date_and_time_of_preparation = date_and_time_of_preparation;
+        this.application_reference = application_reference;
+        this.heading_extensions = heading_extensions;
+    }
 
     /**
      * @summary Restructures an object into a Heading

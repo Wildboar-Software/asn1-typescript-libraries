@@ -32,44 +32,54 @@ import { PDN_GW_Identity, _decode_PDN_GW_Identity, _encode_PDN_GW_Identity } fro
  */
 export
 class SpecificAPNInfo {
+    /**
+     * @summary `apn`.
+     * @description
+     *
+     * APN as in 3GPP TS 23.060 (DNS name of a GGSN / PDN connection).
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.2.42).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly apn: APN;
+    /**
+     * @summary `pdn_gw_Identity`.
+     * @description
+     *
+     * PDN GW identity for this APN.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly pdn_gw_Identity: PDN_GW_Identity;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `apn`.
-         * @description
-         *
-         * APN as in 3GPP TS 23.060 (DNS name of a GGSN / PDN connection).
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.2.42).
-         *
-         * @public
-         * @readonly
-         */
-        readonly apn: APN,
-        /**
-         * @summary `pdn_gw_Identity`.
-         * @description
-         *
-         * PDN GW identity for this APN.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly pdn_gw_Identity: PDN_GW_Identity,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        apn: APN,
+        pdn_gw_Identity: PDN_GW_Identity,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.apn = apn;
+        this.pdn_gw_Identity = pdn_gw_Identity;
+        this.extensionContainer = extensionContainer;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a SpecificAPNInfo

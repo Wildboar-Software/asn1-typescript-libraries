@@ -48,49 +48,59 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class StartDataCollectionArgument {
+    /**
+     * @summary `object`.
+     * @description
+     *
+     * Device (next connection) or specific connection (ECMA-269 §25.1.5.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly object: CallObject;
+    /**
+     * @summary `dataCollType`.
+     * @description
+     *
+     * Digits or telephony tones (ECMA-269 §25.1.5.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly dataCollType?: OPTIONAL<DataCollType>;
+    /**
+     * @summary `digitsReportingCriteria`.
+     * @description
+     *
+     * Only when `dataCollType` is digits (ECMA-269 §25.1.5.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly digitsReportingCriteria?: OPTIONAL<DigitsReportingCriteria>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * CSTACommonArguments carrying the service-table security and
+     * privateData parameters.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `object`.
-         * @description
-         *
-         * Device (next connection) or specific connection (ECMA-269 §25.1.5.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly object: CallObject,
-        /**
-         * @summary `dataCollType`.
-         * @description
-         *
-         * Digits or telephony tones (ECMA-269 §25.1.5.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly dataCollType?: OPTIONAL<DataCollType>,
-        /**
-         * @summary `digitsReportingCriteria`.
-         * @description
-         *
-         * Only when `dataCollType` is digits (ECMA-269 §25.1.5.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly digitsReportingCriteria?: OPTIONAL<DigitsReportingCriteria>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * CSTACommonArguments carrying the service-table security and
-         * privateData parameters.
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        object: CallObject,
+        dataCollType?: OPTIONAL<DataCollType>,
+        digitsReportingCriteria?: OPTIONAL<DigitsReportingCriteria>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.object = object;
+        this.dataCollType = dataCollType;
+        this.digitsReportingCriteria = digitsReportingCriteria;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a StartDataCollectionArgument

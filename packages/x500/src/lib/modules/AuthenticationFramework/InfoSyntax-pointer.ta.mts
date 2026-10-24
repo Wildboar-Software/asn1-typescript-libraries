@@ -36,26 +36,34 @@ import {
  *
  */
 export class InfoSyntax_pointer {
+    /**
+     * @summary `name`.
+     * @public
+     * @readonly
+     */
+    public readonly name: GeneralNames;
+    /**
+     * @summary `hash`.
+     * @public
+     * @readonly
+     */
+    public readonly hash?: OPTIONAL<HASH<HashedPolicyInfo>>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `name`.
-         * @public
-         * @readonly
-         */
-        readonly name: GeneralNames,
-        /**
-         * @summary `hash`.
-         * @public
-         * @readonly
-         */
-        readonly hash?: OPTIONAL<HASH<HashedPolicyInfo>>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        name: GeneralNames,
+        hash?: OPTIONAL<HASH<HashedPolicyInfo>>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.name = name;
+        this.hash = hash;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a InfoSyntax_pointer

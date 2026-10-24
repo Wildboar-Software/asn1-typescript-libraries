@@ -25,23 +25,29 @@ import {
  *
  */
 export class CertUpdateOK_Item_not_ok {
+    /**
+     * @summary `status`.
+     * @description
+     *
+     * CASP-CertStatusCode: `noReason`(1) or `unknownCert`(2).
+     * @public
+     * @readonly
+     */
+    public readonly status: CASP_CertStatusCode;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `status`.
-         * @description
-         *
-         * CASP-CertStatusCode: `noReason`(1) or `unknownCert`(2).
-         * @public
-         * @readonly
-         */
-        readonly status: CASP_CertStatusCode,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        status: CASP_CertStatusCode,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.status = status;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a CertUpdateOK_Item_not_ok

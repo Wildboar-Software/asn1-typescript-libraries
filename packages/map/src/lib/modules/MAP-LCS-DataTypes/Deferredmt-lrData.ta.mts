@@ -32,44 +32,54 @@ import { TerminationCause, _decode_TerminationCause, _encode_TerminationCause, _
  */
 export
 class Deferredmt_lrData {
+    /**
+     * @summary `deferredLocationEventType`.
+     * @description
+     *
+     * Deferred event type.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly deferredLocationEventType: DeferredLocationEventType;
+    /**
+     * @summary `terminationCause`.
+     * @description
+     *
+     * Why monitoring stopped.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly terminationCause?: OPTIONAL<TerminationCause>;
+    /**
+     * @summary `lcsLocationInfo`.
+     * @description
+     *
+     * Only if terminationCause is mt-lrRestart (clause 17.7.13).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly lcsLocationInfo?: OPTIONAL<LCSLocationInfo>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `deferredLocationEventType`.
-         * @description
-         *
-         * Deferred event type.
-         *
-         * @public
-         * @readonly
-         */
-        readonly deferredLocationEventType: DeferredLocationEventType,
-        /**
-         * @summary `terminationCause`.
-         * @description
-         *
-         * Why monitoring stopped.
-         *
-         * @public
-         * @readonly
-         */
-        readonly terminationCause?: OPTIONAL<TerminationCause>,
-        /**
-         * @summary `lcsLocationInfo`.
-         * @description
-         *
-         * Only if terminationCause is mt-lrRestart (clause 17.7.13).
-         *
-         * @public
-         * @readonly
-         */
-        readonly lcsLocationInfo?: OPTIONAL<LCSLocationInfo>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        deferredLocationEventType: DeferredLocationEventType,
+        terminationCause?: OPTIONAL<TerminationCause>,
+        lcsLocationInfo?: OPTIONAL<LCSLocationInfo>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.deferredLocationEventType = deferredLocationEventType;
+        this.terminationCause = terminationCause;
+        this.lcsLocationInfo = lcsLocationInfo;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a Deferredmt_lrData

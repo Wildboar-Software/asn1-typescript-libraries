@@ -55,67 +55,81 @@ import {
  *
  */
 export class EventReportArgument {
+  /**
+   * @summary `managedObjectClass`.
+   * @description
+   *
+   * Class of the object on which the event occurred.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly managedObjectClass: ObjectClass;
+  /**
+   * @summary `managedObjectInstance`.
+   * @description
+   *
+   * Instance on which the event occurred.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly managedObjectInstance: ObjectInstance;
+  /**
+   * @summary `eventTime`.
+   * @description
+   *
+   * Time the event occurred, if supplied.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly eventTime: OPTIONAL<GeneralizedTime>;
+  /**
+   * @summary `eventType`.
+   * @description
+   *
+   * Event type (`CMIP-EVENT.&id`). Unknown yields
+   * `noSuchEventType`.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly eventType: EventTypeId;
+  /**
+   * @summary `eventInfo`.
+   * @description
+   *
+   * Event-specific information (`CMIP-EVENT.&Value`).
+   * Unknown argument yields `noSuchArgument`; bad value
+   * `invalidArgumentValue`.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly eventInfo?: OPTIONAL<_Element>;
+  /**
+   * @summary Extensions that are not recognized.
+   * @public
+   * @readonly
+   */
+  public readonly _unrecognizedExtensionsList: _Element[];
+
   constructor(
-    /**
-     * @summary `managedObjectClass`.
-     * @description
-     *
-     * Class of the object on which the event occurred.
-     *
-     * @public
-     * @readonly
-     */
-    readonly managedObjectClass: ObjectClass,
-    /**
-     * @summary `managedObjectInstance`.
-     * @description
-     *
-     * Instance on which the event occurred.
-     *
-     * @public
-     * @readonly
-     */
-    readonly managedObjectInstance: ObjectInstance,
-    /**
-     * @summary `eventTime`.
-     * @description
-     *
-     * Time the event occurred, if supplied.
-     *
-     * @public
-     * @readonly
-     */
-    readonly eventTime: OPTIONAL<GeneralizedTime>,
-    /**
-     * @summary `eventType`.
-     * @description
-     *
-     * Event type (`CMIP-EVENT.&id`). Unknown yields
-     * `noSuchEventType`.
-     *
-     * @public
-     * @readonly
-     */
-    readonly eventType: EventTypeId,
-    /**
-     * @summary `eventInfo`.
-     * @description
-     *
-     * Event-specific information (`CMIP-EVENT.&Value`).
-     * Unknown argument yields `noSuchArgument`; bad value
-     * `invalidArgumentValue`.
-     *
-     * @public
-     * @readonly
-     */
-    readonly eventInfo?: OPTIONAL<_Element>,
-    /**
-     * @summary Extensions that are not recognized.
-     * @public
-     * @readonly
-     */
-    readonly _unrecognizedExtensionsList: _Element[] = []
-  ) {}
+    managedObjectClass: ObjectClass,
+    managedObjectInstance: ObjectInstance,
+    eventTime: OPTIONAL<GeneralizedTime>,
+    eventType: EventTypeId,
+    eventInfo?: OPTIONAL<_Element>,
+    _unrecognizedExtensionsList: _Element[] = []
+  ) {
+    this.managedObjectClass = managedObjectClass;
+    this.managedObjectInstance = managedObjectInstance;
+    this.eventTime = eventTime;
+    this.eventType = eventType;
+    this.eventInfo = eventInfo;
+    this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+  }
 
   /**
    * @summary Restructures an object into a EventReportArgument

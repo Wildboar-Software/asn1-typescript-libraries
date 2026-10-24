@@ -41,35 +41,41 @@ import { FileAttributes, _decode_FileAttributes, _encode_FileAttributes } from "
  */
 export
 class FileOpen_Response {
+    /**
+     * @summary `frsmID`.
+     * @description
+     *
+     * Identifies the FRSM created for this
+     * transfer. Used on subsequent FileRead and
+     * FileClose over the same association.
+     *
+     * [ISO 9506-1:2003 Annex D, D.3.1.2.1]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly frsmID: Integer32;
+    /**
+     * @summary `fileAttributes`.
+     * @description
+     *
+     * Size and last-modified of the file being
+     * opened. See D.9.
+     *
+     * [ISO 9506-1:2003 Annex D, D.3.1.2.2]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly fileAttributes: FileAttributes;
+
     constructor (
-        /**
-         * @summary `frsmID`.
-         * @description
-         *
-         * Identifies the FRSM created for this
-         * transfer. Used on subsequent FileRead and
-         * FileClose over the same association.
-         *
-         * [ISO 9506-1:2003 Annex D, D.3.1.2.1]
-         *
-         * @public
-         * @readonly
-         */
-        readonly frsmID: Integer32,
-        /**
-         * @summary `fileAttributes`.
-         * @description
-         *
-         * Size and last-modified of the file being
-         * opened. See D.9.
-         *
-         * [ISO 9506-1:2003 Annex D, D.3.1.2.2]
-         *
-         * @public
-         * @readonly
-         */
-        readonly fileAttributes: FileAttributes
-    ) {}
+        frsmID: Integer32,
+        fileAttributes: FileAttributes
+    ) {
+        this.frsmID = frsmID;
+        this.fileAttributes = fileAttributes;
+    }
 
     /**
      * @summary Restructures an object into a FileOpen_Response

@@ -39,45 +39,55 @@ import {
  *
  */
 export class EncryptedData {
+    /**
+     * @summary `version`.
+     * @description
+     *
+     * 0 if unprotectedAttrs absent; 2 if present
+     * ([RFC 5652 §8](https://datatracker.ietf.org/doc/html/rfc5652#section-8)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly version: CMSVersion;
+    /**
+     * @summary `encryptedContentInfo`.
+     * @description
+     *
+     * Encrypted content ([RFC 5652 §8](https://datatracker.ietf.org/doc/html/rfc5652#section-8)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly encryptedContentInfo: EncryptedContentInfo;
+    /**
+     * @summary `unprotectedAttrs`.
+     * @description
+     *
+     * Optional unprotected attributes ([RFC 5652 §8](https://datatracker.ietf.org/doc/html/rfc5652#section-8)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly unprotectedAttrs?: OPTIONAL<Attributes>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `version`.
-         * @description
-         *
-         * 0 if unprotectedAttrs absent; 2 if present
-         * ([RFC 5652 §8](https://datatracker.ietf.org/doc/html/rfc5652#section-8)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly version: CMSVersion,
-        /**
-         * @summary `encryptedContentInfo`.
-         * @description
-         *
-         * Encrypted content ([RFC 5652 §8](https://datatracker.ietf.org/doc/html/rfc5652#section-8)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly encryptedContentInfo: EncryptedContentInfo,
-        /**
-         * @summary `unprotectedAttrs`.
-         * @description
-         *
-         * Optional unprotected attributes ([RFC 5652 §8](https://datatracker.ietf.org/doc/html/rfc5652#section-8)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly unprotectedAttrs?: OPTIONAL<Attributes>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        version: CMSVersion,
+        encryptedContentInfo: EncryptedContentInfo,
+        unprotectedAttrs?: OPTIONAL<Attributes>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.version = version;
+        this.encryptedContentInfo = encryptedContentInfo;
+        this.unprotectedAttrs = unprotectedAttrs;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a EncryptedData

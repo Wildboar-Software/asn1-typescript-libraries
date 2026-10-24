@@ -39,27 +39,33 @@ import {
  *
  */
 export class AttributeGroups_Item {
+    /**
+     * @summary `group`.
+     * @description
+     *
+     * Attribute-group template referenced by the package.
+     * @public
+     * @readonly
+     */
+    public readonly group: TemplateLabel;
+    /**
+     * @summary `attributes`.
+     * @description
+     *
+     * Extra members added to an extensible group in this package. Omitted
+     * for a fixed group.
+     * @public
+     * @readonly
+     */
+    public readonly attributes?: OPTIONAL<TemplateList>;
+
     constructor(
-        /**
-         * @summary `group`.
-         * @description
-         *
-         * Attribute-group template referenced by the package.
-         * @public
-         * @readonly
-         */
-        readonly group: TemplateLabel,
-        /**
-         * @summary `attributes`.
-         * @description
-         *
-         * Extra members added to an extensible group in this package. Omitted
-         * for a fixed group.
-         * @public
-         * @readonly
-         */
-        readonly attributes?: OPTIONAL<TemplateList>
-    ) {}
+        group: TemplateLabel,
+        attributes?: OPTIONAL<TemplateList>
+    ) {
+        this.group = group;
+        this.attributes = attributes;
+    }
 
     /**
      * @summary Restructures an object into a AttributeGroups_Item

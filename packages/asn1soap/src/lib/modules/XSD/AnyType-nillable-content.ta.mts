@@ -28,16 +28,20 @@ import { String, _decode_String, _encode_String } from '../XSD/String.ta.mjs';
  *
  */
 export class AnyType_nillable_content {
+  /**
+   * @summary `elem_list`.
+   * @description Wildcard child elements (`AnyElementFormat`).
+   * ITU-T Rec. X.693 | ISO/IEC 8825-4, clause 19.
+   * @public
+   * @readonly
+   */
+  public readonly elem_list: String[];
+
   constructor(
-    /**
-     * @summary `elem_list`.
-     * @description Wildcard child elements (`AnyElementFormat`).
-     * ITU-T Rec. X.693 | ISO/IEC 8825-4, clause 19.
-     * @public
-     * @readonly
-     */
-    readonly elem_list: String[]
-  ) {}
+    elem_list: String[]
+  ) {
+    this.elem_list = elem_list;
+  }
 
   /**
    * @summary Restructures an object into a AnyType_nillable_content

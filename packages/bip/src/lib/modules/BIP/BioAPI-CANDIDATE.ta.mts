@@ -46,25 +46,31 @@ import {
  *
  */
 export class BioAPI_CANDIDATE {
+  /**
+   * @summary `bir`.
+   * @description
+   *
+   * Which population the candidate belongs to. X.1083 §15.20,
+   * §15.44.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly bir: BioAPI_CANDIDATE_bir;
+  /**
+   * @summary `fmrAchieved`.
+   * @public
+   * @readonly
+   */
+  public readonly fmrAchieved: BioAPI_FMR;
+
   constructor(
-    /**
-     * @summary `bir`.
-     * @description
-     *
-     * Which population the candidate belongs to. X.1083 §15.20,
-     * §15.44.
-     *
-     * @public
-     * @readonly
-     */
-    readonly bir: BioAPI_CANDIDATE_bir,
-    /**
-     * @summary `fmrAchieved`.
-     * @public
-     * @readonly
-     */
-    readonly fmrAchieved: BioAPI_FMR
-  ) {}
+    bir: BioAPI_CANDIDATE_bir,
+    fmrAchieved: BioAPI_FMR
+  ) {
+    this.bir = bir;
+    this.fmrAchieved = fmrAchieved;
+  }
 
   /**
    * @summary Restructures an object into a BioAPI_CANDIDATE

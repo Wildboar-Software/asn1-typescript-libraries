@@ -42,33 +42,43 @@ import {
  *
  */
 export class ItemPermission {
+    /**
+     * @summary `precedence`.
+     * @description Defaults to the ACIItem precedence; if present, this value is used instead.
+     * @public
+     * @readonly
+     */
+    public readonly precedence: OPTIONAL<Precedence>;
+    /**
+     * @summary `userClasses`.
+     * @public
+     * @readonly
+     */
+    public readonly userClasses: UserClasses;
+    /**
+     * @summary `grantsAndDenials`.
+     * @public
+     * @readonly
+     */
+    public readonly grantsAndDenials: GrantsAndDenials;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `precedence`.
-         * @description Defaults to the ACIItem precedence; if present, this value is used instead.
-         * @public
-         * @readonly
-         */
-        readonly precedence: OPTIONAL<Precedence>,
-        /**
-         * @summary `userClasses`.
-         * @public
-         * @readonly
-         */
-        readonly userClasses: UserClasses,
-        /**
-         * @summary `grantsAndDenials`.
-         * @public
-         * @readonly
-         */
-        readonly grantsAndDenials: GrantsAndDenials,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        precedence: OPTIONAL<Precedence>,
+        userClasses: UserClasses,
+        grantsAndDenials: GrantsAndDenials,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.precedence = precedence;
+        this.userClasses = userClasses;
+        this.grantsAndDenials = grantsAndDenials;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a ItemPermission

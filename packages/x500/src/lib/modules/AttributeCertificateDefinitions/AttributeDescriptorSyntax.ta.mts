@@ -49,44 +49,58 @@ import {
  *
  */
 export class AttributeDescriptorSyntax {
+    /**
+     * @summary `identifier`.
+     * @public
+     * @readonly
+     */
+    public readonly identifier: AttributeIdentifier;
+    /**
+     * @summary `attributeSyntax`.
+     * @public
+     * @readonly
+     */
+    public readonly attributeSyntax: OCTET_STRING;
+    /**
+     * @summary `name`.
+     * @public
+     * @readonly
+     */
+    public readonly name: OPTIONAL<AttributeName>;
+    /**
+     * @summary `description`.
+     * @public
+     * @readonly
+     */
+    public readonly description: OPTIONAL<AttributeDescription>;
+    /**
+     * @summary `dominationRule`.
+     * @public
+     * @readonly
+     */
+    public readonly dominationRule: PrivilegePolicyIdentifier;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `identifier`.
-         * @public
-         * @readonly
-         */
-        readonly identifier: AttributeIdentifier,
-        /**
-         * @summary `attributeSyntax`.
-         * @public
-         * @readonly
-         */
-        readonly attributeSyntax: OCTET_STRING,
-        /**
-         * @summary `name`.
-         * @public
-         * @readonly
-         */
-        readonly name: OPTIONAL<AttributeName>,
-        /**
-         * @summary `description`.
-         * @public
-         * @readonly
-         */
-        readonly description: OPTIONAL<AttributeDescription>,
-        /**
-         * @summary `dominationRule`.
-         * @public
-         * @readonly
-         */
-        readonly dominationRule: PrivilegePolicyIdentifier,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        identifier: AttributeIdentifier,
+        attributeSyntax: OCTET_STRING,
+        name: OPTIONAL<AttributeName>,
+        description: OPTIONAL<AttributeDescription>,
+        dominationRule: PrivilegePolicyIdentifier,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.identifier = identifier;
+        this.attributeSyntax = attributeSyntax;
+        this.name = name;
+        this.description = description;
+        this.dominationRule = dominationRule;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a AttributeDescriptorSyntax

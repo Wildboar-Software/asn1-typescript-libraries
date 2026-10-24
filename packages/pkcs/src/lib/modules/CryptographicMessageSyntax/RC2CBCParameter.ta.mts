@@ -24,20 +24,26 @@ import * as $ from "@wildboar/asn1/functional";
  *
  */
 export class RC2CBCParameter {
+    /**
+     * @summary `rc2ParameterVersion`.
+     * @public
+     * @readonly
+     */
+    public readonly rc2ParameterVersion: INTEGER;
+    /**
+     * @summary `iv`.
+     * @public
+     * @readonly
+     */
+    public readonly iv: OCTET_STRING;
+
     constructor(
-        /**
-         * @summary `rc2ParameterVersion`.
-         * @public
-         * @readonly
-         */
-        readonly rc2ParameterVersion: INTEGER,
-        /**
-         * @summary `iv`.
-         * @public
-         * @readonly
-         */
-        readonly iv: OCTET_STRING
-    ) {}
+        rc2ParameterVersion: INTEGER,
+        iv: OCTET_STRING
+    ) {
+        this.rc2ParameterVersion = rc2ParameterVersion;
+        this.iv = iv;
+    }
 
     /**
      * @summary Restructures an object into a RC2CBCParameter

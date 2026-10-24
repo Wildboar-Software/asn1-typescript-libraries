@@ -66,44 +66,58 @@ import {
  *
  */
 export class PerRecipientReportDeliveryFields {
+    /**
+     * @summary `actual_recipient_name`.
+     * @public
+     * @readonly
+     */
+    public readonly actual_recipient_name: ActualRecipientName;
+    /**
+     * @summary `report_type`.
+     * @public
+     * @readonly
+     */
+    public readonly report_type: ReportType;
+    /**
+     * @summary `converted_encoded_information_types`.
+     * @public
+     * @readonly
+     */
+    public readonly converted_encoded_information_types?: OPTIONAL<ConvertedEncodedInformationTypes>;
+    /**
+     * @summary `originally_intended_recipient_name`.
+     * @public
+     * @readonly
+     */
+    public readonly originally_intended_recipient_name?: OPTIONAL<OriginallyIntendedRecipientName>;
+    /**
+     * @summary `supplementary_information`.
+     * @public
+     * @readonly
+     */
+    public readonly supplementary_information?: OPTIONAL<SupplementaryInformation>;
+    /**
+     * @summary `extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<ExtensionField[]>;
+
     constructor(
-        /**
-         * @summary `actual_recipient_name`.
-         * @public
-         * @readonly
-         */
-        readonly actual_recipient_name: ActualRecipientName,
-        /**
-         * @summary `report_type`.
-         * @public
-         * @readonly
-         */
-        readonly report_type: ReportType,
-        /**
-         * @summary `converted_encoded_information_types`.
-         * @public
-         * @readonly
-         */
-        readonly converted_encoded_information_types?: OPTIONAL<ConvertedEncodedInformationTypes>,
-        /**
-         * @summary `originally_intended_recipient_name`.
-         * @public
-         * @readonly
-         */
-        readonly originally_intended_recipient_name?: OPTIONAL<OriginallyIntendedRecipientName>,
-        /**
-         * @summary `supplementary_information`.
-         * @public
-         * @readonly
-         */
-        readonly supplementary_information?: OPTIONAL<SupplementaryInformation>,
-        /**
-         * @summary `extensions`.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<ExtensionField[]>
-    ) {}
+        actual_recipient_name: ActualRecipientName,
+        report_type: ReportType,
+        converted_encoded_information_types?: OPTIONAL<ConvertedEncodedInformationTypes>,
+        originally_intended_recipient_name?: OPTIONAL<OriginallyIntendedRecipientName>,
+        supplementary_information?: OPTIONAL<SupplementaryInformation>,
+        extensions?: OPTIONAL<ExtensionField[]>
+    ) {
+        this.actual_recipient_name = actual_recipient_name;
+        this.report_type = report_type;
+        this.converted_encoded_information_types = converted_encoded_information_types;
+        this.originally_intended_recipient_name = originally_intended_recipient_name;
+        this.supplementary_information = supplementary_information;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a PerRecipientReportDeliveryFields

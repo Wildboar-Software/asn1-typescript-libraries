@@ -48,74 +48,88 @@ import { CorrelatorData, _decode_CorrelatorData, _encode_CorrelatorData } from "
  */
 export
 class ParkCallArgument {
+    /**
+     * @summary `parking`.
+     * @description
+     *
+     * Mandatory. Connection to park. Initial Hold or
+     * Connected; typically becomes Null (Queued for some
+     * independent shared-bridged cases) (FR 5).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly parking: ConnectionID;
+    /**
+     * @summary `parkTo`.
+     * @description
+     *
+     * Mandatory. Device at which the call is queued. Must be a
+     * complete DeviceID (FR 6). DND and Forwarding are honoured
+     * (FR 4). May equal the parking device (FR 2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly parkTo: DeviceID;
+    /**
+     * @summary `correlatorData`.
+     * @description
+     *
+     * Optional correlator data attached before resulting state
+     * transitions (§12.2.10).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly correlatorData?: OPTIONAL<CorrelatorData>;
+    /**
+     * @summary `subjectOfCall`.
+     * @description
+     *
+     * Optional subject or intent of the call (§12.2.27).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly subjectOfCall?: OPTIONAL<SubjectOfCall>;
+    /**
+     * @summary `languagePreferences`.
+     * @description
+     *
+     * Optional preferred language(s) (§12.2.16).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly languagePreferences?: OPTIONAL<LanguagePreferences>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional `CSTACommonArguments` carrying the security and
+     * privateData parameters from the ECMA-269 service table.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `parking`.
-         * @description
-         *
-         * Mandatory. Connection to park. Initial Hold or
-         * Connected; typically becomes Null (Queued for some
-         * independent shared-bridged cases) (FR 5).
-         *
-         * @public
-         * @readonly
-         */
-        readonly parking: ConnectionID,
-        /**
-         * @summary `parkTo`.
-         * @description
-         *
-         * Mandatory. Device at which the call is queued. Must be a
-         * complete DeviceID (FR 6). DND and Forwarding are honoured
-         * (FR 4). May equal the parking device (FR 2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly parkTo: DeviceID,
-        /**
-         * @summary `correlatorData`.
-         * @description
-         *
-         * Optional correlator data attached before resulting state
-         * transitions (§12.2.10).
-         *
-         * @public
-         * @readonly
-         */
-        readonly correlatorData?: OPTIONAL<CorrelatorData>,
-        /**
-         * @summary `subjectOfCall`.
-         * @description
-         *
-         * Optional subject or intent of the call (§12.2.27).
-         *
-         * @public
-         * @readonly
-         */
-        readonly subjectOfCall?: OPTIONAL<SubjectOfCall>,
-        /**
-         * @summary `languagePreferences`.
-         * @description
-         *
-         * Optional preferred language(s) (§12.2.16).
-         *
-         * @public
-         * @readonly
-         */
-        readonly languagePreferences?: OPTIONAL<LanguagePreferences>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional `CSTACommonArguments` carrying the security and
-         * privateData parameters from the ECMA-269 service table.
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        parking: ConnectionID,
+        parkTo: DeviceID,
+        correlatorData?: OPTIONAL<CorrelatorData>,
+        subjectOfCall?: OPTIONAL<SubjectOfCall>,
+        languagePreferences?: OPTIONAL<LanguagePreferences>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.parking = parking;
+        this.parkTo = parkTo;
+        this.correlatorData = correlatorData;
+        this.subjectOfCall = subjectOfCall;
+        this.languagePreferences = languagePreferences;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a ParkCallArgument

@@ -21,28 +21,34 @@ import * as $ from "@wildboar/asn1/functional";
  *
  */
 export class EncryptedPduInfo_pduEncryptionAlgorithm {
+    /**
+     * @summary `algorithm`.
+     * @description
+     *
+     * ALGORITHM.&id from `SymmetricEncryptionAlgorithms`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly algorithm: OBJECT_IDENTIFIER;
+    /**
+     * @summary `parameter`.
+     * @description
+     *
+     * ALGORITHM.&Type for that algorithm (singular field name).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly parameter: _Element;
+
     constructor(
-        /**
-         * @summary `algorithm`.
-         * @description
-         *
-         * ALGORITHM.&id from `SymmetricEncryptionAlgorithms`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly algorithm: OBJECT_IDENTIFIER,
-        /**
-         * @summary `parameter`.
-         * @description
-         *
-         * ALGORITHM.&Type for that algorithm (singular field name).
-         *
-         * @public
-         * @readonly
-         */
-        readonly parameter: _Element,
-    ) {}
+        algorithm: OBJECT_IDENTIFIER,
+        parameter: _Element,
+    ) {
+        this.algorithm = algorithm;
+        this.parameter = parameter;
+    }
 
     /**
      * @summary Restructures an object into a EncryptedPduInfo_pduEncryptionAlgorithm

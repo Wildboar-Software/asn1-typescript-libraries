@@ -37,28 +37,34 @@ import {
  *
  */
 export class EventReply {
+  /**
+   * @summary `eventType`.
+   * @description
+   *
+   * Event type (`CMIP-EVENT.&id`).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly eventType: EventTypeId;
+  /**
+   * @summary `eventReplyInfo`.
+   * @description
+   *
+   * Reply matching `eventType` (`CMIP-EVENT.&Value`).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly eventReplyInfo?: OPTIONAL<_Element>;
+
   constructor(
-    /**
-     * @summary `eventType`.
-     * @description
-     *
-     * Event type (`CMIP-EVENT.&id`).
-     *
-     * @public
-     * @readonly
-     */
-    readonly eventType: EventTypeId,
-    /**
-     * @summary `eventReplyInfo`.
-     * @description
-     *
-     * Reply matching `eventType` (`CMIP-EVENT.&Value`).
-     *
-     * @public
-     * @readonly
-     */
-    readonly eventReplyInfo?: OPTIONAL<_Element>
-  ) {}
+    eventType: EventTypeId,
+    eventReplyInfo?: OPTIONAL<_Element>
+  ) {
+    this.eventType = eventType;
+    this.eventReplyInfo = eventReplyInfo;
+  }
 
   /**
    * @summary Restructures an object into a EventReply

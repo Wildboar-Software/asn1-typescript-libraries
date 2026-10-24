@@ -40,37 +40,43 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class FileRead_Response {
+    /**
+     * @summary `fileData`.
+     * @description
+     *
+     * If the FRSM position is before EOF, a
+     * non-zero contiguous portion starting at
+     * that position toward EOF. If at EOF, a
+     * zero-length octet string.
+     *
+     * [ISO 9506-1:2003 Annex D, D.4.1.2.1]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly fileData: OCTET_STRING;
+    /**
+     * @summary `moreFollows`.
+     * @description
+     *
+     * True if additional content remains; false
+     * if `fileData` is empty or this is the last
+     * portion. Default true.
+     *
+     * [ISO 9506-1:2003 Annex D, D.4.1.2.2]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly moreFollows?: OPTIONAL<BOOLEAN>;
+
     constructor (
-        /**
-         * @summary `fileData`.
-         * @description
-         *
-         * If the FRSM position is before EOF, a
-         * non-zero contiguous portion starting at
-         * that position toward EOF. If at EOF, a
-         * zero-length octet string.
-         *
-         * [ISO 9506-1:2003 Annex D, D.4.1.2.1]
-         *
-         * @public
-         * @readonly
-         */
-        readonly fileData: OCTET_STRING,
-        /**
-         * @summary `moreFollows`.
-         * @description
-         *
-         * True if additional content remains; false
-         * if `fileData` is empty or this is the last
-         * portion. Default true.
-         *
-         * [ISO 9506-1:2003 Annex D, D.4.1.2.2]
-         *
-         * @public
-         * @readonly
-         */
-        readonly moreFollows?: OPTIONAL<BOOLEAN>
-    ) {}
+        fileData: OCTET_STRING,
+        moreFollows?: OPTIONAL<BOOLEAN>
+    ) {
+        this.fileData = fileData;
+        this.moreFollows = moreFollows;
+    }
 
     /**
      * @summary Restructures an object into a FileRead_Response

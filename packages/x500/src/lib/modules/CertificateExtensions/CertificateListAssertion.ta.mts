@@ -61,69 +61,87 @@ import {
  *
  */
 export class CertificateListAssertion {
+    /**
+     * @summary `issuer`.
+     * @public
+     * @readonly
+     */
+    public readonly issuer?: OPTIONAL<Name>;
+    /**
+     * @summary `minCRLNumber`.
+     * @description
+     *
+     * Stored cRLNumber ≥ this. No cRLNumber extension => no match.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly minCRLNumber?: OPTIONAL<CRLNumber>;
+    /**
+     * @summary `maxCRLNumber`.
+     * @description
+     *
+     * Stored cRLNumber ≤ this. No cRLNumber extension => no match.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly maxCRLNumber?: OPTIONAL<CRLNumber>;
+    /**
+     * @summary `reasonFlags`.
+     * @description
+     *
+     * Any presented 1-bit in IDP onlySomeReasons, or match if CRL has no
+     * reasons/IDP.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly reasonFlags?: OPTIONAL<ReasonFlags>;
+    /**
+     * @summary `dateAndTime`.
+     * @public
+     * @readonly
+     */
+    public readonly dateAndTime?: OPTIONAL<Time>;
+    /**
+     * @summary `distributionPoint`.
+     * @public
+     * @readonly
+     */
+    public readonly distributionPoint?: OPTIONAL<DistributionPointName>;
+    /**
+     * @summary `authorityKeyIdentifier`.
+     * @public
+     * @readonly
+     */
+    public readonly authorityKeyIdentifier?: OPTIONAL<AuthorityKeyIdentifier>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `issuer`.
-         * @public
-         * @readonly
-         */
-        readonly issuer?: OPTIONAL<Name>,
-        /**
-         * @summary `minCRLNumber`.
-         * @description
-         *
-         * Stored cRLNumber ≥ this. No cRLNumber extension => no match.
-         *
-         * @public
-         * @readonly
-         */
-        readonly minCRLNumber?: OPTIONAL<CRLNumber>,
-        /**
-         * @summary `maxCRLNumber`.
-         * @description
-         *
-         * Stored cRLNumber ≤ this. No cRLNumber extension => no match.
-         *
-         * @public
-         * @readonly
-         */
-        readonly maxCRLNumber?: OPTIONAL<CRLNumber>,
-        /**
-         * @summary `reasonFlags`.
-         * @description
-         *
-         * Any presented 1-bit in IDP onlySomeReasons, or match if CRL has no
-         * reasons/IDP.
-         *
-         * @public
-         * @readonly
-         */
-        readonly reasonFlags?: OPTIONAL<ReasonFlags>,
-        /**
-         * @summary `dateAndTime`.
-         * @public
-         * @readonly
-         */
-        readonly dateAndTime?: OPTIONAL<Time>,
-        /**
-         * @summary `distributionPoint`.
-         * @public
-         * @readonly
-         */
-        readonly distributionPoint?: OPTIONAL<DistributionPointName>,
-        /**
-         * @summary `authorityKeyIdentifier`.
-         * @public
-         * @readonly
-         */
-        readonly authorityKeyIdentifier?: OPTIONAL<AuthorityKeyIdentifier>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        issuer?: OPTIONAL<Name>,
+        minCRLNumber?: OPTIONAL<CRLNumber>,
+        maxCRLNumber?: OPTIONAL<CRLNumber>,
+        reasonFlags?: OPTIONAL<ReasonFlags>,
+        dateAndTime?: OPTIONAL<Time>,
+        distributionPoint?: OPTIONAL<DistributionPointName>,
+        authorityKeyIdentifier?: OPTIONAL<AuthorityKeyIdentifier>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.issuer = issuer;
+        this.minCRLNumber = minCRLNumber;
+        this.maxCRLNumber = maxCRLNumber;
+        this.reasonFlags = reasonFlags;
+        this.dateAndTime = dateAndTime;
+        this.distributionPoint = distributionPoint;
+        this.authorityKeyIdentifier = authorityKeyIdentifier;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a CertificateListAssertion

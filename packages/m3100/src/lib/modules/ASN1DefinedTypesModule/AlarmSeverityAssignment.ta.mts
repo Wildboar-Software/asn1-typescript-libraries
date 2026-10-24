@@ -40,32 +40,42 @@ import {
  *
  */
 export class AlarmSeverityAssignment {
+    /**
+     * @summary `problem`.
+     * @public
+     * @readonly
+     */
+    public readonly problem: ProbableCause;
+    /**
+     * @summary `severityAssignedServiceAffecting`.
+     * @public
+     * @readonly
+     */
+    public readonly severityAssignedServiceAffecting?: OPTIONAL<AlarmSeverityCode>;
+    /**
+     * @summary `severityAssignedNonServiceAffecting`.
+     * @public
+     * @readonly
+     */
+    public readonly severityAssignedNonServiceAffecting?: OPTIONAL<AlarmSeverityCode>;
+    /**
+     * @summary `severityAssignedServiceIndependent`.
+     * @public
+     * @readonly
+     */
+    public readonly severityAssignedServiceIndependent?: OPTIONAL<AlarmSeverityCode>;
+
     constructor(
-        /**
-         * @summary `problem`.
-         * @public
-         * @readonly
-         */
-        readonly problem: ProbableCause,
-        /**
-         * @summary `severityAssignedServiceAffecting`.
-         * @public
-         * @readonly
-         */
-        readonly severityAssignedServiceAffecting?: OPTIONAL<AlarmSeverityCode>,
-        /**
-         * @summary `severityAssignedNonServiceAffecting`.
-         * @public
-         * @readonly
-         */
-        readonly severityAssignedNonServiceAffecting?: OPTIONAL<AlarmSeverityCode>,
-        /**
-         * @summary `severityAssignedServiceIndependent`.
-         * @public
-         * @readonly
-         */
-        readonly severityAssignedServiceIndependent?: OPTIONAL<AlarmSeverityCode>
-    ) {}
+        problem: ProbableCause,
+        severityAssignedServiceAffecting?: OPTIONAL<AlarmSeverityCode>,
+        severityAssignedNonServiceAffecting?: OPTIONAL<AlarmSeverityCode>,
+        severityAssignedServiceIndependent?: OPTIONAL<AlarmSeverityCode>
+    ) {
+        this.problem = problem;
+        this.severityAssignedServiceAffecting = severityAssignedServiceAffecting;
+        this.severityAssignedNonServiceAffecting = severityAssignedNonServiceAffecting;
+        this.severityAssignedServiceIndependent = severityAssignedServiceIndependent;
+    }
 
     /**
      * @summary Restructures an object into a AlarmSeverityAssignment

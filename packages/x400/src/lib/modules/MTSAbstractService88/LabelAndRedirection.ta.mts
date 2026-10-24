@@ -39,20 +39,26 @@ import {
  *
  */
 export class LabelAndRedirection {
+    /**
+     * @summary `user_security_label`.
+     * @public
+     * @readonly
+     */
+    public readonly user_security_label?: OPTIONAL<UserSecurityLabel>;
+    /**
+     * @summary `recipient_assigned_alternate_recipient`.
+     * @public
+     * @readonly
+     */
+    public readonly recipient_assigned_alternate_recipient?: OPTIONAL<RecipientAssignedAlternateRecipient>;
+
     constructor(
-        /**
-         * @summary `user_security_label`.
-         * @public
-         * @readonly
-         */
-        readonly user_security_label?: OPTIONAL<UserSecurityLabel>,
-        /**
-         * @summary `recipient_assigned_alternate_recipient`.
-         * @public
-         * @readonly
-         */
-        readonly recipient_assigned_alternate_recipient?: OPTIONAL<RecipientAssignedAlternateRecipient>
-    ) {}
+        user_security_label?: OPTIONAL<UserSecurityLabel>,
+        recipient_assigned_alternate_recipient?: OPTIONAL<RecipientAssignedAlternateRecipient>
+    ) {
+        this.user_security_label = user_security_label;
+        this.recipient_assigned_alternate_recipient = recipient_assigned_alternate_recipient;
+    }
 
     /**
      * @summary Restructures an object into a LabelAndRedirection

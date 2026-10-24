@@ -45,89 +45,105 @@ import { type InformationToSend, _decode_InformationToSend, _encode_InformationT
  */
 export
 class PlayAnnouncementArg {
+    /**
+     * @summary `informationToSend`.
+     * @description
+     *
+     * Announcement or tone to send. `inbandInfo`: `messageID`
+     * (elementaryMessageID, text-to-speech, elementaryMessageIDs,
+     * or variableMessage), `numberOfRepetitions`, `duration`
+     * (seconds; 0 = endless repetition), `interval` (seconds
+     * between repetitions; only if numberOfRepetitions > 1).
+     * `tone`: `toneID` and `duration` (seconds; 0 = infinite).
+     * If neither duration nor numberOfRepetitions is specified,
+     * network-specific ending conditions apply.
+     * (3GPP TS 29.078 V19.0.0 clause 11.23.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly informationToSend: InformationToSend;
+    /**
+     * @summary `disconnectFromIPForbidden`.
+     * @description
+     *
+     * TRUE (ASN.1 default): gsmSRF shall not initiate disconnect
+     * from the gsmSSF after the interaction. FALSE: gsmSRF may
+     * disconnect after all information has been sent.
+     * (3GPP TS 29.078 V19.0.0 clause 11.23.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly disconnectFromIPForbidden?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `requestAnnouncementCompleteNotification`.
+     * @description
+     *
+     * TRUE (ASN.1 default): send SpecializedResourceReport with
+     * `allAnnouncementsComplete` when all information has been
+     * sent. FALSE: do not. (3GPP TS 29.078 V19.0.0
+     * clause 11.23.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly requestAnnouncementCompleteNotification?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<Extensions>;
+    /**
+     * @summary `callSegmentID`.
+     * @description
+     *
+     * Call Segment to which the user interaction applies.
+     * unknownCSID if the CSID is not known.
+     * (3GPP TS 29.078 V19.0.0 clause 11.23.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly callSegmentID?: OPTIONAL<CallSegmentID>;
+    /**
+     * @summary `requestAnnouncementStartedNotification`.
+     * @description
+     *
+     * TRUE: send SpecializedResourceReport with
+     * `firstAnnouncementStarted` when the first announcement or
+     * tone has started. ASN.1 default FALSE.
+     * (3GPP TS 29.078 V19.0.0 clause 11.23.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly requestAnnouncementStartedNotification?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `informationToSend`.
-         * @description
-         *
-         * Announcement or tone to send. `inbandInfo`: `messageID`
-         * (elementaryMessageID, text-to-speech, elementaryMessageIDs,
-         * or variableMessage), `numberOfRepetitions`, `duration`
-         * (seconds; 0 = endless repetition), `interval` (seconds
-         * between repetitions; only if numberOfRepetitions > 1).
-         * `tone`: `toneID` and `duration` (seconds; 0 = infinite).
-         * If neither duration nor numberOfRepetitions is specified,
-         * network-specific ending conditions apply.
-         * (3GPP TS 29.078 V19.0.0 clause 11.23.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly informationToSend: InformationToSend,
-        /**
-         * @summary `disconnectFromIPForbidden`.
-         * @description
-         *
-         * TRUE (ASN.1 default): gsmSRF shall not initiate disconnect
-         * from the gsmSSF after the interaction. FALSE: gsmSRF may
-         * disconnect after all information has been sent.
-         * (3GPP TS 29.078 V19.0.0 clause 11.23.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly disconnectFromIPForbidden?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `requestAnnouncementCompleteNotification`.
-         * @description
-         *
-         * TRUE (ASN.1 default): send SpecializedResourceReport with
-         * `allAnnouncementsComplete` when all information has been
-         * sent. FALSE: do not. (3GPP TS 29.078 V19.0.0
-         * clause 11.23.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly requestAnnouncementCompleteNotification?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `extensions`.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<Extensions>,
-        /**
-         * @summary `callSegmentID`.
-         * @description
-         *
-         * Call Segment to which the user interaction applies.
-         * unknownCSID if the CSID is not known.
-         * (3GPP TS 29.078 V19.0.0 clause 11.23.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly callSegmentID?: OPTIONAL<CallSegmentID>,
-        /**
-         * @summary `requestAnnouncementStartedNotification`.
-         * @description
-         *
-         * TRUE: send SpecializedResourceReport with
-         * `firstAnnouncementStarted` when the first announcement or
-         * tone has started. ASN.1 default FALSE.
-         * (3GPP TS 29.078 V19.0.0 clause 11.23.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly requestAnnouncementStartedNotification?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        informationToSend: InformationToSend,
+        disconnectFromIPForbidden?: OPTIONAL<BOOLEAN>,
+        requestAnnouncementCompleteNotification?: OPTIONAL<BOOLEAN>,
+        extensions?: OPTIONAL<Extensions>,
+        callSegmentID?: OPTIONAL<CallSegmentID>,
+        requestAnnouncementStartedNotification?: OPTIONAL<BOOLEAN>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.informationToSend = informationToSend;
+        this.disconnectFromIPForbidden = disconnectFromIPForbidden;
+        this.requestAnnouncementCompleteNotification = requestAnnouncementCompleteNotification;
+        this.extensions = extensions;
+        this.callSegmentID = callSegmentID;
+        this.requestAnnouncementStartedNotification = requestAnnouncementStartedNotification;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a PlayAnnouncementArg

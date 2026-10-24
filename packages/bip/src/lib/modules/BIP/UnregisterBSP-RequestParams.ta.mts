@@ -40,19 +40,23 @@ import {
  *
  */
 export class UnregisterBSP_RequestParams {
+  /**
+   * @summary `bspProductUuid`.
+   * @description
+   *
+   * Product UUID of the BSP to unregister, from C `BSPProductUuid`
+   * (`X.1083 §16.60`, Table 119, §15.58).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly bspProductUuid: BioAPI_UUID;
+
   constructor(
-    /**
-     * @summary `bspProductUuid`.
-     * @description
-     *
-     * Product UUID of the BSP to unregister, from C `BSPProductUuid`
-     * (`X.1083 §16.60`, Table 119, §15.58).
-     *
-     * @public
-     * @readonly
-     */
-    readonly bspProductUuid: BioAPI_UUID
-  ) {}
+    bspProductUuid: BioAPI_UUID
+  ) {
+    this.bspProductUuid = bspProductUuid;
+  }
 
   /**
    * @summary Restructures an object into a UnregisterBSP_RequestParams

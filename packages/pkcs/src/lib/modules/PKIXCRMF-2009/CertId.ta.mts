@@ -11,10 +11,16 @@ import {
 //     serialNumber     INTEGER }
 
 export class CertId {
+    public readonly issuer: GeneralName;
+    public readonly serialNumber: asn1.OCTET_STRING;
+
     constructor(
-        readonly issuer: GeneralName,
-        readonly serialNumber: asn1.OCTET_STRING
-    ) {}
+        issuer: GeneralName,
+        serialNumber: asn1.OCTET_STRING
+    ) {
+        this.issuer = issuer;
+        this.serialNumber = serialNumber;
+    }
 }
 export const _root_component_type_list_1_spec_for_CertId: $.ComponentSpec[] = [
     new $.ComponentSpec("issuer", false, $.hasAnyTag),

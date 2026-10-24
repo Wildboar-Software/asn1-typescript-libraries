@@ -44,61 +44,73 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class QueueArgument {
+    /**
+     * @summary `overConnection`.
+     * @description
+     *
+     * Connection whose Prompt Queue receives the prompt (ECMA-269
+     * §26.1.8.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly overConnection: ConnectionID;
+    /**
+     * @summary `message`.
+     * @description
+     *
+     * Prompt to queue (ECMA-269 §26.1.8.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly message: MessageID;
+    /**
+     * @summary `resource`.
+     * @description
+     *
+     * Interactive voice resource. Required when more than one interactive
+     * voice resource exists on the connection.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly resource?: OPTIONAL<ResourceID>;
+    /**
+     * @summary `text`.
+     * @description
+     *
+     * Optional text associated with the queued prompt (ECMA-269 §26.1.8.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly text?: OPTIONAL<IA5String>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * CSTACommonArguments carrying the service-table security and
+     * privateData parameters.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `overConnection`.
-         * @description
-         *
-         * Connection whose Prompt Queue receives the prompt (ECMA-269
-         * §26.1.8.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly overConnection: ConnectionID,
-        /**
-         * @summary `message`.
-         * @description
-         *
-         * Prompt to queue (ECMA-269 §26.1.8.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly message: MessageID,
-        /**
-         * @summary `resource`.
-         * @description
-         *
-         * Interactive voice resource. Required when more than one interactive
-         * voice resource exists on the connection.
-         *
-         * @public
-         * @readonly
-         */
-        readonly resource?: OPTIONAL<ResourceID>,
-        /**
-         * @summary `text`.
-         * @description
-         *
-         * Optional text associated with the queued prompt (ECMA-269 §26.1.8.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly text?: OPTIONAL<IA5String>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * CSTACommonArguments carrying the service-table security and
-         * privateData parameters.
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        overConnection: ConnectionID,
+        message: MessageID,
+        resource?: OPTIONAL<ResourceID>,
+        text?: OPTIONAL<IA5String>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.overConnection = overConnection;
+        this.message = message;
+        this.resource = resource;
+        this.text = text;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a QueueArgument

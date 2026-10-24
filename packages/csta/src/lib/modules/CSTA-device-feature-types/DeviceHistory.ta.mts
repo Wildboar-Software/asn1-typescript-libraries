@@ -47,36 +47,44 @@ import { ConnectionID, _decode_ConnectionID, _encode_ConnectionID } from "../CST
  */
 export
 class DeviceHistory {
+    /**
+     * @summary `oldDeviceID`.
+     * @description
+     * Device that left the call. Should match the subject device in the
+     * Diverted, Transferred, or Connection Cleared event. May be Not Known,
+     * Restricted, Not Required, or Not Specified.
+     * @public
+     * @readonly
+     */
+    public readonly oldDeviceID: DeviceID;
+    /**
+     * @summary `eventCause`.
+     * @description
+     * Why the device left or was redirected. Should match the cause in that
+     * leaving event.
+     * @public
+     * @readonly
+     */
+    public readonly eventCause?: OPTIONAL<EventCause>;
+    /**
+     * @summary `oldConnectionID`.
+     * @description
+     * Last ConnectionID for the device that left. Should match the subject
+     * connection in that leaving event.
+     * @public
+     * @readonly
+     */
+    public readonly oldConnectionID?: OPTIONAL<ConnectionID>;
+
     constructor (
-        /**
-         * @summary `oldDeviceID`.
-         * @description
-         * Device that left the call. Should match the subject device in the
-         * Diverted, Transferred, or Connection Cleared event. May be Not Known,
-         * Restricted, Not Required, or Not Specified.
-         * @public
-         * @readonly
-         */
-        readonly oldDeviceID: DeviceID,
-        /**
-         * @summary `eventCause`.
-         * @description
-         * Why the device left or was redirected. Should match the cause in that
-         * leaving event.
-         * @public
-         * @readonly
-         */
-        readonly eventCause?: OPTIONAL<EventCause>,
-        /**
-         * @summary `oldConnectionID`.
-         * @description
-         * Last ConnectionID for the device that left. Should match the subject
-         * connection in that leaving event.
-         * @public
-         * @readonly
-         */
-        readonly oldConnectionID?: OPTIONAL<ConnectionID>
-    ) {}
+        oldDeviceID: DeviceID,
+        eventCause?: OPTIONAL<EventCause>,
+        oldConnectionID?: OPTIONAL<ConnectionID>
+    ) {
+        this.oldDeviceID = oldDeviceID;
+        this.eventCause = eventCause;
+        this.oldConnectionID = oldConnectionID;
+    }
 
     /**
      * @summary Restructures an object into a DeviceHistory

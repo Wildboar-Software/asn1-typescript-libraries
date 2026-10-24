@@ -57,80 +57,94 @@ import { TopologyRequest_topologyDirectionExtension, _decode_TopologyRequest_top
  */
 export
 class TopologyRequest {
+    /**
+     * @summary `terminationFrom`.
+     * @description
+     *
+     * Source side of the association. ALL and CHOOSE are allowed with the
+     * restrictions in clause 7.1.18.4. ALL means every termination in the
+     * context except the other termination named in this triple.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly terminationFrom: TerminationID;
+    /**
+     * @summary `terminationTo`.
+     * @description
+     *
+     * Sink side of the association. Same wildcard rules as
+     * `terminationFrom`. A oneway association must not use ALL for both
+     * sides.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly terminationTo: TerminationID;
+    /**
+     * @summary `topologyDirection`.
+     * @description
+     *
+     * Base association: bothway, isolate, or oneway. Ignored when
+     * `topologyDirectionExtension` is present (Annex A).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly topologyDirection: TopologyRequest_topologyDirection;
+    /**
+     * @summary `streamID`.
+     * @description
+     *
+     * When present, the association applies only to this stream. Other
+     * streams between the same terminations are unchanged (clause
+     * 7.1.18.5). Omitted, the association applies to every stream.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly streamID?: OPTIONAL<StreamID>;
+    /**
+     * @summary `topologyDirectionExtension`.
+     * @description
+     *
+     * OnewayExternal or OnewayBoth. When present, this direction is the one
+     * that applies and `topologyDirection` is not (Annex A). OnewayExternal
+     * feeds T2 the media T1 sends externally, and forbids ALL on T1.
+     * OnewayBoth feeds T2 both the media T1 sends and the media T1 receives
+     * externally, and forbids ALL on either side (clause 7.1.18.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly topologyDirectionExtension?: OPTIONAL<TopologyRequest_topologyDirectionExtension>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @description
+     *
+     * Extension additions this version does not define. Kept so a later
+     * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `terminationFrom`.
-         * @description
-         *
-         * Source side of the association. ALL and CHOOSE are allowed with the
-         * restrictions in clause 7.1.18.4. ALL means every termination in the
-         * context except the other termination named in this triple.
-         *
-         * @public
-         * @readonly
-         */
-        readonly terminationFrom: TerminationID,
-        /**
-         * @summary `terminationTo`.
-         * @description
-         *
-         * Sink side of the association. Same wildcard rules as
-         * `terminationFrom`. A oneway association must not use ALL for both
-         * sides.
-         *
-         * @public
-         * @readonly
-         */
-        readonly terminationTo: TerminationID,
-        /**
-         * @summary `topologyDirection`.
-         * @description
-         *
-         * Base association: bothway, isolate, or oneway. Ignored when
-         * `topologyDirectionExtension` is present (Annex A).
-         *
-         * @public
-         * @readonly
-         */
-        readonly topologyDirection: TopologyRequest_topologyDirection,
-        /**
-         * @summary `streamID`.
-         * @description
-         *
-         * When present, the association applies only to this stream. Other
-         * streams between the same terminations are unchanged (clause
-         * 7.1.18.5). Omitted, the association applies to every stream.
-         *
-         * @public
-         * @readonly
-         */
-        readonly streamID?: OPTIONAL<StreamID>,
-        /**
-         * @summary `topologyDirectionExtension`.
-         * @description
-         *
-         * OnewayExternal or OnewayBoth. When present, this direction is the one
-         * that applies and `topologyDirection` is not (Annex A). OnewayExternal
-         * feeds T2 the media T1 sends externally, and forbids ALL on T1.
-         * OnewayBoth feeds T2 both the media T1 sends and the media T1 receives
-         * externally, and forbids ALL on either side (clause 7.1.18.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly topologyDirectionExtension?: OPTIONAL<TopologyRequest_topologyDirectionExtension>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @description
-         *
-         * Extension additions this version does not define. Kept so a later
-         * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
-         *
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        terminationFrom: TerminationID,
+        terminationTo: TerminationID,
+        topologyDirection: TopologyRequest_topologyDirection,
+        streamID?: OPTIONAL<StreamID>,
+        topologyDirectionExtension?: OPTIONAL<TopologyRequest_topologyDirectionExtension>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.terminationFrom = terminationFrom;
+        this.terminationTo = terminationTo;
+        this.topologyDirection = topologyDirection;
+        this.streamID = streamID;
+        this.topologyDirectionExtension = topologyDirectionExtension;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a TopologyRequest

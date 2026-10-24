@@ -35,57 +35,69 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
  */
 export
 class SendRoutingInfoForGprsArg {
+    /**
+     * @summary `imsi`.
+     * @description
+     *
+     * International Mobile Subscriber Identity as in 3GPP TS 23.003.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.2.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly imsi: IMSI;
+    /**
+     * @summary `ggsn_Address`.
+     * @description
+     *
+     * IP address of a GGSN as in 3GPP TS 23.003.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.2.40).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ggsn_Address: OPTIONAL<GSN_Address>;
+    /**
+     * @summary `ggsn_Number`.
+     * @description
+     *
+     * ISDN number of a GGSN, or of a protocol-converting GSN between GGSN
+     * and HLR.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.2.41).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ggsn_Number: ISDN_AddressString;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `imsi`.
-         * @description
-         *
-         * International Mobile Subscriber Identity as in 3GPP TS 23.003.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.2.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly imsi: IMSI,
-        /**
-         * @summary `ggsn_Address`.
-         * @description
-         *
-         * IP address of a GGSN as in 3GPP TS 23.003.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.2.40).
-         *
-         * @public
-         * @readonly
-         */
-        readonly ggsn_Address: OPTIONAL<GSN_Address>,
-        /**
-         * @summary `ggsn_Number`.
-         * @description
-         *
-         * ISDN number of a GGSN, or of a protocol-converting GSN between GGSN
-         * and HLR.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.2.41).
-         *
-         * @public
-         * @readonly
-         */
-        readonly ggsn_Number: ISDN_AddressString,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        imsi: IMSI,
+        ggsn_Address: OPTIONAL<GSN_Address>,
+        ggsn_Number: ISDN_AddressString,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.imsi = imsi;
+        this.ggsn_Address = ggsn_Address;
+        this.ggsn_Number = ggsn_Number;
+        this.extensionContainer = extensionContainer;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a SendRoutingInfoForGprsArg

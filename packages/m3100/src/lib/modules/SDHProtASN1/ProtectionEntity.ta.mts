@@ -32,20 +32,26 @@ import {
  *
  */
 export class ProtectionEntity {
+    /**
+     * @summary `protectedUnits`.
+     * @public
+     * @readonly
+     */
+    public readonly protectedUnits?: OPTIONAL<RelativeDistinguishedName[]>;
+    /**
+     * @summary `protectingUnits`.
+     * @public
+     * @readonly
+     */
+    public readonly protectingUnits?: OPTIONAL<RelativeDistinguishedName[]>;
+
     constructor(
-        /**
-         * @summary `protectedUnits`.
-         * @public
-         * @readonly
-         */
-        readonly protectedUnits?: OPTIONAL<RelativeDistinguishedName[]>,
-        /**
-         * @summary `protectingUnits`.
-         * @public
-         * @readonly
-         */
-        readonly protectingUnits?: OPTIONAL<RelativeDistinguishedName[]>
-    ) {}
+        protectedUnits?: OPTIONAL<RelativeDistinguishedName[]>,
+        protectingUnits?: OPTIONAL<RelativeDistinguishedName[]>
+    ) {
+        this.protectedUnits = protectedUnits;
+        this.protectingUnits = protectingUnits;
+    }
 
     /**
      * @summary Restructures an object into a ProtectionEntity

@@ -45,77 +45,91 @@ import { SegmentNumber, _decode_SegmentNumber, _encode_SegmentNumber } from "../
  */
 export
 class TransactionReply {
+    /**
+     * @summary `transactionId`.
+     * @description
+     *
+     * Same identifier as the corresponding request (clause 8.2.2). Zero
+     * when the request's identifier was missing (clause 8.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly transactionId: TransactionId;
+    /**
+     * @summary `immAckRequired`.
+     * @description
+     *
+     * Present when the sender of this reply requires an immediate
+     * transaction-response acknowledgement. Use of response
+     * acknowledgements depends on the transport (Annex A).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly immAckRequired: OPTIONAL<NULL>;
+    /**
+     * @summary `transactionResult`.
+     * @description
+     *
+     * Either a transaction-level `ErrorDescriptor`, or the action replies.
+     * Error 413 ("Number of transactions in message exceeds maximum") is
+     * returned when the request message contained more transactions than
+     * the receiver can process (clause 8.2.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly transactionResult: TransactionReply_transactionResult;
+    /**
+     * @summary `segmentNumber`.
+     * @description
+     *
+     * Segment number when this reply is one piece of a segmented
+     * TransactionReply, 0 to 65535 (Annex A).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly segmentNumber?: OPTIONAL<SegmentNumber>;
+    /**
+     * @summary `segmentationComplete`.
+     * @description
+     *
+     * Present on the segment that completes a segmented TransactionReply
+     * (Annex A).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly segmentationComplete?: OPTIONAL<NULL>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @description
+     *
+     * Extension additions this version does not define. Kept so a later
+     * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `transactionId`.
-         * @description
-         *
-         * Same identifier as the corresponding request (clause 8.2.2). Zero
-         * when the request's identifier was missing (clause 8.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly transactionId: TransactionId,
-        /**
-         * @summary `immAckRequired`.
-         * @description
-         *
-         * Present when the sender of this reply requires an immediate
-         * transaction-response acknowledgement. Use of response
-         * acknowledgements depends on the transport (Annex A).
-         *
-         * @public
-         * @readonly
-         */
-        readonly immAckRequired: OPTIONAL<NULL>,
-        /**
-         * @summary `transactionResult`.
-         * @description
-         *
-         * Either a transaction-level `ErrorDescriptor`, or the action replies.
-         * Error 413 ("Number of transactions in message exceeds maximum") is
-         * returned when the request message contained more transactions than
-         * the receiver can process (clause 8.2.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly transactionResult: TransactionReply_transactionResult,
-        /**
-         * @summary `segmentNumber`.
-         * @description
-         *
-         * Segment number when this reply is one piece of a segmented
-         * TransactionReply, 0 to 65535 (Annex A).
-         *
-         * @public
-         * @readonly
-         */
-        readonly segmentNumber?: OPTIONAL<SegmentNumber>,
-        /**
-         * @summary `segmentationComplete`.
-         * @description
-         *
-         * Present on the segment that completes a segmented TransactionReply
-         * (Annex A).
-         *
-         * @public
-         * @readonly
-         */
-        readonly segmentationComplete?: OPTIONAL<NULL>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @description
-         *
-         * Extension additions this version does not define. Kept so a later
-         * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
-         *
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        transactionId: TransactionId,
+        immAckRequired: OPTIONAL<NULL>,
+        transactionResult: TransactionReply_transactionResult,
+        segmentNumber?: OPTIONAL<SegmentNumber>,
+        segmentationComplete?: OPTIONAL<NULL>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.transactionId = transactionId;
+        this.immAckRequired = immAckRequired;
+        this.transactionResult = transactionResult;
+        this.segmentNumber = segmentNumber;
+        this.segmentationComplete = segmentationComplete;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a TransactionReply

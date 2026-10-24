@@ -47,26 +47,34 @@ import {
  *
  */
 export class ListResult {
+    /**
+     * @summary `next`.
+     * @public
+     * @readonly
+     */
+    public readonly next?: OPTIONAL<SequenceNumber>;
+    /**
+     * @summary `requested`.
+     * @public
+     * @readonly
+     */
+    public readonly requested?: OPTIONAL<EntryInformation[]>;
+    /**
+     * @summary `list_result_extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly list_result_extensions?: OPTIONAL<MSExtensions>;
+
     constructor(
-        /**
-         * @summary `next`.
-         * @public
-         * @readonly
-         */
-        readonly next?: OPTIONAL<SequenceNumber>,
-        /**
-         * @summary `requested`.
-         * @public
-         * @readonly
-         */
-        readonly requested?: OPTIONAL<EntryInformation[]>,
-        /**
-         * @summary `list_result_extensions`.
-         * @public
-         * @readonly
-         */
-        readonly list_result_extensions?: OPTIONAL<MSExtensions>
-    ) {}
+        next?: OPTIONAL<SequenceNumber>,
+        requested?: OPTIONAL<EntryInformation[]>,
+        list_result_extensions?: OPTIONAL<MSExtensions>
+    ) {
+        this.next = next;
+        this.requested = requested;
+        this.list_result_extensions = list_result_extensions;
+    }
 
     /**
      * @summary Restructures an object into a ListResult

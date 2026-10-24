@@ -33,20 +33,26 @@ import {
  *
  */
 export class InvokeExerciseReply_Item {
+    /**
+     * @summary `protectionUnit`.
+     * @public
+     * @readonly
+     */
+    public readonly protectionUnit: RelativeDistinguishedName;
+    /**
+     * @summary `result`.
+     * @public
+     * @readonly
+     */
+    public readonly result: LastAttemptResult;
+
     constructor(
-        /**
-         * @summary `protectionUnit`.
-         * @public
-         * @readonly
-         */
-        readonly protectionUnit: RelativeDistinguishedName,
-        /**
-         * @summary `result`.
-         * @public
-         * @readonly
-         */
-        readonly result: LastAttemptResult
-    ) {}
+        protectionUnit: RelativeDistinguishedName,
+        result: LastAttemptResult
+    ) {
+        this.protectionUnit = protectionUnit;
+        this.result = result;
+    }
 
     /**
      * @summary Restructures an object into a InvokeExerciseReply_Item

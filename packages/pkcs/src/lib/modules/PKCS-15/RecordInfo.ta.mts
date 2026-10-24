@@ -28,50 +28,66 @@ import * as $ from "@wildboar/asn1/functional";
  *
  */
 export class RecordInfo {
+    /**
+     * @summary `oDFRecordLength`.
+     * @public
+     * @readonly
+     */
+    public readonly oDFRecordLength?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `prKDFRecordLength`.
+     * @public
+     * @readonly
+     */
+    public readonly prKDFRecordLength?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `puKDFRecordLength`.
+     * @public
+     * @readonly
+     */
+    public readonly puKDFRecordLength?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `sKDFRecordLength`.
+     * @public
+     * @readonly
+     */
+    public readonly sKDFRecordLength?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `cDFRecordLength`.
+     * @public
+     * @readonly
+     */
+    public readonly cDFRecordLength?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `dODFRecordLength`.
+     * @public
+     * @readonly
+     */
+    public readonly dODFRecordLength?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `aODFRecordLength`.
+     * @public
+     * @readonly
+     */
+    public readonly aODFRecordLength?: OPTIONAL<INTEGER>;
+
     constructor(
-        /**
-         * @summary `oDFRecordLength`.
-         * @public
-         * @readonly
-         */
-        readonly oDFRecordLength?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `prKDFRecordLength`.
-         * @public
-         * @readonly
-         */
-        readonly prKDFRecordLength?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `puKDFRecordLength`.
-         * @public
-         * @readonly
-         */
-        readonly puKDFRecordLength?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `sKDFRecordLength`.
-         * @public
-         * @readonly
-         */
-        readonly sKDFRecordLength?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `cDFRecordLength`.
-         * @public
-         * @readonly
-         */
-        readonly cDFRecordLength?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `dODFRecordLength`.
-         * @public
-         * @readonly
-         */
-        readonly dODFRecordLength?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `aODFRecordLength`.
-         * @public
-         * @readonly
-         */
-        readonly aODFRecordLength?: OPTIONAL<INTEGER>
-    ) {}
+        oDFRecordLength?: OPTIONAL<INTEGER>,
+        prKDFRecordLength?: OPTIONAL<INTEGER>,
+        puKDFRecordLength?: OPTIONAL<INTEGER>,
+        sKDFRecordLength?: OPTIONAL<INTEGER>,
+        cDFRecordLength?: OPTIONAL<INTEGER>,
+        dODFRecordLength?: OPTIONAL<INTEGER>,
+        aODFRecordLength?: OPTIONAL<INTEGER>
+    ) {
+        this.oDFRecordLength = oDFRecordLength;
+        this.prKDFRecordLength = prKDFRecordLength;
+        this.puKDFRecordLength = puKDFRecordLength;
+        this.sKDFRecordLength = sKDFRecordLength;
+        this.cDFRecordLength = cDFRecordLength;
+        this.dODFRecordLength = dODFRecordLength;
+        this.aODFRecordLength = aODFRecordLength;
+    }
 
     /**
      * @summary Restructures an object into a RecordInfo

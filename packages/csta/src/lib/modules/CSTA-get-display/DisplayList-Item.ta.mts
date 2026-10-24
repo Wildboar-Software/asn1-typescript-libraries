@@ -51,91 +51,111 @@ import {
  */
 export
 class DisplayList_Item {
+    /**
+     * @summary `displayID`.
+     * @description
+     *
+     * Display this entry describes.
+     * @public
+     * @readonly
+     */
+    public readonly displayID: DisplayID;
+    /**
+     * @summary `logicalRows`.
+     * @description
+     *
+     * Rows on the logical display.
+     * @public
+     * @readonly
+     */
+    public readonly logicalRows: INTEGER;
+    /**
+     * @summary `logicalColumns`.
+     * @description
+     *
+     * Columns on the logical display.
+     * @public
+     * @readonly
+     */
+    public readonly logicalColumns: INTEGER;
+    /**
+     * @summary `physicalRows`.
+     * @description
+     *
+     * Physical rows. Omit when equal to `logicalRows`.
+     * @public
+     * @readonly
+     */
+    public readonly physicalRows: OPTIONAL<INTEGER>;
+    /**
+     * @summary `physicalColumns`.
+     * @description
+     *
+     * Physical columns. Omit when equal to `logicalColumns`.
+     * @public
+     * @readonly
+     */
+    public readonly physicalColumns: OPTIONAL<INTEGER>;
+    /**
+     * @summary `physicalBaseRowNumber`.
+     * @description
+     *
+     * Logical row shown at the first physical row. Omit when physical and
+     * logical row counts are equal.
+     * @public
+     * @readonly
+     */
+    public readonly physicalBaseRowNumber: OPTIONAL<INTEGER>;
+    /**
+     * @summary `physicalBaseColumnNumber`.
+     * @description
+     *
+     * Logical column shown at the first physical column. Omit when physical
+     * and logical column counts are equal.
+     * @public
+     * @readonly
+     */
+    public readonly physicalBaseColumnNumber: OPTIONAL<INTEGER>;
+    /**
+     * @summary `characterSet`.
+     * @description
+     *
+     * ASCII (default), Unicode (UTF-8), or Proprietary.
+     * @public
+     * @readonly
+     */
+    public readonly characterSet: OPTIONAL<CharacterSet>;
+    /**
+     * @summary `contentsOfDisplay`.
+     * @description
+     *
+     * Full logical display: rows concatenated, including spaces.
+     * @public
+     * @readonly
+     */
+    public readonly contentsOfDisplay: IA5String;
+
     constructor (
-        /**
-         * @summary `displayID`.
-         * @description
-         *
-         * Display this entry describes.
-         * @public
-         * @readonly
-         */
-        readonly displayID: DisplayID,
-        /**
-         * @summary `logicalRows`.
-         * @description
-         *
-         * Rows on the logical display.
-         * @public
-         * @readonly
-         */
-        readonly logicalRows: INTEGER,
-        /**
-         * @summary `logicalColumns`.
-         * @description
-         *
-         * Columns on the logical display.
-         * @public
-         * @readonly
-         */
-        readonly logicalColumns: INTEGER,
-        /**
-         * @summary `physicalRows`.
-         * @description
-         *
-         * Physical rows. Omit when equal to `logicalRows`.
-         * @public
-         * @readonly
-         */
-        readonly physicalRows: OPTIONAL<INTEGER>,
-        /**
-         * @summary `physicalColumns`.
-         * @description
-         *
-         * Physical columns. Omit when equal to `logicalColumns`.
-         * @public
-         * @readonly
-         */
-        readonly physicalColumns: OPTIONAL<INTEGER>,
-        /**
-         * @summary `physicalBaseRowNumber`.
-         * @description
-         *
-         * Logical row shown at the first physical row. Omit when physical and
-         * logical row counts are equal.
-         * @public
-         * @readonly
-         */
-        readonly physicalBaseRowNumber: OPTIONAL<INTEGER>,
-        /**
-         * @summary `physicalBaseColumnNumber`.
-         * @description
-         *
-         * Logical column shown at the first physical column. Omit when physical
-         * and logical column counts are equal.
-         * @public
-         * @readonly
-         */
-        readonly physicalBaseColumnNumber: OPTIONAL<INTEGER>,
-        /**
-         * @summary `characterSet`.
-         * @description
-         *
-         * ASCII (default), Unicode (UTF-8), or Proprietary.
-         * @public
-         * @readonly
-         */
-        readonly characterSet: OPTIONAL<CharacterSet>,
-        /**
-         * @summary `contentsOfDisplay`.
-         * @description
-         *
-         * Full logical display: rows concatenated, including spaces.
-         * @public
-         * @readonly
-         */
-        readonly contentsOfDisplay: IA5String
-    ) {}
+        displayID: DisplayID,
+        logicalRows: INTEGER,
+        logicalColumns: INTEGER,
+        physicalRows: OPTIONAL<INTEGER>,
+        physicalColumns: OPTIONAL<INTEGER>,
+        physicalBaseRowNumber: OPTIONAL<INTEGER>,
+        physicalBaseColumnNumber: OPTIONAL<INTEGER>,
+        characterSet: OPTIONAL<CharacterSet>,
+        contentsOfDisplay: IA5String
+    ) {
+        this.displayID = displayID;
+        this.logicalRows = logicalRows;
+        this.logicalColumns = logicalColumns;
+        this.physicalRows = physicalRows;
+        this.physicalColumns = physicalColumns;
+        this.physicalBaseRowNumber = physicalBaseRowNumber;
+        this.physicalBaseColumnNumber = physicalBaseColumnNumber;
+        this.characterSet = characterSet;
+        this.contentsOfDisplay = contentsOfDisplay;
+    }
 
     /**
      * @summary Restructures an object into a DisplayList_Item

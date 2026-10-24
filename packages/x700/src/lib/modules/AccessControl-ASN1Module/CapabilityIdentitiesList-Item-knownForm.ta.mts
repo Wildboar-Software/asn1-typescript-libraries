@@ -40,30 +40,36 @@ import {
  *
  */
 export class CapabilityIdentitiesList_Item_knownForm {
+    /**
+     * @summary `initiatorName`.
+     * @description
+     *
+     * Individual, group, role, or application name of the
+     * initiator allowed to use the capability. X.741 §A.5.7.
+     * @public
+     * @readonly
+     */
+    public readonly initiatorName: InitiatorName;
+    /**
+     * @summary `sdaList`.
+     * @description
+     *
+     * Optional per-authority constraints: security domain
+     * authority names paired with operation types. Omit for
+     * capabilities without specific operations. X.741
+     * Annex H.4.
+     * @public
+     * @readonly
+     */
+    public readonly sdaList?: OPTIONAL<SdaList>;
+
     constructor(
-        /**
-         * @summary `initiatorName`.
-         * @description
-         *
-         * Individual, group, role, or application name of the
-         * initiator allowed to use the capability. X.741 §A.5.7.
-         * @public
-         * @readonly
-         */
-        readonly initiatorName: InitiatorName,
-        /**
-         * @summary `sdaList`.
-         * @description
-         *
-         * Optional per-authority constraints: security domain
-         * authority names paired with operation types. Omit for
-         * capabilities without specific operations. X.741
-         * Annex H.4.
-         * @public
-         * @readonly
-         */
-        readonly sdaList?: OPTIONAL<SdaList>
-    ) {}
+        initiatorName: InitiatorName,
+        sdaList?: OPTIONAL<SdaList>
+    ) {
+        this.initiatorName = initiatorName;
+        this.sdaList = sdaList;
+    }
 
     /**
      * @summary Restructures an object into a CapabilityIdentitiesList_Item_knownForm

@@ -80,85 +80,101 @@ import {
  *
  */
 export class AttributeValueChangeInfo {
+    /**
+     * @summary `sourceIndicator`.
+     * @description
+     *
+     * Source of the change: `resourceOperation` (internal
+     * operation of the resource), `managementOperation`
+     * (SMI operation across the object boundary), or
+     * `unknown`. ITU-T Rec. X.730 (01/92) §8.2.3.1.
+     * @public
+     * @readonly
+     */
+    public readonly sourceIndicator: OPTIONAL<SourceIndicator>;
+    /**
+     * @summary `attributeIdentifierList`.
+     * @description
+     *
+     * Identifiers of the attributes whose value changes are
+     * reported. ITU-T Rec. X.730 (01/92) §8.2.3.2.
+     * @public
+     * @readonly
+     */
+    public readonly attributeIdentifierList: OPTIONAL<AttributeIdentifierList>;
+    /**
+     * @summary `attributeValueChangeDefinition`.
+     * @description
+     *
+     * One sequence per changed attribute: identifier, optional
+     * old value, and new (current) value. At least one new
+     * value shall be present. ITU-T Rec. X.730 (01/92)
+     * §8.2.3.3.
+     * @public
+     * @readonly
+     */
+    public readonly attributeValueChangeDefinition: AttributeValueChangeDefinition;
+    /**
+     * @summary `notificationIdentifier`.
+     * @description
+     *
+     * Identifier that later notifications may cite in
+     * `correlatedNotifications`. ITU-T Rec. X.730 (01/92)
+     * §8.2.3.4; X.733 (02/92) §8.1.2.8.
+     * @public
+     * @readonly
+     */
+    public readonly notificationIdentifier?: OPTIONAL<NotificationIdentifier>;
+    /**
+     * @summary `correlatedNotifications`.
+     * @description
+     *
+     * Notifications correlated with this one. ITU-T Rec.
+     * X.730 (01/92) §8.2.3.4; X.733 (02/92) §8.1.2.9.
+     * @public
+     * @readonly
+     */
+    public readonly correlatedNotifications?: OPTIONAL<CorrelatedNotifications>;
+    /**
+     * @summary `additionalText`.
+     * @description
+     *
+     * Free-form text; not required to interpret the
+     * notification. ITU-T Rec. X.730 (01/92) §8.2.3.4;
+     * X.733 (02/92) §8.1.2.13.
+     * @public
+     * @readonly
+     */
+    public readonly additionalText?: OPTIONAL<AdditionalText>;
+    /**
+     * @summary `additionalInformation`.
+     * @description
+     *
+     * Extra identifier/significance/information structures.
+     * ITU-T Rec. X.730 (01/92) §8.2.3.4; X.733 (02/92)
+     * §8.1.2.14.
+     * @public
+     * @readonly
+     */
+    public readonly additionalInformation?: OPTIONAL<AdditionalInformation>;
+
     constructor(
-        /**
-         * @summary `sourceIndicator`.
-         * @description
-         *
-         * Source of the change: `resourceOperation` (internal
-         * operation of the resource), `managementOperation`
-         * (SMI operation across the object boundary), or
-         * `unknown`. ITU-T Rec. X.730 (01/92) §8.2.3.1.
-         * @public
-         * @readonly
-         */
-        readonly sourceIndicator: OPTIONAL<SourceIndicator>,
-        /**
-         * @summary `attributeIdentifierList`.
-         * @description
-         *
-         * Identifiers of the attributes whose value changes are
-         * reported. ITU-T Rec. X.730 (01/92) §8.2.3.2.
-         * @public
-         * @readonly
-         */
-        readonly attributeIdentifierList: OPTIONAL<AttributeIdentifierList>,
-        /**
-         * @summary `attributeValueChangeDefinition`.
-         * @description
-         *
-         * One sequence per changed attribute: identifier, optional
-         * old value, and new (current) value. At least one new
-         * value shall be present. ITU-T Rec. X.730 (01/92)
-         * §8.2.3.3.
-         * @public
-         * @readonly
-         */
-        readonly attributeValueChangeDefinition: AttributeValueChangeDefinition,
-        /**
-         * @summary `notificationIdentifier`.
-         * @description
-         *
-         * Identifier that later notifications may cite in
-         * `correlatedNotifications`. ITU-T Rec. X.730 (01/92)
-         * §8.2.3.4; X.733 (02/92) §8.1.2.8.
-         * @public
-         * @readonly
-         */
-        readonly notificationIdentifier?: OPTIONAL<NotificationIdentifier>,
-        /**
-         * @summary `correlatedNotifications`.
-         * @description
-         *
-         * Notifications correlated with this one. ITU-T Rec.
-         * X.730 (01/92) §8.2.3.4; X.733 (02/92) §8.1.2.9.
-         * @public
-         * @readonly
-         */
-        readonly correlatedNotifications?: OPTIONAL<CorrelatedNotifications>,
-        /**
-         * @summary `additionalText`.
-         * @description
-         *
-         * Free-form text; not required to interpret the
-         * notification. ITU-T Rec. X.730 (01/92) §8.2.3.4;
-         * X.733 (02/92) §8.1.2.13.
-         * @public
-         * @readonly
-         */
-        readonly additionalText?: OPTIONAL<AdditionalText>,
-        /**
-         * @summary `additionalInformation`.
-         * @description
-         *
-         * Extra identifier/significance/information structures.
-         * ITU-T Rec. X.730 (01/92) §8.2.3.4; X.733 (02/92)
-         * §8.1.2.14.
-         * @public
-         * @readonly
-         */
-        readonly additionalInformation?: OPTIONAL<AdditionalInformation>
-    ) {}
+        sourceIndicator: OPTIONAL<SourceIndicator>,
+        attributeIdentifierList: OPTIONAL<AttributeIdentifierList>,
+        attributeValueChangeDefinition: AttributeValueChangeDefinition,
+        notificationIdentifier?: OPTIONAL<NotificationIdentifier>,
+        correlatedNotifications?: OPTIONAL<CorrelatedNotifications>,
+        additionalText?: OPTIONAL<AdditionalText>,
+        additionalInformation?: OPTIONAL<AdditionalInformation>
+    ) {
+        this.sourceIndicator = sourceIndicator;
+        this.attributeIdentifierList = attributeIdentifierList;
+        this.attributeValueChangeDefinition = attributeValueChangeDefinition;
+        this.notificationIdentifier = notificationIdentifier;
+        this.correlatedNotifications = correlatedNotifications;
+        this.additionalText = additionalText;
+        this.additionalInformation = additionalInformation;
+    }
 
     /**
      * @summary Restructures an object into a AttributeValueChangeInfo

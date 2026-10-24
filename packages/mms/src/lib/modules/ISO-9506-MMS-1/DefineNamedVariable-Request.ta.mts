@@ -41,45 +41,53 @@ import { TypeSpecification, _decode_TypeSpecification, _encode_TypeSpecification
  */
 export
 class DefineNamedVariable_Request {
+    /**
+     * @summary `variableName`.
+     * @description
+     *
+     * Unique `&name` among Named Variables of this scope.
+     * ISO 9506-1:2003 §14.10.1.1.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly variableName: ObjectName;
+    /**
+     * @summary `address`.
+     * @description
+     *
+     * Base `&address` of the Unnamed Variable. Extra
+     * addresses for the type are contiguous.
+     * ISO 9506-1:2003 §14.10.1.1.2, §14.5.3.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly address: Address;
+    /**
+     * @summary `typeSpecification`.
+     * @description
+     *
+     * Optional `&typeDescription`. If omitted, inherit the
+     * Unnamed Variable's type. Simple elements shall be
+     * compatible with spanned Unnamed Variables (local
+     * criteria). Type Names are resolved at definition.
+     * ISO 9506-1:2003 §14.10.1.1.3, §14.2.3.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly typeSpecification?: OPTIONAL<TypeSpecification>;
+
     constructor (
-        /**
-         * @summary `variableName`.
-         * @description
-         *
-         * Unique `&name` among Named Variables of this scope.
-         * ISO 9506-1:2003 §14.10.1.1.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly variableName: ObjectName,
-        /**
-         * @summary `address`.
-         * @description
-         *
-         * Base `&address` of the Unnamed Variable. Extra
-         * addresses for the type are contiguous.
-         * ISO 9506-1:2003 §14.10.1.1.2, §14.5.3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly address: Address,
-        /**
-         * @summary `typeSpecification`.
-         * @description
-         *
-         * Optional `&typeDescription`. If omitted, inherit the
-         * Unnamed Variable's type. Simple elements shall be
-         * compatible with spanned Unnamed Variables (local
-         * criteria). Type Names are resolved at definition.
-         * ISO 9506-1:2003 §14.10.1.1.3, §14.2.3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly typeSpecification?: OPTIONAL<TypeSpecification>
-    ) {}
+        variableName: ObjectName,
+        address: Address,
+        typeSpecification?: OPTIONAL<TypeSpecification>
+    ) {
+        this.variableName = variableName;
+        this.address = address;
+        this.typeSpecification = typeSpecification;
+    }
 
     /**
      * @summary Restructures an object into a DefineNamedVariable_Request

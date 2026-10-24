@@ -35,64 +35,78 @@ import { IntraCUG_Options, _decode_IntraCUG_Options, _encode_IntraCUG_Options, _
  */
 export
 class CUG_Subscription {
+    /**
+     * @summary `cug_Index`.
+     * @description
+     *
+     * CUG index defined in ETS 300 138 (3GPP TS 29.002 V19.1.0 clauses
+     * 7.6.3.23 and 7.6.3.25).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly cug_Index: CUG_Index;
+    /**
+     * @summary `cug_Interlock`.
+     * @description
+     *
+     * CUG interlock code defined in ETS 300 138 (3GPP TS 29.002 V19.1.0
+     * clauses 7.6.3.23 and 7.6.3.24).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly cug_Interlock: CUG_Interlock;
+    /**
+     * @summary `intraCUG_Options`.
+     * @description
+     *
+     * Intra CUG restrictions (3GPP TS 29.002 V19.1.0 clauses 7.6.3.23 and
+     * 7.6.3.28).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly intraCUG_Options: IntraCUG_Options;
+    /**
+     * @summary `basicServiceGroupList`.
+     * @description
+     *
+     * Basic Service Group List for this CUG (3GPP TS 29.002 V19.1.0 clause
+     * 7.6.3.23).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly basicServiceGroupList?: OPTIONAL<Ext_BasicServiceGroupList>;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `cug_Index`.
-         * @description
-         *
-         * CUG index defined in ETS 300 138 (3GPP TS 29.002 V19.1.0 clauses
-         * 7.6.3.23 and 7.6.3.25).
-         *
-         * @public
-         * @readonly
-         */
-        readonly cug_Index: CUG_Index,
-        /**
-         * @summary `cug_Interlock`.
-         * @description
-         *
-         * CUG interlock code defined in ETS 300 138 (3GPP TS 29.002 V19.1.0
-         * clauses 7.6.3.23 and 7.6.3.24).
-         *
-         * @public
-         * @readonly
-         */
-        readonly cug_Interlock: CUG_Interlock,
-        /**
-         * @summary `intraCUG_Options`.
-         * @description
-         *
-         * Intra CUG restrictions (3GPP TS 29.002 V19.1.0 clauses 7.6.3.23 and
-         * 7.6.3.28).
-         *
-         * @public
-         * @readonly
-         */
-        readonly intraCUG_Options: IntraCUG_Options,
-        /**
-         * @summary `basicServiceGroupList`.
-         * @description
-         *
-         * Basic Service Group List for this CUG (3GPP TS 29.002 V19.1.0 clause
-         * 7.6.3.23).
-         *
-         * @public
-         * @readonly
-         */
-        readonly basicServiceGroupList?: OPTIONAL<Ext_BasicServiceGroupList>,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        cug_Index: CUG_Index,
+        cug_Interlock: CUG_Interlock,
+        intraCUG_Options: IntraCUG_Options,
+        basicServiceGroupList?: OPTIONAL<Ext_BasicServiceGroupList>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.cug_Index = cug_Index;
+        this.cug_Interlock = cug_Interlock;
+        this.intraCUG_Options = intraCUG_Options;
+        this.basicServiceGroupList = basicServiceGroupList;
+        this.extensionContainer = extensionContainer;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a CUG_Subscription

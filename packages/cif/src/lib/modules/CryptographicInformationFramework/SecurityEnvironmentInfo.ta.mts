@@ -38,39 +38,49 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class SecurityEnvironmentInfo {
+    /**
+     * @summary `se`.
+     * @description
+     * SE number. ISO/IEC 7816-15:2016 §8.10.
+     * @public
+     * @readonly
+     */
+    public readonly se: INTEGER;
+    /**
+     * @summary `owner`.
+     * @description
+     * Owner of the environment. ISO/IEC 7816-15:2016 §8.10.
+     * @public
+     * @readonly
+     */
+    public readonly owner?: OPTIONAL<OBJECT_IDENTIFIER>;
+    /**
+     * @summary `aid`.
+     * @description
+     * Application (ISO/IEC 7816-4 AID) for which the SE applies. ISO/IEC
+     * 7816-15:2016 §8.10.
+     * @public
+     * @readonly
+     */
+    public readonly aid?: OPTIONAL<OCTET_STRING>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `se`.
-         * @description
-         * SE number. ISO/IEC 7816-15:2016 §8.10.
-         * @public
-         * @readonly
-         */
-        readonly se: INTEGER,
-        /**
-         * @summary `owner`.
-         * @description
-         * Owner of the environment. ISO/IEC 7816-15:2016 §8.10.
-         * @public
-         * @readonly
-         */
-        readonly owner?: OPTIONAL<OBJECT_IDENTIFIER>,
-        /**
-         * @summary `aid`.
-         * @description
-         * Application (ISO/IEC 7816-4 AID) for which the SE applies. ISO/IEC
-         * 7816-15:2016 §8.10.
-         * @public
-         * @readonly
-         */
-        readonly aid?: OPTIONAL<OCTET_STRING>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        se: INTEGER,
+        owner?: OPTIONAL<OBJECT_IDENTIFIER>,
+        aid?: OPTIONAL<OCTET_STRING>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.se = se;
+        this.owner = owner;
+        this.aid = aid;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a SecurityEnvironmentInfo

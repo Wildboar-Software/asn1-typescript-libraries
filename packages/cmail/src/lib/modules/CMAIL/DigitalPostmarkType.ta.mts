@@ -63,49 +63,59 @@ import {
  *
  */
 export class DigitalPostmarkType {
+  /**
+   * @summary `mimeMessageHash`.
+   * @description Hash(es) of the MIME ENVELOPE (`SIZE(1..MAX)`).
+   * §8.14 calls this the "mime hash". Annex B's
+   * `HashValueType` names only the algorithm. XER:
+   * untagged, name `MimeMessageHash`. ITU-T Rec. X.1341
+   * (09/2015) §8.14, Annex B.
+   * @public
+   * @readonly
+   */
+  public readonly mimeMessageHash: HashValueType[];
+  /**
+   * @summary `signature`.
+   * @description Signatures over the postmark
+   * (`SIZE(0..MAX)`; may be empty before signing). XSD
+   * uses XMLDSig `ds:SignatureType`; Annex B is `String`.
+   * XER: untagged, name `Signature`. ITU-T Rec. X.1341
+   * (09/2015) §8.14, Annex A–B.
+   * @public
+   * @readonly
+   */
+  public readonly signature: SignatureType[];
+  /**
+   * @summary `envelopeId`.
+   * @description Identifier of this ENVELOPE. XER
+   * attribute `EnvelopeId`. ITU-T Rec. X.1341 (09/2015)
+   * §8.14, Annex B.
+   * @public
+   * @readonly
+   */
+  public readonly envelopeId: String;
+  /**
+   * @summary `deliveryType`.
+   * @description CMTP `DELV` mode. Root value
+   * `certifiedMail`; extensible (`...`). XER attribute
+   * `DeliveryType`, text `CertifiedMail`. ITU-T Rec.
+   * X.1341 (09/2015) Table 1, §8.3, Annex B.
+   * @public
+   * @readonly
+   */
+  public readonly deliveryType: DigitalPostmarkType_deliveryType;
+
   constructor(
-    /**
-     * @summary `mimeMessageHash`.
-     * @description Hash(es) of the MIME ENVELOPE (`SIZE(1..MAX)`).
-     * §8.14 calls this the "mime hash". Annex B's
-     * `HashValueType` names only the algorithm. XER:
-     * untagged, name `MimeMessageHash`. ITU-T Rec. X.1341
-     * (09/2015) §8.14, Annex B.
-     * @public
-     * @readonly
-     */
-    readonly mimeMessageHash: HashValueType[],
-    /**
-     * @summary `signature`.
-     * @description Signatures over the postmark
-     * (`SIZE(0..MAX)`; may be empty before signing). XSD
-     * uses XMLDSig `ds:SignatureType`; Annex B is `String`.
-     * XER: untagged, name `Signature`. ITU-T Rec. X.1341
-     * (09/2015) §8.14, Annex A–B.
-     * @public
-     * @readonly
-     */
-    readonly signature: SignatureType[],
-    /**
-     * @summary `envelopeId`.
-     * @description Identifier of this ENVELOPE. XER
-     * attribute `EnvelopeId`. ITU-T Rec. X.1341 (09/2015)
-     * §8.14, Annex B.
-     * @public
-     * @readonly
-     */
-    readonly envelopeId: String,
-    /**
-     * @summary `deliveryType`.
-     * @description CMTP `DELV` mode. Root value
-     * `certifiedMail`; extensible (`...`). XER attribute
-     * `DeliveryType`, text `CertifiedMail`. ITU-T Rec.
-     * X.1341 (09/2015) Table 1, §8.3, Annex B.
-     * @public
-     * @readonly
-     */
-    readonly deliveryType: DigitalPostmarkType_deliveryType
-  ) {}
+    mimeMessageHash: HashValueType[],
+    signature: SignatureType[],
+    envelopeId: String,
+    deliveryType: DigitalPostmarkType_deliveryType
+  ) {
+    this.mimeMessageHash = mimeMessageHash;
+    this.signature = signature;
+    this.envelopeId = envelopeId;
+    this.deliveryType = deliveryType;
+  }
 
   /**
    * @summary Restructures an object into a DigitalPostmarkType

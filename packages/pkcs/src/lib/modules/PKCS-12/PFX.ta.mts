@@ -38,26 +38,34 @@ import {
  *
  */
 export class PFX {
+    /**
+     * @summary `version`.
+     * @public
+     * @readonly
+     */
+    public readonly version: PFX_version;
+    /**
+     * @summary `authSafe`.
+     * @public
+     * @readonly
+     */
+    public readonly authSafe: ContentInfo;
+    /**
+     * @summary `macData`.
+     * @public
+     * @readonly
+     */
+    public readonly macData?: OPTIONAL<MacData>;
+
     constructor(
-        /**
-         * @summary `version`.
-         * @public
-         * @readonly
-         */
-        readonly version: PFX_version,
-        /**
-         * @summary `authSafe`.
-         * @public
-         * @readonly
-         */
-        readonly authSafe: ContentInfo,
-        /**
-         * @summary `macData`.
-         * @public
-         * @readonly
-         */
-        readonly macData?: OPTIONAL<MacData>
-    ) {}
+        version: PFX_version,
+        authSafe: ContentInfo,
+        macData?: OPTIONAL<MacData>
+    ) {
+        this.version = version;
+        this.authSafe = authSafe;
+        this.macData = macData;
+    }
 
     /**
      * @summary Restructures an object into a PFX

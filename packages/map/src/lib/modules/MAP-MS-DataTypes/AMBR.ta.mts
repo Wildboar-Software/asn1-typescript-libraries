@@ -37,54 +37,68 @@ import { BandwidthExt, _decode_BandwidthExt, _encode_BandwidthExt } from "../MAP
  */
 export
 class AMBR {
+    /**
+     * @summary `max_RequestedBandwidth_UL`.
+     * @public
+     * @readonly
+     */
+    public readonly max_RequestedBandwidth_UL: Bandwidth;
+    /**
+     * @summary `max_RequestedBandwidth_DL`.
+     * @public
+     * @readonly
+     */
+    public readonly max_RequestedBandwidth_DL: Bandwidth;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary `extended_Max_RequestedBandwidth_UL`.
+     * @description
+     *
+     * Shall be populated according to the corresponding parameter in 3GPP
+     * TS 29.272 (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extended_Max_RequestedBandwidth_UL?: OPTIONAL<BandwidthExt>;
+    /**
+     * @summary `extended_Max_RequestedBandwidth_DL`.
+     * @description
+     *
+     * Shall be populated according to the corresponding parameter in 3GPP
+     * TS 29.272 (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extended_Max_RequestedBandwidth_DL?: OPTIONAL<BandwidthExt>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `max_RequestedBandwidth_UL`.
-         * @public
-         * @readonly
-         */
-        readonly max_RequestedBandwidth_UL: Bandwidth,
-        /**
-         * @summary `max_RequestedBandwidth_DL`.
-         * @public
-         * @readonly
-         */
-        readonly max_RequestedBandwidth_DL: Bandwidth,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary `extended_Max_RequestedBandwidth_UL`.
-         * @description
-         *
-         * Shall be populated according to the corresponding parameter in 3GPP
-         * TS 29.272 (3GPP TS 29.002 V19.1.0 clause 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly extended_Max_RequestedBandwidth_UL?: OPTIONAL<BandwidthExt>,
-        /**
-         * @summary `extended_Max_RequestedBandwidth_DL`.
-         * @description
-         *
-         * Shall be populated according to the corresponding parameter in 3GPP
-         * TS 29.272 (3GPP TS 29.002 V19.1.0 clause 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly extended_Max_RequestedBandwidth_DL?: OPTIONAL<BandwidthExt>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        max_RequestedBandwidth_UL: Bandwidth,
+        max_RequestedBandwidth_DL: Bandwidth,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        extended_Max_RequestedBandwidth_UL?: OPTIONAL<BandwidthExt>,
+        extended_Max_RequestedBandwidth_DL?: OPTIONAL<BandwidthExt>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.max_RequestedBandwidth_UL = max_RequestedBandwidth_UL;
+        this.max_RequestedBandwidth_DL = max_RequestedBandwidth_DL;
+        this.extensionContainer = extensionContainer;
+        this.extended_Max_RequestedBandwidth_UL = extended_Max_RequestedBandwidth_UL;
+        this.extended_Max_RequestedBandwidth_DL = extended_Max_RequestedBandwidth_DL;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a AMBR

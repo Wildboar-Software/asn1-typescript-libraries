@@ -36,57 +36,69 @@ import {
  *
  */
 export class IdmBind {
+    /**
+     * @summary `protocolID`.
+     * @description
+     *
+     * IDM-PROTOCOL.&id. Selects the protocol and, implicitly, the
+     * application context. Echoed in BindResult / BindError.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly protocolID: OBJECT_IDENTIFIER;
+    /**
+     * @summary `callingAETitle`.
+     * @description
+     *
+     * Sender's AE name (`GeneralName`). Optional. BindError
+     * `callingAETitleNotAccepted` if present and unacceptable.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly callingAETitle: OPTIONAL<GeneralName>;
+    /**
+     * @summary `calledAETitle`.
+     * @description
+     *
+     * Intended recipient AE name. Optional. BindError
+     * `calledAETitleNotRecognized` if present and not this AE.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly calledAETitle: OPTIONAL<GeneralName>;
+    /**
+     * @summary `argument`.
+     * @description
+     *
+     * Bind-operation ARGUMENT for `protocolID` (open type).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly argument: _Element;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `protocolID`.
-         * @description
-         *
-         * IDM-PROTOCOL.&id. Selects the protocol and, implicitly, the
-         * application context. Echoed in BindResult / BindError.
-         *
-         * @public
-         * @readonly
-         */
-        readonly protocolID: OBJECT_IDENTIFIER,
-        /**
-         * @summary `callingAETitle`.
-         * @description
-         *
-         * Sender's AE name (`GeneralName`). Optional. BindError
-         * `callingAETitleNotAccepted` if present and unacceptable.
-         *
-         * @public
-         * @readonly
-         */
-        readonly callingAETitle: OPTIONAL<GeneralName>,
-        /**
-         * @summary `calledAETitle`.
-         * @description
-         *
-         * Intended recipient AE name. Optional. BindError
-         * `calledAETitleNotRecognized` if present and not this AE.
-         *
-         * @public
-         * @readonly
-         */
-        readonly calledAETitle: OPTIONAL<GeneralName>,
-        /**
-         * @summary `argument`.
-         * @description
-         *
-         * Bind-operation ARGUMENT for `protocolID` (open type).
-         *
-         * @public
-         * @readonly
-         */
-        readonly argument: _Element,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        protocolID: OBJECT_IDENTIFIER,
+        callingAETitle: OPTIONAL<GeneralName>,
+        calledAETitle: OPTIONAL<GeneralName>,
+        argument: _Element,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.protocolID = protocolID;
+        this.callingAETitle = callingAETitle;
+        this.calledAETitle = calledAETitle;
+        this.argument = argument;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a IdmBind

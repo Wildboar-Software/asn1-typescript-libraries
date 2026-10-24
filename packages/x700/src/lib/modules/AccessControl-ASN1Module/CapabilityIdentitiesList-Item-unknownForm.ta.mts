@@ -31,27 +31,33 @@ import * as $ from '@wildboar/asn1/functional';
  *
  */
 export class CapabilityIdentitiesList_Item_unknownForm {
+    /**
+     * @summary `identifier`.
+     * @description
+     *
+     * `AC-CAP-IDENTITY.&id` from `CapabilityIdentitiesSet`.
+     * X.741 Cor.3 A.6.
+     * @public
+     * @readonly
+     */
+    public readonly identifier: OBJECT_IDENTIFIER;
+    /**
+     * @summary `value`.
+     * @description
+     *
+     * Identity value typed by `identifier`. X.741 Cor.3 A.6.
+     * @public
+     * @readonly
+     */
+    public readonly value: _Element;
+
     constructor(
-        /**
-         * @summary `identifier`.
-         * @description
-         *
-         * `AC-CAP-IDENTITY.&id` from `CapabilityIdentitiesSet`.
-         * X.741 Cor.3 A.6.
-         * @public
-         * @readonly
-         */
-        readonly identifier: OBJECT_IDENTIFIER,
-        /**
-         * @summary `value`.
-         * @description
-         *
-         * Identity value typed by `identifier`. X.741 Cor.3 A.6.
-         * @public
-         * @readonly
-         */
-        readonly value: _Element
-    ) {}
+        identifier: OBJECT_IDENTIFIER,
+        value: _Element
+    ) {
+        this.identifier = identifier;
+        this.value = value;
+    }
 
     /**
      * @summary Restructures an object into a CapabilityIdentitiesList_Item_unknownForm

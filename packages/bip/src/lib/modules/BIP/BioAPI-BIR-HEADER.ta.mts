@@ -44,41 +44,49 @@ import {
  *
  */
 export class BioAPI_BIR_HEADER {
+  /**
+   * @summary `patronFormatOwner`.
+   * @description
+   *
+   * CBEFF patron-format owner. Default 257. X.1083 §13.17–13.18,
+   * §15.13.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly patronFormatOwner: UnsignedShort;
+  /**
+   * @summary `patronFormatType`.
+   * @description
+   *
+   * CBEFF patron-format type. Default 8 (ISO/IEC 19784-1
+   * Annex B). X.1083 §13.17–13.18, §15.13.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly patronFormatType: UnsignedShort;
+  /**
+   * @summary `formattedBIR`.
+   * @description
+   *
+   * Octets of a header-only BIR (empty BDB/SB) in the named
+   * patron. X.1083 §10, §13.16–13.18, §15.13.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly formattedBIR: OCTET_STRING;
+
   constructor(
-    /**
-     * @summary `patronFormatOwner`.
-     * @description
-     *
-     * CBEFF patron-format owner. Default 257. X.1083 §13.17–13.18,
-     * §15.13.
-     *
-     * @public
-     * @readonly
-     */
-    readonly patronFormatOwner: UnsignedShort,
-    /**
-     * @summary `patronFormatType`.
-     * @description
-     *
-     * CBEFF patron-format type. Default 8 (ISO/IEC 19784-1
-     * Annex B). X.1083 §13.17–13.18, §15.13.
-     *
-     * @public
-     * @readonly
-     */
-    readonly patronFormatType: UnsignedShort,
-    /**
-     * @summary `formattedBIR`.
-     * @description
-     *
-     * Octets of a header-only BIR (empty BDB/SB) in the named
-     * patron. X.1083 §10, §13.16–13.18, §15.13.
-     *
-     * @public
-     * @readonly
-     */
-    readonly formattedBIR: OCTET_STRING
-  ) {}
+    patronFormatOwner: UnsignedShort,
+    patronFormatType: UnsignedShort,
+    formattedBIR: OCTET_STRING
+  ) {
+    this.patronFormatOwner = patronFormatOwner;
+    this.patronFormatType = patronFormatType;
+    this.formattedBIR = formattedBIR;
+  }
 
   /**
    * @summary Restructures an object into a BioAPI_BIR_HEADER

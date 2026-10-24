@@ -34,26 +34,32 @@ import { NameProblem, _enum_for_NameProblem, _decode_NameProblem, _encode_NamePr
  */
 export
 class nameError_ParameterType_Item {
+    /**
+     * @summary `entry`.
+     * @description
+     *
+     * Name that failed.
+     * @public
+     * @readonly
+     */
+    public readonly entry: DfrEntryName;
+    /**
+     * @summary `problem`.
+     * @description
+     *
+     * Why.
+     * @public
+     * @readonly
+     */
+    public readonly problem: NameProblem;
+
     constructor (
-        /**
-         * @summary `entry`.
-         * @description
-         *
-         * Name that failed.
-         * @public
-         * @readonly
-         */
-        readonly entry: DfrEntryName,
-        /**
-         * @summary `problem`.
-         * @description
-         *
-         * Why.
-         * @public
-         * @readonly
-         */
-        readonly problem: NameProblem
-    ) {}
+        entry: DfrEntryName,
+        problem: NameProblem
+    ) {
+        this.entry = entry;
+        this.problem = problem;
+    }
 
     /**
      * @summary Restructures an object into a nameError_ParameterType_Item

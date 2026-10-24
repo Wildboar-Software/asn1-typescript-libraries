@@ -27,20 +27,26 @@ import {
  *
  */
 export class ARU_PPDU_normal_mode_parameters_user_data_fully_encoded_data_Item {
+    /**
+     * @summary `presentation_context_identifier`.
+     * @public
+     * @readonly
+     */
+    public readonly presentation_context_identifier: Presentation_context_identifier;
+    /**
+     * @summary `presentation_data_values`.
+     * @public
+     * @readonly
+     */
+    public readonly presentation_data_values: ARU_PPDU_normal_mode_parameters_user_data_fully_encoded_data_Item_pdv;
+
     constructor(
-        /**
-         * @summary `presentation_context_identifier`.
-         * @public
-         * @readonly
-         */
-        readonly presentation_context_identifier: Presentation_context_identifier,
-        /**
-         * @summary `presentation_data_values`.
-         * @public
-         * @readonly
-         */
-        readonly presentation_data_values: ARU_PPDU_normal_mode_parameters_user_data_fully_encoded_data_Item_pdv
-    ) {}
+        presentation_context_identifier: Presentation_context_identifier,
+        presentation_data_values: ARU_PPDU_normal_mode_parameters_user_data_fully_encoded_data_Item_pdv
+    ) {
+        this.presentation_context_identifier = presentation_context_identifier;
+        this.presentation_data_values = presentation_data_values;
+    }
 
     /**
      * @summary Restructures an object into a ARU_PPDU_normal_mode_parameters_user_data_fully_encoded_data_Item

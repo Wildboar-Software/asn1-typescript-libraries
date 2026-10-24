@@ -42,34 +42,42 @@ import {
  *
  */
 export class NoSuchEventType {
+  /**
+   * @summary `managedObjectClass`.
+   * @description
+   *
+   * Class on which the unknown event was reported.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly managedObjectClass: ObjectClass;
+  /**
+   * @summary `eventType`.
+   * @description
+   *
+   * Event type that is not defined for the class.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly eventType: EventTypeId;
+  /**
+   * @summary Extensions that are not recognized.
+   * @public
+   * @readonly
+   */
+  public readonly _unrecognizedExtensionsList: _Element[];
+
   constructor(
-    /**
-     * @summary `managedObjectClass`.
-     * @description
-     *
-     * Class on which the unknown event was reported.
-     *
-     * @public
-     * @readonly
-     */
-    readonly managedObjectClass: ObjectClass,
-    /**
-     * @summary `eventType`.
-     * @description
-     *
-     * Event type that is not defined for the class.
-     *
-     * @public
-     * @readonly
-     */
-    readonly eventType: EventTypeId,
-    /**
-     * @summary Extensions that are not recognized.
-     * @public
-     * @readonly
-     */
-    readonly _unrecognizedExtensionsList: _Element[] = []
-  ) {}
+    managedObjectClass: ObjectClass,
+    eventType: EventTypeId,
+    _unrecognizedExtensionsList: _Element[] = []
+  ) {
+    this.managedObjectClass = managedObjectClass;
+    this.eventType = eventType;
+    this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+  }
 
   /**
    * @summary Restructures an object into a NoSuchEventType

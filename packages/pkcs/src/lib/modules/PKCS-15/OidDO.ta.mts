@@ -27,20 +27,26 @@ import {
  *
  */
 export class OidDO {
+    /**
+     * @summary `id`.
+     * @public
+     * @readonly
+     */
+    public readonly id: OBJECT_IDENTIFIER;
+    /**
+     * @summary `value`.
+     * @public
+     * @readonly
+     */
+    public readonly value: ObjectValue<_Element>;
+
     constructor(
-        /**
-         * @summary `id`.
-         * @public
-         * @readonly
-         */
-        readonly id: OBJECT_IDENTIFIER,
-        /**
-         * @summary `value`.
-         * @public
-         * @readonly
-         */
-        readonly value: ObjectValue<_Element>
-    ) {}
+        id: OBJECT_IDENTIFIER,
+        value: ObjectValue<_Element>
+    ) {
+        this.id = id;
+        this.value = value;
+    }
 
     /**
      * @summary Restructures an object into a OidDO

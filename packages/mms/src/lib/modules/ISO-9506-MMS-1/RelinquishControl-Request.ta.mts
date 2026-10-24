@@ -36,31 +36,37 @@ import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-
  */
 export
 class RelinquishControl_Request {
+    /**
+     * @summary `semaphoreName`.
+     * @description
+     *
+     * Semaphore for which control is relinquished.
+     * ISO 9506-1:2003 §16.3.1.1.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly semaphoreName: ObjectName;
+    /**
+     * @summary `namedToken`.
+     * @description
+     *
+     * Required for a pool semaphore; shall not appear for a token
+     * semaphore. Same named-token as in TakeControl Result(+).
+     * ISO 9506-1:2003 §16.3.1.1.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly namedToken?: OPTIONAL<Identifier>;
+
     constructor (
-        /**
-         * @summary `semaphoreName`.
-         * @description
-         *
-         * Semaphore for which control is relinquished.
-         * ISO 9506-1:2003 §16.3.1.1.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly semaphoreName: ObjectName,
-        /**
-         * @summary `namedToken`.
-         * @description
-         *
-         * Required for a pool semaphore; shall not appear for a token
-         * semaphore. Same named-token as in TakeControl Result(+).
-         * ISO 9506-1:2003 §16.3.1.1.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly namedToken?: OPTIONAL<Identifier>
-    ) {}
+        semaphoreName: ObjectName,
+        namedToken?: OPTIONAL<Identifier>
+    ) {
+        this.semaphoreName = semaphoreName;
+        this.namedToken = namedToken;
+    }
 
     /**
      * @summary Restructures an object into a RelinquishControl_Request

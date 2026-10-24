@@ -29,19 +29,23 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class NotificationSentRequest {
+    /**
+     * @summary `seqNumber`.
+     * @description
+     * 
+     * Sequence number of the notification the LPA has delivered and now
+     * wants removed. SGP.22 v3.1 §5.7.11.
+     * 
+     * @public
+     * @readonly
+     */
+    public readonly seqNumber: INTEGER;
+
     constructor (
-        /**
-         * @summary `seqNumber`.
-         * @description
-         * 
-         * Sequence number of the notification the LPA has delivered and now
-         * wants removed. SGP.22 v3.1 §5.7.11.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly seqNumber: INTEGER
-    ) {}
+        seqNumber: INTEGER
+    ) {
+        this.seqNumber = seqNumber;
+    }
 
     /**
      * @summary Restructures an object into a NotificationSentRequest

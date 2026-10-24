@@ -44,43 +44,51 @@ import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-
  */
 export
 class DeleteNamedVariableList_Request {
+    /**
+     * @summary `scopeOfDelete`.
+     * @description
+     *
+     * Extent: `specific`, `aa-specific`, `domain`, or
+     * `vmd`. Default `specific`.
+     * ISO 9506-1:2003 §14.14.1.1.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly scopeOfDelete?: OPTIONAL<DeleteNamedVariableList_Request_scopeOfDelete>;
+    /**
+     * @summary `listOfVariableListName`.
+     * @description
+     *
+     * Lists to delete when scope is `specific`; otherwise
+     * omitted. ISO 9506-1:2003 §14.14.1.1.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly listOfVariableListName?: OPTIONAL<ObjectName[]>;
+    /**
+     * @summary `domainName`.
+     * @description
+     *
+     * Domain whose Named Variable Lists are deleted when
+     * scope is `domain`; otherwise omitted.
+     * ISO 9506-1:2003 §14.14.1.1.3.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly domainName?: OPTIONAL<Identifier>;
+
     constructor (
-        /**
-         * @summary `scopeOfDelete`.
-         * @description
-         *
-         * Extent: `specific`, `aa-specific`, `domain`, or
-         * `vmd`. Default `specific`.
-         * ISO 9506-1:2003 §14.14.1.1.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly scopeOfDelete?: OPTIONAL<DeleteNamedVariableList_Request_scopeOfDelete>,
-        /**
-         * @summary `listOfVariableListName`.
-         * @description
-         *
-         * Lists to delete when scope is `specific`; otherwise
-         * omitted. ISO 9506-1:2003 §14.14.1.1.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly listOfVariableListName?: OPTIONAL<ObjectName[]>,
-        /**
-         * @summary `domainName`.
-         * @description
-         *
-         * Domain whose Named Variable Lists are deleted when
-         * scope is `domain`; otherwise omitted.
-         * ISO 9506-1:2003 §14.14.1.1.3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly domainName?: OPTIONAL<Identifier>
-    ) {}
+        scopeOfDelete?: OPTIONAL<DeleteNamedVariableList_Request_scopeOfDelete>,
+        listOfVariableListName?: OPTIONAL<ObjectName[]>,
+        domainName?: OPTIONAL<Identifier>
+    ) {
+        this.scopeOfDelete = scopeOfDelete;
+        this.listOfVariableListName = listOfVariableListName;
+        this.domainName = domainName;
+    }
 
     /**
      * @summary Restructures an object into a DeleteNamedVariableList_Request

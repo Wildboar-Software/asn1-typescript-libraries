@@ -41,48 +41,58 @@ import {
  *
  */
 export class Del_Header {
+    /**
+     * @summary `tok_id`.
+     * @description
+     *
+     * Must be 769 (0x0301). Bound into the checksum.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly tok_id: INTEGER;
+    /**
+     * @summary `context_id`.
+     * @description
+     *
+     * Context to delete.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly context_id: Random_Integer;
+    /**
+     * @summary `int_alg`.
+     * @description
+     *
+     * Must be an agreed I-ALG. Omit for default.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly int_alg?: OPTIONAL<AlgorithmIdentifier>;
+    /**
+     * @summary `snd_seq`.
+     * @description
+     *
+     * Same construction as MIC/WRAP sequence numbers.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly snd_seq?: OPTIONAL<SeqNum>;
+
     constructor(
-        /**
-         * @summary `tok_id`.
-         * @description
-         *
-         * Must be 769 (0x0301). Bound into the checksum.
-         *
-         * @public
-         * @readonly
-         */
-        readonly tok_id: INTEGER,
-        /**
-         * @summary `context_id`.
-         * @description
-         *
-         * Context to delete.
-         *
-         * @public
-         * @readonly
-         */
-        readonly context_id: Random_Integer,
-        /**
-         * @summary `int_alg`.
-         * @description
-         *
-         * Must be an agreed I-ALG. Omit for default.
-         *
-         * @public
-         * @readonly
-         */
-        readonly int_alg?: OPTIONAL<AlgorithmIdentifier>,
-        /**
-         * @summary `snd_seq`.
-         * @description
-         *
-         * Same construction as MIC/WRAP sequence numbers.
-         *
-         * @public
-         * @readonly
-         */
-        readonly snd_seq?: OPTIONAL<SeqNum>
-    ) {}
+        tok_id: INTEGER,
+        context_id: Random_Integer,
+        int_alg?: OPTIONAL<AlgorithmIdentifier>,
+        snd_seq?: OPTIONAL<SeqNum>
+    ) {
+        this.tok_id = tok_id;
+        this.context_id = context_id;
+        this.int_alg = int_alg;
+        this.snd_seq = snd_seq;
+    }
 
     /**
      * @summary Restructures an object into a Del_Header

@@ -36,25 +36,31 @@ import { Journal_Entry_instance, _decode_Journal_Entry_instance, _encode_Journal
  */
 export
 class Journal_instance_definition_details {
+    /**
+     * @summary `accessControl`.
+     * @description
+     *
+     * SCI encoding of the object's ACL (ISO 9506-1:2003 §9). ISO
+     * 9506-2:2003 Annex B.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly accessControl: Access_Control_List_instance;
+    /**
+     * @summary `entries`.
+     * @public
+     * @readonly
+     */
+    public readonly entries: Journal_Entry_instance[];
+
     constructor (
-        /**
-         * @summary `accessControl`.
-         * @description
-         *
-         * SCI encoding of the object's ACL (ISO 9506-1:2003 §9). ISO
-         * 9506-2:2003 Annex B.
-         *
-         * @public
-         * @readonly
-         */
-        readonly accessControl: Access_Control_List_instance,
-        /**
-         * @summary `entries`.
-         * @public
-         * @readonly
-         */
-        readonly entries: Journal_Entry_instance[]
-    ) {}
+        accessControl: Access_Control_List_instance,
+        entries: Journal_Entry_instance[]
+    ) {
+        this.accessControl = accessControl;
+        this.entries = entries;
+    }
 
     /**
      * @summary Restructures an object into a Journal_instance_definition_details

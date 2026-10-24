@@ -36,30 +36,36 @@ import { ScopeAccreditation, _decode_ScopeAccreditation, _encode_ScopeAccreditat
  */
 export
 class AccreditationStatus {
+    /**
+     * @summary `accreditingBodies`.
+     * @description
+     *
+     * List of accrediting bodies. If none is claimed, Annex B.5
+     * requires an "accreditation not claimed" entry.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly accreditingBodies: AccreditingBody[];
+    /**
+     * @summary `scopeAccreditation`.
+     * @description
+     *
+     * Claimed accreditation scope, e.g. ISO/IEC 19795-1 testing
+     * (Clause 6.4.3, Annex B.5).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly scopeAccreditation?: OPTIONAL<ScopeAccreditation>;
+
     constructor (
-        /**
-         * @summary `accreditingBodies`.
-         * @description
-         *
-         * List of accrediting bodies. If none is claimed, Annex B.5
-         * requires an "accreditation not claimed" entry.
-         *
-         * @public
-         * @readonly
-         */
-        readonly accreditingBodies: AccreditingBody[],
-        /**
-         * @summary `scopeAccreditation`.
-         * @description
-         *
-         * Claimed accreditation scope, e.g. ISO/IEC 19795-1 testing
-         * (Clause 6.4.3, Annex B.5).
-         *
-         * @public
-         * @readonly
-         */
-        readonly scopeAccreditation?: OPTIONAL<ScopeAccreditation>
-    ) {}
+        accreditingBodies: AccreditingBody[],
+        scopeAccreditation?: OPTIONAL<ScopeAccreditation>
+    ) {
+        this.accreditingBodies = accreditingBodies;
+        this.scopeAccreditation = scopeAccreditation;
+    }
 
     /**
      * @summary Restructures an object into a AccreditationStatus

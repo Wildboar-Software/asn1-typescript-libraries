@@ -45,49 +45,59 @@ import {
  *
  */
 export class KEKRecipientInfo {
+    /**
+     * @summary `version`.
+     * @description
+     *
+     * MUST be 4 ([RFC 5652 §6.2.3](https://datatracker.ietf.org/doc/html/rfc5652#section-6.2.3)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly version: CMSVersion;
+    /**
+     * @summary `kekid`.
+     * @description
+     *
+     * Identifies the KEK; may include date and other key attribute
+     * ([RFC 5652 §6.2.3](https://datatracker.ietf.org/doc/html/rfc5652#section-6.2.3)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly kekid: KEKIdentifier;
+    /**
+     * @summary `keyEncryptionAlgorithm`.
+     * @description
+     *
+     * Key-encryption (wrap) algorithm ([RFC 5652 §6.2.3](https://datatracker.ietf.org/doc/html/rfc5652#section-6.2.3)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly keyEncryptionAlgorithm: KeyEncryptionAlgorithmIdentifier;
+    /**
+     * @summary `encryptedKey`.
+     * @description
+     *
+     * CEK encrypted with the KEK ([RFC 5652 §6.2.3](https://datatracker.ietf.org/doc/html/rfc5652#section-6.2.3)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly encryptedKey: EncryptedKey;
+
     constructor(
-        /**
-         * @summary `version`.
-         * @description
-         *
-         * MUST be 4 ([RFC 5652 §6.2.3](https://datatracker.ietf.org/doc/html/rfc5652#section-6.2.3)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly version: CMSVersion,
-        /**
-         * @summary `kekid`.
-         * @description
-         *
-         * Identifies the KEK; may include date and other key attribute
-         * ([RFC 5652 §6.2.3](https://datatracker.ietf.org/doc/html/rfc5652#section-6.2.3)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly kekid: KEKIdentifier,
-        /**
-         * @summary `keyEncryptionAlgorithm`.
-         * @description
-         *
-         * Key-encryption (wrap) algorithm ([RFC 5652 §6.2.3](https://datatracker.ietf.org/doc/html/rfc5652#section-6.2.3)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly keyEncryptionAlgorithm: KeyEncryptionAlgorithmIdentifier,
-        /**
-         * @summary `encryptedKey`.
-         * @description
-         *
-         * CEK encrypted with the KEK ([RFC 5652 §6.2.3](https://datatracker.ietf.org/doc/html/rfc5652#section-6.2.3)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly encryptedKey: EncryptedKey
-    ) {}
+        version: CMSVersion,
+        kekid: KEKIdentifier,
+        keyEncryptionAlgorithm: KeyEncryptionAlgorithmIdentifier,
+        encryptedKey: EncryptedKey
+    ) {
+        this.version = version;
+        this.kekid = kekid;
+        this.keyEncryptionAlgorithm = keyEncryptionAlgorithm;
+        this.encryptedKey = encryptedKey;
+    }
 
     /**
      * @summary Restructures an object into a KEKRecipientInfo

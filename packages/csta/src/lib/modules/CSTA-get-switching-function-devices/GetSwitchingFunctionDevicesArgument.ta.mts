@@ -44,38 +44,46 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class GetSwitchingFunctionDevicesArgument {
+    /**
+     * @summary `requestedDeviceID`.
+     * @description
+     *
+     * If present, query this device only (still subject to
+     * `requestedDeviceCategory`).
+     * @public
+     * @readonly
+     */
+    public readonly requestedDeviceID?: OPTIONAL<DeviceID>;
+    /**
+     * @summary `requestedDeviceCategory`.
+     * @description
+     *
+     * Restrict the list to this category (group ACD/hunt/pick/user/
+     * other, IV variants, station, routeing, etc.).
+     * @public
+     * @readonly
+     */
+    public readonly requestedDeviceCategory?: OPTIONAL<ReqDeviceCategory>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData. ECMA-269 Table 13-10.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `requestedDeviceID`.
-         * @description
-         *
-         * If present, query this device only (still subject to
-         * `requestedDeviceCategory`).
-         * @public
-         * @readonly
-         */
-        readonly requestedDeviceID?: OPTIONAL<DeviceID>,
-        /**
-         * @summary `requestedDeviceCategory`.
-         * @description
-         *
-         * Restrict the list to this category (group ACD/hunt/pick/user/
-         * other, IV variants, station, routeing, etc.).
-         * @public
-         * @readonly
-         */
-        readonly requestedDeviceCategory?: OPTIONAL<ReqDeviceCategory>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData. ECMA-269 Table 13-10.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        requestedDeviceID?: OPTIONAL<DeviceID>,
+        requestedDeviceCategory?: OPTIONAL<ReqDeviceCategory>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.requestedDeviceID = requestedDeviceID;
+        this.requestedDeviceCategory = requestedDeviceCategory;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a GetSwitchingFunctionDevicesArgument

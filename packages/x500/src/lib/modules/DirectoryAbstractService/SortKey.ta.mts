@@ -30,36 +30,44 @@ import {
  *
  */
 export class SortKey {
+    /**
+     * @summary `type_`.
+     * @description
+     *
+     * List: only attrs in the RDN. Search: only attrs actually returned
+     * (selection+ACI); fallback sort by DN.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly type_: AttributeType;
+    /**
+     * @summary `orderingRule`.
+     * @description
+     *
+     * If present, use this matching rule; else the attr's ordering MR.
+     * Ignore the key if neither is available.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly orderingRule?: OPTIONAL<OBJECT_IDENTIFIER>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `type_`.
-         * @description
-         *
-         * List: only attrs in the RDN. Search: only attrs actually returned
-         * (selection+ACI); fallback sort by DN.
-         *
-         * @public
-         * @readonly
-         */
-        readonly type_: AttributeType,
-        /**
-         * @summary `orderingRule`.
-         * @description
-         *
-         * If present, use this matching rule; else the attr's ordering MR.
-         * Ignore the key if neither is available.
-         *
-         * @public
-         * @readonly
-         */
-        readonly orderingRule?: OPTIONAL<OBJECT_IDENTIFIER>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        type_: AttributeType,
+        orderingRule?: OPTIONAL<OBJECT_IDENTIFIER>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.type_ = type_;
+        this.orderingRule = orderingRule;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a SortKey

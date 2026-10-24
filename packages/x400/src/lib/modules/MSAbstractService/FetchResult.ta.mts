@@ -49,32 +49,42 @@ import {
  *
  */
 export class FetchResult {
+    /**
+     * @summary `entry_information`.
+     * @public
+     * @readonly
+     */
+    public readonly entry_information?: OPTIONAL<EntryInformation>;
+    /**
+     * @summary `list`.
+     * @public
+     * @readonly
+     */
+    public readonly list?: OPTIONAL<SequenceNumber[]>;
+    /**
+     * @summary `next`.
+     * @public
+     * @readonly
+     */
+    public readonly next?: OPTIONAL<SequenceNumber>;
+    /**
+     * @summary `fetch_result_extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly fetch_result_extensions?: OPTIONAL<MSExtensions>;
+
     constructor(
-        /**
-         * @summary `entry_information`.
-         * @public
-         * @readonly
-         */
-        readonly entry_information?: OPTIONAL<EntryInformation>,
-        /**
-         * @summary `list`.
-         * @public
-         * @readonly
-         */
-        readonly list?: OPTIONAL<SequenceNumber[]>,
-        /**
-         * @summary `next`.
-         * @public
-         * @readonly
-         */
-        readonly next?: OPTIONAL<SequenceNumber>,
-        /**
-         * @summary `fetch_result_extensions`.
-         * @public
-         * @readonly
-         */
-        readonly fetch_result_extensions?: OPTIONAL<MSExtensions>
-    ) {}
+        entry_information?: OPTIONAL<EntryInformation>,
+        list?: OPTIONAL<SequenceNumber[]>,
+        next?: OPTIONAL<SequenceNumber>,
+        fetch_result_extensions?: OPTIONAL<MSExtensions>
+    ) {
+        this.entry_information = entry_information;
+        this.list = list;
+        this.next = next;
+        this.fetch_result_extensions = fetch_result_extensions;
+    }
 
     /**
      * @summary Restructures an object into a FetchResult

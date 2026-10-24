@@ -37,31 +37,37 @@ import { TimeOfDay, _decode_TimeOfDay, _encode_TimeOfDay } from "../ISO-9506-MMS
  */
 export
 class InitializeJournal_Request_limitSpecification {
+    /**
+     * @summary `limitingTime`.
+     * @description
+     *
+     * `&timeStamp` beyond which the journal is not initialized.
+     * ISO 9506-1:2003 §23.4.1.1.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly limitingTime: TimeOfDay;
+    /**
+     * @summary `limitingEntry`.
+     * @description
+     *
+     * `&entry` used when several entries share `limitingTime`.
+     * Shall not appear without `limitingTime`. ISO 9506-1:2003
+     * §23.4.1.1.3.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly limitingEntry?: OPTIONAL<OCTET_STRING>;
+
     constructor (
-        /**
-         * @summary `limitingTime`.
-         * @description
-         *
-         * `&timeStamp` beyond which the journal is not initialized.
-         * ISO 9506-1:2003 §23.4.1.1.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly limitingTime: TimeOfDay,
-        /**
-         * @summary `limitingEntry`.
-         * @description
-         *
-         * `&entry` used when several entries share `limitingTime`.
-         * Shall not appear without `limitingTime`. ISO 9506-1:2003
-         * §23.4.1.1.3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly limitingEntry?: OPTIONAL<OCTET_STRING>
-    ) {}
+        limitingTime: TimeOfDay,
+        limitingEntry?: OPTIONAL<OCTET_STRING>
+    ) {
+        this.limitingTime = limitingTime;
+        this.limitingEntry = limitingEntry;
+    }
 
     /**
      * @summary Restructures an object into a InitializeJournal_Request_limitSpecification

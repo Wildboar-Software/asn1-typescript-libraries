@@ -37,20 +37,24 @@ import {
  *
  */
 export class NotifyGUIProgressEvent_ResponseParams {
+  /**
+   * @summary `response`.
+   * @description
+   *
+   * GUI handler's response to the progress event. With no
+   * subscriber, clause 32 defaults this to `default`. X.1083
+   * §16.27.6, clause 32.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly response: BioAPI_GUI_RESPONSE;
+
   constructor(
-    /**
-     * @summary `response`.
-     * @description
-     *
-     * GUI handler's response to the progress event. With no
-     * subscriber, clause 32 defaults this to `default`. X.1083
-     * §16.27.6, clause 32.
-     *
-     * @public
-     * @readonly
-     */
-    readonly response: BioAPI_GUI_RESPONSE
-  ) {}
+    response: BioAPI_GUI_RESPONSE
+  ) {
+    this.response = response;
+  }
 
   /**
    * @summary Restructures an object into a NotifyGUIProgressEvent_ResponseParams

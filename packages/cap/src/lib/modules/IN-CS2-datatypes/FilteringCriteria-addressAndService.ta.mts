@@ -35,32 +35,42 @@ import { LocationNumber, _decode_LocationNumber, _encode_LocationNumber } from "
  */
 export
 class FilteringCriteria_addressAndService {
+    /**
+     * @summary `calledAddressValue`.
+     * @public
+     * @readonly
+     */
+    public readonly calledAddressValue: Digits;
+    /**
+     * @summary `serviceKey`.
+     * @public
+     * @readonly
+     */
+    public readonly serviceKey: ServiceKey;
+    /**
+     * @summary `callingAddressValue`.
+     * @public
+     * @readonly
+     */
+    public readonly callingAddressValue?: OPTIONAL<Digits>;
+    /**
+     * @summary `locationNumber`.
+     * @public
+     * @readonly
+     */
+    public readonly locationNumber?: OPTIONAL<LocationNumber>;
+
     constructor (
-        /**
-         * @summary `calledAddressValue`.
-         * @public
-         * @readonly
-         */
-        readonly calledAddressValue: Digits,
-        /**
-         * @summary `serviceKey`.
-         * @public
-         * @readonly
-         */
-        readonly serviceKey: ServiceKey,
-        /**
-         * @summary `callingAddressValue`.
-         * @public
-         * @readonly
-         */
-        readonly callingAddressValue?: OPTIONAL<Digits>,
-        /**
-         * @summary `locationNumber`.
-         * @public
-         * @readonly
-         */
-        readonly locationNumber?: OPTIONAL<LocationNumber>
-    ) {}
+        calledAddressValue: Digits,
+        serviceKey: ServiceKey,
+        callingAddressValue?: OPTIONAL<Digits>,
+        locationNumber?: OPTIONAL<LocationNumber>
+    ) {
+        this.calledAddressValue = calledAddressValue;
+        this.serviceKey = serviceKey;
+        this.callingAddressValue = callingAddressValue;
+        this.locationNumber = locationNumber;
+    }
 
     /**
      * @summary Restructures an object into a FilteringCriteria_addressAndService

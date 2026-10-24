@@ -38,40 +38,48 @@ import { StatisticInformationSet, _decode_StatisticInformationSet, _encode_Stati
  */
 export
 class ResultMatchClosedIdentify {
+    /**
+     * @summary `cmcCurveClosed`.
+     * @description
+     *
+     * Closed-set CMC curve (Clause 6.4.4.3.4).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly cmcCurveClosed: DistributionIntegerReal;
+    /**
+     * @summary `srchExecDistr`.
+     * @description
+     *
+     * Histogram of number of searches executed in closed-set
+     * identification (Clause 6.4.4.3.4).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly srchExecDistr: ExpressionHistogram;
+    /**
+     * @summary `durationClosedIdentify`.
+     * @description
+     *
+     * Closed-set search duration; covers successful and failed
+     * searches (Clause 6.4.4.3.4, Annex C.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly durationClosedIdentify?: OPTIONAL<StatisticInformationSet>;
+
     constructor (
-        /**
-         * @summary `cmcCurveClosed`.
-         * @description
-         *
-         * Closed-set CMC curve (Clause 6.4.4.3.4).
-         *
-         * @public
-         * @readonly
-         */
-        readonly cmcCurveClosed: DistributionIntegerReal,
-        /**
-         * @summary `srchExecDistr`.
-         * @description
-         *
-         * Histogram of number of searches executed in closed-set
-         * identification (Clause 6.4.4.3.4).
-         *
-         * @public
-         * @readonly
-         */
-        readonly srchExecDistr: ExpressionHistogram,
-        /**
-         * @summary `durationClosedIdentify`.
-         * @description
-         *
-         * Closed-set search duration; covers successful and failed
-         * searches (Clause 6.4.4.3.4, Annex C.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly durationClosedIdentify?: OPTIONAL<StatisticInformationSet>
-    ) {}
+        cmcCurveClosed: DistributionIntegerReal,
+        srchExecDistr: ExpressionHistogram,
+        durationClosedIdentify?: OPTIONAL<StatisticInformationSet>
+    ) {
+        this.cmcCurveClosed = cmcCurveClosed;
+        this.srchExecDistr = srchExecDistr;
+        this.durationClosedIdentify = durationClosedIdentify;
+    }
 
     /**
      * @summary Restructures an object into a ResultMatchClosedIdentify

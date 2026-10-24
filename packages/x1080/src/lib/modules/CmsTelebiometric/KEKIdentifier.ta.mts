@@ -35,26 +35,32 @@ import * as $ from '@wildboar/asn1/functional';
  *
  */
 export class KEKIdentifier {
+    /**
+     * @summary `keyIdentifier`.
+     * @description
+     *
+     * Identifier of the CEK retained from a previous exchange
+     * (B.3.4).
+     * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.4.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly keyIdentifier: OCTET_STRING;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `keyIdentifier`.
-         * @description
-         *
-         * Identifier of the CEK retained from a previous exchange
-         * (B.3.4).
-         * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.4.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly keyIdentifier: OCTET_STRING,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        keyIdentifier: OCTET_STRING,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.keyIdentifier = keyIdentifier;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a KEKIdentifier

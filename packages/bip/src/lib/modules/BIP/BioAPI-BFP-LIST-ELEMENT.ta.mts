@@ -43,25 +43,31 @@ import {
  *
  */
 export class BioAPI_BFP_LIST_ELEMENT {
+  /**
+   * @summary `category`.
+   * @public
+   * @readonly
+   */
+  public readonly category: BioAPI_CATEGORY;
+  /**
+   * @summary `bfpProductUuid`.
+   * @description
+   *
+   * Persistent product UUID of the BFP. There is no BFP access
+   * UUID (BFPs are not called directly). X.1083 §15.4, §15.5.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly bfpProductUuid: BioAPI_UUID;
+
   constructor(
-    /**
-     * @summary `category`.
-     * @public
-     * @readonly
-     */
-    readonly category: BioAPI_CATEGORY,
-    /**
-     * @summary `bfpProductUuid`.
-     * @description
-     *
-     * Persistent product UUID of the BFP. There is no BFP access
-     * UUID (BFPs are not called directly). X.1083 §15.4, §15.5.
-     *
-     * @public
-     * @readonly
-     */
-    readonly bfpProductUuid: BioAPI_UUID
-  ) {}
+    category: BioAPI_CATEGORY,
+    bfpProductUuid: BioAPI_UUID
+  ) {
+    this.category = category;
+    this.bfpProductUuid = bfpProductUuid;
+  }
 
   /**
    * @summary Restructures an object into a BioAPI_BFP_LIST_ELEMENT

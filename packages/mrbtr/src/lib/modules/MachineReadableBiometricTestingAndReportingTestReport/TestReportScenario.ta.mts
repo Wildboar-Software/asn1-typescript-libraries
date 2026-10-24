@@ -41,49 +41,59 @@ import { TestReportScenarioForOneCondition, _decode_TestReportScenarioForOneCond
  */
 export
 class TestReportScenario {
+    /**
+     * @summary `version`.
+     * @description
+     *
+     * Format version; defaults to `v0` (Clause 6.5.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly version: OPTIONAL<MRTDBTRVersion>;
+    /**
+     * @summary `targetInfos`.
+     * @description
+     *
+     * Products under test (Clause 6.5.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly targetInfos: ProductInformation[];
+    /**
+     * @summary `testReportInfo`.
+     * @description
+     *
+     * Laboratory, claimed testing standard, issuance date, and
+     * parent written report (Clause 6.5.1, 6.4.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly testReportInfo: TestReportInformation;
+    /**
+     * @summary `testReports`.
+     * @description
+     *
+     * One result set per test condition (Clause 6.5.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly testReports: TestReportScenarioForOneCondition[];
+
     constructor (
-        /**
-         * @summary `version`.
-         * @description
-         *
-         * Format version; defaults to `v0` (Clause 6.5.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly version: OPTIONAL<MRTDBTRVersion>,
-        /**
-         * @summary `targetInfos`.
-         * @description
-         *
-         * Products under test (Clause 6.5.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly targetInfos: ProductInformation[],
-        /**
-         * @summary `testReportInfo`.
-         * @description
-         *
-         * Laboratory, claimed testing standard, issuance date, and
-         * parent written report (Clause 6.5.1, 6.4.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly testReportInfo: TestReportInformation,
-        /**
-         * @summary `testReports`.
-         * @description
-         *
-         * One result set per test condition (Clause 6.5.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly testReports: TestReportScenarioForOneCondition[]
-    ) {}
+        version: OPTIONAL<MRTDBTRVersion>,
+        targetInfos: ProductInformation[],
+        testReportInfo: TestReportInformation,
+        testReports: TestReportScenarioForOneCondition[]
+    ) {
+        this.version = version;
+        this.targetInfos = targetInfos;
+        this.testReportInfo = testReportInfo;
+        this.testReports = testReports;
+    }
 
     /**
      * @summary Restructures an object into a TestReportScenario

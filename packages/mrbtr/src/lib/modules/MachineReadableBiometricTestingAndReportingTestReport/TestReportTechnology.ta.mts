@@ -40,49 +40,59 @@ import { TestReportTechnologyForOneCondition, _decode_TestReportTechnologyForOne
  */
 export
 class TestReportTechnology {
+    /**
+     * @summary `version`.
+     * @description
+     *
+     * Format version; defaults to `v0` (Clause 6.4.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly version: OPTIONAL<MRTDBTRVersion>;
+    /**
+     * @summary `targetInfo`.
+     * @description
+     *
+     * Product under test (IUT).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly targetInfo: ProductInformation;
+    /**
+     * @summary `testReportInfo`.
+     * @description
+     *
+     * Laboratory, claimed testing standard, issuance date, and parent
+     * written report.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly testReportInfo: TestReportInformation;
+    /**
+     * @summary `testReports`.
+     * @description
+     *
+     * One result set per test condition.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly testReports: TestReportTechnologyForOneCondition[];
+
     constructor (
-        /**
-         * @summary `version`.
-         * @description
-         *
-         * Format version; defaults to `v0` (Clause 6.4.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly version: OPTIONAL<MRTDBTRVersion>,
-        /**
-         * @summary `targetInfo`.
-         * @description
-         *
-         * Product under test (IUT).
-         *
-         * @public
-         * @readonly
-         */
-        readonly targetInfo: ProductInformation,
-        /**
-         * @summary `testReportInfo`.
-         * @description
-         *
-         * Laboratory, claimed testing standard, issuance date, and parent
-         * written report.
-         *
-         * @public
-         * @readonly
-         */
-        readonly testReportInfo: TestReportInformation,
-        /**
-         * @summary `testReports`.
-         * @description
-         *
-         * One result set per test condition.
-         *
-         * @public
-         * @readonly
-         */
-        readonly testReports: TestReportTechnologyForOneCondition[]
-    ) {}
+        version: OPTIONAL<MRTDBTRVersion>,
+        targetInfo: ProductInformation,
+        testReportInfo: TestReportInformation,
+        testReports: TestReportTechnologyForOneCondition[]
+    ) {
+        this.version = version;
+        this.targetInfo = targetInfo;
+        this.testReportInfo = testReportInfo;
+        this.testReports = testReports;
+    }
 
     /**
      * @summary Restructures an object into a TestReportTechnology

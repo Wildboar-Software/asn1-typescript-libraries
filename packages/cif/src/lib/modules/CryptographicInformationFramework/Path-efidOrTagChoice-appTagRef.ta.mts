@@ -35,33 +35,41 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class Path_efidOrTagChoice_appTagRef {
+    /**
+     * @summary `aid`.
+     * @description
+     * ISO/IEC 7816-4 AID. ISO/IEC 7816-15:2016 §8.2.5.
+     * @public
+     * @readonly
+     */
+    public readonly aid: OCTET_STRING;
+    /**
+     * @summary `tag`.
+     * @description
+     * Data-object tag. ISO/IEC 7816-15:2016 §8.2.5.
+     * @public
+     * @readonly
+     */
+    public readonly tag: OCTET_STRING;
+    /**
+     * @summary `efidOrPath`.
+     * @description
+     * Optional EF containing the tagged object. ISO/IEC 7816-15:2016
+     * §8.2.5.
+     * @public
+     * @readonly
+     */
+    public readonly efidOrPath?: OPTIONAL<OCTET_STRING>;
+
     constructor (
-        /**
-         * @summary `aid`.
-         * @description
-         * ISO/IEC 7816-4 AID. ISO/IEC 7816-15:2016 §8.2.5.
-         * @public
-         * @readonly
-         */
-        readonly aid: OCTET_STRING,
-        /**
-         * @summary `tag`.
-         * @description
-         * Data-object tag. ISO/IEC 7816-15:2016 §8.2.5.
-         * @public
-         * @readonly
-         */
-        readonly tag: OCTET_STRING,
-        /**
-         * @summary `efidOrPath`.
-         * @description
-         * Optional EF containing the tagged object. ISO/IEC 7816-15:2016
-         * §8.2.5.
-         * @public
-         * @readonly
-         */
-        readonly efidOrPath?: OPTIONAL<OCTET_STRING>
-    ) {}
+        aid: OCTET_STRING,
+        tag: OCTET_STRING,
+        efidOrPath?: OPTIONAL<OCTET_STRING>
+    ) {
+        this.aid = aid;
+        this.tag = tag;
+        this.efidOrPath = efidOrPath;
+    }
 
     /**
      * @summary Restructures an object into a Path_efidOrTagChoice_appTagRef

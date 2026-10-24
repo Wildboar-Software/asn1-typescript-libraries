@@ -35,34 +35,40 @@ import {
  *
  */
 export class MessageImprint {
+    /**
+     * @summary `hashAlgorithm`.
+     * @description
+     *
+     * Identifies the hash algorithm. SHOULD be a known one-way,
+     * collision-resistant algorithm. The TSA SHOULD check whether
+     * it is still "sufficient"; if unrecognized or weak, return
+     * `badAlg`
+     * ([RFC 3161 §2.4.1](https://datatracker.ietf.org/doc/html/rfc3161#section-2.4.1)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly hashAlgorithm: AlgorithmIdentifier;
+    /**
+     * @summary `hashedMessage`.
+     * @description
+     *
+     * Hash of the datum as an `OCTET STRING`. Length MUST match the
+     * hash algorithm (e.g., 20 octets for SHA-1, 16 for MD5)
+     * ([RFC 3161 §2.4.1](https://datatracker.ietf.org/doc/html/rfc3161#section-2.4.1)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly hashedMessage: OCTET_STRING;
+
     constructor(
-        /**
-         * @summary `hashAlgorithm`.
-         * @description
-         *
-         * Identifies the hash algorithm. SHOULD be a known one-way,
-         * collision-resistant algorithm. The TSA SHOULD check whether
-         * it is still "sufficient"; if unrecognized or weak, return
-         * `badAlg`
-         * ([RFC 3161 §2.4.1](https://datatracker.ietf.org/doc/html/rfc3161#section-2.4.1)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly hashAlgorithm: AlgorithmIdentifier,
-        /**
-         * @summary `hashedMessage`.
-         * @description
-         *
-         * Hash of the datum as an `OCTET STRING`. Length MUST match the
-         * hash algorithm (e.g., 20 octets for SHA-1, 16 for MD5)
-         * ([RFC 3161 §2.4.1](https://datatracker.ietf.org/doc/html/rfc3161#section-2.4.1)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly hashedMessage: OCTET_STRING
-    ) {}
+        hashAlgorithm: AlgorithmIdentifier,
+        hashedMessage: OCTET_STRING
+    ) {
+        this.hashAlgorithm = hashAlgorithm;
+        this.hashedMessage = hashedMessage;
+    }
 
     /**
      * @summary Restructures an object into a MessageImprint

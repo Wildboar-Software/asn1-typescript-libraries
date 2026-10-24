@@ -34,20 +34,26 @@ import {
  *
  */
 export class AddTpsToGtpInformation_Item {
+    /**
+     * @summary `tpsAdded`.
+     * @public
+     * @readonly
+     */
+    public readonly tpsAdded: TerminationPointInformation[];
+    /**
+     * @summary `gtp`.
+     * @public
+     * @readonly
+     */
+    public readonly gtp?: OPTIONAL<ObjectInstance>;
+
     constructor(
-        /**
-         * @summary `tpsAdded`.
-         * @public
-         * @readonly
-         */
-        readonly tpsAdded: TerminationPointInformation[],
-        /**
-         * @summary `gtp`.
-         * @public
-         * @readonly
-         */
-        readonly gtp?: OPTIONAL<ObjectInstance>
-    ) {}
+        tpsAdded: TerminationPointInformation[],
+        gtp?: OPTIONAL<ObjectInstance>
+    ) {
+        this.tpsAdded = tpsAdded;
+        this.gtp = gtp;
+    }
 
     /**
      * @summary Restructures an object into a AddTpsToGtpInformation_Item

@@ -39,17 +39,21 @@ import {
  *
  */
 export class CertificateType {
+  /**
+   * @summary `encoding`.
+   * @description Encoding of the certificate. The §8.15
+   * example uses `"base64"`. XER attribute `encoding`.
+   * ITU-T Rec. X.1341 (09/2015) §8.15, Annex B.
+   * @public
+   * @readonly
+   */
+  public readonly encoding: String;
+
   constructor(
-    /**
-     * @summary `encoding`.
-     * @description Encoding of the certificate. The §8.15
-     * example uses `"base64"`. XER attribute `encoding`.
-     * ITU-T Rec. X.1341 (09/2015) §8.15, Annex B.
-     * @public
-     * @readonly
-     */
-    readonly encoding: String
-  ) {}
+    encoding: String
+  ) {
+    this.encoding = encoding;
+  }
 
   /**
    * @summary Restructures an object into a CertificateType

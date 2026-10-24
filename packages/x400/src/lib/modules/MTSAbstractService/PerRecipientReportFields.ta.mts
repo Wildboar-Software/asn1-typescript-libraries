@@ -48,26 +48,34 @@ import {
  *
  */
 export class PerRecipientReportFields {
+    /**
+     * @summary `actual_recipient_name`.
+     * @public
+     * @readonly
+     */
+    public readonly actual_recipient_name: ActualRecipientName;
+    /**
+     * @summary `originally_intended_recipient_name`.
+     * @public
+     * @readonly
+     */
+    public readonly originally_intended_recipient_name: OPTIONAL<OriginallyIntendedRecipientName>;
+    /**
+     * @summary `report_type`.
+     * @public
+     * @readonly
+     */
+    public readonly report_type: PerRecipientReportFields_report_type;
+
     constructor(
-        /**
-         * @summary `actual_recipient_name`.
-         * @public
-         * @readonly
-         */
-        readonly actual_recipient_name: ActualRecipientName,
-        /**
-         * @summary `originally_intended_recipient_name`.
-         * @public
-         * @readonly
-         */
-        readonly originally_intended_recipient_name: OPTIONAL<OriginallyIntendedRecipientName>,
-        /**
-         * @summary `report_type`.
-         * @public
-         * @readonly
-         */
-        readonly report_type: PerRecipientReportFields_report_type
-    ) {}
+        actual_recipient_name: ActualRecipientName,
+        originally_intended_recipient_name: OPTIONAL<OriginallyIntendedRecipientName>,
+        report_type: PerRecipientReportFields_report_type
+    ) {
+        this.actual_recipient_name = actual_recipient_name;
+        this.originally_intended_recipient_name = originally_intended_recipient_name;
+        this.report_type = report_type;
+    }
 
     /**
      * @summary Restructures an object into a PerRecipientReportFields

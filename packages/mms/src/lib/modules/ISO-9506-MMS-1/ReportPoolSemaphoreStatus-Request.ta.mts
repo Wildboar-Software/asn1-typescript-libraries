@@ -35,30 +35,36 @@ import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-
  */
 export
 class ReportPoolSemaphoreStatus_Request {
+    /**
+     * @summary `semaphoreName`.
+     * @description
+     *
+     * Pool semaphore to report. ISO 9506-1:2003 §16.7.1.1.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly semaphoreName: ObjectName;
+    /**
+     * @summary `nameToStartAfter`.
+     * @description
+     *
+     * Resume after this named-token. If unmatched, the sublist
+     * starts at the next name in collation order. Omit to start
+     * at the first. ISO 9506-1:2003 §16.7.1.1.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly nameToStartAfter?: OPTIONAL<Identifier>;
+
     constructor (
-        /**
-         * @summary `semaphoreName`.
-         * @description
-         *
-         * Pool semaphore to report. ISO 9506-1:2003 §16.7.1.1.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly semaphoreName: ObjectName,
-        /**
-         * @summary `nameToStartAfter`.
-         * @description
-         *
-         * Resume after this named-token. If unmatched, the sublist
-         * starts at the next name in collation order. Omit to start
-         * at the first. ISO 9506-1:2003 §16.7.1.1.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly nameToStartAfter?: OPTIONAL<Identifier>
-    ) {}
+        semaphoreName: ObjectName,
+        nameToStartAfter?: OPTIONAL<Identifier>
+    ) {
+        this.semaphoreName = semaphoreName;
+        this.nameToStartAfter = nameToStartAfter;
+    }
 
     /**
      * @summary Restructures an object into a ReportPoolSemaphoreStatus_Request

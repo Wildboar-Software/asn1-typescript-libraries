@@ -30,26 +30,34 @@ import {
  *
  */
 export class EncryptedRecipientID {
+    /**
+     * @summary `algorithm`.
+     * @public
+     * @readonly
+     */
+    public readonly algorithm: OPTIONAL<ContentEncryptionAlgorithmIdentifier>;
+    /**
+     * @summary `keyID`.
+     * @public
+     * @readonly
+     */
+    public readonly keyID: OPTIONAL<OCTET_STRING>;
+    /**
+     * @summary `ciphertext`.
+     * @public
+     * @readonly
+     */
+    public readonly ciphertext: OCTET_STRING;
+
     constructor(
-        /**
-         * @summary `algorithm`.
-         * @public
-         * @readonly
-         */
-        readonly algorithm: OPTIONAL<ContentEncryptionAlgorithmIdentifier>,
-        /**
-         * @summary `keyID`.
-         * @public
-         * @readonly
-         */
-        readonly keyID: OPTIONAL<OCTET_STRING>,
-        /**
-         * @summary `ciphertext`.
-         * @public
-         * @readonly
-         */
-        readonly ciphertext: OCTET_STRING
-    ) {}
+        algorithm: OPTIONAL<ContentEncryptionAlgorithmIdentifier>,
+        keyID: OPTIONAL<OCTET_STRING>,
+        ciphertext: OCTET_STRING
+    ) {
+        this.algorithm = algorithm;
+        this.keyID = keyID;
+        this.ciphertext = ciphertext;
+    }
 
     /**
      * @summary Restructures an object into a EncryptedRecipientID

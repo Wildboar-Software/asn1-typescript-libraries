@@ -31,20 +31,26 @@ import {
  *
  */
 export class CoincidentUnprotectedUnidirectionalConnections {
+    /**
+     * @summary `xcA`.
+     * @public
+     * @readonly
+     */
+    public readonly xcA: ObjectInstance;
+    /**
+     * @summary `xcB`.
+     * @public
+     * @readonly
+     */
+    public readonly xcB: ObjectInstance;
+
     constructor(
-        /**
-         * @summary `xcA`.
-         * @public
-         * @readonly
-         */
-        readonly xcA: ObjectInstance,
-        /**
-         * @summary `xcB`.
-         * @public
-         * @readonly
-         */
-        readonly xcB: ObjectInstance
-    ) {}
+        xcA: ObjectInstance,
+        xcB: ObjectInstance
+    ) {
+        this.xcA = xcA;
+        this.xcB = xcB;
+    }
 
     /**
      * @summary Restructures an object into a CoincidentUnprotectedUnidirectionalConnections

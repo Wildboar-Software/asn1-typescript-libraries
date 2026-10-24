@@ -36,20 +36,26 @@ import {
  *
  */
 export class AssignLinkConnectionOnLogicalLinkInformation {
+    /**
+     * @summary `layerNetworkDomain`.
+     * @public
+     * @readonly
+     */
+    public readonly layerNetworkDomain: ObjectInstance;
+    /**
+     * @summary `requestedLinkConnections`.
+     * @public
+     * @readonly
+     */
+    public readonly requestedLinkConnections: LinkConnectionList;
+
     constructor(
-        /**
-         * @summary `layerNetworkDomain`.
-         * @public
-         * @readonly
-         */
-        readonly layerNetworkDomain: ObjectInstance,
-        /**
-         * @summary `requestedLinkConnections`.
-         * @public
-         * @readonly
-         */
-        readonly requestedLinkConnections: LinkConnectionList
-    ) {}
+        layerNetworkDomain: ObjectInstance,
+        requestedLinkConnections: LinkConnectionList
+    ) {
+        this.layerNetworkDomain = layerNetworkDomain;
+        this.requestedLinkConnections = requestedLinkConnections;
+    }
 
     /**
      * @summary Restructures an object into a AssignLinkConnectionOnLogicalLinkInformation

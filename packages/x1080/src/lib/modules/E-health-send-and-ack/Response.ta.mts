@@ -48,43 +48,51 @@ import {
  *
  */
 export class Response {
+    /**
+     * @summary `encryptionOptions`.
+     * @description
+     *
+     * Whether CMS encryption is applied to `content`. ITU-T Rec.
+     * X.1080.1 (10/2011) module E-health-send-and-ack.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly encryptionOptions: EncryptionOptions;
+    /**
+     * @summary `integrityOptions`.
+     * @description
+     *
+     * Whether CMS integrity is applied to `content`. ITU-T Rec.
+     * X.1080.1 (10/2011) module E-health-send-and-ack.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly integrityOptions: IntegrityOptions;
+    /**
+     * @summary `content`.
+     * @description
+     *
+     * Encoding of an `Ack` under the current encoding rules, in
+     * a CMS `ContentInfo` for encryption and/or integrity if
+     * needed. ITU-T Rec. X.1080.1 (10/2011) module
+     * E-health-send-and-ack.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly content: OCTET_STRING;
+
     constructor(
-        /**
-         * @summary `encryptionOptions`.
-         * @description
-         *
-         * Whether CMS encryption is applied to `content`. ITU-T Rec.
-         * X.1080.1 (10/2011) module E-health-send-and-ack.
-         *
-         * @public
-         * @readonly
-         */
-        readonly encryptionOptions: EncryptionOptions,
-        /**
-         * @summary `integrityOptions`.
-         * @description
-         *
-         * Whether CMS integrity is applied to `content`. ITU-T Rec.
-         * X.1080.1 (10/2011) module E-health-send-and-ack.
-         *
-         * @public
-         * @readonly
-         */
-        readonly integrityOptions: IntegrityOptions,
-        /**
-         * @summary `content`.
-         * @description
-         *
-         * Encoding of an `Ack` under the current encoding rules, in
-         * a CMS `ContentInfo` for encryption and/or integrity if
-         * needed. ITU-T Rec. X.1080.1 (10/2011) module
-         * E-health-send-and-ack.
-         *
-         * @public
-         * @readonly
-         */
-        readonly content: OCTET_STRING
-    ) {}
+        encryptionOptions: EncryptionOptions,
+        integrityOptions: IntegrityOptions,
+        content: OCTET_STRING
+    ) {
+        this.encryptionOptions = encryptionOptions;
+        this.integrityOptions = integrityOptions;
+        this.content = content;
+    }
 
     /**
      * @summary Restructures an object into a Response

@@ -32,20 +32,26 @@ import {
  *
  */
 export class AddNWTTPsToAccessGroupInformation {
+    /**
+     * @summary `nwTTPs`.
+     * @public
+     * @readonly
+     */
+    public readonly nwTTPs: ObjectInstance[];
+    /**
+     * @summary `accessGroup`.
+     * @public
+     * @readonly
+     */
+    public readonly accessGroup?: OPTIONAL<ObjectInstance>;
+
     constructor(
-        /**
-         * @summary `nwTTPs`.
-         * @public
-         * @readonly
-         */
-        readonly nwTTPs: ObjectInstance[],
-        /**
-         * @summary `accessGroup`.
-         * @public
-         * @readonly
-         */
-        readonly accessGroup?: OPTIONAL<ObjectInstance>
-    ) {}
+        nwTTPs: ObjectInstance[],
+        accessGroup?: OPTIONAL<ObjectInstance>
+    ) {
+        this.nwTTPs = nwTTPs;
+        this.accessGroup = accessGroup;
+    }
 
     /**
      * @summary Restructures an object into a AddNWTTPsToAccessGroupInformation

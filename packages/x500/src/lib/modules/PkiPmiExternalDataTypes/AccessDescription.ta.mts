@@ -25,20 +25,26 @@ import {
  *
  */
 export class AccessDescription {
+    /**
+     * @summary `accessMethod`.
+     * @public
+     * @readonly
+     */
+    public readonly accessMethod: OBJECT_IDENTIFIER;
+    /**
+     * @summary `accessLocation`.
+     * @public
+     * @readonly
+     */
+    public readonly accessLocation: GeneralName;
+
     constructor(
-        /**
-         * @summary `accessMethod`.
-         * @public
-         * @readonly
-         */
-        readonly accessMethod: OBJECT_IDENTIFIER,
-        /**
-         * @summary `accessLocation`.
-         * @public
-         * @readonly
-         */
-        readonly accessLocation: GeneralName
-    ) {}
+        accessMethod: OBJECT_IDENTIFIER,
+        accessLocation: GeneralName
+    ) {
+        this.accessMethod = accessMethod;
+        this.accessLocation = accessLocation;
+    }
 
     /**
      * @summary Restructures an object into a AccessDescription

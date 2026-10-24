@@ -37,30 +37,35 @@ import { Signal, _decode_Signal, _encode_Signal } from "../MEDIA-GATEWAY-CONTROL
  */
 export
 class SeqSigList {
+    /**
+     * @summary `id`.
+     * @description
+     *
+     * List identifier, 0 to 65535. A replacement list with the same
+     * identifier continues the list already playing (clause 7.1.11.11).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly id: INTEGER;
+    /**
+     * @summary `signalList`.
+     * @description
+     *
+     * Signals in play order. Every element except the last is brief or
+     * timeout, not on/off (clause 7.1.11.8).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly signalList: Signal[];
+
     constructor (
-        /**
-         * @summary `id`.
-         * @description
-         *
-         * List identifier, 0 to 65535. A replacement list with the same
-         * identifier continues the list already playing (clause 7.1.11.11).
-         *
-         * @public
-         * @readonly
-         */
-        readonly id: INTEGER,
-        /**
-         * @summary `signalList`.
-         * @description
-         *
-         * Signals in play order. Every element except the last is brief or
-         * timeout, not on/off (clause 7.1.11.8).
-         *
-         * @public
-         * @readonly
-         */
-        readonly signalList: Signal[]
+        id: INTEGER,
+        signalList: Signal[]
     ) {
+            this.id = id;
+            this.signalList = signalList;
             const n = typeof id === "bigint" ? id : BigInt(id);
             if (n < 0n || n > 65535n) {
                 throw new ASN1OverflowError("SeqSigList.id violates INTEGER range");

@@ -28,20 +28,26 @@ import * as $ from '@wildboar/asn1/functional';
  *
  */
 export class UserAddress_x121 {
+    /**
+     * @summary `x121_address`.
+     * @public
+     * @readonly
+     */
+    public readonly x121_address?: OPTIONAL<NumericString>;
+    /**
+     * @summary `tsap_id`.
+     * @public
+     * @readonly
+     */
+    public readonly tsap_id?: OPTIONAL<PrintableString>;
+
     constructor(
-        /**
-         * @summary `x121_address`.
-         * @public
-         * @readonly
-         */
-        readonly x121_address?: OPTIONAL<NumericString>,
-        /**
-         * @summary `tsap_id`.
-         * @public
-         * @readonly
-         */
-        readonly tsap_id?: OPTIONAL<PrintableString>
-    ) {}
+        x121_address?: OPTIONAL<NumericString>,
+        tsap_id?: OPTIONAL<PrintableString>
+    ) {
+        this.x121_address = x121_address;
+        this.tsap_id = tsap_id;
+    }
 
     /**
      * @summary Restructures an object into a UserAddress_x121

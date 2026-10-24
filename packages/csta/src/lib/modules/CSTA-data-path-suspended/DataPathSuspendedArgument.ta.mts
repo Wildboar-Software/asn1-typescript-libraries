@@ -39,44 +39,52 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class DataPathSuspendedArgument {
+    /**
+     * @summary `ioCrossRefID`.
+     * @description
+     *
+     * Cross-reference for the data path, including which side started it
+     * (ECMA-269 §6.2.1 / §6.2.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ioCrossRefID: IOCrossRefID;
+    /**
+     * @summary `ioReqRegisterID`.
+     * @description
+     *
+     * I/O registration identifier (ASN.1 name `ioReqRegisterID`; ECMA-269
+     * `ioRegisterReqID`). I/O registration identifier. Mandatory if the
+     * switching function supports I/O registration and the data path was
+     * requested by the switching function; otherwise absent (ECMA-269
+     * §6.2.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ioReqRegisterID?: OPTIONAL<IORegisterReqID>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * CSTACommonArguments carrying the service-table security and
+     * privateData parameters.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `ioCrossRefID`.
-         * @description
-         *
-         * Cross-reference for the data path, including which side started it
-         * (ECMA-269 §6.2.1 / §6.2.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly ioCrossRefID: IOCrossRefID,
-        /**
-         * @summary `ioReqRegisterID`.
-         * @description
-         *
-         * I/O registration identifier (ASN.1 name `ioReqRegisterID`; ECMA-269
-         * `ioRegisterReqID`). I/O registration identifier. Mandatory if the
-         * switching function supports I/O registration and the data path was
-         * requested by the switching function; otherwise absent (ECMA-269
-         * §6.2.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly ioReqRegisterID?: OPTIONAL<IORegisterReqID>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * CSTACommonArguments carrying the service-table security and
-         * privateData parameters.
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        ioCrossRefID: IOCrossRefID,
+        ioReqRegisterID?: OPTIONAL<IORegisterReqID>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.ioCrossRefID = ioCrossRefID;
+        this.ioReqRegisterID = ioReqRegisterID;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a DataPathSuspendedArgument

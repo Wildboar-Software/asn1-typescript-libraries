@@ -35,26 +35,34 @@ import { leg1 } from "../IN-CS2-datatypes/leg1.va.mjs";
  */
 export
 class RequestedUTSI {
+    /**
+     * @summary `uSIServiceIndicator`.
+     * @public
+     * @readonly
+     */
+    public readonly uSIServiceIndicator: USIServiceIndicator;
+    /**
+     * @summary `uSImonitorMode`.
+     * @public
+     * @readonly
+     */
+    public readonly uSImonitorMode: USIMonitorMode;
+    /**
+     * @summary `legID`.
+     * @public
+     * @readonly
+     */
+    public readonly legID?: OPTIONAL<LegID>;
+
     constructor (
-        /**
-         * @summary `uSIServiceIndicator`.
-         * @public
-         * @readonly
-         */
-        readonly uSIServiceIndicator: USIServiceIndicator,
-        /**
-         * @summary `uSImonitorMode`.
-         * @public
-         * @readonly
-         */
-        readonly uSImonitorMode: USIMonitorMode,
-        /**
-         * @summary `legID`.
-         * @public
-         * @readonly
-         */
-        readonly legID?: OPTIONAL<LegID>
-    ) {}
+        uSIServiceIndicator: USIServiceIndicator,
+        uSImonitorMode: USIMonitorMode,
+        legID?: OPTIONAL<LegID>
+    ) {
+        this.uSIServiceIndicator = uSIServiceIndicator;
+        this.uSImonitorMode = uSImonitorMode;
+        this.legID = legID;
+    }
 
     /**
      * @summary Restructures an object into a RequestedUTSI

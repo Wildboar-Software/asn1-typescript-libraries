@@ -39,26 +39,34 @@ import {
  *
  */
 export class ExtendedCertificateInfo {
+    /**
+     * @summary `version`.
+     * @public
+     * @readonly
+     */
+    public readonly version: CMSVersion;
+    /**
+     * @summary `certificate`.
+     * @public
+     * @readonly
+     */
+    public readonly certificate: Certificate;
+    /**
+     * @summary `attributes`.
+     * @public
+     * @readonly
+     */
+    public readonly attributes: UnauthAttributes;
+
     constructor(
-        /**
-         * @summary `version`.
-         * @public
-         * @readonly
-         */
-        readonly version: CMSVersion,
-        /**
-         * @summary `certificate`.
-         * @public
-         * @readonly
-         */
-        readonly certificate: Certificate,
-        /**
-         * @summary `attributes`.
-         * @public
-         * @readonly
-         */
-        readonly attributes: UnauthAttributes
-    ) {}
+        version: CMSVersion,
+        certificate: Certificate,
+        attributes: UnauthAttributes
+    ) {
+        this.version = version;
+        this.certificate = certificate;
+        this.attributes = attributes;
+    }
 
     /**
      * @summary Restructures an object into a ExtendedCertificateInfo

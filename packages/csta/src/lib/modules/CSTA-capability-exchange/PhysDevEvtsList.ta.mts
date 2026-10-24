@@ -63,107 +63,131 @@ import { SpeakerVolume, _decode_SpeakerVolume, _encode_SpeakerVolume } from "../
  */
 export
 class PhysDevEvtsList {
+    /**
+     * @summary `buttonInformation`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this event; omit if the SF does not support it
+     * (ECMA-269 Annex C).
+     */
+    public readonly buttonInformation?: OPTIONAL<ButtonInformation>;
+    /**
+     * @summary `buttonPress`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this event; omit if the SF does not support it
+     * (ECMA-269 Annex C).
+     */
+    public readonly buttonPress?: OPTIONAL<ButtonPressEvent>;
+    /**
+     * @summary `displayUpdated`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this event; omit if the SF does not support it
+     * (ECMA-269 Annex C).
+     */
+    public readonly displayUpdated?: OPTIONAL<DisplayUpdated>;
+    /**
+     * @summary `hookswitch`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this event; omit if the SF does not support it
+     * (ECMA-269 Annex C).
+     */
+    public readonly hookswitch?: OPTIONAL<Hookswitch>;
+    /**
+     * @summary `lampMode`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this event; omit if the SF does not support it
+     * (ECMA-269 Annex C).
+     */
+    public readonly lampMode?: OPTIONAL<LampMode>;
+    /**
+     * @summary `messageWaiting`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this event; omit if the SF does not support it
+     * (ECMA-269 Annex C).
+     */
+    public readonly messageWaiting?: OPTIONAL<MessageWaiting>;
+    /**
+     * @summary `microphoneGain`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this event; omit if the SF does not support it
+     * (ECMA-269 Annex C).
+     */
+    public readonly microphoneGain?: OPTIONAL<MicrophoneGain>;
+    /**
+     * @summary `microphoneMute`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this event; omit if the SF does not support it
+     * (ECMA-269 Annex C).
+     */
+    public readonly microphoneMute?: OPTIONAL<MicrophoneMute>;
+    /**
+     * @summary `ringerStatus`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this event; omit if the SF does not support it
+     * (ECMA-269 Annex C).
+     */
+    public readonly ringerStatus?: OPTIONAL<RingerStatus>;
+    /**
+     * @summary `speakerMute`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this event; omit if the SF does not support it
+     * (ECMA-269 Annex C).
+     */
+    public readonly speakerMute?: OPTIONAL<SpeakerMute>;
+    /**
+     * @summary `speakerVolume`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this event; omit if the SF does not support it
+     * (ECMA-269 Annex C).
+     */
+    public readonly speakerVolume?: OPTIONAL<SpeakerVolume>;
+
     constructor (
-        /**
-         * @summary `buttonInformation`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this event; omit if the SF does not support it
-         * (ECMA-269 Annex C).
-         */
-        readonly buttonInformation?: OPTIONAL<ButtonInformation>,
-        /**
-         * @summary `buttonPress`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this event; omit if the SF does not support it
-         * (ECMA-269 Annex C).
-         */
-        readonly buttonPress?: OPTIONAL<ButtonPressEvent>,
-        /**
-         * @summary `displayUpdated`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this event; omit if the SF does not support it
-         * (ECMA-269 Annex C).
-         */
-        readonly displayUpdated?: OPTIONAL<DisplayUpdated>,
-        /**
-         * @summary `hookswitch`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this event; omit if the SF does not support it
-         * (ECMA-269 Annex C).
-         */
-        readonly hookswitch?: OPTIONAL<Hookswitch>,
-        /**
-         * @summary `lampMode`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this event; omit if the SF does not support it
-         * (ECMA-269 Annex C).
-         */
-        readonly lampMode?: OPTIONAL<LampMode>,
-        /**
-         * @summary `messageWaiting`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this event; omit if the SF does not support it
-         * (ECMA-269 Annex C).
-         */
-        readonly messageWaiting?: OPTIONAL<MessageWaiting>,
-        /**
-         * @summary `microphoneGain`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this event; omit if the SF does not support it
-         * (ECMA-269 Annex C).
-         */
-        readonly microphoneGain?: OPTIONAL<MicrophoneGain>,
-        /**
-         * @summary `microphoneMute`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this event; omit if the SF does not support it
-         * (ECMA-269 Annex C).
-         */
-        readonly microphoneMute?: OPTIONAL<MicrophoneMute>,
-        /**
-         * @summary `ringerStatus`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this event; omit if the SF does not support it
-         * (ECMA-269 Annex C).
-         */
-        readonly ringerStatus?: OPTIONAL<RingerStatus>,
-        /**
-         * @summary `speakerMute`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this event; omit if the SF does not support it
-         * (ECMA-269 Annex C).
-         */
-        readonly speakerMute?: OPTIONAL<SpeakerMute>,
-        /**
-         * @summary `speakerVolume`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this event; omit if the SF does not support it
-         * (ECMA-269 Annex C).
-         */
-        readonly speakerVolume?: OPTIONAL<SpeakerVolume>
-    ) {}
+        buttonInformation?: OPTIONAL<ButtonInformation>,
+        buttonPress?: OPTIONAL<ButtonPressEvent>,
+        displayUpdated?: OPTIONAL<DisplayUpdated>,
+        hookswitch?: OPTIONAL<Hookswitch>,
+        lampMode?: OPTIONAL<LampMode>,
+        messageWaiting?: OPTIONAL<MessageWaiting>,
+        microphoneGain?: OPTIONAL<MicrophoneGain>,
+        microphoneMute?: OPTIONAL<MicrophoneMute>,
+        ringerStatus?: OPTIONAL<RingerStatus>,
+        speakerMute?: OPTIONAL<SpeakerMute>,
+        speakerVolume?: OPTIONAL<SpeakerVolume>
+    ) {
+        this.buttonInformation = buttonInformation;
+        this.buttonPress = buttonPress;
+        this.displayUpdated = displayUpdated;
+        this.hookswitch = hookswitch;
+        this.lampMode = lampMode;
+        this.messageWaiting = messageWaiting;
+        this.microphoneGain = microphoneGain;
+        this.microphoneMute = microphoneMute;
+        this.ringerStatus = ringerStatus;
+        this.speakerMute = speakerMute;
+        this.speakerVolume = speakerVolume;
+    }
 
     /**
      * @summary Restructures an object into a PhysDevEvtsList

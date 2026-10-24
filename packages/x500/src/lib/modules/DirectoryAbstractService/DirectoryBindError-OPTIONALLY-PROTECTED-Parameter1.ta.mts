@@ -43,43 +43,51 @@ import {
  *
  */
 export class DirectoryBindError_OPTIONALLY_PROTECTED_Parameter1 {
+    /**
+     * @summary `versions`.
+     * @description
+     *
+     * Versions the DSA supports. DEFAULT `{v1}`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly versions: OPTIONAL<Versions>;
+    /**
+     * @summary `error`.
+     * @description
+     *
+     * CHOICE `serviceError` / `securityError`. Bind service:
+     * `unavailable`, `saslBindInProgress`. Bind security:
+     * `inappropriateAuthentication`, `invalidCredentials`,
+     * `blockedCredentials`, `spkmError`,
+     * `unsupportedAuthenticationMethod`, `passwordExpired`,
+     * `inappropriateAlgorithms`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly error: DirectoryBindError_OPTIONALLY_PROTECTED_Parameter1_error;
+    /**
+     * @summary `securityParameters`.
+     * @description
+     *
+     * Shall be included if this error is signed.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly securityParameters?: OPTIONAL<SecurityParameters>;
+
     constructor(
-        /**
-         * @summary `versions`.
-         * @description
-         *
-         * Versions the DSA supports. DEFAULT `{v1}`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly versions: OPTIONAL<Versions>,
-        /**
-         * @summary `error`.
-         * @description
-         *
-         * CHOICE `serviceError` / `securityError`. Bind service:
-         * `unavailable`, `saslBindInProgress`. Bind security:
-         * `inappropriateAuthentication`, `invalidCredentials`,
-         * `blockedCredentials`, `spkmError`,
-         * `unsupportedAuthenticationMethod`, `passwordExpired`,
-         * `inappropriateAlgorithms`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly error: DirectoryBindError_OPTIONALLY_PROTECTED_Parameter1_error,
-        /**
-         * @summary `securityParameters`.
-         * @description
-         *
-         * Shall be included if this error is signed.
-         *
-         * @public
-         * @readonly
-         */
-        readonly securityParameters?: OPTIONAL<SecurityParameters>
-    ) {}
+        versions: OPTIONAL<Versions>,
+        error: DirectoryBindError_OPTIONALLY_PROTECTED_Parameter1_error,
+        securityParameters?: OPTIONAL<SecurityParameters>
+    ) {
+        this.versions = versions;
+        this.error = error;
+        this.securityParameters = securityParameters;
+    }
 
     /**
      * @summary Restructures an object into a DirectoryBindError_OPTIONALLY_PROTECTED_Parameter1

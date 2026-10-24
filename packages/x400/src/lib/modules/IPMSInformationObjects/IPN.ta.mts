@@ -76,44 +76,58 @@ import {
  *
  */
 export class IPN implements CommonFields {
+    /**
+     * @summary `subject_ipm`.
+     * @public
+     * @readonly
+     */
+    public readonly subject_ipm: SubjectIPMField; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `ipn_originator`.
+     * @public
+     * @readonly
+     */
+    public readonly ipn_originator: OPTIONAL<IPNOriginatorField>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `ipm_intended_recipient`.
+     * @public
+     * @readonly
+     */
+    public readonly ipm_intended_recipient: OPTIONAL<IPMIntendedRecipientField>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `conversion_eits`.
+     * @public
+     * @readonly
+     */
+    public readonly conversion_eits: OPTIONAL<ConversionEITsField>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `notification_extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly notification_extensions: OPTIONAL<NotificationExtensionsField>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `choice`.
+     * @public
+     * @readonly
+     */
+    public readonly choice: IPN_choice;
+
     constructor(
-        /**
-         * @summary `subject_ipm`.
-         * @public
-         * @readonly
-         */
-        readonly subject_ipm: SubjectIPMField /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `ipn_originator`.
-         * @public
-         * @readonly
-         */
-        readonly ipn_originator: OPTIONAL<IPNOriginatorField> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `ipm_intended_recipient`.
-         * @public
-         * @readonly
-         */
-        readonly ipm_intended_recipient: OPTIONAL<IPMIntendedRecipientField> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `conversion_eits`.
-         * @public
-         * @readonly
-         */
-        readonly conversion_eits: OPTIONAL<ConversionEITsField> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `notification_extensions`.
-         * @public
-         * @readonly
-         */
-        readonly notification_extensions: OPTIONAL<NotificationExtensionsField> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `choice`.
-         * @public
-         * @readonly
-         */
-        readonly choice: IPN_choice
-    ) {}
+        subject_ipm: SubjectIPMField,
+        ipn_originator: OPTIONAL<IPNOriginatorField>,
+        ipm_intended_recipient: OPTIONAL<IPMIntendedRecipientField>,
+        conversion_eits: OPTIONAL<ConversionEITsField>,
+        notification_extensions: OPTIONAL<NotificationExtensionsField>,
+        choice: IPN_choice
+    ) {
+        this.subject_ipm = subject_ipm;
+        this.ipn_originator = ipn_originator;
+        this.ipm_intended_recipient = ipm_intended_recipient;
+        this.conversion_eits = conversion_eits;
+        this.notification_extensions = notification_extensions;
+        this.choice = choice;
+    }
 
     /**
      * @summary Restructures an object into a IPN

@@ -55,86 +55,114 @@ import { RedirectionInformation, _decode_RedirectionInformation, _encode_Redirec
  */
 export
 class ConnectArg {
+    /**
+     * @summary `destinationRoutingAddress`.
+     * @public
+     * @readonly
+     */
+    public readonly destinationRoutingAddress: DestinationRoutingAddress;
+    /**
+     * @summary `alertingPattern`.
+     * @public
+     * @readonly
+     */
+    public readonly alertingPattern?: OPTIONAL<AlertingPattern>;
+    /**
+     * @summary `correlationID`.
+     * @public
+     * @readonly
+     */
+    public readonly correlationID?: OPTIONAL<CorrelationID>;
+    /**
+     * @summary `cutAndPaste`.
+     * @public
+     * @readonly
+     */
+    public readonly cutAndPaste?: OPTIONAL<CutAndPaste>;
+    /**
+     * @summary `originalCalledPartyID`.
+     * @public
+     * @readonly
+     */
+    public readonly originalCalledPartyID?: OPTIONAL<OriginalCalledPartyID>;
+    /**
+     * @summary `routeList`.
+     * @public
+     * @readonly
+     */
+    public readonly routeList?: OPTIONAL<RouteList>;
+    /**
+     * @summary `scfID`.
+     * @public
+     * @readonly
+     */
+    public readonly scfID?: OPTIONAL<ScfID>;
+    /**
+     * @summary `extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<ExtensionField[]>;
+    /**
+     * @summary `serviceInteractionIndicators`.
+     * @public
+     * @readonly
+     */
+    public readonly serviceInteractionIndicators?: OPTIONAL<ServiceInteractionIndicators>;
+    /**
+     * @summary `callingPartyNumber`.
+     * @public
+     * @readonly
+     */
+    public readonly callingPartyNumber?: OPTIONAL<CallingPartyNumber>;
+    /**
+     * @summary `callingPartysCategory`.
+     * @public
+     * @readonly
+     */
+    public readonly callingPartysCategory?: OPTIONAL<CallingPartysCategory>;
+    /**
+     * @summary `redirectingPartyID`.
+     * @public
+     * @readonly
+     */
+    public readonly redirectingPartyID?: OPTIONAL<RedirectingPartyID>;
+    /**
+     * @summary `redirectionInformation`.
+     * @public
+     * @readonly
+     */
+    public readonly redirectionInformation?: OPTIONAL<RedirectionInformation>;
+
     constructor (
-        /**
-         * @summary `destinationRoutingAddress`.
-         * @public
-         * @readonly
-         */
-        readonly destinationRoutingAddress: DestinationRoutingAddress,
-        /**
-         * @summary `alertingPattern`.
-         * @public
-         * @readonly
-         */
-        readonly alertingPattern?: OPTIONAL<AlertingPattern>,
-        /**
-         * @summary `correlationID`.
-         * @public
-         * @readonly
-         */
-        readonly correlationID?: OPTIONAL<CorrelationID>,
-        /**
-         * @summary `cutAndPaste`.
-         * @public
-         * @readonly
-         */
-        readonly cutAndPaste?: OPTIONAL<CutAndPaste>,
-        /**
-         * @summary `originalCalledPartyID`.
-         * @public
-         * @readonly
-         */
-        readonly originalCalledPartyID?: OPTIONAL<OriginalCalledPartyID>,
-        /**
-         * @summary `routeList`.
-         * @public
-         * @readonly
-         */
-        readonly routeList?: OPTIONAL<RouteList>,
-        /**
-         * @summary `scfID`.
-         * @public
-         * @readonly
-         */
-        readonly scfID?: OPTIONAL<ScfID>,
-        /**
-         * @summary `extensions`.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<ExtensionField[]>,
-        /**
-         * @summary `serviceInteractionIndicators`.
-         * @public
-         * @readonly
-         */
-        readonly serviceInteractionIndicators?: OPTIONAL<ServiceInteractionIndicators>,
-        /**
-         * @summary `callingPartyNumber`.
-         * @public
-         * @readonly
-         */
-        readonly callingPartyNumber?: OPTIONAL<CallingPartyNumber>,
-        /**
-         * @summary `callingPartysCategory`.
-         * @public
-         * @readonly
-         */
-        readonly callingPartysCategory?: OPTIONAL<CallingPartysCategory>,
-        /**
-         * @summary `redirectingPartyID`.
-         * @public
-         * @readonly
-         */
-        readonly redirectingPartyID?: OPTIONAL<RedirectingPartyID>,
-        /**
-         * @summary `redirectionInformation`.
-         * @public
-         * @readonly
-         */
-        readonly redirectionInformation?: OPTIONAL<RedirectionInformation>
-    ) {}
+        destinationRoutingAddress: DestinationRoutingAddress,
+        alertingPattern?: OPTIONAL<AlertingPattern>,
+        correlationID?: OPTIONAL<CorrelationID>,
+        cutAndPaste?: OPTIONAL<CutAndPaste>,
+        originalCalledPartyID?: OPTIONAL<OriginalCalledPartyID>,
+        routeList?: OPTIONAL<RouteList>,
+        scfID?: OPTIONAL<ScfID>,
+        extensions?: OPTIONAL<ExtensionField[]>,
+        serviceInteractionIndicators?: OPTIONAL<ServiceInteractionIndicators>,
+        callingPartyNumber?: OPTIONAL<CallingPartyNumber>,
+        callingPartysCategory?: OPTIONAL<CallingPartysCategory>,
+        redirectingPartyID?: OPTIONAL<RedirectingPartyID>,
+        redirectionInformation?: OPTIONAL<RedirectionInformation>
+    ) {
+        this.destinationRoutingAddress = destinationRoutingAddress;
+        this.alertingPattern = alertingPattern;
+        this.correlationID = correlationID;
+        this.cutAndPaste = cutAndPaste;
+        this.originalCalledPartyID = originalCalledPartyID;
+        this.routeList = routeList;
+        this.scfID = scfID;
+        this.extensions = extensions;
+        this.serviceInteractionIndicators = serviceInteractionIndicators;
+        this.callingPartyNumber = callingPartyNumber;
+        this.callingPartysCategory = callingPartysCategory;
+        this.redirectingPartyID = redirectingPartyID;
+        this.redirectionInformation = redirectionInformation;
+    }
 
     /**
      * @summary Restructures an object into a ConnectArg

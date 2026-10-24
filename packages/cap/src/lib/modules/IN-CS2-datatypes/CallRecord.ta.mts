@@ -33,26 +33,34 @@ import { CalledPartyNumber, _decode_CalledPartyNumber, _encode_CalledPartyNumber
  */
 export
 class CallRecord {
+    /**
+     * @summary `callDuration`.
+     * @public
+     * @readonly
+     */
+    public readonly callDuration: Duration;
+    /**
+     * @summary `callingPartyNumber`.
+     * @public
+     * @readonly
+     */
+    public readonly callingPartyNumber: CallingPartyNumber;
+    /**
+     * @summary `calledPartyNumber`.
+     * @public
+     * @readonly
+     */
+    public readonly calledPartyNumber: CalledPartyNumber;
+
     constructor (
-        /**
-         * @summary `callDuration`.
-         * @public
-         * @readonly
-         */
-        readonly callDuration: Duration,
-        /**
-         * @summary `callingPartyNumber`.
-         * @public
-         * @readonly
-         */
-        readonly callingPartyNumber: CallingPartyNumber,
-        /**
-         * @summary `calledPartyNumber`.
-         * @public
-         * @readonly
-         */
-        readonly calledPartyNumber: CalledPartyNumber
-    ) {}
+        callDuration: Duration,
+        callingPartyNumber: CallingPartyNumber,
+        calledPartyNumber: CalledPartyNumber
+    ) {
+        this.callDuration = callDuration;
+        this.callingPartyNumber = callingPartyNumber;
+        this.calledPartyNumber = calledPartyNumber;
+    }
 
     /**
      * @summary Restructures an object into a CallRecord

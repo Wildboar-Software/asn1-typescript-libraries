@@ -182,7 +182,7 @@ let _cached_encoder_for_CtatParamArg: $.ASN1Encoder<CtatParamArg> | null = null;
  */
 export
 function _encode_CtatParamArg (value: CtatParamArg, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CtatParamArg) { _cached_encoder_for_CtatParamArg = function (value: CtatParamArg, elGetter: $.ASN1Encoder<CtatParamArg>): _Element {
+    if (!_cached_encoder_for_CtatParamArg) { _cached_encoder_for_CtatParamArg = function (value: CtatParamArg): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_PartyNumber(value.pisnNumber, $.BER));
     if (value.canCompute !== undefined) {

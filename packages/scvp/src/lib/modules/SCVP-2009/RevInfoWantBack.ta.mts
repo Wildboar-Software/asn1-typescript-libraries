@@ -39,20 +39,26 @@ import {
  *
  */
 export class RevInfoWantBack {
+  /**
+   * @summary `revocationInfo`.
+   * @public
+   * @readonly
+   */
+  public readonly revocationInfo: RevocationInfos;
+  /**
+   * @summary `extraCerts`.
+   * @public
+   * @readonly
+   */
+  public readonly extraCerts?: OPTIONAL<CertBundle>;
+
   constructor(
-    /**
-     * @summary `revocationInfo`.
-     * @public
-     * @readonly
-     */
-    readonly revocationInfo: RevocationInfos,
-    /**
-     * @summary `extraCerts`.
-     * @public
-     * @readonly
-     */
-    readonly extraCerts?: OPTIONAL<CertBundle>
-  ) {}
+    revocationInfo: RevocationInfos,
+    extraCerts?: OPTIONAL<CertBundle>
+  ) {
+    this.revocationInfo = revocationInfo;
+    this.extraCerts = extraCerts;
+  }
 
   /**
    * @summary Restructures an object into a RevInfoWantBack

@@ -81,161 +81,197 @@ import { SynthesizeMsg, _decode_SynthesizeMsg, _encode_SynthesizeMsg } from "../
  */
 export
 class VoiceUnitServList {
+    /**
+     * @summary `activate`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly activate?: OPTIONAL<Activate>;
+    /**
+     * @summary `clear`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly clear?: OPTIONAL<Clear>;
+    /**
+     * @summary `deactivate`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly deactivate?: OPTIONAL<Deactivate>;
+    /**
+     * @summary `concatenateMsg`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly concatenateMsg?: OPTIONAL<ConcatenateMsg>;
+    /**
+     * @summary `deleteMsg`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly deleteMsg?: OPTIONAL<DeleteMsg>;
+    /**
+     * @summary `queue`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly queue?: OPTIONAL<Queue>;
+    /**
+     * @summary `playMsg`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly playMsg?: OPTIONAL<PlayMsg>;
+    /**
+     * @summary `queryVoiceAttrib`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly queryVoiceAttrib?: OPTIONAL<QueryVoiceAttrib>;
+    /**
+     * @summary `recordMsg`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly recordMsg?: OPTIONAL<RecordMsg>;
+    /**
+     * @summary `reposition`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly reposition?: OPTIONAL<Reposition>;
+    /**
+     * @summary `resume`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly resume?: OPTIONAL<Resume>;
+    /**
+     * @summary `review`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly review?: OPTIONAL<Review>;
+    /**
+     * @summary `start`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly start?: OPTIONAL<Start>;
+    /**
+     * @summary `setVoiceAttrib`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly setVoiceAttrib?: OPTIONAL<SetVoiceAttrib>;
+    /**
+     * @summary `stop`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly stop?: OPTIONAL<Stop>;
+    /**
+     * @summary `suspend`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly suspend?: OPTIONAL<Suspend>;
+    /**
+     * @summary `synthesizeMsg`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly synthesizeMsg?: OPTIONAL<SynthesizeMsg>;
+
     constructor (
-        /**
-         * @summary `activate`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly activate?: OPTIONAL<Activate>,
-        /**
-         * @summary `clear`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly clear?: OPTIONAL<Clear>,
-        /**
-         * @summary `deactivate`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly deactivate?: OPTIONAL<Deactivate>,
-        /**
-         * @summary `concatenateMsg`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly concatenateMsg?: OPTIONAL<ConcatenateMsg>,
-        /**
-         * @summary `deleteMsg`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly deleteMsg?: OPTIONAL<DeleteMsg>,
-        /**
-         * @summary `queue`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly queue?: OPTIONAL<Queue>,
-        /**
-         * @summary `playMsg`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly playMsg?: OPTIONAL<PlayMsg>,
-        /**
-         * @summary `queryVoiceAttrib`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly queryVoiceAttrib?: OPTIONAL<QueryVoiceAttrib>,
-        /**
-         * @summary `recordMsg`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly recordMsg?: OPTIONAL<RecordMsg>,
-        /**
-         * @summary `reposition`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly reposition?: OPTIONAL<Reposition>,
-        /**
-         * @summary `resume`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly resume?: OPTIONAL<Resume>,
-        /**
-         * @summary `review`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly review?: OPTIONAL<Review>,
-        /**
-         * @summary `start`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly start?: OPTIONAL<Start>,
-        /**
-         * @summary `setVoiceAttrib`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly setVoiceAttrib?: OPTIONAL<SetVoiceAttrib>,
-        /**
-         * @summary `stop`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly stop?: OPTIONAL<Stop>,
-        /**
-         * @summary `suspend`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly suspend?: OPTIONAL<Suspend>,
-        /**
-         * @summary `synthesizeMsg`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly synthesizeMsg?: OPTIONAL<SynthesizeMsg>
-    ) {}
+        activate?: OPTIONAL<Activate>,
+        clear?: OPTIONAL<Clear>,
+        deactivate?: OPTIONAL<Deactivate>,
+        concatenateMsg?: OPTIONAL<ConcatenateMsg>,
+        deleteMsg?: OPTIONAL<DeleteMsg>,
+        queue?: OPTIONAL<Queue>,
+        playMsg?: OPTIONAL<PlayMsg>,
+        queryVoiceAttrib?: OPTIONAL<QueryVoiceAttrib>,
+        recordMsg?: OPTIONAL<RecordMsg>,
+        reposition?: OPTIONAL<Reposition>,
+        resume?: OPTIONAL<Resume>,
+        review?: OPTIONAL<Review>,
+        start?: OPTIONAL<Start>,
+        setVoiceAttrib?: OPTIONAL<SetVoiceAttrib>,
+        stop?: OPTIONAL<Stop>,
+        suspend?: OPTIONAL<Suspend>,
+        synthesizeMsg?: OPTIONAL<SynthesizeMsg>
+    ) {
+        this.activate = activate;
+        this.clear = clear;
+        this.deactivate = deactivate;
+        this.concatenateMsg = concatenateMsg;
+        this.deleteMsg = deleteMsg;
+        this.queue = queue;
+        this.playMsg = playMsg;
+        this.queryVoiceAttrib = queryVoiceAttrib;
+        this.recordMsg = recordMsg;
+        this.reposition = reposition;
+        this.resume = resume;
+        this.review = review;
+        this.start = start;
+        this.setVoiceAttrib = setVoiceAttrib;
+        this.stop = stop;
+        this.suspend = suspend;
+        this.synthesizeMsg = synthesizeMsg;
+    }
 
     /**
      * @summary Restructures an object into a VoiceUnitServList

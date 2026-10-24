@@ -46,50 +46,60 @@ import {
  *
  */
 export class DirectoryBindResult {
+    /**
+     * @summary `credentials`.
+     * @description
+     *
+     * Same CHOICE form as supplied in the bind argument.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly credentials?: OPTIONAL<Credentials>;
+    /**
+     * @summary `versions`.
+     * @description
+     *
+     * Which requested version the DSA will actually provide. DEFAULT
+     * `{v1}`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly versions?: OPTIONAL<Versions>;
+    /**
+     * @summary `pwdResponseValue`.
+     * @description
+     *
+     * If `timeLeft` present and ≠ 0, `error` shall be absent. If
+     * `graceRemaining` present, `passwordExpired` may be set. On a
+     * master entry: `timeLeft`=0 or `graceRemaining`=0 with
+     * `passwordExpired` ⇒ only change-password accepted.
+     * `changeAfterReset` ⇒ warning shall not be present; only
+     * change-password accepted.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly pwdResponseValue?: OPTIONAL<PwdResponseValue>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `credentials`.
-         * @description
-         *
-         * Same CHOICE form as supplied in the bind argument.
-         *
-         * @public
-         * @readonly
-         */
-        readonly credentials?: OPTIONAL<Credentials>,
-        /**
-         * @summary `versions`.
-         * @description
-         *
-         * Which requested version the DSA will actually provide. DEFAULT
-         * `{v1}`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly versions?: OPTIONAL<Versions>,
-        /**
-         * @summary `pwdResponseValue`.
-         * @description
-         *
-         * If `timeLeft` present and ≠ 0, `error` shall be absent. If
-         * `graceRemaining` present, `passwordExpired` may be set. On a
-         * master entry: `timeLeft`=0 or `graceRemaining`=0 with
-         * `passwordExpired` ⇒ only change-password accepted.
-         * `changeAfterReset` ⇒ warning shall not be present; only
-         * change-password accepted.
-         *
-         * @public
-         * @readonly
-         */
-        readonly pwdResponseValue?: OPTIONAL<PwdResponseValue>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        credentials?: OPTIONAL<Credentials>,
+        versions?: OPTIONAL<Versions>,
+        pwdResponseValue?: OPTIONAL<PwdResponseValue>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.credentials = credentials;
+        this.versions = versions;
+        this.pwdResponseValue = pwdResponseValue;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a DirectoryBindResult

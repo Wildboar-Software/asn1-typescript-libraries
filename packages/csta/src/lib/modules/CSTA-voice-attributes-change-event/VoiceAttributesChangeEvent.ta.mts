@@ -95,240 +95,288 @@ import { MessageID, _decode_MessageID, _encode_MessageID } from "../CSTA-device-
  */
 export
 class VoiceAttributesChangeEvent {
+    /**
+     * @summary `connection`.
+     * @description
+     *
+     * Connection whose attributes changed (ECMA-269 §26.2.17).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly connection: ConnectionID;
+    /**
+     * @summary `resource`.
+     * @description
+     *
+     * Interactive voice resource. Required when more than one interactive
+     * voice resource exists on the connection.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly resource: OPTIONAL<ResourceID>;
+    /**
+     * @summary `message`.
+     * @description
+     *
+     * Related message (ECMA-269 §26.2.17).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly message: MessageID;
+    /**
+     * @summary `playVolume`.
+     * @description
+     *
+     * New play volume, if changed (ECMA-269 §26.2.17).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly playVolume?: OPTIONAL<Volume>;
+    /**
+     * @summary `recordingGain`.
+     * @description
+     *
+     * New recording gain 0..100, if changed (ECMA-269 §26.2.17).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly recordingGain?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `speed`.
+     * @description
+     *
+     * New speed, if changed (ECMA-269 §26.2.17).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly speed?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `currentPosition`.
+     * @description
+     *
+     * Position, if reported (ECMA-269 §26.2.17).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly currentPosition?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `grammars`.
+     * @description
+     *
+     * New grammars, if changed (ECMA-269 §26.2.17).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly grammars?: OPTIONAL<IA5String>;
+    /**
+     * @summary `language`.
+     * @description
+     *
+     * New language, if changed (ECMA-269 §26.2.17).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly language?: OPTIONAL<IA5String>;
+    /**
+     * @summary `mode`.
+     * @description
+     *
+     * New Listener mode, if changed (ECMA-269 §26.2.17).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mode?: OPTIONAL<VoiceAttributesChangeEvent_mode>;
+    /**
+     * @summary `retainAudio`.
+     * @description
+     *
+     * New retain-audio flag, if changed (ECMA-269 §26.2.17).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly retainAudio?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `silenceTimeout`.
+     * @description
+     *
+     * New silence timeout, if changed (ECMA-269 §26.2.17).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly silenceTimeout?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `maxTimeout`.
+     * @description
+     *
+     * New max timeout, if changed (ECMA-269 §26.2.17).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly maxTimeout?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `babbleTimeout`.
+     * @description
+     *
+     * New babble timeout, if changed (ECMA-269 §26.2.17).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly babbleTimeout?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `endSilence`.
+     * @description
+     *
+     * New end-silence, if changed (ECMA-269 §26.2.17).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly endSilence?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `rejectionThreshold`.
+     * @description
+     *
+     * New rejection threshold, if changed (ECMA-269 §26.2.17).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly rejectionThreshold?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `autoInterruptible`.
+     * @description
+     *
+     * New auto-interruptible flag, if changed (ECMA-269 §26.2.17).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly autoInterruptible?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `innerXML`.
+     * @description
+     *
+     * New SSML, if changed (ECMA-269 §26.2.17).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly innerXML?: OPTIONAL<IA5String>;
+    /**
+     * @summary `interDigitTimeout`.
+     * @description
+     *
+     * New inter-digit timeout, if changed (ECMA-269 §26.2.17).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly interDigitTimeout?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `preflush`.
+     * @description
+     *
+     * New preflush flag, if changed (ECMA-269 §26.2.17).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly preflush?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `cause`.
+     * @description
+     *
+     * Event cause, when the switching function supplies one.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly cause?: OPTIONAL<EventCause>;
+    /**
+     * @summary `servicesPermitted`.
+     * @description
+     *
+     * Services permitted on the connection after this event.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly servicesPermitted?: OPTIONAL<ServicesPermitted>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * CSTACommonArguments carrying the service-table security and
+     * privateData parameters.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `connection`.
-         * @description
-         *
-         * Connection whose attributes changed (ECMA-269 §26.2.17).
-         *
-         * @public
-         * @readonly
-         */
-        readonly connection: ConnectionID,
-        /**
-         * @summary `resource`.
-         * @description
-         *
-         * Interactive voice resource. Required when more than one interactive
-         * voice resource exists on the connection.
-         *
-         * @public
-         * @readonly
-         */
-        readonly resource: OPTIONAL<ResourceID>,
-        /**
-         * @summary `message`.
-         * @description
-         *
-         * Related message (ECMA-269 §26.2.17).
-         *
-         * @public
-         * @readonly
-         */
-        readonly message: MessageID,
-        /**
-         * @summary `playVolume`.
-         * @description
-         *
-         * New play volume, if changed (ECMA-269 §26.2.17).
-         *
-         * @public
-         * @readonly
-         */
-        readonly playVolume?: OPTIONAL<Volume>,
-        /**
-         * @summary `recordingGain`.
-         * @description
-         *
-         * New recording gain 0..100, if changed (ECMA-269 §26.2.17).
-         *
-         * @public
-         * @readonly
-         */
-        readonly recordingGain?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `speed`.
-         * @description
-         *
-         * New speed, if changed (ECMA-269 §26.2.17).
-         *
-         * @public
-         * @readonly
-         */
-        readonly speed?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `currentPosition`.
-         * @description
-         *
-         * Position, if reported (ECMA-269 §26.2.17).
-         *
-         * @public
-         * @readonly
-         */
-        readonly currentPosition?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `grammars`.
-         * @description
-         *
-         * New grammars, if changed (ECMA-269 §26.2.17).
-         *
-         * @public
-         * @readonly
-         */
-        readonly grammars?: OPTIONAL<IA5String>,
-        /**
-         * @summary `language`.
-         * @description
-         *
-         * New language, if changed (ECMA-269 §26.2.17).
-         *
-         * @public
-         * @readonly
-         */
-        readonly language?: OPTIONAL<IA5String>,
-        /**
-         * @summary `mode`.
-         * @description
-         *
-         * New Listener mode, if changed (ECMA-269 §26.2.17).
-         *
-         * @public
-         * @readonly
-         */
-        readonly mode?: OPTIONAL<VoiceAttributesChangeEvent_mode>,
-        /**
-         * @summary `retainAudio`.
-         * @description
-         *
-         * New retain-audio flag, if changed (ECMA-269 §26.2.17).
-         *
-         * @public
-         * @readonly
-         */
-        readonly retainAudio?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `silenceTimeout`.
-         * @description
-         *
-         * New silence timeout, if changed (ECMA-269 §26.2.17).
-         *
-         * @public
-         * @readonly
-         */
-        readonly silenceTimeout?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `maxTimeout`.
-         * @description
-         *
-         * New max timeout, if changed (ECMA-269 §26.2.17).
-         *
-         * @public
-         * @readonly
-         */
-        readonly maxTimeout?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `babbleTimeout`.
-         * @description
-         *
-         * New babble timeout, if changed (ECMA-269 §26.2.17).
-         *
-         * @public
-         * @readonly
-         */
-        readonly babbleTimeout?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `endSilence`.
-         * @description
-         *
-         * New end-silence, if changed (ECMA-269 §26.2.17).
-         *
-         * @public
-         * @readonly
-         */
-        readonly endSilence?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `rejectionThreshold`.
-         * @description
-         *
-         * New rejection threshold, if changed (ECMA-269 §26.2.17).
-         *
-         * @public
-         * @readonly
-         */
-        readonly rejectionThreshold?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `autoInterruptible`.
-         * @description
-         *
-         * New auto-interruptible flag, if changed (ECMA-269 §26.2.17).
-         *
-         * @public
-         * @readonly
-         */
-        readonly autoInterruptible?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `innerXML`.
-         * @description
-         *
-         * New SSML, if changed (ECMA-269 §26.2.17).
-         *
-         * @public
-         * @readonly
-         */
-        readonly innerXML?: OPTIONAL<IA5String>,
-        /**
-         * @summary `interDigitTimeout`.
-         * @description
-         *
-         * New inter-digit timeout, if changed (ECMA-269 §26.2.17).
-         *
-         * @public
-         * @readonly
-         */
-        readonly interDigitTimeout?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `preflush`.
-         * @description
-         *
-         * New preflush flag, if changed (ECMA-269 §26.2.17).
-         *
-         * @public
-         * @readonly
-         */
-        readonly preflush?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `cause`.
-         * @description
-         *
-         * Event cause, when the switching function supplies one.
-         *
-         * @public
-         * @readonly
-         */
-        readonly cause?: OPTIONAL<EventCause>,
-        /**
-         * @summary `servicesPermitted`.
-         * @description
-         *
-         * Services permitted on the connection after this event.
-         *
-         * @public
-         * @readonly
-         */
-        readonly servicesPermitted?: OPTIONAL<ServicesPermitted>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * CSTACommonArguments carrying the service-table security and
-         * privateData parameters.
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        connection: ConnectionID,
+        resource: OPTIONAL<ResourceID>,
+        message: MessageID,
+        playVolume?: OPTIONAL<Volume>,
+        recordingGain?: OPTIONAL<INTEGER>,
+        speed?: OPTIONAL<INTEGER>,
+        currentPosition?: OPTIONAL<INTEGER>,
+        grammars?: OPTIONAL<IA5String>,
+        language?: OPTIONAL<IA5String>,
+        mode?: OPTIONAL<VoiceAttributesChangeEvent_mode>,
+        retainAudio?: OPTIONAL<BOOLEAN>,
+        silenceTimeout?: OPTIONAL<INTEGER>,
+        maxTimeout?: OPTIONAL<INTEGER>,
+        babbleTimeout?: OPTIONAL<INTEGER>,
+        endSilence?: OPTIONAL<INTEGER>,
+        rejectionThreshold?: OPTIONAL<INTEGER>,
+        autoInterruptible?: OPTIONAL<BOOLEAN>,
+        innerXML?: OPTIONAL<IA5String>,
+        interDigitTimeout?: OPTIONAL<INTEGER>,
+        preflush?: OPTIONAL<BOOLEAN>,
+        cause?: OPTIONAL<EventCause>,
+        servicesPermitted?: OPTIONAL<ServicesPermitted>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.connection = connection;
+        this.resource = resource;
+        this.message = message;
+        this.playVolume = playVolume;
+        this.recordingGain = recordingGain;
+        this.speed = speed;
+        this.currentPosition = currentPosition;
+        this.grammars = grammars;
+        this.language = language;
+        this.mode = mode;
+        this.retainAudio = retainAudio;
+        this.silenceTimeout = silenceTimeout;
+        this.maxTimeout = maxTimeout;
+        this.babbleTimeout = babbleTimeout;
+        this.endSilence = endSilence;
+        this.rejectionThreshold = rejectionThreshold;
+        this.autoInterruptible = autoInterruptible;
+        this.innerXML = innerXML;
+        this.interDigitTimeout = interDigitTimeout;
+        this.preflush = preflush;
+        this.cause = cause;
+        this.servicesPermitted = servicesPermitted;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a VoiceAttributesChangeEvent

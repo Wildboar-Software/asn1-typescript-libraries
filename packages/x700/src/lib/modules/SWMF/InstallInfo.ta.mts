@@ -46,28 +46,34 @@ import {
  *
  */
 export class InstallInfo {
+    /**
+     * @summary `targetSoftware`.
+     * @description
+     *
+     * Software units to install (mandatory). ITU-T Rec. X.744
+     * (10/96) §9.5 Table 9.
+     * @public
+     * @readonly
+     */
+    public readonly targetSoftware: DistributedSoftware[];
+    /**
+     * @summary `installInfo`.
+     * @description
+     *
+     * Installation-specific extensions (mandatory in Table 9).
+     * ITU-T Rec. X.744 (10/96) §9.5 Table 9.
+     * @public
+     * @readonly
+     */
+    public readonly installInfo: ManagementExtension[];
+
     constructor(
-        /**
-         * @summary `targetSoftware`.
-         * @description
-         *
-         * Software units to install (mandatory). ITU-T Rec. X.744
-         * (10/96) §9.5 Table 9.
-         * @public
-         * @readonly
-         */
-        readonly targetSoftware: DistributedSoftware[],
-        /**
-         * @summary `installInfo`.
-         * @description
-         *
-         * Installation-specific extensions (mandatory in Table 9).
-         * ITU-T Rec. X.744 (10/96) §9.5 Table 9.
-         * @public
-         * @readonly
-         */
-        readonly installInfo: ManagementExtension[]
-    ) {}
+        targetSoftware: DistributedSoftware[],
+        installInfo: ManagementExtension[]
+    ) {
+        this.targetSoftware = targetSoftware;
+        this.installInfo = installInfo;
+    }
 
     /**
      * @summary Restructures an object into a InstallInfo

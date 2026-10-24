@@ -24,20 +24,26 @@ import * as $ from "@wildboar/asn1/functional";
  *
  */
 export class PBEParameter {
+    /**
+     * @summary `salt`.
+     * @public
+     * @readonly
+     */
+    public readonly salt: OCTET_STRING;
+    /**
+     * @summary `iterationCount`.
+     * @public
+     * @readonly
+     */
+    public readonly iterationCount: INTEGER;
+
     constructor(
-        /**
-         * @summary `salt`.
-         * @public
-         * @readonly
-         */
-        readonly salt: OCTET_STRING,
-        /**
-         * @summary `iterationCount`.
-         * @public
-         * @readonly
-         */
-        readonly iterationCount: INTEGER
-    ) {}
+        salt: OCTET_STRING,
+        iterationCount: INTEGER
+    ) {
+        this.salt = salt;
+        this.iterationCount = iterationCount;
+    }
 
     /**
      * @summary Restructures an object into a PBEParameter

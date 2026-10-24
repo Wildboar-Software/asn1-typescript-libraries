@@ -40,61 +40,73 @@ import { ProgramInvocationState, _decode_ProgramInvocationState, _encode_Program
  */
 export
 class ControlElement_piDefinition {
+    /**
+     * @summary `piName`.
+     * @description
+     *
+     * Program Invocation to define. ISO 9506-1:2003 §13.2.1.4.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly piName: Identifier;
+    /**
+     * @summary `listOfDomains`.
+     * @description
+     *
+     * Domains in `&Domains` of the PI. ISO 9506-1:2003 §13.2.1.4.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly listOfDomains: Identifier[];
+    /**
+     * @summary `reusable`.
+     * @description
+     *
+     * `&reusable` of the PI. Default true. ISO 9506-1:2003 §13.2.1.4.3.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly reusable?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `monitorType`.
+     * @description
+     *
+     * If present, Monitor is true; value is Monitor Type (permanent vs
+     * current) as in CreateProgramInvocation. ISO 9506-1:2003 §13.2.1.4.4.
+     * ISO 9506-2:2003 §13.2.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly monitorType?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `pIState`.
+     * @description
+     *
+     * On load: target PI state (else `idle`). On upload: actual
+     * `&programInvocationState`. ISO 9506-1:2003 §13.2.1.4.5.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly pIState?: OPTIONAL<ProgramInvocationState>;
+
     constructor (
-        /**
-         * @summary `piName`.
-         * @description
-         *
-         * Program Invocation to define. ISO 9506-1:2003 §13.2.1.4.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly piName: Identifier,
-        /**
-         * @summary `listOfDomains`.
-         * @description
-         *
-         * Domains in `&Domains` of the PI. ISO 9506-1:2003 §13.2.1.4.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly listOfDomains: Identifier[],
-        /**
-         * @summary `reusable`.
-         * @description
-         *
-         * `&reusable` of the PI. Default true. ISO 9506-1:2003 §13.2.1.4.3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly reusable?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `monitorType`.
-         * @description
-         *
-         * If present, Monitor is true; value is Monitor Type (permanent vs
-         * current) as in CreateProgramInvocation. ISO 9506-1:2003 §13.2.1.4.4.
-         * ISO 9506-2:2003 §13.2.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly monitorType?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `pIState`.
-         * @description
-         *
-         * On load: target PI state (else `idle`). On upload: actual
-         * `&programInvocationState`. ISO 9506-1:2003 §13.2.1.4.5.
-         *
-         * @public
-         * @readonly
-         */
-        readonly pIState?: OPTIONAL<ProgramInvocationState>
-    ) {}
+        piName: Identifier,
+        listOfDomains: Identifier[],
+        reusable?: OPTIONAL<BOOLEAN>,
+        monitorType?: OPTIONAL<BOOLEAN>,
+        pIState?: OPTIONAL<ProgramInvocationState>
+    ) {
+        this.piName = piName;
+        this.listOfDomains = listOfDomains;
+        this.reusable = reusable;
+        this.monitorType = monitorType;
+        this.pIState = pIState;
+    }
 
     /**
      * @summary Restructures an object into a ControlElement_piDefinition

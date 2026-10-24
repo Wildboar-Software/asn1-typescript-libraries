@@ -38,28 +38,34 @@ import {
  *
  */
 export class SdaList_Item {
+    /**
+     * @summary `securityDomainAuthorityName`.
+     * @description
+     *
+     * Security domain authority that issued or constrains
+     * this capability. X.741 Annex H.4, A.6.
+     * @public
+     * @readonly
+     */
+    public readonly securityDomainAuthorityName: SecurityDomainAuthorityName;
+    /**
+     * @summary `operationType`.
+     * @description
+     *
+     * Operation type allowed under that authority. X.741
+     * Annex H.4, A.6.
+     * @public
+     * @readonly
+     */
+    public readonly operationType: OperationType;
+
     constructor(
-        /**
-         * @summary `securityDomainAuthorityName`.
-         * @description
-         *
-         * Security domain authority that issued or constrains
-         * this capability. X.741 Annex H.4, A.6.
-         * @public
-         * @readonly
-         */
-        readonly securityDomainAuthorityName: SecurityDomainAuthorityName,
-        /**
-         * @summary `operationType`.
-         * @description
-         *
-         * Operation type allowed under that authority. X.741
-         * Annex H.4, A.6.
-         * @public
-         * @readonly
-         */
-        readonly operationType: OperationType
-    ) {}
+        securityDomainAuthorityName: SecurityDomainAuthorityName,
+        operationType: OperationType
+    ) {
+        this.securityDomainAuthorityName = securityDomainAuthorityName;
+        this.operationType = operationType;
+    }
 
     /**
      * @summary Restructures an object into a SdaList_Item

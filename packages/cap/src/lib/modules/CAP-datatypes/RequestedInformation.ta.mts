@@ -22,11 +22,19 @@ import { type RequestedInformationValue, _decode_RequestedInformationValue, _enc
  *
  */
 export class RequestedInformation {
+    public readonly requestedInformationType: RequestedInformationType;
+    public readonly requestedInformationValue: RequestedInformationValue;
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        readonly requestedInformationType: RequestedInformationType,
-        readonly requestedInformationValue: RequestedInformationValue,
-        readonly _unrecognizedExtensionsList: _Element[] = [],
-    ) {}
+        requestedInformationType: RequestedInformationType,
+        requestedInformationValue: RequestedInformationValue,
+        _unrecognizedExtensionsList: _Element[] = [],
+    ) {
+        this.requestedInformationType = requestedInformationType;
+        this.requestedInformationValue = requestedInformationValue;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     public static _from_object (_o: { [_K in keyof (RequestedInformation)]: (RequestedInformation)[_K] }): RequestedInformation {
         return new RequestedInformation(_o.requestedInformationType, _o.requestedInformationValue, _o._unrecognizedExtensionsList);

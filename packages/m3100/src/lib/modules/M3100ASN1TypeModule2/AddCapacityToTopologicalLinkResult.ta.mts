@@ -36,20 +36,26 @@ import {
  *
  */
 export class AddCapacityToTopologicalLinkResult {
+    /**
+     * @summary `resultingCapacity`.
+     * @public
+     * @readonly
+     */
+    public readonly resultingCapacity: Capacity;
+    /**
+     * @summary `resultingLinkConnections`.
+     * @public
+     * @readonly
+     */
+    public readonly resultingLinkConnections: LinkConnectionList;
+
     constructor(
-        /**
-         * @summary `resultingCapacity`.
-         * @public
-         * @readonly
-         */
-        readonly resultingCapacity: Capacity,
-        /**
-         * @summary `resultingLinkConnections`.
-         * @public
-         * @readonly
-         */
-        readonly resultingLinkConnections: LinkConnectionList
-    ) {}
+        resultingCapacity: Capacity,
+        resultingLinkConnections: LinkConnectionList
+    ) {
+        this.resultingCapacity = resultingCapacity;
+        this.resultingLinkConnections = resultingLinkConnections;
+    }
 
     /**
      * @summary Restructures an object into a AddCapacityToTopologicalLinkResult

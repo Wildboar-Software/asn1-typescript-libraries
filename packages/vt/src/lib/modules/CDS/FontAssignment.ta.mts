@@ -42,27 +42,33 @@ import { FontAssignment_value, _decode_FontAssignment_value, _encode_FontAssignm
  */
 export
 class FontAssignment {
+    /**
+     * @summary `type_`.
+     * @description
+     * Font-assignment-type. Modal until the next `type` in the
+     * same list. Absent or `{vt-b-font-adhoc}` selects
+     * PrintableString. ISO/IEC 9040:1997 §18.3; ISO/IEC
+     * 9041-1:1997 §12.3.2.
+     * @public
+     * @readonly
+     */
+    public readonly type_: OPTIONAL<OBJECT_IDENTIFIER>;
+    /**
+     * @summary `value`.
+     * @description
+     * Font-assignment-value. ISO/IEC 9040:1997 §18.3.
+     * @public
+     * @readonly
+     */
+    public readonly value: FontAssignment_value;
+
     constructor (
-        /**
-         * @summary `type_`.
-         * @description
-         * Font-assignment-type. Modal until the next `type` in the
-         * same list. Absent or `{vt-b-font-adhoc}` selects
-         * PrintableString. ISO/IEC 9040:1997 §18.3; ISO/IEC
-         * 9041-1:1997 §12.3.2.
-         * @public
-         * @readonly
-         */
-        readonly type_: OPTIONAL<OBJECT_IDENTIFIER>,
-        /**
-         * @summary `value`.
-         * @description
-         * Font-assignment-value. ISO/IEC 9040:1997 §18.3.
-         * @public
-         * @readonly
-         */
-        readonly value: FontAssignment_value
-    ) {}
+        type_: OPTIONAL<OBJECT_IDENTIFIER>,
+        value: FontAssignment_value
+    ) {
+        this.type_ = type_;
+        this.value = value;
+    }
 
     /**
      * @summary Restructures an object into a FontAssignment

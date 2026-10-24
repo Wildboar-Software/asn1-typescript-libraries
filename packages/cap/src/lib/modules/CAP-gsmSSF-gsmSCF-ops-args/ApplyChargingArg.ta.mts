@@ -43,61 +43,73 @@ import { leg1 } from "../Core-INAP-CS1-DataTypes/leg1.va.mjs";
  */
 export
 class ApplyChargingArg {
+    /**
+     * @summary `aChBillingChargingCharacteristics`.
+     * @description
+     *
+     * Parameters for CSE control of call duration (`timeDurationCharging`):
+     * `maxCallPeriodDuration` (period before an ApplyChargingReport);
+     * `releaseIfdurationExceeded`; `audibleIndicator` (`tone` or
+     * `burstlist` with `warningPeriod`, `burst`, `burstInterval`,
+     * `toneInBurst`, `toneDuration`, `toneInterval`); and
+     * `tariffSwitchInterval` (elapsed-tariff timing starts after successful
+     * execution). (3GPP TS 29.078 V19.0.0 clause 11.2.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly aChBillingChargingCharacteristics: AChBillingChargingCharacteristics;
+    /**
+     * @summary `partyToCharge`.
+     * @description
+     *
+     * Party in the call to which ApplyCharging shall be applied. Default
+     * `sendingSideID:leg1` (calling party; clause 4.1.5). (3GPP TS 29.078
+     * V19.0.0 clauses 4.1.5 and 11.2.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly partyToCharge?: OPTIONAL<SendingSideID>;
+    /**
+     * @summary `extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<Extensions>;
+    /**
+     * @summary `aChChargingAddress`.
+     * @description
+     *
+     * Call party to which CSE control of call duration applies: `legID`
+     * (specified leg) or `srfConnection` (temporary connection or gsmSRF).
+     * Default `legID:sendingSideID:leg1`. (3GPP TS 29.078 V19.0.0 clause
+     * 11.2.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly aChChargingAddress?: OPTIONAL<AChChargingAddress>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `aChBillingChargingCharacteristics`.
-         * @description
-         *
-         * Parameters for CSE control of call duration (`timeDurationCharging`):
-         * `maxCallPeriodDuration` (period before an ApplyChargingReport);
-         * `releaseIfdurationExceeded`; `audibleIndicator` (`tone` or
-         * `burstlist` with `warningPeriod`, `burst`, `burstInterval`,
-         * `toneInBurst`, `toneDuration`, `toneInterval`); and
-         * `tariffSwitchInterval` (elapsed-tariff timing starts after successful
-         * execution). (3GPP TS 29.078 V19.0.0 clause 11.2.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly aChBillingChargingCharacteristics: AChBillingChargingCharacteristics,
-        /**
-         * @summary `partyToCharge`.
-         * @description
-         *
-         * Party in the call to which ApplyCharging shall be applied. Default
-         * `sendingSideID:leg1` (calling party; clause 4.1.5). (3GPP TS 29.078
-         * V19.0.0 clauses 4.1.5 and 11.2.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly partyToCharge?: OPTIONAL<SendingSideID>,
-        /**
-         * @summary `extensions`.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<Extensions>,
-        /**
-         * @summary `aChChargingAddress`.
-         * @description
-         *
-         * Call party to which CSE control of call duration applies: `legID`
-         * (specified leg) or `srfConnection` (temporary connection or gsmSRF).
-         * Default `legID:sendingSideID:leg1`. (3GPP TS 29.078 V19.0.0 clause
-         * 11.2.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly aChChargingAddress?: OPTIONAL<AChChargingAddress>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        aChBillingChargingCharacteristics: AChBillingChargingCharacteristics,
+        partyToCharge?: OPTIONAL<SendingSideID>,
+        extensions?: OPTIONAL<Extensions>,
+        aChChargingAddress?: OPTIONAL<AChChargingAddress>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.aChBillingChargingCharacteristics = aChBillingChargingCharacteristics;
+        this.partyToCharge = partyToCharge;
+        this.extensions = extensions;
+        this.aChChargingAddress = aChChargingAddress;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a ApplyChargingArg

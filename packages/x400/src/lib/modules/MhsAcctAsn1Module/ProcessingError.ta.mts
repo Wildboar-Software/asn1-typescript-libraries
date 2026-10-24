@@ -44,26 +44,34 @@ import {
  *
  */
 export class ProcessingError {
+    /**
+     * @summary `non_delivery_reason`.
+     * @public
+     * @readonly
+     */
+    public readonly non_delivery_reason: OPTIONAL<NonDeliveryReasonCode>;
+    /**
+     * @summary `non_delivery_diagnostics`.
+     * @public
+     * @readonly
+     */
+    public readonly non_delivery_diagnostics: OPTIONAL<NonDeliveryDiagnosticCode>;
+    /**
+     * @summary `supplementary_info`.
+     * @public
+     * @readonly
+     */
+    public readonly supplementary_info: SupplementaryError;
+
     constructor(
-        /**
-         * @summary `non_delivery_reason`.
-         * @public
-         * @readonly
-         */
-        readonly non_delivery_reason: OPTIONAL<NonDeliveryReasonCode>,
-        /**
-         * @summary `non_delivery_diagnostics`.
-         * @public
-         * @readonly
-         */
-        readonly non_delivery_diagnostics: OPTIONAL<NonDeliveryDiagnosticCode>,
-        /**
-         * @summary `supplementary_info`.
-         * @public
-         * @readonly
-         */
-        readonly supplementary_info: SupplementaryError
-    ) {}
+        non_delivery_reason: OPTIONAL<NonDeliveryReasonCode>,
+        non_delivery_diagnostics: OPTIONAL<NonDeliveryDiagnosticCode>,
+        supplementary_info: SupplementaryError
+    ) {
+        this.non_delivery_reason = non_delivery_reason;
+        this.non_delivery_diagnostics = non_delivery_diagnostics;
+        this.supplementary_info = supplementary_info;
+    }
 
     /**
      * @summary Restructures an object into a ProcessingError

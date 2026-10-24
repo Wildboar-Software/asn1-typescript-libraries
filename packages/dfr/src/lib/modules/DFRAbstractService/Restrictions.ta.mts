@@ -38,28 +38,34 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class Restrictions {
+    /**
+     * @summary `allowed_document_types`.
+     * @description
+     *
+     * Document-type OIDs the user will accept. Others cause an error.
+     * ISO/IEC 10166-1:1991 §7.1.1; ISO/IEC 10166-1:1991/Cor.1:1994.
+     * @public
+     * @readonly
+     */
+    public readonly allowed_document_types?: OPTIONAL<OBJECT_IDENTIFIER[]>;
+    /**
+     * @summary `maximum_length`.
+     * @description
+     *
+     * Max argument or result length. Exceeding it is `serviceError`
+     * maximum-length-exceeded.
+     * @public
+     * @readonly
+     */
+    public readonly maximum_length?: OPTIONAL<INTEGER>;
+
     constructor (
-        /**
-         * @summary `allowed_document_types`.
-         * @description
-         *
-         * Document-type OIDs the user will accept. Others cause an error.
-         * ISO/IEC 10166-1:1991 §7.1.1; ISO/IEC 10166-1:1991/Cor.1:1994.
-         * @public
-         * @readonly
-         */
-        readonly allowed_document_types?: OPTIONAL<OBJECT_IDENTIFIER[]>,
-        /**
-         * @summary `maximum_length`.
-         * @description
-         *
-         * Max argument or result length. Exceeding it is `serviceError`
-         * maximum-length-exceeded.
-         * @public
-         * @readonly
-         */
-        readonly maximum_length?: OPTIONAL<INTEGER>
-    ) {}
+        allowed_document_types?: OPTIONAL<OBJECT_IDENTIFIER[]>,
+        maximum_length?: OPTIONAL<INTEGER>
+    ) {
+        this.allowed_document_types = allowed_document_types;
+        this.maximum_length = maximum_length;
+    }
 
     /**
      * @summary Restructures an object into a Restrictions

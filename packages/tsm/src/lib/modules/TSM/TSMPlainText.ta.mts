@@ -47,40 +47,48 @@ import { TSMPlainText_fragment, _decode_TSMPlainText_fragment, _encode_TSMPlainT
  */
 export
 class TSMPlainText {
+    /**
+     * @summary `protocolID`.
+     * @description
+     *
+     * Distinguishes TSM from other record-layer protocols. X.1084 does
+     * not assign a numeric value in Annex A.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly protocolID: ProtocolIdentifier;
+    /**
+     * @summary `version`.
+     * @description
+     *
+     * Same major/minor pair as TLS `ProtocolVersion`. X.1084 §10.3.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly version: ProtocolVersion;
+    /**
+     * @summary `fragment`.
+     * @description
+     *
+     * Payload: CCS, alert, biometric handshake, or application data.
+     * X.1084 §10.3.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly fragment: TSMPlainText_fragment;
+
     constructor (
-        /**
-         * @summary `protocolID`.
-         * @description
-         *
-         * Distinguishes TSM from other record-layer protocols. X.1084 does
-         * not assign a numeric value in Annex A.
-         *
-         * @public
-         * @readonly
-         */
-        readonly protocolID: ProtocolIdentifier,
-        /**
-         * @summary `version`.
-         * @description
-         *
-         * Same major/minor pair as TLS `ProtocolVersion`. X.1084 §10.3.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly version: ProtocolVersion,
-        /**
-         * @summary `fragment`.
-         * @description
-         *
-         * Payload: CCS, alert, biometric handshake, or application data.
-         * X.1084 §10.3.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly fragment: TSMPlainText_fragment
-    ) {}
+        protocolID: ProtocolIdentifier,
+        version: ProtocolVersion,
+        fragment: TSMPlainText_fragment
+    ) {
+        this.protocolID = protocolID;
+        this.version = version;
+        this.fragment = fragment;
+    }
 
     /**
      * @summary Restructures an object into a TSMPlainText

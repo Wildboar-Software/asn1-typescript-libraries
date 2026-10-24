@@ -35,28 +35,34 @@ import { Opaque, _decode_Opaque, _encode_Opaque } from "../TSM/Opaque.ta.mjs";
  */
 export
 class Signature_rsa {
+    /**
+     * @summary `md5_hash`.
+     * @description
+     *
+     * 16-octet MD5 digest in an RSA signature. X.1084 Annex A.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly md5_hash: Opaque;
+    /**
+     * @summary `sha_hash`.
+     * @description
+     *
+     * 20-octet SHA-1 digest. X.1084 Annex A.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sha_hash: Opaque;
+
     constructor (
-        /**
-         * @summary `md5_hash`.
-         * @description
-         *
-         * 16-octet MD5 digest in an RSA signature. X.1084 Annex A.
-         *
-         * @public
-         * @readonly
-         */
-        readonly md5_hash: Opaque,
-        /**
-         * @summary `sha_hash`.
-         * @description
-         *
-         * 20-octet SHA-1 digest. X.1084 Annex A.
-         *
-         * @public
-         * @readonly
-         */
-        readonly sha_hash: Opaque
-    ) {}
+        md5_hash: Opaque,
+        sha_hash: Opaque
+    ) {
+        this.md5_hash = md5_hash;
+        this.sha_hash = sha_hash;
+    }
 
     /**
      * @summary Restructures an object into a Signature_rsa

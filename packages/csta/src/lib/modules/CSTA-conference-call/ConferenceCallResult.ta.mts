@@ -47,65 +47,77 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class ConferenceCallResult {
+    /**
+     * @summary `conferenceCall`.
+     * @description
+     *
+     * Mandatory. New connection of the conferencing device in
+     * the resulting conference call.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly conferenceCall: ConnectionID;
+    /**
+     * @summary `connections`.
+     * @description
+     *
+     * Optional connection list for the resulting call. When
+     * new CallIDs are allocated, entries link old
+     * ConnectionIDs of remaining devices to replacements
+     * (§12.3.9 FR 8, §12.2.9).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly connections?: OPTIONAL<ConnectionList>;
+    /**
+     * @summary `conferenceCallInfo`.
+     * @description
+     *
+     * Optional connection information (channels, flow) for
+     * `conferenceCall` (§12.2.8).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly conferenceCallInfo?: OPTIONAL<ConnectionInformation>;
+    /**
+     * @summary `callLinkageDataList`.
+     * @description
+     *
+     * Optional call-linkage data pairing old and new call
+     * identities (§12.2.5, §12.3.9 FR 8).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly callLinkageDataList?: OPTIONAL<CallLinkageDataList>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional `CSTACommonArguments` carrying the security and
+     * privateData parameters from the ECMA-269 service table.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `conferenceCall`.
-         * @description
-         *
-         * Mandatory. New connection of the conferencing device in
-         * the resulting conference call.
-         *
-         * @public
-         * @readonly
-         */
-        readonly conferenceCall: ConnectionID,
-        /**
-         * @summary `connections`.
-         * @description
-         *
-         * Optional connection list for the resulting call. When
-         * new CallIDs are allocated, entries link old
-         * ConnectionIDs of remaining devices to replacements
-         * (§12.3.9 FR 8, §12.2.9).
-         *
-         * @public
-         * @readonly
-         */
-        readonly connections?: OPTIONAL<ConnectionList>,
-        /**
-         * @summary `conferenceCallInfo`.
-         * @description
-         *
-         * Optional connection information (channels, flow) for
-         * `conferenceCall` (§12.2.8).
-         *
-         * @public
-         * @readonly
-         */
-        readonly conferenceCallInfo?: OPTIONAL<ConnectionInformation>,
-        /**
-         * @summary `callLinkageDataList`.
-         * @description
-         *
-         * Optional call-linkage data pairing old and new call
-         * identities (§12.2.5, §12.3.9 FR 8).
-         *
-         * @public
-         * @readonly
-         */
-        readonly callLinkageDataList?: OPTIONAL<CallLinkageDataList>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional `CSTACommonArguments` carrying the security and
-         * privateData parameters from the ECMA-269 service table.
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        conferenceCall: ConnectionID,
+        connections?: OPTIONAL<ConnectionList>,
+        conferenceCallInfo?: OPTIONAL<ConnectionInformation>,
+        callLinkageDataList?: OPTIONAL<CallLinkageDataList>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.conferenceCall = conferenceCall;
+        this.connections = connections;
+        this.conferenceCallInfo = conferenceCallInfo;
+        this.callLinkageDataList = callLinkageDataList;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a ConferenceCallResult

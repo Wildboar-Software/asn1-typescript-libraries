@@ -39,71 +39,85 @@ import { StreamMode, _decode_StreamMode, _encode_StreamMode, _enum_for_StreamMod
  */
 export
 class IndAudLocalControlDescriptor {
+    /**
+     * @summary `streamMode`.
+     * @description
+     *
+     * Present to return the current StreamMode.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly streamMode?: OPTIONAL<NULL>;
+    /**
+     * @summary `reserveValue`.
+     * @description
+     *
+     * Present to return the current ReserveValue flag.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly reserveValue?: OPTIONAL<NULL>;
+    /**
+     * @summary `reserveGroup`.
+     * @description
+     *
+     * Present to return the current ReserveGroup flag.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly reserveGroup?: OPTIONAL<NULL>;
+    /**
+     * @summary `propertyParms`.
+     * @description
+     *
+     * Packaged LocalControl properties to return. The optional nested
+     * `PropertyParm` selects on the property's value (Annex A).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly propertyParms?: OPTIONAL<IndAudPropertyParm[]>;
+    /**
+     * @summary `streamModeSel`.
+     * @description
+     *
+     * Return LocalControl only for this StreamMode. Mutually exclusive with
+     * `streamMode`; this one wins if both are present (Annex A).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly streamModeSel?: OPTIONAL<StreamMode>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @description
+     *
+     * Extension additions this version does not define. Kept so a later
+     * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `streamMode`.
-         * @description
-         *
-         * Present to return the current StreamMode.
-         *
-         * @public
-         * @readonly
-         */
-        readonly streamMode?: OPTIONAL<NULL>,
-        /**
-         * @summary `reserveValue`.
-         * @description
-         *
-         * Present to return the current ReserveValue flag.
-         *
-         * @public
-         * @readonly
-         */
-        readonly reserveValue?: OPTIONAL<NULL>,
-        /**
-         * @summary `reserveGroup`.
-         * @description
-         *
-         * Present to return the current ReserveGroup flag.
-         *
-         * @public
-         * @readonly
-         */
-        readonly reserveGroup?: OPTIONAL<NULL>,
-        /**
-         * @summary `propertyParms`.
-         * @description
-         *
-         * Packaged LocalControl properties to return. The optional nested
-         * `PropertyParm` selects on the property's value (Annex A).
-         *
-         * @public
-         * @readonly
-         */
-        readonly propertyParms?: OPTIONAL<IndAudPropertyParm[]>,
-        /**
-         * @summary `streamModeSel`.
-         * @description
-         *
-         * Return LocalControl only for this StreamMode. Mutually exclusive with
-         * `streamMode`; this one wins if both are present (Annex A).
-         *
-         * @public
-         * @readonly
-         */
-        readonly streamModeSel?: OPTIONAL<StreamMode>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @description
-         *
-         * Extension additions this version does not define. Kept so a later
-         * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
-         *
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        streamMode?: OPTIONAL<NULL>,
+        reserveValue?: OPTIONAL<NULL>,
+        reserveGroup?: OPTIONAL<NULL>,
+        propertyParms?: OPTIONAL<IndAudPropertyParm[]>,
+        streamModeSel?: OPTIONAL<StreamMode>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.streamMode = streamMode;
+        this.reserveValue = reserveValue;
+        this.reserveGroup = reserveGroup;
+        this.propertyParms = propertyParms;
+        this.streamModeSel = streamModeSel;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a IndAudLocalControlDescriptor

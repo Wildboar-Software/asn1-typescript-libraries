@@ -43,53 +43,63 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class SingleStepConfResult {
+    /**
+     * @summary `conferencedCall`.
+     * @description
+     *
+     * Mandatory. Connection of `deviceToJoin` in the
+     * conferenced call. CallID matches the original call.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly conferencedCall: ConnectionID;
+    /**
+     * @summary `conferencedCallInfo`.
+     * @description
+     *
+     * Optional connection information for the joined
+     * connection (§12.2.8).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly conferencedCallInfo?: OPTIONAL<ConnectionInformation>;
+    /**
+     * @summary `callLinkageDataList`.
+     * @description
+     *
+     * Optional call-linkage identifiers for the resulting
+     * connections (§12.2.5).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly callLinkageDataList?: OPTIONAL<CallLinkageDataList>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional `CSTACommonArguments` carrying the security
+     * and privateData parameters from the ECMA-269 service
+     * table.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `conferencedCall`.
-         * @description
-         *
-         * Mandatory. Connection of `deviceToJoin` in the
-         * conferenced call. CallID matches the original call.
-         *
-         * @public
-         * @readonly
-         */
-        readonly conferencedCall: ConnectionID,
-        /**
-         * @summary `conferencedCallInfo`.
-         * @description
-         *
-         * Optional connection information for the joined
-         * connection (§12.2.8).
-         *
-         * @public
-         * @readonly
-         */
-        readonly conferencedCallInfo?: OPTIONAL<ConnectionInformation>,
-        /**
-         * @summary `callLinkageDataList`.
-         * @description
-         *
-         * Optional call-linkage identifiers for the resulting
-         * connections (§12.2.5).
-         *
-         * @public
-         * @readonly
-         */
-        readonly callLinkageDataList?: OPTIONAL<CallLinkageDataList>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional `CSTACommonArguments` carrying the security
-         * and privateData parameters from the ECMA-269 service
-         * table.
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        conferencedCall: ConnectionID,
+        conferencedCallInfo?: OPTIONAL<ConnectionInformation>,
+        callLinkageDataList?: OPTIONAL<CallLinkageDataList>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.conferencedCall = conferencedCall;
+        this.conferencedCallInfo = conferencedCallInfo;
+        this.callLinkageDataList = callLinkageDataList;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a SingleStepConfResult

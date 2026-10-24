@@ -42,49 +42,57 @@ import { EventTime, _decode_EventTime, _encode_EventTime } from "../MMS-Object-M
  */
 export
 class AcknowledgeEventNotification_Request {
+    /**
+     * @summary `eventEnrollmentName`.
+     * @description
+     *
+     * Must equal the Event Enrollment Name of the
+     * EventNotification being acknowledged.
+     *
+     * [ISO 9506-1:2003 §18.4.1.1.1]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly eventEnrollmentName: ObjectName;
+    /**
+     * @summary `acknowledgedState`.
+     * @description
+     *
+     * Must equal the Current State of the
+     * EventNotification being acknowledged. ACTIVE
+     * updates `&timeActiveAck`; IDLE updates
+     * `&timeIdleAck`.
+     *
+     * [ISO 9506-1:2003 §18.4.1.1.2]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly acknowledgedState: EC_State;
+    /**
+     * @summary `timeOfAcknowledgedTransition`.
+     * @description
+     *
+     * Must equal the Transition Time of the
+     * EventNotification being acknowledged.
+     *
+     * [ISO 9506-1:2003 §18.4.1.1.3]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly timeOfAcknowledgedTransition: EventTime;
+
     constructor (
-        /**
-         * @summary `eventEnrollmentName`.
-         * @description
-         *
-         * Must equal the Event Enrollment Name of the
-         * EventNotification being acknowledged.
-         *
-         * [ISO 9506-1:2003 §18.4.1.1.1]
-         *
-         * @public
-         * @readonly
-         */
-        readonly eventEnrollmentName: ObjectName,
-        /**
-         * @summary `acknowledgedState`.
-         * @description
-         *
-         * Must equal the Current State of the
-         * EventNotification being acknowledged. ACTIVE
-         * updates `&timeActiveAck`; IDLE updates
-         * `&timeIdleAck`.
-         *
-         * [ISO 9506-1:2003 §18.4.1.1.2]
-         *
-         * @public
-         * @readonly
-         */
-        readonly acknowledgedState: EC_State,
-        /**
-         * @summary `timeOfAcknowledgedTransition`.
-         * @description
-         *
-         * Must equal the Transition Time of the
-         * EventNotification being acknowledged.
-         *
-         * [ISO 9506-1:2003 §18.4.1.1.3]
-         *
-         * @public
-         * @readonly
-         */
-        readonly timeOfAcknowledgedTransition: EventTime
-    ) {}
+        eventEnrollmentName: ObjectName,
+        acknowledgedState: EC_State,
+        timeOfAcknowledgedTransition: EventTime
+    ) {
+        this.eventEnrollmentName = eventEnrollmentName;
+        this.acknowledgedState = acknowledgedState;
+        this.timeOfAcknowledgedTransition = timeOfAcknowledgedTransition;
+    }
 
     /**
      * @summary Restructures an object into a AcknowledgeEventNotification_Request

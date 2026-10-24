@@ -36,28 +36,34 @@ import { RegistrationTypeList, _decode_RegistrationTypeList, _encode_Registratio
  */
 export
 class GetRegistrationsArg {
+    /**
+     * @summary `requestedRegTypes`.
+     * @description
+     *
+     * Filter: EscapeRegister, IORegister, RouteRegister,
+     * SysStatRegister. Omitted: all supported types.
+     * @public
+     * @readonly
+     */
+    public readonly requestedRegTypes?: OPTIONAL<RegistrationTypeList>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData. ECMA-269 Table 14-18.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `requestedRegTypes`.
-         * @description
-         *
-         * Filter: EscapeRegister, IORegister, RouteRegister,
-         * SysStatRegister. Omitted: all supported types.
-         * @public
-         * @readonly
-         */
-        readonly requestedRegTypes?: OPTIONAL<RegistrationTypeList>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData. ECMA-269 Table 14-18.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        requestedRegTypes?: OPTIONAL<RegistrationTypeList>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.requestedRegTypes = requestedRegTypes;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a GetRegistrationsArg

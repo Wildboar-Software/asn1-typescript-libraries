@@ -40,46 +40,56 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class SetHookswitchStatusArgument {
+    /**
+     * @summary `device`.
+     * @description
+     *
+     * Physical-element DeviceID; other IDs are rejected (ECMA-269 §21 FR
+     * 1).
+     * @public
+     * @readonly
+     */
+    public readonly device: DeviceID;
+    /**
+     * @summary `hookswitch`.
+     * @description
+     *
+     * Hookswitch whose status is set.
+     * @public
+     * @readonly
+     */
+    public readonly hookswitch: HookswitchID;
+    /**
+     * @summary `hookswitchOnHook`.
+     * @description
+     *
+     * TRUE = on-hook; FALSE = off-hook.
+     * @public
+     * @readonly
+     */
+    public readonly hookswitchOnHook: BOOLEAN;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `device`.
-         * @description
-         *
-         * Physical-element DeviceID; other IDs are rejected (ECMA-269 §21 FR
-         * 1).
-         * @public
-         * @readonly
-         */
-        readonly device: DeviceID,
-        /**
-         * @summary `hookswitch`.
-         * @description
-         *
-         * Hookswitch whose status is set.
-         * @public
-         * @readonly
-         */
-        readonly hookswitch: HookswitchID,
-        /**
-         * @summary `hookswitchOnHook`.
-         * @description
-         *
-         * TRUE = on-hook; FALSE = off-hook.
-         * @public
-         * @readonly
-         */
-        readonly hookswitchOnHook: BOOLEAN,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        device: DeviceID,
+        hookswitch: HookswitchID,
+        hookswitchOnHook: BOOLEAN,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.device = device;
+        this.hookswitch = hookswitch;
+        this.hookswitchOnHook = hookswitchOnHook;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a SetHookswitchStatusArgument

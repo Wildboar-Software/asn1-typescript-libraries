@@ -38,28 +38,34 @@ import {
  *
  */
 export class Attribute {
+  /**
+   * @summary `id`.
+   * @description
+   *
+   * Attribute identifier (`CMIP-ATTRIBUTE.&id`).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly id: AttributeId;
+  /**
+   * @summary `value`.
+   * @description
+   *
+   * Value matching `id` (`CMIP-ATTRIBUTE.&Value`).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly value: _Element;
+
   constructor(
-    /**
-     * @summary `id`.
-     * @description
-     *
-     * Attribute identifier (`CMIP-ATTRIBUTE.&id`).
-     *
-     * @public
-     * @readonly
-     */
-    readonly id: AttributeId,
-    /**
-     * @summary `value`.
-     * @description
-     *
-     * Value matching `id` (`CMIP-ATTRIBUTE.&Value`).
-     *
-     * @public
-     * @readonly
-     */
-    readonly value: _Element
-  ) {}
+    id: AttributeId,
+    value: _Element
+  ) {
+    this.id = id;
+    this.value = value;
+  }
 
   /**
    * @summary Restructures an object into a Attribute

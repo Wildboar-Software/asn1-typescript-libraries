@@ -30,47 +30,56 @@ import * as $ from "@wildboar/asn1/functional";
  *
  */
 export class ForwardServiceInteractionInd {
+    /**
+     * @summary `conferenceTreatmentIndicator`.
+     * @description
+     *
+     * Accept conference request `'xxxx xx01'B`; reject `'xxxx xx10'B`. If
+     * absent from Connect or ContinueWithArgument, CAMEL does not affect
+     * conference treatment. (3GPP TS 29.078 V19.0.0 clause 5.1)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly conferenceTreatmentIndicator?: OPTIONAL<OCTET_STRING>;
+    /**
+     * @summary `callDiversionTreatmentIndicator`.
+     * @description
+     *
+     * Call diversion allowed `'xxxx xx01'B`; not allowed `'xxxx xx10'B`.
+     * If absent from Connect or ContinueWithArgument, CAMEL does not
+     * affect call diversion treatment. (3GPP TS 29.078 V19.0.0 clause
+     * 5.1)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly callDiversionTreatmentIndicator?: OPTIONAL<OCTET_STRING>;
+    /**
+     * @summary `callingPartyRestrictionIndicator`.
+     * @description
+     *
+     * No IN impact `'xxxx xx01'B`; presentation restricted `'xxxx xx10'B`.
+     * If absent from Connect or ContinueWithArgument, CAMEL does not
+     * affect calling-party restriction treatment. (3GPP TS 29.078 V19.0.0
+     * clause 5.1)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly callingPartyRestrictionIndicator?: OPTIONAL<OCTET_STRING>;
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `conferenceTreatmentIndicator`.
-         * @description
-         *
-         * Accept conference request `'xxxx xx01'B`; reject `'xxxx xx10'B`. If
-         * absent from Connect or ContinueWithArgument, CAMEL does not affect
-         * conference treatment. (3GPP TS 29.078 V19.0.0 clause 5.1)
-         *
-         * @public
-         * @readonly
-         */
-        readonly conferenceTreatmentIndicator?: OPTIONAL<OCTET_STRING>,
-        /**
-         * @summary `callDiversionTreatmentIndicator`.
-         * @description
-         *
-         * Call diversion allowed `'xxxx xx01'B`; not allowed `'xxxx xx10'B`.
-         * If absent from Connect or ContinueWithArgument, CAMEL does not
-         * affect call diversion treatment. (3GPP TS 29.078 V19.0.0 clause
-         * 5.1)
-         *
-         * @public
-         * @readonly
-         */
-        readonly callDiversionTreatmentIndicator?: OPTIONAL<OCTET_STRING>,
-        /**
-         * @summary `callingPartyRestrictionIndicator`.
-         * @description
-         *
-         * No IN impact `'xxxx xx01'B`; presentation restricted `'xxxx xx10'B`.
-         * If absent from Connect or ContinueWithArgument, CAMEL does not
-         * affect calling-party restriction treatment. (3GPP TS 29.078 V19.0.0
-         * clause 5.1)
-         *
-         * @public
-         * @readonly
-         */
-        readonly callingPartyRestrictionIndicator?: OPTIONAL<OCTET_STRING>,
-        readonly _unrecognizedExtensionsList: _Element[] = [],
+        conferenceTreatmentIndicator?: OPTIONAL<OCTET_STRING>,
+        callDiversionTreatmentIndicator?: OPTIONAL<OCTET_STRING>,
+        callingPartyRestrictionIndicator?: OPTIONAL<OCTET_STRING>,
+        _unrecognizedExtensionsList: _Element[] = [],
     ) {
+        this.conferenceTreatmentIndicator = conferenceTreatmentIndicator;
+        this.callDiversionTreatmentIndicator = callDiversionTreatmentIndicator;
+        this.callingPartyRestrictionIndicator = callingPartyRestrictionIndicator;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
         if (conferenceTreatmentIndicator !== undefined && conferenceTreatmentIndicator.length !== 1) {
             throw new ASN1SizeError("ForwardServiceInteractionInd.conferenceTreatmentIndicator violates SIZE constraint");
         }

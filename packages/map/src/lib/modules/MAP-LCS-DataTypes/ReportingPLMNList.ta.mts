@@ -29,34 +29,42 @@ import { PLMNList, _decode_PLMNList, _encode_PLMNList } from "../MAP-LCS-DataTyp
  */
 export
 class ReportingPLMNList {
+    /**
+     * @summary `plmn_ListPrioritized`.
+     * @description
+     *
+     * PLMN list is prioritized.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly plmn_ListPrioritized: OPTIONAL<NULL>;
+    /**
+     * @summary `plmn_List`.
+     * @description
+     *
+     * 1..20 reporting PLMNs.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly plmn_List: PLMNList;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `plmn_ListPrioritized`.
-         * @description
-         *
-         * PLMN list is prioritized.
-         *
-         * @public
-         * @readonly
-         */
-        readonly plmn_ListPrioritized: OPTIONAL<NULL>,
-        /**
-         * @summary `plmn_List`.
-         * @description
-         *
-         * 1..20 reporting PLMNs.
-         *
-         * @public
-         * @readonly
-         */
-        readonly plmn_List: PLMNList,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        plmn_ListPrioritized: OPTIONAL<NULL>,
+        plmn_List: PLMNList,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.plmn_ListPrioritized = plmn_ListPrioritized;
+        this.plmn_List = plmn_List;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a ReportingPLMNList

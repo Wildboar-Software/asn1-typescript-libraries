@@ -33,43 +33,53 @@ import { UESBI_Iu, _decode_UESBI_Iu, _encode_UESBI_Iu } from "../MAP-MS-DataType
  */
 export
 class CheckIMEI_Res {
+    /**
+     * @summary `equipmentStatus`.
+     * @description
+     *
+     * Sent by the responder on success if Equipment Status was requested
+     * (3GPP TS 29.002 V19.1.0 clauses 8.7.1.3 and 7.6.3.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly equipmentStatus?: OPTIONAL<EquipmentStatus>;
+    /**
+     * @summary `bmuef`.
+     * @description
+     *
+     * Bit Map of UE Faults (UESBI-Iu as in 3GPP TS 25.413). Sent on success
+     * if BMUEF was requested (3GPP TS 29.002 V19.1.0 clauses 8.7.1.3 and
+     * 7.6.3.2a).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly bmuef?: OPTIONAL<UESBI_Iu>;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `equipmentStatus`.
-         * @description
-         *
-         * Sent by the responder on success if Equipment Status was requested
-         * (3GPP TS 29.002 V19.1.0 clauses 8.7.1.3 and 7.6.3.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly equipmentStatus?: OPTIONAL<EquipmentStatus>,
-        /**
-         * @summary `bmuef`.
-         * @description
-         *
-         * Bit Map of UE Faults (UESBI-Iu as in 3GPP TS 25.413). Sent on success
-         * if BMUEF was requested (3GPP TS 29.002 V19.1.0 clauses 8.7.1.3 and
-         * 7.6.3.2a).
-         *
-         * @public
-         * @readonly
-         */
-        readonly bmuef?: OPTIONAL<UESBI_Iu>,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        equipmentStatus?: OPTIONAL<EquipmentStatus>,
+        bmuef?: OPTIONAL<UESBI_Iu>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.equipmentStatus = equipmentStatus;
+        this.bmuef = bmuef;
+        this.extensionContainer = extensionContainer;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a CheckIMEI_Res

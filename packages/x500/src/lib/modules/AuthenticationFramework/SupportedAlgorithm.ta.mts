@@ -40,32 +40,42 @@ import {
  *
  */
 export class SupportedAlgorithm {
+    /**
+     * @summary `algorithmIdentifier`.
+     * @public
+     * @readonly
+     */
+    public readonly algorithmIdentifier: AlgorithmIdentifier;
+    /**
+     * @summary `intendedUsage`.
+     * @public
+     * @readonly
+     */
+    public readonly intendedUsage?: OPTIONAL<KeyUsage>;
+    /**
+     * @summary `intendedCertificatePolicies`.
+     * @public
+     * @readonly
+     */
+    public readonly intendedCertificatePolicies?: OPTIONAL<CertificatePoliciesSyntax>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `algorithmIdentifier`.
-         * @public
-         * @readonly
-         */
-        readonly algorithmIdentifier: AlgorithmIdentifier,
-        /**
-         * @summary `intendedUsage`.
-         * @public
-         * @readonly
-         */
-        readonly intendedUsage?: OPTIONAL<KeyUsage>,
-        /**
-         * @summary `intendedCertificatePolicies`.
-         * @public
-         * @readonly
-         */
-        readonly intendedCertificatePolicies?: OPTIONAL<CertificatePoliciesSyntax>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        algorithmIdentifier: AlgorithmIdentifier,
+        intendedUsage?: OPTIONAL<KeyUsage>,
+        intendedCertificatePolicies?: OPTIONAL<CertificatePoliciesSyntax>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.algorithmIdentifier = algorithmIdentifier;
+        this.intendedUsage = intendedUsage;
+        this.intendedCertificatePolicies = intendedCertificatePolicies;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a SupportedAlgorithm

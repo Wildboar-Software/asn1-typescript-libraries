@@ -41,29 +41,35 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class GetMonitorResult {
+    /**
+     * @summary `crossRefIDorRegistrationData`.
+     * @description
+     *
+     * `serviceCrossRefID` if Monitor Info will follow; `monitorList`
+     * if inline. Mutually exclusive. (Type name says RegistrationData
+     * but the CHOICE is monitor data.)
+     * @public
+     * @readonly
+     */
+    public readonly crossRefIDorRegistrationData: GetMonitorResult_crossRefIDorRegistrationData;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData. ECMA-269 Table 15-9.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `crossRefIDorRegistrationData`.
-         * @description
-         *
-         * `serviceCrossRefID` if Monitor Info will follow; `monitorList`
-         * if inline. Mutually exclusive. (Type name says RegistrationData
-         * but the CHOICE is monitor data.)
-         * @public
-         * @readonly
-         */
-        readonly crossRefIDorRegistrationData: GetMonitorResult_crossRefIDorRegistrationData,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData. ECMA-269 Table 15-9.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        crossRefIDorRegistrationData: GetMonitorResult_crossRefIDorRegistrationData,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.crossRefIDorRegistrationData = crossRefIDorRegistrationData;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a GetMonitorResult

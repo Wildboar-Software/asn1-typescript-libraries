@@ -35,30 +35,36 @@ import { Modifier, _decode_Modifier, _encode_Modifier } from "../MMS-Object-Modu
  */
 export
 class ModifierStep {
+    /**
+     * @summary `modifierID`.
+     * @description
+     *
+     * Step index; 1 is the first pre-execution modifier. ISO 9506-1:2003
+     * §7.3.1.2, §7.3.3.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly modifierID: INTEGER;
+    /**
+     * @summary `modifier`.
+     * @description
+     *
+     * AttachToEventCondition or AttachToSemaphore. ISO 9506-1:2003
+     * §7.3.1.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly modifier: Modifier;
+
     constructor (
-        /**
-         * @summary `modifierID`.
-         * @description
-         *
-         * Step index; 1 is the first pre-execution modifier. ISO 9506-1:2003
-         * §7.3.1.2, §7.3.3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly modifierID: INTEGER,
-        /**
-         * @summary `modifier`.
-         * @description
-         *
-         * AttachToEventCondition or AttachToSemaphore. ISO 9506-1:2003
-         * §7.3.1.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly modifier: Modifier
-    ) {}
+        modifierID: INTEGER,
+        modifier: Modifier
+    ) {
+        this.modifierID = modifierID;
+        this.modifier = modifier;
+    }
 
     /**
      * @summary Restructures an object into a ModifierStep

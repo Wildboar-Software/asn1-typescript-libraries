@@ -30,20 +30,26 @@ import * as $ from '@wildboar/asn1/functional';
  *
  */
 export class DeliveryQueue {
+    /**
+     * @summary `messages`.
+     * @public
+     * @readonly
+     */
+    public readonly messages: INTEGER;
+    /**
+     * @summary `octets`.
+     * @public
+     * @readonly
+     */
+    public readonly octets?: OPTIONAL<INTEGER>;
+
     constructor(
-        /**
-         * @summary `messages`.
-         * @public
-         * @readonly
-         */
-        readonly messages: INTEGER,
-        /**
-         * @summary `octets`.
-         * @public
-         * @readonly
-         */
-        readonly octets?: OPTIONAL<INTEGER>
-    ) {}
+        messages: INTEGER,
+        octets?: OPTIONAL<INTEGER>
+    ) {
+        this.messages = messages;
+        this.octets = octets;
+    }
 
     /**
      * @summary Restructures an object into a DeliveryQueue

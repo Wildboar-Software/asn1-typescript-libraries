@@ -34,57 +34,69 @@ import { CSG_Id, _decode_CSG_Id, _encode_CSG_Id } from "../MAP-MS-DataTypes/CSG-
  */
 export
 class UserCSGInformation {
+    /**
+     * @summary `csg_Id`.
+     * @description
+     *
+     * Closed Subscriber Group identity.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly csg_Id: CSG_Id;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary `accessMode`.
+     * @description
+     *
+     * CSG access mode. Encoding as in 3GPP TS 29.060.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly accessMode?: OPTIONAL<OCTET_STRING>;
+    /**
+     * @summary `cmi`.
+     * @description
+     *
+     * CSG Membership Indication when access mode is Hybrid. Encoding as in
+     * 3GPP TS 29.060.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly cmi?: OPTIONAL<OCTET_STRING>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `csg_Id`.
-         * @description
-         *
-         * Closed Subscriber Group identity.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly csg_Id: CSG_Id,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary `accessMode`.
-         * @description
-         *
-         * CSG access mode. Encoding as in 3GPP TS 29.060.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly accessMode?: OPTIONAL<OCTET_STRING>,
-        /**
-         * @summary `cmi`.
-         * @description
-         *
-         * CSG Membership Indication when access mode is Hybrid. Encoding as in
-         * 3GPP TS 29.060.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly cmi?: OPTIONAL<OCTET_STRING>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        csg_Id: CSG_Id,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        accessMode?: OPTIONAL<OCTET_STRING>,
+        cmi?: OPTIONAL<OCTET_STRING>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.csg_Id = csg_Id;
+        this.extensionContainer = extensionContainer;
+        this.accessMode = accessMode;
+        this.cmi = cmi;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a UserCSGInformation

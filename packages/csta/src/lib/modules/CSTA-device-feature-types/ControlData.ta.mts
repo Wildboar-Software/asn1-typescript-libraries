@@ -45,22 +45,28 @@ import {
  */
 export
 class ControlData {
+    /**
+     * @summary `gender`.
+     * @description Male or female voice.
+     * @public
+     * @readonly
+     */
+    public readonly gender: ControlData_gender;
+    /**
+     * @summary `language`.
+     * @description Language of the synthesized voice.
+     * @public
+     * @readonly
+     */
+    public readonly language: OCTET_STRING;
+
     constructor (
-        /**
-         * @summary `gender`.
-         * @description Male or female voice.
-         * @public
-         * @readonly
-         */
-        readonly gender: ControlData_gender,
-        /**
-         * @summary `language`.
-         * @description Language of the synthesized voice.
-         * @public
-         * @readonly
-         */
-        readonly language: OCTET_STRING
-    ) {}
+        gender: ControlData_gender,
+        language: OCTET_STRING
+    ) {
+        this.gender = gender;
+        this.language = language;
+    }
 
     /**
      * @summary Restructures an object into a ControlData

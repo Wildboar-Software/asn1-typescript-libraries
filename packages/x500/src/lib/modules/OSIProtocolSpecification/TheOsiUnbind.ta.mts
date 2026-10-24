@@ -23,14 +23,18 @@ import {
  *
  */
 export class TheOsiUnbind {
+    /**
+     * @summary `reason`.
+     * @public
+     * @readonly
+     */
+    public readonly reason?: OPTIONAL<Release_request_reason>;
+
     constructor(
-        /**
-         * @summary `reason`.
-         * @public
-         * @readonly
-         */
-        readonly reason?: OPTIONAL<Release_request_reason>
-    ) {}
+        reason?: OPTIONAL<Release_request_reason>
+    ) {
+        this.reason = reason;
+    }
 
     /**
      * @summary Restructures an object into a TheOsiUnbind

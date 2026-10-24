@@ -44,55 +44,67 @@ import {
  *
  */
 export class EncryptedPduInfo {
+    /**
+     * @summary `pduType`.
+     * @description
+     *
+     * WRAPPED-PDU.&id from `SupportedPduSet`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly pduType: OBJECT_IDENTIFIER;
+    /**
+     * @summary `encryptedKey`.
+     * @description
+     *
+     * OPTIONAL wrapped content-encryption key.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly encryptedKey: OPTIONAL<EncryptedKey>;
+    /**
+     * @summary `pduEncryptionAlgorithm`.
+     * @description
+     *
+     * OPTIONAL. Inner `parameter` is ALGORITHM.&Type
+     * (`SymmetricEncryptionAlgorithms`).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly pduEncryptionAlgorithm: OPTIONAL<EncryptedPduInfo_pduEncryptionAlgorithm>;
+    /**
+     * @summary `encryptedPdu`.
+     * @description
+     *
+     * Required ciphertext [0] EncryptedPdu.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly encryptedPdu: EncryptedPdu;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `pduType`.
-         * @description
-         *
-         * WRAPPED-PDU.&id from `SupportedPduSet`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly pduType: OBJECT_IDENTIFIER,
-        /**
-         * @summary `encryptedKey`.
-         * @description
-         *
-         * OPTIONAL wrapped content-encryption key.
-         *
-         * @public
-         * @readonly
-         */
-        readonly encryptedKey: OPTIONAL<EncryptedKey>,
-        /**
-         * @summary `pduEncryptionAlgorithm`.
-         * @description
-         *
-         * OPTIONAL. Inner `parameter` is ALGORITHM.&Type
-         * (`SymmetricEncryptionAlgorithms`).
-         *
-         * @public
-         * @readonly
-         */
-        readonly pduEncryptionAlgorithm: OPTIONAL<EncryptedPduInfo_pduEncryptionAlgorithm>,
-        /**
-         * @summary `encryptedPdu`.
-         * @description
-         *
-         * Required ciphertext [0] EncryptedPdu.
-         *
-         * @public
-         * @readonly
-         */
-        readonly encryptedPdu: EncryptedPdu,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        pduType: OBJECT_IDENTIFIER,
+        encryptedKey: OPTIONAL<EncryptedKey>,
+        pduEncryptionAlgorithm: OPTIONAL<EncryptedPduInfo_pduEncryptionAlgorithm>,
+        encryptedPdu: EncryptedPdu,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.pduType = pduType;
+        this.encryptedKey = encryptedKey;
+        this.pduEncryptionAlgorithm = pduEncryptionAlgorithm;
+        this.encryptedPdu = encryptedPdu;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a EncryptedPduInfo

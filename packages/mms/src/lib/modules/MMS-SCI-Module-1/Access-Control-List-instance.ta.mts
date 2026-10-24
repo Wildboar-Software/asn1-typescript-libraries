@@ -101,29 +101,35 @@ import { Access_Control_List_instance_definition, _decode_Access_Control_List_in
  */
 export
 class Access_Control_List_instance {
+    /**
+     * @summary `name`.
+     * @description
+     *
+     * Configured object name in the SCI file. ISO 9506-2:2003 Annex B.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly name: Identifier;
+    /**
+     * @summary `definition`.
+     * @description
+     *
+     * Standardized Name OID (`reference`) or inline `details`. ISO
+     * 9506-2:2003 Annex B.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly definition: Access_Control_List_instance_definition;
+
     constructor (
-        /**
-         * @summary `name`.
-         * @description
-         *
-         * Configured object name in the SCI file. ISO 9506-2:2003 Annex B.
-         *
-         * @public
-         * @readonly
-         */
-        readonly name: Identifier,
-        /**
-         * @summary `definition`.
-         * @description
-         *
-         * Standardized Name OID (`reference`) or inline `details`. ISO
-         * 9506-2:2003 Annex B.
-         *
-         * @public
-         * @readonly
-         */
-        readonly definition: Access_Control_List_instance_definition
-    ) {}
+        name: Identifier,
+        definition: Access_Control_List_instance_definition
+    ) {
+        this.name = name;
+        this.definition = definition;
+    }
 
     /**
      * @summary Restructures an object into a Access_Control_List_instance

@@ -42,39 +42,47 @@ import { Scope, _decode_Scope, _encode_Scope } from '@wildboar/cmip';
  *
  */
 export class MITSearch {
+    /**
+     * @summary `base`.
+     * @description
+     *
+     * Base of the managed system's subtree to be discovered.
+     * ITU-T Rec. X.750 (10/96) §8.3.2.1.
+     * @public
+     * @readonly
+     */
+    public readonly base: ObjectInstance;
+    /**
+     * @summary `discoveryScope`.
+     * @description
+     *
+     * Scope of the subtree to discover; same syntax as CMIP
+     * `Scope`. ITU-T Rec. X.750 (10/96) §8.3.2.2.
+     * @public
+     * @readonly
+     */
+    public readonly discoveryScope: Scope;
+    /**
+     * @summary `classRequest`.
+     * @description
+     *
+     * If true, each node in the result shall include managed
+     * object class. Default `FALSE`. ITU-T Rec. X.750 (10/96)
+     * §8.3.2.3.
+     * @public
+     * @readonly
+     */
+    public readonly classRequest?: OPTIONAL<BOOLEAN>;
+
     constructor(
-        /**
-         * @summary `base`.
-         * @description
-         *
-         * Base of the managed system's subtree to be discovered.
-         * ITU-T Rec. X.750 (10/96) §8.3.2.1.
-         * @public
-         * @readonly
-         */
-        readonly base: ObjectInstance,
-        /**
-         * @summary `discoveryScope`.
-         * @description
-         *
-         * Scope of the subtree to discover; same syntax as CMIP
-         * `Scope`. ITU-T Rec. X.750 (10/96) §8.3.2.2.
-         * @public
-         * @readonly
-         */
-        readonly discoveryScope: Scope,
-        /**
-         * @summary `classRequest`.
-         * @description
-         *
-         * If true, each node in the result shall include managed
-         * object class. Default `FALSE`. ITU-T Rec. X.750 (10/96)
-         * §8.3.2.3.
-         * @public
-         * @readonly
-         */
-        readonly classRequest?: OPTIONAL<BOOLEAN>
-    ) {}
+        base: ObjectInstance,
+        discoveryScope: Scope,
+        classRequest?: OPTIONAL<BOOLEAN>
+    ) {
+        this.base = base;
+        this.discoveryScope = discoveryScope;
+        this.classRequest = classRequest;
+    }
 
     /**
      * @summary Restructures an object into a MITSearch

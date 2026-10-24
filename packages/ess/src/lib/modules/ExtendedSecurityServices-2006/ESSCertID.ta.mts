@@ -35,33 +35,39 @@ import {
  *
  */
 export class ESSCertID {
+    /**
+     * @summary `certHash`.
+     * @description
+     *
+     * SHA-1 hash over the entire DER-encoded certificate including the
+     * signature ([RFC 2634 §5.4.1](https://datatracker.ietf.org/doc/html/rfc2634#section-5.4.1); [RFC 5035 §6](https://datatracker.ietf.org/doc/html/rfc5035#section-6)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly certHash: Hash;
+    /**
+     * @summary `issuerSerial`.
+     * @description
+     *
+     * Optional issuer name and serial. Normally present unless inferable
+     * (for example from `SignerInfo.sid`). For non-attribute certificates
+     * the issuer MUST contain only the certificate issuer as
+     * `directoryName`; for attribute certificates, the attribute-certificate
+     * issuer name ([RFC 2634 §5.4.1](https://datatracker.ietf.org/doc/html/rfc2634#section-5.4.1)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly issuerSerial?: OPTIONAL<IssuerSerial>;
+
     constructor(
-        /**
-         * @summary `certHash`.
-         * @description
-         *
-         * SHA-1 hash over the entire DER-encoded certificate including the
-         * signature ([RFC 2634 §5.4.1](https://datatracker.ietf.org/doc/html/rfc2634#section-5.4.1); [RFC 5035 §6](https://datatracker.ietf.org/doc/html/rfc5035#section-6)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly certHash: Hash,
-        /**
-         * @summary `issuerSerial`.
-         * @description
-         *
-         * Optional issuer name and serial. Normally present unless inferable
-         * (for example from `SignerInfo.sid`). For non-attribute certificates
-         * the issuer MUST contain only the certificate issuer as
-         * `directoryName`; for attribute certificates, the attribute-certificate
-         * issuer name ([RFC 2634 §5.4.1](https://datatracker.ietf.org/doc/html/rfc2634#section-5.4.1)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly issuerSerial?: OPTIONAL<IssuerSerial>
-    ) {}
+        certHash: Hash,
+        issuerSerial?: OPTIONAL<IssuerSerial>
+    ) {
+        this.certHash = certHash;
+        this.issuerSerial = issuerSerial;
+    }
 
     /**
      * @summary Restructures an object into a ESSCertID

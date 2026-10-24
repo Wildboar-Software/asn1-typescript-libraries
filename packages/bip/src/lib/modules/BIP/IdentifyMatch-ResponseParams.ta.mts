@@ -36,20 +36,24 @@ import {
  *
  */
 export class IdentifyMatch_ResponseParams {
+  /**
+   * @summary `candidates`.
+   * @description
+   *
+   * Identification candidates, in order. Length is BioAPI
+   * `NumberOfResults`. Empty when none match. X.1083
+   * §16.35.6–16.35.8.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly candidates: BioAPI_CANDIDATE[];
+
   constructor(
-    /**
-     * @summary `candidates`.
-     * @description
-     *
-     * Identification candidates, in order. Length is BioAPI
-     * `NumberOfResults`. Empty when none match. X.1083
-     * §16.35.6–16.35.8.
-     *
-     * @public
-     * @readonly
-     */
-    readonly candidates: BioAPI_CANDIDATE[]
-  ) {}
+    candidates: BioAPI_CANDIDATE[]
+  ) {
+    this.candidates = candidates;
+  }
 
   /**
    * @summary Restructures an object into a IdentifyMatch_ResponseParams

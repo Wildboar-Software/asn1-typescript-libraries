@@ -42,60 +42,72 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class SnapshotDeviceDataArgument {
+    /**
+     * @summary `serviceCrossRefID`.
+     * @description
+     *
+     * Associates this segment with the original request. ECMA-269
+     * segmented-response model.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly serviceCrossRefID: ServiceCrossRefID;
+    /**
+     * @summary `segmentID`.
+     * @description
+     *
+     * Segment number; each successive segment increments by one. ECMA-269.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly segmentID: OPTIONAL<INTEGER>;
+    /**
+     * @summary `lastSegment`.
+     * @description
+     *
+     * TRUE if this is the last segment for the serviceCrossRefID. ECMA-269.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly lastSegment: BOOLEAN;
+    /**
+     * @summary `snapshotData`.
+     * @description
+     *
+     * Per-call snapshot rows (connection, call state, services, media,
+     * optional call linkage). ECMA-269 §16.1.4.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly snapshotData: SnapshotDeviceData;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * CSTA common arguments (security, private data, timestamps). ECMA-269.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `serviceCrossRefID`.
-         * @description
-         *
-         * Associates this segment with the original request. ECMA-269
-         * segmented-response model.
-         *
-         * @public
-         * @readonly
-         */
-        readonly serviceCrossRefID: ServiceCrossRefID,
-        /**
-         * @summary `segmentID`.
-         * @description
-         *
-         * Segment number; each successive segment increments by one. ECMA-269.
-         *
-         * @public
-         * @readonly
-         */
-        readonly segmentID: OPTIONAL<INTEGER>,
-        /**
-         * @summary `lastSegment`.
-         * @description
-         *
-         * TRUE if this is the last segment for the serviceCrossRefID. ECMA-269.
-         *
-         * @public
-         * @readonly
-         */
-        readonly lastSegment: BOOLEAN,
-        /**
-         * @summary `snapshotData`.
-         * @description
-         *
-         * Per-call snapshot rows (connection, call state, services, media,
-         * optional call linkage). ECMA-269 §16.1.4.
-         *
-         * @public
-         * @readonly
-         */
-        readonly snapshotData: SnapshotDeviceData,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * CSTA common arguments (security, private data, timestamps). ECMA-269.
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        serviceCrossRefID: ServiceCrossRefID,
+        segmentID: OPTIONAL<INTEGER>,
+        lastSegment: BOOLEAN,
+        snapshotData: SnapshotDeviceData,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.serviceCrossRefID = serviceCrossRefID;
+        this.segmentID = segmentID;
+        this.lastSegment = lastSegment;
+        this.snapshotData = snapshotData;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a SnapshotDeviceDataArgument

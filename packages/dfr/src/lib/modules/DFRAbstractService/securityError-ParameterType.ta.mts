@@ -31,17 +31,21 @@ import { SecurityProblem, _enum_for_SecurityProblem, _decode_SecurityProblem, _e
  */
 export
 class securityError_ParameterType {
+    /**
+     * @summary `problem`.
+     * @description
+     *
+     * Why security checks failed.
+     * @public
+     * @readonly
+     */
+    public readonly problem: SecurityProblem;
+
     constructor (
-        /**
-         * @summary `problem`.
-         * @description
-         *
-         * Why security checks failed.
-         * @public
-         * @readonly
-         */
-        readonly problem: SecurityProblem
-    ) {}
+        problem: SecurityProblem
+    ) {
+        this.problem = problem;
+    }
 
     /**
      * @summary Restructures an object into a securityError_ParameterType

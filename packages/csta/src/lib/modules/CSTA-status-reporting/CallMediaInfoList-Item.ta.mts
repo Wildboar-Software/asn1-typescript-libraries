@@ -48,60 +48,72 @@ import { ConnectionInformation, _decode_ConnectionInformation, _encode_Connectio
  */
 export
 class CallMediaInfoList_Item {
+    /**
+     * @summary `mediaServiceType`.
+     * @description
+     *
+     * Media service type bound to the connection. ECMA-269 §16.1.3.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mediaServiceType: MediaServiceType;
+    /**
+     * @summary `mediaServiceVersion`.
+     * @description
+     *
+     * Version of the media service. ECMA-269 §16.1.3.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mediaServiceVersion?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `mediaServiceInstance`.
+     * @description
+     *
+     * Media service instance bound to the connection. ECMA-269 §16.1.3.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mediaServiceInstance?: OPTIONAL<MediaServiceInstanceID>;
+    /**
+     * @summary `mediaStreamID`.
+     * @description
+     *
+     * Required if the switch provides mediaStreamID (capability exchange).
+     * ECMA-269 §16.1.3.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mediaStreamID?: OPTIONAL<MediaStreamID>;
+    /**
+     * @summary `connectionInformation`.
+     * @description
+     *
+     * Connection-level flow/channels for this binding. ECMA-269 §16.1.3,
+     * §12.2.8.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly connectionInformation?: OPTIONAL<ConnectionInformation>;
+
     constructor (
-        /**
-         * @summary `mediaServiceType`.
-         * @description
-         *
-         * Media service type bound to the connection. ECMA-269 §16.1.3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly mediaServiceType: MediaServiceType,
-        /**
-         * @summary `mediaServiceVersion`.
-         * @description
-         *
-         * Version of the media service. ECMA-269 §16.1.3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly mediaServiceVersion?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `mediaServiceInstance`.
-         * @description
-         *
-         * Media service instance bound to the connection. ECMA-269 §16.1.3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly mediaServiceInstance?: OPTIONAL<MediaServiceInstanceID>,
-        /**
-         * @summary `mediaStreamID`.
-         * @description
-         *
-         * Required if the switch provides mediaStreamID (capability exchange).
-         * ECMA-269 §16.1.3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly mediaStreamID?: OPTIONAL<MediaStreamID>,
-        /**
-         * @summary `connectionInformation`.
-         * @description
-         *
-         * Connection-level flow/channels for this binding. ECMA-269 §16.1.3,
-         * §12.2.8.
-         *
-         * @public
-         * @readonly
-         */
-        readonly connectionInformation?: OPTIONAL<ConnectionInformation>
-    ) {}
+        mediaServiceType: MediaServiceType,
+        mediaServiceVersion?: OPTIONAL<INTEGER>,
+        mediaServiceInstance?: OPTIONAL<MediaServiceInstanceID>,
+        mediaStreamID?: OPTIONAL<MediaStreamID>,
+        connectionInformation?: OPTIONAL<ConnectionInformation>
+    ) {
+        this.mediaServiceType = mediaServiceType;
+        this.mediaServiceVersion = mediaServiceVersion;
+        this.mediaServiceInstance = mediaServiceInstance;
+        this.mediaStreamID = mediaStreamID;
+        this.connectionInformation = connectionInformation;
+    }
 
     /**
      * @summary Restructures an object into a CallMediaInfoList_Item

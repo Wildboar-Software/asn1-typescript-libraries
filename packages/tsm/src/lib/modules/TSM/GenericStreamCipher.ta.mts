@@ -37,28 +37,34 @@ import { HASH, _get_decoder_for_HASH, _get_encoder_for_HASH } from "../TSM/HASH.
  */
 export
 class GenericStreamCipher {
+    /**
+     * @summary `content`.
+     * @description
+     *
+     * Encrypted record payload, `SIZE(0..65535)`. X.1084 Annex A.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly content: Opaque;
+    /**
+     * @summary `mAC`.
+     * @description
+     *
+     * Record MAC, `HASH{Opaque}`. X.1084 Annex A.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mAC: HASH<Opaque>;
+
     constructor (
-        /**
-         * @summary `content`.
-         * @description
-         *
-         * Encrypted record payload, `SIZE(0..65535)`. X.1084 Annex A.
-         *
-         * @public
-         * @readonly
-         */
-        readonly content: Opaque,
-        /**
-         * @summary `mAC`.
-         * @description
-         *
-         * Record MAC, `HASH{Opaque}`. X.1084 Annex A.
-         *
-         * @public
-         * @readonly
-         */
-        readonly mAC: HASH<Opaque>
-    ) {}
+        content: Opaque,
+        mAC: HASH<Opaque>
+    ) {
+        this.content = content;
+        this.mAC = mAC;
+    }
 
     /**
      * @summary Restructures an object into a GenericStreamCipher

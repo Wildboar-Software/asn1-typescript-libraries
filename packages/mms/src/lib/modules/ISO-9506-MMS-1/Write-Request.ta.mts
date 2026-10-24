@@ -36,31 +36,37 @@ import { Data, _decode_Data, _encode_Data } from "../ISO-9506-MMS-1/Data.ta.mjs"
  */
 export
 class Write_Request {
+    /**
+     * @summary `variableAccessSpecification`.
+     * @description
+     *
+     * Variables to write. ISO 9506-1:2003 §14.7.1.1.1,
+     * §14.5.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly variableAccessSpecification: VariableAccessSpecification;
+    /**
+     * @summary `listOfData`.
+     * @description
+     *
+     * Values in VAS order. Abstract syntax follows each
+     * variable's type and alternate access.
+     * ISO 9506-1:2003 §14.7.1.1.2, §14.4.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly listOfData: Data[];
+
     constructor (
-        /**
-         * @summary `variableAccessSpecification`.
-         * @description
-         *
-         * Variables to write. ISO 9506-1:2003 §14.7.1.1.1,
-         * §14.5.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly variableAccessSpecification: VariableAccessSpecification,
-        /**
-         * @summary `listOfData`.
-         * @description
-         *
-         * Values in VAS order. Abstract syntax follows each
-         * variable's type and alternate access.
-         * ISO 9506-1:2003 §14.7.1.1.2, §14.4.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly listOfData: Data[]
-    ) {}
+        variableAccessSpecification: VariableAccessSpecification,
+        listOfData: Data[]
+    ) {
+        this.variableAccessSpecification = variableAccessSpecification;
+        this.listOfData = listOfData;
+    }
 
     /**
      * @summary Restructures an object into a Write_Request

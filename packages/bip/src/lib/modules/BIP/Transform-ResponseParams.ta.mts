@@ -35,20 +35,24 @@ import {
  *
  */
 export class Transform_ResponseParams {
+  /**
+   * @summary `outputBIRs`.
+   * @description
+   *
+   * Handles of the transformed BIRs on the hosting endpoint,
+   * in order. Length is BioAPI `NumberOfOutputBIRs`. X.1083
+   * §16.41.8–16.41.10.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly outputBIRs: BioAPI_BIR_HANDLE[];
+
   constructor(
-    /**
-     * @summary `outputBIRs`.
-     * @description
-     *
-     * Handles of the transformed BIRs on the hosting endpoint,
-     * in order. Length is BioAPI `NumberOfOutputBIRs`. X.1083
-     * §16.41.8–16.41.10.
-     *
-     * @public
-     * @readonly
-     */
-    readonly outputBIRs: BioAPI_BIR_HANDLE[]
-  ) {}
+    outputBIRs: BioAPI_BIR_HANDLE[]
+  ) {
+    this.outputBIRs = outputBIRs;
+  }
 
   /**
    * @summary Restructures an object into a Transform_ResponseParams

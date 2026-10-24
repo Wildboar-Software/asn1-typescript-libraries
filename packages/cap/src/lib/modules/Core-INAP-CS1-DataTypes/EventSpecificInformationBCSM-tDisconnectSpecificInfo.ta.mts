@@ -31,14 +31,18 @@ import { Cause, _decode_Cause, _encode_Cause } from "../Core-INAP-CS1-DataTypes/
  */
 export
 class EventSpecificInformationBCSM_tDisconnectSpecificInfo {
+    /**
+     * @summary `releaseCause`.
+     * @public
+     * @readonly
+     */
+    public readonly releaseCause?: OPTIONAL<Cause>;
+
     constructor (
-        /**
-         * @summary `releaseCause`.
-         * @public
-         * @readonly
-         */
-        readonly releaseCause?: OPTIONAL<Cause>
-    ) {}
+        releaseCause?: OPTIONAL<Cause>
+    ) {
+        this.releaseCause = releaseCause;
+    }
 
     /**
      * @summary Restructures an object into a EventSpecificInformationBCSM_tDisconnectSpecificInfo

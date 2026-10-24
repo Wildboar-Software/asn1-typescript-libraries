@@ -33,20 +33,26 @@ import { MiscCallInfo_dpAssignment, _enum_for_MiscCallInfo_dpAssignment, _decode
  */
 export
 class MiscCallInfo {
+    /**
+     * @summary `messageType`.
+     * @public
+     * @readonly
+     */
+    public readonly messageType: MiscCallInfo_messageType;
+    /**
+     * @summary `dpAssignment`.
+     * @public
+     * @readonly
+     */
+    public readonly dpAssignment?: OPTIONAL<MiscCallInfo_dpAssignment>;
+
     constructor (
-        /**
-         * @summary `messageType`.
-         * @public
-         * @readonly
-         */
-        readonly messageType: MiscCallInfo_messageType,
-        /**
-         * @summary `dpAssignment`.
-         * @public
-         * @readonly
-         */
-        readonly dpAssignment?: OPTIONAL<MiscCallInfo_dpAssignment>
-    ) {}
+        messageType: MiscCallInfo_messageType,
+        dpAssignment?: OPTIONAL<MiscCallInfo_dpAssignment>
+    ) {
+        this.messageType = messageType;
+        this.dpAssignment = dpAssignment;
+    }
 
     /**
      * @summary Restructures an object into a MiscCallInfo

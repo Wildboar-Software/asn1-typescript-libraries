@@ -25,20 +25,27 @@ import { type ChangeOfPositionControlInfo, _decode_ChangeOfPositionControlInfo, 
  *
  */
 export class DpSpecificCriteriaAlt {
+    public readonly changeOfPositionControlInfo?: OPTIONAL<ChangeOfPositionControlInfo>;
+    /**
+     * @summary `interDigitTimeout`.
+     * @description
+     *
+     * Duration in seconds. (3GPP TS 29.078 V19.0.0 clause 5.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly interDigitTimeout?: OPTIONAL<INTEGER>;
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        readonly changeOfPositionControlInfo?: OPTIONAL<ChangeOfPositionControlInfo>,
-        /**
-         * @summary `interDigitTimeout`.
-         * @description
-         *
-         * Duration in seconds. (3GPP TS 29.078 V19.0.0 clause 5.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly interDigitTimeout?: OPTIONAL<INTEGER>,
-        readonly _unrecognizedExtensionsList: _Element[] = [],
+        changeOfPositionControlInfo?: OPTIONAL<ChangeOfPositionControlInfo>,
+        interDigitTimeout?: OPTIONAL<INTEGER>,
+        _unrecognizedExtensionsList: _Element[] = [],
     ) {
+        this.changeOfPositionControlInfo = changeOfPositionControlInfo;
+        this.interDigitTimeout = interDigitTimeout;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
         if (interDigitTimeout !== undefined && (typeof interDigitTimeout === "bigint" ? (interDigitTimeout < 1n || interDigitTimeout > 127n) : (interDigitTimeout < 1 || interDigitTimeout > 127))) {
             throw new ASN1OverflowError("DpSpecificCriteriaAlt.interDigitTimeout violates INTEGER constraint");
         }

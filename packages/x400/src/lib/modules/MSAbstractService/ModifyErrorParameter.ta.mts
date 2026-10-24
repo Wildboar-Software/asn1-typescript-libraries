@@ -42,32 +42,42 @@ import {
  *
  */
 export class ModifyErrorParameter {
+    /**
+     * @summary `entries_modified`.
+     * @public
+     * @readonly
+     */
+    public readonly entries_modified: OPTIONAL<SequenceNumber[]>;
+    /**
+     * @summary `failing_entry`.
+     * @public
+     * @readonly
+     */
+    public readonly failing_entry: SequenceNumber;
+    /**
+     * @summary `modification_number`.
+     * @public
+     * @readonly
+     */
+    public readonly modification_number: INTEGER;
+    /**
+     * @summary `problem`.
+     * @public
+     * @readonly
+     */
+    public readonly problem: ModifyProblem;
+
     constructor(
-        /**
-         * @summary `entries_modified`.
-         * @public
-         * @readonly
-         */
-        readonly entries_modified: OPTIONAL<SequenceNumber[]>,
-        /**
-         * @summary `failing_entry`.
-         * @public
-         * @readonly
-         */
-        readonly failing_entry: SequenceNumber,
-        /**
-         * @summary `modification_number`.
-         * @public
-         * @readonly
-         */
-        readonly modification_number: INTEGER,
-        /**
-         * @summary `problem`.
-         * @public
-         * @readonly
-         */
-        readonly problem: ModifyProblem
-    ) {}
+        entries_modified: OPTIONAL<SequenceNumber[]>,
+        failing_entry: SequenceNumber,
+        modification_number: INTEGER,
+        problem: ModifyProblem
+    ) {
+        this.entries_modified = entries_modified;
+        this.failing_entry = failing_entry;
+        this.modification_number = modification_number;
+        this.problem = problem;
+    }
 
     /**
      * @summary Restructures an object into a ModifyErrorParameter

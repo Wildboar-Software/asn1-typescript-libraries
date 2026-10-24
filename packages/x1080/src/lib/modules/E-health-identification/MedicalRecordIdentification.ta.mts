@@ -44,63 +44,75 @@ import {
  *
  */
 export class MedicalRecordIdentification {
+    /**
+     * @summary `scheme`.
+     * @description
+     *
+     * `MEDICAL-RECORD-SCHEME.&id` of the identification scheme.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly scheme: OBJECT_IDENTIFIER;
+    /**
+     * @summary `schemeName`.
+     * @description
+     *
+     * Optional `MEDICAL-RECORD-SCHEME.&name`. ISO646String is not
+     * necessarily unique.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly schemeName: OPTIONAL<SchemeName>;
+    /**
+     * @summary `definingOrg`.
+     * @description
+     *
+     * `MEDICAL-RECORD-SCHEME.&Organisation` that defined the
+     * format. Typically a government department or SDO.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly definingOrg: _Element;
+    /**
+     * @summary `recordType`.
+     * @description
+     *
+     * `MEDICAL-RECORD-SCHEME.&RecordType` relative to that
+     * organization.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly recordType: _Element;
+    /**
+     * @summary `record`.
+     * @description
+     *
+     * `MEDICAL-RECORD-SCHEME.&Record`: an instance of that type.
+     * Typically extra encryption/integrity inside the record,
+     * beyond ITUEHP CMS.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly record: _Element;
+
     constructor(
-        /**
-         * @summary `scheme`.
-         * @description
-         *
-         * `MEDICAL-RECORD-SCHEME.&id` of the identification scheme.
-         *
-         * @public
-         * @readonly
-         */
-        readonly scheme: OBJECT_IDENTIFIER,
-        /**
-         * @summary `schemeName`.
-         * @description
-         *
-         * Optional `MEDICAL-RECORD-SCHEME.&name`. ISO646String is not
-         * necessarily unique.
-         *
-         * @public
-         * @readonly
-         */
-        readonly schemeName: OPTIONAL<SchemeName>,
-        /**
-         * @summary `definingOrg`.
-         * @description
-         *
-         * `MEDICAL-RECORD-SCHEME.&Organisation` that defined the
-         * format. Typically a government department or SDO.
-         *
-         * @public
-         * @readonly
-         */
-        readonly definingOrg: _Element,
-        /**
-         * @summary `recordType`.
-         * @description
-         *
-         * `MEDICAL-RECORD-SCHEME.&RecordType` relative to that
-         * organization.
-         *
-         * @public
-         * @readonly
-         */
-        readonly recordType: _Element,
-        /**
-         * @summary `record`.
-         * @description
-         *
-         * `MEDICAL-RECORD-SCHEME.&Record`: an instance of that type.
-         * Typically extra encryption/integrity inside the record,
-         * beyond ITUEHP CMS.
-         *
-         * @public
-         * @readonly
-         */
-        readonly record: _Element
-    ) {}
+        scheme: OBJECT_IDENTIFIER,
+        schemeName: OPTIONAL<SchemeName>,
+        definingOrg: _Element,
+        recordType: _Element,
+        record: _Element
+    ) {
+        this.scheme = scheme;
+        this.schemeName = schemeName;
+        this.definingOrg = definingOrg;
+        this.recordType = recordType;
+        this.record = record;
+    }
 
     /**
      * @summary Restructures an object into a MedicalRecordIdentification

@@ -39,57 +39,69 @@ import { NotificationToMSUser, _decode_NotificationToMSUser, _encode_Notificatio
  */
 export
 class ServiceType {
+    /**
+     * @summary `serviceTypeIdentity`.
+     * @description
+     *
+     * LCS Service Type of the positioning request (3GPP TS 22.071).
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.11.15).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly serviceTypeIdentity: LCSServiceTypeID;
+    /**
+     * @summary `gmlc_Restriction`.
+     * @description
+     *
+     * GMLC restriction for this service type.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly gmlc_Restriction?: OPTIONAL<GMLC_Restriction>;
+    /**
+     * @summary `notificationToMSUser`.
+     * @description
+     *
+     * Privacy notification to the MS user. If omitted, the default in 3GPP
+     * TS 23.271 shall be assumed.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly notificationToMSUser?: OPTIONAL<NotificationToMSUser>;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `serviceTypeIdentity`.
-         * @description
-         *
-         * LCS Service Type of the positioning request (3GPP TS 22.071).
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.11.15).
-         *
-         * @public
-         * @readonly
-         */
-        readonly serviceTypeIdentity: LCSServiceTypeID,
-        /**
-         * @summary `gmlc_Restriction`.
-         * @description
-         *
-         * GMLC restriction for this service type.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly gmlc_Restriction?: OPTIONAL<GMLC_Restriction>,
-        /**
-         * @summary `notificationToMSUser`.
-         * @description
-         *
-         * Privacy notification to the MS user. If omitted, the default in 3GPP
-         * TS 23.271 shall be assumed.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly notificationToMSUser?: OPTIONAL<NotificationToMSUser>,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        serviceTypeIdentity: LCSServiceTypeID,
+        gmlc_Restriction?: OPTIONAL<GMLC_Restriction>,
+        notificationToMSUser?: OPTIONAL<NotificationToMSUser>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.serviceTypeIdentity = serviceTypeIdentity;
+        this.gmlc_Restriction = gmlc_Restriction;
+        this.notificationToMSUser = notificationToMSUser;
+        this.extensionContainer = extensionContainer;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a ServiceType

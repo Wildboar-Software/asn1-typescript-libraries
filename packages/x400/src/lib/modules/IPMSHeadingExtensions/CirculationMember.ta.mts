@@ -46,20 +46,26 @@ import {
  *
  */
 export class CirculationMember {
+    /**
+     * @summary `circulation_recipient`.
+     * @public
+     * @readonly
+     */
+    public readonly circulation_recipient: RecipientSpecifier;
+    /**
+     * @summary `checked`.
+     * @public
+     * @readonly
+     */
+    public readonly checked?: OPTIONAL<Checkmark>;
+
     constructor(
-        /**
-         * @summary `circulation_recipient`.
-         * @public
-         * @readonly
-         */
-        readonly circulation_recipient: RecipientSpecifier,
-        /**
-         * @summary `checked`.
-         * @public
-         * @readonly
-         */
-        readonly checked?: OPTIONAL<Checkmark>
-    ) {}
+        circulation_recipient: RecipientSpecifier,
+        checked?: OPTIONAL<Checkmark>
+    ) {
+        this.circulation_recipient = circulation_recipient;
+        this.checked = checked;
+    }
 
     /**
      * @summary Restructures an object into a CirculationMember

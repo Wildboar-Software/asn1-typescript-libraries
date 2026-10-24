@@ -32,44 +32,54 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
  */
 export
 class RoutingInfoForLCS_Arg {
+    /**
+     * @summary `mlcNumber`.
+     * @description
+     *
+     * GMLC number.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mlcNumber: ISDN_AddressString;
+    /**
+     * @summary `targetMS`.
+     * @description
+     *
+     * Target subscriber identity.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly targetMS: SubscriberIdentity;
+    /**
+     * @summary `extensionContainer`.
+     * @description
+     *
+     * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `mlcNumber`.
-         * @description
-         *
-         * GMLC number.
-         *
-         * @public
-         * @readonly
-         */
-        readonly mlcNumber: ISDN_AddressString,
-        /**
-         * @summary `targetMS`.
-         * @description
-         *
-         * Target subscriber identity.
-         *
-         * @public
-         * @readonly
-         */
-        readonly targetMS: SubscriberIdentity,
-        /**
-         * @summary `extensionContainer`.
-         * @description
-         *
-         * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        mlcNumber: ISDN_AddressString,
+        targetMS: SubscriberIdentity,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.mlcNumber = mlcNumber;
+        this.targetMS = targetMS;
+        this.extensionContainer = extensionContainer;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a RoutingInfoForLCS_Arg

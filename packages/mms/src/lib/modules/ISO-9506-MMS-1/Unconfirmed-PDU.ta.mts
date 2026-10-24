@@ -40,34 +40,42 @@ import { Unconfirmed_Detail, _decode_Unconfirmed_Detail, _encode_Unconfirmed_Det
  */
 export
 class Unconfirmed_PDU {
+    /**
+     * @summary `service`.
+     * @description
+     *
+     * Selects the unconfirmed service and its argument (ISO 9506-2:2003
+     * §7.2.1).
+     * @public
+     * @readonly
+     */
+    public readonly service: UnconfirmedService;
+    /**
+     * @summary `service_ext`.
+     * @description
+     *
+     * Companion-standard Unconfirmed-Detail (`cspi`). Do not transmit if
+     * the value is a tagged NULL (ISO 9506-2:2003 §7.2).
+     * @public
+     * @readonly
+     */
+    public readonly service_ext?: OPTIONAL<Unconfirmed_Detail>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `service`.
-         * @description
-         *
-         * Selects the unconfirmed service and its argument (ISO 9506-2:2003
-         * §7.2.1).
-         * @public
-         * @readonly
-         */
-        readonly service: UnconfirmedService,
-        /**
-         * @summary `service_ext`.
-         * @description
-         *
-         * Companion-standard Unconfirmed-Detail (`cspi`). Do not transmit if
-         * the value is a tagged NULL (ISO 9506-2:2003 §7.2).
-         * @public
-         * @readonly
-         */
-        readonly service_ext?: OPTIONAL<Unconfirmed_Detail>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        service: UnconfirmedService,
+        service_ext?: OPTIONAL<Unconfirmed_Detail>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.service = service;
+        this.service_ext = service_ext;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a Unconfirmed_PDU

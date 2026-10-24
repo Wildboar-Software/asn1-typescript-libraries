@@ -79,152 +79,186 @@ import { LocationServicesServList, _decode_LocationServicesServList, _encode_Loc
  */
 export
 class GetCSTAFeatureResult_supportedServices {
+    /**
+     * @summary `capExchangeServList`.
+     * @description
+     *
+     * Capability-exchange services.
+     * @public
+     * @readonly
+     */
+    public readonly capExchangeServList?: OPTIONAL<CapExchangeServList>;
+    /**
+     * @summary `systemStatServList`.
+     * @description
+     *
+     * System status services.
+     * @public
+     * @readonly
+     */
+    public readonly systemStatServList?: OPTIONAL<SystemStatusServList>;
+    /**
+     * @summary `monitoringServList`.
+     * @description
+     *
+     * Monitoring services.
+     * @public
+     * @readonly
+     */
+    public readonly monitoringServList?: OPTIONAL<MonitoringServList>;
+    /**
+     * @summary `snapshotServList`.
+     * @description
+     *
+     * Snapshot services.
+     * @public
+     * @readonly
+     */
+    public readonly snapshotServList?: OPTIONAL<SnapshotServList>;
+    /**
+     * @summary `callControlServList`.
+     * @description
+     *
+     * Call-control services.
+     * @public
+     * @readonly
+     */
+    public readonly callControlServList?: OPTIONAL<CallControlServList>;
+    /**
+     * @summary `callAssociatedServList`.
+     * @description
+     *
+     * Call-associated services.
+     * @public
+     * @readonly
+     */
+    public readonly callAssociatedServList?: OPTIONAL<CallAssociatedServList>;
+    /**
+     * @summary `mediaServList`.
+     * @description
+     *
+     * Media-attachment services.
+     * @public
+     * @readonly
+     */
+    public readonly mediaServList?: OPTIONAL<MediaServList>;
+    /**
+     * @summary `routeingServList`.
+     * @description
+     *
+     * Routeing services.
+     * @public
+     * @readonly
+     */
+    public readonly routeingServList?: OPTIONAL<RouteingServList>;
+    /**
+     * @summary `physDevServList`.
+     * @description
+     *
+     * Physical-device feature services.
+     * @public
+     * @readonly
+     */
+    public readonly physDevServList?: OPTIONAL<PhysDevServList>;
+    /**
+     * @summary `logicalServList`.
+     * @description
+     *
+     * Logical-device feature services.
+     * @public
+     * @readonly
+     */
+    public readonly logicalServList?: OPTIONAL<LogicalServList>;
+    /**
+     * @summary `iOServicesServList`.
+     * @description
+     *
+     * I/O services.
+     * @public
+     * @readonly
+     */
+    public readonly iOServicesServList?: OPTIONAL<IOServicesServList>;
+    /**
+     * @summary `dataCollectionServList`.
+     * @description
+     *
+     * Data-collection services.
+     * @public
+     * @readonly
+     */
+    public readonly dataCollectionServList?: OPTIONAL<DataCollectionServList>;
+    /**
+     * @summary `voiceServList`.
+     * @description
+     *
+     * Voice-unit services.
+     * @public
+     * @readonly
+     */
+    public readonly voiceServList?: OPTIONAL<VoiceUnitServList>;
+    /**
+     * @summary `cDRServList`.
+     * @description
+     *
+     * Call-detail-record services.
+     * @public
+     * @readonly
+     */
+    public readonly cDRServList?: OPTIONAL<CDRServList>;
+    /**
+     * @summary `vendorSpecificServList`.
+     * @description
+     *
+     * Vendor-specific services.
+     * @public
+     * @readonly
+     */
+    public readonly vendorSpecificServList?: OPTIONAL<VendorSpecificServList>;
+    /**
+     * @summary `locationServicesServList`.
+     * @description
+     *
+     * Location services.
+     * @public
+     * @readonly
+     */
+    public readonly locationServicesServList?: OPTIONAL<LocationServicesServList>;
+
     constructor (
-        /**
-         * @summary `capExchangeServList`.
-         * @description
-         *
-         * Capability-exchange services.
-         * @public
-         * @readonly
-         */
-        readonly capExchangeServList?: OPTIONAL<CapExchangeServList>,
-        /**
-         * @summary `systemStatServList`.
-         * @description
-         *
-         * System status services.
-         * @public
-         * @readonly
-         */
-        readonly systemStatServList?: OPTIONAL<SystemStatusServList>,
-        /**
-         * @summary `monitoringServList`.
-         * @description
-         *
-         * Monitoring services.
-         * @public
-         * @readonly
-         */
-        readonly monitoringServList?: OPTIONAL<MonitoringServList>,
-        /**
-         * @summary `snapshotServList`.
-         * @description
-         *
-         * Snapshot services.
-         * @public
-         * @readonly
-         */
-        readonly snapshotServList?: OPTIONAL<SnapshotServList>,
-        /**
-         * @summary `callControlServList`.
-         * @description
-         *
-         * Call-control services.
-         * @public
-         * @readonly
-         */
-        readonly callControlServList?: OPTIONAL<CallControlServList>,
-        /**
-         * @summary `callAssociatedServList`.
-         * @description
-         *
-         * Call-associated services.
-         * @public
-         * @readonly
-         */
-        readonly callAssociatedServList?: OPTIONAL<CallAssociatedServList>,
-        /**
-         * @summary `mediaServList`.
-         * @description
-         *
-         * Media-attachment services.
-         * @public
-         * @readonly
-         */
-        readonly mediaServList?: OPTIONAL<MediaServList>,
-        /**
-         * @summary `routeingServList`.
-         * @description
-         *
-         * Routeing services.
-         * @public
-         * @readonly
-         */
-        readonly routeingServList?: OPTIONAL<RouteingServList>,
-        /**
-         * @summary `physDevServList`.
-         * @description
-         *
-         * Physical-device feature services.
-         * @public
-         * @readonly
-         */
-        readonly physDevServList?: OPTIONAL<PhysDevServList>,
-        /**
-         * @summary `logicalServList`.
-         * @description
-         *
-         * Logical-device feature services.
-         * @public
-         * @readonly
-         */
-        readonly logicalServList?: OPTIONAL<LogicalServList>,
-        /**
-         * @summary `iOServicesServList`.
-         * @description
-         *
-         * I/O services.
-         * @public
-         * @readonly
-         */
-        readonly iOServicesServList?: OPTIONAL<IOServicesServList>,
-        /**
-         * @summary `dataCollectionServList`.
-         * @description
-         *
-         * Data-collection services.
-         * @public
-         * @readonly
-         */
-        readonly dataCollectionServList?: OPTIONAL<DataCollectionServList>,
-        /**
-         * @summary `voiceServList`.
-         * @description
-         *
-         * Voice-unit services.
-         * @public
-         * @readonly
-         */
-        readonly voiceServList?: OPTIONAL<VoiceUnitServList>,
-        /**
-         * @summary `cDRServList`.
-         * @description
-         *
-         * Call-detail-record services.
-         * @public
-         * @readonly
-         */
-        readonly cDRServList?: OPTIONAL<CDRServList>,
-        /**
-         * @summary `vendorSpecificServList`.
-         * @description
-         *
-         * Vendor-specific services.
-         * @public
-         * @readonly
-         */
-        readonly vendorSpecificServList?: OPTIONAL<VendorSpecificServList>,
-        /**
-         * @summary `locationServicesServList`.
-         * @description
-         *
-         * Location services.
-         * @public
-         * @readonly
-         */
-        readonly locationServicesServList?: OPTIONAL<LocationServicesServList>
-    ) {}
+        capExchangeServList?: OPTIONAL<CapExchangeServList>,
+        systemStatServList?: OPTIONAL<SystemStatusServList>,
+        monitoringServList?: OPTIONAL<MonitoringServList>,
+        snapshotServList?: OPTIONAL<SnapshotServList>,
+        callControlServList?: OPTIONAL<CallControlServList>,
+        callAssociatedServList?: OPTIONAL<CallAssociatedServList>,
+        mediaServList?: OPTIONAL<MediaServList>,
+        routeingServList?: OPTIONAL<RouteingServList>,
+        physDevServList?: OPTIONAL<PhysDevServList>,
+        logicalServList?: OPTIONAL<LogicalServList>,
+        iOServicesServList?: OPTIONAL<IOServicesServList>,
+        dataCollectionServList?: OPTIONAL<DataCollectionServList>,
+        voiceServList?: OPTIONAL<VoiceUnitServList>,
+        cDRServList?: OPTIONAL<CDRServList>,
+        vendorSpecificServList?: OPTIONAL<VendorSpecificServList>,
+        locationServicesServList?: OPTIONAL<LocationServicesServList>
+    ) {
+        this.capExchangeServList = capExchangeServList;
+        this.systemStatServList = systemStatServList;
+        this.monitoringServList = monitoringServList;
+        this.snapshotServList = snapshotServList;
+        this.callControlServList = callControlServList;
+        this.callAssociatedServList = callAssociatedServList;
+        this.mediaServList = mediaServList;
+        this.routeingServList = routeingServList;
+        this.physDevServList = physDevServList;
+        this.logicalServList = logicalServList;
+        this.iOServicesServList = iOServicesServList;
+        this.dataCollectionServList = dataCollectionServList;
+        this.voiceServList = voiceServList;
+        this.cDRServList = cDRServList;
+        this.vendorSpecificServList = vendorSpecificServList;
+        this.locationServicesServList = locationServicesServList;
+    }
 
     /**
      * @summary Restructures an object into a GetCSTAFeatureResult_supportedServices

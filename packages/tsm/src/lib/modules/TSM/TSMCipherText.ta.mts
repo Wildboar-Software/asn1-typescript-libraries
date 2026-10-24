@@ -46,50 +46,60 @@ import { TSMCipherText_fragment, _decode_TSMCipherText_fragment, _encode_TSMCiph
  */
 export
 class TSMCipherText {
+    /**
+     * @summary `protocolID`.
+     * @description
+     *
+     * Same role as `TSMPlainText.protocolID`. X.1084 §10.3.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly protocolID: ProtocolIdentifier;
+    /**
+     * @summary `type_`.
+     * @description
+     *
+     * TLS content type of the encrypted fragment (CCS 20, alert 21,
+     * handshake 22, application-data 23). X.1084 §10.3.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly type_: ContentType;
+    /**
+     * @summary `version`.
+     * @description
+     *
+     * Same major/minor pair as TLS `ProtocolVersion`. X.1084 §10.3.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly version: ProtocolVersion;
+    /**
+     * @summary `fragment`.
+     * @description
+     *
+     * `GenericStreamCipher` or `GenericBlockCipher` per the negotiated
+     * cipher suite. X.1084 Annex A.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly fragment: TSMCipherText_fragment;
+
     constructor (
-        /**
-         * @summary `protocolID`.
-         * @description
-         *
-         * Same role as `TSMPlainText.protocolID`. X.1084 §10.3.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly protocolID: ProtocolIdentifier,
-        /**
-         * @summary `type_`.
-         * @description
-         *
-         * TLS content type of the encrypted fragment (CCS 20, alert 21,
-         * handshake 22, application-data 23). X.1084 §10.3.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly type_: ContentType,
-        /**
-         * @summary `version`.
-         * @description
-         *
-         * Same major/minor pair as TLS `ProtocolVersion`. X.1084 §10.3.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly version: ProtocolVersion,
-        /**
-         * @summary `fragment`.
-         * @description
-         *
-         * `GenericStreamCipher` or `GenericBlockCipher` per the negotiated
-         * cipher suite. X.1084 Annex A.
-         *
-         * @public
-         * @readonly
-         */
-        readonly fragment: TSMCipherText_fragment
-    ) {}
+        protocolID: ProtocolIdentifier,
+        type_: ContentType,
+        version: ProtocolVersion,
+        fragment: TSMCipherText_fragment
+    ) {
+        this.protocolID = protocolID;
+        this.type_ = type_;
+        this.version = version;
+        this.fragment = fragment;
+    }
 
     /**
      * @summary Restructures an object into a TSMCipherText

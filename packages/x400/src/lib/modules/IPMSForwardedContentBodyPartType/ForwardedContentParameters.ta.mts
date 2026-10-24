@@ -50,32 +50,42 @@ import {
  *
  */
 export class ForwardedContentParameters {
+    /**
+     * @summary `delivery_time`.
+     * @public
+     * @readonly
+     */
+    public readonly delivery_time?: OPTIONAL<MessageDeliveryTime>;
+    /**
+     * @summary `delivery_envelope`.
+     * @public
+     * @readonly
+     */
+    public readonly delivery_envelope?: OPTIONAL<OtherMessageDeliveryFields>;
+    /**
+     * @summary `mts_identifier`.
+     * @public
+     * @readonly
+     */
+    public readonly mts_identifier?: OPTIONAL<MessageDeliveryIdentifier>;
+    /**
+     * @summary `submission_proof`.
+     * @public
+     * @readonly
+     */
+    public readonly submission_proof?: OPTIONAL<SubmissionProof>;
+
     constructor(
-        /**
-         * @summary `delivery_time`.
-         * @public
-         * @readonly
-         */
-        readonly delivery_time?: OPTIONAL<MessageDeliveryTime>,
-        /**
-         * @summary `delivery_envelope`.
-         * @public
-         * @readonly
-         */
-        readonly delivery_envelope?: OPTIONAL<OtherMessageDeliveryFields>,
-        /**
-         * @summary `mts_identifier`.
-         * @public
-         * @readonly
-         */
-        readonly mts_identifier?: OPTIONAL<MessageDeliveryIdentifier>,
-        /**
-         * @summary `submission_proof`.
-         * @public
-         * @readonly
-         */
-        readonly submission_proof?: OPTIONAL<SubmissionProof>
-    ) {}
+        delivery_time?: OPTIONAL<MessageDeliveryTime>,
+        delivery_envelope?: OPTIONAL<OtherMessageDeliveryFields>,
+        mts_identifier?: OPTIONAL<MessageDeliveryIdentifier>,
+        submission_proof?: OPTIONAL<SubmissionProof>
+    ) {
+        this.delivery_time = delivery_time;
+        this.delivery_envelope = delivery_envelope;
+        this.mts_identifier = mts_identifier;
+        this.submission_proof = submission_proof;
+    }
 
     /**
      * @summary Restructures an object into a ForwardedContentParameters

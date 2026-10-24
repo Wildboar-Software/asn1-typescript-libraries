@@ -123,309 +123,369 @@ import { DeviceID, _decode_DeviceID, _encode_DeviceID } from "../CSTA-device-ide
  */
 export
 class CDRInformationItem {
+    /**
+     * @summary `recordNumber`.
+     * @description
+     *
+     * Record number when more than one record is sent (1..128). ECMA-269
+     * §27.1.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly recordNumber: OPTIONAL<INTEGER>;
+    /**
+     * @summary `recordCreationTime`.
+     * @description
+     *
+     * Time the CDR was created. ECMA-269 §27.1.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly recordCreationTime: TimeInfo;
+    /**
+     * @summary `callingDevice`.
+     * @description
+     *
+     * Calling device. ECMA-269 §27.1.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly callingDevice?: OPTIONAL<CallingDeviceID>;
+    /**
+     * @summary `calledDevice`.
+     * @description
+     *
+     * Called device. ECMA-269 §27.1.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly calledDevice?: OPTIONAL<CalledDeviceID>;
+    /**
+     * @summary `associatedCallingDevice`.
+     * @description
+     *
+     * Network Interface Device associated with the calling device. ECMA-269
+     * §27.1.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly associatedCallingDevice?: OPTIONAL<AssociatedCallingDeviceID>;
+    /**
+     * @summary `associatedCalledDevice`.
+     * @description
+     *
+     * Network Interface Device associated with the called device. ECMA-269
+     * §27.1.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly associatedCalledDevice?: OPTIONAL<AssociatedCalledDeviceID>;
+    /**
+     * @summary `networkCallingDevice`.
+     * @description
+     *
+     * Calling device as provided by the network. ECMA-269 §27.1.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly networkCallingDevice?: OPTIONAL<NetworkCallingDeviceID>;
+    /**
+     * @summary `networkCalledDevice`.
+     * @description
+     *
+     * Called device as provided by the network. ECMA-269 §27.1.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly networkCalledDevice?: OPTIONAL<NetworkCalledDeviceID>;
+    /**
+     * @summary `callCharacteristics`.
+     * @description
+     *
+     * High-level call characteristics (e.g. ACD). ECMA-269 §27.1.2,
+     * §12.2.4.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly callCharacteristics?: OPTIONAL<CallCharacteristics>;
+    /**
+     * @summary `mediaCallCharacteristics`.
+     * @description
+     *
+     * Media class of the call. ECMA-269 §27.1.2, §12.2.20.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mediaCallCharacteristics?: OPTIONAL<MediaCallCharacteristics>;
+    /**
+     * @summary `chargedDevice`.
+     * @description
+     *
+     * Attendant or non-attendant charged device. ECMA-269 §27.1.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly chargedDevice?: OPTIONAL<ChargedDevice>;
+    /**
+     * @summary `recordedCall`.
+     * @description
+     *
+     * Call for which details are recorded. ECMA-269 §27.1.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly recordedCall?: OPTIONAL<ConnectionID>;
+    /**
+     * @summary `nodeNumber`.
+     * @description
+     *
+     * Originating node in a switching network (area0–2). ECMA-269 §27.1.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly nodeNumber?: OPTIONAL<NodeNumber>;
+    /**
+     * @summary `tariffTable`.
+     * @description
+     *
+     * Tariff table for the network type (PSTN, ISDN, etc.). ECMA-269
+     * §27.1.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly tariffTable?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `connectionStart`.
+     * @description
+     *
+     * Date and time the connection was created. ECMA-269 §27.1.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly connectionStart?: OPTIONAL<TimeInfo>;
+    /**
+     * @summary `connectionEnd`.
+     * @description
+     *
+     * Date and time the connection ended. ECMA-269 §27.1.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly connectionEnd?: OPTIONAL<TimeInfo>;
+    /**
+     * @summary `connectionDuration`.
+     * @description
+     *
+     * Connection duration in tenths of a second. ECMA-269 §27.1.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly connectionDuration?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `accessCode`.
+     * @description
+     *
+     * Dialled access number (e.g. business vs private external). ECMA-269
+     * §27.1.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly accessCode?: OPTIONAL<OCTET_STRING>;
+    /**
+     * @summary `carrier`.
+     * @description
+     *
+     * Network that was used. ECMA-269 §27.1.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly carrier?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `selectedRoute`.
+     * @description
+     *
+     * Route that was used. ECMA-269 §27.1.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly selectedRoute?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `billingID`.
+     * @description
+     *
+     * Type of charging (normal, reverse, credit card, etc.). ECMA-269
+     * §27.1.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly billingID?: OPTIONAL<BillingID>;
+    /**
+     * @summary `chargingInfo`.
+     * @description
+     *
+     * Charging or currency units charged to a device. ECMA-269 §27.1.2,
+     * §12.2.7.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly chargingInfo?: OPTIONAL<ChargingInfo>;
+    /**
+     * @summary `supplServiceInfo`.
+     * @description
+     *
+     * Supplementary services used; multiple bits may be set. ECMA-269
+     * §27.1.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly supplServiceInfo?: OPTIONAL<SupplServiceInfo>;
+    /**
+     * @summary `reasonForTerm`.
+     * @description
+     *
+     * Why the connection terminated. ECMA-269 §27.1.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly reasonForTerm?: OPTIONAL<ReasonForTerm>;
+    /**
+     * @summary `authCode`.
+     * @description
+     *
+     * Authorization code used to authorize the call. ECMA-269 §27.1.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly authCode?: OPTIONAL<AuthCode>;
+    /**
+     * @summary `accountInfo`.
+     * @description
+     *
+     * Account code used for the call. ECMA-269 §27.1.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly accountInfo?: OPTIONAL<AccountInfo>;
+    /**
+     * @summary `deviceCategory`.
+     * @description
+     *
+     * Category of the charged device (station, ACD, etc.). ECMA-269
+     * §27.1.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly deviceCategory?: OPTIONAL<DeviceCategory>;
+    /**
+     * @summary `namedDeviceTypes`.
+     * @description
+     *
+     * Named device type of the charged device. ECMA-269 §27.1.2; ECMA-285
+     * §9.11.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly namedDeviceTypes?: OPTIONAL<NamedDeviceTypes>;
+    /**
+     * @summary `operatorDevice`.
+     * @description
+     *
+     * Operator/attendant device. ECMA-285 §9.11.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly operatorDevice?: OPTIONAL<DeviceID>;
+
     constructor (
-        /**
-         * @summary `recordNumber`.
-         * @description
-         *
-         * Record number when more than one record is sent (1..128). ECMA-269
-         * §27.1.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly recordNumber: OPTIONAL<INTEGER>,
-        /**
-         * @summary `recordCreationTime`.
-         * @description
-         *
-         * Time the CDR was created. ECMA-269 §27.1.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly recordCreationTime: TimeInfo,
-        /**
-         * @summary `callingDevice`.
-         * @description
-         *
-         * Calling device. ECMA-269 §27.1.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly callingDevice?: OPTIONAL<CallingDeviceID>,
-        /**
-         * @summary `calledDevice`.
-         * @description
-         *
-         * Called device. ECMA-269 §27.1.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly calledDevice?: OPTIONAL<CalledDeviceID>,
-        /**
-         * @summary `associatedCallingDevice`.
-         * @description
-         *
-         * Network Interface Device associated with the calling device. ECMA-269
-         * §27.1.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly associatedCallingDevice?: OPTIONAL<AssociatedCallingDeviceID>,
-        /**
-         * @summary `associatedCalledDevice`.
-         * @description
-         *
-         * Network Interface Device associated with the called device. ECMA-269
-         * §27.1.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly associatedCalledDevice?: OPTIONAL<AssociatedCalledDeviceID>,
-        /**
-         * @summary `networkCallingDevice`.
-         * @description
-         *
-         * Calling device as provided by the network. ECMA-269 §27.1.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly networkCallingDevice?: OPTIONAL<NetworkCallingDeviceID>,
-        /**
-         * @summary `networkCalledDevice`.
-         * @description
-         *
-         * Called device as provided by the network. ECMA-269 §27.1.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly networkCalledDevice?: OPTIONAL<NetworkCalledDeviceID>,
-        /**
-         * @summary `callCharacteristics`.
-         * @description
-         *
-         * High-level call characteristics (e.g. ACD). ECMA-269 §27.1.2,
-         * §12.2.4.
-         *
-         * @public
-         * @readonly
-         */
-        readonly callCharacteristics?: OPTIONAL<CallCharacteristics>,
-        /**
-         * @summary `mediaCallCharacteristics`.
-         * @description
-         *
-         * Media class of the call. ECMA-269 §27.1.2, §12.2.20.
-         *
-         * @public
-         * @readonly
-         */
-        readonly mediaCallCharacteristics?: OPTIONAL<MediaCallCharacteristics>,
-        /**
-         * @summary `chargedDevice`.
-         * @description
-         *
-         * Attendant or non-attendant charged device. ECMA-269 §27.1.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly chargedDevice?: OPTIONAL<ChargedDevice>,
-        /**
-         * @summary `recordedCall`.
-         * @description
-         *
-         * Call for which details are recorded. ECMA-269 §27.1.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly recordedCall?: OPTIONAL<ConnectionID>,
-        /**
-         * @summary `nodeNumber`.
-         * @description
-         *
-         * Originating node in a switching network (area0–2). ECMA-269 §27.1.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly nodeNumber?: OPTIONAL<NodeNumber>,
-        /**
-         * @summary `tariffTable`.
-         * @description
-         *
-         * Tariff table for the network type (PSTN, ISDN, etc.). ECMA-269
-         * §27.1.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly tariffTable?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `connectionStart`.
-         * @description
-         *
-         * Date and time the connection was created. ECMA-269 §27.1.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly connectionStart?: OPTIONAL<TimeInfo>,
-        /**
-         * @summary `connectionEnd`.
-         * @description
-         *
-         * Date and time the connection ended. ECMA-269 §27.1.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly connectionEnd?: OPTIONAL<TimeInfo>,
-        /**
-         * @summary `connectionDuration`.
-         * @description
-         *
-         * Connection duration in tenths of a second. ECMA-269 §27.1.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly connectionDuration?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `accessCode`.
-         * @description
-         *
-         * Dialled access number (e.g. business vs private external). ECMA-269
-         * §27.1.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly accessCode?: OPTIONAL<OCTET_STRING>,
-        /**
-         * @summary `carrier`.
-         * @description
-         *
-         * Network that was used. ECMA-269 §27.1.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly carrier?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `selectedRoute`.
-         * @description
-         *
-         * Route that was used. ECMA-269 §27.1.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly selectedRoute?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `billingID`.
-         * @description
-         *
-         * Type of charging (normal, reverse, credit card, etc.). ECMA-269
-         * §27.1.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly billingID?: OPTIONAL<BillingID>,
-        /**
-         * @summary `chargingInfo`.
-         * @description
-         *
-         * Charging or currency units charged to a device. ECMA-269 §27.1.2,
-         * §12.2.7.
-         *
-         * @public
-         * @readonly
-         */
-        readonly chargingInfo?: OPTIONAL<ChargingInfo>,
-        /**
-         * @summary `supplServiceInfo`.
-         * @description
-         *
-         * Supplementary services used; multiple bits may be set. ECMA-269
-         * §27.1.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly supplServiceInfo?: OPTIONAL<SupplServiceInfo>,
-        /**
-         * @summary `reasonForTerm`.
-         * @description
-         *
-         * Why the connection terminated. ECMA-269 §27.1.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly reasonForTerm?: OPTIONAL<ReasonForTerm>,
-        /**
-         * @summary `authCode`.
-         * @description
-         *
-         * Authorization code used to authorize the call. ECMA-269 §27.1.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly authCode?: OPTIONAL<AuthCode>,
-        /**
-         * @summary `accountInfo`.
-         * @description
-         *
-         * Account code used for the call. ECMA-269 §27.1.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly accountInfo?: OPTIONAL<AccountInfo>,
-        /**
-         * @summary `deviceCategory`.
-         * @description
-         *
-         * Category of the charged device (station, ACD, etc.). ECMA-269
-         * §27.1.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly deviceCategory?: OPTIONAL<DeviceCategory>,
-        /**
-         * @summary `namedDeviceTypes`.
-         * @description
-         *
-         * Named device type of the charged device. ECMA-269 §27.1.2; ECMA-285
-         * §9.11.
-         *
-         * @public
-         * @readonly
-         */
-        readonly namedDeviceTypes?: OPTIONAL<NamedDeviceTypes>,
-        /**
-         * @summary `operatorDevice`.
-         * @description
-         *
-         * Operator/attendant device. ECMA-285 §9.11.
-         *
-         * @public
-         * @readonly
-         */
-        readonly operatorDevice?: OPTIONAL<DeviceID>
-    ) {}
+        recordNumber: OPTIONAL<INTEGER>,
+        recordCreationTime: TimeInfo,
+        callingDevice?: OPTIONAL<CallingDeviceID>,
+        calledDevice?: OPTIONAL<CalledDeviceID>,
+        associatedCallingDevice?: OPTIONAL<AssociatedCallingDeviceID>,
+        associatedCalledDevice?: OPTIONAL<AssociatedCalledDeviceID>,
+        networkCallingDevice?: OPTIONAL<NetworkCallingDeviceID>,
+        networkCalledDevice?: OPTIONAL<NetworkCalledDeviceID>,
+        callCharacteristics?: OPTIONAL<CallCharacteristics>,
+        mediaCallCharacteristics?: OPTIONAL<MediaCallCharacteristics>,
+        chargedDevice?: OPTIONAL<ChargedDevice>,
+        recordedCall?: OPTIONAL<ConnectionID>,
+        nodeNumber?: OPTIONAL<NodeNumber>,
+        tariffTable?: OPTIONAL<INTEGER>,
+        connectionStart?: OPTIONAL<TimeInfo>,
+        connectionEnd?: OPTIONAL<TimeInfo>,
+        connectionDuration?: OPTIONAL<INTEGER>,
+        accessCode?: OPTIONAL<OCTET_STRING>,
+        carrier?: OPTIONAL<INTEGER>,
+        selectedRoute?: OPTIONAL<INTEGER>,
+        billingID?: OPTIONAL<BillingID>,
+        chargingInfo?: OPTIONAL<ChargingInfo>,
+        supplServiceInfo?: OPTIONAL<SupplServiceInfo>,
+        reasonForTerm?: OPTIONAL<ReasonForTerm>,
+        authCode?: OPTIONAL<AuthCode>,
+        accountInfo?: OPTIONAL<AccountInfo>,
+        deviceCategory?: OPTIONAL<DeviceCategory>,
+        namedDeviceTypes?: OPTIONAL<NamedDeviceTypes>,
+        operatorDevice?: OPTIONAL<DeviceID>
+    ) {
+        this.recordNumber = recordNumber;
+        this.recordCreationTime = recordCreationTime;
+        this.callingDevice = callingDevice;
+        this.calledDevice = calledDevice;
+        this.associatedCallingDevice = associatedCallingDevice;
+        this.associatedCalledDevice = associatedCalledDevice;
+        this.networkCallingDevice = networkCallingDevice;
+        this.networkCalledDevice = networkCalledDevice;
+        this.callCharacteristics = callCharacteristics;
+        this.mediaCallCharacteristics = mediaCallCharacteristics;
+        this.chargedDevice = chargedDevice;
+        this.recordedCall = recordedCall;
+        this.nodeNumber = nodeNumber;
+        this.tariffTable = tariffTable;
+        this.connectionStart = connectionStart;
+        this.connectionEnd = connectionEnd;
+        this.connectionDuration = connectionDuration;
+        this.accessCode = accessCode;
+        this.carrier = carrier;
+        this.selectedRoute = selectedRoute;
+        this.billingID = billingID;
+        this.chargingInfo = chargingInfo;
+        this.supplServiceInfo = supplServiceInfo;
+        this.reasonForTerm = reasonForTerm;
+        this.authCode = authCode;
+        this.accountInfo = accountInfo;
+        this.deviceCategory = deviceCategory;
+        this.namedDeviceTypes = namedDeviceTypes;
+        this.operatorDevice = operatorDevice;
+    }
 
     /**
      * @summary Restructures an object into a CDRInformationItem

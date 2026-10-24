@@ -40,44 +40,54 @@ import { leg2 } from "../Core-INAP-CS1-DataTypes/leg2.va.mjs";
  */
 export
 class CallInformationReportArg {
+    /**
+     * @summary `requestedInformationList`.
+     * @description
+     *
+     * Types and values gsmSSF sends, matching the previously requested
+     * information. (3GPP TS 29.078 V19.0.0 clause 11.6.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly requestedInformationList: RequestedInformationList;
+    /**
+     * @summary `extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<Extensions>;
+    /**
+     * @summary `legID`.
+     * @description
+     *
+     * Party for which the information was collected. Receiving Side LegID
+     * (gsmSSF → gsmSCF). Default `receivingSideID:leg2` (called party from
+     * InitialDP + Connect/Continue/ContinueWithArgument). (3GPP TS 29.078
+     * V19.0.0 clauses 4.1.5 and 11.6.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly legID?: OPTIONAL<ReceivingSideID>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `requestedInformationList`.
-         * @description
-         *
-         * Types and values gsmSSF sends, matching the previously requested
-         * information. (3GPP TS 29.078 V19.0.0 clause 11.6.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly requestedInformationList: RequestedInformationList,
-        /**
-         * @summary `extensions`.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<Extensions>,
-        /**
-         * @summary `legID`.
-         * @description
-         *
-         * Party for which the information was collected. Receiving Side LegID
-         * (gsmSSF → gsmSCF). Default `receivingSideID:leg2` (called party from
-         * InitialDP + Connect/Continue/ContinueWithArgument). (3GPP TS 29.078
-         * V19.0.0 clauses 4.1.5 and 11.6.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly legID?: OPTIONAL<ReceivingSideID>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        requestedInformationList: RequestedInformationList,
+        extensions?: OPTIONAL<Extensions>,
+        legID?: OPTIONAL<ReceivingSideID>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.requestedInformationList = requestedInformationList;
+        this.extensions = extensions;
+        this.legID = legID;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a CallInformationReportArg

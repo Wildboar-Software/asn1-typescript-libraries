@@ -52,32 +52,42 @@ import {
  *
  */
 export class ListArgument {
+    /**
+     * @summary `entry_class`.
+     * @public
+     * @readonly
+     */
+    public readonly entry_class: OPTIONAL<EntryClass>;
+    /**
+     * @summary `selector`.
+     * @public
+     * @readonly
+     */
+    public readonly selector: Selector;
+    /**
+     * @summary `requested_attributes`.
+     * @public
+     * @readonly
+     */
+    public readonly requested_attributes?: OPTIONAL<EntryInformationSelection>;
+    /**
+     * @summary `list_extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly list_extensions?: OPTIONAL<MSExtensions>;
+
     constructor(
-        /**
-         * @summary `entry_class`.
-         * @public
-         * @readonly
-         */
-        readonly entry_class: OPTIONAL<EntryClass>,
-        /**
-         * @summary `selector`.
-         * @public
-         * @readonly
-         */
-        readonly selector: Selector,
-        /**
-         * @summary `requested_attributes`.
-         * @public
-         * @readonly
-         */
-        readonly requested_attributes?: OPTIONAL<EntryInformationSelection>,
-        /**
-         * @summary `list_extensions`.
-         * @public
-         * @readonly
-         */
-        readonly list_extensions?: OPTIONAL<MSExtensions>
-    ) {}
+        entry_class: OPTIONAL<EntryClass>,
+        selector: Selector,
+        requested_attributes?: OPTIONAL<EntryInformationSelection>,
+        list_extensions?: OPTIONAL<MSExtensions>
+    ) {
+        this.entry_class = entry_class;
+        this.selector = selector;
+        this.requested_attributes = requested_attributes;
+        this.list_extensions = list_extensions;
+    }
 
     /**
      * @summary Restructures an object into a ListArgument

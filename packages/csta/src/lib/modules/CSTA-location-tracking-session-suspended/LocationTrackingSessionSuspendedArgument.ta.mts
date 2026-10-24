@@ -48,51 +48,61 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class LocationTrackingSessionSuspendedArgument {
+    /**
+     * @summary `locCrossRefID`.
+     * @description
+     *
+     * Identifies the location tracking session (ECMA-269 §6.8.4).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly locCrossRefID: LocCrossRefID;
+    /**
+     * @summary `locReason`.
+     * @description
+     *
+     * connection to device/network interrupted, or performance condition
+     * (ECMA-269 §28.1.4.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly locReason?: OPTIONAL<LocReason>;
+    /**
+     * @summary `locationInfoList`.
+     * @description
+     *
+     * Collected location not yet reported when the session was suspended
+     * (ECMA-269 §28.1.4.1 / FR 2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly locationInfoList?: OPTIONAL<LocationInfoList>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * CSTACommonArguments carrying the service-table security and
+     * privateData parameters.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `locCrossRefID`.
-         * @description
-         *
-         * Identifies the location tracking session (ECMA-269 §6.8.4).
-         *
-         * @public
-         * @readonly
-         */
-        readonly locCrossRefID: LocCrossRefID,
-        /**
-         * @summary `locReason`.
-         * @description
-         *
-         * connection to device/network interrupted, or performance condition
-         * (ECMA-269 §28.1.4.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly locReason?: OPTIONAL<LocReason>,
-        /**
-         * @summary `locationInfoList`.
-         * @description
-         *
-         * Collected location not yet reported when the session was suspended
-         * (ECMA-269 §28.1.4.1 / FR 2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly locationInfoList?: OPTIONAL<LocationInfoList>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * CSTACommonArguments carrying the service-table security and
-         * privateData parameters.
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        locCrossRefID: LocCrossRefID,
+        locReason?: OPTIONAL<LocReason>,
+        locationInfoList?: OPTIONAL<LocationInfoList>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.locCrossRefID = locCrossRefID;
+        this.locReason = locReason;
+        this.locationInfoList = locationInfoList;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a LocationTrackingSessionSuspendedArgument

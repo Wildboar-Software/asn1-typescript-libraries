@@ -63,214 +63,258 @@ import { ReportInterval, _decode_ReportInterval, _encode_ReportInterval, _enum_f
  */
 export
 class MDT_Configuration {
+    /**
+     * @summary `jobType`.
+     * @description
+     *
+     * immediate-MDT-only, logged-MDT-only, trace-only, or both.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly jobType: JobType;
+    /**
+     * @summary `areaScope`.
+     * @description
+     *
+     * CGI / ECGI / RAI / LAI / TAI lists.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly areaScope?: OPTIONAL<AreaScope>;
+    /**
+     * @summary `listOfMeasurements`.
+     * @description
+     *
+     * 4 octets. Coded as in 3GPP TS 32.422.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly listOfMeasurements?: OPTIONAL<ListOfMeasurements>;
+    /**
+     * @summary `reportingTrigger`.
+     * @description
+     *
+     * 1 octet. Coded as in 3GPP TS 32.422.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly reportingTrigger?: OPTIONAL<ReportingTrigger>;
+    /**
+     * @summary `reportInterval`.
+     * @description
+     *
+     * UMTS or LTE report interval.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly reportInterval?: OPTIONAL<ReportInterval>;
+    /**
+     * @summary `reportAmount`.
+     * @description
+     *
+     * Number of reports or infinity.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly reportAmount?: OPTIONAL<ReportAmount>;
+    /**
+     * @summary `eventThresholdRSRP`.
+     * @description
+     *
+     * INTEGER (0..97).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly eventThresholdRSRP?: OPTIONAL<EventThresholdRSRP>;
+    /**
+     * @summary `eventThresholdRSRQ`.
+     * @description
+     *
+     * INTEGER (0..34).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly eventThresholdRSRQ?: OPTIONAL<EventThresholdRSRQ>;
+    /**
+     * @summary `loggingInterval`.
+     * @description
+     *
+     * Logged MDT interval.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly loggingInterval?: OPTIONAL<LoggingInterval>;
+    /**
+     * @summary `loggingDuration`.
+     * @description
+     *
+     * Logged MDT duration.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly loggingDuration?: OPTIONAL<LoggingDuration>;
+    /**
+     * @summary `extensionContainer`.
+     * @description
+     *
+     * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary `measurementPeriodUMTS`.
+     * @description
+     *
+     * UMTS measurement period.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly measurementPeriodUMTS?: OPTIONAL<PeriodUMTS>;
+    /**
+     * @summary `measurementPeriodLTE`.
+     * @description
+     *
+     * LTE measurement period.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly measurementPeriodLTE?: OPTIONAL<PeriodLTE>;
+    /**
+     * @summary `collectionPeriodRRM_UMTS`.
+     * @description
+     *
+     * UMTS RRM collection period.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly collectionPeriodRRM_UMTS?: OPTIONAL<PeriodUMTS>;
+    /**
+     * @summary `collectionPeriodRRM_LTE`.
+     * @description
+     *
+     * LTE RRM collection period.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly collectionPeriodRRM_LTE?: OPTIONAL<PeriodLTE>;
+    /**
+     * @summary `positioningMethod`.
+     * @description
+     *
+     * 1 octet. Coded as in 3GPP TS 32.422.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly positioningMethod?: OPTIONAL<PositioningMethod>;
+    /**
+     * @summary `measurementQuantity`.
+     * @description
+     *
+     * 1 octet. Coded as in 3GPP TS 32.422.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly measurementQuantity?: OPTIONAL<MeasurementQuantity>;
+    /**
+     * @summary `eventThreshold1F`.
+     * @description
+     *
+     * INTEGER (-120..165).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly eventThreshold1F?: OPTIONAL<EventThreshold1F>;
+    /**
+     * @summary `eventThreshold1I`.
+     * @description
+     *
+     * INTEGER (-120..-25).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly eventThreshold1I?: OPTIONAL<EventThreshold1I>;
+    /**
+     * @summary `mdt_Allowed_PLMN_List`.
+     * @description
+     *
+     * Allowed PLMNs for MDT, 1..16.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mdt_Allowed_PLMN_List?: OPTIONAL<MDT_Allowed_PLMNId_List>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `jobType`.
-         * @description
-         *
-         * immediate-MDT-only, logged-MDT-only, trace-only, or both.
-         *
-         * @public
-         * @readonly
-         */
-        readonly jobType: JobType,
-        /**
-         * @summary `areaScope`.
-         * @description
-         *
-         * CGI / ECGI / RAI / LAI / TAI lists.
-         *
-         * @public
-         * @readonly
-         */
-        readonly areaScope?: OPTIONAL<AreaScope>,
-        /**
-         * @summary `listOfMeasurements`.
-         * @description
-         *
-         * 4 octets. Coded as in 3GPP TS 32.422.
-         *
-         * @public
-         * @readonly
-         */
-        readonly listOfMeasurements?: OPTIONAL<ListOfMeasurements>,
-        /**
-         * @summary `reportingTrigger`.
-         * @description
-         *
-         * 1 octet. Coded as in 3GPP TS 32.422.
-         *
-         * @public
-         * @readonly
-         */
-        readonly reportingTrigger?: OPTIONAL<ReportingTrigger>,
-        /**
-         * @summary `reportInterval`.
-         * @description
-         *
-         * UMTS or LTE report interval.
-         *
-         * @public
-         * @readonly
-         */
-        readonly reportInterval?: OPTIONAL<ReportInterval>,
-        /**
-         * @summary `reportAmount`.
-         * @description
-         *
-         * Number of reports or infinity.
-         *
-         * @public
-         * @readonly
-         */
-        readonly reportAmount?: OPTIONAL<ReportAmount>,
-        /**
-         * @summary `eventThresholdRSRP`.
-         * @description
-         *
-         * INTEGER (0..97).
-         *
-         * @public
-         * @readonly
-         */
-        readonly eventThresholdRSRP?: OPTIONAL<EventThresholdRSRP>,
-        /**
-         * @summary `eventThresholdRSRQ`.
-         * @description
-         *
-         * INTEGER (0..34).
-         *
-         * @public
-         * @readonly
-         */
-        readonly eventThresholdRSRQ?: OPTIONAL<EventThresholdRSRQ>,
-        /**
-         * @summary `loggingInterval`.
-         * @description
-         *
-         * Logged MDT interval.
-         *
-         * @public
-         * @readonly
-         */
-        readonly loggingInterval?: OPTIONAL<LoggingInterval>,
-        /**
-         * @summary `loggingDuration`.
-         * @description
-         *
-         * Logged MDT duration.
-         *
-         * @public
-         * @readonly
-         */
-        readonly loggingDuration?: OPTIONAL<LoggingDuration>,
-        /**
-         * @summary `extensionContainer`.
-         * @description
-         *
-         * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary `measurementPeriodUMTS`.
-         * @description
-         *
-         * UMTS measurement period.
-         *
-         * @public
-         * @readonly
-         */
-        readonly measurementPeriodUMTS?: OPTIONAL<PeriodUMTS>,
-        /**
-         * @summary `measurementPeriodLTE`.
-         * @description
-         *
-         * LTE measurement period.
-         *
-         * @public
-         * @readonly
-         */
-        readonly measurementPeriodLTE?: OPTIONAL<PeriodLTE>,
-        /**
-         * @summary `collectionPeriodRRM_UMTS`.
-         * @description
-         *
-         * UMTS RRM collection period.
-         *
-         * @public
-         * @readonly
-         */
-        readonly collectionPeriodRRM_UMTS?: OPTIONAL<PeriodUMTS>,
-        /**
-         * @summary `collectionPeriodRRM_LTE`.
-         * @description
-         *
-         * LTE RRM collection period.
-         *
-         * @public
-         * @readonly
-         */
-        readonly collectionPeriodRRM_LTE?: OPTIONAL<PeriodLTE>,
-        /**
-         * @summary `positioningMethod`.
-         * @description
-         *
-         * 1 octet. Coded as in 3GPP TS 32.422.
-         *
-         * @public
-         * @readonly
-         */
-        readonly positioningMethod?: OPTIONAL<PositioningMethod>,
-        /**
-         * @summary `measurementQuantity`.
-         * @description
-         *
-         * 1 octet. Coded as in 3GPP TS 32.422.
-         *
-         * @public
-         * @readonly
-         */
-        readonly measurementQuantity?: OPTIONAL<MeasurementQuantity>,
-        /**
-         * @summary `eventThreshold1F`.
-         * @description
-         *
-         * INTEGER (-120..165).
-         *
-         * @public
-         * @readonly
-         */
-        readonly eventThreshold1F?: OPTIONAL<EventThreshold1F>,
-        /**
-         * @summary `eventThreshold1I`.
-         * @description
-         *
-         * INTEGER (-120..-25).
-         *
-         * @public
-         * @readonly
-         */
-        readonly eventThreshold1I?: OPTIONAL<EventThreshold1I>,
-        /**
-         * @summary `mdt_Allowed_PLMN_List`.
-         * @description
-         *
-         * Allowed PLMNs for MDT, 1..16.
-         *
-         * @public
-         * @readonly
-         */
-        readonly mdt_Allowed_PLMN_List?: OPTIONAL<MDT_Allowed_PLMNId_List>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        jobType: JobType,
+        areaScope?: OPTIONAL<AreaScope>,
+        listOfMeasurements?: OPTIONAL<ListOfMeasurements>,
+        reportingTrigger?: OPTIONAL<ReportingTrigger>,
+        reportInterval?: OPTIONAL<ReportInterval>,
+        reportAmount?: OPTIONAL<ReportAmount>,
+        eventThresholdRSRP?: OPTIONAL<EventThresholdRSRP>,
+        eventThresholdRSRQ?: OPTIONAL<EventThresholdRSRQ>,
+        loggingInterval?: OPTIONAL<LoggingInterval>,
+        loggingDuration?: OPTIONAL<LoggingDuration>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        measurementPeriodUMTS?: OPTIONAL<PeriodUMTS>,
+        measurementPeriodLTE?: OPTIONAL<PeriodLTE>,
+        collectionPeriodRRM_UMTS?: OPTIONAL<PeriodUMTS>,
+        collectionPeriodRRM_LTE?: OPTIONAL<PeriodLTE>,
+        positioningMethod?: OPTIONAL<PositioningMethod>,
+        measurementQuantity?: OPTIONAL<MeasurementQuantity>,
+        eventThreshold1F?: OPTIONAL<EventThreshold1F>,
+        eventThreshold1I?: OPTIONAL<EventThreshold1I>,
+        mdt_Allowed_PLMN_List?: OPTIONAL<MDT_Allowed_PLMNId_List>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.jobType = jobType;
+        this.areaScope = areaScope;
+        this.listOfMeasurements = listOfMeasurements;
+        this.reportingTrigger = reportingTrigger;
+        this.reportInterval = reportInterval;
+        this.reportAmount = reportAmount;
+        this.eventThresholdRSRP = eventThresholdRSRP;
+        this.eventThresholdRSRQ = eventThresholdRSRQ;
+        this.loggingInterval = loggingInterval;
+        this.loggingDuration = loggingDuration;
+        this.extensionContainer = extensionContainer;
+        this.measurementPeriodUMTS = measurementPeriodUMTS;
+        this.measurementPeriodLTE = measurementPeriodLTE;
+        this.collectionPeriodRRM_UMTS = collectionPeriodRRM_UMTS;
+        this.collectionPeriodRRM_LTE = collectionPeriodRRM_LTE;
+        this.positioningMethod = positioningMethod;
+        this.measurementQuantity = measurementQuantity;
+        this.eventThreshold1F = eventThreshold1F;
+        this.eventThreshold1I = eventThreshold1I;
+        this.mdt_Allowed_PLMN_List = mdt_Allowed_PLMN_List;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a MDT_Configuration

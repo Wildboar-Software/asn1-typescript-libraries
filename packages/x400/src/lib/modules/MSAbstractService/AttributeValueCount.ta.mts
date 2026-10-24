@@ -34,20 +34,26 @@ import {
  *
  */
 export class AttributeValueCount {
+    /**
+     * @summary `type_`.
+     * @public
+     * @readonly
+     */
+    public readonly type_: AttributeType;
+    /**
+     * @summary `total`.
+     * @public
+     * @readonly
+     */
+    public readonly total: INTEGER;
+
     constructor(
-        /**
-         * @summary `type_`.
-         * @public
-         * @readonly
-         */
-        readonly type_: AttributeType,
-        /**
-         * @summary `total`.
-         * @public
-         * @readonly
-         */
-        readonly total: INTEGER
-    ) {}
+        type_: AttributeType,
+        total: INTEGER
+    ) {
+        this.type_ = type_;
+        this.total = total;
+    }
 
     /**
      * @summary Restructures an object into a AttributeValueCount

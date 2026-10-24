@@ -37,32 +37,40 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class ImplementationIdent {
+    /**
+     * @summary `implementationIdentifier`.
+     * @description
+     * Optional OID naming the product. ISO/IEC 9041-1:1997 §6.2.2 j.
+     * @public
+     * @readonly
+     */
+    public readonly implementationIdentifier?: OPTIONAL<OBJECT_IDENTIFIER>;
+    /**
+     * @summary `implementationName`.
+     * @description
+     * Character name of the product. ISO/IEC 9041-1:1997 §6.2.2 j.
+     * @public
+     * @readonly
+     */
+    public readonly implementationName?: OPTIONAL<PrintableString>;
+    /**
+     * @summary `implementationVersion`.
+     * @description
+     * Character version of the product. ISO/IEC 9041-1:1997 §6.2.2 j.
+     * @public
+     * @readonly
+     */
+    public readonly implementationVersion?: OPTIONAL<PrintableString>;
+
     constructor (
-        /**
-         * @summary `implementationIdentifier`.
-         * @description
-         * Optional OID naming the product. ISO/IEC 9041-1:1997 §6.2.2 j.
-         * @public
-         * @readonly
-         */
-        readonly implementationIdentifier?: OPTIONAL<OBJECT_IDENTIFIER>,
-        /**
-         * @summary `implementationName`.
-         * @description
-         * Character name of the product. ISO/IEC 9041-1:1997 §6.2.2 j.
-         * @public
-         * @readonly
-         */
-        readonly implementationName?: OPTIONAL<PrintableString>,
-        /**
-         * @summary `implementationVersion`.
-         * @description
-         * Character version of the product. ISO/IEC 9041-1:1997 §6.2.2 j.
-         * @public
-         * @readonly
-         */
-        readonly implementationVersion?: OPTIONAL<PrintableString>
-    ) {}
+        implementationIdentifier?: OPTIONAL<OBJECT_IDENTIFIER>,
+        implementationName?: OPTIONAL<PrintableString>,
+        implementationVersion?: OPTIONAL<PrintableString>
+    ) {
+        this.implementationIdentifier = implementationIdentifier;
+        this.implementationName = implementationName;
+        this.implementationVersion = implementationVersion;
+    }
 
     /**
      * @summary Restructures an object into a ImplementationIdent

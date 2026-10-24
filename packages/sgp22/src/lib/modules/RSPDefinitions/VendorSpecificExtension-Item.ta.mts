@@ -28,30 +28,36 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class VendorSpecificExtension_Item {
+    /**
+     * @summary `vendorOid`.
+     * @description
+     * 
+     * OID of the vendor that defined `vendorSpecificData`. SGP.22 v3.1
+     * Annex H.
+     * 
+     * @public
+     * @readonly
+     */
+    public readonly vendorOid: OBJECT_IDENTIFIER;
+    /**
+     * @summary `vendorSpecificData`.
+     * @description
+     * 
+     * Open type identified by `vendorOid`. Must not change non-vendor RSP
+     * behaviour. SGP.22 v3.1 §5.5.3.
+     * 
+     * @public
+     * @readonly
+     */
+    public readonly vendorSpecificData: _Element;
+
     constructor (
-        /**
-         * @summary `vendorOid`.
-         * @description
-         * 
-         * OID of the vendor that defined `vendorSpecificData`. SGP.22 v3.1
-         * Annex H.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly vendorOid: OBJECT_IDENTIFIER,
-        /**
-         * @summary `vendorSpecificData`.
-         * @description
-         * 
-         * Open type identified by `vendorOid`. Must not change non-vendor RSP
-         * behaviour. SGP.22 v3.1 §5.5.3.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly vendorSpecificData: _Element
-    ) {}
+        vendorOid: OBJECT_IDENTIFIER,
+        vendorSpecificData: _Element
+    ) {
+        this.vendorOid = vendorOid;
+        this.vendorSpecificData = vendorSpecificData;
+    }
 
     /**
      * @summary Restructures an object into a VendorSpecificExtension_Item

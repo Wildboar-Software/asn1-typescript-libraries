@@ -33,18 +33,22 @@ import { MMSString, _decode_MMSString, _encode_MMSString } from "../ISO-9506-MMS
  */
 export
 class FileManagementParameters {
+    /**
+     * @summary `fileName`.
+     * @description
+     *
+     * File-name format description. ISO 9506-2:2003 Annex B.2.10.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly fileName: MMSString;
+
     constructor (
-        /**
-         * @summary `fileName`.
-         * @description
-         *
-         * File-name format description. ISO 9506-2:2003 Annex B.2.10.
-         *
-         * @public
-         * @readonly
-         */
-        readonly fileName: MMSString
-    ) {}
+        fileName: MMSString
+    ) {
+        this.fileName = fileName;
+    }
 
     /**
      * @summary Restructures an object into a FileManagementParameters

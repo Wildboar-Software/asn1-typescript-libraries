@@ -116,110 +116,146 @@ import {
  */
 export
 class TroubleHistoryInfo {
+    /**
+     * @summary `managedObjectInstance`.
+     * @public
+     * @readonly
+     */
+    public readonly managedObjectInstance: ObjectInstance;
+    /**
+     * @summary `receivedTime`.
+     * @public
+     * @readonly
+     */
+    public readonly receivedTime: GeneralizedTime;
+    /**
+     * @summary `troubleFound`.
+     * @public
+     * @readonly
+     */
+    public readonly troubleFound: TroubleFound;
+    /**
+     * @summary `activityDuration`.
+     * @public
+     * @readonly
+     */
+    public readonly activityDuration?: OPTIONAL<ActivityDuration>;
+    /**
+     * @summary `additionalTroubleInfoList`.
+     * @public
+     * @readonly
+     */
+    public readonly additionalTroubleInfoList?: OPTIONAL<AdditionalTroubleInfoList>;
+    /**
+     * @summary `authorizationList`.
+     * @public
+     * @readonly
+     */
+    public readonly authorizationList?: OPTIONAL<AuthorizationList>;
+    /**
+     * @summary `cancelRequestedByManager`.
+     * @public
+     * @readonly
+     */
+    public readonly cancelRequestedByManager?: OPTIONAL<CancelRequestedByManager>;
+    /**
+     * @summary `closeOutNarr`.
+     * @public
+     * @readonly
+     */
+    public readonly closeOutNarr?: OPTIONAL<GraphicString>;
+    /**
+     * @summary `closeOutVerification`.
+     * @public
+     * @readonly
+     */
+    public readonly closeOutVerification?: OPTIONAL<CloseOutVerification>;
+    /**
+     * @summary `commitmentTime`.
+     * @public
+     * @readonly
+     */
+    public readonly commitmentTime?: OPTIONAL<CommitmentTime>;
+    /**
+     * @summary `custTroubleTickNum`.
+     * @public
+     * @readonly
+     */
+    public readonly custTroubleTickNum?: OPTIONAL<GraphicString>;
+    /**
+     * @summary `perceivedTroubleSeverity`.
+     * @public
+     * @readonly
+     */
+    public readonly perceivedTroubleSeverity?: OPTIONAL<PerceivedTroubleSeverity>;
+    /**
+     * @summary `restoredTime`.
+     * @public
+     * @readonly
+     */
+    public readonly restoredTime?: OPTIONAL<GeneralizedTime>;
+    /**
+     * @summary `troubleClearancePerson`.
+     * @public
+     * @readonly
+     */
+    public readonly troubleClearancePerson?: OPTIONAL<PersonReach>;
+    /**
+     * @summary `troubleReportNumberList`.
+     * @public
+     * @readonly
+     */
+    public readonly troubleReportNumberList?: OPTIONAL<TroubleReportNumberList>;
+    /**
+     * @summary `troubleType`.
+     * @public
+     * @readonly
+     */
+    public readonly troubleType?: OPTIONAL<TroubleType>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `managedObjectInstance`.
-         * @public
-         * @readonly
-         */
-        readonly managedObjectInstance: ObjectInstance,
-        /**
-         * @summary `receivedTime`.
-         * @public
-         * @readonly
-         */
-        readonly receivedTime: GeneralizedTime,
-        /**
-         * @summary `troubleFound`.
-         * @public
-         * @readonly
-         */
-        readonly troubleFound: TroubleFound,
-        /**
-         * @summary `activityDuration`.
-         * @public
-         * @readonly
-         */
-        readonly activityDuration?: OPTIONAL<ActivityDuration>,
-        /**
-         * @summary `additionalTroubleInfoList`.
-         * @public
-         * @readonly
-         */
-        readonly additionalTroubleInfoList?: OPTIONAL<AdditionalTroubleInfoList>,
-        /**
-         * @summary `authorizationList`.
-         * @public
-         * @readonly
-         */
-        readonly authorizationList?: OPTIONAL<AuthorizationList>,
-        /**
-         * @summary `cancelRequestedByManager`.
-         * @public
-         * @readonly
-         */
-        readonly cancelRequestedByManager?: OPTIONAL<CancelRequestedByManager>,
-        /**
-         * @summary `closeOutNarr`.
-         * @public
-         * @readonly
-         */
-        readonly closeOutNarr?: OPTIONAL<GraphicString>,
-        /**
-         * @summary `closeOutVerification`.
-         * @public
-         * @readonly
-         */
-        readonly closeOutVerification?: OPTIONAL<CloseOutVerification>,
-        /**
-         * @summary `commitmentTime`.
-         * @public
-         * @readonly
-         */
-        readonly commitmentTime?: OPTIONAL<CommitmentTime>,
-        /**
-         * @summary `custTroubleTickNum`.
-         * @public
-         * @readonly
-         */
-        readonly custTroubleTickNum?: OPTIONAL<GraphicString>,
-        /**
-         * @summary `perceivedTroubleSeverity`.
-         * @public
-         * @readonly
-         */
-        readonly perceivedTroubleSeverity?: OPTIONAL<PerceivedTroubleSeverity>,
-        /**
-         * @summary `restoredTime`.
-         * @public
-         * @readonly
-         */
-        readonly restoredTime?: OPTIONAL<GeneralizedTime>,
-        /**
-         * @summary `troubleClearancePerson`.
-         * @public
-         * @readonly
-         */
-        readonly troubleClearancePerson?: OPTIONAL<PersonReach>,
-        /**
-         * @summary `troubleReportNumberList`.
-         * @public
-         * @readonly
-         */
-        readonly troubleReportNumberList?: OPTIONAL<TroubleReportNumberList>,
-        /**
-         * @summary `troubleType`.
-         * @public
-         * @readonly
-         */
-        readonly troubleType?: OPTIONAL<TroubleType>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        managedObjectInstance: ObjectInstance,
+        receivedTime: GeneralizedTime,
+        troubleFound: TroubleFound,
+        activityDuration?: OPTIONAL<ActivityDuration>,
+        additionalTroubleInfoList?: OPTIONAL<AdditionalTroubleInfoList>,
+        authorizationList?: OPTIONAL<AuthorizationList>,
+        cancelRequestedByManager?: OPTIONAL<CancelRequestedByManager>,
+        closeOutNarr?: OPTIONAL<GraphicString>,
+        closeOutVerification?: OPTIONAL<CloseOutVerification>,
+        commitmentTime?: OPTIONAL<CommitmentTime>,
+        custTroubleTickNum?: OPTIONAL<GraphicString>,
+        perceivedTroubleSeverity?: OPTIONAL<PerceivedTroubleSeverity>,
+        restoredTime?: OPTIONAL<GeneralizedTime>,
+        troubleClearancePerson?: OPTIONAL<PersonReach>,
+        troubleReportNumberList?: OPTIONAL<TroubleReportNumberList>,
+        troubleType?: OPTIONAL<TroubleType>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.managedObjectInstance = managedObjectInstance;
+        this.receivedTime = receivedTime;
+        this.troubleFound = troubleFound;
+        this.activityDuration = activityDuration;
+        this.additionalTroubleInfoList = additionalTroubleInfoList;
+        this.authorizationList = authorizationList;
+        this.cancelRequestedByManager = cancelRequestedByManager;
+        this.closeOutNarr = closeOutNarr;
+        this.closeOutVerification = closeOutVerification;
+        this.commitmentTime = commitmentTime;
+        this.custTroubleTickNum = custTroubleTickNum;
+        this.perceivedTroubleSeverity = perceivedTroubleSeverity;
+        this.restoredTime = restoredTime;
+        this.troubleClearancePerson = troubleClearancePerson;
+        this.troubleReportNumberList = troubleReportNumberList;
+        this.troubleType = troubleType;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a TroubleHistoryInfo

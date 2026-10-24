@@ -49,62 +49,74 @@ import {
  *
  */
 export class DeviceIdentification {
+    /**
+     * @summary `scheme`.
+     * @description
+     *
+     * `DEVICE-SCHEME.&id` of the identification scheme.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly scheme: OBJECT_IDENTIFIER;
+    /**
+     * @summary `schemeName`.
+     * @description
+     *
+     * Optional `DEVICE-SCHEME.&name`. ISO646String is not
+     * necessarily unique.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly schemeName: OPTIONAL<SchemeName>;
+    /**
+     * @summary `manufacturerId`.
+     * @description
+     *
+     * Optional `DEVICE-SCHEME.&Manufacturer`. Absent if a generic
+     * term (e.g. "scalpel") is used in `device`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly manufacturerId: OPTIONAL<_Element>;
+    /**
+     * @summary `device`.
+     * @description
+     *
+     * `DEVICE-SCHEME.&Device`: generic description or complete
+     * product reference.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly device: _Element;
+    /**
+     * @summary `formats`.
+     * @description
+     *
+     * `DEVICE-SCHEME.&supportedFormats`. Typically OIDs of data
+     * formats for a sensor or intervention device.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly formats: Supported_formats;
+
     constructor(
-        /**
-         * @summary `scheme`.
-         * @description
-         *
-         * `DEVICE-SCHEME.&id` of the identification scheme.
-         *
-         * @public
-         * @readonly
-         */
-        readonly scheme: OBJECT_IDENTIFIER,
-        /**
-         * @summary `schemeName`.
-         * @description
-         *
-         * Optional `DEVICE-SCHEME.&name`. ISO646String is not
-         * necessarily unique.
-         *
-         * @public
-         * @readonly
-         */
-        readonly schemeName: OPTIONAL<SchemeName>,
-        /**
-         * @summary `manufacturerId`.
-         * @description
-         *
-         * Optional `DEVICE-SCHEME.&Manufacturer`. Absent if a generic
-         * term (e.g. "scalpel") is used in `device`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly manufacturerId: OPTIONAL<_Element>,
-        /**
-         * @summary `device`.
-         * @description
-         *
-         * `DEVICE-SCHEME.&Device`: generic description or complete
-         * product reference.
-         *
-         * @public
-         * @readonly
-         */
-        readonly device: _Element,
-        /**
-         * @summary `formats`.
-         * @description
-         *
-         * `DEVICE-SCHEME.&supportedFormats`. Typically OIDs of data
-         * formats for a sensor or intervention device.
-         *
-         * @public
-         * @readonly
-         */
-        readonly formats: Supported_formats
-    ) {}
+        scheme: OBJECT_IDENTIFIER,
+        schemeName: OPTIONAL<SchemeName>,
+        manufacturerId: OPTIONAL<_Element>,
+        device: _Element,
+        formats: Supported_formats
+    ) {
+        this.scheme = scheme;
+        this.schemeName = schemeName;
+        this.manufacturerId = manufacturerId;
+        this.device = device;
+        this.formats = formats;
+    }
 
     /**
      * @summary Restructures an object into a DeviceIdentification

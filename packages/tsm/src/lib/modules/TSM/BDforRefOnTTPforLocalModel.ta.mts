@@ -46,61 +46,73 @@ import { SignedData, _decode_SignedData, _encode_SignedData } from "../X9-84-CMS
  */
 export
 class BDforRefOnTTPforLocalModel {
+    /**
+     * @summary `thirdPartyInfo`.
+     * @description
+     *
+     * TTP network address as a URI ([IETF RFC 3986]). X.1084 §10.1.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly thirdPartyInfo: UTF8String;
+    /**
+     * @summary `biometricClientProcess`.
+     * @description
+     *
+     * BSP/BFP, template ID, sample quality, and comparison score from
+     * the client. X.1084 §11.1 Table 3.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly biometricClientProcess: BiometricClientProcess;
+    /**
+     * @summary `aCforBioOnTTP`.
+     * @description
+     *
+     * ISO/IEC 24761 ACBio for the TTP process. Optional except in
+     * `BDforRefOnTTPforLocalModel`, where Annex A requires it. X.1084
+     * §11.5.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly aCforBioOnTTP: ACBioContentInformation;
+    /**
+     * @summary `digitalSignaturebyClient`.
+     * @description
+     *
+     * CMS `SignedData` over the client process. X.1084 §11.5, §11.7.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly digitalSignaturebyClient: SignedData;
+    /**
+     * @summary `aCforBioOnClient`.
+     * @description
+     *
+     * Optional ISO/IEC 24761 ACBio for the client process. X.1084 §11.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly aCforBioOnClient?: OPTIONAL<ACBioContentInformation>;
+
     constructor (
-        /**
-         * @summary `thirdPartyInfo`.
-         * @description
-         *
-         * TTP network address as a URI ([IETF RFC 3986]). X.1084 §10.1.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly thirdPartyInfo: UTF8String,
-        /**
-         * @summary `biometricClientProcess`.
-         * @description
-         *
-         * BSP/BFP, template ID, sample quality, and comparison score from
-         * the client. X.1084 §11.1 Table 3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly biometricClientProcess: BiometricClientProcess,
-        /**
-         * @summary `aCforBioOnTTP`.
-         * @description
-         *
-         * ISO/IEC 24761 ACBio for the TTP process. Optional except in
-         * `BDforRefOnTTPforLocalModel`, where Annex A requires it. X.1084
-         * §11.5.
-         *
-         * @public
-         * @readonly
-         */
-        readonly aCforBioOnTTP: ACBioContentInformation,
-        /**
-         * @summary `digitalSignaturebyClient`.
-         * @description
-         *
-         * CMS `SignedData` over the client process. X.1084 §11.5, §11.7.
-         *
-         * @public
-         * @readonly
-         */
-        readonly digitalSignaturebyClient: SignedData,
-        /**
-         * @summary `aCforBioOnClient`.
-         * @description
-         *
-         * Optional ISO/IEC 24761 ACBio for the client process. X.1084 §11.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly aCforBioOnClient?: OPTIONAL<ACBioContentInformation>
-    ) {}
+        thirdPartyInfo: UTF8String,
+        biometricClientProcess: BiometricClientProcess,
+        aCforBioOnTTP: ACBioContentInformation,
+        digitalSignaturebyClient: SignedData,
+        aCforBioOnClient?: OPTIONAL<ACBioContentInformation>
+    ) {
+        this.thirdPartyInfo = thirdPartyInfo;
+        this.biometricClientProcess = biometricClientProcess;
+        this.aCforBioOnTTP = aCforBioOnTTP;
+        this.digitalSignaturebyClient = digitalSignaturebyClient;
+        this.aCforBioOnClient = aCforBioOnClient;
+    }
 
     /**
      * @summary Restructures an object into a BDforRefOnTTPforLocalModel

@@ -29,19 +29,23 @@ import { DigitMapName, _decode_DigitMapName, _encode_DigitMapName } from "../MED
  */
 export
 class IndAudDigitMapDescriptor {
+    /**
+     * @summary `digitMapName`.
+     * @description
+     *
+     * Digit map to return. Omitted, the audit asks for the current digit
+     * map of the termination without naming it.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly digitMapName?: OPTIONAL<DigitMapName>;
+
     constructor (
-        /**
-         * @summary `digitMapName`.
-         * @description
-         *
-         * Digit map to return. Omitted, the audit asks for the current digit
-         * map of the termination without naming it.
-         *
-         * @public
-         * @readonly
-         */
-        readonly digitMapName?: OPTIONAL<DigitMapName>
-    ) {}
+        digitMapName?: OPTIONAL<DigitMapName>
+    ) {
+        this.digitMapName = digitMapName;
+    }
 
     /**
      * @summary Restructures an object into a IndAudDigitMapDescriptor

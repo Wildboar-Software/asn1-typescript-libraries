@@ -37,39 +37,47 @@ import {
  */
 export
 class DigitsReportingCriteria {
+    /**
+     * @summary `numChars`.
+     * @description
+     *
+     * Send Data Collected after this many characters (ECMA-269 §25.1.5.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly numChars?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `flushChar`.
+     * @description
+     *
+     * IA5 flush character that reports collected digits (ECMA-269
+     * §25.1.5.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly flushChar?: OPTIONAL<IA5String>;
+    /**
+     * @summary `timeout`.
+     * @description
+     *
+     * Timeout that reports collected digits (ECMA-269 §25.1.5.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly timeout?: OPTIONAL<INTEGER>;
+
     constructor (
-        /**
-         * @summary `numChars`.
-         * @description
-         *
-         * Send Data Collected after this many characters (ECMA-269 §25.1.5.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly numChars?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `flushChar`.
-         * @description
-         *
-         * IA5 flush character that reports collected digits (ECMA-269
-         * §25.1.5.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly flushChar?: OPTIONAL<IA5String>,
-        /**
-         * @summary `timeout`.
-         * @description
-         *
-         * Timeout that reports collected digits (ECMA-269 §25.1.5.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly timeout?: OPTIONAL<INTEGER>
-    ) {}
+        numChars?: OPTIONAL<INTEGER>,
+        flushChar?: OPTIONAL<IA5String>,
+        timeout?: OPTIONAL<INTEGER>
+    ) {
+        this.numChars = numChars;
+        this.flushChar = flushChar;
+        this.timeout = timeout;
+    }
 
     /**
      * @summary Restructures an object into a DigitsReportingCriteria

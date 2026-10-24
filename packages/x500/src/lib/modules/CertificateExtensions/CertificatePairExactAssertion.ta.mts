@@ -31,26 +31,34 @@ import {
  *
  */
 export class CertificatePairExactAssertion {
+    /**
+     * @summary `issuedToThisCAAssertion`.
+     * @public
+     * @readonly
+     */
+    public readonly issuedToThisCAAssertion?: OPTIONAL<CertificateExactAssertion>;
+    /**
+     * @summary `issuedByThisCAAssertion`.
+     * @public
+     * @readonly
+     */
+    public readonly issuedByThisCAAssertion?: OPTIONAL<CertificateExactAssertion>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `issuedToThisCAAssertion`.
-         * @public
-         * @readonly
-         */
-        readonly issuedToThisCAAssertion?: OPTIONAL<CertificateExactAssertion>,
-        /**
-         * @summary `issuedByThisCAAssertion`.
-         * @public
-         * @readonly
-         */
-        readonly issuedByThisCAAssertion?: OPTIONAL<CertificateExactAssertion>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        issuedToThisCAAssertion?: OPTIONAL<CertificateExactAssertion>,
+        issuedByThisCAAssertion?: OPTIONAL<CertificateExactAssertion>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.issuedToThisCAAssertion = issuedToThisCAAssertion;
+        this.issuedByThisCAAssertion = issuedByThisCAAssertion;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a CertificatePairExactAssertion

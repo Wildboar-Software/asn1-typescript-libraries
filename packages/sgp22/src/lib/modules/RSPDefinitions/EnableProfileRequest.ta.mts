@@ -38,31 +38,37 @@ import { EnableProfileRequest_profileIdentifier, _decode_EnableProfileRequest_pr
  */
 export
 class EnableProfileRequest {
+    /**
+     * @summary `profileIdentifier`.
+     * @description
+     * 
+     * ISD-P AID or ICCID of the Profile to enable. Unknown value is
+     * `iccidOrAidNotFound`. SGP.22 v3.1 §5.7.16.
+     * 
+     * @public
+     * @readonly
+     */
+    public readonly profileIdentifier: EnableProfileRequest_profileIdentifier;
+    /**
+     * @summary `refreshFlag`.
+     * @description
+     * 
+     * True: complete the switch only after REFRESH. False: switch
+     * immediately and reset PIN state on the target port. A proactive
+     * session may yield `catBusy` in either case. SGP.22 v3.1 §5.7.16.
+     * 
+     * @public
+     * @readonly
+     */
+    public readonly refreshFlag: BOOLEAN;
+
     constructor (
-        /**
-         * @summary `profileIdentifier`.
-         * @description
-         * 
-         * ISD-P AID or ICCID of the Profile to enable. Unknown value is
-         * `iccidOrAidNotFound`. SGP.22 v3.1 §5.7.16.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly profileIdentifier: EnableProfileRequest_profileIdentifier,
-        /**
-         * @summary `refreshFlag`.
-         * @description
-         * 
-         * True: complete the switch only after REFRESH. False: switch
-         * immediately and reset PIN state on the target port. A proactive
-         * session may yield `catBusy` in either case. SGP.22 v3.1 §5.7.16.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly refreshFlag: BOOLEAN
-    ) {}
+        profileIdentifier: EnableProfileRequest_profileIdentifier,
+        refreshFlag: BOOLEAN
+    ) {
+        this.profileIdentifier = profileIdentifier;
+        this.refreshFlag = refreshFlag;
+    }
 
     /**
      * @summary Restructures an object into a EnableProfileRequest

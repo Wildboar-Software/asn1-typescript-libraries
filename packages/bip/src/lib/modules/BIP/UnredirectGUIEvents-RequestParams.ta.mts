@@ -54,77 +54,91 @@ import {
  *
  */
 export class UnredirectGUIEvents_RequestParams {
+  /**
+   * @summary `subscriberEndpointIRI`.
+   * @description
+   *
+   * Endpoint IRI of the secondary GUI handler of the
+   * redirector to cancel. BioAPI `NULL` is rewritten to the
+   * local endpoint IRI (X.1083 §15.3). X.1083 §16.29.5.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly subscriberEndpointIRI: EndpointIRI;
+  /**
+   * @summary `guiEventSubscriptionUuid`.
+   * @description
+   *
+   * UUID of the secondary subscription of the redirector to
+   * cancel. Must match the `GUIEventRedirectors` row. X.1083
+   * §16.29.5.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly guiEventSubscriptionUuid: BioAPI_UUID;
+  /**
+   * @summary `originalBSPHandle`.
+   * @description
+   *
+   * Hosting-endpoint attach handle of the redirector to
+   * cancel. BioAPI `BSPHandle` is rewritten via clauses 24
+   * and 26. X.1083 §16.29.5.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly originalBSPHandle: BioAPI_HANDLE;
+  /**
+   * @summary `guiSelectEventRedirected`.
+   * @description
+   *
+   * Select-event redirected flag of the row to cancel; must
+   * match the stored redirector. X.1083 §16.29.4.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly guiSelectEventRedirected: BOOLEAN;
+  /**
+   * @summary `guiStateEventRedirected`.
+   * @description
+   *
+   * State-event redirected flag of the row to cancel; must
+   * match the stored redirector. X.1083 §16.29.4.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly guiStateEventRedirected: BOOLEAN;
+  /**
+   * @summary `guiProgressEventRedirected`.
+   * @description
+   *
+   * Progress-event redirected flag of the row to cancel;
+   * must match the stored redirector. X.1083 §16.29.4.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly guiProgressEventRedirected: BOOLEAN;
+
   constructor(
-    /**
-     * @summary `subscriberEndpointIRI`.
-     * @description
-     *
-     * Endpoint IRI of the secondary GUI handler of the
-     * redirector to cancel. BioAPI `NULL` is rewritten to the
-     * local endpoint IRI (X.1083 §15.3). X.1083 §16.29.5.
-     *
-     * @public
-     * @readonly
-     */
-    readonly subscriberEndpointIRI: EndpointIRI,
-    /**
-     * @summary `guiEventSubscriptionUuid`.
-     * @description
-     *
-     * UUID of the secondary subscription of the redirector to
-     * cancel. Must match the `GUIEventRedirectors` row. X.1083
-     * §16.29.5.
-     *
-     * @public
-     * @readonly
-     */
-    readonly guiEventSubscriptionUuid: BioAPI_UUID,
-    /**
-     * @summary `originalBSPHandle`.
-     * @description
-     *
-     * Hosting-endpoint attach handle of the redirector to
-     * cancel. BioAPI `BSPHandle` is rewritten via clauses 24
-     * and 26. X.1083 §16.29.5.
-     *
-     * @public
-     * @readonly
-     */
-    readonly originalBSPHandle: BioAPI_HANDLE,
-    /**
-     * @summary `guiSelectEventRedirected`.
-     * @description
-     *
-     * Select-event redirected flag of the row to cancel; must
-     * match the stored redirector. X.1083 §16.29.4.
-     *
-     * @public
-     * @readonly
-     */
-    readonly guiSelectEventRedirected: BOOLEAN,
-    /**
-     * @summary `guiStateEventRedirected`.
-     * @description
-     *
-     * State-event redirected flag of the row to cancel; must
-     * match the stored redirector. X.1083 §16.29.4.
-     *
-     * @public
-     * @readonly
-     */
-    readonly guiStateEventRedirected: BOOLEAN,
-    /**
-     * @summary `guiProgressEventRedirected`.
-     * @description
-     *
-     * Progress-event redirected flag of the row to cancel;
-     * must match the stored redirector. X.1083 §16.29.4.
-     *
-     * @public
-     * @readonly
-     */
-    readonly guiProgressEventRedirected: BOOLEAN
-  ) {}
+    subscriberEndpointIRI: EndpointIRI,
+    guiEventSubscriptionUuid: BioAPI_UUID,
+    originalBSPHandle: BioAPI_HANDLE,
+    guiSelectEventRedirected: BOOLEAN,
+    guiStateEventRedirected: BOOLEAN,
+    guiProgressEventRedirected: BOOLEAN
+  ) {
+    this.subscriberEndpointIRI = subscriberEndpointIRI;
+    this.guiEventSubscriptionUuid = guiEventSubscriptionUuid;
+    this.originalBSPHandle = originalBSPHandle;
+    this.guiSelectEventRedirected = guiSelectEventRedirected;
+    this.guiStateEventRedirected = guiStateEventRedirected;
+    this.guiProgressEventRedirected = guiProgressEventRedirected;
+  }
 
   /**
    * @summary Restructures an object into a UnredirectGUIEvents_RequestParams

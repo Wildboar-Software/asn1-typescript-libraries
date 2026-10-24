@@ -43,31 +43,37 @@ import {
  *
  */
 export class TriggerParameters {
+    /**
+     * @summary `triggerId`.
+     * @description
+     *
+     * Identifies this trigger. Mandatory in the trigger action
+     * service. Correlated in later result notifications and in
+     * suspend/resume/terminate. ITU-T Rec. X.753 (10/97)
+     * §8.3.4, §9.4 Table 8.
+     * @public
+     * @readonly
+     */
+    public readonly triggerId: TriggerId;
+    /**
+     * @summary `executionParameterList`.
+     * @description
+     *
+     * Scripts and inputs to run (single, sequential, or
+     * parallel). User-optional as "Attribute list" in Table 8.
+     * ITU-T Rec. X.753 (10/97) §7.1, §8.3.4, §9.4.
+     * @public
+     * @readonly
+     */
+    public readonly executionParameterList: ExecutionParameterList;
+
     constructor(
-        /**
-         * @summary `triggerId`.
-         * @description
-         *
-         * Identifies this trigger. Mandatory in the trigger action
-         * service. Correlated in later result notifications and in
-         * suspend/resume/terminate. ITU-T Rec. X.753 (10/97)
-         * §8.3.4, §9.4 Table 8.
-         * @public
-         * @readonly
-         */
-        readonly triggerId: TriggerId,
-        /**
-         * @summary `executionParameterList`.
-         * @description
-         *
-         * Scripts and inputs to run (single, sequential, or
-         * parallel). User-optional as "Attribute list" in Table 8.
-         * ITU-T Rec. X.753 (10/97) §7.1, §8.3.4, §9.4.
-         * @public
-         * @readonly
-         */
-        readonly executionParameterList: ExecutionParameterList
-    ) {}
+        triggerId: TriggerId,
+        executionParameterList: ExecutionParameterList
+    ) {
+        this.triggerId = triggerId;
+        this.executionParameterList = executionParameterList;
+    }
 
     /**
      * @summary Restructures an object into a TriggerParameters

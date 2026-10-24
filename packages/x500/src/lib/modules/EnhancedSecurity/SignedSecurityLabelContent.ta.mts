@@ -51,41 +51,53 @@ import {
  *
  */
 export class SignedSecurityLabelContent {
+    /**
+     * @summary `attHash`.
+     * @description HASH of DER-encoded AttributeTypeAndValue.
+     * @public
+     * @readonly
+     */
+    public readonly attHash: HASH<AttributeTypeAndValue>;
+    /**
+     * @summary `issuer`.
+     * @description Name of the labelling authority.
+     * @public
+     * @readonly
+     */
+    public readonly issuer: OPTIONAL<Name>;
+    /**
+     * @summary `keyIdentifier`.
+     * @description Subject key identifier or symmetric-key identifier.
+     * @public
+     * @readonly
+     */
+    public readonly keyIdentifier: OPTIONAL<KeyIdentifier>;
+    /**
+     * @summary `securityLabel`.
+     * @public
+     * @readonly
+     */
+    public readonly securityLabel: SecurityLabel;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `attHash`.
-         * @description HASH of DER-encoded AttributeTypeAndValue.
-         * @public
-         * @readonly
-         */
-        readonly attHash: HASH<AttributeTypeAndValue>,
-        /**
-         * @summary `issuer`.
-         * @description Name of the labelling authority.
-         * @public
-         * @readonly
-         */
-        readonly issuer: OPTIONAL<Name>,
-        /**
-         * @summary `keyIdentifier`.
-         * @description Subject key identifier or symmetric-key identifier.
-         * @public
-         * @readonly
-         */
-        readonly keyIdentifier: OPTIONAL<KeyIdentifier>,
-        /**
-         * @summary `securityLabel`.
-         * @public
-         * @readonly
-         */
-        readonly securityLabel: SecurityLabel,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        attHash: HASH<AttributeTypeAndValue>,
+        issuer: OPTIONAL<Name>,
+        keyIdentifier: OPTIONAL<KeyIdentifier>,
+        securityLabel: SecurityLabel,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.attHash = attHash;
+        this.issuer = issuer;
+        this.keyIdentifier = keyIdentifier;
+        this.securityLabel = securityLabel;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a SignedSecurityLabelContent

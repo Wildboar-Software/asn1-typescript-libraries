@@ -36,20 +36,26 @@ import {
  *
  */
 export class IsdnNumber {
+    /**
+     * @summary `typeOfAddress`.
+     * @public
+     * @readonly
+     */
+    public readonly typeOfAddress: TypeOfAddress;
+    /**
+     * @summary `digits`.
+     * @public
+     * @readonly
+     */
+    public readonly digits: TelephonyString;
+
     constructor(
-        /**
-         * @summary `typeOfAddress`.
-         * @public
-         * @readonly
-         */
-        readonly typeOfAddress: TypeOfAddress,
-        /**
-         * @summary `digits`.
-         * @public
-         * @readonly
-         */
-        readonly digits: TelephonyString
-    ) {}
+        typeOfAddress: TypeOfAddress,
+        digits: TelephonyString
+    ) {
+        this.typeOfAddress = typeOfAddress;
+        this.digits = digits;
+    }
 
     /**
      * @summary Restructures an object into a IsdnNumber

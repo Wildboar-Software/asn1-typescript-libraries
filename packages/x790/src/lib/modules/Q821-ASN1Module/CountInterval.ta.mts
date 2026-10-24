@@ -35,26 +35,34 @@ import {
  */
 export
 class CountInterval {
+    /**
+     * @summary `count`.
+     * @public
+     * @readonly
+     */
+    public readonly count: INTEGER;
+    /**
+     * @summary `startTime`.
+     * @public
+     * @readonly
+     */
+    public readonly startTime: GeneralizedTime;
+    /**
+     * @summary `window`.
+     * @public
+     * @readonly
+     */
+    public readonly window: TimeInterval;
+
     constructor (
-        /**
-         * @summary `count`.
-         * @public
-         * @readonly
-         */
-        readonly count: INTEGER,
-        /**
-         * @summary `startTime`.
-         * @public
-         * @readonly
-         */
-        readonly startTime: GeneralizedTime,
-        /**
-         * @summary `window`.
-         * @public
-         * @readonly
-         */
-        readonly window: TimeInterval
-    ) {}
+        count: INTEGER,
+        startTime: GeneralizedTime,
+        window: TimeInterval
+    ) {
+        this.count = count;
+        this.startTime = startTime;
+        this.window = window;
+    }
 
     /**
      * @summary Restructures an object into a CountInterval

@@ -31,45 +31,55 @@ import {
  *
  */
 export class PeriodicStrategy {
+    /**
+     * @summary `beginTime`.
+     * @description
+     *
+     * Start of the first window. Absent = the schedule starts when the
+     * shadowing agreement is activated.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly beginTime: OPTIONAL<Time>;
+    /**
+     * @summary `windowSize`.
+     * @description
+     *
+     * Length of each update window, in seconds.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly windowSize: INTEGER;
+    /**
+     * @summary `updateInterval`.
+     * @description
+     *
+     * Seconds between the start of one window and the start of the next.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly updateInterval: INTEGER;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `beginTime`.
-         * @description
-         *
-         * Start of the first window. Absent = the schedule starts when the
-         * shadowing agreement is activated.
-         *
-         * @public
-         * @readonly
-         */
-        readonly beginTime: OPTIONAL<Time>,
-        /**
-         * @summary `windowSize`.
-         * @description
-         *
-         * Length of each update window, in seconds.
-         *
-         * @public
-         * @readonly
-         */
-        readonly windowSize: INTEGER,
-        /**
-         * @summary `updateInterval`.
-         * @description
-         *
-         * Seconds between the start of one window and the start of the next.
-         *
-         * @public
-         * @readonly
-         */
-        readonly updateInterval: INTEGER,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        beginTime: OPTIONAL<Time>,
+        windowSize: INTEGER,
+        updateInterval: INTEGER,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.beginTime = beginTime;
+        this.windowSize = windowSize;
+        this.updateInterval = updateInterval;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a PeriodicStrategy

@@ -47,45 +47,53 @@ import {
  *
  */
 export class SeverityIndicatingThreshold {
+    /**
+     * @summary `threshold`.
+     * @description
+     *
+     * Observed value compared against the derived gauge (or
+     * estimate of mean). ITU-T Rec. X.739 (11/93)
+     * [§8.1.9.4.2](https://www.itu.int/rec/T-REC-X.739-199311-I).
+     * @public
+     * @readonly
+     */
+    public readonly threshold: ObservedValue;
+    /**
+     * @summary `notifyOnOff`.
+     * @description
+     *
+     * Notification switch for this submember. If false, this
+     * submember does not emit notifications. If true,
+     * `severityIndication` shall be present. ITU-T Rec. X.739
+     * (11/93)
+     * [§8.1.9.4.2](https://www.itu.int/rec/T-REC-X.739-199311-I).
+     * @public
+     * @readonly
+     */
+    public readonly notifyOnOff: BOOLEAN;
+    /**
+     * @summary `severityIndication`.
+     * @description
+     *
+     * Perceived severity of the alarm for this submember. If
+     * both notify-high and notify-low switches are true for
+     * one threshold level, one of the two values shall be
+     * `clear`. ITU-T Rec. X.739 (11/93)
+     * [§8.1.9.4.2](https://www.itu.int/rec/T-REC-X.739-199311-I).
+     * @public
+     * @readonly
+     */
+    public readonly severityIndication?: OPTIONAL<PerceivedSeverity>;
+
     constructor(
-        /**
-         * @summary `threshold`.
-         * @description
-         *
-         * Observed value compared against the derived gauge (or
-         * estimate of mean). ITU-T Rec. X.739 (11/93)
-         * [§8.1.9.4.2](https://www.itu.int/rec/T-REC-X.739-199311-I).
-         * @public
-         * @readonly
-         */
-        readonly threshold: ObservedValue,
-        /**
-         * @summary `notifyOnOff`.
-         * @description
-         *
-         * Notification switch for this submember. If false, this
-         * submember does not emit notifications. If true,
-         * `severityIndication` shall be present. ITU-T Rec. X.739
-         * (11/93)
-         * [§8.1.9.4.2](https://www.itu.int/rec/T-REC-X.739-199311-I).
-         * @public
-         * @readonly
-         */
-        readonly notifyOnOff: BOOLEAN,
-        /**
-         * @summary `severityIndication`.
-         * @description
-         *
-         * Perceived severity of the alarm for this submember. If
-         * both notify-high and notify-low switches are true for
-         * one threshold level, one of the two values shall be
-         * `clear`. ITU-T Rec. X.739 (11/93)
-         * [§8.1.9.4.2](https://www.itu.int/rec/T-REC-X.739-199311-I).
-         * @public
-         * @readonly
-         */
-        readonly severityIndication?: OPTIONAL<PerceivedSeverity>
-    ) {}
+        threshold: ObservedValue,
+        notifyOnOff: BOOLEAN,
+        severityIndication?: OPTIONAL<PerceivedSeverity>
+    ) {
+        this.threshold = threshold;
+        this.notifyOnOff = notifyOnOff;
+        this.severityIndication = severityIndication;
+    }
 
     /**
      * @summary Restructures an object into a SeverityIndicatingThreshold

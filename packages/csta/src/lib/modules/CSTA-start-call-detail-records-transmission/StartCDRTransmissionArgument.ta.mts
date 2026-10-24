@@ -41,30 +41,36 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class StartCDRTransmissionArgument {
+    /**
+     * @summary `transferMode`.
+     * @description
+     *
+     * transferAtEndOfCall, transferOnRequest, or transferOnThresholdReached
+     * (ECMA-269 §27.1.4.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly transferMode: CDRTransferMode;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * CSTACommonArguments carrying the service-table security and
+     * privateData parameters.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `transferMode`.
-         * @description
-         *
-         * transferAtEndOfCall, transferOnRequest, or transferOnThresholdReached
-         * (ECMA-269 §27.1.4.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly transferMode: CDRTransferMode,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * CSTACommonArguments carrying the service-table security and
-         * privateData parameters.
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        transferMode: CDRTransferMode,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.transferMode = transferMode;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a StartCDRTransmissionArgument

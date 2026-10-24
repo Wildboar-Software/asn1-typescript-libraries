@@ -30,14 +30,18 @@ import {
  *
  */
 export class subscription_error_ParameterType {
+    /**
+     * @summary `problem`.
+     * @public
+     * @readonly
+     */
+    public readonly problem: SubscriptionProblem;
+
     constructor(
-        /**
-         * @summary `problem`.
-         * @public
-         * @readonly
-         */
-        readonly problem: SubscriptionProblem
-    ) {}
+        problem: SubscriptionProblem
+    ) {
+        this.problem = problem;
+    }
 
     /**
      * @summary Restructures an object into a subscription_error_ParameterType

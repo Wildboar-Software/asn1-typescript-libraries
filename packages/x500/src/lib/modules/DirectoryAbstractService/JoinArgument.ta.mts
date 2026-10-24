@@ -65,80 +65,96 @@ import {
  *
  */
 export class JoinArgument {
+    /**
+     * @summary `joinBaseObject`.
+     * @description
+     *
+     * Object (or root) relative to which the additional search runs.
+     * May be an alternative name with contexts.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly joinBaseObject: Name;
+    /**
+     * @summary `domainLocalID`.
+     * @description
+     *
+     * Which DIT to start `joinBaseObject` in. Absent ⇒ all DITs the DSA
+     * knows.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly domainLocalID: OPTIONAL<DomainLocalID>;
+    /**
+     * @summary `joinSubset`.
+     * @description
+     *
+     * DEFAULT `baseObject`. `baseObject` / `oneLevel` / `wholeSubtree`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly joinSubset: OPTIONAL<JoinArgument_joinSubset>;
+    /**
+     * @summary `joinFilter`.
+     * @description
+     *
+     * Absent ⇒ use the Search `filter` (or its DEFAULT `and:{}`).
+     * Treated as `extendedFilter`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly joinFilter: OPTIONAL<Filter>;
+    /**
+     * @summary `joinAttributes`.
+     * @description
+     *
+     * SEQUENCE SIZE (1..MAX) of join pairs. Invalid/empty:
+     * `innerJoin` ⇒ empty; `leftOuterJoin` ⇒ primary only;
+     * `fullOuterJoin` ⇒ primary + unjoined additional.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly joinAttributes: OPTIONAL<JoinAttPair[]>;
+    /**
+     * @summary `joinSelection`.
+     * @description
+     *
+     * EIS for the additional search (strip uninteresting attrs from
+     * the intermediate).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly joinSelection: EntryInformationSelection;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `joinBaseObject`.
-         * @description
-         *
-         * Object (or root) relative to which the additional search runs.
-         * May be an alternative name with contexts.
-         *
-         * @public
-         * @readonly
-         */
-        readonly joinBaseObject: Name,
-        /**
-         * @summary `domainLocalID`.
-         * @description
-         *
-         * Which DIT to start `joinBaseObject` in. Absent ⇒ all DITs the DSA
-         * knows.
-         *
-         * @public
-         * @readonly
-         */
-        readonly domainLocalID: OPTIONAL<DomainLocalID>,
-        /**
-         * @summary `joinSubset`.
-         * @description
-         *
-         * DEFAULT `baseObject`. `baseObject` / `oneLevel` / `wholeSubtree`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly joinSubset: OPTIONAL<JoinArgument_joinSubset>,
-        /**
-         * @summary `joinFilter`.
-         * @description
-         *
-         * Absent ⇒ use the Search `filter` (or its DEFAULT `and:{}`).
-         * Treated as `extendedFilter`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly joinFilter: OPTIONAL<Filter>,
-        /**
-         * @summary `joinAttributes`.
-         * @description
-         *
-         * SEQUENCE SIZE (1..MAX) of join pairs. Invalid/empty:
-         * `innerJoin` ⇒ empty; `leftOuterJoin` ⇒ primary only;
-         * `fullOuterJoin` ⇒ primary + unjoined additional.
-         *
-         * @public
-         * @readonly
-         */
-        readonly joinAttributes: OPTIONAL<JoinAttPair[]>,
-        /**
-         * @summary `joinSelection`.
-         * @description
-         *
-         * EIS for the additional search (strip uninteresting attrs from
-         * the intermediate).
-         *
-         * @public
-         * @readonly
-         */
-        readonly joinSelection: EntryInformationSelection,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        joinBaseObject: Name,
+        domainLocalID: OPTIONAL<DomainLocalID>,
+        joinSubset: OPTIONAL<JoinArgument_joinSubset>,
+        joinFilter: OPTIONAL<Filter>,
+        joinAttributes: OPTIONAL<JoinAttPair[]>,
+        joinSelection: EntryInformationSelection,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.joinBaseObject = joinBaseObject;
+        this.domainLocalID = domainLocalID;
+        this.joinSubset = joinSubset;
+        this.joinFilter = joinFilter;
+        this.joinAttributes = joinAttributes;
+        this.joinSelection = joinSelection;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a JoinArgument

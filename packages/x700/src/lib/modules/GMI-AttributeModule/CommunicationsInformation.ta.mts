@@ -45,28 +45,34 @@ import {
  *
  */
 export class CommunicationsInformation {
+    /**
+     * @summary `informationType`.
+     * @description
+     *
+     * Type of the reported communications information
+     * (X.723 §9.10). Bound as attribute id `informationType`.
+     * @public
+     * @readonly
+     */
+    public readonly informationType: InformationType;
+    /**
+     * @summary `informationData`.
+     * @description
+     *
+     * Optional structured payload (X.723 §9.9). Bound as
+     * attribute id `informationData`.
+     * @public
+     * @readonly
+     */
+    public readonly informationData?: OPTIONAL<InformationData>;
+
     constructor(
-        /**
-         * @summary `informationType`.
-         * @description
-         *
-         * Type of the reported communications information
-         * (X.723 §9.10). Bound as attribute id `informationType`.
-         * @public
-         * @readonly
-         */
-        readonly informationType: InformationType,
-        /**
-         * @summary `informationData`.
-         * @description
-         *
-         * Optional structured payload (X.723 §9.9). Bound as
-         * attribute id `informationData`.
-         * @public
-         * @readonly
-         */
-        readonly informationData?: OPTIONAL<InformationData>
-    ) {}
+        informationType: InformationType,
+        informationData?: OPTIONAL<InformationData>
+    ) {
+        this.informationType = informationType;
+        this.informationData = informationData;
+    }
 
     /**
      * @summary Restructures an object into a CommunicationsInformation

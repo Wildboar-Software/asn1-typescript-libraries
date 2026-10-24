@@ -43,60 +43,72 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class RegistrationInfoArg {
+    /**
+     * @summary `serviceCrossRefID`.
+     * @description
+     *
+     * Associates this segment with the original request. ECMA-269
+     * segmented-response model.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly serviceCrossRefID: ServiceCrossRefID;
+    /**
+     * @summary `segmentID`.
+     * @description
+     *
+     * Segment number; each successive segment increments by one. ECMA-269.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly segmentID: OPTIONAL<INTEGER>;
+    /**
+     * @summary `lastSegment`.
+     * @description
+     *
+     * TRUE if this is the last segment for the serviceCrossRefID. ECMA-269.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly lastSegment: BOOLEAN;
+    /**
+     * @summary `registrationList`.
+     * @description
+     *
+     * Zero or more registrations (type, ID, optional object). ECMA-269
+     * §14.2.6.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly registrationList: RegistrationList;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * CSTA common arguments (security, private data, timestamps). ECMA-269.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `serviceCrossRefID`.
-         * @description
-         *
-         * Associates this segment with the original request. ECMA-269
-         * segmented-response model.
-         *
-         * @public
-         * @readonly
-         */
-        readonly serviceCrossRefID: ServiceCrossRefID,
-        /**
-         * @summary `segmentID`.
-         * @description
-         *
-         * Segment number; each successive segment increments by one. ECMA-269.
-         *
-         * @public
-         * @readonly
-         */
-        readonly segmentID: OPTIONAL<INTEGER>,
-        /**
-         * @summary `lastSegment`.
-         * @description
-         *
-         * TRUE if this is the last segment for the serviceCrossRefID. ECMA-269.
-         *
-         * @public
-         * @readonly
-         */
-        readonly lastSegment: BOOLEAN,
-        /**
-         * @summary `registrationList`.
-         * @description
-         *
-         * Zero or more registrations (type, ID, optional object). ECMA-269
-         * §14.2.6.
-         *
-         * @public
-         * @readonly
-         */
-        readonly registrationList: RegistrationList,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * CSTA common arguments (security, private data, timestamps). ECMA-269.
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        serviceCrossRefID: ServiceCrossRefID,
+        segmentID: OPTIONAL<INTEGER>,
+        lastSegment: BOOLEAN,
+        registrationList: RegistrationList,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.serviceCrossRefID = serviceCrossRefID;
+        this.segmentID = segmentID;
+        this.lastSegment = lastSegment;
+        this.registrationList = registrationList;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a RegistrationInfoArg

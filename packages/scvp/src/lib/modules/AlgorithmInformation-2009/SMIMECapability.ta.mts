@@ -26,20 +26,26 @@ import * as $ from "@wildboar/asn1/functional";
  *
  */
 export class SMIMECapability {
+    /**
+     * @summary `capabilityID`.
+     * @public
+     * @readonly
+     */
+    public readonly capabilityID: OBJECT_IDENTIFIER;
+    /**
+     * @summary `parameters`.
+     * @public
+     * @readonly
+     */
+    public readonly parameters?: OPTIONAL<_Element>;
+
     constructor(
-        /**
-         * @summary `capabilityID`.
-         * @public
-         * @readonly
-         */
-        readonly capabilityID: OBJECT_IDENTIFIER,
-        /**
-         * @summary `parameters`.
-         * @public
-         * @readonly
-         */
-        readonly parameters?: OPTIONAL<_Element>
-    ) {}
+        capabilityID: OBJECT_IDENTIFIER,
+        parameters?: OPTIONAL<_Element>
+    ) {
+        this.capabilityID = capabilityID;
+        this.parameters = parameters;
+    }
 
     /**
      * @summary Restructures an object into a SMIMECapability

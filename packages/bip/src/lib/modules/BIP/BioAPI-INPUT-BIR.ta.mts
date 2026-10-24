@@ -41,18 +41,22 @@ import {
  *
  */
 export class BioAPI_INPUT_BIR {
+  /**
+   * @summary `inputBIR`.
+   * @description
+   *
+   * Database key, BSP handle, or full BIR. X.1083 §15.46–15.47.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly inputBIR: BioAPI_INPUT_BIR_inputBIR;
+
   constructor(
-    /**
-     * @summary `inputBIR`.
-     * @description
-     *
-     * Database key, BSP handle, or full BIR. X.1083 §15.46–15.47.
-     *
-     * @public
-     * @readonly
-     */
-    readonly inputBIR: BioAPI_INPUT_BIR_inputBIR
-  ) {}
+    inputBIR: BioAPI_INPUT_BIR_inputBIR
+  ) {
+    this.inputBIR = inputBIR;
+  }
 
   /**
    * @summary Restructures an object into a BioAPI_INPUT_BIR

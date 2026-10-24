@@ -56,46 +56,56 @@ import {
  *
  */
 export class PDUSequence {
+    /**
+     * @summary `pDUType`.
+     * @description
+     *
+     * Type of PDU to transmit (OID). X.737 §7.5.6.
+     * @public
+     * @readonly
+     */
+    public readonly pDUType: PDUType;
+    /**
+     * @summary `parameter`.
+     * @description
+     *
+     * Parameters of that PDU. X.737 A.7.
+     * @public
+     * @readonly
+     */
+    public readonly parameter: Parameter;
+    /**
+     * @summary `contCond`.
+     * @description
+     *
+     * When to send the next element: fixed
+     * interval, or after matching `pDUReception`. X.737 §7.5.6.
+     * @public
+     * @readonly
+     */
+    public readonly contCond: ContCond;
+    /**
+     * @summary `waitDuration`.
+     * @description
+     *
+     * Wait associated with this element.
+     * Optional. X.737 A.7.
+     * @public
+     * @readonly
+     */
+    public readonly waitDuration?: OPTIONAL<WaitDuration>;
+
     constructor(
-        /**
-         * @summary `pDUType`.
-         * @description
-         *
-         * Type of PDU to transmit (OID). X.737 §7.5.6.
-         * @public
-         * @readonly
-         */
-        readonly pDUType: PDUType,
-        /**
-         * @summary `parameter`.
-         * @description
-         *
-         * Parameters of that PDU. X.737 A.7.
-         * @public
-         * @readonly
-         */
-        readonly parameter: Parameter,
-        /**
-         * @summary `contCond`.
-         * @description
-         *
-         * When to send the next element: fixed
-         * interval, or after matching `pDUReception`. X.737 §7.5.6.
-         * @public
-         * @readonly
-         */
-        readonly contCond: ContCond,
-        /**
-         * @summary `waitDuration`.
-         * @description
-         *
-         * Wait associated with this element.
-         * Optional. X.737 A.7.
-         * @public
-         * @readonly
-         */
-        readonly waitDuration?: OPTIONAL<WaitDuration>
-    ) {}
+        pDUType: PDUType,
+        parameter: Parameter,
+        contCond: ContCond,
+        waitDuration?: OPTIONAL<WaitDuration>
+    ) {
+        this.pDUType = pDUType;
+        this.parameter = parameter;
+        this.contCond = contCond;
+        this.waitDuration = waitDuration;
+    }
 
     /**
      * @summary Restructures an object into a PDUSequence

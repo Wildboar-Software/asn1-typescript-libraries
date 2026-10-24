@@ -29,30 +29,36 @@ import { TransactionId, _decode_TransactionId, _encode_TransactionId } from "../
  */
 export
 class TransactionAck {
+    /**
+     * @summary `firstAck`.
+     * @description
+     *
+     * First transaction identifier covered by this acknowledgement. When
+     * `lastAck` is omitted, only this identifier is acknowledged.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly firstAck: TransactionId;
+    /**
+     * @summary `lastAck`.
+     * @description
+     *
+     * Last transaction identifier of an inclusive range beginning at
+     * `firstAck`. Omitted to acknowledge a single identifier.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly lastAck?: OPTIONAL<TransactionId>;
+
     constructor (
-        /**
-         * @summary `firstAck`.
-         * @description
-         *
-         * First transaction identifier covered by this acknowledgement. When
-         * `lastAck` is omitted, only this identifier is acknowledged.
-         *
-         * @public
-         * @readonly
-         */
-        readonly firstAck: TransactionId,
-        /**
-         * @summary `lastAck`.
-         * @description
-         *
-         * Last transaction identifier of an inclusive range beginning at
-         * `firstAck`. Omitted to acknowledge a single identifier.
-         *
-         * @public
-         * @readonly
-         */
-        readonly lastAck?: OPTIONAL<TransactionId>
-    ) {}
+        firstAck: TransactionId,
+        lastAck?: OPTIONAL<TransactionId>
+    ) {
+        this.firstAck = firstAck;
+        this.lastAck = lastAck;
+    }
 
     /**
      * @summary Restructures an object into a TransactionAck

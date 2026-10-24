@@ -30,31 +30,39 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
  */
 export
 class FailureReportRes {
+    /**
+     * @summary `ggsn_Address`.
+     * @description
+     *
+     * GGSN IP-address as defined in 3GPP TS 23.003 (3GPP TS 29.002 V19.1.0
+     * clauses 13.2.2 and 7.6.2.40).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ggsn_Address?: OPTIONAL<GSN_Address>;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `ggsn_Address`.
-         * @description
-         *
-         * GGSN IP-address as defined in 3GPP TS 23.003 (3GPP TS 29.002 V19.1.0
-         * clauses 13.2.2 and 7.6.2.40).
-         *
-         * @public
-         * @readonly
-         */
-        readonly ggsn_Address?: OPTIONAL<GSN_Address>,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        ggsn_Address?: OPTIONAL<GSN_Address>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.ggsn_Address = ggsn_Address;
+        this.extensionContainer = extensionContainer;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a FailureReportRes

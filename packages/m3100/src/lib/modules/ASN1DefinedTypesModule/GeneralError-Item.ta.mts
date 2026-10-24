@@ -40,32 +40,42 @@ import {
  *
  */
 export class GeneralError_Item {
+    /**
+     * @summary `cause`.
+     * @public
+     * @readonly
+     */
+    public readonly cause: GeneralErrorCause;
+    /**
+     * @summary `details`.
+     * @public
+     * @readonly
+     */
+    public readonly details?: OPTIONAL<GraphicString>;
+    /**
+     * @summary `relatedObjects`.
+     * @public
+     * @readonly
+     */
+    public readonly relatedObjects?: OPTIONAL<ObjectInstance[]>;
+    /**
+     * @summary `attributeList`.
+     * @public
+     * @readonly
+     */
+    public readonly attributeList?: OPTIONAL<AttributeList>;
+
     constructor(
-        /**
-         * @summary `cause`.
-         * @public
-         * @readonly
-         */
-        readonly cause: GeneralErrorCause,
-        /**
-         * @summary `details`.
-         * @public
-         * @readonly
-         */
-        readonly details?: OPTIONAL<GraphicString>,
-        /**
-         * @summary `relatedObjects`.
-         * @public
-         * @readonly
-         */
-        readonly relatedObjects?: OPTIONAL<ObjectInstance[]>,
-        /**
-         * @summary `attributeList`.
-         * @public
-         * @readonly
-         */
-        readonly attributeList?: OPTIONAL<AttributeList>
-    ) {}
+        cause: GeneralErrorCause,
+        details?: OPTIONAL<GraphicString>,
+        relatedObjects?: OPTIONAL<ObjectInstance[]>,
+        attributeList?: OPTIONAL<AttributeList>
+    ) {
+        this.cause = cause;
+        this.details = details;
+        this.relatedObjects = relatedObjects;
+        this.attributeList = attributeList;
+    }
 
     /**
      * @summary Restructures an object into a GeneralError_Item

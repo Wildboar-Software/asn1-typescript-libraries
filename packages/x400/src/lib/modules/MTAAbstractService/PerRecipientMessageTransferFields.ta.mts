@@ -59,38 +59,50 @@ import {
  *
  */
 export class PerRecipientMessageTransferFields {
+    /**
+     * @summary `recipient_name`.
+     * @public
+     * @readonly
+     */
+    public readonly recipient_name: RecipientName;
+    /**
+     * @summary `originally_specified_recipient_number`.
+     * @public
+     * @readonly
+     */
+    public readonly originally_specified_recipient_number: OriginallySpecifiedRecipientNumber;
+    /**
+     * @summary `per_recipient_indicators`.
+     * @public
+     * @readonly
+     */
+    public readonly per_recipient_indicators: PerRecipientIndicators;
+    /**
+     * @summary `explicit_conversion`.
+     * @public
+     * @readonly
+     */
+    public readonly explicit_conversion?: OPTIONAL<ExplicitConversion>;
+    /**
+     * @summary `extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<ExtensionField[]>;
+
     constructor(
-        /**
-         * @summary `recipient_name`.
-         * @public
-         * @readonly
-         */
-        readonly recipient_name: RecipientName,
-        /**
-         * @summary `originally_specified_recipient_number`.
-         * @public
-         * @readonly
-         */
-        readonly originally_specified_recipient_number: OriginallySpecifiedRecipientNumber,
-        /**
-         * @summary `per_recipient_indicators`.
-         * @public
-         * @readonly
-         */
-        readonly per_recipient_indicators: PerRecipientIndicators,
-        /**
-         * @summary `explicit_conversion`.
-         * @public
-         * @readonly
-         */
-        readonly explicit_conversion?: OPTIONAL<ExplicitConversion>,
-        /**
-         * @summary `extensions`.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<ExtensionField[]>
-    ) {}
+        recipient_name: RecipientName,
+        originally_specified_recipient_number: OriginallySpecifiedRecipientNumber,
+        per_recipient_indicators: PerRecipientIndicators,
+        explicit_conversion?: OPTIONAL<ExplicitConversion>,
+        extensions?: OPTIONAL<ExtensionField[]>
+    ) {
+        this.recipient_name = recipient_name;
+        this.originally_specified_recipient_number = originally_specified_recipient_number;
+        this.per_recipient_indicators = per_recipient_indicators;
+        this.explicit_conversion = explicit_conversion;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a PerRecipientMessageTransferFields

@@ -37,28 +37,34 @@ import {
  *
  */
 export class ResponseStatus {
+  /**
+   * @summary `statusCode`.
+   * @description
+   *
+   * `CVStatusCode` for the whole request ([RFC 5055 §4.4](https://datatracker.ietf.org/doc/html/rfc5055#section-4.4)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly statusCode?: OPTIONAL<CVStatusCode>;
+  /**
+   * @summary `errorMessage`.
+   * @description
+   *
+   * Optional human-readable UTF-8 status text ([RFC 5055 §4.4](https://datatracker.ietf.org/doc/html/rfc5055#section-4.4)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly errorMessage?: OPTIONAL<UTF8String>;
+
   constructor(
-    /**
-     * @summary `statusCode`.
-     * @description
-     *
-     * `CVStatusCode` for the whole request ([RFC 5055 §4.4](https://datatracker.ietf.org/doc/html/rfc5055#section-4.4)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly statusCode?: OPTIONAL<CVStatusCode>,
-    /**
-     * @summary `errorMessage`.
-     * @description
-     *
-     * Optional human-readable UTF-8 status text ([RFC 5055 §4.4](https://datatracker.ietf.org/doc/html/rfc5055#section-4.4)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly errorMessage?: OPTIONAL<UTF8String>
-  ) {}
+    statusCode?: OPTIONAL<CVStatusCode>,
+    errorMessage?: OPTIONAL<UTF8String>
+  ) {
+    this.statusCode = statusCode;
+    this.errorMessage = errorMessage;
+  }
 
   /**
    * @summary Restructures an object into a ResponseStatus

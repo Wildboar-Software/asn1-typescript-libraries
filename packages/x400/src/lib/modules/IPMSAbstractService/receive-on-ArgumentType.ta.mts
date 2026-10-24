@@ -30,20 +30,26 @@ import { ON, _decode_ON, _encode_ON } from '../IPMSInformationObjects/ON.ta.mjs'
  *
  */
 export class receive_on_ArgumentType {
+    /**
+     * @summary `envelope`.
+     * @public
+     * @readonly
+     */
+    public readonly envelope: MessageDeliveryEnvelope;
+    /**
+     * @summary `content`.
+     * @public
+     * @readonly
+     */
+    public readonly content: ON;
+
     constructor(
-        /**
-         * @summary `envelope`.
-         * @public
-         * @readonly
-         */
-        readonly envelope: MessageDeliveryEnvelope,
-        /**
-         * @summary `content`.
-         * @public
-         * @readonly
-         */
-        readonly content: ON
-    ) {}
+        envelope: MessageDeliveryEnvelope,
+        content: ON
+    ) {
+        this.envelope = envelope;
+        this.content = content;
+    }
 
     /**
      * @summary Restructures an object into a receive_on_ArgumentType

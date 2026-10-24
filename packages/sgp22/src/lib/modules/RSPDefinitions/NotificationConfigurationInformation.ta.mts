@@ -32,29 +32,35 @@ import { NotificationEvent, _decode_NotificationEvent, _encode_NotificationEvent
  */
 export
 class NotificationConfigurationInformation {
+    /**
+     * @summary `profileManagementOperation`.
+     * @description
+     * 
+     * Event bits that trigger a notification to `notificationAddress`. One
+     * entry may name more than one event. SGP.22 v3.1 §5.5.3.
+     * 
+     * @public
+     * @readonly
+     */
+    public readonly profileManagementOperation: NotificationEvent;
+    /**
+     * @summary `notificationAddress`.
+     * @description
+     * 
+     * FQDN the LPA forwards the notification to. SGP.22 v3.1 §5.5.3.
+     * 
+     * @public
+     * @readonly
+     */
+    public readonly notificationAddress: UTF8String;
+
     constructor (
-        /**
-         * @summary `profileManagementOperation`.
-         * @description
-         * 
-         * Event bits that trigger a notification to `notificationAddress`. One
-         * entry may name more than one event. SGP.22 v3.1 §5.5.3.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly profileManagementOperation: NotificationEvent,
-        /**
-         * @summary `notificationAddress`.
-         * @description
-         * 
-         * FQDN the LPA forwards the notification to. SGP.22 v3.1 §5.5.3.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly notificationAddress: UTF8String
-    ) {}
+        profileManagementOperation: NotificationEvent,
+        notificationAddress: UTF8String
+    ) {
+        this.profileManagementOperation = profileManagementOperation;
+        this.notificationAddress = notificationAddress;
+    }
 
     /**
      * @summary Restructures an object into a NotificationConfigurationInformation

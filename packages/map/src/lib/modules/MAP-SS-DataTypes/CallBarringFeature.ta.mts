@@ -29,34 +29,42 @@ import { SS_Status, _decode_SS_Status, _encode_SS_Status } from "../MAP-SS-DataT
  */
 export
 class CallBarringFeature {
+    /**
+     * @summary `basicService`.
+     * @description
+     *
+     * Basic Service Group (clause 7.6.4.40).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly basicService?: OPTIONAL<BasicServiceCode>;
+    /**
+     * @summary `ss_Status`.
+     * @description
+     *
+     * SS-Status (clause 7.6.4.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ss_Status?: OPTIONAL<SS_Status>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `basicService`.
-         * @description
-         *
-         * Basic Service Group (clause 7.6.4.40).
-         *
-         * @public
-         * @readonly
-         */
-        readonly basicService?: OPTIONAL<BasicServiceCode>,
-        /**
-         * @summary `ss_Status`.
-         * @description
-         *
-         * SS-Status (clause 7.6.4.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly ss_Status?: OPTIONAL<SS_Status>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        basicService?: OPTIONAL<BasicServiceCode>,
+        ss_Status?: OPTIONAL<SS_Status>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.basicService = basicService;
+        this.ss_Status = ss_Status;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a CallBarringFeature

@@ -59,76 +59,90 @@ import {
  *
  */
 export class CompareRequest implements CommonReqComp {
+    /**
+     * @summary `attrCerts`.
+     * @description
+     *
+     * AC or AC path holding privilege. Absent → privilege is in the
+     * accessor's end-entity PKC.
+     * ITU-T Rec. X.1080.0 (2017) Cor.1
+     * [§8.2](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly attrCerts: OPTIONAL<AttributeCertificates>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `serviceId`.
+     * @description
+     *
+     * Service being invoked.
+     * ITU-T Rec. X.1080.0 (2017) Cor.1
+     * [§8.2](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly serviceId: OBJECT_IDENTIFIER; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `invokId`.
+     * @description
+     *
+     * 0 for the first operation, then increment. Detects missing
+     * requests and replay. Recipient echoes it in the reply.
+     * ITU-T Rec. X.1080.0 (2017) Cor.1
+     * [§8.2](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly invokId: INTEGER; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `object`.
+     * @description
+     *
+     * Distinguished name of the object to compare against.
+     * ITU-T Rec. X.1080.0 (2017) Cor.1
+     * [§8.5](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly object: DistinguishedName;
+    /**
+     * @summary `purported`.
+     * @description
+     *
+     * Purported `AttributeValueAssertion`.
+     * ITU-T Rec. X.1080.0 (2017) Cor.1
+     * [§8.5](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly purported: AttributeValueAssertion;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `attrCerts`.
-         * @description
-         *
-         * AC or AC path holding privilege. Absent → privilege is in the
-         * accessor's end-entity PKC.
-         * ITU-T Rec. X.1080.0 (2017) Cor.1
-         * [§8.2](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly attrCerts: OPTIONAL<AttributeCertificates> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `serviceId`.
-         * @description
-         *
-         * Service being invoked.
-         * ITU-T Rec. X.1080.0 (2017) Cor.1
-         * [§8.2](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly serviceId: OBJECT_IDENTIFIER /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `invokId`.
-         * @description
-         *
-         * 0 for the first operation, then increment. Detects missing
-         * requests and replay. Recipient echoes it in the reply.
-         * ITU-T Rec. X.1080.0 (2017) Cor.1
-         * [§8.2](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly invokId: INTEGER /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `object`.
-         * @description
-         *
-         * Distinguished name of the object to compare against.
-         * ITU-T Rec. X.1080.0 (2017) Cor.1
-         * [§8.5](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly object: DistinguishedName,
-        /**
-         * @summary `purported`.
-         * @description
-         *
-         * Purported `AttributeValueAssertion`.
-         * ITU-T Rec. X.1080.0 (2017) Cor.1
-         * [§8.5](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly purported: AttributeValueAssertion,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        attrCerts: OPTIONAL<AttributeCertificates>,
+        serviceId: OBJECT_IDENTIFIER,
+        invokId: INTEGER,
+        object: DistinguishedName,
+        purported: AttributeValueAssertion,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.attrCerts = attrCerts;
+        this.serviceId = serviceId;
+        this.invokId = invokId;
+        this.object = object;
+        this.purported = purported;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a CompareRequest

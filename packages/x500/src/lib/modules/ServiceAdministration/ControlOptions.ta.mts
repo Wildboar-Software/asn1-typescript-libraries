@@ -46,32 +46,42 @@ import {
  *
  */
 export class ControlOptions {
+    /**
+     * @summary `serviceControls`.
+     * @public
+     * @readonly
+     */
+    public readonly serviceControls?: OPTIONAL<ServiceControlOptions>;
+    /**
+     * @summary `searchOptions`.
+     * @public
+     * @readonly
+     */
+    public readonly searchOptions?: OPTIONAL<SearchControlOptions>;
+    /**
+     * @summary `hierarchyOptions`.
+     * @public
+     * @readonly
+     */
+    public readonly hierarchyOptions?: OPTIONAL<HierarchySelections>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `serviceControls`.
-         * @public
-         * @readonly
-         */
-        readonly serviceControls?: OPTIONAL<ServiceControlOptions>,
-        /**
-         * @summary `searchOptions`.
-         * @public
-         * @readonly
-         */
-        readonly searchOptions?: OPTIONAL<SearchControlOptions>,
-        /**
-         * @summary `hierarchyOptions`.
-         * @public
-         * @readonly
-         */
-        readonly hierarchyOptions?: OPTIONAL<HierarchySelections>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        serviceControls?: OPTIONAL<ServiceControlOptions>,
+        searchOptions?: OPTIONAL<SearchControlOptions>,
+        hierarchyOptions?: OPTIONAL<HierarchySelections>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.serviceControls = serviceControls;
+        this.searchOptions = searchOptions;
+        this.hierarchyOptions = hierarchyOptions;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a ControlOptions

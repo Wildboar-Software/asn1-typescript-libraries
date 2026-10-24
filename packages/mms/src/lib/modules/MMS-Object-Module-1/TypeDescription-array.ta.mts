@@ -38,39 +38,47 @@ import { TypeSpecification, _decode_TypeSpecification, _encode_TypeSpecification
  */
 export
 class TypeDescription_array {
+    /**
+     * @summary `packed`.
+     * @description
+     *
+     * If true, storage-optimization rules apply to this array sub-tree
+     * (vadr; else false). ISO 9506-1:2003 §14.2.2.2.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly packed: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `numberOfElements`.
+     * @description
+     *
+     * Element count; indices 0 .. n-1. ISO 9506-1:2003 §14.2.2.2.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly numberOfElements: Unsigned32;
+    /**
+     * @summary `elementType`.
+     * @description
+     *
+     * Type of every element. ISO 9506-1:2003 §14.2.2.2.3.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly elementType: TypeSpecification;
+
     constructor (
-        /**
-         * @summary `packed`.
-         * @description
-         *
-         * If true, storage-optimization rules apply to this array sub-tree
-         * (vadr; else false). ISO 9506-1:2003 §14.2.2.2.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly packed: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `numberOfElements`.
-         * @description
-         *
-         * Element count; indices 0 .. n-1. ISO 9506-1:2003 §14.2.2.2.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly numberOfElements: Unsigned32,
-        /**
-         * @summary `elementType`.
-         * @description
-         *
-         * Type of every element. ISO 9506-1:2003 §14.2.2.2.3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly elementType: TypeSpecification
-    ) {}
+        packed: OPTIONAL<BOOLEAN>,
+        numberOfElements: Unsigned32,
+        elementType: TypeSpecification
+    ) {
+        this.packed = packed;
+        this.numberOfElements = numberOfElements;
+        this.elementType = elementType;
+    }
 
     /**
      * @summary Restructures an object into a TypeDescription_array

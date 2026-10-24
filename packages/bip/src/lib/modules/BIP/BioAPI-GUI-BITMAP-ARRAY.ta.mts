@@ -36,19 +36,23 @@ import {
  *
  */
 export class BioAPI_GUI_BITMAP_ARRAY {
+  /**
+   * @summary `guiBitmaps`.
+   * @description
+   *
+   * Bitmaps in order. C count is the sequence length. X.1083
+   * §15.35.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly guiBitmaps: BioAPI_GUI_BITMAP[];
+
   constructor(
-    /**
-     * @summary `guiBitmaps`.
-     * @description
-     *
-     * Bitmaps in order. C count is the sequence length. X.1083
-     * §15.35.
-     *
-     * @public
-     * @readonly
-     */
-    readonly guiBitmaps: BioAPI_GUI_BITMAP[]
-  ) {}
+    guiBitmaps: BioAPI_GUI_BITMAP[]
+  ) {
+    this.guiBitmaps = guiBitmaps;
+  }
 
   /**
    * @summary Restructures an object into a BioAPI_GUI_BITMAP_ARRAY

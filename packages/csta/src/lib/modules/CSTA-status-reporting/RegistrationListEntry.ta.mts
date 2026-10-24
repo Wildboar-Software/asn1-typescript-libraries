@@ -42,40 +42,48 @@ import { DeviceID, _decode_DeviceID, _encode_DeviceID } from "../CSTA-device-ide
  */
 export
 class RegistrationListEntry {
+    /**
+     * @summary `registrationType`.
+     * @description
+     *
+     * Escape, I/O, routeing, or system-status registration. ECMA-269
+     * §14.2.6.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly registrationType: RegistrationType;
+    /**
+     * @summary `registrationID`.
+     * @description
+     *
+     * ID returned when the registration was created. ECMA-269 §14.2.6.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly registrationID: IA5String;
+    /**
+     * @summary `registrationObject`.
+     * @description
+     *
+     * Device associated with the registration, if it was created for a
+     * specific object. ECMA-269 §14.2.6.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly registrationObject?: OPTIONAL<DeviceID>;
+
     constructor (
-        /**
-         * @summary `registrationType`.
-         * @description
-         *
-         * Escape, I/O, routeing, or system-status registration. ECMA-269
-         * §14.2.6.
-         *
-         * @public
-         * @readonly
-         */
-        readonly registrationType: RegistrationType,
-        /**
-         * @summary `registrationID`.
-         * @description
-         *
-         * ID returned when the registration was created. ECMA-269 §14.2.6.
-         *
-         * @public
-         * @readonly
-         */
-        readonly registrationID: IA5String,
-        /**
-         * @summary `registrationObject`.
-         * @description
-         *
-         * Device associated with the registration, if it was created for a
-         * specific object. ECMA-269 §14.2.6.
-         *
-         * @public
-         * @readonly
-         */
-        readonly registrationObject?: OPTIONAL<DeviceID>
-    ) {}
+        registrationType: RegistrationType,
+        registrationID: IA5String,
+        registrationObject?: OPTIONAL<DeviceID>
+    ) {
+        this.registrationType = registrationType;
+        this.registrationID = registrationID;
+        this.registrationObject = registrationObject;
+    }
 
     /**
      * @summary Restructures an object into a RegistrationListEntry

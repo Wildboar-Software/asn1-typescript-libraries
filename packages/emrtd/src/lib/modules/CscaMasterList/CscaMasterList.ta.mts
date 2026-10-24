@@ -45,24 +45,30 @@ import { type Certificate, _decode_Certificate, _encode_Certificate } from "../A
  */
 export
 class CscaMasterList {
+    /**
+     * List syntax version. Only `v0` is assigned.
+     * @summary `version`.
+     * @public
+     * @readonly
+     */
+    public readonly version: CscaMasterListVersion;
+    /**
+     * CSCA certificates. The signer certificate and the CSCA certificate
+     * that verifies the CMS signature are carried in the enclosing
+     * `SignedData`, not in this set.
+     * @summary `certList`.
+     * @public
+     * @readonly
+     */
+    public readonly certList: Certificate[];
+
     constructor (
-        /**
-         * List syntax version. Only `v0` is assigned.
-         * @summary `version`.
-         * @public
-         * @readonly
-         */
-        readonly version: CscaMasterListVersion,
-        /**
-         * CSCA certificates. The signer certificate and the CSCA certificate
-         * that verifies the CMS signature are carried in the enclosing
-         * `SignedData`, not in this set.
-         * @summary `certList`.
-         * @public
-         * @readonly
-         */
-        readonly certList: Certificate[]
-    ) {}
+        version: CscaMasterListVersion,
+        certList: Certificate[]
+    ) {
+        this.version = version;
+        this.certList = certList;
+    }
 
     /**
      * @summary Restructures an object into a CscaMasterList

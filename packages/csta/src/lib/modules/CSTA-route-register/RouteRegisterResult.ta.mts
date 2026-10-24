@@ -43,37 +43,45 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class RouteRegisterResult {
+    /**
+     * @summary `routeRegisterReqID`.
+     * @description
+     *
+     * SF-allocated registration ID. Valid until Cancel or Abort.
+     * Unique across the CSTA service boundary.
+     * @public
+     * @readonly
+     */
+    public readonly routeRegisterReqID: RouteRegisterReqID;
+    /**
+     * @summary `actualRouteingMediaClass`.
+     * @description
+     *
+     * Media classes actually registered.
+     * @public
+     * @readonly
+     */
+    public readonly actualRouteingMediaClass?: OPTIONAL<MediaClass>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `routeRegisterReqID`.
-         * @description
-         *
-         * SF-allocated registration ID. Valid until Cancel or Abort.
-         * Unique across the CSTA service boundary.
-         * @public
-         * @readonly
-         */
-        readonly routeRegisterReqID: RouteRegisterReqID,
-        /**
-         * @summary `actualRouteingMediaClass`.
-         * @description
-         *
-         * Media classes actually registered.
-         * @public
-         * @readonly
-         */
-        readonly actualRouteingMediaClass?: OPTIONAL<MediaClass>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        routeRegisterReqID: RouteRegisterReqID,
+        actualRouteingMediaClass?: OPTIONAL<MediaClass>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.routeRegisterReqID = routeRegisterReqID;
+        this.actualRouteingMediaClass = actualRouteingMediaClass;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a RouteRegisterResult

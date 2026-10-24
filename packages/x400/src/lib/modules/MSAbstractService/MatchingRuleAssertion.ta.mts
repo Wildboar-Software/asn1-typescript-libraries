@@ -36,26 +36,34 @@ import {
  *
  */
 export class MatchingRuleAssertion {
+    /**
+     * @summary `matching_rule`.
+     * @public
+     * @readonly
+     */
+    public readonly matching_rule: OBJECT_IDENTIFIER;
+    /**
+     * @summary `attribute_type`.
+     * @public
+     * @readonly
+     */
+    public readonly attribute_type: AttributeType;
+    /**
+     * @summary `match_value`.
+     * @public
+     * @readonly
+     */
+    public readonly match_value: _Element;
+
     constructor(
-        /**
-         * @summary `matching_rule`.
-         * @public
-         * @readonly
-         */
-        readonly matching_rule: OBJECT_IDENTIFIER,
-        /**
-         * @summary `attribute_type`.
-         * @public
-         * @readonly
-         */
-        readonly attribute_type: AttributeType,
-        /**
-         * @summary `match_value`.
-         * @public
-         * @readonly
-         */
-        readonly match_value: _Element
-    ) {}
+        matching_rule: OBJECT_IDENTIFIER,
+        attribute_type: AttributeType,
+        match_value: _Element
+    ) {
+        this.matching_rule = matching_rule;
+        this.attribute_type = attribute_type;
+        this.match_value = match_value;
+    }
 
     /**
      * @summary Restructures an object into a MatchingRuleAssertion

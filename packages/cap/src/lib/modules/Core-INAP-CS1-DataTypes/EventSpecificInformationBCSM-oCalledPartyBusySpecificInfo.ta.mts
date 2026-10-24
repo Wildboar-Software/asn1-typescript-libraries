@@ -31,14 +31,18 @@ import { Cause, _decode_Cause, _encode_Cause } from "../Core-INAP-CS1-DataTypes/
  */
 export
 class EventSpecificInformationBCSM_oCalledPartyBusySpecificInfo {
+    /**
+     * @summary `busyCause`.
+     * @public
+     * @readonly
+     */
+    public readonly busyCause?: OPTIONAL<Cause>;
+
     constructor (
-        /**
-         * @summary `busyCause`.
-         * @public
-         * @readonly
-         */
-        readonly busyCause?: OPTIONAL<Cause>
-    ) {}
+        busyCause?: OPTIONAL<Cause>
+    ) {
+        this.busyCause = busyCause;
+    }
 
     /**
      * @summary Restructures an object into a EventSpecificInformationBCSM_oCalledPartyBusySpecificInfo

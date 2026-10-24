@@ -37,17 +37,21 @@ import {
  *
  */
 export class ReceiptNoticeType {
+  /**
+   * @summary `operatorPostmark`.
+   * @description Cmail server's digital postmark on the
+   * notice of reception. ITU-T Rec. X.1341 (09/2015) §9.2,
+   * Annex B.
+   * @public
+   * @readonly
+   */
+  public readonly operatorPostmark: DigitalPostmarkType;
+
   constructor(
-    /**
-     * @summary `operatorPostmark`.
-     * @description Cmail server's digital postmark on the
-     * notice of reception. ITU-T Rec. X.1341 (09/2015) §9.2,
-     * Annex B.
-     * @public
-     * @readonly
-     */
-    readonly operatorPostmark: DigitalPostmarkType
-  ) {}
+    operatorPostmark: DigitalPostmarkType
+  ) {
+    this.operatorPostmark = operatorPostmark;
+  }
 
   /**
    * @summary Restructures an object into a ReceiptNoticeType

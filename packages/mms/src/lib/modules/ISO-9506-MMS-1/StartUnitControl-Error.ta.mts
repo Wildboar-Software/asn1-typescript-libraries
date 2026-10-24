@@ -35,29 +35,35 @@ import { ProgramInvocationState, _decode_ProgramInvocationState, _encode_Program
  */
 export
 class StartUnitControl_Error {
+    /**
+     * @summary `programInvocationName`.
+     * @description
+     *
+     * PI whose Start failed. ISO 9506-1:2003 §13.6.1.3.1.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly programInvocationName?: OPTIONAL<Identifier>;
+    /**
+     * @summary `programInvocationState`.
+     * @description
+     *
+     * That PI's state after the failed Start. ISO 9506-1:2003
+     * §13.6.1.3.1.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly programInvocationState?: OPTIONAL<ProgramInvocationState>;
+
     constructor (
-        /**
-         * @summary `programInvocationName`.
-         * @description
-         *
-         * PI whose Start failed. ISO 9506-1:2003 §13.6.1.3.1.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly programInvocationName?: OPTIONAL<Identifier>,
-        /**
-         * @summary `programInvocationState`.
-         * @description
-         *
-         * That PI's state after the failed Start. ISO 9506-1:2003
-         * §13.6.1.3.1.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly programInvocationState?: OPTIONAL<ProgramInvocationState>
-    ) {}
+        programInvocationName?: OPTIONAL<Identifier>,
+        programInvocationState?: OPTIONAL<ProgramInvocationState>
+    ) {
+        this.programInvocationName = programInvocationName;
+        this.programInvocationState = programInvocationState;
+    }
 
     /**
      * @summary Restructures an object into a StartUnitControl_Error

@@ -40,42 +40,50 @@ import { CSTAPrivateData, _decode_CSTAPrivateData, _encode_CSTAPrivateData } fro
  */
 export
 class EscapeArgument {
+    /**
+     * @summary `escapeRegisterID`.
+     * @description
+     *
+     * Associated escape registration. Present on SF→CF invokes when
+     * registration is supported; a CF→SF request shall not include it
+     * (ECMA-269 §9.4.2.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly escapeRegisterID: OPTIONAL<EscapeRegisterID>;
+    /**
+     * @summary `security`.
+     * @description
+     *
+     * Timestamp, sequence number, and security information (ECMA-269
+     * service tables).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly security: OPTIONAL<CSTASecurityData>;
+    /**
+     * @summary `privateData`.
+     * @description
+     *
+     * Vendor-defined Escape parameters. CSTA does not specify the contents
+     * (ECMA-269 §9.4.1 / §9.4.2.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly privateData: CSTAPrivateData;
+
     constructor (
-        /**
-         * @summary `escapeRegisterID`.
-         * @description
-         *
-         * Associated escape registration. Present on SF→CF invokes when
-         * registration is supported; a CF→SF request shall not include it
-         * (ECMA-269 §9.4.2.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly escapeRegisterID: OPTIONAL<EscapeRegisterID>,
-        /**
-         * @summary `security`.
-         * @description
-         *
-         * Timestamp, sequence number, and security information (ECMA-269
-         * service tables).
-         *
-         * @public
-         * @readonly
-         */
-        readonly security: OPTIONAL<CSTASecurityData>,
-        /**
-         * @summary `privateData`.
-         * @description
-         *
-         * Vendor-defined Escape parameters. CSTA does not specify the contents
-         * (ECMA-269 §9.4.1 / §9.4.2.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly privateData: CSTAPrivateData
-    ) {}
+        escapeRegisterID: OPTIONAL<EscapeRegisterID>,
+        security: OPTIONAL<CSTASecurityData>,
+        privateData: CSTAPrivateData
+    ) {
+        this.escapeRegisterID = escapeRegisterID;
+        this.security = security;
+        this.privateData = privateData;
+    }
 
     /**
      * @summary Restructures an object into a EscapeArgument

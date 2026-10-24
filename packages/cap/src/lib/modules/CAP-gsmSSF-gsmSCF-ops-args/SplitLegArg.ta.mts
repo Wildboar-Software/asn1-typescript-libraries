@@ -38,42 +38,52 @@ import { LegID, _decode_LegID, _encode_LegID } from "../Core-INAP-CS1-DataTypes/
  */
 export
 class SplitLegArg {
+    /**
+     * @summary `legToBeSplit`.
+     * @description
+     *
+     * Party to split from the source Call Segment. Sending Side LegID.
+     * (3GPP TS 29.078 V19.0.0 clauses 4.1.5 and 11.31.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly legToBeSplit: LegID;
+    /**
+     * @summary `newCallSegment`.
+     * @description
+     *
+     * CSID to assign to the newly created Call Segment. (3GPP TS 29.078
+     * V19.0.0 clause 11.31.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly newCallSegment?: OPTIONAL<CallSegmentID>;
+    /**
+     * @summary `extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<Extensions>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `legToBeSplit`.
-         * @description
-         *
-         * Party to split from the source Call Segment. Sending Side LegID.
-         * (3GPP TS 29.078 V19.0.0 clauses 4.1.5 and 11.31.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly legToBeSplit: LegID,
-        /**
-         * @summary `newCallSegment`.
-         * @description
-         *
-         * CSID to assign to the newly created Call Segment. (3GPP TS 29.078
-         * V19.0.0 clause 11.31.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly newCallSegment?: OPTIONAL<CallSegmentID>,
-        /**
-         * @summary `extensions`.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<Extensions>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        legToBeSplit: LegID,
+        newCallSegment?: OPTIONAL<CallSegmentID>,
+        extensions?: OPTIONAL<Extensions>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.legToBeSplit = legToBeSplit;
+        this.newCallSegment = newCallSegment;
+        this.extensions = extensions;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a SplitLegArg

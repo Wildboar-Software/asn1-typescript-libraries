@@ -26,24 +26,30 @@ import {
  *
  */
 export class InitializationReq {
+    /**
+     * @summary `version`.
+     * @description
+     *
+     * BIT STRING: client may set multiple bits; server shall pick exactly one of those. Current version is `v1`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly version: Version;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `version`.
-         * @description
-         *
-         * BIT STRING: client may set multiple bits; server shall pick exactly one of those. Current version is `v1`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly version: Version,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        version: Version,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.version = version;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a InitializationReq

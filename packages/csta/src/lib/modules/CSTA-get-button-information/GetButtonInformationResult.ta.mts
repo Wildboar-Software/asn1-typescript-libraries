@@ -35,28 +35,34 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class GetButtonInformationResult {
+    /**
+     * @summary `buttonList`.
+     * @description
+     *
+     * One entry per button. Absent `button` in the request yields all
+     * buttons.
+     * @public
+     * @readonly
+     */
+    public readonly buttonList: ButtonList;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `buttonList`.
-         * @description
-         *
-         * One entry per button. Absent `button` in the request yields all
-         * buttons.
-         * @public
-         * @readonly
-         */
-        readonly buttonList: ButtonList,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        buttonList: ButtonList,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.buttonList = buttonList;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a GetButtonInformationResult

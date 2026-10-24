@@ -28,36 +28,44 @@ import * as $ from "@wildboar/asn1/functional";
  *
  */
 export class PrivateKeyUsagePeriod {
+    /**
+     * @summary `notBefore`.
+     * @description
+     *
+     * Earliest signing time. Omitted = no extra lower bound beyond cert
+     * validity. At least one bound required.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly notBefore?: OPTIONAL<GeneralizedTime>;
+    /**
+     * @summary `notAfter`.
+     * @description
+     *
+     * Latest signing time. Omitted = no extra upper bound beyond cert
+     * validity. Typically shorter than cert notAfter.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly notAfter?: OPTIONAL<GeneralizedTime>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `notBefore`.
-         * @description
-         *
-         * Earliest signing time. Omitted = no extra lower bound beyond cert
-         * validity. At least one bound required.
-         *
-         * @public
-         * @readonly
-         */
-        readonly notBefore?: OPTIONAL<GeneralizedTime>,
-        /**
-         * @summary `notAfter`.
-         * @description
-         *
-         * Latest signing time. Omitted = no extra upper bound beyond cert
-         * validity. Typically shorter than cert notAfter.
-         *
-         * @public
-         * @readonly
-         */
-        readonly notAfter?: OPTIONAL<GeneralizedTime>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        notBefore?: OPTIONAL<GeneralizedTime>,
+        notAfter?: OPTIONAL<GeneralizedTime>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.notBefore = notBefore;
+        this.notAfter = notAfter;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a PrivateKeyUsagePeriod

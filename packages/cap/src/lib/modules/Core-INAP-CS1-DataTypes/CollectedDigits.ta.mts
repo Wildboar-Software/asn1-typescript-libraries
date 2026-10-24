@@ -45,74 +45,97 @@ import { ErrorTreatment, _enum_for_ErrorTreatment, ErrorTreatment_stdErrorAndInf
  */
 export
 class CollectedDigits {
+    /**
+     * @summary `minimumNbOfDigits`.
+     * @public
+     * @readonly
+     */
+    public readonly minimumNbOfDigits: OPTIONAL<INTEGER>;
+    /**
+     * @summary `maximumNbOfDigits`.
+     * @public
+     * @readonly
+     */
+    public readonly maximumNbOfDigits: INTEGER;
+    /**
+     * @summary `endOfReplyDigit`.
+     * @public
+     * @readonly
+     */
+    public readonly endOfReplyDigit?: OPTIONAL<OCTET_STRING>;
+    /**
+     * @summary `cancelDigit`.
+     * @public
+     * @readonly
+     */
+    public readonly cancelDigit?: OPTIONAL<OCTET_STRING>;
+    /**
+     * @summary `startDigit`.
+     * @public
+     * @readonly
+     */
+    public readonly startDigit?: OPTIONAL<OCTET_STRING>;
+    /**
+     * @summary `firstDigitTimeOut`.
+     * @public
+     * @readonly
+     */
+    public readonly firstDigitTimeOut?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `interDigitTimeOut`.
+     * @public
+     * @readonly
+     */
+    public readonly interDigitTimeOut?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `errortreatment`.
+     * @public
+     * @readonly
+     */
+    public readonly errortreatment?: OPTIONAL<ErrorTreatment>;
+    /**
+     * @summary `interruptableAnnInd`.
+     * @public
+     * @readonly
+     */
+    public readonly interruptableAnnInd?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `voiceInformation`.
+     * @public
+     * @readonly
+     */
+    public readonly voiceInformation?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `voiceBack`.
+     * @public
+     * @readonly
+     */
+    public readonly voiceBack?: OPTIONAL<BOOLEAN>;
+
     constructor (
-        /**
-         * @summary `minimumNbOfDigits`.
-         * @public
-         * @readonly
-         */
-        readonly minimumNbOfDigits: OPTIONAL<INTEGER>,
-        /**
-         * @summary `maximumNbOfDigits`.
-         * @public
-         * @readonly
-         */
-        readonly maximumNbOfDigits: INTEGER,
-        /**
-         * @summary `endOfReplyDigit`.
-         * @public
-         * @readonly
-         */
-        readonly endOfReplyDigit?: OPTIONAL<OCTET_STRING>,
-        /**
-         * @summary `cancelDigit`.
-         * @public
-         * @readonly
-         */
-        readonly cancelDigit?: OPTIONAL<OCTET_STRING>,
-        /**
-         * @summary `startDigit`.
-         * @public
-         * @readonly
-         */
-        readonly startDigit?: OPTIONAL<OCTET_STRING>,
-        /**
-         * @summary `firstDigitTimeOut`.
-         * @public
-         * @readonly
-         */
-        readonly firstDigitTimeOut?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `interDigitTimeOut`.
-         * @public
-         * @readonly
-         */
-        readonly interDigitTimeOut?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `errortreatment`.
-         * @public
-         * @readonly
-         */
-        readonly errortreatment?: OPTIONAL<ErrorTreatment>,
-        /**
-         * @summary `interruptableAnnInd`.
-         * @public
-         * @readonly
-         */
-        readonly interruptableAnnInd?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `voiceInformation`.
-         * @public
-         * @readonly
-         */
-        readonly voiceInformation?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `voiceBack`.
-         * @public
-         * @readonly
-         */
-        readonly voiceBack?: OPTIONAL<BOOLEAN>
+        minimumNbOfDigits: OPTIONAL<INTEGER>,
+        maximumNbOfDigits: INTEGER,
+        endOfReplyDigit?: OPTIONAL<OCTET_STRING>,
+        cancelDigit?: OPTIONAL<OCTET_STRING>,
+        startDigit?: OPTIONAL<OCTET_STRING>,
+        firstDigitTimeOut?: OPTIONAL<INTEGER>,
+        interDigitTimeOut?: OPTIONAL<INTEGER>,
+        errortreatment?: OPTIONAL<ErrorTreatment>,
+        interruptableAnnInd?: OPTIONAL<BOOLEAN>,
+        voiceInformation?: OPTIONAL<BOOLEAN>,
+        voiceBack?: OPTIONAL<BOOLEAN>
     ) {
+        this.minimumNbOfDigits = minimumNbOfDigits;
+        this.maximumNbOfDigits = maximumNbOfDigits;
+        this.endOfReplyDigit = endOfReplyDigit;
+        this.cancelDigit = cancelDigit;
+        this.startDigit = startDigit;
+        this.firstDigitTimeOut = firstDigitTimeOut;
+        this.interDigitTimeOut = interDigitTimeOut;
+        this.errortreatment = errortreatment;
+        this.interruptableAnnInd = interruptableAnnInd;
+        this.voiceInformation = voiceInformation;
+        this.voiceBack = voiceBack;
         if (minimumNbOfDigits !== undefined && (typeof minimumNbOfDigits === "bigint" ? (minimumNbOfDigits < 1n || minimumNbOfDigits > 127n) : (minimumNbOfDigits < 1 || minimumNbOfDigits > 127))) {
             throw new ASN1OverflowError("CollectedDigits.minimumNbOfDigits violates INTEGER constraint");
         }

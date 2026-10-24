@@ -45,134 +45,162 @@ import { SmsGmsc_Alert_Event, _decode_SmsGmsc_Alert_Event, _encode_SmsGmsc_Alert
  */
 export
 class AlertServiceCentreArg {
+    /**
+     * @summary `msisdn`.
+     * @description
+     *
+     * Subscriber MSISDN in Message Waiting Data.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly msisdn: ISDN_AddressString;
+    /**
+     * @summary `serviceCentreAddress`.
+     * @description
+     *
+     * Service Centre to alert.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly serviceCentreAddress: AddressString;
+    /**
+     * @summary `imsi`.
+     * @description
+     *
+     * IMSI if present.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly imsi?: OPTIONAL<IMSI>;
+    /**
+     * @summary `correlationID`.
+     * @description
+     *
+     * HLR / SIP URI correlation.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly correlationID?: OPTIONAL<CorrelationID>;
+    /**
+     * @summary `maximumUeAvailabilityTime`.
+     * @description
+     *
+     * Maximum UE availability time.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly maximumUeAvailabilityTime?: OPTIONAL<Time>;
+    /**
+     * @summary `smsGmscAlertEvent`.
+     * @description
+     *
+     * MS available for MT SMS, or under a new serving node.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly smsGmscAlertEvent?: OPTIONAL<SmsGmsc_Alert_Event>;
+    /**
+     * @summary `smsGmscDiameterAddress`.
+     * @description
+     *
+     * SMS-GMSC Diameter address.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly smsGmscDiameterAddress?: OPTIONAL<NetworkNodeDiameterAddress>;
+    /**
+     * @summary `newSGSNNumber`.
+     * @description
+     *
+     * New SGSN number when the MS moved.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly newSGSNNumber?: OPTIONAL<ISDN_AddressString>;
+    /**
+     * @summary `newSGSNDiameterAddress`.
+     * @description
+     *
+     * New SGSN Diameter address.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly newSGSNDiameterAddress?: OPTIONAL<NetworkNodeDiameterAddress>;
+    /**
+     * @summary `newMMENumber`.
+     * @description
+     *
+     * New MME number when the MS moved.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly newMMENumber?: OPTIONAL<ISDN_AddressString>;
+    /**
+     * @summary `newMMEDiameterAddress`.
+     * @description
+     *
+     * New MME Diameter address.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly newMMEDiameterAddress?: OPTIONAL<NetworkNodeDiameterAddress>;
+    /**
+     * @summary `newMSCNumber`.
+     * @description
+     *
+     * New MSC number when the MS moved.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly newMSCNumber?: OPTIONAL<ISDN_AddressString>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `msisdn`.
-         * @description
-         *
-         * Subscriber MSISDN in Message Waiting Data.
-         *
-         * @public
-         * @readonly
-         */
-        readonly msisdn: ISDN_AddressString,
-        /**
-         * @summary `serviceCentreAddress`.
-         * @description
-         *
-         * Service Centre to alert.
-         *
-         * @public
-         * @readonly
-         */
-        readonly serviceCentreAddress: AddressString,
-        /**
-         * @summary `imsi`.
-         * @description
-         *
-         * IMSI if present.
-         *
-         * @public
-         * @readonly
-         */
-        readonly imsi?: OPTIONAL<IMSI>,
-        /**
-         * @summary `correlationID`.
-         * @description
-         *
-         * HLR / SIP URI correlation.
-         *
-         * @public
-         * @readonly
-         */
-        readonly correlationID?: OPTIONAL<CorrelationID>,
-        /**
-         * @summary `maximumUeAvailabilityTime`.
-         * @description
-         *
-         * Maximum UE availability time.
-         *
-         * @public
-         * @readonly
-         */
-        readonly maximumUeAvailabilityTime?: OPTIONAL<Time>,
-        /**
-         * @summary `smsGmscAlertEvent`.
-         * @description
-         *
-         * MS available for MT SMS, or under a new serving node.
-         *
-         * @public
-         * @readonly
-         */
-        readonly smsGmscAlertEvent?: OPTIONAL<SmsGmsc_Alert_Event>,
-        /**
-         * @summary `smsGmscDiameterAddress`.
-         * @description
-         *
-         * SMS-GMSC Diameter address.
-         *
-         * @public
-         * @readonly
-         */
-        readonly smsGmscDiameterAddress?: OPTIONAL<NetworkNodeDiameterAddress>,
-        /**
-         * @summary `newSGSNNumber`.
-         * @description
-         *
-         * New SGSN number when the MS moved.
-         *
-         * @public
-         * @readonly
-         */
-        readonly newSGSNNumber?: OPTIONAL<ISDN_AddressString>,
-        /**
-         * @summary `newSGSNDiameterAddress`.
-         * @description
-         *
-         * New SGSN Diameter address.
-         *
-         * @public
-         * @readonly
-         */
-        readonly newSGSNDiameterAddress?: OPTIONAL<NetworkNodeDiameterAddress>,
-        /**
-         * @summary `newMMENumber`.
-         * @description
-         *
-         * New MME number when the MS moved.
-         *
-         * @public
-         * @readonly
-         */
-        readonly newMMENumber?: OPTIONAL<ISDN_AddressString>,
-        /**
-         * @summary `newMMEDiameterAddress`.
-         * @description
-         *
-         * New MME Diameter address.
-         *
-         * @public
-         * @readonly
-         */
-        readonly newMMEDiameterAddress?: OPTIONAL<NetworkNodeDiameterAddress>,
-        /**
-         * @summary `newMSCNumber`.
-         * @description
-         *
-         * New MSC number when the MS moved.
-         *
-         * @public
-         * @readonly
-         */
-        readonly newMSCNumber?: OPTIONAL<ISDN_AddressString>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        msisdn: ISDN_AddressString,
+        serviceCentreAddress: AddressString,
+        imsi?: OPTIONAL<IMSI>,
+        correlationID?: OPTIONAL<CorrelationID>,
+        maximumUeAvailabilityTime?: OPTIONAL<Time>,
+        smsGmscAlertEvent?: OPTIONAL<SmsGmsc_Alert_Event>,
+        smsGmscDiameterAddress?: OPTIONAL<NetworkNodeDiameterAddress>,
+        newSGSNNumber?: OPTIONAL<ISDN_AddressString>,
+        newSGSNDiameterAddress?: OPTIONAL<NetworkNodeDiameterAddress>,
+        newMMENumber?: OPTIONAL<ISDN_AddressString>,
+        newMMEDiameterAddress?: OPTIONAL<NetworkNodeDiameterAddress>,
+        newMSCNumber?: OPTIONAL<ISDN_AddressString>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.msisdn = msisdn;
+        this.serviceCentreAddress = serviceCentreAddress;
+        this.imsi = imsi;
+        this.correlationID = correlationID;
+        this.maximumUeAvailabilityTime = maximumUeAvailabilityTime;
+        this.smsGmscAlertEvent = smsGmscAlertEvent;
+        this.smsGmscDiameterAddress = smsGmscDiameterAddress;
+        this.newSGSNNumber = newSGSNNumber;
+        this.newSGSNDiameterAddress = newSGSNDiameterAddress;
+        this.newMMENumber = newMMENumber;
+        this.newMMEDiameterAddress = newMMEDiameterAddress;
+        this.newMSCNumber = newMSCNumber;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a AlertServiceCentreArg

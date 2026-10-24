@@ -30,32 +30,42 @@ import {
  *
  */
 export class RC5_CBC_Parameters {
+    /**
+     * @summary `version`.
+     * @public
+     * @readonly
+     */
+    public readonly version: RC5_CBC_Parameters_version;
+    /**
+     * @summary `rounds`.
+     * @public
+     * @readonly
+     */
+    public readonly rounds: INTEGER;
+    /**
+     * @summary `blockSizeInBits`.
+     * @public
+     * @readonly
+     */
+    public readonly blockSizeInBits: INTEGER;
+    /**
+     * @summary `iv`.
+     * @public
+     * @readonly
+     */
+    public readonly iv?: OPTIONAL<OCTET_STRING>;
+
     constructor(
-        /**
-         * @summary `version`.
-         * @public
-         * @readonly
-         */
-        readonly version: RC5_CBC_Parameters_version,
-        /**
-         * @summary `rounds`.
-         * @public
-         * @readonly
-         */
-        readonly rounds: INTEGER,
-        /**
-         * @summary `blockSizeInBits`.
-         * @public
-         * @readonly
-         */
-        readonly blockSizeInBits: INTEGER,
-        /**
-         * @summary `iv`.
-         * @public
-         * @readonly
-         */
-        readonly iv?: OPTIONAL<OCTET_STRING>
-    ) {}
+        version: RC5_CBC_Parameters_version,
+        rounds: INTEGER,
+        blockSizeInBits: INTEGER,
+        iv?: OPTIONAL<OCTET_STRING>
+    ) {
+        this.version = version;
+        this.rounds = rounds;
+        this.blockSizeInBits = blockSizeInBits;
+        this.iv = iv;
+    }
 
     /**
      * @summary Restructures an object into a RC5_CBC_Parameters

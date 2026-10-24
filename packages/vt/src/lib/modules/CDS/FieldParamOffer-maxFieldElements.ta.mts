@@ -35,26 +35,32 @@ import { _decode_IntegerOffer, _encode_IntegerOffer, type IntegerOffer } from ".
  */
 export
 class FieldParamOffer_maxFieldElements {
+    /**
+     * @summary `unbounded`.
+     * @description
+     * Offer unbounded `max-field-elements`. ISO/IEC 9040:1997
+     * §18.2.2.
+     * @public
+     * @readonly
+     */
+    public readonly unbounded?: OPTIONAL<NULL>;
+    /**
+     * @summary `limit`.
+     * @description
+     * Offered integer `max-field-elements`(s). ISO/IEC 9040:1997
+     * §18.2.2.
+     * @public
+     * @readonly
+     */
+    public readonly limit?: OPTIONAL<IntegerOffer>;
+
     constructor (
-        /**
-         * @summary `unbounded`.
-         * @description
-         * Offer unbounded `max-field-elements`. ISO/IEC 9040:1997
-         * §18.2.2.
-         * @public
-         * @readonly
-         */
-        readonly unbounded?: OPTIONAL<NULL>,
-        /**
-         * @summary `limit`.
-         * @description
-         * Offered integer `max-field-elements`(s). ISO/IEC 9040:1997
-         * §18.2.2.
-         * @public
-         * @readonly
-         */
-        readonly limit?: OPTIONAL<IntegerOffer>
-    ) {}
+        unbounded?: OPTIONAL<NULL>,
+        limit?: OPTIONAL<IntegerOffer>
+    ) {
+        this.unbounded = unbounded;
+        this.limit = limit;
+    }
 
     /**
      * @summary Restructures an object into a FieldParamOffer_maxFieldElements

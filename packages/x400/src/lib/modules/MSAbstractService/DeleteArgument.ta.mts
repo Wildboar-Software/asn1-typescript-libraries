@@ -49,26 +49,34 @@ import {
  *
  */
 export class DeleteArgument {
+    /**
+     * @summary `entry_class`.
+     * @public
+     * @readonly
+     */
+    public readonly entry_class: OPTIONAL<EntryClass>;
+    /**
+     * @summary `items`.
+     * @public
+     * @readonly
+     */
+    public readonly items: DeleteArgument_items;
+    /**
+     * @summary `delete_extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly delete_extensions?: OPTIONAL<MSExtensions>;
+
     constructor(
-        /**
-         * @summary `entry_class`.
-         * @public
-         * @readonly
-         */
-        readonly entry_class: OPTIONAL<EntryClass>,
-        /**
-         * @summary `items`.
-         * @public
-         * @readonly
-         */
-        readonly items: DeleteArgument_items,
-        /**
-         * @summary `delete_extensions`.
-         * @public
-         * @readonly
-         */
-        readonly delete_extensions?: OPTIONAL<MSExtensions>
-    ) {}
+        entry_class: OPTIONAL<EntryClass>,
+        items: DeleteArgument_items,
+        delete_extensions?: OPTIONAL<MSExtensions>
+    ) {
+        this.entry_class = entry_class;
+        this.items = items;
+        this.delete_extensions = delete_extensions;
+    }
 
     /**
      * @summary Restructures an object into a DeleteArgument

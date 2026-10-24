@@ -33,44 +33,58 @@ import * as $ from '@wildboar/asn1/functional';
  *
  */
 export class PortIDType {
+    /**
+     * @summary `managedElement`.
+     * @public
+     * @readonly
+     */
+    public readonly managedElement: GraphicString;
+    /**
+     * @summary `bay`.
+     * @public
+     * @readonly
+     */
+    public readonly bay: OPTIONAL<GraphicString>;
+    /**
+     * @summary `shelf`.
+     * @public
+     * @readonly
+     */
+    public readonly shelf: OPTIONAL<GraphicString>;
+    /**
+     * @summary `drawer`.
+     * @public
+     * @readonly
+     */
+    public readonly drawer: OPTIONAL<GraphicString>;
+    /**
+     * @summary `slot`.
+     * @public
+     * @readonly
+     */
+    public readonly slot: OPTIONAL<GraphicString>;
+    /**
+     * @summary `port`.
+     * @public
+     * @readonly
+     */
+    public readonly port: GraphicString;
+
     constructor(
-        /**
-         * @summary `managedElement`.
-         * @public
-         * @readonly
-         */
-        readonly managedElement: GraphicString,
-        /**
-         * @summary `bay`.
-         * @public
-         * @readonly
-         */
-        readonly bay: OPTIONAL<GraphicString>,
-        /**
-         * @summary `shelf`.
-         * @public
-         * @readonly
-         */
-        readonly shelf: OPTIONAL<GraphicString>,
-        /**
-         * @summary `drawer`.
-         * @public
-         * @readonly
-         */
-        readonly drawer: OPTIONAL<GraphicString>,
-        /**
-         * @summary `slot`.
-         * @public
-         * @readonly
-         */
-        readonly slot: OPTIONAL<GraphicString>,
-        /**
-         * @summary `port`.
-         * @public
-         * @readonly
-         */
-        readonly port: GraphicString
-    ) {}
+        managedElement: GraphicString,
+        bay: OPTIONAL<GraphicString>,
+        shelf: OPTIONAL<GraphicString>,
+        drawer: OPTIONAL<GraphicString>,
+        slot: OPTIONAL<GraphicString>,
+        port: GraphicString
+    ) {
+        this.managedElement = managedElement;
+        this.bay = bay;
+        this.shelf = shelf;
+        this.drawer = drawer;
+        this.slot = slot;
+        this.port = port;
+    }
 
     /**
      * @summary Restructures an object into a PortIDType

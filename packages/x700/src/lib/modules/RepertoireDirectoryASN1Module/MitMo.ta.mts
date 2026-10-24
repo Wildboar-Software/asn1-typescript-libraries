@@ -41,29 +41,35 @@ import {
  *
  */
 export class MitMo {
+    /**
+     * @summary `objectClass`.
+     * @description
+     *
+     * GDMO class of the managed objects listed. ITU-T Rec. X.750
+     * (10/96) §8.6.1.
+     * @public
+     * @readonly
+     */
+    public readonly objectClass: GdmoObjectClass;
+    /**
+     * @summary `instances`.
+     * @description
+     *
+     * Instance names of long-lived objects of this class made
+     * visible by the SMAE. Omitted when only the class is
+     * registered. ITU-T Rec. X.750 (10/96) §8.6.1.
+     * @public
+     * @readonly
+     */
+    public readonly instances?: OPTIONAL<InstanceIdList>;
+
     constructor(
-        /**
-         * @summary `objectClass`.
-         * @description
-         *
-         * GDMO class of the managed objects listed. ITU-T Rec. X.750
-         * (10/96) §8.6.1.
-         * @public
-         * @readonly
-         */
-        readonly objectClass: GdmoObjectClass,
-        /**
-         * @summary `instances`.
-         * @description
-         *
-         * Instance names of long-lived objects of this class made
-         * visible by the SMAE. Omitted when only the class is
-         * registered. ITU-T Rec. X.750 (10/96) §8.6.1.
-         * @public
-         * @readonly
-         */
-        readonly instances?: OPTIONAL<InstanceIdList>
-    ) {}
+        objectClass: GdmoObjectClass,
+        instances?: OPTIONAL<InstanceIdList>
+    ) {
+        this.objectClass = objectClass;
+        this.instances = instances;
+    }
 
     /**
      * @summary Restructures an object into a MitMo

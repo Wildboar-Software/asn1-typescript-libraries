@@ -35,26 +35,34 @@ import { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "
  */
 export
 class ResetTimerArg {
+    /**
+     * @summary `timerID`.
+     * @public
+     * @readonly
+     */
+    public readonly timerID: OPTIONAL<TimerID>;
+    /**
+     * @summary `timervalue`.
+     * @public
+     * @readonly
+     */
+    public readonly timervalue: TimerValue;
+    /**
+     * @summary `extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<ExtensionField[]>;
+
     constructor (
-        /**
-         * @summary `timerID`.
-         * @public
-         * @readonly
-         */
-        readonly timerID: OPTIONAL<TimerID>,
-        /**
-         * @summary `timervalue`.
-         * @public
-         * @readonly
-         */
-        readonly timervalue: TimerValue,
-        /**
-         * @summary `extensions`.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<ExtensionField[]>
-    ) {}
+        timerID: OPTIONAL<TimerID>,
+        timervalue: TimerValue,
+        extensions?: OPTIONAL<ExtensionField[]>
+    ) {
+        this.timerID = timerID;
+        this.timervalue = timervalue;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a ResetTimerArg

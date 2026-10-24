@@ -41,55 +41,65 @@ import * as $ from '@wildboar/asn1/functional';
  *
  */
 export class FirstPdvExplicit {
+  /**
+   * @summary `transformationId`.
+   * @description
+   *
+   * `SECURITY-TRANSFORMATION.&sT-Identifier` of the
+   * transformation in use. ITU-T Rec. X.833 (04/95) §5.3,
+   * §6.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly transformationId: OBJECT_IDENTIFIER;
+  /**
+   * @summary `staticUnprotParm`.
+   * @description
+   *
+   * Static unprotected parameters for that transformation
+   * (constant for the association). ITU-T Rec. X.833
+   * (04/95) §6; ITU-T Rec. X.830 (04/95) §7.1.3.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly staticUnprotParm: OPTIONAL<_Element>;
+  /**
+   * @summary `dynamicUnprotParm`.
+   * @description
+   *
+   * Dynamic unprotected parameters (may change while the
+   * association is in use). ITU-T Rec. X.833 (04/95) §6;
+   * ITU-T Rec. X.830 (04/95) §7.1.3.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly dynamicUnprotParm: OPTIONAL<_Element>;
+  /**
+   * @summary `xformedData`.
+   * @description
+   *
+   * Output of the transformation encoding process
+   * (`&XformedDataType`). ITU-T Rec. X.833 (04/95) §5, §6.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly xformedData: _Element;
+
   constructor(
-    /**
-     * @summary `transformationId`.
-     * @description
-     *
-     * `SECURITY-TRANSFORMATION.&sT-Identifier` of the
-     * transformation in use. ITU-T Rec. X.833 (04/95) §5.3,
-     * §6.
-     *
-     * @public
-     * @readonly
-     */
-    readonly transformationId: OBJECT_IDENTIFIER,
-    /**
-     * @summary `staticUnprotParm`.
-     * @description
-     *
-     * Static unprotected parameters for that transformation
-     * (constant for the association). ITU-T Rec. X.833
-     * (04/95) §6; ITU-T Rec. X.830 (04/95) §7.1.3.
-     *
-     * @public
-     * @readonly
-     */
-    readonly staticUnprotParm: OPTIONAL<_Element>,
-    /**
-     * @summary `dynamicUnprotParm`.
-     * @description
-     *
-     * Dynamic unprotected parameters (may change while the
-     * association is in use). ITU-T Rec. X.833 (04/95) §6;
-     * ITU-T Rec. X.830 (04/95) §7.1.3.
-     *
-     * @public
-     * @readonly
-     */
-    readonly dynamicUnprotParm: OPTIONAL<_Element>,
-    /**
-     * @summary `xformedData`.
-     * @description
-     *
-     * Output of the transformation encoding process
-     * (`&XformedDataType`). ITU-T Rec. X.833 (04/95) §5, §6.
-     *
-     * @public
-     * @readonly
-     */
-    readonly xformedData: _Element
-  ) {}
+    transformationId: OBJECT_IDENTIFIER,
+    staticUnprotParm: OPTIONAL<_Element>,
+    dynamicUnprotParm: OPTIONAL<_Element>,
+    xformedData: _Element
+  ) {
+    this.transformationId = transformationId;
+    this.staticUnprotParm = staticUnprotParm;
+    this.dynamicUnprotParm = dynamicUnprotParm;
+    this.xformedData = xformedData;
+  }
 
   /**
    * @summary Restructures an object into a FirstPdvExplicit

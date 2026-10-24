@@ -33,14 +33,18 @@ import {
  *
  */
 export class IA5TextParameters {
+    /**
+     * @summary `repertoire`.
+     * @public
+     * @readonly
+     */
+    public readonly repertoire?: OPTIONAL<Repertoire>;
+
     constructor(
-        /**
-         * @summary `repertoire`.
-         * @public
-         * @readonly
-         */
-        readonly repertoire?: OPTIONAL<Repertoire>
-    ) {}
+        repertoire?: OPTIONAL<Repertoire>
+    ) {
+        this.repertoire = repertoire;
+    }
 
     /**
      * @summary Restructures an object into a IA5TextParameters

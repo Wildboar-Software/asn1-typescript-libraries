@@ -35,29 +35,35 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class ExpressionPointIntegerReal {
+    /**
+     * @summary `xValue`.
+     * @description
+     *
+     * Threshold of the tabulated variable (age, rank, elapsed
+     * days, etc.) (Clause 6.4.4.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly xValue: INTEGER;
+    /**
+     * @summary `yValue`.
+     * @description
+     *
+     * Proportion of observations ≤ `xValue` (Clause 6.4.4.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly yValue: REAL;
+
     constructor (
-        /**
-         * @summary `xValue`.
-         * @description
-         *
-         * Threshold of the tabulated variable (age, rank, elapsed
-         * days, etc.) (Clause 6.4.4.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly xValue: INTEGER,
-        /**
-         * @summary `yValue`.
-         * @description
-         *
-         * Proportion of observations ≤ `xValue` (Clause 6.4.4.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly yValue: REAL
-    ) {}
+        xValue: INTEGER,
+        yValue: REAL
+    ) {
+        this.xValue = xValue;
+        this.yValue = yValue;
+    }
 
     /**
      * @summary Restructures an object into a ExpressionPointIntegerReal

@@ -33,19 +33,23 @@ import {
  *
  */
 export class BSPDetach_RequestParams {
+  /**
+   * @summary `originalBSPHandle`.
+   * @description
+   *
+   * Attach-session handle at the hosting endpoint, not the
+   * application's local handle. X.1083 Table 50, clause 26.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly originalBSPHandle: BioAPI_HANDLE;
+
   constructor(
-    /**
-     * @summary `originalBSPHandle`.
-     * @description
-     *
-     * Attach-session handle at the hosting endpoint, not the
-     * application's local handle. X.1083 Table 50, clause 26.
-     *
-     * @public
-     * @readonly
-     */
-    readonly originalBSPHandle: BioAPI_HANDLE
-  ) {}
+    originalBSPHandle: BioAPI_HANDLE
+  ) {
+    this.originalBSPHandle = originalBSPHandle;
+  }
 
   /**
    * @summary Restructures an object into a BSPDetach_RequestParams

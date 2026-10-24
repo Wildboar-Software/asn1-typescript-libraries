@@ -35,32 +35,42 @@ import {
  *
  */
 export class SupportedPublicKeyAlgorithms {
+    /**
+     * @summary `algorithmIdentifier`.
+     * @public
+     * @readonly
+     */
+    public readonly algorithmIdentifier: AlgorithmIdentifier;
+    /**
+     * @summary `minKeySize`.
+     * @public
+     * @readonly
+     */
+    public readonly minKeySize: INTEGER;
+    /**
+     * @summary `extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<OidOrAttr[]>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `algorithmIdentifier`.
-         * @public
-         * @readonly
-         */
-        readonly algorithmIdentifier: AlgorithmIdentifier,
-        /**
-         * @summary `minKeySize`.
-         * @public
-         * @readonly
-         */
-        readonly minKeySize: INTEGER,
-        /**
-         * @summary `extensions`.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<OidOrAttr[]>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        algorithmIdentifier: AlgorithmIdentifier,
+        minKeySize: INTEGER,
+        extensions?: OPTIONAL<OidOrAttr[]>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.algorithmIdentifier = algorithmIdentifier;
+        this.minKeySize = minKeySize;
+        this.extensions = extensions;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a SupportedPublicKeyAlgorithms

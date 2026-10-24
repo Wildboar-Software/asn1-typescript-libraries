@@ -60,67 +60,79 @@ import {
  *
  */
 export class TestRequestUncontrolledResult {
+    /**
+     * @summary `testOutcome`.
+     * @description
+     *
+     * Only on the last confirmation of this invocation. ITU-T Rec. X.745
+     * (11/93) §7.2.3, 8.1.5.
+     * [§7.2.3](https://www.itu.int/rec/T-REC-X.745-199311-I)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly testOutcome?: OPTIONAL<TestOutcome>;
+    /**
+     * @summary `mORTs`.
+     * @description
+     *
+     * MORTs this result pertains to. ITU-T Rec. X.745 (11/93) §8.4.3.5,
+     * 8.1.2.
+     * [§8.4.3.5](https://www.itu.int/rec/T-REC-X.745-199311-I)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mORTs?: OPTIONAL<ObjectInstance[]>;
+    /**
+     * @summary `proposedRepairActions`.
+     * @description
+     *
+     * X.733 proposedRepairActions; typical when outcome is fail. ITU-T Rec.
+     * X.745 (11/93) §7.2.3, 8.6.
+     * [§7.2.3](https://www.itu.int/rec/T-REC-X.745-199311-I)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly proposedRepairActions?: OPTIONAL<ProposedRepairActions>;
+    /**
+     * @summary `additionalText`.
+     * @description
+     *
+     * X.733 additionalText. ITU-T Rec. X.745 (11/93) §8.6, 9.6.
+     * [§8.6](https://www.itu.int/rec/T-REC-X.745-199311-I)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly additionalText?: OPTIONAL<AdditionalText>;
+    /**
+     * @summary `additionalInformation`.
+     * @description
+     *
+     * X.733 additionalInformation; category-specific extra result data.
+     * ITU-T Rec. X.745 (11/93) §8.6, 7.4.5.4.
+     * [§8.6](https://www.itu.int/rec/T-REC-X.745-199311-I)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly additionalInformation?: OPTIONAL<AdditionalInformation>;
+
     constructor(
-        /**
-         * @summary `testOutcome`.
-         * @description
-         *
-         * Only on the last confirmation of this invocation. ITU-T Rec. X.745
-         * (11/93) §7.2.3, 8.1.5.
-         * [§7.2.3](https://www.itu.int/rec/T-REC-X.745-199311-I)
-         *
-         * @public
-         * @readonly
-         */
-        readonly testOutcome?: OPTIONAL<TestOutcome>,
-        /**
-         * @summary `mORTs`.
-         * @description
-         *
-         * MORTs this result pertains to. ITU-T Rec. X.745 (11/93) §8.4.3.5,
-         * 8.1.2.
-         * [§8.4.3.5](https://www.itu.int/rec/T-REC-X.745-199311-I)
-         *
-         * @public
-         * @readonly
-         */
-        readonly mORTs?: OPTIONAL<ObjectInstance[]>,
-        /**
-         * @summary `proposedRepairActions`.
-         * @description
-         *
-         * X.733 proposedRepairActions; typical when outcome is fail. ITU-T Rec.
-         * X.745 (11/93) §7.2.3, 8.6.
-         * [§7.2.3](https://www.itu.int/rec/T-REC-X.745-199311-I)
-         *
-         * @public
-         * @readonly
-         */
-        readonly proposedRepairActions?: OPTIONAL<ProposedRepairActions>,
-        /**
-         * @summary `additionalText`.
-         * @description
-         *
-         * X.733 additionalText. ITU-T Rec. X.745 (11/93) §8.6, 9.6.
-         * [§8.6](https://www.itu.int/rec/T-REC-X.745-199311-I)
-         *
-         * @public
-         * @readonly
-         */
-        readonly additionalText?: OPTIONAL<AdditionalText>,
-        /**
-         * @summary `additionalInformation`.
-         * @description
-         *
-         * X.733 additionalInformation; category-specific extra result data.
-         * ITU-T Rec. X.745 (11/93) §8.6, 7.4.5.4.
-         * [§8.6](https://www.itu.int/rec/T-REC-X.745-199311-I)
-         *
-         * @public
-         * @readonly
-         */
-        readonly additionalInformation?: OPTIONAL<AdditionalInformation>
-    ) {}
+        testOutcome?: OPTIONAL<TestOutcome>,
+        mORTs?: OPTIONAL<ObjectInstance[]>,
+        proposedRepairActions?: OPTIONAL<ProposedRepairActions>,
+        additionalText?: OPTIONAL<AdditionalText>,
+        additionalInformation?: OPTIONAL<AdditionalInformation>
+    ) {
+        this.testOutcome = testOutcome;
+        this.mORTs = mORTs;
+        this.proposedRepairActions = proposedRepairActions;
+        this.additionalText = additionalText;
+        this.additionalInformation = additionalInformation;
+    }
 
     /**
      * @summary Restructures an object into a TestRequestUncontrolledResult

@@ -39,41 +39,49 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class ConferenceCallArgument {
+    /**
+     * @summary `heldCall`.
+     * @description
+     *
+     * Mandatory. Conferencing device's connection in the held
+     * (or otherwise first) call. Initial Connected or Hold.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly heldCall: ConnectionID;
+    /**
+     * @summary `activeCall`.
+     * @description
+     *
+     * Mandatory. Conferencing device's connection in the
+     * second call. Initial Connected or Hold.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly activeCall: ConnectionID;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional `CSTACommonArguments` carrying the security and
+     * privateData parameters from the ECMA-269 service table.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `heldCall`.
-         * @description
-         *
-         * Mandatory. Conferencing device's connection in the held
-         * (or otherwise first) call. Initial Connected or Hold.
-         *
-         * @public
-         * @readonly
-         */
-        readonly heldCall: ConnectionID,
-        /**
-         * @summary `activeCall`.
-         * @description
-         *
-         * Mandatory. Conferencing device's connection in the
-         * second call. Initial Connected or Hold.
-         *
-         * @public
-         * @readonly
-         */
-        readonly activeCall: ConnectionID,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional `CSTACommonArguments` carrying the security and
-         * privateData parameters from the ECMA-269 service table.
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        heldCall: ConnectionID,
+        activeCall: ConnectionID,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.heldCall = heldCall;
+        this.activeCall = activeCall;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a ConferenceCallArgument

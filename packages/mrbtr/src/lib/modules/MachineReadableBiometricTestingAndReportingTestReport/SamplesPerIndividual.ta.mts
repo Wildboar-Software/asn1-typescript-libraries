@@ -37,50 +37,60 @@ import { DistributionIntegerInteger, _decode_DistributionIntegerInteger, _encode
  */
 export
 class SamplesPerIndividual {
+    /**
+     * @summary `numSubjects`.
+     * @description
+     *
+     * Number of subjects in the sample (Clause 6.4.4.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly numSubjects: INTEGER;
+    /**
+     * @summary `mean`.
+     * @description
+     *
+     * Mean samples per subject, over all subjects (Clause 6.4.4.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mean: INTEGER;
+    /**
+     * @summary `median`.
+     * @description
+     *
+     * Median samples per subject, over all subjects
+     * (Clause 6.4.4.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly median: INTEGER;
+    /**
+     * @summary `distrSubjSample`.
+     * @description
+     *
+     * `(subjectId, numberOfSamples)` pairs. Example: 20 samples for
+     * subject 1, 30 for 2 is `((1,20),(2,30),…)` (Clause 6.4.4.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly distrSubjSample: DistributionIntegerInteger;
+
     constructor (
-        /**
-         * @summary `numSubjects`.
-         * @description
-         *
-         * Number of subjects in the sample (Clause 6.4.4.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly numSubjects: INTEGER,
-        /**
-         * @summary `mean`.
-         * @description
-         *
-         * Mean samples per subject, over all subjects (Clause 6.4.4.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly mean: INTEGER,
-        /**
-         * @summary `median`.
-         * @description
-         *
-         * Median samples per subject, over all subjects
-         * (Clause 6.4.4.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly median: INTEGER,
-        /**
-         * @summary `distrSubjSample`.
-         * @description
-         *
-         * `(subjectId, numberOfSamples)` pairs. Example: 20 samples for
-         * subject 1, 30 for 2 is `((1,20),(2,30),…)` (Clause 6.4.4.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly distrSubjSample: DistributionIntegerInteger
-    ) {}
+        numSubjects: INTEGER,
+        mean: INTEGER,
+        median: INTEGER,
+        distrSubjSample: DistributionIntegerInteger
+    ) {
+        this.numSubjects = numSubjects;
+        this.mean = mean;
+        this.median = median;
+        this.distrSubjSample = distrSubjSample;
+    }
 
     /**
      * @summary Restructures an object into a SamplesPerIndividual

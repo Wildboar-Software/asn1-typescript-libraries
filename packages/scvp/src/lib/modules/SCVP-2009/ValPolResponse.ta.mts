@@ -100,222 +100,264 @@ import {
  *
  */
 export class ValPolResponse {
+  /**
+   * @summary `vpResponseVersion`.
+   * @description
+   *
+   * Policy response version ([RFC 5055 §6.1](https://datatracker.ietf.org/doc/html/rfc5055#section-6.1)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly vpResponseVersion: INTEGER;
+  /**
+   * @summary `maxCVRequestVersion`.
+   * @description
+   *
+   * Maximum supported `CVRequest` version ([RFC 5055 §6.2](https://datatracker.ietf.org/doc/html/rfc5055#section-6.2)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly maxCVRequestVersion: INTEGER;
+  /**
+   * @summary `maxVPRequestVersion`.
+   * @description
+   *
+   * Maximum supported `ValPolRequest` version ([RFC 5055 §6.3](https://datatracker.ietf.org/doc/html/rfc5055#section-6.3)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly maxVPRequestVersion: INTEGER;
+  /**
+   * @summary `serverConfigurationID`.
+   * @description
+   *
+   * Unique ID for this server configuration; MUST change when
+   * listed policy-related fields change ([RFC 5055 §6.4](https://datatracker.ietf.org/doc/html/rfc5055#section-6.4)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly serverConfigurationID: INTEGER;
+  /**
+   * @summary `thisUpdate`.
+   * @description
+   *
+   * Signing date/time of this policy response ([RFC 5055 §6.5](https://datatracker.ietf.org/doc/html/rfc5055#section-6.5)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly thisUpdate: GeneralizedTime;
+  /**
+   * @summary `nextUpdate`.
+   * @description
+   *
+   * If present, cached response freshness bound; if absent, response
+   * is request-specific and `requestNonce` MUST be present
+   * ([RFC 5055 §6.6](https://datatracker.ietf.org/doc/html/rfc5055#section-6.6)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly nextUpdate: OPTIONAL<GeneralizedTime>;
+  /**
+   * @summary `supportedChecks`.
+   * @description
+   *
+   * Check OIDs this server supports ([RFC 5055 §6.7](https://datatracker.ietf.org/doc/html/rfc5055#section-6.7)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly supportedChecks: CertChecks;
+  /**
+   * @summary `supportedWantBacks`.
+   * @description
+   *
+   * WantBack OIDs this server supports ([RFC 5055 §6.8](https://datatracker.ietf.org/doc/html/rfc5055#section-6.8)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly supportedWantBacks: WantBack;
+  /**
+   * @summary `validationPolicies`.
+   * @description
+   *
+   * Validation policy OIDs supported; omit
+   * `id-svp-defaultValPolicy` if the default policy is not offered
+   * ([RFC 5055 §6.9](https://datatracker.ietf.org/doc/html/rfc5055#section-6.9)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly validationPolicies: OBJECT_IDENTIFIER[];
+  /**
+   * @summary `validationAlgs`.
+   * @description
+   *
+   * Validation algorithm OIDs supported ([RFC 5055 §6.10](https://datatracker.ietf.org/doc/html/rfc5055#section-6.10)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly validationAlgs: OBJECT_IDENTIFIER[];
+  /**
+   * @summary `authPolicies`.
+   * @description
+   *
+   * Authentication policy OIDs documenting whether/how clients
+   * authenticate ([RFC 5055 §6.11](https://datatracker.ietf.org/doc/html/rfc5055#section-6.11)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly authPolicies: AuthPolicy[];
+  /**
+   * @summary `responseTypes`.
+   * @description
+   *
+   * Whether the server returns cached, non-cached, or both CV
+   * response types ([RFC 5055 §6.12](https://datatracker.ietf.org/doc/html/rfc5055#section-6.12)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly responseTypes: ResponseTypes;
+  /**
+   * @summary `defaultPolicyValues`.
+   * @description
+   *
+   * Fully populated default `RespValidationPolicy` values
+   * ([RFC 5055 §6.14](https://datatracker.ietf.org/doc/html/rfc5055#section-6.14)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly defaultPolicyValues: RespValidationPolicy;
+  /**
+   * @summary `revocationInfoTypes`.
+   * @description
+   *
+   * Bit string of revocation info sources the server can process
+   * ([RFC 5055 §6.13](https://datatracker.ietf.org/doc/html/rfc5055#section-6.13)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly revocationInfoTypes: RevocationInfoTypes;
+  /**
+   * @summary `signatureGeneration`.
+   * @description
+   *
+   * Signature algorithms the server can use to sign `CVResponse`
+   * messages (ordered; first is default). Empty if the server
+   * cannot sign ([RFC 5055 §6.15](https://datatracker.ietf.org/doc/html/rfc5055#section-6.15)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly signatureGeneration: AlgorithmIdentifier[];
+  /**
+   * @summary `signatureVerification`.
+   * @description
+   *
+   * Signature algorithms the server can verify on requests. Empty
+   * if it does not verify ([RFC 5055 §6.16](https://datatracker.ietf.org/doc/html/rfc5055#section-6.16)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly signatureVerification: AlgorithmIdentifier[];
+  /**
+   * @summary `hashAlgorithms`.
+   * @description
+   *
+   * Hash algorithms the server supports ([RFC 5055 §6.17](https://datatracker.ietf.org/doc/html/rfc5055#section-6.17)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly hashAlgorithms: OBJECT_IDENTIFIER[];
+  /**
+   * @summary `serverPublicKeys`.
+   * @description
+   *
+   * Optional key-agreement public keys for `AuthenticatedData`
+   * responses ([RFC 5055 §6.18](https://datatracker.ietf.org/doc/html/rfc5055#section-6.18)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly serverPublicKeys?: OPTIONAL<KeyAgreePublicKey[]>;
+  /**
+   * @summary `clockSkew`.
+   * @description
+   *
+   * Clock skew in seconds (DEFAULT 10) ([RFC 5055 §6.19](https://datatracker.ietf.org/doc/html/rfc5055#section-6.19)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly clockSkew?: OPTIONAL<INTEGER>;
+  /**
+   * @summary `requestNonce`.
+   * @description
+   *
+   * Nonce from the request for non-cached policy responses
+   * ([RFC 5055 §6.6](https://datatracker.ietf.org/doc/html/rfc5055#section-6.6)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly requestNonce?: OPTIONAL<OCTET_STRING>;
+
   constructor(
-    /**
-     * @summary `vpResponseVersion`.
-     * @description
-     *
-     * Policy response version ([RFC 5055 §6.1](https://datatracker.ietf.org/doc/html/rfc5055#section-6.1)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly vpResponseVersion: INTEGER,
-    /**
-     * @summary `maxCVRequestVersion`.
-     * @description
-     *
-     * Maximum supported `CVRequest` version ([RFC 5055 §6.2](https://datatracker.ietf.org/doc/html/rfc5055#section-6.2)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly maxCVRequestVersion: INTEGER,
-    /**
-     * @summary `maxVPRequestVersion`.
-     * @description
-     *
-     * Maximum supported `ValPolRequest` version ([RFC 5055 §6.3](https://datatracker.ietf.org/doc/html/rfc5055#section-6.3)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly maxVPRequestVersion: INTEGER,
-    /**
-     * @summary `serverConfigurationID`.
-     * @description
-     *
-     * Unique ID for this server configuration; MUST change when
-     * listed policy-related fields change ([RFC 5055 §6.4](https://datatracker.ietf.org/doc/html/rfc5055#section-6.4)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly serverConfigurationID: INTEGER,
-    /**
-     * @summary `thisUpdate`.
-     * @description
-     *
-     * Signing date/time of this policy response ([RFC 5055 §6.5](https://datatracker.ietf.org/doc/html/rfc5055#section-6.5)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly thisUpdate: GeneralizedTime,
-    /**
-     * @summary `nextUpdate`.
-     * @description
-     *
-     * If present, cached response freshness bound; if absent, response
-     * is request-specific and `requestNonce` MUST be present
-     * ([RFC 5055 §6.6](https://datatracker.ietf.org/doc/html/rfc5055#section-6.6)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly nextUpdate: OPTIONAL<GeneralizedTime>,
-    /**
-     * @summary `supportedChecks`.
-     * @description
-     *
-     * Check OIDs this server supports ([RFC 5055 §6.7](https://datatracker.ietf.org/doc/html/rfc5055#section-6.7)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly supportedChecks: CertChecks,
-    /**
-     * @summary `supportedWantBacks`.
-     * @description
-     *
-     * WantBack OIDs this server supports ([RFC 5055 §6.8](https://datatracker.ietf.org/doc/html/rfc5055#section-6.8)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly supportedWantBacks: WantBack,
-    /**
-     * @summary `validationPolicies`.
-     * @description
-     *
-     * Validation policy OIDs supported; omit
-     * `id-svp-defaultValPolicy` if the default policy is not offered
-     * ([RFC 5055 §6.9](https://datatracker.ietf.org/doc/html/rfc5055#section-6.9)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly validationPolicies: OBJECT_IDENTIFIER[],
-    /**
-     * @summary `validationAlgs`.
-     * @description
-     *
-     * Validation algorithm OIDs supported ([RFC 5055 §6.10](https://datatracker.ietf.org/doc/html/rfc5055#section-6.10)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly validationAlgs: OBJECT_IDENTIFIER[],
-    /**
-     * @summary `authPolicies`.
-     * @description
-     *
-     * Authentication policy OIDs documenting whether/how clients
-     * authenticate ([RFC 5055 §6.11](https://datatracker.ietf.org/doc/html/rfc5055#section-6.11)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly authPolicies: AuthPolicy[],
-    /**
-     * @summary `responseTypes`.
-     * @description
-     *
-     * Whether the server returns cached, non-cached, or both CV
-     * response types ([RFC 5055 §6.12](https://datatracker.ietf.org/doc/html/rfc5055#section-6.12)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly responseTypes: ResponseTypes,
-    /**
-     * @summary `defaultPolicyValues`.
-     * @description
-     *
-     * Fully populated default `RespValidationPolicy` values
-     * ([RFC 5055 §6.14](https://datatracker.ietf.org/doc/html/rfc5055#section-6.14)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly defaultPolicyValues: RespValidationPolicy,
-    /**
-     * @summary `revocationInfoTypes`.
-     * @description
-     *
-     * Bit string of revocation info sources the server can process
-     * ([RFC 5055 §6.13](https://datatracker.ietf.org/doc/html/rfc5055#section-6.13)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly revocationInfoTypes: RevocationInfoTypes,
-    /**
-     * @summary `signatureGeneration`.
-     * @description
-     *
-     * Signature algorithms the server can use to sign `CVResponse`
-     * messages (ordered; first is default). Empty if the server
-     * cannot sign ([RFC 5055 §6.15](https://datatracker.ietf.org/doc/html/rfc5055#section-6.15)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly signatureGeneration: AlgorithmIdentifier[],
-    /**
-     * @summary `signatureVerification`.
-     * @description
-     *
-     * Signature algorithms the server can verify on requests. Empty
-     * if it does not verify ([RFC 5055 §6.16](https://datatracker.ietf.org/doc/html/rfc5055#section-6.16)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly signatureVerification: AlgorithmIdentifier[],
-    /**
-     * @summary `hashAlgorithms`.
-     * @description
-     *
-     * Hash algorithms the server supports ([RFC 5055 §6.17](https://datatracker.ietf.org/doc/html/rfc5055#section-6.17)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly hashAlgorithms: OBJECT_IDENTIFIER[],
-    /**
-     * @summary `serverPublicKeys`.
-     * @description
-     *
-     * Optional key-agreement public keys for `AuthenticatedData`
-     * responses ([RFC 5055 §6.18](https://datatracker.ietf.org/doc/html/rfc5055#section-6.18)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly serverPublicKeys?: OPTIONAL<KeyAgreePublicKey[]>,
-    /**
-     * @summary `clockSkew`.
-     * @description
-     *
-     * Clock skew in seconds (DEFAULT 10) ([RFC 5055 §6.19](https://datatracker.ietf.org/doc/html/rfc5055#section-6.19)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly clockSkew?: OPTIONAL<INTEGER>,
-    /**
-     * @summary `requestNonce`.
-     * @description
-     *
-     * Nonce from the request for non-cached policy responses
-     * ([RFC 5055 §6.6](https://datatracker.ietf.org/doc/html/rfc5055#section-6.6)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly requestNonce?: OPTIONAL<OCTET_STRING>
-  ) {}
+    vpResponseVersion: INTEGER,
+    maxCVRequestVersion: INTEGER,
+    maxVPRequestVersion: INTEGER,
+    serverConfigurationID: INTEGER,
+    thisUpdate: GeneralizedTime,
+    nextUpdate: OPTIONAL<GeneralizedTime>,
+    supportedChecks: CertChecks,
+    supportedWantBacks: WantBack,
+    validationPolicies: OBJECT_IDENTIFIER[],
+    validationAlgs: OBJECT_IDENTIFIER[],
+    authPolicies: AuthPolicy[],
+    responseTypes: ResponseTypes,
+    defaultPolicyValues: RespValidationPolicy,
+    revocationInfoTypes: RevocationInfoTypes,
+    signatureGeneration: AlgorithmIdentifier[],
+    signatureVerification: AlgorithmIdentifier[],
+    hashAlgorithms: OBJECT_IDENTIFIER[],
+    serverPublicKeys?: OPTIONAL<KeyAgreePublicKey[]>,
+    clockSkew?: OPTIONAL<INTEGER>,
+    requestNonce?: OPTIONAL<OCTET_STRING>
+  ) {
+    this.vpResponseVersion = vpResponseVersion;
+    this.maxCVRequestVersion = maxCVRequestVersion;
+    this.maxVPRequestVersion = maxVPRequestVersion;
+    this.serverConfigurationID = serverConfigurationID;
+    this.thisUpdate = thisUpdate;
+    this.nextUpdate = nextUpdate;
+    this.supportedChecks = supportedChecks;
+    this.supportedWantBacks = supportedWantBacks;
+    this.validationPolicies = validationPolicies;
+    this.validationAlgs = validationAlgs;
+    this.authPolicies = authPolicies;
+    this.responseTypes = responseTypes;
+    this.defaultPolicyValues = defaultPolicyValues;
+    this.revocationInfoTypes = revocationInfoTypes;
+    this.signatureGeneration = signatureGeneration;
+    this.signatureVerification = signatureVerification;
+    this.hashAlgorithms = hashAlgorithms;
+    this.serverPublicKeys = serverPublicKeys;
+    this.clockSkew = clockSkew;
+    this.requestNonce = requestNonce;
+  }
 
   /**
    * @summary Restructures an object into a ValPolResponse

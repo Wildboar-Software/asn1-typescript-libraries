@@ -38,26 +38,34 @@ import {
  *
  */
 export class TargetCert {
+    /**
+     * @summary `targetCertificate`.
+     * @public
+     * @readonly
+     */
+    public readonly targetCertificate: IssuerSerial;
+    /**
+     * @summary `targetName`.
+     * @public
+     * @readonly
+     */
+    public readonly targetName?: OPTIONAL<GeneralName>;
+    /**
+     * @summary `certDigestInfo`.
+     * @public
+     * @readonly
+     */
+    public readonly certDigestInfo?: OPTIONAL<ObjectDigestInfo>;
+
     constructor(
-        /**
-         * @summary `targetCertificate`.
-         * @public
-         * @readonly
-         */
-        readonly targetCertificate: IssuerSerial,
-        /**
-         * @summary `targetName`.
-         * @public
-         * @readonly
-         */
-        readonly targetName?: OPTIONAL<GeneralName>,
-        /**
-         * @summary `certDigestInfo`.
-         * @public
-         * @readonly
-         */
-        readonly certDigestInfo?: OPTIONAL<ObjectDigestInfo>
-    ) {}
+        targetCertificate: IssuerSerial,
+        targetName?: OPTIONAL<GeneralName>,
+        certDigestInfo?: OPTIONAL<ObjectDigestInfo>
+    ) {
+        this.targetCertificate = targetCertificate;
+        this.targetName = targetName;
+        this.certDigestInfo = certDigestInfo;
+    }
 
     /**
      * @summary Restructures an object into a TargetCert

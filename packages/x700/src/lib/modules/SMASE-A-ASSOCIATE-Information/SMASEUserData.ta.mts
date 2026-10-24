@@ -70,57 +70,65 @@ import {
  *
  */
 export class SMASEUserData {
+    /**
+     * @summary `smfuPackages`.
+     * @description
+     *
+     * Proposed or agreed SMFUs. Present on
+     * request/indication if SMFU negotiation is proposed,
+     * and on response/confirm if accepted; otherwise
+     * omitted. Negotiation is optional. Initiator proposes
+     * a valid non-empty set; responder accepts with an
+     * identical set or a subset, or refuses by omitting
+     * this parameter. If the initiator omits it, the
+     * responder shall omit it or reject the association.
+     * An agreed set constrains operations and
+     * notifications until a new agreement (in-association
+     * change is not specified). Interactions outside the
+     * agreed SMFUs shall result in an error. If two
+     * proposed FUs overlap and only one is accepted,
+     * common capabilities remain agreed (X.701 A.3.2
+     * Note 2). If negotiation is refused but the
+     * association succeeds, only the application context
+     * rules of X.701 A.2.2 apply. X.701 A.3.2, A.3.4.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly smfuPackages?: OPTIONAL<FunctionalUnitPackage[]>;
+    /**
+     * @summary `reason`.
+     * @description
+     *
+     * Why SMFU negotiation failed, the proposed set was
+     * reduced, or the association was rejected. Only on
+     * A-ASSOCIATE response/confirm. X.701 A.3.4.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly reason?: OPTIONAL<Reason>;
+    /**
+     * @summary `systemsManagementUserInformation`.
+     * @description
+     *
+     * Distinguishes implementation environments. Not
+     * subject to conformance testing. X.701 A.3.4.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly systemsManagementUserInformation?: OPTIONAL<GraphicString>;
+
     constructor(
-        /**
-         * @summary `smfuPackages`.
-         * @description
-         *
-         * Proposed or agreed SMFUs. Present on
-         * request/indication if SMFU negotiation is proposed,
-         * and on response/confirm if accepted; otherwise
-         * omitted. Negotiation is optional. Initiator proposes
-         * a valid non-empty set; responder accepts with an
-         * identical set or a subset, or refuses by omitting
-         * this parameter. If the initiator omits it, the
-         * responder shall omit it or reject the association.
-         * An agreed set constrains operations and
-         * notifications until a new agreement (in-association
-         * change is not specified). Interactions outside the
-         * agreed SMFUs shall result in an error. If two
-         * proposed FUs overlap and only one is accepted,
-         * common capabilities remain agreed (X.701 A.3.2
-         * Note 2). If negotiation is refused but the
-         * association succeeds, only the application context
-         * rules of X.701 A.2.2 apply. X.701 A.3.2, A.3.4.
-         *
-         * @public
-         * @readonly
-         */
-        readonly smfuPackages?: OPTIONAL<FunctionalUnitPackage[]>,
-        /**
-         * @summary `reason`.
-         * @description
-         *
-         * Why SMFU negotiation failed, the proposed set was
-         * reduced, or the association was rejected. Only on
-         * A-ASSOCIATE response/confirm. X.701 A.3.4.
-         *
-         * @public
-         * @readonly
-         */
-        readonly reason?: OPTIONAL<Reason>,
-        /**
-         * @summary `systemsManagementUserInformation`.
-         * @description
-         *
-         * Distinguishes implementation environments. Not
-         * subject to conformance testing. X.701 A.3.4.
-         *
-         * @public
-         * @readonly
-         */
-        readonly systemsManagementUserInformation?: OPTIONAL<GraphicString>
-    ) {}
+        smfuPackages?: OPTIONAL<FunctionalUnitPackage[]>,
+        reason?: OPTIONAL<Reason>,
+        systemsManagementUserInformation?: OPTIONAL<GraphicString>
+    ) {
+        this.smfuPackages = smfuPackages;
+        this.reason = reason;
+        this.systemsManagementUserInformation = systemsManagementUserInformation;
+    }
 
     /**
      * @summary Restructures an object into a SMASEUserData

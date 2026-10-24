@@ -55,44 +55,58 @@ import {
  */
 export
 class EscalationList_Item {
+    /**
+     * @summary `state`.
+     * @public
+     * @readonly
+     */
+    public readonly state: RequestState;
+    /**
+     * @summary `escTime`.
+     * @public
+     * @readonly
+     */
+    public readonly escTime: EscalationTime;
+    /**
+     * @summary `requestPerson`.
+     * @public
+     * @readonly
+     */
+    public readonly requestPerson: PersonReach;
+    /**
+     * @summary `level`.
+     * @public
+     * @readonly
+     */
+    public readonly level?: OPTIONAL<OrgLevel>;
+    /**
+     * @summary `escPerson`.
+     * @public
+     * @readonly
+     */
+    public readonly escPerson?: OPTIONAL<PersonReach>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `state`.
-         * @public
-         * @readonly
-         */
-        readonly state: RequestState,
-        /**
-         * @summary `escTime`.
-         * @public
-         * @readonly
-         */
-        readonly escTime: EscalationTime,
-        /**
-         * @summary `requestPerson`.
-         * @public
-         * @readonly
-         */
-        readonly requestPerson: PersonReach,
-        /**
-         * @summary `level`.
-         * @public
-         * @readonly
-         */
-        readonly level?: OPTIONAL<OrgLevel>,
-        /**
-         * @summary `escPerson`.
-         * @public
-         * @readonly
-         */
-        readonly escPerson?: OPTIONAL<PersonReach>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        state: RequestState,
+        escTime: EscalationTime,
+        requestPerson: PersonReach,
+        level?: OPTIONAL<OrgLevel>,
+        escPerson?: OPTIONAL<PersonReach>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.state = state;
+        this.escTime = escTime;
+        this.requestPerson = requestPerson;
+        this.level = level;
+        this.escPerson = escPerson;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a EscalationList_Item

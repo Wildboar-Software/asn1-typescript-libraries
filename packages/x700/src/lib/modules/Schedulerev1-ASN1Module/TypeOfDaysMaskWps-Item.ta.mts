@@ -37,30 +37,36 @@ import {
  *
  */
 export class TypeOfDaysMaskWps_Item {
+    /**
+     * @summary `typeOfDay`.
+     * @description
+     *
+     * Day category this mask applies to. ITU-T Rec. X.746
+     * (02/00)
+     * [A.6](https://www.itu.int/rec/T-REC-X.746-200002-I).
+     * @public
+     * @readonly
+     */
+    public readonly typeOfDay: TypeOfDay;
+    /**
+     * @summary `timesOfDay`.
+     * @description
+     *
+     * Intervals or trigger times on days of this category.
+     * ITU-T Rec. X.746 (02/00)
+     * [A.6](https://www.itu.int/rec/T-REC-X.746-200002-I).
+     * @public
+     * @readonly
+     */
+    public readonly timesOfDay: TimesOfDayWps;
+
     constructor(
-        /**
-         * @summary `typeOfDay`.
-         * @description
-         *
-         * Day category this mask applies to. ITU-T Rec. X.746
-         * (02/00)
-         * [A.6](https://www.itu.int/rec/T-REC-X.746-200002-I).
-         * @public
-         * @readonly
-         */
-        readonly typeOfDay: TypeOfDay,
-        /**
-         * @summary `timesOfDay`.
-         * @description
-         *
-         * Intervals or trigger times on days of this category.
-         * ITU-T Rec. X.746 (02/00)
-         * [A.6](https://www.itu.int/rec/T-REC-X.746-200002-I).
-         * @public
-         * @readonly
-         */
-        readonly timesOfDay: TimesOfDayWps
-    ) {}
+        typeOfDay: TypeOfDay,
+        timesOfDay: TimesOfDayWps
+    ) {
+        this.typeOfDay = typeOfDay;
+        this.timesOfDay = timesOfDay;
+    }
 
     /**
      * @summary Restructures an object into a TypeOfDaysMaskWps_Item

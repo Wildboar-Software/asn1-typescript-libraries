@@ -43,37 +43,45 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class DetachMediaServiceArgument {
+    /**
+     * @summary `connection`.
+     * @description
+     *
+     * Connection at the media-access device if used; otherwise the
+     * connection at the detaching device.
+     * @public
+     * @readonly
+     */
+    public readonly connection: ConnectionID;
+    /**
+     * @summary `mediaServiceType`.
+     * @description
+     *
+     * Media service type to detach.
+     * @public
+     * @readonly
+     */
+    public readonly mediaServiceType: MediaServiceType;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `connection`.
-         * @description
-         *
-         * Connection at the media-access device if used; otherwise the
-         * connection at the detaching device.
-         * @public
-         * @readonly
-         */
-        readonly connection: ConnectionID,
-        /**
-         * @summary `mediaServiceType`.
-         * @description
-         *
-         * Media service type to detach.
-         * @public
-         * @readonly
-         */
-        readonly mediaServiceType: MediaServiceType,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        connection: ConnectionID,
+        mediaServiceType: MediaServiceType,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.connection = connection;
+        this.mediaServiceType = mediaServiceType;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a DetachMediaServiceArgument

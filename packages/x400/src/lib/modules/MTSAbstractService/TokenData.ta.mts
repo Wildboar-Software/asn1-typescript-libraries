@@ -28,20 +28,26 @@ import * as $ from '@wildboar/asn1/functional';
  *
  */
 export class TokenData {
+    /**
+     * @summary `type_`.
+     * @public
+     * @readonly
+     */
+    public readonly type_: INTEGER;
+    /**
+     * @summary `value`.
+     * @public
+     * @readonly
+     */
+    public readonly value: _Element;
+
     constructor(
-        /**
-         * @summary `type_`.
-         * @public
-         * @readonly
-         */
-        readonly type_: INTEGER,
-        /**
-         * @summary `value`.
-         * @public
-         * @readonly
-         */
-        readonly value: _Element
-    ) {}
+        type_: INTEGER,
+        value: _Element
+    ) {
+        this.type_ = type_;
+        this.value = value;
+    }
 
     /**
      * @summary Restructures an object into a TokenData

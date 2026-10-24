@@ -80,56 +80,74 @@ import {
  *
  */
 export class DeliveryControls88 implements Controls {
+    /**
+     * @summary `restrict`.
+     * @public
+     * @readonly
+     */
+    public readonly restrict?: OPTIONAL<BOOLEAN>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `permissible_operations`.
+     * @public
+     * @readonly
+     */
+    public readonly permissible_operations?: OPTIONAL<Operations>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `permissible_maximum_content_length`.
+     * @public
+     * @readonly
+     */
+    public readonly permissible_maximum_content_length?: OPTIONAL<ContentLength>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `permissible_lowest_priority`.
+     * @public
+     * @readonly
+     */
+    public readonly permissible_lowest_priority?: OPTIONAL<Priority>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `permissible_content_types`.
+     * @public
+     * @readonly
+     */
+    public readonly permissible_content_types?: OPTIONAL<ContentTypes>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `permissible_encoded_information_types`.
+     * @public
+     * @readonly
+     */
+    public readonly permissible_encoded_information_types?: OPTIONAL<PermissibleEncodedInformationTypes>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `permissible_security_context`.
+     * @public
+     * @readonly
+     */
+    public readonly permissible_security_context?: OPTIONAL<SecurityContext>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `permissible_encoded_information_types_88`.
+     * @public
+     * @readonly
+     */
+    public readonly permissible_encoded_information_types_88?: OPTIONAL<EncodedInformationTypes>;
+
     constructor(
-        /**
-         * @summary `restrict`.
-         * @public
-         * @readonly
-         */
-        readonly restrict?: OPTIONAL<BOOLEAN> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `permissible_operations`.
-         * @public
-         * @readonly
-         */
-        readonly permissible_operations?: OPTIONAL<Operations> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `permissible_maximum_content_length`.
-         * @public
-         * @readonly
-         */
-        readonly permissible_maximum_content_length?: OPTIONAL<ContentLength> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `permissible_lowest_priority`.
-         * @public
-         * @readonly
-         */
-        readonly permissible_lowest_priority?: OPTIONAL<Priority> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `permissible_content_types`.
-         * @public
-         * @readonly
-         */
-        readonly permissible_content_types?: OPTIONAL<ContentTypes> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `permissible_encoded_information_types`.
-         * @public
-         * @readonly
-         */
-        readonly permissible_encoded_information_types?: OPTIONAL<PermissibleEncodedInformationTypes> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `permissible_security_context`.
-         * @public
-         * @readonly
-         */
-        readonly permissible_security_context?: OPTIONAL<SecurityContext> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `permissible_encoded_information_types_88`.
-         * @public
-         * @readonly
-         */
-        readonly permissible_encoded_information_types_88?: OPTIONAL<EncodedInformationTypes>
-    ) {}
+        restrict?: OPTIONAL<BOOLEAN>,
+        permissible_operations?: OPTIONAL<Operations>,
+        permissible_maximum_content_length?: OPTIONAL<ContentLength>,
+        permissible_lowest_priority?: OPTIONAL<Priority>,
+        permissible_content_types?: OPTIONAL<ContentTypes>,
+        permissible_encoded_information_types?: OPTIONAL<PermissibleEncodedInformationTypes>,
+        permissible_security_context?: OPTIONAL<SecurityContext>,
+        permissible_encoded_information_types_88?: OPTIONAL<EncodedInformationTypes>
+    ) {
+        this.restrict = restrict;
+        this.permissible_operations = permissible_operations;
+        this.permissible_maximum_content_length = permissible_maximum_content_length;
+        this.permissible_lowest_priority = permissible_lowest_priority;
+        this.permissible_content_types = permissible_content_types;
+        this.permissible_encoded_information_types = permissible_encoded_information_types;
+        this.permissible_security_context = permissible_security_context;
+        this.permissible_encoded_information_types_88 = permissible_encoded_information_types_88;
+    }
 
     /**
      * @summary Restructures an object into a DeliveryControls88

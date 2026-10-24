@@ -37,30 +37,36 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class IORegisterResult {
+    /**
+     * @summary `ioRegisterReqID`.
+     * @description
+     *
+     * Identifier for this I/O registration; used on later I/O services and
+     * I/O Register Cancel (ECMA-269 §24.1.1.3.4).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ioRegisterReqID: IORegisterReqID;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * CSTACommonArguments carrying the service-table security and
+     * privateData parameters.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `ioRegisterReqID`.
-         * @description
-         *
-         * Identifier for this I/O registration; used on later I/O services and
-         * I/O Register Cancel (ECMA-269 §24.1.1.3.4).
-         *
-         * @public
-         * @readonly
-         */
-        readonly ioRegisterReqID: IORegisterReqID,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * CSTACommonArguments carrying the service-table security and
-         * privateData parameters.
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        ioRegisterReqID: IORegisterReqID,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.ioRegisterReqID = ioRegisterReqID;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a IORegisterResult

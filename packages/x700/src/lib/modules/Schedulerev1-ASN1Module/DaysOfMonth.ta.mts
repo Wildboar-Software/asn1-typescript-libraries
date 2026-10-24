@@ -34,31 +34,37 @@ import * as $ from '@wildboar/asn1/functional';
  *
  */
 export class DaysOfMonth {
+    /**
+     * @summary `daysFromFirst`.
+     * @description
+     *
+     * Days counted from the first of the month: first bit is
+     * day 1, second bit day 2, etc. ITU-T Rec. X.746 (02/00)
+     * [§8.3.6.2](https://www.itu.int/rec/T-REC-X.746-200002-I).
+     * @public
+     * @readonly
+     */
+    public readonly daysFromFirst: BIT_STRING;
+    /**
+     * @summary `daysFromLast`.
+     * @description
+     *
+     * Days counted backwards from the end of the month: first
+     * bit is the last day (e.g. the 30th of a 30-day month),
+     * second bit the day before, etc. ITU-T Rec. X.746 (02/00)
+     * [§8.3.6.2](https://www.itu.int/rec/T-REC-X.746-200002-I).
+     * @public
+     * @readonly
+     */
+    public readonly daysFromLast: BIT_STRING;
+
     constructor(
-        /**
-         * @summary `daysFromFirst`.
-         * @description
-         *
-         * Days counted from the first of the month: first bit is
-         * day 1, second bit day 2, etc. ITU-T Rec. X.746 (02/00)
-         * [§8.3.6.2](https://www.itu.int/rec/T-REC-X.746-200002-I).
-         * @public
-         * @readonly
-         */
-        readonly daysFromFirst: BIT_STRING,
-        /**
-         * @summary `daysFromLast`.
-         * @description
-         *
-         * Days counted backwards from the end of the month: first
-         * bit is the last day (e.g. the 30th of a 30-day month),
-         * second bit the day before, etc. ITU-T Rec. X.746 (02/00)
-         * [§8.3.6.2](https://www.itu.int/rec/T-REC-X.746-200002-I).
-         * @public
-         * @readonly
-         */
-        readonly daysFromLast: BIT_STRING
-    ) {}
+        daysFromFirst: BIT_STRING,
+        daysFromLast: BIT_STRING
+    ) {
+        this.daysFromFirst = daysFromFirst;
+        this.daysFromLast = daysFromLast;
+    }
 
     /**
      * @summary Restructures an object into a DaysOfMonth

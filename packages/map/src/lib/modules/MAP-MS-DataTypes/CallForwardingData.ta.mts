@@ -31,41 +31,51 @@ import { Ext_ForwFeatureList, _decode_Ext_ForwFeatureList, _encode_Ext_ForwFeatu
  */
 export
 class CallForwardingData {
+    /**
+     * @summary `forwardingFeatureList`.
+     * @description
+     *
+     * Extensible call forwarding feature list (3GPP TS 29.002 V19.1.0
+     * clause 7.6.3.84).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly forwardingFeatureList: Ext_ForwFeatureList;
+    /**
+     * @summary `notificationToCSE`.
+     * @description
+     *
+     * Notification to CSE flag (3GPP TS 29.002 V19.1.0 clause 7.6.3.84).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly notificationToCSE?: OPTIONAL<NULL>;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `forwardingFeatureList`.
-         * @description
-         *
-         * Extensible call forwarding feature list (3GPP TS 29.002 V19.1.0
-         * clause 7.6.3.84).
-         *
-         * @public
-         * @readonly
-         */
-        readonly forwardingFeatureList: Ext_ForwFeatureList,
-        /**
-         * @summary `notificationToCSE`.
-         * @description
-         *
-         * Notification to CSE flag (3GPP TS 29.002 V19.1.0 clause 7.6.3.84).
-         *
-         * @public
-         * @readonly
-         */
-        readonly notificationToCSE?: OPTIONAL<NULL>,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        forwardingFeatureList: Ext_ForwFeatureList,
+        notificationToCSE?: OPTIONAL<NULL>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.forwardingFeatureList = forwardingFeatureList;
+        this.notificationToCSE = notificationToCSE;
+        this.extensionContainer = extensionContainer;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a CallForwardingData

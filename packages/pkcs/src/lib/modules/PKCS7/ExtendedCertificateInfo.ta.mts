@@ -34,26 +34,34 @@ import { Version, _decode_Version, _encode_Version } from "../PKCS7/Version.ta.m
  *
  */
 export class ExtendedCertificateInfo {
+    /**
+     * @summary `version`.
+     * @public
+     * @readonly
+     */
+    public readonly version: Version;
+    /**
+     * @summary `certificate`.
+     * @public
+     * @readonly
+     */
+    public readonly certificate: Certificate;
+    /**
+     * @summary `attributes`.
+     * @public
+     * @readonly
+     */
+    public readonly attributes: Attributes;
+
     constructor(
-        /**
-         * @summary `version`.
-         * @public
-         * @readonly
-         */
-        readonly version: Version,
-        /**
-         * @summary `certificate`.
-         * @public
-         * @readonly
-         */
-        readonly certificate: Certificate,
-        /**
-         * @summary `attributes`.
-         * @public
-         * @readonly
-         */
-        readonly attributes: Attributes
-    ) {}
+        version: Version,
+        certificate: Certificate,
+        attributes: Attributes
+    ) {
+        this.version = version;
+        this.certificate = certificate;
+        this.attributes = attributes;
+    }
 
     /**
      * @summary Restructures an object into a ExtendedCertificateInfo

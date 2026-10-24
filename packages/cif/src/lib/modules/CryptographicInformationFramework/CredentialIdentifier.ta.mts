@@ -34,27 +34,33 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class CredentialIdentifier {
+    /**
+     * @summary `idType`.
+     * @description
+     * `KEY-IDENTIFIER.&id` selecting the identification method (1 =
+     * issuerAndSerialNumber, …, 10 = certificateHolderReference). ISO/IEC
+     * 7816-15:2016 §8.2.4, Annex A.2.4.
+     * @public
+     * @readonly
+     */
+    public readonly idType: INTEGER;
+    /**
+     * @summary `idValue`.
+     * @description
+     * Value whose syntax is determined by `idType`. ISO/IEC 7816-15:2016
+     * §8.2.4.
+     * @public
+     * @readonly
+     */
+    public readonly idValue: _Element;
+
     constructor (
-        /**
-         * @summary `idType`.
-         * @description
-         * `KEY-IDENTIFIER.&id` selecting the identification method (1 =
-         * issuerAndSerialNumber, …, 10 = certificateHolderReference). ISO/IEC
-         * 7816-15:2016 §8.2.4, Annex A.2.4.
-         * @public
-         * @readonly
-         */
-        readonly idType: INTEGER,
-        /**
-         * @summary `idValue`.
-         * @description
-         * Value whose syntax is determined by `idType`. ISO/IEC 7816-15:2016
-         * §8.2.4.
-         * @public
-         * @readonly
-         */
-        readonly idValue: _Element
-    ) {}
+        idType: INTEGER,
+        idValue: _Element
+    ) {
+        this.idType = idType;
+        this.idValue = idValue;
+    }
 
     /**
      * @summary Restructures an object into a CredentialIdentifier

@@ -33,20 +33,26 @@ import { EncryptedContentInfo, _decode_EncryptedContentInfo, _encode_EncryptedCo
  */
 export
 class EncryptedData {
+    /**
+     * @summary `version`.
+     * @public
+     * @readonly
+     */
+    public readonly version: CMSVersion;
+    /**
+     * @summary `encryptedContentInfo`.
+     * @public
+     * @readonly
+     */
+    public readonly encryptedContentInfo: EncryptedContentInfo;
+
     constructor (
-        /**
-         * @summary `version`.
-         * @public
-         * @readonly
-         */
-        readonly version: CMSVersion,
-        /**
-         * @summary `encryptedContentInfo`.
-         * @public
-         * @readonly
-         */
-        readonly encryptedContentInfo: EncryptedContentInfo
-    ) {}
+        version: CMSVersion,
+        encryptedContentInfo: EncryptedContentInfo
+    ) {
+        this.version = version;
+        this.encryptedContentInfo = encryptedContentInfo;
+    }
 
     /**
      * @summary Restructures an object into a EncryptedData

@@ -31,26 +31,34 @@ import * as $ from '@wildboar/asn1/functional';
  *
  */
 export class V42BisCompressionParameter {
+    /**
+     * @summary `dictionary_size`.
+     * @public
+     * @readonly
+     */
+    public readonly dictionary_size?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `largest_compressed_chain`.
+     * @public
+     * @readonly
+     */
+    public readonly largest_compressed_chain?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `last_entries_to_delete`.
+     * @public
+     * @readonly
+     */
+    public readonly last_entries_to_delete?: OPTIONAL<INTEGER>;
+
     constructor(
-        /**
-         * @summary `dictionary_size`.
-         * @public
-         * @readonly
-         */
-        readonly dictionary_size?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `largest_compressed_chain`.
-         * @public
-         * @readonly
-         */
-        readonly largest_compressed_chain?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `last_entries_to_delete`.
-         * @public
-         * @readonly
-         */
-        readonly last_entries_to_delete?: OPTIONAL<INTEGER>
-    ) {}
+        dictionary_size?: OPTIONAL<INTEGER>,
+        largest_compressed_chain?: OPTIONAL<INTEGER>,
+        last_entries_to_delete?: OPTIONAL<INTEGER>
+    ) {
+        this.dictionary_size = dictionary_size;
+        this.largest_compressed_chain = largest_compressed_chain;
+        this.last_entries_to_delete = last_entries_to_delete;
+    }
 
     /**
      * @summary Restructures an object into a V42BisCompressionParameter

@@ -37,32 +37,38 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class IORegisterArgument {
+    /**
+     * @summary `ioDevice`.
+     * @description
+     *
+     * Device for which the computing function requests to be the I/O
+     * server. Mandatory if the switching function does not support
+     * registering for all devices; absent means all devices in the
+     * switching sub-domain (ECMA-269 §24.1.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ioDevice?: OPTIONAL<DeviceID>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * CSTACommonArguments carrying the service-table security and
+     * privateData parameters.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `ioDevice`.
-         * @description
-         *
-         * Device for which the computing function requests to be the I/O
-         * server. Mandatory if the switching function does not support
-         * registering for all devices; absent means all devices in the
-         * switching sub-domain (ECMA-269 §24.1.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly ioDevice?: OPTIONAL<DeviceID>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * CSTACommonArguments carrying the service-table security and
-         * privateData parameters.
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        ioDevice?: OPTIONAL<DeviceID>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.ioDevice = ioDevice;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a IORegisterArgument

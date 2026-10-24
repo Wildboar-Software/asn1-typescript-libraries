@@ -36,35 +36,43 @@ import { AttributeValue, _decode_AttributeValue, _encode_AttributeValue } from "
  */
 export
 class attributeError_ParameterType_problems_Item {
+    /**
+     * @summary `problem`.
+     * @description
+     *
+     * Why the attribute failed.
+     * @public
+     * @readonly
+     */
+    public readonly problem: AttributeProblem;
+    /**
+     * @summary `type_`.
+     * @description
+     *
+     * Attribute type involved.
+     * @public
+     * @readonly
+     */
+    public readonly type_: AttributeType;
+    /**
+     * @summary `value`.
+     * @description
+     *
+     * Value, when needed to disambiguate.
+     * @public
+     * @readonly
+     */
+    public readonly value?: OPTIONAL<AttributeValue>;
+
     constructor (
-        /**
-         * @summary `problem`.
-         * @description
-         *
-         * Why the attribute failed.
-         * @public
-         * @readonly
-         */
-        readonly problem: AttributeProblem,
-        /**
-         * @summary `type_`.
-         * @description
-         *
-         * Attribute type involved.
-         * @public
-         * @readonly
-         */
-        readonly type_: AttributeType,
-        /**
-         * @summary `value`.
-         * @description
-         *
-         * Value, when needed to disambiguate.
-         * @public
-         * @readonly
-         */
-        readonly value?: OPTIONAL<AttributeValue>
-    ) {}
+        problem: AttributeProblem,
+        type_: AttributeType,
+        value?: OPTIONAL<AttributeValue>
+    ) {
+        this.problem = problem;
+        this.type_ = type_;
+        this.value = value;
+    }
 
     /**
      * @summary Restructures an object into a attributeError_ParameterType_problems_Item

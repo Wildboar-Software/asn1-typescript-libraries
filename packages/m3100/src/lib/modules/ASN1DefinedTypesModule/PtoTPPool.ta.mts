@@ -35,20 +35,26 @@ import {
  *
  */
 export class PtoTPPool {
+    /**
+     * @summary `fromTp`.
+     * @public
+     * @readonly
+     */
+    public readonly fromTp: ExplicitTP;
+    /**
+     * @summary `toTpPool`.
+     * @public
+     * @readonly
+     */
+    public readonly toTpPool: ObjectInstance;
+
     constructor(
-        /**
-         * @summary `fromTp`.
-         * @public
-         * @readonly
-         */
-        readonly fromTp: ExplicitTP,
-        /**
-         * @summary `toTpPool`.
-         * @public
-         * @readonly
-         */
-        readonly toTpPool: ObjectInstance
-    ) {}
+        fromTp: ExplicitTP,
+        toTpPool: ObjectInstance
+    ) {
+        this.fromTp = fromTp;
+        this.toTpPool = toTpPool;
+    }
 
     /**
      * @summary Restructures an object into a PtoTPPool

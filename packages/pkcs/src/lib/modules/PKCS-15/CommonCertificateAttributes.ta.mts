@@ -45,56 +45,74 @@ import {
  *
  */
 export class CommonCertificateAttributes {
+    /**
+     * @summary `iD`.
+     * @public
+     * @readonly
+     */
+    public readonly iD: Identifier;
+    /**
+     * @summary `authority`.
+     * @public
+     * @readonly
+     */
+    public readonly authority?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `identifier`.
+     * @public
+     * @readonly
+     */
+    public readonly identifier?: OPTIONAL<CredentialIdentifier>;
+    /**
+     * @summary `certHash`.
+     * @public
+     * @readonly
+     */
+    public readonly certHash?: OPTIONAL<OOBCertHash>;
+    /**
+     * @summary `trustedUsage`.
+     * @public
+     * @readonly
+     */
+    public readonly trustedUsage?: OPTIONAL<Usage>;
+    /**
+     * @summary `identifiers`.
+     * @public
+     * @readonly
+     */
+    public readonly identifiers?: OPTIONAL<CredentialIdentifier[]>;
+    /**
+     * @summary `implicitTrust`.
+     * @public
+     * @readonly
+     */
+    public readonly implicitTrust?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `iD`.
-         * @public
-         * @readonly
-         */
-        readonly iD: Identifier,
-        /**
-         * @summary `authority`.
-         * @public
-         * @readonly
-         */
-        readonly authority?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `identifier`.
-         * @public
-         * @readonly
-         */
-        readonly identifier?: OPTIONAL<CredentialIdentifier>,
-        /**
-         * @summary `certHash`.
-         * @public
-         * @readonly
-         */
-        readonly certHash?: OPTIONAL<OOBCertHash>,
-        /**
-         * @summary `trustedUsage`.
-         * @public
-         * @readonly
-         */
-        readonly trustedUsage?: OPTIONAL<Usage>,
-        /**
-         * @summary `identifiers`.
-         * @public
-         * @readonly
-         */
-        readonly identifiers?: OPTIONAL<CredentialIdentifier[]>,
-        /**
-         * @summary `implicitTrust`.
-         * @public
-         * @readonly
-         */
-        readonly implicitTrust?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        iD: Identifier,
+        authority?: OPTIONAL<BOOLEAN>,
+        identifier?: OPTIONAL<CredentialIdentifier>,
+        certHash?: OPTIONAL<OOBCertHash>,
+        trustedUsage?: OPTIONAL<Usage>,
+        identifiers?: OPTIONAL<CredentialIdentifier[]>,
+        implicitTrust?: OPTIONAL<BOOLEAN>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.iD = iD;
+        this.authority = authority;
+        this.identifier = identifier;
+        this.certHash = certHash;
+        this.trustedUsage = trustedUsage;
+        this.identifiers = identifiers;
+        this.implicitTrust = implicitTrust;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a CommonCertificateAttributes

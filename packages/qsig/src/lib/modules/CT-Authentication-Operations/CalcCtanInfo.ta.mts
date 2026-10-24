@@ -163,7 +163,7 @@ let _cached_encoder_for_CalcCtanInfo: $.ASN1Encoder<CalcCtanInfo> | null = null;
  */
 export
 function _encode_CalcCtanInfo (value: CalcCtanInfo, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CalcCtanInfo) { _cached_encoder_for_CalcCtanInfo = function (value: CalcCtanInfo, elGetter: $.ASN1Encoder<CalcCtanInfo>): _Element {
+    if (!_cached_encoder_for_CalcCtanInfo) { _cached_encoder_for_CalcCtanInfo = function (value: CalcCtanInfo): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_AuthResponse(value.authResponse, $.BER));
     if (value.calculationParam !== undefined) {

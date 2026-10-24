@@ -162,7 +162,7 @@ let _cached_encoder_for_CtanParamRes: $.ASN1Encoder<CtanParamRes> | null = null;
  */
 export
 function _encode_CtanParamRes (value: CtanParamRes, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CtanParamRes) { _cached_encoder_for_CtanParamRes = function (value: CtanParamRes, elGetter: $.ASN1Encoder<CtanParamRes>): _Element {
+    if (!_cached_encoder_for_CtanParamRes) { _cached_encoder_for_CtanParamRes = function (value: CtanParamRes): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_CtanParamInfo(value.ctanParamInfo, $.BER));
     if (value.dummyExtension !== undefined) {

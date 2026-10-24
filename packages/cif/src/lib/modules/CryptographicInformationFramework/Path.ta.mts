@@ -62,35 +62,42 @@ import { cia_ub_index } from "../CryptographicInformationFramework/cia-ub-index.
  */
 export
 class Path {
+    /**
+     * @summary `efidOrTagChoice`.
+     * @description
+     * How the file/object is addressed (EF path, tag, or application AID).
+     * ISO/IEC 7816-15:2016 §8.2.5.
+     * @public
+     * @readonly
+     */
+    public readonly efidOrTagChoice: Path_efidOrTagChoice;
+    /**
+     * @summary `index`.
+     * @description
+     * Record number (linear EF) or byte offset (transparent EF). Must be
+     * present iff `length` is present. ISO/IEC 7816-15:2016 §8.2.5.
+     * @public
+     * @readonly
+     */
+    public readonly index?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `length`.
+     * @description
+     * Record length 0 for linear EFs, or segment length for transparent
+     * EFs. ISO/IEC 7816-15:2016 §8.2.5.
+     * @public
+     * @readonly
+     */
+    public readonly length?: OPTIONAL<INTEGER>;
+
     constructor (
-        /**
-         * @summary `efidOrTagChoice`.
-         * @description
-         * How the file/object is addressed (EF path, tag, or application AID).
-         * ISO/IEC 7816-15:2016 §8.2.5.
-         * @public
-         * @readonly
-         */
-        readonly efidOrTagChoice: Path_efidOrTagChoice,
-        /**
-         * @summary `index`.
-         * @description
-         * Record number (linear EF) or byte offset (transparent EF). Must be
-         * present iff `length` is present. ISO/IEC 7816-15:2016 §8.2.5.
-         * @public
-         * @readonly
-         */
-        readonly index?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `length`.
-         * @description
-         * Record length 0 for linear EFs, or segment length for transparent
-         * EFs. ISO/IEC 7816-15:2016 §8.2.5.
-         * @public
-         * @readonly
-         */
-        readonly length?: OPTIONAL<INTEGER>
+        efidOrTagChoice: Path_efidOrTagChoice,
+        index?: OPTIONAL<INTEGER>,
+        length?: OPTIONAL<INTEGER>
     ) {
+        this.efidOrTagChoice = efidOrTagChoice;
+        this.index = index;
+        this.length = length;
         const indexPresent = index !== undefined;
         const lengthPresent = length !== undefined;
         if (indexPresent !== lengthPresent) {

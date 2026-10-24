@@ -34,20 +34,26 @@ import {
  *
  */
 export class BodyPartSignatureVerification_Item {
+    /**
+     * @summary `body_part_sequence_number`.
+     * @public
+     * @readonly
+     */
+    public readonly body_part_sequence_number: BodyPartNumber;
+    /**
+     * @summary `body_part_signature`.
+     * @public
+     * @readonly
+     */
+    public readonly body_part_signature: SignatureStatus;
+
     constructor(
-        /**
-         * @summary `body_part_sequence_number`.
-         * @public
-         * @readonly
-         */
-        readonly body_part_sequence_number: BodyPartNumber,
-        /**
-         * @summary `body_part_signature`.
-         * @public
-         * @readonly
-         */
-        readonly body_part_signature: SignatureStatus
-    ) {}
+        body_part_sequence_number: BodyPartNumber,
+        body_part_signature: SignatureStatus
+    ) {
+        this.body_part_sequence_number = body_part_sequence_number;
+        this.body_part_signature = body_part_signature;
+    }
 
     /**
      * @summary Restructures an object into a BodyPartSignatureVerification_Item

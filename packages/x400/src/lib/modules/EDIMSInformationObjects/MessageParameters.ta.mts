@@ -44,26 +44,34 @@ import {
  *
  */
 export class MessageParameters {
+    /**
+     * @summary `delivery_time`.
+     * @public
+     * @readonly
+     */
+    public readonly delivery_time?: OPTIONAL<MessageDeliveryTime>;
+    /**
+     * @summary `delivery_envelope`.
+     * @public
+     * @readonly
+     */
+    public readonly delivery_envelope?: OPTIONAL<OtherMessageDeliveryFields>;
+    /**
+     * @summary `other_parameters`.
+     * @public
+     * @readonly
+     */
+    public readonly other_parameters?: OPTIONAL<EDISupplementaryInformation>;
+
     constructor(
-        /**
-         * @summary `delivery_time`.
-         * @public
-         * @readonly
-         */
-        readonly delivery_time?: OPTIONAL<MessageDeliveryTime>,
-        /**
-         * @summary `delivery_envelope`.
-         * @public
-         * @readonly
-         */
-        readonly delivery_envelope?: OPTIONAL<OtherMessageDeliveryFields>,
-        /**
-         * @summary `other_parameters`.
-         * @public
-         * @readonly
-         */
-        readonly other_parameters?: OPTIONAL<EDISupplementaryInformation>
-    ) {}
+        delivery_time?: OPTIONAL<MessageDeliveryTime>,
+        delivery_envelope?: OPTIONAL<OtherMessageDeliveryFields>,
+        other_parameters?: OPTIONAL<EDISupplementaryInformation>
+    ) {
+        this.delivery_time = delivery_time;
+        this.delivery_envelope = delivery_envelope;
+        this.other_parameters = other_parameters;
+    }
 
     /**
      * @summary Restructures an object into a MessageParameters

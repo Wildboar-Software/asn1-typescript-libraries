@@ -33,32 +33,42 @@ import {
  *
  */
 export class CertUpdateReq_certs_Item {
+    /**
+     * @summary `subject`.
+     * @public
+     * @readonly
+     */
+    public readonly subject: Name;
+    /**
+     * @summary `serialNumber`.
+     * @public
+     * @readonly
+     */
+    public readonly serialNumber: CertificateSerialNumber;
+    /**
+     * @summary `certStatus`.
+     * @public
+     * @readonly
+     */
+    public readonly certStatus: CertStatus;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `subject`.
-         * @public
-         * @readonly
-         */
-        readonly subject: Name,
-        /**
-         * @summary `serialNumber`.
-         * @public
-         * @readonly
-         */
-        readonly serialNumber: CertificateSerialNumber,
-        /**
-         * @summary `certStatus`.
-         * @public
-         * @readonly
-         */
-        readonly certStatus: CertStatus,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        subject: Name,
+        serialNumber: CertificateSerialNumber,
+        certStatus: CertStatus,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.subject = subject;
+        this.serialNumber = serialNumber;
+        this.certStatus = certStatus;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a CertUpdateReq_certs_Item

@@ -36,19 +36,23 @@ import {
  *
  */
 export class GetIndicatorStatus_ResponseParams {
+  /**
+   * @summary `indicatorStatus`.
+   * @description
+   *
+   * Indicator status written to C `IndicatorStatus` (cl.20, §15.45).
+   * Required on a conforming response (`X.1083 §16.55`, Table 116).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly indicatorStatus: BioAPI_INDICATOR_STATUS;
+
   constructor(
-    /**
-     * @summary `indicatorStatus`.
-     * @description
-     *
-     * Indicator status written to C `IndicatorStatus` (cl.20, §15.45).
-     * Required on a conforming response (`X.1083 §16.55`, Table 116).
-     *
-     * @public
-     * @readonly
-     */
-    readonly indicatorStatus: BioAPI_INDICATOR_STATUS
-  ) {}
+    indicatorStatus: BioAPI_INDICATOR_STATUS
+  ) {
+    this.indicatorStatus = indicatorStatus;
+  }
 
   /**
    * @summary Restructures an object into a GetIndicatorStatus_ResponseParams

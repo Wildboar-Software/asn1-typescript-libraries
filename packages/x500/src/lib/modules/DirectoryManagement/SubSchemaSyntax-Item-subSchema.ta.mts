@@ -56,85 +56,101 @@ import {
  *
  */
 export class SubSchemaSyntax_Item_subSchema {
+    /**
+     * @summary `structureRules`.
+     * @description
+     *
+     * OPTIONAL SEQUENCE OF; omitted = category not published (not
+     * the same as empty). Order unspecified.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly structureRules?: OPTIONAL<DITStructureRuleDescription[]>;
+    /**
+     * @summary `contentRules`.
+     * @description
+     *
+     * OPTIONAL SEQUENCE OF; omitted = category not published.
+     * Order unspecified.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly contentRules?: OPTIONAL<DITContentRuleDescription[]>;
+    /**
+     * @summary `matchingRules`.
+     * @description
+     *
+     * OPTIONAL SEQUENCE OF; omitted = category not published.
+     * Order unspecified.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly matchingRules?: OPTIONAL<MatchingRuleDescription[]>;
+    /**
+     * @summary `attributeTypes`.
+     * @description
+     *
+     * OPTIONAL SEQUENCE OF; omitted = category not published.
+     * Order unspecified.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly attributeTypes?: OPTIONAL<AttributeTypeDescription[]>;
+    /**
+     * @summary `objectClasses`.
+     * @description
+     *
+     * OPTIONAL SEQUENCE OF; omitted = category not published.
+     * Order unspecified.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly objectClasses?: OPTIONAL<ObjectClassDescription[]>;
+    /**
+     * @summary `nameForms`.
+     * @description
+     *
+     * OPTIONAL SEQUENCE OF; omitted = category not published.
+     * Order unspecified.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly nameForms?: OPTIONAL<NameFormDescription[]>;
+    /**
+     * @summary `matchRuleUses`.
+     * @description
+     *
+     * OPTIONAL SEQUENCE OF; omitted = category not published.
+     * Order unspecified.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly matchRuleUses?: OPTIONAL<MatchingRuleUseDescription[]>;
+
     constructor(
-        /**
-         * @summary `structureRules`.
-         * @description
-         *
-         * OPTIONAL SEQUENCE OF; omitted = category not published (not
-         * the same as empty). Order unspecified.
-         *
-         * @public
-         * @readonly
-         */
-        readonly structureRules?: OPTIONAL<DITStructureRuleDescription[]>,
-        /**
-         * @summary `contentRules`.
-         * @description
-         *
-         * OPTIONAL SEQUENCE OF; omitted = category not published.
-         * Order unspecified.
-         *
-         * @public
-         * @readonly
-         */
-        readonly contentRules?: OPTIONAL<DITContentRuleDescription[]>,
-        /**
-         * @summary `matchingRules`.
-         * @description
-         *
-         * OPTIONAL SEQUENCE OF; omitted = category not published.
-         * Order unspecified.
-         *
-         * @public
-         * @readonly
-         */
-        readonly matchingRules?: OPTIONAL<MatchingRuleDescription[]>,
-        /**
-         * @summary `attributeTypes`.
-         * @description
-         *
-         * OPTIONAL SEQUENCE OF; omitted = category not published.
-         * Order unspecified.
-         *
-         * @public
-         * @readonly
-         */
-        readonly attributeTypes?: OPTIONAL<AttributeTypeDescription[]>,
-        /**
-         * @summary `objectClasses`.
-         * @description
-         *
-         * OPTIONAL SEQUENCE OF; omitted = category not published.
-         * Order unspecified.
-         *
-         * @public
-         * @readonly
-         */
-        readonly objectClasses?: OPTIONAL<ObjectClassDescription[]>,
-        /**
-         * @summary `nameForms`.
-         * @description
-         *
-         * OPTIONAL SEQUENCE OF; omitted = category not published.
-         * Order unspecified.
-         *
-         * @public
-         * @readonly
-         */
-        readonly nameForms?: OPTIONAL<NameFormDescription[]>,
-        /**
-         * @summary `matchRuleUses`.
-         * @description
-         *
-         * OPTIONAL SEQUENCE OF; omitted = category not published.
-         * Order unspecified.
-         *
-         * @public
-         * @readonly
-         */
-        readonly matchRuleUses?: OPTIONAL<MatchingRuleUseDescription[]>
-    ) {}
+        structureRules?: OPTIONAL<DITStructureRuleDescription[]>,
+        contentRules?: OPTIONAL<DITContentRuleDescription[]>,
+        matchingRules?: OPTIONAL<MatchingRuleDescription[]>,
+        attributeTypes?: OPTIONAL<AttributeTypeDescription[]>,
+        objectClasses?: OPTIONAL<ObjectClassDescription[]>,
+        nameForms?: OPTIONAL<NameFormDescription[]>,
+        matchRuleUses?: OPTIONAL<MatchingRuleUseDescription[]>
+    ) {
+        this.structureRules = structureRules;
+        this.contentRules = contentRules;
+        this.matchingRules = matchingRules;
+        this.attributeTypes = attributeTypes;
+        this.objectClasses = objectClasses;
+        this.nameForms = nameForms;
+        this.matchRuleUses = matchRuleUses;
+    }
 
     /**
      * @summary Restructures an object into a SubSchemaSyntax_Item_subSchema

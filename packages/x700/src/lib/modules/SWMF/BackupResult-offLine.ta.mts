@@ -34,28 +34,34 @@ import {
  *
  */
 export class BackupResult_offLine {
+    /**
+     * @summary `destination`.
+     * @description
+     *
+     * Remote system that received the backup (e.g. FTAM
+     * address). ITU-T Rec. X.744 (10/96) A.8.
+     * @public
+     * @readonly
+     */
+    public readonly destination: GraphicString;
+    /**
+     * @summary `result`.
+     * @description
+     *
+     * Off-line backup result (success or named failure). ITU-T
+     * Rec. X.744 (10/96) A.8.
+     * @public
+     * @readonly
+     */
+    public readonly result: BackupResult_offLine_result;
+
     constructor(
-        /**
-         * @summary `destination`.
-         * @description
-         *
-         * Remote system that received the backup (e.g. FTAM
-         * address). ITU-T Rec. X.744 (10/96) A.8.
-         * @public
-         * @readonly
-         */
-        readonly destination: GraphicString,
-        /**
-         * @summary `result`.
-         * @description
-         *
-         * Off-line backup result (success or named failure). ITU-T
-         * Rec. X.744 (10/96) A.8.
-         * @public
-         * @readonly
-         */
-        readonly result: BackupResult_offLine_result
-    ) {}
+        destination: GraphicString,
+        result: BackupResult_offLine_result
+    ) {
+        this.destination = destination;
+        this.result = result;
+    }
 
     /**
      * @summary Restructures an object into a BackupResult_offLine

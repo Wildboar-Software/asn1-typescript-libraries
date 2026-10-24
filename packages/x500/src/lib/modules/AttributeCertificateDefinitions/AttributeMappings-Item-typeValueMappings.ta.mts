@@ -24,26 +24,34 @@ import {
  *
  */
 export class AttributeMappings_Item_typeValueMappings {
+    /**
+     * @summary `local`.
+     * @public
+     * @readonly
+     */
+    public readonly local: AttributeTypeAndValue;
+    /**
+     * @summary `remote`.
+     * @public
+     * @readonly
+     */
+    public readonly remote: AttributeTypeAndValue;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `local`.
-         * @public
-         * @readonly
-         */
-        readonly local: AttributeTypeAndValue,
-        /**
-         * @summary `remote`.
-         * @public
-         * @readonly
-         */
-        readonly remote: AttributeTypeAndValue,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        local: AttributeTypeAndValue,
+        remote: AttributeTypeAndValue,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.local = local;
+        this.remote = remote;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a AttributeMappings_Item_typeValueMappings

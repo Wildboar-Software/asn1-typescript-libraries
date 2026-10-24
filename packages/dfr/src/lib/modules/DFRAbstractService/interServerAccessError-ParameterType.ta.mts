@@ -34,26 +34,32 @@ import { InterServerAccessProblem, _enum_for_InterServerAccessProblem, _decode_I
  */
 export
 class interServerAccessError_ParameterType {
+    /**
+     * @summary `entry`.
+     * @description
+     *
+     * Local DFR-Reference whose remote access failed.
+     * @public
+     * @readonly
+     */
+    public readonly entry: DfrEntryName;
+    /**
+     * @summary `problem`.
+     * @description
+     *
+     * Why the accessee could not be used.
+     * @public
+     * @readonly
+     */
+    public readonly problem: InterServerAccessProblem;
+
     constructor (
-        /**
-         * @summary `entry`.
-         * @description
-         *
-         * Local DFR-Reference whose remote access failed.
-         * @public
-         * @readonly
-         */
-        readonly entry: DfrEntryName,
-        /**
-         * @summary `problem`.
-         * @description
-         *
-         * Why the accessee could not be used.
-         * @public
-         * @readonly
-         */
-        readonly problem: InterServerAccessProblem
-    ) {}
+        entry: DfrEntryName,
+        problem: InterServerAccessProblem
+    ) {
+        this.entry = entry;
+        this.problem = problem;
+    }
 
     /**
      * @summary Restructures an object into a interServerAccessError_ParameterType

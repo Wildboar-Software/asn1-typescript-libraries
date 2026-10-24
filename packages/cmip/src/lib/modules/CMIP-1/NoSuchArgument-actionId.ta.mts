@@ -39,28 +39,34 @@ import {
  *
  */
 export class NoSuchArgument_actionId {
+  /**
+   * @summary `managedObjectClass`.
+   * @description
+   *
+   * Class on which the unknown argument was used.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly managedObjectClass: OPTIONAL<ObjectClass>;
+  /**
+   * @summary `actionType`.
+   * @description
+   *
+   * Action whose argument is unknown.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly actionType: ActionTypeId;
+
   constructor(
-    /**
-     * @summary `managedObjectClass`.
-     * @description
-     *
-     * Class on which the unknown argument was used.
-     *
-     * @public
-     * @readonly
-     */
-    readonly managedObjectClass: OPTIONAL<ObjectClass>,
-    /**
-     * @summary `actionType`.
-     * @description
-     *
-     * Action whose argument is unknown.
-     *
-     * @public
-     * @readonly
-     */
-    readonly actionType: ActionTypeId
-  ) {}
+    managedObjectClass: OPTIONAL<ObjectClass>,
+    actionType: ActionTypeId
+  ) {
+    this.managedObjectClass = managedObjectClass;
+    this.actionType = actionType;
+  }
 
   /**
    * @summary Restructures an object into a NoSuchArgument_actionId

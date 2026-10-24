@@ -46,29 +46,35 @@ import {
  *
  */
 export class BackupArgument {
+    /**
+     * @summary `backupDestination`.
+     * @description
+     *
+     * Where the copy is written (local object, in-line to the
+     * manager, or off-line remote system). Mandatory. ITU-T Rec.
+     * X.744 (10/96) §8.3.1, §9.2 Table 6, A.9.1.
+     * @public
+     * @readonly
+     */
+    public readonly backupDestination: BackupDestination;
+    /**
+     * @summary `additionalInfo`.
+     * @description
+     *
+     * Management extensions. User in Table 6. ITU-T Rec. X.744
+     * (10/96) §9.2 Table 6.
+     * @public
+     * @readonly
+     */
+    public readonly additionalInfo?: OPTIONAL<ManagementExtension[]>;
+
     constructor(
-        /**
-         * @summary `backupDestination`.
-         * @description
-         *
-         * Where the copy is written (local object, in-line to the
-         * manager, or off-line remote system). Mandatory. ITU-T Rec.
-         * X.744 (10/96) §8.3.1, §9.2 Table 6, A.9.1.
-         * @public
-         * @readonly
-         */
-        readonly backupDestination: BackupDestination,
-        /**
-         * @summary `additionalInfo`.
-         * @description
-         *
-         * Management extensions. User in Table 6. ITU-T Rec. X.744
-         * (10/96) §9.2 Table 6.
-         * @public
-         * @readonly
-         */
-        readonly additionalInfo?: OPTIONAL<ManagementExtension[]>
-    ) {}
+        backupDestination: BackupDestination,
+        additionalInfo?: OPTIONAL<ManagementExtension[]>
+    ) {
+        this.backupDestination = backupDestination;
+        this.additionalInfo = additionalInfo;
+    }
 
     /**
      * @summary Restructures an object into a BackupArgument

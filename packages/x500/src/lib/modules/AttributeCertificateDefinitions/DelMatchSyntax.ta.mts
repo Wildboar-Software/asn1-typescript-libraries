@@ -33,26 +33,34 @@ import {
  *
  */
 export class DelMatchSyntax {
+    /**
+     * @summary `firstIssuer`.
+     * @public
+     * @readonly
+     */
+    public readonly firstIssuer: AttCertIssuer;
+    /**
+     * @summary `lastHolder`.
+     * @public
+     * @readonly
+     */
+    public readonly lastHolder: Holder;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `firstIssuer`.
-         * @public
-         * @readonly
-         */
-        readonly firstIssuer: AttCertIssuer,
-        /**
-         * @summary `lastHolder`.
-         * @public
-         * @readonly
-         */
-        readonly lastHolder: Holder,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        firstIssuer: AttCertIssuer,
+        lastHolder: Holder,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.firstIssuer = firstIssuer;
+        this.lastHolder = lastHolder;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a DelMatchSyntax

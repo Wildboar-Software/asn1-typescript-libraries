@@ -34,51 +34,61 @@ import { type Certificate, _decode_Certificate, _encode_Certificate } from "@wil
  */
 export
 class OtherSignedNotification {
+    /**
+     * @summary `tbsOtherNotification`.
+     * @description
+     * 
+     * The metadata that is signed. Enable, disable, and delete use this
+     * form rather than `ProfileInstallationResult`. SGP.22 v3.1 §5.7.10.
+     * 
+     * @public
+     * @readonly
+     */
+    public readonly tbsOtherNotification: NotificationMetadata;
+    /**
+     * @summary `euiccNotificationSignature`.
+     * @description
+     * 
+     * Signature under SK.EUICC.SIG over `tbsOtherNotification`, tag
+     * `'5F37'`. SGP.22 v3.1 §5.7.10.
+     * 
+     * @public
+     * @readonly
+     */
+    public readonly euiccNotificationSignature: OCTET_STRING;
+    /**
+     * @summary `euiccCertificate`.
+     * @description
+     * 
+     * CERT.EUICC.SIG, signed by the EUM. SGP.22 v3.1 §5.7.10.
+     * 
+     * @public
+     * @readonly
+     */
+    public readonly euiccCertificate: Certificate;
+    /**
+     * @summary `eumCertificate`.
+     * @description
+     * 
+     * CERT.EUM.SIG, signed by the CI. The receiver uses it to verify
+     * `euiccCertificate`. SGP.22 v3.1 §5.7.10.
+     * 
+     * @public
+     * @readonly
+     */
+    public readonly eumCertificate: Certificate;
+
     constructor (
-        /**
-         * @summary `tbsOtherNotification`.
-         * @description
-         * 
-         * The metadata that is signed. Enable, disable, and delete use this
-         * form rather than `ProfileInstallationResult`. SGP.22 v3.1 §5.7.10.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly tbsOtherNotification: NotificationMetadata,
-        /**
-         * @summary `euiccNotificationSignature`.
-         * @description
-         * 
-         * Signature under SK.EUICC.SIG over `tbsOtherNotification`, tag
-         * `'5F37'`. SGP.22 v3.1 §5.7.10.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly euiccNotificationSignature: OCTET_STRING,
-        /**
-         * @summary `euiccCertificate`.
-         * @description
-         * 
-         * CERT.EUICC.SIG, signed by the EUM. SGP.22 v3.1 §5.7.10.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly euiccCertificate: Certificate,
-        /**
-         * @summary `eumCertificate`.
-         * @description
-         * 
-         * CERT.EUM.SIG, signed by the CI. The receiver uses it to verify
-         * `euiccCertificate`. SGP.22 v3.1 §5.7.10.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly eumCertificate: Certificate
-    ) {}
+        tbsOtherNotification: NotificationMetadata,
+        euiccNotificationSignature: OCTET_STRING,
+        euiccCertificate: Certificate,
+        eumCertificate: Certificate
+    ) {
+        this.tbsOtherNotification = tbsOtherNotification;
+        this.euiccNotificationSignature = euiccNotificationSignature;
+        this.euiccCertificate = euiccCertificate;
+        this.eumCertificate = eumCertificate;
+    }
 
     /**
      * @summary Restructures an object into a OtherSignedNotification

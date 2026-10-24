@@ -42,34 +42,44 @@ import {
  *
  */
 export class Clearance {
+    /**
+     * @summary `policyId`.
+     * @public
+     * @readonly
+     */
+    public readonly policyId: OBJECT_IDENTIFIER;
+    /**
+     * @summary `classList`.
+     * @description DEFAULT `{unclassified}` (bit 1). Several bits may be set.
+     * @public
+     * @readonly
+     */
+    public readonly classList?: OPTIONAL<ClassList>;
+    /**
+     * @summary `securityCategories`.
+     * @description SET SIZE (1..MAX); further restrictions within `classList`.
+     * @public
+     * @readonly
+     */
+    public readonly securityCategories?: OPTIONAL<SecurityCategory[]>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `policyId`.
-         * @public
-         * @readonly
-         */
-        readonly policyId: OBJECT_IDENTIFIER,
-        /**
-         * @summary `classList`.
-         * @description DEFAULT `{unclassified}` (bit 1). Several bits may be set.
-         * @public
-         * @readonly
-         */
-        readonly classList?: OPTIONAL<ClassList>,
-        /**
-         * @summary `securityCategories`.
-         * @description SET SIZE (1..MAX); further restrictions within `classList`.
-         * @public
-         * @readonly
-         */
-        readonly securityCategories?: OPTIONAL<SecurityCategory[]>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        policyId: OBJECT_IDENTIFIER,
+        classList?: OPTIONAL<ClassList>,
+        securityCategories?: OPTIONAL<SecurityCategory[]>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.policyId = policyId;
+        this.classList = classList;
+        this.securityCategories = securityCategories;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a Clearance

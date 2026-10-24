@@ -56,57 +56,67 @@ import {
  *
  */
 export class ESSSecurityLabel {
+    /**
+     * @summary `security_policy_identifier`.
+     * @description
+     *
+     * OID identifying the security policy in force for this label; defines
+     * the semantics of the other components ([RFC 2634 §3.3.1](https://datatracker.ietf.org/doc/html/rfc2634#section-3.3.1)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly security_policy_identifier: SecurityPolicyIdentifier;
+    /**
+     * @summary `security_classification`.
+     * @description
+     *
+     * Optional hierarchical classification integer. Meanings are defined by
+     * the security policy identified by `security-policy-identifier`. Values
+     * 0–5 are reserved for the X.411 basic hierarchy (unmarked through
+     * top-secret); policies SHOULD use other integers for local levels. The
+     * set of valid values MUST be hierarchical but need not be ascending or
+     * contiguous ([RFC 2634 §3.3.2](https://datatracker.ietf.org/doc/html/rfc2634#section-3.3.2)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly security_classification?: OPTIONAL<SecurityClassification>;
+    /**
+     * @summary `privacy_mark`.
+     * @description
+     *
+     * Optional privacy mark; not used for access control. Content may be
+     * defined by the security policy or chosen by the originator
+     * ([RFC 2634 §3.3.3](https://datatracker.ietf.org/doc/html/rfc2634#section-3.3.3)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly privacy_mark?: OPTIONAL<ESSPrivacyMark>;
+    /**
+     * @summary `security_categories`.
+     * @description
+     *
+     * Optional further sensitivity granularity. Allowed syntaxes are defined
+     * by the security policy (or bilateral agreement) ([RFC 2634 §3.3.4](https://datatracker.ietf.org/doc/html/rfc2634#section-3.3.4)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly security_categories?: OPTIONAL<SecurityCategories>;
+
     constructor(
-        /**
-         * @summary `security_policy_identifier`.
-         * @description
-         *
-         * OID identifying the security policy in force for this label; defines
-         * the semantics of the other components ([RFC 2634 §3.3.1](https://datatracker.ietf.org/doc/html/rfc2634#section-3.3.1)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly security_policy_identifier: SecurityPolicyIdentifier,
-        /**
-         * @summary `security_classification`.
-         * @description
-         *
-         * Optional hierarchical classification integer. Meanings are defined by
-         * the security policy identified by `security-policy-identifier`. Values
-         * 0–5 are reserved for the X.411 basic hierarchy (unmarked through
-         * top-secret); policies SHOULD use other integers for local levels. The
-         * set of valid values MUST be hierarchical but need not be ascending or
-         * contiguous ([RFC 2634 §3.3.2](https://datatracker.ietf.org/doc/html/rfc2634#section-3.3.2)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly security_classification?: OPTIONAL<SecurityClassification>,
-        /**
-         * @summary `privacy_mark`.
-         * @description
-         *
-         * Optional privacy mark; not used for access control. Content may be
-         * defined by the security policy or chosen by the originator
-         * ([RFC 2634 §3.3.3](https://datatracker.ietf.org/doc/html/rfc2634#section-3.3.3)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly privacy_mark?: OPTIONAL<ESSPrivacyMark>,
-        /**
-         * @summary `security_categories`.
-         * @description
-         *
-         * Optional further sensitivity granularity. Allowed syntaxes are defined
-         * by the security policy (or bilateral agreement) ([RFC 2634 §3.3.4](https://datatracker.ietf.org/doc/html/rfc2634#section-3.3.4)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly security_categories?: OPTIONAL<SecurityCategories>
-    ) {}
+        security_policy_identifier: SecurityPolicyIdentifier,
+        security_classification?: OPTIONAL<SecurityClassification>,
+        privacy_mark?: OPTIONAL<ESSPrivacyMark>,
+        security_categories?: OPTIONAL<SecurityCategories>
+    ) {
+        this.security_policy_identifier = security_policy_identifier;
+        this.security_classification = security_classification;
+        this.privacy_mark = privacy_mark;
+        this.security_categories = security_categories;
+    }
 
     /**
      * @summary Restructures an object into a ESSSecurityLabel

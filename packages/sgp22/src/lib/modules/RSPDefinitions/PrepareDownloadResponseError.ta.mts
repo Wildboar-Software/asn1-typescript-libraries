@@ -29,29 +29,35 @@ import { DownloadErrorCode, _decode_DownloadErrorCode, _encode_DownloadErrorCode
  */
 export
 class PrepareDownloadResponseError {
+    /**
+     * @summary `transactionId`.
+     * @description
+     * 
+     * Session the error belongs to. SGP.22 v3.1 §5.7.5.
+     * 
+     * @public
+     * @readonly
+     */
+    public readonly transactionId: TransactionId;
+    /**
+     * @summary `downloadErrorCode`.
+     * @description
+     * 
+     * Certificate, signature, curve, session, or TransactionID failure.
+     * SGP.22 v3.1 §5.7.5.
+     * 
+     * @public
+     * @readonly
+     */
+    public readonly downloadErrorCode: DownloadErrorCode;
+
     constructor (
-        /**
-         * @summary `transactionId`.
-         * @description
-         * 
-         * Session the error belongs to. SGP.22 v3.1 §5.7.5.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly transactionId: TransactionId,
-        /**
-         * @summary `downloadErrorCode`.
-         * @description
-         * 
-         * Certificate, signature, curve, session, or TransactionID failure.
-         * SGP.22 v3.1 §5.7.5.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly downloadErrorCode: DownloadErrorCode
-    ) {}
+        transactionId: TransactionId,
+        downloadErrorCode: DownloadErrorCode
+    ) {
+        this.transactionId = transactionId;
+        this.downloadErrorCode = downloadErrorCode;
+    }
 
     /**
      * @summary Restructures an object into a PrepareDownloadResponseError

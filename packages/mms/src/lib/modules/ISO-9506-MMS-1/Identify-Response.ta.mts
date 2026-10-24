@@ -38,49 +38,59 @@ import { MMSString, _decode_MMSString, _encode_MMSString } from "../ISO-9506-MMS
  */
 export
 class Identify_Response {
+    /**
+     * @summary `vendorName`.
+     * @description
+     *
+     * VMD `&vendorName`. ISO 9506-1:2003 §10.6.1.2.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly vendorName: MMSString;
+    /**
+     * @summary `modelName`.
+     * @description
+     *
+     * VMD `&modelName`. ISO 9506-1:2003 §10.6.1.2.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly modelName: MMSString;
+    /**
+     * @summary `revision`.
+     * @description
+     *
+     * VMD `&revision`. ISO 9506-1:2003 §10.6.1.2.3.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly revision: MMSString;
+    /**
+     * @summary `listOfAbstractSyntaxes`.
+     * @description
+     *
+     * VMD `&AbstractSyntaxes`. Shall not be included if the list is empty.
+     * ISO 9506-1:2003 §10.6.1.2.4.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly listOfAbstractSyntaxes?: OPTIONAL<OBJECT_IDENTIFIER[]>;
+
     constructor (
-        /**
-         * @summary `vendorName`.
-         * @description
-         *
-         * VMD `&vendorName`. ISO 9506-1:2003 §10.6.1.2.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly vendorName: MMSString,
-        /**
-         * @summary `modelName`.
-         * @description
-         *
-         * VMD `&modelName`. ISO 9506-1:2003 §10.6.1.2.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly modelName: MMSString,
-        /**
-         * @summary `revision`.
-         * @description
-         *
-         * VMD `&revision`. ISO 9506-1:2003 §10.6.1.2.3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly revision: MMSString,
-        /**
-         * @summary `listOfAbstractSyntaxes`.
-         * @description
-         *
-         * VMD `&AbstractSyntaxes`. Shall not be included if the list is empty.
-         * ISO 9506-1:2003 §10.6.1.2.4.
-         *
-         * @public
-         * @readonly
-         */
-        readonly listOfAbstractSyntaxes?: OPTIONAL<OBJECT_IDENTIFIER[]>
-    ) {}
+        vendorName: MMSString,
+        modelName: MMSString,
+        revision: MMSString,
+        listOfAbstractSyntaxes?: OPTIONAL<OBJECT_IDENTIFIER[]>
+    ) {
+        this.vendorName = vendorName;
+        this.modelName = modelName;
+        this.revision = revision;
+        this.listOfAbstractSyntaxes = listOfAbstractSyntaxes;
+    }
 
     /**
      * @summary Restructures an object into a Identify_Response

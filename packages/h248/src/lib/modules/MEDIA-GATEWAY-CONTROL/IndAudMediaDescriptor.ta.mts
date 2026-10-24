@@ -35,42 +35,50 @@ import { IndAudMediaDescriptor_streams, _decode_IndAudMediaDescriptor_streams, _
  */
 export
 class IndAudMediaDescriptor {
+    /**
+     * @summary `termStateDescr`.
+     * @description
+     *
+     * TerminationState items to return: packaged properties, and either the
+     * current or the possible ServiceStates and EventBufferControl.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly termStateDescr?: OPTIONAL<IndAudTerminationStateDescriptor>;
+    /**
+     * @summary `streams`.
+     * @description
+     *
+     * Stream items to return. `oneStream` audits the stream whose StreamID
+     * is taken to be 1, matching the convenience form of the Media
+     * descriptor (clause 7.1.4). `multiStream` names streams explicitly.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly streams?: OPTIONAL<IndAudMediaDescriptor_streams>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @description
+     *
+     * Extension additions this version does not define. Kept so a later
+     * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `termStateDescr`.
-         * @description
-         *
-         * TerminationState items to return: packaged properties, and either the
-         * current or the possible ServiceStates and EventBufferControl.
-         *
-         * @public
-         * @readonly
-         */
-        readonly termStateDescr?: OPTIONAL<IndAudTerminationStateDescriptor>,
-        /**
-         * @summary `streams`.
-         * @description
-         *
-         * Stream items to return. `oneStream` audits the stream whose StreamID
-         * is taken to be 1, matching the convenience form of the Media
-         * descriptor (clause 7.1.4). `multiStream` names streams explicitly.
-         *
-         * @public
-         * @readonly
-         */
-        readonly streams?: OPTIONAL<IndAudMediaDescriptor_streams>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @description
-         *
-         * Extension additions this version does not define. Kept so a later
-         * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
-         *
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        termStateDescr?: OPTIONAL<IndAudTerminationStateDescriptor>,
+        streams?: OPTIONAL<IndAudMediaDescriptor_streams>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.termStateDescr = termStateDescr;
+        this.streams = streams;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a IndAudMediaDescriptor

@@ -61,28 +61,34 @@ import {
  * @class
  */
 export class PSID {
+    /**
+     * @summary `hashAlg`.
+     * @description
+     *
+     * Hash algorithm and parameters used to generate the
+     * PSID (Annex A.3).
+     * @public
+     * @readonly
+     */
+    public readonly hashAlg: HashAlgorithm;
+    /**
+     * @summary `hashContent`.
+     * @description
+     *
+     * Hash inputs: biometric reference `BR` and random
+     * number `R` (Annex A.3; clause 8.1.2.2).
+     * @public
+     * @readonly
+     */
+    public readonly hashContent: HashContent;
+
     constructor(
-        /**
-         * @summary `hashAlg`.
-         * @description
-         *
-         * Hash algorithm and parameters used to generate the
-         * PSID (Annex A.3).
-         * @public
-         * @readonly
-         */
-        readonly hashAlg: HashAlgorithm,
-        /**
-         * @summary `hashContent`.
-         * @description
-         *
-         * Hash inputs: biometric reference `BR` and random
-         * number `R` (Annex A.3; clause 8.1.2.2).
-         * @public
-         * @readonly
-         */
-        readonly hashContent: HashContent
-    ) {}
+        hashAlg: HashAlgorithm,
+        hashContent: HashContent
+    ) {
+        this.hashAlg = hashAlg;
+        this.hashContent = hashContent;
+    }
 
     /**
      * @summary Restructures an object into a PSID

@@ -37,31 +37,37 @@ import { BiometricSubtype, _decode_BiometricSubtype, _encode_BiometricSubtype } 
  */
 export
 class Modality {
+    /**
+     * @summary `type_`.
+     * @description
+     *
+     * CBEFF biometric type (e.g. face, iris). Mandatory unless the
+     * product output is a comparison score or comparison result
+     * (Clause 6.4.2.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly type_: BiometricType;
+    /**
+     * @summary `subtype`.
+     * @description
+     *
+     * CBEFF biometric subtype (e.g. index finger code 02)
+     * (Clause 6.4.2.3, Annex B.4).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly subtype?: OPTIONAL<BiometricSubtype>;
+
     constructor (
-        /**
-         * @summary `type_`.
-         * @description
-         *
-         * CBEFF biometric type (e.g. face, iris). Mandatory unless the
-         * product output is a comparison score or comparison result
-         * (Clause 6.4.2.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly type_: BiometricType,
-        /**
-         * @summary `subtype`.
-         * @description
-         *
-         * CBEFF biometric subtype (e.g. index finger code 02)
-         * (Clause 6.4.2.3, Annex B.4).
-         *
-         * @public
-         * @readonly
-         */
-        readonly subtype?: OPTIONAL<BiometricSubtype>
-    ) {}
+        type_: BiometricType,
+        subtype?: OPTIONAL<BiometricSubtype>
+    ) {
+        this.type_ = type_;
+        this.subtype = subtype;
+    }
 
     /**
      * @summary Restructures an object into a Modality

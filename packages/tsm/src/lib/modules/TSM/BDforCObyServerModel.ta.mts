@@ -42,40 +42,48 @@ import { ACBioContentInformation, _decode_ACBioContentInformation, _encode_ACBio
  */
 export
 class BDforCObyServerModel {
+    /**
+     * @summary `sampleData`.
+     * @description
+     *
+     * Captured sample as BioAPI BIR (includes BSP/device info).
+     * [ISO/IEC 19784-1]; X.1084 §11.3–§11.4.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sampleData: SampleData;
+    /**
+     * @summary `digitalSignature`.
+     * @description
+     *
+     * CMS `SignedData` (X9.84) over the biometric process or payload.
+     * Assures integrity of that party's processing. X.1084 §11.1 item 4.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly digitalSignature: SignedData;
+    /**
+     * @summary `aCforBiometrics`.
+     * @description
+     *
+     * Optional ISO/IEC 24761 ACBio for the client process. X.1084 §11.8.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly aCforBiometrics?: OPTIONAL<ACBioContentInformation>;
+
     constructor (
-        /**
-         * @summary `sampleData`.
-         * @description
-         *
-         * Captured sample as BioAPI BIR (includes BSP/device info).
-         * [ISO/IEC 19784-1]; X.1084 §11.3–§11.4.
-         *
-         * @public
-         * @readonly
-         */
-        readonly sampleData: SampleData,
-        /**
-         * @summary `digitalSignature`.
-         * @description
-         *
-         * CMS `SignedData` (X9.84) over the biometric process or payload.
-         * Assures integrity of that party's processing. X.1084 §11.1 item 4.
-         *
-         * @public
-         * @readonly
-         */
-        readonly digitalSignature: SignedData,
-        /**
-         * @summary `aCforBiometrics`.
-         * @description
-         *
-         * Optional ISO/IEC 24761 ACBio for the client process. X.1084 §11.8.
-         *
-         * @public
-         * @readonly
-         */
-        readonly aCforBiometrics?: OPTIONAL<ACBioContentInformation>
-    ) {}
+        sampleData: SampleData,
+        digitalSignature: SignedData,
+        aCforBiometrics?: OPTIONAL<ACBioContentInformation>
+    ) {
+        this.sampleData = sampleData;
+        this.digitalSignature = digitalSignature;
+        this.aCforBiometrics = aCforBiometrics;
+    }
 
     /**
      * @summary Restructures an object into a BDforCObyServerModel

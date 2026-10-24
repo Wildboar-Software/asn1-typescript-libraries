@@ -24,20 +24,26 @@ import * as $ from "@wildboar/asn1/functional";
  *
  */
 export class UniqueID {
+    /**
+     * @summary `name`.
+     * @public
+     * @readonly
+     */
+    public readonly name: OBJECT_IDENTIFIER;
+    /**
+     * @summary `type_`.
+     * @public
+     * @readonly
+     */
+    public readonly type_?: OPTIONAL<_Element>;
+
     constructor(
-        /**
-         * @summary `name`.
-         * @public
-         * @readonly
-         */
-        readonly name: OBJECT_IDENTIFIER,
-        /**
-         * @summary `type_`.
-         * @public
-         * @readonly
-         */
-        readonly type_?: OPTIONAL<_Element>
-    ) {}
+        name: OBJECT_IDENTIFIER,
+        type_?: OPTIONAL<_Element>
+    ) {
+        this.name = name;
+        this.type_ = type_;
+    }
 
     /**
      * @summary Restructures an object into a UniqueID

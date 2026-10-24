@@ -35,27 +35,33 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class GetLastNumberDialedResult {
+    /**
+     * @summary `numberDialed`.
+     * @description
+     *
+     * Last number dialled at the device.
+     * @public
+     * @readonly
+     */
+    public readonly numberDialed: DeviceID;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `numberDialed`.
-         * @description
-         *
-         * Last number dialled at the device.
-         * @public
-         * @readonly
-         */
-        readonly numberDialed: DeviceID,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        numberDialed: DeviceID,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.numberDialed = numberDialed;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a GetLastNumberDialedResult

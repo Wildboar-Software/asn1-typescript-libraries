@@ -33,56 +33,68 @@ import { USSD_String, _decode_USSD_String, _encode_USSD_String } from "../MAP-SS
  */
 export
 class USSD_Arg {
+    /**
+     * @summary `ussd_DataCodingScheme`.
+     * @description
+     *
+     * Alphabet and language; Cell Broadcast DCS as in 3GPP TS 23.038 (3GPP
+     * TS 29.002 V19.1.0 clauses 7.6.4.36 and 17.7.4).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ussd_DataCodingScheme: USSD_DataCodingScheme;
+    /**
+     * @summary `ussd_String`.
+     * @description
+     *
+     * Unstructured string; MS contents as in 3GPP TS 22.090 (3GPP TS 29.002
+     * V19.1.0 clauses 7.6.4.37 and 17.7.4).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ussd_String: USSD_String;
+    /**
+     * @summary `alertingPattern`.
+     * @description
+     *
+     * Alerting pattern for the notification/request.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly alertingPattern?: OPTIONAL<AlertingPattern>;
+    /**
+     * @summary `msisdn`.
+     * @description
+     *
+     * MSISDN when required by the procedure.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly msisdn?: OPTIONAL<ISDN_AddressString>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `ussd_DataCodingScheme`.
-         * @description
-         *
-         * Alphabet and language; Cell Broadcast DCS as in 3GPP TS 23.038 (3GPP
-         * TS 29.002 V19.1.0 clauses 7.6.4.36 and 17.7.4).
-         *
-         * @public
-         * @readonly
-         */
-        readonly ussd_DataCodingScheme: USSD_DataCodingScheme,
-        /**
-         * @summary `ussd_String`.
-         * @description
-         *
-         * Unstructured string; MS contents as in 3GPP TS 22.090 (3GPP TS 29.002
-         * V19.1.0 clauses 7.6.4.37 and 17.7.4).
-         *
-         * @public
-         * @readonly
-         */
-        readonly ussd_String: USSD_String,
-        /**
-         * @summary `alertingPattern`.
-         * @description
-         *
-         * Alerting pattern for the notification/request.
-         *
-         * @public
-         * @readonly
-         */
-        readonly alertingPattern?: OPTIONAL<AlertingPattern>,
-        /**
-         * @summary `msisdn`.
-         * @description
-         *
-         * MSISDN when required by the procedure.
-         *
-         * @public
-         * @readonly
-         */
-        readonly msisdn?: OPTIONAL<ISDN_AddressString>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        ussd_DataCodingScheme: USSD_DataCodingScheme,
+        ussd_String: USSD_String,
+        alertingPattern?: OPTIONAL<AlertingPattern>,
+        msisdn?: OPTIONAL<ISDN_AddressString>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.ussd_DataCodingScheme = ussd_DataCodingScheme;
+        this.ussd_String = ussd_String;
+        this.alertingPattern = alertingPattern;
+        this.msisdn = msisdn;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a USSD_Arg

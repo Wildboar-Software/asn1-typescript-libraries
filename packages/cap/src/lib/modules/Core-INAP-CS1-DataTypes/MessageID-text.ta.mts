@@ -33,20 +33,26 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class MessageID_text {
+    /**
+     * @summary `messageContent`.
+     * @public
+     * @readonly
+     */
+    public readonly messageContent: IA5String;
+    /**
+     * @summary `attributes`.
+     * @public
+     * @readonly
+     */
+    public readonly attributes?: OPTIONAL<OCTET_STRING>;
+
     constructor (
-        /**
-         * @summary `messageContent`.
-         * @public
-         * @readonly
-         */
-        readonly messageContent: IA5String,
-        /**
-         * @summary `attributes`.
-         * @public
-         * @readonly
-         */
-        readonly attributes?: OPTIONAL<OCTET_STRING>
-    ) {}
+        messageContent: IA5String,
+        attributes?: OPTIONAL<OCTET_STRING>
+    ) {
+        this.messageContent = messageContent;
+        this.attributes = attributes;
+    }
 
     /**
      * @summary Restructures an object into a MessageID_text

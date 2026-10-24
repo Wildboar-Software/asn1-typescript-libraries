@@ -45,29 +45,35 @@ import {
  *
  */
 export class TerminateValidationArgument {
+    /**
+     * @summary `terminateValidationInfo`.
+     * @description
+     *
+     * Termination mode: `cancel` discards partial results;
+     * `truncate` returns them. Mandatory. ITU-T Rec. X.744
+     * (10/96) §8.3.7, §9.8 Table 12, A.5.5.
+     * @public
+     * @readonly
+     */
+    public readonly terminateValidationInfo: TerminateValidationInfo;
+    /**
+     * @summary `additionalInfo`.
+     * @description
+     *
+     * Management extensions. User in Table 12. ITU-T Rec. X.744
+     * (10/96) §9.8 Table 12.
+     * @public
+     * @readonly
+     */
+    public readonly additionalInfo?: OPTIONAL<ManagementExtension[]>;
+
     constructor(
-        /**
-         * @summary `terminateValidationInfo`.
-         * @description
-         *
-         * Termination mode: `cancel` discards partial results;
-         * `truncate` returns them. Mandatory. ITU-T Rec. X.744
-         * (10/96) §8.3.7, §9.8 Table 12, A.5.5.
-         * @public
-         * @readonly
-         */
-        readonly terminateValidationInfo: TerminateValidationInfo,
-        /**
-         * @summary `additionalInfo`.
-         * @description
-         *
-         * Management extensions. User in Table 12. ITU-T Rec. X.744
-         * (10/96) §9.8 Table 12.
-         * @public
-         * @readonly
-         */
-        readonly additionalInfo?: OPTIONAL<ManagementExtension[]>
-    ) {}
+        terminateValidationInfo: TerminateValidationInfo,
+        additionalInfo?: OPTIONAL<ManagementExtension[]>
+    ) {
+        this.terminateValidationInfo = terminateValidationInfo;
+        this.additionalInfo = additionalInfo;
+    }
 
     /**
      * @summary Restructures an object into a TerminateValidationArgument

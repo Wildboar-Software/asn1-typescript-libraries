@@ -29,14 +29,18 @@ import {
  *
  */
 export class range_error_ParameterType {
+    /**
+     * @summary `problem`.
+     * @public
+     * @readonly
+     */
+    public readonly problem: RangeProblem;
+
     constructor(
-        /**
-         * @summary `problem`.
-         * @public
-         * @readonly
-         */
-        readonly problem: RangeProblem
-    ) {}
+        problem: RangeProblem
+    ) {
+        this.problem = problem;
+    }
 
     /**
      * @summary Restructures an object into a range_error_ParameterType

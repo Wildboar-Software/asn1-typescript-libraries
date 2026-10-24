@@ -58,32 +58,42 @@ import {
  *
  */
 export class NextRecipientFields {
+    /**
+     * @summary `next_recipient`.
+     * @public
+     * @readonly
+     */
+    public readonly next_recipient: RecipientField;
+    /**
+     * @summary `next_recipient_action_request`.
+     * @public
+     * @readonly
+     */
+    public readonly next_recipient_action_request?: OPTIONAL<ActionRequestField>;
+    /**
+     * @summary `next_recipient_edi_notification_requests_field`.
+     * @public
+     * @readonly
+     */
+    public readonly next_recipient_edi_notification_requests_field?: OPTIONAL<EDINotificationRequestsField>;
+    /**
+     * @summary `next_responsibility_passing_allowed`.
+     * @public
+     * @readonly
+     */
+    public readonly next_responsibility_passing_allowed?: OPTIONAL<ResponsibilityPassingAllowedField>;
+
     constructor(
-        /**
-         * @summary `next_recipient`.
-         * @public
-         * @readonly
-         */
-        readonly next_recipient: RecipientField,
-        /**
-         * @summary `next_recipient_action_request`.
-         * @public
-         * @readonly
-         */
-        readonly next_recipient_action_request?: OPTIONAL<ActionRequestField>,
-        /**
-         * @summary `next_recipient_edi_notification_requests_field`.
-         * @public
-         * @readonly
-         */
-        readonly next_recipient_edi_notification_requests_field?: OPTIONAL<EDINotificationRequestsField>,
-        /**
-         * @summary `next_responsibility_passing_allowed`.
-         * @public
-         * @readonly
-         */
-        readonly next_responsibility_passing_allowed?: OPTIONAL<ResponsibilityPassingAllowedField>
-    ) {}
+        next_recipient: RecipientField,
+        next_recipient_action_request?: OPTIONAL<ActionRequestField>,
+        next_recipient_edi_notification_requests_field?: OPTIONAL<EDINotificationRequestsField>,
+        next_responsibility_passing_allowed?: OPTIONAL<ResponsibilityPassingAllowedField>
+    ) {
+        this.next_recipient = next_recipient;
+        this.next_recipient_action_request = next_recipient_action_request;
+        this.next_recipient_edi_notification_requests_field = next_recipient_edi_notification_requests_field;
+        this.next_responsibility_passing_allowed = next_responsibility_passing_allowed;
+    }
 
     /**
      * @summary Restructures an object into a NextRecipientFields

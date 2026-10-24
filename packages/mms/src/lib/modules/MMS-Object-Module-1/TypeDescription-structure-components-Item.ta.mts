@@ -36,28 +36,34 @@ import { TypeSpecification, _decode_TypeSpecification, _encode_TypeSpecification
  */
 export
 class TypeDescription_structure_components_Item {
+    /**
+     * @summary `componentName`.
+     * @description
+     *
+     * Optional component Identifier. ISO 9506-1:2003 §14.2.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly componentName: OPTIONAL<Identifier>;
+    /**
+     * @summary `componentType`.
+     * @description
+     *
+     * Component TypeSpecification. ISO 9506-1:2003 §14.2.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly componentType: TypeSpecification;
+
     constructor (
-        /**
-         * @summary `componentName`.
-         * @description
-         *
-         * Optional component Identifier. ISO 9506-1:2003 §14.2.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly componentName: OPTIONAL<Identifier>,
-        /**
-         * @summary `componentType`.
-         * @description
-         *
-         * Component TypeSpecification. ISO 9506-1:2003 §14.2.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly componentType: TypeSpecification
-    ) {}
+        componentName: OPTIONAL<Identifier>,
+        componentType: TypeSpecification
+    ) {
+        this.componentName = componentName;
+        this.componentType = componentType;
+    }
 
     /**
      * @summary Restructures an object into a TypeDescription_structure_components_Item

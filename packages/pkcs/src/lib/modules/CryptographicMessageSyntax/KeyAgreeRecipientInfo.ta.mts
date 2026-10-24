@@ -49,38 +49,50 @@ import {
  *
  */
 export class KeyAgreeRecipientInfo {
+    /**
+     * @summary `version`.
+     * @public
+     * @readonly
+     */
+    public readonly version: CMSVersion;
+    /**
+     * @summary `originator`.
+     * @public
+     * @readonly
+     */
+    public readonly originator: OriginatorIdentifierOrKey;
+    /**
+     * @summary `ukm`.
+     * @public
+     * @readonly
+     */
+    public readonly ukm: OPTIONAL<UserKeyingMaterial>;
+    /**
+     * @summary `keyEncryptionAlgorithm`.
+     * @public
+     * @readonly
+     */
+    public readonly keyEncryptionAlgorithm: KeyEncryptionAlgorithmIdentifier;
+    /**
+     * @summary `recipientEncryptedKeys`.
+     * @public
+     * @readonly
+     */
+    public readonly recipientEncryptedKeys: RecipientEncryptedKeys;
+
     constructor(
-        /**
-         * @summary `version`.
-         * @public
-         * @readonly
-         */
-        readonly version: CMSVersion,
-        /**
-         * @summary `originator`.
-         * @public
-         * @readonly
-         */
-        readonly originator: OriginatorIdentifierOrKey,
-        /**
-         * @summary `ukm`.
-         * @public
-         * @readonly
-         */
-        readonly ukm: OPTIONAL<UserKeyingMaterial>,
-        /**
-         * @summary `keyEncryptionAlgorithm`.
-         * @public
-         * @readonly
-         */
-        readonly keyEncryptionAlgorithm: KeyEncryptionAlgorithmIdentifier,
-        /**
-         * @summary `recipientEncryptedKeys`.
-         * @public
-         * @readonly
-         */
-        readonly recipientEncryptedKeys: RecipientEncryptedKeys
-    ) {}
+        version: CMSVersion,
+        originator: OriginatorIdentifierOrKey,
+        ukm: OPTIONAL<UserKeyingMaterial>,
+        keyEncryptionAlgorithm: KeyEncryptionAlgorithmIdentifier,
+        recipientEncryptedKeys: RecipientEncryptedKeys
+    ) {
+        this.version = version;
+        this.originator = originator;
+        this.ukm = ukm;
+        this.keyEncryptionAlgorithm = keyEncryptionAlgorithm;
+        this.recipientEncryptedKeys = recipientEncryptedKeys;
+    }
 
     /**
      * @summary Restructures an object into a KeyAgreeRecipientInfo

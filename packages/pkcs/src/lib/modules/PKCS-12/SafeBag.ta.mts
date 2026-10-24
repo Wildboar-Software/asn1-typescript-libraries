@@ -28,26 +28,34 @@ import {
  *
  */
 export class SafeBag {
+    /**
+     * @summary `bagId`.
+     * @public
+     * @readonly
+     */
+    public readonly bagId: OBJECT_IDENTIFIER;
+    /**
+     * @summary `bagValue`.
+     * @public
+     * @readonly
+     */
+    public readonly bagValue: _Element;
+    /**
+     * @summary `bagAttributes`.
+     * @public
+     * @readonly
+     */
+    public readonly bagAttributes?: OPTIONAL<PKCS12Attribute[]>;
+
     constructor(
-        /**
-         * @summary `bagId`.
-         * @public
-         * @readonly
-         */
-        readonly bagId: OBJECT_IDENTIFIER,
-        /**
-         * @summary `bagValue`.
-         * @public
-         * @readonly
-         */
-        readonly bagValue: _Element,
-        /**
-         * @summary `bagAttributes`.
-         * @public
-         * @readonly
-         */
-        readonly bagAttributes?: OPTIONAL<PKCS12Attribute[]>
-    ) {}
+        bagId: OBJECT_IDENTIFIER,
+        bagValue: _Element,
+        bagAttributes?: OPTIONAL<PKCS12Attribute[]>
+    ) {
+        this.bagId = bagId;
+        this.bagValue = bagValue;
+        this.bagAttributes = bagAttributes;
+    }
 
     /**
      * @summary Restructures an object into a SafeBag

@@ -36,26 +36,33 @@ import {
  */
 export
 class SuspectObject {
+    /**
+     * @summary `suspectObjectClass`.
+     * @public
+     * @readonly
+     */
+    public readonly suspectObjectClass: OBJECT_IDENTIFIER;
+    /**
+     * @summary `suspectObjectInstance`.
+     * @public
+     * @readonly
+     */
+    public readonly suspectObjectInstance: ObjectInstance;
+    /**
+     * @summary `failureProbability`.
+     * @public
+     * @readonly
+     */
+    public readonly failureProbability?: OPTIONAL<INTEGER>;
+
     constructor (
-        /**
-         * @summary `suspectObjectClass`.
-         * @public
-         * @readonly
-         */
-        readonly suspectObjectClass: OBJECT_IDENTIFIER,
-        /**
-         * @summary `suspectObjectInstance`.
-         * @public
-         * @readonly
-         */
-        readonly suspectObjectInstance: ObjectInstance,
-        /**
-         * @summary `failureProbability`.
-         * @public
-         * @readonly
-         */
-        readonly failureProbability?: OPTIONAL<INTEGER>
+        suspectObjectClass: OBJECT_IDENTIFIER,
+        suspectObjectInstance: ObjectInstance,
+        failureProbability?: OPTIONAL<INTEGER>
     ) {
+        this.suspectObjectClass = suspectObjectClass;
+        this.suspectObjectInstance = suspectObjectInstance;
+        this.failureProbability = failureProbability;
         if (this.failureProbability !== undefined) {
             const _n = typeof this.failureProbability === "bigint" ? Number(this.failureProbability) : this.failureProbability;
             if (_n < 0 || _n > 100) {

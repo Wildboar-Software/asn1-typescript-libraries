@@ -36,26 +36,34 @@ import {
  *
  */
 export class MasterKeyEncryptedHMACkey {
+    /**
+     * @summary `masterKeyAID`.
+     * @public
+     * @readonly
+     */
+    public readonly masterKeyAID: OPTIONAL<MasterKeyAlgorithmIdentifier>;
+    /**
+     * @summary `hmacKeyAID`.
+     * @public
+     * @readonly
+     */
+    public readonly hmacKeyAID: OPTIONAL<MessageAuthenticationCodeAlgorithm>;
+    /**
+     * @summary `encryptedKey`.
+     * @public
+     * @readonly
+     */
+    public readonly encryptedKey: OCTET_STRING;
+
     constructor(
-        /**
-         * @summary `masterKeyAID`.
-         * @public
-         * @readonly
-         */
-        readonly masterKeyAID: OPTIONAL<MasterKeyAlgorithmIdentifier>,
-        /**
-         * @summary `hmacKeyAID`.
-         * @public
-         * @readonly
-         */
-        readonly hmacKeyAID: OPTIONAL<MessageAuthenticationCodeAlgorithm>,
-        /**
-         * @summary `encryptedKey`.
-         * @public
-         * @readonly
-         */
-        readonly encryptedKey: OCTET_STRING
-    ) {}
+        masterKeyAID: OPTIONAL<MasterKeyAlgorithmIdentifier>,
+        hmacKeyAID: OPTIONAL<MessageAuthenticationCodeAlgorithm>,
+        encryptedKey: OCTET_STRING
+    ) {
+        this.masterKeyAID = masterKeyAID;
+        this.hmacKeyAID = hmacKeyAID;
+        this.encryptedKey = encryptedKey;
+    }
 
     /**
      * @summary Restructures an object into a MasterKeyEncryptedHMACkey

@@ -41,38 +41,50 @@ import {
  *
  */
 export class CertificateSelectors {
+    /**
+     * @summary `encryption_recipient`.
+     * @public
+     * @readonly
+     */
+    public readonly encryption_recipient?: OPTIONAL<CertificateAssertion>;
+    /**
+     * @summary `encryption_originator`.
+     * @public
+     * @readonly
+     */
+    public readonly encryption_originator?: OPTIONAL<CertificateAssertion>;
+    /**
+     * @summary `content_integrity_check`.
+     * @public
+     * @readonly
+     */
+    public readonly content_integrity_check?: OPTIONAL<CertificateAssertion>;
+    /**
+     * @summary `token_signature`.
+     * @public
+     * @readonly
+     */
+    public readonly token_signature?: OPTIONAL<CertificateAssertion>;
+    /**
+     * @summary `message_origin_authentication`.
+     * @public
+     * @readonly
+     */
+    public readonly message_origin_authentication?: OPTIONAL<CertificateAssertion>;
+
     constructor(
-        /**
-         * @summary `encryption_recipient`.
-         * @public
-         * @readonly
-         */
-        readonly encryption_recipient?: OPTIONAL<CertificateAssertion>,
-        /**
-         * @summary `encryption_originator`.
-         * @public
-         * @readonly
-         */
-        readonly encryption_originator?: OPTIONAL<CertificateAssertion>,
-        /**
-         * @summary `content_integrity_check`.
-         * @public
-         * @readonly
-         */
-        readonly content_integrity_check?: OPTIONAL<CertificateAssertion>,
-        /**
-         * @summary `token_signature`.
-         * @public
-         * @readonly
-         */
-        readonly token_signature?: OPTIONAL<CertificateAssertion>,
-        /**
-         * @summary `message_origin_authentication`.
-         * @public
-         * @readonly
-         */
-        readonly message_origin_authentication?: OPTIONAL<CertificateAssertion>
-    ) {}
+        encryption_recipient?: OPTIONAL<CertificateAssertion>,
+        encryption_originator?: OPTIONAL<CertificateAssertion>,
+        content_integrity_check?: OPTIONAL<CertificateAssertion>,
+        token_signature?: OPTIONAL<CertificateAssertion>,
+        message_origin_authentication?: OPTIONAL<CertificateAssertion>
+    ) {
+        this.encryption_recipient = encryption_recipient;
+        this.encryption_originator = encryption_originator;
+        this.content_integrity_check = content_integrity_check;
+        this.token_signature = token_signature;
+        this.message_origin_authentication = message_origin_authentication;
+    }
 
     /**
      * @summary Restructures an object into a CertificateSelectors

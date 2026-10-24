@@ -49,76 +49,92 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class SetForwardingArgument {
+    /**
+     * @summary `device`.
+     * @description
+     *
+     * Device on which to set forwarding.
+     * @public
+     * @readonly
+     */
+    public readonly device: DeviceID;
+    /**
+     * @summary `forwardingType`.
+     * @description
+     *
+     * Required for user-specified settings; omit for SF default settings.
+     * Values: forwardImmediate, forwardBusy, forwardDND, forwardNoAns, and
+     * Int/Ext variants (§6.7.1).
+     * @public
+     * @readonly
+     */
+    public readonly forwardingType: OPTIONAL<ForwardingType>;
+    /**
+     * @summary `activateForward`.
+     * @description
+     *
+     * FALSE = deactivate; TRUE = activate.
+     * @public
+     * @readonly
+     */
+    public readonly activateForward: BOOLEAN;
+    /**
+     * @summary `forwardDN`.
+     * @description
+     *
+     * Forward destination. Required for user settings when activating; omit
+     * for SF default settings.
+     * @public
+     * @readonly
+     */
+    public readonly forwardDN?: OPTIONAL<DeviceID>;
+    /**
+     * @summary `ringCount`.
+     * @description
+     *
+     * Rings (1...100) before forward-no-answer. Only with activateForward
+     * TRUE and forwardNoAns{,Int,Ext}.
+     * @public
+     * @readonly
+     */
+    public readonly ringCount?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `ringDuration`.
+     * @description
+     *
+     * Seconds before forward-no-answer. Omit if `ringCount` is provided.
+     * @public
+     * @readonly
+     */
+    public readonly ringDuration?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `device`.
-         * @description
-         *
-         * Device on which to set forwarding.
-         * @public
-         * @readonly
-         */
-        readonly device: DeviceID,
-        /**
-         * @summary `forwardingType`.
-         * @description
-         *
-         * Required for user-specified settings; omit for SF default settings.
-         * Values: forwardImmediate, forwardBusy, forwardDND, forwardNoAns, and
-         * Int/Ext variants (§6.7.1).
-         * @public
-         * @readonly
-         */
-        readonly forwardingType: OPTIONAL<ForwardingType>,
-        /**
-         * @summary `activateForward`.
-         * @description
-         *
-         * FALSE = deactivate; TRUE = activate.
-         * @public
-         * @readonly
-         */
-        readonly activateForward: BOOLEAN,
-        /**
-         * @summary `forwardDN`.
-         * @description
-         *
-         * Forward destination. Required for user settings when activating; omit
-         * for SF default settings.
-         * @public
-         * @readonly
-         */
-        readonly forwardDN?: OPTIONAL<DeviceID>,
-        /**
-         * @summary `ringCount`.
-         * @description
-         *
-         * Rings (1...100) before forward-no-answer. Only with activateForward
-         * TRUE and forwardNoAns{,Int,Ext}.
-         * @public
-         * @readonly
-         */
-        readonly ringCount?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `ringDuration`.
-         * @description
-         *
-         * Seconds before forward-no-answer. Omit if `ringCount` is provided.
-         * @public
-         * @readonly
-         */
-        readonly ringDuration?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        device: DeviceID,
+        forwardingType: OPTIONAL<ForwardingType>,
+        activateForward: BOOLEAN,
+        forwardDN?: OPTIONAL<DeviceID>,
+        ringCount?: OPTIONAL<INTEGER>,
+        ringDuration?: OPTIONAL<INTEGER>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.device = device;
+        this.forwardingType = forwardingType;
+        this.activateForward = activateForward;
+        this.forwardDN = forwardDN;
+        this.ringCount = ringCount;
+        this.ringDuration = ringDuration;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a SetForwardingArgument

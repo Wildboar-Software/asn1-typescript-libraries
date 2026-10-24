@@ -21,10 +21,16 @@ import { MonitorMode, _enum_for_MonitorMode, _decode_MonitorMode, _encode_Monito
  *
  */
 export class SMSEvent {
+    public readonly eventTypeSMS: EventTypeSMS;
+    public readonly monitorMode: MonitorMode;
+
     constructor (
-        readonly eventTypeSMS: EventTypeSMS,
-        readonly monitorMode: MonitorMode,
-    ) {}
+        eventTypeSMS: EventTypeSMS,
+        monitorMode: MonitorMode,
+    ) {
+        this.eventTypeSMS = eventTypeSMS;
+        this.monitorMode = monitorMode;
+    }
 
     public static _from_object (_o: { [_K in keyof (SMSEvent)]: (SMSEvent)[_K] }): SMSEvent {
         return new SMSEvent(_o.eventTypeSMS, _o.monitorMode);

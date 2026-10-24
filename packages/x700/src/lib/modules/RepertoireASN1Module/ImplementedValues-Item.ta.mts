@@ -29,62 +29,74 @@ import * as $ from '@wildboar/asn1/functional';
  *
  */
 export class ImplementedValues_Item {
+    /**
+     * @summary `attributeId`.
+     * @description
+     *
+     * OID of the GDMO attribute this element describes. Unique
+     * within the set. ITU-T Rec. X.750 (10/96) A.2.3.
+     * @public
+     * @readonly
+     */
+    public readonly attributeId: OBJECT_IDENTIFIER;
+    /**
+     * @summary `defaultValue`.
+     * @description
+     *
+     * Value applied when a set-to-default management operation
+     * is issued on the attribute. ITU-T Rec. X.750 (10/96) A.2.3.
+     * @public
+     * @readonly
+     */
+    public readonly defaultValue?: OPTIONAL<_Element>;
+    /**
+     * @summary `initialValue`.
+     * @description
+     *
+     * Value the attribute first takes when an instance of the
+     * class comes into existence. ITU-T Rec. X.750 (10/96) A.2.3.
+     * @public
+     * @readonly
+     */
+    public readonly initialValue?: OPTIONAL<_Element>;
+    /**
+     * @summary `minValue`.
+     * @description
+     *
+     * For INTEGER or REAL (or a subtype) with both permitted and
+     * required ranges: minimum value an instance may take. Shall
+     * be ≥ the smallest permitted value and ≤ the smallest
+     * required value. ITU-T Rec. X.750 (10/96) A.2.3.
+     * @public
+     * @readonly
+     */
+    public readonly minValue?: OPTIONAL<_Element>;
+    /**
+     * @summary `maxValue`.
+     * @description
+     *
+     * For INTEGER or REAL (or a subtype) with both permitted and
+     * required ranges: maximum value an instance may take. Shall
+     * be ≤ the largest permitted value and ≥ the largest required
+     * value. ITU-T Rec. X.750 (10/96) A.2.3.
+     * @public
+     * @readonly
+     */
+    public readonly maxValue?: OPTIONAL<_Element>;
+
     constructor(
-        /**
-         * @summary `attributeId`.
-         * @description
-         *
-         * OID of the GDMO attribute this element describes. Unique
-         * within the set. ITU-T Rec. X.750 (10/96) A.2.3.
-         * @public
-         * @readonly
-         */
-        readonly attributeId: OBJECT_IDENTIFIER,
-        /**
-         * @summary `defaultValue`.
-         * @description
-         *
-         * Value applied when a set-to-default management operation
-         * is issued on the attribute. ITU-T Rec. X.750 (10/96) A.2.3.
-         * @public
-         * @readonly
-         */
-        readonly defaultValue?: OPTIONAL<_Element>,
-        /**
-         * @summary `initialValue`.
-         * @description
-         *
-         * Value the attribute first takes when an instance of the
-         * class comes into existence. ITU-T Rec. X.750 (10/96) A.2.3.
-         * @public
-         * @readonly
-         */
-        readonly initialValue?: OPTIONAL<_Element>,
-        /**
-         * @summary `minValue`.
-         * @description
-         *
-         * For INTEGER or REAL (or a subtype) with both permitted and
-         * required ranges: minimum value an instance may take. Shall
-         * be ≥ the smallest permitted value and ≤ the smallest
-         * required value. ITU-T Rec. X.750 (10/96) A.2.3.
-         * @public
-         * @readonly
-         */
-        readonly minValue?: OPTIONAL<_Element>,
-        /**
-         * @summary `maxValue`.
-         * @description
-         *
-         * For INTEGER or REAL (or a subtype) with both permitted and
-         * required ranges: maximum value an instance may take. Shall
-         * be ≤ the largest permitted value and ≥ the largest required
-         * value. ITU-T Rec. X.750 (10/96) A.2.3.
-         * @public
-         * @readonly
-         */
-        readonly maxValue?: OPTIONAL<_Element>
-    ) {}
+        attributeId: OBJECT_IDENTIFIER,
+        defaultValue?: OPTIONAL<_Element>,
+        initialValue?: OPTIONAL<_Element>,
+        minValue?: OPTIONAL<_Element>,
+        maxValue?: OPTIONAL<_Element>
+    ) {
+        this.attributeId = attributeId;
+        this.defaultValue = defaultValue;
+        this.initialValue = initialValue;
+        this.minValue = minValue;
+        this.maxValue = maxValue;
+    }
 
     /**
      * @summary Restructures an object into a ImplementedValues_Item

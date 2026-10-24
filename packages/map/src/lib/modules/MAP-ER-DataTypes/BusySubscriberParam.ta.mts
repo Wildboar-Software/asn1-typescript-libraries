@@ -31,42 +31,52 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
  */
 export
 class BusySubscriberParam {
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary `ccbs_Possible`.
+     * @description
+     *
+     * Subscriber busy due to CCBS and CCBS is possible (3GPP TS 29.002
+     * V19.1.0 clause 7.6.1.4).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ccbs_Possible?: OPTIONAL<NULL>;
+    /**
+     * @summary `ccbs_Busy`.
+     * @description
+     *
+     * CCBS-busy qualifier on `busySubscriber` (3GPP TS 29.002 V19.1.0
+     * clause 17.7.7).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ccbs_Busy?: OPTIONAL<NULL>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary `ccbs_Possible`.
-         * @description
-         *
-         * Subscriber busy due to CCBS and CCBS is possible (3GPP TS 29.002
-         * V19.1.0 clause 7.6.1.4).
-         *
-         * @public
-         * @readonly
-         */
-        readonly ccbs_Possible?: OPTIONAL<NULL>,
-        /**
-         * @summary `ccbs_Busy`.
-         * @description
-         *
-         * CCBS-busy qualifier on `busySubscriber` (3GPP TS 29.002 V19.1.0
-         * clause 17.7.7).
-         *
-         * @public
-         * @readonly
-         */
-        readonly ccbs_Busy?: OPTIONAL<NULL>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        ccbs_Possible?: OPTIONAL<NULL>,
+        ccbs_Busy?: OPTIONAL<NULL>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.extensionContainer = extensionContainer;
+        this.ccbs_Possible = ccbs_Possible;
+        this.ccbs_Busy = ccbs_Busy;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a BusySubscriberParam

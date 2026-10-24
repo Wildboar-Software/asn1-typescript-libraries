@@ -42,61 +42,73 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class ActivateArgument {
+    /**
+     * @summary `overConnection`.
+     * @description
+     *
+     * Connection whose Listener grammar is activated (ECMA-269 §26.1.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly overConnection: ConnectionID;
+    /**
+     * @summary `resource`.
+     * @description
+     *
+     * Interactive voice resource. Required when more than one interactive
+     * voice resource exists on the connection.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly resource: OPTIONAL<ResourceID>;
+    /**
+     * @summary `ruleName`.
+     * @description
+     *
+     * Grammar rule to activate (ECMA-269 §26.1.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ruleName: IA5String;
+    /**
+     * @summary `grammarName`.
+     * @description
+     *
+     * Grammar to activate; if absent, all grammars are affected (ECMA-269
+     * §26.1.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly grammarName?: OPTIONAL<IA5String>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * CSTACommonArguments carrying the service-table security and
+     * privateData parameters.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `overConnection`.
-         * @description
-         *
-         * Connection whose Listener grammar is activated (ECMA-269 §26.1.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly overConnection: ConnectionID,
-        /**
-         * @summary `resource`.
-         * @description
-         *
-         * Interactive voice resource. Required when more than one interactive
-         * voice resource exists on the connection.
-         *
-         * @public
-         * @readonly
-         */
-        readonly resource: OPTIONAL<ResourceID>,
-        /**
-         * @summary `ruleName`.
-         * @description
-         *
-         * Grammar rule to activate (ECMA-269 §26.1.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly ruleName: IA5String,
-        /**
-         * @summary `grammarName`.
-         * @description
-         *
-         * Grammar to activate; if absent, all grammars are affected (ECMA-269
-         * §26.1.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly grammarName?: OPTIONAL<IA5String>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * CSTACommonArguments carrying the service-table security and
-         * privateData parameters.
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        overConnection: ConnectionID,
+        resource: OPTIONAL<ResourceID>,
+        ruleName: IA5String,
+        grammarName?: OPTIONAL<IA5String>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.overConnection = overConnection;
+        this.resource = resource;
+        this.ruleName = ruleName;
+        this.grammarName = grammarName;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a ActivateArgument

@@ -46,26 +46,34 @@ import {
  *
  */
 export class EntryInformation {
+    /**
+     * @summary `sequence_number`.
+     * @public
+     * @readonly
+     */
+    public readonly sequence_number: SequenceNumber;
+    /**
+     * @summary `attributes`.
+     * @public
+     * @readonly
+     */
+    public readonly attributes?: OPTIONAL<Attribute[]>;
+    /**
+     * @summary `value_count_exceeded`.
+     * @public
+     * @readonly
+     */
+    public readonly value_count_exceeded?: OPTIONAL<AttributeValueCount[]>;
+
     constructor(
-        /**
-         * @summary `sequence_number`.
-         * @public
-         * @readonly
-         */
-        readonly sequence_number: SequenceNumber,
-        /**
-         * @summary `attributes`.
-         * @public
-         * @readonly
-         */
-        readonly attributes?: OPTIONAL<Attribute[]>,
-        /**
-         * @summary `value_count_exceeded`.
-         * @public
-         * @readonly
-         */
-        readonly value_count_exceeded?: OPTIONAL<AttributeValueCount[]>
-    ) {}
+        sequence_number: SequenceNumber,
+        attributes?: OPTIONAL<Attribute[]>,
+        value_count_exceeded?: OPTIONAL<AttributeValueCount[]>
+    ) {
+        this.sequence_number = sequence_number;
+        this.attributes = attributes;
+        this.value_count_exceeded = value_count_exceeded;
+    }
 
     /**
      * @summary Restructures an object into a EntryInformation

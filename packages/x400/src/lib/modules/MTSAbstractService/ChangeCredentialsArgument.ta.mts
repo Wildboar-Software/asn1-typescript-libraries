@@ -36,20 +36,26 @@ import {
  *
  */
 export class ChangeCredentialsArgument {
+    /**
+     * @summary `old_credentials`.
+     * @public
+     * @readonly
+     */
+    public readonly old_credentials: Credentials;
+    /**
+     * @summary `new_credentials`.
+     * @public
+     * @readonly
+     */
+    public readonly new_credentials: Credentials;
+
     constructor(
-        /**
-         * @summary `old_credentials`.
-         * @public
-         * @readonly
-         */
-        readonly old_credentials: Credentials,
-        /**
-         * @summary `new_credentials`.
-         * @public
-         * @readonly
-         */
-        readonly new_credentials: Credentials
-    ) {}
+        old_credentials: Credentials,
+        new_credentials: Credentials
+    ) {
+        this.old_credentials = old_credentials;
+        this.new_credentials = new_credentials;
+    }
 
     /**
      * @summary Restructures an object into a ChangeCredentialsArgument

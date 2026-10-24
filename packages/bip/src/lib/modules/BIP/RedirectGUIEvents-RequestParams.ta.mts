@@ -54,78 +54,92 @@ import {
  *
  */
 export class RedirectGUIEvents_RequestParams {
+  /**
+   * @summary `subscriberEndpointIRI`.
+   * @description
+   *
+   * Endpoint IRI of the secondary GUI handler that shall
+   * receive redirected events. BioAPI `NULL` is rewritten to
+   * the local endpoint IRI (X.1083 §15.3). X.1083 §16.28.5.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly subscriberEndpointIRI: EndpointIRI;
+  /**
+   * @summary `guiEventSubscriptionUuid`.
+   * @description
+   *
+   * UUID of the secondary GUI-event subscription that
+   * redirected events shall target. C `NULL` is
+   * unconvertible (clause 19). X.1083 §16.28.5, §8.5.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly guiEventSubscriptionUuid: BioAPI_UUID;
+  /**
+   * @summary `originalBSPHandle`.
+   * @description
+   *
+   * Attach-session handle on the hosting (slave) endpoint
+   * whose primary GUI events are redirected. BioAPI
+   * `BSPHandle` is rewritten via clauses 24 and 26. X.1083
+   * §16.28.5.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly originalBSPHandle: BioAPI_HANDLE;
+  /**
+   * @summary `guiSelectEventRedirected`.
+   * @description
+   *
+   * `TRUE` to redirect GUI select events for this attach
+   * session to the secondary handler. X.1083 §16.28.5.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly guiSelectEventRedirected: BOOLEAN;
+  /**
+   * @summary `guiStateEventRedirected`.
+   * @description
+   *
+   * `TRUE` to redirect GUI state events for this attach
+   * session to the secondary handler. X.1083 §16.28.5.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly guiStateEventRedirected: BOOLEAN;
+  /**
+   * @summary `guiProgressEventRedirected`.
+   * @description
+   *
+   * `TRUE` to redirect GUI progress events for this attach
+   * session to the secondary handler. X.1083 §16.28.5.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly guiProgressEventRedirected: BOOLEAN;
+
   constructor(
-    /**
-     * @summary `subscriberEndpointIRI`.
-     * @description
-     *
-     * Endpoint IRI of the secondary GUI handler that shall
-     * receive redirected events. BioAPI `NULL` is rewritten to
-     * the local endpoint IRI (X.1083 §15.3). X.1083 §16.28.5.
-     *
-     * @public
-     * @readonly
-     */
-    readonly subscriberEndpointIRI: EndpointIRI,
-    /**
-     * @summary `guiEventSubscriptionUuid`.
-     * @description
-     *
-     * UUID of the secondary GUI-event subscription that
-     * redirected events shall target. C `NULL` is
-     * unconvertible (clause 19). X.1083 §16.28.5, §8.5.
-     *
-     * @public
-     * @readonly
-     */
-    readonly guiEventSubscriptionUuid: BioAPI_UUID,
-    /**
-     * @summary `originalBSPHandle`.
-     * @description
-     *
-     * Attach-session handle on the hosting (slave) endpoint
-     * whose primary GUI events are redirected. BioAPI
-     * `BSPHandle` is rewritten via clauses 24 and 26. X.1083
-     * §16.28.5.
-     *
-     * @public
-     * @readonly
-     */
-    readonly originalBSPHandle: BioAPI_HANDLE,
-    /**
-     * @summary `guiSelectEventRedirected`.
-     * @description
-     *
-     * `TRUE` to redirect GUI select events for this attach
-     * session to the secondary handler. X.1083 §16.28.5.
-     *
-     * @public
-     * @readonly
-     */
-    readonly guiSelectEventRedirected: BOOLEAN,
-    /**
-     * @summary `guiStateEventRedirected`.
-     * @description
-     *
-     * `TRUE` to redirect GUI state events for this attach
-     * session to the secondary handler. X.1083 §16.28.5.
-     *
-     * @public
-     * @readonly
-     */
-    readonly guiStateEventRedirected: BOOLEAN,
-    /**
-     * @summary `guiProgressEventRedirected`.
-     * @description
-     *
-     * `TRUE` to redirect GUI progress events for this attach
-     * session to the secondary handler. X.1083 §16.28.5.
-     *
-     * @public
-     * @readonly
-     */
-    readonly guiProgressEventRedirected: BOOLEAN
-  ) {}
+    subscriberEndpointIRI: EndpointIRI,
+    guiEventSubscriptionUuid: BioAPI_UUID,
+    originalBSPHandle: BioAPI_HANDLE,
+    guiSelectEventRedirected: BOOLEAN,
+    guiStateEventRedirected: BOOLEAN,
+    guiProgressEventRedirected: BOOLEAN
+  ) {
+    this.subscriberEndpointIRI = subscriberEndpointIRI;
+    this.guiEventSubscriptionUuid = guiEventSubscriptionUuid;
+    this.originalBSPHandle = originalBSPHandle;
+    this.guiSelectEventRedirected = guiSelectEventRedirected;
+    this.guiStateEventRedirected = guiStateEventRedirected;
+    this.guiProgressEventRedirected = guiProgressEventRedirected;
+  }
 
   /**
    * @summary Restructures an object into a RedirectGUIEvents_RequestParams

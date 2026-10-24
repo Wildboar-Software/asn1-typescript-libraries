@@ -41,26 +41,34 @@ import {
  *
  */
 export class ProtectionStatus_Item_forcedSwitch {
+    /**
+     * @summary `requestSource`.
+     * @public
+     * @readonly
+     */
+    public readonly requestSource: OPTIONAL<RequestSource>;
+    /**
+     * @summary `switchStatus`.
+     * @public
+     * @readonly
+     */
+    public readonly switchStatus: SwitchStatus;
+    /**
+     * @summary `relatedChannel`.
+     * @public
+     * @readonly
+     */
+    public readonly relatedChannel: FromAndToProtectionUnit;
+
     constructor(
-        /**
-         * @summary `requestSource`.
-         * @public
-         * @readonly
-         */
-        readonly requestSource: OPTIONAL<RequestSource>,
-        /**
-         * @summary `switchStatus`.
-         * @public
-         * @readonly
-         */
-        readonly switchStatus: SwitchStatus,
-        /**
-         * @summary `relatedChannel`.
-         * @public
-         * @readonly
-         */
-        readonly relatedChannel: FromAndToProtectionUnit
-    ) {}
+        requestSource: OPTIONAL<RequestSource>,
+        switchStatus: SwitchStatus,
+        relatedChannel: FromAndToProtectionUnit
+    ) {
+        this.requestSource = requestSource;
+        this.switchStatus = switchStatus;
+        this.relatedChannel = relatedChannel;
+    }
 
     /**
      * @summary Restructures an object into a ProtectionStatus_Item_forcedSwitch

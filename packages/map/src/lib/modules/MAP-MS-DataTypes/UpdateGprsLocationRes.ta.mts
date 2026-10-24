@@ -36,69 +36,83 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
  */
 export
 class UpdateGprsLocationRes {
+    /**
+     * @summary `hlr_Number`.
+     * @description
+     *
+     * ISDN number of an HLR. Mandatory in a successful Update Location,
+     * Update GPRS Location, or Restore Data result.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.2.13).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly hlr_Number: ISDN_AddressString;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary `add_Capability`.
+     * @description
+     *
+     * HLR supports the Automatic Device Detection function.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 8.1.2.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly add_Capability?: OPTIONAL<NULL>;
+    /**
+     * @summary `sgsn_mmeSeparationSupported`.
+     * @description
+     *
+     * HLR/HSS supports separate SGSN and MME registrations.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 8.1.7).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sgsn_mmeSeparationSupported?: OPTIONAL<NULL>;
+    /**
+     * @summary `mmeRegisteredforSMS`.
+     * @description
+     *
+     * MME is registered for MT SMS.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 8.1.7).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mmeRegisteredforSMS?: OPTIONAL<NULL>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `hlr_Number`.
-         * @description
-         *
-         * ISDN number of an HLR. Mandatory in a successful Update Location,
-         * Update GPRS Location, or Restore Data result.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.2.13).
-         *
-         * @public
-         * @readonly
-         */
-        readonly hlr_Number: ISDN_AddressString,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary `add_Capability`.
-         * @description
-         *
-         * HLR supports the Automatic Device Detection function.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 8.1.2.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly add_Capability?: OPTIONAL<NULL>,
-        /**
-         * @summary `sgsn_mmeSeparationSupported`.
-         * @description
-         *
-         * HLR/HSS supports separate SGSN and MME registrations.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 8.1.7).
-         *
-         * @public
-         * @readonly
-         */
-        readonly sgsn_mmeSeparationSupported?: OPTIONAL<NULL>,
-        /**
-         * @summary `mmeRegisteredforSMS`.
-         * @description
-         *
-         * MME is registered for MT SMS.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 8.1.7).
-         *
-         * @public
-         * @readonly
-         */
-        readonly mmeRegisteredforSMS?: OPTIONAL<NULL>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        hlr_Number: ISDN_AddressString,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        add_Capability?: OPTIONAL<NULL>,
+        sgsn_mmeSeparationSupported?: OPTIONAL<NULL>,
+        mmeRegisteredforSMS?: OPTIONAL<NULL>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.hlr_Number = hlr_Number;
+        this.extensionContainer = extensionContainer;
+        this.add_Capability = add_Capability;
+        this.sgsn_mmeSeparationSupported = sgsn_mmeSeparationSupported;
+        this.mmeRegisteredforSMS = mmeRegisteredforSMS;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a UpdateGprsLocationRes

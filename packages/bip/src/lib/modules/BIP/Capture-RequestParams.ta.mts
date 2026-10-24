@@ -63,76 +63,90 @@ import {
  *
  */
 export class Capture_RequestParams {
+  /**
+   * @summary `originalBSPHandle`.
+   * @description
+   *
+   * Attach-session handle on the hosting (slave) endpoint.
+   * BioAPI `BSPHandle` is rewritten from the caller's local
+   * handle (clauses 24 and 26). X.1083 §16.30.5.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly originalBSPHandle: BioAPI_HANDLE;
+  /**
+   * @summary `purpose`.
+   * @description
+   *
+   * Intended purpose of the captured BIR, from BioAPI
+   * `Purpose`. X.1083 §16.30.5.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly purpose: BioAPI_BIR_PURPOSE;
+  /**
+   * @summary `subtype`.
+   * @description
+   *
+   * Requested BIR subtype, from BioAPI `Subtype`. X.1083
+   * §16.30.5.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly subtype: BioAPI_BIR_SUBTYPE;
+  /**
+   * @summary `outputFormat`.
+   * @description
+   *
+   * Requested biometric-data format of the captured BIR.
+   * C `NULL` `OutputFormat` ↔ absent (clause 19). X.1083
+   * §16.30.5.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly outputFormat: OPTIONAL<BioAPI_BIR_BIOMETRIC_DATA_FORMAT>;
+  /**
+   * @summary `timeout`.
+   * @description
+   *
+   * Capture timeout from BioAPI `Timeout`. X.1083 §16.30.5.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly timeout: SignedInt;
+  /**
+   * @summary `no_auditData`.
+   * @description
+   *
+   * `TRUE` if the caller passed a NULL `AuditData` pointer
+   * (do not return an audit BIR). `FALSE` requests
+   * `auditData` on the response. X.1083 §16.30.5, clause 21.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly no_auditData: BOOLEAN;
+
   constructor(
-    /**
-     * @summary `originalBSPHandle`.
-     * @description
-     *
-     * Attach-session handle on the hosting (slave) endpoint.
-     * BioAPI `BSPHandle` is rewritten from the caller's local
-     * handle (clauses 24 and 26). X.1083 §16.30.5.
-     *
-     * @public
-     * @readonly
-     */
-    readonly originalBSPHandle: BioAPI_HANDLE,
-    /**
-     * @summary `purpose`.
-     * @description
-     *
-     * Intended purpose of the captured BIR, from BioAPI
-     * `Purpose`. X.1083 §16.30.5.
-     *
-     * @public
-     * @readonly
-     */
-    readonly purpose: BioAPI_BIR_PURPOSE,
-    /**
-     * @summary `subtype`.
-     * @description
-     *
-     * Requested BIR subtype, from BioAPI `Subtype`. X.1083
-     * §16.30.5.
-     *
-     * @public
-     * @readonly
-     */
-    readonly subtype: BioAPI_BIR_SUBTYPE,
-    /**
-     * @summary `outputFormat`.
-     * @description
-     *
-     * Requested biometric-data format of the captured BIR.
-     * C `NULL` `OutputFormat` ↔ absent (clause 19). X.1083
-     * §16.30.5.
-     *
-     * @public
-     * @readonly
-     */
-    readonly outputFormat: OPTIONAL<BioAPI_BIR_BIOMETRIC_DATA_FORMAT>,
-    /**
-     * @summary `timeout`.
-     * @description
-     *
-     * Capture timeout from BioAPI `Timeout`. X.1083 §16.30.5.
-     *
-     * @public
-     * @readonly
-     */
-    readonly timeout: SignedInt,
-    /**
-     * @summary `no_auditData`.
-     * @description
-     *
-     * `TRUE` if the caller passed a NULL `AuditData` pointer
-     * (do not return an audit BIR). `FALSE` requests
-     * `auditData` on the response. X.1083 §16.30.5, clause 21.
-     *
-     * @public
-     * @readonly
-     */
-    readonly no_auditData: BOOLEAN
-  ) {}
+    originalBSPHandle: BioAPI_HANDLE,
+    purpose: BioAPI_BIR_PURPOSE,
+    subtype: BioAPI_BIR_SUBTYPE,
+    outputFormat: OPTIONAL<BioAPI_BIR_BIOMETRIC_DATA_FORMAT>,
+    timeout: SignedInt,
+    no_auditData: BOOLEAN
+  ) {
+    this.originalBSPHandle = originalBSPHandle;
+    this.purpose = purpose;
+    this.subtype = subtype;
+    this.outputFormat = outputFormat;
+    this.timeout = timeout;
+    this.no_auditData = no_auditData;
+  }
 
   /**
    * @summary Restructures an object into a Capture_RequestParams

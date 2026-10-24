@@ -40,39 +40,47 @@ import { MMSString, _decode_MMSString, _encode_MMSString } from "../ISO-9506-MMS
  */
 export
 class DomainManagementParameters {
+    /**
+     * @summary `loadDataOctet`.
+     * @description
+     *
+     * Format of Load Data if the octet-string form is used. ISO 9506-2:2003
+     * Annex B.2.3.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly loadDataOctet: MMSString;
+    /**
+     * @summary `loadDataSyntax`.
+     * @description
+     *
+     * Abstract syntaxes used for Load Data. ISO 9506-2:2003 Annex B.2.3.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly loadDataSyntax: OBJECT_IDENTIFIER[];
+    /**
+     * @summary `maxUploads`.
+     * @description
+     *
+     * Maximum concurrent uploads. ISO 9506-2:2003 Annex B.2.3.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly maxUploads: INTEGER;
+
     constructor (
-        /**
-         * @summary `loadDataOctet`.
-         * @description
-         *
-         * Format of Load Data if the octet-string form is used. ISO 9506-2:2003
-         * Annex B.2.3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly loadDataOctet: MMSString,
-        /**
-         * @summary `loadDataSyntax`.
-         * @description
-         *
-         * Abstract syntaxes used for Load Data. ISO 9506-2:2003 Annex B.2.3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly loadDataSyntax: OBJECT_IDENTIFIER[],
-        /**
-         * @summary `maxUploads`.
-         * @description
-         *
-         * Maximum concurrent uploads. ISO 9506-2:2003 Annex B.2.3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly maxUploads: INTEGER
-    ) {}
+        loadDataOctet: MMSString,
+        loadDataSyntax: OBJECT_IDENTIFIER[],
+        maxUploads: INTEGER
+    ) {
+        this.loadDataOctet = loadDataOctet;
+        this.loadDataSyntax = loadDataSyntax;
+        this.maxUploads = maxUploads;
+    }
 
     /**
      * @summary Restructures an object into a DomainManagementParameters

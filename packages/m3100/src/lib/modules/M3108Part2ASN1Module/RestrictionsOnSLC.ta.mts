@@ -41,26 +41,34 @@ import {
  *
  */
 export class RestrictionsOnSLC {
+    /**
+     * @summary `restrictionId`.
+     * @public
+     * @readonly
+     */
+    public readonly restrictionId: RestrictionsOnSLC_restrictionId;
+    /**
+     * @summary `restrictionText`.
+     * @public
+     * @readonly
+     */
+    public readonly restrictionText?: OPTIONAL<GraphicString>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `restrictionId`.
-         * @public
-         * @readonly
-         */
-        readonly restrictionId: RestrictionsOnSLC_restrictionId,
-        /**
-         * @summary `restrictionText`.
-         * @public
-         * @readonly
-         */
-        readonly restrictionText?: OPTIONAL<GraphicString>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        restrictionId: RestrictionsOnSLC_restrictionId,
+        restrictionText?: OPTIONAL<GraphicString>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.restrictionId = restrictionId;
+        this.restrictionText = restrictionText;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a RestrictionsOnSLC

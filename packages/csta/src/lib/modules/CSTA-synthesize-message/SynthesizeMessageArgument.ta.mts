@@ -38,39 +38,47 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class SynthesizeMessageArgument {
+    /**
+     * @summary `textToBeSynthesized`.
+     * @description
+     *
+     * Source text (ECMA-269 §26.1.17.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly textToBeSynthesized: IA5String;
+    /**
+     * @summary `control`.
+     * @description
+     *
+     * Optional synthesis control (ECMA-269 §26.1.17.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly control?: OPTIONAL<ControlData>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * CSTACommonArguments carrying the service-table security and
+     * privateData parameters.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `textToBeSynthesized`.
-         * @description
-         *
-         * Source text (ECMA-269 §26.1.17.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly textToBeSynthesized: IA5String,
-        /**
-         * @summary `control`.
-         * @description
-         *
-         * Optional synthesis control (ECMA-269 §26.1.17.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly control?: OPTIONAL<ControlData>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * CSTACommonArguments carrying the service-table security and
-         * privateData parameters.
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        textToBeSynthesized: IA5String,
+        control?: OPTIONAL<ControlData>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.textToBeSynthesized = textToBeSynthesized;
+        this.control = control;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a SynthesizeMessageArgument

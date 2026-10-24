@@ -43,38 +43,46 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class ChangeSysStatFilterArg {
+    /**
+     * @summary `sysStatRegisterID`.
+     * @description
+     *
+     * Registration whose filter is changed. Mandatory.
+     * @public
+     * @readonly
+     */
+    public readonly sysStatRegisterID: SysStatRegisterID;
+    /**
+     * @summary `requestedStatusFilter`.
+     * @description
+     *
+     * System Status types to filter: initializing, enabled, normal,
+     * messages lost, disabled, partially disabled, overload
+     * imminent/reached/relieved.
+     * @public
+     * @readonly
+     */
+    public readonly requestedStatusFilter: SystemStatus;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData. ECMA-269 Table 14-2.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `sysStatRegisterID`.
-         * @description
-         *
-         * Registration whose filter is changed. Mandatory.
-         * @public
-         * @readonly
-         */
-        readonly sysStatRegisterID: SysStatRegisterID,
-        /**
-         * @summary `requestedStatusFilter`.
-         * @description
-         *
-         * System Status types to filter: initializing, enabled, normal,
-         * messages lost, disabled, partially disabled, overload
-         * imminent/reached/relieved.
-         * @public
-         * @readonly
-         */
-        readonly requestedStatusFilter: SystemStatus,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData. ECMA-269 Table 14-2.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        sysStatRegisterID: SysStatRegisterID,
+        requestedStatusFilter: SystemStatus,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.sysStatRegisterID = sysStatRegisterID;
+        this.requestedStatusFilter = requestedStatusFilter;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a ChangeSysStatFilterArg

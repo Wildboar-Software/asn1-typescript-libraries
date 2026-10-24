@@ -37,34 +37,42 @@ import { ErrorCode, _decode_ErrorCode, _encode_ErrorCode } from "../G/ErrorCode.
  */
 export
 class Reason {
+    /**
+     * @summary `userA`.
+     * @description
+     * Text string from the responding VT-user. ISO/IEC 9041-1:1997
+     * §6.3.2 e, §6.19.2 b.
+     * @public
+     * @readonly
+     */
+    public readonly userA?: OPTIONAL<PrintableString>;
+    /**
+     * @summary `userB`.
+     * @description
+     * ErrorCode from the peer VT-user. ISO/IEC 9041-1:1997 §12.2.
+     * @public
+     * @readonly
+     */
+    public readonly userB?: OPTIONAL<ErrorCode>;
+    /**
+     * @summary `provider`.
+     * @description
+     * ErrorCode from the VTPM (e.g. collision-detected,
+     * VTE-incomplete). ISO/IEC 9041-1:1997 §6.10.2 d, §6.19.2 b.
+     * @public
+     * @readonly
+     */
+    public readonly provider?: OPTIONAL<ErrorCode>;
+
     constructor (
-        /**
-         * @summary `userA`.
-         * @description
-         * Text string from the responding VT-user. ISO/IEC 9041-1:1997
-         * §6.3.2 e, §6.19.2 b.
-         * @public
-         * @readonly
-         */
-        readonly userA?: OPTIONAL<PrintableString>,
-        /**
-         * @summary `userB`.
-         * @description
-         * ErrorCode from the peer VT-user. ISO/IEC 9041-1:1997 §12.2.
-         * @public
-         * @readonly
-         */
-        readonly userB?: OPTIONAL<ErrorCode>,
-        /**
-         * @summary `provider`.
-         * @description
-         * ErrorCode from the VTPM (e.g. collision-detected,
-         * VTE-incomplete). ISO/IEC 9041-1:1997 §6.10.2 d, §6.19.2 b.
-         * @public
-         * @readonly
-         */
-        readonly provider?: OPTIONAL<ErrorCode>
-    ) {}
+        userA?: OPTIONAL<PrintableString>,
+        userB?: OPTIONAL<ErrorCode>,
+        provider?: OPTIONAL<ErrorCode>
+    ) {
+        this.userA = userA;
+        this.userB = userB;
+        this.provider = provider;
+    }
 
     /**
      * @summary Restructures an object into a Reason

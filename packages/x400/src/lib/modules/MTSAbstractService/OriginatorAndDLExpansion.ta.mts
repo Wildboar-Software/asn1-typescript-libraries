@@ -42,20 +42,26 @@ import {
  *
  */
 export class OriginatorAndDLExpansion {
+    /**
+     * @summary `originator_or_dl_name`.
+     * @public
+     * @readonly
+     */
+    public readonly originator_or_dl_name: ORAddressAndOptionalDirectoryName;
+    /**
+     * @summary `origination_or_expansion_time`.
+     * @public
+     * @readonly
+     */
+    public readonly origination_or_expansion_time: Time;
+
     constructor(
-        /**
-         * @summary `originator_or_dl_name`.
-         * @public
-         * @readonly
-         */
-        readonly originator_or_dl_name: ORAddressAndOptionalDirectoryName,
-        /**
-         * @summary `origination_or_expansion_time`.
-         * @public
-         * @readonly
-         */
-        readonly origination_or_expansion_time: Time
-    ) {}
+        originator_or_dl_name: ORAddressAndOptionalDirectoryName,
+        origination_or_expansion_time: Time
+    ) {
+        this.originator_or_dl_name = originator_or_dl_name;
+        this.origination_or_expansion_time = origination_or_expansion_time;
+    }
 
     /**
      * @summary Restructures an object into a OriginatorAndDLExpansion

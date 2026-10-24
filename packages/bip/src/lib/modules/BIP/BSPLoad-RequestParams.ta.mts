@@ -39,31 +39,37 @@ import {
  *
  */
 export class BSPLoad_RequestParams {
+  /**
+   * @summary `bspProductUuid`.
+   * @description
+   *
+   * Product UUID of the BSP to load. Application may have passed an
+   * access UUID; this component is always the product UUID.
+   * X.1083 §16.9.4, clause 23.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly bspProductUuid: BioAPI_UUID;
+  /**
+   * @summary `unitEventSubscription`.
+   * @description
+   *
+   * TRUE if the master's EventHandler address is non-zero (this
+   * load wants unit-event notifications). X.1083 §16.9.4.2 c.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly unitEventSubscription: BOOLEAN;
+
   constructor(
-    /**
-     * @summary `bspProductUuid`.
-     * @description
-     *
-     * Product UUID of the BSP to load. Application may have passed an
-     * access UUID; this component is always the product UUID.
-     * X.1083 §16.9.4, clause 23.
-     *
-     * @public
-     * @readonly
-     */
-    readonly bspProductUuid: BioAPI_UUID,
-    /**
-     * @summary `unitEventSubscription`.
-     * @description
-     *
-     * TRUE if the master's EventHandler address is non-zero (this
-     * load wants unit-event notifications). X.1083 §16.9.4.2 c.
-     *
-     * @public
-     * @readonly
-     */
-    readonly unitEventSubscription: BOOLEAN
-  ) {}
+    bspProductUuid: BioAPI_UUID,
+    unitEventSubscription: BOOLEAN
+  ) {
+    this.bspProductUuid = bspProductUuid;
+    this.unitEventSubscription = unitEventSubscription;
+  }
 
   /**
    * @summary Restructures an object into a BSPLoad_RequestParams

@@ -41,42 +41,50 @@ import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-
  */
 export
 class GetNameList_Request {
+    /**
+     * @summary `objectClass`.
+     * @description
+     *
+     * Object class of names to return. ISO 9506-1:2003 §10.5.1.1.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly objectClass: ObjectClass;
+    /**
+     * @summary `objectScope`.
+     * @description
+     *
+     * VMD-specific, Domain-specific, or AA-specific. ISO 9506-1:2003
+     * §10.5.1.1.2; ISO 9506-2:2003 §10.5.1.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly objectScope: GetNameList_Request_objectScope;
+    /**
+     * @summary `continueAfter`.
+     * @description
+     *
+     * If present, the returned list begins after this Identifier of the
+     * requested class and scope. If it does not match, the server uses the
+     * collating sequence of ISO 9506-1:2003 §5.4.2. ISO 9506-1:2003
+     * §10.5.1.1.4.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly continueAfter?: OPTIONAL<Identifier>;
+
     constructor (
-        /**
-         * @summary `objectClass`.
-         * @description
-         *
-         * Object class of names to return. ISO 9506-1:2003 §10.5.1.1.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly objectClass: ObjectClass,
-        /**
-         * @summary `objectScope`.
-         * @description
-         *
-         * VMD-specific, Domain-specific, or AA-specific. ISO 9506-1:2003
-         * §10.5.1.1.2; ISO 9506-2:2003 §10.5.1.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly objectScope: GetNameList_Request_objectScope,
-        /**
-         * @summary `continueAfter`.
-         * @description
-         *
-         * If present, the returned list begins after this Identifier of the
-         * requested class and scope. If it does not match, the server uses the
-         * collating sequence of ISO 9506-1:2003 §5.4.2. ISO 9506-1:2003
-         * §10.5.1.1.4.
-         *
-         * @public
-         * @readonly
-         */
-        readonly continueAfter?: OPTIONAL<Identifier>
-    ) {}
+        objectClass: ObjectClass,
+        objectScope: GetNameList_Request_objectScope,
+        continueAfter?: OPTIONAL<Identifier>
+    ) {
+        this.objectClass = objectClass;
+        this.objectScope = objectScope;
+        this.continueAfter = continueAfter;
+    }
 
     /**
      * @summary Restructures an object into a GetNameList_Request

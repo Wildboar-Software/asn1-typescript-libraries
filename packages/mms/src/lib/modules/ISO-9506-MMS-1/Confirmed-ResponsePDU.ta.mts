@@ -41,46 +41,56 @@ import { Response_Detail, _decode_Response_Detail, _encode_Response_Detail } fro
  */
 export
 class Confirmed_ResponsePDU {
+    /**
+     * @summary `invokeID`.
+     * @description
+     *
+     * Same value as the corresponding Confirmed-RequestPDU. Correlates this
+     * result with the outstanding request (ISO 9506-1:2003 §5.5;
+     * ISO 9506-2:2003 §7.3).
+     * @public
+     * @readonly
+     */
+    public readonly invokeID: Unsigned32;
+    /**
+     * @summary `service`.
+     * @description
+     *
+     * Selects the confirmed service and its Result(+) (ISO 9506-2:2003
+     * §7.3.1).
+     * @public
+     * @readonly
+     */
+    public readonly service: ConfirmedServiceResponse;
+    /**
+     * @summary `service_ext`.
+     * @description
+     *
+     * Companion-standard Response-Detail. Present only if `csr` or `cspi`
+     * was negotiated. Do not transmit if the value is a tagged NULL
+     * (ISO 9506-2:2003 §7.3).
+     * @public
+     * @readonly
+     */
+    public readonly service_ext?: OPTIONAL<Response_Detail>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `invokeID`.
-         * @description
-         *
-         * Same value as the corresponding Confirmed-RequestPDU. Correlates this
-         * result with the outstanding request (ISO 9506-1:2003 §5.5;
-         * ISO 9506-2:2003 §7.3).
-         * @public
-         * @readonly
-         */
-        readonly invokeID: Unsigned32,
-        /**
-         * @summary `service`.
-         * @description
-         *
-         * Selects the confirmed service and its Result(+) (ISO 9506-2:2003
-         * §7.3.1).
-         * @public
-         * @readonly
-         */
-        readonly service: ConfirmedServiceResponse,
-        /**
-         * @summary `service_ext`.
-         * @description
-         *
-         * Companion-standard Response-Detail. Present only if `csr` or `cspi`
-         * was negotiated. Do not transmit if the value is a tagged NULL
-         * (ISO 9506-2:2003 §7.3).
-         * @public
-         * @readonly
-         */
-        readonly service_ext?: OPTIONAL<Response_Detail>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        invokeID: Unsigned32,
+        service: ConfirmedServiceResponse,
+        service_ext?: OPTIONAL<Response_Detail>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.invokeID = invokeID;
+        this.service = service;
+        this.service_ext = service_ext;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a Confirmed_ResponsePDU

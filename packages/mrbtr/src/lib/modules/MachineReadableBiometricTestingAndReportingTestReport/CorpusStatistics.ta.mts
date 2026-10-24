@@ -40,48 +40,58 @@ import { SamplesPerIndividual, _decode_SamplesPerIndividual, _encode_SamplesPerI
  */
 export
 class CorpusStatistics {
+    /**
+     * @summary `corpusBasicStatistics`.
+     * @description
+     *
+     * Counts and CDFs common to corpus and crew (Clause 6.4.4.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly corpusBasicStatistics: CorpusCrewBasicStatistics;
+    /**
+     * @summary `numSamples`.
+     * @description
+     *
+     * Number of biometric samples in the corpus (Clause 6.4.4.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly numSamples: INTEGER;
+    /**
+     * @summary `samplesPerIndividualEnrol`.
+     * @description
+     *
+     * Enrolment samples per individual (Clause 6.4.4.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly samplesPerIndividualEnrol?: OPTIONAL<SamplesPerIndividual>;
+    /**
+     * @summary `samplesPerIndividualProbe`.
+     * @description
+     *
+     * Probe samples per individual (Clause 6.4.4.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly samplesPerIndividualProbe?: OPTIONAL<SamplesPerIndividual>;
+
     constructor (
-        /**
-         * @summary `corpusBasicStatistics`.
-         * @description
-         *
-         * Counts and CDFs common to corpus and crew (Clause 6.4.4.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly corpusBasicStatistics: CorpusCrewBasicStatistics,
-        /**
-         * @summary `numSamples`.
-         * @description
-         *
-         * Number of biometric samples in the corpus (Clause 6.4.4.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly numSamples: INTEGER,
-        /**
-         * @summary `samplesPerIndividualEnrol`.
-         * @description
-         *
-         * Enrolment samples per individual (Clause 6.4.4.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly samplesPerIndividualEnrol?: OPTIONAL<SamplesPerIndividual>,
-        /**
-         * @summary `samplesPerIndividualProbe`.
-         * @description
-         *
-         * Probe samples per individual (Clause 6.4.4.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly samplesPerIndividualProbe?: OPTIONAL<SamplesPerIndividual>
-    ) {}
+        corpusBasicStatistics: CorpusCrewBasicStatistics,
+        numSamples: INTEGER,
+        samplesPerIndividualEnrol?: OPTIONAL<SamplesPerIndividual>,
+        samplesPerIndividualProbe?: OPTIONAL<SamplesPerIndividual>
+    ) {
+        this.corpusBasicStatistics = corpusBasicStatistics;
+        this.numSamples = numSamples;
+        this.samplesPerIndividualEnrol = samplesPerIndividualEnrol;
+        this.samplesPerIndividualProbe = samplesPerIndividualProbe;
+    }
 
     /**
      * @summary Restructures an object into a CorpusStatistics

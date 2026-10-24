@@ -35,20 +35,26 @@ import {
  *
  */
 export class DatabaseServerToKeyManager {
+    /**
+     * @summary `encryptedKey`.
+     * @public
+     * @readonly
+     */
+    public readonly encryptedKey: MasterKeyEncryptedHMACkey;
+    /**
+     * @summary `uniqueID`.
+     * @public
+     * @readonly
+     */
+    public readonly uniqueID?: OPTIONAL<UniqueIdentifier>;
+
     constructor(
-        /**
-         * @summary `encryptedKey`.
-         * @public
-         * @readonly
-         */
-        readonly encryptedKey: MasterKeyEncryptedHMACkey,
-        /**
-         * @summary `uniqueID`.
-         * @public
-         * @readonly
-         */
-        readonly uniqueID?: OPTIONAL<UniqueIdentifier>
-    ) {}
+        encryptedKey: MasterKeyEncryptedHMACkey,
+        uniqueID?: OPTIONAL<UniqueIdentifier>
+    ) {
+        this.encryptedKey = encryptedKey;
+        this.uniqueID = uniqueID;
+    }
 
     /**
      * @summary Restructures an object into a DatabaseServerToKeyManager

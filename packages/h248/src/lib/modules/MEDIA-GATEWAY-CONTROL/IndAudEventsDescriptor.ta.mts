@@ -34,50 +34,60 @@ import { StreamID, _decode_StreamID, _encode_StreamID } from "../MEDIA-GATEWAY-C
  */
 export
 class IndAudEventsDescriptor {
+    /**
+     * @summary `requestID`.
+     * @description
+     *
+     * Events descriptor request to match. Optional.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly requestID: OPTIONAL<RequestID>;
+    /**
+     * @summary `pkgdName`.
+     * @description
+     *
+     * Package and event to audit. The ALL wildcard may be used for the
+     * event identifier (clause 7.1.9.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly pkgdName: PkgdName;
+    /**
+     * @summary `streamID`.
+     * @description
+     *
+     * Stream of the event. Omitted means not limited to one stream.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly streamID?: OPTIONAL<StreamID>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @description
+     *
+     * Extension additions this version does not define. Kept so a later
+     * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `requestID`.
-         * @description
-         *
-         * Events descriptor request to match. Optional.
-         *
-         * @public
-         * @readonly
-         */
-        readonly requestID: OPTIONAL<RequestID>,
-        /**
-         * @summary `pkgdName`.
-         * @description
-         *
-         * Package and event to audit. The ALL wildcard may be used for the
-         * event identifier (clause 7.1.9.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly pkgdName: PkgdName,
-        /**
-         * @summary `streamID`.
-         * @description
-         *
-         * Stream of the event. Omitted means not limited to one stream.
-         *
-         * @public
-         * @readonly
-         */
-        readonly streamID?: OPTIONAL<StreamID>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @description
-         *
-         * Extension additions this version does not define. Kept so a later
-         * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
-         *
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        requestID: OPTIONAL<RequestID>,
+        pkgdName: PkgdName,
+        streamID?: OPTIONAL<StreamID>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.requestID = requestID;
+        this.pkgdName = pkgdName;
+        this.streamID = streamID;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a IndAudEventsDescriptor

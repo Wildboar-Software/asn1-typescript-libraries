@@ -38,40 +38,48 @@ import { ApplicationReference, _decode_ApplicationReference, _encode_Application
  */
 export
 class StoreDomainContent_Request {
+    /**
+     * @summary `domainName`.
+     * @description
+     *
+     * Existing Domain whose content is stored. ISO 9506-1:2003
+     * §11.11.1.1.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly domainName: Identifier;
+    /**
+     * @summary `fileName`.
+     * @description
+     *
+     * Destination file. ISO 9506-1:2003 §11.11.1.1.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly fileName: FileName;
+    /**
+     * @summary `thirdParty`.
+     * @description
+     *
+     * Application whose filestore receives the Domain. Requires `tpy` CBB.
+     * Absent: local store method. ISO 9506-1:2003 §11.11.1.1.3. ISO 9506-2:2003 §11.11.1.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly thirdParty?: OPTIONAL<ApplicationReference>;
+
     constructor (
-        /**
-         * @summary `domainName`.
-         * @description
-         *
-         * Existing Domain whose content is stored. ISO 9506-1:2003
-         * §11.11.1.1.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly domainName: Identifier,
-        /**
-         * @summary `fileName`.
-         * @description
-         *
-         * Destination file. ISO 9506-1:2003 §11.11.1.1.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly fileName: FileName,
-        /**
-         * @summary `thirdParty`.
-         * @description
-         *
-         * Application whose filestore receives the Domain. Requires `tpy` CBB.
-         * Absent: local store method. ISO 9506-1:2003 §11.11.1.1.3. ISO 9506-2:2003 §11.11.1.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly thirdParty?: OPTIONAL<ApplicationReference>
-    ) {}
+        domainName: Identifier,
+        fileName: FileName,
+        thirdParty?: OPTIONAL<ApplicationReference>
+    ) {
+        this.domainName = domainName;
+        this.fileName = fileName;
+        this.thirdParty = thirdParty;
+    }
 
     /**
      * @summary Restructures an object into a StoreDomainContent_Request

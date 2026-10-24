@@ -36,27 +36,33 @@ import { MicGainAbs, _decode_MicGainAbs, _encode_MicGainAbs } from "../CSTA-phys
  */
 export
 class MicrophoneGainList_Item {
+    /**
+     * @summary `auditoryApparatus`.
+     * @description
+     *
+     * Apparatus that owns the microphone.
+     * @public
+     * @readonly
+     */
+    public readonly auditoryApparatus: AuditoryApparatusID;
+    /**
+     * @summary `micGainAbs`.
+     * @description
+     *
+     * Absolute gain. 0 silence, 100 maximum; 1–99 device-specific. Absent:
+     * unknown.
+     * @public
+     * @readonly
+     */
+    public readonly micGainAbs?: OPTIONAL<MicGainAbs>;
+
     constructor (
-        /**
-         * @summary `auditoryApparatus`.
-         * @description
-         *
-         * Apparatus that owns the microphone.
-         * @public
-         * @readonly
-         */
-        readonly auditoryApparatus: AuditoryApparatusID,
-        /**
-         * @summary `micGainAbs`.
-         * @description
-         *
-         * Absolute gain. 0 silence, 100 maximum; 1–99 device-specific. Absent:
-         * unknown.
-         * @public
-         * @readonly
-         */
-        readonly micGainAbs?: OPTIONAL<MicGainAbs>
-    ) {}
+        auditoryApparatus: AuditoryApparatusID,
+        micGainAbs?: OPTIONAL<MicGainAbs>
+    ) {
+        this.auditoryApparatus = auditoryApparatus;
+        this.micGainAbs = micGainAbs;
+    }
 
     /**
      * @summary Restructures an object into a MicrophoneGainList_Item

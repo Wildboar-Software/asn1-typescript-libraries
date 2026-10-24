@@ -35,29 +35,35 @@ import { ObjectClass, _decode_ObjectClass, _encode_ObjectClass } from "../ISO-95
  */
 export
 class GetAccessControlListAttributes_Response_references_Item {
+    /**
+     * @summary `objectClass`.
+     * @description
+     *
+     * Object class of the counted set. ISO 9506-1:2003 §9.4.1.2.4.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly objectClass: ObjectClass;
+    /**
+     * @summary `objectCount`.
+     * @description
+     *
+     * Number of objects of that class in the corresponding Controlled
+     * Object List field. ISO 9506-1:2003 §9.4.1.2.4.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly objectCount: INTEGER;
+
     constructor (
-        /**
-         * @summary `objectClass`.
-         * @description
-         *
-         * Object class of the counted set. ISO 9506-1:2003 §9.4.1.2.4.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly objectClass: ObjectClass,
-        /**
-         * @summary `objectCount`.
-         * @description
-         *
-         * Number of objects of that class in the corresponding Controlled
-         * Object List field. ISO 9506-1:2003 §9.4.1.2.4.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly objectCount: INTEGER
-    ) {}
+        objectClass: ObjectClass,
+        objectCount: INTEGER
+    ) {
+        this.objectClass = objectClass;
+        this.objectCount = objectCount;
+    }
 
     /**
      * @summary Restructures an object into a GetAccessControlListAttributes_Response_references_Item

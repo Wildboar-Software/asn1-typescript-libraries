@@ -30,26 +30,34 @@ import {
  *
  */
 export class OsiReq {
+    /**
+     * @summary `invokeId`.
+     * @public
+     * @readonly
+     */
+    public readonly invokeId: InvokeId;
+    /**
+     * @summary `opcode`.
+     * @public
+     * @readonly
+     */
+    public readonly opcode: Code;
+    /**
+     * @summary `argument`.
+     * @public
+     * @readonly
+     */
+    public readonly argument: _Element;
+
     constructor(
-        /**
-         * @summary `invokeId`.
-         * @public
-         * @readonly
-         */
-        readonly invokeId: InvokeId,
-        /**
-         * @summary `opcode`.
-         * @public
-         * @readonly
-         */
-        readonly opcode: Code,
-        /**
-         * @summary `argument`.
-         * @public
-         * @readonly
-         */
-        readonly argument: _Element
-    ) {}
+        invokeId: InvokeId,
+        opcode: Code,
+        argument: _Element
+    ) {
+        this.invokeId = invokeId;
+        this.opcode = opcode;
+        this.argument = argument;
+    }
 
     /**
      * @summary Restructures an object into a OsiReq

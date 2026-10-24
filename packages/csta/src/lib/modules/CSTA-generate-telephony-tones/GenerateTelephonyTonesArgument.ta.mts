@@ -45,45 +45,55 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class GenerateTelephonyTonesArgument {
+    /**
+     * @summary `connectionToSendTone`.
+     * @description
+     *
+     * Connection on whose behalf the tone is generated.
+     * @public
+     * @readonly
+     */
+    public readonly connectionToSendTone: ConnectionID;
+    /**
+     * @summary `toneToSend`.
+     * @description
+     *
+     * Telephony tone to generate.
+     * @public
+     * @readonly
+     */
+    public readonly toneToSend: TelephonyTone;
+    /**
+     * @summary `toneDuration`.
+     * @description
+     *
+     * Duration of generation, if applicable.
+     * @public
+     * @readonly
+     */
+    public readonly toneDuration?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `connectionToSendTone`.
-         * @description
-         *
-         * Connection on whose behalf the tone is generated.
-         * @public
-         * @readonly
-         */
-        readonly connectionToSendTone: ConnectionID,
-        /**
-         * @summary `toneToSend`.
-         * @description
-         *
-         * Telephony tone to generate.
-         * @public
-         * @readonly
-         */
-        readonly toneToSend: TelephonyTone,
-        /**
-         * @summary `toneDuration`.
-         * @description
-         *
-         * Duration of generation, if applicable.
-         * @public
-         * @readonly
-         */
-        readonly toneDuration?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        connectionToSendTone: ConnectionID,
+        toneToSend: TelephonyTone,
+        toneDuration?: OPTIONAL<INTEGER>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.connectionToSendTone = connectionToSendTone;
+        this.toneToSend = toneToSend;
+        this.toneDuration = toneDuration;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a GenerateTelephonyTonesArgument

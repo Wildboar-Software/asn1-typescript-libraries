@@ -47,51 +47,61 @@ import {
  *
  */
 export class PasswordRecipientInfo {
+    /**
+     * @summary `version`.
+     * @description
+     *
+     * MUST be 0 ([RFC 5652 §6.2.4](https://datatracker.ietf.org/doc/html/rfc5652#section-6.2.4)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly version: CMSVersion;
+    /**
+     * @summary `keyDerivationAlgorithm`.
+     * @description
+     *
+     * Optional key-derivation algorithm (e.g., PBKDF2) from password to KEK
+     * ([RFC 5652 §6.2.4](https://datatracker.ietf.org/doc/html/rfc5652#section-6.2.4)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly keyDerivationAlgorithm: OPTIONAL<KeyDerivationAlgorithmIdentifier>;
+    /**
+     * @summary `keyEncryptionAlgorithm`.
+     * @description
+     *
+     * Algorithm used to encrypt the CEK with the derived KEK
+     * ([RFC 5652 §6.2.4](https://datatracker.ietf.org/doc/html/rfc5652#section-6.2.4)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly keyEncryptionAlgorithm: KeyEncryptionAlgorithmIdentifier;
+    /**
+     * @summary `encryptedKey`.
+     * @description
+     *
+     * CEK encrypted with the password-derived KEK
+     * ([RFC 5652 §6.2.4](https://datatracker.ietf.org/doc/html/rfc5652#section-6.2.4)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly encryptedKey: EncryptedKey;
+
     constructor(
-        /**
-         * @summary `version`.
-         * @description
-         *
-         * MUST be 0 ([RFC 5652 §6.2.4](https://datatracker.ietf.org/doc/html/rfc5652#section-6.2.4)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly version: CMSVersion,
-        /**
-         * @summary `keyDerivationAlgorithm`.
-         * @description
-         *
-         * Optional key-derivation algorithm (e.g., PBKDF2) from password to KEK
-         * ([RFC 5652 §6.2.4](https://datatracker.ietf.org/doc/html/rfc5652#section-6.2.4)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly keyDerivationAlgorithm: OPTIONAL<KeyDerivationAlgorithmIdentifier>,
-        /**
-         * @summary `keyEncryptionAlgorithm`.
-         * @description
-         *
-         * Algorithm used to encrypt the CEK with the derived KEK
-         * ([RFC 5652 §6.2.4](https://datatracker.ietf.org/doc/html/rfc5652#section-6.2.4)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly keyEncryptionAlgorithm: KeyEncryptionAlgorithmIdentifier,
-        /**
-         * @summary `encryptedKey`.
-         * @description
-         *
-         * CEK encrypted with the password-derived KEK
-         * ([RFC 5652 §6.2.4](https://datatracker.ietf.org/doc/html/rfc5652#section-6.2.4)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly encryptedKey: EncryptedKey
-    ) {}
+        version: CMSVersion,
+        keyDerivationAlgorithm: OPTIONAL<KeyDerivationAlgorithmIdentifier>,
+        keyEncryptionAlgorithm: KeyEncryptionAlgorithmIdentifier,
+        encryptedKey: EncryptedKey
+    ) {
+        this.version = version;
+        this.keyDerivationAlgorithm = keyDerivationAlgorithm;
+        this.keyEncryptionAlgorithm = keyEncryptionAlgorithm;
+        this.encryptedKey = encryptedKey;
+    }
 
     /**
      * @summary Restructures an object into a PasswordRecipientInfo

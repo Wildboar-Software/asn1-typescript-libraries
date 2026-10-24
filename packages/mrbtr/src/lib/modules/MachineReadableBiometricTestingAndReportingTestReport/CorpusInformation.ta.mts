@@ -34,30 +34,36 @@ import { EnvironmentalInformation, _decode_EnvironmentalInformation, _encode_Env
  */
 export
 class CorpusInformation {
+    /**
+     * @summary `composition`.
+     * @description
+     *
+     * Identifier, name, and statistics of the corpus
+     * (Clause 6.4.4.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly composition: CorpusComposition;
+    /**
+     * @summary `environInfo`.
+     * @description
+     *
+     * Environment in which the corpus was collected
+     * (Clause 6.4.4.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly environInfo: EnvironmentalInformation;
+
     constructor (
-        /**
-         * @summary `composition`.
-         * @description
-         *
-         * Identifier, name, and statistics of the corpus
-         * (Clause 6.4.4.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly composition: CorpusComposition,
-        /**
-         * @summary `environInfo`.
-         * @description
-         *
-         * Environment in which the corpus was collected
-         * (Clause 6.4.4.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly environInfo: EnvironmentalInformation
-    ) {}
+        composition: CorpusComposition,
+        environInfo: EnvironmentalInformation
+    ) {
+        this.composition = composition;
+        this.environInfo = environInfo;
+    }
 
     /**
      * @summary Restructures an object into a CorpusInformation

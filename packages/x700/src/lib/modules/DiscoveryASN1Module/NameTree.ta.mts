@@ -38,28 +38,34 @@ import {
  *
  */
 export class NameTree {
+    /**
+     * @summary `rdnInfo`.
+     * @description
+     *
+     * RDN of this discovered object and, if requested, its class.
+     * ITU-T Rec. X.750 (10/96) §8.3.2.4.
+     * @public
+     * @readonly
+     */
+    public readonly rdnInfo: RDNInfo;
+    /**
+     * @summary `subordinates`.
+     * @description
+     *
+     * Nested RDN trees of contained objects still in scope.
+     * ITU-T Rec. X.750 (10/96) §8.3.2.4.
+     * @public
+     * @readonly
+     */
+    public readonly subordinates?: OPTIONAL<NameTree[]>;
+
     constructor(
-        /**
-         * @summary `rdnInfo`.
-         * @description
-         *
-         * RDN of this discovered object and, if requested, its class.
-         * ITU-T Rec. X.750 (10/96) §8.3.2.4.
-         * @public
-         * @readonly
-         */
-        readonly rdnInfo: RDNInfo,
-        /**
-         * @summary `subordinates`.
-         * @description
-         *
-         * Nested RDN trees of contained objects still in scope.
-         * ITU-T Rec. X.750 (10/96) §8.3.2.4.
-         * @public
-         * @readonly
-         */
-        readonly subordinates?: OPTIONAL<NameTree[]>
-    ) {}
+        rdnInfo: RDNInfo,
+        subordinates?: OPTIONAL<NameTree[]>
+    ) {
+        this.rdnInfo = rdnInfo;
+        this.subordinates = subordinates;
+    }
 
     /**
      * @summary Restructures an object into a NameTree

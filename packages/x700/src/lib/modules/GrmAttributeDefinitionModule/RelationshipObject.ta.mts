@@ -44,30 +44,36 @@ import {
  *
  */
 export class RelationshipObject {
+    /**
+     * @summary `class_`.
+     * @description
+     *
+     * Label of the relationship-object class (or a subclass
+     * thereof in a real implementation). ITU-T Rec. X.725 (11/95)
+     * A.2.3.3.
+     * @public
+     * @readonly
+     */
+    public readonly class_: TemplateLabel;
+    /**
+     * @summary `qualifies`.
+     * @description
+     *
+     * Qualification attributes from the relationship class
+     * template realized by the relationship object. ITU-T Rec.
+     * X.725 (11/95) A.2.3.3.
+     * @public
+     * @readonly
+     */
+    public readonly qualifies?: OPTIONAL<TemplateList>;
+
     constructor(
-        /**
-         * @summary `class_`.
-         * @description
-         *
-         * Label of the relationship-object class (or a subclass
-         * thereof in a real implementation). ITU-T Rec. X.725 (11/95)
-         * A.2.3.3.
-         * @public
-         * @readonly
-         */
-        readonly class_: TemplateLabel,
-        /**
-         * @summary `qualifies`.
-         * @description
-         *
-         * Qualification attributes from the relationship class
-         * template realized by the relationship object. ITU-T Rec.
-         * X.725 (11/95) A.2.3.3.
-         * @public
-         * @readonly
-         */
-        readonly qualifies?: OPTIONAL<TemplateList>
-    ) {}
+        class_: TemplateLabel,
+        qualifies?: OPTIONAL<TemplateList>
+    ) {
+        this.class_ = class_;
+        this.qualifies = qualifies;
+    }
 
     /**
      * @summary Restructures an object into a RelationshipObject

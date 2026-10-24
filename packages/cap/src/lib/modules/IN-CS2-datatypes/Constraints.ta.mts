@@ -35,32 +35,41 @@ import { InfoType, _enum_for_InfoType, InfoType_numericString /* IMPORTED_LONG_E
  */
 export
 class Constraints {
+    /**
+     * @summary `maximumNumberOfDigits`.
+     * @public
+     * @readonly
+     */
+    public readonly maximumNumberOfDigits: INTEGER;
+    /**
+     * @summary `minimumNumberOfDigits`.
+     * @public
+     * @readonly
+     */
+    public readonly minimumNumberOfDigits: INTEGER;
+    /**
+     * @summary `typeOfRequestedInfo`.
+     * @public
+     * @readonly
+     */
+    public readonly typeOfRequestedInfo?: OPTIONAL<InfoType>;
+    /**
+     * @summary `numberOfAllowedRetries`.
+     * @public
+     * @readonly
+     */
+    public readonly numberOfAllowedRetries?: OPTIONAL<INTEGER>;
+
     constructor (
-        /**
-         * @summary `maximumNumberOfDigits`.
-         * @public
-         * @readonly
-         */
-        readonly maximumNumberOfDigits: INTEGER,
-        /**
-         * @summary `minimumNumberOfDigits`.
-         * @public
-         * @readonly
-         */
-        readonly minimumNumberOfDigits: INTEGER,
-        /**
-         * @summary `typeOfRequestedInfo`.
-         * @public
-         * @readonly
-         */
-        readonly typeOfRequestedInfo?: OPTIONAL<InfoType>,
-        /**
-         * @summary `numberOfAllowedRetries`.
-         * @public
-         * @readonly
-         */
-        readonly numberOfAllowedRetries?: OPTIONAL<INTEGER>
+        maximumNumberOfDigits: INTEGER,
+        minimumNumberOfDigits: INTEGER,
+        typeOfRequestedInfo?: OPTIONAL<InfoType>,
+        numberOfAllowedRetries?: OPTIONAL<INTEGER>
     ) {
+        this.maximumNumberOfDigits = maximumNumberOfDigits;
+        this.minimumNumberOfDigits = minimumNumberOfDigits;
+        this.typeOfRequestedInfo = typeOfRequestedInfo;
+        this.numberOfAllowedRetries = numberOfAllowedRetries;
         if ((typeof maximumNumberOfDigits === "bigint" ? (maximumNumberOfDigits < 1n || maximumNumberOfDigits > 127n) : (maximumNumberOfDigits < 1 || maximumNumberOfDigits > 127))) {
             throw new ASN1OverflowError("Constraints.maximumNumberOfDigits violates INTEGER constraint");
         }

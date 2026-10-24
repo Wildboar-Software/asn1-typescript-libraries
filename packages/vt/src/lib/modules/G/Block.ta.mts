@@ -35,25 +35,31 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class Block {
+    /**
+     * @summary `zValue`.
+     * @description
+     * Z coordinate of the Y-array containing the block. ISO/IEC
+     * 9040:1997 §13.1.2.
+     * @public
+     * @readonly
+     */
+    public readonly zValue: OPTIONAL<INTEGER>;
+    /**
+     * @summary `bValue`.
+     * @description
+     * Block index within that Y-array. ISO/IEC 9040:1997 §13.1.2.
+     * @public
+     * @readonly
+     */
+    public readonly bValue: INTEGER;
+
     constructor (
-        /**
-         * @summary `zValue`.
-         * @description
-         * Z coordinate of the Y-array containing the block. ISO/IEC
-         * 9040:1997 §13.1.2.
-         * @public
-         * @readonly
-         */
-        readonly zValue: OPTIONAL<INTEGER>,
-        /**
-         * @summary `bValue`.
-         * @description
-         * Block index within that Y-array. ISO/IEC 9040:1997 §13.1.2.
-         * @public
-         * @readonly
-         */
-        readonly bValue: INTEGER
-    ) {}
+        zValue: OPTIONAL<INTEGER>,
+        bValue: INTEGER
+    ) {
+        this.zValue = zValue;
+        this.bValue = bValue;
+    }
 
     /**
      * @summary Restructures an object into a Block

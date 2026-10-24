@@ -40,20 +40,26 @@ import {
  *
  */
 export class ModifyResult {
+    /**
+     * @summary `entries_modified`.
+     * @public
+     * @readonly
+     */
+    public readonly entries_modified?: OPTIONAL<SequenceNumber[]>;
+    /**
+     * @summary `modify_result_extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly modify_result_extensions?: OPTIONAL<MSExtensions>;
+
     constructor(
-        /**
-         * @summary `entries_modified`.
-         * @public
-         * @readonly
-         */
-        readonly entries_modified?: OPTIONAL<SequenceNumber[]>,
-        /**
-         * @summary `modify_result_extensions`.
-         * @public
-         * @readonly
-         */
-        readonly modify_result_extensions?: OPTIONAL<MSExtensions>
-    ) {}
+        entries_modified?: OPTIONAL<SequenceNumber[]>,
+        modify_result_extensions?: OPTIONAL<MSExtensions>
+    ) {
+        this.entries_modified = entries_modified;
+        this.modify_result_extensions = modify_result_extensions;
+    }
 
     /**
      * @summary Restructures an object into a ModifyResult

@@ -28,20 +28,26 @@ import {
  *
  */
 export class PointToMultipoint_toTps_Item {
+    /**
+     * @summary `tp`.
+     * @public
+     * @readonly
+     */
+    public readonly tp: ObjectInstance;
+    /**
+     * @summary `xConnection`.
+     * @public
+     * @readonly
+     */
+    public readonly xConnection: ObjectInstance;
+
     constructor(
-        /**
-         * @summary `tp`.
-         * @public
-         * @readonly
-         */
-        readonly tp: ObjectInstance,
-        /**
-         * @summary `xConnection`.
-         * @public
-         * @readonly
-         */
-        readonly xConnection: ObjectInstance
-    ) {}
+        tp: ObjectInstance,
+        xConnection: ObjectInstance
+    ) {
+        this.tp = tp;
+        this.xConnection = xConnection;
+    }
 
     /**
      * @summary Restructures an object into a PointToMultipoint_toTps_Item

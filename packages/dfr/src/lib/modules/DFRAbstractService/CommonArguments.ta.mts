@@ -41,66 +41,78 @@ import { Privileges, _decode_Privileges, _encode_Privileges } from "../DFRAbstra
  */
 export
 class CommonArguments {
+    /**
+     * @summary `task_id`.
+     * @description
+     *
+     * Optional identifier for this invocation, so it can later be
+     * abandoned or continued. Must not be reused until the operation
+     * completes or is abandoned. A List/Search continuation value returned
+     * after a limit may be reused here. ISO/IEC 10166-1:1991 §8.1.3.1.
+     * @public
+     * @readonly
+     */
+    public readonly task_id?: OPTIONAL<TaskId>;
+    /**
+     * @summary `reservation`.
+     * @description
+     *
+     * Requested reservation of the object this operation applies to. Omit
+     * to leave the current reservation unchanged. Raising the level or
+     * committing is done first; lowering an uncommitted reservation is
+     * done last. ISO/IEC 10166-1:1991 §8.1.3.2, §8.2.9.
+     * @public
+     * @readonly
+     */
+    public readonly reservation?: OPTIONAL<Reservation>;
+    /**
+     * @summary `error_handling`.
+     * @description
+     *
+     * How List and Copy-of-group treat members that cannot be accessed.
+     * Default `all-or-nothing`. Modification problems are always treated
+     * as all-or-nothing. ISO/IEC 10166-1:1991 §8.1.3.3.
+     * @public
+     * @readonly
+     */
+    public readonly error_handling?: OPTIONAL<ErrorHandlingMode>;
+    /**
+     * @summary `priority`.
+     * @description
+     *
+     * Operational priority for a loaded server; overrides the bind default
+     * (`medium`). The server need not honour it. Unrelated to
+     * communications QoS. ISO/IEC 10166-1:1991 §8.1.3.4, §7.1.1.
+     * @public
+     * @readonly
+     */
+    public readonly priority?: OPTIONAL<Priority>;
+    /**
+     * @summary `privileges`.
+     * @description
+     *
+     * Per-operation PACs that modify bind privileges for this request only
+     * (`operation-Pac`) and/or a `proxy-pac` the server may present when
+     * accessing another application on the user's behalf. ISO/IEC
+     * 10166-1:1991 §8.1.3.5.
+     * @public
+     * @readonly
+     */
+    public readonly privileges?: OPTIONAL<Privileges>;
+
     constructor (
-        /**
-         * @summary `task_id`.
-         * @description
-         *
-         * Optional identifier for this invocation, so it can later be
-         * abandoned or continued. Must not be reused until the operation
-         * completes or is abandoned. A List/Search continuation value returned
-         * after a limit may be reused here. ISO/IEC 10166-1:1991 §8.1.3.1.
-         * @public
-         * @readonly
-         */
-        readonly task_id?: OPTIONAL<TaskId>,
-        /**
-         * @summary `reservation`.
-         * @description
-         *
-         * Requested reservation of the object this operation applies to. Omit
-         * to leave the current reservation unchanged. Raising the level or
-         * committing is done first; lowering an uncommitted reservation is
-         * done last. ISO/IEC 10166-1:1991 §8.1.3.2, §8.2.9.
-         * @public
-         * @readonly
-         */
-        readonly reservation?: OPTIONAL<Reservation>,
-        /**
-         * @summary `error_handling`.
-         * @description
-         *
-         * How List and Copy-of-group treat members that cannot be accessed.
-         * Default `all-or-nothing`. Modification problems are always treated
-         * as all-or-nothing. ISO/IEC 10166-1:1991 §8.1.3.3.
-         * @public
-         * @readonly
-         */
-        readonly error_handling?: OPTIONAL<ErrorHandlingMode>,
-        /**
-         * @summary `priority`.
-         * @description
-         *
-         * Operational priority for a loaded server; overrides the bind default
-         * (`medium`). The server need not honour it. Unrelated to
-         * communications QoS. ISO/IEC 10166-1:1991 §8.1.3.4, §7.1.1.
-         * @public
-         * @readonly
-         */
-        readonly priority?: OPTIONAL<Priority>,
-        /**
-         * @summary `privileges`.
-         * @description
-         *
-         * Per-operation PACs that modify bind privileges for this request only
-         * (`operation-Pac`) and/or a `proxy-pac` the server may present when
-         * accessing another application on the user's behalf. ISO/IEC
-         * 10166-1:1991 §8.1.3.5.
-         * @public
-         * @readonly
-         */
-        readonly privileges?: OPTIONAL<Privileges>
-    ) {}
+        task_id?: OPTIONAL<TaskId>,
+        reservation?: OPTIONAL<Reservation>,
+        error_handling?: OPTIONAL<ErrorHandlingMode>,
+        priority?: OPTIONAL<Priority>,
+        privileges?: OPTIONAL<Privileges>
+    ) {
+        this.task_id = task_id;
+        this.reservation = reservation;
+        this.error_handling = error_handling;
+        this.priority = priority;
+        this.privileges = privileges;
+    }
 
     /**
      * @summary Restructures an object into a CommonArguments

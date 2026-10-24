@@ -58,44 +58,58 @@ import {
  *
  */
 export class KeyConstructRecipientInfo {
+    /**
+     * @summary `version`.
+     * @public
+     * @readonly
+     */
+    public readonly version: Version;
+    /**
+     * @summary `did`.
+     * @public
+     * @readonly
+     */
+    public readonly did: OPTIONAL<KeyConstructionDomain>;
+    /**
+     * @summary `ckmid`.
+     * @public
+     * @readonly
+     */
+    public readonly ckmid: KeyConstructionRecipient;
+    /**
+     * @summary `ukm`.
+     * @public
+     * @readonly
+     */
+    public readonly ukm: OPTIONAL<UserKeyingMaterial>;
+    /**
+     * @summary `keyConstructionAlgorithm`.
+     * @public
+     * @readonly
+     */
+    public readonly keyConstructionAlgorithm: KeyConstructionAlgorithmIdentifier;
+    /**
+     * @summary `encryptedRandom`.
+     * @public
+     * @readonly
+     */
+    public readonly encryptedRandom: EncryptedKey;
+
     constructor(
-        /**
-         * @summary `version`.
-         * @public
-         * @readonly
-         */
-        readonly version: Version,
-        /**
-         * @summary `did`.
-         * @public
-         * @readonly
-         */
-        readonly did: OPTIONAL<KeyConstructionDomain>,
-        /**
-         * @summary `ckmid`.
-         * @public
-         * @readonly
-         */
-        readonly ckmid: KeyConstructionRecipient,
-        /**
-         * @summary `ukm`.
-         * @public
-         * @readonly
-         */
-        readonly ukm: OPTIONAL<UserKeyingMaterial>,
-        /**
-         * @summary `keyConstructionAlgorithm`.
-         * @public
-         * @readonly
-         */
-        readonly keyConstructionAlgorithm: KeyConstructionAlgorithmIdentifier,
-        /**
-         * @summary `encryptedRandom`.
-         * @public
-         * @readonly
-         */
-        readonly encryptedRandom: EncryptedKey
-    ) {}
+        version: Version,
+        did: OPTIONAL<KeyConstructionDomain>,
+        ckmid: KeyConstructionRecipient,
+        ukm: OPTIONAL<UserKeyingMaterial>,
+        keyConstructionAlgorithm: KeyConstructionAlgorithmIdentifier,
+        encryptedRandom: EncryptedKey
+    ) {
+        this.version = version;
+        this.did = did;
+        this.ckmid = ckmid;
+        this.ukm = ukm;
+        this.keyConstructionAlgorithm = keyConstructionAlgorithm;
+        this.encryptedRandom = encryptedRandom;
+    }
 
     /**
      * @summary Restructures an object into a KeyConstructRecipientInfo

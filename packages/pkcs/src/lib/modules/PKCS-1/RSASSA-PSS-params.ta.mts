@@ -42,32 +42,42 @@ import {
  *
  */
 export class RSASSA_PSS_params {
+    /**
+     * @summary `hashAlgorithm`.
+     * @public
+     * @readonly
+     */
+    public readonly hashAlgorithm?: OPTIONAL<HashAlgorithm>;
+    /**
+     * @summary `maskGenAlgorithm`.
+     * @public
+     * @readonly
+     */
+    public readonly maskGenAlgorithm?: OPTIONAL<MaskGenAlgorithm>;
+    /**
+     * @summary `saltLength`.
+     * @public
+     * @readonly
+     */
+    public readonly saltLength?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `trailerField`.
+     * @public
+     * @readonly
+     */
+    public readonly trailerField?: OPTIONAL<TrailerField>;
+
     constructor(
-        /**
-         * @summary `hashAlgorithm`.
-         * @public
-         * @readonly
-         */
-        readonly hashAlgorithm?: OPTIONAL<HashAlgorithm>,
-        /**
-         * @summary `maskGenAlgorithm`.
-         * @public
-         * @readonly
-         */
-        readonly maskGenAlgorithm?: OPTIONAL<MaskGenAlgorithm>,
-        /**
-         * @summary `saltLength`.
-         * @public
-         * @readonly
-         */
-        readonly saltLength?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `trailerField`.
-         * @public
-         * @readonly
-         */
-        readonly trailerField?: OPTIONAL<TrailerField>
-    ) {}
+        hashAlgorithm?: OPTIONAL<HashAlgorithm>,
+        maskGenAlgorithm?: OPTIONAL<MaskGenAlgorithm>,
+        saltLength?: OPTIONAL<INTEGER>,
+        trailerField?: OPTIONAL<TrailerField>
+    ) {
+        this.hashAlgorithm = hashAlgorithm;
+        this.maskGenAlgorithm = maskGenAlgorithm;
+        this.saltLength = saltLength;
+        this.trailerField = trailerField;
+    }
 
     /**
      * @summary Restructures an object into a RSASSA_PSS_params

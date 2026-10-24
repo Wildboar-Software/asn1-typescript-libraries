@@ -53,40 +53,54 @@ import {
  *
  */
 export class SupplierAndConsumers implements AccessPoint {
-    constructor(
-        /**
-         * @summary `ae_title`.
-         * @public
-         * @readonly
-         */
-        readonly ae_title: Name /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `address`.
-         * @public
-         * @readonly
-         */
-        readonly address: PresentationAddress /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `protocolInformation`.
-         * @public
-         * @readonly
-         */
-        readonly protocolInformation: OPTIONAL<
+    /**
+     * @summary `ae_title`.
+     * @public
+     * @readonly
+     */
+    public readonly ae_title: Name; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `address`.
+     * @public
+     * @readonly
+     */
+    public readonly address: PresentationAddress; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `protocolInformation`.
+     * @public
+     * @readonly
+     */
+    public readonly protocolInformation: OPTIONAL<
             ProtocolInformation[]
-        > /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `consumers`.
-         * @public
-         * @readonly
-         */
-        readonly consumers: AccessPoint[],
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        >; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `consumers`.
+     * @public
+     * @readonly
+     */
+    public readonly consumers: AccessPoint[];
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
+    constructor(
+        ae_title: Name,
+        address: PresentationAddress,
+        protocolInformation: OPTIONAL<
+            ProtocolInformation[]
+        >,
+        consumers: AccessPoint[],
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.ae_title = ae_title;
+        this.address = address;
+        this.protocolInformation = protocolInformation;
+        this.consumers = consumers;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a SupplierAndConsumers

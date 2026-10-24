@@ -36,26 +36,32 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class ParameterOffers_defaultCOinitialValue_Item {
+    /**
+     * @summary `value`.
+     * @description
+     * Initial bits for the eight booleans. ISO/IEC 9040:1997
+     * §23.1 table 12.
+     * @public
+     * @readonly
+     */
+    public readonly value: BIT_STRING;
+    /**
+     * @summary `mask`.
+     * @description
+     * Which bits of `value` apply. Omitted ⇒ all-ones (same as
+     * G.COupdate). ISO/IEC 9041-1:1997 §12.5.2.
+     * @public
+     * @readonly
+     */
+    public readonly mask?: OPTIONAL<BIT_STRING>;
+
     constructor (
-        /**
-         * @summary `value`.
-         * @description
-         * Initial bits for the eight booleans. ISO/IEC 9040:1997
-         * §23.1 table 12.
-         * @public
-         * @readonly
-         */
-        readonly value: BIT_STRING,
-        /**
-         * @summary `mask`.
-         * @description
-         * Which bits of `value` apply. Omitted ⇒ all-ones (same as
-         * G.COupdate). ISO/IEC 9041-1:1997 §12.5.2.
-         * @public
-         * @readonly
-         */
-        readonly mask?: OPTIONAL<BIT_STRING>
-    ) {}
+        value: BIT_STRING,
+        mask?: OPTIONAL<BIT_STRING>
+    ) {
+        this.value = value;
+        this.mask = mask;
+    }
 
     /**
      * @summary Restructures an object into a ParameterOffers_defaultCOinitialValue_Item

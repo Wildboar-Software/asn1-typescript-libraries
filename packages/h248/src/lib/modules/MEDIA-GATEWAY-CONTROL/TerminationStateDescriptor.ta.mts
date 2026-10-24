@@ -38,53 +38,63 @@ import { ServiceState, _decode_ServiceState, _encode_ServiceState, _enum_for_Ser
  */
 export
 class TerminationStateDescriptor {
+    /**
+     * @summary `propertyParms`.
+     * @description
+     *
+     * Packaged properties scoped to the termination rather than to a
+     * stream. Values may be a single value, a list of alternatives, a
+     * range, a relation, or CHOOSE (clause 7.1.5).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly propertyParms: PropertyParm[];
+    /**
+     * @summary `eventBufferControl`.
+     * @description
+     *
+     * LockStep buffers events after one is detected. Off processes them
+     * immediately. Default Off (clause 7.1.5.1.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly eventBufferControl?: OPTIONAL<EventBufferControl>;
+    /**
+     * @summary `serviceState`.
+     * @description
+     *
+     * InService, OutOfService, or Test. Default InService. See
+     * `ServiceState` for which command may cause each transition.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly serviceState?: OPTIONAL<ServiceState>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @description
+     *
+     * Extension additions this version does not define. Kept so a later
+     * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `propertyParms`.
-         * @description
-         *
-         * Packaged properties scoped to the termination rather than to a
-         * stream. Values may be a single value, a list of alternatives, a
-         * range, a relation, or CHOOSE (clause 7.1.5).
-         *
-         * @public
-         * @readonly
-         */
-        readonly propertyParms: PropertyParm[],
-        /**
-         * @summary `eventBufferControl`.
-         * @description
-         *
-         * LockStep buffers events after one is detected. Off processes them
-         * immediately. Default Off (clause 7.1.5.1.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly eventBufferControl?: OPTIONAL<EventBufferControl>,
-        /**
-         * @summary `serviceState`.
-         * @description
-         *
-         * InService, OutOfService, or Test. Default InService. See
-         * `ServiceState` for which command may cause each transition.
-         *
-         * @public
-         * @readonly
-         */
-        readonly serviceState?: OPTIONAL<ServiceState>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @description
-         *
-         * Extension additions this version does not define. Kept so a later
-         * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
-         *
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        propertyParms: PropertyParm[],
+        eventBufferControl?: OPTIONAL<EventBufferControl>,
+        serviceState?: OPTIONAL<ServiceState>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.propertyParms = propertyParms;
+        this.eventBufferControl = eventBufferControl;
+        this.serviceState = serviceState;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a TerminationStateDescriptor

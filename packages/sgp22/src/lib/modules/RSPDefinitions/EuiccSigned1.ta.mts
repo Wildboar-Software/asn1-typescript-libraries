@@ -38,60 +38,72 @@ import { CtxParams1, _decode_CtxParams1, _encode_CtxParams1 } from "../RSPDefini
  */
 export
 class EuiccSigned1 {
+    /**
+     * @summary `transactionId`.
+     * @description
+     * 
+     * Echo of the server TransactionID. SGP.22 v3.1 §5.7.13.
+     * 
+     * @public
+     * @readonly
+     */
+    public readonly transactionId: TransactionId;
+    /**
+     * @summary `serverAddress`.
+     * @description
+     * 
+     * Echo of the server address from `serverSigned1`. SGP.22 v3.1 §5.7.13.
+     * 
+     * @public
+     * @readonly
+     */
+    public readonly serverAddress: UTF8String;
+    /**
+     * @summary `serverChallenge`.
+     * @description
+     * 
+     * Echo of the server challenge. SGP.22 v3.1 §5.7.13.
+     * 
+     * @public
+     * @readonly
+     */
+    public readonly serverChallenge: Octet16;
+    /**
+     * @summary `euiccInfo2`.
+     * @description
+     * 
+     * Full eUICC information. Disclosed only after the server certificate
+     * verified. SGP.22 v3.1 §4.3.
+     * 
+     * @public
+     * @readonly
+     */
+    public readonly euiccInfo2: EUICCInfo2;
+    /**
+     * @summary `ctxParams1`.
+     * @description
+     * 
+     * The same context the LPA submitted, now under the eUICC signature.
+     * SGP.22 v3.1 §5.7.13.
+     * 
+     * @public
+     * @readonly
+     */
+    public readonly ctxParams1: CtxParams1;
+
     constructor (
-        /**
-         * @summary `transactionId`.
-         * @description
-         * 
-         * Echo of the server TransactionID. SGP.22 v3.1 §5.7.13.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly transactionId: TransactionId,
-        /**
-         * @summary `serverAddress`.
-         * @description
-         * 
-         * Echo of the server address from `serverSigned1`. SGP.22 v3.1 §5.7.13.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly serverAddress: UTF8String,
-        /**
-         * @summary `serverChallenge`.
-         * @description
-         * 
-         * Echo of the server challenge. SGP.22 v3.1 §5.7.13.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly serverChallenge: Octet16,
-        /**
-         * @summary `euiccInfo2`.
-         * @description
-         * 
-         * Full eUICC information. Disclosed only after the server certificate
-         * verified. SGP.22 v3.1 §4.3.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly euiccInfo2: EUICCInfo2,
-        /**
-         * @summary `ctxParams1`.
-         * @description
-         * 
-         * The same context the LPA submitted, now under the eUICC signature.
-         * SGP.22 v3.1 §5.7.13.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly ctxParams1: CtxParams1
-    ) {}
+        transactionId: TransactionId,
+        serverAddress: UTF8String,
+        serverChallenge: Octet16,
+        euiccInfo2: EUICCInfo2,
+        ctxParams1: CtxParams1
+    ) {
+        this.transactionId = transactionId;
+        this.serverAddress = serverAddress;
+        this.serverChallenge = serverChallenge;
+        this.euiccInfo2 = euiccInfo2;
+        this.ctxParams1 = ctxParams1;
+    }
 
     /**
      * @summary Restructures an object into a EuiccSigned1

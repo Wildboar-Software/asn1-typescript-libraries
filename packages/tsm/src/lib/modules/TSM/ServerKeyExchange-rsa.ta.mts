@@ -36,28 +36,34 @@ import { Signature, _decode_Signature, _encode_Signature } from "../TSM/Signatur
  */
 export
 class ServerKeyExchange_rsa {
+    /**
+     * @summary `params`.
+     * @description
+     *
+     * Key-exchange parameters (RSA or DH). X.1084 Annex A.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly params: ServerRSAParams;
+    /**
+     * @summary `signed_params`.
+     * @description
+     *
+     * Signature over those parameters (or anonymous). X.1084 Annex A.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly signed_params: Signature;
+
     constructor (
-        /**
-         * @summary `params`.
-         * @description
-         *
-         * Key-exchange parameters (RSA or DH). X.1084 Annex A.
-         *
-         * @public
-         * @readonly
-         */
-        readonly params: ServerRSAParams,
-        /**
-         * @summary `signed_params`.
-         * @description
-         *
-         * Signature over those parameters (or anonymous). X.1084 Annex A.
-         *
-         * @public
-         * @readonly
-         */
-        readonly signed_params: Signature
-    ) {}
+        params: ServerRSAParams,
+        signed_params: Signature
+    ) {
+        this.params = params;
+        this.signed_params = signed_params;
+    }
 
     /**
      * @summary Restructures an object into a ServerKeyExchange_rsa

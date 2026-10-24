@@ -35,41 +35,51 @@ import {
  *
  */
 export class MULTY_SIGNED<ToBeSigned> {
+    /**
+     * @summary `toBeSigned`.
+     * @public
+     * @readonly
+     */
+    public readonly toBeSigned: ToBeSigned;
+    /**
+     * @summary `algorithm`.
+     * @description
+     *
+     * Shall be `id-algo-multipleSignaturesAlgo`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly algorithm: OBJECT_IDENTIFIER;
+    /**
+     * @summary `parmeters`.
+     * @description
+     *
+     * Spec spelling. SIZE (1..MAX) of `{algo, signature}`; empty illegal.
+     * May require all signatures or any one.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly parmeters: MULTY_SIGNED_parmeters_sign<ToBeSigned>[];
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `toBeSigned`.
-         * @public
-         * @readonly
-         */
-        readonly toBeSigned: ToBeSigned,
-        /**
-         * @summary `algorithm`.
-         * @description
-         *
-         * Shall be `id-algo-multipleSignaturesAlgo`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly algorithm: OBJECT_IDENTIFIER,
-        /**
-         * @summary `parmeters`.
-         * @description
-         *
-         * Spec spelling. SIZE (1..MAX) of `{algo, signature}`; empty illegal.
-         * May require all signatures or any one.
-         *
-         * @public
-         * @readonly
-         */
-        readonly parmeters: MULTY_SIGNED_parmeters_sign<ToBeSigned>[],
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        toBeSigned: ToBeSigned,
+        algorithm: OBJECT_IDENTIFIER,
+        parmeters: MULTY_SIGNED_parmeters_sign<ToBeSigned>[],
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.toBeSigned = toBeSigned;
+        this.algorithm = algorithm;
+        this.parmeters = parmeters;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a MULTY_SIGNED

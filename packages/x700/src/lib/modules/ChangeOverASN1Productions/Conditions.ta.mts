@@ -37,32 +37,38 @@ import {
  *
  */
 export class Conditions {
+    /**
+     * @summary `primary`.
+     * @description
+     *
+     * Failed condition on the primary / backed-up participant.
+     * ITU-T Rec. X.751 (11/95)
+     * [§8.7.8](https://www.itu.int/rec/T-REC-X.751-199511-I),
+     * §8.7.9.
+     * @public
+     * @readonly
+     */
+    public readonly primary?: OPTIONAL<Condition>;
+    /**
+     * @summary `secondary`.
+     * @description
+     *
+     * Failed condition on the secondary / back-up participant.
+     * ITU-T Rec. X.751 (11/95)
+     * [§8.7.8](https://www.itu.int/rec/T-REC-X.751-199511-I),
+     * §8.7.9.
+     * @public
+     * @readonly
+     */
+    public readonly secondary?: OPTIONAL<Condition>;
+
     constructor(
-        /**
-         * @summary `primary`.
-         * @description
-         *
-         * Failed condition on the primary / backed-up participant.
-         * ITU-T Rec. X.751 (11/95)
-         * [§8.7.8](https://www.itu.int/rec/T-REC-X.751-199511-I),
-         * §8.7.9.
-         * @public
-         * @readonly
-         */
-        readonly primary?: OPTIONAL<Condition>,
-        /**
-         * @summary `secondary`.
-         * @description
-         *
-         * Failed condition on the secondary / back-up participant.
-         * ITU-T Rec. X.751 (11/95)
-         * [§8.7.8](https://www.itu.int/rec/T-REC-X.751-199511-I),
-         * §8.7.9.
-         * @public
-         * @readonly
-         */
-        readonly secondary?: OPTIONAL<Condition>
-    ) {}
+        primary?: OPTIONAL<Condition>,
+        secondary?: OPTIONAL<Condition>
+    ) {
+        this.primary = primary;
+        this.secondary = secondary;
+    }
 
     /**
      * @summary Restructures an object into a Conditions

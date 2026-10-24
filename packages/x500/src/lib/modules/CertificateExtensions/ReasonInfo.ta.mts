@@ -35,30 +35,38 @@ import {
  *
  */
 export class ReasonInfo {
+    /**
+     * @summary `reasonCode`.
+     * @public
+     * @readonly
+     */
+    public readonly reasonCode: CRLReason;
+    /**
+     * @summary `holdInstructionCode`.
+     * @description
+     *
+     * Only with CRLReason certificateHold.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly holdInstructionCode?: OPTIONAL<HoldInstruction>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `reasonCode`.
-         * @public
-         * @readonly
-         */
-        readonly reasonCode: CRLReason,
-        /**
-         * @summary `holdInstructionCode`.
-         * @description
-         *
-         * Only with CRLReason certificateHold.
-         *
-         * @public
-         * @readonly
-         */
-        readonly holdInstructionCode?: OPTIONAL<HoldInstruction>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        reasonCode: CRLReason,
+        holdInstructionCode?: OPTIONAL<HoldInstruction>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.reasonCode = reasonCode;
+        this.holdInstructionCode = holdInstructionCode;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a ReasonInfo

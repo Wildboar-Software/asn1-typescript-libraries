@@ -35,45 +35,55 @@ import {
  *
  */
 export class ResourceSelfTestResults_nonIntermediate {
+    /**
+     * @summary `phases`.
+     * @description
+     *
+     * Phases that were run. X.737 A.7.
+     * @public
+     * @readonly
+     */
+    public readonly phases: INTEGER[];
+    /**
+     * @summary `iteration`.
+     * @description
+     *
+     * Iterations performed. X.737 A.7.
+     * @public
+     * @readonly
+     */
+    public readonly iteration: INTEGER;
+    /**
+     * @summary `timeoutPeriod`.
+     * @description
+     *
+     * Time-out that applied. X.737 A.7.
+     * @public
+     * @readonly
+     */
+    public readonly timeoutPeriod: TimeoutPeriod;
+    /**
+     * @summary `finalResponse`.
+     * @description
+     *
+     * Printable additional result (exercise-
+     * specific info or follow-up). Optional. X.737 §7.7.8.
+     * @public
+     * @readonly
+     */
+    public readonly finalResponse?: OPTIONAL<PrintableString>;
+
     constructor(
-        /**
-         * @summary `phases`.
-         * @description
-         *
-         * Phases that were run. X.737 A.7.
-         * @public
-         * @readonly
-         */
-        readonly phases: INTEGER[],
-        /**
-         * @summary `iteration`.
-         * @description
-         *
-         * Iterations performed. X.737 A.7.
-         * @public
-         * @readonly
-         */
-        readonly iteration: INTEGER,
-        /**
-         * @summary `timeoutPeriod`.
-         * @description
-         *
-         * Time-out that applied. X.737 A.7.
-         * @public
-         * @readonly
-         */
-        readonly timeoutPeriod: TimeoutPeriod,
-        /**
-         * @summary `finalResponse`.
-         * @description
-         *
-         * Printable additional result (exercise-
-         * specific info or follow-up). Optional. X.737 §7.7.8.
-         * @public
-         * @readonly
-         */
-        readonly finalResponse?: OPTIONAL<PrintableString>
-    ) {}
+        phases: INTEGER[],
+        iteration: INTEGER,
+        timeoutPeriod: TimeoutPeriod,
+        finalResponse?: OPTIONAL<PrintableString>
+    ) {
+        this.phases = phases;
+        this.iteration = iteration;
+        this.timeoutPeriod = timeoutPeriod;
+        this.finalResponse = finalResponse;
+    }
 
     /**
      * @summary Restructures an object into a ResourceSelfTestResults_nonIntermediate

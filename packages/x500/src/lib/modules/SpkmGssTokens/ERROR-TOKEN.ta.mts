@@ -29,29 +29,35 @@ import {
  *
  */
 export class ERROR_TOKEN {
+    /**
+     * @summary `tok_id`.
+     * @description
+     *
+     * Must be 1024 (0x0400).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly tok_id: INTEGER;
+    /**
+     * @summary `context_id`.
+     * @description
+     *
+     * Context-id of the failed establishment (may still be initiator-
+     * only if REP-TI was never sent).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly context_id: Random_Integer;
+
     constructor(
-        /**
-         * @summary `tok_id`.
-         * @description
-         *
-         * Must be 1024 (0x0400).
-         *
-         * @public
-         * @readonly
-         */
-        readonly tok_id: INTEGER,
-        /**
-         * @summary `context_id`.
-         * @description
-         *
-         * Context-id of the failed establishment (may still be initiator-
-         * only if REP-TI was never sent).
-         *
-         * @public
-         * @readonly
-         */
-        readonly context_id: Random_Integer
-    ) {}
+        tok_id: INTEGER,
+        context_id: Random_Integer
+    ) {
+        this.tok_id = tok_id;
+        this.context_id = context_id;
+    }
 
     /**
      * @summary Restructures an object into a ERROR_TOKEN

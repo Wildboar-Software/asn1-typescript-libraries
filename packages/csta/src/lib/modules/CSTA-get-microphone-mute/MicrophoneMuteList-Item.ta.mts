@@ -35,26 +35,32 @@ import { AuditoryApparatusID, _decode_AuditoryApparatusID, _encode_AuditoryAppar
  */
 export
 class MicrophoneMuteList_Item {
+    /**
+     * @summary `auditoryApparatus`.
+     * @description
+     *
+     * Apparatus that owns the microphone.
+     * @public
+     * @readonly
+     */
+    public readonly auditoryApparatus: AuditoryApparatusID;
+    /**
+     * @summary `microphoneMuteOn`.
+     * @description
+     *
+     * FALSE = activated; TRUE = muted.
+     * @public
+     * @readonly
+     */
+    public readonly microphoneMuteOn: BOOLEAN;
+
     constructor (
-        /**
-         * @summary `auditoryApparatus`.
-         * @description
-         *
-         * Apparatus that owns the microphone.
-         * @public
-         * @readonly
-         */
-        readonly auditoryApparatus: AuditoryApparatusID,
-        /**
-         * @summary `microphoneMuteOn`.
-         * @description
-         *
-         * FALSE = activated; TRUE = muted.
-         * @public
-         * @readonly
-         */
-        readonly microphoneMuteOn: BOOLEAN
-    ) {}
+        auditoryApparatus: AuditoryApparatusID,
+        microphoneMuteOn: BOOLEAN
+    ) {
+        this.auditoryApparatus = auditoryApparatus;
+        this.microphoneMuteOn = microphoneMuteOn;
+    }
 
     /**
      * @summary Restructures an object into a MicrophoneMuteList_Item

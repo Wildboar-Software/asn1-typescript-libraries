@@ -60,83 +60,103 @@ import {
  *
  */
 export class CompareResultData implements CommonResults {
+    /**
+     * @summary `name`.
+     * @description
+     *
+     * Present if an alias was deref'd and the returned name ≠ `object`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly name: OPTIONAL<Name>;
+    /**
+     * @summary `matched`.
+     * @description
+     *
+     * TRUE if the equality MR succeeded on type or subtype (not friends).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly matched: BOOLEAN;
+    /**
+     * @summary `fromEntry`.
+     * @description
+     *
+     * DEFAULT TRUE. TRUE = entry, FALSE = copy.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly fromEntry?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `matchedSubtype`.
+     * @description
+     *
+     * Only if `matched` is TRUE because of a subtype; if several, the
+     * highest in the hierarchy.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly matchedSubtype?: OPTIONAL<AttributeType>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+    /**
+     * @summary `securityParameters`.
+     * @description
+     *
+     * Required if this result is signed; absence ≡ empty.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly securityParameters?: OPTIONAL<SecurityParameters>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `performer`.
+     * @public
+     * @readonly
+     */
+    public readonly performer?: OPTIONAL<DistinguishedName>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `aliasDereferenced`.
+     * @public
+     * @readonly
+     */
+    public readonly aliasDereferenced?: OPTIONAL<BOOLEAN>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `notification`.
+     * @public
+     * @readonly
+     */
+    public readonly notification?: OPTIONAL<Attribute[]>; /* REPLICATED_COMPONENT */
+
     constructor(
-        /**
-         * @summary `name`.
-         * @description
-         *
-         * Present if an alias was deref'd and the returned name ≠ `object`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly name: OPTIONAL<Name>,
-        /**
-         * @summary `matched`.
-         * @description
-         *
-         * TRUE if the equality MR succeeded on type or subtype (not friends).
-         *
-         * @public
-         * @readonly
-         */
-        readonly matched: BOOLEAN,
-        /**
-         * @summary `fromEntry`.
-         * @description
-         *
-         * DEFAULT TRUE. TRUE = entry, FALSE = copy.
-         *
-         * @public
-         * @readonly
-         */
-        readonly fromEntry?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `matchedSubtype`.
-         * @description
-         *
-         * Only if `matched` is TRUE because of a subtype; if several, the
-         * highest in the hierarchy.
-         *
-         * @public
-         * @readonly
-         */
-        readonly matchedSubtype?: OPTIONAL<AttributeType>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = [],
-        /**
-         * @summary `securityParameters`.
-         * @description
-         *
-         * Required if this result is signed; absence ≡ empty.
-         *
-         * @public
-         * @readonly
-         */
-        readonly securityParameters?: OPTIONAL<SecurityParameters> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `performer`.
-         * @public
-         * @readonly
-         */
-        readonly performer?: OPTIONAL<DistinguishedName> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `aliasDereferenced`.
-         * @public
-         * @readonly
-         */
-        readonly aliasDereferenced?: OPTIONAL<BOOLEAN> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `notification`.
-         * @public
-         * @readonly
-         */
-        readonly notification?: OPTIONAL<Attribute[]> /* REPLICATED_COMPONENT */
-    ) {}
+        name: OPTIONAL<Name>,
+        matched: BOOLEAN,
+        fromEntry?: OPTIONAL<BOOLEAN>,
+        matchedSubtype?: OPTIONAL<AttributeType>,
+        _unrecognizedExtensionsList: _Element[] = [],
+        securityParameters?: OPTIONAL<SecurityParameters>,
+        performer?: OPTIONAL<DistinguishedName>,
+        aliasDereferenced?: OPTIONAL<BOOLEAN>,
+        notification?: OPTIONAL<Attribute[]>
+    ) {
+        this.name = name;
+        this.matched = matched;
+        this.fromEntry = fromEntry;
+        this.matchedSubtype = matchedSubtype;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+        this.securityParameters = securityParameters;
+        this.performer = performer;
+        this.aliasDereferenced = aliasDereferenced;
+        this.notification = notification;
+    }
 
     /**
      * @summary Restructures an object into a CompareResultData

@@ -35,34 +35,42 @@ import { EraseAttr, _decode_EraseAttr, _encode_EraseAttr } from "../ISO9041-VTP/
  */
 export
 class DOupdate_logErase {
+    /**
+     * @summary `logStartErase`.
+     * @description
+     * Start of the logical erase extent. ISO/IEC 9040:1997 §19.4.2.
+     * @public
+     * @readonly
+     */
+    public readonly logStartErase: LogPointer;
+    /**
+     * @summary `logEndErase`.
+     * @description
+     * End of the logical erase extent. ISO/IEC 9040:1997 §19.4.2.
+     * @public
+     * @readonly
+     */
+    public readonly logEndErase: LogPointer;
+    /**
+     * @summary `attribute`.
+     * @description
+     * TRUE also resets secondary attributes to explicit modal
+     * defaults (reset-attribute `"yes"`); FALSE leaves them.
+     * ISO/IEC 9040:1997 §19.4.1.4, §19.4.2.
+     * @public
+     * @readonly
+     */
+    public readonly attribute: EraseAttr;
+
     constructor (
-        /**
-         * @summary `logStartErase`.
-         * @description
-         * Start of the logical erase extent. ISO/IEC 9040:1997 §19.4.2.
-         * @public
-         * @readonly
-         */
-        readonly logStartErase: LogPointer,
-        /**
-         * @summary `logEndErase`.
-         * @description
-         * End of the logical erase extent. ISO/IEC 9040:1997 §19.4.2.
-         * @public
-         * @readonly
-         */
-        readonly logEndErase: LogPointer,
-        /**
-         * @summary `attribute`.
-         * @description
-         * TRUE also resets secondary attributes to explicit modal
-         * defaults (reset-attribute `"yes"`); FALSE leaves them.
-         * ISO/IEC 9040:1997 §19.4.1.4, §19.4.2.
-         * @public
-         * @readonly
-         */
-        readonly attribute: EraseAttr
-    ) {}
+        logStartErase: LogPointer,
+        logEndErase: LogPointer,
+        attribute: EraseAttr
+    ) {
+        this.logStartErase = logStartErase;
+        this.logEndErase = logEndErase;
+        this.attribute = attribute;
+    }
 
     /**
      * @summary Restructures an object into a DOupdate_logErase

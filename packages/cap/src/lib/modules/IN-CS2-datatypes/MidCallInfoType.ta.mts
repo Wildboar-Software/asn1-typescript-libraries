@@ -31,20 +31,26 @@ import { Digits, _decode_Digits, _encode_Digits } from "../IN-CS2-datatypes/Digi
  */
 export
 class MidCallInfoType {
+    /**
+     * @summary `iNServiceControlCodeLow`.
+     * @public
+     * @readonly
+     */
+    public readonly iNServiceControlCodeLow: Digits;
+    /**
+     * @summary `iNServiceControlCodeHigh`.
+     * @public
+     * @readonly
+     */
+    public readonly iNServiceControlCodeHigh?: OPTIONAL<Digits>;
+
     constructor (
-        /**
-         * @summary `iNServiceControlCodeLow`.
-         * @public
-         * @readonly
-         */
-        readonly iNServiceControlCodeLow: Digits,
-        /**
-         * @summary `iNServiceControlCodeHigh`.
-         * @public
-         * @readonly
-         */
-        readonly iNServiceControlCodeHigh?: OPTIONAL<Digits>
-    ) {}
+        iNServiceControlCodeLow: Digits,
+        iNServiceControlCodeHigh?: OPTIONAL<Digits>
+    ) {
+        this.iNServiceControlCodeLow = iNServiceControlCodeLow;
+        this.iNServiceControlCodeHigh = iNServiceControlCodeHigh;
+    }
 
     /**
      * @summary Restructures an object into a MidCallInfoType

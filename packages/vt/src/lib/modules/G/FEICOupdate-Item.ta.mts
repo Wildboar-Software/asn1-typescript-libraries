@@ -34,25 +34,31 @@ import { FEI, _decode_FEI, _encode_FEI } from "../G/FEI.ta.mjs";
  */
 export
 class FEICOupdate_Item {
+    /**
+     * @summary `index`.
+     * @description
+     * FEIR index within the FEICO. ISO/IEC 9041-1:1997 §12.2.3.
+     * @public
+     * @readonly
+     */
+    public readonly index: INTEGER;
+    /**
+     * @summary `content`.
+     * @description
+     * Set of Field Entry Instructions; syntax from the FEICO register
+     * entry. ISO/IEC 9040:1997 §3.3.64; ISO/IEC 9041-1:1997 §12.2.3.
+     * @public
+     * @readonly
+     */
+    public readonly content: FEI[];
+
     constructor (
-        /**
-         * @summary `index`.
-         * @description
-         * FEIR index within the FEICO. ISO/IEC 9041-1:1997 §12.2.3.
-         * @public
-         * @readonly
-         */
-        readonly index: INTEGER,
-        /**
-         * @summary `content`.
-         * @description
-         * Set of Field Entry Instructions; syntax from the FEICO register
-         * entry. ISO/IEC 9040:1997 §3.3.64; ISO/IEC 9041-1:1997 §12.2.3.
-         * @public
-         * @readonly
-         */
-        readonly content: FEI[]
-    ) {}
+        index: INTEGER,
+        content: FEI[]
+    ) {
+        this.index = index;
+        this.content = content;
+    }
 
     /**
      * @summary Restructures an object into a FEICOupdate_Item

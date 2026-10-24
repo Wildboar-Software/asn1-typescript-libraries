@@ -32,20 +32,26 @@ import {
  *
  */
 export class ConversionStatistics {
+    /**
+     * @summary `oldEit`.
+     * @public
+     * @readonly
+     */
+    public readonly oldEit: EncodedInformationTypes;
+    /**
+     * @summary `newEit`.
+     * @public
+     * @readonly
+     */
+    public readonly newEit: EncodedInformationTypes;
+
     constructor(
-        /**
-         * @summary `oldEit`.
-         * @public
-         * @readonly
-         */
-        readonly oldEit: EncodedInformationTypes,
-        /**
-         * @summary `newEit`.
-         * @public
-         * @readonly
-         */
-        readonly newEit: EncodedInformationTypes
-    ) {}
+        oldEit: EncodedInformationTypes,
+        newEit: EncodedInformationTypes
+    ) {
+        this.oldEit = oldEit;
+        this.newEit = newEit;
+    }
 
     /**
      * @summary Restructures an object into a ConversionStatistics

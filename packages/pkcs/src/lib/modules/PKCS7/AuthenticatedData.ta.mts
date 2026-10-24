@@ -64,62 +64,82 @@ import { Version, _decode_Version, _encode_Version } from "../PKCS7/Version.ta.m
  *
  */
 export class AuthenticatedData {
+    /**
+     * @summary `version`.
+     * @public
+     * @readonly
+     */
+    public readonly version: Version;
+    /**
+     * @summary `originatorInfo`.
+     * @public
+     * @readonly
+     */
+    public readonly originatorInfo: OPTIONAL<OriginatorInfo>;
+    /**
+     * @summary `recipientInfos`.
+     * @public
+     * @readonly
+     */
+    public readonly recipientInfos: RecipientInfos;
+    /**
+     * @summary `macAlgorithm`.
+     * @public
+     * @readonly
+     */
+    public readonly macAlgorithm: MessageAuthenticationCodeAlgorithmIdentifier;
+    /**
+     * @summary `digestAlgorithm`.
+     * @public
+     * @readonly
+     */
+    public readonly digestAlgorithm: OPTIONAL<DigestAlgorithmIdentifier>;
+    /**
+     * @summary `contentInfo`.
+     * @public
+     * @readonly
+     */
+    public readonly contentInfo: ContentInfo;
+    /**
+     * @summary `authenticatedAttributes`.
+     * @public
+     * @readonly
+     */
+    public readonly authenticatedAttributes: OPTIONAL<Attributes>;
+    /**
+     * @summary `messageAuthenticationCode`.
+     * @public
+     * @readonly
+     */
+    public readonly messageAuthenticationCode: MessageAuthenticationCode;
+    /**
+     * @summary `unauthenticatedAttributes`.
+     * @public
+     * @readonly
+     */
+    public readonly unauthenticatedAttributes?: OPTIONAL<Attributes>;
+
     constructor(
-        /**
-         * @summary `version`.
-         * @public
-         * @readonly
-         */
-        readonly version: Version,
-        /**
-         * @summary `originatorInfo`.
-         * @public
-         * @readonly
-         */
-        readonly originatorInfo: OPTIONAL<OriginatorInfo>,
-        /**
-         * @summary `recipientInfos`.
-         * @public
-         * @readonly
-         */
-        readonly recipientInfos: RecipientInfos,
-        /**
-         * @summary `macAlgorithm`.
-         * @public
-         * @readonly
-         */
-        readonly macAlgorithm: MessageAuthenticationCodeAlgorithmIdentifier,
-        /**
-         * @summary `digestAlgorithm`.
-         * @public
-         * @readonly
-         */
-        readonly digestAlgorithm: OPTIONAL<DigestAlgorithmIdentifier>,
-        /**
-         * @summary `contentInfo`.
-         * @public
-         * @readonly
-         */
-        readonly contentInfo: ContentInfo,
-        /**
-         * @summary `authenticatedAttributes`.
-         * @public
-         * @readonly
-         */
-        readonly authenticatedAttributes: OPTIONAL<Attributes>,
-        /**
-         * @summary `messageAuthenticationCode`.
-         * @public
-         * @readonly
-         */
-        readonly messageAuthenticationCode: MessageAuthenticationCode,
-        /**
-         * @summary `unauthenticatedAttributes`.
-         * @public
-         * @readonly
-         */
-        readonly unauthenticatedAttributes?: OPTIONAL<Attributes>
-    ) {}
+        version: Version,
+        originatorInfo: OPTIONAL<OriginatorInfo>,
+        recipientInfos: RecipientInfos,
+        macAlgorithm: MessageAuthenticationCodeAlgorithmIdentifier,
+        digestAlgorithm: OPTIONAL<DigestAlgorithmIdentifier>,
+        contentInfo: ContentInfo,
+        authenticatedAttributes: OPTIONAL<Attributes>,
+        messageAuthenticationCode: MessageAuthenticationCode,
+        unauthenticatedAttributes?: OPTIONAL<Attributes>
+    ) {
+        this.version = version;
+        this.originatorInfo = originatorInfo;
+        this.recipientInfos = recipientInfos;
+        this.macAlgorithm = macAlgorithm;
+        this.digestAlgorithm = digestAlgorithm;
+        this.contentInfo = contentInfo;
+        this.authenticatedAttributes = authenticatedAttributes;
+        this.messageAuthenticationCode = messageAuthenticationCode;
+        this.unauthenticatedAttributes = unauthenticatedAttributes;
+    }
 
     /**
      * @summary Restructures an object into a AuthenticatedData

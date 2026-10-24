@@ -33,26 +33,34 @@ import { Integer4, _decode_Integer4, _encode_Integer4 } from "../IN-CS2-datatype
  */
 export
 class EventSpecificInformationBCSM_oDisconnectSpecificInfo {
+    /**
+     * @summary `releaseCause`.
+     * @public
+     * @readonly
+     */
+    public readonly releaseCause?: OPTIONAL<Cause>;
+    /**
+     * @summary `connectTime`.
+     * @public
+     * @readonly
+     */
+    public readonly connectTime?: OPTIONAL<Integer4>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `releaseCause`.
-         * @public
-         * @readonly
-         */
-        readonly releaseCause?: OPTIONAL<Cause>,
-        /**
-         * @summary `connectTime`.
-         * @public
-         * @readonly
-         */
-        readonly connectTime?: OPTIONAL<Integer4>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        releaseCause?: OPTIONAL<Cause>,
+        connectTime?: OPTIONAL<Integer4>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.releaseCause = releaseCause;
+        this.connectTime = connectTime;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a EventSpecificInformationBCSM_oDisconnectSpecificInfo

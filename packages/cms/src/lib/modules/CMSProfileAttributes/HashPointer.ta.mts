@@ -35,20 +35,26 @@ import {
  *
  */
 export class HashPointer {
+    /**
+     * @summary `hash`.
+     * @public
+     * @readonly
+     */
+    public readonly hash?: OPTIONAL<DigestedData>;
+    /**
+     * @summary `pointers`.
+     * @public
+     * @readonly
+     */
+    public readonly pointers?: OPTIONAL<Pointers>;
+
     constructor(
-        /**
-         * @summary `hash`.
-         * @public
-         * @readonly
-         */
-        readonly hash?: OPTIONAL<DigestedData>,
-        /**
-         * @summary `pointers`.
-         * @public
-         * @readonly
-         */
-        readonly pointers?: OPTIONAL<Pointers>
-    ) {}
+        hash?: OPTIONAL<DigestedData>,
+        pointers?: OPTIONAL<Pointers>
+    ) {
+        this.hash = hash;
+        this.pointers = pointers;
+    }
 
     /**
      * @summary Restructures an object into a HashPointer

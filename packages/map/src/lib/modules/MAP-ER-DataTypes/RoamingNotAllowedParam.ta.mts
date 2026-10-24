@@ -32,43 +32,53 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
  */
 export
 class RoamingNotAllowedParam {
+    /**
+     * @summary `roamingNotAllowedCause`.
+     * @description
+     *
+     * Cause of roaming not allowed. Discarded if
+     * `additionalRoamingNotAllowedCause` is received by the MSC/VLR or SGSN
+     * (3GPP TS 29.002 V19.1.0 clause 17.7.7).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly roamingNotAllowedCause: RoamingNotAllowedCause;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary `additionalRoamingNotAllowedCause`.
+     * @description
+     *
+     * If received by the MSC/VLR or SGSN, `roamingNotAllowedCause` shall be
+     * discarded (3GPP TS 29.002 V19.1.0 clause 17.7.7).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly additionalRoamingNotAllowedCause?: OPTIONAL<AdditionalRoamingNotAllowedCause>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `roamingNotAllowedCause`.
-         * @description
-         *
-         * Cause of roaming not allowed. Discarded if
-         * `additionalRoamingNotAllowedCause` is received by the MSC/VLR or SGSN
-         * (3GPP TS 29.002 V19.1.0 clause 17.7.7).
-         *
-         * @public
-         * @readonly
-         */
-        readonly roamingNotAllowedCause: RoamingNotAllowedCause,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary `additionalRoamingNotAllowedCause`.
-         * @description
-         *
-         * If received by the MSC/VLR or SGSN, `roamingNotAllowedCause` shall be
-         * discarded (3GPP TS 29.002 V19.1.0 clause 17.7.7).
-         *
-         * @public
-         * @readonly
-         */
-        readonly additionalRoamingNotAllowedCause?: OPTIONAL<AdditionalRoamingNotAllowedCause>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        roamingNotAllowedCause: RoamingNotAllowedCause,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        additionalRoamingNotAllowedCause?: OPTIONAL<AdditionalRoamingNotAllowedCause>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.roamingNotAllowedCause = roamingNotAllowedCause;
+        this.extensionContainer = extensionContainer;
+        this.additionalRoamingNotAllowedCause = additionalRoamingNotAllowedCause;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a RoamingNotAllowedParam

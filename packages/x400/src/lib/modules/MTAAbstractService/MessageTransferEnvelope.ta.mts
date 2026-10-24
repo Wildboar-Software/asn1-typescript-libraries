@@ -101,84 +101,114 @@ import {
  *
  */
 export class MessageTransferEnvelope implements PerMessageTransferFields {
-    constructor(
-        /**
-         * @summary `message_identifier`.
-         * @public
-         * @readonly
-         */
-        readonly message_identifier: MessageIdentifier /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `originator_name`.
-         * @public
-         * @readonly
-         */
-        readonly originator_name: OriginatorName /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `original_encoded_information_types`.
-         * @public
-         * @readonly
-         */
-        readonly original_encoded_information_types: OPTIONAL<OriginalEncodedInformationTypes> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `content_type`.
-         * @public
-         * @readonly
-         */
-        readonly content_type: ContentType /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `content_identifier`.
-         * @public
-         * @readonly
-         */
-        readonly content_identifier: OPTIONAL<ContentIdentifier> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `priority`.
-         * @public
-         * @readonly
-         */
-        readonly priority: OPTIONAL<Priority> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `per_message_indicators`.
-         * @public
-         * @readonly
-         */
-        readonly per_message_indicators: OPTIONAL<PerMessageIndicators> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `deferred_delivery_time`.
-         * @public
-         * @readonly
-         */
-        readonly deferred_delivery_time: OPTIONAL<DeferredDeliveryTime> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `per_domain_bilateral_information`.
-         * @public
-         * @readonly
-         */
-        readonly per_domain_bilateral_information: OPTIONAL<
+    /**
+     * @summary `message_identifier`.
+     * @public
+     * @readonly
+     */
+    public readonly message_identifier: MessageIdentifier; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `originator_name`.
+     * @public
+     * @readonly
+     */
+    public readonly originator_name: OriginatorName; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `original_encoded_information_types`.
+     * @public
+     * @readonly
+     */
+    public readonly original_encoded_information_types: OPTIONAL<OriginalEncodedInformationTypes>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `content_type`.
+     * @public
+     * @readonly
+     */
+    public readonly content_type: ContentType; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `content_identifier`.
+     * @public
+     * @readonly
+     */
+    public readonly content_identifier: OPTIONAL<ContentIdentifier>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `priority`.
+     * @public
+     * @readonly
+     */
+    public readonly priority: OPTIONAL<Priority>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `per_message_indicators`.
+     * @public
+     * @readonly
+     */
+    public readonly per_message_indicators: OPTIONAL<PerMessageIndicators>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `deferred_delivery_time`.
+     * @public
+     * @readonly
+     */
+    public readonly deferred_delivery_time: OPTIONAL<DeferredDeliveryTime>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `per_domain_bilateral_information`.
+     * @public
+     * @readonly
+     */
+    public readonly per_domain_bilateral_information: OPTIONAL<
             PerDomainBilateralInformation[]
-        > /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `trace_information`.
-         * @public
-         * @readonly
-         */
-        readonly trace_information: TraceInformation /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `extensions`.
-         * @public
-         * @readonly
-         */
-        readonly extensions: OPTIONAL<
+        >; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `trace_information`.
+     * @public
+     * @readonly
+     */
+    public readonly trace_information: TraceInformation; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly extensions: OPTIONAL<
             ExtensionField[]
-        > /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `per_recipient_fields`.
-         * @public
-         * @readonly
-         */
-        readonly per_recipient_fields: PerRecipientMessageTransferFields[]
-    ) {}
+        >; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `per_recipient_fields`.
+     * @public
+     * @readonly
+     */
+    public readonly per_recipient_fields: PerRecipientMessageTransferFields[];
+
+    constructor(
+        message_identifier: MessageIdentifier,
+        originator_name: OriginatorName,
+        original_encoded_information_types: OPTIONAL<OriginalEncodedInformationTypes>,
+        content_type: ContentType,
+        content_identifier: OPTIONAL<ContentIdentifier>,
+        priority: OPTIONAL<Priority>,
+        per_message_indicators: OPTIONAL<PerMessageIndicators>,
+        deferred_delivery_time: OPTIONAL<DeferredDeliveryTime>,
+        per_domain_bilateral_information: OPTIONAL<
+            PerDomainBilateralInformation[]
+        >,
+        trace_information: TraceInformation,
+        extensions: OPTIONAL<
+            ExtensionField[]
+        >,
+        per_recipient_fields: PerRecipientMessageTransferFields[]
+    ) {
+        this.message_identifier = message_identifier;
+        this.originator_name = originator_name;
+        this.original_encoded_information_types = original_encoded_information_types;
+        this.content_type = content_type;
+        this.content_identifier = content_identifier;
+        this.priority = priority;
+        this.per_message_indicators = per_message_indicators;
+        this.deferred_delivery_time = deferred_delivery_time;
+        this.per_domain_bilateral_information = per_domain_bilateral_information;
+        this.trace_information = trace_information;
+        this.extensions = extensions;
+        this.per_recipient_fields = per_recipient_fields;
+    }
 
     /**
      * @summary Restructures an object into a MessageTransferEnvelope

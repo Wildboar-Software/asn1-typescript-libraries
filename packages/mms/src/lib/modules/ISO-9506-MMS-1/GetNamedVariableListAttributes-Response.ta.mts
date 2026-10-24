@@ -40,44 +40,52 @@ import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-
  */
 export
 class GetNamedVariableListAttributes_Response {
+    /**
+     * @summary `mmsDeletable`.
+     * @description
+     *
+     * Whether DeleteNamedVariableList may delete this
+     * object (ISO 9506-1:2003 §9.1.4).
+     * ISO 9506-1:2003 §14.13.1.2.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mmsDeletable: BOOLEAN;
+    /**
+     * @summary `listOfVariable`.
+     * @description
+     *
+     * `&listOfVariables` in stored order.
+     * ISO 9506-1:2003 §14.13.1.2.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly listOfVariable: GetNamedVariableListAttributes_Response_listOfVariable_Item[];
+    /**
+     * @summary `accessControlList`.
+     * @description
+     *
+     * Access Control List `&name`. Present iff `aco` CBB
+     * was negotiated. Absent in minor versions 1 and 2.
+     * ISO 9506-1:2003 §14.13.1.3.
+     * ISO 9506-2:2003 §14.13.2.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly accessControlList?: OPTIONAL<Identifier>;
+
     constructor (
-        /**
-         * @summary `mmsDeletable`.
-         * @description
-         *
-         * Whether DeleteNamedVariableList may delete this
-         * object (ISO 9506-1:2003 §9.1.4).
-         * ISO 9506-1:2003 §14.13.1.2.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly mmsDeletable: BOOLEAN,
-        /**
-         * @summary `listOfVariable`.
-         * @description
-         *
-         * `&listOfVariables` in stored order.
-         * ISO 9506-1:2003 §14.13.1.2.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly listOfVariable: GetNamedVariableListAttributes_Response_listOfVariable_Item[],
-        /**
-         * @summary `accessControlList`.
-         * @description
-         *
-         * Access Control List `&name`. Present iff `aco` CBB
-         * was negotiated. Absent in minor versions 1 and 2.
-         * ISO 9506-1:2003 §14.13.1.3.
-         * ISO 9506-2:2003 §14.13.2.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly accessControlList?: OPTIONAL<Identifier>
-    ) {}
+        mmsDeletable: BOOLEAN,
+        listOfVariable: GetNamedVariableListAttributes_Response_listOfVariable_Item[],
+        accessControlList?: OPTIONAL<Identifier>
+    ) {
+        this.mmsDeletable = mmsDeletable;
+        this.listOfVariable = listOfVariable;
+        this.accessControlList = accessControlList;
+    }
 
     /**
      * @summary Restructures an object into a GetNamedVariableListAttributes_Response

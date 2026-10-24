@@ -63,32 +63,39 @@ const _permitted_protocols_for_PACEDomainParameterInfo: OBJECT_IDENTIFIER[] = [
  */
 export
 class PACEDomainParameterInfo {
+    /**
+     * Key agreement and mapping for these parameters: a `PACE` family
+     * object identifier such as `id-PACE-DH-GM`, not a cipher-specific
+     * child.
+     * @summary `protocol`.
+     * @public
+     * @readonly
+     */
+    public readonly protocol: OBJECT_IDENTIFIER;
+    /**
+     * The explicit domain parameters.
+     * @summary `domainParameter`.
+     * @public
+     * @readonly
+     */
+    public readonly domainParameter: AlgorithmIdentifier;
+    /**
+     * Local identifier of this parameter set. Required when the chip
+     * publishes more than one explicit set.
+     * @summary `parameterId`.
+     * @public
+     * @readonly
+     */
+    public readonly parameterId?: OPTIONAL<INTEGER>;
+
     constructor (
-        /**
-         * Key agreement and mapping for these parameters: a `PACE` family
-         * object identifier such as `id-PACE-DH-GM`, not a cipher-specific
-         * child.
-         * @summary `protocol`.
-         * @public
-         * @readonly
-         */
-        readonly protocol: OBJECT_IDENTIFIER,
-        /**
-         * The explicit domain parameters.
-         * @summary `domainParameter`.
-         * @public
-         * @readonly
-         */
-        readonly domainParameter: AlgorithmIdentifier,
-        /**
-         * Local identifier of this parameter set. Required when the chip
-         * publishes more than one explicit set.
-         * @summary `parameterId`.
-         * @public
-         * @readonly
-         */
-        readonly parameterId?: OPTIONAL<INTEGER>
+        protocol: OBJECT_IDENTIFIER,
+        domainParameter: AlgorithmIdentifier,
+        parameterId?: OPTIONAL<INTEGER>
     ) {
+        this.protocol = protocol;
+        this.domainParameter = domainParameter;
+        this.parameterId = parameterId;
         if (!_permitted_protocols_for_PACEDomainParameterInfo.some((id) => id.isEqualTo(protocol))) {
             throw new ASN1Error("PACEDomainParameterInfo.protocol violates permitted OBJECT IDENTIFIER constraint");
         }

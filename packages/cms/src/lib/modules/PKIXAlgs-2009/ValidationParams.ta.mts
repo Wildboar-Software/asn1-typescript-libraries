@@ -27,20 +27,26 @@ import * as $ from "@wildboar/asn1/functional";
  *
  */
 export class ValidationParams {
+    /**
+     * @summary `seed`.
+     * @public
+     * @readonly
+     */
+    public readonly seed: BIT_STRING;
+    /**
+     * @summary `pgenCounter`.
+     * @public
+     * @readonly
+     */
+    public readonly pgenCounter: INTEGER;
+
     constructor(
-        /**
-         * @summary `seed`.
-         * @public
-         * @readonly
-         */
-        readonly seed: BIT_STRING,
-        /**
-         * @summary `pgenCounter`.
-         * @public
-         * @readonly
-         */
-        readonly pgenCounter: INTEGER
-    ) {}
+        seed: BIT_STRING,
+        pgenCounter: INTEGER
+    ) {
+        this.seed = seed;
+        this.pgenCounter = pgenCounter;
+    }
 
     /**
      * @summary Restructures an object into a ValidationParams

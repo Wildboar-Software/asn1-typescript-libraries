@@ -40,26 +40,34 @@ import {
  *
  */
 export class ProtectionStatusParameter {
+    /**
+     * @summary `oldProtectionStatus`.
+     * @public
+     * @readonly
+     */
+    public readonly oldProtectionStatus: ProtectionStatus;
+    /**
+     * @summary `newProtectionStatus`.
+     * @public
+     * @readonly
+     */
+    public readonly newProtectionStatus: ProtectionStatus;
+    /**
+     * @summary `psDirection`.
+     * @public
+     * @readonly
+     */
+    public readonly psDirection?: OPTIONAL<ProtectionDirection>;
+
     constructor(
-        /**
-         * @summary `oldProtectionStatus`.
-         * @public
-         * @readonly
-         */
-        readonly oldProtectionStatus: ProtectionStatus,
-        /**
-         * @summary `newProtectionStatus`.
-         * @public
-         * @readonly
-         */
-        readonly newProtectionStatus: ProtectionStatus,
-        /**
-         * @summary `psDirection`.
-         * @public
-         * @readonly
-         */
-        readonly psDirection?: OPTIONAL<ProtectionDirection>
-    ) {}
+        oldProtectionStatus: ProtectionStatus,
+        newProtectionStatus: ProtectionStatus,
+        psDirection?: OPTIONAL<ProtectionDirection>
+    ) {
+        this.oldProtectionStatus = oldProtectionStatus;
+        this.newProtectionStatus = newProtectionStatus;
+        this.psDirection = psDirection;
+    }
 
     /**
      * @summary Restructures an object into a ProtectionStatusParameter

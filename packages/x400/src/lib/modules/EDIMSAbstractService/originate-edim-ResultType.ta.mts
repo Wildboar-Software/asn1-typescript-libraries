@@ -34,20 +34,26 @@ import {
  *
  */
 export class originate_edim_ResultType {
+    /**
+     * @summary `submission_identifier`.
+     * @public
+     * @readonly
+     */
+    public readonly submission_identifier: MessageSubmissionIdentifier;
+    /**
+     * @summary `submission_time`.
+     * @public
+     * @readonly
+     */
+    public readonly submission_time: MessageSubmissionTime;
+
     constructor(
-        /**
-         * @summary `submission_identifier`.
-         * @public
-         * @readonly
-         */
-        readonly submission_identifier: MessageSubmissionIdentifier,
-        /**
-         * @summary `submission_time`.
-         * @public
-         * @readonly
-         */
-        readonly submission_time: MessageSubmissionTime
-    ) {}
+        submission_identifier: MessageSubmissionIdentifier,
+        submission_time: MessageSubmissionTime
+    ) {
+        this.submission_identifier = submission_identifier;
+        this.submission_time = submission_time;
+    }
 
     /**
      * @summary Restructures an object into a originate_edim_ResultType

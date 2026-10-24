@@ -41,85 +41,103 @@ import { MW_Status, _decode_MW_Status, _encode_MW_Status } from "../MAP-SM-DataT
  */
 export
 class InformServiceCentreArg {
+    /**
+     * @summary `storedMSISDN`.
+     * @description
+     *
+     * MSISDN stored in MWD if different from SRI-for-SM (clause 12.6.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly storedMSISDN?: OPTIONAL<ISDN_AddressString>;
+    /**
+     * @summary `mw_Status`.
+     * @description
+     *
+     * MCEF, MNRF, MNRG, MNR5G, MNR5GN3G and SC-address inclusion.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mw_Status?: OPTIONAL<MW_Status>;
+    /**
+     * @summary `extensionContainer`.
+     * @description
+     *
+     * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary `absentSubscriberDiagnosticSM`.
+     * @description
+     *
+     * If one MNRR: that value. If two: MSC MNRR (clause 12.6.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly absentSubscriberDiagnosticSM?: OPTIONAL<AbsentSubscriberDiagnosticSM>;
+    /**
+     * @summary `additionalAbsentSubscriberDiagnosticSM`.
+     * @description
+     *
+     * Present only if absentSubscriberDiagnosticSM is present. GPRS
+     * diagnostic; the other is non-GPRS (clause 17.7.6).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly additionalAbsentSubscriberDiagnosticSM?: OPTIONAL<AbsentSubscriberDiagnosticSM>;
+    /**
+     * @summary `smsf3gppAbsentSubscriberDiagnosticSM`.
+     * @description
+     *
+     * 3GPP-SMSF absent-subscriber diagnostic.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly smsf3gppAbsentSubscriberDiagnosticSM?: OPTIONAL<AbsentSubscriberDiagnosticSM>;
+    /**
+     * @summary `smsfNon3gppAbsentSubscriberDiagnosticSM`.
+     * @description
+     *
+     * Non-3GPP-SMSF absent-subscriber diagnostic.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly smsfNon3gppAbsentSubscriberDiagnosticSM?: OPTIONAL<AbsentSubscriberDiagnosticSM>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `storedMSISDN`.
-         * @description
-         *
-         * MSISDN stored in MWD if different from SRI-for-SM (clause 12.6.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly storedMSISDN?: OPTIONAL<ISDN_AddressString>,
-        /**
-         * @summary `mw_Status`.
-         * @description
-         *
-         * MCEF, MNRF, MNRG, MNR5G, MNR5GN3G and SC-address inclusion.
-         *
-         * @public
-         * @readonly
-         */
-        readonly mw_Status?: OPTIONAL<MW_Status>,
-        /**
-         * @summary `extensionContainer`.
-         * @description
-         *
-         * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary `absentSubscriberDiagnosticSM`.
-         * @description
-         *
-         * If one MNRR: that value. If two: MSC MNRR (clause 12.6.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly absentSubscriberDiagnosticSM?: OPTIONAL<AbsentSubscriberDiagnosticSM>,
-        /**
-         * @summary `additionalAbsentSubscriberDiagnosticSM`.
-         * @description
-         *
-         * Present only if absentSubscriberDiagnosticSM is present. GPRS
-         * diagnostic; the other is non-GPRS (clause 17.7.6).
-         *
-         * @public
-         * @readonly
-         */
-        readonly additionalAbsentSubscriberDiagnosticSM?: OPTIONAL<AbsentSubscriberDiagnosticSM>,
-        /**
-         * @summary `smsf3gppAbsentSubscriberDiagnosticSM`.
-         * @description
-         *
-         * 3GPP-SMSF absent-subscriber diagnostic.
-         *
-         * @public
-         * @readonly
-         */
-        readonly smsf3gppAbsentSubscriberDiagnosticSM?: OPTIONAL<AbsentSubscriberDiagnosticSM>,
-        /**
-         * @summary `smsfNon3gppAbsentSubscriberDiagnosticSM`.
-         * @description
-         *
-         * Non-3GPP-SMSF absent-subscriber diagnostic.
-         *
-         * @public
-         * @readonly
-         */
-        readonly smsfNon3gppAbsentSubscriberDiagnosticSM?: OPTIONAL<AbsentSubscriberDiagnosticSM>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        storedMSISDN?: OPTIONAL<ISDN_AddressString>,
+        mw_Status?: OPTIONAL<MW_Status>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        absentSubscriberDiagnosticSM?: OPTIONAL<AbsentSubscriberDiagnosticSM>,
+        additionalAbsentSubscriberDiagnosticSM?: OPTIONAL<AbsentSubscriberDiagnosticSM>,
+        smsf3gppAbsentSubscriberDiagnosticSM?: OPTIONAL<AbsentSubscriberDiagnosticSM>,
+        smsfNon3gppAbsentSubscriberDiagnosticSM?: OPTIONAL<AbsentSubscriberDiagnosticSM>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.storedMSISDN = storedMSISDN;
+        this.mw_Status = mw_Status;
+        this.extensionContainer = extensionContainer;
+        this.absentSubscriberDiagnosticSM = absentSubscriberDiagnosticSM;
+        this.additionalAbsentSubscriberDiagnosticSM = additionalAbsentSubscriberDiagnosticSM;
+        this.smsf3gppAbsentSubscriberDiagnosticSM = smsf3gppAbsentSubscriberDiagnosticSM;
+        this.smsfNon3gppAbsentSubscriberDiagnosticSM = smsfNon3gppAbsentSubscriberDiagnosticSM;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a InformServiceCentreArg

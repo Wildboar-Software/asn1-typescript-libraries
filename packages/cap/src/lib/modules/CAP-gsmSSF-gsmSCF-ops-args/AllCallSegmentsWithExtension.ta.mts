@@ -35,26 +35,32 @@ import { AllCallSegments, _decode_AllCallSegments, _encode_AllCallSegments } fro
  */
 export
 class AllCallSegmentsWithExtension {
+    /**
+     * @summary `allCallSegments`.
+     * @description
+     *
+     * Cause for releasing the call (tones or release-message cause).
+     * Default decimal 31 (normal unspecified). (3GPP TS 29.078 V19.0.0
+     * clause 11.26.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly allCallSegments: AllCallSegments;
+    /**
+     * @summary `extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<Extensions>;
+
     constructor (
-        /**
-         * @summary `allCallSegments`.
-         * @description
-         *
-         * Cause for releasing the call (tones or release-message cause).
-         * Default decimal 31 (normal unspecified). (3GPP TS 29.078 V19.0.0
-         * clause 11.26.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly allCallSegments: AllCallSegments,
-        /**
-         * @summary `extensions`.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<Extensions>
-    ) {}
+        allCallSegments: AllCallSegments,
+        extensions?: OPTIONAL<Extensions>
+    ) {
+        this.allCallSegments = allCallSegments;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a AllCallSegmentsWithExtension

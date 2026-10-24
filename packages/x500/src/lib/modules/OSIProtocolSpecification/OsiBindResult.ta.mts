@@ -39,20 +39,26 @@ import {
  *
  */
 export class OsiBindResult {
+    /**
+     * @summary `mode_selector`.
+     * @public
+     * @readonly
+     */
+    public readonly mode_selector: OsiBindResult_mode_selector;
+    /**
+     * @summary `normal_mode_parameters`.
+     * @public
+     * @readonly
+     */
+    public readonly normal_mode_parameters: OsiBindResult_normal_mode_parameters;
+
     constructor(
-        /**
-         * @summary `mode_selector`.
-         * @public
-         * @readonly
-         */
-        readonly mode_selector: OsiBindResult_mode_selector,
-        /**
-         * @summary `normal_mode_parameters`.
-         * @public
-         * @readonly
-         */
-        readonly normal_mode_parameters: OsiBindResult_normal_mode_parameters
-    ) {}
+        mode_selector: OsiBindResult_mode_selector,
+        normal_mode_parameters: OsiBindResult_normal_mode_parameters
+    ) {
+        this.mode_selector = mode_selector;
+        this.normal_mode_parameters = normal_mode_parameters;
+    }
 
     /**
      * @summary Restructures an object into a OsiBindResult

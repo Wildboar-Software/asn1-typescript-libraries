@@ -45,38 +45,50 @@ import {
  *
  */
 export class AttributeCertificateAssertion {
+    /**
+     * @summary `holder`.
+     * @public
+     * @readonly
+     */
+    public readonly holder?: OPTIONAL<AttributeCertificateAssertion_holder>;
+    /**
+     * @summary `issuer`.
+     * @public
+     * @readonly
+     */
+    public readonly issuer?: OPTIONAL<GeneralNames>;
+    /**
+     * @summary `attCertValidity`.
+     * @public
+     * @readonly
+     */
+    public readonly attCertValidity?: OPTIONAL<GeneralizedTime>;
+    /**
+     * @summary `attType`.
+     * @public
+     * @readonly
+     */
+    public readonly attType?: OPTIONAL<AttributeType[]>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `holder`.
-         * @public
-         * @readonly
-         */
-        readonly holder?: OPTIONAL<AttributeCertificateAssertion_holder>,
-        /**
-         * @summary `issuer`.
-         * @public
-         * @readonly
-         */
-        readonly issuer?: OPTIONAL<GeneralNames>,
-        /**
-         * @summary `attCertValidity`.
-         * @public
-         * @readonly
-         */
-        readonly attCertValidity?: OPTIONAL<GeneralizedTime>,
-        /**
-         * @summary `attType`.
-         * @public
-         * @readonly
-         */
-        readonly attType?: OPTIONAL<AttributeType[]>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        holder?: OPTIONAL<AttributeCertificateAssertion_holder>,
+        issuer?: OPTIONAL<GeneralNames>,
+        attCertValidity?: OPTIONAL<GeneralizedTime>,
+        attType?: OPTIONAL<AttributeType[]>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.holder = holder;
+        this.issuer = issuer;
+        this.attCertValidity = attCertValidity;
+        this.attType = attType;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a AttributeCertificateAssertion

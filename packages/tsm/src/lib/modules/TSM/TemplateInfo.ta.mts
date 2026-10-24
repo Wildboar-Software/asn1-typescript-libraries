@@ -43,50 +43,60 @@ import { CertificateIDInformation, _decode_CertificateIDInformation, _encode_Cer
  */
 export
 class TemplateInfo {
+    /**
+     * @summary `biometricType`.
+     * @description
+     *
+     * BioAPI biometric type of this template. X.1084 §11.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly biometricType: BiometricType;
+    /**
+     * @summary `creator`.
+     * @description
+     *
+     * Party that created the reference template. X.1084 §11.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly creator: UTF8String;
+    /**
+     * @summary `createdBFPSchema`.
+     * @description
+     *
+     * BSP/BFP that produced the template. [ISO/IEC 19784-1];
+     * X.1084 §11.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly createdBFPSchema: BSP_BFP_Schema;
+    /**
+     * @summary `templateID`.
+     * @description
+     *
+     * Certificate serial of this template (Annex A: "such as
+     * CertificateSerialNumber (no value available)"). X.1084 §11.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly templateID: CertificateIDInformation;
+
     constructor (
-        /**
-         * @summary `biometricType`.
-         * @description
-         *
-         * BioAPI biometric type of this template. X.1084 §11.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly biometricType: BiometricType,
-        /**
-         * @summary `creator`.
-         * @description
-         *
-         * Party that created the reference template. X.1084 §11.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly creator: UTF8String,
-        /**
-         * @summary `createdBFPSchema`.
-         * @description
-         *
-         * BSP/BFP that produced the template. [ISO/IEC 19784-1];
-         * X.1084 §11.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly createdBFPSchema: BSP_BFP_Schema,
-        /**
-         * @summary `templateID`.
-         * @description
-         *
-         * Certificate serial of this template (Annex A: "such as
-         * CertificateSerialNumber (no value available)"). X.1084 §11.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly templateID: CertificateIDInformation
-    ) {}
+        biometricType: BiometricType,
+        creator: UTF8String,
+        createdBFPSchema: BSP_BFP_Schema,
+        templateID: CertificateIDInformation
+    ) {
+        this.biometricType = biometricType;
+        this.creator = creator;
+        this.createdBFPSchema = createdBFPSchema;
+        this.templateID = templateID;
+    }
 
     /**
      * @summary Restructures an object into a TemplateInfo

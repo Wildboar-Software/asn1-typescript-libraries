@@ -29,36 +29,44 @@ import { ChosenSpeechVersion, _decode_ChosenSpeechVersion, _encode_ChosenSpeechV
  */
 export
 class ChosenRadioResourceInformation {
+    /**
+     * @summary `chosenChannelInfo`.
+     * @description
+     *
+     * Chosen Channel information element in 3GPP TS 48.008 (3GPP TS 29.002
+     * V19.1.0 clauses 7.6.6.10B and 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly chosenChannelInfo?: OPTIONAL<ChosenChannelInfo>;
+    /**
+     * @summary `chosenSpeechVersion`.
+     * @description
+     *
+     * Speech Version (chosen) information element in 3GPP TS 48.008 (3GPP
+     * TS 29.002 V19.1.0 clauses 7.6.6.10B and 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly chosenSpeechVersion?: OPTIONAL<ChosenSpeechVersion>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `chosenChannelInfo`.
-         * @description
-         *
-         * Chosen Channel information element in 3GPP TS 48.008 (3GPP TS 29.002
-         * V19.1.0 clauses 7.6.6.10B and 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly chosenChannelInfo?: OPTIONAL<ChosenChannelInfo>,
-        /**
-         * @summary `chosenSpeechVersion`.
-         * @description
-         *
-         * Speech Version (chosen) information element in 3GPP TS 48.008 (3GPP
-         * TS 29.002 V19.1.0 clauses 7.6.6.10B and 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly chosenSpeechVersion?: OPTIONAL<ChosenSpeechVersion>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        chosenChannelInfo?: OPTIONAL<ChosenChannelInfo>,
+        chosenSpeechVersion?: OPTIONAL<ChosenSpeechVersion>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.chosenChannelInfo = chosenChannelInfo;
+        this.chosenSpeechVersion = chosenSpeechVersion;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a ChosenRadioResourceInformation

@@ -51,32 +51,42 @@ import {
  *
  */
 export class MessageSubmissionResult {
+    /**
+     * @summary `message_submission_identifier`.
+     * @public
+     * @readonly
+     */
+    public readonly message_submission_identifier: MessageSubmissionIdentifier;
+    /**
+     * @summary `message_submission_time`.
+     * @public
+     * @readonly
+     */
+    public readonly message_submission_time: MessageSubmissionTime;
+    /**
+     * @summary `content_identifier`.
+     * @public
+     * @readonly
+     */
+    public readonly content_identifier?: OPTIONAL<ContentIdentifier>;
+    /**
+     * @summary `extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<ExtensionField[]>;
+
     constructor(
-        /**
-         * @summary `message_submission_identifier`.
-         * @public
-         * @readonly
-         */
-        readonly message_submission_identifier: MessageSubmissionIdentifier,
-        /**
-         * @summary `message_submission_time`.
-         * @public
-         * @readonly
-         */
-        readonly message_submission_time: MessageSubmissionTime,
-        /**
-         * @summary `content_identifier`.
-         * @public
-         * @readonly
-         */
-        readonly content_identifier?: OPTIONAL<ContentIdentifier>,
-        /**
-         * @summary `extensions`.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<ExtensionField[]>
-    ) {}
+        message_submission_identifier: MessageSubmissionIdentifier,
+        message_submission_time: MessageSubmissionTime,
+        content_identifier?: OPTIONAL<ContentIdentifier>,
+        extensions?: OPTIONAL<ExtensionField[]>
+    ) {
+        this.message_submission_identifier = message_submission_identifier;
+        this.message_submission_time = message_submission_time;
+        this.content_identifier = content_identifier;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a MessageSubmissionResult

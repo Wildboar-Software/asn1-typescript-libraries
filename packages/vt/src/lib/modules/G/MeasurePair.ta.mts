@@ -36,25 +36,31 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class MeasurePair {
+    /**
+     * @summary `xValue`.
+     * @description
+     * X origin or width. ISO/IEC 9040:1997 §13.1.2.
+     * @public
+     * @readonly
+     */
+    public readonly xValue: INTEGER;
+    /**
+     * @summary `yValue`.
+     * @description
+     * Y origin or depth. Omitted for a one-dimensional Y-array.
+     * ISO/IEC 9040:1997 §13.1.2.
+     * @public
+     * @readonly
+     */
+    public readonly yValue?: OPTIONAL<INTEGER>;
+
     constructor (
-        /**
-         * @summary `xValue`.
-         * @description
-         * X origin or width. ISO/IEC 9040:1997 §13.1.2.
-         * @public
-         * @readonly
-         */
-        readonly xValue: INTEGER,
-        /**
-         * @summary `yValue`.
-         * @description
-         * Y origin or depth. Omitted for a one-dimensional Y-array.
-         * ISO/IEC 9040:1997 §13.1.2.
-         * @public
-         * @readonly
-         */
-        readonly yValue?: OPTIONAL<INTEGER>
-    ) {}
+        xValue: INTEGER,
+        yValue?: OPTIONAL<INTEGER>
+    ) {
+        this.xValue = xValue;
+        this.yValue = yValue;
+    }
 
     /**
      * @summary Restructures an object into a MeasurePair

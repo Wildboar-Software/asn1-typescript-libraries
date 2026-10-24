@@ -30,29 +30,35 @@ import { CancelSessionResponse, _decode_CancelSessionResponse, _encode_CancelSes
  */
 export
 class CancelSessionRequestEs9 {
+    /**
+     * @summary `transactionId`.
+     * @description
+     * 
+     * Session the signed cancellation belongs to. SGP.22 v3.1 §5.6.5.
+     * 
+     * @public
+     * @readonly
+     */
+    public readonly transactionId: TransactionId;
+    /**
+     * @summary `cancelSessionResponse`.
+     * @description
+     * 
+     * The ES10b.CancelSession response, including the eUICC signature.
+     * SGP.22 v3.1 §5.6.5.
+     * 
+     * @public
+     * @readonly
+     */
+    public readonly cancelSessionResponse: CancelSessionResponse;
+
     constructor (
-        /**
-         * @summary `transactionId`.
-         * @description
-         * 
-         * Session the signed cancellation belongs to. SGP.22 v3.1 §5.6.5.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly transactionId: TransactionId,
-        /**
-         * @summary `cancelSessionResponse`.
-         * @description
-         * 
-         * The ES10b.CancelSession response, including the eUICC signature.
-         * SGP.22 v3.1 §5.6.5.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly cancelSessionResponse: CancelSessionResponse
-    ) {}
+        transactionId: TransactionId,
+        cancelSessionResponse: CancelSessionResponse
+    ) {
+        this.transactionId = transactionId;
+        this.cancelSessionResponse = cancelSessionResponse;
+    }
 
     /**
      * @summary Restructures an object into a CancelSessionRequestEs9

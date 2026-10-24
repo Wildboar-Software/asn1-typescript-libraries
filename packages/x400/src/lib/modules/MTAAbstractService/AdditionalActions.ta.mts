@@ -45,26 +45,34 @@ import {
  *
  */
 export class AdditionalActions {
+    /**
+     * @summary `deferred_time`.
+     * @public
+     * @readonly
+     */
+    public readonly deferred_time?: OPTIONAL<DeferredTime>;
+    /**
+     * @summary `converted_encoded_information_types`.
+     * @public
+     * @readonly
+     */
+    public readonly converted_encoded_information_types?: OPTIONAL<ConvertedEncodedInformationTypes>;
+    /**
+     * @summary `other_actions`.
+     * @public
+     * @readonly
+     */
+    public readonly other_actions?: OPTIONAL<OtherActions>;
+
     constructor(
-        /**
-         * @summary `deferred_time`.
-         * @public
-         * @readonly
-         */
-        readonly deferred_time?: OPTIONAL<DeferredTime>,
-        /**
-         * @summary `converted_encoded_information_types`.
-         * @public
-         * @readonly
-         */
-        readonly converted_encoded_information_types?: OPTIONAL<ConvertedEncodedInformationTypes>,
-        /**
-         * @summary `other_actions`.
-         * @public
-         * @readonly
-         */
-        readonly other_actions?: OPTIONAL<OtherActions>
-    ) {}
+        deferred_time?: OPTIONAL<DeferredTime>,
+        converted_encoded_information_types?: OPTIONAL<ConvertedEncodedInformationTypes>,
+        other_actions?: OPTIONAL<OtherActions>
+    ) {
+        this.deferred_time = deferred_time;
+        this.converted_encoded_information_types = converted_encoded_information_types;
+        this.other_actions = other_actions;
+    }
 
     /**
      * @summary Restructures an object into a AdditionalActions

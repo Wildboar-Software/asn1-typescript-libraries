@@ -23,11 +23,19 @@ import { InitiatingEntity, _enum_for_InitiatingEntity, _decode_InitiatingEntity,
  *
  */
 export class GPRSEventSpecificInformation_disconnectSpecificInformation {
+    public readonly initiatingEntity?: OPTIONAL<InitiatingEntity>;
+    public readonly routeingAreaUpdate?: OPTIONAL<NULL>;
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        readonly initiatingEntity?: OPTIONAL<InitiatingEntity>,
-        readonly routeingAreaUpdate?: OPTIONAL<NULL>,
-        readonly _unrecognizedExtensionsList: _Element[] = [],
-    ) {}
+        initiatingEntity?: OPTIONAL<InitiatingEntity>,
+        routeingAreaUpdate?: OPTIONAL<NULL>,
+        _unrecognizedExtensionsList: _Element[] = [],
+    ) {
+        this.initiatingEntity = initiatingEntity;
+        this.routeingAreaUpdate = routeingAreaUpdate;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     public static _from_object (_o: { [_K in keyof (GPRSEventSpecificInformation_disconnectSpecificInformation)]: (GPRSEventSpecificInformation_disconnectSpecificInformation)[_K] }): GPRSEventSpecificInformation_disconnectSpecificInformation {
         return new GPRSEventSpecificInformation_disconnectSpecificInformation(_o.initiatingEntity, _o.routeingAreaUpdate, _o._unrecognizedExtensionsList);

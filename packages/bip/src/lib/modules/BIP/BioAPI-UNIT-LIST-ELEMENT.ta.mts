@@ -43,20 +43,26 @@ import {
  *
  */
 export class BioAPI_UNIT_LIST_ELEMENT {
+  /**
+   * @summary `category`.
+   * @public
+   * @readonly
+   */
+  public readonly category: BioAPI_CATEGORY;
+  /**
+   * @summary `unitID`.
+   * @public
+   * @readonly
+   */
+  public readonly unitID: BioAPI_UNIT_ID;
+
   constructor(
-    /**
-     * @summary `category`.
-     * @public
-     * @readonly
-     */
-    readonly category: BioAPI_CATEGORY,
-    /**
-     * @summary `unitID`.
-     * @public
-     * @readonly
-     */
-    readonly unitID: BioAPI_UNIT_ID
-  ) {}
+    category: BioAPI_CATEGORY,
+    unitID: BioAPI_UNIT_ID
+  ) {
+    this.category = category;
+    this.unitID = unitID;
+  }
 
   /**
    * @summary Restructures an object into a BioAPI_UNIT_LIST_ELEMENT

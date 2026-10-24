@@ -78,136 +78,166 @@ import { CorrelatorData, _decode_CorrelatorData, _encode_CorrelatorData } from "
  */
 export
 class SnapshotCallResult {
+    /**
+     * @summary `crossRefIDorSnapshotData`.
+     * @description
+     *
+     * `serviceCrossRefID` if Snapshot CallData will follow;
+     * `snapshotData` if endpoint info is inline.
+     * @public
+     * @readonly
+     */
+    public readonly crossRefIDorSnapshotData: SnapshotCallResult_crossRefIDorSnapshotData;
+    /**
+     * @summary `mediaCallCharacteristics`.
+     * @description
+     *
+     * Media class and related call media data.
+     * @public
+     * @readonly
+     */
+    public readonly mediaCallCharacteristics?: OPTIONAL<MediaCallCharacteristics>;
+    /**
+     * @summary `callCharacteristics`.
+     * @description
+     *
+     * Call characterisation bits, if the SF reports them.
+     * @public
+     * @readonly
+     */
+    public readonly callCharacteristics?: OPTIONAL<CallCharacteristics>;
+    /**
+     * @summary `callingDevice`.
+     * @description
+     *
+     * Calling device of the snapshotted call.
+     * @public
+     * @readonly
+     */
+    public readonly callingDevice?: OPTIONAL<CallingDeviceID>;
+    /**
+     * @summary `calledDevice`.
+     * @description
+     *
+     * Called device of the snapshotted call.
+     * @public
+     * @readonly
+     */
+    public readonly calledDevice?: OPTIONAL<CalledDeviceID>;
+    /**
+     * @summary `associatedCallingDeviceID`.
+     * @description
+     *
+     * Associated calling device, if known.
+     * @public
+     * @readonly
+     */
+    public readonly associatedCallingDeviceID?: OPTIONAL<AssociatedCallingDeviceID>;
+    /**
+     * @summary `associatedCalledDeviceID`.
+     * @description
+     *
+     * Associated called device, if known.
+     * @public
+     * @readonly
+     */
+    public readonly associatedCalledDeviceID?: OPTIONAL<AssociatedCalledDeviceID>;
+    /**
+     * @summary `correlatorData`.
+     * @description
+     *
+     * Correlator data associated with the call.
+     * @public
+     * @readonly
+     */
+    public readonly correlatorData?: OPTIONAL<CorrelatorData>;
+    /**
+     * @summary `callLinkageData`.
+     * @description
+     *
+     * Call/thread linkage identifiers.
+     * @public
+     * @readonly
+     */
+    public readonly callLinkageData?: OPTIONAL<CallLinkageData>;
+    /**
+     * @summary `subjectOfCall`.
+     * @description
+     *
+     * Subject/topic associated with the call.
+     * @public
+     * @readonly
+     */
+    public readonly subjectOfCall?: OPTIONAL<SubjectOfCall>;
+    /**
+     * @summary `messageInfo`.
+     * @description
+     *
+     * Message information associated with the call.
+     * @public
+     * @readonly
+     */
+    public readonly messageInfo?: OPTIONAL<MessageInfo>;
+    /**
+     * @summary `languagePreferences`.
+     * @description
+     *
+     * Language preferences associated with the call.
+     * @public
+     * @readonly
+     */
+    public readonly languagePreferences?: OPTIONAL<LanguagePreferences>;
+    /**
+     * @summary `deviceHistory`.
+     * @description
+     *
+     * Device-history entries for the call.
+     * @public
+     * @readonly
+     */
+    public readonly deviceHistory?: OPTIONAL<DeviceHistory>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `crossRefIDorSnapshotData`.
-         * @description
-         *
-         * `serviceCrossRefID` if Snapshot CallData will follow;
-         * `snapshotData` if endpoint info is inline.
-         * @public
-         * @readonly
-         */
-        readonly crossRefIDorSnapshotData: SnapshotCallResult_crossRefIDorSnapshotData,
-        /**
-         * @summary `mediaCallCharacteristics`.
-         * @description
-         *
-         * Media class and related call media data.
-         * @public
-         * @readonly
-         */
-        readonly mediaCallCharacteristics?: OPTIONAL<MediaCallCharacteristics>,
-        /**
-         * @summary `callCharacteristics`.
-         * @description
-         *
-         * Call characterisation bits, if the SF reports them.
-         * @public
-         * @readonly
-         */
-        readonly callCharacteristics?: OPTIONAL<CallCharacteristics>,
-        /**
-         * @summary `callingDevice`.
-         * @description
-         *
-         * Calling device of the snapshotted call.
-         * @public
-         * @readonly
-         */
-        readonly callingDevice?: OPTIONAL<CallingDeviceID>,
-        /**
-         * @summary `calledDevice`.
-         * @description
-         *
-         * Called device of the snapshotted call.
-         * @public
-         * @readonly
-         */
-        readonly calledDevice?: OPTIONAL<CalledDeviceID>,
-        /**
-         * @summary `associatedCallingDeviceID`.
-         * @description
-         *
-         * Associated calling device, if known.
-         * @public
-         * @readonly
-         */
-        readonly associatedCallingDeviceID?: OPTIONAL<AssociatedCallingDeviceID>,
-        /**
-         * @summary `associatedCalledDeviceID`.
-         * @description
-         *
-         * Associated called device, if known.
-         * @public
-         * @readonly
-         */
-        readonly associatedCalledDeviceID?: OPTIONAL<AssociatedCalledDeviceID>,
-        /**
-         * @summary `correlatorData`.
-         * @description
-         *
-         * Correlator data associated with the call.
-         * @public
-         * @readonly
-         */
-        readonly correlatorData?: OPTIONAL<CorrelatorData>,
-        /**
-         * @summary `callLinkageData`.
-         * @description
-         *
-         * Call/thread linkage identifiers.
-         * @public
-         * @readonly
-         */
-        readonly callLinkageData?: OPTIONAL<CallLinkageData>,
-        /**
-         * @summary `subjectOfCall`.
-         * @description
-         *
-         * Subject/topic associated with the call.
-         * @public
-         * @readonly
-         */
-        readonly subjectOfCall?: OPTIONAL<SubjectOfCall>,
-        /**
-         * @summary `messageInfo`.
-         * @description
-         *
-         * Message information associated with the call.
-         * @public
-         * @readonly
-         */
-        readonly messageInfo?: OPTIONAL<MessageInfo>,
-        /**
-         * @summary `languagePreferences`.
-         * @description
-         *
-         * Language preferences associated with the call.
-         * @public
-         * @readonly
-         */
-        readonly languagePreferences?: OPTIONAL<LanguagePreferences>,
-        /**
-         * @summary `deviceHistory`.
-         * @description
-         *
-         * Device-history entries for the call.
-         * @public
-         * @readonly
-         */
-        readonly deviceHistory?: OPTIONAL<DeviceHistory>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        crossRefIDorSnapshotData: SnapshotCallResult_crossRefIDorSnapshotData,
+        mediaCallCharacteristics?: OPTIONAL<MediaCallCharacteristics>,
+        callCharacteristics?: OPTIONAL<CallCharacteristics>,
+        callingDevice?: OPTIONAL<CallingDeviceID>,
+        calledDevice?: OPTIONAL<CalledDeviceID>,
+        associatedCallingDeviceID?: OPTIONAL<AssociatedCallingDeviceID>,
+        associatedCalledDeviceID?: OPTIONAL<AssociatedCalledDeviceID>,
+        correlatorData?: OPTIONAL<CorrelatorData>,
+        callLinkageData?: OPTIONAL<CallLinkageData>,
+        subjectOfCall?: OPTIONAL<SubjectOfCall>,
+        messageInfo?: OPTIONAL<MessageInfo>,
+        languagePreferences?: OPTIONAL<LanguagePreferences>,
+        deviceHistory?: OPTIONAL<DeviceHistory>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.crossRefIDorSnapshotData = crossRefIDorSnapshotData;
+        this.mediaCallCharacteristics = mediaCallCharacteristics;
+        this.callCharacteristics = callCharacteristics;
+        this.callingDevice = callingDevice;
+        this.calledDevice = calledDevice;
+        this.associatedCallingDeviceID = associatedCallingDeviceID;
+        this.associatedCalledDeviceID = associatedCalledDeviceID;
+        this.correlatorData = correlatorData;
+        this.callLinkageData = callLinkageData;
+        this.subjectOfCall = subjectOfCall;
+        this.messageInfo = messageInfo;
+        this.languagePreferences = languagePreferences;
+        this.deviceHistory = deviceHistory;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a SnapshotCallResult

@@ -34,26 +34,34 @@ import { LocationNumber, _decode_LocationNumber, _encode_LocationNumber } from "
  */
 export
 class GapCriteria_callingAddressAndService {
+    /**
+     * @summary `callingAddressValue`.
+     * @public
+     * @readonly
+     */
+    public readonly callingAddressValue: Digits;
+    /**
+     * @summary `serviceKey`.
+     * @public
+     * @readonly
+     */
+    public readonly serviceKey: ServiceKey;
+    /**
+     * @summary `locationNumber`.
+     * @public
+     * @readonly
+     */
+    public readonly locationNumber?: OPTIONAL<LocationNumber>;
+
     constructor (
-        /**
-         * @summary `callingAddressValue`.
-         * @public
-         * @readonly
-         */
-        readonly callingAddressValue: Digits,
-        /**
-         * @summary `serviceKey`.
-         * @public
-         * @readonly
-         */
-        readonly serviceKey: ServiceKey,
-        /**
-         * @summary `locationNumber`.
-         * @public
-         * @readonly
-         */
-        readonly locationNumber?: OPTIONAL<LocationNumber>
-    ) {}
+        callingAddressValue: Digits,
+        serviceKey: ServiceKey,
+        locationNumber?: OPTIONAL<LocationNumber>
+    ) {
+        this.callingAddressValue = callingAddressValue;
+        this.serviceKey = serviceKey;
+        this.locationNumber = locationNumber;
+    }
 
     /**
      * @summary Restructures an object into a GapCriteria_callingAddressAndService

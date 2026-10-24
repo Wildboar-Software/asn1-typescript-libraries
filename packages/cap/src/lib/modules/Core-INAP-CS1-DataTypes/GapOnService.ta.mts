@@ -29,14 +29,18 @@ import { ServiceKey, _decode_ServiceKey, _encode_ServiceKey } from "../Core-INAP
  */
 export
 class GapOnService {
+    /**
+     * @summary `serviceKey`.
+     * @public
+     * @readonly
+     */
+    public readonly serviceKey: ServiceKey;
+
     constructor (
-        /**
-         * @summary `serviceKey`.
-         * @public
-         * @readonly
-         */
-        readonly serviceKey: ServiceKey
-    ) {}
+        serviceKey: ServiceKey
+    ) {
+        this.serviceKey = serviceKey;
+    }
 
     /**
      * @summary Restructures an object into a GapOnService

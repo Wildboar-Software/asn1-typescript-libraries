@@ -41,26 +41,34 @@ import {
  *
  */
 export class Validity {
+    /**
+     * @summary `validFrom`.
+     * @public
+     * @readonly
+     */
+    public readonly validFrom?: OPTIONAL<Validity_validFrom>;
+    /**
+     * @summary `validUntil`.
+     * @public
+     * @readonly
+     */
+    public readonly validUntil?: OPTIONAL<Validity_validUntil>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `validFrom`.
-         * @public
-         * @readonly
-         */
-        readonly validFrom?: OPTIONAL<Validity_validFrom>,
-        /**
-         * @summary `validUntil`.
-         * @public
-         * @readonly
-         */
-        readonly validUntil?: OPTIONAL<Validity_validUntil>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        validFrom?: OPTIONAL<Validity_validFrom>,
+        validUntil?: OPTIONAL<Validity_validUntil>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.validFrom = validFrom;
+        this.validUntil = validUntil;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a Validity

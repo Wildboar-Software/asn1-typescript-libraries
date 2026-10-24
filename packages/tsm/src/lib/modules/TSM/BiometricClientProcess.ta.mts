@@ -44,49 +44,59 @@ import { BioAPI_FMR, _decode_BioAPI_FMR, _encode_BioAPI_FMR } from "../BIP/BioAP
  */
 export
 class BiometricClientProcess {
+    /**
+     * @summary `bFPSchema`.
+     * @description
+     *
+     * BSP/BFP schema(s) used for this process. X.1084 §11.1 Table 3.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly bFPSchema: BSP_BFP_Schemas;
+    /**
+     * @summary `templateID`.
+     * @description
+     *
+     * Identifies the reference template (issuer, serial, metadata)
+     * for revocation without sending the template. X.1084 §11.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly templateID: TemplateID;
+    /**
+     * @summary `sampleQuality`.
+     * @description
+     *
+     * Quality of the captured sample, `0..100`. X.1084 §11.1 item 3.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sampleQuality: Quality;
+    /**
+     * @summary `score`.
+     * @description
+     *
+     * Comparison score as BioAPI FMR. X.1084 §11.1 item 3.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly score: BioAPI_FMR;
+
     constructor (
-        /**
-         * @summary `bFPSchema`.
-         * @description
-         *
-         * BSP/BFP schema(s) used for this process. X.1084 §11.1 Table 3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly bFPSchema: BSP_BFP_Schemas,
-        /**
-         * @summary `templateID`.
-         * @description
-         *
-         * Identifies the reference template (issuer, serial, metadata)
-         * for revocation without sending the template. X.1084 §11.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly templateID: TemplateID,
-        /**
-         * @summary `sampleQuality`.
-         * @description
-         *
-         * Quality of the captured sample, `0..100`. X.1084 §11.1 item 3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly sampleQuality: Quality,
-        /**
-         * @summary `score`.
-         * @description
-         *
-         * Comparison score as BioAPI FMR. X.1084 §11.1 item 3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly score: BioAPI_FMR
-    ) {}
+        bFPSchema: BSP_BFP_Schemas,
+        templateID: TemplateID,
+        sampleQuality: Quality,
+        score: BioAPI_FMR
+    ) {
+        this.bFPSchema = bFPSchema;
+        this.templateID = templateID;
+        this.sampleQuality = sampleQuality;
+        this.score = score;
+    }
 
     /**
      * @summary Restructures an object into a BiometricClientProcess

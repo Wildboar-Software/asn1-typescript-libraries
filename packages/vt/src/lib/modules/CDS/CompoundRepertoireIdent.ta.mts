@@ -37,26 +37,32 @@ import { RepertoireFontIdent, _decode_RepertoireFontIdent, _encode_RepertoireFon
  */
 export
 class CompoundRepertoireIdent {
+    /**
+     * @summary `capability`.
+     * @description
+     * Invite `repertoire-capability` (1..N; default 1). ISO/IEC
+     * 9040:1997 §18.1.
+     * @public
+     * @readonly
+     */
+    public readonly capability?: OPTIONAL<NULL>;
+    /**
+     * @summary `repertoirePositionOffers`.
+     * @description
+     * Per-slot invitations in the repertoire assignment list.
+     * ISO/IEC 9041-1:1997 §12.3.1.
+     * @public
+     * @readonly
+     */
+    public readonly repertoirePositionOffers?: OPTIONAL<RepertoireFontIdent[]>;
+
     constructor (
-        /**
-         * @summary `capability`.
-         * @description
-         * Invite `repertoire-capability` (1..N; default 1). ISO/IEC
-         * 9040:1997 §18.1.
-         * @public
-         * @readonly
-         */
-        readonly capability?: OPTIONAL<NULL>,
-        /**
-         * @summary `repertoirePositionOffers`.
-         * @description
-         * Per-slot invitations in the repertoire assignment list.
-         * ISO/IEC 9041-1:1997 §12.3.1.
-         * @public
-         * @readonly
-         */
-        readonly repertoirePositionOffers?: OPTIONAL<RepertoireFontIdent[]>
-    ) {}
+        capability?: OPTIONAL<NULL>,
+        repertoirePositionOffers?: OPTIONAL<RepertoireFontIdent[]>
+    ) {
+        this.capability = capability;
+        this.repertoirePositionOffers = repertoirePositionOffers;
+    }
 
     /**
      * @summary Restructures an object into a CompoundRepertoireIdent

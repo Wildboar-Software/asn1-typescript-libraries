@@ -34,27 +34,33 @@ import {
  *
  */
 export class TestDuration_signalLength {
+    /**
+     * @summary `size`.
+     * @description
+     *
+     * Length of the pattern (units implied by the data category in use).
+     * X.737 §3.9.7.
+     * @public
+     * @readonly
+     */
+    public readonly size: INTEGER;
+    /**
+     * @summary `dataRate`.
+     * @description
+     *
+     * Optional rate at which that length is sent. X.737 §3.9.7, A.7.
+     * @public
+     * @readonly
+     */
+    public readonly dataRate?: OPTIONAL<DataRate>;
+
     constructor(
-        /**
-         * @summary `size`.
-         * @description
-         *
-         * Length of the pattern (units implied by the data category in use).
-         * X.737 §3.9.7.
-         * @public
-         * @readonly
-         */
-        readonly size: INTEGER,
-        /**
-         * @summary `dataRate`.
-         * @description
-         *
-         * Optional rate at which that length is sent. X.737 §3.9.7, A.7.
-         * @public
-         * @readonly
-         */
-        readonly dataRate?: OPTIONAL<DataRate>
-    ) {}
+        size: INTEGER,
+        dataRate?: OPTIONAL<DataRate>
+    ) {
+        this.size = size;
+        this.dataRate = dataRate;
+    }
 
     /**
      * @summary Restructures an object into a TestDuration_signalLength

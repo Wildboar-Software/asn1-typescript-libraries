@@ -76,171 +76,207 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class GetPhysicalDeviceInformationResult {
+    /**
+     * @summary `deviceCategory`.
+     * @description
+     *
+     * Category of the queried device (station default). Same set as
+     * Get Logical Device Information.
+     * @public
+     * @readonly
+     */
+    public readonly deviceCategory: OPTIONAL<DeviceCategory>;
+    /**
+     * @summary `groupDeviceAttributes`.
+     * @description
+     *
+     * Group attributes. Shall be present iff `deviceCategory` is
+     * Group.
+     * @public
+     * @readonly
+     */
+    public readonly groupDeviceAttributes: OPTIONAL<GroupDeviceAttributes>;
+    /**
+     * @summary `namedDeviceTypes`.
+     * @description
+     *
+     * Named device type assigned by the SF, if any.
+     * @public
+     * @readonly
+     */
+    public readonly namedDeviceTypes: OPTIONAL<NamedDeviceTypes>;
+    /**
+     * @summary `hasLogicalElement`.
+     * @description
+     *
+     * TRUE if this DeviceID also has a logical element; use Get
+     * Logical Device Information with the same identifier.
+     * @public
+     * @readonly
+     */
+    public readonly hasLogicalElement: BOOLEAN;
+    /**
+     * @summary `otherLogicalDeviceList`.
+     * @description
+     *
+     * Other logical-element DeviceIDs associated with this physical
+     * device, limited to observable/controllable devices.
+     * @public
+     * @readonly
+     */
+    public readonly otherLogicalDeviceList?: OPTIONAL<DeviceID[]>;
+    /**
+     * @summary `deviceModelName`.
+     * @description
+     *
+     * SF-specific model name; omitted if unknown.
+     * @public
+     * @readonly
+     */
+    public readonly deviceModelName?: OPTIONAL<IA5String>;
+    /**
+     * @summary `deviceOnDeviceMonitorFilter`.
+     * @description
+     *
+     * MonitorFilter for device-type monitoring. Present iff
+     * supported. Should match the logical-element filters when the
+     * same DeviceID has both elements.
+     * @public
+     * @readonly
+     */
+    public readonly deviceOnDeviceMonitorFilter?: OPTIONAL<MonitorFilter>;
+    /**
+     * @summary `deviceOnConnectionMonitorFilter`.
+     * @description
+     *
+     * MonitorFilter for connections under device-type monitoring.
+     * Present iff supported.
+     * @public
+     * @readonly
+     */
+    public readonly deviceOnConnectionMonitorFilter?: OPTIONAL<MonitorFilter>;
+    /**
+     * @summary `callOnDeviceMonitorFilter`.
+     * @description
+     *
+     * MonitorFilter for call-type monitoring on the device. Present
+     * iff supported.
+     * @public
+     * @readonly
+     */
+    public readonly callOnDeviceMonitorFilter?: OPTIONAL<MonitorFilter>;
+    /**
+     * @summary `callOnConnectionMonitorFilter`.
+     * @description
+     *
+     * MonitorFilter for call-type monitoring of a connection at this
+     * device. Present iff supported.
+     * @public
+     * @readonly
+     */
+    public readonly callOnConnectionMonitorFilter?: OPTIONAL<MonitorFilter>;
+    /**
+     * @summary `maxDisplays`.
+     * @description
+     *
+     * Max displays; omitted if none or unknown.
+     * @public
+     * @readonly
+     */
+    public readonly maxDisplays?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `maxButtons`.
+     * @description
+     *
+     * Max buttons; omitted if none or unknown.
+     * @public
+     * @readonly
+     */
+    public readonly maxButtons?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `maxLamps`.
+     * @description
+     *
+     * Max lamps; omitted if none or unknown.
+     * @public
+     * @readonly
+     */
+    public readonly maxLamps?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `maxRingPatterns`.
+     * @description
+     *
+     * Max ringer patterns; omitted if no ringer or unknown.
+     * @public
+     * @readonly
+     */
+    public readonly maxRingPatterns?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `physDevServList`.
+     * @description
+     *
+     * Physical-device feature services supported here.
+     * @public
+     * @readonly
+     */
+    public readonly physDevServList?: OPTIONAL<PhysDevServList>;
+    /**
+     * @summary `physDevEvtsList`.
+     * @description
+     *
+     * Physical-device feature events supported here.
+     * @public
+     * @readonly
+     */
+    public readonly physDevEvtsList?: OPTIONAL<PhysDevEvtsList>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData. ECMA-269 Table 13-7.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `deviceCategory`.
-         * @description
-         *
-         * Category of the queried device (station default). Same set as
-         * Get Logical Device Information.
-         * @public
-         * @readonly
-         */
-        readonly deviceCategory: OPTIONAL<DeviceCategory>,
-        /**
-         * @summary `groupDeviceAttributes`.
-         * @description
-         *
-         * Group attributes. Shall be present iff `deviceCategory` is
-         * Group.
-         * @public
-         * @readonly
-         */
-        readonly groupDeviceAttributes: OPTIONAL<GroupDeviceAttributes>,
-        /**
-         * @summary `namedDeviceTypes`.
-         * @description
-         *
-         * Named device type assigned by the SF, if any.
-         * @public
-         * @readonly
-         */
-        readonly namedDeviceTypes: OPTIONAL<NamedDeviceTypes>,
-        /**
-         * @summary `hasLogicalElement`.
-         * @description
-         *
-         * TRUE if this DeviceID also has a logical element; use Get
-         * Logical Device Information with the same identifier.
-         * @public
-         * @readonly
-         */
-        readonly hasLogicalElement: BOOLEAN,
-        /**
-         * @summary `otherLogicalDeviceList`.
-         * @description
-         *
-         * Other logical-element DeviceIDs associated with this physical
-         * device, limited to observable/controllable devices.
-         * @public
-         * @readonly
-         */
-        readonly otherLogicalDeviceList?: OPTIONAL<DeviceID[]>,
-        /**
-         * @summary `deviceModelName`.
-         * @description
-         *
-         * SF-specific model name; omitted if unknown.
-         * @public
-         * @readonly
-         */
-        readonly deviceModelName?: OPTIONAL<IA5String>,
-        /**
-         * @summary `deviceOnDeviceMonitorFilter`.
-         * @description
-         *
-         * MonitorFilter for device-type monitoring. Present iff
-         * supported. Should match the logical-element filters when the
-         * same DeviceID has both elements.
-         * @public
-         * @readonly
-         */
-        readonly deviceOnDeviceMonitorFilter?: OPTIONAL<MonitorFilter>,
-        /**
-         * @summary `deviceOnConnectionMonitorFilter`.
-         * @description
-         *
-         * MonitorFilter for connections under device-type monitoring.
-         * Present iff supported.
-         * @public
-         * @readonly
-         */
-        readonly deviceOnConnectionMonitorFilter?: OPTIONAL<MonitorFilter>,
-        /**
-         * @summary `callOnDeviceMonitorFilter`.
-         * @description
-         *
-         * MonitorFilter for call-type monitoring on the device. Present
-         * iff supported.
-         * @public
-         * @readonly
-         */
-        readonly callOnDeviceMonitorFilter?: OPTIONAL<MonitorFilter>,
-        /**
-         * @summary `callOnConnectionMonitorFilter`.
-         * @description
-         *
-         * MonitorFilter for call-type monitoring of a connection at this
-         * device. Present iff supported.
-         * @public
-         * @readonly
-         */
-        readonly callOnConnectionMonitorFilter?: OPTIONAL<MonitorFilter>,
-        /**
-         * @summary `maxDisplays`.
-         * @description
-         *
-         * Max displays; omitted if none or unknown.
-         * @public
-         * @readonly
-         */
-        readonly maxDisplays?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `maxButtons`.
-         * @description
-         *
-         * Max buttons; omitted if none or unknown.
-         * @public
-         * @readonly
-         */
-        readonly maxButtons?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `maxLamps`.
-         * @description
-         *
-         * Max lamps; omitted if none or unknown.
-         * @public
-         * @readonly
-         */
-        readonly maxLamps?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `maxRingPatterns`.
-         * @description
-         *
-         * Max ringer patterns; omitted if no ringer or unknown.
-         * @public
-         * @readonly
-         */
-        readonly maxRingPatterns?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `physDevServList`.
-         * @description
-         *
-         * Physical-device feature services supported here.
-         * @public
-         * @readonly
-         */
-        readonly physDevServList?: OPTIONAL<PhysDevServList>,
-        /**
-         * @summary `physDevEvtsList`.
-         * @description
-         *
-         * Physical-device feature events supported here.
-         * @public
-         * @readonly
-         */
-        readonly physDevEvtsList?: OPTIONAL<PhysDevEvtsList>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData. ECMA-269 Table 13-7.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        deviceCategory: OPTIONAL<DeviceCategory>,
+        groupDeviceAttributes: OPTIONAL<GroupDeviceAttributes>,
+        namedDeviceTypes: OPTIONAL<NamedDeviceTypes>,
+        hasLogicalElement: BOOLEAN,
+        otherLogicalDeviceList?: OPTIONAL<DeviceID[]>,
+        deviceModelName?: OPTIONAL<IA5String>,
+        deviceOnDeviceMonitorFilter?: OPTIONAL<MonitorFilter>,
+        deviceOnConnectionMonitorFilter?: OPTIONAL<MonitorFilter>,
+        callOnDeviceMonitorFilter?: OPTIONAL<MonitorFilter>,
+        callOnConnectionMonitorFilter?: OPTIONAL<MonitorFilter>,
+        maxDisplays?: OPTIONAL<INTEGER>,
+        maxButtons?: OPTIONAL<INTEGER>,
+        maxLamps?: OPTIONAL<INTEGER>,
+        maxRingPatterns?: OPTIONAL<INTEGER>,
+        physDevServList?: OPTIONAL<PhysDevServList>,
+        physDevEvtsList?: OPTIONAL<PhysDevEvtsList>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.deviceCategory = deviceCategory;
+        this.groupDeviceAttributes = groupDeviceAttributes;
+        this.namedDeviceTypes = namedDeviceTypes;
+        this.hasLogicalElement = hasLogicalElement;
+        this.otherLogicalDeviceList = otherLogicalDeviceList;
+        this.deviceModelName = deviceModelName;
+        this.deviceOnDeviceMonitorFilter = deviceOnDeviceMonitorFilter;
+        this.deviceOnConnectionMonitorFilter = deviceOnConnectionMonitorFilter;
+        this.callOnDeviceMonitorFilter = callOnDeviceMonitorFilter;
+        this.callOnConnectionMonitorFilter = callOnConnectionMonitorFilter;
+        this.maxDisplays = maxDisplays;
+        this.maxButtons = maxButtons;
+        this.maxLamps = maxLamps;
+        this.maxRingPatterns = maxRingPatterns;
+        this.physDevServList = physDevServList;
+        this.physDevEvtsList = physDevEvtsList;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a GetPhysicalDeviceInformationResult

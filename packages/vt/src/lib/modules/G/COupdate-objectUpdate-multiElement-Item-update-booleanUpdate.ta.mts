@@ -37,27 +37,33 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class COupdate_objectUpdate_multiElement_Item_update_booleanUpdate {
+    /**
+     * @summary `values`.
+     * @description
+     * New boolean bits. Only bits selected by `mask` are applied.
+     * ISO/IEC 9041-1:1997 §12.2.
+     * @public
+     * @readonly
+     */
+    public readonly values: BIT_STRING;
+    /**
+     * @summary `mask`.
+     * @description
+     * Omitted ⇒ all-ones of the same length as `values`. A 1-bit
+     * means use the corresponding `values` bit. ISO/IEC 9041-1:1997
+     * §12.2.
+     * @public
+     * @readonly
+     */
+    public readonly mask?: OPTIONAL<BIT_STRING>;
+
     constructor (
-        /**
-         * @summary `values`.
-         * @description
-         * New boolean bits. Only bits selected by `mask` are applied.
-         * ISO/IEC 9041-1:1997 §12.2.
-         * @public
-         * @readonly
-         */
-        readonly values: BIT_STRING,
-        /**
-         * @summary `mask`.
-         * @description
-         * Omitted ⇒ all-ones of the same length as `values`. A 1-bit
-         * means use the corresponding `values` bit. ISO/IEC 9041-1:1997
-         * §12.2.
-         * @public
-         * @readonly
-         */
-        readonly mask?: OPTIONAL<BIT_STRING>
-    ) {}
+        values: BIT_STRING,
+        mask?: OPTIONAL<BIT_STRING>
+    ) {
+        this.values = values;
+        this.mask = mask;
+    }
 
     /**
      * @summary Restructures an object into a COupdate_objectUpdate_multiElement_Item_update_booleanUpdate

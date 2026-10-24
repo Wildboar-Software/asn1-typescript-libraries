@@ -35,20 +35,25 @@ import { CertificateRevocationLists, _decode_CertificateRevocationLists, _encode
  */
 export
 class OriginatorInfo {
+    /**
+     * @summary `certs`.
+     * @public
+     * @readonly
+     */
+    public readonly certs?: OPTIONAL<CertificateSet>;
+    /**
+     * @summary `crls`.
+     * @public
+     * @readonly
+     */
+    public readonly crls?: OPTIONAL<CertificateRevocationLists>;
+
     constructor (
-        /**
-         * @summary `certs`.
-         * @public
-         * @readonly
-         */
-        readonly certs?: OPTIONAL<CertificateSet>,
-        /**
-         * @summary `crls`.
-         * @public
-         * @readonly
-         */
-        readonly crls?: OPTIONAL<CertificateRevocationLists>
+        certs?: OPTIONAL<CertificateSet>,
+        crls?: OPTIONAL<CertificateRevocationLists>
     ) {
+        this.certs = certs;
+        this.crls = crls;
         if (certs === undefined && crls === undefined) {
             throw new _ConstructionError("OriginatorInfo requires at least one component");
         }

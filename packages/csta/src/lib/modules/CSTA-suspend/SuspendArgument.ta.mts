@@ -42,50 +42,60 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class SuspendArgument {
+    /**
+     * @summary `connection`.
+     * @description
+     *
+     * Connection whose play/record is suspended (ECMA-269 §26.1.16.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly connection: ConnectionID;
+    /**
+     * @summary `message`.
+     * @description
+     *
+     * Message to suspend when several are active (ECMA-269 §26.1.16.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly message?: OPTIONAL<MessageID>;
+    /**
+     * @summary `resource`.
+     * @description
+     *
+     * Interactive voice resource. Required when more than one interactive
+     * voice resource exists on the connection.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly resource?: OPTIONAL<ResourceID>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * CSTACommonArguments carrying the service-table security and
+     * privateData parameters.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `connection`.
-         * @description
-         *
-         * Connection whose play/record is suspended (ECMA-269 §26.1.16.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly connection: ConnectionID,
-        /**
-         * @summary `message`.
-         * @description
-         *
-         * Message to suspend when several are active (ECMA-269 §26.1.16.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly message?: OPTIONAL<MessageID>,
-        /**
-         * @summary `resource`.
-         * @description
-         *
-         * Interactive voice resource. Required when more than one interactive
-         * voice resource exists on the connection.
-         *
-         * @public
-         * @readonly
-         */
-        readonly resource?: OPTIONAL<ResourceID>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * CSTACommonArguments carrying the service-table security and
-         * privateData parameters.
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        connection: ConnectionID,
+        message?: OPTIONAL<MessageID>,
+        resource?: OPTIONAL<ResourceID>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.connection = connection;
+        this.message = message;
+        this.resource = resource;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a SuspendArgument

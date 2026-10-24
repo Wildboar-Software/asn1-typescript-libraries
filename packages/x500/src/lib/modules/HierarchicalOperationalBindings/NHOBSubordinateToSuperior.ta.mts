@@ -33,36 +33,44 @@ import {
  *
  */
 export class NHOBSubordinateToSuperior {
+    /**
+     * @summary `accessPoints`.
+     * @description
+     *
+     * OPTIONAL. Master AP equals the DOP `accessPoint` parameter (as for
+     * `SubordinateToSuperior`).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly accessPoints?: OPTIONAL<MasterAndShadowAccessPoints>;
+    /**
+     * @summary `subentries`.
+     * @description
+     *
+     * SET SIZE (1..MAX); omit rather than empty. Tag [3] retained; tags [1]
+     * and [2] unused.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly subentries?: OPTIONAL<SubentryInfo[]>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `accessPoints`.
-         * @description
-         *
-         * OPTIONAL. Master AP equals the DOP `accessPoint` parameter (as for
-         * `SubordinateToSuperior`).
-         *
-         * @public
-         * @readonly
-         */
-        readonly accessPoints?: OPTIONAL<MasterAndShadowAccessPoints>,
-        /**
-         * @summary `subentries`.
-         * @description
-         *
-         * SET SIZE (1..MAX); omit rather than empty. Tag [3] retained; tags [1]
-         * and [2] unused.
-         *
-         * @public
-         * @readonly
-         */
-        readonly subentries?: OPTIONAL<SubentryInfo[]>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        accessPoints?: OPTIONAL<MasterAndShadowAccessPoints>,
+        subentries?: OPTIONAL<SubentryInfo[]>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.accessPoints = accessPoints;
+        this.subentries = subentries;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a NHOBSubordinateToSuperior

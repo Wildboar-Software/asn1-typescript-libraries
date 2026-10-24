@@ -39,20 +39,26 @@ import {
  *
  */
 export class AuthorizationInformationField {
+    /**
+     * @summary `authorization_information`.
+     * @public
+     * @readonly
+     */
+    public readonly authorization_information: AuthorizationInformation;
+    /**
+     * @summary `authorization_information_qualifier`.
+     * @public
+     * @readonly
+     */
+    public readonly authorization_information_qualifier?: OPTIONAL<AuthorizationInformationQualifier>;
+
     constructor(
-        /**
-         * @summary `authorization_information`.
-         * @public
-         * @readonly
-         */
-        readonly authorization_information: AuthorizationInformation,
-        /**
-         * @summary `authorization_information_qualifier`.
-         * @public
-         * @readonly
-         */
-        readonly authorization_information_qualifier?: OPTIONAL<AuthorizationInformationQualifier>
-    ) {}
+        authorization_information: AuthorizationInformation,
+        authorization_information_qualifier?: OPTIONAL<AuthorizationInformationQualifier>
+    ) {
+        this.authorization_information = authorization_information;
+        this.authorization_information_qualifier = authorization_information_qualifier;
+    }
 
     /**
      * @summary Restructures an object into a AuthorizationInformationField

@@ -35,29 +35,35 @@ import { StatisticInformationSet, _decode_StatisticInformationSet, _encode_Stati
  */
 export
 class TestResultVerify {
+    /**
+     * @summary `resultMatchVerify`.
+     * @description
+     *
+     * FNMR/FMR, FRR/FAR, and/or GFRR/GFAR DETs, plus optional score
+     * distribution (Clause 6.4.4.3.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly resultMatchVerify: ResultMatchVerify;
+    /**
+     * @summary `durationVerify`.
+     * @description
+     *
+     * Verification duration statistics (Clause 6.4.4.3.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly durationVerify?: OPTIONAL<StatisticInformationSet>;
+
     constructor (
-        /**
-         * @summary `resultMatchVerify`.
-         * @description
-         *
-         * FNMR/FMR, FRR/FAR, and/or GFRR/GFAR DETs, plus optional score
-         * distribution (Clause 6.4.4.3.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly resultMatchVerify: ResultMatchVerify,
-        /**
-         * @summary `durationVerify`.
-         * @description
-         *
-         * Verification duration statistics (Clause 6.4.4.3.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly durationVerify?: OPTIONAL<StatisticInformationSet>
-    ) {}
+        resultMatchVerify: ResultMatchVerify,
+        durationVerify?: OPTIONAL<StatisticInformationSet>
+    ) {
+        this.resultMatchVerify = resultMatchVerify;
+        this.durationVerify = durationVerify;
+    }
 
     /**
      * @summary Restructures an object into a TestResultVerify

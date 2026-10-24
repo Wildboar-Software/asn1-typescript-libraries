@@ -40,42 +40,50 @@ import {
  *
  */
 export class AttributeCertificationPath {
+    /**
+     * @summary `attributeCertificate`: the asserted attribute certificate
+     * @description
+     * 
+     * This does NOT have to be an end-entity. AAs can assert privileges too.
+     * 
+     * @public
+     * @readonly
+     */
+    public readonly attributeCertificate: AttributeCertificate;
+    /**
+     * @summary `acPath`: delegation path up to, but excluding, the SOA
+     * @description
+     * 
+     * It is not clear in ITU-T Recommendation X.509 what the proper ordering of
+     * elements in `acPath` is supposed to be. Because this data structure appears
+     * to be analogous to a `CertificationPath`, I would assume that `acPath`
+     * should contain an `ACPathData` for each AA, starting from the AA that
+     * issued the attribute certificate in `attributeCertificate`, and up until,
+     * but excluding, the SOA. This was both my opinion and the opinion of an
+     * LLM that read the X.509 specification. I would advise _assuming_
+     * this to be the case and fail if it is not in the interest of
+     * [virtuous intolerance](https://datatracker.ietf.org/doc/html/draft-iab-protocol-maintenance-04#section-7).
+     * 
+     * @public
+     * @readonly
+     */
+    public readonly acPath?: OPTIONAL<ACPathData[]>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `attributeCertificate`: the asserted attribute certificate
-         * @description
-         * 
-         * This does NOT have to be an end-entity. AAs can assert privileges too.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly attributeCertificate: AttributeCertificate,
-        /**
-         * @summary `acPath`: delegation path up to, but excluding, the SOA
-         * @description
-         * 
-         * It is not clear in ITU-T Recommendation X.509 what the proper ordering of
-         * elements in `acPath` is supposed to be. Because this data structure appears
-         * to be analogous to a `CertificationPath`, I would assume that `acPath`
-         * should contain an `ACPathData` for each AA, starting from the AA that
-         * issued the attribute certificate in `attributeCertificate`, and up until,
-         * but excluding, the SOA. This was both my opinion and the opinion of an
-         * LLM that read the X.509 specification. I would advise _assuming_
-         * this to be the case and fail if it is not in the interest of
-         * [virtuous intolerance](https://datatracker.ietf.org/doc/html/draft-iab-protocol-maintenance-04#section-7).
-         * 
-         * @public
-         * @readonly
-         */
-        readonly acPath?: OPTIONAL<ACPathData[]>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        attributeCertificate: AttributeCertificate,
+        acPath?: OPTIONAL<ACPathData[]>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.attributeCertificate = attributeCertificate;
+        this.acPath = acPath;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a AttributeCertificationPath

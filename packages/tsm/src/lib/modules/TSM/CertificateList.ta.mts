@@ -33,18 +33,22 @@ import { Certificates, _decode_Certificates, _encode_Certificates } from "../TSM
  */
 export
 class CertificateList {
+    /**
+     * @summary `certificates`.
+     * @description
+     *
+     * Certificate chain, leaf first. X.1084 Annex A.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly certificates: Certificates;
+
     constructor (
-        /**
-         * @summary `certificates`.
-         * @description
-         *
-         * Certificate chain, leaf first. X.1084 Annex A.
-         *
-         * @public
-         * @readonly
-         */
-        readonly certificates: Certificates
-    ) {}
+        certificates: Certificates
+    ) {
+        this.certificates = certificates;
+    }
 
     /**
      * @summary Restructures an object into a CertificateList

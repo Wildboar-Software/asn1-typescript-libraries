@@ -31,15 +31,30 @@ import * as $ from "@wildboar/asn1/functional";
  *
  */
 export class CAI_GSM0224 {
+    public readonly e1?: OPTIONAL<INTEGER>;
+    public readonly e2?: OPTIONAL<INTEGER>;
+    public readonly e3?: OPTIONAL<INTEGER>;
+    public readonly e4?: OPTIONAL<INTEGER>;
+    public readonly e5?: OPTIONAL<INTEGER>;
+    public readonly e6?: OPTIONAL<INTEGER>;
+    public readonly e7?: OPTIONAL<INTEGER>;
+
     constructor (
-        readonly e1?: OPTIONAL<INTEGER>,
-        readonly e2?: OPTIONAL<INTEGER>,
-        readonly e3?: OPTIONAL<INTEGER>,
-        readonly e4?: OPTIONAL<INTEGER>,
-        readonly e5?: OPTIONAL<INTEGER>,
-        readonly e6?: OPTIONAL<INTEGER>,
-        readonly e7?: OPTIONAL<INTEGER>,
+        e1?: OPTIONAL<INTEGER>,
+        e2?: OPTIONAL<INTEGER>,
+        e3?: OPTIONAL<INTEGER>,
+        e4?: OPTIONAL<INTEGER>,
+        e5?: OPTIONAL<INTEGER>,
+        e6?: OPTIONAL<INTEGER>,
+        e7?: OPTIONAL<INTEGER>,
     ) {
+        this.e1 = e1;
+        this.e2 = e2;
+        this.e3 = e3;
+        this.e4 = e4;
+        this.e5 = e5;
+        this.e6 = e6;
+        this.e7 = e7;
         for (const [name, n] of [["e1", e1], ["e2", e2], ["e3", e3], ["e4", e4], ["e5", e5], ["e6", e6], ["e7", e7]] as const) {
             if (n !== undefined && (typeof n === "bigint" ? (n < 0n || n > 8191n) : (n < 0 || n > 8191))) {
                 throw new ASN1OverflowError(`CAI_GSM0224.${name} violates INTEGER constraint`);

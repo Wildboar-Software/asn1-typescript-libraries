@@ -35,23 +35,28 @@ import { DocumentType, _decode_DocumentType, _encode_DocumentType } from "../Doc
  */
 export
 class DocumentTypeListSyntax {
+    /**
+     * List syntax version. Only `v0` is assigned.
+     * @summary `version`.
+     * @public
+     * @readonly
+     */
+    public readonly version: DocumentTypeListVersion;
+    /**
+     * Document types this signer may produce. A one-character value covers
+     * every MRZ document type that starts with that character.
+     * @summary `docTypeList`.
+     * @public
+     * @readonly
+     */
+    public readonly docTypeList: DocumentType[];
+
     constructor (
-        /**
-         * List syntax version. Only `v0` is assigned.
-         * @summary `version`.
-         * @public
-         * @readonly
-         */
-        readonly version: DocumentTypeListVersion,
-        /**
-         * Document types this signer may produce. A one-character value covers
-         * every MRZ document type that starts with that character.
-         * @summary `docTypeList`.
-         * @public
-         * @readonly
-         */
-        readonly docTypeList: DocumentType[]
+        version: DocumentTypeListVersion,
+        docTypeList: DocumentType[]
     ) {
+        this.version = version;
+        this.docTypeList = docTypeList;
         for (const docType of docTypeList) {
             if (docType.length < 1 || docType.length > 2) {
                 throw new ASN1SizeError("DocumentType violates SIZE constraint");

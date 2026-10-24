@@ -48,42 +48,50 @@ import {
  *
  */
 export class Process_RequestParams {
+  /**
+   * @summary `originalBSPHandle`.
+   * @description
+   *
+   * Attach-session handle on the hosting (slave) endpoint.
+   * BioAPI `BSPHandle` is rewritten via clauses 24 and 26.
+   * X.1083 §16.32.5.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly originalBSPHandle: BioAPI_HANDLE;
+  /**
+   * @summary `capturedBIR`.
+   * @description
+   *
+   * Intermediate BIR to process. C `NULL` is unconvertible
+   * (clause 19). X.1083 §16.32.5.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly capturedBIR: BioAPI_INPUT_BIR;
+  /**
+   * @summary `outputFormat`.
+   * @description
+   *
+   * Requested biometric-data format of the processed BIR.
+   * C `NULL` ↔ absent (clause 19). X.1083 §16.32.5.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly outputFormat?: OPTIONAL<BioAPI_BIR_BIOMETRIC_DATA_FORMAT>;
+
   constructor(
-    /**
-     * @summary `originalBSPHandle`.
-     * @description
-     *
-     * Attach-session handle on the hosting (slave) endpoint.
-     * BioAPI `BSPHandle` is rewritten via clauses 24 and 26.
-     * X.1083 §16.32.5.
-     *
-     * @public
-     * @readonly
-     */
-    readonly originalBSPHandle: BioAPI_HANDLE,
-    /**
-     * @summary `capturedBIR`.
-     * @description
-     *
-     * Intermediate BIR to process. C `NULL` is unconvertible
-     * (clause 19). X.1083 §16.32.5.
-     *
-     * @public
-     * @readonly
-     */
-    readonly capturedBIR: BioAPI_INPUT_BIR,
-    /**
-     * @summary `outputFormat`.
-     * @description
-     *
-     * Requested biometric-data format of the processed BIR.
-     * C `NULL` ↔ absent (clause 19). X.1083 §16.32.5.
-     *
-     * @public
-     * @readonly
-     */
-    readonly outputFormat?: OPTIONAL<BioAPI_BIR_BIOMETRIC_DATA_FORMAT>
-  ) {}
+    originalBSPHandle: BioAPI_HANDLE,
+    capturedBIR: BioAPI_INPUT_BIR,
+    outputFormat?: OPTIONAL<BioAPI_BIR_BIOMETRIC_DATA_FORMAT>
+  ) {
+    this.originalBSPHandle = originalBSPHandle;
+    this.capturedBIR = capturedBIR;
+    this.outputFormat = outputFormat;
+  }
 
   /**
    * @summary Restructures an object into a Process_RequestParams

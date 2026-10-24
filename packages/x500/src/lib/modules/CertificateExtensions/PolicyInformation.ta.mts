@@ -34,31 +34,39 @@ import {
  *
  */
 export class PolicyInformation {
+    /**
+     * @summary `policyIdentifier`.
+     * @public
+     * @readonly
+     */
+    public readonly policyIdentifier: CertPolicyId;
+    /**
+     * @summary `policyQualifiers`.
+     * @description
+     *
+     * SIZE (1..MAX) if present. Do not change policy identity. Avoid on
+     * anyPolicy.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly policyQualifiers?: OPTIONAL<PolicyQualifierInfo[]>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `policyIdentifier`.
-         * @public
-         * @readonly
-         */
-        readonly policyIdentifier: CertPolicyId,
-        /**
-         * @summary `policyQualifiers`.
-         * @description
-         *
-         * SIZE (1..MAX) if present. Do not change policy identity. Avoid on
-         * anyPolicy.
-         *
-         * @public
-         * @readonly
-         */
-        readonly policyQualifiers?: OPTIONAL<PolicyQualifierInfo[]>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        policyIdentifier: CertPolicyId,
+        policyQualifiers?: OPTIONAL<PolicyQualifierInfo[]>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.policyIdentifier = policyIdentifier;
+        this.policyQualifiers = policyQualifiers;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a PolicyInformation

@@ -37,32 +37,42 @@ import {
  *
  */
 export class BaseRevocationInfo {
+    /**
+     * @summary `cRLStreamIdentifier`.
+     * @public
+     * @readonly
+     */
+    public readonly cRLStreamIdentifier: OPTIONAL<CRLStreamIdentifier>;
+    /**
+     * @summary `cRLNumber`.
+     * @public
+     * @readonly
+     */
+    public readonly cRLNumber: CRLNumber;
+    /**
+     * @summary `baseThisUpdate`.
+     * @public
+     * @readonly
+     */
+    public readonly baseThisUpdate: GeneralizedTime;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `cRLStreamIdentifier`.
-         * @public
-         * @readonly
-         */
-        readonly cRLStreamIdentifier: OPTIONAL<CRLStreamIdentifier>,
-        /**
-         * @summary `cRLNumber`.
-         * @public
-         * @readonly
-         */
-        readonly cRLNumber: CRLNumber,
-        /**
-         * @summary `baseThisUpdate`.
-         * @public
-         * @readonly
-         */
-        readonly baseThisUpdate: GeneralizedTime,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        cRLStreamIdentifier: OPTIONAL<CRLStreamIdentifier>,
+        cRLNumber: CRLNumber,
+        baseThisUpdate: GeneralizedTime,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.cRLStreamIdentifier = cRLStreamIdentifier;
+        this.cRLNumber = cRLNumber;
+        this.baseThisUpdate = baseThisUpdate;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a BaseRevocationInfo

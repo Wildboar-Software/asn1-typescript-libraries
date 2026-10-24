@@ -45,20 +45,26 @@ import {
  *
  */
 export class OrderedAttribute {
+    /**
+     * @summary `attribute_type`.
+     * @public
+     * @readonly
+     */
+    public readonly attribute_type: AttributeType;
+    /**
+     * @summary `attribute_values`.
+     * @public
+     * @readonly
+     */
+    public readonly attribute_values: OrderedAttribute_attribute_values_Item[];
+
     constructor(
-        /**
-         * @summary `attribute_type`.
-         * @public
-         * @readonly
-         */
-        readonly attribute_type: AttributeType,
-        /**
-         * @summary `attribute_values`.
-         * @public
-         * @readonly
-         */
-        readonly attribute_values: OrderedAttribute_attribute_values_Item[]
-    ) {}
+        attribute_type: AttributeType,
+        attribute_values: OrderedAttribute_attribute_values_Item[]
+    ) {
+        this.attribute_type = attribute_type;
+        this.attribute_values = attribute_values;
+    }
 
     /**
      * @summary Restructures an object into a OrderedAttribute

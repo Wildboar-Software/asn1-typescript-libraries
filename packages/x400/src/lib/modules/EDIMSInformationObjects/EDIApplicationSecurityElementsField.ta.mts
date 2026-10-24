@@ -42,26 +42,34 @@ import {
  *
  */
 export class EDIApplicationSecurityElementsField {
+    /**
+     * @summary `edi_application_security_element`.
+     * @public
+     * @readonly
+     */
+    public readonly edi_application_security_element?: OPTIONAL<EDIApplicationSecurityElement>;
+    /**
+     * @summary `edi_encrypted_primary_bodypart`.
+     * @public
+     * @readonly
+     */
+    public readonly edi_encrypted_primary_bodypart?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `edi_application_security_extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly edi_application_security_extensions?: OPTIONAL<EDIApplicationSecurityExtensions>;
+
     constructor(
-        /**
-         * @summary `edi_application_security_element`.
-         * @public
-         * @readonly
-         */
-        readonly edi_application_security_element?: OPTIONAL<EDIApplicationSecurityElement>,
-        /**
-         * @summary `edi_encrypted_primary_bodypart`.
-         * @public
-         * @readonly
-         */
-        readonly edi_encrypted_primary_bodypart?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `edi_application_security_extensions`.
-         * @public
-         * @readonly
-         */
-        readonly edi_application_security_extensions?: OPTIONAL<EDIApplicationSecurityExtensions>
-    ) {}
+        edi_application_security_element?: OPTIONAL<EDIApplicationSecurityElement>,
+        edi_encrypted_primary_bodypart?: OPTIONAL<BOOLEAN>,
+        edi_application_security_extensions?: OPTIONAL<EDIApplicationSecurityExtensions>
+    ) {
+        this.edi_application_security_element = edi_application_security_element;
+        this.edi_encrypted_primary_bodypart = edi_encrypted_primary_bodypart;
+        this.edi_application_security_extensions = edi_application_security_extensions;
+    }
 
     /**
      * @summary Restructures an object into a EDIApplicationSecurityElementsField

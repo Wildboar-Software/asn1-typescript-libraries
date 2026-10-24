@@ -44,31 +44,37 @@ import { ChangeAccessControl_Request_scopeOfChange_listOfObjects_objectScope, _d
  */
 export
 class ChangeAccessControl_Request_scopeOfChange_listOfObjects {
+    /**
+     * @summary `objectClass`.
+     * @description
+     *
+     * Class of objects whose `&accessControl` is to be altered.
+     * ISO 9506-1:2003 §9.7.1.1.3.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly objectClass: ObjectClass;
+    /**
+     * @summary `objectScope`.
+     * @description
+     *
+     * Extent of the change: SPECIFIC names, all AA-specific objects of the
+     * class, all Domain-scoped objects of a named Domain, or all VMD-scoped
+     * objects of the class. ISO 9506-1:2003 §9.7.1.1.4.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly objectScope: ChangeAccessControl_Request_scopeOfChange_listOfObjects_objectScope;
+
     constructor (
-        /**
-         * @summary `objectClass`.
-         * @description
-         *
-         * Class of objects whose `&accessControl` is to be altered.
-         * ISO 9506-1:2003 §9.7.1.1.3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly objectClass: ObjectClass,
-        /**
-         * @summary `objectScope`.
-         * @description
-         *
-         * Extent of the change: SPECIFIC names, all AA-specific objects of the
-         * class, all Domain-scoped objects of a named Domain, or all VMD-scoped
-         * objects of the class. ISO 9506-1:2003 §9.7.1.1.4.
-         *
-         * @public
-         * @readonly
-         */
-        readonly objectScope: ChangeAccessControl_Request_scopeOfChange_listOfObjects_objectScope
-    ) {}
+        objectClass: ObjectClass,
+        objectScope: ChangeAccessControl_Request_scopeOfChange_listOfObjects_objectScope
+    ) {
+        this.objectClass = objectClass;
+        this.objectScope = objectScope;
+    }
 
     /**
      * @summary Restructures an object into a ChangeAccessControl_Request_scopeOfChange_listOfObjects

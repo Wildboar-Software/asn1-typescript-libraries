@@ -37,39 +37,47 @@ import {
  *
  */
 export class AccessService {
+    /**
+     * @summary `serviceId`.
+     * @description
+     *
+     * Access service type the accessor may use.
+     * ITU-T Rec. X.1080.0 (2017) Cor.1
+     * [§7.3](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly serviceId: OBJECT_IDENTIFIER;
+    /**
+     * @summary `objectDef`.
+     * @description
+     *
+     * One `ObjectSel` per object class with privilege. Unlisted
+     * classes confer no access.
+     * ITU-T Rec. X.1080.0 (2017) Cor.1
+     * [§7.3](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly objectDef: ObjectSel[];
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `serviceId`.
-         * @description
-         *
-         * Access service type the accessor may use.
-         * ITU-T Rec. X.1080.0 (2017) Cor.1
-         * [§7.3](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly serviceId: OBJECT_IDENTIFIER,
-        /**
-         * @summary `objectDef`.
-         * @description
-         *
-         * One `ObjectSel` per object class with privilege. Unlisted
-         * classes confer no access.
-         * ITU-T Rec. X.1080.0 (2017) Cor.1
-         * [§7.3](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly objectDef: ObjectSel[],
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        serviceId: OBJECT_IDENTIFIER,
+        objectDef: ObjectSel[],
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.serviceId = serviceId;
+        this.objectDef = objectDef;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a AccessService

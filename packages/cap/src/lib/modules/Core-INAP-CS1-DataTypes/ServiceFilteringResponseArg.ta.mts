@@ -35,26 +35,34 @@ import { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "
  */
 export
 class ServiceFilteringResponseArg {
+    /**
+     * @summary `countersValue`.
+     * @public
+     * @readonly
+     */
+    public readonly countersValue: CountersValue;
+    /**
+     * @summary `filteringCriteria`.
+     * @public
+     * @readonly
+     */
+    public readonly filteringCriteria: FilteringCriteria;
+    /**
+     * @summary `extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<ExtensionField[]>;
+
     constructor (
-        /**
-         * @summary `countersValue`.
-         * @public
-         * @readonly
-         */
-        readonly countersValue: CountersValue,
-        /**
-         * @summary `filteringCriteria`.
-         * @public
-         * @readonly
-         */
-        readonly filteringCriteria: FilteringCriteria,
-        /**
-         * @summary `extensions`.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<ExtensionField[]>
-    ) {}
+        countersValue: CountersValue,
+        filteringCriteria: FilteringCriteria,
+        extensions?: OPTIONAL<ExtensionField[]>
+    ) {
+        this.countersValue = countersValue;
+        this.filteringCriteria = filteringCriteria;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a ServiceFilteringResponseArg

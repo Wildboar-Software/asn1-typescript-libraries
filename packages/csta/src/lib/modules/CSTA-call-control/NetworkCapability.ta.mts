@@ -94,30 +94,36 @@ import {
  */
 export
 class NetworkCapability {
+    /**
+     * @summary `networkType`.
+     * @description
+     *
+     * ISDN/non-ISDN public or private, or other. ECMA-269
+     * Network Capabilities Changed.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly networkType: NetworkCapability_networkType;
+    /**
+     * @summary `eventsProvided`.
+     * @description
+     *
+     * Bitmap of Call Control events the network can report.
+     * ECMA-269 Network Capabilities Changed.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly eventsProvided?: OPTIONAL<NetworkCapability_eventsProvided>;
+
     constructor (
-        /**
-         * @summary `networkType`.
-         * @description
-         *
-         * ISDN/non-ISDN public or private, or other. ECMA-269
-         * Network Capabilities Changed.
-         *
-         * @public
-         * @readonly
-         */
-        readonly networkType: NetworkCapability_networkType,
-        /**
-         * @summary `eventsProvided`.
-         * @description
-         *
-         * Bitmap of Call Control events the network can report.
-         * ECMA-269 Network Capabilities Changed.
-         *
-         * @public
-         * @readonly
-         */
-        readonly eventsProvided?: OPTIONAL<NetworkCapability_eventsProvided>
-    ) {}
+        networkType: NetworkCapability_networkType,
+        eventsProvided?: OPTIONAL<NetworkCapability_eventsProvided>
+    ) {
+        this.networkType = networkType;
+        this.eventsProvided = eventsProvided;
+    }
 
     /**
      * @summary Restructures an object into a NetworkCapability

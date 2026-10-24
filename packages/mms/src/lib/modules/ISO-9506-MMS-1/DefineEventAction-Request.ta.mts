@@ -46,58 +46,68 @@ import { Request_Detail, _decode_Request_Detail, _encode_Request_Detail } from "
  */
 export
 class DefineEventAction_Request {
+    /**
+     * @summary `eventActionName`.
+     * @description
+     *
+     * `&name` of the Event Action to create.
+     *
+     * [ISO 9506-1:2003 §20.2.1.1.1]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly eventActionName: ObjectName;
+    /**
+     * @summary `listOfModifier`.
+     * @description
+     *
+     * Modifiers applied on each execution of this action, not of DefineEventAction
+     * itself.
+     *
+     * [ISO 9506-1:2003 §20.2.1.1.2]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly listOfModifier: OPTIONAL<Modifier[]>;
+    /**
+     * @summary `confirmedServiceRequest`.
+     * @description
+     *
+     * Confirmed service and argument to execute on a matching transition.
+     *
+     * [ISO 9506-1:2003 §20.2.1.1.3]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly confirmedServiceRequest: ConfirmedServiceRequest;
+    /**
+     * @summary `cs_extension`.
+     * @description
+     *
+     * CS Request-Detail matching the confirmed-service choice. `csr`/`cspi`. Not
+     * sent if tagged NULL.
+     *
+     * [ISO 9506-2:2003 §20.2.1.1]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly cs_extension?: OPTIONAL<Request_Detail>;
+
     constructor (
-        /**
-         * @summary `eventActionName`.
-         * @description
-         *
-         * `&name` of the Event Action to create.
-         *
-         * [ISO 9506-1:2003 §20.2.1.1.1]
-         *
-         * @public
-         * @readonly
-         */
-        readonly eventActionName: ObjectName,
-        /**
-         * @summary `listOfModifier`.
-         * @description
-         *
-         * Modifiers applied on each execution of this action, not of DefineEventAction
-         * itself.
-         *
-         * [ISO 9506-1:2003 §20.2.1.1.2]
-         *
-         * @public
-         * @readonly
-         */
-        readonly listOfModifier: OPTIONAL<Modifier[]>,
-        /**
-         * @summary `confirmedServiceRequest`.
-         * @description
-         *
-         * Confirmed service and argument to execute on a matching transition.
-         *
-         * [ISO 9506-1:2003 §20.2.1.1.3]
-         *
-         * @public
-         * @readonly
-         */
-        readonly confirmedServiceRequest: ConfirmedServiceRequest,
-        /**
-         * @summary `cs_extension`.
-         * @description
-         *
-         * CS Request-Detail matching the confirmed-service choice. `csr`/`cspi`. Not
-         * sent if tagged NULL.
-         *
-         * [ISO 9506-2:2003 §20.2.1.1]
-         *
-         * @public
-         * @readonly
-         */
-        readonly cs_extension?: OPTIONAL<Request_Detail>
-    ) {}
+        eventActionName: ObjectName,
+        listOfModifier: OPTIONAL<Modifier[]>,
+        confirmedServiceRequest: ConfirmedServiceRequest,
+        cs_extension?: OPTIONAL<Request_Detail>
+    ) {
+        this.eventActionName = eventActionName;
+        this.listOfModifier = listOfModifier;
+        this.confirmedServiceRequest = confirmedServiceRequest;
+        this.cs_extension = cs_extension;
+    }
 
     /**
      * @summary Restructures an object into a DefineEventAction_Request

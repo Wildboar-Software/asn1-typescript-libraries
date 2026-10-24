@@ -37,44 +37,56 @@ import { NotificationToMSUser, _decode_NotificationToMSUser, _encode_Notificatio
  */
 export
 class ExternalClient {
+    /**
+     * @summary `clientIdentity`.
+     * @public
+     * @readonly
+     */
+    public readonly clientIdentity: LCSClientExternalID;
+    /**
+     * @summary `gmlc_Restriction`.
+     * @public
+     * @readonly
+     */
+    public readonly gmlc_Restriction?: OPTIONAL<GMLC_Restriction>;
+    /**
+     * @summary `notificationToMSUser`.
+     * @description
+     *
+     * If not received, the default according to 3GPP TS 23.271 shall be
+     * assumed (3GPP TS 29.002 V19.1.0 clauses 7.6.3.64, 7.6.3.65B and
+     * 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly notificationToMSUser?: OPTIONAL<NotificationToMSUser>;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `clientIdentity`.
-         * @public
-         * @readonly
-         */
-        readonly clientIdentity: LCSClientExternalID,
-        /**
-         * @summary `gmlc_Restriction`.
-         * @public
-         * @readonly
-         */
-        readonly gmlc_Restriction?: OPTIONAL<GMLC_Restriction>,
-        /**
-         * @summary `notificationToMSUser`.
-         * @description
-         *
-         * If not received, the default according to 3GPP TS 23.271 shall be
-         * assumed (3GPP TS 29.002 V19.1.0 clauses 7.6.3.64, 7.6.3.65B and
-         * 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly notificationToMSUser?: OPTIONAL<NotificationToMSUser>,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        clientIdentity: LCSClientExternalID,
+        gmlc_Restriction?: OPTIONAL<GMLC_Restriction>,
+        notificationToMSUser?: OPTIONAL<NotificationToMSUser>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.clientIdentity = clientIdentity;
+        this.gmlc_Restriction = gmlc_Restriction;
+        this.notificationToMSUser = notificationToMSUser;
+        this.extensionContainer = extensionContainer;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a ExternalClient

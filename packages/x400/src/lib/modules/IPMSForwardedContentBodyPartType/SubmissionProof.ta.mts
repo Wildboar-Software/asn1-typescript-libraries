@@ -43,26 +43,34 @@ import {
  *
  */
 export class SubmissionProof {
+    /**
+     * @summary `proof_of_submission`.
+     * @public
+     * @readonly
+     */
+    public readonly proof_of_submission: ProofOfSubmission;
+    /**
+     * @summary `originating_MTA_certificate`.
+     * @public
+     * @readonly
+     */
+    public readonly originating_MTA_certificate: OriginatingMTACertificate;
+    /**
+     * @summary `message_submission_envelope`.
+     * @public
+     * @readonly
+     */
+    public readonly message_submission_envelope: MessageSubmissionEnvelope;
+
     constructor(
-        /**
-         * @summary `proof_of_submission`.
-         * @public
-         * @readonly
-         */
-        readonly proof_of_submission: ProofOfSubmission,
-        /**
-         * @summary `originating_MTA_certificate`.
-         * @public
-         * @readonly
-         */
-        readonly originating_MTA_certificate: OriginatingMTACertificate,
-        /**
-         * @summary `message_submission_envelope`.
-         * @public
-         * @readonly
-         */
-        readonly message_submission_envelope: MessageSubmissionEnvelope
-    ) {}
+        proof_of_submission: ProofOfSubmission,
+        originating_MTA_certificate: OriginatingMTACertificate,
+        message_submission_envelope: MessageSubmissionEnvelope
+    ) {
+        this.proof_of_submission = proof_of_submission;
+        this.originating_MTA_certificate = originating_MTA_certificate;
+        this.message_submission_envelope = message_submission_envelope;
+    }
 
     /**
      * @summary Restructures an object into a SubmissionProof

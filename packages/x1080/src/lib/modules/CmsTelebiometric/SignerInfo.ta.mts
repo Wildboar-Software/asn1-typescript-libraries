@@ -65,98 +65,116 @@ import {
  *
  */
 export class SignerInfo {
+    /**
+     * @summary `version`.
+     * @description
+     *
+     * Always `v1`.
+     * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly version: CMSVersion;
+    /**
+     * @summary `sid`.
+     * @description
+     *
+     * Identifies the signer's end-entity PKC. Always
+     * `issuerAndSerialNumber`.
+     * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sid: SignerIdentifier;
+    /**
+     * @summary `digestAlgorithm`.
+     * @description
+     *
+     * Hash used for this signature; shall match
+     * `SignedData.digestAlgorithms`. From
+     * `Teleb-Hash-Algorithms`.
+     * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly digestAlgorithm: AlgorithmIdentifier;
+    /**
+     * @summary `signedAttrs`.
+     * @description
+     *
+     * Signed attributes. RFC 5652 requires `contentType` and
+     * `messageDigest`. This profile requires no extra attrs;
+     * referencing specs may add to `SignedAttributes`.
+     * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly signedAttrs: OPTIONAL<Attributes>;
+    /**
+     * @summary `signatureAlgorithm`.
+     * @description
+     *
+     * Algorithm used to create `signature`. From
+     * `Teleb-Signature-Algorithms` (extensible; none mandated).
+     * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly signatureAlgorithm: AlgorithmIdentifier;
+    /**
+     * @summary `signature`.
+     * @description
+     *
+     * Digital signature value, as in RFC 5652.
+     * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly signature: SignatureValue;
+    /**
+     * @summary `unsignedAttrs`.
+     * @description
+     *
+     * Unsigned attributes, as in RFC 5652. Set is
+     * `UnsignedAttributes` (extensible `{...}`).
+     * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly unsignedAttrs?: OPTIONAL<Attributes>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `version`.
-         * @description
-         *
-         * Always `v1`.
-         * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly version: CMSVersion,
-        /**
-         * @summary `sid`.
-         * @description
-         *
-         * Identifies the signer's end-entity PKC. Always
-         * `issuerAndSerialNumber`.
-         * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly sid: SignerIdentifier,
-        /**
-         * @summary `digestAlgorithm`.
-         * @description
-         *
-         * Hash used for this signature; shall match
-         * `SignedData.digestAlgorithms`. From
-         * `Teleb-Hash-Algorithms`.
-         * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly digestAlgorithm: AlgorithmIdentifier,
-        /**
-         * @summary `signedAttrs`.
-         * @description
-         *
-         * Signed attributes. RFC 5652 requires `contentType` and
-         * `messageDigest`. This profile requires no extra attrs;
-         * referencing specs may add to `SignedAttributes`.
-         * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly signedAttrs: OPTIONAL<Attributes>,
-        /**
-         * @summary `signatureAlgorithm`.
-         * @description
-         *
-         * Algorithm used to create `signature`. From
-         * `Teleb-Signature-Algorithms` (extensible; none mandated).
-         * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly signatureAlgorithm: AlgorithmIdentifier,
-        /**
-         * @summary `signature`.
-         * @description
-         *
-         * Digital signature value, as in RFC 5652.
-         * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly signature: SignatureValue,
-        /**
-         * @summary `unsignedAttrs`.
-         * @description
-         *
-         * Unsigned attributes, as in RFC 5652. Set is
-         * `UnsignedAttributes` (extensible `{...}`).
-         * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly unsignedAttrs?: OPTIONAL<Attributes>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        version: CMSVersion,
+        sid: SignerIdentifier,
+        digestAlgorithm: AlgorithmIdentifier,
+        signedAttrs: OPTIONAL<Attributes>,
+        signatureAlgorithm: AlgorithmIdentifier,
+        signature: SignatureValue,
+        unsignedAttrs?: OPTIONAL<Attributes>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.version = version;
+        this.sid = sid;
+        this.digestAlgorithm = digestAlgorithm;
+        this.signedAttrs = signedAttrs;
+        this.signatureAlgorithm = signatureAlgorithm;
+        this.signature = signature;
+        this.unsignedAttrs = unsignedAttrs;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a SignerInfo

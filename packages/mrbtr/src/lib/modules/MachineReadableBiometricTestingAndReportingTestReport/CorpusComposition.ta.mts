@@ -35,40 +35,48 @@ import { CorpusStatistics, _decode_CorpusStatistics, _encode_CorpusStatistics } 
  */
 export
 class CorpusComposition {
+    /**
+     * @summary `identifier`.
+     * @description
+     *
+     * OID identifying the corpus. Annex C.2 Table C.1 allows an
+     * owner-assigned or independently registered OID.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly identifier: OBJECT_IDENTIFIER;
+    /**
+     * @summary `nameCorpus`.
+     * @description
+     *
+     * Name of the corpus (Clause 6.4.4.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly nameCorpus: VisibleString;
+    /**
+     * @summary `corpusStatistics`.
+     * @description
+     *
+     * Counts, per-subject sample tables, and related statistics
+     * (Clause 6.4.4.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly corpusStatistics: CorpusStatistics;
+
     constructor (
-        /**
-         * @summary `identifier`.
-         * @description
-         *
-         * OID identifying the corpus. Annex C.2 Table C.1 allows an
-         * owner-assigned or independently registered OID.
-         *
-         * @public
-         * @readonly
-         */
-        readonly identifier: OBJECT_IDENTIFIER,
-        /**
-         * @summary `nameCorpus`.
-         * @description
-         *
-         * Name of the corpus (Clause 6.4.4.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly nameCorpus: VisibleString,
-        /**
-         * @summary `corpusStatistics`.
-         * @description
-         *
-         * Counts, per-subject sample tables, and related statistics
-         * (Clause 6.4.4.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly corpusStatistics: CorpusStatistics
-    ) {}
+        identifier: OBJECT_IDENTIFIER,
+        nameCorpus: VisibleString,
+        corpusStatistics: CorpusStatistics
+    ) {
+        this.identifier = identifier;
+        this.nameCorpus = nameCorpus;
+        this.corpusStatistics = corpusStatistics;
+    }
 
     /**
      * @summary Restructures an object into a CorpusComposition

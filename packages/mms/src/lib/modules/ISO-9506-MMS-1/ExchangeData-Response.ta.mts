@@ -32,20 +32,24 @@ import { Data, _decode_Data, _encode_Data } from "../ISO-9506-MMS-1/Data.ta.mjs"
  */
 export
 class ExchangeData_Response {
+    /**
+     * @summary `listOfResponseData`.
+     * @description
+     *
+     * Output values matching `&response` in type and
+     * number. Empty list if there is no response data.
+     * ISO 9506-1:2003 §15.2.1.2.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly listOfResponseData: Data[];
+
     constructor (
-        /**
-         * @summary `listOfResponseData`.
-         * @description
-         *
-         * Output values matching `&response` in type and
-         * number. Empty list if there is no response data.
-         * ISO 9506-1:2003 §15.2.1.2.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly listOfResponseData: Data[]
-    ) {}
+        listOfResponseData: Data[]
+    ) {
+        this.listOfResponseData = listOfResponseData;
+    }
 
     /**
      * @summary Restructures an object into a ExchangeData_Response

@@ -33,17 +33,21 @@ import { PrivateEvent, _decode_PrivateEvent, _encode_PrivateEvent } from "../CST
  */
 export
 class VendorSpecificEvtsList {
+    /**
+     * @summary `privateEvent`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this event; omit if the SF does not support it
+     * (ECMA-269 Annex C).
+     */
+    public readonly privateEvent?: OPTIONAL<PrivateEvent>;
+
     constructor (
-        /**
-         * @summary `privateEvent`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this event; omit if the SF does not support it
-         * (ECMA-269 Annex C).
-         */
-        readonly privateEvent?: OPTIONAL<PrivateEvent>
-    ) {}
+        privateEvent?: OPTIONAL<PrivateEvent>
+    ) {
+        this.privateEvent = privateEvent;
+    }
 
     /**
      * @summary Restructures an object into a VendorSpecificEvtsList

@@ -68,279 +68,327 @@ import { TracePropagationList, _decode_TracePropagationList, _encode_TracePropag
  */
 export
 class ForwardAccessSignalling_Arg {
+    /**
+     * @summary `an_APDU`.
+     * @description
+     *
+     * Access-network APDU forwarded to MSC-B's A-interface or Iu-interface
+     * (3GPP TS 29.002 V19.1.0 clauses 8.4.4.3 and 7.6.9.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly an_APDU: AccessNetworkSignalInfo;
+    /**
+     * @summary `integrityProtectionInfo`.
+     * @description
+     *
+     * UMTS Integrity Protection Information (3GPP TS 25.413). Shall be
+     * included if available and the encapsulated PDU is BSSMAP Cipher Mode
+     * Command (3GPP TS 29.002 V19.1.0 clauses 8.4.4.3 and 7.6.6.8).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly integrityProtectionInfo?: OPTIONAL<IntegrityProtectionInformation>;
+    /**
+     * @summary `encryptionInfo`.
+     * @description
+     *
+     * UMTS Encryption Information (3GPP TS 25.413). Shall be included if
+     * available and the encapsulated PDU is BSSMAP Cipher Mode Command
+     * (3GPP TS 29.002 V19.1.0 clauses 8.4.4.3 and 7.6.6.9).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly encryptionInfo?: OPTIONAL<EncryptionInformation>;
+    /**
+     * @summary `keyStatus`.
+     * @description
+     *
+     * UMTS Key Status. Shall be included if available and the encapsulated
+     * PDU is BSSMAP Cipher Mode Command (3GPP TS 29.002 V19.1.0 clauses
+     * 8.4.4.3 and 7.6.6.11).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly keyStatus?: OPTIONAL<KeyStatus>;
+    /**
+     * @summary `allowedGSM_Algorithms`.
+     * @description
+     *
+     * Shall be included if the encapsulated PDU is RANAP Security Mode
+     * Command and the UE also supports GSM (3GPP TS 29.002 V19.1.0 clauses
+     * 8.4.4.3 and 7.6.6.13).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly allowedGSM_Algorithms?: OPTIONAL<AllowedGSM_Algorithms>;
+    /**
+     * @summary `allowedUMTS_Algorithms`.
+     * @description
+     *
+     * Shall be included if Integrity Protection Information and Encryption
+     * Information are not available and the encapsulated PDU is BSSMAP
+     * Cipher Mode Command (3GPP TS 29.002 V19.1.0 clauses 8.4.4.3 and
+     * 7.6.6.14).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly allowedUMTS_Algorithms?: OPTIONAL<AllowedUMTS_Algorithms>;
+    /**
+     * @summary `radioResourceInformation`.
+     * @description
+     *
+     * Shall be sent if the encapsulated PDU is RANAP RAB Assignment
+     * Request. Shall not be sent if Radio Resource List is sent (3GPP TS
+     * 29.002 V19.1.0 clauses 8.4.4.3 and 7.6.6.10).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly radioResourceInformation?: OPTIONAL<RadioResourceInformation>;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary `radioResourceList`.
+     * @description
+     *
+     * Shall be sent if the encapsulated PDU is RANAP RAB Assignment Request
+     * and MSC-A requests modification of multiple bearers. Shall not be
+     * sent if Radio Resource Information is sent (3GPP TS 29.002 V19.1.0
+     * clauses 8.4.4.3 and 7.6.6.10A).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly radioResourceList?: OPTIONAL<RadioResourceList>;
+    /**
+     * @summary `bssmap_ServiceHandover`.
+     * @description
+     *
+     * Present if available and the encapsulated PDU is RANAP RAB Assignment
+     * Request. Shall not be sent if BSSMAP Service Handover List is sent
+     * (3GPP TS 29.002 V19.1.0 clauses 8.4.4.3 and 7.6.6.5).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly bssmap_ServiceHandover?: OPTIONAL<BSSMAP_ServiceHandover>;
+    /**
+     * @summary `ranap_ServiceHandover`.
+     * @description
+     *
+     * Present if available and the encapsulated PDU is BSSMAP Assignment
+     * Request (3GPP TS 29.002 V19.1.0 clauses 8.4.4.3 and 7.6.6.6).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ranap_ServiceHandover?: OPTIONAL<RANAP_ServiceHandover>;
+    /**
+     * @summary `bssmap_ServiceHandoverList`.
+     * @description
+     *
+     * Present if available, encapsulated PDU is RANAP RAB Assignment
+     * Request, and MSC-A requests modification of multiple bearers. Shall
+     * not be sent if BSSMAP Service Handover is sent (3GPP TS 29.002
+     * V19.1.0 clauses 8.4.4.3 and 7.6.6.5A).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly bssmap_ServiceHandoverList?: OPTIONAL<BSSMAP_ServiceHandoverList>;
+    /**
+     * @summary `currentlyUsedCodec`.
+     * @description
+     *
+     * Iu-Currently Used Codec. Included if encapsulated PDU is RANAP RAB
+     * Assignment Request or BSSMAP Assignment Request for a speech bearer
+     * and the MS is in UMTS or GERAN Iu-mode. Shall not be included if
+     * Iu-Supported Codecs List is not included (3GPP TS 29.002 V19.1.0
+     * clauses 8.4.4.3 and 7.6.6.16).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly currentlyUsedCodec?: OPTIONAL<Codec>;
+    /**
+     * @summary `iuSupportedCodecsList`.
+     * @description
+     *
+     * Included for new or modified speech bearers when the encapsulated PDU
+     * is RANAP RAB Assignment Request or BSSMAP Assignment Request. Shall
+     * not be included if Iu-Selected Codec is included (3GPP TS 29.002
+     * V19.1.0 clauses 8.4.4.3 and 7.6.6.17).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly iuSupportedCodecsList?: OPTIONAL<SupportedCodecsList>;
+    /**
+     * @summary `rab_ConfigurationIndicator`.
+     * @description
+     *
+     * May be included if encapsulated PDU is RANAP RAB Assignment Request
+     * for a speech bearer and MSC-A knows MSC-B supports Iu-Supported
+     * Codecs List. Shall not be included if that list is not included (3GPP
+     * TS 29.002 V19.1.0 clauses 8.4.4.3 and 7.6.6.19).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly rab_ConfigurationIndicator?: OPTIONAL<NULL>;
+    /**
+     * @summary `iuSelectedCodec`.
+     * @description
+     *
+     * Included for an existing speech bearer in UMTS or GERAN Iu-mode when
+     * an Iu-Available Codecs List was previously received. Shall not be
+     * included if Iu-Supported Codecs List is included (3GPP TS 29.002
+     * V19.1.0 clauses 8.4.4.3 and 7.6.6.18).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly iuSelectedCodec?: OPTIONAL<Codec>;
+    /**
+     * @summary `alternativeChannelType`.
+     * @description
+     *
+     * Shall be present for a SCUDIF call if the encapsulated PDU is BSSMAP
+     * Assignment Request (3GPP TS 29.002 V19.1.0 clauses 8.4.4.3 and
+     * 7.6.6.21).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly alternativeChannelType?: OPTIONAL<RadioResourceInformation>;
+    /**
+     * @summary `tracePropagationList`.
+     * @description
+     *
+     * Shall be included when MSC-A requests trace invocation (3GPP TS
+     * 29.002 V19.1.0 clauses 8.4.4.3 and 7.6.10).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly tracePropagationList?: OPTIONAL<TracePropagationList>;
+    /**
+     * @summary `aoipSupportedCodecsListAnchor`.
+     * @description
+     *
+     * May be included if encapsulated PDU is BSSMAP Assignment Request for
+     * a new or modified speech bearer. Shall not be included if
+     * AoIP-Selected Codec Target is included (3GPP TS 29.002 V19.1.0
+     * clauses 8.4.4.3 and 7.6.6.22).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly aoipSupportedCodecsListAnchor?: OPTIONAL<AoIPCodecsList>;
+    /**
+     * @summary `aoipSelectedCodecTarget`.
+     * @description
+     *
+     * May be included for an existing speech bearer in AoIP-capable GSM
+     * access when an AoIP-Available Codecs List was previously received.
+     * Shall not be included if AoIP-Supported Codecs List Anchor is
+     * included (3GPP TS 29.002 V19.1.0 clauses 8.4.4.3 and 7.6.6.24).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly aoipSelectedCodecTarget?: OPTIONAL<AoIPCodec>;
+    /**
+     * @summary `uesbi_Iu`.
+     * @description
+     *
+     * Shall be present if available, the access network protocol is BSSAP,
+     * and the parameter has not already been sent to the target MSC (3GPP
+     * TS 29.002 V19.1.0 clauses 8.4.4.3 and 7.6.6.20).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly uesbi_Iu?: OPTIONAL<UESBI_Iu>;
+    /**
+     * @summary `imeisv`.
+     * @description
+     *
+     * Shall be present if available and not already sent to the target MSC,
+     * e.g. for Management based Trace Activation (3GPP TS 32.422) (3GPP TS
+     * 29.002 V19.1.0 clauses 8.4.4.3 and 7.6.2.3a).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly imeisv?: OPTIONAL<IMEI>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `an_APDU`.
-         * @description
-         *
-         * Access-network APDU forwarded to MSC-B's A-interface or Iu-interface
-         * (3GPP TS 29.002 V19.1.0 clauses 8.4.4.3 and 7.6.9.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly an_APDU: AccessNetworkSignalInfo,
-        /**
-         * @summary `integrityProtectionInfo`.
-         * @description
-         *
-         * UMTS Integrity Protection Information (3GPP TS 25.413). Shall be
-         * included if available and the encapsulated PDU is BSSMAP Cipher Mode
-         * Command (3GPP TS 29.002 V19.1.0 clauses 8.4.4.3 and 7.6.6.8).
-         *
-         * @public
-         * @readonly
-         */
-        readonly integrityProtectionInfo?: OPTIONAL<IntegrityProtectionInformation>,
-        /**
-         * @summary `encryptionInfo`.
-         * @description
-         *
-         * UMTS Encryption Information (3GPP TS 25.413). Shall be included if
-         * available and the encapsulated PDU is BSSMAP Cipher Mode Command
-         * (3GPP TS 29.002 V19.1.0 clauses 8.4.4.3 and 7.6.6.9).
-         *
-         * @public
-         * @readonly
-         */
-        readonly encryptionInfo?: OPTIONAL<EncryptionInformation>,
-        /**
-         * @summary `keyStatus`.
-         * @description
-         *
-         * UMTS Key Status. Shall be included if available and the encapsulated
-         * PDU is BSSMAP Cipher Mode Command (3GPP TS 29.002 V19.1.0 clauses
-         * 8.4.4.3 and 7.6.6.11).
-         *
-         * @public
-         * @readonly
-         */
-        readonly keyStatus?: OPTIONAL<KeyStatus>,
-        /**
-         * @summary `allowedGSM_Algorithms`.
-         * @description
-         *
-         * Shall be included if the encapsulated PDU is RANAP Security Mode
-         * Command and the UE also supports GSM (3GPP TS 29.002 V19.1.0 clauses
-         * 8.4.4.3 and 7.6.6.13).
-         *
-         * @public
-         * @readonly
-         */
-        readonly allowedGSM_Algorithms?: OPTIONAL<AllowedGSM_Algorithms>,
-        /**
-         * @summary `allowedUMTS_Algorithms`.
-         * @description
-         *
-         * Shall be included if Integrity Protection Information and Encryption
-         * Information are not available and the encapsulated PDU is BSSMAP
-         * Cipher Mode Command (3GPP TS 29.002 V19.1.0 clauses 8.4.4.3 and
-         * 7.6.6.14).
-         *
-         * @public
-         * @readonly
-         */
-        readonly allowedUMTS_Algorithms?: OPTIONAL<AllowedUMTS_Algorithms>,
-        /**
-         * @summary `radioResourceInformation`.
-         * @description
-         *
-         * Shall be sent if the encapsulated PDU is RANAP RAB Assignment
-         * Request. Shall not be sent if Radio Resource List is sent (3GPP TS
-         * 29.002 V19.1.0 clauses 8.4.4.3 and 7.6.6.10).
-         *
-         * @public
-         * @readonly
-         */
-        readonly radioResourceInformation?: OPTIONAL<RadioResourceInformation>,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary `radioResourceList`.
-         * @description
-         *
-         * Shall be sent if the encapsulated PDU is RANAP RAB Assignment Request
-         * and MSC-A requests modification of multiple bearers. Shall not be
-         * sent if Radio Resource Information is sent (3GPP TS 29.002 V19.1.0
-         * clauses 8.4.4.3 and 7.6.6.10A).
-         *
-         * @public
-         * @readonly
-         */
-        readonly radioResourceList?: OPTIONAL<RadioResourceList>,
-        /**
-         * @summary `bssmap_ServiceHandover`.
-         * @description
-         *
-         * Present if available and the encapsulated PDU is RANAP RAB Assignment
-         * Request. Shall not be sent if BSSMAP Service Handover List is sent
-         * (3GPP TS 29.002 V19.1.0 clauses 8.4.4.3 and 7.6.6.5).
-         *
-         * @public
-         * @readonly
-         */
-        readonly bssmap_ServiceHandover?: OPTIONAL<BSSMAP_ServiceHandover>,
-        /**
-         * @summary `ranap_ServiceHandover`.
-         * @description
-         *
-         * Present if available and the encapsulated PDU is BSSMAP Assignment
-         * Request (3GPP TS 29.002 V19.1.0 clauses 8.4.4.3 and 7.6.6.6).
-         *
-         * @public
-         * @readonly
-         */
-        readonly ranap_ServiceHandover?: OPTIONAL<RANAP_ServiceHandover>,
-        /**
-         * @summary `bssmap_ServiceHandoverList`.
-         * @description
-         *
-         * Present if available, encapsulated PDU is RANAP RAB Assignment
-         * Request, and MSC-A requests modification of multiple bearers. Shall
-         * not be sent if BSSMAP Service Handover is sent (3GPP TS 29.002
-         * V19.1.0 clauses 8.4.4.3 and 7.6.6.5A).
-         *
-         * @public
-         * @readonly
-         */
-        readonly bssmap_ServiceHandoverList?: OPTIONAL<BSSMAP_ServiceHandoverList>,
-        /**
-         * @summary `currentlyUsedCodec`.
-         * @description
-         *
-         * Iu-Currently Used Codec. Included if encapsulated PDU is RANAP RAB
-         * Assignment Request or BSSMAP Assignment Request for a speech bearer
-         * and the MS is in UMTS or GERAN Iu-mode. Shall not be included if
-         * Iu-Supported Codecs List is not included (3GPP TS 29.002 V19.1.0
-         * clauses 8.4.4.3 and 7.6.6.16).
-         *
-         * @public
-         * @readonly
-         */
-        readonly currentlyUsedCodec?: OPTIONAL<Codec>,
-        /**
-         * @summary `iuSupportedCodecsList`.
-         * @description
-         *
-         * Included for new or modified speech bearers when the encapsulated PDU
-         * is RANAP RAB Assignment Request or BSSMAP Assignment Request. Shall
-         * not be included if Iu-Selected Codec is included (3GPP TS 29.002
-         * V19.1.0 clauses 8.4.4.3 and 7.6.6.17).
-         *
-         * @public
-         * @readonly
-         */
-        readonly iuSupportedCodecsList?: OPTIONAL<SupportedCodecsList>,
-        /**
-         * @summary `rab_ConfigurationIndicator`.
-         * @description
-         *
-         * May be included if encapsulated PDU is RANAP RAB Assignment Request
-         * for a speech bearer and MSC-A knows MSC-B supports Iu-Supported
-         * Codecs List. Shall not be included if that list is not included (3GPP
-         * TS 29.002 V19.1.0 clauses 8.4.4.3 and 7.6.6.19).
-         *
-         * @public
-         * @readonly
-         */
-        readonly rab_ConfigurationIndicator?: OPTIONAL<NULL>,
-        /**
-         * @summary `iuSelectedCodec`.
-         * @description
-         *
-         * Included for an existing speech bearer in UMTS or GERAN Iu-mode when
-         * an Iu-Available Codecs List was previously received. Shall not be
-         * included if Iu-Supported Codecs List is included (3GPP TS 29.002
-         * V19.1.0 clauses 8.4.4.3 and 7.6.6.18).
-         *
-         * @public
-         * @readonly
-         */
-        readonly iuSelectedCodec?: OPTIONAL<Codec>,
-        /**
-         * @summary `alternativeChannelType`.
-         * @description
-         *
-         * Shall be present for a SCUDIF call if the encapsulated PDU is BSSMAP
-         * Assignment Request (3GPP TS 29.002 V19.1.0 clauses 8.4.4.3 and
-         * 7.6.6.21).
-         *
-         * @public
-         * @readonly
-         */
-        readonly alternativeChannelType?: OPTIONAL<RadioResourceInformation>,
-        /**
-         * @summary `tracePropagationList`.
-         * @description
-         *
-         * Shall be included when MSC-A requests trace invocation (3GPP TS
-         * 29.002 V19.1.0 clauses 8.4.4.3 and 7.6.10).
-         *
-         * @public
-         * @readonly
-         */
-        readonly tracePropagationList?: OPTIONAL<TracePropagationList>,
-        /**
-         * @summary `aoipSupportedCodecsListAnchor`.
-         * @description
-         *
-         * May be included if encapsulated PDU is BSSMAP Assignment Request for
-         * a new or modified speech bearer. Shall not be included if
-         * AoIP-Selected Codec Target is included (3GPP TS 29.002 V19.1.0
-         * clauses 8.4.4.3 and 7.6.6.22).
-         *
-         * @public
-         * @readonly
-         */
-        readonly aoipSupportedCodecsListAnchor?: OPTIONAL<AoIPCodecsList>,
-        /**
-         * @summary `aoipSelectedCodecTarget`.
-         * @description
-         *
-         * May be included for an existing speech bearer in AoIP-capable GSM
-         * access when an AoIP-Available Codecs List was previously received.
-         * Shall not be included if AoIP-Supported Codecs List Anchor is
-         * included (3GPP TS 29.002 V19.1.0 clauses 8.4.4.3 and 7.6.6.24).
-         *
-         * @public
-         * @readonly
-         */
-        readonly aoipSelectedCodecTarget?: OPTIONAL<AoIPCodec>,
-        /**
-         * @summary `uesbi_Iu`.
-         * @description
-         *
-         * Shall be present if available, the access network protocol is BSSAP,
-         * and the parameter has not already been sent to the target MSC (3GPP
-         * TS 29.002 V19.1.0 clauses 8.4.4.3 and 7.6.6.20).
-         *
-         * @public
-         * @readonly
-         */
-        readonly uesbi_Iu?: OPTIONAL<UESBI_Iu>,
-        /**
-         * @summary `imeisv`.
-         * @description
-         *
-         * Shall be present if available and not already sent to the target MSC,
-         * e.g. for Management based Trace Activation (3GPP TS 32.422) (3GPP TS
-         * 29.002 V19.1.0 clauses 8.4.4.3 and 7.6.2.3a).
-         *
-         * @public
-         * @readonly
-         */
-        readonly imeisv?: OPTIONAL<IMEI>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        an_APDU: AccessNetworkSignalInfo,
+        integrityProtectionInfo?: OPTIONAL<IntegrityProtectionInformation>,
+        encryptionInfo?: OPTIONAL<EncryptionInformation>,
+        keyStatus?: OPTIONAL<KeyStatus>,
+        allowedGSM_Algorithms?: OPTIONAL<AllowedGSM_Algorithms>,
+        allowedUMTS_Algorithms?: OPTIONAL<AllowedUMTS_Algorithms>,
+        radioResourceInformation?: OPTIONAL<RadioResourceInformation>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        radioResourceList?: OPTIONAL<RadioResourceList>,
+        bssmap_ServiceHandover?: OPTIONAL<BSSMAP_ServiceHandover>,
+        ranap_ServiceHandover?: OPTIONAL<RANAP_ServiceHandover>,
+        bssmap_ServiceHandoverList?: OPTIONAL<BSSMAP_ServiceHandoverList>,
+        currentlyUsedCodec?: OPTIONAL<Codec>,
+        iuSupportedCodecsList?: OPTIONAL<SupportedCodecsList>,
+        rab_ConfigurationIndicator?: OPTIONAL<NULL>,
+        iuSelectedCodec?: OPTIONAL<Codec>,
+        alternativeChannelType?: OPTIONAL<RadioResourceInformation>,
+        tracePropagationList?: OPTIONAL<TracePropagationList>,
+        aoipSupportedCodecsListAnchor?: OPTIONAL<AoIPCodecsList>,
+        aoipSelectedCodecTarget?: OPTIONAL<AoIPCodec>,
+        uesbi_Iu?: OPTIONAL<UESBI_Iu>,
+        imeisv?: OPTIONAL<IMEI>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.an_APDU = an_APDU;
+        this.integrityProtectionInfo = integrityProtectionInfo;
+        this.encryptionInfo = encryptionInfo;
+        this.keyStatus = keyStatus;
+        this.allowedGSM_Algorithms = allowedGSM_Algorithms;
+        this.allowedUMTS_Algorithms = allowedUMTS_Algorithms;
+        this.radioResourceInformation = radioResourceInformation;
+        this.extensionContainer = extensionContainer;
+        this.radioResourceList = radioResourceList;
+        this.bssmap_ServiceHandover = bssmap_ServiceHandover;
+        this.ranap_ServiceHandover = ranap_ServiceHandover;
+        this.bssmap_ServiceHandoverList = bssmap_ServiceHandoverList;
+        this.currentlyUsedCodec = currentlyUsedCodec;
+        this.iuSupportedCodecsList = iuSupportedCodecsList;
+        this.rab_ConfigurationIndicator = rab_ConfigurationIndicator;
+        this.iuSelectedCodec = iuSelectedCodec;
+        this.alternativeChannelType = alternativeChannelType;
+        this.tracePropagationList = tracePropagationList;
+        this.aoipSupportedCodecsListAnchor = aoipSupportedCodecsListAnchor;
+        this.aoipSelectedCodecTarget = aoipSelectedCodecTarget;
+        this.uesbi_Iu = uesbi_Iu;
+        this.imeisv = imeisv;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a ForwardAccessSignalling_Arg

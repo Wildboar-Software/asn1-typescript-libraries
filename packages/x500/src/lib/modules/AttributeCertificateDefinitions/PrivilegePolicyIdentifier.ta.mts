@@ -33,26 +33,34 @@ import {
  *
  */
 export class PrivilegePolicyIdentifier {
+    /**
+     * @summary `privilegePolicy`.
+     * @public
+     * @readonly
+     */
+    public readonly privilegePolicy: PrivilegePolicy;
+    /**
+     * @summary `privPolSyntax`.
+     * @public
+     * @readonly
+     */
+    public readonly privPolSyntax: InfoSyntax;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `privilegePolicy`.
-         * @public
-         * @readonly
-         */
-        readonly privilegePolicy: PrivilegePolicy,
-        /**
-         * @summary `privPolSyntax`.
-         * @public
-         * @readonly
-         */
-        readonly privPolSyntax: InfoSyntax,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        privilegePolicy: PrivilegePolicy,
+        privPolSyntax: InfoSyntax,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.privilegePolicy = privilegePolicy;
+        this.privPolSyntax = privPolSyntax;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a PrivilegePolicyIdentifier

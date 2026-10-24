@@ -41,42 +41,50 @@ import { MediaDescriptor_streams, _decode_MediaDescriptor_streams, _encode_Media
  */
 export
 class MediaDescriptor {
+    /**
+     * @summary `termStateDescr`.
+     * @description
+     *
+     * Properties that apply to the whole termination: ServiceStates,
+     * EventBufferControl, and packaged properties that are not stream
+     * specific (clause 7.1.5).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly termStateDescr?: OPTIONAL<TerminationStateDescriptor>;
+    /**
+     * @summary `streams`.
+     * @description
+     *
+     * One stream or many. `oneStream` is the convenience form and means
+     * StreamID 1 (clause 7.1.4). `multiStream` identifies each stream.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly streams?: OPTIONAL<MediaDescriptor_streams>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @description
+     *
+     * Extension additions this version does not define. Kept so a later
+     * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `termStateDescr`.
-         * @description
-         *
-         * Properties that apply to the whole termination: ServiceStates,
-         * EventBufferControl, and packaged properties that are not stream
-         * specific (clause 7.1.5).
-         *
-         * @public
-         * @readonly
-         */
-        readonly termStateDescr?: OPTIONAL<TerminationStateDescriptor>,
-        /**
-         * @summary `streams`.
-         * @description
-         *
-         * One stream or many. `oneStream` is the convenience form and means
-         * StreamID 1 (clause 7.1.4). `multiStream` identifies each stream.
-         *
-         * @public
-         * @readonly
-         */
-        readonly streams?: OPTIONAL<MediaDescriptor_streams>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @description
-         *
-         * Extension additions this version does not define. Kept so a later
-         * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
-         *
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        termStateDescr?: OPTIONAL<TerminationStateDescriptor>,
+        streams?: OPTIONAL<MediaDescriptor_streams>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.termStateDescr = termStateDescr;
+        this.streams = streams;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a MediaDescriptor

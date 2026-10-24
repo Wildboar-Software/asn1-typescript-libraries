@@ -40,26 +40,34 @@ import { sha1 } from "../PKCS-1/sha1.va.mjs";
  *
  */
 export class RSAES_OAEP_params {
+    /**
+     * @summary `hashAlgorithm`.
+     * @public
+     * @readonly
+     */
+    public readonly hashAlgorithm?: OPTIONAL<HashAlgorithm>;
+    /**
+     * @summary `maskGenAlgorithm`.
+     * @public
+     * @readonly
+     */
+    public readonly maskGenAlgorithm?: OPTIONAL<MaskGenAlgorithm>;
+    /**
+     * @summary `pSourceAlgorithm`.
+     * @public
+     * @readonly
+     */
+    public readonly pSourceAlgorithm?: OPTIONAL<PSourceAlgorithm>;
+
     constructor(
-        /**
-         * @summary `hashAlgorithm`.
-         * @public
-         * @readonly
-         */
-        readonly hashAlgorithm?: OPTIONAL<HashAlgorithm>,
-        /**
-         * @summary `maskGenAlgorithm`.
-         * @public
-         * @readonly
-         */
-        readonly maskGenAlgorithm?: OPTIONAL<MaskGenAlgorithm>,
-        /**
-         * @summary `pSourceAlgorithm`.
-         * @public
-         * @readonly
-         */
-        readonly pSourceAlgorithm?: OPTIONAL<PSourceAlgorithm>
-    ) {}
+        hashAlgorithm?: OPTIONAL<HashAlgorithm>,
+        maskGenAlgorithm?: OPTIONAL<MaskGenAlgorithm>,
+        pSourceAlgorithm?: OPTIONAL<PSourceAlgorithm>
+    ) {
+        this.hashAlgorithm = hashAlgorithm;
+        this.maskGenAlgorithm = maskGenAlgorithm;
+        this.pSourceAlgorithm = pSourceAlgorithm;
+    }
 
     /**
      * @summary Restructures an object into a RSAES_OAEP_params

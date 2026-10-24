@@ -32,34 +32,42 @@ import {
  *
  */
 export class DeleteAvlReq {
+    /**
+     * @summary `invokeID`.
+     * @description
+     *
+     * Pairs this request with `DeleteAvlRsp`. INTEGER (0..127); unique per pair until the interaction completes.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly invokeID: InvokeID;
+    /**
+     * @summary `avl_Id`.
+     * @description
+     *
+     * Serial of the AVL to delete (`avl-Id`). Absent means the unique local AVL with no `serialNumber`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly avl_Id?: OPTIONAL<AvlSerialNumber>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `invokeID`.
-         * @description
-         *
-         * Pairs this request with `DeleteAvlRsp`. INTEGER (0..127); unique per pair until the interaction completes.
-         *
-         * @public
-         * @readonly
-         */
-        readonly invokeID: InvokeID,
-        /**
-         * @summary `avl_Id`.
-         * @description
-         *
-         * Serial of the AVL to delete (`avl-Id`). Absent means the unique local AVL with no `serialNumber`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly avl_Id?: OPTIONAL<AvlSerialNumber>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        invokeID: InvokeID,
+        avl_Id?: OPTIONAL<AvlSerialNumber>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.invokeID = invokeID;
+        this.avl_Id = avl_Id;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a DeleteAvlReq

@@ -56,64 +56,76 @@ import {
  *
  */
 export class Import_RequestParams {
+  /**
+   * @summary `originalBSPHandle`.
+   * @description
+   *
+   * Attach-session handle on the hosting (slave) endpoint.
+   * BioAPI `BSPHandle` is rewritten via clauses 24 and 26.
+   * X.1083 §16.39.5.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly originalBSPHandle: BioAPI_HANDLE;
+  /**
+   * @summary `inputData`.
+   * @description
+   *
+   * Raw biometric data to import. C `NULL` is unconvertible
+   * (clause 19). X.1083 §16.39.5.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly inputData: BioAPI_DATA;
+  /**
+   * @summary `inputFormat`.
+   * @description
+   *
+   * Format of `inputData`. C `NULL` is unconvertible
+   * (clause 19). X.1083 §16.39.5.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly inputFormat: BioAPI_BIR_BIOMETRIC_DATA_FORMAT;
+  /**
+   * @summary `outputFormat`.
+   * @description
+   *
+   * Requested format of the constructed BIR. C `NULL` ↔
+   * absent (clause 19). X.1083 §16.39.5.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly outputFormat: OPTIONAL<BioAPI_BIR_BIOMETRIC_DATA_FORMAT>;
+  /**
+   * @summary `purpose`.
+   * @description
+   *
+   * Intended purpose of the constructed BIR, from BioAPI
+   * `Purpose`. X.1083 §16.39.5.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly purpose: BioAPI_BIR_PURPOSE;
+
   constructor(
-    /**
-     * @summary `originalBSPHandle`.
-     * @description
-     *
-     * Attach-session handle on the hosting (slave) endpoint.
-     * BioAPI `BSPHandle` is rewritten via clauses 24 and 26.
-     * X.1083 §16.39.5.
-     *
-     * @public
-     * @readonly
-     */
-    readonly originalBSPHandle: BioAPI_HANDLE,
-    /**
-     * @summary `inputData`.
-     * @description
-     *
-     * Raw biometric data to import. C `NULL` is unconvertible
-     * (clause 19). X.1083 §16.39.5.
-     *
-     * @public
-     * @readonly
-     */
-    readonly inputData: BioAPI_DATA,
-    /**
-     * @summary `inputFormat`.
-     * @description
-     *
-     * Format of `inputData`. C `NULL` is unconvertible
-     * (clause 19). X.1083 §16.39.5.
-     *
-     * @public
-     * @readonly
-     */
-    readonly inputFormat: BioAPI_BIR_BIOMETRIC_DATA_FORMAT,
-    /**
-     * @summary `outputFormat`.
-     * @description
-     *
-     * Requested format of the constructed BIR. C `NULL` ↔
-     * absent (clause 19). X.1083 §16.39.5.
-     *
-     * @public
-     * @readonly
-     */
-    readonly outputFormat: OPTIONAL<BioAPI_BIR_BIOMETRIC_DATA_FORMAT>,
-    /**
-     * @summary `purpose`.
-     * @description
-     *
-     * Intended purpose of the constructed BIR, from BioAPI
-     * `Purpose`. X.1083 §16.39.5.
-     *
-     * @public
-     * @readonly
-     */
-    readonly purpose: BioAPI_BIR_PURPOSE
-  ) {}
+    originalBSPHandle: BioAPI_HANDLE,
+    inputData: BioAPI_DATA,
+    inputFormat: BioAPI_BIR_BIOMETRIC_DATA_FORMAT,
+    outputFormat: OPTIONAL<BioAPI_BIR_BIOMETRIC_DATA_FORMAT>,
+    purpose: BioAPI_BIR_PURPOSE
+  ) {
+    this.originalBSPHandle = originalBSPHandle;
+    this.inputData = inputData;
+    this.inputFormat = inputFormat;
+    this.outputFormat = outputFormat;
+    this.purpose = purpose;
+  }
 
   /**
    * @summary Restructures an object into a Import_RequestParams

@@ -35,27 +35,33 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class SystemRegisterCancelArgument {
+    /**
+     * @summary `sysStatRegisterID`.
+     * @description
+     *
+     * Registration to cancel. Mandatory.
+     * @public
+     * @readonly
+     */
+    public readonly sysStatRegisterID: SysStatRegisterID;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData. ECMA-269 Table 14-7.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `sysStatRegisterID`.
-         * @description
-         *
-         * Registration to cancel. Mandatory.
-         * @public
-         * @readonly
-         */
-        readonly sysStatRegisterID: SysStatRegisterID,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData. ECMA-269 Table 14-7.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        sysStatRegisterID: SysStatRegisterID,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.sysStatRegisterID = sysStatRegisterID;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a SystemRegisterCancelArgument

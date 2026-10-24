@@ -34,30 +34,36 @@ import { MMSString, _decode_MMSString, _encode_MMSString } from "../ISO-9506-MMS
  */
 export
 class Output_Request {
+    /**
+     * @summary `operatorStationName`.
+     * @description
+     *
+     * Operator Station on which to display.
+     * ISO 9506-1:2003 §17.3.1.1.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly operatorStationName: Identifier;
+    /**
+     * @summary `listOfOutputData`.
+     * @description
+     *
+     * Lines to display; each element is one display line.
+     * ISO 9506-1:2003 §17.3.1.1.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly listOfOutputData: MMSString[];
+
     constructor (
-        /**
-         * @summary `operatorStationName`.
-         * @description
-         *
-         * Operator Station on which to display.
-         * ISO 9506-1:2003 §17.3.1.1.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly operatorStationName: Identifier,
-        /**
-         * @summary `listOfOutputData`.
-         * @description
-         *
-         * Lines to display; each element is one display line.
-         * ISO 9506-1:2003 §17.3.1.1.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly listOfOutputData: MMSString[]
-    ) {}
+        operatorStationName: Identifier,
+        listOfOutputData: MMSString[]
+    ) {
+        this.operatorStationName = operatorStationName;
+        this.listOfOutputData = listOfOutputData;
+    }
 
     /**
      * @summary Restructures an object into a Output_Request

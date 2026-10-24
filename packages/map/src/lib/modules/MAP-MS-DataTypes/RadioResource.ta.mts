@@ -32,38 +32,46 @@ import { RadioResourceInformation, _decode_RadioResourceInformation, _encode_Rad
  */
 export
 class RadioResource {
+    /**
+     * @summary `radioResourceInformation`.
+     * @description
+     *
+     * Channel Type IE as in 3GPP TS 48.008.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.6.10).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly radioResourceInformation: RadioResourceInformation;
+    /**
+     * @summary `rab_Id`.
+     * @description
+     *
+     * Radio access bearer identifier as in 3GPP TS 25.413.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.2.57).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly rab_Id: RAB_Id;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `radioResourceInformation`.
-         * @description
-         *
-         * Channel Type IE as in 3GPP TS 48.008.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.6.10).
-         *
-         * @public
-         * @readonly
-         */
-        readonly radioResourceInformation: RadioResourceInformation,
-        /**
-         * @summary `rab_Id`.
-         * @description
-         *
-         * Radio access bearer identifier as in 3GPP TS 25.413.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.2.57).
-         *
-         * @public
-         * @readonly
-         */
-        readonly rab_Id: RAB_Id,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        radioResourceInformation: RadioResourceInformation,
+        rab_Id: RAB_Id,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.radioResourceInformation = radioResourceInformation;
+        this.rab_Id = rab_Id;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a RadioResource

@@ -46,54 +46,66 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class DoNotDisturbEvent {
+    /**
+     * @summary `device`.
+     * @description
+     *
+     * Device whose DND feature changed.
+     * @public
+     * @readonly
+     */
+    public readonly device: SubjectDeviceID;
+    /**
+     * @summary `doNotDisturbOn`.
+     * @description
+     *
+     * FALSE = disabled; TRUE = enabled.
+     * @public
+     * @readonly
+     */
+    public readonly doNotDisturbOn: BOOLEAN;
+    /**
+     * @summary `callOrigination`.
+     * @description
+     *
+     * Internal and/or External origination bits, if supported.
+     * @public
+     * @readonly
+     */
+    public readonly callOrigination?: OPTIONAL<CallOrigination>;
+    /**
+     * @summary `callingDeviceList`.
+     * @description
+     *
+     * Calling devices from which DND is honoured, if present.
+     * @public
+     * @readonly
+     */
+    public readonly callingDeviceList?: OPTIONAL<DeviceID[]>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `device`.
-         * @description
-         *
-         * Device whose DND feature changed.
-         * @public
-         * @readonly
-         */
-        readonly device: SubjectDeviceID,
-        /**
-         * @summary `doNotDisturbOn`.
-         * @description
-         *
-         * FALSE = disabled; TRUE = enabled.
-         * @public
-         * @readonly
-         */
-        readonly doNotDisturbOn: BOOLEAN,
-        /**
-         * @summary `callOrigination`.
-         * @description
-         *
-         * Internal and/or External origination bits, if supported.
-         * @public
-         * @readonly
-         */
-        readonly callOrigination?: OPTIONAL<CallOrigination>,
-        /**
-         * @summary `callingDeviceList`.
-         * @description
-         *
-         * Calling devices from which DND is honoured, if present.
-         * @public
-         * @readonly
-         */
-        readonly callingDeviceList?: OPTIONAL<DeviceID[]>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        device: SubjectDeviceID,
+        doNotDisturbOn: BOOLEAN,
+        callOrigination?: OPTIONAL<CallOrigination>,
+        callingDeviceList?: OPTIONAL<DeviceID[]>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.device = device;
+        this.doNotDisturbOn = doNotDisturbOn;
+        this.callOrigination = callOrigination;
+        this.callingDeviceList = callingDeviceList;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a DoNotDisturbEvent

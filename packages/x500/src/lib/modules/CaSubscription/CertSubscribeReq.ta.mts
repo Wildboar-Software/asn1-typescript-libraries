@@ -37,32 +37,40 @@ import {
  *
  */
 export class CertSubscribeReq {
+    /**
+     * @summary `invokeID`.
+     * @description
+     *
+     * Pairs this request with the matching response; unique per pair; reusable after completion.
+     * @public
+     * @readonly
+     */
+    public readonly invokeID: InvokeID;
+    /**
+     * @summary `certs`.
+     * @description
+     *
+     * SEQUENCE SIZE (1..MAX); empty is illegal. Each item is `subject`+`serialNumber`. Response SEQUENCE OF has the same count and order as this request (one element per requested cert).
+     * @public
+     * @readonly
+     */
+    public readonly certs: CertSubscribeReq_certs_Item[];
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `invokeID`.
-         * @description
-         *
-         * Pairs this request with the matching response; unique per pair; reusable after completion.
-         * @public
-         * @readonly
-         */
-        readonly invokeID: InvokeID,
-        /**
-         * @summary `certs`.
-         * @description
-         *
-         * SEQUENCE SIZE (1..MAX); empty is illegal. Each item is `subject`+`serialNumber`. Response SEQUENCE OF has the same count and order as this request (one element per requested cert).
-         * @public
-         * @readonly
-         */
-        readonly certs: CertSubscribeReq_certs_Item[],
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        invokeID: InvokeID,
+        certs: CertSubscribeReq_certs_Item[],
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.invokeID = invokeID;
+        this.certs = certs;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a CertSubscribeReq

@@ -35,26 +35,32 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class EntryControl_feprList_Item {
+    /**
+     * @summary `fepcoName`.
+     * @description
+     * Name of the Field Entry Pilot Control Object. ISO/IEC
+     * 9040:1997 §3.3.61.
+     * @public
+     * @readonly
+     */
+    public readonly fepcoName: PrintableString;
+    /**
+     * @summary `recordIndex`.
+     * @description
+     * Index of the FEPR within that FEPCO. ISO/IEC 9040:1997
+     * §3.3.63.
+     * @public
+     * @readonly
+     */
+    public readonly recordIndex: INTEGER;
+
     constructor (
-        /**
-         * @summary `fepcoName`.
-         * @description
-         * Name of the Field Entry Pilot Control Object. ISO/IEC
-         * 9040:1997 §3.3.61.
-         * @public
-         * @readonly
-         */
-        readonly fepcoName: PrintableString,
-        /**
-         * @summary `recordIndex`.
-         * @description
-         * Index of the FEPR within that FEPCO. ISO/IEC 9040:1997
-         * §3.3.63.
-         * @public
-         * @readonly
-         */
-        readonly recordIndex: INTEGER
-    ) {}
+        fepcoName: PrintableString,
+        recordIndex: INTEGER
+    ) {
+        this.fepcoName = fepcoName;
+        this.recordIndex = recordIndex;
+    }
 
     /**
      * @summary Restructures an object into a EntryControl_feprList_Item

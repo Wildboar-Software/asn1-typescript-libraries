@@ -63,83 +63,99 @@ import {
  *
  */
 export class Announcement {
+  /**
+   * @summary `protocolVersion`.
+   * @description
+   *
+   * Discovery protocol version; this annex specifies major 1,
+   * minor 0. X.1083 Annex B.12.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly protocolVersion: ProtocolVersion;
+  /**
+   * @summary `slaveEndpointIPAddress`.
+   * @description
+   *
+   * IP address of the slave. Use `ipv4` on IPv4 networks and
+   * `ipv6` on IPv6 networks. X.1083 Annex B.12.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly slaveEndpointIPAddress: IPAddress;
+  /**
+   * @summary `slaveEndpointMACAddress`.
+   * @description
+   *
+   * Ethernet address of the slave's interface (ISO/IEC TR
+   * 8802-1). X.1083 Annex B.12.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly slaveEndpointMACAddress: MACAddress;
+  /**
+   * @summary `slaveEndpointName`.
+   * @description
+   *
+   * Name of the slave endpoint (1..32 IA5 characters). A
+   * change of this name should trigger a new announcement
+   * (X.1083 B.13). X.1083 Annex B.12.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly slaveEndpointName: IA5String;
+  /**
+   * @summary `bipMessagePort`.
+   * @description
+   *
+   * TCP port for BIP messages. Default 4376; the master
+   * learns the actual port from this field. X.1083 Annex
+   * B.12.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly bipMessagePort?: OPTIONAL<Port>;
+  /**
+   * @summary `securityProtocols`.
+   * @description
+   *
+   * Security protocols the slave supports. Absence means no
+   * security is used for BIP transfers. Each entry is an OID
+   * plus a parameter. X.1083 Annex B.7, B.12.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly securityProtocols?: OPTIONAL<SecurityProtocol[]>;
+  /**
+   * @summary Extensions that are not recognized.
+   * @public
+   * @readonly
+   */
+  public readonly _unrecognizedExtensionsList: _Element[];
+
   constructor(
-    /**
-     * @summary `protocolVersion`.
-     * @description
-     *
-     * Discovery protocol version; this annex specifies major 1,
-     * minor 0. X.1083 Annex B.12.
-     *
-     * @public
-     * @readonly
-     */
-    readonly protocolVersion: ProtocolVersion,
-    /**
-     * @summary `slaveEndpointIPAddress`.
-     * @description
-     *
-     * IP address of the slave. Use `ipv4` on IPv4 networks and
-     * `ipv6` on IPv6 networks. X.1083 Annex B.12.
-     *
-     * @public
-     * @readonly
-     */
-    readonly slaveEndpointIPAddress: IPAddress,
-    /**
-     * @summary `slaveEndpointMACAddress`.
-     * @description
-     *
-     * Ethernet address of the slave's interface (ISO/IEC TR
-     * 8802-1). X.1083 Annex B.12.
-     *
-     * @public
-     * @readonly
-     */
-    readonly slaveEndpointMACAddress: MACAddress,
-    /**
-     * @summary `slaveEndpointName`.
-     * @description
-     *
-     * Name of the slave endpoint (1..32 IA5 characters). A
-     * change of this name should trigger a new announcement
-     * (X.1083 B.13). X.1083 Annex B.12.
-     *
-     * @public
-     * @readonly
-     */
-    readonly slaveEndpointName: IA5String,
-    /**
-     * @summary `bipMessagePort`.
-     * @description
-     *
-     * TCP port for BIP messages. Default 4376; the master
-     * learns the actual port from this field. X.1083 Annex
-     * B.12.
-     *
-     * @public
-     * @readonly
-     */
-    readonly bipMessagePort?: OPTIONAL<Port>,
-    /**
-     * @summary `securityProtocols`.
-     * @description
-     *
-     * Security protocols the slave supports. Absence means no
-     * security is used for BIP transfers. Each entry is an OID
-     * plus a parameter. X.1083 Annex B.7, B.12.
-     *
-     * @public
-     * @readonly
-     */
-    readonly securityProtocols?: OPTIONAL<SecurityProtocol[]>,
-    /**
-     * @summary Extensions that are not recognized.
-     * @public
-     * @readonly
-     */
-    readonly _unrecognizedExtensionsList: _Element[] = []
-  ) {}
+    protocolVersion: ProtocolVersion,
+    slaveEndpointIPAddress: IPAddress,
+    slaveEndpointMACAddress: MACAddress,
+    slaveEndpointName: IA5String,
+    bipMessagePort?: OPTIONAL<Port>,
+    securityProtocols?: OPTIONAL<SecurityProtocol[]>,
+    _unrecognizedExtensionsList: _Element[] = []
+  ) {
+    this.protocolVersion = protocolVersion;
+    this.slaveEndpointIPAddress = slaveEndpointIPAddress;
+    this.slaveEndpointMACAddress = slaveEndpointMACAddress;
+    this.slaveEndpointName = slaveEndpointName;
+    this.bipMessagePort = bipMessagePort;
+    this.securityProtocols = securityProtocols;
+    this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+  }
 
   /**
    * @summary Restructures an object into a Announcement

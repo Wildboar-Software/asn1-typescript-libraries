@@ -40,36 +40,42 @@ import { ScatteredAccessDescription, _decode_ScatteredAccessDescription, _encode
  */
 export
 class DefineScatteredAccess_Request {
+    /**
+     * @summary `scatteredAccessName`.
+     * @description
+     *
+     * Name uniquely identifying the Scattered
+     * Access object at the VMD. Same name space
+     * as Variable Name (VMD-, Domain-, or AA-
+     * specific scope).
+     *
+     * [ISO 9506-1:2003 Annex E, E.3.1.1.1]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly scatteredAccessName: ObjectName;
+    /**
+     * @summary `scatteredAccessDescription`.
+     * @description
+     *
+     * Component variables (one or more) accessed
+     * via the object. See E.2.1.
+     *
+     * [ISO 9506-1:2003 Annex E, E.3.1.1.2]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly scatteredAccessDescription: ScatteredAccessDescription;
+
     constructor (
-        /**
-         * @summary `scatteredAccessName`.
-         * @description
-         *
-         * Name uniquely identifying the Scattered
-         * Access object at the VMD. Same name space
-         * as Variable Name (VMD-, Domain-, or AA-
-         * specific scope).
-         *
-         * [ISO 9506-1:2003 Annex E, E.3.1.1.1]
-         *
-         * @public
-         * @readonly
-         */
-        readonly scatteredAccessName: ObjectName,
-        /**
-         * @summary `scatteredAccessDescription`.
-         * @description
-         *
-         * Component variables (one or more) accessed
-         * via the object. See E.2.1.
-         *
-         * [ISO 9506-1:2003 Annex E, E.3.1.1.2]
-         *
-         * @public
-         * @readonly
-         */
-        readonly scatteredAccessDescription: ScatteredAccessDescription
-    ) {}
+        scatteredAccessName: ObjectName,
+        scatteredAccessDescription: ScatteredAccessDescription
+    ) {
+        this.scatteredAccessName = scatteredAccessName;
+        this.scatteredAccessDescription = scatteredAccessDescription;
+    }
 
     /**
      * @summary Restructures an object into a DefineScatteredAccess_Request

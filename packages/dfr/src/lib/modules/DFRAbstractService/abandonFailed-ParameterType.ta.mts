@@ -38,26 +38,32 @@ import {
  */
 export
 class abandonFailed_ParameterType {
+    /**
+     * @summary `problem`.
+     * @description
+     *
+     * Why abandon failed.
+     * @public
+     * @readonly
+     */
+    public readonly problem: AbandonProblem;
+    /**
+     * @summary `operation`.
+     * @description
+     *
+     * Invoke-id of the operation that was not abandoned.
+     * @public
+     * @readonly
+     */
+    public readonly operation: InvokeId;
+
     constructor (
-        /**
-         * @summary `problem`.
-         * @description
-         *
-         * Why abandon failed.
-         * @public
-         * @readonly
-         */
-        readonly problem: AbandonProblem,
-        /**
-         * @summary `operation`.
-         * @description
-         *
-         * Invoke-id of the operation that was not abandoned.
-         * @public
-         * @readonly
-         */
-        readonly operation: InvokeId
-    ) {}
+        problem: AbandonProblem,
+        operation: InvokeId
+    ) {
+        this.problem = problem;
+        this.operation = operation;
+    }
 
     /**
      * @summary Restructures an object into a abandonFailed_ParameterType

@@ -38,74 +38,90 @@ import { ServiceKey, _decode_ServiceKey, _encode_ServiceKey } from "../MAP-MS-Da
  */
 export
 class M_CSI {
+    /**
+     * @summary `mobilityTriggers`.
+     * @description
+     *
+     * CS-domain MM events to report (CAMEL phase 4 MM-Code values). (3GPP
+     * TS 29.002 V19.1.0 clauses 8.1.8.3 and 17.7.1)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mobilityTriggers: MobilityTriggers;
+    /**
+     * @summary `serviceKey`.
+     * @description
+     *
+     * Service key for the gsmSCF. (3GPP TS 29.002 V19.1.0 clause 8.1.8.3)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly serviceKey: ServiceKey;
+    /**
+     * @summary `gsmSCF_Address`.
+     * @description
+     *
+     * gsmSCF address to which MM events are reported. (3GPP TS 29.002
+     * V19.1.0 clause 8.1.8)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly gsmSCF_Address: ISDN_AddressString;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary `notificationToCSE`.
+     * @description
+     *
+     * Shall not be present when M-CSI is sent to the VLR; may appear only
+     * in ATSI/ATM ack/NSDC. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly notificationToCSE?: OPTIONAL<NULL>;
+    /**
+     * @summary `csi_Active`.
+     * @description
+     *
+     * Shall not be present when M-CSI is sent to the VLR; may appear only
+     * in ATSI/ATM ack/NSDC. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly csi_Active?: OPTIONAL<NULL>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `mobilityTriggers`.
-         * @description
-         *
-         * CS-domain MM events to report (CAMEL phase 4 MM-Code values). (3GPP
-         * TS 29.002 V19.1.0 clauses 8.1.8.3 and 17.7.1)
-         *
-         * @public
-         * @readonly
-         */
-        readonly mobilityTriggers: MobilityTriggers,
-        /**
-         * @summary `serviceKey`.
-         * @description
-         *
-         * Service key for the gsmSCF. (3GPP TS 29.002 V19.1.0 clause 8.1.8.3)
-         *
-         * @public
-         * @readonly
-         */
-        readonly serviceKey: ServiceKey,
-        /**
-         * @summary `gsmSCF_Address`.
-         * @description
-         *
-         * gsmSCF address to which MM events are reported. (3GPP TS 29.002
-         * V19.1.0 clause 8.1.8)
-         *
-         * @public
-         * @readonly
-         */
-        readonly gsmSCF_Address: ISDN_AddressString,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary `notificationToCSE`.
-         * @description
-         *
-         * Shall not be present when M-CSI is sent to the VLR; may appear only
-         * in ATSI/ATM ack/NSDC. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
-         *
-         * @public
-         * @readonly
-         */
-        readonly notificationToCSE?: OPTIONAL<NULL>,
-        /**
-         * @summary `csi_Active`.
-         * @description
-         *
-         * Shall not be present when M-CSI is sent to the VLR; may appear only
-         * in ATSI/ATM ack/NSDC. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
-         *
-         * @public
-         * @readonly
-         */
-        readonly csi_Active?: OPTIONAL<NULL>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        mobilityTriggers: MobilityTriggers,
+        serviceKey: ServiceKey,
+        gsmSCF_Address: ISDN_AddressString,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        notificationToCSE?: OPTIONAL<NULL>,
+        csi_Active?: OPTIONAL<NULL>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.mobilityTriggers = mobilityTriggers;
+        this.serviceKey = serviceKey;
+        this.gsmSCF_Address = gsmSCF_Address;
+        this.extensionContainer = extensionContainer;
+        this.notificationToCSE = notificationToCSE;
+        this.csi_Active = csi_Active;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a M_CSI

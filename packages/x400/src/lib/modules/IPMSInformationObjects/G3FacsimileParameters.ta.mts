@@ -34,20 +34,26 @@ import {
  *
  */
 export class G3FacsimileParameters {
+    /**
+     * @summary `number_of_pages`.
+     * @public
+     * @readonly
+     */
+    public readonly number_of_pages?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `non_basic_parameters`.
+     * @public
+     * @readonly
+     */
+    public readonly non_basic_parameters?: OPTIONAL<G3FacsimileNonBasicParameters>;
+
     constructor(
-        /**
-         * @summary `number_of_pages`.
-         * @public
-         * @readonly
-         */
-        readonly number_of_pages?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `non_basic_parameters`.
-         * @public
-         * @readonly
-         */
-        readonly non_basic_parameters?: OPTIONAL<G3FacsimileNonBasicParameters>
-    ) {}
+        number_of_pages?: OPTIONAL<INTEGER>,
+        non_basic_parameters?: OPTIONAL<G3FacsimileNonBasicParameters>
+    ) {
+        this.number_of_pages = number_of_pages;
+        this.non_basic_parameters = non_basic_parameters;
+    }
 
     /**
      * @summary Restructures an object into a G3FacsimileParameters

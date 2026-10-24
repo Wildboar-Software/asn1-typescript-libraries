@@ -42,29 +42,35 @@ import {
  *
  */
 export class OptionalIdentifierAndRole {
+    /**
+     * @summary `optionalOperationName`.
+     * @description
+     *
+     * Optional operation or notification name from the related
+     * relationship class template. ITU-T Rec. X.725 (11/95)
+     * A.2.3.5.
+     * @public
+     * @readonly
+     */
+    public readonly optionalOperationName: OptionalIdentifier;
+    /**
+     * @summary `optionalRoleName`.
+     * @description
+     *
+     * Role the operation refers to. Optional if the relationship
+     * defines only one role. ITU-T Rec. X.725 (11/95) A.2.3.5.
+     * @public
+     * @readonly
+     */
+    public readonly optionalRoleName?: OPTIONAL<Identifier>;
+
     constructor(
-        /**
-         * @summary `optionalOperationName`.
-         * @description
-         *
-         * Optional operation or notification name from the related
-         * relationship class template. ITU-T Rec. X.725 (11/95)
-         * A.2.3.5.
-         * @public
-         * @readonly
-         */
-        readonly optionalOperationName: OptionalIdentifier,
-        /**
-         * @summary `optionalRoleName`.
-         * @description
-         *
-         * Role the operation refers to. Optional if the relationship
-         * defines only one role. ITU-T Rec. X.725 (11/95) A.2.3.5.
-         * @public
-         * @readonly
-         */
-        readonly optionalRoleName?: OPTIONAL<Identifier>
-    ) {}
+        optionalOperationName: OptionalIdentifier,
+        optionalRoleName?: OPTIONAL<Identifier>
+    ) {
+        this.optionalOperationName = optionalOperationName;
+        this.optionalRoleName = optionalRoleName;
+    }
 
     /**
      * @summary Restructures an object into a OptionalIdentifierAndRole

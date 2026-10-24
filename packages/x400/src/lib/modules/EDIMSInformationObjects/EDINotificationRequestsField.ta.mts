@@ -44,26 +44,34 @@ import {
  *
  */
 export class EDINotificationRequestsField {
+    /**
+     * @summary `edi_notification_requests`.
+     * @public
+     * @readonly
+     */
+    public readonly edi_notification_requests?: OPTIONAL<EDINotificationRequests>;
+    /**
+     * @summary `edi_notification_security`.
+     * @public
+     * @readonly
+     */
+    public readonly edi_notification_security?: OPTIONAL<EDINotificationSecurity>;
+    /**
+     * @summary `edi_reception_security`.
+     * @public
+     * @readonly
+     */
+    public readonly edi_reception_security?: OPTIONAL<EDIReceptionSecurity>;
+
     constructor(
-        /**
-         * @summary `edi_notification_requests`.
-         * @public
-         * @readonly
-         */
-        readonly edi_notification_requests?: OPTIONAL<EDINotificationRequests>,
-        /**
-         * @summary `edi_notification_security`.
-         * @public
-         * @readonly
-         */
-        readonly edi_notification_security?: OPTIONAL<EDINotificationSecurity>,
-        /**
-         * @summary `edi_reception_security`.
-         * @public
-         * @readonly
-         */
-        readonly edi_reception_security?: OPTIONAL<EDIReceptionSecurity>
-    ) {}
+        edi_notification_requests?: OPTIONAL<EDINotificationRequests>,
+        edi_notification_security?: OPTIONAL<EDINotificationSecurity>,
+        edi_reception_security?: OPTIONAL<EDIReceptionSecurity>
+    ) {
+        this.edi_notification_requests = edi_notification_requests;
+        this.edi_notification_security = edi_notification_security;
+        this.edi_reception_security = edi_reception_security;
+    }
 
     /**
      * @summary Restructures an object into a EDINotificationRequestsField

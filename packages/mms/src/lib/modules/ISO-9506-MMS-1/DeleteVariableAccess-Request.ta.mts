@@ -45,43 +45,51 @@ import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-
  */
 export
 class DeleteVariableAccess_Request {
+    /**
+     * @summary `scopeOfDelete`.
+     * @description
+     *
+     * Extent: `specific`, `aa-specific`, `domain`, or
+     * `vmd`. Default `specific`.
+     * ISO 9506-1:2003 §14.11.1.1.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly scopeOfDelete?: OPTIONAL<DeleteVariableAccess_Request_scopeOfDelete>;
+    /**
+     * @summary `listOfName`.
+     * @description
+     *
+     * Named Variables to delete when scope is `specific`;
+     * otherwise omitted. ISO 9506-1:2003 §14.11.1.1.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly listOfName?: OPTIONAL<ObjectName[]>;
+    /**
+     * @summary `domainName`.
+     * @description
+     *
+     * Domain whose Named Variables are deleted when scope
+     * is `domain`; otherwise omitted.
+     * ISO 9506-1:2003 §14.11.1.1.3.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly domainName?: OPTIONAL<Identifier>;
+
     constructor (
-        /**
-         * @summary `scopeOfDelete`.
-         * @description
-         *
-         * Extent: `specific`, `aa-specific`, `domain`, or
-         * `vmd`. Default `specific`.
-         * ISO 9506-1:2003 §14.11.1.1.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly scopeOfDelete?: OPTIONAL<DeleteVariableAccess_Request_scopeOfDelete>,
-        /**
-         * @summary `listOfName`.
-         * @description
-         *
-         * Named Variables to delete when scope is `specific`;
-         * otherwise omitted. ISO 9506-1:2003 §14.11.1.1.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly listOfName?: OPTIONAL<ObjectName[]>,
-        /**
-         * @summary `domainName`.
-         * @description
-         *
-         * Domain whose Named Variables are deleted when scope
-         * is `domain`; otherwise omitted.
-         * ISO 9506-1:2003 §14.11.1.1.3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly domainName?: OPTIONAL<Identifier>
-    ) {}
+        scopeOfDelete?: OPTIONAL<DeleteVariableAccess_Request_scopeOfDelete>,
+        listOfName?: OPTIONAL<ObjectName[]>,
+        domainName?: OPTIONAL<Identifier>
+    ) {
+        this.scopeOfDelete = scopeOfDelete;
+        this.listOfName = listOfName;
+        this.domainName = domainName;
+    }
 
     /**
      * @summary Restructures an object into a DeleteVariableAccess_Request

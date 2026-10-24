@@ -33,20 +33,26 @@ import { MidCallControlInfo_Item_midCallReportType, _enum_for_MidCallControlInfo
  */
 export
 class MidCallControlInfo_Item {
+    /**
+     * @summary `midCallInfoType`.
+     * @public
+     * @readonly
+     */
+    public readonly midCallInfoType: MidCallInfoType;
+    /**
+     * @summary `midCallReportType`.
+     * @public
+     * @readonly
+     */
+    public readonly midCallReportType?: OPTIONAL<MidCallControlInfo_Item_midCallReportType>;
+
     constructor (
-        /**
-         * @summary `midCallInfoType`.
-         * @public
-         * @readonly
-         */
-        readonly midCallInfoType: MidCallInfoType,
-        /**
-         * @summary `midCallReportType`.
-         * @public
-         * @readonly
-         */
-        readonly midCallReportType?: OPTIONAL<MidCallControlInfo_Item_midCallReportType>
-    ) {}
+        midCallInfoType: MidCallInfoType,
+        midCallReportType?: OPTIONAL<MidCallControlInfo_Item_midCallReportType>
+    ) {
+        this.midCallInfoType = midCallInfoType;
+        this.midCallReportType = midCallReportType;
+    }
 
     /**
      * @summary Restructures an object into a MidCallControlInfo_Item

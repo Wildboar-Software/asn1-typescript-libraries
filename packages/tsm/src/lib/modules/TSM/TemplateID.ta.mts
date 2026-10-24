@@ -41,39 +41,47 @@ import { TemplateInfo, _decode_TemplateInfo, _encode_TemplateInfo } from "../TSM
  */
 export
 class TemplateID {
+    /**
+     * @summary `certificateIssuer`.
+     * @description
+     *
+     * Issuer `Name` of the biometric certificate (X.509). X.1084 §11.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly certificateIssuer: Name;
+    /**
+     * @summary `serialNumber`.
+     * @description
+     *
+     * Serial of the biometric certificate (X.509). X.1084 §11.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly serialNumber: CertificateSerialNumber;
+    /**
+     * @summary `templateInfo`.
+     * @description
+     *
+     * Modality, creator, creating BSP/BFP, and certificate serial.
+     * X.1084 §11.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly templateInfo: TemplateInfo;
+
     constructor (
-        /**
-         * @summary `certificateIssuer`.
-         * @description
-         *
-         * Issuer `Name` of the biometric certificate (X.509). X.1084 §11.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly certificateIssuer: Name,
-        /**
-         * @summary `serialNumber`.
-         * @description
-         *
-         * Serial of the biometric certificate (X.509). X.1084 §11.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly serialNumber: CertificateSerialNumber,
-        /**
-         * @summary `templateInfo`.
-         * @description
-         *
-         * Modality, creator, creating BSP/BFP, and certificate serial.
-         * X.1084 §11.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly templateInfo: TemplateInfo
-    ) {}
+        certificateIssuer: Name,
+        serialNumber: CertificateSerialNumber,
+        templateInfo: TemplateInfo
+    ) {
+        this.certificateIssuer = certificateIssuer;
+        this.serialNumber = serialNumber;
+        this.templateInfo = templateInfo;
+    }
 
     /**
      * @summary Restructures an object into a TemplateID

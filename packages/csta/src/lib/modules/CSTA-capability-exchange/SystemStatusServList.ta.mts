@@ -60,98 +60,120 @@ import { RegistrationInfo, _decode_RegistrationInfo, _encode_RegistrationInfo } 
  */
 export
 class SystemStatusServList {
+    /**
+     * @summary `changeSystemStatusFilter`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly changeSystemStatusFilter?: OPTIONAL<ChangeSystemStatusFilter>;
+    /**
+     * @summary `systemRegister`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly systemRegister?: OPTIONAL<SystemRegister>;
+    /**
+     * @summary `systemStatusRegisterAbort`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly systemStatusRegisterAbort?: OPTIONAL<SystemStatusRegisterAbort>;
+    /**
+     * @summary `systemStatusRegisterCancel`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly systemStatusRegisterCancel?: OPTIONAL<SystemStatusRegisterCancel>;
+    /**
+     * @summary `requestSystemStatus`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly requestSystemStatus?: OPTIONAL<RequestSystemStatus>;
+    /**
+     * @summary `systemStatus`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly systemStatus?: OPTIONAL<SystemStatus>;
+    /**
+     * @summary `swFunctionCapsChanged`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly swFunctionCapsChanged?: OPTIONAL<SwFunctionCapsChanged>;
+    /**
+     * @summary `swFunctionDevicesChanged`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly swFunctionDevicesChanged?: OPTIONAL<SwFunctionDevicesChanged>;
+    /**
+     * @summary `getRegistrations`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly getRegistrations?: OPTIONAL<GetRegistrations>;
+    /**
+     * @summary `registrationInfo`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly registrationInfo?: OPTIONAL<RegistrationInfo>;
+
     constructor (
-        /**
-         * @summary `changeSystemStatusFilter`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly changeSystemStatusFilter?: OPTIONAL<ChangeSystemStatusFilter>,
-        /**
-         * @summary `systemRegister`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly systemRegister?: OPTIONAL<SystemRegister>,
-        /**
-         * @summary `systemStatusRegisterAbort`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly systemStatusRegisterAbort?: OPTIONAL<SystemStatusRegisterAbort>,
-        /**
-         * @summary `systemStatusRegisterCancel`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly systemStatusRegisterCancel?: OPTIONAL<SystemStatusRegisterCancel>,
-        /**
-         * @summary `requestSystemStatus`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly requestSystemStatus?: OPTIONAL<RequestSystemStatus>,
-        /**
-         * @summary `systemStatus`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly systemStatus?: OPTIONAL<SystemStatus>,
-        /**
-         * @summary `swFunctionCapsChanged`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly swFunctionCapsChanged?: OPTIONAL<SwFunctionCapsChanged>,
-        /**
-         * @summary `swFunctionDevicesChanged`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly swFunctionDevicesChanged?: OPTIONAL<SwFunctionDevicesChanged>,
-        /**
-         * @summary `getRegistrations`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly getRegistrations?: OPTIONAL<GetRegistrations>,
-        /**
-         * @summary `registrationInfo`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly registrationInfo?: OPTIONAL<RegistrationInfo>
-    ) {}
+        changeSystemStatusFilter?: OPTIONAL<ChangeSystemStatusFilter>,
+        systemRegister?: OPTIONAL<SystemRegister>,
+        systemStatusRegisterAbort?: OPTIONAL<SystemStatusRegisterAbort>,
+        systemStatusRegisterCancel?: OPTIONAL<SystemStatusRegisterCancel>,
+        requestSystemStatus?: OPTIONAL<RequestSystemStatus>,
+        systemStatus?: OPTIONAL<SystemStatus>,
+        swFunctionCapsChanged?: OPTIONAL<SwFunctionCapsChanged>,
+        swFunctionDevicesChanged?: OPTIONAL<SwFunctionDevicesChanged>,
+        getRegistrations?: OPTIONAL<GetRegistrations>,
+        registrationInfo?: OPTIONAL<RegistrationInfo>
+    ) {
+        this.changeSystemStatusFilter = changeSystemStatusFilter;
+        this.systemRegister = systemRegister;
+        this.systemStatusRegisterAbort = systemStatusRegisterAbort;
+        this.systemStatusRegisterCancel = systemStatusRegisterCancel;
+        this.requestSystemStatus = requestSystemStatus;
+        this.systemStatus = systemStatus;
+        this.swFunctionCapsChanged = swFunctionCapsChanged;
+        this.swFunctionDevicesChanged = swFunctionDevicesChanged;
+        this.getRegistrations = getRegistrations;
+        this.registrationInfo = registrationInfo;
+    }
 
     /**
      * @summary Restructures an object into a SystemStatusServList

@@ -58,56 +58,72 @@ import {
  *
  */
 export class TbsHandshakeSecAbort {
+    /**
+     * @summary `version`.
+     * @description Same bits as in the original `HandshakeReq`. DEFAULT `{v1}`.
+     * @public
+     * @readonly
+     */
+    public readonly version: OPTIONAL<Version>;
+    /**
+     * @summary `sigAlg`.
+     * @description Acc’s algorithm if the client accepted it; otherwise the native `sigAlg` from the original `HandshakeReq`. Signs this PDU; `altSignature` absent.
+     * @public
+     * @readonly
+     */
+    public readonly sigAlg: AlgorithmIdentifier;
+    /**
+     * @summary `assoID`.
+     * @description Same value as in the rejected `HandshakeAcc`.
+     * @public
+     * @readonly
+     */
+    public readonly assoID: AssoID;
+    /**
+     * @summary `time`.
+     * @description UTC GeneralizedTime of creation (clause 8.2).
+     * @public
+     * @readonly
+     */
+    public readonly time: TimeStamp;
+    /**
+     * @summary `pkiPath`.
+     * @description DER-encapsulated certification path verifying this signature.
+     * @public
+     * @readonly
+     */
+    public readonly pkiPath: DER_PkiPath;
+    /**
+     * @summary `diag`.
+     * @description `WrpError` when not an alert; **absent if alert**.
+     * @public
+     * @readonly
+     */
+    public readonly diag?: OPTIONAL<WrpError>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `version`.
-         * @description Same bits as in the original `HandshakeReq`. DEFAULT `{v1}`.
-         * @public
-         * @readonly
-         */
-        readonly version: OPTIONAL<Version>,
-        /**
-         * @summary `sigAlg`.
-         * @description Acc’s algorithm if the client accepted it; otherwise the native `sigAlg` from the original `HandshakeReq`. Signs this PDU; `altSignature` absent.
-         * @public
-         * @readonly
-         */
-        readonly sigAlg: AlgorithmIdentifier,
-        /**
-         * @summary `assoID`.
-         * @description Same value as in the rejected `HandshakeAcc`.
-         * @public
-         * @readonly
-         */
-        readonly assoID: AssoID,
-        /**
-         * @summary `time`.
-         * @description UTC GeneralizedTime of creation (clause 8.2).
-         * @public
-         * @readonly
-         */
-        readonly time: TimeStamp,
-        /**
-         * @summary `pkiPath`.
-         * @description DER-encapsulated certification path verifying this signature.
-         * @public
-         * @readonly
-         */
-        readonly pkiPath: DER_PkiPath,
-        /**
-         * @summary `diag`.
-         * @description `WrpError` when not an alert; **absent if alert**.
-         * @public
-         * @readonly
-         */
-        readonly diag?: OPTIONAL<WrpError>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        version: OPTIONAL<Version>,
+        sigAlg: AlgorithmIdentifier,
+        assoID: AssoID,
+        time: TimeStamp,
+        pkiPath: DER_PkiPath,
+        diag?: OPTIONAL<WrpError>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.version = version;
+        this.sigAlg = sigAlg;
+        this.assoID = assoID;
+        this.time = time;
+        this.pkiPath = pkiPath;
+        this.diag = diag;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a TbsHandshakeSecAbort

@@ -33,16 +33,34 @@ import { type GSN_Address, _decode_GSN_Address, _encode_GSN_Address } from "../M
  *
  */
 export class GPRSEventSpecificInformation_pdp_ContextchangeOfPositionSpecificInformation {
+    public readonly accessPointName?: OPTIONAL<AccessPointName>;
+    public readonly chargingID?: OPTIONAL<GPRSChargingID>;
+    public readonly locationInformationGPRS?: OPTIONAL<LocationInformationGPRS>;
+    public readonly endUserAddress?: OPTIONAL<EndUserAddress>;
+    public readonly qualityOfService?: OPTIONAL<QualityOfService>;
+    public readonly timeAndTimeZone?: OPTIONAL<TimeAndTimezone>;
+    public readonly gGSNAddress?: OPTIONAL<GSN_Address>;
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        readonly accessPointName?: OPTIONAL<AccessPointName>,
-        readonly chargingID?: OPTIONAL<GPRSChargingID>,
-        readonly locationInformationGPRS?: OPTIONAL<LocationInformationGPRS>,
-        readonly endUserAddress?: OPTIONAL<EndUserAddress>,
-        readonly qualityOfService?: OPTIONAL<QualityOfService>,
-        readonly timeAndTimeZone?: OPTIONAL<TimeAndTimezone>,
-        readonly gGSNAddress?: OPTIONAL<GSN_Address>,
-        readonly _unrecognizedExtensionsList: _Element[] = [],
-    ) {}
+        accessPointName?: OPTIONAL<AccessPointName>,
+        chargingID?: OPTIONAL<GPRSChargingID>,
+        locationInformationGPRS?: OPTIONAL<LocationInformationGPRS>,
+        endUserAddress?: OPTIONAL<EndUserAddress>,
+        qualityOfService?: OPTIONAL<QualityOfService>,
+        timeAndTimeZone?: OPTIONAL<TimeAndTimezone>,
+        gGSNAddress?: OPTIONAL<GSN_Address>,
+        _unrecognizedExtensionsList: _Element[] = [],
+    ) {
+        this.accessPointName = accessPointName;
+        this.chargingID = chargingID;
+        this.locationInformationGPRS = locationInformationGPRS;
+        this.endUserAddress = endUserAddress;
+        this.qualityOfService = qualityOfService;
+        this.timeAndTimeZone = timeAndTimeZone;
+        this.gGSNAddress = gGSNAddress;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     public static _from_object (_o: { [_K in keyof (GPRSEventSpecificInformation_pdp_ContextchangeOfPositionSpecificInformation)]: (GPRSEventSpecificInformation_pdp_ContextchangeOfPositionSpecificInformation)[_K] }): GPRSEventSpecificInformation_pdp_ContextchangeOfPositionSpecificInformation {
         return new GPRSEventSpecificInformation_pdp_ContextchangeOfPositionSpecificInformation(_o.accessPointName, _o.chargingID, _o.locationInformationGPRS, _o.endUserAddress, _o.qualityOfService, _o.timeAndTimeZone, _o.gGSNAddress, _o._unrecognizedExtensionsList);

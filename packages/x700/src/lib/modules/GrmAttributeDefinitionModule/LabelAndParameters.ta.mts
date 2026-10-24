@@ -41,29 +41,35 @@ import {
  *
  */
 export class LabelAndParameters {
+    /**
+     * @summary `label`.
+     * @description
+     *
+     * Attribute, action, or notification label of the mapped
+     * operation. ITU-T Rec. X.725 (11/95) A.2.3.5.
+     * @public
+     * @readonly
+     */
+    public readonly label: TemplateLabel;
+    /**
+     * @summary `parameters`.
+     * @description
+     *
+     * Parameter labels associated with the systems management
+     * operation or notification. ITU-T Rec. X.725 (11/95)
+     * A.2.3.5.
+     * @public
+     * @readonly
+     */
+    public readonly parameters?: OPTIONAL<TemplateList>;
+
     constructor(
-        /**
-         * @summary `label`.
-         * @description
-         *
-         * Attribute, action, or notification label of the mapped
-         * operation. ITU-T Rec. X.725 (11/95) A.2.3.5.
-         * @public
-         * @readonly
-         */
-        readonly label: TemplateLabel,
-        /**
-         * @summary `parameters`.
-         * @description
-         *
-         * Parameter labels associated with the systems management
-         * operation or notification. ITU-T Rec. X.725 (11/95)
-         * A.2.3.5.
-         * @public
-         * @readonly
-         */
-        readonly parameters?: OPTIONAL<TemplateList>
-    ) {}
+        label: TemplateLabel,
+        parameters?: OPTIONAL<TemplateList>
+    ) {
+        this.label = label;
+        this.parameters = parameters;
+    }
 
     /**
      * @summary Restructures an object into a LabelAndParameters

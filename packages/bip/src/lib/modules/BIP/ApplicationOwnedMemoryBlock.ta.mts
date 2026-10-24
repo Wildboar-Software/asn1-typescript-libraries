@@ -38,19 +38,23 @@ import {
  *
  */
 export class ApplicationOwnedMemoryBlock {
+  /**
+   * @summary `address`.
+   * @description
+   *
+   * Address of the application-owned block. Unique in the
+   * table. X.1083 §18.13.2.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly address: MemoryAddress;
+
   constructor(
-    /**
-     * @summary `address`.
-     * @description
-     *
-     * Address of the application-owned block. Unique in the
-     * table. X.1083 §18.13.2.
-     *
-     * @public
-     * @readonly
-     */
-    readonly address: MemoryAddress
-  ) {}
+    address: MemoryAddress
+  ) {
+    this.address = address;
+  }
 
   /**
    * @summary Restructures an object into a ApplicationOwnedMemoryBlock

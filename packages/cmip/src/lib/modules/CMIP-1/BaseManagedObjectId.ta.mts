@@ -42,28 +42,34 @@ import {
  *
  */
 export class BaseManagedObjectId {
+  /**
+   * @summary `baseManagedObjectClass`.
+   * @description
+   *
+   * Class of the base managed object.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly baseManagedObjectClass: ObjectClass;
+  /**
+   * @summary `baseManagedObjectInstance`.
+   * @description
+   *
+   * Instance of the base managed object.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly baseManagedObjectInstance: ObjectInstance;
+
   constructor(
-    /**
-     * @summary `baseManagedObjectClass`.
-     * @description
-     *
-     * Class of the base managed object.
-     *
-     * @public
-     * @readonly
-     */
-    readonly baseManagedObjectClass: ObjectClass,
-    /**
-     * @summary `baseManagedObjectInstance`.
-     * @description
-     *
-     * Instance of the base managed object.
-     *
-     * @public
-     * @readonly
-     */
-    readonly baseManagedObjectInstance: ObjectInstance
-  ) {}
+    baseManagedObjectClass: ObjectClass,
+    baseManagedObjectInstance: ObjectInstance
+  ) {
+    this.baseManagedObjectClass = baseManagedObjectClass;
+    this.baseManagedObjectInstance = baseManagedObjectInstance;
+  }
 
   /**
    * @summary Restructures an object into a BaseManagedObjectId

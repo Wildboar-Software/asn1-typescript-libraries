@@ -41,20 +41,26 @@ import {
  *
  */
 export class Body {
+    /**
+     * @summary `primary_body_part`.
+     * @public
+     * @readonly
+     */
+    public readonly primary_body_part: PrimaryBodyPart;
+    /**
+     * @summary `additional_body_parts`.
+     * @public
+     * @readonly
+     */
+    public readonly additional_body_parts?: OPTIONAL<OtherBodyParts>;
+
     constructor(
-        /**
-         * @summary `primary_body_part`.
-         * @public
-         * @readonly
-         */
-        readonly primary_body_part: PrimaryBodyPart,
-        /**
-         * @summary `additional_body_parts`.
-         * @public
-         * @readonly
-         */
-        readonly additional_body_parts?: OPTIONAL<OtherBodyParts>
-    ) {}
+        primary_body_part: PrimaryBodyPart,
+        additional_body_parts?: OPTIONAL<OtherBodyParts>
+    ) {
+        this.primary_body_part = primary_body_part;
+        this.additional_body_parts = additional_body_parts;
+    }
 
     /**
      * @summary Restructures an object into a Body

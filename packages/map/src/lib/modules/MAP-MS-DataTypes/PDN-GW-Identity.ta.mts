@@ -36,56 +36,68 @@ import { PDP_Address, _decode_PDP_Address, _encode_PDP_Address } from "../MAP-MS
  */
 export
 class PDN_GW_Identity {
+    /**
+     * @summary `pdn_gw_ipv4_Address`.
+     * @description
+     *
+     * IPv4 address of the PDN GW.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly pdn_gw_ipv4_Address?: OPTIONAL<PDP_Address>;
+    /**
+     * @summary `pdn_gw_ipv6_Address`.
+     * @description
+     *
+     * IPv6 address of the PDN GW.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly pdn_gw_ipv6_Address?: OPTIONAL<PDP_Address>;
+    /**
+     * @summary `pdn_gw_name`.
+     * @description
+     *
+     * FQDN of the PDN GW.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly pdn_gw_name?: OPTIONAL<FQDN>;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `pdn_gw_ipv4_Address`.
-         * @description
-         *
-         * IPv4 address of the PDN GW.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly pdn_gw_ipv4_Address?: OPTIONAL<PDP_Address>,
-        /**
-         * @summary `pdn_gw_ipv6_Address`.
-         * @description
-         *
-         * IPv6 address of the PDN GW.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly pdn_gw_ipv6_Address?: OPTIONAL<PDP_Address>,
-        /**
-         * @summary `pdn_gw_name`.
-         * @description
-         *
-         * FQDN of the PDN GW.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly pdn_gw_name?: OPTIONAL<FQDN>,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        pdn_gw_ipv4_Address?: OPTIONAL<PDP_Address>,
+        pdn_gw_ipv6_Address?: OPTIONAL<PDP_Address>,
+        pdn_gw_name?: OPTIONAL<FQDN>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.pdn_gw_ipv4_Address = pdn_gw_ipv4_Address;
+        this.pdn_gw_ipv6_Address = pdn_gw_ipv6_Address;
+        this.pdn_gw_name = pdn_gw_name;
+        this.extensionContainer = extensionContainer;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a PDN_GW_Identity

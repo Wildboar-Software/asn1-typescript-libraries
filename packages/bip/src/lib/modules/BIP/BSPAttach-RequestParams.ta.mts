@@ -48,42 +48,50 @@ import {
  *
  */
 export class BSPAttach_RequestParams {
+  /**
+   * @summary `bspProductUuid`.
+   * @description
+   *
+   * Product UUID of the BSP to attach. Application may have passed
+   * an access UUID; this component is always the product UUID.
+   * X.1083 Table 47, clause 25.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly bspProductUuid: BioAPI_UUID;
+  /**
+   * @summary `version`.
+   * @description
+   *
+   * BioAPI version for the attach session, from Version.
+   * X.1083 Table 47, §15.59.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly version: BioAPI_VERSION;
+  /**
+   * @summary `units`.
+   * @description
+   *
+   * Units to include in the attach session, from UnitList/NumUnits.
+   * X.1083 §16.13.7, Table 47.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly units: BioAPI_UNIT_LIST_ELEMENT[];
+
   constructor(
-    /**
-     * @summary `bspProductUuid`.
-     * @description
-     *
-     * Product UUID of the BSP to attach. Application may have passed
-     * an access UUID; this component is always the product UUID.
-     * X.1083 Table 47, clause 25.
-     *
-     * @public
-     * @readonly
-     */
-    readonly bspProductUuid: BioAPI_UUID,
-    /**
-     * @summary `version`.
-     * @description
-     *
-     * BioAPI version for the attach session, from Version.
-     * X.1083 Table 47, §15.59.
-     *
-     * @public
-     * @readonly
-     */
-    readonly version: BioAPI_VERSION,
-    /**
-     * @summary `units`.
-     * @description
-     *
-     * Units to include in the attach session, from UnitList/NumUnits.
-     * X.1083 §16.13.7, Table 47.
-     *
-     * @public
-     * @readonly
-     */
-    readonly units: BioAPI_UNIT_LIST_ELEMENT[]
-  ) {}
+    bspProductUuid: BioAPI_UUID,
+    version: BioAPI_VERSION,
+    units: BioAPI_UNIT_LIST_ELEMENT[]
+  ) {
+    this.bspProductUuid = bspProductUuid;
+    this.version = version;
+    this.units = units;
+  }
 
   /**
    * @summary Restructures an object into a BSPAttach_RequestParams

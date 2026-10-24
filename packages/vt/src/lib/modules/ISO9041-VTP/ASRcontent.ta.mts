@@ -41,54 +41,66 @@ import { _decode_FunctionalUnits, _encode_FunctionalUnits, type FunctionalUnits 
  */
 export
 class ASRcontent {
+    /**
+     * @summary `result`.
+     * @description
+     * `success`, `fail`, or `success-with-warning`. ISO/IEC
+     * 9041-1:1997 §6.3.
+     * @public
+     * @readonly
+     */
+    public readonly result: Result3;
+    /**
+     * @summary `implementation`.
+     * @description
+     * Optional implementor id/name/version for maintenance,
+     * as in ASQ. ISO/IEC 9041-1:1997 §6.3.
+     * @public
+     * @readonly
+     */
+    public readonly implementation?: OPTIONAL<ImplementationIdent>;
+    /**
+     * @summary `protocol_verison`.
+     * @description
+     * ASN.1 spelling is `protocol-verison`. On success a
+     * single bit selects the version; on failure indicates
+     * versions the rejecting VTPM supports. ISO/IEC
+     * 9041-1:1997 §6.3, §12.1.
+     * @public
+     * @readonly
+     */
+    public readonly protocol_verison?: OPTIONAL<ProtocolVersion>;
+    /**
+     * @summary `profile_arguments`.
+     * @description
+     * Selected values from the offer list; absent if result
+     * is failure. ISO/IEC 9041-1:1997 §6.3.
+     * @public
+     * @readonly
+     */
+    public readonly profile_arguments?: OPTIONAL<ProfileArgumValueList>;
+    /**
+     * @summary `functional_units`.
+     * @description
+     * Accepted FUs. ISO/IEC 9041-1:1997 §6.3.
+     * @public
+     * @readonly
+     */
+    public readonly functional_units?: OPTIONAL<FunctionalUnits>;
+
     constructor (
-        /**
-         * @summary `result`.
-         * @description
-         * `success`, `fail`, or `success-with-warning`. ISO/IEC
-         * 9041-1:1997 §6.3.
-         * @public
-         * @readonly
-         */
-        readonly result: Result3,
-        /**
-         * @summary `implementation`.
-         * @description
-         * Optional implementor id/name/version for maintenance,
-         * as in ASQ. ISO/IEC 9041-1:1997 §6.3.
-         * @public
-         * @readonly
-         */
-        readonly implementation?: OPTIONAL<ImplementationIdent>,
-        /**
-         * @summary `protocol_verison`.
-         * @description
-         * ASN.1 spelling is `protocol-verison`. On success a
-         * single bit selects the version; on failure indicates
-         * versions the rejecting VTPM supports. ISO/IEC
-         * 9041-1:1997 §6.3, §12.1.
-         * @public
-         * @readonly
-         */
-        readonly protocol_verison?: OPTIONAL<ProtocolVersion>,
-        /**
-         * @summary `profile_arguments`.
-         * @description
-         * Selected values from the offer list; absent if result
-         * is failure. ISO/IEC 9041-1:1997 §6.3.
-         * @public
-         * @readonly
-         */
-        readonly profile_arguments?: OPTIONAL<ProfileArgumValueList>,
-        /**
-         * @summary `functional_units`.
-         * @description
-         * Accepted FUs. ISO/IEC 9041-1:1997 §6.3.
-         * @public
-         * @readonly
-         */
-        readonly functional_units?: OPTIONAL<FunctionalUnits>
-    ) {}
+        result: Result3,
+        implementation?: OPTIONAL<ImplementationIdent>,
+        protocol_verison?: OPTIONAL<ProtocolVersion>,
+        profile_arguments?: OPTIONAL<ProfileArgumValueList>,
+        functional_units?: OPTIONAL<FunctionalUnits>
+    ) {
+        this.result = result;
+        this.implementation = implementation;
+        this.protocol_verison = protocol_verison;
+        this.profile_arguments = profile_arguments;
+        this.functional_units = functional_units;
+    }
 
     /**
      * @summary Restructures an object into a ASRcontent

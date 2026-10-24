@@ -32,20 +32,26 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class ControlConditionByCallParty {
+    /**
+     * @summary `endOfMessageSendingDigit`.
+     * @public
+     * @readonly
+     */
+    public readonly endOfMessageSendingDigit?: OPTIONAL<OCTET_STRING>;
+    /**
+     * @summary `replayDigit`.
+     * @public
+     * @readonly
+     */
+    public readonly replayDigit?: OPTIONAL<OCTET_STRING>;
+
     constructor (
-        /**
-         * @summary `endOfMessageSendingDigit`.
-         * @public
-         * @readonly
-         */
-        readonly endOfMessageSendingDigit?: OPTIONAL<OCTET_STRING>,
-        /**
-         * @summary `replayDigit`.
-         * @public
-         * @readonly
-         */
-        readonly replayDigit?: OPTIONAL<OCTET_STRING>
-    ) {}
+        endOfMessageSendingDigit?: OPTIONAL<OCTET_STRING>,
+        replayDigit?: OPTIONAL<OCTET_STRING>
+    ) {
+        this.endOfMessageSendingDigit = endOfMessageSendingDigit;
+        this.replayDigit = replayDigit;
+    }
 
     /**
      * @summary Restructures an object into a ControlConditionByCallParty

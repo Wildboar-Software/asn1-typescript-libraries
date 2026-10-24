@@ -34,18 +34,22 @@ import { Opaque, _decode_Opaque, _encode_Opaque } from "../TSM/Opaque.ta.mjs";
  */
 export
 class Finished {
+    /**
+     * @summary `verify_data`.
+     * @description
+     *
+     * 12-octet TLS Finished verify-data. X.1084 Annex A.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly verify_data: Opaque;
+
     constructor (
-        /**
-         * @summary `verify_data`.
-         * @description
-         *
-         * 12-octet TLS Finished verify-data. X.1084 Annex A.
-         *
-         * @public
-         * @readonly
-         */
-        readonly verify_data: Opaque
-    ) {}
+        verify_data: Opaque
+    ) {
+        this.verify_data = verify_data;
+    }
 
     /**
      * @summary Restructures an object into a Finished

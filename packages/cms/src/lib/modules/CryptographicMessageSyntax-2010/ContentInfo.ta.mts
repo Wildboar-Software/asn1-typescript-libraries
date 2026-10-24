@@ -28,28 +28,34 @@ import * as $ from "@wildboar/asn1/functional";
  *
  */
 export class ContentInfo {
+    /**
+     * @summary `contentType`.
+     * @description
+     *
+     * OID identifying the type of `content` ([RFC 5652 §3](https://datatracker.ietf.org/doc/html/rfc5652#section-3)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly contentType: OBJECT_IDENTIFIER;
+    /**
+     * @summary `content`.
+     * @description
+     *
+     * Content whose ASN.1 type is determined by `contentType` ([RFC 5652 §3](https://datatracker.ietf.org/doc/html/rfc5652#section-3)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly content: _Element;
+
     constructor(
-        /**
-         * @summary `contentType`.
-         * @description
-         *
-         * OID identifying the type of `content` ([RFC 5652 §3](https://datatracker.ietf.org/doc/html/rfc5652#section-3)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly contentType: OBJECT_IDENTIFIER,
-        /**
-         * @summary `content`.
-         * @description
-         *
-         * Content whose ASN.1 type is determined by `contentType` ([RFC 5652 §3](https://datatracker.ietf.org/doc/html/rfc5652#section-3)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly content: _Element
-    ) {}
+        contentType: OBJECT_IDENTIFIER,
+        content: _Element
+    ) {
+        this.contentType = contentType;
+        this.content = content;
+    }
 
     /**
      * @summary Restructures an object into a ContentInfo

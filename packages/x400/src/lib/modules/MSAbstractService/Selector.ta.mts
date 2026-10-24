@@ -52,38 +52,50 @@ import {
  *
  */
 export class Selector {
+    /**
+     * @summary `child_entries`.
+     * @public
+     * @readonly
+     */
+    public readonly child_entries?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `range`.
+     * @public
+     * @readonly
+     */
+    public readonly range?: OPTIONAL<Range>;
+    /**
+     * @summary `filter`.
+     * @public
+     * @readonly
+     */
+    public readonly filter?: OPTIONAL<Filter>;
+    /**
+     * @summary `limit`.
+     * @public
+     * @readonly
+     */
+    public readonly limit?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `override`.
+     * @public
+     * @readonly
+     */
+    public readonly override?: OPTIONAL<OverrideRestrictions>;
+
     constructor(
-        /**
-         * @summary `child_entries`.
-         * @public
-         * @readonly
-         */
-        readonly child_entries?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `range`.
-         * @public
-         * @readonly
-         */
-        readonly range?: OPTIONAL<Range>,
-        /**
-         * @summary `filter`.
-         * @public
-         * @readonly
-         */
-        readonly filter?: OPTIONAL<Filter>,
-        /**
-         * @summary `limit`.
-         * @public
-         * @readonly
-         */
-        readonly limit?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `override`.
-         * @public
-         * @readonly
-         */
-        readonly override?: OPTIONAL<OverrideRestrictions>
-    ) {}
+        child_entries?: OPTIONAL<BOOLEAN>,
+        range?: OPTIONAL<Range>,
+        filter?: OPTIONAL<Filter>,
+        limit?: OPTIONAL<INTEGER>,
+        override?: OPTIONAL<OverrideRestrictions>
+    ) {
+        this.child_entries = child_entries;
+        this.range = range;
+        this.filter = filter;
+        this.limit = limit;
+        this.override = override;
+    }
 
     /**
      * @summary Restructures an object into a Selector

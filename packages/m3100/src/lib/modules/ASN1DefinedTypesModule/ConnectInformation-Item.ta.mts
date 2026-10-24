@@ -55,50 +55,66 @@ import {
  *
  */
 export class ConnectInformation_Item {
+    /**
+     * @summary `itemType`.
+     * @public
+     * @readonly
+     */
+    public readonly itemType: ConnectInformation_Item_itemType;
+    /**
+     * @summary `administrativeState`.
+     * @public
+     * @readonly
+     */
+    public readonly administrativeState?: OPTIONAL<AdministrativeState>;
+    /**
+     * @summary `namedCrossConnection`.
+     * @public
+     * @readonly
+     */
+    public readonly namedCrossConnection?: OPTIONAL<NamedCrossConnection>;
+    /**
+     * @summary `userLabel`.
+     * @public
+     * @readonly
+     */
+    public readonly userLabel?: OPTIONAL<UserLabel>;
+    /**
+     * @summary `redline`.
+     * @public
+     * @readonly
+     */
+    public readonly redline?: OPTIONAL<Boolean>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+    /**
+     * @summary `additionalInfo`.
+     * @public
+     * @readonly
+     */
+    public readonly additionalInfo?: OPTIONAL<AdditionalInformation>;
+
     constructor(
-        /**
-         * @summary `itemType`.
-         * @public
-         * @readonly
-         */
-        readonly itemType: ConnectInformation_Item_itemType,
-        /**
-         * @summary `administrativeState`.
-         * @public
-         * @readonly
-         */
-        readonly administrativeState?: OPTIONAL<AdministrativeState>,
-        /**
-         * @summary `namedCrossConnection`.
-         * @public
-         * @readonly
-         */
-        readonly namedCrossConnection?: OPTIONAL<NamedCrossConnection>,
-        /**
-         * @summary `userLabel`.
-         * @public
-         * @readonly
-         */
-        readonly userLabel?: OPTIONAL<UserLabel>,
-        /**
-         * @summary `redline`.
-         * @public
-         * @readonly
-         */
-        readonly redline?: OPTIONAL<Boolean>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = [],
-        /**
-         * @summary `additionalInfo`.
-         * @public
-         * @readonly
-         */
-        readonly additionalInfo?: OPTIONAL<AdditionalInformation>
-    ) {}
+        itemType: ConnectInformation_Item_itemType,
+        administrativeState?: OPTIONAL<AdministrativeState>,
+        namedCrossConnection?: OPTIONAL<NamedCrossConnection>,
+        userLabel?: OPTIONAL<UserLabel>,
+        redline?: OPTIONAL<Boolean>,
+        _unrecognizedExtensionsList: _Element[] = [],
+        additionalInfo?: OPTIONAL<AdditionalInformation>
+    ) {
+        this.itemType = itemType;
+        this.administrativeState = administrativeState;
+        this.namedCrossConnection = namedCrossConnection;
+        this.userLabel = userLabel;
+        this.redline = redline;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+        this.additionalInfo = additionalInfo;
+    }
 
     /**
      * @summary Restructures an object into a ConnectInformation_Item

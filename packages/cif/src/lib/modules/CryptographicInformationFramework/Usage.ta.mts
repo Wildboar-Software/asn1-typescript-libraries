@@ -43,30 +43,37 @@ import { KeyUsage, _decode_KeyUsage, _encode_KeyUsage } from "../CertificateExte
  */
 export
 class Usage {
+    /**
+     * @summary `keyUsage`.
+     * @description
+     * ISO/IEC 9594-8 KeyUsage bits. ISO/IEC 7816-15:2016 §8.2.15.
+     * @public
+     * @readonly
+     */
+    public readonly keyUsage?: OPTIONAL<KeyUsage>;
+    /**
+     * @summary `extKeyUsage`.
+     * @description
+     * Extended key purpose OIDs. ISO/IEC 7816-15:2016 §8.2.15.
+     * @public
+     * @readonly
+     */
+    public readonly extKeyUsage?: OPTIONAL<OBJECT_IDENTIFIER[]>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `keyUsage`.
-         * @description
-         * ISO/IEC 9594-8 KeyUsage bits. ISO/IEC 7816-15:2016 §8.2.15.
-         * @public
-         * @readonly
-         */
-        readonly keyUsage?: OPTIONAL<KeyUsage>,
-        /**
-         * @summary `extKeyUsage`.
-         * @description
-         * Extended key purpose OIDs. ISO/IEC 7816-15:2016 §8.2.15.
-         * @public
-         * @readonly
-         */
-        readonly extKeyUsage?: OPTIONAL<OBJECT_IDENTIFIER[]>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
+        keyUsage?: OPTIONAL<KeyUsage>,
+        extKeyUsage?: OPTIONAL<OBJECT_IDENTIFIER[]>,
+        _unrecognizedExtensionsList: _Element[] = []
     ) {
+        this.keyUsage = keyUsage;
+        this.extKeyUsage = extKeyUsage;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
         if (keyUsage === undefined && extKeyUsage === undefined) {
             throw new ASN1ConstructionError("Usage requires keyUsage or extKeyUsage");
         }

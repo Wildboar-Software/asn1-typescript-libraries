@@ -42,38 +42,50 @@ import { SignatureValue, _decode_SignatureValue, _encode_SignatureValue } from "
  */
 export
 class SignerInfo {
+    /**
+     * @summary `version`.
+     * @public
+     * @readonly
+     */
+    public readonly version: CMSVersion;
+    /**
+     * @summary `sid`.
+     * @public
+     * @readonly
+     */
+    public readonly sid: SignerIdentifier;
+    /**
+     * @summary `digestAlgorithm`.
+     * @public
+     * @readonly
+     */
+    public readonly digestAlgorithm: DigestAlgorithmIdentifier;
+    /**
+     * @summary `signatureAlgorithm`.
+     * @public
+     * @readonly
+     */
+    public readonly signatureAlgorithm: SignatureAlgorithmIdentifier;
+    /**
+     * @summary `signature`.
+     * @public
+     * @readonly
+     */
+    public readonly signature: SignatureValue;
+
     constructor (
-        /**
-         * @summary `version`.
-         * @public
-         * @readonly
-         */
-        readonly version: CMSVersion,
-        /**
-         * @summary `sid`.
-         * @public
-         * @readonly
-         */
-        readonly sid: SignerIdentifier,
-        /**
-         * @summary `digestAlgorithm`.
-         * @public
-         * @readonly
-         */
-        readonly digestAlgorithm: DigestAlgorithmIdentifier,
-        /**
-         * @summary `signatureAlgorithm`.
-         * @public
-         * @readonly
-         */
-        readonly signatureAlgorithm: SignatureAlgorithmIdentifier,
-        /**
-         * @summary `signature`.
-         * @public
-         * @readonly
-         */
-        readonly signature: SignatureValue
-    ) {}
+        version: CMSVersion,
+        sid: SignerIdentifier,
+        digestAlgorithm: DigestAlgorithmIdentifier,
+        signatureAlgorithm: SignatureAlgorithmIdentifier,
+        signature: SignatureValue
+    ) {
+        this.version = version;
+        this.sid = sid;
+        this.digestAlgorithm = digestAlgorithm;
+        this.signatureAlgorithm = signatureAlgorithm;
+        this.signature = signature;
+    }
 
     /**
      * @summary Restructures an object into a SignerInfo

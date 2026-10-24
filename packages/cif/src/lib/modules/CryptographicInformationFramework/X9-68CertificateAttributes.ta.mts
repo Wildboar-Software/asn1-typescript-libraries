@@ -34,23 +34,29 @@ import { ObjectValue, _get_decoder_for_ObjectValue, _get_encoder_for_ObjectValue
  */
 export
 class X9_68CertificateAttributes {
+    /**
+     * @summary `value`.
+     * @description
+     * `ReferencedValue` to the domain certificate or URL. ISO/IEC
+     * 7816-15:2016 §8.7.7.
+     * @public
+     * @readonly
+     */
+    public readonly value: ObjectValue<_Element>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `value`.
-         * @description
-         * `ReferencedValue` to the domain certificate or URL. ISO/IEC
-         * 7816-15:2016 §8.7.7.
-         * @public
-         * @readonly
-         */
-        readonly value: ObjectValue<_Element>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        value: ObjectValue<_Element>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.value = value;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a X9_68CertificateAttributes

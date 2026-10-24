@@ -24,28 +24,34 @@ import * as $ from "@wildboar/asn1/functional";
  *
  */
 export class UiiItem {
+    /**
+     * @summary `type_`.
+     * @description
+     *
+     * Attribute type for the AVA.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly type_: OBJECT_IDENTIFIER;
+    /**
+     * @summary `length`.
+     * @description
+     *
+     * How many characters to use as the AVA value.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly length?: OPTIONAL<INTEGER>;
+
     constructor(
-        /**
-         * @summary `type_`.
-         * @description
-         *
-         * Attribute type for the AVA.
-         *
-         * @public
-         * @readonly
-         */
-        readonly type_: OBJECT_IDENTIFIER,
-        /**
-         * @summary `length`.
-         * @description
-         *
-         * How many characters to use as the AVA value.
-         *
-         * @public
-         * @readonly
-         */
-        readonly length?: OPTIONAL<INTEGER>
-    ) {}
+        type_: OBJECT_IDENTIFIER,
+        length?: OPTIONAL<INTEGER>
+    ) {
+        this.type_ = type_;
+        this.length = length;
+    }
 
     /**
      * @summary Restructures an object into a UiiItem

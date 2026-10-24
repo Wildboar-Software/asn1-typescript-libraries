@@ -41,43 +41,51 @@ import { ProfileInfoListRequest_searchCriteria, _decode_ProfileInfoListRequest_s
  */
 export
 class ProfileInfoListRequest {
+    /**
+     * @summary `searchCriteria`.
+     * @description
+     * 
+     * AID, ICCID, or profile class. Omit to return every installed Profile.
+     * SGP.22 v3.1 §5.7.15.
+     * 
+     * @public
+     * @readonly
+     */
+    public readonly searchCriteria?: OPTIONAL<ProfileInfoListRequest_searchCriteria>;
+    /**
+     * @summary `tagList`.
+     * @description
+     * 
+     * Concatenated BER tags, tag `'5C'`, selecting `ProfileInfo` fields.
+     * Absent means the default set (ICCID, AID, state, nickname, provider
+     * name, profile name, icon type, icon, profile class). SGP.22 v3.1
+     * §5.7.15.
+     * 
+     * @public
+     * @readonly
+     */
+    public readonly tagList?: OPTIONAL<OCTET_STRING>;
+    /**
+     * @summary `iotSpecificTagList`.
+     * @description
+     * 
+     * Tag `'5D'`. Reserved for SGP.32. SGP.22 v3.1 §5.7.15 does not define
+     * this component.
+     * 
+     * @public
+     * @readonly
+     */
+    public readonly iotSpecificTagList?: OPTIONAL<OCTET_STRING>;
+
     constructor (
-        /**
-         * @summary `searchCriteria`.
-         * @description
-         * 
-         * AID, ICCID, or profile class. Omit to return every installed Profile.
-         * SGP.22 v3.1 §5.7.15.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly searchCriteria?: OPTIONAL<ProfileInfoListRequest_searchCriteria>,
-        /**
-         * @summary `tagList`.
-         * @description
-         * 
-         * Concatenated BER tags, tag `'5C'`, selecting `ProfileInfo` fields.
-         * Absent means the default set (ICCID, AID, state, nickname, provider
-         * name, profile name, icon type, icon, profile class). SGP.22 v3.1
-         * §5.7.15.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly tagList?: OPTIONAL<OCTET_STRING>,
-        /**
-         * @summary `iotSpecificTagList`.
-         * @description
-         * 
-         * Tag `'5D'`. Reserved for SGP.32. SGP.22 v3.1 §5.7.15 does not define
-         * this component.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly iotSpecificTagList?: OPTIONAL<OCTET_STRING>
-    ) {}
+        searchCriteria?: OPTIONAL<ProfileInfoListRequest_searchCriteria>,
+        tagList?: OPTIONAL<OCTET_STRING>,
+        iotSpecificTagList?: OPTIONAL<OCTET_STRING>
+    ) {
+        this.searchCriteria = searchCriteria;
+        this.tagList = tagList;
+        this.iotSpecificTagList = iotSpecificTagList;
+    }
 
     /**
      * @summary Restructures an object into a ProfileInfoListRequest

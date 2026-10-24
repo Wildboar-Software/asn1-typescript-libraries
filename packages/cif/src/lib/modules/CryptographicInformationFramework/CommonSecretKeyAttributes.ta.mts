@@ -34,23 +34,29 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class CommonSecretKeyAttributes {
+    /**
+     * @summary `keyLen`.
+     * @description
+     * Key length in bits when the algorithm has a variable length. ISO/IEC
+     * 7816-15:2016 §8.2.12.
+     * @public
+     * @readonly
+     */
+    public readonly keyLen?: OPTIONAL<INTEGER>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `keyLen`.
-         * @description
-         * Key length in bits when the algorithm has a variable length. ISO/IEC
-         * 7816-15:2016 §8.2.12.
-         * @public
-         * @readonly
-         */
-        readonly keyLen?: OPTIONAL<INTEGER>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        keyLen?: OPTIONAL<INTEGER>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.keyLen = keyLen;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a CommonSecretKeyAttributes

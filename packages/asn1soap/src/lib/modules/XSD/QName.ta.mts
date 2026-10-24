@@ -35,25 +35,31 @@ import { NCName, _decode_NCName, _encode_NCName } from '../XSD/NCName.ta.mjs';
  *
  */
 export class QName {
+  /**
+   * @summary `uri`.
+   * @description Namespace name. Omit for no namespace. In SOAP
+   * Subcode Values, presence yields `prefix:local`; absence
+   * yields the local name alone (X.892 §7.4.2.5–§7.4.2.6).
+   * @public
+   * @readonly
+   */
+  public readonly uri: OPTIONAL<AnyURI>;
+  /**
+   * @summary `name`.
+   * @description Local name (NCName). ITU-T Rec. X.892 (05/2005)
+   * §7.4.2.5–§7.4.2.6.
+   * @public
+   * @readonly
+   */
+  public readonly name: NCName;
+
   constructor(
-    /**
-     * @summary `uri`.
-     * @description Namespace name. Omit for no namespace. In SOAP
-     * Subcode Values, presence yields `prefix:local`; absence
-     * yields the local name alone (X.892 §7.4.2.5–§7.4.2.6).
-     * @public
-     * @readonly
-     */
-    readonly uri: OPTIONAL<AnyURI>,
-    /**
-     * @summary `name`.
-     * @description Local name (NCName). ITU-T Rec. X.892 (05/2005)
-     * §7.4.2.5–§7.4.2.6.
-     * @public
-     * @readonly
-     */
-    readonly name: NCName
-  ) {}
+    uri: OPTIONAL<AnyURI>,
+    name: NCName
+  ) {
+    this.uri = uri;
+    this.name = name;
+  }
 
   /**
    * @summary Restructures an object into a QName

@@ -38,20 +38,26 @@ import {
  *
  */
 export class BodyOrRemoved {
+    /**
+     * @summary `primary_or_removed`.
+     * @public
+     * @readonly
+     */
+    public readonly primary_or_removed: PrimaryOrRemoved;
+    /**
+     * @summary `additional_body_parts`.
+     * @public
+     * @readonly
+     */
+    public readonly additional_body_parts?: OPTIONAL<AdditionalBodyParts>;
+
     constructor(
-        /**
-         * @summary `primary_or_removed`.
-         * @public
-         * @readonly
-         */
-        readonly primary_or_removed: PrimaryOrRemoved,
-        /**
-         * @summary `additional_body_parts`.
-         * @public
-         * @readonly
-         */
-        readonly additional_body_parts?: OPTIONAL<AdditionalBodyParts>
-    ) {}
+        primary_or_removed: PrimaryOrRemoved,
+        additional_body_parts?: OPTIONAL<AdditionalBodyParts>
+    ) {
+        this.primary_or_removed = primary_or_removed;
+        this.additional_body_parts = additional_body_parts;
+    }
 
     /**
      * @summary Restructures an object into a BodyOrRemoved

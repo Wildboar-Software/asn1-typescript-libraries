@@ -26,24 +26,30 @@ import {
  *
  */
 export class InitializationAcc {
+    /**
+     * @summary `version`.
+     * @description
+     *
+     * Exactly one Version bit, among those suggested in `InitializationRec`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly version: Version;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `version`.
-         * @description
-         *
-         * Exactly one Version bit, among those suggested in `InitializationRec`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly version: Version,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        version: Version,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.version = version;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a InitializationAcc

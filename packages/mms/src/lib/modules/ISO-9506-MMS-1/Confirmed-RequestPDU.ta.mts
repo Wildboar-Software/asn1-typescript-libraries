@@ -45,60 +45,72 @@ import { Request_Detail, _decode_Request_Detail, _encode_Request_Detail } from "
  */
 export
 class Confirmed_RequestPDU {
+    /**
+     * @summary `invokeID`.
+     * @description
+     *
+     * Unambiguously identifies this request among outstanding confirmed
+     * requests from this MMS-user on this association. At most one
+     * outstanding request may use a given value. Copied into the matching
+     * response, error, and cancel PDUs (ISO 9506-1:2003 §5.5;
+     * ISO 9506-2:2003 §7.1).
+     * @public
+     * @readonly
+     */
+    public readonly invokeID: Unsigned32;
+    /**
+     * @summary `listOfModifiers`.
+     * @description
+     *
+     * Optional pre-conditions evaluated in list order before the service
+     * begins. MMS defines AttachToSemaphore and AttachToEventCondition
+     * (ISO 9506-1:2003 §5.6). Omit to start the service immediately
+     * (ISO 9506-2:2003 §7.1).
+     * @public
+     * @readonly
+     */
+    public readonly listOfModifiers: OPTIONAL<Modifier[]>;
+    /**
+     * @summary `service`.
+     * @description
+     *
+     * Selects the confirmed service and its argument (ISO 9506-2:2003
+     * §7.1.1).
+     * @public
+     * @readonly
+     */
+    public readonly service: ConfirmedServiceRequest;
+    /**
+     * @summary `service_ext`.
+     * @description
+     *
+     * Companion-standard Request-Detail. Present only if `csr` or `cspi`
+     * was negotiated. Do not transmit if the value is a tagged NULL
+     * (ISO 9506-2:2003 §7.1).
+     * @public
+     * @readonly
+     */
+    public readonly service_ext?: OPTIONAL<Request_Detail>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `invokeID`.
-         * @description
-         *
-         * Unambiguously identifies this request among outstanding confirmed
-         * requests from this MMS-user on this association. At most one
-         * outstanding request may use a given value. Copied into the matching
-         * response, error, and cancel PDUs (ISO 9506-1:2003 §5.5;
-         * ISO 9506-2:2003 §7.1).
-         * @public
-         * @readonly
-         */
-        readonly invokeID: Unsigned32,
-        /**
-         * @summary `listOfModifiers`.
-         * @description
-         *
-         * Optional pre-conditions evaluated in list order before the service
-         * begins. MMS defines AttachToSemaphore and AttachToEventCondition
-         * (ISO 9506-1:2003 §5.6). Omit to start the service immediately
-         * (ISO 9506-2:2003 §7.1).
-         * @public
-         * @readonly
-         */
-        readonly listOfModifiers: OPTIONAL<Modifier[]>,
-        /**
-         * @summary `service`.
-         * @description
-         *
-         * Selects the confirmed service and its argument (ISO 9506-2:2003
-         * §7.1.1).
-         * @public
-         * @readonly
-         */
-        readonly service: ConfirmedServiceRequest,
-        /**
-         * @summary `service_ext`.
-         * @description
-         *
-         * Companion-standard Request-Detail. Present only if `csr` or `cspi`
-         * was negotiated. Do not transmit if the value is a tagged NULL
-         * (ISO 9506-2:2003 §7.1).
-         * @public
-         * @readonly
-         */
-        readonly service_ext?: OPTIONAL<Request_Detail>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        invokeID: Unsigned32,
+        listOfModifiers: OPTIONAL<Modifier[]>,
+        service: ConfirmedServiceRequest,
+        service_ext?: OPTIONAL<Request_Detail>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.invokeID = invokeID;
+        this.listOfModifiers = listOfModifiers;
+        this.service = service;
+        this.service_ext = service_ext;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a Confirmed_RequestPDU

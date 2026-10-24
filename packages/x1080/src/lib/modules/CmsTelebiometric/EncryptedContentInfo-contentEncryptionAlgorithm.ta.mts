@@ -30,31 +30,37 @@ import * as $ from '@wildboar/asn1/functional';
  *
  */
 export class EncryptedContentInfo_contentEncryptionAlgorithm {
+    /**
+     * @summary `algorithm`.
+     * @description
+     *
+     * OID of the symmetric algorithm
+     * (`SymmetricEncryptionAlgorithms`).
+     * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.3.5.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly algorithm: OBJECT_IDENTIFIER;
+    /**
+     * @summary `parameter`.
+     * @description
+     *
+     * Parameters of that algorithm.
+     * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.3.5.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly parameter: _Element;
+
     constructor(
-        /**
-         * @summary `algorithm`.
-         * @description
-         *
-         * OID of the symmetric algorithm
-         * (`SymmetricEncryptionAlgorithms`).
-         * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.3.5.
-         *
-         * @public
-         * @readonly
-         */
-        readonly algorithm: OBJECT_IDENTIFIER,
-        /**
-         * @summary `parameter`.
-         * @description
-         *
-         * Parameters of that algorithm.
-         * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.3.5.
-         *
-         * @public
-         * @readonly
-         */
-        readonly parameter: _Element
-    ) {}
+        algorithm: OBJECT_IDENTIFIER,
+        parameter: _Element
+    ) {
+        this.algorithm = algorithm;
+        this.parameter = parameter;
+    }
 
     /**
      * @summary Restructures an object into a EncryptedContentInfo_contentEncryptionAlgorithm

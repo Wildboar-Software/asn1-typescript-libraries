@@ -48,32 +48,42 @@ import {
  *
  */
 export class RecipientSpecifier {
+    /**
+     * @summary `recipient`.
+     * @public
+     * @readonly
+     */
+    public readonly recipient: ORDescriptor;
+    /**
+     * @summary `notification_requests`.
+     * @public
+     * @readonly
+     */
+    public readonly notification_requests?: OPTIONAL<NotificationRequests>;
+    /**
+     * @summary `reply_requested`.
+     * @public
+     * @readonly
+     */
+    public readonly reply_requested?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `recipient_extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly recipient_extensions?: OPTIONAL<RecipientExtensionsField>;
+
     constructor(
-        /**
-         * @summary `recipient`.
-         * @public
-         * @readonly
-         */
-        readonly recipient: ORDescriptor,
-        /**
-         * @summary `notification_requests`.
-         * @public
-         * @readonly
-         */
-        readonly notification_requests?: OPTIONAL<NotificationRequests>,
-        /**
-         * @summary `reply_requested`.
-         * @public
-         * @readonly
-         */
-        readonly reply_requested?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `recipient_extensions`.
-         * @public
-         * @readonly
-         */
-        readonly recipient_extensions?: OPTIONAL<RecipientExtensionsField>
-    ) {}
+        recipient: ORDescriptor,
+        notification_requests?: OPTIONAL<NotificationRequests>,
+        reply_requested?: OPTIONAL<BOOLEAN>,
+        recipient_extensions?: OPTIONAL<RecipientExtensionsField>
+    ) {
+        this.recipient = recipient;
+        this.notification_requests = notification_requests;
+        this.reply_requested = reply_requested;
+        this.recipient_extensions = recipient_extensions;
+    }
 
     /**
      * @summary Restructures an object into a RecipientSpecifier

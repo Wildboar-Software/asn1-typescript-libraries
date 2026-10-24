@@ -41,40 +41,48 @@ import { CS_GetProgramInvocationAttributes_Response_control_controlling_runningM
  */
 export
 class CS_GetProgramInvocationAttributes_Response_control_controlling {
+    /**
+     * @summary `controlledPI`.
+     * @description
+     *
+     * Names in `&Controlled-Program-Invocations` (may be empty). ISO 9506-1:2003 §12.9.1.2.11.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly controlledPI: Identifier[];
+    /**
+     * @summary `programLocation`.
+     * @description
+     *
+     * `&program-Location` for sequential languages; omit otherwise. CSI
+     * describes use. ISO 9506-1:2003 §12.9.1.2.12.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly programLocation: OPTIONAL<VisibleString>;
+    /**
+     * @summary `runningMode`.
+     * @description
+     *
+     * `&running-Mode`: free-run, remaining cycle count, or remaining step
+     * count. ISO 9506-1:2003 §12.9.1.2.13–§12.9.1.2.16.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly runningMode: CS_GetProgramInvocationAttributes_Response_control_controlling_runningMode;
+
     constructor (
-        /**
-         * @summary `controlledPI`.
-         * @description
-         *
-         * Names in `&Controlled-Program-Invocations` (may be empty). ISO 9506-1:2003 §12.9.1.2.11.
-         *
-         * @public
-         * @readonly
-         */
-        readonly controlledPI: Identifier[],
-        /**
-         * @summary `programLocation`.
-         * @description
-         *
-         * `&program-Location` for sequential languages; omit otherwise. CSI
-         * describes use. ISO 9506-1:2003 §12.9.1.2.12.
-         *
-         * @public
-         * @readonly
-         */
-        readonly programLocation: OPTIONAL<VisibleString>,
-        /**
-         * @summary `runningMode`.
-         * @description
-         *
-         * `&running-Mode`: free-run, remaining cycle count, or remaining step
-         * count. ISO 9506-1:2003 §12.9.1.2.13–§12.9.1.2.16.
-         *
-         * @public
-         * @readonly
-         */
-        readonly runningMode: CS_GetProgramInvocationAttributes_Response_control_controlling_runningMode
-    ) {}
+        controlledPI: Identifier[],
+        programLocation: OPTIONAL<VisibleString>,
+        runningMode: CS_GetProgramInvocationAttributes_Response_control_controlling_runningMode
+    ) {
+        this.controlledPI = controlledPI;
+        this.programLocation = programLocation;
+        this.runningMode = runningMode;
+    }
 
     /**
      * @summary Restructures an object into a CS_GetProgramInvocationAttributes_Response_control_controlling

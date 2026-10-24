@@ -49,41 +49,49 @@ import {
  *
  */
 export class SetPowerMode_RequestParams {
+  /**
+   * @summary `originalBSPHandle`.
+   * @description
+   *
+   * Hosting-endpoint BSP handle. Rewritten from the master's local
+   * `BSPHandle` (cl.26) (`X.1083 §16.53`, Table 113).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly originalBSPHandle: BioAPI_HANDLE;
+  /**
+   * @summary `unitID`.
+   * @description
+   *
+   * Unit whose power mode is set, from C `UnitID` (`X.1083 §16.53`,
+   * Table 113, §15.55).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly unitID: BioAPI_UNIT_ID;
+  /**
+   * @summary `powerMode`.
+   * @description
+   *
+   * From C `PowerMode` (`normal`/`detect`/`sleep`) (`X.1083 §16.53`,
+   * Table 113, §15.50).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly powerMode: BioAPI_POWER_MODE;
+
   constructor(
-    /**
-     * @summary `originalBSPHandle`.
-     * @description
-     *
-     * Hosting-endpoint BSP handle. Rewritten from the master's local
-     * `BSPHandle` (cl.26) (`X.1083 §16.53`, Table 113).
-     *
-     * @public
-     * @readonly
-     */
-    readonly originalBSPHandle: BioAPI_HANDLE,
-    /**
-     * @summary `unitID`.
-     * @description
-     *
-     * Unit whose power mode is set, from C `UnitID` (`X.1083 §16.53`,
-     * Table 113, §15.55).
-     *
-     * @public
-     * @readonly
-     */
-    readonly unitID: BioAPI_UNIT_ID,
-    /**
-     * @summary `powerMode`.
-     * @description
-     *
-     * From C `PowerMode` (`normal`/`detect`/`sleep`) (`X.1083 §16.53`,
-     * Table 113, §15.50).
-     *
-     * @public
-     * @readonly
-     */
-    readonly powerMode: BioAPI_POWER_MODE
-  ) {}
+    originalBSPHandle: BioAPI_HANDLE,
+    unitID: BioAPI_UNIT_ID,
+    powerMode: BioAPI_POWER_MODE
+  ) {
+    this.originalBSPHandle = originalBSPHandle;
+    this.unitID = unitID;
+    this.powerMode = powerMode;
+  }
 
   /**
    * @summary Restructures an object into a SetPowerMode_RequestParams

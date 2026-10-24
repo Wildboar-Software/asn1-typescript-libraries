@@ -36,26 +36,32 @@ import { MediaDetached, _decode_MediaDetached, _encode_MediaDetached } from "../
  */
 export
 class MediaEvtsList {
+    /**
+     * @summary `mediaAttached`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this event; omit if the SF does not support it
+     * (ECMA-269 Annex C).
+     */
+    public readonly mediaAttached?: OPTIONAL<MediaAttached>;
+    /**
+     * @summary `mediaDetached`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this event; omit if the SF does not support it
+     * (ECMA-269 Annex C).
+     */
+    public readonly mediaDetached?: OPTIONAL<MediaDetached>;
+
     constructor (
-        /**
-         * @summary `mediaAttached`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this event; omit if the SF does not support it
-         * (ECMA-269 Annex C).
-         */
-        readonly mediaAttached?: OPTIONAL<MediaAttached>,
-        /**
-         * @summary `mediaDetached`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this event; omit if the SF does not support it
-         * (ECMA-269 Annex C).
-         */
-        readonly mediaDetached?: OPTIONAL<MediaDetached>
-    ) {}
+        mediaAttached?: OPTIONAL<MediaAttached>,
+        mediaDetached?: OPTIONAL<MediaDetached>
+    ) {
+        this.mediaAttached = mediaAttached;
+        this.mediaDetached = mediaDetached;
+    }
 
     /**
      * @summary Restructures an object into a MediaEvtsList

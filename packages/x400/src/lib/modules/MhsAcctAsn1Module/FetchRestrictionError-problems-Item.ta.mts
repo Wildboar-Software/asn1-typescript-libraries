@@ -34,20 +34,26 @@ import {
  *
  */
 export class FetchRestrictionError_problems_Item {
+    /**
+     * @summary `problem`.
+     * @public
+     * @readonly
+     */
+    public readonly problem: FetchRestrictionProblem;
+    /**
+     * @summary `restriction`.
+     * @public
+     * @readonly
+     */
+    public readonly restriction: FetchRestrictionError_problems_Item_restriction;
+
     constructor(
-        /**
-         * @summary `problem`.
-         * @public
-         * @readonly
-         */
-        readonly problem: FetchRestrictionProblem,
-        /**
-         * @summary `restriction`.
-         * @public
-         * @readonly
-         */
-        readonly restriction: FetchRestrictionError_problems_Item_restriction
-    ) {}
+        problem: FetchRestrictionProblem,
+        restriction: FetchRestrictionError_problems_Item_restriction
+    ) {
+        this.problem = problem;
+        this.restriction = restriction;
+    }
 
     /**
      * @summary Restructures an object into a FetchRestrictionError_problems_Item

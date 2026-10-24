@@ -23,45 +23,55 @@ import * as $ from "@wildboar/asn1/functional";
  *
  */
 export class TimeAssertion_between {
+    /**
+     * @summary `startTime`.
+     * @description
+     *
+     * Start of assertion band.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly startTime: GeneralizedTime;
+    /**
+     * @summary `endTime`.
+     * @description
+     *
+     * Missing ⇒ open-ended.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly endTime?: OPTIONAL<GeneralizedTime>;
+    /**
+     * @summary `entirely`.
+     * @description
+     *
+     * DEFAULT FALSE (any overlap) vs TRUE (assertion fully inside
+     * stored spec).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly entirely?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `startTime`.
-         * @description
-         *
-         * Start of assertion band.
-         *
-         * @public
-         * @readonly
-         */
-        readonly startTime: GeneralizedTime,
-        /**
-         * @summary `endTime`.
-         * @description
-         *
-         * Missing ⇒ open-ended.
-         *
-         * @public
-         * @readonly
-         */
-        readonly endTime?: OPTIONAL<GeneralizedTime>,
-        /**
-         * @summary `entirely`.
-         * @description
-         *
-         * DEFAULT FALSE (any overlap) vs TRUE (assertion fully inside
-         * stored spec).
-         *
-         * @public
-         * @readonly
-         */
-        readonly entirely?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        startTime: GeneralizedTime,
+        endTime?: OPTIONAL<GeneralizedTime>,
+        entirely?: OPTIONAL<BOOLEAN>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.startTime = startTime;
+        this.endTime = endTime;
+        this.entirely = entirely;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a TimeAssertion_between

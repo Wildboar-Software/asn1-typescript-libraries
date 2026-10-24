@@ -48,47 +48,57 @@ import {
  *
  */
 export class E_terminateError {
+    /**
+     * @summary `sessionType`.
+     * @description
+     *
+     * Same value as in the corresponding request.
+     * ITU-T Rec. X.1080.1 (05/2018) §11.2.3 a).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sessionType: SessionType;
+    /**
+     * @summary `sessionId`.
+     * @description
+     *
+     * Same value as in the corresponding request.
+     * ITU-T Rec. X.1080.1 (05/2018) §11.2.3 b).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sessionId: SessionId;
+    /**
+     * @summary `error`.
+     * @description
+     *
+     * Reason termination was refused. ITU-T Rec. X.1080.1
+     * (05/2018) §11.2.3 c).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly error: TerminateError;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `sessionType`.
-         * @description
-         *
-         * Same value as in the corresponding request.
-         * ITU-T Rec. X.1080.1 (05/2018) §11.2.3 a).
-         *
-         * @public
-         * @readonly
-         */
-        readonly sessionType: SessionType,
-        /**
-         * @summary `sessionId`.
-         * @description
-         *
-         * Same value as in the corresponding request.
-         * ITU-T Rec. X.1080.1 (05/2018) §11.2.3 b).
-         *
-         * @public
-         * @readonly
-         */
-        readonly sessionId: SessionId,
-        /**
-         * @summary `error`.
-         * @description
-         *
-         * Reason termination was refused. ITU-T Rec. X.1080.1
-         * (05/2018) §11.2.3 c).
-         *
-         * @public
-         * @readonly
-         */
-        readonly error: TerminateError,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        sessionType: SessionType,
+        sessionId: SessionId,
+        error: TerminateError,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.sessionType = sessionType;
+        this.sessionId = sessionId;
+        this.error = error;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a E_terminateError

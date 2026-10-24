@@ -39,46 +39,56 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class SetAutoWorkModeArgument {
+    /**
+     * @summary `device`.
+     * @description
+     *
+     * ACD agent whose auto-work mode is set.
+     * @public
+     * @readonly
+     */
+    public readonly device: DeviceID;
+    /**
+     * @summary `autoWorkOn`.
+     * @description
+     *
+     * FALSE = off; TRUE = on.
+     * @public
+     * @readonly
+     */
+    public readonly autoWorkOn: BOOLEAN;
+    /**
+     * @summary `autoWorkInterval`.
+     * @description
+     *
+     * Seconds in WorkingAfterCall (0..6000). 0: do not auto-exit that
+     * state.
+     * @public
+     * @readonly
+     */
+    public readonly autoWorkInterval?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `device`.
-         * @description
-         *
-         * ACD agent whose auto-work mode is set.
-         * @public
-         * @readonly
-         */
-        readonly device: DeviceID,
-        /**
-         * @summary `autoWorkOn`.
-         * @description
-         *
-         * FALSE = off; TRUE = on.
-         * @public
-         * @readonly
-         */
-        readonly autoWorkOn: BOOLEAN,
-        /**
-         * @summary `autoWorkInterval`.
-         * @description
-         *
-         * Seconds in WorkingAfterCall (0..6000). 0: do not auto-exit that
-         * state.
-         * @public
-         * @readonly
-         */
-        readonly autoWorkInterval?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        device: DeviceID,
+        autoWorkOn: BOOLEAN,
+        autoWorkInterval?: OPTIONAL<INTEGER>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.device = device;
+        this.autoWorkOn = autoWorkOn;
+        this.autoWorkInterval = autoWorkInterval;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a SetAutoWorkModeArgument

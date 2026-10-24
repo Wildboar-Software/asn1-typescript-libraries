@@ -31,19 +31,23 @@ import { RetrieveNotificationsListRequest_searchCriteria, _decode_RetrieveNotifi
  */
 export
 class RetrieveNotificationsListRequest {
+    /**
+     * @summary `searchCriteria`.
+     * @description
+     * 
+     * One sequence number, or an event filter. Omit to take pending
+     * notifications up to the command size. SGP.22 v3.1 §5.7.10.
+     * 
+     * @public
+     * @readonly
+     */
+    public readonly searchCriteria?: OPTIONAL<RetrieveNotificationsListRequest_searchCriteria>;
+
     constructor (
-        /**
-         * @summary `searchCriteria`.
-         * @description
-         * 
-         * One sequence number, or an event filter. Omit to take pending
-         * notifications up to the command size. SGP.22 v3.1 §5.7.10.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly searchCriteria?: OPTIONAL<RetrieveNotificationsListRequest_searchCriteria>
-    ) {}
+        searchCriteria?: OPTIONAL<RetrieveNotificationsListRequest_searchCriteria>
+    ) {
+        this.searchCriteria = searchCriteria;
+    }
 
     /**
      * @summary Restructures an object into a RetrieveNotificationsListRequest

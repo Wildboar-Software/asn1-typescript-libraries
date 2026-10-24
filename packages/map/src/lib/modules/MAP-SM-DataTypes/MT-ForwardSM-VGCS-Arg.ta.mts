@@ -33,54 +33,66 @@ import { SM_RP_OA, _decode_SM_RP_OA, _encode_SM_RP_OA } from "../MAP-SM-DataType
  */
 export
 class MT_ForwardSM_VGCS_Arg {
+    /**
+     * @summary `asciCallReference`.
+     * @description
+     *
+     * VGCS/VBS call reference.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly asciCallReference: ASCI_CallReference;
+    /**
+     * @summary `sm_RP_OA`.
+     * @description
+     *
+     * Originating address.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sm_RP_OA: SM_RP_OA;
+    /**
+     * @summary `sm_RP_UI`.
+     * @description
+     *
+     * Short message TPDU.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sm_RP_UI: SignalInfo;
+    /**
+     * @summary `extensionContainer`.
+     * @description
+     *
+     * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `asciCallReference`.
-         * @description
-         *
-         * VGCS/VBS call reference.
-         *
-         * @public
-         * @readonly
-         */
-        readonly asciCallReference: ASCI_CallReference,
-        /**
-         * @summary `sm_RP_OA`.
-         * @description
-         *
-         * Originating address.
-         *
-         * @public
-         * @readonly
-         */
-        readonly sm_RP_OA: SM_RP_OA,
-        /**
-         * @summary `sm_RP_UI`.
-         * @description
-         *
-         * Short message TPDU.
-         *
-         * @public
-         * @readonly
-         */
-        readonly sm_RP_UI: SignalInfo,
-        /**
-         * @summary `extensionContainer`.
-         * @description
-         *
-         * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        asciCallReference: ASCI_CallReference,
+        sm_RP_OA: SM_RP_OA,
+        sm_RP_UI: SignalInfo,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.asciCallReference = asciCallReference;
+        this.sm_RP_OA = sm_RP_OA;
+        this.sm_RP_UI = sm_RP_UI;
+        this.extensionContainer = extensionContainer;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a MT_ForwardSM_VGCS_Arg

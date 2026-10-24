@@ -79,78 +79,94 @@ import {
  *
  */
 export class ErrorInfo {
+    /**
+     * @summary `probableCause`.
+     * @description
+     *
+     * Optional probable cause of the example communication
+     * error. ITU-T Rec. X.722 (01/92) A.9.
+     * @public
+     * @readonly
+     */
+    public readonly probableCause?: OPTIONAL<ProbableCause>;
+    /**
+     * @summary `perceivedSeverity`.
+     * @description
+     *
+     * Optional perceived severity of the example
+     * communication error. ITU-T Rec. X.722 (01/92) A.9.
+     * @public
+     * @readonly
+     */
+    public readonly perceivedSeverity?: OPTIONAL<PerceivedSeverity>;
+    /**
+     * @summary `trendIndication`.
+     * @description
+     *
+     * Optional severity trend for the example communication
+     * error. ITU-T Rec. X.722 (01/92) A.9.
+     * @public
+     * @readonly
+     */
+    public readonly trendIndication?: OPTIONAL<TrendIndication>;
+    /**
+     * @summary `backedUpStatus`.
+     * @description
+     *
+     * Optional backed-up status for the example
+     * communication error. ITU-T Rec. X.722 (01/92) A.9.
+     * @public
+     * @readonly
+     */
+    public readonly backedUpStatus?: OPTIONAL<BackedUpStatus>;
+    /**
+     * @summary `proposedRepairActions`.
+     * @description
+     *
+     * Optional proposed repair actions for the example
+     * communication error. ITU-T Rec. X.722 (01/92) A.9.
+     * @public
+     * @readonly
+     */
+    public readonly proposedRepairActions?: OPTIONAL<ProposedRepairActions>;
+    /**
+     * @summary `thresholdInfo`.
+     * @description
+     *
+     * Optional threshold information for the example
+     * communication error. ITU-T Rec. X.722 (01/92) A.9.
+     * @public
+     * @readonly
+     */
+    public readonly thresholdInfo?: OPTIONAL<ThresholdInfo>;
+    /**
+     * @summary `otherInfo`.
+     * @description
+     *
+     * Optional extra information for the example
+     * communication error. ITU-T Rec. X.722 (01/92) A.9.
+     * @public
+     * @readonly
+     */
+    public readonly otherInfo?: OPTIONAL<OtherInfo>;
+
     constructor(
-        /**
-         * @summary `probableCause`.
-         * @description
-         *
-         * Optional probable cause of the example communication
-         * error. ITU-T Rec. X.722 (01/92) A.9.
-         * @public
-         * @readonly
-         */
-        readonly probableCause?: OPTIONAL<ProbableCause>,
-        /**
-         * @summary `perceivedSeverity`.
-         * @description
-         *
-         * Optional perceived severity of the example
-         * communication error. ITU-T Rec. X.722 (01/92) A.9.
-         * @public
-         * @readonly
-         */
-        readonly perceivedSeverity?: OPTIONAL<PerceivedSeverity>,
-        /**
-         * @summary `trendIndication`.
-         * @description
-         *
-         * Optional severity trend for the example communication
-         * error. ITU-T Rec. X.722 (01/92) A.9.
-         * @public
-         * @readonly
-         */
-        readonly trendIndication?: OPTIONAL<TrendIndication>,
-        /**
-         * @summary `backedUpStatus`.
-         * @description
-         *
-         * Optional backed-up status for the example
-         * communication error. ITU-T Rec. X.722 (01/92) A.9.
-         * @public
-         * @readonly
-         */
-        readonly backedUpStatus?: OPTIONAL<BackedUpStatus>,
-        /**
-         * @summary `proposedRepairActions`.
-         * @description
-         *
-         * Optional proposed repair actions for the example
-         * communication error. ITU-T Rec. X.722 (01/92) A.9.
-         * @public
-         * @readonly
-         */
-        readonly proposedRepairActions?: OPTIONAL<ProposedRepairActions>,
-        /**
-         * @summary `thresholdInfo`.
-         * @description
-         *
-         * Optional threshold information for the example
-         * communication error. ITU-T Rec. X.722 (01/92) A.9.
-         * @public
-         * @readonly
-         */
-        readonly thresholdInfo?: OPTIONAL<ThresholdInfo>,
-        /**
-         * @summary `otherInfo`.
-         * @description
-         *
-         * Optional extra information for the example
-         * communication error. ITU-T Rec. X.722 (01/92) A.9.
-         * @public
-         * @readonly
-         */
-        readonly otherInfo?: OPTIONAL<OtherInfo>
-    ) {}
+        probableCause?: OPTIONAL<ProbableCause>,
+        perceivedSeverity?: OPTIONAL<PerceivedSeverity>,
+        trendIndication?: OPTIONAL<TrendIndication>,
+        backedUpStatus?: OPTIONAL<BackedUpStatus>,
+        proposedRepairActions?: OPTIONAL<ProposedRepairActions>,
+        thresholdInfo?: OPTIONAL<ThresholdInfo>,
+        otherInfo?: OPTIONAL<OtherInfo>
+    ) {
+        this.probableCause = probableCause;
+        this.perceivedSeverity = perceivedSeverity;
+        this.trendIndication = trendIndication;
+        this.backedUpStatus = backedUpStatus;
+        this.proposedRepairActions = proposedRepairActions;
+        this.thresholdInfo = thresholdInfo;
+        this.otherInfo = otherInfo;
+    }
 
     /**
      * @summary Restructures an object into a ErrorInfo

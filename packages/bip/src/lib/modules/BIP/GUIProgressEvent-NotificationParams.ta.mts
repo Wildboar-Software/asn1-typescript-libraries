@@ -96,125 +96,149 @@ import {
  *
  */
 export class GUIProgressEvent_NotificationParams {
+  /**
+   * @summary `guiEventSubscriptionUuid`.
+   * @description
+   *
+   * Secondary-subscription UUID. Absent when converting from
+   * `BioSPI_GUI_PROGRESS_EVENT_HANDLER`. Present and taken from
+   * a matching `GUIEventRedirector` when redirected. X.1083
+   * §8.3, §17.4.5, §17.4.8, Table 132.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly guiEventSubscriptionUuid: OPTIONAL<BioAPI_UUID>;
+  /**
+   * @summary `bspProductUuid`.
+   * @description
+   *
+   * Product UUID of the BSP (`BSPUuid`). X.1083 §17.4.7,
+   * Table 132.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly bspProductUuid: BioAPI_UUID;
+  /**
+   * @summary `unitID`.
+   * @description
+   *
+   * Unit associated with the GUI event. X.1083 §17.4.7,
+   * Table 132.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly unitID: BioAPI_UNIT_ID;
+  /**
+   * @summary `originalBSPHandle`.
+   * @description
+   *
+   * Attach-session handle (`BSPHandle`). Absent after
+   * redirection. X.1083 §17.4.5 d, §17.4.7, Table 132.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly originalBSPHandle: OPTIONAL<BioAPI_HANDLE>;
+  /**
+   * @summary `operation`.
+   * @description
+   *
+   * Maps from `Operation`. X.1083 §17.4.7, Table 132.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly operation: BioAPI_GUI_OPERATION;
+  /**
+   * @summary `suboperation`.
+   * @description
+   *
+   * Maps from `Suboperation`. X.1083 §17.4.7, Table 132.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly suboperation: BioAPI_GUI_SUBOPERATION;
+  /**
+   * @summary `purpose`.
+   * @description
+   *
+   * Maps from `Purpose`. X.1083 §17.4.7, Table 132.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly purpose: BioAPI_BIR_PURPOSE;
+  /**
+   * @summary `moment`.
+   * @description
+   *
+   * Maps from `Moment`. X.1083 §17.4.7, Table 132.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly moment: BioAPI_GUI_MOMENT;
+  /**
+   * @summary `suboperationProgress`.
+   * @description
+   *
+   * Maps from `SuboperationProgress`. X.1083 §17.4.7,
+   * Table 132.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly suboperationProgress: UnsignedByte;
+  /**
+   * @summary `bitmaps`.
+   * @description
+   *
+   * Maps from `Bitmaps`. X.1083 §17.4.7, Table 132.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly bitmaps?: OPTIONAL<BioAPI_GUI_BITMAP_ARRAY>;
+  /**
+   * @summary `text`.
+   * @description
+   *
+   * Maps from `Text`. X.1083 §17.4.7, Table 132.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly text?: OPTIONAL<UTF8String>;
+
   constructor(
-    /**
-     * @summary `guiEventSubscriptionUuid`.
-     * @description
-     *
-     * Secondary-subscription UUID. Absent when converting from
-     * `BioSPI_GUI_PROGRESS_EVENT_HANDLER`. Present and taken from
-     * a matching `GUIEventRedirector` when redirected. X.1083
-     * §8.3, §17.4.5, §17.4.8, Table 132.
-     *
-     * @public
-     * @readonly
-     */
-    readonly guiEventSubscriptionUuid: OPTIONAL<BioAPI_UUID>,
-    /**
-     * @summary `bspProductUuid`.
-     * @description
-     *
-     * Product UUID of the BSP (`BSPUuid`). X.1083 §17.4.7,
-     * Table 132.
-     *
-     * @public
-     * @readonly
-     */
-    readonly bspProductUuid: BioAPI_UUID,
-    /**
-     * @summary `unitID`.
-     * @description
-     *
-     * Unit associated with the GUI event. X.1083 §17.4.7,
-     * Table 132.
-     *
-     * @public
-     * @readonly
-     */
-    readonly unitID: BioAPI_UNIT_ID,
-    /**
-     * @summary `originalBSPHandle`.
-     * @description
-     *
-     * Attach-session handle (`BSPHandle`). Absent after
-     * redirection. X.1083 §17.4.5 d, §17.4.7, Table 132.
-     *
-     * @public
-     * @readonly
-     */
-    readonly originalBSPHandle: OPTIONAL<BioAPI_HANDLE>,
-    /**
-     * @summary `operation`.
-     * @description
-     *
-     * Maps from `Operation`. X.1083 §17.4.7, Table 132.
-     *
-     * @public
-     * @readonly
-     */
-    readonly operation: BioAPI_GUI_OPERATION,
-    /**
-     * @summary `suboperation`.
-     * @description
-     *
-     * Maps from `Suboperation`. X.1083 §17.4.7, Table 132.
-     *
-     * @public
-     * @readonly
-     */
-    readonly suboperation: BioAPI_GUI_SUBOPERATION,
-    /**
-     * @summary `purpose`.
-     * @description
-     *
-     * Maps from `Purpose`. X.1083 §17.4.7, Table 132.
-     *
-     * @public
-     * @readonly
-     */
-    readonly purpose: BioAPI_BIR_PURPOSE,
-    /**
-     * @summary `moment`.
-     * @description
-     *
-     * Maps from `Moment`. X.1083 §17.4.7, Table 132.
-     *
-     * @public
-     * @readonly
-     */
-    readonly moment: BioAPI_GUI_MOMENT,
-    /**
-     * @summary `suboperationProgress`.
-     * @description
-     *
-     * Maps from `SuboperationProgress`. X.1083 §17.4.7,
-     * Table 132.
-     *
-     * @public
-     * @readonly
-     */
-    readonly suboperationProgress: UnsignedByte,
-    /**
-     * @summary `bitmaps`.
-     * @description
-     *
-     * Maps from `Bitmaps`. X.1083 §17.4.7, Table 132.
-     *
-     * @public
-     * @readonly
-     */
-    readonly bitmaps?: OPTIONAL<BioAPI_GUI_BITMAP_ARRAY>,
-    /**
-     * @summary `text`.
-     * @description
-     *
-     * Maps from `Text`. X.1083 §17.4.7, Table 132.
-     *
-     * @public
-     * @readonly
-     */
-    readonly text?: OPTIONAL<UTF8String>
-  ) {}
+    guiEventSubscriptionUuid: OPTIONAL<BioAPI_UUID>,
+    bspProductUuid: BioAPI_UUID,
+    unitID: BioAPI_UNIT_ID,
+    originalBSPHandle: OPTIONAL<BioAPI_HANDLE>,
+    operation: BioAPI_GUI_OPERATION,
+    suboperation: BioAPI_GUI_SUBOPERATION,
+    purpose: BioAPI_BIR_PURPOSE,
+    moment: BioAPI_GUI_MOMENT,
+    suboperationProgress: UnsignedByte,
+    bitmaps?: OPTIONAL<BioAPI_GUI_BITMAP_ARRAY>,
+    text?: OPTIONAL<UTF8String>
+  ) {
+    this.guiEventSubscriptionUuid = guiEventSubscriptionUuid;
+    this.bspProductUuid = bspProductUuid;
+    this.unitID = unitID;
+    this.originalBSPHandle = originalBSPHandle;
+    this.operation = operation;
+    this.suboperation = suboperation;
+    this.purpose = purpose;
+    this.moment = moment;
+    this.suboperationProgress = suboperationProgress;
+    this.bitmaps = bitmaps;
+    this.text = text;
+  }
 
   /**
    * @summary Restructures an object into a GUIProgressEvent_NotificationParams

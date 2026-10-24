@@ -39,32 +39,38 @@ import {
  *
  */
 export class Condition {
+    /**
+     * @summary `object`.
+     * @description
+     *
+     * Participant that did not meet the condition. ITU-T Rec.
+     * X.751 (11/95)
+     * [§8.7.8](https://www.itu.int/rec/T-REC-X.751-199511-I),
+     * §8.7.9.
+     * @public
+     * @readonly
+     */
+    public readonly object: ObjectInstance;
+    /**
+     * @summary `details`.
+     * @description
+     *
+     * Attribute values that failed the pre- or postcondition.
+     * ITU-T Rec. X.751 (11/95)
+     * [§8.7.8](https://www.itu.int/rec/T-REC-X.751-199511-I),
+     * §8.7.9.
+     * @public
+     * @readonly
+     */
+    public readonly details: Attribute[];
+
     constructor(
-        /**
-         * @summary `object`.
-         * @description
-         *
-         * Participant that did not meet the condition. ITU-T Rec.
-         * X.751 (11/95)
-         * [§8.7.8](https://www.itu.int/rec/T-REC-X.751-199511-I),
-         * §8.7.9.
-         * @public
-         * @readonly
-         */
-        readonly object: ObjectInstance,
-        /**
-         * @summary `details`.
-         * @description
-         *
-         * Attribute values that failed the pre- or postcondition.
-         * ITU-T Rec. X.751 (11/95)
-         * [§8.7.8](https://www.itu.int/rec/T-REC-X.751-199511-I),
-         * §8.7.9.
-         * @public
-         * @readonly
-         */
-        readonly details: Attribute[]
-    ) {}
+        object: ObjectInstance,
+        details: Attribute[]
+    ) {
+        this.object = object;
+        this.details = details;
+    }
 
     /**
      * @summary Restructures an object into a Condition

@@ -33,26 +33,34 @@ import {
  *
  */
 export class CommonPrivateKeyAttributes {
+    /**
+     * @summary `subjectName`.
+     * @public
+     * @readonly
+     */
+    public readonly subjectName?: OPTIONAL<Name>;
+    /**
+     * @summary `keyIdentifiers`.
+     * @public
+     * @readonly
+     */
+    public readonly keyIdentifiers?: OPTIONAL<CredentialIdentifier[]>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `subjectName`.
-         * @public
-         * @readonly
-         */
-        readonly subjectName?: OPTIONAL<Name>,
-        /**
-         * @summary `keyIdentifiers`.
-         * @public
-         * @readonly
-         */
-        readonly keyIdentifiers?: OPTIONAL<CredentialIdentifier[]>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        subjectName?: OPTIONAL<Name>,
+        keyIdentifiers?: OPTIONAL<CredentialIdentifier[]>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.subjectName = subjectName;
+        this.keyIdentifiers = keyIdentifiers;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a CommonPrivateKeyAttributes

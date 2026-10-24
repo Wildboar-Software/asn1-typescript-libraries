@@ -44,27 +44,33 @@ import {
  *
  */
 export class DeleteSpecification {
+    /**
+     * @summary `deleteModifier`.
+     * @description
+     *
+     * ONLY-IF-NO-CONTAINED-OBJECTS or DELETES-CONTAINED-OBJECTS. Omitted if
+     * the DELETE construct has no modifier.
+     * @public
+     * @readonly
+     */
+    public readonly deleteModifier?: OPTIONAL<DeleteSpecification_deleteModifier>;
+    /**
+     * @summary `parameter`.
+     * @description
+     *
+     * Name-binding-specific Delete error parameters (processing failures).
+     * @public
+     * @readonly
+     */
+    public readonly parameter?: OPTIONAL<TemplateList>;
+
     constructor(
-        /**
-         * @summary `deleteModifier`.
-         * @description
-         *
-         * ONLY-IF-NO-CONTAINED-OBJECTS or DELETES-CONTAINED-OBJECTS. Omitted if
-         * the DELETE construct has no modifier.
-         * @public
-         * @readonly
-         */
-        readonly deleteModifier?: OPTIONAL<DeleteSpecification_deleteModifier>,
-        /**
-         * @summary `parameter`.
-         * @description
-         *
-         * Name-binding-specific Delete error parameters (processing failures).
-         * @public
-         * @readonly
-         */
-        readonly parameter?: OPTIONAL<TemplateList>
-    ) {}
+        deleteModifier?: OPTIONAL<DeleteSpecification_deleteModifier>,
+        parameter?: OPTIONAL<TemplateList>
+    ) {
+        this.deleteModifier = deleteModifier;
+        this.parameter = parameter;
+    }
 
     /**
      * @summary Restructures an object into a DeleteSpecification

@@ -39,31 +39,37 @@ import { Start_Request_executionArgument, _decode_Start_Request_executionArgumen
  */
 export
 class Start_Request {
+    /**
+     * @summary `programInvocationName`.
+     * @description
+     *
+     * Program Invocation to start; must be `idle`. ISO 9506-1:2003
+     * §12.4.1.1.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly programInvocationName: Identifier;
+    /**
+     * @summary `executionArgument`.
+     * @description
+     *
+     * Optional data passed into the PI; sets `&executionArgument` if
+     * present, else that field is unchanged. String or externally encoded.
+     * ISO 9506-1:2003 §12.1.1.10, §12.4.1.1.2. ISO 9506-2:2003 §12.4.1.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly executionArgument?: OPTIONAL<Start_Request_executionArgument>;
+
     constructor (
-        /**
-         * @summary `programInvocationName`.
-         * @description
-         *
-         * Program Invocation to start; must be `idle`. ISO 9506-1:2003
-         * §12.4.1.1.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly programInvocationName: Identifier,
-        /**
-         * @summary `executionArgument`.
-         * @description
-         *
-         * Optional data passed into the PI; sets `&executionArgument` if
-         * present, else that field is unchanged. String or externally encoded.
-         * ISO 9506-1:2003 §12.1.1.10, §12.4.1.1.2. ISO 9506-2:2003 §12.4.1.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly executionArgument?: OPTIONAL<Start_Request_executionArgument>
-    ) {}
+        programInvocationName: Identifier,
+        executionArgument?: OPTIONAL<Start_Request_executionArgument>
+    ) {
+        this.programInvocationName = programInvocationName;
+        this.executionArgument = executionArgument;
+    }
 
     /**
      * @summary Restructures an object into a Start_Request

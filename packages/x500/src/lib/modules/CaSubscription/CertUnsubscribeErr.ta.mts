@@ -28,23 +28,29 @@ import {
  *
  */
 export class CertUnsubscribeErr {
+    /**
+     * @summary `code`.
+     * @description
+     *
+     * CASP-error for the whole-message failure.
+     * @public
+     * @readonly
+     */
+    public readonly code: CASP_error;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `code`.
-         * @description
-         *
-         * CASP-error for the whole-message failure.
-         * @public
-         * @readonly
-         */
-        readonly code: CASP_error,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        code: CASP_error,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.code = code;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a CertUnsubscribeErr

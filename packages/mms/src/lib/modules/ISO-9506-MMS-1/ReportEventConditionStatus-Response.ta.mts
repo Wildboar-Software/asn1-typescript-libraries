@@ -43,70 +43,82 @@ import { EventTime, _decode_EventTime, _encode_EventTime } from "../MMS-Object-M
  */
 export
 class ReportEventConditionStatus_Response {
+    /**
+     * @summary `currentState`.
+     * @description
+     *
+     * `&ecState`: `disabled`, `idle`, or `active`. Network-triggered is always
+     * `disabled`.
+     *
+     * [ISO 9506-1:2003 §19.5.1.2.1]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly currentState: EC_State;
+    /**
+     * @summary `numberOfEventEnrollments`.
+     * @description
+     *
+     * Count of `&EventEnrollments`.
+     *
+     * [ISO 9506-1:2003 §19.5.1.2.2]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly numberOfEventEnrollments: Unsigned32;
+    /**
+     * @summary `enabled`.
+     * @description
+     *
+     * Monitored: `&enabled`. Omitted for network-triggered. False: no transition
+     * processing.
+     *
+     * [ISO 9506-1:2003 §19.5.1.2.3]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly enabled?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `timeOfLastTransitionToActive`.
+     * @description
+     *
+     * Monitored `&timeToActive` if not undefined.
+     *
+     * [ISO 9506-1:2003 §19.5.1.2.4]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly timeOfLastTransitionToActive?: OPTIONAL<EventTime>;
+    /**
+     * @summary `timeOfLastTransitionToIdle`.
+     * @description
+     *
+     * Monitored `&timeToIdle` if not undefined.
+     *
+     * [ISO 9506-1:2003 §19.5.1.2.5]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly timeOfLastTransitionToIdle?: OPTIONAL<EventTime>;
+
     constructor (
-        /**
-         * @summary `currentState`.
-         * @description
-         *
-         * `&ecState`: `disabled`, `idle`, or `active`. Network-triggered is always
-         * `disabled`.
-         *
-         * [ISO 9506-1:2003 §19.5.1.2.1]
-         *
-         * @public
-         * @readonly
-         */
-        readonly currentState: EC_State,
-        /**
-         * @summary `numberOfEventEnrollments`.
-         * @description
-         *
-         * Count of `&EventEnrollments`.
-         *
-         * [ISO 9506-1:2003 §19.5.1.2.2]
-         *
-         * @public
-         * @readonly
-         */
-        readonly numberOfEventEnrollments: Unsigned32,
-        /**
-         * @summary `enabled`.
-         * @description
-         *
-         * Monitored: `&enabled`. Omitted for network-triggered. False: no transition
-         * processing.
-         *
-         * [ISO 9506-1:2003 §19.5.1.2.3]
-         *
-         * @public
-         * @readonly
-         */
-        readonly enabled?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `timeOfLastTransitionToActive`.
-         * @description
-         *
-         * Monitored `&timeToActive` if not undefined.
-         *
-         * [ISO 9506-1:2003 §19.5.1.2.4]
-         *
-         * @public
-         * @readonly
-         */
-        readonly timeOfLastTransitionToActive?: OPTIONAL<EventTime>,
-        /**
-         * @summary `timeOfLastTransitionToIdle`.
-         * @description
-         *
-         * Monitored `&timeToIdle` if not undefined.
-         *
-         * [ISO 9506-1:2003 §19.5.1.2.5]
-         *
-         * @public
-         * @readonly
-         */
-        readonly timeOfLastTransitionToIdle?: OPTIONAL<EventTime>
-    ) {}
+        currentState: EC_State,
+        numberOfEventEnrollments: Unsigned32,
+        enabled?: OPTIONAL<BOOLEAN>,
+        timeOfLastTransitionToActive?: OPTIONAL<EventTime>,
+        timeOfLastTransitionToIdle?: OPTIONAL<EventTime>
+    ) {
+        this.currentState = currentState;
+        this.numberOfEventEnrollments = numberOfEventEnrollments;
+        this.enabled = enabled;
+        this.timeOfLastTransitionToActive = timeOfLastTransitionToActive;
+        this.timeOfLastTransitionToIdle = timeOfLastTransitionToIdle;
+    }
 
     /**
      * @summary Restructures an object into a ReportEventConditionStatus_Response

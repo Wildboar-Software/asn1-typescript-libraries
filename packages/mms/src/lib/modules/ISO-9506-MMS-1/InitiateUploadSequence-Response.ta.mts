@@ -32,29 +32,35 @@ import { MMSString, _decode_MMSString, _encode_MMSString } from "../ISO-9506-MMS
  */
 export
 class InitiateUploadSequence_Response {
+    /**
+     * @summary `ulsmID`.
+     * @description
+     *
+     * ULSM created for this upload; unique on this association. ISO 9506-1:2003 §11.5.1.2.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ulsmID: Integer32;
+    /**
+     * @summary `listOfCapabilities`.
+     * @description
+     *
+     * Capabilities used when the Domain was created. Empty list is
+     * preferred. ISO 9506-1:2003 §11.5.1.2.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly listOfCapabilities: MMSString[];
+
     constructor (
-        /**
-         * @summary `ulsmID`.
-         * @description
-         *
-         * ULSM created for this upload; unique on this association. ISO 9506-1:2003 §11.5.1.2.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly ulsmID: Integer32,
-        /**
-         * @summary `listOfCapabilities`.
-         * @description
-         *
-         * Capabilities used when the Domain was created. Empty list is
-         * preferred. ISO 9506-1:2003 §11.5.1.2.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly listOfCapabilities: MMSString[]
-    ) {}
+        ulsmID: Integer32,
+        listOfCapabilities: MMSString[]
+    ) {
+        this.ulsmID = ulsmID;
+        this.listOfCapabilities = listOfCapabilities;
+    }
 
     /**
      * @summary Restructures an object into a InitiateUploadSequence_Response

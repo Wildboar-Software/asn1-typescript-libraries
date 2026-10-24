@@ -96,116 +96,150 @@ import {
  *
  */
 export class AddEntryArgumentData implements CommonArguments {
+    /**
+     * @summary `object`.
+     * @description
+     *
+     * Name of the entry to create. Alias deref needs `useAliasOnUpdate`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly object: Name;
+    /**
+     * @summary `entry`.
+     * @description
+     *
+     * SET OF Attribute; unordered.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly entry: Attribute[];
+    /**
+     * @summary `targetSystem`.
+     * @description
+     *
+     * Where to create if not locally. Critical extension 9.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly targetSystem?: OPTIONAL<AccessPoint>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+    /**
+     * @summary `serviceControls`.
+     * @public
+     * @readonly
+     */
+    public readonly serviceControls?: OPTIONAL<ServiceControls>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `securityParameters`.
+     * @public
+     * @readonly
+     */
+    public readonly securityParameters?: OPTIONAL<SecurityParameters>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `requestor`.
+     * @public
+     * @readonly
+     */
+    public readonly requestor?: OPTIONAL<DistinguishedName>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `operationProgress`.
+     * @public
+     * @readonly
+     */
+    public readonly operationProgress?: OPTIONAL<OperationProgress>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `aliasedRDNs`.
+     * @public
+     * @readonly
+     */
+    public readonly aliasedRDNs?: OPTIONAL<INTEGER>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `criticalExtensions`.
+     * @public
+     * @readonly
+     */
+    public readonly criticalExtensions?: OPTIONAL<BIT_STRING>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `referenceType`.
+     * @public
+     * @readonly
+     */
+    public readonly referenceType?: OPTIONAL<ReferenceType>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `entryOnly`.
+     * @public
+     * @readonly
+     */
+    public readonly entryOnly?: OPTIONAL<BOOLEAN>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `exclusions`.
+     * @public
+     * @readonly
+     */
+    public readonly exclusions?: OPTIONAL<Exclusions>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `nameResolveOnMaster`.
+     * @public
+     * @readonly
+     */
+    public readonly nameResolveOnMaster?: OPTIONAL<BOOLEAN>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `operationContexts`.
+     * @public
+     * @readonly
+     */
+    public readonly operationContexts?: OPTIONAL<ContextSelection>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `familyGrouping`.
+     * @public
+     * @readonly
+     */
+    public readonly familyGrouping?: OPTIONAL<FamilyGrouping>; /* REPLICATED_COMPONENT */
+
     constructor(
-        /**
-         * @summary `object`.
-         * @description
-         *
-         * Name of the entry to create. Alias deref needs `useAliasOnUpdate`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly object: Name,
-        /**
-         * @summary `entry`.
-         * @description
-         *
-         * SET OF Attribute; unordered.
-         *
-         * @public
-         * @readonly
-         */
-        readonly entry: Attribute[],
-        /**
-         * @summary `targetSystem`.
-         * @description
-         *
-         * Where to create if not locally. Critical extension 9.
-         *
-         * @public
-         * @readonly
-         */
-        readonly targetSystem?: OPTIONAL<AccessPoint>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = [],
-        /**
-         * @summary `serviceControls`.
-         * @public
-         * @readonly
-         */
-        readonly serviceControls?: OPTIONAL<ServiceControls> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `securityParameters`.
-         * @public
-         * @readonly
-         */
-        readonly securityParameters?: OPTIONAL<SecurityParameters> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `requestor`.
-         * @public
-         * @readonly
-         */
-        readonly requestor?: OPTIONAL<DistinguishedName> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `operationProgress`.
-         * @public
-         * @readonly
-         */
-        readonly operationProgress?: OPTIONAL<OperationProgress> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `aliasedRDNs`.
-         * @public
-         * @readonly
-         */
-        readonly aliasedRDNs?: OPTIONAL<INTEGER> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `criticalExtensions`.
-         * @public
-         * @readonly
-         */
-        readonly criticalExtensions?: OPTIONAL<BIT_STRING> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `referenceType`.
-         * @public
-         * @readonly
-         */
-        readonly referenceType?: OPTIONAL<ReferenceType> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `entryOnly`.
-         * @public
-         * @readonly
-         */
-        readonly entryOnly?: OPTIONAL<BOOLEAN> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `exclusions`.
-         * @public
-         * @readonly
-         */
-        readonly exclusions?: OPTIONAL<Exclusions> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `nameResolveOnMaster`.
-         * @public
-         * @readonly
-         */
-        readonly nameResolveOnMaster?: OPTIONAL<BOOLEAN> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `operationContexts`.
-         * @public
-         * @readonly
-         */
-        readonly operationContexts?: OPTIONAL<ContextSelection> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `familyGrouping`.
-         * @public
-         * @readonly
-         */
-        readonly familyGrouping?: OPTIONAL<FamilyGrouping> /* REPLICATED_COMPONENT */
-    ) {}
+        object: Name,
+        entry: Attribute[],
+        targetSystem?: OPTIONAL<AccessPoint>,
+        _unrecognizedExtensionsList: _Element[] = [],
+        serviceControls?: OPTIONAL<ServiceControls>,
+        securityParameters?: OPTIONAL<SecurityParameters>,
+        requestor?: OPTIONAL<DistinguishedName>,
+        operationProgress?: OPTIONAL<OperationProgress>,
+        aliasedRDNs?: OPTIONAL<INTEGER>,
+        criticalExtensions?: OPTIONAL<BIT_STRING>,
+        referenceType?: OPTIONAL<ReferenceType>,
+        entryOnly?: OPTIONAL<BOOLEAN>,
+        exclusions?: OPTIONAL<Exclusions>,
+        nameResolveOnMaster?: OPTIONAL<BOOLEAN>,
+        operationContexts?: OPTIONAL<ContextSelection>,
+        familyGrouping?: OPTIONAL<FamilyGrouping>
+    ) {
+        this.object = object;
+        this.entry = entry;
+        this.targetSystem = targetSystem;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+        this.serviceControls = serviceControls;
+        this.securityParameters = securityParameters;
+        this.requestor = requestor;
+        this.operationProgress = operationProgress;
+        this.aliasedRDNs = aliasedRDNs;
+        this.criticalExtensions = criticalExtensions;
+        this.referenceType = referenceType;
+        this.entryOnly = entryOnly;
+        this.exclusions = exclusions;
+        this.nameResolveOnMaster = nameResolveOnMaster;
+        this.operationContexts = operationContexts;
+        this.familyGrouping = familyGrouping;
+    }
 
     /**
      * @summary Restructures an object into a AddEntryArgumentData

@@ -37,38 +37,46 @@ import { ObjectUpdate, _decode_ObjectUpdate, _encode_ObjectUpdate } from "../ISO
  */
 export
 class NDQcontent {
+    /**
+     * @summary `updates`.
+     * @description
+     * Object name and update for DOs, COs, or RIOs.
+     * Permitted updates: ISO/IEC 9040:1997 clauses 19 and
+     * 20. ISO/IEC 9041-1:1997 §6.14.
+     * @public
+     * @readonly
+     */
+    public readonly updates: ObjectUpdate[];
+    /**
+     * @summary `echoNow`.
+     * @description
+     * Presence means echo-now (A-mode echoing). Absence
+     * means do not echo-now. ISO/IEC 9041-1:1997 §6.14,
+     * §12.1.
+     * @public
+     * @readonly
+     */
+    public readonly echoNow?: OPTIONAL<NULL>;
+    /**
+     * @summary `startEntry`.
+     * @description
+     * Presence means start-entry (A-mode data entry).
+     * Absence means do not start-entry. ISO/IEC
+     * 9041-1:1997 §6.14, §12.1.
+     * @public
+     * @readonly
+     */
+    public readonly startEntry?: OPTIONAL<NULL>;
+
     constructor (
-        /**
-         * @summary `updates`.
-         * @description
-         * Object name and update for DOs, COs, or RIOs.
-         * Permitted updates: ISO/IEC 9040:1997 clauses 19 and
-         * 20. ISO/IEC 9041-1:1997 §6.14.
-         * @public
-         * @readonly
-         */
-        readonly updates: ObjectUpdate[],
-        /**
-         * @summary `echoNow`.
-         * @description
-         * Presence means echo-now (A-mode echoing). Absence
-         * means do not echo-now. ISO/IEC 9041-1:1997 §6.14,
-         * §12.1.
-         * @public
-         * @readonly
-         */
-        readonly echoNow?: OPTIONAL<NULL>,
-        /**
-         * @summary `startEntry`.
-         * @description
-         * Presence means start-entry (A-mode data entry).
-         * Absence means do not start-entry. ISO/IEC
-         * 9041-1:1997 §6.14, §12.1.
-         * @public
-         * @readonly
-         */
-        readonly startEntry?: OPTIONAL<NULL>
-    ) {}
+        updates: ObjectUpdate[],
+        echoNow?: OPTIONAL<NULL>,
+        startEntry?: OPTIONAL<NULL>
+    ) {
+        this.updates = updates;
+        this.echoNow = echoNow;
+        this.startEntry = startEntry;
+    }
 
     /**
      * @summary Restructures an object into a NDQcontent

@@ -36,20 +36,26 @@ import {
  *
  */
 export class ProtectionStatus_Item_lockout {
+    /**
+     * @summary `requestSource`.
+     * @public
+     * @readonly
+     */
+    public readonly requestSource: OPTIONAL<RequestSource>;
+    /**
+     * @summary `switchStatus`.
+     * @public
+     * @readonly
+     */
+    public readonly switchStatus: SwitchStatus;
+
     constructor(
-        /**
-         * @summary `requestSource`.
-         * @public
-         * @readonly
-         */
-        readonly requestSource: OPTIONAL<RequestSource>,
-        /**
-         * @summary `switchStatus`.
-         * @public
-         * @readonly
-         */
-        readonly switchStatus: SwitchStatus
-    ) {}
+        requestSource: OPTIONAL<RequestSource>,
+        switchStatus: SwitchStatus
+    ) {
+        this.requestSource = requestSource;
+        this.switchStatus = switchStatus;
+    }
 
     /**
      * @summary Restructures an object into a ProtectionStatus_Item_lockout

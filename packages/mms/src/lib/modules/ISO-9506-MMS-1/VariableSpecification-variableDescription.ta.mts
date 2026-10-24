@@ -38,30 +38,36 @@ import { TypeSpecification, _decode_TypeSpecification, _encode_TypeSpecification
  */
 export
 class VariableSpecification_variableDescription {
+    /**
+     * @summary `address`.
+     * @description
+     *
+     * Base address of the described variable.
+     * ISO 9506-1:2003 §14.5.2.4.1, §14.5.3.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly address: Address;
+    /**
+     * @summary `typeSpecification`.
+     * @description
+     *
+     * Abstract type of the variable.
+     * ISO 9506-1:2003 §14.5.2.4.2, §14.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly typeSpecification: TypeSpecification;
+
     constructor (
-        /**
-         * @summary `address`.
-         * @description
-         *
-         * Base address of the described variable.
-         * ISO 9506-1:2003 §14.5.2.4.1, §14.5.3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly address: Address,
-        /**
-         * @summary `typeSpecification`.
-         * @description
-         *
-         * Abstract type of the variable.
-         * ISO 9506-1:2003 §14.5.2.4.2, §14.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly typeSpecification: TypeSpecification
-    ) {}
+        address: Address,
+        typeSpecification: TypeSpecification
+    ) {
+        this.address = address;
+        this.typeSpecification = typeSpecification;
+    }
 
     /**
      * @summary Restructures an object into a VariableSpecification_variableDescription

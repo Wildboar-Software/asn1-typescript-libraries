@@ -33,51 +33,63 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
  */
 export
 class Allocation_Retention_Priority {
+    /**
+     * @summary `priority_level`.
+     * @description
+     *
+     * Priority Level of Evolved Allocation/Retention Priority (3GPP TS
+     * 29.060) (3GPP TS 29.002 V19.1.0 clauses 7.6.3.75C and 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly priority_level: INTEGER;
+    /**
+     * @summary `pre_emption_capability`.
+     * @description
+     *
+     * Preemption Capability (3GPP TS 29.002 V19.1.0 clause 7.6.3.75C).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly pre_emption_capability?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `pre_emption_vulnerability`.
+     * @description
+     *
+     * Preemption Vulnerability (3GPP TS 29.002 V19.1.0 clause 7.6.3.75C).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly pre_emption_vulnerability?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `priority_level`.
-         * @description
-         *
-         * Priority Level of Evolved Allocation/Retention Priority (3GPP TS
-         * 29.060) (3GPP TS 29.002 V19.1.0 clauses 7.6.3.75C and 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly priority_level: INTEGER,
-        /**
-         * @summary `pre_emption_capability`.
-         * @description
-         *
-         * Preemption Capability (3GPP TS 29.002 V19.1.0 clause 7.6.3.75C).
-         *
-         * @public
-         * @readonly
-         */
-        readonly pre_emption_capability?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `pre_emption_vulnerability`.
-         * @description
-         *
-         * Preemption Vulnerability (3GPP TS 29.002 V19.1.0 clause 7.6.3.75C).
-         *
-         * @public
-         * @readonly
-         */
-        readonly pre_emption_vulnerability?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        priority_level: INTEGER,
+        pre_emption_capability?: OPTIONAL<BOOLEAN>,
+        pre_emption_vulnerability?: OPTIONAL<BOOLEAN>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.priority_level = priority_level;
+        this.pre_emption_capability = pre_emption_capability;
+        this.pre_emption_vulnerability = pre_emption_vulnerability;
+        this.extensionContainer = extensionContainer;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a Allocation_Retention_Priority

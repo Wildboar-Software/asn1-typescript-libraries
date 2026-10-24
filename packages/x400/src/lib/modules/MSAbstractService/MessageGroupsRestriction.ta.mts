@@ -36,26 +36,34 @@ import {
  *
  */
 export class MessageGroupsRestriction {
+    /**
+     * @summary `parent_group`.
+     * @public
+     * @readonly
+     */
+    public readonly parent_group?: OPTIONAL<MessageGroupName>;
+    /**
+     * @summary `immediate_descendants_only`.
+     * @public
+     * @readonly
+     */
+    public readonly immediate_descendants_only?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `omit_descriptors`.
+     * @public
+     * @readonly
+     */
+    public readonly omit_descriptors?: OPTIONAL<BOOLEAN>;
+
     constructor(
-        /**
-         * @summary `parent_group`.
-         * @public
-         * @readonly
-         */
-        readonly parent_group?: OPTIONAL<MessageGroupName>,
-        /**
-         * @summary `immediate_descendants_only`.
-         * @public
-         * @readonly
-         */
-        readonly immediate_descendants_only?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `omit_descriptors`.
-         * @public
-         * @readonly
-         */
-        readonly omit_descriptors?: OPTIONAL<BOOLEAN>
-    ) {}
+        parent_group?: OPTIONAL<MessageGroupName>,
+        immediate_descendants_only?: OPTIONAL<BOOLEAN>,
+        omit_descriptors?: OPTIONAL<BOOLEAN>
+    ) {
+        this.parent_group = parent_group;
+        this.immediate_descendants_only = immediate_descendants_only;
+        this.omit_descriptors = omit_descriptors;
+    }
 
     /**
      * @summary Restructures an object into a MessageGroupsRestriction

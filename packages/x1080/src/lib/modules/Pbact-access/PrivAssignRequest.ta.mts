@@ -36,26 +36,32 @@ import {
  *
  */
 export class PrivAssignRequest {
+    /**
+     * @summary `attrCerts`.
+     * @description
+     *
+     * SOA sends one AC; each AA on the path adds its AC.
+     * ITU-T Rec. X.1080.0 (2017) Cor.1
+     * [§9](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly attrCerts?: OPTIONAL<AttributeCertificates>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `attrCerts`.
-         * @description
-         *
-         * SOA sends one AC; each AA on the path adds its AC.
-         * ITU-T Rec. X.1080.0 (2017) Cor.1
-         * [§9](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly attrCerts?: OPTIONAL<AttributeCertificates>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        attrCerts?: OPTIONAL<AttributeCertificates>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.attrCerts = attrCerts;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a PrivAssignRequest

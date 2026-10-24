@@ -62,103 +62,123 @@ import {
  *
  */
 export class SecurityParameters {
+    /**
+     * @summary `certification_path`.
+     * @description
+     *
+     * Required if signed. Cert subject shall equal `name`. If the
+     * recipient needs a path and it is missing, reject vs fetch is
+     * local.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly certification_path?: OPTIONAL<CertificationPath>;
+    /**
+     * @summary `name`.
+     * @description
+     *
+     * DN of the first intended recipient (e.g. the DSA the DUA submits
+     * to).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly name?: OPTIONAL<DistinguishedName>;
+    /**
+     * @summary `time`.
+     * @description
+     *
+     * Intended expiry; with `random`, detects replay.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly time?: OPTIONAL<Time>;
+    /**
+     * @summary `random`.
+     * @description
+     *
+     * Should differ per request/result/error. May carry sequence
+     * integrity: args derived from bind random then previous in the same
+     * direction; results/errors derived from the request random
+     * (e.g. +1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly random?: OPTIONAL<BIT_STRING>;
+    /**
+     * @summary `target`.
+     * @description
+     *
+     * Request only. `none`(0) default, `signed`(1). Actual protection
+     * ≤ requested.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly target?: OPTIONAL<ProtectionRequest>;
+    /**
+     * @summary `operationCode`.
+     * @description
+     *
+     * Bind opcode into signed content; receiver checks equality with the
+     * PDU opcode or discards. Only bound if signed.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly operationCode?: OPTIONAL<Code>;
+    /**
+     * @summary `errorProtection`.
+     * @description
+     *
+     * Request only. `none`/`signed`; actual ≤ requested.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly errorProtection?: OPTIONAL<ErrorProtectionRequest>;
+    /**
+     * @summary `errorCode`.
+     * @description
+     *
+     * Binds the error code into signed content when returning an error;
+     * mismatch ⇒ discard.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly errorCode?: OPTIONAL<Code>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `certification_path`.
-         * @description
-         *
-         * Required if signed. Cert subject shall equal `name`. If the
-         * recipient needs a path and it is missing, reject vs fetch is
-         * local.
-         *
-         * @public
-         * @readonly
-         */
-        readonly certification_path?: OPTIONAL<CertificationPath>,
-        /**
-         * @summary `name`.
-         * @description
-         *
-         * DN of the first intended recipient (e.g. the DSA the DUA submits
-         * to).
-         *
-         * @public
-         * @readonly
-         */
-        readonly name?: OPTIONAL<DistinguishedName>,
-        /**
-         * @summary `time`.
-         * @description
-         *
-         * Intended expiry; with `random`, detects replay.
-         *
-         * @public
-         * @readonly
-         */
-        readonly time?: OPTIONAL<Time>,
-        /**
-         * @summary `random`.
-         * @description
-         *
-         * Should differ per request/result/error. May carry sequence
-         * integrity: args derived from bind random then previous in the same
-         * direction; results/errors derived from the request random
-         * (e.g. +1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly random?: OPTIONAL<BIT_STRING>,
-        /**
-         * @summary `target`.
-         * @description
-         *
-         * Request only. `none`(0) default, `signed`(1). Actual protection
-         * ≤ requested.
-         *
-         * @public
-         * @readonly
-         */
-        readonly target?: OPTIONAL<ProtectionRequest>,
-        /**
-         * @summary `operationCode`.
-         * @description
-         *
-         * Bind opcode into signed content; receiver checks equality with the
-         * PDU opcode or discards. Only bound if signed.
-         *
-         * @public
-         * @readonly
-         */
-        readonly operationCode?: OPTIONAL<Code>,
-        /**
-         * @summary `errorProtection`.
-         * @description
-         *
-         * Request only. `none`/`signed`; actual ≤ requested.
-         *
-         * @public
-         * @readonly
-         */
-        readonly errorProtection?: OPTIONAL<ErrorProtectionRequest>,
-        /**
-         * @summary `errorCode`.
-         * @description
-         *
-         * Binds the error code into signed content when returning an error;
-         * mismatch ⇒ discard.
-         *
-         * @public
-         * @readonly
-         */
-        readonly errorCode?: OPTIONAL<Code>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        certification_path?: OPTIONAL<CertificationPath>,
+        name?: OPTIONAL<DistinguishedName>,
+        time?: OPTIONAL<Time>,
+        random?: OPTIONAL<BIT_STRING>,
+        target?: OPTIONAL<ProtectionRequest>,
+        operationCode?: OPTIONAL<Code>,
+        errorProtection?: OPTIONAL<ErrorProtectionRequest>,
+        errorCode?: OPTIONAL<Code>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.certification_path = certification_path;
+        this.name = name;
+        this.time = time;
+        this.random = random;
+        this.target = target;
+        this.operationCode = operationCode;
+        this.errorProtection = errorProtection;
+        this.errorCode = errorCode;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a SecurityParameters

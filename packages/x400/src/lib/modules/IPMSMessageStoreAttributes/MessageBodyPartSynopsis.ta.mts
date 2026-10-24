@@ -37,20 +37,26 @@ import {
  *
  */
 export class MessageBodyPartSynopsis {
+    /**
+     * @summary `number_`.
+     * @public
+     * @readonly
+     */
+    public readonly number_: SequenceNumber;
+    /**
+     * @summary `synopsis`.
+     * @public
+     * @readonly
+     */
+    public readonly synopsis: IPMSynopsis;
+
     constructor(
-        /**
-         * @summary `number_`.
-         * @public
-         * @readonly
-         */
-        readonly number_: SequenceNumber,
-        /**
-         * @summary `synopsis`.
-         * @public
-         * @readonly
-         */
-        readonly synopsis: IPMSynopsis
-    ) {}
+        number_: SequenceNumber,
+        synopsis: IPMSynopsis
+    ) {
+        this.number_ = number_;
+        this.synopsis = synopsis;
+    }
 
     /**
      * @summary Restructures an object into a MessageBodyPartSynopsis

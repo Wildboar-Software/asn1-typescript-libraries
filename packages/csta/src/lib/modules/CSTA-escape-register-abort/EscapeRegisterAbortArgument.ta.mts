@@ -36,29 +36,35 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class EscapeRegisterAbortArgument {
+    /**
+     * @summary `escapeRegisterID`.
+     * @description
+     *
+     * Escape registration that was aborted (ECMA-269 §29.1.2.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly escapeRegisterID: EscapeRegisterID;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * CSTACommonArguments carrying the service-table security and
+     * privateData parameters.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `escapeRegisterID`.
-         * @description
-         *
-         * Escape registration that was aborted (ECMA-269 §29.1.2.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly escapeRegisterID: EscapeRegisterID,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * CSTACommonArguments carrying the service-table security and
-         * privateData parameters.
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        escapeRegisterID: EscapeRegisterID,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.escapeRegisterID = escapeRegisterID;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a EscapeRegisterAbortArgument

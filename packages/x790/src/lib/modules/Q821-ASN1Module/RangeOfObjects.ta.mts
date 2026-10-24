@@ -38,20 +38,26 @@ import {
  */
 export
 class RangeOfObjects {
+    /**
+     * @summary `superiorObjectName`.
+     * @public
+     * @readonly
+     */
+    public readonly superiorObjectName: ObjectInstance;
+    /**
+     * @summary `terminalRDNRange`.
+     * @public
+     * @readonly
+     */
+    public readonly terminalRDNRange: TerminalRDNRange;
+
     constructor (
-        /**
-         * @summary `superiorObjectName`.
-         * @public
-         * @readonly
-         */
-        readonly superiorObjectName: ObjectInstance,
-        /**
-         * @summary `terminalRDNRange`.
-         * @public
-         * @readonly
-         */
-        readonly terminalRDNRange: TerminalRDNRange
-    ) {}
+        superiorObjectName: ObjectInstance,
+        terminalRDNRange: TerminalRDNRange
+    ) {
+        this.superiorObjectName = superiorObjectName;
+        this.terminalRDNRange = terminalRDNRange;
+    }
 
     /**
      * @summary Restructures an object into a RangeOfObjects

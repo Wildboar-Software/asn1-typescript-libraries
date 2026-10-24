@@ -35,27 +35,33 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class GetLampInformationResult {
+    /**
+     * @summary `lampList`.
+     * @description
+     *
+     * One entry per queried lamp.
+     * @public
+     * @readonly
+     */
+    public readonly lampList: LampList;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `lampList`.
-         * @description
-         *
-         * One entry per queried lamp.
-         * @public
-         * @readonly
-         */
-        readonly lampList: LampList,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        lampList: LampList,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.lampList = lampList;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a GetLampInformationResult

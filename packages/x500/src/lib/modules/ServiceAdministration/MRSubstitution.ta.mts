@@ -36,32 +36,42 @@ import {
  *
  */
 export class MRSubstitution {
+    /**
+     * @summary `attribute`.
+     * @public
+     * @readonly
+     */
+    public readonly attribute: AttributeType;
+    /**
+     * @summary `oldMatchingRule`.
+     * @public
+     * @readonly
+     */
+    public readonly oldMatchingRule?: OPTIONAL<OBJECT_IDENTIFIER>;
+    /**
+     * @summary `newMatchingRule`.
+     * @public
+     * @readonly
+     */
+    public readonly newMatchingRule?: OPTIONAL<OBJECT_IDENTIFIER>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `attribute`.
-         * @public
-         * @readonly
-         */
-        readonly attribute: AttributeType,
-        /**
-         * @summary `oldMatchingRule`.
-         * @public
-         * @readonly
-         */
-        readonly oldMatchingRule?: OPTIONAL<OBJECT_IDENTIFIER>,
-        /**
-         * @summary `newMatchingRule`.
-         * @public
-         * @readonly
-         */
-        readonly newMatchingRule?: OPTIONAL<OBJECT_IDENTIFIER>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        attribute: AttributeType,
+        oldMatchingRule?: OPTIONAL<OBJECT_IDENTIFIER>,
+        newMatchingRule?: OPTIONAL<OBJECT_IDENTIFIER>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.attribute = attribute;
+        this.oldMatchingRule = oldMatchingRule;
+        this.newMatchingRule = newMatchingRule;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a MRSubstitution

@@ -49,94 +49,109 @@ import { ContextIDinList, _decode_ContextIDinList, _encode_ContextIDinList } fro
  */
 export
 class ContextRequest {
+    /**
+     * @summary `priority`.
+     * @description
+     *
+     * Precedence of the context, 0 (lowest) through 15 (highest). Lets the
+     * MGC steer which contexts the MG handles first when many are in play
+     * at once, for example during a restart (clause 6.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly priority?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `emergency`.
+     * @description
+     *
+     * Present and true when the context carries an emergency call, so the
+     * MG can give it preference (clause 6.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly emergency?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `topologyReq`.
+     * @description
+     *
+     * Flow directions between terminations in the context. Optional to
+     * implement; an MG that does not support topology returns error 444
+     * ("Unsupported or unknown descriptor") and may put "Topology" in the
+     * error text (clause 7.1.18.1). The default, when no descriptor is
+     * given, is bothway among every termination.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly topologyReq?: OPTIONAL<TopologyRequest[]>;
+    /**
+     * @summary `iepscallind`.
+     * @description
+     *
+     * Present and true when the context is an International Emergency
+     * Preference Scheme call, so the MG can apply the behaviour of ITU-T
+     * E.106 and E.107 (clause 6.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly iepscallind?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `contextProp`.
+     * @description
+     *
+     * Packaged properties that apply to the context as a whole. Termination
+     * properties are not valid here (clause 7.1.19). Values may be
+     * underspecified as in clause 7.1.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly contextProp?: OPTIONAL<PropertyParm[]>;
+    /**
+     * @summary `contextList`.
+     * @description
+     *
+     * Compact list of ContextIDs. Include it on a request to ask for the
+     * same compact form in the reply, instead of one action reply per
+     * context (clauses 7.1.19 and 7.2.5). When a list is returned, the
+     * action reply's own ContextID stays the identifier from the request
+     * (Annex A).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly contextList?: OPTIONAL<ContextIDinList[]>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @description
+     *
+     * Extension additions this version does not define. Kept so a later
+     * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `priority`.
-         * @description
-         *
-         * Precedence of the context, 0 (lowest) through 15 (highest). Lets the
-         * MGC steer which contexts the MG handles first when many are in play
-         * at once, for example during a restart (clause 6.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly priority?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `emergency`.
-         * @description
-         *
-         * Present and true when the context carries an emergency call, so the
-         * MG can give it preference (clause 6.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly emergency?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `topologyReq`.
-         * @description
-         *
-         * Flow directions between terminations in the context. Optional to
-         * implement; an MG that does not support topology returns error 444
-         * ("Unsupported or unknown descriptor") and may put "Topology" in the
-         * error text (clause 7.1.18.1). The default, when no descriptor is
-         * given, is bothway among every termination.
-         *
-         * @public
-         * @readonly
-         */
-        readonly topologyReq?: OPTIONAL<TopologyRequest[]>,
-        /**
-         * @summary `iepscallind`.
-         * @description
-         *
-         * Present and true when the context is an International Emergency
-         * Preference Scheme call, so the MG can apply the behaviour of ITU-T
-         * E.106 and E.107 (clause 6.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly iepscallind?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `contextProp`.
-         * @description
-         *
-         * Packaged properties that apply to the context as a whole. Termination
-         * properties are not valid here (clause 7.1.19). Values may be
-         * underspecified as in clause 7.1.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly contextProp?: OPTIONAL<PropertyParm[]>,
-        /**
-         * @summary `contextList`.
-         * @description
-         *
-         * Compact list of ContextIDs. Include it on a request to ask for the
-         * same compact form in the reply, instead of one action reply per
-         * context (clauses 7.1.19 and 7.2.5). When a list is returned, the
-         * action reply's own ContextID stays the identifier from the request
-         * (Annex A).
-         *
-         * @public
-         * @readonly
-         */
-        readonly contextList?: OPTIONAL<ContextIDinList[]>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @description
-         *
-         * Extension additions this version does not define. Kept so a later
-         * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
-         *
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
+        priority?: OPTIONAL<INTEGER>,
+        emergency?: OPTIONAL<BOOLEAN>,
+        topologyReq?: OPTIONAL<TopologyRequest[]>,
+        iepscallind?: OPTIONAL<BOOLEAN>,
+        contextProp?: OPTIONAL<PropertyParm[]>,
+        contextList?: OPTIONAL<ContextIDinList[]>,
+        _unrecognizedExtensionsList: _Element[] = []
     ) {
+        this.priority = priority;
+        this.emergency = emergency;
+        this.topologyReq = topologyReq;
+        this.iepscallind = iepscallind;
+        this.contextProp = contextProp;
+        this.contextList = contextList;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
         if (priority !== undefined) {
             const n = typeof priority === "bigint" ? priority : BigInt(priority);
             if (n < 0n || n > 15n) {

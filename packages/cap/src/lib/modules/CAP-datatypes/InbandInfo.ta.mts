@@ -31,33 +31,44 @@ import { type MessageID, _decode_MessageID, _encode_MessageID } from "./MessageI
  *
  */
 export class InbandInfo {
+    public readonly messageID: MessageID;
+    public readonly numberOfRepetitions?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `duration`.
+     * @description
+     *
+     * Total time in seconds, including repetitions and intervals; 0 =
+     * infinite. (3GPP TS 29.078 V19.0.0 clause 5.1)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly duration?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `interval`.
+     * @description
+     *
+     * Time in seconds between each repeated announcement. (3GPP TS 29.078
+     * V19.0.0 clause 5.1)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly interval?: OPTIONAL<INTEGER>;
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        readonly messageID: MessageID,
-        readonly numberOfRepetitions?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `duration`.
-         * @description
-         *
-         * Total time in seconds, including repetitions and intervals; 0 =
-         * infinite. (3GPP TS 29.078 V19.0.0 clause 5.1)
-         *
-         * @public
-         * @readonly
-         */
-        readonly duration?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `interval`.
-         * @description
-         *
-         * Time in seconds between each repeated announcement. (3GPP TS 29.078
-         * V19.0.0 clause 5.1)
-         *
-         * @public
-         * @readonly
-         */
-        readonly interval?: OPTIONAL<INTEGER>,
-        readonly _unrecognizedExtensionsList: _Element[] = [],
+        messageID: MessageID,
+        numberOfRepetitions?: OPTIONAL<INTEGER>,
+        duration?: OPTIONAL<INTEGER>,
+        interval?: OPTIONAL<INTEGER>,
+        _unrecognizedExtensionsList: _Element[] = [],
     ) {
+        this.messageID = messageID;
+        this.numberOfRepetitions = numberOfRepetitions;
+        this.duration = duration;
+        this.interval = interval;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
         if (numberOfRepetitions !== undefined && (typeof numberOfRepetitions === "bigint" ? (numberOfRepetitions < 1n || numberOfRepetitions > 127n) : (numberOfRepetitions < 1 || numberOfRepetitions > 127))) {
             throw new ASN1OverflowError("InbandInfo.numberOfRepetitions violates INTEGER constraint");
         }

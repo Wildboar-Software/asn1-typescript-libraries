@@ -42,20 +42,26 @@ import {
  *
  */
 export class AbsenceAdvice {
+    /**
+     * @summary `advice`.
+     * @public
+     * @readonly
+     */
+    public readonly advice?: OPTIONAL<BodyPart>;
+    /**
+     * @summary `next_available`.
+     * @public
+     * @readonly
+     */
+    public readonly next_available?: OPTIONAL<Time>;
+
     constructor(
-        /**
-         * @summary `advice`.
-         * @public
-         * @readonly
-         */
-        readonly advice?: OPTIONAL<BodyPart>,
-        /**
-         * @summary `next_available`.
-         * @public
-         * @readonly
-         */
-        readonly next_available?: OPTIONAL<Time>
-    ) {}
+        advice?: OPTIONAL<BodyPart>,
+        next_available?: OPTIONAL<Time>
+    ) {
+        this.advice = advice;
+        this.next_available = next_available;
+    }
 
     /**
      * @summary Restructures an object into a AbsenceAdvice

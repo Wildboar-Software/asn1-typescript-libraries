@@ -40,68 +40,90 @@ import {
  *
  */
 export class RSAPrivateKey {
+    /**
+     * @summary `version`.
+     * @public
+     * @readonly
+     */
+    public readonly version: Version;
+    /**
+     * @summary `modulus`.
+     * @public
+     * @readonly
+     */
+    public readonly modulus: OCTET_STRING;
+    /**
+     * @summary `publicExponent`.
+     * @public
+     * @readonly
+     */
+    public readonly publicExponent: OCTET_STRING;
+    /**
+     * @summary `privateExponent`.
+     * @public
+     * @readonly
+     */
+    public readonly privateExponent: OCTET_STRING;
+    /**
+     * @summary `prime1`.
+     * @public
+     * @readonly
+     */
+    public readonly prime1: OCTET_STRING;
+    /**
+     * @summary `prime2`.
+     * @public
+     * @readonly
+     */
+    public readonly prime2: OCTET_STRING;
+    /**
+     * @summary `exponent1`.
+     * @public
+     * @readonly
+     */
+    public readonly exponent1: OCTET_STRING;
+    /**
+     * @summary `exponent2`.
+     * @public
+     * @readonly
+     */
+    public readonly exponent2: OCTET_STRING;
+    /**
+     * @summary `coefficient`.
+     * @public
+     * @readonly
+     */
+    public readonly coefficient: OCTET_STRING;
+    /**
+     * @summary `otherPrimeInfos`.
+     * @public
+     * @readonly
+     */
+    public readonly otherPrimeInfos?: OPTIONAL<OtherPrimeInfos>;
+
     constructor(
-        /**
-         * @summary `version`.
-         * @public
-         * @readonly
-         */
-        readonly version: Version,
-        /**
-         * @summary `modulus`.
-         * @public
-         * @readonly
-         */
-        readonly modulus: OCTET_STRING,
-        /**
-         * @summary `publicExponent`.
-         * @public
-         * @readonly
-         */
-        readonly publicExponent: OCTET_STRING,
-        /**
-         * @summary `privateExponent`.
-         * @public
-         * @readonly
-         */
-        readonly privateExponent: OCTET_STRING,
-        /**
-         * @summary `prime1`.
-         * @public
-         * @readonly
-         */
-        readonly prime1: OCTET_STRING,
-        /**
-         * @summary `prime2`.
-         * @public
-         * @readonly
-         */
-        readonly prime2: OCTET_STRING,
-        /**
-         * @summary `exponent1`.
-         * @public
-         * @readonly
-         */
-        readonly exponent1: OCTET_STRING,
-        /**
-         * @summary `exponent2`.
-         * @public
-         * @readonly
-         */
-        readonly exponent2: OCTET_STRING,
-        /**
-         * @summary `coefficient`.
-         * @public
-         * @readonly
-         */
-        readonly coefficient: OCTET_STRING,
-        /**
-         * @summary `otherPrimeInfos`.
-         * @public
-         * @readonly
-         */
-        readonly otherPrimeInfos?: OPTIONAL<OtherPrimeInfos>
-    ) {}
+        version: Version,
+        modulus: OCTET_STRING,
+        publicExponent: OCTET_STRING,
+        privateExponent: OCTET_STRING,
+        prime1: OCTET_STRING,
+        prime2: OCTET_STRING,
+        exponent1: OCTET_STRING,
+        exponent2: OCTET_STRING,
+        coefficient: OCTET_STRING,
+        otherPrimeInfos?: OPTIONAL<OtherPrimeInfos>
+    ) {
+        this.version = version;
+        this.modulus = modulus;
+        this.publicExponent = publicExponent;
+        this.privateExponent = privateExponent;
+        this.prime1 = prime1;
+        this.prime2 = prime2;
+        this.exponent1 = exponent1;
+        this.exponent2 = exponent2;
+        this.coefficient = coefficient;
+        this.otherPrimeInfos = otherPrimeInfos;
+    }
 
     /**
      * @summary Restructures an object into a RSAPrivateKey

@@ -29,20 +29,26 @@ import {
  *
  */
 export class SigncrypterIDs {
+    /**
+     * @summary `sender`.
+     * @public
+     * @readonly
+     */
+    public readonly sender: KeyPairIdentifier;
+    /**
+     * @summary `recipient`.
+     * @public
+     * @readonly
+     */
+    public readonly recipient: KeyPairIdentifier;
+
     constructor(
-        /**
-         * @summary `sender`.
-         * @public
-         * @readonly
-         */
-        readonly sender: KeyPairIdentifier,
-        /**
-         * @summary `recipient`.
-         * @public
-         * @readonly
-         */
-        readonly recipient: KeyPairIdentifier
-    ) {}
+        sender: KeyPairIdentifier,
+        recipient: KeyPairIdentifier
+    ) {
+        this.sender = sender;
+        this.recipient = recipient;
+    }
 
     /**
      * @summary Restructures an object into a SigncrypterIDs

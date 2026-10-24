@@ -31,20 +31,26 @@ import {
  *
  */
 export class Span {
+    /**
+     * @summary `lowest`.
+     * @public
+     * @readonly
+     */
+    public readonly lowest: SequenceNumber;
+    /**
+     * @summary `highest`.
+     * @public
+     * @readonly
+     */
+    public readonly highest: SequenceNumber;
+
     constructor(
-        /**
-         * @summary `lowest`.
-         * @public
-         * @readonly
-         */
-        readonly lowest: SequenceNumber,
-        /**
-         * @summary `highest`.
-         * @public
-         * @readonly
-         */
-        readonly highest: SequenceNumber
-    ) {}
+        lowest: SequenceNumber,
+        highest: SequenceNumber
+    ) {
+        this.lowest = lowest;
+        this.highest = highest;
+    }
 
     /**
      * @summary Restructures an object into a Span

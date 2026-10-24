@@ -47,26 +47,34 @@ import {
  *
  */
 export class ReportingMTAName {
+    /**
+     * @summary `domain`.
+     * @public
+     * @readonly
+     */
+    public readonly domain: GlobalDomainIdentifier;
+    /**
+     * @summary `mta_name`.
+     * @public
+     * @readonly
+     */
+    public readonly mta_name: MTAName;
+    /**
+     * @summary `mta_directory_name`.
+     * @public
+     * @readonly
+     */
+    public readonly mta_directory_name?: OPTIONAL<Name>;
+
     constructor(
-        /**
-         * @summary `domain`.
-         * @public
-         * @readonly
-         */
-        readonly domain: GlobalDomainIdentifier,
-        /**
-         * @summary `mta_name`.
-         * @public
-         * @readonly
-         */
-        readonly mta_name: MTAName,
-        /**
-         * @summary `mta_directory_name`.
-         * @public
-         * @readonly
-         */
-        readonly mta_directory_name?: OPTIONAL<Name>
-    ) {}
+        domain: GlobalDomainIdentifier,
+        mta_name: MTAName,
+        mta_directory_name?: OPTIONAL<Name>
+    ) {
+        this.domain = domain;
+        this.mta_name = mta_name;
+        this.mta_directory_name = mta_directory_name;
+    }
 
     /**
      * @summary Restructures an object into a ReportingMTAName

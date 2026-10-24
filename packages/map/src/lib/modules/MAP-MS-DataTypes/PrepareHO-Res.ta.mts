@@ -51,158 +51,186 @@ import { SelectedUMTS_Algorithms, _decode_SelectedUMTS_Algorithms, _encode_Selec
  */
 export
 class PrepareHO_Res {
+    /**
+     * @summary `handoverNumber`.
+     * @description
+     *
+     * Number allocated for handover or relocation.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.2.21).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly handoverNumber?: OPTIONAL<ISDN_AddressString>;
+    /**
+     * @summary `relocationNumberList`.
+     * @description
+     *
+     * Relocation numbers allocated by MSC-B.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.2.19A).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly relocationNumberList?: OPTIONAL<RelocationNumberList>;
+    /**
+     * @summary `an_APDU`.
+     * @description
+     *
+     * One or two concatenated complete 3GPP TS 25.413 or 48.006 messages,
+     * as in 3GPP TS 23.009 and 29.010. The access-network protocol ID
+     * selects 48.006 or 25.413.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.9.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly an_APDU?: OPTIONAL<AccessNetworkSignalInfo>;
+    /**
+     * @summary `multicallBearerInfo`.
+     * @description
+     *
+     * Number of simultaneous bearers supported per user by the serving
+     * network.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.2.52).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly multicallBearerInfo?: OPTIONAL<MulticallBearerInfo>;
+    /**
+     * @summary `multipleBearerNotSupported`.
+     * @description
+     *
+     * MSC-B does not support multiple bearers.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.2.54).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly multipleBearerNotSupported?: OPTIONAL<NULL>;
+    /**
+     * @summary `selectedUMTS_Algorithms`.
+     * @description
+     *
+     * UMTS integrity and optionally encryption algorithms selected by MSC-B
+     * (3GPP TS 25.413).
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.6.12).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly selectedUMTS_Algorithms?: OPTIONAL<SelectedUMTS_Algorithms>;
+    /**
+     * @summary `chosenRadioResourceInformation`.
+     * @description
+     *
+     * Chosen Channel and Speech Version IEs as in 3GPP TS 48.008.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.6.10B).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly chosenRadioResourceInformation?: OPTIONAL<ChosenRadioResourceInformation>;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary `iuSelectedCodec`.
+     * @description
+     *
+     * When sent by MSC-B: codec selected for Iu. When sent by MSC-A: codec
+     * MSC-B shall use at Iu.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.6.18).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly iuSelectedCodec?: OPTIONAL<Codec>;
+    /**
+     * @summary `iuAvailableCodecsList`.
+     * @description
+     *
+     * Codecs available at the Iu interface in MSC-B, for MSC-A to decide
+     * whether a codec change is possible.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.6.17A).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly iuAvailableCodecsList?: OPTIONAL<CodecList>;
+    /**
+     * @summary `aoipSelectedCodecTarget`.
+     * @description
+     *
+     * AoIP codec selected at the target MSC.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.6.24).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly aoipSelectedCodecTarget?: OPTIONAL<AoIPCodec>;
+    /**
+     * @summary `aoipAvailableCodecsListMap`.
+     * @description
+     *
+     * AoIP codecs available at the target for MAP.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 8.4.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly aoipAvailableCodecsListMap?: OPTIONAL<AoIPCodecsList>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `handoverNumber`.
-         * @description
-         *
-         * Number allocated for handover or relocation.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.2.21).
-         *
-         * @public
-         * @readonly
-         */
-        readonly handoverNumber?: OPTIONAL<ISDN_AddressString>,
-        /**
-         * @summary `relocationNumberList`.
-         * @description
-         *
-         * Relocation numbers allocated by MSC-B.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.2.19A).
-         *
-         * @public
-         * @readonly
-         */
-        readonly relocationNumberList?: OPTIONAL<RelocationNumberList>,
-        /**
-         * @summary `an_APDU`.
-         * @description
-         *
-         * One or two concatenated complete 3GPP TS 25.413 or 48.006 messages,
-         * as in 3GPP TS 23.009 and 29.010. The access-network protocol ID
-         * selects 48.006 or 25.413.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.9.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly an_APDU?: OPTIONAL<AccessNetworkSignalInfo>,
-        /**
-         * @summary `multicallBearerInfo`.
-         * @description
-         *
-         * Number of simultaneous bearers supported per user by the serving
-         * network.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.2.52).
-         *
-         * @public
-         * @readonly
-         */
-        readonly multicallBearerInfo?: OPTIONAL<MulticallBearerInfo>,
-        /**
-         * @summary `multipleBearerNotSupported`.
-         * @description
-         *
-         * MSC-B does not support multiple bearers.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.2.54).
-         *
-         * @public
-         * @readonly
-         */
-        readonly multipleBearerNotSupported?: OPTIONAL<NULL>,
-        /**
-         * @summary `selectedUMTS_Algorithms`.
-         * @description
-         *
-         * UMTS integrity and optionally encryption algorithms selected by MSC-B
-         * (3GPP TS 25.413).
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.6.12).
-         *
-         * @public
-         * @readonly
-         */
-        readonly selectedUMTS_Algorithms?: OPTIONAL<SelectedUMTS_Algorithms>,
-        /**
-         * @summary `chosenRadioResourceInformation`.
-         * @description
-         *
-         * Chosen Channel and Speech Version IEs as in 3GPP TS 48.008.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.6.10B).
-         *
-         * @public
-         * @readonly
-         */
-        readonly chosenRadioResourceInformation?: OPTIONAL<ChosenRadioResourceInformation>,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary `iuSelectedCodec`.
-         * @description
-         *
-         * When sent by MSC-B: codec selected for Iu. When sent by MSC-A: codec
-         * MSC-B shall use at Iu.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.6.18).
-         *
-         * @public
-         * @readonly
-         */
-        readonly iuSelectedCodec?: OPTIONAL<Codec>,
-        /**
-         * @summary `iuAvailableCodecsList`.
-         * @description
-         *
-         * Codecs available at the Iu interface in MSC-B, for MSC-A to decide
-         * whether a codec change is possible.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.6.17A).
-         *
-         * @public
-         * @readonly
-         */
-        readonly iuAvailableCodecsList?: OPTIONAL<CodecList>,
-        /**
-         * @summary `aoipSelectedCodecTarget`.
-         * @description
-         *
-         * AoIP codec selected at the target MSC.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.6.24).
-         *
-         * @public
-         * @readonly
-         */
-        readonly aoipSelectedCodecTarget?: OPTIONAL<AoIPCodec>,
-        /**
-         * @summary `aoipAvailableCodecsListMap`.
-         * @description
-         *
-         * AoIP codecs available at the target for MAP.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 8.4.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly aoipAvailableCodecsListMap?: OPTIONAL<AoIPCodecsList>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        handoverNumber?: OPTIONAL<ISDN_AddressString>,
+        relocationNumberList?: OPTIONAL<RelocationNumberList>,
+        an_APDU?: OPTIONAL<AccessNetworkSignalInfo>,
+        multicallBearerInfo?: OPTIONAL<MulticallBearerInfo>,
+        multipleBearerNotSupported?: OPTIONAL<NULL>,
+        selectedUMTS_Algorithms?: OPTIONAL<SelectedUMTS_Algorithms>,
+        chosenRadioResourceInformation?: OPTIONAL<ChosenRadioResourceInformation>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        iuSelectedCodec?: OPTIONAL<Codec>,
+        iuAvailableCodecsList?: OPTIONAL<CodecList>,
+        aoipSelectedCodecTarget?: OPTIONAL<AoIPCodec>,
+        aoipAvailableCodecsListMap?: OPTIONAL<AoIPCodecsList>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.handoverNumber = handoverNumber;
+        this.relocationNumberList = relocationNumberList;
+        this.an_APDU = an_APDU;
+        this.multicallBearerInfo = multicallBearerInfo;
+        this.multipleBearerNotSupported = multipleBearerNotSupported;
+        this.selectedUMTS_Algorithms = selectedUMTS_Algorithms;
+        this.chosenRadioResourceInformation = chosenRadioResourceInformation;
+        this.extensionContainer = extensionContainer;
+        this.iuSelectedCodec = iuSelectedCodec;
+        this.iuAvailableCodecsList = iuAvailableCodecsList;
+        this.aoipSelectedCodecTarget = aoipSelectedCodecTarget;
+        this.aoipAvailableCodecsListMap = aoipAvailableCodecsListMap;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a PrepareHO_Res

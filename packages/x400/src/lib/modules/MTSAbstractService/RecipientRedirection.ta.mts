@@ -40,20 +40,26 @@ import {
  *
  */
 export class RecipientRedirection {
+    /**
+     * @summary `redirection_classes`.
+     * @public
+     * @readonly
+     */
+    public readonly redirection_classes?: OPTIONAL<RedirectionClass[]>;
+    /**
+     * @summary `recipient_assigned_alternate_recipient`.
+     * @public
+     * @readonly
+     */
+    public readonly recipient_assigned_alternate_recipient?: OPTIONAL<RecipientAssignedAlternateRecipient>;
+
     constructor(
-        /**
-         * @summary `redirection_classes`.
-         * @public
-         * @readonly
-         */
-        readonly redirection_classes?: OPTIONAL<RedirectionClass[]>,
-        /**
-         * @summary `recipient_assigned_alternate_recipient`.
-         * @public
-         * @readonly
-         */
-        readonly recipient_assigned_alternate_recipient?: OPTIONAL<RecipientAssignedAlternateRecipient>
-    ) {}
+        redirection_classes?: OPTIONAL<RedirectionClass[]>,
+        recipient_assigned_alternate_recipient?: OPTIONAL<RecipientAssignedAlternateRecipient>
+    ) {
+        this.redirection_classes = redirection_classes;
+        this.recipient_assigned_alternate_recipient = recipient_assigned_alternate_recipient;
+    }
 
     /**
      * @summary Restructures an object into a RecipientRedirection

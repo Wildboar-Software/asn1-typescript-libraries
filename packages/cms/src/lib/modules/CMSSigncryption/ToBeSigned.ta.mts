@@ -34,20 +34,26 @@ import {
  *
  */
 export class ToBeSigned {
+    /**
+     * @summary `signcryptedPartsManifest`.
+     * @public
+     * @readonly
+     */
+    public readonly signcryptedPartsManifest: SigncryptedPartsManifest;
+    /**
+     * @summary `signedAttributes`.
+     * @public
+     * @readonly
+     */
+    public readonly signedAttributes: SignedAttributes;
+
     constructor(
-        /**
-         * @summary `signcryptedPartsManifest`.
-         * @public
-         * @readonly
-         */
-        readonly signcryptedPartsManifest: SigncryptedPartsManifest,
-        /**
-         * @summary `signedAttributes`.
-         * @public
-         * @readonly
-         */
-        readonly signedAttributes: SignedAttributes
-    ) {}
+        signcryptedPartsManifest: SigncryptedPartsManifest,
+        signedAttributes: SignedAttributes
+    ) {
+        this.signcryptedPartsManifest = signcryptedPartsManifest;
+        this.signedAttributes = signedAttributes;
+    }
 
     /**
      * @summary Restructures an object into a ToBeSigned

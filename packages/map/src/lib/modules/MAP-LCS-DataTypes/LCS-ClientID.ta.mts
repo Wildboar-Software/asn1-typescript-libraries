@@ -38,84 +38,102 @@ import { APN, _decode_APN, _encode_APN } from "../MAP-MS-DataTypes/APN.ta.mjs";
  */
 export
 class LCS_ClientID {
+    /**
+     * @summary `lcsClientType`.
+     * @description
+     *
+     * Emergency, value-added, PLMN operator, or lawful intercept.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly lcsClientType: LCSClientType;
+    /**
+     * @summary `lcsClientExternalID`.
+     * @description
+     *
+     * External client identity.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly lcsClientExternalID?: OPTIONAL<LCSClientExternalID>;
+    /**
+     * @summary `lcsClientDialedByMS`.
+     * @description
+     *
+     * Number dialled by the MS.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly lcsClientDialedByMS?: OPTIONAL<AddressString>;
+    /**
+     * @summary `lcsClientInternalID`.
+     * @description
+     *
+     * Internal client identity.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly lcsClientInternalID?: OPTIONAL<LCSClientInternalID>;
+    /**
+     * @summary `lcsClientName`.
+     * @description
+     *
+     * Client name.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly lcsClientName?: OPTIONAL<LCSClientName>;
+    /**
+     * @summary `lcsAPN`.
+     * @description
+     *
+     * APN.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly lcsAPN?: OPTIONAL<APN>;
+    /**
+     * @summary `lcsRequestorID`.
+     * @description
+     *
+     * Requestor identity.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly lcsRequestorID?: OPTIONAL<LCSRequestorID>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `lcsClientType`.
-         * @description
-         *
-         * Emergency, value-added, PLMN operator, or lawful intercept.
-         *
-         * @public
-         * @readonly
-         */
-        readonly lcsClientType: LCSClientType,
-        /**
-         * @summary `lcsClientExternalID`.
-         * @description
-         *
-         * External client identity.
-         *
-         * @public
-         * @readonly
-         */
-        readonly lcsClientExternalID?: OPTIONAL<LCSClientExternalID>,
-        /**
-         * @summary `lcsClientDialedByMS`.
-         * @description
-         *
-         * Number dialled by the MS.
-         *
-         * @public
-         * @readonly
-         */
-        readonly lcsClientDialedByMS?: OPTIONAL<AddressString>,
-        /**
-         * @summary `lcsClientInternalID`.
-         * @description
-         *
-         * Internal client identity.
-         *
-         * @public
-         * @readonly
-         */
-        readonly lcsClientInternalID?: OPTIONAL<LCSClientInternalID>,
-        /**
-         * @summary `lcsClientName`.
-         * @description
-         *
-         * Client name.
-         *
-         * @public
-         * @readonly
-         */
-        readonly lcsClientName?: OPTIONAL<LCSClientName>,
-        /**
-         * @summary `lcsAPN`.
-         * @description
-         *
-         * APN.
-         *
-         * @public
-         * @readonly
-         */
-        readonly lcsAPN?: OPTIONAL<APN>,
-        /**
-         * @summary `lcsRequestorID`.
-         * @description
-         *
-         * Requestor identity.
-         *
-         * @public
-         * @readonly
-         */
-        readonly lcsRequestorID?: OPTIONAL<LCSRequestorID>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        lcsClientType: LCSClientType,
+        lcsClientExternalID?: OPTIONAL<LCSClientExternalID>,
+        lcsClientDialedByMS?: OPTIONAL<AddressString>,
+        lcsClientInternalID?: OPTIONAL<LCSClientInternalID>,
+        lcsClientName?: OPTIONAL<LCSClientName>,
+        lcsAPN?: OPTIONAL<APN>,
+        lcsRequestorID?: OPTIONAL<LCSRequestorID>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.lcsClientType = lcsClientType;
+        this.lcsClientExternalID = lcsClientExternalID;
+        this.lcsClientDialedByMS = lcsClientDialedByMS;
+        this.lcsClientInternalID = lcsClientInternalID;
+        this.lcsClientName = lcsClientName;
+        this.lcsAPN = lcsAPN;
+        this.lcsRequestorID = lcsRequestorID;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a LCS_ClientID

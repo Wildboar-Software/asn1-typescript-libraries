@@ -38,31 +38,37 @@ import { Data, _decode_Data, _encode_Data } from "../ISO-9506-MMS-1/Data.ta.mjs"
  */
 export
 class ExchangeData_Request {
+    /**
+     * @summary `dataExchangeName`.
+     * @description
+     *
+     * `&name` of the Data Exchange object to invoke.
+     * ISO 9506-1:2003 §15.2.1.1.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly dataExchangeName: ObjectName;
+    /**
+     * @summary `listOfRequestData`.
+     * @description
+     *
+     * Input values matching `&request` in type and number.
+     * Empty list if there is no request data.
+     * ISO 9506-1:2003 §15.2.1.1.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly listOfRequestData: Data[];
+
     constructor (
-        /**
-         * @summary `dataExchangeName`.
-         * @description
-         *
-         * `&name` of the Data Exchange object to invoke.
-         * ISO 9506-1:2003 §15.2.1.1.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly dataExchangeName: ObjectName,
-        /**
-         * @summary `listOfRequestData`.
-         * @description
-         *
-         * Input values matching `&request` in type and number.
-         * Empty list if there is no request data.
-         * ISO 9506-1:2003 §15.2.1.1.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly listOfRequestData: Data[]
-    ) {}
+        dataExchangeName: ObjectName,
+        listOfRequestData: Data[]
+    ) {
+        this.dataExchangeName = dataExchangeName;
+        this.listOfRequestData = listOfRequestData;
+    }
 
     /**
      * @summary Restructures an object into a ExchangeData_Request

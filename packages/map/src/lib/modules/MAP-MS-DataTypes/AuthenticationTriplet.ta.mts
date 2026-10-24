@@ -32,46 +32,56 @@ import { SRES, _decode_SRES, _encode_SRES } from "../MAP-MS-DataTypes/SRES.ta.mj
  */
 export
 class AuthenticationTriplet {
+    /**
+     * @summary `rand`.
+     * @description
+     *
+     * Random number used for authentication (3GPP TS 29.002 V19.1.0 clause
+     * 7.6.7.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly rand: RAND;
+    /**
+     * @summary `sres`.
+     * @description
+     *
+     * Response to an authentication request (3GPP TS 29.002 V19.1.0 clause
+     * 7.6.7.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sres: SRES;
+    /**
+     * @summary `kc`.
+     * @description
+     *
+     * Ciphering key (3GPP TS 29.002 V19.1.0 clause 7.6.7.4).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly kc: Kc;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `rand`.
-         * @description
-         *
-         * Random number used for authentication (3GPP TS 29.002 V19.1.0 clause
-         * 7.6.7.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly rand: RAND,
-        /**
-         * @summary `sres`.
-         * @description
-         *
-         * Response to an authentication request (3GPP TS 29.002 V19.1.0 clause
-         * 7.6.7.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly sres: SRES,
-        /**
-         * @summary `kc`.
-         * @description
-         *
-         * Ciphering key (3GPP TS 29.002 V19.1.0 clause 7.6.7.4).
-         *
-         * @public
-         * @readonly
-         */
-        readonly kc: Kc,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        rand: RAND,
+        sres: SRES,
+        kc: Kc,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.rand = rand;
+        this.sres = sres;
+        this.kc = kc;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a AuthenticationTriplet

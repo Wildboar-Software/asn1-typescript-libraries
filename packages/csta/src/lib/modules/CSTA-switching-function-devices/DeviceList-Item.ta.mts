@@ -56,65 +56,79 @@ import { DeviceAttributes, _decode_DeviceAttributes, _encode_DeviceAttributes } 
  */
 export
 class DeviceList_Item {
+    /**
+     * @summary `deviceID`.
+     * @description
+     *
+     * Device identifier for this entry. Mandatory.
+     * @public
+     * @readonly
+     */
+    public readonly deviceID: DeviceID;
+    /**
+     * @summary `deviceCategory`.
+     * @description
+     *
+     * Category; defaults to station.
+     * @public
+     * @readonly
+     */
+    public readonly deviceCategory?: OPTIONAL<DeviceCategory>;
+    /**
+     * @summary `namedDeviceTypes`.
+     * @description
+     *
+     * Named device type, if assigned.
+     * @public
+     * @readonly
+     */
+    public readonly namedDeviceTypes?: OPTIONAL<NamedDeviceTypes>;
+    /**
+     * @summary `deviceAttributes`.
+     * @description
+     *
+     * Additional bits: media-access device, routeing device, group
+     * ACD/hunt/pick.
+     * @public
+     * @readonly
+     */
+    public readonly deviceAttributes?: OPTIONAL<DeviceAttributes>;
+    /**
+     * @summary `deviceModelName`.
+     * @description
+     *
+     * SF-specific model name.
+     * @public
+     * @readonly
+     */
+    public readonly deviceModelName?: OPTIONAL<IA5String>;
+    /**
+     * @summary `nidGroup`.
+     * @description
+     *
+     * NID group (e.g. trunk group) associated with a Network
+     * Interface device. Only when `deviceCategory` is Network
+     * Interface.
+     * @public
+     * @readonly
+     */
+    public readonly nidGroup?: OPTIONAL<DeviceID>;
+
     constructor (
-        /**
-         * @summary `deviceID`.
-         * @description
-         *
-         * Device identifier for this entry. Mandatory.
-         * @public
-         * @readonly
-         */
-        readonly deviceID: DeviceID,
-        /**
-         * @summary `deviceCategory`.
-         * @description
-         *
-         * Category; defaults to station.
-         * @public
-         * @readonly
-         */
-        readonly deviceCategory?: OPTIONAL<DeviceCategory>,
-        /**
-         * @summary `namedDeviceTypes`.
-         * @description
-         *
-         * Named device type, if assigned.
-         * @public
-         * @readonly
-         */
-        readonly namedDeviceTypes?: OPTIONAL<NamedDeviceTypes>,
-        /**
-         * @summary `deviceAttributes`.
-         * @description
-         *
-         * Additional bits: media-access device, routeing device, group
-         * ACD/hunt/pick.
-         * @public
-         * @readonly
-         */
-        readonly deviceAttributes?: OPTIONAL<DeviceAttributes>,
-        /**
-         * @summary `deviceModelName`.
-         * @description
-         *
-         * SF-specific model name.
-         * @public
-         * @readonly
-         */
-        readonly deviceModelName?: OPTIONAL<IA5String>,
-        /**
-         * @summary `nidGroup`.
-         * @description
-         *
-         * NID group (e.g. trunk group) associated with a Network
-         * Interface device. Only when `deviceCategory` is Network
-         * Interface.
-         * @public
-         * @readonly
-         */
-        readonly nidGroup?: OPTIONAL<DeviceID>
-    ) {}
+        deviceID: DeviceID,
+        deviceCategory?: OPTIONAL<DeviceCategory>,
+        namedDeviceTypes?: OPTIONAL<NamedDeviceTypes>,
+        deviceAttributes?: OPTIONAL<DeviceAttributes>,
+        deviceModelName?: OPTIONAL<IA5String>,
+        nidGroup?: OPTIONAL<DeviceID>
+    ) {
+        this.deviceID = deviceID;
+        this.deviceCategory = deviceCategory;
+        this.namedDeviceTypes = namedDeviceTypes;
+        this.deviceAttributes = deviceAttributes;
+        this.deviceModelName = deviceModelName;
+        this.nidGroup = nidGroup;
+    }
 
     /**
      * @summary Restructures an object into a DeviceList_Item

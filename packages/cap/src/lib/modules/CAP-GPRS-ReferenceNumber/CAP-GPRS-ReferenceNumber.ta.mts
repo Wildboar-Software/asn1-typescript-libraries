@@ -39,35 +39,41 @@ import { Integer4, _decode_Integer4, _encode_Integer4 } from "../Core-INAP-CS1-D
  */
 export
 class CAP_GPRS_ReferenceNumber {
+    /**
+     * @summary `destinationReference`.
+     * @description
+     *
+     * Process identity at the destination. On the first TC-CONTINUE after
+     * InitialDPGPRS, gsmSCF sets this to the SGSN Process Id. A subsequent
+     * TC-BEGIN that opens a new TC dialogue includes the previously
+     * received destinationReference.
+     * (3GPP TS 29.078 V19.0.0 clauses 8.1.1 and 14.1.4.1.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly destinationReference?: OPTIONAL<Integer4>;
+    /**
+     * @summary `originationReference`.
+     * @description
+     *
+     * Process identity assigned by the sender. On InitialDPGPRS, gprsSSF
+     * sets this to the SGSN Process Id. gsmSCF sets this to the SCF Process
+     * Id on the first TC-CONTINUE.
+     * (3GPP TS 29.078 V19.0.0 clauses 8.1.1 and 14.1.4.1.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly originationReference?: OPTIONAL<Integer4>;
+
     constructor (
-        /**
-         * @summary `destinationReference`.
-         * @description
-         *
-         * Process identity at the destination. On the first TC-CONTINUE after
-         * InitialDPGPRS, gsmSCF sets this to the SGSN Process Id. A subsequent
-         * TC-BEGIN that opens a new TC dialogue includes the previously
-         * received destinationReference.
-         * (3GPP TS 29.078 V19.0.0 clauses 8.1.1 and 14.1.4.1.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly destinationReference?: OPTIONAL<Integer4>,
-        /**
-         * @summary `originationReference`.
-         * @description
-         *
-         * Process identity assigned by the sender. On InitialDPGPRS, gprsSSF
-         * sets this to the SGSN Process Id. gsmSCF sets this to the SCF Process
-         * Id on the first TC-CONTINUE.
-         * (3GPP TS 29.078 V19.0.0 clauses 8.1.1 and 14.1.4.1.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly originationReference?: OPTIONAL<Integer4>
-    ) {}
+        destinationReference?: OPTIONAL<Integer4>,
+        originationReference?: OPTIONAL<Integer4>
+    ) {
+        this.destinationReference = destinationReference;
+        this.originationReference = originationReference;
+    }
 
     /**
      * @summary Restructures an object into a CAP_GPRS_ReferenceNumber

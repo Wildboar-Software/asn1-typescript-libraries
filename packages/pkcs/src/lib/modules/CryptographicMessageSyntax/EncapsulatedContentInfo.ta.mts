@@ -27,20 +27,26 @@ import {
  *
  */
 export class EncapsulatedContentInfo {
+    /**
+     * @summary `eContentType`.
+     * @public
+     * @readonly
+     */
+    public readonly eContentType: ContentType;
+    /**
+     * @summary `eContent`.
+     * @public
+     * @readonly
+     */
+    public readonly eContent?: OPTIONAL<OCTET_STRING>;
+
     constructor(
-        /**
-         * @summary `eContentType`.
-         * @public
-         * @readonly
-         */
-        readonly eContentType: ContentType,
-        /**
-         * @summary `eContent`.
-         * @public
-         * @readonly
-         */
-        readonly eContent?: OPTIONAL<OCTET_STRING>
-    ) {}
+        eContentType: ContentType,
+        eContent?: OPTIONAL<OCTET_STRING>
+    ) {
+        this.eContentType = eContentType;
+        this.eContent = eContent;
+    }
 
     /**
      * @summary Restructures an object into a EncapsulatedContentInfo

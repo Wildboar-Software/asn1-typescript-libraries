@@ -33,20 +33,26 @@ import { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "
  */
 export
 class CallInformationRequestArg {
+    /**
+     * @summary `requestedInformationTypeList`.
+     * @public
+     * @readonly
+     */
+    public readonly requestedInformationTypeList: RequestedInformationTypeList;
+    /**
+     * @summary `extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<ExtensionField[]>;
+
     constructor (
-        /**
-         * @summary `requestedInformationTypeList`.
-         * @public
-         * @readonly
-         */
-        readonly requestedInformationTypeList: RequestedInformationTypeList,
-        /**
-         * @summary `extensions`.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<ExtensionField[]>
-    ) {}
+        requestedInformationTypeList: RequestedInformationTypeList,
+        extensions?: OPTIONAL<ExtensionField[]>
+    ) {
+        this.requestedInformationTypeList = requestedInformationTypeList;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a CallInformationRequestArg

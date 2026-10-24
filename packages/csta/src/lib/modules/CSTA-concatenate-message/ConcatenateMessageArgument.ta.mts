@@ -36,29 +36,35 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class ConcatenateMessageArgument {
+    /**
+     * @summary `messagesToConcatenate`.
+     * @description
+     *
+     * Messages in concatenation order (ECMA-269 §26.1.3.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly messagesToConcatenate: MessageID[];
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * CSTACommonArguments carrying the service-table security and
+     * privateData parameters.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `messagesToConcatenate`.
-         * @description
-         *
-         * Messages in concatenation order (ECMA-269 §26.1.3.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly messagesToConcatenate: MessageID[],
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * CSTACommonArguments carrying the service-table security and
-         * privateData parameters.
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        messagesToConcatenate: MessageID[],
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.messagesToConcatenate = messagesToConcatenate;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a ConcatenateMessageArgument

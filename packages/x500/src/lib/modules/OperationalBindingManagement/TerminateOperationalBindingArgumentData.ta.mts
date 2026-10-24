@@ -56,44 +56,58 @@ import {
  *
  */
 export class TerminateOperationalBindingArgumentData {
+    /**
+     * @summary `bindingType`.
+     * @public
+     * @readonly
+     */
+    public readonly bindingType: OBJECT_IDENTIFIER;
+    /**
+     * @summary `bindingID`.
+     * @public
+     * @readonly
+     */
+    public readonly bindingID: OperationalBindingID;
+    /**
+     * @summary `initiator`.
+     * @public
+     * @readonly
+     */
+    public readonly initiator?: OPTIONAL<TerminateOperationalBindingArgumentData_initiator>;
+    /**
+     * @summary `terminateAt`.
+     * @public
+     * @readonly
+     */
+    public readonly terminateAt?: OPTIONAL<Time>;
+    /**
+     * @summary `securityParameters`.
+     * @public
+     * @readonly
+     */
+    public readonly securityParameters?: OPTIONAL<SecurityParameters>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `bindingType`.
-         * @public
-         * @readonly
-         */
-        readonly bindingType: OBJECT_IDENTIFIER,
-        /**
-         * @summary `bindingID`.
-         * @public
-         * @readonly
-         */
-        readonly bindingID: OperationalBindingID,
-        /**
-         * @summary `initiator`.
-         * @public
-         * @readonly
-         */
-        readonly initiator?: OPTIONAL<TerminateOperationalBindingArgumentData_initiator>,
-        /**
-         * @summary `terminateAt`.
-         * @public
-         * @readonly
-         */
-        readonly terminateAt?: OPTIONAL<Time>,
-        /**
-         * @summary `securityParameters`.
-         * @public
-         * @readonly
-         */
-        readonly securityParameters?: OPTIONAL<SecurityParameters>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        bindingType: OBJECT_IDENTIFIER,
+        bindingID: OperationalBindingID,
+        initiator?: OPTIONAL<TerminateOperationalBindingArgumentData_initiator>,
+        terminateAt?: OPTIONAL<Time>,
+        securityParameters?: OPTIONAL<SecurityParameters>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.bindingType = bindingType;
+        this.bindingID = bindingID;
+        this.initiator = initiator;
+        this.terminateAt = terminateAt;
+        this.securityParameters = securityParameters;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a TerminateOperationalBindingArgumentData

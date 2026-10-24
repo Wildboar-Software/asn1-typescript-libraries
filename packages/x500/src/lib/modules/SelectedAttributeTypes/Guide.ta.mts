@@ -29,34 +29,42 @@ import {
  *
  */
 export class Guide {
+    /**
+     * @summary `objectClass`.
+     * @description
+     *
+     * OPTIONAL; omitted ⇒ not class-specific.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly objectClass: OPTIONAL<OBJECT_IDENTIFIER>;
+    /**
+     * @summary `criteria`.
+     * @description
+     *
+     * Attribute types only; DUA supplies values.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly criteria: Criteria;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `objectClass`.
-         * @description
-         *
-         * OPTIONAL; omitted ⇒ not class-specific.
-         *
-         * @public
-         * @readonly
-         */
-        readonly objectClass: OPTIONAL<OBJECT_IDENTIFIER>,
-        /**
-         * @summary `criteria`.
-         * @description
-         *
-         * Attribute types only; DUA supplies values.
-         *
-         * @public
-         * @readonly
-         */
-        readonly criteria: Criteria,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        objectClass: OPTIONAL<OBJECT_IDENTIFIER>,
+        criteria: Criteria,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.objectClass = objectClass;
+        this.criteria = criteria;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a Guide

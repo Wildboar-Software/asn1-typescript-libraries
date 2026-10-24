@@ -25,26 +25,34 @@ import {
  *
  */
 export class MULTY_SIGNED_parmeters_sign<_ToBeSigned> {
+    /**
+     * @summary `algo`.
+     * @public
+     * @readonly
+     */
+    public readonly algo: AlgorithmIdentifier;
+    /**
+     * @summary `signature`.
+     * @public
+     * @readonly
+     */
+    public readonly signature: BIT_STRING;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `algo`.
-         * @public
-         * @readonly
-         */
-        readonly algo: AlgorithmIdentifier,
-        /**
-         * @summary `signature`.
-         * @public
-         * @readonly
-         */
-        readonly signature: BIT_STRING,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        algo: AlgorithmIdentifier,
+        signature: BIT_STRING,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.algo = algo;
+        this.signature = signature;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a MULTY_SIGNED_parmeters_sign

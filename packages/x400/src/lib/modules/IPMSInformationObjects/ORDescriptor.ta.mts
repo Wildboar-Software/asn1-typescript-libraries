@@ -46,26 +46,34 @@ import {
  *
  */
 export class ORDescriptor {
+    /**
+     * @summary `formal_name`.
+     * @public
+     * @readonly
+     */
+    public readonly formal_name?: OPTIONAL<ORName>;
+    /**
+     * @summary `free_form_name`.
+     * @public
+     * @readonly
+     */
+    public readonly free_form_name?: OPTIONAL<FreeFormName>;
+    /**
+     * @summary `telephone_number`.
+     * @public
+     * @readonly
+     */
+    public readonly telephone_number?: OPTIONAL<TelephoneNumber>;
+
     constructor(
-        /**
-         * @summary `formal_name`.
-         * @public
-         * @readonly
-         */
-        readonly formal_name?: OPTIONAL<ORName>,
-        /**
-         * @summary `free_form_name`.
-         * @public
-         * @readonly
-         */
-        readonly free_form_name?: OPTIONAL<FreeFormName>,
-        /**
-         * @summary `telephone_number`.
-         * @public
-         * @readonly
-         */
-        readonly telephone_number?: OPTIONAL<TelephoneNumber>
-    ) {}
+        formal_name?: OPTIONAL<ORName>,
+        free_form_name?: OPTIONAL<FreeFormName>,
+        telephone_number?: OPTIONAL<TelephoneNumber>
+    ) {
+        this.formal_name = formal_name;
+        this.free_form_name = free_form_name;
+        this.telephone_number = telephone_number;
+    }
 
     /**
      * @summary Restructures an object into a ORDescriptor

@@ -42,26 +42,34 @@ import {
  *
  */
 export class TBSCirculationSignature {
+    /**
+     * @summary `algorithm_identifier`.
+     * @public
+     * @readonly
+     */
+    public readonly algorithm_identifier: CirculationSignatureAlgorithmIdentifier;
+    /**
+     * @summary `this_IPM`.
+     * @public
+     * @readonly
+     */
+    public readonly this_IPM: ThisIPMField;
+    /**
+     * @summary `timestamp`.
+     * @public
+     * @readonly
+     */
+    public readonly timestamp: CirculationTime;
+
     constructor(
-        /**
-         * @summary `algorithm_identifier`.
-         * @public
-         * @readonly
-         */
-        readonly algorithm_identifier: CirculationSignatureAlgorithmIdentifier,
-        /**
-         * @summary `this_IPM`.
-         * @public
-         * @readonly
-         */
-        readonly this_IPM: ThisIPMField,
-        /**
-         * @summary `timestamp`.
-         * @public
-         * @readonly
-         */
-        readonly timestamp: CirculationTime
-    ) {}
+        algorithm_identifier: CirculationSignatureAlgorithmIdentifier,
+        this_IPM: ThisIPMField,
+        timestamp: CirculationTime
+    ) {
+        this.algorithm_identifier = algorithm_identifier;
+        this.this_IPM = this_IPM;
+        this.timestamp = timestamp;
+    }
 
     /**
      * @summary Restructures an object into a TBSCirculationSignature

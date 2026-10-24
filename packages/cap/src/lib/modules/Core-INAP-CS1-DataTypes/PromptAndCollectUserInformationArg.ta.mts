@@ -37,32 +37,42 @@ import { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "
  */
 export
 class PromptAndCollectUserInformationArg {
+    /**
+     * @summary `collectedInfo`.
+     * @public
+     * @readonly
+     */
+    public readonly collectedInfo: CollectedInfo;
+    /**
+     * @summary `disconnectFromIPForbidden`.
+     * @public
+     * @readonly
+     */
+    public readonly disconnectFromIPForbidden?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `informationToSend`.
+     * @public
+     * @readonly
+     */
+    public readonly informationToSend?: OPTIONAL<InformationToSend>;
+    /**
+     * @summary `extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<ExtensionField[]>;
+
     constructor (
-        /**
-         * @summary `collectedInfo`.
-         * @public
-         * @readonly
-         */
-        readonly collectedInfo: CollectedInfo,
-        /**
-         * @summary `disconnectFromIPForbidden`.
-         * @public
-         * @readonly
-         */
-        readonly disconnectFromIPForbidden?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `informationToSend`.
-         * @public
-         * @readonly
-         */
-        readonly informationToSend?: OPTIONAL<InformationToSend>,
-        /**
-         * @summary `extensions`.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<ExtensionField[]>
-    ) {}
+        collectedInfo: CollectedInfo,
+        disconnectFromIPForbidden?: OPTIONAL<BOOLEAN>,
+        informationToSend?: OPTIONAL<InformationToSend>,
+        extensions?: OPTIONAL<ExtensionField[]>
+    ) {
+        this.collectedInfo = collectedInfo;
+        this.disconnectFromIPForbidden = disconnectFromIPForbidden;
+        this.informationToSend = informationToSend;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a PromptAndCollectUserInformationArg

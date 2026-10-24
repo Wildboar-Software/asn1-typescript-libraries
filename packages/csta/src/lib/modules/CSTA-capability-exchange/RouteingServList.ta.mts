@@ -62,89 +62,109 @@ import { RouteUsed, _decode_RouteUsed, _encode_RouteUsed } from "../CSTA-capabil
  */
 export
 class RouteingServList {
+    /**
+     * @summary `routeRegister`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly routeRegister?: OPTIONAL<RouteRegister>;
+    /**
+     * @summary `routeRegisterCancel`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly routeRegisterCancel?: OPTIONAL<RouteRegisterCancel>;
+    /**
+     * @summary `routeRegisterAbort`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly routeRegisterAbort?: OPTIONAL<RouteRegisterAbort>;
+    /**
+     * @summary `reRoute`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly reRoute?: OPTIONAL<ReRoute>;
+    /**
+     * @summary `routeEnd`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly routeEnd?: OPTIONAL<RouteEnd>;
+    /**
+     * @summary `routeReject`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly routeReject?: OPTIONAL<RouteReject>;
+    /**
+     * @summary `routeRequest`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly routeRequest?: OPTIONAL<RouteRequest>;
+    /**
+     * @summary `routeSelect`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly routeSelect?: OPTIONAL<RouteSelect>;
+    /**
+     * @summary `routeUsed`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly routeUsed?: OPTIONAL<RouteUsed>;
+
     constructor (
-        /**
-         * @summary `routeRegister`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly routeRegister?: OPTIONAL<RouteRegister>,
-        /**
-         * @summary `routeRegisterCancel`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly routeRegisterCancel?: OPTIONAL<RouteRegisterCancel>,
-        /**
-         * @summary `routeRegisterAbort`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly routeRegisterAbort?: OPTIONAL<RouteRegisterAbort>,
-        /**
-         * @summary `reRoute`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly reRoute?: OPTIONAL<ReRoute>,
-        /**
-         * @summary `routeEnd`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly routeEnd?: OPTIONAL<RouteEnd>,
-        /**
-         * @summary `routeReject`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly routeReject?: OPTIONAL<RouteReject>,
-        /**
-         * @summary `routeRequest`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly routeRequest?: OPTIONAL<RouteRequest>,
-        /**
-         * @summary `routeSelect`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly routeSelect?: OPTIONAL<RouteSelect>,
-        /**
-         * @summary `routeUsed`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly routeUsed?: OPTIONAL<RouteUsed>
-    ) {}
+        routeRegister?: OPTIONAL<RouteRegister>,
+        routeRegisterCancel?: OPTIONAL<RouteRegisterCancel>,
+        routeRegisterAbort?: OPTIONAL<RouteRegisterAbort>,
+        reRoute?: OPTIONAL<ReRoute>,
+        routeEnd?: OPTIONAL<RouteEnd>,
+        routeReject?: OPTIONAL<RouteReject>,
+        routeRequest?: OPTIONAL<RouteRequest>,
+        routeSelect?: OPTIONAL<RouteSelect>,
+        routeUsed?: OPTIONAL<RouteUsed>
+    ) {
+        this.routeRegister = routeRegister;
+        this.routeRegisterCancel = routeRegisterCancel;
+        this.routeRegisterAbort = routeRegisterAbort;
+        this.reRoute = reRoute;
+        this.routeEnd = routeEnd;
+        this.routeReject = routeReject;
+        this.routeRequest = routeRequest;
+        this.routeSelect = routeSelect;
+        this.routeUsed = routeUsed;
+    }
 
     /**
      * @summary Restructures an object into a RouteingServList

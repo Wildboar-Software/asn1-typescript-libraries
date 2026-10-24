@@ -32,19 +32,23 @@ import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-
  */
 export
 class Stop_Request {
+    /**
+     * @summary `programInvocationName`.
+     * @description
+     *
+     * Program Invocation to stop; must be `running`. ISO 9506-1:2003
+     * §12.5.1.1.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly programInvocationName: Identifier;
+
     constructor (
-        /**
-         * @summary `programInvocationName`.
-         * @description
-         *
-         * Program Invocation to stop; must be `running`. ISO 9506-1:2003
-         * §12.5.1.1.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly programInvocationName: Identifier
-    ) {}
+        programInvocationName: Identifier
+    ) {
+        this.programInvocationName = programInvocationName;
+    }
 
     /**
      * @summary Restructures an object into a Stop_Request

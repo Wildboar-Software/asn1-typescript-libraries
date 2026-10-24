@@ -35,30 +35,36 @@ import { ControlElement, _decode_ControlElement, _encode_ControlElement } from "
  */
 export
 class UnitControlLoadSegment_Response {
+    /**
+     * @summary `controlElements`.
+     * @description
+     *
+     * Domain/PI construction records for this segment. PI state in each
+     * element is a user option. ISO 9506-1:2003 §13.4.1.2.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly controlElements: ControlElement[];
+    /**
+     * @summary `moreFollows`.
+     * @description
+     *
+     * True if more UnitControlLoadSegment requests are needed. Default
+     * true. ISO 9506-1:2003 §13.4.1.2.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly moreFollows?: OPTIONAL<BOOLEAN>;
+
     constructor (
-        /**
-         * @summary `controlElements`.
-         * @description
-         *
-         * Domain/PI construction records for this segment. PI state in each
-         * element is a user option. ISO 9506-1:2003 §13.4.1.2.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly controlElements: ControlElement[],
-        /**
-         * @summary `moreFollows`.
-         * @description
-         *
-         * True if more UnitControlLoadSegment requests are needed. Default
-         * true. ISO 9506-1:2003 §13.4.1.2.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly moreFollows?: OPTIONAL<BOOLEAN>
-    ) {}
+        controlElements: ControlElement[],
+        moreFollows?: OPTIONAL<BOOLEAN>
+    ) {
+        this.controlElements = controlElements;
+        this.moreFollows = moreFollows;
+    }
 
     /**
      * @summary Restructures an object into a UnitControlLoadSegment_Response

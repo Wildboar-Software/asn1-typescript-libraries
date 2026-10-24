@@ -34,48 +34,58 @@ import {
  *
  */
 export class Request {
+    /**
+     * @summary `invokeID`.
+     * @description
+     *
+     * Positive INTEGER, unique among all previous requests on this TCP
+     * connection (never reuse; not zero). LDAP `messageID` equivalent.
+     * Not the OSI `InvokeId` CHOICE.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly invokeID: INTEGER;
+    /**
+     * @summary `opcode`.
+     * @description
+     *
+     * OPERATION.&operationCode of the protocol. Local integers are
+     * protocol-scoped (DAP `read` and DISP `requestShadowUpdate` are
+     * both 1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly opcode: Code;
+    /**
+     * @summary `argument`.
+     * @description
+     *
+     * OPERATION.&ArgumentType for `opcode` (open type).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly argument: _Element;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `invokeID`.
-         * @description
-         *
-         * Positive INTEGER, unique among all previous requests on this TCP
-         * connection (never reuse; not zero). LDAP `messageID` equivalent.
-         * Not the OSI `InvokeId` CHOICE.
-         *
-         * @public
-         * @readonly
-         */
-        readonly invokeID: INTEGER,
-        /**
-         * @summary `opcode`.
-         * @description
-         *
-         * OPERATION.&operationCode of the protocol. Local integers are
-         * protocol-scoped (DAP `read` and DISP `requestShadowUpdate` are
-         * both 1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly opcode: Code,
-        /**
-         * @summary `argument`.
-         * @description
-         *
-         * OPERATION.&ArgumentType for `opcode` (open type).
-         *
-         * @public
-         * @readonly
-         */
-        readonly argument: _Element,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        invokeID: INTEGER,
+        opcode: Code,
+        argument: _Element,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.invokeID = invokeID;
+        this.opcode = opcode;
+        this.argument = argument;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a Request

@@ -35,29 +35,35 @@ import { SigParameterName, _decode_SigParameterName, _encode_SigParameterName } 
  */
 export
 class SigParameterV1 {
+    /**
+     * @summary `sigParameterName`.
+     * @description
+     *
+     * Parameter name, a two-octet `Name`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sigParameterName: SigParameterName;
+    /**
+     * @summary `value`.
+     * @description
+     *
+     * Single double-wrapped parameter value. Version 3 uses a sequence of
+     * such octet strings.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly value: SigParamValueV1;
+
     constructor (
-        /**
-         * @summary `sigParameterName`.
-         * @description
-         *
-         * Parameter name, a two-octet `Name`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly sigParameterName: SigParameterName,
-        /**
-         * @summary `value`.
-         * @description
-         *
-         * Single double-wrapped parameter value. Version 3 uses a sequence of
-         * such octet strings.
-         *
-         * @public
-         * @readonly
-         */
-        readonly value: SigParamValueV1
-    ) {}
+        sigParameterName: SigParameterName,
+        value: SigParamValueV1
+    ) {
+        this.sigParameterName = sigParameterName;
+        this.value = value;
+    }
 
     /**
      * @summary Restructures an object into a SigParameterV1

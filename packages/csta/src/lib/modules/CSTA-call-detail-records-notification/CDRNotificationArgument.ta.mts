@@ -44,40 +44,48 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class CDRNotificationArgument {
+    /**
+     * @summary `cdrCrossRefID`.
+     * @description
+     *
+     * CDR transmission cross-reference from Start Call Detail Records
+     * Transmission (ECMA-269 §27.1.4).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly cdrCrossRefID: CDRCrossRefID;
+    /**
+     * @summary `cdrReason`.
+     * @description
+     *
+     * Why the notification is sent, when provided (ECMA-269 §27.1.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly cdrReason?: OPTIONAL<CDRReason>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * CSTACommonArguments carrying the service-table security and
+     * privateData parameters.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `cdrCrossRefID`.
-         * @description
-         *
-         * CDR transmission cross-reference from Start Call Detail Records
-         * Transmission (ECMA-269 §27.1.4).
-         *
-         * @public
-         * @readonly
-         */
-        readonly cdrCrossRefID: CDRCrossRefID,
-        /**
-         * @summary `cdrReason`.
-         * @description
-         *
-         * Why the notification is sent, when provided (ECMA-269 §27.1.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly cdrReason?: OPTIONAL<CDRReason>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * CSTACommonArguments carrying the service-table security and
-         * privateData parameters.
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        cdrCrossRefID: CDRCrossRefID,
+        cdrReason?: OPTIONAL<CDRReason>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.cdrCrossRefID = cdrCrossRefID;
+        this.cdrReason = cdrReason;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a CDRNotificationArgument

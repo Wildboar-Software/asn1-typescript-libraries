@@ -34,28 +34,34 @@ import { LoadData, _decode_LoadData, _encode_LoadData } from "../ISO-9506-MMS-1/
  */
 export
 class ControlElement_continueDomainDef {
+    /**
+     * @summary `domainName`.
+     * @description
+     *
+     * Domain still in `loading`. ISO 9506-1:2003 §13.2.1.2.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly domainName: Identifier;
+    /**
+     * @summary `loadData`.
+     * @description
+     *
+     * Further (partial) Domain content. ISO 9506-1:2003 §13.2.1.2.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly loadData: LoadData;
+
     constructor (
-        /**
-         * @summary `domainName`.
-         * @description
-         *
-         * Domain still in `loading`. ISO 9506-1:2003 §13.2.1.2.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly domainName: Identifier,
-        /**
-         * @summary `loadData`.
-         * @description
-         *
-         * Further (partial) Domain content. ISO 9506-1:2003 §13.2.1.2.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly loadData: LoadData
-    ) {}
+        domainName: Identifier,
+        loadData: LoadData
+    ) {
+        this.domainName = domainName;
+        this.loadData = loadData;
+    }
 
     /**
      * @summary Restructures an object into a ControlElement_continueDomainDef

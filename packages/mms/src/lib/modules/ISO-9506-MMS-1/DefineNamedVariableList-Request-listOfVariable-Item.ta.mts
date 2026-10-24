@@ -35,31 +35,37 @@ import { AlternateAccess, _decode_AlternateAccess, _encode_AlternateAccess } fro
  */
 export
 class DefineNamedVariableList_Request_listOfVariable_Item {
+    /**
+     * @summary `variableSpecification`.
+     * @description
+     *
+     * NAMED, UNNAMED, or SINGLE variable for this element.
+     * ISO 9506-1:2003 §14.12.1.1.2.1, §14.5.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly variableSpecification: VariableSpecification;
+    /**
+     * @summary `alternateAccess`.
+     * @description
+     *
+     * Alternate Access when this element is accessed
+     * (`valt`). Omit for full access.
+     * ISO 9506-1:2003 §14.12.1.1.2.2, §14.3.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly alternateAccess?: OPTIONAL<AlternateAccess>;
+
     constructor (
-        /**
-         * @summary `variableSpecification`.
-         * @description
-         *
-         * NAMED, UNNAMED, or SINGLE variable for this element.
-         * ISO 9506-1:2003 §14.12.1.1.2.1, §14.5.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly variableSpecification: VariableSpecification,
-        /**
-         * @summary `alternateAccess`.
-         * @description
-         *
-         * Alternate Access when this element is accessed
-         * (`valt`). Omit for full access.
-         * ISO 9506-1:2003 §14.12.1.1.2.2, §14.3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly alternateAccess?: OPTIONAL<AlternateAccess>
-    ) {}
+        variableSpecification: VariableSpecification,
+        alternateAccess?: OPTIONAL<AlternateAccess>
+    ) {
+        this.variableSpecification = variableSpecification;
+        this.alternateAccess = alternateAccess;
+    }
 
     /**
      * @summary Restructures an object into a DefineNamedVariableList_Request_listOfVariable_Item

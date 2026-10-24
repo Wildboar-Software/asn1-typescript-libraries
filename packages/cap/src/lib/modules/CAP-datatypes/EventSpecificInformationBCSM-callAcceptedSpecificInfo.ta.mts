@@ -24,19 +24,25 @@ import { LocationInformation, _decode_LocationInformation, _encode_LocationInfor
  *
  */
 export class EventSpecificInformationBCSM_callAcceptedSpecificInfo {
+    /**
+     * @summary `locationInformation`.
+     * @description
+     *
+     * Location of the MS. (3GPP TS 29.078 V19.0.0 clause 11.18).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly locationInformation?: OPTIONAL<LocationInformation>;
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `locationInformation`.
-         * @description
-         *
-         * Location of the MS. (3GPP TS 29.078 V19.0.0 clause 11.18).
-         *
-         * @public
-         * @readonly
-         */
-        readonly locationInformation?: OPTIONAL<LocationInformation>,
-        readonly _unrecognizedExtensionsList: _Element[] = [],
-    ) {}
+        locationInformation?: OPTIONAL<LocationInformation>,
+        _unrecognizedExtensionsList: _Element[] = [],
+    ) {
+        this.locationInformation = locationInformation;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     public static _from_object (_o: { [_K in keyof (EventSpecificInformationBCSM_callAcceptedSpecificInfo)]: (EventSpecificInformationBCSM_callAcceptedSpecificInfo)[_K] }): EventSpecificInformationBCSM_callAcceptedSpecificInfo {
         return new EventSpecificInformationBCSM_callAcceptedSpecificInfo(_o.locationInformation, _o._unrecognizedExtensionsList);

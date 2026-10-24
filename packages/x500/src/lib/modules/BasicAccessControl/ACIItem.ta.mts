@@ -59,42 +59,54 @@ import {
  *
  */
 export class ACIItem {
+    /**
+     * @summary `identificationTag`.
+     * @description Discriminates this ACIItem among siblings; not evaluated in access decisions.
+     * @public
+     * @readonly
+     */
+    public readonly identificationTag: UnboundedDirectoryString;
+    /**
+     * @summary `precedence`.
+     * @description INTEGER 0..255; higher number prevails. Inner permissions may override.
+     * @public
+     * @readonly
+     */
+    public readonly precedence: Precedence;
+    /**
+     * @summary `authenticationLevel`.
+     * @description Minimum requestor level; `none` < `simple` < `strong`.
+     * @public
+     * @readonly
+     */
+    public readonly authenticationLevel: AuthenticationLevel;
+    /**
+     * @summary `itemOrUserFirst`.
+     * @description Outer grouping: protected items first, or user classes first.
+     * @public
+     * @readonly
+     */
+    public readonly itemOrUserFirst: ACIItem_itemOrUserFirst;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `identificationTag`.
-         * @description Discriminates this ACIItem among siblings; not evaluated in access decisions.
-         * @public
-         * @readonly
-         */
-        readonly identificationTag: UnboundedDirectoryString,
-        /**
-         * @summary `precedence`.
-         * @description INTEGER 0..255; higher number prevails. Inner permissions may override.
-         * @public
-         * @readonly
-         */
-        readonly precedence: Precedence,
-        /**
-         * @summary `authenticationLevel`.
-         * @description Minimum requestor level; `none` < `simple` < `strong`.
-         * @public
-         * @readonly
-         */
-        readonly authenticationLevel: AuthenticationLevel,
-        /**
-         * @summary `itemOrUserFirst`.
-         * @description Outer grouping: protected items first, or user classes first.
-         * @public
-         * @readonly
-         */
-        readonly itemOrUserFirst: ACIItem_itemOrUserFirst,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        identificationTag: UnboundedDirectoryString,
+        precedence: Precedence,
+        authenticationLevel: AuthenticationLevel,
+        itemOrUserFirst: ACIItem_itemOrUserFirst,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.identificationTag = identificationTag;
+        this.precedence = precedence;
+        this.authenticationLevel = authenticationLevel;
+        this.itemOrUserFirst = itemOrUserFirst;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a ACIItem

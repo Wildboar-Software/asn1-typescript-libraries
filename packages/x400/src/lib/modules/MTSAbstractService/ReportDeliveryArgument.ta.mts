@@ -74,52 +74,70 @@ import {
  *
  */
 export class ReportDeliveryArgument implements ReportDeliveryEnvelope {
-    constructor(
-        /**
-         * @summary `subject_submission_identifier`.
-         * @public
-         * @readonly
-         */
-        readonly subject_submission_identifier: SubjectSubmissionIdentifier /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `content_identifier`.
-         * @public
-         * @readonly
-         */
-        readonly content_identifier: OPTIONAL<ContentIdentifier> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `content_type`.
-         * @public
-         * @readonly
-         */
-        readonly content_type: OPTIONAL<ContentType> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `original_encoded_information_types`.
-         * @public
-         * @readonly
-         */
-        readonly original_encoded_information_types: OPTIONAL<OriginalEncodedInformationTypes> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `extensions`.
-         * @public
-         * @readonly
-         */
-        readonly extensions: OPTIONAL<
+    /**
+     * @summary `subject_submission_identifier`.
+     * @public
+     * @readonly
+     */
+    public readonly subject_submission_identifier: SubjectSubmissionIdentifier; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `content_identifier`.
+     * @public
+     * @readonly
+     */
+    public readonly content_identifier: OPTIONAL<ContentIdentifier>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `content_type`.
+     * @public
+     * @readonly
+     */
+    public readonly content_type: OPTIONAL<ContentType>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `original_encoded_information_types`.
+     * @public
+     * @readonly
+     */
+    public readonly original_encoded_information_types: OPTIONAL<OriginalEncodedInformationTypes>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly extensions: OPTIONAL<
             ExtensionField[]
-        > /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `per_recipient_fields`.
-         * @public
-         * @readonly
-         */
-        readonly per_recipient_fields: PerRecipientReportDeliveryFields[] /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `returned_content`.
-         * @public
-         * @readonly
-         */
-        readonly returned_content?: OPTIONAL<Content>
-    ) {}
+        >; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `per_recipient_fields`.
+     * @public
+     * @readonly
+     */
+    public readonly per_recipient_fields: PerRecipientReportDeliveryFields[]; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `returned_content`.
+     * @public
+     * @readonly
+     */
+    public readonly returned_content?: OPTIONAL<Content>;
+
+    constructor(
+        subject_submission_identifier: SubjectSubmissionIdentifier,
+        content_identifier: OPTIONAL<ContentIdentifier>,
+        content_type: OPTIONAL<ContentType>,
+        original_encoded_information_types: OPTIONAL<OriginalEncodedInformationTypes>,
+        extensions: OPTIONAL<
+            ExtensionField[]
+        >,
+        per_recipient_fields: PerRecipientReportDeliveryFields[],
+        returned_content?: OPTIONAL<Content>
+    ) {
+        this.subject_submission_identifier = subject_submission_identifier;
+        this.content_identifier = content_identifier;
+        this.content_type = content_type;
+        this.original_encoded_information_types = original_encoded_information_types;
+        this.extensions = extensions;
+        this.per_recipient_fields = per_recipient_fields;
+        this.returned_content = returned_content;
+    }
 
     /**
      * @summary Restructures an object into a ReportDeliveryArgument

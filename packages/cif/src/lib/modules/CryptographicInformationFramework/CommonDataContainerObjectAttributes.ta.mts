@@ -43,40 +43,49 @@ import { Identifier, _decode_Identifier, _encode_Identifier } from "../Cryptogra
  */
 export
 class CommonDataContainerObjectAttributes {
+    /**
+     * @summary `applicationName`.
+     * @description
+     * Name of the application that "owns" the data container. ISO/IEC
+     * 7816-15:2016 §8.2.17.
+     * @public
+     * @readonly
+     */
+    public readonly applicationName?: OPTIONAL<Label>;
+    /**
+     * @summary `applicationOID`.
+     * @description
+     * Registered OID of that application. ISO/IEC 7816-15:2016 §8.2.17.
+     * @public
+     * @readonly
+     */
+    public readonly applicationOID?: OPTIONAL<OBJECT_IDENTIFIER>;
+    /**
+     * @summary `iD`.
+     * @description
+     * Optional association with another CIO (e.g. a private key). ISO/IEC
+     * 7816-15:2016 §8.2.17.
+     * @public
+     * @readonly
+     */
+    public readonly iD?: OPTIONAL<Identifier>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `applicationName`.
-         * @description
-         * Name of the application that "owns" the data container. ISO/IEC
-         * 7816-15:2016 §8.2.17.
-         * @public
-         * @readonly
-         */
-        readonly applicationName?: OPTIONAL<Label>,
-        /**
-         * @summary `applicationOID`.
-         * @description
-         * Registered OID of that application. ISO/IEC 7816-15:2016 §8.2.17.
-         * @public
-         * @readonly
-         */
-        readonly applicationOID?: OPTIONAL<OBJECT_IDENTIFIER>,
-        /**
-         * @summary `iD`.
-         * @description
-         * Optional association with another CIO (e.g. a private key). ISO/IEC
-         * 7816-15:2016 §8.2.17.
-         * @public
-         * @readonly
-         */
-        readonly iD?: OPTIONAL<Identifier>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
+        applicationName?: OPTIONAL<Label>,
+        applicationOID?: OPTIONAL<OBJECT_IDENTIFIER>,
+        iD?: OPTIONAL<Identifier>,
+        _unrecognizedExtensionsList: _Element[] = []
     ) {
+        this.applicationName = applicationName;
+        this.applicationOID = applicationOID;
+        this.iD = iD;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
         if (applicationName === undefined && applicationOID === undefined) {
             throw new ASN1ConstructionError("CommonDataContainerObjectAttributes requires applicationName or applicationOID");
         }

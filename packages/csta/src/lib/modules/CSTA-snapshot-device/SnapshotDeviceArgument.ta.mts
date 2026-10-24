@@ -35,27 +35,33 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class SnapshotDeviceArgument {
+    /**
+     * @summary `snapshotObject`.
+     * @description
+     *
+     * Device whose calls are snapshotted.
+     * @public
+     * @readonly
+     */
+    public readonly snapshotObject: DeviceID;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `snapshotObject`.
-         * @description
-         *
-         * Device whose calls are snapshotted.
-         * @public
-         * @readonly
-         */
-        readonly snapshotObject: DeviceID,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        snapshotObject: DeviceID,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.snapshotObject = snapshotObject;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a SnapshotDeviceArgument

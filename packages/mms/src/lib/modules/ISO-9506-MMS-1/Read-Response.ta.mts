@@ -36,32 +36,38 @@ import { AccessResult, _decode_AccessResult, _encode_AccessResult } from "../ISO
  */
 export
 class Read_Response {
+    /**
+     * @summary `variableAccessSpecification`.
+     * @description
+     *
+     * Echo of the request VAS when
+     * `specificationWithResult` was true; otherwise omitted.
+     * ISO 9506-1:2003 §14.6.1.2.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly variableAccessSpecification: OPTIONAL<VariableAccessSpecification>;
+    /**
+     * @summary `listOfAccessResult`.
+     * @description
+     *
+     * Value or DataAccessError per requested variable, in
+     * VAS order, after type and alternate access.
+     * ISO 9506-1:2003 §14.6.1.2.2, §14.4.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly listOfAccessResult: AccessResult[];
+
     constructor (
-        /**
-         * @summary `variableAccessSpecification`.
-         * @description
-         *
-         * Echo of the request VAS when
-         * `specificationWithResult` was true; otherwise omitted.
-         * ISO 9506-1:2003 §14.6.1.2.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly variableAccessSpecification: OPTIONAL<VariableAccessSpecification>,
-        /**
-         * @summary `listOfAccessResult`.
-         * @description
-         *
-         * Value or DataAccessError per requested variable, in
-         * VAS order, after type and alternate access.
-         * ISO 9506-1:2003 §14.6.1.2.2, §14.4.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly listOfAccessResult: AccessResult[]
-    ) {}
+        variableAccessSpecification: OPTIONAL<VariableAccessSpecification>,
+        listOfAccessResult: AccessResult[]
+    ) {
+        this.variableAccessSpecification = variableAccessSpecification;
+        this.listOfAccessResult = listOfAccessResult;
+    }
 
     /**
      * @summary Restructures an object into a Read_Response

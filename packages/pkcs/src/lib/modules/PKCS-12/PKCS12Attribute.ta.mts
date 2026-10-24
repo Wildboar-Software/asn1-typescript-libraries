@@ -23,20 +23,26 @@ import * as $ from "@wildboar/asn1/functional";
  *
  */
 export class PKCS12Attribute {
+    /**
+     * @summary `attrId`.
+     * @public
+     * @readonly
+     */
+    public readonly attrId: OBJECT_IDENTIFIER;
+    /**
+     * @summary `attrValues`.
+     * @public
+     * @readonly
+     */
+    public readonly attrValues: _Element[];
+
     constructor(
-        /**
-         * @summary `attrId`.
-         * @public
-         * @readonly
-         */
-        readonly attrId: OBJECT_IDENTIFIER,
-        /**
-         * @summary `attrValues`.
-         * @public
-         * @readonly
-         */
-        readonly attrValues: _Element[]
-    ) {}
+        attrId: OBJECT_IDENTIFIER,
+        attrValues: _Element[]
+    ) {
+        this.attrId = attrId;
+        this.attrValues = attrValues;
+    }
 
     /**
      * @summary Restructures an object into a PKCS12Attribute

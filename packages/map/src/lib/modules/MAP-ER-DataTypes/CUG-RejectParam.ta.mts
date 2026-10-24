@@ -30,31 +30,39 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
  */
 export
 class CUG_RejectParam {
+    /**
+     * @summary `cug_RejectCause`.
+     * @description
+     *
+     * Why the call did not pass a CUG check (3GPP TS 29.002 V19.1.0 clauses
+     * 7.6.1.4 and 17.7.7).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly cug_RejectCause?: OPTIONAL<CUG_RejectCause>;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `cug_RejectCause`.
-         * @description
-         *
-         * Why the call did not pass a CUG check (3GPP TS 29.002 V19.1.0 clauses
-         * 7.6.1.4 and 17.7.7).
-         *
-         * @public
-         * @readonly
-         */
-        readonly cug_RejectCause?: OPTIONAL<CUG_RejectCause>,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        cug_RejectCause?: OPTIONAL<CUG_RejectCause>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.cug_RejectCause = cug_RejectCause;
+        this.extensionContainer = extensionContainer;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a CUG_RejectParam

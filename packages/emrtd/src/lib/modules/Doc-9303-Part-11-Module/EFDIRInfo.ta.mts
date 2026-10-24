@@ -39,22 +39,27 @@ import { id_EFDIR } from "../Doc-9303-Part-11-Module/id-EFDIR.va.mjs";
  */
 export
 class EFDIRInfo {
+    /**
+     * `id-EFDIR`.
+     * @summary `protocol`.
+     * @public
+     * @readonly
+     */
+    public readonly protocol: OBJECT_IDENTIFIER;
+    /**
+     * Contents of EF.DIR.
+     * @summary `eFDIR`.
+     * @public
+     * @readonly
+     */
+    public readonly eFDIR: OCTET_STRING;
+
     constructor (
-        /**
-         * `id-EFDIR`.
-         * @summary `protocol`.
-         * @public
-         * @readonly
-         */
-        readonly protocol: OBJECT_IDENTIFIER,
-        /**
-         * Contents of EF.DIR.
-         * @summary `eFDIR`.
-         * @public
-         * @readonly
-         */
-        readonly eFDIR: OCTET_STRING
+        protocol: OBJECT_IDENTIFIER,
+        eFDIR: OCTET_STRING
     ) {
+        this.protocol = protocol;
+        this.eFDIR = eFDIR;
         if (!id_EFDIR.isEqualTo(protocol)) {
             throw new ASN1Error("EFDIRInfo.protocol violates permitted OBJECT IDENTIFIER constraint");
         }

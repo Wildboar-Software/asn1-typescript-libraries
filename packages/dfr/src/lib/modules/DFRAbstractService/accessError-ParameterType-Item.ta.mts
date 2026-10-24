@@ -33,26 +33,32 @@ import { AccessProblem, _enum_for_AccessProblem, _decode_AccessProblem, _encode_
  */
 export
 class accessError_ParameterType_Item {
+    /**
+     * @summary `entry`.
+     * @description
+     *
+     * Entry that could not be accessed.
+     * @public
+     * @readonly
+     */
+    public readonly entry: DfrEntryName;
+    /**
+     * @summary `problem`.
+     * @description
+     *
+     * Why.
+     * @public
+     * @readonly
+     */
+    public readonly problem: AccessProblem;
+
     constructor (
-        /**
-         * @summary `entry`.
-         * @description
-         *
-         * Entry that could not be accessed.
-         * @public
-         * @readonly
-         */
-        readonly entry: DfrEntryName,
-        /**
-         * @summary `problem`.
-         * @description
-         *
-         * Why.
-         * @public
-         * @readonly
-         */
-        readonly problem: AccessProblem
-    ) {}
+        entry: DfrEntryName,
+        problem: AccessProblem
+    ) {
+        this.entry = entry;
+        this.problem = problem;
+    }
 
     /**
      * @summary Restructures an object into a accessError_ParameterType_Item

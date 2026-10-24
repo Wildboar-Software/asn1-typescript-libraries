@@ -57,19 +57,23 @@ import { GpLocationInfo_civicLocGml, _decode_GpLocationInfo_civicLocGml, _encode
  */
 export
 class GpLocationInfo {
+    /**
+     * @summary `civicLocGml`.
+     * @description
+     *
+     * GML 3.0 payload and optional civic-address fields.
+     * ECMA-285 §9.9.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly civicLocGml: GpLocationInfo_civicLocGml;
+
     constructor (
-        /**
-         * @summary `civicLocGml`.
-         * @description
-         *
-         * GML 3.0 payload and optional civic-address fields.
-         * ECMA-285 §9.9.
-         *
-         * @public
-         * @readonly
-         */
-        readonly civicLocGml: GpLocationInfo_civicLocGml
-    ) {}
+        civicLocGml: GpLocationInfo_civicLocGml
+    ) {
+        this.civicLocGml = civicLocGml;
+    }
 
     /**
      * @summary Restructures an object into a GpLocationInfo

@@ -36,32 +36,38 @@ import {
  *
  */
 export class PKIPublicationInfo {
+    /**
+     * @summary `action`.
+     * @description
+     *
+     * `dontPublish`(0): do not publish (`pubInfos` MUST be omitted).
+     * `pleasePublish`(1): request publication
+     * ([RFC 4211 §6.3](https://datatracker.ietf.org/doc/html/rfc4211#section-6.3)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly action: PKIPublicationInfo_action;
+    /**
+     * @summary `pubInfos`.
+     * @description
+     *
+     * Desired publication locations. Omitted for `dontPublish`.
+     * Include a `dontCare` `SinglePubInfo` to allow additional CA/RA
+     * locations ([RFC 4211 §6.3](https://datatracker.ietf.org/doc/html/rfc4211#section-6.3)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly pubInfos?: OPTIONAL<SinglePubInfo[]>;
+
     constructor(
-        /**
-         * @summary `action`.
-         * @description
-         *
-         * `dontPublish`(0): do not publish (`pubInfos` MUST be omitted).
-         * `pleasePublish`(1): request publication
-         * ([RFC 4211 §6.3](https://datatracker.ietf.org/doc/html/rfc4211#section-6.3)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly action: PKIPublicationInfo_action,
-        /**
-         * @summary `pubInfos`.
-         * @description
-         *
-         * Desired publication locations. Omitted for `dontPublish`.
-         * Include a `dontCare` `SinglePubInfo` to allow additional CA/RA
-         * locations ([RFC 4211 §6.3](https://datatracker.ietf.org/doc/html/rfc4211#section-6.3)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly pubInfos?: OPTIONAL<SinglePubInfo[]>
-    ) {}
+        action: PKIPublicationInfo_action,
+        pubInfos?: OPTIONAL<SinglePubInfo[]>
+    ) {
+        this.action = action;
+        this.pubInfos = pubInfos;
+    }
 
     /**
      * @summary Restructures an object into a PKIPublicationInfo

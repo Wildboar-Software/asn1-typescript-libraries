@@ -34,39 +34,47 @@ import {
  *
  */
 export class ModificationList_Item {
+    /**
+     * @summary `modifyOperator`.
+     * @description
+     *
+     * How to apply the change (CMIP `ModifyOperator`; default
+     * `replace`). ITU-T Rec. X.753 (10/97) A.8; X.711.
+     * @public
+     * @readonly
+     */
+    public readonly modifyOperator: OPTIONAL<ModifyOperator>;
+    /**
+     * @summary `attributeId`.
+     * @description
+     *
+     * Attribute to modify. Constrained by the
+     * `ModificationLists` TYPE-IDENTIFIER set. ITU-T Rec.
+     * X.753 (10/97) A.8, D.9.
+     * @public
+     * @readonly
+     */
+    public readonly attributeId: OBJECT_IDENTIFIER;
+    /**
+     * @summary `attributeValue`.
+     * @description
+     *
+     * New value. Absent when `modifyOperator` is
+     * `setToDefault`. ITU-T Rec. X.753 (10/97) A.8.
+     * @public
+     * @readonly
+     */
+    public readonly attributeValue?: OPTIONAL<_Element>;
+
     constructor(
-        /**
-         * @summary `modifyOperator`.
-         * @description
-         *
-         * How to apply the change (CMIP `ModifyOperator`; default
-         * `replace`). ITU-T Rec. X.753 (10/97) A.8; X.711.
-         * @public
-         * @readonly
-         */
-        readonly modifyOperator: OPTIONAL<ModifyOperator>,
-        /**
-         * @summary `attributeId`.
-         * @description
-         *
-         * Attribute to modify. Constrained by the
-         * `ModificationLists` TYPE-IDENTIFIER set. ITU-T Rec.
-         * X.753 (10/97) A.8, D.9.
-         * @public
-         * @readonly
-         */
-        readonly attributeId: OBJECT_IDENTIFIER,
-        /**
-         * @summary `attributeValue`.
-         * @description
-         *
-         * New value. Absent when `modifyOperator` is
-         * `setToDefault`. ITU-T Rec. X.753 (10/97) A.8.
-         * @public
-         * @readonly
-         */
-        readonly attributeValue?: OPTIONAL<_Element>
-    ) {}
+        modifyOperator: OPTIONAL<ModifyOperator>,
+        attributeId: OBJECT_IDENTIFIER,
+        attributeValue?: OPTIONAL<_Element>
+    ) {
+        this.modifyOperator = modifyOperator;
+        this.attributeId = attributeId;
+        this.attributeValue = attributeValue;
+    }
 
     /**
      * @summary Restructures an object into a ModificationList_Item

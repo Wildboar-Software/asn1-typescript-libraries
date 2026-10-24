@@ -58,38 +58,50 @@ import {
  *
  */
 export class NonReceiptFields {
+    /**
+     * @summary `non_receipt_reason`.
+     * @public
+     * @readonly
+     */
+    public readonly non_receipt_reason: NonReceiptReasonField;
+    /**
+     * @summary `discard_reason`.
+     * @public
+     * @readonly
+     */
+    public readonly discard_reason?: OPTIONAL<DiscardReasonField>;
+    /**
+     * @summary `auto_forward_comment`.
+     * @public
+     * @readonly
+     */
+    public readonly auto_forward_comment?: OPTIONAL<AutoForwardCommentField>;
+    /**
+     * @summary `returned_ipm`.
+     * @public
+     * @readonly
+     */
+    public readonly returned_ipm?: OPTIONAL<ReturnedIPMField>;
+    /**
+     * @summary `nrn_extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly nrn_extensions?: OPTIONAL<NRNExtensionsField>;
+
     constructor(
-        /**
-         * @summary `non_receipt_reason`.
-         * @public
-         * @readonly
-         */
-        readonly non_receipt_reason: NonReceiptReasonField,
-        /**
-         * @summary `discard_reason`.
-         * @public
-         * @readonly
-         */
-        readonly discard_reason?: OPTIONAL<DiscardReasonField>,
-        /**
-         * @summary `auto_forward_comment`.
-         * @public
-         * @readonly
-         */
-        readonly auto_forward_comment?: OPTIONAL<AutoForwardCommentField>,
-        /**
-         * @summary `returned_ipm`.
-         * @public
-         * @readonly
-         */
-        readonly returned_ipm?: OPTIONAL<ReturnedIPMField>,
-        /**
-         * @summary `nrn_extensions`.
-         * @public
-         * @readonly
-         */
-        readonly nrn_extensions?: OPTIONAL<NRNExtensionsField>
-    ) {}
+        non_receipt_reason: NonReceiptReasonField,
+        discard_reason?: OPTIONAL<DiscardReasonField>,
+        auto_forward_comment?: OPTIONAL<AutoForwardCommentField>,
+        returned_ipm?: OPTIONAL<ReturnedIPMField>,
+        nrn_extensions?: OPTIONAL<NRNExtensionsField>
+    ) {
+        this.non_receipt_reason = non_receipt_reason;
+        this.discard_reason = discard_reason;
+        this.auto_forward_comment = auto_forward_comment;
+        this.returned_ipm = returned_ipm;
+        this.nrn_extensions = nrn_extensions;
+    }
 
     /**
      * @summary Restructures an object into a NonReceiptFields

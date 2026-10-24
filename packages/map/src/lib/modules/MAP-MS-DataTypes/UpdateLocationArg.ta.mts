@@ -58,203 +58,237 @@ import { VLR_Capability, _decode_VLR_Capability, _encode_VLR_Capability } from "
  */
 export
 class UpdateLocationArg {
+    /**
+     * @summary `imsi`.
+     * @description
+     *
+     * International Mobile Subscriber Identity as in 3GPP TS 23.003.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.2.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly imsi: IMSI;
+    /**
+     * @summary `msc_Number`.
+     * @description
+     *
+     * ISDN number of an MSC. In Update Location, used for short-message
+     * delivery; MSRN is requested from the VLR for each incoming call
+     * set-up.
+     *
+     * (3GPP TS 29.002 V19.1.0 clauses 7.6.2.11 and 8.1.2.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly msc_Number: ISDN_AddressString;
+    /**
+     * @summary `vlr_Number`.
+     * @description
+     *
+     * ISDN number of a VLR.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.2.14).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly vlr_Number: ISDN_AddressString;
+    /**
+     * @summary `lmsi`.
+     * @description
+     *
+     * Local identity allocated by the VLR for internal data management.
+     * Providing it is an operator option; HLR shall support LMSI handling.
+     * Shall not be sent to the SGSN.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.2.16).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly lmsi?: OPTIONAL<LMSI>;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary `vlr_Capability`.
+     * @description
+     *
+     * Capabilities of the serving VLR/VMSC.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 8.1.2.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly vlr_Capability?: OPTIONAL<VLR_Capability>;
+    /**
+     * @summary `informPreviousNetworkEntity`.
+     * @description
+     *
+     * Ask the HLR to send Cancel Location to the previous network entity.
+     * Used if Super-Charger is supported and the serving entity could not
+     * inform the previous entity (no Send Identification) or MTRF Supported
+     * is set.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 8.1.2.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly informPreviousNetworkEntity?: OPTIONAL<NULL>;
+    /**
+     * @summary `cs_LCS_NotSupportedByUE`.
+     * @description
+     *
+     * UE does not support CS-domain LCS.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.11.9).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly cs_LCS_NotSupportedByUE?: OPTIONAL<NULL>;
+    /**
+     * @summary `v_gmlc_Address`.
+     * @description
+     *
+     * IP address of a V-GMLC.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.2.59).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly v_gmlc_Address?: OPTIONAL<GSN_Address>;
+    /**
+     * @summary `add_info`.
+     * @description
+     *
+     * Additional MSC/SGSN information (IMEISV and optional
+     * skip-subscriber-data-update).
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 8.1.2.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly add_info?: OPTIONAL<ADD_Info>;
+    /**
+     * @summary `pagingArea`.
+     * @description
+     *
+     * Paging area where the MS is currently located (3GPP TS 23.012 and
+     * 23.018).
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.5.18).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly pagingArea?: OPTIONAL<PagingArea>;
+    /**
+     * @summary `skipSubscriberDataUpdate`.
+     * @description
+     *
+     * Service is used only to inform the HLR of IMEISV or Paging Area
+     * change, to reduce signalling during location update. Same semantic as
+     * in `ADD-Info`.
+     *
+     * (3GPP TS 29.002 V19.1.0 clauses 8.1.2.3 and 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly skipSubscriberDataUpdate?: OPTIONAL<NULL>;
+    /**
+     * @summary `restorationIndicator`.
+     * @description
+     *
+     * HLR shall send in Insert Subscriber Data the MME Name if the
+     * subscriber is registered to EPS, or the SGSN Number if registered to
+     * GPRS. VLR may set this during a CSFB MO call implicit location update
+     * (3GPP TS 23.272).
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 8.1.2.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly restorationIndicator?: OPTIONAL<NULL>;
+    /**
+     * @summary `eplmn_List`.
+     * @description
+     *
+     * Equivalent PLMN list for which CSG subscription data are requested.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 8.1.2.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly eplmn_List?: OPTIONAL<EPLMN_List>;
+    /**
+     * @summary `mme_DiameterAddress`.
+     * @description
+     *
+     * Diameter Name and Realm of an MME registering for MT-SMS (IWF). May
+     * be stored in the HLR and sent in SMS interrogation responses.
+     *
+     * (3GPP TS 29.002 V19.1.0 clauses 8.1.2.3 and 7.6.2.43A).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mme_DiameterAddress?: OPTIONAL<NetworkNodeDiameterAddress>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `imsi`.
-         * @description
-         *
-         * International Mobile Subscriber Identity as in 3GPP TS 23.003.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.2.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly imsi: IMSI,
-        /**
-         * @summary `msc_Number`.
-         * @description
-         *
-         * ISDN number of an MSC. In Update Location, used for short-message
-         * delivery; MSRN is requested from the VLR for each incoming call
-         * set-up.
-         *
-         * (3GPP TS 29.002 V19.1.0 clauses 7.6.2.11 and 8.1.2.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly msc_Number: ISDN_AddressString,
-        /**
-         * @summary `vlr_Number`.
-         * @description
-         *
-         * ISDN number of a VLR.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.2.14).
-         *
-         * @public
-         * @readonly
-         */
-        readonly vlr_Number: ISDN_AddressString,
-        /**
-         * @summary `lmsi`.
-         * @description
-         *
-         * Local identity allocated by the VLR for internal data management.
-         * Providing it is an operator option; HLR shall support LMSI handling.
-         * Shall not be sent to the SGSN.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.2.16).
-         *
-         * @public
-         * @readonly
-         */
-        readonly lmsi?: OPTIONAL<LMSI>,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary `vlr_Capability`.
-         * @description
-         *
-         * Capabilities of the serving VLR/VMSC.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 8.1.2.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly vlr_Capability?: OPTIONAL<VLR_Capability>,
-        /**
-         * @summary `informPreviousNetworkEntity`.
-         * @description
-         *
-         * Ask the HLR to send Cancel Location to the previous network entity.
-         * Used if Super-Charger is supported and the serving entity could not
-         * inform the previous entity (no Send Identification) or MTRF Supported
-         * is set.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 8.1.2.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly informPreviousNetworkEntity?: OPTIONAL<NULL>,
-        /**
-         * @summary `cs_LCS_NotSupportedByUE`.
-         * @description
-         *
-         * UE does not support CS-domain LCS.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.11.9).
-         *
-         * @public
-         * @readonly
-         */
-        readonly cs_LCS_NotSupportedByUE?: OPTIONAL<NULL>,
-        /**
-         * @summary `v_gmlc_Address`.
-         * @description
-         *
-         * IP address of a V-GMLC.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.2.59).
-         *
-         * @public
-         * @readonly
-         */
-        readonly v_gmlc_Address?: OPTIONAL<GSN_Address>,
-        /**
-         * @summary `add_info`.
-         * @description
-         *
-         * Additional MSC/SGSN information (IMEISV and optional
-         * skip-subscriber-data-update).
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 8.1.2.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly add_info?: OPTIONAL<ADD_Info>,
-        /**
-         * @summary `pagingArea`.
-         * @description
-         *
-         * Paging area where the MS is currently located (3GPP TS 23.012 and
-         * 23.018).
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.5.18).
-         *
-         * @public
-         * @readonly
-         */
-        readonly pagingArea?: OPTIONAL<PagingArea>,
-        /**
-         * @summary `skipSubscriberDataUpdate`.
-         * @description
-         *
-         * Service is used only to inform the HLR of IMEISV or Paging Area
-         * change, to reduce signalling during location update. Same semantic as
-         * in `ADD-Info`.
-         *
-         * (3GPP TS 29.002 V19.1.0 clauses 8.1.2.3 and 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly skipSubscriberDataUpdate?: OPTIONAL<NULL>,
-        /**
-         * @summary `restorationIndicator`.
-         * @description
-         *
-         * HLR shall send in Insert Subscriber Data the MME Name if the
-         * subscriber is registered to EPS, or the SGSN Number if registered to
-         * GPRS. VLR may set this during a CSFB MO call implicit location update
-         * (3GPP TS 23.272).
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 8.1.2.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly restorationIndicator?: OPTIONAL<NULL>,
-        /**
-         * @summary `eplmn_List`.
-         * @description
-         *
-         * Equivalent PLMN list for which CSG subscription data are requested.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 8.1.2.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly eplmn_List?: OPTIONAL<EPLMN_List>,
-        /**
-         * @summary `mme_DiameterAddress`.
-         * @description
-         *
-         * Diameter Name and Realm of an MME registering for MT-SMS (IWF). May
-         * be stored in the HLR and sent in SMS interrogation responses.
-         *
-         * (3GPP TS 29.002 V19.1.0 clauses 8.1.2.3 and 7.6.2.43A).
-         *
-         * @public
-         * @readonly
-         */
-        readonly mme_DiameterAddress?: OPTIONAL<NetworkNodeDiameterAddress>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        imsi: IMSI,
+        msc_Number: ISDN_AddressString,
+        vlr_Number: ISDN_AddressString,
+        lmsi?: OPTIONAL<LMSI>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        vlr_Capability?: OPTIONAL<VLR_Capability>,
+        informPreviousNetworkEntity?: OPTIONAL<NULL>,
+        cs_LCS_NotSupportedByUE?: OPTIONAL<NULL>,
+        v_gmlc_Address?: OPTIONAL<GSN_Address>,
+        add_info?: OPTIONAL<ADD_Info>,
+        pagingArea?: OPTIONAL<PagingArea>,
+        skipSubscriberDataUpdate?: OPTIONAL<NULL>,
+        restorationIndicator?: OPTIONAL<NULL>,
+        eplmn_List?: OPTIONAL<EPLMN_List>,
+        mme_DiameterAddress?: OPTIONAL<NetworkNodeDiameterAddress>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.imsi = imsi;
+        this.msc_Number = msc_Number;
+        this.vlr_Number = vlr_Number;
+        this.lmsi = lmsi;
+        this.extensionContainer = extensionContainer;
+        this.vlr_Capability = vlr_Capability;
+        this.informPreviousNetworkEntity = informPreviousNetworkEntity;
+        this.cs_LCS_NotSupportedByUE = cs_LCS_NotSupportedByUE;
+        this.v_gmlc_Address = v_gmlc_Address;
+        this.add_info = add_info;
+        this.pagingArea = pagingArea;
+        this.skipSubscriberDataUpdate = skipSubscriberDataUpdate;
+        this.restorationIndicator = restorationIndicator;
+        this.eplmn_List = eplmn_List;
+        this.mme_DiameterAddress = mme_DiameterAddress;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a UpdateLocationArg

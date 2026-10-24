@@ -58,32 +58,42 @@ import {
  *
  */
 export class MessageDeliveryArgument implements MessageDeliveryEnvelope {
+    /**
+     * @summary `message_delivery_identifier`.
+     * @public
+     * @readonly
+     */
+    public readonly message_delivery_identifier: MessageDeliveryIdentifier; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `message_delivery_time`.
+     * @public
+     * @readonly
+     */
+    public readonly message_delivery_time: MessageDeliveryTime; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `other_fields`.
+     * @public
+     * @readonly
+     */
+    public readonly other_fields: OtherMessageDeliveryFields; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `content`.
+     * @public
+     * @readonly
+     */
+    public readonly content: Content;
+
     constructor(
-        /**
-         * @summary `message_delivery_identifier`.
-         * @public
-         * @readonly
-         */
-        readonly message_delivery_identifier: MessageDeliveryIdentifier /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `message_delivery_time`.
-         * @public
-         * @readonly
-         */
-        readonly message_delivery_time: MessageDeliveryTime /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `other_fields`.
-         * @public
-         * @readonly
-         */
-        readonly other_fields: OtherMessageDeliveryFields /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `content`.
-         * @public
-         * @readonly
-         */
-        readonly content: Content
-    ) {}
+        message_delivery_identifier: MessageDeliveryIdentifier,
+        message_delivery_time: MessageDeliveryTime,
+        other_fields: OtherMessageDeliveryFields,
+        content: Content
+    ) {
+        this.message_delivery_identifier = message_delivery_identifier;
+        this.message_delivery_time = message_delivery_time;
+        this.other_fields = other_fields;
+        this.content = content;
+    }
 
     /**
      * @summary Restructures an object into a MessageDeliveryArgument

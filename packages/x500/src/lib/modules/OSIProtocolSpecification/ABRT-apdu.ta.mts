@@ -23,14 +23,18 @@ import {
  *
  */
 export class ABRT_apdu {
+    /**
+     * @summary `abort_source`.
+     * @public
+     * @readonly
+     */
+    public readonly abort_source: ABRT_source;
+
     constructor(
-        /**
-         * @summary `abort_source`.
-         * @public
-         * @readonly
-         */
-        readonly abort_source: ABRT_source
-    ) {}
+        abort_source: ABRT_source
+    ) {
+        this.abort_source = abort_source;
+    }
 
     /**
      * @summary Restructures an object into a ABRT_apdu

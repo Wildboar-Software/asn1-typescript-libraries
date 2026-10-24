@@ -26,29 +26,35 @@ import * as $ from "@wildboar/asn1/functional";
  *
  */
 export class ProtocolInformation {
+    /**
+     * @summary `nAddress`.
+     * @description
+     *
+     * NSAP octets. The only component used by protocolInformationMatch.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly nAddress: OCTET_STRING;
+    /**
+     * @summary `profiles`.
+     * @description
+     *
+     * Unordered SET OF OIDs (network/transport profiles). Ignored by
+     * protocolInformationMatch.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly profiles: OBJECT_IDENTIFIER[];
+
     constructor(
-        /**
-         * @summary `nAddress`.
-         * @description
-         *
-         * NSAP octets. The only component used by protocolInformationMatch.
-         *
-         * @public
-         * @readonly
-         */
-        readonly nAddress: OCTET_STRING,
-        /**
-         * @summary `profiles`.
-         * @description
-         *
-         * Unordered SET OF OIDs (network/transport profiles). Ignored by
-         * protocolInformationMatch.
-         *
-         * @public
-         * @readonly
-         */
-        readonly profiles: OBJECT_IDENTIFIER[]
-    ) {}
+        nAddress: OCTET_STRING,
+        profiles: OBJECT_IDENTIFIER[]
+    ) {
+        this.nAddress = nAddress;
+        this.profiles = profiles;
+    }
 
     /**
      * @summary Restructures an object into a ProtocolInformation

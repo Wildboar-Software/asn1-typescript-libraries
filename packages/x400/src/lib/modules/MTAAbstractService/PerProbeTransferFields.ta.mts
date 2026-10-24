@@ -89,70 +89,94 @@ import {
  *
  */
 export class PerProbeTransferFields {
+    /**
+     * @summary `probe_identifier`.
+     * @public
+     * @readonly
+     */
+    public readonly probe_identifier: ProbeIdentifier;
+    /**
+     * @summary `originator_name`.
+     * @public
+     * @readonly
+     */
+    public readonly originator_name: OriginatorName;
+    /**
+     * @summary `original_encoded_information_types`.
+     * @public
+     * @readonly
+     */
+    public readonly original_encoded_information_types: OPTIONAL<OriginalEncodedInformationTypes>;
+    /**
+     * @summary `content_type`.
+     * @public
+     * @readonly
+     */
+    public readonly content_type: ContentType;
+    /**
+     * @summary `content_identifier`.
+     * @public
+     * @readonly
+     */
+    public readonly content_identifier: OPTIONAL<ContentIdentifier>;
+    /**
+     * @summary `content_length`.
+     * @public
+     * @readonly
+     */
+    public readonly content_length: OPTIONAL<ContentLength>;
+    /**
+     * @summary `per_message_indicators`.
+     * @public
+     * @readonly
+     */
+    public readonly per_message_indicators: OPTIONAL<PerMessageIndicators>;
+    /**
+     * @summary `per_domain_bilateral_information`.
+     * @public
+     * @readonly
+     */
+    public readonly per_domain_bilateral_information: OPTIONAL<
+            PerDomainBilateralInformation[]
+        >;
+    /**
+     * @summary `trace_information`.
+     * @public
+     * @readonly
+     */
+    public readonly trace_information: TraceInformation;
+    /**
+     * @summary `extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<ExtensionField[]>;
+
     constructor(
-        /**
-         * @summary `probe_identifier`.
-         * @public
-         * @readonly
-         */
-        readonly probe_identifier: ProbeIdentifier,
-        /**
-         * @summary `originator_name`.
-         * @public
-         * @readonly
-         */
-        readonly originator_name: OriginatorName,
-        /**
-         * @summary `original_encoded_information_types`.
-         * @public
-         * @readonly
-         */
-        readonly original_encoded_information_types: OPTIONAL<OriginalEncodedInformationTypes>,
-        /**
-         * @summary `content_type`.
-         * @public
-         * @readonly
-         */
-        readonly content_type: ContentType,
-        /**
-         * @summary `content_identifier`.
-         * @public
-         * @readonly
-         */
-        readonly content_identifier: OPTIONAL<ContentIdentifier>,
-        /**
-         * @summary `content_length`.
-         * @public
-         * @readonly
-         */
-        readonly content_length: OPTIONAL<ContentLength>,
-        /**
-         * @summary `per_message_indicators`.
-         * @public
-         * @readonly
-         */
-        readonly per_message_indicators: OPTIONAL<PerMessageIndicators>,
-        /**
-         * @summary `per_domain_bilateral_information`.
-         * @public
-         * @readonly
-         */
-        readonly per_domain_bilateral_information: OPTIONAL<
+        probe_identifier: ProbeIdentifier,
+        originator_name: OriginatorName,
+        original_encoded_information_types: OPTIONAL<OriginalEncodedInformationTypes>,
+        content_type: ContentType,
+        content_identifier: OPTIONAL<ContentIdentifier>,
+        content_length: OPTIONAL<ContentLength>,
+        per_message_indicators: OPTIONAL<PerMessageIndicators>,
+        per_domain_bilateral_information: OPTIONAL<
             PerDomainBilateralInformation[]
         >,
-        /**
-         * @summary `trace_information`.
-         * @public
-         * @readonly
-         */
-        readonly trace_information: TraceInformation,
-        /**
-         * @summary `extensions`.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<ExtensionField[]>
-    ) {}
+        trace_information: TraceInformation,
+        extensions?: OPTIONAL<ExtensionField[]>
+    ) {
+        this.probe_identifier = probe_identifier;
+        this.originator_name = originator_name;
+        this.original_encoded_information_types = original_encoded_information_types;
+        this.content_type = content_type;
+        this.content_identifier = content_identifier;
+        this.content_length = content_length;
+        this.per_message_indicators = per_message_indicators;
+        this.per_domain_bilateral_information = per_domain_bilateral_information;
+        this.trace_information = trace_information;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a PerProbeTransferFields

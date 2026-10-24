@@ -27,20 +27,26 @@ import {
  *
  */
 export class CertReplaceErr {
+    /**
+     * @summary `code`.
+     * @public
+     * @readonly
+     */
+    public readonly code: CertReplaceErr_code;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `code`.
-         * @public
-         * @readonly
-         */
-        readonly code: CertReplaceErr_code,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        code: CertReplaceErr_code,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.code = code;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a CertReplaceErr

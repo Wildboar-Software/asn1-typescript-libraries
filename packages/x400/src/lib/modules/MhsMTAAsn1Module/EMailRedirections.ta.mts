@@ -38,20 +38,26 @@ import {
  *
  */
 export class EMailRedirections {
+    /**
+     * @summary `label`.
+     * @public
+     * @readonly
+     */
+    public readonly label: Label;
+    /**
+     * @summary `address`.
+     * @public
+     * @readonly
+     */
+    public readonly address: EMailRedirections_address;
+
     constructor(
-        /**
-         * @summary `label`.
-         * @public
-         * @readonly
-         */
-        readonly label: Label,
-        /**
-         * @summary `address`.
-         * @public
-         * @readonly
-         */
-        readonly address: EMailRedirections_address
-    ) {}
+        label: Label,
+        address: EMailRedirections_address
+    ) {
+        this.label = label;
+        this.address = address;
+    }
 
     /**
      * @summary Restructures an object into a EMailRedirections

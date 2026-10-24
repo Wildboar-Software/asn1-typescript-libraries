@@ -50,82 +50,100 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class RouteSelectRequestArgument {
+    /**
+     * @summary `crossRefIdentifier`.
+     * @description
+     *
+     * Dialogue this destination answers.
+     * @public
+     * @readonly
+     */
+    public readonly crossRefIdentifier: RouteingCrossRefID;
+    /**
+     * @summary `routeRegisterReqID`.
+     * @description
+     *
+     * Registration for this dialogue, if registration is used.
+     * @public
+     * @readonly
+     */
+    public readonly routeRegisterReqID: OPTIONAL<RouteRegisterReqID>;
+    /**
+     * @summary `routeSelected`.
+     * @description
+     *
+     * Destination the SF should use.
+     * @public
+     * @readonly
+     */
+    public readonly routeSelected: DeviceID;
+    /**
+     * @summary `alternateRoutes`.
+     * @description
+     *
+     * Further destinations the SF may try.
+     * @public
+     * @readonly
+     */
+    public readonly alternateRoutes?: OPTIONAL<DeviceID[]>;
+    /**
+     * @summary `remainRetries`.
+     * @description
+     *
+     * Remaining routes CF can still offer, or an indication that no
+     * count is available.
+     * @public
+     * @readonly
+     */
+    public readonly remainRetries?: OPTIONAL<RetryValue>;
+    /**
+     * @summary `routeUsedReq`.
+     * @description
+     *
+     * TRUE: SF should send Route Used with the actual destination.
+     * @public
+     * @readonly
+     */
+    public readonly routeUsedReq?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `correlatorData`.
+     * @description
+     *
+     * Correlator data to associate with the call.
+     * @public
+     * @readonly
+     */
+    public readonly correlatorData?: OPTIONAL<CorrelatorData>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `crossRefIdentifier`.
-         * @description
-         *
-         * Dialogue this destination answers.
-         * @public
-         * @readonly
-         */
-        readonly crossRefIdentifier: RouteingCrossRefID,
-        /**
-         * @summary `routeRegisterReqID`.
-         * @description
-         *
-         * Registration for this dialogue, if registration is used.
-         * @public
-         * @readonly
-         */
-        readonly routeRegisterReqID: OPTIONAL<RouteRegisterReqID>,
-        /**
-         * @summary `routeSelected`.
-         * @description
-         *
-         * Destination the SF should use.
-         * @public
-         * @readonly
-         */
-        readonly routeSelected: DeviceID,
-        /**
-         * @summary `alternateRoutes`.
-         * @description
-         *
-         * Further destinations the SF may try.
-         * @public
-         * @readonly
-         */
-        readonly alternateRoutes?: OPTIONAL<DeviceID[]>,
-        /**
-         * @summary `remainRetries`.
-         * @description
-         *
-         * Remaining routes CF can still offer, or an indication that no
-         * count is available.
-         * @public
-         * @readonly
-         */
-        readonly remainRetries?: OPTIONAL<RetryValue>,
-        /**
-         * @summary `routeUsedReq`.
-         * @description
-         *
-         * TRUE: SF should send Route Used with the actual destination.
-         * @public
-         * @readonly
-         */
-        readonly routeUsedReq?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `correlatorData`.
-         * @description
-         *
-         * Correlator data to associate with the call.
-         * @public
-         * @readonly
-         */
-        readonly correlatorData?: OPTIONAL<CorrelatorData>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        crossRefIdentifier: RouteingCrossRefID,
+        routeRegisterReqID: OPTIONAL<RouteRegisterReqID>,
+        routeSelected: DeviceID,
+        alternateRoutes?: OPTIONAL<DeviceID[]>,
+        remainRetries?: OPTIONAL<RetryValue>,
+        routeUsedReq?: OPTIONAL<BOOLEAN>,
+        correlatorData?: OPTIONAL<CorrelatorData>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.crossRefIdentifier = crossRefIdentifier;
+        this.routeRegisterReqID = routeRegisterReqID;
+        this.routeSelected = routeSelected;
+        this.alternateRoutes = alternateRoutes;
+        this.remainRetries = remainRetries;
+        this.routeUsedReq = routeUsedReq;
+        this.correlatorData = correlatorData;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a RouteSelectRequestArgument

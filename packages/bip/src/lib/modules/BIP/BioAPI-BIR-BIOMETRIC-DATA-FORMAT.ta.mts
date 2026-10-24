@@ -37,20 +37,26 @@ import {
  *
  */
 export class BioAPI_BIR_BIOMETRIC_DATA_FORMAT {
+  /**
+   * @summary `formatOwner`.
+   * @public
+   * @readonly
+   */
+  public readonly formatOwner: UnsignedShort;
+  /**
+   * @summary `formatType`.
+   * @public
+   * @readonly
+   */
+  public readonly formatType: UnsignedShort;
+
   constructor(
-    /**
-     * @summary `formatOwner`.
-     * @public
-     * @readonly
-     */
-    readonly formatOwner: UnsignedShort,
-    /**
-     * @summary `formatType`.
-     * @public
-     * @readonly
-     */
-    readonly formatType: UnsignedShort
-  ) {}
+    formatOwner: UnsignedShort,
+    formatType: UnsignedShort
+  ) {
+    this.formatOwner = formatOwner;
+    this.formatType = formatType;
+  }
 
   /**
    * @summary Restructures an object into a BioAPI_BIR_BIOMETRIC_DATA_FORMAT

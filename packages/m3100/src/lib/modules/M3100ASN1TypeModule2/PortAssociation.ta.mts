@@ -37,20 +37,26 @@ import {
  *
  */
 export class PortAssociation {
+    /**
+     * @summary `portId`.
+     * @public
+     * @readonly
+     */
+    public readonly portId: NameType;
+    /**
+     * @summary `portTrail`.
+     * @public
+     * @readonly
+     */
+    public readonly portTrail: PointerOrNull;
+
     constructor(
-        /**
-         * @summary `portId`.
-         * @public
-         * @readonly
-         */
-        readonly portId: NameType,
-        /**
-         * @summary `portTrail`.
-         * @public
-         * @readonly
-         */
-        readonly portTrail: PointerOrNull
-    ) {}
+        portId: NameType,
+        portTrail: PointerOrNull
+    ) {
+        this.portId = portId;
+        this.portTrail = portTrail;
+    }
 
     /**
      * @summary Restructures an object into a PortAssociation

@@ -36,20 +36,26 @@ import {
  *
  */
 export class AddLeg {
+    /**
+     * @summary `mpCrossConnection`.
+     * @public
+     * @readonly
+     */
+    public readonly mpCrossConnection: ObjectInstance;
+    /**
+     * @summary `legs`.
+     * @public
+     * @readonly
+     */
+    public readonly legs: ToTermSpecifier[];
+
     constructor(
-        /**
-         * @summary `mpCrossConnection`.
-         * @public
-         * @readonly
-         */
-        readonly mpCrossConnection: ObjectInstance,
-        /**
-         * @summary `legs`.
-         * @public
-         * @readonly
-         */
-        readonly legs: ToTermSpecifier[]
-    ) {}
+        mpCrossConnection: ObjectInstance,
+        legs: ToTermSpecifier[]
+    ) {
+        this.mpCrossConnection = mpCrossConnection;
+        this.legs = legs;
+    }
 
     /**
      * @summary Restructures an object into a AddLeg

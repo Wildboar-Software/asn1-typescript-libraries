@@ -35,31 +35,37 @@ import { EntryContent, _decode_EntryContent, _encode_EntryContent } from "../ISO
  */
 export
 class WriteJournal_Request {
+    /**
+     * @summary `journalName`.
+     * @description
+     *
+     * Journal to which entries are added. ISO 9506-1:2003
+     * §23.3.1.1.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly journalName: ObjectName;
+    /**
+     * @summary `listOfJournalEntry`.
+     * @description
+     *
+     * One or more entries. Occurrence time and form (data vs
+     * annotation) are in each `EntryContent`. ISO 9506-1:2003
+     * §23.3.1.1.2. ISO 9506-2:2003 §23.8.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly listOfJournalEntry: EntryContent[];
+
     constructor (
-        /**
-         * @summary `journalName`.
-         * @description
-         *
-         * Journal to which entries are added. ISO 9506-1:2003
-         * §23.3.1.1.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly journalName: ObjectName,
-        /**
-         * @summary `listOfJournalEntry`.
-         * @description
-         *
-         * One or more entries. Occurrence time and form (data vs
-         * annotation) are in each `EntryContent`. ISO 9506-1:2003
-         * §23.3.1.1.2. ISO 9506-2:2003 §23.8.
-         *
-         * @public
-         * @readonly
-         */
-        readonly listOfJournalEntry: EntryContent[]
-    ) {}
+        journalName: ObjectName,
+        listOfJournalEntry: EntryContent[]
+    ) {
+        this.journalName = journalName;
+        this.listOfJournalEntry = listOfJournalEntry;
+    }
 
     /**
      * @summary Restructures an object into a WriteJournal_Request

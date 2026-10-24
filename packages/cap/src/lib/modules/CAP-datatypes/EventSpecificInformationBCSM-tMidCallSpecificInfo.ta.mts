@@ -26,20 +26,26 @@ import { type EventSpecificInformationBCSM_tMidCallSpecificInfo_midCallEvents, _
  *
  */
 export class EventSpecificInformationBCSM_tMidCallSpecificInfo {
+    /**
+     * @summary `midCallEvents`.
+     * @description
+     *
+     * Detected digit string per the RequestReportBCSMEvent criterion.
+     * (3GPP TS 29.078 V19.0.0 clause 11.18).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly midCallEvents: EventSpecificInformationBCSM_tMidCallSpecificInfo_midCallEvents;
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `midCallEvents`.
-         * @description
-         *
-         * Detected digit string per the RequestReportBCSMEvent criterion.
-         * (3GPP TS 29.078 V19.0.0 clause 11.18).
-         *
-         * @public
-         * @readonly
-         */
-        readonly midCallEvents: EventSpecificInformationBCSM_tMidCallSpecificInfo_midCallEvents,
-        readonly _unrecognizedExtensionsList: _Element[] = [],
-    ) {}
+        midCallEvents: EventSpecificInformationBCSM_tMidCallSpecificInfo_midCallEvents,
+        _unrecognizedExtensionsList: _Element[] = [],
+    ) {
+        this.midCallEvents = midCallEvents;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     public static _from_object (_o: { [_K in keyof (EventSpecificInformationBCSM_tMidCallSpecificInfo)]: (EventSpecificInformationBCSM_tMidCallSpecificInfo)[_K] }): EventSpecificInformationBCSM_tMidCallSpecificInfo {
         return new EventSpecificInformationBCSM_tMidCallSpecificInfo(_o.midCallEvents, _o._unrecognizedExtensionsList);

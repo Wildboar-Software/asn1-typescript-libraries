@@ -27,20 +27,26 @@ import {
  *
  */
 export class OsiUnbindResult_fully_encoded_data_Item {
+    /**
+     * @summary `presentation_context_identifier`.
+     * @public
+     * @readonly
+     */
+    public readonly presentation_context_identifier: Presentation_context_identifier;
+    /**
+     * @summary `presentation_data_values`.
+     * @public
+     * @readonly
+     */
+    public readonly presentation_data_values: OsiUnbindResult_fully_encoded_data_Item_presentation_data_values;
+
     constructor(
-        /**
-         * @summary `presentation_context_identifier`.
-         * @public
-         * @readonly
-         */
-        readonly presentation_context_identifier: Presentation_context_identifier,
-        /**
-         * @summary `presentation_data_values`.
-         * @public
-         * @readonly
-         */
-        readonly presentation_data_values: OsiUnbindResult_fully_encoded_data_Item_presentation_data_values
-    ) {}
+        presentation_context_identifier: Presentation_context_identifier,
+        presentation_data_values: OsiUnbindResult_fully_encoded_data_Item_presentation_data_values
+    ) {
+        this.presentation_context_identifier = presentation_context_identifier;
+        this.presentation_data_values = presentation_data_values;
+    }
 
     /**
      * @summary Restructures an object into a OsiUnbindResult_fully_encoded_data_Item

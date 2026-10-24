@@ -64,106 +64,126 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class StartDataPathArgument {
+    /**
+     * @summary `ioRegisterReqID`.
+     * @description
+     *
+     * I/O registration identifier. Mandatory if the switching function
+     * supports I/O registration and the data path was requested by the
+     * switching function; otherwise absent (ECMA-269 §6.2.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ioRegisterReqID: OPTIONAL<IORegisterReqID>;
+    /**
+     * @summary `object`.
+     * @description
+     *
+     * `DeviceID` or `ConnectionID` on which to start the path (ECMA-269
+     * §24.2.8.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly object: CSTAObject;
+    /**
+     * @summary `dataPathDirection`.
+     * @description
+     *
+     * CF→object, object→CF, or bidirectional (ECMA-269 §24.2.8.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly dataPathDirection?: OPTIONAL<DataPathDirection>;
+    /**
+     * @summary `dataPathType`.
+     * @description
+     *
+     * `text` (digitally encoded text) or `voice` (digitally encoded voice)
+     * (ECMA-269 §24.2.3.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly dataPathType?: OPTIONAL<DataPathType>;
+    /**
+     * @summary `displayID`.
+     * @description
+     *
+     * Display to update when the path targets a multi-display device
+     * (ECMA-269 §24.2.8.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly displayID?: OPTIONAL<DisplayID>;
+    /**
+     * @summary `numberOfCharactersToCollect`.
+     * @description
+     *
+     * Send collected characters after this many (ECMA-269 §24.2.8.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly numberOfCharactersToCollect?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `terminationCharacter`.
+     * @description
+     *
+     * IA5 character that flushes collected characters onto the path
+     * (ECMA-269 §24.2.8.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly terminationCharacter?: OPTIONAL<IA5String>;
+    /**
+     * @summary `timeout`.
+     * @description
+     *
+     * Seconds after which collected characters are sent (ECMA-269
+     * §24.2.8.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly timeout?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * CSTACommonArguments carrying the service-table security and
+     * privateData parameters.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `ioRegisterReqID`.
-         * @description
-         *
-         * I/O registration identifier. Mandatory if the switching function
-         * supports I/O registration and the data path was requested by the
-         * switching function; otherwise absent (ECMA-269 §6.2.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly ioRegisterReqID: OPTIONAL<IORegisterReqID>,
-        /**
-         * @summary `object`.
-         * @description
-         *
-         * `DeviceID` or `ConnectionID` on which to start the path (ECMA-269
-         * §24.2.8.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly object: CSTAObject,
-        /**
-         * @summary `dataPathDirection`.
-         * @description
-         *
-         * CF→object, object→CF, or bidirectional (ECMA-269 §24.2.8.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly dataPathDirection?: OPTIONAL<DataPathDirection>,
-        /**
-         * @summary `dataPathType`.
-         * @description
-         *
-         * `text` (digitally encoded text) or `voice` (digitally encoded voice)
-         * (ECMA-269 §24.2.3.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly dataPathType?: OPTIONAL<DataPathType>,
-        /**
-         * @summary `displayID`.
-         * @description
-         *
-         * Display to update when the path targets a multi-display device
-         * (ECMA-269 §24.2.8.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly displayID?: OPTIONAL<DisplayID>,
-        /**
-         * @summary `numberOfCharactersToCollect`.
-         * @description
-         *
-         * Send collected characters after this many (ECMA-269 §24.2.8.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly numberOfCharactersToCollect?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `terminationCharacter`.
-         * @description
-         *
-         * IA5 character that flushes collected characters onto the path
-         * (ECMA-269 §24.2.8.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly terminationCharacter?: OPTIONAL<IA5String>,
-        /**
-         * @summary `timeout`.
-         * @description
-         *
-         * Seconds after which collected characters are sent (ECMA-269
-         * §24.2.8.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly timeout?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * CSTACommonArguments carrying the service-table security and
-         * privateData parameters.
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        ioRegisterReqID: OPTIONAL<IORegisterReqID>,
+        object: CSTAObject,
+        dataPathDirection?: OPTIONAL<DataPathDirection>,
+        dataPathType?: OPTIONAL<DataPathType>,
+        displayID?: OPTIONAL<DisplayID>,
+        numberOfCharactersToCollect?: OPTIONAL<INTEGER>,
+        terminationCharacter?: OPTIONAL<IA5String>,
+        timeout?: OPTIONAL<INTEGER>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.ioRegisterReqID = ioRegisterReqID;
+        this.object = object;
+        this.dataPathDirection = dataPathDirection;
+        this.dataPathType = dataPathType;
+        this.displayID = displayID;
+        this.numberOfCharactersToCollect = numberOfCharactersToCollect;
+        this.terminationCharacter = terminationCharacter;
+        this.timeout = timeout;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a StartDataPathArgument

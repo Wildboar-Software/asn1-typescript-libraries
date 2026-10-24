@@ -39,29 +39,35 @@ import { ErrorParameters_additionalDetial, _decode_ErrorParameters_additionalDet
  */
 export
 class ErrorParameters {
+    /**
+     * @summary `additionalCode`.
+     * @description
+     *
+     * Description of additional error codes. ISO 9506-2:2003 Annex B.2.9.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly additionalCode: MMSString;
+    /**
+     * @summary `additionalDetial`.
+     * @description
+     *
+     * Additional error-detail size/syntax. Spec identifier spelling
+     * `Detial` (ISO 9506-2:2003 Annex B.2.9).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly additionalDetial: ErrorParameters_additionalDetial;
+
     constructor (
-        /**
-         * @summary `additionalCode`.
-         * @description
-         *
-         * Description of additional error codes. ISO 9506-2:2003 Annex B.2.9.
-         *
-         * @public
-         * @readonly
-         */
-        readonly additionalCode: MMSString,
-        /**
-         * @summary `additionalDetial`.
-         * @description
-         *
-         * Additional error-detail size/syntax. Spec identifier spelling
-         * `Detial` (ISO 9506-2:2003 Annex B.2.9).
-         *
-         * @public
-         * @readonly
-         */
-        readonly additionalDetial: ErrorParameters_additionalDetial
-    ) {}
+        additionalCode: MMSString,
+        additionalDetial: ErrorParameters_additionalDetial
+    ) {
+        this.additionalCode = additionalCode;
+        this.additionalDetial = additionalDetial;
+    }
 
     /**
      * @summary Restructures an object into a ErrorParameters

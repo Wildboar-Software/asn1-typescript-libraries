@@ -40,42 +40,50 @@ import {
  *
  */
 export class DynamicSimpleScanArgument_scopeOrListChoice_scopedSelection {
+    /**
+     * @summary `baseManagedObject`.
+     * @description
+     *
+     * Existing managed object that is the base of
+     * scoping. X.738 §8.1.12.3.2, §8.3.1.3, A.4.
+     * @public
+     * @readonly
+     */
+    public readonly baseManagedObject: ObjectInstance;
+    /**
+     * @summary `scope`.
+     * @description
+     *
+     * Level(s) in the naming hierarchy from which
+     * instances are selected by the filter. Semantics as
+     * CMIS scope. X.738 §8.1.12.3.2, §8.3.1.4.
+     * @public
+     * @readonly
+     */
+    public readonly scope: Scope;
+    /**
+     * @summary `scanningFilter`.
+     * @description
+     *
+     * Filter applied to objects in scope. Semantics as
+     * the CMIS filter in X.720 | ISO/IEC 10165-1.
+     * Default on the scanner attribute is true
+     * (`scanningFilterDefault`). X.738 §8.1.12.3.2,
+     * §8.1.1.3, §8.3.1.5.
+     * @public
+     * @readonly
+     */
+    public readonly scanningFilter: CMISFilter;
+
     constructor(
-        /**
-         * @summary `baseManagedObject`.
-         * @description
-         *
-         * Existing managed object that is the base of
-         * scoping. X.738 §8.1.12.3.2, §8.3.1.3, A.4.
-         * @public
-         * @readonly
-         */
-        readonly baseManagedObject: ObjectInstance,
-        /**
-         * @summary `scope`.
-         * @description
-         *
-         * Level(s) in the naming hierarchy from which
-         * instances are selected by the filter. Semantics as
-         * CMIS scope. X.738 §8.1.12.3.2, §8.3.1.4.
-         * @public
-         * @readonly
-         */
-        readonly scope: Scope,
-        /**
-         * @summary `scanningFilter`.
-         * @description
-         *
-         * Filter applied to objects in scope. Semantics as
-         * the CMIS filter in X.720 | ISO/IEC 10165-1.
-         * Default on the scanner attribute is true
-         * (`scanningFilterDefault`). X.738 §8.1.12.3.2,
-         * §8.1.1.3, §8.3.1.5.
-         * @public
-         * @readonly
-         */
-        readonly scanningFilter: CMISFilter
-    ) {}
+        baseManagedObject: ObjectInstance,
+        scope: Scope,
+        scanningFilter: CMISFilter
+    ) {
+        this.baseManagedObject = baseManagedObject;
+        this.scope = scope;
+        this.scanningFilter = scanningFilter;
+    }
 
     /**
      * @summary Restructures an object into a DynamicSimpleScanArgument_scopeOrListChoice_scopedSelection

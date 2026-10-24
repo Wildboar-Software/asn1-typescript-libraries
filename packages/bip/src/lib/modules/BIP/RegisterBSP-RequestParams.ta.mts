@@ -42,33 +42,39 @@ import {
  *
  */
 export class RegisterBSP_RequestParams {
+  /**
+   * @summary `bspSchema`.
+   * @description
+   *
+   * Schema of the BSP to register, from C `BSPSchema`. Not OPTIONAL:
+   * a NULL pointer is unconvertible (cl.19, §15.19)
+   * (`X.1083 §16.59`, Table 118).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly bspSchema: BioAPI_BSP_SCHEMA;
+  /**
+   * @summary `update`.
+   * @description
+   *
+   * From C `Update` (§15.18). FALSE with an existing local
+   * `bspProductUuid` row:
+   * `BioAPIERR_COMPONENT_ALREADY_REGISTERED`. TRUE: delete that
+   * row then insert (`X.1083 §16.59.4`).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly update: BOOLEAN;
+
   constructor(
-    /**
-     * @summary `bspSchema`.
-     * @description
-     *
-     * Schema of the BSP to register, from C `BSPSchema`. Not OPTIONAL:
-     * a NULL pointer is unconvertible (cl.19, §15.19)
-     * (`X.1083 §16.59`, Table 118).
-     *
-     * @public
-     * @readonly
-     */
-    readonly bspSchema: BioAPI_BSP_SCHEMA,
-    /**
-     * @summary `update`.
-     * @description
-     *
-     * From C `Update` (§15.18). FALSE with an existing local
-     * `bspProductUuid` row:
-     * `BioAPIERR_COMPONENT_ALREADY_REGISTERED`. TRUE: delete that
-     * row then insert (`X.1083 §16.59.4`).
-     *
-     * @public
-     * @readonly
-     */
-    readonly update: BOOLEAN
-  ) {}
+    bspSchema: BioAPI_BSP_SCHEMA,
+    update: BOOLEAN
+  ) {
+    this.bspSchema = bspSchema;
+    this.update = update;
+  }
 
   /**
    * @summary Restructures an object into a RegisterBSP_RequestParams

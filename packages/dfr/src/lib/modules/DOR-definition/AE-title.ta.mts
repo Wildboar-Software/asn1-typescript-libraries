@@ -33,20 +33,26 @@ import { AE_qualifier, _decode_AE_qualifier, _encode_AE_qualifier } from "../DOR
  */
 export
 class AE_title {
+    /**
+     * @summary `ap`.
+     * @public
+     * @readonly
+     */
+    public readonly ap: AP_title;
+    /**
+     * @summary `ae`.
+     * @public
+     * @readonly
+     */
+    public readonly ae: AE_qualifier;
+
     constructor (
-        /**
-         * @summary `ap`.
-         * @public
-         * @readonly
-         */
-        readonly ap: AP_title,
-        /**
-         * @summary `ae`.
-         * @public
-         * @readonly
-         */
-        readonly ae: AE_qualifier
-    ) {}
+        ap: AP_title,
+        ae: AE_qualifier
+    ) {
+        this.ap = ap;
+        this.ae = ae;
+    }
 
     /**
      * @summary Restructures an object into a AE_title

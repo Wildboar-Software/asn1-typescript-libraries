@@ -36,32 +36,38 @@ import { MMSString, _decode_MMSString, _encode_MMSString } from "../ISO-9506-MMS
  */
 export
 class GetCapabilityList_Response {
+    /**
+     * @summary `listOfCapabilities`.
+     * @description
+     *
+     * Zero or more capability strings from VMD `&Capabilities`, starting at
+     * the first or after Continue After. ISO 9506-1:2003 §10.8.1.2.1,
+     * §10.8.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly listOfCapabilities: MMSString[];
+    /**
+     * @summary `moreFollows`.
+     * @description
+     *
+     * True if further GetCapabilityList requests are needed. Shall be false
+     * if the list is empty or contains the last capability. ASN.1 DEFAULT
+     * TRUE. ISO 9506-1:2003 §10.8.1.2.2; ISO 9506-2:2003 §10.8.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly moreFollows?: OPTIONAL<BOOLEAN>;
+
     constructor (
-        /**
-         * @summary `listOfCapabilities`.
-         * @description
-         *
-         * Zero or more capability strings from VMD `&Capabilities`, starting at
-         * the first or after Continue After. ISO 9506-1:2003 §10.8.1.2.1,
-         * §10.8.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly listOfCapabilities: MMSString[],
-        /**
-         * @summary `moreFollows`.
-         * @description
-         *
-         * True if further GetCapabilityList requests are needed. Shall be false
-         * if the list is empty or contains the last capability. ASN.1 DEFAULT
-         * TRUE. ISO 9506-1:2003 §10.8.1.2.2; ISO 9506-2:2003 §10.8.
-         *
-         * @public
-         * @readonly
-         */
-        readonly moreFollows?: OPTIONAL<BOOLEAN>
-    ) {}
+        listOfCapabilities: MMSString[],
+        moreFollows?: OPTIONAL<BOOLEAN>
+    ) {
+        this.listOfCapabilities = listOfCapabilities;
+        this.moreFollows = moreFollows;
+    }
 
     /**
      * @summary Restructures an object into a GetCapabilityList_Response

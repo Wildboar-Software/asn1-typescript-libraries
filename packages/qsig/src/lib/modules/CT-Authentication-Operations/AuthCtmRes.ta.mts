@@ -172,7 +172,7 @@ let _cached_encoder_for_AuthCtmRes: $.ASN1Encoder<AuthCtmRes> | null = null;
  */
 export
 function _encode_AuthCtmRes (value: AuthCtmRes, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AuthCtmRes) { _cached_encoder_for_AuthCtmRes = function (value: AuthCtmRes, elGetter: $.ASN1Encoder<AuthCtmRes>): _Element {
+    if (!_cached_encoder_for_AuthCtmRes) { _cached_encoder_for_AuthCtmRes = function (value: AuthCtmRes): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_AuthCtmRes_result(value.result, $.BER));
     if (value.dummyExtension !== undefined) {

@@ -36,43 +36,53 @@ import { RequestedEquipmentInfo, _decode_RequestedEquipmentInfo, _encode_Request
  */
 export
 class CheckIMEI_Arg {
+    /**
+     * @summary `imei`.
+     * @description
+     *
+     * Shall not be included between VLR and MSC. One of IMEI and IMEISV is
+     * mandatory from MSC/SGSN/IWF to EIR (3GPP TS 29.002 V19.1.0 clauses
+     * 8.7.1.3 and 7.6.2.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly imei: IMEI;
+    /**
+     * @summary `requestedEquipmentInfo`.
+     * @description
+     *
+     * Indicates whether Equipment Status or BMUEF or both is requested
+     * (3GPP TS 29.002 V19.1.0 clause 8.7.1.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly requestedEquipmentInfo: RequestedEquipmentInfo;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `imei`.
-         * @description
-         *
-         * Shall not be included between VLR and MSC. One of IMEI and IMEISV is
-         * mandatory from MSC/SGSN/IWF to EIR (3GPP TS 29.002 V19.1.0 clauses
-         * 8.7.1.3 and 7.6.2.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly imei: IMEI,
-        /**
-         * @summary `requestedEquipmentInfo`.
-         * @description
-         *
-         * Indicates whether Equipment Status or BMUEF or both is requested
-         * (3GPP TS 29.002 V19.1.0 clause 8.7.1.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly requestedEquipmentInfo: RequestedEquipmentInfo,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        imei: IMEI,
+        requestedEquipmentInfo: RequestedEquipmentInfo,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.imei = imei;
+        this.requestedEquipmentInfo = requestedEquipmentInfo;
+        this.extensionContainer = extensionContainer;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a CheckIMEI_Arg

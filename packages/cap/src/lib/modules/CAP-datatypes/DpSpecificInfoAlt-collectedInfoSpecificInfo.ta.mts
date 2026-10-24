@@ -21,20 +21,26 @@ import { type CalledPartyNumber, _decode_CalledPartyNumber, _encode_CalledPartyN
  *
  */
 export class DpSpecificInfoAlt_collectedInfoSpecificInfo {
+    /**
+     * @summary `calledPartyNumber`.
+     * @description
+     *
+     * For Collected_Info, EventReportBCSM shall contain the
+     * CalledPartyNumber. (3GPP TS 29.078 V19.0.0 clause 11.18).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly calledPartyNumber?: OPTIONAL<CalledPartyNumber>;
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `calledPartyNumber`.
-         * @description
-         *
-         * For Collected_Info, EventReportBCSM shall contain the
-         * CalledPartyNumber. (3GPP TS 29.078 V19.0.0 clause 11.18).
-         *
-         * @public
-         * @readonly
-         */
-        readonly calledPartyNumber?: OPTIONAL<CalledPartyNumber>,
-        readonly _unrecognizedExtensionsList: _Element[] = [],
-    ) {}
+        calledPartyNumber?: OPTIONAL<CalledPartyNumber>,
+        _unrecognizedExtensionsList: _Element[] = [],
+    ) {
+        this.calledPartyNumber = calledPartyNumber;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     public static _from_object (_o: { [_K in keyof (DpSpecificInfoAlt_collectedInfoSpecificInfo)]: (DpSpecificInfoAlt_collectedInfoSpecificInfo)[_K] }): DpSpecificInfoAlt_collectedInfoSpecificInfo {
         return new DpSpecificInfoAlt_collectedInfoSpecificInfo(_o.calledPartyNumber, _o._unrecognizedExtensionsList);

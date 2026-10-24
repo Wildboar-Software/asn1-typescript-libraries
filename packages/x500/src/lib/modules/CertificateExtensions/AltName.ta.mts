@@ -29,25 +29,31 @@ import {
  *
  */
 export class AltName {
+    /**
+     * @summary `altnameType`.
+     * @public
+     * @readonly
+     */
+    public readonly altnameType: AltNameType;
+    /**
+     * @summary `altNameValue`.
+     * @description
+     *
+     * Omitted = match any SAN of altnameType. If present, form must match
+     * altnameType.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly altNameValue?: OPTIONAL<GeneralName>;
+
     constructor(
-        /**
-         * @summary `altnameType`.
-         * @public
-         * @readonly
-         */
-        readonly altnameType: AltNameType,
-        /**
-         * @summary `altNameValue`.
-         * @description
-         *
-         * Omitted = match any SAN of altnameType. If present, form must match
-         * altnameType.
-         *
-         * @public
-         * @readonly
-         */
-        readonly altNameValue?: OPTIONAL<GeneralName>
-    ) {}
+        altnameType: AltNameType,
+        altNameValue?: OPTIONAL<GeneralName>
+    ) {
+        this.altnameType = altnameType;
+        this.altNameValue = altNameValue;
+    }
 
     /**
      * @summary Restructures an object into a AltName

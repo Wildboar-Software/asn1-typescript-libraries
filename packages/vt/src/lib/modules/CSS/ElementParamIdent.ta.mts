@@ -41,45 +41,55 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class ElementParamIdent {
+    /**
+     * @summary `elementIdentifier`.
+     * @description
+     * `CO-element-id`: 1-based in structure order, 1..N
+     * where N is `CO-structure`.
+     * ISO/IEC 9040:1997 §20.2.1.
+     * @public
+     * @readonly
+     */
+    public readonly elementIdentifier: INTEGER;
+    /**
+     * @summary `size`.
+     * @description
+     * Invite this element's `CO-size`.
+     * ISO/IEC 9040:1997 §20.2.2.
+     * @public
+     * @readonly
+     */
+    public readonly size?: OPTIONAL<NULL>;
+    /**
+     * @summary `category`.
+     * @description
+     * Invite this element's `CO-category`.
+     * ISO/IEC 9040:1997 §20.2.
+     * @public
+     * @readonly
+     */
+    public readonly category?: OPTIONAL<NULL>;
+    /**
+     * @summary `repertoire`.
+     * @description
+     * Invite this element's `CO-repertoire-assignment`.
+     * ISO/IEC 9040:1997 §20.2.5.
+     * @public
+     * @readonly
+     */
+    public readonly repertoire?: OPTIONAL<NULL>;
+
     constructor (
-        /**
-         * @summary `elementIdentifier`.
-         * @description
-         * `CO-element-id`: 1-based in structure order, 1..N
-         * where N is `CO-structure`.
-         * ISO/IEC 9040:1997 §20.2.1.
-         * @public
-         * @readonly
-         */
-        readonly elementIdentifier: INTEGER,
-        /**
-         * @summary `size`.
-         * @description
-         * Invite this element's `CO-size`.
-         * ISO/IEC 9040:1997 §20.2.2.
-         * @public
-         * @readonly
-         */
-        readonly size?: OPTIONAL<NULL>,
-        /**
-         * @summary `category`.
-         * @description
-         * Invite this element's `CO-category`.
-         * ISO/IEC 9040:1997 §20.2.
-         * @public
-         * @readonly
-         */
-        readonly category?: OPTIONAL<NULL>,
-        /**
-         * @summary `repertoire`.
-         * @description
-         * Invite this element's `CO-repertoire-assignment`.
-         * ISO/IEC 9040:1997 §20.2.5.
-         * @public
-         * @readonly
-         */
-        readonly repertoire?: OPTIONAL<NULL>
-    ) {}
+        elementIdentifier: INTEGER,
+        size?: OPTIONAL<NULL>,
+        category?: OPTIONAL<NULL>,
+        repertoire?: OPTIONAL<NULL>
+    ) {
+        this.elementIdentifier = elementIdentifier;
+        this.size = size;
+        this.category = category;
+        this.repertoire = repertoire;
+    }
 
     /**
      * @summary Restructures an object into a ElementParamIdent

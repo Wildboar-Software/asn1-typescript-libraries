@@ -42,30 +42,36 @@ import {
  *
  */
 export class DbGetBIR_ResponseParams {
+  /**
+   * @summary `retrievedBIR`.
+   * @description
+   *
+   * Retrieved BIR handle written to C `RetrievedBIR` (cl.20, §15.12).
+   * Required on a conforming response (`X.1083 §16.49`, Table 108).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly retrievedBIR: BioAPI_BIR_HANDLE;
+  /**
+   * @summary `markerHandle`.
+   * @description
+   *
+   * Marker handle written to C `MarkerHandle` (cl.20, §15.25).
+   * Required on a conforming response (`X.1083 §16.49`, Table 108).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly markerHandle: BioAPI_DB_MARKER_HANDLE;
+
   constructor(
-    /**
-     * @summary `retrievedBIR`.
-     * @description
-     *
-     * Retrieved BIR handle written to C `RetrievedBIR` (cl.20, §15.12).
-     * Required on a conforming response (`X.1083 §16.49`, Table 108).
-     *
-     * @public
-     * @readonly
-     */
-    readonly retrievedBIR: BioAPI_BIR_HANDLE,
-    /**
-     * @summary `markerHandle`.
-     * @description
-     *
-     * Marker handle written to C `MarkerHandle` (cl.20, §15.25).
-     * Required on a conforming response (`X.1083 §16.49`, Table 108).
-     *
-     * @public
-     * @readonly
-     */
-    readonly markerHandle: BioAPI_DB_MARKER_HANDLE
-  ) {}
+    retrievedBIR: BioAPI_BIR_HANDLE,
+    markerHandle: BioAPI_DB_MARKER_HANDLE
+  ) {
+    this.retrievedBIR = retrievedBIR;
+    this.markerHandle = markerHandle;
+  }
 
   /**
    * @summary Restructures an object into a DbGetBIR_ResponseParams

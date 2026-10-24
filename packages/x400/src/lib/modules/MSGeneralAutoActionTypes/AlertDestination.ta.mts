@@ -31,20 +31,26 @@ import * as $ from '@wildboar/asn1/functional';
  *
  */
 export class AlertDestination {
+    /**
+     * @summary `alert_address`.
+     * @public
+     * @readonly
+     */
+    public readonly alert_address: EXTERNAL;
+    /**
+     * @summary `alert_qualifier`.
+     * @public
+     * @readonly
+     */
+    public readonly alert_qualifier?: OPTIONAL<OCTET_STRING>;
+
     constructor(
-        /**
-         * @summary `alert_address`.
-         * @public
-         * @readonly
-         */
-        readonly alert_address: EXTERNAL,
-        /**
-         * @summary `alert_qualifier`.
-         * @public
-         * @readonly
-         */
-        readonly alert_qualifier?: OPTIONAL<OCTET_STRING>
-    ) {}
+        alert_address: EXTERNAL,
+        alert_qualifier?: OPTIONAL<OCTET_STRING>
+    ) {
+        this.alert_address = alert_address;
+        this.alert_qualifier = alert_qualifier;
+    }
 
     /**
      * @summary Restructures an object into a AlertDestination

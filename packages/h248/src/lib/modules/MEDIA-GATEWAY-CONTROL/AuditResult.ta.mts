@@ -30,28 +30,34 @@ import { TerminationAudit, _decode_TerminationAudit, _encode_TerminationAudit } 
  */
 export
 class AuditResult {
+    /**
+     * @summary `terminationID`.
+     * @description
+     *
+     * Termination this audit result describes.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly terminationID: TerminationID;
+    /**
+     * @summary `terminationAuditResult`.
+     * @description
+     *
+     * Returned descriptors and individual audit items for that termination.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly terminationAuditResult: TerminationAudit;
+
     constructor (
-        /**
-         * @summary `terminationID`.
-         * @description
-         *
-         * Termination this audit result describes.
-         *
-         * @public
-         * @readonly
-         */
-        readonly terminationID: TerminationID,
-        /**
-         * @summary `terminationAuditResult`.
-         * @description
-         *
-         * Returned descriptors and individual audit items for that termination.
-         *
-         * @public
-         * @readonly
-         */
-        readonly terminationAuditResult: TerminationAudit
-    ) {}
+        terminationID: TerminationID,
+        terminationAuditResult: TerminationAudit
+    ) {
+        this.terminationID = terminationID;
+        this.terminationAuditResult = terminationAuditResult;
+    }
 
     /**
      * @summary Restructures an object into a AuditResult

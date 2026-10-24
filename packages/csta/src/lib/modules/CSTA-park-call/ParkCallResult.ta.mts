@@ -40,39 +40,47 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class ParkCallResult {
+    /**
+     * @summary `parkedTo`.
+     * @description
+     *
+     * Optional. Connection at the park-to device (Queued).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly parkedTo?: OPTIONAL<ConnectionID>;
+    /**
+     * @summary `callLinkageData`.
+     * @description
+     *
+     * Optional call-linkage identifiers (§12.2.5).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly callLinkageData?: OPTIONAL<CallLinkageData>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional `CSTACommonArguments` carrying the security and
+     * privateData parameters from the ECMA-269 service table.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `parkedTo`.
-         * @description
-         *
-         * Optional. Connection at the park-to device (Queued).
-         *
-         * @public
-         * @readonly
-         */
-        readonly parkedTo?: OPTIONAL<ConnectionID>,
-        /**
-         * @summary `callLinkageData`.
-         * @description
-         *
-         * Optional call-linkage identifiers (§12.2.5).
-         *
-         * @public
-         * @readonly
-         */
-        readonly callLinkageData?: OPTIONAL<CallLinkageData>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional `CSTACommonArguments` carrying the security and
-         * privateData parameters from the ECMA-269 service table.
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        parkedTo?: OPTIONAL<ConnectionID>,
+        callLinkageData?: OPTIONAL<CallLinkageData>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.parkedTo = parkedTo;
+        this.callLinkageData = callLinkageData;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a ParkCallResult

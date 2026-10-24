@@ -37,27 +37,33 @@ import { ProfileArgumOfferList, _decode_ProfileArgumOfferList, _encode_ProfileAr
  */
 export
 class Profile {
+    /**
+     * @summary `name`.
+     * @description
+     * Registered or privately agreed VTE-profile OID. Omitted ⇒ default
+     * profile for the mode. ISO/IEC 9040:1997 §3.3.45, annex A.
+     * @public
+     * @readonly
+     */
+    public readonly name?: OPTIONAL<OBJECT_IDENTIFIER>;
+    /**
+     * @summary `argumentOfferList`.
+     * @description
+     * Special profile arguments plus VTE-parameter offers. Omitted if
+     * the profile has no arguments. ISO/IEC 9040:1997 §3.3.49–§3.3.51;
+     * ISO/IEC 9041-1:1997 §6.2.2 g.
+     * @public
+     * @readonly
+     */
+    public readonly argumentOfferList?: OPTIONAL<ProfileArgumOfferList>;
+
     constructor (
-        /**
-         * @summary `name`.
-         * @description
-         * Registered or privately agreed VTE-profile OID. Omitted ⇒ default
-         * profile for the mode. ISO/IEC 9040:1997 §3.3.45, annex A.
-         * @public
-         * @readonly
-         */
-        readonly name?: OPTIONAL<OBJECT_IDENTIFIER>,
-        /**
-         * @summary `argumentOfferList`.
-         * @description
-         * Special profile arguments plus VTE-parameter offers. Omitted if
-         * the profile has no arguments. ISO/IEC 9040:1997 §3.3.49–§3.3.51;
-         * ISO/IEC 9041-1:1997 §6.2.2 g.
-         * @public
-         * @readonly
-         */
-        readonly argumentOfferList?: OPTIONAL<ProfileArgumOfferList>
-    ) {}
+        name?: OPTIONAL<OBJECT_IDENTIFIER>,
+        argumentOfferList?: OPTIONAL<ProfileArgumOfferList>
+    ) {
+        this.name = name;
+        this.argumentOfferList = argumentOfferList;
+    }
 
     /**
      * @summary Restructures an object into a Profile

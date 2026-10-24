@@ -25,20 +25,26 @@ import * as $ from "@wildboar/asn1/functional";
  *
  */
 export class OtherCertificateFormat {
+    /**
+     * @summary `otherCertFormat`.
+     * @public
+     * @readonly
+     */
+    public readonly otherCertFormat: OBJECT_IDENTIFIER;
+    /**
+     * @summary `otherCert`.
+     * @public
+     * @readonly
+     */
+    public readonly otherCert: _Element;
+
     constructor(
-        /**
-         * @summary `otherCertFormat`.
-         * @public
-         * @readonly
-         */
-        readonly otherCertFormat: OBJECT_IDENTIFIER,
-        /**
-         * @summary `otherCert`.
-         * @public
-         * @readonly
-         */
-        readonly otherCert: _Element
-    ) {}
+        otherCertFormat: OBJECT_IDENTIFIER,
+        otherCert: _Element
+    ) {
+        this.otherCertFormat = otherCertFormat;
+        this.otherCert = otherCert;
+    }
 
     /**
      * @summary Restructures an object into a OtherCertificateFormat

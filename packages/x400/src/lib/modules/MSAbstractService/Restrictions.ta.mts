@@ -37,26 +37,34 @@ import {
  *
  */
 export class Restrictions {
+    /**
+     * @summary `allowed_content_types`.
+     * @public
+     * @readonly
+     */
+    public readonly allowed_content_types?: OPTIONAL<OBJECT_IDENTIFIER[]>;
+    /**
+     * @summary `allowed_EITs`.
+     * @public
+     * @readonly
+     */
+    public readonly allowed_EITs?: OPTIONAL<MS_EITs>;
+    /**
+     * @summary `maximum_attribute_length`.
+     * @public
+     * @readonly
+     */
+    public readonly maximum_attribute_length?: OPTIONAL<INTEGER>;
+
     constructor(
-        /**
-         * @summary `allowed_content_types`.
-         * @public
-         * @readonly
-         */
-        readonly allowed_content_types?: OPTIONAL<OBJECT_IDENTIFIER[]>,
-        /**
-         * @summary `allowed_EITs`.
-         * @public
-         * @readonly
-         */
-        readonly allowed_EITs?: OPTIONAL<MS_EITs>,
-        /**
-         * @summary `maximum_attribute_length`.
-         * @public
-         * @readonly
-         */
-        readonly maximum_attribute_length?: OPTIONAL<INTEGER>
-    ) {}
+        allowed_content_types?: OPTIONAL<OBJECT_IDENTIFIER[]>,
+        allowed_EITs?: OPTIONAL<MS_EITs>,
+        maximum_attribute_length?: OPTIONAL<INTEGER>
+    ) {
+        this.allowed_content_types = allowed_content_types;
+        this.allowed_EITs = allowed_EITs;
+        this.maximum_attribute_length = maximum_attribute_length;
+    }
 
     /**
      * @summary Restructures an object into a Restrictions

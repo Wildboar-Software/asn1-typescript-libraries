@@ -28,36 +28,44 @@ import {
  *
  */
 export class UserPwd_encrypted {
+    /**
+     * @summary `algorithmIdentifier`.
+     * @description
+     *
+     * Must match (id + parameters) when comparing two encrypted values;
+     * else matching fails.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly algorithmIdentifier: AlgorithmIdentifier;
+    /**
+     * @summary `encryptedString`.
+     * @description
+     *
+     * Ciphertext octets. Compared with octetStringMatch only after
+     * algorithm identifier and parameters match.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly encryptedString: OCTET_STRING;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `algorithmIdentifier`.
-         * @description
-         *
-         * Must match (id + parameters) when comparing two encrypted values;
-         * else matching fails.
-         *
-         * @public
-         * @readonly
-         */
-        readonly algorithmIdentifier: AlgorithmIdentifier,
-        /**
-         * @summary `encryptedString`.
-         * @description
-         *
-         * Ciphertext octets. Compared with octetStringMatch only after
-         * algorithm identifier and parameters match.
-         *
-         * @public
-         * @readonly
-         */
-        readonly encryptedString: OCTET_STRING,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        algorithmIdentifier: AlgorithmIdentifier,
+        encryptedString: OCTET_STRING,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.algorithmIdentifier = algorithmIdentifier;
+        this.encryptedString = encryptedString;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a UserPwd_encrypted

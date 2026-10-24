@@ -47,63 +47,73 @@ import { Unsigned32, _decode_Unsigned32, _encode_Unsigned32 } from "../ISO-9506-
  */
 export
 class AttachToEventCondition {
+    /**
+     * @summary `eventEnrollmentName`.
+     * @description
+     *
+     * `&name` of the modifier Event Enrollment to create.
+     * Unique among Event Enrollment names of the same
+     * scope.
+     *
+     * [ISO 9506-1:2003 §18.7.1.1.1]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly eventEnrollmentName: ObjectName;
+    /**
+     * @summary `eventConditionName`.
+     * @description
+     *
+     * Event Condition whose transitions release the
+     * delayed service (`&eventCondition` of the
+     * enrollment).
+     *
+     * [ISO 9506-1:2003 §18.7.1.1.2]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly eventConditionName: ObjectName;
+    /**
+     * @summary `causingTransitions`.
+     * @description
+     *
+     * Set of Event Condition transitions that cause the
+     * delayed service to continue (`&ecTransitions`).
+     *
+     * [ISO 9506-1:2003 §18.7.1.1.3]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly causingTransitions: Transitions;
+    /**
+     * @summary `acceptableDelay`.
+     * @description
+     *
+     * Initial `&remainingDelay` in seconds. Omitted:
+     * wait forever. Zero: Result(-) immediately. Each
+     * modifier on a request may have a different delay.
+     *
+     * [ISO 9506-1:2003 §18.7.1.1.4]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly acceptableDelay?: OPTIONAL<Unsigned32>;
+
     constructor (
-        /**
-         * @summary `eventEnrollmentName`.
-         * @description
-         *
-         * `&name` of the modifier Event Enrollment to create.
-         * Unique among Event Enrollment names of the same
-         * scope.
-         *
-         * [ISO 9506-1:2003 §18.7.1.1.1]
-         *
-         * @public
-         * @readonly
-         */
-        readonly eventEnrollmentName: ObjectName,
-        /**
-         * @summary `eventConditionName`.
-         * @description
-         *
-         * Event Condition whose transitions release the
-         * delayed service (`&eventCondition` of the
-         * enrollment).
-         *
-         * [ISO 9506-1:2003 §18.7.1.1.2]
-         *
-         * @public
-         * @readonly
-         */
-        readonly eventConditionName: ObjectName,
-        /**
-         * @summary `causingTransitions`.
-         * @description
-         *
-         * Set of Event Condition transitions that cause the
-         * delayed service to continue (`&ecTransitions`).
-         *
-         * [ISO 9506-1:2003 §18.7.1.1.3]
-         *
-         * @public
-         * @readonly
-         */
-        readonly causingTransitions: Transitions,
-        /**
-         * @summary `acceptableDelay`.
-         * @description
-         *
-         * Initial `&remainingDelay` in seconds. Omitted:
-         * wait forever. Zero: Result(-) immediately. Each
-         * modifier on a request may have a different delay.
-         *
-         * [ISO 9506-1:2003 §18.7.1.1.4]
-         *
-         * @public
-         * @readonly
-         */
-        readonly acceptableDelay?: OPTIONAL<Unsigned32>
-    ) {}
+        eventEnrollmentName: ObjectName,
+        eventConditionName: ObjectName,
+        causingTransitions: Transitions,
+        acceptableDelay?: OPTIONAL<Unsigned32>
+    ) {
+        this.eventEnrollmentName = eventEnrollmentName;
+        this.eventConditionName = eventConditionName;
+        this.causingTransitions = causingTransitions;
+        this.acceptableDelay = acceptableDelay;
+    }
 
     /**
      * @summary Restructures an object into a AttachToEventCondition

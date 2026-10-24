@@ -30,26 +30,34 @@ import * as $ from '@wildboar/asn1/functional';
  *
  */
 export class Bandwidth {
+    /**
+     * @summary `peakBandwidth`.
+     * @public
+     * @readonly
+     */
+    public readonly peakBandwidth?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `sustainableBandwidth`.
+     * @public
+     * @readonly
+     */
+    public readonly sustainableBandwidth?: OPTIONAL<INTEGER>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `peakBandwidth`.
-         * @public
-         * @readonly
-         */
-        readonly peakBandwidth?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `sustainableBandwidth`.
-         * @public
-         * @readonly
-         */
-        readonly sustainableBandwidth?: OPTIONAL<INTEGER>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        peakBandwidth?: OPTIONAL<INTEGER>,
+        sustainableBandwidth?: OPTIONAL<INTEGER>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.peakBandwidth = peakBandwidth;
+        this.sustainableBandwidth = sustainableBandwidth;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a Bandwidth

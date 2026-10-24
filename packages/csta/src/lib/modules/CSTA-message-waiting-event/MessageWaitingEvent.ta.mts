@@ -44,45 +44,55 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class MessageWaitingEvent {
+    /**
+     * @summary `targetDevice`.
+     * @description
+     *
+     * Device whose message-waiting feature changed.
+     * @public
+     * @readonly
+     */
+    public readonly targetDevice: SubjectDeviceID;
+    /**
+     * @summary `deviceForMessage`.
+     * @description
+     *
+     * Device where the message is waiting.
+     * @public
+     * @readonly
+     */
+    public readonly deviceForMessage: OPTIONAL<DeviceID>;
+    /**
+     * @summary `messageWaitingOn`.
+     * @description
+     *
+     * FALSE = off; TRUE = on.
+     * @public
+     * @readonly
+     */
+    public readonly messageWaitingOn: BOOLEAN;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `targetDevice`.
-         * @description
-         *
-         * Device whose message-waiting feature changed.
-         * @public
-         * @readonly
-         */
-        readonly targetDevice: SubjectDeviceID,
-        /**
-         * @summary `deviceForMessage`.
-         * @description
-         *
-         * Device where the message is waiting.
-         * @public
-         * @readonly
-         */
-        readonly deviceForMessage: OPTIONAL<DeviceID>,
-        /**
-         * @summary `messageWaitingOn`.
-         * @description
-         *
-         * FALSE = off; TRUE = on.
-         * @public
-         * @readonly
-         */
-        readonly messageWaitingOn: BOOLEAN,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        targetDevice: SubjectDeviceID,
+        deviceForMessage: OPTIONAL<DeviceID>,
+        messageWaitingOn: BOOLEAN,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.targetDevice = targetDevice;
+        this.deviceForMessage = deviceForMessage;
+        this.messageWaitingOn = messageWaitingOn;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a MessageWaitingEvent

@@ -39,65 +39,79 @@ import { ForwardingOptions, _decode_ForwardingOptions, _encode_ForwardingOptions
  */
 export
 class ForwardingData {
+    /**
+     * @summary `forwardedToNumber`.
+     * @description
+     *
+     * Use and presence as in 3GPP TS 23.018 and Use and presence as in 3GPP
+     * TS 23.079 (clause 10.1.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly forwardedToNumber?: OPTIONAL<ISDN_AddressString>;
+    /**
+     * @summary `forwardedToSubaddress`.
+     * @description
+     *
+     * Optional forwarded-to subaddress.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly forwardedToSubaddress?: OPTIONAL<ISDN_SubaddressString>;
+    /**
+     * @summary `forwardingOptions`.
+     * @description
+     *
+     * Notification to calling party and redirecting presentation.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly forwardingOptions?: OPTIONAL<ForwardingOptions>;
+    /**
+     * @summary `extensionContainer`.
+     * @description
+     *
+     * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary `longForwardedToNumber`.
+     * @description
+     *
+     * Long forwarded-to number if used.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly longForwardedToNumber?: OPTIONAL<FTN_AddressString>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `forwardedToNumber`.
-         * @description
-         *
-         * Use and presence as in 3GPP TS 23.018 and Use and presence as in 3GPP
-         * TS 23.079 (clause 10.1.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly forwardedToNumber?: OPTIONAL<ISDN_AddressString>,
-        /**
-         * @summary `forwardedToSubaddress`.
-         * @description
-         *
-         * Optional forwarded-to subaddress.
-         *
-         * @public
-         * @readonly
-         */
-        readonly forwardedToSubaddress?: OPTIONAL<ISDN_SubaddressString>,
-        /**
-         * @summary `forwardingOptions`.
-         * @description
-         *
-         * Notification to calling party and redirecting presentation.
-         *
-         * @public
-         * @readonly
-         */
-        readonly forwardingOptions?: OPTIONAL<ForwardingOptions>,
-        /**
-         * @summary `extensionContainer`.
-         * @description
-         *
-         * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary `longForwardedToNumber`.
-         * @description
-         *
-         * Long forwarded-to number if used.
-         *
-         * @public
-         * @readonly
-         */
-        readonly longForwardedToNumber?: OPTIONAL<FTN_AddressString>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        forwardedToNumber?: OPTIONAL<ISDN_AddressString>,
+        forwardedToSubaddress?: OPTIONAL<ISDN_SubaddressString>,
+        forwardingOptions?: OPTIONAL<ForwardingOptions>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        longForwardedToNumber?: OPTIONAL<FTN_AddressString>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.forwardedToNumber = forwardedToNumber;
+        this.forwardedToSubaddress = forwardedToSubaddress;
+        this.forwardingOptions = forwardingOptions;
+        this.extensionContainer = extensionContainer;
+        this.longForwardedToNumber = longForwardedToNumber;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a ForwardingData

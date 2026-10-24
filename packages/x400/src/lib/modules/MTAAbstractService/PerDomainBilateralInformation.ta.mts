@@ -58,26 +58,34 @@ import {
  *
  */
 export class PerDomainBilateralInformation implements BilateralDomain {
+    /**
+     * @summary `country_name`.
+     * @public
+     * @readonly
+     */
+    public readonly country_name: CountryName; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `domain`.
+     * @public
+     * @readonly
+     */
+    public readonly domain: BilateralDomain_domain; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `bilateral_information`.
+     * @public
+     * @readonly
+     */
+    public readonly bilateral_information: _Element;
+
     constructor(
-        /**
-         * @summary `country_name`.
-         * @public
-         * @readonly
-         */
-        readonly country_name: CountryName /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `domain`.
-         * @public
-         * @readonly
-         */
-        readonly domain: BilateralDomain_domain /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `bilateral_information`.
-         * @public
-         * @readonly
-         */
-        readonly bilateral_information: _Element
-    ) {}
+        country_name: CountryName,
+        domain: BilateralDomain_domain,
+        bilateral_information: _Element
+    ) {
+        this.country_name = country_name;
+        this.domain = domain;
+        this.bilateral_information = bilateral_information;
+    }
 
     /**
      * @summary Restructures an object into a PerDomainBilateralInformation

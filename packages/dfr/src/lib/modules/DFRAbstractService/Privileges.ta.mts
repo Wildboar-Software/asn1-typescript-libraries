@@ -36,23 +36,29 @@ import { PrivilegeAttributeCertificate, _decode_PrivilegeAttributeCertificate, _
  */
 export
 class Privileges {
+    /**
+     * @summary `operation_pac`.
+     * @public
+     * @readonly
+     */
+    public readonly operation_pac?: OPTIONAL<PrivilegeAttributeCertificate>;
+    /**
+     * @summary `proxy_pac`.
+     * @description
+     *
+     * PAC the server may use as accessor toward another AE.
+     * @public
+     * @readonly
+     */
+    public readonly proxy_pac?: OPTIONAL<PrivilegeAttributeCertificate>;
+
     constructor (
-        /**
-         * @summary `operation_pac`.
-         * @public
-         * @readonly
-         */
-        readonly operation_pac?: OPTIONAL<PrivilegeAttributeCertificate>,
-        /**
-         * @summary `proxy_pac`.
-         * @description
-         *
-         * PAC the server may use as accessor toward another AE.
-         * @public
-         * @readonly
-         */
-        readonly proxy_pac?: OPTIONAL<PrivilegeAttributeCertificate>
-    ) {}
+        operation_pac?: OPTIONAL<PrivilegeAttributeCertificate>,
+        proxy_pac?: OPTIONAL<PrivilegeAttributeCertificate>
+    ) {
+        this.operation_pac = operation_pac;
+        this.proxy_pac = proxy_pac;
+    }
 
     /**
      * @summary Restructures an object into a Privileges

@@ -87,184 +87,220 @@ import { CallLinkageData, _decode_CallLinkageData, _encode_CallLinkageData } fro
  */
 export
 class NetworkCapabilitiesChangedEvent {
+    /**
+     * @summary `outboundConnection`.
+     * @description
+     *
+     * Mandatory. Outbound connection of the network interface device.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly outboundConnection: ConnectionID;
+    /**
+     * @summary `networkInterfaceUsed`.
+     * @description
+     *
+     * Mandatory. Selected Network Interface Device (trunk, CO line).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly networkInterfaceUsed: SubjectDeviceID;
+    /**
+     * @summary `calledDevice`.
+     * @description
+     *
+     * Mandatory. Destination device.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly calledDevice: CalledDeviceID;
+    /**
+     * @summary `progressIndicator`.
+     * @description
+     *
+     * Mandatory. Interworking location and progress description (Table
+     * 17-171). Event reporting for the call may be reduced.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly progressIndicator: ProgressIndicator;
+    /**
+     * @summary `localConnectionInfo`.
+     * @description
+     *
+     * Device-type monitors only (§9.5.2, §12.2.17).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly localConnectionInfo: OPTIONAL<LocalConnectionState>;
+    /**
+     * @summary `correlatorData`.
+     * @description
+     *
+     * Conditional. Present when correlator data is associated with the call
+     * (§12.2.10).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly correlatorData: OPTIONAL<CorrelatorData>;
+    /**
+     * @summary `userData`.
+     * @description
+     *
+     * Conditional. Present when user data is sent and supported (§12.2.30).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly userData: OPTIONAL<UserData>;
+    /**
+     * @summary `networkCapability`.
+     * @description
+     *
+     * Optional. Network type and Call Control events supported by that
+     * network (Table 17-171).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly networkCapability: OPTIONAL<NetworkCapability>;
+    /**
+     * @summary `cause`.
+     * @description
+     *
+     * Mandatory. Table 17-172 lists Network Signal.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly cause: EventCause;
+    /**
+     * @summary `servicesPermitted`.
+     * @description
+     *
+     * Device-type monitors only (§9.5.2, §12.2.25). Mandatory if Dynamic
+     * Feature Availability is supported.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly servicesPermitted?: OPTIONAL<ServicesPermitted>;
+    /**
+     * @summary `mediaCallCharacteristics`.
+     * @description
+     *
+     * Optional media class and characteristics (§12.2.20).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mediaCallCharacteristics?: OPTIONAL<MediaCallCharacteristics>;
+    /**
+     * @summary `callCharacteristics`.
+     * @description
+     *
+     * Optional high-level call characteristics (§12.2.4).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly callCharacteristics?: OPTIONAL<CallCharacteristics>;
+    /**
+     * @summary `outboundConnectionInfo`.
+     * @description
+     *
+     * Optional connection information. Omitted values are
+     * switching-function specific (§12.2.8).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly outboundConnectionInfo?: OPTIONAL<ConnectionInformation>;
+    /**
+     * @summary `callLinkageData`.
+     * @description
+     *
+     * Optional global call data and thread data (§12.2.5).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly callLinkageData?: OPTIONAL<CallLinkageData>;
+    /**
+     * @summary `languagePreferences`.
+     * @description
+     *
+     * Optional preferred language(s) (§12.2.16).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly languagePreferences?: OPTIONAL<LanguagePreferences>;
+    /**
+     * @summary `locationInfo`.
+     * @description
+     *
+     * Optional location information for devices in the call.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly locationInfo?: OPTIONAL<LocationInfoList>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional `CSTACommonArguments` carrying the security and privateData
+     * parameters from the ECMA-269 event table.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `outboundConnection`.
-         * @description
-         *
-         * Mandatory. Outbound connection of the network interface device.
-         *
-         * @public
-         * @readonly
-         */
-        readonly outboundConnection: ConnectionID,
-        /**
-         * @summary `networkInterfaceUsed`.
-         * @description
-         *
-         * Mandatory. Selected Network Interface Device (trunk, CO line).
-         *
-         * @public
-         * @readonly
-         */
-        readonly networkInterfaceUsed: SubjectDeviceID,
-        /**
-         * @summary `calledDevice`.
-         * @description
-         *
-         * Mandatory. Destination device.
-         *
-         * @public
-         * @readonly
-         */
-        readonly calledDevice: CalledDeviceID,
-        /**
-         * @summary `progressIndicator`.
-         * @description
-         *
-         * Mandatory. Interworking location and progress description (Table
-         * 17-171). Event reporting for the call may be reduced.
-         *
-         * @public
-         * @readonly
-         */
-        readonly progressIndicator: ProgressIndicator,
-        /**
-         * @summary `localConnectionInfo`.
-         * @description
-         *
-         * Device-type monitors only (§9.5.2, §12.2.17).
-         *
-         * @public
-         * @readonly
-         */
-        readonly localConnectionInfo: OPTIONAL<LocalConnectionState>,
-        /**
-         * @summary `correlatorData`.
-         * @description
-         *
-         * Conditional. Present when correlator data is associated with the call
-         * (§12.2.10).
-         *
-         * @public
-         * @readonly
-         */
-        readonly correlatorData: OPTIONAL<CorrelatorData>,
-        /**
-         * @summary `userData`.
-         * @description
-         *
-         * Conditional. Present when user data is sent and supported (§12.2.30).
-         *
-         * @public
-         * @readonly
-         */
-        readonly userData: OPTIONAL<UserData>,
-        /**
-         * @summary `networkCapability`.
-         * @description
-         *
-         * Optional. Network type and Call Control events supported by that
-         * network (Table 17-171).
-         *
-         * @public
-         * @readonly
-         */
-        readonly networkCapability: OPTIONAL<NetworkCapability>,
-        /**
-         * @summary `cause`.
-         * @description
-         *
-         * Mandatory. Table 17-172 lists Network Signal.
-         *
-         * @public
-         * @readonly
-         */
-        readonly cause: EventCause,
-        /**
-         * @summary `servicesPermitted`.
-         * @description
-         *
-         * Device-type monitors only (§9.5.2, §12.2.25). Mandatory if Dynamic
-         * Feature Availability is supported.
-         *
-         * @public
-         * @readonly
-         */
-        readonly servicesPermitted?: OPTIONAL<ServicesPermitted>,
-        /**
-         * @summary `mediaCallCharacteristics`.
-         * @description
-         *
-         * Optional media class and characteristics (§12.2.20).
-         *
-         * @public
-         * @readonly
-         */
-        readonly mediaCallCharacteristics?: OPTIONAL<MediaCallCharacteristics>,
-        /**
-         * @summary `callCharacteristics`.
-         * @description
-         *
-         * Optional high-level call characteristics (§12.2.4).
-         *
-         * @public
-         * @readonly
-         */
-        readonly callCharacteristics?: OPTIONAL<CallCharacteristics>,
-        /**
-         * @summary `outboundConnectionInfo`.
-         * @description
-         *
-         * Optional connection information. Omitted values are
-         * switching-function specific (§12.2.8).
-         *
-         * @public
-         * @readonly
-         */
-        readonly outboundConnectionInfo?: OPTIONAL<ConnectionInformation>,
-        /**
-         * @summary `callLinkageData`.
-         * @description
-         *
-         * Optional global call data and thread data (§12.2.5).
-         *
-         * @public
-         * @readonly
-         */
-        readonly callLinkageData?: OPTIONAL<CallLinkageData>,
-        /**
-         * @summary `languagePreferences`.
-         * @description
-         *
-         * Optional preferred language(s) (§12.2.16).
-         *
-         * @public
-         * @readonly
-         */
-        readonly languagePreferences?: OPTIONAL<LanguagePreferences>,
-        /**
-         * @summary `locationInfo`.
-         * @description
-         *
-         * Optional location information for devices in the call.
-         *
-         * @public
-         * @readonly
-         */
-        readonly locationInfo?: OPTIONAL<LocationInfoList>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional `CSTACommonArguments` carrying the security and privateData
-         * parameters from the ECMA-269 event table.
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        outboundConnection: ConnectionID,
+        networkInterfaceUsed: SubjectDeviceID,
+        calledDevice: CalledDeviceID,
+        progressIndicator: ProgressIndicator,
+        localConnectionInfo: OPTIONAL<LocalConnectionState>,
+        correlatorData: OPTIONAL<CorrelatorData>,
+        userData: OPTIONAL<UserData>,
+        networkCapability: OPTIONAL<NetworkCapability>,
+        cause: EventCause,
+        servicesPermitted?: OPTIONAL<ServicesPermitted>,
+        mediaCallCharacteristics?: OPTIONAL<MediaCallCharacteristics>,
+        callCharacteristics?: OPTIONAL<CallCharacteristics>,
+        outboundConnectionInfo?: OPTIONAL<ConnectionInformation>,
+        callLinkageData?: OPTIONAL<CallLinkageData>,
+        languagePreferences?: OPTIONAL<LanguagePreferences>,
+        locationInfo?: OPTIONAL<LocationInfoList>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.outboundConnection = outboundConnection;
+        this.networkInterfaceUsed = networkInterfaceUsed;
+        this.calledDevice = calledDevice;
+        this.progressIndicator = progressIndicator;
+        this.localConnectionInfo = localConnectionInfo;
+        this.correlatorData = correlatorData;
+        this.userData = userData;
+        this.networkCapability = networkCapability;
+        this.cause = cause;
+        this.servicesPermitted = servicesPermitted;
+        this.mediaCallCharacteristics = mediaCallCharacteristics;
+        this.callCharacteristics = callCharacteristics;
+        this.outboundConnectionInfo = outboundConnectionInfo;
+        this.callLinkageData = callLinkageData;
+        this.languagePreferences = languagePreferences;
+        this.locationInfo = locationInfo;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a NetworkCapabilitiesChangedEvent

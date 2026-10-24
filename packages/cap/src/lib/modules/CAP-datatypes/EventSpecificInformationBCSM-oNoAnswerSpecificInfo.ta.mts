@@ -24,9 +24,13 @@ import * as $ from "@wildboar/asn1/functional";
  *
  */
 export class EventSpecificInformationBCSM_oNoAnswerSpecificInfo {
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        readonly _unrecognizedExtensionsList: _Element[] = [],
-    ) {}
+        _unrecognizedExtensionsList: _Element[] = [],
+    ) {
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     public static _from_object (_o: { [_K in keyof (EventSpecificInformationBCSM_oNoAnswerSpecificInfo)]: (EventSpecificInformationBCSM_oNoAnswerSpecificInfo)[_K] }): EventSpecificInformationBCSM_oNoAnswerSpecificInfo {
         return new EventSpecificInformationBCSM_oNoAnswerSpecificInfo(_o._unrecognizedExtensionsList);

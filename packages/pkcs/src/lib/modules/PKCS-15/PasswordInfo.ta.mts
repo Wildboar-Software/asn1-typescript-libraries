@@ -28,26 +28,34 @@ import { Label, _decode_Label, _encode_Label } from "../PKCS-15/Label.ta.mjs";
  *
  */
 export class PasswordInfo {
+    /**
+     * @summary `hint`.
+     * @public
+     * @readonly
+     */
+    public readonly hint: OPTIONAL<Label>;
+    /**
+     * @summary `algId`.
+     * @public
+     * @readonly
+     */
+    public readonly algId: AlgorithmIdentifier;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `hint`.
-         * @public
-         * @readonly
-         */
-        readonly hint: OPTIONAL<Label>,
-        /**
-         * @summary `algId`.
-         * @public
-         * @readonly
-         */
-        readonly algId: AlgorithmIdentifier,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        hint: OPTIONAL<Label>,
+        algId: AlgorithmIdentifier,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.hint = hint;
+        this.algId = algId;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a PasswordInfo

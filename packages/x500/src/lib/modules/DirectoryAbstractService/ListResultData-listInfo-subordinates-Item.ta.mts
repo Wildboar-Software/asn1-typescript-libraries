@@ -26,44 +26,54 @@ import {
  *
  */
 export class ListResultData_listInfo_subordinates_Item {
+    /**
+     * @summary `rdn`.
+     * @description
+     *
+     * RDN of the subordinate relative to the listed object.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly rdn: RelativeDistinguishedName;
+    /**
+     * @summary `aliasEntry`.
+     * @description
+     *
+     * DEFAULT FALSE. TRUE if this subordinate is an alias entry.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly aliasEntry?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `fromEntry`.
+     * @description
+     *
+     * DEFAULT TRUE. TRUE = entry; FALSE = copy.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly fromEntry?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `rdn`.
-         * @description
-         *
-         * RDN of the subordinate relative to the listed object.
-         *
-         * @public
-         * @readonly
-         */
-        readonly rdn: RelativeDistinguishedName,
-        /**
-         * @summary `aliasEntry`.
-         * @description
-         *
-         * DEFAULT FALSE. TRUE if this subordinate is an alias entry.
-         *
-         * @public
-         * @readonly
-         */
-        readonly aliasEntry?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `fromEntry`.
-         * @description
-         *
-         * DEFAULT TRUE. TRUE = entry; FALSE = copy.
-         *
-         * @public
-         * @readonly
-         */
-        readonly fromEntry?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        rdn: RelativeDistinguishedName,
+        aliasEntry?: OPTIONAL<BOOLEAN>,
+        fromEntry?: OPTIONAL<BOOLEAN>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.rdn = rdn;
+        this.aliasEntry = aliasEntry;
+        this.fromEntry = fromEntry;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a ListResultData_listInfo_subordinates_Item

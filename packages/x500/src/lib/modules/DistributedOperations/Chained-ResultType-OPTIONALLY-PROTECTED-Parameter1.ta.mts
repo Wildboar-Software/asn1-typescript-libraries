@@ -23,29 +23,35 @@ import {
  *
  */
 export class Chained_ResultType_OPTIONALLY_PROTECTED_Parameter1 {
+    /**
+     * @summary `chainedResult`.
+     * @description
+     *
+     * ChainingResults for previous DSAs in the chain.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly chainedResult: ChainingResults;
+    /**
+     * @summary `result`.
+     * @description
+     *
+     * DAP result (`operation.&ResultType`) as `_Element`, intended for
+     * the original requester.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly result: _Element;
+
     constructor(
-        /**
-         * @summary `chainedResult`.
-         * @description
-         *
-         * ChainingResults for previous DSAs in the chain.
-         *
-         * @public
-         * @readonly
-         */
-        readonly chainedResult: ChainingResults,
-        /**
-         * @summary `result`.
-         * @description
-         *
-         * DAP result (`operation.&ResultType`) as `_Element`, intended for
-         * the original requester.
-         *
-         * @public
-         * @readonly
-         */
-        readonly result: _Element
-    ) {}
+        chainedResult: ChainingResults,
+        result: _Element
+    ) {
+        this.chainedResult = chainedResult;
+        this.result = result;
+    }
 
     /**
      * @summary Restructures an object into a Chained_ResultType_OPTIONALLY_PROTECTED_Parameter1

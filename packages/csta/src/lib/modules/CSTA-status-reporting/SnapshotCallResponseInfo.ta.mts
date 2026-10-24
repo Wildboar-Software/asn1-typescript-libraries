@@ -47,70 +47,84 @@ import { LocationInfoList, _decode_LocationInfoList, _encode_LocationInfoList } 
  */
 export
 class SnapshotCallResponseInfo {
+    /**
+     * @summary `deviceOnCall`.
+     * @description
+     *
+     * Device at this endpoint. ECMA-269 §16.1.3.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly deviceOnCall: SubjectDeviceID;
+    /**
+     * @summary `callIdentifier`.
+     * @description
+     *
+     * Connection of the endpoint. Mandatory if the endpoint is in the
+     * switching sub-domain. ECMA-269 §16.1.3.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly callIdentifier?: OPTIONAL<ConnectionID>;
+    /**
+     * @summary `localConnectionState`.
+     * @description
+     *
+     * Local connection state of this endpoint. ECMA-269 §16.1.3.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly localConnectionState?: OPTIONAL<LocalConnectionState>;
+    /**
+     * @summary `servicesPermitted`.
+     * @description
+     *
+     * Mandatory if Dynamic Feature Availability is supported. ECMA-269
+     * §16.1.3, §12.2.25.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly servicesPermitted?: OPTIONAL<ServicesPermitted>;
+    /**
+     * @summary `mediaServiceInfoList`.
+     * @description
+     *
+     * Media services bound to this connection. ECMA-269 §16.1.3.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mediaServiceInfoList?: OPTIONAL<CallMediaInfoList>;
+    /**
+     * @summary `locationInfo`.
+     * @description
+     *
+     * PIDF-LO location for the endpoint. ECMA-269 §16.1.3, §12.2.18.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly locationInfo?: OPTIONAL<LocationInfoList>;
+
     constructor (
-        /**
-         * @summary `deviceOnCall`.
-         * @description
-         *
-         * Device at this endpoint. ECMA-269 §16.1.3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly deviceOnCall: SubjectDeviceID,
-        /**
-         * @summary `callIdentifier`.
-         * @description
-         *
-         * Connection of the endpoint. Mandatory if the endpoint is in the
-         * switching sub-domain. ECMA-269 §16.1.3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly callIdentifier?: OPTIONAL<ConnectionID>,
-        /**
-         * @summary `localConnectionState`.
-         * @description
-         *
-         * Local connection state of this endpoint. ECMA-269 §16.1.3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly localConnectionState?: OPTIONAL<LocalConnectionState>,
-        /**
-         * @summary `servicesPermitted`.
-         * @description
-         *
-         * Mandatory if Dynamic Feature Availability is supported. ECMA-269
-         * §16.1.3, §12.2.25.
-         *
-         * @public
-         * @readonly
-         */
-        readonly servicesPermitted?: OPTIONAL<ServicesPermitted>,
-        /**
-         * @summary `mediaServiceInfoList`.
-         * @description
-         *
-         * Media services bound to this connection. ECMA-269 §16.1.3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly mediaServiceInfoList?: OPTIONAL<CallMediaInfoList>,
-        /**
-         * @summary `locationInfo`.
-         * @description
-         *
-         * PIDF-LO location for the endpoint. ECMA-269 §16.1.3, §12.2.18.
-         *
-         * @public
-         * @readonly
-         */
-        readonly locationInfo?: OPTIONAL<LocationInfoList>
-    ) {}
+        deviceOnCall: SubjectDeviceID,
+        callIdentifier?: OPTIONAL<ConnectionID>,
+        localConnectionState?: OPTIONAL<LocalConnectionState>,
+        servicesPermitted?: OPTIONAL<ServicesPermitted>,
+        mediaServiceInfoList?: OPTIONAL<CallMediaInfoList>,
+        locationInfo?: OPTIONAL<LocationInfoList>
+    ) {
+        this.deviceOnCall = deviceOnCall;
+        this.callIdentifier = callIdentifier;
+        this.localConnectionState = localConnectionState;
+        this.servicesPermitted = servicesPermitted;
+        this.mediaServiceInfoList = mediaServiceInfoList;
+        this.locationInfo = locationInfo;
+    }
 
     /**
      * @summary Restructures an object into a SnapshotCallResponseInfo

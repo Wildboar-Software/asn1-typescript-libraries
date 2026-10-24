@@ -71,74 +71,88 @@ import {
  *
  */
 export class ExecutionResultInfo {
+    /**
+     * @summary `triggerId`.
+     * @description
+     *
+     * Trigger that caused this thread to be spawned. Mandatory
+     * in the execution-result service. ITU-T Rec. X.753 (10/97)
+     * §9.3.1 Table 6.
+     * @public
+     * @readonly
+     */
+    public readonly triggerId: TriggerId;
+    /**
+     * @summary `scriptId`.
+     * @description
+     *
+     * Launch script this thread executed. Mandatory in the
+     * execution-result service. ITU-T Rec. X.753 (10/97)
+     * §9.3.1 Table 6.
+     * @public
+     * @readonly
+     */
+    public readonly scriptId: ScriptId;
+    /**
+     * @summary `threadId`.
+     * @description
+     *
+     * Thread that produced this result. Mandatory in the
+     * execution-result service. ITU-T Rec. X.753 (10/97)
+     * §9.3.1 Table 6.
+     * @public
+     * @readonly
+     */
+    public readonly threadId: ThreadId;
+    /**
+     * @summary `errorCode`.
+     * @description
+     *
+     * Outcome: `{noError}` if successful, otherwise the
+     * applicable failure code(s). User-optional in Table 6;
+     * present in this SEQUENCE. ITU-T Rec. X.753 (10/97)
+     * §8.2.2, §9.3.1.
+     * @public
+     * @readonly
+     */
+    public readonly errorCode: ErrorCode;
+    /**
+     * @summary `executionResultType`.
+     * @description
+     *
+     * Type of `executionResult`; should match the script's
+     * `executionResultType` attribute. User-optional in
+     * Table 6. ITU-T Rec. X.753 (10/97) §7.2, §9.3.1.
+     * @public
+     * @readonly
+     */
+    public readonly executionResultType: ExecutionResultType;
+    /**
+     * @summary `executionResult`.
+     * @description
+     *
+     * Result attributes from the script. User-optional in
+     * Table 6. ITU-T Rec. X.753 (10/97) §7.2, §9.3.1.
+     * @public
+     * @readonly
+     */
+    public readonly executionResult: Attribute[];
+
     constructor(
-        /**
-         * @summary `triggerId`.
-         * @description
-         *
-         * Trigger that caused this thread to be spawned. Mandatory
-         * in the execution-result service. ITU-T Rec. X.753 (10/97)
-         * §9.3.1 Table 6.
-         * @public
-         * @readonly
-         */
-        readonly triggerId: TriggerId,
-        /**
-         * @summary `scriptId`.
-         * @description
-         *
-         * Launch script this thread executed. Mandatory in the
-         * execution-result service. ITU-T Rec. X.753 (10/97)
-         * §9.3.1 Table 6.
-         * @public
-         * @readonly
-         */
-        readonly scriptId: ScriptId,
-        /**
-         * @summary `threadId`.
-         * @description
-         *
-         * Thread that produced this result. Mandatory in the
-         * execution-result service. ITU-T Rec. X.753 (10/97)
-         * §9.3.1 Table 6.
-         * @public
-         * @readonly
-         */
-        readonly threadId: ThreadId,
-        /**
-         * @summary `errorCode`.
-         * @description
-         *
-         * Outcome: `{noError}` if successful, otherwise the
-         * applicable failure code(s). User-optional in Table 6;
-         * present in this SEQUENCE. ITU-T Rec. X.753 (10/97)
-         * §8.2.2, §9.3.1.
-         * @public
-         * @readonly
-         */
-        readonly errorCode: ErrorCode,
-        /**
-         * @summary `executionResultType`.
-         * @description
-         *
-         * Type of `executionResult`; should match the script's
-         * `executionResultType` attribute. User-optional in
-         * Table 6. ITU-T Rec. X.753 (10/97) §7.2, §9.3.1.
-         * @public
-         * @readonly
-         */
-        readonly executionResultType: ExecutionResultType,
-        /**
-         * @summary `executionResult`.
-         * @description
-         *
-         * Result attributes from the script. User-optional in
-         * Table 6. ITU-T Rec. X.753 (10/97) §7.2, §9.3.1.
-         * @public
-         * @readonly
-         */
-        readonly executionResult: Attribute[]
-    ) {}
+        triggerId: TriggerId,
+        scriptId: ScriptId,
+        threadId: ThreadId,
+        errorCode: ErrorCode,
+        executionResultType: ExecutionResultType,
+        executionResult: Attribute[]
+    ) {
+        this.triggerId = triggerId;
+        this.scriptId = scriptId;
+        this.threadId = threadId;
+        this.errorCode = errorCode;
+        this.executionResultType = executionResultType;
+        this.executionResult = executionResult;
+    }
 
     /**
      * @summary Restructures an object into a ExecutionResultInfo

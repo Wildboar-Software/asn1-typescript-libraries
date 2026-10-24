@@ -37,31 +37,37 @@ import { AlertDescription, _enum_for_AlertDescription, _decode_AlertDescription,
  */
 export
 class Alert {
+    /**
+     * @summary `level`.
+     * @description
+     *
+     * `warning` (1) or `fatal` (2). TSM biometric alerts 115–117 are
+     * always fatal. X.1084 §10.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly level: AlertLevel;
+    /**
+     * @summary `description`.
+     * @description
+     *
+     * TLS descriptions 0–114 plus TSM `unacceptable-model` (115),
+     * `unacceptable-biometrics` (116), and `unsupported-biometrics`
+     * (117). X.1084 §10.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly description: AlertDescription;
+
     constructor (
-        /**
-         * @summary `level`.
-         * @description
-         *
-         * `warning` (1) or `fatal` (2). TSM biometric alerts 115–117 are
-         * always fatal. X.1084 §10.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly level: AlertLevel,
-        /**
-         * @summary `description`.
-         * @description
-         *
-         * TLS descriptions 0–114 plus TSM `unacceptable-model` (115),
-         * `unacceptable-biometrics` (116), and `unsupported-biometrics`
-         * (117). X.1084 §10.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly description: AlertDescription
-    ) {}
+        level: AlertLevel,
+        description: AlertDescription
+    ) {
+        this.level = level;
+        this.description = description;
+    }
 
     /**
      * @summary Restructures an object into a Alert

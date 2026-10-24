@@ -52,59 +52,71 @@ import {
  *
  */
 export class RequestShadowUpdateArgumentData {
+    /**
+     * @summary `agreementID`.
+     * @description
+     *
+     * Agreement being requested. Unknown → `invalidAgreementID`;
+     * inactive → `inactiveAgreement`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly agreementID: AgreementID;
+    /**
+     * @summary `lastUpdate`.
+     * @description
+     *
+     * Time from the most recent successful update (supplier-assigned).
+     * Absent if none, or if a full update is wanted even with no
+     * changes. Supplier that cannot build an incremental from this
+     * value returns `fullUpdateRequired`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly lastUpdate: OPTIONAL<Time>;
+    /**
+     * @summary `requestedStrategy`.
+     * @description
+     *
+     * `incremental` (1) or `total` (2) — no `noChanges` (0). Supplier
+     * may still refuse incremental with `fullUpdateRequired`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly requestedStrategy: RequestShadowUpdateArgumentData_requestedStrategy;
+    /**
+     * @summary `securityParameters`.
+     * @description
+     *
+     * Required if this argument is signed. `target` is `none`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly securityParameters?: OPTIONAL<SecurityParameters>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `agreementID`.
-         * @description
-         *
-         * Agreement being requested. Unknown → `invalidAgreementID`;
-         * inactive → `inactiveAgreement`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly agreementID: AgreementID,
-        /**
-         * @summary `lastUpdate`.
-         * @description
-         *
-         * Time from the most recent successful update (supplier-assigned).
-         * Absent if none, or if a full update is wanted even with no
-         * changes. Supplier that cannot build an incremental from this
-         * value returns `fullUpdateRequired`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly lastUpdate: OPTIONAL<Time>,
-        /**
-         * @summary `requestedStrategy`.
-         * @description
-         *
-         * `incremental` (1) or `total` (2) — no `noChanges` (0). Supplier
-         * may still refuse incremental with `fullUpdateRequired`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly requestedStrategy: RequestShadowUpdateArgumentData_requestedStrategy,
-        /**
-         * @summary `securityParameters`.
-         * @description
-         *
-         * Required if this argument is signed. `target` is `none`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly securityParameters?: OPTIONAL<SecurityParameters>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        agreementID: AgreementID,
+        lastUpdate: OPTIONAL<Time>,
+        requestedStrategy: RequestShadowUpdateArgumentData_requestedStrategy,
+        securityParameters?: OPTIONAL<SecurityParameters>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.agreementID = agreementID;
+        this.lastUpdate = lastUpdate;
+        this.requestedStrategy = requestedStrategy;
+        this.securityParameters = securityParameters;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a RequestShadowUpdateArgumentData

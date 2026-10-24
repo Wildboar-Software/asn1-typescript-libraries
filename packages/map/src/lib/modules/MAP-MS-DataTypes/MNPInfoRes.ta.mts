@@ -36,63 +36,77 @@ import { RouteingNumber, _decode_RouteingNumber, _encode_RouteingNumber } from "
  */
 export
 class MNPInfoRes {
+    /**
+     * @summary `routeingNumber`.
+     * @description
+     *
+     * Routeing Number (clause 7.6.2.63). (3GPP TS 29.002 V19.1.0 clause
+     * 7.6.3.93)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly routeingNumber?: OPTIONAL<RouteingNumber>;
+    /**
+     * @summary `imsi`.
+     * @description
+     *
+     * Generic IMSI; MCC/MNC point to the subscription network (3GPP TS
+     * 23.066). (3GPP TS 29.002 V19.1.0 clauses 7.6.3.93 and 17.7.1)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly imsi?: OPTIONAL<IMSI>;
+    /**
+     * @summary `msisdn`.
+     * @description
+     *
+     * MSISDN (clause 7.6.2.17). (3GPP TS 29.002 V19.1.0 clause 7.6.3.93)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly msisdn?: OPTIONAL<ISDN_AddressString>;
+    /**
+     * @summary `numberPortabilityStatus`.
+     * @description
+     *
+     * Number portability status (clause 7.6.5.14). (3GPP TS 29.002 V19.1.0
+     * clause 7.6.3.93)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly numberPortabilityStatus?: OPTIONAL<NumberPortabilityStatus>;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `routeingNumber`.
-         * @description
-         *
-         * Routeing Number (clause 7.6.2.63). (3GPP TS 29.002 V19.1.0 clause
-         * 7.6.3.93)
-         *
-         * @public
-         * @readonly
-         */
-        readonly routeingNumber?: OPTIONAL<RouteingNumber>,
-        /**
-         * @summary `imsi`.
-         * @description
-         *
-         * Generic IMSI; MCC/MNC point to the subscription network (3GPP TS
-         * 23.066). (3GPP TS 29.002 V19.1.0 clauses 7.6.3.93 and 17.7.1)
-         *
-         * @public
-         * @readonly
-         */
-        readonly imsi?: OPTIONAL<IMSI>,
-        /**
-         * @summary `msisdn`.
-         * @description
-         *
-         * MSISDN (clause 7.6.2.17). (3GPP TS 29.002 V19.1.0 clause 7.6.3.93)
-         *
-         * @public
-         * @readonly
-         */
-        readonly msisdn?: OPTIONAL<ISDN_AddressString>,
-        /**
-         * @summary `numberPortabilityStatus`.
-         * @description
-         *
-         * Number portability status (clause 7.6.5.14). (3GPP TS 29.002 V19.1.0
-         * clause 7.6.3.93)
-         *
-         * @public
-         * @readonly
-         */
-        readonly numberPortabilityStatus?: OPTIONAL<NumberPortabilityStatus>,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        routeingNumber?: OPTIONAL<RouteingNumber>,
+        imsi?: OPTIONAL<IMSI>,
+        msisdn?: OPTIONAL<ISDN_AddressString>,
+        numberPortabilityStatus?: OPTIONAL<NumberPortabilityStatus>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.routeingNumber = routeingNumber;
+        this.imsi = imsi;
+        this.msisdn = msisdn;
+        this.numberPortabilityStatus = numberPortabilityStatus;
+        this.extensionContainer = extensionContainer;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a MNPInfoRes

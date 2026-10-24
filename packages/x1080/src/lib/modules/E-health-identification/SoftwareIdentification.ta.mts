@@ -42,51 +42,61 @@ import {
  *
  */
 export class SoftwareIdentification {
+    /**
+     * @summary `scheme`.
+     * @description
+     *
+     * `SOFTWARE-SCHEME.&id` of the identification scheme.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly scheme: OBJECT_IDENTIFIER;
+    /**
+     * @summary `schemeName`.
+     * @description
+     *
+     * Optional `SOFTWARE-SCHEME.&name`. ISO646String is not
+     * necessarily unique.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly schemeName: OPTIONAL<SchemeName>;
+    /**
+     * @summary `manufacturerId`.
+     * @description
+     *
+     * Optional `SOFTWARE-SCHEME.&Manufacturer`. Absent if a
+     * generic term is used in `software`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly manufacturerId: OPTIONAL<_Element>;
+    /**
+     * @summary `software`.
+     * @description
+     *
+     * `SOFTWARE-SCHEME.&Software`: generic description or complete
+     * product reference.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly software: _Element;
+
     constructor(
-        /**
-         * @summary `scheme`.
-         * @description
-         *
-         * `SOFTWARE-SCHEME.&id` of the identification scheme.
-         *
-         * @public
-         * @readonly
-         */
-        readonly scheme: OBJECT_IDENTIFIER,
-        /**
-         * @summary `schemeName`.
-         * @description
-         *
-         * Optional `SOFTWARE-SCHEME.&name`. ISO646String is not
-         * necessarily unique.
-         *
-         * @public
-         * @readonly
-         */
-        readonly schemeName: OPTIONAL<SchemeName>,
-        /**
-         * @summary `manufacturerId`.
-         * @description
-         *
-         * Optional `SOFTWARE-SCHEME.&Manufacturer`. Absent if a
-         * generic term is used in `software`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly manufacturerId: OPTIONAL<_Element>,
-        /**
-         * @summary `software`.
-         * @description
-         *
-         * `SOFTWARE-SCHEME.&Software`: generic description or complete
-         * product reference.
-         *
-         * @public
-         * @readonly
-         */
-        readonly software: _Element
-    ) {}
+        scheme: OBJECT_IDENTIFIER,
+        schemeName: OPTIONAL<SchemeName>,
+        manufacturerId: OPTIONAL<_Element>,
+        software: _Element
+    ) {
+        this.scheme = scheme;
+        this.schemeName = schemeName;
+        this.manufacturerId = manufacturerId;
+        this.software = software;
+    }
 
     /**
      * @summary Restructures an object into a SoftwareIdentification

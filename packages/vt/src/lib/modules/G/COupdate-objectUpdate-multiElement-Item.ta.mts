@@ -44,26 +44,32 @@ import { COupdate_objectUpdate_multiElement_Item_update, _decode_COupdate_object
  */
 export
 class COupdate_objectUpdate_multiElement_Item {
+    /**
+     * @summary `identifier`.
+     * @description
+     * Data-element index within the parametric CO. ISO/IEC
+     * 9041-1:1997 §12.2.
+     * @public
+     * @readonly
+     */
+    public readonly identifier: INTEGER;
+    /**
+     * @summary `update`.
+     * @description
+     * Per-element character/boolean/symbolic/integer/bit-string
+     * update. ISO/IEC 9041-1:1997 §12.2.
+     * @public
+     * @readonly
+     */
+    public readonly update: COupdate_objectUpdate_multiElement_Item_update;
+
     constructor (
-        /**
-         * @summary `identifier`.
-         * @description
-         * Data-element index within the parametric CO. ISO/IEC
-         * 9041-1:1997 §12.2.
-         * @public
-         * @readonly
-         */
-        readonly identifier: INTEGER,
-        /**
-         * @summary `update`.
-         * @description
-         * Per-element character/boolean/symbolic/integer/bit-string
-         * update. ISO/IEC 9041-1:1997 §12.2.
-         * @public
-         * @readonly
-         */
-        readonly update: COupdate_objectUpdate_multiElement_Item_update
-    ) {}
+        identifier: INTEGER,
+        update: COupdate_objectUpdate_multiElement_Item_update
+    ) {
+        this.identifier = identifier;
+        this.update = update;
+    }
 
     /**
      * @summary Restructures an object into a COupdate_objectUpdate_multiElement_Item

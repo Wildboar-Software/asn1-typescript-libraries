@@ -43,54 +43,64 @@ import { CS_Status_Response_fullResponse_selectedProgramInvocation, _decode_CS_S
  */
 export
 class CS_Status_Response_fullResponse {
+    /**
+     * @summary `operationState`.
+     * @description
+     *
+     * VMD `&operationState`. `csr` only. ISO 9506-1:2003 §10.2.4.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly operationState: OperationState;
+    /**
+     * @summary `extendedStatus`.
+     * @description
+     *
+     * Four booleans: safety interlocks violated, any resource power-on, all
+     * resources calibrated, local control. `csr` only. ISO 9506-1:2003
+     * §10.2.5.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extendedStatus: ExtendedStatus;
+    /**
+     * @summary `extendedStatusMask`.
+     * @description
+     *
+     * Significance of corresponding Extended Status bits: one =
+     * significant, zero = ignore. Default all ones. `csr` only; use is a
+     * user option. ISO 9506-1:2003 §10.2.6; ISO 9506-2:2003 §10.2.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extendedStatusMask: OPTIONAL<ExtendedStatus>;
+    /**
+     * @summary `selectedProgramInvocation`.
+     * @description
+     *
+     * VMD `&selected-Program-Invocation`: Controlling Program Invocation
+     * for the system, or NONE if none selected. `csr` only. ISO 9506-1:2003
+     * §7.2.1.34, §10.2.7.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly selectedProgramInvocation: CS_Status_Response_fullResponse_selectedProgramInvocation;
+
     constructor (
-        /**
-         * @summary `operationState`.
-         * @description
-         *
-         * VMD `&operationState`. `csr` only. ISO 9506-1:2003 §10.2.4.
-         *
-         * @public
-         * @readonly
-         */
-        readonly operationState: OperationState,
-        /**
-         * @summary `extendedStatus`.
-         * @description
-         *
-         * Four booleans: safety interlocks violated, any resource power-on, all
-         * resources calibrated, local control. `csr` only. ISO 9506-1:2003
-         * §10.2.5.
-         *
-         * @public
-         * @readonly
-         */
-        readonly extendedStatus: ExtendedStatus,
-        /**
-         * @summary `extendedStatusMask`.
-         * @description
-         *
-         * Significance of corresponding Extended Status bits: one =
-         * significant, zero = ignore. Default all ones. `csr` only; use is a
-         * user option. ISO 9506-1:2003 §10.2.6; ISO 9506-2:2003 §10.2.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly extendedStatusMask: OPTIONAL<ExtendedStatus>,
-        /**
-         * @summary `selectedProgramInvocation`.
-         * @description
-         *
-         * VMD `&selected-Program-Invocation`: Controlling Program Invocation
-         * for the system, or NONE if none selected. `csr` only. ISO 9506-1:2003
-         * §7.2.1.34, §10.2.7.
-         *
-         * @public
-         * @readonly
-         */
-        readonly selectedProgramInvocation: CS_Status_Response_fullResponse_selectedProgramInvocation
-    ) {}
+        operationState: OperationState,
+        extendedStatus: ExtendedStatus,
+        extendedStatusMask: OPTIONAL<ExtendedStatus>,
+        selectedProgramInvocation: CS_Status_Response_fullResponse_selectedProgramInvocation
+    ) {
+        this.operationState = operationState;
+        this.extendedStatus = extendedStatus;
+        this.extendedStatusMask = extendedStatusMask;
+        this.selectedProgramInvocation = selectedProgramInvocation;
+    }
 
     /**
      * @summary Restructures an object into a CS_Status_Response_fullResponse

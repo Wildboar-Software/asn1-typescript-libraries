@@ -29,29 +29,35 @@ import {
  *
  */
 export class SPKM_MIC {
+    /**
+     * @summary `mic_header`.
+     * @description
+     *
+     * Plaintext header included in the checksum input.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mic_header: Mic_Header;
+    /**
+     * @summary `int_cksum`.
+     * @description
+     *
+     * Signature or MAC of header||data per `int-alg`. Length implied
+     * by that algorithm (e.g. RSA modulus size for md5WithRSA).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly int_cksum: BIT_STRING;
+
     constructor(
-        /**
-         * @summary `mic_header`.
-         * @description
-         *
-         * Plaintext header included in the checksum input.
-         *
-         * @public
-         * @readonly
-         */
-        readonly mic_header: Mic_Header,
-        /**
-         * @summary `int_cksum`.
-         * @description
-         *
-         * Signature or MAC of header||data per `int-alg`. Length implied
-         * by that algorithm (e.g. RSA modulus size for md5WithRSA).
-         *
-         * @public
-         * @readonly
-         */
-        readonly int_cksum: BIT_STRING
-    ) {}
+        mic_header: Mic_Header,
+        int_cksum: BIT_STRING
+    ) {
+        this.mic_header = mic_header;
+        this.int_cksum = int_cksum;
+    }
 
     /**
      * @summary Restructures an object into a SPKM_MIC

@@ -45,41 +45,49 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class StartLocationTrackingSessionResult {
+    /**
+     * @summary `locCrossRefID`.
+     * @description
+     *
+     * Session identifier, unique in the switching function (ECMA-269
+     * §28.1.7.2.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly locCrossRefID: LocCrossRefID;
+    /**
+     * @summary `pidProfile`.
+     * @description
+     *
+     * PIDF-LO profile for this session. ECMA-269 lists it mandatory; ASN.1
+     * marks it OPTIONAL (ECMA-269 §28.1.7.2.1, ECMA-285 §26.1.7).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly pidProfile?: OPTIONAL<PIDProfile>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * CSTACommonArguments carrying the service-table security and
+     * privateData parameters.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `locCrossRefID`.
-         * @description
-         *
-         * Session identifier, unique in the switching function (ECMA-269
-         * §28.1.7.2.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly locCrossRefID: LocCrossRefID,
-        /**
-         * @summary `pidProfile`.
-         * @description
-         *
-         * PIDF-LO profile for this session. ECMA-269 lists it mandatory; ASN.1
-         * marks it OPTIONAL (ECMA-269 §28.1.7.2.1, ECMA-285 §26.1.7).
-         *
-         * @public
-         * @readonly
-         */
-        readonly pidProfile?: OPTIONAL<PIDProfile>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * CSTACommonArguments carrying the service-table security and
-         * privateData parameters.
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        locCrossRefID: LocCrossRefID,
+        pidProfile?: OPTIONAL<PIDProfile>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.locCrossRefID = locCrossRefID;
+        this.pidProfile = pidProfile;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a StartLocationTrackingSessionResult

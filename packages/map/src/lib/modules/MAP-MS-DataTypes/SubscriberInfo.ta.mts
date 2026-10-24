@@ -62,221 +62,259 @@ import { Used_RAT_Type, _decode_Used_RAT_Type, _encode_Used_RAT_Type, _enum_for_
  */
 export
 class SubscriberInfo {
+    /**
+     * @summary `locationInformation`.
+     * @description
+     *
+     * CS location of the served subscriber as in 3GPP TS 23.018.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.2.30).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly locationInformation?: OPTIONAL<LocationInformation>;
+    /**
+     * @summary `subscriberState`.
+     * @description
+     *
+     * CS MS state as in 3GPP TS 23.018.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.3.30).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly subscriberState?: OPTIONAL<SubscriberState>;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary `locationInformationGPRS`.
+     * @description
+     *
+     * GPRS location of the served subscriber as in 3GPP TS 23.078.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.2.30a).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly locationInformationGPRS?: OPTIONAL<LocationInformationGPRS>;
+    /**
+     * @summary `ps_SubscriberState`.
+     * @description
+     *
+     * PS subscriber state from SGSN or MME.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 8.11.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ps_SubscriberState?: OPTIONAL<PS_SubscriberState>;
+    /**
+     * @summary `imei`.
+     * @description
+     *
+     * International Mobile Equipment Identity as in 3GPP TS 23.003.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.2.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly imei?: OPTIONAL<IMEI>;
+    /**
+     * @summary `ms_Classmark2`.
+     * @description
+     *
+     * MS Classmark 2 value part as in 3GPP TS 24.008. Discarded by HLR if
+     * received from SGSN or MME (via IWF).
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ms_Classmark2?: OPTIONAL<MS_Classmark2>;
+    /**
+     * @summary `gprs_MS_Class`.
+     * @description
+     *
+     * GPRS MS class (network and radio-access capability). Discarded by HLR
+     * if received from a VLR.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly gprs_MS_Class?: OPTIONAL<GPRSMSClass>;
+    /**
+     * @summary `mnpInfoRes`.
+     * @description
+     *
+     * Mobile Number Portability information (3GPP TS 23.078 and 23.066).
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.3.93).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mnpInfoRes?: OPTIONAL<MNPInfoRes>;
+    /**
+     * @summary `imsVoiceOverPS_SessionsIndication`.
+     * @description
+     *
+     * Whether IMS voice over PS is supported in the UE's current routing
+     * area. Present if the RA is known and T-ADS data were requested. Value
+     * `unknown` shall not be used in ProvideSubscriberInfoRes.
+     *
+     * (3GPP TS 29.002 V19.1.0 clauses 8.11.2.3 and 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly imsVoiceOverPS_SessionsIndication?: OPTIONAL<IMS_VoiceOverPS_SessionsInd>;
+    /**
+     * @summary `lastUE_ActivityTime`.
+     * @description
+     *
+     * Time of the UE's last radio contact. Present if T-ADS data were
+     * requested.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 8.11.2.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly lastUE_ActivityTime?: OPTIONAL<Time>;
+    /**
+     * @summary `lastRAT_Type`.
+     * @description
+     *
+     * RAT of the last radio contact. Present if T-ADS data were requested.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 8.11.2.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly lastRAT_Type?: OPTIONAL<Used_RAT_Type>;
+    /**
+     * @summary `eps_SubscriberState`.
+     * @description
+     *
+     * EPS subscriber state (same CHOICE as PS subscriber state).
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 8.11.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly eps_SubscriberState?: OPTIONAL<PS_SubscriberState>;
+    /**
+     * @summary `locationInformationEPS`.
+     * @description
+     *
+     * EPS location of the served subscriber, from the MME via IWF.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.2.30b).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly locationInformationEPS?: OPTIONAL<LocationInformationEPS>;
+    /**
+     * @summary `timeZone`.
+     * @description
+     *
+     * Time zone of the visited-network location where the UE is
+     * attached, including daylight-saving adjustment. Details in
+     * 3GPP TS 29.272.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 8.11.2.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly timeZone?: OPTIONAL<TimeZone>;
+    /**
+     * @summary `daylightSavingTime`.
+     * @description
+     *
+     * Daylight saving adjustment (0, +1, or +2 hours) of the
+     * visited-network time zone. Details in 3GPP TS 29.272.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 8.11.2.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly daylightSavingTime?: OPTIONAL<DaylightSavingTime>;
+    /**
+     * @summary `locationInformation5GS`.
+     * @description
+     *
+     * 5GS location. Should be absent if the UE did not access via 5GS and
+     * IM-SSF.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly locationInformation5GS?: OPTIONAL<LocationInformation5GS>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `locationInformation`.
-         * @description
-         *
-         * CS location of the served subscriber as in 3GPP TS 23.018.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.2.30).
-         *
-         * @public
-         * @readonly
-         */
-        readonly locationInformation?: OPTIONAL<LocationInformation>,
-        /**
-         * @summary `subscriberState`.
-         * @description
-         *
-         * CS MS state as in 3GPP TS 23.018.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.3.30).
-         *
-         * @public
-         * @readonly
-         */
-        readonly subscriberState?: OPTIONAL<SubscriberState>,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary `locationInformationGPRS`.
-         * @description
-         *
-         * GPRS location of the served subscriber as in 3GPP TS 23.078.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.2.30a).
-         *
-         * @public
-         * @readonly
-         */
-        readonly locationInformationGPRS?: OPTIONAL<LocationInformationGPRS>,
-        /**
-         * @summary `ps_SubscriberState`.
-         * @description
-         *
-         * PS subscriber state from SGSN or MME.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 8.11.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly ps_SubscriberState?: OPTIONAL<PS_SubscriberState>,
-        /**
-         * @summary `imei`.
-         * @description
-         *
-         * International Mobile Equipment Identity as in 3GPP TS 23.003.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.2.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly imei?: OPTIONAL<IMEI>,
-        /**
-         * @summary `ms_Classmark2`.
-         * @description
-         *
-         * MS Classmark 2 value part as in 3GPP TS 24.008. Discarded by HLR if
-         * received from SGSN or MME (via IWF).
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly ms_Classmark2?: OPTIONAL<MS_Classmark2>,
-        /**
-         * @summary `gprs_MS_Class`.
-         * @description
-         *
-         * GPRS MS class (network and radio-access capability). Discarded by HLR
-         * if received from a VLR.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly gprs_MS_Class?: OPTIONAL<GPRSMSClass>,
-        /**
-         * @summary `mnpInfoRes`.
-         * @description
-         *
-         * Mobile Number Portability information (3GPP TS 23.078 and 23.066).
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.3.93).
-         *
-         * @public
-         * @readonly
-         */
-        readonly mnpInfoRes?: OPTIONAL<MNPInfoRes>,
-        /**
-         * @summary `imsVoiceOverPS_SessionsIndication`.
-         * @description
-         *
-         * Whether IMS voice over PS is supported in the UE's current routing
-         * area. Present if the RA is known and T-ADS data were requested. Value
-         * `unknown` shall not be used in ProvideSubscriberInfoRes.
-         *
-         * (3GPP TS 29.002 V19.1.0 clauses 8.11.2.3 and 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly imsVoiceOverPS_SessionsIndication?: OPTIONAL<IMS_VoiceOverPS_SessionsInd>,
-        /**
-         * @summary `lastUE_ActivityTime`.
-         * @description
-         *
-         * Time of the UE's last radio contact. Present if T-ADS data were
-         * requested.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 8.11.2.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly lastUE_ActivityTime?: OPTIONAL<Time>,
-        /**
-         * @summary `lastRAT_Type`.
-         * @description
-         *
-         * RAT of the last radio contact. Present if T-ADS data were requested.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 8.11.2.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly lastRAT_Type?: OPTIONAL<Used_RAT_Type>,
-        /**
-         * @summary `eps_SubscriberState`.
-         * @description
-         *
-         * EPS subscriber state (same CHOICE as PS subscriber state).
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 8.11.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly eps_SubscriberState?: OPTIONAL<PS_SubscriberState>,
-        /**
-         * @summary `locationInformationEPS`.
-         * @description
-         *
-         * EPS location of the served subscriber, from the MME via IWF.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.2.30b).
-         *
-         * @public
-         * @readonly
-         */
-        readonly locationInformationEPS?: OPTIONAL<LocationInformationEPS>,
-        /**
-         * @summary `timeZone`.
-         * @description
-         *
-         * Time zone of the visited-network location where the UE is
-         * attached, including daylight-saving adjustment. Details in
-         * 3GPP TS 29.272.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 8.11.2.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly timeZone?: OPTIONAL<TimeZone>,
-        /**
-         * @summary `daylightSavingTime`.
-         * @description
-         *
-         * Daylight saving adjustment (0, +1, or +2 hours) of the
-         * visited-network time zone. Details in 3GPP TS 29.272.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 8.11.2.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly daylightSavingTime?: OPTIONAL<DaylightSavingTime>,
-        /**
-         * @summary `locationInformation5GS`.
-         * @description
-         *
-         * 5GS location. Should be absent if the UE did not access via 5GS and
-         * IM-SSF.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly locationInformation5GS?: OPTIONAL<LocationInformation5GS>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        locationInformation?: OPTIONAL<LocationInformation>,
+        subscriberState?: OPTIONAL<SubscriberState>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        locationInformationGPRS?: OPTIONAL<LocationInformationGPRS>,
+        ps_SubscriberState?: OPTIONAL<PS_SubscriberState>,
+        imei?: OPTIONAL<IMEI>,
+        ms_Classmark2?: OPTIONAL<MS_Classmark2>,
+        gprs_MS_Class?: OPTIONAL<GPRSMSClass>,
+        mnpInfoRes?: OPTIONAL<MNPInfoRes>,
+        imsVoiceOverPS_SessionsIndication?: OPTIONAL<IMS_VoiceOverPS_SessionsInd>,
+        lastUE_ActivityTime?: OPTIONAL<Time>,
+        lastRAT_Type?: OPTIONAL<Used_RAT_Type>,
+        eps_SubscriberState?: OPTIONAL<PS_SubscriberState>,
+        locationInformationEPS?: OPTIONAL<LocationInformationEPS>,
+        timeZone?: OPTIONAL<TimeZone>,
+        daylightSavingTime?: OPTIONAL<DaylightSavingTime>,
+        locationInformation5GS?: OPTIONAL<LocationInformation5GS>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.locationInformation = locationInformation;
+        this.subscriberState = subscriberState;
+        this.extensionContainer = extensionContainer;
+        this.locationInformationGPRS = locationInformationGPRS;
+        this.ps_SubscriberState = ps_SubscriberState;
+        this.imei = imei;
+        this.ms_Classmark2 = ms_Classmark2;
+        this.gprs_MS_Class = gprs_MS_Class;
+        this.mnpInfoRes = mnpInfoRes;
+        this.imsVoiceOverPS_SessionsIndication = imsVoiceOverPS_SessionsIndication;
+        this.lastUE_ActivityTime = lastUE_ActivityTime;
+        this.lastRAT_Type = lastRAT_Type;
+        this.eps_SubscriberState = eps_SubscriberState;
+        this.locationInformationEPS = locationInformationEPS;
+        this.timeZone = timeZone;
+        this.daylightSavingTime = daylightSavingTime;
+        this.locationInformation5GS = locationInformation5GS;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a SubscriberInfo

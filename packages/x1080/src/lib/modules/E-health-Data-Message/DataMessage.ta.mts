@@ -46,75 +46,91 @@ import {
  *
  */
 export class DataMessage {
+    /**
+     * @summary `quantity`.
+     * @description
+     *
+     * `QUANTITY.&id` of the measured quantity, from the
+     * `Quantities` parameter set.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly quantity: OBJECT_IDENTIFIER;
+    /**
+     * @summary `unit`.
+     * @description
+     *
+     * Optional `UNIT.&id` from that quantity's `&Units`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly unit: OPTIONAL<OBJECT_IDENTIFIER>;
+    /**
+     * @summary `symbol_`.
+     * @description
+     *
+     * Optional `SYMBOLS.&id` from that unit's `&symbols`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly symbol_: OPTIONAL<OBJECT_IDENTIFIER>;
+    /**
+     * @summary `method`.
+     * @description
+     *
+     * Measurement/method OID (under `id-methods` arcs).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly method: OBJECT_IDENTIFIER;
+    /**
+     * @summary `value`.
+     * @description
+     *
+     * Measured value.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly value: REAL;
+    /**
+     * @summary `normalValues`.
+     * @description
+     *
+     * Optional reference range(s) and conditions for this quantity.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly normalValues?: OPTIONAL<NormalValues>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `quantity`.
-         * @description
-         *
-         * `QUANTITY.&id` of the measured quantity, from the
-         * `Quantities` parameter set.
-         *
-         * @public
-         * @readonly
-         */
-        readonly quantity: OBJECT_IDENTIFIER,
-        /**
-         * @summary `unit`.
-         * @description
-         *
-         * Optional `UNIT.&id` from that quantity's `&Units`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly unit: OPTIONAL<OBJECT_IDENTIFIER>,
-        /**
-         * @summary `symbol_`.
-         * @description
-         *
-         * Optional `SYMBOLS.&id` from that unit's `&symbols`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly symbol_: OPTIONAL<OBJECT_IDENTIFIER>,
-        /**
-         * @summary `method`.
-         * @description
-         *
-         * Measurement/method OID (under `id-methods` arcs).
-         *
-         * @public
-         * @readonly
-         */
-        readonly method: OBJECT_IDENTIFIER,
-        /**
-         * @summary `value`.
-         * @description
-         *
-         * Measured value.
-         *
-         * @public
-         * @readonly
-         */
-        readonly value: REAL,
-        /**
-         * @summary `normalValues`.
-         * @description
-         *
-         * Optional reference range(s) and conditions for this quantity.
-         *
-         * @public
-         * @readonly
-         */
-        readonly normalValues?: OPTIONAL<NormalValues>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        quantity: OBJECT_IDENTIFIER,
+        unit: OPTIONAL<OBJECT_IDENTIFIER>,
+        symbol_: OPTIONAL<OBJECT_IDENTIFIER>,
+        method: OBJECT_IDENTIFIER,
+        value: REAL,
+        normalValues?: OPTIONAL<NormalValues>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.quantity = quantity;
+        this.unit = unit;
+        this.symbol_ = symbol_;
+        this.method = method;
+        this.value = value;
+        this.normalValues = normalValues;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a DataMessage

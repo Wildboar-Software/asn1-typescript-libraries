@@ -37,43 +37,51 @@ import { EntryContent, _decode_EntryContent, _encode_EntryContent } from "../ISO
  */
 export
 class JournalEntry {
+    /**
+     * @summary `entryIdentifier`.
+     * @description
+     *
+     * `&entry`. Unique within the Journal; used when several
+     * entries share `&timeStamp`. ISO 9506-1:2003 §23.1.2.2,
+     * §23.2.1.2.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly entryIdentifier: OCTET_STRING;
+    /**
+     * @summary `originatingApplication`.
+     * @description
+     *
+     * Application Process that caused the entry to be created.
+     * ISO 9506-1:2003 §23.1.2.3, §23.2.1.2.3.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly originatingApplication: ApplicationReference;
+    /**
+     * @summary `entryContent`.
+     * @description
+     *
+     * Occurrence time and form (data/event vs annotation).
+     * ISO 9506-1:2003 §23.2.1.2.4–§23.2.1.2.7.
+     * ISO 9506-2:2003 §23.8.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly entryContent: EntryContent;
+
     constructor (
-        /**
-         * @summary `entryIdentifier`.
-         * @description
-         *
-         * `&entry`. Unique within the Journal; used when several
-         * entries share `&timeStamp`. ISO 9506-1:2003 §23.1.2.2,
-         * §23.2.1.2.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly entryIdentifier: OCTET_STRING,
-        /**
-         * @summary `originatingApplication`.
-         * @description
-         *
-         * Application Process that caused the entry to be created.
-         * ISO 9506-1:2003 §23.1.2.3, §23.2.1.2.3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly originatingApplication: ApplicationReference,
-        /**
-         * @summary `entryContent`.
-         * @description
-         *
-         * Occurrence time and form (data/event vs annotation).
-         * ISO 9506-1:2003 §23.2.1.2.4–§23.2.1.2.7.
-         * ISO 9506-2:2003 §23.8.
-         *
-         * @public
-         * @readonly
-         */
-        readonly entryContent: EntryContent
-    ) {}
+        entryIdentifier: OCTET_STRING,
+        originatingApplication: ApplicationReference,
+        entryContent: EntryContent
+    ) {
+        this.entryIdentifier = entryIdentifier;
+        this.originatingApplication = originatingApplication;
+        this.entryContent = entryContent;
+    }
 
     /**
      * @summary Restructures an object into a JournalEntry

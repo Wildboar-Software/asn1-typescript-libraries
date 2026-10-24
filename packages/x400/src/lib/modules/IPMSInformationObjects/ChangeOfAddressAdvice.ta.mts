@@ -45,20 +45,26 @@ import {
  *
  */
 export class ChangeOfAddressAdvice {
+    /**
+     * @summary `new_address`.
+     * @public
+     * @readonly
+     */
+    public readonly new_address: ORDescriptor;
+    /**
+     * @summary `effective_from`.
+     * @public
+     * @readonly
+     */
+    public readonly effective_from?: OPTIONAL<Time>;
+
     constructor(
-        /**
-         * @summary `new_address`.
-         * @public
-         * @readonly
-         */
-        readonly new_address: ORDescriptor,
-        /**
-         * @summary `effective_from`.
-         * @public
-         * @readonly
-         */
-        readonly effective_from?: OPTIONAL<Time>
-    ) {}
+        new_address: ORDescriptor,
+        effective_from?: OPTIONAL<Time>
+    ) {
+        this.new_address = new_address;
+        this.effective_from = effective_from;
+    }
 
     /**
      * @summary Restructures an object into a ChangeOfAddressAdvice

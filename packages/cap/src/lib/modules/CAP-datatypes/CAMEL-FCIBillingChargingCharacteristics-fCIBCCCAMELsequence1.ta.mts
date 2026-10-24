@@ -27,44 +27,54 @@ import { AppendFreeFormatData, _enum_for_AppendFreeFormatData, overwrite, _decod
  *
  */
 export class CAMEL_FCIBillingChargingCharacteristics_fCIBCCCAMELsequence1 {
+    /**
+     * @summary `freeFormatData`.
+     * @description
+     *
+     * Free-format billing and/or charging characteristics.
+     * (3GPP TS 29.078 V19.0.0 clause 11.19).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly freeFormatData: OCTET_STRING;
+    /**
+     * @summary `partyToCharge`.
+     * @description
+     *
+     * Party to bill and/or charge. Sending Side LegID; default
+     * `sendingSideID:leg1`.
+     * (3GPP TS 29.078 V19.0.0 clauses 11.19 and 4.1.5).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly partyToCharge?: OPTIONAL<SendingSideID>;
+    /**
+     * @summary `appendFreeFormatData`.
+     * @description
+     *
+     * Whether previous FCI free format data is appended or overwritten.
+     * Default `overwrite`. See 3GPP TS 23.078.
+     * (3GPP TS 29.078 V19.0.0 clause 11.19).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly appendFreeFormatData?: OPTIONAL<AppendFreeFormatData>;
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `freeFormatData`.
-         * @description
-         *
-         * Free-format billing and/or charging characteristics.
-         * (3GPP TS 29.078 V19.0.0 clause 11.19).
-         *
-         * @public
-         * @readonly
-         */
-        readonly freeFormatData: OCTET_STRING,
-        /**
-         * @summary `partyToCharge`.
-         * @description
-         *
-         * Party to bill and/or charge. Sending Side LegID; default
-         * `sendingSideID:leg1`.
-         * (3GPP TS 29.078 V19.0.0 clauses 11.19 and 4.1.5).
-         *
-         * @public
-         * @readonly
-         */
-        readonly partyToCharge?: OPTIONAL<SendingSideID>,
-        /**
-         * @summary `appendFreeFormatData`.
-         * @description
-         *
-         * Whether previous FCI free format data is appended or overwritten.
-         * Default `overwrite`. See 3GPP TS 23.078.
-         * (3GPP TS 29.078 V19.0.0 clause 11.19).
-         *
-         * @public
-         * @readonly
-         */
-        readonly appendFreeFormatData?: OPTIONAL<AppendFreeFormatData>,
-        readonly _unrecognizedExtensionsList: _Element[] = [],
-    ) {}
+        freeFormatData: OCTET_STRING,
+        partyToCharge?: OPTIONAL<SendingSideID>,
+        appendFreeFormatData?: OPTIONAL<AppendFreeFormatData>,
+        _unrecognizedExtensionsList: _Element[] = [],
+    ) {
+        this.freeFormatData = freeFormatData;
+        this.partyToCharge = partyToCharge;
+        this.appendFreeFormatData = appendFreeFormatData;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     public static _from_object (_o: { [_K in keyof (CAMEL_FCIBillingChargingCharacteristics_fCIBCCCAMELsequence1)]: (CAMEL_FCIBillingChargingCharacteristics_fCIBCCCAMELsequence1)[_K] }): CAMEL_FCIBillingChargingCharacteristics_fCIBCCCAMELsequence1 {
         return new CAMEL_FCIBillingChargingCharacteristics_fCIBCCCAMELsequence1(_o.freeFormatData, _o.partyToCharge, _o.appendFreeFormatData, _o._unrecognizedExtensionsList);

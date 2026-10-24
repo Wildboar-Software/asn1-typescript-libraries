@@ -36,26 +36,32 @@ import { DOupdate, _decode_DOupdate, _encode_DOupdate } from "../ISO9041-VTP/DOu
  */
 export
 class ObjectUpdate_display {
+    /**
+     * @summary `doName`.
+     * @description
+     * Display-object name. Optional when the VTE has a single DO.
+     * ISO/IEC 9041-1:1997 §6.14, §12.1.
+     * @public
+     * @readonly
+     */
+    public readonly doName: OPTIONAL<PrintableString>;
+    /**
+     * @summary `updates`.
+     * @description
+     * Ordered `DOupdate` operations for this DO.
+     * ISO/IEC 9041-1:1997 §6.14, §12.1.
+     * @public
+     * @readonly
+     */
+    public readonly updates: DOupdate[];
+
     constructor (
-        /**
-         * @summary `doName`.
-         * @description
-         * Display-object name. Optional when the VTE has a single DO.
-         * ISO/IEC 9041-1:1997 §6.14, §12.1.
-         * @public
-         * @readonly
-         */
-        readonly doName: OPTIONAL<PrintableString>,
-        /**
-         * @summary `updates`.
-         * @description
-         * Ordered `DOupdate` operations for this DO.
-         * ISO/IEC 9041-1:1997 §6.14, §12.1.
-         * @public
-         * @readonly
-         */
-        readonly updates: DOupdate[]
-    ) {}
+        doName: OPTIONAL<PrintableString>,
+        updates: DOupdate[]
+    ) {
+        this.doName = doName;
+        this.updates = updates;
+    }
 
     /**
      * @summary Restructures an object into a ObjectUpdate_display

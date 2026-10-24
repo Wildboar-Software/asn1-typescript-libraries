@@ -61,52 +61,70 @@ import {
  *
  */
 export class SupplierInformation implements SupplierOrConsumer {
-    constructor(
-        /**
-         * @summary `ae_title`.
-         * @public
-         * @readonly
-         */
-        readonly ae_title: Name /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `address`.
-         * @public
-         * @readonly
-         */
-        readonly address: PresentationAddress /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `protocolInformation`.
-         * @public
-         * @readonly
-         */
-        readonly protocolInformation: OPTIONAL<
+    /**
+     * @summary `ae_title`.
+     * @public
+     * @readonly
+     */
+    public readonly ae_title: Name; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `address`.
+     * @public
+     * @readonly
+     */
+    public readonly address: PresentationAddress; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `protocolInformation`.
+     * @public
+     * @readonly
+     */
+    public readonly protocolInformation: OPTIONAL<
             ProtocolInformation[]
-        > /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `agreementID`.
-         * @public
-         * @readonly
-         */
-        readonly agreementID: OperationalBindingID /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `supplier_is_master`.
-         * @public
-         * @readonly
-         */
-        readonly supplier_is_master?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `non_supplying_master`.
-         * @public
-         * @readonly
-         */
-        readonly non_supplying_master?: OPTIONAL<AccessPoint>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        >; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `agreementID`.
+     * @public
+     * @readonly
+     */
+    public readonly agreementID: OperationalBindingID; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `supplier_is_master`.
+     * @public
+     * @readonly
+     */
+    public readonly supplier_is_master?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `non_supplying_master`.
+     * @public
+     * @readonly
+     */
+    public readonly non_supplying_master?: OPTIONAL<AccessPoint>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
+    constructor(
+        ae_title: Name,
+        address: PresentationAddress,
+        protocolInformation: OPTIONAL<
+            ProtocolInformation[]
+        >,
+        agreementID: OperationalBindingID,
+        supplier_is_master?: OPTIONAL<BOOLEAN>,
+        non_supplying_master?: OPTIONAL<AccessPoint>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.ae_title = ae_title;
+        this.address = address;
+        this.protocolInformation = protocolInformation;
+        this.agreementID = agreementID;
+        this.supplier_is_master = supplier_is_master;
+        this.non_supplying_master = non_supplying_master;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a SupplierInformation

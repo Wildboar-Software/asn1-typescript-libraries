@@ -44,75 +44,91 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class GetPresenceStateResult {
+    /**
+     * @summary `presenceState`.
+     * @description
+     *
+     * Presence values (ECMA-269 §12.2.24): available, away, busy, calling,
+     * dnd, meeting, offline, unknown (default), vacation,
+     * applicationSpecified0–10. 9th-edition feature. `dnd` does not
+     * activate Do Not Disturb (§22.1.21.3.4 FR 1).
+     * @public
+     * @readonly
+     */
+    public readonly presenceState: PresenceState;
+    /**
+     * @summary `fromTime`.
+     * @description
+     *
+     * Start date and time of the presence state.
+     * @public
+     * @readonly
+     */
+    public readonly fromTime?: OPTIONAL<TimeInfo>;
+    /**
+     * @summary `untilTime`.
+     * @description
+     *
+     * End date and time of the presence state.
+     * @public
+     * @readonly
+     */
+    public readonly untilTime?: OPTIONAL<TimeInfo>;
+    /**
+     * @summary `place`.
+     * @description
+     *
+     * Natural-language description of current location.
+     * @public
+     * @readonly
+     */
+    public readonly place?: OPTIONAL<OCTET_STRING>;
+    /**
+     * @summary `mood`.
+     * @description
+     *
+     * Natural-language description of current mood.
+     * @public
+     * @readonly
+     */
+    public readonly mood?: OPTIONAL<OCTET_STRING>;
+    /**
+     * @summary `namedPresenceState`.
+     * @description
+     *
+     * Natural-language description of availability.
+     * @public
+     * @readonly
+     */
+    public readonly namedPresenceState?: OPTIONAL<OCTET_STRING>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `presenceState`.
-         * @description
-         *
-         * Presence values (ECMA-269 §12.2.24): available, away, busy, calling,
-         * dnd, meeting, offline, unknown (default), vacation,
-         * applicationSpecified0–10. 9th-edition feature. `dnd` does not
-         * activate Do Not Disturb (§22.1.21.3.4 FR 1).
-         * @public
-         * @readonly
-         */
-        readonly presenceState: PresenceState,
-        /**
-         * @summary `fromTime`.
-         * @description
-         *
-         * Start date and time of the presence state.
-         * @public
-         * @readonly
-         */
-        readonly fromTime?: OPTIONAL<TimeInfo>,
-        /**
-         * @summary `untilTime`.
-         * @description
-         *
-         * End date and time of the presence state.
-         * @public
-         * @readonly
-         */
-        readonly untilTime?: OPTIONAL<TimeInfo>,
-        /**
-         * @summary `place`.
-         * @description
-         *
-         * Natural-language description of current location.
-         * @public
-         * @readonly
-         */
-        readonly place?: OPTIONAL<OCTET_STRING>,
-        /**
-         * @summary `mood`.
-         * @description
-         *
-         * Natural-language description of current mood.
-         * @public
-         * @readonly
-         */
-        readonly mood?: OPTIONAL<OCTET_STRING>,
-        /**
-         * @summary `namedPresenceState`.
-         * @description
-         *
-         * Natural-language description of availability.
-         * @public
-         * @readonly
-         */
-        readonly namedPresenceState?: OPTIONAL<OCTET_STRING>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        presenceState: PresenceState,
+        fromTime?: OPTIONAL<TimeInfo>,
+        untilTime?: OPTIONAL<TimeInfo>,
+        place?: OPTIONAL<OCTET_STRING>,
+        mood?: OPTIONAL<OCTET_STRING>,
+        namedPresenceState?: OPTIONAL<OCTET_STRING>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.presenceState = presenceState;
+        this.fromTime = fromTime;
+        this.untilTime = untilTime;
+        this.place = place;
+        this.mood = mood;
+        this.namedPresenceState = namedPresenceState;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a GetPresenceStateResult

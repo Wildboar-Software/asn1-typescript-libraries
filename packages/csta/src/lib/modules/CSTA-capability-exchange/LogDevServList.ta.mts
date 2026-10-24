@@ -55,80 +55,98 @@ import { LocationServicesServList, _decode_LocationServicesServList, _encode_Loc
  */
 export
 class LogDevServList {
+    /**
+     * @summary `callControlServList`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmaps for this service category at the logical device;
+     * omit if unsupported (ECMA-269 §13.1.2).
+     */
+    public readonly callControlServList?: OPTIONAL<CallControlServList>;
+    /**
+     * @summary `callAssociatedServList`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmaps for this service category at the logical device;
+     * omit if unsupported (ECMA-269 §13.1.2).
+     */
+    public readonly callAssociatedServList?: OPTIONAL<CallAssociatedServList>;
+    /**
+     * @summary `logicalServList`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmaps for this service category at the logical device;
+     * omit if unsupported (ECMA-269 §13.1.2).
+     */
+    public readonly logicalServList?: OPTIONAL<LogicalServList>;
+    /**
+     * @summary `mediaServList`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmaps for this service category at the logical device;
+     * omit if unsupported (ECMA-269 §13.1.2).
+     */
+    public readonly mediaServList?: OPTIONAL<MediaServList>;
+    /**
+     * @summary `iOServicesServList`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmaps for this service category at the logical device;
+     * omit if unsupported (ECMA-269 §13.1.2).
+     */
+    public readonly iOServicesServList?: OPTIONAL<IOServicesServList>;
+    /**
+     * @summary `dataCollectionServList`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmaps for this service category at the logical device;
+     * omit if unsupported (ECMA-269 §13.1.2).
+     */
+    public readonly dataCollectionServList?: OPTIONAL<DataCollectionServList>;
+    /**
+     * @summary `voiceUnitServList`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmaps for this service category at the logical device;
+     * omit if unsupported (ECMA-269 §13.1.2).
+     */
+    public readonly voiceUnitServList?: OPTIONAL<VoiceUnitServList>;
+    /**
+     * @summary `locationServicesServList`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmaps for this service category at the logical device;
+     * omit if unsupported (ECMA-269 §13.1.2).
+     */
+    public readonly locationServicesServList?: OPTIONAL<LocationServicesServList>;
+
     constructor (
-        /**
-         * @summary `callControlServList`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmaps for this service category at the logical device;
-         * omit if unsupported (ECMA-269 §13.1.2).
-         */
-        readonly callControlServList?: OPTIONAL<CallControlServList>,
-        /**
-         * @summary `callAssociatedServList`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmaps for this service category at the logical device;
-         * omit if unsupported (ECMA-269 §13.1.2).
-         */
-        readonly callAssociatedServList?: OPTIONAL<CallAssociatedServList>,
-        /**
-         * @summary `logicalServList`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmaps for this service category at the logical device;
-         * omit if unsupported (ECMA-269 §13.1.2).
-         */
-        readonly logicalServList?: OPTIONAL<LogicalServList>,
-        /**
-         * @summary `mediaServList`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmaps for this service category at the logical device;
-         * omit if unsupported (ECMA-269 §13.1.2).
-         */
-        readonly mediaServList?: OPTIONAL<MediaServList>,
-        /**
-         * @summary `iOServicesServList`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmaps for this service category at the logical device;
-         * omit if unsupported (ECMA-269 §13.1.2).
-         */
-        readonly iOServicesServList?: OPTIONAL<IOServicesServList>,
-        /**
-         * @summary `dataCollectionServList`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmaps for this service category at the logical device;
-         * omit if unsupported (ECMA-269 §13.1.2).
-         */
-        readonly dataCollectionServList?: OPTIONAL<DataCollectionServList>,
-        /**
-         * @summary `voiceUnitServList`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmaps for this service category at the logical device;
-         * omit if unsupported (ECMA-269 §13.1.2).
-         */
-        readonly voiceUnitServList?: OPTIONAL<VoiceUnitServList>,
-        /**
-         * @summary `locationServicesServList`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmaps for this service category at the logical device;
-         * omit if unsupported (ECMA-269 §13.1.2).
-         */
-        readonly locationServicesServList?: OPTIONAL<LocationServicesServList>
-    ) {}
+        callControlServList?: OPTIONAL<CallControlServList>,
+        callAssociatedServList?: OPTIONAL<CallAssociatedServList>,
+        logicalServList?: OPTIONAL<LogicalServList>,
+        mediaServList?: OPTIONAL<MediaServList>,
+        iOServicesServList?: OPTIONAL<IOServicesServList>,
+        dataCollectionServList?: OPTIONAL<DataCollectionServList>,
+        voiceUnitServList?: OPTIONAL<VoiceUnitServList>,
+        locationServicesServList?: OPTIONAL<LocationServicesServList>
+    ) {
+        this.callControlServList = callControlServList;
+        this.callAssociatedServList = callAssociatedServList;
+        this.logicalServList = logicalServList;
+        this.mediaServList = mediaServList;
+        this.iOServicesServList = iOServicesServList;
+        this.dataCollectionServList = dataCollectionServList;
+        this.voiceUnitServList = voiceUnitServList;
+        this.locationServicesServList = locationServicesServList;
+    }
 
     /**
      * @summary Restructures an object into a LogDevServList

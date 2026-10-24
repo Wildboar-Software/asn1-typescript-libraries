@@ -44,26 +44,34 @@ import {
  *
  */
 export class InterchangeRecipientField {
+    /**
+     * @summary `recipient_identification`.
+     * @public
+     * @readonly
+     */
+    public readonly recipient_identification: IdentificationCode;
+    /**
+     * @summary `identification_code_qualifier`.
+     * @public
+     * @readonly
+     */
+    public readonly identification_code_qualifier?: OPTIONAL<IdentificationCodeQualifier>;
+    /**
+     * @summary `routing_address`.
+     * @public
+     * @readonly
+     */
+    public readonly routing_address?: OPTIONAL<RoutingAddress>;
+
     constructor(
-        /**
-         * @summary `recipient_identification`.
-         * @public
-         * @readonly
-         */
-        readonly recipient_identification: IdentificationCode,
-        /**
-         * @summary `identification_code_qualifier`.
-         * @public
-         * @readonly
-         */
-        readonly identification_code_qualifier?: OPTIONAL<IdentificationCodeQualifier>,
-        /**
-         * @summary `routing_address`.
-         * @public
-         * @readonly
-         */
-        readonly routing_address?: OPTIONAL<RoutingAddress>
-    ) {}
+        recipient_identification: IdentificationCode,
+        identification_code_qualifier?: OPTIONAL<IdentificationCodeQualifier>,
+        routing_address?: OPTIONAL<RoutingAddress>
+    ) {
+        this.recipient_identification = recipient_identification;
+        this.identification_code_qualifier = identification_code_qualifier;
+        this.routing_address = routing_address;
+    }
 
     /**
      * @summary Restructures an object into a InterchangeRecipientField

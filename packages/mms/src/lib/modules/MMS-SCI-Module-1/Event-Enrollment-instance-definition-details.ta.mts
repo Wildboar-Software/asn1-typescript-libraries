@@ -66,122 +66,146 @@ import { Event_Enrollment_instance_definition_details_displayEnhancement, _decod
  */
 export
 class Event_Enrollment_instance_definition_details {
+    /**
+     * @summary `accessControl`.
+     * @description
+     *
+     * SCI encoding of the object's ACL (ISO 9506-1:2003 §9). ISO
+     * 9506-2:2003 Annex B.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly accessControl: Access_Control_List_instance;
+    /**
+     * @summary `eeClass`.
+     * @description
+     *
+     * modifier or notification. ISO 9506-1:2003 §21.1.1.3; ISO 9506-2:2003
+     * Annex B.1.14.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly eeClass: EE_Class;
+    /**
+     * @summary `eventCondition`.
+     * @description
+     *
+     * Configured Event Condition (PI monitor or semaphore match). ISO
+     * 9506-2:2003 Annex B.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly eventCondition: Event_Condition_instance;
+    /**
+     * @summary `ecTransitions`.
+     * @description
+     *
+     * Transitions that invoke processing. ISO 9506-1:2003 §21.1.1.5; ISO
+     * 9506-2:2003 Annex B.1.14.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ecTransitions: Transitions;
+    /**
+     * @summary `remainingDelay`.
+     * @description
+     *
+     * Wait time or forever (modifier class). ISO 9506-1:2003 §21.1.1.8; ISO
+     * 9506-2:2003 Annex B.1.14.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly remainingDelay: OPTIONAL<Event_Enrollment_instance_definition_details_remainingDelay>;
+    /**
+     * @summary `eventAction`.
+     * @description
+     *
+     * Configured Event Action (PI monitor). ISO 9506-1:2003 §12.1.1.8; ISO
+     * 9506-2:2003 Annex B.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly eventAction: OPTIONAL<Event_Action_instance>;
+    /**
+     * @summary `duration`.
+     * @description
+     *
+     * current or permanent. ISO 9506-1:2003 §21.1.1.11; ISO 9506-2:2003
+     * Annex B.1.14.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly duration: OPTIONAL<EE_Duration>;
+    /**
+     * @summary `clientApplication`.
+     * @description
+     *
+     * Enrolled / originating application. ISO 9506-2:2003 Annex B.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly clientApplication: OPTIONAL<ApplicationReference>;
+    /**
+     * @summary `aaRule`.
+     * @description
+     *
+     * Alarm acknowledgement rule. ISO 9506-1:2003 §21.1.1.13; ISO
+     * 9506-2:2003 Annex B.1.14.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly aaRule: OPTIONAL<AlarmAckRule>;
+    /**
+     * @summary `displayEnhancement`.
+     * @description
+     *
+     * text / number / none (cspi, des/dei). ISO 9506-2:2003 Annex B.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly displayEnhancement: Event_Enrollment_instance_definition_details_displayEnhancement;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `accessControl`.
-         * @description
-         *
-         * SCI encoding of the object's ACL (ISO 9506-1:2003 §9). ISO
-         * 9506-2:2003 Annex B.
-         *
-         * @public
-         * @readonly
-         */
-        readonly accessControl: Access_Control_List_instance,
-        /**
-         * @summary `eeClass`.
-         * @description
-         *
-         * modifier or notification. ISO 9506-1:2003 §21.1.1.3; ISO 9506-2:2003
-         * Annex B.1.14.
-         *
-         * @public
-         * @readonly
-         */
-        readonly eeClass: EE_Class,
-        /**
-         * @summary `eventCondition`.
-         * @description
-         *
-         * Configured Event Condition (PI monitor or semaphore match). ISO
-         * 9506-2:2003 Annex B.
-         *
-         * @public
-         * @readonly
-         */
-        readonly eventCondition: Event_Condition_instance,
-        /**
-         * @summary `ecTransitions`.
-         * @description
-         *
-         * Transitions that invoke processing. ISO 9506-1:2003 §21.1.1.5; ISO
-         * 9506-2:2003 Annex B.1.14.
-         *
-         * @public
-         * @readonly
-         */
-        readonly ecTransitions: Transitions,
-        /**
-         * @summary `remainingDelay`.
-         * @description
-         *
-         * Wait time or forever (modifier class). ISO 9506-1:2003 §21.1.1.8; ISO
-         * 9506-2:2003 Annex B.1.14.
-         *
-         * @public
-         * @readonly
-         */
-        readonly remainingDelay: OPTIONAL<Event_Enrollment_instance_definition_details_remainingDelay>,
-        /**
-         * @summary `eventAction`.
-         * @description
-         *
-         * Configured Event Action (PI monitor). ISO 9506-1:2003 §12.1.1.8; ISO
-         * 9506-2:2003 Annex B.
-         *
-         * @public
-         * @readonly
-         */
-        readonly eventAction: OPTIONAL<Event_Action_instance>,
-        /**
-         * @summary `duration`.
-         * @description
-         *
-         * current or permanent. ISO 9506-1:2003 §21.1.1.11; ISO 9506-2:2003
-         * Annex B.1.14.
-         *
-         * @public
-         * @readonly
-         */
-        readonly duration: OPTIONAL<EE_Duration>,
-        /**
-         * @summary `clientApplication`.
-         * @description
-         *
-         * Enrolled / originating application. ISO 9506-2:2003 Annex B.
-         *
-         * @public
-         * @readonly
-         */
-        readonly clientApplication: OPTIONAL<ApplicationReference>,
-        /**
-         * @summary `aaRule`.
-         * @description
-         *
-         * Alarm acknowledgement rule. ISO 9506-1:2003 §21.1.1.13; ISO
-         * 9506-2:2003 Annex B.1.14.
-         *
-         * @public
-         * @readonly
-         */
-        readonly aaRule: OPTIONAL<AlarmAckRule>,
-        /**
-         * @summary `displayEnhancement`.
-         * @description
-         *
-         * text / number / none (cspi, des/dei). ISO 9506-2:2003 Annex B.
-         *
-         * @public
-         * @readonly
-         */
-        readonly displayEnhancement: Event_Enrollment_instance_definition_details_displayEnhancement,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        accessControl: Access_Control_List_instance,
+        eeClass: EE_Class,
+        eventCondition: Event_Condition_instance,
+        ecTransitions: Transitions,
+        remainingDelay: OPTIONAL<Event_Enrollment_instance_definition_details_remainingDelay>,
+        eventAction: OPTIONAL<Event_Action_instance>,
+        duration: OPTIONAL<EE_Duration>,
+        clientApplication: OPTIONAL<ApplicationReference>,
+        aaRule: OPTIONAL<AlarmAckRule>,
+        displayEnhancement: Event_Enrollment_instance_definition_details_displayEnhancement,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.accessControl = accessControl;
+        this.eeClass = eeClass;
+        this.eventCondition = eventCondition;
+        this.ecTransitions = ecTransitions;
+        this.remainingDelay = remainingDelay;
+        this.eventAction = eventAction;
+        this.duration = duration;
+        this.clientApplication = clientApplication;
+        this.aaRule = aaRule;
+        this.displayEnhancement = displayEnhancement;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a Event_Enrollment_instance_definition_details

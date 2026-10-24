@@ -46,38 +46,50 @@ import {
  *
  */
 export class X509AttributeCertificateAttributes {
+    /**
+     * @summary `value`.
+     * @public
+     * @readonly
+     */
+    public readonly value: ObjectValue<AttributeCertificate>;
+    /**
+     * @summary `issuer`.
+     * @public
+     * @readonly
+     */
+    public readonly issuer?: OPTIONAL<GeneralNames>;
+    /**
+     * @summary `serialNumber`.
+     * @public
+     * @readonly
+     */
+    public readonly serialNumber?: OPTIONAL<CertificateSerialNumber>;
+    /**
+     * @summary `attrTypes`.
+     * @public
+     * @readonly
+     */
+    public readonly attrTypes?: OPTIONAL<OBJECT_IDENTIFIER[]>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `value`.
-         * @public
-         * @readonly
-         */
-        readonly value: ObjectValue<AttributeCertificate>,
-        /**
-         * @summary `issuer`.
-         * @public
-         * @readonly
-         */
-        readonly issuer?: OPTIONAL<GeneralNames>,
-        /**
-         * @summary `serialNumber`.
-         * @public
-         * @readonly
-         */
-        readonly serialNumber?: OPTIONAL<CertificateSerialNumber>,
-        /**
-         * @summary `attrTypes`.
-         * @public
-         * @readonly
-         */
-        readonly attrTypes?: OPTIONAL<OBJECT_IDENTIFIER[]>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        value: ObjectValue<AttributeCertificate>,
+        issuer?: OPTIONAL<GeneralNames>,
+        serialNumber?: OPTIONAL<CertificateSerialNumber>,
+        attrTypes?: OPTIONAL<OBJECT_IDENTIFIER[]>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.value = value;
+        this.issuer = issuer;
+        this.serialNumber = serialNumber;
+        this.attrTypes = attrTypes;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a X509AttributeCertificateAttributes

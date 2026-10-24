@@ -41,40 +41,48 @@ import {
  *
  */
 export class ObserverIdentification {
+    /**
+     * @summary `scheme`.
+     * @description
+     *
+     * `MEDICAL-STAFF-SCHEME.&id` of the numbering scheme.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly scheme: OBJECT_IDENTIFIER;
+    /**
+     * @summary `schemeName`.
+     * @description
+     *
+     * Optional `MEDICAL-STAFF-SCHEME.&name`. ISO646String is not
+     * necessarily unique.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly schemeName: OPTIONAL<SchemeName>;
+    /**
+     * @summary `observerId`.
+     * @description
+     *
+     * `MEDICAL-STAFF-SCHEME.&Observer`. Normally role + name;
+     * unlikely to contain unique identification.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly observerId: _Element;
+
     constructor(
-        /**
-         * @summary `scheme`.
-         * @description
-         *
-         * `MEDICAL-STAFF-SCHEME.&id` of the numbering scheme.
-         *
-         * @public
-         * @readonly
-         */
-        readonly scheme: OBJECT_IDENTIFIER,
-        /**
-         * @summary `schemeName`.
-         * @description
-         *
-         * Optional `MEDICAL-STAFF-SCHEME.&name`. ISO646String is not
-         * necessarily unique.
-         *
-         * @public
-         * @readonly
-         */
-        readonly schemeName: OPTIONAL<SchemeName>,
-        /**
-         * @summary `observerId`.
-         * @description
-         *
-         * `MEDICAL-STAFF-SCHEME.&Observer`. Normally role + name;
-         * unlikely to contain unique identification.
-         *
-         * @public
-         * @readonly
-         */
-        readonly observerId: _Element
-    ) {}
+        scheme: OBJECT_IDENTIFIER,
+        schemeName: OPTIONAL<SchemeName>,
+        observerId: _Element
+    ) {
+        this.scheme = scheme;
+        this.schemeName = schemeName;
+        this.observerId = observerId;
+    }
 
     /**
      * @summary Restructures an object into a ObserverIdentification

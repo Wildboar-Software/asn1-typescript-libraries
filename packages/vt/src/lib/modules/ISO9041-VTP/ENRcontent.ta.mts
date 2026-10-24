@@ -37,34 +37,42 @@ import { _decode_Result3, _encode_Result3, type Result3 } from "../G/Result3.ta.
  */
 export
 class ENRcontent {
+    /**
+     * @summary `result`.
+     * @description
+     * Result of end-negotiation. ISO/IEC 9041-1:1997 §6.10.
+     * @public
+     * @readonly
+     */
+    public readonly result: Result3;
+    /**
+     * @summary `vteChoice`.
+     * @description
+     * TRUE = draft; FALSE = current. ISO/IEC 9041-1:1997
+     * §6.10, §12.1.
+     * @public
+     * @readonly
+     */
+    public readonly vteChoice?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `retList`.
+     * @description
+     * DO/CO names agreed to be retained. ISO/IEC
+     * 9041-1:1997 §6.10.
+     * @public
+     * @readonly
+     */
+    public readonly retList?: OPTIONAL<PrintableString[]>;
+
     constructor (
-        /**
-         * @summary `result`.
-         * @description
-         * Result of end-negotiation. ISO/IEC 9041-1:1997 §6.10.
-         * @public
-         * @readonly
-         */
-        readonly result: Result3,
-        /**
-         * @summary `vteChoice`.
-         * @description
-         * TRUE = draft; FALSE = current. ISO/IEC 9041-1:1997
-         * §6.10, §12.1.
-         * @public
-         * @readonly
-         */
-        readonly vteChoice?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `retList`.
-         * @description
-         * DO/CO names agreed to be retained. ISO/IEC
-         * 9041-1:1997 §6.10.
-         * @public
-         * @readonly
-         */
-        readonly retList?: OPTIONAL<PrintableString[]>
-    ) {}
+        result: Result3,
+        vteChoice?: OPTIONAL<BOOLEAN>,
+        retList?: OPTIONAL<PrintableString[]>
+    ) {
+        this.result = result;
+        this.vteChoice = vteChoice;
+        this.retList = retList;
+    }
 
     /**
      * @summary Restructures an object into a ENRcontent

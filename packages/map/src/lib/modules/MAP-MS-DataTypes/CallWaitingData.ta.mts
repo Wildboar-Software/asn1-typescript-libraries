@@ -29,30 +29,38 @@ import { Ext_CwFeatureList, _decode_Ext_CwFeatureList, _encode_Ext_CwFeatureList
  */
 export
 class CallWaitingData {
+    /**
+     * @summary `cwFeatureList`.
+     * @public
+     * @readonly
+     */
+    public readonly cwFeatureList: Ext_CwFeatureList;
+    /**
+     * @summary `notificationToCSE`.
+     * @description
+     *
+     * Notification to CSE flag (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly notificationToCSE?: OPTIONAL<NULL>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `cwFeatureList`.
-         * @public
-         * @readonly
-         */
-        readonly cwFeatureList: Ext_CwFeatureList,
-        /**
-         * @summary `notificationToCSE`.
-         * @description
-         *
-         * Notification to CSE flag (3GPP TS 29.002 V19.1.0 clause 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly notificationToCSE?: OPTIONAL<NULL>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        cwFeatureList: Ext_CwFeatureList,
+        notificationToCSE?: OPTIONAL<NULL>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.cwFeatureList = cwFeatureList;
+        this.notificationToCSE = notificationToCSE;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a CallWaitingData

@@ -43,53 +43,63 @@ import {
  *
  */
 export class PBMParameter {
+    /**
+     * @summary `salt`.
+     * @description
+     *
+     * Random value for MAC key computation; SHOULD be at least 8
+     * octets ([RFC 4211 §4.4](https://datatracker.ietf.org/doc/html/rfc4211#section-4.4)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly salt: OCTET_STRING;
+    /**
+     * @summary `owf`.
+     * @description
+     *
+     * One-way function for key derivation; all implementations MUST
+     * support SHA-1 ([RFC 4211 §4.4](https://datatracker.ietf.org/doc/html/rfc4211#section-4.4)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly owf: AlgorithmIdentifier;
+    /**
+     * @summary `iterationCount`.
+     * @description
+     *
+     * Hash iterations in key derivation; MUST be at least 100
+     * (higher minima such as 1000 are often suggested)
+     * ([RFC 4211 §4.4](https://datatracker.ietf.org/doc/html/rfc4211#section-4.4)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly iterationCount: INTEGER;
+    /**
+     * @summary `mac`.
+     * @description
+     *
+     * MAC algorithm; all implementations MUST support HMAC-SHA1
+     * ([RFC 4211 §4.4](https://datatracker.ietf.org/doc/html/rfc4211#section-4.4)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mac: AlgorithmIdentifier;
+
     constructor(
-        /**
-         * @summary `salt`.
-         * @description
-         *
-         * Random value for MAC key computation; SHOULD be at least 8
-         * octets ([RFC 4211 §4.4](https://datatracker.ietf.org/doc/html/rfc4211#section-4.4)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly salt: OCTET_STRING,
-        /**
-         * @summary `owf`.
-         * @description
-         *
-         * One-way function for key derivation; all implementations MUST
-         * support SHA-1 ([RFC 4211 §4.4](https://datatracker.ietf.org/doc/html/rfc4211#section-4.4)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly owf: AlgorithmIdentifier,
-        /**
-         * @summary `iterationCount`.
-         * @description
-         *
-         * Hash iterations in key derivation; MUST be at least 100
-         * (higher minima such as 1000 are often suggested)
-         * ([RFC 4211 §4.4](https://datatracker.ietf.org/doc/html/rfc4211#section-4.4)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly iterationCount: INTEGER,
-        /**
-         * @summary `mac`.
-         * @description
-         *
-         * MAC algorithm; all implementations MUST support HMAC-SHA1
-         * ([RFC 4211 §4.4](https://datatracker.ietf.org/doc/html/rfc4211#section-4.4)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly mac: AlgorithmIdentifier
-    ) {}
+        salt: OCTET_STRING,
+        owf: AlgorithmIdentifier,
+        iterationCount: INTEGER,
+        mac: AlgorithmIdentifier
+    ) {
+        this.salt = salt;
+        this.owf = owf;
+        this.iterationCount = iterationCount;
+        this.mac = mac;
+    }
 
     /**
      * @summary Restructures an object into a PBMParameter

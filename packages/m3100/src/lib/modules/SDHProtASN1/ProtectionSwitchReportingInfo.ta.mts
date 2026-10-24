@@ -36,20 +36,26 @@ import {
  *
  */
 export class ProtectionSwitchReportingInfo {
+    /**
+     * @summary `protectingUnit`.
+     * @public
+     * @readonly
+     */
+    public readonly protectingUnit: RelativeDistinguishedName;
+    /**
+     * @summary `additionalInfo`.
+     * @public
+     * @readonly
+     */
+    public readonly additionalInfo: AdditionalInformation;
+
     constructor(
-        /**
-         * @summary `protectingUnit`.
-         * @public
-         * @readonly
-         */
-        readonly protectingUnit: RelativeDistinguishedName,
-        /**
-         * @summary `additionalInfo`.
-         * @public
-         * @readonly
-         */
-        readonly additionalInfo: AdditionalInformation
-    ) {}
+        protectingUnit: RelativeDistinguishedName,
+        additionalInfo: AdditionalInformation
+    ) {
+        this.protectingUnit = protectingUnit;
+        this.additionalInfo = additionalInfo;
+    }
 
     /**
      * @summary Restructures an object into a ProtectionSwitchReportingInfo

@@ -24,26 +24,34 @@ import * as $ from "@wildboar/asn1/functional";
  *
  */
 export class OtherPrimeInfo {
+    /**
+     * @summary `prime`.
+     * @public
+     * @readonly
+     */
+    public readonly prime: OCTET_STRING;
+    /**
+     * @summary `exponent`.
+     * @public
+     * @readonly
+     */
+    public readonly exponent: OCTET_STRING;
+    /**
+     * @summary `coefficient`.
+     * @public
+     * @readonly
+     */
+    public readonly coefficient: OCTET_STRING;
+
     constructor(
-        /**
-         * @summary `prime`.
-         * @public
-         * @readonly
-         */
-        readonly prime: OCTET_STRING,
-        /**
-         * @summary `exponent`.
-         * @public
-         * @readonly
-         */
-        readonly exponent: OCTET_STRING,
-        /**
-         * @summary `coefficient`.
-         * @public
-         * @readonly
-         */
-        readonly coefficient: OCTET_STRING
-    ) {}
+        prime: OCTET_STRING,
+        exponent: OCTET_STRING,
+        coefficient: OCTET_STRING
+    ) {
+        this.prime = prime;
+        this.exponent = exponent;
+        this.coefficient = coefficient;
+    }
 
     /**
      * @summary Restructures an object into a OtherPrimeInfo

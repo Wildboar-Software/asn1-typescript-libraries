@@ -38,39 +38,47 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class LevelAndPolicy {
+    /**
+     * @summary `minNumAttempt`.
+     * @description
+     *
+     * Minimum number of attempts (Clause 6.5.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly minNumAttempt: INTEGER;
+    /**
+     * @summary `maxNumAttempt`.
+     * @description
+     *
+     * Maximum number of attempts (Clause 6.5.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly maxNumAttempt: INTEGER;
+    /**
+     * @summary `maxDurPermitted`.
+     * @description
+     *
+     * Maximum duration permitted for the transaction
+     * (Clause 6.5.2). Units are not stated in this document.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly maxDurPermitted: REAL;
+
     constructor (
-        /**
-         * @summary `minNumAttempt`.
-         * @description
-         *
-         * Minimum number of attempts (Clause 6.5.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly minNumAttempt: INTEGER,
-        /**
-         * @summary `maxNumAttempt`.
-         * @description
-         *
-         * Maximum number of attempts (Clause 6.5.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly maxNumAttempt: INTEGER,
-        /**
-         * @summary `maxDurPermitted`.
-         * @description
-         *
-         * Maximum duration permitted for the transaction
-         * (Clause 6.5.2). Units are not stated in this document.
-         *
-         * @public
-         * @readonly
-         */
-        readonly maxDurPermitted: REAL
-    ) {}
+        minNumAttempt: INTEGER,
+        maxNumAttempt: INTEGER,
+        maxDurPermitted: REAL
+    ) {
+        this.minNumAttempt = minNumAttempt;
+        this.maxNumAttempt = maxNumAttempt;
+        this.maxDurPermitted = maxDurPermitted;
+    }
 
     /**
      * @summary Restructures an object into a LevelAndPolicy

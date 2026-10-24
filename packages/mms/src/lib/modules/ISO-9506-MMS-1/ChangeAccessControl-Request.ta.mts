@@ -57,31 +57,37 @@ import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-
  */
 export
 class ChangeAccessControl_Request {
+    /**
+     * @summary `scopeOfChange`.
+     * @description
+     *
+     * Either the VMD itself (`vMDOnly`) or a List of Objects of one class.
+     * ISO 9506-1:2003 §9.7.1.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly scopeOfChange: ChangeAccessControl_Request_scopeOfChange;
+    /**
+     * @summary `accessControlListName`.
+     * @description
+     *
+     * VMD-specific Identifier of the ACL that will become the new
+     * `&accessControl` reference. ISO 9506-1:2003 §9.7.1.1.5;
+     * ISO 9506-2:2003 §9.7.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly accessControlListName: Identifier;
+
     constructor (
-        /**
-         * @summary `scopeOfChange`.
-         * @description
-         *
-         * Either the VMD itself (`vMDOnly`) or a List of Objects of one class.
-         * ISO 9506-1:2003 §9.7.1.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly scopeOfChange: ChangeAccessControl_Request_scopeOfChange,
-        /**
-         * @summary `accessControlListName`.
-         * @description
-         *
-         * VMD-specific Identifier of the ACL that will become the new
-         * `&accessControl` reference. ISO 9506-1:2003 §9.7.1.1.5;
-         * ISO 9506-2:2003 §9.7.
-         *
-         * @public
-         * @readonly
-         */
-        readonly accessControlListName: Identifier
-    ) {}
+        scopeOfChange: ChangeAccessControl_Request_scopeOfChange,
+        accessControlListName: Identifier
+    ) {
+        this.scopeOfChange = scopeOfChange;
+        this.accessControlListName = accessControlListName;
+    }
 
     /**
      * @summary Restructures an object into a ChangeAccessControl_Request

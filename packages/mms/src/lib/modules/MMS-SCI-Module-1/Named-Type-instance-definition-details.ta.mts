@@ -39,41 +39,49 @@ import { TypeDescription, _decode_TypeDescription, _encode_TypeDescription } fro
  */
 export
 class Named_Type_instance_definition_details {
+    /**
+     * @summary `accessControl`.
+     * @description
+     *
+     * SCI encoding of the object's ACL (ISO 9506-1:2003 §9). ISO
+     * 9506-2:2003 Annex B.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly accessControl: Access_Control_List_instance;
+    /**
+     * @summary `typeDescription`.
+     * @description
+     *
+     * Configured TypeDescription. ISO 9506-1:2003 §14.2; ISO 9506-2:2003
+     * Annex B.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly typeDescription: TypeDescription;
+    /**
+     * @summary `meaning`.
+     * @description
+     *
+     * Semantic alias (sem CBB). ISO 9506-1:2003 §14.1.3 / §14.1.5; ISO
+     * 9506-2:2003 Annex B.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly meaning?: OPTIONAL<VisibleString>;
+
     constructor (
-        /**
-         * @summary `accessControl`.
-         * @description
-         *
-         * SCI encoding of the object's ACL (ISO 9506-1:2003 §9). ISO
-         * 9506-2:2003 Annex B.
-         *
-         * @public
-         * @readonly
-         */
-        readonly accessControl: Access_Control_List_instance,
-        /**
-         * @summary `typeDescription`.
-         * @description
-         *
-         * Configured TypeDescription. ISO 9506-1:2003 §14.2; ISO 9506-2:2003
-         * Annex B.
-         *
-         * @public
-         * @readonly
-         */
-        readonly typeDescription: TypeDescription,
-        /**
-         * @summary `meaning`.
-         * @description
-         *
-         * Semantic alias (sem CBB). ISO 9506-1:2003 §14.1.3 / §14.1.5; ISO
-         * 9506-2:2003 Annex B.
-         *
-         * @public
-         * @readonly
-         */
-        readonly meaning?: OPTIONAL<VisibleString>
-    ) {}
+        accessControl: Access_Control_List_instance,
+        typeDescription: TypeDescription,
+        meaning?: OPTIONAL<VisibleString>
+    ) {
+        this.accessControl = accessControl;
+        this.typeDescription = typeDescription;
+        this.meaning = meaning;
+    }
 
     /**
      * @summary Restructures an object into a Named_Type_instance_definition_details

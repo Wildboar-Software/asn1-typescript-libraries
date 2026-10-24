@@ -39,94 +39,114 @@ import { SS_Status, _decode_SS_Status, _encode_SS_Status } from "../MAP-SS-DataT
  */
 export
 class GenericServiceInfo {
+    /**
+     * @summary `ss_Status`.
+     * @description
+     *
+     * SS-Status (clause 7.6.4.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ss_Status: SS_Status;
+    /**
+     * @summary `cliRestrictionOption`.
+     * @description
+     *
+     * CLIR restriction mode (clause 7.6.4.5).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly cliRestrictionOption?: OPTIONAL<CliRestrictionOption>;
+    /**
+     * @summary `maximumEntitledPriority`.
+     * @description
+     *
+     * Maximum entitled eMLPP priority.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly maximumEntitledPriority?: OPTIONAL<EMLPP_Priority>;
+    /**
+     * @summary `defaultPriority`.
+     * @description
+     *
+     * Default eMLPP priority.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly defaultPriority?: OPTIONAL<EMLPP_Priority>;
+    /**
+     * @summary `ccbs_FeatureList`.
+     * @description
+     *
+     * CCBS features, at most 5.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ccbs_FeatureList?: OPTIONAL<CCBS_FeatureList>;
+    /**
+     * @summary `nbrSB`.
+     * @description
+     *
+     * Maximum Multicall bearers.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly nbrSB?: OPTIONAL<MaxMC_Bearers>;
+    /**
+     * @summary `nbrUser`.
+     * @description
+     *
+     * Multicall user bearers.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly nbrUser?: OPTIONAL<MC_Bearers>;
+    /**
+     * @summary `nbrSN`.
+     * @description
+     *
+     * Multicall SN bearers.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly nbrSN?: OPTIONAL<MC_Bearers>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `ss_Status`.
-         * @description
-         *
-         * SS-Status (clause 7.6.4.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly ss_Status: SS_Status,
-        /**
-         * @summary `cliRestrictionOption`.
-         * @description
-         *
-         * CLIR restriction mode (clause 7.6.4.5).
-         *
-         * @public
-         * @readonly
-         */
-        readonly cliRestrictionOption?: OPTIONAL<CliRestrictionOption>,
-        /**
-         * @summary `maximumEntitledPriority`.
-         * @description
-         *
-         * Maximum entitled eMLPP priority.
-         *
-         * @public
-         * @readonly
-         */
-        readonly maximumEntitledPriority?: OPTIONAL<EMLPP_Priority>,
-        /**
-         * @summary `defaultPriority`.
-         * @description
-         *
-         * Default eMLPP priority.
-         *
-         * @public
-         * @readonly
-         */
-        readonly defaultPriority?: OPTIONAL<EMLPP_Priority>,
-        /**
-         * @summary `ccbs_FeatureList`.
-         * @description
-         *
-         * CCBS features, at most 5.
-         *
-         * @public
-         * @readonly
-         */
-        readonly ccbs_FeatureList?: OPTIONAL<CCBS_FeatureList>,
-        /**
-         * @summary `nbrSB`.
-         * @description
-         *
-         * Maximum Multicall bearers.
-         *
-         * @public
-         * @readonly
-         */
-        readonly nbrSB?: OPTIONAL<MaxMC_Bearers>,
-        /**
-         * @summary `nbrUser`.
-         * @description
-         *
-         * Multicall user bearers.
-         *
-         * @public
-         * @readonly
-         */
-        readonly nbrUser?: OPTIONAL<MC_Bearers>,
-        /**
-         * @summary `nbrSN`.
-         * @description
-         *
-         * Multicall SN bearers.
-         *
-         * @public
-         * @readonly
-         */
-        readonly nbrSN?: OPTIONAL<MC_Bearers>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        ss_Status: SS_Status,
+        cliRestrictionOption?: OPTIONAL<CliRestrictionOption>,
+        maximumEntitledPriority?: OPTIONAL<EMLPP_Priority>,
+        defaultPriority?: OPTIONAL<EMLPP_Priority>,
+        ccbs_FeatureList?: OPTIONAL<CCBS_FeatureList>,
+        nbrSB?: OPTIONAL<MaxMC_Bearers>,
+        nbrUser?: OPTIONAL<MC_Bearers>,
+        nbrSN?: OPTIONAL<MC_Bearers>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.ss_Status = ss_Status;
+        this.cliRestrictionOption = cliRestrictionOption;
+        this.maximumEntitledPriority = maximumEntitledPriority;
+        this.defaultPriority = defaultPriority;
+        this.ccbs_FeatureList = ccbs_FeatureList;
+        this.nbrSB = nbrSB;
+        this.nbrUser = nbrUser;
+        this.nbrSN = nbrSN;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a GenericServiceInfo

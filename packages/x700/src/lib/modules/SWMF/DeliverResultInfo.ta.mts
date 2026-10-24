@@ -50,40 +50,48 @@ import {
  *
  */
 export class DeliverResultInfo {
+    /**
+     * @summary `deliverId`.
+     * @description
+     *
+     * Same id as the originating `deliver` action, when one was
+     * supplied. User in Tables 7 and 16. ITU-T Rec. X.744
+     * (10/96) §9.3, §9.12.
+     * @public
+     * @readonly
+     */
+    public readonly deliverId: OPTIONAL<DeliverId>;
+    /**
+     * @summary `deliverResult`.
+     * @description
+     *
+     * Delivery outcome (pass / specific failure / unknown).
+     * Conditional in the action reply; mandatory in the
+     * notification. ITU-T Rec. X.744 (10/96) §8.4.3, §9.12.
+     * @public
+     * @readonly
+     */
+    public readonly deliverResult: DeliverResult;
+    /**
+     * @summary `additionalInfo`.
+     * @description
+     *
+     * Management extensions. User in Tables 7 and 16. ITU-T Rec.
+     * X.744 (10/96) §9.3, §9.12.
+     * @public
+     * @readonly
+     */
+    public readonly additionalInfo?: OPTIONAL<ManagementExtension[]>;
+
     constructor(
-        /**
-         * @summary `deliverId`.
-         * @description
-         *
-         * Same id as the originating `deliver` action, when one was
-         * supplied. User in Tables 7 and 16. ITU-T Rec. X.744
-         * (10/96) §9.3, §9.12.
-         * @public
-         * @readonly
-         */
-        readonly deliverId: OPTIONAL<DeliverId>,
-        /**
-         * @summary `deliverResult`.
-         * @description
-         *
-         * Delivery outcome (pass / specific failure / unknown).
-         * Conditional in the action reply; mandatory in the
-         * notification. ITU-T Rec. X.744 (10/96) §8.4.3, §9.12.
-         * @public
-         * @readonly
-         */
-        readonly deliverResult: DeliverResult,
-        /**
-         * @summary `additionalInfo`.
-         * @description
-         *
-         * Management extensions. User in Tables 7 and 16. ITU-T Rec.
-         * X.744 (10/96) §9.3, §9.12.
-         * @public
-         * @readonly
-         */
-        readonly additionalInfo?: OPTIONAL<ManagementExtension[]>
-    ) {}
+        deliverId: OPTIONAL<DeliverId>,
+        deliverResult: DeliverResult,
+        additionalInfo?: OPTIONAL<ManagementExtension[]>
+    ) {
+        this.deliverId = deliverId;
+        this.deliverResult = deliverResult;
+        this.additionalInfo = additionalInfo;
+    }
 
     /**
      * @summary Restructures an object into a DeliverResultInfo

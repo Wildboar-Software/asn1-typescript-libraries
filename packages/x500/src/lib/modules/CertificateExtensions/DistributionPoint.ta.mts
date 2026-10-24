@@ -42,45 +42,55 @@ import {
  *
  */
 export class DistributionPoint {
+    /**
+     * @summary `distributionPoint`.
+     * @description
+     *
+     * Omitted = DP name defaults to CRL issuer. fullName vs
+     * nameRelativeToCRLIssuer.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly distributionPoint?: OPTIONAL<DistributionPointName>;
+    /**
+     * @summary `reasons`.
+     * @description
+     *
+     * Omitted = all reasons. Not the same as all-zero bits.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly reasons?: OPTIONAL<ReasonFlags>;
+    /**
+     * @summary `cRLIssuer`.
+     * @description
+     *
+     * Omitted = CRL issued by the certificate issuer.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly cRLIssuer?: OPTIONAL<GeneralNames>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `distributionPoint`.
-         * @description
-         *
-         * Omitted = DP name defaults to CRL issuer. fullName vs
-         * nameRelativeToCRLIssuer.
-         *
-         * @public
-         * @readonly
-         */
-        readonly distributionPoint?: OPTIONAL<DistributionPointName>,
-        /**
-         * @summary `reasons`.
-         * @description
-         *
-         * Omitted = all reasons. Not the same as all-zero bits.
-         *
-         * @public
-         * @readonly
-         */
-        readonly reasons?: OPTIONAL<ReasonFlags>,
-        /**
-         * @summary `cRLIssuer`.
-         * @description
-         *
-         * Omitted = CRL issued by the certificate issuer.
-         *
-         * @public
-         * @readonly
-         */
-        readonly cRLIssuer?: OPTIONAL<GeneralNames>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        distributionPoint?: OPTIONAL<DistributionPointName>,
+        reasons?: OPTIONAL<ReasonFlags>,
+        cRLIssuer?: OPTIONAL<GeneralNames>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.distributionPoint = distributionPoint;
+        this.reasons = reasons;
+        this.cRLIssuer = cRLIssuer;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a DistributionPoint

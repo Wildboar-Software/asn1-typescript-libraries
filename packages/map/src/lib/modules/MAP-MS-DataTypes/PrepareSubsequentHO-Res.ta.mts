@@ -31,34 +31,42 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
  */
 export
 class PrepareSubsequentHO_Res {
+    /**
+     * @summary `an_APDU`.
+     * @description
+     *
+     * One or two concatenated complete 3GPP TS 25.413 or 48.006 messages,
+     * as in 3GPP TS 23.009 and 29.010. The access-network protocol ID
+     * selects 48.006 or 25.413.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.9.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly an_APDU: AccessNetworkSignalInfo;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `an_APDU`.
-         * @description
-         *
-         * One or two concatenated complete 3GPP TS 25.413 or 48.006 messages,
-         * as in 3GPP TS 23.009 and 29.010. The access-network protocol ID
-         * selects 48.006 or 25.413.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.9.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly an_APDU: AccessNetworkSignalInfo,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        an_APDU: AccessNetworkSignalInfo,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.an_APDU = an_APDU;
+        this.extensionContainer = extensionContainer;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a PrepareSubsequentHO_Res

@@ -47,126 +47,152 @@ import { Additional_Number, _decode_Additional_Number, _encode_Additional_Number
  */
 export
 class LCSLocationInfo {
+    /**
+     * @summary `networkNode_Number`.
+     * @description
+     *
+     * MSC, SGSN or dummy "0" (clause 17.7.13).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly networkNode_Number: ISDN_AddressString;
+    /**
+     * @summary `lmsi`.
+     * @description
+     *
+     * LMSI if available.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly lmsi?: OPTIONAL<LMSI>;
+    /**
+     * @summary `extensionContainer`.
+     * @description
+     *
+     * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary `gprsNodeIndicator`.
+     * @description
+     *
+     * SGSN number is in networkNode-Number.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly gprsNodeIndicator?: OPTIONAL<NULL>;
+    /**
+     * @summary `additional_Number`.
+     * @description
+     *
+     * Additional MSC/SGSN number.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly additional_Number?: OPTIONAL<Additional_Number>;
+    /**
+     * @summary `supportedLCS_CapabilitySets`.
+     * @description
+     *
+     * LCS capability sets in VLR or SGSN (3GPP TS 29.002 V19.1.0 clause
+     * 7.6.11.17).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly supportedLCS_CapabilitySets?: OPTIONAL<SupportedLCS_CapabilitySets>;
+    /**
+     * @summary `additional_LCS_CapabilitySets`.
+     * @description
+     *
+     * Additional LCS capability sets (3GPP TS 29.002 V19.1.0 clause
+     * 7.6.11.25).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly additional_LCS_CapabilitySets?: OPTIONAL<SupportedLCS_CapabilitySets>;
+    /**
+     * @summary `mme_Name`.
+     * @description
+     *
+     * MME Diameter name.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mme_Name?: OPTIONAL<DiameterIdentity>;
+    /**
+     * @summary `aaa_Server_Name`.
+     * @description
+     *
+     * 3GPP AAA server name.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly aaa_Server_Name?: OPTIONAL<DiameterIdentity>;
+    /**
+     * @summary `sgsn_Name`.
+     * @description
+     *
+     * SGSN Diameter name.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sgsn_Name?: OPTIONAL<DiameterIdentity>;
+    /**
+     * @summary `sgsn_Realm`.
+     * @description
+     *
+     * SGSN Diameter realm.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sgsn_Realm?: OPTIONAL<DiameterIdentity>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `networkNode_Number`.
-         * @description
-         *
-         * MSC, SGSN or dummy "0" (clause 17.7.13).
-         *
-         * @public
-         * @readonly
-         */
-        readonly networkNode_Number: ISDN_AddressString,
-        /**
-         * @summary `lmsi`.
-         * @description
-         *
-         * LMSI if available.
-         *
-         * @public
-         * @readonly
-         */
-        readonly lmsi?: OPTIONAL<LMSI>,
-        /**
-         * @summary `extensionContainer`.
-         * @description
-         *
-         * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary `gprsNodeIndicator`.
-         * @description
-         *
-         * SGSN number is in networkNode-Number.
-         *
-         * @public
-         * @readonly
-         */
-        readonly gprsNodeIndicator?: OPTIONAL<NULL>,
-        /**
-         * @summary `additional_Number`.
-         * @description
-         *
-         * Additional MSC/SGSN number.
-         *
-         * @public
-         * @readonly
-         */
-        readonly additional_Number?: OPTIONAL<Additional_Number>,
-        /**
-         * @summary `supportedLCS_CapabilitySets`.
-         * @description
-         *
-         * LCS capability sets in VLR or SGSN (3GPP TS 29.002 V19.1.0 clause
-         * 7.6.11.17).
-         *
-         * @public
-         * @readonly
-         */
-        readonly supportedLCS_CapabilitySets?: OPTIONAL<SupportedLCS_CapabilitySets>,
-        /**
-         * @summary `additional_LCS_CapabilitySets`.
-         * @description
-         *
-         * Additional LCS capability sets (3GPP TS 29.002 V19.1.0 clause
-         * 7.6.11.25).
-         *
-         * @public
-         * @readonly
-         */
-        readonly additional_LCS_CapabilitySets?: OPTIONAL<SupportedLCS_CapabilitySets>,
-        /**
-         * @summary `mme_Name`.
-         * @description
-         *
-         * MME Diameter name.
-         *
-         * @public
-         * @readonly
-         */
-        readonly mme_Name?: OPTIONAL<DiameterIdentity>,
-        /**
-         * @summary `aaa_Server_Name`.
-         * @description
-         *
-         * 3GPP AAA server name.
-         *
-         * @public
-         * @readonly
-         */
-        readonly aaa_Server_Name?: OPTIONAL<DiameterIdentity>,
-        /**
-         * @summary `sgsn_Name`.
-         * @description
-         *
-         * SGSN Diameter name.
-         *
-         * @public
-         * @readonly
-         */
-        readonly sgsn_Name?: OPTIONAL<DiameterIdentity>,
-        /**
-         * @summary `sgsn_Realm`.
-         * @description
-         *
-         * SGSN Diameter realm.
-         *
-         * @public
-         * @readonly
-         */
-        readonly sgsn_Realm?: OPTIONAL<DiameterIdentity>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        networkNode_Number: ISDN_AddressString,
+        lmsi?: OPTIONAL<LMSI>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        gprsNodeIndicator?: OPTIONAL<NULL>,
+        additional_Number?: OPTIONAL<Additional_Number>,
+        supportedLCS_CapabilitySets?: OPTIONAL<SupportedLCS_CapabilitySets>,
+        additional_LCS_CapabilitySets?: OPTIONAL<SupportedLCS_CapabilitySets>,
+        mme_Name?: OPTIONAL<DiameterIdentity>,
+        aaa_Server_Name?: OPTIONAL<DiameterIdentity>,
+        sgsn_Name?: OPTIONAL<DiameterIdentity>,
+        sgsn_Realm?: OPTIONAL<DiameterIdentity>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.networkNode_Number = networkNode_Number;
+        this.lmsi = lmsi;
+        this.extensionContainer = extensionContainer;
+        this.gprsNodeIndicator = gprsNodeIndicator;
+        this.additional_Number = additional_Number;
+        this.supportedLCS_CapabilitySets = supportedLCS_CapabilitySets;
+        this.additional_LCS_CapabilitySets = additional_LCS_CapabilitySets;
+        this.mme_Name = mme_Name;
+        this.aaa_Server_Name = aaa_Server_Name;
+        this.sgsn_Name = sgsn_Name;
+        this.sgsn_Realm = sgsn_Realm;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a LCSLocationInfo

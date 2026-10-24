@@ -38,38 +38,46 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class GetButtonInformationArgument {
+    /**
+     * @summary `device`.
+     * @description
+     *
+     * Physical-element DeviceID; other IDs are rejected (ECMA-269 §21 FR
+     * 1).
+     * @public
+     * @readonly
+     */
+    public readonly device: DeviceID;
+    /**
+     * @summary `button`.
+     * @description
+     *
+     * Button to query. Absent: all buttons. Reserved ButtonIDs in Table
+     * 12-3: `0`–`9`, `*`=10, `#`=11 (ECMA-269 §12.3.5).
+     * @public
+     * @readonly
+     */
+    public readonly button?: OPTIONAL<ButtonID>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `device`.
-         * @description
-         *
-         * Physical-element DeviceID; other IDs are rejected (ECMA-269 §21 FR
-         * 1).
-         * @public
-         * @readonly
-         */
-        readonly device: DeviceID,
-        /**
-         * @summary `button`.
-         * @description
-         *
-         * Button to query. Absent: all buttons. Reserved ButtonIDs in Table
-         * 12-3: `0`–`9`, `*`=10, `#`=11 (ECMA-269 §12.3.5).
-         * @public
-         * @readonly
-         */
-        readonly button?: OPTIONAL<ButtonID>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        device: DeviceID,
+        button?: OPTIONAL<ButtonID>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.device = device;
+        this.button = button;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a GetButtonInformationArgument

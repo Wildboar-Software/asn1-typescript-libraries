@@ -36,29 +36,35 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class GeneralManagementParameters_supportForTime {
+    /**
+     * @summary `timeOfDay`.
+     * @description
+     *
+     * true if TimeOfDay is supported. ISO 9506-2:2003 Annex B.2.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly timeOfDay: BOOLEAN;
+    /**
+     * @summary `timeSequence`.
+     * @description
+     *
+     * true if Time Sequence Identifiers are supported. ISO 9506-2:2003
+     * Annex B.2.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly timeSequence: BOOLEAN;
+
     constructor (
-        /**
-         * @summary `timeOfDay`.
-         * @description
-         *
-         * true if TimeOfDay is supported. ISO 9506-2:2003 Annex B.2.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly timeOfDay: BOOLEAN,
-        /**
-         * @summary `timeSequence`.
-         * @description
-         *
-         * true if Time Sequence Identifiers are supported. ISO 9506-2:2003
-         * Annex B.2.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly timeSequence: BOOLEAN
-    ) {}
+        timeOfDay: BOOLEAN,
+        timeSequence: BOOLEAN
+    ) {
+        this.timeOfDay = timeOfDay;
+        this.timeSequence = timeSequence;
+    }
 
     /**
      * @summary Restructures an object into a GeneralManagementParameters_supportForTime

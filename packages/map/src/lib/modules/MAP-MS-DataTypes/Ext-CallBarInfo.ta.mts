@@ -33,42 +33,52 @@ import { SS_Code, _decode_SS_Code, _encode_SS_Code } from "../MAP-SS-Code/SS-Cod
  */
 export
 class Ext_CallBarInfo {
+    /**
+     * @summary `ss_Code`.
+     * @description
+     *
+     * SS-Code of the call barring service (3GPP TS 29.002 V19.1.0 clause
+     * 7.6.3.20).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ss_Code: SS_Code;
+    /**
+     * @summary `callBarringFeatureList`.
+     * @description
+     *
+     * Extensible call barring features, one item per Basic Service Group
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.3.20).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly callBarringFeatureList: Ext_CallBarFeatureList;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `ss_Code`.
-         * @description
-         *
-         * SS-Code of the call barring service (3GPP TS 29.002 V19.1.0 clause
-         * 7.6.3.20).
-         *
-         * @public
-         * @readonly
-         */
-        readonly ss_Code: SS_Code,
-        /**
-         * @summary `callBarringFeatureList`.
-         * @description
-         *
-         * Extensible call barring features, one item per Basic Service Group
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.3.20).
-         *
-         * @public
-         * @readonly
-         */
-        readonly callBarringFeatureList: Ext_CallBarFeatureList,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        ss_Code: SS_Code,
+        callBarringFeatureList: Ext_CallBarFeatureList,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.ss_Code = ss_Code;
+        this.callBarringFeatureList = callBarringFeatureList;
+        this.extensionContainer = extensionContainer;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a Ext_CallBarInfo

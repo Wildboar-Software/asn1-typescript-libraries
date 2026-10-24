@@ -32,28 +32,34 @@ import * as $ from '@wildboar/asn1/functional';
  *
  */
 export class AttributeValueAssertion {
+  /**
+   * @summary `id`.
+   * @description
+   *
+   * AVA type (`CMIP-AVA.&id`).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly id: OBJECT_IDENTIFIER;
+  /**
+   * @summary `value`.
+   * @description
+   *
+   * AVA value (`CMIP-AVA.&Value`).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly value: _Element;
+
   constructor(
-    /**
-     * @summary `id`.
-     * @description
-     *
-     * AVA type (`CMIP-AVA.&id`).
-     *
-     * @public
-     * @readonly
-     */
-    readonly id: OBJECT_IDENTIFIER,
-    /**
-     * @summary `value`.
-     * @description
-     *
-     * AVA value (`CMIP-AVA.&Value`).
-     *
-     * @public
-     * @readonly
-     */
-    readonly value: _Element
-  ) {}
+    id: OBJECT_IDENTIFIER,
+    value: _Element
+  ) {
+    this.id = id;
+    this.value = value;
+  }
 
   /**
    * @summary Restructures an object into a AttributeValueAssertion

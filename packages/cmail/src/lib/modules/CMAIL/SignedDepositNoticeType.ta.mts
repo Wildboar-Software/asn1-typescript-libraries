@@ -42,26 +42,32 @@ import {
  *
  */
 export class SignedDepositNoticeType {
+  /**
+   * @summary `digitalPostmark`.
+   * @description Server postmark from the notice of deposit
+   * the sender received after `DATA`. ITU-T Rec. X.1341
+   * (09/2015) §8.14–§8.15.
+   * @public
+   * @readonly
+   */
+  public readonly digitalPostmark: DigitalPostmarkType;
+  /**
+   * @summary `envelopeInformation`.
+   * @description Sender-built envelope hashes, Message-ID,
+   * and per-party `Entity` (including challenges). ITU-T
+   * Rec. X.1341 (09/2015) §8.15, Figure A.4.
+   * @public
+   * @readonly
+   */
+  public readonly envelopeInformation: EnvelopeInformationType;
+
   constructor(
-    /**
-     * @summary `digitalPostmark`.
-     * @description Server postmark from the notice of deposit
-     * the sender received after `DATA`. ITU-T Rec. X.1341
-     * (09/2015) §8.14–§8.15.
-     * @public
-     * @readonly
-     */
-    readonly digitalPostmark: DigitalPostmarkType,
-    /**
-     * @summary `envelopeInformation`.
-     * @description Sender-built envelope hashes, Message-ID,
-     * and per-party `Entity` (including challenges). ITU-T
-     * Rec. X.1341 (09/2015) §8.15, Figure A.4.
-     * @public
-     * @readonly
-     */
-    readonly envelopeInformation: EnvelopeInformationType
-  ) {}
+    digitalPostmark: DigitalPostmarkType,
+    envelopeInformation: EnvelopeInformationType
+  ) {
+    this.digitalPostmark = digitalPostmark;
+    this.envelopeInformation = envelopeInformation;
+  }
 
   /**
    * @summary Restructures an object into a SignedDepositNoticeType

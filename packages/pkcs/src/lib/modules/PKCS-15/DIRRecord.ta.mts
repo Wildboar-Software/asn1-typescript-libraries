@@ -26,32 +26,42 @@ import { DDO, _decode_DDO, _encode_DDO } from "../PKCS-15/DDO.ta.mjs";
  *
  */
 export class DIRRecord {
+    /**
+     * @summary `aid`.
+     * @public
+     * @readonly
+     */
+    public readonly aid: OCTET_STRING;
+    /**
+     * @summary `label`.
+     * @public
+     * @readonly
+     */
+    public readonly label: OPTIONAL<UTF8String>;
+    /**
+     * @summary `path`.
+     * @public
+     * @readonly
+     */
+    public readonly path: OCTET_STRING;
+    /**
+     * @summary `ddo`.
+     * @public
+     * @readonly
+     */
+    public readonly ddo?: OPTIONAL<DDO>;
+
     constructor(
-        /**
-         * @summary `aid`.
-         * @public
-         * @readonly
-         */
-        readonly aid: OCTET_STRING,
-        /**
-         * @summary `label`.
-         * @public
-         * @readonly
-         */
-        readonly label: OPTIONAL<UTF8String>,
-        /**
-         * @summary `path`.
-         * @public
-         * @readonly
-         */
-        readonly path: OCTET_STRING,
-        /**
-         * @summary `ddo`.
-         * @public
-         * @readonly
-         */
-        readonly ddo?: OPTIONAL<DDO>
-    ) {}
+        aid: OCTET_STRING,
+        label: OPTIONAL<UTF8String>,
+        path: OCTET_STRING,
+        ddo?: OPTIONAL<DDO>
+    ) {
+        this.aid = aid;
+        this.label = label;
+        this.path = path;
+        this.ddo = ddo;
+    }
 
     /**
      * @summary Restructures an object into a DIRRecord

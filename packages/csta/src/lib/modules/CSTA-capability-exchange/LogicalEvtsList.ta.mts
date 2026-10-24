@@ -75,143 +75,175 @@ import { RouteingMode, _decode_RouteingMode, _encode_RouteingMode } from "../CST
  */
 export
 class LogicalEvtsList {
+    /**
+     * @summary `agentBusy`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this event; omit if the SF does not support it
+     * (ECMA-269 Annex C).
+     */
+    public readonly agentBusy?: OPTIONAL<AgentBusy>;
+    /**
+     * @summary `agentLoggedOff`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this event; omit if the SF does not support it
+     * (ECMA-269 Annex C).
+     */
+    public readonly agentLoggedOff?: OPTIONAL<AgentLoggedOff>;
+    /**
+     * @summary `agentLoggedOn`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this event; omit if the SF does not support it
+     * (ECMA-269 Annex C).
+     */
+    public readonly agentLoggedOn?: OPTIONAL<AgentLoggedOn>;
+    /**
+     * @summary `agentNotReady`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this event; omit if the SF does not support it
+     * (ECMA-269 Annex C).
+     */
+    public readonly agentNotReady?: OPTIONAL<AgentNotReady>;
+    /**
+     * @summary `agentReady`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this event; omit if the SF does not support it
+     * (ECMA-269 Annex C).
+     */
+    public readonly agentReady?: OPTIONAL<AgentReady>;
+    /**
+     * @summary `agentWorkingAfterCall`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this event; omit if the SF does not support it
+     * (ECMA-269 Annex C).
+     */
+    public readonly agentWorkingAfterCall?: OPTIONAL<AgentWorkingAfterCall>;
+    /**
+     * @summary `autoAnswer`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this event; omit if the SF does not support it
+     * (ECMA-269 Annex C).
+     */
+    public readonly autoAnswer?: OPTIONAL<AutoAnswer>;
+    /**
+     * @summary `autoWorkMode`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this event; omit if the SF does not support it
+     * (ECMA-269 Annex C).
+     */
+    public readonly autoWorkMode?: OPTIONAL<AutoWorkMode>;
+    /**
+     * @summary `callBack`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this event; omit if the SF does not support it
+     * (ECMA-269 Annex C).
+     */
+    public readonly callBack?: OPTIONAL<CallBackEvent>;
+    /**
+     * @summary `callBackMessage`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this event; omit if the SF does not support it
+     * (ECMA-269 Annex C).
+     */
+    public readonly callBackMessage?: OPTIONAL<CallBackMessageEvent>;
+    /**
+     * @summary `callerIDStatus`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this event; omit if the SF does not support it
+     * (ECMA-269 Annex C).
+     */
+    public readonly callerIDStatus?: OPTIONAL<CallerIDStatus>;
+    /**
+     * @summary `doNotDisturb`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this event; omit if the SF does not support it
+     * (ECMA-269 Annex C).
+     */
+    public readonly doNotDisturb?: OPTIONAL<DoNotDisturb>;
+    /**
+     * @summary `forwarding`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this event; omit if the SF does not support it
+     * (ECMA-269 Annex C).
+     */
+    public readonly forwarding?: OPTIONAL<Forwarding>;
+    /**
+     * @summary `presenceState`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this event; omit if the SF does not support it
+     * (ECMA-269 Annex C).
+     */
+    public readonly presenceState?: OPTIONAL<PresenceStateEvent>;
+    /**
+     * @summary `routeingMode`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this event; omit if the SF does not support it
+     * (ECMA-269 Annex C).
+     */
+    public readonly routeingMode?: OPTIONAL<RouteingMode>;
+
     constructor (
-        /**
-         * @summary `agentBusy`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this event; omit if the SF does not support it
-         * (ECMA-269 Annex C).
-         */
-        readonly agentBusy?: OPTIONAL<AgentBusy>,
-        /**
-         * @summary `agentLoggedOff`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this event; omit if the SF does not support it
-         * (ECMA-269 Annex C).
-         */
-        readonly agentLoggedOff?: OPTIONAL<AgentLoggedOff>,
-        /**
-         * @summary `agentLoggedOn`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this event; omit if the SF does not support it
-         * (ECMA-269 Annex C).
-         */
-        readonly agentLoggedOn?: OPTIONAL<AgentLoggedOn>,
-        /**
-         * @summary `agentNotReady`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this event; omit if the SF does not support it
-         * (ECMA-269 Annex C).
-         */
-        readonly agentNotReady?: OPTIONAL<AgentNotReady>,
-        /**
-         * @summary `agentReady`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this event; omit if the SF does not support it
-         * (ECMA-269 Annex C).
-         */
-        readonly agentReady?: OPTIONAL<AgentReady>,
-        /**
-         * @summary `agentWorkingAfterCall`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this event; omit if the SF does not support it
-         * (ECMA-269 Annex C).
-         */
-        readonly agentWorkingAfterCall?: OPTIONAL<AgentWorkingAfterCall>,
-        /**
-         * @summary `autoAnswer`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this event; omit if the SF does not support it
-         * (ECMA-269 Annex C).
-         */
-        readonly autoAnswer?: OPTIONAL<AutoAnswer>,
-        /**
-         * @summary `autoWorkMode`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this event; omit if the SF does not support it
-         * (ECMA-269 Annex C).
-         */
-        readonly autoWorkMode?: OPTIONAL<AutoWorkMode>,
-        /**
-         * @summary `callBack`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this event; omit if the SF does not support it
-         * (ECMA-269 Annex C).
-         */
-        readonly callBack?: OPTIONAL<CallBackEvent>,
-        /**
-         * @summary `callBackMessage`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this event; omit if the SF does not support it
-         * (ECMA-269 Annex C).
-         */
-        readonly callBackMessage?: OPTIONAL<CallBackMessageEvent>,
-        /**
-         * @summary `callerIDStatus`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this event; omit if the SF does not support it
-         * (ECMA-269 Annex C).
-         */
-        readonly callerIDStatus?: OPTIONAL<CallerIDStatus>,
-        /**
-         * @summary `doNotDisturb`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this event; omit if the SF does not support it
-         * (ECMA-269 Annex C).
-         */
-        readonly doNotDisturb?: OPTIONAL<DoNotDisturb>,
-        /**
-         * @summary `forwarding`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this event; omit if the SF does not support it
-         * (ECMA-269 Annex C).
-         */
-        readonly forwarding?: OPTIONAL<Forwarding>,
-        /**
-         * @summary `presenceState`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this event; omit if the SF does not support it
-         * (ECMA-269 Annex C).
-         */
-        readonly presenceState?: OPTIONAL<PresenceStateEvent>,
-        /**
-         * @summary `routeingMode`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this event; omit if the SF does not support it
-         * (ECMA-269 Annex C).
-         */
-        readonly routeingMode?: OPTIONAL<RouteingMode>
-    ) {}
+        agentBusy?: OPTIONAL<AgentBusy>,
+        agentLoggedOff?: OPTIONAL<AgentLoggedOff>,
+        agentLoggedOn?: OPTIONAL<AgentLoggedOn>,
+        agentNotReady?: OPTIONAL<AgentNotReady>,
+        agentReady?: OPTIONAL<AgentReady>,
+        agentWorkingAfterCall?: OPTIONAL<AgentWorkingAfterCall>,
+        autoAnswer?: OPTIONAL<AutoAnswer>,
+        autoWorkMode?: OPTIONAL<AutoWorkMode>,
+        callBack?: OPTIONAL<CallBackEvent>,
+        callBackMessage?: OPTIONAL<CallBackMessageEvent>,
+        callerIDStatus?: OPTIONAL<CallerIDStatus>,
+        doNotDisturb?: OPTIONAL<DoNotDisturb>,
+        forwarding?: OPTIONAL<Forwarding>,
+        presenceState?: OPTIONAL<PresenceStateEvent>,
+        routeingMode?: OPTIONAL<RouteingMode>
+    ) {
+        this.agentBusy = agentBusy;
+        this.agentLoggedOff = agentLoggedOff;
+        this.agentLoggedOn = agentLoggedOn;
+        this.agentNotReady = agentNotReady;
+        this.agentReady = agentReady;
+        this.agentWorkingAfterCall = agentWorkingAfterCall;
+        this.autoAnswer = autoAnswer;
+        this.autoWorkMode = autoWorkMode;
+        this.callBack = callBack;
+        this.callBackMessage = callBackMessage;
+        this.callerIDStatus = callerIDStatus;
+        this.doNotDisturb = doNotDisturb;
+        this.forwarding = forwarding;
+        this.presenceState = presenceState;
+        this.routeingMode = routeingMode;
+    }
 
     /**
      * @summary Restructures an object into a LogicalEvtsList

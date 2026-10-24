@@ -32,26 +32,32 @@ import {
  *
  */
 export class ConditionalPackages_Item {
+    /**
+     * @summary `label`.
+     * @description
+     *
+     * Conditional package template.
+     * @public
+     * @readonly
+     */
+    public readonly label: TemplateLabel;
+    /**
+     * @summary `condition`.
+     * @description
+     *
+     * `PRESENT IF` condition from the managed object class template.
+     * @public
+     * @readonly
+     */
+    public readonly condition: GraphicString;
+
     constructor(
-        /**
-         * @summary `label`.
-         * @description
-         *
-         * Conditional package template.
-         * @public
-         * @readonly
-         */
-        readonly label: TemplateLabel,
-        /**
-         * @summary `condition`.
-         * @description
-         *
-         * `PRESENT IF` condition from the managed object class template.
-         * @public
-         * @readonly
-         */
-        readonly condition: GraphicString
-    ) {}
+        label: TemplateLabel,
+        condition: GraphicString
+    ) {
+        this.label = label;
+        this.condition = condition;
+    }
 
     /**
      * @summary Restructures an object into a ConditionalPackages_Item

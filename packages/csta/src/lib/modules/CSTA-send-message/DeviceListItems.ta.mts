@@ -33,18 +33,22 @@ import { DeviceID, _decode_DeviceID, _encode_DeviceID } from "../CSTA-device-ide
  */
 export
 class DeviceListItems {
+    /**
+     * @summary `device`.
+     * @description
+     *
+     * Mandatory. One destination DeviceID.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly device: DeviceID;
+
     constructor (
-        /**
-         * @summary `device`.
-         * @description
-         *
-         * Mandatory. One destination DeviceID.
-         *
-         * @public
-         * @readonly
-         */
-        readonly device: DeviceID
-    ) {}
+        device: DeviceID
+    ) {
+        this.device = device;
+    }
 
     /**
      * @summary Restructures an object into a DeviceListItems

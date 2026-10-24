@@ -38,20 +38,26 @@ import {
  *
  */
 export class NNUserReasonCodeField {
+    /**
+     * @summary `nn_user_basic_code`.
+     * @public
+     * @readonly
+     */
+    public readonly nn_user_basic_code: NNUserBasicCodeField;
+    /**
+     * @summary `nn_user_diagnostic`.
+     * @public
+     * @readonly
+     */
+    public readonly nn_user_diagnostic?: OPTIONAL<NNUserDiagnosticField>;
+
     constructor(
-        /**
-         * @summary `nn_user_basic_code`.
-         * @public
-         * @readonly
-         */
-        readonly nn_user_basic_code: NNUserBasicCodeField,
-        /**
-         * @summary `nn_user_diagnostic`.
-         * @public
-         * @readonly
-         */
-        readonly nn_user_diagnostic?: OPTIONAL<NNUserDiagnosticField>
-    ) {}
+        nn_user_basic_code: NNUserBasicCodeField,
+        nn_user_diagnostic?: OPTIONAL<NNUserDiagnosticField>
+    ) {
+        this.nn_user_basic_code = nn_user_basic_code;
+        this.nn_user_diagnostic = nn_user_diagnostic;
+    }
 
     /**
      * @summary Restructures an object into a NNUserReasonCodeField

@@ -29,14 +29,18 @@ import {
  *
  */
 export class ipm_auto_discard_error_ParameterType {
+    /**
+     * @summary `problem`.
+     * @public
+     * @readonly
+     */
+    public readonly problem: AutoDiscardProblem;
+
     constructor(
-        /**
-         * @summary `problem`.
-         * @public
-         * @readonly
-         */
-        readonly problem: AutoDiscardProblem
-    ) {}
+        problem: AutoDiscardProblem
+    ) {
+        this.problem = problem;
+    }
 
     /**
      * @summary Restructures an object into a ipm_auto_discard_error_ParameterType

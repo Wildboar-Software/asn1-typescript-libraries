@@ -34,20 +34,26 @@ import {
  *
  */
 export class SecurityProcessingInfo {
+    /**
+     * @summary `action`.
+     * @public
+     * @readonly
+     */
+    public readonly action: SecurityAction;
+    /**
+     * @summary `security_policy`.
+     * @public
+     * @readonly
+     */
+    public readonly security_policy?: OPTIONAL<OBJECT_IDENTIFIER>;
+
     constructor(
-        /**
-         * @summary `action`.
-         * @public
-         * @readonly
-         */
-        readonly action: SecurityAction,
-        /**
-         * @summary `security_policy`.
-         * @public
-         * @readonly
-         */
-        readonly security_policy?: OPTIONAL<OBJECT_IDENTIFIER>
-    ) {}
+        action: SecurityAction,
+        security_policy?: OPTIONAL<OBJECT_IDENTIFIER>
+    ) {
+        this.action = action;
+        this.security_policy = security_policy;
+    }
 
     /**
      * @summary Restructures an object into a SecurityProcessingInfo

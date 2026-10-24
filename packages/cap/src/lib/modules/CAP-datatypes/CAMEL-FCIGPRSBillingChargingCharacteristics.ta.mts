@@ -28,10 +28,16 @@ import { CAMEL_FCIGPRSBillingChargingCharacteristics_fCIBCCCAMELsequence1, _deco
  *
  */
 export class CAMEL_FCIGPRSBillingChargingCharacteristics {
+    public readonly fCIBCCCAMELsequence1: CAMEL_FCIGPRSBillingChargingCharacteristics_fCIBCCCAMELsequence1;
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        readonly fCIBCCCAMELsequence1: CAMEL_FCIGPRSBillingChargingCharacteristics_fCIBCCCAMELsequence1,
-        readonly _unrecognizedExtensionsList: _Element[] = [],
-    ) {}
+        fCIBCCCAMELsequence1: CAMEL_FCIGPRSBillingChargingCharacteristics_fCIBCCCAMELsequence1,
+        _unrecognizedExtensionsList: _Element[] = [],
+    ) {
+        this.fCIBCCCAMELsequence1 = fCIBCCCAMELsequence1;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     public static _from_object (_o: { [_K in keyof (CAMEL_FCIGPRSBillingChargingCharacteristics)]: (CAMEL_FCIGPRSBillingChargingCharacteristics)[_K] }): CAMEL_FCIGPRSBillingChargingCharacteristics {
         return new CAMEL_FCIGPRSBillingChargingCharacteristics(_o.fCIBCCCAMELsequence1, _o._unrecognizedExtensionsList);

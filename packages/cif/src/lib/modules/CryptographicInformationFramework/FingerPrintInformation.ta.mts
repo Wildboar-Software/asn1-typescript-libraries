@@ -33,25 +33,31 @@ import { FingerPrintInformation_finger, _enum_for_FingerPrintInformation_finger,
  */
 export
 class FingerPrintInformation {
+    /**
+     * @summary `hand`.
+     * @description
+     * `left` or `right`. ISO/IEC 7816-15:2016 §8.9.3.
+     * @public
+     * @readonly
+     */
+    public readonly hand: FingerPrintInformation_hand;
+    /**
+     * @summary `finger`.
+     * @description
+     * thumb, pointerFinger, middleFinger, ringFinger, or littleFinger.
+     * ISO/IEC 7816-15:2016 §8.9.3.
+     * @public
+     * @readonly
+     */
+    public readonly finger: FingerPrintInformation_finger;
+
     constructor (
-        /**
-         * @summary `hand`.
-         * @description
-         * `left` or `right`. ISO/IEC 7816-15:2016 §8.9.3.
-         * @public
-         * @readonly
-         */
-        readonly hand: FingerPrintInformation_hand,
-        /**
-         * @summary `finger`.
-         * @description
-         * thumb, pointerFinger, middleFinger, ringFinger, or littleFinger.
-         * ISO/IEC 7816-15:2016 §8.9.3.
-         * @public
-         * @readonly
-         */
-        readonly finger: FingerPrintInformation_finger
-    ) {}
+        hand: FingerPrintInformation_hand,
+        finger: FingerPrintInformation_finger
+    ) {
+        this.hand = hand;
+        this.finger = finger;
+    }
 
     /**
      * @summary Restructures an object into a FingerPrintInformation

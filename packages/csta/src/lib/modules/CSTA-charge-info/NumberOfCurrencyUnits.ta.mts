@@ -58,39 +58,47 @@ import {
  */
 export
 class NumberOfCurrencyUnits {
+    /**
+     * @summary `currencyType`.
+     * @description
+     *
+     * Currency type; empty means the default. Network-dependent. ECMA-269
+     * §12.2.7.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly currencyType: OCTET_STRING;
+    /**
+     * @summary `currencyAmount`.
+     * @description
+     *
+     * Cumulative currency units. ECMA-269 §12.2.7.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly currencyAmount: INTEGER;
+    /**
+     * @summary `currencyMultiplier`.
+     * @description
+     *
+     * 0.001, 0.01, 0.1, 1, 10, 100, or 1000. ECMA-269 §12.2.7.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly currencyMultiplier: NumberOfCurrencyUnits_currencyMultiplier;
+
     constructor (
-        /**
-         * @summary `currencyType`.
-         * @description
-         *
-         * Currency type; empty means the default. Network-dependent. ECMA-269
-         * §12.2.7.
-         *
-         * @public
-         * @readonly
-         */
-        readonly currencyType: OCTET_STRING,
-        /**
-         * @summary `currencyAmount`.
-         * @description
-         *
-         * Cumulative currency units. ECMA-269 §12.2.7.
-         *
-         * @public
-         * @readonly
-         */
-        readonly currencyAmount: INTEGER,
-        /**
-         * @summary `currencyMultiplier`.
-         * @description
-         *
-         * 0.001, 0.01, 0.1, 1, 10, 100, or 1000. ECMA-269 §12.2.7.
-         *
-         * @public
-         * @readonly
-         */
-        readonly currencyMultiplier: NumberOfCurrencyUnits_currencyMultiplier
-    ) {}
+        currencyType: OCTET_STRING,
+        currencyAmount: INTEGER,
+        currencyMultiplier: NumberOfCurrencyUnits_currencyMultiplier
+    ) {
+        this.currencyType = currencyType;
+        this.currencyAmount = currencyAmount;
+        this.currencyMultiplier = currencyMultiplier;
+    }
 
     /**
      * @summary Restructures an object into a NumberOfCurrencyUnits

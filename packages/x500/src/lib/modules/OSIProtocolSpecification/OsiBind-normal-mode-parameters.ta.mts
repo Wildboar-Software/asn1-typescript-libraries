@@ -39,38 +39,50 @@ import {
  *
  */
 export class OsiBind_normal_mode_parameters {
+    /**
+     * @summary `protocol_version`.
+     * @public
+     * @readonly
+     */
+    public readonly protocol_version: OPTIONAL<OsiBind_normal_mode_parameters_protocol_version>;
+    /**
+     * @summary `calling_presentation_selector`.
+     * @public
+     * @readonly
+     */
+    public readonly calling_presentation_selector: OPTIONAL<Presentation_selector>;
+    /**
+     * @summary `called_presentation_selector`.
+     * @public
+     * @readonly
+     */
+    public readonly called_presentation_selector: OPTIONAL<Presentation_selector>;
+    /**
+     * @summary `presentation_context_definition_list`.
+     * @public
+     * @readonly
+     */
+    public readonly presentation_context_definition_list: Context_list;
+    /**
+     * @summary `user_data`.
+     * @public
+     * @readonly
+     */
+    public readonly user_data: OsiBind_normal_mode_parameters_user_data;
+
     constructor(
-        /**
-         * @summary `protocol_version`.
-         * @public
-         * @readonly
-         */
-        readonly protocol_version: OPTIONAL<OsiBind_normal_mode_parameters_protocol_version>,
-        /**
-         * @summary `calling_presentation_selector`.
-         * @public
-         * @readonly
-         */
-        readonly calling_presentation_selector: OPTIONAL<Presentation_selector>,
-        /**
-         * @summary `called_presentation_selector`.
-         * @public
-         * @readonly
-         */
-        readonly called_presentation_selector: OPTIONAL<Presentation_selector>,
-        /**
-         * @summary `presentation_context_definition_list`.
-         * @public
-         * @readonly
-         */
-        readonly presentation_context_definition_list: Context_list,
-        /**
-         * @summary `user_data`.
-         * @public
-         * @readonly
-         */
-        readonly user_data: OsiBind_normal_mode_parameters_user_data
-    ) {}
+        protocol_version: OPTIONAL<OsiBind_normal_mode_parameters_protocol_version>,
+        calling_presentation_selector: OPTIONAL<Presentation_selector>,
+        called_presentation_selector: OPTIONAL<Presentation_selector>,
+        presentation_context_definition_list: Context_list,
+        user_data: OsiBind_normal_mode_parameters_user_data
+    ) {
+        this.protocol_version = protocol_version;
+        this.calling_presentation_selector = calling_presentation_selector;
+        this.called_presentation_selector = called_presentation_selector;
+        this.presentation_context_definition_list = presentation_context_definition_list;
+        this.user_data = user_data;
+    }
 
     /**
      * @summary Restructures an object into a OsiBind_normal_mode_parameters

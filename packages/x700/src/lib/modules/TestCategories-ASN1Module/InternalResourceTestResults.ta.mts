@@ -36,28 +36,34 @@ import * as $ from '@wildboar/asn1/functional';
  *
  */
 export class InternalResourceTestResults {
+    /**
+     * @summary `functionTested`.
+     * @description
+     *
+     * OID of the function (`CDTC-TEST-RESULTS.&id`
+     * constrained by `InternalResourceSet`). X.737 Cor.2 A.7.
+     * @public
+     * @readonly
+     */
+    public readonly functionTested: OBJECT_IDENTIFIER;
+    /**
+     * @summary `testResult`.
+     * @description
+     *
+     * Value syntax `CDTC-TEST-RESULTS.&Value` for
+     * that id. X.737 Cor.2 A.7.
+     * @public
+     * @readonly
+     */
+    public readonly testResult: _Element;
+
     constructor(
-        /**
-         * @summary `functionTested`.
-         * @description
-         *
-         * OID of the function (`CDTC-TEST-RESULTS.&id`
-         * constrained by `InternalResourceSet`). X.737 Cor.2 A.7.
-         * @public
-         * @readonly
-         */
-        readonly functionTested: OBJECT_IDENTIFIER,
-        /**
-         * @summary `testResult`.
-         * @description
-         *
-         * Value syntax `CDTC-TEST-RESULTS.&Value` for
-         * that id. X.737 Cor.2 A.7.
-         * @public
-         * @readonly
-         */
-        readonly testResult: _Element
-    ) {}
+        functionTested: OBJECT_IDENTIFIER,
+        testResult: _Element
+    ) {
+        this.functionTested = functionTested;
+        this.testResult = testResult;
+    }
 
     /**
      * @summary Restructures an object into a InternalResourceTestResults

@@ -39,30 +39,36 @@ import {
  *
  */
 export class ActionFilterList_Item {
+    /**
+     * @summary `actionTypeId`.
+     * @description
+     *
+     * Action type included in the target. If no
+     * `attributeFilterList`, all information values of this
+     * action are targeted. X.741 A.2.6, A.5.4.
+     * @public
+     * @readonly
+     */
+    public readonly actionTypeId: ActionTypeId;
+    /**
+     * @summary `attributeFilterList`.
+     * @description
+     *
+     * Optional CMIS filters on this action's arguments.
+     * Omit to leave argument values unconstrained. X.741
+     * A.2.6, A.5.4.
+     * @public
+     * @readonly
+     */
+    public readonly attributeFilterList?: OPTIONAL<FilterList>;
+
     constructor(
-        /**
-         * @summary `actionTypeId`.
-         * @description
-         *
-         * Action type included in the target. If no
-         * `attributeFilterList`, all information values of this
-         * action are targeted. X.741 A.2.6, A.5.4.
-         * @public
-         * @readonly
-         */
-        readonly actionTypeId: ActionTypeId,
-        /**
-         * @summary `attributeFilterList`.
-         * @description
-         *
-         * Optional CMIS filters on this action's arguments.
-         * Omit to leave argument values unconstrained. X.741
-         * A.2.6, A.5.4.
-         * @public
-         * @readonly
-         */
-        readonly attributeFilterList?: OPTIONAL<FilterList>
-    ) {}
+        actionTypeId: ActionTypeId,
+        attributeFilterList?: OPTIONAL<FilterList>
+    ) {
+        this.actionTypeId = actionTypeId;
+        this.attributeFilterList = attributeFilterList;
+    }
 
     /**
      * @summary Restructures an object into a ActionFilterList_Item

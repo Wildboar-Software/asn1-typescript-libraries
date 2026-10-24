@@ -34,20 +34,26 @@ import {
  *
  */
 export class AttributeError_problems_Item {
+    /**
+     * @summary `problem`.
+     * @public
+     * @readonly
+     */
+    public readonly problem: AttributeProblem;
+    /**
+     * @summary `type_`.
+     * @public
+     * @readonly
+     */
+    public readonly type_: AttributeType;
+
     constructor(
-        /**
-         * @summary `problem`.
-         * @public
-         * @readonly
-         */
-        readonly problem: AttributeProblem,
-        /**
-         * @summary `type_`.
-         * @public
-         * @readonly
-         */
-        readonly type_: AttributeType
-    ) {}
+        problem: AttributeProblem,
+        type_: AttributeType
+    ) {
+        this.problem = problem;
+        this.type_ = type_;
+    }
 
     /**
      * @summary Restructures an object into a AttributeError_problems_Item

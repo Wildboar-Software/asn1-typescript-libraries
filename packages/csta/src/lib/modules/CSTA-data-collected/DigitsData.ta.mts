@@ -37,40 +37,48 @@ import {
  */
 export
 class DigitsData {
+    /**
+     * @summary `digitsDetected`.
+     * @description
+     *
+     * IA5 DTMF/rotary digit string, size 0..64 (ECMA-269 §25.1.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly digitsDetected: IA5String;
+    /**
+     * @summary `digitsDuration`.
+     * @description
+     *
+     * Per-digit durations; if present, one per detected digit. DTMF only
+     * (ECMA-269 §25.1.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly digitsDuration?: OPTIONAL<INTEGER[]>;
+    /**
+     * @summary `digitsPauseDuration`.
+     * @description
+     *
+     * Pause before each digit; if present, one per detected digit (ECMA-269
+     * §25.1.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly digitsPauseDuration?: OPTIONAL<INTEGER[]>;
+
     constructor (
-        /**
-         * @summary `digitsDetected`.
-         * @description
-         *
-         * IA5 DTMF/rotary digit string, size 0..64 (ECMA-269 §25.1.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly digitsDetected: IA5String,
-        /**
-         * @summary `digitsDuration`.
-         * @description
-         *
-         * Per-digit durations; if present, one per detected digit. DTMF only
-         * (ECMA-269 §25.1.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly digitsDuration?: OPTIONAL<INTEGER[]>,
-        /**
-         * @summary `digitsPauseDuration`.
-         * @description
-         *
-         * Pause before each digit; if present, one per detected digit (ECMA-269
-         * §25.1.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly digitsPauseDuration?: OPTIONAL<INTEGER[]>
-    ) {}
+        digitsDetected: IA5String,
+        digitsDuration?: OPTIONAL<INTEGER[]>,
+        digitsPauseDuration?: OPTIONAL<INTEGER[]>
+    ) {
+        this.digitsDetected = digitsDetected;
+        this.digitsDuration = digitsDuration;
+        this.digitsPauseDuration = digitsPauseDuration;
+    }
 
     /**
      * @summary Restructures an object into a DigitsData

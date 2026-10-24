@@ -30,20 +30,26 @@ import {
  *
  */
 export class EncryptedPrivateKeyInfo {
+    /**
+     * @summary `encryptionAlgorithm`.
+     * @public
+     * @readonly
+     */
+    public readonly encryptionAlgorithm: EncryptionAlgorithmIdentifier;
+    /**
+     * @summary `encryptedData`.
+     * @public
+     * @readonly
+     */
+    public readonly encryptedData: EncryptedData;
+
     constructor(
-        /**
-         * @summary `encryptionAlgorithm`.
-         * @public
-         * @readonly
-         */
-        readonly encryptionAlgorithm: EncryptionAlgorithmIdentifier,
-        /**
-         * @summary `encryptedData`.
-         * @public
-         * @readonly
-         */
-        readonly encryptedData: EncryptedData
-    ) {}
+        encryptionAlgorithm: EncryptionAlgorithmIdentifier,
+        encryptedData: EncryptedData
+    ) {
+        this.encryptionAlgorithm = encryptionAlgorithm;
+        this.encryptedData = encryptedData;
+    }
 
     /**
      * @summary Restructures an object into a EncryptedPrivateKeyInfo

@@ -29,30 +29,36 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class EventEntries {
+    /**
+     * @summary `eventId`.
+     * @description
+     * 
+     * Event identifier. The LPA presents it as the MatchingID on ES9+.
+     * SGP.22 v3.1 §5.8.2 and §4.1.1.
+     * 
+     * @public
+     * @readonly
+     */
+    public readonly eventId: UTF8String;
+    /**
+     * @summary `rspServerAddress`.
+     * @description
+     * 
+     * FQDN of the RSP Server that registered the event, usually an SM-DP+.
+     * SGP.22 v3.1 §5.8.2.
+     * 
+     * @public
+     * @readonly
+     */
+    public readonly rspServerAddress: UTF8String;
+
     constructor (
-        /**
-         * @summary `eventId`.
-         * @description
-         * 
-         * Event identifier. The LPA presents it as the MatchingID on ES9+.
-         * SGP.22 v3.1 §5.8.2 and §4.1.1.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly eventId: UTF8String,
-        /**
-         * @summary `rspServerAddress`.
-         * @description
-         * 
-         * FQDN of the RSP Server that registered the event, usually an SM-DP+.
-         * SGP.22 v3.1 §5.8.2.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly rspServerAddress: UTF8String
-    ) {}
+        eventId: UTF8String,
+        rspServerAddress: UTF8String
+    ) {
+        this.eventId = eventId;
+        this.rspServerAddress = rspServerAddress;
+    }
 
     /**
      * @summary Restructures an object into a EventEntries

@@ -36,20 +36,26 @@ import {
  *
  */
 export class AttributeValueAssertion {
+    /**
+     * @summary `attribute_type`.
+     * @public
+     * @readonly
+     */
+    public readonly attribute_type: AttributeType;
+    /**
+     * @summary `attribute_value`.
+     * @public
+     * @readonly
+     */
+    public readonly attribute_value: _Element;
+
     constructor(
-        /**
-         * @summary `attribute_type`.
-         * @public
-         * @readonly
-         */
-        readonly attribute_type: AttributeType,
-        /**
-         * @summary `attribute_value`.
-         * @public
-         * @readonly
-         */
-        readonly attribute_value: _Element
-    ) {}
+        attribute_type: AttributeType,
+        attribute_value: _Element
+    ) {
+        this.attribute_type = attribute_type;
+        this.attribute_value = attribute_value;
+    }
 
     /**
      * @summary Restructures an object into a AttributeValueAssertion

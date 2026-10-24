@@ -34,14 +34,18 @@ import {
  *
  */
 export class DeleteError {
+    /**
+     * @summary `problems`.
+     * @public
+     * @readonly
+     */
+    public readonly problems: DeleteError_problems_Item[];
+
     constructor(
-        /**
-         * @summary `problems`.
-         * @public
-         * @readonly
-         */
-        readonly problems: DeleteError_problems_Item[]
-    ) {}
+        problems: DeleteError_problems_Item[]
+    ) {
+        this.problems = problems;
+    }
 
     /**
      * @summary Restructures an object into a DeleteError

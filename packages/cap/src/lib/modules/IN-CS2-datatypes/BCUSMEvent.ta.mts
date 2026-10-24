@@ -31,20 +31,26 @@ import { MonitorMode, _enum_for_MonitorMode, _decode_MonitorMode, _encode_Monito
  */
 export
 class BCUSMEvent {
+    /**
+     * @summary `eventType`.
+     * @public
+     * @readonly
+     */
+    public readonly eventType: EventTypeBCUSM;
+    /**
+     * @summary `monitorMode`.
+     * @public
+     * @readonly
+     */
+    public readonly monitorMode: MonitorMode;
+
     constructor (
-        /**
-         * @summary `eventType`.
-         * @public
-         * @readonly
-         */
-        readonly eventType: EventTypeBCUSM,
-        /**
-         * @summary `monitorMode`.
-         * @public
-         * @readonly
-         */
-        readonly monitorMode: MonitorMode
-    ) {}
+        eventType: EventTypeBCUSM,
+        monitorMode: MonitorMode
+    ) {
+        this.eventType = eventType;
+        this.monitorMode = monitorMode;
+    }
 
     /**
      * @summary Restructures an object into a BCUSMEvent

@@ -34,20 +34,26 @@ import {
  *
  */
 export class BodyPartTokens_Item {
+    /**
+     * @summary `body_part_number`.
+     * @public
+     * @readonly
+     */
+    public readonly body_part_number: BodyPartNumber;
+    /**
+     * @summary `body_part_choice`.
+     * @public
+     * @readonly
+     */
+    public readonly body_part_choice: BodyPartTokens_Item_body_part_choice;
+
     constructor(
-        /**
-         * @summary `body_part_number`.
-         * @public
-         * @readonly
-         */
-        readonly body_part_number: BodyPartNumber,
-        /**
-         * @summary `body_part_choice`.
-         * @public
-         * @readonly
-         */
-        readonly body_part_choice: BodyPartTokens_Item_body_part_choice
-    ) {}
+        body_part_number: BodyPartNumber,
+        body_part_choice: BodyPartTokens_Item_body_part_choice
+    ) {
+        this.body_part_number = body_part_number;
+        this.body_part_choice = body_part_choice;
+    }
 
     /**
      * @summary Restructures an object into a BodyPartTokens_Item

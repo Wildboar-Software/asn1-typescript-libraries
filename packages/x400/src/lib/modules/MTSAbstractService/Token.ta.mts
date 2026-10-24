@@ -30,20 +30,26 @@ import * as $ from '@wildboar/asn1/functional';
  *
  */
 export class Token {
+    /**
+     * @summary `token_type_identifier`.
+     * @public
+     * @readonly
+     */
+    public readonly token_type_identifier: OBJECT_IDENTIFIER;
+    /**
+     * @summary `token`.
+     * @public
+     * @readonly
+     */
+    public readonly token: _Element;
+
     constructor(
-        /**
-         * @summary `token_type_identifier`.
-         * @public
-         * @readonly
-         */
-        readonly token_type_identifier: OBJECT_IDENTIFIER,
-        /**
-         * @summary `token`.
-         * @public
-         * @readonly
-         */
-        readonly token: _Element
-    ) {}
+        token_type_identifier: OBJECT_IDENTIFIER,
+        token: _Element
+    ) {
+        this.token_type_identifier = token_type_identifier;
+        this.token = token;
+    }
 
     /**
      * @summary Restructures an object into a Token

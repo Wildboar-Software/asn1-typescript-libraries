@@ -42,41 +42,49 @@ import { SecurityInfo, _decode_SecurityInfo, _encode_SecurityInfo } from "../CST
  */
 export
 class CSTASecurityData {
+    /**
+     * @summary `messageSequenceNumber`.
+     * @description
+     *
+     * Sequential number to detect missing messages and verify
+     * order (ECMA-269 §12.2.12).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly messageSequenceNumber?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `timestamp`.
+     * @description
+     *
+     * Generalized time indicating message freshness; helps reject
+     * replay after sequence numbers wrap (ECMA-269 §12.2.12).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly timestamp?: OPTIONAL<TimeInfo>;
+    /**
+     * @summary `securityInfo`.
+     * @description
+     *
+     * Opaque security data for access control or the current
+     * security policy. Not defined by CSTA (ECMA-269 §12.2.12).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly securityInfo?: OPTIONAL<SecurityInfo>;
+
     constructor (
-        /**
-         * @summary `messageSequenceNumber`.
-         * @description
-         *
-         * Sequential number to detect missing messages and verify
-         * order (ECMA-269 §12.2.12).
-         *
-         * @public
-         * @readonly
-         */
-        readonly messageSequenceNumber?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `timestamp`.
-         * @description
-         *
-         * Generalized time indicating message freshness; helps reject
-         * replay after sequence numbers wrap (ECMA-269 §12.2.12).
-         *
-         * @public
-         * @readonly
-         */
-        readonly timestamp?: OPTIONAL<TimeInfo>,
-        /**
-         * @summary `securityInfo`.
-         * @description
-         *
-         * Opaque security data for access control or the current
-         * security policy. Not defined by CSTA (ECMA-269 §12.2.12).
-         *
-         * @public
-         * @readonly
-         */
-        readonly securityInfo?: OPTIONAL<SecurityInfo>
-    ) {}
+        messageSequenceNumber?: OPTIONAL<INTEGER>,
+        timestamp?: OPTIONAL<TimeInfo>,
+        securityInfo?: OPTIONAL<SecurityInfo>
+    ) {
+        this.messageSequenceNumber = messageSequenceNumber;
+        this.timestamp = timestamp;
+        this.securityInfo = securityInfo;
+    }
 
     /**
      * @summary Restructures an object into a CSTASecurityData

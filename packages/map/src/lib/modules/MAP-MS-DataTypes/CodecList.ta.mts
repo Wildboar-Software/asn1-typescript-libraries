@@ -36,68 +36,90 @@ import { Codec, _decode_Codec, _encode_Codec } from "../MAP-MS-DataTypes/Codec.t
  */
 export
 class CodecList {
+    /**
+     * @summary `codec1`.
+     * @public
+     * @readonly
+     */
+    public readonly codec1: Codec;
+    /**
+     * @summary `codec2`.
+     * @public
+     * @readonly
+     */
+    public readonly codec2?: OPTIONAL<Codec>;
+    /**
+     * @summary `codec3`.
+     * @public
+     * @readonly
+     */
+    public readonly codec3?: OPTIONAL<Codec>;
+    /**
+     * @summary `codec4`.
+     * @public
+     * @readonly
+     */
+    public readonly codec4?: OPTIONAL<Codec>;
+    /**
+     * @summary `codec5`.
+     * @public
+     * @readonly
+     */
+    public readonly codec5?: OPTIONAL<Codec>;
+    /**
+     * @summary `codec6`.
+     * @public
+     * @readonly
+     */
+    public readonly codec6?: OPTIONAL<Codec>;
+    /**
+     * @summary `codec7`.
+     * @public
+     * @readonly
+     */
+    public readonly codec7?: OPTIONAL<Codec>;
+    /**
+     * @summary `codec8`.
+     * @public
+     * @readonly
+     */
+    public readonly codec8?: OPTIONAL<Codec>;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `codec1`.
-         * @public
-         * @readonly
-         */
-        readonly codec1: Codec,
-        /**
-         * @summary `codec2`.
-         * @public
-         * @readonly
-         */
-        readonly codec2?: OPTIONAL<Codec>,
-        /**
-         * @summary `codec3`.
-         * @public
-         * @readonly
-         */
-        readonly codec3?: OPTIONAL<Codec>,
-        /**
-         * @summary `codec4`.
-         * @public
-         * @readonly
-         */
-        readonly codec4?: OPTIONAL<Codec>,
-        /**
-         * @summary `codec5`.
-         * @public
-         * @readonly
-         */
-        readonly codec5?: OPTIONAL<Codec>,
-        /**
-         * @summary `codec6`.
-         * @public
-         * @readonly
-         */
-        readonly codec6?: OPTIONAL<Codec>,
-        /**
-         * @summary `codec7`.
-         * @public
-         * @readonly
-         */
-        readonly codec7?: OPTIONAL<Codec>,
-        /**
-         * @summary `codec8`.
-         * @public
-         * @readonly
-         */
-        readonly codec8?: OPTIONAL<Codec>,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        codec1: Codec,
+        codec2?: OPTIONAL<Codec>,
+        codec3?: OPTIONAL<Codec>,
+        codec4?: OPTIONAL<Codec>,
+        codec5?: OPTIONAL<Codec>,
+        codec6?: OPTIONAL<Codec>,
+        codec7?: OPTIONAL<Codec>,
+        codec8?: OPTIONAL<Codec>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.codec1 = codec1;
+        this.codec2 = codec2;
+        this.codec3 = codec3;
+        this.codec4 = codec4;
+        this.codec5 = codec5;
+        this.codec6 = codec6;
+        this.codec7 = codec7;
+        this.codec8 = codec8;
+        this.extensionContainer = extensionContainer;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a CodecList

@@ -45,63 +45,77 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class DigitsGeneratedEvent {
+    /**
+     * @summary `connection`.
+     * @description
+     *
+     * Connection at which digits were generated.
+     * @public
+     * @readonly
+     */
+    public readonly connection: ConnectionID;
+    /**
+     * @summary `digitGeneratedList`.
+     * @description
+     *
+     * Digits that were generated.
+     * @public
+     * @readonly
+     */
+    public readonly digitGeneratedList: IA5String;
+    /**
+     * @summary `digitDurationList`.
+     * @description
+     *
+     * Per-digit durations, if provided.
+     * @public
+     * @readonly
+     */
+    public readonly digitDurationList?: OPTIONAL<INTEGER[]>;
+    /**
+     * @summary `pauseDurationList`.
+     * @description
+     *
+     * Per-pause durations, if provided.
+     * @public
+     * @readonly
+     */
+    public readonly pauseDurationList?: OPTIONAL<INTEGER[]>;
+    /**
+     * @summary `connectionInfo`.
+     * @description
+     *
+     * Connection information for `connection`.
+     * @public
+     * @readonly
+     */
+    public readonly connectionInfo?: OPTIONAL<ConnectionInformation>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `connection`.
-         * @description
-         *
-         * Connection at which digits were generated.
-         * @public
-         * @readonly
-         */
-        readonly connection: ConnectionID,
-        /**
-         * @summary `digitGeneratedList`.
-         * @description
-         *
-         * Digits that were generated.
-         * @public
-         * @readonly
-         */
-        readonly digitGeneratedList: IA5String,
-        /**
-         * @summary `digitDurationList`.
-         * @description
-         *
-         * Per-digit durations, if provided.
-         * @public
-         * @readonly
-         */
-        readonly digitDurationList?: OPTIONAL<INTEGER[]>,
-        /**
-         * @summary `pauseDurationList`.
-         * @description
-         *
-         * Per-pause durations, if provided.
-         * @public
-         * @readonly
-         */
-        readonly pauseDurationList?: OPTIONAL<INTEGER[]>,
-        /**
-         * @summary `connectionInfo`.
-         * @description
-         *
-         * Connection information for `connection`.
-         * @public
-         * @readonly
-         */
-        readonly connectionInfo?: OPTIONAL<ConnectionInformation>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        connection: ConnectionID,
+        digitGeneratedList: IA5String,
+        digitDurationList?: OPTIONAL<INTEGER[]>,
+        pauseDurationList?: OPTIONAL<INTEGER[]>,
+        connectionInfo?: OPTIONAL<ConnectionInformation>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.connection = connection;
+        this.digitGeneratedList = digitGeneratedList;
+        this.digitDurationList = digitDurationList;
+        this.pauseDurationList = pauseDurationList;
+        this.connectionInfo = connectionInfo;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a DigitsGeneratedEvent

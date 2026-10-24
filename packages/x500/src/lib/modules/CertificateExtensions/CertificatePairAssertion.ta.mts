@@ -31,26 +31,34 @@ import {
  *
  */
 export class CertificatePairAssertion {
+    /**
+     * @summary `issuedToThisCAAssertion`.
+     * @public
+     * @readonly
+     */
+    public readonly issuedToThisCAAssertion?: OPTIONAL<CertificateAssertion>;
+    /**
+     * @summary `issuedByThisCAAssertion`.
+     * @public
+     * @readonly
+     */
+    public readonly issuedByThisCAAssertion?: OPTIONAL<CertificateAssertion>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `issuedToThisCAAssertion`.
-         * @public
-         * @readonly
-         */
-        readonly issuedToThisCAAssertion?: OPTIONAL<CertificateAssertion>,
-        /**
-         * @summary `issuedByThisCAAssertion`.
-         * @public
-         * @readonly
-         */
-        readonly issuedByThisCAAssertion?: OPTIONAL<CertificateAssertion>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        issuedToThisCAAssertion?: OPTIONAL<CertificateAssertion>,
+        issuedByThisCAAssertion?: OPTIONAL<CertificateAssertion>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.issuedToThisCAAssertion = issuedToThisCAAssertion;
+        this.issuedByThisCAAssertion = issuedByThisCAAssertion;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a CertificatePairAssertion

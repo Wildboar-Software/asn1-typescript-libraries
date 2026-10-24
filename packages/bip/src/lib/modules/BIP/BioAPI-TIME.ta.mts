@@ -36,41 +36,49 @@ import * as $ from '@wildboar/asn1/functional';
  *
  */
 export class BioAPI_TIME {
+  /**
+   * @summary `hour`.
+   * @description
+   *
+   * 99 only as part of the all-99 time; else 0–23. X.1083
+   * §15.54.4.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly hour: INTEGER;
+  /**
+   * @summary `minute`.
+   * @description
+   *
+   * 99 only as part of the all-99 time; else 0–59. X.1083
+   * §15.54.4.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly minute: INTEGER;
+  /**
+   * @summary `second`.
+   * @description
+   *
+   * 99 only as part of the all-99 time; else 0–59. X.1083
+   * §15.54.4.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly second: INTEGER;
+
   constructor(
-    /**
-     * @summary `hour`.
-     * @description
-     *
-     * 99 only as part of the all-99 time; else 0–23. X.1083
-     * §15.54.4.
-     *
-     * @public
-     * @readonly
-     */
-    readonly hour: INTEGER,
-    /**
-     * @summary `minute`.
-     * @description
-     *
-     * 99 only as part of the all-99 time; else 0–59. X.1083
-     * §15.54.4.
-     *
-     * @public
-     * @readonly
-     */
-    readonly minute: INTEGER,
-    /**
-     * @summary `second`.
-     * @description
-     *
-     * 99 only as part of the all-99 time; else 0–59. X.1083
-     * §15.54.4.
-     *
-     * @public
-     * @readonly
-     */
-    readonly second: INTEGER
-  ) {}
+    hour: INTEGER,
+    minute: INTEGER,
+    second: INTEGER
+  ) {
+    this.hour = hour;
+    this.minute = minute;
+    this.second = second;
+  }
 
   /**
    * @summary Restructures an object into a BioAPI_TIME

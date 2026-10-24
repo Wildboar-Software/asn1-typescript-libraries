@@ -43,26 +43,33 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class ForwardServiceInteractionInd {
+    /**
+     * @summary `conferenceTreatmentIndicator`.
+     * @public
+     * @readonly
+     */
+    public readonly conferenceTreatmentIndicator?: OPTIONAL<OCTET_STRING>;
+    /**
+     * @summary `callDiversionTreatmentIndicator`.
+     * @public
+     * @readonly
+     */
+    public readonly callDiversionTreatmentIndicator?: OPTIONAL<OCTET_STRING>;
+    /**
+     * @summary `callOfferingTreatmentIndicator`.
+     * @public
+     * @readonly
+     */
+    public readonly callOfferingTreatmentIndicator?: OPTIONAL<OCTET_STRING>;
+
     constructor (
-        /**
-         * @summary `conferenceTreatmentIndicator`.
-         * @public
-         * @readonly
-         */
-        readonly conferenceTreatmentIndicator?: OPTIONAL<OCTET_STRING>,
-        /**
-         * @summary `callDiversionTreatmentIndicator`.
-         * @public
-         * @readonly
-         */
-        readonly callDiversionTreatmentIndicator?: OPTIONAL<OCTET_STRING>,
-        /**
-         * @summary `callOfferingTreatmentIndicator`.
-         * @public
-         * @readonly
-         */
-        readonly callOfferingTreatmentIndicator?: OPTIONAL<OCTET_STRING>
+        conferenceTreatmentIndicator?: OPTIONAL<OCTET_STRING>,
+        callDiversionTreatmentIndicator?: OPTIONAL<OCTET_STRING>,
+        callOfferingTreatmentIndicator?: OPTIONAL<OCTET_STRING>
     ) {
+        this.conferenceTreatmentIndicator = conferenceTreatmentIndicator;
+        this.callDiversionTreatmentIndicator = callDiversionTreatmentIndicator;
+        this.callOfferingTreatmentIndicator = callOfferingTreatmentIndicator;
         if (conferenceTreatmentIndicator !== undefined && conferenceTreatmentIndicator.length !== 1) {
             throw new ASN1SizeError("ForwardServiceInteractionInd.conferenceTreatmentIndicator violates SIZE constraint");
         }

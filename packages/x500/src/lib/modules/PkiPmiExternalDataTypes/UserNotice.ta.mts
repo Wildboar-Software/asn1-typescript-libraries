@@ -29,20 +29,26 @@ import {
  *
  */
 export class UserNotice {
+    /**
+     * @summary `noticeRef`.
+     * @public
+     * @readonly
+     */
+    public readonly noticeRef?: OPTIONAL<NoticeReference>;
+    /**
+     * @summary `explicitText`.
+     * @public
+     * @readonly
+     */
+    public readonly explicitText?: OPTIONAL<DisplayText>;
+
     constructor(
-        /**
-         * @summary `noticeRef`.
-         * @public
-         * @readonly
-         */
-        readonly noticeRef?: OPTIONAL<NoticeReference>,
-        /**
-         * @summary `explicitText`.
-         * @public
-         * @readonly
-         */
-        readonly explicitText?: OPTIONAL<DisplayText>
-    ) {}
+        noticeRef?: OPTIONAL<NoticeReference>,
+        explicitText?: OPTIONAL<DisplayText>
+    ) {
+        this.noticeRef = noticeRef;
+        this.explicitText = explicitText;
+    }
 
     /**
      * @summary Restructures an object into a UserNotice

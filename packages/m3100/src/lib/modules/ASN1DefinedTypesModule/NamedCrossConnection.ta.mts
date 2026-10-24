@@ -32,20 +32,26 @@ import {
  *
  */
 export class NamedCrossConnection {
+    /**
+     * @summary `redline`.
+     * @public
+     * @readonly
+     */
+    public readonly redline: BOOLEAN;
+    /**
+     * @summary `name`.
+     * @public
+     * @readonly
+     */
+    public readonly name: CrossConnectionName;
+
     constructor(
-        /**
-         * @summary `redline`.
-         * @public
-         * @readonly
-         */
-        readonly redline: BOOLEAN,
-        /**
-         * @summary `name`.
-         * @public
-         * @readonly
-         */
-        readonly name: CrossConnectionName
-    ) {}
+        redline: BOOLEAN,
+        name: CrossConnectionName
+    ) {
+        this.redline = redline;
+        this.name = name;
+    }
 
     /**
      * @summary Restructures an object into a NamedCrossConnection

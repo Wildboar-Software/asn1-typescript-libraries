@@ -36,29 +36,35 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class DeleteMessageArgument {
+    /**
+     * @summary `messageToBeDeleted`.
+     * @description
+     *
+     * Message identifier to delete (ECMA-269 §26.1.5.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly messageToBeDeleted: MessageID;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * CSTACommonArguments carrying the service-table security and
+     * privateData parameters.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `messageToBeDeleted`.
-         * @description
-         *
-         * Message identifier to delete (ECMA-269 §26.1.5.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly messageToBeDeleted: MessageID,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * CSTACommonArguments carrying the service-table security and
-         * privateData parameters.
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        messageToBeDeleted: MessageID,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.messageToBeDeleted = messageToBeDeleted;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a DeleteMessageArgument

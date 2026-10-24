@@ -33,58 +33,74 @@ import { type AChChargingAddress, _decode_AChChargingAddress, _encode_AChChargin
  *
  */
 export class CAMEL_CallResult_timeDurationChargingResult {
+    /**
+     * @summary `partyToCharge`.
+     * @description
+     *
+     * As received in the related ApplyCharging (or its default). Used by
+     * the gsmSCF to correlate the report to the request. Receiving Side
+     * LegID. (3GPP TS 29.078 V19.0.0 clauses 11.3 and 4.1.5).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly partyToCharge: ReceivingSideID;
+    public readonly timeInformation: TimeInformation;
+    /**
+     * @summary `legActive`.
+     * @description
+     *
+     * Whether the leg, Temporary Connection, or gsmSRF connection is still
+     * active. (3GPP TS 29.078 V19.0.0 clause 11.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly legActive?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `callLegReleasedAtTcpExpiry`.
+     * @description
+     *
+     * gsmSSF released the call leg, Temporary Connection, or SRF connection
+     * because allowed duration was reached.
+     * (3GPP TS 29.078 V19.0.0 clause 11.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly callLegReleasedAtTcpExpiry?: OPTIONAL<NULL>;
+    public readonly extensions?: OPTIONAL<Extensions>;
+    /**
+     * @summary `aChChargingAddress`.
+     * @description
+     *
+     * As received in the related ApplyCharging (or its default). Used to
+     * correlate the report to the request.
+     * (3GPP TS 29.078 V19.0.0 clause 11.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly aChChargingAddress?: OPTIONAL<AChChargingAddress>;
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `partyToCharge`.
-         * @description
-         *
-         * As received in the related ApplyCharging (or its default). Used by
-         * the gsmSCF to correlate the report to the request. Receiving Side
-         * LegID. (3GPP TS 29.078 V19.0.0 clauses 11.3 and 4.1.5).
-         *
-         * @public
-         * @readonly
-         */
-        readonly partyToCharge: ReceivingSideID,
-        readonly timeInformation: TimeInformation,
-        /**
-         * @summary `legActive`.
-         * @description
-         *
-         * Whether the leg, Temporary Connection, or gsmSRF connection is still
-         * active. (3GPP TS 29.078 V19.0.0 clause 11.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly legActive?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `callLegReleasedAtTcpExpiry`.
-         * @description
-         *
-         * gsmSSF released the call leg, Temporary Connection, or SRF connection
-         * because allowed duration was reached.
-         * (3GPP TS 29.078 V19.0.0 clause 11.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly callLegReleasedAtTcpExpiry?: OPTIONAL<NULL>,
-        readonly extensions?: OPTIONAL<Extensions>,
-        /**
-         * @summary `aChChargingAddress`.
-         * @description
-         *
-         * As received in the related ApplyCharging (or its default). Used to
-         * correlate the report to the request.
-         * (3GPP TS 29.078 V19.0.0 clause 11.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly aChChargingAddress?: OPTIONAL<AChChargingAddress>,
-        readonly _unrecognizedExtensionsList: _Element[] = [],
-    ) {}
+        partyToCharge: ReceivingSideID,
+        timeInformation: TimeInformation,
+        legActive?: OPTIONAL<BOOLEAN>,
+        callLegReleasedAtTcpExpiry?: OPTIONAL<NULL>,
+        extensions?: OPTIONAL<Extensions>,
+        aChChargingAddress?: OPTIONAL<AChChargingAddress>,
+        _unrecognizedExtensionsList: _Element[] = [],
+    ) {
+        this.partyToCharge = partyToCharge;
+        this.timeInformation = timeInformation;
+        this.legActive = legActive;
+        this.callLegReleasedAtTcpExpiry = callLegReleasedAtTcpExpiry;
+        this.extensions = extensions;
+        this.aChChargingAddress = aChChargingAddress;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     public static _from_object (_o: { [_K in keyof (CAMEL_CallResult_timeDurationChargingResult)]: (CAMEL_CallResult_timeDurationChargingResult)[_K] }): CAMEL_CallResult_timeDurationChargingResult {
         return new CAMEL_CallResult_timeDurationChargingResult(_o.partyToCharge, _o.timeInformation, _o.legActive, _o.callLegReleasedAtTcpExpiry, _o.extensions, _o.aChChargingAddress, _o._unrecognizedExtensionsList);

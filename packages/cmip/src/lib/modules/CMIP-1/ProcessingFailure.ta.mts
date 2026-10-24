@@ -50,44 +50,54 @@ import {
  *
  */
 export class ProcessingFailure {
+  /**
+   * @summary `managedObjectClass`.
+   * @description
+   *
+   * Class of the object on which processing failed.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly managedObjectClass: ObjectClass;
+  /**
+   * @summary `managedObjectInstance`.
+   * @description
+   *
+   * Instance on which processing failed, if known.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly managedObjectInstance: OPTIONAL<ObjectInstance>;
+  /**
+   * @summary `specificErrorInfo`.
+   * @description
+   *
+   * Application-specific error (`CMIP-SPECIFICERROR`).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly specificErrorInfo: SpecificErrorInfo;
+  /**
+   * @summary Extensions that are not recognized.
+   * @public
+   * @readonly
+   */
+  public readonly _unrecognizedExtensionsList: _Element[];
+
   constructor(
-    /**
-     * @summary `managedObjectClass`.
-     * @description
-     *
-     * Class of the object on which processing failed.
-     *
-     * @public
-     * @readonly
-     */
-    readonly managedObjectClass: ObjectClass,
-    /**
-     * @summary `managedObjectInstance`.
-     * @description
-     *
-     * Instance on which processing failed, if known.
-     *
-     * @public
-     * @readonly
-     */
-    readonly managedObjectInstance: OPTIONAL<ObjectInstance>,
-    /**
-     * @summary `specificErrorInfo`.
-     * @description
-     *
-     * Application-specific error (`CMIP-SPECIFICERROR`).
-     *
-     * @public
-     * @readonly
-     */
-    readonly specificErrorInfo: SpecificErrorInfo,
-    /**
-     * @summary Extensions that are not recognized.
-     * @public
-     * @readonly
-     */
-    readonly _unrecognizedExtensionsList: _Element[] = []
-  ) {}
+    managedObjectClass: ObjectClass,
+    managedObjectInstance: OPTIONAL<ObjectInstance>,
+    specificErrorInfo: SpecificErrorInfo,
+    _unrecognizedExtensionsList: _Element[] = []
+  ) {
+    this.managedObjectClass = managedObjectClass;
+    this.managedObjectInstance = managedObjectInstance;
+    this.specificErrorInfo = specificErrorInfo;
+    this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+  }
 
   /**
    * @summary Restructures an object into a ProcessingFailure

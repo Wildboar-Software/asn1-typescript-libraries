@@ -38,36 +38,44 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class ChangeMonitorFilterArgument {
+    /**
+     * @summary `crossRefIdentifier`.
+     * @description
+     *
+     * Monitor whose filter is changed (from Monitor Start).
+     * @public
+     * @readonly
+     */
+    public readonly crossRefIdentifier: MonitorCrossRefID;
+    /**
+     * @summary `requestedFilterList`.
+     * @description
+     *
+     * Requested events to filter out (not send).
+     * @public
+     * @readonly
+     */
+    public readonly requestedFilterList: MonitorFilter;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData. ECMA-269 Table 15-2.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `crossRefIdentifier`.
-         * @description
-         *
-         * Monitor whose filter is changed (from Monitor Start).
-         * @public
-         * @readonly
-         */
-        readonly crossRefIdentifier: MonitorCrossRefID,
-        /**
-         * @summary `requestedFilterList`.
-         * @description
-         *
-         * Requested events to filter out (not send).
-         * @public
-         * @readonly
-         */
-        readonly requestedFilterList: MonitorFilter,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData. ECMA-269 Table 15-2.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        crossRefIdentifier: MonitorCrossRefID,
+        requestedFilterList: MonitorFilter,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.crossRefIdentifier = crossRefIdentifier;
+        this.requestedFilterList = requestedFilterList;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a ChangeMonitorFilterArgument

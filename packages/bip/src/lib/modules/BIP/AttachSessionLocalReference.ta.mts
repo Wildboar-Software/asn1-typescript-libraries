@@ -58,62 +58,74 @@ import {
  *
  */
 export class AttachSessionLocalReference {
+  /**
+   * @summary `hostingEndpointIRI`.
+   * @description
+   *
+   * Endpoint containing the referenced BSP (local or a slave).
+   * X.1083 §18.8.2.1.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly hostingEndpointIRI: EndpointIRI;
+  /**
+   * @summary `bspProductUuid`.
+   * @description
+   *
+   * Product UUID of that BSP. X.1083 §18.8.2.2.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly bspProductUuid: BioAPI_UUID;
+  /**
+   * @summary `useBSPAccessUuid`.
+   * @description
+   *
+   * `TRUE` if `BioAPI_BSPAttach` identified the BSP by access
+   * UUID rather than product UUID. X.1083 §18.8.2.3.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly useBSPAccessUuid: BOOLEAN;
+  /**
+   * @summary `originalBSPHandle`.
+   * @description
+   *
+   * Handle generated in the hosting framework. X.1083
+   * §18.8.2.4.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly originalBSPHandle: BioAPI_HANDLE;
+  /**
+   * @summary `localBSPHandle`.
+   * @description
+   *
+   * Handle returned to the local application; unique in this
+   * table. X.1083 §18.8.2.5–18.8.2.6.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly localBSPHandle: BioAPI_HANDLE;
+
   constructor(
-    /**
-     * @summary `hostingEndpointIRI`.
-     * @description
-     *
-     * Endpoint containing the referenced BSP (local or a slave).
-     * X.1083 §18.8.2.1.
-     *
-     * @public
-     * @readonly
-     */
-    readonly hostingEndpointIRI: EndpointIRI,
-    /**
-     * @summary `bspProductUuid`.
-     * @description
-     *
-     * Product UUID of that BSP. X.1083 §18.8.2.2.
-     *
-     * @public
-     * @readonly
-     */
-    readonly bspProductUuid: BioAPI_UUID,
-    /**
-     * @summary `useBSPAccessUuid`.
-     * @description
-     *
-     * `TRUE` if `BioAPI_BSPAttach` identified the BSP by access
-     * UUID rather than product UUID. X.1083 §18.8.2.3.
-     *
-     * @public
-     * @readonly
-     */
-    readonly useBSPAccessUuid: BOOLEAN,
-    /**
-     * @summary `originalBSPHandle`.
-     * @description
-     *
-     * Handle generated in the hosting framework. X.1083
-     * §18.8.2.4.
-     *
-     * @public
-     * @readonly
-     */
-    readonly originalBSPHandle: BioAPI_HANDLE,
-    /**
-     * @summary `localBSPHandle`.
-     * @description
-     *
-     * Handle returned to the local application; unique in this
-     * table. X.1083 §18.8.2.5–18.8.2.6.
-     *
-     * @public
-     * @readonly
-     */
-    readonly localBSPHandle: BioAPI_HANDLE
-  ) {}
+    hostingEndpointIRI: EndpointIRI,
+    bspProductUuid: BioAPI_UUID,
+    useBSPAccessUuid: BOOLEAN,
+    originalBSPHandle: BioAPI_HANDLE,
+    localBSPHandle: BioAPI_HANDLE
+  ) {
+    this.hostingEndpointIRI = hostingEndpointIRI;
+    this.bspProductUuid = bspProductUuid;
+    this.useBSPAccessUuid = useBSPAccessUuid;
+    this.originalBSPHandle = originalBSPHandle;
+    this.localBSPHandle = localBSPHandle;
+  }
 
   /**
    * @summary Restructures an object into a AttachSessionLocalReference

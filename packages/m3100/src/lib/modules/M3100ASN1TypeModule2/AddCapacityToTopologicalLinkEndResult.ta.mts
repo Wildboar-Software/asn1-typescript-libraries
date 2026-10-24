@@ -37,26 +37,34 @@ import {
  *
  */
 export class AddCapacityToTopologicalLinkEndResult {
+    /**
+     * @summary `resultingCapacity`.
+     * @public
+     * @readonly
+     */
+    public readonly resultingCapacity: PointCapacity;
+    /**
+     * @summary `resultingnetworkCTPs`.
+     * @public
+     * @readonly
+     */
+    public readonly resultingnetworkCTPs: NWTPList;
+    /**
+     * @summary `resultingProvisionedLinkEndCapacity`.
+     * @public
+     * @readonly
+     */
+    public readonly resultingProvisionedLinkEndCapacity: PointCapacity;
+
     constructor(
-        /**
-         * @summary `resultingCapacity`.
-         * @public
-         * @readonly
-         */
-        readonly resultingCapacity: PointCapacity,
-        /**
-         * @summary `resultingnetworkCTPs`.
-         * @public
-         * @readonly
-         */
-        readonly resultingnetworkCTPs: NWTPList,
-        /**
-         * @summary `resultingProvisionedLinkEndCapacity`.
-         * @public
-         * @readonly
-         */
-        readonly resultingProvisionedLinkEndCapacity: PointCapacity
-    ) {}
+        resultingCapacity: PointCapacity,
+        resultingnetworkCTPs: NWTPList,
+        resultingProvisionedLinkEndCapacity: PointCapacity
+    ) {
+        this.resultingCapacity = resultingCapacity;
+        this.resultingnetworkCTPs = resultingnetworkCTPs;
+        this.resultingProvisionedLinkEndCapacity = resultingProvisionedLinkEndCapacity;
+    }
 
     /**
      * @summary Restructures an object into a AddCapacityToTopologicalLinkEndResult

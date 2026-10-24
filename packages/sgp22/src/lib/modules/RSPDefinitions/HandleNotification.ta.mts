@@ -30,19 +30,23 @@ import { PendingNotification, _decode_PendingNotification, _encode_PendingNotifi
  */
 export
 class HandleNotification {
+    /**
+     * @summary `pendingNotification`.
+     * @description
+     * 
+     * A Profile Installation Result or another signed notification, as
+     * retrieved from the eUICC. SGP.22 v3.1 §5.6.4.
+     * 
+     * @public
+     * @readonly
+     */
+    public readonly pendingNotification: PendingNotification;
+
     constructor (
-        /**
-         * @summary `pendingNotification`.
-         * @description
-         * 
-         * A Profile Installation Result or another signed notification, as
-         * retrieved from the eUICC. SGP.22 v3.1 §5.6.4.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly pendingNotification: PendingNotification
-    ) {}
+        pendingNotification: PendingNotification
+    ) {
+        this.pendingNotification = pendingNotification;
+    }
 
     /**
      * @summary Restructures an object into a HandleNotification

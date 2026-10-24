@@ -36,25 +36,31 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class BKQcontent_stuser_Item {
+    /**
+     * @summary `utag`.
+     * @description
+     * User-defined item-tag. ISO/IEC 9040:1997 §34.1.3.2.
+     * @public
+     * @readonly
+     */
+    public readonly utag: INTEGER;
+    /**
+     * @summary `uvalue`.
+     * @description
+     * User-defined item-value octets. ISO/IEC 9040:1997
+     * §34.1.3.2.
+     * @public
+     * @readonly
+     */
+    public readonly uvalue: OCTET_STRING;
+
     constructor (
-        /**
-         * @summary `utag`.
-         * @description
-         * User-defined item-tag. ISO/IEC 9040:1997 §34.1.3.2.
-         * @public
-         * @readonly
-         */
-        readonly utag: INTEGER,
-        /**
-         * @summary `uvalue`.
-         * @description
-         * User-defined item-value octets. ISO/IEC 9040:1997
-         * §34.1.3.2.
-         * @public
-         * @readonly
-         */
-        readonly uvalue: OCTET_STRING
-    ) {}
+        utag: INTEGER,
+        uvalue: OCTET_STRING
+    ) {
+        this.utag = utag;
+        this.uvalue = uvalue;
+    }
 
     /**
      * @summary Restructures an object into a BKQcontent_stuser_Item

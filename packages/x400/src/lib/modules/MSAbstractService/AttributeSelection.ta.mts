@@ -40,26 +40,34 @@ import {
  *
  */
 export class AttributeSelection {
+    /**
+     * @summary `type_`.
+     * @public
+     * @readonly
+     */
+    public readonly type_: AttributeType;
+    /**
+     * @summary `from_`.
+     * @public
+     * @readonly
+     */
+    public readonly from_?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `count`.
+     * @public
+     * @readonly
+     */
+    public readonly count?: OPTIONAL<INTEGER>;
+
     constructor(
-        /**
-         * @summary `type_`.
-         * @public
-         * @readonly
-         */
-        readonly type_: AttributeType,
-        /**
-         * @summary `from_`.
-         * @public
-         * @readonly
-         */
-        readonly from_?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `count`.
-         * @public
-         * @readonly
-         */
-        readonly count?: OPTIONAL<INTEGER>
-    ) {}
+        type_: AttributeType,
+        from_?: OPTIONAL<INTEGER>,
+        count?: OPTIONAL<INTEGER>
+    ) {
+        this.type_ = type_;
+        this.from_ = from_;
+        this.count = count;
+    }
 
     /**
      * @summary Restructures an object into a AttributeSelection

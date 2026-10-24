@@ -43,41 +43,49 @@ import { AlternateAccess, _decode_AlternateAccess, _encode_AlternateAccess } fro
  */
 export
 class Variable_List_Item_instance {
+    /**
+     * @summary `unnamedItem`.
+     * @description
+     *
+     * Unnamed Variable (or NULL if not vadr). ISO 9506-1:2003 §14.1.4.3.1;
+     * ISO 9506-2:2003 Annex B.1.7.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly unnamedItem?: OPTIONAL<Nullable_Unnamed_Variable_instance>;
+    /**
+     * @summary `namedItem`.
+     * @description
+     *
+     * Named Variable (or NULL if not vnam). ISO 9506-1:2003 §14.1.4.3.2;
+     * ISO 9506-2:2003 Annex B.1.7.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly namedItem?: OPTIONAL<Nullable_Named_Variable_instance>;
+    /**
+     * @summary `alternateAccess`.
+     * @description
+     *
+     * Alternate Access (valt). ISO 9506-1:2003 §14.1.4.3.3; ISO 9506-2:2003
+     * Annex B.1.7.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly alternateAccess?: OPTIONAL<AlternateAccess>;
+
     constructor (
-        /**
-         * @summary `unnamedItem`.
-         * @description
-         *
-         * Unnamed Variable (or NULL if not vadr). ISO 9506-1:2003 §14.1.4.3.1;
-         * ISO 9506-2:2003 Annex B.1.7.
-         *
-         * @public
-         * @readonly
-         */
-        readonly unnamedItem?: OPTIONAL<Nullable_Unnamed_Variable_instance>,
-        /**
-         * @summary `namedItem`.
-         * @description
-         *
-         * Named Variable (or NULL if not vnam). ISO 9506-1:2003 §14.1.4.3.2;
-         * ISO 9506-2:2003 Annex B.1.7.
-         *
-         * @public
-         * @readonly
-         */
-        readonly namedItem?: OPTIONAL<Nullable_Named_Variable_instance>,
-        /**
-         * @summary `alternateAccess`.
-         * @description
-         *
-         * Alternate Access (valt). ISO 9506-1:2003 §14.1.4.3.3; ISO 9506-2:2003
-         * Annex B.1.7.
-         *
-         * @public
-         * @readonly
-         */
-        readonly alternateAccess?: OPTIONAL<AlternateAccess>
-    ) {}
+        unnamedItem?: OPTIONAL<Nullable_Unnamed_Variable_instance>,
+        namedItem?: OPTIONAL<Nullable_Named_Variable_instance>,
+        alternateAccess?: OPTIONAL<AlternateAccess>
+    ) {
+        this.unnamedItem = unnamedItem;
+        this.namedItem = namedItem;
+        this.alternateAccess = alternateAccess;
+    }
 
     /**
      * @summary Restructures an object into a Variable_List_Item_instance

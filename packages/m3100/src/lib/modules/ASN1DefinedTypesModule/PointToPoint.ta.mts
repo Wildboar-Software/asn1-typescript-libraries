@@ -32,26 +32,34 @@ import {
  *
  */
 export class PointToPoint {
+    /**
+     * @summary `fromTp`.
+     * @public
+     * @readonly
+     */
+    public readonly fromTp: ObjectInstance;
+    /**
+     * @summary `toTp`.
+     * @public
+     * @readonly
+     */
+    public readonly toTp: ObjectInstance;
+    /**
+     * @summary `xCon`.
+     * @public
+     * @readonly
+     */
+    public readonly xCon: ObjectInstance;
+
     constructor(
-        /**
-         * @summary `fromTp`.
-         * @public
-         * @readonly
-         */
-        readonly fromTp: ObjectInstance,
-        /**
-         * @summary `toTp`.
-         * @public
-         * @readonly
-         */
-        readonly toTp: ObjectInstance,
-        /**
-         * @summary `xCon`.
-         * @public
-         * @readonly
-         */
-        readonly xCon: ObjectInstance
-    ) {}
+        fromTp: ObjectInstance,
+        toTp: ObjectInstance,
+        xCon: ObjectInstance
+    ) {
+        this.fromTp = fromTp;
+        this.toTp = toTp;
+        this.xCon = xCon;
+    }
 
     /**
      * @summary Restructures an object into a PointToPoint

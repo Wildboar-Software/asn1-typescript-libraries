@@ -35,28 +35,34 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class ChangeMonitorFilterResult {
+    /**
+     * @summary `actualFilterList`.
+     * @description
+     *
+     * Events the SF will actually filter. May be omitted if it
+     * matches the request and the SF supports this parameter.
+     * @public
+     * @readonly
+     */
+    public readonly actualFilterList?: OPTIONAL<MonitorFilter>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData. ECMA-269 Table 15-3.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `actualFilterList`.
-         * @description
-         *
-         * Events the SF will actually filter. May be omitted if it
-         * matches the request and the SF supports this parameter.
-         * @public
-         * @readonly
-         */
-        readonly actualFilterList?: OPTIONAL<MonitorFilter>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData. ECMA-269 Table 15-3.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        actualFilterList?: OPTIONAL<MonitorFilter>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.actualFilterList = actualFilterList;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a ChangeMonitorFilterResult

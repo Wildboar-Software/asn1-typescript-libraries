@@ -35,27 +35,33 @@ import { ParameterValues, _decode_ParameterValues, _encode_ParameterValues } fro
  */
 export
 class Values_Item {
+    /**
+     * @summary `name`.
+     * @description
+     * `display-object-name`; unique PrintableString in the VTE.
+     * ISO/IEC 9040:1997 §18.1.
+     * @public
+     * @readonly
+     */
+    public readonly name: PrintableString;
+    /**
+     * @summary `values`.
+     * @description
+     * Selected single values for this object's VTE-parameters;
+     * must be consistent with the offer. ISO/IEC 9041-1:1997
+     * §12.3.3.
+     * @public
+     * @readonly
+     */
+    public readonly values: ParameterValues;
+
     constructor (
-        /**
-         * @summary `name`.
-         * @description
-         * `display-object-name`; unique PrintableString in the VTE.
-         * ISO/IEC 9040:1997 §18.1.
-         * @public
-         * @readonly
-         */
-        readonly name: PrintableString,
-        /**
-         * @summary `values`.
-         * @description
-         * Selected single values for this object's VTE-parameters;
-         * must be consistent with the offer. ISO/IEC 9041-1:1997
-         * §12.3.3.
-         * @public
-         * @readonly
-         */
-        readonly values: ParameterValues
-    ) {}
+        name: PrintableString,
+        values: ParameterValues
+    ) {
+        this.name = name;
+        this.values = values;
+    }
 
     /**
      * @summary Restructures an object into a Values_Item

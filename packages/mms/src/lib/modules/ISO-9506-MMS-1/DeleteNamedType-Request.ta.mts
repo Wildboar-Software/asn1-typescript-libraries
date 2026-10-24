@@ -43,43 +43,51 @@ import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-
  */
 export
 class DeleteNamedType_Request {
+    /**
+     * @summary `scopeOfDelete`.
+     * @description
+     *
+     * Extent: `specific`, `aa-specific`, `domain`, or
+     * `vmd`. Default `specific`.
+     * ISO 9506-1:2003 §14.17.1.1.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly scopeOfDelete?: OPTIONAL<DeleteNamedType_Request_scopeOfDelete>;
+    /**
+     * @summary `listOfTypeName`.
+     * @description
+     *
+     * Named Types to delete when scope is `specific`;
+     * otherwise omitted. ISO 9506-1:2003 §14.17.1.1.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly listOfTypeName?: OPTIONAL<ObjectName[]>;
+    /**
+     * @summary `domainName`.
+     * @description
+     *
+     * Domain whose Named Types are deleted when scope is
+     * `domain`; otherwise omitted.
+     * ISO 9506-1:2003 §14.17.1.1.3.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly domainName?: OPTIONAL<Identifier>;
+
     constructor (
-        /**
-         * @summary `scopeOfDelete`.
-         * @description
-         *
-         * Extent: `specific`, `aa-specific`, `domain`, or
-         * `vmd`. Default `specific`.
-         * ISO 9506-1:2003 §14.17.1.1.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly scopeOfDelete?: OPTIONAL<DeleteNamedType_Request_scopeOfDelete>,
-        /**
-         * @summary `listOfTypeName`.
-         * @description
-         *
-         * Named Types to delete when scope is `specific`;
-         * otherwise omitted. ISO 9506-1:2003 §14.17.1.1.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly listOfTypeName?: OPTIONAL<ObjectName[]>,
-        /**
-         * @summary `domainName`.
-         * @description
-         *
-         * Domain whose Named Types are deleted when scope is
-         * `domain`; otherwise omitted.
-         * ISO 9506-1:2003 §14.17.1.1.3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly domainName?: OPTIONAL<Identifier>
-    ) {}
+        scopeOfDelete?: OPTIONAL<DeleteNamedType_Request_scopeOfDelete>,
+        listOfTypeName?: OPTIONAL<ObjectName[]>,
+        domainName?: OPTIONAL<Identifier>
+    ) {
+        this.scopeOfDelete = scopeOfDelete;
+        this.listOfTypeName = listOfTypeName;
+        this.domainName = domainName;
+    }
 
     /**
      * @summary Restructures an object into a DeleteNamedType_Request

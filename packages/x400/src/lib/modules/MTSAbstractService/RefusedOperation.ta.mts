@@ -39,20 +39,26 @@ import {
  *
  */
 export class RefusedOperation {
+    /**
+     * @summary `refused_argument`.
+     * @public
+     * @readonly
+     */
+    public readonly refused_argument: RefusedOperation_refused_argument;
+    /**
+     * @summary `refusal_reason`.
+     * @public
+     * @readonly
+     */
+    public readonly refusal_reason: RefusalReason;
+
     constructor(
-        /**
-         * @summary `refused_argument`.
-         * @public
-         * @readonly
-         */
-        readonly refused_argument: RefusedOperation_refused_argument,
-        /**
-         * @summary `refusal_reason`.
-         * @public
-         * @readonly
-         */
-        readonly refusal_reason: RefusalReason
-    ) {}
+        refused_argument: RefusedOperation_refused_argument,
+        refusal_reason: RefusalReason
+    ) {
+        this.refused_argument = refused_argument;
+        this.refusal_reason = refusal_reason;
+    }
 
     /**
      * @summary Restructures an object into a RefusedOperation

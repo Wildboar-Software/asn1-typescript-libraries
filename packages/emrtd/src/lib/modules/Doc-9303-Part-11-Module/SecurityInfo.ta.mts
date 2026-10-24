@@ -32,30 +32,38 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class SecurityInfo {
+    /**
+     * Identifies the supported protocol and selects the open types of
+     * `requiredData` and `optionalData`.
+     * @summary `protocol`.
+     * @public
+     * @readonly
+     */
+    public readonly protocol: OBJECT_IDENTIFIER;
+    /**
+     * Protocol-specific data that must be present.
+     * @summary `requiredData`.
+     * @public
+     * @readonly
+     */
+    public readonly requiredData: _Element;
+    /**
+     * Protocol-specific data that may be absent.
+     * @summary `optionalData`.
+     * @public
+     * @readonly
+     */
+    public readonly optionalData?: OPTIONAL<_Element>;
+
     constructor (
-        /**
-         * Identifies the supported protocol and selects the open types of
-         * `requiredData` and `optionalData`.
-         * @summary `protocol`.
-         * @public
-         * @readonly
-         */
-        readonly protocol: OBJECT_IDENTIFIER,
-        /**
-         * Protocol-specific data that must be present.
-         * @summary `requiredData`.
-         * @public
-         * @readonly
-         */
-        readonly requiredData: _Element,
-        /**
-         * Protocol-specific data that may be absent.
-         * @summary `optionalData`.
-         * @public
-         * @readonly
-         */
-        readonly optionalData?: OPTIONAL<_Element>,
-    ) {}
+        protocol: OBJECT_IDENTIFIER,
+        requiredData: _Element,
+        optionalData?: OPTIONAL<_Element>,
+    ) {
+        this.protocol = protocol;
+        this.requiredData = requiredData;
+        this.optionalData = optionalData;
+    }
 
     /**
      * @summary Restructures an object into a SecurityInfo

@@ -40,48 +40,58 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
  */
 export
 class Ext_ExternalSignalInfo {
+    /**
+     * @summary `ext_ProtocolId`.
+     * @description
+     *
+     * Shall be `ets-300356` for additional signal info. Any other value:
+     * ignore the whole sequence. (3GPP TS 29.002 V19.1.0 clauses 17.7.8 and
+     * 7.6.9.10).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ext_ProtocolId: Ext_ProtocolId;
+    /**
+     * @summary `signalInfo`.
+     * @description
+     *
+     * Additional signal information (clause 7.6.9.10): Calling Party Number
+     * and/or Generic Number as in ETS 300 356, in either order. (3GPP TS
+     * 29.002 V19.1.0 clause 7.6.9.10).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly signalInfo: SignalInfo;
+    /**
+     * @summary `extensionContainer`.
+     * @description
+     *
+     * Private extensions. (3GPP TS 29.002 V19.1.0 clause 17.7.8).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `ext_ProtocolId`.
-         * @description
-         *
-         * Shall be `ets-300356` for additional signal info. Any other value:
-         * ignore the whole sequence. (3GPP TS 29.002 V19.1.0 clauses 17.7.8 and
-         * 7.6.9.10).
-         *
-         * @public
-         * @readonly
-         */
-        readonly ext_ProtocolId: Ext_ProtocolId,
-        /**
-         * @summary `signalInfo`.
-         * @description
-         *
-         * Additional signal information (clause 7.6.9.10): Calling Party Number
-         * and/or Generic Number as in ETS 300 356, in either order. (3GPP TS
-         * 29.002 V19.1.0 clause 7.6.9.10).
-         *
-         * @public
-         * @readonly
-         */
-        readonly signalInfo: SignalInfo,
-        /**
-         * @summary `extensionContainer`.
-         * @description
-         *
-         * Private extensions. (3GPP TS 29.002 V19.1.0 clause 17.7.8).
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        ext_ProtocolId: Ext_ProtocolId,
+        signalInfo: SignalInfo,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.ext_ProtocolId = ext_ProtocolId;
+        this.signalInfo = signalInfo;
+        this.extensionContainer = extensionContainer;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a Ext_ExternalSignalInfo

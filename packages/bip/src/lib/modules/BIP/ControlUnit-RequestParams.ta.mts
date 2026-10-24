@@ -53,51 +53,61 @@ import {
  *
  */
 export class ControlUnit_RequestParams {
+  /**
+   * @summary `originalBSPHandle`.
+   * @description
+   *
+   * Attach-session handle at the hosting endpoint, not the
+   * application's local handle. X.1083 Table 53, clause 26.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly originalBSPHandle: BioAPI_HANDLE;
+  /**
+   * @summary `unitID`.
+   * @description
+   *
+   * Unit to control. X.1083 Table 53, §15.55.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly unitID: BioAPI_UNIT_ID;
+  /**
+   * @summary `controlCode`.
+   * @description
+   *
+   * Control code for the unit. X.1083 Table 53, §15.1.5.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly controlCode: UnsignedInt;
+  /**
+   * @summary `inputData`.
+   * @description
+   *
+   * Input payload of the control operation. Maps from InputData
+   * (clause 19, §15.22). Not OPTIONAL; a NULL C pointer is
+   * unconvertible. X.1083 Table 53.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly inputData: BioAPI_DATA;
+
   constructor(
-    /**
-     * @summary `originalBSPHandle`.
-     * @description
-     *
-     * Attach-session handle at the hosting endpoint, not the
-     * application's local handle. X.1083 Table 53, clause 26.
-     *
-     * @public
-     * @readonly
-     */
-    readonly originalBSPHandle: BioAPI_HANDLE,
-    /**
-     * @summary `unitID`.
-     * @description
-     *
-     * Unit to control. X.1083 Table 53, §15.55.
-     *
-     * @public
-     * @readonly
-     */
-    readonly unitID: BioAPI_UNIT_ID,
-    /**
-     * @summary `controlCode`.
-     * @description
-     *
-     * Control code for the unit. X.1083 Table 53, §15.1.5.
-     *
-     * @public
-     * @readonly
-     */
-    readonly controlCode: UnsignedInt,
-    /**
-     * @summary `inputData`.
-     * @description
-     *
-     * Input payload of the control operation. Maps from InputData
-     * (clause 19, §15.22). Not OPTIONAL; a NULL C pointer is
-     * unconvertible. X.1083 Table 53.
-     *
-     * @public
-     * @readonly
-     */
-    readonly inputData: BioAPI_DATA
-  ) {}
+    originalBSPHandle: BioAPI_HANDLE,
+    unitID: BioAPI_UNIT_ID,
+    controlCode: UnsignedInt,
+    inputData: BioAPI_DATA
+  ) {
+    this.originalBSPHandle = originalBSPHandle;
+    this.unitID = unitID;
+    this.controlCode = controlCode;
+    this.inputData = inputData;
+  }
 
   /**
    * @summary Restructures an object into a ControlUnit_RequestParams

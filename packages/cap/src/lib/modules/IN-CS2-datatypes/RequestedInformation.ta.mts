@@ -31,20 +31,26 @@ import { RequestedInformationValue, _decode_RequestedInformationValue, _encode_R
  */
 export
 class RequestedInformation {
+    /**
+     * @summary `requestedInformationType`.
+     * @public
+     * @readonly
+     */
+    public readonly requestedInformationType: RequestedInformationType;
+    /**
+     * @summary `requestedInformationValue`.
+     * @public
+     * @readonly
+     */
+    public readonly requestedInformationValue: RequestedInformationValue;
+
     constructor (
-        /**
-         * @summary `requestedInformationType`.
-         * @public
-         * @readonly
-         */
-        readonly requestedInformationType: RequestedInformationType,
-        /**
-         * @summary `requestedInformationValue`.
-         * @public
-         * @readonly
-         */
-        readonly requestedInformationValue: RequestedInformationValue
-    ) {}
+        requestedInformationType: RequestedInformationType,
+        requestedInformationValue: RequestedInformationValue
+    ) {
+        this.requestedInformationType = requestedInformationType;
+        this.requestedInformationValue = requestedInformationValue;
+    }
 
     /**
      * @summary Restructures an object into a RequestedInformation

@@ -48,26 +48,34 @@ import { Time24 } from '@wildboar/attribute-asn1module';
  *
  */
 export class WeekMask {
+    /**
+     * @summary `daysOfWeek`.
+     * @public
+     * @readonly
+     */
+    public readonly daysOfWeek?: OPTIONAL<WeekMask_daysOfWeek>;
+    /**
+     * @summary `intervalsOfDay`.
+     * @public
+     * @readonly
+     */
+    public readonly intervalsOfDay?: OPTIONAL<WeekMask_intervalsOfDay_Item[]>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `daysOfWeek`.
-         * @public
-         * @readonly
-         */
-        readonly daysOfWeek?: OPTIONAL<WeekMask_daysOfWeek>,
-        /**
-         * @summary `intervalsOfDay`.
-         * @public
-         * @readonly
-         */
-        readonly intervalsOfDay?: OPTIONAL<WeekMask_intervalsOfDay_Item[]>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        daysOfWeek?: OPTIONAL<WeekMask_daysOfWeek>,
+        intervalsOfDay?: OPTIONAL<WeekMask_intervalsOfDay_Item[]>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.daysOfWeek = daysOfWeek;
+        this.intervalsOfDay = intervalsOfDay;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a WeekMask

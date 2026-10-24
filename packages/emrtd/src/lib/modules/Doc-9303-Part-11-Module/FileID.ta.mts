@@ -38,23 +38,28 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class FileID {
+    /**
+     * Two-octet elementary-file identifier.
+     * @summary `fid`.
+     * @public
+     * @readonly
+     */
+    public readonly fid: OCTET_STRING;
+    /**
+     * One-octet short file identifier. Absent means the file is selected
+     * explicitly by `fid`.
+     * @summary `sfid`.
+     * @public
+     * @readonly
+     */
+    public readonly sfid?: OPTIONAL<OCTET_STRING>;
+
     constructor (
-        /**
-         * Two-octet elementary-file identifier.
-         * @summary `fid`.
-         * @public
-         * @readonly
-         */
-        readonly fid: OCTET_STRING,
-        /**
-         * One-octet short file identifier. Absent means the file is selected
-         * explicitly by `fid`.
-         * @summary `sfid`.
-         * @public
-         * @readonly
-         */
-        readonly sfid?: OPTIONAL<OCTET_STRING>
+        fid: OCTET_STRING,
+        sfid?: OPTIONAL<OCTET_STRING>
     ) {
+        this.fid = fid;
+        this.sfid = sfid;
         if (fid.length !== 2) {
             throw new ASN1SizeError("FileID.fid violates SIZE constraint");
         }

@@ -34,32 +34,42 @@ import {
  *
  */
 export class AVMPcommonComponents {
+    /**
+     * @summary `version`.
+     * @public
+     * @readonly
+     */
+    public readonly version: OPTIONAL<AVMPversion>;
+    /**
+     * @summary `timeStamp`.
+     * @public
+     * @readonly
+     */
+    public readonly timeStamp: GeneralizedTime;
+    /**
+     * @summary `sequence`.
+     * @public
+     * @readonly
+     */
+    public readonly sequence: AVMPsequence;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `version`.
-         * @public
-         * @readonly
-         */
-        readonly version: OPTIONAL<AVMPversion>,
-        /**
-         * @summary `timeStamp`.
-         * @public
-         * @readonly
-         */
-        readonly timeStamp: GeneralizedTime,
-        /**
-         * @summary `sequence`.
-         * @public
-         * @readonly
-         */
-        readonly sequence: AVMPsequence,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        version: OPTIONAL<AVMPversion>,
+        timeStamp: GeneralizedTime,
+        sequence: AVMPsequence,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.version = version;
+        this.timeStamp = timeStamp;
+        this.sequence = sequence;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a AVMPcommonComponents

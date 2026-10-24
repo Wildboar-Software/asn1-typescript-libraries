@@ -87,77 +87,99 @@ import {
  *
  */
 export class TbsHandshakeAcc {
+    /**
+     * @summary `version`.
+     * @description Exactly one bit, chosen among those in the corresponding `HandshakeReq` (highest should be used). DEFAULT `{v1}`.
+     * @public
+     * @readonly
+     */
+    public readonly version: OPTIONAL<Version>;
+    /**
+     * @summary `sigSel`.
+     * @description `altSigAlg` iff the client offered it and the server supports it; else `sigAlg`. Selected alg signs this PDU; `altSignature` absent.
+     * @public
+     * @readonly
+     */
+    public readonly sigSel: TbsHandshakeAcc_sigSel;
+    /**
+     * @summary `pkiPath`.
+     * @description DER-encapsulated certification path verifying this signature.
+     * @public
+     * @readonly
+     */
+    public readonly pkiPath: DER_PkiPath;
+    /**
+     * @summary `assoID`.
+     * @description Same value as in the corresponding `HandshakeReq`.
+     * @public
+     * @readonly
+     */
+    public readonly assoID: AssoID;
+    /**
+     * @summary `time`.
+     * @description UTC GeneralizedTime of creation (clause 8.2).
+     * @public
+     * @readonly
+     */
+    public readonly time: TimeStamp;
+    /**
+     * @summary `keyEstSel`.
+     * @description `altKeyEst` iff the client offered it and the server supports it; else `keyEst`. Carries the server’s DH Payload.
+     * @public
+     * @readonly
+     */
+    public readonly keyEstSel: TbsHandshakeAcc_keyEstSel;
+    /**
+     * @summary `encr_mode`.
+     * @description Same CHOICE alternative as the request; single selected algorithm, not a sequence.
+     * @public
+     * @readonly
+     */
+    public readonly encr_mode: TbsHandshakeAcc_encr_mode;
+    /**
+     * @summary `attCert`.
+     * @description Optional DER-encapsulated attribute certificate.
+     * @public
+     * @readonly
+     */
+    public readonly attCert?: OPTIONAL<DER_AttributeCertificate>;
+    /**
+     * @summary `applData`.
+     * @description Init-response PrPDU when the protected protocol requires one.
+     * @public
+     * @readonly
+     */
+    public readonly applData?: OPTIONAL<WrappedProt>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `version`.
-         * @description Exactly one bit, chosen among those in the corresponding `HandshakeReq` (highest should be used). DEFAULT `{v1}`.
-         * @public
-         * @readonly
-         */
-        readonly version: OPTIONAL<Version>,
-        /**
-         * @summary `sigSel`.
-         * @description `altSigAlg` iff the client offered it and the server supports it; else `sigAlg`. Selected alg signs this PDU; `altSignature` absent.
-         * @public
-         * @readonly
-         */
-        readonly sigSel: TbsHandshakeAcc_sigSel,
-        /**
-         * @summary `pkiPath`.
-         * @description DER-encapsulated certification path verifying this signature.
-         * @public
-         * @readonly
-         */
-        readonly pkiPath: DER_PkiPath,
-        /**
-         * @summary `assoID`.
-         * @description Same value as in the corresponding `HandshakeReq`.
-         * @public
-         * @readonly
-         */
-        readonly assoID: AssoID,
-        /**
-         * @summary `time`.
-         * @description UTC GeneralizedTime of creation (clause 8.2).
-         * @public
-         * @readonly
-         */
-        readonly time: TimeStamp,
-        /**
-         * @summary `keyEstSel`.
-         * @description `altKeyEst` iff the client offered it and the server supports it; else `keyEst`. Carries the server’s DH Payload.
-         * @public
-         * @readonly
-         */
-        readonly keyEstSel: TbsHandshakeAcc_keyEstSel,
-        /**
-         * @summary `encr_mode`.
-         * @description Same CHOICE alternative as the request; single selected algorithm, not a sequence.
-         * @public
-         * @readonly
-         */
-        readonly encr_mode: TbsHandshakeAcc_encr_mode,
-        /**
-         * @summary `attCert`.
-         * @description Optional DER-encapsulated attribute certificate.
-         * @public
-         * @readonly
-         */
-        readonly attCert?: OPTIONAL<DER_AttributeCertificate>,
-        /**
-         * @summary `applData`.
-         * @description Init-response PrPDU when the protected protocol requires one.
-         * @public
-         * @readonly
-         */
-        readonly applData?: OPTIONAL<WrappedProt>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        version: OPTIONAL<Version>,
+        sigSel: TbsHandshakeAcc_sigSel,
+        pkiPath: DER_PkiPath,
+        assoID: AssoID,
+        time: TimeStamp,
+        keyEstSel: TbsHandshakeAcc_keyEstSel,
+        encr_mode: TbsHandshakeAcc_encr_mode,
+        attCert?: OPTIONAL<DER_AttributeCertificate>,
+        applData?: OPTIONAL<WrappedProt>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.version = version;
+        this.sigSel = sigSel;
+        this.pkiPath = pkiPath;
+        this.assoID = assoID;
+        this.time = time;
+        this.keyEstSel = keyEstSel;
+        this.encr_mode = encr_mode;
+        this.attCert = attCert;
+        this.applData = applData;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a TbsHandshakeAcc

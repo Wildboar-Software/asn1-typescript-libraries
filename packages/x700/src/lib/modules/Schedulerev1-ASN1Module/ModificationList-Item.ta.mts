@@ -37,44 +37,52 @@ import { AttributeId, _decode_AttributeId, _encode_AttributeId } from '@wildboar
  *
  */
 export class ModificationList_Item {
+    /**
+     * @summary `modifyOperator`.
+     * @description
+     *
+     * CMIP modify operator; default `replace`. ITU-T Rec. X.746
+     * (02/00)
+     * [A.6](https://www.itu.int/rec/T-REC-X.746-200002-I),
+     * Erratum 1.
+     * @public
+     * @readonly
+     */
+    public readonly modifyOperator: OPTIONAL<ModifyOperator>;
+    /**
+     * @summary `attributeId`.
+     * @description
+     *
+     * Attribute to modify (`CMIP-ATTRIBUTE.&id` constrained to
+     * `AttributeSet`). ITU-T Rec. X.746 (02/00)
+     * [A.6](https://www.itu.int/rec/T-REC-X.746-200002-I),
+     * Erratum 1.
+     * @public
+     * @readonly
+     */
+    public readonly attributeId: AttributeId;
+    /**
+     * @summary `attributeValue`.
+     * @description
+     *
+     * New value of the attribute. Absent for `setToDefault`.
+     * ITU-T Rec. X.746 (02/00)
+     * [A.6](https://www.itu.int/rec/T-REC-X.746-200002-I),
+     * Erratum 1.
+     * @public
+     * @readonly
+     */
+    public readonly attributeValue?: OPTIONAL<_Element>;
+
     constructor(
-        /**
-         * @summary `modifyOperator`.
-         * @description
-         *
-         * CMIP modify operator; default `replace`. ITU-T Rec. X.746
-         * (02/00)
-         * [A.6](https://www.itu.int/rec/T-REC-X.746-200002-I),
-         * Erratum 1.
-         * @public
-         * @readonly
-         */
-        readonly modifyOperator: OPTIONAL<ModifyOperator>,
-        /**
-         * @summary `attributeId`.
-         * @description
-         *
-         * Attribute to modify (`CMIP-ATTRIBUTE.&id` constrained to
-         * `AttributeSet`). ITU-T Rec. X.746 (02/00)
-         * [A.6](https://www.itu.int/rec/T-REC-X.746-200002-I),
-         * Erratum 1.
-         * @public
-         * @readonly
-         */
-        readonly attributeId: AttributeId,
-        /**
-         * @summary `attributeValue`.
-         * @description
-         *
-         * New value of the attribute. Absent for `setToDefault`.
-         * ITU-T Rec. X.746 (02/00)
-         * [A.6](https://www.itu.int/rec/T-REC-X.746-200002-I),
-         * Erratum 1.
-         * @public
-         * @readonly
-         */
-        readonly attributeValue?: OPTIONAL<_Element>
-    ) {}
+        modifyOperator: OPTIONAL<ModifyOperator>,
+        attributeId: AttributeId,
+        attributeValue?: OPTIONAL<_Element>
+    ) {
+        this.modifyOperator = modifyOperator;
+        this.attributeId = attributeId;
+        this.attributeValue = attributeValue;
+    }
 
     /**
      * @summary Restructures an object into a ModificationList_Item

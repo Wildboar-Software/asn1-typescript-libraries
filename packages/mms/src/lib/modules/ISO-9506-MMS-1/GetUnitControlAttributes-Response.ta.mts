@@ -34,30 +34,36 @@ import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-
  */
 export
 class GetUnitControlAttributes_Response {
+    /**
+     * @summary `domains`.
+     * @description
+     *
+     * Names of Domains in the Unit Control `&Domains` field.
+     * ISO 9506-1:2003 §13.11.1.2.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly domains: Identifier[];
+    /**
+     * @summary `programInvocations`.
+     * @description
+     *
+     * Names of Program Invocations in `&ProgramInvocations`.
+     * ISO 9506-1:2003 §13.11.1.2.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly programInvocations: Identifier[];
+
     constructor (
-        /**
-         * @summary `domains`.
-         * @description
-         *
-         * Names of Domains in the Unit Control `&Domains` field.
-         * ISO 9506-1:2003 §13.11.1.2.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly domains: Identifier[],
-        /**
-         * @summary `programInvocations`.
-         * @description
-         *
-         * Names of Program Invocations in `&ProgramInvocations`.
-         * ISO 9506-1:2003 §13.11.1.2.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly programInvocations: Identifier[]
-    ) {}
+        domains: Identifier[],
+        programInvocations: Identifier[]
+    ) {
+        this.domains = domains;
+        this.programInvocations = programInvocations;
+    }
 
     /**
      * @summary Restructures an object into a GetUnitControlAttributes_Response

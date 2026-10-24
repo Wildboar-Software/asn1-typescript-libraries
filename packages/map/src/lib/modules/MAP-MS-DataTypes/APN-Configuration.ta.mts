@@ -75,162 +75,212 @@ import { WLAN_Offloadability, _decode_WLAN_Offloadability, _encode_WLAN_Offloada
  */
 export
 class APN_Configuration {
+    /**
+     * @summary `contextId`.
+     * @public
+     * @readonly
+     */
+    public readonly contextId: ContextId;
+    /**
+     * @summary `pdn_Type`.
+     * @public
+     * @readonly
+     */
+    public readonly pdn_Type: PDN_Type;
+    /**
+     * @summary `servedPartyIP_IPv4_Address`.
+     * @public
+     * @readonly
+     */
+    public readonly servedPartyIP_IPv4_Address: OPTIONAL<PDP_Address>;
+    /**
+     * @summary `apn`.
+     * @public
+     * @readonly
+     */
+    public readonly apn: APN;
+    /**
+     * @summary `eps_qos_Subscribed`.
+     * @public
+     * @readonly
+     */
+    public readonly eps_qos_Subscribed: EPS_QoS_Subscribed;
+    /**
+     * @summary `pdn_gw_Identity`.
+     * @public
+     * @readonly
+     */
+    public readonly pdn_gw_Identity?: OPTIONAL<PDN_GW_Identity>;
+    /**
+     * @summary `pdn_gw_AllocationType`.
+     * @public
+     * @readonly
+     */
+    public readonly pdn_gw_AllocationType?: OPTIONAL<PDN_GW_AllocationType>;
+    /**
+     * @summary `vplmnAddressAllowed`.
+     * @public
+     * @readonly
+     */
+    public readonly vplmnAddressAllowed?: OPTIONAL<NULL>;
+    /**
+     * @summary `chargingCharacteristics`.
+     * @public
+     * @readonly
+     */
+    public readonly chargingCharacteristics?: OPTIONAL<ChargingCharacteristics>;
+    /**
+     * @summary `ambr`.
+     * @public
+     * @readonly
+     */
+    public readonly ambr?: OPTIONAL<AMBR>;
+    /**
+     * @summary `specificAPNInfoList`.
+     * @public
+     * @readonly
+     */
+    public readonly specificAPNInfoList?: OPTIONAL<SpecificAPNInfoList>;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary `servedPartyIP_IPv6_Address`.
+     * @public
+     * @readonly
+     */
+    public readonly servedPartyIP_IPv6_Address?: OPTIONAL<PDP_Address>;
+    /**
+     * @summary `apn_oi_Replacement`.
+     * @description
+     *
+     * APN-level APN-OI replacement; higher priority than UE-level
+     * replacement (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly apn_oi_Replacement?: OPTIONAL<APN_OI_Replacement>;
+    /**
+     * @summary `sipto_Permission`.
+     * @public
+     * @readonly
+     */
+    public readonly sipto_Permission?: OPTIONAL<SIPTO_Permission>;
+    /**
+     * @summary `lipa_Permission`.
+     * @public
+     * @readonly
+     */
+    public readonly lipa_Permission?: OPTIONAL<LIPA_Permission>;
+    /**
+     * @summary `restoration_Priority`.
+     * @public
+     * @readonly
+     */
+    public readonly restoration_Priority?: OPTIONAL<Restoration_Priority>;
+    /**
+     * @summary `sipto_local_network_Permission`.
+     * @public
+     * @readonly
+     */
+    public readonly sipto_local_network_Permission?: OPTIONAL<SIPTO_Local_Network_Permission>;
+    /**
+     * @summary `wlan_offloadability`.
+     * @public
+     * @readonly
+     */
+    public readonly wlan_offloadability?: OPTIONAL<WLAN_Offloadability>;
+    /**
+     * @summary `non_IP_PDN_Type_Indicator`.
+     * @public
+     * @readonly
+     */
+    public readonly non_IP_PDN_Type_Indicator?: OPTIONAL<NULL>;
+    /**
+     * @summary `nIDD_Mechanism`.
+     * @public
+     * @readonly
+     */
+    public readonly nIDD_Mechanism?: OPTIONAL<NIDD_Mechanism>;
+    /**
+     * @summary `sCEF_ID`.
+     * @public
+     * @readonly
+     */
+    public readonly sCEF_ID?: OPTIONAL<FQDN>;
+    /**
+     * @summary `pdn_ConnectionContinuity`.
+     * @description
+     *
+     * Absence indicates handling is left to local VPLMN policy (3GPP TS
+     * 29.002 V19.1.0 clause 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly pdn_ConnectionContinuity?: OPTIONAL<PDN_ConnectionContinuity>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `contextId`.
-         * @public
-         * @readonly
-         */
-        readonly contextId: ContextId,
-        /**
-         * @summary `pdn_Type`.
-         * @public
-         * @readonly
-         */
-        readonly pdn_Type: PDN_Type,
-        /**
-         * @summary `servedPartyIP_IPv4_Address`.
-         * @public
-         * @readonly
-         */
-        readonly servedPartyIP_IPv4_Address: OPTIONAL<PDP_Address>,
-        /**
-         * @summary `apn`.
-         * @public
-         * @readonly
-         */
-        readonly apn: APN,
-        /**
-         * @summary `eps_qos_Subscribed`.
-         * @public
-         * @readonly
-         */
-        readonly eps_qos_Subscribed: EPS_QoS_Subscribed,
-        /**
-         * @summary `pdn_gw_Identity`.
-         * @public
-         * @readonly
-         */
-        readonly pdn_gw_Identity?: OPTIONAL<PDN_GW_Identity>,
-        /**
-         * @summary `pdn_gw_AllocationType`.
-         * @public
-         * @readonly
-         */
-        readonly pdn_gw_AllocationType?: OPTIONAL<PDN_GW_AllocationType>,
-        /**
-         * @summary `vplmnAddressAllowed`.
-         * @public
-         * @readonly
-         */
-        readonly vplmnAddressAllowed?: OPTIONAL<NULL>,
-        /**
-         * @summary `chargingCharacteristics`.
-         * @public
-         * @readonly
-         */
-        readonly chargingCharacteristics?: OPTIONAL<ChargingCharacteristics>,
-        /**
-         * @summary `ambr`.
-         * @public
-         * @readonly
-         */
-        readonly ambr?: OPTIONAL<AMBR>,
-        /**
-         * @summary `specificAPNInfoList`.
-         * @public
-         * @readonly
-         */
-        readonly specificAPNInfoList?: OPTIONAL<SpecificAPNInfoList>,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary `servedPartyIP_IPv6_Address`.
-         * @public
-         * @readonly
-         */
-        readonly servedPartyIP_IPv6_Address?: OPTIONAL<PDP_Address>,
-        /**
-         * @summary `apn_oi_Replacement`.
-         * @description
-         *
-         * APN-level APN-OI replacement; higher priority than UE-level
-         * replacement (3GPP TS 29.002 V19.1.0 clause 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly apn_oi_Replacement?: OPTIONAL<APN_OI_Replacement>,
-        /**
-         * @summary `sipto_Permission`.
-         * @public
-         * @readonly
-         */
-        readonly sipto_Permission?: OPTIONAL<SIPTO_Permission>,
-        /**
-         * @summary `lipa_Permission`.
-         * @public
-         * @readonly
-         */
-        readonly lipa_Permission?: OPTIONAL<LIPA_Permission>,
-        /**
-         * @summary `restoration_Priority`.
-         * @public
-         * @readonly
-         */
-        readonly restoration_Priority?: OPTIONAL<Restoration_Priority>,
-        /**
-         * @summary `sipto_local_network_Permission`.
-         * @public
-         * @readonly
-         */
-        readonly sipto_local_network_Permission?: OPTIONAL<SIPTO_Local_Network_Permission>,
-        /**
-         * @summary `wlan_offloadability`.
-         * @public
-         * @readonly
-         */
-        readonly wlan_offloadability?: OPTIONAL<WLAN_Offloadability>,
-        /**
-         * @summary `non_IP_PDN_Type_Indicator`.
-         * @public
-         * @readonly
-         */
-        readonly non_IP_PDN_Type_Indicator?: OPTIONAL<NULL>,
-        /**
-         * @summary `nIDD_Mechanism`.
-         * @public
-         * @readonly
-         */
-        readonly nIDD_Mechanism?: OPTIONAL<NIDD_Mechanism>,
-        /**
-         * @summary `sCEF_ID`.
-         * @public
-         * @readonly
-         */
-        readonly sCEF_ID?: OPTIONAL<FQDN>,
-        /**
-         * @summary `pdn_ConnectionContinuity`.
-         * @description
-         *
-         * Absence indicates handling is left to local VPLMN policy (3GPP TS
-         * 29.002 V19.1.0 clause 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly pdn_ConnectionContinuity?: OPTIONAL<PDN_ConnectionContinuity>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        contextId: ContextId,
+        pdn_Type: PDN_Type,
+        servedPartyIP_IPv4_Address: OPTIONAL<PDP_Address>,
+        apn: APN,
+        eps_qos_Subscribed: EPS_QoS_Subscribed,
+        pdn_gw_Identity?: OPTIONAL<PDN_GW_Identity>,
+        pdn_gw_AllocationType?: OPTIONAL<PDN_GW_AllocationType>,
+        vplmnAddressAllowed?: OPTIONAL<NULL>,
+        chargingCharacteristics?: OPTIONAL<ChargingCharacteristics>,
+        ambr?: OPTIONAL<AMBR>,
+        specificAPNInfoList?: OPTIONAL<SpecificAPNInfoList>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        servedPartyIP_IPv6_Address?: OPTIONAL<PDP_Address>,
+        apn_oi_Replacement?: OPTIONAL<APN_OI_Replacement>,
+        sipto_Permission?: OPTIONAL<SIPTO_Permission>,
+        lipa_Permission?: OPTIONAL<LIPA_Permission>,
+        restoration_Priority?: OPTIONAL<Restoration_Priority>,
+        sipto_local_network_Permission?: OPTIONAL<SIPTO_Local_Network_Permission>,
+        wlan_offloadability?: OPTIONAL<WLAN_Offloadability>,
+        non_IP_PDN_Type_Indicator?: OPTIONAL<NULL>,
+        nIDD_Mechanism?: OPTIONAL<NIDD_Mechanism>,
+        sCEF_ID?: OPTIONAL<FQDN>,
+        pdn_ConnectionContinuity?: OPTIONAL<PDN_ConnectionContinuity>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.contextId = contextId;
+        this.pdn_Type = pdn_Type;
+        this.servedPartyIP_IPv4_Address = servedPartyIP_IPv4_Address;
+        this.apn = apn;
+        this.eps_qos_Subscribed = eps_qos_Subscribed;
+        this.pdn_gw_Identity = pdn_gw_Identity;
+        this.pdn_gw_AllocationType = pdn_gw_AllocationType;
+        this.vplmnAddressAllowed = vplmnAddressAllowed;
+        this.chargingCharacteristics = chargingCharacteristics;
+        this.ambr = ambr;
+        this.specificAPNInfoList = specificAPNInfoList;
+        this.extensionContainer = extensionContainer;
+        this.servedPartyIP_IPv6_Address = servedPartyIP_IPv6_Address;
+        this.apn_oi_Replacement = apn_oi_Replacement;
+        this.sipto_Permission = sipto_Permission;
+        this.lipa_Permission = lipa_Permission;
+        this.restoration_Priority = restoration_Priority;
+        this.sipto_local_network_Permission = sipto_local_network_Permission;
+        this.wlan_offloadability = wlan_offloadability;
+        this.non_IP_PDN_Type_Indicator = non_IP_PDN_Type_Indicator;
+        this.nIDD_Mechanism = nIDD_Mechanism;
+        this.sCEF_ID = sCEF_ID;
+        this.pdn_ConnectionContinuity = pdn_ConnectionContinuity;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a APN_Configuration

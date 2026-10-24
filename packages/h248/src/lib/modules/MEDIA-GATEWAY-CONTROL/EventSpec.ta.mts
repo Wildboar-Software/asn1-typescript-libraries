@@ -34,49 +34,59 @@ import { EventParameter, _decode_EventParameter, _encode_EventParameter } from "
  */
 export
 class EventSpec {
+    /**
+     * @summary `eventName`.
+     * @description
+     *
+     * Package and event to buffer. See `PkgdName`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly eventName: EventName;
+    /**
+     * @summary `streamID`.
+     * @description
+     *
+     * Stream of the buffered event. 0 means not stream-specific.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly streamID: OPTIONAL<StreamID>;
+    /**
+     * @summary `eventParList`.
+     * @description
+     *
+     * Parameters that qualify the buffered event.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly eventParList: EventParameter[];
+    /**
+     * @summary Extensions that are not recognized.
+     * @description
+     *
+     * Extension additions this version does not define. Kept so a later
+     * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `eventName`.
-         * @description
-         *
-         * Package and event to buffer. See `PkgdName`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly eventName: EventName,
-        /**
-         * @summary `streamID`.
-         * @description
-         *
-         * Stream of the buffered event. 0 means not stream-specific.
-         *
-         * @public
-         * @readonly
-         */
-        readonly streamID: OPTIONAL<StreamID>,
-        /**
-         * @summary `eventParList`.
-         * @description
-         *
-         * Parameters that qualify the buffered event.
-         *
-         * @public
-         * @readonly
-         */
-        readonly eventParList: EventParameter[],
-        /**
-         * @summary Extensions that are not recognized.
-         * @description
-         *
-         * Extension additions this version does not define. Kept so a later
-         * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
-         *
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        eventName: EventName,
+        streamID: OPTIONAL<StreamID>,
+        eventParList: EventParameter[],
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.eventName = eventName;
+        this.streamID = streamID;
+        this.eventParList = eventParList;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a EventSpec

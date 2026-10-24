@@ -35,20 +35,26 @@ import {
  *
  */
 export class FilterItem_substrings {
+    /**
+     * @summary `type_`.
+     * @public
+     * @readonly
+     */
+    public readonly type_: AttributeType;
+    /**
+     * @summary `strings`.
+     * @public
+     * @readonly
+     */
+    public readonly strings: FilterItem_substrings_strings_Item[];
+
     constructor(
-        /**
-         * @summary `type_`.
-         * @public
-         * @readonly
-         */
-        readonly type_: AttributeType,
-        /**
-         * @summary `strings`.
-         * @public
-         * @readonly
-         */
-        readonly strings: FilterItem_substrings_strings_Item[]
-    ) {}
+        type_: AttributeType,
+        strings: FilterItem_substrings_strings_Item[]
+    ) {
+        this.type_ = type_;
+        this.strings = strings;
+    }
 
     /**
      * @summary Restructures an object into a FilterItem_substrings

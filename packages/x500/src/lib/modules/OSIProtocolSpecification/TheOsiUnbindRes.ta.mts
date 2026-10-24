@@ -23,14 +23,18 @@ import {
  *
  */
 export class TheOsiUnbindRes {
+    /**
+     * @summary `reason`.
+     * @public
+     * @readonly
+     */
+    public readonly reason?: OPTIONAL<Release_response_reason>;
+
     constructor(
-        /**
-         * @summary `reason`.
-         * @public
-         * @readonly
-         */
-        readonly reason?: OPTIONAL<Release_response_reason>
-    ) {}
+        reason?: OPTIONAL<Release_response_reason>
+    ) {
+        this.reason = reason;
+    }
 
     /**
      * @summary Restructures an object into a TheOsiUnbindRes

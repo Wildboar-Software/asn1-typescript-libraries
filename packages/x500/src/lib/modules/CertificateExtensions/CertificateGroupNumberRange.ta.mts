@@ -26,34 +26,42 @@ import * as $ from "@wildboar/asn1/functional";
  *
  */
 export class CertificateGroupNumberRange {
+    /**
+     * @summary `startingNumber`.
+     * @description
+     *
+     * Inclusive lower serial. Serials unique per issuer, not sequential.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly startingNumber: INTEGER;
+    /**
+     * @summary `endingNumber`.
+     * @description
+     *
+     * Inclusive upper serial (unlike NumberRange).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly endingNumber: INTEGER;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `startingNumber`.
-         * @description
-         *
-         * Inclusive lower serial. Serials unique per issuer, not sequential.
-         *
-         * @public
-         * @readonly
-         */
-        readonly startingNumber: INTEGER,
-        /**
-         * @summary `endingNumber`.
-         * @description
-         *
-         * Inclusive upper serial (unlike NumberRange).
-         *
-         * @public
-         * @readonly
-         */
-        readonly endingNumber: INTEGER,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        startingNumber: INTEGER,
+        endingNumber: INTEGER,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.startingNumber = startingNumber;
+        this.endingNumber = endingNumber;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a CertificateGroupNumberRange

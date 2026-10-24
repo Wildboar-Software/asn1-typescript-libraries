@@ -46,74 +46,88 @@ import { SignerInfos, _decode_SignerInfos, _encode_SignerInfos } from "../Crypto
  */
 export
 class SignedTestReport {
+    /**
+     * @summary `version`.
+     * @description
+     *
+     * Format version; defaults to `v0` (Clause 6.6).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly version: OPTIONAL<MRTDBTRVersion>;
+    /**
+     * @summary `digestAlgorithms`.
+     * @description
+     *
+     * Message-digest algorithm identifiers. Which algorithms to
+     * support is not specified here; see RFC 3852 (Clause 6.6).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly digestAlgorithms: DigestAlgorithmIdentifiers;
+    /**
+     * @summary `encapContentInfo`.
+     * @description
+     *
+     * Encapsulated technology or scenario test report as an OCTET
+     * STRING (Clause 6.6).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly encapContentInfo: EncapsulatedContentInfoSignedTR;
+    /**
+     * @summary `certificates`.
+     * @description
+     *
+     * Intended to contain certification paths from a recognized
+     * root to all `signerInfos` signers. Correspondence is not
+     * required; see RFC 3852 (Clause 6.6).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly certificates: OPTIONAL<CertificateSet>;
+    /**
+     * @summary `crls`.
+     * @description
+     *
+     * Revocation status information, intended to be sufficient to
+     * decide whether `certificates` are valid; correspondence is
+     * not required. See RFC 3852 (Clause 6.6).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly crls: OPTIONAL<RevocationInfoChoices>;
+    /**
+     * @summary `signerInfos`.
+     * @description
+     *
+     * Per-signer information. See RFC 3852 (Clause 6.6).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly signerInfos: SignerInfos;
+
     constructor (
-        /**
-         * @summary `version`.
-         * @description
-         *
-         * Format version; defaults to `v0` (Clause 6.6).
-         *
-         * @public
-         * @readonly
-         */
-        readonly version: OPTIONAL<MRTDBTRVersion>,
-        /**
-         * @summary `digestAlgorithms`.
-         * @description
-         *
-         * Message-digest algorithm identifiers. Which algorithms to
-         * support is not specified here; see RFC 3852 (Clause 6.6).
-         *
-         * @public
-         * @readonly
-         */
-        readonly digestAlgorithms: DigestAlgorithmIdentifiers,
-        /**
-         * @summary `encapContentInfo`.
-         * @description
-         *
-         * Encapsulated technology or scenario test report as an OCTET
-         * STRING (Clause 6.6).
-         *
-         * @public
-         * @readonly
-         */
-        readonly encapContentInfo: EncapsulatedContentInfoSignedTR,
-        /**
-         * @summary `certificates`.
-         * @description
-         *
-         * Intended to contain certification paths from a recognized
-         * root to all `signerInfos` signers. Correspondence is not
-         * required; see RFC 3852 (Clause 6.6).
-         *
-         * @public
-         * @readonly
-         */
-        readonly certificates: OPTIONAL<CertificateSet>,
-        /**
-         * @summary `crls`.
-         * @description
-         *
-         * Revocation status information, intended to be sufficient to
-         * decide whether `certificates` are valid; correspondence is
-         * not required. See RFC 3852 (Clause 6.6).
-         *
-         * @public
-         * @readonly
-         */
-        readonly crls: OPTIONAL<RevocationInfoChoices>,
-        /**
-         * @summary `signerInfos`.
-         * @description
-         *
-         * Per-signer information. See RFC 3852 (Clause 6.6).
-         *
-         * @public
-         * @readonly
-         */
-        readonly signerInfos: SignerInfos
-    ) {}
+        version: OPTIONAL<MRTDBTRVersion>,
+        digestAlgorithms: DigestAlgorithmIdentifiers,
+        encapContentInfo: EncapsulatedContentInfoSignedTR,
+        certificates: OPTIONAL<CertificateSet>,
+        crls: OPTIONAL<RevocationInfoChoices>,
+        signerInfos: SignerInfos
+    ) {
+        this.version = version;
+        this.digestAlgorithms = digestAlgorithms;
+        this.encapContentInfo = encapContentInfo;
+        this.certificates = certificates;
+        this.crls = crls;
+        this.signerInfos = signerInfos;
+    }
 
     /**
      * @summary Restructures an object into a SignedTestReport

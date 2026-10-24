@@ -45,49 +45,63 @@ import {
  *
  */
 export class UserClasses {
+    /**
+     * @summary `allUsers`.
+     * @description Every directory user (lowest specificity).
+     * @public
+     * @readonly
+     */
+    public readonly allUsers?: OPTIONAL<NULL>;
+    /**
+     * @summary `thisEntry`.
+     * @description The user whose DN is the entry being accessed (or its family ancestor).
+     * @public
+     * @readonly
+     */
+    public readonly thisEntry?: OPTIONAL<NULL>;
+    /**
+     * @summary `name`.
+     * @description Exact names; uniqueIdentifier, if present, must also match.
+     * @public
+     * @readonly
+     */
+    public readonly name?: OPTIONAL<NameAndOptionalUID[]>;
+    /**
+     * @summary `userGroup`.
+     * @description DN of groupOfNames/groupOfUniqueNames; nested groups are not expanded.
+     * @public
+     * @readonly
+     */
+    public readonly userGroup?: OPTIONAL<NameAndOptionalUID[]>;
+    /**
+     * @summary `subtree`.
+     * @description Users in the (unrefined) subtree; `specificationFilter` is ignored.
+     * @public
+     * @readonly
+     */
+    public readonly subtree?: OPTIONAL<SubtreeSpecification[]>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `allUsers`.
-         * @description Every directory user (lowest specificity).
-         * @public
-         * @readonly
-         */
-        readonly allUsers?: OPTIONAL<NULL>,
-        /**
-         * @summary `thisEntry`.
-         * @description The user whose DN is the entry being accessed (or its family ancestor).
-         * @public
-         * @readonly
-         */
-        readonly thisEntry?: OPTIONAL<NULL>,
-        /**
-         * @summary `name`.
-         * @description Exact names; uniqueIdentifier, if present, must also match.
-         * @public
-         * @readonly
-         */
-        readonly name?: OPTIONAL<NameAndOptionalUID[]>,
-        /**
-         * @summary `userGroup`.
-         * @description DN of groupOfNames/groupOfUniqueNames; nested groups are not expanded.
-         * @public
-         * @readonly
-         */
-        readonly userGroup?: OPTIONAL<NameAndOptionalUID[]>,
-        /**
-         * @summary `subtree`.
-         * @description Users in the (unrefined) subtree; `specificationFilter` is ignored.
-         * @public
-         * @readonly
-         */
-        readonly subtree?: OPTIONAL<SubtreeSpecification[]>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        allUsers?: OPTIONAL<NULL>,
+        thisEntry?: OPTIONAL<NULL>,
+        name?: OPTIONAL<NameAndOptionalUID[]>,
+        userGroup?: OPTIONAL<NameAndOptionalUID[]>,
+        subtree?: OPTIONAL<SubtreeSpecification[]>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.allUsers = allUsers;
+        this.thisEntry = thisEntry;
+        this.name = name;
+        this.userGroup = userGroup;
+        this.subtree = subtree;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a UserClasses

@@ -50,48 +50,58 @@ import { Port, _decode_Port, _encode_Port } from '../BIP-DISCOVERY/Port.ta.mjs';
  *
  */
 export class Discovery {
+  /**
+   * @summary `protocolVersion`.
+   * @description
+   *
+   * Discovery protocol version; this annex specifies major 1,
+   * minor 0. X.1083 Annex B.12.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly protocolVersion: ProtocolVersion;
+  /**
+   * @summary `masterEndpointAddress`.
+   * @description
+   *
+   * IP address to which the slave shall send its
+   * `Announcement`. Use `ipv4` on IPv4 networks and `ipv6` on
+   * IPv6 networks. X.1083 Annex B.11–B.12.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly masterEndpointAddress: IPAddress;
+  /**
+   * @summary `masterEndPort`.
+   * @description
+   *
+   * UDP port on which the master listens for announcements.
+   * Default 4376. X.1083 Annex B.8.2, B.12.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly masterEndPort?: OPTIONAL<Port>;
+  /**
+   * @summary Extensions that are not recognized.
+   * @public
+   * @readonly
+   */
+  public readonly _unrecognizedExtensionsList: _Element[];
+
   constructor(
-    /**
-     * @summary `protocolVersion`.
-     * @description
-     *
-     * Discovery protocol version; this annex specifies major 1,
-     * minor 0. X.1083 Annex B.12.
-     *
-     * @public
-     * @readonly
-     */
-    readonly protocolVersion: ProtocolVersion,
-    /**
-     * @summary `masterEndpointAddress`.
-     * @description
-     *
-     * IP address to which the slave shall send its
-     * `Announcement`. Use `ipv4` on IPv4 networks and `ipv6` on
-     * IPv6 networks. X.1083 Annex B.11–B.12.
-     *
-     * @public
-     * @readonly
-     */
-    readonly masterEndpointAddress: IPAddress,
-    /**
-     * @summary `masterEndPort`.
-     * @description
-     *
-     * UDP port on which the master listens for announcements.
-     * Default 4376. X.1083 Annex B.8.2, B.12.
-     *
-     * @public
-     * @readonly
-     */
-    readonly masterEndPort?: OPTIONAL<Port>,
-    /**
-     * @summary Extensions that are not recognized.
-     * @public
-     * @readonly
-     */
-    readonly _unrecognizedExtensionsList: _Element[] = []
-  ) {}
+    protocolVersion: ProtocolVersion,
+    masterEndpointAddress: IPAddress,
+    masterEndPort?: OPTIONAL<Port>,
+    _unrecognizedExtensionsList: _Element[] = []
+  ) {
+    this.protocolVersion = protocolVersion;
+    this.masterEndpointAddress = masterEndpointAddress;
+    this.masterEndPort = masterEndPort;
+    this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+  }
 
   /**
    * @summary Restructures an object into a Discovery

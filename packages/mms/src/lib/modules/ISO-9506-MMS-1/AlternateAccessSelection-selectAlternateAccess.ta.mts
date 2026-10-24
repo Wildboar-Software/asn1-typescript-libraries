@@ -48,31 +48,37 @@ import { AlternateAccess, _decode_AlternateAccess, _encode_AlternateAccess } fro
  */
 export
 class AlternateAccessSelection_selectAlternateAccess {
+    /**
+     * @summary `accessSelection`.
+     * @description
+     *
+     * COMPONENT (`str2`), INDEX (`str1`), INDEX-RANGE
+     * (`str1`), or allElements (sender option for 0/0
+     * range). ISO 9506-1:2003 §14.3.1.1.3.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly accessSelection: AlternateAccessSelection_selectAlternateAccess_accessSelection;
+    /**
+     * @summary `alternateAccess`.
+     * @description
+     *
+     * Further alternate access at the selected node(s).
+     * ISO 9506-1:2003 §14.3.1.1.3.5.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly alternateAccess: AlternateAccess;
+
     constructor (
-        /**
-         * @summary `accessSelection`.
-         * @description
-         *
-         * COMPONENT (`str2`), INDEX (`str1`), INDEX-RANGE
-         * (`str1`), or allElements (sender option for 0/0
-         * range). ISO 9506-1:2003 §14.3.1.1.3.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly accessSelection: AlternateAccessSelection_selectAlternateAccess_accessSelection,
-        /**
-         * @summary `alternateAccess`.
-         * @description
-         *
-         * Further alternate access at the selected node(s).
-         * ISO 9506-1:2003 §14.3.1.1.3.5.
-         *
-         * @public
-         * @readonly
-         */
-        readonly alternateAccess: AlternateAccess
-    ) {}
+        accessSelection: AlternateAccessSelection_selectAlternateAccess_accessSelection,
+        alternateAccess: AlternateAccess
+    ) {
+        this.accessSelection = accessSelection;
+        this.alternateAccess = alternateAccess;
+    }
 
     /**
      * @summary Restructures an object into a AlternateAccessSelection_selectAlternateAccess

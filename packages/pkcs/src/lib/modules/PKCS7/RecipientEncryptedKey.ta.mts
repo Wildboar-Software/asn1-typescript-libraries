@@ -31,20 +31,26 @@ import {
  *
  */
 export class RecipientEncryptedKey {
+    /**
+     * @summary `recipientIdentifier`.
+     * @public
+     * @readonly
+     */
+    public readonly recipientIdentifier: KeyAgreementRecipientIdentifier;
+    /**
+     * @summary `encryptedKey`.
+     * @public
+     * @readonly
+     */
+    public readonly encryptedKey: EncryptedKey;
+
     constructor(
-        /**
-         * @summary `recipientIdentifier`.
-         * @public
-         * @readonly
-         */
-        readonly recipientIdentifier: KeyAgreementRecipientIdentifier,
-        /**
-         * @summary `encryptedKey`.
-         * @public
-         * @readonly
-         */
-        readonly encryptedKey: EncryptedKey
-    ) {}
+        recipientIdentifier: KeyAgreementRecipientIdentifier,
+        encryptedKey: EncryptedKey
+    ) {
+        this.recipientIdentifier = recipientIdentifier;
+        this.encryptedKey = encryptedKey;
+    }
 
     /**
      * @summary Restructures an object into a RecipientEncryptedKey

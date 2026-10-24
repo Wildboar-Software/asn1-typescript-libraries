@@ -55,32 +55,42 @@ import {
  *
  */
 export class ModifyArgument {
+    /**
+     * @summary `entry_class`.
+     * @public
+     * @readonly
+     */
+    public readonly entry_class: OPTIONAL<EntryClass>;
+    /**
+     * @summary `entries`.
+     * @public
+     * @readonly
+     */
+    public readonly entries: ModifyArgument_entries;
+    /**
+     * @summary `modifications`.
+     * @public
+     * @readonly
+     */
+    public readonly modifications: EntryModification[];
+    /**
+     * @summary `modify_extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly modify_extensions?: OPTIONAL<MSExtensions>;
+
     constructor(
-        /**
-         * @summary `entry_class`.
-         * @public
-         * @readonly
-         */
-        readonly entry_class: OPTIONAL<EntryClass>,
-        /**
-         * @summary `entries`.
-         * @public
-         * @readonly
-         */
-        readonly entries: ModifyArgument_entries,
-        /**
-         * @summary `modifications`.
-         * @public
-         * @readonly
-         */
-        readonly modifications: EntryModification[],
-        /**
-         * @summary `modify_extensions`.
-         * @public
-         * @readonly
-         */
-        readonly modify_extensions?: OPTIONAL<MSExtensions>
-    ) {}
+        entry_class: OPTIONAL<EntryClass>,
+        entries: ModifyArgument_entries,
+        modifications: EntryModification[],
+        modify_extensions?: OPTIONAL<MSExtensions>
+    ) {
+        this.entry_class = entry_class;
+        this.entries = entries;
+        this.modifications = modifications;
+        this.modify_extensions = modify_extensions;
+    }
 
     /**
      * @summary Restructures an object into a ModifyArgument

@@ -33,31 +33,37 @@ import { CancelSessionReason, _decode_CancelSessionReason, _encode_CancelSession
  */
 export
 class CancelSessionRequest {
+    /**
+     * @summary `transactionId`.
+     * @description
+     * 
+     * Session to cancel. Unknown id yields `invalidTransactionId`, and a
+     * session that never left GetEUICCChallenge is still discarded. SGP.22
+     * v3.1 §5.7.14.
+     * 
+     * @public
+     * @readonly
+     */
+    public readonly transactionId: TransactionId;
+    /**
+     * @summary `reason`.
+     * @description
+     * 
+     * Why the LPA is cancelling. The eUICC signs this reason. SGP.22 v3.1
+     * §5.7.14.
+     * 
+     * @public
+     * @readonly
+     */
+    public readonly reason: CancelSessionReason;
+
     constructor (
-        /**
-         * @summary `transactionId`.
-         * @description
-         * 
-         * Session to cancel. Unknown id yields `invalidTransactionId`, and a
-         * session that never left GetEUICCChallenge is still discarded. SGP.22
-         * v3.1 §5.7.14.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly transactionId: TransactionId,
-        /**
-         * @summary `reason`.
-         * @description
-         * 
-         * Why the LPA is cancelling. The eUICC signs this reason. SGP.22 v3.1
-         * §5.7.14.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly reason: CancelSessionReason
-    ) {}
+        transactionId: TransactionId,
+        reason: CancelSessionReason
+    ) {
+        this.transactionId = transactionId;
+        this.reason = reason;
+    }
 
     /**
      * @summary Restructures an object into a CancelSessionRequest

@@ -34,26 +34,32 @@ import { AttributeType, _decode_AttributeType, _encode_AttributeType } from "../
  */
 export
 class TypeAndAttribute {
+    /**
+     * @summary `document_types`.
+     * @description
+     *
+     * Document-type object identifier.
+     * @public
+     * @readonly
+     */
+    public readonly document_types: OBJECT_IDENTIFIER;
+    /**
+     * @summary `attributes`.
+     * @description
+     *
+     * Extension attribute types supported for that type.
+     * @public
+     * @readonly
+     */
+    public readonly attributes: AttributeType[];
+
     constructor (
-        /**
-         * @summary `document_types`.
-         * @description
-         *
-         * Document-type object identifier.
-         * @public
-         * @readonly
-         */
-        readonly document_types: OBJECT_IDENTIFIER,
-        /**
-         * @summary `attributes`.
-         * @description
-         *
-         * Extension attribute types supported for that type.
-         * @public
-         * @readonly
-         */
-        readonly attributes: AttributeType[]
-    ) {}
+        document_types: OBJECT_IDENTIFIER,
+        attributes: AttributeType[]
+    ) {
+        this.document_types = document_types;
+        this.attributes = attributes;
+    }
 
     /**
      * @summary Restructures an object into a TypeAndAttribute

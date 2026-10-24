@@ -30,20 +30,26 @@ import { RN, _decode_RN, _encode_RN } from '../IPMSInformationObjects/RN.ta.mjs'
  *
  */
 export class originate_rn_ArgumentType {
+    /**
+     * @summary `envelope`.
+     * @public
+     * @readonly
+     */
+    public readonly envelope: MessageSubmissionEnvelope;
+    /**
+     * @summary `content`.
+     * @public
+     * @readonly
+     */
+    public readonly content: RN;
+
     constructor(
-        /**
-         * @summary `envelope`.
-         * @public
-         * @readonly
-         */
-        readonly envelope: MessageSubmissionEnvelope,
-        /**
-         * @summary `content`.
-         * @public
-         * @readonly
-         */
-        readonly content: RN
-    ) {}
+        envelope: MessageSubmissionEnvelope,
+        content: RN
+    ) {
+        this.envelope = envelope;
+        this.content = content;
+    }
 
     /**
      * @summary Restructures an object into a originate_rn_ArgumentType

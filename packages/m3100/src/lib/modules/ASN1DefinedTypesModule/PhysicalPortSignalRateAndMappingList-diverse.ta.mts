@@ -28,20 +28,26 @@ import {
  *
  */
 export class PhysicalPortSignalRateAndMappingList_diverse {
+    /**
+     * @summary `downstream`.
+     * @public
+     * @readonly
+     */
+    public readonly downstream: SignalRateAndMappingList;
+    /**
+     * @summary `upStream`.
+     * @public
+     * @readonly
+     */
+    public readonly upStream: SignalRateAndMappingList;
+
     constructor(
-        /**
-         * @summary `downstream`.
-         * @public
-         * @readonly
-         */
-        readonly downstream: SignalRateAndMappingList,
-        /**
-         * @summary `upStream`.
-         * @public
-         * @readonly
-         */
-        readonly upStream: SignalRateAndMappingList
-    ) {}
+        downstream: SignalRateAndMappingList,
+        upStream: SignalRateAndMappingList
+    ) {
+        this.downstream = downstream;
+        this.upStream = upStream;
+    }
 
     /**
      * @summary Restructures an object into a PhysicalPortSignalRateAndMappingList_diverse

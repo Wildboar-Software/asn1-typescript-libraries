@@ -51,32 +51,42 @@ import {
  *
  */
 export class ProbeSubmissionResult {
+    /**
+     * @summary `probe_submission_identifier`.
+     * @public
+     * @readonly
+     */
+    public readonly probe_submission_identifier: ProbeSubmissionIdentifier;
+    /**
+     * @summary `probe_submission_time`.
+     * @public
+     * @readonly
+     */
+    public readonly probe_submission_time: ProbeSubmissionTime;
+    /**
+     * @summary `content_identifier`.
+     * @public
+     * @readonly
+     */
+    public readonly content_identifier?: OPTIONAL<ContentIdentifier>;
+    /**
+     * @summary `extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<ExtensionField[]>;
+
     constructor(
-        /**
-         * @summary `probe_submission_identifier`.
-         * @public
-         * @readonly
-         */
-        readonly probe_submission_identifier: ProbeSubmissionIdentifier,
-        /**
-         * @summary `probe_submission_time`.
-         * @public
-         * @readonly
-         */
-        readonly probe_submission_time: ProbeSubmissionTime,
-        /**
-         * @summary `content_identifier`.
-         * @public
-         * @readonly
-         */
-        readonly content_identifier?: OPTIONAL<ContentIdentifier>,
-        /**
-         * @summary `extensions`.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<ExtensionField[]>
-    ) {}
+        probe_submission_identifier: ProbeSubmissionIdentifier,
+        probe_submission_time: ProbeSubmissionTime,
+        content_identifier?: OPTIONAL<ContentIdentifier>,
+        extensions?: OPTIONAL<ExtensionField[]>
+    ) {
+        this.probe_submission_identifier = probe_submission_identifier;
+        this.probe_submission_time = probe_submission_time;
+        this.content_identifier = content_identifier;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a ProbeSubmissionResult

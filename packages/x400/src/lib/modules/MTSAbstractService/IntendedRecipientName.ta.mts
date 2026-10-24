@@ -38,20 +38,26 @@ import {
  *
  */
 export class IntendedRecipientName {
+    /**
+     * @summary `intended_recipient`.
+     * @public
+     * @readonly
+     */
+    public readonly intended_recipient: ORAddressAndOptionalDirectoryName;
+    /**
+     * @summary `redirection_time`.
+     * @public
+     * @readonly
+     */
+    public readonly redirection_time: Time;
+
     constructor(
-        /**
-         * @summary `intended_recipient`.
-         * @public
-         * @readonly
-         */
-        readonly intended_recipient: ORAddressAndOptionalDirectoryName,
-        /**
-         * @summary `redirection_time`.
-         * @public
-         * @readonly
-         */
-        readonly redirection_time: Time
-    ) {}
+        intended_recipient: ORAddressAndOptionalDirectoryName,
+        redirection_time: Time
+    ) {
+        this.intended_recipient = intended_recipient;
+        this.redirection_time = redirection_time;
+    }
 
     /**
      * @summary Restructures an object into a IntendedRecipientName

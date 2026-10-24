@@ -43,52 +43,62 @@ import { TerminationIDList, _decode_TerminationIDList, _encode_TerminationIDList
  */
 export
 class AuditRequest {
+    /**
+     * @summary `terminationID`.
+     * @description
+     *
+     * Termination to audit. When `terminationIDList` is used, this field
+     * carries the first termination in that list (Annex A).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly terminationID: TerminationID;
+    /**
+     * @summary `auditDescriptor`.
+     * @description
+     *
+     * What to return. An empty descriptor returns only the TerminationID
+     * (clause 7.2.5).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly auditDescriptor: AuditDescriptor;
+    /**
+     * @summary `terminationIDList`.
+     * @description
+     *
+     * Additional terminations to audit in the same request. The first
+     * element of the list is also placed in `terminationID` (Annex A).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly terminationIDList?: OPTIONAL<TerminationIDList>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @description
+     *
+     * Extension additions this version does not define. Kept so a later
+     * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `terminationID`.
-         * @description
-         *
-         * Termination to audit. When `terminationIDList` is used, this field
-         * carries the first termination in that list (Annex A).
-         *
-         * @public
-         * @readonly
-         */
-        readonly terminationID: TerminationID,
-        /**
-         * @summary `auditDescriptor`.
-         * @description
-         *
-         * What to return. An empty descriptor returns only the TerminationID
-         * (clause 7.2.5).
-         *
-         * @public
-         * @readonly
-         */
-        readonly auditDescriptor: AuditDescriptor,
-        /**
-         * @summary `terminationIDList`.
-         * @description
-         *
-         * Additional terminations to audit in the same request. The first
-         * element of the list is also placed in `terminationID` (Annex A).
-         *
-         * @public
-         * @readonly
-         */
-        readonly terminationIDList?: OPTIONAL<TerminationIDList>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @description
-         *
-         * Extension additions this version does not define. Kept so a later
-         * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
-         *
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        terminationID: TerminationID,
+        auditDescriptor: AuditDescriptor,
+        terminationIDList?: OPTIONAL<TerminationIDList>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.terminationID = terminationID;
+        this.auditDescriptor = auditDescriptor;
+        this.terminationIDList = terminationIDList;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a AuditRequest

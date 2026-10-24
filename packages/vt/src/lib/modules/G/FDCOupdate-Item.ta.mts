@@ -68,91 +68,111 @@ import { EntryControl, _decode_EntryControl, _encode_EntryControl } from "../G/E
  */
 export
 class FDCOupdate_Item {
+    /**
+     * @summary `labelFCoordinate`.
+     * @description
+     * Field coordinate identifying the FDR. ISO/IEC 9041-1:1997
+     * §12.2.2.
+     * @public
+     * @readonly
+     */
+    public readonly labelFCoordinate: INTEGER;
+    /**
+     * @summary `labelZCoordinate`.
+     * @description
+     * Z coordinate of the FDR when VT-dimensions = three. ISO/IEC
+     * 9041-1:1997 §12.2.2.
+     * @public
+     * @readonly
+     */
+    public readonly labelZCoordinate?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `status`.
+     * @description
+     * FDR status: active(0) / inactive(1) / void(2). ISO/IEC
+     * 9041-1:1997 §12.2.2.
+     * @public
+     * @readonly
+     */
+    public readonly status?: OPTIONAL<FDCOupdate_Item_status>;
+    /**
+     * @summary `extent`.
+     * @description
+     * Field-elements as position+dimension `MeasurePair`s. ISO/IEC
+     * 9040:1997 §13.1.3; ISO/IEC 9041-1:1997 §12.2.2.
+     * @public
+     * @readonly
+     */
+    public readonly extent?: OPTIONAL<FDCOupdate_Item_extent_Item[]>;
+    /**
+     * @summary `attributes`.
+     * @description
+     * Repertoire, colours, emphasis, font. INTEGER 0 ⇒ `"null"`.
+     * ISO/IEC 9041-1:1997 §12.2.2.
+     * @public
+     * @readonly
+     */
+    public readonly attributes?: OPTIONAL<FDCOupdate_Item_attributes>;
+    /**
+     * @summary `nextField`.
+     * @description
+     * Next field in the navigation path. 0 ⇒ end of path; negative
+     * ⇒ `"void"`. ISO/IEC 9041-1:1997 §12.2.2.
+     * @public
+     * @readonly
+     */
+    public readonly nextField?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `previousField`.
+     * @description
+     * Previous field in the navigation path. 0 ⇒ end of path;
+     * negative ⇒ `"void"`. ISO/IEC 9041-1:1997 §12.2.2.
+     * @public
+     * @readonly
+     */
+    public readonly previousField?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `transmissionPolicy`.
+     * @description
+     * How field contents are transmitted after data entry. ISO/IEC
+     * 9040:1997 §3.3.68; ISO/IEC 9041-1:1997 §12.2.2.
+     * @public
+     * @readonly
+     */
+    public readonly transmissionPolicy?: OPTIONAL<FDCOupdate_Item_transmissionPolicy>;
+    /**
+     * @summary `entryControlList`.
+     * @description
+     * Absent ⇒ no change to the FDR's list; present-and-empty ⇒
+     * discard the FDR's list. Non-empty: each `EntryControl` updates
+     * the corresponding FDR entry-control. ISO/IEC 9041-1:1997
+     * §12.2.2.
+     * @public
+     * @readonly
+     */
+    public readonly entryControlList?: OPTIONAL<EntryControl[]>;
+
     constructor (
-        /**
-         * @summary `labelFCoordinate`.
-         * @description
-         * Field coordinate identifying the FDR. ISO/IEC 9041-1:1997
-         * §12.2.2.
-         * @public
-         * @readonly
-         */
-        readonly labelFCoordinate: INTEGER,
-        /**
-         * @summary `labelZCoordinate`.
-         * @description
-         * Z coordinate of the FDR when VT-dimensions = three. ISO/IEC
-         * 9041-1:1997 §12.2.2.
-         * @public
-         * @readonly
-         */
-        readonly labelZCoordinate?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `status`.
-         * @description
-         * FDR status: active(0) / inactive(1) / void(2). ISO/IEC
-         * 9041-1:1997 §12.2.2.
-         * @public
-         * @readonly
-         */
-        readonly status?: OPTIONAL<FDCOupdate_Item_status>,
-        /**
-         * @summary `extent`.
-         * @description
-         * Field-elements as position+dimension `MeasurePair`s. ISO/IEC
-         * 9040:1997 §13.1.3; ISO/IEC 9041-1:1997 §12.2.2.
-         * @public
-         * @readonly
-         */
-        readonly extent?: OPTIONAL<FDCOupdate_Item_extent_Item[]>,
-        /**
-         * @summary `attributes`.
-         * @description
-         * Repertoire, colours, emphasis, font. INTEGER 0 ⇒ `"null"`.
-         * ISO/IEC 9041-1:1997 §12.2.2.
-         * @public
-         * @readonly
-         */
-        readonly attributes?: OPTIONAL<FDCOupdate_Item_attributes>,
-        /**
-         * @summary `nextField`.
-         * @description
-         * Next field in the navigation path. 0 ⇒ end of path; negative
-         * ⇒ `"void"`. ISO/IEC 9041-1:1997 §12.2.2.
-         * @public
-         * @readonly
-         */
-        readonly nextField?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `previousField`.
-         * @description
-         * Previous field in the navigation path. 0 ⇒ end of path;
-         * negative ⇒ `"void"`. ISO/IEC 9041-1:1997 §12.2.2.
-         * @public
-         * @readonly
-         */
-        readonly previousField?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `transmissionPolicy`.
-         * @description
-         * How field contents are transmitted after data entry. ISO/IEC
-         * 9040:1997 §3.3.68; ISO/IEC 9041-1:1997 §12.2.2.
-         * @public
-         * @readonly
-         */
-        readonly transmissionPolicy?: OPTIONAL<FDCOupdate_Item_transmissionPolicy>,
-        /**
-         * @summary `entryControlList`.
-         * @description
-         * Absent ⇒ no change to the FDR's list; present-and-empty ⇒
-         * discard the FDR's list. Non-empty: each `EntryControl` updates
-         * the corresponding FDR entry-control. ISO/IEC 9041-1:1997
-         * §12.2.2.
-         * @public
-         * @readonly
-         */
-        readonly entryControlList?: OPTIONAL<EntryControl[]>
-    ) {}
+        labelFCoordinate: INTEGER,
+        labelZCoordinate?: OPTIONAL<INTEGER>,
+        status?: OPTIONAL<FDCOupdate_Item_status>,
+        extent?: OPTIONAL<FDCOupdate_Item_extent_Item[]>,
+        attributes?: OPTIONAL<FDCOupdate_Item_attributes>,
+        nextField?: OPTIONAL<INTEGER>,
+        previousField?: OPTIONAL<INTEGER>,
+        transmissionPolicy?: OPTIONAL<FDCOupdate_Item_transmissionPolicy>,
+        entryControlList?: OPTIONAL<EntryControl[]>
+    ) {
+        this.labelFCoordinate = labelFCoordinate;
+        this.labelZCoordinate = labelZCoordinate;
+        this.status = status;
+        this.extent = extent;
+        this.attributes = attributes;
+        this.nextField = nextField;
+        this.previousField = previousField;
+        this.transmissionPolicy = transmissionPolicy;
+        this.entryControlList = entryControlList;
+    }
 
     /**
      * @summary Restructures an object into a FDCOupdate_Item

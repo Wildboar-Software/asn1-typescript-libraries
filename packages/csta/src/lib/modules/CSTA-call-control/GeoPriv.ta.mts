@@ -49,54 +49,64 @@ import { ProvidedBy, _decode_ProvidedBy, _encode_ProvidedBy } from "../CSTA-call
  */
 export
 class GeoPriv {
+    /**
+     * @summary `gpLocationInfo`.
+     * @description
+     *
+     * One or more location chunks (GML and/or civic). Two
+     * chunks for the same place are a compound location.
+     * ECMA-269 §12.2.18.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly gpLocationInfo: GpLocationInfoList;
+    /**
+     * @summary `usageRules`.
+     * @description
+     *
+     * Retransmissions-allowed, retention-expires, and
+     * ruleset-reference for this location. ECMA-269
+     * §12.2.18.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly usageRules?: OPTIONAL<UsageRules>;
+    /**
+     * @summary `method`.
+     * @description
+     *
+     * How this location was derived or discovered (e.g. GPS).
+     * IANA method-tokens. ECMA-269 §12.2.18.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly method?: OPTIONAL<Method>;
+    /**
+     * @summary `providedBy`.
+     * @description
+     *
+     * Source of the location, to help locate a service
+     * provider if the location is wrong. ECMA-269 §12.2.18.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly providedBy?: OPTIONAL<ProvidedBy>;
+
     constructor (
-        /**
-         * @summary `gpLocationInfo`.
-         * @description
-         *
-         * One or more location chunks (GML and/or civic). Two
-         * chunks for the same place are a compound location.
-         * ECMA-269 §12.2.18.
-         *
-         * @public
-         * @readonly
-         */
-        readonly gpLocationInfo: GpLocationInfoList,
-        /**
-         * @summary `usageRules`.
-         * @description
-         *
-         * Retransmissions-allowed, retention-expires, and
-         * ruleset-reference for this location. ECMA-269
-         * §12.2.18.
-         *
-         * @public
-         * @readonly
-         */
-        readonly usageRules?: OPTIONAL<UsageRules>,
-        /**
-         * @summary `method`.
-         * @description
-         *
-         * How this location was derived or discovered (e.g. GPS).
-         * IANA method-tokens. ECMA-269 §12.2.18.
-         *
-         * @public
-         * @readonly
-         */
-        readonly method?: OPTIONAL<Method>,
-        /**
-         * @summary `providedBy`.
-         * @description
-         *
-         * Source of the location, to help locate a service
-         * provider if the location is wrong. ECMA-269 §12.2.18.
-         *
-         * @public
-         * @readonly
-         */
-        readonly providedBy?: OPTIONAL<ProvidedBy>
-    ) {}
+        gpLocationInfo: GpLocationInfoList,
+        usageRules?: OPTIONAL<UsageRules>,
+        method?: OPTIONAL<Method>,
+        providedBy?: OPTIONAL<ProvidedBy>
+    ) {
+        this.gpLocationInfo = gpLocationInfo;
+        this.usageRules = usageRules;
+        this.method = method;
+        this.providedBy = providedBy;
+    }
 
     /**
      * @summary Restructures an object into a GeoPriv

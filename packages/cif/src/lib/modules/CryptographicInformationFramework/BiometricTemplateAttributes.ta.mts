@@ -44,69 +44,85 @@ import { Path, _decode_Path, _encode_Path } from "../CryptographicInformationFra
  */
 export
 class BiometricTemplateAttributes {
+    /**
+     * @summary `bioFlags`.
+     * @description
+     * Same meaning as `PasswordFlags`, reading "biometric reference data"
+     * for "password". ISO/IEC 7816-15:2016 §8.9.3.
+     * @public
+     * @readonly
+     */
+    public readonly bioFlags: BiometricFlags;
+    /**
+     * @summary `templateId`.
+     * @description
+     * Identifies the data structure that must be sent to the card. ISO/IEC
+     * 7816-15:2016 §8.9.3.
+     * @public
+     * @readonly
+     */
+    public readonly templateId: BiometricTemplateIdentifier;
+    /**
+     * @summary `bioType`.
+     * @description
+     * Stored biometric (e.g. right pointer finger). `chained` means several
+     * features must be presented in one verification, possibly with chained
+     * commands. ISO/IEC 7816-15:2016 §8.9.3.
+     * @public
+     * @readonly
+     */
+    public readonly bioType: BiometricType;
+    /**
+     * @summary `bioReference`.
+     * @description
+     * Card-specific biometric reference (as `pwdReference`). DEFAULT 0.
+     * ISO/IEC 7816-15:2016 §8.9.3.
+     * @public
+     * @readonly
+     */
+    public readonly bioReference?: OPTIONAL<Reference>;
+    /**
+     * @summary `lastChange`.
+     * @description
+     * Last change of the biometric reference data. ISO/IEC 7816-15:2016
+     * §8.9.3.
+     * @public
+     * @readonly
+     */
+    public readonly lastChange?: OPTIONAL<GeneralizedTime>;
+    /**
+     * @summary `path`.
+     * @description
+     * DF to SELECT before a biometric operation. ISO/IEC 7816-15:2016
+     * §8.9.3.
+     * @public
+     * @readonly
+     */
+    public readonly path?: OPTIONAL<Path>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `bioFlags`.
-         * @description
-         * Same meaning as `PasswordFlags`, reading "biometric reference data"
-         * for "password". ISO/IEC 7816-15:2016 §8.9.3.
-         * @public
-         * @readonly
-         */
-        readonly bioFlags: BiometricFlags,
-        /**
-         * @summary `templateId`.
-         * @description
-         * Identifies the data structure that must be sent to the card. ISO/IEC
-         * 7816-15:2016 §8.9.3.
-         * @public
-         * @readonly
-         */
-        readonly templateId: BiometricTemplateIdentifier,
-        /**
-         * @summary `bioType`.
-         * @description
-         * Stored biometric (e.g. right pointer finger). `chained` means several
-         * features must be presented in one verification, possibly with chained
-         * commands. ISO/IEC 7816-15:2016 §8.9.3.
-         * @public
-         * @readonly
-         */
-        readonly bioType: BiometricType,
-        /**
-         * @summary `bioReference`.
-         * @description
-         * Card-specific biometric reference (as `pwdReference`). DEFAULT 0.
-         * ISO/IEC 7816-15:2016 §8.9.3.
-         * @public
-         * @readonly
-         */
-        readonly bioReference?: OPTIONAL<Reference>,
-        /**
-         * @summary `lastChange`.
-         * @description
-         * Last change of the biometric reference data. ISO/IEC 7816-15:2016
-         * §8.9.3.
-         * @public
-         * @readonly
-         */
-        readonly lastChange?: OPTIONAL<GeneralizedTime>,
-        /**
-         * @summary `path`.
-         * @description
-         * DF to SELECT before a biometric operation. ISO/IEC 7816-15:2016
-         * §8.9.3.
-         * @public
-         * @readonly
-         */
-        readonly path?: OPTIONAL<Path>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        bioFlags: BiometricFlags,
+        templateId: BiometricTemplateIdentifier,
+        bioType: BiometricType,
+        bioReference?: OPTIONAL<Reference>,
+        lastChange?: OPTIONAL<GeneralizedTime>,
+        path?: OPTIONAL<Path>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.bioFlags = bioFlags;
+        this.templateId = templateId;
+        this.bioType = bioType;
+        this.bioReference = bioReference;
+        this.lastChange = lastChange;
+        this.path = path;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a BiometricTemplateAttributes

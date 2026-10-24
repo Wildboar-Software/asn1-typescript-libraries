@@ -41,49 +41,59 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class SendMulticastDataArgument {
+    /**
+     * @summary `ioCrossRefIDList`.
+     * @description
+     *
+     * Data paths to write (ECMA-269 §24.2.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ioCrossRefIDList: IOCrossRefID[];
+    /**
+     * @summary `ioData`.
+     * @description
+     *
+     * Data to send (ECMA-269 §24.2.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ioData?: OPTIONAL<OCTET_STRING>;
+    /**
+     * @summary `displayAttributes`.
+     * @description
+     *
+     * Only when sending to device displays (ECMA-269 §24.2.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly displayAttributes?: OPTIONAL<DisplayAttributeList>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * CSTACommonArguments carrying the service-table security and
+     * privateData parameters.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `ioCrossRefIDList`.
-         * @description
-         *
-         * Data paths to write (ECMA-269 §24.2.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly ioCrossRefIDList: IOCrossRefID[],
-        /**
-         * @summary `ioData`.
-         * @description
-         *
-         * Data to send (ECMA-269 §24.2.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly ioData?: OPTIONAL<OCTET_STRING>,
-        /**
-         * @summary `displayAttributes`.
-         * @description
-         *
-         * Only when sending to device displays (ECMA-269 §24.2.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly displayAttributes?: OPTIONAL<DisplayAttributeList>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * CSTACommonArguments carrying the service-table security and
-         * privateData parameters.
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        ioCrossRefIDList: IOCrossRefID[],
+        ioData?: OPTIONAL<OCTET_STRING>,
+        displayAttributes?: OPTIONAL<DisplayAttributeList>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.ioCrossRefIDList = ioCrossRefIDList;
+        this.ioData = ioData;
+        this.displayAttributes = displayAttributes;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a SendMulticastDataArgument

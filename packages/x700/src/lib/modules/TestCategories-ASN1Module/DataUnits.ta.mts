@@ -61,53 +61,65 @@ import {
  *
  */
 export class DataUnits {
+    /**
+     * @summary `dataType`.
+     * @description
+     *
+     * Pattern/kind of data. Required. X.737 A.7.
+     * @public
+     * @readonly
+     */
+    public readonly dataType: DataType;
+    /**
+     * @summary `dataCategory`.
+     * @description
+     *
+     * Unit of counting (bits/octets/blocks/packets). Optional.
+     * @public
+     * @readonly
+     */
+    public readonly dataCategory?: OPTIONAL<DataCategory>;
+    /**
+     * @summary `dataSize`.
+     * @description
+     *
+     * Size of each unit. Optional. X.737 A.7.
+     * @public
+     * @readonly
+     */
+    public readonly dataSize?: OPTIONAL<DataSize>;
+    /**
+     * @summary `dataNumber`.
+     * @description
+     *
+     * How many units to send. Optional. X.737 §8.1.6.
+     * @public
+     * @readonly
+     */
+    public readonly dataNumber?: OPTIONAL<UnitsTotal>;
+    /**
+     * @summary `dataRate`.
+     * @description
+     *
+     * Send rate as REAL or OID. Optional. Cor.1 tagging. X.737 A.7.
+     * @public
+     * @readonly
+     */
+    public readonly dataRate?: OPTIONAL<DataRate>;
+
     constructor(
-        /**
-         * @summary `dataType`.
-         * @description
-         *
-         * Pattern/kind of data. Required. X.737 A.7.
-         * @public
-         * @readonly
-         */
-        readonly dataType: DataType,
-        /**
-         * @summary `dataCategory`.
-         * @description
-         *
-         * Unit of counting (bits/octets/blocks/packets). Optional.
-         * @public
-         * @readonly
-         */
-        readonly dataCategory?: OPTIONAL<DataCategory>,
-        /**
-         * @summary `dataSize`.
-         * @description
-         *
-         * Size of each unit. Optional. X.737 A.7.
-         * @public
-         * @readonly
-         */
-        readonly dataSize?: OPTIONAL<DataSize>,
-        /**
-         * @summary `dataNumber`.
-         * @description
-         *
-         * How many units to send. Optional. X.737 §8.1.6.
-         * @public
-         * @readonly
-         */
-        readonly dataNumber?: OPTIONAL<UnitsTotal>,
-        /**
-         * @summary `dataRate`.
-         * @description
-         *
-         * Send rate as REAL or OID. Optional. Cor.1 tagging. X.737 A.7.
-         * @public
-         * @readonly
-         */
-        readonly dataRate?: OPTIONAL<DataRate>
-    ) {}
+        dataType: DataType,
+        dataCategory?: OPTIONAL<DataCategory>,
+        dataSize?: OPTIONAL<DataSize>,
+        dataNumber?: OPTIONAL<UnitsTotal>,
+        dataRate?: OPTIONAL<DataRate>
+    ) {
+        this.dataType = dataType;
+        this.dataCategory = dataCategory;
+        this.dataSize = dataSize;
+        this.dataNumber = dataNumber;
+        this.dataRate = dataRate;
+    }
 
     /**
      * @summary Restructures an object into a DataUnits

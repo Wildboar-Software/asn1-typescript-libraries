@@ -33,37 +33,45 @@ import { PrivateExtensionList, _decode_PrivateExtensionList, _encode_PrivateExte
  */
 export
 class ExtensionContainer {
+    /**
+     * @summary `privateExtensionList`.
+     * @description
+     *
+     * Private extensions defined outside this specification. Unsupported
+     * private extensions shall be discarded if received (3GPP TS 29.002
+     * V19.1.0 clauses 17.1.4 and 17.7.11).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly privateExtensionList?: OPTIONAL<PrivateExtensionList>;
+    /**
+     * @summary `pcs_Extensions`.
+     * @description
+     *
+     * PCS extensions. PCS extensions shall be included in the PCS Extension
+     * Container (3GPP TS 29.002 V19.1.0 clauses 17.1.4 and 17.7.11).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly pcs_Extensions?: OPTIONAL<PCS_Extensions>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `privateExtensionList`.
-         * @description
-         *
-         * Private extensions defined outside this specification. Unsupported
-         * private extensions shall be discarded if received (3GPP TS 29.002
-         * V19.1.0 clauses 17.1.4 and 17.7.11).
-         *
-         * @public
-         * @readonly
-         */
-        readonly privateExtensionList?: OPTIONAL<PrivateExtensionList>,
-        /**
-         * @summary `pcs_Extensions`.
-         * @description
-         *
-         * PCS extensions. PCS extensions shall be included in the PCS Extension
-         * Container (3GPP TS 29.002 V19.1.0 clauses 17.1.4 and 17.7.11).
-         *
-         * @public
-         * @readonly
-         */
-        readonly pcs_Extensions?: OPTIONAL<PCS_Extensions>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        privateExtensionList?: OPTIONAL<PrivateExtensionList>,
+        pcs_Extensions?: OPTIONAL<PCS_Extensions>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.privateExtensionList = privateExtensionList;
+        this.pcs_Extensions = pcs_Extensions;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a ExtensionContainer

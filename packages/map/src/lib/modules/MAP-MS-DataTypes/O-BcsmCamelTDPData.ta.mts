@@ -37,62 +37,76 @@ import { ServiceKey, _decode_ServiceKey, _encode_ServiceKey } from "../MAP-MS-Da
  */
 export
 class O_BcsmCamelTDPData {
+    /**
+     * @summary `o_BcsmTriggerDetectionPoint`.
+     * @description
+     *
+     * `collectedInfo` (2) or `routeSelectFailure` (4); other values: ignore
+     * this sequence. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly o_BcsmTriggerDetectionPoint: O_BcsmTriggerDetectionPoint;
+    /**
+     * @summary `serviceKey`.
+     * @description
+     *
+     * CAMEL service key. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly serviceKey: ServiceKey;
+    /**
+     * @summary `gsmSCF_Address`.
+     * @description
+     *
+     * gsmSCF address. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly gsmSCF_Address: ISDN_AddressString;
+    /**
+     * @summary `defaultCallHandling`.
+     * @description
+     *
+     * Default call handling if the gsmSCF is not reachable. (3GPP TS 29.002
+     * V19.1.0 clause 17.7.1)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly defaultCallHandling: DefaultCallHandling;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `o_BcsmTriggerDetectionPoint`.
-         * @description
-         *
-         * `collectedInfo` (2) or `routeSelectFailure` (4); other values: ignore
-         * this sequence. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
-         *
-         * @public
-         * @readonly
-         */
-        readonly o_BcsmTriggerDetectionPoint: O_BcsmTriggerDetectionPoint,
-        /**
-         * @summary `serviceKey`.
-         * @description
-         *
-         * CAMEL service key. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
-         *
-         * @public
-         * @readonly
-         */
-        readonly serviceKey: ServiceKey,
-        /**
-         * @summary `gsmSCF_Address`.
-         * @description
-         *
-         * gsmSCF address. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
-         *
-         * @public
-         * @readonly
-         */
-        readonly gsmSCF_Address: ISDN_AddressString,
-        /**
-         * @summary `defaultCallHandling`.
-         * @description
-         *
-         * Default call handling if the gsmSCF is not reachable. (3GPP TS 29.002
-         * V19.1.0 clause 17.7.1)
-         *
-         * @public
-         * @readonly
-         */
-        readonly defaultCallHandling: DefaultCallHandling,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        o_BcsmTriggerDetectionPoint: O_BcsmTriggerDetectionPoint,
+        serviceKey: ServiceKey,
+        gsmSCF_Address: ISDN_AddressString,
+        defaultCallHandling: DefaultCallHandling,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.o_BcsmTriggerDetectionPoint = o_BcsmTriggerDetectionPoint;
+        this.serviceKey = serviceKey;
+        this.gsmSCF_Address = gsmSCF_Address;
+        this.defaultCallHandling = defaultCallHandling;
+        this.extensionContainer = extensionContainer;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a O_BcsmCamelTDPData

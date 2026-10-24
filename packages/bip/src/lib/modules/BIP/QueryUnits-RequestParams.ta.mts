@@ -34,20 +34,24 @@ import {
  *
  */
 export class QueryUnits_RequestParams {
+  /**
+   * @summary `bspProductUuid`.
+   * @description
+   *
+   * Product UUID of the BSP whose units are queried. Application
+   * may have passed an access UUID; this component is always the
+   * product UUID. X.1083 Table 43, clause 25.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly bspProductUuid: BioAPI_UUID;
+
   constructor(
-    /**
-     * @summary `bspProductUuid`.
-     * @description
-     *
-     * Product UUID of the BSP whose units are queried. Application
-     * may have passed an access UUID; this component is always the
-     * product UUID. X.1083 Table 43, clause 25.
-     *
-     * @public
-     * @readonly
-     */
-    readonly bspProductUuid: BioAPI_UUID
-  ) {}
+    bspProductUuid: BioAPI_UUID
+  ) {
+    this.bspProductUuid = bspProductUuid;
+  }
 
   /**
    * @summary Restructures an object into a QueryUnits_RequestParams

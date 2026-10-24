@@ -39,44 +39,52 @@ import { AmmDescriptor, _decode_AmmDescriptor, _encode_AmmDescriptor } from "../
  */
 export
 class AmmRequest {
+    /**
+     * @summary `terminationID`.
+     * @description
+     *
+     * Terminations the command acts on. CHOOSE on Add asks the MG to pick
+     * or create a termination, and the chosen identifier is returned.
+     * CHOOSE on Move or Modify is an error. ALL does not match Root
+     * (clauses 6.2.2, 7.2.1, and 7.2.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly terminationID: TerminationIDList;
+    /**
+     * @summary `descriptors`.
+     * @description
+     *
+     * Descriptors applied to those terminations, at most one of each kind.
+     * An underspecified or overspecified parameter causes the MG to return
+     * the descriptor with the value it chose (clause 7.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly descriptors: AmmDescriptor[];
+    /**
+     * @summary Extensions that are not recognized.
+     * @description
+     *
+     * Extension additions this version does not define. Kept so a later
+     * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `terminationID`.
-         * @description
-         *
-         * Terminations the command acts on. CHOOSE on Add asks the MG to pick
-         * or create a termination, and the chosen identifier is returned.
-         * CHOOSE on Move or Modify is an error. ALL does not match Root
-         * (clauses 6.2.2, 7.2.1, and 7.2.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly terminationID: TerminationIDList,
-        /**
-         * @summary `descriptors`.
-         * @description
-         *
-         * Descriptors applied to those terminations, at most one of each kind.
-         * An underspecified or overspecified parameter causes the MG to return
-         * the descriptor with the value it chose (clause 7.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly descriptors: AmmDescriptor[],
-        /**
-         * @summary Extensions that are not recognized.
-         * @description
-         *
-         * Extension additions this version does not define. Kept so a later
-         * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
-         *
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        terminationID: TerminationIDList,
+        descriptors: AmmDescriptor[],
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.terminationID = terminationID;
+        this.descriptors = descriptors;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a AmmRequest

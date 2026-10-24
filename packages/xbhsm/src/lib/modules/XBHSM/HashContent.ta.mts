@@ -29,35 +29,41 @@ import * as $ from "@wildboar/asn1/functional";
  * @class
  */
 export class HashContent {
+    /**
+     * @summary `bR`.
+     * @description
+     *
+     * Biometric reference extracted from the captured
+     * biometric information. Any modality (fingerprint,
+     * face, iris, etc.) may be used. Encoding shall follow
+     * an appropriate part of ISO/IEC 19794; a Biometric
+     * Information Record (BIR) per ISO/IEC 19785-1 is
+     * recommended (Annex A.3). How a BIR or 19794 record
+     * is represented in this `PrintableString` is not
+     * specified.
+     * @public
+     * @readonly
+     */
+    public readonly bR: PrintableString;
+    /**
+     * @summary `randomNum`.
+     * @description
+     *
+     * Random number `R` mixed with the biometric reference
+     * when generating the PSID. A secure random number of
+     * at least 160 bits shall be used (clause 8.1.2.2).
+     * @public
+     * @readonly
+     */
+    public readonly randomNum: BIT_STRING;
+
     constructor(
-        /**
-         * @summary `bR`.
-         * @description
-         *
-         * Biometric reference extracted from the captured
-         * biometric information. Any modality (fingerprint,
-         * face, iris, etc.) may be used. Encoding shall follow
-         * an appropriate part of ISO/IEC 19794; a Biometric
-         * Information Record (BIR) per ISO/IEC 19785-1 is
-         * recommended (Annex A.3). How a BIR or 19794 record
-         * is represented in this `PrintableString` is not
-         * specified.
-         * @public
-         * @readonly
-         */
-        readonly bR: PrintableString,
-        /**
-         * @summary `randomNum`.
-         * @description
-         *
-         * Random number `R` mixed with the biometric reference
-         * when generating the PSID. A secure random number of
-         * at least 160 bits shall be used (clause 8.1.2.2).
-         * @public
-         * @readonly
-         */
-        readonly randomNum: BIT_STRING
-    ) {}
+        bR: PrintableString,
+        randomNum: BIT_STRING
+    ) {
+        this.bR = bR;
+        this.randomNum = randomNum;
+    }
 
     /**
      * @summary Restructures an object into a HashContent

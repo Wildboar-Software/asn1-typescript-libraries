@@ -30,20 +30,26 @@ import { URI, _decode_URI, _encode_URI } from "../CMSProfileAttributes/URI.ta.mj
  *
  */
 export class TimeStamped {
+    /**
+     * @summary `timeStampValue`.
+     * @public
+     * @readonly
+     */
+    public readonly timeStampValue: TimeStamp;
+    /**
+     * @summary `timeStampService`.
+     * @public
+     * @readonly
+     */
+    public readonly timeStampService?: OPTIONAL<URI>;
+
     constructor(
-        /**
-         * @summary `timeStampValue`.
-         * @public
-         * @readonly
-         */
-        readonly timeStampValue: TimeStamp,
-        /**
-         * @summary `timeStampService`.
-         * @public
-         * @readonly
-         */
-        readonly timeStampService?: OPTIONAL<URI>
-    ) {}
+        timeStampValue: TimeStamp,
+        timeStampService?: OPTIONAL<URI>
+    ) {
+        this.timeStampValue = timeStampValue;
+        this.timeStampService = timeStampService;
+    }
 
     /**
      * @summary Restructures an object into a TimeStamped

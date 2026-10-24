@@ -96,206 +96,252 @@ import { SetRouteingMode, _decode_SetRouteingMode, _encode_SetRouteingMode } fro
  */
 export
 class LogicalServList {
+    /**
+     * @summary `callBackNonCallRel`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly callBackNonCallRel?: OPTIONAL<CallBackNonCallRel>;
+    /**
+     * @summary `callBackMsgNonCallRel`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly callBackMsgNonCallRel?: OPTIONAL<CallBackMsgNonCallRel>;
+    /**
+     * @summary `cancelCallBack`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly cancelCallBack?: OPTIONAL<CancelCallBack>;
+    /**
+     * @summary `cancelCallBackMsg`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly cancelCallBackMsg?: OPTIONAL<CancelCallBackMsg>;
+    /**
+     * @summary `getAgentState`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly getAgentState?: OPTIONAL<GetAgentState>;
+    /**
+     * @summary `getAutoAnswer`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly getAutoAnswer?: OPTIONAL<GetAutoAnswer>;
+    /**
+     * @summary `getAutoWorkMode`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly getAutoWorkMode?: OPTIONAL<GetAutoWorkMode>;
+    /**
+     * @summary `getCallerIDStatus`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly getCallerIDStatus?: OPTIONAL<GetCallerIDStatus>;
+    /**
+     * @summary `getCallBack`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly getCallBack?: OPTIONAL<GetCallBack>;
+    /**
+     * @summary `getDoNotDisturb`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly getDoNotDisturb?: OPTIONAL<GetDoNotDisturb>;
+    /**
+     * @summary `getForwarding`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly getForwarding?: OPTIONAL<GetForwarding>;
+    /**
+     * @summary `getLastNumberDialed`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly getLastNumberDialed?: OPTIONAL<GetLastNumberDialed>;
+    /**
+     * @summary `getPresenceState`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly getPresenceState?: OPTIONAL<GetPresenceState>;
+    /**
+     * @summary `getRouteingMode`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly getRouteingMode?: OPTIONAL<GetRouteingMode>;
+    /**
+     * @summary `setAgentState`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly setAgentState?: OPTIONAL<SetAgentState>;
+    /**
+     * @summary `setAutoAnswer`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly setAutoAnswer?: OPTIONAL<SetAutoAnswer>;
+    /**
+     * @summary `setAutoWorkMode`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly setAutoWorkMode?: OPTIONAL<SetAutoWorkMode>;
+    /**
+     * @summary `setCallerIDStatus`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly setCallerIDStatus?: OPTIONAL<SetCallerIDStatus>;
+    /**
+     * @summary `setDoNotDisturb`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly setDoNotDisturb?: OPTIONAL<SetDoNotDisturb>;
+    /**
+     * @summary `setForwarding`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly setForwarding?: OPTIONAL<SetForwarding>;
+    /**
+     * @summary `setPresenceState`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly setPresenceState?: OPTIONAL<SetPresenceState>;
+    /**
+     * @summary `setRouteingMode`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly setRouteingMode?: OPTIONAL<SetRouteingMode>;
+
     constructor (
-        /**
-         * @summary `callBackNonCallRel`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly callBackNonCallRel?: OPTIONAL<CallBackNonCallRel>,
-        /**
-         * @summary `callBackMsgNonCallRel`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly callBackMsgNonCallRel?: OPTIONAL<CallBackMsgNonCallRel>,
-        /**
-         * @summary `cancelCallBack`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly cancelCallBack?: OPTIONAL<CancelCallBack>,
-        /**
-         * @summary `cancelCallBackMsg`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly cancelCallBackMsg?: OPTIONAL<CancelCallBackMsg>,
-        /**
-         * @summary `getAgentState`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly getAgentState?: OPTIONAL<GetAgentState>,
-        /**
-         * @summary `getAutoAnswer`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly getAutoAnswer?: OPTIONAL<GetAutoAnswer>,
-        /**
-         * @summary `getAutoWorkMode`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly getAutoWorkMode?: OPTIONAL<GetAutoWorkMode>,
-        /**
-         * @summary `getCallerIDStatus`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly getCallerIDStatus?: OPTIONAL<GetCallerIDStatus>,
-        /**
-         * @summary `getCallBack`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly getCallBack?: OPTIONAL<GetCallBack>,
-        /**
-         * @summary `getDoNotDisturb`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly getDoNotDisturb?: OPTIONAL<GetDoNotDisturb>,
-        /**
-         * @summary `getForwarding`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly getForwarding?: OPTIONAL<GetForwarding>,
-        /**
-         * @summary `getLastNumberDialed`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly getLastNumberDialed?: OPTIONAL<GetLastNumberDialed>,
-        /**
-         * @summary `getPresenceState`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly getPresenceState?: OPTIONAL<GetPresenceState>,
-        /**
-         * @summary `getRouteingMode`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly getRouteingMode?: OPTIONAL<GetRouteingMode>,
-        /**
-         * @summary `setAgentState`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly setAgentState?: OPTIONAL<SetAgentState>,
-        /**
-         * @summary `setAutoAnswer`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly setAutoAnswer?: OPTIONAL<SetAutoAnswer>,
-        /**
-         * @summary `setAutoWorkMode`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly setAutoWorkMode?: OPTIONAL<SetAutoWorkMode>,
-        /**
-         * @summary `setCallerIDStatus`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly setCallerIDStatus?: OPTIONAL<SetCallerIDStatus>,
-        /**
-         * @summary `setDoNotDisturb`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly setDoNotDisturb?: OPTIONAL<SetDoNotDisturb>,
-        /**
-         * @summary `setForwarding`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly setForwarding?: OPTIONAL<SetForwarding>,
-        /**
-         * @summary `setPresenceState`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly setPresenceState?: OPTIONAL<SetPresenceState>,
-        /**
-         * @summary `setRouteingMode`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly setRouteingMode?: OPTIONAL<SetRouteingMode>
-    ) {}
+        callBackNonCallRel?: OPTIONAL<CallBackNonCallRel>,
+        callBackMsgNonCallRel?: OPTIONAL<CallBackMsgNonCallRel>,
+        cancelCallBack?: OPTIONAL<CancelCallBack>,
+        cancelCallBackMsg?: OPTIONAL<CancelCallBackMsg>,
+        getAgentState?: OPTIONAL<GetAgentState>,
+        getAutoAnswer?: OPTIONAL<GetAutoAnswer>,
+        getAutoWorkMode?: OPTIONAL<GetAutoWorkMode>,
+        getCallerIDStatus?: OPTIONAL<GetCallerIDStatus>,
+        getCallBack?: OPTIONAL<GetCallBack>,
+        getDoNotDisturb?: OPTIONAL<GetDoNotDisturb>,
+        getForwarding?: OPTIONAL<GetForwarding>,
+        getLastNumberDialed?: OPTIONAL<GetLastNumberDialed>,
+        getPresenceState?: OPTIONAL<GetPresenceState>,
+        getRouteingMode?: OPTIONAL<GetRouteingMode>,
+        setAgentState?: OPTIONAL<SetAgentState>,
+        setAutoAnswer?: OPTIONAL<SetAutoAnswer>,
+        setAutoWorkMode?: OPTIONAL<SetAutoWorkMode>,
+        setCallerIDStatus?: OPTIONAL<SetCallerIDStatus>,
+        setDoNotDisturb?: OPTIONAL<SetDoNotDisturb>,
+        setForwarding?: OPTIONAL<SetForwarding>,
+        setPresenceState?: OPTIONAL<SetPresenceState>,
+        setRouteingMode?: OPTIONAL<SetRouteingMode>
+    ) {
+        this.callBackNonCallRel = callBackNonCallRel;
+        this.callBackMsgNonCallRel = callBackMsgNonCallRel;
+        this.cancelCallBack = cancelCallBack;
+        this.cancelCallBackMsg = cancelCallBackMsg;
+        this.getAgentState = getAgentState;
+        this.getAutoAnswer = getAutoAnswer;
+        this.getAutoWorkMode = getAutoWorkMode;
+        this.getCallerIDStatus = getCallerIDStatus;
+        this.getCallBack = getCallBack;
+        this.getDoNotDisturb = getDoNotDisturb;
+        this.getForwarding = getForwarding;
+        this.getLastNumberDialed = getLastNumberDialed;
+        this.getPresenceState = getPresenceState;
+        this.getRouteingMode = getRouteingMode;
+        this.setAgentState = setAgentState;
+        this.setAutoAnswer = setAutoAnswer;
+        this.setAutoWorkMode = setAutoWorkMode;
+        this.setCallerIDStatus = setCallerIDStatus;
+        this.setDoNotDisturb = setDoNotDisturb;
+        this.setForwarding = setForwarding;
+        this.setPresenceState = setPresenceState;
+        this.setRouteingMode = setRouteingMode;
+    }
 
     /**
      * @summary Restructures an object into a LogicalServList

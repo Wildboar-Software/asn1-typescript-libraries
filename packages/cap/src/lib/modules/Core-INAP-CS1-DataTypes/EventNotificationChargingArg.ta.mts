@@ -39,38 +39,50 @@ import { MonitorMode, _enum_for_MonitorMode, MonitorMode_notifyAndContinue /* IM
  */
 export
 class EventNotificationChargingArg {
+    /**
+     * @summary `eventTypeCharging`.
+     * @public
+     * @readonly
+     */
+    public readonly eventTypeCharging: EventTypeCharging;
+    /**
+     * @summary `eventSpecificInformationCharging`.
+     * @public
+     * @readonly
+     */
+    public readonly eventSpecificInformationCharging?: OPTIONAL<EventSpecificInformationCharging>;
+    /**
+     * @summary `legID`.
+     * @public
+     * @readonly
+     */
+    public readonly legID?: OPTIONAL<LegID>;
+    /**
+     * @summary `extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<ExtensionField[]>;
+    /**
+     * @summary `monitorMode`.
+     * @public
+     * @readonly
+     */
+    public readonly monitorMode?: OPTIONAL<MonitorMode>;
+
     constructor (
-        /**
-         * @summary `eventTypeCharging`.
-         * @public
-         * @readonly
-         */
-        readonly eventTypeCharging: EventTypeCharging,
-        /**
-         * @summary `eventSpecificInformationCharging`.
-         * @public
-         * @readonly
-         */
-        readonly eventSpecificInformationCharging?: OPTIONAL<EventSpecificInformationCharging>,
-        /**
-         * @summary `legID`.
-         * @public
-         * @readonly
-         */
-        readonly legID?: OPTIONAL<LegID>,
-        /**
-         * @summary `extensions`.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<ExtensionField[]>,
-        /**
-         * @summary `monitorMode`.
-         * @public
-         * @readonly
-         */
-        readonly monitorMode?: OPTIONAL<MonitorMode>
-    ) {}
+        eventTypeCharging: EventTypeCharging,
+        eventSpecificInformationCharging?: OPTIONAL<EventSpecificInformationCharging>,
+        legID?: OPTIONAL<LegID>,
+        extensions?: OPTIONAL<ExtensionField[]>,
+        monitorMode?: OPTIONAL<MonitorMode>
+    ) {
+        this.eventTypeCharging = eventTypeCharging;
+        this.eventSpecificInformationCharging = eventSpecificInformationCharging;
+        this.legID = legID;
+        this.extensions = extensions;
+        this.monitorMode = monitorMode;
+    }
 
     /**
      * @summary Restructures an object into a EventNotificationChargingArg

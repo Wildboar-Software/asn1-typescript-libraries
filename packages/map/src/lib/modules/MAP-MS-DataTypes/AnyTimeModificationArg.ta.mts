@@ -63,161 +63,197 @@ import { RequestedServingNode, _decode_RequestedServingNode, _encode_RequestedSe
  */
 export
 class AnyTimeModificationArg {
+    /**
+     * @summary `subscriberIdentity`.
+     * @description
+     *
+     * Identity of the subscriber whose data is to be modified (3GPP TS
+     * 29.002 V19.1.0 clauses 8.11.4.2 and 7.6.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly subscriberIdentity: SubscriberIdentity;
+    /**
+     * @summary `gsmSCF_Address`.
+     * @description
+     *
+     * Address of the interrogating gsmSCF in international E.164 format. If
+     * used by IP-SM-GW, contains the IP-SM-GW address. The HLR may use it
+     * to screen the request (3GPP TS 29.002 V19.1.0 clause 8.11.4.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly gsmSCF_Address: ISDN_AddressString;
+    /**
+     * @summary `modificationRequestFor_CF_Info`.
+     * @description
+     *
+     * Modification request for call-forwarding SS information (3GPP TS
+     * 29.002 V19.1.0 clauses 8.11.4.2 and 7.6.3.82).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly modificationRequestFor_CF_Info?: OPTIONAL<ModificationRequestFor_CF_Info>;
+    /**
+     * @summary `modificationRequestFor_CB_Info`.
+     * @description
+     *
+     * Modification request for call-barring SS information (3GPP TS 29.002
+     * V19.1.0 clauses 8.11.4.2 and 7.6.3.82).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly modificationRequestFor_CB_Info?: OPTIONAL<ModificationRequestFor_CB_Info>;
+    /**
+     * @summary `modificationRequestFor_CSI`.
+     * @description
+     *
+     * Modification request for CSI (3GPP TS 29.002 V19.1.0 clauses 8.11.4.2
+     * and 7.6.3.81).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly modificationRequestFor_CSI?: OPTIONAL<ModificationRequestFor_CSI>;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary `longFTN_Supported`.
+     * @description
+     *
+     * Indicates support of Long Forwarded-to Numbers (3GPP TS 29.002
+     * V19.1.0 clauses 8.11.4.2 and 7.6.2.22B).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly longFTN_Supported?: OPTIONAL<NULL>;
+    /**
+     * @summary `modificationRequestFor_ODB_data`.
+     * @description
+     *
+     * Modification request for ODB data (3GPP TS 29.002 V19.1.0 clause
+     * 8.11.4.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly modificationRequestFor_ODB_data?: OPTIONAL<ModificationRequestFor_ODB_data>;
+    /**
+     * @summary `modificationRequestFor_IP_SM_GW_Data`.
+     * @description
+     *
+     * Used by IP-SM-GW to update the IP-SM-GW Number stored in the HLR and
+     * to retrieve the SC Address (3GPP TS 29.002 V19.1.0 clause 8.11.4.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly modificationRequestFor_IP_SM_GW_Data?: OPTIONAL<ModificationRequestFor_IP_SM_GW_Data>;
+    /**
+     * @summary `activationRequestForUE_reachability`.
+     * @description
+     *
+     * One-time subscription of UE-reachability in MME (3GPP TS 23.204) and
+     * SGSN (3GPP TS 23.060) (3GPP TS 29.002 V19.1.0 clause 8.11.4.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly activationRequestForUE_reachability?: OPTIONAL<RequestedServingNode>;
+    /**
+     * @summary `modificationRequestFor_CSG`.
+     * @description
+     *
+     * Used by the gsmSCF to request notification of modification of CSG
+     * subscription data (3GPP TS 29.002 V19.1.0 clause 8.11.4.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly modificationRequestFor_CSG?: OPTIONAL<ModificationRequestFor_CSG>;
+    /**
+     * @summary `modificationRequestFor_CW_Data`.
+     * @public
+     * @readonly
+     */
+    public readonly modificationRequestFor_CW_Data?: OPTIONAL<ModificationRequestFor_CW_Info>;
+    /**
+     * @summary `modificationRequestFor_CLIP_Data`.
+     * @public
+     * @readonly
+     */
+    public readonly modificationRequestFor_CLIP_Data?: OPTIONAL<ModificationRequestFor_CLIP_Info>;
+    /**
+     * @summary `modificationRequestFor_CLIR_Data`.
+     * @public
+     * @readonly
+     */
+    public readonly modificationRequestFor_CLIR_Data?: OPTIONAL<ModificationRequestFor_CLIR_Info>;
+    /**
+     * @summary `modificationRequestFor_HOLD_Data`.
+     * @public
+     * @readonly
+     */
+    public readonly modificationRequestFor_HOLD_Data?: OPTIONAL<ModificationRequestFor_CH_Info>;
+    /**
+     * @summary `modificationRequestFor_ECT_Data`.
+     * @public
+     * @readonly
+     */
+    public readonly modificationRequestFor_ECT_Data?: OPTIONAL<ModificationRequestFor_ECT_Info>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `subscriberIdentity`.
-         * @description
-         *
-         * Identity of the subscriber whose data is to be modified (3GPP TS
-         * 29.002 V19.1.0 clauses 8.11.4.2 and 7.6.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly subscriberIdentity: SubscriberIdentity,
-        /**
-         * @summary `gsmSCF_Address`.
-         * @description
-         *
-         * Address of the interrogating gsmSCF in international E.164 format. If
-         * used by IP-SM-GW, contains the IP-SM-GW address. The HLR may use it
-         * to screen the request (3GPP TS 29.002 V19.1.0 clause 8.11.4.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly gsmSCF_Address: ISDN_AddressString,
-        /**
-         * @summary `modificationRequestFor_CF_Info`.
-         * @description
-         *
-         * Modification request for call-forwarding SS information (3GPP TS
-         * 29.002 V19.1.0 clauses 8.11.4.2 and 7.6.3.82).
-         *
-         * @public
-         * @readonly
-         */
-        readonly modificationRequestFor_CF_Info?: OPTIONAL<ModificationRequestFor_CF_Info>,
-        /**
-         * @summary `modificationRequestFor_CB_Info`.
-         * @description
-         *
-         * Modification request for call-barring SS information (3GPP TS 29.002
-         * V19.1.0 clauses 8.11.4.2 and 7.6.3.82).
-         *
-         * @public
-         * @readonly
-         */
-        readonly modificationRequestFor_CB_Info?: OPTIONAL<ModificationRequestFor_CB_Info>,
-        /**
-         * @summary `modificationRequestFor_CSI`.
-         * @description
-         *
-         * Modification request for CSI (3GPP TS 29.002 V19.1.0 clauses 8.11.4.2
-         * and 7.6.3.81).
-         *
-         * @public
-         * @readonly
-         */
-        readonly modificationRequestFor_CSI?: OPTIONAL<ModificationRequestFor_CSI>,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary `longFTN_Supported`.
-         * @description
-         *
-         * Indicates support of Long Forwarded-to Numbers (3GPP TS 29.002
-         * V19.1.0 clauses 8.11.4.2 and 7.6.2.22B).
-         *
-         * @public
-         * @readonly
-         */
-        readonly longFTN_Supported?: OPTIONAL<NULL>,
-        /**
-         * @summary `modificationRequestFor_ODB_data`.
-         * @description
-         *
-         * Modification request for ODB data (3GPP TS 29.002 V19.1.0 clause
-         * 8.11.4.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly modificationRequestFor_ODB_data?: OPTIONAL<ModificationRequestFor_ODB_data>,
-        /**
-         * @summary `modificationRequestFor_IP_SM_GW_Data`.
-         * @description
-         *
-         * Used by IP-SM-GW to update the IP-SM-GW Number stored in the HLR and
-         * to retrieve the SC Address (3GPP TS 29.002 V19.1.0 clause 8.11.4.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly modificationRequestFor_IP_SM_GW_Data?: OPTIONAL<ModificationRequestFor_IP_SM_GW_Data>,
-        /**
-         * @summary `activationRequestForUE_reachability`.
-         * @description
-         *
-         * One-time subscription of UE-reachability in MME (3GPP TS 23.204) and
-         * SGSN (3GPP TS 23.060) (3GPP TS 29.002 V19.1.0 clause 8.11.4.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly activationRequestForUE_reachability?: OPTIONAL<RequestedServingNode>,
-        /**
-         * @summary `modificationRequestFor_CSG`.
-         * @description
-         *
-         * Used by the gsmSCF to request notification of modification of CSG
-         * subscription data (3GPP TS 29.002 V19.1.0 clause 8.11.4.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly modificationRequestFor_CSG?: OPTIONAL<ModificationRequestFor_CSG>,
-        /**
-         * @summary `modificationRequestFor_CW_Data`.
-         * @public
-         * @readonly
-         */
-        readonly modificationRequestFor_CW_Data?: OPTIONAL<ModificationRequestFor_CW_Info>,
-        /**
-         * @summary `modificationRequestFor_CLIP_Data`.
-         * @public
-         * @readonly
-         */
-        readonly modificationRequestFor_CLIP_Data?: OPTIONAL<ModificationRequestFor_CLIP_Info>,
-        /**
-         * @summary `modificationRequestFor_CLIR_Data`.
-         * @public
-         * @readonly
-         */
-        readonly modificationRequestFor_CLIR_Data?: OPTIONAL<ModificationRequestFor_CLIR_Info>,
-        /**
-         * @summary `modificationRequestFor_HOLD_Data`.
-         * @public
-         * @readonly
-         */
-        readonly modificationRequestFor_HOLD_Data?: OPTIONAL<ModificationRequestFor_CH_Info>,
-        /**
-         * @summary `modificationRequestFor_ECT_Data`.
-         * @public
-         * @readonly
-         */
-        readonly modificationRequestFor_ECT_Data?: OPTIONAL<ModificationRequestFor_ECT_Info>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        subscriberIdentity: SubscriberIdentity,
+        gsmSCF_Address: ISDN_AddressString,
+        modificationRequestFor_CF_Info?: OPTIONAL<ModificationRequestFor_CF_Info>,
+        modificationRequestFor_CB_Info?: OPTIONAL<ModificationRequestFor_CB_Info>,
+        modificationRequestFor_CSI?: OPTIONAL<ModificationRequestFor_CSI>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        longFTN_Supported?: OPTIONAL<NULL>,
+        modificationRequestFor_ODB_data?: OPTIONAL<ModificationRequestFor_ODB_data>,
+        modificationRequestFor_IP_SM_GW_Data?: OPTIONAL<ModificationRequestFor_IP_SM_GW_Data>,
+        activationRequestForUE_reachability?: OPTIONAL<RequestedServingNode>,
+        modificationRequestFor_CSG?: OPTIONAL<ModificationRequestFor_CSG>,
+        modificationRequestFor_CW_Data?: OPTIONAL<ModificationRequestFor_CW_Info>,
+        modificationRequestFor_CLIP_Data?: OPTIONAL<ModificationRequestFor_CLIP_Info>,
+        modificationRequestFor_CLIR_Data?: OPTIONAL<ModificationRequestFor_CLIR_Info>,
+        modificationRequestFor_HOLD_Data?: OPTIONAL<ModificationRequestFor_CH_Info>,
+        modificationRequestFor_ECT_Data?: OPTIONAL<ModificationRequestFor_ECT_Info>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.subscriberIdentity = subscriberIdentity;
+        this.gsmSCF_Address = gsmSCF_Address;
+        this.modificationRequestFor_CF_Info = modificationRequestFor_CF_Info;
+        this.modificationRequestFor_CB_Info = modificationRequestFor_CB_Info;
+        this.modificationRequestFor_CSI = modificationRequestFor_CSI;
+        this.extensionContainer = extensionContainer;
+        this.longFTN_Supported = longFTN_Supported;
+        this.modificationRequestFor_ODB_data = modificationRequestFor_ODB_data;
+        this.modificationRequestFor_IP_SM_GW_Data = modificationRequestFor_IP_SM_GW_Data;
+        this.activationRequestForUE_reachability = activationRequestForUE_reachability;
+        this.modificationRequestFor_CSG = modificationRequestFor_CSG;
+        this.modificationRequestFor_CW_Data = modificationRequestFor_CW_Data;
+        this.modificationRequestFor_CLIP_Data = modificationRequestFor_CLIP_Data;
+        this.modificationRequestFor_CLIR_Data = modificationRequestFor_CLIR_Data;
+        this.modificationRequestFor_HOLD_Data = modificationRequestFor_HOLD_Data;
+        this.modificationRequestFor_ECT_Data = modificationRequestFor_ECT_Data;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a AnyTimeModificationArg

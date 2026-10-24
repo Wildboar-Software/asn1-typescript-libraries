@@ -31,30 +31,36 @@ import * as $ from '@wildboar/asn1/functional';
  *
  */
 export class Identified_Simple_Message {
+    /**
+     * @summary `sm_Identifier`.
+     * @description
+     *
+     * `SIMPLE-MESSAGE.&id` from `Simple-Messages`. ITU-T Rec.
+     * X.1080.1 (10/2011) module E-health-send-and-ack.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sm_Identifier: OBJECT_IDENTIFIER;
+    /**
+     * @summary `sm_Content`.
+     * @description
+     *
+     * `SIMPLE-MESSAGE.&Type` for `sm-Identifier`. ITU-T Rec.
+     * X.1080.1 (10/2011) module E-health-send-and-ack.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sm_Content: _Element;
+
     constructor(
-        /**
-         * @summary `sm_Identifier`.
-         * @description
-         *
-         * `SIMPLE-MESSAGE.&id` from `Simple-Messages`. ITU-T Rec.
-         * X.1080.1 (10/2011) module E-health-send-and-ack.
-         *
-         * @public
-         * @readonly
-         */
-        readonly sm_Identifier: OBJECT_IDENTIFIER,
-        /**
-         * @summary `sm_Content`.
-         * @description
-         *
-         * `SIMPLE-MESSAGE.&Type` for `sm-Identifier`. ITU-T Rec.
-         * X.1080.1 (10/2011) module E-health-send-and-ack.
-         *
-         * @public
-         * @readonly
-         */
-        readonly sm_Content: _Element
-    ) {}
+        sm_Identifier: OBJECT_IDENTIFIER,
+        sm_Content: _Element
+    ) {
+        this.sm_Identifier = sm_Identifier;
+        this.sm_Content = sm_Content;
+    }
 
     /**
      * @summary Restructures an object into a Identified_Simple_Message

@@ -54,54 +54,66 @@ import {
  *
  */
 export class DeleteError {
+  /**
+   * @summary `managedObjectClass`.
+   * @description
+   *
+   * Class of the object that could not be deleted.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly managedObjectClass: OPTIONAL<ObjectClass>;
+  /**
+   * @summary `managedObjectInstance`.
+   * @description
+   *
+   * Instance that could not be deleted.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly managedObjectInstance: OPTIONAL<ObjectInstance>;
+  /**
+   * @summary `currentTime`.
+   * @description
+   *
+   * Time associated with this error, if supplied.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly currentTime: OPTIONAL<GeneralizedTime>;
+  /**
+   * @summary `deleteErrorInfo`.
+   * @description
+   *
+   * Currently only `accessDenied` (2); extensible.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly deleteErrorInfo: DeleteError_deleteErrorInfo;
+  /**
+   * @summary Extensions that are not recognized.
+   * @public
+   * @readonly
+   */
+  public readonly _unrecognizedExtensionsList: _Element[];
+
   constructor(
-    /**
-     * @summary `managedObjectClass`.
-     * @description
-     *
-     * Class of the object that could not be deleted.
-     *
-     * @public
-     * @readonly
-     */
-    readonly managedObjectClass: OPTIONAL<ObjectClass>,
-    /**
-     * @summary `managedObjectInstance`.
-     * @description
-     *
-     * Instance that could not be deleted.
-     *
-     * @public
-     * @readonly
-     */
-    readonly managedObjectInstance: OPTIONAL<ObjectInstance>,
-    /**
-     * @summary `currentTime`.
-     * @description
-     *
-     * Time associated with this error, if supplied.
-     *
-     * @public
-     * @readonly
-     */
-    readonly currentTime: OPTIONAL<GeneralizedTime>,
-    /**
-     * @summary `deleteErrorInfo`.
-     * @description
-     *
-     * Currently only `accessDenied` (2); extensible.
-     *
-     * @public
-     * @readonly
-     */
-    readonly deleteErrorInfo: DeleteError_deleteErrorInfo,
-    /**
-     * @summary Extensions that are not recognized.
-     * @public
-     * @readonly
-     */
-    readonly _unrecognizedExtensionsList: _Element[] = []
-  ) {}
+    managedObjectClass: OPTIONAL<ObjectClass>,
+    managedObjectInstance: OPTIONAL<ObjectInstance>,
+    currentTime: OPTIONAL<GeneralizedTime>,
+    deleteErrorInfo: DeleteError_deleteErrorInfo,
+    _unrecognizedExtensionsList: _Element[] = []
+  ) {
+    this.managedObjectClass = managedObjectClass;
+    this.managedObjectInstance = managedObjectInstance;
+    this.currentTime = currentTime;
+    this.deleteErrorInfo = deleteErrorInfo;
+    this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+  }
 
   /**
    * @summary Restructures an object into a DeleteError

@@ -42,38 +42,50 @@ import { MessageAuthenticationCode, _decode_MessageAuthenticationCode, _encode_M
  */
 export
 class AuthenticatedData {
+    /**
+     * @summary `version`.
+     * @public
+     * @readonly
+     */
+    public readonly version: CMSVersion;
+    /**
+     * @summary `recipientInfos`.
+     * @public
+     * @readonly
+     */
+    public readonly recipientInfos: RecipientInfos;
+    /**
+     * @summary `macAlgorithm`.
+     * @public
+     * @readonly
+     */
+    public readonly macAlgorithm: MACAlgorithmIdentifier;
+    /**
+     * @summary `encapContentInfo`.
+     * @public
+     * @readonly
+     */
+    public readonly encapContentInfo: EncapsulatedContentInfo;
+    /**
+     * @summary `mac`.
+     * @public
+     * @readonly
+     */
+    public readonly mac: MessageAuthenticationCode;
+
     constructor (
-        /**
-         * @summary `version`.
-         * @public
-         * @readonly
-         */
-        readonly version: CMSVersion,
-        /**
-         * @summary `recipientInfos`.
-         * @public
-         * @readonly
-         */
-        readonly recipientInfos: RecipientInfos,
-        /**
-         * @summary `macAlgorithm`.
-         * @public
-         * @readonly
-         */
-        readonly macAlgorithm: MACAlgorithmIdentifier,
-        /**
-         * @summary `encapContentInfo`.
-         * @public
-         * @readonly
-         */
-        readonly encapContentInfo: EncapsulatedContentInfo,
-        /**
-         * @summary `mac`.
-         * @public
-         * @readonly
-         */
-        readonly mac: MessageAuthenticationCode
-    ) {}
+        version: CMSVersion,
+        recipientInfos: RecipientInfos,
+        macAlgorithm: MACAlgorithmIdentifier,
+        encapContentInfo: EncapsulatedContentInfo,
+        mac: MessageAuthenticationCode
+    ) {
+        this.version = version;
+        this.recipientInfos = recipientInfos;
+        this.macAlgorithm = macAlgorithm;
+        this.encapContentInfo = encapContentInfo;
+        this.mac = mac;
+    }
 
     /**
      * @summary Restructures an object into a AuthenticatedData

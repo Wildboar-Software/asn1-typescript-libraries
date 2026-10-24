@@ -33,26 +33,32 @@ import { DOR, _decode_DOR, _encode_DOR } from "../DOR-definition/DOR.ta.mjs";
  */
 export
 class EntryInformation_attr_and_dor_to_entire_object {
+    /**
+     * @summary `attributes`.
+     * @description
+     *
+     * Selected attributes.
+     * @public
+     * @readonly
+     */
+    public readonly attributes: DfrEntryAttributes;
+    /**
+     * @summary `dor_to_entire_object`.
+     * @description
+     *
+     * DOR locating the whole object.
+     * @public
+     * @readonly
+     */
+    public readonly dor_to_entire_object: DOR;
+
     constructor (
-        /**
-         * @summary `attributes`.
-         * @description
-         *
-         * Selected attributes.
-         * @public
-         * @readonly
-         */
-        readonly attributes: DfrEntryAttributes,
-        /**
-         * @summary `dor_to_entire_object`.
-         * @description
-         *
-         * DOR locating the whole object.
-         * @public
-         * @readonly
-         */
-        readonly dor_to_entire_object: DOR
-    ) {}
+        attributes: DfrEntryAttributes,
+        dor_to_entire_object: DOR
+    ) {
+        this.attributes = attributes;
+        this.dor_to_entire_object = dor_to_entire_object;
+    }
 
     /**
      * @summary Restructures an object into a EntryInformation_attr_and_dor_to_entire_object

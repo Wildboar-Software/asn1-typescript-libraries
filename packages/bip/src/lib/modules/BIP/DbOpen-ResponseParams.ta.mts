@@ -41,30 +41,36 @@ import {
  *
  */
 export class DbOpen_ResponseParams {
+  /**
+   * @summary `dbHandle`.
+   * @description
+   *
+   * Opened-database handle written to C `DbHandle` (cl.20, §15.26).
+   * Required on a conforming response (`X.1083 §16.42`, Table 98).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly dbHandle: BioAPI_DB_HANDLE;
+  /**
+   * @summary `markerHandle`.
+   * @description
+   *
+   * Marker handle written to C `MarkerHandle` (cl.20, §15.25).
+   * Required on a conforming response (`X.1083 §16.42`, Table 98).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly markerHandle: BioAPI_DB_MARKER_HANDLE;
+
   constructor(
-    /**
-     * @summary `dbHandle`.
-     * @description
-     *
-     * Opened-database handle written to C `DbHandle` (cl.20, §15.26).
-     * Required on a conforming response (`X.1083 §16.42`, Table 98).
-     *
-     * @public
-     * @readonly
-     */
-    readonly dbHandle: BioAPI_DB_HANDLE,
-    /**
-     * @summary `markerHandle`.
-     * @description
-     *
-     * Marker handle written to C `MarkerHandle` (cl.20, §15.25).
-     * Required on a conforming response (`X.1083 §16.42`, Table 98).
-     *
-     * @public
-     * @readonly
-     */
-    readonly markerHandle: BioAPI_DB_MARKER_HANDLE
-  ) {}
+    dbHandle: BioAPI_DB_HANDLE,
+    markerHandle: BioAPI_DB_MARKER_HANDLE
+  ) {
+    this.dbHandle = dbHandle;
+    this.markerHandle = markerHandle;
+  }
 
   /**
    * @summary Restructures an object into a DbOpen_ResponseParams

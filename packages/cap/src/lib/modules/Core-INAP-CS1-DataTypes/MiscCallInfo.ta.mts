@@ -32,14 +32,18 @@ import { MiscCallInfo_messageType, _enum_for_MiscCallInfo_messageType, _decode_M
  */
 export
 class MiscCallInfo {
+    /**
+     * @summary `messageType`.
+     * @public
+     * @readonly
+     */
+    public readonly messageType: MiscCallInfo_messageType;
+
     constructor (
-        /**
-         * @summary `messageType`.
-         * @public
-         * @readonly
-         */
-        readonly messageType: MiscCallInfo_messageType
-    ) {}
+        messageType: MiscCallInfo_messageType
+    ) {
+        this.messageType = messageType;
+    }
 
     /**
      * @summary Restructures an object into a MiscCallInfo

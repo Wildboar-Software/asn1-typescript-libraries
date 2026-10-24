@@ -44,45 +44,55 @@ import { type Values as DEV_Values, _decode_Values as DEV__decode_Values, _encod
  */
 export
 class ParamValueList {
+    /**
+     * @summary `displayObjects`.
+     * @description
+     * Selected CDS display-object values. ISO/IEC 9041-1:1997
+     * §6.13.2, §12.2.
+     * @public
+     * @readonly
+     */
+    public readonly displayObjects?: OPTIONAL<CDS_Values>;
+    /**
+     * @summary `controlObjects`.
+     * @description
+     * Selected CSS control-object values. ISO/IEC 9041-1:1997
+     * §6.13.2, §12.2.
+     * @public
+     * @readonly
+     */
+    public readonly controlObjects?: OPTIONAL<CSS_Values>;
+    /**
+     * @summary `deviceObjects`.
+     * @description
+     * Selected DEV device-object values. ISO/IEC 9041-1:1997
+     * §6.13.2, §12.2.
+     * @public
+     * @readonly
+     */
+    public readonly deviceObjects?: OPTIONAL<DEV_Values>;
+    /**
+     * @summary `deliveryControl`.
+     * @description
+     * Selected delivery-control: none / simple / quarantine. Applies
+     * only to DO updates and COs with CO-priority `"normal"`.
+     * ISO/IEC 9040:1997 §24, table 15.
+     * @public
+     * @readonly
+     */
+    public readonly deliveryControl?: OPTIONAL<ParamValueList_deliveryControl>;
+
     constructor (
-        /**
-         * @summary `displayObjects`.
-         * @description
-         * Selected CDS display-object values. ISO/IEC 9041-1:1997
-         * §6.13.2, §12.2.
-         * @public
-         * @readonly
-         */
-        readonly displayObjects?: OPTIONAL<CDS_Values>,
-        /**
-         * @summary `controlObjects`.
-         * @description
-         * Selected CSS control-object values. ISO/IEC 9041-1:1997
-         * §6.13.2, §12.2.
-         * @public
-         * @readonly
-         */
-        readonly controlObjects?: OPTIONAL<CSS_Values>,
-        /**
-         * @summary `deviceObjects`.
-         * @description
-         * Selected DEV device-object values. ISO/IEC 9041-1:1997
-         * §6.13.2, §12.2.
-         * @public
-         * @readonly
-         */
-        readonly deviceObjects?: OPTIONAL<DEV_Values>,
-        /**
-         * @summary `deliveryControl`.
-         * @description
-         * Selected delivery-control: none / simple / quarantine. Applies
-         * only to DO updates and COs with CO-priority `"normal"`.
-         * ISO/IEC 9040:1997 §24, table 15.
-         * @public
-         * @readonly
-         */
-        readonly deliveryControl?: OPTIONAL<ParamValueList_deliveryControl>
-    ) {}
+        displayObjects?: OPTIONAL<CDS_Values>,
+        controlObjects?: OPTIONAL<CSS_Values>,
+        deviceObjects?: OPTIONAL<DEV_Values>,
+        deliveryControl?: OPTIONAL<ParamValueList_deliveryControl>
+    ) {
+        this.displayObjects = displayObjects;
+        this.controlObjects = controlObjects;
+        this.deviceObjects = deviceObjects;
+        this.deliveryControl = deliveryControl;
+    }
 
     /**
      * @summary Restructures an object into a ParamValueList

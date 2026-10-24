@@ -39,50 +39,60 @@ import {
  *
  */
 export class EpcFormat {
+    /**
+     * @summary `fields`.
+     * @description
+     *
+     * SIZE (1..MAX); order is bit-field order.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly fields: EpcFormat_fields_Item[];
+    /**
+     * @summary `digitShift`.
+     * @description
+     *
+     * Position of numeric character to move to front (not when
+     * producing a URN).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly digitShift?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `checkCalc`.
+     * @description
+     *
+     * How many initial numeric characters generate the check digit
+     * (not for URN).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly checkCalc?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `urnPrefix`.
+     * @description
+     *
+     * Optional URN prefix for global uniqueness.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly urnPrefix?: OPTIONAL<UTF8String>;
+
     constructor(
-        /**
-         * @summary `fields`.
-         * @description
-         *
-         * SIZE (1..MAX); order is bit-field order.
-         *
-         * @public
-         * @readonly
-         */
-        readonly fields: EpcFormat_fields_Item[],
-        /**
-         * @summary `digitShift`.
-         * @description
-         *
-         * Position of numeric character to move to front (not when
-         * producing a URN).
-         *
-         * @public
-         * @readonly
-         */
-        readonly digitShift?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `checkCalc`.
-         * @description
-         *
-         * How many initial numeric characters generate the check digit
-         * (not for URN).
-         *
-         * @public
-         * @readonly
-         */
-        readonly checkCalc?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `urnPrefix`.
-         * @description
-         *
-         * Optional URN prefix for global uniqueness.
-         *
-         * @public
-         * @readonly
-         */
-        readonly urnPrefix?: OPTIONAL<UTF8String>
-    ) {}
+        fields: EpcFormat_fields_Item[],
+        digitShift?: OPTIONAL<INTEGER>,
+        checkCalc?: OPTIONAL<INTEGER>,
+        urnPrefix?: OPTIONAL<UTF8String>
+    ) {
+        this.fields = fields;
+        this.digitShift = digitShift;
+        this.checkCalc = checkCalc;
+        this.urnPrefix = urnPrefix;
+    }
 
     /**
      * @summary Restructures an object into a EpcFormat

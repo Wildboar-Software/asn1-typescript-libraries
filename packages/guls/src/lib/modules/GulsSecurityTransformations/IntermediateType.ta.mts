@@ -72,66 +72,78 @@ import {
  *
  */
 export class IntermediateType {
+  /**
+   * @summary `unprotectedItem`.
+   * @description
+   *
+   * Item being protected, or a BIT STRING if it is not from
+   * an ASN.1 abstract syntax. ITU-T Rec. X.830 (04/95)
+   * Annex D.4.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly unprotectedItem: _Element;
+  /**
+   * @summary `initEncRules`.
+   * @description
+   *
+   * Initial encoding rules used on this intermediate value.
+   * Default CER; overrides the transformation default.
+   * ITU-T Rec. X.830 (04/95) §7.1.4, Annex D.4.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly initEncRules?: OPTIONAL<OBJECT_IDENTIFIER>;
+  /**
+   * @summary `signOrSealAlgorithm`.
+   * @description
+   *
+   * Signing or sealing algorithm and its parameters. ITU-T
+   * Rec. X.830 (04/95) Annex D.4.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly signOrSealAlgorithm?: OPTIONAL<AlgorithmIdentifier>;
+  /**
+   * @summary `hashAlgorithm`.
+   * @description
+   *
+   * Hash function, if one is required and not implied by
+   * `signOrSealAlgorithm`. ITU-T Rec. X.830 (04/95)
+   * Annex D.4.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly hashAlgorithm?: OPTIONAL<AlgorithmIdentifier>;
+  /**
+   * @summary `keyInformation`.
+   * @description
+   *
+   * Key material in a `KEY-INFORMATION` format from the
+   * supported classes. ITU-T Rec. X.830 (04/95) Annex D.4.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly keyInformation?: OPTIONAL<IntermediateType_keyInformation>;
+
   constructor(
-    /**
-     * @summary `unprotectedItem`.
-     * @description
-     *
-     * Item being protected, or a BIT STRING if it is not from
-     * an ASN.1 abstract syntax. ITU-T Rec. X.830 (04/95)
-     * Annex D.4.
-     *
-     * @public
-     * @readonly
-     */
-    readonly unprotectedItem: _Element,
-    /**
-     * @summary `initEncRules`.
-     * @description
-     *
-     * Initial encoding rules used on this intermediate value.
-     * Default CER; overrides the transformation default.
-     * ITU-T Rec. X.830 (04/95) §7.1.4, Annex D.4.
-     *
-     * @public
-     * @readonly
-     */
-    readonly initEncRules?: OPTIONAL<OBJECT_IDENTIFIER>,
-    /**
-     * @summary `signOrSealAlgorithm`.
-     * @description
-     *
-     * Signing or sealing algorithm and its parameters. ITU-T
-     * Rec. X.830 (04/95) Annex D.4.
-     *
-     * @public
-     * @readonly
-     */
-    readonly signOrSealAlgorithm?: OPTIONAL<AlgorithmIdentifier>,
-    /**
-     * @summary `hashAlgorithm`.
-     * @description
-     *
-     * Hash function, if one is required and not implied by
-     * `signOrSealAlgorithm`. ITU-T Rec. X.830 (04/95)
-     * Annex D.4.
-     *
-     * @public
-     * @readonly
-     */
-    readonly hashAlgorithm?: OPTIONAL<AlgorithmIdentifier>,
-    /**
-     * @summary `keyInformation`.
-     * @description
-     *
-     * Key material in a `KEY-INFORMATION` format from the
-     * supported classes. ITU-T Rec. X.830 (04/95) Annex D.4.
-     *
-     * @public
-     * @readonly
-     */
-    readonly keyInformation?: OPTIONAL<IntermediateType_keyInformation>
-  ) {}
+    unprotectedItem: _Element,
+    initEncRules?: OPTIONAL<OBJECT_IDENTIFIER>,
+    signOrSealAlgorithm?: OPTIONAL<AlgorithmIdentifier>,
+    hashAlgorithm?: OPTIONAL<AlgorithmIdentifier>,
+    keyInformation?: OPTIONAL<IntermediateType_keyInformation>
+  ) {
+    this.unprotectedItem = unprotectedItem;
+    this.initEncRules = initEncRules;
+    this.signOrSealAlgorithm = signOrSealAlgorithm;
+    this.hashAlgorithm = hashAlgorithm;
+    this.keyInformation = keyInformation;
+  }
 
   /**
    * @summary Restructures an object into a IntermediateType

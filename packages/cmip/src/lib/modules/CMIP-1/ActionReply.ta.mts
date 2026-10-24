@@ -36,28 +36,34 @@ import {
  *
  */
 export class ActionReply {
+  /**
+   * @summary `actionType`.
+   * @description
+   *
+   * Action type (`CMIP-ACTION.&id`).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly actionType: CMIP_ACTION["&id"];
+  /**
+   * @summary `actionReplyInfo`.
+   * @description
+   *
+   * Reply matching `actionType` (`CMIP-ACTION.&Value`).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly actionReplyInfo: _Element;
+
   constructor(
-    /**
-     * @summary `actionType`.
-     * @description
-     *
-     * Action type (`CMIP-ACTION.&id`).
-     *
-     * @public
-     * @readonly
-     */
-    readonly actionType: CMIP_ACTION["&id"],
-    /**
-     * @summary `actionReplyInfo`.
-     * @description
-     *
-     * Reply matching `actionType` (`CMIP-ACTION.&Value`).
-     *
-     * @public
-     * @readonly
-     */
-    readonly actionReplyInfo: _Element
-  ) {}
+    actionType: CMIP_ACTION["&id"],
+    actionReplyInfo: _Element
+  ) {
+    this.actionType = actionType;
+    this.actionReplyInfo = actionReplyInfo;
+  }
 
   /**
    * @summary Restructures an object into a ActionReply

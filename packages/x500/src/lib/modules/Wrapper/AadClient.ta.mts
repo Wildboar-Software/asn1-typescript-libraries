@@ -49,65 +49,77 @@ import {
  *
  */
 export class AadClient {
+    /**
+     * @summary `invokeID`.
+     * @description
+     *
+     * Optional. SIZE (6): ASCII `REQ` or `RSP` then numerals `000`–`127`
+     * from the protected protocol. Distinct from AVMP/CASP INTEGER
+     * InvokeID.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly invokeID: OPTIONAL<InvokeID>;
+    /**
+     * @summary `assoID`.
+     * @description
+     *
+     * Association identifier agreed at handshake for this association.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly assoID: AssoID;
+    /**
+     * @summary `time`.
+     * @description
+     *
+     * UTC GeneralizedTime of creation.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly time: TimeStamp;
+    /**
+     * @summary `seq`.
+     * @description
+     *
+     * Per-direction client sequence. First data-transfer WrPDU of the
+     * association is `0`, then +1; wraps to `0` at 2147483647. Replay/loss
+     * detection. Not used on handshake.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly seq: SequenceNumber;
+    /**
+     * @summary `keyEst`.
+     * @description
+     *
+     * Present = client rekey (prose "rekey component"). New DH pair +
+     * nonce in Payload. Do not send another until a server PDU with
+     * `changedKey` TRUE for the outstanding rekey. Only the client
+     * initiates; interval 15 min–24 h.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly keyEst?: OPTIONAL<AlgoInvoke>;
+
     constructor(
-        /**
-         * @summary `invokeID`.
-         * @description
-         *
-         * Optional. SIZE (6): ASCII `REQ` or `RSP` then numerals `000`–`127`
-         * from the protected protocol. Distinct from AVMP/CASP INTEGER
-         * InvokeID.
-         *
-         * @public
-         * @readonly
-         */
-        readonly invokeID: OPTIONAL<InvokeID>,
-        /**
-         * @summary `assoID`.
-         * @description
-         *
-         * Association identifier agreed at handshake for this association.
-         *
-         * @public
-         * @readonly
-         */
-        readonly assoID: AssoID,
-        /**
-         * @summary `time`.
-         * @description
-         *
-         * UTC GeneralizedTime of creation.
-         *
-         * @public
-         * @readonly
-         */
-        readonly time: TimeStamp,
-        /**
-         * @summary `seq`.
-         * @description
-         *
-         * Per-direction client sequence. First data-transfer WrPDU of the
-         * association is `0`, then +1; wraps to `0` at 2147483647. Replay/loss
-         * detection. Not used on handshake.
-         *
-         * @public
-         * @readonly
-         */
-        readonly seq: SequenceNumber,
-        /**
-         * @summary `keyEst`.
-         * @description
-         *
-         * Present = client rekey (prose "rekey component"). New DH pair +
-         * nonce in Payload. Do not send another until a server PDU with
-         * `changedKey` TRUE for the outstanding rekey. Only the client
-         * initiates; interval 15 min–24 h.
-         *
-         * @public
-         * @readonly
-         */
-        readonly keyEst?: OPTIONAL<AlgoInvoke>
-    ) {}
+        invokeID: OPTIONAL<InvokeID>,
+        assoID: AssoID,
+        time: TimeStamp,
+        seq: SequenceNumber,
+        keyEst?: OPTIONAL<AlgoInvoke>
+    ) {
+        this.invokeID = invokeID;
+        this.assoID = assoID;
+        this.time = time;
+        this.seq = seq;
+        this.keyEst = keyEst;
+    }
 
     /**
      * @summary Restructures an object into a AadClient

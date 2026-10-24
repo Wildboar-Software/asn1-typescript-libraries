@@ -39,30 +39,36 @@ import { DigitMapValue, _decode_DigitMapValue, _encode_DigitMapValue } from "../
  */
 export
 class DigitMapDescriptor {
+    /**
+     * @summary `digitMapName`.
+     * @description
+     *
+     * Name of the map, two octets (`Name`). Omitted when the map is
+     * supplied only for immediate use and is not stored under a name.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly digitMapName?: OPTIONAL<DigitMapName>;
+    /**
+     * @summary `digitMapValue`.
+     * @description
+     *
+     * Body of the map, and optional timer overrides. Empty, for a name that
+     * already exists, deletes the map (clause 7.1.14.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly digitMapValue?: OPTIONAL<DigitMapValue>;
+
     constructor (
-        /**
-         * @summary `digitMapName`.
-         * @description
-         *
-         * Name of the map, two octets (`Name`). Omitted when the map is
-         * supplied only for immediate use and is not stored under a name.
-         *
-         * @public
-         * @readonly
-         */
-        readonly digitMapName?: OPTIONAL<DigitMapName>,
-        /**
-         * @summary `digitMapValue`.
-         * @description
-         *
-         * Body of the map, and optional timer overrides. Empty, for a name that
-         * already exists, deletes the map (clause 7.1.14.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly digitMapValue?: OPTIONAL<DigitMapValue>
-    ) {}
+        digitMapName?: OPTIONAL<DigitMapName>,
+        digitMapValue?: OPTIONAL<DigitMapValue>
+    ) {
+        this.digitMapName = digitMapName;
+        this.digitMapValue = digitMapValue;
+    }
 
     /**
      * @summary Restructures an object into a DigitMapDescriptor

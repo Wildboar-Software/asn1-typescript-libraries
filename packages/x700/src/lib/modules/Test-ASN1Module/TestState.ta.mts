@@ -62,57 +62,67 @@ import {
  *
  */
 export class TestState {
+    /**
+     * @summary `operationalState`.
+     * @description
+     *
+     * X.731 operationalState. Enabled for every test state except Disabled.
+     * ITU-T Rec. X.745 (11/93) §7.3.3.
+     * [§7.3.3](https://www.itu.int/rec/T-REC-X.745-199311-I)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly operationalState: OperationalState;
+    /**
+     * @summary `proceduralStatus`.
+     * @description
+     *
+     * X.731 proceduralStatus: not-initialized, initializing, terminating,
+     * reporting, or empty, per Table 1. ITU-T Rec. X.745 (11/93) §7.3.3.
+     * [§7.3.3](https://www.itu.int/rec/T-REC-X.745-199311-I)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly proceduralStatus: ProceduralStatus;
+    /**
+     * @summary `controlStatus`.
+     * @description
+     *
+     * X.731 controlStatus; required only if the TO supports Suspended.
+     * Present as [2] (Cor.1). ITU-T Rec. X.745 (11/93) §7.3.3.
+     * [§7.3.3](https://www.itu.int/rec/T-REC-X.745-199311-I)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly controlStatus?: OPTIONAL<ControlStatus>;
+    /**
+     * @summary `availabilityStatus`.
+     * @description
+     *
+     * X.731 availabilityStatus; required only if scheduling is supported
+     * (Idle / off-duty). Present as [3] (Cor.1). ITU-T Rec. X.745 (11/93)
+     * §7.3.3.
+     * [§7.3.3](https://www.itu.int/rec/T-REC-X.745-199311-I)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly availabilityStatus?: OPTIONAL<AvailabilityStatus>;
+
     constructor(
-        /**
-         * @summary `operationalState`.
-         * @description
-         *
-         * X.731 operationalState. Enabled for every test state except Disabled.
-         * ITU-T Rec. X.745 (11/93) §7.3.3.
-         * [§7.3.3](https://www.itu.int/rec/T-REC-X.745-199311-I)
-         *
-         * @public
-         * @readonly
-         */
-        readonly operationalState: OperationalState,
-        /**
-         * @summary `proceduralStatus`.
-         * @description
-         *
-         * X.731 proceduralStatus: not-initialized, initializing, terminating,
-         * reporting, or empty, per Table 1. ITU-T Rec. X.745 (11/93) §7.3.3.
-         * [§7.3.3](https://www.itu.int/rec/T-REC-X.745-199311-I)
-         *
-         * @public
-         * @readonly
-         */
-        readonly proceduralStatus: ProceduralStatus,
-        /**
-         * @summary `controlStatus`.
-         * @description
-         *
-         * X.731 controlStatus; required only if the TO supports Suspended.
-         * Present as [2] (Cor.1). ITU-T Rec. X.745 (11/93) §7.3.3.
-         * [§7.3.3](https://www.itu.int/rec/T-REC-X.745-199311-I)
-         *
-         * @public
-         * @readonly
-         */
-        readonly controlStatus?: OPTIONAL<ControlStatus>,
-        /**
-         * @summary `availabilityStatus`.
-         * @description
-         *
-         * X.731 availabilityStatus; required only if scheduling is supported
-         * (Idle / off-duty). Present as [3] (Cor.1). ITU-T Rec. X.745 (11/93)
-         * §7.3.3.
-         * [§7.3.3](https://www.itu.int/rec/T-REC-X.745-199311-I)
-         *
-         * @public
-         * @readonly
-         */
-        readonly availabilityStatus?: OPTIONAL<AvailabilityStatus>
-    ) {}
+        operationalState: OperationalState,
+        proceduralStatus: ProceduralStatus,
+        controlStatus?: OPTIONAL<ControlStatus>,
+        availabilityStatus?: OPTIONAL<AvailabilityStatus>
+    ) {
+        this.operationalState = operationalState;
+        this.proceduralStatus = proceduralStatus;
+        this.controlStatus = controlStatus;
+        this.availabilityStatus = availabilityStatus;
+    }
 
     /**
      * @summary Restructures an object into a TestState

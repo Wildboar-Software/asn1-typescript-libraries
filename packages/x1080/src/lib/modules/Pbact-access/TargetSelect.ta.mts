@@ -44,38 +44,46 @@ import {
  *
  */
 export class TargetSelect {
+    /**
+     * @summary `objOper`.
+     * @description
+     *
+     * Operations on objects as a whole. Absent → none.
+     * ITU-T Rec. X.1080.0 (2017) Cor.1
+     * [§7.3.2](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly objOper?: OPTIONAL<ObjectOperations>;
+    /**
+     * @summary `attrSel`.
+     * @description
+     *
+     * Operations on attributes. Absent → none.
+     * ITU-T Rec. X.1080.0 (2017) Cor.1
+     * [§7.3.2](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly attrSel?: OPTIONAL<AttributeSel>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `objOper`.
-         * @description
-         *
-         * Operations on objects as a whole. Absent → none.
-         * ITU-T Rec. X.1080.0 (2017) Cor.1
-         * [§7.3.2](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly objOper?: OPTIONAL<ObjectOperations>,
-        /**
-         * @summary `attrSel`.
-         * @description
-         *
-         * Operations on attributes. Absent → none.
-         * ITU-T Rec. X.1080.0 (2017) Cor.1
-         * [§7.3.2](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly attrSel?: OPTIONAL<AttributeSel>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        objOper?: OPTIONAL<ObjectOperations>,
+        attrSel?: OPTIONAL<AttributeSel>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.objOper = objOper;
+        this.attrSel = attrSel;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a TargetSelect

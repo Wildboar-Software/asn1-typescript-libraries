@@ -42,79 +42,95 @@ import * as $ from '@wildboar/asn1/functional';
  *
  */
 export class Time24Wps {
+    /**
+     * @summary `hour`.
+     * @description
+     *
+     * Hour of day (0..23). With `minute` 0, start means start of
+     * day and end means 24:00. ITU-T Rec. X.746 (02/00)
+     * [§8.3.4.2](https://www.itu.int/rec/T-REC-X.746-200002-I).
+     * @public
+     * @readonly
+     */
+    public readonly hour: INTEGER;
+    /**
+     * @summary `minute`.
+     * @description
+     *
+     * Minute within the hour (0..59). ITU-T Rec. X.746 (02/00)
+     * [§8.3.4.2](https://www.itu.int/rec/T-REC-X.746-200002-I).
+     * @public
+     * @readonly
+     */
+    public readonly minute?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `second`.
+     * @description
+     *
+     * Second within the minute (0..59). ITU-T Rec. X.746 (02/00)
+     * [A.6](https://www.itu.int/rec/T-REC-X.746-200002-I).
+     * @public
+     * @readonly
+     */
+    public readonly second?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `milliseconds`.
+     * @description
+     *
+     * Milliseconds within the second (0..999). X.746 does not
+     * define further behaviour for this field.
+     * @public
+     * @readonly
+     */
+    public readonly milliseconds?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `microseconds`.
+     * @description
+     *
+     * Microseconds within the second (0..999999). X.746 does
+     * not define further behaviour for this field.
+     * @public
+     * @readonly
+     */
+    public readonly microseconds?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `nanoseconds`.
+     * @description
+     *
+     * Nanoseconds within the second (0..999999999). X.746 does
+     * not define further behaviour for this field.
+     * @public
+     * @readonly
+     */
+    public readonly nanoseconds?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `picoseconds`.
+     * @description
+     *
+     * Picoseconds within the second (0..999999999999). X.746
+     * does not define further behaviour for this field.
+     * @public
+     * @readonly
+     */
+    public readonly picoseconds?: OPTIONAL<INTEGER>;
+
     constructor(
-        /**
-         * @summary `hour`.
-         * @description
-         *
-         * Hour of day (0..23). With `minute` 0, start means start of
-         * day and end means 24:00. ITU-T Rec. X.746 (02/00)
-         * [§8.3.4.2](https://www.itu.int/rec/T-REC-X.746-200002-I).
-         * @public
-         * @readonly
-         */
-        readonly hour: INTEGER,
-        /**
-         * @summary `minute`.
-         * @description
-         *
-         * Minute within the hour (0..59). ITU-T Rec. X.746 (02/00)
-         * [§8.3.4.2](https://www.itu.int/rec/T-REC-X.746-200002-I).
-         * @public
-         * @readonly
-         */
-        readonly minute?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `second`.
-         * @description
-         *
-         * Second within the minute (0..59). ITU-T Rec. X.746 (02/00)
-         * [A.6](https://www.itu.int/rec/T-REC-X.746-200002-I).
-         * @public
-         * @readonly
-         */
-        readonly second?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `milliseconds`.
-         * @description
-         *
-         * Milliseconds within the second (0..999). X.746 does not
-         * define further behaviour for this field.
-         * @public
-         * @readonly
-         */
-        readonly milliseconds?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `microseconds`.
-         * @description
-         *
-         * Microseconds within the second (0..999999). X.746 does
-         * not define further behaviour for this field.
-         * @public
-         * @readonly
-         */
-        readonly microseconds?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `nanoseconds`.
-         * @description
-         *
-         * Nanoseconds within the second (0..999999999). X.746 does
-         * not define further behaviour for this field.
-         * @public
-         * @readonly
-         */
-        readonly nanoseconds?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `picoseconds`.
-         * @description
-         *
-         * Picoseconds within the second (0..999999999999). X.746
-         * does not define further behaviour for this field.
-         * @public
-         * @readonly
-         */
-        readonly picoseconds?: OPTIONAL<INTEGER>
-    ) {}
+        hour: INTEGER,
+        minute?: OPTIONAL<INTEGER>,
+        second?: OPTIONAL<INTEGER>,
+        milliseconds?: OPTIONAL<INTEGER>,
+        microseconds?: OPTIONAL<INTEGER>,
+        nanoseconds?: OPTIONAL<INTEGER>,
+        picoseconds?: OPTIONAL<INTEGER>
+    ) {
+        this.hour = hour;
+        this.minute = minute;
+        this.second = second;
+        this.milliseconds = milliseconds;
+        this.microseconds = microseconds;
+        this.nanoseconds = nanoseconds;
+        this.picoseconds = picoseconds;
+    }
 
     /**
      * @summary Restructures an object into a Time24Wps

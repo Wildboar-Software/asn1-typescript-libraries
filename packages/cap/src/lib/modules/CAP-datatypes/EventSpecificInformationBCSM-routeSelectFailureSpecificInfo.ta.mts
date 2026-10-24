@@ -24,19 +24,25 @@ import { type Cause, _decode_Cause, _encode_Cause } from "./Cause.ta.mjs";
  *
  */
 export class EventSpecificInformationBCSM_routeSelectFailureSpecificInfo {
+    /**
+     * @summary `failureCause`.
+     * @description
+     *
+     * Present if available. (3GPP TS 29.078 V19.0.0 clause 11.18).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly failureCause?: OPTIONAL<Cause>;
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `failureCause`.
-         * @description
-         *
-         * Present if available. (3GPP TS 29.078 V19.0.0 clause 11.18).
-         *
-         * @public
-         * @readonly
-         */
-        readonly failureCause?: OPTIONAL<Cause>,
-        readonly _unrecognizedExtensionsList: _Element[] = [],
-    ) {}
+        failureCause?: OPTIONAL<Cause>,
+        _unrecognizedExtensionsList: _Element[] = [],
+    ) {
+        this.failureCause = failureCause;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     public static _from_object (_o: { [_K in keyof (EventSpecificInformationBCSM_routeSelectFailureSpecificInfo)]: (EventSpecificInformationBCSM_routeSelectFailureSpecificInfo)[_K] }): EventSpecificInformationBCSM_routeSelectFailureSpecificInfo {
         return new EventSpecificInformationBCSM_routeSelectFailureSpecificInfo(_o.failureCause, _o._unrecognizedExtensionsList);

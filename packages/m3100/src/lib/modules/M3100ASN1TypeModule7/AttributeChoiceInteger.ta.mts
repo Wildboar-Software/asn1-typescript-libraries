@@ -31,32 +31,42 @@ import * as $ from '@wildboar/asn1/functional';
  *
  */
 export class AttributeChoiceInteger {
+    /**
+     * @summary `attributeName`.
+     * @public
+     * @readonly
+     */
+    public readonly attributeName: GraphicString;
+    /**
+     * @summary `minimumValue`.
+     * @public
+     * @readonly
+     */
+    public readonly minimumValue: INTEGER;
+    /**
+     * @summary `maximumValue`.
+     * @public
+     * @readonly
+     */
+    public readonly maximumValue: INTEGER;
+    /**
+     * @summary `granularity`.
+     * @public
+     * @readonly
+     */
+    public readonly granularity: INTEGER;
+
     constructor(
-        /**
-         * @summary `attributeName`.
-         * @public
-         * @readonly
-         */
-        readonly attributeName: GraphicString,
-        /**
-         * @summary `minimumValue`.
-         * @public
-         * @readonly
-         */
-        readonly minimumValue: INTEGER,
-        /**
-         * @summary `maximumValue`.
-         * @public
-         * @readonly
-         */
-        readonly maximumValue: INTEGER,
-        /**
-         * @summary `granularity`.
-         * @public
-         * @readonly
-         */
-        readonly granularity: INTEGER
-    ) {}
+        attributeName: GraphicString,
+        minimumValue: INTEGER,
+        maximumValue: INTEGER,
+        granularity: INTEGER
+    ) {
+        this.attributeName = attributeName;
+        this.minimumValue = minimumValue;
+        this.maximumValue = maximumValue;
+        this.granularity = granularity;
+    }
 
     /**
      * @summary Restructures an object into a AttributeChoiceInteger

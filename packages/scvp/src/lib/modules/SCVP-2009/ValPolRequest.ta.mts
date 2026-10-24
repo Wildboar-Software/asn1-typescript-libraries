@@ -33,30 +33,36 @@ import * as $ from '@wildboar/asn1/functional';
  *
  */
 export class ValPolRequest {
+  /**
+   * @summary `vpRequestVersion`.
+   * @description
+   *
+   * Version of the policy request (DEFAULT 1); same rules as
+   * `cvRequestVersion` ([RFC 5055 §5.1](https://datatracker.ietf.org/doc/html/rfc5055#section-5.1)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly vpRequestVersion: OPTIONAL<INTEGER>;
+  /**
+   * @summary `requestNonce`.
+   * @description
+   *
+   * Client nonce; MUST be returned in a non-cached policy response
+   * and MUST NOT appear in a cached one ([RFC 5055 §5.2](https://datatracker.ietf.org/doc/html/rfc5055#section-5.2)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly requestNonce: OCTET_STRING;
+
   constructor(
-    /**
-     * @summary `vpRequestVersion`.
-     * @description
-     *
-     * Version of the policy request (DEFAULT 1); same rules as
-     * `cvRequestVersion` ([RFC 5055 §5.1](https://datatracker.ietf.org/doc/html/rfc5055#section-5.1)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly vpRequestVersion: OPTIONAL<INTEGER>,
-    /**
-     * @summary `requestNonce`.
-     * @description
-     *
-     * Client nonce; MUST be returned in a non-cached policy response
-     * and MUST NOT appear in a cached one ([RFC 5055 §5.2](https://datatracker.ietf.org/doc/html/rfc5055#section-5.2)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly requestNonce: OCTET_STRING
-  ) {}
+    vpRequestVersion: OPTIONAL<INTEGER>,
+    requestNonce: OCTET_STRING
+  ) {
+    this.vpRequestVersion = vpRequestVersion;
+    this.requestNonce = requestNonce;
+  }
 
   /**
    * @summary Restructures an object into a ValPolRequest

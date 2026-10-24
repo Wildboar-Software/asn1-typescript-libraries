@@ -38,41 +38,51 @@ import {
  *
  */
 export class GeneralSubtree {
+    /**
+     * @summary `base`.
+     * @public
+     * @readonly
+     */
+    public readonly base: GeneralName;
+    /**
+     * @summary `minimum`.
+     * @description
+     *
+     * DEFAULT 0 = the base name itself. 1 excludes the base but includes
+     * subordinates.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly minimum?: OPTIONAL<BaseDistance>;
+    /**
+     * @summary `maximum`.
+     * @description
+     *
+     * Absent = no upper bound. 0 = only the base.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly maximum?: OPTIONAL<BaseDistance>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `base`.
-         * @public
-         * @readonly
-         */
-        readonly base: GeneralName,
-        /**
-         * @summary `minimum`.
-         * @description
-         *
-         * DEFAULT 0 = the base name itself. 1 excludes the base but includes
-         * subordinates.
-         *
-         * @public
-         * @readonly
-         */
-        readonly minimum?: OPTIONAL<BaseDistance>,
-        /**
-         * @summary `maximum`.
-         * @description
-         *
-         * Absent = no upper bound. 0 = only the base.
-         *
-         * @public
-         * @readonly
-         */
-        readonly maximum?: OPTIONAL<BaseDistance>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        base: GeneralName,
+        minimum?: OPTIONAL<BaseDistance>,
+        maximum?: OPTIONAL<BaseDistance>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.base = base;
+        this.minimum = minimum;
+        this.maximum = maximum;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a GeneralSubtree

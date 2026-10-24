@@ -34,30 +34,36 @@ import { Unsigned32, _decode_Unsigned32, _encode_Unsigned32 } from "../ISO-9506-
  */
 export
 class DeleteVariableAccess_Response {
+    /**
+     * @summary `numberMatched`.
+     * @description
+     *
+     * Named Variables that matched the name specification.
+     * ISO 9506-1:2003 §14.11.1.2.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly numberMatched: Unsigned32;
+    /**
+     * @summary `numberDeleted`.
+     * @description
+     *
+     * Named Variables actually deleted.
+     * ISO 9506-1:2003 §14.11.1.2.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly numberDeleted: Unsigned32;
+
     constructor (
-        /**
-         * @summary `numberMatched`.
-         * @description
-         *
-         * Named Variables that matched the name specification.
-         * ISO 9506-1:2003 §14.11.1.2.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly numberMatched: Unsigned32,
-        /**
-         * @summary `numberDeleted`.
-         * @description
-         *
-         * Named Variables actually deleted.
-         * ISO 9506-1:2003 §14.11.1.2.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly numberDeleted: Unsigned32
-    ) {}
+        numberMatched: Unsigned32,
+        numberDeleted: Unsigned32
+    ) {
+        this.numberMatched = numberMatched;
+        this.numberDeleted = numberDeleted;
+    }
 
     /**
      * @summary Restructures an object into a DeleteVariableAccess_Response

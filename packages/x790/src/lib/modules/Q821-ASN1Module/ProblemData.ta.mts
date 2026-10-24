@@ -36,26 +36,34 @@ import {
  */
 export
 class ProblemData {
+    /**
+     * @summary `identifier`.
+     * @public
+     * @readonly
+     */
+    public readonly identifier: OBJECT_IDENTIFIER;
+    /**
+     * @summary `significance`.
+     * @public
+     * @readonly
+     */
+    public readonly significance: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `information`.
+     * @public
+     * @readonly
+     */
+    public readonly information: _Element;
+
     constructor (
-        /**
-         * @summary `identifier`.
-         * @public
-         * @readonly
-         */
-        readonly identifier: OBJECT_IDENTIFIER,
-        /**
-         * @summary `significance`.
-         * @public
-         * @readonly
-         */
-        readonly significance: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `information`.
-         * @public
-         * @readonly
-         */
-        readonly information: _Element
-    ) {}
+        identifier: OBJECT_IDENTIFIER,
+        significance: OPTIONAL<BOOLEAN>,
+        information: _Element
+    ) {
+        this.identifier = identifier;
+        this.significance = significance;
+        this.information = information;
+    }
 
     /**
      * @summary Restructures an object into a ProblemData

@@ -45,42 +45,50 @@ import {
  *
  */
 export class BioAPI_BIR {
+  /**
+   * @summary `patronFormatOwner`.
+   * @description
+   *
+   * CBEFF patron-format owner. Default 257 (BioAPI patron).
+   * X.1083 §13.17–13.18, §15.6.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly patronFormatOwner: UnsignedShort;
+  /**
+   * @summary `patronFormatType`.
+   * @description
+   *
+   * CBEFF patron-format type. Default 8 (ISO/IEC 19784-1
+   * Annex B). X.1083 §13.17–13.18, §15.6.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly patronFormatType: UnsignedShort;
+  /**
+   * @summary `formattedBIR`.
+   * @description
+   *
+   * Octets of the BIR in the named patron format. For owner 257
+   * type 8, ISO/IEC 19784-1 Annex B. X.1083 §10, §13.16–13.18,
+   * §15.6.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly formattedBIR: OCTET_STRING;
+
   constructor(
-    /**
-     * @summary `patronFormatOwner`.
-     * @description
-     *
-     * CBEFF patron-format owner. Default 257 (BioAPI patron).
-     * X.1083 §13.17–13.18, §15.6.
-     *
-     * @public
-     * @readonly
-     */
-    readonly patronFormatOwner: UnsignedShort,
-    /**
-     * @summary `patronFormatType`.
-     * @description
-     *
-     * CBEFF patron-format type. Default 8 (ISO/IEC 19784-1
-     * Annex B). X.1083 §13.17–13.18, §15.6.
-     *
-     * @public
-     * @readonly
-     */
-    readonly patronFormatType: UnsignedShort,
-    /**
-     * @summary `formattedBIR`.
-     * @description
-     *
-     * Octets of the BIR in the named patron format. For owner 257
-     * type 8, ISO/IEC 19784-1 Annex B. X.1083 §10, §13.16–13.18,
-     * §15.6.
-     *
-     * @public
-     * @readonly
-     */
-    readonly formattedBIR: OCTET_STRING
-  ) {}
+    patronFormatOwner: UnsignedShort,
+    patronFormatType: UnsignedShort,
+    formattedBIR: OCTET_STRING
+  ) {
+    this.patronFormatOwner = patronFormatOwner;
+    this.patronFormatType = patronFormatType;
+    this.formattedBIR = formattedBIR;
+  }
 
   /**
    * @summary Restructures an object into a BioAPI_BIR

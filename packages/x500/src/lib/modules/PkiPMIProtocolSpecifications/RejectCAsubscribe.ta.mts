@@ -43,32 +43,42 @@ import {
  *
  */
 export class RejectCAsubscribe implements CASPcommonComponents {
+    /**
+     * @summary `version`.
+     * @public
+     * @readonly
+     */
+    public readonly version: OPTIONAL<CASPversion>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `sequence`.
+     * @public
+     * @readonly
+     */
+    public readonly sequence: CASPsequence; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `reason`.
+     * @public
+     * @readonly
+     */
+    public readonly reason: CASP_error;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `version`.
-         * @public
-         * @readonly
-         */
-        readonly version: OPTIONAL<CASPversion> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `sequence`.
-         * @public
-         * @readonly
-         */
-        readonly sequence: CASPsequence /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `reason`.
-         * @public
-         * @readonly
-         */
-        readonly reason: CASP_error,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        version: OPTIONAL<CASPversion>,
+        sequence: CASPsequence,
+        reason: CASP_error,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.version = version;
+        this.sequence = sequence;
+        this.reason = reason;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a RejectCAsubscribe

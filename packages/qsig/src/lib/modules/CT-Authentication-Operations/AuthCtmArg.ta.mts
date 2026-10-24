@@ -183,7 +183,7 @@ let _cached_encoder_for_AuthCtmArg: $.ASN1Encoder<AuthCtmArg> | null = null;
  */
 export
 function _encode_AuthCtmArg (value: AuthCtmArg, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AuthCtmArg) { _cached_encoder_for_AuthCtmArg = function (value: AuthCtmArg, elGetter: $.ASN1Encoder<AuthCtmArg>): _Element {
+    if (!_cached_encoder_for_AuthCtmArg) { _cached_encoder_for_AuthCtmArg = function (value: AuthCtmArg): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_PartyNumber(value.pisnNumber, $.BER));
     if (value.calcCtatInfo !== undefined) {

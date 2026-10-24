@@ -67,40 +67,54 @@ import {
  *
  */
 export class MSProbeSubmissionResult implements ProbeSubmissionResult {
-    constructor(
-        /**
-         * @summary `probe_submission_identifier`.
-         * @public
-         * @readonly
-         */
-        readonly probe_submission_identifier: ProbeSubmissionIdentifier /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `probe_submission_time`.
-         * @public
-         * @readonly
-         */
-        readonly probe_submission_time: ProbeSubmissionTime /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `content_identifier`.
-         * @public
-         * @readonly
-         */
-        readonly content_identifier?: OPTIONAL<ContentIdentifier> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `extensions`.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<
+    /**
+     * @summary `probe_submission_identifier`.
+     * @public
+     * @readonly
+     */
+    public readonly probe_submission_identifier: ProbeSubmissionIdentifier; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `probe_submission_time`.
+     * @public
+     * @readonly
+     */
+    public readonly probe_submission_time: ProbeSubmissionTime; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `content_identifier`.
+     * @public
+     * @readonly
+     */
+    public readonly content_identifier?: OPTIONAL<ContentIdentifier>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<
             ExtensionField[]
-        > /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `ms_probe_result`.
-         * @public
-         * @readonly
-         */
-        readonly ms_probe_result?: OPTIONAL<CommonSubmissionResults>
-    ) {}
+        >; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `ms_probe_result`.
+     * @public
+     * @readonly
+     */
+    public readonly ms_probe_result?: OPTIONAL<CommonSubmissionResults>;
+
+    constructor(
+        probe_submission_identifier: ProbeSubmissionIdentifier,
+        probe_submission_time: ProbeSubmissionTime,
+        content_identifier?: OPTIONAL<ContentIdentifier>,
+        extensions?: OPTIONAL<
+            ExtensionField[]
+        >,
+        ms_probe_result?: OPTIONAL<CommonSubmissionResults>
+    ) {
+        this.probe_submission_identifier = probe_submission_identifier;
+        this.probe_submission_time = probe_submission_time;
+        this.content_identifier = content_identifier;
+        this.extensions = extensions;
+        this.ms_probe_result = ms_probe_result;
+    }
 
     /**
      * @summary Restructures an object into a MSProbeSubmissionResult

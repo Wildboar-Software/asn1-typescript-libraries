@@ -221,7 +221,7 @@ let _cached_encoder_for_CtanParamArg: $.ASN1Encoder<CtanParamArg> | null = null;
  */
 export
 function _encode_CtanParamArg (value: CtanParamArg, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CtanParamArg) { _cached_encoder_for_CtanParamArg = function (value: CtanParamArg, elGetter: $.ASN1Encoder<CtanParamArg>): _Element {
+    if (!_cached_encoder_for_CtanParamArg) { _cached_encoder_for_CtanParamArg = function (value: CtanParamArg): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_PartyNumber(value.pisnNumber, $.BER));
     _components.push(/* REQUIRED   */ _encode_AuthChallenge(value.authChallenge, $.BER));

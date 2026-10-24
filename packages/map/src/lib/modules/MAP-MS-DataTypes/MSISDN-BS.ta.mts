@@ -31,41 +31,51 @@ import { BasicServiceList, _decode_BasicServiceList, _encode_BasicServiceList } 
  */
 export
 class MSISDN_BS {
+    /**
+     * @summary `msisdn`.
+     * @description
+     *
+     * MSISDN. (3GPP TS 29.002 V19.1.0 clause 7.6.2.17)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly msisdn: ISDN_AddressString;
+    /**
+     * @summary `basicServiceList`.
+     * @description
+     *
+     * Basic services associated with this MSISDN. (3GPP TS 29.002 V19.1.0
+     * clause 17.7.1)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly basicServiceList?: OPTIONAL<BasicServiceList>;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `msisdn`.
-         * @description
-         *
-         * MSISDN. (3GPP TS 29.002 V19.1.0 clause 7.6.2.17)
-         *
-         * @public
-         * @readonly
-         */
-        readonly msisdn: ISDN_AddressString,
-        /**
-         * @summary `basicServiceList`.
-         * @description
-         *
-         * Basic services associated with this MSISDN. (3GPP TS 29.002 V19.1.0
-         * clause 17.7.1)
-         *
-         * @public
-         * @readonly
-         */
-        readonly basicServiceList?: OPTIONAL<BasicServiceList>,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        msisdn: ISDN_AddressString,
+        basicServiceList?: OPTIONAL<BasicServiceList>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.msisdn = msisdn;
+        this.basicServiceList = basicServiceList;
+        this.extensionContainer = extensionContainer;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a MSISDN_BS

@@ -35,27 +35,33 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class GetMicrophoneMuteResult {
+    /**
+     * @summary `microphoneMuteList`.
+     * @description
+     *
+     * One entry per queried apparatus.
+     * @public
+     * @readonly
+     */
+    public readonly microphoneMuteList: MicrophoneMuteList;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `microphoneMuteList`.
-         * @description
-         *
-         * One entry per queried apparatus.
-         * @public
-         * @readonly
-         */
-        readonly microphoneMuteList: MicrophoneMuteList,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        microphoneMuteList: MicrophoneMuteList,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.microphoneMuteList = microphoneMuteList;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a GetMicrophoneMuteResult

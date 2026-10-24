@@ -42,26 +42,32 @@ import {
  *
  */
 export class ErrorUnitThreshold {
+    /**
+     * @summary `unitType`.
+     * @description
+     *
+     * OID identifying the unit counted. X.737 A.7.
+     * @public
+     * @readonly
+     */
+    public readonly unitType: UnitsType;
+    /**
+     * @summary `unitsTotal`.
+     * @description
+     *
+     * Count of those units that is the threshold. X.737 A.7.
+     * @public
+     * @readonly
+     */
+    public readonly unitsTotal: UnitsTotal;
+
     constructor(
-        /**
-         * @summary `unitType`.
-         * @description
-         *
-         * OID identifying the unit counted. X.737 A.7.
-         * @public
-         * @readonly
-         */
-        readonly unitType: UnitsType,
-        /**
-         * @summary `unitsTotal`.
-         * @description
-         *
-         * Count of those units that is the threshold. X.737 A.7.
-         * @public
-         * @readonly
-         */
-        readonly unitsTotal: UnitsTotal
-    ) {}
+        unitType: UnitsType,
+        unitsTotal: UnitsTotal
+    ) {
+        this.unitType = unitType;
+        this.unitsTotal = unitsTotal;
+    }
 
     /**
      * @summary Restructures an object into a ErrorUnitThreshold

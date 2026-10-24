@@ -34,32 +34,42 @@ import {
  *
  */
 export class CertSubscribeOK_Item_ok {
+    /**
+     * @summary `cert`.
+     * @public
+     * @readonly
+     */
+    public readonly cert: Certificate;
+    /**
+     * @summary `status`.
+     * @public
+     * @readonly
+     */
+    public readonly status: CertStatus;
+    /**
+     * @summary `revokeReason`.
+     * @public
+     * @readonly
+     */
+    public readonly revokeReason?: OPTIONAL<CRLReason>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `cert`.
-         * @public
-         * @readonly
-         */
-        readonly cert: Certificate,
-        /**
-         * @summary `status`.
-         * @public
-         * @readonly
-         */
-        readonly status: CertStatus,
-        /**
-         * @summary `revokeReason`.
-         * @public
-         * @readonly
-         */
-        readonly revokeReason?: OPTIONAL<CRLReason>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        cert: Certificate,
+        status: CertStatus,
+        revokeReason?: OPTIONAL<CRLReason>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.cert = cert;
+        this.status = status;
+        this.revokeReason = revokeReason;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a CertSubscribeOK_Item_ok

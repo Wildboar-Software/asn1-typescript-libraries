@@ -28,26 +28,34 @@ import {
  *
  */
 export class DualStringSyntax {
+    /**
+     * @summary `operation`.
+     * @public
+     * @readonly
+     */
+    public readonly operation: UnboundedDirectoryString;
+    /**
+     * @summary `object`.
+     * @public
+     * @readonly
+     */
+    public readonly object: UnboundedDirectoryString;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `operation`.
-         * @public
-         * @readonly
-         */
-        readonly operation: UnboundedDirectoryString,
-        /**
-         * @summary `object`.
-         * @public
-         * @readonly
-         */
-        readonly object: UnboundedDirectoryString,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        operation: UnboundedDirectoryString,
+        object: UnboundedDirectoryString,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.operation = operation;
+        this.object = object;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a DualStringSyntax

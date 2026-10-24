@@ -34,34 +34,40 @@ import {
  *
  */
 export class SeverityIndicatingGaugeThreshold_Item {
+    /**
+     * @summary `notifyLow`.
+     * @description
+     *
+     * Decreasing (negative-going) submember; also the
+     * hysteresis clear for a high-triggered level. ITU-T Rec.
+     * X.739 (11/93)
+     * [§7.3](https://www.itu.int/rec/T-REC-X.739-199311-I),
+     * §8.1.9.4.2.
+     * @public
+     * @readonly
+     */
+    public readonly notifyLow: SeverityIndicatingThreshold;
+    /**
+     * @summary `notifyHigh`.
+     * @description
+     *
+     * Increasing (positive-going) submember; also the
+     * hysteresis clear for a low-triggered level. ITU-T Rec.
+     * X.739 (11/93)
+     * [§7.3](https://www.itu.int/rec/T-REC-X.739-199311-I),
+     * §8.1.9.4.2.
+     * @public
+     * @readonly
+     */
+    public readonly notifyHigh: SeverityIndicatingThreshold;
+
     constructor(
-        /**
-         * @summary `notifyLow`.
-         * @description
-         *
-         * Decreasing (negative-going) submember; also the
-         * hysteresis clear for a high-triggered level. ITU-T Rec.
-         * X.739 (11/93)
-         * [§7.3](https://www.itu.int/rec/T-REC-X.739-199311-I),
-         * §8.1.9.4.2.
-         * @public
-         * @readonly
-         */
-        readonly notifyLow: SeverityIndicatingThreshold,
-        /**
-         * @summary `notifyHigh`.
-         * @description
-         *
-         * Increasing (positive-going) submember; also the
-         * hysteresis clear for a low-triggered level. ITU-T Rec.
-         * X.739 (11/93)
-         * [§7.3](https://www.itu.int/rec/T-REC-X.739-199311-I),
-         * §8.1.9.4.2.
-         * @public
-         * @readonly
-         */
-        readonly notifyHigh: SeverityIndicatingThreshold
-    ) {}
+        notifyLow: SeverityIndicatingThreshold,
+        notifyHigh: SeverityIndicatingThreshold
+    ) {
+        this.notifyLow = notifyLow;
+        this.notifyHigh = notifyHigh;
+    }
 
     /**
      * @summary Restructures an object into a SeverityIndicatingGaugeThreshold_Item

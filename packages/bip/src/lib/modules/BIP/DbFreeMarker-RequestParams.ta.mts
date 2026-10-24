@@ -42,30 +42,36 @@ import {
  *
  */
 export class DbFreeMarker_RequestParams {
+  /**
+   * @summary `originalBSPHandle`.
+   * @description
+   *
+   * Hosting-endpoint BSP handle. Rewritten from the master's local
+   * `BSPHandle` (cl.26) (`X.1083 §16.47`, Table 104).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly originalBSPHandle: BioAPI_HANDLE;
+  /**
+   * @summary `markerHandle`.
+   * @description
+   *
+   * Marker to free, from C `MarkerHandle` (`X.1083 §16.47`, Table 104,
+   * §15.25).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly markerHandle: BioAPI_DB_MARKER_HANDLE;
+
   constructor(
-    /**
-     * @summary `originalBSPHandle`.
-     * @description
-     *
-     * Hosting-endpoint BSP handle. Rewritten from the master's local
-     * `BSPHandle` (cl.26) (`X.1083 §16.47`, Table 104).
-     *
-     * @public
-     * @readonly
-     */
-    readonly originalBSPHandle: BioAPI_HANDLE,
-    /**
-     * @summary `markerHandle`.
-     * @description
-     *
-     * Marker to free, from C `MarkerHandle` (`X.1083 §16.47`, Table 104,
-     * §15.25).
-     *
-     * @public
-     * @readonly
-     */
-    readonly markerHandle: BioAPI_DB_MARKER_HANDLE
-  ) {}
+    originalBSPHandle: BioAPI_HANDLE,
+    markerHandle: BioAPI_DB_MARKER_HANDLE
+  ) {
+    this.originalBSPHandle = originalBSPHandle;
+    this.markerHandle = markerHandle;
+  }
 
   /**
    * @summary Restructures an object into a DbFreeMarker_RequestParams

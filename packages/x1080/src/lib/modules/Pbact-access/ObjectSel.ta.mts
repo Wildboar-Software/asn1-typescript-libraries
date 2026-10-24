@@ -46,39 +46,47 @@ import {
  *
  */
 export class ObjectSel {
+    /**
+     * @summary `objecClass`.
+     * @description
+     *
+     * Object class for which privileges are assigned. ASN.1 spells
+     * this `objecClass` (not `objectClass`).
+     * ITU-T Rec. X.1080.0 (2017) Cor.1
+     * [§7.3](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly objecClass: OBJECT_IDENTIFIER;
+    /**
+     * @summary `objSelect`.
+     * @description
+     *
+     * All objects of the class, or selected objects only.
+     * ITU-T Rec. X.1080.0 (2017) Cor.1
+     * [§7.3](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly objSelect: ObjectSel_objSelect;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `objecClass`.
-         * @description
-         *
-         * Object class for which privileges are assigned. ASN.1 spells
-         * this `objecClass` (not `objectClass`).
-         * ITU-T Rec. X.1080.0 (2017) Cor.1
-         * [§7.3](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly objecClass: OBJECT_IDENTIFIER,
-        /**
-         * @summary `objSelect`.
-         * @description
-         *
-         * All objects of the class, or selected objects only.
-         * ITU-T Rec. X.1080.0 (2017) Cor.1
-         * [§7.3](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly objSelect: ObjectSel_objSelect,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        objecClass: OBJECT_IDENTIFIER,
+        objSelect: ObjectSel_objSelect,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.objecClass = objecClass;
+        this.objSelect = objSelect;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a ObjectSel

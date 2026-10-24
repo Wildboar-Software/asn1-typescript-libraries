@@ -31,20 +31,26 @@ import {
  *
  */
 export class OriginatorInfo {
+    /**
+     * @summary `certificates`.
+     * @public
+     * @readonly
+     */
+    public readonly certificates?: OPTIONAL<CertificateSet>;
+    /**
+     * @summary `crls`.
+     * @public
+     * @readonly
+     */
+    public readonly crls?: OPTIONAL<CertificateRevocationLists>;
+
     constructor(
-        /**
-         * @summary `certificates`.
-         * @public
-         * @readonly
-         */
-        readonly certificates?: OPTIONAL<CertificateSet>,
-        /**
-         * @summary `crls`.
-         * @public
-         * @readonly
-         */
-        readonly crls?: OPTIONAL<CertificateRevocationLists>
-    ) {}
+        certificates?: OPTIONAL<CertificateSet>,
+        crls?: OPTIONAL<CertificateRevocationLists>
+    ) {
+        this.certificates = certificates;
+        this.crls = crls;
+    }
 
     /**
      * @summary Restructures an object into a OriginatorInfo

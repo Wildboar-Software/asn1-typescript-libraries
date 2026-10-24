@@ -29,29 +29,35 @@ import { AuthenticateErrorCode, _decode_AuthenticateErrorCode, _encode_Authentic
  */
 export
 class AuthenticateResponseError {
+    /**
+     * @summary `transactionId`.
+     * @description
+     * 
+     * Session the error belongs to. SGP.22 v3.1 §5.7.13.
+     * 
+     * @public
+     * @readonly
+     */
+    public readonly transactionId: TransactionId;
+    /**
+     * @summary `authenticateErrorCode`.
+     * @description
+     * 
+     * Certificate, signature, curve, session, OID, challenge, or CI-key
+     * failure. SGP.22 v3.1 §5.7.13.
+     * 
+     * @public
+     * @readonly
+     */
+    public readonly authenticateErrorCode: AuthenticateErrorCode;
+
     constructor (
-        /**
-         * @summary `transactionId`.
-         * @description
-         * 
-         * Session the error belongs to. SGP.22 v3.1 §5.7.13.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly transactionId: TransactionId,
-        /**
-         * @summary `authenticateErrorCode`.
-         * @description
-         * 
-         * Certificate, signature, curve, session, OID, challenge, or CI-key
-         * failure. SGP.22 v3.1 §5.7.13.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly authenticateErrorCode: AuthenticateErrorCode
-    ) {}
+        transactionId: TransactionId,
+        authenticateErrorCode: AuthenticateErrorCode
+    ) {
+        this.transactionId = transactionId;
+        this.authenticateErrorCode = authenticateErrorCode;
+    }
 
     /**
      * @summary Restructures an object into a AuthenticateResponseError

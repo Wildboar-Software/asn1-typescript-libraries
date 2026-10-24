@@ -38,20 +38,26 @@ import {
  *
  */
 export class IPM {
+    /**
+     * @summary `heading`.
+     * @public
+     * @readonly
+     */
+    public readonly heading: Heading;
+    /**
+     * @summary `body`.
+     * @public
+     * @readonly
+     */
+    public readonly body: Body;
+
     constructor(
-        /**
-         * @summary `heading`.
-         * @public
-         * @readonly
-         */
-        readonly heading: Heading,
-        /**
-         * @summary `body`.
-         * @public
-         * @readonly
-         */
-        readonly body: Body
-    ) {}
+        heading: Heading,
+        body: Body
+    ) {
+        this.heading = heading;
+        this.body = body;
+    }
 
     /**
      * @summary Restructures an object into a IPM

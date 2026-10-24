@@ -54,96 +54,114 @@ import { VendorSpecEvents, _decode_VendorSpecEvents, _encode_VendorSpecEvents } 
  */
 export
 class MonitorFilter {
+    /**
+     * @summary `callControl`.
+     * @description
+     *
+     * Call-control events (ECMA-269 Table 17-150). A set bit filters
+     * (suppresses) the event. ECMA-269 §12.2.23.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly callControl?: OPTIONAL<CallControlEvents>;
+    /**
+     * @summary `callAssociated`.
+     * @description
+     *
+     * Call-associated events (Table 18-26). A set bit filters (suppresses)
+     * the event. ECMA-269 §12.2.23.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly callAssociated?: OPTIONAL<CallAssociatedEvents>;
+    /**
+     * @summary `mediaAttachment`.
+     * @description
+     *
+     * Media-attachment events (Table 19-14). A set bit filters (suppresses)
+     * the event. ECMA-269 §12.2.23.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mediaAttachment?: OPTIONAL<MediaAttachmentEvents>;
+    /**
+     * @summary `physicalDeviceFeature`.
+     * @description
+     *
+     * Physical-device events (Table 21-59). A set bit filters (suppresses)
+     * the event. ECMA-269 §12.2.23.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly physicalDeviceFeature?: OPTIONAL<PhysicalDeviceFeatureEvents>;
+    /**
+     * @summary `logicalDeviceFeature`.
+     * @description
+     *
+     * Logical-device events (Table 22-61). A set bit filters (suppresses)
+     * the event. ECMA-269 §12.2.23.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly logicalDeviceFeature?: OPTIONAL<LogicalDeviceFeatureEvents>;
+    /**
+     * @summary `maintenance`.
+     * @description
+     *
+     * Maintenance events (Table 23-1). A set bit filters (suppresses) the
+     * event. ECMA-269 §12.2.23.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly maintenance?: OPTIONAL<DeviceMaintenanceEvents>;
+    /**
+     * @summary `voiceUnit`.
+     * @description
+     *
+     * Voice events (Table 26-58). A set bit filters (suppresses) the event.
+     * ECMA-269 §12.2.23.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly voiceUnit?: OPTIONAL<VoiceUnitEvents>;
+    /**
+     * @summary `private_`.
+     * @description
+     *
+     * Vendor-specific events (Table 29-12). ASN.1 name `private`. A set bit
+     * filters (suppresses) the event. ECMA-269 §12.2.23.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly private_?: OPTIONAL<VendorSpecEvents>;
+
     constructor (
-        /**
-         * @summary `callControl`.
-         * @description
-         *
-         * Call-control events (ECMA-269 Table 17-150). A set bit filters
-         * (suppresses) the event. ECMA-269 §12.2.23.
-         *
-         * @public
-         * @readonly
-         */
-        readonly callControl?: OPTIONAL<CallControlEvents>,
-        /**
-         * @summary `callAssociated`.
-         * @description
-         *
-         * Call-associated events (Table 18-26). A set bit filters (suppresses)
-         * the event. ECMA-269 §12.2.23.
-         *
-         * @public
-         * @readonly
-         */
-        readonly callAssociated?: OPTIONAL<CallAssociatedEvents>,
-        /**
-         * @summary `mediaAttachment`.
-         * @description
-         *
-         * Media-attachment events (Table 19-14). A set bit filters (suppresses)
-         * the event. ECMA-269 §12.2.23.
-         *
-         * @public
-         * @readonly
-         */
-        readonly mediaAttachment?: OPTIONAL<MediaAttachmentEvents>,
-        /**
-         * @summary `physicalDeviceFeature`.
-         * @description
-         *
-         * Physical-device events (Table 21-59). A set bit filters (suppresses)
-         * the event. ECMA-269 §12.2.23.
-         *
-         * @public
-         * @readonly
-         */
-        readonly physicalDeviceFeature?: OPTIONAL<PhysicalDeviceFeatureEvents>,
-        /**
-         * @summary `logicalDeviceFeature`.
-         * @description
-         *
-         * Logical-device events (Table 22-61). A set bit filters (suppresses)
-         * the event. ECMA-269 §12.2.23.
-         *
-         * @public
-         * @readonly
-         */
-        readonly logicalDeviceFeature?: OPTIONAL<LogicalDeviceFeatureEvents>,
-        /**
-         * @summary `maintenance`.
-         * @description
-         *
-         * Maintenance events (Table 23-1). A set bit filters (suppresses) the
-         * event. ECMA-269 §12.2.23.
-         *
-         * @public
-         * @readonly
-         */
-        readonly maintenance?: OPTIONAL<DeviceMaintenanceEvents>,
-        /**
-         * @summary `voiceUnit`.
-         * @description
-         *
-         * Voice events (Table 26-58). A set bit filters (suppresses) the event.
-         * ECMA-269 §12.2.23.
-         *
-         * @public
-         * @readonly
-         */
-        readonly voiceUnit?: OPTIONAL<VoiceUnitEvents>,
-        /**
-         * @summary `private_`.
-         * @description
-         *
-         * Vendor-specific events (Table 29-12). ASN.1 name `private`. A set bit
-         * filters (suppresses) the event. ECMA-269 §12.2.23.
-         *
-         * @public
-         * @readonly
-         */
-        readonly private_?: OPTIONAL<VendorSpecEvents>
-    ) {}
+        callControl?: OPTIONAL<CallControlEvents>,
+        callAssociated?: OPTIONAL<CallAssociatedEvents>,
+        mediaAttachment?: OPTIONAL<MediaAttachmentEvents>,
+        physicalDeviceFeature?: OPTIONAL<PhysicalDeviceFeatureEvents>,
+        logicalDeviceFeature?: OPTIONAL<LogicalDeviceFeatureEvents>,
+        maintenance?: OPTIONAL<DeviceMaintenanceEvents>,
+        voiceUnit?: OPTIONAL<VoiceUnitEvents>,
+        private_?: OPTIONAL<VendorSpecEvents>
+    ) {
+        this.callControl = callControl;
+        this.callAssociated = callAssociated;
+        this.mediaAttachment = mediaAttachment;
+        this.physicalDeviceFeature = physicalDeviceFeature;
+        this.logicalDeviceFeature = logicalDeviceFeature;
+        this.maintenance = maintenance;
+        this.voiceUnit = voiceUnit;
+        this.private_ = private_;
+    }
 
     /**
      * @summary Restructures an object into a MonitorFilter

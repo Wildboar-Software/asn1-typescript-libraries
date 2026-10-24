@@ -43,45 +43,53 @@ import { AlterEventConditionListMonitoring_Request_priorityChange, _decode_Alter
  */
 export
 class AlterEventConditionListMonitoring_Request {
+    /**
+     * @summary `eventConditionListName`.
+     * @description
+     *
+     * List whose referenced conditions are altered.
+     *
+     * [ISO 9506-1:2003 §22.8.1.1.1]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly eventConditionListName: ObjectName;
+    /**
+     * @summary `enabled`.
+     * @description
+     *
+     * Replacement `&enabled` for all referenced (direct or nested) conditions.
+     *
+     * [ISO 9506-1:2003 §22.8.1.1.2]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly enabled: BOOLEAN;
+    /**
+     * @summary `priorityChange`.
+     * @description
+     *
+     * `priorityValue` sets `&groupPriorityOverride`; `priorityReset` sets it
+     * undefined.
+     *
+     * [ISO 9506-1:2003 §22.8.1.1.3]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly priorityChange?: OPTIONAL<AlterEventConditionListMonitoring_Request_priorityChange>;
+
     constructor (
-        /**
-         * @summary `eventConditionListName`.
-         * @description
-         *
-         * List whose referenced conditions are altered.
-         *
-         * [ISO 9506-1:2003 §22.8.1.1.1]
-         *
-         * @public
-         * @readonly
-         */
-        readonly eventConditionListName: ObjectName,
-        /**
-         * @summary `enabled`.
-         * @description
-         *
-         * Replacement `&enabled` for all referenced (direct or nested) conditions.
-         *
-         * [ISO 9506-1:2003 §22.8.1.1.2]
-         *
-         * @public
-         * @readonly
-         */
-        readonly enabled: BOOLEAN,
-        /**
-         * @summary `priorityChange`.
-         * @description
-         *
-         * `priorityValue` sets `&groupPriorityOverride`; `priorityReset` sets it
-         * undefined.
-         *
-         * [ISO 9506-1:2003 §22.8.1.1.3]
-         *
-         * @public
-         * @readonly
-         */
-        readonly priorityChange?: OPTIONAL<AlterEventConditionListMonitoring_Request_priorityChange>
-    ) {}
+        eventConditionListName: ObjectName,
+        enabled: BOOLEAN,
+        priorityChange?: OPTIONAL<AlterEventConditionListMonitoring_Request_priorityChange>
+    ) {
+        this.eventConditionListName = eventConditionListName;
+        this.enabled = enabled;
+        this.priorityChange = priorityChange;
+    }
 
     /**
      * @summary Restructures an object into a AlterEventConditionListMonitoring_Request

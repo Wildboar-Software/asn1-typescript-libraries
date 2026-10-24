@@ -68,71 +68,85 @@ import {
  *
  */
 export class ScanReportInformation {
+    /**
+     * @summary `scanInitiationTime`.
+     * @description
+     *
+     * Date and time the reported scan was initiated.
+     * Required if `timeStampReportMode` is present with a
+     * non-zero value. X.738 §8.2.2.1.1, A.9.
+     * @public
+     * @readonly
+     */
+    public readonly scanInitiationTime: OPTIONAL<GeneralizedTime>;
+    /**
+     * @summary `onceReportAttributeList`.
+     * @description
+     *
+     * Once-report attribute values that were the same
+     * across all observed objects. X.738 §8.2.2.1.2.
+     * @public
+     * @readonly
+     */
+    public readonly onceReportAttributeList: OPTIONAL<OnceReportAttributeList>;
+    /**
+     * @summary `observationScanList`.
+     * @description
+     *
+     * One entry per observed object: instance name
+     * (unless suppressed), scan-attribute measures, and
+     * numeric-value array. Mandatory. X.738 §8.2.2.1.3,
+     * Table 2.
+     * @public
+     * @readonly
+     */
+    public readonly observationScanList: ObservationScanList;
+    /**
+     * @summary `incompleteScan`.
+     * @description
+     *
+     * Present if the scan could not be completed; value
+     * is the reason. X.738 §8.2.2.1.4, Table 2 note 2.
+     * @public
+     * @readonly
+     */
+    public readonly incompleteScan?: OPTIONAL<IncompleteScan>;
+    /**
+     * @summary `additionalText`.
+     * @description
+     *
+     * Optional textual extension as in X.733 | ISO/IEC
+     * 10164-4. X.738 §8.2.2.2.6, §8.11.
+     * @public
+     * @readonly
+     */
+    public readonly additionalText?: OPTIONAL<AdditionalText>;
+    /**
+     * @summary `additionalInformation`.
+     * @description
+     *
+     * Optional structured extension as in X.733 | ISO/IEC
+     * 10164-4. X.738 §8.2.2.2.7, §8.11.
+     * @public
+     * @readonly
+     */
+    public readonly additionalInformation?: OPTIONAL<AdditionalInformation>;
+
     constructor(
-        /**
-         * @summary `scanInitiationTime`.
-         * @description
-         *
-         * Date and time the reported scan was initiated.
-         * Required if `timeStampReportMode` is present with a
-         * non-zero value. X.738 §8.2.2.1.1, A.9.
-         * @public
-         * @readonly
-         */
-        readonly scanInitiationTime: OPTIONAL<GeneralizedTime>,
-        /**
-         * @summary `onceReportAttributeList`.
-         * @description
-         *
-         * Once-report attribute values that were the same
-         * across all observed objects. X.738 §8.2.2.1.2.
-         * @public
-         * @readonly
-         */
-        readonly onceReportAttributeList: OPTIONAL<OnceReportAttributeList>,
-        /**
-         * @summary `observationScanList`.
-         * @description
-         *
-         * One entry per observed object: instance name
-         * (unless suppressed), scan-attribute measures, and
-         * numeric-value array. Mandatory. X.738 §8.2.2.1.3,
-         * Table 2.
-         * @public
-         * @readonly
-         */
-        readonly observationScanList: ObservationScanList,
-        /**
-         * @summary `incompleteScan`.
-         * @description
-         *
-         * Present if the scan could not be completed; value
-         * is the reason. X.738 §8.2.2.1.4, Table 2 note 2.
-         * @public
-         * @readonly
-         */
-        readonly incompleteScan?: OPTIONAL<IncompleteScan>,
-        /**
-         * @summary `additionalText`.
-         * @description
-         *
-         * Optional textual extension as in X.733 | ISO/IEC
-         * 10164-4. X.738 §8.2.2.2.6, §8.11.
-         * @public
-         * @readonly
-         */
-        readonly additionalText?: OPTIONAL<AdditionalText>,
-        /**
-         * @summary `additionalInformation`.
-         * @description
-         *
-         * Optional structured extension as in X.733 | ISO/IEC
-         * 10164-4. X.738 §8.2.2.2.7, §8.11.
-         * @public
-         * @readonly
-         */
-        readonly additionalInformation?: OPTIONAL<AdditionalInformation>
-    ) {}
+        scanInitiationTime: OPTIONAL<GeneralizedTime>,
+        onceReportAttributeList: OPTIONAL<OnceReportAttributeList>,
+        observationScanList: ObservationScanList,
+        incompleteScan?: OPTIONAL<IncompleteScan>,
+        additionalText?: OPTIONAL<AdditionalText>,
+        additionalInformation?: OPTIONAL<AdditionalInformation>
+    ) {
+        this.scanInitiationTime = scanInitiationTime;
+        this.onceReportAttributeList = onceReportAttributeList;
+        this.observationScanList = observationScanList;
+        this.incompleteScan = incompleteScan;
+        this.additionalText = additionalText;
+        this.additionalInformation = additionalInformation;
+    }
 
     /**
      * @summary Restructures an object into a ScanReportInformation

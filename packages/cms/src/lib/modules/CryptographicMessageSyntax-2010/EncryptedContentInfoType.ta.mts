@@ -27,26 +27,34 @@ import * as $ from "@wildboar/asn1/functional";
  *
  */
 export class EncryptedContentInfoType<AlgorithmIdentifierType> {
+    /**
+     * @summary `contentType`.
+     * @public
+     * @readonly
+     */
+    public readonly contentType: OBJECT_IDENTIFIER;
+    /**
+     * @summary `contentEncryptionAlgorithm`.
+     * @public
+     * @readonly
+     */
+    public readonly contentEncryptionAlgorithm: AlgorithmIdentifierType;
+    /**
+     * @summary `encryptedContent`.
+     * @public
+     * @readonly
+     */
+    public readonly encryptedContent?: OPTIONAL<OCTET_STRING>;
+
     constructor(
-        /**
-         * @summary `contentType`.
-         * @public
-         * @readonly
-         */
-        readonly contentType: OBJECT_IDENTIFIER,
-        /**
-         * @summary `contentEncryptionAlgorithm`.
-         * @public
-         * @readonly
-         */
-        readonly contentEncryptionAlgorithm: AlgorithmIdentifierType,
-        /**
-         * @summary `encryptedContent`.
-         * @public
-         * @readonly
-         */
-        readonly encryptedContent?: OPTIONAL<OCTET_STRING>
-    ) {}
+        contentType: OBJECT_IDENTIFIER,
+        contentEncryptionAlgorithm: AlgorithmIdentifierType,
+        encryptedContent?: OPTIONAL<OCTET_STRING>
+    ) {
+        this.contentType = contentType;
+        this.contentEncryptionAlgorithm = contentEncryptionAlgorithm;
+        this.encryptedContent = encryptedContent;
+    }
 
     /**
      * @summary Restructures an object into a EncryptedContentInfoType

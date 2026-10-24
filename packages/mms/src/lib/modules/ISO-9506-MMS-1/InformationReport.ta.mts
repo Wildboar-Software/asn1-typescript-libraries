@@ -38,30 +38,36 @@ import { AccessResult, _decode_AccessResult, _encode_AccessResult } from "../ISO
  */
 export
 class InformationReport {
+    /**
+     * @summary `variableAccessSpecification`.
+     * @description
+     *
+     * Variables whose values are reported.
+     * ISO 9506-1:2003 §14.8.1.1.1, §14.5.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly variableAccessSpecification: VariableAccessSpecification;
+    /**
+     * @summary `listOfAccessResult`.
+     * @description
+     *
+     * Value or failure per variable, in VAS order.
+     * ISO 9506-1:2003 §14.8.1.1.2, §14.4.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly listOfAccessResult: AccessResult[];
+
     constructor (
-        /**
-         * @summary `variableAccessSpecification`.
-         * @description
-         *
-         * Variables whose values are reported.
-         * ISO 9506-1:2003 §14.8.1.1.1, §14.5.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly variableAccessSpecification: VariableAccessSpecification,
-        /**
-         * @summary `listOfAccessResult`.
-         * @description
-         *
-         * Value or failure per variable, in VAS order.
-         * ISO 9506-1:2003 §14.8.1.1.2, §14.4.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly listOfAccessResult: AccessResult[]
-    ) {}
+        variableAccessSpecification: VariableAccessSpecification,
+        listOfAccessResult: AccessResult[]
+    ) {
+        this.variableAccessSpecification = variableAccessSpecification;
+        this.listOfAccessResult = listOfAccessResult;
+    }
 
     /**
      * @summary Restructures an object into a InformationReport

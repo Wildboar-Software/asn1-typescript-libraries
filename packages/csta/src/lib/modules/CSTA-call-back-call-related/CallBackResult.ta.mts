@@ -38,31 +38,37 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class CallBackResult {
+    /**
+     * @summary `targetDevice`.
+     * @description
+     *
+     * Optional. Device that will receive the callback. After
+     * forward/deflect, may be the forwarded-to device rather
+     * than the originally called device.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly targetDevice?: OPTIONAL<DeviceID>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional `CSTACommonArguments` carrying the security and
+     * privateData parameters from the ECMA-269 service table.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `targetDevice`.
-         * @description
-         *
-         * Optional. Device that will receive the callback. After
-         * forward/deflect, may be the forwarded-to device rather
-         * than the originally called device.
-         *
-         * @public
-         * @readonly
-         */
-        readonly targetDevice?: OPTIONAL<DeviceID>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional `CSTACommonArguments` carrying the security and
-         * privateData parameters from the ECMA-269 service table.
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        targetDevice?: OPTIONAL<DeviceID>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.targetDevice = targetDevice;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a CallBackResult

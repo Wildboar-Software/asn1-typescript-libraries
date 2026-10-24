@@ -60,68 +60,80 @@ import {
  *
  */
 export class BIPNotification {
+  /**
+   * @summary `masterEndpointIRI`.
+   * @description
+   *
+   * Destination: the master endpoint. X.1083 §13.4.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly masterEndpointIRI: EndpointIRI;
+  /**
+   * @summary `slaveEndpointIRI`.
+   * @description
+   *
+   * Sender: the local (slave) endpoint. X.1083 §13.4.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly slaveEndpointIRI: EndpointIRI;
+  /**
+   * @summary `linkNumber`.
+   * @description
+   *
+   * BIP link this message traverses; the number associated
+   * with the link from this master to the local slave.
+   * Copied into a matching acknowledgement. X.1083 §13.4,
+   * §13.5.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly linkNumber: UnsignedInt;
+  /**
+   * @summary `notificationId`.
+   * @description
+   *
+   * Pairs this notification with its acknowledgement, when
+   * one is sent. Numbered per link, independently of
+   * `requestId`. Starts at a random value when the slave
+   * accepts the link; incremented on each notification;
+   * wraps from 4294967295 to 0. X.1083 §7.2.4, §13.4,
+   * §16.4.5.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly notificationId: UnsignedInt;
+  /**
+   * @summary `params`.
+   * @description
+   *
+   * Event kind and its parameters. If an acknowledgement is
+   * sent, it shall use the same alternative name. X.1083
+   * §13.4, §13.5.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly params: BIPNotification_params;
+
   constructor(
-    /**
-     * @summary `masterEndpointIRI`.
-     * @description
-     *
-     * Destination: the master endpoint. X.1083 §13.4.
-     *
-     * @public
-     * @readonly
-     */
-    readonly masterEndpointIRI: EndpointIRI,
-    /**
-     * @summary `slaveEndpointIRI`.
-     * @description
-     *
-     * Sender: the local (slave) endpoint. X.1083 §13.4.
-     *
-     * @public
-     * @readonly
-     */
-    readonly slaveEndpointIRI: EndpointIRI,
-    /**
-     * @summary `linkNumber`.
-     * @description
-     *
-     * BIP link this message traverses; the number associated
-     * with the link from this master to the local slave.
-     * Copied into a matching acknowledgement. X.1083 §13.4,
-     * §13.5.
-     *
-     * @public
-     * @readonly
-     */
-    readonly linkNumber: UnsignedInt,
-    /**
-     * @summary `notificationId`.
-     * @description
-     *
-     * Pairs this notification with its acknowledgement, when
-     * one is sent. Numbered per link, independently of
-     * `requestId`. Starts at a random value when the slave
-     * accepts the link; incremented on each notification;
-     * wraps from 4294967295 to 0. X.1083 §7.2.4, §13.4,
-     * §16.4.5.
-     *
-     * @public
-     * @readonly
-     */
-    readonly notificationId: UnsignedInt,
-    /**
-     * @summary `params`.
-     * @description
-     *
-     * Event kind and its parameters. If an acknowledgement is
-     * sent, it shall use the same alternative name. X.1083
-     * §13.4, §13.5.
-     *
-     * @public
-     * @readonly
-     */
-    readonly params: BIPNotification_params
-  ) {}
+    masterEndpointIRI: EndpointIRI,
+    slaveEndpointIRI: EndpointIRI,
+    linkNumber: UnsignedInt,
+    notificationId: UnsignedInt,
+    params: BIPNotification_params
+  ) {
+    this.masterEndpointIRI = masterEndpointIRI;
+    this.slaveEndpointIRI = slaveEndpointIRI;
+    this.linkNumber = linkNumber;
+    this.notificationId = notificationId;
+    this.params = params;
+  }
 
   /**
    * @summary Restructures an object into a BIPNotification

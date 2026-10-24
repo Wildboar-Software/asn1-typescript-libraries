@@ -42,31 +42,37 @@ import {
  *
  */
 export class LeapSecondInfo {
+    /**
+     * @summary `leapIndication`.
+     * @description
+     *
+     * Insert (61-second minute), delete (59-second minute), no
+     * warning, or alarm. Mandatory in the leap-second action.
+     * ITU-T Rec. X.743 (06/98)
+     * [§9.7](https://www.itu.int/rec/T-REC-X.743-199806-I), Table 2, A.5.
+     * @public
+     * @readonly
+     */
+    public readonly leapIndication: LeapIndication;
+    /**
+     * @summary `dateOfLeap`.
+     * @description
+     *
+     * When the leap second occurs. Mandatory in the leap-second
+     * action (Table 2). ITU-T Rec. X.743 (06/98)
+     * [§9.7](https://www.itu.int/rec/T-REC-X.743-199806-I), A.5.
+     * @public
+     * @readonly
+     */
+    public readonly dateOfLeap: DateOfLeap;
+
     constructor(
-        /**
-         * @summary `leapIndication`.
-         * @description
-         *
-         * Insert (61-second minute), delete (59-second minute), no
-         * warning, or alarm. Mandatory in the leap-second action.
-         * ITU-T Rec. X.743 (06/98)
-         * [§9.7](https://www.itu.int/rec/T-REC-X.743-199806-I), Table 2, A.5.
-         * @public
-         * @readonly
-         */
-        readonly leapIndication: LeapIndication,
-        /**
-         * @summary `dateOfLeap`.
-         * @description
-         *
-         * When the leap second occurs. Mandatory in the leap-second
-         * action (Table 2). ITU-T Rec. X.743 (06/98)
-         * [§9.7](https://www.itu.int/rec/T-REC-X.743-199806-I), A.5.
-         * @public
-         * @readonly
-         */
-        readonly dateOfLeap: DateOfLeap
-    ) {}
+        leapIndication: LeapIndication,
+        dateOfLeap: DateOfLeap
+    ) {
+        this.leapIndication = leapIndication;
+        this.dateOfLeap = dateOfLeap;
+    }
 
     /**
      * @summary Restructures an object into a LeapSecondInfo

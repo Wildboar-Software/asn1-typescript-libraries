@@ -59,99 +59,121 @@ import { CallCharacteristics, _decode_CallCharacteristics, _encode_CallCharacter
  */
 export
 class AssociateDataArgument {
+    /**
+     * @summary `existingCall`.
+     * @description
+     *
+     * Connection identifying the call. Either endpoint is valid.
+     * @public
+     * @readonly
+     */
+    public readonly existingCall: ConnectionID;
+    /**
+     * @summary `accountCode`.
+     * @description
+     *
+     * Account information to associate with the call.
+     * @public
+     * @readonly
+     */
+    public readonly accountCode?: OPTIONAL<AccountInfo>;
+    /**
+     * @summary `authCode`.
+     * @description
+     *
+     * Authorisation code to associate with the call.
+     * @public
+     * @readonly
+     */
+    public readonly authCode?: OPTIONAL<AuthCode>;
+    /**
+     * @summary `correlatorData`.
+     * @description
+     *
+     * Correlator data to associate with the call.
+     * @public
+     * @readonly
+     */
+    public readonly correlatorData?: OPTIONAL<CorrelatorData>;
+    /**
+     * @summary `callQualifyingData`.
+     * @description
+     *
+     * Call-qualifying data to associate with the call.
+     * @public
+     * @readonly
+     */
+    public readonly callQualifyingData?: OPTIONAL<CallQualifyingData>;
+    /**
+     * @summary `callCharacteristics`.
+     * @description
+     *
+     * Call characterisation to associate with the call.
+     * @public
+     * @readonly
+     */
+    public readonly callCharacteristics?: OPTIONAL<CallCharacteristics>;
+    /**
+     * @summary `subjectOfCall`.
+     * @description
+     *
+     * Subject/topic to associate with the call.
+     * @public
+     * @readonly
+     */
+    public readonly subjectOfCall?: OPTIONAL<SubjectOfCall>;
+    /**
+     * @summary `languagePreferences`.
+     * @description
+     *
+     * Language preferences to associate with the call.
+     * @public
+     * @readonly
+     */
+    public readonly languagePreferences?: OPTIONAL<LanguagePreferences>;
+    /**
+     * @summary `deviceInfo`.
+     * @description
+     *
+     * Device information to associate with a device in the call.
+     * @public
+     * @readonly
+     */
+    public readonly deviceInfo?: OPTIONAL<DeviceID>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `existingCall`.
-         * @description
-         *
-         * Connection identifying the call. Either endpoint is valid.
-         * @public
-         * @readonly
-         */
-        readonly existingCall: ConnectionID,
-        /**
-         * @summary `accountCode`.
-         * @description
-         *
-         * Account information to associate with the call.
-         * @public
-         * @readonly
-         */
-        readonly accountCode?: OPTIONAL<AccountInfo>,
-        /**
-         * @summary `authCode`.
-         * @description
-         *
-         * Authorisation code to associate with the call.
-         * @public
-         * @readonly
-         */
-        readonly authCode?: OPTIONAL<AuthCode>,
-        /**
-         * @summary `correlatorData`.
-         * @description
-         *
-         * Correlator data to associate with the call.
-         * @public
-         * @readonly
-         */
-        readonly correlatorData?: OPTIONAL<CorrelatorData>,
-        /**
-         * @summary `callQualifyingData`.
-         * @description
-         *
-         * Call-qualifying data to associate with the call.
-         * @public
-         * @readonly
-         */
-        readonly callQualifyingData?: OPTIONAL<CallQualifyingData>,
-        /**
-         * @summary `callCharacteristics`.
-         * @description
-         *
-         * Call characterisation to associate with the call.
-         * @public
-         * @readonly
-         */
-        readonly callCharacteristics?: OPTIONAL<CallCharacteristics>,
-        /**
-         * @summary `subjectOfCall`.
-         * @description
-         *
-         * Subject/topic to associate with the call.
-         * @public
-         * @readonly
-         */
-        readonly subjectOfCall?: OPTIONAL<SubjectOfCall>,
-        /**
-         * @summary `languagePreferences`.
-         * @description
-         *
-         * Language preferences to associate with the call.
-         * @public
-         * @readonly
-         */
-        readonly languagePreferences?: OPTIONAL<LanguagePreferences>,
-        /**
-         * @summary `deviceInfo`.
-         * @description
-         *
-         * Device information to associate with a device in the call.
-         * @public
-         * @readonly
-         */
-        readonly deviceInfo?: OPTIONAL<DeviceID>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        existingCall: ConnectionID,
+        accountCode?: OPTIONAL<AccountInfo>,
+        authCode?: OPTIONAL<AuthCode>,
+        correlatorData?: OPTIONAL<CorrelatorData>,
+        callQualifyingData?: OPTIONAL<CallQualifyingData>,
+        callCharacteristics?: OPTIONAL<CallCharacteristics>,
+        subjectOfCall?: OPTIONAL<SubjectOfCall>,
+        languagePreferences?: OPTIONAL<LanguagePreferences>,
+        deviceInfo?: OPTIONAL<DeviceID>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.existingCall = existingCall;
+        this.accountCode = accountCode;
+        this.authCode = authCode;
+        this.correlatorData = correlatorData;
+        this.callQualifyingData = callQualifyingData;
+        this.callCharacteristics = callCharacteristics;
+        this.subjectOfCall = subjectOfCall;
+        this.languagePreferences = languagePreferences;
+        this.deviceInfo = deviceInfo;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a AssociateDataArgument

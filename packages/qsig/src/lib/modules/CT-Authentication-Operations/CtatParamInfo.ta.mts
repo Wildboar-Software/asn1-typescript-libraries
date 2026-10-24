@@ -168,7 +168,7 @@ let _cached_encoder_for_CtatParamInfo: $.ASN1Encoder<CtatParamInfo> | null = nul
  */
 export
 function _encode_CtatParamInfo (value: CtatParamInfo, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CtatParamInfo) { _cached_encoder_for_CtatParamInfo = function (value: CtatParamInfo, elGetter: $.ASN1Encoder<CtatParamInfo>): _Element {
+    if (!_cached_encoder_for_CtatParamInfo) { _cached_encoder_for_CtatParamInfo = function (value: CtatParamInfo): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_AuthAlgorithm(value.authAlgorithm, $.BER),
         /* REQUIRED   */ _encode_CtatParamInfo_info(value.info, $.BER)

@@ -28,20 +28,26 @@ import {
  *
  */
 export class RemoveTpsFromTpPoolInformation_Item {
+    /**
+     * @summary `fromTpPool`.
+     * @public
+     * @readonly
+     */
+    public readonly fromTpPool: ObjectInstance;
+    /**
+     * @summary `tps`.
+     * @public
+     * @readonly
+     */
+    public readonly tps: ObjectInstance[];
+
     constructor(
-        /**
-         * @summary `fromTpPool`.
-         * @public
-         * @readonly
-         */
-        readonly fromTpPool: ObjectInstance,
-        /**
-         * @summary `tps`.
-         * @public
-         * @readonly
-         */
-        readonly tps: ObjectInstance[]
-    ) {}
+        fromTpPool: ObjectInstance,
+        tps: ObjectInstance[]
+    ) {
+        this.fromTpPool = fromTpPool;
+        this.tps = tps;
+    }
 
     /**
      * @summary Restructures an object into a RemoveTpsFromTpPoolInformation_Item

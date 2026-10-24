@@ -33,26 +33,32 @@ import { ReservationProblem, _enum_for_ReservationProblem, _decode_ReservationPr
  */
 export
 class reservationError_ParameterType {
+    /**
+     * @summary `entry`.
+     * @description
+     *
+     * Entry whose reservation could not be changed.
+     * @public
+     * @readonly
+     */
+    public readonly entry: DfrEntryName;
+    /**
+     * @summary `problem`.
+     * @description
+     *
+     * Why.
+     * @public
+     * @readonly
+     */
+    public readonly problem: ReservationProblem;
+
     constructor (
-        /**
-         * @summary `entry`.
-         * @description
-         *
-         * Entry whose reservation could not be changed.
-         * @public
-         * @readonly
-         */
-        readonly entry: DfrEntryName,
-        /**
-         * @summary `problem`.
-         * @description
-         *
-         * Why.
-         * @public
-         * @readonly
-         */
-        readonly problem: ReservationProblem
-    ) {}
+        entry: DfrEntryName,
+        problem: ReservationProblem
+    ) {
+        this.entry = entry;
+        this.problem = problem;
+    }
 
     /**
      * @summary Restructures an object into a reservationError_ParameterType

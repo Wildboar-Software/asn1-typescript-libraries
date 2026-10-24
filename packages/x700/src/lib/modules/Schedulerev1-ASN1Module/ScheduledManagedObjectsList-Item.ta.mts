@@ -38,33 +38,39 @@ import {
  *
  */
 export class ScheduledManagedObjectsList_Item {
+    /**
+     * @summary `objectInstance`.
+     * @description
+     *
+     * SMO instance using this SO. Removed from the list if the
+     * SMO is deleted. ITU-T Rec. X.746 (02/00)
+     * [§7.4](https://www.itu.int/rec/T-REC-X.746-200002-I),
+     * 8.3.2.2.
+     * @public
+     * @readonly
+     */
+    public readonly objectInstance: ObjectInstance;
+    /**
+     * @summary `activity`.
+     * @description
+     *
+     * Identifier of the SMO attribute that describes the
+     * activity being scheduled (e.g. `onDuty` or a derived
+     * attribute). ITU-T Rec. X.746 (02/00)
+     * [§8.3.2.2](https://www.itu.int/rec/T-REC-X.746-200002-I),
+     * 8.4.1.2.
+     * @public
+     * @readonly
+     */
+    public readonly activity?: OPTIONAL<AttributeId>;
+
     constructor(
-        /**
-         * @summary `objectInstance`.
-         * @description
-         *
-         * SMO instance using this SO. Removed from the list if the
-         * SMO is deleted. ITU-T Rec. X.746 (02/00)
-         * [§7.4](https://www.itu.int/rec/T-REC-X.746-200002-I),
-         * 8.3.2.2.
-         * @public
-         * @readonly
-         */
-        readonly objectInstance: ObjectInstance,
-        /**
-         * @summary `activity`.
-         * @description
-         *
-         * Identifier of the SMO attribute that describes the
-         * activity being scheduled (e.g. `onDuty` or a derived
-         * attribute). ITU-T Rec. X.746 (02/00)
-         * [§8.3.2.2](https://www.itu.int/rec/T-REC-X.746-200002-I),
-         * 8.4.1.2.
-         * @public
-         * @readonly
-         */
-        readonly activity?: OPTIONAL<AttributeId>
-    ) {}
+        objectInstance: ObjectInstance,
+        activity?: OPTIONAL<AttributeId>
+    ) {
+        this.objectInstance = objectInstance;
+        this.activity = activity;
+    }
 
     /**
      * @summary Restructures an object into a ScheduledManagedObjectsList_Item

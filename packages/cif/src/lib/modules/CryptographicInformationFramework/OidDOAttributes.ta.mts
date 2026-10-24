@@ -33,25 +33,31 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class OidDOAttributes {
+    /**
+     * @summary `id`.
+     * @description
+     * Member of `AllowedOidDOs`. ISO/IEC 7816-15:2016 §8.8.4.
+     * @public
+     * @readonly
+     */
+    public readonly id: OBJECT_IDENTIFIER;
+    /**
+     * @summary `value`.
+     * @description
+     * Value whose syntax is determined by `id`. ISO/IEC 7816-15:2016
+     * §8.8.4.
+     * @public
+     * @readonly
+     */
+    public readonly value: _Element;
+
     constructor (
-        /**
-         * @summary `id`.
-         * @description
-         * Member of `AllowedOidDOs`. ISO/IEC 7816-15:2016 §8.8.4.
-         * @public
-         * @readonly
-         */
-        readonly id: OBJECT_IDENTIFIER,
-        /**
-         * @summary `value`.
-         * @description
-         * Value whose syntax is determined by `id`. ISO/IEC 7816-15:2016
-         * §8.8.4.
-         * @public
-         * @readonly
-         */
-        readonly value: _Element
-    ) {}
+        id: OBJECT_IDENTIFIER,
+        value: _Element
+    ) {
+        this.id = id;
+        this.value = value;
+    }
 
     /**
      * @summary Restructures an object into a OidDOAttributes

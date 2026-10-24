@@ -60,82 +60,96 @@ import {
  *
  */
 export class UnitOfReplication {
+    /**
+     * @summary `area`.
+     * @description
+     *
+     * Context prefix plus subtree specification. Names are primary DNs
+     * (no context lists, no alternative distinguished values).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly area: AreaSpecification;
+    /**
+     * @summary `attributes`.
+     * @description
+     *
+     * User, collective, and extra operational attributes to copy.
+     * Selection is applied only by the supplier; the consumer does not
+     * re-filter. Knowledge operational attributes are implied if
+     * `knowledge` is present and need not be enumerated here.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly attributes: AttributeSelection;
+    /**
+     * @summary `knowledge`.
+     * @description
+     *
+     * Absent = no subordinate knowledge references. If present, those
+     * knowledge attributes are included automatically.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly knowledge?: OPTIONAL<Knowledge>;
+    /**
+     * @summary `subordinates`.
+     * @description
+     *
+     * DEFAULT FALSE. TRUE copies subordinate *entries*, not just
+     * references. May be TRUE only if `knowledge` is present and
+     * `extendedKnowledge` is FALSE.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly subordinates?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `contextSelection`.
+     * @description
+     *
+     * Which attribute values (and alternative distinguished values) to
+     * shadow. Absent = all values of selected attributes — default
+     * contexts from EntryInformationSelection are *not* applied.
+     * Never applied to primary distinguished values.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly contextSelection?: OPTIONAL<ContextSelection>;
+    /**
+     * @summary `supplyContexts`.
+     * @description
+     *
+     * Absent = strip all context information from shadowed values.
+     * Not applied to distinguished values in the SDSE name; if any
+     * alternative distinguished values are included in an RDN, the
+     * context list for the primary and all alternatives shall be
+     * included.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly supplyContexts?: OPTIONAL<UnitOfReplication_supplyContexts>;
+
     constructor(
-        /**
-         * @summary `area`.
-         * @description
-         *
-         * Context prefix plus subtree specification. Names are primary DNs
-         * (no context lists, no alternative distinguished values).
-         *
-         * @public
-         * @readonly
-         */
-        readonly area: AreaSpecification,
-        /**
-         * @summary `attributes`.
-         * @description
-         *
-         * User, collective, and extra operational attributes to copy.
-         * Selection is applied only by the supplier; the consumer does not
-         * re-filter. Knowledge operational attributes are implied if
-         * `knowledge` is present and need not be enumerated here.
-         *
-         * @public
-         * @readonly
-         */
-        readonly attributes: AttributeSelection,
-        /**
-         * @summary `knowledge`.
-         * @description
-         *
-         * Absent = no subordinate knowledge references. If present, those
-         * knowledge attributes are included automatically.
-         *
-         * @public
-         * @readonly
-         */
-        readonly knowledge?: OPTIONAL<Knowledge>,
-        /**
-         * @summary `subordinates`.
-         * @description
-         *
-         * DEFAULT FALSE. TRUE copies subordinate *entries*, not just
-         * references. May be TRUE only if `knowledge` is present and
-         * `extendedKnowledge` is FALSE.
-         *
-         * @public
-         * @readonly
-         */
-        readonly subordinates?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `contextSelection`.
-         * @description
-         *
-         * Which attribute values (and alternative distinguished values) to
-         * shadow. Absent = all values of selected attributes — default
-         * contexts from EntryInformationSelection are *not* applied.
-         * Never applied to primary distinguished values.
-         *
-         * @public
-         * @readonly
-         */
-        readonly contextSelection?: OPTIONAL<ContextSelection>,
-        /**
-         * @summary `supplyContexts`.
-         * @description
-         *
-         * Absent = strip all context information from shadowed values.
-         * Not applied to distinguished values in the SDSE name; if any
-         * alternative distinguished values are included in an RDN, the
-         * context list for the primary and all alternatives shall be
-         * included.
-         *
-         * @public
-         * @readonly
-         */
-        readonly supplyContexts?: OPTIONAL<UnitOfReplication_supplyContexts>
-    ) {}
+        area: AreaSpecification,
+        attributes: AttributeSelection,
+        knowledge?: OPTIONAL<Knowledge>,
+        subordinates?: OPTIONAL<BOOLEAN>,
+        contextSelection?: OPTIONAL<ContextSelection>,
+        supplyContexts?: OPTIONAL<UnitOfReplication_supplyContexts>
+    ) {
+        this.area = area;
+        this.attributes = attributes;
+        this.knowledge = knowledge;
+        this.subordinates = subordinates;
+        this.contextSelection = contextSelection;
+        this.supplyContexts = supplyContexts;
+    }
 
     /**
      * @summary Restructures an object into a UnitOfReplication

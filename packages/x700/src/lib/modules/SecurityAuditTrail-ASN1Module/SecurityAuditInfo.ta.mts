@@ -63,72 +63,84 @@ import {
  *
  */
 export class SecurityAuditInfo {
+    /**
+     * @summary `serviceReportCause`.
+     * @description
+     *
+     * Further qualification of the probable cause of a service
+     * report. Shall be supplied when the event type is service
+     * report (Table 1: C). Not listed among `usageReport`
+     * attribute IDs. ITU-T Rec. X.740 (09/92)
+     * [§8.1.2](https://www.itu.int/rec/T-REC-X.740-199209-I),
+     * §9.2, A.4.
+     * @public
+     * @readonly
+     */
+    public readonly serviceReportCause?: OPTIONAL<ServiceReportCause>;
+    /**
+     * @summary `notificationIdentifier`.
+     * @description
+     *
+     * User-optional (Table 1: U). May be assigned by the
+     * emitting managed object or by the managed system.
+     * Defined in ITU-T Rec. X.733. ITU-T Rec. X.740 (09/92)
+     * [§8.3](https://www.itu.int/rec/T-REC-X.740-199209-I),
+     * §9.2.
+     * @public
+     * @readonly
+     */
+    public readonly notificationIdentifier?: OPTIONAL<NotificationIdentifier>;
+    /**
+     * @summary `correlatedNotifications`.
+     * @description
+     *
+     * User-optional (Table 1: U). May be assigned by the
+     * emitting managed object or by the managed system.
+     * Defined in ITU-T Rec. X.733. ITU-T Rec. X.740 (09/92)
+     * [§8.3](https://www.itu.int/rec/T-REC-X.740-199209-I),
+     * §9.2.
+     * @public
+     * @readonly
+     */
+    public readonly correlatedNotifications?: OPTIONAL<CorrelatedNotifications>;
+    /**
+     * @summary `additionalText`.
+     * @description
+     *
+     * User-optional (Table 1: U). Defined in ITU-T Rec. X.733.
+     * ITU-T Rec. X.740 (09/92)
+     * [§8.3](https://www.itu.int/rec/T-REC-X.740-199209-I),
+     * §9.2.
+     * @public
+     * @readonly
+     */
+    public readonly additionalText?: OPTIONAL<AdditionalText>;
+    /**
+     * @summary `additionalInformation`.
+     * @description
+     *
+     * User-optional (Table 1: U). Defined in ITU-T Rec. X.733.
+     * ITU-T Rec. X.740 (09/92)
+     * [§8.3](https://www.itu.int/rec/T-REC-X.740-199209-I),
+     * §9.2.
+     * @public
+     * @readonly
+     */
+    public readonly additionalInformation?: OPTIONAL<AdditionalInformation>;
+
     constructor(
-        /**
-         * @summary `serviceReportCause`.
-         * @description
-         *
-         * Further qualification of the probable cause of a service
-         * report. Shall be supplied when the event type is service
-         * report (Table 1: C). Not listed among `usageReport`
-         * attribute IDs. ITU-T Rec. X.740 (09/92)
-         * [§8.1.2](https://www.itu.int/rec/T-REC-X.740-199209-I),
-         * §9.2, A.4.
-         * @public
-         * @readonly
-         */
-        readonly serviceReportCause?: OPTIONAL<ServiceReportCause>,
-        /**
-         * @summary `notificationIdentifier`.
-         * @description
-         *
-         * User-optional (Table 1: U). May be assigned by the
-         * emitting managed object or by the managed system.
-         * Defined in ITU-T Rec. X.733. ITU-T Rec. X.740 (09/92)
-         * [§8.3](https://www.itu.int/rec/T-REC-X.740-199209-I),
-         * §9.2.
-         * @public
-         * @readonly
-         */
-        readonly notificationIdentifier?: OPTIONAL<NotificationIdentifier>,
-        /**
-         * @summary `correlatedNotifications`.
-         * @description
-         *
-         * User-optional (Table 1: U). May be assigned by the
-         * emitting managed object or by the managed system.
-         * Defined in ITU-T Rec. X.733. ITU-T Rec. X.740 (09/92)
-         * [§8.3](https://www.itu.int/rec/T-REC-X.740-199209-I),
-         * §9.2.
-         * @public
-         * @readonly
-         */
-        readonly correlatedNotifications?: OPTIONAL<CorrelatedNotifications>,
-        /**
-         * @summary `additionalText`.
-         * @description
-         *
-         * User-optional (Table 1: U). Defined in ITU-T Rec. X.733.
-         * ITU-T Rec. X.740 (09/92)
-         * [§8.3](https://www.itu.int/rec/T-REC-X.740-199209-I),
-         * §9.2.
-         * @public
-         * @readonly
-         */
-        readonly additionalText?: OPTIONAL<AdditionalText>,
-        /**
-         * @summary `additionalInformation`.
-         * @description
-         *
-         * User-optional (Table 1: U). Defined in ITU-T Rec. X.733.
-         * ITU-T Rec. X.740 (09/92)
-         * [§8.3](https://www.itu.int/rec/T-REC-X.740-199209-I),
-         * §9.2.
-         * @public
-         * @readonly
-         */
-        readonly additionalInformation?: OPTIONAL<AdditionalInformation>
-    ) {}
+        serviceReportCause?: OPTIONAL<ServiceReportCause>,
+        notificationIdentifier?: OPTIONAL<NotificationIdentifier>,
+        correlatedNotifications?: OPTIONAL<CorrelatedNotifications>,
+        additionalText?: OPTIONAL<AdditionalText>,
+        additionalInformation?: OPTIONAL<AdditionalInformation>
+    ) {
+        this.serviceReportCause = serviceReportCause;
+        this.notificationIdentifier = notificationIdentifier;
+        this.correlatedNotifications = correlatedNotifications;
+        this.additionalText = additionalText;
+        this.additionalInformation = additionalInformation;
+    }
 
     /**
      * @summary Restructures an object into a SecurityAuditInfo

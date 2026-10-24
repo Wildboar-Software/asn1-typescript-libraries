@@ -31,20 +31,26 @@ import {
  *
  */
 export class ProtectionStatusParameterR1 {
+    /**
+     * @summary `oldProtectionStatus`.
+     * @public
+     * @readonly
+     */
+    public readonly oldProtectionStatus: ProtectionStatusR1;
+    /**
+     * @summary `newProtectionStatus`.
+     * @public
+     * @readonly
+     */
+    public readonly newProtectionStatus: ProtectionStatusR1;
+
     constructor(
-        /**
-         * @summary `oldProtectionStatus`.
-         * @public
-         * @readonly
-         */
-        readonly oldProtectionStatus: ProtectionStatusR1,
-        /**
-         * @summary `newProtectionStatus`.
-         * @public
-         * @readonly
-         */
-        readonly newProtectionStatus: ProtectionStatusR1
-    ) {}
+        oldProtectionStatus: ProtectionStatusR1,
+        newProtectionStatus: ProtectionStatusR1
+    ) {
+        this.oldProtectionStatus = oldProtectionStatus;
+        this.newProtectionStatus = newProtectionStatus;
+    }
 
     /**
      * @summary Restructures an object into a ProtectionStatusParameterR1

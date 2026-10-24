@@ -29,24 +29,30 @@ import {
  *
  */
 export class InitializationRej {
+    /**
+     * @summary `diag`.
+     * @description
+     *
+     * `unsupportedVersion`: none of the versions in `InitializationRec` are supported (prose sometimes says unsupportedVersions).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly diag: InitializationRej_diag;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `diag`.
-         * @description
-         *
-         * `unsupportedVersion`: none of the versions in `InitializationRec` are supported (prose sometimes says unsupportedVersions).
-         *
-         * @public
-         * @readonly
-         */
-        readonly diag: InitializationRej_diag,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        diag: InitializationRej_diag,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.diag = diag;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a InitializationRej

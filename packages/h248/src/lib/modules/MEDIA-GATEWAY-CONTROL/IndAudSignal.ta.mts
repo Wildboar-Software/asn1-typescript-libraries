@@ -33,51 +33,61 @@ import { RequestID, _decode_RequestID, _encode_RequestID } from "../MEDIA-GATEWA
  */
 export
 class IndAudSignal {
+    /**
+     * @summary `signalName`.
+     * @description
+     *
+     * Package and signal to audit. No wildcard is used in a SignalID
+     * (clause 7.1.11.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly signalName: PkgdName;
+    /**
+     * @summary `streamID`.
+     * @description
+     *
+     * Stream the signal was applied to. 0 means every stream.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly streamID?: OPTIONAL<StreamID>;
+    /**
+     * @summary `signalRequestID`.
+     * @description
+     *
+     * Request identifier of one instance, used when several signals of the
+     * same SignalID were requested (clause 7.1.11.5).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly signalRequestID?: OPTIONAL<RequestID>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @description
+     *
+     * Extension additions this version does not define. Kept so a later
+     * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `signalName`.
-         * @description
-         *
-         * Package and signal to audit. No wildcard is used in a SignalID
-         * (clause 7.1.11.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly signalName: PkgdName,
-        /**
-         * @summary `streamID`.
-         * @description
-         *
-         * Stream the signal was applied to. 0 means every stream.
-         *
-         * @public
-         * @readonly
-         */
-        readonly streamID?: OPTIONAL<StreamID>,
-        /**
-         * @summary `signalRequestID`.
-         * @description
-         *
-         * Request identifier of one instance, used when several signals of the
-         * same SignalID were requested (clause 7.1.11.5).
-         *
-         * @public
-         * @readonly
-         */
-        readonly signalRequestID?: OPTIONAL<RequestID>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @description
-         *
-         * Extension additions this version does not define. Kept so a later
-         * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
-         *
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        signalName: PkgdName,
+        streamID?: OPTIONAL<StreamID>,
+        signalRequestID?: OPTIONAL<RequestID>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.signalName = signalName;
+        this.streamID = streamID;
+        this.signalRequestID = signalRequestID;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a IndAudSignal

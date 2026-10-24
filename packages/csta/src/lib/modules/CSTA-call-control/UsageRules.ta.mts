@@ -38,50 +38,60 @@ import { TimeInfo, _decode_TimeInfo, _encode_TimeInfo } from "../CSTA-security/T
  */
 export
 class UsageRules {
+    /**
+     * @summary `retransmissionAllowed`.
+     * @description
+     *
+     * Whether retransmission of this location is allowed.
+     * ECMA-269 §12.2.18.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly retransmissionAllowed: BOOLEAN;
+    /**
+     * @summary `retentionExpires`.
+     * @description
+     *
+     * When retention of this location must end. ECMA-269
+     * §12.2.18.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly retentionExpires: TimeInfo;
+    /**
+     * @summary `rulesetReference`.
+     * @description
+     *
+     * URI of the applicable ruleset. ECMA-285 §9.9.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly rulesetReference: IA5String;
+    /**
+     * @summary `noteWell`.
+     * @description
+     *
+     * Optional human-readable usage note. ECMA-285 §9.9.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly noteWell?: OPTIONAL<IA5String>;
+
     constructor (
-        /**
-         * @summary `retransmissionAllowed`.
-         * @description
-         *
-         * Whether retransmission of this location is allowed.
-         * ECMA-269 §12.2.18.
-         *
-         * @public
-         * @readonly
-         */
-        readonly retransmissionAllowed: BOOLEAN,
-        /**
-         * @summary `retentionExpires`.
-         * @description
-         *
-         * When retention of this location must end. ECMA-269
-         * §12.2.18.
-         *
-         * @public
-         * @readonly
-         */
-        readonly retentionExpires: TimeInfo,
-        /**
-         * @summary `rulesetReference`.
-         * @description
-         *
-         * URI of the applicable ruleset. ECMA-285 §9.9.
-         *
-         * @public
-         * @readonly
-         */
-        readonly rulesetReference: IA5String,
-        /**
-         * @summary `noteWell`.
-         * @description
-         *
-         * Optional human-readable usage note. ECMA-285 §9.9.
-         *
-         * @public
-         * @readonly
-         */
-        readonly noteWell?: OPTIONAL<IA5String>
-    ) {}
+        retransmissionAllowed: BOOLEAN,
+        retentionExpires: TimeInfo,
+        rulesetReference: IA5String,
+        noteWell?: OPTIONAL<IA5String>
+    ) {
+        this.retransmissionAllowed = retransmissionAllowed;
+        this.retentionExpires = retentionExpires;
+        this.rulesetReference = rulesetReference;
+        this.noteWell = noteWell;
+    }
 
     /**
      * @summary Restructures an object into a UsageRules

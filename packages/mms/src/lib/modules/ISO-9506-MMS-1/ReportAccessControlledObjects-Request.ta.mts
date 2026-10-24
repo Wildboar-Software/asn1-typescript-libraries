@@ -40,40 +40,48 @@ import { ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-
  */
 export
 class ReportAccessControlledObjects_Request {
+    /**
+     * @summary `accessControlList`.
+     * @description
+     *
+     * VMD-specific Identifier of the ACL. ISO 9506-1:2003 §9.5.1.1.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly accessControlList: Identifier;
+    /**
+     * @summary `objectClass`.
+     * @description
+     *
+     * Object class of names to return. ISO 9506-1:2003 §9.5.1.1.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly objectClass: ObjectClass;
+    /**
+     * @summary `continueAfter`.
+     * @description
+     *
+     * Optional start-after name. If it does not match an existing name of
+     * the class, the server uses the collating sequence of ISO 9506-1:2003
+     * §5.4.2. ISO 9506-1:2003 §9.5.1.1.3.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly continueAfter?: OPTIONAL<ObjectName>;
+
     constructor (
-        /**
-         * @summary `accessControlList`.
-         * @description
-         *
-         * VMD-specific Identifier of the ACL. ISO 9506-1:2003 §9.5.1.1.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly accessControlList: Identifier,
-        /**
-         * @summary `objectClass`.
-         * @description
-         *
-         * Object class of names to return. ISO 9506-1:2003 §9.5.1.1.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly objectClass: ObjectClass,
-        /**
-         * @summary `continueAfter`.
-         * @description
-         *
-         * Optional start-after name. If it does not match an existing name of
-         * the class, the server uses the collating sequence of ISO 9506-1:2003
-         * §5.4.2. ISO 9506-1:2003 §9.5.1.1.3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly continueAfter?: OPTIONAL<ObjectName>
-    ) {}
+        accessControlList: Identifier,
+        objectClass: ObjectClass,
+        continueAfter?: OPTIONAL<ObjectName>
+    ) {
+        this.accessControlList = accessControlList;
+        this.objectClass = objectClass;
+        this.continueAfter = continueAfter;
+    }
 
     /**
      * @summary Restructures an object into a ReportAccessControlledObjects_Request

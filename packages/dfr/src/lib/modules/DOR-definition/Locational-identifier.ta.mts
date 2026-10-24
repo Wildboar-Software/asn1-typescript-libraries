@@ -41,26 +41,34 @@ import {
  */
 export
 class Locational_identifier {
+    /**
+     * @summary `presentation_address`.
+     * @public
+     * @readonly
+     */
+    public readonly presentation_address: PresentationAddress;
+    /**
+     * @summary `ae_title`.
+     * @public
+     * @readonly
+     */
+    public readonly ae_title: OPTIONAL<AE_title>;
+    /**
+     * @summary `application_contexts`.
+     * @public
+     * @readonly
+     */
+    public readonly application_contexts: OBJECT_IDENTIFIER[];
+
     constructor (
-        /**
-         * @summary `presentation_address`.
-         * @public
-         * @readonly
-         */
-        readonly presentation_address: PresentationAddress,
-        /**
-         * @summary `ae_title`.
-         * @public
-         * @readonly
-         */
-        readonly ae_title: OPTIONAL<AE_title>,
-        /**
-         * @summary `application_contexts`.
-         * @public
-         * @readonly
-         */
-        readonly application_contexts: OBJECT_IDENTIFIER[]
-    ) {}
+        presentation_address: PresentationAddress,
+        ae_title: OPTIONAL<AE_title>,
+        application_contexts: OBJECT_IDENTIFIER[]
+    ) {
+        this.presentation_address = presentation_address;
+        this.ae_title = ae_title;
+        this.application_contexts = application_contexts;
+    }
 
     /**
      * @summary Restructures an object into a Locational_identifier

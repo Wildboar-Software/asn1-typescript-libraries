@@ -49,43 +49,51 @@ import {
  *
  */
 export class Transform_RequestParams {
+  /**
+   * @summary `bspHandle`.
+   * @description
+   *
+   * Attach-session handle on the hosting (slave) endpoint.
+   * Table 95 maps BioAPI `BSPHandle` here via clause 26
+   * (same rewriting as `originalBSPHandle` on other PDUs).
+   * X.1083 §16.41.5.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly bspHandle: BioAPI_HANDLE;
+  /**
+   * @summary `operationUuid`.
+   * @description
+   *
+   * UUID of the transform operation to apply, from BioAPI
+   * `OperationUuid`. X.1083 §16.41.5.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly operationUuid: BioAPI_UUID;
+  /**
+   * @summary `inputBIRs`.
+   * @description
+   *
+   * Input BIRs to transform, in order. Length is BioAPI
+   * `NumberOfInputBIRs`. X.1083 §16.41.5–16.41.7.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly inputBIRs: BioAPI_INPUT_BIR[];
+
   constructor(
-    /**
-     * @summary `bspHandle`.
-     * @description
-     *
-     * Attach-session handle on the hosting (slave) endpoint.
-     * Table 95 maps BioAPI `BSPHandle` here via clause 26
-     * (same rewriting as `originalBSPHandle` on other PDUs).
-     * X.1083 §16.41.5.
-     *
-     * @public
-     * @readonly
-     */
-    readonly bspHandle: BioAPI_HANDLE,
-    /**
-     * @summary `operationUuid`.
-     * @description
-     *
-     * UUID of the transform operation to apply, from BioAPI
-     * `OperationUuid`. X.1083 §16.41.5.
-     *
-     * @public
-     * @readonly
-     */
-    readonly operationUuid: BioAPI_UUID,
-    /**
-     * @summary `inputBIRs`.
-     * @description
-     *
-     * Input BIRs to transform, in order. Length is BioAPI
-     * `NumberOfInputBIRs`. X.1083 §16.41.5–16.41.7.
-     *
-     * @public
-     * @readonly
-     */
-    readonly inputBIRs: BioAPI_INPUT_BIR[]
-  ) {}
+    bspHandle: BioAPI_HANDLE,
+    operationUuid: BioAPI_UUID,
+    inputBIRs: BioAPI_INPUT_BIR[]
+  ) {
+    this.bspHandle = bspHandle;
+    this.operationUuid = operationUuid;
+    this.inputBIRs = inputBIRs;
+  }
 
   /**
    * @summary Restructures an object into a Transform_RequestParams

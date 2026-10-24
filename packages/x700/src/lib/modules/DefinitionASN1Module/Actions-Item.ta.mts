@@ -39,27 +39,33 @@ import {
  *
  */
 export class Actions_Item {
+    /**
+     * @summary `action`.
+     * @description
+     *
+     * Action template included in the package.
+     * @public
+     * @readonly
+     */
+    public readonly action: TemplateLabel;
+    /**
+     * @summary `parameter`.
+     * @description
+     *
+     * Optional parameter templates for action information, reply, or
+     * processing failures of this action.
+     * @public
+     * @readonly
+     */
+    public readonly parameter?: OPTIONAL<TemplateList>;
+
     constructor(
-        /**
-         * @summary `action`.
-         * @description
-         *
-         * Action template included in the package.
-         * @public
-         * @readonly
-         */
-        readonly action: TemplateLabel,
-        /**
-         * @summary `parameter`.
-         * @description
-         *
-         * Optional parameter templates for action information, reply, or
-         * processing failures of this action.
-         * @public
-         * @readonly
-         */
-        readonly parameter?: OPTIONAL<TemplateList>
-    ) {}
+        action: TemplateLabel,
+        parameter?: OPTIONAL<TemplateList>
+    ) {
+        this.action = action;
+        this.parameter = parameter;
+    }
 
     /**
      * @summary Restructures an object into a Actions_Item

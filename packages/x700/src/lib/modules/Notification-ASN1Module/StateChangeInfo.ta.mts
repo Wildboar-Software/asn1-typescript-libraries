@@ -76,85 +76,101 @@ import {
  *
  */
 export class StateChangeInfo {
+    /**
+     * @summary `sourceIndicator`.
+     * @description
+     *
+     * Source of the state-attribute change:
+     * `resourceOperation`, `managementOperation`, or
+     * `unknown`. ITU-T Rec. X.731 (01/92) §8.2.2.1.
+     * @public
+     * @readonly
+     */
+    public readonly sourceIndicator: OPTIONAL<SourceIndicator>;
+    /**
+     * @summary `attributeIdentifierList`.
+     * @description
+     *
+     * Identifiers of the state attributes whose value
+     * changes are reported. ITU-T Rec. X.731 (01/92)
+     * §8.2.2.2.
+     * @public
+     * @readonly
+     */
+    public readonly attributeIdentifierList: OPTIONAL<AttributeIdentifierList>;
+    /**
+     * @summary `stateChangeDefinition`.
+     * @description
+     *
+     * One sequence per changed state attribute: identifier,
+     * optional old value, and new (current) value. At least
+     * one new state-attribute value shall be present.
+     * ITU-T Rec. X.731 (01/92) §8.2.2.3.
+     * @public
+     * @readonly
+     */
+    public readonly stateChangeDefinition: AttributeValueChangeDefinition;
+    /**
+     * @summary `notificationIdentifier`.
+     * @description
+     *
+     * Identifier that later notifications may cite in
+     * `correlatedNotifications`. ITU-T Rec. X.731 (01/92)
+     * §8.2.2.4; X.733 (02/92) §8.1.2.8.
+     * @public
+     * @readonly
+     */
+    public readonly notificationIdentifier?: OPTIONAL<NotificationIdentifier>;
+    /**
+     * @summary `correlatedNotifications`.
+     * @description
+     *
+     * Notifications correlated with this one. ITU-T Rec.
+     * X.731 (01/92) §8.2.2.4; X.733 (02/92) §8.1.2.9.
+     * @public
+     * @readonly
+     */
+    public readonly correlatedNotifications?: OPTIONAL<CorrelatedNotifications>;
+    /**
+     * @summary `additionalText`.
+     * @description
+     *
+     * Free-form text; not required to interpret the
+     * notification. ITU-T Rec. X.731 (01/92) §8.2.2.4;
+     * X.733 (02/92) §8.1.2.13.
+     * @public
+     * @readonly
+     */
+    public readonly additionalText?: OPTIONAL<AdditionalText>;
+    /**
+     * @summary `additionalInformation`.
+     * @description
+     *
+     * Extra identifier/significance/information structures.
+     * ITU-T Rec. X.731 (01/92) §8.2.2.4; X.733 (02/92)
+     * §8.1.2.14.
+     * @public
+     * @readonly
+     */
+    public readonly additionalInformation?: OPTIONAL<AdditionalInformation>;
+
     constructor(
-        /**
-         * @summary `sourceIndicator`.
-         * @description
-         *
-         * Source of the state-attribute change:
-         * `resourceOperation`, `managementOperation`, or
-         * `unknown`. ITU-T Rec. X.731 (01/92) §8.2.2.1.
-         * @public
-         * @readonly
-         */
-        readonly sourceIndicator: OPTIONAL<SourceIndicator>,
-        /**
-         * @summary `attributeIdentifierList`.
-         * @description
-         *
-         * Identifiers of the state attributes whose value
-         * changes are reported. ITU-T Rec. X.731 (01/92)
-         * §8.2.2.2.
-         * @public
-         * @readonly
-         */
-        readonly attributeIdentifierList: OPTIONAL<AttributeIdentifierList>,
-        /**
-         * @summary `stateChangeDefinition`.
-         * @description
-         *
-         * One sequence per changed state attribute: identifier,
-         * optional old value, and new (current) value. At least
-         * one new state-attribute value shall be present.
-         * ITU-T Rec. X.731 (01/92) §8.2.2.3.
-         * @public
-         * @readonly
-         */
-        readonly stateChangeDefinition: AttributeValueChangeDefinition,
-        /**
-         * @summary `notificationIdentifier`.
-         * @description
-         *
-         * Identifier that later notifications may cite in
-         * `correlatedNotifications`. ITU-T Rec. X.731 (01/92)
-         * §8.2.2.4; X.733 (02/92) §8.1.2.8.
-         * @public
-         * @readonly
-         */
-        readonly notificationIdentifier?: OPTIONAL<NotificationIdentifier>,
-        /**
-         * @summary `correlatedNotifications`.
-         * @description
-         *
-         * Notifications correlated with this one. ITU-T Rec.
-         * X.731 (01/92) §8.2.2.4; X.733 (02/92) §8.1.2.9.
-         * @public
-         * @readonly
-         */
-        readonly correlatedNotifications?: OPTIONAL<CorrelatedNotifications>,
-        /**
-         * @summary `additionalText`.
-         * @description
-         *
-         * Free-form text; not required to interpret the
-         * notification. ITU-T Rec. X.731 (01/92) §8.2.2.4;
-         * X.733 (02/92) §8.1.2.13.
-         * @public
-         * @readonly
-         */
-        readonly additionalText?: OPTIONAL<AdditionalText>,
-        /**
-         * @summary `additionalInformation`.
-         * @description
-         *
-         * Extra identifier/significance/information structures.
-         * ITU-T Rec. X.731 (01/92) §8.2.2.4; X.733 (02/92)
-         * §8.1.2.14.
-         * @public
-         * @readonly
-         */
-        readonly additionalInformation?: OPTIONAL<AdditionalInformation>
-    ) {}
+        sourceIndicator: OPTIONAL<SourceIndicator>,
+        attributeIdentifierList: OPTIONAL<AttributeIdentifierList>,
+        stateChangeDefinition: AttributeValueChangeDefinition,
+        notificationIdentifier?: OPTIONAL<NotificationIdentifier>,
+        correlatedNotifications?: OPTIONAL<CorrelatedNotifications>,
+        additionalText?: OPTIONAL<AdditionalText>,
+        additionalInformation?: OPTIONAL<AdditionalInformation>
+    ) {
+        this.sourceIndicator = sourceIndicator;
+        this.attributeIdentifierList = attributeIdentifierList;
+        this.stateChangeDefinition = stateChangeDefinition;
+        this.notificationIdentifier = notificationIdentifier;
+        this.correlatedNotifications = correlatedNotifications;
+        this.additionalText = additionalText;
+        this.additionalInformation = additionalInformation;
+    }
 
     /**
      * @summary Restructures an object into a StateChangeInfo

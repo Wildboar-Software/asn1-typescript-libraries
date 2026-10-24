@@ -67,74 +67,94 @@ import {
  *
  */
 export class PerAuthorityScope {
+    /**
+     * @summary `authorityName`.
+     * @description
+     *
+     * Omitted = CRL issuer.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly authorityName?: OPTIONAL<GeneralName>;
+    /**
+     * @summary `distributionPoint`.
+     * @public
+     * @readonly
+     */
+    public readonly distributionPoint?: OPTIONAL<DistributionPointName>;
+    /**
+     * @summary `onlyContains`.
+     * @description
+     *
+     * Omitted = all certificate types.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly onlyContains?: OPTIONAL<OnlyCertificateTypes>;
+    /**
+     * @summary `onlySomeReasons`.
+     * @description
+     *
+     * Omitted = all reasons.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly onlySomeReasons?: OPTIONAL<ReasonFlags>;
+    /**
+     * @summary `serialNumberRange`.
+     * @public
+     * @readonly
+     */
+    public readonly serialNumberRange?: OPTIONAL<NumberRange>;
+    /**
+     * @summary `subjectKeyIdRange`.
+     * @public
+     * @readonly
+     */
+    public readonly subjectKeyIdRange?: OPTIONAL<NumberRange>;
+    /**
+     * @summary `nameSubtrees`.
+     * @public
+     * @readonly
+     */
+    public readonly nameSubtrees?: OPTIONAL<GeneralNames>;
+    /**
+     * @summary `baseRevocationInfo`.
+     * @public
+     * @readonly
+     */
+    public readonly baseRevocationInfo?: OPTIONAL<BaseRevocationInfo>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `authorityName`.
-         * @description
-         *
-         * Omitted = CRL issuer.
-         *
-         * @public
-         * @readonly
-         */
-        readonly authorityName?: OPTIONAL<GeneralName>,
-        /**
-         * @summary `distributionPoint`.
-         * @public
-         * @readonly
-         */
-        readonly distributionPoint?: OPTIONAL<DistributionPointName>,
-        /**
-         * @summary `onlyContains`.
-         * @description
-         *
-         * Omitted = all certificate types.
-         *
-         * @public
-         * @readonly
-         */
-        readonly onlyContains?: OPTIONAL<OnlyCertificateTypes>,
-        /**
-         * @summary `onlySomeReasons`.
-         * @description
-         *
-         * Omitted = all reasons.
-         *
-         * @public
-         * @readonly
-         */
-        readonly onlySomeReasons?: OPTIONAL<ReasonFlags>,
-        /**
-         * @summary `serialNumberRange`.
-         * @public
-         * @readonly
-         */
-        readonly serialNumberRange?: OPTIONAL<NumberRange>,
-        /**
-         * @summary `subjectKeyIdRange`.
-         * @public
-         * @readonly
-         */
-        readonly subjectKeyIdRange?: OPTIONAL<NumberRange>,
-        /**
-         * @summary `nameSubtrees`.
-         * @public
-         * @readonly
-         */
-        readonly nameSubtrees?: OPTIONAL<GeneralNames>,
-        /**
-         * @summary `baseRevocationInfo`.
-         * @public
-         * @readonly
-         */
-        readonly baseRevocationInfo?: OPTIONAL<BaseRevocationInfo>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        authorityName?: OPTIONAL<GeneralName>,
+        distributionPoint?: OPTIONAL<DistributionPointName>,
+        onlyContains?: OPTIONAL<OnlyCertificateTypes>,
+        onlySomeReasons?: OPTIONAL<ReasonFlags>,
+        serialNumberRange?: OPTIONAL<NumberRange>,
+        subjectKeyIdRange?: OPTIONAL<NumberRange>,
+        nameSubtrees?: OPTIONAL<GeneralNames>,
+        baseRevocationInfo?: OPTIONAL<BaseRevocationInfo>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.authorityName = authorityName;
+        this.distributionPoint = distributionPoint;
+        this.onlyContains = onlyContains;
+        this.onlySomeReasons = onlySomeReasons;
+        this.serialNumberRange = serialNumberRange;
+        this.subjectKeyIdRange = subjectKeyIdRange;
+        this.nameSubtrees = nameSubtrees;
+        this.baseRevocationInfo = baseRevocationInfo;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a PerAuthorityScope

@@ -27,20 +27,26 @@ import { DataGroupNumber, _decode_DataGroupNumber, _encode_DataGroupNumber } fro
  */
 export
 class DataGroupHash {
+    /**
+     * @summary `dataGroupNumber`.
+     * @public
+     * @readonly
+     */
+    public readonly dataGroupNumber: DataGroupNumber;
+    /**
+     * @summary `dataGroupHashValue`.
+     * @public
+     * @readonly
+     */
+    public readonly dataGroupHashValue: OCTET_STRING;
+
     constructor (
-        /**
-         * @summary `dataGroupNumber`.
-         * @public
-         * @readonly
-         */
-        readonly dataGroupNumber: DataGroupNumber,
-        /**
-         * @summary `dataGroupHashValue`.
-         * @public
-         * @readonly
-         */
-        readonly dataGroupHashValue: OCTET_STRING
-    ) {}
+        dataGroupNumber: DataGroupNumber,
+        dataGroupHashValue: OCTET_STRING
+    ) {
+        this.dataGroupNumber = dataGroupNumber;
+        this.dataGroupHashValue = dataGroupHashValue;
+    }
 
     /**
      * @summary Restructures an object into a DataGroupHash

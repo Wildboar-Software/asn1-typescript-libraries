@@ -37,26 +37,32 @@ import { ColourAssignment, _decode_ColourAssignment, _encode_ColourAssignment } 
  */
 export
 class CompoundColourValue {
+    /**
+     * @summary `capability`.
+     * @description
+     * Selected colour-capability (1..N; default 1). ISO/IEC
+     * 9040:1997 §18.1.
+     * @public
+     * @readonly
+     */
+    public readonly capability?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `assignments`.
+     * @description
+     * Selected colour-assignment list. ISO/IEC 9040:1997
+     * §18.2.5.
+     * @public
+     * @readonly
+     */
+    public readonly assignments?: OPTIONAL<ColourAssignment[]>;
+
     constructor (
-        /**
-         * @summary `capability`.
-         * @description
-         * Selected colour-capability (1..N; default 1). ISO/IEC
-         * 9040:1997 §18.1.
-         * @public
-         * @readonly
-         */
-        readonly capability?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `assignments`.
-         * @description
-         * Selected colour-assignment list. ISO/IEC 9040:1997
-         * §18.2.5.
-         * @public
-         * @readonly
-         */
-        readonly assignments?: OPTIONAL<ColourAssignment[]>
-    ) {}
+        capability?: OPTIONAL<INTEGER>,
+        assignments?: OPTIONAL<ColourAssignment[]>
+    ) {
+        this.capability = capability;
+        this.assignments = assignments;
+    }
 
     /**
      * @summary Restructures an object into a CompoundColourValue

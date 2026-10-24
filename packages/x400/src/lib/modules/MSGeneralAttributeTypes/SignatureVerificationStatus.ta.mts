@@ -48,44 +48,58 @@ import {
  *
  */
 export class SignatureVerificationStatus {
+    /**
+     * @summary `content_integrity_check`.
+     * @public
+     * @readonly
+     */
+    public readonly content_integrity_check?: OPTIONAL<SignatureStatus>;
+    /**
+     * @summary `message_origin_authentication_check`.
+     * @public
+     * @readonly
+     */
+    public readonly message_origin_authentication_check?: OPTIONAL<SignatureStatus>;
+    /**
+     * @summary `message_token`.
+     * @public
+     * @readonly
+     */
+    public readonly message_token?: OPTIONAL<SignatureStatus>;
+    /**
+     * @summary `report_origin_authentication_check`.
+     * @public
+     * @readonly
+     */
+    public readonly report_origin_authentication_check?: OPTIONAL<SignatureStatus>;
+    /**
+     * @summary `proof_of_delivery`.
+     * @public
+     * @readonly
+     */
+    public readonly proof_of_delivery?: OPTIONAL<SignatureStatus>;
+    /**
+     * @summary `proof_of_submission`.
+     * @public
+     * @readonly
+     */
+    public readonly proof_of_submission?: OPTIONAL<SignatureStatus>;
+
     constructor(
-        /**
-         * @summary `content_integrity_check`.
-         * @public
-         * @readonly
-         */
-        readonly content_integrity_check?: OPTIONAL<SignatureStatus>,
-        /**
-         * @summary `message_origin_authentication_check`.
-         * @public
-         * @readonly
-         */
-        readonly message_origin_authentication_check?: OPTIONAL<SignatureStatus>,
-        /**
-         * @summary `message_token`.
-         * @public
-         * @readonly
-         */
-        readonly message_token?: OPTIONAL<SignatureStatus>,
-        /**
-         * @summary `report_origin_authentication_check`.
-         * @public
-         * @readonly
-         */
-        readonly report_origin_authentication_check?: OPTIONAL<SignatureStatus>,
-        /**
-         * @summary `proof_of_delivery`.
-         * @public
-         * @readonly
-         */
-        readonly proof_of_delivery?: OPTIONAL<SignatureStatus>,
-        /**
-         * @summary `proof_of_submission`.
-         * @public
-         * @readonly
-         */
-        readonly proof_of_submission?: OPTIONAL<SignatureStatus>
-    ) {}
+        content_integrity_check?: OPTIONAL<SignatureStatus>,
+        message_origin_authentication_check?: OPTIONAL<SignatureStatus>,
+        message_token?: OPTIONAL<SignatureStatus>,
+        report_origin_authentication_check?: OPTIONAL<SignatureStatus>,
+        proof_of_delivery?: OPTIONAL<SignatureStatus>,
+        proof_of_submission?: OPTIONAL<SignatureStatus>
+    ) {
+        this.content_integrity_check = content_integrity_check;
+        this.message_origin_authentication_check = message_origin_authentication_check;
+        this.message_token = message_token;
+        this.report_origin_authentication_check = report_origin_authentication_check;
+        this.proof_of_delivery = proof_of_delivery;
+        this.proof_of_submission = proof_of_submission;
+    }
 
     /**
      * @summary Restructures an object into a SignatureVerificationStatus

@@ -37,44 +37,54 @@ import { MonitorFilter, _decode_MonitorFilter, _encode_MonitorFilter } from "../
  */
 export
 class MonitorFilterItems {
+    /**
+     * @summary `deviceOnDeviceMonitorFilter`.
+     * @description
+     *
+     * Device-type monitoring of a device.
+     * @public
+     * @readonly
+     */
+    public readonly deviceOnDeviceMonitorFilter?: OPTIONAL<MonitorFilter>;
+    /**
+     * @summary `deviceOnConnectionMonitorFilter`.
+     * @description
+     *
+     * Device-type monitoring of a connection.
+     * @public
+     * @readonly
+     */
+    public readonly deviceOnConnectionMonitorFilter?: OPTIONAL<MonitorFilter>;
+    /**
+     * @summary `callOnDeviceMonitorFilter`.
+     * @description
+     *
+     * Call-type monitoring of a device.
+     * @public
+     * @readonly
+     */
+    public readonly callOnDeviceMonitorFilter?: OPTIONAL<MonitorFilter>;
+    /**
+     * @summary `callOnConnectionMonitorFilter`.
+     * @description
+     *
+     * Call-type monitoring of a connection.
+     * @public
+     * @readonly
+     */
+    public readonly callOnConnectionMonitorFilter?: OPTIONAL<MonitorFilter>;
+
     constructor (
-        /**
-         * @summary `deviceOnDeviceMonitorFilter`.
-         * @description
-         *
-         * Device-type monitoring of a device.
-         * @public
-         * @readonly
-         */
-        readonly deviceOnDeviceMonitorFilter?: OPTIONAL<MonitorFilter>,
-        /**
-         * @summary `deviceOnConnectionMonitorFilter`.
-         * @description
-         *
-         * Device-type monitoring of a connection.
-         * @public
-         * @readonly
-         */
-        readonly deviceOnConnectionMonitorFilter?: OPTIONAL<MonitorFilter>,
-        /**
-         * @summary `callOnDeviceMonitorFilter`.
-         * @description
-         *
-         * Call-type monitoring of a device.
-         * @public
-         * @readonly
-         */
-        readonly callOnDeviceMonitorFilter?: OPTIONAL<MonitorFilter>,
-        /**
-         * @summary `callOnConnectionMonitorFilter`.
-         * @description
-         *
-         * Call-type monitoring of a connection.
-         * @public
-         * @readonly
-         */
-        readonly callOnConnectionMonitorFilter?: OPTIONAL<MonitorFilter>
-    ) {}
+        deviceOnDeviceMonitorFilter?: OPTIONAL<MonitorFilter>,
+        deviceOnConnectionMonitorFilter?: OPTIONAL<MonitorFilter>,
+        callOnDeviceMonitorFilter?: OPTIONAL<MonitorFilter>,
+        callOnConnectionMonitorFilter?: OPTIONAL<MonitorFilter>
+    ) {
+        this.deviceOnDeviceMonitorFilter = deviceOnDeviceMonitorFilter;
+        this.deviceOnConnectionMonitorFilter = deviceOnConnectionMonitorFilter;
+        this.callOnDeviceMonitorFilter = callOnDeviceMonitorFilter;
+        this.callOnConnectionMonitorFilter = callOnConnectionMonitorFilter;
+    }
 
     /**
      * @summary Restructures an object into a MonitorFilterItems

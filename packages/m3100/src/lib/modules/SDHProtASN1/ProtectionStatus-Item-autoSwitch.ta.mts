@@ -46,32 +46,42 @@ import {
  *
  */
 export class ProtectionStatus_Item_autoSwitch {
+    /**
+     * @summary `requestSource`.
+     * @public
+     * @readonly
+     */
+    public readonly requestSource: OPTIONAL<RequestSource>;
+    /**
+     * @summary `switchStatus`.
+     * @public
+     * @readonly
+     */
+    public readonly switchStatus: SwitchStatus;
+    /**
+     * @summary `relatedChannel`.
+     * @public
+     * @readonly
+     */
+    public readonly relatedChannel: FromAndToProtectionUnit;
+    /**
+     * @summary `autoSwitchReason`.
+     * @public
+     * @readonly
+     */
+    public readonly autoSwitchReason: AutoSwitchReason;
+
     constructor(
-        /**
-         * @summary `requestSource`.
-         * @public
-         * @readonly
-         */
-        readonly requestSource: OPTIONAL<RequestSource>,
-        /**
-         * @summary `switchStatus`.
-         * @public
-         * @readonly
-         */
-        readonly switchStatus: SwitchStatus,
-        /**
-         * @summary `relatedChannel`.
-         * @public
-         * @readonly
-         */
-        readonly relatedChannel: FromAndToProtectionUnit,
-        /**
-         * @summary `autoSwitchReason`.
-         * @public
-         * @readonly
-         */
-        readonly autoSwitchReason: AutoSwitchReason
-    ) {}
+        requestSource: OPTIONAL<RequestSource>,
+        switchStatus: SwitchStatus,
+        relatedChannel: FromAndToProtectionUnit,
+        autoSwitchReason: AutoSwitchReason
+    ) {
+        this.requestSource = requestSource;
+        this.switchStatus = switchStatus;
+        this.relatedChannel = relatedChannel;
+        this.autoSwitchReason = autoSwitchReason;
+    }
 
     /**
      * @summary Restructures an object into a ProtectionStatus_Item_autoSwitch

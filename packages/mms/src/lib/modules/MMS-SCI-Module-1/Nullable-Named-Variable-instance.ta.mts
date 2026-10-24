@@ -38,29 +38,35 @@ import { Named_Variable_Definition, _decode_Named_Variable_Definition, _encode_N
  */
 export
 class Nullable_Named_Variable_instance {
+    /**
+     * @summary `name`.
+     * @description
+     *
+     * Configured object name in the SCI file. ISO 9506-2:2003 Annex B.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly name?: OPTIONAL<ObjectName>;
+    /**
+     * @summary `definition`.
+     * @description
+     *
+     * Standardized Name OID (`reference`) or inline `details`. ISO
+     * 9506-2:2003 Annex B.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly definition?: OPTIONAL<Named_Variable_Definition>;
+
     constructor (
-        /**
-         * @summary `name`.
-         * @description
-         *
-         * Configured object name in the SCI file. ISO 9506-2:2003 Annex B.
-         *
-         * @public
-         * @readonly
-         */
-        readonly name?: OPTIONAL<ObjectName>,
-        /**
-         * @summary `definition`.
-         * @description
-         *
-         * Standardized Name OID (`reference`) or inline `details`. ISO
-         * 9506-2:2003 Annex B.
-         *
-         * @public
-         * @readonly
-         */
-        readonly definition?: OPTIONAL<Named_Variable_Definition>
-    ) {}
+        name?: OPTIONAL<ObjectName>,
+        definition?: OPTIONAL<Named_Variable_Definition>
+    ) {
+        this.name = name;
+        this.definition = definition;
+    }
 
     /**
      * @summary Restructures an object into a Nullable_Named_Variable_instance

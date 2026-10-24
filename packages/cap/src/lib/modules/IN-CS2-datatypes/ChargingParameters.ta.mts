@@ -41,50 +41,66 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class ChargingParameters {
+    /**
+     * @summary `unitsPerInterval`.
+     * @public
+     * @readonly
+     */
+    public readonly unitsPerInterval: INTEGER;
+    /**
+     * @summary `timePerInterval`.
+     * @public
+     * @readonly
+     */
+    public readonly timePerInterval: INTEGER;
+    /**
+     * @summary `scalingFactor`.
+     * @public
+     * @readonly
+     */
+    public readonly scalingFactor: INTEGER;
+    /**
+     * @summary `initialUnitIncrement`.
+     * @public
+     * @readonly
+     */
+    public readonly initialUnitIncrement?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `unitsPerDataInterval`.
+     * @public
+     * @readonly
+     */
+    public readonly unitsPerDataInterval?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `segmentsPerDataInterval`.
+     * @public
+     * @readonly
+     */
+    public readonly segmentsPerDataInterval?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `initialTimeInterval`.
+     * @public
+     * @readonly
+     */
+    public readonly initialTimeInterval?: OPTIONAL<INTEGER>;
+
     constructor (
-        /**
-         * @summary `unitsPerInterval`.
-         * @public
-         * @readonly
-         */
-        readonly unitsPerInterval: INTEGER,
-        /**
-         * @summary `timePerInterval`.
-         * @public
-         * @readonly
-         */
-        readonly timePerInterval: INTEGER,
-        /**
-         * @summary `scalingFactor`.
-         * @public
-         * @readonly
-         */
-        readonly scalingFactor: INTEGER,
-        /**
-         * @summary `initialUnitIncrement`.
-         * @public
-         * @readonly
-         */
-        readonly initialUnitIncrement?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `unitsPerDataInterval`.
-         * @public
-         * @readonly
-         */
-        readonly unitsPerDataInterval?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `segmentsPerDataInterval`.
-         * @public
-         * @readonly
-         */
-        readonly segmentsPerDataInterval?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `initialTimeInterval`.
-         * @public
-         * @readonly
-         */
-        readonly initialTimeInterval?: OPTIONAL<INTEGER>
-    ) {}
+        unitsPerInterval: INTEGER,
+        timePerInterval: INTEGER,
+        scalingFactor: INTEGER,
+        initialUnitIncrement?: OPTIONAL<INTEGER>,
+        unitsPerDataInterval?: OPTIONAL<INTEGER>,
+        segmentsPerDataInterval?: OPTIONAL<INTEGER>,
+        initialTimeInterval?: OPTIONAL<INTEGER>
+    ) {
+        this.unitsPerInterval = unitsPerInterval;
+        this.timePerInterval = timePerInterval;
+        this.scalingFactor = scalingFactor;
+        this.initialUnitIncrement = initialUnitIncrement;
+        this.unitsPerDataInterval = unitsPerDataInterval;
+        this.segmentsPerDataInterval = segmentsPerDataInterval;
+        this.initialTimeInterval = initialTimeInterval;
+    }
 
     /**
      * @summary Restructures an object into a ChargingParameters

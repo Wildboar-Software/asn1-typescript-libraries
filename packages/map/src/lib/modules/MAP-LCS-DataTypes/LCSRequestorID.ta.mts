@@ -30,44 +30,54 @@ import { USSD_DataCodingScheme, _decode_USSD_DataCodingScheme, _encode_USSD_Data
  */
 export
 class LCSRequestorID {
+    /**
+     * @summary `dataCodingScheme`.
+     * @description
+     *
+     * USSD DCS.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly dataCodingScheme: USSD_DataCodingScheme;
+    /**
+     * @summary `requestorIDString`.
+     * @description
+     *
+     * Requestor ID string, 1..63.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly requestorIDString: RequestorIDString;
+    /**
+     * @summary `lcs_FormatIndicator`.
+     * @description
+     *
+     * Format of the requestor ID.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly lcs_FormatIndicator?: OPTIONAL<LCS_FormatIndicator>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `dataCodingScheme`.
-         * @description
-         *
-         * USSD DCS.
-         *
-         * @public
-         * @readonly
-         */
-        readonly dataCodingScheme: USSD_DataCodingScheme,
-        /**
-         * @summary `requestorIDString`.
-         * @description
-         *
-         * Requestor ID string, 1..63.
-         *
-         * @public
-         * @readonly
-         */
-        readonly requestorIDString: RequestorIDString,
-        /**
-         * @summary `lcs_FormatIndicator`.
-         * @description
-         *
-         * Format of the requestor ID.
-         *
-         * @public
-         * @readonly
-         */
-        readonly lcs_FormatIndicator?: OPTIONAL<LCS_FormatIndicator>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        dataCodingScheme: USSD_DataCodingScheme,
+        requestorIDString: RequestorIDString,
+        lcs_FormatIndicator?: OPTIONAL<LCS_FormatIndicator>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.dataCodingScheme = dataCodingScheme;
+        this.requestorIDString = requestorIDString;
+        this.lcs_FormatIndicator = lcs_FormatIndicator;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a LCSRequestorID

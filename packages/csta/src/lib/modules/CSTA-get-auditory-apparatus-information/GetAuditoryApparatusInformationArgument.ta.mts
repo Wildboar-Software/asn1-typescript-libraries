@@ -38,37 +38,45 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class GetAuditoryApparatusInformationArgument {
+    /**
+     * @summary `device`.
+     * @description
+     *
+     * Physical-element DeviceID; other IDs are rejected (ECMA-269 §21 FR
+     * 1).
+     * @public
+     * @readonly
+     */
+    public readonly device: DeviceID;
+    /**
+     * @summary `auditoryApparatus`.
+     * @description
+     *
+     * Apparatus to query. Absent: all apparatuses on the device.
+     * @public
+     * @readonly
+     */
+    public readonly auditoryApparatus?: OPTIONAL<AuditoryApparatusID>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `device`.
-         * @description
-         *
-         * Physical-element DeviceID; other IDs are rejected (ECMA-269 §21 FR
-         * 1).
-         * @public
-         * @readonly
-         */
-        readonly device: DeviceID,
-        /**
-         * @summary `auditoryApparatus`.
-         * @description
-         *
-         * Apparatus to query. Absent: all apparatuses on the device.
-         * @public
-         * @readonly
-         */
-        readonly auditoryApparatus?: OPTIONAL<AuditoryApparatusID>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        device: DeviceID,
+        auditoryApparatus?: OPTIONAL<AuditoryApparatusID>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.device = device;
+        this.auditoryApparatus = auditoryApparatus;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a GetAuditoryApparatusInformationArgument

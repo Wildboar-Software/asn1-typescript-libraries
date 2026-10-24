@@ -37,20 +37,26 @@ import {
  *
  */
 export class DLExpansionProcessingInfo {
+    /**
+     * @summary `dlORName`.
+     * @public
+     * @readonly
+     */
+    public readonly dlORName: ORAddressAndOptionalDirectoryName;
+    /**
+     * @summary `actions`.
+     * @public
+     * @readonly
+     */
+    public readonly actions: Actions;
+
     constructor(
-        /**
-         * @summary `dlORName`.
-         * @public
-         * @readonly
-         */
-        readonly dlORName: ORAddressAndOptionalDirectoryName,
-        /**
-         * @summary `actions`.
-         * @public
-         * @readonly
-         */
-        readonly actions: Actions
-    ) {}
+        dlORName: ORAddressAndOptionalDirectoryName,
+        actions: Actions
+    ) {
+        this.dlORName = dlORName;
+        this.actions = actions;
+    }
 
     /**
      * @summary Restructures an object into a DLExpansionProcessingInfo

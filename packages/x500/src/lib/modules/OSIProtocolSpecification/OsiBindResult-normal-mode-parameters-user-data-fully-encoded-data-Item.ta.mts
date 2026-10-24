@@ -32,26 +32,34 @@ import {
  *
  */
 export class OsiBindResult_normal_mode_parameters_user_data_fully_encoded_data_Item {
+    /**
+     * @summary `transfer_syntax_name`.
+     * @public
+     * @readonly
+     */
+    public readonly transfer_syntax_name: OPTIONAL<Transfer_syntax_name>;
+    /**
+     * @summary `presentation_context_identifier`.
+     * @public
+     * @readonly
+     */
+    public readonly presentation_context_identifier: Presentation_context_identifier;
+    /**
+     * @summary `presentation_data_values`.
+     * @public
+     * @readonly
+     */
+    public readonly presentation_data_values: OsiBindResult_normal_mode_parameters_user_data_fully_encoded_data_Item_pdv;
+
     constructor(
-        /**
-         * @summary `transfer_syntax_name`.
-         * @public
-         * @readonly
-         */
-        readonly transfer_syntax_name: OPTIONAL<Transfer_syntax_name>,
-        /**
-         * @summary `presentation_context_identifier`.
-         * @public
-         * @readonly
-         */
-        readonly presentation_context_identifier: Presentation_context_identifier,
-        /**
-         * @summary `presentation_data_values`.
-         * @public
-         * @readonly
-         */
-        readonly presentation_data_values: OsiBindResult_normal_mode_parameters_user_data_fully_encoded_data_Item_pdv
-    ) {}
+        transfer_syntax_name: OPTIONAL<Transfer_syntax_name>,
+        presentation_context_identifier: Presentation_context_identifier,
+        presentation_data_values: OsiBindResult_normal_mode_parameters_user_data_fully_encoded_data_Item_pdv
+    ) {
+        this.transfer_syntax_name = transfer_syntax_name;
+        this.presentation_context_identifier = presentation_context_identifier;
+        this.presentation_data_values = presentation_data_values;
+    }
 
     /**
      * @summary Restructures an object into a OsiBindResult_normal_mode_parameters_user_data_fully_encoded_data_Item

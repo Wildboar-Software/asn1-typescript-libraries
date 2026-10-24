@@ -36,36 +36,44 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class GetAgentStateArgument {
+    /**
+     * @summary `device`.
+     * @description
+     *
+     * Device whose agent state is queried.
+     * @public
+     * @readonly
+     */
+    public readonly device: DeviceID;
+    /**
+     * @summary `acdGroup`.
+     * @description
+     *
+     * If provided, limit the result to this ACD group.
+     * @public
+     * @readonly
+     */
+    public readonly acdGroup?: OPTIONAL<DeviceID>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `device`.
-         * @description
-         *
-         * Device whose agent state is queried.
-         * @public
-         * @readonly
-         */
-        readonly device: DeviceID,
-        /**
-         * @summary `acdGroup`.
-         * @description
-         *
-         * If provided, limit the result to this ACD group.
-         * @public
-         * @readonly
-         */
-        readonly acdGroup?: OPTIONAL<DeviceID>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        device: DeviceID,
+        acdGroup?: OPTIONAL<DeviceID>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.device = device;
+        this.acdGroup = acdGroup;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a GetAgentStateArgument

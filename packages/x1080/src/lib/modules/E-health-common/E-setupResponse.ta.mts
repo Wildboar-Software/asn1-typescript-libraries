@@ -41,36 +41,44 @@ import {
  *
  */
 export class E_setupResponse {
+    /**
+     * @summary `sessionType`.
+     * @description
+     *
+     * Same value as in the corresponding request.
+     * ITU-T Rec. X.1080.1 (05/2018) §11.1.2 a).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sessionType: SessionType;
+    /**
+     * @summary `sessionId`.
+     * @description
+     *
+     * Same value as in the corresponding request.
+     * ITU-T Rec. X.1080.1 (05/2018) §11.1.2 b).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sessionId: SessionId;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `sessionType`.
-         * @description
-         *
-         * Same value as in the corresponding request.
-         * ITU-T Rec. X.1080.1 (05/2018) §11.1.2 a).
-         *
-         * @public
-         * @readonly
-         */
-        readonly sessionType: SessionType,
-        /**
-         * @summary `sessionId`.
-         * @description
-         *
-         * Same value as in the corresponding request.
-         * ITU-T Rec. X.1080.1 (05/2018) §11.1.2 b).
-         *
-         * @public
-         * @readonly
-         */
-        readonly sessionId: SessionId,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        sessionType: SessionType,
+        sessionId: SessionId,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.sessionType = sessionType;
+        this.sessionId = sessionId;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a E_setupResponse

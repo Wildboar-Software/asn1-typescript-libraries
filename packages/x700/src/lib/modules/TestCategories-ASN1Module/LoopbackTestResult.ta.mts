@@ -50,59 +50,71 @@ import {
  *
  */
 export class LoopbackTestResult {
+    /**
+     * @summary `passed`.
+     * @description
+     *
+     * Returned looped-back data and measured error
+     * when all patterns succeeded and the threshold was not exceeded.
+     * X.737 §7.4.8.
+     * @public
+     * @readonly
+     */
+    public readonly passed: LoopbackTestResult_passed;
+    /**
+     * @summary `fail`.
+     * @description
+     *
+     * Failure cause: error threshold or loopback
+     * time-out exceeded. X.737 §7.4.8.
+     * @public
+     * @readonly
+     */
+    public readonly fail: LoopbackFailInfo;
+    /**
+     * @summary `timeout`.
+     * @description
+     *
+     * NULL: overall test time-out period exceeded
+     * (including set-up and loopback time-outs). X.737 §7.4.8, A.7.
+     * @public
+     * @readonly
+     */
+    public readonly timeout: NULL;
+    /**
+     * @summary `prematureTermination`.
+     * @description
+     *
+     * NULL: procedural failure or
+     * TERMINATE REQUEST. X.737 §7.4.8.
+     * @public
+     * @readonly
+     */
+    public readonly prematureTermination: NULL;
+    /**
+     * @summary `inconclusive`.
+     * @description
+     *
+     * NULL: none of the other outcomes.
+     * X.737 §7.4.8.
+     * @public
+     * @readonly
+     */
+    public readonly inconclusive: NULL;
+
     constructor(
-        /**
-         * @summary `passed`.
-         * @description
-         *
-         * Returned looped-back data and measured error
-         * when all patterns succeeded and the threshold was not exceeded.
-         * X.737 §7.4.8.
-         * @public
-         * @readonly
-         */
-        readonly passed: LoopbackTestResult_passed,
-        /**
-         * @summary `fail`.
-         * @description
-         *
-         * Failure cause: error threshold or loopback
-         * time-out exceeded. X.737 §7.4.8.
-         * @public
-         * @readonly
-         */
-        readonly fail: LoopbackFailInfo,
-        /**
-         * @summary `timeout`.
-         * @description
-         *
-         * NULL: overall test time-out period exceeded
-         * (including set-up and loopback time-outs). X.737 §7.4.8, A.7.
-         * @public
-         * @readonly
-         */
-        readonly timeout: NULL,
-        /**
-         * @summary `prematureTermination`.
-         * @description
-         *
-         * NULL: procedural failure or
-         * TERMINATE REQUEST. X.737 §7.4.8.
-         * @public
-         * @readonly
-         */
-        readonly prematureTermination: NULL,
-        /**
-         * @summary `inconclusive`.
-         * @description
-         *
-         * NULL: none of the other outcomes.
-         * X.737 §7.4.8.
-         * @public
-         * @readonly
-         */
-        readonly inconclusive: NULL
-    ) {}
+        passed: LoopbackTestResult_passed,
+        fail: LoopbackFailInfo,
+        timeout: NULL,
+        prematureTermination: NULL,
+        inconclusive: NULL
+    ) {
+        this.passed = passed;
+        this.fail = fail;
+        this.timeout = timeout;
+        this.prematureTermination = prematureTermination;
+        this.inconclusive = inconclusive;
+    }
 
     /**
      * @summary Restructures an object into a LoopbackTestResult

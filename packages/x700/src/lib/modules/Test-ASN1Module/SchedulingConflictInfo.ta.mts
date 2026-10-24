@@ -79,102 +79,120 @@ import {
  *
  */
 export class SchedulingConflictInfo {
+    /**
+     * @summary `testInvocationId`.
+     * @description
+     *
+     * The conflicting controlled test. Mandatory. ITU-T Rec. X.745 (11/93)
+     * §9.10.
+     * [§9.10](https://www.itu.int/rec/T-REC-X.745-199311-I)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly testInvocationId: TestInvocationId;
+    /**
+     * @summary `testSessionId`.
+     * @description
+     *
+     * Present if supplied at initiation. ITU-T Rec. X.745 (11/93) §9.10,
+     * 7.3.2.
+     * [§9.10](https://www.itu.int/rec/T-REC-X.745-199311-I)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly testSessionId: OPTIONAL<TestSessionId>;
+    /**
+     * @summary `startTime`.
+     * @description
+     *
+     * Requested earliest enter-Testing time. Mandatory. ITU-T Rec. X.745
+     * (11/93) §8.2.3, 9.10.
+     * [§8.2.3](https://www.itu.int/rec/T-REC-X.745-199311-I)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly startTime: StartTime;
+    /**
+     * @summary `endTime`.
+     * @description
+     *
+     * Requested latest leave-Testing time. Mandatory. ITU-T Rec. X.745
+     * (11/93) §8.2.3, 9.10.
+     * [§8.2.3](https://www.itu.int/rec/T-REC-X.745-199311-I)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly endTime: EndTime;
+    /**
+     * @summary `actualStartTime`.
+     * @description
+     *
+     * Performer actual/expected start that conflicts with the window. ITU-T
+     * Rec. X.745 (11/93) §7.2.2, 9.10.
+     * [§7.2.2](https://www.itu.int/rec/T-REC-X.745-199311-I)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly actualStartTime: ActualStartTime;
+    /**
+     * @summary `actualStopTime`.
+     * @description
+     *
+     * Performer actual/expected stop that conflicts with the window. ITU-T
+     * Rec. X.745 (11/93) §7.2.2, 9.10.
+     * [§7.2.2](https://www.itu.int/rec/T-REC-X.745-199311-I)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly actualStopTime: ActualStopTime;
+    /**
+     * @summary `additionalText`.
+     * @description
+     *
+     * X.733 additionalText. ITU-T Rec. X.745 (11/93) §8.6, 9.10.
+     * [§8.6](https://www.itu.int/rec/T-REC-X.745-199311-I)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly additionalText?: OPTIONAL<AdditionalText>;
+    /**
+     * @summary `additionalInformation`.
+     * @description
+     *
+     * X.733 additionalInformation. ITU-T Rec. X.745 (11/93) §8.6, 9.10.
+     * [§8.6](https://www.itu.int/rec/T-REC-X.745-199311-I)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly additionalInformation?: OPTIONAL<AdditionalInformation>;
+
     constructor(
-        /**
-         * @summary `testInvocationId`.
-         * @description
-         *
-         * The conflicting controlled test. Mandatory. ITU-T Rec. X.745 (11/93)
-         * §9.10.
-         * [§9.10](https://www.itu.int/rec/T-REC-X.745-199311-I)
-         *
-         * @public
-         * @readonly
-         */
-        readonly testInvocationId: TestInvocationId,
-        /**
-         * @summary `testSessionId`.
-         * @description
-         *
-         * Present if supplied at initiation. ITU-T Rec. X.745 (11/93) §9.10,
-         * 7.3.2.
-         * [§9.10](https://www.itu.int/rec/T-REC-X.745-199311-I)
-         *
-         * @public
-         * @readonly
-         */
-        readonly testSessionId: OPTIONAL<TestSessionId>,
-        /**
-         * @summary `startTime`.
-         * @description
-         *
-         * Requested earliest enter-Testing time. Mandatory. ITU-T Rec. X.745
-         * (11/93) §8.2.3, 9.10.
-         * [§8.2.3](https://www.itu.int/rec/T-REC-X.745-199311-I)
-         *
-         * @public
-         * @readonly
-         */
-        readonly startTime: StartTime,
-        /**
-         * @summary `endTime`.
-         * @description
-         *
-         * Requested latest leave-Testing time. Mandatory. ITU-T Rec. X.745
-         * (11/93) §8.2.3, 9.10.
-         * [§8.2.3](https://www.itu.int/rec/T-REC-X.745-199311-I)
-         *
-         * @public
-         * @readonly
-         */
-        readonly endTime: EndTime,
-        /**
-         * @summary `actualStartTime`.
-         * @description
-         *
-         * Performer actual/expected start that conflicts with the window. ITU-T
-         * Rec. X.745 (11/93) §7.2.2, 9.10.
-         * [§7.2.2](https://www.itu.int/rec/T-REC-X.745-199311-I)
-         *
-         * @public
-         * @readonly
-         */
-        readonly actualStartTime: ActualStartTime,
-        /**
-         * @summary `actualStopTime`.
-         * @description
-         *
-         * Performer actual/expected stop that conflicts with the window. ITU-T
-         * Rec. X.745 (11/93) §7.2.2, 9.10.
-         * [§7.2.2](https://www.itu.int/rec/T-REC-X.745-199311-I)
-         *
-         * @public
-         * @readonly
-         */
-        readonly actualStopTime: ActualStopTime,
-        /**
-         * @summary `additionalText`.
-         * @description
-         *
-         * X.733 additionalText. ITU-T Rec. X.745 (11/93) §8.6, 9.10.
-         * [§8.6](https://www.itu.int/rec/T-REC-X.745-199311-I)
-         *
-         * @public
-         * @readonly
-         */
-        readonly additionalText?: OPTIONAL<AdditionalText>,
-        /**
-         * @summary `additionalInformation`.
-         * @description
-         *
-         * X.733 additionalInformation. ITU-T Rec. X.745 (11/93) §8.6, 9.10.
-         * [§8.6](https://www.itu.int/rec/T-REC-X.745-199311-I)
-         *
-         * @public
-         * @readonly
-         */
-        readonly additionalInformation?: OPTIONAL<AdditionalInformation>
-    ) {}
+        testInvocationId: TestInvocationId,
+        testSessionId: OPTIONAL<TestSessionId>,
+        startTime: StartTime,
+        endTime: EndTime,
+        actualStartTime: ActualStartTime,
+        actualStopTime: ActualStopTime,
+        additionalText?: OPTIONAL<AdditionalText>,
+        additionalInformation?: OPTIONAL<AdditionalInformation>
+    ) {
+        this.testInvocationId = testInvocationId;
+        this.testSessionId = testSessionId;
+        this.startTime = startTime;
+        this.endTime = endTime;
+        this.actualStartTime = actualStartTime;
+        this.actualStopTime = actualStopTime;
+        this.additionalText = additionalText;
+        this.additionalInformation = additionalInformation;
+    }
 
     /**
      * @summary Restructures an object into a SchedulingConflictInfo

@@ -33,43 +33,51 @@ import { Octet32, _decode_Octet32, _encode_Octet32 } from "../RSPDefinitions/Oct
  */
 export
 class EUICCSigned2 {
+    /**
+     * @summary `transactionId`.
+     * @description
+     * 
+     * Must be the session id. A mismatch is `invalidTransactionId` on the
+     * eUICC side of later checks, and an unknown id at the SM-DP+. SGP.22
+     * v3.1 §5.7.5.
+     * 
+     * @public
+     * @readonly
+     */
+    public readonly transactionId: TransactionId;
+    /**
+     * @summary `euiccOtpk`.
+     * @description
+     * 
+     * otPK.EUICC.KA, tag `'5F49'`. Input to the SM-DP+ side of the key
+     * agreement. SGP.22 v3.1 §2.6.4 and §5.7.5.
+     * 
+     * @public
+     * @readonly
+     */
+    public readonly euiccOtpk: OCTET_STRING;
+    /**
+     * @summary `hashCc`.
+     * @description
+     * 
+     * Confirmation Code hash, echoed from the request when the user entered
+     * a code. The SM-DP+ compares SHA-256(stored hash concatenated with the
+     * TransactionID) to this value. SGP.22 v3.1 §3.1.3.
+     * 
+     * @public
+     * @readonly
+     */
+    public readonly hashCc?: OPTIONAL<Octet32>;
+
     constructor (
-        /**
-         * @summary `transactionId`.
-         * @description
-         * 
-         * Must be the session id. A mismatch is `invalidTransactionId` on the
-         * eUICC side of later checks, and an unknown id at the SM-DP+. SGP.22
-         * v3.1 §5.7.5.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly transactionId: TransactionId,
-        /**
-         * @summary `euiccOtpk`.
-         * @description
-         * 
-         * otPK.EUICC.KA, tag `'5F49'`. Input to the SM-DP+ side of the key
-         * agreement. SGP.22 v3.1 §2.6.4 and §5.7.5.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly euiccOtpk: OCTET_STRING,
-        /**
-         * @summary `hashCc`.
-         * @description
-         * 
-         * Confirmation Code hash, echoed from the request when the user entered
-         * a code. The SM-DP+ compares SHA-256(stored hash concatenated with the
-         * TransactionID) to this value. SGP.22 v3.1 §3.1.3.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly hashCc?: OPTIONAL<Octet32>
-    ) {}
+        transactionId: TransactionId,
+        euiccOtpk: OCTET_STRING,
+        hashCc?: OPTIONAL<Octet32>
+    ) {
+        this.transactionId = transactionId;
+        this.euiccOtpk = euiccOtpk;
+        this.hashCc = hashCc;
+    }
 
     /**
      * @summary Restructures an object into a EUICCSigned2

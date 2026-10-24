@@ -39,34 +39,40 @@ import { ServiceError, _decode_ServiceError, _encode_ServiceError } from "../ISO
  */
 export
 class EventNotification_actionResult_successOrFailure_failure {
+    /**
+     * @summary `modifierPosition`.
+     * @description
+     *
+     * Index of the Event Action modifier that failed, if
+     * failure occurred during modifier execution.
+     *
+     * [ISO 9506-2:2003 §18.3.1.1]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly modifierPosition: OPTIONAL<Unsigned32>;
+    /**
+     * @summary `serviceError`.
+     * @description
+     *
+     * Result(-) of the confirmed service when Event Action
+     * execution failed in the requested service itself.
+     *
+     * [ISO 9506-1:2003 §18.3.1.1.8.4]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly serviceError: ServiceError;
+
     constructor (
-        /**
-         * @summary `modifierPosition`.
-         * @description
-         *
-         * Index of the Event Action modifier that failed, if
-         * failure occurred during modifier execution.
-         *
-         * [ISO 9506-2:2003 §18.3.1.1]
-         *
-         * @public
-         * @readonly
-         */
-        readonly modifierPosition: OPTIONAL<Unsigned32>,
-        /**
-         * @summary `serviceError`.
-         * @description
-         *
-         * Result(-) of the confirmed service when Event Action
-         * execution failed in the requested service itself.
-         *
-         * [ISO 9506-1:2003 §18.3.1.1.8.4]
-         *
-         * @public
-         * @readonly
-         */
-        readonly serviceError: ServiceError
-    ) {}
+        modifierPosition: OPTIONAL<Unsigned32>,
+        serviceError: ServiceError
+    ) {
+        this.modifierPosition = modifierPosition;
+        this.serviceError = serviceError;
+    }
 
     /**
      * @summary Restructures an object into a EventNotification_actionResult_successOrFailure_failure

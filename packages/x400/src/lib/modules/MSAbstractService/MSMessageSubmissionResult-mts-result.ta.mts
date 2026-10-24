@@ -61,40 +61,54 @@ import {
  *
  */
 export class MSMessageSubmissionResult_mts_result implements MessageSubmissionResult {
-    constructor(
-        /**
-         * @summary `message_submission_identifier`.
-         * @public
-         * @readonly
-         */
-        readonly message_submission_identifier: MessageSubmissionIdentifier /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `message_submission_time`.
-         * @public
-         * @readonly
-         */
-        readonly message_submission_time: MessageSubmissionTime /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `content_identifier`.
-         * @public
-         * @readonly
-         */
-        readonly content_identifier?: OPTIONAL<ContentIdentifier> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `extensions`.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<
+    /**
+     * @summary `message_submission_identifier`.
+     * @public
+     * @readonly
+     */
+    public readonly message_submission_identifier: MessageSubmissionIdentifier; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `message_submission_time`.
+     * @public
+     * @readonly
+     */
+    public readonly message_submission_time: MessageSubmissionTime; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `content_identifier`.
+     * @public
+     * @readonly
+     */
+    public readonly content_identifier?: OPTIONAL<ContentIdentifier>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<
             ExtensionField[]
-        > /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `ms_message_result`.
-         * @public
-         * @readonly
-         */
-        readonly ms_message_result?: OPTIONAL<CommonSubmissionResults>
-    ) {}
+        >; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `ms_message_result`.
+     * @public
+     * @readonly
+     */
+    public readonly ms_message_result?: OPTIONAL<CommonSubmissionResults>;
+
+    constructor(
+        message_submission_identifier: MessageSubmissionIdentifier,
+        message_submission_time: MessageSubmissionTime,
+        content_identifier?: OPTIONAL<ContentIdentifier>,
+        extensions?: OPTIONAL<
+            ExtensionField[]
+        >,
+        ms_message_result?: OPTIONAL<CommonSubmissionResults>
+    ) {
+        this.message_submission_identifier = message_submission_identifier;
+        this.message_submission_time = message_submission_time;
+        this.content_identifier = content_identifier;
+        this.extensions = extensions;
+        this.ms_message_result = ms_message_result;
+    }
 
     /**
      * @summary Restructures an object into a MSMessageSubmissionResult_mts_result

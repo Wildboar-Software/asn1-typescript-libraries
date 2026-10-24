@@ -40,20 +40,26 @@ import {
  *
  */
 export class EDIMIdentifier {
+    /**
+     * @summary `user`.
+     * @public
+     * @readonly
+     */
+    public readonly user: ORName;
+    /**
+     * @summary `user_relative_identifier`.
+     * @public
+     * @readonly
+     */
+    public readonly user_relative_identifier: LocalReference;
+
     constructor(
-        /**
-         * @summary `user`.
-         * @public
-         * @readonly
-         */
-        readonly user: ORName,
-        /**
-         * @summary `user_relative_identifier`.
-         * @public
-         * @readonly
-         */
-        readonly user_relative_identifier: LocalReference
-    ) {}
+        user: ORName,
+        user_relative_identifier: LocalReference
+    ) {
+        this.user = user;
+        this.user_relative_identifier = user_relative_identifier;
+    }
 
     /**
      * @summary Restructures an object into a EDIMIdentifier

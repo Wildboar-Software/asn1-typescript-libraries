@@ -65,40 +65,54 @@ import {
  *
  */
 export class DeliveryControlResult implements Waiting {
-    constructor(
-        /**
-         * @summary `waiting_operations`.
-         * @public
-         * @readonly
-         */
-        readonly waiting_operations?: OPTIONAL<Operations> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `waiting_messages`.
-         * @public
-         * @readonly
-         */
-        readonly waiting_messages?: OPTIONAL<WaitingMessages> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `waiting_content_types`.
-         * @public
-         * @readonly
-         */
-        readonly waiting_content_types?: OPTIONAL<
+    /**
+     * @summary `waiting_operations`.
+     * @public
+     * @readonly
+     */
+    public readonly waiting_operations?: OPTIONAL<Operations>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `waiting_messages`.
+     * @public
+     * @readonly
+     */
+    public readonly waiting_messages?: OPTIONAL<WaitingMessages>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `waiting_content_types`.
+     * @public
+     * @readonly
+     */
+    public readonly waiting_content_types?: OPTIONAL<
             ContentType[]
-        > /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `waiting_encoded_information_types`.
-         * @public
-         * @readonly
-         */
-        readonly waiting_encoded_information_types?: OPTIONAL<EncodedInformationTypes> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `extensions`.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<ExtensionField[]>
-    ) {}
+        >; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `waiting_encoded_information_types`.
+     * @public
+     * @readonly
+     */
+    public readonly waiting_encoded_information_types?: OPTIONAL<EncodedInformationTypes>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<ExtensionField[]>;
+
+    constructor(
+        waiting_operations?: OPTIONAL<Operations>,
+        waiting_messages?: OPTIONAL<WaitingMessages>,
+        waiting_content_types?: OPTIONAL<
+            ContentType[]
+        >,
+        waiting_encoded_information_types?: OPTIONAL<EncodedInformationTypes>,
+        extensions?: OPTIONAL<ExtensionField[]>
+    ) {
+        this.waiting_operations = waiting_operations;
+        this.waiting_messages = waiting_messages;
+        this.waiting_content_types = waiting_content_types;
+        this.waiting_encoded_information_types = waiting_encoded_information_types;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a DeliveryControlResult

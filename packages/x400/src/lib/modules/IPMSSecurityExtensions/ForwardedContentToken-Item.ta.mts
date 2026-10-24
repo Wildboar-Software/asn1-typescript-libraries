@@ -34,20 +34,26 @@ import {
  *
  */
 export class ForwardedContentToken_Item {
+    /**
+     * @summary `body_part_number`.
+     * @public
+     * @readonly
+     */
+    public readonly body_part_number: BodyPartNumber;
+    /**
+     * @summary `body_part_choice`.
+     * @public
+     * @readonly
+     */
+    public readonly body_part_choice: ForwardedContentToken_Item_body_part_choice;
+
     constructor(
-        /**
-         * @summary `body_part_number`.
-         * @public
-         * @readonly
-         */
-        readonly body_part_number: BodyPartNumber,
-        /**
-         * @summary `body_part_choice`.
-         * @public
-         * @readonly
-         */
-        readonly body_part_choice: ForwardedContentToken_Item_body_part_choice
-    ) {}
+        body_part_number: BodyPartNumber,
+        body_part_choice: ForwardedContentToken_Item_body_part_choice
+    ) {
+        this.body_part_number = body_part_number;
+        this.body_part_choice = body_part_choice;
+    }
 
     /**
      * @summary Restructures an object into a ForwardedContentToken_Item

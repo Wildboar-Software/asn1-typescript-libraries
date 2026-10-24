@@ -41,29 +41,35 @@ import {
  *
  */
 export class GetBIRFromHandle_RequestParams {
+  /**
+   * @summary `originalBSPHandle`.
+   * @description
+   *
+   * Attach-session handle at the hosting endpoint, not the
+   * application's local handle. X.1083 Table 58, clause 26.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly originalBSPHandle: BioAPI_HANDLE;
+  /**
+   * @summary `birHandle`.
+   * @description
+   *
+   * BIR handle whose BIR is requested. X.1083 Table 58, §15.12.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly birHandle: BioAPI_BIR_HANDLE;
+
   constructor(
-    /**
-     * @summary `originalBSPHandle`.
-     * @description
-     *
-     * Attach-session handle at the hosting endpoint, not the
-     * application's local handle. X.1083 Table 58, clause 26.
-     *
-     * @public
-     * @readonly
-     */
-    readonly originalBSPHandle: BioAPI_HANDLE,
-    /**
-     * @summary `birHandle`.
-     * @description
-     *
-     * BIR handle whose BIR is requested. X.1083 Table 58, §15.12.
-     *
-     * @public
-     * @readonly
-     */
-    readonly birHandle: BioAPI_BIR_HANDLE
-  ) {}
+    originalBSPHandle: BioAPI_HANDLE,
+    birHandle: BioAPI_BIR_HANDLE
+  ) {
+    this.originalBSPHandle = originalBSPHandle;
+    this.birHandle = birHandle;
+  }
 
   /**
    * @summary Restructures an object into a GetBIRFromHandle_RequestParams

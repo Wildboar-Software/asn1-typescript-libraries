@@ -52,32 +52,42 @@ import {
  *
  */
 export class ReceiptFields {
+    /**
+     * @summary `receipt_time`.
+     * @public
+     * @readonly
+     */
+    public readonly receipt_time: ReceiptTimeField;
+    /**
+     * @summary `acknowledgment_mode`.
+     * @public
+     * @readonly
+     */
+    public readonly acknowledgment_mode?: OPTIONAL<AcknowledgmentModeField>;
+    /**
+     * @summary `suppl_receipt_info`.
+     * @public
+     * @readonly
+     */
+    public readonly suppl_receipt_info?: OPTIONAL<SupplReceiptInfoField>;
+    /**
+     * @summary `rn_extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly rn_extensions?: OPTIONAL<RNExtensionsField>;
+
     constructor(
-        /**
-         * @summary `receipt_time`.
-         * @public
-         * @readonly
-         */
-        readonly receipt_time: ReceiptTimeField,
-        /**
-         * @summary `acknowledgment_mode`.
-         * @public
-         * @readonly
-         */
-        readonly acknowledgment_mode?: OPTIONAL<AcknowledgmentModeField>,
-        /**
-         * @summary `suppl_receipt_info`.
-         * @public
-         * @readonly
-         */
-        readonly suppl_receipt_info?: OPTIONAL<SupplReceiptInfoField>,
-        /**
-         * @summary `rn_extensions`.
-         * @public
-         * @readonly
-         */
-        readonly rn_extensions?: OPTIONAL<RNExtensionsField>
-    ) {}
+        receipt_time: ReceiptTimeField,
+        acknowledgment_mode?: OPTIONAL<AcknowledgmentModeField>,
+        suppl_receipt_info?: OPTIONAL<SupplReceiptInfoField>,
+        rn_extensions?: OPTIONAL<RNExtensionsField>
+    ) {
+        this.receipt_time = receipt_time;
+        this.acknowledgment_mode = acknowledgment_mode;
+        this.suppl_receipt_info = suppl_receipt_info;
+        this.rn_extensions = rn_extensions;
+    }
 
     /**
      * @summary Restructures an object into a ReceiptFields

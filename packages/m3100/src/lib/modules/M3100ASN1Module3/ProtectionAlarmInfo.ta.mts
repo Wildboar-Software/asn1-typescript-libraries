@@ -36,20 +36,26 @@ import {
  *
  */
 export class ProtectionAlarmInfo {
+    /**
+     * @summary `probableCause`.
+     * @public
+     * @readonly
+     */
+    public readonly probableCause: ProbableCause;
+    /**
+     * @summary `additionalInfo`.
+     * @public
+     * @readonly
+     */
+    public readonly additionalInfo: AdditionalInformation;
+
     constructor(
-        /**
-         * @summary `probableCause`.
-         * @public
-         * @readonly
-         */
-        readonly probableCause: ProbableCause,
-        /**
-         * @summary `additionalInfo`.
-         * @public
-         * @readonly
-         */
-        readonly additionalInfo: AdditionalInformation
-    ) {}
+        probableCause: ProbableCause,
+        additionalInfo: AdditionalInformation
+    ) {
+        this.probableCause = probableCause;
+        this.additionalInfo = additionalInfo;
+    }
 
     /**
      * @summary Restructures an object into a ProtectionAlarmInfo

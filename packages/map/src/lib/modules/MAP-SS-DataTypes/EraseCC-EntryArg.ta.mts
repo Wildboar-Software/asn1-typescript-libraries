@@ -29,34 +29,42 @@ import { CCBS_Index, _decode_CCBS_Index, _encode_CCBS_Index } from "../MAP-SS-Da
  */
 export
 class EraseCC_EntryArg {
+    /**
+     * @summary `ss_Code`.
+     * @description
+     *
+     * Call-completion SS-Code.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ss_Code: SS_Code;
+    /**
+     * @summary `ccbs_Index`.
+     * @description
+     *
+     * CCBS request index to erase, if present.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ccbs_Index?: OPTIONAL<CCBS_Index>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `ss_Code`.
-         * @description
-         *
-         * Call-completion SS-Code.
-         *
-         * @public
-         * @readonly
-         */
-        readonly ss_Code: SS_Code,
-        /**
-         * @summary `ccbs_Index`.
-         * @description
-         *
-         * CCBS request index to erase, if present.
-         *
-         * @public
-         * @readonly
-         */
-        readonly ccbs_Index?: OPTIONAL<CCBS_Index>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        ss_Code: SS_Code,
+        ccbs_Index?: OPTIONAL<CCBS_Index>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.ss_Code = ss_Code;
+        this.ccbs_Index = ccbs_Index;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a EraseCC_EntryArg

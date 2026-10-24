@@ -38,26 +38,34 @@ import {
  *
  */
 export class TroubleProgressInfo {
+    /**
+     * @summary `troubleReportStatus`.
+     * @public
+     * @readonly
+     */
+    public readonly troubleReportStatus: TroubleReportStatus;
+    /**
+     * @summary `additionalTroubleStatusInfo`.
+     * @public
+     * @readonly
+     */
+    public readonly additionalTroubleStatusInfo?: OPTIONAL<AdditionalTroubleStatusInfo>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `troubleReportStatus`.
-         * @public
-         * @readonly
-         */
-        readonly troubleReportStatus: TroubleReportStatus,
-        /**
-         * @summary `additionalTroubleStatusInfo`.
-         * @public
-         * @readonly
-         */
-        readonly additionalTroubleStatusInfo?: OPTIONAL<AdditionalTroubleStatusInfo>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        troubleReportStatus: TroubleReportStatus,
+        additionalTroubleStatusInfo?: OPTIONAL<AdditionalTroubleStatusInfo>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.troubleReportStatus = troubleReportStatus;
+        this.additionalTroubleStatusInfo = additionalTroubleStatusInfo;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a TroubleProgressInfo

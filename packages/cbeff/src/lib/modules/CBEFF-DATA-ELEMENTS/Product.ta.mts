@@ -28,20 +28,26 @@ import * as $ from '@wildboar/asn1/functional';
  *
  */
 export class Product {
+  /**
+   * @summary `product_owner`.
+   * @public
+   * @readonly
+   */
+  public readonly product_owner?: OPTIONAL<INTEGER>;
+  /**
+   * @summary `product_type`.
+   * @public
+   * @readonly
+   */
+  public readonly product_type?: OPTIONAL<INTEGER>;
+
   constructor(
-    /**
-     * @summary `product_owner`.
-     * @public
-     * @readonly
-     */
-    readonly product_owner?: OPTIONAL<INTEGER>,
-    /**
-     * @summary `product_type`.
-     * @public
-     * @readonly
-     */
-    readonly product_type?: OPTIONAL<INTEGER>
-  ) {}
+    product_owner?: OPTIONAL<INTEGER>,
+    product_type?: OPTIONAL<INTEGER>
+  ) {
+    this.product_owner = product_owner;
+    this.product_type = product_type;
+  }
 
   /**
    * @summary Restructures an object into a Product

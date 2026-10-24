@@ -22,34 +22,42 @@ import * as $ from "@wildboar/asn1/functional";
  *
  */
 export class TimeSpecification_time_absolute {
+    /**
+     * @summary `startTime`.
+     * @description
+     *
+     * Equal to `endTime` ⇒ instant.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly startTime?: OPTIONAL<GeneralizedTime>;
+    /**
+     * @summary `endTime`.
+     * @description
+     *
+     * Missing ⇒ all times after `startTime`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly endTime?: OPTIONAL<GeneralizedTime>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `startTime`.
-         * @description
-         *
-         * Equal to `endTime` ⇒ instant.
-         *
-         * @public
-         * @readonly
-         */
-        readonly startTime?: OPTIONAL<GeneralizedTime>,
-        /**
-         * @summary `endTime`.
-         * @description
-         *
-         * Missing ⇒ all times after `startTime`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly endTime?: OPTIONAL<GeneralizedTime>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        startTime?: OPTIONAL<GeneralizedTime>,
+        endTime?: OPTIONAL<GeneralizedTime>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.startTime = startTime;
+        this.endTime = endTime;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a TimeSpecification_time_absolute

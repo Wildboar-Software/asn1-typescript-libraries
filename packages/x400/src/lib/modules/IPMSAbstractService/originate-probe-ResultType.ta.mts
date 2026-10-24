@@ -34,20 +34,26 @@ import {
  *
  */
 export class originate_probe_ResultType {
+    /**
+     * @summary `submission_identifier`.
+     * @public
+     * @readonly
+     */
+    public readonly submission_identifier: ProbeSubmissionIdentifier;
+    /**
+     * @summary `submission_time`.
+     * @public
+     * @readonly
+     */
+    public readonly submission_time: ProbeSubmissionTime;
+
     constructor(
-        /**
-         * @summary `submission_identifier`.
-         * @public
-         * @readonly
-         */
-        readonly submission_identifier: ProbeSubmissionIdentifier,
-        /**
-         * @summary `submission_time`.
-         * @public
-         * @readonly
-         */
-        readonly submission_time: ProbeSubmissionTime
-    ) {}
+        submission_identifier: ProbeSubmissionIdentifier,
+        submission_time: ProbeSubmissionTime
+    ) {
+        this.submission_identifier = submission_identifier;
+        this.submission_time = submission_time;
+    }
 
     /**
      * @summary Restructures an object into a originate_probe_ResultType

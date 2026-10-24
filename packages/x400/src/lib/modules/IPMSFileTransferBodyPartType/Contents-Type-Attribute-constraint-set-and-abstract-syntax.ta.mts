@@ -34,20 +34,26 @@ import {
  *
  */
 export class Contents_Type_Attribute_constraint_set_and_abstract_syntax {
+    /**
+     * @summary `constraint_set_name`.
+     * @public
+     * @readonly
+     */
+    public readonly constraint_set_name: Constraint_Set_Name;
+    /**
+     * @summary `abstract_syntax_name`.
+     * @public
+     * @readonly
+     */
+    public readonly abstract_syntax_name: Abstract_Syntax_Name;
+
     constructor(
-        /**
-         * @summary `constraint_set_name`.
-         * @public
-         * @readonly
-         */
-        readonly constraint_set_name: Constraint_Set_Name,
-        /**
-         * @summary `abstract_syntax_name`.
-         * @public
-         * @readonly
-         */
-        readonly abstract_syntax_name: Abstract_Syntax_Name
-    ) {}
+        constraint_set_name: Constraint_Set_Name,
+        abstract_syntax_name: Abstract_Syntax_Name
+    ) {
+        this.constraint_set_name = constraint_set_name;
+        this.abstract_syntax_name = abstract_syntax_name;
+    }
 
     /**
      * @summary Restructures an object into a Contents_Type_Attribute_constraint_set_and_abstract_syntax

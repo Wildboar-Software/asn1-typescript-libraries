@@ -35,20 +35,26 @@ import {
  *
  */
 export class register_ms_error_ParameterType {
+    /**
+     * @summary `problem`.
+     * @public
+     * @readonly
+     */
+    public readonly problem: RegistrationProblem;
+    /**
+     * @summary `registration_type`.
+     * @public
+     * @readonly
+     */
+    public readonly registration_type: RegistrationTypes;
+
     constructor(
-        /**
-         * @summary `problem`.
-         * @public
-         * @readonly
-         */
-        readonly problem: RegistrationProblem,
-        /**
-         * @summary `registration_type`.
-         * @public
-         * @readonly
-         */
-        readonly registration_type: RegistrationTypes
-    ) {}
+        problem: RegistrationProblem,
+        registration_type: RegistrationTypes
+    ) {
+        this.problem = problem;
+        this.registration_type = registration_type;
+    }
 
     /**
      * @summary Restructures an object into a register_ms_error_ParameterType

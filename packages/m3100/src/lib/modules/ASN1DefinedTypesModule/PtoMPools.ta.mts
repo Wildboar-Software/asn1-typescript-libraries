@@ -35,20 +35,26 @@ import {
  *
  */
 export class PtoMPools {
+    /**
+     * @summary `fromTp`.
+     * @public
+     * @readonly
+     */
+    public readonly fromTp: ExplicitTP;
+    /**
+     * @summary `toTPPools`.
+     * @public
+     * @readonly
+     */
+    public readonly toTPPools: ToTPPools;
+
     constructor(
-        /**
-         * @summary `fromTp`.
-         * @public
-         * @readonly
-         */
-        readonly fromTp: ExplicitTP,
-        /**
-         * @summary `toTPPools`.
-         * @public
-         * @readonly
-         */
-        readonly toTPPools: ToTPPools
-    ) {}
+        fromTp: ExplicitTP,
+        toTPPools: ToTPPools
+    ) {
+        this.fromTp = fromTp;
+        this.toTPPools = toTPPools;
+    }
 
     /**
      * @summary Restructures an object into a PtoMPools

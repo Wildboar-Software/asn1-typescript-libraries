@@ -42,57 +42,69 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class SetButtonInformationArgument {
+    /**
+     * @summary `device`.
+     * @description
+     *
+     * Physical-element DeviceID; other IDs are rejected (ECMA-269 §21 FR
+     * 1).
+     * @public
+     * @readonly
+     */
+    public readonly device: DeviceID;
+    /**
+     * @summary `button`.
+     * @description
+     *
+     * Button to set. Reserved ButtonIDs in Table 12-3: `0`–`9`, `*`=10,
+     * `#`=11 (ECMA-269 §12.3.5).
+     * @public
+     * @readonly
+     */
+    public readonly button: ButtonID;
+    /**
+     * @summary `buttonLabel`.
+     * @description
+     *
+     * Label by which the button may be referenced. Max length from
+     * capabilities exchange.
+     * @public
+     * @readonly
+     */
+    public readonly buttonLabel?: OPTIONAL<IA5String>;
+    /**
+     * @summary `buttonAssociatedNumber`.
+     * @description
+     *
+     * Diallable-digits string associated with the button (e.g. speed-dial).
+     * @public
+     * @readonly
+     */
+    public readonly buttonAssociatedNumber?: OPTIONAL<DeviceID>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `device`.
-         * @description
-         *
-         * Physical-element DeviceID; other IDs are rejected (ECMA-269 §21 FR
-         * 1).
-         * @public
-         * @readonly
-         */
-        readonly device: DeviceID,
-        /**
-         * @summary `button`.
-         * @description
-         *
-         * Button to set. Reserved ButtonIDs in Table 12-3: `0`–`9`, `*`=10,
-         * `#`=11 (ECMA-269 §12.3.5).
-         * @public
-         * @readonly
-         */
-        readonly button: ButtonID,
-        /**
-         * @summary `buttonLabel`.
-         * @description
-         *
-         * Label by which the button may be referenced. Max length from
-         * capabilities exchange.
-         * @public
-         * @readonly
-         */
-        readonly buttonLabel?: OPTIONAL<IA5String>,
-        /**
-         * @summary `buttonAssociatedNumber`.
-         * @description
-         *
-         * Diallable-digits string associated with the button (e.g. speed-dial).
-         * @public
-         * @readonly
-         */
-        readonly buttonAssociatedNumber?: OPTIONAL<DeviceID>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        device: DeviceID,
+        button: ButtonID,
+        buttonLabel?: OPTIONAL<IA5String>,
+        buttonAssociatedNumber?: OPTIONAL<DeviceID>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.device = device;
+        this.button = button;
+        this.buttonLabel = buttonLabel;
+        this.buttonAssociatedNumber = buttonAssociatedNumber;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a SetButtonInformationArgument

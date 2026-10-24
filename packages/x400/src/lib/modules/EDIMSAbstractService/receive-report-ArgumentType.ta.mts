@@ -35,20 +35,26 @@ import {
  *
  */
 export class receive_report_ArgumentType {
+    /**
+     * @summary `envelope`.
+     * @public
+     * @readonly
+     */
+    public readonly envelope: ReportDeliveryEnvelope;
+    /**
+     * @summary `undelivered_object`.
+     * @public
+     * @readonly
+     */
+    public readonly undelivered_object?: OPTIONAL<InformationObject>;
+
     constructor(
-        /**
-         * @summary `envelope`.
-         * @public
-         * @readonly
-         */
-        readonly envelope: ReportDeliveryEnvelope,
-        /**
-         * @summary `undelivered_object`.
-         * @public
-         * @readonly
-         */
-        readonly undelivered_object?: OPTIONAL<InformationObject>
-    ) {}
+        envelope: ReportDeliveryEnvelope,
+        undelivered_object?: OPTIONAL<InformationObject>
+    ) {
+        this.envelope = envelope;
+        this.undelivered_object = undelivered_object;
+    }
 
     /**
      * @summary Restructures an object into a receive_report_ArgumentType

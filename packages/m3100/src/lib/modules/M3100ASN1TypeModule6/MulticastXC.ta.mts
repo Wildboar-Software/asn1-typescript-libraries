@@ -32,26 +32,34 @@ import {
  *
  */
 export class MulticastXC {
+    /**
+     * @summary `mpXC`.
+     * @public
+     * @readonly
+     */
+    public readonly mpXC: ObjectInstance;
+    /**
+     * @summary `xcA`.
+     * @public
+     * @readonly
+     */
+    public readonly xcA: ObjectInstance;
+    /**
+     * @summary `xcB`.
+     * @public
+     * @readonly
+     */
+    public readonly xcB: ObjectInstance;
+
     constructor(
-        /**
-         * @summary `mpXC`.
-         * @public
-         * @readonly
-         */
-        readonly mpXC: ObjectInstance,
-        /**
-         * @summary `xcA`.
-         * @public
-         * @readonly
-         */
-        readonly xcA: ObjectInstance,
-        /**
-         * @summary `xcB`.
-         * @public
-         * @readonly
-         */
-        readonly xcB: ObjectInstance
-    ) {}
+        mpXC: ObjectInstance,
+        xcA: ObjectInstance,
+        xcB: ObjectInstance
+    ) {
+        this.mpXC = mpXC;
+        this.xcA = xcA;
+        this.xcB = xcB;
+    }
 
     /**
      * @summary Restructures an object into a MulticastXC

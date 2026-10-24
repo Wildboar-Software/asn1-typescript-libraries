@@ -38,20 +38,26 @@ import {
  *
  */
 export class NNPDAUReasonCodeField {
+    /**
+     * @summary `nn_pdau_basic_code`.
+     * @public
+     * @readonly
+     */
+    public readonly nn_pdau_basic_code: NNPDAUBasicCodeField;
+    /**
+     * @summary `nn_pdau_diagnostic`.
+     * @public
+     * @readonly
+     */
+    public readonly nn_pdau_diagnostic?: OPTIONAL<NNPDAUDiagnosticField>;
+
     constructor(
-        /**
-         * @summary `nn_pdau_basic_code`.
-         * @public
-         * @readonly
-         */
-        readonly nn_pdau_basic_code: NNPDAUBasicCodeField,
-        /**
-         * @summary `nn_pdau_diagnostic`.
-         * @public
-         * @readonly
-         */
-        readonly nn_pdau_diagnostic?: OPTIONAL<NNPDAUDiagnosticField>
-    ) {}
+        nn_pdau_basic_code: NNPDAUBasicCodeField,
+        nn_pdau_diagnostic?: OPTIONAL<NNPDAUDiagnosticField>
+    ) {
+        this.nn_pdau_basic_code = nn_pdau_basic_code;
+        this.nn_pdau_diagnostic = nn_pdau_diagnostic;
+    }
 
     /**
      * @summary Restructures an object into a NNPDAUReasonCodeField

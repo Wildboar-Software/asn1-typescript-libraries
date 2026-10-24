@@ -42,41 +42,49 @@ import {
  *
  */
 export class LaboratoryIdentification {
+    /**
+     * @summary `scheme`.
+     * @description
+     *
+     * `LABORATORY-SCHEME.&id` of the identification scheme.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly scheme: OBJECT_IDENTIFIER;
+    /**
+     * @summary `schemeName`.
+     * @description
+     *
+     * Optional `LABORATORY-SCHEME.&name`. ISO646String is not
+     * necessarily unique.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly schemeName?: OPTIONAL<SchemeName>;
+    /**
+     * @summary `qualifications`.
+     * @description
+     *
+     * Optional `LABORATORY-SCHEME.&Qualifications`. Typically
+     * signed by known authorities; type often includes public-key
+     * certificates.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly qualifications?: OPTIONAL<_Element>;
+
     constructor(
-        /**
-         * @summary `scheme`.
-         * @description
-         *
-         * `LABORATORY-SCHEME.&id` of the identification scheme.
-         *
-         * @public
-         * @readonly
-         */
-        readonly scheme: OBJECT_IDENTIFIER,
-        /**
-         * @summary `schemeName`.
-         * @description
-         *
-         * Optional `LABORATORY-SCHEME.&name`. ISO646String is not
-         * necessarily unique.
-         *
-         * @public
-         * @readonly
-         */
-        readonly schemeName?: OPTIONAL<SchemeName>,
-        /**
-         * @summary `qualifications`.
-         * @description
-         *
-         * Optional `LABORATORY-SCHEME.&Qualifications`. Typically
-         * signed by known authorities; type often includes public-key
-         * certificates.
-         *
-         * @public
-         * @readonly
-         */
-        readonly qualifications?: OPTIONAL<_Element>
-    ) {}
+        scheme: OBJECT_IDENTIFIER,
+        schemeName?: OPTIONAL<SchemeName>,
+        qualifications?: OPTIONAL<_Element>
+    ) {
+        this.scheme = scheme;
+        this.schemeName = schemeName;
+        this.qualifications = qualifications;
+    }
 
     /**
      * @summary Restructures an object into a LaboratoryIdentification

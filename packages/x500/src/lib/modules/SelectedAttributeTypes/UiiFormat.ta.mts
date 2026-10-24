@@ -46,39 +46,47 @@ import {
  *
  */
 export class UiiFormat {
+    /**
+     * @summary `baseObject`.
+     * @description
+     *
+     * URI of search base; omitted ⇒ start at root.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly baseObject: OPTIONAL<URI>;
+    /**
+     * @summary `subset`.
+     * @description
+     *
+     * DEFAULT baseObject. Recommended Search subset.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly subset: OPTIONAL<UiiFormat_subset>;
+    /**
+     * @summary `next`.
+     * @description
+     *
+     * Following UII field: fixed `length` vs `filter` for remaining
+     * bits.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly next: UiiFormat_next;
+
     constructor(
-        /**
-         * @summary `baseObject`.
-         * @description
-         *
-         * URI of search base; omitted ⇒ start at root.
-         *
-         * @public
-         * @readonly
-         */
-        readonly baseObject: OPTIONAL<URI>,
-        /**
-         * @summary `subset`.
-         * @description
-         *
-         * DEFAULT baseObject. Recommended Search subset.
-         *
-         * @public
-         * @readonly
-         */
-        readonly subset: OPTIONAL<UiiFormat_subset>,
-        /**
-         * @summary `next`.
-         * @description
-         *
-         * Following UII field: fixed `length` vs `filter` for remaining
-         * bits.
-         *
-         * @public
-         * @readonly
-         */
-        readonly next: UiiFormat_next
-    ) {}
+        baseObject: OPTIONAL<URI>,
+        subset: OPTIONAL<UiiFormat_subset>,
+        next: UiiFormat_next
+    ) {
+        this.baseObject = baseObject;
+        this.subset = subset;
+        this.next = next;
+    }
 
     /**
      * @summary Restructures an object into a UiiFormat

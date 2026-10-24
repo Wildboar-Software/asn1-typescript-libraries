@@ -35,51 +35,61 @@ import {
  *
  */
 export class asymmetricKeyInformation_KiType {
+  /**
+   * @summary `issuerCAName`.
+   * @description
+   *
+   * Name of the CA that issued the certificate, if a
+   * certificate identifies the key. ITU-T Rec. X.830 (04/95)
+   * Annex D.6.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly issuerCAName?: OPTIONAL<SecurityIdentity>;
+  /**
+   * @summary `certSerialNumber`.
+   * @description
+   *
+   * Certificate serial number, if a certificate identifies
+   * the key. ITU-T Rec. X.830 (04/95) Annex D.6.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly certSerialNumber?: OPTIONAL<INTEGER>;
+  /**
+   * @summary `signerName`.
+   * @description
+   *
+   * Name of the signer. ITU-T Rec. X.830 (04/95) Annex D.6.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly signerName?: OPTIONAL<SecurityIdentity>;
+  /**
+   * @summary `keyIdentifier`.
+   * @description
+   *
+   * Key identifier bits. ITU-T Rec. X.830 (04/95) Annex D.6.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly keyIdentifier?: OPTIONAL<BIT_STRING>;
+
   constructor(
-    /**
-     * @summary `issuerCAName`.
-     * @description
-     *
-     * Name of the CA that issued the certificate, if a
-     * certificate identifies the key. ITU-T Rec. X.830 (04/95)
-     * Annex D.6.
-     *
-     * @public
-     * @readonly
-     */
-    readonly issuerCAName?: OPTIONAL<SecurityIdentity>,
-    /**
-     * @summary `certSerialNumber`.
-     * @description
-     *
-     * Certificate serial number, if a certificate identifies
-     * the key. ITU-T Rec. X.830 (04/95) Annex D.6.
-     *
-     * @public
-     * @readonly
-     */
-    readonly certSerialNumber?: OPTIONAL<INTEGER>,
-    /**
-     * @summary `signerName`.
-     * @description
-     *
-     * Name of the signer. ITU-T Rec. X.830 (04/95) Annex D.6.
-     *
-     * @public
-     * @readonly
-     */
-    readonly signerName?: OPTIONAL<SecurityIdentity>,
-    /**
-     * @summary `keyIdentifier`.
-     * @description
-     *
-     * Key identifier bits. ITU-T Rec. X.830 (04/95) Annex D.6.
-     *
-     * @public
-     * @readonly
-     */
-    readonly keyIdentifier?: OPTIONAL<BIT_STRING>
-  ) {}
+    issuerCAName?: OPTIONAL<SecurityIdentity>,
+    certSerialNumber?: OPTIONAL<INTEGER>,
+    signerName?: OPTIONAL<SecurityIdentity>,
+    keyIdentifier?: OPTIONAL<BIT_STRING>
+  ) {
+    this.issuerCAName = issuerCAName;
+    this.certSerialNumber = certSerialNumber;
+    this.signerName = signerName;
+    this.keyIdentifier = keyIdentifier;
+  }
 
   /**
    * @summary Restructures an object into a asymmetricKeyInformation_KiType

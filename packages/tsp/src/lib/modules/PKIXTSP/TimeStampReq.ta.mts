@@ -57,91 +57,105 @@ import {
  *
  */
 export class TimeStampReq {
+    /**
+     * @summary `version`.
+     * @description
+     *
+     * Version of the time-stamp request; currently `v1(1)`
+     * ([RFC 3161 §2.4.1](https://datatracker.ietf.org/doc/html/rfc3161#section-2.4.1)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly version: TimeStampReq_version;
+    /**
+     * @summary `messageImprint`.
+     * @description
+     *
+     * Hash algorithm OID and hash value of the data to be
+     * time-stamped. The hash length MUST match the algorithm
+     * (e.g., 20 octets for SHA-1, 16 for MD5)
+     * ([RFC 3161 §2.4.1](https://datatracker.ietf.org/doc/html/rfc3161#section-2.4.1)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly messageImprint: MessageImprint;
+    /**
+     * @summary `reqPolicy`.
+     * @description
+     *
+     * If present, the TSA policy under which the `TimeStampToken`
+     * SHOULD be provided
+     * ([RFC 3161 §2.4.1](https://datatracker.ietf.org/doc/html/rfc3161#section-2.4.1)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly reqPolicy?: OPTIONAL<TSAPolicyId>;
+    /**
+     * @summary `nonce`.
+     * @description
+     *
+     * Optional large random number so the client can verify
+     * response timeliness without a local clock. High probability
+     * the client generates it only once (e.g., a 64-bit integer).
+     * When present, the same value MUST appear in the response or
+     * the response is rejected
+     * ([RFC 3161 §2.4.1](https://datatracker.ietf.org/doc/html/rfc3161#section-2.4.1)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly nonce?: OPTIONAL<OCTET_STRING>;
+    /**
+     * @summary `certReq`.
+     * @description
+     *
+     * If present and `TRUE`, the TSA MUST include in the response
+     * `SignedData` `certificates` field the TSA public-key
+     * certificate referenced by the `ESSCertID` in the
+     * `SigningCertificate` attribute (other certificates MAY also
+     * appear). If missing or `FALSE`, that `certificates` field
+     * MUST NOT be present
+     * ([RFC 3161 §2.4.1](https://datatracker.ietf.org/doc/html/rfc3161#section-2.4.1)).
+     * Default `FALSE`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly certReq?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Generic extension point for future request information
+     * (`Extensions` as in [RFC 2459](https://datatracker.ietf.org/doc/html/rfc2459)).
+     * If the requester uses an extension the TSA does not
+     * recognize (critical or not), the TSA SHALL not issue a token
+     * and SHALL return failure `unacceptedExtension`
+     * ([RFC 3161 §2.4.1](https://datatracker.ietf.org/doc/html/rfc3161#section-2.4.1)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<Extensions>;
+
     constructor(
-        /**
-         * @summary `version`.
-         * @description
-         *
-         * Version of the time-stamp request; currently `v1(1)`
-         * ([RFC 3161 §2.4.1](https://datatracker.ietf.org/doc/html/rfc3161#section-2.4.1)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly version: TimeStampReq_version,
-        /**
-         * @summary `messageImprint`.
-         * @description
-         *
-         * Hash algorithm OID and hash value of the data to be
-         * time-stamped. The hash length MUST match the algorithm
-         * (e.g., 20 octets for SHA-1, 16 for MD5)
-         * ([RFC 3161 §2.4.1](https://datatracker.ietf.org/doc/html/rfc3161#section-2.4.1)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly messageImprint: MessageImprint,
-        /**
-         * @summary `reqPolicy`.
-         * @description
-         *
-         * If present, the TSA policy under which the `TimeStampToken`
-         * SHOULD be provided
-         * ([RFC 3161 §2.4.1](https://datatracker.ietf.org/doc/html/rfc3161#section-2.4.1)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly reqPolicy?: OPTIONAL<TSAPolicyId>,
-        /**
-         * @summary `nonce`.
-         * @description
-         *
-         * Optional large random number so the client can verify
-         * response timeliness without a local clock. High probability
-         * the client generates it only once (e.g., a 64-bit integer).
-         * When present, the same value MUST appear in the response or
-         * the response is rejected
-         * ([RFC 3161 §2.4.1](https://datatracker.ietf.org/doc/html/rfc3161#section-2.4.1)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly nonce?: OPTIONAL<OCTET_STRING>,
-        /**
-         * @summary `certReq`.
-         * @description
-         *
-         * If present and `TRUE`, the TSA MUST include in the response
-         * `SignedData` `certificates` field the TSA public-key
-         * certificate referenced by the `ESSCertID` in the
-         * `SigningCertificate` attribute (other certificates MAY also
-         * appear). If missing or `FALSE`, that `certificates` field
-         * MUST NOT be present
-         * ([RFC 3161 §2.4.1](https://datatracker.ietf.org/doc/html/rfc3161#section-2.4.1)).
-         * Default `FALSE`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly certReq?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Generic extension point for future request information
-         * (`Extensions` as in [RFC 2459](https://datatracker.ietf.org/doc/html/rfc2459)).
-         * If the requester uses an extension the TSA does not
-         * recognize (critical or not), the TSA SHALL not issue a token
-         * and SHALL return failure `unacceptedExtension`
-         * ([RFC 3161 §2.4.1](https://datatracker.ietf.org/doc/html/rfc3161#section-2.4.1)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<Extensions>
-    ) {}
+        version: TimeStampReq_version,
+        messageImprint: MessageImprint,
+        reqPolicy?: OPTIONAL<TSAPolicyId>,
+        nonce?: OPTIONAL<OCTET_STRING>,
+        certReq?: OPTIONAL<BOOLEAN>,
+        extensions?: OPTIONAL<Extensions>
+    ) {
+        this.version = version;
+        this.messageImprint = messageImprint;
+        this.reqPolicy = reqPolicy;
+        this.nonce = nonce;
+        this.certReq = certReq;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a TimeStampReq

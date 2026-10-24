@@ -27,20 +27,26 @@ import {
  *
  */
 export class OsiBindResult_normal_mode_parameters_pres_context_result_list_Item {
+    /**
+     * @summary `result`.
+     * @public
+     * @readonly
+     */
+    public readonly result: Result;
+    /**
+     * @summary `transfer_syntax_name`.
+     * @public
+     * @readonly
+     */
+    public readonly transfer_syntax_name: Transfer_syntax_name;
+
     constructor(
-        /**
-         * @summary `result`.
-         * @public
-         * @readonly
-         */
-        readonly result: Result,
-        /**
-         * @summary `transfer_syntax_name`.
-         * @public
-         * @readonly
-         */
-        readonly transfer_syntax_name: Transfer_syntax_name
-    ) {}
+        result: Result,
+        transfer_syntax_name: Transfer_syntax_name
+    ) {
+        this.result = result;
+        this.transfer_syntax_name = transfer_syntax_name;
+    }
 
     /**
      * @summary Restructures an object into a OsiBindResult_normal_mode_parameters_pres_context_result_list_Item

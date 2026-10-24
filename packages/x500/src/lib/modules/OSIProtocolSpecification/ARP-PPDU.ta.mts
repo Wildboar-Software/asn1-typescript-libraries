@@ -29,20 +29,26 @@ import {
  *
  */
 export class ARP_PPDU {
+    /**
+     * @summary `provider_reason`.
+     * @public
+     * @readonly
+     */
+    public readonly provider_reason?: OPTIONAL<Abort_reason>;
+    /**
+     * @summary `event_identifier`.
+     * @public
+     * @readonly
+     */
+    public readonly event_identifier?: OPTIONAL<Event_identifier>;
+
     constructor(
-        /**
-         * @summary `provider_reason`.
-         * @public
-         * @readonly
-         */
-        readonly provider_reason?: OPTIONAL<Abort_reason>,
-        /**
-         * @summary `event_identifier`.
-         * @public
-         * @readonly
-         */
-        readonly event_identifier?: OPTIONAL<Event_identifier>
-    ) {}
+        provider_reason?: OPTIONAL<Abort_reason>,
+        event_identifier?: OPTIONAL<Event_identifier>
+    ) {
+        this.provider_reason = provider_reason;
+        this.event_identifier = event_identifier;
+    }
 
     /**
      * @summary Restructures an object into a ARP_PPDU

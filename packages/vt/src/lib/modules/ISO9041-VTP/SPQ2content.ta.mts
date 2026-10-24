@@ -38,26 +38,32 @@ import { _decode_Profile, _encode_Profile, Profile } from "../G/Profile.ta.mjs";
  */
 export
 class SPQ2content {
+    /**
+     * @summary `profile`.
+     * @description
+     * Named VTE-profile plus argument offers. ISO/IEC
+     * 9041-1:1997 §6.23.
+     * @public
+     * @readonly
+     */
+    public readonly profile: Profile;
+    /**
+     * @summary `retList`.
+     * @description
+     * DO/CO names whose contents are requested retained.
+     * ISO/IEC 9041-1:1997 §12.1.
+     * @public
+     * @readonly
+     */
+    public readonly retList?: OPTIONAL<PrintableString[]>;
+
     constructor (
-        /**
-         * @summary `profile`.
-         * @description
-         * Named VTE-profile plus argument offers. ISO/IEC
-         * 9041-1:1997 §6.23.
-         * @public
-         * @readonly
-         */
-        readonly profile: Profile,
-        /**
-         * @summary `retList`.
-         * @description
-         * DO/CO names whose contents are requested retained.
-         * ISO/IEC 9041-1:1997 §12.1.
-         * @public
-         * @readonly
-         */
-        readonly retList?: OPTIONAL<PrintableString[]>
-    ) {}
+        profile: Profile,
+        retList?: OPTIONAL<PrintableString[]>
+    ) {
+        this.profile = profile;
+        this.retList = retList;
+    }
 
     /**
      * @summary Restructures an object into a SPQ2content

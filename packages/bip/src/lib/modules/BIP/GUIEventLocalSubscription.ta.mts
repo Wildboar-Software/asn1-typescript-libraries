@@ -67,132 +67,156 @@ import {
  *
  */
 export class GUIEventLocalSubscription {
+  /**
+   * @summary `guiEventSubscriptionUuid`.
+   * @description
+   *
+   * Secondary-subscription UUID. Absence means a primary GUI
+   * event subscription. X.1083 §8.3, §18.10.2.1.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly guiEventSubscriptionUuid: OPTIONAL<BioAPI_UUID>;
+  /**
+   * @summary `hostingEndpointIRI`.
+   * @description
+   *
+   * Limits the subscription to GUI events of BSPs running in
+   * this endpoint (local or a slave). X.1083 §18.10.2.2.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly hostingEndpointIRI: EndpointIRI;
+  /**
+   * @summary `bspProductUuid`.
+   * @description
+   *
+   * Limits the subscription to GUI events of this BSP. X.1083
+   * §18.10.2.3.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly bspProductUuid: BioAPI_UUID;
+  /**
+   * @summary `useBSPAccessUuid`.
+   * @description
+   *
+   * `TRUE` if `BioAPI_SubscribeToGUIEvents` identified the BSP
+   * by access UUID. Unsubscribe and callbacks using this row
+   * must use the same UUID. X.1083 §18.10.2.4.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly useBSPAccessUuid: BOOLEAN;
+  /**
+   * @summary `originalBSPHandle`.
+   * @description
+   *
+   * If present, limits the subscription to GUI events carrying
+   * this attach-session handle; absence means not limited to
+   * one attach session. X.1083 §18.10.2.5.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly originalBSPHandle: OPTIONAL<BioAPI_HANDLE>;
+  /**
+   * @summary `guiSelectEventHandlerAddress`.
+   * @description
+   *
+   * Local GUI select handler. 0 means select events are not
+   * notified. X.1083 §18.10.2.6.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly guiSelectEventHandlerAddress: MemoryAddress;
+  /**
+   * @summary `guiSelectEventHandlerContext`.
+   * @description
+   *
+   * Context passed into the GUI select handler. X.1083
+   * §18.10.2.7.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly guiSelectEventHandlerContext: MemoryAddress;
+  /**
+   * @summary `guiStateEventHandlerAddress`.
+   * @description
+   *
+   * Local GUI state handler. 0 means state events are not
+   * notified. X.1083 §18.10.2.8.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly guiStateEventHandlerAddress: MemoryAddress;
+  /**
+   * @summary `guiStateEventHandlerContext`.
+   * @description
+   *
+   * Context passed into the GUI state handler. X.1083
+   * §18.10.2.9.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly guiStateEventHandlerContext: MemoryAddress;
+  /**
+   * @summary `guiProgressEventHandlerAddress`.
+   * @description
+   *
+   * Local GUI progress handler. 0 means progress events are
+   * not notified. At least one of the three handler addresses
+   * shall be non-zero. X.1083 §18.10.2.10.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly guiProgressEventHandlerAddress: MemoryAddress;
+  /**
+   * @summary `guiProgressEventHandlerContext`.
+   * @description
+   *
+   * Context passed into the GUI progress handler. X.1083
+   * §18.10.2.11.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly guiProgressEventHandlerContext: MemoryAddress;
+
   constructor(
-    /**
-     * @summary `guiEventSubscriptionUuid`.
-     * @description
-     *
-     * Secondary-subscription UUID. Absence means a primary GUI
-     * event subscription. X.1083 §8.3, §18.10.2.1.
-     *
-     * @public
-     * @readonly
-     */
-    readonly guiEventSubscriptionUuid: OPTIONAL<BioAPI_UUID>,
-    /**
-     * @summary `hostingEndpointIRI`.
-     * @description
-     *
-     * Limits the subscription to GUI events of BSPs running in
-     * this endpoint (local or a slave). X.1083 §18.10.2.2.
-     *
-     * @public
-     * @readonly
-     */
-    readonly hostingEndpointIRI: EndpointIRI,
-    /**
-     * @summary `bspProductUuid`.
-     * @description
-     *
-     * Limits the subscription to GUI events of this BSP. X.1083
-     * §18.10.2.3.
-     *
-     * @public
-     * @readonly
-     */
-    readonly bspProductUuid: BioAPI_UUID,
-    /**
-     * @summary `useBSPAccessUuid`.
-     * @description
-     *
-     * `TRUE` if `BioAPI_SubscribeToGUIEvents` identified the BSP
-     * by access UUID. Unsubscribe and callbacks using this row
-     * must use the same UUID. X.1083 §18.10.2.4.
-     *
-     * @public
-     * @readonly
-     */
-    readonly useBSPAccessUuid: BOOLEAN,
-    /**
-     * @summary `originalBSPHandle`.
-     * @description
-     *
-     * If present, limits the subscription to GUI events carrying
-     * this attach-session handle; absence means not limited to
-     * one attach session. X.1083 §18.10.2.5.
-     *
-     * @public
-     * @readonly
-     */
-    readonly originalBSPHandle: OPTIONAL<BioAPI_HANDLE>,
-    /**
-     * @summary `guiSelectEventHandlerAddress`.
-     * @description
-     *
-     * Local GUI select handler. 0 means select events are not
-     * notified. X.1083 §18.10.2.6.
-     *
-     * @public
-     * @readonly
-     */
-    readonly guiSelectEventHandlerAddress: MemoryAddress,
-    /**
-     * @summary `guiSelectEventHandlerContext`.
-     * @description
-     *
-     * Context passed into the GUI select handler. X.1083
-     * §18.10.2.7.
-     *
-     * @public
-     * @readonly
-     */
-    readonly guiSelectEventHandlerContext: MemoryAddress,
-    /**
-     * @summary `guiStateEventHandlerAddress`.
-     * @description
-     *
-     * Local GUI state handler. 0 means state events are not
-     * notified. X.1083 §18.10.2.8.
-     *
-     * @public
-     * @readonly
-     */
-    readonly guiStateEventHandlerAddress: MemoryAddress,
-    /**
-     * @summary `guiStateEventHandlerContext`.
-     * @description
-     *
-     * Context passed into the GUI state handler. X.1083
-     * §18.10.2.9.
-     *
-     * @public
-     * @readonly
-     */
-    readonly guiStateEventHandlerContext: MemoryAddress,
-    /**
-     * @summary `guiProgressEventHandlerAddress`.
-     * @description
-     *
-     * Local GUI progress handler. 0 means progress events are
-     * not notified. At least one of the three handler addresses
-     * shall be non-zero. X.1083 §18.10.2.10.
-     *
-     * @public
-     * @readonly
-     */
-    readonly guiProgressEventHandlerAddress: MemoryAddress,
-    /**
-     * @summary `guiProgressEventHandlerContext`.
-     * @description
-     *
-     * Context passed into the GUI progress handler. X.1083
-     * §18.10.2.11.
-     *
-     * @public
-     * @readonly
-     */
-    readonly guiProgressEventHandlerContext: MemoryAddress
-  ) {}
+    guiEventSubscriptionUuid: OPTIONAL<BioAPI_UUID>,
+    hostingEndpointIRI: EndpointIRI,
+    bspProductUuid: BioAPI_UUID,
+    useBSPAccessUuid: BOOLEAN,
+    originalBSPHandle: OPTIONAL<BioAPI_HANDLE>,
+    guiSelectEventHandlerAddress: MemoryAddress,
+    guiSelectEventHandlerContext: MemoryAddress,
+    guiStateEventHandlerAddress: MemoryAddress,
+    guiStateEventHandlerContext: MemoryAddress,
+    guiProgressEventHandlerAddress: MemoryAddress,
+    guiProgressEventHandlerContext: MemoryAddress
+  ) {
+    this.guiEventSubscriptionUuid = guiEventSubscriptionUuid;
+    this.hostingEndpointIRI = hostingEndpointIRI;
+    this.bspProductUuid = bspProductUuid;
+    this.useBSPAccessUuid = useBSPAccessUuid;
+    this.originalBSPHandle = originalBSPHandle;
+    this.guiSelectEventHandlerAddress = guiSelectEventHandlerAddress;
+    this.guiSelectEventHandlerContext = guiSelectEventHandlerContext;
+    this.guiStateEventHandlerAddress = guiStateEventHandlerAddress;
+    this.guiStateEventHandlerContext = guiStateEventHandlerContext;
+    this.guiProgressEventHandlerAddress = guiProgressEventHandlerAddress;
+    this.guiProgressEventHandlerContext = guiProgressEventHandlerContext;
+  }
 
   /**
    * @summary Restructures an object into a GUIEventLocalSubscription

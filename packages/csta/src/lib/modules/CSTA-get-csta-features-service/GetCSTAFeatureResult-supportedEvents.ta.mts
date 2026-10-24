@@ -55,80 +55,98 @@ import { VendorSpecificEvtsList, _decode_VendorSpecificEvtsList, _encode_VendorS
  */
 export
 class GetCSTAFeatureResult_supportedEvents {
+    /**
+     * @summary `callControlEvtsList`.
+     * @description
+     *
+     * Call-control events.
+     * @public
+     * @readonly
+     */
+    public readonly callControlEvtsList?: OPTIONAL<CallControlEvtsList>;
+    /**
+     * @summary `callAssociatedEvtsList`.
+     * @description
+     *
+     * Call-associated events.
+     * @public
+     * @readonly
+     */
+    public readonly callAssociatedEvtsList?: OPTIONAL<CallAssociatedEvtsList>;
+    /**
+     * @summary `mediaEvtsList`.
+     * @description
+     *
+     * Media-attachment events.
+     * @public
+     * @readonly
+     */
+    public readonly mediaEvtsList?: OPTIONAL<MediaEvtsList>;
+    /**
+     * @summary `physDevEvtsList`.
+     * @description
+     *
+     * Physical-device feature events.
+     * @public
+     * @readonly
+     */
+    public readonly physDevEvtsList?: OPTIONAL<PhysDevEvtsList>;
+    /**
+     * @summary `logicalEvtsList`.
+     * @description
+     *
+     * Logical-device feature events.
+     * @public
+     * @readonly
+     */
+    public readonly logicalEvtsList?: OPTIONAL<LogicalEvtsList>;
+    /**
+     * @summary `deviceMaintEvtsList`.
+     * @description
+     *
+     * Device-maintenance events.
+     * @public
+     * @readonly
+     */
+    public readonly deviceMaintEvtsList?: OPTIONAL<DeviceMaintEvtsList>;
+    /**
+     * @summary `voiceEvtsList`.
+     * @description
+     *
+     * Voice-unit events.
+     * @public
+     * @readonly
+     */
+    public readonly voiceEvtsList?: OPTIONAL<VoiceUnitEvtsList>;
+    /**
+     * @summary `vendorSpecificEvtsList`.
+     * @description
+     *
+     * Vendor-specific events.
+     * @public
+     * @readonly
+     */
+    public readonly vendorSpecificEvtsList?: OPTIONAL<VendorSpecificEvtsList>;
+
     constructor (
-        /**
-         * @summary `callControlEvtsList`.
-         * @description
-         *
-         * Call-control events.
-         * @public
-         * @readonly
-         */
-        readonly callControlEvtsList?: OPTIONAL<CallControlEvtsList>,
-        /**
-         * @summary `callAssociatedEvtsList`.
-         * @description
-         *
-         * Call-associated events.
-         * @public
-         * @readonly
-         */
-        readonly callAssociatedEvtsList?: OPTIONAL<CallAssociatedEvtsList>,
-        /**
-         * @summary `mediaEvtsList`.
-         * @description
-         *
-         * Media-attachment events.
-         * @public
-         * @readonly
-         */
-        readonly mediaEvtsList?: OPTIONAL<MediaEvtsList>,
-        /**
-         * @summary `physDevEvtsList`.
-         * @description
-         *
-         * Physical-device feature events.
-         * @public
-         * @readonly
-         */
-        readonly physDevEvtsList?: OPTIONAL<PhysDevEvtsList>,
-        /**
-         * @summary `logicalEvtsList`.
-         * @description
-         *
-         * Logical-device feature events.
-         * @public
-         * @readonly
-         */
-        readonly logicalEvtsList?: OPTIONAL<LogicalEvtsList>,
-        /**
-         * @summary `deviceMaintEvtsList`.
-         * @description
-         *
-         * Device-maintenance events.
-         * @public
-         * @readonly
-         */
-        readonly deviceMaintEvtsList?: OPTIONAL<DeviceMaintEvtsList>,
-        /**
-         * @summary `voiceEvtsList`.
-         * @description
-         *
-         * Voice-unit events.
-         * @public
-         * @readonly
-         */
-        readonly voiceEvtsList?: OPTIONAL<VoiceUnitEvtsList>,
-        /**
-         * @summary `vendorSpecificEvtsList`.
-         * @description
-         *
-         * Vendor-specific events.
-         * @public
-         * @readonly
-         */
-        readonly vendorSpecificEvtsList?: OPTIONAL<VendorSpecificEvtsList>
-    ) {}
+        callControlEvtsList?: OPTIONAL<CallControlEvtsList>,
+        callAssociatedEvtsList?: OPTIONAL<CallAssociatedEvtsList>,
+        mediaEvtsList?: OPTIONAL<MediaEvtsList>,
+        physDevEvtsList?: OPTIONAL<PhysDevEvtsList>,
+        logicalEvtsList?: OPTIONAL<LogicalEvtsList>,
+        deviceMaintEvtsList?: OPTIONAL<DeviceMaintEvtsList>,
+        voiceEvtsList?: OPTIONAL<VoiceUnitEvtsList>,
+        vendorSpecificEvtsList?: OPTIONAL<VendorSpecificEvtsList>
+    ) {
+        this.callControlEvtsList = callControlEvtsList;
+        this.callAssociatedEvtsList = callAssociatedEvtsList;
+        this.mediaEvtsList = mediaEvtsList;
+        this.physDevEvtsList = physDevEvtsList;
+        this.logicalEvtsList = logicalEvtsList;
+        this.deviceMaintEvtsList = deviceMaintEvtsList;
+        this.voiceEvtsList = voiceEvtsList;
+        this.vendorSpecificEvtsList = vendorSpecificEvtsList;
+    }
 
     /**
      * @summary Restructures an object into a GetCSTAFeatureResult_supportedEvents

@@ -68,50 +68,66 @@ import {
  *
  */
 export class EDIProcessableDocument {
+    /**
+     * @summary `standardVersion`.
+     * @public
+     * @readonly
+     */
+    public readonly standardVersion?: OPTIONAL<SyntaxVersion>;
+    /**
+     * @summary `standardSyntaxId`.
+     * @public
+     * @readonly
+     */
+    public readonly standardSyntaxId?: OPTIONAL<SyntaxIdentifier>;
+    /**
+     * @summary `documentType`.
+     * @public
+     * @readonly
+     */
+    public readonly documentType?: OPTIONAL<EDIMessageTypeFieldSubField>;
+    /**
+     * @summary `documentVersion`.
+     * @public
+     * @readonly
+     */
+    public readonly documentVersion?: OPTIONAL<DocumentVersion>;
+    /**
+     * @summary `documentRelease`.
+     * @public
+     * @readonly
+     */
+    public readonly documentRelease?: OPTIONAL<DocumentRelease>;
+    /**
+     * @summary `controllingAgency`.
+     * @public
+     * @readonly
+     */
+    public readonly controllingAgency?: OPTIONAL<ControllingAgency>;
+    /**
+     * @summary `associationAssignedCode`.
+     * @public
+     * @readonly
+     */
+    public readonly associationAssignedCode?: OPTIONAL<AssociationAssignedCode>;
+
     constructor(
-        /**
-         * @summary `standardVersion`.
-         * @public
-         * @readonly
-         */
-        readonly standardVersion?: OPTIONAL<SyntaxVersion>,
-        /**
-         * @summary `standardSyntaxId`.
-         * @public
-         * @readonly
-         */
-        readonly standardSyntaxId?: OPTIONAL<SyntaxIdentifier>,
-        /**
-         * @summary `documentType`.
-         * @public
-         * @readonly
-         */
-        readonly documentType?: OPTIONAL<EDIMessageTypeFieldSubField>,
-        /**
-         * @summary `documentVersion`.
-         * @public
-         * @readonly
-         */
-        readonly documentVersion?: OPTIONAL<DocumentVersion>,
-        /**
-         * @summary `documentRelease`.
-         * @public
-         * @readonly
-         */
-        readonly documentRelease?: OPTIONAL<DocumentRelease>,
-        /**
-         * @summary `controllingAgency`.
-         * @public
-         * @readonly
-         */
-        readonly controllingAgency?: OPTIONAL<ControllingAgency>,
-        /**
-         * @summary `associationAssignedCode`.
-         * @public
-         * @readonly
-         */
-        readonly associationAssignedCode?: OPTIONAL<AssociationAssignedCode>
-    ) {}
+        standardVersion?: OPTIONAL<SyntaxVersion>,
+        standardSyntaxId?: OPTIONAL<SyntaxIdentifier>,
+        documentType?: OPTIONAL<EDIMessageTypeFieldSubField>,
+        documentVersion?: OPTIONAL<DocumentVersion>,
+        documentRelease?: OPTIONAL<DocumentRelease>,
+        controllingAgency?: OPTIONAL<ControllingAgency>,
+        associationAssignedCode?: OPTIONAL<AssociationAssignedCode>
+    ) {
+        this.standardVersion = standardVersion;
+        this.standardSyntaxId = standardSyntaxId;
+        this.documentType = documentType;
+        this.documentVersion = documentVersion;
+        this.documentRelease = documentRelease;
+        this.controllingAgency = controllingAgency;
+        this.associationAssignedCode = associationAssignedCode;
+    }
 
     /**
      * @summary Restructures an object into a EDIProcessableDocument

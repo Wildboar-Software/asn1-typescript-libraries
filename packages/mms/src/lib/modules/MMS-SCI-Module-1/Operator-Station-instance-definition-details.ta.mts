@@ -41,30 +41,36 @@ import { Operator_Station_instance_definition_details_stationType, _enum_for_Ope
  */
 export
 class Operator_Station_instance_definition_details {
+    /**
+     * @summary `accessControl`.
+     * @description
+     *
+     * SCI encoding of the object's ACL (ISO 9506-1:2003 §9). ISO
+     * 9506-2:2003 Annex B.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly accessControl: Access_Control_List_instance;
+    /**
+     * @summary `stationType`.
+     * @description
+     *
+     * entry, display, or entry-display. ISO 9506-1:2003 §17.1.1.3; ISO
+     * 9506-2:2003 Annex B.1.11.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly stationType: Operator_Station_instance_definition_details_stationType;
+
     constructor (
-        /**
-         * @summary `accessControl`.
-         * @description
-         *
-         * SCI encoding of the object's ACL (ISO 9506-1:2003 §9). ISO
-         * 9506-2:2003 Annex B.
-         *
-         * @public
-         * @readonly
-         */
-        readonly accessControl: Access_Control_List_instance,
-        /**
-         * @summary `stationType`.
-         * @description
-         *
-         * entry, display, or entry-display. ISO 9506-1:2003 §17.1.1.3; ISO
-         * 9506-2:2003 Annex B.1.11.
-         *
-         * @public
-         * @readonly
-         */
-        readonly stationType: Operator_Station_instance_definition_details_stationType
-    ) {}
+        accessControl: Access_Control_List_instance,
+        stationType: Operator_Station_instance_definition_details_stationType
+    ) {
+        this.accessControl = accessControl;
+        this.stationType = stationType;
+    }
 
     /**
      * @summary Restructures an object into a Operator_Station_instance_definition_details

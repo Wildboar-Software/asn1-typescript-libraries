@@ -29,35 +29,43 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
  */
 export
 class PrepareGroupCallRes {
+    /**
+     * @summary `groupCallNumber`.
+     * @description
+     *
+     * Temporary E.164 number for routing from Anchor MSC to Relay MSC
+     * (clause 10.4.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly groupCallNumber: ISDN_AddressString;
+    /**
+     * @summary `extensionContainer`.
+     * @description
+     *
+     * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `groupCallNumber`.
-         * @description
-         *
-         * Temporary E.164 number for routing from Anchor MSC to Relay MSC
-         * (clause 10.4.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly groupCallNumber: ISDN_AddressString,
-        /**
-         * @summary `extensionContainer`.
-         * @description
-         *
-         * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        groupCallNumber: ISDN_AddressString,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.groupCallNumber = groupCallNumber;
+        this.extensionContainer = extensionContainer;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a PrepareGroupCallRes

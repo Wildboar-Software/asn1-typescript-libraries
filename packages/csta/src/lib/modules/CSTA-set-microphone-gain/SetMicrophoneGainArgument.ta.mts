@@ -41,47 +41,57 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class SetMicrophoneGainArgument {
+    /**
+     * @summary `device`.
+     * @description
+     *
+     * Physical-element DeviceID; other IDs are rejected (ECMA-269 §21 FR
+     * 1).
+     * @public
+     * @readonly
+     */
+    public readonly device: DeviceID;
+    /**
+     * @summary `auditoryApparatus`.
+     * @description
+     *
+     * Auditory apparatus at the device on which to set the feature.
+     * @public
+     * @readonly
+     */
+    public readonly auditoryApparatus: AuditoryApparatusID;
+    /**
+     * @summary `microphoneGain`.
+     * @description
+     *
+     * Absolute 0–100 (0 silence, 100 max; 1–99 device-specific) or
+     * increment/decrement by a switch-specified step.
+     * @public
+     * @readonly
+     */
+    public readonly microphoneGain: MicrophoneGain;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `device`.
-         * @description
-         *
-         * Physical-element DeviceID; other IDs are rejected (ECMA-269 §21 FR
-         * 1).
-         * @public
-         * @readonly
-         */
-        readonly device: DeviceID,
-        /**
-         * @summary `auditoryApparatus`.
-         * @description
-         *
-         * Auditory apparatus at the device on which to set the feature.
-         * @public
-         * @readonly
-         */
-        readonly auditoryApparatus: AuditoryApparatusID,
-        /**
-         * @summary `microphoneGain`.
-         * @description
-         *
-         * Absolute 0–100 (0 silence, 100 max; 1–99 device-specific) or
-         * increment/decrement by a switch-specified step.
-         * @public
-         * @readonly
-         */
-        readonly microphoneGain: MicrophoneGain,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        device: DeviceID,
+        auditoryApparatus: AuditoryApparatusID,
+        microphoneGain: MicrophoneGain,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.device = device;
+        this.auditoryApparatus = auditoryApparatus;
+        this.microphoneGain = microphoneGain;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a SetMicrophoneGainArgument

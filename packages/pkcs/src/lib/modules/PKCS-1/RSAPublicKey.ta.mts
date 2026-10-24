@@ -23,20 +23,26 @@ import * as $ from "@wildboar/asn1/functional";
  *
  */
 export class RSAPublicKey {
+    /**
+     * @summary `modulus`.
+     * @public
+     * @readonly
+     */
+    public readonly modulus: INTEGER;
+    /**
+     * @summary `publicExponent`.
+     * @public
+     * @readonly
+     */
+    public readonly publicExponent: INTEGER;
+
     constructor(
-        /**
-         * @summary `modulus`.
-         * @public
-         * @readonly
-         */
-        readonly modulus: INTEGER,
-        /**
-         * @summary `publicExponent`.
-         * @public
-         * @readonly
-         */
-        readonly publicExponent: INTEGER
-    ) {}
+        modulus: INTEGER,
+        publicExponent: INTEGER
+    ) {
+        this.modulus = modulus;
+        this.publicExponent = publicExponent;
+    }
 
     /**
      * @summary Restructures an object into a RSAPublicKey

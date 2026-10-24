@@ -41,18 +41,22 @@ import {
  *
  */
 export class ResponseType {
+  /**
+   * @summary `algorithmIdentifier`.
+   * @description OID (as a string) of the hash applied
+   * to RandomNumber||RSCK. XER attribute
+   * `AlgorithmIdentifier`. ITU-T Rec. X.1341 (09/2015)
+   * §8.15, §9.3.
+   * @public
+   * @readonly
+   */
+  public readonly algorithmIdentifier: String;
+
   constructor(
-    /**
-     * @summary `algorithmIdentifier`.
-     * @description OID (as a string) of the hash applied
-     * to RandomNumber||RSCK. XER attribute
-     * `AlgorithmIdentifier`. ITU-T Rec. X.1341 (09/2015)
-     * §8.15, §9.3.
-     * @public
-     * @readonly
-     */
-    readonly algorithmIdentifier: String
-  ) {}
+    algorithmIdentifier: String
+  ) {
+    this.algorithmIdentifier = algorithmIdentifier;
+  }
 
   /**
    * @summary Restructures an object into a ResponseType

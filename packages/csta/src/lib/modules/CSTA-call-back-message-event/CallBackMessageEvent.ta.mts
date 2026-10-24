@@ -40,45 +40,55 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class CallBackMessageEvent {
+    /**
+     * @summary `originatingDevice`.
+     * @description
+     *
+     * Originating device when the call-back message was established.
+     * @public
+     * @readonly
+     */
+    public readonly originatingDevice: SubjectDeviceID;
+    /**
+     * @summary `targetDevice`.
+     * @description
+     *
+     * Target device of the call-back message.
+     * @public
+     * @readonly
+     */
+    public readonly targetDevice: SubjectDeviceID;
+    /**
+     * @summary `callBackMsgSetCanceled`.
+     * @description
+     *
+     * TRUE = message was set; FALSE = cancelled.
+     * @public
+     * @readonly
+     */
+    public readonly callBackMsgSetCanceled: BOOLEAN;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `originatingDevice`.
-         * @description
-         *
-         * Originating device when the call-back message was established.
-         * @public
-         * @readonly
-         */
-        readonly originatingDevice: SubjectDeviceID,
-        /**
-         * @summary `targetDevice`.
-         * @description
-         *
-         * Target device of the call-back message.
-         * @public
-         * @readonly
-         */
-        readonly targetDevice: SubjectDeviceID,
-        /**
-         * @summary `callBackMsgSetCanceled`.
-         * @description
-         *
-         * TRUE = message was set; FALSE = cancelled.
-         * @public
-         * @readonly
-         */
-        readonly callBackMsgSetCanceled: BOOLEAN,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        originatingDevice: SubjectDeviceID,
+        targetDevice: SubjectDeviceID,
+        callBackMsgSetCanceled: BOOLEAN,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.originatingDevice = originatingDevice;
+        this.targetDevice = targetDevice;
+        this.callBackMsgSetCanceled = callBackMsgSetCanceled;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a CallBackMessageEvent

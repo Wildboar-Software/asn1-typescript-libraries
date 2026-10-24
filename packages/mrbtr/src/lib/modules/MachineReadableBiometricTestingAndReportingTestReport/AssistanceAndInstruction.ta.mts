@@ -36,42 +36,50 @@ import { InstructionMode, _enum_for_InstructionMode, _decode_InstructionMode, _e
  */
 export
 class AssistanceAndInstruction {
+    /**
+     * @summary `assistanceLocation`.
+     * @description
+     *
+     * Before and separate from the transaction, during/interactively
+     * with it, or after a failure (Clause 6.5.2, Annex C.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly assistanceLocation: AssistanceLocation;
+    /**
+     * @summary `assistanceMode`.
+     * @description
+     *
+     * How assistance was provided: physical, audio-only,
+     * audio-video, none, or video-only (Clause 6.5.2). Annex C.3
+     * describes this as human assistance to the subject.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly assistanceMode: AssistanceMode;
+    /**
+     * @summary `instructionMode`.
+     * @description
+     *
+     * Written manual, poster, video, or personal (Clause 6.5.2).
+     * `video` covers slides or other sets of static images.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly instructionMode: InstructionMode;
+
     constructor (
-        /**
-         * @summary `assistanceLocation`.
-         * @description
-         *
-         * Before and separate from the transaction, during/interactively
-         * with it, or after a failure (Clause 6.5.2, Annex C.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly assistanceLocation: AssistanceLocation,
-        /**
-         * @summary `assistanceMode`.
-         * @description
-         *
-         * How assistance was provided: physical, audio-only,
-         * audio-video, none, or video-only (Clause 6.5.2). Annex C.3
-         * describes this as human assistance to the subject.
-         *
-         * @public
-         * @readonly
-         */
-        readonly assistanceMode: AssistanceMode,
-        /**
-         * @summary `instructionMode`.
-         * @description
-         *
-         * Written manual, poster, video, or personal (Clause 6.5.2).
-         * `video` covers slides or other sets of static images.
-         *
-         * @public
-         * @readonly
-         */
-        readonly instructionMode: InstructionMode
-    ) {}
+        assistanceLocation: AssistanceLocation,
+        assistanceMode: AssistanceMode,
+        instructionMode: InstructionMode
+    ) {
+        this.assistanceLocation = assistanceLocation;
+        this.assistanceMode = assistanceMode;
+        this.instructionMode = instructionMode;
+    }
 
     /**
      * @summary Restructures an object into a AssistanceAndInstruction

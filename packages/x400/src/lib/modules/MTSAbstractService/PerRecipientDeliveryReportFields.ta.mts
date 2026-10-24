@@ -50,32 +50,42 @@ import {
  *
  */
 export class PerRecipientDeliveryReportFields {
+    /**
+     * @summary `message_delivery_time`.
+     * @public
+     * @readonly
+     */
+    public readonly message_delivery_time: MessageDeliveryTime;
+    /**
+     * @summary `type_of_MTS_user`.
+     * @public
+     * @readonly
+     */
+    public readonly type_of_MTS_user: TypeOfMTSUser;
+    /**
+     * @summary `recipient_certificate`.
+     * @public
+     * @readonly
+     */
+    public readonly recipient_certificate?: OPTIONAL<RecipientCertificate>;
+    /**
+     * @summary `proof_of_delivery`.
+     * @public
+     * @readonly
+     */
+    public readonly proof_of_delivery?: OPTIONAL<ProofOfDelivery>;
+
     constructor(
-        /**
-         * @summary `message_delivery_time`.
-         * @public
-         * @readonly
-         */
-        readonly message_delivery_time: MessageDeliveryTime,
-        /**
-         * @summary `type_of_MTS_user`.
-         * @public
-         * @readonly
-         */
-        readonly type_of_MTS_user: TypeOfMTSUser,
-        /**
-         * @summary `recipient_certificate`.
-         * @public
-         * @readonly
-         */
-        readonly recipient_certificate?: OPTIONAL<RecipientCertificate>,
-        /**
-         * @summary `proof_of_delivery`.
-         * @public
-         * @readonly
-         */
-        readonly proof_of_delivery?: OPTIONAL<ProofOfDelivery>
-    ) {}
+        message_delivery_time: MessageDeliveryTime,
+        type_of_MTS_user: TypeOfMTSUser,
+        recipient_certificate?: OPTIONAL<RecipientCertificate>,
+        proof_of_delivery?: OPTIONAL<ProofOfDelivery>
+    ) {
+        this.message_delivery_time = message_delivery_time;
+        this.type_of_MTS_user = type_of_MTS_user;
+        this.recipient_certificate = recipient_certificate;
+        this.proof_of_delivery = proof_of_delivery;
+    }
 
     /**
      * @summary Restructures an object into a PerRecipientDeliveryReportFields

@@ -38,49 +38,59 @@ import { TestResult, _decode_TestResult, _encode_TestResult } from "../MachineRe
  */
 export
 class TestReportTechnologyForOneCondition {
+    /**
+     * @summary `corpusInfo`.
+     * @description
+     *
+     * Corpus used in the evaluation (Clause 6.4.4.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly corpusInfo: CorpusInformation;
+    /**
+     * @summary `dateStarted`.
+     * @description
+     *
+     * Date the test trials started (Clause 6.4.4.1, Annex C.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly dateStarted: OPTIONAL<Date>;
+    /**
+     * @summary `dateEnded`.
+     * @description
+     *
+     * Date the test trials ended (Clause 6.4.4.1, Annex C.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly dateEnded: OPTIONAL<Date>;
+    /**
+     * @summary `testResult`.
+     * @description
+     *
+     * Enrolment, acquisition, verification, and/or identification
+     * results for this condition (Clause 6.4.4.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly testResult: TestResult[];
+
     constructor (
-        /**
-         * @summary `corpusInfo`.
-         * @description
-         *
-         * Corpus used in the evaluation (Clause 6.4.4.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly corpusInfo: CorpusInformation,
-        /**
-         * @summary `dateStarted`.
-         * @description
-         *
-         * Date the test trials started (Clause 6.4.4.1, Annex C.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly dateStarted: OPTIONAL<Date>,
-        /**
-         * @summary `dateEnded`.
-         * @description
-         *
-         * Date the test trials ended (Clause 6.4.4.1, Annex C.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly dateEnded: OPTIONAL<Date>,
-        /**
-         * @summary `testResult`.
-         * @description
-         *
-         * Enrolment, acquisition, verification, and/or identification
-         * results for this condition (Clause 6.4.4.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly testResult: TestResult[]
-    ) {}
+        corpusInfo: CorpusInformation,
+        dateStarted: OPTIONAL<Date>,
+        dateEnded: OPTIONAL<Date>,
+        testResult: TestResult[]
+    ) {
+        this.corpusInfo = corpusInfo;
+        this.dateStarted = dateStarted;
+        this.dateEnded = dateEnded;
+        this.testResult = testResult;
+    }
 
     /**
      * @summary Restructures an object into a TestReportTechnologyForOneCondition

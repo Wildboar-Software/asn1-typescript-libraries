@@ -37,34 +37,42 @@ import { CertId, _decode_CertId, _encode_CertId } from "../CryptographicInformat
  */
 export
 class CertHash {
+    /**
+     * @summary `hashAlg`.
+     * @description
+     * Hash algorithm; if omitted, the context must make it clear. ISO/IEC
+     * 7816-15:2016 Annex A.
+     * @public
+     * @readonly
+     */
+    public readonly hashAlg: OPTIONAL<AlgorithmIdentifier>;
+    /**
+     * @summary `certId`.
+     * @description
+     * Optional identifier of the hashed certificate. ISO/IEC 7816-15:2016
+     * Annex A.
+     * @public
+     * @readonly
+     */
+    public readonly certId: OPTIONAL<CertId>;
+    /**
+     * @summary `hashVal`.
+     * @description
+     * Hash of the entire DER certificate. ISO/IEC 7816-15:2016 Annex A.
+     * @public
+     * @readonly
+     */
+    public readonly hashVal: BIT_STRING;
+
     constructor (
-        /**
-         * @summary `hashAlg`.
-         * @description
-         * Hash algorithm; if omitted, the context must make it clear. ISO/IEC
-         * 7816-15:2016 Annex A.
-         * @public
-         * @readonly
-         */
-        readonly hashAlg: OPTIONAL<AlgorithmIdentifier>,
-        /**
-         * @summary `certId`.
-         * @description
-         * Optional identifier of the hashed certificate. ISO/IEC 7816-15:2016
-         * Annex A.
-         * @public
-         * @readonly
-         */
-        readonly certId: OPTIONAL<CertId>,
-        /**
-         * @summary `hashVal`.
-         * @description
-         * Hash of the entire DER certificate. ISO/IEC 7816-15:2016 Annex A.
-         * @public
-         * @readonly
-         */
-        readonly hashVal: BIT_STRING
-    ) {}
+        hashAlg: OPTIONAL<AlgorithmIdentifier>,
+        certId: OPTIONAL<CertId>,
+        hashVal: BIT_STRING
+    ) {
+        this.hashAlg = hashAlg;
+        this.certId = certId;
+        this.hashVal = hashVal;
+    }
 
     /**
      * @summary Restructures an object into a CertHash

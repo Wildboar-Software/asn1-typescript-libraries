@@ -53,32 +53,42 @@ import {
  *
  */
 export class Waiting {
+    /**
+     * @summary `waiting_operations`.
+     * @public
+     * @readonly
+     */
+    public readonly waiting_operations?: OPTIONAL<Operations>;
+    /**
+     * @summary `waiting_messages`.
+     * @public
+     * @readonly
+     */
+    public readonly waiting_messages?: OPTIONAL<WaitingMessages>;
+    /**
+     * @summary `waiting_content_types`.
+     * @public
+     * @readonly
+     */
+    public readonly waiting_content_types?: OPTIONAL<ContentType[]>;
+    /**
+     * @summary `waiting_encoded_information_types`.
+     * @public
+     * @readonly
+     */
+    public readonly waiting_encoded_information_types?: OPTIONAL<EncodedInformationTypes>;
+
     constructor(
-        /**
-         * @summary `waiting_operations`.
-         * @public
-         * @readonly
-         */
-        readonly waiting_operations?: OPTIONAL<Operations>,
-        /**
-         * @summary `waiting_messages`.
-         * @public
-         * @readonly
-         */
-        readonly waiting_messages?: OPTIONAL<WaitingMessages>,
-        /**
-         * @summary `waiting_content_types`.
-         * @public
-         * @readonly
-         */
-        readonly waiting_content_types?: OPTIONAL<ContentType[]>,
-        /**
-         * @summary `waiting_encoded_information_types`.
-         * @public
-         * @readonly
-         */
-        readonly waiting_encoded_information_types?: OPTIONAL<EncodedInformationTypes>
-    ) {}
+        waiting_operations?: OPTIONAL<Operations>,
+        waiting_messages?: OPTIONAL<WaitingMessages>,
+        waiting_content_types?: OPTIONAL<ContentType[]>,
+        waiting_encoded_information_types?: OPTIONAL<EncodedInformationTypes>
+    ) {
+        this.waiting_operations = waiting_operations;
+        this.waiting_messages = waiting_messages;
+        this.waiting_content_types = waiting_content_types;
+        this.waiting_encoded_information_types = waiting_encoded_information_types;
+    }
 
     /**
      * @summary Restructures an object into a Waiting

@@ -27,18 +27,22 @@ import { _decode_LpaeActivationResponse_lpaeActivationResult, _encode_LpaeActiva
  */
 export
 class LpaeActivationResponse {
+    /**
+     * @summary `lpaeActivationResult`.
+     * @description
+     * 
+     * `ok` or `notSupported`. SGP.22 v3.1 §5.7.1.
+     * 
+     * @public
+     * @readonly
+     */
+    public readonly lpaeActivationResult: LpaeActivationResponse_lpaeActivationResult;
+
     constructor (
-        /**
-         * @summary `lpaeActivationResult`.
-         * @description
-         * 
-         * `ok` or `notSupported`. SGP.22 v3.1 §5.7.1.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly lpaeActivationResult: LpaeActivationResponse_lpaeActivationResult
-    ) {}
+        lpaeActivationResult: LpaeActivationResponse_lpaeActivationResult
+    ) {
+        this.lpaeActivationResult = lpaeActivationResult;
+    }
 
     /**
      * @summary Restructures an object into a LpaeActivationResponse

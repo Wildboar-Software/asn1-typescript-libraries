@@ -32,32 +32,40 @@ import { SubscriberInfo, _decode_SubscriberInfo, _encode_SubscriberInfo } from "
  */
 export
 class ProvideSubscriberInfoRes {
+    /**
+     * @summary `subscriberInfo`.
+     * @description
+     *
+     * Location, state, and related subscriber data matching the request.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 8.11.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly subscriberInfo: SubscriberInfo;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `subscriberInfo`.
-         * @description
-         *
-         * Location, state, and related subscriber data matching the request.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 8.11.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly subscriberInfo: SubscriberInfo,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        subscriberInfo: SubscriberInfo,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.subscriberInfo = subscriberInfo;
+        this.extensionContainer = extensionContainer;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a ProvideSubscriberInfoRes

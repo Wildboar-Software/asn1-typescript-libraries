@@ -34,29 +34,35 @@ import { FileName, _decode_FileName, _encode_FileName } from "../ISO-9506-MMS-1/
  */
 export
 class RequestDomainUpload_Request {
+    /**
+     * @summary `domainName`.
+     * @description
+     *
+     * Domain at the server whose content is uploaded. ISO 9506-1:2003
+     * §11.9.1.1.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly domainName: Identifier;
+    /**
+     * @summary `fileName`.
+     * @description
+     *
+     * Client file that will store the upload. ISO 9506-1:2003 §11.9.1.1.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly fileName: FileName;
+
     constructor (
-        /**
-         * @summary `domainName`.
-         * @description
-         *
-         * Domain at the server whose content is uploaded. ISO 9506-1:2003
-         * §11.9.1.1.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly domainName: Identifier,
-        /**
-         * @summary `fileName`.
-         * @description
-         *
-         * Client file that will store the upload. ISO 9506-1:2003 §11.9.1.1.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly fileName: FileName
-    ) {}
+        domainName: Identifier,
+        fileName: FileName
+    ) {
+        this.domainName = domainName;
+        this.fileName = fileName;
+    }
 
     /**
      * @summary Restructures an object into a RequestDomainUpload_Request

@@ -76,119 +76,141 @@ import {
  *
  */
 export class E_setupRequest {
+    /**
+     * @summary `sessionType`.
+     * @description
+     *
+     * OID of the session type to establish, allocated by the
+     * defining telebiometrics specification. ITU-T Rec.
+     * X.1080.1 (05/2018) §11.1.1 a).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sessionType: SessionType;
+    /**
+     * @summary `sessionId`.
+     * @description
+     *
+     * Unique among concurrent same-type sessions between the
+     * pair; reusable after terminate. ITU-T Rec. X.1080.1
+     * (05/2018) §11.1.1 b).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sessionId: SessionId;
+    /**
+     * @summary `requirement`.
+     * @description
+     *
+     * Voice and video; default `none`. Present in the ASN.1;
+     * not listed in §11.1.1 a–f. ITU-T Rec. X.1080.1
+     * (05/2018) §10.1, §11.1.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly requirement: OPTIONAL<Requirements>;
+    /**
+     * @summary `voiceOptions`.
+     * @description
+     *
+     * Voice option OID. Present in the ASN.1; not listed in
+     * §11.1.1 a–f. ITU-T Rec. X.1080.1 (05/2018) §10.1,
+     * §11.1.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly voiceOptions: OPTIONAL<VoiceOptions>;
+    /**
+     * @summary `videoOptions`.
+     * @description
+     *
+     * Video option OID. Present in the ASN.1; not listed in
+     * §11.1.1 a–f. ITU-T Rec. X.1080.1 (05/2018) §10.1,
+     * §11.1.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly videoOptions: OPTIONAL<VideoOptions>;
+    /**
+     * @summary `returnMode`.
+     * @description
+     *
+     * `continuous`: return results as generated. `batch`:
+     * collect and return at end of sensing or when requested.
+     * ITU-T Rec. X.1080.1 (05/2018) §11.1.1 c).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly returnMode: ReturnMode;
+    /**
+     * @summary `sensorId`.
+     * @description
+     *
+     * Identifies a particular device when several could serve.
+     * ITU-T Rec. X.1080.1 (05/2018) §11.1.1 d).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sensorId: OPTIONAL<UTF8String>;
+    /**
+     * @summary `operations`.
+     * @description
+     *
+     * `INTERACTIVE-OPERATION.&id` values allowed in the
+     * session. ITU-T Rec. X.1080.1 (05/2018) §11.1.1 e).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly operations: INTEGER[];
+    /**
+     * @summary `first`.
+     * @description
+     *
+     * First operation to initiate after the session is
+     * established. ITU-T Rec. X.1080.1 (05/2018) §11.1.1 f).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly first?: OPTIONAL<INTEGER>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `sessionType`.
-         * @description
-         *
-         * OID of the session type to establish, allocated by the
-         * defining telebiometrics specification. ITU-T Rec.
-         * X.1080.1 (05/2018) §11.1.1 a).
-         *
-         * @public
-         * @readonly
-         */
-        readonly sessionType: SessionType,
-        /**
-         * @summary `sessionId`.
-         * @description
-         *
-         * Unique among concurrent same-type sessions between the
-         * pair; reusable after terminate. ITU-T Rec. X.1080.1
-         * (05/2018) §11.1.1 b).
-         *
-         * @public
-         * @readonly
-         */
-        readonly sessionId: SessionId,
-        /**
-         * @summary `requirement`.
-         * @description
-         *
-         * Voice and video; default `none`. Present in the ASN.1;
-         * not listed in §11.1.1 a–f. ITU-T Rec. X.1080.1
-         * (05/2018) §10.1, §11.1.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly requirement: OPTIONAL<Requirements>,
-        /**
-         * @summary `voiceOptions`.
-         * @description
-         *
-         * Voice option OID. Present in the ASN.1; not listed in
-         * §11.1.1 a–f. ITU-T Rec. X.1080.1 (05/2018) §10.1,
-         * §11.1.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly voiceOptions: OPTIONAL<VoiceOptions>,
-        /**
-         * @summary `videoOptions`.
-         * @description
-         *
-         * Video option OID. Present in the ASN.1; not listed in
-         * §11.1.1 a–f. ITU-T Rec. X.1080.1 (05/2018) §10.1,
-         * §11.1.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly videoOptions: OPTIONAL<VideoOptions>,
-        /**
-         * @summary `returnMode`.
-         * @description
-         *
-         * `continuous`: return results as generated. `batch`:
-         * collect and return at end of sensing or when requested.
-         * ITU-T Rec. X.1080.1 (05/2018) §11.1.1 c).
-         *
-         * @public
-         * @readonly
-         */
-        readonly returnMode: ReturnMode,
-        /**
-         * @summary `sensorId`.
-         * @description
-         *
-         * Identifies a particular device when several could serve.
-         * ITU-T Rec. X.1080.1 (05/2018) §11.1.1 d).
-         *
-         * @public
-         * @readonly
-         */
-        readonly sensorId: OPTIONAL<UTF8String>,
-        /**
-         * @summary `operations`.
-         * @description
-         *
-         * `INTERACTIVE-OPERATION.&id` values allowed in the
-         * session. ITU-T Rec. X.1080.1 (05/2018) §11.1.1 e).
-         *
-         * @public
-         * @readonly
-         */
-        readonly operations: INTEGER[],
-        /**
-         * @summary `first`.
-         * @description
-         *
-         * First operation to initiate after the session is
-         * established. ITU-T Rec. X.1080.1 (05/2018) §11.1.1 f).
-         *
-         * @public
-         * @readonly
-         */
-        readonly first?: OPTIONAL<INTEGER>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        sessionType: SessionType,
+        sessionId: SessionId,
+        requirement: OPTIONAL<Requirements>,
+        voiceOptions: OPTIONAL<VoiceOptions>,
+        videoOptions: OPTIONAL<VideoOptions>,
+        returnMode: ReturnMode,
+        sensorId: OPTIONAL<UTF8String>,
+        operations: INTEGER[],
+        first?: OPTIONAL<INTEGER>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.sessionType = sessionType;
+        this.sessionId = sessionId;
+        this.requirement = requirement;
+        this.voiceOptions = voiceOptions;
+        this.videoOptions = videoOptions;
+        this.returnMode = returnMode;
+        this.sensorId = sensorId;
+        this.operations = operations;
+        this.first = first;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a E_setupRequest

@@ -36,32 +36,38 @@ import {
  *
  */
 export class AssociatedObjects_Item {
+    /**
+     * @summary `associatedObject`.
+     * @description
+     *
+     * Instance of the associated object (not a MORT, TO, or TARR). ITU-T
+     * Rec. X.745 (11/93) §8.1.1.
+     * [§8.1.1](https://www.itu.int/rec/T-REC-X.745-199311-I)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly associatedObject: ObjectInstance;
+    /**
+     * @summary `associatedObjectInfo`.
+     * @description
+     *
+     * TMF-OBJECT id and optional value describing this AO; id is from
+     * AssociatedObjectSet (Cor.3). ITU-T Rec. X.745 (11/93) §8.1.1.
+     * [§8.1.1](https://www.itu.int/rec/T-REC-X.745-199311-I)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly associatedObjectInfo: AssociatedObjects_Item_associatedObjectInfo;
+
     constructor(
-        /**
-         * @summary `associatedObject`.
-         * @description
-         *
-         * Instance of the associated object (not a MORT, TO, or TARR). ITU-T
-         * Rec. X.745 (11/93) §8.1.1.
-         * [§8.1.1](https://www.itu.int/rec/T-REC-X.745-199311-I)
-         *
-         * @public
-         * @readonly
-         */
-        readonly associatedObject: ObjectInstance,
-        /**
-         * @summary `associatedObjectInfo`.
-         * @description
-         *
-         * TMF-OBJECT id and optional value describing this AO; id is from
-         * AssociatedObjectSet (Cor.3). ITU-T Rec. X.745 (11/93) §8.1.1.
-         * [§8.1.1](https://www.itu.int/rec/T-REC-X.745-199311-I)
-         *
-         * @public
-         * @readonly
-         */
-        readonly associatedObjectInfo: AssociatedObjects_Item_associatedObjectInfo
-    ) {}
+        associatedObject: ObjectInstance,
+        associatedObjectInfo: AssociatedObjects_Item_associatedObjectInfo
+    ) {
+        this.associatedObject = associatedObject;
+        this.associatedObjectInfo = associatedObjectInfo;
+    }
 
     /**
      * @summary Restructures an object into a AssociatedObjects_Item

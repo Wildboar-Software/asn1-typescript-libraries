@@ -31,35 +31,49 @@ import { type DpSpecificCriteria, _decode_DpSpecificCriteria, _encode_DpSpecific
  *
  */
 export class BCSMEvent {
+    public readonly eventTypeBCSM: EventTypeBCSM;
+    public readonly monitorMode: MonitorMode;
+    /**
+     * @summary `legID`.
+     * @description
+     *
+     * Leg to monitor. Sending Side LegID (gsmSCF → gsmSSF). LegID 1 =
+     * calling party; 2 = called party from InitialDP; > 2 = called party
+     * from InitiateCallAttempt. (3GPP TS 29.078 V19.0.0 clause 4.1.5).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly legID?: OPTIONAL<LegID>;
+    public readonly dpSpecificCriteria?: OPTIONAL<DpSpecificCriteria>;
+    /**
+     * @summary `automaticRearm`.
+     * @description
+     *
+     * gsmSSF shall rearm the DP whenever it is encountered.
+     * (3GPP TS 29.078 V19.0.0 clause 11.27).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly automaticRearm?: OPTIONAL<NULL>;
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        readonly eventTypeBCSM: EventTypeBCSM,
-        readonly monitorMode: MonitorMode,
-        /**
-         * @summary `legID`.
-         * @description
-         *
-         * Leg to monitor. Sending Side LegID (gsmSCF → gsmSSF). LegID 1 =
-         * calling party; 2 = called party from InitialDP; > 2 = called party
-         * from InitiateCallAttempt. (3GPP TS 29.078 V19.0.0 clause 4.1.5).
-         *
-         * @public
-         * @readonly
-         */
-        readonly legID?: OPTIONAL<LegID>,
-        readonly dpSpecificCriteria?: OPTIONAL<DpSpecificCriteria>,
-        /**
-         * @summary `automaticRearm`.
-         * @description
-         *
-         * gsmSSF shall rearm the DP whenever it is encountered.
-         * (3GPP TS 29.078 V19.0.0 clause 11.27).
-         *
-         * @public
-         * @readonly
-         */
-        readonly automaticRearm?: OPTIONAL<NULL>,
-        readonly _unrecognizedExtensionsList: _Element[] = [],
-    ) {}
+        eventTypeBCSM: EventTypeBCSM,
+        monitorMode: MonitorMode,
+        legID?: OPTIONAL<LegID>,
+        dpSpecificCriteria?: OPTIONAL<DpSpecificCriteria>,
+        automaticRearm?: OPTIONAL<NULL>,
+        _unrecognizedExtensionsList: _Element[] = [],
+    ) {
+        this.eventTypeBCSM = eventTypeBCSM;
+        this.monitorMode = monitorMode;
+        this.legID = legID;
+        this.dpSpecificCriteria = dpSpecificCriteria;
+        this.automaticRearm = automaticRearm;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     public static _from_object (_o: { [_K in keyof (BCSMEvent)]: (BCSMEvent)[_K] }): BCSMEvent {
         return new BCSMEvent(_o.eventTypeBCSM, _o.monitorMode, _o.legID, _o.dpSpecificCriteria, _o.automaticRearm, _o._unrecognizedExtensionsList);

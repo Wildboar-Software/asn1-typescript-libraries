@@ -27,19 +27,23 @@ import { _decode_DeleteProfileResponse_deleteResult, _encode_DeleteProfileRespon
  */
 export
 class DeleteProfileResponse {
+    /**
+     * @summary `deleteResult`.
+     * @description
+     * 
+     * `ok`, not found, not disabled, disallowed by policy (PPR2), or
+     * undefined. SGP.22 v3.1 §5.7.18.
+     * 
+     * @public
+     * @readonly
+     */
+    public readonly deleteResult: DeleteProfileResponse_deleteResult;
+
     constructor (
-        /**
-         * @summary `deleteResult`.
-         * @description
-         * 
-         * `ok`, not found, not disabled, disallowed by policy (PPR2), or
-         * undefined. SGP.22 v3.1 §5.7.18.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly deleteResult: DeleteProfileResponse_deleteResult
-    ) {}
+        deleteResult: DeleteProfileResponse_deleteResult
+    ) {
+        this.deleteResult = deleteResult;
+    }
 
     /**
      * @summary Restructures an object into a DeleteProfileResponse

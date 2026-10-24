@@ -39,51 +39,61 @@ import { DistributionRealReal, _decode_DistributionRealReal, _encode_Distributio
  */
 export
 class ResultMatchVerify {
+    /**
+     * @summary `infoDETFNMRFMR`.
+     * @description
+     *
+     * DET of FNMR vs FMR. Pair of error types shall be `fnmr-fmr`
+     * (Clause 6.4.4.3.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly infoDETFNMRFMR?: OPTIONAL<InfoDETCurve>;
+    /**
+     * @summary `infoDETFRRFAR`.
+     * @description
+     *
+     * DET of FRR vs FAR. Pair of error types shall be `frr-far`
+     * (Clause 6.4.4.3.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly infoDETFRRFAR?: OPTIONAL<InfoDETCurve>;
+    /**
+     * @summary `infoDETGFRRGFAR`.
+     * @description
+     *
+     * DET of GFRR vs GFAR. Pair of error types shall be `gfrr-gfar`
+     * (Clause 6.4.4.3.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly infoDETGFRRGFAR?: OPTIONAL<InfoDETCurve>;
+    /**
+     * @summary `cmpScrDistr`.
+     * @description
+     *
+     * CDF of comparison scores (Clause 6.4.4.3.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly cmpScrDistr?: OPTIONAL<DistributionRealReal>;
+
     constructor (
-        /**
-         * @summary `infoDETFNMRFMR`.
-         * @description
-         *
-         * DET of FNMR vs FMR. Pair of error types shall be `fnmr-fmr`
-         * (Clause 6.4.4.3.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly infoDETFNMRFMR?: OPTIONAL<InfoDETCurve>,
-        /**
-         * @summary `infoDETFRRFAR`.
-         * @description
-         *
-         * DET of FRR vs FAR. Pair of error types shall be `frr-far`
-         * (Clause 6.4.4.3.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly infoDETFRRFAR?: OPTIONAL<InfoDETCurve>,
-        /**
-         * @summary `infoDETGFRRGFAR`.
-         * @description
-         *
-         * DET of GFRR vs GFAR. Pair of error types shall be `gfrr-gfar`
-         * (Clause 6.4.4.3.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly infoDETGFRRGFAR?: OPTIONAL<InfoDETCurve>,
-        /**
-         * @summary `cmpScrDistr`.
-         * @description
-         *
-         * CDF of comparison scores (Clause 6.4.4.3.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly cmpScrDistr?: OPTIONAL<DistributionRealReal>
-    ) {}
+        infoDETFNMRFMR?: OPTIONAL<InfoDETCurve>,
+        infoDETFRRFAR?: OPTIONAL<InfoDETCurve>,
+        infoDETGFRRGFAR?: OPTIONAL<InfoDETCurve>,
+        cmpScrDistr?: OPTIONAL<DistributionRealReal>
+    ) {
+        this.infoDETFNMRFMR = infoDETFNMRFMR;
+        this.infoDETFRRFAR = infoDETFRRFAR;
+        this.infoDETGFRRGFAR = infoDETGFRRGFAR;
+        this.cmpScrDistr = cmpScrDistr;
+    }
 
     /**
      * @summary Restructures an object into a ResultMatchVerify

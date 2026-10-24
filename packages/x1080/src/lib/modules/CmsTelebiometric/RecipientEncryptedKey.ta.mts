@@ -40,31 +40,37 @@ import {
  *
  */
 export class RecipientEncryptedKey {
+    /**
+     * @summary `rid`.
+     * @description
+     *
+     * Identifies the recipient by its end-entity PKC.
+     * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.3.3.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly rid: KeyAgreeRecipientIdentifier;
+    /**
+     * @summary `encryptedKey`.
+     * @description
+     *
+     * CEK wrapped under the KEK derived from DH (and UKM if
+     * static-static).
+     * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.3.3.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly encryptedKey: EncryptedKey;
+
     constructor(
-        /**
-         * @summary `rid`.
-         * @description
-         *
-         * Identifies the recipient by its end-entity PKC.
-         * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.3.3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly rid: KeyAgreeRecipientIdentifier,
-        /**
-         * @summary `encryptedKey`.
-         * @description
-         *
-         * CEK wrapped under the KEK derived from DH (and UKM if
-         * static-static).
-         * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.3.3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly encryptedKey: EncryptedKey
-    ) {}
+        rid: KeyAgreeRecipientIdentifier,
+        encryptedKey: EncryptedKey
+    ) {
+        this.rid = rid;
+        this.encryptedKey = encryptedKey;
+    }
 
     /**
      * @summary Restructures an object into a RecipientEncryptedKey

@@ -36,19 +36,23 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class ImplicitNullable<T> {
+    /**
+     * @summary `present`.
+     * @description
+     *
+     * The non-NULL alternative. Absent encodes as empty
+     * (IMPLICIT NULL) under the same context tag.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly present?: OPTIONAL<T>;
+
     constructor (
-        /**
-         * @summary `present`.
-         * @description
-         *
-         * The non-NULL alternative. Absent encodes as empty
-         * (IMPLICIT NULL) under the same context tag.
-         *
-         * @public
-         * @readonly
-         */
-        readonly present?: OPTIONAL<T>
-    ) {}
+        present?: OPTIONAL<T>
+    ) {
+        this.present = present;
+    }
 
     /**
      * @summary Restructures an object into a ImplicitNullable

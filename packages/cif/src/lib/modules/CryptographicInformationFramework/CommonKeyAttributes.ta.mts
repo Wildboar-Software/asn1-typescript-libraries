@@ -49,85 +49,105 @@ import { Reference, _decode_Reference, _encode_Reference } from "../Cryptographi
  */
 export
 class CommonKeyAttributes {
+    /**
+     * @summary `iD`.
+     * @description
+     * Unique among keys unless shared with the matching public key and/or
+     * certificates. ISO/IEC 7816-15:2016 §8.2.9, §8.2.15.
+     * @public
+     * @readonly
+     */
+    public readonly iD: Identifier;
+    /**
+     * @summary `usage`.
+     * @description
+     * Intended cryptographic operations. Algorithms themselves are
+     * implicit. ISO/IEC 7816-15:2016 §8.2.9.
+     * @public
+     * @readonly
+     */
+    public readonly usage: KeyUsageFlags;
+    /**
+     * @summary `native`.
+     * @description
+     * Whether associated algorithms are implemented in card hardware.
+     * DEFAULT TRUE. ISO/IEC 7816-15:2016 §8.2.9.
+     * @public
+     * @readonly
+     */
+    public readonly native?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `accessFlags`.
+     * @description
+     * Sensitivity/extractability/generation. May be omitted when the value
+     * can be deduced otherwise. ISO/IEC 7816-15:2016 §8.2.9.
+     * @public
+     * @readonly
+     */
+    public readonly accessFlags?: OPTIONAL<KeyAccessFlags>;
+    /**
+     * @summary `keyReference`.
+     * @description
+     * Card-specific key reference for cryptographic cards (ISO/IEC 7816-4/8
+     * key reference DOs). Negative values are allowed. ISO/IEC 7816-15:2016
+     * §8.2.9.
+     * @public
+     * @readonly
+     */
+    public readonly keyReference?: OPTIONAL<KeyReference>;
+    /**
+     * @summary `startDate`.
+     * @description
+     * Start of the key's validity period. ISO/IEC 7816-15:2016 §8.2.9.
+     * @public
+     * @readonly
+     */
+    public readonly startDate?: OPTIONAL<GeneralizedTime>;
+    /**
+     * @summary `endDate`.
+     * @description
+     * End of the key's validity period. ISO/IEC 7816-15:2016 §8.2.9.
+     * @public
+     * @readonly
+     */
+    public readonly endDate?: OPTIONAL<GeneralizedTime>;
+    /**
+     * @summary `algReference`.
+     * @description
+     * References `AlgorithmInfo.reference` values in EF.CIAInfo for
+     * algorithms this key may be used with. ISO/IEC 7816-15:2016 §8.2.9.
+     * @public
+     * @readonly
+     */
+    public readonly algReference?: OPTIONAL<Reference[]>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `iD`.
-         * @description
-         * Unique among keys unless shared with the matching public key and/or
-         * certificates. ISO/IEC 7816-15:2016 §8.2.9, §8.2.15.
-         * @public
-         * @readonly
-         */
-        readonly iD: Identifier,
-        /**
-         * @summary `usage`.
-         * @description
-         * Intended cryptographic operations. Algorithms themselves are
-         * implicit. ISO/IEC 7816-15:2016 §8.2.9.
-         * @public
-         * @readonly
-         */
-        readonly usage: KeyUsageFlags,
-        /**
-         * @summary `native`.
-         * @description
-         * Whether associated algorithms are implemented in card hardware.
-         * DEFAULT TRUE. ISO/IEC 7816-15:2016 §8.2.9.
-         * @public
-         * @readonly
-         */
-        readonly native?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `accessFlags`.
-         * @description
-         * Sensitivity/extractability/generation. May be omitted when the value
-         * can be deduced otherwise. ISO/IEC 7816-15:2016 §8.2.9.
-         * @public
-         * @readonly
-         */
-        readonly accessFlags?: OPTIONAL<KeyAccessFlags>,
-        /**
-         * @summary `keyReference`.
-         * @description
-         * Card-specific key reference for cryptographic cards (ISO/IEC 7816-4/8
-         * key reference DOs). Negative values are allowed. ISO/IEC 7816-15:2016
-         * §8.2.9.
-         * @public
-         * @readonly
-         */
-        readonly keyReference?: OPTIONAL<KeyReference>,
-        /**
-         * @summary `startDate`.
-         * @description
-         * Start of the key's validity period. ISO/IEC 7816-15:2016 §8.2.9.
-         * @public
-         * @readonly
-         */
-        readonly startDate?: OPTIONAL<GeneralizedTime>,
-        /**
-         * @summary `endDate`.
-         * @description
-         * End of the key's validity period. ISO/IEC 7816-15:2016 §8.2.9.
-         * @public
-         * @readonly
-         */
-        readonly endDate?: OPTIONAL<GeneralizedTime>,
-        /**
-         * @summary `algReference`.
-         * @description
-         * References `AlgorithmInfo.reference` values in EF.CIAInfo for
-         * algorithms this key may be used with. ISO/IEC 7816-15:2016 §8.2.9.
-         * @public
-         * @readonly
-         */
-        readonly algReference?: OPTIONAL<Reference[]>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        iD: Identifier,
+        usage: KeyUsageFlags,
+        native?: OPTIONAL<BOOLEAN>,
+        accessFlags?: OPTIONAL<KeyAccessFlags>,
+        keyReference?: OPTIONAL<KeyReference>,
+        startDate?: OPTIONAL<GeneralizedTime>,
+        endDate?: OPTIONAL<GeneralizedTime>,
+        algReference?: OPTIONAL<Reference[]>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.iD = iD;
+        this.usage = usage;
+        this.native = native;
+        this.accessFlags = accessFlags;
+        this.keyReference = keyReference;
+        this.startDate = startDate;
+        this.endDate = endDate;
+        this.algReference = algReference;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a CommonKeyAttributes

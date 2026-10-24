@@ -48,36 +48,44 @@ import {
  *
  */
 export class IdmReject {
+    /**
+     * @summary `invokeID`.
+     * @description
+     *
+     * Invoke ID recovered from the bad Request/Result/Error. If it cannot
+     * be recovered, close the connection instead of Reject.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly invokeID: INTEGER;
+    /**
+     * @summary `reason`.
+     * @description
+     *
+     * See `IdmReject-reason`. Reasons 11–13 are TCP-mapping version
+     * problems, not Directory protocol version.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly reason: IdmReject_reason;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `invokeID`.
-         * @description
-         *
-         * Invoke ID recovered from the bad Request/Result/Error. If it cannot
-         * be recovered, close the connection instead of Reject.
-         *
-         * @public
-         * @readonly
-         */
-        readonly invokeID: INTEGER,
-        /**
-         * @summary `reason`.
-         * @description
-         *
-         * See `IdmReject-reason`. Reasons 11–13 are TCP-mapping version
-         * problems, not Directory protocol version.
-         *
-         * @public
-         * @readonly
-         */
-        readonly reason: IdmReject_reason,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        invokeID: INTEGER,
+        reason: IdmReject_reason,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.invokeID = invokeID;
+        this.reason = reason;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a IdmReject

@@ -27,22 +27,28 @@ import {
  *
  */
 export class TbsHandshakeAcc_encr_mode_non_aead {
+    /**
+     * @summary `encr`.
+     * @description First supported symmetric-key algorithm of those suggested; present iff the client included `encr`.
+     * @public
+     * @readonly
+     */
+    public readonly encr: OPTIONAL<AlgorithmIdentifier>;
+    /**
+     * @summary `icvAlgID`.
+     * @description First supported ICV algorithm of those suggested.
+     * @public
+     * @readonly
+     */
+    public readonly icvAlgID: AlgorithmIdentifier;
+
     constructor(
-        /**
-         * @summary `encr`.
-         * @description First supported symmetric-key algorithm of those suggested; present iff the client included `encr`.
-         * @public
-         * @readonly
-         */
-        readonly encr: OPTIONAL<AlgorithmIdentifier>,
-        /**
-         * @summary `icvAlgID`.
-         * @description First supported ICV algorithm of those suggested.
-         * @public
-         * @readonly
-         */
-        readonly icvAlgID: AlgorithmIdentifier
-    ) {}
+        encr: OPTIONAL<AlgorithmIdentifier>,
+        icvAlgID: AlgorithmIdentifier
+    ) {
+        this.encr = encr;
+        this.icvAlgID = icvAlgID;
+    }
 
     /**
      * @summary Restructures an object into a TbsHandshakeAcc_encr_mode_non_aead

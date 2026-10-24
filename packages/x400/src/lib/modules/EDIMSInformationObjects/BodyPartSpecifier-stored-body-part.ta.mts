@@ -30,20 +30,26 @@ import {
  *
  */
 export class BodyPartSpecifier_stored_body_part {
+    /**
+     * @summary `message_entry`.
+     * @public
+     * @readonly
+     */
+    public readonly message_entry: SequenceNumber;
+    /**
+     * @summary `body_part_number`.
+     * @public
+     * @readonly
+     */
+    public readonly body_part_number: INTEGER;
+
     constructor(
-        /**
-         * @summary `message_entry`.
-         * @public
-         * @readonly
-         */
-        readonly message_entry: SequenceNumber,
-        /**
-         * @summary `body_part_number`.
-         * @public
-         * @readonly
-         */
-        readonly body_part_number: INTEGER
-    ) {}
+        message_entry: SequenceNumber,
+        body_part_number: INTEGER
+    ) {
+        this.message_entry = message_entry;
+        this.body_part_number = body_part_number;
+    }
 
     /**
      * @summary Restructures an object into a BodyPartSpecifier_stored_body_part

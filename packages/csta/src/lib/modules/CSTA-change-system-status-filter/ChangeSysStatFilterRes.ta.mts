@@ -40,27 +40,33 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class ChangeSysStatFilterRes {
+    /**
+     * @summary `actualStatusFilter`.
+     * @description
+     *
+     * Types the SF will actually filter (not send).
+     * @public
+     * @readonly
+     */
+    public readonly actualStatusFilter: SystemStatus;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData. ECMA-269 Table 14-3.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `actualStatusFilter`.
-         * @description
-         *
-         * Types the SF will actually filter (not send).
-         * @public
-         * @readonly
-         */
-        readonly actualStatusFilter: SystemStatus,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData. ECMA-269 Table 14-3.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        actualStatusFilter: SystemStatus,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.actualStatusFilter = actualStatusFilter;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a ChangeSysStatFilterRes

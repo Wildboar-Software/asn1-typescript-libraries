@@ -41,94 +41,114 @@ import { SGW_EventList, _decode_SGW_EventList, _encode_SGW_EventList } from "../
  */
 export
 class TraceEventList {
+    /**
+     * @summary `msc_s_List`.
+     * @description
+     *
+     * Event list for this NE (clause 17.7.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly msc_s_List?: OPTIONAL<MSC_S_EventList>;
+    /**
+     * @summary `mgw_List`.
+     * @description
+     *
+     * Event list for this NE (clause 17.7.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mgw_List?: OPTIONAL<MGW_EventList>;
+    /**
+     * @summary `sgsn_List`.
+     * @description
+     *
+     * Event list for this NE (clause 17.7.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sgsn_List?: OPTIONAL<SGSN_EventList>;
+    /**
+     * @summary `ggsn_List`.
+     * @description
+     *
+     * Event list for this NE (clause 17.7.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ggsn_List?: OPTIONAL<GGSN_EventList>;
+    /**
+     * @summary `bmsc_List`.
+     * @description
+     *
+     * Event list for this NE (clause 17.7.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly bmsc_List?: OPTIONAL<BMSC_EventList>;
+    /**
+     * @summary `mme_List`.
+     * @description
+     *
+     * Event list for this NE (clause 17.7.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mme_List?: OPTIONAL<MME_EventList>;
+    /**
+     * @summary `sgw_List`.
+     * @description
+     *
+     * Event list for this NE (clause 17.7.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sgw_List?: OPTIONAL<SGW_EventList>;
+    /**
+     * @summary `pgw_List`.
+     * @description
+     *
+     * Event list for this NE (clause 17.7.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly pgw_List?: OPTIONAL<PGW_EventList>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `msc_s_List`.
-         * @description
-         *
-         * Event list for this NE (clause 17.7.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly msc_s_List?: OPTIONAL<MSC_S_EventList>,
-        /**
-         * @summary `mgw_List`.
-         * @description
-         *
-         * Event list for this NE (clause 17.7.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly mgw_List?: OPTIONAL<MGW_EventList>,
-        /**
-         * @summary `sgsn_List`.
-         * @description
-         *
-         * Event list for this NE (clause 17.7.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly sgsn_List?: OPTIONAL<SGSN_EventList>,
-        /**
-         * @summary `ggsn_List`.
-         * @description
-         *
-         * Event list for this NE (clause 17.7.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly ggsn_List?: OPTIONAL<GGSN_EventList>,
-        /**
-         * @summary `bmsc_List`.
-         * @description
-         *
-         * Event list for this NE (clause 17.7.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly bmsc_List?: OPTIONAL<BMSC_EventList>,
-        /**
-         * @summary `mme_List`.
-         * @description
-         *
-         * Event list for this NE (clause 17.7.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly mme_List?: OPTIONAL<MME_EventList>,
-        /**
-         * @summary `sgw_List`.
-         * @description
-         *
-         * Event list for this NE (clause 17.7.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly sgw_List?: OPTIONAL<SGW_EventList>,
-        /**
-         * @summary `pgw_List`.
-         * @description
-         *
-         * Event list for this NE (clause 17.7.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly pgw_List?: OPTIONAL<PGW_EventList>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        msc_s_List?: OPTIONAL<MSC_S_EventList>,
+        mgw_List?: OPTIONAL<MGW_EventList>,
+        sgsn_List?: OPTIONAL<SGSN_EventList>,
+        ggsn_List?: OPTIONAL<GGSN_EventList>,
+        bmsc_List?: OPTIONAL<BMSC_EventList>,
+        mme_List?: OPTIONAL<MME_EventList>,
+        sgw_List?: OPTIONAL<SGW_EventList>,
+        pgw_List?: OPTIONAL<PGW_EventList>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.msc_s_List = msc_s_List;
+        this.mgw_List = mgw_List;
+        this.sgsn_List = sgsn_List;
+        this.ggsn_List = ggsn_List;
+        this.bmsc_List = bmsc_List;
+        this.mme_List = mme_List;
+        this.sgw_List = sgw_List;
+        this.pgw_List = pgw_List;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a TraceEventList

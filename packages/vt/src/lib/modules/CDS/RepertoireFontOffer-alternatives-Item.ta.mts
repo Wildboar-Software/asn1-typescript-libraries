@@ -38,35 +38,43 @@ import { FontAssignment, _decode_FontAssignment, _encode_FontAssignment } from "
  */
 export
 class RepertoireFontOffer_alternatives_Item {
+    /**
+     * @summary `repertoire`.
+     * @description
+     * Offered repertoire-assignment for this slot. ISO/IEC
+     * 9040:1997 §18.2.4.
+     * @public
+     * @readonly
+     */
+    public readonly repertoire?: OPTIONAL<RepertoireAssignment>;
+    /**
+     * @summary `fontCapability`.
+     * @description
+     * Offered `font-capability` (number of fonts for this
+     * repertoire; default 1). ISO/IEC 9040:1997 §18.3.
+     * @public
+     * @readonly
+     */
+    public readonly fontCapability?: OPTIONAL<IntegerOffer>;
+    /**
+     * @summary `fontAssignments`.
+     * @description
+     * Offered font-assignment list for this repertoire. ISO/IEC
+     * 9040:1997 §18.3.
+     * @public
+     * @readonly
+     */
+    public readonly fontAssignments?: OPTIONAL<FontAssignment[]>;
+
     constructor (
-        /**
-         * @summary `repertoire`.
-         * @description
-         * Offered repertoire-assignment for this slot. ISO/IEC
-         * 9040:1997 §18.2.4.
-         * @public
-         * @readonly
-         */
-        readonly repertoire?: OPTIONAL<RepertoireAssignment>,
-        /**
-         * @summary `fontCapability`.
-         * @description
-         * Offered `font-capability` (number of fonts for this
-         * repertoire; default 1). ISO/IEC 9040:1997 §18.3.
-         * @public
-         * @readonly
-         */
-        readonly fontCapability?: OPTIONAL<IntegerOffer>,
-        /**
-         * @summary `fontAssignments`.
-         * @description
-         * Offered font-assignment list for this repertoire. ISO/IEC
-         * 9040:1997 §18.3.
-         * @public
-         * @readonly
-         */
-        readonly fontAssignments?: OPTIONAL<FontAssignment[]>
-    ) {}
+        repertoire?: OPTIONAL<RepertoireAssignment>,
+        fontCapability?: OPTIONAL<IntegerOffer>,
+        fontAssignments?: OPTIONAL<FontAssignment[]>
+    ) {
+        this.repertoire = repertoire;
+        this.fontCapability = fontCapability;
+        this.fontAssignments = fontAssignments;
+    }
 
     /**
      * @summary Restructures an object into a RepertoireFontOffer_alternatives_Item

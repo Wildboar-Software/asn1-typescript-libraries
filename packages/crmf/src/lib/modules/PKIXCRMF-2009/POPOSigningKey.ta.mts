@@ -42,42 +42,50 @@ import {
  *
  */
 export class POPOSigningKey {
+    /**
+     * @summary `poposkInput`.
+     * @description
+     *
+     * Data to be signed when present. MUST be present when the
+     * certificate template does not contain both the public key
+     * and a subject name ([RFC 4211 §4.1](https://datatracker.ietf.org/doc/html/rfc4211#section-4.1)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly poposkInput: OPTIONAL<POPOSigningKeyInput>;
+    /**
+     * @summary `algorithmIdentifier`.
+     * @description
+     *
+     * Signature algorithm (and parameters) used to produce the POP
+     * value ([RFC 4211 §4.1](https://datatracker.ietf.org/doc/html/rfc4211#section-4.1)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly algorithmIdentifier: AlgorithmIdentifier;
+    /**
+     * @summary `signature`.
+     * @description
+     *
+     * POP signature value: over DER(`poposkInput`) if present,
+     * else over DER(`certReq`) ([RFC 4211 §4.1](https://datatracker.ietf.org/doc/html/rfc4211#section-4.1)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly signature: BIT_STRING;
+
     constructor(
-        /**
-         * @summary `poposkInput`.
-         * @description
-         *
-         * Data to be signed when present. MUST be present when the
-         * certificate template does not contain both the public key
-         * and a subject name ([RFC 4211 §4.1](https://datatracker.ietf.org/doc/html/rfc4211#section-4.1)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly poposkInput: OPTIONAL<POPOSigningKeyInput>,
-        /**
-         * @summary `algorithmIdentifier`.
-         * @description
-         *
-         * Signature algorithm (and parameters) used to produce the POP
-         * value ([RFC 4211 §4.1](https://datatracker.ietf.org/doc/html/rfc4211#section-4.1)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly algorithmIdentifier: AlgorithmIdentifier,
-        /**
-         * @summary `signature`.
-         * @description
-         *
-         * POP signature value: over DER(`poposkInput`) if present,
-         * else over DER(`certReq`) ([RFC 4211 §4.1](https://datatracker.ietf.org/doc/html/rfc4211#section-4.1)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly signature: BIT_STRING
-    ) {}
+        poposkInput: OPTIONAL<POPOSigningKeyInput>,
+        algorithmIdentifier: AlgorithmIdentifier,
+        signature: BIT_STRING
+    ) {
+        this.poposkInput = poposkInput;
+        this.algorithmIdentifier = algorithmIdentifier;
+        this.signature = signature;
+    }
 
     /**
      * @summary Restructures an object into a POPOSigningKey

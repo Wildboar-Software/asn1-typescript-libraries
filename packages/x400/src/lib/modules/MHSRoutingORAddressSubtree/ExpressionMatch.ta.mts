@@ -39,20 +39,26 @@ import {
  *
  */
 export class ExpressionMatch {
+    /**
+     * @summary `filter_set`.
+     * @public
+     * @readonly
+     */
+    public readonly filter_set: ORAddressFilter[];
+    /**
+     * @summary `routing_advice`.
+     * @public
+     * @readonly
+     */
+    public readonly routing_advice: RoutingAdvice;
+
     constructor(
-        /**
-         * @summary `filter_set`.
-         * @public
-         * @readonly
-         */
-        readonly filter_set: ORAddressFilter[],
-        /**
-         * @summary `routing_advice`.
-         * @public
-         * @readonly
-         */
-        readonly routing_advice: RoutingAdvice
-    ) {}
+        filter_set: ORAddressFilter[],
+        routing_advice: RoutingAdvice
+    ) {
+        this.filter_set = filter_set;
+        this.routing_advice = routing_advice;
+    }
 
     /**
      * @summary Restructures an object into a ExpressionMatch

@@ -36,30 +36,36 @@ import * as $ from '@wildboar/asn1/functional';
  *
  */
 export class TransferInfo {
+    /**
+     * @summary `transferProtocol`.
+     * @description
+     *
+     * OID of the chosen transfer mechanism (`SWMF-TRANSFER.&id`
+     * constrained by `TransferInfoSet`). ITU-T Rec. X.744 Cor.2
+     * (02/2000) item 5.
+     * @public
+     * @readonly
+     */
+    public readonly transferProtocol: OBJECT_IDENTIFIER;
+    /**
+     * @summary `protocolSpecificInfo`.
+     * @description
+     *
+     * Protocol-specific parameters (`SWMF-TRANSFER.&Value` for
+     * `transferProtocol`). ITU-T Rec. X.744 Cor.2 (02/2000)
+     * item 5.
+     * @public
+     * @readonly
+     */
+    public readonly protocolSpecificInfo: _Element;
+
     constructor(
-        /**
-         * @summary `transferProtocol`.
-         * @description
-         *
-         * OID of the chosen transfer mechanism (`SWMF-TRANSFER.&id`
-         * constrained by `TransferInfoSet`). ITU-T Rec. X.744 Cor.2
-         * (02/2000) item 5.
-         * @public
-         * @readonly
-         */
-        readonly transferProtocol: OBJECT_IDENTIFIER,
-        /**
-         * @summary `protocolSpecificInfo`.
-         * @description
-         *
-         * Protocol-specific parameters (`SWMF-TRANSFER.&Value` for
-         * `transferProtocol`). ITU-T Rec. X.744 Cor.2 (02/2000)
-         * item 5.
-         * @public
-         * @readonly
-         */
-        readonly protocolSpecificInfo: _Element
-    ) {}
+        transferProtocol: OBJECT_IDENTIFIER,
+        protocolSpecificInfo: _Element
+    ) {
+        this.transferProtocol = transferProtocol;
+        this.protocolSpecificInfo = protocolSpecificInfo;
+    }
 
     /**
      * @summary Restructures an object into a TransferInfo

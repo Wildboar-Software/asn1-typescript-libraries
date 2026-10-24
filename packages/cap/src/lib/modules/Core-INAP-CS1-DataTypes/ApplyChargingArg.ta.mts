@@ -37,32 +37,42 @@ import { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "
  */
 export
 class ApplyChargingArg {
+    /**
+     * @summary `aChBillingChargingCharacteristics`.
+     * @public
+     * @readonly
+     */
+    public readonly aChBillingChargingCharacteristics: AChBillingChargingCharacteristics;
+    /**
+     * @summary `sendCalculationToSCPIndication`.
+     * @public
+     * @readonly
+     */
+    public readonly sendCalculationToSCPIndication?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `partyToCharge`.
+     * @public
+     * @readonly
+     */
+    public readonly partyToCharge?: OPTIONAL<LegID>;
+    /**
+     * @summary `extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<ExtensionField[]>;
+
     constructor (
-        /**
-         * @summary `aChBillingChargingCharacteristics`.
-         * @public
-         * @readonly
-         */
-        readonly aChBillingChargingCharacteristics: AChBillingChargingCharacteristics,
-        /**
-         * @summary `sendCalculationToSCPIndication`.
-         * @public
-         * @readonly
-         */
-        readonly sendCalculationToSCPIndication?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `partyToCharge`.
-         * @public
-         * @readonly
-         */
-        readonly partyToCharge?: OPTIONAL<LegID>,
-        /**
-         * @summary `extensions`.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<ExtensionField[]>
-    ) {}
+        aChBillingChargingCharacteristics: AChBillingChargingCharacteristics,
+        sendCalculationToSCPIndication?: OPTIONAL<BOOLEAN>,
+        partyToCharge?: OPTIONAL<LegID>,
+        extensions?: OPTIONAL<ExtensionField[]>
+    ) {
+        this.aChBillingChargingCharacteristics = aChBillingChargingCharacteristics;
+        this.sendCalculationToSCPIndication = sendCalculationToSCPIndication;
+        this.partyToCharge = partyToCharge;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a ApplyChargingArg

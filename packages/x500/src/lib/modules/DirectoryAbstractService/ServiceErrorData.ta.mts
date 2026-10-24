@@ -52,66 +52,80 @@ import {
  *
  */
 export class ServiceErrorData implements CommonResults {
+    /**
+     * @summary `problem`.
+     * @description
+     *
+     * `timeLimitExceeded` / `administrativeLimitExceeded` ⇒ NO partial
+     * results.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly problem: ServiceProblem;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+    /**
+     * @summary `securityParameters`.
+     * @description
+     *
+     * Required if the error is signed; absence ≡ empty set.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly securityParameters?: OPTIONAL<SecurityParameters>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `performer`.
+     * @description
+     *
+     * DN of the DSA that signed; needed when the error is signed.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly performer?: OPTIONAL<DistinguishedName>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `aliasDereferenced`.
+     * @description
+     *
+     * DEFAULT FALSE. TRUE if any alias in the purported name was
+     * dereferenced.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly aliasDereferenced?: OPTIONAL<BOOLEAN>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `notification`.
+     * @description
+     *
+     * SEQUENCE SIZE (1..MAX). Qualifies the error.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly notification?: OPTIONAL<Attribute[]>; /* REPLICATED_COMPONENT */
+
     constructor(
-        /**
-         * @summary `problem`.
-         * @description
-         *
-         * `timeLimitExceeded` / `administrativeLimitExceeded` ⇒ NO partial
-         * results.
-         *
-         * @public
-         * @readonly
-         */
-        readonly problem: ServiceProblem,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = [],
-        /**
-         * @summary `securityParameters`.
-         * @description
-         *
-         * Required if the error is signed; absence ≡ empty set.
-         *
-         * @public
-         * @readonly
-         */
-        readonly securityParameters?: OPTIONAL<SecurityParameters> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `performer`.
-         * @description
-         *
-         * DN of the DSA that signed; needed when the error is signed.
-         *
-         * @public
-         * @readonly
-         */
-        readonly performer?: OPTIONAL<DistinguishedName> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `aliasDereferenced`.
-         * @description
-         *
-         * DEFAULT FALSE. TRUE if any alias in the purported name was
-         * dereferenced.
-         *
-         * @public
-         * @readonly
-         */
-        readonly aliasDereferenced?: OPTIONAL<BOOLEAN> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `notification`.
-         * @description
-         *
-         * SEQUENCE SIZE (1..MAX). Qualifies the error.
-         *
-         * @public
-         * @readonly
-         */
-        readonly notification?: OPTIONAL<Attribute[]> /* REPLICATED_COMPONENT */
-    ) {}
+        problem: ServiceProblem,
+        _unrecognizedExtensionsList: _Element[] = [],
+        securityParameters?: OPTIONAL<SecurityParameters>,
+        performer?: OPTIONAL<DistinguishedName>,
+        aliasDereferenced?: OPTIONAL<BOOLEAN>,
+        notification?: OPTIONAL<Attribute[]>
+    ) {
+        this.problem = problem;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+        this.securityParameters = securityParameters;
+        this.performer = performer;
+        this.aliasDereferenced = aliasDereferenced;
+        this.notification = notification;
+    }
 
     /**
      * @summary Restructures an object into a ServiceErrorData

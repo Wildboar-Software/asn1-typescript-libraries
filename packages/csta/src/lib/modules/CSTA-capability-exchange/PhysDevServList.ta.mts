@@ -99,215 +99,263 @@ import { SetSpeakerVolume, _decode_SetSpeakerVolume, _encode_SetSpeakerVolume } 
  */
 export
 class PhysDevServList {
+    /**
+     * @summary `buttonPress`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly buttonPress?: OPTIONAL<ButtonPress>;
+    /**
+     * @summary `getAuditoryApparatusInfo`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly getAuditoryApparatusInfo?: OPTIONAL<GetAuditoryApparatusInfo>;
+    /**
+     * @summary `getButtonInformation`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly getButtonInformation?: OPTIONAL<GetButtonInformation>;
+    /**
+     * @summary `getDisplay`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly getDisplay?: OPTIONAL<GetDisplay>;
+    /**
+     * @summary `getHookSwitchStatus`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly getHookSwitchStatus?: OPTIONAL<GetHookSwitchStatus>;
+    /**
+     * @summary `getLampInfo`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly getLampInfo?: OPTIONAL<GetLampInfo>;
+    /**
+     * @summary `getLampMode`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly getLampMode?: OPTIONAL<GetLampMode>;
+    /**
+     * @summary `getMessageWaitingIndicator`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly getMessageWaitingIndicator?: OPTIONAL<GetMessageWaitingIndicator>;
+    /**
+     * @summary `getMicrophoneGain`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly getMicrophoneGain?: OPTIONAL<GetMicrophoneGain>;
+    /**
+     * @summary `getMicrophoneMute`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly getMicrophoneMute?: OPTIONAL<GetMicrophoneMute>;
+    /**
+     * @summary `getRingerStatus`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly getRingerStatus?: OPTIONAL<GetRingerStatus>;
+    /**
+     * @summary `getSpeakerMute`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly getSpeakerMute?: OPTIONAL<GetSpeakerMute>;
+    /**
+     * @summary `getSpeakerVolume`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly getSpeakerVolume?: OPTIONAL<GetSpeakerVolume>;
+    /**
+     * @summary `setButtonInformation`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly setButtonInformation?: OPTIONAL<SetButtonInformation>;
+    /**
+     * @summary `setDisplay`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly setDisplay?: OPTIONAL<SetDisplay>;
+    /**
+     * @summary `setHookSwitchStatus`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly setHookSwitchStatus?: OPTIONAL<SetHookSwitchStatus>;
+    /**
+     * @summary `setLampMode`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly setLampMode?: OPTIONAL<SetLampMode>;
+    /**
+     * @summary `setMessageWaitingIndicator`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly setMessageWaitingIndicator?: OPTIONAL<SetMessageWaitingIndicator>;
+    /**
+     * @summary `setMicrophoneGain`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly setMicrophoneGain?: OPTIONAL<SetMicrophoneGain>;
+    /**
+     * @summary `setMicrophoneMute`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly setMicrophoneMute?: OPTIONAL<SetMicrophoneMute>;
+    /**
+     * @summary `setRingerStatus`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly setRingerStatus?: OPTIONAL<SetRingerStatus>;
+    /**
+     * @summary `setSpeakerMute`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly setSpeakerMute?: OPTIONAL<SetSpeakerMute>;
+    /**
+     * @summary `setSpeakerVolume`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly setSpeakerVolume?: OPTIONAL<SetSpeakerVolume>;
+
     constructor (
-        /**
-         * @summary `buttonPress`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly buttonPress?: OPTIONAL<ButtonPress>,
-        /**
-         * @summary `getAuditoryApparatusInfo`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly getAuditoryApparatusInfo?: OPTIONAL<GetAuditoryApparatusInfo>,
-        /**
-         * @summary `getButtonInformation`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly getButtonInformation?: OPTIONAL<GetButtonInformation>,
-        /**
-         * @summary `getDisplay`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly getDisplay?: OPTIONAL<GetDisplay>,
-        /**
-         * @summary `getHookSwitchStatus`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly getHookSwitchStatus?: OPTIONAL<GetHookSwitchStatus>,
-        /**
-         * @summary `getLampInfo`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly getLampInfo?: OPTIONAL<GetLampInfo>,
-        /**
-         * @summary `getLampMode`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly getLampMode?: OPTIONAL<GetLampMode>,
-        /**
-         * @summary `getMessageWaitingIndicator`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly getMessageWaitingIndicator?: OPTIONAL<GetMessageWaitingIndicator>,
-        /**
-         * @summary `getMicrophoneGain`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly getMicrophoneGain?: OPTIONAL<GetMicrophoneGain>,
-        /**
-         * @summary `getMicrophoneMute`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly getMicrophoneMute?: OPTIONAL<GetMicrophoneMute>,
-        /**
-         * @summary `getRingerStatus`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly getRingerStatus?: OPTIONAL<GetRingerStatus>,
-        /**
-         * @summary `getSpeakerMute`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly getSpeakerMute?: OPTIONAL<GetSpeakerMute>,
-        /**
-         * @summary `getSpeakerVolume`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly getSpeakerVolume?: OPTIONAL<GetSpeakerVolume>,
-        /**
-         * @summary `setButtonInformation`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly setButtonInformation?: OPTIONAL<SetButtonInformation>,
-        /**
-         * @summary `setDisplay`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly setDisplay?: OPTIONAL<SetDisplay>,
-        /**
-         * @summary `setHookSwitchStatus`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly setHookSwitchStatus?: OPTIONAL<SetHookSwitchStatus>,
-        /**
-         * @summary `setLampMode`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly setLampMode?: OPTIONAL<SetLampMode>,
-        /**
-         * @summary `setMessageWaitingIndicator`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly setMessageWaitingIndicator?: OPTIONAL<SetMessageWaitingIndicator>,
-        /**
-         * @summary `setMicrophoneGain`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly setMicrophoneGain?: OPTIONAL<SetMicrophoneGain>,
-        /**
-         * @summary `setMicrophoneMute`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly setMicrophoneMute?: OPTIONAL<SetMicrophoneMute>,
-        /**
-         * @summary `setRingerStatus`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly setRingerStatus?: OPTIONAL<SetRingerStatus>,
-        /**
-         * @summary `setSpeakerMute`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly setSpeakerMute?: OPTIONAL<SetSpeakerMute>,
-        /**
-         * @summary `setSpeakerVolume`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly setSpeakerVolume?: OPTIONAL<SetSpeakerVolume>
-    ) {}
+        buttonPress?: OPTIONAL<ButtonPress>,
+        getAuditoryApparatusInfo?: OPTIONAL<GetAuditoryApparatusInfo>,
+        getButtonInformation?: OPTIONAL<GetButtonInformation>,
+        getDisplay?: OPTIONAL<GetDisplay>,
+        getHookSwitchStatus?: OPTIONAL<GetHookSwitchStatus>,
+        getLampInfo?: OPTIONAL<GetLampInfo>,
+        getLampMode?: OPTIONAL<GetLampMode>,
+        getMessageWaitingIndicator?: OPTIONAL<GetMessageWaitingIndicator>,
+        getMicrophoneGain?: OPTIONAL<GetMicrophoneGain>,
+        getMicrophoneMute?: OPTIONAL<GetMicrophoneMute>,
+        getRingerStatus?: OPTIONAL<GetRingerStatus>,
+        getSpeakerMute?: OPTIONAL<GetSpeakerMute>,
+        getSpeakerVolume?: OPTIONAL<GetSpeakerVolume>,
+        setButtonInformation?: OPTIONAL<SetButtonInformation>,
+        setDisplay?: OPTIONAL<SetDisplay>,
+        setHookSwitchStatus?: OPTIONAL<SetHookSwitchStatus>,
+        setLampMode?: OPTIONAL<SetLampMode>,
+        setMessageWaitingIndicator?: OPTIONAL<SetMessageWaitingIndicator>,
+        setMicrophoneGain?: OPTIONAL<SetMicrophoneGain>,
+        setMicrophoneMute?: OPTIONAL<SetMicrophoneMute>,
+        setRingerStatus?: OPTIONAL<SetRingerStatus>,
+        setSpeakerMute?: OPTIONAL<SetSpeakerMute>,
+        setSpeakerVolume?: OPTIONAL<SetSpeakerVolume>
+    ) {
+        this.buttonPress = buttonPress;
+        this.getAuditoryApparatusInfo = getAuditoryApparatusInfo;
+        this.getButtonInformation = getButtonInformation;
+        this.getDisplay = getDisplay;
+        this.getHookSwitchStatus = getHookSwitchStatus;
+        this.getLampInfo = getLampInfo;
+        this.getLampMode = getLampMode;
+        this.getMessageWaitingIndicator = getMessageWaitingIndicator;
+        this.getMicrophoneGain = getMicrophoneGain;
+        this.getMicrophoneMute = getMicrophoneMute;
+        this.getRingerStatus = getRingerStatus;
+        this.getSpeakerMute = getSpeakerMute;
+        this.getSpeakerVolume = getSpeakerVolume;
+        this.setButtonInformation = setButtonInformation;
+        this.setDisplay = setDisplay;
+        this.setHookSwitchStatus = setHookSwitchStatus;
+        this.setLampMode = setLampMode;
+        this.setMessageWaitingIndicator = setMessageWaitingIndicator;
+        this.setMicrophoneGain = setMicrophoneGain;
+        this.setMicrophoneMute = setMicrophoneMute;
+        this.setRingerStatus = setRingerStatus;
+        this.setSpeakerMute = setSpeakerMute;
+        this.setSpeakerVolume = setSpeakerVolume;
+    }
 
     /**
      * @summary Restructures an object into a PhysDevServList

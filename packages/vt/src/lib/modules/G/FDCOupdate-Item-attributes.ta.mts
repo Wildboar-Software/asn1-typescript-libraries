@@ -40,51 +40,63 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class FDCOupdate_Item_attributes {
+    /**
+     * @summary `graphicCharacterRepertoire`.
+     * @description
+     * Repertoire assignment; 0 ⇒ `"null"`. ISO/IEC 9041-1:1997
+     * §12.2.2.
+     * @public
+     * @readonly
+     */
+    public readonly graphicCharacterRepertoire?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `foregroundColour`.
+     * @description
+     * Foreground colour assignment; 0 ⇒ `"null"`. ISO/IEC
+     * 9041-1:1997 §12.2.2.
+     * @public
+     * @readonly
+     */
+    public readonly foregroundColour?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `backgroundColour`.
+     * @description
+     * Background colour assignment; 0 ⇒ `"null"`. ISO/IEC
+     * 9041-1:1997 §12.2.2.
+     * @public
+     * @readonly
+     */
+    public readonly backgroundColour?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `emphasis`.
+     * @description
+     * Emphasis attribute string. ISO/IEC 9041-1:1997 §12.2.2.
+     * @public
+     * @readonly
+     */
+    public readonly emphasis?: OPTIONAL<PrintableString>;
+    /**
+     * @summary `font`.
+     * @description
+     * Font assignment; 0 ⇒ `"null"`. ISO/IEC 9041-1:1997 §12.2.2.
+     * @public
+     * @readonly
+     */
+    public readonly font?: OPTIONAL<INTEGER>;
+
     constructor (
-        /**
-         * @summary `graphicCharacterRepertoire`.
-         * @description
-         * Repertoire assignment; 0 ⇒ `"null"`. ISO/IEC 9041-1:1997
-         * §12.2.2.
-         * @public
-         * @readonly
-         */
-        readonly graphicCharacterRepertoire?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `foregroundColour`.
-         * @description
-         * Foreground colour assignment; 0 ⇒ `"null"`. ISO/IEC
-         * 9041-1:1997 §12.2.2.
-         * @public
-         * @readonly
-         */
-        readonly foregroundColour?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `backgroundColour`.
-         * @description
-         * Background colour assignment; 0 ⇒ `"null"`. ISO/IEC
-         * 9041-1:1997 §12.2.2.
-         * @public
-         * @readonly
-         */
-        readonly backgroundColour?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `emphasis`.
-         * @description
-         * Emphasis attribute string. ISO/IEC 9041-1:1997 §12.2.2.
-         * @public
-         * @readonly
-         */
-        readonly emphasis?: OPTIONAL<PrintableString>,
-        /**
-         * @summary `font`.
-         * @description
-         * Font assignment; 0 ⇒ `"null"`. ISO/IEC 9041-1:1997 §12.2.2.
-         * @public
-         * @readonly
-         */
-        readonly font?: OPTIONAL<INTEGER>
-    ) {}
+        graphicCharacterRepertoire?: OPTIONAL<INTEGER>,
+        foregroundColour?: OPTIONAL<INTEGER>,
+        backgroundColour?: OPTIONAL<INTEGER>,
+        emphasis?: OPTIONAL<PrintableString>,
+        font?: OPTIONAL<INTEGER>
+    ) {
+        this.graphicCharacterRepertoire = graphicCharacterRepertoire;
+        this.foregroundColour = foregroundColour;
+        this.backgroundColour = backgroundColour;
+        this.emphasis = emphasis;
+        this.font = font;
+    }
 
     /**
      * @summary Restructures an object into a FDCOupdate_Item_attributes

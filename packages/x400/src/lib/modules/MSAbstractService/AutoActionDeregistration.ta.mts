@@ -35,20 +35,26 @@ import {
  *
  */
 export class AutoActionDeregistration {
+    /**
+     * @summary `auto_action_type`.
+     * @public
+     * @readonly
+     */
+    public readonly auto_action_type: AutoActionType;
+    /**
+     * @summary `registration_identifier`.
+     * @public
+     * @readonly
+     */
+    public readonly registration_identifier?: OPTIONAL<INTEGER>;
+
     constructor(
-        /**
-         * @summary `auto_action_type`.
-         * @public
-         * @readonly
-         */
-        readonly auto_action_type: AutoActionType,
-        /**
-         * @summary `registration_identifier`.
-         * @public
-         * @readonly
-         */
-        readonly registration_identifier?: OPTIONAL<INTEGER>
-    ) {}
+        auto_action_type: AutoActionType,
+        registration_identifier?: OPTIONAL<INTEGER>
+    ) {
+        this.auto_action_type = auto_action_type;
+        this.registration_identifier = registration_identifier;
+    }
 
     /**
      * @summary Restructures an object into a AutoActionDeregistration

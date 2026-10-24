@@ -45,53 +45,65 @@ import { StopCDRTransmission, _decode_StopCDRTransmission, _encode_StopCDRTransm
  */
 export
 class CDRServList {
+    /**
+     * @summary `cdrNotification`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly cdrNotification?: OPTIONAL<CdrNotification>;
+    /**
+     * @summary `cdrReport`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly cdrReport?: OPTIONAL<CdrReport>;
+    /**
+     * @summary `sendStoredCDRs`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly sendStoredCDRs?: OPTIONAL<SendStoredCDRs>;
+    /**
+     * @summary `startCDRTransmission`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly startCDRTransmission?: OPTIONAL<StartCDRTransmission>;
+    /**
+     * @summary `stopCDRTransmission`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly stopCDRTransmission?: OPTIONAL<StopCDRTransmission>;
+
     constructor (
-        /**
-         * @summary `cdrNotification`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly cdrNotification?: OPTIONAL<CdrNotification>,
-        /**
-         * @summary `cdrReport`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly cdrReport?: OPTIONAL<CdrReport>,
-        /**
-         * @summary `sendStoredCDRs`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly sendStoredCDRs?: OPTIONAL<SendStoredCDRs>,
-        /**
-         * @summary `startCDRTransmission`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly startCDRTransmission?: OPTIONAL<StartCDRTransmission>,
-        /**
-         * @summary `stopCDRTransmission`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly stopCDRTransmission?: OPTIONAL<StopCDRTransmission>
-    ) {}
+        cdrNotification?: OPTIONAL<CdrNotification>,
+        cdrReport?: OPTIONAL<CdrReport>,
+        sendStoredCDRs?: OPTIONAL<SendStoredCDRs>,
+        startCDRTransmission?: OPTIONAL<StartCDRTransmission>,
+        stopCDRTransmission?: OPTIONAL<StopCDRTransmission>
+    ) {
+        this.cdrNotification = cdrNotification;
+        this.cdrReport = cdrReport;
+        this.sendStoredCDRs = sendStoredCDRs;
+        this.startCDRTransmission = startCDRTransmission;
+        this.stopCDRTransmission = stopCDRTransmission;
+    }
 
     /**
      * @summary Restructures an object into a CDRServList

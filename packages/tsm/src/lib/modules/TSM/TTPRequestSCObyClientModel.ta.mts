@@ -33,19 +33,23 @@ import { SampleData, _decode_SampleData, _encode_SampleData } from "../TSM/Sampl
  */
 export
 class TTPRequestSCObyClientModel {
+    /**
+     * @summary `sampleData`.
+     * @description
+     *
+     * Captured sample as BioAPI BIR (includes BSP/device info).
+     * [ISO/IEC 19784-1]; X.1084 §11.3–§11.4.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sampleData: SampleData;
+
     constructor (
-        /**
-         * @summary `sampleData`.
-         * @description
-         *
-         * Captured sample as BioAPI BIR (includes BSP/device info).
-         * [ISO/IEC 19784-1]; X.1084 §11.3–§11.4.
-         *
-         * @public
-         * @readonly
-         */
-        readonly sampleData: SampleData
-    ) {}
+        sampleData: SampleData
+    ) {
+        this.sampleData = sampleData;
+    }
 
     /**
      * @summary Restructures an object into a TTPRequestSCObyClientModel

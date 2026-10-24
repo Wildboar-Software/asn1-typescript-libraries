@@ -53,32 +53,42 @@ import {
  *
  */
 export class PerRecipientAutoForwardFields {
+    /**
+     * @summary `recipient_name`.
+     * @public
+     * @readonly
+     */
+    public readonly recipient_name: RecipientName;
+    /**
+     * @summary `originator_report_request`.
+     * @public
+     * @readonly
+     */
+    public readonly originator_report_request: OriginatorReportRequest;
+    /**
+     * @summary `explicit_conversion`.
+     * @public
+     * @readonly
+     */
+    public readonly explicit_conversion?: OPTIONAL<ExplicitConversion>;
+    /**
+     * @summary `extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<ExtensionField[]>;
+
     constructor(
-        /**
-         * @summary `recipient_name`.
-         * @public
-         * @readonly
-         */
-        readonly recipient_name: RecipientName,
-        /**
-         * @summary `originator_report_request`.
-         * @public
-         * @readonly
-         */
-        readonly originator_report_request: OriginatorReportRequest,
-        /**
-         * @summary `explicit_conversion`.
-         * @public
-         * @readonly
-         */
-        readonly explicit_conversion?: OPTIONAL<ExplicitConversion>,
-        /**
-         * @summary `extensions`.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<ExtensionField[]>
-    ) {}
+        recipient_name: RecipientName,
+        originator_report_request: OriginatorReportRequest,
+        explicit_conversion?: OPTIONAL<ExplicitConversion>,
+        extensions?: OPTIONAL<ExtensionField[]>
+    ) {
+        this.recipient_name = recipient_name;
+        this.originator_report_request = originator_report_request;
+        this.explicit_conversion = explicit_conversion;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a PerRecipientAutoForwardFields

@@ -30,20 +30,26 @@ import {
  *
  */
 export class PtoPoint {
+    /**
+     * @summary `aEnd`.
+     * @public
+     * @readonly
+     */
+    public readonly aEnd: ConnectivityEndPoint;
+    /**
+     * @summary `zEnd`.
+     * @public
+     * @readonly
+     */
+    public readonly zEnd: ConnectivityEndPoint;
+
     constructor(
-        /**
-         * @summary `aEnd`.
-         * @public
-         * @readonly
-         */
-        readonly aEnd: ConnectivityEndPoint,
-        /**
-         * @summary `zEnd`.
-         * @public
-         * @readonly
-         */
-        readonly zEnd: ConnectivityEndPoint
-    ) {}
+        aEnd: ConnectivityEndPoint,
+        zEnd: ConnectivityEndPoint
+    ) {
+        this.aEnd = aEnd;
+        this.zEnd = zEnd;
+    }
 
     /**
      * @summary Restructures an object into a PtoPoint

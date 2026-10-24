@@ -48,82 +48,96 @@ import { ApplicationReference, _decode_ApplicationReference, _encode_Application
  */
 export
 class GetEventEnrollmentAttributes_Request {
+    /**
+     * @summary `scopeOfRequest`.
+     * @description
+     *
+     * Which enrollments: `specific`, `client` (default), `ec`, or `ea`.
+     *
+     * [ISO 9506-1:2003 §21.4.1.1.1]
+     * [ISO 9506-2:2003 §21.4.1.1]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly scopeOfRequest?: OPTIONAL<GetEventEnrollmentAttributes_Request_scopeOfRequest>;
+    /**
+     * @summary `eventEnrollmentNames`.
+     * @description
+     *
+     * Names when scope is `specific`.
+     *
+     * [ISO 9506-1:2003 §21.4.1.1.2]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly eventEnrollmentNames?: OPTIONAL<ObjectName[]>;
+    /**
+     * @summary `clientApplication`.
+     * @description
+     *
+     * Client filter. Omitted if the requesting client. Requires `tpy`.
+     *
+     * [ISO 9506-1:2003 §21.4.1.1.3]
+     * [ISO 9506-2:2003 §21.4.1.3]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly clientApplication?: OPTIONAL<Nullable<ApplicationReference>>;
+    /**
+     * @summary `eventConditionName`.
+     * @description
+     *
+     * Event Condition when scope is `ec`.
+     *
+     * [ISO 9506-1:2003 §21.4.1.1.4]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly eventConditionName?: OPTIONAL<ObjectName>;
+    /**
+     * @summary `eventActionName`.
+     * @description
+     *
+     * Event Action when scope is `ea`.
+     *
+     * [ISO 9506-1:2003 §21.4.1.1.5]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly eventActionName?: OPTIONAL<ObjectName>;
+    /**
+     * @summary `continueAfter`.
+     * @description
+     *
+     * Last enrollment name from a prior `moreFollows` response.
+     *
+     * [ISO 9506-1:2003 §21.4.1.1.6]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly continueAfter?: OPTIONAL<ObjectName>;
+
     constructor (
-        /**
-         * @summary `scopeOfRequest`.
-         * @description
-         *
-         * Which enrollments: `specific`, `client` (default), `ec`, or `ea`.
-         *
-         * [ISO 9506-1:2003 §21.4.1.1.1]
-         * [ISO 9506-2:2003 §21.4.1.1]
-         *
-         * @public
-         * @readonly
-         */
-        readonly scopeOfRequest?: OPTIONAL<GetEventEnrollmentAttributes_Request_scopeOfRequest>,
-        /**
-         * @summary `eventEnrollmentNames`.
-         * @description
-         *
-         * Names when scope is `specific`.
-         *
-         * [ISO 9506-1:2003 §21.4.1.1.2]
-         *
-         * @public
-         * @readonly
-         */
-        readonly eventEnrollmentNames?: OPTIONAL<ObjectName[]>,
-        /**
-         * @summary `clientApplication`.
-         * @description
-         *
-         * Client filter. Omitted if the requesting client. Requires `tpy`.
-         *
-         * [ISO 9506-1:2003 §21.4.1.1.3]
-         * [ISO 9506-2:2003 §21.4.1.3]
-         *
-         * @public
-         * @readonly
-         */
-        readonly clientApplication?: OPTIONAL<Nullable<ApplicationReference>>,
-        /**
-         * @summary `eventConditionName`.
-         * @description
-         *
-         * Event Condition when scope is `ec`.
-         *
-         * [ISO 9506-1:2003 §21.4.1.1.4]
-         *
-         * @public
-         * @readonly
-         */
-        readonly eventConditionName?: OPTIONAL<ObjectName>,
-        /**
-         * @summary `eventActionName`.
-         * @description
-         *
-         * Event Action when scope is `ea`.
-         *
-         * [ISO 9506-1:2003 §21.4.1.1.5]
-         *
-         * @public
-         * @readonly
-         */
-        readonly eventActionName?: OPTIONAL<ObjectName>,
-        /**
-         * @summary `continueAfter`.
-         * @description
-         *
-         * Last enrollment name from a prior `moreFollows` response.
-         *
-         * [ISO 9506-1:2003 §21.4.1.1.6]
-         *
-         * @public
-         * @readonly
-         */
-        readonly continueAfter?: OPTIONAL<ObjectName>
-    ) {}
+        scopeOfRequest?: OPTIONAL<GetEventEnrollmentAttributes_Request_scopeOfRequest>,
+        eventEnrollmentNames?: OPTIONAL<ObjectName[]>,
+        clientApplication?: OPTIONAL<Nullable<ApplicationReference>>,
+        eventConditionName?: OPTIONAL<ObjectName>,
+        eventActionName?: OPTIONAL<ObjectName>,
+        continueAfter?: OPTIONAL<ObjectName>
+    ) {
+        this.scopeOfRequest = scopeOfRequest;
+        this.eventEnrollmentNames = eventEnrollmentNames;
+        this.clientApplication = clientApplication;
+        this.eventConditionName = eventConditionName;
+        this.eventActionName = eventActionName;
+        this.continueAfter = continueAfter;
+    }
 
     /**
      * @summary Restructures an object into a GetEventEnrollmentAttributes_Request

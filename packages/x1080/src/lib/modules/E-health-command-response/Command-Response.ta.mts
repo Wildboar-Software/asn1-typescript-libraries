@@ -48,45 +48,53 @@ import {
  *
  */
 export class Command_Response {
+    /**
+     * @summary `encryptionOptions`.
+     * @description
+     *
+     * When `TRUE`, `content` is encrypted. ITU-T Rec. X.1080.1
+     * (10/2011) module E-health-command-response.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly encryptionOptions: EncryptionOptions;
+    /**
+     * @summary `integrityOptions`.
+     * @description
+     *
+     * BOOLEAN flag. The `content` constraint comment only
+     * mentions encryption when `encryptionOptions` is `TRUE`.
+     * ITU-T Rec. X.1080.1 (10/2011) module
+     * E-health-command-response.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly integrityOptions: IntegrityOptions;
+    /**
+     * @summary `content`.
+     * @description
+     *
+     * Encoding of an `Identified-Command-Response` under the
+     * current encoding rules, then encrypted if
+     * `encryptionOptions` is `TRUE`. ITU-T Rec. X.1080.1
+     * (10/2011) module E-health-command-response.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly content: OCTET_STRING;
+
     constructor(
-        /**
-         * @summary `encryptionOptions`.
-         * @description
-         *
-         * When `TRUE`, `content` is encrypted. ITU-T Rec. X.1080.1
-         * (10/2011) module E-health-command-response.
-         *
-         * @public
-         * @readonly
-         */
-        readonly encryptionOptions: EncryptionOptions,
-        /**
-         * @summary `integrityOptions`.
-         * @description
-         *
-         * BOOLEAN flag. The `content` constraint comment only
-         * mentions encryption when `encryptionOptions` is `TRUE`.
-         * ITU-T Rec. X.1080.1 (10/2011) module
-         * E-health-command-response.
-         *
-         * @public
-         * @readonly
-         */
-        readonly integrityOptions: IntegrityOptions,
-        /**
-         * @summary `content`.
-         * @description
-         *
-         * Encoding of an `Identified-Command-Response` under the
-         * current encoding rules, then encrypted if
-         * `encryptionOptions` is `TRUE`. ITU-T Rec. X.1080.1
-         * (10/2011) module E-health-command-response.
-         *
-         * @public
-         * @readonly
-         */
-        readonly content: OCTET_STRING
-    ) {}
+        encryptionOptions: EncryptionOptions,
+        integrityOptions: IntegrityOptions,
+        content: OCTET_STRING
+    ) {
+        this.encryptionOptions = encryptionOptions;
+        this.integrityOptions = integrityOptions;
+        this.content = content;
+    }
 
     /**
      * @summary Restructures an object into a Command_Response

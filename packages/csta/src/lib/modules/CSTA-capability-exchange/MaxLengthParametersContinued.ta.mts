@@ -38,56 +38,70 @@ import {
  */
 export
 class MaxLengthParametersContinued {
+    /**
+     * @summary `monitorCrossRefID`.
+     * @public
+     * @readonly
+     * @description
+     * max length of MonitorCrossRefID; 0 means unsupported
+     */
+    public readonly monitorCrossRefID: INTEGER;
+    /**
+     * @summary `callQualifyingData`.
+     * @public
+     * @readonly
+     * @description
+     * max length of CallQualifyingData; 0 means unsupported
+     */
+    public readonly callQualifyingData: INTEGER;
+    /**
+     * @summary `subDomainCallLinkageData`.
+     * @public
+     * @readonly
+     * @description
+     * max length of subDomainCallLinkageID; 0 means unsupported
+     */
+    public readonly subDomainCallLinkageData: INTEGER;
+    /**
+     * @summary `subDomainThreadID`.
+     * @public
+     * @readonly
+     * @description
+     * max length of subDomainThreadID; 0 means unsupported
+     */
+    public readonly subDomainThreadID: INTEGER;
+    /**
+     * @summary `ioData`.
+     * @public
+     * @readonly
+     * @description
+     * max length of ioData parameters; 0 means unsupported
+     */
+    public readonly ioData: INTEGER;
+    /**
+     * @summary `messageInfo`.
+     * @public
+     * @readonly
+     * @description
+     * max length of MessageInfo; 0 means unsupported
+     */
+    public readonly messageInfo: INTEGER;
+
     constructor (
-        /**
-         * @summary `monitorCrossRefID`.
-         * @public
-         * @readonly
-         * @description
-         * max length of MonitorCrossRefID; 0 means unsupported
-         */
-        readonly monitorCrossRefID: INTEGER,
-        /**
-         * @summary `callQualifyingData`.
-         * @public
-         * @readonly
-         * @description
-         * max length of CallQualifyingData; 0 means unsupported
-         */
-        readonly callQualifyingData: INTEGER,
-        /**
-         * @summary `subDomainCallLinkageData`.
-         * @public
-         * @readonly
-         * @description
-         * max length of subDomainCallLinkageID; 0 means unsupported
-         */
-        readonly subDomainCallLinkageData: INTEGER,
-        /**
-         * @summary `subDomainThreadID`.
-         * @public
-         * @readonly
-         * @description
-         * max length of subDomainThreadID; 0 means unsupported
-         */
-        readonly subDomainThreadID: INTEGER,
-        /**
-         * @summary `ioData`.
-         * @public
-         * @readonly
-         * @description
-         * max length of ioData parameters; 0 means unsupported
-         */
-        readonly ioData: INTEGER,
-        /**
-         * @summary `messageInfo`.
-         * @public
-         * @readonly
-         * @description
-         * max length of MessageInfo; 0 means unsupported
-         */
-        readonly messageInfo: INTEGER
-    ) {}
+        monitorCrossRefID: INTEGER,
+        callQualifyingData: INTEGER,
+        subDomainCallLinkageData: INTEGER,
+        subDomainThreadID: INTEGER,
+        ioData: INTEGER,
+        messageInfo: INTEGER
+    ) {
+        this.monitorCrossRefID = monitorCrossRefID;
+        this.callQualifyingData = callQualifyingData;
+        this.subDomainCallLinkageData = subDomainCallLinkageData;
+        this.subDomainThreadID = subDomainThreadID;
+        this.ioData = ioData;
+        this.messageInfo = messageInfo;
+    }
 
     /**
      * @summary Restructures an object into a MaxLengthParametersContinued

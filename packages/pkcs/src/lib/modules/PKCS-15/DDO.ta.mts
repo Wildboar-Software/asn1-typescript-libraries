@@ -26,38 +26,50 @@ import { Path, _decode_Path, _encode_Path } from "../PKCS-15/Path.ta.mjs";
  *
  */
 export class DDO {
+    /**
+     * @summary `oid`.
+     * @public
+     * @readonly
+     */
+    public readonly oid: OBJECT_IDENTIFIER;
+    /**
+     * @summary `odfPath`.
+     * @public
+     * @readonly
+     */
+    public readonly odfPath?: OPTIONAL<Path>;
+    /**
+     * @summary `tokenInfoPath`.
+     * @public
+     * @readonly
+     */
+    public readonly tokenInfoPath?: OPTIONAL<Path>;
+    /**
+     * @summary `unusedPath`.
+     * @public
+     * @readonly
+     */
+    public readonly unusedPath?: OPTIONAL<Path>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `oid`.
-         * @public
-         * @readonly
-         */
-        readonly oid: OBJECT_IDENTIFIER,
-        /**
-         * @summary `odfPath`.
-         * @public
-         * @readonly
-         */
-        readonly odfPath?: OPTIONAL<Path>,
-        /**
-         * @summary `tokenInfoPath`.
-         * @public
-         * @readonly
-         */
-        readonly tokenInfoPath?: OPTIONAL<Path>,
-        /**
-         * @summary `unusedPath`.
-         * @public
-         * @readonly
-         */
-        readonly unusedPath?: OPTIONAL<Path>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        oid: OBJECT_IDENTIFIER,
+        odfPath?: OPTIONAL<Path>,
+        tokenInfoPath?: OPTIONAL<Path>,
+        unusedPath?: OPTIONAL<Path>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.oid = oid;
+        this.odfPath = odfPath;
+        this.tokenInfoPath = tokenInfoPath;
+        this.unusedPath = unusedPath;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a DDO

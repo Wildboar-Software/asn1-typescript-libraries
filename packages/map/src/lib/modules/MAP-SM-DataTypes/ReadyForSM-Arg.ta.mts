@@ -41,75 +41,91 @@ import { AlertReason, _decode_AlertReason, _encode_AlertReason, _enum_for_AlertR
  */
 export
 class ReadyForSM_Arg {
+    /**
+     * @summary `imsi`.
+     * @description
+     *
+     * Subscriber IMSI.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly imsi: IMSI;
+    /**
+     * @summary `alertReason`.
+     * @description
+     *
+     * ms-Present or memoryAvailable.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly alertReason: AlertReason;
+    /**
+     * @summary `alertReasonIndicator`.
+     * @description
+     *
+     * Set only when alertReason sent to HLR is for GPRS (clause 17.7.6).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly alertReasonIndicator?: OPTIONAL<NULL>;
+    /**
+     * @summary `extensionContainer`.
+     * @description
+     *
+     * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary `additionalAlertReasonIndicator`.
+     * @description
+     *
+     * Set only when alertReason sent to HLR is for IP-SM-GW (clause
+     * 17.7.6).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly additionalAlertReasonIndicator?: OPTIONAL<NULL>;
+    /**
+     * @summary `maximumUeAvailabilityTime`.
+     * @description
+     *
+     * Maximum UE availability time.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly maximumUeAvailabilityTime?: OPTIONAL<Time>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `imsi`.
-         * @description
-         *
-         * Subscriber IMSI.
-         *
-         * @public
-         * @readonly
-         */
-        readonly imsi: IMSI,
-        /**
-         * @summary `alertReason`.
-         * @description
-         *
-         * ms-Present or memoryAvailable.
-         *
-         * @public
-         * @readonly
-         */
-        readonly alertReason: AlertReason,
-        /**
-         * @summary `alertReasonIndicator`.
-         * @description
-         *
-         * Set only when alertReason sent to HLR is for GPRS (clause 17.7.6).
-         *
-         * @public
-         * @readonly
-         */
-        readonly alertReasonIndicator?: OPTIONAL<NULL>,
-        /**
-         * @summary `extensionContainer`.
-         * @description
-         *
-         * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary `additionalAlertReasonIndicator`.
-         * @description
-         *
-         * Set only when alertReason sent to HLR is for IP-SM-GW (clause
-         * 17.7.6).
-         *
-         * @public
-         * @readonly
-         */
-        readonly additionalAlertReasonIndicator?: OPTIONAL<NULL>,
-        /**
-         * @summary `maximumUeAvailabilityTime`.
-         * @description
-         *
-         * Maximum UE availability time.
-         *
-         * @public
-         * @readonly
-         */
-        readonly maximumUeAvailabilityTime?: OPTIONAL<Time>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        imsi: IMSI,
+        alertReason: AlertReason,
+        alertReasonIndicator?: OPTIONAL<NULL>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        additionalAlertReasonIndicator?: OPTIONAL<NULL>,
+        maximumUeAvailabilityTime?: OPTIONAL<Time>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.imsi = imsi;
+        this.alertReason = alertReason;
+        this.alertReasonIndicator = alertReasonIndicator;
+        this.extensionContainer = extensionContainer;
+        this.additionalAlertReasonIndicator = additionalAlertReasonIndicator;
+        this.maximumUeAvailabilityTime = maximumUeAvailabilityTime;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a ReadyForSM_Arg

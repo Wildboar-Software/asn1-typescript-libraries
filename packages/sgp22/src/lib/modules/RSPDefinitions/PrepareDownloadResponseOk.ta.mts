@@ -30,30 +30,36 @@ import { EUICCSigned2, _decode_EUICCSigned2, _encode_EUICCSigned2 } from "../RSP
  */
 export
 class PrepareDownloadResponseOk {
+    /**
+     * @summary `euiccSigned2`.
+     * @description
+     * 
+     * eUICC one-time public key and optional Confirmation Code hash. SGP.22
+     * v3.1 §5.7.5.
+     * 
+     * @public
+     * @readonly
+     */
+    public readonly euiccSigned2: EUICCSigned2;
+    /**
+     * @summary `euiccSignature2`.
+     * @description
+     * 
+     * Signature under SK.EUICC.SIG, tag `'5F37'`. The SM-DP+ verifies it
+     * over `euiccSigned2` and `smdpSignature2`. SGP.22 v3.1 §5.6.2.
+     * 
+     * @public
+     * @readonly
+     */
+    public readonly euiccSignature2: OCTET_STRING;
+
     constructor (
-        /**
-         * @summary `euiccSigned2`.
-         * @description
-         * 
-         * eUICC one-time public key and optional Confirmation Code hash. SGP.22
-         * v3.1 §5.7.5.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly euiccSigned2: EUICCSigned2,
-        /**
-         * @summary `euiccSignature2`.
-         * @description
-         * 
-         * Signature under SK.EUICC.SIG, tag `'5F37'`. The SM-DP+ verifies it
-         * over `euiccSigned2` and `smdpSignature2`. SGP.22 v3.1 §5.6.2.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly euiccSignature2: OCTET_STRING
-    ) {}
+        euiccSigned2: EUICCSigned2,
+        euiccSignature2: OCTET_STRING
+    ) {
+        this.euiccSigned2 = euiccSigned2;
+        this.euiccSignature2 = euiccSignature2;
+    }
 
     /**
      * @summary Restructures an object into a PrepareDownloadResponseOk

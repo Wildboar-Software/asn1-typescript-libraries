@@ -39,40 +39,48 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class ExpressionPointDETCurve {
+    /**
+     * @summary `threshold`.
+     * @description
+     *
+     * Operating threshold. See type JSDoc for conflicting sentinel
+     * values in Clause 6.4.4.3.3 vs Annex A.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly threshold: OPTIONAL<REAL>;
+    /**
+     * @summary `typeIError`.
+     * @description
+     *
+     * Type I error rate at this point (Clause 6.4.4.3.3). Sequence
+     * of points shall be increasing in this field.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly typeIError: REAL;
+    /**
+     * @summary `typeIIError`.
+     * @description
+     *
+     * Type II error rate at this point (Clause 6.4.4.3.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly typeIIError: REAL;
+
     constructor (
-        /**
-         * @summary `threshold`.
-         * @description
-         *
-         * Operating threshold. See type JSDoc for conflicting sentinel
-         * values in Clause 6.4.4.3.3 vs Annex A.
-         *
-         * @public
-         * @readonly
-         */
-        readonly threshold: OPTIONAL<REAL>,
-        /**
-         * @summary `typeIError`.
-         * @description
-         *
-         * Type I error rate at this point (Clause 6.4.4.3.3). Sequence
-         * of points shall be increasing in this field.
-         *
-         * @public
-         * @readonly
-         */
-        readonly typeIError: REAL,
-        /**
-         * @summary `typeIIError`.
-         * @description
-         *
-         * Type II error rate at this point (Clause 6.4.4.3.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly typeIIError: REAL
-    ) {}
+        threshold: OPTIONAL<REAL>,
+        typeIError: REAL,
+        typeIIError: REAL
+    ) {
+        this.threshold = threshold;
+        this.typeIError = typeIError;
+        this.typeIIError = typeIIError;
+    }
 
     /**
      * @summary Restructures an object into a ExpressionPointDETCurve

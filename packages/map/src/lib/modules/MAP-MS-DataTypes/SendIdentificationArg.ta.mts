@@ -50,133 +50,157 @@ import { NumberOfRequestedVectors, _decode_NumberOfRequestedVectors, _encode_Num
  */
 export
 class SendIdentificationArg {
+    /**
+     * @summary `tmsi`.
+     * @description
+     *
+     * Temporary Mobile Subscriber Identity as in 3GPP TS 23.003.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.2.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly tmsi: TMSI;
+    /**
+     * @summary `numberOfRequestedVectors`.
+     * @description
+     *
+     * How many authentication vectors (1..5) the requester is prepared to
+     * receive. HLR shall not return more. Present in the first request of a
+     * dialogue only.
+     *
+     * (3GPP TS 29.002 V19.1.0 clauses 8.5.2.3 and 8.1.4).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly numberOfRequestedVectors?: OPTIONAL<NumberOfRequestedVectors>;
+    /**
+     * @summary `segmentationProhibited`.
+     * @description
+     *
+     * If present, the requester does not allow MAP-user segmentation of the
+     * response. May be present only in the first request of a dialogue.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 8.5.2.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly segmentationProhibited?: OPTIONAL<NULL>;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary `msc_Number`.
+     * @description
+     *
+     * ISDN number of an MSC. In Update Location, used for short-message
+     * delivery; MSRN is requested from the VLR for each incoming call
+     * set-up.
+     *
+     * (3GPP TS 29.002 V19.1.0 clauses 7.6.2.11 and 8.1.2.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly msc_Number?: OPTIONAL<ISDN_AddressString>;
+    /**
+     * @summary `previous_LAI`.
+     * @description
+     *
+     * Location area from which the subscriber has roamed.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.2.4).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly previous_LAI?: OPTIONAL<LAIFixedLength>;
+    /**
+     * @summary `hopCounter`.
+     * @description
+     *
+     * Hop count (0..3) for the identification request chain.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly hopCounter?: OPTIONAL<HopCounter>;
+    /**
+     * @summary `mtRoamingForwardingSupported`.
+     * @description
+     *
+     * Sender supports MT Roaming Forwarding.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.5.20).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mtRoamingForwardingSupported?: OPTIONAL<NULL>;
+    /**
+     * @summary `newVLR_Number`.
+     * @description
+     *
+     * ISDN number of the new VLR.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.2.14).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly newVLR_Number?: OPTIONAL<ISDN_AddressString>;
+    /**
+     * @summary `new_lmsi`.
+     * @description
+     *
+     * LMSI allocated by the new VLR.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.2.16).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly new_lmsi?: OPTIONAL<LMSI>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `tmsi`.
-         * @description
-         *
-         * Temporary Mobile Subscriber Identity as in 3GPP TS 23.003.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.2.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly tmsi: TMSI,
-        /**
-         * @summary `numberOfRequestedVectors`.
-         * @description
-         *
-         * How many authentication vectors (1..5) the requester is prepared to
-         * receive. HLR shall not return more. Present in the first request of a
-         * dialogue only.
-         *
-         * (3GPP TS 29.002 V19.1.0 clauses 8.5.2.3 and 8.1.4).
-         *
-         * @public
-         * @readonly
-         */
-        readonly numberOfRequestedVectors?: OPTIONAL<NumberOfRequestedVectors>,
-        /**
-         * @summary `segmentationProhibited`.
-         * @description
-         *
-         * If present, the requester does not allow MAP-user segmentation of the
-         * response. May be present only in the first request of a dialogue.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 8.5.2.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly segmentationProhibited?: OPTIONAL<NULL>,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary `msc_Number`.
-         * @description
-         *
-         * ISDN number of an MSC. In Update Location, used for short-message
-         * delivery; MSRN is requested from the VLR for each incoming call
-         * set-up.
-         *
-         * (3GPP TS 29.002 V19.1.0 clauses 7.6.2.11 and 8.1.2.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly msc_Number?: OPTIONAL<ISDN_AddressString>,
-        /**
-         * @summary `previous_LAI`.
-         * @description
-         *
-         * Location area from which the subscriber has roamed.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.2.4).
-         *
-         * @public
-         * @readonly
-         */
-        readonly previous_LAI?: OPTIONAL<LAIFixedLength>,
-        /**
-         * @summary `hopCounter`.
-         * @description
-         *
-         * Hop count (0..3) for the identification request chain.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly hopCounter?: OPTIONAL<HopCounter>,
-        /**
-         * @summary `mtRoamingForwardingSupported`.
-         * @description
-         *
-         * Sender supports MT Roaming Forwarding.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.5.20).
-         *
-         * @public
-         * @readonly
-         */
-        readonly mtRoamingForwardingSupported?: OPTIONAL<NULL>,
-        /**
-         * @summary `newVLR_Number`.
-         * @description
-         *
-         * ISDN number of the new VLR.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.2.14).
-         *
-         * @public
-         * @readonly
-         */
-        readonly newVLR_Number?: OPTIONAL<ISDN_AddressString>,
-        /**
-         * @summary `new_lmsi`.
-         * @description
-         *
-         * LMSI allocated by the new VLR.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.2.16).
-         *
-         * @public
-         * @readonly
-         */
-        readonly new_lmsi?: OPTIONAL<LMSI>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        tmsi: TMSI,
+        numberOfRequestedVectors?: OPTIONAL<NumberOfRequestedVectors>,
+        segmentationProhibited?: OPTIONAL<NULL>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        msc_Number?: OPTIONAL<ISDN_AddressString>,
+        previous_LAI?: OPTIONAL<LAIFixedLength>,
+        hopCounter?: OPTIONAL<HopCounter>,
+        mtRoamingForwardingSupported?: OPTIONAL<NULL>,
+        newVLR_Number?: OPTIONAL<ISDN_AddressString>,
+        new_lmsi?: OPTIONAL<LMSI>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.tmsi = tmsi;
+        this.numberOfRequestedVectors = numberOfRequestedVectors;
+        this.segmentationProhibited = segmentationProhibited;
+        this.extensionContainer = extensionContainer;
+        this.msc_Number = msc_Number;
+        this.previous_LAI = previous_LAI;
+        this.hopCounter = hopCounter;
+        this.mtRoamingForwardingSupported = mtRoamingForwardingSupported;
+        this.newVLR_Number = newVLR_Number;
+        this.new_lmsi = new_lmsi;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a SendIdentificationArg

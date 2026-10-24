@@ -38,30 +38,36 @@ import {
  *
  */
 export class SEerror {
+  /**
+   * @summary `errorCode`.
+   * @description
+   *
+   * `SE-ERROR.&errorCode` from the identified security
+   * exchange. ITU-T Rec. X.832 (04/95) §7.1.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly errorCode?: OPTIONAL<Identifier>;
+  /**
+   * @summary `errorParameter`.
+   * @description
+   *
+   * `SE-ERROR.&ParameterType` for that error. ITU-T Rec.
+   * X.832 (04/95) §7.1.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly errorParameter?: OPTIONAL<_Element>;
+
   constructor(
-    /**
-     * @summary `errorCode`.
-     * @description
-     *
-     * `SE-ERROR.&errorCode` from the identified security
-     * exchange. ITU-T Rec. X.832 (04/95) §7.1.
-     *
-     * @public
-     * @readonly
-     */
-    readonly errorCode?: OPTIONAL<Identifier>,
-    /**
-     * @summary `errorParameter`.
-     * @description
-     *
-     * `SE-ERROR.&ParameterType` for that error. ITU-T Rec.
-     * X.832 (04/95) §7.1.
-     *
-     * @public
-     * @readonly
-     */
-    readonly errorParameter?: OPTIONAL<_Element>
-  ) {}
+    errorCode?: OPTIONAL<Identifier>,
+    errorParameter?: OPTIONAL<_Element>
+  ) {
+    this.errorCode = errorCode;
+    this.errorParameter = errorParameter;
+  }
 
   /**
    * @summary Restructures an object into a SEerror

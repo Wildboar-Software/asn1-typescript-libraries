@@ -53,89 +53,107 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class SetDisplayArgument {
+    /**
+     * @summary `device`.
+     * @description
+     *
+     * Physical-element DeviceID; other IDs are rejected (ECMA-269 §21 FR
+     * 1).
+     * @public
+     * @readonly
+     */
+    public readonly device: DeviceID;
+    /**
+     * @summary `display`.
+     * @description
+     *
+     * Which display. Omit only if the device has exactly one display.
+     * @public
+     * @readonly
+     */
+    public readonly display: OPTIONAL<DisplayID>;
+    /**
+     * @summary `physicalBaseRowNumber`.
+     * @description
+     *
+     * Logical row at the first physical row (scroll). Omit when physical
+     * rows equal logical rows. Changing it may be rejected if scrolling is
+     * unsupported (§21.1.15.3.4 FR 7).
+     * @public
+     * @readonly
+     */
+    public readonly physicalBaseRowNumber: OPTIONAL<INTEGER>;
+    /**
+     * @summary `physicalBaseColumnNumber`.
+     * @description
+     *
+     * Logical column at the first physical column. Omit when physical
+     * columns equal logical columns.
+     * @public
+     * @readonly
+     */
+    public readonly physicalBaseColumnNumber: OPTIONAL<INTEGER>;
+    /**
+     * @summary `contentsOfDisplay`.
+     * @description
+     *
+     * Text to place: rows concatenated including spaces. Empty string
+     * clears from `offset` to end of display. Overflow is truncated.
+     * @public
+     * @readonly
+     */
+    public readonly contentsOfDisplay: IA5String;
+    /**
+     * @summary `offset`.
+     * @description
+     *
+     * Character offset (not bytes) where text starts. 0 (default) through
+     * logicalColumns*logicalRows-1. CR/LF/Tab count toward offset and
+     * length.
+     * @public
+     * @readonly
+     */
+    public readonly offset?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `characterSet`.
+     * @description
+     *
+     * ASCII (default), Unicode (UTF-8), or Proprietary. Unsupported
+     * characterSet: reject or interpret as default (§21.1.15.3.4 FR 8).
+     * @public
+     * @readonly
+     */
+    public readonly characterSet?: OPTIONAL<CharacterSet>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `device`.
-         * @description
-         *
-         * Physical-element DeviceID; other IDs are rejected (ECMA-269 §21 FR
-         * 1).
-         * @public
-         * @readonly
-         */
-        readonly device: DeviceID,
-        /**
-         * @summary `display`.
-         * @description
-         *
-         * Which display. Omit only if the device has exactly one display.
-         * @public
-         * @readonly
-         */
-        readonly display: OPTIONAL<DisplayID>,
-        /**
-         * @summary `physicalBaseRowNumber`.
-         * @description
-         *
-         * Logical row at the first physical row (scroll). Omit when physical
-         * rows equal logical rows. Changing it may be rejected if scrolling is
-         * unsupported (§21.1.15.3.4 FR 7).
-         * @public
-         * @readonly
-         */
-        readonly physicalBaseRowNumber: OPTIONAL<INTEGER>,
-        /**
-         * @summary `physicalBaseColumnNumber`.
-         * @description
-         *
-         * Logical column at the first physical column. Omit when physical
-         * columns equal logical columns.
-         * @public
-         * @readonly
-         */
-        readonly physicalBaseColumnNumber: OPTIONAL<INTEGER>,
-        /**
-         * @summary `contentsOfDisplay`.
-         * @description
-         *
-         * Text to place: rows concatenated including spaces. Empty string
-         * clears from `offset` to end of display. Overflow is truncated.
-         * @public
-         * @readonly
-         */
-        readonly contentsOfDisplay: IA5String,
-        /**
-         * @summary `offset`.
-         * @description
-         *
-         * Character offset (not bytes) where text starts. 0 (default) through
-         * logicalColumns*logicalRows-1. CR/LF/Tab count toward offset and
-         * length.
-         * @public
-         * @readonly
-         */
-        readonly offset?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `characterSet`.
-         * @description
-         *
-         * ASCII (default), Unicode (UTF-8), or Proprietary. Unsupported
-         * characterSet: reject or interpret as default (§21.1.15.3.4 FR 8).
-         * @public
-         * @readonly
-         */
-        readonly characterSet?: OPTIONAL<CharacterSet>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        device: DeviceID,
+        display: OPTIONAL<DisplayID>,
+        physicalBaseRowNumber: OPTIONAL<INTEGER>,
+        physicalBaseColumnNumber: OPTIONAL<INTEGER>,
+        contentsOfDisplay: IA5String,
+        offset?: OPTIONAL<INTEGER>,
+        characterSet?: OPTIONAL<CharacterSet>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.device = device;
+        this.display = display;
+        this.physicalBaseRowNumber = physicalBaseRowNumber;
+        this.physicalBaseColumnNumber = physicalBaseColumnNumber;
+        this.contentsOfDisplay = contentsOfDisplay;
+        this.offset = offset;
+        this.characterSet = characterSet;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a SetDisplayArgument

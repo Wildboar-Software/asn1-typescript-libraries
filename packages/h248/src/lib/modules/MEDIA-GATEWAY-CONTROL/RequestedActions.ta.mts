@@ -44,94 +44,110 @@ import { NotifyBehaviour, _decode_NotifyBehaviour, _encode_NotifyBehaviour } fro
  */
 export
 class RequestedActions {
+    /**
+     * @summary `keepActive`.
+     * @description
+     *
+     * When true, recognizing the event does not stop signals already
+     * playing on the termination. Default behaviour is to stop them (clause
+     * 7.1.9.5).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly keepActive?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `eventDM`.
+     * @description
+     *
+     * Digit map that a digit-map completion event uses, either by name or
+     * by value. A completion event without this field is error 457
+     * ("Missing parameter in signal or event") (clause 7.1.14.6).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly eventDM?: OPTIONAL<EventDM>;
+    /**
+     * @summary `secondEvent`.
+     * @description
+     *
+     * Embedded Events descriptor. Replaces the active Events descriptor
+     * when the event is recognized (clause 7.1.9.8). It must not itself
+     * contain an embedded Events descriptor.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly secondEvent?: OPTIONAL<SecondEventsDescriptor>;
+    /**
+     * @summary `signalsDescriptor`.
+     * @description
+     *
+     * Embedded Signals descriptor. Replaces the active Signals descriptor
+     * when the event is recognized (clause 7.1.9.8). Not combined with
+     * KeepActive.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly signalsDescriptor?: OPTIONAL<SignalsDescriptor>;
+    /**
+     * @summary `notifyBehaviour`.
+     * @description
+     *
+     * When the Notify is sent. Omitted means immediately. See
+     * `NotifyBehaviour` and clause E.15. With a digit map, the behaviour
+     * applies when the map completes (clause 7.1.9.6).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly notifyBehaviour?: OPTIONAL<NotifyBehaviour>;
+    /**
+     * @summary `resetEventsDescriptor`.
+     * @description
+     *
+     * On a physical termination in the NULL context, reset the Events
+     * descriptor. Embedded, that restores the descriptor from before the
+     * embedded one was activated. Not embedded, it re-activates digit-map
+     * completion events that had matched and been deactivated. No effect
+     * outside the NULL context, and not used on ephemeral terminations
+     * (clause 7.1.9.7).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly resetEventsDescriptor?: OPTIONAL<NULL>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @description
+     *
+     * Extension additions this version does not define. Kept so a later
+     * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `keepActive`.
-         * @description
-         *
-         * When true, recognizing the event does not stop signals already
-         * playing on the termination. Default behaviour is to stop them (clause
-         * 7.1.9.5).
-         *
-         * @public
-         * @readonly
-         */
-        readonly keepActive?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `eventDM`.
-         * @description
-         *
-         * Digit map that a digit-map completion event uses, either by name or
-         * by value. A completion event without this field is error 457
-         * ("Missing parameter in signal or event") (clause 7.1.14.6).
-         *
-         * @public
-         * @readonly
-         */
-        readonly eventDM?: OPTIONAL<EventDM>,
-        /**
-         * @summary `secondEvent`.
-         * @description
-         *
-         * Embedded Events descriptor. Replaces the active Events descriptor
-         * when the event is recognized (clause 7.1.9.8). It must not itself
-         * contain an embedded Events descriptor.
-         *
-         * @public
-         * @readonly
-         */
-        readonly secondEvent?: OPTIONAL<SecondEventsDescriptor>,
-        /**
-         * @summary `signalsDescriptor`.
-         * @description
-         *
-         * Embedded Signals descriptor. Replaces the active Signals descriptor
-         * when the event is recognized (clause 7.1.9.8). Not combined with
-         * KeepActive.
-         *
-         * @public
-         * @readonly
-         */
-        readonly signalsDescriptor?: OPTIONAL<SignalsDescriptor>,
-        /**
-         * @summary `notifyBehaviour`.
-         * @description
-         *
-         * When the Notify is sent. Omitted means immediately. See
-         * `NotifyBehaviour` and clause E.15. With a digit map, the behaviour
-         * applies when the map completes (clause 7.1.9.6).
-         *
-         * @public
-         * @readonly
-         */
-        readonly notifyBehaviour?: OPTIONAL<NotifyBehaviour>,
-        /**
-         * @summary `resetEventsDescriptor`.
-         * @description
-         *
-         * On a physical termination in the NULL context, reset the Events
-         * descriptor. Embedded, that restores the descriptor from before the
-         * embedded one was activated. Not embedded, it re-activates digit-map
-         * completion events that had matched and been deactivated. No effect
-         * outside the NULL context, and not used on ephemeral terminations
-         * (clause 7.1.9.7).
-         *
-         * @public
-         * @readonly
-         */
-        readonly resetEventsDescriptor?: OPTIONAL<NULL>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @description
-         *
-         * Extension additions this version does not define. Kept so a later
-         * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
-         *
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        keepActive?: OPTIONAL<BOOLEAN>,
+        eventDM?: OPTIONAL<EventDM>,
+        secondEvent?: OPTIONAL<SecondEventsDescriptor>,
+        signalsDescriptor?: OPTIONAL<SignalsDescriptor>,
+        notifyBehaviour?: OPTIONAL<NotifyBehaviour>,
+        resetEventsDescriptor?: OPTIONAL<NULL>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.keepActive = keepActive;
+        this.eventDM = eventDM;
+        this.secondEvent = secondEvent;
+        this.signalsDescriptor = signalsDescriptor;
+        this.notifyBehaviour = notifyBehaviour;
+        this.resetEventsDescriptor = resetEventsDescriptor;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a RequestedActions

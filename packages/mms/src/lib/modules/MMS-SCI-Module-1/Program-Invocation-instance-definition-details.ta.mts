@@ -63,135 +63,163 @@ import { Program_Invocation_instance, _decode_Program_Invocation_instance, _enco
  */
 export
 class Program_Invocation_instance_definition_details {
+    /**
+     * @summary `programInvocationState`.
+     * @description
+     *
+     * Configured PI state. ISO 9506-1:2003 §12.1.1.2; ISO 9506-2:2003 Annex
+     * B.1.3.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly programInvocationState: ProgramInvocationState;
+    /**
+     * @summary `domains`.
+     * @description
+     *
+     * Configured Domain instances. ISO 9506-2:2003 Annex B.1.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly domains: Domain_instance[];
+    /**
+     * @summary `accessControl`.
+     * @description
+     *
+     * SCI encoding of the object's ACL (ISO 9506-1:2003 §9). ISO
+     * 9506-2:2003 Annex B.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly accessControl: Access_Control_List_instance[];
+    /**
+     * @summary `reusable`.
+     * @description
+     *
+     * Whether the PI returns to idle after completion. ISO 9506-1:2003
+     * §12.1.1.5; ISO 9506-2:2003 Annex B.1.3.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly reusable: BOOLEAN;
+    /**
+     * @summary `monitor`.
+     * @description
+     *
+     * Whether PI-exit monitoring objects are configured. ISO 9506-1:2003
+     * §12.1.1.6; ISO 9506-2:2003 Annex B.1.3.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly monitor: BOOLEAN;
+    /**
+     * @summary `eventCondition`.
+     * @description
+     *
+     * Configured Event Condition (PI monitor or semaphore match). ISO
+     * 9506-2:2003 Annex B.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly eventCondition: OPTIONAL<Event_Condition_instance[]>;
+    /**
+     * @summary `eventAction`.
+     * @description
+     *
+     * Configured Event Action (PI monitor). ISO 9506-1:2003 §12.1.1.8; ISO
+     * 9506-2:2003 Annex B.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly eventAction: OPTIONAL<Event_Action_instance[]>;
+    /**
+     * @summary `eventEnrollment`.
+     * @description
+     *
+     * Configured Event Enrollment (PI monitor). ISO 9506-1:2003 §12.1.1.9;
+     * ISO 9506-2:2003 Annex B.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly eventEnrollment: OPTIONAL<Event_Enrollment_instance[]>;
+    /**
+     * @summary `executionArgument`.
+     * @description
+     *
+     * Configured execution argument. ISO 9506-1:2003 §12.1.1; ISO
+     * 9506-2:2003 Annex B.1.3.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly executionArgument: MMSString;
+    /**
+     * @summary `control`.
+     * @description
+     *
+     * csr Control-State. ISO 9506-1:2003 §12.1.1.12; ISO 9506-2:2003 Annex
+     * B.1.3.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly control: Control_State;
+    /**
+     * @summary `controlling_Program_Invocation`.
+     * @public
+     * @readonly
+     */
+    public readonly controlling_Program_Invocation: Program_Invocation_instance;
+    /**
+     * @summary `controlled_Program_Invocations`.
+     * @public
+     * @readonly
+     */
+    public readonly controlled_Program_Invocations?: OPTIONAL<Program_Invocation_instance[]>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `programInvocationState`.
-         * @description
-         *
-         * Configured PI state. ISO 9506-1:2003 §12.1.1.2; ISO 9506-2:2003 Annex
-         * B.1.3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly programInvocationState: ProgramInvocationState,
-        /**
-         * @summary `domains`.
-         * @description
-         *
-         * Configured Domain instances. ISO 9506-2:2003 Annex B.1.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly domains: Domain_instance[],
-        /**
-         * @summary `accessControl`.
-         * @description
-         *
-         * SCI encoding of the object's ACL (ISO 9506-1:2003 §9). ISO
-         * 9506-2:2003 Annex B.
-         *
-         * @public
-         * @readonly
-         */
-        readonly accessControl: Access_Control_List_instance[],
-        /**
-         * @summary `reusable`.
-         * @description
-         *
-         * Whether the PI returns to idle after completion. ISO 9506-1:2003
-         * §12.1.1.5; ISO 9506-2:2003 Annex B.1.3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly reusable: BOOLEAN,
-        /**
-         * @summary `monitor`.
-         * @description
-         *
-         * Whether PI-exit monitoring objects are configured. ISO 9506-1:2003
-         * §12.1.1.6; ISO 9506-2:2003 Annex B.1.3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly monitor: BOOLEAN,
-        /**
-         * @summary `eventCondition`.
-         * @description
-         *
-         * Configured Event Condition (PI monitor or semaphore match). ISO
-         * 9506-2:2003 Annex B.
-         *
-         * @public
-         * @readonly
-         */
-        readonly eventCondition: OPTIONAL<Event_Condition_instance[]>,
-        /**
-         * @summary `eventAction`.
-         * @description
-         *
-         * Configured Event Action (PI monitor). ISO 9506-1:2003 §12.1.1.8; ISO
-         * 9506-2:2003 Annex B.
-         *
-         * @public
-         * @readonly
-         */
-        readonly eventAction: OPTIONAL<Event_Action_instance[]>,
-        /**
-         * @summary `eventEnrollment`.
-         * @description
-         *
-         * Configured Event Enrollment (PI monitor). ISO 9506-1:2003 §12.1.1.9;
-         * ISO 9506-2:2003 Annex B.
-         *
-         * @public
-         * @readonly
-         */
-        readonly eventEnrollment: OPTIONAL<Event_Enrollment_instance[]>,
-        /**
-         * @summary `executionArgument`.
-         * @description
-         *
-         * Configured execution argument. ISO 9506-1:2003 §12.1.1; ISO
-         * 9506-2:2003 Annex B.1.3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly executionArgument: MMSString,
-        /**
-         * @summary `control`.
-         * @description
-         *
-         * csr Control-State. ISO 9506-1:2003 §12.1.1.12; ISO 9506-2:2003 Annex
-         * B.1.3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly control: Control_State,
-        /**
-         * @summary `controlling_Program_Invocation`.
-         * @public
-         * @readonly
-         */
-        readonly controlling_Program_Invocation: Program_Invocation_instance,
-        /**
-         * @summary `controlled_Program_Invocations`.
-         * @public
-         * @readonly
-         */
-        readonly controlled_Program_Invocations?: OPTIONAL<Program_Invocation_instance[]>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        programInvocationState: ProgramInvocationState,
+        domains: Domain_instance[],
+        accessControl: Access_Control_List_instance[],
+        reusable: BOOLEAN,
+        monitor: BOOLEAN,
+        eventCondition: OPTIONAL<Event_Condition_instance[]>,
+        eventAction: OPTIONAL<Event_Action_instance[]>,
+        eventEnrollment: OPTIONAL<Event_Enrollment_instance[]>,
+        executionArgument: MMSString,
+        control: Control_State,
+        controlling_Program_Invocation: Program_Invocation_instance,
+        controlled_Program_Invocations?: OPTIONAL<Program_Invocation_instance[]>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.programInvocationState = programInvocationState;
+        this.domains = domains;
+        this.accessControl = accessControl;
+        this.reusable = reusable;
+        this.monitor = monitor;
+        this.eventCondition = eventCondition;
+        this.eventAction = eventAction;
+        this.eventEnrollment = eventEnrollment;
+        this.executionArgument = executionArgument;
+        this.control = control;
+        this.controlling_Program_Invocation = controlling_Program_Invocation;
+        this.controlled_Program_Invocations = controlled_Program_Invocations;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a Program_Invocation_instance_definition_details

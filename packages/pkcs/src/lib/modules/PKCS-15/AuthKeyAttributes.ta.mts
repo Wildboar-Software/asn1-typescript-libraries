@@ -28,26 +28,34 @@ import {
  *
  */
 export class AuthKeyAttributes {
+    /**
+     * @summary `derivedKey`.
+     * @public
+     * @readonly
+     */
+    public readonly derivedKey: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `authKeyId`.
+     * @public
+     * @readonly
+     */
+    public readonly authKeyId: Identifier;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `derivedKey`.
-         * @public
-         * @readonly
-         */
-        readonly derivedKey: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `authKeyId`.
-         * @public
-         * @readonly
-         */
-        readonly authKeyId: Identifier,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        derivedKey: OPTIONAL<BOOLEAN>,
+        authKeyId: Identifier,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.derivedKey = derivedKey;
+        this.authKeyId = authKeyId;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a AuthKeyAttributes

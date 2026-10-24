@@ -35,43 +35,51 @@ import { Octet8, _decode_Octet8, _encode_Octet8 } from "../RSPDefinitions/Octet8
  */
 export
 class DeviceInfo {
+    /**
+     * @summary `tac`.
+     * @description
+     * 
+     * Type Allocation Code, four octets, telephony BCD. The first eight
+     * digits of the IMEI. SGP.22 v3.1 §4.2.
+     * 
+     * @public
+     * @readonly
+     */
+    public readonly tac: Octet4;
+    /**
+     * @summary `deviceCapabilities`.
+     * @description
+     * 
+     * Access technologies and other device features the SM-DP+ may use for
+     * eligibility. SGP.22 v3.1 §4.2.
+     * 
+     * @public
+     * @readonly
+     */
+    public readonly deviceCapabilities: DeviceCapabilities;
+    /**
+     * @summary `imei`.
+     * @description
+     * 
+     * Optional IMEI, eight octets, telephony BCD, check digit in the low
+     * nibble of the last octet and `'F'` in the high nibble. Should be
+     * present for a non-removable eUICC. v2 and v3 nibble order of that
+     * last octet differ; v3.1 §4.2 warns servers about the v2 encoding.
+     * 
+     * @public
+     * @readonly
+     */
+    public readonly imei?: OPTIONAL<Octet8>;
+
     constructor (
-        /**
-         * @summary `tac`.
-         * @description
-         * 
-         * Type Allocation Code, four octets, telephony BCD. The first eight
-         * digits of the IMEI. SGP.22 v3.1 §4.2.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly tac: Octet4,
-        /**
-         * @summary `deviceCapabilities`.
-         * @description
-         * 
-         * Access technologies and other device features the SM-DP+ may use for
-         * eligibility. SGP.22 v3.1 §4.2.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly deviceCapabilities: DeviceCapabilities,
-        /**
-         * @summary `imei`.
-         * @description
-         * 
-         * Optional IMEI, eight octets, telephony BCD, check digit in the low
-         * nibble of the last octet and `'F'` in the high nibble. Should be
-         * present for a non-removable eUICC. v2 and v3 nibble order of that
-         * last octet differ; v3.1 §4.2 warns servers about the v2 encoding.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly imei?: OPTIONAL<Octet8>
-    ) {}
+        tac: Octet4,
+        deviceCapabilities: DeviceCapabilities,
+        imei?: OPTIONAL<Octet8>
+    ) {
+        this.tac = tac;
+        this.deviceCapabilities = deviceCapabilities;
+        this.imei = imei;
+    }
 
     /**
      * @summary Restructures an object into a DeviceInfo

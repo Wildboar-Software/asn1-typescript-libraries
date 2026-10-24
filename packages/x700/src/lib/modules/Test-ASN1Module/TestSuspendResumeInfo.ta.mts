@@ -41,31 +41,37 @@ import {
  *
  */
 export class TestSuspendResumeInfo {
+    /**
+     * @summary `indicatedTests`.
+     * @description
+     *
+     * Session id (best-effort) or invocation ids (all-or-error). ITU-T Rec.
+     * X.745 (11/93) §8.4.2.2, 7.2.4.
+     * [§8.4.2.2](https://www.itu.int/rec/T-REC-X.745-199311-I)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly indicatedTests: IndicatedTests;
+    /**
+     * @summary `suspendResumeChoice`.
+     * @description
+     *
+     * suspend or resume. ITU-T Rec. X.745 (11/93) §8.4.2.3.
+     * [§8.4.2.3](https://www.itu.int/rec/T-REC-X.745-199311-I)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly suspendResumeChoice: SuspendResumeChoice;
+
     constructor(
-        /**
-         * @summary `indicatedTests`.
-         * @description
-         *
-         * Session id (best-effort) or invocation ids (all-or-error). ITU-T Rec.
-         * X.745 (11/93) §8.4.2.2, 7.2.4.
-         * [§8.4.2.2](https://www.itu.int/rec/T-REC-X.745-199311-I)
-         *
-         * @public
-         * @readonly
-         */
-        readonly indicatedTests: IndicatedTests,
-        /**
-         * @summary `suspendResumeChoice`.
-         * @description
-         *
-         * suspend or resume. ITU-T Rec. X.745 (11/93) §8.4.2.3.
-         * [§8.4.2.3](https://www.itu.int/rec/T-REC-X.745-199311-I)
-         *
-         * @public
-         * @readonly
-         */
-        readonly suspendResumeChoice: SuspendResumeChoice
-    ) {}
+        indicatedTests: IndicatedTests,
+        suspendResumeChoice: SuspendResumeChoice
+    ) {
+        this.indicatedTests = indicatedTests;
+        this.suspendResumeChoice = suspendResumeChoice;
+    }
 
     /**
      * @summary Restructures an object into a TestSuspendResumeInfo

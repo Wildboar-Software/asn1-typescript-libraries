@@ -52,32 +52,42 @@ import {
  *
  */
 export class SecurityLabel {
+    /**
+     * @summary `security_policy_identifier`.
+     * @public
+     * @readonly
+     */
+    public readonly security_policy_identifier?: OPTIONAL<SecurityPolicyIdentifier>;
+    /**
+     * @summary `security_classification`.
+     * @public
+     * @readonly
+     */
+    public readonly security_classification?: OPTIONAL<SecurityClassification>;
+    /**
+     * @summary `privacy_mark`.
+     * @public
+     * @readonly
+     */
+    public readonly privacy_mark?: OPTIONAL<PrivacyMark>;
+    /**
+     * @summary `security_categories`.
+     * @public
+     * @readonly
+     */
+    public readonly security_categories?: OPTIONAL<SecurityCategories>;
+
     constructor(
-        /**
-         * @summary `security_policy_identifier`.
-         * @public
-         * @readonly
-         */
-        readonly security_policy_identifier?: OPTIONAL<SecurityPolicyIdentifier>,
-        /**
-         * @summary `security_classification`.
-         * @public
-         * @readonly
-         */
-        readonly security_classification?: OPTIONAL<SecurityClassification>,
-        /**
-         * @summary `privacy_mark`.
-         * @public
-         * @readonly
-         */
-        readonly privacy_mark?: OPTIONAL<PrivacyMark>,
-        /**
-         * @summary `security_categories`.
-         * @public
-         * @readonly
-         */
-        readonly security_categories?: OPTIONAL<SecurityCategories>
-    ) {}
+        security_policy_identifier?: OPTIONAL<SecurityPolicyIdentifier>,
+        security_classification?: OPTIONAL<SecurityClassification>,
+        privacy_mark?: OPTIONAL<PrivacyMark>,
+        security_categories?: OPTIONAL<SecurityCategories>
+    ) {
+        this.security_policy_identifier = security_policy_identifier;
+        this.security_classification = security_classification;
+        this.privacy_mark = privacy_mark;
+        this.security_categories = security_categories;
+    }
 
     /**
      * @summary Restructures an object into a SecurityLabel

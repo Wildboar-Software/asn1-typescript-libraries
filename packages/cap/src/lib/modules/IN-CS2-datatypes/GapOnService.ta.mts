@@ -32,20 +32,26 @@ import { EventTypeBCSM, _enum_for_EventTypeBCSM, _decode_EventTypeBCSM, _encode_
  */
 export
 class GapOnService {
+    /**
+     * @summary `serviceKey`.
+     * @public
+     * @readonly
+     */
+    public readonly serviceKey: ServiceKey;
+    /**
+     * @summary `dpCriteria`.
+     * @public
+     * @readonly
+     */
+    public readonly dpCriteria?: OPTIONAL<EventTypeBCSM>;
+
     constructor (
-        /**
-         * @summary `serviceKey`.
-         * @public
-         * @readonly
-         */
-        readonly serviceKey: ServiceKey,
-        /**
-         * @summary `dpCriteria`.
-         * @public
-         * @readonly
-         */
-        readonly dpCriteria?: OPTIONAL<EventTypeBCSM>
-    ) {}
+        serviceKey: ServiceKey,
+        dpCriteria?: OPTIONAL<EventTypeBCSM>
+    ) {
+        this.serviceKey = serviceKey;
+        this.dpCriteria = dpCriteria;
+    }
 
     /**
      * @summary Restructures an object into a GapOnService

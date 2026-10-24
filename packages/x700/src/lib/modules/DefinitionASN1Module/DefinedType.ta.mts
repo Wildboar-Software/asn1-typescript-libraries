@@ -37,26 +37,32 @@ import {
  *
  */
 export class DefinedType {
+    /**
+     * @summary `module_`.
+     * @description
+     *
+     * ASN.1 module of the type, if the reference is not unique in context.
+     * @public
+     * @readonly
+     */
+    public readonly module_: OPTIONAL<Identifier>;
+    /**
+     * @summary `reference`.
+     * @description
+     *
+     * ASN.1 type identifier.
+     * @public
+     * @readonly
+     */
+    public readonly reference: Identifier;
+
     constructor(
-        /**
-         * @summary `module_`.
-         * @description
-         *
-         * ASN.1 module of the type, if the reference is not unique in context.
-         * @public
-         * @readonly
-         */
-        readonly module_: OPTIONAL<Identifier>,
-        /**
-         * @summary `reference`.
-         * @description
-         *
-         * ASN.1 type identifier.
-         * @public
-         * @readonly
-         */
-        readonly reference: Identifier
-    ) {}
+        module_: OPTIONAL<Identifier>,
+        reference: Identifier
+    ) {
+        this.module_ = module_;
+        this.reference = reference;
+    }
 
     /**
      * @summary Restructures an object into a DefinedType

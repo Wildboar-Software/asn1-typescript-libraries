@@ -46,32 +46,41 @@ import { InformationToRecord_controlDigits, _decode_InformationToRecord_controlD
  */
 export
 class InformationToRecord {
+    /**
+     * @summary `messageID`.
+     * @public
+     * @readonly
+     */
+    public readonly messageID: OPTIONAL<ElementaryMessageID>;
+    /**
+     * @summary `messageDeletionTimeOut`.
+     * @public
+     * @readonly
+     */
+    public readonly messageDeletionTimeOut: OPTIONAL<INTEGER>;
+    /**
+     * @summary `timeToRecord`.
+     * @public
+     * @readonly
+     */
+    public readonly timeToRecord: OPTIONAL<INTEGER>;
+    /**
+     * @summary `controlDigits`.
+     * @public
+     * @readonly
+     */
+    public readonly controlDigits: InformationToRecord_controlDigits;
+
     constructor (
-        /**
-         * @summary `messageID`.
-         * @public
-         * @readonly
-         */
-        readonly messageID: OPTIONAL<ElementaryMessageID>,
-        /**
-         * @summary `messageDeletionTimeOut`.
-         * @public
-         * @readonly
-         */
-        readonly messageDeletionTimeOut: OPTIONAL<INTEGER>,
-        /**
-         * @summary `timeToRecord`.
-         * @public
-         * @readonly
-         */
-        readonly timeToRecord: OPTIONAL<INTEGER>,
-        /**
-         * @summary `controlDigits`.
-         * @public
-         * @readonly
-         */
-        readonly controlDigits: InformationToRecord_controlDigits
+        messageID: OPTIONAL<ElementaryMessageID>,
+        messageDeletionTimeOut: OPTIONAL<INTEGER>,
+        timeToRecord: OPTIONAL<INTEGER>,
+        controlDigits: InformationToRecord_controlDigits
     ) {
+        this.messageID = messageID;
+        this.messageDeletionTimeOut = messageDeletionTimeOut;
+        this.timeToRecord = timeToRecord;
+        this.controlDigits = controlDigits;
         if (messageDeletionTimeOut !== undefined && (typeof messageDeletionTimeOut === "bigint" ? (messageDeletionTimeOut < 1n || messageDeletionTimeOut > 3600n) : (messageDeletionTimeOut < 1 || messageDeletionTimeOut > 3600))) {
             throw new ASN1OverflowError("InformationToRecord.messageDeletionTimeOut violates INTEGER constraint");
         }

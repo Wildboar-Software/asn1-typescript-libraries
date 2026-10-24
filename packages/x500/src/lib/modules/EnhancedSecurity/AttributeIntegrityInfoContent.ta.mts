@@ -41,35 +41,45 @@ import {
  *
  */
 export class AttributeIntegrityInfoContent {
+    /**
+     * @summary `scope`.
+     * @description `wholeEntry` vs `selectedTypes`; determines hash input and attribute order.
+     * @public
+     * @readonly
+     */
+    public readonly scope: Scope;
+    /**
+     * @summary `signer`.
+     * @description Authority or originator; omit when the verifying key is known by off-line means.
+     * @public
+     * @readonly
+     */
+    public readonly signer: OPTIONAL<Signer>;
+    /**
+     * @summary `attribsHash`.
+     * @description HASH of DER-encoded {@link HashedAttributes} in scope order.
+     * @public
+     * @readonly
+     */
+    public readonly attribsHash: AttribsHash;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `scope`.
-         * @description `wholeEntry` vs `selectedTypes`; determines hash input and attribute order.
-         * @public
-         * @readonly
-         */
-        readonly scope: Scope,
-        /**
-         * @summary `signer`.
-         * @description Authority or originator; omit when the verifying key is known by off-line means.
-         * @public
-         * @readonly
-         */
-        readonly signer: OPTIONAL<Signer>,
-        /**
-         * @summary `attribsHash`.
-         * @description HASH of DER-encoded {@link HashedAttributes} in scope order.
-         * @public
-         * @readonly
-         */
-        readonly attribsHash: AttribsHash,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        scope: Scope,
+        signer: OPTIONAL<Signer>,
+        attribsHash: AttribsHash,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.scope = scope;
+        this.signer = signer;
+        this.attribsHash = attribsHash;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a AttributeIntegrityInfoContent

@@ -35,28 +35,34 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class RequestSysStatArg {
+    /**
+     * @summary `sysStatRegisterID`.
+     * @description
+     *
+     * Mandatory if SF is the requester and registration is
+     * supported; otherwise absent.
+     * @public
+     * @readonly
+     */
+    public readonly sysStatRegisterID?: OPTIONAL<SysStatRegisterID>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData. ECMA-269 Table 14-10.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `sysStatRegisterID`.
-         * @description
-         *
-         * Mandatory if SF is the requester and registration is
-         * supported; otherwise absent.
-         * @public
-         * @readonly
-         */
-        readonly sysStatRegisterID?: OPTIONAL<SysStatRegisterID>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData. ECMA-269 Table 14-10.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        sysStatRegisterID?: OPTIONAL<SysStatRegisterID>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.sysStatRegisterID = sysStatRegisterID;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a RequestSysStatArg

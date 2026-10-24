@@ -34,43 +34,53 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
  */
 export
 class SM_DeliveryFailureCause {
+    /**
+     * @summary `sm_EnumeratedDeliveryFailureCause`.
+     * @description
+     *
+     * Enumerated delivery-failure reason (3GPP TS 29.002 V19.1.0 clauses
+     * 7.6.1.4 and 17.7.7).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sm_EnumeratedDeliveryFailureCause: SM_EnumeratedDeliveryFailureCause;
+    /**
+     * @summary `diagnosticInfo`.
+     * @description
+     *
+     * Detailed diagnostic information coded as specified in 3GPP TS 23.040
+     * under SMS-SUBMIT-REPORT and SMS-DELIVERY-REPORT (3GPP TS 29.002
+     * V19.1.0 clause 7.6.1.4).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly diagnosticInfo?: OPTIONAL<SignalInfo>;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `sm_EnumeratedDeliveryFailureCause`.
-         * @description
-         *
-         * Enumerated delivery-failure reason (3GPP TS 29.002 V19.1.0 clauses
-         * 7.6.1.4 and 17.7.7).
-         *
-         * @public
-         * @readonly
-         */
-        readonly sm_EnumeratedDeliveryFailureCause: SM_EnumeratedDeliveryFailureCause,
-        /**
-         * @summary `diagnosticInfo`.
-         * @description
-         *
-         * Detailed diagnostic information coded as specified in 3GPP TS 23.040
-         * under SMS-SUBMIT-REPORT and SMS-DELIVERY-REPORT (3GPP TS 29.002
-         * V19.1.0 clause 7.6.1.4).
-         *
-         * @public
-         * @readonly
-         */
-        readonly diagnosticInfo?: OPTIONAL<SignalInfo>,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        sm_EnumeratedDeliveryFailureCause: SM_EnumeratedDeliveryFailureCause,
+        diagnosticInfo?: OPTIONAL<SignalInfo>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.sm_EnumeratedDeliveryFailureCause = sm_EnumeratedDeliveryFailureCause;
+        this.diagnosticInfo = diagnosticInfo;
+        this.extensionContainer = extensionContainer;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a SM_DeliveryFailureCause

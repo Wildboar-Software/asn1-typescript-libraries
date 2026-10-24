@@ -41,38 +41,50 @@ import { Version, _decode_Version, _encode_Version } from "../PKCS7/Version.ta.m
  *
  */
 export class KeyAgreementRecipientInfo {
+    /**
+     * @summary `version`.
+     * @public
+     * @readonly
+     */
+    public readonly version: Version;
+    /**
+     * @summary `originator`.
+     * @public
+     * @readonly
+     */
+    public readonly originator: OriginatorIdentifierOrKey;
+    /**
+     * @summary `userKeyingMaterial`.
+     * @public
+     * @readonly
+     */
+    public readonly userKeyingMaterial: OPTIONAL<OCTET_STRING>;
+    /**
+     * @summary `keyEncryptionAlgorithm`.
+     * @public
+     * @readonly
+     */
+    public readonly keyEncryptionAlgorithm: KeyEncryptionAlgorithmIdentifier;
+    /**
+     * @summary `recipientEncryptedKeys`.
+     * @public
+     * @readonly
+     */
+    public readonly recipientEncryptedKeys: RecipientEncryptedKeys;
+
     constructor(
-        /**
-         * @summary `version`.
-         * @public
-         * @readonly
-         */
-        readonly version: Version,
-        /**
-         * @summary `originator`.
-         * @public
-         * @readonly
-         */
-        readonly originator: OriginatorIdentifierOrKey,
-        /**
-         * @summary `userKeyingMaterial`.
-         * @public
-         * @readonly
-         */
-        readonly userKeyingMaterial: OPTIONAL<OCTET_STRING>,
-        /**
-         * @summary `keyEncryptionAlgorithm`.
-         * @public
-         * @readonly
-         */
-        readonly keyEncryptionAlgorithm: KeyEncryptionAlgorithmIdentifier,
-        /**
-         * @summary `recipientEncryptedKeys`.
-         * @public
-         * @readonly
-         */
-        readonly recipientEncryptedKeys: RecipientEncryptedKeys
-    ) {}
+        version: Version,
+        originator: OriginatorIdentifierOrKey,
+        userKeyingMaterial: OPTIONAL<OCTET_STRING>,
+        keyEncryptionAlgorithm: KeyEncryptionAlgorithmIdentifier,
+        recipientEncryptedKeys: RecipientEncryptedKeys
+    ) {
+        this.version = version;
+        this.originator = originator;
+        this.userKeyingMaterial = userKeyingMaterial;
+        this.keyEncryptionAlgorithm = keyEncryptionAlgorithm;
+        this.recipientEncryptedKeys = recipientEncryptedKeys;
+    }
 
     /**
      * @summary Restructures an object into a KeyAgreementRecipientInfo

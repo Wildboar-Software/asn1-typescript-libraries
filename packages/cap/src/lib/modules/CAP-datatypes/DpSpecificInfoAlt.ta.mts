@@ -43,12 +43,22 @@ import { DpSpecificInfoAlt_collectedInfoSpecificInfo, _decode_DpSpecificInfoAlt_
  *
  */
 export class DpSpecificInfoAlt {
+    public readonly oServiceChangeSpecificInfo: DpSpecificInfoAlt_oServiceChangeSpecificInfo;
+    public readonly tServiceChangeSpecificInfo: DpSpecificInfoAlt_tServiceChangeSpecificInfo;
+    public readonly collectedInfoSpecificInfo: DpSpecificInfoAlt_collectedInfoSpecificInfo;
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        readonly oServiceChangeSpecificInfo: DpSpecificInfoAlt_oServiceChangeSpecificInfo,
-        readonly tServiceChangeSpecificInfo: DpSpecificInfoAlt_tServiceChangeSpecificInfo,
-        readonly collectedInfoSpecificInfo: DpSpecificInfoAlt_collectedInfoSpecificInfo,
-        readonly _unrecognizedExtensionsList: _Element[] = [],
-    ) {}
+        oServiceChangeSpecificInfo: DpSpecificInfoAlt_oServiceChangeSpecificInfo,
+        tServiceChangeSpecificInfo: DpSpecificInfoAlt_tServiceChangeSpecificInfo,
+        collectedInfoSpecificInfo: DpSpecificInfoAlt_collectedInfoSpecificInfo,
+        _unrecognizedExtensionsList: _Element[] = [],
+    ) {
+        this.oServiceChangeSpecificInfo = oServiceChangeSpecificInfo;
+        this.tServiceChangeSpecificInfo = tServiceChangeSpecificInfo;
+        this.collectedInfoSpecificInfo = collectedInfoSpecificInfo;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     public static _from_object (_o: { [_K in keyof (DpSpecificInfoAlt)]: (DpSpecificInfoAlt)[_K] }): DpSpecificInfoAlt {
         return new DpSpecificInfoAlt(_o.oServiceChangeSpecificInfo, _o.tServiceChangeSpecificInfo, _o.collectedInfoSpecificInfo, _o._unrecognizedExtensionsList);

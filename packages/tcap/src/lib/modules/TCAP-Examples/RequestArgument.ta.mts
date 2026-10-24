@@ -37,20 +37,26 @@ import {
  *
  */
 export class RequestArgument {
+    /**
+     * @summary `calledNumber`.
+     * @public
+     * @readonly
+     */
+    public readonly calledNumber: IsdnNumber;
+    /**
+     * @summary `basicService`.
+     * @public
+     * @readonly
+     */
+    public readonly basicService?: OPTIONAL<BasicServiceIndicator>;
+
     constructor(
-        /**
-         * @summary `calledNumber`.
-         * @public
-         * @readonly
-         */
-        readonly calledNumber: IsdnNumber,
-        /**
-         * @summary `basicService`.
-         * @public
-         * @readonly
-         */
-        readonly basicService?: OPTIONAL<BasicServiceIndicator>
-    ) {}
+        calledNumber: IsdnNumber,
+        basicService?: OPTIONAL<BasicServiceIndicator>
+    ) {
+        this.calledNumber = calledNumber;
+        this.basicService = basicService;
+    }
 
     /**
      * @summary Restructures an object into a RequestArgument

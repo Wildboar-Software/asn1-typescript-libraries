@@ -29,36 +29,44 @@ import { TPDU_TypeCriterion, _decode_TPDU_TypeCriterion, _encode_TPDU_TypeCriter
  */
 export
 class MT_smsCAMELTDP_Criteria {
+    /**
+     * @summary `sms_TriggerDetectionPoint`.
+     * @description
+     *
+     * SMS trigger detection point. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sms_TriggerDetectionPoint: SMS_TriggerDetectionPoint;
+    /**
+     * @summary `tpdu_TypeCriterion`.
+     * @description
+     *
+     * MT-SMS TPDU types that trigger. Unknown values, or
+     * `sms-SUBMIT-REPORT` in CAMEL phase 4, cause the whole criterion to be
+     * ignored. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly tpdu_TypeCriterion?: OPTIONAL<TPDU_TypeCriterion>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `sms_TriggerDetectionPoint`.
-         * @description
-         *
-         * SMS trigger detection point. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
-         *
-         * @public
-         * @readonly
-         */
-        readonly sms_TriggerDetectionPoint: SMS_TriggerDetectionPoint,
-        /**
-         * @summary `tpdu_TypeCriterion`.
-         * @description
-         *
-         * MT-SMS TPDU types that trigger. Unknown values, or
-         * `sms-SUBMIT-REPORT` in CAMEL phase 4, cause the whole criterion to be
-         * ignored. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
-         *
-         * @public
-         * @readonly
-         */
-        readonly tpdu_TypeCriterion?: OPTIONAL<TPDU_TypeCriterion>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        sms_TriggerDetectionPoint: SMS_TriggerDetectionPoint,
+        tpdu_TypeCriterion?: OPTIONAL<TPDU_TypeCriterion>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.sms_TriggerDetectionPoint = sms_TriggerDetectionPoint;
+        this.tpdu_TypeCriterion = tpdu_TypeCriterion;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a MT_smsCAMELTDP_Criteria

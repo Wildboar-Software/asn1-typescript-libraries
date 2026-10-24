@@ -47,44 +47,54 @@ import {
  *
  */
 export class DeleteResult {
+  /**
+   * @summary `managedObjectClass`.
+   * @description
+   *
+   * Class of the object that was deleted.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly managedObjectClass?: OPTIONAL<ObjectClass>;
+  /**
+   * @summary `managedObjectInstance`.
+   * @description
+   *
+   * Instance that was deleted.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly managedObjectInstance?: OPTIONAL<ObjectInstance>;
+  /**
+   * @summary `currentTime`.
+   * @description
+   *
+   * Time associated with this result, if supplied.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly currentTime?: OPTIONAL<GeneralizedTime>;
+  /**
+   * @summary Extensions that are not recognized.
+   * @public
+   * @readonly
+   */
+  public readonly _unrecognizedExtensionsList: _Element[];
+
   constructor(
-    /**
-     * @summary `managedObjectClass`.
-     * @description
-     *
-     * Class of the object that was deleted.
-     *
-     * @public
-     * @readonly
-     */
-    readonly managedObjectClass?: OPTIONAL<ObjectClass>,
-    /**
-     * @summary `managedObjectInstance`.
-     * @description
-     *
-     * Instance that was deleted.
-     *
-     * @public
-     * @readonly
-     */
-    readonly managedObjectInstance?: OPTIONAL<ObjectInstance>,
-    /**
-     * @summary `currentTime`.
-     * @description
-     *
-     * Time associated with this result, if supplied.
-     *
-     * @public
-     * @readonly
-     */
-    readonly currentTime?: OPTIONAL<GeneralizedTime>,
-    /**
-     * @summary Extensions that are not recognized.
-     * @public
-     * @readonly
-     */
-    readonly _unrecognizedExtensionsList: _Element[] = []
-  ) {}
+    managedObjectClass?: OPTIONAL<ObjectClass>,
+    managedObjectInstance?: OPTIONAL<ObjectInstance>,
+    currentTime?: OPTIONAL<GeneralizedTime>,
+    _unrecognizedExtensionsList: _Element[] = []
+  ) {
+    this.managedObjectClass = managedObjectClass;
+    this.managedObjectInstance = managedObjectInstance;
+    this.currentTime = currentTime;
+    this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+  }
 
   /**
    * @summary Restructures an object into a DeleteResult

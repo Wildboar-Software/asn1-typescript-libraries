@@ -38,64 +38,78 @@ import { RequestedCAMEL_SubscriptionInfo, _decode_RequestedCAMEL_SubscriptionInf
  */
 export
 class ModificationRequestFor_CSI {
+    /**
+     * @summary `requestedCamel_SubscriptionInfo`.
+     * @description
+     *
+     * Shall be discarded if `additionalRequestedCAMEL-SubscriptionInfo` is
+     * received. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly requestedCamel_SubscriptionInfo: RequestedCAMEL_SubscriptionInfo;
+    /**
+     * @summary `modifyNotificationToCSE`.
+     * @description
+     *
+     * Activate or deactivate notification to the CSE for this CSI. (3GPP TS
+     * 29.002 V19.1.0 clause 7.6.3.81)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly modifyNotificationToCSE?: OPTIONAL<ModificationInstruction>;
+    /**
+     * @summary `modifyCSI_State`.
+     * @description
+     *
+     * Activate or deactivate the CSI itself. (3GPP TS 29.002 V19.1.0 clause
+     * 7.6.3.81)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly modifyCSI_State?: OPTIONAL<ModificationInstruction>;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary `additionalRequestedCAMEL_SubscriptionInfo`.
+     * @description
+     *
+     * Takes precedence over `requestedCamel-SubscriptionInfo`. (3GPP TS
+     * 29.002 V19.1.0 clause 17.7.1)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly additionalRequestedCAMEL_SubscriptionInfo?: OPTIONAL<AdditionalRequestedCAMEL_SubscriptionInfo>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `requestedCamel_SubscriptionInfo`.
-         * @description
-         *
-         * Shall be discarded if `additionalRequestedCAMEL-SubscriptionInfo` is
-         * received. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
-         *
-         * @public
-         * @readonly
-         */
-        readonly requestedCamel_SubscriptionInfo: RequestedCAMEL_SubscriptionInfo,
-        /**
-         * @summary `modifyNotificationToCSE`.
-         * @description
-         *
-         * Activate or deactivate notification to the CSE for this CSI. (3GPP TS
-         * 29.002 V19.1.0 clause 7.6.3.81)
-         *
-         * @public
-         * @readonly
-         */
-        readonly modifyNotificationToCSE?: OPTIONAL<ModificationInstruction>,
-        /**
-         * @summary `modifyCSI_State`.
-         * @description
-         *
-         * Activate or deactivate the CSI itself. (3GPP TS 29.002 V19.1.0 clause
-         * 7.6.3.81)
-         *
-         * @public
-         * @readonly
-         */
-        readonly modifyCSI_State?: OPTIONAL<ModificationInstruction>,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary `additionalRequestedCAMEL_SubscriptionInfo`.
-         * @description
-         *
-         * Takes precedence over `requestedCamel-SubscriptionInfo`. (3GPP TS
-         * 29.002 V19.1.0 clause 17.7.1)
-         *
-         * @public
-         * @readonly
-         */
-        readonly additionalRequestedCAMEL_SubscriptionInfo?: OPTIONAL<AdditionalRequestedCAMEL_SubscriptionInfo>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        requestedCamel_SubscriptionInfo: RequestedCAMEL_SubscriptionInfo,
+        modifyNotificationToCSE?: OPTIONAL<ModificationInstruction>,
+        modifyCSI_State?: OPTIONAL<ModificationInstruction>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        additionalRequestedCAMEL_SubscriptionInfo?: OPTIONAL<AdditionalRequestedCAMEL_SubscriptionInfo>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.requestedCamel_SubscriptionInfo = requestedCamel_SubscriptionInfo;
+        this.modifyNotificationToCSE = modifyNotificationToCSE;
+        this.modifyCSI_State = modifyCSI_State;
+        this.extensionContainer = extensionContainer;
+        this.additionalRequestedCAMEL_SubscriptionInfo = additionalRequestedCAMEL_SubscriptionInfo;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a ModificationRequestFor_CSI

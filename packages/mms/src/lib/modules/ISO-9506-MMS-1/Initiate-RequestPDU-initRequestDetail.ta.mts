@@ -45,79 +45,95 @@ import { AdditionalCBBOptions, _decode_AdditionalCBBOptions, _encode_AdditionalC
  */
 export
 class Initiate_RequestPDU_initRequestDetail {
+    /**
+     * @summary `proposedVersionNumber`.
+     * @description
+     *
+     * Proposed minor version of ISO 9506-1/2. Provider may reduce, not
+     * below 1. Major versions are distinct abstract syntaxes
+     * (ISO 9506-1:2003 §8.2.1.1.5).
+     * @public
+     * @readonly
+     */
+    public readonly proposedVersionNumber: Integer16;
+    /**
+     * @summary `proposedParameterCBB`.
+     * @description
+     *
+     * Parameter CBBs the calling user supports. Indication is the
+     * intersection with the calling provider. Bit 1 = support. Encode all
+     * bits; ignore extra received bits (ISO 9506-1:2003 §8.2.1.1.6).
+     * @public
+     * @readonly
+     */
+    public readonly proposedParameterCBB: ParameterSupportOptions;
+    /**
+     * @summary `servicesSupportedCalling`.
+     * @description
+     *
+     * Services (and modifiers) the calling user supports. Indication is the
+     * intersection with the calling provider. Unsupported receipt shall be
+     * Rejected UNRECOGNIZED-SERVICE (ISO 9506-1:2003 §8.2.1.1.8).
+     * @public
+     * @readonly
+     */
+    public readonly servicesSupportedCalling: ServiceSupportOptions;
+    /**
+     * @summary `additionalSupportedCalling`.
+     * @description
+     *
+     * Extended services supported by the calling user. Present only if
+     * `csr` or `cspi` was offered in Proposed Parameter CBB
+     * (ISO 9506-1:2003 §8.2.1.1.9).
+     * @public
+     * @readonly
+     */
+    public readonly additionalSupportedCalling: AdditionalSupportOptions;
+    /**
+     * @summary `additionalCbbSupportedCalling`.
+     * @description
+     *
+     * Additional parameter CBBs. Present only if `cspi` was offered in
+     * Proposed Parameter CBB (ISO 9506-1:2003 §8.2.1.1.7).
+     * @public
+     * @readonly
+     */
+    public readonly additionalCbbSupportedCalling: AdditionalCBBOptions;
+    /**
+     * @summary `privilegeClassIdentityCalling`.
+     * @description
+     *
+     * Present in the abstract syntax when `cspi` is offered
+     * (ISO 9506-2:2003 §8.2). ISO 9506-1:2003 does not specify the semantics of
+     * this field.
+     * @public
+     * @readonly
+     */
+    public readonly privilegeClassIdentityCalling: VisibleString;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `proposedVersionNumber`.
-         * @description
-         *
-         * Proposed minor version of ISO 9506-1/2. Provider may reduce, not
-         * below 1. Major versions are distinct abstract syntaxes
-         * (ISO 9506-1:2003 §8.2.1.1.5).
-         * @public
-         * @readonly
-         */
-        readonly proposedVersionNumber: Integer16,
-        /**
-         * @summary `proposedParameterCBB`.
-         * @description
-         *
-         * Parameter CBBs the calling user supports. Indication is the
-         * intersection with the calling provider. Bit 1 = support. Encode all
-         * bits; ignore extra received bits (ISO 9506-1:2003 §8.2.1.1.6).
-         * @public
-         * @readonly
-         */
-        readonly proposedParameterCBB: ParameterSupportOptions,
-        /**
-         * @summary `servicesSupportedCalling`.
-         * @description
-         *
-         * Services (and modifiers) the calling user supports. Indication is the
-         * intersection with the calling provider. Unsupported receipt shall be
-         * Rejected UNRECOGNIZED-SERVICE (ISO 9506-1:2003 §8.2.1.1.8).
-         * @public
-         * @readonly
-         */
-        readonly servicesSupportedCalling: ServiceSupportOptions,
-        /**
-         * @summary `additionalSupportedCalling`.
-         * @description
-         *
-         * Extended services supported by the calling user. Present only if
-         * `csr` or `cspi` was offered in Proposed Parameter CBB
-         * (ISO 9506-1:2003 §8.2.1.1.9).
-         * @public
-         * @readonly
-         */
-        readonly additionalSupportedCalling: AdditionalSupportOptions,
-        /**
-         * @summary `additionalCbbSupportedCalling`.
-         * @description
-         *
-         * Additional parameter CBBs. Present only if `cspi` was offered in
-         * Proposed Parameter CBB (ISO 9506-1:2003 §8.2.1.1.7).
-         * @public
-         * @readonly
-         */
-        readonly additionalCbbSupportedCalling: AdditionalCBBOptions,
-        /**
-         * @summary `privilegeClassIdentityCalling`.
-         * @description
-         *
-         * Present in the abstract syntax when `cspi` is offered
-         * (ISO 9506-2:2003 §8.2). ISO 9506-1:2003 does not specify the semantics of
-         * this field.
-         * @public
-         * @readonly
-         */
-        readonly privilegeClassIdentityCalling: VisibleString,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        proposedVersionNumber: Integer16,
+        proposedParameterCBB: ParameterSupportOptions,
+        servicesSupportedCalling: ServiceSupportOptions,
+        additionalSupportedCalling: AdditionalSupportOptions,
+        additionalCbbSupportedCalling: AdditionalCBBOptions,
+        privilegeClassIdentityCalling: VisibleString,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.proposedVersionNumber = proposedVersionNumber;
+        this.proposedParameterCBB = proposedParameterCBB;
+        this.servicesSupportedCalling = servicesSupportedCalling;
+        this.additionalSupportedCalling = additionalSupportedCalling;
+        this.additionalCbbSupportedCalling = additionalCbbSupportedCalling;
+        this.privilegeClassIdentityCalling = privilegeClassIdentityCalling;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a Initiate_RequestPDU_initRequestDetail

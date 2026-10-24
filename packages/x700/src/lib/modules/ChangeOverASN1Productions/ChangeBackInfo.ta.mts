@@ -49,57 +49,67 @@ import {
  *
  */
 export class ChangeBackInfo {
+    /**
+     * @summary `backedUpObject`.
+     * @description
+     *
+     * Object in the backed-up role that is to leave that role.
+     * Mandatory. ITU-T Rec. X.751 (11/95)
+     * [§7.3.1.2](https://www.itu.int/rec/T-REC-X.751-199511-I),
+     * §8.6.2.1.
+     * @public
+     * @readonly
+     */
+    public readonly backedUpObject: ObjectInstance;
+    /**
+     * @summary `backUpObject`.
+     * @description
+     *
+     * Object in the back-up role that is to leave that role. If
+     * omitted, the control object uses the `backUpObject`
+     * attribute. ITU-T Rec. X.751 (11/95)
+     * [§7.3.1.2](https://www.itu.int/rec/T-REC-X.751-199511-I),
+     * §8.6.2.1.
+     * @public
+     * @readonly
+     */
+    public readonly backUpObject?: OPTIONAL<OptionalObject>;
+    /**
+     * @summary `backedUpObjectChanges`.
+     * @description
+     *
+     * Extra attribute modifications on the backed-up object as
+     * it leaves the backed-up role. Applied after preconditions
+     * succeed. ITU-T Rec. X.751 (11/95)
+     * [§8.6.2.1](https://www.itu.int/rec/T-REC-X.751-199511-I).
+     * @public
+     * @readonly
+     */
+    public readonly backedUpObjectChanges?: OPTIONAL<ExpectedAttributeList>;
+    /**
+     * @summary `backUpObjectChanges`.
+     * @description
+     *
+     * Extra attribute modifications on the back-up object as
+     * it leaves the back-up role. Applied after preconditions
+     * succeed. ITU-T Rec. X.751 (11/95)
+     * [§8.6.2.1](https://www.itu.int/rec/T-REC-X.751-199511-I).
+     * @public
+     * @readonly
+     */
+    public readonly backUpObjectChanges?: OPTIONAL<ExpectedAttributeList>;
+
     constructor(
-        /**
-         * @summary `backedUpObject`.
-         * @description
-         *
-         * Object in the backed-up role that is to leave that role.
-         * Mandatory. ITU-T Rec. X.751 (11/95)
-         * [§7.3.1.2](https://www.itu.int/rec/T-REC-X.751-199511-I),
-         * §8.6.2.1.
-         * @public
-         * @readonly
-         */
-        readonly backedUpObject: ObjectInstance,
-        /**
-         * @summary `backUpObject`.
-         * @description
-         *
-         * Object in the back-up role that is to leave that role. If
-         * omitted, the control object uses the `backUpObject`
-         * attribute. ITU-T Rec. X.751 (11/95)
-         * [§7.3.1.2](https://www.itu.int/rec/T-REC-X.751-199511-I),
-         * §8.6.2.1.
-         * @public
-         * @readonly
-         */
-        readonly backUpObject?: OPTIONAL<OptionalObject>,
-        /**
-         * @summary `backedUpObjectChanges`.
-         * @description
-         *
-         * Extra attribute modifications on the backed-up object as
-         * it leaves the backed-up role. Applied after preconditions
-         * succeed. ITU-T Rec. X.751 (11/95)
-         * [§8.6.2.1](https://www.itu.int/rec/T-REC-X.751-199511-I).
-         * @public
-         * @readonly
-         */
-        readonly backedUpObjectChanges?: OPTIONAL<ExpectedAttributeList>,
-        /**
-         * @summary `backUpObjectChanges`.
-         * @description
-         *
-         * Extra attribute modifications on the back-up object as
-         * it leaves the back-up role. Applied after preconditions
-         * succeed. ITU-T Rec. X.751 (11/95)
-         * [§8.6.2.1](https://www.itu.int/rec/T-REC-X.751-199511-I).
-         * @public
-         * @readonly
-         */
-        readonly backUpObjectChanges?: OPTIONAL<ExpectedAttributeList>
-    ) {}
+        backedUpObject: ObjectInstance,
+        backUpObject?: OPTIONAL<OptionalObject>,
+        backedUpObjectChanges?: OPTIONAL<ExpectedAttributeList>,
+        backUpObjectChanges?: OPTIONAL<ExpectedAttributeList>
+    ) {
+        this.backedUpObject = backedUpObject;
+        this.backUpObject = backUpObject;
+        this.backedUpObjectChanges = backedUpObjectChanges;
+        this.backUpObjectChanges = backUpObjectChanges;
+    }
 
     /**
      * @summary Restructures an object into a ChangeBackInfo

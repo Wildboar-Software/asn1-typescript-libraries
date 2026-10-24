@@ -53,50 +53,60 @@ import {
  *
  */
 export class BufferedObservationId {
+    /**
+     * @summary `observedObject`.
+     * @description
+     *
+     * Name of the managed object instance to observe.
+     * X.738 §8.1.9.2.
+     * @public
+     * @readonly
+     */
+    public readonly observedObject: ObjectInstance;
+    /**
+     * @summary `scanAttributeIdList`.
+     * @description
+     *
+     * Attributes of any type observed every granularity
+     * period and retained until the report. X.738
+     * §8.1.9.2.
+     * @public
+     * @readonly
+     */
+    public readonly scanAttributeIdList?: OPTIONAL<AttributeId[]>;
+    /**
+     * @summary `numericAttributeIdArray`.
+     * @description
+     *
+     * Ordered INTEGER/REAL attributes observed every
+     * granularity period; compact reporting without
+     * identifiers. X.738 §8.1.9.2.
+     * @public
+     * @readonly
+     */
+    public readonly numericAttributeIdArray?: OPTIONAL<NumericAttributeIdArray>;
+    /**
+     * @summary `reportTimeAttributeIdList`.
+     * @description
+     *
+     * Attributes of arbitrary type scanned only at the
+     * end of the report period. X.738 §8.1.9.2.
+     * @public
+     * @readonly
+     */
+    public readonly reportTimeAttributeIdList?: OPTIONAL<ReportTimeAttributeIdList>;
+
     constructor(
-        /**
-         * @summary `observedObject`.
-         * @description
-         *
-         * Name of the managed object instance to observe.
-         * X.738 §8.1.9.2.
-         * @public
-         * @readonly
-         */
-        readonly observedObject: ObjectInstance,
-        /**
-         * @summary `scanAttributeIdList`.
-         * @description
-         *
-         * Attributes of any type observed every granularity
-         * period and retained until the report. X.738
-         * §8.1.9.2.
-         * @public
-         * @readonly
-         */
-        readonly scanAttributeIdList?: OPTIONAL<AttributeId[]>,
-        /**
-         * @summary `numericAttributeIdArray`.
-         * @description
-         *
-         * Ordered INTEGER/REAL attributes observed every
-         * granularity period; compact reporting without
-         * identifiers. X.738 §8.1.9.2.
-         * @public
-         * @readonly
-         */
-        readonly numericAttributeIdArray?: OPTIONAL<NumericAttributeIdArray>,
-        /**
-         * @summary `reportTimeAttributeIdList`.
-         * @description
-         *
-         * Attributes of arbitrary type scanned only at the
-         * end of the report period. X.738 §8.1.9.2.
-         * @public
-         * @readonly
-         */
-        readonly reportTimeAttributeIdList?: OPTIONAL<ReportTimeAttributeIdList>
-    ) {}
+        observedObject: ObjectInstance,
+        scanAttributeIdList?: OPTIONAL<AttributeId[]>,
+        numericAttributeIdArray?: OPTIONAL<NumericAttributeIdArray>,
+        reportTimeAttributeIdList?: OPTIONAL<ReportTimeAttributeIdList>
+    ) {
+        this.observedObject = observedObject;
+        this.scanAttributeIdList = scanAttributeIdList;
+        this.numericAttributeIdArray = numericAttributeIdArray;
+        this.reportTimeAttributeIdList = reportTimeAttributeIdList;
+    }
 
     /**
      * @summary Restructures an object into a BufferedObservationId

@@ -40,29 +40,35 @@ import { UnitControlUpload_Request_continueAfter, _decode_UnitControlUpload_Requ
  */
 export
 class UnitControlUpload_Request {
+    /**
+     * @summary `unitControlName`.
+     * @description
+     *
+     * Unit Control object to upload. ISO 9506-1:2003 §13.5.1.1.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly unitControlName: Identifier;
+    /**
+     * @summary `continueAfter`.
+     * @description
+     *
+     * Resume point: next Domain, open ULSM, or next PI. Absent: start at
+     * the beginning. ISO 9506-1:2003 §13.5.1.1.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly continueAfter?: OPTIONAL<UnitControlUpload_Request_continueAfter>;
+
     constructor (
-        /**
-         * @summary `unitControlName`.
-         * @description
-         *
-         * Unit Control object to upload. ISO 9506-1:2003 §13.5.1.1.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly unitControlName: Identifier,
-        /**
-         * @summary `continueAfter`.
-         * @description
-         *
-         * Resume point: next Domain, open ULSM, or next PI. Absent: start at
-         * the beginning. ISO 9506-1:2003 §13.5.1.1.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly continueAfter?: OPTIONAL<UnitControlUpload_Request_continueAfter>
-    ) {}
+        unitControlName: Identifier,
+        continueAfter?: OPTIONAL<UnitControlUpload_Request_continueAfter>
+    ) {
+        this.unitControlName = unitControlName;
+        this.continueAfter = continueAfter;
+    }
 
     /**
      * @summary Restructures an object into a UnitControlUpload_Request

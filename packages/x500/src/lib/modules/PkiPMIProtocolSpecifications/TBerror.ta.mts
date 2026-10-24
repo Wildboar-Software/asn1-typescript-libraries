@@ -37,26 +37,34 @@ import {
  *
  */
 export class TBerror {
+    /**
+     * @summary `code`.
+     * @public
+     * @readonly
+     */
+    public readonly code: TBerror_code;
+    /**
+     * @summary `diagnostic`.
+     * @public
+     * @readonly
+     */
+    public readonly diagnostic?: OPTIONAL<UTF8String>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `code`.
-         * @public
-         * @readonly
-         */
-        readonly code: TBerror_code,
-        /**
-         * @summary `diagnostic`.
-         * @public
-         * @readonly
-         */
-        readonly diagnostic?: OPTIONAL<UTF8String>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        code: TBerror_code,
+        diagnostic?: OPTIONAL<UTF8String>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.code = code;
+        this.diagnostic = diagnostic;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a TBerror

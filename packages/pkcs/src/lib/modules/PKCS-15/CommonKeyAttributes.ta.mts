@@ -49,56 +49,74 @@ import {
  *
  */
 export class CommonKeyAttributes {
+    /**
+     * @summary `iD`.
+     * @public
+     * @readonly
+     */
+    public readonly iD: Identifier;
+    /**
+     * @summary `usage`.
+     * @public
+     * @readonly
+     */
+    public readonly usage: KeyUsageFlags;
+    /**
+     * @summary `native`.
+     * @public
+     * @readonly
+     */
+    public readonly native?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `accessFlags`.
+     * @public
+     * @readonly
+     */
+    public readonly accessFlags?: OPTIONAL<KeyAccessFlags>;
+    /**
+     * @summary `keyReference`.
+     * @public
+     * @readonly
+     */
+    public readonly keyReference?: OPTIONAL<Reference>;
+    /**
+     * @summary `startDate`.
+     * @public
+     * @readonly
+     */
+    public readonly startDate?: OPTIONAL<GeneralizedTime>;
+    /**
+     * @summary `endDate`.
+     * @public
+     * @readonly
+     */
+    public readonly endDate?: OPTIONAL<GeneralizedTime>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `iD`.
-         * @public
-         * @readonly
-         */
-        readonly iD: Identifier,
-        /**
-         * @summary `usage`.
-         * @public
-         * @readonly
-         */
-        readonly usage: KeyUsageFlags,
-        /**
-         * @summary `native`.
-         * @public
-         * @readonly
-         */
-        readonly native?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `accessFlags`.
-         * @public
-         * @readonly
-         */
-        readonly accessFlags?: OPTIONAL<KeyAccessFlags>,
-        /**
-         * @summary `keyReference`.
-         * @public
-         * @readonly
-         */
-        readonly keyReference?: OPTIONAL<Reference>,
-        /**
-         * @summary `startDate`.
-         * @public
-         * @readonly
-         */
-        readonly startDate?: OPTIONAL<GeneralizedTime>,
-        /**
-         * @summary `endDate`.
-         * @public
-         * @readonly
-         */
-        readonly endDate?: OPTIONAL<GeneralizedTime>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        iD: Identifier,
+        usage: KeyUsageFlags,
+        native?: OPTIONAL<BOOLEAN>,
+        accessFlags?: OPTIONAL<KeyAccessFlags>,
+        keyReference?: OPTIONAL<Reference>,
+        startDate?: OPTIONAL<GeneralizedTime>,
+        endDate?: OPTIONAL<GeneralizedTime>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.iD = iD;
+        this.usage = usage;
+        this.native = native;
+        this.accessFlags = accessFlags;
+        this.keyReference = keyReference;
+        this.startDate = startDate;
+        this.endDate = endDate;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a CommonKeyAttributes

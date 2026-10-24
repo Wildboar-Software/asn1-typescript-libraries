@@ -41,38 +41,50 @@ import { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "
  */
 export
 class CallUnrelatedDpSpecificCommonParameters {
+    /**
+     * @summary `serviceAddressInformation`.
+     * @public
+     * @readonly
+     */
+    public readonly serviceAddressInformation: ServiceAddressInformation;
+    /**
+     * @summary `callingPartyNumber`.
+     * @public
+     * @readonly
+     */
+    public readonly callingPartyNumber?: OPTIONAL<CallingPartyNumber>;
+    /**
+     * @summary `locationNumber`.
+     * @public
+     * @readonly
+     */
+    public readonly locationNumber?: OPTIONAL<LocationNumber>;
+    /**
+     * @summary `terminalType`.
+     * @public
+     * @readonly
+     */
+    public readonly terminalType?: OPTIONAL<TerminalType>;
+    /**
+     * @summary `extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<ExtensionField[]>;
+
     constructor (
-        /**
-         * @summary `serviceAddressInformation`.
-         * @public
-         * @readonly
-         */
-        readonly serviceAddressInformation: ServiceAddressInformation,
-        /**
-         * @summary `callingPartyNumber`.
-         * @public
-         * @readonly
-         */
-        readonly callingPartyNumber?: OPTIONAL<CallingPartyNumber>,
-        /**
-         * @summary `locationNumber`.
-         * @public
-         * @readonly
-         */
-        readonly locationNumber?: OPTIONAL<LocationNumber>,
-        /**
-         * @summary `terminalType`.
-         * @public
-         * @readonly
-         */
-        readonly terminalType?: OPTIONAL<TerminalType>,
-        /**
-         * @summary `extensions`.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<ExtensionField[]>
-    ) {}
+        serviceAddressInformation: ServiceAddressInformation,
+        callingPartyNumber?: OPTIONAL<CallingPartyNumber>,
+        locationNumber?: OPTIONAL<LocationNumber>,
+        terminalType?: OPTIONAL<TerminalType>,
+        extensions?: OPTIONAL<ExtensionField[]>
+    ) {
+        this.serviceAddressInformation = serviceAddressInformation;
+        this.callingPartyNumber = callingPartyNumber;
+        this.locationNumber = locationNumber;
+        this.terminalType = terminalType;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a CallUnrelatedDpSpecificCommonParameters

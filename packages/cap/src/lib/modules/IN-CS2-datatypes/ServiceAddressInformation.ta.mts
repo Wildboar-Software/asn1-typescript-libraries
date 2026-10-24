@@ -34,26 +34,34 @@ import { TriggerType, _enum_for_TriggerType, _decode_TriggerType, _encode_Trigge
  */
 export
 class ServiceAddressInformation {
+    /**
+     * @summary `serviceKey`.
+     * @public
+     * @readonly
+     */
+    public readonly serviceKey: OPTIONAL<ServiceKey>;
+    /**
+     * @summary `miscCallInfo`.
+     * @public
+     * @readonly
+     */
+    public readonly miscCallInfo: MiscCallInfo;
+    /**
+     * @summary `triggerType`.
+     * @public
+     * @readonly
+     */
+    public readonly triggerType?: OPTIONAL<TriggerType>;
+
     constructor (
-        /**
-         * @summary `serviceKey`.
-         * @public
-         * @readonly
-         */
-        readonly serviceKey: OPTIONAL<ServiceKey>,
-        /**
-         * @summary `miscCallInfo`.
-         * @public
-         * @readonly
-         */
-        readonly miscCallInfo: MiscCallInfo,
-        /**
-         * @summary `triggerType`.
-         * @public
-         * @readonly
-         */
-        readonly triggerType?: OPTIONAL<TriggerType>
-    ) {}
+        serviceKey: OPTIONAL<ServiceKey>,
+        miscCallInfo: MiscCallInfo,
+        triggerType?: OPTIONAL<TriggerType>
+    ) {
+        this.serviceKey = serviceKey;
+        this.miscCallInfo = miscCallInfo;
+        this.triggerType = triggerType;
+    }
 
     /**
      * @summary Restructures an object into a ServiceAddressInformation

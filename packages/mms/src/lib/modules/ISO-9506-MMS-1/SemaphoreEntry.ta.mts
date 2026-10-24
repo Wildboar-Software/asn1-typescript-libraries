@@ -51,100 +51,118 @@ import { Unsigned32, _decode_Unsigned32, _encode_Unsigned32 } from "../ISO-9506-
  */
 export
 class SemaphoreEntry {
+    /**
+     * @summary `entryID`.
+     * @description
+     *
+     * Unique among entries of this semaphore.
+     * ISO 9506-1:2003 §16.1.3.1, §16.8.1.2.1.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly entryID: OCTET_STRING;
+    /**
+     * @summary `entryClass`.
+     * @description
+     *
+     * `simple` (0) from TakeControl; `modifier` (1) from
+     * AttachToSemaphore. ISO 9506-1:2003 §16.1.3.2,
+     * §16.8.1.2.1.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly entryClass: SemaphoreEntry_entryClass;
+    /**
+     * @summary `applicationReference`.
+     * @description
+     *
+     * MMS-user that created the entry. ISO 9506-1:2003
+     * §16.8.1.2.1.3.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly applicationReference: ApplicationReference;
+    /**
+     * @summary `namedToken`.
+     * @description
+     *
+     * Present iff the semaphore is a pool semaphore.
+     * ISO 9506-1:2003 §16.1.3.7, §16.8.1.2.1.4.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly namedToken?: OPTIONAL<Identifier>;
+    /**
+     * @summary `priority`.
+     * @description
+     *
+     * Queue rank. 0 highest, 64 normal, 127 lowest. Default
+     * `normalPriority`. ISO 9506-1:2003 §16.1.3.8,
+     * §16.8.1.2.1.5.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly priority?: OPTIONAL<Priority>;
+    /**
+     * @summary `remainingTimeOut`.
+     * @description
+     *
+     * Remaining acquisition delay if `queued`, or remaining
+     * control timeout if `owner`. Absent means forever.
+     * ISO 9506-1:2003 §16.8.1.2.1.6.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly remainingTimeOut?: OPTIONAL<Unsigned32>;
+    /**
+     * @summary `abortOnTimeOut`.
+     * @description
+     *
+     * True aborts the association on control timeout.
+     * ISO 9506-1:2003 §16.1.3.12, §16.8.1.2.1.7.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly abortOnTimeOut?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `relinquishIfConnectionLost`.
+     * @description
+     *
+     * True (default) releases control if the AA is lost; false
+     * leaves the entry hung. ISO 9506-1:2003 §16.1.3.13,
+     * §16.8.1.2.1.8.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly relinquishIfConnectionLost?: OPTIONAL<BOOLEAN>;
+
     constructor (
-        /**
-         * @summary `entryID`.
-         * @description
-         *
-         * Unique among entries of this semaphore.
-         * ISO 9506-1:2003 §16.1.3.1, §16.8.1.2.1.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly entryID: OCTET_STRING,
-        /**
-         * @summary `entryClass`.
-         * @description
-         *
-         * `simple` (0) from TakeControl; `modifier` (1) from
-         * AttachToSemaphore. ISO 9506-1:2003 §16.1.3.2,
-         * §16.8.1.2.1.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly entryClass: SemaphoreEntry_entryClass,
-        /**
-         * @summary `applicationReference`.
-         * @description
-         *
-         * MMS-user that created the entry. ISO 9506-1:2003
-         * §16.8.1.2.1.3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly applicationReference: ApplicationReference,
-        /**
-         * @summary `namedToken`.
-         * @description
-         *
-         * Present iff the semaphore is a pool semaphore.
-         * ISO 9506-1:2003 §16.1.3.7, §16.8.1.2.1.4.
-         *
-         * @public
-         * @readonly
-         */
-        readonly namedToken?: OPTIONAL<Identifier>,
-        /**
-         * @summary `priority`.
-         * @description
-         *
-         * Queue rank. 0 highest, 64 normal, 127 lowest. Default
-         * `normalPriority`. ISO 9506-1:2003 §16.1.3.8,
-         * §16.8.1.2.1.5.
-         *
-         * @public
-         * @readonly
-         */
-        readonly priority?: OPTIONAL<Priority>,
-        /**
-         * @summary `remainingTimeOut`.
-         * @description
-         *
-         * Remaining acquisition delay if `queued`, or remaining
-         * control timeout if `owner`. Absent means forever.
-         * ISO 9506-1:2003 §16.8.1.2.1.6.
-         *
-         * @public
-         * @readonly
-         */
-        readonly remainingTimeOut?: OPTIONAL<Unsigned32>,
-        /**
-         * @summary `abortOnTimeOut`.
-         * @description
-         *
-         * True aborts the association on control timeout.
-         * ISO 9506-1:2003 §16.1.3.12, §16.8.1.2.1.7.
-         *
-         * @public
-         * @readonly
-         */
-        readonly abortOnTimeOut?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `relinquishIfConnectionLost`.
-         * @description
-         *
-         * True (default) releases control if the AA is lost; false
-         * leaves the entry hung. ISO 9506-1:2003 §16.1.3.13,
-         * §16.8.1.2.1.8.
-         *
-         * @public
-         * @readonly
-         */
-        readonly relinquishIfConnectionLost?: OPTIONAL<BOOLEAN>
-    ) {}
+        entryID: OCTET_STRING,
+        entryClass: SemaphoreEntry_entryClass,
+        applicationReference: ApplicationReference,
+        namedToken?: OPTIONAL<Identifier>,
+        priority?: OPTIONAL<Priority>,
+        remainingTimeOut?: OPTIONAL<Unsigned32>,
+        abortOnTimeOut?: OPTIONAL<BOOLEAN>,
+        relinquishIfConnectionLost?: OPTIONAL<BOOLEAN>
+    ) {
+        this.entryID = entryID;
+        this.entryClass = entryClass;
+        this.applicationReference = applicationReference;
+        this.namedToken = namedToken;
+        this.priority = priority;
+        this.remainingTimeOut = remainingTimeOut;
+        this.abortOnTimeOut = abortOnTimeOut;
+        this.relinquishIfConnectionLost = relinquishIfConnectionLost;
+    }
 
     /**
      * @summary Restructures an object into a SemaphoreEntry

@@ -38,26 +38,32 @@ import { ParameterValues_terminationLength_eventId, _decode_ParameterValues_term
  */
 export
 class ParameterValues_terminationLength {
+    /**
+     * @summary `length`.
+     * @description
+     * Number of array-element updates after which to terminate if
+     * no event fired first. ISO/IEC 9040:1997 §23.4 table 14.
+     * @public
+     * @readonly
+     */
+    public readonly length: OPTIONAL<INTEGER>;
+    /**
+     * @summary `eventId`.
+     * @description
+     * Agreed event-id: non-zero positive integer or `"null"`.
+     * ISO/IEC 9040:1997 §23.4.
+     * @public
+     * @readonly
+     */
+    public readonly eventId: ParameterValues_terminationLength_eventId;
+
     constructor (
-        /**
-         * @summary `length`.
-         * @description
-         * Number of array-element updates after which to terminate if
-         * no event fired first. ISO/IEC 9040:1997 §23.4 table 14.
-         * @public
-         * @readonly
-         */
-        readonly length: OPTIONAL<INTEGER>,
-        /**
-         * @summary `eventId`.
-         * @description
-         * Agreed event-id: non-zero positive integer or `"null"`.
-         * ISO/IEC 9040:1997 §23.4.
-         * @public
-         * @readonly
-         */
-        readonly eventId: ParameterValues_terminationLength_eventId
-    ) {}
+        length: OPTIONAL<INTEGER>,
+        eventId: ParameterValues_terminationLength_eventId
+    ) {
+        this.length = length;
+        this.eventId = eventId;
+    }
 
     /**
      * @summary Restructures an object into a ParameterValues_terminationLength

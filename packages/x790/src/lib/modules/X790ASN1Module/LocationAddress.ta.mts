@@ -39,26 +39,34 @@ import {
  */
 export
 class LocationAddress {
+    /**
+     * @summary `name`.
+     * @public
+     * @readonly
+     */
+    public readonly name: PremisesName;
+    /**
+     * @summary `address`.
+     * @public
+     * @readonly
+     */
+    public readonly address: PremisesAddress;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `name`.
-         * @public
-         * @readonly
-         */
-        readonly name: PremisesName,
-        /**
-         * @summary `address`.
-         * @public
-         * @readonly
-         */
-        readonly address: PremisesAddress,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        name: PremisesName,
+        address: PremisesAddress,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.name = name;
+        this.address = address;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a LocationAddress

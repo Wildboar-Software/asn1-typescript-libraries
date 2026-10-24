@@ -37,18 +37,22 @@ import {
  *
  */
 export class BioAPI_BIR_ARRAY_POPULATION {
+  /**
+   * @summary `members`.
+   * @description
+   *
+   * BIRs in order. C count is the sequence length. X.1083 §15.7.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly members: BioAPI_BIR[];
+
   constructor(
-    /**
-     * @summary `members`.
-     * @description
-     *
-     * BIRs in order. C count is the sequence length. X.1083 §15.7.
-     *
-     * @public
-     * @readonly
-     */
-    readonly members: BioAPI_BIR[]
-  ) {}
+    members: BioAPI_BIR[]
+  ) {
+    this.members = members;
+  }
 
   /**
    * @summary Restructures an object into a BioAPI_BIR_ARRAY_POPULATION

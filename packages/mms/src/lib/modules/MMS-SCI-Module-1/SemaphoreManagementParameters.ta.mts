@@ -35,19 +35,23 @@ import { MMSString, _decode_MMSString, _encode_MMSString } from "../ISO-9506-MMS
  */
 export
 class SemaphoreManagementParameters {
+    /**
+     * @summary `algorithm`.
+     * @description
+     *
+     * Method of processing Semaphore-Entry &priority. ISO 9506-1:2003
+     * §16.1.3.8; ISO 9506-2:2003 Annex B.2.7.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly algorithm: MMSString;
+
     constructor (
-        /**
-         * @summary `algorithm`.
-         * @description
-         *
-         * Method of processing Semaphore-Entry &priority. ISO 9506-1:2003
-         * §16.1.3.8; ISO 9506-2:2003 Annex B.2.7.
-         *
-         * @public
-         * @readonly
-         */
-        readonly algorithm: MMSString
-    ) {}
+        algorithm: MMSString
+    ) {
+        this.algorithm = algorithm;
+    }
 
     /**
      * @summary Restructures an object into a SemaphoreManagementParameters

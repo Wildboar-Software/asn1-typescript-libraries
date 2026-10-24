@@ -45,97 +45,119 @@ import { RFSP_ID, _decode_RFSP_ID, _encode_RFSP_ID } from "../MAP-MS-DataTypes/R
  */
 export
 class EPS_SubscriptionData {
+    /**
+     * @summary `apn_oi_Replacement`.
+     * @description
+     *
+     * UE-level APN-OI replacement (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly apn_oi_Replacement?: OPTIONAL<APN_OI_Replacement>;
+    /**
+     * @summary `rfsp_id`.
+     * @public
+     * @readonly
+     */
+    public readonly rfsp_id?: OPTIONAL<RFSP_ID>;
+    /**
+     * @summary `ambr`.
+     * @description
+     *
+     * UE-AMBR associated with the EPS subscription (3GPP TS 29.002 V19.1.0
+     * clause 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ambr?: OPTIONAL<AMBR>;
+    /**
+     * @summary `apn_ConfigurationProfile`.
+     * @description
+     *
+     * APN-Configurations the subscriber has subscribed to (3GPP TS 29.002
+     * V19.1.0 clause 7.6.3.46A).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly apn_ConfigurationProfile?: OPTIONAL<APN_ConfigurationProfile>;
+    /**
+     * @summary `stn_sr`.
+     * @public
+     * @readonly
+     */
+    public readonly stn_sr?: OPTIONAL<ISDN_AddressString>;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary `mps_CSPriority`.
+     * @description
+     *
+     * By its presence, the UE is subscribed to eMLPP in the CS domain (3GPP
+     * TS 29.272) (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mps_CSPriority?: OPTIONAL<NULL>;
+    /**
+     * @summary `mps_EPSPriority`.
+     * @description
+     *
+     * By its presence, the UE is subscribed to MPS in the EPS domain (3GPP
+     * TS 29.272) (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mps_EPSPriority?: OPTIONAL<NULL>;
+    /**
+     * @summary `subscribed_vsrvcc`.
+     * @description
+     *
+     * By its presence, the UE is subscribed to vSRVCC in the EPS domain
+     * (3GPP TS 29.272) (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly subscribed_vsrvcc?: OPTIONAL<NULL>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `apn_oi_Replacement`.
-         * @description
-         *
-         * UE-level APN-OI replacement (3GPP TS 29.002 V19.1.0 clause 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly apn_oi_Replacement?: OPTIONAL<APN_OI_Replacement>,
-        /**
-         * @summary `rfsp_id`.
-         * @public
-         * @readonly
-         */
-        readonly rfsp_id?: OPTIONAL<RFSP_ID>,
-        /**
-         * @summary `ambr`.
-         * @description
-         *
-         * UE-AMBR associated with the EPS subscription (3GPP TS 29.002 V19.1.0
-         * clause 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly ambr?: OPTIONAL<AMBR>,
-        /**
-         * @summary `apn_ConfigurationProfile`.
-         * @description
-         *
-         * APN-Configurations the subscriber has subscribed to (3GPP TS 29.002
-         * V19.1.0 clause 7.6.3.46A).
-         *
-         * @public
-         * @readonly
-         */
-        readonly apn_ConfigurationProfile?: OPTIONAL<APN_ConfigurationProfile>,
-        /**
-         * @summary `stn_sr`.
-         * @public
-         * @readonly
-         */
-        readonly stn_sr?: OPTIONAL<ISDN_AddressString>,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary `mps_CSPriority`.
-         * @description
-         *
-         * By its presence, the UE is subscribed to eMLPP in the CS domain (3GPP
-         * TS 29.272) (3GPP TS 29.002 V19.1.0 clause 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly mps_CSPriority?: OPTIONAL<NULL>,
-        /**
-         * @summary `mps_EPSPriority`.
-         * @description
-         *
-         * By its presence, the UE is subscribed to MPS in the EPS domain (3GPP
-         * TS 29.272) (3GPP TS 29.002 V19.1.0 clause 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly mps_EPSPriority?: OPTIONAL<NULL>,
-        /**
-         * @summary `subscribed_vsrvcc`.
-         * @description
-         *
-         * By its presence, the UE is subscribed to vSRVCC in the EPS domain
-         * (3GPP TS 29.272) (3GPP TS 29.002 V19.1.0 clause 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly subscribed_vsrvcc?: OPTIONAL<NULL>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        apn_oi_Replacement?: OPTIONAL<APN_OI_Replacement>,
+        rfsp_id?: OPTIONAL<RFSP_ID>,
+        ambr?: OPTIONAL<AMBR>,
+        apn_ConfigurationProfile?: OPTIONAL<APN_ConfigurationProfile>,
+        stn_sr?: OPTIONAL<ISDN_AddressString>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        mps_CSPriority?: OPTIONAL<NULL>,
+        mps_EPSPriority?: OPTIONAL<NULL>,
+        subscribed_vsrvcc?: OPTIONAL<NULL>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.apn_oi_Replacement = apn_oi_Replacement;
+        this.rfsp_id = rfsp_id;
+        this.ambr = ambr;
+        this.apn_ConfigurationProfile = apn_ConfigurationProfile;
+        this.stn_sr = stn_sr;
+        this.extensionContainer = extensionContainer;
+        this.mps_CSPriority = mps_CSPriority;
+        this.mps_EPSPriority = mps_EPSPriority;
+        this.subscribed_vsrvcc = subscribed_vsrvcc;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a EPS_SubscriptionData

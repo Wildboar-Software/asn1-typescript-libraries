@@ -64,74 +64,90 @@ import {
  *
  */
 export class SequenceOfEvents {
+    /**
+     * @summary `eventId`.
+     * @description
+     *
+     * Number of this event. X.737 §7.6.6, A.6.20.
+     * @public
+     * @readonly
+     */
+    public readonly eventId: INTEGER;
+    /**
+     * @summary `signalType`.
+     * @description
+     *
+     * Id of the signal (`CDTC-SIGNAL-TYPE.&id` in `SignalTypeSet`). Cor.2.
+     * @public
+     * @readonly
+     */
+    public readonly signalType: OBJECT_IDENTIFIER;
+    /**
+     * @summary `signalValue`.
+     * @description
+     *
+     * Value syntax `CDTC-SIGNAL-TYPE.&Value` for that type. Cor.2.
+     * @public
+     * @readonly
+     */
+    public readonly signalValue: _Element;
+    /**
+     * @summary `signalDirection`.
+     * @description
+     *
+     * Insert (`send`) or expect (`receive`). X.737 §7.6.2.2.
+     * @public
+     * @readonly
+     */
+    public readonly signalDirection: SignalDirection;
+    /**
+     * @summary `mORTs`.
+     * @description
+     *
+     * MORT into which the signal is inserted or from which it is received.
+     * X.737 §7.6.6.
+     * @public
+     * @readonly
+     */
+    public readonly mORTs: MORTs;
+    /**
+     * @summary `associatedObjects`.
+     * @description
+     *
+     * AO (PCO) where the signal is inserted or received. X.737 §7.6.6.
+     * @public
+     * @readonly
+     */
+    public readonly associatedObjects: AssociatedObjects;
+    /**
+     * @summary `waitDuration`.
+     * @description
+     *
+     * Receive: time allowed until the signal.
+     * Send: wait after the previous event before inserting. X.737
+     * §7.6.2.2, §8.1.20.
+     * @public
+     * @readonly
+     */
+    public readonly waitDuration: WaitDuration;
+
     constructor(
-        /**
-         * @summary `eventId`.
-         * @description
-         *
-         * Number of this event. X.737 §7.6.6, A.6.20.
-         * @public
-         * @readonly
-         */
-        readonly eventId: INTEGER,
-        /**
-         * @summary `signalType`.
-         * @description
-         *
-         * Id of the signal (`CDTC-SIGNAL-TYPE.&id` in `SignalTypeSet`). Cor.2.
-         * @public
-         * @readonly
-         */
-        readonly signalType: OBJECT_IDENTIFIER,
-        /**
-         * @summary `signalValue`.
-         * @description
-         *
-         * Value syntax `CDTC-SIGNAL-TYPE.&Value` for that type. Cor.2.
-         * @public
-         * @readonly
-         */
-        readonly signalValue: _Element,
-        /**
-         * @summary `signalDirection`.
-         * @description
-         *
-         * Insert (`send`) or expect (`receive`). X.737 §7.6.2.2.
-         * @public
-         * @readonly
-         */
-        readonly signalDirection: SignalDirection,
-        /**
-         * @summary `mORTs`.
-         * @description
-         *
-         * MORT into which the signal is inserted or from which it is received.
-         * X.737 §7.6.6.
-         * @public
-         * @readonly
-         */
-        readonly mORTs: MORTs,
-        /**
-         * @summary `associatedObjects`.
-         * @description
-         *
-         * AO (PCO) where the signal is inserted or received. X.737 §7.6.6.
-         * @public
-         * @readonly
-         */
-        readonly associatedObjects: AssociatedObjects,
-        /**
-         * @summary `waitDuration`.
-         * @description
-         *
-         * Receive: time allowed until the signal.
-         * Send: wait after the previous event before inserting. X.737
-         * §7.6.2.2, §8.1.20.
-         * @public
-         * @readonly
-         */
-        readonly waitDuration: WaitDuration
-    ) {}
+        eventId: INTEGER,
+        signalType: OBJECT_IDENTIFIER,
+        signalValue: _Element,
+        signalDirection: SignalDirection,
+        mORTs: MORTs,
+        associatedObjects: AssociatedObjects,
+        waitDuration: WaitDuration
+    ) {
+        this.eventId = eventId;
+        this.signalType = signalType;
+        this.signalValue = signalValue;
+        this.signalDirection = signalDirection;
+        this.mORTs = mORTs;
+        this.associatedObjects = associatedObjects;
+        this.waitDuration = waitDuration;
+    }
 
     /**
      * @summary Restructures an object into a SequenceOfEvents

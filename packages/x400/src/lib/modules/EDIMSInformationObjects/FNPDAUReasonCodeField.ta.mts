@@ -38,20 +38,26 @@ import {
  *
  */
 export class FNPDAUReasonCodeField {
+    /**
+     * @summary `fn_pdau_basic_code`.
+     * @public
+     * @readonly
+     */
+    public readonly fn_pdau_basic_code: FNPDAUBasicCodeField;
+    /**
+     * @summary `fn_pdau_diagnostic`.
+     * @public
+     * @readonly
+     */
+    public readonly fn_pdau_diagnostic?: OPTIONAL<FNPDAUDiagnosticField>;
+
     constructor(
-        /**
-         * @summary `fn_pdau_basic_code`.
-         * @public
-         * @readonly
-         */
-        readonly fn_pdau_basic_code: FNPDAUBasicCodeField,
-        /**
-         * @summary `fn_pdau_diagnostic`.
-         * @public
-         * @readonly
-         */
-        readonly fn_pdau_diagnostic?: OPTIONAL<FNPDAUDiagnosticField>
-    ) {}
+        fn_pdau_basic_code: FNPDAUBasicCodeField,
+        fn_pdau_diagnostic?: OPTIONAL<FNPDAUDiagnosticField>
+    ) {
+        this.fn_pdau_basic_code = fn_pdau_basic_code;
+        this.fn_pdau_diagnostic = fn_pdau_diagnostic;
+    }
 
     /**
      * @summary Restructures an object into a FNPDAUReasonCodeField

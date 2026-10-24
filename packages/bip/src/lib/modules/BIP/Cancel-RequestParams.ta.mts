@@ -35,19 +35,23 @@ import {
  *
  */
 export class Cancel_RequestParams {
+  /**
+   * @summary `originalBSPHandle`.
+   * @description
+   *
+   * Hosting-endpoint BSP handle. Rewritten from the master's local
+   * `BSPHandle` (cl.26) (`X.1083 §16.57`, Table 117).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly originalBSPHandle: BioAPI_HANDLE;
+
   constructor(
-    /**
-     * @summary `originalBSPHandle`.
-     * @description
-     *
-     * Hosting-endpoint BSP handle. Rewritten from the master's local
-     * `BSPHandle` (cl.26) (`X.1083 §16.57`, Table 117).
-     *
-     * @public
-     * @readonly
-     */
-    readonly originalBSPHandle: BioAPI_HANDLE
-  ) {}
+    originalBSPHandle: BioAPI_HANDLE
+  ) {
+    this.originalBSPHandle = originalBSPHandle;
+  }
 
   /**
    * @summary Restructures an object into a Cancel_RequestParams

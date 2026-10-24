@@ -23,31 +23,37 @@ import { AppendFreeFormatData, _enum_for_AppendFreeFormatData, overwrite, _decod
  *
  */
 export class CAMEL_FCISMSBillingChargingCharacteristics_fCIBCCCAMELsequence1 {
+    /**
+     * @summary `freeFormatData`.
+     * @description
+     *
+     * Free-format billing and/or charging characteristics.
+     * (3GPP TS 29.078 V19.0.0 clause 12.4).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly freeFormatData: OCTET_STRING;
+    /**
+     * @summary `appendFreeFormatData`.
+     * @description
+     *
+     * Whether previous free-format data shall be appended or overwritten.
+     * Default `overwrite`. See 3GPP TS 23.078.
+     * (3GPP TS 29.078 V19.0.0 clause 12.4).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly appendFreeFormatData?: OPTIONAL<AppendFreeFormatData>;
+
     constructor (
-        /**
-         * @summary `freeFormatData`.
-         * @description
-         *
-         * Free-format billing and/or charging characteristics.
-         * (3GPP TS 29.078 V19.0.0 clause 12.4).
-         *
-         * @public
-         * @readonly
-         */
-        readonly freeFormatData: OCTET_STRING,
-        /**
-         * @summary `appendFreeFormatData`.
-         * @description
-         *
-         * Whether previous free-format data shall be appended or overwritten.
-         * Default `overwrite`. See 3GPP TS 23.078.
-         * (3GPP TS 29.078 V19.0.0 clause 12.4).
-         *
-         * @public
-         * @readonly
-         */
-        readonly appendFreeFormatData?: OPTIONAL<AppendFreeFormatData>,
-    ) {}
+        freeFormatData: OCTET_STRING,
+        appendFreeFormatData?: OPTIONAL<AppendFreeFormatData>,
+    ) {
+        this.freeFormatData = freeFormatData;
+        this.appendFreeFormatData = appendFreeFormatData;
+    }
 
     public static _from_object (_o: { [_K in keyof (CAMEL_FCISMSBillingChargingCharacteristics_fCIBCCCAMELsequence1)]: (CAMEL_FCISMSBillingChargingCharacteristics_fCIBCCCAMELsequence1)[_K] }): CAMEL_FCISMSBillingChargingCharacteristics_fCIBCCCAMELsequence1 {
         return new CAMEL_FCISMSBillingChargingCharacteristics_fCIBCCCAMELsequence1(_o.freeFormatData, _o.appendFreeFormatData);

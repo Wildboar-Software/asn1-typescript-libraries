@@ -30,14 +30,18 @@ import {
  *
  */
 export class ServiceError {
+    /**
+     * @summary `problem`.
+     * @public
+     * @readonly
+     */
+    public readonly problem: ServiceProblem;
+
     constructor(
-        /**
-         * @summary `problem`.
-         * @public
-         * @readonly
-         */
-        readonly problem: ServiceProblem
-    ) {}
+        problem: ServiceProblem
+    ) {
+        this.problem = problem;
+    }
 
     /**
      * @summary Restructures an object into a ServiceError

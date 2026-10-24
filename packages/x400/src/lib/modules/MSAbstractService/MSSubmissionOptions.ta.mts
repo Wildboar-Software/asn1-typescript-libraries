@@ -52,32 +52,42 @@ import {
  *
  */
 export class MSSubmissionOptions {
+    /**
+     * @summary `object_entry_class`.
+     * @public
+     * @readonly
+     */
+    public readonly object_entry_class?: OPTIONAL<EntryClass>;
+    /**
+     * @summary `disable_auto_modify`.
+     * @public
+     * @readonly
+     */
+    public readonly disable_auto_modify?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `add_message_group_names`.
+     * @public
+     * @readonly
+     */
+    public readonly add_message_group_names?: OPTIONAL<MessageGroupName[]>;
+    /**
+     * @summary `ms_submission_extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly ms_submission_extensions?: OPTIONAL<MSExtensions>;
+
     constructor(
-        /**
-         * @summary `object_entry_class`.
-         * @public
-         * @readonly
-         */
-        readonly object_entry_class?: OPTIONAL<EntryClass>,
-        /**
-         * @summary `disable_auto_modify`.
-         * @public
-         * @readonly
-         */
-        readonly disable_auto_modify?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `add_message_group_names`.
-         * @public
-         * @readonly
-         */
-        readonly add_message_group_names?: OPTIONAL<MessageGroupName[]>,
-        /**
-         * @summary `ms_submission_extensions`.
-         * @public
-         * @readonly
-         */
-        readonly ms_submission_extensions?: OPTIONAL<MSExtensions>
-    ) {}
+        object_entry_class?: OPTIONAL<EntryClass>,
+        disable_auto_modify?: OPTIONAL<BOOLEAN>,
+        add_message_group_names?: OPTIONAL<MessageGroupName[]>,
+        ms_submission_extensions?: OPTIONAL<MSExtensions>
+    ) {
+        this.object_entry_class = object_entry_class;
+        this.disable_auto_modify = disable_auto_modify;
+        this.add_message_group_names = add_message_group_names;
+        this.ms_submission_extensions = ms_submission_extensions;
+    }
 
     /**
      * @summary Restructures an object into a MSSubmissionOptions

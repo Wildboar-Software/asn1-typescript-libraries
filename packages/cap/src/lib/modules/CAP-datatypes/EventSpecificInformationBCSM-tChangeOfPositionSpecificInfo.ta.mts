@@ -26,20 +26,28 @@ import { type MetDPCriteriaList, _decode_MetDPCriteriaList, _encode_MetDPCriteri
  *
  */
 export class EventSpecificInformationBCSM_tChangeOfPositionSpecificInfo {
+    /**
+     * @summary `locationInformation`.
+     * @description
+     *
+     * Location of the MS. (3GPP TS 29.078 V19.0.0 clause 11.18).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly locationInformation?: OPTIONAL<LocationInformation>;
+    public readonly metDPCriteriaList?: OPTIONAL<MetDPCriteriaList>;
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `locationInformation`.
-         * @description
-         *
-         * Location of the MS. (3GPP TS 29.078 V19.0.0 clause 11.18).
-         *
-         * @public
-         * @readonly
-         */
-        readonly locationInformation?: OPTIONAL<LocationInformation>,
-        readonly metDPCriteriaList?: OPTIONAL<MetDPCriteriaList>,
-        readonly _unrecognizedExtensionsList: _Element[] = [],
-    ) {}
+        locationInformation?: OPTIONAL<LocationInformation>,
+        metDPCriteriaList?: OPTIONAL<MetDPCriteriaList>,
+        _unrecognizedExtensionsList: _Element[] = [],
+    ) {
+        this.locationInformation = locationInformation;
+        this.metDPCriteriaList = metDPCriteriaList;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     public static _from_object (_o: { [_K in keyof (EventSpecificInformationBCSM_tChangeOfPositionSpecificInfo)]: (EventSpecificInformationBCSM_tChangeOfPositionSpecificInfo)[_K] }): EventSpecificInformationBCSM_tChangeOfPositionSpecificInfo {
         return new EventSpecificInformationBCSM_tChangeOfPositionSpecificInfo(_o.locationInformation, _o.metDPCriteriaList, _o._unrecognizedExtensionsList);

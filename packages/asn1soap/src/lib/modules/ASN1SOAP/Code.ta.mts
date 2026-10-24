@@ -43,27 +43,33 @@ import { QName, _decode_QName, _encode_QName } from '../XSD/QName.ta.mjs';
  *
  */
 export class Code {
+  /**
+   * @summary `value`.
+   * @description Top-level SOAP fault code (`env:Value`).
+   * Maps to a local name per X.892 Table 2.
+   * ITU-T Rec. X.892 (05/2005) §7.4.2.2, §7.4.3.
+   * @public
+   * @readonly
+   */
+  public readonly value: Value;
+  /**
+   * @summary `subcodes`.
+   * @description Nested SOAP Subcodes, outermost first. Empty
+   * means no Subcode children. A QName with `uri` present is
+   * written as `prefix:local`; without `uri`, as the local name
+   * alone. ITU-T Rec. X.892 (05/2005) §7.4.2.3–§7.4.2.6.
+   * @public
+   * @readonly
+   */
+  public readonly subcodes: QName[];
+
   constructor(
-    /**
-     * @summary `value`.
-     * @description Top-level SOAP fault code (`env:Value`).
-     * Maps to a local name per X.892 Table 2.
-     * ITU-T Rec. X.892 (05/2005) §7.4.2.2, §7.4.3.
-     * @public
-     * @readonly
-     */
-    readonly value: Value,
-    /**
-     * @summary `subcodes`.
-     * @description Nested SOAP Subcodes, outermost first. Empty
-     * means no Subcode children. A QName with `uri` present is
-     * written as `prefix:local`; without `uri`, as the local name
-     * alone. ITU-T Rec. X.892 (05/2005) §7.4.2.3–§7.4.2.6.
-     * @public
-     * @readonly
-     */
-    readonly subcodes: QName[]
-  ) {}
+    value: Value,
+    subcodes: QName[]
+  ) {
+    this.value = value;
+    this.subcodes = subcodes;
+  }
 
   /**
    * @summary Restructures an object into a Code

@@ -33,38 +33,46 @@ import {
  *
  */
 export class EpcFormat_fields_Item {
+    /**
+     * @summary `bits`.
+     * @description
+     *
+     * How many bits the field occupies.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly bits: INTEGER;
+    /**
+     * @summary `charField`.
+     * @description
+     *
+     * `characters` width or `maxValue` cap.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly charField: EpcFormat_fields_Item_charField;
+    /**
+     * @summary `result`.
+     * @description
+     *
+     * DEFAULT numericPad.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly result?: OPTIONAL<EpcFormat_fields_Item_result>;
+
     constructor(
-        /**
-         * @summary `bits`.
-         * @description
-         *
-         * How many bits the field occupies.
-         *
-         * @public
-         * @readonly
-         */
-        readonly bits: INTEGER,
-        /**
-         * @summary `charField`.
-         * @description
-         *
-         * `characters` width or `maxValue` cap.
-         *
-         * @public
-         * @readonly
-         */
-        readonly charField: EpcFormat_fields_Item_charField,
-        /**
-         * @summary `result`.
-         * @description
-         *
-         * DEFAULT numericPad.
-         *
-         * @public
-         * @readonly
-         */
-        readonly result?: OPTIONAL<EpcFormat_fields_Item_result>
-    ) {}
+        bits: INTEGER,
+        charField: EpcFormat_fields_Item_charField,
+        result?: OPTIONAL<EpcFormat_fields_Item_result>
+    ) {
+        this.bits = bits;
+        this.charField = charField;
+        this.result = result;
+    }
 
     /**
      * @summary Restructures an object into a EpcFormat_fields_Item

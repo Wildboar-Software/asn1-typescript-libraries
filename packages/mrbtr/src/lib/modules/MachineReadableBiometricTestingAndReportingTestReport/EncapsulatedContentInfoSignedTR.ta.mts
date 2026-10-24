@@ -38,31 +38,37 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class EncapsulatedContentInfoSignedTR {
+    /**
+     * @summary `eContentTypeContentInfoSignedTR`.
+     * @description
+     *
+     * `id-testReportTechnology` or `id-testReportScenario`
+     * (Clause 6.6). Signed reports do not wrap another signed
+     * report.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly eContentTypeContentInfoSignedTR: OBJECT_IDENTIFIER;
+    /**
+     * @summary `eContentContentInfoSignedTR`.
+     * @description
+     *
+     * The test report itself, carried as an OCTET STRING containing
+     * `TestReportTechnology` or `TestReportScenario` (Clause 6.6).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly eContentContentInfoSignedTR: OCTET_STRING;
+
     constructor (
-        /**
-         * @summary `eContentTypeContentInfoSignedTR`.
-         * @description
-         *
-         * `id-testReportTechnology` or `id-testReportScenario`
-         * (Clause 6.6). Signed reports do not wrap another signed
-         * report.
-         *
-         * @public
-         * @readonly
-         */
-        readonly eContentTypeContentInfoSignedTR: OBJECT_IDENTIFIER,
-        /**
-         * @summary `eContentContentInfoSignedTR`.
-         * @description
-         *
-         * The test report itself, carried as an OCTET STRING containing
-         * `TestReportTechnology` or `TestReportScenario` (Clause 6.6).
-         *
-         * @public
-         * @readonly
-         */
-        readonly eContentContentInfoSignedTR: OCTET_STRING
-    ) {}
+        eContentTypeContentInfoSignedTR: OBJECT_IDENTIFIER,
+        eContentContentInfoSignedTR: OCTET_STRING
+    ) {
+        this.eContentTypeContentInfoSignedTR = eContentTypeContentInfoSignedTR;
+        this.eContentContentInfoSignedTR = eContentContentInfoSignedTR;
+    }
 
     /**
      * @summary Restructures an object into a EncapsulatedContentInfoSignedTR

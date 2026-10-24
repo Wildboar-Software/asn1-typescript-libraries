@@ -56,32 +56,42 @@ import {
  *
  */
 export class SummarizeArgument {
+    /**
+     * @summary `entry_class`.
+     * @public
+     * @readonly
+     */
+    public readonly entry_class: OPTIONAL<EntryClass>;
+    /**
+     * @summary `selector`.
+     * @public
+     * @readonly
+     */
+    public readonly selector: Selector;
+    /**
+     * @summary `summary_requests`.
+     * @public
+     * @readonly
+     */
+    public readonly summary_requests?: OPTIONAL<AttributeType[]>;
+    /**
+     * @summary `summarize_extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly summarize_extensions?: OPTIONAL<MSExtensions>;
+
     constructor(
-        /**
-         * @summary `entry_class`.
-         * @public
-         * @readonly
-         */
-        readonly entry_class: OPTIONAL<EntryClass>,
-        /**
-         * @summary `selector`.
-         * @public
-         * @readonly
-         */
-        readonly selector: Selector,
-        /**
-         * @summary `summary_requests`.
-         * @public
-         * @readonly
-         */
-        readonly summary_requests?: OPTIONAL<AttributeType[]>,
-        /**
-         * @summary `summarize_extensions`.
-         * @public
-         * @readonly
-         */
-        readonly summarize_extensions?: OPTIONAL<MSExtensions>
-    ) {}
+        entry_class: OPTIONAL<EntryClass>,
+        selector: Selector,
+        summary_requests?: OPTIONAL<AttributeType[]>,
+        summarize_extensions?: OPTIONAL<MSExtensions>
+    ) {
+        this.entry_class = entry_class;
+        this.selector = selector;
+        this.summary_requests = summary_requests;
+        this.summarize_extensions = summarize_extensions;
+    }
 
     /**
      * @summary Restructures an object into a SummarizeArgument

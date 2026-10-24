@@ -37,36 +37,42 @@ import { AlarmEnrollmentSummary, _decode_AlarmEnrollmentSummary, _encode_AlarmEn
  */
 export
 class GetAlarmEnrollmentSummary_Response {
+    /**
+     * @summary `listOfAlarmEnrollmentSummary`.
+     * @description
+     *
+     * One summary per matching notification enrollment,
+     * ordered by Event Condition then enrollment
+     * collation sequence.
+     *
+     * [ISO 9506-1:2003 §18.6.1.2.1]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly listOfAlarmEnrollmentSummary: AlarmEnrollmentSummary[];
+    /**
+     * @summary `moreFollows`.
+     * @description
+     *
+     * True if this response is incomplete and a
+     * continuation request is needed. If true, the list
+     * contains at least one entry. Default false.
+     *
+     * [ISO 9506-1:2003 §18.6.1.2.2]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly moreFollows?: OPTIONAL<BOOLEAN>;
+
     constructor (
-        /**
-         * @summary `listOfAlarmEnrollmentSummary`.
-         * @description
-         *
-         * One summary per matching notification enrollment,
-         * ordered by Event Condition then enrollment
-         * collation sequence.
-         *
-         * [ISO 9506-1:2003 §18.6.1.2.1]
-         *
-         * @public
-         * @readonly
-         */
-        readonly listOfAlarmEnrollmentSummary: AlarmEnrollmentSummary[],
-        /**
-         * @summary `moreFollows`.
-         * @description
-         *
-         * True if this response is incomplete and a
-         * continuation request is needed. If true, the list
-         * contains at least one entry. Default false.
-         *
-         * [ISO 9506-1:2003 §18.6.1.2.2]
-         *
-         * @public
-         * @readonly
-         */
-        readonly moreFollows?: OPTIONAL<BOOLEAN>
-    ) {}
+        listOfAlarmEnrollmentSummary: AlarmEnrollmentSummary[],
+        moreFollows?: OPTIONAL<BOOLEAN>
+    ) {
+        this.listOfAlarmEnrollmentSummary = listOfAlarmEnrollmentSummary;
+        this.moreFollows = moreFollows;
+    }
 
     /**
      * @summary Restructures an object into a GetAlarmEnrollmentSummary_Response

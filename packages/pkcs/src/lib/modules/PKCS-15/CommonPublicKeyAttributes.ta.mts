@@ -29,26 +29,34 @@ import { Usage, _decode_Usage, _encode_Usage } from "../PKCS-15/Usage.ta.mjs";
  *
  */
 export class CommonPublicKeyAttributes {
+    /**
+     * @summary `subjectName`.
+     * @public
+     * @readonly
+     */
+    public readonly subjectName?: OPTIONAL<Name>;
+    /**
+     * @summary `trustedUsage`.
+     * @public
+     * @readonly
+     */
+    public readonly trustedUsage?: OPTIONAL<Usage>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `subjectName`.
-         * @public
-         * @readonly
-         */
-        readonly subjectName?: OPTIONAL<Name>,
-        /**
-         * @summary `trustedUsage`.
-         * @public
-         * @readonly
-         */
-        readonly trustedUsage?: OPTIONAL<Usage>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        subjectName?: OPTIONAL<Name>,
+        trustedUsage?: OPTIONAL<Usage>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.subjectName = subjectName;
+        this.trustedUsage = trustedUsage;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a CommonPublicKeyAttributes

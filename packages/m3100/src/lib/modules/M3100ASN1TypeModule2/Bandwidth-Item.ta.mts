@@ -25,20 +25,26 @@ import * as $ from '@wildboar/asn1/functional';
  *
  */
 export class Bandwidth_Item {
+    /**
+     * @summary `ingress`.
+     * @public
+     * @readonly
+     */
+    public readonly ingress: INTEGER;
+    /**
+     * @summary `egress`.
+     * @public
+     * @readonly
+     */
+    public readonly egress: INTEGER;
+
     constructor(
-        /**
-         * @summary `ingress`.
-         * @public
-         * @readonly
-         */
-        readonly ingress: INTEGER,
-        /**
-         * @summary `egress`.
-         * @public
-         * @readonly
-         */
-        readonly egress: INTEGER
-    ) {}
+        ingress: INTEGER,
+        egress: INTEGER
+    ) {
+        this.ingress = ingress;
+        this.egress = egress;
+    }
 
     /**
      * @summary Restructures an object into a Bandwidth_Item

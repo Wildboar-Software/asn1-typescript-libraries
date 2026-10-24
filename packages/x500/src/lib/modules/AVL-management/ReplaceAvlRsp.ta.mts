@@ -35,34 +35,42 @@ import {
  *
  */
 export class ReplaceAvlRsp {
+    /**
+     * @summary `invokeID`.
+     * @description
+     *
+     * Same value as the corresponding `ReplaceAvlReq`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly invokeID: InvokeID;
+    /**
+     * @summary `result`.
+     * @description
+     *
+     * `success` (`RepAvlOK`) or `failure` (`RepAvlErr`).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly result: ReplaceAvlRsp_result;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `invokeID`.
-         * @description
-         *
-         * Same value as the corresponding `ReplaceAvlReq`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly invokeID: InvokeID,
-        /**
-         * @summary `result`.
-         * @description
-         *
-         * `success` (`RepAvlOK`) or `failure` (`RepAvlErr`).
-         *
-         * @public
-         * @readonly
-         */
-        readonly result: ReplaceAvlRsp_result,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        invokeID: InvokeID,
+        result: ReplaceAvlRsp_result,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.invokeID = invokeID;
+        this.result = result;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a ReplaceAvlRsp

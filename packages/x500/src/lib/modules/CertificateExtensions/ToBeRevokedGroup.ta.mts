@@ -43,47 +43,59 @@ import {
  *
  */
 export class ToBeRevokedGroup {
+    /**
+     * @summary `certificateIssuer`.
+     * @description
+     *
+     * Omitted = CRL issuer.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly certificateIssuer: OPTIONAL<GeneralName>;
+    /**
+     * @summary `reasonInfo`.
+     * @public
+     * @readonly
+     */
+    public readonly reasonInfo: OPTIONAL<ReasonInfo>;
+    /**
+     * @summary `revocationTime`.
+     * @description
+     *
+     * Shall be after thisUpdate. If before nextUpdate, treat as revoked in
+     * that window.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly revocationTime: GeneralizedTime;
+    /**
+     * @summary `certificateGroup`.
+     * @public
+     * @readonly
+     */
+    public readonly certificateGroup: CertificateGroup;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `certificateIssuer`.
-         * @description
-         *
-         * Omitted = CRL issuer.
-         *
-         * @public
-         * @readonly
-         */
-        readonly certificateIssuer: OPTIONAL<GeneralName>,
-        /**
-         * @summary `reasonInfo`.
-         * @public
-         * @readonly
-         */
-        readonly reasonInfo: OPTIONAL<ReasonInfo>,
-        /**
-         * @summary `revocationTime`.
-         * @description
-         *
-         * Shall be after thisUpdate. If before nextUpdate, treat as revoked in
-         * that window.
-         *
-         * @public
-         * @readonly
-         */
-        readonly revocationTime: GeneralizedTime,
-        /**
-         * @summary `certificateGroup`.
-         * @public
-         * @readonly
-         */
-        readonly certificateGroup: CertificateGroup,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        certificateIssuer: OPTIONAL<GeneralName>,
+        reasonInfo: OPTIONAL<ReasonInfo>,
+        revocationTime: GeneralizedTime,
+        certificateGroup: CertificateGroup,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.certificateIssuer = certificateIssuer;
+        this.reasonInfo = reasonInfo;
+        this.revocationTime = revocationTime;
+        this.certificateGroup = certificateGroup;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a ToBeRevokedGroup

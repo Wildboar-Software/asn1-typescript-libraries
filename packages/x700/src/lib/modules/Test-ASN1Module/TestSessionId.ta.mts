@@ -42,33 +42,39 @@ import {
  *
  */
 export class TestSessionId {
+    /**
+     * @summary `localId`.
+     * @description
+     *
+     * Integer part of the session identifier; always present. ITU-T Rec.
+     * X.745 (11/93) §8.1.6.
+     * [§8.1.6](https://www.itu.int/rec/T-REC-X.745-199311-I)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly localId: INTEGER;
+    /**
+     * @summary `globalRef`.
+     * @description
+     *
+     * Optional global qualifier: a Distinguished Name or an OBJECT
+     * IDENTIFIER, for uniqueness across systems. ITU-T Rec. X.745 (11/93)
+     * §8.1.6.
+     * [§8.1.6](https://www.itu.int/rec/T-REC-X.745-199311-I)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly globalRef?: OPTIONAL<TestSessionId_globalRef>;
+
     constructor(
-        /**
-         * @summary `localId`.
-         * @description
-         *
-         * Integer part of the session identifier; always present. ITU-T Rec.
-         * X.745 (11/93) §8.1.6.
-         * [§8.1.6](https://www.itu.int/rec/T-REC-X.745-199311-I)
-         *
-         * @public
-         * @readonly
-         */
-        readonly localId: INTEGER,
-        /**
-         * @summary `globalRef`.
-         * @description
-         *
-         * Optional global qualifier: a Distinguished Name or an OBJECT
-         * IDENTIFIER, for uniqueness across systems. ITU-T Rec. X.745 (11/93)
-         * §8.1.6.
-         * [§8.1.6](https://www.itu.int/rec/T-REC-X.745-199311-I)
-         *
-         * @public
-         * @readonly
-         */
-        readonly globalRef?: OPTIONAL<TestSessionId_globalRef>
-    ) {}
+        localId: INTEGER,
+        globalRef?: OPTIONAL<TestSessionId_globalRef>
+    ) {
+        this.localId = localId;
+        this.globalRef = globalRef;
+    }
 
     /**
      * @summary Restructures an object into a TestSessionId

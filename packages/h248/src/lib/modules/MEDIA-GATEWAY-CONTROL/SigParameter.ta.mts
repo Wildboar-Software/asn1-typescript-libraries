@@ -44,50 +44,60 @@ import { SigParameter_extraInfo, _decode_SigParameter_extraInfo, _encode_SigPara
  */
 export
 class SigParameter {
+    /**
+     * @summary `sigParameterName`.
+     * @description
+     *
+     * Parameter name, a two-octet `Name`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sigParameterName: SigParameterName;
+    /**
+     * @summary `value`.
+     * @description
+     *
+     * Parameter values, each a BER-encoded package value wrapped as an
+     * octet string (Annex A, note 3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly value: SigParamValues;
+    /**
+     * @summary `extraInfo`.
+     * @description
+     *
+     * Relation, range, or sub-list. Same rules as `PropertyParm-extraInfo`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extraInfo?: OPTIONAL<SigParameter_extraInfo>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @description
+     *
+     * Extension additions this version does not define. Kept so a later
+     * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `sigParameterName`.
-         * @description
-         *
-         * Parameter name, a two-octet `Name`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly sigParameterName: SigParameterName,
-        /**
-         * @summary `value`.
-         * @description
-         *
-         * Parameter values, each a BER-encoded package value wrapped as an
-         * octet string (Annex A, note 3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly value: SigParamValues,
-        /**
-         * @summary `extraInfo`.
-         * @description
-         *
-         * Relation, range, or sub-list. Same rules as `PropertyParm-extraInfo`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly extraInfo?: OPTIONAL<SigParameter_extraInfo>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @description
-         *
-         * Extension additions this version does not define. Kept so a later
-         * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
-         *
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        sigParameterName: SigParameterName,
+        value: SigParamValues,
+        extraInfo?: OPTIONAL<SigParameter_extraInfo>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.sigParameterName = sigParameterName;
+        this.value = value;
+        this.extraInfo = extraInfo;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a SigParameter

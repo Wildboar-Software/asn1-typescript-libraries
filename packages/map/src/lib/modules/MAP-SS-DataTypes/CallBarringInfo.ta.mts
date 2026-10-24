@@ -29,34 +29,42 @@ import { CallBarringFeatureList, _decode_CallBarringFeatureList, _encode_CallBar
  */
 export
 class CallBarringInfo {
+    /**
+     * @summary `ss_Code`.
+     * @description
+     *
+     * SS-Code of the call barring service (clause 7.6.4.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ss_Code: OPTIONAL<SS_Code>;
+    /**
+     * @summary `callBarringFeatureList`.
+     * @description
+     *
+     * One item per Basic Service Group (clause 7.6.4.18).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly callBarringFeatureList: CallBarringFeatureList;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `ss_Code`.
-         * @description
-         *
-         * SS-Code of the call barring service (clause 7.6.4.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly ss_Code: OPTIONAL<SS_Code>,
-        /**
-         * @summary `callBarringFeatureList`.
-         * @description
-         *
-         * One item per Basic Service Group (clause 7.6.4.18).
-         *
-         * @public
-         * @readonly
-         */
-        readonly callBarringFeatureList: CallBarringFeatureList,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        ss_Code: OPTIONAL<SS_Code>,
+        callBarringFeatureList: CallBarringFeatureList,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.ss_Code = ss_Code;
+        this.callBarringFeatureList = callBarringFeatureList;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a CallBarringInfo

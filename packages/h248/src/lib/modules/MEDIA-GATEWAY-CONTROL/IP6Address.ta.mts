@@ -33,30 +33,35 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class IP6Address {
+    /**
+     * @summary `address`.
+     * @description
+     *
+     * Sixteen-octet IPv6 address.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly address: OCTET_STRING;
+    /**
+     * @summary `portNumber`.
+     * @description
+     *
+     * UDP, TCP, or SCTP port, 0 to 65535. Omitted when only the address is
+     * being identified. For IP transports, a ServiceChangeAddress may be a
+     * full address or only a port (clause 7.2.8.1.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly portNumber?: OPTIONAL<INTEGER>;
+
     constructor (
-        /**
-         * @summary `address`.
-         * @description
-         *
-         * Sixteen-octet IPv6 address.
-         *
-         * @public
-         * @readonly
-         */
-        readonly address: OCTET_STRING,
-        /**
-         * @summary `portNumber`.
-         * @description
-         *
-         * UDP, TCP, or SCTP port, 0 to 65535. Omitted when only the address is
-         * being identified. For IP transports, a ServiceChangeAddress may be a
-         * full address or only a port (clause 7.2.8.1.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly portNumber?: OPTIONAL<INTEGER>
+        address: OCTET_STRING,
+        portNumber?: OPTIONAL<INTEGER>
     ) {
+            this.address = address;
+            this.portNumber = portNumber;
             if (address.length !== 16) {
                 throw new ASN1SizeError("IP6Address.address violates SIZE constraint");
             }

@@ -31,26 +31,34 @@ import {
  *
  */
 export class MaxValueCount {
+    /**
+     * @summary `type_`.
+     * @public
+     * @readonly
+     */
+    public readonly type_: AttributeType;
+    /**
+     * @summary `maxCount`.
+     * @public
+     * @readonly
+     */
+    public readonly maxCount: INTEGER;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `type_`.
-         * @public
-         * @readonly
-         */
-        readonly type_: AttributeType,
-        /**
-         * @summary `maxCount`.
-         * @public
-         * @readonly
-         */
-        readonly maxCount: INTEGER,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        type_: AttributeType,
+        maxCount: INTEGER,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.type_ = type_;
+        this.maxCount = maxCount;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a MaxValueCount

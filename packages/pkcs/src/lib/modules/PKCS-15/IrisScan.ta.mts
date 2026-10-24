@@ -27,20 +27,26 @@ import {
  *
  */
 export class IrisScan {
+    /**
+     * @summary `eye`.
+     * @public
+     * @readonly
+     */
+    public readonly eye: IrisScan_eye;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `eye`.
-         * @public
-         * @readonly
-         */
-        readonly eye: IrisScan_eye,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        eye: IrisScan_eye,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.eye = eye;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a IrisScan

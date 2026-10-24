@@ -34,26 +34,32 @@ import { AccessRights, _enum_for_AccessRights, _decode_AccessRights, _encode_Acc
  */
 export
 class DfrAccessListElement {
+    /**
+     * @summary `access_id`.
+     * @description
+     *
+     * Distinguished name of the security subject.
+     * @public
+     * @readonly
+     */
+    public readonly access_id: AccessId;
+    /**
+     * @summary `access_rights`.
+     * @description
+     *
+     * Granted AccessRights.
+     * @public
+     * @readonly
+     */
+    public readonly access_rights: AccessRights;
+
     constructor (
-        /**
-         * @summary `access_id`.
-         * @description
-         *
-         * Distinguished name of the security subject.
-         * @public
-         * @readonly
-         */
-        readonly access_id: AccessId,
-        /**
-         * @summary `access_rights`.
-         * @description
-         *
-         * Granted AccessRights.
-         * @public
-         * @readonly
-         */
-        readonly access_rights: AccessRights
-    ) {}
+        access_id: AccessId,
+        access_rights: AccessRights
+    ) {
+        this.access_id = access_id;
+        this.access_rights = access_rights;
+    }
 
     /**
      * @summary Restructures an object into a DfrAccessListElement

@@ -25,26 +25,34 @@ import {
  *
  */
 export class OsiErr {
+    /**
+     * @summary `invokeID`.
+     * @public
+     * @readonly
+     */
+    public readonly invokeID: InvokeId;
+    /**
+     * @summary `errcode`.
+     * @public
+     * @readonly
+     */
+    public readonly errcode: _Element;
+    /**
+     * @summary `error`.
+     * @public
+     * @readonly
+     */
+    public readonly error: _Element;
+
     constructor(
-        /**
-         * @summary `invokeID`.
-         * @public
-         * @readonly
-         */
-        readonly invokeID: InvokeId,
-        /**
-         * @summary `errcode`.
-         * @public
-         * @readonly
-         */
-        readonly errcode: _Element,
-        /**
-         * @summary `error`.
-         * @public
-         * @readonly
-         */
-        readonly error: _Element
-    ) {}
+        invokeID: InvokeId,
+        errcode: _Element,
+        error: _Element
+    ) {
+        this.invokeID = invokeID;
+        this.errcode = errcode;
+        this.error = error;
+    }
 
     /**
      * @summary Restructures an object into a OsiErr

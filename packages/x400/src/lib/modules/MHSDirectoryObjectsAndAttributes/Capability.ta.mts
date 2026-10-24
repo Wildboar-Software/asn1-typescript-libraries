@@ -53,38 +53,50 @@ import {
  *
  */
 export class Capability {
+    /**
+     * @summary `content_types`.
+     * @public
+     * @readonly
+     */
+    public readonly content_types?: OPTIONAL<ExtendedContentType[]>;
+    /**
+     * @summary `maximum_content_length`.
+     * @public
+     * @readonly
+     */
+    public readonly maximum_content_length?: OPTIONAL<ContentLength>;
+    /**
+     * @summary `encoded_information_types_constraints`.
+     * @public
+     * @readonly
+     */
+    public readonly encoded_information_types_constraints?: OPTIONAL<EncodedInformationTypesConstraints>;
+    /**
+     * @summary `security_labels`.
+     * @public
+     * @readonly
+     */
+    public readonly security_labels?: OPTIONAL<SecurityContext>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `content_types`.
-         * @public
-         * @readonly
-         */
-        readonly content_types?: OPTIONAL<ExtendedContentType[]>,
-        /**
-         * @summary `maximum_content_length`.
-         * @public
-         * @readonly
-         */
-        readonly maximum_content_length?: OPTIONAL<ContentLength>,
-        /**
-         * @summary `encoded_information_types_constraints`.
-         * @public
-         * @readonly
-         */
-        readonly encoded_information_types_constraints?: OPTIONAL<EncodedInformationTypesConstraints>,
-        /**
-         * @summary `security_labels`.
-         * @public
-         * @readonly
-         */
-        readonly security_labels?: OPTIONAL<SecurityContext>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        content_types?: OPTIONAL<ExtendedContentType[]>,
+        maximum_content_length?: OPTIONAL<ContentLength>,
+        encoded_information_types_constraints?: OPTIONAL<EncodedInformationTypesConstraints>,
+        security_labels?: OPTIONAL<SecurityContext>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.content_types = content_types;
+        this.maximum_content_length = maximum_content_length;
+        this.encoded_information_types_constraints = encoded_information_types_constraints;
+        this.security_labels = security_labels;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a Capability

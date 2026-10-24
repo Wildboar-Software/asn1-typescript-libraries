@@ -38,39 +38,47 @@ import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-
  */
 export
 class Rename_Request {
+    /**
+     * @summary `objectClass`.
+     * @description
+     *
+     * Class of the object to rename. ISO 9506-1:2003 §10.7.1.1.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly objectClass: ObjectClass;
+    /**
+     * @summary `currentName`.
+     * @description
+     *
+     * Current object name. ISO 9506-1:2003 §10.7.1.1.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly currentName: ObjectName;
+    /**
+     * @summary `newIdentifier`.
+     * @description
+     *
+     * New identifier part of the object name (scope unchanged).
+     * ISO 9506-1:2003 §10.7.1.1.3.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly newIdentifier: Identifier;
+
     constructor (
-        /**
-         * @summary `objectClass`.
-         * @description
-         *
-         * Class of the object to rename. ISO 9506-1:2003 §10.7.1.1.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly objectClass: ObjectClass,
-        /**
-         * @summary `currentName`.
-         * @description
-         *
-         * Current object name. ISO 9506-1:2003 §10.7.1.1.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly currentName: ObjectName,
-        /**
-         * @summary `newIdentifier`.
-         * @description
-         *
-         * New identifier part of the object name (scope unchanged).
-         * ISO 9506-1:2003 §10.7.1.1.3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly newIdentifier: Identifier
-    ) {}
+        objectClass: ObjectClass,
+        currentName: ObjectName,
+        newIdentifier: Identifier
+    ) {
+        this.objectClass = objectClass;
+        this.currentName = currentName;
+        this.newIdentifier = newIdentifier;
+    }
 
     /**
      * @summary Restructures an object into a Rename_Request

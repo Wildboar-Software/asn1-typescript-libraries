@@ -44,50 +44,66 @@ import {
  *
  */
 export class BiometricAttributes {
+    /**
+     * @summary `bioFlags`.
+     * @public
+     * @readonly
+     */
+    public readonly bioFlags: BiometricFlags;
+    /**
+     * @summary `templateId`.
+     * @public
+     * @readonly
+     */
+    public readonly templateId: OBJECT_IDENTIFIER;
+    /**
+     * @summary `bioType`.
+     * @public
+     * @readonly
+     */
+    public readonly bioType: BiometricType;
+    /**
+     * @summary `bioReference`.
+     * @public
+     * @readonly
+     */
+    public readonly bioReference?: OPTIONAL<Reference>;
+    /**
+     * @summary `lastChange`.
+     * @public
+     * @readonly
+     */
+    public readonly lastChange?: OPTIONAL<GeneralizedTime>;
+    /**
+     * @summary `path`.
+     * @public
+     * @readonly
+     */
+    public readonly path?: OPTIONAL<Path>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `bioFlags`.
-         * @public
-         * @readonly
-         */
-        readonly bioFlags: BiometricFlags,
-        /**
-         * @summary `templateId`.
-         * @public
-         * @readonly
-         */
-        readonly templateId: OBJECT_IDENTIFIER,
-        /**
-         * @summary `bioType`.
-         * @public
-         * @readonly
-         */
-        readonly bioType: BiometricType,
-        /**
-         * @summary `bioReference`.
-         * @public
-         * @readonly
-         */
-        readonly bioReference?: OPTIONAL<Reference>,
-        /**
-         * @summary `lastChange`.
-         * @public
-         * @readonly
-         */
-        readonly lastChange?: OPTIONAL<GeneralizedTime>,
-        /**
-         * @summary `path`.
-         * @public
-         * @readonly
-         */
-        readonly path?: OPTIONAL<Path>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        bioFlags: BiometricFlags,
+        templateId: OBJECT_IDENTIFIER,
+        bioType: BiometricType,
+        bioReference?: OPTIONAL<Reference>,
+        lastChange?: OPTIONAL<GeneralizedTime>,
+        path?: OPTIONAL<Path>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.bioFlags = bioFlags;
+        this.templateId = templateId;
+        this.bioType = bioType;
+        this.bioReference = bioReference;
+        this.lastChange = lastChange;
+        this.path = path;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a BiometricAttributes

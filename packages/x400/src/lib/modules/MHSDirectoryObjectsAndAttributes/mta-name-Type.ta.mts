@@ -34,20 +34,26 @@ import {
  *
  */
 export class mta_name_Type {
+    /**
+     * @summary `domain`.
+     * @public
+     * @readonly
+     */
+    public readonly domain: GlobalDomainIdentifier;
+    /**
+     * @summary `mta_name`.
+     * @public
+     * @readonly
+     */
+    public readonly mta_name: MTAName;
+
     constructor(
-        /**
-         * @summary `domain`.
-         * @public
-         * @readonly
-         */
-        readonly domain: GlobalDomainIdentifier,
-        /**
-         * @summary `mta_name`.
-         * @public
-         * @readonly
-         */
-        readonly mta_name: MTAName
-    ) {}
+        domain: GlobalDomainIdentifier,
+        mta_name: MTAName
+    ) {
+        this.domain = domain;
+        this.mta_name = mta_name;
+    }
 
     /**
      * @summary Restructures an object into a mta_name_Type

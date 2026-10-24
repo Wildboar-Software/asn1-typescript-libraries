@@ -36,47 +36,57 @@ import { TotalRefresh } from "../DirectoryShadowAbstractService/TotalRefresh.ta.
  *
  */
 export class Subtree implements TotalRefresh {
+    /**
+     * @summary `rdn`.
+     * @description
+     *
+     * Primary RDN of this SDSE relative to its parent. Include context
+     * lists and all alternative distinguished values unless the
+     * agreement's context selection reduced them.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly rdn: RelativeDistinguishedName;
+    /**
+     * @summary `sDSE`.
+     * @description
+     *
+     * Content of this SDSE. Absent is legal (glue / subordinates only).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sDSE?: OPTIONAL<SDSEContent>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `subtree`.
+     * @description
+     *
+     * Further subordinates. Omit if none; do not send empty
+     * (SIZE 1..MAX). Unordered.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly subtree?: OPTIONAL<Subtree[]>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `rdn`.
-         * @description
-         *
-         * Primary RDN of this SDSE relative to its parent. Include context
-         * lists and all alternative distinguished values unless the
-         * agreement's context selection reduced them.
-         *
-         * @public
-         * @readonly
-         */
-        readonly rdn: RelativeDistinguishedName,
-        /**
-         * @summary `sDSE`.
-         * @description
-         *
-         * Content of this SDSE. Absent is legal (glue / subordinates only).
-         *
-         * @public
-         * @readonly
-         */
-        readonly sDSE?: OPTIONAL<SDSEContent> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `subtree`.
-         * @description
-         *
-         * Further subordinates. Omit if none; do not send empty
-         * (SIZE 1..MAX). Unordered.
-         *
-         * @public
-         * @readonly
-         */
-        readonly subtree?: OPTIONAL<Subtree[]> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        rdn: RelativeDistinguishedName,
+        sDSE?: OPTIONAL<SDSEContent>,
+        subtree?: OPTIONAL<Subtree[]>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.rdn = rdn;
+        this.sDSE = sDSE;
+        this.subtree = subtree;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a Subtree

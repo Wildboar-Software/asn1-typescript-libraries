@@ -46,39 +46,47 @@ import {
  *
  */
 export class AutoRestoreReportInfo {
+    /**
+     * @summary `source`.
+     * @description
+     *
+     * Local object or remote system from which the information
+     * was restored. Mandatory. ITU-T Rec. X.744 (10/96) §8.4.2,
+     * §9.11 Table 15.
+     * @public
+     * @readonly
+     */
+    public readonly source: AutoRestoreSource;
+    /**
+     * @summary `success`.
+     * @description
+     *
+     * `TRUE` if the restore succeeded. Mandatory. ITU-T Rec.
+     * X.744 (10/96) A.8, §9.11 Table 15.
+     * @public
+     * @readonly
+     */
+    public readonly success: BOOLEAN;
+    /**
+     * @summary `additionalInfo`.
+     * @description
+     *
+     * Management extensions. User in Table 15. ITU-T Rec. X.744
+     * (10/96) §9.11 Table 15.
+     * @public
+     * @readonly
+     */
+    public readonly additionalInfo?: OPTIONAL<ManagementExtension[]>;
+
     constructor(
-        /**
-         * @summary `source`.
-         * @description
-         *
-         * Local object or remote system from which the information
-         * was restored. Mandatory. ITU-T Rec. X.744 (10/96) §8.4.2,
-         * §9.11 Table 15.
-         * @public
-         * @readonly
-         */
-        readonly source: AutoRestoreSource,
-        /**
-         * @summary `success`.
-         * @description
-         *
-         * `TRUE` if the restore succeeded. Mandatory. ITU-T Rec.
-         * X.744 (10/96) A.8, §9.11 Table 15.
-         * @public
-         * @readonly
-         */
-        readonly success: BOOLEAN,
-        /**
-         * @summary `additionalInfo`.
-         * @description
-         *
-         * Management extensions. User in Table 15. ITU-T Rec. X.744
-         * (10/96) §9.11 Table 15.
-         * @public
-         * @readonly
-         */
-        readonly additionalInfo?: OPTIONAL<ManagementExtension[]>
-    ) {}
+        source: AutoRestoreSource,
+        success: BOOLEAN,
+        additionalInfo?: OPTIONAL<ManagementExtension[]>
+    ) {
+        this.source = source;
+        this.success = success;
+        this.additionalInfo = additionalInfo;
+    }
 
     /**
      * @summary Restructures an object into a AutoRestoreReportInfo

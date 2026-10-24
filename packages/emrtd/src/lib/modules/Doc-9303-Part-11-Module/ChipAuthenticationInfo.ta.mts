@@ -71,31 +71,38 @@ const _permitted_protocols_for_ChipAuthenticationInfo: OBJECT_IDENTIFIER[] = [
  */
 export
 class ChipAuthenticationInfo {
+    /**
+     * Key agreement, symmetric cipher, and MAC. One of the cipher-specific
+     * Chip Authentication object identifiers.
+     * @summary `protocol`.
+     * @public
+     * @readonly
+     */
+    public readonly protocol: OBJECT_IDENTIFIER;
+    /**
+     * Protocol version. This specification supports only version 1.
+     * @summary `version`.
+     * @public
+     * @readonly
+     */
+    public readonly version: INTEGER;
+    /**
+     * Local key identifier. Required when the chip has more than one Chip
+     * Authentication public key.
+     * @summary `keyId`.
+     * @public
+     * @readonly
+     */
+    public readonly keyId?: OPTIONAL<INTEGER>;
+
     constructor (
-        /**
-         * Key agreement, symmetric cipher, and MAC. One of the cipher-specific
-         * Chip Authentication object identifiers.
-         * @summary `protocol`.
-         * @public
-         * @readonly
-         */
-        readonly protocol: OBJECT_IDENTIFIER,
-        /**
-         * Protocol version. This specification supports only version 1.
-         * @summary `version`.
-         * @public
-         * @readonly
-         */
-        readonly version: INTEGER,
-        /**
-         * Local key identifier. Required when the chip has more than one Chip
-         * Authentication public key.
-         * @summary `keyId`.
-         * @public
-         * @readonly
-         */
-        readonly keyId?: OPTIONAL<INTEGER>
+        protocol: OBJECT_IDENTIFIER,
+        version: INTEGER,
+        keyId?: OPTIONAL<INTEGER>
     ) {
+        this.protocol = protocol;
+        this.version = version;
+        this.keyId = keyId;
         if (!_permitted_protocols_for_ChipAuthenticationInfo.some((id) => id.isEqualTo(protocol))) {
             throw new ASN1Error("ChipAuthenticationInfo.protocol violates permitted OBJECT IDENTIFIER constraint");
         }

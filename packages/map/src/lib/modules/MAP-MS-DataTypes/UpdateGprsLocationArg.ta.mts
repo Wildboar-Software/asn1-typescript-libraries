@@ -70,352 +70,412 @@ import { Used_RAT_Type, _decode_Used_RAT_Type, _encode_Used_RAT_Type, _enum_for_
  */
 export
 class UpdateGprsLocationArg {
+    /**
+     * @summary `imsi`.
+     * @description
+     *
+     * International Mobile Subscriber Identity as in 3GPP TS 23.003.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.2.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly imsi: IMSI;
+    /**
+     * @summary `sgsn_Number`.
+     * @description
+     *
+     * ISDN number of an SGSN. In EPS, may be an IWF number.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.2.38).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sgsn_Number: ISDN_AddressString;
+    /**
+     * @summary `sgsn_Address`.
+     * @description
+     *
+     * IP address of an SGSN as in 3GPP TS 23.003. In EPS, may be an IWF
+     * address.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.2.39).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sgsn_Address: GSN_Address;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary `sgsn_Capability`.
+     * @description
+     *
+     * SGSN or MME/IWF capabilities.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 8.1.7.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sgsn_Capability?: OPTIONAL<SGSN_Capability>;
+    /**
+     * @summary `informPreviousNetworkEntity`.
+     * @description
+     *
+     * Ask the HLR to send Cancel Location to the previous network entity.
+     * Used if Super-Charger is supported and the serving entity could not
+     * inform the previous entity (no Send Identification) or MTRF Supported
+     * is set.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 8.1.2.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly informPreviousNetworkEntity?: OPTIONAL<NULL>;
+    /**
+     * @summary `ps_LCS_NotSupportedByUE`.
+     * @description
+     *
+     * UE does not support PS-domain LCS.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.11.10).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ps_LCS_NotSupportedByUE?: OPTIONAL<NULL>;
+    /**
+     * @summary `v_gmlc_Address`.
+     * @description
+     *
+     * IP address of a V-GMLC.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.2.59).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly v_gmlc_Address?: OPTIONAL<GSN_Address>;
+    /**
+     * @summary `add_info`.
+     * @description
+     *
+     * Additional MSC/SGSN information (IMEISV and optional
+     * skip-subscriber-data-update).
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 8.1.2.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly add_info?: OPTIONAL<ADD_Info>;
+    /**
+     * @summary `eps_info`.
+     * @description
+     *
+     * EPS-specific information: PDN GW update or ISR information.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 8.1.7).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly eps_info?: OPTIONAL<EPS_Info>;
+    /**
+     * @summary `servingNodeTypeIndicator`.
+     * @description
+     *
+     * Indicates the type of serving node performing the update.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 8.1.7).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly servingNodeTypeIndicator?: OPTIONAL<NULL>;
+    /**
+     * @summary `skipSubscriberDataUpdate`.
+     * @description
+     *
+     * Service is used only to inform the HLR of IMEISV or Paging Area
+     * change, to reduce signalling during location update. Same semantic as
+     * in `ADD-Info`.
+     *
+     * (3GPP TS 29.002 V19.1.0 clauses 8.1.2.3 and 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly skipSubscriberDataUpdate?: OPTIONAL<NULL>;
+    /**
+     * @summary `usedRAT_Type`.
+     * @description
+     *
+     * RAT currently used. `e-utran` means wide-band E-UTRAN.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly usedRAT_Type?: OPTIONAL<Used_RAT_Type>;
+    /**
+     * @summary `gprsSubscriptionDataNotNeeded`.
+     * @description
+     *
+     * GPRS subscription data need not be inserted.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 8.1.7).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly gprsSubscriptionDataNotNeeded?: OPTIONAL<NULL>;
+    /**
+     * @summary `nodeTypeIndicator`.
+     * @description
+     *
+     * Distinguishes the updating node type.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 8.1.7).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly nodeTypeIndicator?: OPTIONAL<NULL>;
+    /**
+     * @summary `areaRestricted`.
+     * @description
+     *
+     * UE is in a restricted area.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 8.1.7).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly areaRestricted?: OPTIONAL<NULL>;
+    /**
+     * @summary `ue_reachableIndicator`.
+     * @description
+     *
+     * UE has become reachable.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 8.1.7).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ue_reachableIndicator?: OPTIONAL<NULL>;
+    /**
+     * @summary `epsSubscriptionDataNotNeeded`.
+     * @description
+     *
+     * EPS subscription data need not be inserted.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 8.1.7).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly epsSubscriptionDataNotNeeded?: OPTIONAL<NULL>;
+    /**
+     * @summary `ue_srvcc_Capability`.
+     * @description
+     *
+     * Whether the UE supports SRVCC.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.3.99).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ue_srvcc_Capability?: OPTIONAL<UE_SRVCC_Capability>;
+    /**
+     * @summary `eplmn_List`.
+     * @description
+     *
+     * Equivalent PLMN list for which CSG subscription data are requested.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 8.1.2.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly eplmn_List?: OPTIONAL<EPLMN_List>;
+    /**
+     * @summary `mmeNumberforMTSMS`.
+     * @description
+     *
+     * MME ISDN number for MT SMS.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 8.1.7).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mmeNumberforMTSMS?: OPTIONAL<ISDN_AddressString>;
+    /**
+     * @summary `smsRegisterRequest`.
+     * @description
+     *
+     * SMS registration preference at this node.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 8.1.7).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly smsRegisterRequest?: OPTIONAL<SMSRegisterRequest>;
+    /**
+     * @summary `sms_Only`.
+     * @description
+     *
+     * Registration is for SMS only.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 8.1.7).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sms_Only?: OPTIONAL<NULL>;
+    /**
+     * @summary `removalofMMERegistrationforSMS`.
+     * @description
+     *
+     * Remove the MME registration for SMS.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 8.1.7).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly removalofMMERegistrationforSMS?: OPTIONAL<NULL>;
+    /**
+     * @summary `sgsn_Name`.
+     * @description
+     *
+     * Diameter Identity of the SGSN as in 3GPP TS 23.003.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.2.68).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sgsn_Name?: OPTIONAL<DiameterIdentity>;
+    /**
+     * @summary `sgsn_Realm`.
+     * @description
+     *
+     * Diameter realm of the SGSN as in 3GPP TS 23.003.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.2.69).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sgsn_Realm?: OPTIONAL<DiameterIdentity>;
+    /**
+     * @summary `lgd_supportIndicator`.
+     * @description
+     *
+     * LGD (Location Services via Diameter) support.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 8.1.7).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly lgd_supportIndicator?: OPTIONAL<NULL>;
+    /**
+     * @summary `adjacentPLMN_List`.
+     * @description
+     *
+     * Adjacent PLMNs for which corresponding restriction data are
+     * requested.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 8.1.7).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly adjacentPLMN_List?: OPTIONAL<AdjacentPLMN_List>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `imsi`.
-         * @description
-         *
-         * International Mobile Subscriber Identity as in 3GPP TS 23.003.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.2.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly imsi: IMSI,
-        /**
-         * @summary `sgsn_Number`.
-         * @description
-         *
-         * ISDN number of an SGSN. In EPS, may be an IWF number.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.2.38).
-         *
-         * @public
-         * @readonly
-         */
-        readonly sgsn_Number: ISDN_AddressString,
-        /**
-         * @summary `sgsn_Address`.
-         * @description
-         *
-         * IP address of an SGSN as in 3GPP TS 23.003. In EPS, may be an IWF
-         * address.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.2.39).
-         *
-         * @public
-         * @readonly
-         */
-        readonly sgsn_Address: GSN_Address,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary `sgsn_Capability`.
-         * @description
-         *
-         * SGSN or MME/IWF capabilities.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 8.1.7.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly sgsn_Capability?: OPTIONAL<SGSN_Capability>,
-        /**
-         * @summary `informPreviousNetworkEntity`.
-         * @description
-         *
-         * Ask the HLR to send Cancel Location to the previous network entity.
-         * Used if Super-Charger is supported and the serving entity could not
-         * inform the previous entity (no Send Identification) or MTRF Supported
-         * is set.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 8.1.2.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly informPreviousNetworkEntity?: OPTIONAL<NULL>,
-        /**
-         * @summary `ps_LCS_NotSupportedByUE`.
-         * @description
-         *
-         * UE does not support PS-domain LCS.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.11.10).
-         *
-         * @public
-         * @readonly
-         */
-        readonly ps_LCS_NotSupportedByUE?: OPTIONAL<NULL>,
-        /**
-         * @summary `v_gmlc_Address`.
-         * @description
-         *
-         * IP address of a V-GMLC.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.2.59).
-         *
-         * @public
-         * @readonly
-         */
-        readonly v_gmlc_Address?: OPTIONAL<GSN_Address>,
-        /**
-         * @summary `add_info`.
-         * @description
-         *
-         * Additional MSC/SGSN information (IMEISV and optional
-         * skip-subscriber-data-update).
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 8.1.2.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly add_info?: OPTIONAL<ADD_Info>,
-        /**
-         * @summary `eps_info`.
-         * @description
-         *
-         * EPS-specific information: PDN GW update or ISR information.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 8.1.7).
-         *
-         * @public
-         * @readonly
-         */
-        readonly eps_info?: OPTIONAL<EPS_Info>,
-        /**
-         * @summary `servingNodeTypeIndicator`.
-         * @description
-         *
-         * Indicates the type of serving node performing the update.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 8.1.7).
-         *
-         * @public
-         * @readonly
-         */
-        readonly servingNodeTypeIndicator?: OPTIONAL<NULL>,
-        /**
-         * @summary `skipSubscriberDataUpdate`.
-         * @description
-         *
-         * Service is used only to inform the HLR of IMEISV or Paging Area
-         * change, to reduce signalling during location update. Same semantic as
-         * in `ADD-Info`.
-         *
-         * (3GPP TS 29.002 V19.1.0 clauses 8.1.2.3 and 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly skipSubscriberDataUpdate?: OPTIONAL<NULL>,
-        /**
-         * @summary `usedRAT_Type`.
-         * @description
-         *
-         * RAT currently used. `e-utran` means wide-band E-UTRAN.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly usedRAT_Type?: OPTIONAL<Used_RAT_Type>,
-        /**
-         * @summary `gprsSubscriptionDataNotNeeded`.
-         * @description
-         *
-         * GPRS subscription data need not be inserted.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 8.1.7).
-         *
-         * @public
-         * @readonly
-         */
-        readonly gprsSubscriptionDataNotNeeded?: OPTIONAL<NULL>,
-        /**
-         * @summary `nodeTypeIndicator`.
-         * @description
-         *
-         * Distinguishes the updating node type.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 8.1.7).
-         *
-         * @public
-         * @readonly
-         */
-        readonly nodeTypeIndicator?: OPTIONAL<NULL>,
-        /**
-         * @summary `areaRestricted`.
-         * @description
-         *
-         * UE is in a restricted area.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 8.1.7).
-         *
-         * @public
-         * @readonly
-         */
-        readonly areaRestricted?: OPTIONAL<NULL>,
-        /**
-         * @summary `ue_reachableIndicator`.
-         * @description
-         *
-         * UE has become reachable.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 8.1.7).
-         *
-         * @public
-         * @readonly
-         */
-        readonly ue_reachableIndicator?: OPTIONAL<NULL>,
-        /**
-         * @summary `epsSubscriptionDataNotNeeded`.
-         * @description
-         *
-         * EPS subscription data need not be inserted.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 8.1.7).
-         *
-         * @public
-         * @readonly
-         */
-        readonly epsSubscriptionDataNotNeeded?: OPTIONAL<NULL>,
-        /**
-         * @summary `ue_srvcc_Capability`.
-         * @description
-         *
-         * Whether the UE supports SRVCC.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.3.99).
-         *
-         * @public
-         * @readonly
-         */
-        readonly ue_srvcc_Capability?: OPTIONAL<UE_SRVCC_Capability>,
-        /**
-         * @summary `eplmn_List`.
-         * @description
-         *
-         * Equivalent PLMN list for which CSG subscription data are requested.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 8.1.2.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly eplmn_List?: OPTIONAL<EPLMN_List>,
-        /**
-         * @summary `mmeNumberforMTSMS`.
-         * @description
-         *
-         * MME ISDN number for MT SMS.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 8.1.7).
-         *
-         * @public
-         * @readonly
-         */
-        readonly mmeNumberforMTSMS?: OPTIONAL<ISDN_AddressString>,
-        /**
-         * @summary `smsRegisterRequest`.
-         * @description
-         *
-         * SMS registration preference at this node.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 8.1.7).
-         *
-         * @public
-         * @readonly
-         */
-        readonly smsRegisterRequest?: OPTIONAL<SMSRegisterRequest>,
-        /**
-         * @summary `sms_Only`.
-         * @description
-         *
-         * Registration is for SMS only.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 8.1.7).
-         *
-         * @public
-         * @readonly
-         */
-        readonly sms_Only?: OPTIONAL<NULL>,
-        /**
-         * @summary `removalofMMERegistrationforSMS`.
-         * @description
-         *
-         * Remove the MME registration for SMS.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 8.1.7).
-         *
-         * @public
-         * @readonly
-         */
-        readonly removalofMMERegistrationforSMS?: OPTIONAL<NULL>,
-        /**
-         * @summary `sgsn_Name`.
-         * @description
-         *
-         * Diameter Identity of the SGSN as in 3GPP TS 23.003.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.2.68).
-         *
-         * @public
-         * @readonly
-         */
-        readonly sgsn_Name?: OPTIONAL<DiameterIdentity>,
-        /**
-         * @summary `sgsn_Realm`.
-         * @description
-         *
-         * Diameter realm of the SGSN as in 3GPP TS 23.003.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.2.69).
-         *
-         * @public
-         * @readonly
-         */
-        readonly sgsn_Realm?: OPTIONAL<DiameterIdentity>,
-        /**
-         * @summary `lgd_supportIndicator`.
-         * @description
-         *
-         * LGD (Location Services via Diameter) support.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 8.1.7).
-         *
-         * @public
-         * @readonly
-         */
-        readonly lgd_supportIndicator?: OPTIONAL<NULL>,
-        /**
-         * @summary `adjacentPLMN_List`.
-         * @description
-         *
-         * Adjacent PLMNs for which corresponding restriction data are
-         * requested.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 8.1.7).
-         *
-         * @public
-         * @readonly
-         */
-        readonly adjacentPLMN_List?: OPTIONAL<AdjacentPLMN_List>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        imsi: IMSI,
+        sgsn_Number: ISDN_AddressString,
+        sgsn_Address: GSN_Address,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        sgsn_Capability?: OPTIONAL<SGSN_Capability>,
+        informPreviousNetworkEntity?: OPTIONAL<NULL>,
+        ps_LCS_NotSupportedByUE?: OPTIONAL<NULL>,
+        v_gmlc_Address?: OPTIONAL<GSN_Address>,
+        add_info?: OPTIONAL<ADD_Info>,
+        eps_info?: OPTIONAL<EPS_Info>,
+        servingNodeTypeIndicator?: OPTIONAL<NULL>,
+        skipSubscriberDataUpdate?: OPTIONAL<NULL>,
+        usedRAT_Type?: OPTIONAL<Used_RAT_Type>,
+        gprsSubscriptionDataNotNeeded?: OPTIONAL<NULL>,
+        nodeTypeIndicator?: OPTIONAL<NULL>,
+        areaRestricted?: OPTIONAL<NULL>,
+        ue_reachableIndicator?: OPTIONAL<NULL>,
+        epsSubscriptionDataNotNeeded?: OPTIONAL<NULL>,
+        ue_srvcc_Capability?: OPTIONAL<UE_SRVCC_Capability>,
+        eplmn_List?: OPTIONAL<EPLMN_List>,
+        mmeNumberforMTSMS?: OPTIONAL<ISDN_AddressString>,
+        smsRegisterRequest?: OPTIONAL<SMSRegisterRequest>,
+        sms_Only?: OPTIONAL<NULL>,
+        removalofMMERegistrationforSMS?: OPTIONAL<NULL>,
+        sgsn_Name?: OPTIONAL<DiameterIdentity>,
+        sgsn_Realm?: OPTIONAL<DiameterIdentity>,
+        lgd_supportIndicator?: OPTIONAL<NULL>,
+        adjacentPLMN_List?: OPTIONAL<AdjacentPLMN_List>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.imsi = imsi;
+        this.sgsn_Number = sgsn_Number;
+        this.sgsn_Address = sgsn_Address;
+        this.extensionContainer = extensionContainer;
+        this.sgsn_Capability = sgsn_Capability;
+        this.informPreviousNetworkEntity = informPreviousNetworkEntity;
+        this.ps_LCS_NotSupportedByUE = ps_LCS_NotSupportedByUE;
+        this.v_gmlc_Address = v_gmlc_Address;
+        this.add_info = add_info;
+        this.eps_info = eps_info;
+        this.servingNodeTypeIndicator = servingNodeTypeIndicator;
+        this.skipSubscriberDataUpdate = skipSubscriberDataUpdate;
+        this.usedRAT_Type = usedRAT_Type;
+        this.gprsSubscriptionDataNotNeeded = gprsSubscriptionDataNotNeeded;
+        this.nodeTypeIndicator = nodeTypeIndicator;
+        this.areaRestricted = areaRestricted;
+        this.ue_reachableIndicator = ue_reachableIndicator;
+        this.epsSubscriptionDataNotNeeded = epsSubscriptionDataNotNeeded;
+        this.ue_srvcc_Capability = ue_srvcc_Capability;
+        this.eplmn_List = eplmn_List;
+        this.mmeNumberforMTSMS = mmeNumberforMTSMS;
+        this.smsRegisterRequest = smsRegisterRequest;
+        this.sms_Only = sms_Only;
+        this.removalofMMERegistrationforSMS = removalofMMERegistrationforSMS;
+        this.sgsn_Name = sgsn_Name;
+        this.sgsn_Realm = sgsn_Realm;
+        this.lgd_supportIndicator = lgd_supportIndicator;
+        this.adjacentPLMN_List = adjacentPLMN_List;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a UpdateGprsLocationArg

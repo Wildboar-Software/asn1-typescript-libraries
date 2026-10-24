@@ -36,41 +36,49 @@ import * as $ from "@wildboar/asn1/functional";
  *
  */
 export class Accuracy {
+    /**
+     * @summary `seconds`.
+     * @description
+     *
+     * Whole-second component of accuracy. If absent, treat as zero
+     * ([RFC 3161 §2.4.2](https://datatracker.ietf.org/doc/html/rfc3161#section-2.4.2)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly seconds?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `millis`.
+     * @description
+     *
+     * Milliseconds, range 1..999. If absent, treat as zero
+     * ([RFC 3161 §2.4.2](https://datatracker.ietf.org/doc/html/rfc3161#section-2.4.2)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly millis?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `micros`.
+     * @description
+     *
+     * Microseconds, range 1..999. If absent, treat as zero
+     * ([RFC 3161 §2.4.2](https://datatracker.ietf.org/doc/html/rfc3161#section-2.4.2)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly micros?: OPTIONAL<INTEGER>;
+
     constructor(
-        /**
-         * @summary `seconds`.
-         * @description
-         *
-         * Whole-second component of accuracy. If absent, treat as zero
-         * ([RFC 3161 §2.4.2](https://datatracker.ietf.org/doc/html/rfc3161#section-2.4.2)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly seconds?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `millis`.
-         * @description
-         *
-         * Milliseconds, range 1..999. If absent, treat as zero
-         * ([RFC 3161 §2.4.2](https://datatracker.ietf.org/doc/html/rfc3161#section-2.4.2)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly millis?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `micros`.
-         * @description
-         *
-         * Microseconds, range 1..999. If absent, treat as zero
-         * ([RFC 3161 §2.4.2](https://datatracker.ietf.org/doc/html/rfc3161#section-2.4.2)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly micros?: OPTIONAL<INTEGER>
-    ) {}
+        seconds?: OPTIONAL<INTEGER>,
+        millis?: OPTIONAL<INTEGER>,
+        micros?: OPTIONAL<INTEGER>
+    ) {
+        this.seconds = seconds;
+        this.millis = millis;
+        this.micros = micros;
+    }
 
     /**
      * @summary Restructures an object into a Accuracy

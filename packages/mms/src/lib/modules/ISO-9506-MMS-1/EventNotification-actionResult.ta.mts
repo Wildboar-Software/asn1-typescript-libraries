@@ -48,36 +48,42 @@ import { EventNotification_actionResult_successOrFailure, _decode_EventNotificat
  */
 export
 class EventNotification_actionResult {
+    /**
+     * @summary `eventActionName`.
+     * @description
+     *
+     * `&name` of the Event Action referenced by the
+     * enrollment's `&eventAction`.
+     *
+     * [ISO 9506-1:2003 §18.3.1.1.8.1]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly eventActionName: ObjectName;
+    /**
+     * @summary `successOrFailure`.
+     * @description
+     *
+     * Whether Event Action execution succeeded. `success`
+     * carries Result(+); `failure` carries Result(-) or
+     * the failing modifier position.
+     *
+     * [ISO 9506-1:2003 §18.3.1.1.8.2]
+     * [ISO 9506-2:2003 §18.3.1.1]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly successOrFailure: EventNotification_actionResult_successOrFailure;
+
     constructor (
-        /**
-         * @summary `eventActionName`.
-         * @description
-         *
-         * `&name` of the Event Action referenced by the
-         * enrollment's `&eventAction`.
-         *
-         * [ISO 9506-1:2003 §18.3.1.1.8.1]
-         *
-         * @public
-         * @readonly
-         */
-        readonly eventActionName: ObjectName,
-        /**
-         * @summary `successOrFailure`.
-         * @description
-         *
-         * Whether Event Action execution succeeded. `success`
-         * carries Result(+); `failure` carries Result(-) or
-         * the failing modifier position.
-         *
-         * [ISO 9506-1:2003 §18.3.1.1.8.2]
-         * [ISO 9506-2:2003 §18.3.1.1]
-         *
-         * @public
-         * @readonly
-         */
-        readonly successOrFailure: EventNotification_actionResult_successOrFailure
-    ) {}
+        eventActionName: ObjectName,
+        successOrFailure: EventNotification_actionResult_successOrFailure
+    ) {
+        this.eventActionName = eventActionName;
+        this.successOrFailure = successOrFailure;
+    }
 
     /**
      * @summary Restructures an object into a EventNotification_actionResult

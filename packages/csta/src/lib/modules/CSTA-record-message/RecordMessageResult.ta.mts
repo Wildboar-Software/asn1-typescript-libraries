@@ -36,29 +36,35 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class RecordMessageResult {
+    /**
+     * @summary `resultingMessage`.
+     * @description
+     *
+     * MessageID of the recording (ECMA-269 §26.1.9.2.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly resultingMessage: MessageID;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * CSTACommonArguments carrying the service-table security and
+     * privateData parameters.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `resultingMessage`.
-         * @description
-         *
-         * MessageID of the recording (ECMA-269 §26.1.9.2.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly resultingMessage: MessageID,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * CSTACommonArguments carrying the service-table security and
-         * privateData parameters.
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        resultingMessage: MessageID,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.resultingMessage = resultingMessage;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a RecordMessageResult

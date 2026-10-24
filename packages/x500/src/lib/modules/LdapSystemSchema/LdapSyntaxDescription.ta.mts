@@ -31,26 +31,34 @@ import {
  *
  */
 export class LdapSyntaxDescription {
+    /**
+     * @summary `identifier`.
+     * @public
+     * @readonly
+     */
+    public readonly identifier: OBJECT_IDENTIFIER;
+    /**
+     * @summary `description`.
+     * @public
+     * @readonly
+     */
+    public readonly description?: OPTIONAL<UnboundedDirectoryString>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `identifier`.
-         * @public
-         * @readonly
-         */
-        readonly identifier: OBJECT_IDENTIFIER,
-        /**
-         * @summary `description`.
-         * @public
-         * @readonly
-         */
-        readonly description?: OPTIONAL<UnboundedDirectoryString>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        identifier: OBJECT_IDENTIFIER,
+        description?: OPTIONAL<UnboundedDirectoryString>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.identifier = identifier;
+        this.description = description;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a LdapSyntaxDescription

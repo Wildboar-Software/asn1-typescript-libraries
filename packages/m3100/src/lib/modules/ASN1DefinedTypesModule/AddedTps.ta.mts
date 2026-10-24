@@ -31,20 +31,26 @@ import {
  *
  */
 export class AddedTps {
+    /**
+     * @summary `gtp`.
+     * @public
+     * @readonly
+     */
+    public readonly gtp: ObjectInstance;
+    /**
+     * @summary `tpsAdded`.
+     * @public
+     * @readonly
+     */
+    public readonly tpsAdded: ObjectInstance[];
+
     constructor(
-        /**
-         * @summary `gtp`.
-         * @public
-         * @readonly
-         */
-        readonly gtp: ObjectInstance,
-        /**
-         * @summary `tpsAdded`.
-         * @public
-         * @readonly
-         */
-        readonly tpsAdded: ObjectInstance[]
-    ) {}
+        gtp: ObjectInstance,
+        tpsAdded: ObjectInstance[]
+    ) {
+        this.gtp = gtp;
+        this.tpsAdded = tpsAdded;
+    }
 
     /**
      * @summary Restructures an object into a AddedTps

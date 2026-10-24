@@ -41,32 +41,42 @@ import {
  *
  */
 export class change_auto_forwarding_ArgumentType {
+    /**
+     * @summary `auto_forward_IPMs`.
+     * @public
+     * @readonly
+     */
+    public readonly auto_forward_IPMs: BOOLEAN;
+    /**
+     * @summary `auto_forward_recipients`.
+     * @public
+     * @readonly
+     */
+    public readonly auto_forward_recipients?: OPTIONAL<ORName[]>;
+    /**
+     * @summary `auto_forward_heading`.
+     * @public
+     * @readonly
+     */
+    public readonly auto_forward_heading?: OPTIONAL<Heading>;
+    /**
+     * @summary `auto_forward_comment`.
+     * @public
+     * @readonly
+     */
+    public readonly auto_forward_comment?: OPTIONAL<AutoForwardComment>;
+
     constructor(
-        /**
-         * @summary `auto_forward_IPMs`.
-         * @public
-         * @readonly
-         */
-        readonly auto_forward_IPMs: BOOLEAN,
-        /**
-         * @summary `auto_forward_recipients`.
-         * @public
-         * @readonly
-         */
-        readonly auto_forward_recipients?: OPTIONAL<ORName[]>,
-        /**
-         * @summary `auto_forward_heading`.
-         * @public
-         * @readonly
-         */
-        readonly auto_forward_heading?: OPTIONAL<Heading>,
-        /**
-         * @summary `auto_forward_comment`.
-         * @public
-         * @readonly
-         */
-        readonly auto_forward_comment?: OPTIONAL<AutoForwardComment>
-    ) {}
+        auto_forward_IPMs: BOOLEAN,
+        auto_forward_recipients?: OPTIONAL<ORName[]>,
+        auto_forward_heading?: OPTIONAL<Heading>,
+        auto_forward_comment?: OPTIONAL<AutoForwardComment>
+    ) {
+        this.auto_forward_IPMs = auto_forward_IPMs;
+        this.auto_forward_recipients = auto_forward_recipients;
+        this.auto_forward_heading = auto_forward_heading;
+        this.auto_forward_comment = auto_forward_comment;
+    }
 
     /**
      * @summary Restructures an object into a change_auto_forwarding_ArgumentType

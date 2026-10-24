@@ -76,52 +76,70 @@ import {
  *
  */
 export class AutoForwardArguments implements PerMessageAutoForwardFields {
-    constructor(
-        /**
-         * @summary `originator_name`.
-         * @public
-         * @readonly
-         */
-        readonly originator_name: OriginatorName /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `content_identifier`.
-         * @public
-         * @readonly
-         */
-        readonly content_identifier: OPTIONAL<ContentIdentifier> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `priority`.
-         * @public
-         * @readonly
-         */
-        readonly priority: OPTIONAL<Priority> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `per_message_indicators`.
-         * @public
-         * @readonly
-         */
-        readonly per_message_indicators: OPTIONAL<PerMessageIndicators> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `deferred_delivery_time`.
-         * @public
-         * @readonly
-         */
-        readonly deferred_delivery_time: OPTIONAL<DeferredDeliveryTime> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `extensions`.
-         * @public
-         * @readonly
-         */
-        readonly extensions: OPTIONAL<
+    /**
+     * @summary `originator_name`.
+     * @public
+     * @readonly
+     */
+    public readonly originator_name: OriginatorName; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `content_identifier`.
+     * @public
+     * @readonly
+     */
+    public readonly content_identifier: OPTIONAL<ContentIdentifier>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `priority`.
+     * @public
+     * @readonly
+     */
+    public readonly priority: OPTIONAL<Priority>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `per_message_indicators`.
+     * @public
+     * @readonly
+     */
+    public readonly per_message_indicators: OPTIONAL<PerMessageIndicators>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `deferred_delivery_time`.
+     * @public
+     * @readonly
+     */
+    public readonly deferred_delivery_time: OPTIONAL<DeferredDeliveryTime>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly extensions: OPTIONAL<
             ExtensionField[]
-        > /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `per_recipient_fields`.
-         * @public
-         * @readonly
-         */
-        readonly per_recipient_fields: PerRecipientAutoForwardFields[]
-    ) {}
+        >; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `per_recipient_fields`.
+     * @public
+     * @readonly
+     */
+    public readonly per_recipient_fields: PerRecipientAutoForwardFields[];
+
+    constructor(
+        originator_name: OriginatorName,
+        content_identifier: OPTIONAL<ContentIdentifier>,
+        priority: OPTIONAL<Priority>,
+        per_message_indicators: OPTIONAL<PerMessageIndicators>,
+        deferred_delivery_time: OPTIONAL<DeferredDeliveryTime>,
+        extensions: OPTIONAL<
+            ExtensionField[]
+        >,
+        per_recipient_fields: PerRecipientAutoForwardFields[]
+    ) {
+        this.originator_name = originator_name;
+        this.content_identifier = content_identifier;
+        this.priority = priority;
+        this.per_message_indicators = per_message_indicators;
+        this.deferred_delivery_time = deferred_delivery_time;
+        this.extensions = extensions;
+        this.per_recipient_fields = per_recipient_fields;
+    }
 
     /**
      * @summary Restructures an object into a AutoForwardArguments

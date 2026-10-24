@@ -62,33 +62,42 @@ import {
  *
  */
 export class ORName extends ORAddress {
+    /**
+     * @summary `built_in_standard_attributes`.
+     * @public
+     * @readonly
+     */
+    public override readonly built_in_standard_attributes: BuiltInStandardAttributes; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `built_in_domain_defined_attributes`.
+     * @public
+     * @readonly
+     */
+    public override readonly built_in_domain_defined_attributes?: OPTIONAL<BuiltInDomainDefinedAttributes>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `extension_attributes`.
+     * @public
+     * @readonly
+     */
+    public override readonly extension_attributes?: OPTIONAL<ExtensionAttributes>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `directory_name`.
+     * @public
+     * @readonly
+     */
+    public readonly directory_name?: OPTIONAL<Name>;
+
     constructor(
-        /**
-         * @summary `built_in_standard_attributes`.
-         * @public
-         * @readonly
-         */
-        override readonly built_in_standard_attributes: BuiltInStandardAttributes /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `built_in_domain_defined_attributes`.
-         * @public
-         * @readonly
-         */
-        override readonly built_in_domain_defined_attributes?: OPTIONAL<BuiltInDomainDefinedAttributes> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `extension_attributes`.
-         * @public
-         * @readonly
-         */
-        override readonly extension_attributes?: OPTIONAL<ExtensionAttributes> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `directory_name`.
-         * @public
-         * @readonly
-         */
-        readonly directory_name?: OPTIONAL<Name>
+        built_in_standard_attributes: BuiltInStandardAttributes,
+        built_in_domain_defined_attributes?: OPTIONAL<BuiltInDomainDefinedAttributes>,
+        extension_attributes?: OPTIONAL<ExtensionAttributes>,
+        directory_name?: OPTIONAL<Name>
     ) {
         super(built_in_standard_attributes, built_in_domain_defined_attributes, extension_attributes);
+        this.built_in_standard_attributes = built_in_standard_attributes;
+        this.built_in_domain_defined_attributes = built_in_domain_defined_attributes;
+        this.extension_attributes = extension_attributes;
+        this.directory_name = directory_name;
     }
 
     /**

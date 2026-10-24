@@ -39,30 +39,36 @@ import { InitializeJournal_Request_limitSpecification, _decode_InitializeJournal
  */
 export
 class InitializeJournal_Request {
+    /**
+     * @summary `journalName`.
+     * @description
+     *
+     * Journal to initialize. ISO 9506-1:2003 §23.4.1.1.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly journalName: ObjectName;
+    /**
+     * @summary `limitSpecification`.
+     * @description
+     *
+     * If absent, all entries are deleted. If present, entries
+     * through `limitingTime` (and optionally `limitingEntry`)
+     * are deleted. ISO 9506-1:2003 §23.4.1.1.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly limitSpecification?: OPTIONAL<InitializeJournal_Request_limitSpecification>;
+
     constructor (
-        /**
-         * @summary `journalName`.
-         * @description
-         *
-         * Journal to initialize. ISO 9506-1:2003 §23.4.1.1.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly journalName: ObjectName,
-        /**
-         * @summary `limitSpecification`.
-         * @description
-         *
-         * If absent, all entries are deleted. If present, entries
-         * through `limitingTime` (and optionally `limitingEntry`)
-         * are deleted. ISO 9506-1:2003 §23.4.1.1.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly limitSpecification?: OPTIONAL<InitializeJournal_Request_limitSpecification>
-    ) {}
+        journalName: ObjectName,
+        limitSpecification?: OPTIONAL<InitializeJournal_Request_limitSpecification>
+    ) {
+        this.journalName = journalName;
+        this.limitSpecification = limitSpecification;
+    }
 
     /**
      * @summary Restructures an object into a InitializeJournal_Request

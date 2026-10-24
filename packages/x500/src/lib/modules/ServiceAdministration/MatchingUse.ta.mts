@@ -27,26 +27,34 @@ import * as $ from "@wildboar/asn1/functional";
  *
  */
 export class MatchingUse {
+    /**
+     * @summary `restrictionType`.
+     * @public
+     * @readonly
+     */
+    public readonly restrictionType: OBJECT_IDENTIFIER;
+    /**
+     * @summary `restrictionValue`.
+     * @public
+     * @readonly
+     */
+    public readonly restrictionValue: _Element;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `restrictionType`.
-         * @public
-         * @readonly
-         */
-        readonly restrictionType: OBJECT_IDENTIFIER,
-        /**
-         * @summary `restrictionValue`.
-         * @public
-         * @readonly
-         */
-        readonly restrictionValue: _Element,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        restrictionType: OBJECT_IDENTIFIER,
+        restrictionValue: _Element,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.restrictionType = restrictionType;
+        this.restrictionValue = restrictionValue;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a MatchingUse

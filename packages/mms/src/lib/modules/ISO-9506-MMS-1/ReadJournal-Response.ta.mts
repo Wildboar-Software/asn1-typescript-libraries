@@ -36,32 +36,38 @@ import { JournalEntry, _decode_JournalEntry, _encode_JournalEntry } from "../ISO
  */
 export
 class ReadJournal_Response {
+    /**
+     * @summary `listOfJournalEntry`.
+     * @description
+     *
+     * Entries to return. Each has identifier, originating
+     * application, and `EntryContent`. ISO 9506-1:2003
+     * §23.2.1.2.1. ISO 9506-2:2003 §23.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly listOfJournalEntry: JournalEntry[];
+    /**
+     * @summary `moreFollows`.
+     * @description
+     *
+     * True if more qualified entries remain. False if this list
+     * holds the last or is empty. Default false.
+     * ISO 9506-1:2003 §23.2.1.2.8.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly moreFollows?: OPTIONAL<BOOLEAN>;
+
     constructor (
-        /**
-         * @summary `listOfJournalEntry`.
-         * @description
-         *
-         * Entries to return. Each has identifier, originating
-         * application, and `EntryContent`. ISO 9506-1:2003
-         * §23.2.1.2.1. ISO 9506-2:2003 §23.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly listOfJournalEntry: JournalEntry[],
-        /**
-         * @summary `moreFollows`.
-         * @description
-         *
-         * True if more qualified entries remain. False if this list
-         * holds the last or is empty. Default false.
-         * ISO 9506-1:2003 §23.2.1.2.8.
-         *
-         * @public
-         * @readonly
-         */
-        readonly moreFollows?: OPTIONAL<BOOLEAN>
-    ) {}
+        listOfJournalEntry: JournalEntry[],
+        moreFollows?: OPTIONAL<BOOLEAN>
+    ) {
+        this.listOfJournalEntry = listOfJournalEntry;
+        this.moreFollows = moreFollows;
+    }
 
     /**
      * @summary Restructures an object into a ReadJournal_Response

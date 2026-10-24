@@ -35,38 +35,46 @@ import {
  *
  */
 export class AttributeSel_attSelect_attributes_Item {
+    /**
+     * @summary `select`.
+     * @description
+     *
+     * Attribute type OIDs (`ATTRIBUTE.&id`) this item covers.
+     * ITU-T Rec. X.1080.0 (2017) Cor.1
+     * [§7.3.3](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly select: OBJECT_IDENTIFIER[];
+    /**
+     * @summary `attrOper2`.
+     * @description
+     *
+     * Allowed operations on those attribute types.
+     * ITU-T Rec. X.1080.0 (2017) Cor.1
+     * [§7.3.3](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly attrOper2?: OPTIONAL<AttributeOperations>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `select`.
-         * @description
-         *
-         * Attribute type OIDs (`ATTRIBUTE.&id`) this item covers.
-         * ITU-T Rec. X.1080.0 (2017) Cor.1
-         * [§7.3.3](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly select: OBJECT_IDENTIFIER[],
-        /**
-         * @summary `attrOper2`.
-         * @description
-         *
-         * Allowed operations on those attribute types.
-         * ITU-T Rec. X.1080.0 (2017) Cor.1
-         * [§7.3.3](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly attrOper2?: OPTIONAL<AttributeOperations>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        select: OBJECT_IDENTIFIER[],
+        attrOper2?: OPTIONAL<AttributeOperations>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.select = select;
+        this.attrOper2 = attrOper2;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a AttributeSel_attSelect_attributes_Item

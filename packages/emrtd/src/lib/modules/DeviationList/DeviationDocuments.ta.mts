@@ -40,37 +40,46 @@ import { IssuancePeriod, _decode_IssuancePeriod, _encode_IssuancePeriod } from "
  */
 export
 class DeviationDocuments {
+    /**
+     * Document type per the MRZ. The ASN.1 comment gives `P` as an example.
+     * The size constraint is two characters.
+     * @summary `documentType`.
+     * @public
+     * @readonly
+     */
+    public readonly documentType?: OPTIONAL<PrintableString>;
+    /**
+     * Document Signer certificates whose documents are affected.
+     * @summary `dscIdentifier`.
+     * @public
+     * @readonly
+     */
+    public readonly dscIdentifier?: OPTIONAL<DocumentSignerIdentifier>;
+    /**
+     * Issuance dates of the affected documents.
+     * @summary `issuingDate`.
+     * @public
+     * @readonly
+     */
+    public readonly issuingDate?: OPTIONAL<IssuancePeriod>;
+    /**
+     * Document numbers of the affected eMRTDs.
+     * @summary `documentNumbers`.
+     * @public
+     * @readonly
+     */
+    public readonly documentNumbers?: OPTIONAL<PrintableString[]>;
+
     constructor (
-        /**
-         * Document type per the MRZ. The ASN.1 comment gives `P` as an example.
-         * The size constraint is two characters.
-         * @summary `documentType`.
-         * @public
-         * @readonly
-         */
-        readonly documentType?: OPTIONAL<PrintableString>,
-        /**
-         * Document Signer certificates whose documents are affected.
-         * @summary `dscIdentifier`.
-         * @public
-         * @readonly
-         */
-        readonly dscIdentifier?: OPTIONAL<DocumentSignerIdentifier>,
-        /**
-         * Issuance dates of the affected documents.
-         * @summary `issuingDate`.
-         * @public
-         * @readonly
-         */
-        readonly issuingDate?: OPTIONAL<IssuancePeriod>,
-        /**
-         * Document numbers of the affected eMRTDs.
-         * @summary `documentNumbers`.
-         * @public
-         * @readonly
-         */
-        readonly documentNumbers?: OPTIONAL<PrintableString[]>
+        documentType?: OPTIONAL<PrintableString>,
+        dscIdentifier?: OPTIONAL<DocumentSignerIdentifier>,
+        issuingDate?: OPTIONAL<IssuancePeriod>,
+        documentNumbers?: OPTIONAL<PrintableString[]>
     ) {
+        this.documentType = documentType;
+        this.dscIdentifier = dscIdentifier;
+        this.issuingDate = issuingDate;
+        this.documentNumbers = documentNumbers;
         if (documentType !== undefined && documentType.length !== 2) {
             throw new ASN1SizeError("DeviationDocuments.documentType violates SIZE constraint");
         }

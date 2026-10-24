@@ -36,20 +36,26 @@ import { Single_use_of_reference, _decode_Single_use_of_reference, _encode_Singl
  */
 export
 class Quality_of_Service {
+    /**
+     * @summary `qoS_level`.
+     * @public
+     * @readonly
+     */
+    public readonly qoS_level?: OPTIONAL<QoS_level>;
+    /**
+     * @summary `usage_of_reference`.
+     * @public
+     * @readonly
+     */
+    public readonly usage_of_reference?: OPTIONAL<Single_use_of_reference>;
+
     constructor (
-        /**
-         * @summary `qoS_level`.
-         * @public
-         * @readonly
-         */
-        readonly qoS_level?: OPTIONAL<QoS_level>,
-        /**
-         * @summary `usage_of_reference`.
-         * @public
-         * @readonly
-         */
-        readonly usage_of_reference?: OPTIONAL<Single_use_of_reference>
-    ) {}
+        qoS_level?: OPTIONAL<QoS_level>,
+        usage_of_reference?: OPTIONAL<Single_use_of_reference>
+    ) {
+        this.qoS_level = qoS_level;
+        this.usage_of_reference = usage_of_reference;
+    }
 
     /**
      * @summary Restructures an object into a Quality_of_Service

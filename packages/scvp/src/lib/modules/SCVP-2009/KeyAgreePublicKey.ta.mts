@@ -43,32 +43,42 @@ import {
  *
  */
 export class KeyAgreePublicKey {
+  /**
+   * @summary `algorithm`.
+   * @public
+   * @readonly
+   */
+  public readonly algorithm: AlgorithmIdentifier;
+  /**
+   * @summary `publicKey`.
+   * @public
+   * @readonly
+   */
+  public readonly publicKey: BIT_STRING;
+  /**
+   * @summary `macAlgorithm`.
+   * @public
+   * @readonly
+   */
+  public readonly macAlgorithm: AlgorithmIdentifier;
+  /**
+   * @summary `kDF`.
+   * @public
+   * @readonly
+   */
+  public readonly kDF?: OPTIONAL<AlgorithmIdentifier>;
+
   constructor(
-    /**
-     * @summary `algorithm`.
-     * @public
-     * @readonly
-     */
-    readonly algorithm: AlgorithmIdentifier,
-    /**
-     * @summary `publicKey`.
-     * @public
-     * @readonly
-     */
-    readonly publicKey: BIT_STRING,
-    /**
-     * @summary `macAlgorithm`.
-     * @public
-     * @readonly
-     */
-    readonly macAlgorithm: AlgorithmIdentifier,
-    /**
-     * @summary `kDF`.
-     * @public
-     * @readonly
-     */
-    readonly kDF?: OPTIONAL<AlgorithmIdentifier>
-  ) {}
+    algorithm: AlgorithmIdentifier,
+    publicKey: BIT_STRING,
+    macAlgorithm: AlgorithmIdentifier,
+    kDF?: OPTIONAL<AlgorithmIdentifier>
+  ) {
+    this.algorithm = algorithm;
+    this.publicKey = publicKey;
+    this.macAlgorithm = macAlgorithm;
+    this.kDF = kDF;
+  }
 
   /**
    * @summary Restructures an object into a KeyAgreePublicKey

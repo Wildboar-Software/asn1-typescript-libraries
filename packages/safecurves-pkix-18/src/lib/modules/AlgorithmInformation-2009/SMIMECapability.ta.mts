@@ -34,28 +34,34 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class SMIMECapability {
+    /**
+     * @summary `capabilityID`.
+     * @description
+     *
+     * `SMIME-CAPS.&id` for the advertised capability ([RFC 5911 §2](https://datatracker.ietf.org/doc/html/rfc5911#section-2)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly capabilityID: OBJECT_IDENTIFIER;
+    /**
+     * @summary `parameters`.
+     * @description
+     *
+     * Optional `SMIME-CAPS.&Type` parameters for `capabilityID` ([RFC 5911 §2](https://datatracker.ietf.org/doc/html/rfc5911#section-2)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly parameters?: OPTIONAL<_Element>;
+
     constructor (
-        /**
-         * @summary `capabilityID`.
-         * @description
-         *
-         * `SMIME-CAPS.&id` for the advertised capability ([RFC 5911 §2](https://datatracker.ietf.org/doc/html/rfc5911#section-2)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly capabilityID: OBJECT_IDENTIFIER,
-        /**
-         * @summary `parameters`.
-         * @description
-         *
-         * Optional `SMIME-CAPS.&Type` parameters for `capabilityID` ([RFC 5911 §2](https://datatracker.ietf.org/doc/html/rfc5911#section-2)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly parameters?: OPTIONAL<_Element>
-    ) {}
+        capabilityID: OBJECT_IDENTIFIER,
+        parameters?: OPTIONAL<_Element>
+    ) {
+        this.capabilityID = capabilityID;
+        this.parameters = parameters;
+    }
 
     /**
      * @summary Restructures an object into a SMIMECapability

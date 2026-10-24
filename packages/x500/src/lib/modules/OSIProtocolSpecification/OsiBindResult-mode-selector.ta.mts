@@ -18,14 +18,18 @@ import * as $ from "@wildboar/asn1/functional";
  *
  */
 export class OsiBindResult_mode_selector {
+    /**
+     * @summary `mode_value`.
+     * @public
+     * @readonly
+     */
+    public readonly mode_value: INTEGER;
+
     constructor(
-        /**
-         * @summary `mode_value`.
-         * @public
-         * @readonly
-         */
-        readonly mode_value: INTEGER
-    ) {}
+        mode_value: INTEGER
+    ) {
+        this.mode_value = mode_value;
+    }
 
     /**
      * @summary Restructures an object into a OsiBindResult_mode_selector

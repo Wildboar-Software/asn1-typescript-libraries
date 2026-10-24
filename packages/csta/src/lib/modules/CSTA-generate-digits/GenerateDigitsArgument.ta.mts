@@ -49,72 +49,88 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class GenerateDigitsArgument {
+    /**
+     * @summary `connectionToSendDigits`.
+     * @description
+     *
+     * Connection on whose behalf digits are generated.
+     * @public
+     * @readonly
+     */
+    public readonly connectionToSendDigits: ConnectionID;
+    /**
+     * @summary `digitMode`.
+     * @description
+     *
+     * rotaryPulse or dTMF. SF default if omitted.
+     * @public
+     * @readonly
+     */
+    public readonly digitMode: OPTIONAL<DigitMode>;
+    /**
+     * @summary `charactersToSend`.
+     * @description
+     *
+     * Digit string to generate (max length from capabilities).
+     * @public
+     * @readonly
+     */
+    public readonly charactersToSend: IA5String;
+    /**
+     * @summary `toneDuration`.
+     * @description
+     *
+     * Tone duration for DTMF generation, if applicable.
+     * @public
+     * @readonly
+     */
+    public readonly toneDuration?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `pulseRate`.
+     * @description
+     *
+     * Pulse rate for rotary generation, if applicable.
+     * @public
+     * @readonly
+     */
+    public readonly pulseRate?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `pauseDuration`.
+     * @description
+     *
+     * Pause duration between digits, if applicable.
+     * @public
+     * @readonly
+     */
+    public readonly pauseDuration?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `connectionToSendDigits`.
-         * @description
-         *
-         * Connection on whose behalf digits are generated.
-         * @public
-         * @readonly
-         */
-        readonly connectionToSendDigits: ConnectionID,
-        /**
-         * @summary `digitMode`.
-         * @description
-         *
-         * rotaryPulse or dTMF. SF default if omitted.
-         * @public
-         * @readonly
-         */
-        readonly digitMode: OPTIONAL<DigitMode>,
-        /**
-         * @summary `charactersToSend`.
-         * @description
-         *
-         * Digit string to generate (max length from capabilities).
-         * @public
-         * @readonly
-         */
-        readonly charactersToSend: IA5String,
-        /**
-         * @summary `toneDuration`.
-         * @description
-         *
-         * Tone duration for DTMF generation, if applicable.
-         * @public
-         * @readonly
-         */
-        readonly toneDuration?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `pulseRate`.
-         * @description
-         *
-         * Pulse rate for rotary generation, if applicable.
-         * @public
-         * @readonly
-         */
-        readonly pulseRate?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `pauseDuration`.
-         * @description
-         *
-         * Pause duration between digits, if applicable.
-         * @public
-         * @readonly
-         */
-        readonly pauseDuration?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        connectionToSendDigits: ConnectionID,
+        digitMode: OPTIONAL<DigitMode>,
+        charactersToSend: IA5String,
+        toneDuration?: OPTIONAL<INTEGER>,
+        pulseRate?: OPTIONAL<INTEGER>,
+        pauseDuration?: OPTIONAL<INTEGER>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.connectionToSendDigits = connectionToSendDigits;
+        this.digitMode = digitMode;
+        this.charactersToSend = charactersToSend;
+        this.toneDuration = toneDuration;
+        this.pulseRate = pulseRate;
+        this.pauseDuration = pauseDuration;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a GenerateDigitsArgument

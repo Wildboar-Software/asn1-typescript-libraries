@@ -34,38 +34,46 @@ import {
  */
 export
 class NodeNumber {
+    /**
+     * @summary `area0`.
+     * @description
+     *
+     * First originating-node area. ECMA-269 §27.1.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly area0?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `area1`.
+     * @description
+     *
+     * Second originating-node area. ECMA-269 §27.1.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly area1?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `area2`.
+     * @description
+     *
+     * Third originating-node area. ECMA-269 §27.1.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly area2?: OPTIONAL<INTEGER>;
+
     constructor (
-        /**
-         * @summary `area0`.
-         * @description
-         *
-         * First originating-node area. ECMA-269 §27.1.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly area0?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `area1`.
-         * @description
-         *
-         * Second originating-node area. ECMA-269 §27.1.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly area1?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `area2`.
-         * @description
-         *
-         * Third originating-node area. ECMA-269 §27.1.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly area2?: OPTIONAL<INTEGER>
-    ) {}
+        area0?: OPTIONAL<INTEGER>,
+        area1?: OPTIONAL<INTEGER>,
+        area2?: OPTIONAL<INTEGER>
+    ) {
+        this.area0 = area0;
+        this.area1 = area1;
+        this.area2 = area2;
+    }
 
     /**
      * @summary Restructures an object into a NodeNumber

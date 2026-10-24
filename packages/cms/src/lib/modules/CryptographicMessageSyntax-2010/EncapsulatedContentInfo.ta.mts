@@ -28,31 +28,37 @@ import * as $ from "@wildboar/asn1/functional";
  *
  */
 export class EncapsulatedContentInfo {
+    /**
+     * @summary `eContentType`.
+     * @description
+     *
+     * OID for the content type. Does not imply a particular content transfer
+     * encoding ([RFC 5652 §5.2](https://datatracker.ietf.org/doc/html/rfc5652#section-5.2)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly eContentType: OBJECT_IDENTIFIER;
+    /**
+     * @summary `eContent`.
+     * @description
+     *
+     * Content octets, exclusive of DER/BER tag and length (i.e., the value
+     * octets). Absent for detached content
+     * ([RFC 5652 §5.2](https://datatracker.ietf.org/doc/html/rfc5652#section-5.2)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly eContent?: OPTIONAL<OCTET_STRING>;
+
     constructor(
-        /**
-         * @summary `eContentType`.
-         * @description
-         *
-         * OID for the content type. Does not imply a particular content transfer
-         * encoding ([RFC 5652 §5.2](https://datatracker.ietf.org/doc/html/rfc5652#section-5.2)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly eContentType: OBJECT_IDENTIFIER,
-        /**
-         * @summary `eContent`.
-         * @description
-         *
-         * Content octets, exclusive of DER/BER tag and length (i.e., the value
-         * octets). Absent for detached content
-         * ([RFC 5652 §5.2](https://datatracker.ietf.org/doc/html/rfc5652#section-5.2)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly eContent?: OPTIONAL<OCTET_STRING>
-    ) {}
+        eContentType: OBJECT_IDENTIFIER,
+        eContent?: OPTIONAL<OCTET_STRING>
+    ) {
+        this.eContentType = eContentType;
+        this.eContent = eContent;
+    }
 
     /**
      * @summary Restructures an object into a EncapsulatedContentInfo

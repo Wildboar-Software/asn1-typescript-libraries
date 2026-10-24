@@ -38,38 +38,46 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class GetLampInformationArgument {
+    /**
+     * @summary `device`.
+     * @description
+     *
+     * Physical-element DeviceID; other IDs are rejected (ECMA-269 §21 FR
+     * 1).
+     * @public
+     * @readonly
+     */
+    public readonly device: DeviceID;
+    /**
+     * @summary `lamp`.
+     * @description
+     *
+     * Lamp to query. Absent: all lamps, including those with no button
+     * (ECMA-269 §21.1.6.3.4 FR 1).
+     * @public
+     * @readonly
+     */
+    public readonly lamp?: OPTIONAL<LampID>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `device`.
-         * @description
-         *
-         * Physical-element DeviceID; other IDs are rejected (ECMA-269 §21 FR
-         * 1).
-         * @public
-         * @readonly
-         */
-        readonly device: DeviceID,
-        /**
-         * @summary `lamp`.
-         * @description
-         *
-         * Lamp to query. Absent: all lamps, including those with no button
-         * (ECMA-269 §21.1.6.3.4 FR 1).
-         * @public
-         * @readonly
-         */
-        readonly lamp?: OPTIONAL<LampID>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        device: DeviceID,
+        lamp?: OPTIONAL<LampID>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.device = device;
+        this.lamp = lamp;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a GetLampInformationArgument

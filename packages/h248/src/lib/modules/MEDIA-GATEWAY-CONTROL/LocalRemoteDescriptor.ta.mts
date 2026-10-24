@@ -42,32 +42,38 @@ import { PropertyGroup, _decode_PropertyGroup, _encode_PropertyGroup } from "../
  */
 export
 class LocalRemoteDescriptor {
+    /**
+     * @summary `propGrps`.
+     * @description
+     *
+     * Alternative property groups, most preferred first. One group is one
+     * session description in the text encoding (clause 7.1.7.1.2). Multiple
+     * values inside a group are likewise in descending preference (clause
+     * 7.1.8.2.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly propGrps: PropertyGroup[];
+    /**
+     * @summary Extensions that are not recognized.
+     * @description
+     *
+     * Extension additions this version does not define. Kept so a later
+     * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `propGrps`.
-         * @description
-         *
-         * Alternative property groups, most preferred first. One group is one
-         * session description in the text encoding (clause 7.1.7.1.2). Multiple
-         * values inside a group are likewise in descending preference (clause
-         * 7.1.8.2.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly propGrps: PropertyGroup[],
-        /**
-         * @summary Extensions that are not recognized.
-         * @description
-         *
-         * Extension additions this version does not define. Kept so a later
-         * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
-         *
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        propGrps: PropertyGroup[],
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.propGrps = propGrps;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a LocalRemoteDescriptor

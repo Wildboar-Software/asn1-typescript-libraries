@@ -30,30 +30,36 @@ import { StoreMetadataRequest, _decode_StoreMetadataRequest, _encode_StoreMetada
  */
 export
 class AuthenticateClientOkAcr {
+    /**
+     * @summary `transactionId`.
+     * @description
+     * 
+     * Same session id. SGP.22 v3.1 does not define this success
+     * alternative.
+     * 
+     * @public
+     * @readonly
+     */
+    public readonly transactionId: TransactionId;
+    /**
+     * @summary `profileMetaData`.
+     * @description
+     * 
+     * Metadata returned for Activation Code retrieval, without
+     * `smdpSigned2`. Not defined in SGP.22 v3.1 §5.6.3.
+     * 
+     * @public
+     * @readonly
+     */
+    public readonly profileMetaData: StoreMetadataRequest;
+
     constructor (
-        /**
-         * @summary `transactionId`.
-         * @description
-         * 
-         * Same session id. SGP.22 v3.1 does not define this success
-         * alternative.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly transactionId: TransactionId,
-        /**
-         * @summary `profileMetaData`.
-         * @description
-         * 
-         * Metadata returned for Activation Code retrieval, without
-         * `smdpSigned2`. Not defined in SGP.22 v3.1 §5.6.3.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly profileMetaData: StoreMetadataRequest
-    ) {}
+        transactionId: TransactionId,
+        profileMetaData: StoreMetadataRequest
+    ) {
+        this.transactionId = transactionId;
+        this.profileMetaData = profileMetaData;
+    }
 
     /**
      * @summary Restructures an object into a AuthenticateClientOkAcr

@@ -30,26 +30,34 @@ import * as $ from '@wildboar/asn1/functional';
  *
  */
 export class AttributeChoiceReal {
+    /**
+     * @summary `attributeName`.
+     * @public
+     * @readonly
+     */
+    public readonly attributeName: GraphicString;
+    /**
+     * @summary `minimumValue`.
+     * @public
+     * @readonly
+     */
+    public readonly minimumValue: REAL;
+    /**
+     * @summary `maximumValue`.
+     * @public
+     * @readonly
+     */
+    public readonly maximumValue: REAL;
+
     constructor(
-        /**
-         * @summary `attributeName`.
-         * @public
-         * @readonly
-         */
-        readonly attributeName: GraphicString,
-        /**
-         * @summary `minimumValue`.
-         * @public
-         * @readonly
-         */
-        readonly minimumValue: REAL,
-        /**
-         * @summary `maximumValue`.
-         * @public
-         * @readonly
-         */
-        readonly maximumValue: REAL
-    ) {}
+        attributeName: GraphicString,
+        minimumValue: REAL,
+        maximumValue: REAL
+    ) {
+        this.attributeName = attributeName;
+        this.minimumValue = minimumValue;
+        this.maximumValue = maximumValue;
+    }
 
     /**
      * @summary Restructures an object into a AttributeChoiceReal

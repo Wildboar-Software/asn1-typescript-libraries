@@ -39,26 +39,34 @@ import {
  *
  */
 export class RTABapdu {
+    /**
+     * @summary `abortReason`.
+     * @public
+     * @readonly
+     */
+    public readonly abortReason?: OPTIONAL<AbortReason>;
+    /**
+     * @summary `reflectedParameter`.
+     * @public
+     * @readonly
+     */
+    public readonly reflectedParameter?: OPTIONAL<BIT_STRING>;
+    /**
+     * @summary `userdataAB`.
+     * @public
+     * @readonly
+     */
+    public readonly userdataAB?: OPTIONAL<_Element>;
+
     constructor(
-        /**
-         * @summary `abortReason`.
-         * @public
-         * @readonly
-         */
-        readonly abortReason?: OPTIONAL<AbortReason>,
-        /**
-         * @summary `reflectedParameter`.
-         * @public
-         * @readonly
-         */
-        readonly reflectedParameter?: OPTIONAL<BIT_STRING>,
-        /**
-         * @summary `userdataAB`.
-         * @public
-         * @readonly
-         */
-        readonly userdataAB?: OPTIONAL<_Element>
-    ) {}
+        abortReason?: OPTIONAL<AbortReason>,
+        reflectedParameter?: OPTIONAL<BIT_STRING>,
+        userdataAB?: OPTIONAL<_Element>
+    ) {
+        this.abortReason = abortReason;
+        this.reflectedParameter = reflectedParameter;
+        this.userdataAB = userdataAB;
+    }
 
     /**
      * @summary Restructures an object into a RTABapdu

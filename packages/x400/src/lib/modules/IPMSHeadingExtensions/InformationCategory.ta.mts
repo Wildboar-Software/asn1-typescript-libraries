@@ -36,20 +36,26 @@ import {
  *
  */
 export class InformationCategory {
+    /**
+     * @summary `reference`.
+     * @public
+     * @readonly
+     */
+    public readonly reference?: OPTIONAL<OBJECT_IDENTIFIER>;
+    /**
+     * @summary `description`.
+     * @public
+     * @readonly
+     */
+    public readonly description?: OPTIONAL<DescriptionString>;
+
     constructor(
-        /**
-         * @summary `reference`.
-         * @public
-         * @readonly
-         */
-        readonly reference?: OPTIONAL<OBJECT_IDENTIFIER>,
-        /**
-         * @summary `description`.
-         * @public
-         * @readonly
-         */
-        readonly description?: OPTIONAL<DescriptionString>
-    ) {}
+        reference?: OPTIONAL<OBJECT_IDENTIFIER>,
+        description?: OPTIONAL<DescriptionString>
+    ) {
+        this.reference = reference;
+        this.description = description;
+    }
 
     /**
      * @summary Restructures an object into a InformationCategory

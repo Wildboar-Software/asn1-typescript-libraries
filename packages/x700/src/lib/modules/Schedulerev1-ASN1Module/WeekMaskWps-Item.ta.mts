@@ -37,30 +37,36 @@ import {
  *
  */
 export class WeekMaskWps_Item {
+    /**
+     * @summary `daysOfWeek`.
+     * @description
+     *
+     * Days on which this mask operates. If omitted at create,
+     * defaults to all seven days. ITU-T Rec. X.746 (02/00)
+     * [§8.3.5.2](https://www.itu.int/rec/T-REC-X.746-200002-I).
+     * @public
+     * @readonly
+     */
+    public readonly daysOfWeek: DaysOfWeek;
+    /**
+     * @summary `timesOfDayWps`.
+     * @description
+     *
+     * Intervals or trigger times on the selected days. ITU-T
+     * Rec. X.746 (02/00)
+     * [§8.3.5.2](https://www.itu.int/rec/T-REC-X.746-200002-I).
+     * @public
+     * @readonly
+     */
+    public readonly timesOfDayWps: TimesOfDayWps;
+
     constructor(
-        /**
-         * @summary `daysOfWeek`.
-         * @description
-         *
-         * Days on which this mask operates. If omitted at create,
-         * defaults to all seven days. ITU-T Rec. X.746 (02/00)
-         * [§8.3.5.2](https://www.itu.int/rec/T-REC-X.746-200002-I).
-         * @public
-         * @readonly
-         */
-        readonly daysOfWeek: DaysOfWeek,
-        /**
-         * @summary `timesOfDayWps`.
-         * @description
-         *
-         * Intervals or trigger times on the selected days. ITU-T
-         * Rec. X.746 (02/00)
-         * [§8.3.5.2](https://www.itu.int/rec/T-REC-X.746-200002-I).
-         * @public
-         * @readonly
-         */
-        readonly timesOfDayWps: TimesOfDayWps
-    ) {}
+        daysOfWeek: DaysOfWeek,
+        timesOfDayWps: TimesOfDayWps
+    ) {
+        this.daysOfWeek = daysOfWeek;
+        this.timesOfDayWps = timesOfDayWps;
+    }
 
     /**
      * @summary Restructures an object into a WeekMaskWps_Item

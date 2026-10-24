@@ -35,32 +35,40 @@ import {
  *
  */
 export class CAsubscribeAbort {
+    /**
+     * @summary `invokeID`.
+     * @description
+     *
+     * InvokeID of the response being rejected.
+     * @public
+     * @readonly
+     */
+    public readonly invokeID: InvokeID;
+    /**
+     * @summary `reason`.
+     * @description
+     *
+     * CASP-error for the abort.
+     * @public
+     * @readonly
+     */
+    public readonly reason: CASP_error;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `invokeID`.
-         * @description
-         *
-         * InvokeID of the response being rejected.
-         * @public
-         * @readonly
-         */
-        readonly invokeID: InvokeID,
-        /**
-         * @summary `reason`.
-         * @description
-         *
-         * CASP-error for the abort.
-         * @public
-         * @readonly
-         */
-        readonly reason: CASP_error,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        invokeID: InvokeID,
+        reason: CASP_error,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.invokeID = invokeID;
+        this.reason = reason;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a CAsubscribeAbort

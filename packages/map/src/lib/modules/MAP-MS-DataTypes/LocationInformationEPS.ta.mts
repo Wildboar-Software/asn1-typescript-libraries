@@ -42,94 +42,114 @@ import { GeographicalInformation, _decode_GeographicalInformation, _encode_Geogr
  */
 export
 class LocationInformationEPS {
+    /**
+     * @summary `e_utranCellGlobalIdentity`.
+     * @description
+     *
+     * E-UTRAN Cell Global Identity. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly e_utranCellGlobalIdentity?: OPTIONAL<E_UTRAN_CGI>;
+    /**
+     * @summary `trackingAreaIdentity`.
+     * @description
+     *
+     * Tracking Area Identity. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly trackingAreaIdentity?: OPTIONAL<TA_Id>;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary `geographicalInformation`.
+     * @description
+     *
+     * Ellipsoid point with uncertainty circle (3GPP TS 23.032). (3GPP TS
+     * 29.002 V19.1.0 clause 17.7.1)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly geographicalInformation?: OPTIONAL<GeographicalInformation>;
+    /**
+     * @summary `geodeticInformation`.
+     * @description
+     *
+     * Calling Geodetic Location (Q.763, 1999), ellipsoid point with
+     * uncertainty circle. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly geodeticInformation?: OPTIONAL<GeodeticInformation>;
+    /**
+     * @summary `currentLocationRetrieved`.
+     * @description
+     *
+     * Shall be present if the location was retrieved after successful
+     * paging. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly currentLocationRetrieved?: OPTIONAL<NULL>;
+    /**
+     * @summary `ageOfLocationInformation`.
+     * @description
+     *
+     * Age of the location estimate. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ageOfLocationInformation?: OPTIONAL<AgeOfLocationInformation>;
+    /**
+     * @summary `mme_Name`.
+     * @description
+     *
+     * Diameter identity of the serving MME. (3GPP TS 29.002 V19.1.0 clause
+     * 7.6.2.65)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mme_Name?: OPTIONAL<DiameterIdentity>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `e_utranCellGlobalIdentity`.
-         * @description
-         *
-         * E-UTRAN Cell Global Identity. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
-         *
-         * @public
-         * @readonly
-         */
-        readonly e_utranCellGlobalIdentity?: OPTIONAL<E_UTRAN_CGI>,
-        /**
-         * @summary `trackingAreaIdentity`.
-         * @description
-         *
-         * Tracking Area Identity. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
-         *
-         * @public
-         * @readonly
-         */
-        readonly trackingAreaIdentity?: OPTIONAL<TA_Id>,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary `geographicalInformation`.
-         * @description
-         *
-         * Ellipsoid point with uncertainty circle (3GPP TS 23.032). (3GPP TS
-         * 29.002 V19.1.0 clause 17.7.1)
-         *
-         * @public
-         * @readonly
-         */
-        readonly geographicalInformation?: OPTIONAL<GeographicalInformation>,
-        /**
-         * @summary `geodeticInformation`.
-         * @description
-         *
-         * Calling Geodetic Location (Q.763, 1999), ellipsoid point with
-         * uncertainty circle. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
-         *
-         * @public
-         * @readonly
-         */
-        readonly geodeticInformation?: OPTIONAL<GeodeticInformation>,
-        /**
-         * @summary `currentLocationRetrieved`.
-         * @description
-         *
-         * Shall be present if the location was retrieved after successful
-         * paging. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
-         *
-         * @public
-         * @readonly
-         */
-        readonly currentLocationRetrieved?: OPTIONAL<NULL>,
-        /**
-         * @summary `ageOfLocationInformation`.
-         * @description
-         *
-         * Age of the location estimate. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
-         *
-         * @public
-         * @readonly
-         */
-        readonly ageOfLocationInformation?: OPTIONAL<AgeOfLocationInformation>,
-        /**
-         * @summary `mme_Name`.
-         * @description
-         *
-         * Diameter identity of the serving MME. (3GPP TS 29.002 V19.1.0 clause
-         * 7.6.2.65)
-         *
-         * @public
-         * @readonly
-         */
-        readonly mme_Name?: OPTIONAL<DiameterIdentity>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        e_utranCellGlobalIdentity?: OPTIONAL<E_UTRAN_CGI>,
+        trackingAreaIdentity?: OPTIONAL<TA_Id>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        geographicalInformation?: OPTIONAL<GeographicalInformation>,
+        geodeticInformation?: OPTIONAL<GeodeticInformation>,
+        currentLocationRetrieved?: OPTIONAL<NULL>,
+        ageOfLocationInformation?: OPTIONAL<AgeOfLocationInformation>,
+        mme_Name?: OPTIONAL<DiameterIdentity>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.e_utranCellGlobalIdentity = e_utranCellGlobalIdentity;
+        this.trackingAreaIdentity = trackingAreaIdentity;
+        this.extensionContainer = extensionContainer;
+        this.geographicalInformation = geographicalInformation;
+        this.geodeticInformation = geodeticInformation;
+        this.currentLocationRetrieved = currentLocationRetrieved;
+        this.ageOfLocationInformation = ageOfLocationInformation;
+        this.mme_Name = mme_Name;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a LocationInformationEPS

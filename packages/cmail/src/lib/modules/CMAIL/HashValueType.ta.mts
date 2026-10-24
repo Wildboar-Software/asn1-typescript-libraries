@@ -41,18 +41,22 @@ import {
  *
  */
 export class HashValueType {
+  /**
+   * @summary `algorithmOID`.
+   * @description `sha-1` (XER `1.3.14.3.2.26`) or
+   * `sha-256` (XER `2.16.840.1.101.3.4.2.1`). XER
+   * attribute `AlgorithmOID`. ITU-T Rec. X.1341 (09/2015)
+   * Annex B.
+   * @public
+   * @readonly
+   */
+  public readonly algorithmOID: HashValueType_algorithmOID;
+
   constructor(
-    /**
-     * @summary `algorithmOID`.
-     * @description `sha-1` (XER `1.3.14.3.2.26`) or
-     * `sha-256` (XER `2.16.840.1.101.3.4.2.1`). XER
-     * attribute `AlgorithmOID`. ITU-T Rec. X.1341 (09/2015)
-     * Annex B.
-     * @public
-     * @readonly
-     */
-    readonly algorithmOID: HashValueType_algorithmOID
-  ) {}
+    algorithmOID: HashValueType_algorithmOID
+  ) {
+    this.algorithmOID = algorithmOID;
+  }
 
   /**
    * @summary Restructures an object into a HashValueType

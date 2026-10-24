@@ -53,125 +53,153 @@ import { FieldParamIdent, _decode_FieldParamIdent, _encode_FieldParamIdent } fro
  */
 export
 class ParameterIdents {
+    /**
+     * @summary `dimensions`.
+     * @description
+     * Invite `dimensions` (`one`/`two`/`three`, default `"two"`).
+     * ISO/IEC 9040:1997 §18.1.
+     * @public
+     * @readonly
+     */
+    public readonly dimensions?: OPTIONAL<NULL>;
+    /**
+     * @summary `xParam`.
+     * @description
+     * Invite X-dimension addressing parameters. Always defined.
+     * ISO/IEC 9040:1997 §18.2.3.
+     * @public
+     * @readonly
+     */
+    public readonly xParam?: OPTIONAL<DimensionParamIdent>;
+    /**
+     * @summary `yParam`.
+     * @description
+     * Invite Y-dimension addressing parameters. Valid if
+     * `dimensions` ≥ 2. ISO/IEC 9040:1997 §18.2.3.
+     * @public
+     * @readonly
+     */
+    public readonly yParam?: OPTIONAL<DimensionParamIdent>;
+    /**
+     * @summary `zParam`.
+     * @description
+     * Invite Z-dimension addressing parameters. Valid if
+     * `dimensions` = 3. ISO/IEC 9040:1997 §18.2.3.
+     * @public
+     * @readonly
+     */
+    public readonly zParam?: OPTIONAL<DimensionParamIdent>;
+    /**
+     * @summary `erasure`.
+     * @description
+     * Invite `erasure-capability` (controls ERASE; default `"no"`).
+     * ISO/IEC 9040:1997 §18.1, §19.4.1.4.
+     * @public
+     * @readonly
+     */
+    public readonly erasure?: OPTIONAL<NULL>;
+    /**
+     * @summary `repertoire`.
+     * @description
+     * Invite repertoire-capability and assignment-list slots.
+     * ISO/IEC 9040:1997 §18.1, §18.2.4.
+     * @public
+     * @readonly
+     */
+    public readonly repertoire?: OPTIONAL<CompoundRepertoireIdent>;
+    /**
+     * @summary `emphasis`.
+     * @description
+     * Invite DO-emphasis assignment-list slots. ISO/IEC 9040:1997
+     * §18.2.6, B.17.
+     * @public
+     * @readonly
+     */
+    public readonly emphasis?: OPTIONAL<CompoundEmphasisIdent>;
+    /**
+     * @summary `foreground`.
+     * @description
+     * Invite foreground-colour capability and assignment list.
+     * ISO/IEC 9040:1997 §18.1, §18.2.5.
+     * @public
+     * @readonly
+     */
+    public readonly foreground?: OPTIONAL<CompoundColourIdent>;
+    /**
+     * @summary `background`.
+     * @description
+     * Invite background-colour capability and assignment list.
+     * ISO/IEC 9040:1997 §18.1, §18.2.5.
+     * @public
+     * @readonly
+     */
+    public readonly background?: OPTIONAL<CompoundColourIdent>;
+    /**
+     * @summary `access`.
+     * @description
+     * Invite DO-access (`WAVAR`/`WACI`/`WACA` only). ISO/IEC
+     * 9040:1997 §8, §9, §18.1.
+     * @public
+     * @readonly
+     */
+    public readonly access?: OPTIONAL<NULL>;
+    /**
+     * @summary `blockParams`.
+     * @description
+     * Invite block-definition-capability and `b-bound`. Requires
+     * Blocks FU. ISO/IEC 9040:1997 §10.7, §18.2.1.
+     * @public
+     * @readonly
+     */
+    public readonly blockParams?: OPTIONAL<BlockParamIdent>;
+    /**
+     * @summary `fieldParams`.
+     * @description
+     * Invite field-definition-capability and field bounds. Requires
+     * Fields FU. ISO/IEC 9040:1997 §10.8, §18.2.2.
+     * @public
+     * @readonly
+     */
+    public readonly fieldParams?: OPTIONAL<FieldParamIdent>;
+    /**
+     * @summary `rippleCapability`.
+     * @description
+     * Invite `ripple-capability` (default `"no"`). Requires Ripple
+     * FU. ISO/IEC 9040:1997 §10.10, §18.1.
+     * @public
+     * @readonly
+     */
+    public readonly rippleCapability?: OPTIONAL<NULL>;
+
     constructor (
-        /**
-         * @summary `dimensions`.
-         * @description
-         * Invite `dimensions` (`one`/`two`/`three`, default `"two"`).
-         * ISO/IEC 9040:1997 §18.1.
-         * @public
-         * @readonly
-         */
-        readonly dimensions?: OPTIONAL<NULL>,
-        /**
-         * @summary `xParam`.
-         * @description
-         * Invite X-dimension addressing parameters. Always defined.
-         * ISO/IEC 9040:1997 §18.2.3.
-         * @public
-         * @readonly
-         */
-        readonly xParam?: OPTIONAL<DimensionParamIdent>,
-        /**
-         * @summary `yParam`.
-         * @description
-         * Invite Y-dimension addressing parameters. Valid if
-         * `dimensions` ≥ 2. ISO/IEC 9040:1997 §18.2.3.
-         * @public
-         * @readonly
-         */
-        readonly yParam?: OPTIONAL<DimensionParamIdent>,
-        /**
-         * @summary `zParam`.
-         * @description
-         * Invite Z-dimension addressing parameters. Valid if
-         * `dimensions` = 3. ISO/IEC 9040:1997 §18.2.3.
-         * @public
-         * @readonly
-         */
-        readonly zParam?: OPTIONAL<DimensionParamIdent>,
-        /**
-         * @summary `erasure`.
-         * @description
-         * Invite `erasure-capability` (controls ERASE; default `"no"`).
-         * ISO/IEC 9040:1997 §18.1, §19.4.1.4.
-         * @public
-         * @readonly
-         */
-        readonly erasure?: OPTIONAL<NULL>,
-        /**
-         * @summary `repertoire`.
-         * @description
-         * Invite repertoire-capability and assignment-list slots.
-         * ISO/IEC 9040:1997 §18.1, §18.2.4.
-         * @public
-         * @readonly
-         */
-        readonly repertoire?: OPTIONAL<CompoundRepertoireIdent>,
-        /**
-         * @summary `emphasis`.
-         * @description
-         * Invite DO-emphasis assignment-list slots. ISO/IEC 9040:1997
-         * §18.2.6, B.17.
-         * @public
-         * @readonly
-         */
-        readonly emphasis?: OPTIONAL<CompoundEmphasisIdent>,
-        /**
-         * @summary `foreground`.
-         * @description
-         * Invite foreground-colour capability and assignment list.
-         * ISO/IEC 9040:1997 §18.1, §18.2.5.
-         * @public
-         * @readonly
-         */
-        readonly foreground?: OPTIONAL<CompoundColourIdent>,
-        /**
-         * @summary `background`.
-         * @description
-         * Invite background-colour capability and assignment list.
-         * ISO/IEC 9040:1997 §18.1, §18.2.5.
-         * @public
-         * @readonly
-         */
-        readonly background?: OPTIONAL<CompoundColourIdent>,
-        /**
-         * @summary `access`.
-         * @description
-         * Invite DO-access (`WAVAR`/`WACI`/`WACA` only). ISO/IEC
-         * 9040:1997 §8, §9, §18.1.
-         * @public
-         * @readonly
-         */
-        readonly access?: OPTIONAL<NULL>,
-        /**
-         * @summary `blockParams`.
-         * @description
-         * Invite block-definition-capability and `b-bound`. Requires
-         * Blocks FU. ISO/IEC 9040:1997 §10.7, §18.2.1.
-         * @public
-         * @readonly
-         */
-        readonly blockParams?: OPTIONAL<BlockParamIdent>,
-        /**
-         * @summary `fieldParams`.
-         * @description
-         * Invite field-definition-capability and field bounds. Requires
-         * Fields FU. ISO/IEC 9040:1997 §10.8, §18.2.2.
-         * @public
-         * @readonly
-         */
-        readonly fieldParams?: OPTIONAL<FieldParamIdent>,
-        /**
-         * @summary `rippleCapability`.
-         * @description
-         * Invite `ripple-capability` (default `"no"`). Requires Ripple
-         * FU. ISO/IEC 9040:1997 §10.10, §18.1.
-         * @public
-         * @readonly
-         */
-        readonly rippleCapability?: OPTIONAL<NULL>
-    ) {}
+        dimensions?: OPTIONAL<NULL>,
+        xParam?: OPTIONAL<DimensionParamIdent>,
+        yParam?: OPTIONAL<DimensionParamIdent>,
+        zParam?: OPTIONAL<DimensionParamIdent>,
+        erasure?: OPTIONAL<NULL>,
+        repertoire?: OPTIONAL<CompoundRepertoireIdent>,
+        emphasis?: OPTIONAL<CompoundEmphasisIdent>,
+        foreground?: OPTIONAL<CompoundColourIdent>,
+        background?: OPTIONAL<CompoundColourIdent>,
+        access?: OPTIONAL<NULL>,
+        blockParams?: OPTIONAL<BlockParamIdent>,
+        fieldParams?: OPTIONAL<FieldParamIdent>,
+        rippleCapability?: OPTIONAL<NULL>
+    ) {
+        this.dimensions = dimensions;
+        this.xParam = xParam;
+        this.yParam = yParam;
+        this.zParam = zParam;
+        this.erasure = erasure;
+        this.repertoire = repertoire;
+        this.emphasis = emphasis;
+        this.foreground = foreground;
+        this.background = background;
+        this.access = access;
+        this.blockParams = blockParams;
+        this.fieldParams = fieldParams;
+        this.rippleCapability = rippleCapability;
+    }
 
     /**
      * @summary Restructures an object into a ParameterIdents

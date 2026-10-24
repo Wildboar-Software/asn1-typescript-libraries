@@ -30,14 +30,18 @@ import {
  *
  */
 export class RangeError {
+    /**
+     * @summary `problem`.
+     * @public
+     * @readonly
+     */
+    public readonly problem: RangeProblem;
+
     constructor(
-        /**
-         * @summary `problem`.
-         * @public
-         * @readonly
-         */
-        readonly problem: RangeProblem
-    ) {}
+        problem: RangeProblem
+    ) {
+        this.problem = problem;
+    }
 
     /**
      * @summary Restructures an object into a RangeError

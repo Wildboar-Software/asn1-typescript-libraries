@@ -29,31 +29,37 @@ import * as $ from '@wildboar/asn1/functional';
  *
  */
 export class Identified_Command_Response_response {
+    /**
+     * @summary `message_id`.
+     * @description
+     *
+     * Shall equal `&expected-response` of the command.
+     * ITU-T Rec. X.1080.1 (10/2011) module
+     * E-health-command-response.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly message_id: INTEGER;
+    /**
+     * @summary `message_content`.
+     * @description
+     *
+     * `INTERACTIVE-MESSAGE.&Type` for `message-id`. ITU-T Rec.
+     * X.1080.1 (10/2011) module E-health-command-response.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly message_content: _Element;
+
     constructor(
-        /**
-         * @summary `message_id`.
-         * @description
-         *
-         * Shall equal `&expected-response` of the command.
-         * ITU-T Rec. X.1080.1 (10/2011) module
-         * E-health-command-response.
-         *
-         * @public
-         * @readonly
-         */
-        readonly message_id: INTEGER,
-        /**
-         * @summary `message_content`.
-         * @description
-         *
-         * `INTERACTIVE-MESSAGE.&Type` for `message-id`. ITU-T Rec.
-         * X.1080.1 (10/2011) module E-health-command-response.
-         *
-         * @public
-         * @readonly
-         */
-        readonly message_content: _Element
-    ) {}
+        message_id: INTEGER,
+        message_content: _Element
+    ) {
+        this.message_id = message_id;
+        this.message_content = message_content;
+    }
 
     /**
      * @summary Restructures an object into a Identified_Command_Response_response

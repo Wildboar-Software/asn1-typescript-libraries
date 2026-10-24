@@ -37,20 +37,26 @@ import {
  *
  */
 export class SyntaxIdentifierField {
+    /**
+     * @summary `syntax_identifier`.
+     * @public
+     * @readonly
+     */
+    public readonly syntax_identifier: SyntaxIdentifier;
+    /**
+     * @summary `syntax_version`.
+     * @public
+     * @readonly
+     */
+    public readonly syntax_version: SyntaxVersion;
+
     constructor(
-        /**
-         * @summary `syntax_identifier`.
-         * @public
-         * @readonly
-         */
-        readonly syntax_identifier: SyntaxIdentifier,
-        /**
-         * @summary `syntax_version`.
-         * @public
-         * @readonly
-         */
-        readonly syntax_version: SyntaxVersion
-    ) {}
+        syntax_identifier: SyntaxIdentifier,
+        syntax_version: SyntaxVersion
+    ) {
+        this.syntax_identifier = syntax_identifier;
+        this.syntax_version = syntax_version;
+    }
 
     /**
      * @summary Restructures an object into a SyntaxIdentifierField

@@ -51,41 +51,49 @@ import {
  *
  */
 export class SimpleCredentials {
+    /**
+     * @summary `name`.
+     * @description
+     *
+     * Always an object DN.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly name: DistinguishedName;
+    /**
+     * @summary `validity`.
+     * @description
+     *
+     * `time1`/`time2`/`random1`/`random2` meaning is bilateral agreement
+     * (replay detection).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly validity?: OPTIONAL<SimpleCredentials_validity>;
+    /**
+     * @summary `password`.
+     * @description
+     *
+     * Unprotected OCTET STRING, protected HASH{OCTET STRING}
+     * (Protected1/Protected2 per X.509 18.1), or `userPwd` [0]
+     * (matching rule X.509 18.1.8).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly password?: OPTIONAL<SimpleCredentials_password>;
+
     constructor(
-        /**
-         * @summary `name`.
-         * @description
-         *
-         * Always an object DN.
-         *
-         * @public
-         * @readonly
-         */
-        readonly name: DistinguishedName,
-        /**
-         * @summary `validity`.
-         * @description
-         *
-         * `time1`/`time2`/`random1`/`random2` meaning is bilateral agreement
-         * (replay detection).
-         *
-         * @public
-         * @readonly
-         */
-        readonly validity?: OPTIONAL<SimpleCredentials_validity>,
-        /**
-         * @summary `password`.
-         * @description
-         *
-         * Unprotected OCTET STRING, protected HASH{OCTET STRING}
-         * (Protected1/Protected2 per X.509 18.1), or `userPwd` [0]
-         * (matching rule X.509 18.1.8).
-         *
-         * @public
-         * @readonly
-         */
-        readonly password?: OPTIONAL<SimpleCredentials_password>
-    ) {}
+        name: DistinguishedName,
+        validity?: OPTIONAL<SimpleCredentials_validity>,
+        password?: OPTIONAL<SimpleCredentials_password>
+    ) {
+        this.name = name;
+        this.validity = validity;
+        this.password = password;
+    }
 
     /**
      * @summary Restructures an object into a SimpleCredentials

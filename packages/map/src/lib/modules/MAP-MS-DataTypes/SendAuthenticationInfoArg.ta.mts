@@ -47,155 +47,181 @@ import { RequestingNodeType, _decode_RequestingNodeType, _encode_RequestingNodeT
  */
 export
 class SendAuthenticationInfoArg {
+    /**
+     * @summary `imsi`.
+     * @description
+     *
+     * IMSI of the subscriber. Present in the first (or only) request of the
+     * dialogue; absent in subsequent requests.
+     *
+     * (3GPP TS 29.002 V19.1.0 clauses 7.6.2.1 and 8.5.2.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly imsi: IMSI;
+    /**
+     * @summary `numberOfRequestedVectors`.
+     * @description
+     *
+     * How many authentication vectors (1..5) the requester is prepared to
+     * receive. HLR shall not return more. Present in the first request of a
+     * dialogue only.
+     *
+     * (3GPP TS 29.002 V19.1.0 clauses 8.5.2.3 and 8.1.4).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly numberOfRequestedVectors: NumberOfRequestedVectors;
+    /**
+     * @summary `segmentationProhibited`.
+     * @description
+     *
+     * If present, the requester does not allow MAP-user segmentation of the
+     * response. May be present only in the first request of a dialogue.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 8.5.2.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly segmentationProhibited?: OPTIONAL<NULL>;
+    /**
+     * @summary `immediateResponsePreferred`.
+     * @description
+     *
+     * One requested vector is for immediate use. HLR may use this with
+     * vector counts to decide how many to obtain from the AuC. Ignored if
+     * available vectors exceed the requested number. First request of a
+     * dialogue only.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 8.5.2.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly immediateResponsePreferred?: OPTIONAL<NULL>;
+    /**
+     * @summary `re_synchronisationInfo`.
+     * @description
+     *
+     * RAND and AUTS for UMTS/EPS resynchronisation (3GPP TS 33.200). First
+     * request of a dialogue only.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 8.5.2.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly re_synchronisationInfo?: OPTIONAL<Re_synchronisationInfo>;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary `requestingNodeType`.
+     * @description
+     *
+     * SGSN, MME, combined MME/SGSN, VLR, or BSF. First request of a
+     * dialogue only. If MME, HSS returns EPS vectors; if not MME, triplets
+     * or quintuplets by subscription.
+     *
+     * (3GPP TS 29.002 V19.1.0 clauses 8.5.2.1 and 8.5.2.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly requestingNodeType?: OPTIONAL<RequestingNodeType>;
+    /**
+     * @summary `requestingPLMN_Id`.
+     * @description
+     *
+     * PLMN-ID of the requesting node (3GPP TS 23.003). First request of a
+     * dialogue only.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 8.5.2.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly requestingPLMN_Id?: OPTIONAL<PLMN_Id>;
+    /**
+     * @summary `numberOfRequestedAdditional_Vectors`.
+     * @description
+     *
+     * Additional vectors a combined MME/SGSN or IWF will accept. Present
+     * only if requesting node type is combined MME/SGSN. First request of a
+     * dialogue only.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 8.5.2.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly numberOfRequestedAdditional_Vectors?: OPTIONAL<NumberOfRequestedVectors>;
+    /**
+     * @summary `additionalVectorsAreForEPS`.
+     * @description
+     *
+     * Additional (not immediate) vectors are for EPS. Absent if number of
+     * additional vectors is absent. First request of a dialogue only.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 8.5.2.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly additionalVectorsAreForEPS?: OPTIONAL<NULL>;
+    /**
+     * @summary `ueUsageTypeRequestIndication`.
+     * @description
+     *
+     * HLR that supports Dedicated Core Network shall include UE Usage Type
+     * in the response. Not applicable for VLRs.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 8.5.2.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ueUsageTypeRequestIndication?: OPTIONAL<NULL>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `imsi`.
-         * @description
-         *
-         * IMSI of the subscriber. Present in the first (or only) request of the
-         * dialogue; absent in subsequent requests.
-         *
-         * (3GPP TS 29.002 V19.1.0 clauses 7.6.2.1 and 8.5.2.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly imsi: IMSI,
-        /**
-         * @summary `numberOfRequestedVectors`.
-         * @description
-         *
-         * How many authentication vectors (1..5) the requester is prepared to
-         * receive. HLR shall not return more. Present in the first request of a
-         * dialogue only.
-         *
-         * (3GPP TS 29.002 V19.1.0 clauses 8.5.2.3 and 8.1.4).
-         *
-         * @public
-         * @readonly
-         */
-        readonly numberOfRequestedVectors: NumberOfRequestedVectors,
-        /**
-         * @summary `segmentationProhibited`.
-         * @description
-         *
-         * If present, the requester does not allow MAP-user segmentation of the
-         * response. May be present only in the first request of a dialogue.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 8.5.2.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly segmentationProhibited?: OPTIONAL<NULL>,
-        /**
-         * @summary `immediateResponsePreferred`.
-         * @description
-         *
-         * One requested vector is for immediate use. HLR may use this with
-         * vector counts to decide how many to obtain from the AuC. Ignored if
-         * available vectors exceed the requested number. First request of a
-         * dialogue only.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 8.5.2.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly immediateResponsePreferred?: OPTIONAL<NULL>,
-        /**
-         * @summary `re_synchronisationInfo`.
-         * @description
-         *
-         * RAND and AUTS for UMTS/EPS resynchronisation (3GPP TS 33.200). First
-         * request of a dialogue only.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 8.5.2.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly re_synchronisationInfo?: OPTIONAL<Re_synchronisationInfo>,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary `requestingNodeType`.
-         * @description
-         *
-         * SGSN, MME, combined MME/SGSN, VLR, or BSF. First request of a
-         * dialogue only. If MME, HSS returns EPS vectors; if not MME, triplets
-         * or quintuplets by subscription.
-         *
-         * (3GPP TS 29.002 V19.1.0 clauses 8.5.2.1 and 8.5.2.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly requestingNodeType?: OPTIONAL<RequestingNodeType>,
-        /**
-         * @summary `requestingPLMN_Id`.
-         * @description
-         *
-         * PLMN-ID of the requesting node (3GPP TS 23.003). First request of a
-         * dialogue only.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 8.5.2.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly requestingPLMN_Id?: OPTIONAL<PLMN_Id>,
-        /**
-         * @summary `numberOfRequestedAdditional_Vectors`.
-         * @description
-         *
-         * Additional vectors a combined MME/SGSN or IWF will accept. Present
-         * only if requesting node type is combined MME/SGSN. First request of a
-         * dialogue only.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 8.5.2.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly numberOfRequestedAdditional_Vectors?: OPTIONAL<NumberOfRequestedVectors>,
-        /**
-         * @summary `additionalVectorsAreForEPS`.
-         * @description
-         *
-         * Additional (not immediate) vectors are for EPS. Absent if number of
-         * additional vectors is absent. First request of a dialogue only.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 8.5.2.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly additionalVectorsAreForEPS?: OPTIONAL<NULL>,
-        /**
-         * @summary `ueUsageTypeRequestIndication`.
-         * @description
-         *
-         * HLR that supports Dedicated Core Network shall include UE Usage Type
-         * in the response. Not applicable for VLRs.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 8.5.2.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly ueUsageTypeRequestIndication?: OPTIONAL<NULL>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        imsi: IMSI,
+        numberOfRequestedVectors: NumberOfRequestedVectors,
+        segmentationProhibited?: OPTIONAL<NULL>,
+        immediateResponsePreferred?: OPTIONAL<NULL>,
+        re_synchronisationInfo?: OPTIONAL<Re_synchronisationInfo>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        requestingNodeType?: OPTIONAL<RequestingNodeType>,
+        requestingPLMN_Id?: OPTIONAL<PLMN_Id>,
+        numberOfRequestedAdditional_Vectors?: OPTIONAL<NumberOfRequestedVectors>,
+        additionalVectorsAreForEPS?: OPTIONAL<NULL>,
+        ueUsageTypeRequestIndication?: OPTIONAL<NULL>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.imsi = imsi;
+        this.numberOfRequestedVectors = numberOfRequestedVectors;
+        this.segmentationProhibited = segmentationProhibited;
+        this.immediateResponsePreferred = immediateResponsePreferred;
+        this.re_synchronisationInfo = re_synchronisationInfo;
+        this.extensionContainer = extensionContainer;
+        this.requestingNodeType = requestingNodeType;
+        this.requestingPLMN_Id = requestingPLMN_Id;
+        this.numberOfRequestedAdditional_Vectors = numberOfRequestedAdditional_Vectors;
+        this.additionalVectorsAreForEPS = additionalVectorsAreForEPS;
+        this.ueUsageTypeRequestIndication = ueUsageTypeRequestIndication;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a SendAuthenticationInfoArg

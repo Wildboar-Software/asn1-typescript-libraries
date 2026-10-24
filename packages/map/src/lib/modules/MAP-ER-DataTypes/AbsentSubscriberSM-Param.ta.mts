@@ -43,75 +43,91 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
  */
 export
 class AbsentSubscriberSM_Param {
+    /**
+     * @summary `absentSubscriberDiagnosticSM`.
+     * @description
+     *
+     * Reason why the subscriber is absent. May be either for non-GPRS or
+     * for GPRS. If `additionalAbsentSubscriberDiagnosticSM` is received,
+     * this component is for non-GPRS (3GPP TS 29.002 V19.1.0 clauses
+     * 7.6.8.9 and 17.7.7).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly absentSubscriberDiagnosticSM?: OPTIONAL<AbsentSubscriberDiagnosticSM>;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary `additionalAbsentSubscriberDiagnosticSM`.
+     * @description
+     *
+     * If received, this diagnostic is for GPRS and
+     * `absentSubscriberDiagnosticSM` is for non-GPRS (3GPP TS 29.002
+     * V19.1.0 clauses 7.6.8.12 and 17.7.7).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly additionalAbsentSubscriberDiagnosticSM?: OPTIONAL<AbsentSubscriberDiagnosticSM>;
+    /**
+     * @summary `imsi`.
+     * @description
+     *
+     * When sent from HLR to IP-SM-GW, IMSI shall be present if UNRI is not
+     * set, to indicate that the absent condition is met for CS and PS but
+     * not for IMS (3GPP TS 29.002 V19.1.0 clause 17.7.7).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly imsi?: OPTIONAL<IMSI>;
+    /**
+     * @summary `requestedRetransmissionTime`.
+     * @description
+     *
+     * Retransmission time (UTC) at which the SMS-GMSC is requested to
+     * retransmit the MT Short Message (3GPP TS 29.002 V19.1.0 clause
+     * 7.6.8.24).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly requestedRetransmissionTime?: OPTIONAL<Time>;
+    /**
+     * @summary `userIdentifierAlert`.
+     * @public
+     * @readonly
+     */
+    public readonly userIdentifierAlert?: OPTIONAL<IMSI>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `absentSubscriberDiagnosticSM`.
-         * @description
-         *
-         * Reason why the subscriber is absent. May be either for non-GPRS or
-         * for GPRS. If `additionalAbsentSubscriberDiagnosticSM` is received,
-         * this component is for non-GPRS (3GPP TS 29.002 V19.1.0 clauses
-         * 7.6.8.9 and 17.7.7).
-         *
-         * @public
-         * @readonly
-         */
-        readonly absentSubscriberDiagnosticSM?: OPTIONAL<AbsentSubscriberDiagnosticSM>,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary `additionalAbsentSubscriberDiagnosticSM`.
-         * @description
-         *
-         * If received, this diagnostic is for GPRS and
-         * `absentSubscriberDiagnosticSM` is for non-GPRS (3GPP TS 29.002
-         * V19.1.0 clauses 7.6.8.12 and 17.7.7).
-         *
-         * @public
-         * @readonly
-         */
-        readonly additionalAbsentSubscriberDiagnosticSM?: OPTIONAL<AbsentSubscriberDiagnosticSM>,
-        /**
-         * @summary `imsi`.
-         * @description
-         *
-         * When sent from HLR to IP-SM-GW, IMSI shall be present if UNRI is not
-         * set, to indicate that the absent condition is met for CS and PS but
-         * not for IMS (3GPP TS 29.002 V19.1.0 clause 17.7.7).
-         *
-         * @public
-         * @readonly
-         */
-        readonly imsi?: OPTIONAL<IMSI>,
-        /**
-         * @summary `requestedRetransmissionTime`.
-         * @description
-         *
-         * Retransmission time (UTC) at which the SMS-GMSC is requested to
-         * retransmit the MT Short Message (3GPP TS 29.002 V19.1.0 clause
-         * 7.6.8.24).
-         *
-         * @public
-         * @readonly
-         */
-        readonly requestedRetransmissionTime?: OPTIONAL<Time>,
-        /**
-         * @summary `userIdentifierAlert`.
-         * @public
-         * @readonly
-         */
-        readonly userIdentifierAlert?: OPTIONAL<IMSI>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        absentSubscriberDiagnosticSM?: OPTIONAL<AbsentSubscriberDiagnosticSM>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        additionalAbsentSubscriberDiagnosticSM?: OPTIONAL<AbsentSubscriberDiagnosticSM>,
+        imsi?: OPTIONAL<IMSI>,
+        requestedRetransmissionTime?: OPTIONAL<Time>,
+        userIdentifierAlert?: OPTIONAL<IMSI>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.absentSubscriberDiagnosticSM = absentSubscriberDiagnosticSM;
+        this.extensionContainer = extensionContainer;
+        this.additionalAbsentSubscriberDiagnosticSM = additionalAbsentSubscriberDiagnosticSM;
+        this.imsi = imsi;
+        this.requestedRetransmissionTime = requestedRetransmissionTime;
+        this.userIdentifierAlert = userIdentifierAlert;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a AbsentSubscriberSM_Param

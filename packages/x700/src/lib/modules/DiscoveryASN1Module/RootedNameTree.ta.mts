@@ -48,38 +48,46 @@ import {
  *
  */
 export class RootedNameTree {
+    /**
+     * @summary `rootObject`.
+     * @description
+     *
+     * Distinguished name of the root of this discovered subtree.
+     * ITU-T Rec. X.750 (10/96) §8.3.2.4.
+     * @public
+     * @readonly
+     */
+    public readonly rootObject: ObjectInstance;
+    /**
+     * @summary `classOfRoot`.
+     * @description
+     *
+     * Class of the root object. Present when `classRequest` was
+     * true. ITU-T Rec. X.750 (10/96) §8.3.2.3–§8.3.2.4.
+     * @public
+     * @readonly
+     */
+    public readonly classOfRoot?: OPTIONAL<GdmoObjectClass>;
+    /**
+     * @summary `subordinates`.
+     * @description
+     *
+     * Recursively nested RDNs of contained managed objects in
+     * scope. ITU-T Rec. X.750 (10/96) §8.3.2.4.
+     * @public
+     * @readonly
+     */
+    public readonly subordinates?: OPTIONAL<NameTree[]>;
+
     constructor(
-        /**
-         * @summary `rootObject`.
-         * @description
-         *
-         * Distinguished name of the root of this discovered subtree.
-         * ITU-T Rec. X.750 (10/96) §8.3.2.4.
-         * @public
-         * @readonly
-         */
-        readonly rootObject: ObjectInstance,
-        /**
-         * @summary `classOfRoot`.
-         * @description
-         *
-         * Class of the root object. Present when `classRequest` was
-         * true. ITU-T Rec. X.750 (10/96) §8.3.2.3–§8.3.2.4.
-         * @public
-         * @readonly
-         */
-        readonly classOfRoot?: OPTIONAL<GdmoObjectClass>,
-        /**
-         * @summary `subordinates`.
-         * @description
-         *
-         * Recursively nested RDNs of contained managed objects in
-         * scope. ITU-T Rec. X.750 (10/96) §8.3.2.4.
-         * @public
-         * @readonly
-         */
-        readonly subordinates?: OPTIONAL<NameTree[]>
-    ) {}
+        rootObject: ObjectInstance,
+        classOfRoot?: OPTIONAL<GdmoObjectClass>,
+        subordinates?: OPTIONAL<NameTree[]>
+    ) {
+        this.rootObject = rootObject;
+        this.classOfRoot = classOfRoot;
+        this.subordinates = subordinates;
+    }
 
     /**
      * @summary Restructures an object into a RootedNameTree

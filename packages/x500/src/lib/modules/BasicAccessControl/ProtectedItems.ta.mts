@@ -87,108 +87,140 @@ import {
  *
  */
 export class ProtectedItems {
+    /**
+     * @summary `entry`.
+     * @description Entry contents as a whole; ignored if `classes` is present.
+     * @public
+     * @readonly
+     */
+    public readonly entry?: OPTIONAL<NULL>;
+    /**
+     * @summary `allUserAttributeTypes`.
+     * @description All user attribute *types* (not values); excludes operational attributes.
+     * @public
+     * @readonly
+     */
+    public readonly allUserAttributeTypes?: OPTIONAL<NULL>;
+    /**
+     * @summary `attributeType`.
+     * @public
+     * @readonly
+     */
+    public readonly attributeType?: OPTIONAL<AttributeType[]>;
+    /**
+     * @summary `allAttributeValues`.
+     * @public
+     * @readonly
+     */
+    public readonly allAttributeValues?: OPTIONAL<AttributeType[]>;
+    /**
+     * @summary `allUserAttributeTypesAndValues`.
+     * @description All user attribute types *and* values; excludes operational attributes.
+     * @public
+     * @readonly
+     */
+    public readonly allUserAttributeTypesAndValues?: OPTIONAL<NULL>;
+    /**
+     * @summary `attributeValue`.
+     * @public
+     * @readonly
+     */
+    public readonly attributeValue?: OPTIONAL<AttributeTypeAndValue[]>;
+    /**
+     * @summary `selfValue`.
+     * @description Attribute types whose DistinguishedName/uniqueMember value is the requestor's name.
+     * @public
+     * @readonly
+     */
+    public readonly selfValue?: OPTIONAL<AttributeType[]>;
+    /**
+     * @summary `rangeOfValues`.
+     * @description Filter evaluated on a fictitious entry holding only the candidate value.
+     * @public
+     * @readonly
+     */
+    public readonly rangeOfValues?: OPTIONAL<Filter>;
+    /**
+     * @summary `maxValueCount`.
+     * @description Add constraint: if value count would exceed `maxCount`, treat as not granting add.
+     * @public
+     * @readonly
+     */
+    public readonly maxValueCount?: OPTIONAL<MaxValueCount[]>;
+    /**
+     * @summary `maxImmSub`.
+     * @description Add/import constraint on immediate subordinates of the superior entry.
+     * @public
+     * @readonly
+     */
+    public readonly maxImmSub?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `restrictedBy`.
+     * @description Add constraint: new value must already appear in `valuesIn` of the same entry.
+     * @public
+     * @readonly
+     */
+    public readonly restrictedBy?: OPTIONAL<RestrictedValue[]>;
+    /**
+     * @summary `contexts`.
+     * @description Add constraint: all ContextAssertions must be satisfied, else not granting add.
+     * @public
+     * @readonly
+     */
+    public readonly contexts?: OPTIONAL<ContextAssertion[]>;
+    /**
+     * @summary `classes`.
+     * @description Refinement on object class; if present, `entry` is ignored.
+     * @public
+     * @readonly
+     */
+    public readonly classes?: OPTIONAL<Refinement>;
+    /**
+     * @summary `entryMethods`.
+     * @public
+     * @readonly
+     */
+    public readonly entryMethods?: OPTIONAL<OBJECT_IDENTIFIER[]>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `entry`.
-         * @description Entry contents as a whole; ignored if `classes` is present.
-         * @public
-         * @readonly
-         */
-        readonly entry?: OPTIONAL<NULL>,
-        /**
-         * @summary `allUserAttributeTypes`.
-         * @description All user attribute *types* (not values); excludes operational attributes.
-         * @public
-         * @readonly
-         */
-        readonly allUserAttributeTypes?: OPTIONAL<NULL>,
-        /**
-         * @summary `attributeType`.
-         * @public
-         * @readonly
-         */
-        readonly attributeType?: OPTIONAL<AttributeType[]>,
-        /**
-         * @summary `allAttributeValues`.
-         * @public
-         * @readonly
-         */
-        readonly allAttributeValues?: OPTIONAL<AttributeType[]>,
-        /**
-         * @summary `allUserAttributeTypesAndValues`.
-         * @description All user attribute types *and* values; excludes operational attributes.
-         * @public
-         * @readonly
-         */
-        readonly allUserAttributeTypesAndValues?: OPTIONAL<NULL>,
-        /**
-         * @summary `attributeValue`.
-         * @public
-         * @readonly
-         */
-        readonly attributeValue?: OPTIONAL<AttributeTypeAndValue[]>,
-        /**
-         * @summary `selfValue`.
-         * @description Attribute types whose DistinguishedName/uniqueMember value is the requestor's name.
-         * @public
-         * @readonly
-         */
-        readonly selfValue?: OPTIONAL<AttributeType[]>,
-        /**
-         * @summary `rangeOfValues`.
-         * @description Filter evaluated on a fictitious entry holding only the candidate value.
-         * @public
-         * @readonly
-         */
-        readonly rangeOfValues?: OPTIONAL<Filter>,
-        /**
-         * @summary `maxValueCount`.
-         * @description Add constraint: if value count would exceed `maxCount`, treat as not granting add.
-         * @public
-         * @readonly
-         */
-        readonly maxValueCount?: OPTIONAL<MaxValueCount[]>,
-        /**
-         * @summary `maxImmSub`.
-         * @description Add/import constraint on immediate subordinates of the superior entry.
-         * @public
-         * @readonly
-         */
-        readonly maxImmSub?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `restrictedBy`.
-         * @description Add constraint: new value must already appear in `valuesIn` of the same entry.
-         * @public
-         * @readonly
-         */
-        readonly restrictedBy?: OPTIONAL<RestrictedValue[]>,
-        /**
-         * @summary `contexts`.
-         * @description Add constraint: all ContextAssertions must be satisfied, else not granting add.
-         * @public
-         * @readonly
-         */
-        readonly contexts?: OPTIONAL<ContextAssertion[]>,
-        /**
-         * @summary `classes`.
-         * @description Refinement on object class; if present, `entry` is ignored.
-         * @public
-         * @readonly
-         */
-        readonly classes?: OPTIONAL<Refinement>,
-        /**
-         * @summary `entryMethods`.
-         * @public
-         * @readonly
-         */
-        readonly entryMethods?: OPTIONAL<OBJECT_IDENTIFIER[]>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        entry?: OPTIONAL<NULL>,
+        allUserAttributeTypes?: OPTIONAL<NULL>,
+        attributeType?: OPTIONAL<AttributeType[]>,
+        allAttributeValues?: OPTIONAL<AttributeType[]>,
+        allUserAttributeTypesAndValues?: OPTIONAL<NULL>,
+        attributeValue?: OPTIONAL<AttributeTypeAndValue[]>,
+        selfValue?: OPTIONAL<AttributeType[]>,
+        rangeOfValues?: OPTIONAL<Filter>,
+        maxValueCount?: OPTIONAL<MaxValueCount[]>,
+        maxImmSub?: OPTIONAL<INTEGER>,
+        restrictedBy?: OPTIONAL<RestrictedValue[]>,
+        contexts?: OPTIONAL<ContextAssertion[]>,
+        classes?: OPTIONAL<Refinement>,
+        entryMethods?: OPTIONAL<OBJECT_IDENTIFIER[]>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.entry = entry;
+        this.allUserAttributeTypes = allUserAttributeTypes;
+        this.attributeType = attributeType;
+        this.allAttributeValues = allAttributeValues;
+        this.allUserAttributeTypesAndValues = allUserAttributeTypesAndValues;
+        this.attributeValue = attributeValue;
+        this.selfValue = selfValue;
+        this.rangeOfValues = rangeOfValues;
+        this.maxValueCount = maxValueCount;
+        this.maxImmSub = maxImmSub;
+        this.restrictedBy = restrictedBy;
+        this.contexts = contexts;
+        this.classes = classes;
+        this.entryMethods = entryMethods;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a ProtectedItems

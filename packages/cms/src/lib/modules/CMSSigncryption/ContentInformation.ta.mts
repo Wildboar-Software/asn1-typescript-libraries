@@ -30,28 +30,34 @@ import { Mode, _decode_Mode, _encode_Mode } from "../CMSSigncryption/Mode.ta.mjs
  *
  */
 export class ContentInformation {
+    /**
+     * @summary `mode`.
+     * @description
+     *
+     * OID of a `MODE` object from `ProcessingModes` (ITU-T X.894 | ISO/IEC 24824-4 clause 7.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mode: Mode;
+    /**
+     * @summary `content`.
+     * @description
+     *
+     * Optional content octets; mode-specific presence rules (ITU-T X.894 | ISO/IEC 24824-4 clause 7.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly content?: OPTIONAL<Content>;
+
     constructor(
-        /**
-         * @summary `mode`.
-         * @description
-         *
-         * OID of a `MODE` object from `ProcessingModes` (ITU-T X.894 | ISO/IEC 24824-4 clause 7.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly mode: Mode,
-        /**
-         * @summary `content`.
-         * @description
-         *
-         * Optional content octets; mode-specific presence rules (ITU-T X.894 | ISO/IEC 24824-4 clause 7.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly content?: OPTIONAL<Content>
-    ) {}
+        mode: Mode,
+        content?: OPTIONAL<Content>
+    ) {
+        this.mode = mode;
+        this.content = content;
+    }
 
     /**
      * @summary Restructures an object into a ContentInformation

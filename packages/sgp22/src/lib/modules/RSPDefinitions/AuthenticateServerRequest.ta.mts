@@ -41,67 +41,79 @@ import { CtxParams1, _decode_CtxParams1, _encode_CtxParams1 } from "../RSPDefini
  */
 export
 class AuthenticateServerRequest {
+    /**
+     * @summary `serverSigned1`.
+     * @description
+     * 
+     * Server-signed session binding. SGP.22 v3.1 §5.7.13.
+     * 
+     * @public
+     * @readonly
+     */
+    public readonly serverSigned1: ServerSigned1;
+    /**
+     * @summary `serverSignature1`.
+     * @description
+     * 
+     * Signature over `serverSigned1`, tag `'5F37'`, under the key in
+     * `serverCertificate`. Invalid signature yields `invalidSignature`.
+     * SGP.22 v3.1 §5.7.13.
+     * 
+     * @public
+     * @readonly
+     */
+    public readonly serverSignature1: OCTET_STRING;
+    /**
+     * @summary `euiccCiPKIdToBeUsed`.
+     * @description
+     * 
+     * Which eSIM CA Root CA key the eUICC must use to sign. Chosen by the
+     * server from `euiccCiPKIdListForSigning`. Unknown or unusable yields
+     * `ciPKUnknown`. Not covered by `serverSignature1`. SGP.22 v3.1 §5.6.1
+     * and §5.7.13.
+     * 
+     * @public
+     * @readonly
+     */
+    public readonly euiccCiPKIdToBeUsed: OCTET_STRING;
+    /**
+     * @summary `serverCertificate`.
+     * @description
+     * 
+     * CERT.DPauth.SIG or CERT.DSauth.SIG. Any other role OID is
+     * `invalidOid`. An invalid chain is `invalidCertificate`. SGP.22 v3.1
+     * §5.7.13.
+     * 
+     * @public
+     * @readonly
+     */
+    public readonly serverCertificate: Certificate;
+    /**
+     * @summary `ctxParams1`.
+     * @description
+     * 
+     * MatchingID and DeviceInfo for this session. The eUICC copies them
+     * into `euiccSigned1` so the server sees the same context under the
+     * eUICC signature. SGP.22 v3.1 §5.7.13.
+     * 
+     * @public
+     * @readonly
+     */
+    public readonly ctxParams1: CtxParams1;
+
     constructor (
-        /**
-         * @summary `serverSigned1`.
-         * @description
-         * 
-         * Server-signed session binding. SGP.22 v3.1 §5.7.13.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly serverSigned1: ServerSigned1,
-        /**
-         * @summary `serverSignature1`.
-         * @description
-         * 
-         * Signature over `serverSigned1`, tag `'5F37'`, under the key in
-         * `serverCertificate`. Invalid signature yields `invalidSignature`.
-         * SGP.22 v3.1 §5.7.13.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly serverSignature1: OCTET_STRING,
-        /**
-         * @summary `euiccCiPKIdToBeUsed`.
-         * @description
-         * 
-         * Which eSIM CA Root CA key the eUICC must use to sign. Chosen by the
-         * server from `euiccCiPKIdListForSigning`. Unknown or unusable yields
-         * `ciPKUnknown`. Not covered by `serverSignature1`. SGP.22 v3.1 §5.6.1
-         * and §5.7.13.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly euiccCiPKIdToBeUsed: OCTET_STRING,
-        /**
-         * @summary `serverCertificate`.
-         * @description
-         * 
-         * CERT.DPauth.SIG or CERT.DSauth.SIG. Any other role OID is
-         * `invalidOid`. An invalid chain is `invalidCertificate`. SGP.22 v3.1
-         * §5.7.13.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly serverCertificate: Certificate,
-        /**
-         * @summary `ctxParams1`.
-         * @description
-         * 
-         * MatchingID and DeviceInfo for this session. The eUICC copies them
-         * into `euiccSigned1` so the server sees the same context under the
-         * eUICC signature. SGP.22 v3.1 §5.7.13.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly ctxParams1: CtxParams1
-    ) {}
+        serverSigned1: ServerSigned1,
+        serverSignature1: OCTET_STRING,
+        euiccCiPKIdToBeUsed: OCTET_STRING,
+        serverCertificate: Certificate,
+        ctxParams1: CtxParams1
+    ) {
+        this.serverSigned1 = serverSigned1;
+        this.serverSignature1 = serverSignature1;
+        this.euiccCiPKIdToBeUsed = euiccCiPKIdToBeUsed;
+        this.serverCertificate = serverCertificate;
+        this.ctxParams1 = ctxParams1;
+    }
 
     /**
      * @summary Restructures an object into a AuthenticateServerRequest

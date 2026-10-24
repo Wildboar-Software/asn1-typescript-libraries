@@ -28,20 +28,26 @@ import {
  *
  */
 export class ConvertPtoPToMulticastReply_Item_success {
+    /**
+     * @summary `mpXC`.
+     * @public
+     * @readonly
+     */
+    public readonly mpXC: ObjectInstance;
+    /**
+     * @summary `xC`.
+     * @public
+     * @readonly
+     */
+    public readonly xC: ObjectInstance;
+
     constructor(
-        /**
-         * @summary `mpXC`.
-         * @public
-         * @readonly
-         */
-        readonly mpXC: ObjectInstance,
-        /**
-         * @summary `xC`.
-         * @public
-         * @readonly
-         */
-        readonly xC: ObjectInstance
-    ) {}
+        mpXC: ObjectInstance,
+        xC: ObjectInstance
+    ) {
+        this.mpXC = mpXC;
+        this.xC = xC;
+    }
 
     /**
      * @summary Restructures an object into a ConvertPtoPToMulticastReply_Item_success

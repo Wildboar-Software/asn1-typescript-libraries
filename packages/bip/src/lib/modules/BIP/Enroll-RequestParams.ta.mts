@@ -76,110 +76,130 @@ import {
  *
  */
 export class Enroll_RequestParams {
+  /**
+   * @summary `originalBSPHandle`.
+   * @description
+   *
+   * Attach-session handle on the hosting (slave) endpoint.
+   * BioAPI `BSPHandle` is rewritten via clauses 24 and 26.
+   * X.1083 §16.36.5.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly originalBSPHandle: BioAPI_HANDLE;
+  /**
+   * @summary `purpose`.
+   * @description
+   *
+   * Intended purpose of the enrolled template, from BioAPI
+   * `Purpose`. X.1083 §16.36.5.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly purpose: BioAPI_BIR_PURPOSE;
+  /**
+   * @summary `subtype`.
+   * @description
+   *
+   * Requested BIR subtype, from BioAPI `Subtype`. X.1083
+   * §16.36.5.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly subtype: BioAPI_BIR_SUBTYPE;
+  /**
+   * @summary `outputFormat`.
+   * @description
+   *
+   * Requested biometric-data format of the new template. C
+   * `NULL` ↔ absent (clause 19). X.1083 §16.36.5.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly outputFormat: OPTIONAL<BioAPI_BIR_BIOMETRIC_DATA_FORMAT>;
+  /**
+   * @summary `referenceTemplate`.
+   * @description
+   *
+   * Optional existing reference template to update. C `NULL`
+   * ↔ absent (clause 19). X.1083 §16.36.5.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly referenceTemplate: OPTIONAL<BioAPI_INPUT_BIR>;
+  /**
+   * @summary `payload`.
+   * @description
+   *
+   * Optional payload to embed in the new template. C `NULL`
+   * ↔ absent (clause 19). X.1083 §16.36.5.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly payload: OPTIONAL<BioAPI_DATA>;
+  /**
+   * @summary `timeout`.
+   * @description
+   *
+   * Enrollment timeout from BioAPI `Timeout`. X.1083
+   * §16.36.5.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly timeout: SignedInt;
+  /**
+   * @summary `no_auditData`.
+   * @description
+   *
+   * `TRUE` if the caller passed a NULL `AuditData` pointer
+   * (do not return an audit BIR). X.1083 §16.36.5,
+   * clause 21.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly no_auditData: BOOLEAN;
+  /**
+   * @summary `no_templateUuid`.
+   * @description
+   *
+   * `TRUE` if the caller passed a NULL `TemplateUuid`
+   * pointer (do not return a template UUID). X.1083
+   * §16.36.5, clause 21.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly no_templateUuid: BOOLEAN;
+
   constructor(
-    /**
-     * @summary `originalBSPHandle`.
-     * @description
-     *
-     * Attach-session handle on the hosting (slave) endpoint.
-     * BioAPI `BSPHandle` is rewritten via clauses 24 and 26.
-     * X.1083 §16.36.5.
-     *
-     * @public
-     * @readonly
-     */
-    readonly originalBSPHandle: BioAPI_HANDLE,
-    /**
-     * @summary `purpose`.
-     * @description
-     *
-     * Intended purpose of the enrolled template, from BioAPI
-     * `Purpose`. X.1083 §16.36.5.
-     *
-     * @public
-     * @readonly
-     */
-    readonly purpose: BioAPI_BIR_PURPOSE,
-    /**
-     * @summary `subtype`.
-     * @description
-     *
-     * Requested BIR subtype, from BioAPI `Subtype`. X.1083
-     * §16.36.5.
-     *
-     * @public
-     * @readonly
-     */
-    readonly subtype: BioAPI_BIR_SUBTYPE,
-    /**
-     * @summary `outputFormat`.
-     * @description
-     *
-     * Requested biometric-data format of the new template. C
-     * `NULL` ↔ absent (clause 19). X.1083 §16.36.5.
-     *
-     * @public
-     * @readonly
-     */
-    readonly outputFormat: OPTIONAL<BioAPI_BIR_BIOMETRIC_DATA_FORMAT>,
-    /**
-     * @summary `referenceTemplate`.
-     * @description
-     *
-     * Optional existing reference template to update. C `NULL`
-     * ↔ absent (clause 19). X.1083 §16.36.5.
-     *
-     * @public
-     * @readonly
-     */
-    readonly referenceTemplate: OPTIONAL<BioAPI_INPUT_BIR>,
-    /**
-     * @summary `payload`.
-     * @description
-     *
-     * Optional payload to embed in the new template. C `NULL`
-     * ↔ absent (clause 19). X.1083 §16.36.5.
-     *
-     * @public
-     * @readonly
-     */
-    readonly payload: OPTIONAL<BioAPI_DATA>,
-    /**
-     * @summary `timeout`.
-     * @description
-     *
-     * Enrollment timeout from BioAPI `Timeout`. X.1083
-     * §16.36.5.
-     *
-     * @public
-     * @readonly
-     */
-    readonly timeout: SignedInt,
-    /**
-     * @summary `no_auditData`.
-     * @description
-     *
-     * `TRUE` if the caller passed a NULL `AuditData` pointer
-     * (do not return an audit BIR). X.1083 §16.36.5,
-     * clause 21.
-     *
-     * @public
-     * @readonly
-     */
-    readonly no_auditData: BOOLEAN,
-    /**
-     * @summary `no_templateUuid`.
-     * @description
-     *
-     * `TRUE` if the caller passed a NULL `TemplateUuid`
-     * pointer (do not return a template UUID). X.1083
-     * §16.36.5, clause 21.
-     *
-     * @public
-     * @readonly
-     */
-    readonly no_templateUuid: BOOLEAN
-  ) {}
+    originalBSPHandle: BioAPI_HANDLE,
+    purpose: BioAPI_BIR_PURPOSE,
+    subtype: BioAPI_BIR_SUBTYPE,
+    outputFormat: OPTIONAL<BioAPI_BIR_BIOMETRIC_DATA_FORMAT>,
+    referenceTemplate: OPTIONAL<BioAPI_INPUT_BIR>,
+    payload: OPTIONAL<BioAPI_DATA>,
+    timeout: SignedInt,
+    no_auditData: BOOLEAN,
+    no_templateUuid: BOOLEAN
+  ) {
+    this.originalBSPHandle = originalBSPHandle;
+    this.purpose = purpose;
+    this.subtype = subtype;
+    this.outputFormat = outputFormat;
+    this.referenceTemplate = referenceTemplate;
+    this.payload = payload;
+    this.timeout = timeout;
+    this.no_auditData = no_auditData;
+    this.no_templateUuid = no_templateUuid;
+  }
 
   /**
    * @summary Restructures an object into a Enroll_RequestParams

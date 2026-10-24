@@ -39,30 +39,36 @@ import {
  *
  */
 export class MapsToPair {
+    /**
+     * @summary `systemsMgtOperation`.
+     * @description
+     *
+     * GET, REPLACE, ADD, REMOVE, CREATE, DELETE, ACTION, or
+     * NOTIFICATION, with labels and optional parameters. ITU-T
+     * Rec. X.725 (11/95) A.2.3.5.
+     * @public
+     * @readonly
+     */
+    public readonly systemsMgtOperation: SystemsMgtOperation;
+    /**
+     * @summary `roleOrRelationshipObject`.
+     * @description
+     *
+     * Target or source: the managed object fulfilling a named
+     * role, or the relationship object. ITU-T Rec. X.725 (11/95)
+     * A.2.3.5.
+     * @public
+     * @readonly
+     */
+    public readonly roleOrRelationshipObject: RoleOrRelationshipObject;
+
     constructor(
-        /**
-         * @summary `systemsMgtOperation`.
-         * @description
-         *
-         * GET, REPLACE, ADD, REMOVE, CREATE, DELETE, ACTION, or
-         * NOTIFICATION, with labels and optional parameters. ITU-T
-         * Rec. X.725 (11/95) A.2.3.5.
-         * @public
-         * @readonly
-         */
-        readonly systemsMgtOperation: SystemsMgtOperation,
-        /**
-         * @summary `roleOrRelationshipObject`.
-         * @description
-         *
-         * Target or source: the managed object fulfilling a named
-         * role, or the relationship object. ITU-T Rec. X.725 (11/95)
-         * A.2.3.5.
-         * @public
-         * @readonly
-         */
-        readonly roleOrRelationshipObject: RoleOrRelationshipObject
-    ) {}
+        systemsMgtOperation: SystemsMgtOperation,
+        roleOrRelationshipObject: RoleOrRelationshipObject
+    ) {
+        this.systemsMgtOperation = systemsMgtOperation;
+        this.roleOrRelationshipObject = roleOrRelationshipObject;
+    }
 
     /**
      * @summary Restructures an object into a MapsToPair

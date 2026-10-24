@@ -52,44 +52,58 @@ import {
  *
  */
 export class OneAsymmetricKey {
+    /**
+     * @summary `version`.
+     * @public
+     * @readonly
+     */
+    public readonly version: Version;
+    /**
+     * @summary `privateKeyAlgorithm`.
+     * @public
+     * @readonly
+     */
+    public readonly privateKeyAlgorithm: PrivateKeyAlgorithmIdentifier;
+    /**
+     * @summary `privateKey`.
+     * @public
+     * @readonly
+     */
+    public readonly privateKey: PrivateKey;
+    /**
+     * @summary `attributes`.
+     * @public
+     * @readonly
+     */
+    public readonly attributes?: OPTIONAL<Attributes>;
+    /**
+     * @summary `publicKey`.
+     * @public
+     * @readonly
+     */
+    public readonly publicKey?: OPTIONAL<PublicKey>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `version`.
-         * @public
-         * @readonly
-         */
-        readonly version: Version,
-        /**
-         * @summary `privateKeyAlgorithm`.
-         * @public
-         * @readonly
-         */
-        readonly privateKeyAlgorithm: PrivateKeyAlgorithmIdentifier,
-        /**
-         * @summary `privateKey`.
-         * @public
-         * @readonly
-         */
-        readonly privateKey: PrivateKey,
-        /**
-         * @summary `attributes`.
-         * @public
-         * @readonly
-         */
-        readonly attributes?: OPTIONAL<Attributes>,
-        /**
-         * @summary `publicKey`.
-         * @public
-         * @readonly
-         */
-        readonly publicKey?: OPTIONAL<PublicKey>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        version: Version,
+        privateKeyAlgorithm: PrivateKeyAlgorithmIdentifier,
+        privateKey: PrivateKey,
+        attributes?: OPTIONAL<Attributes>,
+        publicKey?: OPTIONAL<PublicKey>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.version = version;
+        this.privateKeyAlgorithm = privateKeyAlgorithm;
+        this.privateKey = privateKey;
+        this.attributes = attributes;
+        this.publicKey = publicKey;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a OneAsymmetricKey

@@ -41,30 +41,36 @@ import {
  *
  */
 export class DbGetNextBIR_ResponseParams {
+  /**
+   * @summary `retrievedBIR`.
+   * @description
+   *
+   * Next BIR handle written to C `RetrievedBIR` (cl.20, §15.12).
+   * Required on a conforming response (`X.1083 §16.50`, Table 110).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly retrievedBIR: BioAPI_BIR_HANDLE;
+  /**
+   * @summary `birUuid`.
+   * @description
+   *
+   * Next-BIR UUID written to C `BirUuid` (cl.20, §15.58). Required on
+   * a conforming response (`X.1083 §16.50`, Table 110).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly birUuid: BioAPI_UUID;
+
   constructor(
-    /**
-     * @summary `retrievedBIR`.
-     * @description
-     *
-     * Next BIR handle written to C `RetrievedBIR` (cl.20, §15.12).
-     * Required on a conforming response (`X.1083 §16.50`, Table 110).
-     *
-     * @public
-     * @readonly
-     */
-    readonly retrievedBIR: BioAPI_BIR_HANDLE,
-    /**
-     * @summary `birUuid`.
-     * @description
-     *
-     * Next-BIR UUID written to C `BirUuid` (cl.20, §15.58). Required on
-     * a conforming response (`X.1083 §16.50`, Table 110).
-     *
-     * @public
-     * @readonly
-     */
-    readonly birUuid: BioAPI_UUID
-  ) {}
+    retrievedBIR: BioAPI_BIR_HANDLE,
+    birUuid: BioAPI_UUID
+  ) {
+    this.retrievedBIR = retrievedBIR;
+    this.birUuid = birUuid;
+  }
 
   /**
    * @summary Restructures an object into a DbGetNextBIR_ResponseParams

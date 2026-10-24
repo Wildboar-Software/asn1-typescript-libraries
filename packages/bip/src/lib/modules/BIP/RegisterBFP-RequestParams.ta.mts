@@ -42,33 +42,39 @@ import {
  *
  */
 export class RegisterBFP_RequestParams {
+  /**
+   * @summary `bfpSchema`.
+   * @description
+   *
+   * Schema of the BFP to register, from C `BFPSchema`. Not OPTIONAL:
+   * a NULL pointer is unconvertible (cl.19, §15.5)
+   * (`X.1083 §16.61`, Table 120).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly bfpSchema: BioAPI_BFP_SCHEMA;
+  /**
+   * @summary `update`.
+   * @description
+   *
+   * From C `Update` (§15.18). FALSE with an existing local
+   * `bfpProductUuid` row:
+   * `BioAPIERR_COMPONENT_ALREADY_REGISTERED`. TRUE: delete that
+   * row then insert (`X.1083 §16.61.3.1`).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly update: BOOLEAN;
+
   constructor(
-    /**
-     * @summary `bfpSchema`.
-     * @description
-     *
-     * Schema of the BFP to register, from C `BFPSchema`. Not OPTIONAL:
-     * a NULL pointer is unconvertible (cl.19, §15.5)
-     * (`X.1083 §16.61`, Table 120).
-     *
-     * @public
-     * @readonly
-     */
-    readonly bfpSchema: BioAPI_BFP_SCHEMA,
-    /**
-     * @summary `update`.
-     * @description
-     *
-     * From C `Update` (§15.18). FALSE with an existing local
-     * `bfpProductUuid` row:
-     * `BioAPIERR_COMPONENT_ALREADY_REGISTERED`. TRUE: delete that
-     * row then insert (`X.1083 §16.61.3.1`).
-     *
-     * @public
-     * @readonly
-     */
-    readonly update: BOOLEAN
-  ) {}
+    bfpSchema: BioAPI_BFP_SCHEMA,
+    update: BOOLEAN
+  ) {
+    this.bfpSchema = bfpSchema;
+    this.update = update;
+  }
 
   /**
    * @summary Restructures an object into a RegisterBFP_RequestParams

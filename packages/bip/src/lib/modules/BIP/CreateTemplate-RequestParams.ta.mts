@@ -57,77 +57,91 @@ import {
  *
  */
 export class CreateTemplate_RequestParams {
+  /**
+   * @summary `originalBSPHandle`.
+   * @description
+   *
+   * Attach-session handle on the hosting (slave) endpoint.
+   * BioAPI `BSPHandle` is rewritten via clauses 24 and 26.
+   * X.1083 §16.31.5.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly originalBSPHandle: BioAPI_HANDLE;
+  /**
+   * @summary `capturedBIR`.
+   * @description
+   *
+   * Input BIR from which the template is created. C `NULL`
+   * is unconvertible (clause 19). X.1083 §16.31.5.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly capturedBIR: BioAPI_INPUT_BIR;
+  /**
+   * @summary `referenceTemplate`.
+   * @description
+   *
+   * Optional existing reference template to update. C `NULL`
+   * ↔ absent (clause 19). X.1083 §16.31.5.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly referenceTemplate: OPTIONAL<BioAPI_INPUT_BIR>;
+  /**
+   * @summary `outputFormat`.
+   * @description
+   *
+   * Requested biometric-data format of the new template. C
+   * `NULL` ↔ absent (clause 19). X.1083 §16.31.5.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly outputFormat: OPTIONAL<BioAPI_BIR_BIOMETRIC_DATA_FORMAT>;
+  /**
+   * @summary `payload`.
+   * @description
+   *
+   * Optional payload to embed in the new template. C `NULL`
+   * ↔ absent (clause 19). X.1083 §16.31.5.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly payload: OPTIONAL<BioAPI_DATA>;
+  /**
+   * @summary `no_templateUuid`.
+   * @description
+   *
+   * `TRUE` if the caller passed a NULL `TemplateUuid`
+   * pointer (do not return a template UUID). `FALSE`
+   * requests `templateUuid` on the response. X.1083
+   * §16.31.5, clause 21.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly no_templateUuid: BOOLEAN;
+
   constructor(
-    /**
-     * @summary `originalBSPHandle`.
-     * @description
-     *
-     * Attach-session handle on the hosting (slave) endpoint.
-     * BioAPI `BSPHandle` is rewritten via clauses 24 and 26.
-     * X.1083 §16.31.5.
-     *
-     * @public
-     * @readonly
-     */
-    readonly originalBSPHandle: BioAPI_HANDLE,
-    /**
-     * @summary `capturedBIR`.
-     * @description
-     *
-     * Input BIR from which the template is created. C `NULL`
-     * is unconvertible (clause 19). X.1083 §16.31.5.
-     *
-     * @public
-     * @readonly
-     */
-    readonly capturedBIR: BioAPI_INPUT_BIR,
-    /**
-     * @summary `referenceTemplate`.
-     * @description
-     *
-     * Optional existing reference template to update. C `NULL`
-     * ↔ absent (clause 19). X.1083 §16.31.5.
-     *
-     * @public
-     * @readonly
-     */
-    readonly referenceTemplate: OPTIONAL<BioAPI_INPUT_BIR>,
-    /**
-     * @summary `outputFormat`.
-     * @description
-     *
-     * Requested biometric-data format of the new template. C
-     * `NULL` ↔ absent (clause 19). X.1083 §16.31.5.
-     *
-     * @public
-     * @readonly
-     */
-    readonly outputFormat: OPTIONAL<BioAPI_BIR_BIOMETRIC_DATA_FORMAT>,
-    /**
-     * @summary `payload`.
-     * @description
-     *
-     * Optional payload to embed in the new template. C `NULL`
-     * ↔ absent (clause 19). X.1083 §16.31.5.
-     *
-     * @public
-     * @readonly
-     */
-    readonly payload: OPTIONAL<BioAPI_DATA>,
-    /**
-     * @summary `no_templateUuid`.
-     * @description
-     *
-     * `TRUE` if the caller passed a NULL `TemplateUuid`
-     * pointer (do not return a template UUID). `FALSE`
-     * requests `templateUuid` on the response. X.1083
-     * §16.31.5, clause 21.
-     *
-     * @public
-     * @readonly
-     */
-    readonly no_templateUuid: BOOLEAN
-  ) {}
+    originalBSPHandle: BioAPI_HANDLE,
+    capturedBIR: BioAPI_INPUT_BIR,
+    referenceTemplate: OPTIONAL<BioAPI_INPUT_BIR>,
+    outputFormat: OPTIONAL<BioAPI_BIR_BIOMETRIC_DATA_FORMAT>,
+    payload: OPTIONAL<BioAPI_DATA>,
+    no_templateUuid: BOOLEAN
+  ) {
+    this.originalBSPHandle = originalBSPHandle;
+    this.capturedBIR = capturedBIR;
+    this.referenceTemplate = referenceTemplate;
+    this.outputFormat = outputFormat;
+    this.payload = payload;
+    this.no_templateUuid = no_templateUuid;
+  }
 
   /**
    * @summary Restructures an object into a CreateTemplate_RequestParams

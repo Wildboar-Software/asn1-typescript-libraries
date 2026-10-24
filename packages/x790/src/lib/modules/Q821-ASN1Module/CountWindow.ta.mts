@@ -32,20 +32,26 @@ import {
  */
 export
 class CountWindow {
+    /**
+     * @summary `count`.
+     * @public
+     * @readonly
+     */
+    public readonly count: INTEGER;
+    /**
+     * @summary `window`.
+     * @public
+     * @readonly
+     */
+    public readonly window: TimeInterval;
+
     constructor (
-        /**
-         * @summary `count`.
-         * @public
-         * @readonly
-         */
-        readonly count: INTEGER,
-        /**
-         * @summary `window`.
-         * @public
-         * @readonly
-         */
-        readonly window: TimeInterval
-    ) {}
+        count: INTEGER,
+        window: TimeInterval
+    ) {
+        this.count = count;
+        this.window = window;
+    }
 
     /**
      * @summary Restructures an object into a CountWindow

@@ -41,42 +41,50 @@ import { ACBioContentInformation, _decode_ACBioContentInformation, _encode_ACBio
  */
 export
 class TTPResponseRefOnTTPforCenterModel {
+    /**
+     * @summary `templateData`.
+     * @description
+     *
+     * Reference template as `XtsmTemplate` (X.1089 biometric
+     * certificate). X.1084 §11.3, §11.5.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly templateData: XtsmTemplate;
+    /**
+     * @summary `digitalSignature`.
+     * @description
+     *
+     * CMS `SignedData` (X9.84) over the biometric process or payload.
+     * Assures integrity of that party's processing. X.1084 §11.1 item 4.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly digitalSignature: SignedData;
+    /**
+     * @summary `aCforBioOnTTP`.
+     * @description
+     *
+     * ISO/IEC 24761 ACBio for the TTP process. Optional except in
+     * `BDforRefOnTTPforLocalModel`, where Annex A requires it. X.1084
+     * §11.5.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly aCforBioOnTTP?: OPTIONAL<ACBioContentInformation>;
+
     constructor (
-        /**
-         * @summary `templateData`.
-         * @description
-         *
-         * Reference template as `XtsmTemplate` (X.1089 biometric
-         * certificate). X.1084 §11.3, §11.5.
-         *
-         * @public
-         * @readonly
-         */
-        readonly templateData: XtsmTemplate,
-        /**
-         * @summary `digitalSignature`.
-         * @description
-         *
-         * CMS `SignedData` (X9.84) over the biometric process or payload.
-         * Assures integrity of that party's processing. X.1084 §11.1 item 4.
-         *
-         * @public
-         * @readonly
-         */
-        readonly digitalSignature: SignedData,
-        /**
-         * @summary `aCforBioOnTTP`.
-         * @description
-         *
-         * ISO/IEC 24761 ACBio for the TTP process. Optional except in
-         * `BDforRefOnTTPforLocalModel`, where Annex A requires it. X.1084
-         * §11.5.
-         *
-         * @public
-         * @readonly
-         */
-        readonly aCforBioOnTTP?: OPTIONAL<ACBioContentInformation>
-    ) {}
+        templateData: XtsmTemplate,
+        digitalSignature: SignedData,
+        aCforBioOnTTP?: OPTIONAL<ACBioContentInformation>
+    ) {
+        this.templateData = templateData;
+        this.digitalSignature = digitalSignature;
+        this.aCforBioOnTTP = aCforBioOnTTP;
+    }
 
     /**
      * @summary Restructures an object into a TTPResponseRefOnTTPforCenterModel

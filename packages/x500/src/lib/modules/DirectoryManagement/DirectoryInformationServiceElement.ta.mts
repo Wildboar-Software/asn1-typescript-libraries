@@ -44,40 +44,48 @@ import {
  *
  */
 export class DirectoryInformationServiceElement {
+    /**
+     * @summary `operationType`.
+     * @description
+     *
+     * BIT STRING of DAP ops; multiple bits may be set. Absent: this
+     * element does not constrain by operation.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly operationType?: OPTIONAL<DirectoryInformationServiceElement_operationType>;
+    /**
+     * @summary `attributeType`.
+     * @description
+     *
+     * Absent: this element does not constrain by attribute type.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly attributeType?: OPTIONAL<AttributeType>;
+    /**
+     * @summary `attributeValue`.
+     * @description
+     *
+     * Tagged [0] (open type). Typically paired with `attributeType`.
+     * Absent: no value constraint.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly attributeValue?: OPTIONAL<AttributeValue>;
+
     constructor(
-        /**
-         * @summary `operationType`.
-         * @description
-         *
-         * BIT STRING of DAP ops; multiple bits may be set. Absent: this
-         * element does not constrain by operation.
-         *
-         * @public
-         * @readonly
-         */
-        readonly operationType?: OPTIONAL<DirectoryInformationServiceElement_operationType>,
-        /**
-         * @summary `attributeType`.
-         * @description
-         *
-         * Absent: this element does not constrain by attribute type.
-         *
-         * @public
-         * @readonly
-         */
-        readonly attributeType?: OPTIONAL<AttributeType>,
-        /**
-         * @summary `attributeValue`.
-         * @description
-         *
-         * Tagged [0] (open type). Typically paired with `attributeType`.
-         * Absent: no value constraint.
-         *
-         * @public
-         * @readonly
-         */
-        readonly attributeValue?: OPTIONAL<AttributeValue>
-    ) {}
+        operationType?: OPTIONAL<DirectoryInformationServiceElement_operationType>,
+        attributeType?: OPTIONAL<AttributeType>,
+        attributeValue?: OPTIONAL<AttributeValue>
+    ) {
+        this.operationType = operationType;
+        this.attributeType = attributeType;
+        this.attributeValue = attributeValue;
+    }
 
     /**
      * @summary Restructures an object into a DirectoryInformationServiceElement

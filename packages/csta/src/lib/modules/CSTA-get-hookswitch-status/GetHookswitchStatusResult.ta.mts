@@ -35,27 +35,33 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class GetHookswitchStatusResult {
+    /**
+     * @summary `hookswitchStatusList`.
+     * @description
+     *
+     * One entry per queried hookswitch.
+     * @public
+     * @readonly
+     */
+    public readonly hookswitchStatusList: HookswitchStatusList;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `hookswitchStatusList`.
-         * @description
-         *
-         * One entry per queried hookswitch.
-         * @public
-         * @readonly
-         */
-        readonly hookswitchStatusList: HookswitchStatusList,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        hookswitchStatusList: HookswitchStatusList,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.hookswitchStatusList = hookswitchStatusList;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a GetHookswitchStatusResult

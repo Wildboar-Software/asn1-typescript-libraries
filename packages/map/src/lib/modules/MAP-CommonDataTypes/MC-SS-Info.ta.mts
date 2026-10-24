@@ -39,68 +39,82 @@ import { SS_Code, _decode_SS_Code, _encode_SS_Code } from "../MAP-SS-Code/SS-Cod
  */
 export
 class MC_SS_Info {
+    /**
+     * @summary `ss_Code`.
+     * @description
+     *
+     * SS-Code of the Multicall supplementary service. (3GPP TS 29.002
+     * V19.1.0 clause 7.6.4.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ss_Code: SS_Code;
+    /**
+     * @summary `ss_Status`.
+     * @description
+     *
+     * State of the Multicall SS as in 3GPP TS 23.011. (3GPP TS 29.002
+     * V19.1.0 clause 7.6.3.17).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ss_Status: Ext_SS_Status;
+    /**
+     * @summary `nbrSB`.
+     * @description
+     *
+     * Maximum number of multicall bearers (2..7). (3GPP TS 29.002 V19.1.0
+     * clause 17.7.8).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly nbrSB: MaxMC_Bearers;
+    /**
+     * @summary `nbrUser`.
+     * @description
+     *
+     * Number of multicall bearers for the user (1..7). (3GPP TS 29.002
+     * V19.1.0 clauses 17.7.8 and 7.6.2.52).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly nbrUser: MC_Bearers;
+    /**
+     * @summary `extensionContainer`.
+     * @description
+     *
+     * Private extensions. (3GPP TS 29.002 V19.1.0 clause 17.7.8).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `ss_Code`.
-         * @description
-         *
-         * SS-Code of the Multicall supplementary service. (3GPP TS 29.002
-         * V19.1.0 clause 7.6.4.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly ss_Code: SS_Code,
-        /**
-         * @summary `ss_Status`.
-         * @description
-         *
-         * State of the Multicall SS as in 3GPP TS 23.011. (3GPP TS 29.002
-         * V19.1.0 clause 7.6.3.17).
-         *
-         * @public
-         * @readonly
-         */
-        readonly ss_Status: Ext_SS_Status,
-        /**
-         * @summary `nbrSB`.
-         * @description
-         *
-         * Maximum number of multicall bearers (2..7). (3GPP TS 29.002 V19.1.0
-         * clause 17.7.8).
-         *
-         * @public
-         * @readonly
-         */
-        readonly nbrSB: MaxMC_Bearers,
-        /**
-         * @summary `nbrUser`.
-         * @description
-         *
-         * Number of multicall bearers for the user (1..7). (3GPP TS 29.002
-         * V19.1.0 clauses 17.7.8 and 7.6.2.52).
-         *
-         * @public
-         * @readonly
-         */
-        readonly nbrUser: MC_Bearers,
-        /**
-         * @summary `extensionContainer`.
-         * @description
-         *
-         * Private extensions. (3GPP TS 29.002 V19.1.0 clause 17.7.8).
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        ss_Code: SS_Code,
+        ss_Status: Ext_SS_Status,
+        nbrSB: MaxMC_Bearers,
+        nbrUser: MC_Bearers,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.ss_Code = ss_Code;
+        this.ss_Status = ss_Status;
+        this.nbrSB = nbrSB;
+        this.nbrUser = nbrUser;
+        this.extensionContainer = extensionContainer;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a MC_SS_Info

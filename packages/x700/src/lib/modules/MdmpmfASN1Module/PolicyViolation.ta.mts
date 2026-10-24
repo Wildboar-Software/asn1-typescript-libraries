@@ -36,30 +36,36 @@ import {
  *
  */
 export class PolicyViolation {
+    /**
+     * @summary `violatorName`.
+     * @description
+     *
+     * Object that violated the policy. ITU-T Rec. X.749 (08/97)
+     * [§8.3.1](https://www.itu.int/rec/T-REC-X.749-199708-I),
+     * §8.5.20.
+     * @public
+     * @readonly
+     */
+    public readonly violatorName: ObjectInstance;
+    /**
+     * @summary `violatedPolicy`.
+     * @description
+     *
+     * Policy that evaluated to false. ITU-T Rec. X.749 (08/97)
+     * [§8.3.1](https://www.itu.int/rec/T-REC-X.749-199708-I),
+     * §8.5.19.
+     * @public
+     * @readonly
+     */
+    public readonly violatedPolicy: ObjectInstance;
+
     constructor(
-        /**
-         * @summary `violatorName`.
-         * @description
-         *
-         * Object that violated the policy. ITU-T Rec. X.749 (08/97)
-         * [§8.3.1](https://www.itu.int/rec/T-REC-X.749-199708-I),
-         * §8.5.20.
-         * @public
-         * @readonly
-         */
-        readonly violatorName: ObjectInstance,
-        /**
-         * @summary `violatedPolicy`.
-         * @description
-         *
-         * Policy that evaluated to false. ITU-T Rec. X.749 (08/97)
-         * [§8.3.1](https://www.itu.int/rec/T-REC-X.749-199708-I),
-         * §8.5.19.
-         * @public
-         * @readonly
-         */
-        readonly violatedPolicy: ObjectInstance
-    ) {}
+        violatorName: ObjectInstance,
+        violatedPolicy: ObjectInstance
+    ) {
+        this.violatorName = violatorName;
+        this.violatedPolicy = violatedPolicy;
+    }
 
     /**
      * @summary Restructures an object into a PolicyViolation

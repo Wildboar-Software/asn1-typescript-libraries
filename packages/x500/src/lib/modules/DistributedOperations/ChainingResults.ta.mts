@@ -47,58 +47,70 @@ import {
  *
  */
 export class ChainingResults {
+    /**
+     * @summary `info`.
+     * @description
+     *
+     * Unconstrained DMD-private DomainInfo. Opaque to the spec.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly info?: OPTIONAL<DomainInfo>;
+    /**
+     * @summary `crossReferences`.
+     * @description
+     *
+     * Shall be absent unless the request had `returnCrossRefs` TRUE.
+     * SEQUENCE SIZE (1..MAX); order = order DSAs appended them. Cannot
+     * be empty if present. Admin policy may refuse to add.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly crossReferences?: OPTIONAL<CrossReference[]>;
+    /**
+     * @summary `securityParameters`.
+     * @description
+     *
+     * DEFAULT `{}`. Absence ≡ empty set.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly securityParameters?: OPTIONAL<SecurityParameters>;
+    /**
+     * @summary `alreadySearched`.
+     * @description
+     *
+     * Subordinate RDNSequences under `targetObject` already processed
+     * in a chained Search. Same Exclusions rules (relative, SIZE
+     * (1..MAX)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly alreadySearched?: OPTIONAL<Exclusions>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `info`.
-         * @description
-         *
-         * Unconstrained DMD-private DomainInfo. Opaque to the spec.
-         *
-         * @public
-         * @readonly
-         */
-        readonly info?: OPTIONAL<DomainInfo>,
-        /**
-         * @summary `crossReferences`.
-         * @description
-         *
-         * Shall be absent unless the request had `returnCrossRefs` TRUE.
-         * SEQUENCE SIZE (1..MAX); order = order DSAs appended them. Cannot
-         * be empty if present. Admin policy may refuse to add.
-         *
-         * @public
-         * @readonly
-         */
-        readonly crossReferences?: OPTIONAL<CrossReference[]>,
-        /**
-         * @summary `securityParameters`.
-         * @description
-         *
-         * DEFAULT `{}`. Absence ≡ empty set.
-         *
-         * @public
-         * @readonly
-         */
-        readonly securityParameters?: OPTIONAL<SecurityParameters>,
-        /**
-         * @summary `alreadySearched`.
-         * @description
-         *
-         * Subordinate RDNSequences under `targetObject` already processed
-         * in a chained Search. Same Exclusions rules (relative, SIZE
-         * (1..MAX)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly alreadySearched?: OPTIONAL<Exclusions>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        info?: OPTIONAL<DomainInfo>,
+        crossReferences?: OPTIONAL<CrossReference[]>,
+        securityParameters?: OPTIONAL<SecurityParameters>,
+        alreadySearched?: OPTIONAL<Exclusions>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.info = info;
+        this.crossReferences = crossReferences;
+        this.securityParameters = securityParameters;
+        this.alreadySearched = alreadySearched;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a ChainingResults

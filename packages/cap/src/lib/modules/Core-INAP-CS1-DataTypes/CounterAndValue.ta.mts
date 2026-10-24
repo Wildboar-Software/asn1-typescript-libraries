@@ -31,20 +31,26 @@ import { Integer4, _decode_Integer4, _encode_Integer4 } from "../Core-INAP-CS1-D
  */
 export
 class CounterAndValue {
+    /**
+     * @summary `counterID`.
+     * @public
+     * @readonly
+     */
+    public readonly counterID: CounterID;
+    /**
+     * @summary `counterValue`.
+     * @public
+     * @readonly
+     */
+    public readonly counterValue: Integer4;
+
     constructor (
-        /**
-         * @summary `counterID`.
-         * @public
-         * @readonly
-         */
-        readonly counterID: CounterID,
-        /**
-         * @summary `counterValue`.
-         * @public
-         * @readonly
-         */
-        readonly counterValue: Integer4
-    ) {}
+        counterID: CounterID,
+        counterValue: Integer4
+    ) {
+        this.counterID = counterID;
+        this.counterValue = counterValue;
+    }
 
     /**
      * @summary Restructures an object into a CounterAndValue

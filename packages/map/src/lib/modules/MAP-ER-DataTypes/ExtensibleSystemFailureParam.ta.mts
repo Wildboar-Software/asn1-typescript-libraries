@@ -36,54 +36,66 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
  */
 export
 class ExtensibleSystemFailureParam {
+    /**
+     * @summary `networkResource`.
+     * @description
+     *
+     * Class or type of network resource: PLMN, HLR, VLR (current or
+     * previous), MSC (controlling or current), EIR, or radio sub-system
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.10.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly networkResource?: OPTIONAL<NetworkResource>;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary `additionalNetworkResource`.
+     * @description
+     *
+     * Class or type of additional network resource: SGSN, GGSN, GMLC,
+     * gsmSCF, NPLR, or AuC (3GPP TS 29.002 V19.1.0 clause 7.6.10.4).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly additionalNetworkResource?: OPTIONAL<AdditionalNetworkResource>;
+    /**
+     * @summary `failureCauseParam`.
+     * @description
+     *
+     * Shall be included if and only if the problem is in the entity
+     * reporting the error (3GPP TS 29.002 V19.1.0 clause 7.6.1.4).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly failureCauseParam?: OPTIONAL<FailureCauseParam>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `networkResource`.
-         * @description
-         *
-         * Class or type of network resource: PLMN, HLR, VLR (current or
-         * previous), MSC (controlling or current), EIR, or radio sub-system
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.10.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly networkResource?: OPTIONAL<NetworkResource>,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary `additionalNetworkResource`.
-         * @description
-         *
-         * Class or type of additional network resource: SGSN, GGSN, GMLC,
-         * gsmSCF, NPLR, or AuC (3GPP TS 29.002 V19.1.0 clause 7.6.10.4).
-         *
-         * @public
-         * @readonly
-         */
-        readonly additionalNetworkResource?: OPTIONAL<AdditionalNetworkResource>,
-        /**
-         * @summary `failureCauseParam`.
-         * @description
-         *
-         * Shall be included if and only if the problem is in the entity
-         * reporting the error (3GPP TS 29.002 V19.1.0 clause 7.6.1.4).
-         *
-         * @public
-         * @readonly
-         */
-        readonly failureCauseParam?: OPTIONAL<FailureCauseParam>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        networkResource?: OPTIONAL<NetworkResource>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        additionalNetworkResource?: OPTIONAL<AdditionalNetworkResource>,
+        failureCauseParam?: OPTIONAL<FailureCauseParam>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.networkResource = networkResource;
+        this.extensionContainer = extensionContainer;
+        this.additionalNetworkResource = additionalNetworkResource;
+        this.failureCauseParam = failureCauseParam;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a ExtensibleSystemFailureParam

@@ -41,49 +41,59 @@ import { AE_invocation_identifier, _decode_AE_invocation_identifier, _encode_AE_
  */
 export
 class ApplicationReference {
+    /**
+     * @summary `ap_title`.
+     * @description
+     *
+     * AP-title of the referenced AE. Optional; omit when the communication
+     * system does not supply it (ISO 9506-1:2003 §6.6; ISO 9506-2:2003
+     * Annex A).
+     * @public
+     * @readonly
+     */
+    public readonly ap_title?: OPTIONAL<AP_title>;
+    /**
+     * @summary `ap_invocation_id`.
+     * @description
+     *
+     * AP-invocation-identifier of the referenced AE. Optional
+     * (ISO 9506-1:2003 §6.6; ISO 9506-2:2003 Annex A).
+     * @public
+     * @readonly
+     */
+    public readonly ap_invocation_id?: OPTIONAL<AP_invocation_identifier>;
+    /**
+     * @summary `ae_qualifier`.
+     * @description
+     *
+     * AE-qualifier of the referenced AE. Optional (ISO 9506-1:2003 §6.6;
+     * ISO 9506-2:2003 Annex A).
+     * @public
+     * @readonly
+     */
+    public readonly ae_qualifier?: OPTIONAL<AE_qualifier>;
+    /**
+     * @summary `ae_invocation_id`.
+     * @description
+     *
+     * AE-invocation-identifier of the referenced AE. Optional
+     * (ISO 9506-1:2003 §6.6; ISO 9506-2:2003 Annex A).
+     * @public
+     * @readonly
+     */
+    public readonly ae_invocation_id?: OPTIONAL<AE_invocation_identifier>;
+
     constructor (
-        /**
-         * @summary `ap_title`.
-         * @description
-         *
-         * AP-title of the referenced AE. Optional; omit when the communication
-         * system does not supply it (ISO 9506-1:2003 §6.6; ISO 9506-2:2003
-         * Annex A).
-         * @public
-         * @readonly
-         */
-        readonly ap_title?: OPTIONAL<AP_title>,
-        /**
-         * @summary `ap_invocation_id`.
-         * @description
-         *
-         * AP-invocation-identifier of the referenced AE. Optional
-         * (ISO 9506-1:2003 §6.6; ISO 9506-2:2003 Annex A).
-         * @public
-         * @readonly
-         */
-        readonly ap_invocation_id?: OPTIONAL<AP_invocation_identifier>,
-        /**
-         * @summary `ae_qualifier`.
-         * @description
-         *
-         * AE-qualifier of the referenced AE. Optional (ISO 9506-1:2003 §6.6;
-         * ISO 9506-2:2003 Annex A).
-         * @public
-         * @readonly
-         */
-        readonly ae_qualifier?: OPTIONAL<AE_qualifier>,
-        /**
-         * @summary `ae_invocation_id`.
-         * @description
-         *
-         * AE-invocation-identifier of the referenced AE. Optional
-         * (ISO 9506-1:2003 §6.6; ISO 9506-2:2003 Annex A).
-         * @public
-         * @readonly
-         */
-        readonly ae_invocation_id?: OPTIONAL<AE_invocation_identifier>
-    ) {}
+        ap_title?: OPTIONAL<AP_title>,
+        ap_invocation_id?: OPTIONAL<AP_invocation_identifier>,
+        ae_qualifier?: OPTIONAL<AE_qualifier>,
+        ae_invocation_id?: OPTIONAL<AE_invocation_identifier>
+    ) {
+        this.ap_title = ap_title;
+        this.ap_invocation_id = ap_invocation_id;
+        this.ae_qualifier = ae_qualifier;
+        this.ae_invocation_id = ae_invocation_id;
+    }
 
     /**
      * @summary Restructures an object into a ApplicationReference

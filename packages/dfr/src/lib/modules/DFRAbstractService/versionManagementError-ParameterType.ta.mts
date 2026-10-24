@@ -35,26 +35,32 @@ import { VersionManagementProblem, _enum_for_VersionManagementProblem, _decode_V
  */
 export
 class versionManagementError_ParameterType {
+    /**
+     * @summary `entry`.
+     * @description
+     *
+     * Entry or potential previous version.
+     * @public
+     * @readonly
+     */
+    public readonly entry: DfrEntryName;
+    /**
+     * @summary `problem`.
+     * @description
+     *
+     * Why versioning failed.
+     * @public
+     * @readonly
+     */
+    public readonly problem: VersionManagementProblem;
+
     constructor (
-        /**
-         * @summary `entry`.
-         * @description
-         *
-         * Entry or potential previous version.
-         * @public
-         * @readonly
-         */
-        readonly entry: DfrEntryName,
-        /**
-         * @summary `problem`.
-         * @description
-         *
-         * Why versioning failed.
-         * @public
-         * @readonly
-         */
-        readonly problem: VersionManagementProblem
-    ) {}
+        entry: DfrEntryName,
+        problem: VersionManagementProblem
+    ) {
+        this.entry = entry;
+        this.problem = problem;
+    }
 
     /**
      * @summary Restructures an object into a versionManagementError_ParameterType

@@ -46,26 +46,32 @@ import { AttributeSelection, _decode_AttributeSelection, _encode_AttributeSelect
  */
 export
 class EntryInformationSelection {
+    /**
+     * @summary `read_selector`.
+     * @description
+     *
+     * Attributes, content, DOR, or combinations.
+     * @public
+     * @readonly
+     */
+    public readonly read_selector?: OPTIONAL<EntryInformationSelection_read_selector>;
+    /**
+     * @summary `attribute_selection`.
+     * @description
+     *
+     * Which attributes, and optionally in what order.
+     * @public
+     * @readonly
+     */
+    public readonly attribute_selection?: OPTIONAL<AttributeSelection>;
+
     constructor (
-        /**
-         * @summary `read_selector`.
-         * @description
-         *
-         * Attributes, content, DOR, or combinations.
-         * @public
-         * @readonly
-         */
-        readonly read_selector?: OPTIONAL<EntryInformationSelection_read_selector>,
-        /**
-         * @summary `attribute_selection`.
-         * @description
-         *
-         * Which attributes, and optionally in what order.
-         * @public
-         * @readonly
-         */
-        readonly attribute_selection?: OPTIONAL<AttributeSelection>
-    ) {}
+        read_selector?: OPTIONAL<EntryInformationSelection_read_selector>,
+        attribute_selection?: OPTIONAL<AttributeSelection>
+    ) {
+        this.read_selector = read_selector;
+        this.attribute_selection = attribute_selection;
+    }
 
     /**
      * @summary Restructures an object into a EntryInformationSelection

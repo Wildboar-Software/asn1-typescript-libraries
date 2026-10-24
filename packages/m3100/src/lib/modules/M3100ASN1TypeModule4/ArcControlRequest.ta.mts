@@ -44,26 +44,34 @@ import {
  *
  */
 export class ArcControlRequest {
+    /**
+     * @summary `time`.
+     * @public
+     * @readonly
+     */
+    public readonly time: OPTIONAL<ArcTime>;
+    /**
+     * @summary `newState`.
+     * @public
+     * @readonly
+     */
+    public readonly newState: ArcState;
+    /**
+     * @summary `additionalInfo`.
+     * @public
+     * @readonly
+     */
+    public readonly additionalInfo?: OPTIONAL<AdditionalInformation>;
+
     constructor(
-        /**
-         * @summary `time`.
-         * @public
-         * @readonly
-         */
-        readonly time: OPTIONAL<ArcTime>,
-        /**
-         * @summary `newState`.
-         * @public
-         * @readonly
-         */
-        readonly newState: ArcState,
-        /**
-         * @summary `additionalInfo`.
-         * @public
-         * @readonly
-         */
-        readonly additionalInfo?: OPTIONAL<AdditionalInformation>
-    ) {}
+        time: OPTIONAL<ArcTime>,
+        newState: ArcState,
+        additionalInfo?: OPTIONAL<AdditionalInformation>
+    ) {
+        this.time = time;
+        this.newState = newState;
+        this.additionalInfo = additionalInfo;
+    }
 
     /**
      * @summary Restructures an object into a ArcControlRequest

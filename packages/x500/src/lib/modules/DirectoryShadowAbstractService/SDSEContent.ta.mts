@@ -46,71 +46,85 @@ import {
  *
  */
 export class SDSEContent {
+    /**
+     * @summary `sDSEType`.
+     * @description
+     *
+     * Same BIT STRING as `DSEType`. Bits `supr`, `xr`, `shadow`,
+     * `immSupr`, and `rhob`, if set, are ignored.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sDSEType: SDSEType;
+    /**
+     * @summary `subComplete`.
+     * @description
+     *
+     * DEFAULT FALSE. TRUE = subordinate knowledge is complete; FALSE =
+     * incomplete or unknown.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly subComplete: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `attComplete`.
+     * @description
+     *
+     * TRUE iff all user attributes, all of their values, and all
+     * associated contexts are present. FALSE = some omitted. Absent =
+     * undefined whether complete.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly attComplete: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `attributes`.
+     * @description
+     *
+     * Unordered SET OF user and operational attributes selected by the
+     * agreement. Empty SET is legal (e.g. glue with only ACI/type).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly attributes: Attribute[];
+    /**
+     * @summary `attValIncomplete`.
+     * @description
+     *
+     * DEFAULT {} (empty). Types present in `attributes` for which some
+     * values were omitted (usually context selection). Types not listed
+     * have all values. Shall not name a type absent from `attributes`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly attValIncomplete?: OPTIONAL<AttributeType[]>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `sDSEType`.
-         * @description
-         *
-         * Same BIT STRING as `DSEType`. Bits `supr`, `xr`, `shadow`,
-         * `immSupr`, and `rhob`, if set, are ignored.
-         *
-         * @public
-         * @readonly
-         */
-        readonly sDSEType: SDSEType,
-        /**
-         * @summary `subComplete`.
-         * @description
-         *
-         * DEFAULT FALSE. TRUE = subordinate knowledge is complete; FALSE =
-         * incomplete or unknown.
-         *
-         * @public
-         * @readonly
-         */
-        readonly subComplete: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `attComplete`.
-         * @description
-         *
-         * TRUE iff all user attributes, all of their values, and all
-         * associated contexts are present. FALSE = some omitted. Absent =
-         * undefined whether complete.
-         *
-         * @public
-         * @readonly
-         */
-        readonly attComplete: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `attributes`.
-         * @description
-         *
-         * Unordered SET OF user and operational attributes selected by the
-         * agreement. Empty SET is legal (e.g. glue with only ACI/type).
-         *
-         * @public
-         * @readonly
-         */
-        readonly attributes: Attribute[],
-        /**
-         * @summary `attValIncomplete`.
-         * @description
-         *
-         * DEFAULT {} (empty). Types present in `attributes` for which some
-         * values were omitted (usually context selection). Types not listed
-         * have all values. Shall not name a type absent from `attributes`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly attValIncomplete?: OPTIONAL<AttributeType[]>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        sDSEType: SDSEType,
+        subComplete: OPTIONAL<BOOLEAN>,
+        attComplete: OPTIONAL<BOOLEAN>,
+        attributes: Attribute[],
+        attValIncomplete?: OPTIONAL<AttributeType[]>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.sDSEType = sDSEType;
+        this.subComplete = subComplete;
+        this.attComplete = attComplete;
+        this.attributes = attributes;
+        this.attValIncomplete = attValIncomplete;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a SDSEContent

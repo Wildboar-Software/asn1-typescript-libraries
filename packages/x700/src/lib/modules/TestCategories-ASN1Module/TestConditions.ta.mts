@@ -44,28 +44,34 @@ import {
  *
  */
 export class TestConditions {
+    /**
+     * @summary `first`.
+     * @description
+     *
+     * Busy handling: run anyway, reject, or wait.
+     * X.737 §8.1.21, A.7.
+     * @public
+     * @readonly
+     */
+    public readonly first: TestConditions_first;
+    /**
+     * @summary `second`.
+     * @description
+     *
+     * Whether the MORT's user may override/abort
+     * the test. Optional. X.737 §8.1.21.
+     * @public
+     * @readonly
+     */
+    public readonly second?: OPTIONAL<TestConditions_second>;
+
     constructor(
-        /**
-         * @summary `first`.
-         * @description
-         *
-         * Busy handling: run anyway, reject, or wait.
-         * X.737 §8.1.21, A.7.
-         * @public
-         * @readonly
-         */
-        readonly first: TestConditions_first,
-        /**
-         * @summary `second`.
-         * @description
-         *
-         * Whether the MORT's user may override/abort
-         * the test. Optional. X.737 §8.1.21.
-         * @public
-         * @readonly
-         */
-        readonly second?: OPTIONAL<TestConditions_second>
-    ) {}
+        first: TestConditions_first,
+        second?: OPTIONAL<TestConditions_second>
+    ) {
+        this.first = first;
+        this.second = second;
+    }
 
     /**
      * @summary Restructures an object into a TestConditions

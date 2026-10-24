@@ -41,36 +41,44 @@ import {
  *
  */
 export class ResponseContent {
+    /**
+     * @summary `contentType`.
+     * @description
+     *
+     * `INTERACTIVE-OPERATION.&content-rsp` for this response.
+     * ITU-T Rec. X.1080.1 (05/2018) §10.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly contentType: OBJECT_IDENTIFIER;
+    /**
+     * @summary `content`.
+     * @description
+     *
+     * Inner response (invokId, session, response body).
+     * ITU-T Rec. X.1080.1 (05/2018) §10.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly content: ResponseContent_content;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `contentType`.
-         * @description
-         *
-         * `INTERACTIVE-OPERATION.&content-rsp` for this response.
-         * ITU-T Rec. X.1080.1 (05/2018) §10.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly contentType: OBJECT_IDENTIFIER,
-        /**
-         * @summary `content`.
-         * @description
-         *
-         * Inner response (invokId, session, response body).
-         * ITU-T Rec. X.1080.1 (05/2018) §10.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly content: ResponseContent_content,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        contentType: OBJECT_IDENTIFIER,
+        content: ResponseContent_content,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.contentType = contentType;
+        this.content = content;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a ResponseContent

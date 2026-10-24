@@ -37,43 +37,53 @@ import { CommonObjectAttributes, _decode_CommonObjectAttributes, _encode_CommonO
  */
 export
 class CIO<ClassAttributes, SubClassAttributes, TypeAttributes> {
+    /**
+     * @summary `commonObjectAttributes`.
+     * @description
+     * Attributes common to all CIOs. ISO/IEC 7816-15:2016 §8.2.8, §8.2.19.
+     * @public
+     * @readonly
+     */
+    public readonly commonObjectAttributes: CommonObjectAttributes;
+    /**
+     * @summary `classAttributes`.
+     * @description
+     * Class-level attributes (key, certificate, data container, or
+     * authentication). ISO/IEC 7816-15:2016 §8.2.19.
+     * @public
+     * @readonly
+     */
+    public readonly classAttributes: ClassAttributes;
+    /**
+     * @summary `subClassAttributes`.
+     * @description
+     * Subclass attributes (e.g. private vs public key). ISO/IEC
+     * 7816-15:2016 §8.2.19.
+     * @public
+     * @readonly
+     */
+    public readonly subClassAttributes: OPTIONAL<SubClassAttributes>;
+    /**
+     * @summary `typeAttributes`.
+     * @description
+     * Algorithm- or format-specific attributes. ISO/IEC 7816-15:2016
+     * §8.2.19.
+     * @public
+     * @readonly
+     */
+    public readonly typeAttributes: TypeAttributes;
+
     constructor (
-        /**
-         * @summary `commonObjectAttributes`.
-         * @description
-         * Attributes common to all CIOs. ISO/IEC 7816-15:2016 §8.2.8, §8.2.19.
-         * @public
-         * @readonly
-         */
-        readonly commonObjectAttributes: CommonObjectAttributes,
-        /**
-         * @summary `classAttributes`.
-         * @description
-         * Class-level attributes (key, certificate, data container, or
-         * authentication). ISO/IEC 7816-15:2016 §8.2.19.
-         * @public
-         * @readonly
-         */
-        readonly classAttributes: ClassAttributes,
-        /**
-         * @summary `subClassAttributes`.
-         * @description
-         * Subclass attributes (e.g. private vs public key). ISO/IEC
-         * 7816-15:2016 §8.2.19.
-         * @public
-         * @readonly
-         */
-        readonly subClassAttributes: OPTIONAL<SubClassAttributes>,
-        /**
-         * @summary `typeAttributes`.
-         * @description
-         * Algorithm- or format-specific attributes. ISO/IEC 7816-15:2016
-         * §8.2.19.
-         * @public
-         * @readonly
-         */
-        readonly typeAttributes: TypeAttributes
-    ) {}
+        commonObjectAttributes: CommonObjectAttributes,
+        classAttributes: ClassAttributes,
+        subClassAttributes: OPTIONAL<SubClassAttributes>,
+        typeAttributes: TypeAttributes
+    ) {
+        this.commonObjectAttributes = commonObjectAttributes;
+        this.classAttributes = classAttributes;
+        this.subClassAttributes = subClassAttributes;
+        this.typeAttributes = typeAttributes;
+    }
 
     /**
      * @summary Restructures an object into a CIO

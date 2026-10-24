@@ -33,28 +33,34 @@ import * as $ from '@wildboar/asn1/functional';
  *
  */
 export class ProtocolVersion {
+  /**
+   * @summary `major`.
+   * @description
+   *
+   * Major version; this protocol uses 1. X.1083 Annex B.12.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly major: INTEGER;
+  /**
+   * @summary `minor`.
+   * @description
+   *
+   * Minor version; this protocol uses 0. X.1083 Annex B.12.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly minor: INTEGER;
+
   constructor(
-    /**
-     * @summary `major`.
-     * @description
-     *
-     * Major version; this protocol uses 1. X.1083 Annex B.12.
-     *
-     * @public
-     * @readonly
-     */
-    readonly major: INTEGER,
-    /**
-     * @summary `minor`.
-     * @description
-     *
-     * Minor version; this protocol uses 0. X.1083 Annex B.12.
-     *
-     * @public
-     * @readonly
-     */
-    readonly minor: INTEGER
-  ) {}
+    major: INTEGER,
+    minor: INTEGER
+  ) {
+    this.major = major;
+    this.minor = minor;
+  }
 
   /**
    * @summary Restructures an object into a ProtocolVersion

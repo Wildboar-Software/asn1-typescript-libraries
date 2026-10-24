@@ -40,53 +40,65 @@ import { OfferedCamel4Functionalities, _decode_OfferedCamel4Functionalities, _en
  */
 export
 class InitiateCallAttemptRes {
+    /**
+     * @summary `supportedCamelPhases`.
+     * @description
+     *
+     * CAMEL phases supported in the gsmSSF that received
+     * InitiateCallAttempt. (3GPP TS 29.078 V19.0.0 clause 11.21.1.1.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly supportedCamelPhases?: OPTIONAL<SupportedCamelPhases>;
+    /**
+     * @summary `offeredCamel4Functionalities`.
+     * @description
+     *
+     * Offered CAMEL phase 4 functionalities. (3GPP TS 29.078 V19.0.0 clause
+     * 11.21.1.1.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly offeredCamel4Functionalities?: OPTIONAL<OfferedCamel4Functionalities>;
+    /**
+     * @summary `extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<Extensions>;
+    /**
+     * @summary `releaseCallArgExtensionAllowed`.
+     * @description
+     *
+     * Presence means gsmSCF may use Extensions in ReleaseCall for this
+     * call. (3GPP TS 29.078 V19.0.0 clause 11.21.1.1.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly releaseCallArgExtensionAllowed?: OPTIONAL<NULL>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `supportedCamelPhases`.
-         * @description
-         *
-         * CAMEL phases supported in the gsmSSF that received
-         * InitiateCallAttempt. (3GPP TS 29.078 V19.0.0 clause 11.21.1.1.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly supportedCamelPhases?: OPTIONAL<SupportedCamelPhases>,
-        /**
-         * @summary `offeredCamel4Functionalities`.
-         * @description
-         *
-         * Offered CAMEL phase 4 functionalities. (3GPP TS 29.078 V19.0.0 clause
-         * 11.21.1.1.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly offeredCamel4Functionalities?: OPTIONAL<OfferedCamel4Functionalities>,
-        /**
-         * @summary `extensions`.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<Extensions>,
-        /**
-         * @summary `releaseCallArgExtensionAllowed`.
-         * @description
-         *
-         * Presence means gsmSCF may use Extensions in ReleaseCall for this
-         * call. (3GPP TS 29.078 V19.0.0 clause 11.21.1.1.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly releaseCallArgExtensionAllowed?: OPTIONAL<NULL>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        supportedCamelPhases?: OPTIONAL<SupportedCamelPhases>,
+        offeredCamel4Functionalities?: OPTIONAL<OfferedCamel4Functionalities>,
+        extensions?: OPTIONAL<Extensions>,
+        releaseCallArgExtensionAllowed?: OPTIONAL<NULL>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.supportedCamelPhases = supportedCamelPhases;
+        this.offeredCamel4Functionalities = offeredCamel4Functionalities;
+        this.extensions = extensions;
+        this.releaseCallArgExtensionAllowed = releaseCallArgExtensionAllowed;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a InitiateCallAttemptRes

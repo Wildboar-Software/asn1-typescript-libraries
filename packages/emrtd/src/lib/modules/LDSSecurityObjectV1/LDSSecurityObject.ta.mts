@@ -37,32 +37,41 @@ import { ub_DataGroups } from "../LDSSecurityObjectV1/ub-DataGroups.va.mjs";
  */
 export
 class LDSSecurityObject {
+    /**
+     * @summary `version`.
+     * @public
+     * @readonly
+     */
+    public readonly version: LDSSecurityObjectVersion;
+    /**
+     * @summary `hashAlgorithm`.
+     * @public
+     * @readonly
+     */
+    public readonly hashAlgorithm: DigestAlgorithmIdentifier;
+    /**
+     * @summary `dataGroupHashValues`.
+     * @public
+     * @readonly
+     */
+    public readonly dataGroupHashValues: DataGroupHash[];
+    /**
+     * @summary `ldsVersionInfo`.
+     * @public
+     * @readonly
+     */
+    public readonly ldsVersionInfo?: OPTIONAL<LDSVersionInfo>;
+
     constructor (
-        /**
-         * @summary `version`.
-         * @public
-         * @readonly
-         */
-        readonly version: LDSSecurityObjectVersion,
-        /**
-         * @summary `hashAlgorithm`.
-         * @public
-         * @readonly
-         */
-        readonly hashAlgorithm: DigestAlgorithmIdentifier,
-        /**
-         * @summary `dataGroupHashValues`.
-         * @public
-         * @readonly
-         */
-        readonly dataGroupHashValues: DataGroupHash[],
-        /**
-         * @summary `ldsVersionInfo`.
-         * @public
-         * @readonly
-         */
-        readonly ldsVersionInfo?: OPTIONAL<LDSVersionInfo>
+        version: LDSSecurityObjectVersion,
+        hashAlgorithm: DigestAlgorithmIdentifier,
+        dataGroupHashValues: DataGroupHash[],
+        ldsVersionInfo?: OPTIONAL<LDSVersionInfo>
     ) {
+        this.version = version;
+        this.hashAlgorithm = hashAlgorithm;
+        this.dataGroupHashValues = dataGroupHashValues;
+        this.ldsVersionInfo = ldsVersionInfo;
         if (
             dataGroupHashValues.length < 2
             || dataGroupHashValues.length > ub_DataGroups

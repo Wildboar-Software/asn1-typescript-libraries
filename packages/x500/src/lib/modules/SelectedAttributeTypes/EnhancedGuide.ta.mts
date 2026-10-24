@@ -39,44 +39,54 @@ import {
  *
  */
 export class EnhancedGuide {
+    /**
+     * @summary `objectClass`.
+     * @description
+     *
+     * Required (unlike Guide).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly objectClass: OBJECT_IDENTIFIER;
+    /**
+     * @summary `criteria`.
+     * @description
+     *
+     * Attribute types only; DUA supplies values.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly criteria: Criteria;
+    /**
+     * @summary `subset`.
+     * @description
+     *
+     * DEFAULT oneLevel. Recommended search depth.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly subset?: OPTIONAL<EnhancedGuide_subset>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `objectClass`.
-         * @description
-         *
-         * Required (unlike Guide).
-         *
-         * @public
-         * @readonly
-         */
-        readonly objectClass: OBJECT_IDENTIFIER,
-        /**
-         * @summary `criteria`.
-         * @description
-         *
-         * Attribute types only; DUA supplies values.
-         *
-         * @public
-         * @readonly
-         */
-        readonly criteria: Criteria,
-        /**
-         * @summary `subset`.
-         * @description
-         *
-         * DEFAULT oneLevel. Recommended search depth.
-         *
-         * @public
-         * @readonly
-         */
-        readonly subset?: OPTIONAL<EnhancedGuide_subset>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        objectClass: OBJECT_IDENTIFIER,
+        criteria: Criteria,
+        subset?: OPTIONAL<EnhancedGuide_subset>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.objectClass = objectClass;
+        this.criteria = criteria;
+        this.subset = subset;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a EnhancedGuide

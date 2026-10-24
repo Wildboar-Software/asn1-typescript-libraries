@@ -39,48 +39,58 @@ import {
  *
  */
 export class PBKDF2_params {
+    /**
+     * @summary `salt`.
+     * @description
+     *
+     * Salt as OCTET STRING or other source algorithm ([RFC 3370 §4.4.1](https://datatracker.ietf.org/doc/html/rfc3370#section-4.4.1)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly salt: PBKDF2_params_salt;
+    /**
+     * @summary `iterationCount`.
+     * @description
+     *
+     * Iteration count (≥ 1) ([RFC 3370 §4.4.1](https://datatracker.ietf.org/doc/html/rfc3370#section-4.4.1)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly iterationCount: INTEGER;
+    /**
+     * @summary `keyLength`.
+     * @description
+     *
+     * Optional derived key length in octets ([RFC 3370 §4.4.1](https://datatracker.ietf.org/doc/html/rfc3370#section-4.4.1)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly keyLength?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `prf`.
+     * @description
+     *
+     * PRF AlgorithmIdentifier; default HMAC-SHA1 ([RFC 3370 §4.4.1](https://datatracker.ietf.org/doc/html/rfc3370#section-4.4.1)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly prf?: OPTIONAL<PBKDF2_PRFsAlgorithmIdentifier>;
+
     constructor(
-        /**
-         * @summary `salt`.
-         * @description
-         *
-         * Salt as OCTET STRING or other source algorithm ([RFC 3370 §4.4.1](https://datatracker.ietf.org/doc/html/rfc3370#section-4.4.1)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly salt: PBKDF2_params_salt,
-        /**
-         * @summary `iterationCount`.
-         * @description
-         *
-         * Iteration count (≥ 1) ([RFC 3370 §4.4.1](https://datatracker.ietf.org/doc/html/rfc3370#section-4.4.1)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly iterationCount: INTEGER,
-        /**
-         * @summary `keyLength`.
-         * @description
-         *
-         * Optional derived key length in octets ([RFC 3370 §4.4.1](https://datatracker.ietf.org/doc/html/rfc3370#section-4.4.1)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly keyLength?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `prf`.
-         * @description
-         *
-         * PRF AlgorithmIdentifier; default HMAC-SHA1 ([RFC 3370 §4.4.1](https://datatracker.ietf.org/doc/html/rfc3370#section-4.4.1)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly prf?: OPTIONAL<PBKDF2_PRFsAlgorithmIdentifier>
-    ) {}
+        salt: PBKDF2_params_salt,
+        iterationCount: INTEGER,
+        keyLength?: OPTIONAL<INTEGER>,
+        prf?: OPTIONAL<PBKDF2_PRFsAlgorithmIdentifier>
+    ) {
+        this.salt = salt;
+        this.iterationCount = iterationCount;
+        this.keyLength = keyLength;
+        this.prf = prf;
+    }
 
     /**
      * @summary Restructures an object into a PBKDF2_params

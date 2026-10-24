@@ -31,42 +31,52 @@ import { QoS_Class_Identifier, _decode_QoS_Class_Identifier, _encode_QoS_Class_I
  */
 export
 class EPS_QoS_Subscribed {
+    /**
+     * @summary `qos_Class_Identifier`.
+     * @description
+     *
+     * QoS Class Identifier; values are defined in 3GPP TS 29.212 (3GPP TS
+     * 29.002 V19.1.0 clause 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly qos_Class_Identifier: QoS_Class_Identifier;
+    /**
+     * @summary `allocation_Retention_Priority`.
+     * @description
+     *
+     * EPS allocation/retention priority (3GPP TS 29.002 V19.1.0 clause
+     * 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly allocation_Retention_Priority: Allocation_Retention_Priority;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `qos_Class_Identifier`.
-         * @description
-         *
-         * QoS Class Identifier; values are defined in 3GPP TS 29.212 (3GPP TS
-         * 29.002 V19.1.0 clause 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly qos_Class_Identifier: QoS_Class_Identifier,
-        /**
-         * @summary `allocation_Retention_Priority`.
-         * @description
-         *
-         * EPS allocation/retention priority (3GPP TS 29.002 V19.1.0 clause
-         * 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly allocation_Retention_Priority: Allocation_Retention_Priority,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        qos_Class_Identifier: QoS_Class_Identifier,
+        allocation_Retention_Priority: Allocation_Retention_Priority,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.qos_Class_Identifier = qos_Class_Identifier;
+        this.allocation_Retention_Priority = allocation_Retention_Priority;
+        this.extensionContainer = extensionContainer;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a EPS_QoS_Subscribed

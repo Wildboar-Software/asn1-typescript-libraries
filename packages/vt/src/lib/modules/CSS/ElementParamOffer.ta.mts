@@ -48,46 +48,56 @@ import { _decode_RepertoireAssignment, _encode_RepertoireAssignment, RepertoireA
  */
 export
 class ElementParamOffer {
+    /**
+     * @summary `elementIdentifier`.
+     * @description
+     * `CO-element-id`: 1-based in structure order, 1..N.
+     * ISO/IEC 9040:1997 §20.2.1.
+     * @public
+     * @readonly
+     */
+    public readonly elementIdentifier: INTEGER;
+    /**
+     * @summary `size`.
+     * @description
+     * Offered `CO-size` for this element. Meaning depends
+     * on category (see `CO-size` defaults).
+     * ISO/IEC 9040:1997 §20.2.2.
+     * @public
+     * @readonly
+     */
+    public readonly size?: OPTIONAL<IntegerOffer>;
+    /**
+     * @summary `category`.
+     * @description
+     * Offered `CO-category` values; set bits are offered.
+     * Default `"boolean"`.
+     * ISO/IEC 9040:1997 table 9, §20.2.3–§20.2.6.
+     * @public
+     * @readonly
+     */
+    public readonly category?: OPTIONAL<ElementParamOffer_category>;
+    /**
+     * @summary `repertoire`.
+     * @description
+     * Offered `CO-repertoire-assignment` alternatives
+     * (character category). ISO/IEC 9040:1997 §20.2.5.
+     * @public
+     * @readonly
+     */
+    public readonly repertoire?: OPTIONAL<RepertoireAssignment[]>;
+
     constructor (
-        /**
-         * @summary `elementIdentifier`.
-         * @description
-         * `CO-element-id`: 1-based in structure order, 1..N.
-         * ISO/IEC 9040:1997 §20.2.1.
-         * @public
-         * @readonly
-         */
-        readonly elementIdentifier: INTEGER,
-        /**
-         * @summary `size`.
-         * @description
-         * Offered `CO-size` for this element. Meaning depends
-         * on category (see `CO-size` defaults).
-         * ISO/IEC 9040:1997 §20.2.2.
-         * @public
-         * @readonly
-         */
-        readonly size?: OPTIONAL<IntegerOffer>,
-        /**
-         * @summary `category`.
-         * @description
-         * Offered `CO-category` values; set bits are offered.
-         * Default `"boolean"`.
-         * ISO/IEC 9040:1997 table 9, §20.2.3–§20.2.6.
-         * @public
-         * @readonly
-         */
-        readonly category?: OPTIONAL<ElementParamOffer_category>,
-        /**
-         * @summary `repertoire`.
-         * @description
-         * Offered `CO-repertoire-assignment` alternatives
-         * (character category). ISO/IEC 9040:1997 §20.2.5.
-         * @public
-         * @readonly
-         */
-        readonly repertoire?: OPTIONAL<RepertoireAssignment[]>
-    ) {}
+        elementIdentifier: INTEGER,
+        size?: OPTIONAL<IntegerOffer>,
+        category?: OPTIONAL<ElementParamOffer_category>,
+        repertoire?: OPTIONAL<RepertoireAssignment[]>
+    ) {
+        this.elementIdentifier = elementIdentifier;
+        this.size = size;
+        this.category = category;
+        this.repertoire = repertoire;
+    }
 
     /**
      * @summary Restructures an object into a ElementParamOffer

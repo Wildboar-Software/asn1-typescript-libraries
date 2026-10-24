@@ -29,22 +29,32 @@ import { CriticalityType, _enum_for_CriticalityType, ignore, _decode_Criticality
  *
  */
 export class ExtensionField {
+    /**
+     * @summary `type`.
+     * @description
+     *
+     * Shall identify the value of an `EXTENSION` type. (3GPP TS 29.078
+     * V19.0.0 clause 5.1)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly type_: Code;
+    public readonly criticality: OPTIONAL<CriticalityType>;
+    public readonly value: _Element;
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `type`.
-         * @description
-         *
-         * Shall identify the value of an `EXTENSION` type. (3GPP TS 29.078
-         * V19.0.0 clause 5.1)
-         *
-         * @public
-         * @readonly
-         */
-        readonly type_: Code,
-        readonly criticality: OPTIONAL<CriticalityType>,
-        readonly value: _Element,
-        readonly _unrecognizedExtensionsList: _Element[] = [],
-    ) {}
+        type_: Code,
+        criticality: OPTIONAL<CriticalityType>,
+        value: _Element,
+        _unrecognizedExtensionsList: _Element[] = [],
+    ) {
+        this.type_ = type_;
+        this.criticality = criticality;
+        this.value = value;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     public static _from_object (_o: { [_K in keyof (ExtensionField)]: (ExtensionField)[_K] }): ExtensionField {
         return new ExtensionField(_o.type_, _o.criticality, _o.value, _o._unrecognizedExtensionsList);

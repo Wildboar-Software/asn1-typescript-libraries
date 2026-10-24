@@ -29,18 +29,22 @@ import { PkgdName, _decode_PkgdName, _encode_PkgdName } from "../MEDIA-GATEWAY-C
  */
 export
 class IndAudStatisticsDescriptor {
+    /**
+     * @summary `statName`.
+     * @description
+     *
+     * Package and statistic identifier to return.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly statName: PkgdName;
+
     constructor (
-        /**
-         * @summary `statName`.
-         * @description
-         *
-         * Package and statistic identifier to return.
-         *
-         * @public
-         * @readonly
-         */
-        readonly statName: PkgdName
-    ) {}
+        statName: PkgdName
+    ) {
+        this.statName = statName;
+    }
 
     /**
      * @summary Restructures an object into a IndAudStatisticsDescriptor

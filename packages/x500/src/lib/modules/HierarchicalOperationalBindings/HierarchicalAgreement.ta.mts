@@ -33,34 +33,42 @@ import {
  *
  */
 export class HierarchicalAgreement {
+    /**
+     * @summary `rdn`.
+     * @description
+     *
+     * RDN of the new context prefix (not of the superior).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly rdn: RelativeDistinguishedName;
+    /**
+     * @summary `immediateSuperior`.
+     * @description
+     *
+     * DN of the entry immediately above the new context prefix.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly immediateSuperior: DistinguishedName;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `rdn`.
-         * @description
-         *
-         * RDN of the new context prefix (not of the superior).
-         *
-         * @public
-         * @readonly
-         */
-        readonly rdn: RelativeDistinguishedName,
-        /**
-         * @summary `immediateSuperior`.
-         * @description
-         *
-         * DN of the entry immediately above the new context prefix.
-         *
-         * @public
-         * @readonly
-         */
-        readonly immediateSuperior: DistinguishedName,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        rdn: RelativeDistinguishedName,
+        immediateSuperior: DistinguishedName,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.rdn = rdn;
+        this.immediateSuperior = immediateSuperior;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a HierarchicalAgreement

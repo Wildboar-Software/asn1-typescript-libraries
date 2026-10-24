@@ -32,20 +32,26 @@ import {
  *
  */
 export class OtherKey {
+    /**
+     * @summary `keyType`.
+     * @public
+     * @readonly
+     */
+    public readonly keyType: OBJECT_IDENTIFIER;
+    /**
+     * @summary `keyAttr`.
+     * @public
+     * @readonly
+     */
+    public readonly keyAttr: SecretKeyObject<GenericSecretKeyAttributes>;
+
     constructor(
-        /**
-         * @summary `keyType`.
-         * @public
-         * @readonly
-         */
-        readonly keyType: OBJECT_IDENTIFIER,
-        /**
-         * @summary `keyAttr`.
-         * @public
-         * @readonly
-         */
-        readonly keyAttr: SecretKeyObject<GenericSecretKeyAttributes>
-    ) {}
+        keyType: OBJECT_IDENTIFIER,
+        keyAttr: SecretKeyObject<GenericSecretKeyAttributes>
+    ) {
+        this.keyType = keyType;
+        this.keyAttr = keyAttr;
+    }
 
     /**
      * @summary Restructures an object into a OtherKey

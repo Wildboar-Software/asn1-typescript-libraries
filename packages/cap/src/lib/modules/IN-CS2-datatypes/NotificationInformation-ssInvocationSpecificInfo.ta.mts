@@ -30,20 +30,26 @@ import { InvokableService, _enum_for_InvokableService, _decode_InvokableService,
  */
 export
 class NotificationInformation_ssInvocationSpecificInfo {
+    /**
+     * @summary `invokedService`.
+     * @public
+     * @readonly
+     */
+    public readonly invokedService: InvokableService;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `invokedService`.
-         * @public
-         * @readonly
-         */
-        readonly invokedService: InvokableService,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        invokedService: InvokableService,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.invokedService = invokedService;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a NotificationInformation_ssInvocationSpecificInfo

@@ -41,28 +41,34 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class SnapshotDeviceResult {
+    /**
+     * @summary `crossRefIDorSnapshotData`.
+     * @description
+     *
+     * `serviceCrossRefID` if Snapshot DeviceData will follow;
+     * `snapshotData` if inline.
+     * @public
+     * @readonly
+     */
+    public readonly crossRefIDorSnapshotData: SnapshotDeviceResult_crossRefIDorSnapshotData;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `crossRefIDorSnapshotData`.
-         * @description
-         *
-         * `serviceCrossRefID` if Snapshot DeviceData will follow;
-         * `snapshotData` if inline.
-         * @public
-         * @readonly
-         */
-        readonly crossRefIDorSnapshotData: SnapshotDeviceResult_crossRefIDorSnapshotData,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        crossRefIDorSnapshotData: SnapshotDeviceResult_crossRefIDorSnapshotData,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.crossRefIDorSnapshotData = crossRefIDorSnapshotData;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a SnapshotDeviceResult

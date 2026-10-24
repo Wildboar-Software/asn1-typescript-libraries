@@ -28,54 +28,66 @@ import * as $ from "@wildboar/asn1/functional";
  *
  */
 export class TBOK {
+    /**
+     * @summary `levelOfAssurance`.
+     * @description
+     *
+     * 0..100: 0 = none, 100 = full. Validated-but-untrusted → 0, not `TBerror`. TBs may differ for the same cert.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly levelOfAssurance: INTEGER;
+    /**
+     * @summary `confidenceLevel`.
+     * @description
+     *
+     * 0..100: confidence in the `levelOfAssurance` figure (0 = none, 100 = full).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly confidenceLevel: INTEGER;
+    /**
+     * @summary `validationTime`.
+     * @description
+     *
+     * UTCTime of the TB's last revocation check of the presented certificate.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly validationTime: UTCTime;
+    /**
+     * @summary `info`.
+     * @description
+     *
+     * Optional extra text for the requestor.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly info?: OPTIONAL<UTF8String>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `levelOfAssurance`.
-         * @description
-         *
-         * 0..100: 0 = none, 100 = full. Validated-but-untrusted → 0, not `TBerror`. TBs may differ for the same cert.
-         *
-         * @public
-         * @readonly
-         */
-        readonly levelOfAssurance: INTEGER,
-        /**
-         * @summary `confidenceLevel`.
-         * @description
-         *
-         * 0..100: confidence in the `levelOfAssurance` figure (0 = none, 100 = full).
-         *
-         * @public
-         * @readonly
-         */
-        readonly confidenceLevel: INTEGER,
-        /**
-         * @summary `validationTime`.
-         * @description
-         *
-         * UTCTime of the TB's last revocation check of the presented certificate.
-         *
-         * @public
-         * @readonly
-         */
-        readonly validationTime: UTCTime,
-        /**
-         * @summary `info`.
-         * @description
-         *
-         * Optional extra text for the requestor.
-         *
-         * @public
-         * @readonly
-         */
-        readonly info?: OPTIONAL<UTF8String>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        levelOfAssurance: INTEGER,
+        confidenceLevel: INTEGER,
+        validationTime: UTCTime,
+        info?: OPTIONAL<UTF8String>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.levelOfAssurance = levelOfAssurance;
+        this.confidenceLevel = confidenceLevel;
+        this.validationTime = validationTime;
+        this.info = info;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a TBOK

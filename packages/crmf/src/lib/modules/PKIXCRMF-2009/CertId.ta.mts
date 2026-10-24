@@ -31,28 +31,34 @@ import {
  *
  */
 export class CertId {
+    /**
+     * @summary `issuer`.
+     * @description
+     *
+     * Issuer name ([RFC 4211 §6.5](https://datatracker.ietf.org/doc/html/rfc4211#section-6.5)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly issuer: GeneralName;
+    /**
+     * @summary `serialNumber`.
+     * @description
+     *
+     * Certificate serial number ([RFC 4211 §6.5](https://datatracker.ietf.org/doc/html/rfc4211#section-6.5)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly serialNumber: INTEGER;
+
     constructor(
-        /**
-         * @summary `issuer`.
-         * @description
-         *
-         * Issuer name ([RFC 4211 §6.5](https://datatracker.ietf.org/doc/html/rfc4211#section-6.5)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly issuer: GeneralName,
-        /**
-         * @summary `serialNumber`.
-         * @description
-         *
-         * Certificate serial number ([RFC 4211 §6.5](https://datatracker.ietf.org/doc/html/rfc4211#section-6.5)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly serialNumber: INTEGER
-    ) {}
+        issuer: GeneralName,
+        serialNumber: INTEGER
+    ) {
+        this.issuer = issuer;
+        this.serialNumber = serialNumber;
+    }
 
     /**
      * @summary Restructures an object into a CertId

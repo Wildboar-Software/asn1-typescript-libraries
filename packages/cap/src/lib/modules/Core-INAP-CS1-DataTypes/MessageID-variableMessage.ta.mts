@@ -32,20 +32,25 @@ import { VariablePart, _decode_VariablePart, _encode_VariablePart } from "../Cor
  */
 export
 class MessageID_variableMessage {
+    /**
+     * @summary `elementaryMessageID`.
+     * @public
+     * @readonly
+     */
+    public readonly elementaryMessageID: Integer4;
+    /**
+     * @summary `variableParts`.
+     * @public
+     * @readonly
+     */
+    public readonly variableParts: VariablePart[];
+
     constructor (
-        /**
-         * @summary `elementaryMessageID`.
-         * @public
-         * @readonly
-         */
-        readonly elementaryMessageID: Integer4,
-        /**
-         * @summary `variableParts`.
-         * @public
-         * @readonly
-         */
-        readonly variableParts: VariablePart[]
+        elementaryMessageID: Integer4,
+        variableParts: VariablePart[]
     ) {
+        this.elementaryMessageID = elementaryMessageID;
+        this.variableParts = variableParts;
         if (variableParts.length < 1 || variableParts.length > 5) {
             throw new ASN1SizeError("MessageID_variableMessage.variableParts violates SIZE constraint");
         }

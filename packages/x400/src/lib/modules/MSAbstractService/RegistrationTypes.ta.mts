@@ -44,26 +44,34 @@ import {
  *
  */
 export class RegistrationTypes {
+    /**
+     * @summary `registrations`.
+     * @public
+     * @readonly
+     */
+    public readonly registrations?: OPTIONAL<RegistrationTypes_registrations>;
+    /**
+     * @summary `extended_registrations`.
+     * @public
+     * @readonly
+     */
+    public readonly extended_registrations?: OPTIONAL<OBJECT_IDENTIFIER[]>;
+    /**
+     * @summary `restrict_message_groups`.
+     * @public
+     * @readonly
+     */
+    public readonly restrict_message_groups?: OPTIONAL<MessageGroupsRestriction>;
+
     constructor(
-        /**
-         * @summary `registrations`.
-         * @public
-         * @readonly
-         */
-        readonly registrations?: OPTIONAL<RegistrationTypes_registrations>,
-        /**
-         * @summary `extended_registrations`.
-         * @public
-         * @readonly
-         */
-        readonly extended_registrations?: OPTIONAL<OBJECT_IDENTIFIER[]>,
-        /**
-         * @summary `restrict_message_groups`.
-         * @public
-         * @readonly
-         */
-        readonly restrict_message_groups?: OPTIONAL<MessageGroupsRestriction>
-    ) {}
+        registrations?: OPTIONAL<RegistrationTypes_registrations>,
+        extended_registrations?: OPTIONAL<OBJECT_IDENTIFIER[]>,
+        restrict_message_groups?: OPTIONAL<MessageGroupsRestriction>
+    ) {
+        this.registrations = registrations;
+        this.extended_registrations = extended_registrations;
+        this.restrict_message_groups = restrict_message_groups;
+    }
 
     /**
      * @summary Restructures an object into a RegistrationTypes

@@ -31,14 +31,18 @@ import { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "
  */
 export
 class CollectInformationArg {
+    /**
+     * @summary `extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<ExtensionField[]>;
+
     constructor (
-        /**
-         * @summary `extensions`.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<ExtensionField[]>
-    ) {}
+        extensions?: OPTIONAL<ExtensionField[]>
+    ) {
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a CollectInformationArg

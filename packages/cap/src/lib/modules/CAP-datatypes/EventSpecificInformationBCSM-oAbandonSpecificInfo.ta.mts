@@ -25,21 +25,27 @@ import * as $ from "@wildboar/asn1/functional";
  *
  */
 export class EventSpecificInformationBCSM_oAbandonSpecificInfo {
+    /**
+     * @summary `routeNotPermitted`.
+     * @description
+     *
+     * O-Abandon triggered because call set-up shall not be invoked in this
+     * MSC due to Basic Optimal Routeing rules.
+     * (3GPP TS 29.078 V19.0.0 clause 11.18).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly routeNotPermitted?: OPTIONAL<NULL>;
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `routeNotPermitted`.
-         * @description
-         *
-         * O-Abandon triggered because call set-up shall not be invoked in this
-         * MSC due to Basic Optimal Routeing rules.
-         * (3GPP TS 29.078 V19.0.0 clause 11.18).
-         *
-         * @public
-         * @readonly
-         */
-        readonly routeNotPermitted?: OPTIONAL<NULL>,
-        readonly _unrecognizedExtensionsList: _Element[] = [],
-    ) {}
+        routeNotPermitted?: OPTIONAL<NULL>,
+        _unrecognizedExtensionsList: _Element[] = [],
+    ) {
+        this.routeNotPermitted = routeNotPermitted;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     public static _from_object (_o: { [_K in keyof (EventSpecificInformationBCSM_oAbandonSpecificInfo)]: (EventSpecificInformationBCSM_oAbandonSpecificInfo)[_K] }): EventSpecificInformationBCSM_oAbandonSpecificInfo {
         return new EventSpecificInformationBCSM_oAbandonSpecificInfo(_o.routeNotPermitted, _o._unrecognizedExtensionsList);

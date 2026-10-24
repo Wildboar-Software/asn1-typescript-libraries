@@ -43,26 +43,34 @@ import {
  *
  */
 export class AnyType_nillable {
+  /**
+   * @summary `embed_values`.
+   * @public
+   * @readonly
+   */
+  public readonly embed_values: String[];
+  /**
+   * @summary `attr`.
+   * @public
+   * @readonly
+   */
+  public readonly attr: String[];
+  /**
+   * @summary `content`.
+   * @public
+   * @readonly
+   */
+  public readonly content?: OPTIONAL<AnyType_nillable_content>;
+
   constructor(
-    /**
-     * @summary `embed_values`.
-     * @public
-     * @readonly
-     */
-    readonly embed_values: String[],
-    /**
-     * @summary `attr`.
-     * @public
-     * @readonly
-     */
-    readonly attr: String[],
-    /**
-     * @summary `content`.
-     * @public
-     * @readonly
-     */
-    readonly content?: OPTIONAL<AnyType_nillable_content>
-  ) {}
+    embed_values: String[],
+    attr: String[],
+    content?: OPTIONAL<AnyType_nillable_content>
+  ) {
+    this.embed_values = embed_values;
+    this.attr = attr;
+    this.content = content;
+  }
 
   /**
    * @summary Restructures an object into a AnyType_nillable

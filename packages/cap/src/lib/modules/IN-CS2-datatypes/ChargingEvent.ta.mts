@@ -34,26 +34,34 @@ import { LegID, _decode_LegID, _encode_LegID } from "../IN-CS2-datatypes/LegID.t
  */
 export
 class ChargingEvent {
+    /**
+     * @summary `eventTypeCharging`.
+     * @public
+     * @readonly
+     */
+    public readonly eventTypeCharging: EventTypeCharging;
+    /**
+     * @summary `monitorMode`.
+     * @public
+     * @readonly
+     */
+    public readonly monitorMode: MonitorMode;
+    /**
+     * @summary `legID`.
+     * @public
+     * @readonly
+     */
+    public readonly legID?: OPTIONAL<LegID>;
+
     constructor (
-        /**
-         * @summary `eventTypeCharging`.
-         * @public
-         * @readonly
-         */
-        readonly eventTypeCharging: EventTypeCharging,
-        /**
-         * @summary `monitorMode`.
-         * @public
-         * @readonly
-         */
-        readonly monitorMode: MonitorMode,
-        /**
-         * @summary `legID`.
-         * @public
-         * @readonly
-         */
-        readonly legID?: OPTIONAL<LegID>
-    ) {}
+        eventTypeCharging: EventTypeCharging,
+        monitorMode: MonitorMode,
+        legID?: OPTIONAL<LegID>
+    ) {
+        this.eventTypeCharging = eventTypeCharging;
+        this.monitorMode = monitorMode;
+        this.legID = legID;
+    }
 
     /**
      * @summary Restructures an object into a ChargingEvent

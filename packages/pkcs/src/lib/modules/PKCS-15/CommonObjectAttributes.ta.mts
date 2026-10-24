@@ -44,44 +44,58 @@ import { Label, _decode_Label, _encode_Label } from "../PKCS-15/Label.ta.mjs";
  *
  */
 export class CommonObjectAttributes {
+    /**
+     * @summary `label`.
+     * @public
+     * @readonly
+     */
+    public readonly label?: OPTIONAL<Label>;
+    /**
+     * @summary `flags`.
+     * @public
+     * @readonly
+     */
+    public readonly flags?: OPTIONAL<CommonObjectFlags>;
+    /**
+     * @summary `authId`.
+     * @public
+     * @readonly
+     */
+    public readonly authId?: OPTIONAL<Identifier>;
+    /**
+     * @summary `userConsent`.
+     * @public
+     * @readonly
+     */
+    public readonly userConsent?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `accessControlRules`.
+     * @public
+     * @readonly
+     */
+    public readonly accessControlRules?: OPTIONAL<AccessControlRule[]>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `label`.
-         * @public
-         * @readonly
-         */
-        readonly label?: OPTIONAL<Label>,
-        /**
-         * @summary `flags`.
-         * @public
-         * @readonly
-         */
-        readonly flags?: OPTIONAL<CommonObjectFlags>,
-        /**
-         * @summary `authId`.
-         * @public
-         * @readonly
-         */
-        readonly authId?: OPTIONAL<Identifier>,
-        /**
-         * @summary `userConsent`.
-         * @public
-         * @readonly
-         */
-        readonly userConsent?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `accessControlRules`.
-         * @public
-         * @readonly
-         */
-        readonly accessControlRules?: OPTIONAL<AccessControlRule[]>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        label?: OPTIONAL<Label>,
+        flags?: OPTIONAL<CommonObjectFlags>,
+        authId?: OPTIONAL<Identifier>,
+        userConsent?: OPTIONAL<INTEGER>,
+        accessControlRules?: OPTIONAL<AccessControlRule[]>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.label = label;
+        this.flags = flags;
+        this.authId = authId;
+        this.userConsent = userConsent;
+        this.accessControlRules = accessControlRules;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a CommonObjectAttributes

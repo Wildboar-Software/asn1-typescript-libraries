@@ -39,44 +39,54 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class ExplicitPointer {
+    /**
+     * @summary `x`.
+     * @description
+     * X (lowest-order) coordinate. Only component present for a 1-D
+     * DO. Maps to service argument p. ISO/IEC 9041-1:1997 §12.2.
+     * @public
+     * @readonly
+     */
+    public readonly x?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `y`.
+     * @description
+     * Y coordinate. Maps to service argument q. ISO/IEC 9041-1:1997
+     * §12.2.
+     * @public
+     * @readonly
+     */
+    public readonly y?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `z`.
+     * @description
+     * Z coordinate. Always omitted for a 2-D DO. Maps to service
+     * argument r. ISO/IEC 9041-1:1997 §12.2.
+     * @public
+     * @readonly
+     */
+    public readonly z?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `b`.
+     * @description
+     * Block index. Always omitted if the Blocks FU is not selected.
+     * ISO/IEC 9041-1:1997 §12.2; ISO/IEC 9040:1997 §13.1.2.
+     * @public
+     * @readonly
+     */
+    public readonly b?: OPTIONAL<INTEGER>;
+
     constructor (
-        /**
-         * @summary `x`.
-         * @description
-         * X (lowest-order) coordinate. Only component present for a 1-D
-         * DO. Maps to service argument p. ISO/IEC 9041-1:1997 §12.2.
-         * @public
-         * @readonly
-         */
-        readonly x?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `y`.
-         * @description
-         * Y coordinate. Maps to service argument q. ISO/IEC 9041-1:1997
-         * §12.2.
-         * @public
-         * @readonly
-         */
-        readonly y?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `z`.
-         * @description
-         * Z coordinate. Always omitted for a 2-D DO. Maps to service
-         * argument r. ISO/IEC 9041-1:1997 §12.2.
-         * @public
-         * @readonly
-         */
-        readonly z?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `b`.
-         * @description
-         * Block index. Always omitted if the Blocks FU is not selected.
-         * ISO/IEC 9041-1:1997 §12.2; ISO/IEC 9040:1997 §13.1.2.
-         * @public
-         * @readonly
-         */
-        readonly b?: OPTIONAL<INTEGER>
-    ) {}
+        x?: OPTIONAL<INTEGER>,
+        y?: OPTIONAL<INTEGER>,
+        z?: OPTIONAL<INTEGER>,
+        b?: OPTIONAL<INTEGER>
+    ) {
+        this.x = x;
+        this.y = y;
+        this.z = z;
+        this.b = b;
+    }
 
     /**
      * @summary Restructures an object into a ExplicitPointer

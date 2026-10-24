@@ -37,29 +37,35 @@ import { MMSString, _decode_MMSString, _encode_MMSString } from "../ISO-9506-MMS
  */
 export
 class VMDSupportParameters {
+    /**
+     * @summary `localDetail`.
+     * @description
+     *
+     * Implementation-local CIS detail string. ISO 9506-2:2003 Annex B.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly localDetail: MMSString;
+    /**
+     * @summary `extendedDerivation`.
+     * @description
+     *
+     * Method used to perform extended derivation. ISO 9506-2:2003 Annex
+     * B.2.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extendedDerivation: MMSString;
+
     constructor (
-        /**
-         * @summary `localDetail`.
-         * @description
-         *
-         * Implementation-local CIS detail string. ISO 9506-2:2003 Annex B.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly localDetail: MMSString,
-        /**
-         * @summary `extendedDerivation`.
-         * @description
-         *
-         * Method used to perform extended derivation. ISO 9506-2:2003 Annex
-         * B.2.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly extendedDerivation: MMSString
-    ) {}
+        localDetail: MMSString,
+        extendedDerivation: MMSString
+    ) {
+        this.localDetail = localDetail;
+        this.extendedDerivation = extendedDerivation;
+    }
 
     /**
      * @summary Restructures an object into a VMDSupportParameters

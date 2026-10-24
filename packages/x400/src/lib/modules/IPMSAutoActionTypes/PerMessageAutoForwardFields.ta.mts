@@ -42,14 +42,6 @@ import {
     _encode_ExtensionField,
 } from '../MTSAbstractService/ExtensionField.ta.mjs';
 
-export interface PerMessageAutoForwardFields {
-    readonly originator_name: OriginatorName;
-    readonly content_identifier?: OPTIONAL<ContentIdentifier>;
-    readonly priority?: OPTIONAL<Priority>;
-    readonly per_message_indicators?: OPTIONAL<PerMessageIndicators>;
-    readonly deferred_delivery_time?: OPTIONAL<DeferredDeliveryTime>;
-}
-
 /**
  * @summary PerMessageAutoForwardFields
  * @description
@@ -73,44 +65,58 @@ export interface PerMessageAutoForwardFields {
  *
  */
 export class PerMessageAutoForwardFields {
+    /**
+     * @summary `originator_name`.
+     * @public
+     * @readonly
+     */
+    public readonly originator_name: OriginatorName;
+    /**
+     * @summary `content_identifier`.
+     * @public
+     * @readonly
+     */
+    public readonly content_identifier?: OPTIONAL<ContentIdentifier>;
+    /**
+     * @summary `priority`.
+     * @public
+     * @readonly
+     */
+    public readonly priority?: OPTIONAL<Priority>;
+    /**
+     * @summary `per_message_indicators`.
+     * @public
+     * @readonly
+     */
+    public readonly per_message_indicators?: OPTIONAL<PerMessageIndicators>;
+    /**
+     * @summary `deferred_delivery_time`.
+     * @public
+     * @readonly
+     */
+    public readonly deferred_delivery_time?: OPTIONAL<DeferredDeliveryTime>;
+    /**
+     * @summary `extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<ExtensionField[]>;
+
     constructor(
-        /**
-         * @summary `originator_name`.
-         * @public
-         * @readonly
-         */
-        readonly originator_name: OriginatorName,
-        /**
-         * @summary `content_identifier`.
-         * @public
-         * @readonly
-         */
-        readonly content_identifier?: OPTIONAL<ContentIdentifier>,
-        /**
-         * @summary `priority`.
-         * @public
-         * @readonly
-         */
-        readonly priority?: OPTIONAL<Priority>,
-        /**
-         * @summary `per_message_indicators`.
-         * @public
-         * @readonly
-         */
-        readonly per_message_indicators?: OPTIONAL<PerMessageIndicators>,
-        /**
-         * @summary `deferred_delivery_time`.
-         * @public
-         * @readonly
-         */
-        readonly deferred_delivery_time?: OPTIONAL<DeferredDeliveryTime>,
-        /**
-         * @summary `extensions`.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<ExtensionField[]>
-    ) {}
+        originator_name: OriginatorName,
+        content_identifier?: OPTIONAL<ContentIdentifier>,
+        priority?: OPTIONAL<Priority>,
+        per_message_indicators?: OPTIONAL<PerMessageIndicators>,
+        deferred_delivery_time?: OPTIONAL<DeferredDeliveryTime>,
+        extensions?: OPTIONAL<ExtensionField[]>
+    ) {
+        this.originator_name = originator_name;
+        this.content_identifier = content_identifier;
+        this.priority = priority;
+        this.per_message_indicators = per_message_indicators;
+        this.deferred_delivery_time = deferred_delivery_time;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a PerMessageAutoForwardFields
@@ -148,6 +154,16 @@ export class PerMessageAutoForwardFields {
     public static get _default_value_for_extensions(): ExtensionField[] {
         return [];
     }
+}
+
+// This is the weirdest behavior I've ever seen in Typescript:
+// You MUST declare this after PerMessageAutoForwardFields.
+export interface PerMessageAutoForwardFields {
+    readonly originator_name: OriginatorName;
+    readonly content_identifier?: OPTIONAL<ContentIdentifier>;
+    readonly priority?: OPTIONAL<Priority>;
+    readonly per_message_indicators?: OPTIONAL<PerMessageIndicators>;
+    readonly deferred_delivery_time?: OPTIONAL<DeferredDeliveryTime>;
 }
 
 /**

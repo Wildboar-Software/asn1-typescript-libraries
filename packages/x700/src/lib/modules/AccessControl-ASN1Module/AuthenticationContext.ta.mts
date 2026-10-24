@@ -41,30 +41,36 @@ import * as $ from '@wildboar/asn1/functional';
  *
  */
 export class AuthenticationContext {
+    /**
+     * @summary `authenticationPolicyId`.
+     * @description
+     *
+     * `AC-AUTH-CONTEXT.&id` from
+     * `AuthenticationContextSet`; identifies the
+     * authentication policy. X.741 §8.1.3.4.1.1, Cor.3 A.6.
+     * @public
+     * @readonly
+     */
+    public readonly authenticationPolicyId: OBJECT_IDENTIFIER;
+    /**
+     * @summary `requirements`.
+     * @description
+     *
+     * Policy-defined authentication requirements, typed by
+     * `authenticationPolicyId`. X.741 §8.1.3.4.1.1, Cor.3
+     * A.6.
+     * @public
+     * @readonly
+     */
+    public readonly requirements: _Element;
+
     constructor(
-        /**
-         * @summary `authenticationPolicyId`.
-         * @description
-         *
-         * `AC-AUTH-CONTEXT.&id` from
-         * `AuthenticationContextSet`; identifies the
-         * authentication policy. X.741 §8.1.3.4.1.1, Cor.3 A.6.
-         * @public
-         * @readonly
-         */
-        readonly authenticationPolicyId: OBJECT_IDENTIFIER,
-        /**
-         * @summary `requirements`.
-         * @description
-         *
-         * Policy-defined authentication requirements, typed by
-         * `authenticationPolicyId`. X.741 §8.1.3.4.1.1, Cor.3
-         * A.6.
-         * @public
-         * @readonly
-         */
-        readonly requirements: _Element
-    ) {}
+        authenticationPolicyId: OBJECT_IDENTIFIER,
+        requirements: _Element
+    ) {
+        this.authenticationPolicyId = authenticationPolicyId;
+        this.requirements = requirements;
+    }
 
     /**
      * @summary Restructures an object into a AuthenticationContext

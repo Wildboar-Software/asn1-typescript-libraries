@@ -56,64 +56,76 @@ import {
  *
  */
 export class RunningBSPLocalReference {
+  /**
+   * @summary `hostingEndpointIRI`.
+   * @description
+   *
+   * Endpoint containing the referenced BSP (local or a slave).
+   * X.1083 §18.5.2.1.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly hostingEndpointIRI: EndpointIRI;
+  /**
+   * @summary `bspProductUuid`.
+   * @description
+   *
+   * Product UUID of that BSP. X.1083 §18.5.2.2.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly bspProductUuid: BioAPI_UUID;
+  /**
+   * @summary `useBSPAccessUuid`.
+   * @description
+   *
+   * `TRUE` if `BioAPI_BSPLoad` identified the BSP by access
+   * UUID rather than product UUID. A later `BioAPI_BSPUnload`
+   * and unit-event callbacks using this row must use the same
+   * UUID. X.1083 §18.5.2.3.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly useBSPAccessUuid: BOOLEAN;
+  /**
+   * @summary `unitEventHandlerAddress`.
+   * @description
+   *
+   * Local unit-event handler. A value other than 0 obliges the
+   * framework to call that handler. X.1083 §18.5.2.4.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly unitEventHandlerAddress: MemoryAddress;
+  /**
+   * @summary `unitEventHandlerContext`.
+   * @description
+   *
+   * Context passed into the unit-event handler. X.1083
+   * §18.5.2.5.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly unitEventHandlerContext: MemoryAddress;
+
   constructor(
-    /**
-     * @summary `hostingEndpointIRI`.
-     * @description
-     *
-     * Endpoint containing the referenced BSP (local or a slave).
-     * X.1083 §18.5.2.1.
-     *
-     * @public
-     * @readonly
-     */
-    readonly hostingEndpointIRI: EndpointIRI,
-    /**
-     * @summary `bspProductUuid`.
-     * @description
-     *
-     * Product UUID of that BSP. X.1083 §18.5.2.2.
-     *
-     * @public
-     * @readonly
-     */
-    readonly bspProductUuid: BioAPI_UUID,
-    /**
-     * @summary `useBSPAccessUuid`.
-     * @description
-     *
-     * `TRUE` if `BioAPI_BSPLoad` identified the BSP by access
-     * UUID rather than product UUID. A later `BioAPI_BSPUnload`
-     * and unit-event callbacks using this row must use the same
-     * UUID. X.1083 §18.5.2.3.
-     *
-     * @public
-     * @readonly
-     */
-    readonly useBSPAccessUuid: BOOLEAN,
-    /**
-     * @summary `unitEventHandlerAddress`.
-     * @description
-     *
-     * Local unit-event handler. A value other than 0 obliges the
-     * framework to call that handler. X.1083 §18.5.2.4.
-     *
-     * @public
-     * @readonly
-     */
-    readonly unitEventHandlerAddress: MemoryAddress,
-    /**
-     * @summary `unitEventHandlerContext`.
-     * @description
-     *
-     * Context passed into the unit-event handler. X.1083
-     * §18.5.2.5.
-     *
-     * @public
-     * @readonly
-     */
-    readonly unitEventHandlerContext: MemoryAddress
-  ) {}
+    hostingEndpointIRI: EndpointIRI,
+    bspProductUuid: BioAPI_UUID,
+    useBSPAccessUuid: BOOLEAN,
+    unitEventHandlerAddress: MemoryAddress,
+    unitEventHandlerContext: MemoryAddress
+  ) {
+    this.hostingEndpointIRI = hostingEndpointIRI;
+    this.bspProductUuid = bspProductUuid;
+    this.useBSPAccessUuid = useBSPAccessUuid;
+    this.unitEventHandlerAddress = unitEventHandlerAddress;
+    this.unitEventHandlerContext = unitEventHandlerContext;
+  }
 
   /**
    * @summary Restructures an object into a RunningBSPLocalReference

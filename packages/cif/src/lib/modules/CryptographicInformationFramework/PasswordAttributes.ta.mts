@@ -59,116 +59,141 @@ import { cia_ub_storedVerifDataValueNumber } from "../CryptographicInformationFr
  */
 export
 class PasswordAttributes {
+    /**
+     * @summary `pwdFlags`.
+     * @description
+     * See `PasswordFlags`. Local vs global: a non-local password is global;
+     * verification remains in effect until removal/reset or a failed
+     * re-verify. A local password may need re-verification on each use and
+     * only protects its application. ISO/IEC 7816-15:2016 §8.9.2.
+     * @public
+     * @readonly
+     */
+    public readonly pwdFlags: PasswordFlags;
+    /**
+     * @summary `pwdType`.
+     * @description
+     * Encoding of password digits/characters. ISO/IEC 7816-15:2016 §8.9.2.
+     * @public
+     * @readonly
+     */
+    public readonly pwdType: PasswordType;
+    /**
+     * @summary `minLength`.
+     * @description
+     * Minimum length in characters of a new password (if change is
+     * allowed). ISO/IEC 7816-15:2016 §8.9.2.
+     * @public
+     * @readonly
+     */
+    public readonly minLength: INTEGER;
+    /**
+     * @summary `storedLength`.
+     * @description
+     * Stored length on the card in bytes; used to compute padding. May be 0
+     * and ignored if padding is not needed. ISO/IEC 7816-15:2016 §8.9.2.
+     * @public
+     * @readonly
+     */
+    public readonly storedLength: INTEGER;
+    /**
+     * @summary `maxLength`.
+     * @description
+     * Maximum length in characters when the card does not pad. ISO/IEC
+     * 7816-15:2016 §8.9.2.
+     * @public
+     * @readonly
+     */
+    public readonly maxLength?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `pwdReference`.
+     * @description
+     * Card-specific password reference, typically P2 of ISO/IEC 7816-4
+     * VERIFY. DEFAULT 0. ISO/IEC 7816-15:2016 §8.9.2.
+     * @public
+     * @readonly
+     */
+    public readonly pwdReference?: OPTIONAL<Reference>;
+    /**
+     * @summary `padChar`.
+     * @description
+     * Padding octet (usually 'FF' or '00'). For `bcd`, both nibbles shall
+     * be equal (e.g. '55' is allowed, '34' is not). Omit if padding is not
+     * needed. ISO/IEC 7816-15:2016 §8.9.2.
+     * @public
+     * @readonly
+     */
+    public readonly padChar?: OPTIONAL<OCTET_STRING>;
+    /**
+     * @summary `lastPasswordChange`.
+     * @description
+     * For password-expiration policies. If never set/changed, use
+     * `000000000000Z`. ISO/IEC 7816-15:2016 §8.9.2.
+     * @public
+     * @readonly
+     */
+    public readonly lastPasswordChange?: OPTIONAL<GeneralizedTime>;
+    /**
+     * @summary `path`.
+     * @description
+     * DF in which the password resides; SELECT it before a password
+     * operation. If absent, CHV is possible without a prior SELECT. ISO/IEC
+     * 7816-15:2016 §8.9.2.
+     * @public
+     * @readonly
+     */
+    public readonly path?: OPTIONAL<Path>;
+    /**
+     * @summary `verifDataHistoryLength`.
+     * @description
+     * Maximum number of stored verification data values; range [0, 8].
+     * ISO/IEC 7816-15:2016 §8.9.2.
+     * @public
+     * @readonly
+     */
+    public readonly verifDataHistoryLength?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `cioSecurityId`.
+     * @description
+     * Cross-reference to a `SecurityFileOrObject` whose protocol requires
+     * this password. ISO/IEC 7816-15:2016 §8.9.2.
+     * @public
+     * @readonly
+     */
+    public readonly cioSecurityId?: OPTIONAL<INTEGER>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `pwdFlags`.
-         * @description
-         * See `PasswordFlags`. Local vs global: a non-local password is global;
-         * verification remains in effect until removal/reset or a failed
-         * re-verify. A local password may need re-verification on each use and
-         * only protects its application. ISO/IEC 7816-15:2016 §8.9.2.
-         * @public
-         * @readonly
-         */
-        readonly pwdFlags: PasswordFlags,
-        /**
-         * @summary `pwdType`.
-         * @description
-         * Encoding of password digits/characters. ISO/IEC 7816-15:2016 §8.9.2.
-         * @public
-         * @readonly
-         */
-        readonly pwdType: PasswordType,
-        /**
-         * @summary `minLength`.
-         * @description
-         * Minimum length in characters of a new password (if change is
-         * allowed). ISO/IEC 7816-15:2016 §8.9.2.
-         * @public
-         * @readonly
-         */
-        readonly minLength: INTEGER,
-        /**
-         * @summary `storedLength`.
-         * @description
-         * Stored length on the card in bytes; used to compute padding. May be 0
-         * and ignored if padding is not needed. ISO/IEC 7816-15:2016 §8.9.2.
-         * @public
-         * @readonly
-         */
-        readonly storedLength: INTEGER,
-        /**
-         * @summary `maxLength`.
-         * @description
-         * Maximum length in characters when the card does not pad. ISO/IEC
-         * 7816-15:2016 §8.9.2.
-         * @public
-         * @readonly
-         */
-        readonly maxLength?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `pwdReference`.
-         * @description
-         * Card-specific password reference, typically P2 of ISO/IEC 7816-4
-         * VERIFY. DEFAULT 0. ISO/IEC 7816-15:2016 §8.9.2.
-         * @public
-         * @readonly
-         */
-        readonly pwdReference?: OPTIONAL<Reference>,
-        /**
-         * @summary `padChar`.
-         * @description
-         * Padding octet (usually 'FF' or '00'). For `bcd`, both nibbles shall
-         * be equal (e.g. '55' is allowed, '34' is not). Omit if padding is not
-         * needed. ISO/IEC 7816-15:2016 §8.9.2.
-         * @public
-         * @readonly
-         */
-        readonly padChar?: OPTIONAL<OCTET_STRING>,
-        /**
-         * @summary `lastPasswordChange`.
-         * @description
-         * For password-expiration policies. If never set/changed, use
-         * `000000000000Z`. ISO/IEC 7816-15:2016 §8.9.2.
-         * @public
-         * @readonly
-         */
-        readonly lastPasswordChange?: OPTIONAL<GeneralizedTime>,
-        /**
-         * @summary `path`.
-         * @description
-         * DF in which the password resides; SELECT it before a password
-         * operation. If absent, CHV is possible without a prior SELECT. ISO/IEC
-         * 7816-15:2016 §8.9.2.
-         * @public
-         * @readonly
-         */
-        readonly path?: OPTIONAL<Path>,
-        /**
-         * @summary `verifDataHistoryLength`.
-         * @description
-         * Maximum number of stored verification data values; range [0, 8].
-         * ISO/IEC 7816-15:2016 §8.9.2.
-         * @public
-         * @readonly
-         */
-        readonly verifDataHistoryLength?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `cioSecurityId`.
-         * @description
-         * Cross-reference to a `SecurityFileOrObject` whose protocol requires
-         * this password. ISO/IEC 7816-15:2016 §8.9.2.
-         * @public
-         * @readonly
-         */
-        readonly cioSecurityId?: OPTIONAL<INTEGER>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
+        pwdFlags: PasswordFlags,
+        pwdType: PasswordType,
+        minLength: INTEGER,
+        storedLength: INTEGER,
+        maxLength?: OPTIONAL<INTEGER>,
+        pwdReference?: OPTIONAL<Reference>,
+        padChar?: OPTIONAL<OCTET_STRING>,
+        lastPasswordChange?: OPTIONAL<GeneralizedTime>,
+        path?: OPTIONAL<Path>,
+        verifDataHistoryLength?: OPTIONAL<INTEGER>,
+        cioSecurityId?: OPTIONAL<INTEGER>,
+        _unrecognizedExtensionsList: _Element[] = []
     ) {
+        this.pwdFlags = pwdFlags;
+        this.pwdType = pwdType;
+        this.minLength = minLength;
+        this.storedLength = storedLength;
+        this.maxLength = maxLength;
+        this.pwdReference = pwdReference;
+        this.padChar = padChar;
+        this.lastPasswordChange = lastPasswordChange;
+        this.path = path;
+        this.verifDataHistoryLength = verifDataHistoryLength;
+        this.cioSecurityId = cioSecurityId;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
         const minN = typeof minLength === "bigint" ? minLength : BigInt(minLength);
         if (minN < BigInt(cia_lb_minPasswordLength) || minN > BigInt(cia_ub_minPasswordLength)) {
             throw new ASN1OverflowError("PasswordAttributes.minLength violates INTEGER range");

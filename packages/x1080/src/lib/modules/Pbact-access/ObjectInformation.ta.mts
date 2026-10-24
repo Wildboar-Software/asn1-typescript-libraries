@@ -41,39 +41,47 @@ import {
  *
  */
 export class ObjectInformation {
+    /**
+     * @summary `name`.
+     * @description
+     *
+     * Distinguished name of the object.
+     * ITU-T Rec. X.1080.0 (2017) Cor.1
+     * [§8.12](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly name: DistinguishedName;
+    /**
+     * @summary `info`.
+     * @description
+     *
+     * Returned attributes; types only when the request asked for
+     * `attributeTypesOnly`.
+     * ITU-T Rec. X.1080.0 (2017) Cor.1
+     * [§8.12](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly info: Attribute[];
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `name`.
-         * @description
-         *
-         * Distinguished name of the object.
-         * ITU-T Rec. X.1080.0 (2017) Cor.1
-         * [§8.12](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly name: DistinguishedName,
-        /**
-         * @summary `info`.
-         * @description
-         *
-         * Returned attributes; types only when the request asked for
-         * `attributeTypesOnly`.
-         * ITU-T Rec. X.1080.0 (2017) Cor.1
-         * [§8.12](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly info: Attribute[],
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        name: DistinguishedName,
+        info: Attribute[],
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.name = name;
+        this.info = info;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a ObjectInformation

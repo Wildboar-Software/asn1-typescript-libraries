@@ -29,14 +29,18 @@ import { Digits, _decode_Digits, _encode_Digits } from "../IN-CS2-datatypes/Digi
  */
 export
 class MidCallInfo {
+    /**
+     * @summary `iNServiceControlCode`.
+     * @public
+     * @readonly
+     */
+    public readonly iNServiceControlCode: Digits;
+
     constructor (
-        /**
-         * @summary `iNServiceControlCode`.
-         * @public
-         * @readonly
-         */
-        readonly iNServiceControlCode: Digits
-    ) {}
+        iNServiceControlCode: Digits
+    ) {
+        this.iNServiceControlCode = iNServiceControlCode;
+    }
 
     /**
      * @summary Restructures an object into a MidCallInfo

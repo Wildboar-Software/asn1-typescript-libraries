@@ -46,60 +46,72 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class SetVoiceAttributeArgument {
+    /**
+     * @summary `connection`.
+     * @description
+     *
+     * Connection whose attribute is set (ECMA-269 §26.1.13.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly connection: ConnectionID;
+    /**
+     * @summary `attributeToSet`.
+     * @description
+     *
+     * Attribute CHOICE to apply (ECMA-269 §26.1.13.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly attributeToSet: AttributeToSet;
+    /**
+     * @summary `message`.
+     * @description
+     *
+     * Message when the attribute is message-scoped (ECMA-269 §26.1.13.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly message?: OPTIONAL<MessageID>;
+    /**
+     * @summary `resource`.
+     * @description
+     *
+     * Interactive voice resource. Required when more than one interactive
+     * voice resource exists on the connection.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly resource?: OPTIONAL<ResourceID>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * CSTACommonArguments carrying the service-table security and
+     * privateData parameters.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `connection`.
-         * @description
-         *
-         * Connection whose attribute is set (ECMA-269 §26.1.13.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly connection: ConnectionID,
-        /**
-         * @summary `attributeToSet`.
-         * @description
-         *
-         * Attribute CHOICE to apply (ECMA-269 §26.1.13.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly attributeToSet: AttributeToSet,
-        /**
-         * @summary `message`.
-         * @description
-         *
-         * Message when the attribute is message-scoped (ECMA-269 §26.1.13.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly message?: OPTIONAL<MessageID>,
-        /**
-         * @summary `resource`.
-         * @description
-         *
-         * Interactive voice resource. Required when more than one interactive
-         * voice resource exists on the connection.
-         *
-         * @public
-         * @readonly
-         */
-        readonly resource?: OPTIONAL<ResourceID>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * CSTACommonArguments carrying the service-table security and
-         * privateData parameters.
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        connection: ConnectionID,
+        attributeToSet: AttributeToSet,
+        message?: OPTIONAL<MessageID>,
+        resource?: OPTIONAL<ResourceID>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.connection = connection;
+        this.attributeToSet = attributeToSet;
+        this.message = message;
+        this.resource = resource;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a SetVoiceAttributeArgument

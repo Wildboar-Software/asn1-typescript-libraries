@@ -28,19 +28,23 @@ import { NotificationEvent, _decode_NotificationEvent, _encode_NotificationEvent
  */
 export
 class ListNotificationRequest {
+    /**
+     * @summary `profileManagementOperation`.
+     * @description
+     * 
+     * If present, only notifications of these events are listed. If
+     * omitted, all pending notifications are listed. SGP.22 v3.1 §5.7.9.
+     * 
+     * @public
+     * @readonly
+     */
+    public readonly profileManagementOperation?: OPTIONAL<NotificationEvent>;
+
     constructor (
-        /**
-         * @summary `profileManagementOperation`.
-         * @description
-         * 
-         * If present, only notifications of these events are listed. If
-         * omitted, all pending notifications are listed. SGP.22 v3.1 §5.7.9.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly profileManagementOperation?: OPTIONAL<NotificationEvent>
-    ) {}
+        profileManagementOperation?: OPTIONAL<NotificationEvent>
+    ) {
+        this.profileManagementOperation = profileManagementOperation;
+    }
 
     /**
      * @summary Restructures an object into a ListNotificationRequest

@@ -38,44 +38,52 @@ import { ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-
  */
 export
 class RemoveEventConditionListReference_Request {
+    /**
+     * @summary `eventConditionListName`.
+     * @description
+     *
+     * List to update.
+     *
+     * [ISO 9506-1:2003 §22.5.1.1]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly eventConditionListName: ObjectName;
+    /**
+     * @summary `listOfEventConditionName`.
+     * @description
+     *
+     * Event Conditions to remove.
+     *
+     * [ISO 9506-1:2003 §22.5]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly listOfEventConditionName: ObjectName[];
+    /**
+     * @summary `listOfEventConditionListName`.
+     * @description
+     *
+     * Nested lists to remove. Iff `recl`.
+     *
+     * [ISO 9506-2:2003 §22.5]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly listOfEventConditionListName: ObjectName[];
+
     constructor (
-        /**
-         * @summary `eventConditionListName`.
-         * @description
-         *
-         * List to update.
-         *
-         * [ISO 9506-1:2003 §22.5.1.1]
-         *
-         * @public
-         * @readonly
-         */
-        readonly eventConditionListName: ObjectName,
-        /**
-         * @summary `listOfEventConditionName`.
-         * @description
-         *
-         * Event Conditions to remove.
-         *
-         * [ISO 9506-1:2003 §22.5]
-         *
-         * @public
-         * @readonly
-         */
-        readonly listOfEventConditionName: ObjectName[],
-        /**
-         * @summary `listOfEventConditionListName`.
-         * @description
-         *
-         * Nested lists to remove. Iff `recl`.
-         *
-         * [ISO 9506-2:2003 §22.5]
-         *
-         * @public
-         * @readonly
-         */
-        readonly listOfEventConditionListName: ObjectName[]
-    ) {}
+        eventConditionListName: ObjectName,
+        listOfEventConditionName: ObjectName[],
+        listOfEventConditionListName: ObjectName[]
+    ) {
+        this.eventConditionListName = eventConditionListName;
+        this.listOfEventConditionName = listOfEventConditionName;
+        this.listOfEventConditionListName = listOfEventConditionListName;
+    }
 
     /**
      * @summary Restructures an object into a RemoveEventConditionListReference_Request

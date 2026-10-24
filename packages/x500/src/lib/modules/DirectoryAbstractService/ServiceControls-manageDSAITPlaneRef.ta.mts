@@ -30,34 +30,42 @@ import {
  *
  */
 export class ServiceControls_manageDSAITPlaneRef {
+    /**
+     * @summary `dsaName`.
+     * @description
+     *
+     * Name of the supplying DSA of the replication plane.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly dsaName: Name;
+    /**
+     * @summary `agreementID`.
+     * @description
+     *
+     * Shadowing agreement ID of the plane; paired with `dsaName`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly agreementID: AgreementID;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `dsaName`.
-         * @description
-         *
-         * Name of the supplying DSA of the replication plane.
-         *
-         * @public
-         * @readonly
-         */
-        readonly dsaName: Name,
-        /**
-         * @summary `agreementID`.
-         * @description
-         *
-         * Shadowing agreement ID of the plane; paired with `dsaName`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly agreementID: AgreementID,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        dsaName: Name,
+        agreementID: AgreementID,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.dsaName = dsaName;
+        this.agreementID = agreementID;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a ServiceControls_manageDSAITPlaneRef

@@ -32,26 +32,34 @@ import {
  *
  */
 export class Context_list_Item {
+    /**
+     * @summary `presentation_context_identifier`.
+     * @public
+     * @readonly
+     */
+    public readonly presentation_context_identifier: Presentation_context_identifier;
+    /**
+     * @summary `abstract_syntax_name`.
+     * @public
+     * @readonly
+     */
+    public readonly abstract_syntax_name: Abstract_syntax_name;
+    /**
+     * @summary `transfer_syntax_name_list`.
+     * @public
+     * @readonly
+     */
+    public readonly transfer_syntax_name_list: Transfer_syntax_name[];
+
     constructor(
-        /**
-         * @summary `presentation_context_identifier`.
-         * @public
-         * @readonly
-         */
-        readonly presentation_context_identifier: Presentation_context_identifier,
-        /**
-         * @summary `abstract_syntax_name`.
-         * @public
-         * @readonly
-         */
-        readonly abstract_syntax_name: Abstract_syntax_name,
-        /**
-         * @summary `transfer_syntax_name_list`.
-         * @public
-         * @readonly
-         */
-        readonly transfer_syntax_name_list: Transfer_syntax_name[]
-    ) {}
+        presentation_context_identifier: Presentation_context_identifier,
+        abstract_syntax_name: Abstract_syntax_name,
+        transfer_syntax_name_list: Transfer_syntax_name[]
+    ) {
+        this.presentation_context_identifier = presentation_context_identifier;
+        this.abstract_syntax_name = abstract_syntax_name;
+        this.transfer_syntax_name_list = transfer_syntax_name_list;
+    }
 
     /**
      * @summary Restructures an object into a Context_list_Item

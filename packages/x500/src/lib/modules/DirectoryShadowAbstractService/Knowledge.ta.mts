@@ -35,37 +35,45 @@ import {
  *
  */
 export class Knowledge {
+    /**
+     * @summary `knowledgeType`.
+     * @description
+     *
+     * `master` = refs to master naming contexts only; `shadow` = refs to
+     * commonly usable replicated areas only; `both` = both.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly knowledgeType: Knowledge_knowledgeType;
+    /**
+     * @summary `extendedKnowledge`.
+     * @description
+     *
+     * DEFAULT FALSE. TRUE includes subordinate / NSSR refs that are not
+     * immediately subordinate to entries in the replicated area (glue
+     * SDSEs fill the gap). Incompatible with `subordinates` TRUE.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extendedKnowledge?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `knowledgeType`.
-         * @description
-         *
-         * `master` = refs to master naming contexts only; `shadow` = refs to
-         * commonly usable replicated areas only; `both` = both.
-         *
-         * @public
-         * @readonly
-         */
-        readonly knowledgeType: Knowledge_knowledgeType,
-        /**
-         * @summary `extendedKnowledge`.
-         * @description
-         *
-         * DEFAULT FALSE. TRUE includes subordinate / NSSR refs that are not
-         * immediately subordinate to entries in the replicated area (glue
-         * SDSEs fill the gap). Incompatible with `subordinates` TRUE.
-         *
-         * @public
-         * @readonly
-         */
-        readonly extendedKnowledge?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        knowledgeType: Knowledge_knowledgeType,
+        extendedKnowledge?: OPTIONAL<BOOLEAN>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.knowledgeType = knowledgeType;
+        this.extendedKnowledge = extendedKnowledge;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a Knowledge

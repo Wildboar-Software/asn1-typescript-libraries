@@ -38,39 +38,47 @@ import { type Extensions, _decode_Extensions, _encode_Extensions } from "../CAP-
  */
 export
 class RequestReportBCSMEventArg {
+    /**
+     * @summary `bcsmEvents`.
+     * @description
+     *
+     * Events to report. Each `BCSMEvent` has `eventTypeBCSM`; `monitorMode`
+     * (interrupted = request, notifyAndContinue = notification, transparent
+     * = do not report); `legID` as Sending Side LegID (gsmSCF → gsmSSF;
+     * defaults from tables 11-1/11-2; always included for O_Disconnect and
+     * T_Disconnect); `dPSpecificCriteria` (`numberOfDigits` and
+     * `interDigitTimeout` for CollectedInfo, `applicationTimer` No_Answer
+     * timer shorter than the network timer, `midCallControlInfo`,
+     * `changeOfPositionControlInfo`); `automaticRearm` (NULL) to rearm the
+     * DP whenever encountered. (3GPP TS 29.078 V19.0.0 clauses 4.1.5 and
+     * 11.27.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly bcsmEvents: BCSMEvent[];
+    /**
+     * @summary `extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<Extensions>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `bcsmEvents`.
-         * @description
-         *
-         * Events to report. Each `BCSMEvent` has `eventTypeBCSM`; `monitorMode`
-         * (interrupted = request, notifyAndContinue = notification, transparent
-         * = do not report); `legID` as Sending Side LegID (gsmSCF → gsmSSF;
-         * defaults from tables 11-1/11-2; always included for O_Disconnect and
-         * T_Disconnect); `dPSpecificCriteria` (`numberOfDigits` and
-         * `interDigitTimeout` for CollectedInfo, `applicationTimer` No_Answer
-         * timer shorter than the network timer, `midCallControlInfo`,
-         * `changeOfPositionControlInfo`); `automaticRearm` (NULL) to rearm the
-         * DP whenever encountered. (3GPP TS 29.078 V19.0.0 clauses 4.1.5 and
-         * 11.27.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly bcsmEvents: BCSMEvent[],
-        /**
-         * @summary `extensions`.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<Extensions>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        bcsmEvents: BCSMEvent[],
+        extensions?: OPTIONAL<Extensions>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.bcsmEvents = bcsmEvents;
+        this.extensions = extensions;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a RequestReportBCSMEventArg

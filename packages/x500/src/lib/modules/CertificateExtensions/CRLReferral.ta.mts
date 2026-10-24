@@ -46,58 +46,74 @@ import {
  *
  */
 export class CRLReferral {
+    /**
+     * @summary `issuer`.
+     * @description
+     *
+     * Omitted = encompassing CRL issuer.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly issuer: OPTIONAL<GeneralName>;
+    /**
+     * @summary `location`.
+     * @description
+     *
+     * Omitted = same as issuer.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly location: OPTIONAL<GeneralName>;
+    /**
+     * @summary `deltaRefInfo`.
+     * @public
+     * @readonly
+     */
+    public readonly deltaRefInfo: OPTIONAL<DeltaRefInfo>;
+    /**
+     * @summary `cRLScope`.
+     * @public
+     * @readonly
+     */
+    public readonly cRLScope: CRLScopeSyntax;
+    /**
+     * @summary `lastUpdate`.
+     * @public
+     * @readonly
+     */
+    public readonly lastUpdate?: OPTIONAL<GeneralizedTime>;
+    /**
+     * @summary `lastChangedCRL`.
+     * @public
+     * @readonly
+     */
+    public readonly lastChangedCRL?: OPTIONAL<GeneralizedTime>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `issuer`.
-         * @description
-         *
-         * Omitted = encompassing CRL issuer.
-         *
-         * @public
-         * @readonly
-         */
-        readonly issuer: OPTIONAL<GeneralName>,
-        /**
-         * @summary `location`.
-         * @description
-         *
-         * Omitted = same as issuer.
-         *
-         * @public
-         * @readonly
-         */
-        readonly location: OPTIONAL<GeneralName>,
-        /**
-         * @summary `deltaRefInfo`.
-         * @public
-         * @readonly
-         */
-        readonly deltaRefInfo: OPTIONAL<DeltaRefInfo>,
-        /**
-         * @summary `cRLScope`.
-         * @public
-         * @readonly
-         */
-        readonly cRLScope: CRLScopeSyntax,
-        /**
-         * @summary `lastUpdate`.
-         * @public
-         * @readonly
-         */
-        readonly lastUpdate?: OPTIONAL<GeneralizedTime>,
-        /**
-         * @summary `lastChangedCRL`.
-         * @public
-         * @readonly
-         */
-        readonly lastChangedCRL?: OPTIONAL<GeneralizedTime>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        issuer: OPTIONAL<GeneralName>,
+        location: OPTIONAL<GeneralName>,
+        deltaRefInfo: OPTIONAL<DeltaRefInfo>,
+        cRLScope: CRLScopeSyntax,
+        lastUpdate?: OPTIONAL<GeneralizedTime>,
+        lastChangedCRL?: OPTIONAL<GeneralizedTime>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.issuer = issuer;
+        this.location = location;
+        this.deltaRefInfo = deltaRefInfo;
+        this.cRLScope = cRLScope;
+        this.lastUpdate = lastUpdate;
+        this.lastChangedCRL = lastChangedCRL;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a CRLReferral

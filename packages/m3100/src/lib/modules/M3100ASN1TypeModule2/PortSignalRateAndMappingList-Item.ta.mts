@@ -40,26 +40,34 @@ import {
  *
  */
 export class PortSignalRateAndMappingList_Item {
+    /**
+     * @summary `portId`.
+     * @public
+     * @readonly
+     */
+    public readonly portId: NameType;
+    /**
+     * @summary `signalRate`.
+     * @public
+     * @readonly
+     */
+    public readonly signalRate: SignalRate;
+    /**
+     * @summary `mappingList`.
+     * @public
+     * @readonly
+     */
+    public readonly mappingList?: OPTIONAL<MappingList>;
+
     constructor(
-        /**
-         * @summary `portId`.
-         * @public
-         * @readonly
-         */
-        readonly portId: NameType,
-        /**
-         * @summary `signalRate`.
-         * @public
-         * @readonly
-         */
-        readonly signalRate: SignalRate,
-        /**
-         * @summary `mappingList`.
-         * @public
-         * @readonly
-         */
-        readonly mappingList?: OPTIONAL<MappingList>
-    ) {}
+        portId: NameType,
+        signalRate: SignalRate,
+        mappingList?: OPTIONAL<MappingList>
+    ) {
+        this.portId = portId;
+        this.signalRate = signalRate;
+        this.mappingList = mappingList;
+    }
 
     /**
      * @summary Restructures an object into a PortSignalRateAndMappingList_Item

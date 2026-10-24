@@ -24,20 +24,26 @@ import * as $ from "@wildboar/asn1/functional";
  *
  */
 export class OtherRecipientInfo {
+    /**
+     * @summary `oriType`.
+     * @public
+     * @readonly
+     */
+    public readonly oriType: OBJECT_IDENTIFIER;
+    /**
+     * @summary `oriValue`.
+     * @public
+     * @readonly
+     */
+    public readonly oriValue: _Element;
+
     constructor(
-        /**
-         * @summary `oriType`.
-         * @public
-         * @readonly
-         */
-        readonly oriType: OBJECT_IDENTIFIER,
-        /**
-         * @summary `oriValue`.
-         * @public
-         * @readonly
-         */
-        readonly oriValue: _Element
-    ) {}
+        oriType: OBJECT_IDENTIFIER,
+        oriValue: _Element
+    ) {
+        this.oriType = oriType;
+        this.oriValue = oriValue;
+    }
 
     /**
      * @summary Restructures an object into a OtherRecipientInfo

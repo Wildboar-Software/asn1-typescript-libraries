@@ -38,43 +38,51 @@ import { AuthenticateServerResponse, _decode_AuthenticateServerResponse, _encode
  */
 export
 class AuthenticateClientRequest {
+    /**
+     * @summary `transactionId`.
+     * @description
+     * 
+     * Session from InitiateAuthentication. Unknown id is
+     * `invalidTransactionId`. SGP.22 v3.1 §5.6.3.
+     * 
+     * @public
+     * @readonly
+     */
+    public readonly transactionId: TransactionId;
+    /**
+     * @summary `authenticateServerResponse`.
+     * @description
+     * 
+     * The ES10b.AuthenticateServer response, success or error. The server
+     * verifies `euiccSignature1` and the certificate chain. SGP.22 v3.1
+     * §5.6.3.
+     * 
+     * @public
+     * @readonly
+     */
+    public readonly authenticateServerResponse: AuthenticateServerResponse;
+    /**
+     * @summary `useMatchingIdForAcr`.
+     * @description
+     * 
+     * Present, as a NULL, when the MatchingID is to be used for Activation
+     * Code retrieval. This module's ASN.1 comment points at §5.6.3. SGP.22
+     * v3.1 §5.6.3 does not define this component.
+     * 
+     * @public
+     * @readonly
+     */
+    public readonly useMatchingIdForAcr?: OPTIONAL<NULL>;
+
     constructor (
-        /**
-         * @summary `transactionId`.
-         * @description
-         * 
-         * Session from InitiateAuthentication. Unknown id is
-         * `invalidTransactionId`. SGP.22 v3.1 §5.6.3.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly transactionId: TransactionId,
-        /**
-         * @summary `authenticateServerResponse`.
-         * @description
-         * 
-         * The ES10b.AuthenticateServer response, success or error. The server
-         * verifies `euiccSignature1` and the certificate chain. SGP.22 v3.1
-         * §5.6.3.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly authenticateServerResponse: AuthenticateServerResponse,
-        /**
-         * @summary `useMatchingIdForAcr`.
-         * @description
-         * 
-         * Present, as a NULL, when the MatchingID is to be used for Activation
-         * Code retrieval. This module's ASN.1 comment points at §5.6.3. SGP.22
-         * v3.1 §5.6.3 does not define this component.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly useMatchingIdForAcr?: OPTIONAL<NULL>
-    ) {}
+        transactionId: TransactionId,
+        authenticateServerResponse: AuthenticateServerResponse,
+        useMatchingIdForAcr?: OPTIONAL<NULL>
+    ) {
+        this.transactionId = transactionId;
+        this.authenticateServerResponse = authenticateServerResponse;
+        this.useMatchingIdForAcr = useMatchingIdForAcr;
+    }
 
     /**
      * @summary Restructures an object into a AuthenticateClientRequest

@@ -36,26 +36,32 @@ import { DetachMediaService, _decode_DetachMediaService, _encode_DetachMediaServ
  */
 export
 class MediaServList {
+    /**
+     * @summary `attachMediaService`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly attachMediaService?: OPTIONAL<AttachMediaService>;
+    /**
+     * @summary `detachMediaService`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly detachMediaService?: OPTIONAL<DetachMediaService>;
+
     constructor (
-        /**
-         * @summary `attachMediaService`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly attachMediaService?: OPTIONAL<AttachMediaService>,
-        /**
-         * @summary `detachMediaService`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly detachMediaService?: OPTIONAL<DetachMediaService>
-    ) {}
+        attachMediaService?: OPTIONAL<AttachMediaService>,
+        detachMediaService?: OPTIONAL<DetachMediaService>
+    ) {
+        this.attachMediaService = attachMediaService;
+        this.detachMediaService = detachMediaService;
+    }
 
     /**
      * @summary Restructures an object into a MediaServList

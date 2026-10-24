@@ -45,31 +45,37 @@ import {
  *
  */
 export class NonStatisticalScan {
+    /**
+     * @summary `objectInstance`.
+     * @description
+     *
+     * Name of the observed object. Omitted if
+     * `suppressObjectInstance` is true; required in the
+     * list if that attribute is false. X.738 §8.2.2.2.2,
+     * A.9, Table 3 note 1.
+     * @public
+     * @readonly
+     */
+    public readonly objectInstance?: OPTIONAL<ObjectInstance>;
+    /**
+     * @summary `attributeValues`.
+     * @description
+     *
+     * Scanned values with identifiers. Omitted if the
+     * scan-attribute list is empty. Missing attributes
+     * are indicated. X.738 §8.2.2.2.2, A.9.
+     * @public
+     * @readonly
+     */
+    public readonly attributeValues?: OPTIONAL<AttributeMeasure[]>;
+
     constructor(
-        /**
-         * @summary `objectInstance`.
-         * @description
-         *
-         * Name of the observed object. Omitted if
-         * `suppressObjectInstance` is true; required in the
-         * list if that attribute is false. X.738 §8.2.2.2.2,
-         * A.9, Table 3 note 1.
-         * @public
-         * @readonly
-         */
-        readonly objectInstance?: OPTIONAL<ObjectInstance>,
-        /**
-         * @summary `attributeValues`.
-         * @description
-         *
-         * Scanned values with identifiers. Omitted if the
-         * scan-attribute list is empty. Missing attributes
-         * are indicated. X.738 §8.2.2.2.2, A.9.
-         * @public
-         * @readonly
-         */
-        readonly attributeValues?: OPTIONAL<AttributeMeasure[]>
-    ) {}
+        objectInstance?: OPTIONAL<ObjectInstance>,
+        attributeValues?: OPTIONAL<AttributeMeasure[]>
+    ) {
+        this.objectInstance = objectInstance;
+        this.attributeValues = attributeValues;
+    }
 
     /**
      * @summary Restructures an object into a NonStatisticalScan

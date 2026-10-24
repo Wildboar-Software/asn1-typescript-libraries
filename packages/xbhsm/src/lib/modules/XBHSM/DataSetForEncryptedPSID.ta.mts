@@ -45,42 +45,50 @@ import {
  * @class
  */
 export class DataSetForEncryptedPSID {
+    /**
+     * @summary `version`.
+     * @description
+     *
+     * Version of this Recommendation | International
+     * Standard. Use `0` (`v1`) for X.1085 (10/2016) |
+     * ISO/IEC 17922:2017 (clause 8.3). DEFAULT 0.
+     * @public
+     * @readonly
+     */
+    public readonly version: OPTIONAL<INTEGER>;
+    /**
+     * @summary `psidEncAlg`.
+     * @description
+     *
+     * Asymmetric encryption algorithm and parameters used
+     * to encrypt the PSID. Should match the algorithm in
+     * the CA's certificate (clause 8.3). The key is taken
+     * from the CA's key-distribution certificate
+     * (clause 8.1.3).
+     * @public
+     * @readonly
+     */
+    public readonly psidEncAlg: PSIDEncryptionAlgorithm;
+    /**
+     * @summary `encryptedPsid`.
+     * @description
+     *
+     * PSID ciphertext under the CA public key
+     * (`EPSID = E(PSID)`, clauses 8.1.3 and 8.3).
+     * @public
+     * @readonly
+     */
+    public readonly encryptedPsid: EncryptedPsid;
+
     constructor(
-        /**
-         * @summary `version`.
-         * @description
-         *
-         * Version of this Recommendation | International
-         * Standard. Use `0` (`v1`) for X.1085 (10/2016) |
-         * ISO/IEC 17922:2017 (clause 8.3). DEFAULT 0.
-         * @public
-         * @readonly
-         */
-        readonly version: OPTIONAL<INTEGER>,
-        /**
-         * @summary `psidEncAlg`.
-         * @description
-         *
-         * Asymmetric encryption algorithm and parameters used
-         * to encrypt the PSID. Should match the algorithm in
-         * the CA's certificate (clause 8.3). The key is taken
-         * from the CA's key-distribution certificate
-         * (clause 8.1.3).
-         * @public
-         * @readonly
-         */
-        readonly psidEncAlg: PSIDEncryptionAlgorithm,
-        /**
-         * @summary `encryptedPsid`.
-         * @description
-         *
-         * PSID ciphertext under the CA public key
-         * (`EPSID = E(PSID)`, clauses 8.1.3 and 8.3).
-         * @public
-         * @readonly
-         */
-        readonly encryptedPsid: EncryptedPsid
-    ) {}
+        version: OPTIONAL<INTEGER>,
+        psidEncAlg: PSIDEncryptionAlgorithm,
+        encryptedPsid: EncryptedPsid
+    ) {
+        this.version = version;
+        this.psidEncAlg = psidEncAlg;
+        this.encryptedPsid = encryptedPsid;
+    }
 
     /**
      * @summary Restructures an object into a DataSetForEncryptedPSID

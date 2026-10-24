@@ -45,50 +45,62 @@ import {
  *
  */
 export class StrongCredentials {
+    /**
+     * @summary `certification_path`.
+     * @description
+     *
+     * If present, a certification path as in X.509 7.6.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly certification_path: OPTIONAL<CertificationPath>;
+    /**
+     * @summary `bind_token`.
+     * @description
+     *
+     * Required. SIGNED TokenContent.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly bind_token: Token;
+    /**
+     * @summary `name`.
+     * @description
+     *
+     * Requester DN.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly name?: OPTIONAL<DistinguishedName>;
+    /**
+     * @summary `attributeCertificationPath`.
+     * @public
+     * @readonly
+     */
+    public readonly attributeCertificationPath?: OPTIONAL<AttributeCertificationPath>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `certification_path`.
-         * @description
-         *
-         * If present, a certification path as in X.509 7.6.
-         *
-         * @public
-         * @readonly
-         */
-        readonly certification_path: OPTIONAL<CertificationPath>,
-        /**
-         * @summary `bind_token`.
-         * @description
-         *
-         * Required. SIGNED TokenContent.
-         *
-         * @public
-         * @readonly
-         */
-        readonly bind_token: Token,
-        /**
-         * @summary `name`.
-         * @description
-         *
-         * Requester DN.
-         *
-         * @public
-         * @readonly
-         */
-        readonly name?: OPTIONAL<DistinguishedName>,
-        /**
-         * @summary `attributeCertificationPath`.
-         * @public
-         * @readonly
-         */
-        readonly attributeCertificationPath?: OPTIONAL<AttributeCertificationPath>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        certification_path: OPTIONAL<CertificationPath>,
+        bind_token: Token,
+        name?: OPTIONAL<DistinguishedName>,
+        attributeCertificationPath?: OPTIONAL<AttributeCertificationPath>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.certification_path = certification_path;
+        this.bind_token = bind_token;
+        this.name = name;
+        this.attributeCertificationPath = attributeCertificationPath;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a StrongCredentials

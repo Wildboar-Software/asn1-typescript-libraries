@@ -37,33 +37,39 @@ import { FileAttributes, _decode_FileAttributes, _encode_FileAttributes } from "
  */
 export
 class DirectoryEntry {
+    /**
+     * @summary `fileName`.
+     * @description
+     *
+     * Name of the file whose attributes follow.
+     *
+     * [ISO 9506-1:2003 Annex D, D.8.1.2.1.1]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly fileName: FileName;
+    /**
+     * @summary `fileAttributes`.
+     * @description
+     *
+     * Size and last-modified of the selected
+     * file. See D.9.
+     *
+     * [ISO 9506-1:2003 Annex D, D.8.1.2.1.2]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly fileAttributes: FileAttributes;
+
     constructor (
-        /**
-         * @summary `fileName`.
-         * @description
-         *
-         * Name of the file whose attributes follow.
-         *
-         * [ISO 9506-1:2003 Annex D, D.8.1.2.1.1]
-         *
-         * @public
-         * @readonly
-         */
-        readonly fileName: FileName,
-        /**
-         * @summary `fileAttributes`.
-         * @description
-         *
-         * Size and last-modified of the selected
-         * file. See D.9.
-         *
-         * [ISO 9506-1:2003 Annex D, D.8.1.2.1.2]
-         *
-         * @public
-         * @readonly
-         */
-        readonly fileAttributes: FileAttributes
-    ) {}
+        fileName: FileName,
+        fileAttributes: FileAttributes
+    ) {
+        this.fileName = fileName;
+        this.fileAttributes = fileAttributes;
+    }
 
     /**
      * @summary Restructures an object into a DirectoryEntry

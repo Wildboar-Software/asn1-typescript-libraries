@@ -48,62 +48,76 @@ import { SendUserInformation, _decode_SendUserInformation, _encode_SendUserInfor
  */
 export
 class CallAssociatedServList {
+    /**
+     * @summary `associateData`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly associateData?: OPTIONAL<AssociateData>;
+    /**
+     * @summary `cancelTelephonyTones`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly cancelTelephonyTones?: OPTIONAL<CancelTelephonyTones>;
+    /**
+     * @summary `changeConnectionInformation`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly changeConnectionInformation?: OPTIONAL<ChangeConnectionInformation>;
+    /**
+     * @summary `generateDigits`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly generateDigits?: OPTIONAL<GenerateDigits>;
+    /**
+     * @summary `generateTelephonyTones`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly generateTelephonyTones?: OPTIONAL<GenerateTelephonyTones>;
+    /**
+     * @summary `sendUserInformation`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly sendUserInformation?: OPTIONAL<SendUserInformation>;
+
     constructor (
-        /**
-         * @summary `associateData`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly associateData?: OPTIONAL<AssociateData>,
-        /**
-         * @summary `cancelTelephonyTones`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly cancelTelephonyTones?: OPTIONAL<CancelTelephonyTones>,
-        /**
-         * @summary `changeConnectionInformation`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly changeConnectionInformation?: OPTIONAL<ChangeConnectionInformation>,
-        /**
-         * @summary `generateDigits`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly generateDigits?: OPTIONAL<GenerateDigits>,
-        /**
-         * @summary `generateTelephonyTones`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly generateTelephonyTones?: OPTIONAL<GenerateTelephonyTones>,
-        /**
-         * @summary `sendUserInformation`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly sendUserInformation?: OPTIONAL<SendUserInformation>
-    ) {}
+        associateData?: OPTIONAL<AssociateData>,
+        cancelTelephonyTones?: OPTIONAL<CancelTelephonyTones>,
+        changeConnectionInformation?: OPTIONAL<ChangeConnectionInformation>,
+        generateDigits?: OPTIONAL<GenerateDigits>,
+        generateTelephonyTones?: OPTIONAL<GenerateTelephonyTones>,
+        sendUserInformation?: OPTIONAL<SendUserInformation>
+    ) {
+        this.associateData = associateData;
+        this.cancelTelephonyTones = cancelTelephonyTones;
+        this.changeConnectionInformation = changeConnectionInformation;
+        this.generateDigits = generateDigits;
+        this.generateTelephonyTones = generateTelephonyTones;
+        this.sendUserInformation = sendUserInformation;
+    }
 
     /**
      * @summary Restructures an object into a CallAssociatedServList

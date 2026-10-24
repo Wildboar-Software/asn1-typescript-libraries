@@ -59,44 +59,58 @@ import {
  *
  */
 export class TBSAsymmetricToken {
+    /**
+     * @summary `signature_algorithm_identifier`.
+     * @public
+     * @readonly
+     */
+    public readonly signature_algorithm_identifier: AlgorithmIdentifier;
+    /**
+     * @summary `name`.
+     * @public
+     * @readonly
+     */
+    public readonly name: TBSAsymmetricToken_name;
+    /**
+     * @summary `time`.
+     * @public
+     * @readonly
+     */
+    public readonly time: Time;
+    /**
+     * @summary `signed_data`.
+     * @public
+     * @readonly
+     */
+    public readonly signed_data?: OPTIONAL<TokenData>;
+    /**
+     * @summary `encryption_algorithm_identifier`.
+     * @public
+     * @readonly
+     */
+    public readonly encryption_algorithm_identifier?: OPTIONAL<AlgorithmIdentifier>;
+    /**
+     * @summary `encrypted_data`.
+     * @public
+     * @readonly
+     */
+    public readonly encrypted_data?: OPTIONAL<ENCRYPTED<TokenData>>;
+
     constructor(
-        /**
-         * @summary `signature_algorithm_identifier`.
-         * @public
-         * @readonly
-         */
-        readonly signature_algorithm_identifier: AlgorithmIdentifier,
-        /**
-         * @summary `name`.
-         * @public
-         * @readonly
-         */
-        readonly name: TBSAsymmetricToken_name,
-        /**
-         * @summary `time`.
-         * @public
-         * @readonly
-         */
-        readonly time: Time,
-        /**
-         * @summary `signed_data`.
-         * @public
-         * @readonly
-         */
-        readonly signed_data?: OPTIONAL<TokenData>,
-        /**
-         * @summary `encryption_algorithm_identifier`.
-         * @public
-         * @readonly
-         */
-        readonly encryption_algorithm_identifier?: OPTIONAL<AlgorithmIdentifier>,
-        /**
-         * @summary `encrypted_data`.
-         * @public
-         * @readonly
-         */
-        readonly encrypted_data?: OPTIONAL<ENCRYPTED<TokenData>>
-    ) {}
+        signature_algorithm_identifier: AlgorithmIdentifier,
+        name: TBSAsymmetricToken_name,
+        time: Time,
+        signed_data?: OPTIONAL<TokenData>,
+        encryption_algorithm_identifier?: OPTIONAL<AlgorithmIdentifier>,
+        encrypted_data?: OPTIONAL<ENCRYPTED<TokenData>>
+    ) {
+        this.signature_algorithm_identifier = signature_algorithm_identifier;
+        this.name = name;
+        this.time = time;
+        this.signed_data = signed_data;
+        this.encryption_algorithm_identifier = encryption_algorithm_identifier;
+        this.encrypted_data = encrypted_data;
+    }
 
     /**
      * @summary Restructures an object into a TBSAsymmetricToken

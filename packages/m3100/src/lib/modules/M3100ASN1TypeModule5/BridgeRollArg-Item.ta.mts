@@ -40,38 +40,50 @@ import {
  *
  */
 export class BridgeRollArg_Item {
+    /**
+     * @summary `xc`.
+     * @public
+     * @readonly
+     */
+    public readonly xc: ObjectInstance;
+    /**
+     * @summary `bridgeRollFromTp`.
+     * @public
+     * @readonly
+     */
+    public readonly bridgeRollFromTp: ObjectInstance;
+    /**
+     * @summary `bridgeRollToTp`.
+     * @public
+     * @readonly
+     */
+    public readonly bridgeRollToTp: ObjectInstance;
+    /**
+     * @summary `bridgeRollOperation`.
+     * @public
+     * @readonly
+     */
+    public readonly bridgeRollOperation: BridgeRollArg_Item_bridgeRollOperation;
+    /**
+     * @summary `additionalInfo`.
+     * @public
+     * @readonly
+     */
+    public readonly additionalInfo?: OPTIONAL<ManagementExtension[]>;
+
     constructor(
-        /**
-         * @summary `xc`.
-         * @public
-         * @readonly
-         */
-        readonly xc: ObjectInstance,
-        /**
-         * @summary `bridgeRollFromTp`.
-         * @public
-         * @readonly
-         */
-        readonly bridgeRollFromTp: ObjectInstance,
-        /**
-         * @summary `bridgeRollToTp`.
-         * @public
-         * @readonly
-         */
-        readonly bridgeRollToTp: ObjectInstance,
-        /**
-         * @summary `bridgeRollOperation`.
-         * @public
-         * @readonly
-         */
-        readonly bridgeRollOperation: BridgeRollArg_Item_bridgeRollOperation,
-        /**
-         * @summary `additionalInfo`.
-         * @public
-         * @readonly
-         */
-        readonly additionalInfo?: OPTIONAL<ManagementExtension[]>
-    ) {}
+        xc: ObjectInstance,
+        bridgeRollFromTp: ObjectInstance,
+        bridgeRollToTp: ObjectInstance,
+        bridgeRollOperation: BridgeRollArg_Item_bridgeRollOperation,
+        additionalInfo?: OPTIONAL<ManagementExtension[]>
+    ) {
+        this.xc = xc;
+        this.bridgeRollFromTp = bridgeRollFromTp;
+        this.bridgeRollToTp = bridgeRollToTp;
+        this.bridgeRollOperation = bridgeRollOperation;
+        this.additionalInfo = additionalInfo;
+    }
 
     /**
      * @summary Restructures an object into a BridgeRollArg_Item

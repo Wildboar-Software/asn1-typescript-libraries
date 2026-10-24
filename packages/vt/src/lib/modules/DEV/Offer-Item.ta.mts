@@ -34,26 +34,32 @@ import { ParameterOffers, _decode_ParameterOffers, _encode_ParameterOffers } fro
  */
 export
 class Offer_Item {
+    /**
+     * @summary `name`.
+     * @description
+     * VTE-unique device-name of the object these offers apply to.
+     * ISO/IEC 9040:1997 §16, §23.1.
+     * @public
+     * @readonly
+     */
+    public readonly name: PrintableString;
+    /**
+     * @summary `offers`.
+     * @description
+     * Offered values for this device's VTE-parameters. ISO/IEC
+     * 9041-1:1997 §12.5.2.
+     * @public
+     * @readonly
+     */
+    public readonly offers: ParameterOffers;
+
     constructor (
-        /**
-         * @summary `name`.
-         * @description
-         * VTE-unique device-name of the object these offers apply to.
-         * ISO/IEC 9040:1997 §16, §23.1.
-         * @public
-         * @readonly
-         */
-        readonly name: PrintableString,
-        /**
-         * @summary `offers`.
-         * @description
-         * Offered values for this device's VTE-parameters. ISO/IEC
-         * 9041-1:1997 §12.5.2.
-         * @public
-         * @readonly
-         */
-        readonly offers: ParameterOffers
-    ) {}
+        name: PrintableString,
+        offers: ParameterOffers
+    ) {
+        this.name = name;
+        this.offers = offers;
+    }
 
     /**
      * @summary Restructures an object into a Offer_Item

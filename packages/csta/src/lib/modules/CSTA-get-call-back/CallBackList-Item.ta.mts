@@ -37,35 +37,43 @@ import { DeviceID, _decode_DeviceID, _encode_DeviceID } from "../CSTA-device-ide
  */
 export
 class CallBackList_Item {
+    /**
+     * @summary `originatingDevice`.
+     * @description
+     *
+     * Device that originated the callback.
+     * @public
+     * @readonly
+     */
+    public readonly originatingDevice: DeviceID;
+    /**
+     * @summary `targetDevice`.
+     * @description
+     *
+     * Target of the callback.
+     * @public
+     * @readonly
+     */
+    public readonly targetDevice: DeviceID;
+    /**
+     * @summary `callBackMessageIndicator`.
+     * @description
+     *
+     * TRUE = Call Back Message; FALSE (default) = Call Back.
+     * @public
+     * @readonly
+     */
+    public readonly callBackMessageIndicator?: OPTIONAL<BOOLEAN>;
+
     constructor (
-        /**
-         * @summary `originatingDevice`.
-         * @description
-         *
-         * Device that originated the callback.
-         * @public
-         * @readonly
-         */
-        readonly originatingDevice: DeviceID,
-        /**
-         * @summary `targetDevice`.
-         * @description
-         *
-         * Target of the callback.
-         * @public
-         * @readonly
-         */
-        readonly targetDevice: DeviceID,
-        /**
-         * @summary `callBackMessageIndicator`.
-         * @description
-         *
-         * TRUE = Call Back Message; FALSE (default) = Call Back.
-         * @public
-         * @readonly
-         */
-        readonly callBackMessageIndicator?: OPTIONAL<BOOLEAN>
-    ) {}
+        originatingDevice: DeviceID,
+        targetDevice: DeviceID,
+        callBackMessageIndicator?: OPTIONAL<BOOLEAN>
+    ) {
+        this.originatingDevice = originatingDevice;
+        this.targetDevice = targetDevice;
+        this.callBackMessageIndicator = callBackMessageIndicator;
+    }
 
     /**
      * @summary Restructures an object into a CallBackList_Item

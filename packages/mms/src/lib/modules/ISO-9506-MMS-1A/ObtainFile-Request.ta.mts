@@ -45,49 +45,57 @@ import { FileName, _decode_FileName, _encode_FileName } from "../ISO-9506-MMS-1/
  */
 export
 class ObtainFile_Request {
+    /**
+     * @summary `sourceFileServer`.
+     * @description
+     *
+     * File server from which the source file is
+     * obtained. If absent, the requesting MMS
+     * client is the source. CBB `tpy`. Not all
+     * file servers need support MMS.
+     *
+     * [ISO 9506-1:2003 Annex C, C.1.1.1.1]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sourceFileServer: OPTIONAL<ApplicationReference>;
+    /**
+     * @summary `sourceFile`.
+     * @description
+     *
+     * Unique name of a single existing file in
+     * the source file server's filestore.
+     *
+     * [ISO 9506-1:2003 Annex C, C.1.1.1.2]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sourceFile: FileName;
+    /**
+     * @summary `destinationFile`.
+     * @description
+     *
+     * Name assigned to the newly acquired file
+     * in the MMS server's filestore.
+     *
+     * [ISO 9506-1:2003 Annex C, C.1.1.1.3]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly destinationFile: FileName;
+
     constructor (
-        /**
-         * @summary `sourceFileServer`.
-         * @description
-         *
-         * File server from which the source file is
-         * obtained. If absent, the requesting MMS
-         * client is the source. CBB `tpy`. Not all
-         * file servers need support MMS.
-         *
-         * [ISO 9506-1:2003 Annex C, C.1.1.1.1]
-         *
-         * @public
-         * @readonly
-         */
-        readonly sourceFileServer: OPTIONAL<ApplicationReference>,
-        /**
-         * @summary `sourceFile`.
-         * @description
-         *
-         * Unique name of a single existing file in
-         * the source file server's filestore.
-         *
-         * [ISO 9506-1:2003 Annex C, C.1.1.1.2]
-         *
-         * @public
-         * @readonly
-         */
-        readonly sourceFile: FileName,
-        /**
-         * @summary `destinationFile`.
-         * @description
-         *
-         * Name assigned to the newly acquired file
-         * in the MMS server's filestore.
-         *
-         * [ISO 9506-1:2003 Annex C, C.1.1.1.3]
-         *
-         * @public
-         * @readonly
-         */
-        readonly destinationFile: FileName
-    ) {}
+        sourceFileServer: OPTIONAL<ApplicationReference>,
+        sourceFile: FileName,
+        destinationFile: FileName
+    ) {
+        this.sourceFileServer = sourceFileServer;
+        this.sourceFile = sourceFile;
+        this.destinationFile = destinationFile;
+    }
 
     /**
      * @summary Restructures an object into a ObtainFile_Request

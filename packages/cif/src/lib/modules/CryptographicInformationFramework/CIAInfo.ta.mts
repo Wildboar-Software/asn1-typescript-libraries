@@ -57,131 +57,161 @@ import { ProfileIndication, _decode_ProfileIndication, _encode_ProfileIndication
  */
 export
 class CIAInfo {
+    /**
+     * @summary `version`.
+     * @description
+     * Shall be `v2` (1) for this edition of 7816-15. `v1` (0) is the PKCS
+     * #15 equivalent. ISO/IEC 7816-15:2016 §8.10.
+     * @public
+     * @readonly
+     */
+    public readonly version: CIAInfo_version;
+    /**
+     * @summary `serialNumber`.
+     * @description
+     * CIA unique serial number chosen by the application provider. Together
+     * with `lastUpdate`, lets a host decide whether cached EF.OD/EF.CD
+     * copies are still valid. ISO/IEC 7816-15:2016 §8.10.
+     * @public
+     * @readonly
+     */
+    public readonly serialNumber: OPTIONAL<OCTET_STRING>;
+    /**
+     * @summary `manufacturerID`.
+     * @description
+     * Card manufacturer identification (UTF-8). ISO/IEC 7816-15:2016 §8.10.
+     * @public
+     * @readonly
+     */
+    public readonly manufacturerID: OPTIONAL<Label>;
+    /**
+     * @summary `label`.
+     * @description
+     * Identifying information about the application. ISO/IEC 7816-15:2016
+     * §8.10.
+     * @public
+     * @readonly
+     */
+    public readonly label: OPTIONAL<Label>;
+    /**
+     * @summary `cardflags`.
+     * @description
+     * Card-wide capabilities. ISO/IEC 7816-15:2016 §8.10.
+     * @public
+     * @readonly
+     */
+    public readonly cardflags: CardFlags;
+    /**
+     * @summary `seInfo`.
+     * @description
+     * Pre-set Security Environments and their owners (definition out of
+     * scope; see ISO/IEC 7816-4). ISO/IEC 7816-15:2016 §8.10.
+     * @public
+     * @readonly
+     */
+    public readonly seInfo?: OPTIONAL<SecurityEnvironmentInfo[]>;
+    /**
+     * @summary `recordInfo`.
+     * @description
+     * If present, EF.OD and the directory EFs are linear record files;
+     * otherwise they are transparent. A length of 0 means variable-length
+     * records; a non-zero length is the fixed record size. ISO/IEC
+     * 7816-15:2016 §8.10.
+     * @public
+     * @readonly
+     */
+    public readonly recordInfo?: OPTIONAL<RecordInfo>;
+    /**
+     * @summary `supportedAlgorithms`.
+     * @description
+     * Algorithms, parameters, operations, and input formats the card
+     * supports. `reference` is cited from PrKD/PuKD `algReference`.
+     * `algorithm` values are private (PKCS #11 mechanism numbers are a
+     * possible interpretation). ISO/IEC 7816-15:2016 §8.10.
+     * @public
+     * @readonly
+     */
+    public readonly supportedAlgorithms?: OPTIONAL<AlgorithmInfo[]>;
+    /**
+     * @summary `issuerId`.
+     * @description
+     * Card issuer identification. ISO/IEC 7816-15:2016 §8.10.
+     * @public
+     * @readonly
+     */
+    public readonly issuerId?: OPTIONAL<Label>;
+    /**
+     * @summary `holderId`.
+     * @description
+     * Cardholder identification. ISO/IEC 7816-15:2016 §8.10.
+     * @public
+     * @readonly
+     */
+    public readonly holderId?: OPTIONAL<Label>;
+    /**
+     * @summary `lastUpdate`.
+     * @description
+     * Date of last CIA file update. `referencedTime` is for write-protected
+     * EF.CIAInfo. ISO/IEC 7816-15:2016 §8.10.
+     * @public
+     * @readonly
+     */
+    public readonly lastUpdate?: OPTIONAL<LastUpdate>;
+    /**
+     * @summary `preferredLanguage`.
+     * @description
+     * Cardholder language tag (IETF RFC 5646). ISO/IEC 7816-15:2016 §8.10.
+     * @public
+     * @readonly
+     */
+    public readonly preferredLanguage?: OPTIONAL<PrintableString>;
+    /**
+     * @summary `profileIndication`.
+     * @description
+     * Profiles of 7816-15 with which the card conforms. Other
+     * specifications define those profiles. ISO/IEC 7816-15:2016 §8.10.
+     * @public
+     * @readonly
+     */
+    public readonly profileIndication?: OPTIONAL<ProfileIndication[]>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `version`.
-         * @description
-         * Shall be `v2` (1) for this edition of 7816-15. `v1` (0) is the PKCS
-         * #15 equivalent. ISO/IEC 7816-15:2016 §8.10.
-         * @public
-         * @readonly
-         */
-        readonly version: CIAInfo_version,
-        /**
-         * @summary `serialNumber`.
-         * @description
-         * CIA unique serial number chosen by the application provider. Together
-         * with `lastUpdate`, lets a host decide whether cached EF.OD/EF.CD
-         * copies are still valid. ISO/IEC 7816-15:2016 §8.10.
-         * @public
-         * @readonly
-         */
-        readonly serialNumber: OPTIONAL<OCTET_STRING>,
-        /**
-         * @summary `manufacturerID`.
-         * @description
-         * Card manufacturer identification (UTF-8). ISO/IEC 7816-15:2016 §8.10.
-         * @public
-         * @readonly
-         */
-        readonly manufacturerID: OPTIONAL<Label>,
-        /**
-         * @summary `label`.
-         * @description
-         * Identifying information about the application. ISO/IEC 7816-15:2016
-         * §8.10.
-         * @public
-         * @readonly
-         */
-        readonly label: OPTIONAL<Label>,
-        /**
-         * @summary `cardflags`.
-         * @description
-         * Card-wide capabilities. ISO/IEC 7816-15:2016 §8.10.
-         * @public
-         * @readonly
-         */
-        readonly cardflags: CardFlags,
-        /**
-         * @summary `seInfo`.
-         * @description
-         * Pre-set Security Environments and their owners (definition out of
-         * scope; see ISO/IEC 7816-4). ISO/IEC 7816-15:2016 §8.10.
-         * @public
-         * @readonly
-         */
-        readonly seInfo?: OPTIONAL<SecurityEnvironmentInfo[]>,
-        /**
-         * @summary `recordInfo`.
-         * @description
-         * If present, EF.OD and the directory EFs are linear record files;
-         * otherwise they are transparent. A length of 0 means variable-length
-         * records; a non-zero length is the fixed record size. ISO/IEC
-         * 7816-15:2016 §8.10.
-         * @public
-         * @readonly
-         */
-        readonly recordInfo?: OPTIONAL<RecordInfo>,
-        /**
-         * @summary `supportedAlgorithms`.
-         * @description
-         * Algorithms, parameters, operations, and input formats the card
-         * supports. `reference` is cited from PrKD/PuKD `algReference`.
-         * `algorithm` values are private (PKCS #11 mechanism numbers are a
-         * possible interpretation). ISO/IEC 7816-15:2016 §8.10.
-         * @public
-         * @readonly
-         */
-        readonly supportedAlgorithms?: OPTIONAL<AlgorithmInfo[]>,
-        /**
-         * @summary `issuerId`.
-         * @description
-         * Card issuer identification. ISO/IEC 7816-15:2016 §8.10.
-         * @public
-         * @readonly
-         */
-        readonly issuerId?: OPTIONAL<Label>,
-        /**
-         * @summary `holderId`.
-         * @description
-         * Cardholder identification. ISO/IEC 7816-15:2016 §8.10.
-         * @public
-         * @readonly
-         */
-        readonly holderId?: OPTIONAL<Label>,
-        /**
-         * @summary `lastUpdate`.
-         * @description
-         * Date of last CIA file update. `referencedTime` is for write-protected
-         * EF.CIAInfo. ISO/IEC 7816-15:2016 §8.10.
-         * @public
-         * @readonly
-         */
-        readonly lastUpdate?: OPTIONAL<LastUpdate>,
-        /**
-         * @summary `preferredLanguage`.
-         * @description
-         * Cardholder language tag (IETF RFC 5646). ISO/IEC 7816-15:2016 §8.10.
-         * @public
-         * @readonly
-         */
-        readonly preferredLanguage?: OPTIONAL<PrintableString>,
-        /**
-         * @summary `profileIndication`.
-         * @description
-         * Profiles of 7816-15 with which the card conforms. Other
-         * specifications define those profiles. ISO/IEC 7816-15:2016 §8.10.
-         * @public
-         * @readonly
-         */
-        readonly profileIndication?: OPTIONAL<ProfileIndication[]>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        version: CIAInfo_version,
+        serialNumber: OPTIONAL<OCTET_STRING>,
+        manufacturerID: OPTIONAL<Label>,
+        label: OPTIONAL<Label>,
+        cardflags: CardFlags,
+        seInfo?: OPTIONAL<SecurityEnvironmentInfo[]>,
+        recordInfo?: OPTIONAL<RecordInfo>,
+        supportedAlgorithms?: OPTIONAL<AlgorithmInfo[]>,
+        issuerId?: OPTIONAL<Label>,
+        holderId?: OPTIONAL<Label>,
+        lastUpdate?: OPTIONAL<LastUpdate>,
+        preferredLanguage?: OPTIONAL<PrintableString>,
+        profileIndication?: OPTIONAL<ProfileIndication[]>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.version = version;
+        this.serialNumber = serialNumber;
+        this.manufacturerID = manufacturerID;
+        this.label = label;
+        this.cardflags = cardflags;
+        this.seInfo = seInfo;
+        this.recordInfo = recordInfo;
+        this.supportedAlgorithms = supportedAlgorithms;
+        this.issuerId = issuerId;
+        this.holderId = holderId;
+        this.lastUpdate = lastUpdate;
+        this.preferredLanguage = preferredLanguage;
+        this.profileIndication = profileIndication;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a CIAInfo

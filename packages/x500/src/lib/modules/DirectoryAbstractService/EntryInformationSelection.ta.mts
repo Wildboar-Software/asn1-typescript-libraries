@@ -65,79 +65,93 @@ import {
  *
  */
 export class EntryInformationSelection {
+    /**
+     * @summary `attributes`.
+     * @description
+     *
+     * DEFAULT `allUserAttributes:NULL`. `select` empty SET ⇒ no
+     * attributes requested.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly attributes?: OPTIONAL<EntryInformationSelection_attributes>;
+    /**
+     * @summary `infoTypes`.
+     * @description
+     *
+     * DEFAULT `attributeTypesAndValues`. Meaningless if `attributes`
+     * request nothing. Carrier attrs always return values; this applies
+     * to contained attrs.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly infoTypes?: OPTIONAL<EntryInformationSelection_infoTypes>;
+    /**
+     * @summary `extraAttributes`.
+     * @description
+     *
+     * Same type in both `attributes` and `extraAttributes` is requested
+     * once. `allOperationalAttributes` = all directory operational attrs.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extraAttributes?: OPTIONAL<EntryInformationSelection_extraAttributes>;
+    /**
+     * @summary `contextSelection`.
+     * @description
+     *
+     * Evaluated only against candidate values after other selection.
+     * Meaningless if no values are requested. May leave an attr with no
+     * values (attr may still be returned). Does not filter which
+     * contexts `returnContexts` returns.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly contextSelection?: OPTIONAL<ContextSelection>;
+    /**
+     * @summary `returnContexts`.
+     * @description
+     *
+     * DEFAULT FALSE. TRUE ⇒ return ALL context info for each returned
+     * value. `contextSelection` does not filter which contexts are
+     * returned.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly returnContexts?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `familyReturn`.
+     * @description
+     *
+     * DEFAULT `{memberSelect contributingEntriesOnly}`. Which
+     * compound-entry members to return if some were marked
+     * contributing/participating.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly familyReturn?: OPTIONAL<FamilyReturn>;
+
     constructor(
-        /**
-         * @summary `attributes`.
-         * @description
-         *
-         * DEFAULT `allUserAttributes:NULL`. `select` empty SET ⇒ no
-         * attributes requested.
-         *
-         * @public
-         * @readonly
-         */
-        readonly attributes?: OPTIONAL<EntryInformationSelection_attributes>,
-        /**
-         * @summary `infoTypes`.
-         * @description
-         *
-         * DEFAULT `attributeTypesAndValues`. Meaningless if `attributes`
-         * request nothing. Carrier attrs always return values; this applies
-         * to contained attrs.
-         *
-         * @public
-         * @readonly
-         */
-        readonly infoTypes?: OPTIONAL<EntryInformationSelection_infoTypes>,
-        /**
-         * @summary `extraAttributes`.
-         * @description
-         *
-         * Same type in both `attributes` and `extraAttributes` is requested
-         * once. `allOperationalAttributes` = all directory operational attrs.
-         *
-         * @public
-         * @readonly
-         */
-        readonly extraAttributes?: OPTIONAL<EntryInformationSelection_extraAttributes>,
-        /**
-         * @summary `contextSelection`.
-         * @description
-         *
-         * Evaluated only against candidate values after other selection.
-         * Meaningless if no values are requested. May leave an attr with no
-         * values (attr may still be returned). Does not filter which
-         * contexts `returnContexts` returns.
-         *
-         * @public
-         * @readonly
-         */
-        readonly contextSelection?: OPTIONAL<ContextSelection>,
-        /**
-         * @summary `returnContexts`.
-         * @description
-         *
-         * DEFAULT FALSE. TRUE ⇒ return ALL context info for each returned
-         * value. `contextSelection` does not filter which contexts are
-         * returned.
-         *
-         * @public
-         * @readonly
-         */
-        readonly returnContexts?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `familyReturn`.
-         * @description
-         *
-         * DEFAULT `{memberSelect contributingEntriesOnly}`. Which
-         * compound-entry members to return if some were marked
-         * contributing/participating.
-         *
-         * @public
-         * @readonly
-         */
-        readonly familyReturn?: OPTIONAL<FamilyReturn>
-    ) {}
+        attributes?: OPTIONAL<EntryInformationSelection_attributes>,
+        infoTypes?: OPTIONAL<EntryInformationSelection_infoTypes>,
+        extraAttributes?: OPTIONAL<EntryInformationSelection_extraAttributes>,
+        contextSelection?: OPTIONAL<ContextSelection>,
+        returnContexts?: OPTIONAL<BOOLEAN>,
+        familyReturn?: OPTIONAL<FamilyReturn>
+    ) {
+        this.attributes = attributes;
+        this.infoTypes = infoTypes;
+        this.extraAttributes = extraAttributes;
+        this.contextSelection = contextSelection;
+        this.returnContexts = returnContexts;
+        this.familyReturn = familyReturn;
+    }
 
     /**
      * @summary Restructures an object into a EntryInformationSelection

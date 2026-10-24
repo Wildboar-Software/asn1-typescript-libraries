@@ -35,27 +35,33 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class GetDisplayResult {
+    /**
+     * @summary `displayList`.
+     * @description
+     *
+     * One entry per queried display.
+     * @public
+     * @readonly
+     */
+    public readonly displayList: DisplayList;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `displayList`.
-         * @description
-         *
-         * One entry per queried display.
-         * @public
-         * @readonly
-         */
-        readonly displayList: DisplayList,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        displayList: DisplayList,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.displayList = displayList;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a GetDisplayResult

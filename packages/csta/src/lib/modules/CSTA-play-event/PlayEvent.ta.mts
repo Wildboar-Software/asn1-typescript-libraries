@@ -60,100 +60,120 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class PlayEvent {
+    /**
+     * @summary `connection`.
+     * @description
+     *
+     * Connection on which the message is playing (ECMA-269 §26.2.7).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly connection: ConnectionID;
+    /**
+     * @summary `message`.
+     * @description
+     *
+     * Message being played (ECMA-269 §26.2.7).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly message: MessageID;
+    /**
+     * @summary `resource`.
+     * @description
+     *
+     * Interactive voice resource. Required when more than one interactive
+     * voice resource exists on the connection.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly resource?: OPTIONAL<ResourceID>;
+    /**
+     * @summary `length`.
+     * @description
+     *
+     * Message length, when provided (ECMA-269 §26.2.7).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly length?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `currentPosition`.
+     * @description
+     *
+     * Current play position (ECMA-269 §26.2.7).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly currentPosition?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `speed`.
+     * @description
+     *
+     * Current play speed (ECMA-269 §26.2.7).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly speed?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `cause`.
+     * @description
+     *
+     * Event cause, when the switching function supplies one.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly cause?: OPTIONAL<EventCause>;
+    /**
+     * @summary `servicesPermitted`.
+     * @description
+     *
+     * Services permitted on the connection after this event.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly servicesPermitted?: OPTIONAL<ServicesPermitted>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * CSTACommonArguments carrying the service-table security and
+     * privateData parameters.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `connection`.
-         * @description
-         *
-         * Connection on which the message is playing (ECMA-269 §26.2.7).
-         *
-         * @public
-         * @readonly
-         */
-        readonly connection: ConnectionID,
-        /**
-         * @summary `message`.
-         * @description
-         *
-         * Message being played (ECMA-269 §26.2.7).
-         *
-         * @public
-         * @readonly
-         */
-        readonly message: MessageID,
-        /**
-         * @summary `resource`.
-         * @description
-         *
-         * Interactive voice resource. Required when more than one interactive
-         * voice resource exists on the connection.
-         *
-         * @public
-         * @readonly
-         */
-        readonly resource?: OPTIONAL<ResourceID>,
-        /**
-         * @summary `length`.
-         * @description
-         *
-         * Message length, when provided (ECMA-269 §26.2.7).
-         *
-         * @public
-         * @readonly
-         */
-        readonly length?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `currentPosition`.
-         * @description
-         *
-         * Current play position (ECMA-269 §26.2.7).
-         *
-         * @public
-         * @readonly
-         */
-        readonly currentPosition?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `speed`.
-         * @description
-         *
-         * Current play speed (ECMA-269 §26.2.7).
-         *
-         * @public
-         * @readonly
-         */
-        readonly speed?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `cause`.
-         * @description
-         *
-         * Event cause, when the switching function supplies one.
-         *
-         * @public
-         * @readonly
-         */
-        readonly cause?: OPTIONAL<EventCause>,
-        /**
-         * @summary `servicesPermitted`.
-         * @description
-         *
-         * Services permitted on the connection after this event.
-         *
-         * @public
-         * @readonly
-         */
-        readonly servicesPermitted?: OPTIONAL<ServicesPermitted>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * CSTACommonArguments carrying the service-table security and
-         * privateData parameters.
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        connection: ConnectionID,
+        message: MessageID,
+        resource?: OPTIONAL<ResourceID>,
+        length?: OPTIONAL<INTEGER>,
+        currentPosition?: OPTIONAL<INTEGER>,
+        speed?: OPTIONAL<INTEGER>,
+        cause?: OPTIONAL<EventCause>,
+        servicesPermitted?: OPTIONAL<ServicesPermitted>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.connection = connection;
+        this.message = message;
+        this.resource = resource;
+        this.length = length;
+        this.currentPosition = currentPosition;
+        this.speed = speed;
+        this.cause = cause;
+        this.servicesPermitted = servicesPermitted;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a PlayEvent

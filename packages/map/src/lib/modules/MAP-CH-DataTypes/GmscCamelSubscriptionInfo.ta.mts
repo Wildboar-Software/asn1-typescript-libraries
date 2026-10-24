@@ -37,74 +37,90 @@ import { T_CSI, _decode_T_CSI, _encode_T_CSI } from "../MAP-MS-DataTypes/T-CSI.t
  */
 export
 class GmscCamelSubscriptionInfo {
+    /**
+     * @summary `t_CSI`.
+     * @description
+     *
+     * T-CSI.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly t_CSI?: OPTIONAL<T_CSI>;
+    /**
+     * @summary `o_CSI`.
+     * @description
+     *
+     * O-CSI.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly o_CSI?: OPTIONAL<O_CSI>;
+    /**
+     * @summary `extensionContainer`.
+     * @description
+     *
+     * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary `o_BcsmCamelTDP_CriteriaList`.
+     * @description
+     *
+     * O-BCSM CAMEL TDP criteria.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly o_BcsmCamelTDP_CriteriaList?: OPTIONAL<O_BcsmCamelTDPCriteriaList>;
+    /**
+     * @summary `t_BCSM_CAMEL_TDP_CriteriaList`.
+     * @description
+     *
+     * T-BCSM CAMEL TDP criteria.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly t_BCSM_CAMEL_TDP_CriteriaList?: OPTIONAL<T_BCSM_CAMEL_TDP_CriteriaList>;
+    /**
+     * @summary `d_csi`.
+     * @description
+     *
+     * D-CSI.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly d_csi?: OPTIONAL<D_CSI>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `t_CSI`.
-         * @description
-         *
-         * T-CSI.
-         *
-         * @public
-         * @readonly
-         */
-        readonly t_CSI?: OPTIONAL<T_CSI>,
-        /**
-         * @summary `o_CSI`.
-         * @description
-         *
-         * O-CSI.
-         *
-         * @public
-         * @readonly
-         */
-        readonly o_CSI?: OPTIONAL<O_CSI>,
-        /**
-         * @summary `extensionContainer`.
-         * @description
-         *
-         * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary `o_BcsmCamelTDP_CriteriaList`.
-         * @description
-         *
-         * O-BCSM CAMEL TDP criteria.
-         *
-         * @public
-         * @readonly
-         */
-        readonly o_BcsmCamelTDP_CriteriaList?: OPTIONAL<O_BcsmCamelTDPCriteriaList>,
-        /**
-         * @summary `t_BCSM_CAMEL_TDP_CriteriaList`.
-         * @description
-         *
-         * T-BCSM CAMEL TDP criteria.
-         *
-         * @public
-         * @readonly
-         */
-        readonly t_BCSM_CAMEL_TDP_CriteriaList?: OPTIONAL<T_BCSM_CAMEL_TDP_CriteriaList>,
-        /**
-         * @summary `d_csi`.
-         * @description
-         *
-         * D-CSI.
-         *
-         * @public
-         * @readonly
-         */
-        readonly d_csi?: OPTIONAL<D_CSI>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        t_CSI?: OPTIONAL<T_CSI>,
+        o_CSI?: OPTIONAL<O_CSI>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        o_BcsmCamelTDP_CriteriaList?: OPTIONAL<O_BcsmCamelTDPCriteriaList>,
+        t_BCSM_CAMEL_TDP_CriteriaList?: OPTIONAL<T_BCSM_CAMEL_TDP_CriteriaList>,
+        d_csi?: OPTIONAL<D_CSI>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.t_CSI = t_CSI;
+        this.o_CSI = o_CSI;
+        this.extensionContainer = extensionContainer;
+        this.o_BcsmCamelTDP_CriteriaList = o_BcsmCamelTDP_CriteriaList;
+        this.t_BCSM_CAMEL_TDP_CriteriaList = t_BCSM_CAMEL_TDP_CriteriaList;
+        this.d_csi = d_csi;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a GmscCamelSubscriptionInfo

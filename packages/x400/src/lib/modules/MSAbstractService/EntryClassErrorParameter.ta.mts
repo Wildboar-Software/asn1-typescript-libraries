@@ -39,20 +39,26 @@ import {
  *
  */
 export class EntryClassErrorParameter {
+    /**
+     * @summary `entry_class`.
+     * @public
+     * @readonly
+     */
+    public readonly entry_class: EntryClass;
+    /**
+     * @summary `problem`.
+     * @public
+     * @readonly
+     */
+    public readonly problem: EntryClassErrorParameter_problem;
+
     constructor(
-        /**
-         * @summary `entry_class`.
-         * @public
-         * @readonly
-         */
-        readonly entry_class: EntryClass,
-        /**
-         * @summary `problem`.
-         * @public
-         * @readonly
-         */
-        readonly problem: EntryClassErrorParameter_problem
-    ) {}
+        entry_class: EntryClass,
+        problem: EntryClassErrorParameter_problem
+    ) {
+        this.entry_class = entry_class;
+        this.problem = problem;
+    }
 
     /**
      * @summary Restructures an object into a EntryClassErrorParameter

@@ -43,99 +43,115 @@ import { AccessCondition, _decode_AccessCondition, _encode_AccessCondition } fro
  */
 export
 class GetAccessControlListAttributes_Response_accessControlListElements {
+    /**
+     * @summary `readAccessCondition`.
+     * @description
+     *
+     * Access Condition for service class READ. If unsatisfied, Read and
+     * Output shall fail with ACCESS / OBJECT-ACCESS-DENIED. ISO 9506-1:2003
+     * §9.1.1.3, §9.1.3, §9.3.1.1.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly readAccessCondition?: OPTIONAL<AccessCondition>;
+    /**
+     * @summary `storeAccessCondition`.
+     * @description
+     *
+     * Access Condition for service class STORE. Affects
+     * InitiateUploadSequence, StoreDomainContent, ReadJournal,
+     * UnitControlUpload, and StoreUnitControlToFile. ISO 9506-1:2003
+     * §9.1.1.4, §9.3.1.1.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly storeAccessCondition?: OPTIONAL<AccessCondition>;
+    /**
+     * @summary `writeAccessCondition`.
+     * @description
+     *
+     * Access Condition for service class WRITE. Affects Write, Input, and
+     * ExchangeData. ISO 9506-1:2003 §9.1.1.5, §9.3.1.1.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly writeAccessCondition?: OPTIONAL<AccessCondition>;
+    /**
+     * @summary `loadAccessCondition`.
+     * @description
+     *
+     * Access Condition for service class LOAD. Affects
+     * download/define/create and related services listed in ISO 9506-1:2003
+     * §9.1.1.6. Services that create objects (marked * there) are
+     * constrained only by the VMD's Access Control List. ISO 9506-1:2003
+     * §9.3.1.1.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly loadAccessCondition?: OPTIONAL<AccessCondition>;
+    /**
+     * @summary `executeAccessCondition`.
+     * @description
+     *
+     * Access Condition for service class EXECUTE. Affects Start, Stop,
+     * Resume, Reset, Kill, VMDStop, VMDReset, Select, StartUnitControl, and
+     * StopUnitControl. ISO 9506-1:2003 §9.1.1.7, §9.3.1.1.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly executeAccessCondition?: OPTIONAL<AccessCondition>;
+    /**
+     * @summary `deleteAccessCondition`.
+     * @description
+     *
+     * Access Condition for service class DELETE. Affects DeleteDomain,
+     * DeleteProgramInvocation, DeleteVariableAccess,
+     * DeleteNamedVariableList, DeleteNamedType, DeleteSemaphore,
+     * DeleteEventCondition, DeleteEventAction, DeleteEventEnrollment,
+     * DeleteJournal, DeleteAccessControlList, DeleteUnitControl, and
+     * DeleteEventConditionList. ISO 9506-1:2003 §9.1.1.8, §9.3.1.1.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly deleteAccessCondition?: OPTIONAL<AccessCondition>;
+    /**
+     * @summary `editAccessCondition`.
+     * @description
+     *
+     * Access Condition for service class EDIT (change access control).
+     * Affects ChangeAccessControl, Rename, AddToUnitControl,
+     * RemoveFromUnitControl, AddEventConditionListReference, and
+     * RemoveEventConditionListReference. ISO 9506-1:2003 §9.1.1.9,
+     * §9.3.1.1.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly editAccessCondition?: OPTIONAL<AccessCondition>;
+
     constructor (
-        /**
-         * @summary `readAccessCondition`.
-         * @description
-         *
-         * Access Condition for service class READ. If unsatisfied, Read and
-         * Output shall fail with ACCESS / OBJECT-ACCESS-DENIED. ISO 9506-1:2003
-         * §9.1.1.3, §9.1.3, §9.3.1.1.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly readAccessCondition?: OPTIONAL<AccessCondition>,
-        /**
-         * @summary `storeAccessCondition`.
-         * @description
-         *
-         * Access Condition for service class STORE. Affects
-         * InitiateUploadSequence, StoreDomainContent, ReadJournal,
-         * UnitControlUpload, and StoreUnitControlToFile. ISO 9506-1:2003
-         * §9.1.1.4, §9.3.1.1.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly storeAccessCondition?: OPTIONAL<AccessCondition>,
-        /**
-         * @summary `writeAccessCondition`.
-         * @description
-         *
-         * Access Condition for service class WRITE. Affects Write, Input, and
-         * ExchangeData. ISO 9506-1:2003 §9.1.1.5, §9.3.1.1.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly writeAccessCondition?: OPTIONAL<AccessCondition>,
-        /**
-         * @summary `loadAccessCondition`.
-         * @description
-         *
-         * Access Condition for service class LOAD. Affects
-         * download/define/create and related services listed in ISO 9506-1:2003
-         * §9.1.1.6. Services that create objects (marked * there) are
-         * constrained only by the VMD's Access Control List. ISO 9506-1:2003
-         * §9.3.1.1.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly loadAccessCondition?: OPTIONAL<AccessCondition>,
-        /**
-         * @summary `executeAccessCondition`.
-         * @description
-         *
-         * Access Condition for service class EXECUTE. Affects Start, Stop,
-         * Resume, Reset, Kill, VMDStop, VMDReset, Select, StartUnitControl, and
-         * StopUnitControl. ISO 9506-1:2003 §9.1.1.7, §9.3.1.1.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly executeAccessCondition?: OPTIONAL<AccessCondition>,
-        /**
-         * @summary `deleteAccessCondition`.
-         * @description
-         *
-         * Access Condition for service class DELETE. Affects DeleteDomain,
-         * DeleteProgramInvocation, DeleteVariableAccess,
-         * DeleteNamedVariableList, DeleteNamedType, DeleteSemaphore,
-         * DeleteEventCondition, DeleteEventAction, DeleteEventEnrollment,
-         * DeleteJournal, DeleteAccessControlList, DeleteUnitControl, and
-         * DeleteEventConditionList. ISO 9506-1:2003 §9.1.1.8, §9.3.1.1.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly deleteAccessCondition?: OPTIONAL<AccessCondition>,
-        /**
-         * @summary `editAccessCondition`.
-         * @description
-         *
-         * Access Condition for service class EDIT (change access control).
-         * Affects ChangeAccessControl, Rename, AddToUnitControl,
-         * RemoveFromUnitControl, AddEventConditionListReference, and
-         * RemoveEventConditionListReference. ISO 9506-1:2003 §9.1.1.9,
-         * §9.3.1.1.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly editAccessCondition?: OPTIONAL<AccessCondition>
-    ) {}
+        readAccessCondition?: OPTIONAL<AccessCondition>,
+        storeAccessCondition?: OPTIONAL<AccessCondition>,
+        writeAccessCondition?: OPTIONAL<AccessCondition>,
+        loadAccessCondition?: OPTIONAL<AccessCondition>,
+        executeAccessCondition?: OPTIONAL<AccessCondition>,
+        deleteAccessCondition?: OPTIONAL<AccessCondition>,
+        editAccessCondition?: OPTIONAL<AccessCondition>
+    ) {
+        this.readAccessCondition = readAccessCondition;
+        this.storeAccessCondition = storeAccessCondition;
+        this.writeAccessCondition = writeAccessCondition;
+        this.loadAccessCondition = loadAccessCondition;
+        this.executeAccessCondition = executeAccessCondition;
+        this.deleteAccessCondition = deleteAccessCondition;
+        this.editAccessCondition = editAccessCondition;
+    }
 
     /**
      * @summary Restructures an object into a GetAccessControlListAttributes_Response_accessControlListElements

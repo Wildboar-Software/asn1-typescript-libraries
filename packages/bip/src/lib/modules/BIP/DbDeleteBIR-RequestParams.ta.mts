@@ -48,41 +48,49 @@ import {
  *
  */
 export class DbDeleteBIR_RequestParams {
+  /**
+   * @summary `originalBSPHandle`.
+   * @description
+   *
+   * Hosting-endpoint BSP handle. Rewritten from the master's local
+   * `BSPHandle` (cl.26) (`X.1083 §16.51`, Table 111).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly originalBSPHandle: BioAPI_HANDLE;
+  /**
+   * @summary `dbHandle`.
+   * @description
+   *
+   * Database to modify, from C `DbHandle` (`X.1083 §16.51`, Table 111,
+   * §15.26). No local/original rewrite is specified.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly dbHandle: BioAPI_DB_HANDLE;
+  /**
+   * @summary `keyValue`.
+   * @description
+   *
+   * From C `KeyValue`. Not OPTIONAL: a NULL pointer is unconvertible
+   * (cl.19, §15.58) (`X.1083 §16.51`, Table 111).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly keyValue: BioAPI_UUID;
+
   constructor(
-    /**
-     * @summary `originalBSPHandle`.
-     * @description
-     *
-     * Hosting-endpoint BSP handle. Rewritten from the master's local
-     * `BSPHandle` (cl.26) (`X.1083 §16.51`, Table 111).
-     *
-     * @public
-     * @readonly
-     */
-    readonly originalBSPHandle: BioAPI_HANDLE,
-    /**
-     * @summary `dbHandle`.
-     * @description
-     *
-     * Database to modify, from C `DbHandle` (`X.1083 §16.51`, Table 111,
-     * §15.26). No local/original rewrite is specified.
-     *
-     * @public
-     * @readonly
-     */
-    readonly dbHandle: BioAPI_DB_HANDLE,
-    /**
-     * @summary `keyValue`.
-     * @description
-     *
-     * From C `KeyValue`. Not OPTIONAL: a NULL pointer is unconvertible
-     * (cl.19, §15.58) (`X.1083 §16.51`, Table 111).
-     *
-     * @public
-     * @readonly
-     */
-    readonly keyValue: BioAPI_UUID
-  ) {}
+    originalBSPHandle: BioAPI_HANDLE,
+    dbHandle: BioAPI_DB_HANDLE,
+    keyValue: BioAPI_UUID
+  ) {
+    this.originalBSPHandle = originalBSPHandle;
+    this.dbHandle = dbHandle;
+    this.keyValue = keyValue;
+  }
 
   /**
    * @summary Restructures an object into a DbDeleteBIR_RequestParams

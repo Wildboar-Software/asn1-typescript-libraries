@@ -51,29 +51,35 @@ import {
  *
  */
 export class TriggerResultInfo {
+    /**
+     * @summary `triggerId`.
+     * @description
+     *
+     * Trigger this result answers. Mandatory in the trigger-
+     * result service. ITU-T Rec. X.753 (10/97) §9.3.1 Table 7.
+     * @public
+     * @readonly
+     */
+    public readonly triggerId: TriggerId;
+    /**
+     * @summary `resultType`.
+     * @description
+     *
+     * Per-thread results grouped as single, sequential, or
+     * parallel, matching how the launch pad spawned. ITU-T Rec.
+     * X.753 (10/97) §7.1–§7.2, A.8.
+     * @public
+     * @readonly
+     */
+    public readonly resultType: TriggerResultInfo_resultType;
+
     constructor(
-        /**
-         * @summary `triggerId`.
-         * @description
-         *
-         * Trigger this result answers. Mandatory in the trigger-
-         * result service. ITU-T Rec. X.753 (10/97) §9.3.1 Table 7.
-         * @public
-         * @readonly
-         */
-        readonly triggerId: TriggerId,
-        /**
-         * @summary `resultType`.
-         * @description
-         *
-         * Per-thread results grouped as single, sequential, or
-         * parallel, matching how the launch pad spawned. ITU-T Rec.
-         * X.753 (10/97) §7.1–§7.2, A.8.
-         * @public
-         * @readonly
-         */
-        readonly resultType: TriggerResultInfo_resultType
-    ) {}
+        triggerId: TriggerId,
+        resultType: TriggerResultInfo_resultType
+    ) {
+        this.triggerId = triggerId;
+        this.resultType = resultType;
+    }
 
     /**
      * @summary Restructures an object into a TriggerResultInfo

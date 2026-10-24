@@ -36,27 +36,33 @@ import { VolAbs, _decode_VolAbs, _encode_VolAbs } from "../CSTA-physical-device-
  */
 export
 class SpeakerVolumeList_Item {
+    /**
+     * @summary `auditoryApparatus`.
+     * @description
+     *
+     * Apparatus that owns the speaker.
+     * @public
+     * @readonly
+     */
+    public readonly auditoryApparatus: AuditoryApparatusID;
+    /**
+     * @summary `speakerVolAbs`.
+     * @description
+     *
+     * Absolute volume. 0 silence, 100 maximum; 1–99 device-specific.
+     * Absent: unknown.
+     * @public
+     * @readonly
+     */
+    public readonly speakerVolAbs?: OPTIONAL<VolAbs>;
+
     constructor (
-        /**
-         * @summary `auditoryApparatus`.
-         * @description
-         *
-         * Apparatus that owns the speaker.
-         * @public
-         * @readonly
-         */
-        readonly auditoryApparatus: AuditoryApparatusID,
-        /**
-         * @summary `speakerVolAbs`.
-         * @description
-         *
-         * Absolute volume. 0 silence, 100 maximum; 1–99 device-specific.
-         * Absent: unknown.
-         * @public
-         * @readonly
-         */
-        readonly speakerVolAbs?: OPTIONAL<VolAbs>
-    ) {}
+        auditoryApparatus: AuditoryApparatusID,
+        speakerVolAbs?: OPTIONAL<VolAbs>
+    ) {
+        this.auditoryApparatus = auditoryApparatus;
+        this.speakerVolAbs = speakerVolAbs;
+    }
 
     /**
      * @summary Restructures an object into a SpeakerVolumeList_Item

@@ -49,81 +49,97 @@ import { GetProgramInvocationAttributes_Response_executionArgument, _decode_GetP
  */
 export
 class GetProgramInvocationAttributes_Response {
+    /**
+     * @summary `state`.
+     * @description
+     *
+     * `&programInvocationState` of the PI. ISO 9506-1:2003 §12.9.1.2.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly state: ProgramInvocationState;
+    /**
+     * @summary `listOfDomainNames`.
+     * @description
+     *
+     * Domains referenced by `&Domains`. ISO 9506-1:2003 §12.9.1.2.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly listOfDomainNames: Identifier[];
+    /**
+     * @summary `mmsDeletable`.
+     * @description
+     *
+     * Whether MMS services may delete this PI. ISO 9506-1:2003 §9.1.4,
+     * §12.9.1.2.3.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mmsDeletable: BOOLEAN;
+    /**
+     * @summary `reusable`.
+     * @description
+     *
+     * `&reusable`: `idle` vs `unrunnable` after normal completion. ISO 9506-1:2003 §12.9.1.2.4.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly reusable: BOOLEAN;
+    /**
+     * @summary `monitor`.
+     * @description
+     *
+     * `&monitor`. If true, related Event Enrollment is available via
+     * GetEventEnrollmentAttributes. ISO 9506-1:2003 §12.9.1.2.5.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly monitor: BOOLEAN;
+    /**
+     * @summary `executionArgument`.
+     * @description
+     *
+     * Current `&executionArgument` (string or externally encoded). ISO 9506-1:2003 §12.9.1.2.6. ISO 9506-2:2003 §12.9.2.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly executionArgument: GetProgramInvocationAttributes_Response_executionArgument;
+    /**
+     * @summary `accessControlList`.
+     * @description
+     *
+     * ACL name. Present only if `aco` was negotiated; not in minor version
+     * one or two. ISO 9506-1:2003 §12.9.1.2.7. ISO 9506-2:2003 §12.9.2.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly accessControlList?: OPTIONAL<Identifier>;
+
     constructor (
-        /**
-         * @summary `state`.
-         * @description
-         *
-         * `&programInvocationState` of the PI. ISO 9506-1:2003 §12.9.1.2.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly state: ProgramInvocationState,
-        /**
-         * @summary `listOfDomainNames`.
-         * @description
-         *
-         * Domains referenced by `&Domains`. ISO 9506-1:2003 §12.9.1.2.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly listOfDomainNames: Identifier[],
-        /**
-         * @summary `mmsDeletable`.
-         * @description
-         *
-         * Whether MMS services may delete this PI. ISO 9506-1:2003 §9.1.4,
-         * §12.9.1.2.3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly mmsDeletable: BOOLEAN,
-        /**
-         * @summary `reusable`.
-         * @description
-         *
-         * `&reusable`: `idle` vs `unrunnable` after normal completion. ISO 9506-1:2003 §12.9.1.2.4.
-         *
-         * @public
-         * @readonly
-         */
-        readonly reusable: BOOLEAN,
-        /**
-         * @summary `monitor`.
-         * @description
-         *
-         * `&monitor`. If true, related Event Enrollment is available via
-         * GetEventEnrollmentAttributes. ISO 9506-1:2003 §12.9.1.2.5.
-         *
-         * @public
-         * @readonly
-         */
-        readonly monitor: BOOLEAN,
-        /**
-         * @summary `executionArgument`.
-         * @description
-         *
-         * Current `&executionArgument` (string or externally encoded). ISO 9506-1:2003 §12.9.1.2.6. ISO 9506-2:2003 §12.9.2.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly executionArgument: GetProgramInvocationAttributes_Response_executionArgument,
-        /**
-         * @summary `accessControlList`.
-         * @description
-         *
-         * ACL name. Present only if `aco` was negotiated; not in minor version
-         * one or two. ISO 9506-1:2003 §12.9.1.2.7. ISO 9506-2:2003 §12.9.2.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly accessControlList?: OPTIONAL<Identifier>
-    ) {}
+        state: ProgramInvocationState,
+        listOfDomainNames: Identifier[],
+        mmsDeletable: BOOLEAN,
+        reusable: BOOLEAN,
+        monitor: BOOLEAN,
+        executionArgument: GetProgramInvocationAttributes_Response_executionArgument,
+        accessControlList?: OPTIONAL<Identifier>
+    ) {
+        this.state = state;
+        this.listOfDomainNames = listOfDomainNames;
+        this.mmsDeletable = mmsDeletable;
+        this.reusable = reusable;
+        this.monitor = monitor;
+        this.executionArgument = executionArgument;
+        this.accessControlList = accessControlList;
+    }
 
     /**
      * @summary Restructures an object into a GetProgramInvocationAttributes_Response

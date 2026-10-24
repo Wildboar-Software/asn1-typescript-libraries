@@ -21,10 +21,16 @@ import { LocationInformationGPRS, _decode_LocationInformationGPRS, _encode_Locat
  *
  */
 export class GPRSEventSpecificInformation_attachChangeOfPositionSpecificInformation {
+    public readonly locationInformationGPRS?: OPTIONAL<LocationInformationGPRS>;
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        readonly locationInformationGPRS?: OPTIONAL<LocationInformationGPRS>,
-        readonly _unrecognizedExtensionsList: _Element[] = [],
-    ) {}
+        locationInformationGPRS?: OPTIONAL<LocationInformationGPRS>,
+        _unrecognizedExtensionsList: _Element[] = [],
+    ) {
+        this.locationInformationGPRS = locationInformationGPRS;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     public static _from_object (_o: { [_K in keyof (GPRSEventSpecificInformation_attachChangeOfPositionSpecificInformation)]: (GPRSEventSpecificInformation_attachChangeOfPositionSpecificInformation)[_K] }): GPRSEventSpecificInformation_attachChangeOfPositionSpecificInformation {
         return new GPRSEventSpecificInformation_attachChangeOfPositionSpecificInformation(_o.locationInformationGPRS, _o._unrecognizedExtensionsList);

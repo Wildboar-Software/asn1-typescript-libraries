@@ -33,26 +33,34 @@ import { DateAndTime, _decode_DateAndTime, _encode_DateAndTime } from "../IN-CS2
  */
 export
 class NotificationInformation_callReleaseSpecificInfo {
+    /**
+     * @summary `releaseCause`.
+     * @public
+     * @readonly
+     */
+    public readonly releaseCause?: OPTIONAL<Cause>;
+    /**
+     * @summary `timeStamp`.
+     * @public
+     * @readonly
+     */
+    public readonly timeStamp?: OPTIONAL<DateAndTime>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `releaseCause`.
-         * @public
-         * @readonly
-         */
-        readonly releaseCause?: OPTIONAL<Cause>,
-        /**
-         * @summary `timeStamp`.
-         * @public
-         * @readonly
-         */
-        readonly timeStamp?: OPTIONAL<DateAndTime>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        releaseCause?: OPTIONAL<Cause>,
+        timeStamp?: OPTIONAL<DateAndTime>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.releaseCause = releaseCause;
+        this.timeStamp = timeStamp;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a NotificationInformation_callReleaseSpecificInfo

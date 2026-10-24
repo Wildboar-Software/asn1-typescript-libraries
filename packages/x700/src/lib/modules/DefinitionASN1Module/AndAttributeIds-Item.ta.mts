@@ -42,27 +42,33 @@ import {
  *
  */
 export class AndAttributeIds_Item {
+    /**
+     * @summary `fieldName`.
+     * @description
+     *
+     * Label of the field in the notification information syntax that
+     * carries the attribute value.
+     * @public
+     * @readonly
+     */
+    public readonly fieldName: Identifier;
+    /**
+     * @summary `attribute`.
+     * @description
+     *
+     * Attribute template whose values occupy `fieldName`.
+     * @public
+     * @readonly
+     */
+    public readonly attribute: TemplateLabel;
+
     constructor(
-        /**
-         * @summary `fieldName`.
-         * @description
-         *
-         * Label of the field in the notification information syntax that
-         * carries the attribute value.
-         * @public
-         * @readonly
-         */
-        readonly fieldName: Identifier,
-        /**
-         * @summary `attribute`.
-         * @description
-         *
-         * Attribute template whose values occupy `fieldName`.
-         * @public
-         * @readonly
-         */
-        readonly attribute: TemplateLabel
-    ) {}
+        fieldName: Identifier,
+        attribute: TemplateLabel
+    ) {
+        this.fieldName = fieldName;
+        this.attribute = attribute;
+    }
 
     /**
      * @summary Restructures an object into a AndAttributeIds_Item

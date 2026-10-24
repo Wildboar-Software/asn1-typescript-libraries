@@ -51,67 +51,77 @@ import { ECParameters, _decode_ECParameters, _encode_ECParameters } from "../PKI
  */
 export
 class ECPrivateKey {
+    /**
+     * @summary `version`.
+     * @description
+     *
+     * Syntax version of the EC private key structure. For this
+     * document it SHALL be `ecPrivkeyVer1` (INTEGER value 1)
+     * ([RFC 5915 §3](https://datatracker.ietf.org/doc/html/rfc5915#section-3)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly version: ECPrivateKey_version;
+    /**
+     * @summary `privateKey`.
+     * @description
+     *
+     * The EC private key as an OCTET STRING of length
+     * ceiling(log2(n)/8) (n = curve order), obtained from the
+     * unsigned integer via I2OSP
+     * ([RFC 3447](https://datatracker.ietf.org/doc/html/rfc3447))
+     * ([RFC 5915 §3](https://datatracker.ietf.org/doc/html/rfc5915#section-3)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly privateKey: OCTET_STRING;
+    /**
+     * @summary `parameters`.
+     * @description
+     *
+     * Elliptic curve domain parameters for this private key.
+     * Type `ECParameters` is from
+     * [RFC 5480](https://datatracker.ietf.org/doc/html/rfc5480);
+     * only the `namedCurve` CHOICE is permitted. Though OPTIONAL
+     * in ASN.1, conforming implementations MUST always include
+     * this field
+     * ([RFC 5915 §3](https://datatracker.ietf.org/doc/html/rfc5915#section-3)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly parameters?: OPTIONAL<ECParameters>;
+    /**
+     * @summary `publicKey`.
+     * @description
+     *
+     * Public key associated with `privateKey`. Format is
+     * [RFC 5480 §2.2](https://datatracker.ietf.org/doc/html/rfc5480#section-2.2)
+     * (ECPoint in a BIT STRING). Though OPTIONAL in ASN.1,
+     * conforming implementations SHOULD always include it; it may
+     * be omitted when the public key was distributed another way.
+     * It can always be recomputed from the private key and
+     * parameters
+     * ([RFC 5915 §3](https://datatracker.ietf.org/doc/html/rfc5915#section-3)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly publicKey?: OPTIONAL<BIT_STRING>;
+
     constructor (
-        /**
-         * @summary `version`.
-         * @description
-         *
-         * Syntax version of the EC private key structure. For this
-         * document it SHALL be `ecPrivkeyVer1` (INTEGER value 1)
-         * ([RFC 5915 §3](https://datatracker.ietf.org/doc/html/rfc5915#section-3)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly version: ECPrivateKey_version,
-        /**
-         * @summary `privateKey`.
-         * @description
-         *
-         * The EC private key as an OCTET STRING of length
-         * ceiling(log2(n)/8) (n = curve order), obtained from the
-         * unsigned integer via I2OSP
-         * ([RFC 3447](https://datatracker.ietf.org/doc/html/rfc3447))
-         * ([RFC 5915 §3](https://datatracker.ietf.org/doc/html/rfc5915#section-3)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly privateKey: OCTET_STRING,
-        /**
-         * @summary `parameters`.
-         * @description
-         *
-         * Elliptic curve domain parameters for this private key.
-         * Type `ECParameters` is from
-         * [RFC 5480](https://datatracker.ietf.org/doc/html/rfc5480);
-         * only the `namedCurve` CHOICE is permitted. Though OPTIONAL
-         * in ASN.1, conforming implementations MUST always include
-         * this field
-         * ([RFC 5915 §3](https://datatracker.ietf.org/doc/html/rfc5915#section-3)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly parameters?: OPTIONAL<ECParameters>,
-        /**
-         * @summary `publicKey`.
-         * @description
-         *
-         * Public key associated with `privateKey`. Format is
-         * [RFC 5480 §2.2](https://datatracker.ietf.org/doc/html/rfc5480#section-2.2)
-         * (ECPoint in a BIT STRING). Though OPTIONAL in ASN.1,
-         * conforming implementations SHOULD always include it; it may
-         * be omitted when the public key was distributed another way.
-         * It can always be recomputed from the private key and
-         * parameters
-         * ([RFC 5915 §3](https://datatracker.ietf.org/doc/html/rfc5915#section-3)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly publicKey?: OPTIONAL<BIT_STRING>
-    ) {}
+        version: ECPrivateKey_version,
+        privateKey: OCTET_STRING,
+        parameters?: OPTIONAL<ECParameters>,
+        publicKey?: OPTIONAL<BIT_STRING>
+    ) {
+        this.version = version;
+        this.privateKey = privateKey;
+        this.parameters = parameters;
+        this.publicKey = publicKey;
+    }
 
     /**
      * @summary Restructures an object into a ECPrivateKey

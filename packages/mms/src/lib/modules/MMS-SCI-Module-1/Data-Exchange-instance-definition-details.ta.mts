@@ -44,63 +44,75 @@ import { Program_Invocation_instance, _decode_Program_Invocation_instance, _enco
  */
 export
 class Data_Exchange_instance_definition_details {
+    /**
+     * @summary `accessControl`.
+     * @description
+     *
+     * SCI encoding of the object's ACL (ISO 9506-1:2003 §9). ISO
+     * 9506-2:2003 Annex B.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly accessControl: Access_Control_List_instance;
+    /**
+     * @summary `request`.
+     * @description
+     *
+     * Input TypeDescriptions. ISO 9506-1:2003 §15.1.2.4; ISO 9506-2:2003
+     * Annex B.1.9.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly request: TypeDescription[];
+    /**
+     * @summary `response`.
+     * @description
+     *
+     * Output TypeDescriptions. ISO 9506-1:2003 §15.1.2.5; ISO 9506-2:2003
+     * Annex B.1.9.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly response: TypeDescription[];
+    /**
+     * @summary `linked`.
+     * @description
+     *
+     * Whether linked to a Program Invocation. ISO 9506-1:2003 §15.1.2.6;
+     * ISO 9506-2:2003 Annex B.1.9.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly linked: BOOLEAN;
+    /**
+     * @summary `programInvocation`.
+     * @description
+     *
+     * Table 28 CIS parameters, or a linked PI instance in object records.
+     * ISO 9506-2:2003 Annex B.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly programInvocation?: OPTIONAL<Program_Invocation_instance>;
+
     constructor (
-        /**
-         * @summary `accessControl`.
-         * @description
-         *
-         * SCI encoding of the object's ACL (ISO 9506-1:2003 §9). ISO
-         * 9506-2:2003 Annex B.
-         *
-         * @public
-         * @readonly
-         */
-        readonly accessControl: Access_Control_List_instance,
-        /**
-         * @summary `request`.
-         * @description
-         *
-         * Input TypeDescriptions. ISO 9506-1:2003 §15.1.2.4; ISO 9506-2:2003
-         * Annex B.1.9.
-         *
-         * @public
-         * @readonly
-         */
-        readonly request: TypeDescription[],
-        /**
-         * @summary `response`.
-         * @description
-         *
-         * Output TypeDescriptions. ISO 9506-1:2003 §15.1.2.5; ISO 9506-2:2003
-         * Annex B.1.9.
-         *
-         * @public
-         * @readonly
-         */
-        readonly response: TypeDescription[],
-        /**
-         * @summary `linked`.
-         * @description
-         *
-         * Whether linked to a Program Invocation. ISO 9506-1:2003 §15.1.2.6;
-         * ISO 9506-2:2003 Annex B.1.9.
-         *
-         * @public
-         * @readonly
-         */
-        readonly linked: BOOLEAN,
-        /**
-         * @summary `programInvocation`.
-         * @description
-         *
-         * Table 28 CIS parameters, or a linked PI instance in object records.
-         * ISO 9506-2:2003 Annex B.
-         *
-         * @public
-         * @readonly
-         */
-        readonly programInvocation?: OPTIONAL<Program_Invocation_instance>
-    ) {}
+        accessControl: Access_Control_List_instance,
+        request: TypeDescription[],
+        response: TypeDescription[],
+        linked: BOOLEAN,
+        programInvocation?: OPTIONAL<Program_Invocation_instance>
+    ) {
+        this.accessControl = accessControl;
+        this.request = request;
+        this.response = response;
+        this.linked = linked;
+        this.programInvocation = programInvocation;
+    }
 
     /**
      * @summary Restructures an object into a Data_Exchange_instance_definition_details

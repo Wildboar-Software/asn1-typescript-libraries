@@ -55,64 +55,78 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class AgentLoggedOffEvent {
+    /**
+     * @summary `agentDevice`.
+     * @description
+     *
+     * Device at which the agent logged off.
+     * @public
+     * @readonly
+     */
+    public readonly agentDevice: SubjectDeviceID;
+    /**
+     * @summary `agentID`.
+     * @description
+     *
+     * Required if multiple agentIDs exist at the agent device.
+     * @public
+     * @readonly
+     */
+    public readonly agentID?: OPTIONAL<AgentID>;
+    /**
+     * @summary `acdGroup`.
+     * @description
+     *
+     * ACD group from which the agent logged off. Present iff the event is
+     * associated with ACD group activity (§6.1.1.6.5); otherwise absent.
+     * @public
+     * @readonly
+     */
+    public readonly acdGroup?: OPTIONAL<DeviceID>;
+    /**
+     * @summary `agentPassword`.
+     * @description
+     *
+     * Password used; the SF may omit it for security.
+     * @public
+     * @readonly
+     */
+    public readonly agentPassword?: OPTIONAL<AgentPassword>;
+    /**
+     * @summary `cause`.
+     * @description
+     *
+     * Reason for the event.
+     * @public
+     * @readonly
+     */
+    public readonly cause?: OPTIONAL<EventCause>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `agentDevice`.
-         * @description
-         *
-         * Device at which the agent logged off.
-         * @public
-         * @readonly
-         */
-        readonly agentDevice: SubjectDeviceID,
-        /**
-         * @summary `agentID`.
-         * @description
-         *
-         * Required if multiple agentIDs exist at the agent device.
-         * @public
-         * @readonly
-         */
-        readonly agentID?: OPTIONAL<AgentID>,
-        /**
-         * @summary `acdGroup`.
-         * @description
-         *
-         * ACD group from which the agent logged off. Present iff the event is
-         * associated with ACD group activity (§6.1.1.6.5); otherwise absent.
-         * @public
-         * @readonly
-         */
-        readonly acdGroup?: OPTIONAL<DeviceID>,
-        /**
-         * @summary `agentPassword`.
-         * @description
-         *
-         * Password used; the SF may omit it for security.
-         * @public
-         * @readonly
-         */
-        readonly agentPassword?: OPTIONAL<AgentPassword>,
-        /**
-         * @summary `cause`.
-         * @description
-         *
-         * Reason for the event.
-         * @public
-         * @readonly
-         */
-        readonly cause?: OPTIONAL<EventCause>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        agentDevice: SubjectDeviceID,
+        agentID?: OPTIONAL<AgentID>,
+        acdGroup?: OPTIONAL<DeviceID>,
+        agentPassword?: OPTIONAL<AgentPassword>,
+        cause?: OPTIONAL<EventCause>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.agentDevice = agentDevice;
+        this.agentID = agentID;
+        this.acdGroup = acdGroup;
+        this.agentPassword = agentPassword;
+        this.cause = cause;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a AgentLoggedOffEvent

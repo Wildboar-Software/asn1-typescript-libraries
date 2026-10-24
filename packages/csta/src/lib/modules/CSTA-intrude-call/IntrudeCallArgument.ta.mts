@@ -50,51 +50,61 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class IntrudeCallArgument {
+    /**
+     * @summary `intrude`.
+     * @description
+     *
+     * Mandatory. Calling device's connection (typically
+     * Connected while the called side is Fail).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly intrude: ConnectionID;
+    /**
+     * @summary `participationType`.
+     * @description
+     *
+     * Default `active`. Whether the intruding device may speak
+     * (`active`) or only listen (`silent`).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly participationType?: OPTIONAL<ParticipationType>;
+    /**
+     * @summary `userData`.
+     * @description
+     *
+     * Optional user data sent with the intrusion (§12.2.30).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly userData?: OPTIONAL<UserData>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional `CSTACommonArguments` carrying the security and
+     * privateData parameters from the ECMA-269 service table.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `intrude`.
-         * @description
-         *
-         * Mandatory. Calling device's connection (typically
-         * Connected while the called side is Fail).
-         *
-         * @public
-         * @readonly
-         */
-        readonly intrude: ConnectionID,
-        /**
-         * @summary `participationType`.
-         * @description
-         *
-         * Default `active`. Whether the intruding device may speak
-         * (`active`) or only listen (`silent`).
-         *
-         * @public
-         * @readonly
-         */
-        readonly participationType?: OPTIONAL<ParticipationType>,
-        /**
-         * @summary `userData`.
-         * @description
-         *
-         * Optional user data sent with the intrusion (§12.2.30).
-         *
-         * @public
-         * @readonly
-         */
-        readonly userData?: OPTIONAL<UserData>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional `CSTACommonArguments` carrying the security and
-         * privateData parameters from the ECMA-269 service table.
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        intrude: ConnectionID,
+        participationType?: OPTIONAL<ParticipationType>,
+        userData?: OPTIONAL<UserData>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.intrude = intrude;
+        this.participationType = participationType;
+        this.userData = userData;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a IntrudeCallArgument

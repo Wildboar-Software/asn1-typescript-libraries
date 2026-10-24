@@ -31,31 +31,37 @@ import * as $ from '@wildboar/asn1/functional';
  *
  */
 export class gulsSignedTransformation_XformedDataType {
+  /**
+   * @summary `intermediateValue`.
+   * @description
+   *
+   * `IntermediateType` encoded with the initial encoding
+   * rules; this encoding is what is signed or sealed. ITU-T
+   * Rec. X.830 (04/95) Annex D.4.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly intermediateValue: EMBEDDED_PDV;
+  /**
+   * @summary `appendix`.
+   * @description
+   *
+   * Signature or seal over that encoding (D.4 procedure).
+   * ITU-T Rec. X.830 (04/95) Annex D.4.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly appendix: BIT_STRING;
+
   constructor(
-    /**
-     * @summary `intermediateValue`.
-     * @description
-     *
-     * `IntermediateType` encoded with the initial encoding
-     * rules; this encoding is what is signed or sealed. ITU-T
-     * Rec. X.830 (04/95) Annex D.4.
-     *
-     * @public
-     * @readonly
-     */
-    readonly intermediateValue: EMBEDDED_PDV,
-    /**
-     * @summary `appendix`.
-     * @description
-     *
-     * Signature or seal over that encoding (D.4 procedure).
-     * ITU-T Rec. X.830 (04/95) Annex D.4.
-     *
-     * @public
-     * @readonly
-     */
-    readonly appendix: BIT_STRING
-  ) {}
+    intermediateValue: EMBEDDED_PDV,
+    appendix: BIT_STRING
+  ) {
+    this.intermediateValue = intermediateValue;
+    this.appendix = appendix;
+  }
 
   /**
    * @summary Restructures an object into a gulsSignedTransformation_XformedDataType

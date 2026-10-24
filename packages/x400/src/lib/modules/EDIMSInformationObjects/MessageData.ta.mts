@@ -36,20 +36,26 @@ import {
  *
  */
 export class MessageData {
+    /**
+     * @summary `heading`.
+     * @public
+     * @readonly
+     */
+    public readonly heading: Heading;
+    /**
+     * @summary `body`.
+     * @public
+     * @readonly
+     */
+    public readonly body: BodyOrRemoved;
+
     constructor(
-        /**
-         * @summary `heading`.
-         * @public
-         * @readonly
-         */
-        readonly heading: Heading,
-        /**
-         * @summary `body`.
-         * @public
-         * @readonly
-         */
-        readonly body: BodyOrRemoved
-    ) {}
+        heading: Heading,
+        body: BodyOrRemoved
+    ) {
+        this.heading = heading;
+        this.body = body;
+    }
 
     /**
      * @summary Restructures an object into a MessageData

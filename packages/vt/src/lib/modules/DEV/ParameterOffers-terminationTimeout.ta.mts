@@ -39,26 +39,32 @@ import { ParameterOffers_terminationTimeout_eventId, _decode_ParameterOffers_ter
  */
 export
 class ParameterOffers_terminationTimeout {
+    /**
+     * @summary `timeOffer`.
+     * @description
+     * Offered timeouts as values or ranges of `(multiplier,
+     * exponent)`. T=0 means infinite. ISO/IEC 9040:1997 §23.4.
+     * @public
+     * @readonly
+     */
+    public readonly timeOffer: TimeOffer;
+    /**
+     * @summary `eventId`.
+     * @description
+     * Offered event-id: non-zero positive integer or `"null"`.
+     * ISO/IEC 9040:1997 §23.4.
+     * @public
+     * @readonly
+     */
+    public readonly eventId: ParameterOffers_terminationTimeout_eventId;
+
     constructor (
-        /**
-         * @summary `timeOffer`.
-         * @description
-         * Offered timeouts as values or ranges of `(multiplier,
-         * exponent)`. T=0 means infinite. ISO/IEC 9040:1997 §23.4.
-         * @public
-         * @readonly
-         */
-        readonly timeOffer: TimeOffer,
-        /**
-         * @summary `eventId`.
-         * @description
-         * Offered event-id: non-zero positive integer or `"null"`.
-         * ISO/IEC 9040:1997 §23.4.
-         * @public
-         * @readonly
-         */
-        readonly eventId: ParameterOffers_terminationTimeout_eventId
-    ) {}
+        timeOffer: TimeOffer,
+        eventId: ParameterOffers_terminationTimeout_eventId
+    ) {
+        this.timeOffer = timeOffer;
+        this.eventId = eventId;
+    }
 
     /**
      * @summary Restructures an object into a ParameterOffers_terminationTimeout

@@ -31,20 +31,26 @@ import {
  *
  */
 export class RecipientEncryptedKey {
+    /**
+     * @summary `rid`.
+     * @public
+     * @readonly
+     */
+    public readonly rid: KeyAgreeRecipientIdentifier;
+    /**
+     * @summary `encryptedKey`.
+     * @public
+     * @readonly
+     */
+    public readonly encryptedKey: EncryptedKey;
+
     constructor(
-        /**
-         * @summary `rid`.
-         * @public
-         * @readonly
-         */
-        readonly rid: KeyAgreeRecipientIdentifier,
-        /**
-         * @summary `encryptedKey`.
-         * @public
-         * @readonly
-         */
-        readonly encryptedKey: EncryptedKey
-    ) {}
+        rid: KeyAgreeRecipientIdentifier,
+        encryptedKey: EncryptedKey
+    ) {
+        this.rid = rid;
+        this.encryptedKey = encryptedKey;
+    }
 
     /**
      * @summary Restructures an object into a RecipientEncryptedKey

@@ -39,30 +39,36 @@ import {
  *
  */
 export class MappingPair {
+    /**
+     * @summary `relationshipOperation`.
+     * @description
+     *
+     * ESTABLISH, TERMINATE, BIND, UNBIND, QUERY, NOTIFY, or
+     * USER DEFINED, with optional names. ITU-T Rec. X.725 (11/95)
+     * A.2.3.5.
+     * @public
+     * @readonly
+     */
+    public readonly relationshipOperation: RelationshipOperation;
+    /**
+     * @summary `mapsTo`.
+     * @description
+     *
+     * Systems management operations (and their targets) that
+     * realize this relationship operation. ITU-T Rec. X.725
+     * (11/95) A.2.3.5.
+     * @public
+     * @readonly
+     */
+    public readonly mapsTo: MapsTo;
+
     constructor(
-        /**
-         * @summary `relationshipOperation`.
-         * @description
-         *
-         * ESTABLISH, TERMINATE, BIND, UNBIND, QUERY, NOTIFY, or
-         * USER DEFINED, with optional names. ITU-T Rec. X.725 (11/95)
-         * A.2.3.5.
-         * @public
-         * @readonly
-         */
-        readonly relationshipOperation: RelationshipOperation,
-        /**
-         * @summary `mapsTo`.
-         * @description
-         *
-         * Systems management operations (and their targets) that
-         * realize this relationship operation. ITU-T Rec. X.725
-         * (11/95) A.2.3.5.
-         * @public
-         * @readonly
-         */
-        readonly mapsTo: MapsTo
-    ) {}
+        relationshipOperation: RelationshipOperation,
+        mapsTo: MapsTo
+    ) {
+        this.relationshipOperation = relationshipOperation;
+        this.mapsTo = mapsTo;
+    }
 
     /**
      * @summary Restructures an object into a MappingPair

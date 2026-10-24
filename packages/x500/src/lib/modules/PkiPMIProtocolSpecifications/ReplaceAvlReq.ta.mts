@@ -49,44 +49,58 @@ import {
  *
  */
 export class ReplaceAvlReq implements AVMPcommonComponents {
+    /**
+     * @summary `version`.
+     * @public
+     * @readonly
+     */
+    public readonly version: OPTIONAL<AVMPversion>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `timeStamp`.
+     * @public
+     * @readonly
+     */
+    public readonly timeStamp: GeneralizedTime; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `sequence`.
+     * @public
+     * @readonly
+     */
+    public readonly sequence: AVMPsequence; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `old`.
+     * @public
+     * @readonly
+     */
+    public readonly old: OPTIONAL<AvlSerialNumber>;
+    /**
+     * @summary `new_`.
+     * @public
+     * @readonly
+     */
+    public readonly new_: CertAVL;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `version`.
-         * @public
-         * @readonly
-         */
-        readonly version: OPTIONAL<AVMPversion> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `timeStamp`.
-         * @public
-         * @readonly
-         */
-        readonly timeStamp: GeneralizedTime /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `sequence`.
-         * @public
-         * @readonly
-         */
-        readonly sequence: AVMPsequence /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `old`.
-         * @public
-         * @readonly
-         */
-        readonly old: OPTIONAL<AvlSerialNumber>,
-        /**
-         * @summary `new_`.
-         * @public
-         * @readonly
-         */
-        readonly new_: CertAVL,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        version: OPTIONAL<AVMPversion>,
+        timeStamp: GeneralizedTime,
+        sequence: AVMPsequence,
+        old: OPTIONAL<AvlSerialNumber>,
+        new_: CertAVL,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.version = version;
+        this.timeStamp = timeStamp;
+        this.sequence = sequence;
+        this.old = old;
+        this.new_ = new_;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a ReplaceAvlReq

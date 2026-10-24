@@ -34,19 +34,23 @@ import { TemplateID, _decode_TemplateID, _encode_TemplateID } from "../TSM/Templ
  */
 export
 class TTPRequestRefOnTTPforCenterModel {
+    /**
+     * @summary `templateID`.
+     * @description
+     *
+     * Identifies the reference template (issuer, serial, metadata)
+     * for revocation without sending the template. X.1084 §11.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly templateID: TemplateID;
+
     constructor (
-        /**
-         * @summary `templateID`.
-         * @description
-         *
-         * Identifies the reference template (issuer, serial, metadata)
-         * for revocation without sending the template. X.1084 §11.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly templateID: TemplateID
-    ) {}
+        templateID: TemplateID
+    ) {
+        this.templateID = templateID;
+    }
 
     /**
      * @summary Restructures an object into a TTPRequestRefOnTTPforCenterModel

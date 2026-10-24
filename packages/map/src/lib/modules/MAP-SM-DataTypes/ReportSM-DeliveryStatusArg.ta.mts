@@ -89,238 +89,286 @@ import { SMServingNodeAddressList, _decode_SMServingNodeAddressList, _encode_SMS
  */
 export
 class ReportSM_DeliveryStatusArg {
+    /**
+     * @summary `msisdn`.
+     * @description
+     *
+     * Subscriber MSISDN.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly msisdn: ISDN_AddressString;
+    /**
+     * @summary `serviceCentreAddress`.
+     * @description
+     *
+     * Service Centre address.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly serviceCentreAddress: AddressString;
+    /**
+     * @summary `sm_DeliveryOutcome`.
+     * @description
+     *
+     * Outcome for CS unless an indicator says otherwise.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sm_DeliveryOutcome: SM_DeliveryOutcome;
+    /**
+     * @summary `absentSubscriberDiagnosticSM`.
+     * @description
+     *
+     * Absent-subscriber diagnostic for the primary outcome.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly absentSubscriberDiagnosticSM?: OPTIONAL<AbsentSubscriberDiagnosticSM>;
+    /**
+     * @summary `extensionContainer`.
+     * @description
+     *
+     * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary `gprsSupportIndicator`.
+     * @description
+     *
+     * Set only if SMS-GMSC supports two delivery outcomes (clause 17.7.6).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly gprsSupportIndicator?: OPTIONAL<NULL>;
+    /**
+     * @summary `deliveryOutcomeIndicator`.
+     * @description
+     *
+     * SM-DeliveryOutcome is for GPRS. Then additional GPRS
+     * outcome/diagnostic shall be absent (clause 17.7.6).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly deliveryOutcomeIndicator?: OPTIONAL<NULL>;
+    /**
+     * @summary `additionalSM_DeliveryOutcome`.
+     * @description
+     *
+     * GPRS outcome. Absent if deliveryOutcomeIndicator is set.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly additionalSM_DeliveryOutcome?: OPTIONAL<SM_DeliveryOutcome>;
+    /**
+     * @summary `additionalAbsentSubscriberDiagnosticSM`.
+     * @description
+     *
+     * GPRS diagnostic. Absent if deliveryOutcomeIndicator is set.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly additionalAbsentSubscriberDiagnosticSM?: OPTIONAL<AbsentSubscriberDiagnosticSM>;
+    /**
+     * @summary `ip_sm_gw_Indicator`.
+     * @description
+     *
+     * SM-DeliveryOutcome is for IMS. Then deliveryOutcomeIndicator and
+     * ip-sm-gw outcome/diagnostic shall be absent (clause 17.7.6).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ip_sm_gw_Indicator?: OPTIONAL<NULL>;
+    /**
+     * @summary `ip_sm_gw_sm_deliveryOutcome`.
+     * @description
+     *
+     * IMS outcome. Absent if ip-sm-gw-Indicator is set.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ip_sm_gw_sm_deliveryOutcome?: OPTIONAL<SM_DeliveryOutcome>;
+    /**
+     * @summary `ip_sm_gw_absentSubscriberDiagnosticSM`.
+     * @description
+     *
+     * IMS diagnostic. Absent if ip-sm-gw-Indicator is set.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ip_sm_gw_absentSubscriberDiagnosticSM?: OPTIONAL<AbsentSubscriberDiagnosticSM>;
+    /**
+     * @summary `imsi`.
+     * @description
+     *
+     * IMSI if present.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly imsi?: OPTIONAL<IMSI>;
+    /**
+     * @summary `singleAttemptDelivery`.
+     * @description
+     *
+     * Single-attempt delivery.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly singleAttemptDelivery?: OPTIONAL<NULL>;
+    /**
+     * @summary `correlationID`.
+     * @description
+     *
+     * HLR / SIP URI correlation.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly correlationID?: OPTIONAL<CorrelationID>;
+    /**
+     * @summary `smsf_3gpp_deliveryOutcomeIndicator`.
+     * @description
+     *
+     * SM-DeliveryOutcome is for 3GPP-SMSF; then the 3GPP-SMSF
+     * outcome/diagnostic shall be absent (clause 17.7.6).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly smsf_3gpp_deliveryOutcomeIndicator?: OPTIONAL<NULL>;
+    /**
+     * @summary `smsf_3gpp_deliveryOutcome`.
+     * @description
+     *
+     * Absent if smsf-3gpp-deliveryOutcomeIndicator is set.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly smsf_3gpp_deliveryOutcome?: OPTIONAL<SM_DeliveryOutcome>;
+    /**
+     * @summary `smsf_3gpp_absentSubscriberDiagSM`.
+     * @description
+     *
+     * Absent if smsf-3gpp-deliveryOutcomeIndicator is set.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly smsf_3gpp_absentSubscriberDiagSM?: OPTIONAL<AbsentSubscriberDiagnosticSM>;
+    /**
+     * @summary `smsf_non_3gpp_deliveryOutcomeIndicator`.
+     * @description
+     *
+     * SM-DeliveryOutcome is for non-3GPP-SMSF; then the non-3GPP-SMSF
+     * outcome/diagnostic shall be absent.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly smsf_non_3gpp_deliveryOutcomeIndicator?: OPTIONAL<NULL>;
+    /**
+     * @summary `smsf_non_3gpp_deliveryOutcome`.
+     * @description
+     *
+     * Absent if smsf-non-3gpp-deliveryOutcomeIndicator is set.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly smsf_non_3gpp_deliveryOutcome?: OPTIONAL<SM_DeliveryOutcome>;
+    /**
+     * @summary `smsf_non_3gpp_absentSubscriberDiagSM`.
+     * @description
+     *
+     * Absent if smsf-non-3gpp-deliveryOutcomeIndicator is set.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly smsf_non_3gpp_absentSubscriberDiagSM?: OPTIONAL<AbsentSubscriberDiagnosticSM>;
+    /**
+     * @summary `failedSMServingNodes`.
+     * @description
+     *
+     * Serving nodes that failed delivery.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly failedSMServingNodes?: OPTIONAL<SMServingNodeAddressList>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `msisdn`.
-         * @description
-         *
-         * Subscriber MSISDN.
-         *
-         * @public
-         * @readonly
-         */
-        readonly msisdn: ISDN_AddressString,
-        /**
-         * @summary `serviceCentreAddress`.
-         * @description
-         *
-         * Service Centre address.
-         *
-         * @public
-         * @readonly
-         */
-        readonly serviceCentreAddress: AddressString,
-        /**
-         * @summary `sm_DeliveryOutcome`.
-         * @description
-         *
-         * Outcome for CS unless an indicator says otherwise.
-         *
-         * @public
-         * @readonly
-         */
-        readonly sm_DeliveryOutcome: SM_DeliveryOutcome,
-        /**
-         * @summary `absentSubscriberDiagnosticSM`.
-         * @description
-         *
-         * Absent-subscriber diagnostic for the primary outcome.
-         *
-         * @public
-         * @readonly
-         */
-        readonly absentSubscriberDiagnosticSM?: OPTIONAL<AbsentSubscriberDiagnosticSM>,
-        /**
-         * @summary `extensionContainer`.
-         * @description
-         *
-         * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary `gprsSupportIndicator`.
-         * @description
-         *
-         * Set only if SMS-GMSC supports two delivery outcomes (clause 17.7.6).
-         *
-         * @public
-         * @readonly
-         */
-        readonly gprsSupportIndicator?: OPTIONAL<NULL>,
-        /**
-         * @summary `deliveryOutcomeIndicator`.
-         * @description
-         *
-         * SM-DeliveryOutcome is for GPRS. Then additional GPRS
-         * outcome/diagnostic shall be absent (clause 17.7.6).
-         *
-         * @public
-         * @readonly
-         */
-        readonly deliveryOutcomeIndicator?: OPTIONAL<NULL>,
-        /**
-         * @summary `additionalSM_DeliveryOutcome`.
-         * @description
-         *
-         * GPRS outcome. Absent if deliveryOutcomeIndicator is set.
-         *
-         * @public
-         * @readonly
-         */
-        readonly additionalSM_DeliveryOutcome?: OPTIONAL<SM_DeliveryOutcome>,
-        /**
-         * @summary `additionalAbsentSubscriberDiagnosticSM`.
-         * @description
-         *
-         * GPRS diagnostic. Absent if deliveryOutcomeIndicator is set.
-         *
-         * @public
-         * @readonly
-         */
-        readonly additionalAbsentSubscriberDiagnosticSM?: OPTIONAL<AbsentSubscriberDiagnosticSM>,
-        /**
-         * @summary `ip_sm_gw_Indicator`.
-         * @description
-         *
-         * SM-DeliveryOutcome is for IMS. Then deliveryOutcomeIndicator and
-         * ip-sm-gw outcome/diagnostic shall be absent (clause 17.7.6).
-         *
-         * @public
-         * @readonly
-         */
-        readonly ip_sm_gw_Indicator?: OPTIONAL<NULL>,
-        /**
-         * @summary `ip_sm_gw_sm_deliveryOutcome`.
-         * @description
-         *
-         * IMS outcome. Absent if ip-sm-gw-Indicator is set.
-         *
-         * @public
-         * @readonly
-         */
-        readonly ip_sm_gw_sm_deliveryOutcome?: OPTIONAL<SM_DeliveryOutcome>,
-        /**
-         * @summary `ip_sm_gw_absentSubscriberDiagnosticSM`.
-         * @description
-         *
-         * IMS diagnostic. Absent if ip-sm-gw-Indicator is set.
-         *
-         * @public
-         * @readonly
-         */
-        readonly ip_sm_gw_absentSubscriberDiagnosticSM?: OPTIONAL<AbsentSubscriberDiagnosticSM>,
-        /**
-         * @summary `imsi`.
-         * @description
-         *
-         * IMSI if present.
-         *
-         * @public
-         * @readonly
-         */
-        readonly imsi?: OPTIONAL<IMSI>,
-        /**
-         * @summary `singleAttemptDelivery`.
-         * @description
-         *
-         * Single-attempt delivery.
-         *
-         * @public
-         * @readonly
-         */
-        readonly singleAttemptDelivery?: OPTIONAL<NULL>,
-        /**
-         * @summary `correlationID`.
-         * @description
-         *
-         * HLR / SIP URI correlation.
-         *
-         * @public
-         * @readonly
-         */
-        readonly correlationID?: OPTIONAL<CorrelationID>,
-        /**
-         * @summary `smsf_3gpp_deliveryOutcomeIndicator`.
-         * @description
-         *
-         * SM-DeliveryOutcome is for 3GPP-SMSF; then the 3GPP-SMSF
-         * outcome/diagnostic shall be absent (clause 17.7.6).
-         *
-         * @public
-         * @readonly
-         */
-        readonly smsf_3gpp_deliveryOutcomeIndicator?: OPTIONAL<NULL>,
-        /**
-         * @summary `smsf_3gpp_deliveryOutcome`.
-         * @description
-         *
-         * Absent if smsf-3gpp-deliveryOutcomeIndicator is set.
-         *
-         * @public
-         * @readonly
-         */
-        readonly smsf_3gpp_deliveryOutcome?: OPTIONAL<SM_DeliveryOutcome>,
-        /**
-         * @summary `smsf_3gpp_absentSubscriberDiagSM`.
-         * @description
-         *
-         * Absent if smsf-3gpp-deliveryOutcomeIndicator is set.
-         *
-         * @public
-         * @readonly
-         */
-        readonly smsf_3gpp_absentSubscriberDiagSM?: OPTIONAL<AbsentSubscriberDiagnosticSM>,
-        /**
-         * @summary `smsf_non_3gpp_deliveryOutcomeIndicator`.
-         * @description
-         *
-         * SM-DeliveryOutcome is for non-3GPP-SMSF; then the non-3GPP-SMSF
-         * outcome/diagnostic shall be absent.
-         *
-         * @public
-         * @readonly
-         */
-        readonly smsf_non_3gpp_deliveryOutcomeIndicator?: OPTIONAL<NULL>,
-        /**
-         * @summary `smsf_non_3gpp_deliveryOutcome`.
-         * @description
-         *
-         * Absent if smsf-non-3gpp-deliveryOutcomeIndicator is set.
-         *
-         * @public
-         * @readonly
-         */
-        readonly smsf_non_3gpp_deliveryOutcome?: OPTIONAL<SM_DeliveryOutcome>,
-        /**
-         * @summary `smsf_non_3gpp_absentSubscriberDiagSM`.
-         * @description
-         *
-         * Absent if smsf-non-3gpp-deliveryOutcomeIndicator is set.
-         *
-         * @public
-         * @readonly
-         */
-        readonly smsf_non_3gpp_absentSubscriberDiagSM?: OPTIONAL<AbsentSubscriberDiagnosticSM>,
-        /**
-         * @summary `failedSMServingNodes`.
-         * @description
-         *
-         * Serving nodes that failed delivery.
-         *
-         * @public
-         * @readonly
-         */
-        readonly failedSMServingNodes?: OPTIONAL<SMServingNodeAddressList>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        msisdn: ISDN_AddressString,
+        serviceCentreAddress: AddressString,
+        sm_DeliveryOutcome: SM_DeliveryOutcome,
+        absentSubscriberDiagnosticSM?: OPTIONAL<AbsentSubscriberDiagnosticSM>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        gprsSupportIndicator?: OPTIONAL<NULL>,
+        deliveryOutcomeIndicator?: OPTIONAL<NULL>,
+        additionalSM_DeliveryOutcome?: OPTIONAL<SM_DeliveryOutcome>,
+        additionalAbsentSubscriberDiagnosticSM?: OPTIONAL<AbsentSubscriberDiagnosticSM>,
+        ip_sm_gw_Indicator?: OPTIONAL<NULL>,
+        ip_sm_gw_sm_deliveryOutcome?: OPTIONAL<SM_DeliveryOutcome>,
+        ip_sm_gw_absentSubscriberDiagnosticSM?: OPTIONAL<AbsentSubscriberDiagnosticSM>,
+        imsi?: OPTIONAL<IMSI>,
+        singleAttemptDelivery?: OPTIONAL<NULL>,
+        correlationID?: OPTIONAL<CorrelationID>,
+        smsf_3gpp_deliveryOutcomeIndicator?: OPTIONAL<NULL>,
+        smsf_3gpp_deliveryOutcome?: OPTIONAL<SM_DeliveryOutcome>,
+        smsf_3gpp_absentSubscriberDiagSM?: OPTIONAL<AbsentSubscriberDiagnosticSM>,
+        smsf_non_3gpp_deliveryOutcomeIndicator?: OPTIONAL<NULL>,
+        smsf_non_3gpp_deliveryOutcome?: OPTIONAL<SM_DeliveryOutcome>,
+        smsf_non_3gpp_absentSubscriberDiagSM?: OPTIONAL<AbsentSubscriberDiagnosticSM>,
+        failedSMServingNodes?: OPTIONAL<SMServingNodeAddressList>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.msisdn = msisdn;
+        this.serviceCentreAddress = serviceCentreAddress;
+        this.sm_DeliveryOutcome = sm_DeliveryOutcome;
+        this.absentSubscriberDiagnosticSM = absentSubscriberDiagnosticSM;
+        this.extensionContainer = extensionContainer;
+        this.gprsSupportIndicator = gprsSupportIndicator;
+        this.deliveryOutcomeIndicator = deliveryOutcomeIndicator;
+        this.additionalSM_DeliveryOutcome = additionalSM_DeliveryOutcome;
+        this.additionalAbsentSubscriberDiagnosticSM = additionalAbsentSubscriberDiagnosticSM;
+        this.ip_sm_gw_Indicator = ip_sm_gw_Indicator;
+        this.ip_sm_gw_sm_deliveryOutcome = ip_sm_gw_sm_deliveryOutcome;
+        this.ip_sm_gw_absentSubscriberDiagnosticSM = ip_sm_gw_absentSubscriberDiagnosticSM;
+        this.imsi = imsi;
+        this.singleAttemptDelivery = singleAttemptDelivery;
+        this.correlationID = correlationID;
+        this.smsf_3gpp_deliveryOutcomeIndicator = smsf_3gpp_deliveryOutcomeIndicator;
+        this.smsf_3gpp_deliveryOutcome = smsf_3gpp_deliveryOutcome;
+        this.smsf_3gpp_absentSubscriberDiagSM = smsf_3gpp_absentSubscriberDiagSM;
+        this.smsf_non_3gpp_deliveryOutcomeIndicator = smsf_non_3gpp_deliveryOutcomeIndicator;
+        this.smsf_non_3gpp_deliveryOutcome = smsf_non_3gpp_deliveryOutcome;
+        this.smsf_non_3gpp_absentSubscriberDiagSM = smsf_non_3gpp_absentSubscriberDiagSM;
+        this.failedSMServingNodes = failedSMServingNodes;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a ReportSM_DeliveryStatusArg

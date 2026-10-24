@@ -48,26 +48,34 @@ import { type Code, _encode_Code, _decode_Code } from "@wildboar/rose";
  */
 export
 class ExtensionField {
+    /**
+     * @summary `type_`.
+     * @public
+     * @readonly
+     */
+    public readonly type_: Code;
+    /**
+     * @summary `criticality`.
+     * @public
+     * @readonly
+     */
+    public readonly criticality: OPTIONAL<CriticalityType>;
+    /**
+     * @summary `value`.
+     * @public
+     * @readonly
+     */
+    public readonly value: _Element;
+
     constructor (
-        /**
-         * @summary `type_`.
-         * @public
-         * @readonly
-         */
-        readonly type_: Code,
-        /**
-         * @summary `criticality`.
-         * @public
-         * @readonly
-         */
-        readonly criticality: OPTIONAL<CriticalityType>,
-        /**
-         * @summary `value`.
-         * @public
-         * @readonly
-         */
-        readonly value: _Element
-    ) {}
+        type_: Code,
+        criticality: OPTIONAL<CriticalityType>,
+        value: _Element
+    ) {
+        this.type_ = type_;
+        this.criticality = criticality;
+        this.value = value;
+    }
 
     /**
      * @summary Restructures an object into a ExtensionField

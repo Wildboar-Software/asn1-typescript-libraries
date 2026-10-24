@@ -43,30 +43,36 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class GetLocationTrackingSessionsResult {
+    /**
+     * @summary `crossRefIDorRegistrationData`.
+     * @description
+     *
+     * Either a ServiceCrossRefID for Location Session Info or the session
+     * list itself (ECMA-269 §28.1.11.2.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly crossRefIDorRegistrationData: GetLocationTrackingSessionsResult_crossRefIDorRegistrationData;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * CSTACommonArguments carrying the service-table security and
+     * privateData parameters.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `crossRefIDorRegistrationData`.
-         * @description
-         *
-         * Either a ServiceCrossRefID for Location Session Info or the session
-         * list itself (ECMA-269 §28.1.11.2.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly crossRefIDorRegistrationData: GetLocationTrackingSessionsResult_crossRefIDorRegistrationData,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * CSTACommonArguments carrying the service-table security and
-         * privateData parameters.
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        crossRefIDorRegistrationData: GetLocationTrackingSessionsResult_crossRefIDorRegistrationData,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.crossRefIDorRegistrationData = crossRefIDorRegistrationData;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a GetLocationTrackingSessionsResult

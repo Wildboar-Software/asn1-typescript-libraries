@@ -38,42 +38,52 @@ import { FER, _decode_FER, _encode_FER } from "../G/FER.ta.mjs";
  */
 export
 class FEPCOupdate_Item {
+    /**
+     * @summary `index`.
+     * @description
+     * FEPR index within the FEPCO. ISO/IEC 9041-1:1997 §12.2.4.
+     * @public
+     * @readonly
+     */
+    public readonly index: INTEGER;
+    /**
+     * @summary `event`.
+     * @description
+     * Field Entry Event. ISO/IEC 9040:1997 §3.3.65.
+     * @public
+     * @readonly
+     */
+    public readonly event: FEE;
+    /**
+     * @summary `condition`.
+     * @description
+     * Field Entry Conditions that, with the event, predicate a
+     * reaction. ISO/IEC 9040:1997 §3.3.66.
+     * @public
+     * @readonly
+     */
+    public readonly condition: FEC[];
+    /**
+     * @summary `reactions`.
+     * @description
+     * Ordered Field Entry Reactions on other VTE objects. ISO/IEC
+     * 9040:1997 §3.3.67.
+     * @public
+     * @readonly
+     */
+    public readonly reactions: FER[];
+
     constructor (
-        /**
-         * @summary `index`.
-         * @description
-         * FEPR index within the FEPCO. ISO/IEC 9041-1:1997 §12.2.4.
-         * @public
-         * @readonly
-         */
-        readonly index: INTEGER,
-        /**
-         * @summary `event`.
-         * @description
-         * Field Entry Event. ISO/IEC 9040:1997 §3.3.65.
-         * @public
-         * @readonly
-         */
-        readonly event: FEE,
-        /**
-         * @summary `condition`.
-         * @description
-         * Field Entry Conditions that, with the event, predicate a
-         * reaction. ISO/IEC 9040:1997 §3.3.66.
-         * @public
-         * @readonly
-         */
-        readonly condition: FEC[],
-        /**
-         * @summary `reactions`.
-         * @description
-         * Ordered Field Entry Reactions on other VTE objects. ISO/IEC
-         * 9040:1997 §3.3.67.
-         * @public
-         * @readonly
-         */
-        readonly reactions: FER[]
-    ) {}
+        index: INTEGER,
+        event: FEE,
+        condition: FEC[],
+        reactions: FER[]
+    ) {
+        this.index = index;
+        this.event = event;
+        this.condition = condition;
+        this.reactions = reactions;
+    }
 
     /**
      * @summary Restructures an object into a FEPCOupdate_Item

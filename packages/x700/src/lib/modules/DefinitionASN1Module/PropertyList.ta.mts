@@ -74,98 +74,118 @@ import {
  *
  */
 export class PropertyList {
+    /**
+     * @summary `replaceWithDefault`.
+     * @description
+     *
+     * `TRUE` if REPLACE-WITH-DEFAULT is present (default value may be set
+     * by Replace-with-default). Default `FALSE`.
+     * @public
+     * @readonly
+     */
+    public readonly replaceWithDefault?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `defaultValue`.
+     * @description
+     *
+     * DEFAULT VALUE: value used by Replace-with-default or when the package
+     * is instantiated. If REPLACE-WITH-DEFAULT is present and this is
+     * omitted, the default is local to the managed system.
+     * @public
+     * @readonly
+     */
+    public readonly defaultValue?: OPTIONAL<ValueSpecifier>;
+    /**
+     * @summary `initialValue`.
+     * @description
+     *
+     * INITIAL VALUE: mandatory value at Create.
+     * @public
+     * @readonly
+     */
+    public readonly initialValue?: OPTIONAL<ValueSpecifier>;
+    /**
+     * @summary `permittedValues`.
+     * @description
+     *
+     * PERMITTED VALUES: ASN.1 subtype restricting the attribute syntax.
+     * @public
+     * @readonly
+     */
+    public readonly permittedValues?: OPTIONAL<DefinedType>;
+    /**
+     * @summary `requiredValues`.
+     * @description
+     *
+     * REQUIRED VALUES: subtype the implementation shall be capable of
+     * taking (conformance value set).
+     * @public
+     * @readonly
+     */
+    public readonly requiredValues?: OPTIONAL<DefinedType>;
+    /**
+     * @summary `getReplace`.
+     * @description
+     *
+     * GET, REPLACE, or GET-REPLACE. Omitted if none of those properties is
+     * present.
+     * @public
+     * @readonly
+     */
+    public readonly getReplace?: OPTIONAL<PropertyList_getReplace>;
+    /**
+     * @summary `addRemove`.
+     * @description
+     *
+     * ADD, REMOVE, or ADD-REMOVE. Omitted if none of those properties is
+     * present.
+     * @public
+     * @readonly
+     */
+    public readonly addRemove?: OPTIONAL<PropertyList_addRemove>;
+    /**
+     * @summary `setByCreate`.
+     * @description
+     *
+     * `TRUE` if SET-BY-CREATE is present. Redundant if REPLACE or
+     * ADD/REMOVE is already present; even if `FALSE`, Create may still
+     * succeed in setting the value. Default `FALSE`. X.722 Amd.1 item 6.
+     * @public
+     * @readonly
+     */
+    public readonly setByCreate?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `additionalProperties`.
+     * @description
+     *
+     * Further propertylist extensions as `ManagementExtension`s. X.750 does
+     * not enumerate them.
+     * @public
+     * @readonly
+     */
+    public readonly additionalProperties?: OPTIONAL<AdditionalProperties>;
+
     constructor(
-        /**
-         * @summary `replaceWithDefault`.
-         * @description
-         *
-         * `TRUE` if REPLACE-WITH-DEFAULT is present (default value may be set
-         * by Replace-with-default). Default `FALSE`.
-         * @public
-         * @readonly
-         */
-        readonly replaceWithDefault?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `defaultValue`.
-         * @description
-         *
-         * DEFAULT VALUE: value used by Replace-with-default or when the package
-         * is instantiated. If REPLACE-WITH-DEFAULT is present and this is
-         * omitted, the default is local to the managed system.
-         * @public
-         * @readonly
-         */
-        readonly defaultValue?: OPTIONAL<ValueSpecifier>,
-        /**
-         * @summary `initialValue`.
-         * @description
-         *
-         * INITIAL VALUE: mandatory value at Create.
-         * @public
-         * @readonly
-         */
-        readonly initialValue?: OPTIONAL<ValueSpecifier>,
-        /**
-         * @summary `permittedValues`.
-         * @description
-         *
-         * PERMITTED VALUES: ASN.1 subtype restricting the attribute syntax.
-         * @public
-         * @readonly
-         */
-        readonly permittedValues?: OPTIONAL<DefinedType>,
-        /**
-         * @summary `requiredValues`.
-         * @description
-         *
-         * REQUIRED VALUES: subtype the implementation shall be capable of
-         * taking (conformance value set).
-         * @public
-         * @readonly
-         */
-        readonly requiredValues?: OPTIONAL<DefinedType>,
-        /**
-         * @summary `getReplace`.
-         * @description
-         *
-         * GET, REPLACE, or GET-REPLACE. Omitted if none of those properties is
-         * present.
-         * @public
-         * @readonly
-         */
-        readonly getReplace?: OPTIONAL<PropertyList_getReplace>,
-        /**
-         * @summary `addRemove`.
-         * @description
-         *
-         * ADD, REMOVE, or ADD-REMOVE. Omitted if none of those properties is
-         * present.
-         * @public
-         * @readonly
-         */
-        readonly addRemove?: OPTIONAL<PropertyList_addRemove>,
-        /**
-         * @summary `setByCreate`.
-         * @description
-         *
-         * `TRUE` if SET-BY-CREATE is present. Redundant if REPLACE or
-         * ADD/REMOVE is already present; even if `FALSE`, Create may still
-         * succeed in setting the value. Default `FALSE`. X.722 Amd.1 item 6.
-         * @public
-         * @readonly
-         */
-        readonly setByCreate?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `additionalProperties`.
-         * @description
-         *
-         * Further propertylist extensions as `ManagementExtension`s. X.750 does
-         * not enumerate them.
-         * @public
-         * @readonly
-         */
-        readonly additionalProperties?: OPTIONAL<AdditionalProperties>
-    ) {}
+        replaceWithDefault?: OPTIONAL<BOOLEAN>,
+        defaultValue?: OPTIONAL<ValueSpecifier>,
+        initialValue?: OPTIONAL<ValueSpecifier>,
+        permittedValues?: OPTIONAL<DefinedType>,
+        requiredValues?: OPTIONAL<DefinedType>,
+        getReplace?: OPTIONAL<PropertyList_getReplace>,
+        addRemove?: OPTIONAL<PropertyList_addRemove>,
+        setByCreate?: OPTIONAL<BOOLEAN>,
+        additionalProperties?: OPTIONAL<AdditionalProperties>
+    ) {
+        this.replaceWithDefault = replaceWithDefault;
+        this.defaultValue = defaultValue;
+        this.initialValue = initialValue;
+        this.permittedValues = permittedValues;
+        this.requiredValues = requiredValues;
+        this.getReplace = getReplace;
+        this.addRemove = addRemove;
+        this.setByCreate = setByCreate;
+        this.additionalProperties = additionalProperties;
+    }
 
     /**
      * @summary Restructures an object into a PropertyList

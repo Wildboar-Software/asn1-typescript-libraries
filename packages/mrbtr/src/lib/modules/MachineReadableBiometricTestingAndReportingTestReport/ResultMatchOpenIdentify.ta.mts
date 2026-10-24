@@ -42,62 +42,74 @@ import { StatisticInformationSet, _decode_StatisticInformationSet, _encode_Stati
  */
 export
 class ResultMatchOpenIdentify {
+    /**
+     * @summary `cmcCurveOpen`.
+     * @description
+     *
+     * Open-set CMC curve (Clause 6.4.4.3.4).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly cmcCurveOpen: DistributionIntegerReal;
+    /**
+     * @summary `srchExecDistrEnroled`.
+     * @description
+     *
+     * Histogram of searches that had an enrolled mate
+     * (Clause 6.4.4.3.4).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly srchExecDistrEnroled: ExpressionHistogram;
+    /**
+     * @summary `srchExecDistrNoEnroled`.
+     * @description
+     *
+     * Histogram of searches with no enrolled mate
+     * (Clause 6.4.4.3.4).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly srchExecDistrNoEnroled: ExpressionHistogram;
+    /**
+     * @summary `infoDETCurveFNIRFPIR`.
+     * @description
+     *
+     * DET of FNIR vs FPIR. Pair of error types shall be
+     * `fnir-fpir` (Clause 6.4.4.3.4).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly infoDETCurveFNIRFPIR?: OPTIONAL<InfoDETCurve>;
+    /**
+     * @summary `durationOpenIdentify`.
+     * @description
+     *
+     * Open-set search duration; covers successful and failed
+     * searches (Clause 6.4.4.3.4).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly durationOpenIdentify?: OPTIONAL<StatisticInformationSet>;
+
     constructor (
-        /**
-         * @summary `cmcCurveOpen`.
-         * @description
-         *
-         * Open-set CMC curve (Clause 6.4.4.3.4).
-         *
-         * @public
-         * @readonly
-         */
-        readonly cmcCurveOpen: DistributionIntegerReal,
-        /**
-         * @summary `srchExecDistrEnroled`.
-         * @description
-         *
-         * Histogram of searches that had an enrolled mate
-         * (Clause 6.4.4.3.4).
-         *
-         * @public
-         * @readonly
-         */
-        readonly srchExecDistrEnroled: ExpressionHistogram,
-        /**
-         * @summary `srchExecDistrNoEnroled`.
-         * @description
-         *
-         * Histogram of searches with no enrolled mate
-         * (Clause 6.4.4.3.4).
-         *
-         * @public
-         * @readonly
-         */
-        readonly srchExecDistrNoEnroled: ExpressionHistogram,
-        /**
-         * @summary `infoDETCurveFNIRFPIR`.
-         * @description
-         *
-         * DET of FNIR vs FPIR. Pair of error types shall be
-         * `fnir-fpir` (Clause 6.4.4.3.4).
-         *
-         * @public
-         * @readonly
-         */
-        readonly infoDETCurveFNIRFPIR?: OPTIONAL<InfoDETCurve>,
-        /**
-         * @summary `durationOpenIdentify`.
-         * @description
-         *
-         * Open-set search duration; covers successful and failed
-         * searches (Clause 6.4.4.3.4).
-         *
-         * @public
-         * @readonly
-         */
-        readonly durationOpenIdentify?: OPTIONAL<StatisticInformationSet>
-    ) {}
+        cmcCurveOpen: DistributionIntegerReal,
+        srchExecDistrEnroled: ExpressionHistogram,
+        srchExecDistrNoEnroled: ExpressionHistogram,
+        infoDETCurveFNIRFPIR?: OPTIONAL<InfoDETCurve>,
+        durationOpenIdentify?: OPTIONAL<StatisticInformationSet>
+    ) {
+        this.cmcCurveOpen = cmcCurveOpen;
+        this.srchExecDistrEnroled = srchExecDistrEnroled;
+        this.srchExecDistrNoEnroled = srchExecDistrNoEnroled;
+        this.infoDETCurveFNIRFPIR = infoDETCurveFNIRFPIR;
+        this.durationOpenIdentify = durationOpenIdentify;
+    }
 
     /**
      * @summary Restructures an object into a ResultMatchOpenIdentify

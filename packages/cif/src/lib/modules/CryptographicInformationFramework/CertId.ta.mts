@@ -34,24 +34,30 @@ import { CertificateSerialNumber, _decode_CertificateSerialNumber, _encode_Certi
  */
 export
 class CertId {
+    /**
+     * @summary `issuer`.
+     * @description
+     * Certificate issuer. ISO/IEC 7816-15:2016 Annex A.
+     * @public
+     * @readonly
+     */
+    public readonly issuer: GeneralName;
+    /**
+     * @summary `serialNumber`.
+     * @description
+     * Certificate serial number. ISO/IEC 7816-15:2016 Annex A.
+     * @public
+     * @readonly
+     */
+    public readonly serialNumber: CertificateSerialNumber;
+
     constructor (
-        /**
-         * @summary `issuer`.
-         * @description
-         * Certificate issuer. ISO/IEC 7816-15:2016 Annex A.
-         * @public
-         * @readonly
-         */
-        readonly issuer: GeneralName,
-        /**
-         * @summary `serialNumber`.
-         * @description
-         * Certificate serial number. ISO/IEC 7816-15:2016 Annex A.
-         * @public
-         * @readonly
-         */
-        readonly serialNumber: CertificateSerialNumber
-    ) {}
+        issuer: GeneralName,
+        serialNumber: CertificateSerialNumber
+    ) {
+        this.issuer = issuer;
+        this.serialNumber = serialNumber;
+    }
 
     /**
      * @summary Restructures an object into a CertId

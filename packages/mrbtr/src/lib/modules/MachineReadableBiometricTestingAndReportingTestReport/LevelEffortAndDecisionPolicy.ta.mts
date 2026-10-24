@@ -33,28 +33,34 @@ import { LevelAndPolicy, _decode_LevelAndPolicy, _encode_LevelAndPolicy } from "
  */
 export
 class LevelEffortAndDecisionPolicy {
+    /**
+     * @summary `levelAndPolicyEnrol`.
+     * @description
+     *
+     * Enrolment transaction policy (Clause 6.5.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly levelAndPolicyEnrol: LevelAndPolicy;
+    /**
+     * @summary `levelAndPolicyCmp`.
+     * @description
+     *
+     * Comparison (recognition) transaction policy (Clause 6.5.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly levelAndPolicyCmp: LevelAndPolicy;
+
     constructor (
-        /**
-         * @summary `levelAndPolicyEnrol`.
-         * @description
-         *
-         * Enrolment transaction policy (Clause 6.5.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly levelAndPolicyEnrol: LevelAndPolicy,
-        /**
-         * @summary `levelAndPolicyCmp`.
-         * @description
-         *
-         * Comparison (recognition) transaction policy (Clause 6.5.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly levelAndPolicyCmp: LevelAndPolicy
-    ) {}
+        levelAndPolicyEnrol: LevelAndPolicy,
+        levelAndPolicyCmp: LevelAndPolicy
+    ) {
+        this.levelAndPolicyEnrol = levelAndPolicyEnrol;
+        this.levelAndPolicyCmp = levelAndPolicyCmp;
+    }
 
     /**
      * @summary Restructures an object into a LevelEffortAndDecisionPolicy

@@ -36,29 +36,35 @@ import * as $ from '@wildboar/asn1/functional';
  *
  */
 export class AuditInfo {
+    /**
+     * @summary `service`.
+     * @description
+     *
+     * OID identifying the audit-details syntax (`UMF-AUDIT.&id`).
+     * ITU-T Rec. X.742 (1995)/Cor.2 (02/2000) §4.
+     * @public
+     * @readonly
+     */
+    public readonly service: OBJECT_IDENTIFIER;
+    /**
+     * @summary `auditDetails`.
+     * @description
+     *
+     * Audit payload for `service` (source file/record
+     * identifiers or equivalent). ITU-T Rec. X.742 (04/95)
+     * §8.2.4.2; Cor.2 (02/2000) §4.
+     * @public
+     * @readonly
+     */
+    public readonly auditDetails: _Element;
+
     constructor(
-        /**
-         * @summary `service`.
-         * @description
-         *
-         * OID identifying the audit-details syntax (`UMF-AUDIT.&id`).
-         * ITU-T Rec. X.742 (1995)/Cor.2 (02/2000) §4.
-         * @public
-         * @readonly
-         */
-        readonly service: OBJECT_IDENTIFIER,
-        /**
-         * @summary `auditDetails`.
-         * @description
-         *
-         * Audit payload for `service` (source file/record
-         * identifiers or equivalent). ITU-T Rec. X.742 (04/95)
-         * §8.2.4.2; Cor.2 (02/2000) §4.
-         * @public
-         * @readonly
-         */
-        readonly auditDetails: _Element
-    ) {}
+        service: OBJECT_IDENTIFIER,
+        auditDetails: _Element
+    ) {
+        this.service = service;
+        this.auditDetails = auditDetails;
+    }
 
     /**
      * @summary Restructures an object into a AuditInfo

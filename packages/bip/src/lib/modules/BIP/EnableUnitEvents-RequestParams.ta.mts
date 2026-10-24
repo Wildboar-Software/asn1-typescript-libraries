@@ -42,30 +42,36 @@ import {
  *
  */
 export class EnableUnitEvents_RequestParams {
+  /**
+   * @summary `originalBSPHandle`.
+   * @description
+   *
+   * Attach-session handle at the hosting endpoint, not the
+   * application's local handle. X.1083 Table 51, clause 26.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly originalBSPHandle: BioAPI_HANDLE;
+  /**
+   * @summary `unitEvents`.
+   * @description
+   *
+   * Unit-event type mask from Events (insert, remove, fault,
+   * sourcePresent, sourceRemoved). X.1083 Table 51, §15.31.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly unitEvents: BioAPI_UNIT_EVENT_TYPE_MASK;
+
   constructor(
-    /**
-     * @summary `originalBSPHandle`.
-     * @description
-     *
-     * Attach-session handle at the hosting endpoint, not the
-     * application's local handle. X.1083 Table 51, clause 26.
-     *
-     * @public
-     * @readonly
-     */
-    readonly originalBSPHandle: BioAPI_HANDLE,
-    /**
-     * @summary `unitEvents`.
-     * @description
-     *
-     * Unit-event type mask from Events (insert, remove, fault,
-     * sourcePresent, sourceRemoved). X.1083 Table 51, §15.31.
-     *
-     * @public
-     * @readonly
-     */
-    readonly unitEvents: BioAPI_UNIT_EVENT_TYPE_MASK
-  ) {}
+    originalBSPHandle: BioAPI_HANDLE,
+    unitEvents: BioAPI_UNIT_EVENT_TYPE_MASK
+  ) {
+    this.originalBSPHandle = originalBSPHandle;
+    this.unitEvents = unitEvents;
+  }
 
   /**
    * @summary Restructures an object into a EnableUnitEvents_RequestParams

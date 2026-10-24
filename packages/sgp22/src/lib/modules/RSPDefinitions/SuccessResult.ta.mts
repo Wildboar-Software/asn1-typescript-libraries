@@ -32,30 +32,35 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class SuccessResult {
+    /**
+     * @summary `aid`.
+     * @description
+     * 
+     * AID of the ISD-P that now contains the Profile. Five to sixteen
+     * octets. SGP.22 v3.1 §2.5.6.
+     * 
+     * @public
+     * @readonly
+     */
+    public readonly aid: OCTET_STRING;
+    /**
+     * @summary `simaResponse`.
+     * @description
+     * 
+     * One or more `EUICCResponse` values from the Profile Package
+     * Interpreter. SGP.22 v3.1 calls this `ppiResponse`.
+     * 
+     * @public
+     * @readonly
+     */
+    public readonly simaResponse: OCTET_STRING;
+
     constructor (
-        /**
-         * @summary `aid`.
-         * @description
-         * 
-         * AID of the ISD-P that now contains the Profile. Five to sixteen
-         * octets. SGP.22 v3.1 §2.5.6.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly aid: OCTET_STRING,
-        /**
-         * @summary `simaResponse`.
-         * @description
-         * 
-         * One or more `EUICCResponse` values from the Profile Package
-         * Interpreter. SGP.22 v3.1 calls this `ppiResponse`.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly simaResponse: OCTET_STRING
+        aid: OCTET_STRING,
+        simaResponse: OCTET_STRING
     ) {
+        this.aid = aid;
+        this.simaResponse = simaResponse;
         if (this.aid.length < 5 || this.aid.length > 16) {
             throw new ASN1SizeError("SuccessResult.aid violates SIZE constraint");
         }

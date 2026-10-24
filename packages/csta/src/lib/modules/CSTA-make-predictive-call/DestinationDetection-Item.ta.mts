@@ -47,30 +47,36 @@ import {
  */
 export
 class DestinationDetection_Item {
+    /**
+     * @summary `destinationCondition`.
+     * @description
+     *
+     * Mandatory. `humanVoice`, `answeringMachine`, or
+     * `facsimileMachine`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly destinationCondition: DestinationCondition;
+    /**
+     * @summary `detectionAction`.
+     * @description
+     *
+     * Mandatory. `clearCalledConnection` or
+     * `remainConnected` when the condition is detected.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly detectionAction: DetectionAction;
+
     constructor (
-        /**
-         * @summary `destinationCondition`.
-         * @description
-         *
-         * Mandatory. `humanVoice`, `answeringMachine`, or
-         * `facsimileMachine`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly destinationCondition: DestinationCondition,
-        /**
-         * @summary `detectionAction`.
-         * @description
-         *
-         * Mandatory. `clearCalledConnection` or
-         * `remainConnected` when the condition is detected.
-         *
-         * @public
-         * @readonly
-         */
-        readonly detectionAction: DetectionAction
-    ) {}
+        destinationCondition: DestinationCondition,
+        detectionAction: DetectionAction
+    ) {
+        this.destinationCondition = destinationCondition;
+        this.detectionAction = detectionAction;
+    }
 
     /**
      * @summary Restructures an object into a DestinationDetection_Item

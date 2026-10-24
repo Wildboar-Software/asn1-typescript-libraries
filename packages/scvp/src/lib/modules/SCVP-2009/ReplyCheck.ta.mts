@@ -34,30 +34,36 @@ import * as $ from '@wildboar/asn1/functional';
  *
  */
 export class ReplyCheck {
+  /**
+   * @summary `check`.
+   * @description
+   *
+   * OID of the check (matches a `checks` OID from the query)
+   * ([RFC 5055 §4.9.4](https://datatracker.ietf.org/doc/html/rfc5055#section-4.9.4)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly check: OBJECT_IDENTIFIER;
+  /**
+   * @summary `status`.
+   * @description
+   *
+   * Integer check outcome (0 success; >0 error; <0 unknown)
+   * ([RFC 5055 §4.9.4](https://datatracker.ietf.org/doc/html/rfc5055#section-4.9.4)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly status?: OPTIONAL<INTEGER>;
+
   constructor(
-    /**
-     * @summary `check`.
-     * @description
-     *
-     * OID of the check (matches a `checks` OID from the query)
-     * ([RFC 5055 §4.9.4](https://datatracker.ietf.org/doc/html/rfc5055#section-4.9.4)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly check: OBJECT_IDENTIFIER,
-    /**
-     * @summary `status`.
-     * @description
-     *
-     * Integer check outcome (0 success; >0 error; <0 unknown)
-     * ([RFC 5055 §4.9.4](https://datatracker.ietf.org/doc/html/rfc5055#section-4.9.4)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly status?: OPTIONAL<INTEGER>
-  ) {}
+    check: OBJECT_IDENTIFIER,
+    status?: OPTIONAL<INTEGER>
+  ) {
+    this.check = check;
+    this.status = status;
+  }
 
   /**
    * @summary Restructures an object into a ReplyCheck

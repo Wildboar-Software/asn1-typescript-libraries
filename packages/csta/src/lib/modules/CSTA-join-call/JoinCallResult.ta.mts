@@ -43,52 +43,62 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class JoinCallResult {
+    /**
+     * @summary `conferencedCall`.
+     * @description
+     *
+     * Mandatory. Joining device's connection in the resulting
+     * conference.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly conferencedCall: ConnectionID;
+    /**
+     * @summary `conferencedCallInfo`.
+     * @description
+     *
+     * Optional connection information for `conferencedCall`
+     * (§12.2.8).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly conferencedCallInfo?: OPTIONAL<ConnectionInformation>;
+    /**
+     * @summary `callLinkageDataList`.
+     * @description
+     *
+     * Optional call-linkage data pairing old and new call
+     * identities (§12.2.5, §12.3.9 FR 8).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly callLinkageDataList?: OPTIONAL<CallLinkageDataList>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional `CSTACommonArguments` carrying the security and
+     * privateData parameters from the ECMA-269 service table.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `conferencedCall`.
-         * @description
-         *
-         * Mandatory. Joining device's connection in the resulting
-         * conference.
-         *
-         * @public
-         * @readonly
-         */
-        readonly conferencedCall: ConnectionID,
-        /**
-         * @summary `conferencedCallInfo`.
-         * @description
-         *
-         * Optional connection information for `conferencedCall`
-         * (§12.2.8).
-         *
-         * @public
-         * @readonly
-         */
-        readonly conferencedCallInfo?: OPTIONAL<ConnectionInformation>,
-        /**
-         * @summary `callLinkageDataList`.
-         * @description
-         *
-         * Optional call-linkage data pairing old and new call
-         * identities (§12.2.5, §12.3.9 FR 8).
-         *
-         * @public
-         * @readonly
-         */
-        readonly callLinkageDataList?: OPTIONAL<CallLinkageDataList>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional `CSTACommonArguments` carrying the security and
-         * privateData parameters from the ECMA-269 service table.
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        conferencedCall: ConnectionID,
+        conferencedCallInfo?: OPTIONAL<ConnectionInformation>,
+        callLinkageDataList?: OPTIONAL<CallLinkageDataList>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.conferencedCall = conferencedCall;
+        this.conferencedCallInfo = conferencedCallInfo;
+        this.callLinkageDataList = callLinkageDataList;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a JoinCallResult

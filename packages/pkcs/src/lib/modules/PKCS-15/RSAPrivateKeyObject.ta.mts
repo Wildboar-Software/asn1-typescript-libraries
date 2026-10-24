@@ -30,56 +30,74 @@ import * as $ from "@wildboar/asn1/functional";
  *
  */
 export class RSAPrivateKeyObject {
+    /**
+     * @summary `modulus`.
+     * @public
+     * @readonly
+     */
+    public readonly modulus?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `publicExponent`.
+     * @public
+     * @readonly
+     */
+    public readonly publicExponent?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `privateExponent`.
+     * @public
+     * @readonly
+     */
+    public readonly privateExponent?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `prime1`.
+     * @public
+     * @readonly
+     */
+    public readonly prime1?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `prime2`.
+     * @public
+     * @readonly
+     */
+    public readonly prime2?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `exponent1`.
+     * @public
+     * @readonly
+     */
+    public readonly exponent1?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `exponent2`.
+     * @public
+     * @readonly
+     */
+    public readonly exponent2?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `coefficient`.
+     * @public
+     * @readonly
+     */
+    public readonly coefficient?: OPTIONAL<INTEGER>;
+
     constructor(
-        /**
-         * @summary `modulus`.
-         * @public
-         * @readonly
-         */
-        readonly modulus?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `publicExponent`.
-         * @public
-         * @readonly
-         */
-        readonly publicExponent?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `privateExponent`.
-         * @public
-         * @readonly
-         */
-        readonly privateExponent?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `prime1`.
-         * @public
-         * @readonly
-         */
-        readonly prime1?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `prime2`.
-         * @public
-         * @readonly
-         */
-        readonly prime2?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `exponent1`.
-         * @public
-         * @readonly
-         */
-        readonly exponent1?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `exponent2`.
-         * @public
-         * @readonly
-         */
-        readonly exponent2?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `coefficient`.
-         * @public
-         * @readonly
-         */
-        readonly coefficient?: OPTIONAL<INTEGER>
-    ) {}
+        modulus?: OPTIONAL<INTEGER>,
+        publicExponent?: OPTIONAL<INTEGER>,
+        privateExponent?: OPTIONAL<INTEGER>,
+        prime1?: OPTIONAL<INTEGER>,
+        prime2?: OPTIONAL<INTEGER>,
+        exponent1?: OPTIONAL<INTEGER>,
+        exponent2?: OPTIONAL<INTEGER>,
+        coefficient?: OPTIONAL<INTEGER>
+    ) {
+        this.modulus = modulus;
+        this.publicExponent = publicExponent;
+        this.privateExponent = privateExponent;
+        this.prime1 = prime1;
+        this.prime2 = prime2;
+        this.exponent1 = exponent1;
+        this.exponent2 = exponent2;
+        this.coefficient = coefficient;
+    }
 
     /**
      * @summary Restructures an object into a RSAPrivateKeyObject

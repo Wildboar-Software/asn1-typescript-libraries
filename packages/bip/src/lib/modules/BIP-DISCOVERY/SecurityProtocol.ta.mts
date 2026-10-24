@@ -34,30 +34,36 @@ import * as $ from '@wildboar/asn1/functional';
  *
  */
 export class SecurityProtocol {
+  /**
+   * @summary `id`.
+   * @description
+   *
+   * Object identifier of the security protocol
+   * (`SECURITY-PROTOCOL.&id`). X.1083 Annex B.12.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly id: OBJECT_IDENTIFIER;
+  /**
+   * @summary `parameter`.
+   * @description
+   *
+   * Parameter of that protocol
+   * (`SECURITY-PROTOCOL.&Parameter`). X.1083 Annex B.12.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly parameter: _Element;
+
   constructor(
-    /**
-     * @summary `id`.
-     * @description
-     *
-     * Object identifier of the security protocol
-     * (`SECURITY-PROTOCOL.&id`). X.1083 Annex B.12.
-     *
-     * @public
-     * @readonly
-     */
-    readonly id: OBJECT_IDENTIFIER,
-    /**
-     * @summary `parameter`.
-     * @description
-     *
-     * Parameter of that protocol
-     * (`SECURITY-PROTOCOL.&Parameter`). X.1083 Annex B.12.
-     *
-     * @public
-     * @readonly
-     */
-    readonly parameter: _Element
-  ) {}
+    id: OBJECT_IDENTIFIER,
+    parameter: _Element
+  ) {
+    this.id = id;
+    this.parameter = parameter;
+  }
 
   /**
    * @summary Restructures an object into a SecurityProtocol

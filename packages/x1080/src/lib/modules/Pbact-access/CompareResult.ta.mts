@@ -43,38 +43,46 @@ import {
  *
  */
 export class CompareResult {
+    /**
+     * @summary `object`.
+     * @description
+     *
+     * Distinguished name of the object that was compared.
+     * ITU-T Rec. X.1080.0 (2017) Cor.1
+     * [§8.5](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly object: DistinguishedName;
+    /**
+     * @summary `result`.
+     * @description
+     *
+     * Success (`CompareOK`) or failure (`AccessdErr`).
+     * ITU-T Rec. X.1080.0 (2017) Cor.1
+     * [§8.5](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly result: CompareResult_result;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `object`.
-         * @description
-         *
-         * Distinguished name of the object that was compared.
-         * ITU-T Rec. X.1080.0 (2017) Cor.1
-         * [§8.5](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly object: DistinguishedName,
-        /**
-         * @summary `result`.
-         * @description
-         *
-         * Success (`CompareOK`) or failure (`AccessdErr`).
-         * ITU-T Rec. X.1080.0 (2017) Cor.1
-         * [§8.5](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly result: CompareResult_result,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        object: DistinguishedName,
+        result: CompareResult_result,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.object = object;
+        this.result = result;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a CompareResult

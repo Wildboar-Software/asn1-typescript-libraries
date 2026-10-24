@@ -45,26 +45,34 @@ import {
  *
  */
 export class FNUAMSReasonCodeField {
+    /**
+     * @summary `fn_ua_ms_basic_code`.
+     * @public
+     * @readonly
+     */
+    public readonly fn_ua_ms_basic_code: FNUAMSBasicCodeField;
+    /**
+     * @summary `fn_ua_ms_diagnostic`.
+     * @public
+     * @readonly
+     */
+    public readonly fn_ua_ms_diagnostic?: OPTIONAL<FNUAMSDiagnosticField>;
+    /**
+     * @summary `fn_security_check`.
+     * @public
+     * @readonly
+     */
+    public readonly fn_security_check?: OPTIONAL<FNUAMSSecurityCheckField>;
+
     constructor(
-        /**
-         * @summary `fn_ua_ms_basic_code`.
-         * @public
-         * @readonly
-         */
-        readonly fn_ua_ms_basic_code: FNUAMSBasicCodeField,
-        /**
-         * @summary `fn_ua_ms_diagnostic`.
-         * @public
-         * @readonly
-         */
-        readonly fn_ua_ms_diagnostic?: OPTIONAL<FNUAMSDiagnosticField>,
-        /**
-         * @summary `fn_security_check`.
-         * @public
-         * @readonly
-         */
-        readonly fn_security_check?: OPTIONAL<FNUAMSSecurityCheckField>
-    ) {}
+        fn_ua_ms_basic_code: FNUAMSBasicCodeField,
+        fn_ua_ms_diagnostic?: OPTIONAL<FNUAMSDiagnosticField>,
+        fn_security_check?: OPTIONAL<FNUAMSSecurityCheckField>
+    ) {
+        this.fn_ua_ms_basic_code = fn_ua_ms_basic_code;
+        this.fn_ua_ms_diagnostic = fn_ua_ms_diagnostic;
+        this.fn_security_check = fn_security_check;
+    }
 
     /**
      * @summary Restructures an object into a FNUAMSReasonCodeField

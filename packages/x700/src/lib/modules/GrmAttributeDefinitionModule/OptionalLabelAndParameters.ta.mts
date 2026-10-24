@@ -40,28 +40,34 @@ import {
  *
  */
 export class OptionalLabelAndParameters {
+    /**
+     * @summary `label`.
+     * @description
+     *
+     * Class of the created managed object, if specified. ITU-T
+     * Rec. X.725 (11/95) A.2.3.5.
+     * @public
+     * @readonly
+     */
+    public readonly label?: OPTIONAL<TemplateLabel>;
+    /**
+     * @summary `parameters`.
+     * @description
+     *
+     * Parameter labels associated with the CREATE. ITU-T Rec.
+     * X.725 (11/95) A.2.3.5.
+     * @public
+     * @readonly
+     */
+    public readonly parameters?: OPTIONAL<TemplateList>;
+
     constructor(
-        /**
-         * @summary `label`.
-         * @description
-         *
-         * Class of the created managed object, if specified. ITU-T
-         * Rec. X.725 (11/95) A.2.3.5.
-         * @public
-         * @readonly
-         */
-        readonly label?: OPTIONAL<TemplateLabel>,
-        /**
-         * @summary `parameters`.
-         * @description
-         *
-         * Parameter labels associated with the CREATE. ITU-T Rec.
-         * X.725 (11/95) A.2.3.5.
-         * @public
-         * @readonly
-         */
-        readonly parameters?: OPTIONAL<TemplateList>
-    ) {}
+        label?: OPTIONAL<TemplateLabel>,
+        parameters?: OPTIONAL<TemplateList>
+    ) {
+        this.label = label;
+        this.parameters = parameters;
+    }
 
     /**
      * @summary Restructures an object into a OptionalLabelAndParameters

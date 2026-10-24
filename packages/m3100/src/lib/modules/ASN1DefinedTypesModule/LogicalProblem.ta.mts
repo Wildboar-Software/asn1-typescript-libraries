@@ -37,20 +37,26 @@ import {
  *
  */
 export class LogicalProblem {
+    /**
+     * @summary `problemCause`.
+     * @public
+     * @readonly
+     */
+    public readonly problemCause: ProblemCause;
+    /**
+     * @summary `incorrectInstances`.
+     * @public
+     * @readonly
+     */
+    public readonly incorrectInstances?: OPTIONAL<ObjectInstance[]>;
+
     constructor(
-        /**
-         * @summary `problemCause`.
-         * @public
-         * @readonly
-         */
-        readonly problemCause: ProblemCause,
-        /**
-         * @summary `incorrectInstances`.
-         * @public
-         * @readonly
-         */
-        readonly incorrectInstances?: OPTIONAL<ObjectInstance[]>
-    ) {}
+        problemCause: ProblemCause,
+        incorrectInstances?: OPTIONAL<ObjectInstance[]>
+    ) {
+        this.problemCause = problemCause;
+        this.incorrectInstances = incorrectInstances;
+    }
 
     /**
      * @summary Restructures an object into a LogicalProblem

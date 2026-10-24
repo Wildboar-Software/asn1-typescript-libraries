@@ -33,55 +33,67 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
  */
 export
 class ExtensibleCallBarredParam {
+    /**
+     * @summary `callBarringCause`.
+     * @description
+     *
+     * Subscriber barring service active, or operator barring (3GPP TS
+     * 29.002 V19.1.0 clause 7.6.1.4).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly callBarringCause?: OPTIONAL<CallBarringCause>;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary `unauthorisedMessageOriginator`.
+     * @description
+     *
+     * Barring of Mobile Terminating Short Message due to "Unauthorised
+     * Message Originator". Mutually exclusive with `anonymousCallRejection`
+     * (3GPP TS 29.002 V19.1.0 clauses 7.6.1.4 and 17.7.7).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly unauthorisedMessageOriginator?: OPTIONAL<NULL>;
+    /**
+     * @summary `anonymousCallRejection`.
+     * @description
+     *
+     * Call rejected due to the ACR supplementary service. Mutually
+     * exclusive with `unauthorisedMessageOriginator` (3GPP TS 29.002
+     * V19.1.0 clauses 7.6.1.4 and 17.7.7).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly anonymousCallRejection?: OPTIONAL<NULL>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `callBarringCause`.
-         * @description
-         *
-         * Subscriber barring service active, or operator barring (3GPP TS
-         * 29.002 V19.1.0 clause 7.6.1.4).
-         *
-         * @public
-         * @readonly
-         */
-        readonly callBarringCause?: OPTIONAL<CallBarringCause>,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary `unauthorisedMessageOriginator`.
-         * @description
-         *
-         * Barring of Mobile Terminating Short Message due to "Unauthorised
-         * Message Originator". Mutually exclusive with `anonymousCallRejection`
-         * (3GPP TS 29.002 V19.1.0 clauses 7.6.1.4 and 17.7.7).
-         *
-         * @public
-         * @readonly
-         */
-        readonly unauthorisedMessageOriginator?: OPTIONAL<NULL>,
-        /**
-         * @summary `anonymousCallRejection`.
-         * @description
-         *
-         * Call rejected due to the ACR supplementary service. Mutually
-         * exclusive with `unauthorisedMessageOriginator` (3GPP TS 29.002
-         * V19.1.0 clauses 7.6.1.4 and 17.7.7).
-         *
-         * @public
-         * @readonly
-         */
-        readonly anonymousCallRejection?: OPTIONAL<NULL>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        callBarringCause?: OPTIONAL<CallBarringCause>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        unauthorisedMessageOriginator?: OPTIONAL<NULL>,
+        anonymousCallRejection?: OPTIONAL<NULL>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.callBarringCause = callBarringCause;
+        this.extensionContainer = extensionContainer;
+        this.unauthorisedMessageOriginator = unauthorisedMessageOriginator;
+        this.anonymousCallRejection = anonymousCallRejection;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a ExtensibleCallBarredParam

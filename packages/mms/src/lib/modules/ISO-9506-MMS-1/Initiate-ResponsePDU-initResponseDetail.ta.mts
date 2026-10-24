@@ -45,77 +45,93 @@ import { AdditionalCBBOptions, _decode_AdditionalCBBOptions, _encode_AdditionalC
  */
 export
 class Initiate_ResponsePDU_initResponseDetail {
+    /**
+     * @summary `negotiatedVersionNumber`.
+     * @description
+     *
+     * Minor version used on this association. ≤ proposed; not less than 1
+     * (ISO 9506-1:2003 §8.2.1.2.5).
+     * @public
+     * @readonly
+     */
+    public readonly negotiatedVersionNumber: Integer16;
+    /**
+     * @summary `negotiatedParameterCBB`.
+     * @description
+     *
+     * Negotiated parameter CBBs: intersection of proposed and called-user
+     * support. Bit 1 = support. Encode all bits; ignore extras
+     * (ISO 9506-1:2003 §8.2.1.2.6).
+     * @public
+     * @readonly
+     */
+    public readonly negotiatedParameterCBB: ParameterSupportOptions;
+    /**
+     * @summary `servicesSupportedCalled`.
+     * @description
+     *
+     * Services (and modifiers) the called user supports. Confirmation is
+     * the intersection with the called provider. Unsupported receipt shall
+     * be Rejected UNRECOGNIZED-SERVICE (ISO 9506-1:2003 §8.2.1.2.8).
+     * @public
+     * @readonly
+     */
+    public readonly servicesSupportedCalled: ServiceSupportOptions;
+    /**
+     * @summary `additionalSupportedCalled`.
+     * @description
+     *
+     * Extended services supported by the called user (ISO 9506-1:2003
+     * §8.2.1.2.9).
+     * @public
+     * @readonly
+     */
+    public readonly additionalSupportedCalled: AdditionalSupportOptions;
+    /**
+     * @summary `additionalCbbSupportedCalled`.
+     * @description
+     *
+     * Additional parameter CBBs. Present only if `cspi` was negotiated
+     * (ISO 9506-1:2003 §8.2.1.2.7).
+     * @public
+     * @readonly
+     */
+    public readonly additionalCbbSupportedCalled: AdditionalCBBOptions;
+    /**
+     * @summary `privilegeClassIdentityCalled`.
+     * @description
+     *
+     * Present in the abstract syntax when `cspi` is negotiated
+     * (ISO 9506-2:2003 §8.2). ISO 9506-1:2003 does not specify the semantics of
+     * this field.
+     * @public
+     * @readonly
+     */
+    public readonly privilegeClassIdentityCalled: VisibleString;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `negotiatedVersionNumber`.
-         * @description
-         *
-         * Minor version used on this association. ≤ proposed; not less than 1
-         * (ISO 9506-1:2003 §8.2.1.2.5).
-         * @public
-         * @readonly
-         */
-        readonly negotiatedVersionNumber: Integer16,
-        /**
-         * @summary `negotiatedParameterCBB`.
-         * @description
-         *
-         * Negotiated parameter CBBs: intersection of proposed and called-user
-         * support. Bit 1 = support. Encode all bits; ignore extras
-         * (ISO 9506-1:2003 §8.2.1.2.6).
-         * @public
-         * @readonly
-         */
-        readonly negotiatedParameterCBB: ParameterSupportOptions,
-        /**
-         * @summary `servicesSupportedCalled`.
-         * @description
-         *
-         * Services (and modifiers) the called user supports. Confirmation is
-         * the intersection with the called provider. Unsupported receipt shall
-         * be Rejected UNRECOGNIZED-SERVICE (ISO 9506-1:2003 §8.2.1.2.8).
-         * @public
-         * @readonly
-         */
-        readonly servicesSupportedCalled: ServiceSupportOptions,
-        /**
-         * @summary `additionalSupportedCalled`.
-         * @description
-         *
-         * Extended services supported by the called user (ISO 9506-1:2003
-         * §8.2.1.2.9).
-         * @public
-         * @readonly
-         */
-        readonly additionalSupportedCalled: AdditionalSupportOptions,
-        /**
-         * @summary `additionalCbbSupportedCalled`.
-         * @description
-         *
-         * Additional parameter CBBs. Present only if `cspi` was negotiated
-         * (ISO 9506-1:2003 §8.2.1.2.7).
-         * @public
-         * @readonly
-         */
-        readonly additionalCbbSupportedCalled: AdditionalCBBOptions,
-        /**
-         * @summary `privilegeClassIdentityCalled`.
-         * @description
-         *
-         * Present in the abstract syntax when `cspi` is negotiated
-         * (ISO 9506-2:2003 §8.2). ISO 9506-1:2003 does not specify the semantics of
-         * this field.
-         * @public
-         * @readonly
-         */
-        readonly privilegeClassIdentityCalled: VisibleString,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        negotiatedVersionNumber: Integer16,
+        negotiatedParameterCBB: ParameterSupportOptions,
+        servicesSupportedCalled: ServiceSupportOptions,
+        additionalSupportedCalled: AdditionalSupportOptions,
+        additionalCbbSupportedCalled: AdditionalCBBOptions,
+        privilegeClassIdentityCalled: VisibleString,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.negotiatedVersionNumber = negotiatedVersionNumber;
+        this.negotiatedParameterCBB = negotiatedParameterCBB;
+        this.servicesSupportedCalled = servicesSupportedCalled;
+        this.additionalSupportedCalled = additionalSupportedCalled;
+        this.additionalCbbSupportedCalled = additionalCbbSupportedCalled;
+        this.privilegeClassIdentityCalled = privilegeClassIdentityCalled;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a Initiate_ResponsePDU_initResponseDetail

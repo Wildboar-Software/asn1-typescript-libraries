@@ -33,31 +33,39 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
  */
 export
 class CancelVcsgLocationArg {
+    /**
+     * @summary `identity`.
+     * @description
+     *
+     * IMSI of the subscriber whose VCSG roaming record is to be deleted
+     * (3GPP TS 29.002 V19.1.0 clauses 8.1.10.3 and 7.6.2.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly identity: Identity;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `identity`.
-         * @description
-         *
-         * IMSI of the subscriber whose VCSG roaming record is to be deleted
-         * (3GPP TS 29.002 V19.1.0 clauses 8.1.10.3 and 7.6.2.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly identity: Identity,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        identity: Identity,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.identity = identity;
+        this.extensionContainer = extensionContainer;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a CancelVcsgLocationArg

@@ -37,32 +37,40 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class LogExpPointer {
+    /**
+     * @summary `kValue`.
+     * @description
+     * Field-element coordinate. ISO/IEC 9040:1997 §19.1.3.
+     * @public
+     * @readonly
+     */
+    public readonly kValue?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `fValue`.
+     * @description
+     * Field coordinate. ISO/IEC 9040:1997 §19.1.3.
+     * @public
+     * @readonly
+     */
+    public readonly fValue?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `zValue`.
+     * @description
+     * Z coordinate of the logical pointer. ISO/IEC 9040:1997 §19.1.3.
+     * @public
+     * @readonly
+     */
+    public readonly zValue?: OPTIONAL<INTEGER>;
+
     constructor (
-        /**
-         * @summary `kValue`.
-         * @description
-         * Field-element coordinate. ISO/IEC 9040:1997 §19.1.3.
-         * @public
-         * @readonly
-         */
-        readonly kValue?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `fValue`.
-         * @description
-         * Field coordinate. ISO/IEC 9040:1997 §19.1.3.
-         * @public
-         * @readonly
-         */
-        readonly fValue?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `zValue`.
-         * @description
-         * Z coordinate of the logical pointer. ISO/IEC 9040:1997 §19.1.3.
-         * @public
-         * @readonly
-         */
-        readonly zValue?: OPTIONAL<INTEGER>
-    ) {}
+        kValue?: OPTIONAL<INTEGER>,
+        fValue?: OPTIONAL<INTEGER>,
+        zValue?: OPTIONAL<INTEGER>
+    ) {
+        this.kValue = kValue;
+        this.fValue = fValue;
+        this.zValue = zValue;
+    }
 
     /**
      * @summary Restructures an object into a LogExpPointer

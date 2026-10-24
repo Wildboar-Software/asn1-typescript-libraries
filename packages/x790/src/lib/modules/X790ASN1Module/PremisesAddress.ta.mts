@@ -32,38 +32,49 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class PremisesAddress {
+    /**
+     * @summary `civicAddress`.
+     * @public
+     * @readonly
+     */
+    public readonly civicAddress: GraphicString;
+    /**
+     * @summary `city`.
+     * @public
+     * @readonly
+     */
+    public readonly city: GraphicString;
+    /**
+     * @summary `state`.
+     * @public
+     * @readonly
+     */
+    public readonly state: GraphicString;
+    /**
+     * @summary `zip`.
+     * @public
+     * @readonly
+     */
+    public readonly zip: GraphicString;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `civicAddress`.
-         * @public
-         * @readonly
-         */
-        readonly civicAddress: GraphicString,
-        /**
-         * @summary `city`.
-         * @public
-         * @readonly
-         */
-        readonly city: GraphicString,
-        /**
-         * @summary `state`.
-         * @public
-         * @readonly
-         */
-        readonly state: GraphicString,
-        /**
-         * @summary `zip`.
-         * @public
-         * @readonly
-         */
-        readonly zip: GraphicString,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
+        civicAddress: GraphicString,
+        city: GraphicString,
+        state: GraphicString,
+        zip: GraphicString,
+        _unrecognizedExtensionsList: _Element[] = []
     ) {
+        this.civicAddress = civicAddress;
+        this.city = city;
+        this.state = state;
+        this.zip = zip;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
         for (const [name, v] of [
             ["civicAddress", this.civicAddress],
             ["city", this.city],

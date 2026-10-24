@@ -32,41 +32,51 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
  */
 export
 class Ext_CallBarringFeature {
+    /**
+     * @summary `basicService`.
+     * @description
+     *
+     * Extensible Basic Service Group (3GPP TS 29.002 V19.1.0 clause
+     * 7.6.3.21).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly basicService: OPTIONAL<Ext_BasicServiceCode>;
+    /**
+     * @summary `ss_Status`.
+     * @description
+     *
+     * Provisioned SS-Status (3GPP TS 29.002 V19.1.0 clause 7.6.3.21).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ss_Status: Ext_SS_Status;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `basicService`.
-         * @description
-         *
-         * Extensible Basic Service Group (3GPP TS 29.002 V19.1.0 clause
-         * 7.6.3.21).
-         *
-         * @public
-         * @readonly
-         */
-        readonly basicService: OPTIONAL<Ext_BasicServiceCode>,
-        /**
-         * @summary `ss_Status`.
-         * @description
-         *
-         * Provisioned SS-Status (3GPP TS 29.002 V19.1.0 clause 7.6.3.21).
-         *
-         * @public
-         * @readonly
-         */
-        readonly ss_Status: Ext_SS_Status,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        basicService: OPTIONAL<Ext_BasicServiceCode>,
+        ss_Status: Ext_SS_Status,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.basicService = basicService;
+        this.ss_Status = ss_Status;
+        this.extensionContainer = extensionContainer;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a Ext_CallBarringFeature

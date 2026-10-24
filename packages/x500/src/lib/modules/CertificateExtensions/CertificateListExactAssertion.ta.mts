@@ -35,26 +35,34 @@ import {
  *
  */
 export class CertificateListExactAssertion {
+    /**
+     * @summary `issuer`.
+     * @public
+     * @readonly
+     */
+    public readonly issuer: Name;
+    /**
+     * @summary `thisUpdate`.
+     * @public
+     * @readonly
+     */
+    public readonly thisUpdate: Time;
+    /**
+     * @summary `distributionPoint`.
+     * @public
+     * @readonly
+     */
+    public readonly distributionPoint?: OPTIONAL<DistributionPointName>;
+
     constructor(
-        /**
-         * @summary `issuer`.
-         * @public
-         * @readonly
-         */
-        readonly issuer: Name,
-        /**
-         * @summary `thisUpdate`.
-         * @public
-         * @readonly
-         */
-        readonly thisUpdate: Time,
-        /**
-         * @summary `distributionPoint`.
-         * @public
-         * @readonly
-         */
-        readonly distributionPoint?: OPTIONAL<DistributionPointName>
-    ) {}
+        issuer: Name,
+        thisUpdate: Time,
+        distributionPoint?: OPTIONAL<DistributionPointName>
+    ) {
+        this.issuer = issuer;
+        this.thisUpdate = thisUpdate;
+        this.distributionPoint = distributionPoint;
+    }
 
     /**
      * @summary Restructures an object into a CertificateListExactAssertion

@@ -37,34 +37,42 @@ import { EraseAttr, _decode_EraseAttr, _encode_EraseAttr } from "../ISO9041-VTP/
  */
 export
 class DOupdate_erase {
+    /**
+     * @summary `startErase`.
+     * @description
+     * Start of the erase extent. ISO/IEC 9040:1997 §19.4.1.4.
+     * @public
+     * @readonly
+     */
+    public readonly startErase: Pointer;
+    /**
+     * @summary `endErase`.
+     * @description
+     * End of the erase extent. ISO/IEC 9040:1997 §19.4.1.4.
+     * @public
+     * @readonly
+     */
+    public readonly endErase: Pointer;
+    /**
+     * @summary `attribute`.
+     * @description
+     * TRUE also resets secondary attributes to explicit modal
+     * defaults (reset-attribute `"yes"`); FALSE leaves them.
+     * ISO/IEC 9040:1997 §19.4.1.4.
+     * @public
+     * @readonly
+     */
+    public readonly attribute: EraseAttr;
+
     constructor (
-        /**
-         * @summary `startErase`.
-         * @description
-         * Start of the erase extent. ISO/IEC 9040:1997 §19.4.1.4.
-         * @public
-         * @readonly
-         */
-        readonly startErase: Pointer,
-        /**
-         * @summary `endErase`.
-         * @description
-         * End of the erase extent. ISO/IEC 9040:1997 §19.4.1.4.
-         * @public
-         * @readonly
-         */
-        readonly endErase: Pointer,
-        /**
-         * @summary `attribute`.
-         * @description
-         * TRUE also resets secondary attributes to explicit modal
-         * defaults (reset-attribute `"yes"`); FALSE leaves them.
-         * ISO/IEC 9040:1997 §19.4.1.4.
-         * @public
-         * @readonly
-         */
-        readonly attribute: EraseAttr
-    ) {}
+        startErase: Pointer,
+        endErase: Pointer,
+        attribute: EraseAttr
+    ) {
+        this.startErase = startErase;
+        this.endErase = endErase;
+        this.attribute = attribute;
+    }
 
     /**
      * @summary Restructures an object into a DOupdate_erase

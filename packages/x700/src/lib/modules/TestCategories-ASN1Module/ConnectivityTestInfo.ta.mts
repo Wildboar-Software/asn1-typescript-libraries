@@ -45,31 +45,37 @@ import {
  *
  */
 export class ConnectivityTestInfo {
+    /**
+     * @summary `timeoutPeriod`.
+     * @description
+     *
+     * Time allowed for establishment, given
+     * directly (`timeUnits`) or as the id of a timer attribute on the
+     * MORT (`attributeId`). Required in the test request if not
+     * implicitly known by the MORT. X.737 §7.2.2, §7.2.6.
+     * @public
+     * @readonly
+     */
+    public readonly timeoutPeriod: ConnectivityTestInfo_timeoutPeriod;
+    /**
+     * @summary `effectiveTime`.
+     * @description
+     *
+     * Present and required in A.7. The rec
+     * does not define this field beyond the ASN.1 (Annex F lists it
+     * with the test-info parameters).
+     * @public
+     * @readonly
+     */
+    public readonly effectiveTime: Timespec;
+
     constructor(
-        /**
-         * @summary `timeoutPeriod`.
-         * @description
-         *
-         * Time allowed for establishment, given
-         * directly (`timeUnits`) or as the id of a timer attribute on the
-         * MORT (`attributeId`). Required in the test request if not
-         * implicitly known by the MORT. X.737 §7.2.2, §7.2.6.
-         * @public
-         * @readonly
-         */
-        readonly timeoutPeriod: ConnectivityTestInfo_timeoutPeriod,
-        /**
-         * @summary `effectiveTime`.
-         * @description
-         *
-         * Present and required in A.7. The rec
-         * does not define this field beyond the ASN.1 (Annex F lists it
-         * with the test-info parameters).
-         * @public
-         * @readonly
-         */
-        readonly effectiveTime: Timespec
-    ) {}
+        timeoutPeriod: ConnectivityTestInfo_timeoutPeriod,
+        effectiveTime: Timespec
+    ) {
+        this.timeoutPeriod = timeoutPeriod;
+        this.effectiveTime = effectiveTime;
+    }
 
     /**
      * @summary Restructures an object into a ConnectivityTestInfo

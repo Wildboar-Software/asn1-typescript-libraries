@@ -54,41 +54,49 @@ import {
  */
 export
 class ConnectionInformation {
+    /**
+     * @summary `flowDirection`.
+     * @description
+     *
+     * Transmit, Receive, Transmit and Receive, or None. Absent means
+     * unknown. ECMA-269 §12.2.8.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly flowDirection?: OPTIONAL<ConnectionInformation_flowDirection>;
+    /**
+     * @summary `numberOfChannels`.
+     * @description
+     *
+     * Media-stream channels on this connection. Default (and when absent)
+     * is one. ECMA-269 §12.2.8.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly numberOfChannels?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `mediaSessionInformation`.
+     * @description
+     *
+     * Protocol-specific session data (e.g. derived from SDP). Format and
+     * meaning are switching-function specific. ECMA-269 §12.2.8.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mediaSessionInformation?: OPTIONAL<IA5String>;
+
     constructor (
-        /**
-         * @summary `flowDirection`.
-         * @description
-         *
-         * Transmit, Receive, Transmit and Receive, or None. Absent means
-         * unknown. ECMA-269 §12.2.8.
-         *
-         * @public
-         * @readonly
-         */
-        readonly flowDirection?: OPTIONAL<ConnectionInformation_flowDirection>,
-        /**
-         * @summary `numberOfChannels`.
-         * @description
-         *
-         * Media-stream channels on this connection. Default (and when absent)
-         * is one. ECMA-269 §12.2.8.
-         *
-         * @public
-         * @readonly
-         */
-        readonly numberOfChannels?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `mediaSessionInformation`.
-         * @description
-         *
-         * Protocol-specific session data (e.g. derived from SDP). Format and
-         * meaning are switching-function specific. ECMA-269 §12.2.8.
-         *
-         * @public
-         * @readonly
-         */
-        readonly mediaSessionInformation?: OPTIONAL<IA5String>
-    ) {}
+        flowDirection?: OPTIONAL<ConnectionInformation_flowDirection>,
+        numberOfChannels?: OPTIONAL<INTEGER>,
+        mediaSessionInformation?: OPTIONAL<IA5String>
+    ) {
+        this.flowDirection = flowDirection;
+        this.numberOfChannels = numberOfChannels;
+        this.mediaSessionInformation = mediaSessionInformation;
+    }
 
     /**
      * @summary Restructures an object into a ConnectionInformation

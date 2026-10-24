@@ -61,50 +61,66 @@ import {
  *
  */
 export class SignerInfo {
+    /**
+     * @summary `version`.
+     * @public
+     * @readonly
+     */
+    public readonly version: CMSVersion;
+    /**
+     * @summary `sid`.
+     * @public
+     * @readonly
+     */
+    public readonly sid: SignerIdentifier;
+    /**
+     * @summary `digestAlgorithm`.
+     * @public
+     * @readonly
+     */
+    public readonly digestAlgorithm: DigestAlgorithmIdentifier;
+    /**
+     * @summary `signedAttrs`.
+     * @public
+     * @readonly
+     */
+    public readonly signedAttrs: OPTIONAL<SignedAttributes>;
+    /**
+     * @summary `signatureAlgorithm`.
+     * @public
+     * @readonly
+     */
+    public readonly signatureAlgorithm: SignatureAlgorithmIdentifier;
+    /**
+     * @summary `signature`.
+     * @public
+     * @readonly
+     */
+    public readonly signature: SignatureValue;
+    /**
+     * @summary `unsignedAttrs`.
+     * @public
+     * @readonly
+     */
+    public readonly unsignedAttrs?: OPTIONAL<UnsignedAttributes>;
+
     constructor(
-        /**
-         * @summary `version`.
-         * @public
-         * @readonly
-         */
-        readonly version: CMSVersion,
-        /**
-         * @summary `sid`.
-         * @public
-         * @readonly
-         */
-        readonly sid: SignerIdentifier,
-        /**
-         * @summary `digestAlgorithm`.
-         * @public
-         * @readonly
-         */
-        readonly digestAlgorithm: DigestAlgorithmIdentifier,
-        /**
-         * @summary `signedAttrs`.
-         * @public
-         * @readonly
-         */
-        readonly signedAttrs: OPTIONAL<SignedAttributes>,
-        /**
-         * @summary `signatureAlgorithm`.
-         * @public
-         * @readonly
-         */
-        readonly signatureAlgorithm: SignatureAlgorithmIdentifier,
-        /**
-         * @summary `signature`.
-         * @public
-         * @readonly
-         */
-        readonly signature: SignatureValue,
-        /**
-         * @summary `unsignedAttrs`.
-         * @public
-         * @readonly
-         */
-        readonly unsignedAttrs?: OPTIONAL<UnsignedAttributes>
-    ) {}
+        version: CMSVersion,
+        sid: SignerIdentifier,
+        digestAlgorithm: DigestAlgorithmIdentifier,
+        signedAttrs: OPTIONAL<SignedAttributes>,
+        signatureAlgorithm: SignatureAlgorithmIdentifier,
+        signature: SignatureValue,
+        unsignedAttrs?: OPTIONAL<UnsignedAttributes>
+    ) {
+        this.version = version;
+        this.sid = sid;
+        this.digestAlgorithm = digestAlgorithm;
+        this.signedAttrs = signedAttrs;
+        this.signatureAlgorithm = signatureAlgorithm;
+        this.signature = signature;
+        this.unsignedAttrs = unsignedAttrs;
+    }
 
     /**
      * @summary Restructures an object into a SignerInfo

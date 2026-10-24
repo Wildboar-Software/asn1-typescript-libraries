@@ -60,61 +60,73 @@ import {
  *
  */
 export class TimeDifference {
+    /**
+     * @summary `sign`.
+     * @description
+     *
+     * `positive` (0) or `negative` (1). ITU-T Rec. X.743 (06/98)
+     * [§A.6](https://www.itu.int/rec/T-REC-X.743-199806-I).
+     * @public
+     * @readonly
+     */
+    public readonly sign: TimeDifference_sign;
+    /**
+     * @summary `epochs`.
+     * @description
+     *
+     * Whole epochs in the absolute difference. ITU-T Rec. X.743 (06/98)
+     * [§A.6](https://www.itu.int/rec/T-REC-X.743-199806-I), §8.1.
+     * @public
+     * @readonly
+     */
+    public readonly epochs: Epochs;
+    /**
+     * @summary `seconds`.
+     * @description
+     *
+     * Additional whole seconds of the absolute difference.
+     * ITU-T Rec. X.743 (06/98)
+     * [§A.6](https://www.itu.int/rec/T-REC-X.743-199806-I).
+     * @public
+     * @readonly
+     */
+    public readonly seconds: Seconds;
+    /**
+     * @summary `nanoseconds`.
+     * @description
+     *
+     * Additional nanoseconds of the absolute difference.
+     * ITU-T Rec. X.743 (06/98)
+     * [§A.6](https://www.itu.int/rec/T-REC-X.743-199806-I).
+     * @public
+     * @readonly
+     */
+    public readonly nanoseconds: Nanoseconds;
+    /**
+     * @summary `maximumError`.
+     * @description
+     *
+     * Maximum error bound of the difference, in nanoseconds.
+     * ITU-T Rec. X.743 (06/98)
+     * [§A.6](https://www.itu.int/rec/T-REC-X.743-199806-I), §8.1.
+     * @public
+     * @readonly
+     */
+    public readonly maximumError: MaximumErrorInNanoseconds;
+
     constructor(
-        /**
-         * @summary `sign`.
-         * @description
-         *
-         * `positive` (0) or `negative` (1). ITU-T Rec. X.743 (06/98)
-         * [§A.6](https://www.itu.int/rec/T-REC-X.743-199806-I).
-         * @public
-         * @readonly
-         */
-        readonly sign: TimeDifference_sign,
-        /**
-         * @summary `epochs`.
-         * @description
-         *
-         * Whole epochs in the absolute difference. ITU-T Rec. X.743 (06/98)
-         * [§A.6](https://www.itu.int/rec/T-REC-X.743-199806-I), §8.1.
-         * @public
-         * @readonly
-         */
-        readonly epochs: Epochs,
-        /**
-         * @summary `seconds`.
-         * @description
-         *
-         * Additional whole seconds of the absolute difference.
-         * ITU-T Rec. X.743 (06/98)
-         * [§A.6](https://www.itu.int/rec/T-REC-X.743-199806-I).
-         * @public
-         * @readonly
-         */
-        readonly seconds: Seconds,
-        /**
-         * @summary `nanoseconds`.
-         * @description
-         *
-         * Additional nanoseconds of the absolute difference.
-         * ITU-T Rec. X.743 (06/98)
-         * [§A.6](https://www.itu.int/rec/T-REC-X.743-199806-I).
-         * @public
-         * @readonly
-         */
-        readonly nanoseconds: Nanoseconds,
-        /**
-         * @summary `maximumError`.
-         * @description
-         *
-         * Maximum error bound of the difference, in nanoseconds.
-         * ITU-T Rec. X.743 (06/98)
-         * [§A.6](https://www.itu.int/rec/T-REC-X.743-199806-I), §8.1.
-         * @public
-         * @readonly
-         */
-        readonly maximumError: MaximumErrorInNanoseconds
-    ) {}
+        sign: TimeDifference_sign,
+        epochs: Epochs,
+        seconds: Seconds,
+        nanoseconds: Nanoseconds,
+        maximumError: MaximumErrorInNanoseconds
+    ) {
+        this.sign = sign;
+        this.epochs = epochs;
+        this.seconds = seconds;
+        this.nanoseconds = nanoseconds;
+        this.maximumError = maximumError;
+    }
 
     /**
      * @summary Restructures an object into a TimeDifference

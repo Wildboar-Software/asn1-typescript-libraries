@@ -39,26 +39,34 @@ import {
  *
  */
 export class PointToMultipoint {
+    /**
+     * @summary `fromTp`.
+     * @public
+     * @readonly
+     */
+    public readonly fromTp: ObjectInstance;
+    /**
+     * @summary `toTps`.
+     * @public
+     * @readonly
+     */
+    public readonly toTps: PointToMultipoint_toTps_Item[];
+    /**
+     * @summary `mpXCon`.
+     * @public
+     * @readonly
+     */
+    public readonly mpXCon: ObjectInstance;
+
     constructor(
-        /**
-         * @summary `fromTp`.
-         * @public
-         * @readonly
-         */
-        readonly fromTp: ObjectInstance,
-        /**
-         * @summary `toTps`.
-         * @public
-         * @readonly
-         */
-        readonly toTps: PointToMultipoint_toTps_Item[],
-        /**
-         * @summary `mpXCon`.
-         * @public
-         * @readonly
-         */
-        readonly mpXCon: ObjectInstance
-    ) {}
+        fromTp: ObjectInstance,
+        toTps: PointToMultipoint_toTps_Item[],
+        mpXCon: ObjectInstance
+    ) {
+        this.fromTp = fromTp;
+        this.toTps = toTps;
+        this.mpXCon = mpXCon;
+    }
 
     /**
      * @summary Restructures an object into a PointToMultipoint

@@ -46,33 +46,41 @@ import type { PkiPath } from "./PkiPath.ta.mjs";
  *
  */
 export class CertificationPath {
+    /**
+     * @summary `userCertificate`: the end-entity public-key certificate
+     * @public
+     * @readonly
+     */
+    public readonly userCertificate: Certificate;
+    /**
+     * @summary `theCACertificates`: each CA up to and including the CA certified by the trust anchor
+     * @description
+     * 
+     * This is not intended to contain the trust anchor itself, only the CA
+     * certs leading up to it. If the end-entity public-key certificate has
+     * been issued directly by the trust anchor, this component shall be
+     * absent.
+     * 
+     * @public
+     * @readonly
+     */
+    public readonly theCACertificates?: OPTIONAL<CertificatePair[]>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `userCertificate`: the end-entity public-key certificate
-         * @public
-         * @readonly
-         */
-        readonly userCertificate: Certificate,
-        /**
-         * @summary `theCACertificates`: each CA up to and including the CA certified by the trust anchor
-         * @description
-         * 
-         * This is not intended to contain the trust anchor itself, only the CA
-         * certs leading up to it. If the end-entity public-key certificate has
-         * been issued directly by the trust anchor, this component shall be
-         * absent.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly theCACertificates?: OPTIONAL<CertificatePair[]>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        userCertificate: Certificate,
+        theCACertificates?: OPTIONAL<CertificatePair[]>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.userCertificate = userCertificate;
+        this.theCACertificates = theCACertificates;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a CertificationPath

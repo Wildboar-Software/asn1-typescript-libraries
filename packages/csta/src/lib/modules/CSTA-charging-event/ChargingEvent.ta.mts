@@ -51,54 +51,66 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class ChargingEvent {
+    /**
+     * @summary `connection`.
+     * @description
+     *
+     * Connection for which charging information was detected.
+     * @public
+     * @readonly
+     */
+    public readonly connection: ConnectionID;
+    /**
+     * @summary `chargedDevice`.
+     * @description
+     *
+     * Device being charged.
+     * @public
+     * @readonly
+     */
+    public readonly chargedDevice: DeviceID;
+    /**
+     * @summary `chargingInfo`.
+     * @description
+     *
+     * New charging information (e.g. PPM).
+     * @public
+     * @readonly
+     */
+    public readonly chargingInfo: ChargingInfo;
+    /**
+     * @summary `cause`.
+     * @description
+     *
+     * Event cause, if provided.
+     * @public
+     * @readonly
+     */
+    public readonly cause?: OPTIONAL<EventCause>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `connection`.
-         * @description
-         *
-         * Connection for which charging information was detected.
-         * @public
-         * @readonly
-         */
-        readonly connection: ConnectionID,
-        /**
-         * @summary `chargedDevice`.
-         * @description
-         *
-         * Device being charged.
-         * @public
-         * @readonly
-         */
-        readonly chargedDevice: DeviceID,
-        /**
-         * @summary `chargingInfo`.
-         * @description
-         *
-         * New charging information (e.g. PPM).
-         * @public
-         * @readonly
-         */
-        readonly chargingInfo: ChargingInfo,
-        /**
-         * @summary `cause`.
-         * @description
-         *
-         * Event cause, if provided.
-         * @public
-         * @readonly
-         */
-        readonly cause?: OPTIONAL<EventCause>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        connection: ConnectionID,
+        chargedDevice: DeviceID,
+        chargingInfo: ChargingInfo,
+        cause?: OPTIONAL<EventCause>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.connection = connection;
+        this.chargedDevice = chargedDevice;
+        this.chargingInfo = chargingInfo;
+        this.cause = cause;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a ChargingEvent

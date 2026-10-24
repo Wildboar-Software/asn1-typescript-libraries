@@ -34,26 +34,32 @@ import { DfrPathName, _decode_DfrPathName, _encode_DfrPathName } from "../DFRAbs
  */
 export
 class DfrEntryName_relative_path_name {
+    /**
+     * @summary `base`.
+     * @description
+     *
+     * UPI of the group the relative path starts from.
+     * @public
+     * @readonly
+     */
+    public readonly base: DfrUniquePermanentIdentifier;
+    /**
+     * @summary `path`.
+     * @description
+     *
+     * Titles from that group down to the target.
+     * @public
+     * @readonly
+     */
+    public readonly path: DfrPathName;
+
     constructor (
-        /**
-         * @summary `base`.
-         * @description
-         *
-         * UPI of the group the relative path starts from.
-         * @public
-         * @readonly
-         */
-        readonly base: DfrUniquePermanentIdentifier,
-        /**
-         * @summary `path`.
-         * @description
-         *
-         * Titles from that group down to the target.
-         * @public
-         * @readonly
-         */
-        readonly path: DfrPathName
-    ) {}
+        base: DfrUniquePermanentIdentifier,
+        path: DfrPathName
+    ) {
+        this.base = base;
+        this.path = path;
+    }
 
     /**
      * @summary Restructures an object into a DfrEntryName_relative_path_name

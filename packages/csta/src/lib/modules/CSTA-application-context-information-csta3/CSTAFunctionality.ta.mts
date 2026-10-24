@@ -51,58 +51,74 @@ import { VoiceUnitServicesC2, _decode_VoiceUnitServicesC2, _encode_VoiceUnitServ
  */
 export
 class CSTAFunctionality {
+    /**
+     * @summary `switchingFunctionServices`.
+     * @description Switching-function services this association will use.
+     * @public
+     * @readonly
+     */
+    public readonly switchingFunctionServices?: OPTIONAL<SwitchingFunctionServicesC2>;
+    /**
+     * @summary `eventReportServices`.
+     * @description Event reports this association will use.
+     * @public
+     * @readonly
+     */
+    public readonly eventReportServices?: OPTIONAL<EventReportServicesC2>;
+    /**
+     * @summary `computingFunctionServices`.
+     * @description
+     * Computing-function (routeing) services this association will use.
+     * @public
+     * @readonly
+     */
+    public readonly computingFunctionServices?: OPTIONAL<ComputingFunctionServicesC2>;
+    /**
+     * @summary `bidirectionalServices`.
+     * @description Bidirectional services (escape, system status).
+     * @public
+     * @readonly
+     */
+    public readonly bidirectionalServices?: OPTIONAL<BidirectionalServicesC2>;
+    /**
+     * @summary `statusReportingServices`.
+     * @description Status-reporting services.
+     * @public
+     * @readonly
+     */
+    public readonly statusReportingServices?: OPTIONAL<StatusReportingServicesC2>;
+    /**
+     * @summary `inputOutputServices`.
+     * @description I/O data-path services.
+     * @public
+     * @readonly
+     */
+    public readonly inputOutputServices?: OPTIONAL<InputOutputServicesC2>;
+    /**
+     * @summary `voiceUnitServices`.
+     * @description Voice-unit services.
+     * @public
+     * @readonly
+     */
+    public readonly voiceUnitServices?: OPTIONAL<VoiceUnitServicesC2>;
+
     constructor (
-        /**
-         * @summary `switchingFunctionServices`.
-         * @description Switching-function services this association will use.
-         * @public
-         * @readonly
-         */
-        readonly switchingFunctionServices?: OPTIONAL<SwitchingFunctionServicesC2>,
-        /**
-         * @summary `eventReportServices`.
-         * @description Event reports this association will use.
-         * @public
-         * @readonly
-         */
-        readonly eventReportServices?: OPTIONAL<EventReportServicesC2>,
-        /**
-         * @summary `computingFunctionServices`.
-         * @description
-         * Computing-function (routeing) services this association will use.
-         * @public
-         * @readonly
-         */
-        readonly computingFunctionServices?: OPTIONAL<ComputingFunctionServicesC2>,
-        /**
-         * @summary `bidirectionalServices`.
-         * @description Bidirectional services (escape, system status).
-         * @public
-         * @readonly
-         */
-        readonly bidirectionalServices?: OPTIONAL<BidirectionalServicesC2>,
-        /**
-         * @summary `statusReportingServices`.
-         * @description Status-reporting services.
-         * @public
-         * @readonly
-         */
-        readonly statusReportingServices?: OPTIONAL<StatusReportingServicesC2>,
-        /**
-         * @summary `inputOutputServices`.
-         * @description I/O data-path services.
-         * @public
-         * @readonly
-         */
-        readonly inputOutputServices?: OPTIONAL<InputOutputServicesC2>,
-        /**
-         * @summary `voiceUnitServices`.
-         * @description Voice-unit services.
-         * @public
-         * @readonly
-         */
-        readonly voiceUnitServices?: OPTIONAL<VoiceUnitServicesC2>
-    ) {}
+        switchingFunctionServices?: OPTIONAL<SwitchingFunctionServicesC2>,
+        eventReportServices?: OPTIONAL<EventReportServicesC2>,
+        computingFunctionServices?: OPTIONAL<ComputingFunctionServicesC2>,
+        bidirectionalServices?: OPTIONAL<BidirectionalServicesC2>,
+        statusReportingServices?: OPTIONAL<StatusReportingServicesC2>,
+        inputOutputServices?: OPTIONAL<InputOutputServicesC2>,
+        voiceUnitServices?: OPTIONAL<VoiceUnitServicesC2>
+    ) {
+        this.switchingFunctionServices = switchingFunctionServices;
+        this.eventReportServices = eventReportServices;
+        this.computingFunctionServices = computingFunctionServices;
+        this.bidirectionalServices = bidirectionalServices;
+        this.statusReportingServices = statusReportingServices;
+        this.inputOutputServices = inputOutputServices;
+        this.voiceUnitServices = voiceUnitServices;
+    }
 
     /**
      * @summary Restructures an object into a CSTAFunctionality

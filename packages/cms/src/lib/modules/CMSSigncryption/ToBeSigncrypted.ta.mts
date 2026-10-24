@@ -34,20 +34,26 @@ import {
  *
  */
 export class ToBeSigncrypted {
+    /**
+     * @summary `content`.
+     * @public
+     * @readonly
+     */
+    public readonly content: Content;
+    /**
+     * @summary `attributes`.
+     * @public
+     * @readonly
+     */
+    public readonly attributes: SigncryptedAttributes;
+
     constructor(
-        /**
-         * @summary `content`.
-         * @public
-         * @readonly
-         */
-        readonly content: Content,
-        /**
-         * @summary `attributes`.
-         * @public
-         * @readonly
-         */
-        readonly attributes: SigncryptedAttributes
-    ) {}
+        content: Content,
+        attributes: SigncryptedAttributes
+    ) {
+        this.content = content;
+        this.attributes = attributes;
+    }
 
     /**
      * @summary Restructures an object into a ToBeSigncrypted

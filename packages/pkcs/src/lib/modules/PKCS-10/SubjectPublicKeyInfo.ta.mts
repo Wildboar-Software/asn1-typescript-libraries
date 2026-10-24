@@ -27,20 +27,26 @@ import {
  *
  */
 export class SubjectPublicKeyInfo {
+    /**
+     * @summary `algorithm`.
+     * @public
+     * @readonly
+     */
+    public readonly algorithm: AlgorithmIdentifier;
+    /**
+     * @summary `subjectPublicKey`.
+     * @public
+     * @readonly
+     */
+    public readonly subjectPublicKey: BIT_STRING;
+
     constructor(
-        /**
-         * @summary `algorithm`.
-         * @public
-         * @readonly
-         */
-        readonly algorithm: AlgorithmIdentifier,
-        /**
-         * @summary `subjectPublicKey`.
-         * @public
-         * @readonly
-         */
-        readonly subjectPublicKey: BIT_STRING
-    ) {}
+        algorithm: AlgorithmIdentifier,
+        subjectPublicKey: BIT_STRING
+    ) {
+        this.algorithm = algorithm;
+        this.subjectPublicKey = subjectPublicKey;
+    }
 
     /**
      * @summary Restructures an object into a SubjectPublicKeyInfo

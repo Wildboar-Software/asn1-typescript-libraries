@@ -34,20 +34,26 @@ import {
  *
  */
 export class TimeRange {
+    /**
+     * @summary `from_`.
+     * @public
+     * @readonly
+     */
+    public readonly from_?: OPTIONAL<CreationTime>;
+    /**
+     * @summary `to`.
+     * @public
+     * @readonly
+     */
+    public readonly to?: OPTIONAL<CreationTime>;
+
     constructor(
-        /**
-         * @summary `from_`.
-         * @public
-         * @readonly
-         */
-        readonly from_?: OPTIONAL<CreationTime>,
-        /**
-         * @summary `to`.
-         * @public
-         * @readonly
-         */
-        readonly to?: OPTIONAL<CreationTime>
-    ) {}
+        from_?: OPTIONAL<CreationTime>,
+        to?: OPTIONAL<CreationTime>
+    ) {
+        this.from_ = from_;
+        this.to = to;
+    }
 
     /**
      * @summary Restructures an object into a TimeRange

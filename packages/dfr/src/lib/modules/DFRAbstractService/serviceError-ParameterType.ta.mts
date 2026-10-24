@@ -31,17 +31,21 @@ import { ServiceProblem, _enum_for_ServiceProblem, _decode_ServiceProblem, _enco
  */
 export
 class serviceError_ParameterType {
+    /**
+     * @summary `problem`.
+     * @description
+     *
+     * Operational reason the request failed.
+     * @public
+     * @readonly
+     */
+    public readonly problem: ServiceProblem;
+
     constructor (
-        /**
-         * @summary `problem`.
-         * @description
-         *
-         * Operational reason the request failed.
-         * @public
-         * @readonly
-         */
-        readonly problem: ServiceProblem
-    ) {}
+        problem: ServiceProblem
+    ) {
+        this.problem = problem;
+    }
 
     /**
      * @summary Restructures an object into a serviceError_ParameterType

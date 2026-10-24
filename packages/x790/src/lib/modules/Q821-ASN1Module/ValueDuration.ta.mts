@@ -32,20 +32,26 @@ import {
  */
 export
 class ValueDuration {
+    /**
+     * @summary `value`.
+     * @public
+     * @readonly
+     */
+    public readonly value: REAL;
+    /**
+     * @summary `duration`.
+     * @public
+     * @readonly
+     */
+    public readonly duration: TimeInterval;
+
     constructor (
-        /**
-         * @summary `value`.
-         * @public
-         * @readonly
-         */
-        readonly value: REAL,
-        /**
-         * @summary `duration`.
-         * @public
-         * @readonly
-         */
-        readonly duration: TimeInterval
-    ) {}
+        value: REAL,
+        duration: TimeInterval
+    ) {
+        this.value = value;
+        this.duration = duration;
+    }
 
     /**
      * @summary Restructures an object into a ValueDuration

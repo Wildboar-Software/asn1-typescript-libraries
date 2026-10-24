@@ -57,84 +57,100 @@ import {
  *
  */
 export class LoopbackTestInfo {
+    /**
+     * @summary `loopbackData`.
+     * @description
+     *
+     * Test-signal sequence. If omitted, the
+     * pattern is implementation-specific. X.737 §7.4.6, §8.1.23.
+     * @public
+     * @readonly
+     */
+    public readonly loopbackData?: OPTIONAL<TestPatternSequence>;
+    /**
+     * @summary `testStartTime`.
+     * @description
+     *
+     * When to start (schedules the test;
+     * time-out period begins then). Optional. X.737 §3.9.8, §7.4.2.2,
+     * §7.4.6.
+     * @public
+     * @readonly
+     */
+    public readonly testStartTime?: OPTIONAL<GeneralizedTime>;
+    /**
+     * @summary `testIntervalTime`.
+     * @description
+     *
+     * Delay after fully receiving one
+     * pattern before sending the next. May be nearly zero. Optional.
+     * X.737 §3.9.9, §7.4.2.2, §7.4.6.
+     * @public
+     * @readonly
+     */
+    public readonly testIntervalTime?: OPTIONAL<Timespec>;
+    /**
+     * @summary `reportingIntervalTime`.
+     * @description
+     *
+     * Interval between intermediate
+     * reports from start time; zero means no intermediate reporting.
+     * Optional. X.737 §7.4.2.2, §7.4.6.
+     * @public
+     * @readonly
+     */
+    public readonly reportingIntervalTime?: OPTIONAL<Timespec>;
+    /**
+     * @summary `loopbackType`.
+     * @description
+     *
+     * Kind of loopback (physical, echo,
+     * analogue/digital, …). If omitted, implementation-specific.
+     * X.737 §7.4.6, §8.1.12.
+     * @public
+     * @readonly
+     */
+    public readonly loopbackType?: OPTIONAL<OBJECT_IDENTIFIER>;
+    /**
+     * @summary `loopbackTimeout`.
+     * @description
+     *
+     * How long the performer waits for
+     * returned data, measured from transmitting a pattern until
+     * reception. If delay exceeds this, the whole test Fails
+     * immediately. Optional. X.737 §3.9.5, §7.4.2.2, §7.4.6.
+     * @public
+     * @readonly
+     */
+    public readonly loopbackTimeout?: OPTIONAL<Timespec>;
+    /**
+     * @summary `loopbackErrorThreshold`.
+     * @description
+     *
+     * Error threshold; crossing it
+     * terminates the test with Fail. Optional. X.737 §7.4.6, §8.1.11.
+     * @public
+     * @readonly
+     */
+    public readonly loopbackErrorThreshold?: OPTIONAL<LoopbackError>;
+
     constructor(
-        /**
-         * @summary `loopbackData`.
-         * @description
-         *
-         * Test-signal sequence. If omitted, the
-         * pattern is implementation-specific. X.737 §7.4.6, §8.1.23.
-         * @public
-         * @readonly
-         */
-        readonly loopbackData?: OPTIONAL<TestPatternSequence>,
-        /**
-         * @summary `testStartTime`.
-         * @description
-         *
-         * When to start (schedules the test;
-         * time-out period begins then). Optional. X.737 §3.9.8, §7.4.2.2,
-         * §7.4.6.
-         * @public
-         * @readonly
-         */
-        readonly testStartTime?: OPTIONAL<GeneralizedTime>,
-        /**
-         * @summary `testIntervalTime`.
-         * @description
-         *
-         * Delay after fully receiving one
-         * pattern before sending the next. May be nearly zero. Optional.
-         * X.737 §3.9.9, §7.4.2.2, §7.4.6.
-         * @public
-         * @readonly
-         */
-        readonly testIntervalTime?: OPTIONAL<Timespec>,
-        /**
-         * @summary `reportingIntervalTime`.
-         * @description
-         *
-         * Interval between intermediate
-         * reports from start time; zero means no intermediate reporting.
-         * Optional. X.737 §7.4.2.2, §7.4.6.
-         * @public
-         * @readonly
-         */
-        readonly reportingIntervalTime?: OPTIONAL<Timespec>,
-        /**
-         * @summary `loopbackType`.
-         * @description
-         *
-         * Kind of loopback (physical, echo,
-         * analogue/digital, …). If omitted, implementation-specific.
-         * X.737 §7.4.6, §8.1.12.
-         * @public
-         * @readonly
-         */
-        readonly loopbackType?: OPTIONAL<OBJECT_IDENTIFIER>,
-        /**
-         * @summary `loopbackTimeout`.
-         * @description
-         *
-         * How long the performer waits for
-         * returned data, measured from transmitting a pattern until
-         * reception. If delay exceeds this, the whole test Fails
-         * immediately. Optional. X.737 §3.9.5, §7.4.2.2, §7.4.6.
-         * @public
-         * @readonly
-         */
-        readonly loopbackTimeout?: OPTIONAL<Timespec>,
-        /**
-         * @summary `loopbackErrorThreshold`.
-         * @description
-         *
-         * Error threshold; crossing it
-         * terminates the test with Fail. Optional. X.737 §7.4.6, §8.1.11.
-         * @public
-         * @readonly
-         */
-        readonly loopbackErrorThreshold?: OPTIONAL<LoopbackError>
-    ) {}
+        loopbackData?: OPTIONAL<TestPatternSequence>,
+        testStartTime?: OPTIONAL<GeneralizedTime>,
+        testIntervalTime?: OPTIONAL<Timespec>,
+        reportingIntervalTime?: OPTIONAL<Timespec>,
+        loopbackType?: OPTIONAL<OBJECT_IDENTIFIER>,
+        loopbackTimeout?: OPTIONAL<Timespec>,
+        loopbackErrorThreshold?: OPTIONAL<LoopbackError>
+    ) {
+        this.loopbackData = loopbackData;
+        this.testStartTime = testStartTime;
+        this.testIntervalTime = testIntervalTime;
+        this.reportingIntervalTime = reportingIntervalTime;
+        this.loopbackType = loopbackType;
+        this.loopbackTimeout = loopbackTimeout;
+        this.loopbackErrorThreshold = loopbackErrorThreshold;
+    }
 
     /**
      * @summary Restructures an object into a LoopbackTestInfo

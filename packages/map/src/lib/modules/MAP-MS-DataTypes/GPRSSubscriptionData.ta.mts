@@ -39,54 +39,66 @@ import { GPRSDataList, _decode_GPRSDataList, _encode_GPRSDataList } from "../MAP
  */
 export
 class GPRSSubscriptionData {
+    /**
+     * @summary `completeDataListIncluded`.
+     * @description
+     *
+     * If segmentation is used, may only be present in the first segment.
+     * Indicates the complete GPRS Subscription Data stored for the
+     * subscriber shall be replaced (3GPP TS 29.002 V19.1.0 clauses 7.6.3.54
+     * and 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly completeDataListIncluded: OPTIONAL<NULL>;
+    /**
+     * @summary `gprsDataList`.
+     * @description
+     *
+     * List of PDP-Contexts the subscriber has subscribed to (3GPP TS 29.002
+     * V19.1.0 clause 7.6.3.46).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly gprsDataList: GPRSDataList;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary `apn_oi_Replacement`.
+     * @description
+     *
+     * UE-level APN-OI replacement (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly apn_oi_Replacement?: OPTIONAL<APN_OI_Replacement>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `completeDataListIncluded`.
-         * @description
-         *
-         * If segmentation is used, may only be present in the first segment.
-         * Indicates the complete GPRS Subscription Data stored for the
-         * subscriber shall be replaced (3GPP TS 29.002 V19.1.0 clauses 7.6.3.54
-         * and 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly completeDataListIncluded: OPTIONAL<NULL>,
-        /**
-         * @summary `gprsDataList`.
-         * @description
-         *
-         * List of PDP-Contexts the subscriber has subscribed to (3GPP TS 29.002
-         * V19.1.0 clause 7.6.3.46).
-         *
-         * @public
-         * @readonly
-         */
-        readonly gprsDataList: GPRSDataList,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary `apn_oi_Replacement`.
-         * @description
-         *
-         * UE-level APN-OI replacement (3GPP TS 29.002 V19.1.0 clause 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly apn_oi_Replacement?: OPTIONAL<APN_OI_Replacement>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        completeDataListIncluded: OPTIONAL<NULL>,
+        gprsDataList: GPRSDataList,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        apn_oi_Replacement?: OPTIONAL<APN_OI_Replacement>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.completeDataListIncluded = completeDataListIncluded;
+        this.gprsDataList = gprsDataList;
+        this.extensionContainer = extensionContainer;
+        this.apn_oi_Replacement = apn_oi_Replacement;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a GPRSSubscriptionData

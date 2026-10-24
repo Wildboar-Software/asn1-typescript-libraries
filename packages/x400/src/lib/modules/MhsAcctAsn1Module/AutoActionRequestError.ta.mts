@@ -34,14 +34,18 @@ import {
  *
  */
 export class AutoActionRequestError {
+    /**
+     * @summary `problems`.
+     * @public
+     * @readonly
+     */
+    public readonly problems: AutoActionRequestError_problems_Item[];
+
     constructor(
-        /**
-         * @summary `problems`.
-         * @public
-         * @readonly
-         */
-        readonly problems: AutoActionRequestError_problems_Item[]
-    ) {}
+        problems: AutoActionRequestError_problems_Item[]
+    ) {
+        this.problems = problems;
+    }
 
     /**
      * @summary Restructures an object into a AutoActionRequestError

@@ -59,68 +59,90 @@ import { ConnectedNumberTreatmentInd, _enum_for_ConnectedNumberTreatmentInd, _de
  */
 export
 class ServiceInteractionIndicatorsTwo {
+    /**
+     * @summary `forwardServiceInteractionInd`.
+     * @public
+     * @readonly
+     */
+    public readonly forwardServiceInteractionInd?: OPTIONAL<ForwardServiceInteractionInd>;
+    /**
+     * @summary `backwardServiceInteractionInd`.
+     * @public
+     * @readonly
+     */
+    public readonly backwardServiceInteractionInd?: OPTIONAL<BackwardServiceInteractionInd>;
+    /**
+     * @summary `bothwayThroughConnectionInd`.
+     * @public
+     * @readonly
+     */
+    public readonly bothwayThroughConnectionInd?: OPTIONAL<BothwayThroughConnectionInd>;
+    /**
+     * @summary `suspendTimer`.
+     * @public
+     * @readonly
+     */
+    public readonly suspendTimer?: OPTIONAL<SuspendTimer>;
+    /**
+     * @summary `connectedNumberTreatmentInd`.
+     * @public
+     * @readonly
+     */
+    public readonly connectedNumberTreatmentInd?: OPTIONAL<ConnectedNumberTreatmentInd>;
+    /**
+     * @summary `suppressCallDiversionNotification`.
+     * @public
+     * @readonly
+     */
+    public readonly suppressCallDiversionNotification?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `suppressCallTransferNotification`.
+     * @public
+     * @readonly
+     */
+    public readonly suppressCallTransferNotification?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `allowCdINNoPresentationInd`.
+     * @public
+     * @readonly
+     */
+    public readonly allowCdINNoPresentationInd?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `userDialogueDurationInd`.
+     * @public
+     * @readonly
+     */
+    public readonly userDialogueDurationInd?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `forwardServiceInteractionInd`.
-         * @public
-         * @readonly
-         */
-        readonly forwardServiceInteractionInd?: OPTIONAL<ForwardServiceInteractionInd>,
-        /**
-         * @summary `backwardServiceInteractionInd`.
-         * @public
-         * @readonly
-         */
-        readonly backwardServiceInteractionInd?: OPTIONAL<BackwardServiceInteractionInd>,
-        /**
-         * @summary `bothwayThroughConnectionInd`.
-         * @public
-         * @readonly
-         */
-        readonly bothwayThroughConnectionInd?: OPTIONAL<BothwayThroughConnectionInd>,
-        /**
-         * @summary `suspendTimer`.
-         * @public
-         * @readonly
-         */
-        readonly suspendTimer?: OPTIONAL<SuspendTimer>,
-        /**
-         * @summary `connectedNumberTreatmentInd`.
-         * @public
-         * @readonly
-         */
-        readonly connectedNumberTreatmentInd?: OPTIONAL<ConnectedNumberTreatmentInd>,
-        /**
-         * @summary `suppressCallDiversionNotification`.
-         * @public
-         * @readonly
-         */
-        readonly suppressCallDiversionNotification?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `suppressCallTransferNotification`.
-         * @public
-         * @readonly
-         */
-        readonly suppressCallTransferNotification?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `allowCdINNoPresentationInd`.
-         * @public
-         * @readonly
-         */
-        readonly allowCdINNoPresentationInd?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `userDialogueDurationInd`.
-         * @public
-         * @readonly
-         */
-        readonly userDialogueDurationInd?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        forwardServiceInteractionInd?: OPTIONAL<ForwardServiceInteractionInd>,
+        backwardServiceInteractionInd?: OPTIONAL<BackwardServiceInteractionInd>,
+        bothwayThroughConnectionInd?: OPTIONAL<BothwayThroughConnectionInd>,
+        suspendTimer?: OPTIONAL<SuspendTimer>,
+        connectedNumberTreatmentInd?: OPTIONAL<ConnectedNumberTreatmentInd>,
+        suppressCallDiversionNotification?: OPTIONAL<BOOLEAN>,
+        suppressCallTransferNotification?: OPTIONAL<BOOLEAN>,
+        allowCdINNoPresentationInd?: OPTIONAL<BOOLEAN>,
+        userDialogueDurationInd?: OPTIONAL<BOOLEAN>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.forwardServiceInteractionInd = forwardServiceInteractionInd;
+        this.backwardServiceInteractionInd = backwardServiceInteractionInd;
+        this.bothwayThroughConnectionInd = bothwayThroughConnectionInd;
+        this.suspendTimer = suspendTimer;
+        this.connectedNumberTreatmentInd = connectedNumberTreatmentInd;
+        this.suppressCallDiversionNotification = suppressCallDiversionNotification;
+        this.suppressCallTransferNotification = suppressCallTransferNotification;
+        this.allowCdINNoPresentationInd = allowCdINNoPresentationInd;
+        this.userDialogueDurationInd = userDialogueDurationInd;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a ServiceInteractionIndicatorsTwo

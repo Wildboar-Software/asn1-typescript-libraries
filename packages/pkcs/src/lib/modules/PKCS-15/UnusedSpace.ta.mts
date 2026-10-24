@@ -34,32 +34,42 @@ import { Path, _decode_Path, _encode_Path } from "../PKCS-15/Path.ta.mjs";
  *
  */
 export class UnusedSpace {
+    /**
+     * @summary `path`.
+     * @public
+     * @readonly
+     */
+    public readonly path: Path;
+    /**
+     * @summary `authId`.
+     * @public
+     * @readonly
+     */
+    public readonly authId?: OPTIONAL<Identifier>;
+    /**
+     * @summary `accessControlRules`.
+     * @public
+     * @readonly
+     */
+    public readonly accessControlRules?: OPTIONAL<AccessControlRule[]>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `path`.
-         * @public
-         * @readonly
-         */
-        readonly path: Path,
-        /**
-         * @summary `authId`.
-         * @public
-         * @readonly
-         */
-        readonly authId?: OPTIONAL<Identifier>,
-        /**
-         * @summary `accessControlRules`.
-         * @public
-         * @readonly
-         */
-        readonly accessControlRules?: OPTIONAL<AccessControlRule[]>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        path: Path,
+        authId?: OPTIONAL<Identifier>,
+        accessControlRules?: OPTIONAL<AccessControlRule[]>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.path = path;
+        this.authId = authId;
+        this.accessControlRules = accessControlRules;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a UnusedSpace

@@ -39,32 +39,38 @@ import {
  *
  */
 export class TestSuspendResumeElement {
+    /**
+     * @summary `testInvocationId`.
+     * @description
+     *
+     * The test that was (or failed to be) suspended or resumed. ITU-T Rec.
+     * X.745 (11/93) §8.4.3.6.
+     * [§8.4.3.6](https://www.itu.int/rec/T-REC-X.745-199311-I)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly testInvocationId: TestInvocationId;
+    /**
+     * @summary `tOsStates`.
+     * @description
+     *
+     * State of each TO: before suspend, or after resume. ITU-T Rec. X.745
+     * (11/93) §9.7.
+     * [§9.7](https://www.itu.int/rec/T-REC-X.745-199311-I)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly tOsStates: TOsState[];
+
     constructor(
-        /**
-         * @summary `testInvocationId`.
-         * @description
-         *
-         * The test that was (or failed to be) suspended or resumed. ITU-T Rec.
-         * X.745 (11/93) §8.4.3.6.
-         * [§8.4.3.6](https://www.itu.int/rec/T-REC-X.745-199311-I)
-         *
-         * @public
-         * @readonly
-         */
-        readonly testInvocationId: TestInvocationId,
-        /**
-         * @summary `tOsStates`.
-         * @description
-         *
-         * State of each TO: before suspend, or after resume. ITU-T Rec. X.745
-         * (11/93) §9.7.
-         * [§9.7](https://www.itu.int/rec/T-REC-X.745-199311-I)
-         *
-         * @public
-         * @readonly
-         */
-        readonly tOsStates: TOsState[]
-    ) {}
+        testInvocationId: TestInvocationId,
+        tOsStates: TOsState[]
+    ) {
+        this.testInvocationId = testInvocationId;
+        this.tOsStates = tOsStates;
+    }
 
     /**
      * @summary Restructures an object into a TestSuspendResumeElement

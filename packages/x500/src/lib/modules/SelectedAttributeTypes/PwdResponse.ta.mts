@@ -42,30 +42,36 @@ import {
  *
  */
 export class PwdResponse {
+    /**
+     * @summary `warning`.
+     * @description
+     *
+     * If `timeleft` present and ≠ 0, `error` shall be absent. Shall not
+     * be present with `changeAfterReset`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly warning?: OPTIONAL<PwdResponse_warning>;
+    /**
+     * @summary `error`.
+     * @description
+     *
+     * Absent if `timeleft` present and ≠ 0. `changeAfterReset` ⇒
+     * warning shall not be present.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly error?: OPTIONAL<PwdResponse_error>;
+
     constructor(
-        /**
-         * @summary `warning`.
-         * @description
-         *
-         * If `timeleft` present and ≠ 0, `error` shall be absent. Shall not
-         * be present with `changeAfterReset`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly warning?: OPTIONAL<PwdResponse_warning>,
-        /**
-         * @summary `error`.
-         * @description
-         *
-         * Absent if `timeleft` present and ≠ 0. `changeAfterReset` ⇒
-         * warning shall not be present.
-         *
-         * @public
-         * @readonly
-         */
-        readonly error?: OPTIONAL<PwdResponse_error>
-    ) {}
+        warning?: OPTIONAL<PwdResponse_warning>,
+        error?: OPTIONAL<PwdResponse_error>
+    ) {
+        this.warning = warning;
+        this.error = error;
+    }
 
     /**
      * @summary Restructures an object into a PwdResponse

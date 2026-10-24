@@ -37,35 +37,43 @@ import { SMSEvent, _decode_SMSEvent, _encode_SMSEvent } from "../CAP-datatypes/S
  */
 export
 class RequestReportSMSEventArg {
+    /**
+     * @summary `sMSEvents`.
+     * @description
+     *
+     * Event(s) for which a report is requested. Each `SMSEvent`
+     * carries `eventTypeSMS` (SMSCollectedInfo and
+     * SMSDeliveryRequested are not valid here) and `monitorMode`:
+     * interrupted → report as request; notifyAndContinue →
+     * notification; transparent → do not report.
+     * (3GPP TS 29.078 V19.0.0 clause 12.7.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sMSEvents: SMSEvent[];
+    /**
+     * @summary `extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<Extensions>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `sMSEvents`.
-         * @description
-         *
-         * Event(s) for which a report is requested. Each `SMSEvent`
-         * carries `eventTypeSMS` (SMSCollectedInfo and
-         * SMSDeliveryRequested are not valid here) and `monitorMode`:
-         * interrupted → report as request; notifyAndContinue →
-         * notification; transparent → do not report.
-         * (3GPP TS 29.078 V19.0.0 clause 12.7.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly sMSEvents: SMSEvent[],
-        /**
-         * @summary `extensions`.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<Extensions>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        sMSEvents: SMSEvent[],
+        extensions?: OPTIONAL<Extensions>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.sMSEvents = sMSEvents;
+        this.extensions = extensions;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a RequestReportSMSEventArg

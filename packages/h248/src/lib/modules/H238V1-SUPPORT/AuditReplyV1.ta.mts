@@ -37,29 +37,35 @@ import { TerminationID, _decode_TerminationID, _encode_TerminationID } from "../
  */
 export
 class AuditReplyV1 {
+    /**
+     * @summary `terminationID`.
+     * @description
+     *
+     * Termination the version 1 audit reply describes.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly terminationID: TerminationID;
+    /**
+     * @summary `auditResult`.
+     * @description
+     *
+     * Either a context-audit termination identifier, or the termination
+     * audit. The arm is spelled `contectAuditResult` in the support module.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly auditResult: AuditResultV1;
+
     constructor (
-        /**
-         * @summary `terminationID`.
-         * @description
-         *
-         * Termination the version 1 audit reply describes.
-         *
-         * @public
-         * @readonly
-         */
-        readonly terminationID: TerminationID,
-        /**
-         * @summary `auditResult`.
-         * @description
-         *
-         * Either a context-audit termination identifier, or the termination
-         * audit. The arm is spelled `contectAuditResult` in the support module.
-         *
-         * @public
-         * @readonly
-         */
-        readonly auditResult: AuditResultV1
-    ) {}
+        terminationID: TerminationID,
+        auditResult: AuditResultV1
+    ) {
+        this.terminationID = terminationID;
+        this.auditResult = auditResult;
+    }
 
     /**
      * @summary Restructures an object into a AuditReplyV1

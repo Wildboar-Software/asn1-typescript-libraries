@@ -27,24 +27,30 @@ import {
  *
  */
 export class DelAvlErr {
+    /**
+     * @summary `notOK`.
+     * @description
+     *
+     * Why the delete failed (often `unknownAVL` if `avl-Id` did not identify a local AVL).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly notOK: AVMP_error;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `notOK`.
-         * @description
-         *
-         * Why the delete failed (often `unknownAVL` if `avl-Id` did not identify a local AVL).
-         *
-         * @public
-         * @readonly
-         */
-        readonly notOK: AVMP_error,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        notOK: AVMP_error,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.notOK = notOK;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a DelAvlErr

@@ -91,67 +91,80 @@ const MAX_GENERALIZED_TIME = new Date(9999, 11, 31, 23, 59, 59, 999);
  *
  */
 export class Period {
+    /**
+     * @summary `timesOfDay`.
+     * @description
+     *
+     * SET SIZE (1..MAX). Omitted ⇒ all times of day within the next
+     * element.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly timesOfDay?: OPTIONAL<DayTimeBand[]>;
+    /**
+     * @summary `days`.
+     * @description
+     *
+     * Omitted ⇒ all days within the next element. `dayOf` ⇒ `weeks`
+     * ignored.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly days?: OPTIONAL<Period_days>;
+    /**
+     * @summary `weeks`.
+     * @description
+     *
+     * Omitted ⇒ all weeks. Ignored if `dayOf` used. week 5/53 = last
+     * week.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly weeks?: OPTIONAL<Period_weeks>;
+    /**
+     * @summary `months`.
+     * @description
+     *
+     * Omitted ⇒ all months. intMonth 1 = January.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly months?: OPTIONAL<Period_months>;
+    /**
+     * @summary `years`.
+     * @description
+     *
+     * INTEGER 1000..MAX. Omitted ⇒ all years.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly years?: OPTIONAL<INTEGER[]>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `timesOfDay`.
-         * @description
-         *
-         * SET SIZE (1..MAX). Omitted ⇒ all times of day within the next
-         * element.
-         *
-         * @public
-         * @readonly
-         */
-        readonly timesOfDay?: OPTIONAL<DayTimeBand[]>,
-        /**
-         * @summary `days`.
-         * @description
-         *
-         * Omitted ⇒ all days within the next element. `dayOf` ⇒ `weeks`
-         * ignored.
-         *
-         * @public
-         * @readonly
-         */
-        readonly days?: OPTIONAL<Period_days>,
-        /**
-         * @summary `weeks`.
-         * @description
-         *
-         * Omitted ⇒ all weeks. Ignored if `dayOf` used. week 5/53 = last
-         * week.
-         *
-         * @public
-         * @readonly
-         */
-        readonly weeks?: OPTIONAL<Period_weeks>,
-        /**
-         * @summary `months`.
-         * @description
-         *
-         * Omitted ⇒ all months. intMonth 1 = January.
-         *
-         * @public
-         * @readonly
-         */
-        readonly months?: OPTIONAL<Period_months>,
-        /**
-         * @summary `years`.
-         * @description
-         *
-         * INTEGER 1000..MAX. Omitted ⇒ all years.
-         *
-         * @public
-         * @readonly
-         */
-        readonly years?: OPTIONAL<INTEGER[]>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
+        timesOfDay?: OPTIONAL<DayTimeBand[]>,
+        days?: OPTIONAL<Period_days>,
+        weeks?: OPTIONAL<Period_weeks>,
+        months?: OPTIONAL<Period_months>,
+        years?: OPTIONAL<INTEGER[]>,
+        _unrecognizedExtensionsList: _Element[] = []
     ) {
+        this.timesOfDay = timesOfDay;
+        this.days = days;
+        this.weeks = weeks;
+        this.months = months;
+        this.years = years;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
         if (
             (
                 this.days

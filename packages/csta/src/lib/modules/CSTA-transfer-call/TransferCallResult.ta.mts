@@ -47,64 +47,76 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class TransferCallResult {
+    /**
+     * @summary `transferredCall`.
+     * @description
+     *
+     * Mandatory. A connection in the resulting transferred
+     * call (new CallID may be allocated).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly transferredCall: ConnectionID;
+    /**
+     * @summary `connections`.
+     * @description
+     *
+     * Optional connection list linking old ConnectionIDs of
+     * remaining devices to replacements when CallIDs change
+     * (§12.3.9 FR 8, §12.2.9).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly connections?: OPTIONAL<ConnectionList>;
+    /**
+     * @summary `transferredCallInfo`.
+     * @description
+     *
+     * Optional connection information for `transferredCall`
+     * (§12.2.8).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly transferredCallInfo?: OPTIONAL<ConnectionInformation>;
+    /**
+     * @summary `callLinkageDataList`.
+     * @description
+     *
+     * Optional call-linkage data pairing old and new call
+     * identities (§12.2.5, §12.3.9 FR 8).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly callLinkageDataList?: OPTIONAL<CallLinkageDataList>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional `CSTACommonArguments` carrying the security and
+     * privateData parameters from the ECMA-269 service table.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `transferredCall`.
-         * @description
-         *
-         * Mandatory. A connection in the resulting transferred
-         * call (new CallID may be allocated).
-         *
-         * @public
-         * @readonly
-         */
-        readonly transferredCall: ConnectionID,
-        /**
-         * @summary `connections`.
-         * @description
-         *
-         * Optional connection list linking old ConnectionIDs of
-         * remaining devices to replacements when CallIDs change
-         * (§12.3.9 FR 8, §12.2.9).
-         *
-         * @public
-         * @readonly
-         */
-        readonly connections?: OPTIONAL<ConnectionList>,
-        /**
-         * @summary `transferredCallInfo`.
-         * @description
-         *
-         * Optional connection information for `transferredCall`
-         * (§12.2.8).
-         *
-         * @public
-         * @readonly
-         */
-        readonly transferredCallInfo?: OPTIONAL<ConnectionInformation>,
-        /**
-         * @summary `callLinkageDataList`.
-         * @description
-         *
-         * Optional call-linkage data pairing old and new call
-         * identities (§12.2.5, §12.3.9 FR 8).
-         *
-         * @public
-         * @readonly
-         */
-        readonly callLinkageDataList?: OPTIONAL<CallLinkageDataList>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional `CSTACommonArguments` carrying the security and
-         * privateData parameters from the ECMA-269 service table.
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        transferredCall: ConnectionID,
+        connections?: OPTIONAL<ConnectionList>,
+        transferredCallInfo?: OPTIONAL<ConnectionInformation>,
+        callLinkageDataList?: OPTIONAL<CallLinkageDataList>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.transferredCall = transferredCall;
+        this.connections = connections;
+        this.transferredCallInfo = transferredCallInfo;
+        this.callLinkageDataList = callLinkageDataList;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a TransferCallResult

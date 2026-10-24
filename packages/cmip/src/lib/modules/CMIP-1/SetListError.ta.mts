@@ -53,55 +53,67 @@ import {
  *
  */
 export class SetListError {
+  /**
+   * @summary `managedObjectClass`.
+   * @description
+   *
+   * Class of the object this list applies to.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly managedObjectClass: OPTIONAL<ObjectClass>;
+  /**
+   * @summary `managedObjectInstance`.
+   * @description
+   *
+   * Instance this list applies to.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly managedObjectInstance: OPTIONAL<ObjectInstance>;
+  /**
+   * @summary `currentTime`.
+   * @description
+   *
+   * Time associated with this error, if supplied.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly currentTime: OPTIONAL<GeneralizedTime>;
+  /**
+   * @summary `setInfoList`.
+   * @description
+   *
+   * Per-attribute success (`attribute`) or failure
+   * (`attributeError`).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly setInfoList: SetInfoStatus[];
+  /**
+   * @summary Extensions that are not recognized.
+   * @public
+   * @readonly
+   */
+  public readonly _unrecognizedExtensionsList: _Element[];
+
   constructor(
-    /**
-     * @summary `managedObjectClass`.
-     * @description
-     *
-     * Class of the object this list applies to.
-     *
-     * @public
-     * @readonly
-     */
-    readonly managedObjectClass: OPTIONAL<ObjectClass>,
-    /**
-     * @summary `managedObjectInstance`.
-     * @description
-     *
-     * Instance this list applies to.
-     *
-     * @public
-     * @readonly
-     */
-    readonly managedObjectInstance: OPTIONAL<ObjectInstance>,
-    /**
-     * @summary `currentTime`.
-     * @description
-     *
-     * Time associated with this error, if supplied.
-     *
-     * @public
-     * @readonly
-     */
-    readonly currentTime: OPTIONAL<GeneralizedTime>,
-    /**
-     * @summary `setInfoList`.
-     * @description
-     *
-     * Per-attribute success (`attribute`) or failure
-     * (`attributeError`).
-     *
-     * @public
-     * @readonly
-     */
-    readonly setInfoList: SetInfoStatus[],
-    /**
-     * @summary Extensions that are not recognized.
-     * @public
-     * @readonly
-     */
-    readonly _unrecognizedExtensionsList: _Element[] = []
-  ) {}
+    managedObjectClass: OPTIONAL<ObjectClass>,
+    managedObjectInstance: OPTIONAL<ObjectInstance>,
+    currentTime: OPTIONAL<GeneralizedTime>,
+    setInfoList: SetInfoStatus[],
+    _unrecognizedExtensionsList: _Element[] = []
+  ) {
+    this.managedObjectClass = managedObjectClass;
+    this.managedObjectInstance = managedObjectInstance;
+    this.currentTime = currentTime;
+    this.setInfoList = setInfoList;
+    this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+  }
 
   /**
    * @summary Restructures an object into a SetListError

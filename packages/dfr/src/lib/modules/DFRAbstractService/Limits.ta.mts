@@ -35,26 +35,32 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class Limits {
+    /**
+     * @summary `time_limit`.
+     * @description
+     *
+     * Max execution time for Search.
+     * @public
+     * @readonly
+     */
+    public readonly time_limit?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `count_limit`.
+     * @description
+     *
+     * Max entries to return this invocation.
+     * @public
+     * @readonly
+     */
+    public readonly count_limit?: OPTIONAL<INTEGER>;
+
     constructor (
-        /**
-         * @summary `time_limit`.
-         * @description
-         *
-         * Max execution time for Search.
-         * @public
-         * @readonly
-         */
-        readonly time_limit?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `count_limit`.
-         * @description
-         *
-         * Max entries to return this invocation.
-         * @public
-         * @readonly
-         */
-        readonly count_limit?: OPTIONAL<INTEGER>
-    ) {}
+        time_limit?: OPTIONAL<INTEGER>,
+        count_limit?: OPTIONAL<INTEGER>
+    ) {
+        this.time_limit = time_limit;
+        this.count_limit = count_limit;
+    }
 
     /**
      * @summary Restructures an object into a Limits

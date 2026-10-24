@@ -34,19 +34,23 @@ import {
  *
  */
 export class GetHeaderFromHandle_ResponseParams {
+  /**
+   * @summary `header`.
+   * @description
+   *
+   * BIR header identified by the request handle. Maps to Header
+   * (clause 20, §15.13). X.1083 Table 61.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly header: BioAPI_BIR_HEADER;
+
   constructor(
-    /**
-     * @summary `header`.
-     * @description
-     *
-     * BIR header identified by the request handle. Maps to Header
-     * (clause 20, §15.13). X.1083 Table 61.
-     *
-     * @public
-     * @readonly
-     */
-    readonly header: BioAPI_BIR_HEADER
-  ) {}
+    header: BioAPI_BIR_HEADER
+  ) {
+    this.header = header;
+  }
 
   /**
    * @summary Restructures an object into a GetHeaderFromHandle_ResponseParams

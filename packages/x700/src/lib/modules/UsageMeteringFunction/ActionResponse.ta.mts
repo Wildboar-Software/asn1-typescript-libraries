@@ -40,38 +40,46 @@ import {
  *
  */
 export class ActionResponse {
+    /**
+     * @summary `success`.
+     * @description
+     *
+     * Data objects on which the action was performed. ITU-T
+     * Rec. X.742 (04/95) §8.1.4, Table 9.
+     * @public
+     * @readonly
+     */
+    public readonly success?: OPTIONAL<ObjectInstance[]>;
+    /**
+     * @summary `failed`.
+     * @description
+     *
+     * Data objects on which the action was unsuccessful.
+     * ITU-T Rec. X.742 (04/95) §8.1.4, Table 9.
+     * @public
+     * @readonly
+     */
+    public readonly failed?: OPTIONAL<ObjectInstance[]>;
+    /**
+     * @summary `indeterminate`.
+     * @description
+     *
+     * Data objects whose outcome is unknown. ITU-T Rec. X.742
+     * (04/95) §8.1.4, Table 9.
+     * @public
+     * @readonly
+     */
+    public readonly indeterminate?: OPTIONAL<ObjectInstance[]>;
+
     constructor(
-        /**
-         * @summary `success`.
-         * @description
-         *
-         * Data objects on which the action was performed. ITU-T
-         * Rec. X.742 (04/95) §8.1.4, Table 9.
-         * @public
-         * @readonly
-         */
-        readonly success?: OPTIONAL<ObjectInstance[]>,
-        /**
-         * @summary `failed`.
-         * @description
-         *
-         * Data objects on which the action was unsuccessful.
-         * ITU-T Rec. X.742 (04/95) §8.1.4, Table 9.
-         * @public
-         * @readonly
-         */
-        readonly failed?: OPTIONAL<ObjectInstance[]>,
-        /**
-         * @summary `indeterminate`.
-         * @description
-         *
-         * Data objects whose outcome is unknown. ITU-T Rec. X.742
-         * (04/95) §8.1.4, Table 9.
-         * @public
-         * @readonly
-         */
-        readonly indeterminate?: OPTIONAL<ObjectInstance[]>
-    ) {}
+        success?: OPTIONAL<ObjectInstance[]>,
+        failed?: OPTIONAL<ObjectInstance[]>,
+        indeterminate?: OPTIONAL<ObjectInstance[]>
+    ) {
+        this.success = success;
+        this.failed = failed;
+        this.indeterminate = indeterminate;
+    }
 
     /**
      * @summary Restructures an object into a ActionResponse

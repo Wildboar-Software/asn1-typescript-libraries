@@ -34,24 +34,30 @@ import { CertificateSerialNumber, _decode_CertificateSerialNumber, _encode_Certi
  */
 export
 class IssuerAndSerialNumber {
+    /**
+     * @summary `issuer`.
+     * @description
+     * Certificate issuer DN. ISO/IEC 7816-15:2016 §8.2.4.
+     * @public
+     * @readonly
+     */
+    public readonly issuer: Name;
+    /**
+     * @summary `serialNumber`.
+     * @description
+     * Certificate serial number. ISO/IEC 7816-15:2016 §8.2.4.
+     * @public
+     * @readonly
+     */
+    public readonly serialNumber: CertificateSerialNumber;
+
     constructor (
-        /**
-         * @summary `issuer`.
-         * @description
-         * Certificate issuer DN. ISO/IEC 7816-15:2016 §8.2.4.
-         * @public
-         * @readonly
-         */
-        readonly issuer: Name,
-        /**
-         * @summary `serialNumber`.
-         * @description
-         * Certificate serial number. ISO/IEC 7816-15:2016 §8.2.4.
-         * @public
-         * @readonly
-         */
-        readonly serialNumber: CertificateSerialNumber
-    ) {}
+        issuer: Name,
+        serialNumber: CertificateSerialNumber
+    ) {
+        this.issuer = issuer;
+        this.serialNumber = serialNumber;
+    }
 
     /**
      * @summary Restructures an object into a IssuerAndSerialNumber

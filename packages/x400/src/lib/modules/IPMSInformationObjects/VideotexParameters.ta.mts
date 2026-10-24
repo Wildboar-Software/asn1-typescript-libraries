@@ -31,14 +31,18 @@ import {
  *
  */
 export class VideotexParameters {
+    /**
+     * @summary `syntax`.
+     * @public
+     * @readonly
+     */
+    public readonly syntax?: OPTIONAL<VideotexSyntax>;
+
     constructor(
-        /**
-         * @summary `syntax`.
-         * @public
-         * @readonly
-         */
-        readonly syntax?: OPTIONAL<VideotexSyntax>
-    ) {}
+        syntax?: OPTIONAL<VideotexSyntax>
+    ) {
+        this.syntax = syntax;
+    }
 
     /**
      * @summary Restructures an object into a VideotexParameters

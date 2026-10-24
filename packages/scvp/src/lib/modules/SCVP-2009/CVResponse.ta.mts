@@ -78,145 +78,173 @@ import {
  *
  */
 export class CVResponse {
+  /**
+   * @summary `cvResponseVersion`.
+   * @description
+   *
+   * Version of this `CVResponse` ([RFC 5055 §4.1](https://datatracker.ietf.org/doc/html/rfc5055#section-4.1)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly cvResponseVersion: INTEGER;
+  /**
+   * @summary `serverConfigurationID`.
+   * @description
+   *
+   * Integer identifying the server configuration used
+   * ([RFC 5055 §4.2](https://datatracker.ietf.org/doc/html/rfc5055#section-4.2)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly serverConfigurationID: INTEGER;
+  /**
+   * @summary `producedAt`.
+   * @description
+   *
+   * UTC time the response was produced ([RFC 5055 §4.3](https://datatracker.ietf.org/doc/html/rfc5055#section-4.3)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly producedAt: GeneralizedTime;
+  /**
+   * @summary `responseStatus`.
+   * @description
+   *
+   * Overall request status (`CVStatusCode` + optional message).
+   * Codes 0–9 are success-class; ≥10 are errors ([RFC 5055 §4.4](https://datatracker.ietf.org/doc/html/rfc5055#section-4.4)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly responseStatus: ResponseStatus;
+  /**
+   * @summary `respValidationPolicy`.
+   * @description
+   *
+   * Validation policy used, by value or as referenced
+   * ([RFC 5055 §4.5](https://datatracker.ietf.org/doc/html/rfc5055#section-4.5)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly respValidationPolicy?: OPTIONAL<RespValidationPolicy>;
+  /**
+   * @summary `requestRef`.
+   * @description
+   *
+   * Hash of or full copy of the `CVRequest` ([RFC 5055 §4.6](https://datatracker.ietf.org/doc/html/rfc5055#section-4.6)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly requestRef?: OPTIONAL<RequestReference>;
+  /**
+   * @summary `requestorRef`.
+   * @description
+   *
+   * Echo/relay of requestor names ([RFC 5055 §4.7](https://datatracker.ietf.org/doc/html/rfc5055#section-4.7)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly requestorRef?: OPTIONAL<GeneralNames>;
+  /**
+   * @summary `requestorName`.
+   * @description
+   *
+   * Requestor name(s) as known to the server ([RFC 5055 §4.8](https://datatracker.ietf.org/doc/html/rfc5055#section-4.8)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly requestorName?: OPTIONAL<GeneralNames>;
+  /**
+   * @summary `replyObjects`.
+   * @description
+   *
+   * Per-certificate replies (`ReplyObjects`) ([RFC 5055 §4.9](https://datatracker.ietf.org/doc/html/rfc5055#section-4.9)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly replyObjects?: OPTIONAL<ReplyObjects>;
+  /**
+   * @summary `respNonce`.
+   * @description
+   *
+   * Nonce binding response to request; MUST match `requestNonce`
+   * for non-cached responses; MUST be omitted for cached responses
+   * ([RFC 5055 §4.10](https://datatracker.ietf.org/doc/html/rfc5055#section-4.10)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly respNonce?: OPTIONAL<OCTET_STRING>;
+  /**
+   * @summary `serverContextInfo`.
+   * @description
+   *
+   * Opaque context for obtaining another path on a follow-up query
+   * ([RFC 5055 §4.11](https://datatracker.ietf.org/doc/html/rfc5055#section-4.11)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly serverContextInfo?: OPTIONAL<OCTET_STRING>;
+  /**
+   * @summary `cvResponseExtensions`.
+   * @description
+   *
+   * Optional response extensions ([RFC 5055 §4.12](https://datatracker.ietf.org/doc/html/rfc5055#section-4.12)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly cvResponseExtensions?: OPTIONAL<Extensions>;
+  /**
+   * @summary `requestorText`.
+   * @description
+   *
+   * Echo of client `requestorText` for non-cached responses
+   * ([RFC 5055 §4.13](https://datatracker.ietf.org/doc/html/rfc5055#section-4.13)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly requestorText?: OPTIONAL<UTF8String>;
+
   constructor(
-    /**
-     * @summary `cvResponseVersion`.
-     * @description
-     *
-     * Version of this `CVResponse` ([RFC 5055 §4.1](https://datatracker.ietf.org/doc/html/rfc5055#section-4.1)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly cvResponseVersion: INTEGER,
-    /**
-     * @summary `serverConfigurationID`.
-     * @description
-     *
-     * Integer identifying the server configuration used
-     * ([RFC 5055 §4.2](https://datatracker.ietf.org/doc/html/rfc5055#section-4.2)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly serverConfigurationID: INTEGER,
-    /**
-     * @summary `producedAt`.
-     * @description
-     *
-     * UTC time the response was produced ([RFC 5055 §4.3](https://datatracker.ietf.org/doc/html/rfc5055#section-4.3)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly producedAt: GeneralizedTime,
-    /**
-     * @summary `responseStatus`.
-     * @description
-     *
-     * Overall request status (`CVStatusCode` + optional message).
-     * Codes 0–9 are success-class; ≥10 are errors ([RFC 5055 §4.4](https://datatracker.ietf.org/doc/html/rfc5055#section-4.4)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly responseStatus: ResponseStatus,
-    /**
-     * @summary `respValidationPolicy`.
-     * @description
-     *
-     * Validation policy used, by value or as referenced
-     * ([RFC 5055 §4.5](https://datatracker.ietf.org/doc/html/rfc5055#section-4.5)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly respValidationPolicy?: OPTIONAL<RespValidationPolicy>,
-    /**
-     * @summary `requestRef`.
-     * @description
-     *
-     * Hash of or full copy of the `CVRequest` ([RFC 5055 §4.6](https://datatracker.ietf.org/doc/html/rfc5055#section-4.6)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly requestRef?: OPTIONAL<RequestReference>,
-    /**
-     * @summary `requestorRef`.
-     * @description
-     *
-     * Echo/relay of requestor names ([RFC 5055 §4.7](https://datatracker.ietf.org/doc/html/rfc5055#section-4.7)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly requestorRef?: OPTIONAL<GeneralNames>,
-    /**
-     * @summary `requestorName`.
-     * @description
-     *
-     * Requestor name(s) as known to the server ([RFC 5055 §4.8](https://datatracker.ietf.org/doc/html/rfc5055#section-4.8)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly requestorName?: OPTIONAL<GeneralNames>,
-    /**
-     * @summary `replyObjects`.
-     * @description
-     *
-     * Per-certificate replies (`ReplyObjects`) ([RFC 5055 §4.9](https://datatracker.ietf.org/doc/html/rfc5055#section-4.9)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly replyObjects?: OPTIONAL<ReplyObjects>,
-    /**
-     * @summary `respNonce`.
-     * @description
-     *
-     * Nonce binding response to request; MUST match `requestNonce`
-     * for non-cached responses; MUST be omitted for cached responses
-     * ([RFC 5055 §4.10](https://datatracker.ietf.org/doc/html/rfc5055#section-4.10)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly respNonce?: OPTIONAL<OCTET_STRING>,
-    /**
-     * @summary `serverContextInfo`.
-     * @description
-     *
-     * Opaque context for obtaining another path on a follow-up query
-     * ([RFC 5055 §4.11](https://datatracker.ietf.org/doc/html/rfc5055#section-4.11)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly serverContextInfo?: OPTIONAL<OCTET_STRING>,
-    /**
-     * @summary `cvResponseExtensions`.
-     * @description
-     *
-     * Optional response extensions ([RFC 5055 §4.12](https://datatracker.ietf.org/doc/html/rfc5055#section-4.12)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly cvResponseExtensions?: OPTIONAL<Extensions>,
-    /**
-     * @summary `requestorText`.
-     * @description
-     *
-     * Echo of client `requestorText` for non-cached responses
-     * ([RFC 5055 §4.13](https://datatracker.ietf.org/doc/html/rfc5055#section-4.13)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly requestorText?: OPTIONAL<UTF8String>
-  ) {}
+    cvResponseVersion: INTEGER,
+    serverConfigurationID: INTEGER,
+    producedAt: GeneralizedTime,
+    responseStatus: ResponseStatus,
+    respValidationPolicy?: OPTIONAL<RespValidationPolicy>,
+    requestRef?: OPTIONAL<RequestReference>,
+    requestorRef?: OPTIONAL<GeneralNames>,
+    requestorName?: OPTIONAL<GeneralNames>,
+    replyObjects?: OPTIONAL<ReplyObjects>,
+    respNonce?: OPTIONAL<OCTET_STRING>,
+    serverContextInfo?: OPTIONAL<OCTET_STRING>,
+    cvResponseExtensions?: OPTIONAL<Extensions>,
+    requestorText?: OPTIONAL<UTF8String>
+  ) {
+    this.cvResponseVersion = cvResponseVersion;
+    this.serverConfigurationID = serverConfigurationID;
+    this.producedAt = producedAt;
+    this.responseStatus = responseStatus;
+    this.respValidationPolicy = respValidationPolicy;
+    this.requestRef = requestRef;
+    this.requestorRef = requestorRef;
+    this.requestorName = requestorName;
+    this.replyObjects = replyObjects;
+    this.respNonce = respNonce;
+    this.serverContextInfo = serverContextInfo;
+    this.cvResponseExtensions = cvResponseExtensions;
+    this.requestorText = requestorText;
+  }
 
   /**
    * @summary Restructures an object into a CVResponse

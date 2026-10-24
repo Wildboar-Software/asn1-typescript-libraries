@@ -43,64 +43,79 @@ import { cia_ub_recordLength } from "../CryptographicInformationFramework/cia-ub
  */
 export
 class RecordInfo {
+    /**
+     * @summary `oDRecordLength`.
+     * @description
+     * EF.OD record length (0 = variable). ISO/IEC 7816-15:2016 §8.10.
+     * @public
+     * @readonly
+     */
+    public readonly oDRecordLength?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `prKDRecordLength`.
+     * @description
+     * EF.PrKD record length. ISO/IEC 7816-15:2016 §8.10.
+     * @public
+     * @readonly
+     */
+    public readonly prKDRecordLength?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `puKDRecordLength`.
+     * @description
+     * EF.PuKD record length. ISO/IEC 7816-15:2016 §8.10.
+     * @public
+     * @readonly
+     */
+    public readonly puKDRecordLength?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `sKDRecordLength`.
+     * @description
+     * EF.SKD record length. ISO/IEC 7816-15:2016 §8.10.
+     * @public
+     * @readonly
+     */
+    public readonly sKDRecordLength?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `cDRecordLength`.
+     * @description
+     * EF.CD record length. ISO/IEC 7816-15:2016 §8.10.
+     * @public
+     * @readonly
+     */
+    public readonly cDRecordLength?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `dCODRecordLength`.
+     * @description
+     * EF.DCOD record length. ISO/IEC 7816-15:2016 §8.10.
+     * @public
+     * @readonly
+     */
+    public readonly dCODRecordLength?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `aODRecordLength`.
+     * @description
+     * EF.AOD record length. ISO/IEC 7816-15:2016 §8.10.
+     * @public
+     * @readonly
+     */
+    public readonly aODRecordLength?: OPTIONAL<INTEGER>;
+
     constructor (
-        /**
-         * @summary `oDRecordLength`.
-         * @description
-         * EF.OD record length (0 = variable). ISO/IEC 7816-15:2016 §8.10.
-         * @public
-         * @readonly
-         */
-        readonly oDRecordLength?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `prKDRecordLength`.
-         * @description
-         * EF.PrKD record length. ISO/IEC 7816-15:2016 §8.10.
-         * @public
-         * @readonly
-         */
-        readonly prKDRecordLength?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `puKDRecordLength`.
-         * @description
-         * EF.PuKD record length. ISO/IEC 7816-15:2016 §8.10.
-         * @public
-         * @readonly
-         */
-        readonly puKDRecordLength?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `sKDRecordLength`.
-         * @description
-         * EF.SKD record length. ISO/IEC 7816-15:2016 §8.10.
-         * @public
-         * @readonly
-         */
-        readonly sKDRecordLength?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `cDRecordLength`.
-         * @description
-         * EF.CD record length. ISO/IEC 7816-15:2016 §8.10.
-         * @public
-         * @readonly
-         */
-        readonly cDRecordLength?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `dCODRecordLength`.
-         * @description
-         * EF.DCOD record length. ISO/IEC 7816-15:2016 §8.10.
-         * @public
-         * @readonly
-         */
-        readonly dCODRecordLength?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `aODRecordLength`.
-         * @description
-         * EF.AOD record length. ISO/IEC 7816-15:2016 §8.10.
-         * @public
-         * @readonly
-         */
-        readonly aODRecordLength?: OPTIONAL<INTEGER>
+        oDRecordLength?: OPTIONAL<INTEGER>,
+        prKDRecordLength?: OPTIONAL<INTEGER>,
+        puKDRecordLength?: OPTIONAL<INTEGER>,
+        sKDRecordLength?: OPTIONAL<INTEGER>,
+        cDRecordLength?: OPTIONAL<INTEGER>,
+        dCODRecordLength?: OPTIONAL<INTEGER>,
+        aODRecordLength?: OPTIONAL<INTEGER>
     ) {
+        this.oDRecordLength = oDRecordLength;
+        this.prKDRecordLength = prKDRecordLength;
+        this.puKDRecordLength = puKDRecordLength;
+        this.sKDRecordLength = sKDRecordLength;
+        this.cDRecordLength = cDRecordLength;
+        this.dCODRecordLength = dCODRecordLength;
+        this.aODRecordLength = aODRecordLength;
         for (const [name, value] of [
             ["oDRecordLength", oDRecordLength],
             ["prKDRecordLength", prKDRecordLength],

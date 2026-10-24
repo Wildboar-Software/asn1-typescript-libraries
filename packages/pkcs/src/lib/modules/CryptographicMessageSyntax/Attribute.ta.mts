@@ -27,20 +27,26 @@ import {
  *
  */
 export class Attribute {
+    /**
+     * @summary `attrType`.
+     * @public
+     * @readonly
+     */
+    public readonly attrType: OBJECT_IDENTIFIER;
+    /**
+     * @summary `attrValues`.
+     * @public
+     * @readonly
+     */
+    public readonly attrValues: AttributeValue[];
+
     constructor(
-        /**
-         * @summary `attrType`.
-         * @public
-         * @readonly
-         */
-        readonly attrType: OBJECT_IDENTIFIER,
-        /**
-         * @summary `attrValues`.
-         * @public
-         * @readonly
-         */
-        readonly attrValues: AttributeValue[]
-    ) {}
+        attrType: OBJECT_IDENTIFIER,
+        attrValues: AttributeValue[]
+    ) {
+        this.attrType = attrType;
+        this.attrValues = attrValues;
+    }
 
     /**
      * @summary Restructures an object into a Attribute

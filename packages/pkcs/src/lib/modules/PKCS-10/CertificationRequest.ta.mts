@@ -33,26 +33,34 @@ import {
  *
  */
 export class CertificationRequest {
+    /**
+     * @summary `certificationRequestInfo`.
+     * @public
+     * @readonly
+     */
+    public readonly certificationRequestInfo: CertificationRequestInfo;
+    /**
+     * @summary `signatureAlgorithm`.
+     * @public
+     * @readonly
+     */
+    public readonly signatureAlgorithm: AlgorithmIdentifier;
+    /**
+     * @summary `signature`.
+     * @public
+     * @readonly
+     */
+    public readonly signature: BIT_STRING;
+
     constructor(
-        /**
-         * @summary `certificationRequestInfo`.
-         * @public
-         * @readonly
-         */
-        readonly certificationRequestInfo: CertificationRequestInfo,
-        /**
-         * @summary `signatureAlgorithm`.
-         * @public
-         * @readonly
-         */
-        readonly signatureAlgorithm: AlgorithmIdentifier,
-        /**
-         * @summary `signature`.
-         * @public
-         * @readonly
-         */
-        readonly signature: BIT_STRING
-    ) {}
+        certificationRequestInfo: CertificationRequestInfo,
+        signatureAlgorithm: AlgorithmIdentifier,
+        signature: BIT_STRING
+    ) {
+        this.certificationRequestInfo = certificationRequestInfo;
+        this.signatureAlgorithm = signatureAlgorithm;
+        this.signature = signature;
+    }
 
     /**
      * @summary Restructures an object into a CertificationRequest

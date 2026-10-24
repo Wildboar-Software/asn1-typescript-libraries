@@ -46,65 +46,79 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class ReRouteRequestArgument {
+    /**
+     * @summary `crossRefIdentifier`.
+     * @description
+     *
+     * Per-call routeing dialogue (`routeingCrossRefID`).
+     * @public
+     * @readonly
+     */
+    public readonly crossRefIdentifier: RouteingCrossRefID;
+    /**
+     * @summary `routeRegisterReqID`.
+     * @description
+     *
+     * Mandatory if the SF supports route registration; otherwise
+     * absent. If absent, `routeingCrossRefID` is unique in the
+     * sub-domain.
+     * @public
+     * @readonly
+     */
+    public readonly routeRegisterReqID?: OPTIONAL<RouteRegisterReqID>;
+    /**
+     * @summary `replyTimeout`.
+     * @description
+     *
+     * How long CF may take to respond, if provided.
+     * @public
+     * @readonly
+     */
+    public readonly replyTimeout?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `correlatorData`.
+     * @description
+     *
+     * Correlator data associated with the call.
+     * @public
+     * @readonly
+     */
+    public readonly correlatorData?: OPTIONAL<CorrelatorData>;
+    /**
+     * @summary `callLinkageData`.
+     * @description
+     *
+     * Call/thread linkage identifiers.
+     * @public
+     * @readonly
+     */
+    public readonly callLinkageData?: OPTIONAL<CallLinkageData>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `crossRefIdentifier`.
-         * @description
-         *
-         * Per-call routeing dialogue (`routeingCrossRefID`).
-         * @public
-         * @readonly
-         */
-        readonly crossRefIdentifier: RouteingCrossRefID,
-        /**
-         * @summary `routeRegisterReqID`.
-         * @description
-         *
-         * Mandatory if the SF supports route registration; otherwise
-         * absent. If absent, `routeingCrossRefID` is unique in the
-         * sub-domain.
-         * @public
-         * @readonly
-         */
-        readonly routeRegisterReqID?: OPTIONAL<RouteRegisterReqID>,
-        /**
-         * @summary `replyTimeout`.
-         * @description
-         *
-         * How long CF may take to respond, if provided.
-         * @public
-         * @readonly
-         */
-        readonly replyTimeout?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `correlatorData`.
-         * @description
-         *
-         * Correlator data associated with the call.
-         * @public
-         * @readonly
-         */
-        readonly correlatorData?: OPTIONAL<CorrelatorData>,
-        /**
-         * @summary `callLinkageData`.
-         * @description
-         *
-         * Call/thread linkage identifiers.
-         * @public
-         * @readonly
-         */
-        readonly callLinkageData?: OPTIONAL<CallLinkageData>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        crossRefIdentifier: RouteingCrossRefID,
+        routeRegisterReqID?: OPTIONAL<RouteRegisterReqID>,
+        replyTimeout?: OPTIONAL<INTEGER>,
+        correlatorData?: OPTIONAL<CorrelatorData>,
+        callLinkageData?: OPTIONAL<CallLinkageData>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.crossRefIdentifier = crossRefIdentifier;
+        this.routeRegisterReqID = routeRegisterReqID;
+        this.replyTimeout = replyTimeout;
+        this.correlatorData = correlatorData;
+        this.callLinkageData = callLinkageData;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a ReRouteRequestArgument

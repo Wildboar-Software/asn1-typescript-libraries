@@ -36,20 +36,26 @@ import {
  *
  */
 export class CoincidentProtectedUnidirectionalConnections {
+    /**
+     * @summary `protectedXC`.
+     * @public
+     * @readonly
+     */
+    public readonly protectedXC: ProtectedXC;
+    /**
+     * @summary `multicastXC`.
+     * @public
+     * @readonly
+     */
+    public readonly multicastXC: MulticastXC;
+
     constructor(
-        /**
-         * @summary `protectedXC`.
-         * @public
-         * @readonly
-         */
-        readonly protectedXC: ProtectedXC,
-        /**
-         * @summary `multicastXC`.
-         * @public
-         * @readonly
-         */
-        readonly multicastXC: MulticastXC
-    ) {}
+        protectedXC: ProtectedXC,
+        multicastXC: MulticastXC
+    ) {
+        this.protectedXC = protectedXC;
+        this.multicastXC = multicastXC;
+    }
 
     /**
      * @summary Restructures an object into a CoincidentProtectedUnidirectionalConnections

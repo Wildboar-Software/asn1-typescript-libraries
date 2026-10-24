@@ -46,30 +46,36 @@ import {
  *
  */
 export class GUISelectEvent_AcknowledgementParams {
+  /**
+   * @summary `selectedInstances`.
+   * @description
+   *
+   * Instances chosen by the GUI handler; written to
+   * `SelectedInstances`. X.1083 §17.2.9, Table 125.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly selectedInstances: BioAPI_BIR_SUBTYPE_MASK;
+  /**
+   * @summary `response`.
+   * @description
+   *
+   * Handler's GUI response; written to `Response`. X.1083
+   * §17.2.9, Table 125.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly response: BioAPI_GUI_RESPONSE;
+
   constructor(
-    /**
-     * @summary `selectedInstances`.
-     * @description
-     *
-     * Instances chosen by the GUI handler; written to
-     * `SelectedInstances`. X.1083 §17.2.9, Table 125.
-     *
-     * @public
-     * @readonly
-     */
-    readonly selectedInstances: BioAPI_BIR_SUBTYPE_MASK,
-    /**
-     * @summary `response`.
-     * @description
-     *
-     * Handler's GUI response; written to `Response`. X.1083
-     * §17.2.9, Table 125.
-     *
-     * @public
-     * @readonly
-     */
-    readonly response: BioAPI_GUI_RESPONSE
-  ) {}
+    selectedInstances: BioAPI_BIR_SUBTYPE_MASK,
+    response: BioAPI_GUI_RESPONSE
+  ) {
+    this.selectedInstances = selectedInstances;
+    this.response = response;
+  }
 
   /**
    * @summary Restructures an object into a GUISelectEvent_AcknowledgementParams

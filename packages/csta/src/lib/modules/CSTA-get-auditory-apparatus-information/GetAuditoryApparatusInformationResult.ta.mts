@@ -36,29 +36,35 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class GetAuditoryApparatusInformationResult {
+    /**
+     * @summary `auditoryApparatusList`.
+     * @description
+     *
+     * One entry per apparatus: type, speaker/microphone/hookswitch
+     * capability bits, `hookswitchID` (a hookswitch may serve multiple
+     * apparatuses).
+     * @public
+     * @readonly
+     */
+    public readonly auditoryApparatusList: AuditoryApparatusList;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `auditoryApparatusList`.
-         * @description
-         *
-         * One entry per apparatus: type, speaker/microphone/hookswitch
-         * capability bits, `hookswitchID` (a hookswitch may serve multiple
-         * apparatuses).
-         * @public
-         * @readonly
-         */
-        readonly auditoryApparatusList: AuditoryApparatusList,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        auditoryApparatusList: AuditoryApparatusList,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.auditoryApparatusList = auditoryApparatusList;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a GetAuditoryApparatusInformationResult

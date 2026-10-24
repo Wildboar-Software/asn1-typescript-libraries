@@ -39,29 +39,35 @@ import {
  *
  */
 export class ScriptThreadSet {
+    /**
+     * @summary `scriptId`.
+     * @description
+     *
+     * Launch-script instance this thread is executing. ITU-T
+     * Rec. X.753 (10/97) §8.1.2.3.2, A.4.
+     * @public
+     * @readonly
+     */
+    public readonly scriptId: ScriptId;
+    /**
+     * @summary `threadId`.
+     * @description
+     *
+     * Thread that was spawned for that script. Supply this to
+     * suspend/resume a suspendable thread. ITU-T Rec. X.753
+     * (10/97) §7.2, §8.3.1–§8.3.2, A.4.
+     * @public
+     * @readonly
+     */
+    public readonly threadId: ThreadId;
+
     constructor(
-        /**
-         * @summary `scriptId`.
-         * @description
-         *
-         * Launch-script instance this thread is executing. ITU-T
-         * Rec. X.753 (10/97) §8.1.2.3.2, A.4.
-         * @public
-         * @readonly
-         */
-        readonly scriptId: ScriptId,
-        /**
-         * @summary `threadId`.
-         * @description
-         *
-         * Thread that was spawned for that script. Supply this to
-         * suspend/resume a suspendable thread. ITU-T Rec. X.753
-         * (10/97) §7.2, §8.3.1–§8.3.2, A.4.
-         * @public
-         * @readonly
-         */
-        readonly threadId: ThreadId
-    ) {}
+        scriptId: ScriptId,
+        threadId: ThreadId
+    ) {
+        this.scriptId = scriptId;
+        this.threadId = threadId;
+    }
 
     /**
      * @summary Restructures an object into a ScriptThreadSet

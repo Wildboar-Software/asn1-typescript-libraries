@@ -38,66 +38,80 @@ import { XRES, _decode_XRES, _encode_XRES } from "../MAP-MS-DataTypes/XRES.ta.mj
  */
 export
 class AuthenticationQuintuplet {
+    /**
+     * @summary `rand`.
+     * @description
+     *
+     * Random number used for authentication (3GPP TS 29.002 V19.1.0 clause
+     * 7.6.7.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly rand: RAND;
+    /**
+     * @summary `xres`.
+     * @description
+     *
+     * Expected response to a UMTS authentication request (3GPP TS 29.002
+     * V19.1.0 clause 7.6.7.5).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly xres: XRES;
+    /**
+     * @summary `ck`.
+     * @description
+     *
+     * UMTS ciphering key (3GPP TS 29.002 V19.1.0 clause 7.6.7.5A).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ck: CK;
+    /**
+     * @summary `ik`.
+     * @description
+     *
+     * Integrity Key (3GPP TS 29.002 V19.1.0 clause 7.6.7.5B).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ik: IK;
+    /**
+     * @summary `autn`.
+     * @description
+     *
+     * Authentication Token (3GPP TS 29.002 V19.1.0 clause 7.6.7.5C).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly autn: AUTN;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `rand`.
-         * @description
-         *
-         * Random number used for authentication (3GPP TS 29.002 V19.1.0 clause
-         * 7.6.7.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly rand: RAND,
-        /**
-         * @summary `xres`.
-         * @description
-         *
-         * Expected response to a UMTS authentication request (3GPP TS 29.002
-         * V19.1.0 clause 7.6.7.5).
-         *
-         * @public
-         * @readonly
-         */
-        readonly xres: XRES,
-        /**
-         * @summary `ck`.
-         * @description
-         *
-         * UMTS ciphering key (3GPP TS 29.002 V19.1.0 clause 7.6.7.5A).
-         *
-         * @public
-         * @readonly
-         */
-        readonly ck: CK,
-        /**
-         * @summary `ik`.
-         * @description
-         *
-         * Integrity Key (3GPP TS 29.002 V19.1.0 clause 7.6.7.5B).
-         *
-         * @public
-         * @readonly
-         */
-        readonly ik: IK,
-        /**
-         * @summary `autn`.
-         * @description
-         *
-         * Authentication Token (3GPP TS 29.002 V19.1.0 clause 7.6.7.5C).
-         *
-         * @public
-         * @readonly
-         */
-        readonly autn: AUTN,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        rand: RAND,
+        xres: XRES,
+        ck: CK,
+        ik: IK,
+        autn: AUTN,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.rand = rand;
+        this.xres = xres;
+        this.ck = ck;
+        this.ik = ik;
+        this.autn = autn;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a AuthenticationQuintuplet

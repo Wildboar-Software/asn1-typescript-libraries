@@ -60,76 +60,91 @@ import {
  *
  */
 export class MasterOrShadowAccessPoint extends AccessPoint {
-    constructor(
-        /**
-         * @summary `ae_title`.
-         * @description
-         *
-         * DSA's Name. Ignored for LDAP servers.
-         *
-         * @public
-         * @readonly
-         */
-        override readonly ae_title: Name /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `address`.
-         * @description
-         *
-         * PresentationAddress. For IDM/DSP-over-TCP, ignore pSelector /
-         * sSelector / tSelector. LDAP: those selectors ignored too.
-         *
-         * @public
-         * @readonly
-         */
-        override readonly address: PresentationAddress /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `protocolInformation`.
-         * @description
-         *
-         * SET SIZE (1..MAX). Ignored for LDAP. Empty SET illegal; omit
-         * instead.
-         *
-         * @public
-         * @readonly
-         */
-        override readonly protocolInformation?: OPTIONAL<
+    /**
+     * @summary `ae_title`.
+     * @description
+     *
+     * DSA's Name. Ignored for LDAP servers.
+     *
+     * @public
+     * @readonly
+     */
+    public override readonly ae_title: Name; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `address`.
+     * @description
+     *
+     * PresentationAddress. For IDM/DSP-over-TCP, ignore pSelector /
+     * sSelector / tSelector. LDAP: those selectors ignored too.
+     *
+     * @public
+     * @readonly
+     */
+    public override readonly address: PresentationAddress; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `protocolInformation`.
+     * @description
+     *
+     * SET SIZE (1..MAX). Ignored for LDAP. Empty SET illegal; omit
+     * instead.
+     *
+     * @public
+     * @readonly
+     */
+    public override readonly protocolInformation?: OPTIONAL<
             ProtocolInformation[]
-        > /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `category`.
-         * @description
-         *
-         * DEFAULT `master`. `master`(0) naming-context master; `shadow`(1)
-         * commonly usable replica (LDAP shadow may still update);
-         * `writeableCopy`(2) LDAP only.
-         *
-         * @public
-         * @readonly
-         */
-        readonly category?: OPTIONAL<MasterOrShadowAccessPoint_category>,
-        /**
-         * @summary `chainingRequired`.
-         * @description
-         *
-         * DEFAULT FALSE. TRUE ⇒ do not return a referral for that DSA;
-         * chain.
-         *
-         * @public
-         * @readonly
-         */
-        readonly chainingRequired?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        override readonly _unrecognizedExtensionsList: _Element[] = []
+        >; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `category`.
+     * @description
+     *
+     * DEFAULT `master`. `master`(0) naming-context master; `shadow`(1)
+     * commonly usable replica (LDAP shadow may still update);
+     * `writeableCopy`(2) LDAP only.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly category?: OPTIONAL<MasterOrShadowAccessPoint_category>;
+    /**
+     * @summary `chainingRequired`.
+     * @description
+     *
+     * DEFAULT FALSE. TRUE ⇒ do not return a referral for that DSA;
+     * chain.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly chainingRequired?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public override readonly _unrecognizedExtensionsList: _Element[];
+
+    constructor(
+        ae_title: Name,
+        address: PresentationAddress,
+        protocolInformation?: OPTIONAL<
+            ProtocolInformation[]
+        >,
+        category?: OPTIONAL<MasterOrShadowAccessPoint_category>,
+        chainingRequired?: OPTIONAL<BOOLEAN>,
+        _unrecognizedExtensionsList: _Element[] = []
     ) {
         super(
             ae_title,
             address,
             protocolInformation,
         );
+        this.ae_title = ae_title;
+        this.address = address;
+        this.protocolInformation = protocolInformation;
+        this.category = category;
+        this.chainingRequired = chainingRequired;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
     }
 
     /**

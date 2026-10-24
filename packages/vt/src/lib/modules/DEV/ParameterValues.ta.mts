@@ -91,156 +91,188 @@ import { ParameterValues_defaultCOinitialValue, _decode_ParameterValues_defaultC
  */
 export
 class ParameterValues {
+    /**
+     * @summary `defaultCOaccess`.
+     * @description
+     * CSS `AccessRuleValue` for the implicit default CO. ISO/IEC
+     * 9040:1997 §23.1 table 12.
+     * @public
+     * @readonly
+     */
+    public readonly defaultCOaccess?: OPTIONAL<AccessRuleValue>;
+    /**
+     * @summary `defaultCOPriority`.
+     * @description
+     * Agreed default-CO priority. Same meaning as CO-priority.
+     * ISO/IEC 9040:1997 §23.1 table 12.
+     * @public
+     * @readonly
+     */
+    public readonly defaultCOPriority?: OPTIONAL<ParameterValues_defaultCOPriority>;
+    /**
+     * @summary `deviceRepertoireAssignment`.
+     * @description
+     * Agreed repertoire overrides. The n-th device assignment
+     * overrides the n-th DO assignment; `"null"` skips a slot.
+     * ISO/IEC 9040:1997 §23.3.
+     * @public
+     * @readonly
+     */
+    public readonly deviceRepertoireAssignment?: OPTIONAL<CompoundRepertoireValue>;
+    /**
+     * @summary `deviceEmphasisAssignment`.
+     * @description
+     * Agreed emphasis overrides of the linked DO. Same n-th/`"null"`
+     * slot rule. ISO/IEC 9040:1997 §23.3.
+     * @public
+     * @readonly
+     */
+    public readonly deviceEmphasisAssignment?: OPTIONAL<CompoundEmphasisValue>;
+    /**
+     * @summary `deviceForegroundAssignment`.
+     * @description
+     * Agreed foreground-colour overrides of the linked DO. Same
+     * CDS colour semantics and n-th/`"null"` slot rule. ISO/IEC
+     * 9040:1997 §23.3.
+     * @public
+     * @readonly
+     */
+    public readonly deviceForegroundAssignment?: OPTIONAL<CompoundColourValue>;
+    /**
+     * @summary `deviceBackgroundAssignment`.
+     * @description
+     * Agreed background-colour overrides of the linked DO. Same
+     * CDS colour semantics and n-th/`"null"` slot rule. ISO/IEC
+     * 9040:1997 §23.3.
+     * @public
+     * @readonly
+     */
+    public readonly deviceBackgroundAssignment?: OPTIONAL<CompoundColourValue>;
+    /**
+     * @summary `minimumXarrayLength`.
+     * @description
+     * Agreed minimum X-array length the device must handle.
+     * ISO/IEC 9040:1997 §23.2 table 12.
+     * @public
+     * @readonly
+     */
+    public readonly minimumXarrayLength?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `minimumYarrayLength`.
+     * @description
+     * Agreed minimum Y-array length the device must handle.
+     * ISO/IEC 9040:1997 §23.2 table 12.
+     * @public
+     * @readonly
+     */
+    public readonly minimumYarrayLength?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `deviceControlObjectNames`.
+     * @description
+     * Linked CO-names (profile-defined semantics). Does not
+     * include the implicit default CO. ISO/IEC 9040:1997 §23
+     * notes.
+     * @public
+     * @readonly
+     */
+    public readonly deviceControlObjectNames?: OPTIONAL<PrintableString[]>;
+    /**
+     * @summary `deviceDisplayObjectName`.
+     * @description
+     * Linked DO-name; must equal a DO-name in the VTE. ISO/IEC
+     * 9040:1997 §23 notes.
+     * @public
+     * @readonly
+     */
+    public readonly deviceDisplayObjectName?: OPTIONAL<PrintableString>;
+    /**
+     * @summary `terminationEventList`.
+     * @description
+     * Agreed `<event, eventId>` pairs. Event syntax is not defined
+     * in 9040; datatypes come from the VTE-profile used as the
+     * initial draft-VTE. Absent ⇒ no explicit event conditions.
+     * ISO/IEC 9040:1997 §23.4; ISO/IEC 9041-1:1997 §12.5.3.
+     * @public
+     * @readonly
+     */
+    public readonly terminationEventList?: OPTIONAL<ParameterValues_terminationEventList_Item[]>;
+    /**
+     * @summary `terminationLength`.
+     * @description
+     * Agreed `<length, eventId>`: terminate after this many
+     * array-element updates if no event fired first. Absent ⇒ no
+     * update-count limit. ISO/IEC 9040:1997 §23.4 table 14.
+     * @public
+     * @readonly
+     */
+    public readonly terminationLength?: OPTIONAL<ParameterValues_terminationLength>;
+    /**
+     * @summary `terminationTimeout`.
+     * @description
+     * Agreed timeout `<T, E, eventId>`. T and E encode the timeout
+     * per ISO/IEC 9040:1997 §23.4; T=0 means infinite. If a TCCO
+     * is linked, these parameters become ineffective; an FDCO
+     * linked to the device also overrides them. ISO/IEC 9040:1997
+     * §14.3, §23.4, §23.5.
+     * @public
+     * @readonly
+     */
+    public readonly terminationTimeout?: OPTIONAL<ParameterValues_terminationTimeout>;
+    /**
+     * @summary `defaultCOtriggerSelected`.
+     * @description
+     * Whether the implicit default CO's trigger is selected. True
+     * = `selected`, false = `notSelected`. ISO/IEC 9040:1997
+     * §23.1 table 12.
+     * @public
+     * @readonly
+     */
+    public readonly defaultCOtriggerSelected?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `defaultCOinitialValue`.
+     * @description
+     * Agreed initial state of the eight booleans. BIT STRING
+     * value plus optional mask (omitted ⇒ all-ones, same as
+     * G.COupdate). ISO/IEC 9040:1997 §23.1; ISO/IEC 9041-1:1997
+     * §12.5.3.
+     * @public
+     * @readonly
+     */
+    public readonly defaultCOinitialValue?: OPTIONAL<ParameterValues_defaultCOinitialValue>;
+
     constructor (
-        /**
-         * @summary `defaultCOaccess`.
-         * @description
-         * CSS `AccessRuleValue` for the implicit default CO. ISO/IEC
-         * 9040:1997 §23.1 table 12.
-         * @public
-         * @readonly
-         */
-        readonly defaultCOaccess?: OPTIONAL<AccessRuleValue>,
-        /**
-         * @summary `defaultCOPriority`.
-         * @description
-         * Agreed default-CO priority. Same meaning as CO-priority.
-         * ISO/IEC 9040:1997 §23.1 table 12.
-         * @public
-         * @readonly
-         */
-        readonly defaultCOPriority?: OPTIONAL<ParameterValues_defaultCOPriority>,
-        /**
-         * @summary `deviceRepertoireAssignment`.
-         * @description
-         * Agreed repertoire overrides. The n-th device assignment
-         * overrides the n-th DO assignment; `"null"` skips a slot.
-         * ISO/IEC 9040:1997 §23.3.
-         * @public
-         * @readonly
-         */
-        readonly deviceRepertoireAssignment?: OPTIONAL<CompoundRepertoireValue>,
-        /**
-         * @summary `deviceEmphasisAssignment`.
-         * @description
-         * Agreed emphasis overrides of the linked DO. Same n-th/`"null"`
-         * slot rule. ISO/IEC 9040:1997 §23.3.
-         * @public
-         * @readonly
-         */
-        readonly deviceEmphasisAssignment?: OPTIONAL<CompoundEmphasisValue>,
-        /**
-         * @summary `deviceForegroundAssignment`.
-         * @description
-         * Agreed foreground-colour overrides of the linked DO. Same
-         * CDS colour semantics and n-th/`"null"` slot rule. ISO/IEC
-         * 9040:1997 §23.3.
-         * @public
-         * @readonly
-         */
-        readonly deviceForegroundAssignment?: OPTIONAL<CompoundColourValue>,
-        /**
-         * @summary `deviceBackgroundAssignment`.
-         * @description
-         * Agreed background-colour overrides of the linked DO. Same
-         * CDS colour semantics and n-th/`"null"` slot rule. ISO/IEC
-         * 9040:1997 §23.3.
-         * @public
-         * @readonly
-         */
-        readonly deviceBackgroundAssignment?: OPTIONAL<CompoundColourValue>,
-        /**
-         * @summary `minimumXarrayLength`.
-         * @description
-         * Agreed minimum X-array length the device must handle.
-         * ISO/IEC 9040:1997 §23.2 table 12.
-         * @public
-         * @readonly
-         */
-        readonly minimumXarrayLength?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `minimumYarrayLength`.
-         * @description
-         * Agreed minimum Y-array length the device must handle.
-         * ISO/IEC 9040:1997 §23.2 table 12.
-         * @public
-         * @readonly
-         */
-        readonly minimumYarrayLength?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `deviceControlObjectNames`.
-         * @description
-         * Linked CO-names (profile-defined semantics). Does not
-         * include the implicit default CO. ISO/IEC 9040:1997 §23
-         * notes.
-         * @public
-         * @readonly
-         */
-        readonly deviceControlObjectNames?: OPTIONAL<PrintableString[]>,
-        /**
-         * @summary `deviceDisplayObjectName`.
-         * @description
-         * Linked DO-name; must equal a DO-name in the VTE. ISO/IEC
-         * 9040:1997 §23 notes.
-         * @public
-         * @readonly
-         */
-        readonly deviceDisplayObjectName?: OPTIONAL<PrintableString>,
-        /**
-         * @summary `terminationEventList`.
-         * @description
-         * Agreed `<event, eventId>` pairs. Event syntax is not defined
-         * in 9040; datatypes come from the VTE-profile used as the
-         * initial draft-VTE. Absent ⇒ no explicit event conditions.
-         * ISO/IEC 9040:1997 §23.4; ISO/IEC 9041-1:1997 §12.5.3.
-         * @public
-         * @readonly
-         */
-        readonly terminationEventList?: OPTIONAL<ParameterValues_terminationEventList_Item[]>,
-        /**
-         * @summary `terminationLength`.
-         * @description
-         * Agreed `<length, eventId>`: terminate after this many
-         * array-element updates if no event fired first. Absent ⇒ no
-         * update-count limit. ISO/IEC 9040:1997 §23.4 table 14.
-         * @public
-         * @readonly
-         */
-        readonly terminationLength?: OPTIONAL<ParameterValues_terminationLength>,
-        /**
-         * @summary `terminationTimeout`.
-         * @description
-         * Agreed timeout `<T, E, eventId>`. T and E encode the timeout
-         * per ISO/IEC 9040:1997 §23.4; T=0 means infinite. If a TCCO
-         * is linked, these parameters become ineffective; an FDCO
-         * linked to the device also overrides them. ISO/IEC 9040:1997
-         * §14.3, §23.4, §23.5.
-         * @public
-         * @readonly
-         */
-        readonly terminationTimeout?: OPTIONAL<ParameterValues_terminationTimeout>,
-        /**
-         * @summary `defaultCOtriggerSelected`.
-         * @description
-         * Whether the implicit default CO's trigger is selected. True
-         * = `selected`, false = `notSelected`. ISO/IEC 9040:1997
-         * §23.1 table 12.
-         * @public
-         * @readonly
-         */
-        readonly defaultCOtriggerSelected?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `defaultCOinitialValue`.
-         * @description
-         * Agreed initial state of the eight booleans. BIT STRING
-         * value plus optional mask (omitted ⇒ all-ones, same as
-         * G.COupdate). ISO/IEC 9040:1997 §23.1; ISO/IEC 9041-1:1997
-         * §12.5.3.
-         * @public
-         * @readonly
-         */
-        readonly defaultCOinitialValue?: OPTIONAL<ParameterValues_defaultCOinitialValue>
-    ) {}
+        defaultCOaccess?: OPTIONAL<AccessRuleValue>,
+        defaultCOPriority?: OPTIONAL<ParameterValues_defaultCOPriority>,
+        deviceRepertoireAssignment?: OPTIONAL<CompoundRepertoireValue>,
+        deviceEmphasisAssignment?: OPTIONAL<CompoundEmphasisValue>,
+        deviceForegroundAssignment?: OPTIONAL<CompoundColourValue>,
+        deviceBackgroundAssignment?: OPTIONAL<CompoundColourValue>,
+        minimumXarrayLength?: OPTIONAL<INTEGER>,
+        minimumYarrayLength?: OPTIONAL<INTEGER>,
+        deviceControlObjectNames?: OPTIONAL<PrintableString[]>,
+        deviceDisplayObjectName?: OPTIONAL<PrintableString>,
+        terminationEventList?: OPTIONAL<ParameterValues_terminationEventList_Item[]>,
+        terminationLength?: OPTIONAL<ParameterValues_terminationLength>,
+        terminationTimeout?: OPTIONAL<ParameterValues_terminationTimeout>,
+        defaultCOtriggerSelected?: OPTIONAL<BOOLEAN>,
+        defaultCOinitialValue?: OPTIONAL<ParameterValues_defaultCOinitialValue>
+    ) {
+        this.defaultCOaccess = defaultCOaccess;
+        this.defaultCOPriority = defaultCOPriority;
+        this.deviceRepertoireAssignment = deviceRepertoireAssignment;
+        this.deviceEmphasisAssignment = deviceEmphasisAssignment;
+        this.deviceForegroundAssignment = deviceForegroundAssignment;
+        this.deviceBackgroundAssignment = deviceBackgroundAssignment;
+        this.minimumXarrayLength = minimumXarrayLength;
+        this.minimumYarrayLength = minimumYarrayLength;
+        this.deviceControlObjectNames = deviceControlObjectNames;
+        this.deviceDisplayObjectName = deviceDisplayObjectName;
+        this.terminationEventList = terminationEventList;
+        this.terminationLength = terminationLength;
+        this.terminationTimeout = terminationTimeout;
+        this.defaultCOtriggerSelected = defaultCOtriggerSelected;
+        this.defaultCOinitialValue = defaultCOinitialValue;
+    }
 
     /**
      * @summary Restructures an object into a ParameterValues

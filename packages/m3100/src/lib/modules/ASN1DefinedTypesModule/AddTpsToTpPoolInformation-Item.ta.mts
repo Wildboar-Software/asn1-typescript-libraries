@@ -34,20 +34,26 @@ import {
  *
  */
 export class AddTpsToTpPoolInformation_Item {
+    /**
+     * @summary `tps`.
+     * @public
+     * @readonly
+     */
+    public readonly tps: TerminationPointInformation[];
+    /**
+     * @summary `toTpPool`.
+     * @public
+     * @readonly
+     */
+    public readonly toTpPool?: OPTIONAL<ObjectInstance>;
+
     constructor(
-        /**
-         * @summary `tps`.
-         * @public
-         * @readonly
-         */
-        readonly tps: TerminationPointInformation[],
-        /**
-         * @summary `toTpPool`.
-         * @public
-         * @readonly
-         */
-        readonly toTpPool?: OPTIONAL<ObjectInstance>
-    ) {}
+        tps: TerminationPointInformation[],
+        toTpPool?: OPTIONAL<ObjectInstance>
+    ) {
+        this.tps = tps;
+        this.toTpPool = toTpPool;
+    }
 
     /**
      * @summary Restructures an object into a AddTpsToTpPoolInformation_Item

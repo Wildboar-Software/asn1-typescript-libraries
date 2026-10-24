@@ -37,26 +37,34 @@ import {
  *
  */
 export class ExtendedCertificate {
+    /**
+     * @summary `extendedCertificateInfo`.
+     * @public
+     * @readonly
+     */
+    public readonly extendedCertificateInfo: ExtendedCertificateInfo;
+    /**
+     * @summary `signatureAlgorithm`.
+     * @public
+     * @readonly
+     */
+    public readonly signatureAlgorithm: SignatureAlgorithmIdentifier;
+    /**
+     * @summary `signature`.
+     * @public
+     * @readonly
+     */
+    public readonly signature: Signature;
+
     constructor(
-        /**
-         * @summary `extendedCertificateInfo`.
-         * @public
-         * @readonly
-         */
-        readonly extendedCertificateInfo: ExtendedCertificateInfo,
-        /**
-         * @summary `signatureAlgorithm`.
-         * @public
-         * @readonly
-         */
-        readonly signatureAlgorithm: SignatureAlgorithmIdentifier,
-        /**
-         * @summary `signature`.
-         * @public
-         * @readonly
-         */
-        readonly signature: Signature
-    ) {}
+        extendedCertificateInfo: ExtendedCertificateInfo,
+        signatureAlgorithm: SignatureAlgorithmIdentifier,
+        signature: Signature
+    ) {
+        this.extendedCertificateInfo = extendedCertificateInfo;
+        this.signatureAlgorithm = signatureAlgorithm;
+        this.signature = signature;
+    }
 
     /**
      * @summary Restructures an object into a ExtendedCertificate

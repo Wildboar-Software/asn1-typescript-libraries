@@ -36,20 +36,26 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class Local_reference {
+    /**
+     * @summary `application`.
+     * @public
+     * @readonly
+     */
+    public readonly application: OPTIONAL<OCTET_STRING>;
+    /**
+     * @summary `specific_reference`.
+     * @public
+     * @readonly
+     */
+    public readonly specific_reference: OCTET_STRING;
+
     constructor (
-        /**
-         * @summary `application`.
-         * @public
-         * @readonly
-         */
-        readonly application: OPTIONAL<OCTET_STRING>,
-        /**
-         * @summary `specific_reference`.
-         * @public
-         * @readonly
-         */
-        readonly specific_reference: OCTET_STRING
-    ) {}
+        application: OPTIONAL<OCTET_STRING>,
+        specific_reference: OCTET_STRING
+    ) {
+        this.application = application;
+        this.specific_reference = specific_reference;
+    }
 
     /**
      * @summary Restructures an object into a Local_reference

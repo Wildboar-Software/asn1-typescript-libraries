@@ -36,26 +36,32 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class RangeOfDate {
+    /**
+     * @summary `startDate`.
+     * @description
+     * Start of the allowed verification interval. ISO/IEC 7816-15:2016
+     * §8.2.8.
+     * @public
+     * @readonly
+     */
+    public readonly startDate?: OPTIONAL<GeneralizedTime>;
+    /**
+     * @summary `endDate`.
+     * @description
+     * End of the allowed verification interval. ISO/IEC 7816-15:2016
+     * §8.2.8.
+     * @public
+     * @readonly
+     */
+    public readonly endDate?: OPTIONAL<GeneralizedTime>;
+
     constructor (
-        /**
-         * @summary `startDate`.
-         * @description
-         * Start of the allowed verification interval. ISO/IEC 7816-15:2016
-         * §8.2.8.
-         * @public
-         * @readonly
-         */
-        readonly startDate?: OPTIONAL<GeneralizedTime>,
-        /**
-         * @summary `endDate`.
-         * @description
-         * End of the allowed verification interval. ISO/IEC 7816-15:2016
-         * §8.2.8.
-         * @public
-         * @readonly
-         */
-        readonly endDate?: OPTIONAL<GeneralizedTime>
-    ) {}
+        startDate?: OPTIONAL<GeneralizedTime>,
+        endDate?: OPTIONAL<GeneralizedTime>
+    ) {
+        this.startDate = startDate;
+        this.endDate = endDate;
+    }
 
     /**
      * @summary Restructures an object into a RangeOfDate

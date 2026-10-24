@@ -29,30 +29,36 @@ import { DiameterIdentity, _decode_DiameterIdentity, _encode_DiameterIdentity } 
  */
 export
 class NetworkNodeDiameterAddress {
+    /**
+     * @summary `diameter_Name`.
+     * @description
+     *
+     * Diameter Name of the MT-SMS target node or SMS Router. (3GPP TS
+     * 29.002 V19.1.0 clause 7.6.2.43A).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly diameter_Name: DiameterIdentity;
+    /**
+     * @summary `diameter_Realm`.
+     * @description
+     *
+     * Diameter Realm of the same node. (3GPP TS 29.002 V19.1.0 clause
+     * 7.6.2.43A).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly diameter_Realm: DiameterIdentity;
+
     constructor (
-        /**
-         * @summary `diameter_Name`.
-         * @description
-         *
-         * Diameter Name of the MT-SMS target node or SMS Router. (3GPP TS
-         * 29.002 V19.1.0 clause 7.6.2.43A).
-         *
-         * @public
-         * @readonly
-         */
-        readonly diameter_Name: DiameterIdentity,
-        /**
-         * @summary `diameter_Realm`.
-         * @description
-         *
-         * Diameter Realm of the same node. (3GPP TS 29.002 V19.1.0 clause
-         * 7.6.2.43A).
-         *
-         * @public
-         * @readonly
-         */
-        readonly diameter_Realm: DiameterIdentity
-    ) {}
+        diameter_Name: DiameterIdentity,
+        diameter_Realm: DiameterIdentity
+    ) {
+        this.diameter_Name = diameter_Name;
+        this.diameter_Realm = diameter_Realm;
+    }
 
     /**
      * @summary Restructures an object into a NetworkNodeDiameterAddress

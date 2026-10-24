@@ -32,44 +32,54 @@ import {
  *
  */
 export class IdmBindResult {
+    /**
+     * @summary `protocolID`.
+     * @description
+     *
+     * Shall equal the Bind's `protocolID`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly protocolID: OBJECT_IDENTIFIER;
+    /**
+     * @summary `respondingAETitle`.
+     * @description
+     *
+     * Responder's AE name. Optional.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly respondingAETitle: OPTIONAL<GeneralName>;
+    /**
+     * @summary `result`.
+     * @description
+     *
+     * Bind-operation RESULT for `protocolID` (open type).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly result: _Element;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `protocolID`.
-         * @description
-         *
-         * Shall equal the Bind's `protocolID`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly protocolID: OBJECT_IDENTIFIER,
-        /**
-         * @summary `respondingAETitle`.
-         * @description
-         *
-         * Responder's AE name. Optional.
-         *
-         * @public
-         * @readonly
-         */
-        readonly respondingAETitle: OPTIONAL<GeneralName>,
-        /**
-         * @summary `result`.
-         * @description
-         *
-         * Bind-operation RESULT for `protocolID` (open type).
-         *
-         * @public
-         * @readonly
-         */
-        readonly result: _Element,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        protocolID: OBJECT_IDENTIFIER,
+        respondingAETitle: OPTIONAL<GeneralName>,
+        result: _Element,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.protocolID = protocolID;
+        this.respondingAETitle = respondingAETitle;
+        this.result = result;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a IdmBindResult

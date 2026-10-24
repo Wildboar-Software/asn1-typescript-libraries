@@ -38,73 +38,89 @@ import { Password, _decode_Password, _encode_Password } from "../MAP-SS-DataType
  */
 export
 class Ext_CallBarringInfoFor_CSE {
+    /**
+     * @summary `ss_Code`.
+     * @description
+     *
+     * SS-Code of the call barring service (3GPP TS 29.002 V19.1.0 clause
+     * 7.6.3.79).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ss_Code: SS_Code;
+    /**
+     * @summary `callBarringFeatureList`.
+     * @description
+     *
+     * Extensible call barring features, one item per Basic Service Group
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.3.79).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly callBarringFeatureList: Ext_CallBarFeatureList;
+    /**
+     * @summary `password`.
+     * @description
+     *
+     * Call barring password (3GPP TS 29.002 V19.1.0 clause 7.6.3.79).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly password?: OPTIONAL<Password>;
+    /**
+     * @summary `wrongPasswordAttemptsCounter`.
+     * @description
+     *
+     * Wrong password attempt counter (3GPP TS 29.002 V19.1.0 clause
+     * 7.6.3.79).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly wrongPasswordAttemptsCounter?: OPTIONAL<WrongPasswordAttemptsCounter>;
+    /**
+     * @summary `notificationToCSE`.
+     * @description
+     *
+     * Notification-to-CSE flag (3GPP TS 29.002 V19.1.0 clause 7.6.3.79).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly notificationToCSE?: OPTIONAL<NULL>;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `ss_Code`.
-         * @description
-         *
-         * SS-Code of the call barring service (3GPP TS 29.002 V19.1.0 clause
-         * 7.6.3.79).
-         *
-         * @public
-         * @readonly
-         */
-        readonly ss_Code: SS_Code,
-        /**
-         * @summary `callBarringFeatureList`.
-         * @description
-         *
-         * Extensible call barring features, one item per Basic Service Group
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.3.79).
-         *
-         * @public
-         * @readonly
-         */
-        readonly callBarringFeatureList: Ext_CallBarFeatureList,
-        /**
-         * @summary `password`.
-         * @description
-         *
-         * Call barring password (3GPP TS 29.002 V19.1.0 clause 7.6.3.79).
-         *
-         * @public
-         * @readonly
-         */
-        readonly password?: OPTIONAL<Password>,
-        /**
-         * @summary `wrongPasswordAttemptsCounter`.
-         * @description
-         *
-         * Wrong password attempt counter (3GPP TS 29.002 V19.1.0 clause
-         * 7.6.3.79).
-         *
-         * @public
-         * @readonly
-         */
-        readonly wrongPasswordAttemptsCounter?: OPTIONAL<WrongPasswordAttemptsCounter>,
-        /**
-         * @summary `notificationToCSE`.
-         * @description
-         *
-         * Notification-to-CSE flag (3GPP TS 29.002 V19.1.0 clause 7.6.3.79).
-         *
-         * @public
-         * @readonly
-         */
-        readonly notificationToCSE?: OPTIONAL<NULL>,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        ss_Code: SS_Code,
+        callBarringFeatureList: Ext_CallBarFeatureList,
+        password?: OPTIONAL<Password>,
+        wrongPasswordAttemptsCounter?: OPTIONAL<WrongPasswordAttemptsCounter>,
+        notificationToCSE?: OPTIONAL<NULL>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.ss_Code = ss_Code;
+        this.callBarringFeatureList = callBarringFeatureList;
+        this.password = password;
+        this.wrongPasswordAttemptsCounter = wrongPasswordAttemptsCounter;
+        this.notificationToCSE = notificationToCSE;
+        this.extensionContainer = extensionContainer;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a Ext_CallBarringInfoFor_CSE

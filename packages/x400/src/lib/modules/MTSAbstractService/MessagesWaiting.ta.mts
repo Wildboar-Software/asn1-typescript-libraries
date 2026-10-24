@@ -35,26 +35,34 @@ import {
  *
  */
 export class MessagesWaiting {
+    /**
+     * @summary `urgent`.
+     * @public
+     * @readonly
+     */
+    public readonly urgent: DeliveryQueue;
+    /**
+     * @summary `normal`.
+     * @public
+     * @readonly
+     */
+    public readonly normal: DeliveryQueue;
+    /**
+     * @summary `non_urgent`.
+     * @public
+     * @readonly
+     */
+    public readonly non_urgent: DeliveryQueue;
+
     constructor(
-        /**
-         * @summary `urgent`.
-         * @public
-         * @readonly
-         */
-        readonly urgent: DeliveryQueue,
-        /**
-         * @summary `normal`.
-         * @public
-         * @readonly
-         */
-        readonly normal: DeliveryQueue,
-        /**
-         * @summary `non_urgent`.
-         * @public
-         * @readonly
-         */
-        readonly non_urgent: DeliveryQueue
-    ) {}
+        urgent: DeliveryQueue,
+        normal: DeliveryQueue,
+        non_urgent: DeliveryQueue
+    ) {
+        this.urgent = urgent;
+        this.normal = normal;
+        this.non_urgent = non_urgent;
+    }
 
     /**
      * @summary Restructures an object into a MessagesWaiting

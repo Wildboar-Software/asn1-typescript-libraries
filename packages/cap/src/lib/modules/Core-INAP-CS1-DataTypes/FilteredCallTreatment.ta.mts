@@ -36,32 +36,42 @@ import { Cause, _decode_Cause, _encode_Cause } from "../Core-INAP-CS1-DataTypes/
  */
 export
 class FilteredCallTreatment {
+    /**
+     * @summary `sFBillingChargingCharacteristics`.
+     * @public
+     * @readonly
+     */
+    public readonly sFBillingChargingCharacteristics: SFBillingChargingCharacteristics;
+    /**
+     * @summary `informationToSend`.
+     * @public
+     * @readonly
+     */
+    public readonly informationToSend?: OPTIONAL<InformationToSend>;
+    /**
+     * @summary `maximumNumberOfCounters`.
+     * @public
+     * @readonly
+     */
+    public readonly maximumNumberOfCounters?: OPTIONAL<MaximumNumberOfCounters>;
+    /**
+     * @summary `releaseCause`.
+     * @public
+     * @readonly
+     */
+    public readonly releaseCause?: OPTIONAL<Cause>;
+
     constructor (
-        /**
-         * @summary `sFBillingChargingCharacteristics`.
-         * @public
-         * @readonly
-         */
-        readonly sFBillingChargingCharacteristics: SFBillingChargingCharacteristics,
-        /**
-         * @summary `informationToSend`.
-         * @public
-         * @readonly
-         */
-        readonly informationToSend?: OPTIONAL<InformationToSend>,
-        /**
-         * @summary `maximumNumberOfCounters`.
-         * @public
-         * @readonly
-         */
-        readonly maximumNumberOfCounters?: OPTIONAL<MaximumNumberOfCounters>,
-        /**
-         * @summary `releaseCause`.
-         * @public
-         * @readonly
-         */
-        readonly releaseCause?: OPTIONAL<Cause>
-    ) {}
+        sFBillingChargingCharacteristics: SFBillingChargingCharacteristics,
+        informationToSend?: OPTIONAL<InformationToSend>,
+        maximumNumberOfCounters?: OPTIONAL<MaximumNumberOfCounters>,
+        releaseCause?: OPTIONAL<Cause>
+    ) {
+        this.sFBillingChargingCharacteristics = sFBillingChargingCharacteristics;
+        this.informationToSend = informationToSend;
+        this.maximumNumberOfCounters = maximumNumberOfCounters;
+        this.releaseCause = releaseCause;
+    }
 
     /**
      * @summary Restructures an object into a FilteredCallTreatment

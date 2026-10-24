@@ -47,32 +47,38 @@ import {
  *
  */
 export class Abort {
+  /**
+   * @summary `dtid`.
+   * @description
+   *
+   * Destination Transaction ID of the transaction being
+   * aborted (1–4 octets). Mandatory (Table 9).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly dtid: DestTransactionID;
+  /**
+   * @summary `reason`.
+   * @description
+   *
+   * `p-abortCause` from the Transaction sublayer, or
+   * `u-abortCause` (Dialogue Portion) from the component
+   * sublayer or TC-User. Optional as a whole; presence
+   * rules are in Table 7 notes b and c.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly reason?: OPTIONAL<Abort_reason>;
+
   constructor(
-    /**
-     * @summary `dtid`.
-     * @description
-     *
-     * Destination Transaction ID of the transaction being
-     * aborted (1–4 octets). Mandatory (Table 9).
-     *
-     * @public
-     * @readonly
-     */
-    readonly dtid: DestTransactionID,
-    /**
-     * @summary `reason`.
-     * @description
-     *
-     * `p-abortCause` from the Transaction sublayer, or
-     * `u-abortCause` (Dialogue Portion) from the component
-     * sublayer or TC-User. Optional as a whole; presence
-     * rules are in Table 7 notes b and c.
-     *
-     * @public
-     * @readonly
-     */
-    readonly reason?: OPTIONAL<Abort_reason>
-  ) {}
+    dtid: DestTransactionID,
+    reason?: OPTIONAL<Abort_reason>
+  ) {
+    this.dtid = dtid;
+    this.reason = reason;
+  }
 
   /**
    * @summary Restructures an object into a Abort

@@ -48,32 +48,38 @@ import {
  */
 export
 class SignallingDetection {
+    /**
+     * @summary `signallingCondition`.
+     * @description
+     *
+     * Mandatory. `callDelivered` or `callEstablished`
+     * before the action is processed.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly signallingCondition: SignallingCondition;
+    /**
+     * @summary `signallingConditionsAction`.
+     * @description
+     *
+     * Mandatory. `destinationDetection` follows
+     * `destinationDetection` entries;
+     * `remainConnected` keeps the called device and
+     * attempts the calling-device connection.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly signallingConditionsAction: SignallingConditionsAction;
+
     constructor (
-        /**
-         * @summary `signallingCondition`.
-         * @description
-         *
-         * Mandatory. `callDelivered` or `callEstablished`
-         * before the action is processed.
-         *
-         * @public
-         * @readonly
-         */
-        readonly signallingCondition: SignallingCondition,
-        /**
-         * @summary `signallingConditionsAction`.
-         * @description
-         *
-         * Mandatory. `destinationDetection` follows
-         * `destinationDetection` entries;
-         * `remainConnected` keeps the called device and
-         * attempts the calling-device connection.
-         *
-         * @public
-         * @readonly
-         */
-        readonly signallingConditionsAction: SignallingConditionsAction
-    ) {}
+        signallingCondition: SignallingCondition,
+        signallingConditionsAction: SignallingConditionsAction
+    ) {
+        this.signallingCondition = signallingCondition;
+        this.signallingConditionsAction = signallingConditionsAction;
+    }
 
     /**
      * @summary Restructures an object into a SignallingDetection

@@ -44,60 +44,72 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class ResumeArgument {
+    /**
+     * @summary `connection`.
+     * @description
+     *
+     * Connection on which to resume (ECMA-269 §26.1.11.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly connection: ConnectionID;
+    /**
+     * @summary `messageToResume`.
+     * @description
+     *
+     * Message to resume when several are active (ECMA-269 §26.1.11.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly messageToResume?: OPTIONAL<MessageID>;
+    /**
+     * @summary `resource`.
+     * @description
+     *
+     * Interactive voice resource. Required when more than one interactive
+     * voice resource exists on the connection.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly resource?: OPTIONAL<ResourceID>;
+    /**
+     * @summary `duration`.
+     * @description
+     *
+     * Optional duration (ECMA-269 §26.1.11.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly duration?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * CSTACommonArguments carrying the service-table security and
+     * privateData parameters.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `connection`.
-         * @description
-         *
-         * Connection on which to resume (ECMA-269 §26.1.11.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly connection: ConnectionID,
-        /**
-         * @summary `messageToResume`.
-         * @description
-         *
-         * Message to resume when several are active (ECMA-269 §26.1.11.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly messageToResume?: OPTIONAL<MessageID>,
-        /**
-         * @summary `resource`.
-         * @description
-         *
-         * Interactive voice resource. Required when more than one interactive
-         * voice resource exists on the connection.
-         *
-         * @public
-         * @readonly
-         */
-        readonly resource?: OPTIONAL<ResourceID>,
-        /**
-         * @summary `duration`.
-         * @description
-         *
-         * Optional duration (ECMA-269 §26.1.11.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly duration?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * CSTACommonArguments carrying the service-table security and
-         * privateData parameters.
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        connection: ConnectionID,
+        messageToResume?: OPTIONAL<MessageID>,
+        resource?: OPTIONAL<ResourceID>,
+        duration?: OPTIONAL<INTEGER>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.connection = connection;
+        this.messageToResume = messageToResume;
+        this.resource = resource;
+        this.duration = duration;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a ResumeArgument

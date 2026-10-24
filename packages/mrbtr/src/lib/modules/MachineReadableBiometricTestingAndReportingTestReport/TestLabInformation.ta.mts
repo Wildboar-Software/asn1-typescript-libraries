@@ -35,31 +35,37 @@ import { AccreditationStatus, _decode_AccreditationStatus, _encode_Accreditation
  */
 export
 class TestLabInformation {
+    /**
+     * @summary `identificationTestLab`.
+     * @description
+     *
+     * Name, location, implementor, signatory, and contact for the
+     * laboratory (Clause 6.4.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly identificationTestLab: IdentificationTestLab;
+    /**
+     * @summary `accreditationStatus`.
+     * @description
+     *
+     * Accrediting bodies and optional scope. If no accreditation is
+     * claimed, Annex B.5 requires an "accreditation not claimed"
+     * entry.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly accreditationStatus: AccreditationStatus;
+
     constructor (
-        /**
-         * @summary `identificationTestLab`.
-         * @description
-         *
-         * Name, location, implementor, signatory, and contact for the
-         * laboratory (Clause 6.4.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly identificationTestLab: IdentificationTestLab,
-        /**
-         * @summary `accreditationStatus`.
-         * @description
-         *
-         * Accrediting bodies and optional scope. If no accreditation is
-         * claimed, Annex B.5 requires an "accreditation not claimed"
-         * entry.
-         *
-         * @public
-         * @readonly
-         */
-        readonly accreditationStatus: AccreditationStatus
-    ) {}
+        identificationTestLab: IdentificationTestLab,
+        accreditationStatus: AccreditationStatus
+    ) {
+        this.identificationTestLab = identificationTestLab;
+        this.accreditationStatus = accreditationStatus;
+    }
 
     /**
      * @summary Restructures an object into a TestLabInformation

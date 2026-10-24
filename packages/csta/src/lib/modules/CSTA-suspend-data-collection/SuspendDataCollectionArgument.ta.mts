@@ -36,29 +36,35 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class SuspendDataCollectionArgument {
+    /**
+     * @summary `dcollCrossRefID`.
+     * @description
+     *
+     * Collection to suspend (ECMA-269 §25.1.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly dcollCrossRefID: DcollCrossRefID;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * CSTACommonArguments carrying the service-table security and
+     * privateData parameters.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `dcollCrossRefID`.
-         * @description
-         *
-         * Collection to suspend (ECMA-269 §25.1.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly dcollCrossRefID: DcollCrossRefID,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * CSTACommonArguments carrying the service-table security and
-         * privateData parameters.
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        dcollCrossRefID: DcollCrossRefID,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.dcollCrossRefID = dcollCrossRefID;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a SuspendDataCollectionArgument

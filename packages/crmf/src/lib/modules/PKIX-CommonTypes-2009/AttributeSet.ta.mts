@@ -30,30 +30,36 @@ import * as $ from "@wildboar/asn1/functional";
  *
  */
 export class AttributeSet {
+    /**
+     * @summary `type_`.
+     * @description
+     *
+     * Attribute type OID (`ATTRIBUTE.&id` selected from `AttrSet`)
+     * ([RFC 5912 §2](https://datatracker.ietf.org/doc/html/rfc5912#section-2)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly type_: OBJECT_IDENTIFIER;
+    /**
+     * @summary `values`.
+     * @description
+     *
+     * One or more attribute values (`ATTRIBUTE.&Type` for `type`)
+     * ([RFC 5912 §2](https://datatracker.ietf.org/doc/html/rfc5912#section-2)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly values: _Element[];
+
     constructor(
-        /**
-         * @summary `type_`.
-         * @description
-         *
-         * Attribute type OID (`ATTRIBUTE.&id` selected from `AttrSet`)
-         * ([RFC 5912 §2](https://datatracker.ietf.org/doc/html/rfc5912#section-2)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly type_: OBJECT_IDENTIFIER,
-        /**
-         * @summary `values`.
-         * @description
-         *
-         * One or more attribute values (`ATTRIBUTE.&Type` for `type`)
-         * ([RFC 5912 §2](https://datatracker.ietf.org/doc/html/rfc5912#section-2)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly values: _Element[]
-    ) {}
+        type_: OBJECT_IDENTIFIER,
+        values: _Element[]
+    ) {
+        this.type_ = type_;
+        this.values = values;
+    }
 
     /**
      * @summary Restructures an object into a AttributeSet

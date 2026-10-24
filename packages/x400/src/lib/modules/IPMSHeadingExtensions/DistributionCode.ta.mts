@@ -42,26 +42,34 @@ import {
  *
  */
 export class DistributionCode {
+    /**
+     * @summary `oid_code`.
+     * @public
+     * @readonly
+     */
+    public readonly oid_code?: OPTIONAL<OBJECT_IDENTIFIER>;
+    /**
+     * @summary `alphanumeric_code`.
+     * @public
+     * @readonly
+     */
+    public readonly alphanumeric_code?: OPTIONAL<AlphaCode>;
+    /**
+     * @summary `or_descriptor`.
+     * @public
+     * @readonly
+     */
+    public readonly or_descriptor?: OPTIONAL<ORDescriptor>;
+
     constructor(
-        /**
-         * @summary `oid_code`.
-         * @public
-         * @readonly
-         */
-        readonly oid_code?: OPTIONAL<OBJECT_IDENTIFIER>,
-        /**
-         * @summary `alphanumeric_code`.
-         * @public
-         * @readonly
-         */
-        readonly alphanumeric_code?: OPTIONAL<AlphaCode>,
-        /**
-         * @summary `or_descriptor`.
-         * @public
-         * @readonly
-         */
-        readonly or_descriptor?: OPTIONAL<ORDescriptor>
-    ) {}
+        oid_code?: OPTIONAL<OBJECT_IDENTIFIER>,
+        alphanumeric_code?: OPTIONAL<AlphaCode>,
+        or_descriptor?: OPTIONAL<ORDescriptor>
+    ) {
+        this.oid_code = oid_code;
+        this.alphanumeric_code = alphanumeric_code;
+        this.or_descriptor = or_descriptor;
+    }
 
     /**
      * @summary Restructures an object into a DistributionCode

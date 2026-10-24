@@ -35,20 +35,26 @@ import {
  *
  */
 export class PerRecipientReport {
+    /**
+     * @summary `report_entry`.
+     * @public
+     * @readonly
+     */
+    public readonly report_entry: SequenceNumber;
+    /**
+     * @summary `position`.
+     * @public
+     * @readonly
+     */
+    public readonly position?: OPTIONAL<INTEGER>;
+
     constructor(
-        /**
-         * @summary `report_entry`.
-         * @public
-         * @readonly
-         */
-        readonly report_entry: SequenceNumber,
-        /**
-         * @summary `position`.
-         * @public
-         * @readonly
-         */
-        readonly position?: OPTIONAL<INTEGER>
-    ) {}
+        report_entry: SequenceNumber,
+        position?: OPTIONAL<INTEGER>
+    ) {
+        this.report_entry = report_entry;
+        this.position = position;
+    }
 
     /**
      * @summary Restructures an object into a PerRecipientReport

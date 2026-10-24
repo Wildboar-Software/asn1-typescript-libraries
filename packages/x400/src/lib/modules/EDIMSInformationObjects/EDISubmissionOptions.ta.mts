@@ -33,14 +33,18 @@ import {
  *
  */
 export class EDISubmissionOptions {
+    /**
+     * @summary `assembly_instructions`.
+     * @public
+     * @readonly
+     */
+    public readonly assembly_instructions: BodyPartSpecifiers;
+
     constructor(
-        /**
-         * @summary `assembly_instructions`.
-         * @public
-         * @readonly
-         */
-        readonly assembly_instructions: BodyPartSpecifiers
-    ) {}
+        assembly_instructions: BodyPartSpecifiers
+    ) {
+        this.assembly_instructions = assembly_instructions;
+    }
 
     /**
      * @summary Restructures an object into a EDISubmissionOptions

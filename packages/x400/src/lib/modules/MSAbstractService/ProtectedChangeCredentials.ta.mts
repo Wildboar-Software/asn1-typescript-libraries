@@ -38,26 +38,34 @@ import {
  *
  */
 export class ProtectedChangeCredentials {
+    /**
+     * @summary `algorithm_identifier`.
+     * @public
+     * @readonly
+     */
+    public readonly algorithm_identifier: OBJECT_IDENTIFIER;
+    /**
+     * @summary `old_credentials`.
+     * @public
+     * @readonly
+     */
+    public readonly old_credentials: InitiatorCredentials;
+    /**
+     * @summary `password_delta`.
+     * @public
+     * @readonly
+     */
+    public readonly password_delta: BIT_STRING;
+
     constructor(
-        /**
-         * @summary `algorithm_identifier`.
-         * @public
-         * @readonly
-         */
-        readonly algorithm_identifier: OBJECT_IDENTIFIER,
-        /**
-         * @summary `old_credentials`.
-         * @public
-         * @readonly
-         */
-        readonly old_credentials: InitiatorCredentials,
-        /**
-         * @summary `password_delta`.
-         * @public
-         * @readonly
-         */
-        readonly password_delta: BIT_STRING
-    ) {}
+        algorithm_identifier: OBJECT_IDENTIFIER,
+        old_credentials: InitiatorCredentials,
+        password_delta: BIT_STRING
+    ) {
+        this.algorithm_identifier = algorithm_identifier;
+        this.old_credentials = old_credentials;
+        this.password_delta = password_delta;
+    }
 
     /**
      * @summary Restructures an object into a ProtectedChangeCredentials

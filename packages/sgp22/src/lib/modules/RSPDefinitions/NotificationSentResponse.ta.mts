@@ -26,18 +26,22 @@ import { _decode_NotificationSentResponse_deleteNotificationStatus, _encode_Noti
  */
 export
 class NotificationSentResponse {
+    /**
+     * @summary `deleteNotificationStatus`.
+     * @description
+     * 
+     * Whether that sequence number was removed. SGP.22 v3.1 §5.7.11.
+     * 
+     * @public
+     * @readonly
+     */
+    public readonly deleteNotificationStatus: NotificationSentResponse_deleteNotificationStatus;
+
     constructor (
-        /**
-         * @summary `deleteNotificationStatus`.
-         * @description
-         * 
-         * Whether that sequence number was removed. SGP.22 v3.1 §5.7.11.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly deleteNotificationStatus: NotificationSentResponse_deleteNotificationStatus
-    ) {}
+        deleteNotificationStatus: NotificationSentResponse_deleteNotificationStatus
+    ) {
+        this.deleteNotificationStatus = deleteNotificationStatus;
+    }
 
     /**
      * @summary Restructures an object into a NotificationSentResponse

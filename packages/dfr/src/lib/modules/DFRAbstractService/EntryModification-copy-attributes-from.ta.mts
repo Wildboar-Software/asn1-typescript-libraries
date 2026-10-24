@@ -36,26 +36,32 @@ import { AttributeType, _decode_AttributeType, _encode_AttributeType } from "../
  */
 export
 class EntryModification_copy_attributes_from {
+    /**
+     * @summary `source`.
+     * @description
+     *
+     * Where to copy from.
+     * @public
+     * @readonly
+     */
+    public readonly source: SourceEntry;
+    /**
+     * @summary `attribute_selection`.
+     * @description
+     *
+     * Attribute types to copy; omit for the default set.
+     * @public
+     * @readonly
+     */
+    public readonly attribute_selection?: OPTIONAL<AttributeType[]>;
+
     constructor (
-        /**
-         * @summary `source`.
-         * @description
-         *
-         * Where to copy from.
-         * @public
-         * @readonly
-         */
-        readonly source: SourceEntry,
-        /**
-         * @summary `attribute_selection`.
-         * @description
-         *
-         * Attribute types to copy; omit for the default set.
-         * @public
-         * @readonly
-         */
-        readonly attribute_selection?: OPTIONAL<AttributeType[]>
-    ) {}
+        source: SourceEntry,
+        attribute_selection?: OPTIONAL<AttributeType[]>
+    ) {
+        this.source = source;
+        this.attribute_selection = attribute_selection;
+    }
 
     /**
      * @summary Restructures an object into a EntryModification_copy_attributes_from

@@ -56,46 +56,56 @@ import {
  */
 export
 class AgentInfo {
+    /**
+     * @summary `acdGroup`.
+     * @description
+     *
+     * Mandatory in an entry when the list has more than one.
+     * @public
+     * @readonly
+     */
+    public readonly acdGroup: OPTIONAL<DeviceID>;
+    /**
+     * @summary `agentState`.
+     * @description
+     *
+     * Busy, Not Ready, Null, Ready, or Working After Call.
+     * @public
+     * @readonly
+     */
+    public readonly agentState: AgentState;
+    /**
+     * @summary `pendingAgentState`.
+     * @description
+     *
+     * Next state if `agentState` is Busy or Working After Call and the SF
+     * is delaying the transition: Working After Call, Not Ready, Ready, or
+     * Null.
+     * @public
+     * @readonly
+     */
+    public readonly pendingAgentState?: OPTIONAL<PendingAgentState>;
+    /**
+     * @summary `agentStateCondition`.
+     * @description
+     *
+     * Forced Pause or Other.
+     * @public
+     * @readonly
+     */
+    public readonly agentStateCondition?: OPTIONAL<AgentStateCondition>;
+
     constructor (
-        /**
-         * @summary `acdGroup`.
-         * @description
-         *
-         * Mandatory in an entry when the list has more than one.
-         * @public
-         * @readonly
-         */
-        readonly acdGroup: OPTIONAL<DeviceID>,
-        /**
-         * @summary `agentState`.
-         * @description
-         *
-         * Busy, Not Ready, Null, Ready, or Working After Call.
-         * @public
-         * @readonly
-         */
-        readonly agentState: AgentState,
-        /**
-         * @summary `pendingAgentState`.
-         * @description
-         *
-         * Next state if `agentState` is Busy or Working After Call and the SF
-         * is delaying the transition: Working After Call, Not Ready, Ready, or
-         * Null.
-         * @public
-         * @readonly
-         */
-        readonly pendingAgentState?: OPTIONAL<PendingAgentState>,
-        /**
-         * @summary `agentStateCondition`.
-         * @description
-         *
-         * Forced Pause or Other.
-         * @public
-         * @readonly
-         */
-        readonly agentStateCondition?: OPTIONAL<AgentStateCondition>
-    ) {}
+        acdGroup: OPTIONAL<DeviceID>,
+        agentState: AgentState,
+        pendingAgentState?: OPTIONAL<PendingAgentState>,
+        agentStateCondition?: OPTIONAL<AgentStateCondition>
+    ) {
+        this.acdGroup = acdGroup;
+        this.agentState = agentState;
+        this.pendingAgentState = pendingAgentState;
+        this.agentStateCondition = agentStateCondition;
+    }
 
     /**
      * @summary Restructures an object into a AgentInfo

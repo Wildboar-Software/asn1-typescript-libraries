@@ -36,31 +36,37 @@ import { EC_State, _decode_EC_State, _encode_EC_State } from "../MMS-Object-Modu
  */
 export
 class EntryContent_entryForm_data_event {
+    /**
+     * @summary `eventConditionName`.
+     * @description
+     *
+     * Event Condition whose transition is recorded.
+     * ISO 9506-1:2003 §23.2.1.2.6.1.1, §23.3.1.1.2.2.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly eventConditionName: ObjectName;
+    /**
+     * @summary `currentState`.
+     * @description
+     *
+     * `&ecState` of that Event Condition after transition
+     * processing. ISO 9506-1:2003 §23.2.1.2.6.1.2,
+     * §23.3.1.1.2.2.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly currentState: EC_State;
+
     constructor (
-        /**
-         * @summary `eventConditionName`.
-         * @description
-         *
-         * Event Condition whose transition is recorded.
-         * ISO 9506-1:2003 §23.2.1.2.6.1.1, §23.3.1.1.2.2.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly eventConditionName: ObjectName,
-        /**
-         * @summary `currentState`.
-         * @description
-         *
-         * `&ecState` of that Event Condition after transition
-         * processing. ISO 9506-1:2003 §23.2.1.2.6.1.2,
-         * §23.3.1.1.2.2.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly currentState: EC_State
-    ) {}
+        eventConditionName: ObjectName,
+        currentState: EC_State
+    ) {
+        this.eventConditionName = eventConditionName;
+        this.currentState = currentState;
+    }
 
     /**
      * @summary Restructures an object into a EntryContent_entryForm_data_event

@@ -42,32 +42,38 @@ import {
  *
  */
 export class EnableCallParams {
+  /**
+   * @summary `bspUuid`.
+   * @description
+   *
+   * `BSPUuid` of `BioAPI_EnableEventNotifications`: BSP
+   * product or access UUID. X.1083 §16.16.6.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly bspUuid: BioAPI_UUID;
+  /**
+   * @summary `unitEventTypes`.
+   * @description
+   *
+   * `Events` of `BioAPI_EnableEventNotifications`. If this
+   * mask indicates that at least one event type is to be
+   * disabled, a `UnitEventNotificationDisablers` entry is
+   * recorded. X.1083 §16.16.4, §16.16.6.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly unitEventTypes: BioAPI_UNIT_EVENT_TYPE_MASK;
+
   constructor(
-    /**
-     * @summary `bspUuid`.
-     * @description
-     *
-     * `BSPUuid` of `BioAPI_EnableEventNotifications`: BSP
-     * product or access UUID. X.1083 §16.16.6.
-     *
-     * @public
-     * @readonly
-     */
-    readonly bspUuid: BioAPI_UUID,
-    /**
-     * @summary `unitEventTypes`.
-     * @description
-     *
-     * `Events` of `BioAPI_EnableEventNotifications`. If this
-     * mask indicates that at least one event type is to be
-     * disabled, a `UnitEventNotificationDisablers` entry is
-     * recorded. X.1083 §16.16.4, §16.16.6.
-     *
-     * @public
-     * @readonly
-     */
-    readonly unitEventTypes: BioAPI_UNIT_EVENT_TYPE_MASK
-  ) {}
+    bspUuid: BioAPI_UUID,
+    unitEventTypes: BioAPI_UNIT_EVENT_TYPE_MASK
+  ) {
+    this.bspUuid = bspUuid;
+    this.unitEventTypes = unitEventTypes;
+  }
 
   /**
    * @summary Restructures an object into a EnableCallParams

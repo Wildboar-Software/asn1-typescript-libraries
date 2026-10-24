@@ -34,39 +34,47 @@ import {
  *
  */
 export class TotalRefresh {
+    /**
+     * @summary `sDSE`.
+     * @description
+     *
+     * Content of this SDSE. Absent is legal (e.g. a glue/place-holder
+     * with only subordinates).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sDSE?: OPTIONAL<SDSEContent>;
+    /**
+     * @summary `subtree`.
+     * @description
+     *
+     * Immediate subordinate SDSEs. SET SIZE (1..MAX) — omit the
+     * component rather than send empty; omit when there are no
+     * subordinate SDSEs. Order does not matter. RDNs are primary and
+     * include contexts plus all alternative distinguished values unless
+     * the agreement's context selection reduced them.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly subtree?: OPTIONAL<Subtree[]>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `sDSE`.
-         * @description
-         *
-         * Content of this SDSE. Absent is legal (e.g. a glue/place-holder
-         * with only subordinates).
-         *
-         * @public
-         * @readonly
-         */
-        readonly sDSE?: OPTIONAL<SDSEContent>,
-        /**
-         * @summary `subtree`.
-         * @description
-         *
-         * Immediate subordinate SDSEs. SET SIZE (1..MAX) — omit the
-         * component rather than send empty; omit when there are no
-         * subordinate SDSEs. Order does not matter. RDNs are primary and
-         * include contexts plus all alternative distinguished values unless
-         * the agreement's context selection reduced them.
-         *
-         * @public
-         * @readonly
-         */
-        readonly subtree?: OPTIONAL<Subtree[]>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        sDSE?: OPTIONAL<SDSEContent>,
+        subtree?: OPTIONAL<Subtree[]>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.sDSE = sDSE;
+        this.subtree = subtree;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a TotalRefresh

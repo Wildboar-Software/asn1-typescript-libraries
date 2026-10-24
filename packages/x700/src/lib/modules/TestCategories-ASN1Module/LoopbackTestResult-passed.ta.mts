@@ -36,26 +36,32 @@ import {
  *
  */
 export class LoopbackTestResult_passed {
+    /**
+     * @summary `loopbackDataReceived`.
+     * @description
+     *
+     * Data received from the loop. X.737 §7.4.8.
+     * @public
+     * @readonly
+     */
+    public readonly loopbackDataReceived: TestPatternSequence;
+    /**
+     * @summary `loopbackErrorReceived`.
+     * @description
+     *
+     * Measured error (bit count or percent). X.737 §7.4.8.
+     * @public
+     * @readonly
+     */
+    public readonly loopbackErrorReceived: LoopbackError;
+
     constructor(
-        /**
-         * @summary `loopbackDataReceived`.
-         * @description
-         *
-         * Data received from the loop. X.737 §7.4.8.
-         * @public
-         * @readonly
-         */
-        readonly loopbackDataReceived: TestPatternSequence,
-        /**
-         * @summary `loopbackErrorReceived`.
-         * @description
-         *
-         * Measured error (bit count or percent). X.737 §7.4.8.
-         * @public
-         * @readonly
-         */
-        readonly loopbackErrorReceived: LoopbackError
-    ) {}
+        loopbackDataReceived: TestPatternSequence,
+        loopbackErrorReceived: LoopbackError
+    ) {
+        this.loopbackDataReceived = loopbackDataReceived;
+        this.loopbackErrorReceived = loopbackErrorReceived;
+    }
 
     /**
      * @summary Restructures an object into a LoopbackTestResult_passed

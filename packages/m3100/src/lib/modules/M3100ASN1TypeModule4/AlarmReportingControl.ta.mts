@@ -46,32 +46,42 @@ import {
  *
  */
 export class AlarmReportingControl {
+    /**
+     * @summary `controlledEntity`.
+     * @public
+     * @readonly
+     */
+    public readonly controlledEntity: ObjectInstance;
+    /**
+     * @summary `arcProbableCauseList`.
+     * @public
+     * @readonly
+     */
+    public readonly arcProbableCauseList: ProbableCause[];
+    /**
+     * @summary `arcState`.
+     * @public
+     * @readonly
+     */
+    public readonly arcState: ArcState;
+    /**
+     * @summary `timeRemainingInARCState`.
+     * @public
+     * @readonly
+     */
+    public readonly timeRemainingInARCState?: OPTIONAL<INTEGER>;
+
     constructor(
-        /**
-         * @summary `controlledEntity`.
-         * @public
-         * @readonly
-         */
-        readonly controlledEntity: ObjectInstance,
-        /**
-         * @summary `arcProbableCauseList`.
-         * @public
-         * @readonly
-         */
-        readonly arcProbableCauseList: ProbableCause[],
-        /**
-         * @summary `arcState`.
-         * @public
-         * @readonly
-         */
-        readonly arcState: ArcState,
-        /**
-         * @summary `timeRemainingInARCState`.
-         * @public
-         * @readonly
-         */
-        readonly timeRemainingInARCState?: OPTIONAL<INTEGER>
-    ) {}
+        controlledEntity: ObjectInstance,
+        arcProbableCauseList: ProbableCause[],
+        arcState: ArcState,
+        timeRemainingInARCState?: OPTIONAL<INTEGER>
+    ) {
+        this.controlledEntity = controlledEntity;
+        this.arcProbableCauseList = arcProbableCauseList;
+        this.arcState = arcState;
+        this.timeRemainingInARCState = timeRemainingInARCState;
+    }
 
     /**
      * @summary Restructures an object into a AlarmReportingControl

@@ -38,35 +38,43 @@ import { SystemStatusServList, _decode_SystemStatusServList, _encode_SystemStatu
  */
 export
 class StatusReportingServList {
+    /**
+     * @summary `monitoringServices`.
+     * @description
+     *
+     * Monitoring services.
+     * @public
+     * @readonly
+     */
+    public readonly monitoringServices?: OPTIONAL<MonitoringServList>;
+    /**
+     * @summary `snapshotServices`.
+     * @description
+     *
+     * Snapshot services.
+     * @public
+     * @readonly
+     */
+    public readonly snapshotServices?: OPTIONAL<SnapshotServList>;
+    /**
+     * @summary `systemServices`.
+     * @description
+     *
+     * System status services.
+     * @public
+     * @readonly
+     */
+    public readonly systemServices?: OPTIONAL<SystemStatusServList>;
+
     constructor (
-        /**
-         * @summary `monitoringServices`.
-         * @description
-         *
-         * Monitoring services.
-         * @public
-         * @readonly
-         */
-        readonly monitoringServices?: OPTIONAL<MonitoringServList>,
-        /**
-         * @summary `snapshotServices`.
-         * @description
-         *
-         * Snapshot services.
-         * @public
-         * @readonly
-         */
-        readonly snapshotServices?: OPTIONAL<SnapshotServList>,
-        /**
-         * @summary `systemServices`.
-         * @description
-         *
-         * System status services.
-         * @public
-         * @readonly
-         */
-        readonly systemServices?: OPTIONAL<SystemStatusServList>
-    ) {}
+        monitoringServices?: OPTIONAL<MonitoringServList>,
+        snapshotServices?: OPTIONAL<SnapshotServList>,
+        systemServices?: OPTIONAL<SystemStatusServList>
+    ) {
+        this.monitoringServices = monitoringServices;
+        this.snapshotServices = snapshotServices;
+        this.systemServices = systemServices;
+    }
 
     /**
      * @summary Restructures an object into a StatusReportingServList

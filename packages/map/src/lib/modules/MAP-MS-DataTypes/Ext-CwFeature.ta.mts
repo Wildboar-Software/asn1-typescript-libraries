@@ -29,26 +29,34 @@ import { Ext_SS_Status, _decode_Ext_SS_Status, _encode_Ext_SS_Status } from "../
  */
 export
 class Ext_CwFeature {
+    /**
+     * @summary `basicService`.
+     * @public
+     * @readonly
+     */
+    public readonly basicService: Ext_BasicServiceCode;
+    /**
+     * @summary `ss_Status`.
+     * @public
+     * @readonly
+     */
+    public readonly ss_Status: Ext_SS_Status;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `basicService`.
-         * @public
-         * @readonly
-         */
-        readonly basicService: Ext_BasicServiceCode,
-        /**
-         * @summary `ss_Status`.
-         * @public
-         * @readonly
-         */
-        readonly ss_Status: Ext_SS_Status,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        basicService: Ext_BasicServiceCode,
+        ss_Status: Ext_SS_Status,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.basicService = basicService;
+        this.ss_Status = ss_Status;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a Ext_CwFeature

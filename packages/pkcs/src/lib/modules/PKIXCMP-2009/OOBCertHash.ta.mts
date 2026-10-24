@@ -37,26 +37,34 @@ import {
  *
  */
 export class OOBCertHash {
+    /**
+     * @summary `hashAlg`.
+     * @public
+     * @readonly
+     */
+    public readonly hashAlg: OPTIONAL<AlgorithmIdentifier>;
+    /**
+     * @summary `certId`.
+     * @public
+     * @readonly
+     */
+    public readonly certId: OPTIONAL<CertId>;
+    /**
+     * @summary `hashVal`.
+     * @public
+     * @readonly
+     */
+    public readonly hashVal: BIT_STRING;
+
     constructor(
-        /**
-         * @summary `hashAlg`.
-         * @public
-         * @readonly
-         */
-        readonly hashAlg: OPTIONAL<AlgorithmIdentifier>,
-        /**
-         * @summary `certId`.
-         * @public
-         * @readonly
-         */
-        readonly certId: OPTIONAL<CertId>,
-        /**
-         * @summary `hashVal`.
-         * @public
-         * @readonly
-         */
-        readonly hashVal: BIT_STRING
-    ) {}
+        hashAlg: OPTIONAL<AlgorithmIdentifier>,
+        certId: OPTIONAL<CertId>,
+        hashVal: BIT_STRING
+    ) {
+        this.hashAlg = hashAlg;
+        this.certId = certId;
+        this.hashVal = hashVal;
+    }
 
     /**
      * @summary Restructures an object into a OOBCertHash

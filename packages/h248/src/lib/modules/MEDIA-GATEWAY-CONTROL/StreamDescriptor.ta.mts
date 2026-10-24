@@ -38,30 +38,36 @@ import { StreamParms, _decode_StreamParms, _encode_StreamParms } from "../MEDIA-
  */
 export
 class StreamDescriptor {
+    /**
+     * @summary `streamID`.
+     * @description
+     *
+     * Stream identifier. Values 1 to 65535 identify a media stream. 0 is
+     * used on events and signals to mean "not a particular stream", not as
+     * a stream in this descriptor (clauses 7.1.4 and 7.1.9.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly streamID: StreamID;
+    /**
+     * @summary `streamParms`.
+     * @description
+     *
+     * LocalControl, Local, Remote, and Statistics for this stream.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly streamParms: StreamParms;
+
     constructor (
-        /**
-         * @summary `streamID`.
-         * @description
-         *
-         * Stream identifier. Values 1 to 65535 identify a media stream. 0 is
-         * used on events and signals to mean "not a particular stream", not as
-         * a stream in this descriptor (clauses 7.1.4 and 7.1.9.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly streamID: StreamID,
-        /**
-         * @summary `streamParms`.
-         * @description
-         *
-         * LocalControl, Local, Remote, and Statistics for this stream.
-         *
-         * @public
-         * @readonly
-         */
-        readonly streamParms: StreamParms
-    ) {}
+        streamID: StreamID,
+        streamParms: StreamParms
+    ) {
+        this.streamID = streamID;
+        this.streamParms = streamParms;
+    }
 
     /**
      * @summary Restructures an object into a StreamDescriptor

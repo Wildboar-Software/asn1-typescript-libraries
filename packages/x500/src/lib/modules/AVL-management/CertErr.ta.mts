@@ -33,34 +33,42 @@ import {
  *
  */
 export class CertErr {
+    /**
+     * @summary `notOK`.
+     * @description
+     *
+     * Why the cert exchange failed.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly notOK: AVMP_error;
+    /**
+     * @summary `note`.
+     * @description
+     *
+     * OPTIONAL. If present, SIZE (1..MAX) — empty `Notifications` is illegal.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly note?: OPTIONAL<Notifications>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `notOK`.
-         * @description
-         *
-         * Why the cert exchange failed.
-         *
-         * @public
-         * @readonly
-         */
-        readonly notOK: AVMP_error,
-        /**
-         * @summary `note`.
-         * @description
-         *
-         * OPTIONAL. If present, SIZE (1..MAX) — empty `Notifications` is illegal.
-         *
-         * @public
-         * @readonly
-         */
-        readonly note?: OPTIONAL<Notifications>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        notOK: AVMP_error,
+        note?: OPTIONAL<Notifications>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.notOK = notOK;
+        this.note = note;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a CertErr

@@ -27,18 +27,22 @@ import { Octet1, _decode_Octet1, _encode_Octet1 } from "../RSPDefinitions/Octet1
  */
 export
 class GetEuiccDataRequest {
+    /**
+     * @summary `tagList`.
+     * @description
+     * 
+     * One octet whose value is `'5A'`. SGP.22 v3.1 §5.7.20.
+     * 
+     * @public
+     * @readonly
+     */
+    public readonly tagList: Octet1;
+
     constructor (
-        /**
-         * @summary `tagList`.
-         * @description
-         * 
-         * One octet whose value is `'5A'`. SGP.22 v3.1 §5.7.20.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly tagList: Octet1
-    ) {}
+        tagList: Octet1
+    ) {
+        this.tagList = tagList;
+    }
 
     /**
      * @summary Restructures an object into a GetEuiccDataRequest

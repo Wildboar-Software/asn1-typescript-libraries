@@ -40,55 +40,65 @@ import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-
  */
 export
 class GetNamedTypeAttributes_Response {
+    /**
+     * @summary `mmsDeletable`.
+     * @description
+     *
+     * Whether DeleteNamedType may delete this object
+     * (ISO 9506-1:2003 §9.1.4).
+     * ISO 9506-1:2003 §14.16.1.2.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mmsDeletable: BOOLEAN;
+    /**
+     * @summary `typeSpecification`.
+     * @description
+     *
+     * `&typeDescription` of the Named Type.
+     * ISO 9506-1:2003 §14.16.1.2.2, §14.2.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly typeSpecification: TypeSpecification;
+    /**
+     * @summary `accessControlList`.
+     * @description
+     *
+     * Access Control List `&name`. Present iff `aco` CBB
+     * was negotiated. Absent in minor versions 1 and 2.
+     * ISO 9506-1:2003 §14.16.1.2.3.
+     * ISO 9506-2:2003 §14.16.2.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly accessControlList?: OPTIONAL<Identifier>;
+    /**
+     * @summary `meaning`.
+     * @description
+     *
+     * `&meaning` if present. Present iff `sem` CBB was
+     * negotiated. ISO 9506-1:2003 §14.16.1.2.4.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly meaning?: OPTIONAL<VisibleString>;
+
     constructor (
-        /**
-         * @summary `mmsDeletable`.
-         * @description
-         *
-         * Whether DeleteNamedType may delete this object
-         * (ISO 9506-1:2003 §9.1.4).
-         * ISO 9506-1:2003 §14.16.1.2.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly mmsDeletable: BOOLEAN,
-        /**
-         * @summary `typeSpecification`.
-         * @description
-         *
-         * `&typeDescription` of the Named Type.
-         * ISO 9506-1:2003 §14.16.1.2.2, §14.2.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly typeSpecification: TypeSpecification,
-        /**
-         * @summary `accessControlList`.
-         * @description
-         *
-         * Access Control List `&name`. Present iff `aco` CBB
-         * was negotiated. Absent in minor versions 1 and 2.
-         * ISO 9506-1:2003 §14.16.1.2.3.
-         * ISO 9506-2:2003 §14.16.2.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly accessControlList?: OPTIONAL<Identifier>,
-        /**
-         * @summary `meaning`.
-         * @description
-         *
-         * `&meaning` if present. Present iff `sem` CBB was
-         * negotiated. ISO 9506-1:2003 §14.16.1.2.4.
-         *
-         * @public
-         * @readonly
-         */
-        readonly meaning?: OPTIONAL<VisibleString>
-    ) {}
+        mmsDeletable: BOOLEAN,
+        typeSpecification: TypeSpecification,
+        accessControlList?: OPTIONAL<Identifier>,
+        meaning?: OPTIONAL<VisibleString>
+    ) {
+        this.mmsDeletable = mmsDeletable;
+        this.typeSpecification = typeSpecification;
+        this.accessControlList = accessControlList;
+        this.meaning = meaning;
+    }
 
     /**
      * @summary Restructures an object into a GetNamedTypeAttributes_Response

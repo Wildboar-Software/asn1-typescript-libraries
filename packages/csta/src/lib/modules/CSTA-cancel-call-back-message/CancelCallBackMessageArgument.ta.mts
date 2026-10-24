@@ -36,37 +36,45 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class CancelCallBackMessageArgument {
+    /**
+     * @summary `originatingDevice`.
+     * @description
+     *
+     * Party that initiated the original Call Back Message.
+     * @public
+     * @readonly
+     */
+    public readonly originatingDevice: DeviceID;
+    /**
+     * @summary `targetDevice`.
+     * @description
+     *
+     * Target of the original Call Back Message. Empty DeviceID cancels all
+     * at the originator if supported.
+     * @public
+     * @readonly
+     */
+    public readonly targetDevice: DeviceID;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `originatingDevice`.
-         * @description
-         *
-         * Party that initiated the original Call Back Message.
-         * @public
-         * @readonly
-         */
-        readonly originatingDevice: DeviceID,
-        /**
-         * @summary `targetDevice`.
-         * @description
-         *
-         * Target of the original Call Back Message. Empty DeviceID cancels all
-         * at the originator if supported.
-         * @public
-         * @readonly
-         */
-        readonly targetDevice: DeviceID,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        originatingDevice: DeviceID,
+        targetDevice: DeviceID,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.originatingDevice = originatingDevice;
+        this.targetDevice = targetDevice;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a CancelCallBackMessageArgument

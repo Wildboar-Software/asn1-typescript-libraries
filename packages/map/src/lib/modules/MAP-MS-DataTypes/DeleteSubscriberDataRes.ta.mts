@@ -31,32 +31,40 @@ import { RegionalSubscriptionResponse, _decode_RegionalSubscriptionResponse, _en
  */
 export
 class DeleteSubscriberDataRes {
+    /**
+     * @summary `regionalSubscriptionResponse`.
+     * @description
+     *
+     * Network Node Area Restricted or Regional Subscription Not Supported.
+     * Used by VLR, SGSN and IWF. Not applicable for the CSS (3GPP TS 29.002
+     * V19.1.0 clause 8.8.2.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly regionalSubscriptionResponse?: OPTIONAL<RegionalSubscriptionResponse>;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `regionalSubscriptionResponse`.
-         * @description
-         *
-         * Network Node Area Restricted or Regional Subscription Not Supported.
-         * Used by VLR, SGSN and IWF. Not applicable for the CSS (3GPP TS 29.002
-         * V19.1.0 clause 8.8.2.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly regionalSubscriptionResponse?: OPTIONAL<RegionalSubscriptionResponse>,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        regionalSubscriptionResponse?: OPTIONAL<RegionalSubscriptionResponse>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.regionalSubscriptionResponse = regionalSubscriptionResponse;
+        this.extensionContainer = extensionContainer;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a DeleteSubscriberDataRes

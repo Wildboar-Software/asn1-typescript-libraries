@@ -33,32 +33,42 @@ import {
  *
  */
 export class Capacities {
+    /**
+     * @summary `availableLinkCapacity`.
+     * @public
+     * @readonly
+     */
+    public readonly availableLinkCapacity: Capacity;
+    /**
+     * @summary `maxProvisionableCapacity`.
+     * @public
+     * @readonly
+     */
+    public readonly maxProvisionableCapacity: Capacity;
+    /**
+     * @summary `potentialLinkCapacity`.
+     * @public
+     * @readonly
+     */
+    public readonly potentialLinkCapacity: Capacity;
+    /**
+     * @summary `provisionedLinkCapacity`.
+     * @public
+     * @readonly
+     */
+    public readonly provisionedLinkCapacity: Capacity;
+
     constructor(
-        /**
-         * @summary `availableLinkCapacity`.
-         * @public
-         * @readonly
-         */
-        readonly availableLinkCapacity: Capacity,
-        /**
-         * @summary `maxProvisionableCapacity`.
-         * @public
-         * @readonly
-         */
-        readonly maxProvisionableCapacity: Capacity,
-        /**
-         * @summary `potentialLinkCapacity`.
-         * @public
-         * @readonly
-         */
-        readonly potentialLinkCapacity: Capacity,
-        /**
-         * @summary `provisionedLinkCapacity`.
-         * @public
-         * @readonly
-         */
-        readonly provisionedLinkCapacity: Capacity
-    ) {}
+        availableLinkCapacity: Capacity,
+        maxProvisionableCapacity: Capacity,
+        potentialLinkCapacity: Capacity,
+        provisionedLinkCapacity: Capacity
+    ) {
+        this.availableLinkCapacity = availableLinkCapacity;
+        this.maxProvisionableCapacity = maxProvisionableCapacity;
+        this.potentialLinkCapacity = potentialLinkCapacity;
+        this.provisionedLinkCapacity = provisionedLinkCapacity;
+    }
 
     /**
      * @summary Restructures an object into a Capacities

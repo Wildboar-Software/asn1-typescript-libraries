@@ -39,29 +39,35 @@ import {
  *
  */
 export class StateConditions_Item {
+    /**
+     * @summary `conditionalObject`.
+     * @description
+     *
+     * Managed object whose state is a context for the rule.
+     * If it is not available, the rule evaluates to FALSE.
+     * X.741 A.2.3, A.5.25.
+     * @public
+     * @readonly
+     */
+    public readonly conditionalObject: ObjectInstance;
+    /**
+     * @summary `state`.
+     * @description
+     *
+     * CMIS filter on attributes of `conditionalObject`.
+     * FALSE ⇒ rule evaluates to FALSE. X.741 A.2.3, A.5.25.
+     * @public
+     * @readonly
+     */
+    public readonly state: CMISFilter;
+
     constructor(
-        /**
-         * @summary `conditionalObject`.
-         * @description
-         *
-         * Managed object whose state is a context for the rule.
-         * If it is not available, the rule evaluates to FALSE.
-         * X.741 A.2.3, A.5.25.
-         * @public
-         * @readonly
-         */
-        readonly conditionalObject: ObjectInstance,
-        /**
-         * @summary `state`.
-         * @description
-         *
-         * CMIS filter on attributes of `conditionalObject`.
-         * FALSE ⇒ rule evaluates to FALSE. X.741 A.2.3, A.5.25.
-         * @public
-         * @readonly
-         */
-        readonly state: CMISFilter
-    ) {}
+        conditionalObject: ObjectInstance,
+        state: CMISFilter
+    ) {
+        this.conditionalObject = conditionalObject;
+        this.state = state;
+    }
 
     /**
      * @summary Restructures an object into a StateConditions_Item

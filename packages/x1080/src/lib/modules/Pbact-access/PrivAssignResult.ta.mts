@@ -37,26 +37,32 @@ import {
  *
  */
 export class PrivAssignResult {
+    /**
+     * @summary `result`.
+     * @description
+     *
+     * Success (`NULL`) or failure (`PrivAssignErr`).
+     * ITU-T Rec. X.1080.0 (2017) Cor.1
+     * [§9](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly result: PrivAssignResult_result;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `result`.
-         * @description
-         *
-         * Success (`NULL`) or failure (`PrivAssignErr`).
-         * ITU-T Rec. X.1080.0 (2017) Cor.1
-         * [§9](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly result: PrivAssignResult_result,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        result: PrivAssignResult_result,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.result = result;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a PrivAssignResult

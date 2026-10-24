@@ -38,30 +38,36 @@ import { CSTAPrivateData, _decode_CSTAPrivateData, _encode_CSTAPrivateData } fro
  */
 export
 class CSTACommonArguments {
+    /**
+     * @summary `security`.
+     * @description
+     *
+     * Timestamp, message sequence number, and opaque security info
+     * (ECMA-269 §12.2.12).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly security?: OPTIONAL<CSTASecurityData>;
+    /**
+     * @summary `privateData`.
+     * @description
+     *
+     * Non-standard parameters (ECMA-269 §12.2.11). Discard if
+     * unrecognised (ECMA-285 §5.5).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly privateData?: OPTIONAL<CSTAPrivateData[]>;
+
     constructor (
-        /**
-         * @summary `security`.
-         * @description
-         *
-         * Timestamp, message sequence number, and opaque security info
-         * (ECMA-269 §12.2.12).
-         *
-         * @public
-         * @readonly
-         */
-        readonly security?: OPTIONAL<CSTASecurityData>,
-        /**
-         * @summary `privateData`.
-         * @description
-         *
-         * Non-standard parameters (ECMA-269 §12.2.11). Discard if
-         * unrecognised (ECMA-285 §5.5).
-         *
-         * @public
-         * @readonly
-         */
-        readonly privateData?: OPTIONAL<CSTAPrivateData[]>
-    ) {}
+        security?: OPTIONAL<CSTASecurityData>,
+        privateData?: OPTIONAL<CSTAPrivateData[]>
+    ) {
+        this.security = security;
+        this.privateData = privateData;
+    }
 
     /**
      * @summary Restructures an object into a CSTACommonArguments

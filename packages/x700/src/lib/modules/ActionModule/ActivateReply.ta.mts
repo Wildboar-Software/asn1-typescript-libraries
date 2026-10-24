@@ -55,42 +55,50 @@ import {
  *
  */
 export class ActivateReply {
+    /**
+     * @summary `operationalStatus`.
+     * @description
+     *
+     * Operational state of the object after the example
+     * `activate` action. ITU-T Rec. X.722 (01/92) A.7, A.10.
+     * @public
+     * @readonly
+     */
+    public readonly operationalStatus: OperationalState;
+    /**
+     * @summary `responseCode`.
+     * @description
+     *
+     * `successResponse` (0) if activate succeeded;
+     * `serviceProviderErrorResponse` (1) if it failed
+     * because of the underlying service provider. ITU-T Rec.
+     * X.722 (01/92) A.7.
+     * @public
+     * @readonly
+     */
+    public readonly responseCode: ActivateReply_responseCode;
+    /**
+     * @summary `responseParams`.
+     * @description
+     *
+     * Optional management extensions. When
+     * `responseCode` is `serviceProviderErrorResponse`,
+     * carries `serviceProviderErrorResponseReason`. ITU-T
+     * Rec. X.722 (01/92) A.3, A.7.
+     * @public
+     * @readonly
+     */
+    public readonly responseParams?: OPTIONAL<ManagementExtension[]>;
+
     constructor(
-        /**
-         * @summary `operationalStatus`.
-         * @description
-         *
-         * Operational state of the object after the example
-         * `activate` action. ITU-T Rec. X.722 (01/92) A.7, A.10.
-         * @public
-         * @readonly
-         */
-        readonly operationalStatus: OperationalState,
-        /**
-         * @summary `responseCode`.
-         * @description
-         *
-         * `successResponse` (0) if activate succeeded;
-         * `serviceProviderErrorResponse` (1) if it failed
-         * because of the underlying service provider. ITU-T Rec.
-         * X.722 (01/92) A.7.
-         * @public
-         * @readonly
-         */
-        readonly responseCode: ActivateReply_responseCode,
-        /**
-         * @summary `responseParams`.
-         * @description
-         *
-         * Optional management extensions. When
-         * `responseCode` is `serviceProviderErrorResponse`,
-         * carries `serviceProviderErrorResponseReason`. ITU-T
-         * Rec. X.722 (01/92) A.3, A.7.
-         * @public
-         * @readonly
-         */
-        readonly responseParams?: OPTIONAL<ManagementExtension[]>
-    ) {}
+        operationalStatus: OperationalState,
+        responseCode: ActivateReply_responseCode,
+        responseParams?: OPTIONAL<ManagementExtension[]>
+    ) {
+        this.operationalStatus = operationalStatus;
+        this.responseCode = responseCode;
+        this.responseParams = responseParams;
+    }
 
     /**
      * @summary Restructures an object into a ActivateReply

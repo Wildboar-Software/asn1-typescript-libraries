@@ -37,28 +37,34 @@ import { MMSString, _decode_MMSString, _encode_MMSString } from "../ISO-9506-MMS
  */
 export
 class ErrorParameters_additionalDetial {
+    /**
+     * @summary `size`.
+     * @description
+     *
+     * Size of additional error detail. ISO 9506-2:2003 Annex B.2.9.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly size: INTEGER;
+    /**
+     * @summary `syntax`.
+     * @description
+     *
+     * Syntax of additional error detail. ISO 9506-2:2003 Annex B.2.9.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly syntax: MMSString;
+
     constructor (
-        /**
-         * @summary `size`.
-         * @description
-         *
-         * Size of additional error detail. ISO 9506-2:2003 Annex B.2.9.
-         *
-         * @public
-         * @readonly
-         */
-        readonly size: INTEGER,
-        /**
-         * @summary `syntax`.
-         * @description
-         *
-         * Syntax of additional error detail. ISO 9506-2:2003 Annex B.2.9.
-         *
-         * @public
-         * @readonly
-         */
-        readonly syntax: MMSString
-    ) {}
+        size: INTEGER,
+        syntax: MMSString
+    ) {
+        this.size = size;
+        this.syntax = syntax;
+    }
 
     /**
      * @summary Restructures an object into a ErrorParameters_additionalDetial

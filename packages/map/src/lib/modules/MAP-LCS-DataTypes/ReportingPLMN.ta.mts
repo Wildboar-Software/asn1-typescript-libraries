@@ -30,44 +30,54 @@ import { RAN_Technology, _decode_RAN_Technology, _encode_RAN_Technology, _enum_f
  */
 export
 class ReportingPLMN {
+    /**
+     * @summary `plmn_Id`.
+     * @description
+     *
+     * PLMN identity.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly plmn_Id: PLMN_Id;
+    /**
+     * @summary `ran_Technology`.
+     * @description
+     *
+     * gsm or umts.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ran_Technology?: OPTIONAL<RAN_Technology>;
+    /**
+     * @summary `ran_PeriodicLocationSupport`.
+     * @description
+     *
+     * Periodic location supported in this RAN.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ran_PeriodicLocationSupport?: OPTIONAL<NULL>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `plmn_Id`.
-         * @description
-         *
-         * PLMN identity.
-         *
-         * @public
-         * @readonly
-         */
-        readonly plmn_Id: PLMN_Id,
-        /**
-         * @summary `ran_Technology`.
-         * @description
-         *
-         * gsm or umts.
-         *
-         * @public
-         * @readonly
-         */
-        readonly ran_Technology?: OPTIONAL<RAN_Technology>,
-        /**
-         * @summary `ran_PeriodicLocationSupport`.
-         * @description
-         *
-         * Periodic location supported in this RAN.
-         *
-         * @public
-         * @readonly
-         */
-        readonly ran_PeriodicLocationSupport?: OPTIONAL<NULL>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        plmn_Id: PLMN_Id,
+        ran_Technology?: OPTIONAL<RAN_Technology>,
+        ran_PeriodicLocationSupport?: OPTIONAL<NULL>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.plmn_Id = plmn_Id;
+        this.ran_Technology = ran_Technology;
+        this.ran_PeriodicLocationSupport = ran_PeriodicLocationSupport;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a ReportingPLMN

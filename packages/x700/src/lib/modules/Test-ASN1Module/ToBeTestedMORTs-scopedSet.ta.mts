@@ -44,44 +44,52 @@ import {
  *
  */
 export class ToBeTestedMORTs_scopedSet {
+    /**
+     * @summary `base`.
+     * @description
+     *
+     * Base object instance for the CMIS scoped selection of MORTs. Untagged
+     * ObjectInstance (Cor.2). ITU-T Rec. X.745 (11/93) §8.4.2.6.
+     * [§8.4.2.6](https://www.itu.int/rec/T-REC-X.745-199311-I)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly base: ObjectInstance;
+    /**
+     * @summary `mORTsScope0`.
+     * @description
+     *
+     * CMIS Scope of the MORT selection; DEFAULT namedNumbers:baseObject
+     * (Cor.2). ITU-T Rec. X.745 (11/93) §8.4.2.6.
+     * [§8.4.2.6](https://www.itu.int/rec/T-REC-X.745-199311-I)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mORTsScope0?: OPTIONAL<Scope>;
+    /**
+     * @summary `mORTsFilter`.
+     * @description
+     *
+     * CMISFilter applied after scope; DEFAULT `and:{}` (empty AND, matches
+     * all; Cor.1). ITU-T Rec. X.745 (11/93) §8.4.2.6.
+     * [§8.4.2.6](https://www.itu.int/rec/T-REC-X.745-199311-I)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mORTsFilter?: OPTIONAL<CMISFilter>;
+
     constructor(
-        /**
-         * @summary `base`.
-         * @description
-         *
-         * Base object instance for the CMIS scoped selection of MORTs. Untagged
-         * ObjectInstance (Cor.2). ITU-T Rec. X.745 (11/93) §8.4.2.6.
-         * [§8.4.2.6](https://www.itu.int/rec/T-REC-X.745-199311-I)
-         *
-         * @public
-         * @readonly
-         */
-        readonly base: ObjectInstance,
-        /**
-         * @summary `mORTsScope0`.
-         * @description
-         *
-         * CMIS Scope of the MORT selection; DEFAULT namedNumbers:baseObject
-         * (Cor.2). ITU-T Rec. X.745 (11/93) §8.4.2.6.
-         * [§8.4.2.6](https://www.itu.int/rec/T-REC-X.745-199311-I)
-         *
-         * @public
-         * @readonly
-         */
-        readonly mORTsScope0?: OPTIONAL<Scope>,
-        /**
-         * @summary `mORTsFilter`.
-         * @description
-         *
-         * CMISFilter applied after scope; DEFAULT `and:{}` (empty AND, matches
-         * all; Cor.1). ITU-T Rec. X.745 (11/93) §8.4.2.6.
-         * [§8.4.2.6](https://www.itu.int/rec/T-REC-X.745-199311-I)
-         *
-         * @public
-         * @readonly
-         */
-        readonly mORTsFilter?: OPTIONAL<CMISFilter>
-    ) {}
+        base: ObjectInstance,
+        mORTsScope0?: OPTIONAL<Scope>,
+        mORTsFilter?: OPTIONAL<CMISFilter>
+    ) {
+        this.base = base;
+        this.mORTsScope0 = mORTsScope0;
+        this.mORTsFilter = mORTsFilter;
+    }
 
     /**
      * @summary Restructures an object into a ToBeTestedMORTs_scopedSet

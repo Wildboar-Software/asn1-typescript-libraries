@@ -38,31 +38,37 @@ import {
  *
  */
 export class ABRT_apdu {
+    /**
+     * @summary `abort_source`.
+     * @description
+     *
+     * `dialogue-service-user` (0) or
+     * `dialogue-service-provider` (1) (Table 60).
+     * Mandatory.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly abort_source: ABRT_source;
+    /**
+     * @summary `user_information`.
+     * @description
+     *
+     * Optional sequence of EXTERNALs identified by a
+     * user-defined abstract syntax name (§4.2.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly user_information?: OPTIONAL<EXTERNAL[]>;
+
     constructor(
-        /**
-         * @summary `abort_source`.
-         * @description
-         *
-         * `dialogue-service-user` (0) or
-         * `dialogue-service-provider` (1) (Table 60).
-         * Mandatory.
-         *
-         * @public
-         * @readonly
-         */
-        readonly abort_source: ABRT_source,
-        /**
-         * @summary `user_information`.
-         * @description
-         *
-         * Optional sequence of EXTERNALs identified by a
-         * user-defined abstract syntax name (§4.2.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly user_information?: OPTIONAL<EXTERNAL[]>
-    ) {}
+        abort_source: ABRT_source,
+        user_information?: OPTIONAL<EXTERNAL[]>
+    ) {
+        this.abort_source = abort_source;
+        this.user_information = user_information;
+    }
 
     /**
      * @summary Restructures an object into a ABRT_apdu

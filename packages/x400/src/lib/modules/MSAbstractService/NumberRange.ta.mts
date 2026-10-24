@@ -34,20 +34,26 @@ import {
  *
  */
 export class NumberRange {
+    /**
+     * @summary `from_`.
+     * @public
+     * @readonly
+     */
+    public readonly from_?: OPTIONAL<SequenceNumber>;
+    /**
+     * @summary `to`.
+     * @public
+     * @readonly
+     */
+    public readonly to?: OPTIONAL<SequenceNumber>;
+
     constructor(
-        /**
-         * @summary `from_`.
-         * @public
-         * @readonly
-         */
-        readonly from_?: OPTIONAL<SequenceNumber>,
-        /**
-         * @summary `to`.
-         * @public
-         * @readonly
-         */
-        readonly to?: OPTIONAL<SequenceNumber>
-    ) {}
+        from_?: OPTIONAL<SequenceNumber>,
+        to?: OPTIONAL<SequenceNumber>
+    ) {
+        this.from_ = from_;
+        this.to = to;
+    }
 
     /**
      * @summary Restructures an object into a NumberRange

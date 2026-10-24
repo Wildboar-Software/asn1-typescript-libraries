@@ -37,63 +37,77 @@ import { XRES, _decode_XRES, _encode_XRES } from "../MAP-MS-DataTypes/XRES.ta.mj
  */
 export
 class EPC_AV {
+    /**
+     * @summary `rand`.
+     * @description
+     *
+     * Random number used for authentication (3GPP TS 29.002 V19.1.0 clause
+     * 7.6.7.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly rand: RAND;
+    /**
+     * @summary `xres`.
+     * @description
+     *
+     * Expected response to the authentication request (3GPP TS 29.002
+     * V19.1.0 clause 7.6.7.5).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly xres: XRES;
+    /**
+     * @summary `autn`.
+     * @description
+     *
+     * Authentication Token (3GPP TS 29.002 V19.1.0 clause 7.6.7.5C).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly autn: AUTN;
+    /**
+     * @summary `kasme`.
+     * @description
+     *
+     * Key for the Access Security Management Entity (3GPP TS 29.002 V19.1.0
+     * clause 7.6.7.5D).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly kasme: KASME;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `rand`.
-         * @description
-         *
-         * Random number used for authentication (3GPP TS 29.002 V19.1.0 clause
-         * 7.6.7.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly rand: RAND,
-        /**
-         * @summary `xres`.
-         * @description
-         *
-         * Expected response to the authentication request (3GPP TS 29.002
-         * V19.1.0 clause 7.6.7.5).
-         *
-         * @public
-         * @readonly
-         */
-        readonly xres: XRES,
-        /**
-         * @summary `autn`.
-         * @description
-         *
-         * Authentication Token (3GPP TS 29.002 V19.1.0 clause 7.6.7.5C).
-         *
-         * @public
-         * @readonly
-         */
-        readonly autn: AUTN,
-        /**
-         * @summary `kasme`.
-         * @description
-         *
-         * Key for the Access Security Management Entity (3GPP TS 29.002 V19.1.0
-         * clause 7.6.7.5D).
-         *
-         * @public
-         * @readonly
-         */
-        readonly kasme: KASME,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        rand: RAND,
+        xres: XRES,
+        autn: AUTN,
+        kasme: KASME,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.rand = rand;
+        this.xres = xres;
+        this.autn = autn;
+        this.kasme = kasme;
+        this.extensionContainer = extensionContainer;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a EPC_AV

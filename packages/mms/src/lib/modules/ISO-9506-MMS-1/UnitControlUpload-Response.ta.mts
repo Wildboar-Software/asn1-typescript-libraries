@@ -38,30 +38,36 @@ import { UnitControlUpload_Response_nextElement, _decode_UnitControlUpload_Respo
  */
 export
 class UnitControlUpload_Response {
+    /**
+     * @summary `controlElements`.
+     * @description
+     *
+     * Domain/PI records; each PI definition includes
+     * `&programInvocationState`. ISO 9506-1:2003 §13.5.1.2.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly controlElements: ControlElement[];
+    /**
+     * @summary `nextElement`.
+     * @description
+     *
+     * First unsent element for a follow-up request. Absent: this response
+     * finished the Unit Control. ISO 9506-1:2003 §13.5.1.2.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly nextElement?: OPTIONAL<UnitControlUpload_Response_nextElement>;
+
     constructor (
-        /**
-         * @summary `controlElements`.
-         * @description
-         *
-         * Domain/PI records; each PI definition includes
-         * `&programInvocationState`. ISO 9506-1:2003 §13.5.1.2.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly controlElements: ControlElement[],
-        /**
-         * @summary `nextElement`.
-         * @description
-         *
-         * First unsent element for a follow-up request. Absent: this response
-         * finished the Unit Control. ISO 9506-1:2003 §13.5.1.2.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly nextElement?: OPTIONAL<UnitControlUpload_Response_nextElement>
-    ) {}
+        controlElements: ControlElement[],
+        nextElement?: OPTIONAL<UnitControlUpload_Response_nextElement>
+    ) {
+        this.controlElements = controlElements;
+        this.nextElement = nextElement;
+    }
 
     /**
      * @summary Restructures an object into a UnitControlUpload_Response

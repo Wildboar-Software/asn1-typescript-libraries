@@ -41,50 +41,60 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class StartArgument {
+    /**
+     * @summary `overConnection`.
+     * @description
+     *
+     * Connection to start with the voice resource (ECMA-269 §26.1.14.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly overConnection: ConnectionID;
+    /**
+     * @summary `resource`.
+     * @description
+     *
+     * Interactive voice resource. Required when more than one interactive
+     * voice resource exists on the connection.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly resource?: OPTIONAL<ResourceID>;
+    /**
+     * @summary `text`.
+     * @description
+     *
+     * Optional text (ECMA-269 §26.1.14.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly text?: OPTIONAL<IA5String>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * CSTACommonArguments carrying the service-table security and
+     * privateData parameters.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `overConnection`.
-         * @description
-         *
-         * Connection to start with the voice resource (ECMA-269 §26.1.14.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly overConnection: ConnectionID,
-        /**
-         * @summary `resource`.
-         * @description
-         *
-         * Interactive voice resource. Required when more than one interactive
-         * voice resource exists on the connection.
-         *
-         * @public
-         * @readonly
-         */
-        readonly resource?: OPTIONAL<ResourceID>,
-        /**
-         * @summary `text`.
-         * @description
-         *
-         * Optional text (ECMA-269 §26.1.14.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly text?: OPTIONAL<IA5String>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * CSTACommonArguments carrying the service-table security and
-         * privateData parameters.
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        overConnection: ConnectionID,
+        resource?: OPTIONAL<ResourceID>,
+        text?: OPTIONAL<IA5String>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.overConnection = overConnection;
+        this.resource = resource;
+        this.text = text;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a StartArgument

@@ -42,29 +42,35 @@ import {
  *
  */
 export class VerifyMembershipStatusReply {
+    /**
+     * @summary `objectName`.
+     * @description
+     *
+     * Object whose membership was tested. ITU-T Rec. X.749
+     * (08/97)
+     * [§8.4.3](https://www.itu.int/rec/T-REC-X.749-199708-I).
+     * @public
+     * @readonly
+     */
+    public readonly objectName: ObjectInstance;
+    /**
+     * @summary `membershipStatus`.
+     * @description
+     *
+     * Result of the membership test. ITU-T Rec. X.749 (08/97)
+     * [§8.4.3](https://www.itu.int/rec/T-REC-X.749-199708-I).
+     * @public
+     * @readonly
+     */
+    public readonly membershipStatus: MembershipStatus;
+
     constructor(
-        /**
-         * @summary `objectName`.
-         * @description
-         *
-         * Object whose membership was tested. ITU-T Rec. X.749
-         * (08/97)
-         * [§8.4.3](https://www.itu.int/rec/T-REC-X.749-199708-I).
-         * @public
-         * @readonly
-         */
-        readonly objectName: ObjectInstance,
-        /**
-         * @summary `membershipStatus`.
-         * @description
-         *
-         * Result of the membership test. ITU-T Rec. X.749 (08/97)
-         * [§8.4.3](https://www.itu.int/rec/T-REC-X.749-199708-I).
-         * @public
-         * @readonly
-         */
-        readonly membershipStatus: MembershipStatus
-    ) {}
+        objectName: ObjectInstance,
+        membershipStatus: MembershipStatus
+    ) {
+        this.objectName = objectName;
+        this.membershipStatus = membershipStatus;
+    }
 
     /**
      * @summary Restructures an object into a VerifyMembershipStatusReply

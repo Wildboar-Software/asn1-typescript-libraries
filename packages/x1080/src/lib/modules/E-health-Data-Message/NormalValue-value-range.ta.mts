@@ -30,28 +30,34 @@ import * as $ from '@wildboar/asn1/functional';
  *
  */
 export class NormalValue_value_range {
+    /**
+     * @summary `minimum`.
+     * @description
+     *
+     * Lower bound of the closed interval.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly minimum: REAL;
+    /**
+     * @summary `maximum`.
+     * @description
+     *
+     * Upper bound of the closed interval.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly maximum: REAL;
+
     constructor(
-        /**
-         * @summary `minimum`.
-         * @description
-         *
-         * Lower bound of the closed interval.
-         *
-         * @public
-         * @readonly
-         */
-        readonly minimum: REAL,
-        /**
-         * @summary `maximum`.
-         * @description
-         *
-         * Upper bound of the closed interval.
-         *
-         * @public
-         * @readonly
-         */
-        readonly maximum: REAL
-    ) {}
+        minimum: REAL,
+        maximum: REAL
+    ) {
+        this.minimum = minimum;
+        this.maximum = maximum;
+    }
 
     /**
      * @summary Restructures an object into a NormalValue_value_range

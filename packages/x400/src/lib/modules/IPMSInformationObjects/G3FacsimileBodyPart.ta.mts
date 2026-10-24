@@ -37,20 +37,26 @@ import {
  *
  */
 export class G3FacsimileBodyPart {
+    /**
+     * @summary `parameters`.
+     * @public
+     * @readonly
+     */
+    public readonly parameters: G3FacsimileParameters;
+    /**
+     * @summary `data`.
+     * @public
+     * @readonly
+     */
+    public readonly data: G3FacsimileData;
+
     constructor(
-        /**
-         * @summary `parameters`.
-         * @public
-         * @readonly
-         */
-        readonly parameters: G3FacsimileParameters,
-        /**
-         * @summary `data`.
-         * @public
-         * @readonly
-         */
-        readonly data: G3FacsimileData
-    ) {}
+        parameters: G3FacsimileParameters,
+        data: G3FacsimileData
+    ) {
+        this.parameters = parameters;
+        this.data = data;
+    }
 
     /**
      * @summary Restructures an object into a G3FacsimileBodyPart

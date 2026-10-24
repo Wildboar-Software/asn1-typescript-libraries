@@ -31,20 +31,26 @@ import { Cause, _decode_Cause, _encode_Cause } from "../IN-CS2-datatypes/Cause.t
  */
 export
 class EventSpecificInformationBCSM_routeSelectFailureSpecificInfo {
+    /**
+     * @summary `failureCause`.
+     * @public
+     * @readonly
+     */
+    public readonly failureCause?: OPTIONAL<Cause>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `failureCause`.
-         * @public
-         * @readonly
-         */
-        readonly failureCause?: OPTIONAL<Cause>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        failureCause?: OPTIONAL<Cause>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.failureCause = failureCause;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a EventSpecificInformationBCSM_routeSelectFailureSpecificInfo

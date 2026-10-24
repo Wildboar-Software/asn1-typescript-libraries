@@ -25,26 +25,34 @@ import * as $ from "@wildboar/asn1/functional";
  *
  */
 export class Path {
+    /**
+     * @summary `path`.
+     * @public
+     * @readonly
+     */
+    public readonly path: OCTET_STRING;
+    /**
+     * @summary `index`.
+     * @public
+     * @readonly
+     */
+    public readonly index?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `length`.
+     * @public
+     * @readonly
+     */
+    public readonly length?: OPTIONAL<INTEGER>;
+
     constructor(
-        /**
-         * @summary `path`.
-         * @public
-         * @readonly
-         */
-        readonly path: OCTET_STRING,
-        /**
-         * @summary `index`.
-         * @public
-         * @readonly
-         */
-        readonly index?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `length`.
-         * @public
-         * @readonly
-         */
-        readonly length?: OPTIONAL<INTEGER>
-    ) {}
+        path: OCTET_STRING,
+        index?: OPTIONAL<INTEGER>,
+        length?: OPTIONAL<INTEGER>
+    ) {
+        this.path = path;
+        this.index = index;
+        this.length = length;
+    }
 
     /**
      * @summary Restructures an object into a Path

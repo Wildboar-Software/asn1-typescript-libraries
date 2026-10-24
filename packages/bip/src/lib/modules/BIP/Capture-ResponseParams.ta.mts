@@ -37,31 +37,37 @@ import {
  *
  */
 export class Capture_ResponseParams {
+  /**
+   * @summary `capturedBIR`.
+   * @description
+   *
+   * Handle of the captured BIR on the hosting endpoint. Maps
+   * to BioAPI `CapturedBIR` (clause 20). X.1083 §16.30.6.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly capturedBIR: BioAPI_BIR_HANDLE;
+  /**
+   * @summary `auditData`.
+   * @description
+   *
+   * Handle of the audit BIR, if requested. Absent when
+   * `no-auditData` was `TRUE` (or the caller passed NULL
+   * `AuditData`, clause 20). X.1083 §16.30.6.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly auditData?: OPTIONAL<BioAPI_BIR_HANDLE>;
+
   constructor(
-    /**
-     * @summary `capturedBIR`.
-     * @description
-     *
-     * Handle of the captured BIR on the hosting endpoint. Maps
-     * to BioAPI `CapturedBIR` (clause 20). X.1083 §16.30.6.
-     *
-     * @public
-     * @readonly
-     */
-    readonly capturedBIR: BioAPI_BIR_HANDLE,
-    /**
-     * @summary `auditData`.
-     * @description
-     *
-     * Handle of the audit BIR, if requested. Absent when
-     * `no-auditData` was `TRUE` (or the caller passed NULL
-     * `AuditData`, clause 20). X.1083 §16.30.6.
-     *
-     * @public
-     * @readonly
-     */
-    readonly auditData?: OPTIONAL<BioAPI_BIR_HANDLE>
-  ) {}
+    capturedBIR: BioAPI_BIR_HANDLE,
+    auditData?: OPTIONAL<BioAPI_BIR_HANDLE>
+  ) {
+    this.capturedBIR = capturedBIR;
+    this.auditData = auditData;
+  }
 
   /**
    * @summary Restructures an object into a Capture_ResponseParams

@@ -49,32 +49,42 @@ import {
  *
  */
 export class AutoAlertRegistrationParameter {
+    /**
+     * @summary `filter`.
+     * @public
+     * @readonly
+     */
+    public readonly filter?: OPTIONAL<Filter>;
+    /**
+     * @summary `alert_destinations`.
+     * @public
+     * @readonly
+     */
+    public readonly alert_destinations?: OPTIONAL<AlertDestination[]>;
+    /**
+     * @summary `requested_attributes`.
+     * @public
+     * @readonly
+     */
+    public readonly requested_attributes?: OPTIONAL<EntryInformationSelection>;
+    /**
+     * @summary `suppress_alert_destinations`.
+     * @public
+     * @readonly
+     */
+    public readonly suppress_alert_destinations?: OPTIONAL<BOOLEAN>;
+
     constructor(
-        /**
-         * @summary `filter`.
-         * @public
-         * @readonly
-         */
-        readonly filter?: OPTIONAL<Filter>,
-        /**
-         * @summary `alert_destinations`.
-         * @public
-         * @readonly
-         */
-        readonly alert_destinations?: OPTIONAL<AlertDestination[]>,
-        /**
-         * @summary `requested_attributes`.
-         * @public
-         * @readonly
-         */
-        readonly requested_attributes?: OPTIONAL<EntryInformationSelection>,
-        /**
-         * @summary `suppress_alert_destinations`.
-         * @public
-         * @readonly
-         */
-        readonly suppress_alert_destinations?: OPTIONAL<BOOLEAN>
-    ) {}
+        filter?: OPTIONAL<Filter>,
+        alert_destinations?: OPTIONAL<AlertDestination[]>,
+        requested_attributes?: OPTIONAL<EntryInformationSelection>,
+        suppress_alert_destinations?: OPTIONAL<BOOLEAN>
+    ) {
+        this.filter = filter;
+        this.alert_destinations = alert_destinations;
+        this.requested_attributes = requested_attributes;
+        this.suppress_alert_destinations = suppress_alert_destinations;
+    }
 
     /**
      * @summary Restructures an object into a AutoAlertRegistrationParameter

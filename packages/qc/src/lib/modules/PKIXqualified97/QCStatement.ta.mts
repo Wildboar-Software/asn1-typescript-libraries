@@ -28,33 +28,39 @@ import * as $ from "@wildboar/asn1/functional";
  *
  */
 export class QCStatement {
+    /**
+     * @summary `statementId`.
+     * @description
+     *
+     * Object identifier for the statement
+     * ([RFC 3739 §3.2.6](https://datatracker.ietf.org/doc/html/rfc3739#section-3.2.6)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly statementId: OBJECT_IDENTIFIER;
+    /**
+     * @summary `statementInfo`.
+     * @description
+     *
+     * Optional qualifying data whose syntax is defined by
+     * `statementId`. May be absent even when `statementId` is
+     * `id-qcs-pkixQCSyntax-v1` or `id-qcs-pkixQCSyntax-v2`
+     * ([RFC 3739 §3.2.6](https://datatracker.ietf.org/doc/html/rfc3739#section-3.2.6),
+     * [§3.2.6.1](https://datatracker.ietf.org/doc/html/rfc3739#section-3.2.6.1)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly statementInfo?: OPTIONAL<_Element>;
+
     constructor(
-        /**
-         * @summary `statementId`.
-         * @description
-         *
-         * Object identifier for the statement
-         * ([RFC 3739 §3.2.6](https://datatracker.ietf.org/doc/html/rfc3739#section-3.2.6)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly statementId: OBJECT_IDENTIFIER,
-        /**
-         * @summary `statementInfo`.
-         * @description
-         *
-         * Optional qualifying data whose syntax is defined by
-         * `statementId`. May be absent even when `statementId` is
-         * `id-qcs-pkixQCSyntax-v1` or `id-qcs-pkixQCSyntax-v2`
-         * ([RFC 3739 §3.2.6](https://datatracker.ietf.org/doc/html/rfc3739#section-3.2.6),
-         * [§3.2.6.1](https://datatracker.ietf.org/doc/html/rfc3739#section-3.2.6.1)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly statementInfo?: OPTIONAL<_Element>
-    ) {}
+        statementId: OBJECT_IDENTIFIER,
+        statementInfo?: OPTIONAL<_Element>
+    ) {
+        this.statementId = statementId;
+        this.statementInfo = statementInfo;
+    }
 
     /**
      * @summary Restructures an object into a QCStatement

@@ -49,51 +49,61 @@ import {
  *
  */
 export class EncryptedContentInfo {
+    /**
+     * @summary `contentType`.
+     * @description
+     *
+     * Content type of the encrypted payload. From
+     * `EncryptedContentSet` (types for which encryption is an
+     * option).
+     * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.3.5.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly contentType: OBJECT_IDENTIFIER;
+    /**
+     * @summary `contentEncryptionAlgorithm`.
+     * @description
+     *
+     * Symmetric content-encryption algorithm, as required by
+     * RFC 5652. From `SymmetricEncryptionAlgorithms`.
+     * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.3.5.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly contentEncryptionAlgorithm?: OPTIONAL<EncryptedContentInfo_contentEncryptionAlgorithm>;
+    /**
+     * @summary `encryptedContent`.
+     * @description
+     *
+     * Ciphertext of the encapsulated content, as required by
+     * RFC 5652.
+     * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.3.5.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly encryptedContent?: OPTIONAL<EncryptedContent>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `contentType`.
-         * @description
-         *
-         * Content type of the encrypted payload. From
-         * `EncryptedContentSet` (types for which encryption is an
-         * option).
-         * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.3.5.
-         *
-         * @public
-         * @readonly
-         */
-        readonly contentType: OBJECT_IDENTIFIER,
-        /**
-         * @summary `contentEncryptionAlgorithm`.
-         * @description
-         *
-         * Symmetric content-encryption algorithm, as required by
-         * RFC 5652. From `SymmetricEncryptionAlgorithms`.
-         * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.3.5.
-         *
-         * @public
-         * @readonly
-         */
-        readonly contentEncryptionAlgorithm?: OPTIONAL<EncryptedContentInfo_contentEncryptionAlgorithm>,
-        /**
-         * @summary `encryptedContent`.
-         * @description
-         *
-         * Ciphertext of the encapsulated content, as required by
-         * RFC 5652.
-         * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.3.5.
-         *
-         * @public
-         * @readonly
-         */
-        readonly encryptedContent?: OPTIONAL<EncryptedContent>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        contentType: OBJECT_IDENTIFIER,
+        contentEncryptionAlgorithm?: OPTIONAL<EncryptedContentInfo_contentEncryptionAlgorithm>,
+        encryptedContent?: OPTIONAL<EncryptedContent>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.contentType = contentType;
+        this.contentEncryptionAlgorithm = contentEncryptionAlgorithm;
+        this.encryptedContent = encryptedContent;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a EncryptedContentInfo

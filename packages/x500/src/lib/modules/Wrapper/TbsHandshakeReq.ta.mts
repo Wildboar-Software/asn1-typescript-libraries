@@ -91,98 +91,126 @@ import {
  *
  */
 export class TbsHandshakeReq {
+    /**
+     * @summary `version`.
+     * @description BIT STRING of supported wrapper versions; client may set multiple bits. DEFAULT `{v1}`.
+     * @public
+     * @readonly
+     */
+    public readonly version: OPTIONAL<Version>;
+    /**
+     * @summary `prProt`.
+     * @description OID of the protocol to be protected (`WRAPPED-PROT.&id`).
+     * @public
+     * @readonly
+     */
+    public readonly prProt: OBJECT_IDENTIFIER;
+    /**
+     * @summary `sigAlg`.
+     * @description Native signature algorithm; used to produce `signature`.
+     * @public
+     * @readonly
+     */
+    public readonly sigAlg: AlgorithmIdentifier;
+    /**
+     * @summary `altSigAlg`.
+     * @description Alternative signature algorithm (migration). Present iff `altSignature` is present.
+     * @public
+     * @readonly
+     */
+    public readonly altSigAlg: OPTIONAL<AlgorithmIdentifier>;
+    /**
+     * @summary `pkiPath`.
+     * @description DER-encapsulated certification path verifying this signature.
+     * @public
+     * @readonly
+     */
+    public readonly pkiPath: DER_PkiPath;
+    /**
+     * @summary `assoID`.
+     * @description Association identifier unique within this client–server pair.
+     * @public
+     * @readonly
+     */
+    public readonly assoID: AssoID;
+    /**
+     * @summary `time`.
+     * @description UTC GeneralizedTime of creation (clause 8.2).
+     * @public
+     * @readonly
+     */
+    public readonly time: TimeStamp;
+    /**
+     * @summary `keyEst`.
+     * @description Key-establishment algorithm with invoke/Payload dyn parms (DH public + nonce).
+     * @public
+     * @readonly
+     */
+    public readonly keyEst: AlgorithmWithInvoke;
+    /**
+     * @summary `altKeyEst`.
+     * @description Alternative key-establishment algorithm (migration).
+     * @public
+     * @readonly
+     */
+    public readonly altKeyEst: OPTIONAL<AlgorithmWithInvoke>;
+    /**
+     * @summary `encr_mode`.
+     * @description `aead` (preference sequence, 2 keys) or `non_aead` (`encr` optional + required `icvAlgID`).
+     * @public
+     * @readonly
+     */
+    public readonly encr_mode: TbsHandshakeReq_encr_mode;
+    /**
+     * @summary `attCert`.
+     * @description Optional DER-encapsulated attribute certificate (access control).
+     * @public
+     * @readonly
+     */
+    public readonly attCert?: OPTIONAL<DER_AttributeCertificate>;
+    /**
+     * @summary `applData`.
+     * @description Init PrPDU when the protected protocol requires one.
+     * @public
+     * @readonly
+     */
+    public readonly applData?: OPTIONAL<WrappedProt>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `version`.
-         * @description BIT STRING of supported wrapper versions; client may set multiple bits. DEFAULT `{v1}`.
-         * @public
-         * @readonly
-         */
-        readonly version: OPTIONAL<Version>,
-        /**
-         * @summary `prProt`.
-         * @description OID of the protocol to be protected (`WRAPPED-PROT.&id`).
-         * @public
-         * @readonly
-         */
-        readonly prProt: OBJECT_IDENTIFIER,
-        /**
-         * @summary `sigAlg`.
-         * @description Native signature algorithm; used to produce `signature`.
-         * @public
-         * @readonly
-         */
-        readonly sigAlg: AlgorithmIdentifier,
-        /**
-         * @summary `altSigAlg`.
-         * @description Alternative signature algorithm (migration). Present iff `altSignature` is present.
-         * @public
-         * @readonly
-         */
-        readonly altSigAlg: OPTIONAL<AlgorithmIdentifier>,
-        /**
-         * @summary `pkiPath`.
-         * @description DER-encapsulated certification path verifying this signature.
-         * @public
-         * @readonly
-         */
-        readonly pkiPath: DER_PkiPath,
-        /**
-         * @summary `assoID`.
-         * @description Association identifier unique within this client–server pair.
-         * @public
-         * @readonly
-         */
-        readonly assoID: AssoID,
-        /**
-         * @summary `time`.
-         * @description UTC GeneralizedTime of creation (clause 8.2).
-         * @public
-         * @readonly
-         */
-        readonly time: TimeStamp,
-        /**
-         * @summary `keyEst`.
-         * @description Key-establishment algorithm with invoke/Payload dyn parms (DH public + nonce).
-         * @public
-         * @readonly
-         */
-        readonly keyEst: AlgorithmWithInvoke,
-        /**
-         * @summary `altKeyEst`.
-         * @description Alternative key-establishment algorithm (migration).
-         * @public
-         * @readonly
-         */
-        readonly altKeyEst: OPTIONAL<AlgorithmWithInvoke>,
-        /**
-         * @summary `encr_mode`.
-         * @description `aead` (preference sequence, 2 keys) or `non_aead` (`encr` optional + required `icvAlgID`).
-         * @public
-         * @readonly
-         */
-        readonly encr_mode: TbsHandshakeReq_encr_mode,
-        /**
-         * @summary `attCert`.
-         * @description Optional DER-encapsulated attribute certificate (access control).
-         * @public
-         * @readonly
-         */
-        readonly attCert?: OPTIONAL<DER_AttributeCertificate>,
-        /**
-         * @summary `applData`.
-         * @description Init PrPDU when the protected protocol requires one.
-         * @public
-         * @readonly
-         */
-        readonly applData?: OPTIONAL<WrappedProt>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        version: OPTIONAL<Version>,
+        prProt: OBJECT_IDENTIFIER,
+        sigAlg: AlgorithmIdentifier,
+        altSigAlg: OPTIONAL<AlgorithmIdentifier>,
+        pkiPath: DER_PkiPath,
+        assoID: AssoID,
+        time: TimeStamp,
+        keyEst: AlgorithmWithInvoke,
+        altKeyEst: OPTIONAL<AlgorithmWithInvoke>,
+        encr_mode: TbsHandshakeReq_encr_mode,
+        attCert?: OPTIONAL<DER_AttributeCertificate>,
+        applData?: OPTIONAL<WrappedProt>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.version = version;
+        this.prProt = prProt;
+        this.sigAlg = sigAlg;
+        this.altSigAlg = altSigAlg;
+        this.pkiPath = pkiPath;
+        this.assoID = assoID;
+        this.time = time;
+        this.keyEst = keyEst;
+        this.altKeyEst = altKeyEst;
+        this.encr_mode = encr_mode;
+        this.attCert = attCert;
+        this.applData = applData;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a TbsHandshakeReq

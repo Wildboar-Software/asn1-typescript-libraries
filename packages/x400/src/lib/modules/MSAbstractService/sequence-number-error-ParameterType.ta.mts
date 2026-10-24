@@ -29,14 +29,18 @@ import {
  *
  */
 export class sequence_number_error_ParameterType {
+    /**
+     * @summary `problems`.
+     * @public
+     * @readonly
+     */
+    public readonly problems: sequence_number_error_ParameterType_problems_Item[];
+
     constructor(
-        /**
-         * @summary `problems`.
-         * @public
-         * @readonly
-         */
-        readonly problems: sequence_number_error_ParameterType_problems_Item[]
-    ) {}
+        problems: sequence_number_error_ParameterType_problems_Item[]
+    ) {
+        this.problems = problems;
+    }
 
     /**
      * @summary Restructures an object into a sequence_number_error_ParameterType

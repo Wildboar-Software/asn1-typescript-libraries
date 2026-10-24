@@ -34,28 +34,34 @@ import {
  *
  */
 export class SPKM_WRAP {
+    /**
+     * @summary `wrap_header`.
+     * @description
+     *
+     * Plaintext header; included in the checksum.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly wrap_header: Wrap_Header;
+    /**
+     * @summary `wrap_body`.
+     * @description
+     *
+     * Checksum plus plaintext or encrypted data.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly wrap_body: Wrap_Body;
+
     constructor(
-        /**
-         * @summary `wrap_header`.
-         * @description
-         *
-         * Plaintext header; included in the checksum.
-         *
-         * @public
-         * @readonly
-         */
-        readonly wrap_header: Wrap_Header,
-        /**
-         * @summary `wrap_body`.
-         * @description
-         *
-         * Checksum plus plaintext or encrypted data.
-         *
-         * @public
-         * @readonly
-         */
-        readonly wrap_body: Wrap_Body
-    ) {}
+        wrap_header: Wrap_Header,
+        wrap_body: Wrap_Body
+    ) {
+        this.wrap_header = wrap_header;
+        this.wrap_body = wrap_body;
+    }
 
     /**
      * @summary Restructures an object into a SPKM_WRAP

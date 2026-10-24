@@ -47,70 +47,82 @@ import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-
  */
 export
 class GetEventActionAttributes_Response {
+    /**
+     * @summary `mmsDeletable`.
+     * @description
+     *
+     * Whether DeleteEventAction may delete this object. Default false.
+     *
+     * [ISO 9506-1:2003 §20.4.1.2.1]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mmsDeletable: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `listOfModifier`.
+     * @description
+     *
+     * `&Modifiers` applied on each Event Action execution.
+     *
+     * [ISO 9506-1:2003 §20.4.1.2.2]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly listOfModifier: Modifier[];
+    /**
+     * @summary `confirmedServiceRequest`.
+     * @description
+     *
+     * `&confirmedServiceRequest` executed on a matching transition.
+     *
+     * [ISO 9506-1:2003 §20.4.1.2.3]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly confirmedServiceRequest: ConfirmedServiceRequest;
+    /**
+     * @summary `cs_extension`.
+     * @description
+     *
+     * CS Request-Detail for the stored confirmed service. `csr`/`cspi`.
+     *
+     * [ISO 9506-2:2003 §20.4.2.1]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly cs_extension?: OPTIONAL<Request_Detail>;
+    /**
+     * @summary `accessControlList`.
+     * @description
+     *
+     * Access Control List name. Iff `aco`. Shall not appear in minor version 1 or
+     * 2.
+     *
+     * [ISO 9506-1:2003 §20.4.1.2.4]
+     * [ISO 9506-2:2003 §20.4.2.2]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly accessControlList?: OPTIONAL<Identifier>;
+
     constructor (
-        /**
-         * @summary `mmsDeletable`.
-         * @description
-         *
-         * Whether DeleteEventAction may delete this object. Default false.
-         *
-         * [ISO 9506-1:2003 §20.4.1.2.1]
-         *
-         * @public
-         * @readonly
-         */
-        readonly mmsDeletable: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `listOfModifier`.
-         * @description
-         *
-         * `&Modifiers` applied on each Event Action execution.
-         *
-         * [ISO 9506-1:2003 §20.4.1.2.2]
-         *
-         * @public
-         * @readonly
-         */
-        readonly listOfModifier: Modifier[],
-        /**
-         * @summary `confirmedServiceRequest`.
-         * @description
-         *
-         * `&confirmedServiceRequest` executed on a matching transition.
-         *
-         * [ISO 9506-1:2003 §20.4.1.2.3]
-         *
-         * @public
-         * @readonly
-         */
-        readonly confirmedServiceRequest: ConfirmedServiceRequest,
-        /**
-         * @summary `cs_extension`.
-         * @description
-         *
-         * CS Request-Detail for the stored confirmed service. `csr`/`cspi`.
-         *
-         * [ISO 9506-2:2003 §20.4.2.1]
-         *
-         * @public
-         * @readonly
-         */
-        readonly cs_extension?: OPTIONAL<Request_Detail>,
-        /**
-         * @summary `accessControlList`.
-         * @description
-         *
-         * Access Control List name. Iff `aco`. Shall not appear in minor version 1 or
-         * 2.
-         *
-         * [ISO 9506-1:2003 §20.4.1.2.4]
-         * [ISO 9506-2:2003 §20.4.2.2]
-         *
-         * @public
-         * @readonly
-         */
-        readonly accessControlList?: OPTIONAL<Identifier>
-    ) {}
+        mmsDeletable: OPTIONAL<BOOLEAN>,
+        listOfModifier: Modifier[],
+        confirmedServiceRequest: ConfirmedServiceRequest,
+        cs_extension?: OPTIONAL<Request_Detail>,
+        accessControlList?: OPTIONAL<Identifier>
+    ) {
+        this.mmsDeletable = mmsDeletable;
+        this.listOfModifier = listOfModifier;
+        this.confirmedServiceRequest = confirmedServiceRequest;
+        this.cs_extension = cs_extension;
+        this.accessControlList = accessControlList;
+    }
 
     /**
      * @summary Restructures an object into a GetEventActionAttributes_Response

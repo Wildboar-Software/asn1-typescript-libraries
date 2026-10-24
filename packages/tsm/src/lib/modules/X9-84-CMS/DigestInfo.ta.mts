@@ -32,20 +32,26 @@ import { DigestAlgorithmIdentifier, _decode_DigestAlgorithmIdentifier, _encode_D
  */
 export
 class DigestInfo {
+    /**
+     * @summary `hashAlgorithm`.
+     * @public
+     * @readonly
+     */
+    public readonly hashAlgorithm: DigestAlgorithmIdentifier;
+    /**
+     * @summary `digest`.
+     * @public
+     * @readonly
+     */
+    public readonly digest: OCTET_STRING;
+
     constructor (
-        /**
-         * @summary `hashAlgorithm`.
-         * @public
-         * @readonly
-         */
-        readonly hashAlgorithm: DigestAlgorithmIdentifier,
-        /**
-         * @summary `digest`.
-         * @public
-         * @readonly
-         */
-        readonly digest: OCTET_STRING
-    ) {}
+        hashAlgorithm: DigestAlgorithmIdentifier,
+        digest: OCTET_STRING
+    ) {
+        this.hashAlgorithm = hashAlgorithm;
+        this.digest = digest;
+    }
 
     /**
      * @summary Restructures an object into a DigestInfo

@@ -45,38 +45,50 @@ import {
  *
  */
 export class AuthorizationList_Item {
+    /**
+     * @summary `state`.
+     * @public
+     * @readonly
+     */
+    public readonly state: RequestState;
+    /**
+     * @summary `type_`.
+     * @public
+     * @readonly
+     */
+    public readonly type_: ActivityType;
+    /**
+     * @summary `authTime`.
+     * @public
+     * @readonly
+     */
+    public readonly authTime?: OPTIONAL<AuthorizationTime>;
+    /**
+     * @summary `authPerson`.
+     * @public
+     * @readonly
+     */
+    public readonly authPerson?: OPTIONAL<PersonReach>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `state`.
-         * @public
-         * @readonly
-         */
-        readonly state: RequestState,
-        /**
-         * @summary `type_`.
-         * @public
-         * @readonly
-         */
-        readonly type_: ActivityType,
-        /**
-         * @summary `authTime`.
-         * @public
-         * @readonly
-         */
-        readonly authTime?: OPTIONAL<AuthorizationTime>,
-        /**
-         * @summary `authPerson`.
-         * @public
-         * @readonly
-         */
-        readonly authPerson?: OPTIONAL<PersonReach>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        state: RequestState,
+        type_: ActivityType,
+        authTime?: OPTIONAL<AuthorizationTime>,
+        authPerson?: OPTIONAL<PersonReach>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.state = state;
+        this.type_ = type_;
+        this.authTime = authTime;
+        this.authPerson = authPerson;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a AuthorizationList_Item

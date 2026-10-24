@@ -34,35 +34,43 @@ import {
  *
  */
 export class CertificateExactAssertion {
+    /**
+     * @summary `serialNumber`.
+     * @description
+     *
+     * Unique per issuer, not sequential.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly serialNumber: CertificateSerialNumber;
+    /**
+     * @summary `issuer`.
+     * @description
+     *
+     * X.501 Name (RDNSequence, root first). Combined with serial, uniquely
+     * identifies the cert.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly issuer: Name;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `serialNumber`.
-         * @description
-         *
-         * Unique per issuer, not sequential.
-         *
-         * @public
-         * @readonly
-         */
-        readonly serialNumber: CertificateSerialNumber,
-        /**
-         * @summary `issuer`.
-         * @description
-         *
-         * X.501 Name (RDNSequence, root first). Combined with serial, uniquely
-         * identifies the cert.
-         *
-         * @public
-         * @readonly
-         */
-        readonly issuer: Name,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        serialNumber: CertificateSerialNumber,
+        issuer: Name,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.serialNumber = serialNumber;
+        this.issuer = issuer;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a CertificateExactAssertion

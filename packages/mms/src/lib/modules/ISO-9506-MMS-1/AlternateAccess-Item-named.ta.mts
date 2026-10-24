@@ -36,31 +36,37 @@ import { AlternateAccessSelection, _decode_AlternateAccessSelection, _encode_Alt
  */
 export
 class AlternateAccess_Item_named {
+    /**
+     * @summary `componentName`.
+     * @description
+     *
+     * Name of this derived-structure component for further
+     * alternate access. Forbidden if the list has one
+     * element. ISO 9506-1:2003 §14.3.1.1.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly componentName: Identifier;
+    /**
+     * @summary `access`.
+     * @description
+     *
+     * SELECT-ALTERNATE-ACCESS or SELECT-ACCESS.
+     * ISO 9506-1:2003 §14.3.1.1.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly access: AlternateAccessSelection;
+
     constructor (
-        /**
-         * @summary `componentName`.
-         * @description
-         *
-         * Name of this derived-structure component for further
-         * alternate access. Forbidden if the list has one
-         * element. ISO 9506-1:2003 §14.3.1.1.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly componentName: Identifier,
-        /**
-         * @summary `access`.
-         * @description
-         *
-         * SELECT-ALTERNATE-ACCESS or SELECT-ACCESS.
-         * ISO 9506-1:2003 §14.3.1.1.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly access: AlternateAccessSelection
-    ) {}
+        componentName: Identifier,
+        access: AlternateAccessSelection
+    ) {
+        this.componentName = componentName;
+        this.access = access;
+    }
 
     /**
      * @summary Restructures an object into a AlternateAccess_Item_named

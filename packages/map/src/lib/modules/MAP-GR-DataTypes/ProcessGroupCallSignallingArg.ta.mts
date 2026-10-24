@@ -38,96 +38,116 @@ import { AdditionalInfo, _decode_AdditionalInfo, _encode_AdditionalInfo } from "
  */
 export
 class ProcessGroupCallSignallingArg {
+    /**
+     * @summary `uplinkRequest`.
+     * @description
+     *
+     * Service subscriber in the Relay MSC area requests uplink access
+     * (clause 10.5.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly uplinkRequest?: OPTIONAL<NULL>;
+    /**
+     * @summary `uplinkReleaseIndication`.
+     * @description
+     *
+     * Uplink has become free (clause 10.5.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly uplinkReleaseIndication?: OPTIONAL<NULL>;
+    /**
+     * @summary `releaseGroupCall`.
+     * @description
+     *
+     * Call initiator who currently has the uplink terminates the call
+     * (clause 10.5.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly releaseGroupCall?: OPTIONAL<NULL>;
+    /**
+     * @summary `extensionContainer`.
+     * @description
+     *
+     * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary `talkerPriority`.
+     * @description
+     *
+     * See 3GPP TS 43.068 (clause 10.5.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly talkerPriority?: OPTIONAL<TalkerPriority>;
+    /**
+     * @summary `additionalInfo`.
+     * @description
+     *
+     * See 3GPP TS 43.068 (clause 10.5.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly additionalInfo?: OPTIONAL<AdditionalInfo>;
+    /**
+     * @summary `emergencyModeResetCommandFlag`.
+     * @description
+     *
+     * See 3GPP TS 43.068 (clause 10.5.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly emergencyModeResetCommandFlag?: OPTIONAL<NULL>;
+    /**
+     * @summary `an_APDU`.
+     * @description
+     *
+     * Notification Data message as in 3GPP TS 48.008 (clause 10.5.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly an_APDU?: OPTIONAL<AccessNetworkSignalInfo>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `uplinkRequest`.
-         * @description
-         *
-         * Service subscriber in the Relay MSC area requests uplink access
-         * (clause 10.5.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly uplinkRequest?: OPTIONAL<NULL>,
-        /**
-         * @summary `uplinkReleaseIndication`.
-         * @description
-         *
-         * Uplink has become free (clause 10.5.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly uplinkReleaseIndication?: OPTIONAL<NULL>,
-        /**
-         * @summary `releaseGroupCall`.
-         * @description
-         *
-         * Call initiator who currently has the uplink terminates the call
-         * (clause 10.5.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly releaseGroupCall?: OPTIONAL<NULL>,
-        /**
-         * @summary `extensionContainer`.
-         * @description
-         *
-         * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary `talkerPriority`.
-         * @description
-         *
-         * See 3GPP TS 43.068 (clause 10.5.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly talkerPriority?: OPTIONAL<TalkerPriority>,
-        /**
-         * @summary `additionalInfo`.
-         * @description
-         *
-         * See 3GPP TS 43.068 (clause 10.5.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly additionalInfo?: OPTIONAL<AdditionalInfo>,
-        /**
-         * @summary `emergencyModeResetCommandFlag`.
-         * @description
-         *
-         * See 3GPP TS 43.068 (clause 10.5.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly emergencyModeResetCommandFlag?: OPTIONAL<NULL>,
-        /**
-         * @summary `an_APDU`.
-         * @description
-         *
-         * Notification Data message as in 3GPP TS 48.008 (clause 10.5.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly an_APDU?: OPTIONAL<AccessNetworkSignalInfo>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        uplinkRequest?: OPTIONAL<NULL>,
+        uplinkReleaseIndication?: OPTIONAL<NULL>,
+        releaseGroupCall?: OPTIONAL<NULL>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        talkerPriority?: OPTIONAL<TalkerPriority>,
+        additionalInfo?: OPTIONAL<AdditionalInfo>,
+        emergencyModeResetCommandFlag?: OPTIONAL<NULL>,
+        an_APDU?: OPTIONAL<AccessNetworkSignalInfo>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.uplinkRequest = uplinkRequest;
+        this.uplinkReleaseIndication = uplinkReleaseIndication;
+        this.releaseGroupCall = releaseGroupCall;
+        this.extensionContainer = extensionContainer;
+        this.talkerPriority = talkerPriority;
+        this.additionalInfo = additionalInfo;
+        this.emergencyModeResetCommandFlag = emergencyModeResetCommandFlag;
+        this.an_APDU = an_APDU;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a ProcessGroupCallSignallingArg

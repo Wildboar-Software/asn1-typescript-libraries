@@ -37,60 +37,72 @@ import { type Certificate, _decode_Certificate, _encode_Certificate } from "@wil
  */
 export
 class AuthenticateClientOk {
+    /**
+     * @summary `transactionId`.
+     * @description
+     * 
+     * Same session id. SGP.22 v3.1 §5.6.3.
+     * 
+     * @public
+     * @readonly
+     */
+    public readonly transactionId: TransactionId;
+    /**
+     * @summary `profileMetaData`.
+     * @description
+     * 
+     * Metadata the LPA displays and checks against the RAT before download
+     * continues. SGP.22 v3.1 §5.6.3 and §2.9.2.4.
+     * 
+     * @public
+     * @readonly
+     */
+    public readonly profileMetaData: StoreMetadataRequest;
+    /**
+     * @summary `smdpSigned2`.
+     * @description
+     * 
+     * Binding data for ES10b.PrepareDownload, including `ccRequiredFlag`.
+     * SGP.22 v3.1 §5.6.3.
+     * 
+     * @public
+     * @readonly
+     */
+    public readonly smdpSigned2: SmdpSigned2;
+    /**
+     * @summary `smdpSignature2`.
+     * @description
+     * 
+     * Signature under SK.DPpb.SIG, tag `'5F37'`. SGP.22 v3.1 §5.6.3.
+     * 
+     * @public
+     * @readonly
+     */
+    public readonly smdpSignature2: OCTET_STRING;
+    /**
+     * @summary `smdpCertificate`.
+     * @description
+     * 
+     * CERT.DPpb.SIG, passed through to PrepareDownload. SGP.22 v3.1 §5.6.3.
+     * 
+     * @public
+     * @readonly
+     */
+    public readonly smdpCertificate: Certificate;
+
     constructor (
-        /**
-         * @summary `transactionId`.
-         * @description
-         * 
-         * Same session id. SGP.22 v3.1 §5.6.3.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly transactionId: TransactionId,
-        /**
-         * @summary `profileMetaData`.
-         * @description
-         * 
-         * Metadata the LPA displays and checks against the RAT before download
-         * continues. SGP.22 v3.1 §5.6.3 and §2.9.2.4.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly profileMetaData: StoreMetadataRequest,
-        /**
-         * @summary `smdpSigned2`.
-         * @description
-         * 
-         * Binding data for ES10b.PrepareDownload, including `ccRequiredFlag`.
-         * SGP.22 v3.1 §5.6.3.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly smdpSigned2: SmdpSigned2,
-        /**
-         * @summary `smdpSignature2`.
-         * @description
-         * 
-         * Signature under SK.DPpb.SIG, tag `'5F37'`. SGP.22 v3.1 §5.6.3.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly smdpSignature2: OCTET_STRING,
-        /**
-         * @summary `smdpCertificate`.
-         * @description
-         * 
-         * CERT.DPpb.SIG, passed through to PrepareDownload. SGP.22 v3.1 §5.6.3.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly smdpCertificate: Certificate
-    ) {}
+        transactionId: TransactionId,
+        profileMetaData: StoreMetadataRequest,
+        smdpSigned2: SmdpSigned2,
+        smdpSignature2: OCTET_STRING,
+        smdpCertificate: Certificate
+    ) {
+        this.transactionId = transactionId;
+        this.profileMetaData = profileMetaData;
+        this.smdpSigned2 = smdpSigned2;
+        this.smdpSignature2 = smdpSignature2;
+        this.smdpCertificate = smdpCertificate;
+    }
 
     /**
      * @summary Restructures an object into a AuthenticateClientOk

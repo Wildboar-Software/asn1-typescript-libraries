@@ -30,40 +30,50 @@ import {
  *
  */
 export class ICV_Invoke<ToBeProtected> {
+    /**
+     * @summary `toBeProtected`.
+     * @public
+     * @readonly
+     */
+    public readonly toBeProtected: ToBeProtected;
+    /**
+     * @summary `dynParms`.
+     * @description
+     *
+     * Present iff the agreed ICV alg has `&DynParms`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly dynParms: OPTIONAL<AlgoInvoke>;
+    /**
+     * @summary `icv`.
+     * @description
+     *
+     * BIT STRING ICV.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly icv: BIT_STRING;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `toBeProtected`.
-         * @public
-         * @readonly
-         */
-        readonly toBeProtected: ToBeProtected,
-        /**
-         * @summary `dynParms`.
-         * @description
-         *
-         * Present iff the agreed ICV alg has `&DynParms`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly dynParms: OPTIONAL<AlgoInvoke>,
-        /**
-         * @summary `icv`.
-         * @description
-         *
-         * BIT STRING ICV.
-         *
-         * @public
-         * @readonly
-         */
-        readonly icv: BIT_STRING,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        toBeProtected: ToBeProtected,
+        dynParms: OPTIONAL<AlgoInvoke>,
+        icv: BIT_STRING,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.toBeProtected = toBeProtected;
+        this.dynParms = dynParms;
+        this.icv = icv;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a ICV_Invoke

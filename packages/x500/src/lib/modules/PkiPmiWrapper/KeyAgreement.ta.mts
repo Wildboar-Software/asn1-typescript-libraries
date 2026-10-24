@@ -36,34 +36,42 @@ import {
  *
  */
 export class KeyAgreement {
+    /**
+     * @summary `senderDhInfo`.
+     * @description
+     *
+     * [0] CHOICE: static DH cert vs ephemeral DH public key.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly senderDhInfo: SenderDhInfo;
+    /**
+     * @summary `keyEncryptionAlgorithm`.
+     * @description
+     *
+     * KDF/wrap of the content key. `parameters` is ALGORITHM.&Type.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly keyEncryptionAlgorithm: KeyAgreement_keyEncryptionAlgorithm;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `senderDhInfo`.
-         * @description
-         *
-         * [0] CHOICE: static DH cert vs ephemeral DH public key.
-         *
-         * @public
-         * @readonly
-         */
-        readonly senderDhInfo: SenderDhInfo,
-        /**
-         * @summary `keyEncryptionAlgorithm`.
-         * @description
-         *
-         * KDF/wrap of the content key. `parameters` is ALGORITHM.&Type.
-         *
-         * @public
-         * @readonly
-         */
-        readonly keyEncryptionAlgorithm: KeyAgreement_keyEncryptionAlgorithm,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        senderDhInfo: SenderDhInfo,
+        keyEncryptionAlgorithm: KeyAgreement_keyEncryptionAlgorithm,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.senderDhInfo = senderDhInfo;
+        this.keyEncryptionAlgorithm = keyEncryptionAlgorithm;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a KeyAgreement

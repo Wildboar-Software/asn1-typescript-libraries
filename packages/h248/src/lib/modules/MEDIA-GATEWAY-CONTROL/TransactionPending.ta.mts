@@ -37,32 +37,38 @@ import { TransactionId, _decode_TransactionId, _encode_TransactionId } from "../
  */
 export
 class TransactionPending {
+    /**
+     * @summary `transactionId`.
+     * @description
+     *
+     * Same identifier as the TransactionRequest this pending refers to
+     * (clause 8.2.3). A duplicate request received while pending may be
+     * answered with another pending immediately, or left until the
+     * provisional timer fires.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly transactionId: TransactionId;
+    /**
+     * @summary Extensions that are not recognized.
+     * @description
+     *
+     * Extension additions this version does not define. Kept so a later
+     * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `transactionId`.
-         * @description
-         *
-         * Same identifier as the TransactionRequest this pending refers to
-         * (clause 8.2.3). A duplicate request received while pending may be
-         * answered with another pending immediately, or left until the
-         * provisional timer fires.
-         *
-         * @public
-         * @readonly
-         */
-        readonly transactionId: TransactionId,
-        /**
-         * @summary Extensions that are not recognized.
-         * @description
-         *
-         * Extension additions this version does not define. Kept so a later
-         * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
-         *
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        transactionId: TransactionId,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.transactionId = transactionId;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a TransactionPending

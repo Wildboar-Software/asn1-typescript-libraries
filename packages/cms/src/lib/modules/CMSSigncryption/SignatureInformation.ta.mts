@@ -47,32 +47,42 @@ import {
  *
  */
 export class SignatureInformation {
+    /**
+     * @summary `signerIdentifier`.
+     * @public
+     * @readonly
+     */
+    public readonly signerIdentifier: OPTIONAL<SignerIdentifier>;
+    /**
+     * @summary `signatureAlgorithm`.
+     * @public
+     * @readonly
+     */
+    public readonly signatureAlgorithm: OPTIONAL<SignatureAlgorithmIdentifier>;
+    /**
+     * @summary `toBeSigned`.
+     * @public
+     * @readonly
+     */
+    public readonly toBeSigned: ToBeSigned;
+    /**
+     * @summary `signatureValue`.
+     * @public
+     * @readonly
+     */
+    public readonly signatureValue: SignatureValue;
+
     constructor(
-        /**
-         * @summary `signerIdentifier`.
-         * @public
-         * @readonly
-         */
-        readonly signerIdentifier: OPTIONAL<SignerIdentifier>,
-        /**
-         * @summary `signatureAlgorithm`.
-         * @public
-         * @readonly
-         */
-        readonly signatureAlgorithm: OPTIONAL<SignatureAlgorithmIdentifier>,
-        /**
-         * @summary `toBeSigned`.
-         * @public
-         * @readonly
-         */
-        readonly toBeSigned: ToBeSigned,
-        /**
-         * @summary `signatureValue`.
-         * @public
-         * @readonly
-         */
-        readonly signatureValue: SignatureValue
-    ) {}
+        signerIdentifier: OPTIONAL<SignerIdentifier>,
+        signatureAlgorithm: OPTIONAL<SignatureAlgorithmIdentifier>,
+        toBeSigned: ToBeSigned,
+        signatureValue: SignatureValue
+    ) {
+        this.signerIdentifier = signerIdentifier;
+        this.signatureAlgorithm = signatureAlgorithm;
+        this.toBeSigned = toBeSigned;
+        this.signatureValue = signatureValue;
+    }
 
     /**
      * @summary Restructures an object into a SignatureInformation

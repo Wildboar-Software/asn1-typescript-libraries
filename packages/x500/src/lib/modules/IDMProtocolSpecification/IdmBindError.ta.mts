@@ -44,56 +44,68 @@ import {
  *
  */
 export class IdmBindError {
+    /**
+     * @summary `protocolID`.
+     * @description
+     *
+     * Shall equal the Bind's `protocolID`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly protocolID: OBJECT_IDENTIFIER;
+    /**
+     * @summary `respondingAETitle`.
+     * @description
+     *
+     * Responder's AE name. Optional.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly respondingAETitle: OPTIONAL<GeneralName>;
+    /**
+     * @summary `aETitleError`.
+     * @description
+     *
+     * Set only if both peers use AE-title info. See
+     * `IdmBindError-aETitleError`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly aETitleError: OPTIONAL<IdmBindError_aETitleError>;
+    /**
+     * @summary `error`.
+     * @description
+     *
+     * Bind-operation ERROR parameter (open type). The ASN.1 `errcode`
+     * field is commented out — this is not tagged by error code.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly error: _Element;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `protocolID`.
-         * @description
-         *
-         * Shall equal the Bind's `protocolID`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly protocolID: OBJECT_IDENTIFIER,
-        /**
-         * @summary `respondingAETitle`.
-         * @description
-         *
-         * Responder's AE name. Optional.
-         *
-         * @public
-         * @readonly
-         */
-        readonly respondingAETitle: OPTIONAL<GeneralName>,
-        /**
-         * @summary `aETitleError`.
-         * @description
-         *
-         * Set only if both peers use AE-title info. See
-         * `IdmBindError-aETitleError`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly aETitleError: OPTIONAL<IdmBindError_aETitleError>,
-        /**
-         * @summary `error`.
-         * @description
-         *
-         * Bind-operation ERROR parameter (open type). The ASN.1 `errcode`
-         * field is commented out — this is not tagged by error code.
-         *
-         * @public
-         * @readonly
-         */
-        readonly error: _Element,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        protocolID: OBJECT_IDENTIFIER,
+        respondingAETitle: OPTIONAL<GeneralName>,
+        aETitleError: OPTIONAL<IdmBindError_aETitleError>,
+        error: _Element,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.protocolID = protocolID;
+        this.respondingAETitle = respondingAETitle;
+        this.aETitleError = aETitleError;
+        this.error = error;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a IdmBindError

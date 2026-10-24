@@ -35,26 +35,32 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class EntryControl_feirList_Item {
+    /**
+     * @summary `feicoName`.
+     * @description
+     * Name of the Field Entry Instruction Control Object. ISO/IEC
+     * 9040:1997 §3.3.60.
+     * @public
+     * @readonly
+     */
+    public readonly feicoName: PrintableString;
+    /**
+     * @summary `recordIndex`.
+     * @description
+     * Index of the FEIR within that FEICO. ISO/IEC 9040:1997
+     * §3.3.62.
+     * @public
+     * @readonly
+     */
+    public readonly recordIndex: INTEGER;
+
     constructor (
-        /**
-         * @summary `feicoName`.
-         * @description
-         * Name of the Field Entry Instruction Control Object. ISO/IEC
-         * 9040:1997 §3.3.60.
-         * @public
-         * @readonly
-         */
-        readonly feicoName: PrintableString,
-        /**
-         * @summary `recordIndex`.
-         * @description
-         * Index of the FEIR within that FEICO. ISO/IEC 9040:1997
-         * §3.3.62.
-         * @public
-         * @readonly
-         */
-        readonly recordIndex: INTEGER
-    ) {}
+        feicoName: PrintableString,
+        recordIndex: INTEGER
+    ) {
+        this.feicoName = feicoName;
+        this.recordIndex = recordIndex;
+    }
 
     /**
      * @summary Restructures an object into a EntryControl_feirList_Item

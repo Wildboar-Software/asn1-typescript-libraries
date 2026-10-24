@@ -26,24 +26,30 @@ import { AreaList, _decode_AreaList, _encode_AreaList } from "../MAP-LCS-DataTyp
  */
 export
 class AreaDefinition {
+    /**
+     * @summary `areaList`.
+     * @description
+     *
+     * 1..10 areas.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly areaList: AreaList;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `areaList`.
-         * @description
-         *
-         * 1..10 areas.
-         *
-         * @public
-         * @readonly
-         */
-        readonly areaList: AreaList,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        areaList: AreaList,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.areaList = areaList;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a AreaDefinition

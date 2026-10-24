@@ -26,26 +26,34 @@ import * as $ from "@wildboar/asn1/functional";
  *
  */
 export class PolicyQualifierInfo {
+    /**
+     * @summary `policyQualifierId`.
+     * @public
+     * @readonly
+     */
+    public readonly policyQualifierId: OBJECT_IDENTIFIER;
+    /**
+     * @summary `qualifier`.
+     * @public
+     * @readonly
+     */
+    public readonly qualifier?: OPTIONAL<_Element>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `policyQualifierId`.
-         * @public
-         * @readonly
-         */
-        readonly policyQualifierId: OBJECT_IDENTIFIER,
-        /**
-         * @summary `qualifier`.
-         * @public
-         * @readonly
-         */
-        readonly qualifier?: OPTIONAL<_Element>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        policyQualifierId: OBJECT_IDENTIFIER,
+        qualifier?: OPTIONAL<_Element>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.policyQualifierId = policyQualifierId;
+        this.qualifier = qualifier;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a PolicyQualifierInfo

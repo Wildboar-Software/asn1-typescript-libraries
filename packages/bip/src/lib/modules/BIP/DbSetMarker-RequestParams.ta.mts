@@ -54,52 +54,62 @@ import {
  *
  */
 export class DbSetMarker_RequestParams {
+  /**
+   * @summary `originalBSPHandle`.
+   * @description
+   *
+   * Hosting-endpoint BSP handle. Rewritten from the master's local
+   * `BSPHandle` (cl.26) (`X.1083 §16.46`, Table 103).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly originalBSPHandle: BioAPI_HANDLE;
+  /**
+   * @summary `dbHandle`.
+   * @description
+   *
+   * Database whose marker is set, from C `DbHandle` (`X.1083 §16.46`,
+   * Table 103, §15.26). No local/original rewrite is specified.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly dbHandle: BioAPI_DB_HANDLE;
+  /**
+   * @summary `keyValue`.
+   * @description
+   *
+   * From C `KeyValue`. Not OPTIONAL: a NULL pointer is unconvertible
+   * (cl.19, §15.58) (`X.1083 §16.46`, Table 103).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly keyValue: BioAPI_UUID;
+  /**
+   * @summary `markerHandle`.
+   * @description
+   *
+   * Marker to reposition, from C `MarkerHandle` (`X.1083 §16.46`,
+   * Table 103, §15.25).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly markerHandle: BioAPI_DB_MARKER_HANDLE;
+
   constructor(
-    /**
-     * @summary `originalBSPHandle`.
-     * @description
-     *
-     * Hosting-endpoint BSP handle. Rewritten from the master's local
-     * `BSPHandle` (cl.26) (`X.1083 §16.46`, Table 103).
-     *
-     * @public
-     * @readonly
-     */
-    readonly originalBSPHandle: BioAPI_HANDLE,
-    /**
-     * @summary `dbHandle`.
-     * @description
-     *
-     * Database whose marker is set, from C `DbHandle` (`X.1083 §16.46`,
-     * Table 103, §15.26). No local/original rewrite is specified.
-     *
-     * @public
-     * @readonly
-     */
-    readonly dbHandle: BioAPI_DB_HANDLE,
-    /**
-     * @summary `keyValue`.
-     * @description
-     *
-     * From C `KeyValue`. Not OPTIONAL: a NULL pointer is unconvertible
-     * (cl.19, §15.58) (`X.1083 §16.46`, Table 103).
-     *
-     * @public
-     * @readonly
-     */
-    readonly keyValue: BioAPI_UUID,
-    /**
-     * @summary `markerHandle`.
-     * @description
-     *
-     * Marker to reposition, from C `MarkerHandle` (`X.1083 §16.46`,
-     * Table 103, §15.25).
-     *
-     * @public
-     * @readonly
-     */
-    readonly markerHandle: BioAPI_DB_MARKER_HANDLE
-  ) {}
+    originalBSPHandle: BioAPI_HANDLE,
+    dbHandle: BioAPI_DB_HANDLE,
+    keyValue: BioAPI_UUID,
+    markerHandle: BioAPI_DB_MARKER_HANDLE
+  ) {
+    this.originalBSPHandle = originalBSPHandle;
+    this.dbHandle = dbHandle;
+    this.keyValue = keyValue;
+    this.markerHandle = markerHandle;
+  }
 
   /**
    * @summary Restructures an object into a DbSetMarker_RequestParams

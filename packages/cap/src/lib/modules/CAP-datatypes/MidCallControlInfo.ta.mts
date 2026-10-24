@@ -37,75 +37,90 @@ import * as $ from "@wildboar/asn1/functional";
  *
  */
 export class MidCallControlInfo {
+    /**
+     * @summary `minimumNumberOfDigits`.
+     * @description
+     *
+     * Minimum number of digits that shall be collected. (3GPP TS 29.078 V19.0.0
+     * clause 5.1)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly minimumNumberOfDigits?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `maximumNumberOfDigits`.
+     * @description
+     *
+     * Maximum number of digits that shall be collected. (3GPP TS 29.078 V19.0.0
+     * clause 5.1)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly maximumNumberOfDigits?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `endOfReplyDigit`.
+     * @description
+     *
+     * Digit string that denotes the end of digits to be collected (included in
+     * the report to the gsmSCF). (3GPP TS 29.078 V19.0.0 clause 5.1)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly endOfReplyDigit?: OPTIONAL<OCTET_STRING>;
+    /**
+     * @summary `cancelDigit`.
+     * @description
+     *
+     * Digit string that erases input and restarts collection. (3GPP TS 29.078
+     * V19.0.0 clause 5.1)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly cancelDigit?: OPTIONAL<OCTET_STRING>;
+    /**
+     * @summary `startDigit`.
+     * @description
+     *
+     * Digit string that denotes the start of digits to be collected (included
+     * in the report to the gsmSCF). (3GPP TS 29.078 V19.0.0 clause 5.1)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly startDigit?: OPTIONAL<OCTET_STRING>;
+    /**
+     * @summary `interDigitTimeout`.
+     * @description
+     *
+     * Maximum duration in seconds between successive digits. (3GPP TS 29.078
+     * V19.0.0 clause 5.1)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly interDigitTimeout?: OPTIONAL<INTEGER>;
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `minimumNumberOfDigits`.
-         * @description
-         *
-         * Minimum number of digits that shall be collected. (3GPP TS 29.078 V19.0.0
-         * clause 5.1)
-         *
-         * @public
-         * @readonly
-         */
-        readonly minimumNumberOfDigits?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `maximumNumberOfDigits`.
-         * @description
-         *
-         * Maximum number of digits that shall be collected. (3GPP TS 29.078 V19.0.0
-         * clause 5.1)
-         *
-         * @public
-         * @readonly
-         */
-        readonly maximumNumberOfDigits?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `endOfReplyDigit`.
-         * @description
-         *
-         * Digit string that denotes the end of digits to be collected (included in
-         * the report to the gsmSCF). (3GPP TS 29.078 V19.0.0 clause 5.1)
-         *
-         * @public
-         * @readonly
-         */
-        readonly endOfReplyDigit?: OPTIONAL<OCTET_STRING>,
-        /**
-         * @summary `cancelDigit`.
-         * @description
-         *
-         * Digit string that erases input and restarts collection. (3GPP TS 29.078
-         * V19.0.0 clause 5.1)
-         *
-         * @public
-         * @readonly
-         */
-        readonly cancelDigit?: OPTIONAL<OCTET_STRING>,
-        /**
-         * @summary `startDigit`.
-         * @description
-         *
-         * Digit string that denotes the start of digits to be collected (included
-         * in the report to the gsmSCF). (3GPP TS 29.078 V19.0.0 clause 5.1)
-         *
-         * @public
-         * @readonly
-         */
-        readonly startDigit?: OPTIONAL<OCTET_STRING>,
-        /**
-         * @summary `interDigitTimeout`.
-         * @description
-         *
-         * Maximum duration in seconds between successive digits. (3GPP TS 29.078
-         * V19.0.0 clause 5.1)
-         *
-         * @public
-         * @readonly
-         */
-        readonly interDigitTimeout?: OPTIONAL<INTEGER>,
-        readonly _unrecognizedExtensionsList: _Element[] = [],
+        minimumNumberOfDigits?: OPTIONAL<INTEGER>,
+        maximumNumberOfDigits?: OPTIONAL<INTEGER>,
+        endOfReplyDigit?: OPTIONAL<OCTET_STRING>,
+        cancelDigit?: OPTIONAL<OCTET_STRING>,
+        startDigit?: OPTIONAL<OCTET_STRING>,
+        interDigitTimeout?: OPTIONAL<INTEGER>,
+        _unrecognizedExtensionsList: _Element[] = [],
     ) {
+        this.minimumNumberOfDigits = minimumNumberOfDigits;
+        this.maximumNumberOfDigits = maximumNumberOfDigits;
+        this.endOfReplyDigit = endOfReplyDigit;
+        this.cancelDigit = cancelDigit;
+        this.startDigit = startDigit;
+        this.interDigitTimeout = interDigitTimeout;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
         if (minimumNumberOfDigits !== undefined && (typeof minimumNumberOfDigits === "bigint" ? (minimumNumberOfDigits < 1n || minimumNumberOfDigits > 30n) : (minimumNumberOfDigits < 1 || minimumNumberOfDigits > 30))) {
             throw new ASN1OverflowError("MidCallControlInfo.minimumNumberOfDigits violates INTEGER constraint");
         }

@@ -70,132 +70,157 @@ import { Privileges, _decode_Privileges, _encode_Privileges } from "../DFRAbstra
  */
 export
 class SearchArgument {
+    /**
+     * @summary `search_mode`.
+     * @description
+     *
+     * Execution mode; see SearchArgument-search-mode.
+     * @public
+     * @readonly
+     */
+    public readonly search_mode: SearchArgument_search_mode;
+    /**
+     * @summary `continue_`.
+     * @description
+     *
+     * If true, resume the List/Search identified by `task-id` instead of
+     * starting over. ISO/IEC 10166-1:1991 §8.1.6.1.
+     * @public
+     * @readonly
+     */
+    public readonly continue_?: OPTIONAL<BOOLEAN>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `limits`.
+     * @description
+     *
+     * Optional count and/or time caps for this List/Search. ISO/IEC
+     * 10166-1:1991 §8.1.6.1.
+     * @public
+     * @readonly
+     */
+    public readonly limits?: OPTIONAL<Limits>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `selection`.
+     * @description
+     *
+     * Which attributes of each hit to return in `entry-list`. Omit to
+     * return UPI and class only (plus ordering keys if requested).
+     * ISO/IEC 10166-1:1991 §8.1.6.2, §8.2.8.1.
+     * @public
+     * @readonly
+     */
+    public readonly selection?: OPTIONAL<AttributeSelection>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `ordering`.
+     * @description
+     *
+     * Sort keys and directions. Overrides the group's `dfr-ordering` for
+     * this request. Only attributes that MATCH FOR ORDERING may be used.
+     * ISO/IEC 10166-1:1991 §8.1.6.3.
+     * @public
+     * @readonly
+     */
+    public readonly ordering?: OPTIONAL<OrderingRule>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `search_domain`.
+     * @description
+     *
+     * Groups and/or previous SRLs to search.
+     * @public
+     * @readonly
+     */
+    public readonly search_domain?: OPTIONAL<SearchDomain>;
+    /**
+     * @summary `search_criteria`.
+     * @description
+     *
+     * Filter that a hit must satisfy.
+     * @public
+     * @readonly
+     */
+    public readonly search_criteria?: OPTIONAL<SearchCriteria>;
+    /**
+     * @summary `task_id`.
+     * @description
+     *
+     * Optional identifier for this invocation, so it can later be
+     * abandoned or continued. Must not be reused until the operation
+     * completes or is abandoned. A List/Search continuation value returned
+     * after a limit may be reused here. ISO/IEC 10166-1:1991 §8.1.3.1.
+     * @public
+     * @readonly
+     */
+    public readonly task_id?: OPTIONAL<TaskId>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `reservation`.
+     * @description
+     *
+     * If requested, applies to the search-result-list named in
+     * `search-mode`. Omit to leave that reservation unchanged. ISO/IEC
+     * 10166-1:1991 §8.2.8.1, §8.1.3.2.
+     * @public
+     * @readonly
+     */
+    public readonly reservation?: OPTIONAL<Reservation>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `error_handling`.
+     * @description
+     *
+     * Constrained absent on Search. ISO/IEC 10166-1:1991 §8.2.8.1.
+     * @public
+     * @readonly
+     */
+    public readonly error_handling?: OPTIONAL<ErrorHandlingMode>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `priority`.
+     * @description
+     *
+     * Operational priority for a loaded server; overrides the bind default
+     * (`medium`). The server need not honour it. Unrelated to
+     * communications QoS. ISO/IEC 10166-1:1991 §8.1.3.4, §7.1.1.
+     * @public
+     * @readonly
+     */
+    public readonly priority?: OPTIONAL<Priority>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `privileges`.
+     * @description
+     *
+     * Per-operation PACs that modify bind privileges for this request only
+     * (`operation-Pac`) and/or a `proxy-pac` the server may present when
+     * accessing another application on the user's behalf. ISO/IEC
+     * 10166-1:1991 §8.1.3.5.
+     * @public
+     * @readonly
+     */
+    public readonly privileges?: OPTIONAL<Privileges>; /* REPLICATED_COMPONENT */
+
     constructor (
-        /**
-         * @summary `search_mode`.
-         * @description
-         *
-         * Execution mode; see SearchArgument-search-mode.
-         * @public
-         * @readonly
-         */
-        readonly search_mode: SearchArgument_search_mode,
-        /**
-         * @summary `continue_`.
-         * @description
-         *
-         * If true, resume the List/Search identified by `task-id` instead of
-         * starting over. ISO/IEC 10166-1:1991 §8.1.6.1.
-         * @public
-         * @readonly
-         */
-        readonly continue_?: OPTIONAL<BOOLEAN> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `limits`.
-         * @description
-         *
-         * Optional count and/or time caps for this List/Search. ISO/IEC
-         * 10166-1:1991 §8.1.6.1.
-         * @public
-         * @readonly
-         */
-        readonly limits?: OPTIONAL<Limits> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `selection`.
-         * @description
-         *
-         * Which attributes of each hit to return in `entry-list`. Omit to
-         * return UPI and class only (plus ordering keys if requested).
-         * ISO/IEC 10166-1:1991 §8.1.6.2, §8.2.8.1.
-         * @public
-         * @readonly
-         */
-        readonly selection?: OPTIONAL<AttributeSelection> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `ordering`.
-         * @description
-         *
-         * Sort keys and directions. Overrides the group's `dfr-ordering` for
-         * this request. Only attributes that MATCH FOR ORDERING may be used.
-         * ISO/IEC 10166-1:1991 §8.1.6.3.
-         * @public
-         * @readonly
-         */
-        readonly ordering?: OPTIONAL<OrderingRule> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `search_domain`.
-         * @description
-         *
-         * Groups and/or previous SRLs to search.
-         * @public
-         * @readonly
-         */
-        readonly search_domain?: OPTIONAL<SearchDomain>,
-        /**
-         * @summary `search_criteria`.
-         * @description
-         *
-         * Filter that a hit must satisfy.
-         * @public
-         * @readonly
-         */
-        readonly search_criteria?: OPTIONAL<SearchCriteria>,
-        /**
-         * @summary `task_id`.
-         * @description
-         *
-         * Optional identifier for this invocation, so it can later be
-         * abandoned or continued. Must not be reused until the operation
-         * completes or is abandoned. A List/Search continuation value returned
-         * after a limit may be reused here. ISO/IEC 10166-1:1991 §8.1.3.1.
-         * @public
-         * @readonly
-         */
-        readonly task_id?: OPTIONAL<TaskId> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `reservation`.
-         * @description
-         *
-         * If requested, applies to the search-result-list named in
-         * `search-mode`. Omit to leave that reservation unchanged. ISO/IEC
-         * 10166-1:1991 §8.2.8.1, §8.1.3.2.
-         * @public
-         * @readonly
-         */
-        readonly reservation?: OPTIONAL<Reservation> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `error_handling`.
-         * @description
-         *
-         * Constrained absent on Search. ISO/IEC 10166-1:1991 §8.2.8.1.
-         * @public
-         * @readonly
-         */
-        readonly error_handling?: OPTIONAL<ErrorHandlingMode> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `priority`.
-         * @description
-         *
-         * Operational priority for a loaded server; overrides the bind default
-         * (`medium`). The server need not honour it. Unrelated to
-         * communications QoS. ISO/IEC 10166-1:1991 §8.1.3.4, §7.1.1.
-         * @public
-         * @readonly
-         */
-        readonly priority?: OPTIONAL<Priority> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `privileges`.
-         * @description
-         *
-         * Per-operation PACs that modify bind privileges for this request only
-         * (`operation-Pac`) and/or a `proxy-pac` the server may present when
-         * accessing another application on the user's behalf. ISO/IEC
-         * 10166-1:1991 §8.1.3.5.
-         * @public
-         * @readonly
-         */
-        readonly privileges?: OPTIONAL<Privileges> /* REPLICATED_COMPONENT */
+        search_mode: SearchArgument_search_mode,
+        continue_?: OPTIONAL<BOOLEAN>,
+        limits?: OPTIONAL<Limits>,
+        selection?: OPTIONAL<AttributeSelection>,
+        ordering?: OPTIONAL<OrderingRule>,
+        search_domain?: OPTIONAL<SearchDomain>,
+        search_criteria?: OPTIONAL<SearchCriteria>,
+        task_id?: OPTIONAL<TaskId>,
+        reservation?: OPTIONAL<Reservation>,
+        error_handling?: OPTIONAL<ErrorHandlingMode>,
+        priority?: OPTIONAL<Priority>,
+        privileges?: OPTIONAL<Privileges>
     ) {
+        this.search_mode = search_mode;
+        this.continue_ = continue_;
+        this.limits = limits;
+        this.selection = selection;
+        this.ordering = ordering;
+        this.search_domain = search_domain;
+        this.search_criteria = search_criteria;
+        this.task_id = task_id;
+        this.reservation = reservation;
+        this.error_handling = error_handling;
+        this.priority = priority;
+        this.privileges = privileges;
         if (error_handling !== undefined && !("all_or_nothing" in error_handling)) {
             throw new _ConstructionError("SearchArgument.error-handling shall be absent");
         }

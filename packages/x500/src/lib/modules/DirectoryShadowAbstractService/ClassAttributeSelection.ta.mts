@@ -30,30 +30,36 @@ import {
  *
  */
 export class ClassAttributeSelection {
+    /**
+     * @summary `class_`.
+     * @description
+     *
+     * Object-class OID. Absent = this selection applies to all classes.
+     * Also matches subclasses of the named class.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly class_?: OPTIONAL<OBJECT_IDENTIFIER>;
+    /**
+     * @summary `classAttributes`.
+     * @description
+     *
+     * DEFAULT `allAttributes:NULL` (all user and collective attributes;
+     * extra operational attributes still need an `include`).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly classAttributes?: OPTIONAL<ClassAttributes>;
+
     constructor(
-        /**
-         * @summary `class_`.
-         * @description
-         *
-         * Object-class OID. Absent = this selection applies to all classes.
-         * Also matches subclasses of the named class.
-         *
-         * @public
-         * @readonly
-         */
-        readonly class_?: OPTIONAL<OBJECT_IDENTIFIER>,
-        /**
-         * @summary `classAttributes`.
-         * @description
-         *
-         * DEFAULT `allAttributes:NULL` (all user and collective attributes;
-         * extra operational attributes still need an `include`).
-         *
-         * @public
-         * @readonly
-         */
-        readonly classAttributes?: OPTIONAL<ClassAttributes>
-    ) {}
+        class_?: OPTIONAL<OBJECT_IDENTIFIER>,
+        classAttributes?: OPTIONAL<ClassAttributes>
+    ) {
+        this.class_ = class_;
+        this.classAttributes = classAttributes;
+    }
 
     /**
      * @summary Restructures an object into a ClassAttributeSelection

@@ -31,20 +31,26 @@ import {
  *
  */
 export class OsiRes {
+    /**
+     * @summary `invokeId`.
+     * @public
+     * @readonly
+     */
+    public readonly invokeId: InvokeId;
+    /**
+     * @summary `result`.
+     * @public
+     * @readonly
+     */
+    public readonly result: OsiRes_result;
+
     constructor(
-        /**
-         * @summary `invokeId`.
-         * @public
-         * @readonly
-         */
-        readonly invokeId: InvokeId,
-        /**
-         * @summary `result`.
-         * @public
-         * @readonly
-         */
-        readonly result: OsiRes_result
-    ) {}
+        invokeId: InvokeId,
+        result: OsiRes_result
+    ) {
+        this.invokeId = invokeId;
+        this.result = result;
+    }
 
     /**
      * @summary Restructures an object into a OsiRes

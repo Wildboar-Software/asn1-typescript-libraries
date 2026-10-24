@@ -28,20 +28,26 @@ import * as $ from '@wildboar/asn1/functional';
  *
  */
 export class PatronFormat {
+  /**
+   * @summary `patron_format_owner`.
+   * @public
+   * @readonly
+   */
+  public readonly patron_format_owner?: OPTIONAL<INTEGER>;
+  /**
+   * @summary `patron_format_type`.
+   * @public
+   * @readonly
+   */
+  public readonly patron_format_type?: OPTIONAL<INTEGER>;
+
   constructor(
-    /**
-     * @summary `patron_format_owner`.
-     * @public
-     * @readonly
-     */
-    readonly patron_format_owner?: OPTIONAL<INTEGER>,
-    /**
-     * @summary `patron_format_type`.
-     * @public
-     * @readonly
-     */
-    readonly patron_format_type?: OPTIONAL<INTEGER>
-  ) {}
+    patron_format_owner?: OPTIONAL<INTEGER>,
+    patron_format_type?: OPTIONAL<INTEGER>
+  ) {
+    this.patron_format_owner = patron_format_owner;
+    this.patron_format_type = patron_format_type;
+  }
 
   /**
    * @summary Restructures an object into a PatronFormat

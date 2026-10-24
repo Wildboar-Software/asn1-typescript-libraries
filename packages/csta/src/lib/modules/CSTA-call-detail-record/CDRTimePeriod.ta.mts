@@ -32,28 +32,34 @@ import { TimeInfo, _decode_TimeInfo, _encode_TimeInfo } from "../CSTA-security/T
  */
 export
 class CDRTimePeriod {
+    /**
+     * @summary `beginningOfCDR`.
+     * @description
+     *
+     * Start of the CDR time window. ECMA-285 §9.11.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly beginningOfCDR: TimeInfo;
+    /**
+     * @summary `endOfCDR`.
+     * @description
+     *
+     * End of the CDR time window. ECMA-285 §9.11.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly endOfCDR: TimeInfo;
+
     constructor (
-        /**
-         * @summary `beginningOfCDR`.
-         * @description
-         *
-         * Start of the CDR time window. ECMA-285 §9.11.
-         *
-         * @public
-         * @readonly
-         */
-        readonly beginningOfCDR: TimeInfo,
-        /**
-         * @summary `endOfCDR`.
-         * @description
-         *
-         * End of the CDR time window. ECMA-285 §9.11.
-         *
-         * @public
-         * @readonly
-         */
-        readonly endOfCDR: TimeInfo
-    ) {}
+        beginningOfCDR: TimeInfo,
+        endOfCDR: TimeInfo
+    ) {
+        this.beginningOfCDR = beginningOfCDR;
+        this.endOfCDR = endOfCDR;
+    }
 
     /**
      * @summary Restructures an object into a CDRTimePeriod

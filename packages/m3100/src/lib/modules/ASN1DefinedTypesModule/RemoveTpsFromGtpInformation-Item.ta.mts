@@ -28,20 +28,26 @@ import {
  *
  */
 export class RemoveTpsFromGtpInformation_Item {
+    /**
+     * @summary `fromGtp`.
+     * @public
+     * @readonly
+     */
+    public readonly fromGtp: ObjectInstance;
+    /**
+     * @summary `tps`.
+     * @public
+     * @readonly
+     */
+    public readonly tps: ObjectInstance[];
+
     constructor(
-        /**
-         * @summary `fromGtp`.
-         * @public
-         * @readonly
-         */
-        readonly fromGtp: ObjectInstance,
-        /**
-         * @summary `tps`.
-         * @public
-         * @readonly
-         */
-        readonly tps: ObjectInstance[]
-    ) {}
+        fromGtp: ObjectInstance,
+        tps: ObjectInstance[]
+    ) {
+        this.fromGtp = fromGtp;
+        this.tps = tps;
+    }
 
     /**
      * @summary Restructures an object into a RemoveTpsFromGtpInformation_Item

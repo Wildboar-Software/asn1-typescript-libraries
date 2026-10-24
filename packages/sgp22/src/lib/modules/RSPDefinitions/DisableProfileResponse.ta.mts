@@ -26,19 +26,23 @@ import { _decode_DisableProfileResponse_disableResult, _encode_DisableProfileRes
  */
 export
 class DisableProfileResponse {
+    /**
+     * @summary `disableResult`.
+     * @description
+     * 
+     * `ok`, not found, not enabled, disallowed by policy (PPR1), CAT busy,
+     * or undefined. SGP.22 v3.1 §5.7.17.
+     * 
+     * @public
+     * @readonly
+     */
+    public readonly disableResult: DisableProfileResponse_disableResult;
+
     constructor (
-        /**
-         * @summary `disableResult`.
-         * @description
-         * 
-         * `ok`, not found, not enabled, disallowed by policy (PPR1), CAT busy,
-         * or undefined. SGP.22 v3.1 §5.7.17.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly disableResult: DisableProfileResponse_disableResult
-    ) {}
+        disableResult: DisableProfileResponse_disableResult
+    ) {
+        this.disableResult = disableResult;
+    }
 
     /**
      * @summary Restructures an object into a DisableProfileResponse

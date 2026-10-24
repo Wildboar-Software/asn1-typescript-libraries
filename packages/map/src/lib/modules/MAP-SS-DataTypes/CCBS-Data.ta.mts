@@ -33,64 +33,78 @@ import { ServiceIndicator, _decode_ServiceIndicator, _encode_ServiceIndicator } 
  */
 export
 class CCBS_Data {
+    /**
+     * @summary `ccbs_Feature`.
+     * @description
+     *
+     * CCBS feature being registered.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ccbs_Feature: CCBS_Feature;
+    /**
+     * @summary `translatedB_Number`.
+     * @description
+     *
+     * Translated B-number.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly translatedB_Number: ISDN_AddressString;
+    /**
+     * @summary `serviceIndicator`.
+     * @description
+     *
+     * CLIR and/or CAMEL invoked.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly serviceIndicator: OPTIONAL<ServiceIndicator>;
+    /**
+     * @summary `callInfo`.
+     * @description
+     *
+     * Call information as ExternalSignalInfo.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly callInfo: ExternalSignalInfo;
+    /**
+     * @summary `networkSignalInfo`.
+     * @description
+     *
+     * Network signalling information.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly networkSignalInfo: ExternalSignalInfo;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `ccbs_Feature`.
-         * @description
-         *
-         * CCBS feature being registered.
-         *
-         * @public
-         * @readonly
-         */
-        readonly ccbs_Feature: CCBS_Feature,
-        /**
-         * @summary `translatedB_Number`.
-         * @description
-         *
-         * Translated B-number.
-         *
-         * @public
-         * @readonly
-         */
-        readonly translatedB_Number: ISDN_AddressString,
-        /**
-         * @summary `serviceIndicator`.
-         * @description
-         *
-         * CLIR and/or CAMEL invoked.
-         *
-         * @public
-         * @readonly
-         */
-        readonly serviceIndicator: OPTIONAL<ServiceIndicator>,
-        /**
-         * @summary `callInfo`.
-         * @description
-         *
-         * Call information as ExternalSignalInfo.
-         *
-         * @public
-         * @readonly
-         */
-        readonly callInfo: ExternalSignalInfo,
-        /**
-         * @summary `networkSignalInfo`.
-         * @description
-         *
-         * Network signalling information.
-         *
-         * @public
-         * @readonly
-         */
-        readonly networkSignalInfo: ExternalSignalInfo,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        ccbs_Feature: CCBS_Feature,
+        translatedB_Number: ISDN_AddressString,
+        serviceIndicator: OPTIONAL<ServiceIndicator>,
+        callInfo: ExternalSignalInfo,
+        networkSignalInfo: ExternalSignalInfo,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.ccbs_Feature = ccbs_Feature;
+        this.translatedB_Number = translatedB_Number;
+        this.serviceIndicator = serviceIndicator;
+        this.callInfo = callInfo;
+        this.networkSignalInfo = networkSignalInfo;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a CCBS_Data

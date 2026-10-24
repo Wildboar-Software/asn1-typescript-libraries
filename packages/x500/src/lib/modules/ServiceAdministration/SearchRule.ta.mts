@@ -110,116 +110,154 @@ import {
  *
  */
 export class SearchRule implements SearchRuleId {
+    /**
+     * @summary `id`.
+     * @public
+     * @readonly
+     */
+    public readonly id: INTEGER; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `dmdId`.
+     * @public
+     * @readonly
+     */
+    public readonly dmdId: OBJECT_IDENTIFIER; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `serviceType`.
+     * @public
+     * @readonly
+     */
+    public readonly serviceType?: OPTIONAL<OBJECT_IDENTIFIER>;
+    /**
+     * @summary `userClass`.
+     * @public
+     * @readonly
+     */
+    public readonly userClass?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `inputAttributeTypes`.
+     * @public
+     * @readonly
+     */
+    public readonly inputAttributeTypes?: OPTIONAL<RequestAttribute[]>;
+    /**
+     * @summary `attributeCombination`.
+     * @public
+     * @readonly
+     */
+    public readonly attributeCombination?: OPTIONAL<AttributeCombination>;
+    /**
+     * @summary `outputAttributeTypes`.
+     * @public
+     * @readonly
+     */
+    public readonly outputAttributeTypes?: OPTIONAL<ResultAttribute[]>;
+    /**
+     * @summary `defaultControls`.
+     * @public
+     * @readonly
+     */
+    public readonly defaultControls?: OPTIONAL<ControlOptions>;
+    /**
+     * @summary `mandatoryControls`.
+     * @public
+     * @readonly
+     */
+    public readonly mandatoryControls?: OPTIONAL<ControlOptions>;
+    /**
+     * @summary `searchRuleControls`.
+     * @public
+     * @readonly
+     */
+    public readonly searchRuleControls?: OPTIONAL<ControlOptions>;
+    /**
+     * @summary `familyGrouping`.
+     * @public
+     * @readonly
+     */
+    public readonly familyGrouping?: OPTIONAL<FamilyGrouping>;
+    /**
+     * @summary `familyReturn`.
+     * @public
+     * @readonly
+     */
+    public readonly familyReturn?: OPTIONAL<FamilyReturn>;
+    /**
+     * @summary `relaxation`.
+     * @public
+     * @readonly
+     */
+    public readonly relaxation?: OPTIONAL<RelaxationPolicy>;
+    /**
+     * @summary `additionalControl`.
+     * @public
+     * @readonly
+     */
+    public readonly additionalControl?: OPTIONAL<AttributeType[]>;
+    /**
+     * @summary `allowedSubset`.
+     * @public
+     * @readonly
+     */
+    public readonly allowedSubset?: OPTIONAL<AllowedSubset>;
+    /**
+     * @summary `imposedSubset`.
+     * @public
+     * @readonly
+     */
+    public readonly imposedSubset?: OPTIONAL<ImposedSubset>;
+    /**
+     * @summary `entryLimit`.
+     * @public
+     * @readonly
+     */
+    public readonly entryLimit?: OPTIONAL<EntryLimit>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `id`.
-         * @public
-         * @readonly
-         */
-        readonly id: INTEGER /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `dmdId`.
-         * @public
-         * @readonly
-         */
-        readonly dmdId: OBJECT_IDENTIFIER /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `serviceType`.
-         * @public
-         * @readonly
-         */
-        readonly serviceType?: OPTIONAL<OBJECT_IDENTIFIER>,
-        /**
-         * @summary `userClass`.
-         * @public
-         * @readonly
-         */
-        readonly userClass?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `inputAttributeTypes`.
-         * @public
-         * @readonly
-         */
-        readonly inputAttributeTypes?: OPTIONAL<RequestAttribute[]>,
-        /**
-         * @summary `attributeCombination`.
-         * @public
-         * @readonly
-         */
-        readonly attributeCombination?: OPTIONAL<AttributeCombination>,
-        /**
-         * @summary `outputAttributeTypes`.
-         * @public
-         * @readonly
-         */
-        readonly outputAttributeTypes?: OPTIONAL<ResultAttribute[]>,
-        /**
-         * @summary `defaultControls`.
-         * @public
-         * @readonly
-         */
-        readonly defaultControls?: OPTIONAL<ControlOptions>,
-        /**
-         * @summary `mandatoryControls`.
-         * @public
-         * @readonly
-         */
-        readonly mandatoryControls?: OPTIONAL<ControlOptions>,
-        /**
-         * @summary `searchRuleControls`.
-         * @public
-         * @readonly
-         */
-        readonly searchRuleControls?: OPTIONAL<ControlOptions>,
-        /**
-         * @summary `familyGrouping`.
-         * @public
-         * @readonly
-         */
-        readonly familyGrouping?: OPTIONAL<FamilyGrouping>,
-        /**
-         * @summary `familyReturn`.
-         * @public
-         * @readonly
-         */
-        readonly familyReturn?: OPTIONAL<FamilyReturn>,
-        /**
-         * @summary `relaxation`.
-         * @public
-         * @readonly
-         */
-        readonly relaxation?: OPTIONAL<RelaxationPolicy>,
-        /**
-         * @summary `additionalControl`.
-         * @public
-         * @readonly
-         */
-        readonly additionalControl?: OPTIONAL<AttributeType[]>,
-        /**
-         * @summary `allowedSubset`.
-         * @public
-         * @readonly
-         */
-        readonly allowedSubset?: OPTIONAL<AllowedSubset>,
-        /**
-         * @summary `imposedSubset`.
-         * @public
-         * @readonly
-         */
-        readonly imposedSubset?: OPTIONAL<ImposedSubset>,
-        /**
-         * @summary `entryLimit`.
-         * @public
-         * @readonly
-         */
-        readonly entryLimit?: OPTIONAL<EntryLimit>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        id: INTEGER,
+        dmdId: OBJECT_IDENTIFIER,
+        serviceType?: OPTIONAL<OBJECT_IDENTIFIER>,
+        userClass?: OPTIONAL<INTEGER>,
+        inputAttributeTypes?: OPTIONAL<RequestAttribute[]>,
+        attributeCombination?: OPTIONAL<AttributeCombination>,
+        outputAttributeTypes?: OPTIONAL<ResultAttribute[]>,
+        defaultControls?: OPTIONAL<ControlOptions>,
+        mandatoryControls?: OPTIONAL<ControlOptions>,
+        searchRuleControls?: OPTIONAL<ControlOptions>,
+        familyGrouping?: OPTIONAL<FamilyGrouping>,
+        familyReturn?: OPTIONAL<FamilyReturn>,
+        relaxation?: OPTIONAL<RelaxationPolicy>,
+        additionalControl?: OPTIONAL<AttributeType[]>,
+        allowedSubset?: OPTIONAL<AllowedSubset>,
+        imposedSubset?: OPTIONAL<ImposedSubset>,
+        entryLimit?: OPTIONAL<EntryLimit>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.id = id;
+        this.dmdId = dmdId;
+        this.serviceType = serviceType;
+        this.userClass = userClass;
+        this.inputAttributeTypes = inputAttributeTypes;
+        this.attributeCombination = attributeCombination;
+        this.outputAttributeTypes = outputAttributeTypes;
+        this.defaultControls = defaultControls;
+        this.mandatoryControls = mandatoryControls;
+        this.searchRuleControls = searchRuleControls;
+        this.familyGrouping = familyGrouping;
+        this.familyReturn = familyReturn;
+        this.relaxation = relaxation;
+        this.additionalControl = additionalControl;
+        this.allowedSubset = allowedSubset;
+        this.imposedSubset = imposedSubset;
+        this.entryLimit = entryLimit;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a SearchRule

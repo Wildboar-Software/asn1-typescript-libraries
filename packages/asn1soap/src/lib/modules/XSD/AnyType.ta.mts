@@ -40,33 +40,41 @@ import { String, _decode_String, _encode_String } from '../XSD/String.ta.mjs';
  *
  */
 export class AnyType {
+  /**
+   * @summary `embed_values`.
+   * @description Character data interleaved with child elements
+   * (XER `EMBED-VALUES`). ITU-T Rec. X.693 | ISO/IEC 8825-4,
+   * clause 25.
+   * @public
+   * @readonly
+   */
+  public readonly embed_values: String[];
+  /**
+   * @summary `attr`.
+   * @description Wildcard attributes; each item is
+   * `AnyAttributeFormat` (X.693 clause 18).
+   * @public
+   * @readonly
+   */
+  public readonly attr: String[];
+  /**
+   * @summary `elem_list`.
+   * @description Wildcard child elements; each item is
+   * `AnyElementFormat` (X.693 clause 19).
+   * @public
+   * @readonly
+   */
+  public readonly elem_list: String[];
+
   constructor(
-    /**
-     * @summary `embed_values`.
-     * @description Character data interleaved with child elements
-     * (XER `EMBED-VALUES`). ITU-T Rec. X.693 | ISO/IEC 8825-4,
-     * clause 25.
-     * @public
-     * @readonly
-     */
-    readonly embed_values: String[],
-    /**
-     * @summary `attr`.
-     * @description Wildcard attributes; each item is
-     * `AnyAttributeFormat` (X.693 clause 18).
-     * @public
-     * @readonly
-     */
-    readonly attr: String[],
-    /**
-     * @summary `elem_list`.
-     * @description Wildcard child elements; each item is
-     * `AnyElementFormat` (X.693 clause 19).
-     * @public
-     * @readonly
-     */
-    readonly elem_list: String[]
-  ) {}
+    embed_values: String[],
+    attr: String[],
+    elem_list: String[]
+  ) {
+    this.embed_values = embed_values;
+    this.attr = attr;
+    this.elem_list = elem_list;
+  }
 
   /**
    * @summary Restructures an object into a AnyType

@@ -46,28 +46,34 @@ import {
  */
 export
 class ChargingInfo {
+    /**
+     * @summary `numberUnits`.
+     * @description
+     *
+     * Charging units or currency units. ECMA-269 §12.2.7.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly numberUnits: NumberUnits;
+    /**
+     * @summary `typeOfChargingInfo`.
+     * @description
+     *
+     * Sub-total (intermediate) or Total (complete). ECMA-269 §12.2.7.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly typeOfChargingInfo: ChargingInfo_typeOfChargingInfo;
+
     constructor (
-        /**
-         * @summary `numberUnits`.
-         * @description
-         *
-         * Charging units or currency units. ECMA-269 §12.2.7.
-         *
-         * @public
-         * @readonly
-         */
-        readonly numberUnits: NumberUnits,
-        /**
-         * @summary `typeOfChargingInfo`.
-         * @description
-         *
-         * Sub-total (intermediate) or Total (complete). ECMA-269 §12.2.7.
-         *
-         * @public
-         * @readonly
-         */
-        readonly typeOfChargingInfo: ChargingInfo_typeOfChargingInfo
-    ) {}
+        numberUnits: NumberUnits,
+        typeOfChargingInfo: ChargingInfo_typeOfChargingInfo
+    ) {
+        this.numberUnits = numberUnits;
+        this.typeOfChargingInfo = typeOfChargingInfo;
+    }
 
     /**
      * @summary Restructures an object into a ChargingInfo

@@ -52,32 +52,42 @@ import {
  *
  */
 export class ArcAlarmDetail {
+    /**
+     * @summary `problem`.
+     * @public
+     * @readonly
+     */
+    public readonly problem: ProbableCause;
+    /**
+     * @summary `alarmStatus`.
+     * @public
+     * @readonly
+     */
+    public readonly alarmStatus: AlarmStatus;
+    /**
+     * @summary `perceivedSeverity`.
+     * @public
+     * @readonly
+     */
+    public readonly perceivedSeverity?: OPTIONAL<PerceivedSeverity>;
+    /**
+     * @summary `eventTime`.
+     * @public
+     * @readonly
+     */
+    public readonly eventTime?: OPTIONAL<EventTime>;
+
     constructor(
-        /**
-         * @summary `problem`.
-         * @public
-         * @readonly
-         */
-        readonly problem: ProbableCause,
-        /**
-         * @summary `alarmStatus`.
-         * @public
-         * @readonly
-         */
-        readonly alarmStatus: AlarmStatus,
-        /**
-         * @summary `perceivedSeverity`.
-         * @public
-         * @readonly
-         */
-        readonly perceivedSeverity?: OPTIONAL<PerceivedSeverity>,
-        /**
-         * @summary `eventTime`.
-         * @public
-         * @readonly
-         */
-        readonly eventTime?: OPTIONAL<EventTime>
-    ) {}
+        problem: ProbableCause,
+        alarmStatus: AlarmStatus,
+        perceivedSeverity?: OPTIONAL<PerceivedSeverity>,
+        eventTime?: OPTIONAL<EventTime>
+    ) {
+        this.problem = problem;
+        this.alarmStatus = alarmStatus;
+        this.perceivedSeverity = perceivedSeverity;
+        this.eventTime = eventTime;
+    }
 
     /**
      * @summary Restructures an object into a ArcAlarmDetail

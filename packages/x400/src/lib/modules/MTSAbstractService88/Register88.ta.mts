@@ -71,50 +71,66 @@ import {
  *
  */
 export class Register88 {
+    /**
+     * @summary `user_name`.
+     * @public
+     * @readonly
+     */
+    public readonly user_name?: OPTIONAL<UserName>;
+    /**
+     * @summary `user_address`.
+     * @public
+     * @readonly
+     */
+    public readonly user_address?: OPTIONAL<UserAddress>;
+    /**
+     * @summary `deliverable_encoded_information_types`.
+     * @public
+     * @readonly
+     */
+    public readonly deliverable_encoded_information_types?: OPTIONAL<EncodedInformationTypes>;
+    /**
+     * @summary `deliverable_maximum_content_length`.
+     * @public
+     * @readonly
+     */
+    public readonly deliverable_maximum_content_length?: OPTIONAL<ContentLength>;
+    /**
+     * @summary `default_delivery_controls`.
+     * @public
+     * @readonly
+     */
+    public readonly default_delivery_controls?: OPTIONAL<DefaultDeliveryControls>;
+    /**
+     * @summary `deliverable_content_types`.
+     * @public
+     * @readonly
+     */
+    public readonly deliverable_content_types?: OPTIONAL<ContentTypes>;
+    /**
+     * @summary `labels_and_redirections`.
+     * @public
+     * @readonly
+     */
+    public readonly labels_and_redirections?: OPTIONAL<LabelAndRedirection[]>;
+
     constructor(
-        /**
-         * @summary `user_name`.
-         * @public
-         * @readonly
-         */
-        readonly user_name?: OPTIONAL<UserName>,
-        /**
-         * @summary `user_address`.
-         * @public
-         * @readonly
-         */
-        readonly user_address?: OPTIONAL<UserAddress>,
-        /**
-         * @summary `deliverable_encoded_information_types`.
-         * @public
-         * @readonly
-         */
-        readonly deliverable_encoded_information_types?: OPTIONAL<EncodedInformationTypes>,
-        /**
-         * @summary `deliverable_maximum_content_length`.
-         * @public
-         * @readonly
-         */
-        readonly deliverable_maximum_content_length?: OPTIONAL<ContentLength>,
-        /**
-         * @summary `default_delivery_controls`.
-         * @public
-         * @readonly
-         */
-        readonly default_delivery_controls?: OPTIONAL<DefaultDeliveryControls>,
-        /**
-         * @summary `deliverable_content_types`.
-         * @public
-         * @readonly
-         */
-        readonly deliverable_content_types?: OPTIONAL<ContentTypes>,
-        /**
-         * @summary `labels_and_redirections`.
-         * @public
-         * @readonly
-         */
-        readonly labels_and_redirections?: OPTIONAL<LabelAndRedirection[]>
-    ) {}
+        user_name?: OPTIONAL<UserName>,
+        user_address?: OPTIONAL<UserAddress>,
+        deliverable_encoded_information_types?: OPTIONAL<EncodedInformationTypes>,
+        deliverable_maximum_content_length?: OPTIONAL<ContentLength>,
+        default_delivery_controls?: OPTIONAL<DefaultDeliveryControls>,
+        deliverable_content_types?: OPTIONAL<ContentTypes>,
+        labels_and_redirections?: OPTIONAL<LabelAndRedirection[]>
+    ) {
+        this.user_name = user_name;
+        this.user_address = user_address;
+        this.deliverable_encoded_information_types = deliverable_encoded_information_types;
+        this.deliverable_maximum_content_length = deliverable_maximum_content_length;
+        this.default_delivery_controls = default_delivery_controls;
+        this.deliverable_content_types = deliverable_content_types;
+        this.labels_and_redirections = labels_and_redirections;
+    }
 
     /**
      * @summary Restructures an object into a Register88

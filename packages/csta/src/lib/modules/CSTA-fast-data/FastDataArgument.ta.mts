@@ -53,74 +53,88 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class FastDataArgument {
+    /**
+     * @summary `ioRegisterReqID`.
+     * @description
+     *
+     * I/O registration identifier. Mandatory if the switching function
+     * supports I/O registration and the data path was requested by the
+     * switching function; otherwise absent (ECMA-269 §6.2.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ioRegisterReqID: OPTIONAL<IORegisterReqID>;
+    /**
+     * @summary `object`.
+     * @description
+     *
+     * `DeviceID` or `ConnectionID` on which the ephemeral data path is
+     * started (ECMA-269 §24.2.3.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly object: CSTAObject;
+    /**
+     * @summary `dataPathType`.
+     * @description
+     *
+     * `text` (digitally encoded text) or `voice` (digitally encoded voice)
+     * (ECMA-269 §24.2.3.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly dataPathType: OPTIONAL<DataPathType>;
+    /**
+     * @summary `displayAttributes`.
+     * @description
+     *
+     * Only when `ioData` updates a device display (ECMA-269 §24.2.3.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly displayAttributes: OPTIONAL<DisplayAttribute>;
+    /**
+     * @summary `ioData`.
+     * @description
+     *
+     * Payload. Spec table size is 240 characters; ASN.1 is `OCTET STRING`
+     * (ECMA-269 §24.2.3.1, ECMA-285 §22.2.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ioData: OCTET_STRING;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * CSTACommonArguments carrying the service-table security and
+     * privateData parameters.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `ioRegisterReqID`.
-         * @description
-         *
-         * I/O registration identifier. Mandatory if the switching function
-         * supports I/O registration and the data path was requested by the
-         * switching function; otherwise absent (ECMA-269 §6.2.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly ioRegisterReqID: OPTIONAL<IORegisterReqID>,
-        /**
-         * @summary `object`.
-         * @description
-         *
-         * `DeviceID` or `ConnectionID` on which the ephemeral data path is
-         * started (ECMA-269 §24.2.3.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly object: CSTAObject,
-        /**
-         * @summary `dataPathType`.
-         * @description
-         *
-         * `text` (digitally encoded text) or `voice` (digitally encoded voice)
-         * (ECMA-269 §24.2.3.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly dataPathType: OPTIONAL<DataPathType>,
-        /**
-         * @summary `displayAttributes`.
-         * @description
-         *
-         * Only when `ioData` updates a device display (ECMA-269 §24.2.3.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly displayAttributes: OPTIONAL<DisplayAttribute>,
-        /**
-         * @summary `ioData`.
-         * @description
-         *
-         * Payload. Spec table size is 240 characters; ASN.1 is `OCTET STRING`
-         * (ECMA-269 §24.2.3.1, ECMA-285 §22.2.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly ioData: OCTET_STRING,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * CSTACommonArguments carrying the service-table security and
-         * privateData parameters.
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        ioRegisterReqID: OPTIONAL<IORegisterReqID>,
+        object: CSTAObject,
+        dataPathType: OPTIONAL<DataPathType>,
+        displayAttributes: OPTIONAL<DisplayAttribute>,
+        ioData: OCTET_STRING,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.ioRegisterReqID = ioRegisterReqID;
+        this.object = object;
+        this.dataPathType = dataPathType;
+        this.displayAttributes = displayAttributes;
+        this.ioData = ioData;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a FastDataArgument

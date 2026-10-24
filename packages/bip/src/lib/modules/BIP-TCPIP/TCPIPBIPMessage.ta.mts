@@ -53,42 +53,50 @@ import {
  *
  */
 export class TCPIPBIPMessage {
+  /**
+   * @summary `magicNumber`.
+   * @description
+   *
+   * SHALL be the four octets `'3AC49E70'H`. X.1083 Annex A.2.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly magicNumber: OCTET_STRING;
+  /**
+   * @summary `version`.
+   * @description
+   *
+   * Transport-message version; this Recommendation defines
+   * `version-1(1)`. X.1083 Annex A.2.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly version: TCPIPBIPMessage_version;
+  /**
+   * @summary `content`.
+   * @description
+   *
+   * Payload: encoded `BIPMessage`, keepalive, or a master's
+   * request that the slave open (or share) a
+   * notification/acknowledgement link channel. Table A.1.
+   * X.1083 Annex A.2.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly content: TCPIPBIPMessage_content;
+
   constructor(
-    /**
-     * @summary `magicNumber`.
-     * @description
-     *
-     * SHALL be the four octets `'3AC49E70'H`. X.1083 Annex A.2.
-     *
-     * @public
-     * @readonly
-     */
-    readonly magicNumber: OCTET_STRING,
-    /**
-     * @summary `version`.
-     * @description
-     *
-     * Transport-message version; this Recommendation defines
-     * `version-1(1)`. X.1083 Annex A.2.
-     *
-     * @public
-     * @readonly
-     */
-    readonly version: TCPIPBIPMessage_version,
-    /**
-     * @summary `content`.
-     * @description
-     *
-     * Payload: encoded `BIPMessage`, keepalive, or a master's
-     * request that the slave open (or share) a
-     * notification/acknowledgement link channel. Table A.1.
-     * X.1083 Annex A.2.
-     *
-     * @public
-     * @readonly
-     */
-    readonly content: TCPIPBIPMessage_content
-  ) {}
+    magicNumber: OCTET_STRING,
+    version: TCPIPBIPMessage_version,
+    content: TCPIPBIPMessage_content
+  ) {
+    this.magicNumber = magicNumber;
+    this.version = version;
+    this.content = content;
+  }
 
   /**
    * @summary Restructures an object into a TCPIPBIPMessage

@@ -53,75 +53,91 @@ import { ExtensionValues, _decode_ExtensionValues, _encode_ExtensionValues } fro
  */
 export
 class ClientHello {
+    /**
+     * @summary `client_version`.
+     * @description
+     *
+     * Protocol version the client offers (TLS-style). X.1084 §10.3.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly client_version: ProtocolVersion;
+    /**
+     * @summary `random`.
+     * @description
+     *
+     * Hello random (challenge). X.1084 §10.3.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly random: ClientRandom;
+    /**
+     * @summary `session_id`.
+     * @description
+     *
+     * TLS session identifier (`UINT32` in Annex A). X.1084 §10.3.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly session_id: SessionID;
+    /**
+     * @summary `cipher_suites`.
+     * @description
+     *
+     * Cipher suites the client offers, ordered by preference.
+     * X.1084 §10.3.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly cipher_suites: CipherSuites;
+    /**
+     * @summary `compression_methods`.
+     * @description
+     *
+     * Compression methods the client offers. X.1084 §10.3.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly compression_methods: CompressionMethods;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+    /**
+     * @summary `client_hello_extension_list`.
+     * @description
+     *
+     * TLS-style hello extensions. X.1084 §10.3.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly client_hello_extension_list: ExtensionValues;
+
     constructor (
-        /**
-         * @summary `client_version`.
-         * @description
-         *
-         * Protocol version the client offers (TLS-style). X.1084 §10.3.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly client_version: ProtocolVersion,
-        /**
-         * @summary `random`.
-         * @description
-         *
-         * Hello random (challenge). X.1084 §10.3.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly random: ClientRandom,
-        /**
-         * @summary `session_id`.
-         * @description
-         *
-         * TLS session identifier (`UINT32` in Annex A). X.1084 §10.3.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly session_id: SessionID,
-        /**
-         * @summary `cipher_suites`.
-         * @description
-         *
-         * Cipher suites the client offers, ordered by preference.
-         * X.1084 §10.3.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly cipher_suites: CipherSuites,
-        /**
-         * @summary `compression_methods`.
-         * @description
-         *
-         * Compression methods the client offers. X.1084 §10.3.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly compression_methods: CompressionMethods,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = [],
-        /**
-         * @summary `client_hello_extension_list`.
-         * @description
-         *
-         * TLS-style hello extensions. X.1084 §10.3.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly client_hello_extension_list: ExtensionValues
-    ) {}
+        client_version: ProtocolVersion,
+        random: ClientRandom,
+        session_id: SessionID,
+        cipher_suites: CipherSuites,
+        compression_methods: CompressionMethods,
+        _unrecognizedExtensionsList: _Element[] = [],
+        client_hello_extension_list: ExtensionValues
+    ) {
+        this.client_version = client_version;
+        this.random = random;
+        this.session_id = session_id;
+        this.cipher_suites = cipher_suites;
+        this.compression_methods = compression_methods;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+        this.client_hello_extension_list = client_hello_extension_list;
+    }
 
     /**
      * @summary Restructures an object into a ClientHello

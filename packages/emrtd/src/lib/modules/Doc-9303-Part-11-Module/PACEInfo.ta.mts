@@ -104,33 +104,40 @@ const _permitted_protocols_for_PACEInfo: OBJECT_IDENTIFIER[] = [
  */
 export
 class PACEInfo {
+    /**
+     * Key agreement, mapping, symmetric cipher, and MAC. One of the
+     * cipher-specific PACE object identifiers.
+     * @summary `protocol`.
+     * @public
+     * @readonly
+     */
+    public readonly protocol: OBJECT_IDENTIFIER;
+    /**
+     * Protocol version. This specification supports only version 2.
+     * @summary `version`.
+     * @public
+     * @readonly
+     */
+    public readonly version: INTEGER;
+    /**
+     * Domain-parameter id (Table 12), or the Chip Authentication `keyId`
+     * when the protocol is Chip Authentication Mapping. Required for
+     * standardized parameters, for multiple explicit parameter sets, and
+     * for every `*-CAM-*` protocol.
+     * @summary `parameterId`.
+     * @public
+     * @readonly
+     */
+    public readonly parameterId?: OPTIONAL<INTEGER>;
+
     constructor (
-        /**
-         * Key agreement, mapping, symmetric cipher, and MAC. One of the
-         * cipher-specific PACE object identifiers.
-         * @summary `protocol`.
-         * @public
-         * @readonly
-         */
-        readonly protocol: OBJECT_IDENTIFIER,
-        /**
-         * Protocol version. This specification supports only version 2.
-         * @summary `version`.
-         * @public
-         * @readonly
-         */
-        readonly version: INTEGER,
-        /**
-         * Domain-parameter id (Table 12), or the Chip Authentication `keyId`
-         * when the protocol is Chip Authentication Mapping. Required for
-         * standardized parameters, for multiple explicit parameter sets, and
-         * for every `*-CAM-*` protocol.
-         * @summary `parameterId`.
-         * @public
-         * @readonly
-         */
-        readonly parameterId?: OPTIONAL<INTEGER>
+        protocol: OBJECT_IDENTIFIER,
+        version: INTEGER,
+        parameterId?: OPTIONAL<INTEGER>
     ) {
+        this.protocol = protocol;
+        this.version = version;
+        this.parameterId = parameterId;
         if (!_permitted_protocols_for_PACEInfo.some((id) => id.isEqualTo(protocol))) {
             throw new ASN1Error("PACEInfo.protocol violates permitted OBJECT IDENTIFIER constraint");
         }

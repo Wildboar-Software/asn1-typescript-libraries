@@ -56,38 +56,50 @@ import {
  *
  */
 export class UARegistration {
+    /**
+     * @summary `ua_registration_identifier`.
+     * @public
+     * @readonly
+     */
+    public readonly ua_registration_identifier: RegistrationIdentifier;
+    /**
+     * @summary `ua_list_attribute_defaults`.
+     * @public
+     * @readonly
+     */
+    public readonly ua_list_attribute_defaults?: OPTIONAL<AttributeType[]>;
+    /**
+     * @summary `ua_fetch_attribute_defaults`.
+     * @public
+     * @readonly
+     */
+    public readonly ua_fetch_attribute_defaults?: OPTIONAL<AttributeType[]>;
+    /**
+     * @summary `ua_submission_defaults`.
+     * @public
+     * @readonly
+     */
+    public readonly ua_submission_defaults?: OPTIONAL<MSSubmissionOptions>;
+    /**
+     * @summary `content_specific_defaults`.
+     * @public
+     * @readonly
+     */
+    public readonly content_specific_defaults?: OPTIONAL<MSExtensions>;
+
     constructor(
-        /**
-         * @summary `ua_registration_identifier`.
-         * @public
-         * @readonly
-         */
-        readonly ua_registration_identifier: RegistrationIdentifier,
-        /**
-         * @summary `ua_list_attribute_defaults`.
-         * @public
-         * @readonly
-         */
-        readonly ua_list_attribute_defaults?: OPTIONAL<AttributeType[]>,
-        /**
-         * @summary `ua_fetch_attribute_defaults`.
-         * @public
-         * @readonly
-         */
-        readonly ua_fetch_attribute_defaults?: OPTIONAL<AttributeType[]>,
-        /**
-         * @summary `ua_submission_defaults`.
-         * @public
-         * @readonly
-         */
-        readonly ua_submission_defaults?: OPTIONAL<MSSubmissionOptions>,
-        /**
-         * @summary `content_specific_defaults`.
-         * @public
-         * @readonly
-         */
-        readonly content_specific_defaults?: OPTIONAL<MSExtensions>
-    ) {}
+        ua_registration_identifier: RegistrationIdentifier,
+        ua_list_attribute_defaults?: OPTIONAL<AttributeType[]>,
+        ua_fetch_attribute_defaults?: OPTIONAL<AttributeType[]>,
+        ua_submission_defaults?: OPTIONAL<MSSubmissionOptions>,
+        content_specific_defaults?: OPTIONAL<MSExtensions>
+    ) {
+        this.ua_registration_identifier = ua_registration_identifier;
+        this.ua_list_attribute_defaults = ua_list_attribute_defaults;
+        this.ua_fetch_attribute_defaults = ua_fetch_attribute_defaults;
+        this.ua_submission_defaults = ua_submission_defaults;
+        this.content_specific_defaults = content_specific_defaults;
+    }
 
     /**
      * @summary Restructures an object into a UARegistration

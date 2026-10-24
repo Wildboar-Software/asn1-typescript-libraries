@@ -38,20 +38,26 @@ import {
  *
  */
 export class MessageParameters {
+    /**
+     * @summary `delivery_time`.
+     * @public
+     * @readonly
+     */
+    public readonly delivery_time?: OPTIONAL<MessageDeliveryTime>;
+    /**
+     * @summary `delivery_envelope`.
+     * @public
+     * @readonly
+     */
+    public readonly delivery_envelope?: OPTIONAL<OtherMessageDeliveryFields>;
+
     constructor(
-        /**
-         * @summary `delivery_time`.
-         * @public
-         * @readonly
-         */
-        readonly delivery_time?: OPTIONAL<MessageDeliveryTime>,
-        /**
-         * @summary `delivery_envelope`.
-         * @public
-         * @readonly
-         */
-        readonly delivery_envelope?: OPTIONAL<OtherMessageDeliveryFields>
-    ) {}
+        delivery_time?: OPTIONAL<MessageDeliveryTime>,
+        delivery_envelope?: OPTIONAL<OtherMessageDeliveryFields>
+    ) {
+        this.delivery_time = delivery_time;
+        this.delivery_envelope = delivery_envelope;
+    }
 
     /**
      * @summary Restructures an object into a MessageParameters

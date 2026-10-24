@@ -38,20 +38,26 @@ import {
  *
  */
 export class RecipientReferenceField {
+    /**
+     * @summary `recipient_reference`.
+     * @public
+     * @readonly
+     */
+    public readonly recipient_reference: RecipientReference;
+    /**
+     * @summary `recipient_reference_qualifier`.
+     * @public
+     * @readonly
+     */
+    public readonly recipient_reference_qualifier?: OPTIONAL<RecipientReferenceQualifier>;
+
     constructor(
-        /**
-         * @summary `recipient_reference`.
-         * @public
-         * @readonly
-         */
-        readonly recipient_reference: RecipientReference,
-        /**
-         * @summary `recipient_reference_qualifier`.
-         * @public
-         * @readonly
-         */
-        readonly recipient_reference_qualifier?: OPTIONAL<RecipientReferenceQualifier>
-    ) {}
+        recipient_reference: RecipientReference,
+        recipient_reference_qualifier?: OPTIONAL<RecipientReferenceQualifier>
+    ) {
+        this.recipient_reference = recipient_reference;
+        this.recipient_reference_qualifier = recipient_reference_qualifier;
+    }
 
     /**
      * @summary Restructures an object into a RecipientReferenceField

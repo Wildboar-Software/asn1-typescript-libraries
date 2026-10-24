@@ -29,57 +29,70 @@ import { type Extensions, _decode_Extensions, _encode_Extensions } from "./Exten
  *
  */
 export class CAMEL_AChBillingChargingCharacteristics_timeDurationCharging {
+    /**
+     * @summary `maxCallPeriodDuration`.
+     * @description
+     *
+     * How long the call may progress before ApplyChargingReport. Measured
+     * in 100 ms units. (3GPP TS 29.078 V19.0.0 clauses 5.1 and 11.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly maxCallPeriodDuration: INTEGER;
+    /**
+     * @summary `releaseIfdurationExceeded`.
+     * @description
+     *
+     * Action at the gsmSSF when `maxCallPeriodDuration` is reached.
+     * (3GPP TS 29.078 V19.0.0 clause 11.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly releaseIfdurationExceeded?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `tariffSwitchInterval`.
+     * @description
+     *
+     * Time until the next tariff switch for CSE control of call duration.
+     * Measured in 1 second units. Measurement starts immediately after
+     * successful ApplyCharging execution.
+     * (3GPP TS 29.078 V19.0.0 clauses 5.1 and 11.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly tariffSwitchInterval?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `audibleIndicator`.
+     * @description
+     *
+     * Warning indication that may be played to the served subscriber
+     * (predefined tone or gsmSCF burst list).
+     * (3GPP TS 29.078 V19.0.0 clause 11.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly audibleIndicator?: OPTIONAL<AudibleIndicator>;
+    public readonly extensions?: OPTIONAL<Extensions>;
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `maxCallPeriodDuration`.
-         * @description
-         *
-         * How long the call may progress before ApplyChargingReport. Measured
-         * in 100 ms units. (3GPP TS 29.078 V19.0.0 clauses 5.1 and 11.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly maxCallPeriodDuration: INTEGER,
-        /**
-         * @summary `releaseIfdurationExceeded`.
-         * @description
-         *
-         * Action at the gsmSSF when `maxCallPeriodDuration` is reached.
-         * (3GPP TS 29.078 V19.0.0 clause 11.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly releaseIfdurationExceeded?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `tariffSwitchInterval`.
-         * @description
-         *
-         * Time until the next tariff switch for CSE control of call duration.
-         * Measured in 1 second units. Measurement starts immediately after
-         * successful ApplyCharging execution.
-         * (3GPP TS 29.078 V19.0.0 clauses 5.1 and 11.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly tariffSwitchInterval?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `audibleIndicator`.
-         * @description
-         *
-         * Warning indication that may be played to the served subscriber
-         * (predefined tone or gsmSCF burst list).
-         * (3GPP TS 29.078 V19.0.0 clause 11.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly audibleIndicator?: OPTIONAL<AudibleIndicator>,
-        readonly extensions?: OPTIONAL<Extensions>,
-        readonly _unrecognizedExtensionsList: _Element[] = [],
+        maxCallPeriodDuration: INTEGER,
+        releaseIfdurationExceeded?: OPTIONAL<BOOLEAN>,
+        tariffSwitchInterval?: OPTIONAL<INTEGER>,
+        audibleIndicator?: OPTIONAL<AudibleIndicator>,
+        extensions?: OPTIONAL<Extensions>,
+        _unrecognizedExtensionsList: _Element[] = [],
     ) {
+        this.maxCallPeriodDuration = maxCallPeriodDuration;
+        this.releaseIfdurationExceeded = releaseIfdurationExceeded;
+        this.tariffSwitchInterval = tariffSwitchInterval;
+        this.audibleIndicator = audibleIndicator;
+        this.extensions = extensions;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
         if ((typeof maxCallPeriodDuration === "bigint" ? (maxCallPeriodDuration < 1n || maxCallPeriodDuration > 864000n) : (maxCallPeriodDuration < 1 || maxCallPeriodDuration > 864000))) {
             throw new ASN1OverflowError("CAMEL_AChBillingChargingCharacteristics_timeDurationCharging.maxCallPeriodDuration violates INTEGER constraint");
         }

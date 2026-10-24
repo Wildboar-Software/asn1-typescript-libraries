@@ -28,35 +28,43 @@ import { Kc, _decode_Kc, _encode_Kc } from "../MAP-MS-DataTypes/Kc.ta.mjs";
  */
 export
 class GSM_SecurityContextData {
+    /**
+     * @summary `kc`.
+     * @description
+     *
+     * Ciphering key (3GPP TS 29.002 V19.1.0 clauses 7.6.7.4 and 7.6.7.8).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly kc: Kc;
+    /**
+     * @summary `cksn`.
+     * @description
+     *
+     * Ciphering key sequence number (3GPP TS 29.002 V19.1.0 clauses 7.6.7.6
+     * and 7.6.7.8).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly cksn: Cksn;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `kc`.
-         * @description
-         *
-         * Ciphering key (3GPP TS 29.002 V19.1.0 clauses 7.6.7.4 and 7.6.7.8).
-         *
-         * @public
-         * @readonly
-         */
-        readonly kc: Kc,
-        /**
-         * @summary `cksn`.
-         * @description
-         *
-         * Ciphering key sequence number (3GPP TS 29.002 V19.1.0 clauses 7.6.7.6
-         * and 7.6.7.8).
-         *
-         * @public
-         * @readonly
-         */
-        readonly cksn: Cksn,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        kc: Kc,
+        cksn: Cksn,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.kc = kc;
+        this.cksn = cksn;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a GSM_SecurityContextData

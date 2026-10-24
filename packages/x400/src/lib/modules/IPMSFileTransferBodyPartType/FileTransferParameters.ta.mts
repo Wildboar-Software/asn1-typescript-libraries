@@ -70,44 +70,58 @@ import { Contents_Type_Attribute_document_type } from './Contents-Type-Attribute
  *
  */
 export class FileTransferParameters {
+    /**
+     * @summary `related_stored_file`.
+     * @public
+     * @readonly
+     */
+    public readonly related_stored_file?: OPTIONAL<RelatedStoredFile>;
+    /**
+     * @summary `contents_type`.
+     * @public
+     * @readonly
+     */
+    public readonly contents_type?: OPTIONAL<ContentsTypeParameter>;
+    /**
+     * @summary `environment`.
+     * @public
+     * @readonly
+     */
+    public readonly environment?: OPTIONAL<EnvironmentParameter>;
+    /**
+     * @summary `compression`.
+     * @public
+     * @readonly
+     */
+    public readonly compression?: OPTIONAL<CompressionParameter>;
+    /**
+     * @summary `file_attributes`.
+     * @public
+     * @readonly
+     */
+    public readonly file_attributes?: OPTIONAL<FileAttributes>;
+    /**
+     * @summary `extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<ExtensionsField>;
+
     constructor(
-        /**
-         * @summary `related_stored_file`.
-         * @public
-         * @readonly
-         */
-        readonly related_stored_file?: OPTIONAL<RelatedStoredFile>,
-        /**
-         * @summary `contents_type`.
-         * @public
-         * @readonly
-         */
-        readonly contents_type?: OPTIONAL<ContentsTypeParameter>,
-        /**
-         * @summary `environment`.
-         * @public
-         * @readonly
-         */
-        readonly environment?: OPTIONAL<EnvironmentParameter>,
-        /**
-         * @summary `compression`.
-         * @public
-         * @readonly
-         */
-        readonly compression?: OPTIONAL<CompressionParameter>,
-        /**
-         * @summary `file_attributes`.
-         * @public
-         * @readonly
-         */
-        readonly file_attributes?: OPTIONAL<FileAttributes>,
-        /**
-         * @summary `extensions`.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<ExtensionsField>
-    ) {}
+        related_stored_file?: OPTIONAL<RelatedStoredFile>,
+        contents_type?: OPTIONAL<ContentsTypeParameter>,
+        environment?: OPTIONAL<EnvironmentParameter>,
+        compression?: OPTIONAL<CompressionParameter>,
+        file_attributes?: OPTIONAL<FileAttributes>,
+        extensions?: OPTIONAL<ExtensionsField>
+    ) {
+        this.related_stored_file = related_stored_file;
+        this.contents_type = contents_type;
+        this.environment = environment;
+        this.compression = compression;
+        this.file_attributes = file_attributes;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a FileTransferParameters

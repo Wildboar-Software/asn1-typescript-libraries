@@ -28,20 +28,26 @@ import {
  *
  */
 export class OriginatorPublicKey {
+    /**
+     * @summary `algorithm`.
+     * @public
+     * @readonly
+     */
+    public readonly algorithm: AlgorithmIdentifier;
+    /**
+     * @summary `publicKey`.
+     * @public
+     * @readonly
+     */
+    public readonly publicKey: BIT_STRING;
+
     constructor(
-        /**
-         * @summary `algorithm`.
-         * @public
-         * @readonly
-         */
-        readonly algorithm: AlgorithmIdentifier,
-        /**
-         * @summary `publicKey`.
-         * @public
-         * @readonly
-         */
-        readonly publicKey: BIT_STRING
-    ) {}
+        algorithm: AlgorithmIdentifier,
+        publicKey: BIT_STRING
+    ) {
+        this.algorithm = algorithm;
+        this.publicKey = publicKey;
+    }
 
     /**
      * @summary Restructures an object into a OriginatorPublicKey

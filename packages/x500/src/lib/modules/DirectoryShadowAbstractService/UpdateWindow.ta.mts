@@ -30,35 +30,43 @@ import {
  *
  */
 export class UpdateWindow {
+    /**
+     * @summary `start`.
+     * @description
+     *
+     * Inclusive start of the window (UTC GeneralizedTime with seconds).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly start: Time;
+    /**
+     * @summary `stop`.
+     * @description
+     *
+     * End of the window. Spec does not define start == stop or
+     * start > stop.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly stop: Time;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `start`.
-         * @description
-         *
-         * Inclusive start of the window (UTC GeneralizedTime with seconds).
-         *
-         * @public
-         * @readonly
-         */
-        readonly start: Time,
-        /**
-         * @summary `stop`.
-         * @description
-         *
-         * End of the window. Spec does not define start == stop or
-         * start > stop.
-         *
-         * @public
-         * @readonly
-         */
-        readonly stop: Time,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        start: Time,
+        stop: Time,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.start = start;
+        this.stop = stop;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a UpdateWindow

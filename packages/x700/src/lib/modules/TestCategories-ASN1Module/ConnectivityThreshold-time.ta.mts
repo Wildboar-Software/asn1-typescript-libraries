@@ -37,26 +37,32 @@ import {
  *
  */
 export class ConnectivityThreshold_time {
+    /**
+     * @summary `unitsType`.
+     * @description
+     *
+     * OID identifying the unit. X.737 A.7.
+     * @public
+     * @readonly
+     */
+    public readonly unitsType: UnitsType;
+    /**
+     * @summary `unitsTotal`.
+     * @description
+     *
+     * Count of those units. X.737 A.7.
+     * @public
+     * @readonly
+     */
+    public readonly unitsTotal: UnitsTotal;
+
     constructor(
-        /**
-         * @summary `unitsType`.
-         * @description
-         *
-         * OID identifying the unit. X.737 A.7.
-         * @public
-         * @readonly
-         */
-        readonly unitsType: UnitsType,
-        /**
-         * @summary `unitsTotal`.
-         * @description
-         *
-         * Count of those units. X.737 A.7.
-         * @public
-         * @readonly
-         */
-        readonly unitsTotal: UnitsTotal
-    ) {}
+        unitsType: UnitsType,
+        unitsTotal: UnitsTotal
+    ) {
+        this.unitsType = unitsType;
+        this.unitsTotal = unitsTotal;
+    }
 
     /**
      * @summary Restructures an object into a ConnectivityThreshold_time

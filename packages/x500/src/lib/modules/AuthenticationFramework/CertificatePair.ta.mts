@@ -32,26 +32,34 @@ import {
  *
  */
 export class CertificatePair {
+    /**
+     * @summary `issuedToThisCA`.
+     * @public
+     * @readonly
+     */
+    public readonly issuedToThisCA?: OPTIONAL<Certificate>;
+    /**
+     * @summary `issuedByThisCA`.
+     * @public
+     * @readonly
+     */
+    public readonly issuedByThisCA?: OPTIONAL<Certificate>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `issuedToThisCA`.
-         * @public
-         * @readonly
-         */
-        readonly issuedToThisCA?: OPTIONAL<Certificate>,
-        /**
-         * @summary `issuedByThisCA`.
-         * @public
-         * @readonly
-         */
-        readonly issuedByThisCA?: OPTIONAL<Certificate>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        issuedToThisCA?: OPTIONAL<Certificate>,
+        issuedByThisCA?: OPTIONAL<Certificate>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.issuedToThisCA = issuedToThisCA;
+        this.issuedByThisCA = issuedByThisCA;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a CertificatePair

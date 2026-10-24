@@ -48,53 +48,63 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class ClearCallArgument {
+    /**
+     * @summary `callToBeCleared`.
+     * @description
+     *
+     * Mandatory. Any connection in the call to clear, or a
+     * Call-ID-only ConnectionID (FR 2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly callToBeCleared: ConnectionID;
+    /**
+     * @summary `userData`.
+     * @description
+     *
+     * Optional user data sent to parties in the call
+     * (§12.2.30). Not retained on a later conference or
+     * transferred call.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly userData?: OPTIONAL<UserData>;
+    /**
+     * @summary `reason`.
+     * @description
+     *
+     * Optional `EventCause` for underlying signalling
+     * (§12.2.15).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly reason?: OPTIONAL<EventCause>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional `CSTACommonArguments` carrying the security and
+     * privateData parameters from the ECMA-269 service table.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `callToBeCleared`.
-         * @description
-         *
-         * Mandatory. Any connection in the call to clear, or a
-         * Call-ID-only ConnectionID (FR 2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly callToBeCleared: ConnectionID,
-        /**
-         * @summary `userData`.
-         * @description
-         *
-         * Optional user data sent to parties in the call
-         * (§12.2.30). Not retained on a later conference or
-         * transferred call.
-         *
-         * @public
-         * @readonly
-         */
-        readonly userData?: OPTIONAL<UserData>,
-        /**
-         * @summary `reason`.
-         * @description
-         *
-         * Optional `EventCause` for underlying signalling
-         * (§12.2.15).
-         *
-         * @public
-         * @readonly
-         */
-        readonly reason?: OPTIONAL<EventCause>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional `CSTACommonArguments` carrying the security and
-         * privateData parameters from the ECMA-269 service table.
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        callToBeCleared: ConnectionID,
+        userData?: OPTIONAL<UserData>,
+        reason?: OPTIONAL<EventCause>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.callToBeCleared = callToBeCleared;
+        this.userData = userData;
+        this.reason = reason;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a ClearCallArgument

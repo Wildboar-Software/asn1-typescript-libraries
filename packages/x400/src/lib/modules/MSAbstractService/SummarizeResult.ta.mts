@@ -52,38 +52,50 @@ import {
  *
  */
 export class SummarizeResult {
+    /**
+     * @summary `next`.
+     * @public
+     * @readonly
+     */
+    public readonly next: OPTIONAL<SequenceNumber>;
+    /**
+     * @summary `count`.
+     * @public
+     * @readonly
+     */
+    public readonly count: INTEGER;
+    /**
+     * @summary `span`.
+     * @public
+     * @readonly
+     */
+    public readonly span?: OPTIONAL<Span>;
+    /**
+     * @summary `summaries`.
+     * @public
+     * @readonly
+     */
+    public readonly summaries?: OPTIONAL<Summary[]>;
+    /**
+     * @summary `summarize_result_extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly summarize_result_extensions?: OPTIONAL<MSExtensions>;
+
     constructor(
-        /**
-         * @summary `next`.
-         * @public
-         * @readonly
-         */
-        readonly next: OPTIONAL<SequenceNumber>,
-        /**
-         * @summary `count`.
-         * @public
-         * @readonly
-         */
-        readonly count: INTEGER,
-        /**
-         * @summary `span`.
-         * @public
-         * @readonly
-         */
-        readonly span?: OPTIONAL<Span>,
-        /**
-         * @summary `summaries`.
-         * @public
-         * @readonly
-         */
-        readonly summaries?: OPTIONAL<Summary[]>,
-        /**
-         * @summary `summarize_result_extensions`.
-         * @public
-         * @readonly
-         */
-        readonly summarize_result_extensions?: OPTIONAL<MSExtensions>
-    ) {}
+        next: OPTIONAL<SequenceNumber>,
+        count: INTEGER,
+        span?: OPTIONAL<Span>,
+        summaries?: OPTIONAL<Summary[]>,
+        summarize_result_extensions?: OPTIONAL<MSExtensions>
+    ) {
+        this.next = next;
+        this.count = count;
+        this.span = span;
+        this.summaries = summaries;
+        this.summarize_result_extensions = summarize_result_extensions;
+    }
 
     /**
      * @summary Restructures an object into a SummarizeResult

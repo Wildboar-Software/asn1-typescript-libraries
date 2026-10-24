@@ -27,41 +27,51 @@ import * as $ from "@wildboar/asn1/functional";
  *
  */
 export class Signed<ToBeSigned> {
+    /**
+     * @summary `toBeSigned`.
+     * @public
+     * @readonly
+     */
+    public readonly toBeSigned: ToBeSigned;
+    /**
+     * @summary `signature`.
+     * @description
+     *
+     * Native signature (previously signalled alg).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly signature: BIT_STRING;
+    /**
+     * @summary `altSignature`.
+     * @description
+     *
+     * Present iff an alternative sig alg was signalled. Shall be absent
+     * on handshake accept/reject/abort after selection.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly altSignature?: OPTIONAL<BIT_STRING>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `toBeSigned`.
-         * @public
-         * @readonly
-         */
-        readonly toBeSigned: ToBeSigned,
-        /**
-         * @summary `signature`.
-         * @description
-         *
-         * Native signature (previously signalled alg).
-         *
-         * @public
-         * @readonly
-         */
-        readonly signature: BIT_STRING,
-        /**
-         * @summary `altSignature`.
-         * @description
-         *
-         * Present iff an alternative sig alg was signalled. Shall be absent
-         * on handshake accept/reject/abort after selection.
-         *
-         * @public
-         * @readonly
-         */
-        readonly altSignature?: OPTIONAL<BIT_STRING>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        toBeSigned: ToBeSigned,
+        signature: BIT_STRING,
+        altSignature?: OPTIONAL<BIT_STRING>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.toBeSigned = toBeSigned;
+        this.signature = signature;
+        this.altSignature = altSignature;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a Signed

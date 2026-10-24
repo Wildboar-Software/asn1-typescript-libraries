@@ -39,30 +39,36 @@ import { DefineNamedVariableList_Request_listOfVariable_Item, _decode_DefineName
  */
 export
 class DefineNamedVariableList_Request {
+    /**
+     * @summary `variableListName`.
+     * @description
+     *
+     * Unique `&name` of the Named Variable List.
+     * ISO 9506-1:2003 §14.12.1.1.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly variableListName: ObjectName;
+    /**
+     * @summary `listOfVariable`.
+     * @description
+     *
+     * Variables accessed via this list, in stored order.
+     * ISO 9506-1:2003 §14.12.1.1.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly listOfVariable: DefineNamedVariableList_Request_listOfVariable_Item[];
+
     constructor (
-        /**
-         * @summary `variableListName`.
-         * @description
-         *
-         * Unique `&name` of the Named Variable List.
-         * ISO 9506-1:2003 §14.12.1.1.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly variableListName: ObjectName,
-        /**
-         * @summary `listOfVariable`.
-         * @description
-         *
-         * Variables accessed via this list, in stored order.
-         * ISO 9506-1:2003 §14.12.1.1.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly listOfVariable: DefineNamedVariableList_Request_listOfVariable_Item[]
-    ) {}
+        variableListName: ObjectName,
+        listOfVariable: DefineNamedVariableList_Request_listOfVariable_Item[]
+    ) {
+        this.variableListName = variableListName;
+        this.listOfVariable = listOfVariable;
+    }
 
     /**
      * @summary Restructures an object into a DefineNamedVariableList_Request

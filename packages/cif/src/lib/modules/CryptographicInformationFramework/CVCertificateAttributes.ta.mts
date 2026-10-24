@@ -36,32 +36,40 @@ import { ObjectValue, _get_decoder_for_ObjectValue, _get_encoder_for_ObjectValue
  */
 export
 class CVCertificateAttributes {
+    /**
+     * @summary `value`.
+     * @description
+     * `ReferencedValue` to the CV certificate or URL. ISO/IEC 7816-15:2016
+     * §8.7.8.
+     * @public
+     * @readonly
+     */
+    public readonly value: ObjectValue<_Element>;
+    /**
+     * @summary `certificationAuthorityReference`.
+     * @description
+     * Shall equal the corresponding field of the CV certificate. ISO/IEC
+     * 7816-15:2016 §8.7.8.
+     * @public
+     * @readonly
+     */
+    public readonly certificationAuthorityReference?: OPTIONAL<OCTET_STRING>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `value`.
-         * @description
-         * `ReferencedValue` to the CV certificate or URL. ISO/IEC 7816-15:2016
-         * §8.7.8.
-         * @public
-         * @readonly
-         */
-        readonly value: ObjectValue<_Element>,
-        /**
-         * @summary `certificationAuthorityReference`.
-         * @description
-         * Shall equal the corresponding field of the CV certificate. ISO/IEC
-         * 7816-15:2016 §8.7.8.
-         * @public
-         * @readonly
-         */
-        readonly certificationAuthorityReference?: OPTIONAL<OCTET_STRING>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        value: ObjectValue<_Element>,
+        certificationAuthorityReference?: OPTIONAL<OCTET_STRING>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.value = value;
+        this.certificationAuthorityReference = certificationAuthorityReference;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a CVCertificateAttributes

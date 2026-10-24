@@ -35,29 +35,35 @@ import { DeviceID, _decode_DeviceID, _encode_DeviceID } from "../CSTA-device-ide
  */
 export
 class MonitorListEntry {
+    /**
+     * @summary `monitorCrossRefID`.
+     * @description
+     *
+     * Cross-reference assigned when the monitor was created. ECMA-269
+     * §15.1.5.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly monitorCrossRefID: MonitorCrossRefID;
+    /**
+     * @summary `monitorObject`.
+     * @description
+     *
+     * Device that is the monitor object. ECMA-269 §15.1.5.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly monitorObject: DeviceID;
+
     constructor (
-        /**
-         * @summary `monitorCrossRefID`.
-         * @description
-         *
-         * Cross-reference assigned when the monitor was created. ECMA-269
-         * §15.1.5.
-         *
-         * @public
-         * @readonly
-         */
-        readonly monitorCrossRefID: MonitorCrossRefID,
-        /**
-         * @summary `monitorObject`.
-         * @description
-         *
-         * Device that is the monitor object. ECMA-269 §15.1.5.
-         *
-         * @public
-         * @readonly
-         */
-        readonly monitorObject: DeviceID
-    ) {}
+        monitorCrossRefID: MonitorCrossRefID,
+        monitorObject: DeviceID
+    ) {
+        this.monitorCrossRefID = monitorCrossRefID;
+        this.monitorObject = monitorObject;
+    }
 
     /**
      * @summary Restructures an object into a MonitorListEntry

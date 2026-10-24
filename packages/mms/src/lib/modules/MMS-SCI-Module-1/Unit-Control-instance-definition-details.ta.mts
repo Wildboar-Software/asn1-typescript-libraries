@@ -39,39 +39,47 @@ import { Program_Invocation_instance, _decode_Program_Invocation_instance, _enco
  */
 export
 class Unit_Control_instance_definition_details {
+    /**
+     * @summary `accessControl`.
+     * @description
+     *
+     * SCI encoding of the object's ACL (ISO 9506-1:2003 §9). ISO
+     * 9506-2:2003 Annex B.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly accessControl: Access_Control_List_instance;
+    /**
+     * @summary `domains`.
+     * @description
+     *
+     * Configured Domain instances. ISO 9506-2:2003 Annex B.1.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly domains: Domain_instance[];
+    /**
+     * @summary `programInvocations`.
+     * @description
+     *
+     * Configured Program Invocation instances. ISO 9506-2:2003 Annex B.1.3.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly programInvocations: Program_Invocation_instance[];
+
     constructor (
-        /**
-         * @summary `accessControl`.
-         * @description
-         *
-         * SCI encoding of the object's ACL (ISO 9506-1:2003 §9). ISO
-         * 9506-2:2003 Annex B.
-         *
-         * @public
-         * @readonly
-         */
-        readonly accessControl: Access_Control_List_instance,
-        /**
-         * @summary `domains`.
-         * @description
-         *
-         * Configured Domain instances. ISO 9506-2:2003 Annex B.1.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly domains: Domain_instance[],
-        /**
-         * @summary `programInvocations`.
-         * @description
-         *
-         * Configured Program Invocation instances. ISO 9506-2:2003 Annex B.1.3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly programInvocations: Program_Invocation_instance[]
-    ) {}
+        accessControl: Access_Control_List_instance,
+        domains: Domain_instance[],
+        programInvocations: Program_Invocation_instance[]
+    ) {
+        this.accessControl = accessControl;
+        this.domains = domains;
+        this.programInvocations = programInvocations;
+    }
 
     /**
      * @summary Restructures an object into a Unit_Control_instance_definition_details

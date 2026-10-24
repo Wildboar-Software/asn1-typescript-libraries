@@ -40,28 +40,34 @@ import {
  *
  */
 export class NamingObjectClass {
+    /**
+     * @summary `class_`.
+     * @description
+     *
+     * Managed object class (or other object class) referenced by the name
+     * binding.
+     * @public
+     * @readonly
+     */
+    public readonly class_: TemplateLabel;
+    /**
+     * @summary `andSubclasses`.
+     * @description
+     *
+     * `TRUE` if the name binding also applies to subclasses (GDMO `AND
+     * SUBCLASSES`). Default `FALSE`.
+     * @public
+     * @readonly
+     */
+    public readonly andSubclasses?: OPTIONAL<BOOLEAN>;
+
     constructor(
-        /**
-         * @summary `class_`.
-         * @description
-         *
-         * Managed object class (or other object class) referenced by the name
-         * binding.
-         * @public
-         * @readonly
-         */
-        readonly class_: TemplateLabel,
-        /**
-         * @summary `andSubclasses`.
-         * @description
-         *
-         * `TRUE` if the name binding also applies to subclasses (GDMO `AND
-         * SUBCLASSES`). Default `FALSE`.
-         * @public
-         * @readonly
-         */
-        readonly andSubclasses?: OPTIONAL<BOOLEAN>
-    ) {}
+        class_: TemplateLabel,
+        andSubclasses?: OPTIONAL<BOOLEAN>
+    ) {
+        this.class_ = class_;
+        this.andSubclasses = andSubclasses;
+    }
 
     /**
      * @summary Restructures an object into a NamingObjectClass

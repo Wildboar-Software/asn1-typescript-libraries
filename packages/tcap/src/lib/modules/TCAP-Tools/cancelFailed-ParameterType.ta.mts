@@ -33,20 +33,26 @@ import {
  *
  */
 export class cancelFailed_ParameterType {
+  /**
+   * @summary `problem`.
+   * @public
+   * @readonly
+   */
+  public readonly problem: CancelProblem;
+  /**
+   * @summary `invokeId`.
+   * @public
+   * @readonly
+   */
+  public readonly invokeId: $.Selection<TCInvokeIdSet, 'present'>;
+
   constructor(
-    /**
-     * @summary `problem`.
-     * @public
-     * @readonly
-     */
-    readonly problem: CancelProblem,
-    /**
-     * @summary `invokeId`.
-     * @public
-     * @readonly
-     */
-    readonly invokeId: $.Selection<TCInvokeIdSet, 'present'>
-  ) {}
+    problem: CancelProblem,
+    invokeId: $.Selection<TCInvokeIdSet, 'present'>
+  ) {
+    this.problem = problem;
+    this.invokeId = invokeId;
+  }
 
   /**
    * @summary Restructures an object into a cancelFailed_ParameterType

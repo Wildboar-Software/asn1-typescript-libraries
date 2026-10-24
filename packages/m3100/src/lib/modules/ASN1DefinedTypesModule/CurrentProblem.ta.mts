@@ -37,20 +37,26 @@ import {
  *
  */
 export class CurrentProblem {
+    /**
+     * @summary `problem`.
+     * @public
+     * @readonly
+     */
+    public readonly problem: ProbableCause;
+    /**
+     * @summary `alarmStatus`.
+     * @public
+     * @readonly
+     */
+    public readonly alarmStatus: AlarmStatus;
+
     constructor(
-        /**
-         * @summary `problem`.
-         * @public
-         * @readonly
-         */
-        readonly problem: ProbableCause,
-        /**
-         * @summary `alarmStatus`.
-         * @public
-         * @readonly
-         */
-        readonly alarmStatus: AlarmStatus
-    ) {}
+        problem: ProbableCause,
+        alarmStatus: AlarmStatus
+    ) {
+        this.problem = problem;
+        this.alarmStatus = alarmStatus;
+    }
 
     /**
      * @summary Restructures an object into a CurrentProblem

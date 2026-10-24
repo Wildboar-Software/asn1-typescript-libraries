@@ -37,26 +37,32 @@ import { Pointer, _decode_Pointer, _encode_Pointer } from "../ISO9041-VTP/Pointe
  */
 export
 class DOupdate_repeatText {
+    /**
+     * @summary `finishAddress`.
+     * @description
+     * End of the repeat-extent; must be ≥ the current pointer.
+     * ISO/IEC 9040:1997 §19.4.1.2.
+     * @public
+     * @readonly
+     */
+    public readonly finishAddress: Pointer;
+    /**
+     * @summary `text`.
+     * @description
+     * Primary-attribute octets cycled across the repeat-extent.
+     * Repertoire defines the encoding. ISO/IEC 9040:1997 §19.4.1.2.
+     * @public
+     * @readonly
+     */
+    public readonly text: OCTET_STRING;
+
     constructor (
-        /**
-         * @summary `finishAddress`.
-         * @description
-         * End of the repeat-extent; must be ≥ the current pointer.
-         * ISO/IEC 9040:1997 §19.4.1.2.
-         * @public
-         * @readonly
-         */
-        readonly finishAddress: Pointer,
-        /**
-         * @summary `text`.
-         * @description
-         * Primary-attribute octets cycled across the repeat-extent.
-         * Repertoire defines the encoding. ISO/IEC 9040:1997 §19.4.1.2.
-         * @public
-         * @readonly
-         */
-        readonly text: OCTET_STRING
-    ) {}
+        finishAddress: Pointer,
+        text: OCTET_STRING
+    ) {
+        this.finishAddress = finishAddress;
+        this.text = text;
+    }
 
     /**
      * @summary Restructures an object into a DOupdate_repeatText

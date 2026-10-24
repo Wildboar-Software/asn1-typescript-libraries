@@ -29,28 +29,34 @@ import * as $ from '@wildboar/asn1/functional';
  *
  */
 export class ClockAddress_ip {
+    /**
+     * @summary `host`.
+     * @description
+     *
+     * Four-octet IP host address. ITU-T Rec. X.743 (06/98)
+     * [§A.5](https://www.itu.int/rec/T-REC-X.743-199806-I).
+     * @public
+     * @readonly
+     */
+    public readonly host: OCTET_STRING;
+    /**
+     * @summary `port`.
+     * @description
+     *
+     * Port number (0..65536). ITU-T Rec. X.743 (06/98)
+     * [§A.5](https://www.itu.int/rec/T-REC-X.743-199806-I).
+     * @public
+     * @readonly
+     */
+    public readonly port: INTEGER;
+
     constructor(
-        /**
-         * @summary `host`.
-         * @description
-         *
-         * Four-octet IP host address. ITU-T Rec. X.743 (06/98)
-         * [§A.5](https://www.itu.int/rec/T-REC-X.743-199806-I).
-         * @public
-         * @readonly
-         */
-        readonly host: OCTET_STRING,
-        /**
-         * @summary `port`.
-         * @description
-         *
-         * Port number (0..65536). ITU-T Rec. X.743 (06/98)
-         * [§A.5](https://www.itu.int/rec/T-REC-X.743-199806-I).
-         * @public
-         * @readonly
-         */
-        readonly port: INTEGER
-    ) {}
+        host: OCTET_STRING,
+        port: INTEGER
+    ) {
+        this.host = host;
+        this.port = port;
+    }
 
     /**
      * @summary Restructures an object into a ClockAddress_ip

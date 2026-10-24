@@ -30,20 +30,26 @@ import { CalledPartyNumber, _decode_CalledPartyNumber, _encode_CalledPartyNumber
  */
 export
 class EventSpecificInformationBCSM_collectedInfoSpecificInfo {
+    /**
+     * @summary `calledPartynumber`.
+     * @public
+     * @readonly
+     */
+    public readonly calledPartynumber: CalledPartyNumber;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `calledPartynumber`.
-         * @public
-         * @readonly
-         */
-        readonly calledPartynumber: CalledPartyNumber,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        calledPartynumber: CalledPartyNumber,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.calledPartynumber = calledPartynumber;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a EventSpecificInformationBCSM_collectedInfoSpecificInfo

@@ -38,28 +38,34 @@ import { _decode_IntegerOffer, _encode_IntegerOffer, type IntegerOffer } from ".
  */
 export
 class ParameterOffers_structure {
+    /**
+     * @summary `nonParametric`.
+     * @description
+     * Offer non-parametric structure (defined by
+     * `CO-type-identifier`: CCO, FDCO, FEICO, FEPCO, RIO,
+     * TCO, …). ISO/IEC 9040:1997 §14.1, §20.1.2.
+     * @public
+     * @readonly
+     */
+    public readonly nonParametric?: OPTIONAL<NULL>;
+    /**
+     * @summary `numberElements`.
+     * @description
+     * Offered parametric element counts. 1 = single
+     * element (kernel); >1 requires Structured COs FU.
+     * ISO/IEC 9040:1997 §10.6, §20.1.2, table 9 note 3.
+     * @public
+     * @readonly
+     */
+    public readonly numberElements?: OPTIONAL<IntegerOffer>;
+
     constructor (
-        /**
-         * @summary `nonParametric`.
-         * @description
-         * Offer non-parametric structure (defined by
-         * `CO-type-identifier`: CCO, FDCO, FEICO, FEPCO, RIO,
-         * TCO, …). ISO/IEC 9040:1997 §14.1, §20.1.2.
-         * @public
-         * @readonly
-         */
-        readonly nonParametric?: OPTIONAL<NULL>,
-        /**
-         * @summary `numberElements`.
-         * @description
-         * Offered parametric element counts. 1 = single
-         * element (kernel); >1 requires Structured COs FU.
-         * ISO/IEC 9040:1997 §10.6, §20.1.2, table 9 note 3.
-         * @public
-         * @readonly
-         */
-        readonly numberElements?: OPTIONAL<IntegerOffer>
-    ) {}
+        nonParametric?: OPTIONAL<NULL>,
+        numberElements?: OPTIONAL<IntegerOffer>
+    ) {
+        this.nonParametric = nonParametric;
+        this.numberElements = numberElements;
+    }
 
     /**
      * @summary Restructures an object into a ParameterOffers_structure

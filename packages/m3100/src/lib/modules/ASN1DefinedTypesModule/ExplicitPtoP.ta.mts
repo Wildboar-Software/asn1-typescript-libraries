@@ -30,20 +30,26 @@ import {
  *
  */
 export class ExplicitPtoP {
+    /**
+     * @summary `fromTp`.
+     * @public
+     * @readonly
+     */
+    public readonly fromTp: ExplicitTP;
+    /**
+     * @summary `toTp`.
+     * @public
+     * @readonly
+     */
+    public readonly toTp: ExplicitTP;
+
     constructor(
-        /**
-         * @summary `fromTp`.
-         * @public
-         * @readonly
-         */
-        readonly fromTp: ExplicitTP,
-        /**
-         * @summary `toTp`.
-         * @public
-         * @readonly
-         */
-        readonly toTp: ExplicitTP
-    ) {}
+        fromTp: ExplicitTP,
+        toTp: ExplicitTP
+    ) {
+        this.fromTp = fromTp;
+        this.toTp = toTp;
+    }
 
     /**
      * @summary Restructures an object into a ExplicitPtoP

@@ -37,44 +37,54 @@ import {
  *
  */
 export class SignalReceived_Item {
+    /**
+     * @summary `signalType`.
+     * @description
+     *
+     * Id of the received signal (`CDTC-SIGNAL-TYPE.&id`). Cor.2.
+     * @public
+     * @readonly
+     */
+    public readonly signalType: OBJECT_IDENTIFIER;
+    /**
+     * @summary `signalValue`.
+     * @description
+     *
+     * Value of that signal type. Cor.2.
+     * @public
+     * @readonly
+     */
+    public readonly signalValue: _Element;
+    /**
+     * @summary `mORTs`.
+     * @description
+     *
+     * MORTs from which the signal was received. X.737 §7.6.8.
+     * @public
+     * @readonly
+     */
+    public readonly mORTs: MORTs;
+    /**
+     * @summary `associatedObjects`.
+     * @description
+     *
+     * AOs (PCOs) where the signal was received. X.737 §7.6.8.
+     * @public
+     * @readonly
+     */
+    public readonly associatedObjects: AssociatedObjects;
+
     constructor(
-        /**
-         * @summary `signalType`.
-         * @description
-         *
-         * Id of the received signal (`CDTC-SIGNAL-TYPE.&id`). Cor.2.
-         * @public
-         * @readonly
-         */
-        readonly signalType: OBJECT_IDENTIFIER,
-        /**
-         * @summary `signalValue`.
-         * @description
-         *
-         * Value of that signal type. Cor.2.
-         * @public
-         * @readonly
-         */
-        readonly signalValue: _Element,
-        /**
-         * @summary `mORTs`.
-         * @description
-         *
-         * MORTs from which the signal was received. X.737 §7.6.8.
-         * @public
-         * @readonly
-         */
-        readonly mORTs: MORTs,
-        /**
-         * @summary `associatedObjects`.
-         * @description
-         *
-         * AOs (PCOs) where the signal was received. X.737 §7.6.8.
-         * @public
-         * @readonly
-         */
-        readonly associatedObjects: AssociatedObjects
-    ) {}
+        signalType: OBJECT_IDENTIFIER,
+        signalValue: _Element,
+        mORTs: MORTs,
+        associatedObjects: AssociatedObjects
+    ) {
+        this.signalType = signalType;
+        this.signalValue = signalValue;
+        this.mORTs = mORTs;
+        this.associatedObjects = associatedObjects;
+    }
 
     /**
      * @summary Restructures an object into a SignalReceived_Item

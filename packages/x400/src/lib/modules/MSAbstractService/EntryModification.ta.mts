@@ -38,20 +38,26 @@ import {
  *
  */
 export class EntryModification {
+    /**
+     * @summary `strict`.
+     * @public
+     * @readonly
+     */
+    public readonly strict: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `modification`.
+     * @public
+     * @readonly
+     */
+    public readonly modification: EntryModification_modification;
+
     constructor(
-        /**
-         * @summary `strict`.
-         * @public
-         * @readonly
-         */
-        readonly strict: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `modification`.
-         * @public
-         * @readonly
-         */
-        readonly modification: EntryModification_modification
-    ) {}
+        strict: OPTIONAL<BOOLEAN>,
+        modification: EntryModification_modification
+    ) {
+        this.strict = strict;
+        this.modification = modification;
+    }
 
     /**
      * @summary Restructures an object into a EntryModification

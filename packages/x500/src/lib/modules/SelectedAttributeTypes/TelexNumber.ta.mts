@@ -26,44 +26,54 @@ import * as $ from "@wildboar/asn1/functional";
  *
  */
 export class TelexNumber {
+    /**
+     * @summary `telexNumber`.
+     * @description
+     *
+     * Telex subscriber number. Required; first in SEQUENCE.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly telexNumber: PrintableString;
+    /**
+     * @summary `countryCode`.
+     * @description
+     *
+     * Telex country code. Required.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly countryCode: PrintableString;
+    /**
+     * @summary `answerback`.
+     * @description
+     *
+     * Answerback code. Required.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly answerback: PrintableString;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `telexNumber`.
-         * @description
-         *
-         * Telex subscriber number. Required; first in SEQUENCE.
-         *
-         * @public
-         * @readonly
-         */
-        readonly telexNumber: PrintableString,
-        /**
-         * @summary `countryCode`.
-         * @description
-         *
-         * Telex country code. Required.
-         *
-         * @public
-         * @readonly
-         */
-        readonly countryCode: PrintableString,
-        /**
-         * @summary `answerback`.
-         * @description
-         *
-         * Answerback code. Required.
-         *
-         * @public
-         * @readonly
-         */
-        readonly answerback: PrintableString,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        telexNumber: PrintableString,
+        countryCode: PrintableString,
+        answerback: PrintableString,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.telexNumber = telexNumber;
+        this.countryCode = countryCode;
+        this.answerback = answerback;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a TelexNumber

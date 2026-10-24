@@ -39,26 +39,32 @@ import { attributeError_ParameterType_problems_Item, _decode_attributeError_Para
  */
 export
 class attributeError_ParameterType {
+    /**
+     * @summary `entry`.
+     * @description
+     *
+     * Entry being processed; omitted in some Create/Search cases.
+     * @public
+     * @readonly
+     */
+    public readonly entry: OPTIONAL<DfrEntryName>;
+    /**
+     * @summary `problems`.
+     * @description
+     *
+     * Each item is type, problem, and optional value.
+     * @public
+     * @readonly
+     */
+    public readonly problems: attributeError_ParameterType_problems_Item[];
+
     constructor (
-        /**
-         * @summary `entry`.
-         * @description
-         *
-         * Entry being processed; omitted in some Create/Search cases.
-         * @public
-         * @readonly
-         */
-        readonly entry: OPTIONAL<DfrEntryName>,
-        /**
-         * @summary `problems`.
-         * @description
-         *
-         * Each item is type, problem, and optional value.
-         * @public
-         * @readonly
-         */
-        readonly problems: attributeError_ParameterType_problems_Item[]
-    ) {}
+        entry: OPTIONAL<DfrEntryName>,
+        problems: attributeError_ParameterType_problems_Item[]
+    ) {
+        this.entry = entry;
+        this.problems = problems;
+    }
 
     /**
      * @summary Restructures an object into a attributeError_ParameterType

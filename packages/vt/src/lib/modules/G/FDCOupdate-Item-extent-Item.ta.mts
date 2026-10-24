@@ -33,24 +33,30 @@ import { MeasurePair, _decode_MeasurePair, _encode_MeasurePair } from "../G/Meas
  */
 export
 class FDCOupdate_Item_extent_Item {
+    /**
+     * @summary `position`.
+     * @description
+     * Origin of the field-element. ISO/IEC 9040:1997 §13.1.3.
+     * @public
+     * @readonly
+     */
+    public readonly position: MeasurePair;
+    /**
+     * @summary `dimension`.
+     * @description
+     * Size of the field-element. ISO/IEC 9040:1997 §13.1.3.
+     * @public
+     * @readonly
+     */
+    public readonly dimension: MeasurePair;
+
     constructor (
-        /**
-         * @summary `position`.
-         * @description
-         * Origin of the field-element. ISO/IEC 9040:1997 §13.1.3.
-         * @public
-         * @readonly
-         */
-        readonly position: MeasurePair,
-        /**
-         * @summary `dimension`.
-         * @description
-         * Size of the field-element. ISO/IEC 9040:1997 §13.1.3.
-         * @public
-         * @readonly
-         */
-        readonly dimension: MeasurePair
-    ) {}
+        position: MeasurePair,
+        dimension: MeasurePair
+    ) {
+        this.position = position;
+        this.dimension = dimension;
+    }
 
     /**
      * @summary Restructures an object into a FDCOupdate_Item_extent_Item

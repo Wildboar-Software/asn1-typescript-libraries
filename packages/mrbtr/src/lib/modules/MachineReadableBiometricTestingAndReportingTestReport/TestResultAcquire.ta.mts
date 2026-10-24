@@ -36,29 +36,35 @@ import { StatisticInformationSet, _decode_StatisticInformationSet, _encode_Stati
  */
 export
 class TestResultAcquire {
+    /**
+     * @summary `failureToAcquireRate`.
+     * @description
+     *
+     * Failure-to-acquire rate (FTA) (Clause 6.4.4.3.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly failureToAcquireRate: REAL;
+    /**
+     * @summary `durationAcquire`.
+     * @description
+     *
+     * Acquisition duration statistics; covers successful and failed
+     * operations (Clause 6.4.4.3.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly durationAcquire?: OPTIONAL<StatisticInformationSet>;
+
     constructor (
-        /**
-         * @summary `failureToAcquireRate`.
-         * @description
-         *
-         * Failure-to-acquire rate (FTA) (Clause 6.4.4.3.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly failureToAcquireRate: REAL,
-        /**
-         * @summary `durationAcquire`.
-         * @description
-         *
-         * Acquisition duration statistics; covers successful and failed
-         * operations (Clause 6.4.4.3.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly durationAcquire?: OPTIONAL<StatisticInformationSet>
-    ) {}
+        failureToAcquireRate: REAL,
+        durationAcquire?: OPTIONAL<StatisticInformationSet>
+    ) {
+        this.failureToAcquireRate = failureToAcquireRate;
+        this.durationAcquire = durationAcquire;
+    }
 
     /**
      * @summary Restructures an object into a TestResultAcquire
