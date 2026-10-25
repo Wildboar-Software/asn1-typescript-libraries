@@ -50,7 +50,7 @@ type NetworkAccessMode = _enum_for_NetworkAccessMode | ENUMERATED;
  * @type {number}
  */
 export
-const NetworkAccessMode_packetAndCircuit: NetworkAccessMode = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+const NetworkAccessMode_packetAndCircuit = _enum_for_NetworkAccessMode.packetAndCircuit; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary packetAndCircuit
@@ -62,7 +62,7 @@ const NetworkAccessMode_packetAndCircuit: NetworkAccessMode = 0; /* LONG_NAMED_E
  * @type {number}
  */
 export
-const packetAndCircuit: NetworkAccessMode = NetworkAccessMode_packetAndCircuit; /* SHORT_NAMED_ENUMERATED_VALUE */
+const packetAndCircuit = NetworkAccessMode_packetAndCircuit; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NetworkAccessMode_onlyCircuit
@@ -74,7 +74,7 @@ const packetAndCircuit: NetworkAccessMode = NetworkAccessMode_packetAndCircuit; 
  * @type {number}
  */
 export
-const NetworkAccessMode_onlyCircuit: NetworkAccessMode = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const NetworkAccessMode_onlyCircuit = _enum_for_NetworkAccessMode.onlyCircuit; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary onlyCircuit
@@ -86,7 +86,7 @@ const NetworkAccessMode_onlyCircuit: NetworkAccessMode = 1; /* LONG_NAMED_ENUMER
  * @type {number}
  */
 export
-const onlyCircuit: NetworkAccessMode = NetworkAccessMode_onlyCircuit; /* SHORT_NAMED_ENUMERATED_VALUE */
+const onlyCircuit = NetworkAccessMode_onlyCircuit; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NetworkAccessMode_onlyPacket
@@ -98,7 +98,7 @@ const onlyCircuit: NetworkAccessMode = NetworkAccessMode_onlyCircuit; /* SHORT_N
  * @type {number}
  */
 export
-const NetworkAccessMode_onlyPacket: NetworkAccessMode = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+const NetworkAccessMode_onlyPacket = _enum_for_NetworkAccessMode.onlyPacket; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary onlyPacket
@@ -110,7 +110,7 @@ const NetworkAccessMode_onlyPacket: NetworkAccessMode = 2; /* LONG_NAMED_ENUMERA
  * @type {number}
  */
 export
-const onlyPacket: NetworkAccessMode = NetworkAccessMode_onlyPacket; /* SHORT_NAMED_ENUMERATED_VALUE */
+const onlyPacket = NetworkAccessMode_onlyPacket; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) NetworkAccessMode

@@ -105,7 +105,7 @@ const Scale = _enum_for_Scale;
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-211/
  */
 export
-const Scale_oneHundredthSecond: Scale = Scale.oneHundredthSecond; /* LONG_NAMED_ENUMERATED_VALUE */
+const Scale_oneHundredthSecond = Scale.oneHundredthSecond; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary oneHundredthSecond
@@ -114,7 +114,7 @@ const Scale_oneHundredthSecond: Scale = Scale.oneHundredthSecond; /* LONG_NAMED_
  * @type {number}
  */
 export
-const oneHundredthSecond: Scale = Scale.oneHundredthSecond; /* SHORT_NAMED_ENUMERATED_VALUE */
+const oneHundredthSecond = Scale.oneHundredthSecond; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Scale_oneTenthSecond
@@ -125,7 +125,7 @@ const oneHundredthSecond: Scale = Scale.oneHundredthSecond; /* SHORT_NAMED_ENUME
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-211/
  */
 export
-const Scale_oneTenthSecond: Scale = Scale.oneTenthSecond; /* LONG_NAMED_ENUMERATED_VALUE */
+const Scale_oneTenthSecond = Scale.oneTenthSecond; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary oneTenthSecond
@@ -134,7 +134,7 @@ const Scale_oneTenthSecond: Scale = Scale.oneTenthSecond; /* LONG_NAMED_ENUMERAT
  * @type {number}
  */
 export
-const oneTenthSecond: Scale = Scale.oneTenthSecond; /* SHORT_NAMED_ENUMERATED_VALUE */
+const oneTenthSecond = Scale.oneTenthSecond; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Scale_oneSecond
@@ -145,7 +145,7 @@ const oneTenthSecond: Scale = Scale.oneTenthSecond; /* SHORT_NAMED_ENUMERATED_VA
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-211/
  */
 export
-const Scale_oneSecond: Scale = Scale.oneSecond; /* LONG_NAMED_ENUMERATED_VALUE */
+const Scale_oneSecond = Scale.oneSecond; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary oneSecond
@@ -154,7 +154,7 @@ const Scale_oneSecond: Scale = Scale.oneSecond; /* LONG_NAMED_ENUMERATED_VALUE *
  * @type {number}
  */
 export
-const oneSecond: Scale = Scale.oneSecond; /* SHORT_NAMED_ENUMERATED_VALUE */
+const oneSecond = Scale.oneSecond; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Scale_tenSeconds
@@ -165,7 +165,7 @@ const oneSecond: Scale = Scale.oneSecond; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-211/
  */
 export
-const Scale_tenSeconds: Scale = Scale.tenSeconds; /* LONG_NAMED_ENUMERATED_VALUE */
+const Scale_tenSeconds = Scale.tenSeconds; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tenSeconds
@@ -174,7 +174,7 @@ const Scale_tenSeconds: Scale = Scale.tenSeconds; /* LONG_NAMED_ENUMERATED_VALUE
  * @type {number}
  */
 export
-const tenSeconds: Scale = Scale.tenSeconds; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tenSeconds = Scale.tenSeconds; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Scale_oneMinute
@@ -185,7 +185,7 @@ const tenSeconds: Scale = Scale.tenSeconds; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-211/
  */
 export
-const Scale_oneMinute: Scale = Scale.oneMinute; /* LONG_NAMED_ENUMERATED_VALUE */
+const Scale_oneMinute = Scale.oneMinute; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary oneMinute
@@ -194,7 +194,7 @@ const Scale_oneMinute: Scale = Scale.oneMinute; /* LONG_NAMED_ENUMERATED_VALUE *
  * @type {number}
  */
 export
-const oneMinute: Scale = Scale.oneMinute; /* SHORT_NAMED_ENUMERATED_VALUE */
+const oneMinute = Scale.oneMinute; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Scale_oneHour
@@ -205,7 +205,7 @@ const oneMinute: Scale = Scale.oneMinute; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-211/
  */
 export
-const Scale_oneHour: Scale = Scale.oneHour; /* LONG_NAMED_ENUMERATED_VALUE */
+const Scale_oneHour = Scale.oneHour; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary oneHour
@@ -214,7 +214,7 @@ const Scale_oneHour: Scale = Scale.oneHour; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const oneHour: Scale = Scale.oneHour; /* SHORT_NAMED_ENUMERATED_VALUE */
+const oneHour = Scale.oneHour; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Scale_twentyFourHours
@@ -225,7 +225,7 @@ const oneHour: Scale = Scale.oneHour; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-211/
  */
 export
-const Scale_twentyFourHours: Scale = Scale.twentyFourHours; /* LONG_NAMED_ENUMERATED_VALUE */
+const Scale_twentyFourHours = Scale.twentyFourHours; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary twentyFourHours
@@ -234,7 +234,7 @@ const Scale_twentyFourHours: Scale = Scale.twentyFourHours; /* LONG_NAMED_ENUMER
  * @type {number}
  */
 export
-const twentyFourHours: Scale = Scale.twentyFourHours; /* SHORT_NAMED_ENUMERATED_VALUE */
+const twentyFourHours = Scale.twentyFourHours; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_Scale: $.ASN1Decoder<Scale> = $._decodeEnumerated;

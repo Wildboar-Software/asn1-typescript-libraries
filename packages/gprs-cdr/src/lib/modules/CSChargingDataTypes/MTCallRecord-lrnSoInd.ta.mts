@@ -30,7 +30,7 @@ type MTCallRecord_lrnSoInd = INTEGER;
  * @type {number}
  */
 export
-const MTCallRecord_lrnSoInd_lRN_NP_Database: MTCallRecord_lrnSoInd = 1; /* LONG_NAMED_INTEGER_VALUE */
+const MTCallRecord_lrnSoInd_lRN_NP_Database = 1 satisfies MTCallRecord_lrnSoInd; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary MTCallRecord_lrnSoInd_lRN_NP_Database
@@ -38,7 +38,7 @@ const MTCallRecord_lrnSoInd_lRN_NP_Database: MTCallRecord_lrnSoInd = 1; /* LONG_
  * @type {number}
  */
 export
-const lRN_NP_Database: MTCallRecord_lrnSoInd = MTCallRecord_lrnSoInd_lRN_NP_Database; /* SHORT_NAMED_INTEGER_VALUE */
+const lRN_NP_Database = MTCallRecord_lrnSoInd_lRN_NP_Database; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary MTCallRecord_lrnSoInd_switchingSystemData
@@ -46,7 +46,7 @@ const lRN_NP_Database: MTCallRecord_lrnSoInd = MTCallRecord_lrnSoInd_lRN_NP_Data
  * @type {number}
  */
 export
-const MTCallRecord_lrnSoInd_switchingSystemData: MTCallRecord_lrnSoInd = 2; /* LONG_NAMED_INTEGER_VALUE */
+const MTCallRecord_lrnSoInd_switchingSystemData = 2 satisfies MTCallRecord_lrnSoInd; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary MTCallRecord_lrnSoInd_switchingSystemData
@@ -54,7 +54,7 @@ const MTCallRecord_lrnSoInd_switchingSystemData: MTCallRecord_lrnSoInd = 2; /* L
  * @type {number}
  */
 export
-const switchingSystemData: MTCallRecord_lrnSoInd = MTCallRecord_lrnSoInd_switchingSystemData; /* SHORT_NAMED_INTEGER_VALUE */
+const switchingSystemData = MTCallRecord_lrnSoInd_switchingSystemData; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary MTCallRecord_lrnSoInd_incomingsignaling
@@ -62,7 +62,7 @@ const switchingSystemData: MTCallRecord_lrnSoInd = MTCallRecord_lrnSoInd_switchi
  * @type {number}
  */
 export
-const MTCallRecord_lrnSoInd_incomingsignaling: MTCallRecord_lrnSoInd = 3; /* LONG_NAMED_INTEGER_VALUE */
+const MTCallRecord_lrnSoInd_incomingsignaling = 3 satisfies MTCallRecord_lrnSoInd; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary MTCallRecord_lrnSoInd_incomingsignaling
@@ -70,7 +70,7 @@ const MTCallRecord_lrnSoInd_incomingsignaling: MTCallRecord_lrnSoInd = 3; /* LON
  * @type {number}
  */
 export
-const incomingsignaling: MTCallRecord_lrnSoInd = MTCallRecord_lrnSoInd_incomingsignaling; /* SHORT_NAMED_INTEGER_VALUE */
+const incomingsignaling = MTCallRecord_lrnSoInd_incomingsignaling; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary MTCallRecord_lrnSoInd_unknown
@@ -78,7 +78,7 @@ const incomingsignaling: MTCallRecord_lrnSoInd = MTCallRecord_lrnSoInd_incomings
  * @type {number}
  */
 export
-const MTCallRecord_lrnSoInd_unknown: MTCallRecord_lrnSoInd = 9; /* LONG_NAMED_INTEGER_VALUE */
+const MTCallRecord_lrnSoInd_unknown = 9 satisfies MTCallRecord_lrnSoInd; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary MTCallRecord_lrnSoInd_unknown
@@ -86,7 +86,7 @@ const MTCallRecord_lrnSoInd_unknown: MTCallRecord_lrnSoInd = 9; /* LONG_NAMED_IN
  * @type {number}
  */
 export
-const unknown: MTCallRecord_lrnSoInd = MTCallRecord_lrnSoInd_unknown; /* SHORT_NAMED_INTEGER_VALUE */
+const unknown = MTCallRecord_lrnSoInd_unknown; /* SHORT_NAMED_INTEGER_VALUE */
 
 export
 const _decode_MTCallRecord_lrnSoInd: $.ASN1Decoder<MTCallRecord_lrnSoInd> = $._decodeInteger;

@@ -63,7 +63,7 @@ export const Repertoire = _enum_for_Repertoire;
  * @constant
  * @type {number}
  */
-export const Repertoire_ita2: Repertoire =
+export const Repertoire_ita2 =
     Repertoire.ita2; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -71,7 +71,7 @@ export const Repertoire_ita2: Repertoire =
  * @constant
  * @type {number}
  */
-export const ita2: Repertoire =
+export const ita2 =
     Repertoire.ita2; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -79,7 +79,7 @@ export const ita2: Repertoire =
  * @constant
  * @type {number}
  */
-export const Repertoire_ia5: Repertoire =
+export const Repertoire_ia5 =
     Repertoire.ia5; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -87,7 +87,7 @@ export const Repertoire_ia5: Repertoire =
  * @constant
  * @type {number}
  */
-export const ia5: Repertoire =
+export const ia5 =
     Repertoire.ia5; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 

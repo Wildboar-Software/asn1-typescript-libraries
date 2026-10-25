@@ -41,7 +41,7 @@ type VersionProduct = INTEGER;
  * @type {number}
  */
 export
-const VersionProduct_v0: VersionProduct = 0; /* LONG_NAMED_INTEGER_VALUE */
+const VersionProduct_v0 = 0 satisfies VersionProduct; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary VersionProduct_v0
@@ -49,7 +49,7 @@ const VersionProduct_v0: VersionProduct = 0; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const v0: VersionProduct = VersionProduct_v0; /* SHORT_NAMED_INTEGER_VALUE */
+const v0 = VersionProduct_v0; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**

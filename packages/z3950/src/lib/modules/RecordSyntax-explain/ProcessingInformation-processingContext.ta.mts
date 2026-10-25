@@ -45,7 +45,7 @@ type ProcessingInformation_processingContext = INTEGER;
  * @type {number}
  */
 export
-const ProcessingInformation_processingContext_access: ProcessingInformation_processingContext = 0; /* LONG_NAMED_INTEGER_VALUE */
+const ProcessingInformation_processingContext_access = 0 satisfies ProcessingInformation_processingContext; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProcessingInformation_processingContext_access
@@ -55,7 +55,7 @@ const ProcessingInformation_processingContext_access: ProcessingInformation_proc
  * @type {number}
  */
 export
-const access: ProcessingInformation_processingContext = ProcessingInformation_processingContext_access; /* SHORT_NAMED_INTEGER_VALUE */
+const access = ProcessingInformation_processingContext_access; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProcessingInformation_processingContext_search
@@ -67,7 +67,7 @@ const access: ProcessingInformation_processingContext = ProcessingInformation_pr
  * @type {number}
  */
 export
-const ProcessingInformation_processingContext_search: ProcessingInformation_processingContext = 1; /* LONG_NAMED_INTEGER_VALUE */
+const ProcessingInformation_processingContext_search = 1 satisfies ProcessingInformation_processingContext; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProcessingInformation_processingContext_search
@@ -77,7 +77,7 @@ const ProcessingInformation_processingContext_search: ProcessingInformation_proc
  * @type {number}
  */
 export
-const search: ProcessingInformation_processingContext = ProcessingInformation_processingContext_search; /* SHORT_NAMED_INTEGER_VALUE */
+const search = ProcessingInformation_processingContext_search; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProcessingInformation_processingContext_retrieval
@@ -89,7 +89,7 @@ const search: ProcessingInformation_processingContext = ProcessingInformation_pr
  * @type {number}
  */
 export
-const ProcessingInformation_processingContext_retrieval: ProcessingInformation_processingContext = 2; /* LONG_NAMED_INTEGER_VALUE */
+const ProcessingInformation_processingContext_retrieval = 2 satisfies ProcessingInformation_processingContext; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProcessingInformation_processingContext_retrieval
@@ -99,7 +99,7 @@ const ProcessingInformation_processingContext_retrieval: ProcessingInformation_p
  * @type {number}
  */
 export
-const retrieval: ProcessingInformation_processingContext = ProcessingInformation_processingContext_retrieval; /* SHORT_NAMED_INTEGER_VALUE */
+const retrieval = ProcessingInformation_processingContext_retrieval; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProcessingInformation_processingContext_record_presentation
@@ -111,7 +111,7 @@ const retrieval: ProcessingInformation_processingContext = ProcessingInformation
  * @type {number}
  */
 export
-const ProcessingInformation_processingContext_record_presentation: ProcessingInformation_processingContext = 3; /* LONG_NAMED_INTEGER_VALUE */
+const ProcessingInformation_processingContext_record_presentation = 3 satisfies ProcessingInformation_processingContext; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProcessingInformation_processingContext_record_presentation
@@ -121,7 +121,7 @@ const ProcessingInformation_processingContext_record_presentation: ProcessingInf
  * @type {number}
  */
 export
-const record_presentation: ProcessingInformation_processingContext = ProcessingInformation_processingContext_record_presentation; /* SHORT_NAMED_INTEGER_VALUE */
+const record_presentation = ProcessingInformation_processingContext_record_presentation; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProcessingInformation_processingContext_record_handling
@@ -133,7 +133,7 @@ const record_presentation: ProcessingInformation_processingContext = ProcessingI
  * @type {number}
  */
 export
-const ProcessingInformation_processingContext_record_handling: ProcessingInformation_processingContext = 4; /* LONG_NAMED_INTEGER_VALUE */
+const ProcessingInformation_processingContext_record_handling = 4 satisfies ProcessingInformation_processingContext; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProcessingInformation_processingContext_record_handling
@@ -143,7 +143,7 @@ const ProcessingInformation_processingContext_record_handling: ProcessingInforma
  * @type {number}
  */
 export
-const record_handling: ProcessingInformation_processingContext = ProcessingInformation_processingContext_record_handling; /* SHORT_NAMED_INTEGER_VALUE */
+const record_handling = ProcessingInformation_processingContext_record_handling; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_ProcessingInformation_processingContext: $.ASN1Decoder<ProcessingInformation_processingContext> = $._decodeInteger;
 export const _encode_ProcessingInformation_processingContext: $.ASN1Encoder<ProcessingInformation_processingContext> = $._encodeInteger;
 

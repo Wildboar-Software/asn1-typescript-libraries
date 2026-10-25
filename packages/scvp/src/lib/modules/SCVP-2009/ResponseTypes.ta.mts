@@ -87,7 +87,7 @@ export const ResponseTypes = _enum_for_ResponseTypes;
  * @constant
  * @type {number}
  */
-export const ResponseTypes_cached_only: ResponseTypes =
+export const ResponseTypes_cached_only =
   ResponseTypes.cached_only; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -99,7 +99,7 @@ export const ResponseTypes_cached_only: ResponseTypes =
  * @constant
  * @type {number}
  */
-export const cached_only: ResponseTypes =
+export const cached_only =
   ResponseTypes.cached_only; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -111,7 +111,7 @@ export const cached_only: ResponseTypes =
  * @constant
  * @type {number}
  */
-export const ResponseTypes_non_cached_only: ResponseTypes =
+export const ResponseTypes_non_cached_only =
   ResponseTypes.non_cached_only; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -123,7 +123,7 @@ export const ResponseTypes_non_cached_only: ResponseTypes =
  * @constant
  * @type {number}
  */
-export const non_cached_only: ResponseTypes =
+export const non_cached_only =
   ResponseTypes.non_cached_only; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -135,7 +135,7 @@ export const non_cached_only: ResponseTypes =
  * @constant
  * @type {number}
  */
-export const ResponseTypes_cached_and_non_cached: ResponseTypes =
+export const ResponseTypes_cached_and_non_cached =
   ResponseTypes.cached_and_non_cached; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -147,7 +147,7 @@ export const ResponseTypes_cached_and_non_cached: ResponseTypes =
  * @constant
  * @type {number}
  */
-export const cached_and_non_cached: ResponseTypes =
+export const cached_and_non_cached =
   ResponseTypes.cached_and_non_cached; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 

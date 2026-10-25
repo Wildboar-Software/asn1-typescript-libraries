@@ -37,7 +37,7 @@ type ProfileInfoListError = INTEGER;
  * @type {number}
  */
 export
-const ProfileInfoListError_incorrectInputValues: ProfileInfoListError = 1; /* LONG_NAMED_INTEGER_VALUE */
+const ProfileInfoListError_incorrectInputValues = 1 satisfies ProfileInfoListError; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProfileInfoListError_incorrectInputValues
@@ -48,7 +48,7 @@ const ProfileInfoListError_incorrectInputValues: ProfileInfoListError = 1; /* LO
  * @type {number}
  */
 export
-const incorrectInputValues: ProfileInfoListError = ProfileInfoListError_incorrectInputValues; /* SHORT_NAMED_INTEGER_VALUE */
+const incorrectInputValues = ProfileInfoListError_incorrectInputValues; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProfileInfoListError_profileChangeOngoing
@@ -59,7 +59,7 @@ const incorrectInputValues: ProfileInfoListError = ProfileInfoListError_incorrec
  * @type {number}
  */
 export
-const ProfileInfoListError_profileChangeOngoing: ProfileInfoListError = 11; /* LONG_NAMED_INTEGER_VALUE */
+const ProfileInfoListError_profileChangeOngoing = 11 satisfies ProfileInfoListError; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProfileInfoListError_profileChangeOngoing
@@ -70,7 +70,7 @@ const ProfileInfoListError_profileChangeOngoing: ProfileInfoListError = 11; /* L
  * @type {number}
  */
 export
-const profileChangeOngoing: ProfileInfoListError = ProfileInfoListError_profileChangeOngoing; /* SHORT_NAMED_INTEGER_VALUE */
+const profileChangeOngoing = ProfileInfoListError_profileChangeOngoing; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProfileInfoListError_undefinedError
@@ -81,7 +81,7 @@ const profileChangeOngoing: ProfileInfoListError = ProfileInfoListError_profileC
  * @type {number}
  */
 export
-const ProfileInfoListError_undefinedError: ProfileInfoListError = 127; /* LONG_NAMED_INTEGER_VALUE */
+const ProfileInfoListError_undefinedError = 127 satisfies ProfileInfoListError; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProfileInfoListError_undefinedError
@@ -91,7 +91,7 @@ const ProfileInfoListError_undefinedError: ProfileInfoListError = 127; /* LONG_N
  * @type {number}
  */
 export
-const undefinedError: ProfileInfoListError = ProfileInfoListError_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
+const undefinedError = ProfileInfoListError_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_ProfileInfoListError: $.ASN1Decoder<ProfileInfoListError> = $._decodeInteger;
 export const _encode_ProfileInfoListError: $.ASN1Encoder<ProfileInfoListError> = $._encodeInteger;
 

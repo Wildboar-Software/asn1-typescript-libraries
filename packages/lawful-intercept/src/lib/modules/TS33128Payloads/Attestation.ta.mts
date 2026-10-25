@@ -100,7 +100,7 @@ const Attestation = _enum_for_Attestation;
  * @type {number}
  */
 export
-const Attestation_attestationA: Attestation = Attestation.attestationA; /* LONG_NAMED_ENUMERATED_VALUE */
+const Attestation_attestationA = Attestation.attestationA; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary attestationA
@@ -108,7 +108,7 @@ const Attestation_attestationA: Attestation = Attestation.attestationA; /* LONG_
  * @type {number}
  */
 export
-const attestationA: Attestation = Attestation.attestationA; /* SHORT_NAMED_ENUMERATED_VALUE */
+const attestationA = Attestation.attestationA; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Attestation_attestationB
@@ -116,7 +116,7 @@ const attestationA: Attestation = Attestation.attestationA; /* SHORT_NAMED_ENUME
  * @type {number}
  */
 export
-const Attestation_attestationB: Attestation = Attestation.attestationB; /* LONG_NAMED_ENUMERATED_VALUE */
+const Attestation_attestationB = Attestation.attestationB; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary attestationB
@@ -124,7 +124,7 @@ const Attestation_attestationB: Attestation = Attestation.attestationB; /* LONG_
  * @type {number}
  */
 export
-const attestationB: Attestation = Attestation.attestationB; /* SHORT_NAMED_ENUMERATED_VALUE */
+const attestationB = Attestation.attestationB; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Attestation_attestationC
@@ -132,7 +132,7 @@ const attestationB: Attestation = Attestation.attestationB; /* SHORT_NAMED_ENUME
  * @type {number}
  */
 export
-const Attestation_attestationC: Attestation = Attestation.attestationC; /* LONG_NAMED_ENUMERATED_VALUE */
+const Attestation_attestationC = Attestation.attestationC; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary attestationC
@@ -140,7 +140,7 @@ const Attestation_attestationC: Attestation = Attestation.attestationC; /* LONG_
  * @type {number}
  */
 export
-const attestationC: Attestation = Attestation.attestationC; /* SHORT_NAMED_ENUMERATED_VALUE */
+const attestationC = Attestation.attestationC; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_Attestation: $.ASN1Decoder<Attestation> = $._decodeEnumerated;
 export const _encode_Attestation: $.ASN1Encoder<Attestation> = $._encodeEnumerated;
 

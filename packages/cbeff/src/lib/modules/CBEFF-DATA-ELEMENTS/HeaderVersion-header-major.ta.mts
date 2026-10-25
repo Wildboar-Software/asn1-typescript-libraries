@@ -29,14 +29,14 @@ export type HeaderVersion_header_major = INTEGER;
  * @constant
  * @type {number}
  */
-export const HeaderVersion_header_major_version1: HeaderVersion_header_major = 1; /* LONG_NAMED_INTEGER_VALUE */
+export const HeaderVersion_header_major_version1 = 1 satisfies HeaderVersion_header_major; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary HeaderVersion_header_major_version1
  * @constant
  * @type {number}
  */
-export const version1: HeaderVersion_header_major = HeaderVersion_header_major_version1; /* SHORT_NAMED_INTEGER_VALUE */
+export const version1 = HeaderVersion_header_major_version1; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_HeaderVersion_header_major = $._decodeInteger;

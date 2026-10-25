@@ -87,7 +87,7 @@ const MMEDirection = _enum_for_MMEDirection;
  * @type {number}
  */
 export
-const MMEDirection_networkInitiated: MMEDirection = MMEDirection.networkInitiated; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMEDirection_networkInitiated = MMEDirection.networkInitiated; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary networkInitiated
@@ -95,7 +95,7 @@ const MMEDirection_networkInitiated: MMEDirection = MMEDirection.networkInitiate
  * @type {number}
  */
 export
-const networkInitiated: MMEDirection = MMEDirection.networkInitiated; /* SHORT_NAMED_ENUMERATED_VALUE */
+const networkInitiated = MMEDirection.networkInitiated; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMEDirection_uEInitiated
@@ -103,7 +103,7 @@ const networkInitiated: MMEDirection = MMEDirection.networkInitiated; /* SHORT_N
  * @type {number}
  */
 export
-const MMEDirection_uEInitiated: MMEDirection = MMEDirection.uEInitiated; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMEDirection_uEInitiated = MMEDirection.uEInitiated; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary uEInitiated
@@ -111,7 +111,7 @@ const MMEDirection_uEInitiated: MMEDirection = MMEDirection.uEInitiated; /* LONG
  * @type {number}
  */
 export
-const uEInitiated: MMEDirection = MMEDirection.uEInitiated; /* SHORT_NAMED_ENUMERATED_VALUE */
+const uEInitiated = MMEDirection.uEInitiated; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_MMEDirection: $.ASN1Decoder<MMEDirection> = $._decodeEnumerated;
 export const _encode_MMEDirection: $.ASN1Encoder<MMEDirection> = $._encodeEnumerated;
 

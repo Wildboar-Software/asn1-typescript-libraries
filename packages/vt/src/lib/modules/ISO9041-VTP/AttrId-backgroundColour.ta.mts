@@ -42,7 +42,7 @@ type AttrId_backgroundColour = INTEGER;
  * @type {number}
  */
 export
-const AttrId_backgroundColour_null_: AttrId_backgroundColour = 0; /* LONG_NAMED_INTEGER_VALUE */
+const AttrId_backgroundColour_null_ = 0 satisfies AttrId_backgroundColour; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AttrId_backgroundColour_null_
@@ -54,7 +54,7 @@ const AttrId_backgroundColour_null_: AttrId_backgroundColour = 0; /* LONG_NAMED_
  * @type {number}
  */
 export
-const null_: AttrId_backgroundColour = AttrId_backgroundColour_null_; /* SHORT_NAMED_INTEGER_VALUE */
+const null_ = AttrId_backgroundColour_null_; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_AttrId_backgroundColour = $._decodeInteger;
 export const _encode_AttrId_backgroundColour = $._encodeInteger;
 

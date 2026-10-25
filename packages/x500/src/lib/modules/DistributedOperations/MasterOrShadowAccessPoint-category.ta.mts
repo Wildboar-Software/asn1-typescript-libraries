@@ -36,7 +36,7 @@ export type MasterOrShadowAccessPoint_category =
  * @constant
  * @type {number}
  */
-export const MasterOrShadowAccessPoint_category_master: MasterOrShadowAccessPoint_category = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+export const MasterOrShadowAccessPoint_category_master = _enum_for_MasterOrShadowAccessPoint_category.master; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary master
@@ -47,7 +47,7 @@ export const MasterOrShadowAccessPoint_category_master: MasterOrShadowAccessPoin
  * @constant
  * @type {number}
  */
-export const master: MasterOrShadowAccessPoint_category = MasterOrShadowAccessPoint_category_master; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const master = MasterOrShadowAccessPoint_category_master; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MasterOrShadowAccessPoint_category_shadow
@@ -59,7 +59,7 @@ export const master: MasterOrShadowAccessPoint_category = MasterOrShadowAccessPo
  * @constant
  * @type {number}
  */
-export const MasterOrShadowAccessPoint_category_shadow: MasterOrShadowAccessPoint_category = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+export const MasterOrShadowAccessPoint_category_shadow = _enum_for_MasterOrShadowAccessPoint_category.shadow; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary shadow
@@ -71,7 +71,7 @@ export const MasterOrShadowAccessPoint_category_shadow: MasterOrShadowAccessPoin
  * @constant
  * @type {number}
  */
-export const shadow: MasterOrShadowAccessPoint_category = MasterOrShadowAccessPoint_category_shadow; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const shadow = MasterOrShadowAccessPoint_category_shadow; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MasterOrShadowAccessPoint_category_writeableCopy
@@ -82,7 +82,7 @@ export const shadow: MasterOrShadowAccessPoint_category = MasterOrShadowAccessPo
  * @constant
  * @type {number}
  */
-export const MasterOrShadowAccessPoint_category_writeableCopy: MasterOrShadowAccessPoint_category = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+export const MasterOrShadowAccessPoint_category_writeableCopy = _enum_for_MasterOrShadowAccessPoint_category.writeableCopy; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary writeableCopy
@@ -93,7 +93,7 @@ export const MasterOrShadowAccessPoint_category_writeableCopy: MasterOrShadowAcc
  * @constant
  * @type {number}
  */
-export const writeableCopy: MasterOrShadowAccessPoint_category = MasterOrShadowAccessPoint_category_writeableCopy; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const writeableCopy = MasterOrShadowAccessPoint_category_writeableCopy; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 let _cached_decoder_for_MasterOrShadowAccessPoint_category: $.ASN1Decoder<MasterOrShadowAccessPoint_category> | null = null;
 

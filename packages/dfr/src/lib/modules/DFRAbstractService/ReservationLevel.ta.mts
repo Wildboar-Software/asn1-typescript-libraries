@@ -103,7 +103,7 @@ const ReservationLevel = _enum_for_ReservationLevel;
  * @type {number}
  */
 export
-const ReservationLevel_unreserved: ReservationLevel = ReservationLevel.unreserved; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReservationLevel_unreserved = ReservationLevel.unreserved; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unreserved
@@ -114,7 +114,7 @@ const ReservationLevel_unreserved: ReservationLevel = ReservationLevel.unreserve
  * @type {number}
  */
 export
-const unreserved: ReservationLevel = ReservationLevel.unreserved; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unreserved = ReservationLevel.unreserved; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReservationLevel_exclusive_write
@@ -127,7 +127,7 @@ const unreserved: ReservationLevel = ReservationLevel.unreserved; /* SHORT_NAMED
  * @type {number}
  */
 export
-const ReservationLevel_exclusive_write: ReservationLevel = ReservationLevel.exclusive_write; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReservationLevel_exclusive_write = ReservationLevel.exclusive_write; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary exclusive_write
@@ -140,7 +140,7 @@ const ReservationLevel_exclusive_write: ReservationLevel = ReservationLevel.excl
  * @type {number}
  */
 export
-const exclusive_write: ReservationLevel = ReservationLevel.exclusive_write; /* SHORT_NAMED_ENUMERATED_VALUE */
+const exclusive_write = ReservationLevel.exclusive_write; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReservationLevel_exclusive_access
@@ -152,7 +152,7 @@ const exclusive_write: ReservationLevel = ReservationLevel.exclusive_write; /* S
  * @type {number}
  */
 export
-const ReservationLevel_exclusive_access: ReservationLevel = ReservationLevel.exclusive_access; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReservationLevel_exclusive_access = ReservationLevel.exclusive_access; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary exclusive_access
@@ -164,7 +164,7 @@ const ReservationLevel_exclusive_access: ReservationLevel = ReservationLevel.exc
  * @type {number}
  */
 export
-const exclusive_access: ReservationLevel = ReservationLevel.exclusive_access; /* SHORT_NAMED_ENUMERATED_VALUE */
+const exclusive_access = ReservationLevel.exclusive_access; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReservationLevel_read_only1
@@ -175,7 +175,7 @@ const exclusive_access: ReservationLevel = ReservationLevel.exclusive_access; /*
  * @type {number}
  */
 export
-const ReservationLevel_read_only1: ReservationLevel = ReservationLevel.read_only1; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReservationLevel_read_only1 = ReservationLevel.read_only1; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary read_only1
@@ -186,7 +186,7 @@ const ReservationLevel_read_only1: ReservationLevel = ReservationLevel.read_only
  * @type {number}
  */
 export
-const read_only1: ReservationLevel = ReservationLevel.read_only1; /* SHORT_NAMED_ENUMERATED_VALUE */
+const read_only1 = ReservationLevel.read_only1; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReservationLevel_read_only2
@@ -197,7 +197,7 @@ const read_only1: ReservationLevel = ReservationLevel.read_only1; /* SHORT_NAMED
  * @type {number}
  */
 export
-const ReservationLevel_read_only2: ReservationLevel = ReservationLevel.read_only2; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReservationLevel_read_only2 = ReservationLevel.read_only2; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary read_only2
@@ -208,7 +208,7 @@ const ReservationLevel_read_only2: ReservationLevel = ReservationLevel.read_only
  * @type {number}
  */
 export
-const read_only2: ReservationLevel = ReservationLevel.read_only2; /* SHORT_NAMED_ENUMERATED_VALUE */
+const read_only2 = ReservationLevel.read_only2; /* SHORT_NAMED_ENUMERATED_VALUE */
 export function _decode_ReservationLevel(el: _Element): ReservationLevel {
     const enumerated = $._decodeEnumerated(el);
     switch (enumerated) {

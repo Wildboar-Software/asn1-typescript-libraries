@@ -112,7 +112,7 @@ const EntryInformationSelection_read_selector = _enum_for_EntryInformationSelect
  * @type {number}
  */
 export
-const EntryInformationSelection_read_selector_attributes_only: EntryInformationSelection_read_selector = EntryInformationSelection_read_selector.attributes_only; /* LONG_NAMED_ENUMERATED_VALUE */
+const EntryInformationSelection_read_selector_attributes_only = EntryInformationSelection_read_selector.attributes_only; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary attributes_only
@@ -120,7 +120,7 @@ const EntryInformationSelection_read_selector_attributes_only: EntryInformationS
  * @type {number}
  */
 export
-const attributes_only: EntryInformationSelection_read_selector = EntryInformationSelection_read_selector.attributes_only; /* SHORT_NAMED_ENUMERATED_VALUE */
+const attributes_only = EntryInformationSelection_read_selector.attributes_only; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EntryInformationSelection_read_selector_attributes_and_content
@@ -128,7 +128,7 @@ const attributes_only: EntryInformationSelection_read_selector = EntryInformatio
  * @type {number}
  */
 export
-const EntryInformationSelection_read_selector_attributes_and_content: EntryInformationSelection_read_selector = EntryInformationSelection_read_selector.attributes_and_content; /* LONG_NAMED_ENUMERATED_VALUE */
+const EntryInformationSelection_read_selector_attributes_and_content = EntryInformationSelection_read_selector.attributes_and_content; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary attributes_and_content
@@ -136,7 +136,7 @@ const EntryInformationSelection_read_selector_attributes_and_content: EntryInfor
  * @type {number}
  */
 export
-const attributes_and_content: EntryInformationSelection_read_selector = EntryInformationSelection_read_selector.attributes_and_content; /* SHORT_NAMED_ENUMERATED_VALUE */
+const attributes_and_content = EntryInformationSelection_read_selector.attributes_and_content; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EntryInformationSelection_read_selector_content_only
@@ -144,7 +144,7 @@ const attributes_and_content: EntryInformationSelection_read_selector = EntryInf
  * @type {number}
  */
 export
-const EntryInformationSelection_read_selector_content_only: EntryInformationSelection_read_selector = EntryInformationSelection_read_selector.content_only; /* LONG_NAMED_ENUMERATED_VALUE */
+const EntryInformationSelection_read_selector_content_only = EntryInformationSelection_read_selector.content_only; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary content_only
@@ -152,7 +152,7 @@ const EntryInformationSelection_read_selector_content_only: EntryInformationSele
  * @type {number}
  */
 export
-const content_only: EntryInformationSelection_read_selector = EntryInformationSelection_read_selector.content_only; /* SHORT_NAMED_ENUMERATED_VALUE */
+const content_only = EntryInformationSelection_read_selector.content_only; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EntryInformationSelection_read_selector_dor_to_attr_only
@@ -160,7 +160,7 @@ const content_only: EntryInformationSelection_read_selector = EntryInformationSe
  * @type {number}
  */
 export
-const EntryInformationSelection_read_selector_dor_to_attr_only: EntryInformationSelection_read_selector = EntryInformationSelection_read_selector.dor_to_attr_only; /* LONG_NAMED_ENUMERATED_VALUE */
+const EntryInformationSelection_read_selector_dor_to_attr_only = EntryInformationSelection_read_selector.dor_to_attr_only; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary dor_to_attr_only
@@ -168,7 +168,7 @@ const EntryInformationSelection_read_selector_dor_to_attr_only: EntryInformation
  * @type {number}
  */
 export
-const dor_to_attr_only: EntryInformationSelection_read_selector = EntryInformationSelection_read_selector.dor_to_attr_only; /* SHORT_NAMED_ENUMERATED_VALUE */
+const dor_to_attr_only = EntryInformationSelection_read_selector.dor_to_attr_only; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EntryInformationSelection_read_selector_attr_and_dor_to_content
@@ -176,7 +176,7 @@ const dor_to_attr_only: EntryInformationSelection_read_selector = EntryInformati
  * @type {number}
  */
 export
-const EntryInformationSelection_read_selector_attr_and_dor_to_content: EntryInformationSelection_read_selector = EntryInformationSelection_read_selector.attr_and_dor_to_content; /* LONG_NAMED_ENUMERATED_VALUE */
+const EntryInformationSelection_read_selector_attr_and_dor_to_content = EntryInformationSelection_read_selector.attr_and_dor_to_content; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary attr_and_dor_to_content
@@ -184,7 +184,7 @@ const EntryInformationSelection_read_selector_attr_and_dor_to_content: EntryInfo
  * @type {number}
  */
 export
-const attr_and_dor_to_content: EntryInformationSelection_read_selector = EntryInformationSelection_read_selector.attr_and_dor_to_content; /* SHORT_NAMED_ENUMERATED_VALUE */
+const attr_and_dor_to_content = EntryInformationSelection_read_selector.attr_and_dor_to_content; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EntryInformationSelection_read_selector_dor_to_content_only
@@ -192,7 +192,7 @@ const attr_and_dor_to_content: EntryInformationSelection_read_selector = EntryIn
  * @type {number}
  */
 export
-const EntryInformationSelection_read_selector_dor_to_content_only: EntryInformationSelection_read_selector = EntryInformationSelection_read_selector.dor_to_content_only; /* LONG_NAMED_ENUMERATED_VALUE */
+const EntryInformationSelection_read_selector_dor_to_content_only = EntryInformationSelection_read_selector.dor_to_content_only; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary dor_to_content_only
@@ -200,7 +200,7 @@ const EntryInformationSelection_read_selector_dor_to_content_only: EntryInformat
  * @type {number}
  */
 export
-const dor_to_content_only: EntryInformationSelection_read_selector = EntryInformationSelection_read_selector.dor_to_content_only; /* SHORT_NAMED_ENUMERATED_VALUE */
+const dor_to_content_only = EntryInformationSelection_read_selector.dor_to_content_only; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EntryInformationSelection_read_selector_dor_to_entire_object
@@ -208,7 +208,7 @@ const dor_to_content_only: EntryInformationSelection_read_selector = EntryInform
  * @type {number}
  */
 export
-const EntryInformationSelection_read_selector_dor_to_entire_object: EntryInformationSelection_read_selector = EntryInformationSelection_read_selector.dor_to_entire_object; /* LONG_NAMED_ENUMERATED_VALUE */
+const EntryInformationSelection_read_selector_dor_to_entire_object = EntryInformationSelection_read_selector.dor_to_entire_object; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary dor_to_entire_object
@@ -216,7 +216,7 @@ const EntryInformationSelection_read_selector_dor_to_entire_object: EntryInforma
  * @type {number}
  */
 export
-const dor_to_entire_object: EntryInformationSelection_read_selector = EntryInformationSelection_read_selector.dor_to_entire_object; /* SHORT_NAMED_ENUMERATED_VALUE */
+const dor_to_entire_object = EntryInformationSelection_read_selector.dor_to_entire_object; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EntryInformationSelection_read_selector_attr_and_dor_to_entire_object
@@ -224,7 +224,7 @@ const dor_to_entire_object: EntryInformationSelection_read_selector = EntryInfor
  * @type {number}
  */
 export
-const EntryInformationSelection_read_selector_attr_and_dor_to_entire_object: EntryInformationSelection_read_selector = EntryInformationSelection_read_selector.attr_and_dor_to_entire_object; /* LONG_NAMED_ENUMERATED_VALUE */
+const EntryInformationSelection_read_selector_attr_and_dor_to_entire_object = EntryInformationSelection_read_selector.attr_and_dor_to_entire_object; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary attr_and_dor_to_entire_object
@@ -232,7 +232,7 @@ const EntryInformationSelection_read_selector_attr_and_dor_to_entire_object: Ent
  * @type {number}
  */
 export
-const attr_and_dor_to_entire_object: EntryInformationSelection_read_selector = EntryInformationSelection_read_selector.attr_and_dor_to_entire_object; /* SHORT_NAMED_ENUMERATED_VALUE */
+const attr_and_dor_to_entire_object = EntryInformationSelection_read_selector.attr_and_dor_to_entire_object; /* SHORT_NAMED_ENUMERATED_VALUE */
 export function _decode_EntryInformationSelection_read_selector(el: _Element): EntryInformationSelection_read_selector {
     const enumerated = $._decodeEnumerated(el);
     switch (enumerated) {

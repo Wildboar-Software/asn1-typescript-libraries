@@ -104,7 +104,7 @@ const RoleProvider = _enum_for_RoleProvider;
  * @type {number}
  */
 export
-const RoleProvider_manufacturer: RoleProvider = RoleProvider.manufacturer; /* LONG_NAMED_ENUMERATED_VALUE */
+const RoleProvider_manufacturer = RoleProvider.manufacturer; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary manufacturer
@@ -112,7 +112,7 @@ const RoleProvider_manufacturer: RoleProvider = RoleProvider.manufacturer; /* LO
  * @type {number}
  */
 export
-const manufacturer: RoleProvider = RoleProvider.manufacturer; /* SHORT_NAMED_ENUMERATED_VALUE */
+const manufacturer = RoleProvider.manufacturer; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RoleProvider_reseller
@@ -124,7 +124,7 @@ const manufacturer: RoleProvider = RoleProvider.manufacturer; /* SHORT_NAMED_ENU
  * @type {number}
  */
 export
-const RoleProvider_reseller: RoleProvider = RoleProvider.reseller; /* LONG_NAMED_ENUMERATED_VALUE */
+const RoleProvider_reseller = RoleProvider.reseller; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary reseller
@@ -132,7 +132,7 @@ const RoleProvider_reseller: RoleProvider = RoleProvider.reseller; /* LONG_NAMED
  * @type {number}
  */
 export
-const reseller: RoleProvider = RoleProvider.reseller; /* SHORT_NAMED_ENUMERATED_VALUE */
+const reseller = RoleProvider.reseller; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RoleProvider_integrator
@@ -145,7 +145,7 @@ const reseller: RoleProvider = RoleProvider.reseller; /* SHORT_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const RoleProvider_integrator: RoleProvider = RoleProvider.integrator; /* LONG_NAMED_ENUMERATED_VALUE */
+const RoleProvider_integrator = RoleProvider.integrator; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary integrator
@@ -153,7 +153,7 @@ const RoleProvider_integrator: RoleProvider = RoleProvider.integrator; /* LONG_N
  * @type {number}
  */
 export
-const integrator: RoleProvider = RoleProvider.integrator; /* SHORT_NAMED_ENUMERATED_VALUE */
+const integrator = RoleProvider.integrator; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RoleProvider_other
@@ -161,7 +161,7 @@ const integrator: RoleProvider = RoleProvider.integrator; /* SHORT_NAMED_ENUMERA
  * @type {number}
  */
 export
-const RoleProvider_other: RoleProvider = RoleProvider.other; /* LONG_NAMED_ENUMERATED_VALUE */
+const RoleProvider_other = RoleProvider.other; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary other
@@ -169,7 +169,7 @@ const RoleProvider_other: RoleProvider = RoleProvider.other; /* LONG_NAMED_ENUME
  * @type {number}
  */
 export
-const other: RoleProvider = RoleProvider.other; /* SHORT_NAMED_ENUMERATED_VALUE */
+const other = RoleProvider.other; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**

@@ -99,7 +99,7 @@ export const IntermediateResourceBoundaryTestOutcome = _enum_for_IntermediateRes
  * @constant
  * @type {number}
  */
-export const IntermediateResourceBoundaryTestOutcome_passed: IntermediateResourceBoundaryTestOutcome =
+export const IntermediateResourceBoundaryTestOutcome_passed =
     IntermediateResourceBoundaryTestOutcome.passed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -110,7 +110,7 @@ export const IntermediateResourceBoundaryTestOutcome_passed: IntermediateResourc
  * @constant
  * @type {number}
  */
-export const passed: IntermediateResourceBoundaryTestOutcome =
+export const passed =
     IntermediateResourceBoundaryTestOutcome.passed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -121,7 +121,7 @@ export const passed: IntermediateResourceBoundaryTestOutcome =
  * @constant
  * @type {number}
  */
-export const IntermediateResourceBoundaryTestOutcome_unexpected: IntermediateResourceBoundaryTestOutcome =
+export const IntermediateResourceBoundaryTestOutcome_unexpected =
     IntermediateResourceBoundaryTestOutcome.unexpected; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -132,7 +132,7 @@ export const IntermediateResourceBoundaryTestOutcome_unexpected: IntermediateRes
  * @constant
  * @type {number}
  */
-export const unexpected: IntermediateResourceBoundaryTestOutcome =
+export const unexpected =
     IntermediateResourceBoundaryTestOutcome.unexpected; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -143,7 +143,7 @@ export const unexpected: IntermediateResourceBoundaryTestOutcome =
  * @constant
  * @type {number}
  */
-export const IntermediateResourceBoundaryTestOutcome_wrongSignalReceived: IntermediateResourceBoundaryTestOutcome =
+export const IntermediateResourceBoundaryTestOutcome_wrongSignalReceived =
     IntermediateResourceBoundaryTestOutcome.wrongSignalReceived; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -154,7 +154,7 @@ export const IntermediateResourceBoundaryTestOutcome_wrongSignalReceived: Interm
  * @constant
  * @type {number}
  */
-export const wrongSignalReceived: IntermediateResourceBoundaryTestOutcome =
+export const wrongSignalReceived =
     IntermediateResourceBoundaryTestOutcome.wrongSignalReceived; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -165,7 +165,7 @@ export const wrongSignalReceived: IntermediateResourceBoundaryTestOutcome =
  * @constant
  * @type {number}
  */
-export const IntermediateResourceBoundaryTestOutcome_waitDurationTimerExpired: IntermediateResourceBoundaryTestOutcome =
+export const IntermediateResourceBoundaryTestOutcome_waitDurationTimerExpired =
     IntermediateResourceBoundaryTestOutcome.waitDurationTimerExpired; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -176,7 +176,7 @@ export const IntermediateResourceBoundaryTestOutcome_waitDurationTimerExpired: I
  * @constant
  * @type {number}
  */
-export const waitDurationTimerExpired: IntermediateResourceBoundaryTestOutcome =
+export const waitDurationTimerExpired =
     IntermediateResourceBoundaryTestOutcome.waitDurationTimerExpired; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 let _cached_decoder_for_IntermediateResourceBoundaryTestOutcome: $.ASN1Decoder<IntermediateResourceBoundaryTestOutcome> | null = null;

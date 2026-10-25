@@ -50,7 +50,7 @@ export type Reason = INTEGER;
  * @constant
  * @type {number}
  */
-export const Reason_smfusNotSupported: Reason = 0; /* LONG_NAMED_INTEGER_VALUE */
+export const Reason_smfusNotSupported = 0 satisfies Reason; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary smfusNotSupported
@@ -62,7 +62,7 @@ export const Reason_smfusNotSupported: Reason = 0; /* LONG_NAMED_INTEGER_VALUE *
  * @constant
  * @type {number}
  */
-export const smfusNotSupported: Reason = Reason_smfusNotSupported; /* SHORT_NAMED_INTEGER_VALUE */
+export const smfusNotSupported = Reason_smfusNotSupported; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Reason_smfuCombinationNotSupported
@@ -74,7 +74,7 @@ export const smfusNotSupported: Reason = Reason_smfusNotSupported; /* SHORT_NAME
  * @constant
  * @type {number}
  */
-export const Reason_smfuCombinationNotSupported: Reason = 1; /* LONG_NAMED_INTEGER_VALUE */
+export const Reason_smfuCombinationNotSupported = 1 satisfies Reason; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary smfuCombinationNotSupported
@@ -86,7 +86,7 @@ export const Reason_smfuCombinationNotSupported: Reason = 1; /* LONG_NAMED_INTEG
  * @constant
  * @type {number}
  */
-export const smfuCombinationNotSupported: Reason = Reason_smfuCombinationNotSupported; /* SHORT_NAMED_INTEGER_VALUE */
+export const smfuCombinationNotSupported = Reason_smfuCombinationNotSupported; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Reason_smfusRequiredNotAvailable
@@ -99,7 +99,7 @@ export const smfuCombinationNotSupported: Reason = Reason_smfuCombinationNotSupp
  * @constant
  * @type {number}
  */
-export const Reason_smfusRequiredNotAvailable: Reason = 2; /* LONG_NAMED_INTEGER_VALUE */
+export const Reason_smfusRequiredNotAvailable = 2 satisfies Reason; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary smfusRequiredNotAvailable
@@ -112,7 +112,7 @@ export const Reason_smfusRequiredNotAvailable: Reason = 2; /* LONG_NAMED_INTEGER
  * @constant
  * @type {number}
  */
-export const smfusRequiredNotAvailable: Reason = Reason_smfusRequiredNotAvailable; /* SHORT_NAMED_INTEGER_VALUE */
+export const smfusRequiredNotAvailable = Reason_smfusRequiredNotAvailable; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Reason_smfuNegotiationRefused
@@ -124,7 +124,7 @@ export const smfusRequiredNotAvailable: Reason = Reason_smfusRequiredNotAvailabl
  * @constant
  * @type {number}
  */
-export const Reason_smfuNegotiationRefused: Reason = 3; /* LONG_NAMED_INTEGER_VALUE */
+export const Reason_smfuNegotiationRefused = 3 satisfies Reason; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary smfuNegotiationRefused
@@ -136,7 +136,7 @@ export const Reason_smfuNegotiationRefused: Reason = 3; /* LONG_NAMED_INTEGER_VA
  * @constant
  * @type {number}
  */
-export const smfuNegotiationRefused: Reason = Reason_smfuNegotiationRefused; /* SHORT_NAMED_INTEGER_VALUE */
+export const smfuNegotiationRefused = Reason_smfuNegotiationRefused; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_Reason = $._decodeInteger;

@@ -62,7 +62,7 @@ export const TypeOfAddress = _enum_for_TypeOfAddress;
  * @constant
  * @type {number}
  */
-export const TypeOfAddress_national: TypeOfAddress =
+export const TypeOfAddress_national =
     TypeOfAddress.national; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -70,7 +70,7 @@ export const TypeOfAddress_national: TypeOfAddress =
  * @constant
  * @type {number}
  */
-export const national: TypeOfAddress =
+export const national =
     TypeOfAddress.national; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -78,7 +78,7 @@ export const national: TypeOfAddress =
  * @constant
  * @type {number}
  */
-export const TypeOfAddress_international: TypeOfAddress =
+export const TypeOfAddress_international =
     TypeOfAddress.international; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -86,7 +86,7 @@ export const TypeOfAddress_international: TypeOfAddress =
  * @constant
  * @type {number}
  */
-export const international: TypeOfAddress =
+export const international =
     TypeOfAddress.international; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -94,7 +94,7 @@ export const international: TypeOfAddress =
  * @constant
  * @type {number}
  */
-export const TypeOfAddress_private_: TypeOfAddress =
+export const TypeOfAddress_private_ =
     TypeOfAddress.private_; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -102,7 +102,7 @@ export const TypeOfAddress_private_: TypeOfAddress =
  * @constant
  * @type {number}
  */
-export const private_: TypeOfAddress =
+export const private_ =
     TypeOfAddress.private_; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 

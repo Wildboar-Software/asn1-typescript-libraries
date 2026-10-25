@@ -91,7 +91,7 @@ const SMSTransferStatus = _enum_for_SMSTransferStatus;
  * @type {number}
  */
 export
-const SMSTransferStatus_transferSucceeded: SMSTransferStatus = SMSTransferStatus.transferSucceeded; /* LONG_NAMED_ENUMERATED_VALUE */
+const SMSTransferStatus_transferSucceeded = SMSTransferStatus.transferSucceeded; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary transferSucceeded
@@ -99,7 +99,7 @@ const SMSTransferStatus_transferSucceeded: SMSTransferStatus = SMSTransferStatus
  * @type {number}
  */
 export
-const transferSucceeded: SMSTransferStatus = SMSTransferStatus.transferSucceeded; /* SHORT_NAMED_ENUMERATED_VALUE */
+const transferSucceeded = SMSTransferStatus.transferSucceeded; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SMSTransferStatus_transferFailed
@@ -107,7 +107,7 @@ const transferSucceeded: SMSTransferStatus = SMSTransferStatus.transferSucceeded
  * @type {number}
  */
 export
-const SMSTransferStatus_transferFailed: SMSTransferStatus = SMSTransferStatus.transferFailed; /* LONG_NAMED_ENUMERATED_VALUE */
+const SMSTransferStatus_transferFailed = SMSTransferStatus.transferFailed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary transferFailed
@@ -115,7 +115,7 @@ const SMSTransferStatus_transferFailed: SMSTransferStatus = SMSTransferStatus.tr
  * @type {number}
  */
 export
-const transferFailed: SMSTransferStatus = SMSTransferStatus.transferFailed; /* SHORT_NAMED_ENUMERATED_VALUE */
+const transferFailed = SMSTransferStatus.transferFailed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SMSTransferStatus_undefined
@@ -123,7 +123,7 @@ const transferFailed: SMSTransferStatus = SMSTransferStatus.transferFailed; /* S
  * @type {number}
  */
 export
-const SMSTransferStatus_undefined: SMSTransferStatus = SMSTransferStatus.undefined; /* LONG_NAMED_ENUMERATED_VALUE */
+const SMSTransferStatus_undefined = SMSTransferStatus.undefined; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary undefined
@@ -131,7 +131,7 @@ const SMSTransferStatus_undefined: SMSTransferStatus = SMSTransferStatus.undefin
  * @type {number}
  */
 export
-const undefined: SMSTransferStatus = SMSTransferStatus.undefined; /* SHORT_NAMED_ENUMERATED_VALUE */
+const undefined = SMSTransferStatus.undefined; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_SMSTransferStatus: $.ASN1Decoder<SMSTransferStatus> = $._decodeEnumerated;
 export const _encode_SMSTransferStatus: $.ASN1Encoder<SMSTransferStatus> = $._encodeEnumerated;
 

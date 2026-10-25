@@ -40,7 +40,7 @@ export type DedicatedOrShared = _enum_for_DedicatedOrShared | ENUMERATED;
  * @constant
  * @type {number}
  */
-export const DedicatedOrShared_dedicated: DedicatedOrShared = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+export const DedicatedOrShared_dedicated = _enum_for_DedicatedOrShared.dedicated; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -48,7 +48,7 @@ export const DedicatedOrShared_dedicated: DedicatedOrShared = 1; /* LONG_NAMED_E
  * @constant
  * @type {number}
  */
-export const dedicated: DedicatedOrShared = DedicatedOrShared_dedicated; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const dedicated = DedicatedOrShared_dedicated; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -56,7 +56,7 @@ export const dedicated: DedicatedOrShared = DedicatedOrShared_dedicated; /* SHOR
  * @constant
  * @type {number}
  */
-export const DedicatedOrShared_shared: DedicatedOrShared = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+export const DedicatedOrShared_shared = _enum_for_DedicatedOrShared.shared; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -64,7 +64,7 @@ export const DedicatedOrShared_shared: DedicatedOrShared = 2; /* LONG_NAMED_ENUM
  * @constant
  * @type {number}
  */
-export const shared: DedicatedOrShared = DedicatedOrShared_shared; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const shared = DedicatedOrShared_shared; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 

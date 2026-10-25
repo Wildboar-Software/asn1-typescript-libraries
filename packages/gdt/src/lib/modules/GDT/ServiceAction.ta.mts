@@ -30,7 +30,7 @@ type ServiceAction = INTEGER;
  * @type {number}
  */
 export
-const ServiceAction_srvca_request: ServiceAction = 0; /* LONG_NAMED_INTEGER_VALUE */
+const ServiceAction_srvca_request = 0 satisfies ServiceAction; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceAction_srvca_request
@@ -38,7 +38,7 @@ const ServiceAction_srvca_request: ServiceAction = 0; /* LONG_NAMED_INTEGER_VALU
  * @type {number}
  */
 export
-const srvca_request: ServiceAction = ServiceAction_srvca_request; /* SHORT_NAMED_INTEGER_VALUE */
+const srvca_request = ServiceAction_srvca_request; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceAction_srvca_result
@@ -46,7 +46,7 @@ const srvca_request: ServiceAction = ServiceAction_srvca_request; /* SHORT_NAMED
  * @type {number}
  */
 export
-const ServiceAction_srvca_result: ServiceAction = 1; /* LONG_NAMED_INTEGER_VALUE */
+const ServiceAction_srvca_result = 1 satisfies ServiceAction; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceAction_srvca_result
@@ -54,7 +54,7 @@ const ServiceAction_srvca_result: ServiceAction = 1; /* LONG_NAMED_INTEGER_VALUE
  * @type {number}
  */
 export
-const srvca_result: ServiceAction = ServiceAction_srvca_result; /* SHORT_NAMED_INTEGER_VALUE */
+const srvca_result = ServiceAction_srvca_result; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceAction_srvca_default
@@ -62,7 +62,7 @@ const srvca_result: ServiceAction = ServiceAction_srvca_result; /* SHORT_NAMED_I
  * @type {number}
  */
 export
-const ServiceAction_srvca_default: ServiceAction = 2; /* LONG_NAMED_INTEGER_VALUE */
+const ServiceAction_srvca_default = 2 satisfies ServiceAction; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceAction_srvca_default
@@ -70,7 +70,7 @@ const ServiceAction_srvca_default: ServiceAction = 2; /* LONG_NAMED_INTEGER_VALU
  * @type {number}
  */
 export
-const srvca_default: ServiceAction = ServiceAction_srvca_default; /* SHORT_NAMED_INTEGER_VALUE */
+const srvca_default = ServiceAction_srvca_default; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceAction_srvca_na
@@ -78,7 +78,7 @@ const srvca_default: ServiceAction = ServiceAction_srvca_default; /* SHORT_NAMED
  * @type {number}
  */
 export
-const ServiceAction_srvca_na: ServiceAction = 3; /* LONG_NAMED_INTEGER_VALUE */
+const ServiceAction_srvca_na = 3 satisfies ServiceAction; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceAction_srvca_na
@@ -86,7 +86,7 @@ const ServiceAction_srvca_na: ServiceAction = 3; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const srvca_na: ServiceAction = ServiceAction_srvca_na; /* SHORT_NAMED_INTEGER_VALUE */
+const srvca_na = ServiceAction_srvca_na; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_ServiceAction = $._decodeInteger;
 export const _encode_ServiceAction = $._encodeInteger;
 

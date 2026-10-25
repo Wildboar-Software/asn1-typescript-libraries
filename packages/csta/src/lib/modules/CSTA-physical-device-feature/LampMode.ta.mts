@@ -39,7 +39,7 @@ type LampMode = INTEGER;
  * @type {number}
  */
 export
-const LampMode_brokenFlutter: LampMode = 0; /* LONG_NAMED_INTEGER_VALUE */
+const LampMode_brokenFlutter = 0 satisfies LampMode; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary LampMode_brokenFlutter
@@ -47,7 +47,7 @@ const LampMode_brokenFlutter: LampMode = 0; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const brokenFlutter: LampMode = LampMode_brokenFlutter; /* SHORT_NAMED_INTEGER_VALUE */
+const brokenFlutter = LampMode_brokenFlutter; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary LampMode_flutter
@@ -59,7 +59,7 @@ const brokenFlutter: LampMode = LampMode_brokenFlutter; /* SHORT_NAMED_INTEGER_V
  * @type {number}
  */
 export
-const LampMode_flutter: LampMode = 1; /* LONG_NAMED_INTEGER_VALUE */
+const LampMode_flutter = 1 satisfies LampMode; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary LampMode_flutter
@@ -67,7 +67,7 @@ const LampMode_flutter: LampMode = 1; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const flutter: LampMode = LampMode_flutter; /* SHORT_NAMED_INTEGER_VALUE */
+const flutter = LampMode_flutter; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary LampMode_off
@@ -79,7 +79,7 @@ const flutter: LampMode = LampMode_flutter; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const LampMode_off: LampMode = 2; /* LONG_NAMED_INTEGER_VALUE */
+const LampMode_off = 2 satisfies LampMode; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary LampMode_off
@@ -87,7 +87,7 @@ const LampMode_off: LampMode = 2; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const off: LampMode = LampMode_off; /* SHORT_NAMED_INTEGER_VALUE */
+const off = LampMode_off; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary LampMode_steady
@@ -99,7 +99,7 @@ const off: LampMode = LampMode_off; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const LampMode_steady: LampMode = 3; /* LONG_NAMED_INTEGER_VALUE */
+const LampMode_steady = 3 satisfies LampMode; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary LampMode_steady
@@ -107,7 +107,7 @@ const LampMode_steady: LampMode = 3; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const steady: LampMode = LampMode_steady; /* SHORT_NAMED_INTEGER_VALUE */
+const steady = LampMode_steady; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary LampMode_wink
@@ -119,7 +119,7 @@ const steady: LampMode = LampMode_steady; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const LampMode_wink: LampMode = 4; /* LONG_NAMED_INTEGER_VALUE */
+const LampMode_wink = 4 satisfies LampMode; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary LampMode_wink
@@ -127,7 +127,7 @@ const LampMode_wink: LampMode = 4; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const wink: LampMode = LampMode_wink; /* SHORT_NAMED_INTEGER_VALUE */
+const wink = LampMode_wink; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary LampMode_unknown
@@ -140,7 +140,7 @@ const wink: LampMode = LampMode_wink; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const LampMode_unknown: LampMode = 5; /* LONG_NAMED_INTEGER_VALUE */
+const LampMode_unknown = 5 satisfies LampMode; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary LampMode_unknown
@@ -148,7 +148,7 @@ const LampMode_unknown: LampMode = 5; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const unknown: LampMode = LampMode_unknown; /* SHORT_NAMED_INTEGER_VALUE */
+const unknown = LampMode_unknown; /* SHORT_NAMED_INTEGER_VALUE */
 
 let _cached_decoder_for_LampMode: $.ASN1Decoder<LampMode> | null = null;
 

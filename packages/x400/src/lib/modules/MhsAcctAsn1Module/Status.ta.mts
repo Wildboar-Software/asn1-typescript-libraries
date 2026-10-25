@@ -34,56 +34,56 @@ export type Status = INTEGER;
  * @constant
  * @type {number}
  */
-export const Status_indirect_mIS_user_agreement_on_the_request: Status = 0; /* LONG_NAMED_INTEGER_VALUE */
+export const Status_indirect_mIS_user_agreement_on_the_request = 0 satisfies Status; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Status_indirect_mIS_user_agreement_on_the_request
  * @constant
  * @type {number}
  */
-export const indirect_mIS_user_agreement_on_the_request: Status = Status_indirect_mIS_user_agreement_on_the_request; /* SHORT_NAMED_INTEGER_VALUE */
+export const indirect_mIS_user_agreement_on_the_request = Status_indirect_mIS_user_agreement_on_the_request; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Status_mis_provider_agreement_on_the_request
  * @constant
  * @type {number}
  */
-export const Status_mis_provider_agreement_on_the_request: Status = 1; /* LONG_NAMED_INTEGER_VALUE */
+export const Status_mis_provider_agreement_on_the_request = 1 satisfies Status; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Status_mis_provider_agreement_on_the_request
  * @constant
  * @type {number}
  */
-export const mis_provider_agreement_on_the_request: Status = Status_mis_provider_agreement_on_the_request; /* SHORT_NAMED_INTEGER_VALUE */
+export const mis_provider_agreement_on_the_request = Status_mis_provider_agreement_on_the_request; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Status_request_in_progress
  * @constant
  * @type {number}
  */
-export const Status_request_in_progress: Status = 2; /* LONG_NAMED_INTEGER_VALUE */
+export const Status_request_in_progress = 2 satisfies Status; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Status_request_in_progress
  * @constant
  * @type {number}
  */
-export const request_in_progress: Status = Status_request_in_progress; /* SHORT_NAMED_INTEGER_VALUE */
+export const request_in_progress = Status_request_in_progress; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Status_request_processed
  * @constant
  * @type {number}
  */
-export const Status_request_processed: Status = 3; /* LONG_NAMED_INTEGER_VALUE */
+export const Status_request_processed = 3 satisfies Status; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Status_request_processed
  * @constant
  * @type {number}
  */
-export const request_processed: Status = Status_request_processed; /* SHORT_NAMED_INTEGER_VALUE */
+export const request_processed = Status_request_processed; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_Status = $._decodeInteger;

@@ -136,7 +136,7 @@ const APINetworkServiceNode = _enum_for_APINetworkServiceNode;
  * @type {number}
  */
 export
-const APINetworkServiceNode_mME: APINetworkServiceNode = APINetworkServiceNode.mME; /* LONG_NAMED_ENUMERATED_VALUE */
+const APINetworkServiceNode_mME = APINetworkServiceNode.mME; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary mME
@@ -148,7 +148,7 @@ const APINetworkServiceNode_mME: APINetworkServiceNode = APINetworkServiceNode.m
  * @type {number}
  */
 export
-const mME: APINetworkServiceNode = APINetworkServiceNode.mME; /* SHORT_NAMED_ENUMERATED_VALUE */
+const mME = APINetworkServiceNode.mME; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary APINetworkServiceNode_sGSN
@@ -164,7 +164,7 @@ const mME: APINetworkServiceNode = APINetworkServiceNode.mME; /* SHORT_NAMED_ENU
  * @type {number}
  */
 export
-const APINetworkServiceNode_sGSN: APINetworkServiceNode = APINetworkServiceNode.sGSN; /* LONG_NAMED_ENUMERATED_VALUE */
+const APINetworkServiceNode_sGSN = APINetworkServiceNode.sGSN; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sGSN
@@ -176,7 +176,7 @@ const APINetworkServiceNode_sGSN: APINetworkServiceNode = APINetworkServiceNode.
  * @type {number}
  */
 export
-const sGSN: APINetworkServiceNode = APINetworkServiceNode.sGSN; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sGSN = APINetworkServiceNode.sGSN; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary APINetworkServiceNode_hSS
@@ -191,7 +191,7 @@ const sGSN: APINetworkServiceNode = APINetworkServiceNode.sGSN; /* SHORT_NAMED_E
  * @type {number}
  */
 export
-const APINetworkServiceNode_hSS: APINetworkServiceNode = APINetworkServiceNode.hSS; /* LONG_NAMED_ENUMERATED_VALUE */
+const APINetworkServiceNode_hSS = APINetworkServiceNode.hSS; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary hSS
@@ -203,7 +203,7 @@ const APINetworkServiceNode_hSS: APINetworkServiceNode = APINetworkServiceNode.h
  * @type {number}
  */
 export
-const hSS: APINetworkServiceNode = APINetworkServiceNode.hSS; /* SHORT_NAMED_ENUMERATED_VALUE */
+const hSS = APINetworkServiceNode.hSS; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary APINetworkServiceNode_pCRF
@@ -218,7 +218,7 @@ const hSS: APINetworkServiceNode = APINetworkServiceNode.hSS; /* SHORT_NAMED_ENU
  * @type {number}
  */
 export
-const APINetworkServiceNode_pCRF: APINetworkServiceNode = APINetworkServiceNode.pCRF; /* LONG_NAMED_ENUMERATED_VALUE */
+const APINetworkServiceNode_pCRF = APINetworkServiceNode.pCRF; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pCRF
@@ -230,7 +230,7 @@ const APINetworkServiceNode_pCRF: APINetworkServiceNode = APINetworkServiceNode.
  * @type {number}
  */
 export
-const pCRF: APINetworkServiceNode = APINetworkServiceNode.pCRF; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pCRF = APINetworkServiceNode.pCRF; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary APINetworkServiceNode_pFDF
@@ -245,7 +245,7 @@ const pCRF: APINetworkServiceNode = APINetworkServiceNode.pCRF; /* SHORT_NAMED_E
  * @type {number}
  */
 export
-const APINetworkServiceNode_pFDF: APINetworkServiceNode = APINetworkServiceNode.pFDF; /* LONG_NAMED_ENUMERATED_VALUE */
+const APINetworkServiceNode_pFDF = APINetworkServiceNode.pFDF; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pFDF
@@ -257,7 +257,7 @@ const APINetworkServiceNode_pFDF: APINetworkServiceNode = APINetworkServiceNode.
  * @type {number}
  */
 export
-const pFDF: APINetworkServiceNode = APINetworkServiceNode.pFDF; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pFDF = APINetworkServiceNode.pFDF; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary APINetworkServiceNode_bMSC
@@ -272,7 +272,7 @@ const pFDF: APINetworkServiceNode = APINetworkServiceNode.pFDF; /* SHORT_NAMED_E
  * @type {number}
  */
 export
-const APINetworkServiceNode_bMSC: APINetworkServiceNode = APINetworkServiceNode.bMSC; /* LONG_NAMED_ENUMERATED_VALUE */
+const APINetworkServiceNode_bMSC = APINetworkServiceNode.bMSC; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary bMSC
@@ -284,7 +284,7 @@ const APINetworkServiceNode_bMSC: APINetworkServiceNode = APINetworkServiceNode.
  * @type {number}
  */
 export
-const bMSC: APINetworkServiceNode = APINetworkServiceNode.bMSC; /* SHORT_NAMED_ENUMERATED_VALUE */
+const bMSC = APINetworkServiceNode.bMSC; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary APINetworkServiceNode_cCSCF
@@ -299,7 +299,7 @@ const bMSC: APINetworkServiceNode = APINetworkServiceNode.bMSC; /* SHORT_NAMED_E
  * @type {number}
  */
 export
-const APINetworkServiceNode_cCSCF: APINetworkServiceNode = APINetworkServiceNode.cCSCF; /* LONG_NAMED_ENUMERATED_VALUE */
+const APINetworkServiceNode_cCSCF = APINetworkServiceNode.cCSCF; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary cCSCF
@@ -311,7 +311,7 @@ const APINetworkServiceNode_cCSCF: APINetworkServiceNode = APINetworkServiceNode
  * @type {number}
  */
 export
-const cCSCF: APINetworkServiceNode = APINetworkServiceNode.cCSCF; /* SHORT_NAMED_ENUMERATED_VALUE */
+const cCSCF = APINetworkServiceNode.cCSCF; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary APINetworkServiceNode_rCAF
@@ -328,7 +328,7 @@ const cCSCF: APINetworkServiceNode = APINetworkServiceNode.cCSCF; /* SHORT_NAMED
  * @type {number}
  */
 export
-const APINetworkServiceNode_rCAF: APINetworkServiceNode = APINetworkServiceNode.rCAF; /* LONG_NAMED_ENUMERATED_VALUE */
+const APINetworkServiceNode_rCAF = APINetworkServiceNode.rCAF; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary rCAF
@@ -340,7 +340,7 @@ const APINetworkServiceNode_rCAF: APINetworkServiceNode = APINetworkServiceNode.
  * @type {number}
  */
 export
-const rCAF: APINetworkServiceNode = APINetworkServiceNode.rCAF; /* SHORT_NAMED_ENUMERATED_VALUE */
+const rCAF = APINetworkServiceNode.rCAF; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_APINetworkServiceNode: $.ASN1Decoder<APINetworkServiceNode> = $._decodeEnumerated;

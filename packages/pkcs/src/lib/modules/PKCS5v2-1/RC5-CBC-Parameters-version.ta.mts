@@ -21,7 +21,7 @@ export type RC5_CBC_Parameters_version = INTEGER;
  * @constant
  * @type {number}
  */
-export const RC5_CBC_Parameters_version_v1_0: RC5_CBC_Parameters_version = 16; /* LONG_NAMED_INTEGER_VALUE */
+export const RC5_CBC_Parameters_version_v1_0 = 16 satisfies RC5_CBC_Parameters_version; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -29,7 +29,7 @@ export const RC5_CBC_Parameters_version_v1_0: RC5_CBC_Parameters_version = 16; /
  * @constant
  * @type {number}
  */
-export const v1_0: RC5_CBC_Parameters_version = RC5_CBC_Parameters_version_v1_0; /* SHORT_NAMED_INTEGER_VALUE */
+export const v1_0 = RC5_CBC_Parameters_version_v1_0; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 

@@ -64,7 +64,7 @@ export const DLPolicy_disclosure_of_other_recipients = _enum_for_DLPolicy_disclo
  * @constant
  * @type {number}
  */
-export const DLPolicy_disclosure_of_other_recipients_unchanged: DLPolicy_disclosure_of_other_recipients =
+export const DLPolicy_disclosure_of_other_recipients_unchanged =
     DLPolicy_disclosure_of_other_recipients.unchanged; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -72,7 +72,7 @@ export const DLPolicy_disclosure_of_other_recipients_unchanged: DLPolicy_disclos
  * @constant
  * @type {number}
  */
-export const unchanged: DLPolicy_disclosure_of_other_recipients =
+export const unchanged =
     DLPolicy_disclosure_of_other_recipients.unchanged; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -80,7 +80,7 @@ export const unchanged: DLPolicy_disclosure_of_other_recipients =
  * @constant
  * @type {number}
  */
-export const DLPolicy_disclosure_of_other_recipients_disclosure_of_other_recipients_prohibited: DLPolicy_disclosure_of_other_recipients =
+export const DLPolicy_disclosure_of_other_recipients_disclosure_of_other_recipients_prohibited =
     DLPolicy_disclosure_of_other_recipients.disclosure_of_other_recipients_prohibited; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -88,7 +88,7 @@ export const DLPolicy_disclosure_of_other_recipients_disclosure_of_other_recipie
  * @constant
  * @type {number}
  */
-export const disclosure_of_other_recipients_prohibited: DLPolicy_disclosure_of_other_recipients =
+export const disclosure_of_other_recipients_prohibited =
     DLPolicy_disclosure_of_other_recipients.disclosure_of_other_recipients_prohibited; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -96,7 +96,7 @@ export const disclosure_of_other_recipients_prohibited: DLPolicy_disclosure_of_o
  * @constant
  * @type {number}
  */
-export const DLPolicy_disclosure_of_other_recipients_disclosure_of_other_recipients_allowed: DLPolicy_disclosure_of_other_recipients =
+export const DLPolicy_disclosure_of_other_recipients_disclosure_of_other_recipients_allowed =
     DLPolicy_disclosure_of_other_recipients.disclosure_of_other_recipients_allowed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -104,7 +104,7 @@ export const DLPolicy_disclosure_of_other_recipients_disclosure_of_other_recipie
  * @constant
  * @type {number}
  */
-export const disclosure_of_other_recipients_allowed: DLPolicy_disclosure_of_other_recipients =
+export const disclosure_of_other_recipients_allowed =
     DLPolicy_disclosure_of_other_recipients.disclosure_of_other_recipients_allowed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 let _cached_decoder_for_DLPolicy_disclosure_of_other_recipients: $.ASN1Decoder<DLPolicy_disclosure_of_other_recipients> | null = null;

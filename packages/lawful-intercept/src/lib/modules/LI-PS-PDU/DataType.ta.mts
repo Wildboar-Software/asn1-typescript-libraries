@@ -93,7 +93,7 @@ type DataType = _enum_for_DataType | ENUMERATED;
  * @type {number}
  */
 export
-const DataType_iRI: DataType = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const DataType_iRI = _enum_for_DataType.iRI; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary iRI
@@ -109,7 +109,7 @@ const DataType_iRI: DataType = 1; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const iRI: DataType = DataType_iRI; /* SHORT_NAMED_ENUMERATED_VALUE */
+const iRI = DataType_iRI; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary DataType_cC
@@ -125,7 +125,7 @@ const iRI: DataType = DataType_iRI; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const DataType_cC: DataType = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+const DataType_cC = _enum_for_DataType.cC; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary cC
@@ -141,7 +141,7 @@ const DataType_cC: DataType = 2; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const cC: DataType = DataType_cC; /* SHORT_NAMED_ENUMERATED_VALUE */
+const cC = DataType_cC; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary DataType_iLHI
@@ -159,7 +159,7 @@ const cC: DataType = DataType_cC; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const DataType_iLHI: DataType = 3; /* LONG_NAMED_ENUMERATED_VALUE */
+const DataType_iLHI = _enum_for_DataType.iLHI; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary iLHI
@@ -177,7 +177,7 @@ const DataType_iLHI: DataType = 3; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const iLHI: DataType = DataType_iLHI; /* SHORT_NAMED_ENUMERATED_VALUE */
+const iLHI = DataType_iLHI; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_DataType: $.ASN1Decoder<DataType> = $._decodeEnumerated;
 export const _encode_DataType: $.ASN1Encoder<DataType> = $._encodeEnumerated;
 

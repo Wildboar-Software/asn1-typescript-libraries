@@ -52,7 +52,7 @@ export type ExchangeMode = _enum_for_ExchangeMode | ENUMERATED;
  * @constant
  * @type {number}
  */
-export const ExchangeMode_sync: ExchangeMode = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ExchangeMode_sync = _enum_for_ExchangeMode.sync; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -66,7 +66,7 @@ export const ExchangeMode_sync: ExchangeMode = 0; /* LONG_NAMED_ENUMERATED_VALUE
  * @constant
  * @type {number}
  */
-export const sync: ExchangeMode = ExchangeMode_sync; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const sync = ExchangeMode_sync; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -79,7 +79,7 @@ export const sync: ExchangeMode = ExchangeMode_sync; /* SHORT_NAMED_ENUMERATED_V
  * @constant
  * @type {number}
  */
-export const ExchangeMode_async: ExchangeMode = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ExchangeMode_async = _enum_for_ExchangeMode.async; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -92,7 +92,7 @@ export const ExchangeMode_async: ExchangeMode = 1; /* LONG_NAMED_ENUMERATED_VALU
  * @constant
  * @type {number}
  */
-export const async: ExchangeMode = ExchangeMode_async; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const async = ExchangeMode_async; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 

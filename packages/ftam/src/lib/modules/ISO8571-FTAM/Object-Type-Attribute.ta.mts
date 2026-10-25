@@ -39,7 +39,7 @@ export type Object_Type_Attribute = INTEGER;
  * @constant
  * @type {number}
  */
-export const Object_Type_Attribute_file: Object_Type_Attribute = 0; /* LONG_NAMED_INTEGER_VALUE */
+export const Object_Type_Attribute_file = 0 satisfies Object_Type_Attribute; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -47,7 +47,7 @@ export const Object_Type_Attribute_file: Object_Type_Attribute = 0; /* LONG_NAME
  * @constant
  * @type {number}
  */
-export const file: Object_Type_Attribute = Object_Type_Attribute_file; /* SHORT_NAMED_INTEGER_VALUE */
+export const file = Object_Type_Attribute_file; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -60,7 +60,7 @@ export const file: Object_Type_Attribute = Object_Type_Attribute_file; /* SHORT_
  * @constant
  * @type {number}
  */
-export const Object_Type_Attribute_file_directory: Object_Type_Attribute = 1; /* LONG_NAMED_INTEGER_VALUE */
+export const Object_Type_Attribute_file_directory = 1 satisfies Object_Type_Attribute; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -68,7 +68,7 @@ export const Object_Type_Attribute_file_directory: Object_Type_Attribute = 1; /*
  * @constant
  * @type {number}
  */
-export const file_directory: Object_Type_Attribute = Object_Type_Attribute_file_directory; /* SHORT_NAMED_INTEGER_VALUE */
+export const file_directory = Object_Type_Attribute_file_directory; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -80,7 +80,7 @@ export const file_directory: Object_Type_Attribute = Object_Type_Attribute_file_
  * @constant
  * @type {number}
  */
-export const Object_Type_Attribute_reference: Object_Type_Attribute = 2; /* LONG_NAMED_INTEGER_VALUE */
+export const Object_Type_Attribute_reference = 2 satisfies Object_Type_Attribute; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -88,7 +88,7 @@ export const Object_Type_Attribute_reference: Object_Type_Attribute = 2; /* LONG
  * @constant
  * @type {number}
  */
-export const reference: Object_Type_Attribute = Object_Type_Attribute_reference; /* SHORT_NAMED_INTEGER_VALUE */
+export const reference = Object_Type_Attribute_reference; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 

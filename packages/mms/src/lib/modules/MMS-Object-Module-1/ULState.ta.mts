@@ -50,7 +50,7 @@ type ULState = INTEGER;
  * @type {number}
  */
 export
-const ULState_non_existent: ULState = 0; /* LONG_NAMED_INTEGER_VALUE */
+const ULState_non_existent = 0 satisfies ULState; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ULState_non_existent
@@ -62,7 +62,7 @@ const ULState_non_existent: ULState = 0; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const non_existent: ULState = ULState_non_existent; /* SHORT_NAMED_INTEGER_VALUE */
+const non_existent = ULState_non_existent; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ULState_uploading
@@ -74,7 +74,7 @@ const non_existent: ULState = ULState_non_existent; /* SHORT_NAMED_INTEGER_VALUE
  * @type {number}
  */
 export
-const ULState_uploading: ULState = 1; /* LONG_NAMED_INTEGER_VALUE */
+const ULState_uploading = 1 satisfies ULState; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ULState_uploading
@@ -86,7 +86,7 @@ const ULState_uploading: ULState = 1; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const uploading: ULState = ULState_uploading; /* SHORT_NAMED_INTEGER_VALUE */
+const uploading = ULState_uploading; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ULState_uploaded
@@ -98,7 +98,7 @@ const uploading: ULState = ULState_uploading; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const ULState_uploaded: ULState = 2; /* LONG_NAMED_INTEGER_VALUE */
+const ULState_uploaded = 2 satisfies ULState; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ULState_uploaded
@@ -110,7 +110,7 @@ const ULState_uploaded: ULState = 2; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const uploaded: ULState = ULState_uploaded; /* SHORT_NAMED_INTEGER_VALUE */
+const uploaded = ULState_uploaded; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ULState_u1
@@ -122,7 +122,7 @@ const uploaded: ULState = ULState_uploaded; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const ULState_u1: ULState = 3; /* LONG_NAMED_INTEGER_VALUE */
+const ULState_u1 = 3 satisfies ULState; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ULState_u1
@@ -134,7 +134,7 @@ const ULState_u1: ULState = 3; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const u1: ULState = ULState_u1; /* SHORT_NAMED_INTEGER_VALUE */
+const u1 = ULState_u1; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ULState_u2
@@ -146,7 +146,7 @@ const u1: ULState = ULState_u1; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const ULState_u2: ULState = 4; /* LONG_NAMED_INTEGER_VALUE */
+const ULState_u2 = 4 satisfies ULState; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ULState_u2
@@ -158,7 +158,7 @@ const ULState_u2: ULState = 4; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const u2: ULState = ULState_u2; /* SHORT_NAMED_INTEGER_VALUE */
+const u2 = ULState_u2; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ULState_u3
@@ -170,7 +170,7 @@ const u2: ULState = ULState_u2; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const ULState_u3: ULState = 5; /* LONG_NAMED_INTEGER_VALUE */
+const ULState_u3 = 5 satisfies ULState; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ULState_u3
@@ -182,7 +182,7 @@ const ULState_u3: ULState = 5; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const u3: ULState = ULState_u3; /* SHORT_NAMED_INTEGER_VALUE */
+const u3 = ULState_u3; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ULState_u4
@@ -194,7 +194,7 @@ const u3: ULState = ULState_u3; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const ULState_u4: ULState = 6; /* LONG_NAMED_INTEGER_VALUE */
+const ULState_u4 = 6 satisfies ULState; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ULState_u4
@@ -206,7 +206,7 @@ const ULState_u4: ULState = 6; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const u4: ULState = ULState_u4; /* SHORT_NAMED_INTEGER_VALUE */
+const u4 = ULState_u4; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_ULState = $._decodeInteger;
 export const _encode_ULState = $._encodeInteger;
 

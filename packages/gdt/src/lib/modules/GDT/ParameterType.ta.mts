@@ -282,7 +282,7 @@ type ParameterType = INTEGER;
  * @type {number}
  */
 export
-const ParameterType_pt_mink_daemon_type: ParameterType = 6000; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_mink_daemon_type = 6000 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_daemon_type
@@ -290,7 +290,7 @@ const ParameterType_pt_mink_daemon_type: ParameterType = 6000; /* LONG_NAMED_INT
  * @type {number}
  */
 export
-const pt_mink_daemon_type: ParameterType = ParameterType_pt_mink_daemon_type; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_mink_daemon_type = ParameterType_pt_mink_daemon_type; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_daemon_id
@@ -298,7 +298,7 @@ const pt_mink_daemon_type: ParameterType = ParameterType_pt_mink_daemon_type; /*
  * @type {number}
  */
 export
-const ParameterType_pt_mink_daemon_id: ParameterType = 6001; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_mink_daemon_id = 6001 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_daemon_id
@@ -306,7 +306,7 @@ const ParameterType_pt_mink_daemon_id: ParameterType = 6001; /* LONG_NAMED_INTEG
  * @type {number}
  */
 export
-const pt_mink_daemon_id: ParameterType = ParameterType_pt_mink_daemon_id; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_mink_daemon_id = ParameterType_pt_mink_daemon_id; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_auth_id
@@ -314,7 +314,7 @@ const pt_mink_daemon_id: ParameterType = ParameterType_pt_mink_daemon_id; /* SHO
  * @type {number}
  */
 export
-const ParameterType_pt_mink_auth_id: ParameterType = 6002; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_mink_auth_id = 6002 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_auth_id
@@ -322,7 +322,7 @@ const ParameterType_pt_mink_auth_id: ParameterType = 6002; /* LONG_NAMED_INTEGER
  * @type {number}
  */
 export
-const pt_mink_auth_id: ParameterType = ParameterType_pt_mink_auth_id; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_mink_auth_id = ParameterType_pt_mink_auth_id; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_auth_password
@@ -330,7 +330,7 @@ const pt_mink_auth_id: ParameterType = ParameterType_pt_mink_auth_id; /* SHORT_N
  * @type {number}
  */
 export
-const ParameterType_pt_mink_auth_password: ParameterType = 6003; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_mink_auth_password = 6003 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_auth_password
@@ -338,7 +338,7 @@ const ParameterType_pt_mink_auth_password: ParameterType = 6003; /* LONG_NAMED_I
  * @type {number}
  */
 export
-const pt_mink_auth_password: ParameterType = ParameterType_pt_mink_auth_password; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_mink_auth_password = ParameterType_pt_mink_auth_password; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_daemon_ip
@@ -346,7 +346,7 @@ const pt_mink_auth_password: ParameterType = ParameterType_pt_mink_auth_password
  * @type {number}
  */
 export
-const ParameterType_pt_mink_daemon_ip: ParameterType = 6004; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_mink_daemon_ip = 6004 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_daemon_ip
@@ -354,7 +354,7 @@ const ParameterType_pt_mink_daemon_ip: ParameterType = 6004; /* LONG_NAMED_INTEG
  * @type {number}
  */
 export
-const pt_mink_daemon_ip: ParameterType = ParameterType_pt_mink_daemon_ip; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_mink_daemon_ip = ParameterType_pt_mink_daemon_ip; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_daemon_port
@@ -362,7 +362,7 @@ const pt_mink_daemon_ip: ParameterType = ParameterType_pt_mink_daemon_ip; /* SHO
  * @type {number}
  */
 export
-const ParameterType_pt_mink_daemon_port: ParameterType = 6005; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_mink_daemon_port = 6005 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_daemon_port
@@ -370,7 +370,7 @@ const ParameterType_pt_mink_daemon_port: ParameterType = 6005; /* LONG_NAMED_INT
  * @type {number}
  */
 export
-const pt_mink_daemon_port: ParameterType = ParameterType_pt_mink_daemon_port; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_mink_daemon_port = ParameterType_pt_mink_daemon_port; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_daemon_description
@@ -378,7 +378,7 @@ const pt_mink_daemon_port: ParameterType = ParameterType_pt_mink_daemon_port; /*
  * @type {number}
  */
 export
-const ParameterType_pt_mink_daemon_description: ParameterType = 6006; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_mink_daemon_description = 6006 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_daemon_description
@@ -386,7 +386,7 @@ const ParameterType_pt_mink_daemon_description: ParameterType = 6006; /* LONG_NA
  * @type {number}
  */
 export
-const pt_mink_daemon_description: ParameterType = ParameterType_pt_mink_daemon_description; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_mink_daemon_description = ParameterType_pt_mink_daemon_description; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_action
@@ -394,7 +394,7 @@ const pt_mink_daemon_description: ParameterType = ParameterType_pt_mink_daemon_d
  * @type {number}
  */
 export
-const ParameterType_pt_mink_action: ParameterType = 6007; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_mink_action = 6007 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_action
@@ -402,7 +402,7 @@ const ParameterType_pt_mink_action: ParameterType = 6007; /* LONG_NAMED_INTEGER_
  * @type {number}
  */
 export
-const pt_mink_action: ParameterType = ParameterType_pt_mink_action; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_mink_action = ParameterType_pt_mink_action; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_dpi
@@ -410,7 +410,7 @@ const pt_mink_action: ParameterType = ParameterType_pt_mink_action; /* SHORT_NAM
  * @type {number}
  */
 export
-const ParameterType_pt_mink_dpi: ParameterType = 6008; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_mink_dpi = 6008 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_dpi
@@ -418,7 +418,7 @@ const ParameterType_pt_mink_dpi: ParameterType = 6008; /* LONG_NAMED_INTEGER_VAL
  * @type {number}
  */
 export
-const pt_mink_dpi: ParameterType = ParameterType_pt_mink_dpi; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_mink_dpi = ParameterType_pt_mink_dpi; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_spi
@@ -426,7 +426,7 @@ const pt_mink_dpi: ParameterType = ParameterType_pt_mink_dpi; /* SHORT_NAMED_INT
  * @type {number}
  */
 export
-const ParameterType_pt_mink_spi: ParameterType = 6009; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_mink_spi = 6009 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_spi
@@ -434,7 +434,7 @@ const ParameterType_pt_mink_spi: ParameterType = 6009; /* LONG_NAMED_INTEGER_VAL
  * @type {number}
  */
 export
-const pt_mink_spi: ParameterType = ParameterType_pt_mink_spi; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_mink_spi = ParameterType_pt_mink_spi; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_timestamp
@@ -442,7 +442,7 @@ const pt_mink_spi: ParameterType = ParameterType_pt_mink_spi; /* SHORT_NAMED_INT
  * @type {number}
  */
 export
-const ParameterType_pt_mink_timestamp: ParameterType = 6010; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_mink_timestamp = 6010 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_timestamp
@@ -450,7 +450,7 @@ const ParameterType_pt_mink_timestamp: ParameterType = 6010; /* LONG_NAMED_INTEG
  * @type {number}
  */
 export
-const pt_mink_timestamp: ParameterType = ParameterType_pt_mink_timestamp; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_mink_timestamp = ParameterType_pt_mink_timestamp; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_timestamp_nsec
@@ -458,7 +458,7 @@ const pt_mink_timestamp: ParameterType = ParameterType_pt_mink_timestamp; /* SHO
  * @type {number}
  */
 export
-const ParameterType_pt_mink_timestamp_nsec: ParameterType = 6011; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_mink_timestamp_nsec = 6011 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_timestamp_nsec
@@ -466,7 +466,7 @@ const ParameterType_pt_mink_timestamp_nsec: ParameterType = 6011; /* LONG_NAMED_
  * @type {number}
  */
 export
-const pt_mink_timestamp_nsec: ParameterType = ParameterType_pt_mink_timestamp_nsec; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_mink_timestamp_nsec = ParameterType_pt_mink_timestamp_nsec; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_security_phase
@@ -474,7 +474,7 @@ const pt_mink_timestamp_nsec: ParameterType = ParameterType_pt_mink_timestamp_ns
  * @type {number}
  */
 export
-const ParameterType_pt_mink_security_phase: ParameterType = 6012; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_mink_security_phase = 6012 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_security_phase
@@ -482,7 +482,7 @@ const ParameterType_pt_mink_security_phase: ParameterType = 6012; /* LONG_NAMED_
  * @type {number}
  */
 export
-const pt_mink_security_phase: ParameterType = ParameterType_pt_mink_security_phase; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_mink_security_phase = ParameterType_pt_mink_security_phase; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_loop_count
@@ -490,7 +490,7 @@ const pt_mink_security_phase: ParameterType = ParameterType_pt_mink_security_pha
  * @type {number}
  */
 export
-const ParameterType_pt_mink_loop_count: ParameterType = 6013; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_mink_loop_count = 6013 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_loop_count
@@ -498,7 +498,7 @@ const ParameterType_pt_mink_loop_count: ParameterType = 6013; /* LONG_NAMED_INTE
  * @type {number}
  */
 export
-const pt_mink_loop_count: ParameterType = ParameterType_pt_mink_loop_count; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_mink_loop_count = ParameterType_pt_mink_loop_count; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_checksum
@@ -506,7 +506,7 @@ const pt_mink_loop_count: ParameterType = ParameterType_pt_mink_loop_count; /* S
  * @type {number}
  */
 export
-const ParameterType_pt_mink_checksum: ParameterType = 6014; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_mink_checksum = 6014 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_checksum
@@ -514,7 +514,7 @@ const ParameterType_pt_mink_checksum: ParameterType = 6014; /* LONG_NAMED_INTEGE
  * @type {number}
  */
 export
-const pt_mink_checksum: ParameterType = ParameterType_pt_mink_checksum; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_mink_checksum = ParameterType_pt_mink_checksum; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_timeout
@@ -522,7 +522,7 @@ const pt_mink_checksum: ParameterType = ParameterType_pt_mink_checksum; /* SHORT
  * @type {number}
  */
 export
-const ParameterType_pt_mink_timeout: ParameterType = 6015; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_mink_timeout = 6015 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_timeout
@@ -530,7 +530,7 @@ const ParameterType_pt_mink_timeout: ParameterType = 6015; /* LONG_NAMED_INTEGER
  * @type {number}
  */
 export
-const pt_mink_timeout: ParameterType = ParameterType_pt_mink_timeout; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_mink_timeout = ParameterType_pt_mink_timeout; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_error
@@ -538,7 +538,7 @@ const pt_mink_timeout: ParameterType = ParameterType_pt_mink_timeout; /* SHORT_N
  * @type {number}
  */
 export
-const ParameterType_pt_mink_error: ParameterType = 6016; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_mink_error = 6016 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_error
@@ -546,7 +546,7 @@ const ParameterType_pt_mink_error: ParameterType = 6016; /* LONG_NAMED_INTEGER_V
  * @type {number}
  */
 export
-const pt_mink_error: ParameterType = ParameterType_pt_mink_error; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_mink_error = ParameterType_pt_mink_error; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_error_msg
@@ -554,7 +554,7 @@ const pt_mink_error: ParameterType = ParameterType_pt_mink_error; /* SHORT_NAMED
  * @type {number}
  */
 export
-const ParameterType_pt_mink_error_msg: ParameterType = 6017; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_mink_error_msg = 6017 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_error_msg
@@ -562,7 +562,7 @@ const ParameterType_pt_mink_error_msg: ParameterType = 6017; /* LONG_NAMED_INTEG
  * @type {number}
  */
 export
-const pt_mink_error_msg: ParameterType = ParameterType_pt_mink_error_msg; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_mink_error_msg = ParameterType_pt_mink_error_msg; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_status
@@ -570,7 +570,7 @@ const pt_mink_error_msg: ParameterType = ParameterType_pt_mink_error_msg; /* SHO
  * @type {number}
  */
 export
-const ParameterType_pt_mink_status: ParameterType = 6018; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_mink_status = 6018 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_status
@@ -578,7 +578,7 @@ const ParameterType_pt_mink_status: ParameterType = 6018; /* LONG_NAMED_INTEGER_
  * @type {number}
  */
 export
-const pt_mink_status: ParameterType = ParameterType_pt_mink_status; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_mink_status = ParameterType_pt_mink_status; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_status_msg
@@ -586,7 +586,7 @@ const pt_mink_status: ParameterType = ParameterType_pt_mink_status; /* SHORT_NAM
  * @type {number}
  */
 export
-const ParameterType_pt_mink_status_msg: ParameterType = 6019; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_mink_status_msg = 6019 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_status_msg
@@ -594,7 +594,7 @@ const ParameterType_pt_mink_status_msg: ParameterType = 6019; /* LONG_NAMED_INTE
  * @type {number}
  */
 export
-const pt_mink_status_msg: ParameterType = ParameterType_pt_mink_status_msg; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_mink_status_msg = ParameterType_pt_mink_status_msg; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_persistent_correlation
@@ -602,7 +602,7 @@ const pt_mink_status_msg: ParameterType = ParameterType_pt_mink_status_msg; /* S
  * @type {number}
  */
 export
-const ParameterType_pt_mink_persistent_correlation: ParameterType = 6020; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_mink_persistent_correlation = 6020 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_persistent_correlation
@@ -610,7 +610,7 @@ const ParameterType_pt_mink_persistent_correlation: ParameterType = 6020; /* LON
  * @type {number}
  */
 export
-const pt_mink_persistent_correlation: ParameterType = ParameterType_pt_mink_persistent_correlation; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_mink_persistent_correlation = ParameterType_pt_mink_persistent_correlation; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_routing_destination
@@ -618,7 +618,7 @@ const pt_mink_persistent_correlation: ParameterType = ParameterType_pt_mink_pers
  * @type {number}
  */
 export
-const ParameterType_pt_mink_routing_destination: ParameterType = 6100; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_mink_routing_destination = 6100 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_routing_destination
@@ -626,7 +626,7 @@ const ParameterType_pt_mink_routing_destination: ParameterType = 6100; /* LONG_N
  * @type {number}
  */
 export
-const pt_mink_routing_destination: ParameterType = ParameterType_pt_mink_routing_destination; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_mink_routing_destination = ParameterType_pt_mink_routing_destination; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_routing_source
@@ -634,7 +634,7 @@ const pt_mink_routing_destination: ParameterType = ParameterType_pt_mink_routing
  * @type {number}
  */
 export
-const ParameterType_pt_mink_routing_source: ParameterType = 6101; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_mink_routing_source = 6101 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_routing_source
@@ -642,7 +642,7 @@ const ParameterType_pt_mink_routing_source: ParameterType = 6101; /* LONG_NAMED_
  * @type {number}
  */
 export
-const pt_mink_routing_source: ParameterType = ParameterType_pt_mink_routing_source; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_mink_routing_source = ParameterType_pt_mink_routing_source; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_routing_gateway
@@ -650,7 +650,7 @@ const pt_mink_routing_source: ParameterType = ParameterType_pt_mink_routing_sour
  * @type {number}
  */
 export
-const ParameterType_pt_mink_routing_gateway: ParameterType = 6102; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_mink_routing_gateway = 6102 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_routing_gateway
@@ -658,7 +658,7 @@ const ParameterType_pt_mink_routing_gateway: ParameterType = 6102; /* LONG_NAMED
  * @type {number}
  */
 export
-const pt_mink_routing_gateway: ParameterType = ParameterType_pt_mink_routing_gateway; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_mink_routing_gateway = ParameterType_pt_mink_routing_gateway; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_routing_interface
@@ -666,7 +666,7 @@ const pt_mink_routing_gateway: ParameterType = ParameterType_pt_mink_routing_gat
  * @type {number}
  */
 export
-const ParameterType_pt_mink_routing_interface: ParameterType = 6103; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_mink_routing_interface = 6103 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_routing_interface
@@ -674,7 +674,7 @@ const ParameterType_pt_mink_routing_interface: ParameterType = 6103; /* LONG_NAM
  * @type {number}
  */
 export
-const pt_mink_routing_interface: ParameterType = ParameterType_pt_mink_routing_interface; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_mink_routing_interface = ParameterType_pt_mink_routing_interface; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_routing_priority
@@ -682,7 +682,7 @@ const pt_mink_routing_interface: ParameterType = ParameterType_pt_mink_routing_i
  * @type {number}
  */
 export
-const ParameterType_pt_mink_routing_priority: ParameterType = 6104; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_mink_routing_priority = 6104 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_routing_priority
@@ -690,7 +690,7 @@ const ParameterType_pt_mink_routing_priority: ParameterType = 6104; /* LONG_NAME
  * @type {number}
  */
 export
-const pt_mink_routing_priority: ParameterType = ParameterType_pt_mink_routing_priority; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_mink_routing_priority = ParameterType_pt_mink_routing_priority; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_router_status
@@ -698,7 +698,7 @@ const pt_mink_routing_priority: ParameterType = ParameterType_pt_mink_routing_pr
  * @type {number}
  */
 export
-const ParameterType_pt_mink_router_status: ParameterType = 6105; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_mink_router_status = 6105 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_router_status
@@ -706,7 +706,7 @@ const ParameterType_pt_mink_router_status: ParameterType = 6105; /* LONG_NAMED_I
  * @type {number}
  */
 export
-const pt_mink_router_status: ParameterType = ParameterType_pt_mink_router_status; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_mink_router_status = ParameterType_pt_mink_router_status; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_routing_destination_type
@@ -714,7 +714,7 @@ const pt_mink_router_status: ParameterType = ParameterType_pt_mink_router_status
  * @type {number}
  */
 export
-const ParameterType_pt_mink_routing_destination_type: ParameterType = 6106; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_mink_routing_destination_type = 6106 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_routing_destination_type
@@ -722,7 +722,7 @@ const ParameterType_pt_mink_routing_destination_type: ParameterType = 6106; /* L
  * @type {number}
  */
 export
-const pt_mink_routing_destination_type: ParameterType = ParameterType_pt_mink_routing_destination_type; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_mink_routing_destination_type = ParameterType_pt_mink_routing_destination_type; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_routing_index
@@ -730,7 +730,7 @@ const pt_mink_routing_destination_type: ParameterType = ParameterType_pt_mink_ro
  * @type {number}
  */
 export
-const ParameterType_pt_mink_routing_index: ParameterType = 6107; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_mink_routing_index = 6107 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_routing_index
@@ -738,7 +738,7 @@ const ParameterType_pt_mink_routing_index: ParameterType = 6107; /* LONG_NAMED_I
  * @type {number}
  */
 export
-const pt_mink_routing_index: ParameterType = ParameterType_pt_mink_routing_index; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_mink_routing_index = ParameterType_pt_mink_routing_index; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_trunk_label
@@ -746,7 +746,7 @@ const pt_mink_routing_index: ParameterType = ParameterType_pt_mink_routing_index
  * @type {number}
  */
 export
-const ParameterType_pt_mink_trunk_label: ParameterType = 6108; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_mink_trunk_label = 6108 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_trunk_label
@@ -754,7 +754,7 @@ const ParameterType_pt_mink_trunk_label: ParameterType = 6108; /* LONG_NAMED_INT
  * @type {number}
  */
 export
-const pt_mink_trunk_label: ParameterType = ParameterType_pt_mink_trunk_label; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_mink_trunk_label = ParameterType_pt_mink_trunk_label; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_connection_type
@@ -762,7 +762,7 @@ const pt_mink_trunk_label: ParameterType = ParameterType_pt_mink_trunk_label; /*
  * @type {number}
  */
 export
-const ParameterType_pt_mink_connection_type: ParameterType = 6109; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_mink_connection_type = 6109 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_connection_type
@@ -770,7 +770,7 @@ const ParameterType_pt_mink_connection_type: ParameterType = 6109; /* LONG_NAMED
  * @type {number}
  */
 export
-const pt_mink_connection_type: ParameterType = ParameterType_pt_mink_connection_type; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_mink_connection_type = ParameterType_pt_mink_connection_type; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_service_id
@@ -778,7 +778,7 @@ const pt_mink_connection_type: ParameterType = ParameterType_pt_mink_connection_
  * @type {number}
  */
 export
-const ParameterType_pt_mink_service_id: ParameterType = 6110; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_mink_service_id = 6110 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_service_id
@@ -786,7 +786,7 @@ const ParameterType_pt_mink_service_id: ParameterType = 6110; /* LONG_NAMED_INTE
  * @type {number}
  */
 export
-const pt_mink_service_id: ParameterType = ParameterType_pt_mink_service_id; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_mink_service_id = ParameterType_pt_mink_service_id; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_command_id
@@ -794,7 +794,7 @@ const pt_mink_service_id: ParameterType = ParameterType_pt_mink_service_id; /* S
  * @type {number}
  */
 export
-const ParameterType_pt_mink_command_id: ParameterType = 6111; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_mink_command_id = 6111 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_command_id
@@ -802,7 +802,7 @@ const ParameterType_pt_mink_command_id: ParameterType = 6111; /* LONG_NAMED_INTE
  * @type {number}
  */
 export
-const pt_mink_command_id: ParameterType = ParameterType_pt_mink_command_id; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_mink_command_id = ParameterType_pt_mink_command_id; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_routing_sub_destination
@@ -810,7 +810,7 @@ const pt_mink_command_id: ParameterType = ParameterType_pt_mink_command_id; /* S
  * @type {number}
  */
 export
-const ParameterType_pt_mink_routing_sub_destination: ParameterType = 6112; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_mink_routing_sub_destination = 6112 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_routing_sub_destination
@@ -818,7 +818,7 @@ const ParameterType_pt_mink_routing_sub_destination: ParameterType = 6112; /* LO
  * @type {number}
  */
 export
-const pt_mink_routing_sub_destination: ParameterType = ParameterType_pt_mink_routing_sub_destination; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_mink_routing_sub_destination = ParameterType_pt_mink_routing_sub_destination; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_routing_sub_destination_type
@@ -826,7 +826,7 @@ const pt_mink_routing_sub_destination: ParameterType = ParameterType_pt_mink_rou
  * @type {number}
  */
 export
-const ParameterType_pt_mink_routing_sub_destination_type: ParameterType = 6113; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_mink_routing_sub_destination_type = 6113 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_routing_sub_destination_type
@@ -834,7 +834,7 @@ const ParameterType_pt_mink_routing_sub_destination_type: ParameterType = 6113; 
  * @type {number}
  */
 export
-const pt_mink_routing_sub_destination_type: ParameterType = ParameterType_pt_mink_routing_sub_destination_type; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_mink_routing_sub_destination_type = ParameterType_pt_mink_routing_sub_destination_type; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_correlation_notification
@@ -842,7 +842,7 @@ const pt_mink_routing_sub_destination_type: ParameterType = ParameterType_pt_min
  * @type {number}
  */
 export
-const ParameterType_pt_mink_correlation_notification: ParameterType = 6114; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_mink_correlation_notification = 6114 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_correlation_notification
@@ -850,7 +850,7 @@ const ParameterType_pt_mink_correlation_notification: ParameterType = 6114; /* L
  * @type {number}
  */
 export
-const pt_mink_correlation_notification: ParameterType = ParameterType_pt_mink_correlation_notification; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_mink_correlation_notification = ParameterType_pt_mink_correlation_notification; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_guid
@@ -858,7 +858,7 @@ const pt_mink_correlation_notification: ParameterType = ParameterType_pt_mink_co
  * @type {number}
  */
 export
-const ParameterType_pt_mink_guid: ParameterType = 6115; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_mink_guid = 6115 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_guid
@@ -866,7 +866,7 @@ const ParameterType_pt_mink_guid: ParameterType = 6115; /* LONG_NAMED_INTEGER_VA
  * @type {number}
  */
 export
-const pt_mink_guid: ParameterType = ParameterType_pt_mink_guid; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_mink_guid = ParameterType_pt_mink_guid; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_routing_service_id
@@ -874,7 +874,7 @@ const pt_mink_guid: ParameterType = ParameterType_pt_mink_guid; /* SHORT_NAMED_I
  * @type {number}
  */
 export
-const ParameterType_pt_mink_routing_service_id: ParameterType = 6116; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_mink_routing_service_id = 6116 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_routing_service_id
@@ -882,7 +882,7 @@ const ParameterType_pt_mink_routing_service_id: ParameterType = 6116; /* LONG_NA
  * @type {number}
  */
 export
-const pt_mink_routing_service_id: ParameterType = ParameterType_pt_mink_routing_service_id; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_mink_routing_service_id = ParameterType_pt_mink_routing_service_id; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_event_id
@@ -890,7 +890,7 @@ const pt_mink_routing_service_id: ParameterType = ParameterType_pt_mink_routing_
  * @type {number}
  */
 export
-const ParameterType_pt_mink_event_id: ParameterType = 6200; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_mink_event_id = 6200 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_event_id
@@ -898,7 +898,7 @@ const ParameterType_pt_mink_event_id: ParameterType = 6200; /* LONG_NAMED_INTEGE
  * @type {number}
  */
 export
-const pt_mink_event_id: ParameterType = ParameterType_pt_mink_event_id; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_mink_event_id = ParameterType_pt_mink_event_id; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_event_description
@@ -906,7 +906,7 @@ const pt_mink_event_id: ParameterType = ParameterType_pt_mink_event_id; /* SHORT
  * @type {number}
  */
 export
-const ParameterType_pt_mink_event_description: ParameterType = 6201; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_mink_event_description = 6201 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_event_description
@@ -914,7 +914,7 @@ const ParameterType_pt_mink_event_description: ParameterType = 6201; /* LONG_NAM
  * @type {number}
  */
 export
-const pt_mink_event_description: ParameterType = ParameterType_pt_mink_event_description; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_mink_event_description = ParameterType_pt_mink_event_description; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_event_callback_id
@@ -922,7 +922,7 @@ const pt_mink_event_description: ParameterType = ParameterType_pt_mink_event_des
  * @type {number}
  */
 export
-const ParameterType_pt_mink_event_callback_id: ParameterType = 6202; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_mink_event_callback_id = 6202 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_event_callback_id
@@ -930,7 +930,7 @@ const ParameterType_pt_mink_event_callback_id: ParameterType = 6202; /* LONG_NAM
  * @type {number}
  */
 export
-const pt_mink_event_callback_id: ParameterType = ParameterType_pt_mink_event_callback_id; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_mink_event_callback_id = ParameterType_pt_mink_event_callback_id; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_event_callback_priority
@@ -938,7 +938,7 @@ const pt_mink_event_callback_id: ParameterType = ParameterType_pt_mink_event_cal
  * @type {number}
  */
 export
-const ParameterType_pt_mink_event_callback_priority: ParameterType = 6203; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_mink_event_callback_priority = 6203 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_event_callback_priority
@@ -946,7 +946,7 @@ const ParameterType_pt_mink_event_callback_priority: ParameterType = 6203; /* LO
  * @type {number}
  */
 export
-const pt_mink_event_callback_priority: ParameterType = ParameterType_pt_mink_event_callback_priority; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_mink_event_callback_priority = ParameterType_pt_mink_event_callback_priority; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_enc_public_key
@@ -954,7 +954,7 @@ const pt_mink_event_callback_priority: ParameterType = ParameterType_pt_mink_eve
  * @type {number}
  */
 export
-const ParameterType_pt_mink_enc_public_key: ParameterType = 6300; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_mink_enc_public_key = 6300 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_enc_public_key
@@ -962,7 +962,7 @@ const ParameterType_pt_mink_enc_public_key: ParameterType = 6300; /* LONG_NAMED_
  * @type {number}
  */
 export
-const pt_mink_enc_public_key: ParameterType = ParameterType_pt_mink_enc_public_key; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_mink_enc_public_key = ParameterType_pt_mink_enc_public_key; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_enc_private_key
@@ -970,7 +970,7 @@ const pt_mink_enc_public_key: ParameterType = ParameterType_pt_mink_enc_public_k
  * @type {number}
  */
 export
-const ParameterType_pt_mink_enc_private_key: ParameterType = 6301; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_mink_enc_private_key = 6301 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_enc_private_key
@@ -978,7 +978,7 @@ const ParameterType_pt_mink_enc_private_key: ParameterType = 6301; /* LONG_NAMED
  * @type {number}
  */
 export
-const pt_mink_enc_private_key: ParameterType = ParameterType_pt_mink_enc_private_key; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_mink_enc_private_key = ParameterType_pt_mink_enc_private_key; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_enc_type
@@ -986,7 +986,7 @@ const pt_mink_enc_private_key: ParameterType = ParameterType_pt_mink_enc_private
  * @type {number}
  */
 export
-const ParameterType_pt_mink_enc_type: ParameterType = 6302; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_mink_enc_type = 6302 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_enc_type
@@ -994,7 +994,7 @@ const ParameterType_pt_mink_enc_type: ParameterType = 6302; /* LONG_NAMED_INTEGE
  * @type {number}
  */
 export
-const pt_mink_enc_type: ParameterType = ParameterType_pt_mink_enc_type; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_mink_enc_type = ParameterType_pt_mink_enc_type; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_stats_id
@@ -1002,7 +1002,7 @@ const pt_mink_enc_type: ParameterType = ParameterType_pt_mink_enc_type; /* SHORT
  * @type {number}
  */
 export
-const ParameterType_pt_mink_stats_id: ParameterType = 6400; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_mink_stats_id = 6400 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_stats_id
@@ -1010,7 +1010,7 @@ const ParameterType_pt_mink_stats_id: ParameterType = 6400; /* LONG_NAMED_INTEGE
  * @type {number}
  */
 export
-const pt_mink_stats_id: ParameterType = ParameterType_pt_mink_stats_id; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_mink_stats_id = ParameterType_pt_mink_stats_id; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_stats_description
@@ -1018,7 +1018,7 @@ const pt_mink_stats_id: ParameterType = ParameterType_pt_mink_stats_id; /* SHORT
  * @type {number}
  */
 export
-const ParameterType_pt_mink_stats_description: ParameterType = 6401; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_mink_stats_description = 6401 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_stats_description
@@ -1026,7 +1026,7 @@ const ParameterType_pt_mink_stats_description: ParameterType = 6401; /* LONG_NAM
  * @type {number}
  */
 export
-const pt_mink_stats_description: ParameterType = ParameterType_pt_mink_stats_description; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_mink_stats_description = ParameterType_pt_mink_stats_description; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_stats_value
@@ -1034,7 +1034,7 @@ const pt_mink_stats_description: ParameterType = ParameterType_pt_mink_stats_des
  * @type {number}
  */
 export
-const ParameterType_pt_mink_stats_value: ParameterType = 6402; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_mink_stats_value = 6402 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_stats_value
@@ -1042,7 +1042,7 @@ const ParameterType_pt_mink_stats_value: ParameterType = 6402; /* LONG_NAMED_INT
  * @type {number}
  */
 export
-const pt_mink_stats_value: ParameterType = ParameterType_pt_mink_stats_value; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_mink_stats_value = ParameterType_pt_mink_stats_value; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_stats_count
@@ -1050,7 +1050,7 @@ const pt_mink_stats_value: ParameterType = ParameterType_pt_mink_stats_value; /*
  * @type {number}
  */
 export
-const ParameterType_pt_mink_stats_count: ParameterType = 6403; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_mink_stats_count = 6403 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_stats_count
@@ -1058,7 +1058,7 @@ const ParameterType_pt_mink_stats_count: ParameterType = 6403; /* LONG_NAMED_INT
  * @type {number}
  */
 export
-const pt_mink_stats_count: ParameterType = ParameterType_pt_mink_stats_count; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_mink_stats_count = ParameterType_pt_mink_stats_count; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_config_param_name
@@ -1066,7 +1066,7 @@ const pt_mink_stats_count: ParameterType = ParameterType_pt_mink_stats_count; /*
  * @type {number}
  */
 export
-const ParameterType_pt_mink_config_param_name: ParameterType = 7400; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_mink_config_param_name = 7400 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_config_param_name
@@ -1074,7 +1074,7 @@ const ParameterType_pt_mink_config_param_name: ParameterType = 7400; /* LONG_NAM
  * @type {number}
  */
 export
-const pt_mink_config_param_name: ParameterType = ParameterType_pt_mink_config_param_name; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_mink_config_param_name = ParameterType_pt_mink_config_param_name; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_config_param_value
@@ -1082,7 +1082,7 @@ const pt_mink_config_param_name: ParameterType = ParameterType_pt_mink_config_pa
  * @type {number}
  */
 export
-const ParameterType_pt_mink_config_param_value: ParameterType = 7401; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_mink_config_param_value = 7401 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_config_param_value
@@ -1090,7 +1090,7 @@ const ParameterType_pt_mink_config_param_value: ParameterType = 7401; /* LONG_NA
  * @type {number}
  */
 export
-const pt_mink_config_param_value: ParameterType = ParameterType_pt_mink_config_param_value; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_mink_config_param_value = ParameterType_pt_mink_config_param_value; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_config_ac_line
@@ -1098,7 +1098,7 @@ const pt_mink_config_param_value: ParameterType = ParameterType_pt_mink_config_p
  * @type {number}
  */
 export
-const ParameterType_pt_mink_config_ac_line: ParameterType = 7402; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_mink_config_ac_line = 7402 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_config_ac_line
@@ -1106,7 +1106,7 @@ const ParameterType_pt_mink_config_ac_line: ParameterType = 7402; /* LONG_NAMED_
  * @type {number}
  */
 export
-const pt_mink_config_ac_line: ParameterType = ParameterType_pt_mink_config_ac_line; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_mink_config_ac_line = ParameterType_pt_mink_config_ac_line; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_config_cfg_item_name
@@ -1114,7 +1114,7 @@ const pt_mink_config_ac_line: ParameterType = ParameterType_pt_mink_config_ac_li
  * @type {number}
  */
 export
-const ParameterType_pt_mink_config_cfg_item_name: ParameterType = 7403; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_mink_config_cfg_item_name = 7403 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_config_cfg_item_name
@@ -1122,7 +1122,7 @@ const ParameterType_pt_mink_config_cfg_item_name: ParameterType = 7403; /* LONG_
  * @type {number}
  */
 export
-const pt_mink_config_cfg_item_name: ParameterType = ParameterType_pt_mink_config_cfg_item_name; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_mink_config_cfg_item_name = ParameterType_pt_mink_config_cfg_item_name; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_config_cfg_item_desc
@@ -1130,7 +1130,7 @@ const pt_mink_config_cfg_item_name: ParameterType = ParameterType_pt_mink_config
  * @type {number}
  */
 export
-const ParameterType_pt_mink_config_cfg_item_desc: ParameterType = 7404; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_mink_config_cfg_item_desc = 7404 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_config_cfg_item_desc
@@ -1138,7 +1138,7 @@ const ParameterType_pt_mink_config_cfg_item_desc: ParameterType = 7404; /* LONG_
  * @type {number}
  */
 export
-const pt_mink_config_cfg_item_desc: ParameterType = ParameterType_pt_mink_config_cfg_item_desc; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_mink_config_cfg_item_desc = ParameterType_pt_mink_config_cfg_item_desc; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_config_cfg_item_ns
@@ -1146,7 +1146,7 @@ const pt_mink_config_cfg_item_desc: ParameterType = ParameterType_pt_mink_config
  * @type {number}
  */
 export
-const ParameterType_pt_mink_config_cfg_item_ns: ParameterType = 7405; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_mink_config_cfg_item_ns = 7405 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_config_cfg_item_ns
@@ -1154,7 +1154,7 @@ const ParameterType_pt_mink_config_cfg_item_ns: ParameterType = 7405; /* LONG_NA
  * @type {number}
  */
 export
-const pt_mink_config_cfg_item_ns: ParameterType = ParameterType_pt_mink_config_cfg_item_ns; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_mink_config_cfg_item_ns = ParameterType_pt_mink_config_cfg_item_ns; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_config_cfg_item_value
@@ -1162,7 +1162,7 @@ const pt_mink_config_cfg_item_ns: ParameterType = ParameterType_pt_mink_config_c
  * @type {number}
  */
 export
-const ParameterType_pt_mink_config_cfg_item_value: ParameterType = 7406; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_mink_config_cfg_item_value = 7406 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_config_cfg_item_value
@@ -1170,7 +1170,7 @@ const ParameterType_pt_mink_config_cfg_item_value: ParameterType = 7406; /* LONG
  * @type {number}
  */
 export
-const pt_mink_config_cfg_item_value: ParameterType = ParameterType_pt_mink_config_cfg_item_value; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_mink_config_cfg_item_value = ParameterType_pt_mink_config_cfg_item_value; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_config_cfg_item_nvalue
@@ -1178,7 +1178,7 @@ const pt_mink_config_cfg_item_value: ParameterType = ParameterType_pt_mink_confi
  * @type {number}
  */
 export
-const ParameterType_pt_mink_config_cfg_item_nvalue: ParameterType = 7407; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_mink_config_cfg_item_nvalue = 7407 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_config_cfg_item_nvalue
@@ -1186,7 +1186,7 @@ const ParameterType_pt_mink_config_cfg_item_nvalue: ParameterType = 7407; /* LON
  * @type {number}
  */
 export
-const pt_mink_config_cfg_item_nvalue: ParameterType = ParameterType_pt_mink_config_cfg_item_nvalue; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_mink_config_cfg_item_nvalue = ParameterType_pt_mink_config_cfg_item_nvalue; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_config_cfg_item_nt
@@ -1194,7 +1194,7 @@ const pt_mink_config_cfg_item_nvalue: ParameterType = ParameterType_pt_mink_conf
  * @type {number}
  */
 export
-const ParameterType_pt_mink_config_cfg_item_nt: ParameterType = 7408; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_mink_config_cfg_item_nt = 7408 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_config_cfg_item_nt
@@ -1202,7 +1202,7 @@ const ParameterType_pt_mink_config_cfg_item_nt: ParameterType = 7408; /* LONG_NA
  * @type {number}
  */
 export
-const pt_mink_config_cfg_item_nt: ParameterType = ParameterType_pt_mink_config_cfg_item_nt; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_mink_config_cfg_item_nt = ParameterType_pt_mink_config_cfg_item_nt; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_config_cfg_cm_mode
@@ -1210,7 +1210,7 @@ const pt_mink_config_cfg_item_nt: ParameterType = ParameterType_pt_mink_config_c
  * @type {number}
  */
 export
-const ParameterType_pt_mink_config_cfg_cm_mode: ParameterType = 7409; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_mink_config_cfg_cm_mode = 7409 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_config_cfg_cm_mode
@@ -1218,7 +1218,7 @@ const ParameterType_pt_mink_config_cfg_cm_mode: ParameterType = 7409; /* LONG_NA
  * @type {number}
  */
 export
-const pt_mink_config_cfg_cm_mode: ParameterType = ParameterType_pt_mink_config_cfg_cm_mode; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_mink_config_cfg_cm_mode = ParameterType_pt_mink_config_cfg_cm_mode; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_config_cfg_ac_err
@@ -1226,7 +1226,7 @@ const pt_mink_config_cfg_cm_mode: ParameterType = ParameterType_pt_mink_config_c
  * @type {number}
  */
 export
-const ParameterType_pt_mink_config_cfg_ac_err: ParameterType = 7410; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_mink_config_cfg_ac_err = 7410 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_config_cfg_ac_err
@@ -1234,7 +1234,7 @@ const ParameterType_pt_mink_config_cfg_ac_err: ParameterType = 7410; /* LONG_NAM
  * @type {number}
  */
 export
-const pt_mink_config_cfg_ac_err: ParameterType = ParameterType_pt_mink_config_cfg_ac_err; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_mink_config_cfg_ac_err = ParameterType_pt_mink_config_cfg_ac_err; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_config_cli_path
@@ -1242,7 +1242,7 @@ const pt_mink_config_cfg_ac_err: ParameterType = ParameterType_pt_mink_config_cf
  * @type {number}
  */
 export
-const ParameterType_pt_mink_config_cli_path: ParameterType = 7411; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_mink_config_cli_path = 7411 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_config_cli_path
@@ -1250,7 +1250,7 @@ const ParameterType_pt_mink_config_cli_path: ParameterType = 7411; /* LONG_NAMED
  * @type {number}
  */
 export
-const pt_mink_config_cli_path: ParameterType = ParameterType_pt_mink_config_cli_path; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_mink_config_cli_path = ParameterType_pt_mink_config_cli_path; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_config_cfg_line
@@ -1258,7 +1258,7 @@ const pt_mink_config_cli_path: ParameterType = ParameterType_pt_mink_config_cli_
  * @type {number}
  */
 export
-const ParameterType_pt_mink_config_cfg_line: ParameterType = 7412; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_mink_config_cfg_line = 7412 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_config_cfg_line
@@ -1266,7 +1266,7 @@ const ParameterType_pt_mink_config_cfg_line: ParameterType = 7412; /* LONG_NAMED
  * @type {number}
  */
 export
-const pt_mink_config_cfg_line: ParameterType = ParameterType_pt_mink_config_cfg_line; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_mink_config_cfg_line = ParameterType_pt_mink_config_cfg_line; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_config_ac_err_count
@@ -1274,7 +1274,7 @@ const pt_mink_config_cfg_line: ParameterType = ParameterType_pt_mink_config_cfg_
  * @type {number}
  */
 export
-const ParameterType_pt_mink_config_ac_err_count: ParameterType = 7413; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_mink_config_ac_err_count = 7413 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_config_ac_err_count
@@ -1282,7 +1282,7 @@ const ParameterType_pt_mink_config_ac_err_count: ParameterType = 7413; /* LONG_N
  * @type {number}
  */
 export
-const pt_mink_config_ac_err_count: ParameterType = ParameterType_pt_mink_config_ac_err_count; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_mink_config_ac_err_count = ParameterType_pt_mink_config_ac_err_count; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_config_cfg_line_count
@@ -1290,7 +1290,7 @@ const pt_mink_config_ac_err_count: ParameterType = ParameterType_pt_mink_config_
  * @type {number}
  */
 export
-const ParameterType_pt_mink_config_cfg_line_count: ParameterType = 7414; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_mink_config_cfg_line_count = 7414 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_config_cfg_line_count
@@ -1298,7 +1298,7 @@ const ParameterType_pt_mink_config_cfg_line_count: ParameterType = 7414; /* LONG
  * @type {number}
  */
 export
-const pt_mink_config_cfg_line_count: ParameterType = ParameterType_pt_mink_config_cfg_line_count; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_mink_config_cfg_line_count = ParameterType_pt_mink_config_cfg_line_count; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_config_cfg_item_path
@@ -1306,7 +1306,7 @@ const pt_mink_config_cfg_line_count: ParameterType = ParameterType_pt_mink_confi
  * @type {number}
  */
 export
-const ParameterType_pt_mink_config_cfg_item_path: ParameterType = 7415; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_mink_config_cfg_item_path = 7415 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_config_cfg_item_path
@@ -1314,7 +1314,7 @@ const ParameterType_pt_mink_config_cfg_item_path: ParameterType = 7415; /* LONG_
  * @type {number}
  */
 export
-const pt_mink_config_cfg_item_path: ParameterType = ParameterType_pt_mink_config_cfg_item_path; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_mink_config_cfg_item_path = ParameterType_pt_mink_config_cfg_item_path; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_config_cfg_item_notify
@@ -1322,7 +1322,7 @@ const pt_mink_config_cfg_item_path: ParameterType = ParameterType_pt_mink_config
  * @type {number}
  */
 export
-const ParameterType_pt_mink_config_cfg_item_notify: ParameterType = 7416; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_mink_config_cfg_item_notify = 7416 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_config_cfg_item_notify
@@ -1330,7 +1330,7 @@ const ParameterType_pt_mink_config_cfg_item_notify: ParameterType = 7416; /* LON
  * @type {number}
  */
 export
-const pt_mink_config_cfg_item_notify: ParameterType = ParameterType_pt_mink_config_cfg_item_notify; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_mink_config_cfg_item_notify = ParameterType_pt_mink_config_cfg_item_notify; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_config_cfg_item_count
@@ -1338,7 +1338,7 @@ const pt_mink_config_cfg_item_notify: ParameterType = ParameterType_pt_mink_conf
  * @type {number}
  */
 export
-const ParameterType_pt_mink_config_cfg_item_count: ParameterType = 7417; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_mink_config_cfg_item_count = 7417 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_config_cfg_item_count
@@ -1346,7 +1346,7 @@ const ParameterType_pt_mink_config_cfg_item_count: ParameterType = 7417; /* LONG
  * @type {number}
  */
 export
-const pt_mink_config_cfg_item_count: ParameterType = ParameterType_pt_mink_config_cfg_item_count; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_mink_config_cfg_item_count = ParameterType_pt_mink_config_cfg_item_count; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_config_replication_line
@@ -1354,7 +1354,7 @@ const pt_mink_config_cfg_item_count: ParameterType = ParameterType_pt_mink_confi
  * @type {number}
  */
 export
-const ParameterType_pt_mink_config_replication_line: ParameterType = 7418; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_mink_config_replication_line = 7418 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_config_replication_line
@@ -1362,7 +1362,7 @@ const ParameterType_pt_mink_config_replication_line: ParameterType = 7418; /* LO
  * @type {number}
  */
 export
-const pt_mink_config_replication_line: ParameterType = ParameterType_pt_mink_config_replication_line; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_mink_config_replication_line = ParameterType_pt_mink_config_replication_line; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_sms_status
@@ -1370,7 +1370,7 @@ const pt_mink_config_replication_line: ParameterType = ParameterType_pt_mink_con
  * @type {number}
  */
 export
-const ParameterType_pt_mink_sms_status: ParameterType = 7500; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_mink_sms_status = 7500 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_sms_status
@@ -1378,7 +1378,7 @@ const ParameterType_pt_mink_sms_status: ParameterType = 7500; /* LONG_NAMED_INTE
  * @type {number}
  */
 export
-const pt_mink_sms_status: ParameterType = ParameterType_pt_mink_sms_status; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_mink_sms_status = ParameterType_pt_mink_sms_status; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_sms_uuid
@@ -1386,7 +1386,7 @@ const pt_mink_sms_status: ParameterType = ParameterType_pt_mink_sms_status; /* S
  * @type {number}
  */
 export
-const ParameterType_pt_mink_sms_uuid: ParameterType = 7501; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_mink_sms_uuid = 7501 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_sms_uuid
@@ -1394,7 +1394,7 @@ const ParameterType_pt_mink_sms_uuid: ParameterType = 7501; /* LONG_NAMED_INTEGE
  * @type {number}
  */
 export
-const pt_mink_sms_uuid: ParameterType = ParameterType_pt_mink_sms_uuid; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_mink_sms_uuid = ParameterType_pt_mink_sms_uuid; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_filter_result
@@ -1402,7 +1402,7 @@ const pt_mink_sms_uuid: ParameterType = ParameterType_pt_mink_sms_uuid; /* SHORT
  * @type {number}
  */
 export
-const ParameterType_pt_mink_filter_result: ParameterType = 7600; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_mink_filter_result = 7600 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_filter_result
@@ -1410,7 +1410,7 @@ const ParameterType_pt_mink_filter_result: ParameterType = 7600; /* LONG_NAMED_I
  * @type {number}
  */
 export
-const pt_mink_filter_result: ParameterType = ParameterType_pt_mink_filter_result; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_mink_filter_result = ParameterType_pt_mink_filter_result; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_filter_exit
@@ -1418,7 +1418,7 @@ const pt_mink_filter_result: ParameterType = ParameterType_pt_mink_filter_result
  * @type {number}
  */
 export
-const ParameterType_pt_mink_filter_exit: ParameterType = 7601; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_mink_filter_exit = 7601 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_filter_exit
@@ -1426,7 +1426,7 @@ const ParameterType_pt_mink_filter_exit: ParameterType = 7601; /* LONG_NAMED_INT
  * @type {number}
  */
 export
-const pt_mink_filter_exit: ParameterType = ParameterType_pt_mink_filter_exit; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_mink_filter_exit = ParameterType_pt_mink_filter_exit; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_filter_list_id
@@ -1434,7 +1434,7 @@ const pt_mink_filter_exit: ParameterType = ParameterType_pt_mink_filter_exit; /*
  * @type {number}
  */
 export
-const ParameterType_pt_mink_filter_list_id: ParameterType = 7602; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_mink_filter_list_id = 7602 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_filter_list_id
@@ -1442,7 +1442,7 @@ const ParameterType_pt_mink_filter_list_id: ParameterType = 7602; /* LONG_NAMED_
  * @type {number}
  */
 export
-const pt_mink_filter_list_id: ParameterType = ParameterType_pt_mink_filter_list_id; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_mink_filter_list_id = ParameterType_pt_mink_filter_list_id; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_filter_list_label
@@ -1450,7 +1450,7 @@ const pt_mink_filter_list_id: ParameterType = ParameterType_pt_mink_filter_list_
  * @type {number}
  */
 export
-const ParameterType_pt_mink_filter_list_label: ParameterType = 7603; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_mink_filter_list_label = 7603 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_filter_list_label
@@ -1458,7 +1458,7 @@ const ParameterType_pt_mink_filter_list_label: ParameterType = 7603; /* LONG_NAM
  * @type {number}
  */
 export
-const pt_mink_filter_list_label: ParameterType = ParameterType_pt_mink_filter_list_label; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_mink_filter_list_label = ParameterType_pt_mink_filter_list_label; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_filter_data
@@ -1466,7 +1466,7 @@ const pt_mink_filter_list_label: ParameterType = ParameterType_pt_mink_filter_li
  * @type {number}
  */
 export
-const ParameterType_pt_mink_filter_data: ParameterType = 7604; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_mink_filter_data = 7604 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_filter_data
@@ -1474,7 +1474,7 @@ const ParameterType_pt_mink_filter_data: ParameterType = 7604; /* LONG_NAMED_INT
  * @type {number}
  */
 export
-const pt_mink_filter_data: ParameterType = ParameterType_pt_mink_filter_data; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_mink_filter_data = ParameterType_pt_mink_filter_data; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_filter_data_size
@@ -1482,7 +1482,7 @@ const pt_mink_filter_data: ParameterType = ParameterType_pt_mink_filter_data; /*
  * @type {number}
  */
 export
-const ParameterType_pt_mink_filter_data_size: ParameterType = 7605; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_mink_filter_data_size = 7605 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_mink_filter_data_size
@@ -1490,7 +1490,7 @@ const ParameterType_pt_mink_filter_data_size: ParameterType = 7605; /* LONG_NAME
  * @type {number}
  */
 export
-const pt_mink_filter_data_size: ParameterType = ParameterType_pt_mink_filter_data_size; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_mink_filter_data_size = ParameterType_pt_mink_filter_data_size; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_eth_destination_mac
@@ -1498,7 +1498,7 @@ const pt_mink_filter_data_size: ParameterType = ParameterType_pt_mink_filter_dat
  * @type {number}
  */
 export
-const ParameterType_pt_eth_destination_mac: ParameterType = 600; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_eth_destination_mac = 600 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_eth_destination_mac
@@ -1506,7 +1506,7 @@ const ParameterType_pt_eth_destination_mac: ParameterType = 600; /* LONG_NAMED_I
  * @type {number}
  */
 export
-const pt_eth_destination_mac: ParameterType = ParameterType_pt_eth_destination_mac; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_eth_destination_mac = ParameterType_pt_eth_destination_mac; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_eth_source_mac
@@ -1514,7 +1514,7 @@ const pt_eth_destination_mac: ParameterType = ParameterType_pt_eth_destination_m
  * @type {number}
  */
 export
-const ParameterType_pt_eth_source_mac: ParameterType = 601; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_eth_source_mac = 601 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_eth_source_mac
@@ -1522,7 +1522,7 @@ const ParameterType_pt_eth_source_mac: ParameterType = 601; /* LONG_NAMED_INTEGE
  * @type {number}
  */
 export
-const pt_eth_source_mac: ParameterType = ParameterType_pt_eth_source_mac; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_eth_source_mac = ParameterType_pt_eth_source_mac; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_ip_destination_ip
@@ -1530,7 +1530,7 @@ const pt_eth_source_mac: ParameterType = ParameterType_pt_eth_source_mac; /* SHO
  * @type {number}
  */
 export
-const ParameterType_pt_ip_destination_ip: ParameterType = 700; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_ip_destination_ip = 700 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_ip_destination_ip
@@ -1538,7 +1538,7 @@ const ParameterType_pt_ip_destination_ip: ParameterType = 700; /* LONG_NAMED_INT
  * @type {number}
  */
 export
-const pt_ip_destination_ip: ParameterType = ParameterType_pt_ip_destination_ip; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_ip_destination_ip = ParameterType_pt_ip_destination_ip; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_ip_source_ip
@@ -1546,7 +1546,7 @@ const pt_ip_destination_ip: ParameterType = ParameterType_pt_ip_destination_ip; 
  * @type {number}
  */
 export
-const ParameterType_pt_ip_source_ip: ParameterType = 701; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_ip_source_ip = 701 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_ip_source_ip
@@ -1554,7 +1554,7 @@ const ParameterType_pt_ip_source_ip: ParameterType = 701; /* LONG_NAMED_INTEGER_
  * @type {number}
  */
 export
-const pt_ip_source_ip: ParameterType = ParameterType_pt_ip_source_ip; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_ip_source_ip = ParameterType_pt_ip_source_ip; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_tcp_destination_port
@@ -1562,7 +1562,7 @@ const pt_ip_source_ip: ParameterType = ParameterType_pt_ip_source_ip; /* SHORT_N
  * @type {number}
  */
 export
-const ParameterType_pt_tcp_destination_port: ParameterType = 800; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_tcp_destination_port = 800 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_tcp_destination_port
@@ -1570,7 +1570,7 @@ const ParameterType_pt_tcp_destination_port: ParameterType = 800; /* LONG_NAMED_
  * @type {number}
  */
 export
-const pt_tcp_destination_port: ParameterType = ParameterType_pt_tcp_destination_port; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_tcp_destination_port = ParameterType_pt_tcp_destination_port; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_tcp_source_port
@@ -1578,7 +1578,7 @@ const pt_tcp_destination_port: ParameterType = ParameterType_pt_tcp_destination_
  * @type {number}
  */
 export
-const ParameterType_pt_tcp_source_port: ParameterType = 801; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_tcp_source_port = 801 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_tcp_source_port
@@ -1586,7 +1586,7 @@ const ParameterType_pt_tcp_source_port: ParameterType = 801; /* LONG_NAMED_INTEG
  * @type {number}
  */
 export
-const pt_tcp_source_port: ParameterType = ParameterType_pt_tcp_source_port; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_tcp_source_port = ParameterType_pt_tcp_source_port; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_udp_destination_port
@@ -1594,7 +1594,7 @@ const pt_tcp_source_port: ParameterType = ParameterType_pt_tcp_source_port; /* S
  * @type {number}
  */
 export
-const ParameterType_pt_udp_destination_port: ParameterType = 900; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_udp_destination_port = 900 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_udp_destination_port
@@ -1602,7 +1602,7 @@ const ParameterType_pt_udp_destination_port: ParameterType = 900; /* LONG_NAMED_
  * @type {number}
  */
 export
-const pt_udp_destination_port: ParameterType = ParameterType_pt_udp_destination_port; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_udp_destination_port = ParameterType_pt_udp_destination_port; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_udp_source_port
@@ -1610,7 +1610,7 @@ const pt_udp_destination_port: ParameterType = ParameterType_pt_udp_destination_
  * @type {number}
  */
 export
-const ParameterType_pt_udp_source_port: ParameterType = 901; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_udp_source_port = 901 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_udp_source_port
@@ -1618,7 +1618,7 @@ const ParameterType_pt_udp_source_port: ParameterType = 901; /* LONG_NAMED_INTEG
  * @type {number}
  */
 export
-const pt_udp_source_port: ParameterType = ParameterType_pt_udp_source_port; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_udp_source_port = ParameterType_pt_udp_source_port; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_sctp_destination_port
@@ -1626,7 +1626,7 @@ const pt_udp_source_port: ParameterType = ParameterType_pt_udp_source_port; /* S
  * @type {number}
  */
 export
-const ParameterType_pt_sctp_destination_port: ParameterType = 1000; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_sctp_destination_port = 1000 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_sctp_destination_port
@@ -1634,7 +1634,7 @@ const ParameterType_pt_sctp_destination_port: ParameterType = 1000; /* LONG_NAME
  * @type {number}
  */
 export
-const pt_sctp_destination_port: ParameterType = ParameterType_pt_sctp_destination_port; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_sctp_destination_port = ParameterType_pt_sctp_destination_port; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_sctp_source_port
@@ -1642,7 +1642,7 @@ const pt_sctp_destination_port: ParameterType = ParameterType_pt_sctp_destinatio
  * @type {number}
  */
 export
-const ParameterType_pt_sctp_source_port: ParameterType = 1001; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_sctp_source_port = 1001 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_sctp_source_port
@@ -1650,7 +1650,7 @@ const ParameterType_pt_sctp_source_port: ParameterType = 1001; /* LONG_NAMED_INT
  * @type {number}
  */
 export
-const pt_sctp_source_port: ParameterType = ParameterType_pt_sctp_source_port; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_sctp_source_port = ParameterType_pt_sctp_source_port; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_gsmmap_scoa_digits
@@ -1658,7 +1658,7 @@ const pt_sctp_source_port: ParameterType = ParameterType_pt_sctp_source_port; /*
  * @type {number}
  */
 export
-const ParameterType_pt_gsmmap_scoa_digits: ParameterType = 500; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_gsmmap_scoa_digits = 500 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_gsmmap_scoa_digits
@@ -1666,7 +1666,7 @@ const ParameterType_pt_gsmmap_scoa_digits: ParameterType = 500; /* LONG_NAMED_IN
  * @type {number}
  */
 export
-const pt_gsmmap_scoa_digits: ParameterType = ParameterType_pt_gsmmap_scoa_digits; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_gsmmap_scoa_digits = ParameterType_pt_gsmmap_scoa_digits; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_gsmmap_scoa_type_of_number
@@ -1674,7 +1674,7 @@ const pt_gsmmap_scoa_digits: ParameterType = ParameterType_pt_gsmmap_scoa_digits
  * @type {number}
  */
 export
-const ParameterType_pt_gsmmap_scoa_type_of_number: ParameterType = 501; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_gsmmap_scoa_type_of_number = 501 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_gsmmap_scoa_type_of_number
@@ -1682,7 +1682,7 @@ const ParameterType_pt_gsmmap_scoa_type_of_number: ParameterType = 501; /* LONG_
  * @type {number}
  */
 export
-const pt_gsmmap_scoa_type_of_number: ParameterType = ParameterType_pt_gsmmap_scoa_type_of_number; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_gsmmap_scoa_type_of_number = ParameterType_pt_gsmmap_scoa_type_of_number; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_gsmmap_scoa_numbering_plan
@@ -1690,7 +1690,7 @@ const pt_gsmmap_scoa_type_of_number: ParameterType = ParameterType_pt_gsmmap_sco
  * @type {number}
  */
 export
-const ParameterType_pt_gsmmap_scoa_numbering_plan: ParameterType = 502; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_gsmmap_scoa_numbering_plan = 502 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_gsmmap_scoa_numbering_plan
@@ -1698,7 +1698,7 @@ const ParameterType_pt_gsmmap_scoa_numbering_plan: ParameterType = 502; /* LONG_
  * @type {number}
  */
 export
-const pt_gsmmap_scoa_numbering_plan: ParameterType = ParameterType_pt_gsmmap_scoa_numbering_plan; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_gsmmap_scoa_numbering_plan = ParameterType_pt_gsmmap_scoa_numbering_plan; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_gsmmap_scda_digits
@@ -1706,7 +1706,7 @@ const pt_gsmmap_scoa_numbering_plan: ParameterType = ParameterType_pt_gsmmap_sco
  * @type {number}
  */
 export
-const ParameterType_pt_gsmmap_scda_digits: ParameterType = 503; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_gsmmap_scda_digits = 503 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_gsmmap_scda_digits
@@ -1714,7 +1714,7 @@ const ParameterType_pt_gsmmap_scda_digits: ParameterType = 503; /* LONG_NAMED_IN
  * @type {number}
  */
 export
-const pt_gsmmap_scda_digits: ParameterType = ParameterType_pt_gsmmap_scda_digits; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_gsmmap_scda_digits = ParameterType_pt_gsmmap_scda_digits; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_gsmmap_scda_type_of_number
@@ -1722,7 +1722,7 @@ const pt_gsmmap_scda_digits: ParameterType = ParameterType_pt_gsmmap_scda_digits
  * @type {number}
  */
 export
-const ParameterType_pt_gsmmap_scda_type_of_number: ParameterType = 504; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_gsmmap_scda_type_of_number = 504 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_gsmmap_scda_type_of_number
@@ -1730,7 +1730,7 @@ const ParameterType_pt_gsmmap_scda_type_of_number: ParameterType = 504; /* LONG_
  * @type {number}
  */
 export
-const pt_gsmmap_scda_type_of_number: ParameterType = ParameterType_pt_gsmmap_scda_type_of_number; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_gsmmap_scda_type_of_number = ParameterType_pt_gsmmap_scda_type_of_number; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_gsmmap_scda_numbering_plan
@@ -1738,7 +1738,7 @@ const pt_gsmmap_scda_type_of_number: ParameterType = ParameterType_pt_gsmmap_scd
  * @type {number}
  */
 export
-const ParameterType_pt_gsmmap_scda_numbering_plan: ParameterType = 505; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_gsmmap_scda_numbering_plan = 505 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_gsmmap_scda_numbering_plan
@@ -1746,7 +1746,7 @@ const ParameterType_pt_gsmmap_scda_numbering_plan: ParameterType = 505; /* LONG_
  * @type {number}
  */
 export
-const pt_gsmmap_scda_numbering_plan: ParameterType = ParameterType_pt_gsmmap_scda_numbering_plan; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_gsmmap_scda_numbering_plan = ParameterType_pt_gsmmap_scda_numbering_plan; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_gsmmap_imsi
@@ -1754,7 +1754,7 @@ const pt_gsmmap_scda_numbering_plan: ParameterType = ParameterType_pt_gsmmap_scd
  * @type {number}
  */
 export
-const ParameterType_pt_gsmmap_imsi: ParameterType = 506; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_gsmmap_imsi = 506 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_gsmmap_imsi
@@ -1762,7 +1762,7 @@ const ParameterType_pt_gsmmap_imsi: ParameterType = 506; /* LONG_NAMED_INTEGER_V
  * @type {number}
  */
 export
-const pt_gsmmap_imsi: ParameterType = ParameterType_pt_gsmmap_imsi; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_gsmmap_imsi = ParameterType_pt_gsmmap_imsi; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_gsmmap_msisdn_digits
@@ -1770,7 +1770,7 @@ const pt_gsmmap_imsi: ParameterType = ParameterType_pt_gsmmap_imsi; /* SHORT_NAM
  * @type {number}
  */
 export
-const ParameterType_pt_gsmmap_msisdn_digits: ParameterType = 507; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_gsmmap_msisdn_digits = 507 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_gsmmap_msisdn_digits
@@ -1778,7 +1778,7 @@ const ParameterType_pt_gsmmap_msisdn_digits: ParameterType = 507; /* LONG_NAMED_
  * @type {number}
  */
 export
-const pt_gsmmap_msisdn_digits: ParameterType = ParameterType_pt_gsmmap_msisdn_digits; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_gsmmap_msisdn_digits = ParameterType_pt_gsmmap_msisdn_digits; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_gsmmap_msisdn_type_of_number
@@ -1786,7 +1786,7 @@ const pt_gsmmap_msisdn_digits: ParameterType = ParameterType_pt_gsmmap_msisdn_di
  * @type {number}
  */
 export
-const ParameterType_pt_gsmmap_msisdn_type_of_number: ParameterType = 508; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_gsmmap_msisdn_type_of_number = 508 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_gsmmap_msisdn_type_of_number
@@ -1794,7 +1794,7 @@ const ParameterType_pt_gsmmap_msisdn_type_of_number: ParameterType = 508; /* LON
  * @type {number}
  */
 export
-const pt_gsmmap_msisdn_type_of_number: ParameterType = ParameterType_pt_gsmmap_msisdn_type_of_number; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_gsmmap_msisdn_type_of_number = ParameterType_pt_gsmmap_msisdn_type_of_number; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_gsmmap_msisdn_numbering_plan
@@ -1802,7 +1802,7 @@ const pt_gsmmap_msisdn_type_of_number: ParameterType = ParameterType_pt_gsmmap_m
  * @type {number}
  */
 export
-const ParameterType_pt_gsmmap_msisdn_numbering_plan: ParameterType = 509; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_gsmmap_msisdn_numbering_plan = 509 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_gsmmap_msisdn_numbering_plan
@@ -1810,7 +1810,7 @@ const ParameterType_pt_gsmmap_msisdn_numbering_plan: ParameterType = 509; /* LON
  * @type {number}
  */
 export
-const pt_gsmmap_msisdn_numbering_plan: ParameterType = ParameterType_pt_gsmmap_msisdn_numbering_plan; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_gsmmap_msisdn_numbering_plan = ParameterType_pt_gsmmap_msisdn_numbering_plan; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_tcap_source_transaction_id
@@ -1818,7 +1818,7 @@ const pt_gsmmap_msisdn_numbering_plan: ParameterType = ParameterType_pt_gsmmap_m
  * @type {number}
  */
 export
-const ParameterType_pt_tcap_source_transaction_id: ParameterType = 510; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_tcap_source_transaction_id = 510 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_tcap_source_transaction_id
@@ -1826,7 +1826,7 @@ const ParameterType_pt_tcap_source_transaction_id: ParameterType = 510; /* LONG_
  * @type {number}
  */
 export
-const pt_tcap_source_transaction_id: ParameterType = ParameterType_pt_tcap_source_transaction_id; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_tcap_source_transaction_id = ParameterType_pt_tcap_source_transaction_id; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_tcap_destination_transaction_id
@@ -1834,7 +1834,7 @@ const pt_tcap_source_transaction_id: ParameterType = ParameterType_pt_tcap_sourc
  * @type {number}
  */
 export
-const ParameterType_pt_tcap_destination_transaction_id: ParameterType = 511; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_tcap_destination_transaction_id = 511 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_tcap_destination_transaction_id
@@ -1842,7 +1842,7 @@ const ParameterType_pt_tcap_destination_transaction_id: ParameterType = 511; /* 
  * @type {number}
  */
 export
-const pt_tcap_destination_transaction_id: ParameterType = ParameterType_pt_tcap_destination_transaction_id; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_tcap_destination_transaction_id = ParameterType_pt_tcap_destination_transaction_id; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_tcap_opcode
@@ -1850,7 +1850,7 @@ const pt_tcap_destination_transaction_id: ParameterType = ParameterType_pt_tcap_
  * @type {number}
  */
 export
-const ParameterType_pt_tcap_opcode: ParameterType = 512; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_tcap_opcode = 512 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_tcap_opcode
@@ -1858,7 +1858,7 @@ const ParameterType_pt_tcap_opcode: ParameterType = 512; /* LONG_NAMED_INTEGER_V
  * @type {number}
  */
 export
-const pt_tcap_opcode: ParameterType = ParameterType_pt_tcap_opcode; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_tcap_opcode = ParameterType_pt_tcap_opcode; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_tcap_component_type
@@ -1866,7 +1866,7 @@ const pt_tcap_opcode: ParameterType = ParameterType_pt_tcap_opcode; /* SHORT_NAM
  * @type {number}
  */
 export
-const ParameterType_pt_tcap_component_type: ParameterType = 513; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_tcap_component_type = 513 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_tcap_component_type
@@ -1874,7 +1874,7 @@ const ParameterType_pt_tcap_component_type: ParameterType = 513; /* LONG_NAMED_I
  * @type {number}
  */
 export
-const pt_tcap_component_type: ParameterType = ParameterType_pt_tcap_component_type; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_tcap_component_type = ParameterType_pt_tcap_component_type; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_tcap_component_invoke_id
@@ -1882,7 +1882,7 @@ const pt_tcap_component_type: ParameterType = ParameterType_pt_tcap_component_ty
  * @type {number}
  */
 export
-const ParameterType_pt_tcap_component_invoke_id: ParameterType = 514; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_tcap_component_invoke_id = 514 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_tcap_component_invoke_id
@@ -1890,7 +1890,7 @@ const ParameterType_pt_tcap_component_invoke_id: ParameterType = 514; /* LONG_NA
  * @type {number}
  */
 export
-const pt_tcap_component_invoke_id: ParameterType = ParameterType_pt_tcap_component_invoke_id; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_tcap_component_invoke_id = ParameterType_pt_tcap_component_invoke_id; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_tcap_error_type
@@ -1898,7 +1898,7 @@ const pt_tcap_component_invoke_id: ParameterType = ParameterType_pt_tcap_compone
  * @type {number}
  */
 export
-const ParameterType_pt_tcap_error_type: ParameterType = 515; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_tcap_error_type = 515 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_tcap_error_type
@@ -1906,7 +1906,7 @@ const ParameterType_pt_tcap_error_type: ParameterType = 515; /* LONG_NAMED_INTEG
  * @type {number}
  */
 export
-const pt_tcap_error_type: ParameterType = ParameterType_pt_tcap_error_type; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_tcap_error_type = ParameterType_pt_tcap_error_type; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_tcap_error_code
@@ -1914,7 +1914,7 @@ const pt_tcap_error_type: ParameterType = ParameterType_pt_tcap_error_type; /* S
  * @type {number}
  */
 export
-const ParameterType_pt_tcap_error_code: ParameterType = 516; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_tcap_error_code = 516 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_tcap_error_code
@@ -1922,7 +1922,7 @@ const ParameterType_pt_tcap_error_code: ParameterType = 516; /* LONG_NAMED_INTEG
  * @type {number}
  */
 export
-const pt_tcap_error_code: ParameterType = ParameterType_pt_tcap_error_code; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_tcap_error_code = ParameterType_pt_tcap_error_code; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_tcap_dialogue_context_oid
@@ -1930,7 +1930,7 @@ const pt_tcap_error_code: ParameterType = ParameterType_pt_tcap_error_code; /* S
  * @type {number}
  */
 export
-const ParameterType_pt_tcap_dialogue_context_oid: ParameterType = 517; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_tcap_dialogue_context_oid = 517 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_tcap_dialogue_context_oid
@@ -1938,7 +1938,7 @@ const ParameterType_pt_tcap_dialogue_context_oid: ParameterType = 517; /* LONG_N
  * @type {number}
  */
 export
-const pt_tcap_dialogue_context_oid: ParameterType = ParameterType_pt_tcap_dialogue_context_oid; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_tcap_dialogue_context_oid = ParameterType_pt_tcap_dialogue_context_oid; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_tcap_message_type
@@ -1946,7 +1946,7 @@ const pt_tcap_dialogue_context_oid: ParameterType = ParameterType_pt_tcap_dialog
  * @type {number}
  */
 export
-const ParameterType_pt_tcap_message_type: ParameterType = 518; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_tcap_message_type = 518 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_tcap_message_type
@@ -1954,7 +1954,7 @@ const ParameterType_pt_tcap_message_type: ParameterType = 518; /* LONG_NAMED_INT
  * @type {number}
  */
 export
-const pt_tcap_message_type: ParameterType = ParameterType_pt_tcap_message_type; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_tcap_message_type = ParameterType_pt_tcap_message_type; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_gsmmap_nnn_digits
@@ -1962,7 +1962,7 @@ const pt_tcap_message_type: ParameterType = ParameterType_pt_tcap_message_type; 
  * @type {number}
  */
 export
-const ParameterType_pt_gsmmap_nnn_digits: ParameterType = 519; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_gsmmap_nnn_digits = 519 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_gsmmap_nnn_digits
@@ -1970,7 +1970,7 @@ const ParameterType_pt_gsmmap_nnn_digits: ParameterType = 519; /* LONG_NAMED_INT
  * @type {number}
  */
 export
-const pt_gsmmap_nnn_digits: ParameterType = ParameterType_pt_gsmmap_nnn_digits; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_gsmmap_nnn_digits = ParameterType_pt_gsmmap_nnn_digits; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_gsmmap_nnn_type_of_number
@@ -1978,7 +1978,7 @@ const pt_gsmmap_nnn_digits: ParameterType = ParameterType_pt_gsmmap_nnn_digits; 
  * @type {number}
  */
 export
-const ParameterType_pt_gsmmap_nnn_type_of_number: ParameterType = 520; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_gsmmap_nnn_type_of_number = 520 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_gsmmap_nnn_type_of_number
@@ -1986,7 +1986,7 @@ const ParameterType_pt_gsmmap_nnn_type_of_number: ParameterType = 520; /* LONG_N
  * @type {number}
  */
 export
-const pt_gsmmap_nnn_type_of_number: ParameterType = ParameterType_pt_gsmmap_nnn_type_of_number; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_gsmmap_nnn_type_of_number = ParameterType_pt_gsmmap_nnn_type_of_number; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_gsmmap_nnn_numbering_plan
@@ -1994,7 +1994,7 @@ const pt_gsmmap_nnn_type_of_number: ParameterType = ParameterType_pt_gsmmap_nnn_
  * @type {number}
  */
 export
-const ParameterType_pt_gsmmap_nnn_numbering_plan: ParameterType = 521; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_gsmmap_nnn_numbering_plan = 521 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_gsmmap_nnn_numbering_plan
@@ -2002,7 +2002,7 @@ const ParameterType_pt_gsmmap_nnn_numbering_plan: ParameterType = 521; /* LONG_N
  * @type {number}
  */
 export
-const pt_gsmmap_nnn_numbering_plan: ParameterType = ParameterType_pt_gsmmap_nnn_numbering_plan; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_gsmmap_nnn_numbering_plan = ParameterType_pt_gsmmap_nnn_numbering_plan; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_gsmmap_an_digits
@@ -2010,7 +2010,7 @@ const pt_gsmmap_nnn_numbering_plan: ParameterType = ParameterType_pt_gsmmap_nnn_
  * @type {number}
  */
 export
-const ParameterType_pt_gsmmap_an_digits: ParameterType = 522; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_gsmmap_an_digits = 522 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_gsmmap_an_digits
@@ -2018,7 +2018,7 @@ const ParameterType_pt_gsmmap_an_digits: ParameterType = 522; /* LONG_NAMED_INTE
  * @type {number}
  */
 export
-const pt_gsmmap_an_digits: ParameterType = ParameterType_pt_gsmmap_an_digits; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_gsmmap_an_digits = ParameterType_pt_gsmmap_an_digits; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_gsmmap_an_type_of_number
@@ -2026,7 +2026,7 @@ const pt_gsmmap_an_digits: ParameterType = ParameterType_pt_gsmmap_an_digits; /*
  * @type {number}
  */
 export
-const ParameterType_pt_gsmmap_an_type_of_number: ParameterType = 523; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_gsmmap_an_type_of_number = 523 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_gsmmap_an_type_of_number
@@ -2034,7 +2034,7 @@ const ParameterType_pt_gsmmap_an_type_of_number: ParameterType = 523; /* LONG_NA
  * @type {number}
  */
 export
-const pt_gsmmap_an_type_of_number: ParameterType = ParameterType_pt_gsmmap_an_type_of_number; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_gsmmap_an_type_of_number = ParameterType_pt_gsmmap_an_type_of_number; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_gsmmap_an_numbering_plan
@@ -2042,7 +2042,7 @@ const pt_gsmmap_an_type_of_number: ParameterType = ParameterType_pt_gsmmap_an_ty
  * @type {number}
  */
 export
-const ParameterType_pt_gsmmap_an_numbering_plan: ParameterType = 524; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_gsmmap_an_numbering_plan = 524 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_gsmmap_an_numbering_plan
@@ -2050,7 +2050,7 @@ const ParameterType_pt_gsmmap_an_numbering_plan: ParameterType = 524; /* LONG_NA
  * @type {number}
  */
 export
-const pt_gsmmap_an_numbering_plan: ParameterType = ParameterType_pt_gsmmap_an_numbering_plan; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_gsmmap_an_numbering_plan = ParameterType_pt_gsmmap_an_numbering_plan; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_gsmmap_sca_digits
@@ -2058,7 +2058,7 @@ const pt_gsmmap_an_numbering_plan: ParameterType = ParameterType_pt_gsmmap_an_nu
  * @type {number}
  */
 export
-const ParameterType_pt_gsmmap_sca_digits: ParameterType = 525; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_gsmmap_sca_digits = 525 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_gsmmap_sca_digits
@@ -2066,7 +2066,7 @@ const ParameterType_pt_gsmmap_sca_digits: ParameterType = 525; /* LONG_NAMED_INT
  * @type {number}
  */
 export
-const pt_gsmmap_sca_digits: ParameterType = ParameterType_pt_gsmmap_sca_digits; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_gsmmap_sca_digits = ParameterType_pt_gsmmap_sca_digits; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_gsmmap_sca_type_of_number
@@ -2074,7 +2074,7 @@ const pt_gsmmap_sca_digits: ParameterType = ParameterType_pt_gsmmap_sca_digits; 
  * @type {number}
  */
 export
-const ParameterType_pt_gsmmap_sca_type_of_number: ParameterType = 526; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_gsmmap_sca_type_of_number = 526 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_gsmmap_sca_type_of_number
@@ -2082,7 +2082,7 @@ const ParameterType_pt_gsmmap_sca_type_of_number: ParameterType = 526; /* LONG_N
  * @type {number}
  */
 export
-const pt_gsmmap_sca_type_of_number: ParameterType = ParameterType_pt_gsmmap_sca_type_of_number; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_gsmmap_sca_type_of_number = ParameterType_pt_gsmmap_sca_type_of_number; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_gsmmap_sca_numbering_plan
@@ -2090,7 +2090,7 @@ const pt_gsmmap_sca_type_of_number: ParameterType = ParameterType_pt_gsmmap_sca_
  * @type {number}
  */
 export
-const ParameterType_pt_gsmmap_sca_numbering_plan: ParameterType = 527; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_gsmmap_sca_numbering_plan = 527 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_gsmmap_sca_numbering_plan
@@ -2098,7 +2098,7 @@ const ParameterType_pt_gsmmap_sca_numbering_plan: ParameterType = 527; /* LONG_N
  * @type {number}
  */
 export
-const pt_gsmmap_sca_numbering_plan: ParameterType = ParameterType_pt_gsmmap_sca_numbering_plan; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_gsmmap_sca_numbering_plan = ParameterType_pt_gsmmap_sca_numbering_plan; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_tcap_component_count
@@ -2106,7 +2106,7 @@ const pt_gsmmap_sca_numbering_plan: ParameterType = ParameterType_pt_gsmmap_sca_
  * @type {number}
  */
 export
-const ParameterType_pt_tcap_component_count: ParameterType = 528; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_tcap_component_count = 528 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_tcap_component_count
@@ -2114,7 +2114,7 @@ const ParameterType_pt_tcap_component_count: ParameterType = 528; /* LONG_NAMED_
  * @type {number}
  */
 export
-const pt_tcap_component_count: ParameterType = ParameterType_pt_tcap_component_count; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_tcap_component_count = ParameterType_pt_tcap_component_count; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_tcap_dialogue_context_supported
@@ -2122,7 +2122,7 @@ const pt_tcap_component_count: ParameterType = ParameterType_pt_tcap_component_c
  * @type {number}
  */
 export
-const ParameterType_pt_tcap_dialogue_context_supported: ParameterType = 529; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_tcap_dialogue_context_supported = 529 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_tcap_dialogue_context_supported
@@ -2130,7 +2130,7 @@ const ParameterType_pt_tcap_dialogue_context_supported: ParameterType = 529; /* 
  * @type {number}
  */
 export
-const pt_tcap_dialogue_context_supported: ParameterType = ParameterType_pt_tcap_dialogue_context_supported; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_tcap_dialogue_context_supported = ParameterType_pt_tcap_dialogue_context_supported; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_tcap_component_index
@@ -2138,7 +2138,7 @@ const pt_tcap_dialogue_context_supported: ParameterType = ParameterType_pt_tcap_
  * @type {number}
  */
 export
-const ParameterType_pt_tcap_component_index: ParameterType = 530; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_tcap_component_index = 530 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_tcap_component_index
@@ -2146,7 +2146,7 @@ const ParameterType_pt_tcap_component_index: ParameterType = 530; /* LONG_NAMED_
  * @type {number}
  */
 export
-const pt_tcap_component_index: ParameterType = ParameterType_pt_tcap_component_index; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_tcap_component_index = ParameterType_pt_tcap_component_index; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_tcap_source_transaction_id_length
@@ -2154,7 +2154,7 @@ const pt_tcap_component_index: ParameterType = ParameterType_pt_tcap_component_i
  * @type {number}
  */
 export
-const ParameterType_pt_tcap_source_transaction_id_length: ParameterType = 531; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_tcap_source_transaction_id_length = 531 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_tcap_source_transaction_id_length
@@ -2162,7 +2162,7 @@ const ParameterType_pt_tcap_source_transaction_id_length: ParameterType = 531; /
  * @type {number}
  */
 export
-const pt_tcap_source_transaction_id_length: ParameterType = ParameterType_pt_tcap_source_transaction_id_length; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_tcap_source_transaction_id_length = ParameterType_pt_tcap_source_transaction_id_length; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_tcap_destination_transaction_id_length
@@ -2170,7 +2170,7 @@ const pt_tcap_source_transaction_id_length: ParameterType = ParameterType_pt_tca
  * @type {number}
  */
 export
-const ParameterType_pt_tcap_destination_transaction_id_length: ParameterType = 532; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_tcap_destination_transaction_id_length = 532 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_tcap_destination_transaction_id_length
@@ -2178,7 +2178,7 @@ const ParameterType_pt_tcap_destination_transaction_id_length: ParameterType = 5
  * @type {number}
  */
 export
-const pt_tcap_destination_transaction_id_length: ParameterType = ParameterType_pt_tcap_destination_transaction_id_length; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_tcap_destination_transaction_id_length = ParameterType_pt_tcap_destination_transaction_id_length; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_gsmmap_version
@@ -2186,7 +2186,7 @@ const pt_tcap_destination_transaction_id_length: ParameterType = ParameterType_p
  * @type {number}
  */
 export
-const ParameterType_pt_gsmmap_version: ParameterType = 533; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_gsmmap_version = 533 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_gsmmap_version
@@ -2194,7 +2194,7 @@ const ParameterType_pt_gsmmap_version: ParameterType = 533; /* LONG_NAMED_INTEGE
  * @type {number}
  */
 export
-const pt_gsmmap_version: ParameterType = ParameterType_pt_gsmmap_version; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_gsmmap_version = ParameterType_pt_gsmmap_version; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_smstpdu_tp_udhi
@@ -2202,7 +2202,7 @@ const pt_gsmmap_version: ParameterType = ParameterType_pt_gsmmap_version; /* SHO
  * @type {number}
  */
 export
-const ParameterType_pt_smstpdu_tp_udhi: ParameterType = 400; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_smstpdu_tp_udhi = 400 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_smstpdu_tp_udhi
@@ -2210,7 +2210,7 @@ const ParameterType_pt_smstpdu_tp_udhi: ParameterType = 400; /* LONG_NAMED_INTEG
  * @type {number}
  */
 export
-const pt_smstpdu_tp_udhi: ParameterType = ParameterType_pt_smstpdu_tp_udhi; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_smstpdu_tp_udhi = ParameterType_pt_smstpdu_tp_udhi; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_smstpdu_tp_sri
@@ -2218,7 +2218,7 @@ const pt_smstpdu_tp_udhi: ParameterType = ParameterType_pt_smstpdu_tp_udhi; /* S
  * @type {number}
  */
 export
-const ParameterType_pt_smstpdu_tp_sri: ParameterType = 401; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_smstpdu_tp_sri = 401 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_smstpdu_tp_sri
@@ -2226,7 +2226,7 @@ const ParameterType_pt_smstpdu_tp_sri: ParameterType = 401; /* LONG_NAMED_INTEGE
  * @type {number}
  */
 export
-const pt_smstpdu_tp_sri: ParameterType = ParameterType_pt_smstpdu_tp_sri; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_smstpdu_tp_sri = ParameterType_pt_smstpdu_tp_sri; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_smstpdu_tp_mms
@@ -2234,7 +2234,7 @@ const pt_smstpdu_tp_sri: ParameterType = ParameterType_pt_smstpdu_tp_sri; /* SHO
  * @type {number}
  */
 export
-const ParameterType_pt_smstpdu_tp_mms: ParameterType = 402; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_smstpdu_tp_mms = 402 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_smstpdu_tp_mms
@@ -2242,7 +2242,7 @@ const ParameterType_pt_smstpdu_tp_mms: ParameterType = 402; /* LONG_NAMED_INTEGE
  * @type {number}
  */
 export
-const pt_smstpdu_tp_mms: ParameterType = ParameterType_pt_smstpdu_tp_mms; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_smstpdu_tp_mms = ParameterType_pt_smstpdu_tp_mms; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_smstpdu_tp_mti
@@ -2250,7 +2250,7 @@ const pt_smstpdu_tp_mms: ParameterType = ParameterType_pt_smstpdu_tp_mms; /* SHO
  * @type {number}
  */
 export
-const ParameterType_pt_smstpdu_tp_mti: ParameterType = 403; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_smstpdu_tp_mti = 403 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_smstpdu_tp_mti
@@ -2258,7 +2258,7 @@ const ParameterType_pt_smstpdu_tp_mti: ParameterType = 403; /* LONG_NAMED_INTEGE
  * @type {number}
  */
 export
-const pt_smstpdu_tp_mti: ParameterType = ParameterType_pt_smstpdu_tp_mti; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_smstpdu_tp_mti = ParameterType_pt_smstpdu_tp_mti; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_smstpdu_tp_oa_type_of_number
@@ -2266,7 +2266,7 @@ const pt_smstpdu_tp_mti: ParameterType = ParameterType_pt_smstpdu_tp_mti; /* SHO
  * @type {number}
  */
 export
-const ParameterType_pt_smstpdu_tp_oa_type_of_number: ParameterType = 404; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_smstpdu_tp_oa_type_of_number = 404 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_smstpdu_tp_oa_type_of_number
@@ -2274,7 +2274,7 @@ const ParameterType_pt_smstpdu_tp_oa_type_of_number: ParameterType = 404; /* LON
  * @type {number}
  */
 export
-const pt_smstpdu_tp_oa_type_of_number: ParameterType = ParameterType_pt_smstpdu_tp_oa_type_of_number; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_smstpdu_tp_oa_type_of_number = ParameterType_pt_smstpdu_tp_oa_type_of_number; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_smstpdu_tp_oa_numbering_plan
@@ -2282,7 +2282,7 @@ const pt_smstpdu_tp_oa_type_of_number: ParameterType = ParameterType_pt_smstpdu_
  * @type {number}
  */
 export
-const ParameterType_pt_smstpdu_tp_oa_numbering_plan: ParameterType = 405; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_smstpdu_tp_oa_numbering_plan = 405 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_smstpdu_tp_oa_numbering_plan
@@ -2290,7 +2290,7 @@ const ParameterType_pt_smstpdu_tp_oa_numbering_plan: ParameterType = 405; /* LON
  * @type {number}
  */
 export
-const pt_smstpdu_tp_oa_numbering_plan: ParameterType = ParameterType_pt_smstpdu_tp_oa_numbering_plan; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_smstpdu_tp_oa_numbering_plan = ParameterType_pt_smstpdu_tp_oa_numbering_plan; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_smstpdu_tp_oa_digits
@@ -2298,7 +2298,7 @@ const pt_smstpdu_tp_oa_numbering_plan: ParameterType = ParameterType_pt_smstpdu_
  * @type {number}
  */
 export
-const ParameterType_pt_smstpdu_tp_oa_digits: ParameterType = 406; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_smstpdu_tp_oa_digits = 406 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_smstpdu_tp_oa_digits
@@ -2306,7 +2306,7 @@ const ParameterType_pt_smstpdu_tp_oa_digits: ParameterType = 406; /* LONG_NAMED_
  * @type {number}
  */
 export
-const pt_smstpdu_tp_oa_digits: ParameterType = ParameterType_pt_smstpdu_tp_oa_digits; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_smstpdu_tp_oa_digits = ParameterType_pt_smstpdu_tp_oa_digits; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_smstpdu_tp_pid
@@ -2314,7 +2314,7 @@ const pt_smstpdu_tp_oa_digits: ParameterType = ParameterType_pt_smstpdu_tp_oa_di
  * @type {number}
  */
 export
-const ParameterType_pt_smstpdu_tp_pid: ParameterType = 407; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_smstpdu_tp_pid = 407 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_smstpdu_tp_pid
@@ -2322,7 +2322,7 @@ const ParameterType_pt_smstpdu_tp_pid: ParameterType = 407; /* LONG_NAMED_INTEGE
  * @type {number}
  */
 export
-const pt_smstpdu_tp_pid: ParameterType = ParameterType_pt_smstpdu_tp_pid; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_smstpdu_tp_pid = ParameterType_pt_smstpdu_tp_pid; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_smstpdu_tp_dcs
@@ -2330,7 +2330,7 @@ const pt_smstpdu_tp_pid: ParameterType = ParameterType_pt_smstpdu_tp_pid; /* SHO
  * @type {number}
  */
 export
-const ParameterType_pt_smstpdu_tp_dcs: ParameterType = 408; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_smstpdu_tp_dcs = 408 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_smstpdu_tp_dcs
@@ -2338,7 +2338,7 @@ const ParameterType_pt_smstpdu_tp_dcs: ParameterType = 408; /* LONG_NAMED_INTEGE
  * @type {number}
  */
 export
-const pt_smstpdu_tp_dcs: ParameterType = ParameterType_pt_smstpdu_tp_dcs; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_smstpdu_tp_dcs = ParameterType_pt_smstpdu_tp_dcs; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_smstpdu_tp_scts
@@ -2346,7 +2346,7 @@ const pt_smstpdu_tp_dcs: ParameterType = ParameterType_pt_smstpdu_tp_dcs; /* SHO
  * @type {number}
  */
 export
-const ParameterType_pt_smstpdu_tp_scts: ParameterType = 409; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_smstpdu_tp_scts = 409 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_smstpdu_tp_scts
@@ -2354,7 +2354,7 @@ const ParameterType_pt_smstpdu_tp_scts: ParameterType = 409; /* LONG_NAMED_INTEG
  * @type {number}
  */
 export
-const pt_smstpdu_tp_scts: ParameterType = ParameterType_pt_smstpdu_tp_scts; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_smstpdu_tp_scts = ParameterType_pt_smstpdu_tp_scts; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_smstpdu_tp_udl
@@ -2362,7 +2362,7 @@ const pt_smstpdu_tp_scts: ParameterType = ParameterType_pt_smstpdu_tp_scts; /* S
  * @type {number}
  */
 export
-const ParameterType_pt_smstpdu_tp_udl: ParameterType = 410; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_smstpdu_tp_udl = 410 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_smstpdu_tp_udl
@@ -2370,7 +2370,7 @@ const ParameterType_pt_smstpdu_tp_udl: ParameterType = 410; /* LONG_NAMED_INTEGE
  * @type {number}
  */
 export
-const pt_smstpdu_tp_udl: ParameterType = ParameterType_pt_smstpdu_tp_udl; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_smstpdu_tp_udl = ParameterType_pt_smstpdu_tp_udl; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_smstpdu_tp_ud
@@ -2378,7 +2378,7 @@ const pt_smstpdu_tp_udl: ParameterType = ParameterType_pt_smstpdu_tp_udl; /* SHO
  * @type {number}
  */
 export
-const ParameterType_pt_smstpdu_tp_ud: ParameterType = 411; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_smstpdu_tp_ud = 411 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_smstpdu_tp_ud
@@ -2386,7 +2386,7 @@ const ParameterType_pt_smstpdu_tp_ud: ParameterType = 411; /* LONG_NAMED_INTEGER
  * @type {number}
  */
 export
-const pt_smstpdu_tp_ud: ParameterType = ParameterType_pt_smstpdu_tp_ud; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_smstpdu_tp_ud = ParameterType_pt_smstpdu_tp_ud; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_smstpdu_tp_rp
@@ -2394,7 +2394,7 @@ const pt_smstpdu_tp_ud: ParameterType = ParameterType_pt_smstpdu_tp_ud; /* SHORT
  * @type {number}
  */
 export
-const ParameterType_pt_smstpdu_tp_rp: ParameterType = 412; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_smstpdu_tp_rp = 412 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_smstpdu_tp_rp
@@ -2402,7 +2402,7 @@ const ParameterType_pt_smstpdu_tp_rp: ParameterType = 412; /* LONG_NAMED_INTEGER
  * @type {number}
  */
 export
-const pt_smstpdu_tp_rp: ParameterType = ParameterType_pt_smstpdu_tp_rp; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_smstpdu_tp_rp = ParameterType_pt_smstpdu_tp_rp; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_smstpdu_tp_srr
@@ -2410,7 +2410,7 @@ const pt_smstpdu_tp_rp: ParameterType = ParameterType_pt_smstpdu_tp_rp; /* SHORT
  * @type {number}
  */
 export
-const ParameterType_pt_smstpdu_tp_srr: ParameterType = 413; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_smstpdu_tp_srr = 413 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_smstpdu_tp_srr
@@ -2418,7 +2418,7 @@ const ParameterType_pt_smstpdu_tp_srr: ParameterType = 413; /* LONG_NAMED_INTEGE
  * @type {number}
  */
 export
-const pt_smstpdu_tp_srr: ParameterType = ParameterType_pt_smstpdu_tp_srr; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_smstpdu_tp_srr = ParameterType_pt_smstpdu_tp_srr; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_smstpdu_tp_vpf
@@ -2426,7 +2426,7 @@ const pt_smstpdu_tp_srr: ParameterType = ParameterType_pt_smstpdu_tp_srr; /* SHO
  * @type {number}
  */
 export
-const ParameterType_pt_smstpdu_tp_vpf: ParameterType = 414; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_smstpdu_tp_vpf = 414 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_smstpdu_tp_vpf
@@ -2434,7 +2434,7 @@ const ParameterType_pt_smstpdu_tp_vpf: ParameterType = 414; /* LONG_NAMED_INTEGE
  * @type {number}
  */
 export
-const pt_smstpdu_tp_vpf: ParameterType = ParameterType_pt_smstpdu_tp_vpf; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_smstpdu_tp_vpf = ParameterType_pt_smstpdu_tp_vpf; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_smstpdu_tp_rd
@@ -2442,7 +2442,7 @@ const pt_smstpdu_tp_vpf: ParameterType = ParameterType_pt_smstpdu_tp_vpf; /* SHO
  * @type {number}
  */
 export
-const ParameterType_pt_smstpdu_tp_rd: ParameterType = 415; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_smstpdu_tp_rd = 415 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_smstpdu_tp_rd
@@ -2450,7 +2450,7 @@ const ParameterType_pt_smstpdu_tp_rd: ParameterType = 415; /* LONG_NAMED_INTEGER
  * @type {number}
  */
 export
-const pt_smstpdu_tp_rd: ParameterType = ParameterType_pt_smstpdu_tp_rd; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_smstpdu_tp_rd = ParameterType_pt_smstpdu_tp_rd; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_smstpdu_tp_da_type_of_number
@@ -2458,7 +2458,7 @@ const pt_smstpdu_tp_rd: ParameterType = ParameterType_pt_smstpdu_tp_rd; /* SHORT
  * @type {number}
  */
 export
-const ParameterType_pt_smstpdu_tp_da_type_of_number: ParameterType = 416; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_smstpdu_tp_da_type_of_number = 416 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_smstpdu_tp_da_type_of_number
@@ -2466,7 +2466,7 @@ const ParameterType_pt_smstpdu_tp_da_type_of_number: ParameterType = 416; /* LON
  * @type {number}
  */
 export
-const pt_smstpdu_tp_da_type_of_number: ParameterType = ParameterType_pt_smstpdu_tp_da_type_of_number; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_smstpdu_tp_da_type_of_number = ParameterType_pt_smstpdu_tp_da_type_of_number; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_smstpdu_tp_da_numbering_plan
@@ -2474,7 +2474,7 @@ const pt_smstpdu_tp_da_type_of_number: ParameterType = ParameterType_pt_smstpdu_
  * @type {number}
  */
 export
-const ParameterType_pt_smstpdu_tp_da_numbering_plan: ParameterType = 417; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_smstpdu_tp_da_numbering_plan = 417 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_smstpdu_tp_da_numbering_plan
@@ -2482,7 +2482,7 @@ const ParameterType_pt_smstpdu_tp_da_numbering_plan: ParameterType = 417; /* LON
  * @type {number}
  */
 export
-const pt_smstpdu_tp_da_numbering_plan: ParameterType = ParameterType_pt_smstpdu_tp_da_numbering_plan; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_smstpdu_tp_da_numbering_plan = ParameterType_pt_smstpdu_tp_da_numbering_plan; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_smstpdu_tp_da_digits
@@ -2490,7 +2490,7 @@ const pt_smstpdu_tp_da_numbering_plan: ParameterType = ParameterType_pt_smstpdu_
  * @type {number}
  */
 export
-const ParameterType_pt_smstpdu_tp_da_digits: ParameterType = 418; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_smstpdu_tp_da_digits = 418 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_smstpdu_tp_da_digits
@@ -2498,7 +2498,7 @@ const ParameterType_pt_smstpdu_tp_da_digits: ParameterType = 418; /* LONG_NAMED_
  * @type {number}
  */
 export
-const pt_smstpdu_tp_da_digits: ParameterType = ParameterType_pt_smstpdu_tp_da_digits; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_smstpdu_tp_da_digits = ParameterType_pt_smstpdu_tp_da_digits; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_smstpdu_tp_vp
@@ -2506,7 +2506,7 @@ const pt_smstpdu_tp_da_digits: ParameterType = ParameterType_pt_smstpdu_tp_da_di
  * @type {number}
  */
 export
-const ParameterType_pt_smstpdu_tp_vp: ParameterType = 419; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_smstpdu_tp_vp = 419 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_smstpdu_tp_vp
@@ -2514,7 +2514,7 @@ const ParameterType_pt_smstpdu_tp_vp: ParameterType = 419; /* LONG_NAMED_INTEGER
  * @type {number}
  */
 export
-const pt_smstpdu_tp_vp: ParameterType = ParameterType_pt_smstpdu_tp_vp; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_smstpdu_tp_vp = ParameterType_pt_smstpdu_tp_vp; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_smstpdu_msg_id
@@ -2522,7 +2522,7 @@ const pt_smstpdu_tp_vp: ParameterType = ParameterType_pt_smstpdu_tp_vp; /* SHORT
  * @type {number}
  */
 export
-const ParameterType_pt_smstpdu_msg_id: ParameterType = 420; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_smstpdu_msg_id = 420 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_smstpdu_msg_id
@@ -2530,7 +2530,7 @@ const ParameterType_pt_smstpdu_msg_id: ParameterType = 420; /* LONG_NAMED_INTEGE
  * @type {number}
  */
 export
-const pt_smstpdu_msg_id: ParameterType = ParameterType_pt_smstpdu_msg_id; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_smstpdu_msg_id = ParameterType_pt_smstpdu_msg_id; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_smstpdu_msg_parts
@@ -2538,7 +2538,7 @@ const pt_smstpdu_msg_id: ParameterType = ParameterType_pt_smstpdu_msg_id; /* SHO
  * @type {number}
  */
 export
-const ParameterType_pt_smstpdu_msg_parts: ParameterType = 421; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_smstpdu_msg_parts = 421 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_smstpdu_msg_parts
@@ -2546,7 +2546,7 @@ const ParameterType_pt_smstpdu_msg_parts: ParameterType = 421; /* LONG_NAMED_INT
  * @type {number}
  */
 export
-const pt_smstpdu_msg_parts: ParameterType = ParameterType_pt_smstpdu_msg_parts; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_smstpdu_msg_parts = ParameterType_pt_smstpdu_msg_parts; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_smstpdu_msg_part
@@ -2554,7 +2554,7 @@ const pt_smstpdu_msg_parts: ParameterType = ParameterType_pt_smstpdu_msg_parts; 
  * @type {number}
  */
 export
-const ParameterType_pt_smstpdu_msg_part: ParameterType = 422; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_smstpdu_msg_part = 422 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_smstpdu_msg_part
@@ -2562,7 +2562,7 @@ const ParameterType_pt_smstpdu_msg_part: ParameterType = 422; /* LONG_NAMED_INTE
  * @type {number}
  */
 export
-const pt_smstpdu_msg_part: ParameterType = ParameterType_pt_smstpdu_msg_part; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_smstpdu_msg_part = ParameterType_pt_smstpdu_msg_part; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_smstpdu_tp_mr
@@ -2570,7 +2570,7 @@ const pt_smstpdu_msg_part: ParameterType = ParameterType_pt_smstpdu_msg_part; /*
  * @type {number}
  */
 export
-const ParameterType_pt_smstpdu_tp_mr: ParameterType = 423; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_smstpdu_tp_mr = 423 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_smstpdu_tp_mr
@@ -2578,7 +2578,7 @@ const ParameterType_pt_smstpdu_tp_mr: ParameterType = 423; /* LONG_NAMED_INTEGER
  * @type {number}
  */
 export
-const pt_smstpdu_tp_mr: ParameterType = ParameterType_pt_smstpdu_tp_mr; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_smstpdu_tp_mr = ParameterType_pt_smstpdu_tp_mr; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_smstpdu_message_class
@@ -2586,7 +2586,7 @@ const pt_smstpdu_tp_mr: ParameterType = ParameterType_pt_smstpdu_tp_mr; /* SHORT
  * @type {number}
  */
 export
-const ParameterType_pt_smstpdu_message_class: ParameterType = 424; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_smstpdu_message_class = 424 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_smstpdu_message_class
@@ -2594,7 +2594,7 @@ const ParameterType_pt_smstpdu_message_class: ParameterType = 424; /* LONG_NAMED
  * @type {number}
  */
 export
-const pt_smstpdu_message_class: ParameterType = ParameterType_pt_smstpdu_message_class; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_smstpdu_message_class = ParameterType_pt_smstpdu_message_class; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_sccp_destination_local_reference
@@ -2602,7 +2602,7 @@ const pt_smstpdu_message_class: ParameterType = ParameterType_pt_smstpdu_message
  * @type {number}
  */
 export
-const ParameterType_pt_sccp_destination_local_reference: ParameterType = 300; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_sccp_destination_local_reference = 300 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_sccp_destination_local_reference
@@ -2610,7 +2610,7 @@ const ParameterType_pt_sccp_destination_local_reference: ParameterType = 300; /*
  * @type {number}
  */
 export
-const pt_sccp_destination_local_reference: ParameterType = ParameterType_pt_sccp_destination_local_reference; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_sccp_destination_local_reference = ParameterType_pt_sccp_destination_local_reference; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_sccp_source_local_reference
@@ -2618,7 +2618,7 @@ const pt_sccp_destination_local_reference: ParameterType = ParameterType_pt_sccp
  * @type {number}
  */
 export
-const ParameterType_pt_sccp_source_local_reference: ParameterType = 301; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_sccp_source_local_reference = 301 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_sccp_source_local_reference
@@ -2626,7 +2626,7 @@ const ParameterType_pt_sccp_source_local_reference: ParameterType = 301; /* LONG
  * @type {number}
  */
 export
-const pt_sccp_source_local_reference: ParameterType = ParameterType_pt_sccp_source_local_reference; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_sccp_source_local_reference = ParameterType_pt_sccp_source_local_reference; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_sccp_called_party
@@ -2634,7 +2634,7 @@ const pt_sccp_source_local_reference: ParameterType = ParameterType_pt_sccp_sour
  * @type {number}
  */
 export
-const ParameterType_pt_sccp_called_party: ParameterType = 302; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_sccp_called_party = 302 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_sccp_called_party
@@ -2642,7 +2642,7 @@ const ParameterType_pt_sccp_called_party: ParameterType = 302; /* LONG_NAMED_INT
  * @type {number}
  */
 export
-const pt_sccp_called_party: ParameterType = ParameterType_pt_sccp_called_party; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_sccp_called_party = ParameterType_pt_sccp_called_party; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_sccp_calling_party
@@ -2650,7 +2650,7 @@ const pt_sccp_called_party: ParameterType = ParameterType_pt_sccp_called_party; 
  * @type {number}
  */
 export
-const ParameterType_pt_sccp_calling_party: ParameterType = 303; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_sccp_calling_party = 303 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_sccp_calling_party
@@ -2658,7 +2658,7 @@ const ParameterType_pt_sccp_calling_party: ParameterType = 303; /* LONG_NAMED_IN
  * @type {number}
  */
 export
-const pt_sccp_calling_party: ParameterType = ParameterType_pt_sccp_calling_party; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_sccp_calling_party = ParameterType_pt_sccp_calling_party; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_sccp_protocol_class
@@ -2666,7 +2666,7 @@ const pt_sccp_calling_party: ParameterType = ParameterType_pt_sccp_calling_party
  * @type {number}
  */
 export
-const ParameterType_pt_sccp_protocol_class: ParameterType = 304; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_sccp_protocol_class = 304 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_sccp_protocol_class
@@ -2674,7 +2674,7 @@ const ParameterType_pt_sccp_protocol_class: ParameterType = 304; /* LONG_NAMED_I
  * @type {number}
  */
 export
-const pt_sccp_protocol_class: ParameterType = ParameterType_pt_sccp_protocol_class; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_sccp_protocol_class = ParameterType_pt_sccp_protocol_class; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_sccp_segmenting_reassembling
@@ -2682,7 +2682,7 @@ const pt_sccp_protocol_class: ParameterType = ParameterType_pt_sccp_protocol_cla
  * @type {number}
  */
 export
-const ParameterType_pt_sccp_segmenting_reassembling: ParameterType = 305; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_sccp_segmenting_reassembling = 305 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_sccp_segmenting_reassembling
@@ -2690,7 +2690,7 @@ const ParameterType_pt_sccp_segmenting_reassembling: ParameterType = 305; /* LON
  * @type {number}
  */
 export
-const pt_sccp_segmenting_reassembling: ParameterType = ParameterType_pt_sccp_segmenting_reassembling; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_sccp_segmenting_reassembling = ParameterType_pt_sccp_segmenting_reassembling; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_sccp_receive_sequence_number
@@ -2698,7 +2698,7 @@ const pt_sccp_segmenting_reassembling: ParameterType = ParameterType_pt_sccp_seg
  * @type {number}
  */
 export
-const ParameterType_pt_sccp_receive_sequence_number: ParameterType = 306; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_sccp_receive_sequence_number = 306 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_sccp_receive_sequence_number
@@ -2706,7 +2706,7 @@ const ParameterType_pt_sccp_receive_sequence_number: ParameterType = 306; /* LON
  * @type {number}
  */
 export
-const pt_sccp_receive_sequence_number: ParameterType = ParameterType_pt_sccp_receive_sequence_number; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_sccp_receive_sequence_number = ParameterType_pt_sccp_receive_sequence_number; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_sccp_sequencing_segmenting
@@ -2714,7 +2714,7 @@ const pt_sccp_receive_sequence_number: ParameterType = ParameterType_pt_sccp_rec
  * @type {number}
  */
 export
-const ParameterType_pt_sccp_sequencing_segmenting: ParameterType = 307; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_sccp_sequencing_segmenting = 307 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_sccp_sequencing_segmenting
@@ -2722,7 +2722,7 @@ const ParameterType_pt_sccp_sequencing_segmenting: ParameterType = 307; /* LONG_
  * @type {number}
  */
 export
-const pt_sccp_sequencing_segmenting: ParameterType = ParameterType_pt_sccp_sequencing_segmenting; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_sccp_sequencing_segmenting = ParameterType_pt_sccp_sequencing_segmenting; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_sccp_credit
@@ -2730,7 +2730,7 @@ const pt_sccp_sequencing_segmenting: ParameterType = ParameterType_pt_sccp_seque
  * @type {number}
  */
 export
-const ParameterType_pt_sccp_credit: ParameterType = 308; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_sccp_credit = 308 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_sccp_credit
@@ -2738,7 +2738,7 @@ const ParameterType_pt_sccp_credit: ParameterType = 308; /* LONG_NAMED_INTEGER_V
  * @type {number}
  */
 export
-const pt_sccp_credit: ParameterType = ParameterType_pt_sccp_credit; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_sccp_credit = ParameterType_pt_sccp_credit; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_sccp_release_cause
@@ -2746,7 +2746,7 @@ const pt_sccp_credit: ParameterType = ParameterType_pt_sccp_credit; /* SHORT_NAM
  * @type {number}
  */
 export
-const ParameterType_pt_sccp_release_cause: ParameterType = 309; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_sccp_release_cause = 309 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_sccp_release_cause
@@ -2754,7 +2754,7 @@ const ParameterType_pt_sccp_release_cause: ParameterType = 309; /* LONG_NAMED_IN
  * @type {number}
  */
 export
-const pt_sccp_release_cause: ParameterType = ParameterType_pt_sccp_release_cause; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_sccp_release_cause = ParameterType_pt_sccp_release_cause; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_sccp_return_cause
@@ -2762,7 +2762,7 @@ const pt_sccp_release_cause: ParameterType = ParameterType_pt_sccp_release_cause
  * @type {number}
  */
 export
-const ParameterType_pt_sccp_return_cause: ParameterType = 310; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_sccp_return_cause = 310 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_sccp_return_cause
@@ -2770,7 +2770,7 @@ const ParameterType_pt_sccp_return_cause: ParameterType = 310; /* LONG_NAMED_INT
  * @type {number}
  */
 export
-const pt_sccp_return_cause: ParameterType = ParameterType_pt_sccp_return_cause; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_sccp_return_cause = ParameterType_pt_sccp_return_cause; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_sccp_reset_cause
@@ -2778,7 +2778,7 @@ const pt_sccp_return_cause: ParameterType = ParameterType_pt_sccp_return_cause; 
  * @type {number}
  */
 export
-const ParameterType_pt_sccp_reset_cause: ParameterType = 311; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_sccp_reset_cause = 311 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_sccp_reset_cause
@@ -2786,7 +2786,7 @@ const ParameterType_pt_sccp_reset_cause: ParameterType = 311; /* LONG_NAMED_INTE
  * @type {number}
  */
 export
-const pt_sccp_reset_cause: ParameterType = ParameterType_pt_sccp_reset_cause; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_sccp_reset_cause = ParameterType_pt_sccp_reset_cause; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_sccp_error_cause
@@ -2794,7 +2794,7 @@ const pt_sccp_reset_cause: ParameterType = ParameterType_pt_sccp_reset_cause; /*
  * @type {number}
  */
 export
-const ParameterType_pt_sccp_error_cause: ParameterType = 312; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_sccp_error_cause = 312 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_sccp_error_cause
@@ -2802,7 +2802,7 @@ const ParameterType_pt_sccp_error_cause: ParameterType = 312; /* LONG_NAMED_INTE
  * @type {number}
  */
 export
-const pt_sccp_error_cause: ParameterType = ParameterType_pt_sccp_error_cause; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_sccp_error_cause = ParameterType_pt_sccp_error_cause; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_sccp_refusal_cause
@@ -2810,7 +2810,7 @@ const pt_sccp_error_cause: ParameterType = ParameterType_pt_sccp_error_cause; /*
  * @type {number}
  */
 export
-const ParameterType_pt_sccp_refusal_cause: ParameterType = 313; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_sccp_refusal_cause = 313 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_sccp_refusal_cause
@@ -2818,7 +2818,7 @@ const ParameterType_pt_sccp_refusal_cause: ParameterType = 313; /* LONG_NAMED_IN
  * @type {number}
  */
 export
-const pt_sccp_refusal_cause: ParameterType = ParameterType_pt_sccp_refusal_cause; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_sccp_refusal_cause = ParameterType_pt_sccp_refusal_cause; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_sccp_data
@@ -2826,7 +2826,7 @@ const pt_sccp_refusal_cause: ParameterType = ParameterType_pt_sccp_refusal_cause
  * @type {number}
  */
 export
-const ParameterType_pt_sccp_data: ParameterType = 314; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_sccp_data = 314 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_sccp_data
@@ -2834,7 +2834,7 @@ const ParameterType_pt_sccp_data: ParameterType = 314; /* LONG_NAMED_INTEGER_VAL
  * @type {number}
  */
 export
-const pt_sccp_data: ParameterType = ParameterType_pt_sccp_data; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_sccp_data = ParameterType_pt_sccp_data; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_sccp_segmentation
@@ -2842,7 +2842,7 @@ const pt_sccp_data: ParameterType = ParameterType_pt_sccp_data; /* SHORT_NAMED_I
  * @type {number}
  */
 export
-const ParameterType_pt_sccp_segmentation: ParameterType = 315; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_sccp_segmentation = 315 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_sccp_segmentation
@@ -2850,7 +2850,7 @@ const ParameterType_pt_sccp_segmentation: ParameterType = 315; /* LONG_NAMED_INT
  * @type {number}
  */
 export
-const pt_sccp_segmentation: ParameterType = ParameterType_pt_sccp_segmentation; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_sccp_segmentation = ParameterType_pt_sccp_segmentation; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_sccp_hop_counter
@@ -2858,7 +2858,7 @@ const pt_sccp_segmentation: ParameterType = ParameterType_pt_sccp_segmentation; 
  * @type {number}
  */
 export
-const ParameterType_pt_sccp_hop_counter: ParameterType = 316; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_sccp_hop_counter = 316 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_sccp_hop_counter
@@ -2866,7 +2866,7 @@ const ParameterType_pt_sccp_hop_counter: ParameterType = 316; /* LONG_NAMED_INTE
  * @type {number}
  */
 export
-const pt_sccp_hop_counter: ParameterType = ParameterType_pt_sccp_hop_counter; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_sccp_hop_counter = ParameterType_pt_sccp_hop_counter; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_sccp_importance
@@ -2874,7 +2874,7 @@ const pt_sccp_hop_counter: ParameterType = ParameterType_pt_sccp_hop_counter; /*
  * @type {number}
  */
 export
-const ParameterType_pt_sccp_importance: ParameterType = 317; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_sccp_importance = 317 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_sccp_importance
@@ -2882,7 +2882,7 @@ const ParameterType_pt_sccp_importance: ParameterType = 317; /* LONG_NAMED_INTEG
  * @type {number}
  */
 export
-const pt_sccp_importance: ParameterType = ParameterType_pt_sccp_importance; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_sccp_importance = ParameterType_pt_sccp_importance; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_sccp_long_data
@@ -2890,7 +2890,7 @@ const pt_sccp_importance: ParameterType = ParameterType_pt_sccp_importance; /* S
  * @type {number}
  */
 export
-const ParameterType_pt_sccp_long_data: ParameterType = 318; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_sccp_long_data = 318 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_sccp_long_data
@@ -2898,7 +2898,7 @@ const ParameterType_pt_sccp_long_data: ParameterType = 318; /* LONG_NAMED_INTEGE
  * @type {number}
  */
 export
-const pt_sccp_long_data: ParameterType = ParameterType_pt_sccp_long_data; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_sccp_long_data = ParameterType_pt_sccp_long_data; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_sccp_called_pa_routing_indicator
@@ -2906,7 +2906,7 @@ const pt_sccp_long_data: ParameterType = ParameterType_pt_sccp_long_data; /* SHO
  * @type {number}
  */
 export
-const ParameterType_pt_sccp_called_pa_routing_indicator: ParameterType = 319; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_sccp_called_pa_routing_indicator = 319 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_sccp_called_pa_routing_indicator
@@ -2914,7 +2914,7 @@ const ParameterType_pt_sccp_called_pa_routing_indicator: ParameterType = 319; /*
  * @type {number}
  */
 export
-const pt_sccp_called_pa_routing_indicator: ParameterType = ParameterType_pt_sccp_called_pa_routing_indicator; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_sccp_called_pa_routing_indicator = ParameterType_pt_sccp_called_pa_routing_indicator; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_sccp_called_pa_global_title_indicator
@@ -2922,7 +2922,7 @@ const pt_sccp_called_pa_routing_indicator: ParameterType = ParameterType_pt_sccp
  * @type {number}
  */
 export
-const ParameterType_pt_sccp_called_pa_global_title_indicator: ParameterType = 320; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_sccp_called_pa_global_title_indicator = 320 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_sccp_called_pa_global_title_indicator
@@ -2930,7 +2930,7 @@ const ParameterType_pt_sccp_called_pa_global_title_indicator: ParameterType = 32
  * @type {number}
  */
 export
-const pt_sccp_called_pa_global_title_indicator: ParameterType = ParameterType_pt_sccp_called_pa_global_title_indicator; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_sccp_called_pa_global_title_indicator = ParameterType_pt_sccp_called_pa_global_title_indicator; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_sccp_called_pa_ssn_indicator
@@ -2938,7 +2938,7 @@ const pt_sccp_called_pa_global_title_indicator: ParameterType = ParameterType_pt
  * @type {number}
  */
 export
-const ParameterType_pt_sccp_called_pa_ssn_indicator: ParameterType = 321; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_sccp_called_pa_ssn_indicator = 321 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_sccp_called_pa_ssn_indicator
@@ -2946,7 +2946,7 @@ const ParameterType_pt_sccp_called_pa_ssn_indicator: ParameterType = 321; /* LON
  * @type {number}
  */
 export
-const pt_sccp_called_pa_ssn_indicator: ParameterType = ParameterType_pt_sccp_called_pa_ssn_indicator; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_sccp_called_pa_ssn_indicator = ParameterType_pt_sccp_called_pa_ssn_indicator; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_sccp_called_pa_point_code_indicator
@@ -2954,7 +2954,7 @@ const pt_sccp_called_pa_ssn_indicator: ParameterType = ParameterType_pt_sccp_cal
  * @type {number}
  */
 export
-const ParameterType_pt_sccp_called_pa_point_code_indicator: ParameterType = 322; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_sccp_called_pa_point_code_indicator = 322 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_sccp_called_pa_point_code_indicator
@@ -2962,7 +2962,7 @@ const ParameterType_pt_sccp_called_pa_point_code_indicator: ParameterType = 322;
  * @type {number}
  */
 export
-const pt_sccp_called_pa_point_code_indicator: ParameterType = ParameterType_pt_sccp_called_pa_point_code_indicator; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_sccp_called_pa_point_code_indicator = ParameterType_pt_sccp_called_pa_point_code_indicator; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_sccp_called_pa_point_code_number
@@ -2970,7 +2970,7 @@ const pt_sccp_called_pa_point_code_indicator: ParameterType = ParameterType_pt_s
  * @type {number}
  */
 export
-const ParameterType_pt_sccp_called_pa_point_code_number: ParameterType = 323; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_sccp_called_pa_point_code_number = 323 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_sccp_called_pa_point_code_number
@@ -2978,7 +2978,7 @@ const ParameterType_pt_sccp_called_pa_point_code_number: ParameterType = 323; /*
  * @type {number}
  */
 export
-const pt_sccp_called_pa_point_code_number: ParameterType = ParameterType_pt_sccp_called_pa_point_code_number; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_sccp_called_pa_point_code_number = ParameterType_pt_sccp_called_pa_point_code_number; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_sccp_called_pa_subsystem_number
@@ -2986,7 +2986,7 @@ const pt_sccp_called_pa_point_code_number: ParameterType = ParameterType_pt_sccp
  * @type {number}
  */
 export
-const ParameterType_pt_sccp_called_pa_subsystem_number: ParameterType = 324; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_sccp_called_pa_subsystem_number = 324 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_sccp_called_pa_subsystem_number
@@ -2994,7 +2994,7 @@ const ParameterType_pt_sccp_called_pa_subsystem_number: ParameterType = 324; /* 
  * @type {number}
  */
 export
-const pt_sccp_called_pa_subsystem_number: ParameterType = ParameterType_pt_sccp_called_pa_subsystem_number; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_sccp_called_pa_subsystem_number = ParameterType_pt_sccp_called_pa_subsystem_number; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_sccp_called_pa_gt_numbering_plan
@@ -3002,7 +3002,7 @@ const pt_sccp_called_pa_subsystem_number: ParameterType = ParameterType_pt_sccp_
  * @type {number}
  */
 export
-const ParameterType_pt_sccp_called_pa_gt_numbering_plan: ParameterType = 325; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_sccp_called_pa_gt_numbering_plan = 325 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_sccp_called_pa_gt_numbering_plan
@@ -3010,7 +3010,7 @@ const ParameterType_pt_sccp_called_pa_gt_numbering_plan: ParameterType = 325; /*
  * @type {number}
  */
 export
-const pt_sccp_called_pa_gt_numbering_plan: ParameterType = ParameterType_pt_sccp_called_pa_gt_numbering_plan; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_sccp_called_pa_gt_numbering_plan = ParameterType_pt_sccp_called_pa_gt_numbering_plan; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_sccp_called_pa_gt_encoding_scheme
@@ -3018,7 +3018,7 @@ const pt_sccp_called_pa_gt_numbering_plan: ParameterType = ParameterType_pt_sccp
  * @type {number}
  */
 export
-const ParameterType_pt_sccp_called_pa_gt_encoding_scheme: ParameterType = 326; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_sccp_called_pa_gt_encoding_scheme = 326 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_sccp_called_pa_gt_encoding_scheme
@@ -3026,7 +3026,7 @@ const ParameterType_pt_sccp_called_pa_gt_encoding_scheme: ParameterType = 326; /
  * @type {number}
  */
 export
-const pt_sccp_called_pa_gt_encoding_scheme: ParameterType = ParameterType_pt_sccp_called_pa_gt_encoding_scheme; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_sccp_called_pa_gt_encoding_scheme = ParameterType_pt_sccp_called_pa_gt_encoding_scheme; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_sccp_called_pa_gt_nature_of_address
@@ -3034,7 +3034,7 @@ const pt_sccp_called_pa_gt_encoding_scheme: ParameterType = ParameterType_pt_scc
  * @type {number}
  */
 export
-const ParameterType_pt_sccp_called_pa_gt_nature_of_address: ParameterType = 327; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_sccp_called_pa_gt_nature_of_address = 327 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_sccp_called_pa_gt_nature_of_address
@@ -3042,7 +3042,7 @@ const ParameterType_pt_sccp_called_pa_gt_nature_of_address: ParameterType = 327;
  * @type {number}
  */
 export
-const pt_sccp_called_pa_gt_nature_of_address: ParameterType = ParameterType_pt_sccp_called_pa_gt_nature_of_address; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_sccp_called_pa_gt_nature_of_address = ParameterType_pt_sccp_called_pa_gt_nature_of_address; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_sccp_called_pa_gt_address
@@ -3050,7 +3050,7 @@ const pt_sccp_called_pa_gt_nature_of_address: ParameterType = ParameterType_pt_s
  * @type {number}
  */
 export
-const ParameterType_pt_sccp_called_pa_gt_address: ParameterType = 328; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_sccp_called_pa_gt_address = 328 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_sccp_called_pa_gt_address
@@ -3058,7 +3058,7 @@ const ParameterType_pt_sccp_called_pa_gt_address: ParameterType = 328; /* LONG_N
  * @type {number}
  */
 export
-const pt_sccp_called_pa_gt_address: ParameterType = ParameterType_pt_sccp_called_pa_gt_address; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_sccp_called_pa_gt_address = ParameterType_pt_sccp_called_pa_gt_address; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_sccp_called_pa_gt_translation_type
@@ -3066,7 +3066,7 @@ const pt_sccp_called_pa_gt_address: ParameterType = ParameterType_pt_sccp_called
  * @type {number}
  */
 export
-const ParameterType_pt_sccp_called_pa_gt_translation_type: ParameterType = 329; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_sccp_called_pa_gt_translation_type = 329 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_sccp_called_pa_gt_translation_type
@@ -3074,7 +3074,7 @@ const ParameterType_pt_sccp_called_pa_gt_translation_type: ParameterType = 329; 
  * @type {number}
  */
 export
-const pt_sccp_called_pa_gt_translation_type: ParameterType = ParameterType_pt_sccp_called_pa_gt_translation_type; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_sccp_called_pa_gt_translation_type = ParameterType_pt_sccp_called_pa_gt_translation_type; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_sccp_calling_pa_routing_indicator
@@ -3082,7 +3082,7 @@ const pt_sccp_called_pa_gt_translation_type: ParameterType = ParameterType_pt_sc
  * @type {number}
  */
 export
-const ParameterType_pt_sccp_calling_pa_routing_indicator: ParameterType = 330; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_sccp_calling_pa_routing_indicator = 330 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_sccp_calling_pa_routing_indicator
@@ -3090,7 +3090,7 @@ const ParameterType_pt_sccp_calling_pa_routing_indicator: ParameterType = 330; /
  * @type {number}
  */
 export
-const pt_sccp_calling_pa_routing_indicator: ParameterType = ParameterType_pt_sccp_calling_pa_routing_indicator; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_sccp_calling_pa_routing_indicator = ParameterType_pt_sccp_calling_pa_routing_indicator; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_sccp_calling_pa_global_title_indicator
@@ -3098,7 +3098,7 @@ const pt_sccp_calling_pa_routing_indicator: ParameterType = ParameterType_pt_scc
  * @type {number}
  */
 export
-const ParameterType_pt_sccp_calling_pa_global_title_indicator: ParameterType = 331; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_sccp_calling_pa_global_title_indicator = 331 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_sccp_calling_pa_global_title_indicator
@@ -3106,7 +3106,7 @@ const ParameterType_pt_sccp_calling_pa_global_title_indicator: ParameterType = 3
  * @type {number}
  */
 export
-const pt_sccp_calling_pa_global_title_indicator: ParameterType = ParameterType_pt_sccp_calling_pa_global_title_indicator; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_sccp_calling_pa_global_title_indicator = ParameterType_pt_sccp_calling_pa_global_title_indicator; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_sccp_calling_pa_ssn_indicator
@@ -3114,7 +3114,7 @@ const pt_sccp_calling_pa_global_title_indicator: ParameterType = ParameterType_p
  * @type {number}
  */
 export
-const ParameterType_pt_sccp_calling_pa_ssn_indicator: ParameterType = 332; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_sccp_calling_pa_ssn_indicator = 332 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_sccp_calling_pa_ssn_indicator
@@ -3122,7 +3122,7 @@ const ParameterType_pt_sccp_calling_pa_ssn_indicator: ParameterType = 332; /* LO
  * @type {number}
  */
 export
-const pt_sccp_calling_pa_ssn_indicator: ParameterType = ParameterType_pt_sccp_calling_pa_ssn_indicator; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_sccp_calling_pa_ssn_indicator = ParameterType_pt_sccp_calling_pa_ssn_indicator; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_sccp_calling_pa_point_code_indicator
@@ -3130,7 +3130,7 @@ const pt_sccp_calling_pa_ssn_indicator: ParameterType = ParameterType_pt_sccp_ca
  * @type {number}
  */
 export
-const ParameterType_pt_sccp_calling_pa_point_code_indicator: ParameterType = 333; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_sccp_calling_pa_point_code_indicator = 333 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_sccp_calling_pa_point_code_indicator
@@ -3138,7 +3138,7 @@ const ParameterType_pt_sccp_calling_pa_point_code_indicator: ParameterType = 333
  * @type {number}
  */
 export
-const pt_sccp_calling_pa_point_code_indicator: ParameterType = ParameterType_pt_sccp_calling_pa_point_code_indicator; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_sccp_calling_pa_point_code_indicator = ParameterType_pt_sccp_calling_pa_point_code_indicator; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_sccp_calling_pa_point_code_number
@@ -3146,7 +3146,7 @@ const pt_sccp_calling_pa_point_code_indicator: ParameterType = ParameterType_pt_
  * @type {number}
  */
 export
-const ParameterType_pt_sccp_calling_pa_point_code_number: ParameterType = 334; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_sccp_calling_pa_point_code_number = 334 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_sccp_calling_pa_point_code_number
@@ -3154,7 +3154,7 @@ const ParameterType_pt_sccp_calling_pa_point_code_number: ParameterType = 334; /
  * @type {number}
  */
 export
-const pt_sccp_calling_pa_point_code_number: ParameterType = ParameterType_pt_sccp_calling_pa_point_code_number; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_sccp_calling_pa_point_code_number = ParameterType_pt_sccp_calling_pa_point_code_number; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_sccp_calling_pa_subsystem_number
@@ -3162,7 +3162,7 @@ const pt_sccp_calling_pa_point_code_number: ParameterType = ParameterType_pt_scc
  * @type {number}
  */
 export
-const ParameterType_pt_sccp_calling_pa_subsystem_number: ParameterType = 335; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_sccp_calling_pa_subsystem_number = 335 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_sccp_calling_pa_subsystem_number
@@ -3170,7 +3170,7 @@ const ParameterType_pt_sccp_calling_pa_subsystem_number: ParameterType = 335; /*
  * @type {number}
  */
 export
-const pt_sccp_calling_pa_subsystem_number: ParameterType = ParameterType_pt_sccp_calling_pa_subsystem_number; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_sccp_calling_pa_subsystem_number = ParameterType_pt_sccp_calling_pa_subsystem_number; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_sccp_calling_pa_gt_numbering_plan
@@ -3178,7 +3178,7 @@ const pt_sccp_calling_pa_subsystem_number: ParameterType = ParameterType_pt_sccp
  * @type {number}
  */
 export
-const ParameterType_pt_sccp_calling_pa_gt_numbering_plan: ParameterType = 336; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_sccp_calling_pa_gt_numbering_plan = 336 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_sccp_calling_pa_gt_numbering_plan
@@ -3186,7 +3186,7 @@ const ParameterType_pt_sccp_calling_pa_gt_numbering_plan: ParameterType = 336; /
  * @type {number}
  */
 export
-const pt_sccp_calling_pa_gt_numbering_plan: ParameterType = ParameterType_pt_sccp_calling_pa_gt_numbering_plan; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_sccp_calling_pa_gt_numbering_plan = ParameterType_pt_sccp_calling_pa_gt_numbering_plan; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_sccp_calling_pa_gt_encoding_scheme
@@ -3194,7 +3194,7 @@ const pt_sccp_calling_pa_gt_numbering_plan: ParameterType = ParameterType_pt_scc
  * @type {number}
  */
 export
-const ParameterType_pt_sccp_calling_pa_gt_encoding_scheme: ParameterType = 337; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_sccp_calling_pa_gt_encoding_scheme = 337 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_sccp_calling_pa_gt_encoding_scheme
@@ -3202,7 +3202,7 @@ const ParameterType_pt_sccp_calling_pa_gt_encoding_scheme: ParameterType = 337; 
  * @type {number}
  */
 export
-const pt_sccp_calling_pa_gt_encoding_scheme: ParameterType = ParameterType_pt_sccp_calling_pa_gt_encoding_scheme; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_sccp_calling_pa_gt_encoding_scheme = ParameterType_pt_sccp_calling_pa_gt_encoding_scheme; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_sccp_calling_pa_gt_nature_of_address
@@ -3210,7 +3210,7 @@ const pt_sccp_calling_pa_gt_encoding_scheme: ParameterType = ParameterType_pt_sc
  * @type {number}
  */
 export
-const ParameterType_pt_sccp_calling_pa_gt_nature_of_address: ParameterType = 338; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_sccp_calling_pa_gt_nature_of_address = 338 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_sccp_calling_pa_gt_nature_of_address
@@ -3218,7 +3218,7 @@ const ParameterType_pt_sccp_calling_pa_gt_nature_of_address: ParameterType = 338
  * @type {number}
  */
 export
-const pt_sccp_calling_pa_gt_nature_of_address: ParameterType = ParameterType_pt_sccp_calling_pa_gt_nature_of_address; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_sccp_calling_pa_gt_nature_of_address = ParameterType_pt_sccp_calling_pa_gt_nature_of_address; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_sccp_calling_pa_gt_address
@@ -3226,7 +3226,7 @@ const pt_sccp_calling_pa_gt_nature_of_address: ParameterType = ParameterType_pt_
  * @type {number}
  */
 export
-const ParameterType_pt_sccp_calling_pa_gt_address: ParameterType = 339; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_sccp_calling_pa_gt_address = 339 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_sccp_calling_pa_gt_address
@@ -3234,7 +3234,7 @@ const ParameterType_pt_sccp_calling_pa_gt_address: ParameterType = 339; /* LONG_
  * @type {number}
  */
 export
-const pt_sccp_calling_pa_gt_address: ParameterType = ParameterType_pt_sccp_calling_pa_gt_address; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_sccp_calling_pa_gt_address = ParameterType_pt_sccp_calling_pa_gt_address; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_sccp_calling_pa_gt_translation_type
@@ -3242,7 +3242,7 @@ const pt_sccp_calling_pa_gt_address: ParameterType = ParameterType_pt_sccp_calli
  * @type {number}
  */
 export
-const ParameterType_pt_sccp_calling_pa_gt_translation_type: ParameterType = 340; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_sccp_calling_pa_gt_translation_type = 340 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_sccp_calling_pa_gt_translation_type
@@ -3250,7 +3250,7 @@ const ParameterType_pt_sccp_calling_pa_gt_translation_type: ParameterType = 340;
  * @type {number}
  */
 export
-const pt_sccp_calling_pa_gt_translation_type: ParameterType = ParameterType_pt_sccp_calling_pa_gt_translation_type; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_sccp_calling_pa_gt_translation_type = ParameterType_pt_sccp_calling_pa_gt_translation_type; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_sccp_message_type
@@ -3258,7 +3258,7 @@ const pt_sccp_calling_pa_gt_translation_type: ParameterType = ParameterType_pt_s
  * @type {number}
  */
 export
-const ParameterType_pt_sccp_message_type: ParameterType = 341; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_sccp_message_type = 341 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_sccp_message_type
@@ -3266,7 +3266,7 @@ const ParameterType_pt_sccp_message_type: ParameterType = 341; /* LONG_NAMED_INT
  * @type {number}
  */
 export
-const pt_sccp_message_type: ParameterType = ParameterType_pt_sccp_message_type; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_sccp_message_type = ParameterType_pt_sccp_message_type; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_m3ua_info_string
@@ -3274,7 +3274,7 @@ const pt_sccp_message_type: ParameterType = ParameterType_pt_sccp_message_type; 
  * @type {number}
  */
 export
-const ParameterType_pt_m3ua_info_string: ParameterType = 200; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_m3ua_info_string = 200 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_m3ua_info_string
@@ -3282,7 +3282,7 @@ const ParameterType_pt_m3ua_info_string: ParameterType = 200; /* LONG_NAMED_INTE
  * @type {number}
  */
 export
-const pt_m3ua_info_string: ParameterType = ParameterType_pt_m3ua_info_string; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_m3ua_info_string = ParameterType_pt_m3ua_info_string; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_m3ua_routing_context
@@ -3290,7 +3290,7 @@ const pt_m3ua_info_string: ParameterType = ParameterType_pt_m3ua_info_string; /*
  * @type {number}
  */
 export
-const ParameterType_pt_m3ua_routing_context: ParameterType = 201; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_m3ua_routing_context = 201 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_m3ua_routing_context
@@ -3298,7 +3298,7 @@ const ParameterType_pt_m3ua_routing_context: ParameterType = 201; /* LONG_NAMED_
  * @type {number}
  */
 export
-const pt_m3ua_routing_context: ParameterType = ParameterType_pt_m3ua_routing_context; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_m3ua_routing_context = ParameterType_pt_m3ua_routing_context; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_m3ua_diagnostic_info
@@ -3306,7 +3306,7 @@ const pt_m3ua_routing_context: ParameterType = ParameterType_pt_m3ua_routing_con
  * @type {number}
  */
 export
-const ParameterType_pt_m3ua_diagnostic_info: ParameterType = 202; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_m3ua_diagnostic_info = 202 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_m3ua_diagnostic_info
@@ -3314,7 +3314,7 @@ const ParameterType_pt_m3ua_diagnostic_info: ParameterType = 202; /* LONG_NAMED_
  * @type {number}
  */
 export
-const pt_m3ua_diagnostic_info: ParameterType = ParameterType_pt_m3ua_diagnostic_info; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_m3ua_diagnostic_info = ParameterType_pt_m3ua_diagnostic_info; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_m3ua_heartbeat
@@ -3322,7 +3322,7 @@ const pt_m3ua_diagnostic_info: ParameterType = ParameterType_pt_m3ua_diagnostic_
  * @type {number}
  */
 export
-const ParameterType_pt_m3ua_heartbeat: ParameterType = 203; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_m3ua_heartbeat = 203 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_m3ua_heartbeat
@@ -3330,7 +3330,7 @@ const ParameterType_pt_m3ua_heartbeat: ParameterType = 203; /* LONG_NAMED_INTEGE
  * @type {number}
  */
 export
-const pt_m3ua_heartbeat: ParameterType = ParameterType_pt_m3ua_heartbeat; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_m3ua_heartbeat = ParameterType_pt_m3ua_heartbeat; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_m3ua_traffic_mode_type
@@ -3338,7 +3338,7 @@ const pt_m3ua_heartbeat: ParameterType = ParameterType_pt_m3ua_heartbeat; /* SHO
  * @type {number}
  */
 export
-const ParameterType_pt_m3ua_traffic_mode_type: ParameterType = 204; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_m3ua_traffic_mode_type = 204 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_m3ua_traffic_mode_type
@@ -3346,7 +3346,7 @@ const ParameterType_pt_m3ua_traffic_mode_type: ParameterType = 204; /* LONG_NAME
  * @type {number}
  */
 export
-const pt_m3ua_traffic_mode_type: ParameterType = ParameterType_pt_m3ua_traffic_mode_type; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_m3ua_traffic_mode_type = ParameterType_pt_m3ua_traffic_mode_type; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_m3ua_error_code
@@ -3354,7 +3354,7 @@ const pt_m3ua_traffic_mode_type: ParameterType = ParameterType_pt_m3ua_traffic_m
  * @type {number}
  */
 export
-const ParameterType_pt_m3ua_error_code: ParameterType = 205; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_m3ua_error_code = 205 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_m3ua_error_code
@@ -3362,7 +3362,7 @@ const ParameterType_pt_m3ua_error_code: ParameterType = 205; /* LONG_NAMED_INTEG
  * @type {number}
  */
 export
-const pt_m3ua_error_code: ParameterType = ParameterType_pt_m3ua_error_code; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_m3ua_error_code = ParameterType_pt_m3ua_error_code; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_m3ua_status
@@ -3370,7 +3370,7 @@ const pt_m3ua_error_code: ParameterType = ParameterType_pt_m3ua_error_code; /* S
  * @type {number}
  */
 export
-const ParameterType_pt_m3ua_status: ParameterType = 206; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_m3ua_status = 206 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_m3ua_status
@@ -3378,7 +3378,7 @@ const ParameterType_pt_m3ua_status: ParameterType = 206; /* LONG_NAMED_INTEGER_V
  * @type {number}
  */
 export
-const pt_m3ua_status: ParameterType = ParameterType_pt_m3ua_status; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_m3ua_status = ParameterType_pt_m3ua_status; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_m3ua_asp_identifier
@@ -3386,7 +3386,7 @@ const pt_m3ua_status: ParameterType = ParameterType_pt_m3ua_status; /* SHORT_NAM
  * @type {number}
  */
 export
-const ParameterType_pt_m3ua_asp_identifier: ParameterType = 207; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_m3ua_asp_identifier = 207 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_m3ua_asp_identifier
@@ -3394,7 +3394,7 @@ const ParameterType_pt_m3ua_asp_identifier: ParameterType = 207; /* LONG_NAMED_I
  * @type {number}
  */
 export
-const pt_m3ua_asp_identifier: ParameterType = ParameterType_pt_m3ua_asp_identifier; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_m3ua_asp_identifier = ParameterType_pt_m3ua_asp_identifier; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_m3ua_affected_point_code
@@ -3402,7 +3402,7 @@ const pt_m3ua_asp_identifier: ParameterType = ParameterType_pt_m3ua_asp_identifi
  * @type {number}
  */
 export
-const ParameterType_pt_m3ua_affected_point_code: ParameterType = 208; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_m3ua_affected_point_code = 208 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_m3ua_affected_point_code
@@ -3410,7 +3410,7 @@ const ParameterType_pt_m3ua_affected_point_code: ParameterType = 208; /* LONG_NA
  * @type {number}
  */
 export
-const pt_m3ua_affected_point_code: ParameterType = ParameterType_pt_m3ua_affected_point_code; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_m3ua_affected_point_code = ParameterType_pt_m3ua_affected_point_code; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_m3ua_correlation_id
@@ -3418,7 +3418,7 @@ const pt_m3ua_affected_point_code: ParameterType = ParameterType_pt_m3ua_affecte
  * @type {number}
  */
 export
-const ParameterType_pt_m3ua_correlation_id: ParameterType = 209; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_m3ua_correlation_id = 209 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_m3ua_correlation_id
@@ -3426,7 +3426,7 @@ const ParameterType_pt_m3ua_correlation_id: ParameterType = 209; /* LONG_NAMED_I
  * @type {number}
  */
 export
-const pt_m3ua_correlation_id: ParameterType = ParameterType_pt_m3ua_correlation_id; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_m3ua_correlation_id = ParameterType_pt_m3ua_correlation_id; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_m3ua_network_appearance
@@ -3434,7 +3434,7 @@ const pt_m3ua_correlation_id: ParameterType = ParameterType_pt_m3ua_correlation_
  * @type {number}
  */
 export
-const ParameterType_pt_m3ua_network_appearance: ParameterType = 210; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_m3ua_network_appearance = 210 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_m3ua_network_appearance
@@ -3442,7 +3442,7 @@ const ParameterType_pt_m3ua_network_appearance: ParameterType = 210; /* LONG_NAM
  * @type {number}
  */
 export
-const pt_m3ua_network_appearance: ParameterType = ParameterType_pt_m3ua_network_appearance; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_m3ua_network_appearance = ParameterType_pt_m3ua_network_appearance; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_m3ua_user_cause
@@ -3450,7 +3450,7 @@ const pt_m3ua_network_appearance: ParameterType = ParameterType_pt_m3ua_network_
  * @type {number}
  */
 export
-const ParameterType_pt_m3ua_user_cause: ParameterType = 211; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_m3ua_user_cause = 211 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_m3ua_user_cause
@@ -3458,7 +3458,7 @@ const ParameterType_pt_m3ua_user_cause: ParameterType = 211; /* LONG_NAMED_INTEG
  * @type {number}
  */
 export
-const pt_m3ua_user_cause: ParameterType = ParameterType_pt_m3ua_user_cause; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_m3ua_user_cause = ParameterType_pt_m3ua_user_cause; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_m3ua_congestion_indications
@@ -3466,7 +3466,7 @@ const pt_m3ua_user_cause: ParameterType = ParameterType_pt_m3ua_user_cause; /* S
  * @type {number}
  */
 export
-const ParameterType_pt_m3ua_congestion_indications: ParameterType = 212; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_m3ua_congestion_indications = 212 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_m3ua_congestion_indications
@@ -3474,7 +3474,7 @@ const ParameterType_pt_m3ua_congestion_indications: ParameterType = 212; /* LONG
  * @type {number}
  */
 export
-const pt_m3ua_congestion_indications: ParameterType = ParameterType_pt_m3ua_congestion_indications; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_m3ua_congestion_indications = ParameterType_pt_m3ua_congestion_indications; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_m3ua_concerned_destination
@@ -3482,7 +3482,7 @@ const pt_m3ua_congestion_indications: ParameterType = ParameterType_pt_m3ua_cong
  * @type {number}
  */
 export
-const ParameterType_pt_m3ua_concerned_destination: ParameterType = 213; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_m3ua_concerned_destination = 213 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_m3ua_concerned_destination
@@ -3490,7 +3490,7 @@ const ParameterType_pt_m3ua_concerned_destination: ParameterType = 213; /* LONG_
  * @type {number}
  */
 export
-const pt_m3ua_concerned_destination: ParameterType = ParameterType_pt_m3ua_concerned_destination; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_m3ua_concerned_destination = ParameterType_pt_m3ua_concerned_destination; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_m3ua_routing_key
@@ -3498,7 +3498,7 @@ const pt_m3ua_concerned_destination: ParameterType = ParameterType_pt_m3ua_conce
  * @type {number}
  */
 export
-const ParameterType_pt_m3ua_routing_key: ParameterType = 214; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_m3ua_routing_key = 214 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_m3ua_routing_key
@@ -3506,7 +3506,7 @@ const ParameterType_pt_m3ua_routing_key: ParameterType = 214; /* LONG_NAMED_INTE
  * @type {number}
  */
 export
-const pt_m3ua_routing_key: ParameterType = ParameterType_pt_m3ua_routing_key; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_m3ua_routing_key = ParameterType_pt_m3ua_routing_key; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_m3ua_registration_result
@@ -3514,7 +3514,7 @@ const pt_m3ua_routing_key: ParameterType = ParameterType_pt_m3ua_routing_key; /*
  * @type {number}
  */
 export
-const ParameterType_pt_m3ua_registration_result: ParameterType = 215; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_m3ua_registration_result = 215 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_m3ua_registration_result
@@ -3522,7 +3522,7 @@ const ParameterType_pt_m3ua_registration_result: ParameterType = 215; /* LONG_NA
  * @type {number}
  */
 export
-const pt_m3ua_registration_result: ParameterType = ParameterType_pt_m3ua_registration_result; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_m3ua_registration_result = ParameterType_pt_m3ua_registration_result; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_m3ua_deregistration_result
@@ -3530,7 +3530,7 @@ const pt_m3ua_registration_result: ParameterType = ParameterType_pt_m3ua_registr
  * @type {number}
  */
 export
-const ParameterType_pt_m3ua_deregistration_result: ParameterType = 216; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_m3ua_deregistration_result = 216 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_m3ua_deregistration_result
@@ -3538,7 +3538,7 @@ const ParameterType_pt_m3ua_deregistration_result: ParameterType = 216; /* LONG_
  * @type {number}
  */
 export
-const pt_m3ua_deregistration_result: ParameterType = ParameterType_pt_m3ua_deregistration_result; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_m3ua_deregistration_result = ParameterType_pt_m3ua_deregistration_result; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_m3ua_local_routing_key_identifier
@@ -3546,7 +3546,7 @@ const pt_m3ua_deregistration_result: ParameterType = ParameterType_pt_m3ua_dereg
  * @type {number}
  */
 export
-const ParameterType_pt_m3ua_local_routing_key_identifier: ParameterType = 217; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_m3ua_local_routing_key_identifier = 217 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_m3ua_local_routing_key_identifier
@@ -3554,7 +3554,7 @@ const ParameterType_pt_m3ua_local_routing_key_identifier: ParameterType = 217; /
  * @type {number}
  */
 export
-const pt_m3ua_local_routing_key_identifier: ParameterType = ParameterType_pt_m3ua_local_routing_key_identifier; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_m3ua_local_routing_key_identifier = ParameterType_pt_m3ua_local_routing_key_identifier; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_m3ua_destination_point_code
@@ -3562,7 +3562,7 @@ const pt_m3ua_local_routing_key_identifier: ParameterType = ParameterType_pt_m3u
  * @type {number}
  */
 export
-const ParameterType_pt_m3ua_destination_point_code: ParameterType = 218; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_m3ua_destination_point_code = 218 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_m3ua_destination_point_code
@@ -3570,7 +3570,7 @@ const ParameterType_pt_m3ua_destination_point_code: ParameterType = 218; /* LONG
  * @type {number}
  */
 export
-const pt_m3ua_destination_point_code: ParameterType = ParameterType_pt_m3ua_destination_point_code; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_m3ua_destination_point_code = ParameterType_pt_m3ua_destination_point_code; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_m3ua_service_indicators
@@ -3578,7 +3578,7 @@ const pt_m3ua_destination_point_code: ParameterType = ParameterType_pt_m3ua_dest
  * @type {number}
  */
 export
-const ParameterType_pt_m3ua_service_indicators: ParameterType = 219; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_m3ua_service_indicators = 219 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_m3ua_service_indicators
@@ -3586,7 +3586,7 @@ const ParameterType_pt_m3ua_service_indicators: ParameterType = 219; /* LONG_NAM
  * @type {number}
  */
 export
-const pt_m3ua_service_indicators: ParameterType = ParameterType_pt_m3ua_service_indicators; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_m3ua_service_indicators = ParameterType_pt_m3ua_service_indicators; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_m3ua_origination_point_code_list
@@ -3594,7 +3594,7 @@ const pt_m3ua_service_indicators: ParameterType = ParameterType_pt_m3ua_service_
  * @type {number}
  */
 export
-const ParameterType_pt_m3ua_origination_point_code_list: ParameterType = 220; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_m3ua_origination_point_code_list = 220 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_m3ua_origination_point_code_list
@@ -3602,7 +3602,7 @@ const ParameterType_pt_m3ua_origination_point_code_list: ParameterType = 220; /*
  * @type {number}
  */
 export
-const pt_m3ua_origination_point_code_list: ParameterType = ParameterType_pt_m3ua_origination_point_code_list; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_m3ua_origination_point_code_list = ParameterType_pt_m3ua_origination_point_code_list; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_m3ua_circuit_range
@@ -3610,7 +3610,7 @@ const pt_m3ua_origination_point_code_list: ParameterType = ParameterType_pt_m3ua
  * @type {number}
  */
 export
-const ParameterType_pt_m3ua_circuit_range: ParameterType = 221; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_m3ua_circuit_range = 221 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_m3ua_circuit_range
@@ -3618,7 +3618,7 @@ const ParameterType_pt_m3ua_circuit_range: ParameterType = 221; /* LONG_NAMED_IN
  * @type {number}
  */
 export
-const pt_m3ua_circuit_range: ParameterType = ParameterType_pt_m3ua_circuit_range; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_m3ua_circuit_range = ParameterType_pt_m3ua_circuit_range; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_m3ua_protocol_data
@@ -3626,7 +3626,7 @@ const pt_m3ua_circuit_range: ParameterType = ParameterType_pt_m3ua_circuit_range
  * @type {number}
  */
 export
-const ParameterType_pt_m3ua_protocol_data: ParameterType = 222; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_m3ua_protocol_data = 222 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_m3ua_protocol_data
@@ -3634,7 +3634,7 @@ const ParameterType_pt_m3ua_protocol_data: ParameterType = 222; /* LONG_NAMED_IN
  * @type {number}
  */
 export
-const pt_m3ua_protocol_data: ParameterType = ParameterType_pt_m3ua_protocol_data; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_m3ua_protocol_data = ParameterType_pt_m3ua_protocol_data; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_m3ua_protocol_data_service_indicator
@@ -3642,7 +3642,7 @@ const pt_m3ua_protocol_data: ParameterType = ParameterType_pt_m3ua_protocol_data
  * @type {number}
  */
 export
-const ParameterType_pt_m3ua_protocol_data_service_indicator: ParameterType = 223; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_m3ua_protocol_data_service_indicator = 223 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_m3ua_protocol_data_service_indicator
@@ -3650,7 +3650,7 @@ const ParameterType_pt_m3ua_protocol_data_service_indicator: ParameterType = 223
  * @type {number}
  */
 export
-const pt_m3ua_protocol_data_service_indicator: ParameterType = ParameterType_pt_m3ua_protocol_data_service_indicator; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_m3ua_protocol_data_service_indicator = ParameterType_pt_m3ua_protocol_data_service_indicator; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_m3ua_protocol_data_network_indicator
@@ -3658,7 +3658,7 @@ const pt_m3ua_protocol_data_service_indicator: ParameterType = ParameterType_pt_
  * @type {number}
  */
 export
-const ParameterType_pt_m3ua_protocol_data_network_indicator: ParameterType = 224; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_m3ua_protocol_data_network_indicator = 224 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_m3ua_protocol_data_network_indicator
@@ -3666,7 +3666,7 @@ const ParameterType_pt_m3ua_protocol_data_network_indicator: ParameterType = 224
  * @type {number}
  */
 export
-const pt_m3ua_protocol_data_network_indicator: ParameterType = ParameterType_pt_m3ua_protocol_data_network_indicator; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_m3ua_protocol_data_network_indicator = ParameterType_pt_m3ua_protocol_data_network_indicator; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_m3ua_protocol_data_message_priority
@@ -3674,7 +3674,7 @@ const pt_m3ua_protocol_data_network_indicator: ParameterType = ParameterType_pt_
  * @type {number}
  */
 export
-const ParameterType_pt_m3ua_protocol_data_message_priority: ParameterType = 225; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_m3ua_protocol_data_message_priority = 225 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_m3ua_protocol_data_message_priority
@@ -3682,7 +3682,7 @@ const ParameterType_pt_m3ua_protocol_data_message_priority: ParameterType = 225;
  * @type {number}
  */
 export
-const pt_m3ua_protocol_data_message_priority: ParameterType = ParameterType_pt_m3ua_protocol_data_message_priority; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_m3ua_protocol_data_message_priority = ParameterType_pt_m3ua_protocol_data_message_priority; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_m3ua_protocol_data_destination_point_code
@@ -3690,7 +3690,7 @@ const pt_m3ua_protocol_data_message_priority: ParameterType = ParameterType_pt_m
  * @type {number}
  */
 export
-const ParameterType_pt_m3ua_protocol_data_destination_point_code: ParameterType = 226; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_m3ua_protocol_data_destination_point_code = 226 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_m3ua_protocol_data_destination_point_code
@@ -3698,7 +3698,7 @@ const ParameterType_pt_m3ua_protocol_data_destination_point_code: ParameterType 
  * @type {number}
  */
 export
-const pt_m3ua_protocol_data_destination_point_code: ParameterType = ParameterType_pt_m3ua_protocol_data_destination_point_code; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_m3ua_protocol_data_destination_point_code = ParameterType_pt_m3ua_protocol_data_destination_point_code; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_m3ua_protocol_data_originating_point_code
@@ -3706,7 +3706,7 @@ const pt_m3ua_protocol_data_destination_point_code: ParameterType = ParameterTyp
  * @type {number}
  */
 export
-const ParameterType_pt_m3ua_protocol_data_originating_point_code: ParameterType = 227; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_m3ua_protocol_data_originating_point_code = 227 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_m3ua_protocol_data_originating_point_code
@@ -3714,7 +3714,7 @@ const ParameterType_pt_m3ua_protocol_data_originating_point_code: ParameterType 
  * @type {number}
  */
 export
-const pt_m3ua_protocol_data_originating_point_code: ParameterType = ParameterType_pt_m3ua_protocol_data_originating_point_code; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_m3ua_protocol_data_originating_point_code = ParameterType_pt_m3ua_protocol_data_originating_point_code; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_m3ua_protocol_data_signalling_link_selection_code
@@ -3722,7 +3722,7 @@ const pt_m3ua_protocol_data_originating_point_code: ParameterType = ParameterTyp
  * @type {number}
  */
 export
-const ParameterType_pt_m3ua_protocol_data_signalling_link_selection_code: ParameterType = 228; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_m3ua_protocol_data_signalling_link_selection_code = 228 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_m3ua_protocol_data_signalling_link_selection_code
@@ -3730,7 +3730,7 @@ const ParameterType_pt_m3ua_protocol_data_signalling_link_selection_code: Parame
  * @type {number}
  */
 export
-const pt_m3ua_protocol_data_signalling_link_selection_code: ParameterType = ParameterType_pt_m3ua_protocol_data_signalling_link_selection_code; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_m3ua_protocol_data_signalling_link_selection_code = ParameterType_pt_m3ua_protocol_data_signalling_link_selection_code; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_m3ua_registration_status
@@ -3738,7 +3738,7 @@ const pt_m3ua_protocol_data_signalling_link_selection_code: ParameterType = Para
  * @type {number}
  */
 export
-const ParameterType_pt_m3ua_registration_status: ParameterType = 229; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_m3ua_registration_status = 229 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_m3ua_registration_status
@@ -3746,7 +3746,7 @@ const ParameterType_pt_m3ua_registration_status: ParameterType = 229; /* LONG_NA
  * @type {number}
  */
 export
-const pt_m3ua_registration_status: ParameterType = ParameterType_pt_m3ua_registration_status; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_m3ua_registration_status = ParameterType_pt_m3ua_registration_status; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_m3ua_deregistration_status
@@ -3754,7 +3754,7 @@ const pt_m3ua_registration_status: ParameterType = ParameterType_pt_m3ua_registr
  * @type {number}
  */
 export
-const ParameterType_pt_m3ua_deregistration_status: ParameterType = 230; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_m3ua_deregistration_status = 230 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_m3ua_deregistration_status
@@ -3762,7 +3762,7 @@ const ParameterType_pt_m3ua_deregistration_status: ParameterType = 230; /* LONG_
  * @type {number}
  */
 export
-const pt_m3ua_deregistration_status: ParameterType = ParameterType_pt_m3ua_deregistration_status; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_m3ua_deregistration_status = ParameterType_pt_m3ua_deregistration_status; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_m3ua_header_data
@@ -3770,7 +3770,7 @@ const pt_m3ua_deregistration_status: ParameterType = ParameterType_pt_m3ua_dereg
  * @type {number}
  */
 export
-const ParameterType_pt_m3ua_header_data: ParameterType = 231; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_m3ua_header_data = 231 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_m3ua_header_data
@@ -3778,7 +3778,7 @@ const ParameterType_pt_m3ua_header_data: ParameterType = 231; /* LONG_NAMED_INTE
  * @type {number}
  */
 export
-const pt_m3ua_header_data: ParameterType = ParameterType_pt_m3ua_header_data; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_m3ua_header_data = ParameterType_pt_m3ua_header_data; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_m3ua_as_label
@@ -3786,7 +3786,7 @@ const pt_m3ua_header_data: ParameterType = ParameterType_pt_m3ua_header_data; /*
  * @type {number}
  */
 export
-const ParameterType_pt_m3ua_as_label: ParameterType = 232; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_m3ua_as_label = 232 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_m3ua_as_label
@@ -3794,7 +3794,7 @@ const ParameterType_pt_m3ua_as_label: ParameterType = 232; /* LONG_NAMED_INTEGER
  * @type {number}
  */
 export
-const pt_m3ua_as_label: ParameterType = ParameterType_pt_m3ua_as_label; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_m3ua_as_label = ParameterType_pt_m3ua_as_label; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_m3ua_asp_label
@@ -3802,7 +3802,7 @@ const pt_m3ua_as_label: ParameterType = ParameterType_pt_m3ua_as_label; /* SHORT
  * @type {number}
  */
 export
-const ParameterType_pt_m3ua_asp_label: ParameterType = 233; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterType_pt_m3ua_asp_label = 233 satisfies ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterType_pt_m3ua_asp_label
@@ -3810,7 +3810,7 @@ const ParameterType_pt_m3ua_asp_label: ParameterType = 233; /* LONG_NAMED_INTEGE
  * @type {number}
  */
 export
-const pt_m3ua_asp_label: ParameterType = ParameterType_pt_m3ua_asp_label; /* SHORT_NAMED_INTEGER_VALUE */
+const pt_m3ua_asp_label = ParameterType_pt_m3ua_asp_label; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_ParameterType = $._decodeInteger;
 export const _encode_ParameterType = $._encodeInteger;
 

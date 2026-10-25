@@ -33,7 +33,7 @@ type TermCAMELRecord_jIPQuryStatus = INTEGER;
  * @type {number}
  */
 export
-const TermCAMELRecord_jIPQuryStatus_successfulQuery: TermCAMELRecord_jIPQuryStatus = 1; /* LONG_NAMED_INTEGER_VALUE */
+const TermCAMELRecord_jIPQuryStatus_successfulQuery = 1 satisfies TermCAMELRecord_jIPQuryStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TermCAMELRecord_jIPQuryStatus_successfulQuery
@@ -41,7 +41,7 @@ const TermCAMELRecord_jIPQuryStatus_successfulQuery: TermCAMELRecord_jIPQuryStat
  * @type {number}
  */
 export
-const successfulQuery: TermCAMELRecord_jIPQuryStatus = TermCAMELRecord_jIPQuryStatus_successfulQuery; /* SHORT_NAMED_INTEGER_VALUE */
+const successfulQuery = TermCAMELRecord_jIPQuryStatus_successfulQuery; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TermCAMELRecord_jIPQuryStatus_noQueryResponseMsg
@@ -49,7 +49,7 @@ const successfulQuery: TermCAMELRecord_jIPQuryStatus = TermCAMELRecord_jIPQurySt
  * @type {number}
  */
 export
-const TermCAMELRecord_jIPQuryStatus_noQueryResponseMsg: TermCAMELRecord_jIPQuryStatus = 2; /* LONG_NAMED_INTEGER_VALUE */
+const TermCAMELRecord_jIPQuryStatus_noQueryResponseMsg = 2 satisfies TermCAMELRecord_jIPQuryStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TermCAMELRecord_jIPQuryStatus_noQueryResponseMsg
@@ -57,7 +57,7 @@ const TermCAMELRecord_jIPQuryStatus_noQueryResponseMsg: TermCAMELRecord_jIPQuryS
  * @type {number}
  */
 export
-const noQueryResponseMsg: TermCAMELRecord_jIPQuryStatus = TermCAMELRecord_jIPQuryStatus_noQueryResponseMsg; /* SHORT_NAMED_INTEGER_VALUE */
+const noQueryResponseMsg = TermCAMELRecord_jIPQuryStatus_noQueryResponseMsg; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TermCAMELRecord_jIPQuryStatus_queryProtocolErr
@@ -65,7 +65,7 @@ const noQueryResponseMsg: TermCAMELRecord_jIPQuryStatus = TermCAMELRecord_jIPQur
  * @type {number}
  */
 export
-const TermCAMELRecord_jIPQuryStatus_queryProtocolErr: TermCAMELRecord_jIPQuryStatus = 4; /* LONG_NAMED_INTEGER_VALUE */
+const TermCAMELRecord_jIPQuryStatus_queryProtocolErr = 4 satisfies TermCAMELRecord_jIPQuryStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TermCAMELRecord_jIPQuryStatus_queryProtocolErr
@@ -73,7 +73,7 @@ const TermCAMELRecord_jIPQuryStatus_queryProtocolErr: TermCAMELRecord_jIPQurySta
  * @type {number}
  */
 export
-const queryProtocolErr: TermCAMELRecord_jIPQuryStatus = TermCAMELRecord_jIPQuryStatus_queryProtocolErr; /* SHORT_NAMED_INTEGER_VALUE */
+const queryProtocolErr = TermCAMELRecord_jIPQuryStatus_queryProtocolErr; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TermCAMELRecord_jIPQuryStatus_queryResponseDataErr
@@ -81,7 +81,7 @@ const queryProtocolErr: TermCAMELRecord_jIPQuryStatus = TermCAMELRecord_jIPQuryS
  * @type {number}
  */
 export
-const TermCAMELRecord_jIPQuryStatus_queryResponseDataErr: TermCAMELRecord_jIPQuryStatus = 5; /* LONG_NAMED_INTEGER_VALUE */
+const TermCAMELRecord_jIPQuryStatus_queryResponseDataErr = 5 satisfies TermCAMELRecord_jIPQuryStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TermCAMELRecord_jIPQuryStatus_queryResponseDataErr
@@ -89,7 +89,7 @@ const TermCAMELRecord_jIPQuryStatus_queryResponseDataErr: TermCAMELRecord_jIPQur
  * @type {number}
  */
 export
-const queryResponseDataErr: TermCAMELRecord_jIPQuryStatus = TermCAMELRecord_jIPQuryStatus_queryResponseDataErr; /* SHORT_NAMED_INTEGER_VALUE */
+const queryResponseDataErr = TermCAMELRecord_jIPQuryStatus_queryResponseDataErr; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TermCAMELRecord_jIPQuryStatus_queryRejected
@@ -97,7 +97,7 @@ const queryResponseDataErr: TermCAMELRecord_jIPQuryStatus = TermCAMELRecord_jIPQ
  * @type {number}
  */
 export
-const TermCAMELRecord_jIPQuryStatus_queryRejected: TermCAMELRecord_jIPQuryStatus = 6; /* LONG_NAMED_INTEGER_VALUE */
+const TermCAMELRecord_jIPQuryStatus_queryRejected = 6 satisfies TermCAMELRecord_jIPQuryStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TermCAMELRecord_jIPQuryStatus_queryRejected
@@ -105,7 +105,7 @@ const TermCAMELRecord_jIPQuryStatus_queryRejected: TermCAMELRecord_jIPQuryStatus
  * @type {number}
  */
 export
-const queryRejected: TermCAMELRecord_jIPQuryStatus = TermCAMELRecord_jIPQuryStatus_queryRejected; /* SHORT_NAMED_INTEGER_VALUE */
+const queryRejected = TermCAMELRecord_jIPQuryStatus_queryRejected; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TermCAMELRecord_jIPQuryStatus_queryNotPerformed
@@ -113,7 +113,7 @@ const queryRejected: TermCAMELRecord_jIPQuryStatus = TermCAMELRecord_jIPQuryStat
  * @type {number}
  */
 export
-const TermCAMELRecord_jIPQuryStatus_queryNotPerformed: TermCAMELRecord_jIPQuryStatus = 9; /* LONG_NAMED_INTEGER_VALUE */
+const TermCAMELRecord_jIPQuryStatus_queryNotPerformed = 9 satisfies TermCAMELRecord_jIPQuryStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TermCAMELRecord_jIPQuryStatus_queryNotPerformed
@@ -121,7 +121,7 @@ const TermCAMELRecord_jIPQuryStatus_queryNotPerformed: TermCAMELRecord_jIPQurySt
  * @type {number}
  */
 export
-const queryNotPerformed: TermCAMELRecord_jIPQuryStatus = TermCAMELRecord_jIPQuryStatus_queryNotPerformed; /* SHORT_NAMED_INTEGER_VALUE */
+const queryNotPerformed = TermCAMELRecord_jIPQuryStatus_queryNotPerformed; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TermCAMELRecord_jIPQuryStatus_queryUnsuccessful
@@ -129,7 +129,7 @@ const queryNotPerformed: TermCAMELRecord_jIPQuryStatus = TermCAMELRecord_jIPQury
  * @type {number}
  */
 export
-const TermCAMELRecord_jIPQuryStatus_queryUnsuccessful: TermCAMELRecord_jIPQuryStatus = 99; /* LONG_NAMED_INTEGER_VALUE */
+const TermCAMELRecord_jIPQuryStatus_queryUnsuccessful = 99 satisfies TermCAMELRecord_jIPQuryStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TermCAMELRecord_jIPQuryStatus_queryUnsuccessful
@@ -137,7 +137,7 @@ const TermCAMELRecord_jIPQuryStatus_queryUnsuccessful: TermCAMELRecord_jIPQurySt
  * @type {number}
  */
 export
-const queryUnsuccessful: TermCAMELRecord_jIPQuryStatus = TermCAMELRecord_jIPQuryStatus_queryUnsuccessful; /* SHORT_NAMED_INTEGER_VALUE */
+const queryUnsuccessful = TermCAMELRecord_jIPQuryStatus_queryUnsuccessful; /* SHORT_NAMED_INTEGER_VALUE */
 
 export
 const _decode_TermCAMELRecord_jIPQuryStatus: $.ASN1Decoder<TermCAMELRecord_jIPQuryStatus> = $._decodeInteger;

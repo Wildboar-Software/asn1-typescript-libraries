@@ -31,56 +31,56 @@ export type DLPolicy_originator_report = INTEGER;
  * @constant
  * @type {number}
  */
-export const DLPolicy_originator_report_unchanged: DLPolicy_originator_report = 0; /* LONG_NAMED_INTEGER_VALUE */
+export const DLPolicy_originator_report_unchanged = 0 satisfies DLPolicy_originator_report; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DLPolicy_originator_report_unchanged
  * @constant
  * @type {number}
  */
-export const unchanged: DLPolicy_originator_report = DLPolicy_originator_report_unchanged; /* SHORT_NAMED_INTEGER_VALUE */
+export const unchanged = DLPolicy_originator_report_unchanged; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DLPolicy_originator_report_no_report
  * @constant
  * @type {number}
  */
-export const DLPolicy_originator_report_no_report: DLPolicy_originator_report = 1; /* LONG_NAMED_INTEGER_VALUE */
+export const DLPolicy_originator_report_no_report = 1 satisfies DLPolicy_originator_report; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DLPolicy_originator_report_no_report
  * @constant
  * @type {number}
  */
-export const no_report: DLPolicy_originator_report = DLPolicy_originator_report_no_report; /* SHORT_NAMED_INTEGER_VALUE */
+export const no_report = DLPolicy_originator_report_no_report; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DLPolicy_originator_report_report
  * @constant
  * @type {number}
  */
-export const DLPolicy_originator_report_report: DLPolicy_originator_report = 2; /* LONG_NAMED_INTEGER_VALUE */
+export const DLPolicy_originator_report_report = 2 satisfies DLPolicy_originator_report; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DLPolicy_originator_report_report
  * @constant
  * @type {number}
  */
-export const report: DLPolicy_originator_report = DLPolicy_originator_report_report; /* SHORT_NAMED_INTEGER_VALUE */
+export const report = DLPolicy_originator_report_report; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DLPolicy_originator_report_non_delivery_report
  * @constant
  * @type {number}
  */
-export const DLPolicy_originator_report_non_delivery_report: DLPolicy_originator_report = 3; /* LONG_NAMED_INTEGER_VALUE */
+export const DLPolicy_originator_report_non_delivery_report = 3 satisfies DLPolicy_originator_report; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DLPolicy_originator_report_non_delivery_report
  * @constant
  * @type {number}
  */
-export const non_delivery_report: DLPolicy_originator_report = DLPolicy_originator_report_non_delivery_report; /* SHORT_NAMED_INTEGER_VALUE */
+export const non_delivery_report = DLPolicy_originator_report_non_delivery_report; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_DLPolicy_originator_report = $._decodeInteger;

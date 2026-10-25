@@ -92,7 +92,7 @@ const RegionalSubscriptionResponse = _enum_for_RegionalSubscriptionResponse;
  * @type {number}
  */
 export
-const RegionalSubscriptionResponse_networkNode_AreaRestricted: RegionalSubscriptionResponse = RegionalSubscriptionResponse.networkNode_AreaRestricted; /* LONG_NAMED_ENUMERATED_VALUE */
+const RegionalSubscriptionResponse_networkNode_AreaRestricted = RegionalSubscriptionResponse.networkNode_AreaRestricted; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary networkNode_AreaRestricted
@@ -100,7 +100,7 @@ const RegionalSubscriptionResponse_networkNode_AreaRestricted: RegionalSubscript
  * @type {number}
  */
 export
-const networkNode_AreaRestricted: RegionalSubscriptionResponse = RegionalSubscriptionResponse.networkNode_AreaRestricted; /* SHORT_NAMED_ENUMERATED_VALUE */
+const networkNode_AreaRestricted = RegionalSubscriptionResponse.networkNode_AreaRestricted; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RegionalSubscriptionResponse_tooManyZoneCodes
@@ -108,7 +108,7 @@ const networkNode_AreaRestricted: RegionalSubscriptionResponse = RegionalSubscri
  * @type {number}
  */
 export
-const RegionalSubscriptionResponse_tooManyZoneCodes: RegionalSubscriptionResponse = RegionalSubscriptionResponse.tooManyZoneCodes; /* LONG_NAMED_ENUMERATED_VALUE */
+const RegionalSubscriptionResponse_tooManyZoneCodes = RegionalSubscriptionResponse.tooManyZoneCodes; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tooManyZoneCodes
@@ -116,7 +116,7 @@ const RegionalSubscriptionResponse_tooManyZoneCodes: RegionalSubscriptionRespons
  * @type {number}
  */
 export
-const tooManyZoneCodes: RegionalSubscriptionResponse = RegionalSubscriptionResponse.tooManyZoneCodes; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tooManyZoneCodes = RegionalSubscriptionResponse.tooManyZoneCodes; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RegionalSubscriptionResponse_zoneCodesConflict
@@ -124,7 +124,7 @@ const tooManyZoneCodes: RegionalSubscriptionResponse = RegionalSubscriptionRespo
  * @type {number}
  */
 export
-const RegionalSubscriptionResponse_zoneCodesConflict: RegionalSubscriptionResponse = RegionalSubscriptionResponse.zoneCodesConflict; /* LONG_NAMED_ENUMERATED_VALUE */
+const RegionalSubscriptionResponse_zoneCodesConflict = RegionalSubscriptionResponse.zoneCodesConflict; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary zoneCodesConflict
@@ -132,7 +132,7 @@ const RegionalSubscriptionResponse_zoneCodesConflict: RegionalSubscriptionRespon
  * @type {number}
  */
 export
-const zoneCodesConflict: RegionalSubscriptionResponse = RegionalSubscriptionResponse.zoneCodesConflict; /* SHORT_NAMED_ENUMERATED_VALUE */
+const zoneCodesConflict = RegionalSubscriptionResponse.zoneCodesConflict; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RegionalSubscriptionResponse_regionalSubscNotSupported
@@ -140,7 +140,7 @@ const zoneCodesConflict: RegionalSubscriptionResponse = RegionalSubscriptionResp
  * @type {number}
  */
 export
-const RegionalSubscriptionResponse_regionalSubscNotSupported: RegionalSubscriptionResponse = RegionalSubscriptionResponse.regionalSubscNotSupported; /* LONG_NAMED_ENUMERATED_VALUE */
+const RegionalSubscriptionResponse_regionalSubscNotSupported = RegionalSubscriptionResponse.regionalSubscNotSupported; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary regionalSubscNotSupported
@@ -148,7 +148,7 @@ const RegionalSubscriptionResponse_regionalSubscNotSupported: RegionalSubscripti
  * @type {number}
  */
 export
-const regionalSubscNotSupported: RegionalSubscriptionResponse = RegionalSubscriptionResponse.regionalSubscNotSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
+const regionalSubscNotSupported = RegionalSubscriptionResponse.regionalSubscNotSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) RegionalSubscriptionResponse

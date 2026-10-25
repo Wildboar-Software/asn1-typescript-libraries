@@ -38,7 +38,7 @@ type SortKeyDetails_caseSensitivity = INTEGER;
  * @type {number}
  */
 export
-const SortKeyDetails_caseSensitivity_always: SortKeyDetails_caseSensitivity = 0; /* LONG_NAMED_INTEGER_VALUE */
+const SortKeyDetails_caseSensitivity_always = 0 satisfies SortKeyDetails_caseSensitivity; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SortKeyDetails_caseSensitivity_always
@@ -48,7 +48,7 @@ const SortKeyDetails_caseSensitivity_always: SortKeyDetails_caseSensitivity = 0;
  * @type {number}
  */
 export
-const always: SortKeyDetails_caseSensitivity = SortKeyDetails_caseSensitivity_always; /* SHORT_NAMED_INTEGER_VALUE */
+const always = SortKeyDetails_caseSensitivity_always; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SortKeyDetails_caseSensitivity_never
@@ -58,7 +58,7 @@ const always: SortKeyDetails_caseSensitivity = SortKeyDetails_caseSensitivity_al
  * @type {number}
  */
 export
-const SortKeyDetails_caseSensitivity_never: SortKeyDetails_caseSensitivity = 1; /* LONG_NAMED_INTEGER_VALUE */
+const SortKeyDetails_caseSensitivity_never = 1 satisfies SortKeyDetails_caseSensitivity; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SortKeyDetails_caseSensitivity_never
@@ -68,7 +68,7 @@ const SortKeyDetails_caseSensitivity_never: SortKeyDetails_caseSensitivity = 1; 
  * @type {number}
  */
 export
-const never: SortKeyDetails_caseSensitivity = SortKeyDetails_caseSensitivity_never; /* SHORT_NAMED_INTEGER_VALUE */
+const never = SortKeyDetails_caseSensitivity_never; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SortKeyDetails_caseSensitivity_default_yes
@@ -79,7 +79,7 @@ const never: SortKeyDetails_caseSensitivity = SortKeyDetails_caseSensitivity_nev
  * @type {number}
  */
 export
-const SortKeyDetails_caseSensitivity_default_yes: SortKeyDetails_caseSensitivity = 2; /* LONG_NAMED_INTEGER_VALUE */
+const SortKeyDetails_caseSensitivity_default_yes = 2 satisfies SortKeyDetails_caseSensitivity; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SortKeyDetails_caseSensitivity_default_yes
@@ -89,7 +89,7 @@ const SortKeyDetails_caseSensitivity_default_yes: SortKeyDetails_caseSensitivity
  * @type {number}
  */
 export
-const default_yes: SortKeyDetails_caseSensitivity = SortKeyDetails_caseSensitivity_default_yes; /* SHORT_NAMED_INTEGER_VALUE */
+const default_yes = SortKeyDetails_caseSensitivity_default_yes; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SortKeyDetails_caseSensitivity_default_no
@@ -100,7 +100,7 @@ const default_yes: SortKeyDetails_caseSensitivity = SortKeyDetails_caseSensitivi
  * @type {number}
  */
 export
-const SortKeyDetails_caseSensitivity_default_no: SortKeyDetails_caseSensitivity = 3; /* LONG_NAMED_INTEGER_VALUE */
+const SortKeyDetails_caseSensitivity_default_no = 3 satisfies SortKeyDetails_caseSensitivity; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SortKeyDetails_caseSensitivity_default_no
@@ -110,7 +110,7 @@ const SortKeyDetails_caseSensitivity_default_no: SortKeyDetails_caseSensitivity 
  * @type {number}
  */
 export
-const default_no: SortKeyDetails_caseSensitivity = SortKeyDetails_caseSensitivity_default_no; /* SHORT_NAMED_INTEGER_VALUE */
+const default_no = SortKeyDetails_caseSensitivity_default_no; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_SortKeyDetails_caseSensitivity: $.ASN1Decoder<SortKeyDetails_caseSensitivity> = $._decodeInteger;
 export const _encode_SortKeyDetails_caseSensitivity: $.ASN1Encoder<SortKeyDetails_caseSensitivity> = $._encodeInteger;
 

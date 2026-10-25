@@ -79,7 +79,7 @@ const OverrideCategory = _enum_for_OverrideCategory;
  * @type {number}
  */
 export
-const OverrideCategory_overrideEnabled: OverrideCategory = OverrideCategory.overrideEnabled; /* LONG_NAMED_ENUMERATED_VALUE */
+const OverrideCategory_overrideEnabled = OverrideCategory.overrideEnabled; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary overrideEnabled
@@ -91,7 +91,7 @@ const OverrideCategory_overrideEnabled: OverrideCategory = OverrideCategory.over
  * @type {number}
  */
 export
-const overrideEnabled: OverrideCategory = OverrideCategory.overrideEnabled; /* SHORT_NAMED_ENUMERATED_VALUE */
+const overrideEnabled = OverrideCategory.overrideEnabled; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OverrideCategory_overrideDisabled
@@ -103,7 +103,7 @@ const overrideEnabled: OverrideCategory = OverrideCategory.overrideEnabled; /* S
  * @type {number}
  */
 export
-const OverrideCategory_overrideDisabled: OverrideCategory = OverrideCategory.overrideDisabled; /* LONG_NAMED_ENUMERATED_VALUE */
+const OverrideCategory_overrideDisabled = OverrideCategory.overrideDisabled; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary overrideDisabled
@@ -115,7 +115,7 @@ const OverrideCategory_overrideDisabled: OverrideCategory = OverrideCategory.ove
  * @type {number}
  */
 export
-const overrideDisabled: OverrideCategory = OverrideCategory.overrideDisabled; /* SHORT_NAMED_ENUMERATED_VALUE */
+const overrideDisabled = OverrideCategory.overrideDisabled; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) OverrideCategory

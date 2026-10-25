@@ -66,7 +66,7 @@ export const UiiFormat_subset = _enum_for_UiiFormat_subset;
  * @constant
  * @type {number}
  */
-export const UiiFormat_subset_baseObject: UiiFormat_subset =
+export const UiiFormat_subset_baseObject =
     UiiFormat_subset.baseObject; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -78,7 +78,7 @@ export const UiiFormat_subset_baseObject: UiiFormat_subset =
  * @constant
  * @type {number}
  */
-export const baseObject: UiiFormat_subset =
+export const baseObject =
     UiiFormat_subset.baseObject; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -86,7 +86,7 @@ export const baseObject: UiiFormat_subset =
  * @constant
  * @type {number}
  */
-export const UiiFormat_subset_oneLevel: UiiFormat_subset =
+export const UiiFormat_subset_oneLevel =
     UiiFormat_subset.oneLevel; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -94,7 +94,7 @@ export const UiiFormat_subset_oneLevel: UiiFormat_subset =
  * @constant
  * @type {number}
  */
-export const oneLevel: UiiFormat_subset =
+export const oneLevel =
     UiiFormat_subset.oneLevel; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -102,7 +102,7 @@ export const oneLevel: UiiFormat_subset =
  * @constant
  * @type {number}
  */
-export const UiiFormat_subset_wholeSubtree: UiiFormat_subset =
+export const UiiFormat_subset_wholeSubtree =
     UiiFormat_subset.wholeSubtree; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -110,7 +110,7 @@ export const UiiFormat_subset_wholeSubtree: UiiFormat_subset =
  * @constant
  * @type {number}
  */
-export const wholeSubtree: UiiFormat_subset =
+export const wholeSubtree =
     UiiFormat_subset.wholeSubtree; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 

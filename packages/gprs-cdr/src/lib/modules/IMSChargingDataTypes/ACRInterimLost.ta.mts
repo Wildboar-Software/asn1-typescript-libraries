@@ -96,7 +96,7 @@ const ACRInterimLost = _enum_for_ACRInterimLost;
  * @type {number}
  */
 export
-const ACRInterimLost_no: ACRInterimLost = ACRInterimLost.no; /* LONG_NAMED_ENUMERATED_VALUE */
+const ACRInterimLost_no = ACRInterimLost.no; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary no
@@ -109,7 +109,7 @@ const ACRInterimLost_no: ACRInterimLost = ACRInterimLost.no; /* LONG_NAMED_ENUME
  * @type {number}
  */
 export
-const no: ACRInterimLost = ACRInterimLost.no; /* SHORT_NAMED_ENUMERATED_VALUE */
+const no = ACRInterimLost.no; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ACRInterimLost_yes
@@ -122,7 +122,7 @@ const no: ACRInterimLost = ACRInterimLost.no; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const ACRInterimLost_yes: ACRInterimLost = ACRInterimLost.yes; /* LONG_NAMED_ENUMERATED_VALUE */
+const ACRInterimLost_yes = ACRInterimLost.yes; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary yes
@@ -135,7 +135,7 @@ const ACRInterimLost_yes: ACRInterimLost = ACRInterimLost.yes; /* LONG_NAMED_ENU
  * @type {number}
  */
 export
-const yes: ACRInterimLost = ACRInterimLost.yes; /* SHORT_NAMED_ENUMERATED_VALUE */
+const yes = ACRInterimLost.yes; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ACRInterimLost_unknown
@@ -148,7 +148,7 @@ const yes: ACRInterimLost = ACRInterimLost.yes; /* SHORT_NAMED_ENUMERATED_VALUE 
  * @type {number}
  */
 export
-const ACRInterimLost_unknown: ACRInterimLost = ACRInterimLost.unknown; /* LONG_NAMED_ENUMERATED_VALUE */
+const ACRInterimLost_unknown = ACRInterimLost.unknown; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unknown
@@ -161,7 +161,7 @@ const ACRInterimLost_unknown: ACRInterimLost = ACRInterimLost.unknown; /* LONG_N
  * @type {number}
  */
 export
-const unknown: ACRInterimLost = ACRInterimLost.unknown; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unknown = ACRInterimLost.unknown; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_ACRInterimLost: $.ASN1Decoder<ACRInterimLost> = $._decodeEnumerated;

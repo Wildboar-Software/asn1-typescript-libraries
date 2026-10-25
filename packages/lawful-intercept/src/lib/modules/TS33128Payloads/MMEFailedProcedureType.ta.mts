@@ -124,7 +124,7 @@ const MMEFailedProcedureType = _enum_for_MMEFailedProcedureType;
  * @type {number}
  */
 export
-const MMEFailedProcedureType_attachReject: MMEFailedProcedureType = MMEFailedProcedureType.attachReject; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMEFailedProcedureType_attachReject = MMEFailedProcedureType.attachReject; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary attachReject
@@ -132,7 +132,7 @@ const MMEFailedProcedureType_attachReject: MMEFailedProcedureType = MMEFailedPro
  * @type {number}
  */
 export
-const attachReject: MMEFailedProcedureType = MMEFailedProcedureType.attachReject; /* SHORT_NAMED_ENUMERATED_VALUE */
+const attachReject = MMEFailedProcedureType.attachReject; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMEFailedProcedureType_authenticationReject
@@ -140,7 +140,7 @@ const attachReject: MMEFailedProcedureType = MMEFailedProcedureType.attachReject
  * @type {number}
  */
 export
-const MMEFailedProcedureType_authenticationReject: MMEFailedProcedureType = MMEFailedProcedureType.authenticationReject; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMEFailedProcedureType_authenticationReject = MMEFailedProcedureType.authenticationReject; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary authenticationReject
@@ -148,7 +148,7 @@ const MMEFailedProcedureType_authenticationReject: MMEFailedProcedureType = MMEF
  * @type {number}
  */
 export
-const authenticationReject: MMEFailedProcedureType = MMEFailedProcedureType.authenticationReject; /* SHORT_NAMED_ENUMERATED_VALUE */
+const authenticationReject = MMEFailedProcedureType.authenticationReject; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMEFailedProcedureType_securityModeReject
@@ -156,7 +156,7 @@ const authenticationReject: MMEFailedProcedureType = MMEFailedProcedureType.auth
  * @type {number}
  */
 export
-const MMEFailedProcedureType_securityModeReject: MMEFailedProcedureType = MMEFailedProcedureType.securityModeReject; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMEFailedProcedureType_securityModeReject = MMEFailedProcedureType.securityModeReject; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary securityModeReject
@@ -164,7 +164,7 @@ const MMEFailedProcedureType_securityModeReject: MMEFailedProcedureType = MMEFai
  * @type {number}
  */
 export
-const securityModeReject: MMEFailedProcedureType = MMEFailedProcedureType.securityModeReject; /* SHORT_NAMED_ENUMERATED_VALUE */
+const securityModeReject = MMEFailedProcedureType.securityModeReject; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMEFailedProcedureType_serviceReject
@@ -172,7 +172,7 @@ const securityModeReject: MMEFailedProcedureType = MMEFailedProcedureType.securi
  * @type {number}
  */
 export
-const MMEFailedProcedureType_serviceReject: MMEFailedProcedureType = MMEFailedProcedureType.serviceReject; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMEFailedProcedureType_serviceReject = MMEFailedProcedureType.serviceReject; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary serviceReject
@@ -180,7 +180,7 @@ const MMEFailedProcedureType_serviceReject: MMEFailedProcedureType = MMEFailedPr
  * @type {number}
  */
 export
-const serviceReject: MMEFailedProcedureType = MMEFailedProcedureType.serviceReject; /* SHORT_NAMED_ENUMERATED_VALUE */
+const serviceReject = MMEFailedProcedureType.serviceReject; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMEFailedProcedureType_trackingAreaUpdateReject
@@ -188,7 +188,7 @@ const serviceReject: MMEFailedProcedureType = MMEFailedProcedureType.serviceReje
  * @type {number}
  */
 export
-const MMEFailedProcedureType_trackingAreaUpdateReject: MMEFailedProcedureType = MMEFailedProcedureType.trackingAreaUpdateReject; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMEFailedProcedureType_trackingAreaUpdateReject = MMEFailedProcedureType.trackingAreaUpdateReject; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary trackingAreaUpdateReject
@@ -196,7 +196,7 @@ const MMEFailedProcedureType_trackingAreaUpdateReject: MMEFailedProcedureType = 
  * @type {number}
  */
 export
-const trackingAreaUpdateReject: MMEFailedProcedureType = MMEFailedProcedureType.trackingAreaUpdateReject; /* SHORT_NAMED_ENUMERATED_VALUE */
+const trackingAreaUpdateReject = MMEFailedProcedureType.trackingAreaUpdateReject; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMEFailedProcedureType_activateDedicatedEPSBearerContextReject
@@ -204,7 +204,7 @@ const trackingAreaUpdateReject: MMEFailedProcedureType = MMEFailedProcedureType.
  * @type {number}
  */
 export
-const MMEFailedProcedureType_activateDedicatedEPSBearerContextReject: MMEFailedProcedureType = MMEFailedProcedureType.activateDedicatedEPSBearerContextReject; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMEFailedProcedureType_activateDedicatedEPSBearerContextReject = MMEFailedProcedureType.activateDedicatedEPSBearerContextReject; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary activateDedicatedEPSBearerContextReject
@@ -212,7 +212,7 @@ const MMEFailedProcedureType_activateDedicatedEPSBearerContextReject: MMEFailedP
  * @type {number}
  */
 export
-const activateDedicatedEPSBearerContextReject: MMEFailedProcedureType = MMEFailedProcedureType.activateDedicatedEPSBearerContextReject; /* SHORT_NAMED_ENUMERATED_VALUE */
+const activateDedicatedEPSBearerContextReject = MMEFailedProcedureType.activateDedicatedEPSBearerContextReject; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMEFailedProcedureType_activateDefaultEPSBearerContextReject
@@ -220,7 +220,7 @@ const activateDedicatedEPSBearerContextReject: MMEFailedProcedureType = MMEFaile
  * @type {number}
  */
 export
-const MMEFailedProcedureType_activateDefaultEPSBearerContextReject: MMEFailedProcedureType = MMEFailedProcedureType.activateDefaultEPSBearerContextReject; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMEFailedProcedureType_activateDefaultEPSBearerContextReject = MMEFailedProcedureType.activateDefaultEPSBearerContextReject; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary activateDefaultEPSBearerContextReject
@@ -228,7 +228,7 @@ const MMEFailedProcedureType_activateDefaultEPSBearerContextReject: MMEFailedPro
  * @type {number}
  */
 export
-const activateDefaultEPSBearerContextReject: MMEFailedProcedureType = MMEFailedProcedureType.activateDefaultEPSBearerContextReject; /* SHORT_NAMED_ENUMERATED_VALUE */
+const activateDefaultEPSBearerContextReject = MMEFailedProcedureType.activateDefaultEPSBearerContextReject; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMEFailedProcedureType_bearerResourceAllocationReject
@@ -236,7 +236,7 @@ const activateDefaultEPSBearerContextReject: MMEFailedProcedureType = MMEFailedP
  * @type {number}
  */
 export
-const MMEFailedProcedureType_bearerResourceAllocationReject: MMEFailedProcedureType = MMEFailedProcedureType.bearerResourceAllocationReject; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMEFailedProcedureType_bearerResourceAllocationReject = MMEFailedProcedureType.bearerResourceAllocationReject; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary bearerResourceAllocationReject
@@ -244,7 +244,7 @@ const MMEFailedProcedureType_bearerResourceAllocationReject: MMEFailedProcedureT
  * @type {number}
  */
 export
-const bearerResourceAllocationReject: MMEFailedProcedureType = MMEFailedProcedureType.bearerResourceAllocationReject; /* SHORT_NAMED_ENUMERATED_VALUE */
+const bearerResourceAllocationReject = MMEFailedProcedureType.bearerResourceAllocationReject; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMEFailedProcedureType_bearerResourceModificationReject
@@ -252,7 +252,7 @@ const bearerResourceAllocationReject: MMEFailedProcedureType = MMEFailedProcedur
  * @type {number}
  */
 export
-const MMEFailedProcedureType_bearerResourceModificationReject: MMEFailedProcedureType = MMEFailedProcedureType.bearerResourceModificationReject; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMEFailedProcedureType_bearerResourceModificationReject = MMEFailedProcedureType.bearerResourceModificationReject; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary bearerResourceModificationReject
@@ -260,7 +260,7 @@ const MMEFailedProcedureType_bearerResourceModificationReject: MMEFailedProcedur
  * @type {number}
  */
 export
-const bearerResourceModificationReject: MMEFailedProcedureType = MMEFailedProcedureType.bearerResourceModificationReject; /* SHORT_NAMED_ENUMERATED_VALUE */
+const bearerResourceModificationReject = MMEFailedProcedureType.bearerResourceModificationReject; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMEFailedProcedureType_modifyEPSBearerContectReject
@@ -268,7 +268,7 @@ const bearerResourceModificationReject: MMEFailedProcedureType = MMEFailedProced
  * @type {number}
  */
 export
-const MMEFailedProcedureType_modifyEPSBearerContectReject: MMEFailedProcedureType = MMEFailedProcedureType.modifyEPSBearerContectReject; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMEFailedProcedureType_modifyEPSBearerContectReject = MMEFailedProcedureType.modifyEPSBearerContectReject; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary modifyEPSBearerContectReject
@@ -276,7 +276,7 @@ const MMEFailedProcedureType_modifyEPSBearerContectReject: MMEFailedProcedureTyp
  * @type {number}
  */
 export
-const modifyEPSBearerContectReject: MMEFailedProcedureType = MMEFailedProcedureType.modifyEPSBearerContectReject; /* SHORT_NAMED_ENUMERATED_VALUE */
+const modifyEPSBearerContectReject = MMEFailedProcedureType.modifyEPSBearerContectReject; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMEFailedProcedureType_pDNConnectivityReject
@@ -284,7 +284,7 @@ const modifyEPSBearerContectReject: MMEFailedProcedureType = MMEFailedProcedureT
  * @type {number}
  */
 export
-const MMEFailedProcedureType_pDNConnectivityReject: MMEFailedProcedureType = MMEFailedProcedureType.pDNConnectivityReject; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMEFailedProcedureType_pDNConnectivityReject = MMEFailedProcedureType.pDNConnectivityReject; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pDNConnectivityReject
@@ -292,7 +292,7 @@ const MMEFailedProcedureType_pDNConnectivityReject: MMEFailedProcedureType = MME
  * @type {number}
  */
 export
-const pDNConnectivityReject: MMEFailedProcedureType = MMEFailedProcedureType.pDNConnectivityReject; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pDNConnectivityReject = MMEFailedProcedureType.pDNConnectivityReject; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMEFailedProcedureType_pDNDisconnectReject
@@ -300,7 +300,7 @@ const pDNConnectivityReject: MMEFailedProcedureType = MMEFailedProcedureType.pDN
  * @type {number}
  */
 export
-const MMEFailedProcedureType_pDNDisconnectReject: MMEFailedProcedureType = MMEFailedProcedureType.pDNDisconnectReject; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMEFailedProcedureType_pDNDisconnectReject = MMEFailedProcedureType.pDNDisconnectReject; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pDNDisconnectReject
@@ -308,7 +308,7 @@ const MMEFailedProcedureType_pDNDisconnectReject: MMEFailedProcedureType = MMEFa
  * @type {number}
  */
 export
-const pDNDisconnectReject: MMEFailedProcedureType = MMEFailedProcedureType.pDNDisconnectReject; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pDNDisconnectReject = MMEFailedProcedureType.pDNDisconnectReject; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_MMEFailedProcedureType: $.ASN1Decoder<MMEFailedProcedureType> = $._decodeEnumerated;
 export const _encode_MMEFailedProcedureType: $.ASN1Encoder<MMEFailedProcedureType> = $._encodeEnumerated;
 

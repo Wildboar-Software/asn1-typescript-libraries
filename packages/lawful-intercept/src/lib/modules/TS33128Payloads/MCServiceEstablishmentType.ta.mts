@@ -69,7 +69,7 @@ const MCServiceEstablishmentType = _enum_for_MCServiceEstablishmentType;
  * @type {number}
  */
 export
-const MCServiceEstablishmentType_onDemand: MCServiceEstablishmentType = MCServiceEstablishmentType.onDemand; /* LONG_NAMED_ENUMERATED_VALUE */
+const MCServiceEstablishmentType_onDemand = MCServiceEstablishmentType.onDemand; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary onDemand
@@ -77,7 +77,7 @@ const MCServiceEstablishmentType_onDemand: MCServiceEstablishmentType = MCServic
  * @type {number}
  */
 export
-const onDemand: MCServiceEstablishmentType = MCServiceEstablishmentType.onDemand; /* SHORT_NAMED_ENUMERATED_VALUE */
+const onDemand = MCServiceEstablishmentType.onDemand; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MCServiceEstablishmentType_preEstablished
@@ -85,7 +85,7 @@ const onDemand: MCServiceEstablishmentType = MCServiceEstablishmentType.onDemand
  * @type {number}
  */
 export
-const MCServiceEstablishmentType_preEstablished: MCServiceEstablishmentType = MCServiceEstablishmentType.preEstablished; /* LONG_NAMED_ENUMERATED_VALUE */
+const MCServiceEstablishmentType_preEstablished = MCServiceEstablishmentType.preEstablished; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary preEstablished
@@ -93,7 +93,7 @@ const MCServiceEstablishmentType_preEstablished: MCServiceEstablishmentType = MC
  * @type {number}
  */
 export
-const preEstablished: MCServiceEstablishmentType = MCServiceEstablishmentType.preEstablished; /* SHORT_NAMED_ENUMERATED_VALUE */
+const preEstablished = MCServiceEstablishmentType.preEstablished; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_MCServiceEstablishmentType: $.ASN1Decoder<MCServiceEstablishmentType> = $._decodeEnumerated;
 export const _encode_MCServiceEstablishmentType: $.ASN1Encoder<MCServiceEstablishmentType> = $._encodeEnumerated;
 

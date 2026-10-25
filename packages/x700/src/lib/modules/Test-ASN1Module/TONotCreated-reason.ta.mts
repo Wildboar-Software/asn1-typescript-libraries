@@ -107,7 +107,7 @@ export const TONotCreated_reason = _enum_for_TONotCreated_reason;
  * @constant
  * @type {number}
  */
-export const TONotCreated_reason_invalidTOclass: TONotCreated_reason =
+export const TONotCreated_reason_invalidTOclass =
     TONotCreated_reason.invalidTOclass; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -121,7 +121,7 @@ export const TONotCreated_reason_invalidTOclass: TONotCreated_reason =
  * @constant
  * @type {number}
  */
-export const invalidTOclass: TONotCreated_reason =
+export const invalidTOclass =
     TONotCreated_reason.invalidTOclass; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -134,7 +134,7 @@ export const invalidTOclass: TONotCreated_reason =
  * @constant
  * @type {number}
  */
-export const TONotCreated_reason_duplicateTOInstance: TONotCreated_reason =
+export const TONotCreated_reason_duplicateTOInstance =
     TONotCreated_reason.duplicateTOInstance; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -147,7 +147,7 @@ export const TONotCreated_reason_duplicateTOInstance: TONotCreated_reason =
  * @constant
  * @type {number}
  */
-export const duplicateTOInstance: TONotCreated_reason =
+export const duplicateTOInstance =
     TONotCreated_reason.duplicateTOInstance; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -160,7 +160,7 @@ export const duplicateTOInstance: TONotCreated_reason =
  * @constant
  * @type {number}
  */
-export const TONotCreated_reason_invalidMORTClass: TONotCreated_reason =
+export const TONotCreated_reason_invalidMORTClass =
     TONotCreated_reason.invalidMORTClass; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -173,7 +173,7 @@ export const TONotCreated_reason_invalidMORTClass: TONotCreated_reason =
  * @constant
  * @type {number}
  */
-export const invalidMORTClass: TONotCreated_reason =
+export const invalidMORTClass =
     TONotCreated_reason.invalidMORTClass; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -187,7 +187,7 @@ export const invalidMORTClass: TONotCreated_reason =
  * @constant
  * @type {number}
  */
-export const TONotCreated_reason_invalidAssociatedObjectClass: TONotCreated_reason =
+export const TONotCreated_reason_invalidAssociatedObjectClass =
     TONotCreated_reason.invalidAssociatedObjectClass; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -201,7 +201,7 @@ export const TONotCreated_reason_invalidAssociatedObjectClass: TONotCreated_reas
  * @constant
  * @type {number}
  */
-export const invalidAssociatedObjectClass: TONotCreated_reason =
+export const invalidAssociatedObjectClass =
     TONotCreated_reason.invalidAssociatedObjectClass; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -215,7 +215,7 @@ export const invalidAssociatedObjectClass: TONotCreated_reason =
  * @constant
  * @type {number}
  */
-export const TONotCreated_reason_mORTNotAvailable: TONotCreated_reason =
+export const TONotCreated_reason_mORTNotAvailable =
     TONotCreated_reason.mORTNotAvailable; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -229,7 +229,7 @@ export const TONotCreated_reason_mORTNotAvailable: TONotCreated_reason =
  * @constant
  * @type {number}
  */
-export const mORTNotAvailable: TONotCreated_reason =
+export const mORTNotAvailable =
     TONotCreated_reason.mORTNotAvailable; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -243,7 +243,7 @@ export const mORTNotAvailable: TONotCreated_reason =
  * @constant
  * @type {number}
  */
-export const TONotCreated_reason_associatedObjectNotAvailable: TONotCreated_reason =
+export const TONotCreated_reason_associatedObjectNotAvailable =
     TONotCreated_reason.associatedObjectNotAvailable; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -257,7 +257,7 @@ export const TONotCreated_reason_associatedObjectNotAvailable: TONotCreated_reas
  * @constant
  * @type {number}
  */
-export const associatedObjectNotAvailable: TONotCreated_reason =
+export const associatedObjectNotAvailable =
     TONotCreated_reason.associatedObjectNotAvailable; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 

@@ -61,7 +61,7 @@ export const BasicServiceIndicator = _enum_for_BasicServiceIndicator;
  * @constant
  * @type {number}
  */
-export const BasicServiceIndicator_speech: BasicServiceIndicator =
+export const BasicServiceIndicator_speech =
     BasicServiceIndicator.speech; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -69,7 +69,7 @@ export const BasicServiceIndicator_speech: BasicServiceIndicator =
  * @constant
  * @type {number}
  */
-export const speech: BasicServiceIndicator =
+export const speech =
     BasicServiceIndicator.speech; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -77,7 +77,7 @@ export const speech: BasicServiceIndicator =
  * @constant
  * @type {number}
  */
-export const BasicServiceIndicator_unrestrictedDigital: BasicServiceIndicator =
+export const BasicServiceIndicator_unrestrictedDigital =
     BasicServiceIndicator.unrestrictedDigital; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -85,7 +85,7 @@ export const BasicServiceIndicator_unrestrictedDigital: BasicServiceIndicator =
  * @constant
  * @type {number}
  */
-export const unrestrictedDigital: BasicServiceIndicator =
+export const unrestrictedDigital =
     BasicServiceIndicator.unrestrictedDigital; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 

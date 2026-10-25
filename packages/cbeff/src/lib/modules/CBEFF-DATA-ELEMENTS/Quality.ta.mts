@@ -31,42 +31,42 @@ export type Quality = INTEGER;
  * @constant
  * @type {number}
  */
-export const Quality_no_value_available: Quality = -3; /* LONG_NAMED_INTEGER_VALUE */
+export const Quality_no_value_available = -3 satisfies Quality; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Quality_no_value_available
  * @constant
  * @type {number}
  */
-export const no_value_available: Quality = Quality_no_value_available; /* SHORT_NAMED_INTEGER_VALUE */
+export const no_value_available = Quality_no_value_available; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Quality_quality_not_supported
  * @constant
  * @type {number}
  */
-export const Quality_quality_not_supported: Quality = -2; /* LONG_NAMED_INTEGER_VALUE */
+export const Quality_quality_not_supported = -2 satisfies Quality; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Quality_quality_not_supported
  * @constant
  * @type {number}
  */
-export const quality_not_supported: Quality = Quality_quality_not_supported; /* SHORT_NAMED_INTEGER_VALUE */
+export const quality_not_supported = Quality_quality_not_supported; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Quality_quality_not_recorded
  * @constant
  * @type {number}
  */
-export const Quality_quality_not_recorded: Quality = -1; /* LONG_NAMED_INTEGER_VALUE */
+export const Quality_quality_not_recorded = -1 satisfies Quality; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Quality_quality_not_recorded
  * @constant
  * @type {number}
  */
-export const quality_not_recorded: Quality = Quality_quality_not_recorded; /* SHORT_NAMED_INTEGER_VALUE */
+export const quality_not_recorded = Quality_quality_not_recorded; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_Quality = $._decodeInteger;

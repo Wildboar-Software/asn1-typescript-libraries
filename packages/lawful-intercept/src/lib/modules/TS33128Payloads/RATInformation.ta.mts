@@ -85,7 +85,7 @@ const RATInformation = _enum_for_RATInformation;
  * @type {number}
  */
 export
-const RATInformation_unlicensed: RATInformation = RATInformation.unlicensed; /* LONG_NAMED_ENUMERATED_VALUE */
+const RATInformation_unlicensed = RATInformation.unlicensed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unlicensed
@@ -93,7 +93,7 @@ const RATInformation_unlicensed: RATInformation = RATInformation.unlicensed; /* 
  * @type {number}
  */
 export
-const unlicensed: RATInformation = RATInformation.unlicensed; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unlicensed = RATInformation.unlicensed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RATInformation_nBIoT
@@ -101,7 +101,7 @@ const unlicensed: RATInformation = RATInformation.unlicensed; /* SHORT_NAMED_ENU
  * @type {number}
  */
 export
-const RATInformation_nBIoT: RATInformation = RATInformation.nBIoT; /* LONG_NAMED_ENUMERATED_VALUE */
+const RATInformation_nBIoT = RATInformation.nBIoT; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary nBIoT
@@ -109,7 +109,7 @@ const RATInformation_nBIoT: RATInformation = RATInformation.nBIoT; /* LONG_NAMED
  * @type {number}
  */
 export
-const nBIoT: RATInformation = RATInformation.nBIoT; /* SHORT_NAMED_ENUMERATED_VALUE */
+const nBIoT = RATInformation.nBIoT; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RATInformation_nRLEO
@@ -117,7 +117,7 @@ const nBIoT: RATInformation = RATInformation.nBIoT; /* SHORT_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const RATInformation_nRLEO: RATInformation = RATInformation.nRLEO; /* LONG_NAMED_ENUMERATED_VALUE */
+const RATInformation_nRLEO = RATInformation.nRLEO; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary nRLEO
@@ -125,7 +125,7 @@ const RATInformation_nRLEO: RATInformation = RATInformation.nRLEO; /* LONG_NAMED
  * @type {number}
  */
 export
-const nRLEO: RATInformation = RATInformation.nRLEO; /* SHORT_NAMED_ENUMERATED_VALUE */
+const nRLEO = RATInformation.nRLEO; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RATInformation_nRMEO
@@ -133,7 +133,7 @@ const nRLEO: RATInformation = RATInformation.nRLEO; /* SHORT_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const RATInformation_nRMEO: RATInformation = RATInformation.nRMEO; /* LONG_NAMED_ENUMERATED_VALUE */
+const RATInformation_nRMEO = RATInformation.nRMEO; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary nRMEO
@@ -141,7 +141,7 @@ const RATInformation_nRMEO: RATInformation = RATInformation.nRMEO; /* LONG_NAMED
  * @type {number}
  */
 export
-const nRMEO: RATInformation = RATInformation.nRMEO; /* SHORT_NAMED_ENUMERATED_VALUE */
+const nRMEO = RATInformation.nRMEO; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RATInformation_nRGEO
@@ -149,7 +149,7 @@ const nRMEO: RATInformation = RATInformation.nRMEO; /* SHORT_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const RATInformation_nRGEO: RATInformation = RATInformation.nRGEO; /* LONG_NAMED_ENUMERATED_VALUE */
+const RATInformation_nRGEO = RATInformation.nRGEO; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary nRGEO
@@ -157,7 +157,7 @@ const RATInformation_nRGEO: RATInformation = RATInformation.nRGEO; /* LONG_NAMED
  * @type {number}
  */
 export
-const nRGEO: RATInformation = RATInformation.nRGEO; /* SHORT_NAMED_ENUMERATED_VALUE */
+const nRGEO = RATInformation.nRGEO; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RATInformation_nROTHERSAT
@@ -165,7 +165,7 @@ const nRGEO: RATInformation = RATInformation.nRGEO; /* SHORT_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const RATInformation_nROTHERSAT: RATInformation = RATInformation.nROTHERSAT; /* LONG_NAMED_ENUMERATED_VALUE */
+const RATInformation_nROTHERSAT = RATInformation.nROTHERSAT; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary nROTHERSAT
@@ -173,7 +173,7 @@ const RATInformation_nROTHERSAT: RATInformation = RATInformation.nROTHERSAT; /* 
  * @type {number}
  */
 export
-const nROTHERSAT: RATInformation = RATInformation.nROTHERSAT; /* SHORT_NAMED_ENUMERATED_VALUE */
+const nROTHERSAT = RATInformation.nROTHERSAT; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_RATInformation: $.ASN1Decoder<RATInformation> = $._decodeEnumerated;
 export const _encode_RATInformation: $.ASN1Encoder<RATInformation> = $._encodeEnumerated;
 

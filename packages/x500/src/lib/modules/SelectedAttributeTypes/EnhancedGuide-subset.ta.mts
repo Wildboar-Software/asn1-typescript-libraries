@@ -22,14 +22,14 @@ export type EnhancedGuide_subset = INTEGER;
  * @constant
  * @type {number}
  */
-export const EnhancedGuide_subset_baseObject: EnhancedGuide_subset = 0; /* LONG_NAMED_INTEGER_VALUE */
+export const EnhancedGuide_subset_baseObject = 0 satisfies EnhancedGuide_subset; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EnhancedGuide_subset_baseObject
  * @constant
  * @type {number}
  */
-export const baseObject: EnhancedGuide_subset = EnhancedGuide_subset_baseObject; /* SHORT_NAMED_INTEGER_VALUE */
+export const baseObject = EnhancedGuide_subset_baseObject; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EnhancedGuide_subset_oneLevel
@@ -40,7 +40,7 @@ export const baseObject: EnhancedGuide_subset = EnhancedGuide_subset_baseObject;
  * @constant
  * @type {number}
  */
-export const EnhancedGuide_subset_oneLevel: EnhancedGuide_subset = 1; /* LONG_NAMED_INTEGER_VALUE */
+export const EnhancedGuide_subset_oneLevel = 1 satisfies EnhancedGuide_subset; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EnhancedGuide_subset_oneLevel
@@ -51,21 +51,21 @@ export const EnhancedGuide_subset_oneLevel: EnhancedGuide_subset = 1; /* LONG_NA
  * @constant
  * @type {number}
  */
-export const oneLevel: EnhancedGuide_subset = EnhancedGuide_subset_oneLevel; /* SHORT_NAMED_INTEGER_VALUE */
+export const oneLevel = EnhancedGuide_subset_oneLevel; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EnhancedGuide_subset_wholeSubtree
  * @constant
  * @type {number}
  */
-export const EnhancedGuide_subset_wholeSubtree: EnhancedGuide_subset = 2; /* LONG_NAMED_INTEGER_VALUE */
+export const EnhancedGuide_subset_wholeSubtree = 2 satisfies EnhancedGuide_subset; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EnhancedGuide_subset_wholeSubtree
  * @constant
  * @type {number}
  */
-export const wholeSubtree: EnhancedGuide_subset = EnhancedGuide_subset_wholeSubtree; /* SHORT_NAMED_INTEGER_VALUE */
+export const wholeSubtree = EnhancedGuide_subset_wholeSubtree; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_EnhancedGuide_subset = $._decodeInteger;

@@ -85,7 +85,7 @@ const SubscriptionProblem = _enum_for_SubscriptionProblem;
  * @type {number}
  */
 export
-const SubscriptionProblem_mms_eos_not_subcribed: SubscriptionProblem = SubscriptionProblem.mms_eos_not_subcribed; /* LONG_NAMED_ENUMERATED_VALUE */
+const SubscriptionProblem_mms_eos_not_subcribed = SubscriptionProblem.mms_eos_not_subcribed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary mms_eos_not_subcribed
@@ -97,7 +97,7 @@ const SubscriptionProblem_mms_eos_not_subcribed: SubscriptionProblem = Subscript
  * @type {number}
  */
 export
-const mms_eos_not_subcribed: SubscriptionProblem = SubscriptionProblem.mms_eos_not_subcribed; /* SHORT_NAMED_ENUMERATED_VALUE */
+const mms_eos_not_subcribed = SubscriptionProblem.mms_eos_not_subcribed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SubscriptionProblem_mts_eos_not_subcribed
@@ -109,7 +109,7 @@ const mms_eos_not_subcribed: SubscriptionProblem = SubscriptionProblem.mms_eos_n
  * @type {number}
  */
 export
-const SubscriptionProblem_mts_eos_not_subcribed: SubscriptionProblem = SubscriptionProblem.mts_eos_not_subcribed; /* LONG_NAMED_ENUMERATED_VALUE */
+const SubscriptionProblem_mts_eos_not_subcribed = SubscriptionProblem.mts_eos_not_subcribed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary mts_eos_not_subcribed
@@ -121,7 +121,7 @@ const SubscriptionProblem_mts_eos_not_subcribed: SubscriptionProblem = Subscript
  * @type {number}
  */
 export
-const mts_eos_not_subcribed: SubscriptionProblem = SubscriptionProblem.mts_eos_not_subcribed; /* SHORT_NAMED_ENUMERATED_VALUE */
+const mts_eos_not_subcribed = SubscriptionProblem.mts_eos_not_subcribed; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_SubscriptionProblem: $.ASN1Decoder<SubscriptionProblem> = $._decodeEnumerated;
 export const _encode_SubscriptionProblem: $.ASN1Encoder<SubscriptionProblem> = $._encodeEnumerated;
 

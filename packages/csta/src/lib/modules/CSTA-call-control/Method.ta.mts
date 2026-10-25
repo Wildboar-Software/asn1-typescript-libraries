@@ -188,7 +188,7 @@ const Method = _enum_for_Method;
  * @type {number}
  */
 export
-const Method_a_GPS: Method = Method.a_GPS; /* LONG_NAMED_ENUMERATED_VALUE */
+const Method_a_GPS = Method.a_GPS; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary a_GPS
@@ -196,7 +196,7 @@ const Method_a_GPS: Method = Method.a_GPS; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const a_GPS: Method = Method.a_GPS; /* SHORT_NAMED_ENUMERATED_VALUE */
+const a_GPS = Method.a_GPS; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Method_aOA
@@ -209,7 +209,7 @@ const a_GPS: Method = Method.a_GPS; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const Method_aOA: Method = Method.aOA; /* LONG_NAMED_ENUMERATED_VALUE */
+const Method_aOA = Method.aOA; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary aOA
@@ -217,7 +217,7 @@ const Method_aOA: Method = Method.aOA; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const aOA: Method = Method.aOA; /* SHORT_NAMED_ENUMERATED_VALUE */
+const aOA = Method.aOA; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Method_cell
@@ -230,7 +230,7 @@ const aOA: Method = Method.aOA; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const Method_cell: Method = Method.cell; /* LONG_NAMED_ENUMERATED_VALUE */
+const Method_cell = Method.cell; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary cell
@@ -238,7 +238,7 @@ const Method_cell: Method = Method.cell; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const cell: Method = Method.cell; /* SHORT_NAMED_ENUMERATED_VALUE */
+const cell = Method.cell; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Method_derived
@@ -251,7 +251,7 @@ const cell: Method = Method.cell; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const Method_derived: Method = Method.derived; /* LONG_NAMED_ENUMERATED_VALUE */
+const Method_derived = Method.derived; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary derived
@@ -259,7 +259,7 @@ const Method_derived: Method = Method.derived; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const derived: Method = Method.derived; /* SHORT_NAMED_ENUMERATED_VALUE */
+const derived = Method.derived; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Method_deviceAssistedAGps
@@ -272,7 +272,7 @@ const derived: Method = Method.derived; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const Method_deviceAssistedAGps: Method = Method.deviceAssistedAGps; /* LONG_NAMED_ENUMERATED_VALUE */
+const Method_deviceAssistedAGps = Method.deviceAssistedAGps; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary deviceAssistedAGps
@@ -280,7 +280,7 @@ const Method_deviceAssistedAGps: Method = Method.deviceAssistedAGps; /* LONG_NAM
  * @type {number}
  */
 export
-const deviceAssistedAGps: Method = Method.deviceAssistedAGps; /* SHORT_NAMED_ENUMERATED_VALUE */
+const deviceAssistedAGps = Method.deviceAssistedAGps; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Method_deviceBasedAGps
@@ -293,7 +293,7 @@ const deviceAssistedAGps: Method = Method.deviceAssistedAGps; /* SHORT_NAMED_ENU
  * @type {number}
  */
 export
-const Method_deviceBasedAGps: Method = Method.deviceBasedAGps; /* LONG_NAMED_ENUMERATED_VALUE */
+const Method_deviceBasedAGps = Method.deviceBasedAGps; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary deviceBasedAGps
@@ -301,7 +301,7 @@ const Method_deviceBasedAGps: Method = Method.deviceBasedAGps; /* LONG_NAMED_ENU
  * @type {number}
  */
 export
-const deviceBasedAGps: Method = Method.deviceBasedAGps; /* SHORT_NAMED_ENUMERATED_VALUE */
+const deviceBasedAGps = Method.deviceBasedAGps; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Method_dHCP
@@ -314,7 +314,7 @@ const deviceBasedAGps: Method = Method.deviceBasedAGps; /* SHORT_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const Method_dHCP: Method = Method.dHCP; /* LONG_NAMED_ENUMERATED_VALUE */
+const Method_dHCP = Method.dHCP; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary dHCP
@@ -322,7 +322,7 @@ const Method_dHCP: Method = Method.dHCP; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const dHCP: Method = Method.dHCP; /* SHORT_NAMED_ENUMERATED_VALUE */
+const dHCP = Method.dHCP; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Method_gPS
@@ -335,7 +335,7 @@ const dHCP: Method = Method.dHCP; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const Method_gPS: Method = Method.gPS; /* LONG_NAMED_ENUMERATED_VALUE */
+const Method_gPS = Method.gPS; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary gPS
@@ -343,7 +343,7 @@ const Method_gPS: Method = Method.gPS; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const gPS: Method = Method.gPS; /* SHORT_NAMED_ENUMERATED_VALUE */
+const gPS = Method.gPS; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Method_handsetAflt
@@ -356,7 +356,7 @@ const gPS: Method = Method.gPS; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const Method_handsetAflt: Method = Method.handsetAflt; /* LONG_NAMED_ENUMERATED_VALUE */
+const Method_handsetAflt = Method.handsetAflt; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary handsetAflt
@@ -364,7 +364,7 @@ const Method_handsetAflt: Method = Method.handsetAflt; /* LONG_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const handsetAflt: Method = Method.handsetAflt; /* SHORT_NAMED_ENUMERATED_VALUE */
+const handsetAflt = Method.handsetAflt; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Method_handsetEflt
@@ -377,7 +377,7 @@ const handsetAflt: Method = Method.handsetAflt; /* SHORT_NAMED_ENUMERATED_VALUE 
  * @type {number}
  */
 export
-const Method_handsetEflt: Method = Method.handsetEflt; /* LONG_NAMED_ENUMERATED_VALUE */
+const Method_handsetEflt = Method.handsetEflt; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary handsetEflt
@@ -385,7 +385,7 @@ const Method_handsetEflt: Method = Method.handsetEflt; /* LONG_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const handsetEflt: Method = Method.handsetEflt; /* SHORT_NAMED_ENUMERATED_VALUE */
+const handsetEflt = Method.handsetEflt; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Method_hybridAGps
@@ -398,7 +398,7 @@ const handsetEflt: Method = Method.handsetEflt; /* SHORT_NAMED_ENUMERATED_VALUE 
  * @type {number}
  */
 export
-const Method_hybridAGps: Method = Method.hybridAGps; /* LONG_NAMED_ENUMERATED_VALUE */
+const Method_hybridAGps = Method.hybridAGps; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary hybridAGps
@@ -406,7 +406,7 @@ const Method_hybridAGps: Method = Method.hybridAGps; /* LONG_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const hybridAGps: Method = Method.hybridAGps; /* SHORT_NAMED_ENUMERATED_VALUE */
+const hybridAGps = Method.hybridAGps; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Method_ipdl
@@ -419,7 +419,7 @@ const hybridAGps: Method = Method.hybridAGps; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const Method_ipdl: Method = Method.ipdl; /* LONG_NAMED_ENUMERATED_VALUE */
+const Method_ipdl = Method.ipdl; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ipdl
@@ -427,7 +427,7 @@ const Method_ipdl: Method = Method.ipdl; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const ipdl: Method = Method.ipdl; /* SHORT_NAMED_ENUMERATED_VALUE */
+const ipdl = Method.ipdl; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Method_lldpMed
@@ -440,7 +440,7 @@ const ipdl: Method = Method.ipdl; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const Method_lldpMed: Method = Method.lldpMed; /* LONG_NAMED_ENUMERATED_VALUE */
+const Method_lldpMed = Method.lldpMed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary lldpMed
@@ -448,7 +448,7 @@ const Method_lldpMed: Method = Method.lldpMed; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const lldpMed: Method = Method.lldpMed; /* SHORT_NAMED_ENUMERATED_VALUE */
+const lldpMed = Method.lldpMed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Method_manual
@@ -461,7 +461,7 @@ const lldpMed: Method = Method.lldpMed; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const Method_manual: Method = Method.manual; /* LONG_NAMED_ENUMERATED_VALUE */
+const Method_manual = Method.manual; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary manual
@@ -469,7 +469,7 @@ const Method_manual: Method = Method.manual; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const manual: Method = Method.manual; /* SHORT_NAMED_ENUMERATED_VALUE */
+const manual = Method.manual; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Method_mpl
@@ -482,7 +482,7 @@ const manual: Method = Method.manual; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const Method_mpl: Method = Method.mpl; /* LONG_NAMED_ENUMERATED_VALUE */
+const Method_mpl = Method.mpl; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary mpl
@@ -490,7 +490,7 @@ const Method_mpl: Method = Method.mpl; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const mpl: Method = Method.mpl; /* SHORT_NAMED_ENUMERATED_VALUE */
+const mpl = Method.mpl; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Method_nmr
@@ -503,7 +503,7 @@ const mpl: Method = Method.mpl; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const Method_nmr: Method = Method.nmr; /* LONG_NAMED_ENUMERATED_VALUE */
+const Method_nmr = Method.nmr; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary nmr
@@ -511,7 +511,7 @@ const Method_nmr: Method = Method.nmr; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const nmr: Method = Method.nmr; /* SHORT_NAMED_ENUMERATED_VALUE */
+const nmr = Method.nmr; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Method_otdoa
@@ -524,7 +524,7 @@ const nmr: Method = Method.nmr; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const Method_otdoa: Method = Method.otdoa; /* LONG_NAMED_ENUMERATED_VALUE */
+const Method_otdoa = Method.otdoa; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary otdoa
@@ -532,7 +532,7 @@ const Method_otdoa: Method = Method.otdoa; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const otdoa: Method = Method.otdoa; /* SHORT_NAMED_ENUMERATED_VALUE */
+const otdoa = Method.otdoa; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Method_rfid
@@ -545,7 +545,7 @@ const otdoa: Method = Method.otdoa; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const Method_rfid: Method = Method.rfid; /* LONG_NAMED_ENUMERATED_VALUE */
+const Method_rfid = Method.rfid; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary rfid
@@ -553,7 +553,7 @@ const Method_rfid: Method = Method.rfid; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const rfid: Method = Method.rfid; /* SHORT_NAMED_ENUMERATED_VALUE */
+const rfid = Method.rfid; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Method_rssi
@@ -566,7 +566,7 @@ const rfid: Method = Method.rfid; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const Method_rssi: Method = Method.rssi; /* LONG_NAMED_ENUMERATED_VALUE */
+const Method_rssi = Method.rssi; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary rssi
@@ -574,7 +574,7 @@ const Method_rssi: Method = Method.rssi; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const rssi: Method = Method.rssi; /* SHORT_NAMED_ENUMERATED_VALUE */
+const rssi = Method.rssi; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Method_rssiRtt
@@ -587,7 +587,7 @@ const rssi: Method = Method.rssi; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const Method_rssiRtt: Method = Method.rssiRtt; /* LONG_NAMED_ENUMERATED_VALUE */
+const Method_rssiRtt = Method.rssiRtt; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary rssiRtt
@@ -595,7 +595,7 @@ const Method_rssiRtt: Method = Method.rssiRtt; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const rssiRtt: Method = Method.rssiRtt; /* SHORT_NAMED_ENUMERATED_VALUE */
+const rssiRtt = Method.rssiRtt; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Method_rtt
@@ -608,7 +608,7 @@ const rssiRtt: Method = Method.rssiRtt; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const Method_rtt: Method = Method.rtt; /* LONG_NAMED_ENUMERATED_VALUE */
+const Method_rtt = Method.rtt; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary rtt
@@ -616,7 +616,7 @@ const Method_rtt: Method = Method.rtt; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const rtt: Method = Method.rtt; /* SHORT_NAMED_ENUMERATED_VALUE */
+const rtt = Method.rtt; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Method_ta
@@ -629,7 +629,7 @@ const rtt: Method = Method.rtt; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const Method_ta: Method = Method.ta; /* LONG_NAMED_ENUMERATED_VALUE */
+const Method_ta = Method.ta; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ta
@@ -637,7 +637,7 @@ const Method_ta: Method = Method.ta; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const ta: Method = Method.ta; /* SHORT_NAMED_ENUMERATED_VALUE */
+const ta = Method.ta; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Method_taNmr
@@ -650,7 +650,7 @@ const ta: Method = Method.ta; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const Method_taNmr: Method = Method.taNmr; /* LONG_NAMED_ENUMERATED_VALUE */
+const Method_taNmr = Method.taNmr; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary taNmr
@@ -658,7 +658,7 @@ const Method_taNmr: Method = Method.taNmr; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const taNmr: Method = Method.taNmr; /* SHORT_NAMED_ENUMERATED_VALUE */
+const taNmr = Method.taNmr; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Method_triangulation
@@ -671,7 +671,7 @@ const taNmr: Method = Method.taNmr; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const Method_triangulation: Method = Method.triangulation; /* LONG_NAMED_ENUMERATED_VALUE */
+const Method_triangulation = Method.triangulation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary triangulation
@@ -679,7 +679,7 @@ const Method_triangulation: Method = Method.triangulation; /* LONG_NAMED_ENUMERA
  * @type {number}
  */
 export
-const triangulation: Method = Method.triangulation; /* SHORT_NAMED_ENUMERATED_VALUE */
+const triangulation = Method.triangulation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Method_utdoa
@@ -692,7 +692,7 @@ const triangulation: Method = Method.triangulation; /* SHORT_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const Method_utdoa: Method = Method.utdoa; /* LONG_NAMED_ENUMERATED_VALUE */
+const Method_utdoa = Method.utdoa; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary utdoa
@@ -700,7 +700,7 @@ const Method_utdoa: Method = Method.utdoa; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const utdoa: Method = Method.utdoa; /* SHORT_NAMED_ENUMERATED_VALUE */
+const utdoa = Method.utdoa; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Method_wiremap
@@ -713,7 +713,7 @@ const utdoa: Method = Method.utdoa; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const Method_wiremap: Method = Method.wiremap; /* LONG_NAMED_ENUMERATED_VALUE */
+const Method_wiremap = Method.wiremap; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary wiremap
@@ -721,7 +721,7 @@ const Method_wiremap: Method = Method.wiremap; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const wiremap: Method = Method.wiremap; /* SHORT_NAMED_ENUMERATED_VALUE */
+const wiremap = Method.wiremap; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Method_locMet80211
@@ -734,7 +734,7 @@ const wiremap: Method = Method.wiremap; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const Method_locMet80211: Method = Method.locMet80211; /* LONG_NAMED_ENUMERATED_VALUE */
+const Method_locMet80211 = Method.locMet80211; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary locMet80211
@@ -742,7 +742,7 @@ const Method_locMet80211: Method = Method.locMet80211; /* LONG_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const locMet80211: Method = Method.locMet80211; /* SHORT_NAMED_ENUMERATED_VALUE */
+const locMet80211 = Method.locMet80211; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 let _cached_decoder_for_Method: $.ASN1Decoder<Method> | null = null;
 

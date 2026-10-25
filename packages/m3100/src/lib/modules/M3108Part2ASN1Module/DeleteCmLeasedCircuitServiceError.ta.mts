@@ -46,7 +46,7 @@ export type DeleteCmLeasedCircuitServiceError =
  * @constant
  * @type {number}
  */
-export const DeleteCmLeasedCircuitServiceError_alreadyDeleted: DeleteCmLeasedCircuitServiceError = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+export const DeleteCmLeasedCircuitServiceError_alreadyDeleted = _enum_for_DeleteCmLeasedCircuitServiceError.alreadyDeleted; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -54,7 +54,7 @@ export const DeleteCmLeasedCircuitServiceError_alreadyDeleted: DeleteCmLeasedCir
  * @constant
  * @type {number}
  */
-export const alreadyDeleted: DeleteCmLeasedCircuitServiceError = DeleteCmLeasedCircuitServiceError_alreadyDeleted; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const alreadyDeleted = DeleteCmLeasedCircuitServiceError_alreadyDeleted; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -62,7 +62,7 @@ export const alreadyDeleted: DeleteCmLeasedCircuitServiceError = DeleteCmLeasedC
  * @constant
  * @type {number}
  */
-export const DeleteCmLeasedCircuitServiceError_contractViolation: DeleteCmLeasedCircuitServiceError = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+export const DeleteCmLeasedCircuitServiceError_contractViolation = _enum_for_DeleteCmLeasedCircuitServiceError.contractViolation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -70,7 +70,7 @@ export const DeleteCmLeasedCircuitServiceError_contractViolation: DeleteCmLeased
  * @constant
  * @type {number}
  */
-export const contractViolation: DeleteCmLeasedCircuitServiceError = DeleteCmLeasedCircuitServiceError_contractViolation; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const contractViolation = DeleteCmLeasedCircuitServiceError_contractViolation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -78,7 +78,7 @@ export const contractViolation: DeleteCmLeasedCircuitServiceError = DeleteCmLeas
  * @constant
  * @type {number}
  */
-export const DeleteCmLeasedCircuitServiceError_invalidCircuitNumber: DeleteCmLeasedCircuitServiceError = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+export const DeleteCmLeasedCircuitServiceError_invalidCircuitNumber = _enum_for_DeleteCmLeasedCircuitServiceError.invalidCircuitNumber; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -86,7 +86,7 @@ export const DeleteCmLeasedCircuitServiceError_invalidCircuitNumber: DeleteCmLea
  * @constant
  * @type {number}
  */
-export const invalidCircuitNumber: DeleteCmLeasedCircuitServiceError = DeleteCmLeasedCircuitServiceError_invalidCircuitNumber; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const invalidCircuitNumber = DeleteCmLeasedCircuitServiceError_invalidCircuitNumber; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -94,7 +94,7 @@ export const invalidCircuitNumber: DeleteCmLeasedCircuitServiceError = DeleteCmL
  * @constant
  * @type {number}
  */
-export const DeleteCmLeasedCircuitServiceError_unlockedAdministrativeState: DeleteCmLeasedCircuitServiceError = 3; /* LONG_NAMED_ENUMERATED_VALUE */
+export const DeleteCmLeasedCircuitServiceError_unlockedAdministrativeState = _enum_for_DeleteCmLeasedCircuitServiceError.unlockedAdministrativeState; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -102,7 +102,7 @@ export const DeleteCmLeasedCircuitServiceError_unlockedAdministrativeState: Dele
  * @constant
  * @type {number}
  */
-export const unlockedAdministrativeState: DeleteCmLeasedCircuitServiceError = DeleteCmLeasedCircuitServiceError_unlockedAdministrativeState; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const unlockedAdministrativeState = DeleteCmLeasedCircuitServiceError_unlockedAdministrativeState; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 let _cached_decoder_for_DeleteCmLeasedCircuitServiceError: $.ASN1Decoder<DeleteCmLeasedCircuitServiceError> | null = null;

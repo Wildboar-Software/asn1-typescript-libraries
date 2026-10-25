@@ -37,7 +37,7 @@ type SetNicknameResponse_setNicknameResult = INTEGER;
  * @type {number}
  */
 export
-const SetNicknameResponse_setNicknameResult_ok: SetNicknameResponse_setNicknameResult = 0; /* LONG_NAMED_INTEGER_VALUE */
+const SetNicknameResponse_setNicknameResult_ok = 0 satisfies SetNicknameResponse_setNicknameResult; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SetNicknameResponse_setNicknameResult_ok
@@ -49,7 +49,7 @@ const SetNicknameResponse_setNicknameResult_ok: SetNicknameResponse_setNicknameR
  * @type {number}
  */
 export
-const ok: SetNicknameResponse_setNicknameResult = SetNicknameResponse_setNicknameResult_ok; /* SHORT_NAMED_INTEGER_VALUE */
+const ok = SetNicknameResponse_setNicknameResult_ok; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SetNicknameResponse_setNicknameResult_iccidNotFound
@@ -61,7 +61,7 @@ const ok: SetNicknameResponse_setNicknameResult = SetNicknameResponse_setNicknam
  * @type {number}
  */
 export
-const SetNicknameResponse_setNicknameResult_iccidNotFound: SetNicknameResponse_setNicknameResult = 1; /* LONG_NAMED_INTEGER_VALUE */
+const SetNicknameResponse_setNicknameResult_iccidNotFound = 1 satisfies SetNicknameResponse_setNicknameResult; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SetNicknameResponse_setNicknameResult_iccidNotFound
@@ -73,7 +73,7 @@ const SetNicknameResponse_setNicknameResult_iccidNotFound: SetNicknameResponse_s
  * @type {number}
  */
 export
-const iccidNotFound: SetNicknameResponse_setNicknameResult = SetNicknameResponse_setNicknameResult_iccidNotFound; /* SHORT_NAMED_INTEGER_VALUE */
+const iccidNotFound = SetNicknameResponse_setNicknameResult_iccidNotFound; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SetNicknameResponse_setNicknameResult_undefinedError
@@ -85,7 +85,7 @@ const iccidNotFound: SetNicknameResponse_setNicknameResult = SetNicknameResponse
  * @type {number}
  */
 export
-const SetNicknameResponse_setNicknameResult_undefinedError: SetNicknameResponse_setNicknameResult = 127; /* LONG_NAMED_INTEGER_VALUE */
+const SetNicknameResponse_setNicknameResult_undefinedError = 127 satisfies SetNicknameResponse_setNicknameResult; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SetNicknameResponse_setNicknameResult_undefinedError
@@ -97,7 +97,7 @@ const SetNicknameResponse_setNicknameResult_undefinedError: SetNicknameResponse_
  * @type {number}
  */
 export
-const undefinedError: SetNicknameResponse_setNicknameResult = SetNicknameResponse_setNicknameResult_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
+const undefinedError = SetNicknameResponse_setNicknameResult_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_SetNicknameResponse_setNicknameResult = $._decodeInteger;
 export const _encode_SetNicknameResponse_setNicknameResult = $._encodeInteger;
 

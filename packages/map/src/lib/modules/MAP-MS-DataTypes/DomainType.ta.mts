@@ -41,7 +41,7 @@ type DomainType = _enum_for_DomainType | ENUMERATED;
  * @type {number}
  */
 export
-const DomainType_cs_Domain: DomainType = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+const DomainType_cs_Domain = _enum_for_DomainType.cs_Domain; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary cs_Domain
@@ -49,7 +49,7 @@ const DomainType_cs_Domain: DomainType = 0; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const cs_Domain: DomainType = DomainType_cs_Domain; /* SHORT_NAMED_ENUMERATED_VALUE */
+const cs_Domain = DomainType_cs_Domain; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary DomainType_ps_Domain
@@ -57,7 +57,7 @@ const cs_Domain: DomainType = DomainType_cs_Domain; /* SHORT_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const DomainType_ps_Domain: DomainType = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const DomainType_ps_Domain = _enum_for_DomainType.ps_Domain; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ps_Domain
@@ -65,7 +65,7 @@ const DomainType_ps_Domain: DomainType = 1; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const ps_Domain: DomainType = DomainType_ps_Domain; /* SHORT_NAMED_ENUMERATED_VALUE */
+const ps_Domain = DomainType_ps_Domain; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) DomainType

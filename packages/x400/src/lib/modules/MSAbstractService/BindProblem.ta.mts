@@ -45,70 +45,70 @@ export type BindProblem = _enum_for_BindProblem | ENUMERATED;
  * @constant
  * @type {number}
  */
-export const BindProblem_authentication_error: BindProblem = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+export const BindProblem_authentication_error = _enum_for_BindProblem.authentication_error; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary authentication_error
  * @constant
  * @type {number}
  */
-export const authentication_error: BindProblem = BindProblem_authentication_error; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const authentication_error = BindProblem_authentication_error; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary BindProblem_unacceptable_security_context
  * @constant
  * @type {number}
  */
-export const BindProblem_unacceptable_security_context: BindProblem = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+export const BindProblem_unacceptable_security_context = _enum_for_BindProblem.unacceptable_security_context; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unacceptable_security_context
  * @constant
  * @type {number}
  */
-export const unacceptable_security_context: BindProblem = BindProblem_unacceptable_security_context; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const unacceptable_security_context = BindProblem_unacceptable_security_context; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary BindProblem_unable_to_establish_association
  * @constant
  * @type {number}
  */
-export const BindProblem_unable_to_establish_association: BindProblem = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+export const BindProblem_unable_to_establish_association = _enum_for_BindProblem.unable_to_establish_association; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unable_to_establish_association
  * @constant
  * @type {number}
  */
-export const unable_to_establish_association: BindProblem = BindProblem_unable_to_establish_association; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const unable_to_establish_association = BindProblem_unable_to_establish_association; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary BindProblem_bind_extension_problem
  * @constant
  * @type {number}
  */
-export const BindProblem_bind_extension_problem: BindProblem = 3; /* LONG_NAMED_ENUMERATED_VALUE */
+export const BindProblem_bind_extension_problem = _enum_for_BindProblem.bind_extension_problem; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary bind_extension_problem
  * @constant
  * @type {number}
  */
-export const bind_extension_problem: BindProblem = BindProblem_bind_extension_problem; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const bind_extension_problem = BindProblem_bind_extension_problem; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary BindProblem_inadequate_association_confidentiality
  * @constant
  * @type {number}
  */
-export const BindProblem_inadequate_association_confidentiality: BindProblem = 4; /* LONG_NAMED_ENUMERATED_VALUE */
+export const BindProblem_inadequate_association_confidentiality = _enum_for_BindProblem.inadequate_association_confidentiality; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary inadequate_association_confidentiality
  * @constant
  * @type {number}
  */
-export const inadequate_association_confidentiality: BindProblem = BindProblem_inadequate_association_confidentiality; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const inadequate_association_confidentiality = BindProblem_inadequate_association_confidentiality; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 export const _decode_BindProblem = $._decodeEnumerated;

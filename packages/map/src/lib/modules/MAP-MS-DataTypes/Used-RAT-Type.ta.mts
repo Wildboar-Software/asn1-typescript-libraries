@@ -49,7 +49,7 @@ type Used_RAT_Type = _enum_for_Used_RAT_Type | ENUMERATED;
  * @type {number}
  */
 export
-const Used_RAT_Type_utran: Used_RAT_Type = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+const Used_RAT_Type_utran = _enum_for_Used_RAT_Type.utran; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary utran
@@ -57,7 +57,7 @@ const Used_RAT_Type_utran: Used_RAT_Type = 0; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const utran: Used_RAT_Type = Used_RAT_Type_utran; /* SHORT_NAMED_ENUMERATED_VALUE */
+const utran = Used_RAT_Type_utran; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Used_RAT_Type_geran
@@ -65,7 +65,7 @@ const utran: Used_RAT_Type = Used_RAT_Type_utran; /* SHORT_NAMED_ENUMERATED_VALU
  * @type {number}
  */
 export
-const Used_RAT_Type_geran: Used_RAT_Type = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const Used_RAT_Type_geran = _enum_for_Used_RAT_Type.geran; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary geran
@@ -73,7 +73,7 @@ const Used_RAT_Type_geran: Used_RAT_Type = 1; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const geran: Used_RAT_Type = Used_RAT_Type_geran; /* SHORT_NAMED_ENUMERATED_VALUE */
+const geran = Used_RAT_Type_geran; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Used_RAT_Type_gan
@@ -81,7 +81,7 @@ const geran: Used_RAT_Type = Used_RAT_Type_geran; /* SHORT_NAMED_ENUMERATED_VALU
  * @type {number}
  */
 export
-const Used_RAT_Type_gan: Used_RAT_Type = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+const Used_RAT_Type_gan = _enum_for_Used_RAT_Type.gan; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary gan
@@ -89,7 +89,7 @@ const Used_RAT_Type_gan: Used_RAT_Type = 2; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const gan: Used_RAT_Type = Used_RAT_Type_gan; /* SHORT_NAMED_ENUMERATED_VALUE */
+const gan = Used_RAT_Type_gan; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Used_RAT_Type_i_hspa_evolution
@@ -97,7 +97,7 @@ const gan: Used_RAT_Type = Used_RAT_Type_gan; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const Used_RAT_Type_i_hspa_evolution: Used_RAT_Type = 3; /* LONG_NAMED_ENUMERATED_VALUE */
+const Used_RAT_Type_i_hspa_evolution = _enum_for_Used_RAT_Type.i_hspa_evolution; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary i_hspa_evolution
@@ -105,7 +105,7 @@ const Used_RAT_Type_i_hspa_evolution: Used_RAT_Type = 3; /* LONG_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const i_hspa_evolution: Used_RAT_Type = Used_RAT_Type_i_hspa_evolution; /* SHORT_NAMED_ENUMERATED_VALUE */
+const i_hspa_evolution = Used_RAT_Type_i_hspa_evolution; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Used_RAT_Type_e_utran
@@ -113,7 +113,7 @@ const i_hspa_evolution: Used_RAT_Type = Used_RAT_Type_i_hspa_evolution; /* SHORT
  * @type {number}
  */
 export
-const Used_RAT_Type_e_utran: Used_RAT_Type = 4; /* LONG_NAMED_ENUMERATED_VALUE */
+const Used_RAT_Type_e_utran = _enum_for_Used_RAT_Type.e_utran; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary e_utran
@@ -121,7 +121,7 @@ const Used_RAT_Type_e_utran: Used_RAT_Type = 4; /* LONG_NAMED_ENUMERATED_VALUE *
  * @type {number}
  */
 export
-const e_utran: Used_RAT_Type = Used_RAT_Type_e_utran; /* SHORT_NAMED_ENUMERATED_VALUE */
+const e_utran = Used_RAT_Type_e_utran; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Used_RAT_Type_nb_iot
@@ -129,7 +129,7 @@ const e_utran: Used_RAT_Type = Used_RAT_Type_e_utran; /* SHORT_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const Used_RAT_Type_nb_iot: Used_RAT_Type = 5; /* LONG_NAMED_ENUMERATED_VALUE */
+const Used_RAT_Type_nb_iot = _enum_for_Used_RAT_Type.nb_iot; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary nb_iot
@@ -137,7 +137,7 @@ const Used_RAT_Type_nb_iot: Used_RAT_Type = 5; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const nb_iot: Used_RAT_Type = Used_RAT_Type_nb_iot; /* SHORT_NAMED_ENUMERATED_VALUE */
+const nb_iot = Used_RAT_Type_nb_iot; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) Used_RAT_Type

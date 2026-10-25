@@ -89,7 +89,7 @@ const GuidanceInfo = _enum_for_GuidanceInfo;
  * @type {number}
  */
 export
-const GuidanceInfo_enterPW: GuidanceInfo = GuidanceInfo.enterPW; /* LONG_NAMED_ENUMERATED_VALUE */
+const GuidanceInfo_enterPW = GuidanceInfo.enterPW; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary enterPW
@@ -101,7 +101,7 @@ const GuidanceInfo_enterPW: GuidanceInfo = GuidanceInfo.enterPW; /* LONG_NAMED_E
  * @type {number}
  */
 export
-const enterPW: GuidanceInfo = GuidanceInfo.enterPW; /* SHORT_NAMED_ENUMERATED_VALUE */
+const enterPW = GuidanceInfo.enterPW; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary GuidanceInfo_enterNewPW
@@ -114,7 +114,7 @@ const enterPW: GuidanceInfo = GuidanceInfo.enterPW; /* SHORT_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const GuidanceInfo_enterNewPW: GuidanceInfo = GuidanceInfo.enterNewPW; /* LONG_NAMED_ENUMERATED_VALUE */
+const GuidanceInfo_enterNewPW = GuidanceInfo.enterNewPW; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary enterNewPW
@@ -127,7 +127,7 @@ const GuidanceInfo_enterNewPW: GuidanceInfo = GuidanceInfo.enterNewPW; /* LONG_N
  * @type {number}
  */
 export
-const enterNewPW: GuidanceInfo = GuidanceInfo.enterNewPW; /* SHORT_NAMED_ENUMERATED_VALUE */
+const enterNewPW = GuidanceInfo.enterNewPW; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary GuidanceInfo_enterNewPW_Again
@@ -140,7 +140,7 @@ const enterNewPW: GuidanceInfo = GuidanceInfo.enterNewPW; /* SHORT_NAMED_ENUMERA
  * @type {number}
  */
 export
-const GuidanceInfo_enterNewPW_Again: GuidanceInfo = GuidanceInfo.enterNewPW_Again; /* LONG_NAMED_ENUMERATED_VALUE */
+const GuidanceInfo_enterNewPW_Again = GuidanceInfo.enterNewPW_Again; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary enterNewPW_Again
@@ -153,7 +153,7 @@ const GuidanceInfo_enterNewPW_Again: GuidanceInfo = GuidanceInfo.enterNewPW_Agai
  * @type {number}
  */
 export
-const enterNewPW_Again: GuidanceInfo = GuidanceInfo.enterNewPW_Again; /* SHORT_NAMED_ENUMERATED_VALUE */
+const enterNewPW_Again = GuidanceInfo.enterNewPW_Again; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) GuidanceInfo

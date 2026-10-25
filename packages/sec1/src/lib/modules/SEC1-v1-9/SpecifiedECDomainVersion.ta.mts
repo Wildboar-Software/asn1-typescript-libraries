@@ -47,7 +47,7 @@ type SpecifiedECDomainVersion = INTEGER;
  * @type {number}
  */
 export
-const SpecifiedECDomainVersion_ecdpVer1: SpecifiedECDomainVersion = 1; /* LONG_NAMED_INTEGER_VALUE */
+const SpecifiedECDomainVersion_ecdpVer1 = 1 satisfies SpecifiedECDomainVersion; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SpecifiedECDomainVersion_ecdpVer1
@@ -59,7 +59,7 @@ const SpecifiedECDomainVersion_ecdpVer1: SpecifiedECDomainVersion = 1; /* LONG_N
  * @type {number}
  */
 export
-const ecdpVer1: SpecifiedECDomainVersion = SpecifiedECDomainVersion_ecdpVer1; /* SHORT_NAMED_INTEGER_VALUE */
+const ecdpVer1 = SpecifiedECDomainVersion_ecdpVer1; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SpecifiedECDomainVersion_ecdpVer2
@@ -72,7 +72,7 @@ const ecdpVer1: SpecifiedECDomainVersion = SpecifiedECDomainVersion_ecdpVer1; /*
  * @type {number}
  */
 export
-const SpecifiedECDomainVersion_ecdpVer2: SpecifiedECDomainVersion = 2; /* LONG_NAMED_INTEGER_VALUE */
+const SpecifiedECDomainVersion_ecdpVer2 = 2 satisfies SpecifiedECDomainVersion; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SpecifiedECDomainVersion_ecdpVer2
@@ -85,7 +85,7 @@ const SpecifiedECDomainVersion_ecdpVer2: SpecifiedECDomainVersion = 2; /* LONG_N
  * @type {number}
  */
 export
-const ecdpVer2: SpecifiedECDomainVersion = SpecifiedECDomainVersion_ecdpVer2; /* SHORT_NAMED_INTEGER_VALUE */
+const ecdpVer2 = SpecifiedECDomainVersion_ecdpVer2; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SpecifiedECDomainVersion_ecdpVer3
@@ -98,7 +98,7 @@ const ecdpVer2: SpecifiedECDomainVersion = SpecifiedECDomainVersion_ecdpVer2; /*
  * @type {number}
  */
 export
-const SpecifiedECDomainVersion_ecdpVer3: SpecifiedECDomainVersion = 3; /* LONG_NAMED_INTEGER_VALUE */
+const SpecifiedECDomainVersion_ecdpVer3 = 3 satisfies SpecifiedECDomainVersion; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SpecifiedECDomainVersion_ecdpVer3
@@ -110,7 +110,7 @@ const SpecifiedECDomainVersion_ecdpVer3: SpecifiedECDomainVersion = 3; /* LONG_N
  * @type {number}
  */
 export
-const ecdpVer3: SpecifiedECDomainVersion = SpecifiedECDomainVersion_ecdpVer3; /* SHORT_NAMED_INTEGER_VALUE */
+const ecdpVer3 = SpecifiedECDomainVersion_ecdpVer3; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_SpecifiedECDomainVersion = $._decodeInteger;

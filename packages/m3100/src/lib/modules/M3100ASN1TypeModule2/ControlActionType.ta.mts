@@ -73,7 +73,7 @@ export const ControlActionType = _enum_for_ControlActionType;
  * @constant
  * @type {number}
  */
-export const ControlActionType_closeContinuously: ControlActionType =
+export const ControlActionType_closeContinuously =
     ControlActionType.closeContinuously; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -82,7 +82,7 @@ export const ControlActionType_closeContinuously: ControlActionType =
  * @constant
  * @type {number}
  */
-export const closeContinuously: ControlActionType =
+export const closeContinuously =
     ControlActionType.closeContinuously; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -91,7 +91,7 @@ export const closeContinuously: ControlActionType =
  * @constant
  * @type {number}
  */
-export const ControlActionType_openContinuously: ControlActionType =
+export const ControlActionType_openContinuously =
     ControlActionType.openContinuously; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -100,7 +100,7 @@ export const ControlActionType_openContinuously: ControlActionType =
  * @constant
  * @type {number}
  */
-export const openContinuously: ControlActionType =
+export const openContinuously =
     ControlActionType.openContinuously; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -109,7 +109,7 @@ export const openContinuously: ControlActionType =
  * @constant
  * @type {number}
  */
-export const ControlActionType_closeMomentarily: ControlActionType =
+export const ControlActionType_closeMomentarily =
     ControlActionType.closeMomentarily; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -118,7 +118,7 @@ export const ControlActionType_closeMomentarily: ControlActionType =
  * @constant
  * @type {number}
  */
-export const closeMomentarily: ControlActionType =
+export const closeMomentarily =
     ControlActionType.closeMomentarily; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -127,7 +127,7 @@ export const closeMomentarily: ControlActionType =
  * @constant
  * @type {number}
  */
-export const ControlActionType_openMomentarily: ControlActionType =
+export const ControlActionType_openMomentarily =
     ControlActionType.openMomentarily; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -136,7 +136,7 @@ export const ControlActionType_openMomentarily: ControlActionType =
  * @constant
  * @type {number}
  */
-export const openMomentarily: ControlActionType =
+export const openMomentarily =
     ControlActionType.openMomentarily; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 

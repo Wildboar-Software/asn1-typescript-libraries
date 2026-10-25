@@ -28,7 +28,7 @@ type RegistrationAction = INTEGER;
  * @type {number}
  */
 export
-const RegistrationAction_ra_reg_request: RegistrationAction = 0; /* LONG_NAMED_INTEGER_VALUE */
+const RegistrationAction_ra_reg_request = 0 satisfies RegistrationAction; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RegistrationAction_ra_reg_request
@@ -36,7 +36,7 @@ const RegistrationAction_ra_reg_request: RegistrationAction = 0; /* LONG_NAMED_I
  * @type {number}
  */
 export
-const ra_reg_request: RegistrationAction = RegistrationAction_ra_reg_request; /* SHORT_NAMED_INTEGER_VALUE */
+const ra_reg_request = RegistrationAction_ra_reg_request; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RegistrationAction_ra_reg_result
@@ -44,7 +44,7 @@ const ra_reg_request: RegistrationAction = RegistrationAction_ra_reg_request; /*
  * @type {number}
  */
 export
-const RegistrationAction_ra_reg_result: RegistrationAction = 1; /* LONG_NAMED_INTEGER_VALUE */
+const RegistrationAction_ra_reg_result = 1 satisfies RegistrationAction; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RegistrationAction_ra_reg_result
@@ -52,7 +52,7 @@ const RegistrationAction_ra_reg_result: RegistrationAction = 1; /* LONG_NAMED_IN
  * @type {number}
  */
 export
-const ra_reg_result: RegistrationAction = RegistrationAction_ra_reg_result; /* SHORT_NAMED_INTEGER_VALUE */
+const ra_reg_result = RegistrationAction_ra_reg_result; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_RegistrationAction = $._decodeInteger;
 export const _encode_RegistrationAction = $._encodeInteger;
 

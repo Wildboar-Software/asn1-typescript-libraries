@@ -47,7 +47,7 @@ type ClientPartToKeep_resultSetDisposition = INTEGER;
  * @type {number}
  */
 export
-const ClientPartToKeep_resultSetDisposition_replace: ClientPartToKeep_resultSetDisposition = 1; /* LONG_NAMED_INTEGER_VALUE */
+const ClientPartToKeep_resultSetDisposition_replace = 1 satisfies ClientPartToKeep_resultSetDisposition; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ClientPartToKeep_resultSetDisposition_replace
@@ -59,7 +59,7 @@ const ClientPartToKeep_resultSetDisposition_replace: ClientPartToKeep_resultSetD
  * @type {number}
  */
 export
-const replace: ClientPartToKeep_resultSetDisposition = ClientPartToKeep_resultSetDisposition_replace; /* SHORT_NAMED_INTEGER_VALUE */
+const replace = ClientPartToKeep_resultSetDisposition_replace; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ClientPartToKeep_resultSetDisposition_append
@@ -76,7 +76,7 @@ const replace: ClientPartToKeep_resultSetDisposition = ClientPartToKeep_resultSe
  * @type {number}
  */
 export
-const ClientPartToKeep_resultSetDisposition_append: ClientPartToKeep_resultSetDisposition = 2; /* LONG_NAMED_INTEGER_VALUE */
+const ClientPartToKeep_resultSetDisposition_append = 2 satisfies ClientPartToKeep_resultSetDisposition; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ClientPartToKeep_resultSetDisposition_append
@@ -88,7 +88,7 @@ const ClientPartToKeep_resultSetDisposition_append: ClientPartToKeep_resultSetDi
  * @type {number}
  */
 export
-const append: ClientPartToKeep_resultSetDisposition = ClientPartToKeep_resultSetDisposition_append; /* SHORT_NAMED_INTEGER_VALUE */
+const append = ClientPartToKeep_resultSetDisposition_append; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ClientPartToKeep_resultSetDisposition_createNew
@@ -104,7 +104,7 @@ const append: ClientPartToKeep_resultSetDisposition = ClientPartToKeep_resultSet
  * @type {number}
  */
 export
-const ClientPartToKeep_resultSetDisposition_createNew: ClientPartToKeep_resultSetDisposition = 3; /* LONG_NAMED_INTEGER_VALUE */
+const ClientPartToKeep_resultSetDisposition_createNew = 3 satisfies ClientPartToKeep_resultSetDisposition; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ClientPartToKeep_resultSetDisposition_createNew
@@ -117,7 +117,7 @@ const ClientPartToKeep_resultSetDisposition_createNew: ClientPartToKeep_resultSe
  * @type {number}
  */
 export
-const createNew: ClientPartToKeep_resultSetDisposition = ClientPartToKeep_resultSetDisposition_createNew; /* SHORT_NAMED_INTEGER_VALUE */
+const createNew = ClientPartToKeep_resultSetDisposition_createNew; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_ClientPartToKeep_resultSetDisposition: $.ASN1Decoder<ClientPartToKeep_resultSetDisposition> = $._decodeInteger;
 export const _encode_ClientPartToKeep_resultSetDisposition: $.ASN1Encoder<ClientPartToKeep_resultSetDisposition> = $._encodeInteger;
 

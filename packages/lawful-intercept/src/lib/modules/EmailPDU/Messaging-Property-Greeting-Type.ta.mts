@@ -91,7 +91,7 @@ type Messaging_Property_Greeting_Type = _enum_for_Messaging_Property_Greeting_Ty
  * @type {number}
  */
 export
-const Messaging_Property_Greeting_Type_general: Messaging_Property_Greeting_Type = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const Messaging_Property_Greeting_Type_general = _enum_for_Messaging_Property_Greeting_Type.general; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary general
@@ -106,7 +106,7 @@ const Messaging_Property_Greeting_Type_general: Messaging_Property_Greeting_Type
  * @type {number}
  */
 export
-const general: Messaging_Property_Greeting_Type = Messaging_Property_Greeting_Type_general; /* SHORT_NAMED_ENUMERATED_VALUE */
+const general = Messaging_Property_Greeting_Type_general; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Messaging_Property_Greeting_Type_name
@@ -120,7 +120,7 @@ const general: Messaging_Property_Greeting_Type = Messaging_Property_Greeting_Ty
  * @type {number}
  */
 export
-const Messaging_Property_Greeting_Type_name: Messaging_Property_Greeting_Type = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+const Messaging_Property_Greeting_Type_name = _enum_for_Messaging_Property_Greeting_Type.name; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary name
@@ -134,7 +134,7 @@ const Messaging_Property_Greeting_Type_name: Messaging_Property_Greeting_Type = 
  * @type {number}
  */
 export
-const name: Messaging_Property_Greeting_Type = Messaging_Property_Greeting_Type_name; /* SHORT_NAMED_ENUMERATED_VALUE */
+const name = Messaging_Property_Greeting_Type_name; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Messaging_Property_Greeting_Type_personal
@@ -148,7 +148,7 @@ const name: Messaging_Property_Greeting_Type = Messaging_Property_Greeting_Type_
  * @type {number}
  */
 export
-const Messaging_Property_Greeting_Type_personal: Messaging_Property_Greeting_Type = 3; /* LONG_NAMED_ENUMERATED_VALUE */
+const Messaging_Property_Greeting_Type_personal = _enum_for_Messaging_Property_Greeting_Type.personal; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary personal
@@ -162,7 +162,7 @@ const Messaging_Property_Greeting_Type_personal: Messaging_Property_Greeting_Typ
  * @type {number}
  */
 export
-const personal: Messaging_Property_Greeting_Type = Messaging_Property_Greeting_Type_personal; /* SHORT_NAMED_ENUMERATED_VALUE */
+const personal = Messaging_Property_Greeting_Type_personal; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Messaging_Property_Greeting_Type_absence
@@ -177,7 +177,7 @@ const personal: Messaging_Property_Greeting_Type = Messaging_Property_Greeting_T
  * @type {number}
  */
 export
-const Messaging_Property_Greeting_Type_absence: Messaging_Property_Greeting_Type = 4; /* LONG_NAMED_ENUMERATED_VALUE */
+const Messaging_Property_Greeting_Type_absence = _enum_for_Messaging_Property_Greeting_Type.absence; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary absence
@@ -192,7 +192,7 @@ const Messaging_Property_Greeting_Type_absence: Messaging_Property_Greeting_Type
  * @type {number}
  */
 export
-const absence: Messaging_Property_Greeting_Type = Messaging_Property_Greeting_Type_absence; /* SHORT_NAMED_ENUMERATED_VALUE */
+const absence = Messaging_Property_Greeting_Type_absence; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Messaging_Property_Greeting_Type_number_
@@ -206,7 +206,7 @@ const absence: Messaging_Property_Greeting_Type = Messaging_Property_Greeting_Ty
  * @type {number}
  */
 export
-const Messaging_Property_Greeting_Type_number_: Messaging_Property_Greeting_Type = 5; /* LONG_NAMED_ENUMERATED_VALUE */
+const Messaging_Property_Greeting_Type_number_ = _enum_for_Messaging_Property_Greeting_Type.number_; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary number_
@@ -220,7 +220,7 @@ const Messaging_Property_Greeting_Type_number_: Messaging_Property_Greeting_Type
  * @type {number}
  */
 export
-const number_: Messaging_Property_Greeting_Type = Messaging_Property_Greeting_Type_number_; /* SHORT_NAMED_ENUMERATED_VALUE */
+const number_ = Messaging_Property_Greeting_Type_number_; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_Messaging_Property_Greeting_Type: $.ASN1Decoder<Messaging_Property_Greeting_Type> = $._decodeEnumerated;
 export const _encode_Messaging_Property_Greeting_Type: $.ASN1Encoder<Messaging_Property_Greeting_Type> = $._encodeEnumerated;
 

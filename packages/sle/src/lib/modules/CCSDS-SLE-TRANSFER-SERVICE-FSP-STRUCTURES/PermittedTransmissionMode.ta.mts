@@ -41,7 +41,7 @@ type PermittedTransmissionMode = INTEGER;
  * @type {number}
  */
 export
-const PermittedTransmissionMode_sequenceControlled: PermittedTransmissionMode = 0; /* LONG_NAMED_INTEGER_VALUE */
+const PermittedTransmissionMode_sequenceControlled = 0 satisfies PermittedTransmissionMode; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PermittedTransmissionMode_sequenceControlled
@@ -53,7 +53,7 @@ const PermittedTransmissionMode_sequenceControlled: PermittedTransmissionMode = 
  * @type {number}
  */
 export
-const sequenceControlled: PermittedTransmissionMode = PermittedTransmissionMode_sequenceControlled; /* SHORT_NAMED_INTEGER_VALUE */
+const sequenceControlled = PermittedTransmissionMode_sequenceControlled; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PermittedTransmissionMode_expedited
@@ -66,7 +66,7 @@ const sequenceControlled: PermittedTransmissionMode = PermittedTransmissionMode_
  * @type {number}
  */
 export
-const PermittedTransmissionMode_expedited: PermittedTransmissionMode = 1; /* LONG_NAMED_INTEGER_VALUE */
+const PermittedTransmissionMode_expedited = 1 satisfies PermittedTransmissionMode; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PermittedTransmissionMode_expedited
@@ -77,7 +77,7 @@ const PermittedTransmissionMode_expedited: PermittedTransmissionMode = 1; /* LON
  * @type {number}
  */
 export
-const expedited: PermittedTransmissionMode = PermittedTransmissionMode_expedited; /* SHORT_NAMED_INTEGER_VALUE */
+const expedited = PermittedTransmissionMode_expedited; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PermittedTransmissionMode_any_
@@ -91,7 +91,7 @@ const expedited: PermittedTransmissionMode = PermittedTransmissionMode_expedited
  * @type {number}
  */
 export
-const PermittedTransmissionMode_any_: PermittedTransmissionMode = 2; /* LONG_NAMED_INTEGER_VALUE */
+const PermittedTransmissionMode_any_ = 2 satisfies PermittedTransmissionMode; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PermittedTransmissionMode_any_
@@ -103,7 +103,7 @@ const PermittedTransmissionMode_any_: PermittedTransmissionMode = 2; /* LONG_NAM
  * @type {number}
  */
 export
-const any_: PermittedTransmissionMode = PermittedTransmissionMode_any_; /* SHORT_NAMED_INTEGER_VALUE */
+const any_ = PermittedTransmissionMode_any_; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_PermittedTransmissionMode: $.ASN1Decoder<PermittedTransmissionMode> = $._decodeInteger;
 export const _encode_PermittedTransmissionMode: $.ASN1Encoder<PermittedTransmissionMode> = $._encodeInteger;
 

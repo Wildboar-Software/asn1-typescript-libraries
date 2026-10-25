@@ -59,7 +59,7 @@ const Message = _enum_for_Message;
  * @type {number}
  */
 export
-const Message_rELease: Message = Message.rELease; /* LONG_NAMED_ENUMERATED_VALUE */
+const Message_rELease = Message.rELease; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary rELease
@@ -67,7 +67,7 @@ const Message_rELease: Message = Message.rELease; /* LONG_NAMED_ENUMERATED_VALUE
  * @type {number}
  */
 export
-const rELease: Message = Message.rELease; /* SHORT_NAMED_ENUMERATED_VALUE */
+const rELease = Message.rELease; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Message_rELeaseCOMPlete
@@ -75,7 +75,7 @@ const rELease: Message = Message.rELease; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const Message_rELeaseCOMPlete: Message = Message.rELeaseCOMPlete; /* LONG_NAMED_ENUMERATED_VALUE */
+const Message_rELeaseCOMPlete = Message.rELeaseCOMPlete; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary rELeaseCOMPlete
@@ -83,7 +83,7 @@ const Message_rELeaseCOMPlete: Message = Message.rELeaseCOMPlete; /* LONG_NAMED_
  * @type {number}
  */
 export
-const rELeaseCOMPlete: Message = Message.rELeaseCOMPlete; /* SHORT_NAMED_ENUMERATED_VALUE */
+const rELeaseCOMPlete = Message.rELeaseCOMPlete; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Message_fACility
@@ -91,7 +91,7 @@ const rELeaseCOMPlete: Message = Message.rELeaseCOMPlete; /* SHORT_NAMED_ENUMERA
  * @type {number}
  */
 export
-const Message_fACility: Message = Message.fACility; /* LONG_NAMED_ENUMERATED_VALUE */
+const Message_fACility = Message.fACility; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary fACility
@@ -99,7 +99,7 @@ const Message_fACility: Message = Message.fACility; /* LONG_NAMED_ENUMERATED_VAL
  * @type {number}
  */
 export
-const fACility: Message = Message.fACility; /* SHORT_NAMED_ENUMERATED_VALUE */
+const fACility = Message.fACility; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 function _decode_Message(el: _Element): Message {

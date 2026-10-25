@@ -88,7 +88,7 @@ const LoggingDuration = _enum_for_LoggingDuration;
  * @type {number}
  */
 export
-const LoggingDuration_d600sec: LoggingDuration = LoggingDuration.d600sec; /* LONG_NAMED_ENUMERATED_VALUE */
+const LoggingDuration_d600sec = LoggingDuration.d600sec; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary d600sec
@@ -96,7 +96,7 @@ const LoggingDuration_d600sec: LoggingDuration = LoggingDuration.d600sec; /* LON
  * @type {number}
  */
 export
-const d600sec: LoggingDuration = LoggingDuration.d600sec; /* SHORT_NAMED_ENUMERATED_VALUE */
+const d600sec = LoggingDuration.d600sec; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LoggingDuration_d1200sec
@@ -104,7 +104,7 @@ const d600sec: LoggingDuration = LoggingDuration.d600sec; /* SHORT_NAMED_ENUMERA
  * @type {number}
  */
 export
-const LoggingDuration_d1200sec: LoggingDuration = LoggingDuration.d1200sec; /* LONG_NAMED_ENUMERATED_VALUE */
+const LoggingDuration_d1200sec = LoggingDuration.d1200sec; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary d1200sec
@@ -112,7 +112,7 @@ const LoggingDuration_d1200sec: LoggingDuration = LoggingDuration.d1200sec; /* L
  * @type {number}
  */
 export
-const d1200sec: LoggingDuration = LoggingDuration.d1200sec; /* SHORT_NAMED_ENUMERATED_VALUE */
+const d1200sec = LoggingDuration.d1200sec; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LoggingDuration_d2400sec
@@ -120,7 +120,7 @@ const d1200sec: LoggingDuration = LoggingDuration.d1200sec; /* SHORT_NAMED_ENUME
  * @type {number}
  */
 export
-const LoggingDuration_d2400sec: LoggingDuration = LoggingDuration.d2400sec; /* LONG_NAMED_ENUMERATED_VALUE */
+const LoggingDuration_d2400sec = LoggingDuration.d2400sec; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary d2400sec
@@ -128,7 +128,7 @@ const LoggingDuration_d2400sec: LoggingDuration = LoggingDuration.d2400sec; /* L
  * @type {number}
  */
 export
-const d2400sec: LoggingDuration = LoggingDuration.d2400sec; /* SHORT_NAMED_ENUMERATED_VALUE */
+const d2400sec = LoggingDuration.d2400sec; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LoggingDuration_d3600sec
@@ -136,7 +136,7 @@ const d2400sec: LoggingDuration = LoggingDuration.d2400sec; /* SHORT_NAMED_ENUME
  * @type {number}
  */
 export
-const LoggingDuration_d3600sec: LoggingDuration = LoggingDuration.d3600sec; /* LONG_NAMED_ENUMERATED_VALUE */
+const LoggingDuration_d3600sec = LoggingDuration.d3600sec; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary d3600sec
@@ -144,7 +144,7 @@ const LoggingDuration_d3600sec: LoggingDuration = LoggingDuration.d3600sec; /* L
  * @type {number}
  */
 export
-const d3600sec: LoggingDuration = LoggingDuration.d3600sec; /* SHORT_NAMED_ENUMERATED_VALUE */
+const d3600sec = LoggingDuration.d3600sec; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LoggingDuration_d5400sec
@@ -152,7 +152,7 @@ const d3600sec: LoggingDuration = LoggingDuration.d3600sec; /* SHORT_NAMED_ENUME
  * @type {number}
  */
 export
-const LoggingDuration_d5400sec: LoggingDuration = LoggingDuration.d5400sec; /* LONG_NAMED_ENUMERATED_VALUE */
+const LoggingDuration_d5400sec = LoggingDuration.d5400sec; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary d5400sec
@@ -160,7 +160,7 @@ const LoggingDuration_d5400sec: LoggingDuration = LoggingDuration.d5400sec; /* L
  * @type {number}
  */
 export
-const d5400sec: LoggingDuration = LoggingDuration.d5400sec; /* SHORT_NAMED_ENUMERATED_VALUE */
+const d5400sec = LoggingDuration.d5400sec; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LoggingDuration_d7200sec
@@ -168,7 +168,7 @@ const d5400sec: LoggingDuration = LoggingDuration.d5400sec; /* SHORT_NAMED_ENUME
  * @type {number}
  */
 export
-const LoggingDuration_d7200sec: LoggingDuration = LoggingDuration.d7200sec; /* LONG_NAMED_ENUMERATED_VALUE */
+const LoggingDuration_d7200sec = LoggingDuration.d7200sec; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary d7200sec
@@ -176,7 +176,7 @@ const LoggingDuration_d7200sec: LoggingDuration = LoggingDuration.d7200sec; /* L
  * @type {number}
  */
 export
-const d7200sec: LoggingDuration = LoggingDuration.d7200sec; /* SHORT_NAMED_ENUMERATED_VALUE */
+const d7200sec = LoggingDuration.d7200sec; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) LoggingDuration

@@ -28,7 +28,7 @@ type FilterResultType = INTEGER;
  * @type {number}
  */
 export
-const FilterResultType_frt_accept: FilterResultType = 1; /* LONG_NAMED_INTEGER_VALUE */
+const FilterResultType_frt_accept = 1 satisfies FilterResultType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary FilterResultType_frt_accept
@@ -36,7 +36,7 @@ const FilterResultType_frt_accept: FilterResultType = 1; /* LONG_NAMED_INTEGER_V
  * @type {number}
  */
 export
-const frt_accept: FilterResultType = FilterResultType_frt_accept; /* SHORT_NAMED_INTEGER_VALUE */
+const frt_accept = FilterResultType_frt_accept; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary FilterResultType_frt_drop
@@ -44,7 +44,7 @@ const frt_accept: FilterResultType = FilterResultType_frt_accept; /* SHORT_NAMED
  * @type {number}
  */
 export
-const FilterResultType_frt_drop: FilterResultType = 2; /* LONG_NAMED_INTEGER_VALUE */
+const FilterResultType_frt_drop = 2 satisfies FilterResultType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary FilterResultType_frt_drop
@@ -52,7 +52,7 @@ const FilterResultType_frt_drop: FilterResultType = 2; /* LONG_NAMED_INTEGER_VAL
  * @type {number}
  */
 export
-const frt_drop: FilterResultType = FilterResultType_frt_drop; /* SHORT_NAMED_INTEGER_VALUE */
+const frt_drop = FilterResultType_frt_drop; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_FilterResultType = $._decodeInteger;
 export const _encode_FilterResultType = $._encodeInteger;
 

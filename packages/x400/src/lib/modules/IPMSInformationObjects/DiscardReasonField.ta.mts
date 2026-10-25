@@ -71,7 +71,7 @@ export const DiscardReasonField = _enum_for_DiscardReasonField;
  * @constant
  * @type {number}
  */
-export const DiscardReasonField_ipm_expired: DiscardReasonField =
+export const DiscardReasonField_ipm_expired =
     DiscardReasonField.ipm_expired; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -79,7 +79,7 @@ export const DiscardReasonField_ipm_expired: DiscardReasonField =
  * @constant
  * @type {number}
  */
-export const ipm_expired: DiscardReasonField =
+export const ipm_expired =
     DiscardReasonField.ipm_expired; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -87,7 +87,7 @@ export const ipm_expired: DiscardReasonField =
  * @constant
  * @type {number}
  */
-export const DiscardReasonField_ipm_obsoleted: DiscardReasonField =
+export const DiscardReasonField_ipm_obsoleted =
     DiscardReasonField.ipm_obsoleted; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -95,7 +95,7 @@ export const DiscardReasonField_ipm_obsoleted: DiscardReasonField =
  * @constant
  * @type {number}
  */
-export const ipm_obsoleted: DiscardReasonField =
+export const ipm_obsoleted =
     DiscardReasonField.ipm_obsoleted; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -103,7 +103,7 @@ export const ipm_obsoleted: DiscardReasonField =
  * @constant
  * @type {number}
  */
-export const DiscardReasonField_user_subscription_terminated: DiscardReasonField =
+export const DiscardReasonField_user_subscription_terminated =
     DiscardReasonField.user_subscription_terminated; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -111,7 +111,7 @@ export const DiscardReasonField_user_subscription_terminated: DiscardReasonField
  * @constant
  * @type {number}
  */
-export const user_subscription_terminated: DiscardReasonField =
+export const user_subscription_terminated =
     DiscardReasonField.user_subscription_terminated; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -119,7 +119,7 @@ export const user_subscription_terminated: DiscardReasonField =
  * @constant
  * @type {number}
  */
-export const DiscardReasonField_not_used: DiscardReasonField =
+export const DiscardReasonField_not_used =
     DiscardReasonField.not_used; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -127,7 +127,7 @@ export const DiscardReasonField_not_used: DiscardReasonField =
  * @constant
  * @type {number}
  */
-export const not_used: DiscardReasonField =
+export const not_used =
     DiscardReasonField.not_used; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 

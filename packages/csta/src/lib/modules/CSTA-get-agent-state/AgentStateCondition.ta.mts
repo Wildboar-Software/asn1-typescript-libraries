@@ -86,7 +86,7 @@ const AgentStateCondition = _enum_for_AgentStateCondition;
  * @type {number}
  */
 export
-const AgentStateCondition_forcedPause: AgentStateCondition = AgentStateCondition.forcedPause; /* LONG_NAMED_ENUMERATED_VALUE */
+const AgentStateCondition_forcedPause = AgentStateCondition.forcedPause; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary forcedPause
@@ -94,7 +94,7 @@ const AgentStateCondition_forcedPause: AgentStateCondition = AgentStateCondition
  * @type {number}
  */
 export
-const forcedPause: AgentStateCondition = AgentStateCondition.forcedPause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const forcedPause = AgentStateCondition.forcedPause; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AgentStateCondition_other
@@ -105,7 +105,7 @@ const forcedPause: AgentStateCondition = AgentStateCondition.forcedPause; /* SHO
  * @type {number}
  */
 export
-const AgentStateCondition_other: AgentStateCondition = AgentStateCondition.other; /* LONG_NAMED_ENUMERATED_VALUE */
+const AgentStateCondition_other = AgentStateCondition.other; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary other
@@ -113,7 +113,7 @@ const AgentStateCondition_other: AgentStateCondition = AgentStateCondition.other
  * @type {number}
  */
 export
-const other: AgentStateCondition = AgentStateCondition.other; /* SHORT_NAMED_ENUMERATED_VALUE */
+const other = AgentStateCondition.other; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 let _cached_decoder_for_AgentStateCondition: $.ASN1Decoder<AgentStateCondition> | null = null;
 

@@ -95,7 +95,7 @@ const PeriodLTE = _enum_for_PeriodLTE;
  * @type {number}
  */
 export
-const PeriodLTE_d1024ms: PeriodLTE = PeriodLTE.d1024ms; /* LONG_NAMED_ENUMERATED_VALUE */
+const PeriodLTE_d1024ms = PeriodLTE.d1024ms; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary d1024ms
@@ -103,7 +103,7 @@ const PeriodLTE_d1024ms: PeriodLTE = PeriodLTE.d1024ms; /* LONG_NAMED_ENUMERATED
  * @type {number}
  */
 export
-const d1024ms: PeriodLTE = PeriodLTE.d1024ms; /* SHORT_NAMED_ENUMERATED_VALUE */
+const d1024ms = PeriodLTE.d1024ms; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PeriodLTE_d1280ms
@@ -111,7 +111,7 @@ const d1024ms: PeriodLTE = PeriodLTE.d1024ms; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const PeriodLTE_d1280ms: PeriodLTE = PeriodLTE.d1280ms; /* LONG_NAMED_ENUMERATED_VALUE */
+const PeriodLTE_d1280ms = PeriodLTE.d1280ms; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary d1280ms
@@ -119,7 +119,7 @@ const PeriodLTE_d1280ms: PeriodLTE = PeriodLTE.d1280ms; /* LONG_NAMED_ENUMERATED
  * @type {number}
  */
 export
-const d1280ms: PeriodLTE = PeriodLTE.d1280ms; /* SHORT_NAMED_ENUMERATED_VALUE */
+const d1280ms = PeriodLTE.d1280ms; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PeriodLTE_d2048ms
@@ -127,7 +127,7 @@ const d1280ms: PeriodLTE = PeriodLTE.d1280ms; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const PeriodLTE_d2048ms: PeriodLTE = PeriodLTE.d2048ms; /* LONG_NAMED_ENUMERATED_VALUE */
+const PeriodLTE_d2048ms = PeriodLTE.d2048ms; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary d2048ms
@@ -135,7 +135,7 @@ const PeriodLTE_d2048ms: PeriodLTE = PeriodLTE.d2048ms; /* LONG_NAMED_ENUMERATED
  * @type {number}
  */
 export
-const d2048ms: PeriodLTE = PeriodLTE.d2048ms; /* SHORT_NAMED_ENUMERATED_VALUE */
+const d2048ms = PeriodLTE.d2048ms; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PeriodLTE_d2560ms
@@ -143,7 +143,7 @@ const d2048ms: PeriodLTE = PeriodLTE.d2048ms; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const PeriodLTE_d2560ms: PeriodLTE = PeriodLTE.d2560ms; /* LONG_NAMED_ENUMERATED_VALUE */
+const PeriodLTE_d2560ms = PeriodLTE.d2560ms; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary d2560ms
@@ -151,7 +151,7 @@ const PeriodLTE_d2560ms: PeriodLTE = PeriodLTE.d2560ms; /* LONG_NAMED_ENUMERATED
  * @type {number}
  */
 export
-const d2560ms: PeriodLTE = PeriodLTE.d2560ms; /* SHORT_NAMED_ENUMERATED_VALUE */
+const d2560ms = PeriodLTE.d2560ms; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PeriodLTE_d5120ms
@@ -159,7 +159,7 @@ const d2560ms: PeriodLTE = PeriodLTE.d2560ms; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const PeriodLTE_d5120ms: PeriodLTE = PeriodLTE.d5120ms; /* LONG_NAMED_ENUMERATED_VALUE */
+const PeriodLTE_d5120ms = PeriodLTE.d5120ms; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary d5120ms
@@ -167,7 +167,7 @@ const PeriodLTE_d5120ms: PeriodLTE = PeriodLTE.d5120ms; /* LONG_NAMED_ENUMERATED
  * @type {number}
  */
 export
-const d5120ms: PeriodLTE = PeriodLTE.d5120ms; /* SHORT_NAMED_ENUMERATED_VALUE */
+const d5120ms = PeriodLTE.d5120ms; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PeriodLTE_d10240ms
@@ -175,7 +175,7 @@ const d5120ms: PeriodLTE = PeriodLTE.d5120ms; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const PeriodLTE_d10240ms: PeriodLTE = PeriodLTE.d10240ms; /* LONG_NAMED_ENUMERATED_VALUE */
+const PeriodLTE_d10240ms = PeriodLTE.d10240ms; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary d10240ms
@@ -183,7 +183,7 @@ const PeriodLTE_d10240ms: PeriodLTE = PeriodLTE.d10240ms; /* LONG_NAMED_ENUMERAT
  * @type {number}
  */
 export
-const d10240ms: PeriodLTE = PeriodLTE.d10240ms; /* SHORT_NAMED_ENUMERATED_VALUE */
+const d10240ms = PeriodLTE.d10240ms; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PeriodLTE_d1min
@@ -191,7 +191,7 @@ const d10240ms: PeriodLTE = PeriodLTE.d10240ms; /* SHORT_NAMED_ENUMERATED_VALUE 
  * @type {number}
  */
 export
-const PeriodLTE_d1min: PeriodLTE = PeriodLTE.d1min; /* LONG_NAMED_ENUMERATED_VALUE */
+const PeriodLTE_d1min = PeriodLTE.d1min; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary d1min
@@ -199,7 +199,7 @@ const PeriodLTE_d1min: PeriodLTE = PeriodLTE.d1min; /* LONG_NAMED_ENUMERATED_VAL
  * @type {number}
  */
 export
-const d1min: PeriodLTE = PeriodLTE.d1min; /* SHORT_NAMED_ENUMERATED_VALUE */
+const d1min = PeriodLTE.d1min; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) PeriodLTE

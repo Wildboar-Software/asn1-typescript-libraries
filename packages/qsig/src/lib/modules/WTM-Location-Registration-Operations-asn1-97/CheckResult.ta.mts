@@ -88,7 +88,7 @@ const CheckResult = _enum_for_CheckResult;
  * @type {number}
  */
 export
-const CheckResult_locInfChk_correct: CheckResult = CheckResult.locInfChk_correct; /* LONG_NAMED_ENUMERATED_VALUE */
+const CheckResult_locInfChk_correct = CheckResult.locInfChk_correct; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary locInfChk_correct
@@ -97,7 +97,7 @@ const CheckResult_locInfChk_correct: CheckResult = CheckResult.locInfChk_correct
  * @type {number}
  */
 export
-const locInfChk_correct: CheckResult = CheckResult.locInfChk_correct; /* SHORT_NAMED_ENUMERATED_VALUE */
+const locInfChk_correct = CheckResult.locInfChk_correct; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CheckResult_locInfChk_incorrect
@@ -111,7 +111,7 @@ const locInfChk_correct: CheckResult = CheckResult.locInfChk_correct; /* SHORT_N
  * @type {number}
  */
 export
-const CheckResult_locInfChk_incorrect: CheckResult = CheckResult.locInfChk_incorrect; /* LONG_NAMED_ENUMERATED_VALUE */
+const CheckResult_locInfChk_incorrect = CheckResult.locInfChk_incorrect; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary locInfChk_incorrect
@@ -120,7 +120,7 @@ const CheckResult_locInfChk_incorrect: CheckResult = CheckResult.locInfChk_incor
  * @type {number}
  */
 export
-const locInfChk_incorrect: CheckResult = CheckResult.locInfChk_incorrect; /* SHORT_NAMED_ENUMERATED_VALUE */
+const locInfChk_incorrect = CheckResult.locInfChk_incorrect; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_CheckResult: $.ASN1Decoder<CheckResult> = $._decodeEnumerated;

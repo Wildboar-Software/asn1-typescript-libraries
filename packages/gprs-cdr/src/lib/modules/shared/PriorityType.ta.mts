@@ -67,7 +67,7 @@ const PriorityType = _enum_for_PriorityType;
  * @type {number}
  */
 export
-const PriorityType_low: PriorityType = PriorityType.low; /* LONG_NAMED_ENUMERATED_VALUE */
+const PriorityType_low = PriorityType.low; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary low
@@ -75,7 +75,7 @@ const PriorityType_low: PriorityType = PriorityType.low; /* LONG_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const low: PriorityType = PriorityType.low; /* SHORT_NAMED_ENUMERATED_VALUE */
+const low = PriorityType.low; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PriorityType_normal
@@ -83,7 +83,7 @@ const low: PriorityType = PriorityType.low; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const PriorityType_normal: PriorityType = PriorityType.normal; /* LONG_NAMED_ENUMERATED_VALUE */
+const PriorityType_normal = PriorityType.normal; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary normal
@@ -91,7 +91,7 @@ const PriorityType_normal: PriorityType = PriorityType.normal; /* LONG_NAMED_ENU
  * @type {number}
  */
 export
-const normal: PriorityType = PriorityType.normal; /* SHORT_NAMED_ENUMERATED_VALUE */
+const normal = PriorityType.normal; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PriorityType_high
@@ -99,7 +99,7 @@ const normal: PriorityType = PriorityType.normal; /* SHORT_NAMED_ENUMERATED_VALU
  * @type {number}
  */
 export
-const PriorityType_high: PriorityType = PriorityType.high; /* LONG_NAMED_ENUMERATED_VALUE */
+const PriorityType_high = PriorityType.high; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary high
@@ -107,7 +107,7 @@ const PriorityType_high: PriorityType = PriorityType.high; /* LONG_NAMED_ENUMERA
  * @type {number}
  */
 export
-const high: PriorityType = PriorityType.high; /* SHORT_NAMED_ENUMERATED_VALUE */
+const high = PriorityType.high; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_PriorityType: $.ASN1Decoder<PriorityType> = $._decodeEnumerated;

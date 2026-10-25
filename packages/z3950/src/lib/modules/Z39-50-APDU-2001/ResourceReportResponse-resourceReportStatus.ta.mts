@@ -42,7 +42,7 @@ type ResourceReportResponse_resourceReportStatus = INTEGER;
  * @type {number}
  */
 export
-const ResourceReportResponse_resourceReportStatus_success: ResourceReportResponse_resourceReportStatus = 0; /* LONG_NAMED_INTEGER_VALUE */
+const ResourceReportResponse_resourceReportStatus_success = 0 satisfies ResourceReportResponse_resourceReportStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ResourceReportResponse_resourceReportStatus_success
@@ -55,7 +55,7 @@ const ResourceReportResponse_resourceReportStatus_success: ResourceReportRespons
  * @type {number}
  */
 export
-const success: ResourceReportResponse_resourceReportStatus = ResourceReportResponse_resourceReportStatus_success; /* SHORT_NAMED_INTEGER_VALUE */
+const success = ResourceReportResponse_resourceReportStatus_success; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ResourceReportResponse_resourceReportStatus_partial
@@ -68,7 +68,7 @@ const success: ResourceReportResponse_resourceReportStatus = ResourceReportRespo
  * @type {number}
  */
 export
-const ResourceReportResponse_resourceReportStatus_partial: ResourceReportResponse_resourceReportStatus = 1; /* LONG_NAMED_INTEGER_VALUE */
+const ResourceReportResponse_resourceReportStatus_partial = 1 satisfies ResourceReportResponse_resourceReportStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ResourceReportResponse_resourceReportStatus_partial
@@ -81,7 +81,7 @@ const ResourceReportResponse_resourceReportStatus_partial: ResourceReportRespons
  * @type {number}
  */
 export
-const partial: ResourceReportResponse_resourceReportStatus = ResourceReportResponse_resourceReportStatus_partial; /* SHORT_NAMED_INTEGER_VALUE */
+const partial = ResourceReportResponse_resourceReportStatus_partial; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ResourceReportResponse_resourceReportStatus_failure_1
@@ -94,7 +94,7 @@ const partial: ResourceReportResponse_resourceReportStatus = ResourceReportRespo
  * @type {number}
  */
 export
-const ResourceReportResponse_resourceReportStatus_failure_1: ResourceReportResponse_resourceReportStatus = 2; /* LONG_NAMED_INTEGER_VALUE */
+const ResourceReportResponse_resourceReportStatus_failure_1 = 2 satisfies ResourceReportResponse_resourceReportStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ResourceReportResponse_resourceReportStatus_failure_1
@@ -107,7 +107,7 @@ const ResourceReportResponse_resourceReportStatus_failure_1: ResourceReportRespo
  * @type {number}
  */
 export
-const failure_1: ResourceReportResponse_resourceReportStatus = ResourceReportResponse_resourceReportStatus_failure_1; /* SHORT_NAMED_INTEGER_VALUE */
+const failure_1 = ResourceReportResponse_resourceReportStatus_failure_1; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ResourceReportResponse_resourceReportStatus_failure_2
@@ -120,7 +120,7 @@ const failure_1: ResourceReportResponse_resourceReportStatus = ResourceReportRes
  * @type {number}
  */
 export
-const ResourceReportResponse_resourceReportStatus_failure_2: ResourceReportResponse_resourceReportStatus = 3; /* LONG_NAMED_INTEGER_VALUE */
+const ResourceReportResponse_resourceReportStatus_failure_2 = 3 satisfies ResourceReportResponse_resourceReportStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ResourceReportResponse_resourceReportStatus_failure_2
@@ -133,7 +133,7 @@ const ResourceReportResponse_resourceReportStatus_failure_2: ResourceReportRespo
  * @type {number}
  */
 export
-const failure_2: ResourceReportResponse_resourceReportStatus = ResourceReportResponse_resourceReportStatus_failure_2; /* SHORT_NAMED_INTEGER_VALUE */
+const failure_2 = ResourceReportResponse_resourceReportStatus_failure_2; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ResourceReportResponse_resourceReportStatus_failure_3
@@ -145,7 +145,7 @@ const failure_2: ResourceReportResponse_resourceReportStatus = ResourceReportRes
  * @type {number}
  */
 export
-const ResourceReportResponse_resourceReportStatus_failure_3: ResourceReportResponse_resourceReportStatus = 4; /* LONG_NAMED_INTEGER_VALUE */
+const ResourceReportResponse_resourceReportStatus_failure_3 = 4 satisfies ResourceReportResponse_resourceReportStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ResourceReportResponse_resourceReportStatus_failure_3
@@ -158,7 +158,7 @@ const ResourceReportResponse_resourceReportStatus_failure_3: ResourceReportRespo
  * @type {number}
  */
 export
-const failure_3: ResourceReportResponse_resourceReportStatus = ResourceReportResponse_resourceReportStatus_failure_3; /* SHORT_NAMED_INTEGER_VALUE */
+const failure_3 = ResourceReportResponse_resourceReportStatus_failure_3; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ResourceReportResponse_resourceReportStatus_failure_4
@@ -170,7 +170,7 @@ const failure_3: ResourceReportResponse_resourceReportStatus = ResourceReportRes
  * @type {number}
  */
 export
-const ResourceReportResponse_resourceReportStatus_failure_4: ResourceReportResponse_resourceReportStatus = 5; /* LONG_NAMED_INTEGER_VALUE */
+const ResourceReportResponse_resourceReportStatus_failure_4 = 5 satisfies ResourceReportResponse_resourceReportStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ResourceReportResponse_resourceReportStatus_failure_4
@@ -183,7 +183,7 @@ const ResourceReportResponse_resourceReportStatus_failure_4: ResourceReportRespo
  * @type {number}
  */
 export
-const failure_4: ResourceReportResponse_resourceReportStatus = ResourceReportResponse_resourceReportStatus_failure_4; /* SHORT_NAMED_INTEGER_VALUE */
+const failure_4 = ResourceReportResponse_resourceReportStatus_failure_4; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ResourceReportResponse_resourceReportStatus_failure_5
@@ -196,7 +196,7 @@ const failure_4: ResourceReportResponse_resourceReportStatus = ResourceReportRes
  * @type {number}
  */
 export
-const ResourceReportResponse_resourceReportStatus_failure_5: ResourceReportResponse_resourceReportStatus = 6; /* LONG_NAMED_INTEGER_VALUE */
+const ResourceReportResponse_resourceReportStatus_failure_5 = 6 satisfies ResourceReportResponse_resourceReportStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ResourceReportResponse_resourceReportStatus_failure_5
@@ -209,7 +209,7 @@ const ResourceReportResponse_resourceReportStatus_failure_5: ResourceReportRespo
  * @type {number}
  */
 export
-const failure_5: ResourceReportResponse_resourceReportStatus = ResourceReportResponse_resourceReportStatus_failure_5; /* SHORT_NAMED_INTEGER_VALUE */
+const failure_5 = ResourceReportResponse_resourceReportStatus_failure_5; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ResourceReportResponse_resourceReportStatus_failure_6
@@ -222,7 +222,7 @@ const failure_5: ResourceReportResponse_resourceReportStatus = ResourceReportRes
  * @type {number}
  */
 export
-const ResourceReportResponse_resourceReportStatus_failure_6: ResourceReportResponse_resourceReportStatus = 7; /* LONG_NAMED_INTEGER_VALUE */
+const ResourceReportResponse_resourceReportStatus_failure_6 = 7 satisfies ResourceReportResponse_resourceReportStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ResourceReportResponse_resourceReportStatus_failure_6
@@ -235,7 +235,7 @@ const ResourceReportResponse_resourceReportStatus_failure_6: ResourceReportRespo
  * @type {number}
  */
 export
-const failure_6: ResourceReportResponse_resourceReportStatus = ResourceReportResponse_resourceReportStatus_failure_6; /* SHORT_NAMED_INTEGER_VALUE */
+const failure_6 = ResourceReportResponse_resourceReportStatus_failure_6; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_ResourceReportResponse_resourceReportStatus: $.ASN1Decoder<ResourceReportResponse_resourceReportStatus> = $._decodeInteger;
 export const _encode_ResourceReportResponse_resourceReportStatus: $.ASN1Encoder<ResourceReportResponse_resourceReportStatus> = $._encodeInteger;
 

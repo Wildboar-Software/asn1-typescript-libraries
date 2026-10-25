@@ -36,7 +36,7 @@ export type FADU_Identity_relative = INTEGER;
  * @constant
  * @type {number}
  */
-export const FADU_Identity_relative_previous: FADU_Identity_relative = 0; /* LONG_NAMED_INTEGER_VALUE */
+export const FADU_Identity_relative_previous = 0 satisfies FADU_Identity_relative; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -44,7 +44,7 @@ export const FADU_Identity_relative_previous: FADU_Identity_relative = 0; /* LON
  * @constant
  * @type {number}
  */
-export const previous: FADU_Identity_relative = FADU_Identity_relative_previous; /* SHORT_NAMED_INTEGER_VALUE */
+export const previous = FADU_Identity_relative_previous; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -53,7 +53,7 @@ export const previous: FADU_Identity_relative = FADU_Identity_relative_previous;
  * @constant
  * @type {number}
  */
-export const FADU_Identity_relative_current: FADU_Identity_relative = 1; /* LONG_NAMED_INTEGER_VALUE */
+export const FADU_Identity_relative_current = 1 satisfies FADU_Identity_relative; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -61,7 +61,7 @@ export const FADU_Identity_relative_current: FADU_Identity_relative = 1; /* LONG
  * @constant
  * @type {number}
  */
-export const current: FADU_Identity_relative = FADU_Identity_relative_current; /* SHORT_NAMED_INTEGER_VALUE */
+export const current = FADU_Identity_relative_current; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -71,7 +71,7 @@ export const current: FADU_Identity_relative = FADU_Identity_relative_current; /
  * @constant
  * @type {number}
  */
-export const FADU_Identity_relative_next: FADU_Identity_relative = 2; /* LONG_NAMED_INTEGER_VALUE */
+export const FADU_Identity_relative_next = 2 satisfies FADU_Identity_relative; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -79,7 +79,7 @@ export const FADU_Identity_relative_next: FADU_Identity_relative = 2; /* LONG_NA
  * @constant
  * @type {number}
  */
-export const next: FADU_Identity_relative = FADU_Identity_relative_next; /* SHORT_NAMED_INTEGER_VALUE */
+export const next = FADU_Identity_relative_next; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 

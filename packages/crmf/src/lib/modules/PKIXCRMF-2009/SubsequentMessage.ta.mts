@@ -35,7 +35,7 @@ export type SubsequentMessage = INTEGER;
  * @constant
  * @type {number}
  */
-export const SubsequentMessage_encrCert: SubsequentMessage = 0; /* LONG_NAMED_INTEGER_VALUE */
+export const SubsequentMessage_encrCert = 0 satisfies SubsequentMessage; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -49,7 +49,7 @@ export const SubsequentMessage_encrCert: SubsequentMessage = 0; /* LONG_NAMED_IN
  * @constant
  * @type {number}
  */
-export const encrCert: SubsequentMessage = SubsequentMessage_encrCert; /* SHORT_NAMED_INTEGER_VALUE */
+export const encrCert = SubsequentMessage_encrCert; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -62,7 +62,7 @@ export const encrCert: SubsequentMessage = SubsequentMessage_encrCert; /* SHORT_
  * @constant
  * @type {number}
  */
-export const SubsequentMessage_challengeResp: SubsequentMessage = 1; /* LONG_NAMED_INTEGER_VALUE */
+export const SubsequentMessage_challengeResp = 1 satisfies SubsequentMessage; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -75,7 +75,7 @@ export const SubsequentMessage_challengeResp: SubsequentMessage = 1; /* LONG_NAM
  * @constant
  * @type {number}
  */
-export const challengeResp: SubsequentMessage = SubsequentMessage_challengeResp; /* SHORT_NAMED_INTEGER_VALUE */
+export const challengeResp = SubsequentMessage_challengeResp; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 

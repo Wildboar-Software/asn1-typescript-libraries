@@ -299,7 +299,7 @@ const EVENT_ENROLLMENT_ackState = _enum_for_EVENT_ENROLLMENT_ackState;
  * @type {number}
  */
 export
-const EVENT_ENROLLMENT_ackState_acked: EVENT_ENROLLMENT_ackState = EVENT_ENROLLMENT_ackState.acked; /* LONG_NAMED_ENUMERATED_VALUE */
+const EVENT_ENROLLMENT_ackState_acked = EVENT_ENROLLMENT_ackState.acked; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EVENT_ENROLLMENT_ackState_noAckA
@@ -307,7 +307,7 @@ const EVENT_ENROLLMENT_ackState_acked: EVENT_ENROLLMENT_ackState = EVENT_ENROLLM
  * @type {number}
  */
 export
-const EVENT_ENROLLMENT_ackState_noAckA: EVENT_ENROLLMENT_ackState = EVENT_ENROLLMENT_ackState.noAckA; /* LONG_NAMED_ENUMERATED_VALUE */
+const EVENT_ENROLLMENT_ackState_noAckA = EVENT_ENROLLMENT_ackState.noAckA; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EVENT_ENROLLMENT_ackState_noAckI
@@ -315,6 +315,6 @@ const EVENT_ENROLLMENT_ackState_noAckA: EVENT_ENROLLMENT_ackState = EVENT_ENROLL
  * @type {number}
  */
 export
-const EVENT_ENROLLMENT_ackState_noAckI: EVENT_ENROLLMENT_ackState = EVENT_ENROLLMENT_ackState.noAckI; /* LONG_NAMED_ENUMERATED_VALUE */
+const EVENT_ENROLLMENT_ackState_noAckI = EVENT_ENROLLMENT_ackState.noAckI; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /* eslint-enable */

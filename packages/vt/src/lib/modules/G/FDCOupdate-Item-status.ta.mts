@@ -38,7 +38,7 @@ type FDCOupdate_Item_status = INTEGER;
  * @type {number}
  */
 export
-const FDCOupdate_Item_status_active: FDCOupdate_Item_status = 0; /* LONG_NAMED_INTEGER_VALUE */
+const FDCOupdate_Item_status_active = 0 satisfies FDCOupdate_Item_status; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary FDCOupdate_Item_status_active
@@ -49,7 +49,7 @@ const FDCOupdate_Item_status_active: FDCOupdate_Item_status = 0; /* LONG_NAMED_I
  * @type {number}
  */
 export
-const active: FDCOupdate_Item_status = FDCOupdate_Item_status_active; /* SHORT_NAMED_INTEGER_VALUE */
+const active = FDCOupdate_Item_status_active; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary FDCOupdate_Item_status_inactive
@@ -60,7 +60,7 @@ const active: FDCOupdate_Item_status = FDCOupdate_Item_status_active; /* SHORT_N
  * @type {number}
  */
 export
-const FDCOupdate_Item_status_inactive: FDCOupdate_Item_status = 1; /* LONG_NAMED_INTEGER_VALUE */
+const FDCOupdate_Item_status_inactive = 1 satisfies FDCOupdate_Item_status; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary FDCOupdate_Item_status_inactive
@@ -71,7 +71,7 @@ const FDCOupdate_Item_status_inactive: FDCOupdate_Item_status = 1; /* LONG_NAMED
  * @type {number}
  */
 export
-const inactive: FDCOupdate_Item_status = FDCOupdate_Item_status_inactive; /* SHORT_NAMED_INTEGER_VALUE */
+const inactive = FDCOupdate_Item_status_inactive; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary FDCOupdate_Item_status_void_
@@ -82,7 +82,7 @@ const inactive: FDCOupdate_Item_status = FDCOupdate_Item_status_inactive; /* SHO
  * @type {number}
  */
 export
-const FDCOupdate_Item_status_void_: FDCOupdate_Item_status = 2; /* LONG_NAMED_INTEGER_VALUE */
+const FDCOupdate_Item_status_void_ = 2 satisfies FDCOupdate_Item_status; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary FDCOupdate_Item_status_void_
@@ -93,7 +93,7 @@ const FDCOupdate_Item_status_void_: FDCOupdate_Item_status = 2; /* LONG_NAMED_IN
  * @type {number}
  */
 export
-const void_: FDCOupdate_Item_status = FDCOupdate_Item_status_void_; /* SHORT_NAMED_INTEGER_VALUE */
+const void_ = FDCOupdate_Item_status_void_; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_FDCOupdate_Item_status = $._decodeInteger;
 export const _encode_FDCOupdate_Item_status = $._encodeInteger;
 

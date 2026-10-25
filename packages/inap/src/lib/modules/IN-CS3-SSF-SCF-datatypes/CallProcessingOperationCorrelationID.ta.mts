@@ -69,7 +69,7 @@ const CallProcessingOperationCorrelationID = _enum_for_CallProcessingOperationCo
  * @type {number}
  */
 export
-const CallProcessingOperationCorrelationID_aLERTing: CallProcessingOperationCorrelationID = CallProcessingOperationCorrelationID.aLERTing; /* LONG_NAMED_ENUMERATED_VALUE */
+const CallProcessingOperationCorrelationID_aLERTing = CallProcessingOperationCorrelationID.aLERTing; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary aLERTing
@@ -77,7 +77,7 @@ const CallProcessingOperationCorrelationID_aLERTing: CallProcessingOperationCorr
  * @type {number}
  */
 export
-const aLERTing: CallProcessingOperationCorrelationID = CallProcessingOperationCorrelationID.aLERTing; /* SHORT_NAMED_ENUMERATED_VALUE */
+const aLERTing = CallProcessingOperationCorrelationID.aLERTing; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CallProcessingOperationCorrelationID_sETUP
@@ -85,7 +85,7 @@ const aLERTing: CallProcessingOperationCorrelationID = CallProcessingOperationCo
  * @type {number}
  */
 export
-const CallProcessingOperationCorrelationID_sETUP: CallProcessingOperationCorrelationID = CallProcessingOperationCorrelationID.sETUP; /* LONG_NAMED_ENUMERATED_VALUE */
+const CallProcessingOperationCorrelationID_sETUP = CallProcessingOperationCorrelationID.sETUP; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sETUP
@@ -93,7 +93,7 @@ const CallProcessingOperationCorrelationID_sETUP: CallProcessingOperationCorrela
  * @type {number}
  */
 export
-const sETUP: CallProcessingOperationCorrelationID = CallProcessingOperationCorrelationID.sETUP; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sETUP = CallProcessingOperationCorrelationID.sETUP; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CallProcessingOperationCorrelationID_cONNect
@@ -101,7 +101,7 @@ const sETUP: CallProcessingOperationCorrelationID = CallProcessingOperationCorre
  * @type {number}
  */
 export
-const CallProcessingOperationCorrelationID_cONNect: CallProcessingOperationCorrelationID = CallProcessingOperationCorrelationID.cONNect; /* LONG_NAMED_ENUMERATED_VALUE */
+const CallProcessingOperationCorrelationID_cONNect = CallProcessingOperationCorrelationID.cONNect; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary cONNect
@@ -109,7 +109,7 @@ const CallProcessingOperationCorrelationID_cONNect: CallProcessingOperationCorre
  * @type {number}
  */
 export
-const cONNect: CallProcessingOperationCorrelationID = CallProcessingOperationCorrelationID.cONNect; /* SHORT_NAMED_ENUMERATED_VALUE */
+const cONNect = CallProcessingOperationCorrelationID.cONNect; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CallProcessingOperationCorrelationID_dISConnect
@@ -117,7 +117,7 @@ const cONNect: CallProcessingOperationCorrelationID = CallProcessingOperationCor
  * @type {number}
  */
 export
-const CallProcessingOperationCorrelationID_dISConnect: CallProcessingOperationCorrelationID = CallProcessingOperationCorrelationID.dISConnect; /* LONG_NAMED_ENUMERATED_VALUE */
+const CallProcessingOperationCorrelationID_dISConnect = CallProcessingOperationCorrelationID.dISConnect; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary dISConnect
@@ -125,7 +125,7 @@ const CallProcessingOperationCorrelationID_dISConnect: CallProcessingOperationCo
  * @type {number}
  */
 export
-const dISConnect: CallProcessingOperationCorrelationID = CallProcessingOperationCorrelationID.dISConnect; /* SHORT_NAMED_ENUMERATED_VALUE */
+const dISConnect = CallProcessingOperationCorrelationID.dISConnect; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CallProcessingOperationCorrelationID_rELease
@@ -133,7 +133,7 @@ const dISConnect: CallProcessingOperationCorrelationID = CallProcessingOperation
  * @type {number}
  */
 export
-const CallProcessingOperationCorrelationID_rELease: CallProcessingOperationCorrelationID = CallProcessingOperationCorrelationID.rELease; /* LONG_NAMED_ENUMERATED_VALUE */
+const CallProcessingOperationCorrelationID_rELease = CallProcessingOperationCorrelationID.rELease; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary rELease
@@ -141,7 +141,7 @@ const CallProcessingOperationCorrelationID_rELease: CallProcessingOperationCorre
  * @type {number}
  */
 export
-const rELease: CallProcessingOperationCorrelationID = CallProcessingOperationCorrelationID.rELease; /* SHORT_NAMED_ENUMERATED_VALUE */
+const rELease = CallProcessingOperationCorrelationID.rELease; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CallProcessingOperationCorrelationID_rELeaseCOMPlete
@@ -149,7 +149,7 @@ const rELease: CallProcessingOperationCorrelationID = CallProcessingOperationCor
  * @type {number}
  */
 export
-const CallProcessingOperationCorrelationID_rELeaseCOMPlete: CallProcessingOperationCorrelationID = CallProcessingOperationCorrelationID.rELeaseCOMPlete; /* LONG_NAMED_ENUMERATED_VALUE */
+const CallProcessingOperationCorrelationID_rELeaseCOMPlete = CallProcessingOperationCorrelationID.rELeaseCOMPlete; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary rELeaseCOMPlete
@@ -157,7 +157,7 @@ const CallProcessingOperationCorrelationID_rELeaseCOMPlete: CallProcessingOperat
  * @type {number}
  */
 export
-const rELeaseCOMPlete: CallProcessingOperationCorrelationID = CallProcessingOperationCorrelationID.rELeaseCOMPlete; /* SHORT_NAMED_ENUMERATED_VALUE */
+const rELeaseCOMPlete = CallProcessingOperationCorrelationID.rELeaseCOMPlete; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CallProcessingOperationCorrelationID_fACility
@@ -165,7 +165,7 @@ const rELeaseCOMPlete: CallProcessingOperationCorrelationID = CallProcessingOper
  * @type {number}
  */
 export
-const CallProcessingOperationCorrelationID_fACility: CallProcessingOperationCorrelationID = CallProcessingOperationCorrelationID.fACility; /* LONG_NAMED_ENUMERATED_VALUE */
+const CallProcessingOperationCorrelationID_fACility = CallProcessingOperationCorrelationID.fACility; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary fACility
@@ -173,7 +173,7 @@ const CallProcessingOperationCorrelationID_fACility: CallProcessingOperationCorr
  * @type {number}
  */
 export
-const fACility: CallProcessingOperationCorrelationID = CallProcessingOperationCorrelationID.fACility; /* SHORT_NAMED_ENUMERATED_VALUE */
+const fACility = CallProcessingOperationCorrelationID.fACility; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 function _decode_CallProcessingOperationCorrelationID(el: _Element): CallProcessingOperationCorrelationID {

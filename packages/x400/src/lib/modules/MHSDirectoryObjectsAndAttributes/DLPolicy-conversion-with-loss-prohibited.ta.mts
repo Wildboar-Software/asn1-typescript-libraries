@@ -64,7 +64,7 @@ export const DLPolicy_conversion_with_loss_prohibited = _enum_for_DLPolicy_conve
  * @constant
  * @type {number}
  */
-export const DLPolicy_conversion_with_loss_prohibited_unchanged: DLPolicy_conversion_with_loss_prohibited =
+export const DLPolicy_conversion_with_loss_prohibited_unchanged =
     DLPolicy_conversion_with_loss_prohibited.unchanged; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -72,7 +72,7 @@ export const DLPolicy_conversion_with_loss_prohibited_unchanged: DLPolicy_conver
  * @constant
  * @type {number}
  */
-export const unchanged: DLPolicy_conversion_with_loss_prohibited =
+export const unchanged =
     DLPolicy_conversion_with_loss_prohibited.unchanged; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -80,7 +80,7 @@ export const unchanged: DLPolicy_conversion_with_loss_prohibited =
  * @constant
  * @type {number}
  */
-export const DLPolicy_conversion_with_loss_prohibited_conversion_with_loss_allowed: DLPolicy_conversion_with_loss_prohibited =
+export const DLPolicy_conversion_with_loss_prohibited_conversion_with_loss_allowed =
     DLPolicy_conversion_with_loss_prohibited.conversion_with_loss_allowed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -88,7 +88,7 @@ export const DLPolicy_conversion_with_loss_prohibited_conversion_with_loss_allow
  * @constant
  * @type {number}
  */
-export const conversion_with_loss_allowed: DLPolicy_conversion_with_loss_prohibited =
+export const conversion_with_loss_allowed =
     DLPolicy_conversion_with_loss_prohibited.conversion_with_loss_allowed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -96,7 +96,7 @@ export const conversion_with_loss_allowed: DLPolicy_conversion_with_loss_prohibi
  * @constant
  * @type {number}
  */
-export const DLPolicy_conversion_with_loss_prohibited_conversion_with_loss_prohibited: DLPolicy_conversion_with_loss_prohibited =
+export const DLPolicy_conversion_with_loss_prohibited_conversion_with_loss_prohibited =
     DLPolicy_conversion_with_loss_prohibited.conversion_with_loss_prohibited; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -104,7 +104,7 @@ export const DLPolicy_conversion_with_loss_prohibited_conversion_with_loss_prohi
  * @constant
  * @type {number}
  */
-export const conversion_with_loss_prohibited: DLPolicy_conversion_with_loss_prohibited =
+export const conversion_with_loss_prohibited =
     DLPolicy_conversion_with_loss_prohibited.conversion_with_loss_prohibited; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 let _cached_decoder_for_DLPolicy_conversion_with_loss_prohibited: $.ASN1Decoder<DLPolicy_conversion_with_loss_prohibited> | null = null;

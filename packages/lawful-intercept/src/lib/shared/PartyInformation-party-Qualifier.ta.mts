@@ -147,7 +147,7 @@ type PartyInformation_party_Qualifier = _enum_for_PartyInformation_party_Qualifi
  * @type {number}
  */
 export
-const PartyInformation_party_Qualifier_originating_Party: PartyInformation_party_Qualifier = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+const PartyInformation_party_Qualifier_originating_Party = _enum_for_PartyInformation_party_Qualifier.originating_Party; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary originating_Party
@@ -165,7 +165,7 @@ const PartyInformation_party_Qualifier_originating_Party: PartyInformation_party
  * @type {number}
  */
 export
-const originating_Party: PartyInformation_party_Qualifier = PartyInformation_party_Qualifier_originating_Party; /* SHORT_NAMED_ENUMERATED_VALUE */
+const originating_Party = PartyInformation_party_Qualifier_originating_Party; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PartyInformation_party_Qualifier_terminating_Party
@@ -183,7 +183,7 @@ const originating_Party: PartyInformation_party_Qualifier = PartyInformation_par
  * @type {number}
  */
 export
-const PartyInformation_party_Qualifier_terminating_Party: PartyInformation_party_Qualifier = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const PartyInformation_party_Qualifier_terminating_Party = _enum_for_PartyInformation_party_Qualifier.terminating_Party; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary terminating_Party
@@ -201,7 +201,7 @@ const PartyInformation_party_Qualifier_terminating_Party: PartyInformation_party
  * @type {number}
  */
 export
-const terminating_Party: PartyInformation_party_Qualifier = PartyInformation_party_Qualifier_terminating_Party; /* SHORT_NAMED_ENUMERATED_VALUE */
+const terminating_Party = PartyInformation_party_Qualifier_terminating_Party; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PartyInformation_party_Qualifier_forwarded_to_Party
@@ -220,7 +220,7 @@ const terminating_Party: PartyInformation_party_Qualifier = PartyInformation_par
  * @type {number}
  */
 export
-const PartyInformation_party_Qualifier_forwarded_to_Party: PartyInformation_party_Qualifier = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+const PartyInformation_party_Qualifier_forwarded_to_Party = _enum_for_PartyInformation_party_Qualifier.forwarded_to_Party; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary forwarded_to_Party
@@ -239,7 +239,7 @@ const PartyInformation_party_Qualifier_forwarded_to_Party: PartyInformation_part
  * @type {number}
  */
 export
-const forwarded_to_Party: PartyInformation_party_Qualifier = PartyInformation_party_Qualifier_forwarded_to_Party; /* SHORT_NAMED_ENUMERATED_VALUE */
+const forwarded_to_Party = PartyInformation_party_Qualifier_forwarded_to_Party; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PartyInformation_party_Qualifier_gPRS_Target
@@ -256,7 +256,7 @@ const forwarded_to_Party: PartyInformation_party_Qualifier = PartyInformation_pa
  * @type {number}
  */
 export
-const PartyInformation_party_Qualifier_gPRS_Target: PartyInformation_party_Qualifier = 3; /* LONG_NAMED_ENUMERATED_VALUE */
+const PartyInformation_party_Qualifier_gPRS_Target = _enum_for_PartyInformation_party_Qualifier.gPRS_Target; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary gPRS_Target
@@ -273,7 +273,7 @@ const PartyInformation_party_Qualifier_gPRS_Target: PartyInformation_party_Quali
  * @type {number}
  */
 export
-const gPRS_Target: PartyInformation_party_Qualifier = PartyInformation_party_Qualifier_gPRS_Target; /* SHORT_NAMED_ENUMERATED_VALUE */
+const gPRS_Target = PartyInformation_party_Qualifier_gPRS_Target; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_PartyInformation_party_Qualifier: $.ASN1Decoder<PartyInformation_party_Qualifier> = $._decodeEnumerated;
 export const _encode_PartyInformation_party_Qualifier: $.ASN1Encoder<PartyInformation_party_Qualifier> = $._encodeEnumerated;
 

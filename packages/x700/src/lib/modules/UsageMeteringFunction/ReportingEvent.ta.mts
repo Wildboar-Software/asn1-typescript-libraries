@@ -143,7 +143,7 @@ export const ReportingEvent = _enum_for_ReportingEvent;
  * @constant
  * @type {number}
  */
-export const ReportingEvent_registration: ReportingEvent =
+export const ReportingEvent_registration =
     ReportingEvent.registration; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -156,7 +156,7 @@ export const ReportingEvent_registration: ReportingEvent =
  * @constant
  * @type {number}
  */
-export const registration: ReportingEvent =
+export const registration =
     ReportingEvent.registration; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -169,7 +169,7 @@ export const registration: ReportingEvent =
  * @constant
  * @type {number}
  */
-export const ReportingEvent_request: ReportingEvent =
+export const ReportingEvent_request =
     ReportingEvent.request; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -182,7 +182,7 @@ export const ReportingEvent_request: ReportingEvent =
  * @constant
  * @type {number}
  */
-export const request: ReportingEvent =
+export const request =
     ReportingEvent.request; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -195,7 +195,7 @@ export const request: ReportingEvent =
  * @constant
  * @type {number}
  */
-export const ReportingEvent_accept: ReportingEvent =
+export const ReportingEvent_accept =
     ReportingEvent.accept; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -208,7 +208,7 @@ export const ReportingEvent_accept: ReportingEvent =
  * @constant
  * @type {number}
  */
-export const accept: ReportingEvent =
+export const accept =
     ReportingEvent.accept; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -220,7 +220,7 @@ export const accept: ReportingEvent =
  * @constant
  * @type {number}
  */
-export const ReportingEvent_complete: ReportingEvent =
+export const ReportingEvent_complete =
     ReportingEvent.complete; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -232,7 +232,7 @@ export const ReportingEvent_complete: ReportingEvent =
  * @constant
  * @type {number}
  */
-export const complete: ReportingEvent =
+export const complete =
     ReportingEvent.complete; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -245,7 +245,7 @@ export const complete: ReportingEvent =
  * @constant
  * @type {number}
  */
-export const ReportingEvent_corresponding: ReportingEvent =
+export const ReportingEvent_corresponding =
     ReportingEvent.corresponding; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -258,7 +258,7 @@ export const ReportingEvent_corresponding: ReportingEvent =
  * @constant
  * @type {number}
  */
-export const corresponding: ReportingEvent =
+export const corresponding =
     ReportingEvent.corresponding; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -271,7 +271,7 @@ export const corresponding: ReportingEvent =
  * @constant
  * @type {number}
  */
-export const ReportingEvent_bulk: ReportingEvent =
+export const ReportingEvent_bulk =
     ReportingEvent.bulk; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -284,7 +284,7 @@ export const ReportingEvent_bulk: ReportingEvent =
  * @constant
  * @type {number}
  */
-export const bulk: ReportingEvent =
+export const bulk =
     ReportingEvent.bulk; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -297,7 +297,7 @@ export const bulk: ReportingEvent =
  * @constant
  * @type {number}
  */
-export const ReportingEvent_interruption: ReportingEvent =
+export const ReportingEvent_interruption =
     ReportingEvent.interruption; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -310,7 +310,7 @@ export const ReportingEvent_interruption: ReportingEvent =
  * @constant
  * @type {number}
  */
-export const interruption: ReportingEvent =
+export const interruption =
     ReportingEvent.interruption; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 

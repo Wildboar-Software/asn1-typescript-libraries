@@ -84,7 +84,7 @@ const PTCAccessPolicyFailure = _enum_for_PTCAccessPolicyFailure;
  * @type {number}
  */
 export
-const PTCAccessPolicyFailure_requestUnsuccessful: PTCAccessPolicyFailure = PTCAccessPolicyFailure.requestUnsuccessful; /* LONG_NAMED_ENUMERATED_VALUE */
+const PTCAccessPolicyFailure_requestUnsuccessful = PTCAccessPolicyFailure.requestUnsuccessful; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary requestUnsuccessful
@@ -92,7 +92,7 @@ const PTCAccessPolicyFailure_requestUnsuccessful: PTCAccessPolicyFailure = PTCAc
  * @type {number}
  */
 export
-const requestUnsuccessful: PTCAccessPolicyFailure = PTCAccessPolicyFailure.requestUnsuccessful; /* SHORT_NAMED_ENUMERATED_VALUE */
+const requestUnsuccessful = PTCAccessPolicyFailure.requestUnsuccessful; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PTCAccessPolicyFailure_requestUnknown
@@ -100,7 +100,7 @@ const requestUnsuccessful: PTCAccessPolicyFailure = PTCAccessPolicyFailure.reque
  * @type {number}
  */
 export
-const PTCAccessPolicyFailure_requestUnknown: PTCAccessPolicyFailure = PTCAccessPolicyFailure.requestUnknown; /* LONG_NAMED_ENUMERATED_VALUE */
+const PTCAccessPolicyFailure_requestUnknown = PTCAccessPolicyFailure.requestUnknown; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary requestUnknown
@@ -108,7 +108,7 @@ const PTCAccessPolicyFailure_requestUnknown: PTCAccessPolicyFailure = PTCAccessP
  * @type {number}
  */
 export
-const requestUnknown: PTCAccessPolicyFailure = PTCAccessPolicyFailure.requestUnknown; /* SHORT_NAMED_ENUMERATED_VALUE */
+const requestUnknown = PTCAccessPolicyFailure.requestUnknown; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_PTCAccessPolicyFailure: $.ASN1Decoder<PTCAccessPolicyFailure> = $._decodeEnumerated;
 export const _encode_PTCAccessPolicyFailure: $.ASN1Encoder<PTCAccessPolicyFailure> = $._encodeEnumerated;
 

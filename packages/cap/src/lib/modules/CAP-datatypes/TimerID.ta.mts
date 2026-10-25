@@ -34,7 +34,7 @@ export const TimerID = _enum_for_TimerID;
  *
  * @constant
  */
-export const TimerID_tssf: TimerID = TimerID.tssf;
+export const TimerID_tssf = TimerID.tssf;
 /**
  * @summary tssf
  * @description
@@ -44,6 +44,6 @@ export const TimerID_tssf: TimerID = TimerID.tssf;
  *
  * @constant
  */
-export const tssf: TimerID = TimerID.tssf;
+export const tssf = TimerID.tssf;
 export const _decode_TimerID = $._decodeEnumerated;
 export const _encode_TimerID = $._encodeEnumerated;

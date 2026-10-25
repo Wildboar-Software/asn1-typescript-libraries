@@ -29,14 +29,14 @@ export type CBEFFVersion_cbeff_minor = INTEGER;
  * @constant
  * @type {number}
  */
-export const CBEFFVersion_cbeff_minor_version0: CBEFFVersion_cbeff_minor = 0; /* LONG_NAMED_INTEGER_VALUE */
+export const CBEFFVersion_cbeff_minor_version0 = 0 satisfies CBEFFVersion_cbeff_minor; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CBEFFVersion_cbeff_minor_version0
  * @constant
  * @type {number}
  */
-export const version0: CBEFFVersion_cbeff_minor = CBEFFVersion_cbeff_minor_version0; /* SHORT_NAMED_INTEGER_VALUE */
+export const version0 = CBEFFVersion_cbeff_minor_version0; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_CBEFFVersion_cbeff_minor = $._decodeInteger;

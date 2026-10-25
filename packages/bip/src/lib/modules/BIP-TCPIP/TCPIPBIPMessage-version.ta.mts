@@ -41,7 +41,7 @@ export type TCPIPBIPMessage_version = INTEGER;
  * @constant
  * @type {number}
  */
-export const TCPIPBIPMessage_version_version_1: TCPIPBIPMessage_version = 1; /* LONG_NAMED_INTEGER_VALUE */
+export const TCPIPBIPMessage_version_version_1 = 1 satisfies TCPIPBIPMessage_version; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -54,7 +54,7 @@ export const TCPIPBIPMessage_version_version_1: TCPIPBIPMessage_version = 1; /* 
  * @constant
  * @type {number}
  */
-export const version_1: TCPIPBIPMessage_version = TCPIPBIPMessage_version_version_1; /* SHORT_NAMED_INTEGER_VALUE */
+export const version_1 = TCPIPBIPMessage_version_version_1; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 

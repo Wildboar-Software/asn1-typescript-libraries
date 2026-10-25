@@ -75,7 +75,7 @@ export const PropertyList_getReplace = _enum_for_PropertyList_getReplace;
  * @constant
  * @type {number}
  */
-export const PropertyList_getReplace_gET: PropertyList_getReplace =
+export const PropertyList_getReplace_gET =
     PropertyList_getReplace.gET; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -87,7 +87,7 @@ export const PropertyList_getReplace_gET: PropertyList_getReplace =
  * @constant
  * @type {number}
  */
-export const gET: PropertyList_getReplace =
+export const gET =
     PropertyList_getReplace.gET; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -99,7 +99,7 @@ export const gET: PropertyList_getReplace =
  * @constant
  * @type {number}
  */
-export const PropertyList_getReplace_rEPLACE: PropertyList_getReplace =
+export const PropertyList_getReplace_rEPLACE =
     PropertyList_getReplace.rEPLACE; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -111,7 +111,7 @@ export const PropertyList_getReplace_rEPLACE: PropertyList_getReplace =
  * @constant
  * @type {number}
  */
-export const rEPLACE: PropertyList_getReplace =
+export const rEPLACE =
     PropertyList_getReplace.rEPLACE; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -123,7 +123,7 @@ export const rEPLACE: PropertyList_getReplace =
  * @constant
  * @type {number}
  */
-export const PropertyList_getReplace_gET_REPLACE: PropertyList_getReplace =
+export const PropertyList_getReplace_gET_REPLACE =
     PropertyList_getReplace.gET_REPLACE; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -135,7 +135,7 @@ export const PropertyList_getReplace_gET_REPLACE: PropertyList_getReplace =
  * @constant
  * @type {number}
  */
-export const gET_REPLACE: PropertyList_getReplace =
+export const gET_REPLACE =
     PropertyList_getReplace.gET_REPLACE; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 

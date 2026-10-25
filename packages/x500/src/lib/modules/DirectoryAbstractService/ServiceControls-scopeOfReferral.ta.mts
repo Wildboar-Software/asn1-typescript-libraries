@@ -26,7 +26,7 @@ export type ServiceControls_scopeOfReferral = INTEGER;
  * @constant
  * @type {number}
  */
-export const ServiceControls_scopeOfReferral_dmd: ServiceControls_scopeOfReferral = 0; /* LONG_NAMED_INTEGER_VALUE */
+export const ServiceControls_scopeOfReferral_dmd = 0 satisfies ServiceControls_scopeOfReferral; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceControls_scopeOfReferral_dmd
@@ -37,7 +37,7 @@ export const ServiceControls_scopeOfReferral_dmd: ServiceControls_scopeOfReferra
  * @constant
  * @type {number}
  */
-export const dmd: ServiceControls_scopeOfReferral = ServiceControls_scopeOfReferral_dmd; /* SHORT_NAMED_INTEGER_VALUE */
+export const dmd = ServiceControls_scopeOfReferral_dmd; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceControls_scopeOfReferral_country
@@ -48,7 +48,7 @@ export const dmd: ServiceControls_scopeOfReferral = ServiceControls_scopeOfRefer
  * @constant
  * @type {number}
  */
-export const ServiceControls_scopeOfReferral_country: ServiceControls_scopeOfReferral = 1; /* LONG_NAMED_INTEGER_VALUE */
+export const ServiceControls_scopeOfReferral_country = 1 satisfies ServiceControls_scopeOfReferral; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceControls_scopeOfReferral_country
@@ -59,7 +59,7 @@ export const ServiceControls_scopeOfReferral_country: ServiceControls_scopeOfRef
  * @constant
  * @type {number}
  */
-export const country: ServiceControls_scopeOfReferral = ServiceControls_scopeOfReferral_country; /* SHORT_NAMED_INTEGER_VALUE */
+export const country = ServiceControls_scopeOfReferral_country; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_ServiceControls_scopeOfReferral = $._decodeInteger;

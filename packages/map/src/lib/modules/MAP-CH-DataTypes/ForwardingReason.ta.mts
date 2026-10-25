@@ -83,7 +83,7 @@ const ForwardingReason = _enum_for_ForwardingReason;
  * @type {number}
  */
 export
-const ForwardingReason_notReachable: ForwardingReason = ForwardingReason.notReachable; /* LONG_NAMED_ENUMERATED_VALUE */
+const ForwardingReason_notReachable = ForwardingReason.notReachable; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary notReachable
@@ -95,7 +95,7 @@ const ForwardingReason_notReachable: ForwardingReason = ForwardingReason.notReac
  * @type {number}
  */
 export
-const notReachable: ForwardingReason = ForwardingReason.notReachable; /* SHORT_NAMED_ENUMERATED_VALUE */
+const notReachable = ForwardingReason.notReachable; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ForwardingReason_busy
@@ -107,7 +107,7 @@ const notReachable: ForwardingReason = ForwardingReason.notReachable; /* SHORT_N
  * @type {number}
  */
 export
-const ForwardingReason_busy: ForwardingReason = ForwardingReason.busy; /* LONG_NAMED_ENUMERATED_VALUE */
+const ForwardingReason_busy = ForwardingReason.busy; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary busy
@@ -119,7 +119,7 @@ const ForwardingReason_busy: ForwardingReason = ForwardingReason.busy; /* LONG_N
  * @type {number}
  */
 export
-const busy: ForwardingReason = ForwardingReason.busy; /* SHORT_NAMED_ENUMERATED_VALUE */
+const busy = ForwardingReason.busy; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ForwardingReason_noReply
@@ -131,7 +131,7 @@ const busy: ForwardingReason = ForwardingReason.busy; /* SHORT_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const ForwardingReason_noReply: ForwardingReason = ForwardingReason.noReply; /* LONG_NAMED_ENUMERATED_VALUE */
+const ForwardingReason_noReply = ForwardingReason.noReply; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary noReply
@@ -143,7 +143,7 @@ const ForwardingReason_noReply: ForwardingReason = ForwardingReason.noReply; /* 
  * @type {number}
  */
 export
-const noReply: ForwardingReason = ForwardingReason.noReply; /* SHORT_NAMED_ENUMERATED_VALUE */
+const noReply = ForwardingReason.noReply; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) ForwardingReason

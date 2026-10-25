@@ -99,7 +99,7 @@ const Semaphore_instance_definition_details_class = _enum_for_Semaphore_instance
  * @type {number}
  */
 export
-const Semaphore_instance_definition_details_class_token: Semaphore_instance_definition_details_class = Semaphore_instance_definition_details_class.token; /* LONG_NAMED_ENUMERATED_VALUE */
+const Semaphore_instance_definition_details_class_token = Semaphore_instance_definition_details_class.token; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary token
@@ -112,7 +112,7 @@ const Semaphore_instance_definition_details_class_token: Semaphore_instance_defi
  * @type {number}
  */
 export
-const token: Semaphore_instance_definition_details_class = Semaphore_instance_definition_details_class.token; /* SHORT_NAMED_ENUMERATED_VALUE */
+const token = Semaphore_instance_definition_details_class.token; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Semaphore_instance_definition_details_class_pool
@@ -125,7 +125,7 @@ const token: Semaphore_instance_definition_details_class = Semaphore_instance_de
  * @type {number}
  */
 export
-const Semaphore_instance_definition_details_class_pool: Semaphore_instance_definition_details_class = Semaphore_instance_definition_details_class.pool; /* LONG_NAMED_ENUMERATED_VALUE */
+const Semaphore_instance_definition_details_class_pool = Semaphore_instance_definition_details_class.pool; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pool
@@ -138,7 +138,7 @@ const Semaphore_instance_definition_details_class_pool: Semaphore_instance_defin
  * @type {number}
  */
 export
-const pool: Semaphore_instance_definition_details_class = Semaphore_instance_definition_details_class.pool; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pool = Semaphore_instance_definition_details_class.pool; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_Semaphore_instance_definition_details_class = $._decodeEnumerated;
 export const _encode_Semaphore_instance_definition_details_class = $._encodeEnumerated;
 

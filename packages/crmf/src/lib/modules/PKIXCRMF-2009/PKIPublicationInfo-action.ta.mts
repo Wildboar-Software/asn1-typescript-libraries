@@ -29,7 +29,7 @@ export type PKIPublicationInfo_action = INTEGER;
  * @constant
  * @type {number}
  */
-export const PKIPublicationInfo_action_dontPublish: PKIPublicationInfo_action = 0; /* LONG_NAMED_INTEGER_VALUE */
+export const PKIPublicationInfo_action_dontPublish = 0 satisfies PKIPublicationInfo_action; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -42,7 +42,7 @@ export const PKIPublicationInfo_action_dontPublish: PKIPublicationInfo_action = 
  * @constant
  * @type {number}
  */
-export const dontPublish: PKIPublicationInfo_action = PKIPublicationInfo_action_dontPublish; /* SHORT_NAMED_INTEGER_VALUE */
+export const dontPublish = PKIPublicationInfo_action_dontPublish; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -55,7 +55,7 @@ export const dontPublish: PKIPublicationInfo_action = PKIPublicationInfo_action_
  * @constant
  * @type {number}
  */
-export const PKIPublicationInfo_action_pleasePublish: PKIPublicationInfo_action = 1; /* LONG_NAMED_INTEGER_VALUE */
+export const PKIPublicationInfo_action_pleasePublish = 1 satisfies PKIPublicationInfo_action; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -68,7 +68,7 @@ export const PKIPublicationInfo_action_pleasePublish: PKIPublicationInfo_action 
  * @constant
  * @type {number}
  */
-export const pleasePublish: PKIPublicationInfo_action = PKIPublicationInfo_action_pleasePublish; /* SHORT_NAMED_INTEGER_VALUE */
+export const pleasePublish = PKIPublicationInfo_action_pleasePublish; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 

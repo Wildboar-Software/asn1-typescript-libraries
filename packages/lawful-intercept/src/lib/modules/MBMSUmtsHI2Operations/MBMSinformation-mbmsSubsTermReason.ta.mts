@@ -46,7 +46,7 @@ type MBMSinformation_mbmsSubsTermReason = _enum_for_MBMSinformation_mbmsSubsTerm
  * @type {number}
  */
 export
-const MBMSinformation_mbmsSubsTermReason_userInitiated: MBMSinformation_mbmsSubsTermReason = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+const MBMSinformation_mbmsSubsTermReason_userInitiated = _enum_for_MBMSinformation_mbmsSubsTermReason.userInitiated; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary userInitiated
@@ -57,7 +57,7 @@ const MBMSinformation_mbmsSubsTermReason_userInitiated: MBMSinformation_mbmsSubs
  * @type {number}
  */
 export
-const userInitiated: MBMSinformation_mbmsSubsTermReason = MBMSinformation_mbmsSubsTermReason_userInitiated; /* SHORT_NAMED_ENUMERATED_VALUE */
+const userInitiated = MBMSinformation_mbmsSubsTermReason_userInitiated; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MBMSinformation_mbmsSubsTermReason_subscriptionExpired
@@ -68,7 +68,7 @@ const userInitiated: MBMSinformation_mbmsSubsTermReason = MBMSinformation_mbmsSu
  * @type {number}
  */
 export
-const MBMSinformation_mbmsSubsTermReason_subscriptionExpired: MBMSinformation_mbmsSubsTermReason = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const MBMSinformation_mbmsSubsTermReason_subscriptionExpired = _enum_for_MBMSinformation_mbmsSubsTermReason.subscriptionExpired; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary subscriptionExpired
@@ -79,7 +79,7 @@ const MBMSinformation_mbmsSubsTermReason_subscriptionExpired: MBMSinformation_mb
  * @type {number}
  */
 export
-const subscriptionExpired: MBMSinformation_mbmsSubsTermReason = MBMSinformation_mbmsSubsTermReason_subscriptionExpired; /* SHORT_NAMED_ENUMERATED_VALUE */
+const subscriptionExpired = MBMSinformation_mbmsSubsTermReason_subscriptionExpired; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_MBMSinformation_mbmsSubsTermReason: $.ASN1Decoder<MBMSinformation_mbmsSubsTermReason> = $._decodeEnumerated;
 export const _encode_MBMSinformation_mbmsSubsTermReason: $.ASN1Encoder<MBMSinformation_mbmsSubsTermReason> = $._encodeEnumerated;
 

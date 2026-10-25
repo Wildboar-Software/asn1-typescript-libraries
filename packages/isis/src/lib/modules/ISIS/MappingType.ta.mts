@@ -84,7 +84,7 @@ export const MappingType = _enum_for_MappingType;
  * @constant
  * @type {number}
  */
-export const MappingType_none: MappingType =
+export const MappingType_none =
   MappingType.none; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -92,7 +92,7 @@ export const MappingType_none: MappingType =
  * @constant
  * @type {number}
  */
-export const none: MappingType =
+export const none =
   MappingType.none; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -107,7 +107,7 @@ export const none: MappingType =
  * @constant
  * @type {number}
  */
-export const MappingType_explicit: MappingType =
+export const MappingType_explicit =
   MappingType.explicit; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -115,7 +115,7 @@ export const MappingType_explicit: MappingType =
  * @constant
  * @type {number}
  */
-export const explicit: MappingType =
+export const explicit =
   MappingType.explicit; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -130,7 +130,7 @@ export const explicit: MappingType =
  * @constant
  * @type {number}
  */
-export const MappingType_extractIDI: MappingType =
+export const MappingType_extractIDI =
   MappingType.extractIDI; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -138,7 +138,7 @@ export const MappingType_extractIDI: MappingType =
  * @constant
  * @type {number}
  */
-export const extractIDI: MappingType =
+export const extractIDI =
   MappingType.extractIDI; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -153,7 +153,7 @@ export const extractIDI: MappingType =
  * @constant
  * @type {number}
  */
-export const MappingType_extractDSP: MappingType =
+export const MappingType_extractDSP =
   MappingType.extractDSP; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -161,7 +161,7 @@ export const MappingType_extractDSP: MappingType =
  * @constant
  * @type {number}
  */
-export const extractDSP: MappingType =
+export const extractDSP =
   MappingType.extractDSP; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 

@@ -90,7 +90,7 @@ const Period_absolutePosition = _enum_for_Period_absolutePosition;
  * @type {number}
  */
 export
-const Period_absolutePosition_startOfMessage: Period_absolutePosition = Period_absolutePosition.startOfMessage; /* LONG_NAMED_ENUMERATED_VALUE */
+const Period_absolutePosition_startOfMessage = Period_absolutePosition.startOfMessage; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary startOfMessage
@@ -102,7 +102,7 @@ const Period_absolutePosition_startOfMessage: Period_absolutePosition = Period_a
  * @type {number}
  */
 export
-const startOfMessage: Period_absolutePosition = Period_absolutePosition.startOfMessage; /* SHORT_NAMED_ENUMERATED_VALUE */
+const startOfMessage = Period_absolutePosition.startOfMessage; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Period_absolutePosition_endOfMessage
@@ -114,7 +114,7 @@ const startOfMessage: Period_absolutePosition = Period_absolutePosition.startOfM
  * @type {number}
  */
 export
-const Period_absolutePosition_endOfMessage: Period_absolutePosition = Period_absolutePosition.endOfMessage; /* LONG_NAMED_ENUMERATED_VALUE */
+const Period_absolutePosition_endOfMessage = Period_absolutePosition.endOfMessage; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary endOfMessage
@@ -126,7 +126,7 @@ const Period_absolutePosition_endOfMessage: Period_absolutePosition = Period_abs
  * @type {number}
  */
 export
-const endOfMessage: Period_absolutePosition = Period_absolutePosition.endOfMessage; /* SHORT_NAMED_ENUMERATED_VALUE */
+const endOfMessage = Period_absolutePosition.endOfMessage; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 let _cached_decoder_for_Period_absolutePosition: $.ASN1Decoder<Period_absolutePosition> | null = null;
 

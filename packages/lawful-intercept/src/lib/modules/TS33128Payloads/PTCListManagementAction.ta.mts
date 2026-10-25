@@ -108,7 +108,7 @@ const PTCListManagementAction = _enum_for_PTCListManagementAction;
  * @type {number}
  */
 export
-const PTCListManagementAction_create: PTCListManagementAction = PTCListManagementAction.create; /* LONG_NAMED_ENUMERATED_VALUE */
+const PTCListManagementAction_create = PTCListManagementAction.create; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary create
@@ -116,7 +116,7 @@ const PTCListManagementAction_create: PTCListManagementAction = PTCListManagemen
  * @type {number}
  */
 export
-const create: PTCListManagementAction = PTCListManagementAction.create; /* SHORT_NAMED_ENUMERATED_VALUE */
+const create = PTCListManagementAction.create; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PTCListManagementAction_modify
@@ -124,7 +124,7 @@ const create: PTCListManagementAction = PTCListManagementAction.create; /* SHORT
  * @type {number}
  */
 export
-const PTCListManagementAction_modify: PTCListManagementAction = PTCListManagementAction.modify; /* LONG_NAMED_ENUMERATED_VALUE */
+const PTCListManagementAction_modify = PTCListManagementAction.modify; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary modify
@@ -132,7 +132,7 @@ const PTCListManagementAction_modify: PTCListManagementAction = PTCListManagemen
  * @type {number}
  */
 export
-const modify: PTCListManagementAction = PTCListManagementAction.modify; /* SHORT_NAMED_ENUMERATED_VALUE */
+const modify = PTCListManagementAction.modify; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PTCListManagementAction_retrieve
@@ -140,7 +140,7 @@ const modify: PTCListManagementAction = PTCListManagementAction.modify; /* SHORT
  * @type {number}
  */
 export
-const PTCListManagementAction_retrieve: PTCListManagementAction = PTCListManagementAction.retrieve; /* LONG_NAMED_ENUMERATED_VALUE */
+const PTCListManagementAction_retrieve = PTCListManagementAction.retrieve; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary retrieve
@@ -148,7 +148,7 @@ const PTCListManagementAction_retrieve: PTCListManagementAction = PTCListManagem
  * @type {number}
  */
 export
-const retrieve: PTCListManagementAction = PTCListManagementAction.retrieve; /* SHORT_NAMED_ENUMERATED_VALUE */
+const retrieve = PTCListManagementAction.retrieve; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PTCListManagementAction_delete_
@@ -156,7 +156,7 @@ const retrieve: PTCListManagementAction = PTCListManagementAction.retrieve; /* S
  * @type {number}
  */
 export
-const PTCListManagementAction_delete_: PTCListManagementAction = PTCListManagementAction.delete_; /* LONG_NAMED_ENUMERATED_VALUE */
+const PTCListManagementAction_delete_ = PTCListManagementAction.delete_; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary delete_
@@ -164,7 +164,7 @@ const PTCListManagementAction_delete_: PTCListManagementAction = PTCListManageme
  * @type {number}
  */
 export
-const delete_: PTCListManagementAction = PTCListManagementAction.delete_; /* SHORT_NAMED_ENUMERATED_VALUE */
+const delete_ = PTCListManagementAction.delete_; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PTCListManagementAction_notify
@@ -172,7 +172,7 @@ const delete_: PTCListManagementAction = PTCListManagementAction.delete_; /* SHO
  * @type {number}
  */
 export
-const PTCListManagementAction_notify: PTCListManagementAction = PTCListManagementAction.notify; /* LONG_NAMED_ENUMERATED_VALUE */
+const PTCListManagementAction_notify = PTCListManagementAction.notify; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary notify
@@ -180,7 +180,7 @@ const PTCListManagementAction_notify: PTCListManagementAction = PTCListManagemen
  * @type {number}
  */
 export
-const notify: PTCListManagementAction = PTCListManagementAction.notify; /* SHORT_NAMED_ENUMERATED_VALUE */
+const notify = PTCListManagementAction.notify; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_PTCListManagementAction: $.ASN1Decoder<PTCListManagementAction> = $._decodeEnumerated;
 export const _encode_PTCListManagementAction: $.ASN1Encoder<PTCListManagementAction> = $._encodeEnumerated;
 

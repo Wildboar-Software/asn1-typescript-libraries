@@ -33,7 +33,7 @@ type TransitCallRecord_jIPQuryStatus = INTEGER;
  * @type {number}
  */
 export
-const TransitCallRecord_jIPQuryStatus_successfulQuery: TransitCallRecord_jIPQuryStatus = 1; /* LONG_NAMED_INTEGER_VALUE */
+const TransitCallRecord_jIPQuryStatus_successfulQuery = 1 satisfies TransitCallRecord_jIPQuryStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TransitCallRecord_jIPQuryStatus_successfulQuery
@@ -41,7 +41,7 @@ const TransitCallRecord_jIPQuryStatus_successfulQuery: TransitCallRecord_jIPQury
  * @type {number}
  */
 export
-const successfulQuery: TransitCallRecord_jIPQuryStatus = TransitCallRecord_jIPQuryStatus_successfulQuery; /* SHORT_NAMED_INTEGER_VALUE */
+const successfulQuery = TransitCallRecord_jIPQuryStatus_successfulQuery; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TransitCallRecord_jIPQuryStatus_noQueryResponseMsg
@@ -49,7 +49,7 @@ const successfulQuery: TransitCallRecord_jIPQuryStatus = TransitCallRecord_jIPQu
  * @type {number}
  */
 export
-const TransitCallRecord_jIPQuryStatus_noQueryResponseMsg: TransitCallRecord_jIPQuryStatus = 2; /* LONG_NAMED_INTEGER_VALUE */
+const TransitCallRecord_jIPQuryStatus_noQueryResponseMsg = 2 satisfies TransitCallRecord_jIPQuryStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TransitCallRecord_jIPQuryStatus_noQueryResponseMsg
@@ -57,7 +57,7 @@ const TransitCallRecord_jIPQuryStatus_noQueryResponseMsg: TransitCallRecord_jIPQ
  * @type {number}
  */
 export
-const noQueryResponseMsg: TransitCallRecord_jIPQuryStatus = TransitCallRecord_jIPQuryStatus_noQueryResponseMsg; /* SHORT_NAMED_INTEGER_VALUE */
+const noQueryResponseMsg = TransitCallRecord_jIPQuryStatus_noQueryResponseMsg; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TransitCallRecord_jIPQuryStatus_queryProtocolErr
@@ -65,7 +65,7 @@ const noQueryResponseMsg: TransitCallRecord_jIPQuryStatus = TransitCallRecord_jI
  * @type {number}
  */
 export
-const TransitCallRecord_jIPQuryStatus_queryProtocolErr: TransitCallRecord_jIPQuryStatus = 4; /* LONG_NAMED_INTEGER_VALUE */
+const TransitCallRecord_jIPQuryStatus_queryProtocolErr = 4 satisfies TransitCallRecord_jIPQuryStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TransitCallRecord_jIPQuryStatus_queryProtocolErr
@@ -73,7 +73,7 @@ const TransitCallRecord_jIPQuryStatus_queryProtocolErr: TransitCallRecord_jIPQur
  * @type {number}
  */
 export
-const queryProtocolErr: TransitCallRecord_jIPQuryStatus = TransitCallRecord_jIPQuryStatus_queryProtocolErr; /* SHORT_NAMED_INTEGER_VALUE */
+const queryProtocolErr = TransitCallRecord_jIPQuryStatus_queryProtocolErr; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TransitCallRecord_jIPQuryStatus_queryResponseDataErr
@@ -81,7 +81,7 @@ const queryProtocolErr: TransitCallRecord_jIPQuryStatus = TransitCallRecord_jIPQ
  * @type {number}
  */
 export
-const TransitCallRecord_jIPQuryStatus_queryResponseDataErr: TransitCallRecord_jIPQuryStatus = 5; /* LONG_NAMED_INTEGER_VALUE */
+const TransitCallRecord_jIPQuryStatus_queryResponseDataErr = 5 satisfies TransitCallRecord_jIPQuryStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TransitCallRecord_jIPQuryStatus_queryResponseDataErr
@@ -89,7 +89,7 @@ const TransitCallRecord_jIPQuryStatus_queryResponseDataErr: TransitCallRecord_jI
  * @type {number}
  */
 export
-const queryResponseDataErr: TransitCallRecord_jIPQuryStatus = TransitCallRecord_jIPQuryStatus_queryResponseDataErr; /* SHORT_NAMED_INTEGER_VALUE */
+const queryResponseDataErr = TransitCallRecord_jIPQuryStatus_queryResponseDataErr; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TransitCallRecord_jIPQuryStatus_queryRejected
@@ -97,7 +97,7 @@ const queryResponseDataErr: TransitCallRecord_jIPQuryStatus = TransitCallRecord_
  * @type {number}
  */
 export
-const TransitCallRecord_jIPQuryStatus_queryRejected: TransitCallRecord_jIPQuryStatus = 6; /* LONG_NAMED_INTEGER_VALUE */
+const TransitCallRecord_jIPQuryStatus_queryRejected = 6 satisfies TransitCallRecord_jIPQuryStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TransitCallRecord_jIPQuryStatus_queryRejected
@@ -105,7 +105,7 @@ const TransitCallRecord_jIPQuryStatus_queryRejected: TransitCallRecord_jIPQurySt
  * @type {number}
  */
 export
-const queryRejected: TransitCallRecord_jIPQuryStatus = TransitCallRecord_jIPQuryStatus_queryRejected; /* SHORT_NAMED_INTEGER_VALUE */
+const queryRejected = TransitCallRecord_jIPQuryStatus_queryRejected; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TransitCallRecord_jIPQuryStatus_queryNotPerformed
@@ -113,7 +113,7 @@ const queryRejected: TransitCallRecord_jIPQuryStatus = TransitCallRecord_jIPQury
  * @type {number}
  */
 export
-const TransitCallRecord_jIPQuryStatus_queryNotPerformed: TransitCallRecord_jIPQuryStatus = 9; /* LONG_NAMED_INTEGER_VALUE */
+const TransitCallRecord_jIPQuryStatus_queryNotPerformed = 9 satisfies TransitCallRecord_jIPQuryStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TransitCallRecord_jIPQuryStatus_queryNotPerformed
@@ -121,7 +121,7 @@ const TransitCallRecord_jIPQuryStatus_queryNotPerformed: TransitCallRecord_jIPQu
  * @type {number}
  */
 export
-const queryNotPerformed: TransitCallRecord_jIPQuryStatus = TransitCallRecord_jIPQuryStatus_queryNotPerformed; /* SHORT_NAMED_INTEGER_VALUE */
+const queryNotPerformed = TransitCallRecord_jIPQuryStatus_queryNotPerformed; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TransitCallRecord_jIPQuryStatus_queryUnsuccessful
@@ -129,7 +129,7 @@ const queryNotPerformed: TransitCallRecord_jIPQuryStatus = TransitCallRecord_jIP
  * @type {number}
  */
 export
-const TransitCallRecord_jIPQuryStatus_queryUnsuccessful: TransitCallRecord_jIPQuryStatus = 99; /* LONG_NAMED_INTEGER_VALUE */
+const TransitCallRecord_jIPQuryStatus_queryUnsuccessful = 99 satisfies TransitCallRecord_jIPQuryStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TransitCallRecord_jIPQuryStatus_queryUnsuccessful
@@ -137,7 +137,7 @@ const TransitCallRecord_jIPQuryStatus_queryUnsuccessful: TransitCallRecord_jIPQu
  * @type {number}
  */
 export
-const queryUnsuccessful: TransitCallRecord_jIPQuryStatus = TransitCallRecord_jIPQuryStatus_queryUnsuccessful; /* SHORT_NAMED_INTEGER_VALUE */
+const queryUnsuccessful = TransitCallRecord_jIPQuryStatus_queryUnsuccessful; /* SHORT_NAMED_INTEGER_VALUE */
 
 export
 const _decode_TransitCallRecord_jIPQuryStatus: $.ASN1Decoder<TransitCallRecord_jIPQuryStatus> = $._decodeInteger;

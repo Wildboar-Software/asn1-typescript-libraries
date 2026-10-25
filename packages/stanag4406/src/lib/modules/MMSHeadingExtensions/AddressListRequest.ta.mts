@@ -33,7 +33,7 @@ type AddressListRequest = INTEGER;
  * @type {number}
  */
 export
-const AddressListRequest_action: AddressListRequest = 0; /* LONG_NAMED_INTEGER_VALUE */
+const AddressListRequest_action = 0 satisfies AddressListRequest; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AddressListRequest_action
@@ -45,7 +45,7 @@ const AddressListRequest_action: AddressListRequest = 0; /* LONG_NAMED_INTEGER_V
  * @type {number}
  */
 export
-const action: AddressListRequest = AddressListRequest_action; /* SHORT_NAMED_INTEGER_VALUE */
+const action = AddressListRequest_action; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AddressListRequest_info
@@ -57,7 +57,7 @@ const action: AddressListRequest = AddressListRequest_action; /* SHORT_NAMED_INT
  * @type {number}
  */
 export
-const AddressListRequest_info: AddressListRequest = 1; /* LONG_NAMED_INTEGER_VALUE */
+const AddressListRequest_info = 1 satisfies AddressListRequest; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AddressListRequest_info
@@ -69,7 +69,7 @@ const AddressListRequest_info: AddressListRequest = 1; /* LONG_NAMED_INTEGER_VAL
  * @type {number}
  */
 export
-const info: AddressListRequest = AddressListRequest_info; /* SHORT_NAMED_INTEGER_VALUE */
+const info = AddressListRequest_info; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AddressListRequest_both
@@ -81,7 +81,7 @@ const info: AddressListRequest = AddressListRequest_info; /* SHORT_NAMED_INTEGER
  * @type {number}
  */
 export
-const AddressListRequest_both: AddressListRequest = 2; /* LONG_NAMED_INTEGER_VALUE */
+const AddressListRequest_both = 2 satisfies AddressListRequest; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AddressListRequest_both
@@ -93,7 +93,7 @@ const AddressListRequest_both: AddressListRequest = 2; /* LONG_NAMED_INTEGER_VAL
  * @type {number}
  */
 export
-const both: AddressListRequest = AddressListRequest_both; /* SHORT_NAMED_INTEGER_VALUE */
+const both = AddressListRequest_both; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_AddressListRequest: $.ASN1Decoder<AddressListRequest> = $._decodeInteger;
 export const _encode_AddressListRequest: $.ASN1Encoder<AddressListRequest> = $._encodeInteger;
 

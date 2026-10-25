@@ -99,7 +99,7 @@ export const FastSelect = _enum_for_FastSelect;
  * @constant
  * @type {number}
  */
-export const FastSelect_notSpecified: FastSelect =
+export const FastSelect_notSpecified =
     FastSelect.notSpecified; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -114,7 +114,7 @@ export const FastSelect_notSpecified: FastSelect =
  * @constant
  * @type {number}
  */
-export const notSpecified: FastSelect =
+export const notSpecified =
     FastSelect.notSpecified; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -129,7 +129,7 @@ export const notSpecified: FastSelect =
  * @constant
  * @type {number}
  */
-export const FastSelect_fastSelect: FastSelect =
+export const FastSelect_fastSelect =
     FastSelect.fastSelect; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -144,7 +144,7 @@ export const FastSelect_fastSelect: FastSelect =
  * @constant
  * @type {number}
  */
-export const fastSelect: FastSelect =
+export const fastSelect =
     FastSelect.fastSelect; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -159,7 +159,7 @@ export const fastSelect: FastSelect =
  * @constant
  * @type {number}
  */
-export const FastSelect_fastSelectWithRestrictedResponse: FastSelect =
+export const FastSelect_fastSelectWithRestrictedResponse =
     FastSelect.fastSelectWithRestrictedResponse; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -174,7 +174,7 @@ export const FastSelect_fastSelectWithRestrictedResponse: FastSelect =
  * @constant
  * @type {number}
  */
-export const fastSelectWithRestrictedResponse: FastSelect =
+export const fastSelectWithRestrictedResponse =
     FastSelect.fastSelectWithRestrictedResponse; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -189,7 +189,7 @@ export const fastSelectWithRestrictedResponse: FastSelect =
  * @constant
  * @type {number}
  */
-export const FastSelect_noFastSelect: FastSelect =
+export const FastSelect_noFastSelect =
     FastSelect.noFastSelect; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -204,7 +204,7 @@ export const FastSelect_noFastSelect: FastSelect =
  * @constant
  * @type {number}
  */
-export const noFastSelect: FastSelect =
+export const noFastSelect =
     FastSelect.noFastSelect; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 

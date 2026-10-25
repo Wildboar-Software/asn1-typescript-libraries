@@ -58,7 +58,7 @@ type ApplicationIdentifier = INTEGER;
  * @type {number}
  */
 export
-const ApplicationIdentifier_rtnAllFrames: ApplicationIdentifier = 0; /* LONG_NAMED_INTEGER_VALUE */
+const ApplicationIdentifier_rtnAllFrames = 0 satisfies ApplicationIdentifier; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ApplicationIdentifier_rtnAllFrames
@@ -70,7 +70,7 @@ const ApplicationIdentifier_rtnAllFrames: ApplicationIdentifier = 0; /* LONG_NAM
  * @type {number}
  */
 export
-const rtnAllFrames: ApplicationIdentifier = ApplicationIdentifier_rtnAllFrames; /* SHORT_NAMED_INTEGER_VALUE */
+const rtnAllFrames = ApplicationIdentifier_rtnAllFrames; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ApplicationIdentifier_rtnInsert
@@ -83,7 +83,7 @@ const rtnAllFrames: ApplicationIdentifier = ApplicationIdentifier_rtnAllFrames; 
  * @type {number}
  */
 export
-const ApplicationIdentifier_rtnInsert: ApplicationIdentifier = 1; /* LONG_NAMED_INTEGER_VALUE */
+const ApplicationIdentifier_rtnInsert = 1 satisfies ApplicationIdentifier; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ApplicationIdentifier_rtnInsert
@@ -95,7 +95,7 @@ const ApplicationIdentifier_rtnInsert: ApplicationIdentifier = 1; /* LONG_NAMED_
  * @type {number}
  */
 export
-const rtnInsert: ApplicationIdentifier = ApplicationIdentifier_rtnInsert; /* SHORT_NAMED_INTEGER_VALUE */
+const rtnInsert = ApplicationIdentifier_rtnInsert; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ApplicationIdentifier_rtnChFrames
@@ -109,7 +109,7 @@ const rtnInsert: ApplicationIdentifier = ApplicationIdentifier_rtnInsert; /* SHO
  * @type {number}
  */
 export
-const ApplicationIdentifier_rtnChFrames: ApplicationIdentifier = 2; /* LONG_NAMED_INTEGER_VALUE */
+const ApplicationIdentifier_rtnChFrames = 2 satisfies ApplicationIdentifier; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ApplicationIdentifier_rtnChFrames
@@ -122,7 +122,7 @@ const ApplicationIdentifier_rtnChFrames: ApplicationIdentifier = 2; /* LONG_NAME
  * @type {number}
  */
 export
-const rtnChFrames: ApplicationIdentifier = ApplicationIdentifier_rtnChFrames; /* SHORT_NAMED_INTEGER_VALUE */
+const rtnChFrames = ApplicationIdentifier_rtnChFrames; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ApplicationIdentifier_rtnChFsh
@@ -136,7 +136,7 @@ const rtnChFrames: ApplicationIdentifier = ApplicationIdentifier_rtnChFrames; /*
  * @type {number}
  */
 export
-const ApplicationIdentifier_rtnChFsh: ApplicationIdentifier = 3; /* LONG_NAMED_INTEGER_VALUE */
+const ApplicationIdentifier_rtnChFsh = 3 satisfies ApplicationIdentifier; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ApplicationIdentifier_rtnChFsh
@@ -148,7 +148,7 @@ const ApplicationIdentifier_rtnChFsh: ApplicationIdentifier = 3; /* LONG_NAMED_I
  * @type {number}
  */
 export
-const rtnChFsh: ApplicationIdentifier = ApplicationIdentifier_rtnChFsh; /* SHORT_NAMED_INTEGER_VALUE */
+const rtnChFsh = ApplicationIdentifier_rtnChFsh; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ApplicationIdentifier_rtnChOcf
@@ -162,7 +162,7 @@ const rtnChFsh: ApplicationIdentifier = ApplicationIdentifier_rtnChFsh; /* SHORT
  * @type {number}
  */
 export
-const ApplicationIdentifier_rtnChOcf: ApplicationIdentifier = 4; /* LONG_NAMED_INTEGER_VALUE */
+const ApplicationIdentifier_rtnChOcf = 4 satisfies ApplicationIdentifier; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ApplicationIdentifier_rtnChOcf
@@ -174,7 +174,7 @@ const ApplicationIdentifier_rtnChOcf: ApplicationIdentifier = 4; /* LONG_NAMED_I
  * @type {number}
  */
 export
-const rtnChOcf: ApplicationIdentifier = ApplicationIdentifier_rtnChOcf; /* SHORT_NAMED_INTEGER_VALUE */
+const rtnChOcf = ApplicationIdentifier_rtnChOcf; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ApplicationIdentifier_rtnBitstr
@@ -188,7 +188,7 @@ const rtnChOcf: ApplicationIdentifier = ApplicationIdentifier_rtnChOcf; /* SHORT
  * @type {number}
  */
 export
-const ApplicationIdentifier_rtnBitstr: ApplicationIdentifier = 5; /* LONG_NAMED_INTEGER_VALUE */
+const ApplicationIdentifier_rtnBitstr = 5 satisfies ApplicationIdentifier; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ApplicationIdentifier_rtnBitstr
@@ -200,7 +200,7 @@ const ApplicationIdentifier_rtnBitstr: ApplicationIdentifier = 5; /* LONG_NAMED_
  * @type {number}
  */
 export
-const rtnBitstr: ApplicationIdentifier = ApplicationIdentifier_rtnBitstr; /* SHORT_NAMED_INTEGER_VALUE */
+const rtnBitstr = ApplicationIdentifier_rtnBitstr; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ApplicationIdentifier_rtnSpacePkt
@@ -213,7 +213,7 @@ const rtnBitstr: ApplicationIdentifier = ApplicationIdentifier_rtnBitstr; /* SHO
  * @type {number}
  */
 export
-const ApplicationIdentifier_rtnSpacePkt: ApplicationIdentifier = 6; /* LONG_NAMED_INTEGER_VALUE */
+const ApplicationIdentifier_rtnSpacePkt = 6 satisfies ApplicationIdentifier; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ApplicationIdentifier_rtnSpacePkt
@@ -225,7 +225,7 @@ const ApplicationIdentifier_rtnSpacePkt: ApplicationIdentifier = 6; /* LONG_NAME
  * @type {number}
  */
 export
-const rtnSpacePkt: ApplicationIdentifier = ApplicationIdentifier_rtnSpacePkt; /* SHORT_NAMED_INTEGER_VALUE */
+const rtnSpacePkt = ApplicationIdentifier_rtnSpacePkt; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ApplicationIdentifier_fwdAosSpacePkt
@@ -238,7 +238,7 @@ const rtnSpacePkt: ApplicationIdentifier = ApplicationIdentifier_rtnSpacePkt; /*
  * @type {number}
  */
 export
-const ApplicationIdentifier_fwdAosSpacePkt: ApplicationIdentifier = 7; /* LONG_NAMED_INTEGER_VALUE */
+const ApplicationIdentifier_fwdAosSpacePkt = 7 satisfies ApplicationIdentifier; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ApplicationIdentifier_fwdAosSpacePkt
@@ -250,7 +250,7 @@ const ApplicationIdentifier_fwdAosSpacePkt: ApplicationIdentifier = 7; /* LONG_N
  * @type {number}
  */
 export
-const fwdAosSpacePkt: ApplicationIdentifier = ApplicationIdentifier_fwdAosSpacePkt; /* SHORT_NAMED_INTEGER_VALUE */
+const fwdAosSpacePkt = ApplicationIdentifier_fwdAosSpacePkt; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ApplicationIdentifier_fwdAosVca
@@ -263,7 +263,7 @@ const fwdAosSpacePkt: ApplicationIdentifier = ApplicationIdentifier_fwdAosSpaceP
  * @type {number}
  */
 export
-const ApplicationIdentifier_fwdAosVca: ApplicationIdentifier = 8; /* LONG_NAMED_INTEGER_VALUE */
+const ApplicationIdentifier_fwdAosVca = 8 satisfies ApplicationIdentifier; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ApplicationIdentifier_fwdAosVca
@@ -275,7 +275,7 @@ const ApplicationIdentifier_fwdAosVca: ApplicationIdentifier = 8; /* LONG_NAMED_
  * @type {number}
  */
 export
-const fwdAosVca: ApplicationIdentifier = ApplicationIdentifier_fwdAosVca; /* SHORT_NAMED_INTEGER_VALUE */
+const fwdAosVca = ApplicationIdentifier_fwdAosVca; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ApplicationIdentifier_fwdBitstr
@@ -288,7 +288,7 @@ const fwdAosVca: ApplicationIdentifier = ApplicationIdentifier_fwdAosVca; /* SHO
  * @type {number}
  */
 export
-const ApplicationIdentifier_fwdBitstr: ApplicationIdentifier = 9; /* LONG_NAMED_INTEGER_VALUE */
+const ApplicationIdentifier_fwdBitstr = 9 satisfies ApplicationIdentifier; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ApplicationIdentifier_fwdBitstr
@@ -300,7 +300,7 @@ const ApplicationIdentifier_fwdBitstr: ApplicationIdentifier = 9; /* LONG_NAMED_
  * @type {number}
  */
 export
-const fwdBitstr: ApplicationIdentifier = ApplicationIdentifier_fwdBitstr; /* SHORT_NAMED_INTEGER_VALUE */
+const fwdBitstr = ApplicationIdentifier_fwdBitstr; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ApplicationIdentifier_fwdProtoVcdu
@@ -313,7 +313,7 @@ const fwdBitstr: ApplicationIdentifier = ApplicationIdentifier_fwdBitstr; /* SHO
  * @type {number}
  */
 export
-const ApplicationIdentifier_fwdProtoVcdu: ApplicationIdentifier = 10; /* LONG_NAMED_INTEGER_VALUE */
+const ApplicationIdentifier_fwdProtoVcdu = 10 satisfies ApplicationIdentifier; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ApplicationIdentifier_fwdProtoVcdu
@@ -325,7 +325,7 @@ const ApplicationIdentifier_fwdProtoVcdu: ApplicationIdentifier = 10; /* LONG_NA
  * @type {number}
  */
 export
-const fwdProtoVcdu: ApplicationIdentifier = ApplicationIdentifier_fwdProtoVcdu; /* SHORT_NAMED_INTEGER_VALUE */
+const fwdProtoVcdu = ApplicationIdentifier_fwdProtoVcdu; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ApplicationIdentifier_fwdInsert
@@ -338,7 +338,7 @@ const fwdProtoVcdu: ApplicationIdentifier = ApplicationIdentifier_fwdProtoVcdu; 
  * @type {number}
  */
 export
-const ApplicationIdentifier_fwdInsert: ApplicationIdentifier = 11; /* LONG_NAMED_INTEGER_VALUE */
+const ApplicationIdentifier_fwdInsert = 11 satisfies ApplicationIdentifier; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ApplicationIdentifier_fwdInsert
@@ -350,7 +350,7 @@ const ApplicationIdentifier_fwdInsert: ApplicationIdentifier = 11; /* LONG_NAMED
  * @type {number}
  */
 export
-const fwdInsert: ApplicationIdentifier = ApplicationIdentifier_fwdInsert; /* SHORT_NAMED_INTEGER_VALUE */
+const fwdInsert = ApplicationIdentifier_fwdInsert; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ApplicationIdentifier_fwdCVcdu
@@ -363,7 +363,7 @@ const fwdInsert: ApplicationIdentifier = ApplicationIdentifier_fwdInsert; /* SHO
  * @type {number}
  */
 export
-const ApplicationIdentifier_fwdCVcdu: ApplicationIdentifier = 12; /* LONG_NAMED_INTEGER_VALUE */
+const ApplicationIdentifier_fwdCVcdu = 12 satisfies ApplicationIdentifier; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ApplicationIdentifier_fwdCVcdu
@@ -375,7 +375,7 @@ const ApplicationIdentifier_fwdCVcdu: ApplicationIdentifier = 12; /* LONG_NAMED_
  * @type {number}
  */
 export
-const fwdCVcdu: ApplicationIdentifier = ApplicationIdentifier_fwdCVcdu; /* SHORT_NAMED_INTEGER_VALUE */
+const fwdCVcdu = ApplicationIdentifier_fwdCVcdu; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ApplicationIdentifier_fwdTcSpacePkt
@@ -389,7 +389,7 @@ const fwdCVcdu: ApplicationIdentifier = ApplicationIdentifier_fwdCVcdu; /* SHORT
  * @type {number}
  */
 export
-const ApplicationIdentifier_fwdTcSpacePkt: ApplicationIdentifier = 13; /* LONG_NAMED_INTEGER_VALUE */
+const ApplicationIdentifier_fwdTcSpacePkt = 13 satisfies ApplicationIdentifier; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ApplicationIdentifier_fwdTcSpacePkt
@@ -401,7 +401,7 @@ const ApplicationIdentifier_fwdTcSpacePkt: ApplicationIdentifier = 13; /* LONG_N
  * @type {number}
  */
 export
-const fwdTcSpacePkt: ApplicationIdentifier = ApplicationIdentifier_fwdTcSpacePkt; /* SHORT_NAMED_INTEGER_VALUE */
+const fwdTcSpacePkt = ApplicationIdentifier_fwdTcSpacePkt; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ApplicationIdentifier_fwdTcVca
@@ -415,7 +415,7 @@ const fwdTcSpacePkt: ApplicationIdentifier = ApplicationIdentifier_fwdTcSpacePkt
  * @type {number}
  */
 export
-const ApplicationIdentifier_fwdTcVca: ApplicationIdentifier = 14; /* LONG_NAMED_INTEGER_VALUE */
+const ApplicationIdentifier_fwdTcVca = 14 satisfies ApplicationIdentifier; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ApplicationIdentifier_fwdTcVca
@@ -427,7 +427,7 @@ const ApplicationIdentifier_fwdTcVca: ApplicationIdentifier = 14; /* LONG_NAMED_
  * @type {number}
  */
 export
-const fwdTcVca: ApplicationIdentifier = ApplicationIdentifier_fwdTcVca; /* SHORT_NAMED_INTEGER_VALUE */
+const fwdTcVca = ApplicationIdentifier_fwdTcVca; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ApplicationIdentifier_fwdTcFrame
@@ -440,7 +440,7 @@ const fwdTcVca: ApplicationIdentifier = ApplicationIdentifier_fwdTcVca; /* SHORT
  * @type {number}
  */
 export
-const ApplicationIdentifier_fwdTcFrame: ApplicationIdentifier = 15; /* LONG_NAMED_INTEGER_VALUE */
+const ApplicationIdentifier_fwdTcFrame = 15 satisfies ApplicationIdentifier; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ApplicationIdentifier_fwdTcFrame
@@ -452,7 +452,7 @@ const ApplicationIdentifier_fwdTcFrame: ApplicationIdentifier = 15; /* LONG_NAME
  * @type {number}
  */
 export
-const fwdTcFrame: ApplicationIdentifier = ApplicationIdentifier_fwdTcFrame; /* SHORT_NAMED_INTEGER_VALUE */
+const fwdTcFrame = ApplicationIdentifier_fwdTcFrame; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ApplicationIdentifier_fwdCltu
@@ -465,7 +465,7 @@ const fwdTcFrame: ApplicationIdentifier = ApplicationIdentifier_fwdTcFrame; /* S
  * @type {number}
  */
 export
-const ApplicationIdentifier_fwdCltu: ApplicationIdentifier = 16; /* LONG_NAMED_INTEGER_VALUE */
+const ApplicationIdentifier_fwdCltu = 16 satisfies ApplicationIdentifier; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ApplicationIdentifier_fwdCltu
@@ -477,7 +477,7 @@ const ApplicationIdentifier_fwdCltu: ApplicationIdentifier = 16; /* LONG_NAMED_I
  * @type {number}
  */
 export
-const fwdCltu: ApplicationIdentifier = ApplicationIdentifier_fwdCltu; /* SHORT_NAMED_INTEGER_VALUE */
+const fwdCltu = ApplicationIdentifier_fwdCltu; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_ApplicationIdentifier: $.ASN1Decoder<ApplicationIdentifier> = $._decodeInteger;
 export const _encode_ApplicationIdentifier: $.ASN1Encoder<ApplicationIdentifier> = $._encodeInteger;
 

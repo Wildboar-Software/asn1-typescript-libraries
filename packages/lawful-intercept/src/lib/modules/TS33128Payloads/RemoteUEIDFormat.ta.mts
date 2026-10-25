@@ -69,7 +69,7 @@ const RemoteUEIDFormat = _enum_for_RemoteUEIDFormat;
  * @type {number}
  */
 export
-const RemoteUEIDFormat_nAI: RemoteUEIDFormat = RemoteUEIDFormat.nAI; /* LONG_NAMED_ENUMERATED_VALUE */
+const RemoteUEIDFormat_nAI = RemoteUEIDFormat.nAI; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary nAI
@@ -77,7 +77,7 @@ const RemoteUEIDFormat_nAI: RemoteUEIDFormat = RemoteUEIDFormat.nAI; /* LONG_NAM
  * @type {number}
  */
 export
-const nAI: RemoteUEIDFormat = RemoteUEIDFormat.nAI; /* SHORT_NAMED_ENUMERATED_VALUE */
+const nAI = RemoteUEIDFormat.nAI; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RemoteUEIDFormat_sixtyFourBitString
@@ -85,7 +85,7 @@ const nAI: RemoteUEIDFormat = RemoteUEIDFormat.nAI; /* SHORT_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const RemoteUEIDFormat_sixtyFourBitString: RemoteUEIDFormat = RemoteUEIDFormat.sixtyFourBitString; /* LONG_NAMED_ENUMERATED_VALUE */
+const RemoteUEIDFormat_sixtyFourBitString = RemoteUEIDFormat.sixtyFourBitString; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sixtyFourBitString
@@ -93,7 +93,7 @@ const RemoteUEIDFormat_sixtyFourBitString: RemoteUEIDFormat = RemoteUEIDFormat.s
  * @type {number}
  */
 export
-const sixtyFourBitString: RemoteUEIDFormat = RemoteUEIDFormat.sixtyFourBitString; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sixtyFourBitString = RemoteUEIDFormat.sixtyFourBitString; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_RemoteUEIDFormat: $.ASN1Decoder<RemoteUEIDFormat> = $._decodeEnumerated;
 export const _encode_RemoteUEIDFormat: $.ASN1Encoder<RemoteUEIDFormat> = $._encodeEnumerated;
 

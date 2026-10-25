@@ -110,7 +110,7 @@ const CSGMembershipIndication = _enum_for_CSGMembershipIndication;
  * @type {number}
  */
 export
-const CSGMembershipIndication_notCSGMember: CSGMembershipIndication = CSGMembershipIndication.notCSGMember; /* LONG_NAMED_ENUMERATED_VALUE */
+const CSGMembershipIndication_notCSGMember = CSGMembershipIndication.notCSGMember; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary notCSGMember
@@ -124,7 +124,7 @@ const CSGMembershipIndication_notCSGMember: CSGMembershipIndication = CSGMembers
  * @type {number}
  */
 export
-const notCSGMember: CSGMembershipIndication = CSGMembershipIndication.notCSGMember; /* SHORT_NAMED_ENUMERATED_VALUE */
+const notCSGMember = CSGMembershipIndication.notCSGMember; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CSGMembershipIndication_cSGMember
@@ -138,7 +138,7 @@ const notCSGMember: CSGMembershipIndication = CSGMembershipIndication.notCSGMemb
  * @type {number}
  */
 export
-const CSGMembershipIndication_cSGMember: CSGMembershipIndication = CSGMembershipIndication.cSGMember; /* LONG_NAMED_ENUMERATED_VALUE */
+const CSGMembershipIndication_cSGMember = CSGMembershipIndication.cSGMember; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary cSGMember
@@ -152,7 +152,7 @@ const CSGMembershipIndication_cSGMember: CSGMembershipIndication = CSGMembership
  * @type {number}
  */
 export
-const cSGMember: CSGMembershipIndication = CSGMembershipIndication.cSGMember; /* SHORT_NAMED_ENUMERATED_VALUE */
+const cSGMember = CSGMembershipIndication.cSGMember; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_CSGMembershipIndication: $.ASN1Decoder<CSGMembershipIndication> = $._decodeEnumerated;
 export const _encode_CSGMembershipIndication: $.ASN1Encoder<CSGMembershipIndication> = $._encodeEnumerated;
 

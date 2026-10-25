@@ -66,7 +66,7 @@ const LegStatus = _enum_for_LegStatus;
  * @type {number}
  */
 export
-const LegStatus_connected: LegStatus = LegStatus.connected; /* LONG_NAMED_ENUMERATED_VALUE */
+const LegStatus_connected = LegStatus.connected; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary connected
@@ -74,7 +74,7 @@ const LegStatus_connected: LegStatus = LegStatus.connected; /* LONG_NAMED_ENUMER
  * @type {number}
  */
 export
-const connected: LegStatus = LegStatus.connected; /* SHORT_NAMED_ENUMERATED_VALUE */
+const connected = LegStatus.connected; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LegStatus_unconnected
@@ -82,7 +82,7 @@ const connected: LegStatus = LegStatus.connected; /* SHORT_NAMED_ENUMERATED_VALU
  * @type {number}
  */
 export
-const LegStatus_unconnected: LegStatus = LegStatus.unconnected; /* LONG_NAMED_ENUMERATED_VALUE */
+const LegStatus_unconnected = LegStatus.unconnected; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unconnected
@@ -90,7 +90,7 @@ const LegStatus_unconnected: LegStatus = LegStatus.unconnected; /* LONG_NAMED_EN
  * @type {number}
  */
 export
-const unconnected: LegStatus = LegStatus.unconnected; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unconnected = LegStatus.unconnected; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LegStatus_pending
@@ -98,7 +98,7 @@ const unconnected: LegStatus = LegStatus.unconnected; /* SHORT_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const LegStatus_pending: LegStatus = LegStatus.pending; /* LONG_NAMED_ENUMERATED_VALUE */
+const LegStatus_pending = LegStatus.pending; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pending
@@ -106,7 +106,7 @@ const LegStatus_pending: LegStatus = LegStatus.pending; /* LONG_NAMED_ENUMERATED
  * @type {number}
  */
 export
-const pending: LegStatus = LegStatus.pending; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pending = LegStatus.pending; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LegStatus_interacting
@@ -114,7 +114,7 @@ const pending: LegStatus = LegStatus.pending; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const LegStatus_interacting: LegStatus = LegStatus.interacting; /* LONG_NAMED_ENUMERATED_VALUE */
+const LegStatus_interacting = LegStatus.interacting; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary interacting
@@ -122,7 +122,7 @@ const LegStatus_interacting: LegStatus = LegStatus.interacting; /* LONG_NAMED_EN
  * @type {number}
  */
 export
-const interacting: LegStatus = LegStatus.interacting; /* SHORT_NAMED_ENUMERATED_VALUE */
+const interacting = LegStatus.interacting; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 function _decode_LegStatus(el: _Element): LegStatus {

@@ -38,7 +38,7 @@ type EuiccMemoryResetResponse_resetEimResult = INTEGER;
  * 2.11.1.1).
  */
 export
-const EuiccMemoryResetResponse_resetEimResult_ok: EuiccMemoryResetResponse_resetEimResult = 0; /* LONG_NAMED_INTEGER_VALUE */
+const EuiccMemoryResetResponse_resetEimResult_ok = 0 satisfies EuiccMemoryResetResponse_resetEimResult; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EuiccMemoryResetResponse_resetEimResult_ok
@@ -49,7 +49,7 @@ const EuiccMemoryResetResponse_resetEimResult_ok: EuiccMemoryResetResponse_reset
  * 5.9.5).
  */
 export
-const ok: EuiccMemoryResetResponse_resetEimResult = EuiccMemoryResetResponse_resetEimResult_ok; /* SHORT_NAMED_INTEGER_VALUE */
+const ok = EuiccMemoryResetResponse_resetEimResult_ok; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EuiccMemoryResetResponse_resetEimResult_nothingToDelete
@@ -60,7 +60,7 @@ const ok: EuiccMemoryResetResponse_resetEimResult = EuiccMemoryResetResponse_res
  * v1.2, section 5.9.5).
  */
 export
-const EuiccMemoryResetResponse_resetEimResult_nothingToDelete: EuiccMemoryResetResponse_resetEimResult = 1; /* LONG_NAMED_INTEGER_VALUE */
+const EuiccMemoryResetResponse_resetEimResult_nothingToDelete = 1 satisfies EuiccMemoryResetResponse_resetEimResult; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EuiccMemoryResetResponse_resetEimResult_nothingToDelete
@@ -71,7 +71,7 @@ const EuiccMemoryResetResponse_resetEimResult_nothingToDelete: EuiccMemoryResetR
  * 5.9.5).
  */
 export
-const nothingToDelete: EuiccMemoryResetResponse_resetEimResult = EuiccMemoryResetResponse_resetEimResult_nothingToDelete; /* SHORT_NAMED_INTEGER_VALUE */
+const nothingToDelete = EuiccMemoryResetResponse_resetEimResult_nothingToDelete; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EuiccMemoryResetResponse_resetEimResult_eimResetNotSupported
@@ -82,7 +82,7 @@ const nothingToDelete: EuiccMemoryResetResponse_resetEimResult = EuiccMemoryRese
  * section 5.9.5).
  */
 export
-const EuiccMemoryResetResponse_resetEimResult_eimResetNotSupported: EuiccMemoryResetResponse_resetEimResult = 2; /* LONG_NAMED_INTEGER_VALUE */
+const EuiccMemoryResetResponse_resetEimResult_eimResetNotSupported = 2 satisfies EuiccMemoryResetResponse_resetEimResult; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EuiccMemoryResetResponse_resetEimResult_eimResetNotSupported
@@ -93,7 +93,7 @@ const EuiccMemoryResetResponse_resetEimResult_eimResetNotSupported: EuiccMemoryR
  * section 5.9.5).
  */
 export
-const eimResetNotSupported: EuiccMemoryResetResponse_resetEimResult = EuiccMemoryResetResponse_resetEimResult_eimResetNotSupported; /* SHORT_NAMED_INTEGER_VALUE */
+const eimResetNotSupported = EuiccMemoryResetResponse_resetEimResult_eimResetNotSupported; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EuiccMemoryResetResponse_resetEimResult_undefinedError
@@ -104,7 +104,7 @@ const eimResetNotSupported: EuiccMemoryResetResponse_resetEimResult = EuiccMemor
  * does not further define the condition that produces it.
  */
 export
-const EuiccMemoryResetResponse_resetEimResult_undefinedError: EuiccMemoryResetResponse_resetEimResult = 127; /* LONG_NAMED_INTEGER_VALUE */
+const EuiccMemoryResetResponse_resetEimResult_undefinedError = 127 satisfies EuiccMemoryResetResponse_resetEimResult; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EuiccMemoryResetResponse_resetEimResult_undefinedError
@@ -115,7 +115,7 @@ const EuiccMemoryResetResponse_resetEimResult_undefinedError: EuiccMemoryResetRe
  * condition that produces it.
  */
 export
-const undefinedError: EuiccMemoryResetResponse_resetEimResult = EuiccMemoryResetResponse_resetEimResult_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
+const undefinedError = EuiccMemoryResetResponse_resetEimResult_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_EuiccMemoryResetResponse_resetEimResult: $.ASN1Decoder<EuiccMemoryResetResponse_resetEimResult> = $._decodeInteger;
 export const _encode_EuiccMemoryResetResponse_resetEimResult: $.ASN1Encoder<EuiccMemoryResetResponse_resetEimResult> = $._encodeInteger;
 

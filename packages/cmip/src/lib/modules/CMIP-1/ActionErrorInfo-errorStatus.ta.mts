@@ -49,7 +49,7 @@ export type ActionErrorInfo_errorStatus =
  * @constant
  * @type {number}
  */
-export const ActionErrorInfo_errorStatus_accessDenied: ActionErrorInfo_errorStatus = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ActionErrorInfo_errorStatus_accessDenied = _enum_for_ActionErrorInfo_errorStatus.accessDenied; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -57,7 +57,7 @@ export const ActionErrorInfo_errorStatus_accessDenied: ActionErrorInfo_errorStat
  * @constant
  * @type {number}
  */
-export const accessDenied: ActionErrorInfo_errorStatus = ActionErrorInfo_errorStatus_accessDenied; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const accessDenied = ActionErrorInfo_errorStatus_accessDenied; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -65,7 +65,7 @@ export const accessDenied: ActionErrorInfo_errorStatus = ActionErrorInfo_errorSt
  * @constant
  * @type {number}
  */
-export const ActionErrorInfo_errorStatus_noSuchAction: ActionErrorInfo_errorStatus = 9; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ActionErrorInfo_errorStatus_noSuchAction = _enum_for_ActionErrorInfo_errorStatus.noSuchAction; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -73,7 +73,7 @@ export const ActionErrorInfo_errorStatus_noSuchAction: ActionErrorInfo_errorStat
  * @constant
  * @type {number}
  */
-export const noSuchAction: ActionErrorInfo_errorStatus = ActionErrorInfo_errorStatus_noSuchAction; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const noSuchAction = ActionErrorInfo_errorStatus_noSuchAction; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -81,7 +81,7 @@ export const noSuchAction: ActionErrorInfo_errorStatus = ActionErrorInfo_errorSt
  * @constant
  * @type {number}
  */
-export const ActionErrorInfo_errorStatus_noSuchArgument: ActionErrorInfo_errorStatus = 14; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ActionErrorInfo_errorStatus_noSuchArgument = _enum_for_ActionErrorInfo_errorStatus.noSuchArgument; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -89,7 +89,7 @@ export const ActionErrorInfo_errorStatus_noSuchArgument: ActionErrorInfo_errorSt
  * @constant
  * @type {number}
  */
-export const noSuchArgument: ActionErrorInfo_errorStatus = ActionErrorInfo_errorStatus_noSuchArgument; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const noSuchArgument = ActionErrorInfo_errorStatus_noSuchArgument; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -97,7 +97,7 @@ export const noSuchArgument: ActionErrorInfo_errorStatus = ActionErrorInfo_error
  * @constant
  * @type {number}
  */
-export const ActionErrorInfo_errorStatus_invalidArgumentValue: ActionErrorInfo_errorStatus = 15; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ActionErrorInfo_errorStatus_invalidArgumentValue = _enum_for_ActionErrorInfo_errorStatus.invalidArgumentValue; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -105,7 +105,7 @@ export const ActionErrorInfo_errorStatus_invalidArgumentValue: ActionErrorInfo_e
  * @constant
  * @type {number}
  */
-export const invalidArgumentValue: ActionErrorInfo_errorStatus = ActionErrorInfo_errorStatus_invalidArgumentValue; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const invalidArgumentValue = ActionErrorInfo_errorStatus_invalidArgumentValue; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 

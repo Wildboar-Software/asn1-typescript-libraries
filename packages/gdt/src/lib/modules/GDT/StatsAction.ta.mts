@@ -28,7 +28,7 @@ type StatsAction = INTEGER;
  * @type {number}
  */
 export
-const StatsAction_sa_request: StatsAction = 0; /* LONG_NAMED_INTEGER_VALUE */
+const StatsAction_sa_request = 0 satisfies StatsAction; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary StatsAction_sa_request
@@ -36,7 +36,7 @@ const StatsAction_sa_request: StatsAction = 0; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const sa_request: StatsAction = StatsAction_sa_request; /* SHORT_NAMED_INTEGER_VALUE */
+const sa_request = StatsAction_sa_request; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary StatsAction_sa_result
@@ -44,7 +44,7 @@ const sa_request: StatsAction = StatsAction_sa_request; /* SHORT_NAMED_INTEGER_V
  * @type {number}
  */
 export
-const StatsAction_sa_result: StatsAction = 1; /* LONG_NAMED_INTEGER_VALUE */
+const StatsAction_sa_result = 1 satisfies StatsAction; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary StatsAction_sa_result
@@ -52,7 +52,7 @@ const StatsAction_sa_result: StatsAction = 1; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const sa_result: StatsAction = StatsAction_sa_result; /* SHORT_NAMED_INTEGER_VALUE */
+const sa_result = StatsAction_sa_result; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_StatsAction = $._decodeInteger;
 export const _encode_StatsAction = $._encodeInteger;
 

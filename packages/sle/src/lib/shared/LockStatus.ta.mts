@@ -43,7 +43,7 @@ type LockStatus = INTEGER;
  * @type {number}
  */
 export
-const LockStatus_inLock: LockStatus = 0; /* LONG_NAMED_INTEGER_VALUE */
+const LockStatus_inLock = 0 satisfies LockStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary LockStatus_inLock
@@ -54,7 +54,7 @@ const LockStatus_inLock: LockStatus = 0; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const inLock: LockStatus = LockStatus_inLock; /* SHORT_NAMED_INTEGER_VALUE */
+const inLock = LockStatus_inLock; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary LockStatus_outOfLock
@@ -71,7 +71,7 @@ const inLock: LockStatus = LockStatus_inLock; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const LockStatus_outOfLock: LockStatus = 1; /* LONG_NAMED_INTEGER_VALUE */
+const LockStatus_outOfLock = 1 satisfies LockStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary LockStatus_outOfLock
@@ -83,7 +83,7 @@ const LockStatus_outOfLock: LockStatus = 1; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const outOfLock: LockStatus = LockStatus_outOfLock; /* SHORT_NAMED_INTEGER_VALUE */
+const outOfLock = LockStatus_outOfLock; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary LockStatus_notInUse
@@ -97,7 +97,7 @@ const outOfLock: LockStatus = LockStatus_outOfLock; /* SHORT_NAMED_INTEGER_VALUE
  * @type {number}
  */
 export
-const LockStatus_notInUse: LockStatus = 2; /* LONG_NAMED_INTEGER_VALUE */
+const LockStatus_notInUse = 2 satisfies LockStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary LockStatus_notInUse
@@ -109,7 +109,7 @@ const LockStatus_notInUse: LockStatus = 2; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const notInUse: LockStatus = LockStatus_notInUse; /* SHORT_NAMED_INTEGER_VALUE */
+const notInUse = LockStatus_notInUse; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary LockStatus_unknown
@@ -124,7 +124,7 @@ const notInUse: LockStatus = LockStatus_notInUse; /* SHORT_NAMED_INTEGER_VALUE *
  * @type {number}
  */
 export
-const LockStatus_unknown: LockStatus = 3; /* LONG_NAMED_INTEGER_VALUE */
+const LockStatus_unknown = 3 satisfies LockStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary LockStatus_unknown
@@ -136,7 +136,7 @@ const LockStatus_unknown: LockStatus = 3; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const unknown: LockStatus = LockStatus_unknown; /* SHORT_NAMED_INTEGER_VALUE */
+const unknown = LockStatus_unknown; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_LockStatus: $.ASN1Decoder<LockStatus> = $._decodeInteger;
 export const _encode_LockStatus: $.ASN1Encoder<LockStatus> = $._encodeInteger;
 

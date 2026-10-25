@@ -89,7 +89,7 @@ export const AbortProblem = _enum_for_AbortProblem;
  * @constant
  * @type {number}
  */
-export const AbortProblem_unrecognizedInvocationId: AbortProblem =
+export const AbortProblem_unrecognizedInvocationId =
   AbortProblem.unrecognizedInvocationId; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -98,7 +98,7 @@ export const AbortProblem_unrecognizedInvocationId: AbortProblem =
  * @constant
  * @type {number}
  */
-export const unrecognizedInvocationId: AbortProblem =
+export const unrecognizedInvocationId =
   AbortProblem.unrecognizedInvocationId; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -112,7 +112,7 @@ export const unrecognizedInvocationId: AbortProblem =
  * @constant
  * @type {number}
  */
-export const AbortProblem_abortUnexpected: AbortProblem =
+export const AbortProblem_abortUnexpected =
   AbortProblem.abortUnexpected; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -121,7 +121,7 @@ export const AbortProblem_abortUnexpected: AbortProblem =
  * @constant
  * @type {number}
  */
-export const abortUnexpected: AbortProblem =
+export const abortUnexpected =
   AbortProblem.abortUnexpected; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -135,7 +135,7 @@ export const abortUnexpected: AbortProblem =
  * @constant
  * @type {number}
  */
-export const AbortProblem_unrecognizedError: AbortProblem =
+export const AbortProblem_unrecognizedError =
   AbortProblem.unrecognizedError; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -144,7 +144,7 @@ export const AbortProblem_unrecognizedError: AbortProblem =
  * @constant
  * @type {number}
  */
-export const unrecognizedError: AbortProblem =
+export const unrecognizedError =
   AbortProblem.unrecognizedError; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -159,7 +159,7 @@ export const unrecognizedError: AbortProblem =
  * @constant
  * @type {number}
  */
-export const AbortProblem_unexpectedError: AbortProblem =
+export const AbortProblem_unexpectedError =
   AbortProblem.unexpectedError; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -168,7 +168,7 @@ export const AbortProblem_unexpectedError: AbortProblem =
  * @constant
  * @type {number}
  */
-export const unexpectedError: AbortProblem =
+export const unexpectedError =
   AbortProblem.unexpectedError; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -183,7 +183,7 @@ export const unexpectedError: AbortProblem =
  * @constant
  * @type {number}
  */
-export const AbortProblem_mistypedErrorParameter: AbortProblem =
+export const AbortProblem_mistypedErrorParameter =
   AbortProblem.mistypedErrorParameter; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -192,7 +192,7 @@ export const AbortProblem_mistypedErrorParameter: AbortProblem =
  * @constant
  * @type {number}
  */
-export const mistypedErrorParameter: AbortProblem =
+export const mistypedErrorParameter =
   AbortProblem.mistypedErrorParameter; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 

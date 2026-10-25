@@ -88,7 +88,7 @@ const CDRReason = _enum_for_CDRReason;
  * @type {number}
  */
 export
-const CDRReason_timeout: CDRReason = CDRReason.timeout; /* LONG_NAMED_ENUMERATED_VALUE */
+const CDRReason_timeout = CDRReason.timeout; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary timeout
@@ -96,7 +96,7 @@ const CDRReason_timeout: CDRReason = CDRReason.timeout; /* LONG_NAMED_ENUMERATED
  * @type {number}
  */
 export
-const timeout: CDRReason = CDRReason.timeout; /* SHORT_NAMED_ENUMERATED_VALUE */
+const timeout = CDRReason.timeout; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CDRReason_thresholdReached
@@ -108,7 +108,7 @@ const timeout: CDRReason = CDRReason.timeout; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const CDRReason_thresholdReached: CDRReason = CDRReason.thresholdReached; /* LONG_NAMED_ENUMERATED_VALUE */
+const CDRReason_thresholdReached = CDRReason.thresholdReached; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary thresholdReached
@@ -116,7 +116,7 @@ const CDRReason_thresholdReached: CDRReason = CDRReason.thresholdReached; /* LON
  * @type {number}
  */
 export
-const thresholdReached: CDRReason = CDRReason.thresholdReached; /* SHORT_NAMED_ENUMERATED_VALUE */
+const thresholdReached = CDRReason.thresholdReached; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CDRReason_other
@@ -128,7 +128,7 @@ const thresholdReached: CDRReason = CDRReason.thresholdReached; /* SHORT_NAMED_E
  * @type {number}
  */
 export
-const CDRReason_other: CDRReason = CDRReason.other; /* LONG_NAMED_ENUMERATED_VALUE */
+const CDRReason_other = CDRReason.other; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary other
@@ -136,7 +136,7 @@ const CDRReason_other: CDRReason = CDRReason.other; /* LONG_NAMED_ENUMERATED_VAL
  * @type {number}
  */
 export
-const other: CDRReason = CDRReason.other; /* SHORT_NAMED_ENUMERATED_VALUE */
+const other = CDRReason.other; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 let _cached_decoder_for_CDRReason: $.ASN1Decoder<CDRReason> | null = null;
 

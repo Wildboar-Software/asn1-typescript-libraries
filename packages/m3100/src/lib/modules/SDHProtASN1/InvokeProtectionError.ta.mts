@@ -66,7 +66,7 @@ export const InvokeProtectionError = _enum_for_InvokeProtectionError;
  * @constant
  * @type {number}
  */
-export const InvokeProtectionError_preempted: InvokeProtectionError =
+export const InvokeProtectionError_preempted =
     InvokeProtectionError.preempted; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -75,7 +75,7 @@ export const InvokeProtectionError_preempted: InvokeProtectionError =
  * @constant
  * @type {number}
  */
-export const preempted: InvokeProtectionError =
+export const preempted =
     InvokeProtectionError.preempted; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -84,7 +84,7 @@ export const preempted: InvokeProtectionError =
  * @constant
  * @type {number}
  */
-export const InvokeProtectionError_failure: InvokeProtectionError =
+export const InvokeProtectionError_failure =
     InvokeProtectionError.failure; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -93,7 +93,7 @@ export const InvokeProtectionError_failure: InvokeProtectionError =
  * @constant
  * @type {number}
  */
-export const failure: InvokeProtectionError =
+export const failure =
     InvokeProtectionError.failure; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -102,7 +102,7 @@ export const failure: InvokeProtectionError =
  * @constant
  * @type {number}
  */
-export const InvokeProtectionError_timeout: InvokeProtectionError =
+export const InvokeProtectionError_timeout =
     InvokeProtectionError.timeout; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -111,7 +111,7 @@ export const InvokeProtectionError_timeout: InvokeProtectionError =
  * @constant
  * @type {number}
  */
-export const timeout: InvokeProtectionError =
+export const timeout =
     InvokeProtectionError.timeout; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 

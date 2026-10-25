@@ -31,28 +31,28 @@ export type Decipherment = INTEGER;
  * @constant
  * @type {number}
  */
-export const Decipherment_success: Decipherment = 1; /* LONG_NAMED_INTEGER_VALUE */
+export const Decipherment_success = 1 satisfies Decipherment; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Decipherment_success
  * @constant
  * @type {number}
  */
-export const success: Decipherment = Decipherment_success; /* SHORT_NAMED_INTEGER_VALUE */
+export const success = Decipherment_success; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Decipherment_failure
  * @constant
  * @type {number}
  */
-export const Decipherment_failure: Decipherment = 2; /* LONG_NAMED_INTEGER_VALUE */
+export const Decipherment_failure = 2 satisfies Decipherment; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Decipherment_failure
  * @constant
  * @type {number}
  */
-export const failure: Decipherment = Decipherment_failure; /* SHORT_NAMED_INTEGER_VALUE */
+export const failure = Decipherment_failure; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_Decipherment = $._decodeInteger;

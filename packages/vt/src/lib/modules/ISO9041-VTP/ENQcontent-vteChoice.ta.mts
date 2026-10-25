@@ -38,7 +38,7 @@ type ENQcontent_vteChoice = INTEGER;
  * @type {number}
  */
 export
-const ENQcontent_vteChoice_draft: ENQcontent_vteChoice = 0; /* LONG_NAMED_INTEGER_VALUE */
+const ENQcontent_vteChoice_draft = 0 satisfies ENQcontent_vteChoice; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ENQcontent_vteChoice_draft
@@ -48,7 +48,7 @@ const ENQcontent_vteChoice_draft: ENQcontent_vteChoice = 0; /* LONG_NAMED_INTEGE
  * @type {number}
  */
 export
-const draft: ENQcontent_vteChoice = ENQcontent_vteChoice_draft; /* SHORT_NAMED_INTEGER_VALUE */
+const draft = ENQcontent_vteChoice_draft; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ENQcontent_vteChoice_current
@@ -58,7 +58,7 @@ const draft: ENQcontent_vteChoice = ENQcontent_vteChoice_draft; /* SHORT_NAMED_I
  * @type {number}
  */
 export
-const ENQcontent_vteChoice_current: ENQcontent_vteChoice = 1; /* LONG_NAMED_INTEGER_VALUE */
+const ENQcontent_vteChoice_current = 1 satisfies ENQcontent_vteChoice; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ENQcontent_vteChoice_current
@@ -68,7 +68,7 @@ const ENQcontent_vteChoice_current: ENQcontent_vteChoice = 1; /* LONG_NAMED_INTE
  * @type {number}
  */
 export
-const current: ENQcontent_vteChoice = ENQcontent_vteChoice_current; /* SHORT_NAMED_INTEGER_VALUE */
+const current = ENQcontent_vteChoice_current; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ENQcontent_vteChoice_either
@@ -78,7 +78,7 @@ const current: ENQcontent_vteChoice = ENQcontent_vteChoice_current; /* SHORT_NAM
  * @type {number}
  */
 export
-const ENQcontent_vteChoice_either: ENQcontent_vteChoice = 2; /* LONG_NAMED_INTEGER_VALUE */
+const ENQcontent_vteChoice_either = 2 satisfies ENQcontent_vteChoice; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ENQcontent_vteChoice_either
@@ -88,7 +88,7 @@ const ENQcontent_vteChoice_either: ENQcontent_vteChoice = 2; /* LONG_NAMED_INTEG
  * @type {number}
  */
 export
-const either: ENQcontent_vteChoice = ENQcontent_vteChoice_either; /* SHORT_NAMED_INTEGER_VALUE */
+const either = ENQcontent_vteChoice_either; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_ENQcontent_vteChoice = $._decodeInteger;
 export const _encode_ENQcontent_vteChoice = $._encodeInteger;
 

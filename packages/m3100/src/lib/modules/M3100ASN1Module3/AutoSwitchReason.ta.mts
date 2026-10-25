@@ -69,7 +69,7 @@ export const AutoSwitchReason = _enum_for_AutoSwitchReason;
  * @constant
  * @type {number}
  */
-export const AutoSwitchReason_waitToRestore: AutoSwitchReason =
+export const AutoSwitchReason_waitToRestore =
     AutoSwitchReason.waitToRestore; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -78,7 +78,7 @@ export const AutoSwitchReason_waitToRestore: AutoSwitchReason =
  * @constant
  * @type {number}
  */
-export const waitToRestore: AutoSwitchReason =
+export const waitToRestore =
     AutoSwitchReason.waitToRestore; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -87,7 +87,7 @@ export const waitToRestore: AutoSwitchReason =
  * @constant
  * @type {number}
  */
-export const AutoSwitchReason_resourceDegrade: AutoSwitchReason =
+export const AutoSwitchReason_resourceDegrade =
     AutoSwitchReason.resourceDegrade; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -96,7 +96,7 @@ export const AutoSwitchReason_resourceDegrade: AutoSwitchReason =
  * @constant
  * @type {number}
  */
-export const resourceDegrade: AutoSwitchReason =
+export const resourceDegrade =
     AutoSwitchReason.resourceDegrade; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -105,7 +105,7 @@ export const resourceDegrade: AutoSwitchReason =
  * @constant
  * @type {number}
  */
-export const AutoSwitchReason_resourceFailed: AutoSwitchReason =
+export const AutoSwitchReason_resourceFailed =
     AutoSwitchReason.resourceFailed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -114,7 +114,7 @@ export const AutoSwitchReason_resourceFailed: AutoSwitchReason =
  * @constant
  * @type {number}
  */
-export const resourceFailed: AutoSwitchReason =
+export const resourceFailed =
     AutoSwitchReason.resourceFailed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 

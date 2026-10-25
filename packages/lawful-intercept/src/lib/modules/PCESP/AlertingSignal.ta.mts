@@ -182,7 +182,7 @@ type AlertingSignal = _enum_for_AlertingSignal | ENUMERATED;
  * @type {number}
  */
 export
-const AlertingSignal_notUsed: AlertingSignal = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+const AlertingSignal_notUsed = _enum_for_AlertingSignal.notUsed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary notUsed
@@ -196,7 +196,7 @@ const AlertingSignal_notUsed: AlertingSignal = 0; /* LONG_NAMED_ENUMERATED_VALUE
  * @type {number}
  */
 export
-const notUsed: AlertingSignal = AlertingSignal_notUsed; /* SHORT_NAMED_ENUMERATED_VALUE */
+const notUsed = AlertingSignal_notUsed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AlertingSignal_alertingPattern0
@@ -210,7 +210,7 @@ const notUsed: AlertingSignal = AlertingSignal_notUsed; /* SHORT_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const AlertingSignal_alertingPattern0: AlertingSignal = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const AlertingSignal_alertingPattern0 = _enum_for_AlertingSignal.alertingPattern0; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary alertingPattern0
@@ -224,7 +224,7 @@ const AlertingSignal_alertingPattern0: AlertingSignal = 1; /* LONG_NAMED_ENUMERA
  * @type {number}
  */
 export
-const alertingPattern0: AlertingSignal = AlertingSignal_alertingPattern0; /* SHORT_NAMED_ENUMERATED_VALUE */
+const alertingPattern0 = AlertingSignal_alertingPattern0; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AlertingSignal_alertingPattern1
@@ -238,7 +238,7 @@ const alertingPattern0: AlertingSignal = AlertingSignal_alertingPattern0; /* SHO
  * @type {number}
  */
 export
-const AlertingSignal_alertingPattern1: AlertingSignal = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+const AlertingSignal_alertingPattern1 = _enum_for_AlertingSignal.alertingPattern1; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary alertingPattern1
@@ -252,7 +252,7 @@ const AlertingSignal_alertingPattern1: AlertingSignal = 2; /* LONG_NAMED_ENUMERA
  * @type {number}
  */
 export
-const alertingPattern1: AlertingSignal = AlertingSignal_alertingPattern1; /* SHORT_NAMED_ENUMERATED_VALUE */
+const alertingPattern1 = AlertingSignal_alertingPattern1; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AlertingSignal_alertingPattern2
@@ -266,7 +266,7 @@ const alertingPattern1: AlertingSignal = AlertingSignal_alertingPattern1; /* SHO
  * @type {number}
  */
 export
-const AlertingSignal_alertingPattern2: AlertingSignal = 3; /* LONG_NAMED_ENUMERATED_VALUE */
+const AlertingSignal_alertingPattern2 = _enum_for_AlertingSignal.alertingPattern2; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary alertingPattern2
@@ -280,7 +280,7 @@ const AlertingSignal_alertingPattern2: AlertingSignal = 3; /* LONG_NAMED_ENUMERA
  * @type {number}
  */
 export
-const alertingPattern2: AlertingSignal = AlertingSignal_alertingPattern2; /* SHORT_NAMED_ENUMERATED_VALUE */
+const alertingPattern2 = AlertingSignal_alertingPattern2; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AlertingSignal_alertingPattern3
@@ -295,7 +295,7 @@ const alertingPattern2: AlertingSignal = AlertingSignal_alertingPattern2; /* SHO
  * @type {number}
  */
 export
-const AlertingSignal_alertingPattern3: AlertingSignal = 4; /* LONG_NAMED_ENUMERATED_VALUE */
+const AlertingSignal_alertingPattern3 = _enum_for_AlertingSignal.alertingPattern3; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary alertingPattern3
@@ -310,7 +310,7 @@ const AlertingSignal_alertingPattern3: AlertingSignal = 4; /* LONG_NAMED_ENUMERA
  * @type {number}
  */
 export
-const alertingPattern3: AlertingSignal = AlertingSignal_alertingPattern3; /* SHORT_NAMED_ENUMERATED_VALUE */
+const alertingPattern3 = AlertingSignal_alertingPattern3; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AlertingSignal_alertingPattern4
@@ -324,7 +324,7 @@ const alertingPattern3: AlertingSignal = AlertingSignal_alertingPattern3; /* SHO
  * @type {number}
  */
 export
-const AlertingSignal_alertingPattern4: AlertingSignal = 5; /* LONG_NAMED_ENUMERATED_VALUE */
+const AlertingSignal_alertingPattern4 = _enum_for_AlertingSignal.alertingPattern4; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary alertingPattern4
@@ -338,7 +338,7 @@ const AlertingSignal_alertingPattern4: AlertingSignal = 5; /* LONG_NAMED_ENUMERA
  * @type {number}
  */
 export
-const alertingPattern4: AlertingSignal = AlertingSignal_alertingPattern4; /* SHORT_NAMED_ENUMERATED_VALUE */
+const alertingPattern4 = AlertingSignal_alertingPattern4; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AlertingSignal_callWaitingPattern1
@@ -352,7 +352,7 @@ const alertingPattern4: AlertingSignal = AlertingSignal_alertingPattern4; /* SHO
  * @type {number}
  */
 export
-const AlertingSignal_callWaitingPattern1: AlertingSignal = 6; /* LONG_NAMED_ENUMERATED_VALUE */
+const AlertingSignal_callWaitingPattern1 = _enum_for_AlertingSignal.callWaitingPattern1; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary callWaitingPattern1
@@ -366,7 +366,7 @@ const AlertingSignal_callWaitingPattern1: AlertingSignal = 6; /* LONG_NAMED_ENUM
  * @type {number}
  */
 export
-const callWaitingPattern1: AlertingSignal = AlertingSignal_callWaitingPattern1; /* SHORT_NAMED_ENUMERATED_VALUE */
+const callWaitingPattern1 = AlertingSignal_callWaitingPattern1; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AlertingSignal_callWaitingPattern2
@@ -380,7 +380,7 @@ const callWaitingPattern1: AlertingSignal = AlertingSignal_callWaitingPattern1; 
  * @type {number}
  */
 export
-const AlertingSignal_callWaitingPattern2: AlertingSignal = 7; /* LONG_NAMED_ENUMERATED_VALUE */
+const AlertingSignal_callWaitingPattern2 = _enum_for_AlertingSignal.callWaitingPattern2; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary callWaitingPattern2
@@ -394,7 +394,7 @@ const AlertingSignal_callWaitingPattern2: AlertingSignal = 7; /* LONG_NAMED_ENUM
  * @type {number}
  */
 export
-const callWaitingPattern2: AlertingSignal = AlertingSignal_callWaitingPattern2; /* SHORT_NAMED_ENUMERATED_VALUE */
+const callWaitingPattern2 = AlertingSignal_callWaitingPattern2; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AlertingSignal_callWaitingPattern3
@@ -408,7 +408,7 @@ const callWaitingPattern2: AlertingSignal = AlertingSignal_callWaitingPattern2; 
  * @type {number}
  */
 export
-const AlertingSignal_callWaitingPattern3: AlertingSignal = 8; /* LONG_NAMED_ENUMERATED_VALUE */
+const AlertingSignal_callWaitingPattern3 = _enum_for_AlertingSignal.callWaitingPattern3; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary callWaitingPattern3
@@ -422,7 +422,7 @@ const AlertingSignal_callWaitingPattern3: AlertingSignal = 8; /* LONG_NAMED_ENUM
  * @type {number}
  */
 export
-const callWaitingPattern3: AlertingSignal = AlertingSignal_callWaitingPattern3; /* SHORT_NAMED_ENUMERATED_VALUE */
+const callWaitingPattern3 = AlertingSignal_callWaitingPattern3; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AlertingSignal_callWaitingPattern4
@@ -436,7 +436,7 @@ const callWaitingPattern3: AlertingSignal = AlertingSignal_callWaitingPattern3; 
  * @type {number}
  */
 export
-const AlertingSignal_callWaitingPattern4: AlertingSignal = 9; /* LONG_NAMED_ENUMERATED_VALUE */
+const AlertingSignal_callWaitingPattern4 = _enum_for_AlertingSignal.callWaitingPattern4; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary callWaitingPattern4
@@ -450,7 +450,7 @@ const AlertingSignal_callWaitingPattern4: AlertingSignal = 9; /* LONG_NAMED_ENUM
  * @type {number}
  */
 export
-const callWaitingPattern4: AlertingSignal = AlertingSignal_callWaitingPattern4; /* SHORT_NAMED_ENUMERATED_VALUE */
+const callWaitingPattern4 = AlertingSignal_callWaitingPattern4; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AlertingSignal_bargeInTone
@@ -464,7 +464,7 @@ const callWaitingPattern4: AlertingSignal = AlertingSignal_callWaitingPattern4; 
  * @type {number}
  */
 export
-const AlertingSignal_bargeInTone: AlertingSignal = 10; /* LONG_NAMED_ENUMERATED_VALUE */
+const AlertingSignal_bargeInTone = _enum_for_AlertingSignal.bargeInTone; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary bargeInTone
@@ -478,7 +478,7 @@ const AlertingSignal_bargeInTone: AlertingSignal = 10; /* LONG_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const bargeInTone: AlertingSignal = AlertingSignal_bargeInTone; /* SHORT_NAMED_ENUMERATED_VALUE */
+const bargeInTone = AlertingSignal_bargeInTone; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AlertingSignal_alertingPattern5
@@ -492,7 +492,7 @@ const bargeInTone: AlertingSignal = AlertingSignal_bargeInTone; /* SHORT_NAMED_E
  * @type {number}
  */
 export
-const AlertingSignal_alertingPattern5: AlertingSignal = 11; /* LONG_NAMED_ENUMERATED_VALUE */
+const AlertingSignal_alertingPattern5 = _enum_for_AlertingSignal.alertingPattern5; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary alertingPattern5
@@ -506,7 +506,7 @@ const AlertingSignal_alertingPattern5: AlertingSignal = 11; /* LONG_NAMED_ENUMER
  * @type {number}
  */
 export
-const alertingPattern5: AlertingSignal = AlertingSignal_alertingPattern5; /* SHORT_NAMED_ENUMERATED_VALUE */
+const alertingPattern5 = AlertingSignal_alertingPattern5; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AlertingSignal_alertingPattern6
@@ -520,7 +520,7 @@ const alertingPattern5: AlertingSignal = AlertingSignal_alertingPattern5; /* SHO
  * @type {number}
  */
 export
-const AlertingSignal_alertingPattern6: AlertingSignal = 12; /* LONG_NAMED_ENUMERATED_VALUE */
+const AlertingSignal_alertingPattern6 = _enum_for_AlertingSignal.alertingPattern6; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary alertingPattern6
@@ -534,7 +534,7 @@ const AlertingSignal_alertingPattern6: AlertingSignal = 12; /* LONG_NAMED_ENUMER
  * @type {number}
  */
 export
-const alertingPattern6: AlertingSignal = AlertingSignal_alertingPattern6; /* SHORT_NAMED_ENUMERATED_VALUE */
+const alertingPattern6 = AlertingSignal_alertingPattern6; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AlertingSignal_alertingPattern7
@@ -548,7 +548,7 @@ const alertingPattern6: AlertingSignal = AlertingSignal_alertingPattern6; /* SHO
  * @type {number}
  */
 export
-const AlertingSignal_alertingPattern7: AlertingSignal = 13; /* LONG_NAMED_ENUMERATED_VALUE */
+const AlertingSignal_alertingPattern7 = _enum_for_AlertingSignal.alertingPattern7; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary alertingPattern7
@@ -562,7 +562,7 @@ const AlertingSignal_alertingPattern7: AlertingSignal = 13; /* LONG_NAMED_ENUMER
  * @type {number}
  */
 export
-const alertingPattern7: AlertingSignal = AlertingSignal_alertingPattern7; /* SHORT_NAMED_ENUMERATED_VALUE */
+const alertingPattern7 = AlertingSignal_alertingPattern7; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AlertingSignal_alertingPattern8
@@ -576,7 +576,7 @@ const alertingPattern7: AlertingSignal = AlertingSignal_alertingPattern7; /* SHO
  * @type {number}
  */
 export
-const AlertingSignal_alertingPattern8: AlertingSignal = 14; /* LONG_NAMED_ENUMERATED_VALUE */
+const AlertingSignal_alertingPattern8 = _enum_for_AlertingSignal.alertingPattern8; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary alertingPattern8
@@ -590,7 +590,7 @@ const AlertingSignal_alertingPattern8: AlertingSignal = 14; /* LONG_NAMED_ENUMER
  * @type {number}
  */
 export
-const alertingPattern8: AlertingSignal = AlertingSignal_alertingPattern8; /* SHORT_NAMED_ENUMERATED_VALUE */
+const alertingPattern8 = AlertingSignal_alertingPattern8; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AlertingSignal_alertingPattern9
@@ -604,7 +604,7 @@ const alertingPattern8: AlertingSignal = AlertingSignal_alertingPattern8; /* SHO
  * @type {number}
  */
 export
-const AlertingSignal_alertingPattern9: AlertingSignal = 15; /* LONG_NAMED_ENUMERATED_VALUE */
+const AlertingSignal_alertingPattern9 = _enum_for_AlertingSignal.alertingPattern9; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary alertingPattern9
@@ -618,7 +618,7 @@ const AlertingSignal_alertingPattern9: AlertingSignal = 15; /* LONG_NAMED_ENUMER
  * @type {number}
  */
 export
-const alertingPattern9: AlertingSignal = AlertingSignal_alertingPattern9; /* SHORT_NAMED_ENUMERATED_VALUE */
+const alertingPattern9 = AlertingSignal_alertingPattern9; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_AlertingSignal: $.ASN1Decoder<AlertingSignal> = $._decodeEnumerated;
 export const _encode_AlertingSignal: $.ASN1Encoder<AlertingSignal> = $._encodeEnumerated;
 

@@ -42,7 +42,7 @@ type IpaEuiccDataErrorCode = INTEGER;
  * @type {number}
  */
 export
-const IpaEuiccDataErrorCode_incorrectTagList: IpaEuiccDataErrorCode = 1; /* LONG_NAMED_INTEGER_VALUE */
+const IpaEuiccDataErrorCode_incorrectTagList = 1 satisfies IpaEuiccDataErrorCode; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary IpaEuiccDataErrorCode_incorrectTagList
@@ -53,7 +53,7 @@ const IpaEuiccDataErrorCode_incorrectTagList: IpaEuiccDataErrorCode = 1; /* LONG
  * @type {number}
  */
 export
-const incorrectTagList: IpaEuiccDataErrorCode = IpaEuiccDataErrorCode_incorrectTagList; /* SHORT_NAMED_INTEGER_VALUE */
+const incorrectTagList = IpaEuiccDataErrorCode_incorrectTagList; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary IpaEuiccDataErrorCode_euiccCiPKIdNotFound
@@ -64,7 +64,7 @@ const incorrectTagList: IpaEuiccDataErrorCode = IpaEuiccDataErrorCode_incorrectT
  * @type {number}
  */
 export
-const IpaEuiccDataErrorCode_euiccCiPKIdNotFound: IpaEuiccDataErrorCode = 5; /* LONG_NAMED_INTEGER_VALUE */
+const IpaEuiccDataErrorCode_euiccCiPKIdNotFound = 5 satisfies IpaEuiccDataErrorCode; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary IpaEuiccDataErrorCode_euiccCiPKIdNotFound
@@ -75,7 +75,7 @@ const IpaEuiccDataErrorCode_euiccCiPKIdNotFound: IpaEuiccDataErrorCode = 5; /* L
  * @type {number}
  */
 export
-const euiccCiPKIdNotFound: IpaEuiccDataErrorCode = IpaEuiccDataErrorCode_euiccCiPKIdNotFound; /* SHORT_NAMED_INTEGER_VALUE */
+const euiccCiPKIdNotFound = IpaEuiccDataErrorCode_euiccCiPKIdNotFound; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary IpaEuiccDataErrorCode_ecallActive
@@ -87,7 +87,7 @@ const euiccCiPKIdNotFound: IpaEuiccDataErrorCode = IpaEuiccDataErrorCode_euiccCi
  * @type {number}
  */
 export
-const IpaEuiccDataErrorCode_ecallActive: IpaEuiccDataErrorCode = 104; /* LONG_NAMED_INTEGER_VALUE */
+const IpaEuiccDataErrorCode_ecallActive = 104 satisfies IpaEuiccDataErrorCode; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary IpaEuiccDataErrorCode_ecallActive
@@ -98,7 +98,7 @@ const IpaEuiccDataErrorCode_ecallActive: IpaEuiccDataErrorCode = 104; /* LONG_NA
  * @type {number}
  */
 export
-const ecallActive: IpaEuiccDataErrorCode = IpaEuiccDataErrorCode_ecallActive; /* SHORT_NAMED_INTEGER_VALUE */
+const ecallActive = IpaEuiccDataErrorCode_ecallActive; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary IpaEuiccDataErrorCode_undefinedError
@@ -109,7 +109,7 @@ const ecallActive: IpaEuiccDataErrorCode = IpaEuiccDataErrorCode_ecallActive; /*
  * @type {number}
  */
 export
-const IpaEuiccDataErrorCode_undefinedError: IpaEuiccDataErrorCode = 127; /* LONG_NAMED_INTEGER_VALUE */
+const IpaEuiccDataErrorCode_undefinedError = 127 satisfies IpaEuiccDataErrorCode; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary IpaEuiccDataErrorCode_undefinedError
@@ -120,7 +120,7 @@ const IpaEuiccDataErrorCode_undefinedError: IpaEuiccDataErrorCode = 127; /* LONG
  * @type {number}
  */
 export
-const undefinedError: IpaEuiccDataErrorCode = IpaEuiccDataErrorCode_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
+const undefinedError = IpaEuiccDataErrorCode_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_IpaEuiccDataErrorCode: $.ASN1Decoder<IpaEuiccDataErrorCode> = $._decodeInteger;
 export const _encode_IpaEuiccDataErrorCode: $.ASN1Encoder<IpaEuiccDataErrorCode> = $._encodeInteger;
 

@@ -92,7 +92,7 @@ const LimitEncountered = _enum_for_LimitEncountered;
  * @type {number}
  */
 export
-const LimitEncountered_time_limit: LimitEncountered = LimitEncountered.time_limit; /* LONG_NAMED_ENUMERATED_VALUE */
+const LimitEncountered_time_limit = LimitEncountered.time_limit; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary time_limit
@@ -103,7 +103,7 @@ const LimitEncountered_time_limit: LimitEncountered = LimitEncountered.time_limi
  * @type {number}
  */
 export
-const time_limit: LimitEncountered = LimitEncountered.time_limit; /* SHORT_NAMED_ENUMERATED_VALUE */
+const time_limit = LimitEncountered.time_limit; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LimitEncountered_count_limit
@@ -114,7 +114,7 @@ const time_limit: LimitEncountered = LimitEncountered.time_limit; /* SHORT_NAMED
  * @type {number}
  */
 export
-const LimitEncountered_count_limit: LimitEncountered = LimitEncountered.count_limit; /* LONG_NAMED_ENUMERATED_VALUE */
+const LimitEncountered_count_limit = LimitEncountered.count_limit; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary count_limit
@@ -125,7 +125,7 @@ const LimitEncountered_count_limit: LimitEncountered = LimitEncountered.count_li
  * @type {number}
  */
 export
-const count_limit: LimitEncountered = LimitEncountered.count_limit; /* SHORT_NAMED_ENUMERATED_VALUE */
+const count_limit = LimitEncountered.count_limit; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LimitEncountered_length_exceeded
@@ -136,7 +136,7 @@ const count_limit: LimitEncountered = LimitEncountered.count_limit; /* SHORT_NAM
  * @type {number}
  */
 export
-const LimitEncountered_length_exceeded: LimitEncountered = LimitEncountered.length_exceeded; /* LONG_NAMED_ENUMERATED_VALUE */
+const LimitEncountered_length_exceeded = LimitEncountered.length_exceeded; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary length_exceeded
@@ -147,7 +147,7 @@ const LimitEncountered_length_exceeded: LimitEncountered = LimitEncountered.leng
  * @type {number}
  */
 export
-const length_exceeded: LimitEncountered = LimitEncountered.length_exceeded; /* SHORT_NAMED_ENUMERATED_VALUE */
+const length_exceeded = LimitEncountered.length_exceeded; /* SHORT_NAMED_ENUMERATED_VALUE */
 export function _decode_LimitEncountered(el: _Element): LimitEncountered {
     const enumerated = $._decodeEnumerated(el);
     switch (enumerated) {

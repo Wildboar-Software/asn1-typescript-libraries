@@ -65,7 +65,7 @@ export const ReleaseProtectionError = _enum_for_ReleaseProtectionError;
  * @constant
  * @type {number}
  */
-export const ReleaseProtectionError_failure: ReleaseProtectionError =
+export const ReleaseProtectionError_failure =
     ReleaseProtectionError.failure; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -74,7 +74,7 @@ export const ReleaseProtectionError_failure: ReleaseProtectionError =
  * @constant
  * @type {number}
  */
-export const failure: ReleaseProtectionError =
+export const failure =
     ReleaseProtectionError.failure; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -83,7 +83,7 @@ export const failure: ReleaseProtectionError =
  * @constant
  * @type {number}
  */
-export const ReleaseProtectionError_timeout: ReleaseProtectionError =
+export const ReleaseProtectionError_timeout =
     ReleaseProtectionError.timeout; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -92,7 +92,7 @@ export const ReleaseProtectionError_timeout: ReleaseProtectionError =
  * @constant
  * @type {number}
  */
-export const timeout: ReleaseProtectionError =
+export const timeout =
     ReleaseProtectionError.timeout; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 

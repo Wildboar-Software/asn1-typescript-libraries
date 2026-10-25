@@ -90,7 +90,7 @@ export const Value = _enum_for_Value;
  * @constant
  * @type {number}
  */
-export const Value_versionMismatch: Value =
+export const Value_versionMismatch =
   Value.versionMismatch; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -101,7 +101,7 @@ export const Value_versionMismatch: Value =
  * @constant
  * @type {number}
  */
-export const versionMismatch: Value =
+export const versionMismatch =
   Value.versionMismatch; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -114,7 +114,7 @@ export const versionMismatch: Value =
  * @constant
  * @type {number}
  */
-export const Value_mustUnderstand: Value =
+export const Value_mustUnderstand =
   Value.mustUnderstand; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -125,7 +125,7 @@ export const Value_mustUnderstand: Value =
  * @constant
  * @type {number}
  */
-export const mustUnderstand: Value =
+export const mustUnderstand =
   Value.mustUnderstand; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -137,7 +137,7 @@ export const mustUnderstand: Value =
  * @constant
  * @type {number}
  */
-export const Value_dataEncodingUnknown: Value =
+export const Value_dataEncodingUnknown =
   Value.dataEncodingUnknown; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -148,7 +148,7 @@ export const Value_dataEncodingUnknown: Value =
  * @constant
  * @type {number}
  */
-export const dataEncodingUnknown: Value =
+export const dataEncodingUnknown =
   Value.dataEncodingUnknown; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -163,7 +163,7 @@ export const dataEncodingUnknown: Value =
  * @constant
  * @type {number}
  */
-export const Value_sender: Value =
+export const Value_sender =
   Value.sender; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -173,7 +173,7 @@ export const Value_sender: Value =
  * @constant
  * @type {number}
  */
-export const sender: Value = Value.sender; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const sender = Value.sender; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -185,7 +185,7 @@ export const sender: Value = Value.sender; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @constant
  * @type {number}
  */
-export const Value_receiver: Value =
+export const Value_receiver =
   Value.receiver; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -195,7 +195,7 @@ export const Value_receiver: Value =
  * @constant
  * @type {number}
  */
-export const receiver: Value =
+export const receiver =
   Value.receiver; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 

@@ -27,7 +27,7 @@ export type VersionInformationData = INTEGER;
  * @constant
  * @type {number}
  */
-export const VersionInformationData_v1: VersionInformationData = 0; /* LONG_NAMED_INTEGER_VALUE */
+export const VersionInformationData_v1 = 0 satisfies VersionInformationData; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -36,7 +36,7 @@ export const VersionInformationData_v1: VersionInformationData = 0; /* LONG_NAME
  * @constant
  * @type {number}
  */
-export const v1: VersionInformationData = VersionInformationData_v1; /* SHORT_NAMED_INTEGER_VALUE */
+export const v1 = VersionInformationData_v1; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 

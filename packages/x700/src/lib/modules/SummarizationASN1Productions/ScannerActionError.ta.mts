@@ -98,7 +98,7 @@ export const ScannerActionError = _enum_for_ScannerActionError;
  * @constant
  * @type {number}
  */
-export const ScannerActionError_unspecified: ScannerActionError =
+export const ScannerActionError_unspecified =
     ScannerActionError.unspecified; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -112,7 +112,7 @@ export const ScannerActionError_unspecified: ScannerActionError =
  * @constant
  * @type {number}
  */
-export const unspecified: ScannerActionError =
+export const unspecified =
     ScannerActionError.unspecified; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -125,7 +125,7 @@ export const unspecified: ScannerActionError =
  * @constant
  * @type {number}
  */
-export const ScannerActionError_administrativeStateLocked: ScannerActionError =
+export const ScannerActionError_administrativeStateLocked =
     ScannerActionError.administrativeStateLocked; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -138,7 +138,7 @@ export const ScannerActionError_administrativeStateLocked: ScannerActionError =
  * @constant
  * @type {number}
  */
-export const administrativeStateLocked: ScannerActionError =
+export const administrativeStateLocked =
     ScannerActionError.administrativeStateLocked; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -152,7 +152,7 @@ export const administrativeStateLocked: ScannerActionError =
  * @constant
  * @type {number}
  */
-export const ScannerActionError_administrativeStateShuttingDown: ScannerActionError =
+export const ScannerActionError_administrativeStateShuttingDown =
     ScannerActionError.administrativeStateShuttingDown; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -166,7 +166,7 @@ export const ScannerActionError_administrativeStateShuttingDown: ScannerActionEr
  * @constant
  * @type {number}
  */
-export const administrativeStateShuttingDown: ScannerActionError =
+export const administrativeStateShuttingDown =
     ScannerActionError.administrativeStateShuttingDown; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -180,7 +180,7 @@ export const administrativeStateShuttingDown: ScannerActionError =
  * @constant
  * @type {number}
  */
-export const ScannerActionError_scanTerminated: ScannerActionError =
+export const ScannerActionError_scanTerminated =
     ScannerActionError.scanTerminated; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -194,7 +194,7 @@ export const ScannerActionError_scanTerminated: ScannerActionError =
  * @constant
  * @type {number}
  */
-export const scanTerminated: ScannerActionError =
+export const scanTerminated =
     ScannerActionError.scanTerminated; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 

@@ -96,7 +96,7 @@ const RIParametersDeprecated_rIType = _enum_for_RIParametersDeprecated_rIType;
  * @type {number}
  */
 export
-const RIParametersDeprecated_rIType_normal: RIParametersDeprecated_rIType = RIParametersDeprecated_rIType.normal; /* LONG_NAMED_ENUMERATED_VALUE */
+const RIParametersDeprecated_rIType_normal = RIParametersDeprecated_rIType.normal; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * Short name for {@link RIParametersDeprecated_rIType_normal}.
@@ -105,7 +105,7 @@ const RIParametersDeprecated_rIType_normal: RIParametersDeprecated_rIType = RIPa
  * @type {number}
  */
 export
-const normal: RIParametersDeprecated_rIType = RIParametersDeprecated_rIType.normal; /* SHORT_NAMED_ENUMERATED_VALUE */
+const normal = RIParametersDeprecated_rIType.normal; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * Off-line routing indicator.
@@ -114,7 +114,7 @@ const normal: RIParametersDeprecated_rIType = RIParametersDeprecated_rIType.norm
  * @type {number}
  */
 export
-const RIParametersDeprecated_rIType_off_line: RIParametersDeprecated_rIType = RIParametersDeprecated_rIType.off_line; /* LONG_NAMED_ENUMERATED_VALUE */
+const RIParametersDeprecated_rIType_off_line = RIParametersDeprecated_rIType.off_line; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * Short name for {@link RIParametersDeprecated_rIType_off_line}.
@@ -123,7 +123,7 @@ const RIParametersDeprecated_rIType_off_line: RIParametersDeprecated_rIType = RI
  * @type {number}
  */
 export
-const off_line: RIParametersDeprecated_rIType = RIParametersDeprecated_rIType.off_line; /* SHORT_NAMED_ENUMERATED_VALUE */
+const off_line = RIParametersDeprecated_rIType.off_line; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * Part-time terminal.
@@ -132,7 +132,7 @@ const off_line: RIParametersDeprecated_rIType = RIParametersDeprecated_rIType.of
  * @type {number}
  */
 export
-const RIParametersDeprecated_rIType_partTimeTerminal: RIParametersDeprecated_rIType = RIParametersDeprecated_rIType.partTimeTerminal; /* LONG_NAMED_ENUMERATED_VALUE */
+const RIParametersDeprecated_rIType_partTimeTerminal = RIParametersDeprecated_rIType.partTimeTerminal; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * Short name for {@link RIParametersDeprecated_rIType_partTimeTerminal}.
@@ -141,7 +141,7 @@ const RIParametersDeprecated_rIType_partTimeTerminal: RIParametersDeprecated_rIT
  * @type {number}
  */
 export
-const partTimeTerminal: RIParametersDeprecated_rIType = RIParametersDeprecated_rIType.partTimeTerminal; /* SHORT_NAMED_ENUMERATED_VALUE */
+const partTimeTerminal = RIParametersDeprecated_rIType.partTimeTerminal; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_RIParametersDeprecated_rIType: $.ASN1Decoder<RIParametersDeprecated_rIType> =
     $._decodeEnumerated as $.ASN1Decoder<RIParametersDeprecated_rIType>;
 export const _encode_RIParametersDeprecated_rIType: $.ASN1Encoder<RIParametersDeprecated_rIType> =

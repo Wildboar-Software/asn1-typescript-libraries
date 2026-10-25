@@ -106,7 +106,7 @@ export const InvalidAccessControlFilter_errorId = _enum_for_InvalidAccessControl
  * @constant
  * @type {number}
  */
-export const InvalidAccessControlFilter_errorId_duplicateId: InvalidAccessControlFilter_errorId =
+export const InvalidAccessControlFilter_errorId_duplicateId =
     InvalidAccessControlFilter_errorId.duplicateId; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -119,7 +119,7 @@ export const InvalidAccessControlFilter_errorId_duplicateId: InvalidAccessContro
  * @constant
  * @type {number}
  */
-export const duplicateId: InvalidAccessControlFilter_errorId =
+export const duplicateId =
     InvalidAccessControlFilter_errorId.duplicateId; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -132,7 +132,7 @@ export const duplicateId: InvalidAccessControlFilter_errorId =
  * @constant
  * @type {number}
  */
-export const InvalidAccessControlFilter_errorId_heterogeneousId: InvalidAccessControlFilter_errorId =
+export const InvalidAccessControlFilter_errorId_heterogeneousId =
     InvalidAccessControlFilter_errorId.heterogeneousId; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -145,7 +145,7 @@ export const InvalidAccessControlFilter_errorId_heterogeneousId: InvalidAccessCo
  * @constant
  * @type {number}
  */
-export const heterogeneousId: InvalidAccessControlFilter_errorId =
+export const heterogeneousId =
     InvalidAccessControlFilter_errorId.heterogeneousId; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -159,7 +159,7 @@ export const heterogeneousId: InvalidAccessControlFilter_errorId =
  * @constant
  * @type {number}
  */
-export const InvalidAccessControlFilter_errorId_invalidId: InvalidAccessControlFilter_errorId =
+export const InvalidAccessControlFilter_errorId_invalidId =
     InvalidAccessControlFilter_errorId.invalidId; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -172,7 +172,7 @@ export const InvalidAccessControlFilter_errorId_invalidId: InvalidAccessControlF
  * @constant
  * @type {number}
  */
-export const invalidId: InvalidAccessControlFilter_errorId =
+export const invalidId =
     InvalidAccessControlFilter_errorId.invalidId; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 let _cached_decoder_for_InvalidAccessControlFilter_errorId: $.ASN1Decoder<InvalidAccessControlFilter_errorId> | null = null;

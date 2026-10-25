@@ -89,7 +89,7 @@ export const DatabaseState = _enum_for_DatabaseState;
  * @constant
  * @type {number}
  */
-export const DatabaseState_off: DatabaseState =
+export const DatabaseState_off =
   DatabaseState.off; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -97,7 +97,7 @@ export const DatabaseState_off: DatabaseState =
  * @constant
  * @type {number}
  */
-export const off: DatabaseState =
+export const off =
   DatabaseState.off; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -112,7 +112,7 @@ export const off: DatabaseState =
  * @constant
  * @type {number}
  */
-export const DatabaseState_on: DatabaseState =
+export const DatabaseState_on =
   DatabaseState.on; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -120,7 +120,7 @@ export const DatabaseState_on: DatabaseState =
  * @constant
  * @type {number}
  */
-export const on: DatabaseState =
+export const on =
   DatabaseState.on; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -136,7 +136,7 @@ export const on: DatabaseState =
  * @constant
  * @type {number}
  */
-export const DatabaseState_waiting: DatabaseState =
+export const DatabaseState_waiting =
   DatabaseState.waiting; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -144,7 +144,7 @@ export const DatabaseState_waiting: DatabaseState =
  * @constant
  * @type {number}
  */
-export const waiting: DatabaseState =
+export const waiting =
   DatabaseState.waiting; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 

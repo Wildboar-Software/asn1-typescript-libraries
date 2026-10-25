@@ -31,7 +31,7 @@ export type Version = INTEGER;
  * @constant
  * @type {number}
  */
-export const Version_v0: Version = 0; /* LONG_NAMED_INTEGER_VALUE */
+export const Version_v0 = 0 satisfies Version; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -39,7 +39,7 @@ export const Version_v0: Version = 0; /* LONG_NAMED_INTEGER_VALUE */
  * @constant
  * @type {number}
  */
-export const v0: Version = Version_v0; /* SHORT_NAMED_INTEGER_VALUE */
+export const v0 = Version_v0; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 

@@ -93,7 +93,7 @@ export const ProtocolVersion = _enum_for_ProtocolVersion;
  * @constant
  * @type {number}
  */
-export const ProtocolVersion_iSO8208V1: ProtocolVersion =
+export const ProtocolVersion_iSO8208V1 =
     ProtocolVersion.iSO8208V1; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -108,7 +108,7 @@ export const ProtocolVersion_iSO8208V1: ProtocolVersion =
  * @constant
  * @type {number}
  */
-export const iSO8208V1: ProtocolVersion =
+export const iSO8208V1 =
     ProtocolVersion.iSO8208V1; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -123,7 +123,7 @@ export const iSO8208V1: ProtocolVersion =
  * @constant
  * @type {number}
  */
-export const ProtocolVersion_iSO8208V2: ProtocolVersion =
+export const ProtocolVersion_iSO8208V2 =
     ProtocolVersion.iSO8208V2; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -138,7 +138,7 @@ export const ProtocolVersion_iSO8208V2: ProtocolVersion =
  * @constant
  * @type {number}
  */
-export const iSO8208V2: ProtocolVersion =
+export const iSO8208V2 =
     ProtocolVersion.iSO8208V2; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -153,7 +153,7 @@ export const iSO8208V2: ProtocolVersion =
  * @constant
  * @type {number}
  */
-export const ProtocolVersion_x2584: ProtocolVersion =
+export const ProtocolVersion_x2584 =
     ProtocolVersion.x2584; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -168,7 +168,7 @@ export const ProtocolVersion_x2584: ProtocolVersion =
  * @constant
  * @type {number}
  */
-export const x2584: ProtocolVersion =
+export const x2584 =
     ProtocolVersion.x2584; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -183,7 +183,7 @@ export const x2584: ProtocolVersion =
  * @constant
  * @type {number}
  */
-export const ProtocolVersion_x2588: ProtocolVersion =
+export const ProtocolVersion_x2588 =
     ProtocolVersion.x2588; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -198,7 +198,7 @@ export const ProtocolVersion_x2588: ProtocolVersion =
  * @constant
  * @type {number}
  */
-export const x2588: ProtocolVersion =
+export const x2588 =
     ProtocolVersion.x2588; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 

@@ -68,7 +68,7 @@ const InfoType = _enum_for_InfoType;
  * @type {number}
  */
 export
-const InfoType_numericString: InfoType = InfoType.numericString; /* LONG_NAMED_ENUMERATED_VALUE */
+const InfoType_numericString = InfoType.numericString; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary numericString
@@ -76,7 +76,7 @@ const InfoType_numericString: InfoType = InfoType.numericString; /* LONG_NAMED_E
  * @type {number}
  */
 export
-const numericString: InfoType = InfoType.numericString; /* SHORT_NAMED_ENUMERATED_VALUE */
+const numericString = InfoType.numericString; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary InfoType_characterString
@@ -84,7 +84,7 @@ const numericString: InfoType = InfoType.numericString; /* SHORT_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const InfoType_characterString: InfoType = InfoType.characterString; /* LONG_NAMED_ENUMERATED_VALUE */
+const InfoType_characterString = InfoType.characterString; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary characterString
@@ -92,7 +92,7 @@ const InfoType_characterString: InfoType = InfoType.characterString; /* LONG_NAM
  * @type {number}
  */
 export
-const characterString: InfoType = InfoType.characterString; /* SHORT_NAMED_ENUMERATED_VALUE */
+const characterString = InfoType.characterString; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary InfoType_iA5String
@@ -100,7 +100,7 @@ const characterString: InfoType = InfoType.characterString; /* SHORT_NAMED_ENUME
  * @type {number}
  */
 export
-const InfoType_iA5String: InfoType = InfoType.iA5String; /* LONG_NAMED_ENUMERATED_VALUE */
+const InfoType_iA5String = InfoType.iA5String; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary iA5String
@@ -108,7 +108,7 @@ const InfoType_iA5String: InfoType = InfoType.iA5String; /* LONG_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const iA5String: InfoType = InfoType.iA5String; /* SHORT_NAMED_ENUMERATED_VALUE */
+const iA5String = InfoType.iA5String; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_InfoType = $._decodeEnumerated;
 export const _encode_InfoType = $._encodeEnumerated;
 

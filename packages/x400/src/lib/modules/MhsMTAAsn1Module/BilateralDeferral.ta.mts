@@ -31,28 +31,28 @@ export type BilateralDeferral = INTEGER;
  * @constant
  * @type {number}
  */
-export const BilateralDeferral_agreement: BilateralDeferral = 0; /* LONG_NAMED_INTEGER_VALUE */
+export const BilateralDeferral_agreement = 0 satisfies BilateralDeferral; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary BilateralDeferral_agreement
  * @constant
  * @type {number}
  */
-export const agreement: BilateralDeferral = BilateralDeferral_agreement; /* SHORT_NAMED_INTEGER_VALUE */
+export const agreement = BilateralDeferral_agreement; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary BilateralDeferral_no_agreement
  * @constant
  * @type {number}
  */
-export const BilateralDeferral_no_agreement: BilateralDeferral = 1; /* LONG_NAMED_INTEGER_VALUE */
+export const BilateralDeferral_no_agreement = 1 satisfies BilateralDeferral; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary BilateralDeferral_no_agreement
  * @constant
  * @type {number}
  */
-export const no_agreement: BilateralDeferral = BilateralDeferral_no_agreement; /* SHORT_NAMED_INTEGER_VALUE */
+export const no_agreement = BilateralDeferral_no_agreement; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_BilateralDeferral = $._decodeInteger;

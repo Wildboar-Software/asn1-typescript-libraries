@@ -48,7 +48,7 @@ type Running_Mode = INTEGER;
  * @type {number}
  */
 export
-const Running_Mode_free_run: Running_Mode = 0; /* LONG_NAMED_INTEGER_VALUE */
+const Running_Mode_free_run = 0 satisfies Running_Mode; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Running_Mode_free_run
@@ -61,7 +61,7 @@ const Running_Mode_free_run: Running_Mode = 0; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const free_run: Running_Mode = Running_Mode_free_run; /* SHORT_NAMED_INTEGER_VALUE */
+const free_run = Running_Mode_free_run; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Running_Mode_cycle_limited
@@ -74,7 +74,7 @@ const free_run: Running_Mode = Running_Mode_free_run; /* SHORT_NAMED_INTEGER_VAL
  * @type {number}
  */
 export
-const Running_Mode_cycle_limited: Running_Mode = 1; /* LONG_NAMED_INTEGER_VALUE */
+const Running_Mode_cycle_limited = 1 satisfies Running_Mode; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Running_Mode_cycle_limited
@@ -87,7 +87,7 @@ const Running_Mode_cycle_limited: Running_Mode = 1; /* LONG_NAMED_INTEGER_VALUE 
  * @type {number}
  */
 export
-const cycle_limited: Running_Mode = Running_Mode_cycle_limited; /* SHORT_NAMED_INTEGER_VALUE */
+const cycle_limited = Running_Mode_cycle_limited; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Running_Mode_step_limited
@@ -100,7 +100,7 @@ const cycle_limited: Running_Mode = Running_Mode_cycle_limited; /* SHORT_NAMED_I
  * @type {number}
  */
 export
-const Running_Mode_step_limited: Running_Mode = 2; /* LONG_NAMED_INTEGER_VALUE */
+const Running_Mode_step_limited = 2 satisfies Running_Mode; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Running_Mode_step_limited
@@ -113,7 +113,7 @@ const Running_Mode_step_limited: Running_Mode = 2; /* LONG_NAMED_INTEGER_VALUE *
  * @type {number}
  */
 export
-const step_limited: Running_Mode = Running_Mode_step_limited; /* SHORT_NAMED_INTEGER_VALUE */
+const step_limited = Running_Mode_step_limited; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_Running_Mode = $._decodeInteger;
 export const _encode_Running_Mode = $._encodeInteger;
 

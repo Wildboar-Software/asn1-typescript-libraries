@@ -30,7 +30,7 @@ type MOCallRecord_jIPSoInd = INTEGER;
  * @type {number}
  */
 export
-const MOCallRecord_jIPSoInd_lRN_NP_Database: MOCallRecord_jIPSoInd = 1; /* LONG_NAMED_INTEGER_VALUE */
+const MOCallRecord_jIPSoInd_lRN_NP_Database = 1 satisfies MOCallRecord_jIPSoInd; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary MOCallRecord_jIPSoInd_lRN_NP_Database
@@ -38,7 +38,7 @@ const MOCallRecord_jIPSoInd_lRN_NP_Database: MOCallRecord_jIPSoInd = 1; /* LONG_
  * @type {number}
  */
 export
-const lRN_NP_Database: MOCallRecord_jIPSoInd = MOCallRecord_jIPSoInd_lRN_NP_Database; /* SHORT_NAMED_INTEGER_VALUE */
+const lRN_NP_Database = MOCallRecord_jIPSoInd_lRN_NP_Database; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary MOCallRecord_jIPSoInd_switchingSystemData
@@ -46,7 +46,7 @@ const lRN_NP_Database: MOCallRecord_jIPSoInd = MOCallRecord_jIPSoInd_lRN_NP_Data
  * @type {number}
  */
 export
-const MOCallRecord_jIPSoInd_switchingSystemData: MOCallRecord_jIPSoInd = 2; /* LONG_NAMED_INTEGER_VALUE */
+const MOCallRecord_jIPSoInd_switchingSystemData = 2 satisfies MOCallRecord_jIPSoInd; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary MOCallRecord_jIPSoInd_switchingSystemData
@@ -54,7 +54,7 @@ const MOCallRecord_jIPSoInd_switchingSystemData: MOCallRecord_jIPSoInd = 2; /* L
  * @type {number}
  */
 export
-const switchingSystemData: MOCallRecord_jIPSoInd = MOCallRecord_jIPSoInd_switchingSystemData; /* SHORT_NAMED_INTEGER_VALUE */
+const switchingSystemData = MOCallRecord_jIPSoInd_switchingSystemData; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary MOCallRecord_jIPSoInd_incomingsignaling
@@ -62,7 +62,7 @@ const switchingSystemData: MOCallRecord_jIPSoInd = MOCallRecord_jIPSoInd_switchi
  * @type {number}
  */
 export
-const MOCallRecord_jIPSoInd_incomingsignaling: MOCallRecord_jIPSoInd = 3; /* LONG_NAMED_INTEGER_VALUE */
+const MOCallRecord_jIPSoInd_incomingsignaling = 3 satisfies MOCallRecord_jIPSoInd; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary MOCallRecord_jIPSoInd_incomingsignaling
@@ -70,7 +70,7 @@ const MOCallRecord_jIPSoInd_incomingsignaling: MOCallRecord_jIPSoInd = 3; /* LON
  * @type {number}
  */
 export
-const incomingsignaling: MOCallRecord_jIPSoInd = MOCallRecord_jIPSoInd_incomingsignaling; /* SHORT_NAMED_INTEGER_VALUE */
+const incomingsignaling = MOCallRecord_jIPSoInd_incomingsignaling; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary MOCallRecord_jIPSoInd_unknown
@@ -78,7 +78,7 @@ const incomingsignaling: MOCallRecord_jIPSoInd = MOCallRecord_jIPSoInd_incomings
  * @type {number}
  */
 export
-const MOCallRecord_jIPSoInd_unknown: MOCallRecord_jIPSoInd = 9; /* LONG_NAMED_INTEGER_VALUE */
+const MOCallRecord_jIPSoInd_unknown = 9 satisfies MOCallRecord_jIPSoInd; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary MOCallRecord_jIPSoInd_unknown
@@ -86,7 +86,7 @@ const MOCallRecord_jIPSoInd_unknown: MOCallRecord_jIPSoInd = 9; /* LONG_NAMED_IN
  * @type {number}
  */
 export
-const unknown: MOCallRecord_jIPSoInd = MOCallRecord_jIPSoInd_unknown; /* SHORT_NAMED_INTEGER_VALUE */
+const unknown = MOCallRecord_jIPSoInd_unknown; /* SHORT_NAMED_INTEGER_VALUE */
 
 export
 const _decode_MOCallRecord_jIPSoInd: $.ASN1Decoder<MOCallRecord_jIPSoInd> = $._decodeInteger;

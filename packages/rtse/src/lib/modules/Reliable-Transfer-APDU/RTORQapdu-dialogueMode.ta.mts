@@ -38,7 +38,7 @@ export type RTORQapdu_dialogueMode = INTEGER;
  * @constant
  * @type {number}
  */
-export const RTORQapdu_dialogueMode_monologue: RTORQapdu_dialogueMode = 0; /* LONG_NAMED_INTEGER_VALUE */
+export const RTORQapdu_dialogueMode_monologue = 0 satisfies RTORQapdu_dialogueMode; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -47,7 +47,7 @@ export const RTORQapdu_dialogueMode_monologue: RTORQapdu_dialogueMode = 0; /* LO
  * @constant
  * @type {number}
  */
-export const monologue: RTORQapdu_dialogueMode = RTORQapdu_dialogueMode_monologue; /* SHORT_NAMED_INTEGER_VALUE */
+export const monologue = RTORQapdu_dialogueMode_monologue; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -57,7 +57,7 @@ export const monologue: RTORQapdu_dialogueMode = RTORQapdu_dialogueMode_monologu
  * @constant
  * @type {number}
  */
-export const RTORQapdu_dialogueMode_twa: RTORQapdu_dialogueMode = 1; /* LONG_NAMED_INTEGER_VALUE */
+export const RTORQapdu_dialogueMode_twa = 1 satisfies RTORQapdu_dialogueMode; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -66,7 +66,7 @@ export const RTORQapdu_dialogueMode_twa: RTORQapdu_dialogueMode = 1; /* LONG_NAM
  * @constant
  * @type {number}
  */
-export const twa: RTORQapdu_dialogueMode = RTORQapdu_dialogueMode_twa; /* SHORT_NAMED_INTEGER_VALUE */
+export const twa = RTORQapdu_dialogueMode_twa; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 

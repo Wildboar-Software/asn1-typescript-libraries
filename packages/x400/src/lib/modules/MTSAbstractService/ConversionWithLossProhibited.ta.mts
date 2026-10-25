@@ -71,7 +71,7 @@ export const ConversionWithLossProhibited = _enum_for_ConversionWithLossProhibit
  * @constant
  * @type {number}
  */
-export const ConversionWithLossProhibited_conversion_with_loss_allowed: ConversionWithLossProhibited =
+export const ConversionWithLossProhibited_conversion_with_loss_allowed =
     ConversionWithLossProhibited.conversion_with_loss_allowed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -79,7 +79,7 @@ export const ConversionWithLossProhibited_conversion_with_loss_allowed: Conversi
  * @constant
  * @type {number}
  */
-export const conversion_with_loss_allowed: ConversionWithLossProhibited =
+export const conversion_with_loss_allowed =
     ConversionWithLossProhibited.conversion_with_loss_allowed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -87,7 +87,7 @@ export const conversion_with_loss_allowed: ConversionWithLossProhibited =
  * @constant
  * @type {number}
  */
-export const ConversionWithLossProhibited_conversion_with_loss_prohibited: ConversionWithLossProhibited =
+export const ConversionWithLossProhibited_conversion_with_loss_prohibited =
     ConversionWithLossProhibited.conversion_with_loss_prohibited; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -95,7 +95,7 @@ export const ConversionWithLossProhibited_conversion_with_loss_prohibited: Conve
  * @constant
  * @type {number}
  */
-export const conversion_with_loss_prohibited: ConversionWithLossProhibited =
+export const conversion_with_loss_prohibited =
     ConversionWithLossProhibited.conversion_with_loss_prohibited; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 

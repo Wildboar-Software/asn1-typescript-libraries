@@ -162,7 +162,7 @@ type SimpleIndication = _enum_for_SimpleIndication | ENUMERATED;
  * @type {number}
  */
 export
-const SimpleIndication_call_Waiting_Indication: SimpleIndication = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+const SimpleIndication_call_Waiting_Indication = _enum_for_SimpleIndication.call_Waiting_Indication; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary call_Waiting_Indication
@@ -182,7 +182,7 @@ const SimpleIndication_call_Waiting_Indication: SimpleIndication = 0; /* LONG_NA
  * @type {number}
  */
 export
-const call_Waiting_Indication: SimpleIndication = SimpleIndication_call_Waiting_Indication; /* SHORT_NAMED_ENUMERATED_VALUE */
+const call_Waiting_Indication = SimpleIndication_call_Waiting_Indication; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SimpleIndication_add_conf_Indication
@@ -200,7 +200,7 @@ const call_Waiting_Indication: SimpleIndication = SimpleIndication_call_Waiting_
  * @type {number}
  */
 export
-const SimpleIndication_add_conf_Indication: SimpleIndication = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const SimpleIndication_add_conf_Indication = _enum_for_SimpleIndication.add_conf_Indication; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary add_conf_Indication
@@ -218,7 +218,7 @@ const SimpleIndication_add_conf_Indication: SimpleIndication = 1; /* LONG_NAMED_
  * @type {number}
  */
 export
-const add_conf_Indication: SimpleIndication = SimpleIndication_add_conf_Indication; /* SHORT_NAMED_ENUMERATED_VALUE */
+const add_conf_Indication = SimpleIndication_add_conf_Indication; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SimpleIndication_call_on_hold_Indication
@@ -236,7 +236,7 @@ const add_conf_Indication: SimpleIndication = SimpleIndication_add_conf_Indicati
  * @type {number}
  */
 export
-const SimpleIndication_call_on_hold_Indication: SimpleIndication = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+const SimpleIndication_call_on_hold_Indication = _enum_for_SimpleIndication.call_on_hold_Indication; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary call_on_hold_Indication
@@ -254,7 +254,7 @@ const SimpleIndication_call_on_hold_Indication: SimpleIndication = 2; /* LONG_NA
  * @type {number}
  */
 export
-const call_on_hold_Indication: SimpleIndication = SimpleIndication_call_on_hold_Indication; /* SHORT_NAMED_ENUMERATED_VALUE */
+const call_on_hold_Indication = SimpleIndication_call_on_hold_Indication; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SimpleIndication_retrieve_Indication
@@ -272,7 +272,7 @@ const call_on_hold_Indication: SimpleIndication = SimpleIndication_call_on_hold_
  * @type {number}
  */
 export
-const SimpleIndication_retrieve_Indication: SimpleIndication = 3; /* LONG_NAMED_ENUMERATED_VALUE */
+const SimpleIndication_retrieve_Indication = _enum_for_SimpleIndication.retrieve_Indication; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary retrieve_Indication
@@ -290,7 +290,7 @@ const SimpleIndication_retrieve_Indication: SimpleIndication = 3; /* LONG_NAMED_
  * @type {number}
  */
 export
-const retrieve_Indication: SimpleIndication = SimpleIndication_retrieve_Indication; /* SHORT_NAMED_ENUMERATED_VALUE */
+const retrieve_Indication = SimpleIndication_retrieve_Indication; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SimpleIndication_suspend_Indication
@@ -308,7 +308,7 @@ const retrieve_Indication: SimpleIndication = SimpleIndication_retrieve_Indicati
  * @type {number}
  */
 export
-const SimpleIndication_suspend_Indication: SimpleIndication = 4; /* LONG_NAMED_ENUMERATED_VALUE */
+const SimpleIndication_suspend_Indication = _enum_for_SimpleIndication.suspend_Indication; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary suspend_Indication
@@ -326,7 +326,7 @@ const SimpleIndication_suspend_Indication: SimpleIndication = 4; /* LONG_NAMED_E
  * @type {number}
  */
 export
-const suspend_Indication: SimpleIndication = SimpleIndication_suspend_Indication; /* SHORT_NAMED_ENUMERATED_VALUE */
+const suspend_Indication = SimpleIndication_suspend_Indication; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SimpleIndication_resume_Indication
@@ -344,7 +344,7 @@ const suspend_Indication: SimpleIndication = SimpleIndication_suspend_Indication
  * @type {number}
  */
 export
-const SimpleIndication_resume_Indication: SimpleIndication = 5; /* LONG_NAMED_ENUMERATED_VALUE */
+const SimpleIndication_resume_Indication = _enum_for_SimpleIndication.resume_Indication; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary resume_Indication
@@ -362,7 +362,7 @@ const SimpleIndication_resume_Indication: SimpleIndication = 5; /* LONG_NAMED_EN
  * @type {number}
  */
 export
-const resume_Indication: SimpleIndication = SimpleIndication_resume_Indication; /* SHORT_NAMED_ENUMERATED_VALUE */
+const resume_Indication = SimpleIndication_resume_Indication; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SimpleIndication_answer_Indication
@@ -379,7 +379,7 @@ const resume_Indication: SimpleIndication = SimpleIndication_resume_Indication; 
  * @type {number}
  */
 export
-const SimpleIndication_answer_Indication: SimpleIndication = 6; /* LONG_NAMED_ENUMERATED_VALUE */
+const SimpleIndication_answer_Indication = _enum_for_SimpleIndication.answer_Indication; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary answer_Indication
@@ -396,7 +396,7 @@ const SimpleIndication_answer_Indication: SimpleIndication = 6; /* LONG_NAMED_EN
  * @type {number}
  */
 export
-const answer_Indication: SimpleIndication = SimpleIndication_answer_Indication; /* SHORT_NAMED_ENUMERATED_VALUE */
+const answer_Indication = SimpleIndication_answer_Indication; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_SimpleIndication: $.ASN1Decoder<SimpleIndication> = $._decodeEnumerated;
 export const _encode_SimpleIndication: $.ASN1Encoder<SimpleIndication> = $._encodeEnumerated;
 

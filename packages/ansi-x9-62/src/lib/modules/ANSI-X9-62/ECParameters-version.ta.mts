@@ -27,7 +27,7 @@ export type ECParameters_version = INTEGER;
  * @constant
  * @type {number}
  */
-export const ECParameters_version_ecpVerl: ECParameters_version = 1; /* LONG_NAMED_INTEGER_VALUE */
+export const ECParameters_version_ecpVerl = 1 satisfies ECParameters_version; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ECParameters_version_ecpVerl
@@ -38,7 +38,7 @@ export const ECParameters_version_ecpVerl: ECParameters_version = 1; /* LONG_NAM
  * @constant
  * @type {number}
  */
-export const ecpVerl: ECParameters_version = ECParameters_version_ecpVerl; /* SHORT_NAMED_INTEGER_VALUE */
+export const ecpVerl = ECParameters_version_ecpVerl; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_ECParameters_version = $._decodeInteger;

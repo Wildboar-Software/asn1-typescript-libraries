@@ -36,42 +36,42 @@ export type Release_response_reason = INTEGER;
  * @constant
  * @type {number}
  */
-export const Release_response_reason_normal: Release_response_reason = 0; /* LONG_NAMED_INTEGER_VALUE */
+export const Release_response_reason_normal = 0 satisfies Release_response_reason; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Release_response_reason_normal
  * @constant
  * @type {number}
  */
-export const normal: Release_response_reason = Release_response_reason_normal; /* SHORT_NAMED_INTEGER_VALUE */
+export const normal = Release_response_reason_normal; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Release_response_reason_not_finished
  * @constant
  * @type {number}
  */
-export const Release_response_reason_not_finished: Release_response_reason = 1; /* LONG_NAMED_INTEGER_VALUE */
+export const Release_response_reason_not_finished = 1 satisfies Release_response_reason; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Release_response_reason_not_finished
  * @constant
  * @type {number}
  */
-export const not_finished: Release_response_reason = Release_response_reason_not_finished; /* SHORT_NAMED_INTEGER_VALUE */
+export const not_finished = Release_response_reason_not_finished; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Release_response_reason_user_defined
  * @constant
  * @type {number}
  */
-export const Release_response_reason_user_defined: Release_response_reason = 30; /* LONG_NAMED_INTEGER_VALUE */
+export const Release_response_reason_user_defined = 30 satisfies Release_response_reason; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Release_response_reason_user_defined
  * @constant
  * @type {number}
  */
-export const user_defined: Release_response_reason = Release_response_reason_user_defined; /* SHORT_NAMED_INTEGER_VALUE */
+export const user_defined = Release_response_reason_user_defined; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_Release_response_reason = $._decodeInteger;

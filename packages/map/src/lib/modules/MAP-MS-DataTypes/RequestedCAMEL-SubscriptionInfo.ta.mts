@@ -109,7 +109,7 @@ const RequestedCAMEL_SubscriptionInfo = _enum_for_RequestedCAMEL_SubscriptionInf
  * @type {number}
  */
 export
-const RequestedCAMEL_SubscriptionInfo_o_CSI: RequestedCAMEL_SubscriptionInfo = RequestedCAMEL_SubscriptionInfo.o_CSI; /* LONG_NAMED_ENUMERATED_VALUE */
+const RequestedCAMEL_SubscriptionInfo_o_CSI = RequestedCAMEL_SubscriptionInfo.o_CSI; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary o_CSI
@@ -117,7 +117,7 @@ const RequestedCAMEL_SubscriptionInfo_o_CSI: RequestedCAMEL_SubscriptionInfo = R
  * @type {number}
  */
 export
-const o_CSI: RequestedCAMEL_SubscriptionInfo = RequestedCAMEL_SubscriptionInfo.o_CSI; /* SHORT_NAMED_ENUMERATED_VALUE */
+const o_CSI = RequestedCAMEL_SubscriptionInfo.o_CSI; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RequestedCAMEL_SubscriptionInfo_t_CSI
@@ -125,7 +125,7 @@ const o_CSI: RequestedCAMEL_SubscriptionInfo = RequestedCAMEL_SubscriptionInfo.o
  * @type {number}
  */
 export
-const RequestedCAMEL_SubscriptionInfo_t_CSI: RequestedCAMEL_SubscriptionInfo = RequestedCAMEL_SubscriptionInfo.t_CSI; /* LONG_NAMED_ENUMERATED_VALUE */
+const RequestedCAMEL_SubscriptionInfo_t_CSI = RequestedCAMEL_SubscriptionInfo.t_CSI; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary t_CSI
@@ -133,7 +133,7 @@ const RequestedCAMEL_SubscriptionInfo_t_CSI: RequestedCAMEL_SubscriptionInfo = R
  * @type {number}
  */
 export
-const t_CSI: RequestedCAMEL_SubscriptionInfo = RequestedCAMEL_SubscriptionInfo.t_CSI; /* SHORT_NAMED_ENUMERATED_VALUE */
+const t_CSI = RequestedCAMEL_SubscriptionInfo.t_CSI; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RequestedCAMEL_SubscriptionInfo_vt_CSI
@@ -141,7 +141,7 @@ const t_CSI: RequestedCAMEL_SubscriptionInfo = RequestedCAMEL_SubscriptionInfo.t
  * @type {number}
  */
 export
-const RequestedCAMEL_SubscriptionInfo_vt_CSI: RequestedCAMEL_SubscriptionInfo = RequestedCAMEL_SubscriptionInfo.vt_CSI; /* LONG_NAMED_ENUMERATED_VALUE */
+const RequestedCAMEL_SubscriptionInfo_vt_CSI = RequestedCAMEL_SubscriptionInfo.vt_CSI; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary vt_CSI
@@ -149,7 +149,7 @@ const RequestedCAMEL_SubscriptionInfo_vt_CSI: RequestedCAMEL_SubscriptionInfo = 
  * @type {number}
  */
 export
-const vt_CSI: RequestedCAMEL_SubscriptionInfo = RequestedCAMEL_SubscriptionInfo.vt_CSI; /* SHORT_NAMED_ENUMERATED_VALUE */
+const vt_CSI = RequestedCAMEL_SubscriptionInfo.vt_CSI; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RequestedCAMEL_SubscriptionInfo_tif_CSI
@@ -157,7 +157,7 @@ const vt_CSI: RequestedCAMEL_SubscriptionInfo = RequestedCAMEL_SubscriptionInfo.
  * @type {number}
  */
 export
-const RequestedCAMEL_SubscriptionInfo_tif_CSI: RequestedCAMEL_SubscriptionInfo = RequestedCAMEL_SubscriptionInfo.tif_CSI; /* LONG_NAMED_ENUMERATED_VALUE */
+const RequestedCAMEL_SubscriptionInfo_tif_CSI = RequestedCAMEL_SubscriptionInfo.tif_CSI; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tif_CSI
@@ -165,7 +165,7 @@ const RequestedCAMEL_SubscriptionInfo_tif_CSI: RequestedCAMEL_SubscriptionInfo =
  * @type {number}
  */
 export
-const tif_CSI: RequestedCAMEL_SubscriptionInfo = RequestedCAMEL_SubscriptionInfo.tif_CSI; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tif_CSI = RequestedCAMEL_SubscriptionInfo.tif_CSI; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RequestedCAMEL_SubscriptionInfo_gprs_CSI
@@ -173,7 +173,7 @@ const tif_CSI: RequestedCAMEL_SubscriptionInfo = RequestedCAMEL_SubscriptionInfo
  * @type {number}
  */
 export
-const RequestedCAMEL_SubscriptionInfo_gprs_CSI: RequestedCAMEL_SubscriptionInfo = RequestedCAMEL_SubscriptionInfo.gprs_CSI; /* LONG_NAMED_ENUMERATED_VALUE */
+const RequestedCAMEL_SubscriptionInfo_gprs_CSI = RequestedCAMEL_SubscriptionInfo.gprs_CSI; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary gprs_CSI
@@ -181,7 +181,7 @@ const RequestedCAMEL_SubscriptionInfo_gprs_CSI: RequestedCAMEL_SubscriptionInfo 
  * @type {number}
  */
 export
-const gprs_CSI: RequestedCAMEL_SubscriptionInfo = RequestedCAMEL_SubscriptionInfo.gprs_CSI; /* SHORT_NAMED_ENUMERATED_VALUE */
+const gprs_CSI = RequestedCAMEL_SubscriptionInfo.gprs_CSI; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RequestedCAMEL_SubscriptionInfo_mo_sms_CSI
@@ -189,7 +189,7 @@ const gprs_CSI: RequestedCAMEL_SubscriptionInfo = RequestedCAMEL_SubscriptionInf
  * @type {number}
  */
 export
-const RequestedCAMEL_SubscriptionInfo_mo_sms_CSI: RequestedCAMEL_SubscriptionInfo = RequestedCAMEL_SubscriptionInfo.mo_sms_CSI; /* LONG_NAMED_ENUMERATED_VALUE */
+const RequestedCAMEL_SubscriptionInfo_mo_sms_CSI = RequestedCAMEL_SubscriptionInfo.mo_sms_CSI; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary mo_sms_CSI
@@ -197,7 +197,7 @@ const RequestedCAMEL_SubscriptionInfo_mo_sms_CSI: RequestedCAMEL_SubscriptionInf
  * @type {number}
  */
 export
-const mo_sms_CSI: RequestedCAMEL_SubscriptionInfo = RequestedCAMEL_SubscriptionInfo.mo_sms_CSI; /* SHORT_NAMED_ENUMERATED_VALUE */
+const mo_sms_CSI = RequestedCAMEL_SubscriptionInfo.mo_sms_CSI; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RequestedCAMEL_SubscriptionInfo_ss_CSI
@@ -205,7 +205,7 @@ const mo_sms_CSI: RequestedCAMEL_SubscriptionInfo = RequestedCAMEL_SubscriptionI
  * @type {number}
  */
 export
-const RequestedCAMEL_SubscriptionInfo_ss_CSI: RequestedCAMEL_SubscriptionInfo = RequestedCAMEL_SubscriptionInfo.ss_CSI; /* LONG_NAMED_ENUMERATED_VALUE */
+const RequestedCAMEL_SubscriptionInfo_ss_CSI = RequestedCAMEL_SubscriptionInfo.ss_CSI; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ss_CSI
@@ -213,7 +213,7 @@ const RequestedCAMEL_SubscriptionInfo_ss_CSI: RequestedCAMEL_SubscriptionInfo = 
  * @type {number}
  */
 export
-const ss_CSI: RequestedCAMEL_SubscriptionInfo = RequestedCAMEL_SubscriptionInfo.ss_CSI; /* SHORT_NAMED_ENUMERATED_VALUE */
+const ss_CSI = RequestedCAMEL_SubscriptionInfo.ss_CSI; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RequestedCAMEL_SubscriptionInfo_m_CSI
@@ -221,7 +221,7 @@ const ss_CSI: RequestedCAMEL_SubscriptionInfo = RequestedCAMEL_SubscriptionInfo.
  * @type {number}
  */
 export
-const RequestedCAMEL_SubscriptionInfo_m_CSI: RequestedCAMEL_SubscriptionInfo = RequestedCAMEL_SubscriptionInfo.m_CSI; /* LONG_NAMED_ENUMERATED_VALUE */
+const RequestedCAMEL_SubscriptionInfo_m_CSI = RequestedCAMEL_SubscriptionInfo.m_CSI; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary m_CSI
@@ -229,7 +229,7 @@ const RequestedCAMEL_SubscriptionInfo_m_CSI: RequestedCAMEL_SubscriptionInfo = R
  * @type {number}
  */
 export
-const m_CSI: RequestedCAMEL_SubscriptionInfo = RequestedCAMEL_SubscriptionInfo.m_CSI; /* SHORT_NAMED_ENUMERATED_VALUE */
+const m_CSI = RequestedCAMEL_SubscriptionInfo.m_CSI; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RequestedCAMEL_SubscriptionInfo_d_csi
@@ -237,7 +237,7 @@ const m_CSI: RequestedCAMEL_SubscriptionInfo = RequestedCAMEL_SubscriptionInfo.m
  * @type {number}
  */
 export
-const RequestedCAMEL_SubscriptionInfo_d_csi: RequestedCAMEL_SubscriptionInfo = RequestedCAMEL_SubscriptionInfo.d_csi; /* LONG_NAMED_ENUMERATED_VALUE */
+const RequestedCAMEL_SubscriptionInfo_d_csi = RequestedCAMEL_SubscriptionInfo.d_csi; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary d_csi
@@ -245,7 +245,7 @@ const RequestedCAMEL_SubscriptionInfo_d_csi: RequestedCAMEL_SubscriptionInfo = R
  * @type {number}
  */
 export
-const d_csi: RequestedCAMEL_SubscriptionInfo = RequestedCAMEL_SubscriptionInfo.d_csi; /* SHORT_NAMED_ENUMERATED_VALUE */
+const d_csi = RequestedCAMEL_SubscriptionInfo.d_csi; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) RequestedCAMEL_SubscriptionInfo

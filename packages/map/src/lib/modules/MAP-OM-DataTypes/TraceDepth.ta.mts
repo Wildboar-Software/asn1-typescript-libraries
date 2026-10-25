@@ -46,7 +46,7 @@ type TraceDepth = _enum_for_TraceDepth | ENUMERATED;
  * @type {number}
  */
 export
-const TraceDepth_minimum: TraceDepth = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+const TraceDepth_minimum = _enum_for_TraceDepth.minimum; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary minimum
@@ -58,7 +58,7 @@ const TraceDepth_minimum: TraceDepth = 0; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const minimum: TraceDepth = TraceDepth_minimum; /* SHORT_NAMED_ENUMERATED_VALUE */
+const minimum = TraceDepth_minimum; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TraceDepth_medium
@@ -71,7 +71,7 @@ const minimum: TraceDepth = TraceDepth_minimum; /* SHORT_NAMED_ENUMERATED_VALUE 
  * @type {number}
  */
 export
-const TraceDepth_medium: TraceDepth = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const TraceDepth_medium = _enum_for_TraceDepth.medium; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary medium
@@ -84,7 +84,7 @@ const TraceDepth_medium: TraceDepth = 1; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const medium: TraceDepth = TraceDepth_medium; /* SHORT_NAMED_ENUMERATED_VALUE */
+const medium = TraceDepth_medium; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TraceDepth_maximum
@@ -96,7 +96,7 @@ const medium: TraceDepth = TraceDepth_medium; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const TraceDepth_maximum: TraceDepth = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+const TraceDepth_maximum = _enum_for_TraceDepth.maximum; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary maximum
@@ -108,7 +108,7 @@ const TraceDepth_maximum: TraceDepth = 2; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const maximum: TraceDepth = TraceDepth_maximum; /* SHORT_NAMED_ENUMERATED_VALUE */
+const maximum = TraceDepth_maximum; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) TraceDepth

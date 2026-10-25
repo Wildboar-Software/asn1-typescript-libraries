@@ -107,7 +107,7 @@ const MobileIABAuthorizedIndicator = _enum_for_MobileIABAuthorizedIndicator;
  * @type {number}
  */
 export
-const MobileIABAuthorizedIndicator_authorized: MobileIABAuthorizedIndicator = MobileIABAuthorizedIndicator.authorized; /* LONG_NAMED_ENUMERATED_VALUE */
+const MobileIABAuthorizedIndicator_authorized = MobileIABAuthorizedIndicator.authorized; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary authorized
@@ -121,7 +121,7 @@ const MobileIABAuthorizedIndicator_authorized: MobileIABAuthorizedIndicator = Mo
  * @type {number}
  */
 export
-const authorized: MobileIABAuthorizedIndicator = MobileIABAuthorizedIndicator.authorized; /* SHORT_NAMED_ENUMERATED_VALUE */
+const authorized = MobileIABAuthorizedIndicator.authorized; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MobileIABAuthorizedIndicator_notAuthorized
@@ -135,7 +135,7 @@ const authorized: MobileIABAuthorizedIndicator = MobileIABAuthorizedIndicator.au
  * @type {number}
  */
 export
-const MobileIABAuthorizedIndicator_notAuthorized: MobileIABAuthorizedIndicator = MobileIABAuthorizedIndicator.notAuthorized; /* LONG_NAMED_ENUMERATED_VALUE */
+const MobileIABAuthorizedIndicator_notAuthorized = MobileIABAuthorizedIndicator.notAuthorized; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary notAuthorized
@@ -149,7 +149,7 @@ const MobileIABAuthorizedIndicator_notAuthorized: MobileIABAuthorizedIndicator =
  * @type {number}
  */
 export
-const notAuthorized: MobileIABAuthorizedIndicator = MobileIABAuthorizedIndicator.notAuthorized; /* SHORT_NAMED_ENUMERATED_VALUE */
+const notAuthorized = MobileIABAuthorizedIndicator.notAuthorized; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_MobileIABAuthorizedIndicator: $.ASN1Decoder<MobileIABAuthorizedIndicator> = $._decodeEnumerated;
 export const _encode_MobileIABAuthorizedIndicator: $.ASN1Encoder<MobileIABAuthorizedIndicator> = $._encodeEnumerated;
 

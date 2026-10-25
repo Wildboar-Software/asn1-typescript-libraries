@@ -84,7 +84,7 @@ export const DialogueMode = _enum_for_DialogueMode;
  * @constant
  * @type {number}
  */
-export const DialogueMode_structured: DialogueMode =
+export const DialogueMode_structured =
     DialogueMode.structured; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -92,7 +92,7 @@ export const DialogueMode_structured: DialogueMode =
  * @constant
  * @type {number}
  */
-export const structured: DialogueMode =
+export const structured =
     DialogueMode.structured; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -105,7 +105,7 @@ export const structured: DialogueMode =
  * @constant
  * @type {number}
  */
-export const DialogueMode_unstructured: DialogueMode =
+export const DialogueMode_unstructured =
     DialogueMode.unstructured; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -113,7 +113,7 @@ export const DialogueMode_unstructured: DialogueMode =
  * @constant
  * @type {number}
  */
-export const unstructured: DialogueMode =
+export const unstructured =
     DialogueMode.unstructured; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 

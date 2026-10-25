@@ -40,7 +40,7 @@ type CorrelationReason = INTEGER;
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-344/
  */
 export
-const CorrelationReason_unknown: CorrelationReason = 0; /* LONG_NAMED_INTEGER_VALUE */
+const CorrelationReason_unknown = 0 satisfies CorrelationReason; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary unknown
@@ -49,7 +49,7 @@ const CorrelationReason_unknown: CorrelationReason = 0; /* LONG_NAMED_INTEGER_VA
  * @type {number}
  */
 export
-const unknown: CorrelationReason = CorrelationReason_unknown; /* SHORT_NAMED_INTEGER_VALUE */
+const unknown = CorrelationReason_unknown; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CorrelationReason_mCACommunication
@@ -62,7 +62,7 @@ const unknown: CorrelationReason = CorrelationReason_unknown; /* SHORT_NAMED_INT
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-344/
  */
 export
-const CorrelationReason_mCACommunication: CorrelationReason = 1; /* LONG_NAMED_INTEGER_VALUE */
+const CorrelationReason_mCACommunication = 1 satisfies CorrelationReason; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary mCACommunication
@@ -71,7 +71,7 @@ const CorrelationReason_mCACommunication: CorrelationReason = 1; /* LONG_NAMED_I
  * @type {number}
  */
 export
-const mCACommunication: CorrelationReason = CorrelationReason_mCACommunication; /* SHORT_NAMED_INTEGER_VALUE */
+const mCACommunication = CorrelationReason_mCACommunication; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CorrelationReason_cTIApplication
@@ -84,7 +84,7 @@ const mCACommunication: CorrelationReason = CorrelationReason_mCACommunication; 
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-344/
  */
 export
-const CorrelationReason_cTIApplication: CorrelationReason = 2; /* LONG_NAMED_INTEGER_VALUE */
+const CorrelationReason_cTIApplication = 2 satisfies CorrelationReason; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary cTIApplication
@@ -93,7 +93,7 @@ const CorrelationReason_cTIApplication: CorrelationReason = 2; /* LONG_NAMED_INT
  * @type {number}
  */
 export
-const cTIApplication: CorrelationReason = CorrelationReason_cTIApplication; /* SHORT_NAMED_INTEGER_VALUE */
+const cTIApplication = CorrelationReason_cTIApplication; /* SHORT_NAMED_INTEGER_VALUE */
 
 export
 const _decode_CorrelationReason = (el: _Element): CorrelationReason => {

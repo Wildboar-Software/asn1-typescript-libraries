@@ -44,7 +44,7 @@ export type IdmBindError_aETitleError =
  * @constant
  * @type {number}
  */
-export const IdmBindError_aETitleError_callingAETitleNotAccepted: IdmBindError_aETitleError = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+export const IdmBindError_aETitleError_callingAETitleNotAccepted = _enum_for_IdmBindError_aETitleError.callingAETitleNotAccepted; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary callingAETitleNotAccepted
@@ -55,7 +55,7 @@ export const IdmBindError_aETitleError_callingAETitleNotAccepted: IdmBindError_a
  * @constant
  * @type {number}
  */
-export const callingAETitleNotAccepted: IdmBindError_aETitleError = IdmBindError_aETitleError_callingAETitleNotAccepted; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const callingAETitleNotAccepted = IdmBindError_aETitleError_callingAETitleNotAccepted; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary IdmBindError_aETitleError_calledAETitleNotRecognized
@@ -66,7 +66,7 @@ export const callingAETitleNotAccepted: IdmBindError_aETitleError = IdmBindError
  * @constant
  * @type {number}
  */
-export const IdmBindError_aETitleError_calledAETitleNotRecognized: IdmBindError_aETitleError = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+export const IdmBindError_aETitleError_calledAETitleNotRecognized = _enum_for_IdmBindError_aETitleError.calledAETitleNotRecognized; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary calledAETitleNotRecognized
@@ -77,7 +77,7 @@ export const IdmBindError_aETitleError_calledAETitleNotRecognized: IdmBindError_
  * @constant
  * @type {number}
  */
-export const calledAETitleNotRecognized: IdmBindError_aETitleError = IdmBindError_aETitleError_calledAETitleNotRecognized; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const calledAETitleNotRecognized = IdmBindError_aETitleError_calledAETitleNotRecognized; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 export const _decode_IdmBindError_aETitleError = $._decodeEnumerated;

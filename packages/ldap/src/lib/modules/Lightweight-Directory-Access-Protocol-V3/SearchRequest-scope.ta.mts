@@ -47,7 +47,7 @@ export type SearchRequest_scope = _enum_for_SearchRequest_scope | ENUMERATED;
  * @constant
  * @type {number}
  */
-export const SearchRequest_scope_baseObject: SearchRequest_scope = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+export const SearchRequest_scope_baseObject = _enum_for_SearchRequest_scope.baseObject; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary baseObject
@@ -58,7 +58,7 @@ export const SearchRequest_scope_baseObject: SearchRequest_scope = 0; /* LONG_NA
  * @constant
  * @type {number}
  */
-export const baseObject: SearchRequest_scope = SearchRequest_scope_baseObject; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const baseObject = SearchRequest_scope_baseObject; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SearchRequest_scope_singleLevel
@@ -69,7 +69,7 @@ export const baseObject: SearchRequest_scope = SearchRequest_scope_baseObject; /
  * @constant
  * @type {number}
  */
-export const SearchRequest_scope_singleLevel: SearchRequest_scope = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+export const SearchRequest_scope_singleLevel = _enum_for_SearchRequest_scope.singleLevel; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary singleLevel
@@ -80,7 +80,7 @@ export const SearchRequest_scope_singleLevel: SearchRequest_scope = 1; /* LONG_N
  * @constant
  * @type {number}
  */
-export const singleLevel: SearchRequest_scope = SearchRequest_scope_singleLevel; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const singleLevel = SearchRequest_scope_singleLevel; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SearchRequest_scope_wholeSubtree
@@ -91,7 +91,7 @@ export const singleLevel: SearchRequest_scope = SearchRequest_scope_singleLevel;
  * @constant
  * @type {number}
  */
-export const SearchRequest_scope_wholeSubtree: SearchRequest_scope = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+export const SearchRequest_scope_wholeSubtree = _enum_for_SearchRequest_scope.wholeSubtree; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary wholeSubtree
@@ -102,7 +102,7 @@ export const SearchRequest_scope_wholeSubtree: SearchRequest_scope = 2; /* LONG_
  * @constant
  * @type {number}
  */
-export const wholeSubtree: SearchRequest_scope = SearchRequest_scope_wholeSubtree; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const wholeSubtree = SearchRequest_scope_wholeSubtree; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) SearchRequest_scope

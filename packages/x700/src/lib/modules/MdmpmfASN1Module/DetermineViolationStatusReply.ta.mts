@@ -103,7 +103,7 @@ export const DetermineViolationStatusReply = _enum_for_DetermineViolationStatusR
  * @constant
  * @type {number}
  */
-export const DetermineViolationStatusReply_unknown: DetermineViolationStatusReply =
+export const DetermineViolationStatusReply_unknown =
     DetermineViolationStatusReply.unknown; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -115,7 +115,7 @@ export const DetermineViolationStatusReply_unknown: DetermineViolationStatusRepl
  * @constant
  * @type {number}
  */
-export const unknown: DetermineViolationStatusReply =
+export const unknown =
     DetermineViolationStatusReply.unknown; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -128,7 +128,7 @@ export const unknown: DetermineViolationStatusReply =
  * @constant
  * @type {number}
  */
-export const DetermineViolationStatusReply_no_violation: DetermineViolationStatusReply =
+export const DetermineViolationStatusReply_no_violation =
     DetermineViolationStatusReply.no_violation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -141,7 +141,7 @@ export const DetermineViolationStatusReply_no_violation: DetermineViolationStatu
  * @constant
  * @type {number}
  */
-export const no_violation: DetermineViolationStatusReply =
+export const no_violation =
     DetermineViolationStatusReply.no_violation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -154,7 +154,7 @@ export const no_violation: DetermineViolationStatusReply =
  * @constant
  * @type {number}
  */
-export const DetermineViolationStatusReply_violation_detected: DetermineViolationStatusReply =
+export const DetermineViolationStatusReply_violation_detected =
     DetermineViolationStatusReply.violation_detected; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -167,7 +167,7 @@ export const DetermineViolationStatusReply_violation_detected: DetermineViolatio
  * @constant
  * @type {number}
  */
-export const violation_detected: DetermineViolationStatusReply =
+export const violation_detected =
     DetermineViolationStatusReply.violation_detected; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -179,7 +179,7 @@ export const violation_detected: DetermineViolationStatusReply =
  * @constant
  * @type {number}
  */
-export const DetermineViolationStatusReply_non_member: DetermineViolationStatusReply =
+export const DetermineViolationStatusReply_non_member =
     DetermineViolationStatusReply.non_member; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -191,7 +191,7 @@ export const DetermineViolationStatusReply_non_member: DetermineViolationStatusR
  * @constant
  * @type {number}
  */
-export const non_member: DetermineViolationStatusReply =
+export const non_member =
     DetermineViolationStatusReply.non_member; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 

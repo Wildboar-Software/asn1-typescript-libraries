@@ -46,7 +46,7 @@ type IPADirection = _enum_for_IPADirection | ENUMERATED;
  * @type {number}
  */
 export
-const IPADirection_toTarget: IPADirection = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+const IPADirection_toTarget = _enum_for_IPADirection.toTarget; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary toTarget
@@ -58,7 +58,7 @@ const IPADirection_toTarget: IPADirection = 0; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const toTarget: IPADirection = IPADirection_toTarget; /* SHORT_NAMED_ENUMERATED_VALUE */
+const toTarget = IPADirection_toTarget; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary IPADirection_fromTarget
@@ -70,7 +70,7 @@ const toTarget: IPADirection = IPADirection_toTarget; /* SHORT_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const IPADirection_fromTarget: IPADirection = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const IPADirection_fromTarget = _enum_for_IPADirection.fromTarget; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary fromTarget
@@ -82,7 +82,7 @@ const IPADirection_fromTarget: IPADirection = 1; /* LONG_NAMED_ENUMERATED_VALUE 
  * @type {number}
  */
 export
-const fromTarget: IPADirection = IPADirection_fromTarget; /* SHORT_NAMED_ENUMERATED_VALUE */
+const fromTarget = IPADirection_fromTarget; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_IPADirection: $.ASN1Decoder<IPADirection> = $._decodeEnumerated;
 export const _encode_IPADirection: $.ASN1Encoder<IPADirection> = $._encodeEnumerated;
 

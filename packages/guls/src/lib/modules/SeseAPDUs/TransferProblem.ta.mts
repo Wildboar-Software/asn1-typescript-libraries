@@ -88,7 +88,7 @@ export const TransferProblem = _enum_for_TransferProblem;
  * @constant
  * @type {number}
  */
-export const TransferProblem_duplicateInvocationId: TransferProblem =
+export const TransferProblem_duplicateInvocationId =
   TransferProblem.duplicateInvocationId; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -97,7 +97,7 @@ export const TransferProblem_duplicateInvocationId: TransferProblem =
  * @constant
  * @type {number}
  */
-export const duplicateInvocationId: TransferProblem =
+export const duplicateInvocationId =
   TransferProblem.duplicateInvocationId; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -112,7 +112,7 @@ export const duplicateInvocationId: TransferProblem =
  * @constant
  * @type {number}
  */
-export const TransferProblem_unrecognizedSecurityExchange: TransferProblem =
+export const TransferProblem_unrecognizedSecurityExchange =
   TransferProblem.unrecognizedSecurityExchange; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -121,7 +121,7 @@ export const TransferProblem_unrecognizedSecurityExchange: TransferProblem =
  * @constant
  * @type {number}
  */
-export const unrecognizedSecurityExchange: TransferProblem =
+export const unrecognizedSecurityExchange =
   TransferProblem.unrecognizedSecurityExchange; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -135,7 +135,7 @@ export const unrecognizedSecurityExchange: TransferProblem =
  * @constant
  * @type {number}
  */
-export const TransferProblem_mistypedItem: TransferProblem =
+export const TransferProblem_mistypedItem =
   TransferProblem.mistypedItem; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -144,7 +144,7 @@ export const TransferProblem_mistypedItem: TransferProblem =
  * @constant
  * @type {number}
  */
-export const mistypedItem: TransferProblem =
+export const mistypedItem =
   TransferProblem.mistypedItem; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -159,7 +159,7 @@ export const mistypedItem: TransferProblem =
  * @constant
  * @type {number}
  */
-export const TransferProblem_inappropriateInvocationId: TransferProblem =
+export const TransferProblem_inappropriateInvocationId =
   TransferProblem.inappropriateInvocationId; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -168,7 +168,7 @@ export const TransferProblem_inappropriateInvocationId: TransferProblem =
  * @constant
  * @type {number}
  */
-export const inappropriateInvocationId: TransferProblem =
+export const inappropriateInvocationId =
   TransferProblem.inappropriateInvocationId; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -183,7 +183,7 @@ export const inappropriateInvocationId: TransferProblem =
  * @constant
  * @type {number}
  */
-export const TransferProblem_alternatingSequenceError: TransferProblem =
+export const TransferProblem_alternatingSequenceError =
   TransferProblem.alternatingSequenceError; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -192,7 +192,7 @@ export const TransferProblem_alternatingSequenceError: TransferProblem =
  * @constant
  * @type {number}
  */
-export const alternatingSequenceError: TransferProblem =
+export const alternatingSequenceError =
   TransferProblem.alternatingSequenceError; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 

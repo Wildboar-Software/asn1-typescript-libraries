@@ -29,7 +29,7 @@ export type DSAScopeOfReferralValue = INTEGER;
  * @constant
  * @type {number}
  */
-export const DSAScopeOfReferralValue_dmd: DSAScopeOfReferralValue = 0; /* LONG_NAMED_INTEGER_VALUE */
+export const DSAScopeOfReferralValue_dmd = 0 satisfies DSAScopeOfReferralValue; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DSAScopeOfReferralValue_dmd
@@ -41,7 +41,7 @@ export const DSAScopeOfReferralValue_dmd: DSAScopeOfReferralValue = 0; /* LONG_N
  * @constant
  * @type {number}
  */
-export const dmd: DSAScopeOfReferralValue = DSAScopeOfReferralValue_dmd; /* SHORT_NAMED_INTEGER_VALUE */
+export const dmd = DSAScopeOfReferralValue_dmd; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DSAScopeOfReferralValue_country
@@ -52,7 +52,7 @@ export const dmd: DSAScopeOfReferralValue = DSAScopeOfReferralValue_dmd; /* SHOR
  * @constant
  * @type {number}
  */
-export const DSAScopeOfReferralValue_country: DSAScopeOfReferralValue = 1; /* LONG_NAMED_INTEGER_VALUE */
+export const DSAScopeOfReferralValue_country = 1 satisfies DSAScopeOfReferralValue; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DSAScopeOfReferralValue_country
@@ -63,7 +63,7 @@ export const DSAScopeOfReferralValue_country: DSAScopeOfReferralValue = 1; /* LO
  * @constant
  * @type {number}
  */
-export const country: DSAScopeOfReferralValue = DSAScopeOfReferralValue_country; /* SHORT_NAMED_INTEGER_VALUE */
+export const country = DSAScopeOfReferralValue_country; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DSAScopeOfReferralValue_global
@@ -74,7 +74,7 @@ export const country: DSAScopeOfReferralValue = DSAScopeOfReferralValue_country;
  * @constant
  * @type {number}
  */
-export const DSAScopeOfReferralValue_global: DSAScopeOfReferralValue = 2; /* LONG_NAMED_INTEGER_VALUE */
+export const DSAScopeOfReferralValue_global = 2 satisfies DSAScopeOfReferralValue; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DSAScopeOfReferralValue_global
@@ -85,7 +85,7 @@ export const DSAScopeOfReferralValue_global: DSAScopeOfReferralValue = 2; /* LON
  * @constant
  * @type {number}
  */
-export const global: DSAScopeOfReferralValue = DSAScopeOfReferralValue_global; /* SHORT_NAMED_INTEGER_VALUE */
+export const global = DSAScopeOfReferralValue_global; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_DSAScopeOfReferralValue = $._decodeInteger;

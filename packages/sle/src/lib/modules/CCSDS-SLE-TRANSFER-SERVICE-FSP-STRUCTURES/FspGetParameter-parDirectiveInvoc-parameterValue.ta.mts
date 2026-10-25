@@ -37,7 +37,7 @@ type FspGetParameter_parDirectiveInvoc_parameterValue = INTEGER;
  * @type {number}
  */
 export
-const FspGetParameter_parDirectiveInvoc_parameterValue_enabled: FspGetParameter_parDirectiveInvoc_parameterValue = 0; /* LONG_NAMED_INTEGER_VALUE */
+const FspGetParameter_parDirectiveInvoc_parameterValue_enabled = 0 satisfies FspGetParameter_parDirectiveInvoc_parameterValue; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary FspGetParameter_parDirectiveInvoc_parameterValue_enabled
@@ -49,7 +49,7 @@ const FspGetParameter_parDirectiveInvoc_parameterValue_enabled: FspGetParameter_
  * @type {number}
  */
 export
-const enabled: FspGetParameter_parDirectiveInvoc_parameterValue = FspGetParameter_parDirectiveInvoc_parameterValue_enabled; /* SHORT_NAMED_INTEGER_VALUE */
+const enabled = FspGetParameter_parDirectiveInvoc_parameterValue_enabled; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary FspGetParameter_parDirectiveInvoc_parameterValue_disabled
@@ -61,7 +61,7 @@ const enabled: FspGetParameter_parDirectiveInvoc_parameterValue = FspGetParamete
  * @type {number}
  */
 export
-const FspGetParameter_parDirectiveInvoc_parameterValue_disabled: FspGetParameter_parDirectiveInvoc_parameterValue = 1; /* LONG_NAMED_INTEGER_VALUE */
+const FspGetParameter_parDirectiveInvoc_parameterValue_disabled = 1 satisfies FspGetParameter_parDirectiveInvoc_parameterValue; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary FspGetParameter_parDirectiveInvoc_parameterValue_disabled
@@ -73,7 +73,7 @@ const FspGetParameter_parDirectiveInvoc_parameterValue_disabled: FspGetParameter
  * @type {number}
  */
 export
-const disabled: FspGetParameter_parDirectiveInvoc_parameterValue = FspGetParameter_parDirectiveInvoc_parameterValue_disabled; /* SHORT_NAMED_INTEGER_VALUE */
+const disabled = FspGetParameter_parDirectiveInvoc_parameterValue_disabled; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_FspGetParameter_parDirectiveInvoc_parameterValue: $.ASN1Decoder<FspGetParameter_parDirectiveInvoc_parameterValue> = $._decodeInteger;
 export const _encode_FspGetParameter_parDirectiveInvoc_parameterValue: $.ASN1Encoder<FspGetParameter_parDirectiveInvoc_parameterValue> = $._encodeInteger;
 

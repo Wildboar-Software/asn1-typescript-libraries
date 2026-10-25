@@ -50,7 +50,7 @@ export type ContactFunction = _enum_for_ContactFunction | ENUMERATED;
  * @constant
  * @type {number}
  */
-export const ContactFunction_other: ContactFunction = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ContactFunction_other = _enum_for_ContactFunction.other; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -58,7 +58,7 @@ export const ContactFunction_other: ContactFunction = 0; /* LONG_NAMED_ENUMERATE
  * @constant
  * @type {number}
  */
-export const other: ContactFunction = ContactFunction_other; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const other = ContactFunction_other; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -66,7 +66,7 @@ export const other: ContactFunction = ContactFunction_other; /* SHORT_NAMED_ENUM
  * @constant
  * @type {number}
  */
-export const ContactFunction_customerMaintenanceManager: ContactFunction = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ContactFunction_customerMaintenanceManager = _enum_for_ContactFunction.customerMaintenanceManager; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -74,7 +74,7 @@ export const ContactFunction_customerMaintenanceManager: ContactFunction = 1; /*
  * @constant
  * @type {number}
  */
-export const customerMaintenanceManager: ContactFunction = ContactFunction_customerMaintenanceManager; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const customerMaintenanceManager = ContactFunction_customerMaintenanceManager; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -82,7 +82,7 @@ export const customerMaintenanceManager: ContactFunction = ContactFunction_custo
  * @constant
  * @type {number}
  */
-export const ContactFunction_providerMaintenanceManager: ContactFunction = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ContactFunction_providerMaintenanceManager = _enum_for_ContactFunction.providerMaintenanceManager; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -90,7 +90,7 @@ export const ContactFunction_providerMaintenanceManager: ContactFunction = 2; /*
  * @constant
  * @type {number}
  */
-export const providerMaintenanceManager: ContactFunction = ContactFunction_providerMaintenanceManager; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const providerMaintenanceManager = ContactFunction_providerMaintenanceManager; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -98,7 +98,7 @@ export const providerMaintenanceManager: ContactFunction = ContactFunction_provi
  * @constant
  * @type {number}
  */
-export const ContactFunction_customerAccountManager: ContactFunction = 3; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ContactFunction_customerAccountManager = _enum_for_ContactFunction.customerAccountManager; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -106,7 +106,7 @@ export const ContactFunction_customerAccountManager: ContactFunction = 3; /* LON
  * @constant
  * @type {number}
  */
-export const customerAccountManager: ContactFunction = ContactFunction_customerAccountManager; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const customerAccountManager = ContactFunction_customerAccountManager; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -114,7 +114,7 @@ export const customerAccountManager: ContactFunction = ContactFunction_customerA
  * @constant
  * @type {number}
  */
-export const ContactFunction_providerAccountManager: ContactFunction = 4; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ContactFunction_providerAccountManager = _enum_for_ContactFunction.providerAccountManager; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -122,7 +122,7 @@ export const ContactFunction_providerAccountManager: ContactFunction = 4; /* LON
  * @constant
  * @type {number}
  */
-export const providerAccountManager: ContactFunction = ContactFunction_providerAccountManager; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const providerAccountManager = ContactFunction_providerAccountManager; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -130,7 +130,7 @@ export const providerAccountManager: ContactFunction = ContactFunction_providerA
  * @constant
  * @type {number}
  */
-export const ContactFunction_fieldServiceManager: ContactFunction = 5; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ContactFunction_fieldServiceManager = _enum_for_ContactFunction.fieldServiceManager; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -138,7 +138,7 @@ export const ContactFunction_fieldServiceManager: ContactFunction = 5; /* LONG_N
  * @constant
  * @type {number}
  */
-export const fieldServiceManager: ContactFunction = ContactFunction_fieldServiceManager; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const fieldServiceManager = ContactFunction_fieldServiceManager; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -146,7 +146,7 @@ export const fieldServiceManager: ContactFunction = ContactFunction_fieldService
  * @constant
  * @type {number}
  */
-export const ContactFunction_repairman: ContactFunction = 6; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ContactFunction_repairman = _enum_for_ContactFunction.repairman; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -154,7 +154,7 @@ export const ContactFunction_repairman: ContactFunction = 6; /* LONG_NAMED_ENUME
  * @constant
  * @type {number}
  */
-export const repairman: ContactFunction = ContactFunction_repairman; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const repairman = ContactFunction_repairman; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -162,7 +162,7 @@ export const repairman: ContactFunction = ContactFunction_repairman; /* SHORT_NA
  * @constant
  * @type {number}
  */
-export const ContactFunction_tester: ContactFunction = 7; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ContactFunction_tester = _enum_for_ContactFunction.tester; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -170,7 +170,7 @@ export const ContactFunction_tester: ContactFunction = 7; /* LONG_NAMED_ENUMERAT
  * @constant
  * @type {number}
  */
-export const tester: ContactFunction = ContactFunction_tester; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const tester = ContactFunction_tester; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -178,7 +178,7 @@ export const tester: ContactFunction = ContactFunction_tester; /* SHORT_NAMED_EN
  * @constant
  * @type {number}
  */
-export const ContactFunction_screener: ContactFunction = 8; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ContactFunction_screener = _enum_for_ContactFunction.screener; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -186,7 +186,7 @@ export const ContactFunction_screener: ContactFunction = 8; /* LONG_NAMED_ENUMER
  * @constant
  * @type {number}
  */
-export const screener: ContactFunction = ContactFunction_screener; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const screener = ContactFunction_screener; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 

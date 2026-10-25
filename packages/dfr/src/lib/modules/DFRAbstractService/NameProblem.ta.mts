@@ -94,7 +94,7 @@ const NameProblem = _enum_for_NameProblem;
  * @type {number}
  */
 export
-const NameProblem_invalid_upi: NameProblem = NameProblem.invalid_upi; /* LONG_NAMED_ENUMERATED_VALUE */
+const NameProblem_invalid_upi = NameProblem.invalid_upi; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalid_upi
@@ -106,7 +106,7 @@ const NameProblem_invalid_upi: NameProblem = NameProblem.invalid_upi; /* LONG_NA
  * @type {number}
  */
 export
-const invalid_upi: NameProblem = NameProblem.invalid_upi; /* SHORT_NAMED_ENUMERATED_VALUE */
+const invalid_upi = NameProblem.invalid_upi; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NameProblem_invalid_path_name
@@ -118,7 +118,7 @@ const invalid_upi: NameProblem = NameProblem.invalid_upi; /* SHORT_NAMED_ENUMERA
  * @type {number}
  */
 export
-const NameProblem_invalid_path_name: NameProblem = NameProblem.invalid_path_name; /* LONG_NAMED_ENUMERATED_VALUE */
+const NameProblem_invalid_path_name = NameProblem.invalid_path_name; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalid_path_name
@@ -130,7 +130,7 @@ const NameProblem_invalid_path_name: NameProblem = NameProblem.invalid_path_name
  * @type {number}
  */
 export
-const invalid_path_name: NameProblem = NameProblem.invalid_path_name; /* SHORT_NAMED_ENUMERATED_VALUE */
+const invalid_path_name = NameProblem.invalid_path_name; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NameProblem_ambiguous_path_name
@@ -141,7 +141,7 @@ const invalid_path_name: NameProblem = NameProblem.invalid_path_name; /* SHORT_N
  * @type {number}
  */
 export
-const NameProblem_ambiguous_path_name: NameProblem = NameProblem.ambiguous_path_name; /* LONG_NAMED_ENUMERATED_VALUE */
+const NameProblem_ambiguous_path_name = NameProblem.ambiguous_path_name; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ambiguous_path_name
@@ -152,7 +152,7 @@ const NameProblem_ambiguous_path_name: NameProblem = NameProblem.ambiguous_path_
  * @type {number}
  */
 export
-const ambiguous_path_name: NameProblem = NameProblem.ambiguous_path_name; /* SHORT_NAMED_ENUMERATED_VALUE */
+const ambiguous_path_name = NameProblem.ambiguous_path_name; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NameProblem_inappropriate_object_class
@@ -164,7 +164,7 @@ const ambiguous_path_name: NameProblem = NameProblem.ambiguous_path_name; /* SHO
  * @type {number}
  */
 export
-const NameProblem_inappropriate_object_class: NameProblem = NameProblem.inappropriate_object_class; /* LONG_NAMED_ENUMERATED_VALUE */
+const NameProblem_inappropriate_object_class = NameProblem.inappropriate_object_class; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary inappropriate_object_class
@@ -176,7 +176,7 @@ const NameProblem_inappropriate_object_class: NameProblem = NameProblem.inapprop
  * @type {number}
  */
 export
-const inappropriate_object_class: NameProblem = NameProblem.inappropriate_object_class; /* SHORT_NAMED_ENUMERATED_VALUE */
+const inappropriate_object_class = NameProblem.inappropriate_object_class; /* SHORT_NAMED_ENUMERATED_VALUE */
 export function _decode_NameProblem(el: _Element): NameProblem {
     const enumerated = $._decodeEnumerated(el);
     switch (enumerated) {

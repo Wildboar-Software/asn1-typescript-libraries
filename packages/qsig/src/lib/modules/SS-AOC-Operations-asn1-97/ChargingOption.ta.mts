@@ -90,7 +90,7 @@ const ChargingOption = _enum_for_ChargingOption;
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-211/
  */
 export
-const ChargingOption_aocFreeOfCharge: ChargingOption = ChargingOption.aocFreeOfCharge; /* LONG_NAMED_ENUMERATED_VALUE */
+const ChargingOption_aocFreeOfCharge = ChargingOption.aocFreeOfCharge; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary aocFreeOfCharge
@@ -99,7 +99,7 @@ const ChargingOption_aocFreeOfCharge: ChargingOption = ChargingOption.aocFreeOfC
  * @type {number}
  */
 export
-const aocFreeOfCharge: ChargingOption = ChargingOption.aocFreeOfCharge; /* SHORT_NAMED_ENUMERATED_VALUE */
+const aocFreeOfCharge = ChargingOption.aocFreeOfCharge; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ChargingOption_aocContinueCharging
@@ -115,7 +115,7 @@ const aocFreeOfCharge: ChargingOption = ChargingOption.aocFreeOfCharge; /* SHORT
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-211/
  */
 export
-const ChargingOption_aocContinueCharging: ChargingOption = ChargingOption.aocContinueCharging; /* LONG_NAMED_ENUMERATED_VALUE */
+const ChargingOption_aocContinueCharging = ChargingOption.aocContinueCharging; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary aocContinueCharging
@@ -124,7 +124,7 @@ const ChargingOption_aocContinueCharging: ChargingOption = ChargingOption.aocCon
  * @type {number}
  */
 export
-const aocContinueCharging: ChargingOption = ChargingOption.aocContinueCharging; /* SHORT_NAMED_ENUMERATED_VALUE */
+const aocContinueCharging = ChargingOption.aocContinueCharging; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ChargingOption_aocStopCharging
@@ -139,7 +139,7 @@ const aocContinueCharging: ChargingOption = ChargingOption.aocContinueCharging; 
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-211/
  */
 export
-const ChargingOption_aocStopCharging: ChargingOption = ChargingOption.aocStopCharging; /* LONG_NAMED_ENUMERATED_VALUE */
+const ChargingOption_aocStopCharging = ChargingOption.aocStopCharging; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary aocStopCharging
@@ -148,7 +148,7 @@ const ChargingOption_aocStopCharging: ChargingOption = ChargingOption.aocStopCha
  * @type {number}
  */
 export
-const aocStopCharging: ChargingOption = ChargingOption.aocStopCharging; /* SHORT_NAMED_ENUMERATED_VALUE */
+const aocStopCharging = ChargingOption.aocStopCharging; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_ChargingOption: $.ASN1Decoder<ChargingOption> = $._decodeEnumerated;

@@ -69,7 +69,7 @@ export const SensitivityField = _enum_for_SensitivityField;
  * @constant
  * @type {number}
  */
-export const SensitivityField_personal: SensitivityField =
+export const SensitivityField_personal =
     SensitivityField.personal; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -77,7 +77,7 @@ export const SensitivityField_personal: SensitivityField =
  * @constant
  * @type {number}
  */
-export const personal: SensitivityField =
+export const personal =
     SensitivityField.personal; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -85,7 +85,7 @@ export const personal: SensitivityField =
  * @constant
  * @type {number}
  */
-export const SensitivityField_private_: SensitivityField =
+export const SensitivityField_private_ =
     SensitivityField.private_; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -93,7 +93,7 @@ export const SensitivityField_private_: SensitivityField =
  * @constant
  * @type {number}
  */
-export const private_: SensitivityField =
+export const private_ =
     SensitivityField.private_; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -101,7 +101,7 @@ export const private_: SensitivityField =
  * @constant
  * @type {number}
  */
-export const SensitivityField_company_confidential: SensitivityField =
+export const SensitivityField_company_confidential =
     SensitivityField.company_confidential; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -109,7 +109,7 @@ export const SensitivityField_company_confidential: SensitivityField =
  * @constant
  * @type {number}
  */
-export const company_confidential: SensitivityField =
+export const company_confidential =
     SensitivityField.company_confidential; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 

@@ -61,7 +61,7 @@ export const Termination = _enum_for_Termination;
  * @constant
  * @type {number}
  */
-export const Termination_basic: Termination =
+export const Termination_basic =
     Termination.basic; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -69,7 +69,7 @@ export const Termination_basic: Termination =
  * @constant
  * @type {number}
  */
-export const basic: Termination =
+export const basic =
     Termination.basic; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -77,7 +77,7 @@ export const basic: Termination =
  * @constant
  * @type {number}
  */
-export const Termination_prearranged: Termination =
+export const Termination_prearranged =
     Termination.prearranged; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -85,7 +85,7 @@ export const Termination_prearranged: Termination =
  * @constant
  * @type {number}
  */
-export const prearranged: Termination =
+export const prearranged =
     Termination.prearranged; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 

@@ -43,7 +43,7 @@ export type AbortReason = INTEGER;
  * @constant
  * @type {number}
  */
-export const AbortReason_localSystemProblem: AbortReason = 0; /* LONG_NAMED_INTEGER_VALUE */
+export const AbortReason_localSystemProblem = 0 satisfies AbortReason; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -52,7 +52,7 @@ export const AbortReason_localSystemProblem: AbortReason = 0; /* LONG_NAMED_INTE
  * @constant
  * @type {number}
  */
-export const localSystemProblem: AbortReason = AbortReason_localSystemProblem; /* SHORT_NAMED_INTEGER_VALUE */
+export const localSystemProblem = AbortReason_localSystemProblem; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -61,7 +61,7 @@ export const localSystemProblem: AbortReason = AbortReason_localSystemProblem; /
  * @constant
  * @type {number}
  */
-export const AbortReason_invalidParameter: AbortReason = 1; /* LONG_NAMED_INTEGER_VALUE */
+export const AbortReason_invalidParameter = 1 satisfies AbortReason; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -70,7 +70,7 @@ export const AbortReason_invalidParameter: AbortReason = 1; /* LONG_NAMED_INTEGE
  * @constant
  * @type {number}
  */
-export const invalidParameter: AbortReason = AbortReason_invalidParameter; /* SHORT_NAMED_INTEGER_VALUE */
+export const invalidParameter = AbortReason_invalidParameter; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -79,7 +79,7 @@ export const invalidParameter: AbortReason = AbortReason_invalidParameter; /* SH
  * @constant
  * @type {number}
  */
-export const AbortReason_unrecognizedActivity: AbortReason = 2; /* LONG_NAMED_INTEGER_VALUE */
+export const AbortReason_unrecognizedActivity = 2 satisfies AbortReason; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -88,7 +88,7 @@ export const AbortReason_unrecognizedActivity: AbortReason = 2; /* LONG_NAMED_IN
  * @constant
  * @type {number}
  */
-export const unrecognizedActivity: AbortReason = AbortReason_unrecognizedActivity; /* SHORT_NAMED_INTEGER_VALUE */
+export const unrecognizedActivity = AbortReason_unrecognizedActivity; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -97,7 +97,7 @@ export const unrecognizedActivity: AbortReason = AbortReason_unrecognizedActivit
  * @constant
  * @type {number}
  */
-export const AbortReason_temporaryProblem: AbortReason = 3; /* LONG_NAMED_INTEGER_VALUE */
+export const AbortReason_temporaryProblem = 3 satisfies AbortReason; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -106,7 +106,7 @@ export const AbortReason_temporaryProblem: AbortReason = 3; /* LONG_NAMED_INTEGE
  * @constant
  * @type {number}
  */
-export const temporaryProblem: AbortReason = AbortReason_temporaryProblem; /* SHORT_NAMED_INTEGER_VALUE */
+export const temporaryProblem = AbortReason_temporaryProblem; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -115,7 +115,7 @@ export const temporaryProblem: AbortReason = AbortReason_temporaryProblem; /* SH
  * @constant
  * @type {number}
  */
-export const AbortReason_protocolError: AbortReason = 4; /* LONG_NAMED_INTEGER_VALUE */
+export const AbortReason_protocolError = 4 satisfies AbortReason; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -124,7 +124,7 @@ export const AbortReason_protocolError: AbortReason = 4; /* LONG_NAMED_INTEGER_V
  * @constant
  * @type {number}
  */
-export const protocolError: AbortReason = AbortReason_protocolError; /* SHORT_NAMED_INTEGER_VALUE */
+export const protocolError = AbortReason_protocolError; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -133,7 +133,7 @@ export const protocolError: AbortReason = AbortReason_protocolError; /* SHORT_NA
  * @constant
  * @type {number}
  */
-export const AbortReason_permanentProblem: AbortReason = 5; /* LONG_NAMED_INTEGER_VALUE */
+export const AbortReason_permanentProblem = 5 satisfies AbortReason; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -142,7 +142,7 @@ export const AbortReason_permanentProblem: AbortReason = 5; /* LONG_NAMED_INTEGE
  * @constant
  * @type {number}
  */
-export const permanentProblem: AbortReason = AbortReason_permanentProblem; /* SHORT_NAMED_INTEGER_VALUE */
+export const permanentProblem = AbortReason_permanentProblem; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -151,7 +151,7 @@ export const permanentProblem: AbortReason = AbortReason_permanentProblem; /* SH
  * @constant
  * @type {number}
  */
-export const AbortReason_userError: AbortReason = 6; /* LONG_NAMED_INTEGER_VALUE */
+export const AbortReason_userError = 6 satisfies AbortReason; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -160,7 +160,7 @@ export const AbortReason_userError: AbortReason = 6; /* LONG_NAMED_INTEGER_VALUE
  * @constant
  * @type {number}
  */
-export const userError: AbortReason = AbortReason_userError; /* SHORT_NAMED_INTEGER_VALUE */
+export const userError = AbortReason_userError; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -169,7 +169,7 @@ export const userError: AbortReason = AbortReason_userError; /* SHORT_NAMED_INTE
  * @constant
  * @type {number}
  */
-export const AbortReason_transferCompleted: AbortReason = 7; /* LONG_NAMED_INTEGER_VALUE */
+export const AbortReason_transferCompleted = 7 satisfies AbortReason; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -178,7 +178,7 @@ export const AbortReason_transferCompleted: AbortReason = 7; /* LONG_NAMED_INTEG
  * @constant
  * @type {number}
  */
-export const transferCompleted: AbortReason = AbortReason_transferCompleted; /* SHORT_NAMED_INTEGER_VALUE */
+export const transferCompleted = AbortReason_transferCompleted; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 

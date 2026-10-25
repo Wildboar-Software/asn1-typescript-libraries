@@ -39,42 +39,42 @@ export type MessageClass_objects = _enum_for_MessageClass_objects | ENUMERATED;
  * @constant
  * @type {number}
  */
-export const MessageClass_objects_messages: MessageClass_objects = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+export const MessageClass_objects_messages = _enum_for_MessageClass_objects.messages; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary messages
  * @constant
  * @type {number}
  */
-export const messages: MessageClass_objects = MessageClass_objects_messages; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const messages = MessageClass_objects_messages; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MessageClass_objects_reports
  * @constant
  * @type {number}
  */
-export const MessageClass_objects_reports: MessageClass_objects = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+export const MessageClass_objects_reports = _enum_for_MessageClass_objects.reports; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary reports
  * @constant
  * @type {number}
  */
-export const reports: MessageClass_objects = MessageClass_objects_reports; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const reports = MessageClass_objects_reports; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MessageClass_objects_both
  * @constant
  * @type {number}
  */
-export const MessageClass_objects_both: MessageClass_objects = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+export const MessageClass_objects_both = _enum_for_MessageClass_objects.both; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary both
  * @constant
  * @type {number}
  */
-export const both: MessageClass_objects = MessageClass_objects_both; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const both = MessageClass_objects_both; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 export const _decode_MessageClass_objects = $._decodeEnumerated;

@@ -101,7 +101,7 @@ const MMSMessageClass = _enum_for_MMSMessageClass;
  * @type {number}
  */
 export
-const MMSMessageClass_personal: MMSMessageClass = MMSMessageClass.personal; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMSMessageClass_personal = MMSMessageClass.personal; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary personal
@@ -109,7 +109,7 @@ const MMSMessageClass_personal: MMSMessageClass = MMSMessageClass.personal; /* L
  * @type {number}
  */
 export
-const personal: MMSMessageClass = MMSMessageClass.personal; /* SHORT_NAMED_ENUMERATED_VALUE */
+const personal = MMSMessageClass.personal; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMSMessageClass_advertisement
@@ -117,7 +117,7 @@ const personal: MMSMessageClass = MMSMessageClass.personal; /* SHORT_NAMED_ENUME
  * @type {number}
  */
 export
-const MMSMessageClass_advertisement: MMSMessageClass = MMSMessageClass.advertisement; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMSMessageClass_advertisement = MMSMessageClass.advertisement; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary advertisement
@@ -125,7 +125,7 @@ const MMSMessageClass_advertisement: MMSMessageClass = MMSMessageClass.advertise
  * @type {number}
  */
 export
-const advertisement: MMSMessageClass = MMSMessageClass.advertisement; /* SHORT_NAMED_ENUMERATED_VALUE */
+const advertisement = MMSMessageClass.advertisement; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMSMessageClass_informational
@@ -133,7 +133,7 @@ const advertisement: MMSMessageClass = MMSMessageClass.advertisement; /* SHORT_N
  * @type {number}
  */
 export
-const MMSMessageClass_informational: MMSMessageClass = MMSMessageClass.informational; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMSMessageClass_informational = MMSMessageClass.informational; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary informational
@@ -141,7 +141,7 @@ const MMSMessageClass_informational: MMSMessageClass = MMSMessageClass.informati
  * @type {number}
  */
 export
-const informational: MMSMessageClass = MMSMessageClass.informational; /* SHORT_NAMED_ENUMERATED_VALUE */
+const informational = MMSMessageClass.informational; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMSMessageClass_auto
@@ -149,7 +149,7 @@ const informational: MMSMessageClass = MMSMessageClass.informational; /* SHORT_N
  * @type {number}
  */
 export
-const MMSMessageClass_auto: MMSMessageClass = MMSMessageClass.auto; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMSMessageClass_auto = MMSMessageClass.auto; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary auto
@@ -157,7 +157,7 @@ const MMSMessageClass_auto: MMSMessageClass = MMSMessageClass.auto; /* LONG_NAME
  * @type {number}
  */
 export
-const auto: MMSMessageClass = MMSMessageClass.auto; /* SHORT_NAMED_ENUMERATED_VALUE */
+const auto = MMSMessageClass.auto; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_MMSMessageClass: $.ASN1Decoder<MMSMessageClass> = $._decodeEnumerated;
 export const _encode_MMSMessageClass: $.ASN1Encoder<MMSMessageClass> = $._encodeEnumerated;
 

@@ -65,7 +65,7 @@ export const EDIMSEntryType = _enum_for_EDIMSEntryType;
  * @constant
  * @type {number}
  */
-export const EDIMSEntryType_edim: EDIMSEntryType =
+export const EDIMSEntryType_edim =
     EDIMSEntryType.edim; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -73,7 +73,7 @@ export const EDIMSEntryType_edim: EDIMSEntryType =
  * @constant
  * @type {number}
  */
-export const edim: EDIMSEntryType =
+export const edim =
     EDIMSEntryType.edim; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -81,7 +81,7 @@ export const edim: EDIMSEntryType =
  * @constant
  * @type {number}
  */
-export const EDIMSEntryType_pn: EDIMSEntryType =
+export const EDIMSEntryType_pn =
     EDIMSEntryType.pn; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -89,7 +89,7 @@ export const EDIMSEntryType_pn: EDIMSEntryType =
  * @constant
  * @type {number}
  */
-export const pn: EDIMSEntryType =
+export const pn =
     EDIMSEntryType.pn; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -97,7 +97,7 @@ export const pn: EDIMSEntryType =
  * @constant
  * @type {number}
  */
-export const EDIMSEntryType_nn: EDIMSEntryType =
+export const EDIMSEntryType_nn =
     EDIMSEntryType.nn; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -105,7 +105,7 @@ export const EDIMSEntryType_nn: EDIMSEntryType =
  * @constant
  * @type {number}
  */
-export const nn: EDIMSEntryType =
+export const nn =
     EDIMSEntryType.nn; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -113,7 +113,7 @@ export const nn: EDIMSEntryType =
  * @constant
  * @type {number}
  */
-export const EDIMSEntryType_fn: EDIMSEntryType =
+export const EDIMSEntryType_fn =
     EDIMSEntryType.fn; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -121,7 +121,7 @@ export const EDIMSEntryType_fn: EDIMSEntryType =
  * @constant
  * @type {number}
  */
-export const fn: EDIMSEntryType =
+export const fn =
     EDIMSEntryType.fn; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 

@@ -88,7 +88,7 @@ const LampBrightness = _enum_for_LampBrightness;
  * @type {number}
  */
 export
-const LampBrightness_unspecified: LampBrightness = LampBrightness.unspecified; /* LONG_NAMED_ENUMERATED_VALUE */
+const LampBrightness_unspecified = LampBrightness.unspecified; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unspecified
@@ -96,7 +96,7 @@ const LampBrightness_unspecified: LampBrightness = LampBrightness.unspecified; /
  * @type {number}
  */
 export
-const unspecified: LampBrightness = LampBrightness.unspecified; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unspecified = LampBrightness.unspecified; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LampBrightness_dim
@@ -108,7 +108,7 @@ const unspecified: LampBrightness = LampBrightness.unspecified; /* SHORT_NAMED_E
  * @type {number}
  */
 export
-const LampBrightness_dim: LampBrightness = LampBrightness.dim; /* LONG_NAMED_ENUMERATED_VALUE */
+const LampBrightness_dim = LampBrightness.dim; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary dim
@@ -116,7 +116,7 @@ const LampBrightness_dim: LampBrightness = LampBrightness.dim; /* LONG_NAMED_ENU
  * @type {number}
  */
 export
-const dim: LampBrightness = LampBrightness.dim; /* SHORT_NAMED_ENUMERATED_VALUE */
+const dim = LampBrightness.dim; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LampBrightness_bright
@@ -128,7 +128,7 @@ const dim: LampBrightness = LampBrightness.dim; /* SHORT_NAMED_ENUMERATED_VALUE 
  * @type {number}
  */
 export
-const LampBrightness_bright: LampBrightness = LampBrightness.bright; /* LONG_NAMED_ENUMERATED_VALUE */
+const LampBrightness_bright = LampBrightness.bright; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary bright
@@ -136,7 +136,7 @@ const LampBrightness_bright: LampBrightness = LampBrightness.bright; /* LONG_NAM
  * @type {number}
  */
 export
-const bright: LampBrightness = LampBrightness.bright; /* SHORT_NAMED_ENUMERATED_VALUE */
+const bright = LampBrightness.bright; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 let _cached_decoder_for_LampBrightness: $.ASN1Decoder<LampBrightness> | null = null;
 

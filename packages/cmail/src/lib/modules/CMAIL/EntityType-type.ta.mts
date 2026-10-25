@@ -81,7 +81,7 @@ export const EntityType_type = _enum_for_EntityType_type;
  * @constant
  * @type {number}
  */
-export const EntityType_type_from_: EntityType_type =
+export const EntityType_type_from_ =
   EntityType_type.from_; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -91,7 +91,7 @@ export const EntityType_type_from_: EntityType_type =
  * @constant
  * @type {number}
  */
-export const from_: EntityType_type =
+export const from_ =
   EntityType_type.from_; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -101,7 +101,7 @@ export const from_: EntityType_type =
  * @constant
  * @type {number}
  */
-export const EntityType_type_to: EntityType_type =
+export const EntityType_type_to =
   EntityType_type.to; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -111,7 +111,7 @@ export const EntityType_type_to: EntityType_type =
  * @constant
  * @type {number}
  */
-export const to: EntityType_type =
+export const to =
   EntityType_type.to; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -121,7 +121,7 @@ export const to: EntityType_type =
  * @constant
  * @type {number}
  */
-export const EntityType_type_cc: EntityType_type =
+export const EntityType_type_cc =
   EntityType_type.cc; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -131,7 +131,7 @@ export const EntityType_type_cc: EntityType_type =
  * @constant
  * @type {number}
  */
-export const cc: EntityType_type =
+export const cc =
   EntityType_type.cc; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -141,7 +141,7 @@ export const cc: EntityType_type =
  * @constant
  * @type {number}
  */
-export const EntityType_type_transit: EntityType_type =
+export const EntityType_type_transit =
   EntityType_type.transit; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -151,7 +151,7 @@ export const EntityType_type_transit: EntityType_type =
  * @constant
  * @type {number}
  */
-export const transit: EntityType_type =
+export const transit =
   EntityType_type.transit; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 

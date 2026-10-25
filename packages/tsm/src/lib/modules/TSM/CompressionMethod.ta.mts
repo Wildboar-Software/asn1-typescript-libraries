@@ -47,7 +47,7 @@ type CompressionMethod = _enum_for_CompressionMethod | ENUMERATED;
  * @type {number}
  */
 export
-const CompressionMethod_null_: CompressionMethod = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+const CompressionMethod_null_ = _enum_for_CompressionMethod.null_; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary null_
@@ -56,7 +56,7 @@ const CompressionMethod_null_: CompressionMethod = 0; /* LONG_NAMED_ENUMERATED_V
  * @type {number}
  */
 export
-const null_: CompressionMethod = CompressionMethod_null_; /* SHORT_NAMED_ENUMERATED_VALUE */
+const null_ = CompressionMethod_null_; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_CompressionMethod = $._decodeEnumerated;
 export const _encode_CompressionMethod = $._encodeEnumerated;
 

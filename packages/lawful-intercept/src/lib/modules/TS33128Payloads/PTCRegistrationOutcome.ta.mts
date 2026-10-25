@@ -84,7 +84,7 @@ const PTCRegistrationOutcome = _enum_for_PTCRegistrationOutcome;
  * @type {number}
  */
 export
-const PTCRegistrationOutcome_success: PTCRegistrationOutcome = PTCRegistrationOutcome.success; /* LONG_NAMED_ENUMERATED_VALUE */
+const PTCRegistrationOutcome_success = PTCRegistrationOutcome.success; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary success
@@ -92,7 +92,7 @@ const PTCRegistrationOutcome_success: PTCRegistrationOutcome = PTCRegistrationOu
  * @type {number}
  */
 export
-const success: PTCRegistrationOutcome = PTCRegistrationOutcome.success; /* SHORT_NAMED_ENUMERATED_VALUE */
+const success = PTCRegistrationOutcome.success; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PTCRegistrationOutcome_failure
@@ -100,7 +100,7 @@ const success: PTCRegistrationOutcome = PTCRegistrationOutcome.success; /* SHORT
  * @type {number}
  */
 export
-const PTCRegistrationOutcome_failure: PTCRegistrationOutcome = PTCRegistrationOutcome.failure; /* LONG_NAMED_ENUMERATED_VALUE */
+const PTCRegistrationOutcome_failure = PTCRegistrationOutcome.failure; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary failure
@@ -108,7 +108,7 @@ const PTCRegistrationOutcome_failure: PTCRegistrationOutcome = PTCRegistrationOu
  * @type {number}
  */
 export
-const failure: PTCRegistrationOutcome = PTCRegistrationOutcome.failure; /* SHORT_NAMED_ENUMERATED_VALUE */
+const failure = PTCRegistrationOutcome.failure; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_PTCRegistrationOutcome: $.ASN1Decoder<PTCRegistrationOutcome> = $._decodeEnumerated;
 export const _encode_PTCRegistrationOutcome: $.ASN1Encoder<PTCRegistrationOutcome> = $._encodeEnumerated;
 

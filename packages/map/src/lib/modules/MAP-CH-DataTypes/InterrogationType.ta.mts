@@ -79,7 +79,7 @@ const InterrogationType = _enum_for_InterrogationType;
  * @type {number}
  */
 export
-const InterrogationType_basicCall: InterrogationType = InterrogationType.basicCall; /* LONG_NAMED_ENUMERATED_VALUE */
+const InterrogationType_basicCall = InterrogationType.basicCall; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary basicCall
@@ -91,7 +91,7 @@ const InterrogationType_basicCall: InterrogationType = InterrogationType.basicCa
  * @type {number}
  */
 export
-const basicCall: InterrogationType = InterrogationType.basicCall; /* SHORT_NAMED_ENUMERATED_VALUE */
+const basicCall = InterrogationType.basicCall; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary InterrogationType_forwarding
@@ -103,7 +103,7 @@ const basicCall: InterrogationType = InterrogationType.basicCall; /* SHORT_NAMED
  * @type {number}
  */
 export
-const InterrogationType_forwarding: InterrogationType = InterrogationType.forwarding; /* LONG_NAMED_ENUMERATED_VALUE */
+const InterrogationType_forwarding = InterrogationType.forwarding; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary forwarding
@@ -115,7 +115,7 @@ const InterrogationType_forwarding: InterrogationType = InterrogationType.forwar
  * @type {number}
  */
 export
-const forwarding: InterrogationType = InterrogationType.forwarding; /* SHORT_NAMED_ENUMERATED_VALUE */
+const forwarding = InterrogationType.forwarding; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) InterrogationType

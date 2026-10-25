@@ -76,7 +76,7 @@ const ExtensionField_criticality = _enum_for_ExtensionField_criticality;
  * @type {number}
  */
 export
-const ExtensionField_criticality_ignore: ExtensionField_criticality = ExtensionField_criticality.ignore; /* LONG_NAMED_ENUMERATED_VALUE */
+const ExtensionField_criticality_ignore = ExtensionField_criticality.ignore; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ignore
@@ -84,7 +84,7 @@ const ExtensionField_criticality_ignore: ExtensionField_criticality = ExtensionF
  * @type {number}
  */
 export
-const ignore: ExtensionField_criticality = ExtensionField_criticality.ignore; /* SHORT_NAMED_ENUMERATED_VALUE */
+const ignore = ExtensionField_criticality.ignore; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ExtensionField_criticality_abort
@@ -92,7 +92,7 @@ const ignore: ExtensionField_criticality = ExtensionField_criticality.ignore; /*
  * @type {number}
  */
 export
-const ExtensionField_criticality_abort: ExtensionField_criticality = ExtensionField_criticality.abort; /* LONG_NAMED_ENUMERATED_VALUE */
+const ExtensionField_criticality_abort = ExtensionField_criticality.abort; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary abort
@@ -100,7 +100,7 @@ const ExtensionField_criticality_abort: ExtensionField_criticality = ExtensionFi
  * @type {number}
  */
 export
-const abort: ExtensionField_criticality = ExtensionField_criticality.abort; /* SHORT_NAMED_ENUMERATED_VALUE */
+const abort = ExtensionField_criticality.abort; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_ExtensionField_criticality = $._decodeEnumerated;
 export const _encode_ExtensionField_criticality = $._encodeEnumerated;
 

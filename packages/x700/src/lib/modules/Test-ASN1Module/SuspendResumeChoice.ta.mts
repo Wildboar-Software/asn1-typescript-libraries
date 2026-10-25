@@ -82,7 +82,7 @@ export const SuspendResumeChoice = _enum_for_SuspendResumeChoice;
  * @constant
  * @type {number}
  */
-export const SuspendResumeChoice_suspend: SuspendResumeChoice =
+export const SuspendResumeChoice_suspend =
     SuspendResumeChoice.suspend; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -96,7 +96,7 @@ export const SuspendResumeChoice_suspend: SuspendResumeChoice =
  * @constant
  * @type {number}
  */
-export const suspend: SuspendResumeChoice =
+export const suspend =
     SuspendResumeChoice.suspend; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -110,7 +110,7 @@ export const suspend: SuspendResumeChoice =
  * @constant
  * @type {number}
  */
-export const SuspendResumeChoice_resume: SuspendResumeChoice =
+export const SuspendResumeChoice_resume =
     SuspendResumeChoice.resume; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -124,7 +124,7 @@ export const SuspendResumeChoice_resume: SuspendResumeChoice =
  * @constant
  * @type {number}
  */
-export const resume: SuspendResumeChoice =
+export const resume =
     SuspendResumeChoice.resume; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 

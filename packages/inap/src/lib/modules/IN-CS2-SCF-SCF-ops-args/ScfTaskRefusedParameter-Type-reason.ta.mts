@@ -77,7 +77,7 @@ const ScfTaskRefusedParameter_Type_reason = _enum_for_ScfTaskRefusedParameter_Ty
  * @type {number}
  */
 export
-const ScfTaskRefusedParameter_Type_reason_generic: ScfTaskRefusedParameter_Type_reason = ScfTaskRefusedParameter_Type_reason.generic; /* LONG_NAMED_ENUMERATED_VALUE */
+const ScfTaskRefusedParameter_Type_reason_generic = ScfTaskRefusedParameter_Type_reason.generic; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary generic
@@ -85,7 +85,7 @@ const ScfTaskRefusedParameter_Type_reason_generic: ScfTaskRefusedParameter_Type_
  * @type {number}
  */
 export
-const generic: ScfTaskRefusedParameter_Type_reason = ScfTaskRefusedParameter_Type_reason.generic; /* SHORT_NAMED_ENUMERATED_VALUE */
+const generic = ScfTaskRefusedParameter_Type_reason.generic; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ScfTaskRefusedParameter_Type_reason_unobtainable
@@ -93,7 +93,7 @@ const generic: ScfTaskRefusedParameter_Type_reason = ScfTaskRefusedParameter_Typ
  * @type {number}
  */
 export
-const ScfTaskRefusedParameter_Type_reason_unobtainable: ScfTaskRefusedParameter_Type_reason = ScfTaskRefusedParameter_Type_reason.unobtainable; /* LONG_NAMED_ENUMERATED_VALUE */
+const ScfTaskRefusedParameter_Type_reason_unobtainable = ScfTaskRefusedParameter_Type_reason.unobtainable; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unobtainable
@@ -101,7 +101,7 @@ const ScfTaskRefusedParameter_Type_reason_unobtainable: ScfTaskRefusedParameter_
  * @type {number}
  */
 export
-const unobtainable: ScfTaskRefusedParameter_Type_reason = ScfTaskRefusedParameter_Type_reason.unobtainable; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unobtainable = ScfTaskRefusedParameter_Type_reason.unobtainable; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ScfTaskRefusedParameter_Type_reason_congestion
@@ -109,7 +109,7 @@ const unobtainable: ScfTaskRefusedParameter_Type_reason = ScfTaskRefusedParamete
  * @type {number}
  */
 export
-const ScfTaskRefusedParameter_Type_reason_congestion: ScfTaskRefusedParameter_Type_reason = ScfTaskRefusedParameter_Type_reason.congestion; /* LONG_NAMED_ENUMERATED_VALUE */
+const ScfTaskRefusedParameter_Type_reason_congestion = ScfTaskRefusedParameter_Type_reason.congestion; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary congestion
@@ -117,7 +117,7 @@ const ScfTaskRefusedParameter_Type_reason_congestion: ScfTaskRefusedParameter_Ty
  * @type {number}
  */
 export
-const congestion: ScfTaskRefusedParameter_Type_reason = ScfTaskRefusedParameter_Type_reason.congestion; /* SHORT_NAMED_ENUMERATED_VALUE */
+const congestion = ScfTaskRefusedParameter_Type_reason.congestion; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 function _decode_ScfTaskRefusedParameter_Type_reason(el: _Element): ScfTaskRefusedParameter_Type_reason {
