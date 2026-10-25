@@ -128,7 +128,6 @@ export * from "./lib/distributed/ipv4.mjs";
 export { loopDetected } from "./lib/distributed/loopDetected.mjs";
 export { naddrToURI } from "./lib/distributed/naddrToURI.mjs";
 export * from "./lib/distributed/uri.mjs";
-export { boundariesOfPeriodOccurrence } from "./lib/utils/boundariesOfPeriodOccurrence.mjs";
 export { checkNameForm } from "./lib/utils/checkNameForm.mjs";
 export { compareCode } from "./lib/utils/compareCode.mjs";
 export { dateIsBetweenDayTimeBand } from "./lib/utils/dateIsBetweenDayTimeBand.mjs";
