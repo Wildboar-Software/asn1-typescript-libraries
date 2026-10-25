@@ -57,7 +57,7 @@ const FspInvokeDirectiveInvocation_directive_setTimeoutType_terminateAD = 0 sati
  * @type {number}
  */
 export
-const terminateAD = FspInvokeDirectiveInvocation_directive_setTimeoutType_terminateAD satisfies FspInvokeDirectiveInvocation_directive_setTimeoutType; /* SHORT_NAMED_INTEGER_VALUE */
+const terminateAD = FspInvokeDirectiveInvocation_directive_setTimeoutType_terminateAD; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary FspInvokeDirectiveInvocation_directive_setTimeoutType_suspendAD
@@ -84,7 +84,7 @@ const FspInvokeDirectiveInvocation_directive_setTimeoutType_suspendAD = 1 satisf
  * @type {number}
  */
 export
-const suspendAD = FspInvokeDirectiveInvocation_directive_setTimeoutType_suspendAD satisfies FspInvokeDirectiveInvocation_directive_setTimeoutType; /* SHORT_NAMED_INTEGER_VALUE */
+const suspendAD = FspInvokeDirectiveInvocation_directive_setTimeoutType_suspendAD; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_FspInvokeDirectiveInvocation_directive_setTimeoutType: $.ASN1Decoder<FspInvokeDirectiveInvocation_directive_setTimeoutType> = $._decodeInteger;
 export const _encode_FspInvokeDirectiveInvocation_directive_setTimeoutType: $.ASN1Encoder<FspInvokeDirectiveInvocation_directive_setTimeoutType> = $._encodeInteger;
 

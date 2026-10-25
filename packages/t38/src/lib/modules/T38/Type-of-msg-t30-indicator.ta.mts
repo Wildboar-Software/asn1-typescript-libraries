@@ -109,7 +109,7 @@ export type Type_of_msg_t30_indicator =
  * @constant
  * @type {number}
  */
-export const Type_of_msg_t30_indicator_no_signal = _enum_for_Type_of_msg_t30_indicator.no_signal satisfies Type_of_msg_t30_indicator; /* LONG_NAMED_ENUMERATED_VALUE */
+export const Type_of_msg_t30_indicator_no_signal = _enum_for_Type_of_msg_t30_indicator.no_signal; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -118,7 +118,7 @@ export const Type_of_msg_t30_indicator_no_signal = _enum_for_Type_of_msg_t30_ind
  * @constant
  * @type {number}
  */
-export const no_signal = Type_of_msg_t30_indicator_no_signal satisfies Type_of_msg_t30_indicator; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const no_signal = Type_of_msg_t30_indicator_no_signal; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -128,7 +128,7 @@ export const no_signal = Type_of_msg_t30_indicator_no_signal satisfies Type_of_m
  * @constant
  * @type {number}
  */
-export const Type_of_msg_t30_indicator_cng = _enum_for_Type_of_msg_t30_indicator.cng satisfies Type_of_msg_t30_indicator; /* LONG_NAMED_ENUMERATED_VALUE */
+export const Type_of_msg_t30_indicator_cng = _enum_for_Type_of_msg_t30_indicator.cng; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -138,7 +138,7 @@ export const Type_of_msg_t30_indicator_cng = _enum_for_Type_of_msg_t30_indicator
  * @constant
  * @type {number}
  */
-export const cng = Type_of_msg_t30_indicator_cng satisfies Type_of_msg_t30_indicator; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const cng = Type_of_msg_t30_indicator_cng; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -148,7 +148,7 @@ export const cng = Type_of_msg_t30_indicator_cng satisfies Type_of_msg_t30_indic
  * @constant
  * @type {number}
  */
-export const Type_of_msg_t30_indicator_ced = _enum_for_Type_of_msg_t30_indicator.ced satisfies Type_of_msg_t30_indicator; /* LONG_NAMED_ENUMERATED_VALUE */
+export const Type_of_msg_t30_indicator_ced = _enum_for_Type_of_msg_t30_indicator.ced; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -158,7 +158,7 @@ export const Type_of_msg_t30_indicator_ced = _enum_for_Type_of_msg_t30_indicator
  * @constant
  * @type {number}
  */
-export const ced = Type_of_msg_t30_indicator_ced satisfies Type_of_msg_t30_indicator; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const ced = Type_of_msg_t30_indicator_ced; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -167,7 +167,7 @@ export const ced = Type_of_msg_t30_indicator_ced satisfies Type_of_msg_t30_indic
  * @constant
  * @type {number}
  */
-export const Type_of_msg_t30_indicator_v21_preamble = _enum_for_Type_of_msg_t30_indicator.v21_preamble satisfies Type_of_msg_t30_indicator; /* LONG_NAMED_ENUMERATED_VALUE */
+export const Type_of_msg_t30_indicator_v21_preamble = _enum_for_Type_of_msg_t30_indicator.v21_preamble; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -176,7 +176,7 @@ export const Type_of_msg_t30_indicator_v21_preamble = _enum_for_Type_of_msg_t30_
  * @constant
  * @type {number}
  */
-export const v21_preamble = Type_of_msg_t30_indicator_v21_preamble satisfies Type_of_msg_t30_indicator; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const v21_preamble = Type_of_msg_t30_indicator_v21_preamble; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -185,7 +185,7 @@ export const v21_preamble = Type_of_msg_t30_indicator_v21_preamble satisfies Typ
  * @constant
  * @type {number}
  */
-export const Type_of_msg_t30_indicator_v27_2400_training = _enum_for_Type_of_msg_t30_indicator.v27_2400_training satisfies Type_of_msg_t30_indicator; /* LONG_NAMED_ENUMERATED_VALUE */
+export const Type_of_msg_t30_indicator_v27_2400_training = _enum_for_Type_of_msg_t30_indicator.v27_2400_training; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -194,7 +194,7 @@ export const Type_of_msg_t30_indicator_v27_2400_training = _enum_for_Type_of_msg
  * @constant
  * @type {number}
  */
-export const v27_2400_training = Type_of_msg_t30_indicator_v27_2400_training satisfies Type_of_msg_t30_indicator; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const v27_2400_training = Type_of_msg_t30_indicator_v27_2400_training; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -203,7 +203,7 @@ export const v27_2400_training = Type_of_msg_t30_indicator_v27_2400_training sat
  * @constant
  * @type {number}
  */
-export const Type_of_msg_t30_indicator_v27_4800_training = _enum_for_Type_of_msg_t30_indicator.v27_4800_training satisfies Type_of_msg_t30_indicator; /* LONG_NAMED_ENUMERATED_VALUE */
+export const Type_of_msg_t30_indicator_v27_4800_training = _enum_for_Type_of_msg_t30_indicator.v27_4800_training; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -212,7 +212,7 @@ export const Type_of_msg_t30_indicator_v27_4800_training = _enum_for_Type_of_msg
  * @constant
  * @type {number}
  */
-export const v27_4800_training = Type_of_msg_t30_indicator_v27_4800_training satisfies Type_of_msg_t30_indicator; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const v27_4800_training = Type_of_msg_t30_indicator_v27_4800_training; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -221,7 +221,7 @@ export const v27_4800_training = Type_of_msg_t30_indicator_v27_4800_training sat
  * @constant
  * @type {number}
  */
-export const Type_of_msg_t30_indicator_v29_7200_training = _enum_for_Type_of_msg_t30_indicator.v29_7200_training satisfies Type_of_msg_t30_indicator; /* LONG_NAMED_ENUMERATED_VALUE */
+export const Type_of_msg_t30_indicator_v29_7200_training = _enum_for_Type_of_msg_t30_indicator.v29_7200_training; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -230,7 +230,7 @@ export const Type_of_msg_t30_indicator_v29_7200_training = _enum_for_Type_of_msg
  * @constant
  * @type {number}
  */
-export const v29_7200_training = Type_of_msg_t30_indicator_v29_7200_training satisfies Type_of_msg_t30_indicator; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const v29_7200_training = Type_of_msg_t30_indicator_v29_7200_training; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -239,7 +239,7 @@ export const v29_7200_training = Type_of_msg_t30_indicator_v29_7200_training sat
  * @constant
  * @type {number}
  */
-export const Type_of_msg_t30_indicator_v29_9600_training = _enum_for_Type_of_msg_t30_indicator.v29_9600_training satisfies Type_of_msg_t30_indicator; /* LONG_NAMED_ENUMERATED_VALUE */
+export const Type_of_msg_t30_indicator_v29_9600_training = _enum_for_Type_of_msg_t30_indicator.v29_9600_training; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -248,7 +248,7 @@ export const Type_of_msg_t30_indicator_v29_9600_training = _enum_for_Type_of_msg
  * @constant
  * @type {number}
  */
-export const v29_9600_training = Type_of_msg_t30_indicator_v29_9600_training satisfies Type_of_msg_t30_indicator; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const v29_9600_training = Type_of_msg_t30_indicator_v29_9600_training; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -257,7 +257,7 @@ export const v29_9600_training = Type_of_msg_t30_indicator_v29_9600_training sat
  * @constant
  * @type {number}
  */
-export const Type_of_msg_t30_indicator_v17_7200_short_training = _enum_for_Type_of_msg_t30_indicator.v17_7200_short_training satisfies Type_of_msg_t30_indicator; /* LONG_NAMED_ENUMERATED_VALUE */
+export const Type_of_msg_t30_indicator_v17_7200_short_training = _enum_for_Type_of_msg_t30_indicator.v17_7200_short_training; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -266,7 +266,7 @@ export const Type_of_msg_t30_indicator_v17_7200_short_training = _enum_for_Type_
  * @constant
  * @type {number}
  */
-export const v17_7200_short_training = Type_of_msg_t30_indicator_v17_7200_short_training satisfies Type_of_msg_t30_indicator; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const v17_7200_short_training = Type_of_msg_t30_indicator_v17_7200_short_training; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -275,7 +275,7 @@ export const v17_7200_short_training = Type_of_msg_t30_indicator_v17_7200_short_
  * @constant
  * @type {number}
  */
-export const Type_of_msg_t30_indicator_v17_7200_long_training = _enum_for_Type_of_msg_t30_indicator.v17_7200_long_training satisfies Type_of_msg_t30_indicator; /* LONG_NAMED_ENUMERATED_VALUE */
+export const Type_of_msg_t30_indicator_v17_7200_long_training = _enum_for_Type_of_msg_t30_indicator.v17_7200_long_training; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -284,7 +284,7 @@ export const Type_of_msg_t30_indicator_v17_7200_long_training = _enum_for_Type_o
  * @constant
  * @type {number}
  */
-export const v17_7200_long_training = Type_of_msg_t30_indicator_v17_7200_long_training satisfies Type_of_msg_t30_indicator; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const v17_7200_long_training = Type_of_msg_t30_indicator_v17_7200_long_training; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -293,7 +293,7 @@ export const v17_7200_long_training = Type_of_msg_t30_indicator_v17_7200_long_tr
  * @constant
  * @type {number}
  */
-export const Type_of_msg_t30_indicator_v17_9600_short_training = _enum_for_Type_of_msg_t30_indicator.v17_9600_short_training satisfies Type_of_msg_t30_indicator; /* LONG_NAMED_ENUMERATED_VALUE */
+export const Type_of_msg_t30_indicator_v17_9600_short_training = _enum_for_Type_of_msg_t30_indicator.v17_9600_short_training; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -302,7 +302,7 @@ export const Type_of_msg_t30_indicator_v17_9600_short_training = _enum_for_Type_
  * @constant
  * @type {number}
  */
-export const v17_9600_short_training = Type_of_msg_t30_indicator_v17_9600_short_training satisfies Type_of_msg_t30_indicator; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const v17_9600_short_training = Type_of_msg_t30_indicator_v17_9600_short_training; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -311,7 +311,7 @@ export const v17_9600_short_training = Type_of_msg_t30_indicator_v17_9600_short_
  * @constant
  * @type {number}
  */
-export const Type_of_msg_t30_indicator_v17_9600_long_training = _enum_for_Type_of_msg_t30_indicator.v17_9600_long_training satisfies Type_of_msg_t30_indicator; /* LONG_NAMED_ENUMERATED_VALUE */
+export const Type_of_msg_t30_indicator_v17_9600_long_training = _enum_for_Type_of_msg_t30_indicator.v17_9600_long_training; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -320,7 +320,7 @@ export const Type_of_msg_t30_indicator_v17_9600_long_training = _enum_for_Type_o
  * @constant
  * @type {number}
  */
-export const v17_9600_long_training = Type_of_msg_t30_indicator_v17_9600_long_training satisfies Type_of_msg_t30_indicator; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const v17_9600_long_training = Type_of_msg_t30_indicator_v17_9600_long_training; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -329,7 +329,7 @@ export const v17_9600_long_training = Type_of_msg_t30_indicator_v17_9600_long_tr
  * @constant
  * @type {number}
  */
-export const Type_of_msg_t30_indicator_v17_12000_short_training = _enum_for_Type_of_msg_t30_indicator.v17_12000_short_training satisfies Type_of_msg_t30_indicator; /* LONG_NAMED_ENUMERATED_VALUE */
+export const Type_of_msg_t30_indicator_v17_12000_short_training = _enum_for_Type_of_msg_t30_indicator.v17_12000_short_training; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -338,7 +338,7 @@ export const Type_of_msg_t30_indicator_v17_12000_short_training = _enum_for_Type
  * @constant
  * @type {number}
  */
-export const v17_12000_short_training = Type_of_msg_t30_indicator_v17_12000_short_training satisfies Type_of_msg_t30_indicator; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const v17_12000_short_training = Type_of_msg_t30_indicator_v17_12000_short_training; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -347,7 +347,7 @@ export const v17_12000_short_training = Type_of_msg_t30_indicator_v17_12000_shor
  * @constant
  * @type {number}
  */
-export const Type_of_msg_t30_indicator_v17_12000_long_training = _enum_for_Type_of_msg_t30_indicator.v17_12000_long_training satisfies Type_of_msg_t30_indicator; /* LONG_NAMED_ENUMERATED_VALUE */
+export const Type_of_msg_t30_indicator_v17_12000_long_training = _enum_for_Type_of_msg_t30_indicator.v17_12000_long_training; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -356,7 +356,7 @@ export const Type_of_msg_t30_indicator_v17_12000_long_training = _enum_for_Type_
  * @constant
  * @type {number}
  */
-export const v17_12000_long_training = Type_of_msg_t30_indicator_v17_12000_long_training satisfies Type_of_msg_t30_indicator; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const v17_12000_long_training = Type_of_msg_t30_indicator_v17_12000_long_training; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -365,7 +365,7 @@ export const v17_12000_long_training = Type_of_msg_t30_indicator_v17_12000_long_
  * @constant
  * @type {number}
  */
-export const Type_of_msg_t30_indicator_v17_14400_short_training = _enum_for_Type_of_msg_t30_indicator.v17_14400_short_training satisfies Type_of_msg_t30_indicator; /* LONG_NAMED_ENUMERATED_VALUE */
+export const Type_of_msg_t30_indicator_v17_14400_short_training = _enum_for_Type_of_msg_t30_indicator.v17_14400_short_training; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -374,7 +374,7 @@ export const Type_of_msg_t30_indicator_v17_14400_short_training = _enum_for_Type
  * @constant
  * @type {number}
  */
-export const v17_14400_short_training = Type_of_msg_t30_indicator_v17_14400_short_training satisfies Type_of_msg_t30_indicator; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const v17_14400_short_training = Type_of_msg_t30_indicator_v17_14400_short_training; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -383,7 +383,7 @@ export const v17_14400_short_training = Type_of_msg_t30_indicator_v17_14400_shor
  * @constant
  * @type {number}
  */
-export const Type_of_msg_t30_indicator_v17_14400_long_training = _enum_for_Type_of_msg_t30_indicator.v17_14400_long_training satisfies Type_of_msg_t30_indicator; /* LONG_NAMED_ENUMERATED_VALUE */
+export const Type_of_msg_t30_indicator_v17_14400_long_training = _enum_for_Type_of_msg_t30_indicator.v17_14400_long_training; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -392,7 +392,7 @@ export const Type_of_msg_t30_indicator_v17_14400_long_training = _enum_for_Type_
  * @constant
  * @type {number}
  */
-export const v17_14400_long_training = Type_of_msg_t30_indicator_v17_14400_long_training satisfies Type_of_msg_t30_indicator; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const v17_14400_long_training = Type_of_msg_t30_indicator_v17_14400_long_training; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -402,7 +402,7 @@ export const v17_14400_long_training = Type_of_msg_t30_indicator_v17_14400_long_
  * @constant
  * @type {number}
  */
-export const Type_of_msg_t30_indicator_v8_ansam = _enum_for_Type_of_msg_t30_indicator.v8_ansam satisfies Type_of_msg_t30_indicator; /* LONG_NAMED_ENUMERATED_VALUE */
+export const Type_of_msg_t30_indicator_v8_ansam = _enum_for_Type_of_msg_t30_indicator.v8_ansam; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -412,7 +412,7 @@ export const Type_of_msg_t30_indicator_v8_ansam = _enum_for_Type_of_msg_t30_indi
  * @constant
  * @type {number}
  */
-export const v8_ansam = Type_of_msg_t30_indicator_v8_ansam satisfies Type_of_msg_t30_indicator; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const v8_ansam = Type_of_msg_t30_indicator_v8_ansam; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -422,7 +422,7 @@ export const v8_ansam = Type_of_msg_t30_indicator_v8_ansam satisfies Type_of_msg
  * @constant
  * @type {number}
  */
-export const Type_of_msg_t30_indicator_v8_signal = _enum_for_Type_of_msg_t30_indicator.v8_signal satisfies Type_of_msg_t30_indicator; /* LONG_NAMED_ENUMERATED_VALUE */
+export const Type_of_msg_t30_indicator_v8_signal = _enum_for_Type_of_msg_t30_indicator.v8_signal; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -432,7 +432,7 @@ export const Type_of_msg_t30_indicator_v8_signal = _enum_for_Type_of_msg_t30_ind
  * @constant
  * @type {number}
  */
-export const v8_signal = Type_of_msg_t30_indicator_v8_signal satisfies Type_of_msg_t30_indicator; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const v8_signal = Type_of_msg_t30_indicator_v8_signal; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -442,7 +442,7 @@ export const v8_signal = Type_of_msg_t30_indicator_v8_signal satisfies Type_of_m
  * @constant
  * @type {number}
  */
-export const Type_of_msg_t30_indicator_v34_cntl_channel_1200 = _enum_for_Type_of_msg_t30_indicator.v34_cntl_channel_1200 satisfies Type_of_msg_t30_indicator; /* LONG_NAMED_ENUMERATED_VALUE */
+export const Type_of_msg_t30_indicator_v34_cntl_channel_1200 = _enum_for_Type_of_msg_t30_indicator.v34_cntl_channel_1200; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -452,7 +452,7 @@ export const Type_of_msg_t30_indicator_v34_cntl_channel_1200 = _enum_for_Type_of
  * @constant
  * @type {number}
  */
-export const v34_cntl_channel_1200 = Type_of_msg_t30_indicator_v34_cntl_channel_1200 satisfies Type_of_msg_t30_indicator; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const v34_cntl_channel_1200 = Type_of_msg_t30_indicator_v34_cntl_channel_1200; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -462,7 +462,7 @@ export const v34_cntl_channel_1200 = Type_of_msg_t30_indicator_v34_cntl_channel_
  * @constant
  * @type {number}
  */
-export const Type_of_msg_t30_indicator_v34_pri_channel = _enum_for_Type_of_msg_t30_indicator.v34_pri_channel satisfies Type_of_msg_t30_indicator; /* LONG_NAMED_ENUMERATED_VALUE */
+export const Type_of_msg_t30_indicator_v34_pri_channel = _enum_for_Type_of_msg_t30_indicator.v34_pri_channel; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -472,7 +472,7 @@ export const Type_of_msg_t30_indicator_v34_pri_channel = _enum_for_Type_of_msg_t
  * @constant
  * @type {number}
  */
-export const v34_pri_channel = Type_of_msg_t30_indicator_v34_pri_channel satisfies Type_of_msg_t30_indicator; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const v34_pri_channel = Type_of_msg_t30_indicator_v34_pri_channel; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -482,7 +482,7 @@ export const v34_pri_channel = Type_of_msg_t30_indicator_v34_pri_channel satisfi
  * @constant
  * @type {number}
  */
-export const Type_of_msg_t30_indicator_v34_CC_retrain = _enum_for_Type_of_msg_t30_indicator.v34_CC_retrain satisfies Type_of_msg_t30_indicator; /* LONG_NAMED_ENUMERATED_VALUE */
+export const Type_of_msg_t30_indicator_v34_CC_retrain = _enum_for_Type_of_msg_t30_indicator.v34_CC_retrain; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -492,7 +492,7 @@ export const Type_of_msg_t30_indicator_v34_CC_retrain = _enum_for_Type_of_msg_t3
  * @constant
  * @type {number}
  */
-export const v34_CC_retrain = Type_of_msg_t30_indicator_v34_CC_retrain satisfies Type_of_msg_t30_indicator; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const v34_CC_retrain = Type_of_msg_t30_indicator_v34_CC_retrain; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -501,7 +501,7 @@ export const v34_CC_retrain = Type_of_msg_t30_indicator_v34_CC_retrain satisfies
  * @constant
  * @type {number}
  */
-export const Type_of_msg_t30_indicator_v33_12000_training = _enum_for_Type_of_msg_t30_indicator.v33_12000_training satisfies Type_of_msg_t30_indicator; /* LONG_NAMED_ENUMERATED_VALUE */
+export const Type_of_msg_t30_indicator_v33_12000_training = _enum_for_Type_of_msg_t30_indicator.v33_12000_training; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -510,7 +510,7 @@ export const Type_of_msg_t30_indicator_v33_12000_training = _enum_for_Type_of_ms
  * @constant
  * @type {number}
  */
-export const v33_12000_training = Type_of_msg_t30_indicator_v33_12000_training satisfies Type_of_msg_t30_indicator; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const v33_12000_training = Type_of_msg_t30_indicator_v33_12000_training; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -519,7 +519,7 @@ export const v33_12000_training = Type_of_msg_t30_indicator_v33_12000_training s
  * @constant
  * @type {number}
  */
-export const Type_of_msg_t30_indicator_v33_14400_training = _enum_for_Type_of_msg_t30_indicator.v33_14400_training satisfies Type_of_msg_t30_indicator; /* LONG_NAMED_ENUMERATED_VALUE */
+export const Type_of_msg_t30_indicator_v33_14400_training = _enum_for_Type_of_msg_t30_indicator.v33_14400_training; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -528,7 +528,7 @@ export const Type_of_msg_t30_indicator_v33_14400_training = _enum_for_Type_of_ms
  * @constant
  * @type {number}
  */
-export const v33_14400_training = Type_of_msg_t30_indicator_v33_14400_training satisfies Type_of_msg_t30_indicator; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const v33_14400_training = Type_of_msg_t30_indicator_v33_14400_training; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 

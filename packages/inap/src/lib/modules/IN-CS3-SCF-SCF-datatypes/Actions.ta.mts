@@ -58,7 +58,7 @@ const Actions = _enum_for_Actions;
  * @type {number}
  */
 export
-const Actions_play = Actions.play satisfies Actions; /* LONG_NAMED_ENUMERATED_VALUE */
+const Actions_play = Actions.play; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary play
@@ -66,7 +66,7 @@ const Actions_play = Actions.play satisfies Actions; /* LONG_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const play = Actions.play satisfies Actions; /* SHORT_NAMED_ENUMERATED_VALUE */
+const play = Actions.play; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Actions_playandcollect
@@ -74,7 +74,7 @@ const play = Actions.play satisfies Actions; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const Actions_playandcollect = Actions.playandcollect satisfies Actions; /* LONG_NAMED_ENUMERATED_VALUE */
+const Actions_playandcollect = Actions.playandcollect; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary playandcollect
@@ -82,7 +82,7 @@ const Actions_playandcollect = Actions.playandcollect satisfies Actions; /* LONG
  * @type {number}
  */
 export
-const playandcollect = Actions.playandcollect satisfies Actions; /* SHORT_NAMED_ENUMERATED_VALUE */
+const playandcollect = Actions.playandcollect; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 function _decode_Actions(el: _Element): Actions {

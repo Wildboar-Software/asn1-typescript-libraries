@@ -45,7 +45,7 @@ export const ReturnResultProblem_unrecognizedInvocation = 0 satisfies ReturnResu
  * @constant
  * @type {number}
  */
-export const unrecognizedInvocation = ReturnResultProblem_unrecognizedInvocation satisfies ReturnResultProblem; /* SHORT_NAMED_INTEGER_VALUE */
+export const unrecognizedInvocation = ReturnResultProblem_unrecognizedInvocation; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -63,7 +63,7 @@ export const ReturnResultProblem_resultResponseUnexpected = 1 satisfies ReturnRe
  * @constant
  * @type {number}
  */
-export const resultResponseUnexpected = ReturnResultProblem_resultResponseUnexpected satisfies ReturnResultProblem; /* SHORT_NAMED_INTEGER_VALUE */
+export const resultResponseUnexpected = ReturnResultProblem_resultResponseUnexpected; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -81,7 +81,7 @@ export const ReturnResultProblem_mistypedResult = 2 satisfies ReturnResultProble
  * @constant
  * @type {number}
  */
-export const mistypedResult = ReturnResultProblem_mistypedResult satisfies ReturnResultProblem; /* SHORT_NAMED_INTEGER_VALUE */
+export const mistypedResult = ReturnResultProblem_mistypedResult; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 

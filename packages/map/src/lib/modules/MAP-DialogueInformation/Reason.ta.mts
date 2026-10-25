@@ -87,7 +87,7 @@ const Reason = _enum_for_Reason;
  * @type {number}
  */
 export
-const Reason_noReasonGiven = Reason.noReasonGiven satisfies Reason; /* LONG_NAMED_ENUMERATED_VALUE */
+const Reason_noReasonGiven = Reason.noReasonGiven; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary noReasonGiven
@@ -99,7 +99,7 @@ const Reason_noReasonGiven = Reason.noReasonGiven satisfies Reason; /* LONG_NAME
  * @type {number}
  */
 export
-const noReasonGiven = Reason.noReasonGiven satisfies Reason; /* SHORT_NAMED_ENUMERATED_VALUE */
+const noReasonGiven = Reason.noReasonGiven; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Reason_invalidDestinationReference
@@ -112,7 +112,7 @@ const noReasonGiven = Reason.noReasonGiven satisfies Reason; /* SHORT_NAMED_ENUM
  * @type {number}
  */
 export
-const Reason_invalidDestinationReference = Reason.invalidDestinationReference satisfies Reason; /* LONG_NAMED_ENUMERATED_VALUE */
+const Reason_invalidDestinationReference = Reason.invalidDestinationReference; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidDestinationReference
@@ -125,7 +125,7 @@ const Reason_invalidDestinationReference = Reason.invalidDestinationReference sa
  * @type {number}
  */
 export
-const invalidDestinationReference = Reason.invalidDestinationReference satisfies Reason; /* SHORT_NAMED_ENUMERATED_VALUE */
+const invalidDestinationReference = Reason.invalidDestinationReference; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Reason_invalidOriginatingReference
@@ -138,7 +138,7 @@ const invalidDestinationReference = Reason.invalidDestinationReference satisfies
  * @type {number}
  */
 export
-const Reason_invalidOriginatingReference = Reason.invalidOriginatingReference satisfies Reason; /* LONG_NAMED_ENUMERATED_VALUE */
+const Reason_invalidOriginatingReference = Reason.invalidOriginatingReference; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidOriginatingReference
@@ -151,7 +151,7 @@ const Reason_invalidOriginatingReference = Reason.invalidOriginatingReference sa
  * @type {number}
  */
 export
-const invalidOriginatingReference = Reason.invalidOriginatingReference satisfies Reason; /* SHORT_NAMED_ENUMERATED_VALUE */
+const invalidOriginatingReference = Reason.invalidOriginatingReference; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) Reason

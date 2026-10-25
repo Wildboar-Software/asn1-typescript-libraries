@@ -85,7 +85,7 @@ const EquipmentStatus = _enum_for_EquipmentStatus;
  * @type {number}
  */
 export
-const EquipmentStatus_permittedListed = EquipmentStatus.permittedListed satisfies EquipmentStatus; /* LONG_NAMED_ENUMERATED_VALUE */
+const EquipmentStatus_permittedListed = EquipmentStatus.permittedListed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary permittedListed
@@ -93,7 +93,7 @@ const EquipmentStatus_permittedListed = EquipmentStatus.permittedListed satisfie
  * @type {number}
  */
 export
-const permittedListed = EquipmentStatus.permittedListed satisfies EquipmentStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
+const permittedListed = EquipmentStatus.permittedListed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EquipmentStatus_prohibitedListed
@@ -101,7 +101,7 @@ const permittedListed = EquipmentStatus.permittedListed satisfies EquipmentStatu
  * @type {number}
  */
 export
-const EquipmentStatus_prohibitedListed = EquipmentStatus.prohibitedListed satisfies EquipmentStatus; /* LONG_NAMED_ENUMERATED_VALUE */
+const EquipmentStatus_prohibitedListed = EquipmentStatus.prohibitedListed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary prohibitedListed
@@ -109,7 +109,7 @@ const EquipmentStatus_prohibitedListed = EquipmentStatus.prohibitedListed satisf
  * @type {number}
  */
 export
-const prohibitedListed = EquipmentStatus.prohibitedListed satisfies EquipmentStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
+const prohibitedListed = EquipmentStatus.prohibitedListed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EquipmentStatus_trackingListed
@@ -117,7 +117,7 @@ const prohibitedListed = EquipmentStatus.prohibitedListed satisfies EquipmentSta
  * @type {number}
  */
 export
-const EquipmentStatus_trackingListed = EquipmentStatus.trackingListed satisfies EquipmentStatus; /* LONG_NAMED_ENUMERATED_VALUE */
+const EquipmentStatus_trackingListed = EquipmentStatus.trackingListed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary trackingListed
@@ -125,7 +125,7 @@ const EquipmentStatus_trackingListed = EquipmentStatus.trackingListed satisfies 
  * @type {number}
  */
 export
-const trackingListed = EquipmentStatus.trackingListed satisfies EquipmentStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
+const trackingListed = EquipmentStatus.trackingListed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) EquipmentStatus

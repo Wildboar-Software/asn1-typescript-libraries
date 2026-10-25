@@ -37,7 +37,7 @@ type CAMELSMSInformation_defaultSMSHandling = _enum_for_CAMELSMSInformation_defa
  * @type {number}
  */
 export
-const CAMELSMSInformation_defaultSMSHandling_continueTransaction = _enum_for_CAMELSMSInformation_defaultSMSHandling.continueTransaction satisfies CAMELSMSInformation_defaultSMSHandling; /* LONG_NAMED_ENUMERATED_VALUE */
+const CAMELSMSInformation_defaultSMSHandling_continueTransaction = _enum_for_CAMELSMSInformation_defaultSMSHandling.continueTransaction; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary continueTransaction
@@ -45,7 +45,7 @@ const CAMELSMSInformation_defaultSMSHandling_continueTransaction = _enum_for_CAM
  * @type {number}
  */
 export
-const continueTransaction = CAMELSMSInformation_defaultSMSHandling_continueTransaction satisfies CAMELSMSInformation_defaultSMSHandling; /* SHORT_NAMED_ENUMERATED_VALUE */
+const continueTransaction = CAMELSMSInformation_defaultSMSHandling_continueTransaction; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CAMELSMSInformation_defaultSMSHandling_releaseTransaction
@@ -53,7 +53,7 @@ const continueTransaction = CAMELSMSInformation_defaultSMSHandling_continueTrans
  * @type {number}
  */
 export
-const CAMELSMSInformation_defaultSMSHandling_releaseTransaction = _enum_for_CAMELSMSInformation_defaultSMSHandling.releaseTransaction satisfies CAMELSMSInformation_defaultSMSHandling; /* LONG_NAMED_ENUMERATED_VALUE */
+const CAMELSMSInformation_defaultSMSHandling_releaseTransaction = _enum_for_CAMELSMSInformation_defaultSMSHandling.releaseTransaction; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary releaseTransaction
@@ -61,7 +61,7 @@ const CAMELSMSInformation_defaultSMSHandling_releaseTransaction = _enum_for_CAME
  * @type {number}
  */
 export
-const releaseTransaction = CAMELSMSInformation_defaultSMSHandling_releaseTransaction satisfies CAMELSMSInformation_defaultSMSHandling; /* SHORT_NAMED_ENUMERATED_VALUE */
+const releaseTransaction = CAMELSMSInformation_defaultSMSHandling_releaseTransaction; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_CAMELSMSInformation_defaultSMSHandling: $.ASN1Decoder<CAMELSMSInformation_defaultSMSHandling> = $._decodeEnumerated;

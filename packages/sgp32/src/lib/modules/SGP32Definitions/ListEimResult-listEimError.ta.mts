@@ -47,7 +47,7 @@ const ListEimResult_listEimError_undefinedError = 127 satisfies ListEimResult_li
  * @type {number}
  */
 export
-const undefinedError = ListEimResult_listEimError_undefinedError satisfies ListEimResult_listEimError; /* SHORT_NAMED_INTEGER_VALUE */
+const undefinedError = ListEimResult_listEimError_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_ListEimResult_listEimError: $.ASN1Decoder<ListEimResult_listEimError> = $._decodeInteger;
 export const _encode_ListEimResult_listEimError: $.ASN1Encoder<ListEimResult_listEimError> = $._encodeInteger;
 

@@ -54,7 +54,7 @@ type ListManagementType = _enum_for_ListManagementType | ENUMERATED;
  * @type {number}
  */
 export
-const ListManagementType_contactListManagementAttempt = _enum_for_ListManagementType.contactListManagementAttempt satisfies ListManagementType; /* LONG_NAMED_ENUMERATED_VALUE */
+const ListManagementType_contactListManagementAttempt = _enum_for_ListManagementType.contactListManagementAttempt; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary contactListManagementAttempt
@@ -66,7 +66,7 @@ const ListManagementType_contactListManagementAttempt = _enum_for_ListManagement
  * @type {number}
  */
 export
-const contactListManagementAttempt = ListManagementType_contactListManagementAttempt satisfies ListManagementType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const contactListManagementAttempt = ListManagementType_contactListManagementAttempt; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ListManagementType_groupListManagementAttempt
@@ -78,7 +78,7 @@ const contactListManagementAttempt = ListManagementType_contactListManagementAtt
  * @type {number}
  */
 export
-const ListManagementType_groupListManagementAttempt = _enum_for_ListManagementType.groupListManagementAttempt satisfies ListManagementType; /* LONG_NAMED_ENUMERATED_VALUE */
+const ListManagementType_groupListManagementAttempt = _enum_for_ListManagementType.groupListManagementAttempt; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary groupListManagementAttempt
@@ -90,7 +90,7 @@ const ListManagementType_groupListManagementAttempt = _enum_for_ListManagementTy
  * @type {number}
  */
 export
-const groupListManagementAttempt = ListManagementType_groupListManagementAttempt satisfies ListManagementType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const groupListManagementAttempt = ListManagementType_groupListManagementAttempt; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ListManagementType_contactListManagementResult
@@ -102,7 +102,7 @@ const groupListManagementAttempt = ListManagementType_groupListManagementAttempt
  * @type {number}
  */
 export
-const ListManagementType_contactListManagementResult = _enum_for_ListManagementType.contactListManagementResult satisfies ListManagementType; /* LONG_NAMED_ENUMERATED_VALUE */
+const ListManagementType_contactListManagementResult = _enum_for_ListManagementType.contactListManagementResult; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary contactListManagementResult
@@ -114,7 +114,7 @@ const ListManagementType_contactListManagementResult = _enum_for_ListManagementT
  * @type {number}
  */
 export
-const contactListManagementResult = ListManagementType_contactListManagementResult satisfies ListManagementType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const contactListManagementResult = ListManagementType_contactListManagementResult; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ListManagementType_groupListManagementResult
@@ -126,7 +126,7 @@ const contactListManagementResult = ListManagementType_contactListManagementResu
  * @type {number}
  */
 export
-const ListManagementType_groupListManagementResult = _enum_for_ListManagementType.groupListManagementResult satisfies ListManagementType; /* LONG_NAMED_ENUMERATED_VALUE */
+const ListManagementType_groupListManagementResult = _enum_for_ListManagementType.groupListManagementResult; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary groupListManagementResult
@@ -138,7 +138,7 @@ const ListManagementType_groupListManagementResult = _enum_for_ListManagementTyp
  * @type {number}
  */
 export
-const groupListManagementResult = ListManagementType_groupListManagementResult satisfies ListManagementType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const groupListManagementResult = ListManagementType_groupListManagementResult; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ListManagementType_requestSuccessful
@@ -152,7 +152,7 @@ const groupListManagementResult = ListManagementType_groupListManagementResult s
  * @type {number}
  */
 export
-const ListManagementType_requestSuccessful = _enum_for_ListManagementType.requestSuccessful satisfies ListManagementType; /* LONG_NAMED_ENUMERATED_VALUE */
+const ListManagementType_requestSuccessful = _enum_for_ListManagementType.requestSuccessful; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary requestSuccessful
@@ -164,7 +164,7 @@ const ListManagementType_requestSuccessful = _enum_for_ListManagementType.reques
  * @type {number}
  */
 export
-const requestSuccessful = ListManagementType_requestSuccessful satisfies ListManagementType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const requestSuccessful = ListManagementType_requestSuccessful; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_ListManagementType: $.ASN1Decoder<ListManagementType> = $._decodeEnumerated;
 export const _encode_ListManagementType: $.ASN1Encoder<ListManagementType> = $._encodeEnumerated;
 

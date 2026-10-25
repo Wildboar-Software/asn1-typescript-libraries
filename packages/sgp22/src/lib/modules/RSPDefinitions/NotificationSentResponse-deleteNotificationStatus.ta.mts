@@ -49,7 +49,7 @@ const NotificationSentResponse_deleteNotificationStatus_ok = 0 satisfies Notific
  * @type {number}
  */
 export
-const ok = NotificationSentResponse_deleteNotificationStatus_ok satisfies NotificationSentResponse_deleteNotificationStatus; /* SHORT_NAMED_INTEGER_VALUE */
+const ok = NotificationSentResponse_deleteNotificationStatus_ok; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NotificationSentResponse_deleteNotificationStatus_nothingToDelete
@@ -73,7 +73,7 @@ const NotificationSentResponse_deleteNotificationStatus_nothingToDelete = 1 sati
  * @type {number}
  */
 export
-const nothingToDelete = NotificationSentResponse_deleteNotificationStatus_nothingToDelete satisfies NotificationSentResponse_deleteNotificationStatus; /* SHORT_NAMED_INTEGER_VALUE */
+const nothingToDelete = NotificationSentResponse_deleteNotificationStatus_nothingToDelete; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NotificationSentResponse_deleteNotificationStatus_undefinedError
@@ -97,7 +97,7 @@ const NotificationSentResponse_deleteNotificationStatus_undefinedError = 127 sat
  * @type {number}
  */
 export
-const undefinedError = NotificationSentResponse_deleteNotificationStatus_undefinedError satisfies NotificationSentResponse_deleteNotificationStatus; /* SHORT_NAMED_INTEGER_VALUE */
+const undefinedError = NotificationSentResponse_deleteNotificationStatus_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_NotificationSentResponse_deleteNotificationStatus = $._decodeInteger;
 export const _encode_NotificationSentResponse_deleteNotificationStatus = $._encodeInteger;
 

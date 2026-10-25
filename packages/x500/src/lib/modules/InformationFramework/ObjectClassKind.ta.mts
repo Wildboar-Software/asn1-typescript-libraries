@@ -73,7 +73,7 @@ export const ObjectClassKind = _enum_for_ObjectClassKind;
  * @type {number}
  */
 export const ObjectClassKind_abstract =
-    ObjectClassKind.abstract satisfies ObjectClassKind; /* LONG_NAMED_ENUMERATED_VALUE */
+    ObjectClassKind.abstract; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary abstract
@@ -81,7 +81,7 @@ export const ObjectClassKind_abstract =
  * @type {number}
  */
 export const abstract =
-    ObjectClassKind.abstract satisfies ObjectClassKind; /* SHORT_NAMED_ENUMERATED_VALUE */
+    ObjectClassKind.abstract; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ObjectClassKind_structural
@@ -89,7 +89,7 @@ export const abstract =
  * @type {number}
  */
 export const ObjectClassKind_structural =
-    ObjectClassKind.structural satisfies ObjectClassKind; /* LONG_NAMED_ENUMERATED_VALUE */
+    ObjectClassKind.structural; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary structural
@@ -97,7 +97,7 @@ export const ObjectClassKind_structural =
  * @type {number}
  */
 export const structural =
-    ObjectClassKind.structural satisfies ObjectClassKind; /* SHORT_NAMED_ENUMERATED_VALUE */
+    ObjectClassKind.structural; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ObjectClassKind_auxiliary
@@ -105,7 +105,7 @@ export const structural =
  * @type {number}
  */
 export const ObjectClassKind_auxiliary =
-    ObjectClassKind.auxiliary satisfies ObjectClassKind; /* LONG_NAMED_ENUMERATED_VALUE */
+    ObjectClassKind.auxiliary; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary auxiliary
@@ -113,7 +113,7 @@ export const ObjectClassKind_auxiliary =
  * @type {number}
  */
 export const auxiliary =
-    ObjectClassKind.auxiliary satisfies ObjectClassKind; /* SHORT_NAMED_ENUMERATED_VALUE */
+    ObjectClassKind.auxiliary; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 export function _decode_ObjectClassKind(el: _Element): ObjectClassKind {

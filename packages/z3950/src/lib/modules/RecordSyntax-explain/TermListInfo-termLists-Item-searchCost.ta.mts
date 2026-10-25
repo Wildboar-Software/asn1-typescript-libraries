@@ -47,7 +47,7 @@ const TermListInfo_termLists_Item_searchCost_optimized = 0 satisfies TermListInf
  * @type {number}
  */
 export
-const optimized = TermListInfo_termLists_Item_searchCost_optimized satisfies TermListInfo_termLists_Item_searchCost; /* SHORT_NAMED_INTEGER_VALUE */
+const optimized = TermListInfo_termLists_Item_searchCost_optimized; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TermListInfo_termLists_Item_searchCost_normal
@@ -69,7 +69,7 @@ const TermListInfo_termLists_Item_searchCost_normal = 1 satisfies TermListInfo_t
  * @type {number}
  */
 export
-const normal = TermListInfo_termLists_Item_searchCost_normal satisfies TermListInfo_termLists_Item_searchCost; /* SHORT_NAMED_INTEGER_VALUE */
+const normal = TermListInfo_termLists_Item_searchCost_normal; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TermListInfo_termLists_Item_searchCost_expensive
@@ -91,7 +91,7 @@ const TermListInfo_termLists_Item_searchCost_expensive = 2 satisfies TermListInf
  * @type {number}
  */
 export
-const expensive = TermListInfo_termLists_Item_searchCost_expensive satisfies TermListInfo_termLists_Item_searchCost; /* SHORT_NAMED_INTEGER_VALUE */
+const expensive = TermListInfo_termLists_Item_searchCost_expensive; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TermListInfo_termLists_Item_searchCost_filter
@@ -112,7 +112,7 @@ const TermListInfo_termLists_Item_searchCost_filter = 3 satisfies TermListInfo_t
  * @type {number}
  */
 export
-const filter = TermListInfo_termLists_Item_searchCost_filter satisfies TermListInfo_termLists_Item_searchCost; /* SHORT_NAMED_INTEGER_VALUE */
+const filter = TermListInfo_termLists_Item_searchCost_filter; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_TermListInfo_termLists_Item_searchCost: $.ASN1Decoder<TermListInfo_termLists_Item_searchCost> = $._decodeInteger;
 export const _encode_TermListInfo_termLists_Item_searchCost: $.ASN1Encoder<TermListInfo_termLists_Item_searchCost> = $._encodeInteger;
 

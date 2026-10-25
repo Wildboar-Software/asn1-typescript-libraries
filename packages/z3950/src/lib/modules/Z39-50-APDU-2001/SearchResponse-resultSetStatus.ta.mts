@@ -52,7 +52,7 @@ const SearchResponse_resultSetStatus_subset = 1 satisfies SearchResponse_resultS
  * @type {number}
  */
 export
-const subset = SearchResponse_resultSetStatus_subset satisfies SearchResponse_resultSetStatus; /* SHORT_NAMED_INTEGER_VALUE */
+const subset = SearchResponse_resultSetStatus_subset; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SearchResponse_resultSetStatus_interim
@@ -79,7 +79,7 @@ const SearchResponse_resultSetStatus_interim = 2 satisfies SearchResponse_result
  * @type {number}
  */
 export
-const interim = SearchResponse_resultSetStatus_interim satisfies SearchResponse_resultSetStatus; /* SHORT_NAMED_INTEGER_VALUE */
+const interim = SearchResponse_resultSetStatus_interim; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SearchResponse_resultSetStatus_none
@@ -105,7 +105,7 @@ const SearchResponse_resultSetStatus_none = 3 satisfies SearchResponse_resultSet
  * @type {number}
  */
 export
-const none = SearchResponse_resultSetStatus_none satisfies SearchResponse_resultSetStatus; /* SHORT_NAMED_INTEGER_VALUE */
+const none = SearchResponse_resultSetStatus_none; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_SearchResponse_resultSetStatus: $.ASN1Decoder<SearchResponse_resultSetStatus> = $._decodeInteger;
 export const _encode_SearchResponse_resultSetStatus: $.ASN1Encoder<SearchResponse_resultSetStatus> = $._encodeInteger;
 

@@ -44,7 +44,7 @@ export const EntryType_delivered_message = 0 satisfies EntryType; /* LONG_NAMED_
  * @constant
  * @type {number}
  */
-export const delivered_message = EntryType_delivered_message satisfies EntryType; /* SHORT_NAMED_INTEGER_VALUE */
+export const delivered_message = EntryType_delivered_message; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EntryType_delivered_report
@@ -58,7 +58,7 @@ export const EntryType_delivered_report = 1 satisfies EntryType; /* LONG_NAMED_I
  * @constant
  * @type {number}
  */
-export const delivered_report = EntryType_delivered_report satisfies EntryType; /* SHORT_NAMED_INTEGER_VALUE */
+export const delivered_report = EntryType_delivered_report; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EntryType_returned_content
@@ -72,7 +72,7 @@ export const EntryType_returned_content = 2 satisfies EntryType; /* LONG_NAMED_I
  * @constant
  * @type {number}
  */
-export const returned_content = EntryType_returned_content satisfies EntryType; /* SHORT_NAMED_INTEGER_VALUE */
+export const returned_content = EntryType_returned_content; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EntryType_submitted_message
@@ -86,7 +86,7 @@ export const EntryType_submitted_message = 3 satisfies EntryType; /* LONG_NAMED_
  * @constant
  * @type {number}
  */
-export const submitted_message = EntryType_submitted_message satisfies EntryType; /* SHORT_NAMED_INTEGER_VALUE */
+export const submitted_message = EntryType_submitted_message; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EntryType_submitted_probe
@@ -100,7 +100,7 @@ export const EntryType_submitted_probe = 4 satisfies EntryType; /* LONG_NAMED_IN
  * @constant
  * @type {number}
  */
-export const submitted_probe = EntryType_submitted_probe satisfies EntryType; /* SHORT_NAMED_INTEGER_VALUE */
+export const submitted_probe = EntryType_submitted_probe; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EntryType_draft_message
@@ -114,7 +114,7 @@ export const EntryType_draft_message = 5 satisfies EntryType; /* LONG_NAMED_INTE
  * @constant
  * @type {number}
  */
-export const draft_message = EntryType_draft_message satisfies EntryType; /* SHORT_NAMED_INTEGER_VALUE */
+export const draft_message = EntryType_draft_message; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EntryType_auto_action_event
@@ -128,7 +128,7 @@ export const EntryType_auto_action_event = 6 satisfies EntryType; /* LONG_NAMED_
  * @constant
  * @type {number}
  */
-export const auto_action_event = EntryType_auto_action_event satisfies EntryType; /* SHORT_NAMED_INTEGER_VALUE */
+export const auto_action_event = EntryType_auto_action_event; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_EntryType = $._decodeInteger;

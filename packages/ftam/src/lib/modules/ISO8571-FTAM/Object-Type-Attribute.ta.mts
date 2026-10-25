@@ -47,7 +47,7 @@ export const Object_Type_Attribute_file = 0 satisfies Object_Type_Attribute; /* 
  * @constant
  * @type {number}
  */
-export const file = Object_Type_Attribute_file satisfies Object_Type_Attribute; /* SHORT_NAMED_INTEGER_VALUE */
+export const file = Object_Type_Attribute_file; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -68,7 +68,7 @@ export const Object_Type_Attribute_file_directory = 1 satisfies Object_Type_Attr
  * @constant
  * @type {number}
  */
-export const file_directory = Object_Type_Attribute_file_directory satisfies Object_Type_Attribute; /* SHORT_NAMED_INTEGER_VALUE */
+export const file_directory = Object_Type_Attribute_file_directory; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -88,7 +88,7 @@ export const Object_Type_Attribute_reference = 2 satisfies Object_Type_Attribute
  * @constant
  * @type {number}
  */
-export const reference = Object_Type_Attribute_reference satisfies Object_Type_Attribute; /* SHORT_NAMED_INTEGER_VALUE */
+export const reference = Object_Type_Attribute_reference; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 

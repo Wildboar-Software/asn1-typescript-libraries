@@ -54,7 +54,7 @@ const CommandType_enquiry = 0 satisfies CommandType; /* LONG_NAMED_INTEGER_VALUE
  * @type {number}
  */
 export
-const enquiry = CommandType_enquiry satisfies CommandType; /* SHORT_NAMED_INTEGER_VALUE */
+const enquiry = CommandType_enquiry; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CommandType_cancelSRR
@@ -77,7 +77,7 @@ const CommandType_cancelSRR = 1 satisfies CommandType; /* LONG_NAMED_INTEGER_VAL
  * @type {number}
  */
 export
-const cancelSRR = CommandType_cancelSRR satisfies CommandType; /* SHORT_NAMED_INTEGER_VALUE */
+const cancelSRR = CommandType_cancelSRR; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CommandType_deletePreviouslySubmittedSM
@@ -101,7 +101,7 @@ const CommandType_deletePreviouslySubmittedSM = 2 satisfies CommandType; /* LONG
  * @type {number}
  */
 export
-const deletePreviouslySubmittedSM = CommandType_deletePreviouslySubmittedSM satisfies CommandType; /* SHORT_NAMED_INTEGER_VALUE */
+const deletePreviouslySubmittedSM = CommandType_deletePreviouslySubmittedSM; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CommandType_enableSRRrelatingToPreviouslySubmittedSM
@@ -125,7 +125,7 @@ const CommandType_enableSRRrelatingToPreviouslySubmittedSM = 3 satisfies Command
  * @type {number}
  */
 export
-const enableSRRrelatingToPreviouslySubmittedSM = CommandType_enableSRRrelatingToPreviouslySubmittedSM satisfies CommandType; /* SHORT_NAMED_INTEGER_VALUE */
+const enableSRRrelatingToPreviouslySubmittedSM = CommandType_enableSRRrelatingToPreviouslySubmittedSM; /* SHORT_NAMED_INTEGER_VALUE */
 
 export
 const _decode_CommandType = (el: _Element): CommandType => {

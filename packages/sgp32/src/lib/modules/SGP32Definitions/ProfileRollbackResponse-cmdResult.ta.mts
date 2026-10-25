@@ -48,7 +48,7 @@ const ProfileRollbackResponse_cmdResult_ok = 0 satisfies ProfileRollbackResponse
  * @type {number}
  */
 export
-const ok = ProfileRollbackResponse_cmdResult_ok satisfies ProfileRollbackResponse_cmdResult; /* SHORT_NAMED_INTEGER_VALUE */
+const ok = ProfileRollbackResponse_cmdResult_ok; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProfileRollbackResponse_cmdResult_rollbackNotAllowed
@@ -70,7 +70,7 @@ const ProfileRollbackResponse_cmdResult_rollbackNotAllowed = 1 satisfies Profile
  * @type {number}
  */
 export
-const rollbackNotAllowed = ProfileRollbackResponse_cmdResult_rollbackNotAllowed satisfies ProfileRollbackResponse_cmdResult; /* SHORT_NAMED_INTEGER_VALUE */
+const rollbackNotAllowed = ProfileRollbackResponse_cmdResult_rollbackNotAllowed; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProfileRollbackResponse_cmdResult_catBusy
@@ -91,7 +91,7 @@ const ProfileRollbackResponse_cmdResult_catBusy = 5 satisfies ProfileRollbackRes
  * @type {number}
  */
 export
-const catBusy = ProfileRollbackResponse_cmdResult_catBusy satisfies ProfileRollbackResponse_cmdResult; /* SHORT_NAMED_INTEGER_VALUE */
+const catBusy = ProfileRollbackResponse_cmdResult_catBusy; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProfileRollbackResponse_cmdResult_commandError
@@ -111,7 +111,7 @@ const ProfileRollbackResponse_cmdResult_commandError = 7 satisfies ProfileRollba
  * @type {number}
  */
 export
-const commandError = ProfileRollbackResponse_cmdResult_commandError satisfies ProfileRollbackResponse_cmdResult; /* SHORT_NAMED_INTEGER_VALUE */
+const commandError = ProfileRollbackResponse_cmdResult_commandError; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProfileRollbackResponse_cmdResult_undefinedError
@@ -132,7 +132,7 @@ const ProfileRollbackResponse_cmdResult_undefinedError = 127 satisfies ProfileRo
  * @type {number}
  */
 export
-const undefinedError = ProfileRollbackResponse_cmdResult_undefinedError satisfies ProfileRollbackResponse_cmdResult; /* SHORT_NAMED_INTEGER_VALUE */
+const undefinedError = ProfileRollbackResponse_cmdResult_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_ProfileRollbackResponse_cmdResult: $.ASN1Decoder<ProfileRollbackResponse_cmdResult> = $._decodeInteger;
 export const _encode_ProfileRollbackResponse_cmdResult: $.ASN1Encoder<ProfileRollbackResponse_cmdResult> = $._encodeInteger;
 

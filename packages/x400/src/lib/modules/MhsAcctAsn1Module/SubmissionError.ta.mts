@@ -44,7 +44,7 @@ export const SubmissionError_submission_control_violated = 1 satisfies Submissio
  * @constant
  * @type {number}
  */
-export const submission_control_violated = SubmissionError_submission_control_violated satisfies SubmissionError; /* SHORT_NAMED_INTEGER_VALUE */
+export const submission_control_violated = SubmissionError_submission_control_violated; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SubmissionError_element_of_service_not_subscribed
@@ -58,7 +58,7 @@ export const SubmissionError_element_of_service_not_subscribed = 2 satisfies Sub
  * @constant
  * @type {number}
  */
-export const element_of_service_not_subscribed = SubmissionError_element_of_service_not_subscribed satisfies SubmissionError; /* SHORT_NAMED_INTEGER_VALUE */
+export const element_of_service_not_subscribed = SubmissionError_element_of_service_not_subscribed; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SubmissionError_deferred_delivery_cancellation_rejected
@@ -72,7 +72,7 @@ export const SubmissionError_deferred_delivery_cancellation_rejected = 3 satisfi
  * @constant
  * @type {number}
  */
-export const deferred_delivery_cancellation_rejected = SubmissionError_deferred_delivery_cancellation_rejected satisfies SubmissionError; /* SHORT_NAMED_INTEGER_VALUE */
+export const deferred_delivery_cancellation_rejected = SubmissionError_deferred_delivery_cancellation_rejected; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SubmissionError_originator_invalid
@@ -86,7 +86,7 @@ export const SubmissionError_originator_invalid = 4 satisfies SubmissionError; /
  * @constant
  * @type {number}
  */
-export const originator_invalid = SubmissionError_originator_invalid satisfies SubmissionError; /* SHORT_NAMED_INTEGER_VALUE */
+export const originator_invalid = SubmissionError_originator_invalid; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SubmissionError_recipient_improperly_specified
@@ -100,7 +100,7 @@ export const SubmissionError_recipient_improperly_specified = 5 satisfies Submis
  * @constant
  * @type {number}
  */
-export const recipient_improperly_specified = SubmissionError_recipient_improperly_specified satisfies SubmissionError; /* SHORT_NAMED_INTEGER_VALUE */
+export const recipient_improperly_specified = SubmissionError_recipient_improperly_specified; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SubmissionError_message_submission_identifier_invalid
@@ -114,7 +114,7 @@ export const SubmissionError_message_submission_identifier_invalid = 6 satisfies
  * @constant
  * @type {number}
  */
-export const message_submission_identifier_invalid = SubmissionError_message_submission_identifier_invalid satisfies SubmissionError; /* SHORT_NAMED_INTEGER_VALUE */
+export const message_submission_identifier_invalid = SubmissionError_message_submission_identifier_invalid; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SubmissionError_inconsistent_request
@@ -128,7 +128,7 @@ export const SubmissionError_inconsistent_request = 7 satisfies SubmissionError;
  * @constant
  * @type {number}
  */
-export const inconsistent_request = SubmissionError_inconsistent_request satisfies SubmissionError; /* SHORT_NAMED_INTEGER_VALUE */
+export const inconsistent_request = SubmissionError_inconsistent_request; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SubmissionError_security_error
@@ -142,7 +142,7 @@ export const SubmissionError_security_error = 8 satisfies SubmissionError; /* LO
  * @constant
  * @type {number}
  */
-export const security_error = SubmissionError_security_error satisfies SubmissionError; /* SHORT_NAMED_INTEGER_VALUE */
+export const security_error = SubmissionError_security_error; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SubmissionError_unsupported_critical_function
@@ -156,7 +156,7 @@ export const SubmissionError_unsupported_critical_function = 9 satisfies Submiss
  * @constant
  * @type {number}
  */
-export const unsupported_critical_function = SubmissionError_unsupported_critical_function satisfies SubmissionError; /* SHORT_NAMED_INTEGER_VALUE */
+export const unsupported_critical_function = SubmissionError_unsupported_critical_function; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SubmissionError_remote_bind_error
@@ -170,7 +170,7 @@ export const SubmissionError_remote_bind_error = 10 satisfies SubmissionError; /
  * @constant
  * @type {number}
  */
-export const remote_bind_error = SubmissionError_remote_bind_error satisfies SubmissionError; /* SHORT_NAMED_INTEGER_VALUE */
+export const remote_bind_error = SubmissionError_remote_bind_error; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_SubmissionError = $._decodeInteger;

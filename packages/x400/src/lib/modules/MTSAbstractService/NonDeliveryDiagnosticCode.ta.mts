@@ -89,7 +89,7 @@ export const NonDeliveryDiagnosticCode_unrecognised_OR_name = 0 satisfies NonDel
  * @constant
  * @type {number}
  */
-export const unrecognised_OR_name = NonDeliveryDiagnosticCode_unrecognised_OR_name satisfies NonDeliveryDiagnosticCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const unrecognised_OR_name = NonDeliveryDiagnosticCode_unrecognised_OR_name; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NonDeliveryDiagnosticCode_ambiguous_OR_name
@@ -103,7 +103,7 @@ export const NonDeliveryDiagnosticCode_ambiguous_OR_name = 1 satisfies NonDelive
  * @constant
  * @type {number}
  */
-export const ambiguous_OR_name = NonDeliveryDiagnosticCode_ambiguous_OR_name satisfies NonDeliveryDiagnosticCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const ambiguous_OR_name = NonDeliveryDiagnosticCode_ambiguous_OR_name; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NonDeliveryDiagnosticCode_mts_congestion
@@ -117,7 +117,7 @@ export const NonDeliveryDiagnosticCode_mts_congestion = 2 satisfies NonDeliveryD
  * @constant
  * @type {number}
  */
-export const mts_congestion = NonDeliveryDiagnosticCode_mts_congestion satisfies NonDeliveryDiagnosticCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const mts_congestion = NonDeliveryDiagnosticCode_mts_congestion; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NonDeliveryDiagnosticCode_loop_detected
@@ -131,7 +131,7 @@ export const NonDeliveryDiagnosticCode_loop_detected = 3 satisfies NonDeliveryDi
  * @constant
  * @type {number}
  */
-export const loop_detected = NonDeliveryDiagnosticCode_loop_detected satisfies NonDeliveryDiagnosticCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const loop_detected = NonDeliveryDiagnosticCode_loop_detected; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NonDeliveryDiagnosticCode_recipient_unavailable
@@ -145,7 +145,7 @@ export const NonDeliveryDiagnosticCode_recipient_unavailable = 4 satisfies NonDe
  * @constant
  * @type {number}
  */
-export const recipient_unavailable = NonDeliveryDiagnosticCode_recipient_unavailable satisfies NonDeliveryDiagnosticCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const recipient_unavailable = NonDeliveryDiagnosticCode_recipient_unavailable; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NonDeliveryDiagnosticCode_maximum_time_expired
@@ -159,7 +159,7 @@ export const NonDeliveryDiagnosticCode_maximum_time_expired = 5 satisfies NonDel
  * @constant
  * @type {number}
  */
-export const maximum_time_expired = NonDeliveryDiagnosticCode_maximum_time_expired satisfies NonDeliveryDiagnosticCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const maximum_time_expired = NonDeliveryDiagnosticCode_maximum_time_expired; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NonDeliveryDiagnosticCode_encoded_information_types_unsupported
@@ -173,7 +173,7 @@ export const NonDeliveryDiagnosticCode_encoded_information_types_unsupported = 6
  * @constant
  * @type {number}
  */
-export const encoded_information_types_unsupported = NonDeliveryDiagnosticCode_encoded_information_types_unsupported satisfies NonDeliveryDiagnosticCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const encoded_information_types_unsupported = NonDeliveryDiagnosticCode_encoded_information_types_unsupported; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NonDeliveryDiagnosticCode_content_too_long
@@ -187,7 +187,7 @@ export const NonDeliveryDiagnosticCode_content_too_long = 7 satisfies NonDeliver
  * @constant
  * @type {number}
  */
-export const content_too_long = NonDeliveryDiagnosticCode_content_too_long satisfies NonDeliveryDiagnosticCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const content_too_long = NonDeliveryDiagnosticCode_content_too_long; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NonDeliveryDiagnosticCode_conversion_impractical
@@ -201,7 +201,7 @@ export const NonDeliveryDiagnosticCode_conversion_impractical = 8 satisfies NonD
  * @constant
  * @type {number}
  */
-export const conversion_impractical = NonDeliveryDiagnosticCode_conversion_impractical satisfies NonDeliveryDiagnosticCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const conversion_impractical = NonDeliveryDiagnosticCode_conversion_impractical; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NonDeliveryDiagnosticCode_implicit_conversion_prohibited
@@ -215,7 +215,7 @@ export const NonDeliveryDiagnosticCode_implicit_conversion_prohibited = 9 satisf
  * @constant
  * @type {number}
  */
-export const implicit_conversion_prohibited = NonDeliveryDiagnosticCode_implicit_conversion_prohibited satisfies NonDeliveryDiagnosticCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const implicit_conversion_prohibited = NonDeliveryDiagnosticCode_implicit_conversion_prohibited; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NonDeliveryDiagnosticCode_implicit_conversion_not_subscribed
@@ -229,7 +229,7 @@ export const NonDeliveryDiagnosticCode_implicit_conversion_not_subscribed = 10 s
  * @constant
  * @type {number}
  */
-export const implicit_conversion_not_subscribed = NonDeliveryDiagnosticCode_implicit_conversion_not_subscribed satisfies NonDeliveryDiagnosticCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const implicit_conversion_not_subscribed = NonDeliveryDiagnosticCode_implicit_conversion_not_subscribed; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NonDeliveryDiagnosticCode_invalid_arguments
@@ -243,7 +243,7 @@ export const NonDeliveryDiagnosticCode_invalid_arguments = 11 satisfies NonDeliv
  * @constant
  * @type {number}
  */
-export const invalid_arguments = NonDeliveryDiagnosticCode_invalid_arguments satisfies NonDeliveryDiagnosticCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const invalid_arguments = NonDeliveryDiagnosticCode_invalid_arguments; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NonDeliveryDiagnosticCode_content_syntax_error
@@ -257,7 +257,7 @@ export const NonDeliveryDiagnosticCode_content_syntax_error = 12 satisfies NonDe
  * @constant
  * @type {number}
  */
-export const content_syntax_error = NonDeliveryDiagnosticCode_content_syntax_error satisfies NonDeliveryDiagnosticCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const content_syntax_error = NonDeliveryDiagnosticCode_content_syntax_error; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NonDeliveryDiagnosticCode_size_constraint_violation
@@ -271,7 +271,7 @@ export const NonDeliveryDiagnosticCode_size_constraint_violation = 13 satisfies 
  * @constant
  * @type {number}
  */
-export const size_constraint_violation = NonDeliveryDiagnosticCode_size_constraint_violation satisfies NonDeliveryDiagnosticCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const size_constraint_violation = NonDeliveryDiagnosticCode_size_constraint_violation; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NonDeliveryDiagnosticCode_protocol_violation
@@ -285,7 +285,7 @@ export const NonDeliveryDiagnosticCode_protocol_violation = 14 satisfies NonDeli
  * @constant
  * @type {number}
  */
-export const protocol_violation = NonDeliveryDiagnosticCode_protocol_violation satisfies NonDeliveryDiagnosticCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const protocol_violation = NonDeliveryDiagnosticCode_protocol_violation; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NonDeliveryDiagnosticCode_content_type_not_supported
@@ -299,7 +299,7 @@ export const NonDeliveryDiagnosticCode_content_type_not_supported = 15 satisfies
  * @constant
  * @type {number}
  */
-export const content_type_not_supported = NonDeliveryDiagnosticCode_content_type_not_supported satisfies NonDeliveryDiagnosticCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const content_type_not_supported = NonDeliveryDiagnosticCode_content_type_not_supported; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NonDeliveryDiagnosticCode_too_many_recipients
@@ -313,7 +313,7 @@ export const NonDeliveryDiagnosticCode_too_many_recipients = 16 satisfies NonDel
  * @constant
  * @type {number}
  */
-export const too_many_recipients = NonDeliveryDiagnosticCode_too_many_recipients satisfies NonDeliveryDiagnosticCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const too_many_recipients = NonDeliveryDiagnosticCode_too_many_recipients; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NonDeliveryDiagnosticCode_no_bilateral_agreement
@@ -327,7 +327,7 @@ export const NonDeliveryDiagnosticCode_no_bilateral_agreement = 17 satisfies Non
  * @constant
  * @type {number}
  */
-export const no_bilateral_agreement = NonDeliveryDiagnosticCode_no_bilateral_agreement satisfies NonDeliveryDiagnosticCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const no_bilateral_agreement = NonDeliveryDiagnosticCode_no_bilateral_agreement; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NonDeliveryDiagnosticCode_unsupported_critical_function
@@ -341,7 +341,7 @@ export const NonDeliveryDiagnosticCode_unsupported_critical_function = 18 satisf
  * @constant
  * @type {number}
  */
-export const unsupported_critical_function = NonDeliveryDiagnosticCode_unsupported_critical_function satisfies NonDeliveryDiagnosticCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const unsupported_critical_function = NonDeliveryDiagnosticCode_unsupported_critical_function; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NonDeliveryDiagnosticCode_conversion_with_loss_prohibited
@@ -355,7 +355,7 @@ export const NonDeliveryDiagnosticCode_conversion_with_loss_prohibited = 19 sati
  * @constant
  * @type {number}
  */
-export const conversion_with_loss_prohibited = NonDeliveryDiagnosticCode_conversion_with_loss_prohibited satisfies NonDeliveryDiagnosticCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const conversion_with_loss_prohibited = NonDeliveryDiagnosticCode_conversion_with_loss_prohibited; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NonDeliveryDiagnosticCode_line_too_long
@@ -369,7 +369,7 @@ export const NonDeliveryDiagnosticCode_line_too_long = 20 satisfies NonDeliveryD
  * @constant
  * @type {number}
  */
-export const line_too_long = NonDeliveryDiagnosticCode_line_too_long satisfies NonDeliveryDiagnosticCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const line_too_long = NonDeliveryDiagnosticCode_line_too_long; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NonDeliveryDiagnosticCode_page_split
@@ -383,7 +383,7 @@ export const NonDeliveryDiagnosticCode_page_split = 21 satisfies NonDeliveryDiag
  * @constant
  * @type {number}
  */
-export const page_split = NonDeliveryDiagnosticCode_page_split satisfies NonDeliveryDiagnosticCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const page_split = NonDeliveryDiagnosticCode_page_split; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NonDeliveryDiagnosticCode_pictorial_symbol_loss
@@ -397,7 +397,7 @@ export const NonDeliveryDiagnosticCode_pictorial_symbol_loss = 22 satisfies NonD
  * @constant
  * @type {number}
  */
-export const pictorial_symbol_loss = NonDeliveryDiagnosticCode_pictorial_symbol_loss satisfies NonDeliveryDiagnosticCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const pictorial_symbol_loss = NonDeliveryDiagnosticCode_pictorial_symbol_loss; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NonDeliveryDiagnosticCode_punctuation_symbol_loss
@@ -411,7 +411,7 @@ export const NonDeliveryDiagnosticCode_punctuation_symbol_loss = 23 satisfies No
  * @constant
  * @type {number}
  */
-export const punctuation_symbol_loss = NonDeliveryDiagnosticCode_punctuation_symbol_loss satisfies NonDeliveryDiagnosticCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const punctuation_symbol_loss = NonDeliveryDiagnosticCode_punctuation_symbol_loss; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NonDeliveryDiagnosticCode_alphabetic_character_loss
@@ -425,7 +425,7 @@ export const NonDeliveryDiagnosticCode_alphabetic_character_loss = 24 satisfies 
  * @constant
  * @type {number}
  */
-export const alphabetic_character_loss = NonDeliveryDiagnosticCode_alphabetic_character_loss satisfies NonDeliveryDiagnosticCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const alphabetic_character_loss = NonDeliveryDiagnosticCode_alphabetic_character_loss; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NonDeliveryDiagnosticCode_multiple_information_loss
@@ -439,7 +439,7 @@ export const NonDeliveryDiagnosticCode_multiple_information_loss = 25 satisfies 
  * @constant
  * @type {number}
  */
-export const multiple_information_loss = NonDeliveryDiagnosticCode_multiple_information_loss satisfies NonDeliveryDiagnosticCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const multiple_information_loss = NonDeliveryDiagnosticCode_multiple_information_loss; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NonDeliveryDiagnosticCode_recipient_reassignment_prohibited
@@ -453,7 +453,7 @@ export const NonDeliveryDiagnosticCode_recipient_reassignment_prohibited = 26 sa
  * @constant
  * @type {number}
  */
-export const recipient_reassignment_prohibited = NonDeliveryDiagnosticCode_recipient_reassignment_prohibited satisfies NonDeliveryDiagnosticCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const recipient_reassignment_prohibited = NonDeliveryDiagnosticCode_recipient_reassignment_prohibited; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NonDeliveryDiagnosticCode_redirection_loop_detected
@@ -467,7 +467,7 @@ export const NonDeliveryDiagnosticCode_redirection_loop_detected = 27 satisfies 
  * @constant
  * @type {number}
  */
-export const redirection_loop_detected = NonDeliveryDiagnosticCode_redirection_loop_detected satisfies NonDeliveryDiagnosticCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const redirection_loop_detected = NonDeliveryDiagnosticCode_redirection_loop_detected; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NonDeliveryDiagnosticCode_dl_expansion_prohibited
@@ -481,7 +481,7 @@ export const NonDeliveryDiagnosticCode_dl_expansion_prohibited = 28 satisfies No
  * @constant
  * @type {number}
  */
-export const dl_expansion_prohibited = NonDeliveryDiagnosticCode_dl_expansion_prohibited satisfies NonDeliveryDiagnosticCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const dl_expansion_prohibited = NonDeliveryDiagnosticCode_dl_expansion_prohibited; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NonDeliveryDiagnosticCode_no_dl_submit_permission
@@ -495,7 +495,7 @@ export const NonDeliveryDiagnosticCode_no_dl_submit_permission = 29 satisfies No
  * @constant
  * @type {number}
  */
-export const no_dl_submit_permission = NonDeliveryDiagnosticCode_no_dl_submit_permission satisfies NonDeliveryDiagnosticCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const no_dl_submit_permission = NonDeliveryDiagnosticCode_no_dl_submit_permission; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NonDeliveryDiagnosticCode_dl_expansion_failure
@@ -509,7 +509,7 @@ export const NonDeliveryDiagnosticCode_dl_expansion_failure = 30 satisfies NonDe
  * @constant
  * @type {number}
  */
-export const dl_expansion_failure = NonDeliveryDiagnosticCode_dl_expansion_failure satisfies NonDeliveryDiagnosticCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const dl_expansion_failure = NonDeliveryDiagnosticCode_dl_expansion_failure; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NonDeliveryDiagnosticCode_physical_rendition_attributes_not_supported
@@ -523,7 +523,7 @@ export const NonDeliveryDiagnosticCode_physical_rendition_attributes_not_support
  * @constant
  * @type {number}
  */
-export const physical_rendition_attributes_not_supported = NonDeliveryDiagnosticCode_physical_rendition_attributes_not_supported satisfies NonDeliveryDiagnosticCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const physical_rendition_attributes_not_supported = NonDeliveryDiagnosticCode_physical_rendition_attributes_not_supported; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NonDeliveryDiagnosticCode_undeliverable_mail_physical_delivery_address_incorrect
@@ -537,7 +537,7 @@ export const NonDeliveryDiagnosticCode_undeliverable_mail_physical_delivery_addr
  * @constant
  * @type {number}
  */
-export const undeliverable_mail_physical_delivery_address_incorrect = NonDeliveryDiagnosticCode_undeliverable_mail_physical_delivery_address_incorrect satisfies NonDeliveryDiagnosticCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const undeliverable_mail_physical_delivery_address_incorrect = NonDeliveryDiagnosticCode_undeliverable_mail_physical_delivery_address_incorrect; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NonDeliveryDiagnosticCode_undeliverable_mail_physical_delivery_office_incorrect_or_invalid
@@ -551,7 +551,7 @@ export const NonDeliveryDiagnosticCode_undeliverable_mail_physical_delivery_offi
  * @constant
  * @type {number}
  */
-export const undeliverable_mail_physical_delivery_office_incorrect_or_invalid = NonDeliveryDiagnosticCode_undeliverable_mail_physical_delivery_office_incorrect_or_invalid satisfies NonDeliveryDiagnosticCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const undeliverable_mail_physical_delivery_office_incorrect_or_invalid = NonDeliveryDiagnosticCode_undeliverable_mail_physical_delivery_office_incorrect_or_invalid; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NonDeliveryDiagnosticCode_undeliverable_mail_physical_delivery_address_incomplete
@@ -565,7 +565,7 @@ export const NonDeliveryDiagnosticCode_undeliverable_mail_physical_delivery_addr
  * @constant
  * @type {number}
  */
-export const undeliverable_mail_physical_delivery_address_incomplete = NonDeliveryDiagnosticCode_undeliverable_mail_physical_delivery_address_incomplete satisfies NonDeliveryDiagnosticCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const undeliverable_mail_physical_delivery_address_incomplete = NonDeliveryDiagnosticCode_undeliverable_mail_physical_delivery_address_incomplete; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NonDeliveryDiagnosticCode_undeliverable_mail_recipient_unknown
@@ -579,7 +579,7 @@ export const NonDeliveryDiagnosticCode_undeliverable_mail_recipient_unknown = 35
  * @constant
  * @type {number}
  */
-export const undeliverable_mail_recipient_unknown = NonDeliveryDiagnosticCode_undeliverable_mail_recipient_unknown satisfies NonDeliveryDiagnosticCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const undeliverable_mail_recipient_unknown = NonDeliveryDiagnosticCode_undeliverable_mail_recipient_unknown; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NonDeliveryDiagnosticCode_undeliverable_mail_recipient_deceased
@@ -593,7 +593,7 @@ export const NonDeliveryDiagnosticCode_undeliverable_mail_recipient_deceased = 3
  * @constant
  * @type {number}
  */
-export const undeliverable_mail_recipient_deceased = NonDeliveryDiagnosticCode_undeliverable_mail_recipient_deceased satisfies NonDeliveryDiagnosticCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const undeliverable_mail_recipient_deceased = NonDeliveryDiagnosticCode_undeliverable_mail_recipient_deceased; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NonDeliveryDiagnosticCode_undeliverable_mail_organization_expired
@@ -607,7 +607,7 @@ export const NonDeliveryDiagnosticCode_undeliverable_mail_organization_expired =
  * @constant
  * @type {number}
  */
-export const undeliverable_mail_organization_expired = NonDeliveryDiagnosticCode_undeliverable_mail_organization_expired satisfies NonDeliveryDiagnosticCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const undeliverable_mail_organization_expired = NonDeliveryDiagnosticCode_undeliverable_mail_organization_expired; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NonDeliveryDiagnosticCode_undeliverable_mail_recipient_refused_to_accept
@@ -621,7 +621,7 @@ export const NonDeliveryDiagnosticCode_undeliverable_mail_recipient_refused_to_a
  * @constant
  * @type {number}
  */
-export const undeliverable_mail_recipient_refused_to_accept = NonDeliveryDiagnosticCode_undeliverable_mail_recipient_refused_to_accept satisfies NonDeliveryDiagnosticCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const undeliverable_mail_recipient_refused_to_accept = NonDeliveryDiagnosticCode_undeliverable_mail_recipient_refused_to_accept; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NonDeliveryDiagnosticCode_undeliverable_mail_recipient_did_not_claim
@@ -635,7 +635,7 @@ export const NonDeliveryDiagnosticCode_undeliverable_mail_recipient_did_not_clai
  * @constant
  * @type {number}
  */
-export const undeliverable_mail_recipient_did_not_claim = NonDeliveryDiagnosticCode_undeliverable_mail_recipient_did_not_claim satisfies NonDeliveryDiagnosticCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const undeliverable_mail_recipient_did_not_claim = NonDeliveryDiagnosticCode_undeliverable_mail_recipient_did_not_claim; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NonDeliveryDiagnosticCode_undeliverable_mail_recipient_changed_address_permanently
@@ -649,7 +649,7 @@ export const NonDeliveryDiagnosticCode_undeliverable_mail_recipient_changed_addr
  * @constant
  * @type {number}
  */
-export const undeliverable_mail_recipient_changed_address_permanently = NonDeliveryDiagnosticCode_undeliverable_mail_recipient_changed_address_permanently satisfies NonDeliveryDiagnosticCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const undeliverable_mail_recipient_changed_address_permanently = NonDeliveryDiagnosticCode_undeliverable_mail_recipient_changed_address_permanently; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NonDeliveryDiagnosticCode_undeliverable_mail_recipient_changed_address_temporarily
@@ -663,7 +663,7 @@ export const NonDeliveryDiagnosticCode_undeliverable_mail_recipient_changed_addr
  * @constant
  * @type {number}
  */
-export const undeliverable_mail_recipient_changed_address_temporarily = NonDeliveryDiagnosticCode_undeliverable_mail_recipient_changed_address_temporarily satisfies NonDeliveryDiagnosticCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const undeliverable_mail_recipient_changed_address_temporarily = NonDeliveryDiagnosticCode_undeliverable_mail_recipient_changed_address_temporarily; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NonDeliveryDiagnosticCode_undeliverable_mail_recipient_changed_temporary_address
@@ -677,7 +677,7 @@ export const NonDeliveryDiagnosticCode_undeliverable_mail_recipient_changed_temp
  * @constant
  * @type {number}
  */
-export const undeliverable_mail_recipient_changed_temporary_address = NonDeliveryDiagnosticCode_undeliverable_mail_recipient_changed_temporary_address satisfies NonDeliveryDiagnosticCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const undeliverable_mail_recipient_changed_temporary_address = NonDeliveryDiagnosticCode_undeliverable_mail_recipient_changed_temporary_address; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NonDeliveryDiagnosticCode_undeliverable_mail_new_address_unknown
@@ -691,7 +691,7 @@ export const NonDeliveryDiagnosticCode_undeliverable_mail_new_address_unknown = 
  * @constant
  * @type {number}
  */
-export const undeliverable_mail_new_address_unknown = NonDeliveryDiagnosticCode_undeliverable_mail_new_address_unknown satisfies NonDeliveryDiagnosticCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const undeliverable_mail_new_address_unknown = NonDeliveryDiagnosticCode_undeliverable_mail_new_address_unknown; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NonDeliveryDiagnosticCode_undeliverable_mail_recipient_did_not_want_forwarding
@@ -705,7 +705,7 @@ export const NonDeliveryDiagnosticCode_undeliverable_mail_recipient_did_not_want
  * @constant
  * @type {number}
  */
-export const undeliverable_mail_recipient_did_not_want_forwarding = NonDeliveryDiagnosticCode_undeliverable_mail_recipient_did_not_want_forwarding satisfies NonDeliveryDiagnosticCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const undeliverable_mail_recipient_did_not_want_forwarding = NonDeliveryDiagnosticCode_undeliverable_mail_recipient_did_not_want_forwarding; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NonDeliveryDiagnosticCode_undeliverable_mail_originator_prohibited_forwarding
@@ -719,7 +719,7 @@ export const NonDeliveryDiagnosticCode_undeliverable_mail_originator_prohibited_
  * @constant
  * @type {number}
  */
-export const undeliverable_mail_originator_prohibited_forwarding = NonDeliveryDiagnosticCode_undeliverable_mail_originator_prohibited_forwarding satisfies NonDeliveryDiagnosticCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const undeliverable_mail_originator_prohibited_forwarding = NonDeliveryDiagnosticCode_undeliverable_mail_originator_prohibited_forwarding; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NonDeliveryDiagnosticCode_secure_messaging_error
@@ -733,7 +733,7 @@ export const NonDeliveryDiagnosticCode_secure_messaging_error = 46 satisfies Non
  * @constant
  * @type {number}
  */
-export const secure_messaging_error = NonDeliveryDiagnosticCode_secure_messaging_error satisfies NonDeliveryDiagnosticCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const secure_messaging_error = NonDeliveryDiagnosticCode_secure_messaging_error; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NonDeliveryDiagnosticCode_unable_to_downgrade
@@ -747,7 +747,7 @@ export const NonDeliveryDiagnosticCode_unable_to_downgrade = 47 satisfies NonDel
  * @constant
  * @type {number}
  */
-export const unable_to_downgrade = NonDeliveryDiagnosticCode_unable_to_downgrade satisfies NonDeliveryDiagnosticCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const unable_to_downgrade = NonDeliveryDiagnosticCode_unable_to_downgrade; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NonDeliveryDiagnosticCode_unable_to_complete_transfer
@@ -761,7 +761,7 @@ export const NonDeliveryDiagnosticCode_unable_to_complete_transfer = 48 satisfie
  * @constant
  * @type {number}
  */
-export const unable_to_complete_transfer = NonDeliveryDiagnosticCode_unable_to_complete_transfer satisfies NonDeliveryDiagnosticCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const unable_to_complete_transfer = NonDeliveryDiagnosticCode_unable_to_complete_transfer; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NonDeliveryDiagnosticCode_transfer_attempts_limit_reached
@@ -775,7 +775,7 @@ export const NonDeliveryDiagnosticCode_transfer_attempts_limit_reached = 49 sati
  * @constant
  * @type {number}
  */
-export const transfer_attempts_limit_reached = NonDeliveryDiagnosticCode_transfer_attempts_limit_reached satisfies NonDeliveryDiagnosticCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const transfer_attempts_limit_reached = NonDeliveryDiagnosticCode_transfer_attempts_limit_reached; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NonDeliveryDiagnosticCode_incorrect_notification_type
@@ -789,7 +789,7 @@ export const NonDeliveryDiagnosticCode_incorrect_notification_type = 50 satisfie
  * @constant
  * @type {number}
  */
-export const incorrect_notification_type = NonDeliveryDiagnosticCode_incorrect_notification_type satisfies NonDeliveryDiagnosticCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const incorrect_notification_type = NonDeliveryDiagnosticCode_incorrect_notification_type; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NonDeliveryDiagnosticCode_dl_expansion_prohibited_by_security_policy
@@ -803,7 +803,7 @@ export const NonDeliveryDiagnosticCode_dl_expansion_prohibited_by_security_polic
  * @constant
  * @type {number}
  */
-export const dl_expansion_prohibited_by_security_policy = NonDeliveryDiagnosticCode_dl_expansion_prohibited_by_security_policy satisfies NonDeliveryDiagnosticCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const dl_expansion_prohibited_by_security_policy = NonDeliveryDiagnosticCode_dl_expansion_prohibited_by_security_policy; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NonDeliveryDiagnosticCode_forbidden_alternate_recipient
@@ -817,7 +817,7 @@ export const NonDeliveryDiagnosticCode_forbidden_alternate_recipient = 52 satisf
  * @constant
  * @type {number}
  */
-export const forbidden_alternate_recipient = NonDeliveryDiagnosticCode_forbidden_alternate_recipient satisfies NonDeliveryDiagnosticCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const forbidden_alternate_recipient = NonDeliveryDiagnosticCode_forbidden_alternate_recipient; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NonDeliveryDiagnosticCode_security_policy_violation
@@ -831,7 +831,7 @@ export const NonDeliveryDiagnosticCode_security_policy_violation = 53 satisfies 
  * @constant
  * @type {number}
  */
-export const security_policy_violation = NonDeliveryDiagnosticCode_security_policy_violation satisfies NonDeliveryDiagnosticCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const security_policy_violation = NonDeliveryDiagnosticCode_security_policy_violation; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NonDeliveryDiagnosticCode_security_services_refusal
@@ -845,7 +845,7 @@ export const NonDeliveryDiagnosticCode_security_services_refusal = 54 satisfies 
  * @constant
  * @type {number}
  */
-export const security_services_refusal = NonDeliveryDiagnosticCode_security_services_refusal satisfies NonDeliveryDiagnosticCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const security_services_refusal = NonDeliveryDiagnosticCode_security_services_refusal; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NonDeliveryDiagnosticCode_unauthorised_dl_member
@@ -859,7 +859,7 @@ export const NonDeliveryDiagnosticCode_unauthorised_dl_member = 55 satisfies Non
  * @constant
  * @type {number}
  */
-export const unauthorised_dl_member = NonDeliveryDiagnosticCode_unauthorised_dl_member satisfies NonDeliveryDiagnosticCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const unauthorised_dl_member = NonDeliveryDiagnosticCode_unauthorised_dl_member; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NonDeliveryDiagnosticCode_unauthorised_dl_name
@@ -873,7 +873,7 @@ export const NonDeliveryDiagnosticCode_unauthorised_dl_name = 56 satisfies NonDe
  * @constant
  * @type {number}
  */
-export const unauthorised_dl_name = NonDeliveryDiagnosticCode_unauthorised_dl_name satisfies NonDeliveryDiagnosticCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const unauthorised_dl_name = NonDeliveryDiagnosticCode_unauthorised_dl_name; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NonDeliveryDiagnosticCode_unauthorised_originally_intended_recipient_name
@@ -887,7 +887,7 @@ export const NonDeliveryDiagnosticCode_unauthorised_originally_intended_recipien
  * @constant
  * @type {number}
  */
-export const unauthorised_originally_intended_recipient_name = NonDeliveryDiagnosticCode_unauthorised_originally_intended_recipient_name satisfies NonDeliveryDiagnosticCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const unauthorised_originally_intended_recipient_name = NonDeliveryDiagnosticCode_unauthorised_originally_intended_recipient_name; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NonDeliveryDiagnosticCode_unauthorised_originator_name
@@ -901,7 +901,7 @@ export const NonDeliveryDiagnosticCode_unauthorised_originator_name = 58 satisfi
  * @constant
  * @type {number}
  */
-export const unauthorised_originator_name = NonDeliveryDiagnosticCode_unauthorised_originator_name satisfies NonDeliveryDiagnosticCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const unauthorised_originator_name = NonDeliveryDiagnosticCode_unauthorised_originator_name; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NonDeliveryDiagnosticCode_unauthorised_recipient_name
@@ -915,7 +915,7 @@ export const NonDeliveryDiagnosticCode_unauthorised_recipient_name = 59 satisfie
  * @constant
  * @type {number}
  */
-export const unauthorised_recipient_name = NonDeliveryDiagnosticCode_unauthorised_recipient_name satisfies NonDeliveryDiagnosticCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const unauthorised_recipient_name = NonDeliveryDiagnosticCode_unauthorised_recipient_name; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NonDeliveryDiagnosticCode_unreliable_system
@@ -929,7 +929,7 @@ export const NonDeliveryDiagnosticCode_unreliable_system = 60 satisfies NonDeliv
  * @constant
  * @type {number}
  */
-export const unreliable_system = NonDeliveryDiagnosticCode_unreliable_system satisfies NonDeliveryDiagnosticCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const unreliable_system = NonDeliveryDiagnosticCode_unreliable_system; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NonDeliveryDiagnosticCode_authentication_failure_on_subject_message
@@ -943,7 +943,7 @@ export const NonDeliveryDiagnosticCode_authentication_failure_on_subject_message
  * @constant
  * @type {number}
  */
-export const authentication_failure_on_subject_message = NonDeliveryDiagnosticCode_authentication_failure_on_subject_message satisfies NonDeliveryDiagnosticCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const authentication_failure_on_subject_message = NonDeliveryDiagnosticCode_authentication_failure_on_subject_message; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NonDeliveryDiagnosticCode_decryption_failed
@@ -957,7 +957,7 @@ export const NonDeliveryDiagnosticCode_decryption_failed = 62 satisfies NonDeliv
  * @constant
  * @type {number}
  */
-export const decryption_failed = NonDeliveryDiagnosticCode_decryption_failed satisfies NonDeliveryDiagnosticCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const decryption_failed = NonDeliveryDiagnosticCode_decryption_failed; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NonDeliveryDiagnosticCode_decryption_key_unobtainable
@@ -971,7 +971,7 @@ export const NonDeliveryDiagnosticCode_decryption_key_unobtainable = 63 satisfie
  * @constant
  * @type {number}
  */
-export const decryption_key_unobtainable = NonDeliveryDiagnosticCode_decryption_key_unobtainable satisfies NonDeliveryDiagnosticCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const decryption_key_unobtainable = NonDeliveryDiagnosticCode_decryption_key_unobtainable; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NonDeliveryDiagnosticCode_double_envelope_creation_failure
@@ -985,7 +985,7 @@ export const NonDeliveryDiagnosticCode_double_envelope_creation_failure = 64 sat
  * @constant
  * @type {number}
  */
-export const double_envelope_creation_failure = NonDeliveryDiagnosticCode_double_envelope_creation_failure satisfies NonDeliveryDiagnosticCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const double_envelope_creation_failure = NonDeliveryDiagnosticCode_double_envelope_creation_failure; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NonDeliveryDiagnosticCode_double_enveloping_message_restoring_failure
@@ -999,7 +999,7 @@ export const NonDeliveryDiagnosticCode_double_enveloping_message_restoring_failu
  * @constant
  * @type {number}
  */
-export const double_enveloping_message_restoring_failure = NonDeliveryDiagnosticCode_double_enveloping_message_restoring_failure satisfies NonDeliveryDiagnosticCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const double_enveloping_message_restoring_failure = NonDeliveryDiagnosticCode_double_enveloping_message_restoring_failure; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NonDeliveryDiagnosticCode_failure_of_proof_of_message
@@ -1013,7 +1013,7 @@ export const NonDeliveryDiagnosticCode_failure_of_proof_of_message = 66 satisfie
  * @constant
  * @type {number}
  */
-export const failure_of_proof_of_message = NonDeliveryDiagnosticCode_failure_of_proof_of_message satisfies NonDeliveryDiagnosticCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const failure_of_proof_of_message = NonDeliveryDiagnosticCode_failure_of_proof_of_message; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NonDeliveryDiagnosticCode_integrity_failure_on_subject_message
@@ -1027,7 +1027,7 @@ export const NonDeliveryDiagnosticCode_integrity_failure_on_subject_message = 67
  * @constant
  * @type {number}
  */
-export const integrity_failure_on_subject_message = NonDeliveryDiagnosticCode_integrity_failure_on_subject_message satisfies NonDeliveryDiagnosticCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const integrity_failure_on_subject_message = NonDeliveryDiagnosticCode_integrity_failure_on_subject_message; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NonDeliveryDiagnosticCode_invalid_security_label
@@ -1041,7 +1041,7 @@ export const NonDeliveryDiagnosticCode_invalid_security_label = 68 satisfies Non
  * @constant
  * @type {number}
  */
-export const invalid_security_label = NonDeliveryDiagnosticCode_invalid_security_label satisfies NonDeliveryDiagnosticCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const invalid_security_label = NonDeliveryDiagnosticCode_invalid_security_label; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NonDeliveryDiagnosticCode_key_failure
@@ -1055,7 +1055,7 @@ export const NonDeliveryDiagnosticCode_key_failure = 69 satisfies NonDeliveryDia
  * @constant
  * @type {number}
  */
-export const key_failure = NonDeliveryDiagnosticCode_key_failure satisfies NonDeliveryDiagnosticCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const key_failure = NonDeliveryDiagnosticCode_key_failure; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NonDeliveryDiagnosticCode_mandatory_parameter_absence
@@ -1069,7 +1069,7 @@ export const NonDeliveryDiagnosticCode_mandatory_parameter_absence = 70 satisfie
  * @constant
  * @type {number}
  */
-export const mandatory_parameter_absence = NonDeliveryDiagnosticCode_mandatory_parameter_absence satisfies NonDeliveryDiagnosticCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const mandatory_parameter_absence = NonDeliveryDiagnosticCode_mandatory_parameter_absence; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NonDeliveryDiagnosticCode_operation_security_failure
@@ -1083,7 +1083,7 @@ export const NonDeliveryDiagnosticCode_operation_security_failure = 71 satisfies
  * @constant
  * @type {number}
  */
-export const operation_security_failure = NonDeliveryDiagnosticCode_operation_security_failure satisfies NonDeliveryDiagnosticCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const operation_security_failure = NonDeliveryDiagnosticCode_operation_security_failure; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NonDeliveryDiagnosticCode_repudiation_failure_of_message
@@ -1097,7 +1097,7 @@ export const NonDeliveryDiagnosticCode_repudiation_failure_of_message = 72 satis
  * @constant
  * @type {number}
  */
-export const repudiation_failure_of_message = NonDeliveryDiagnosticCode_repudiation_failure_of_message satisfies NonDeliveryDiagnosticCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const repudiation_failure_of_message = NonDeliveryDiagnosticCode_repudiation_failure_of_message; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NonDeliveryDiagnosticCode_security_context_failure
@@ -1111,7 +1111,7 @@ export const NonDeliveryDiagnosticCode_security_context_failure = 73 satisfies N
  * @constant
  * @type {number}
  */
-export const security_context_failure = NonDeliveryDiagnosticCode_security_context_failure satisfies NonDeliveryDiagnosticCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const security_context_failure = NonDeliveryDiagnosticCode_security_context_failure; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NonDeliveryDiagnosticCode_token_decryption_failed
@@ -1125,7 +1125,7 @@ export const NonDeliveryDiagnosticCode_token_decryption_failed = 74 satisfies No
  * @constant
  * @type {number}
  */
-export const token_decryption_failed = NonDeliveryDiagnosticCode_token_decryption_failed satisfies NonDeliveryDiagnosticCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const token_decryption_failed = NonDeliveryDiagnosticCode_token_decryption_failed; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NonDeliveryDiagnosticCode_token_error
@@ -1139,7 +1139,7 @@ export const NonDeliveryDiagnosticCode_token_error = 75 satisfies NonDeliveryDia
  * @constant
  * @type {number}
  */
-export const token_error = NonDeliveryDiagnosticCode_token_error satisfies NonDeliveryDiagnosticCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const token_error = NonDeliveryDiagnosticCode_token_error; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NonDeliveryDiagnosticCode_unknown_security_label
@@ -1153,7 +1153,7 @@ export const NonDeliveryDiagnosticCode_unknown_security_label = 76 satisfies Non
  * @constant
  * @type {number}
  */
-export const unknown_security_label = NonDeliveryDiagnosticCode_unknown_security_label satisfies NonDeliveryDiagnosticCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const unknown_security_label = NonDeliveryDiagnosticCode_unknown_security_label; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NonDeliveryDiagnosticCode_unsupported_algorithm_identifier
@@ -1167,7 +1167,7 @@ export const NonDeliveryDiagnosticCode_unsupported_algorithm_identifier = 77 sat
  * @constant
  * @type {number}
  */
-export const unsupported_algorithm_identifier = NonDeliveryDiagnosticCode_unsupported_algorithm_identifier satisfies NonDeliveryDiagnosticCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const unsupported_algorithm_identifier = NonDeliveryDiagnosticCode_unsupported_algorithm_identifier; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NonDeliveryDiagnosticCode_unsupported_security_policy
@@ -1181,7 +1181,7 @@ export const NonDeliveryDiagnosticCode_unsupported_security_policy = 78 satisfie
  * @constant
  * @type {number}
  */
-export const unsupported_security_policy = NonDeliveryDiagnosticCode_unsupported_security_policy satisfies NonDeliveryDiagnosticCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const unsupported_security_policy = NonDeliveryDiagnosticCode_unsupported_security_policy; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_NonDeliveryDiagnosticCode = $._decodeInteger;

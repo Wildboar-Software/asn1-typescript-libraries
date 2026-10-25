@@ -52,7 +52,7 @@ type UnavailabilityCause = _enum_for_UnavailabilityCause | ENUMERATED;
  * @type {number}
  */
 export
-const UnavailabilityCause_bearerServiceNotProvisioned = _enum_for_UnavailabilityCause.bearerServiceNotProvisioned satisfies UnavailabilityCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const UnavailabilityCause_bearerServiceNotProvisioned = _enum_for_UnavailabilityCause.bearerServiceNotProvisioned; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary bearerServiceNotProvisioned
@@ -64,7 +64,7 @@ const UnavailabilityCause_bearerServiceNotProvisioned = _enum_for_Unavailability
  * @type {number}
  */
 export
-const bearerServiceNotProvisioned = UnavailabilityCause_bearerServiceNotProvisioned satisfies UnavailabilityCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const bearerServiceNotProvisioned = UnavailabilityCause_bearerServiceNotProvisioned; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary UnavailabilityCause_teleserviceNotProvisioned
@@ -76,7 +76,7 @@ const bearerServiceNotProvisioned = UnavailabilityCause_bearerServiceNotProvisio
  * @type {number}
  */
 export
-const UnavailabilityCause_teleserviceNotProvisioned = _enum_for_UnavailabilityCause.teleserviceNotProvisioned satisfies UnavailabilityCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const UnavailabilityCause_teleserviceNotProvisioned = _enum_for_UnavailabilityCause.teleserviceNotProvisioned; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary teleserviceNotProvisioned
@@ -88,7 +88,7 @@ const UnavailabilityCause_teleserviceNotProvisioned = _enum_for_UnavailabilityCa
  * @type {number}
  */
 export
-const teleserviceNotProvisioned = UnavailabilityCause_teleserviceNotProvisioned satisfies UnavailabilityCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const teleserviceNotProvisioned = UnavailabilityCause_teleserviceNotProvisioned; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary UnavailabilityCause_absentSubscriber
@@ -100,7 +100,7 @@ const teleserviceNotProvisioned = UnavailabilityCause_teleserviceNotProvisioned 
  * @type {number}
  */
 export
-const UnavailabilityCause_absentSubscriber = _enum_for_UnavailabilityCause.absentSubscriber satisfies UnavailabilityCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const UnavailabilityCause_absentSubscriber = _enum_for_UnavailabilityCause.absentSubscriber; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary absentSubscriber
@@ -112,7 +112,7 @@ const UnavailabilityCause_absentSubscriber = _enum_for_UnavailabilityCause.absen
  * @type {number}
  */
 export
-const absentSubscriber = UnavailabilityCause_absentSubscriber satisfies UnavailabilityCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const absentSubscriber = UnavailabilityCause_absentSubscriber; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary UnavailabilityCause_busySubscriber
@@ -124,7 +124,7 @@ const absentSubscriber = UnavailabilityCause_absentSubscriber satisfies Unavaila
  * @type {number}
  */
 export
-const UnavailabilityCause_busySubscriber = _enum_for_UnavailabilityCause.busySubscriber satisfies UnavailabilityCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const UnavailabilityCause_busySubscriber = _enum_for_UnavailabilityCause.busySubscriber; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary busySubscriber
@@ -136,7 +136,7 @@ const UnavailabilityCause_busySubscriber = _enum_for_UnavailabilityCause.busySub
  * @type {number}
  */
 export
-const busySubscriber = UnavailabilityCause_busySubscriber satisfies UnavailabilityCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const busySubscriber = UnavailabilityCause_busySubscriber; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary UnavailabilityCause_callBarred
@@ -148,7 +148,7 @@ const busySubscriber = UnavailabilityCause_busySubscriber satisfies Unavailabili
  * @type {number}
  */
 export
-const UnavailabilityCause_callBarred = _enum_for_UnavailabilityCause.callBarred satisfies UnavailabilityCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const UnavailabilityCause_callBarred = _enum_for_UnavailabilityCause.callBarred; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary callBarred
@@ -160,7 +160,7 @@ const UnavailabilityCause_callBarred = _enum_for_UnavailabilityCause.callBarred 
  * @type {number}
  */
 export
-const callBarred = UnavailabilityCause_callBarred satisfies UnavailabilityCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const callBarred = UnavailabilityCause_callBarred; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary UnavailabilityCause_cug_Reject
@@ -172,7 +172,7 @@ const callBarred = UnavailabilityCause_callBarred satisfies UnavailabilityCause;
  * @type {number}
  */
 export
-const UnavailabilityCause_cug_Reject = _enum_for_UnavailabilityCause.cug_Reject satisfies UnavailabilityCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const UnavailabilityCause_cug_Reject = _enum_for_UnavailabilityCause.cug_Reject; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary cug_Reject
@@ -184,7 +184,7 @@ const UnavailabilityCause_cug_Reject = _enum_for_UnavailabilityCause.cug_Reject 
  * @type {number}
  */
 export
-const cug_Reject = UnavailabilityCause_cug_Reject satisfies UnavailabilityCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const cug_Reject = UnavailabilityCause_cug_Reject; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) UnavailabilityCause

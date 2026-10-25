@@ -115,7 +115,7 @@ const PTCSessionEndCause = _enum_for_PTCSessionEndCause;
  * @type {number}
  */
 export
-const PTCSessionEndCause_initiaterLeavesSession = PTCSessionEndCause.initiaterLeavesSession satisfies PTCSessionEndCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const PTCSessionEndCause_initiaterLeavesSession = PTCSessionEndCause.initiaterLeavesSession; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary initiaterLeavesSession
@@ -123,7 +123,7 @@ const PTCSessionEndCause_initiaterLeavesSession = PTCSessionEndCause.initiaterLe
  * @type {number}
  */
 export
-const initiaterLeavesSession = PTCSessionEndCause.initiaterLeavesSession satisfies PTCSessionEndCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const initiaterLeavesSession = PTCSessionEndCause.initiaterLeavesSession; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PTCSessionEndCause_definedParticipantLeaves
@@ -131,7 +131,7 @@ const initiaterLeavesSession = PTCSessionEndCause.initiaterLeavesSession satisfi
  * @type {number}
  */
 export
-const PTCSessionEndCause_definedParticipantLeaves = PTCSessionEndCause.definedParticipantLeaves satisfies PTCSessionEndCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const PTCSessionEndCause_definedParticipantLeaves = PTCSessionEndCause.definedParticipantLeaves; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary definedParticipantLeaves
@@ -139,7 +139,7 @@ const PTCSessionEndCause_definedParticipantLeaves = PTCSessionEndCause.definedPa
  * @type {number}
  */
 export
-const definedParticipantLeaves = PTCSessionEndCause.definedParticipantLeaves satisfies PTCSessionEndCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const definedParticipantLeaves = PTCSessionEndCause.definedParticipantLeaves; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PTCSessionEndCause_numberOfParticipants
@@ -147,7 +147,7 @@ const definedParticipantLeaves = PTCSessionEndCause.definedParticipantLeaves sat
  * @type {number}
  */
 export
-const PTCSessionEndCause_numberOfParticipants = PTCSessionEndCause.numberOfParticipants satisfies PTCSessionEndCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const PTCSessionEndCause_numberOfParticipants = PTCSessionEndCause.numberOfParticipants; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary numberOfParticipants
@@ -155,7 +155,7 @@ const PTCSessionEndCause_numberOfParticipants = PTCSessionEndCause.numberOfParti
  * @type {number}
  */
 export
-const numberOfParticipants = PTCSessionEndCause.numberOfParticipants satisfies PTCSessionEndCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const numberOfParticipants = PTCSessionEndCause.numberOfParticipants; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PTCSessionEndCause_sessionTimerExpired
@@ -163,7 +163,7 @@ const numberOfParticipants = PTCSessionEndCause.numberOfParticipants satisfies P
  * @type {number}
  */
 export
-const PTCSessionEndCause_sessionTimerExpired = PTCSessionEndCause.sessionTimerExpired satisfies PTCSessionEndCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const PTCSessionEndCause_sessionTimerExpired = PTCSessionEndCause.sessionTimerExpired; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sessionTimerExpired
@@ -171,7 +171,7 @@ const PTCSessionEndCause_sessionTimerExpired = PTCSessionEndCause.sessionTimerEx
  * @type {number}
  */
 export
-const sessionTimerExpired = PTCSessionEndCause.sessionTimerExpired satisfies PTCSessionEndCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sessionTimerExpired = PTCSessionEndCause.sessionTimerExpired; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PTCSessionEndCause_pTCSpeechInactive
@@ -179,7 +179,7 @@ const sessionTimerExpired = PTCSessionEndCause.sessionTimerExpired satisfies PTC
  * @type {number}
  */
 export
-const PTCSessionEndCause_pTCSpeechInactive = PTCSessionEndCause.pTCSpeechInactive satisfies PTCSessionEndCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const PTCSessionEndCause_pTCSpeechInactive = PTCSessionEndCause.pTCSpeechInactive; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pTCSpeechInactive
@@ -187,7 +187,7 @@ const PTCSessionEndCause_pTCSpeechInactive = PTCSessionEndCause.pTCSpeechInactiv
  * @type {number}
  */
 export
-const pTCSpeechInactive = PTCSessionEndCause.pTCSpeechInactive satisfies PTCSessionEndCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pTCSpeechInactive = PTCSessionEndCause.pTCSpeechInactive; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PTCSessionEndCause_allMediaTypesInactive
@@ -195,7 +195,7 @@ const pTCSpeechInactive = PTCSessionEndCause.pTCSpeechInactive satisfies PTCSess
  * @type {number}
  */
 export
-const PTCSessionEndCause_allMediaTypesInactive = PTCSessionEndCause.allMediaTypesInactive satisfies PTCSessionEndCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const PTCSessionEndCause_allMediaTypesInactive = PTCSessionEndCause.allMediaTypesInactive; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary allMediaTypesInactive
@@ -203,7 +203,7 @@ const PTCSessionEndCause_allMediaTypesInactive = PTCSessionEndCause.allMediaType
  * @type {number}
  */
 export
-const allMediaTypesInactive = PTCSessionEndCause.allMediaTypesInactive satisfies PTCSessionEndCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const allMediaTypesInactive = PTCSessionEndCause.allMediaTypesInactive; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_PTCSessionEndCause: $.ASN1Decoder<PTCSessionEndCause> = $._decodeEnumerated;
 export const _encode_PTCSessionEndCause: $.ASN1Encoder<PTCSessionEndCause> = $._encodeEnumerated;
 

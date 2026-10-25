@@ -90,7 +90,7 @@ const ACPPreferredDelivery = _enum_for_ACPPreferredDelivery;
  * @type {number}
  */
 export
-const ACPPreferredDelivery_smtp = ACPPreferredDelivery.smtp satisfies ACPPreferredDelivery; /* LONG_NAMED_ENUMERATED_VALUE */
+const ACPPreferredDelivery_smtp = ACPPreferredDelivery.smtp; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * Short name for {@link ACPPreferredDelivery_smtp}.
@@ -99,7 +99,7 @@ const ACPPreferredDelivery_smtp = ACPPreferredDelivery.smtp satisfies ACPPreferr
  * @type {number}
  */
 export
-const smtp = ACPPreferredDelivery.smtp satisfies ACPPreferredDelivery; /* SHORT_NAMED_ENUMERATED_VALUE */
+const smtp = ACPPreferredDelivery.smtp; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * ACP 127. {@link ACPLegacyFormat} names the format.
@@ -108,7 +108,7 @@ const smtp = ACPPreferredDelivery.smtp satisfies ACPPreferredDelivery; /* SHORT_
  * @type {number}
  */
 export
-const ACPPreferredDelivery_acp127 = ACPPreferredDelivery.acp127 satisfies ACPPreferredDelivery; /* LONG_NAMED_ENUMERATED_VALUE */
+const ACPPreferredDelivery_acp127 = ACPPreferredDelivery.acp127; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * Short name for {@link ACPPreferredDelivery_acp127}.
@@ -117,7 +117,7 @@ const ACPPreferredDelivery_acp127 = ACPPreferredDelivery.acp127 satisfies ACPPre
  * @type {number}
  */
 export
-const acp127 = ACPPreferredDelivery.acp127 satisfies ACPPreferredDelivery; /* SHORT_NAMED_ENUMERATED_VALUE */
+const acp127 = ACPPreferredDelivery.acp127; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * X.400 (1984 or 1988), or ACP 123.
@@ -126,7 +126,7 @@ const acp127 = ACPPreferredDelivery.acp127 satisfies ACPPreferredDelivery; /* SH
  * @type {number}
  */
 export
-const ACPPreferredDelivery_mhs = ACPPreferredDelivery.mhs satisfies ACPPreferredDelivery; /* LONG_NAMED_ENUMERATED_VALUE */
+const ACPPreferredDelivery_mhs = ACPPreferredDelivery.mhs; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * Short name for {@link ACPPreferredDelivery_mhs}.
@@ -135,7 +135,7 @@ const ACPPreferredDelivery_mhs = ACPPreferredDelivery.mhs satisfies ACPPreferred
  * @type {number}
  */
 export
-const mhs = ACPPreferredDelivery.mhs satisfies ACPPreferredDelivery; /* SHORT_NAMED_ENUMERATED_VALUE */
+const mhs = ACPPreferredDelivery.mhs; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_ACPPreferredDelivery: $.ASN1Decoder<ACPPreferredDelivery> =
     $._decodeEnumerated as $.ASN1Decoder<ACPPreferredDelivery>;
 export const _encode_ACPPreferredDelivery: $.ASN1Encoder<ACPPreferredDelivery> =

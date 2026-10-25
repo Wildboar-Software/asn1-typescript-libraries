@@ -92,7 +92,7 @@ export const ControlledTestRequestType = _enum_for_ControlledTestRequestType;
  * @type {number}
  */
 export const ControlledTestRequestType_independent =
-    ControlledTestRequestType.independent satisfies ControlledTestRequestType; /* LONG_NAMED_ENUMERATED_VALUE */
+    ControlledTestRequestType.independent; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary independent
@@ -106,7 +106,7 @@ export const ControlledTestRequestType_independent =
  * @type {number}
  */
 export const independent =
-    ControlledTestRequestType.independent satisfies ControlledTestRequestType; /* SHORT_NAMED_ENUMERATED_VALUE */
+    ControlledTestRequestType.independent; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ControlledTestRequestType_related
@@ -121,7 +121,7 @@ export const independent =
  * @type {number}
  */
 export const ControlledTestRequestType_related =
-    ControlledTestRequestType.related satisfies ControlledTestRequestType; /* LONG_NAMED_ENUMERATED_VALUE */
+    ControlledTestRequestType.related; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary related
@@ -136,7 +136,7 @@ export const ControlledTestRequestType_related =
  * @type {number}
  */
 export const related =
-    ControlledTestRequestType.related satisfies ControlledTestRequestType; /* SHORT_NAMED_ENUMERATED_VALUE */
+    ControlledTestRequestType.related; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 export function _decode_ControlledTestRequestType(el: _Element): ControlledTestRequestType {

@@ -144,7 +144,7 @@ const DeviceTriggerDeliveryResult = _enum_for_DeviceTriggerDeliveryResult;
  * @type {number}
  */
 export
-const DeviceTriggerDeliveryResult_success = DeviceTriggerDeliveryResult.success satisfies DeviceTriggerDeliveryResult; /* LONG_NAMED_ENUMERATED_VALUE */
+const DeviceTriggerDeliveryResult_success = DeviceTriggerDeliveryResult.success; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary success
@@ -152,7 +152,7 @@ const DeviceTriggerDeliveryResult_success = DeviceTriggerDeliveryResult.success 
  * @type {number}
  */
 export
-const success = DeviceTriggerDeliveryResult.success satisfies DeviceTriggerDeliveryResult; /* SHORT_NAMED_ENUMERATED_VALUE */
+const success = DeviceTriggerDeliveryResult.success; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary DeviceTriggerDeliveryResult_unknown
@@ -160,7 +160,7 @@ const success = DeviceTriggerDeliveryResult.success satisfies DeviceTriggerDeliv
  * @type {number}
  */
 export
-const DeviceTriggerDeliveryResult_unknown = DeviceTriggerDeliveryResult.unknown satisfies DeviceTriggerDeliveryResult; /* LONG_NAMED_ENUMERATED_VALUE */
+const DeviceTriggerDeliveryResult_unknown = DeviceTriggerDeliveryResult.unknown; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unknown
@@ -168,7 +168,7 @@ const DeviceTriggerDeliveryResult_unknown = DeviceTriggerDeliveryResult.unknown 
  * @type {number}
  */
 export
-const unknown = DeviceTriggerDeliveryResult.unknown satisfies DeviceTriggerDeliveryResult; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unknown = DeviceTriggerDeliveryResult.unknown; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary DeviceTriggerDeliveryResult_failure
@@ -176,7 +176,7 @@ const unknown = DeviceTriggerDeliveryResult.unknown satisfies DeviceTriggerDeliv
  * @type {number}
  */
 export
-const DeviceTriggerDeliveryResult_failure = DeviceTriggerDeliveryResult.failure satisfies DeviceTriggerDeliveryResult; /* LONG_NAMED_ENUMERATED_VALUE */
+const DeviceTriggerDeliveryResult_failure = DeviceTriggerDeliveryResult.failure; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary failure
@@ -184,7 +184,7 @@ const DeviceTriggerDeliveryResult_failure = DeviceTriggerDeliveryResult.failure 
  * @type {number}
  */
 export
-const failure = DeviceTriggerDeliveryResult.failure satisfies DeviceTriggerDeliveryResult; /* SHORT_NAMED_ENUMERATED_VALUE */
+const failure = DeviceTriggerDeliveryResult.failure; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary DeviceTriggerDeliveryResult_triggered
@@ -192,7 +192,7 @@ const failure = DeviceTriggerDeliveryResult.failure satisfies DeviceTriggerDeliv
  * @type {number}
  */
 export
-const DeviceTriggerDeliveryResult_triggered = DeviceTriggerDeliveryResult.triggered satisfies DeviceTriggerDeliveryResult; /* LONG_NAMED_ENUMERATED_VALUE */
+const DeviceTriggerDeliveryResult_triggered = DeviceTriggerDeliveryResult.triggered; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary triggered
@@ -200,7 +200,7 @@ const DeviceTriggerDeliveryResult_triggered = DeviceTriggerDeliveryResult.trigge
  * @type {number}
  */
 export
-const triggered = DeviceTriggerDeliveryResult.triggered satisfies DeviceTriggerDeliveryResult; /* SHORT_NAMED_ENUMERATED_VALUE */
+const triggered = DeviceTriggerDeliveryResult.triggered; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary DeviceTriggerDeliveryResult_expired
@@ -208,7 +208,7 @@ const triggered = DeviceTriggerDeliveryResult.triggered satisfies DeviceTriggerD
  * @type {number}
  */
 export
-const DeviceTriggerDeliveryResult_expired = DeviceTriggerDeliveryResult.expired satisfies DeviceTriggerDeliveryResult; /* LONG_NAMED_ENUMERATED_VALUE */
+const DeviceTriggerDeliveryResult_expired = DeviceTriggerDeliveryResult.expired; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary expired
@@ -216,7 +216,7 @@ const DeviceTriggerDeliveryResult_expired = DeviceTriggerDeliveryResult.expired 
  * @type {number}
  */
 export
-const expired = DeviceTriggerDeliveryResult.expired satisfies DeviceTriggerDeliveryResult; /* SHORT_NAMED_ENUMERATED_VALUE */
+const expired = DeviceTriggerDeliveryResult.expired; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary DeviceTriggerDeliveryResult_unconfirmed
@@ -224,7 +224,7 @@ const expired = DeviceTriggerDeliveryResult.expired satisfies DeviceTriggerDeliv
  * @type {number}
  */
 export
-const DeviceTriggerDeliveryResult_unconfirmed = DeviceTriggerDeliveryResult.unconfirmed satisfies DeviceTriggerDeliveryResult; /* LONG_NAMED_ENUMERATED_VALUE */
+const DeviceTriggerDeliveryResult_unconfirmed = DeviceTriggerDeliveryResult.unconfirmed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unconfirmed
@@ -232,7 +232,7 @@ const DeviceTriggerDeliveryResult_unconfirmed = DeviceTriggerDeliveryResult.unco
  * @type {number}
  */
 export
-const unconfirmed = DeviceTriggerDeliveryResult.unconfirmed satisfies DeviceTriggerDeliveryResult; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unconfirmed = DeviceTriggerDeliveryResult.unconfirmed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary DeviceTriggerDeliveryResult_replaced
@@ -240,7 +240,7 @@ const unconfirmed = DeviceTriggerDeliveryResult.unconfirmed satisfies DeviceTrig
  * @type {number}
  */
 export
-const DeviceTriggerDeliveryResult_replaced = DeviceTriggerDeliveryResult.replaced satisfies DeviceTriggerDeliveryResult; /* LONG_NAMED_ENUMERATED_VALUE */
+const DeviceTriggerDeliveryResult_replaced = DeviceTriggerDeliveryResult.replaced; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary replaced
@@ -248,7 +248,7 @@ const DeviceTriggerDeliveryResult_replaced = DeviceTriggerDeliveryResult.replace
  * @type {number}
  */
 export
-const replaced = DeviceTriggerDeliveryResult.replaced satisfies DeviceTriggerDeliveryResult; /* SHORT_NAMED_ENUMERATED_VALUE */
+const replaced = DeviceTriggerDeliveryResult.replaced; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary DeviceTriggerDeliveryResult_terminate
@@ -256,7 +256,7 @@ const replaced = DeviceTriggerDeliveryResult.replaced satisfies DeviceTriggerDel
  * @type {number}
  */
 export
-const DeviceTriggerDeliveryResult_terminate = DeviceTriggerDeliveryResult.terminate satisfies DeviceTriggerDeliveryResult; /* LONG_NAMED_ENUMERATED_VALUE */
+const DeviceTriggerDeliveryResult_terminate = DeviceTriggerDeliveryResult.terminate; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary terminate
@@ -264,7 +264,7 @@ const DeviceTriggerDeliveryResult_terminate = DeviceTriggerDeliveryResult.termin
  * @type {number}
  */
 export
-const terminate = DeviceTriggerDeliveryResult.terminate satisfies DeviceTriggerDeliveryResult; /* SHORT_NAMED_ENUMERATED_VALUE */
+const terminate = DeviceTriggerDeliveryResult.terminate; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_DeviceTriggerDeliveryResult: $.ASN1Decoder<DeviceTriggerDeliveryResult> = $._decodeEnumerated;
 export const _encode_DeviceTriggerDeliveryResult: $.ASN1Encoder<DeviceTriggerDeliveryResult> = $._encodeEnumerated;
 

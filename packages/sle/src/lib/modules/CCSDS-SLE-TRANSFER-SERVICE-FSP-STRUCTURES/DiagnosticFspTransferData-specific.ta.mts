@@ -71,7 +71,7 @@ const DiagnosticFspTransferData_specific_unableToProcess = 0 satisfies Diagnosti
  * @type {number}
  */
 export
-const unableToProcess = DiagnosticFspTransferData_specific_unableToProcess satisfies DiagnosticFspTransferData_specific; /* SHORT_NAMED_INTEGER_VALUE */
+const unableToProcess = DiagnosticFspTransferData_specific_unableToProcess; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagnosticFspTransferData_specific_unableToStore
@@ -97,7 +97,7 @@ const DiagnosticFspTransferData_specific_unableToStore = 1 satisfies DiagnosticF
  * @type {number}
  */
 export
-const unableToStore = DiagnosticFspTransferData_specific_unableToStore satisfies DiagnosticFspTransferData_specific; /* SHORT_NAMED_INTEGER_VALUE */
+const unableToStore = DiagnosticFspTransferData_specific_unableToStore; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagnosticFspTransferData_specific_packetIdentificationOutOfSequence
@@ -125,7 +125,7 @@ const DiagnosticFspTransferData_specific_packetIdentificationOutOfSequence = 2 s
  * @type {number}
  */
 export
-const packetIdentificationOutOfSequence = DiagnosticFspTransferData_specific_packetIdentificationOutOfSequence satisfies DiagnosticFspTransferData_specific; /* SHORT_NAMED_INTEGER_VALUE */
+const packetIdentificationOutOfSequence = DiagnosticFspTransferData_specific_packetIdentificationOutOfSequence; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagnosticFspTransferData_specific_duplicatePacketIdentification
@@ -154,7 +154,7 @@ const DiagnosticFspTransferData_specific_duplicatePacketIdentification = 3 satis
  * @type {number}
  */
 export
-const duplicatePacketIdentification = DiagnosticFspTransferData_specific_duplicatePacketIdentification satisfies DiagnosticFspTransferData_specific; /* SHORT_NAMED_INTEGER_VALUE */
+const duplicatePacketIdentification = DiagnosticFspTransferData_specific_duplicatePacketIdentification; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagnosticFspTransferData_specific_inconsistentTimeRange
@@ -179,7 +179,7 @@ const DiagnosticFspTransferData_specific_inconsistentTimeRange = 4 satisfies Dia
  * @type {number}
  */
 export
-const inconsistentTimeRange = DiagnosticFspTransferData_specific_inconsistentTimeRange satisfies DiagnosticFspTransferData_specific; /* SHORT_NAMED_INTEGER_VALUE */
+const inconsistentTimeRange = DiagnosticFspTransferData_specific_inconsistentTimeRange; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagnosticFspTransferData_specific_invalidTime
@@ -208,7 +208,7 @@ const DiagnosticFspTransferData_specific_invalidTime = 5 satisfies DiagnosticFsp
  * @type {number}
  */
 export
-const invalidTime = DiagnosticFspTransferData_specific_invalidTime satisfies DiagnosticFspTransferData_specific; /* SHORT_NAMED_INTEGER_VALUE */
+const invalidTime = DiagnosticFspTransferData_specific_invalidTime; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagnosticFspTransferData_specific_conflictingProductionTimeIntervals
@@ -236,7 +236,7 @@ const DiagnosticFspTransferData_specific_conflictingProductionTimeIntervals = 6 
  * @type {number}
  */
 export
-const conflictingProductionTimeIntervals = DiagnosticFspTransferData_specific_conflictingProductionTimeIntervals satisfies DiagnosticFspTransferData_specific; /* SHORT_NAMED_INTEGER_VALUE */
+const conflictingProductionTimeIntervals = DiagnosticFspTransferData_specific_conflictingProductionTimeIntervals; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagnosticFspTransferData_specific_lateSldu
@@ -262,7 +262,7 @@ const DiagnosticFspTransferData_specific_lateSldu = 7 satisfies DiagnosticFspTra
  * @type {number}
  */
 export
-const lateSldu = DiagnosticFspTransferData_specific_lateSldu satisfies DiagnosticFspTransferData_specific; /* SHORT_NAMED_INTEGER_VALUE */
+const lateSldu = DiagnosticFspTransferData_specific_lateSldu; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagnosticFspTransferData_specific_invalidDelayTime
@@ -288,7 +288,7 @@ const DiagnosticFspTransferData_specific_invalidDelayTime = 8 satisfies Diagnost
  * @type {number}
  */
 export
-const invalidDelayTime = DiagnosticFspTransferData_specific_invalidDelayTime satisfies DiagnosticFspTransferData_specific; /* SHORT_NAMED_INTEGER_VALUE */
+const invalidDelayTime = DiagnosticFspTransferData_specific_invalidDelayTime; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagnosticFspTransferData_specific_invalidTransmissionMode
@@ -315,7 +315,7 @@ const DiagnosticFspTransferData_specific_invalidTransmissionMode = 9 satisfies D
  * @type {number}
  */
 export
-const invalidTransmissionMode = DiagnosticFspTransferData_specific_invalidTransmissionMode satisfies DiagnosticFspTransferData_specific; /* SHORT_NAMED_INTEGER_VALUE */
+const invalidTransmissionMode = DiagnosticFspTransferData_specific_invalidTransmissionMode; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagnosticFspTransferData_specific_invalidMap
@@ -341,7 +341,7 @@ const DiagnosticFspTransferData_specific_invalidMap = 10 satisfies DiagnosticFsp
  * @type {number}
  */
 export
-const invalidMap = DiagnosticFspTransferData_specific_invalidMap satisfies DiagnosticFspTransferData_specific; /* SHORT_NAMED_INTEGER_VALUE */
+const invalidMap = DiagnosticFspTransferData_specific_invalidMap; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagnosticFspTransferData_specific_invalidNotificationRequest
@@ -367,7 +367,7 @@ const DiagnosticFspTransferData_specific_invalidNotificationRequest = 11 satisfi
  * @type {number}
  */
 export
-const invalidNotificationRequest = DiagnosticFspTransferData_specific_invalidNotificationRequest satisfies DiagnosticFspTransferData_specific; /* SHORT_NAMED_INTEGER_VALUE */
+const invalidNotificationRequest = DiagnosticFspTransferData_specific_invalidNotificationRequest; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagnosticFspTransferData_specific_packetTooLong
@@ -394,7 +394,7 @@ const DiagnosticFspTransferData_specific_packetTooLong = 12 satisfies Diagnostic
  * @type {number}
  */
 export
-const packetTooLong = DiagnosticFspTransferData_specific_packetTooLong satisfies DiagnosticFspTransferData_specific; /* SHORT_NAMED_INTEGER_VALUE */
+const packetTooLong = DiagnosticFspTransferData_specific_packetTooLong; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagnosticFspTransferData_specific_unsupportedPacketVersion
@@ -421,7 +421,7 @@ const DiagnosticFspTransferData_specific_unsupportedPacketVersion = 13 satisfies
  * @type {number}
  */
 export
-const unsupportedPacketVersion = DiagnosticFspTransferData_specific_unsupportedPacketVersion satisfies DiagnosticFspTransferData_specific; /* SHORT_NAMED_INTEGER_VALUE */
+const unsupportedPacketVersion = DiagnosticFspTransferData_specific_unsupportedPacketVersion; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagnosticFspTransferData_specific_incorrectPacketType
@@ -447,7 +447,7 @@ const DiagnosticFspTransferData_specific_incorrectPacketType = 14 satisfies Diag
  * @type {number}
  */
 export
-const incorrectPacketType = DiagnosticFspTransferData_specific_incorrectPacketType satisfies DiagnosticFspTransferData_specific; /* SHORT_NAMED_INTEGER_VALUE */
+const incorrectPacketType = DiagnosticFspTransferData_specific_incorrectPacketType; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagnosticFspTransferData_specific_invalidPacketApid
@@ -474,7 +474,7 @@ const DiagnosticFspTransferData_specific_invalidPacketApid = 15 satisfies Diagno
  * @type {number}
  */
 export
-const invalidPacketApid = DiagnosticFspTransferData_specific_invalidPacketApid satisfies DiagnosticFspTransferData_specific; /* SHORT_NAMED_INTEGER_VALUE */
+const invalidPacketApid = DiagnosticFspTransferData_specific_invalidPacketApid; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_DiagnosticFspTransferData_specific: $.ASN1Decoder<DiagnosticFspTransferData_specific> = $._decodeInteger;
 export const _encode_DiagnosticFspTransferData_specific: $.ASN1Encoder<DiagnosticFspTransferData_specific> = $._encodeInteger;
 

@@ -313,7 +313,7 @@ const NchfChargingEvent = _enum_for_NchfChargingEvent;
  * @type {number}
  */
 export
-const NchfChargingEvent_pDUSessionChargingInformation = NchfChargingEvent.pDUSessionChargingInformation satisfies NchfChargingEvent; /* LONG_NAMED_ENUMERATED_VALUE */
+const NchfChargingEvent_pDUSessionChargingInformation = NchfChargingEvent.pDUSessionChargingInformation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pDUSessionChargingInformation
@@ -328,7 +328,7 @@ const NchfChargingEvent_pDUSessionChargingInformation = NchfChargingEvent.pDUSes
  * @type {number}
  */
 export
-const pDUSessionChargingInformation = NchfChargingEvent.pDUSessionChargingInformation satisfies NchfChargingEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pDUSessionChargingInformation = NchfChargingEvent.pDUSessionChargingInformation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NchfChargingEvent_sMSChargingInformation
@@ -342,7 +342,7 @@ const pDUSessionChargingInformation = NchfChargingEvent.pDUSessionChargingInform
  * @type {number}
  */
 export
-const NchfChargingEvent_sMSChargingInformation = NchfChargingEvent.sMSChargingInformation satisfies NchfChargingEvent; /* LONG_NAMED_ENUMERATED_VALUE */
+const NchfChargingEvent_sMSChargingInformation = NchfChargingEvent.sMSChargingInformation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sMSChargingInformation
@@ -356,7 +356,7 @@ const NchfChargingEvent_sMSChargingInformation = NchfChargingEvent.sMSChargingIn
  * @type {number}
  */
 export
-const sMSChargingInformation = NchfChargingEvent.sMSChargingInformation satisfies NchfChargingEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sMSChargingInformation = NchfChargingEvent.sMSChargingInformation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NchfChargingEvent_nEFChargingInformation
@@ -371,7 +371,7 @@ const sMSChargingInformation = NchfChargingEvent.sMSChargingInformation satisfie
  * @type {number}
  */
 export
-const NchfChargingEvent_nEFChargingInformation = NchfChargingEvent.nEFChargingInformation satisfies NchfChargingEvent; /* LONG_NAMED_ENUMERATED_VALUE */
+const NchfChargingEvent_nEFChargingInformation = NchfChargingEvent.nEFChargingInformation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary nEFChargingInformation
@@ -386,7 +386,7 @@ const NchfChargingEvent_nEFChargingInformation = NchfChargingEvent.nEFChargingIn
  * @type {number}
  */
 export
-const nEFChargingInformation = NchfChargingEvent.nEFChargingInformation satisfies NchfChargingEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const nEFChargingInformation = NchfChargingEvent.nEFChargingInformation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NchfChargingEvent_registrationChargingInformation
@@ -400,7 +400,7 @@ const nEFChargingInformation = NchfChargingEvent.nEFChargingInformation satisfie
  * @type {number}
  */
 export
-const NchfChargingEvent_registrationChargingInformation = NchfChargingEvent.registrationChargingInformation satisfies NchfChargingEvent; /* LONG_NAMED_ENUMERATED_VALUE */
+const NchfChargingEvent_registrationChargingInformation = NchfChargingEvent.registrationChargingInformation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary registrationChargingInformation
@@ -414,7 +414,7 @@ const NchfChargingEvent_registrationChargingInformation = NchfChargingEvent.regi
  * @type {number}
  */
 export
-const registrationChargingInformation = NchfChargingEvent.registrationChargingInformation satisfies NchfChargingEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const registrationChargingInformation = NchfChargingEvent.registrationChargingInformation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NchfChargingEvent_n2ConnectionChargingInformation
@@ -428,7 +428,7 @@ const registrationChargingInformation = NchfChargingEvent.registrationChargingIn
  * @type {number}
  */
 export
-const NchfChargingEvent_n2ConnectionChargingInformation = NchfChargingEvent.n2ConnectionChargingInformation satisfies NchfChargingEvent; /* LONG_NAMED_ENUMERATED_VALUE */
+const NchfChargingEvent_n2ConnectionChargingInformation = NchfChargingEvent.n2ConnectionChargingInformation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary n2ConnectionChargingInformation
@@ -442,7 +442,7 @@ const NchfChargingEvent_n2ConnectionChargingInformation = NchfChargingEvent.n2Co
  * @type {number}
  */
 export
-const n2ConnectionChargingInformation = NchfChargingEvent.n2ConnectionChargingInformation satisfies NchfChargingEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const n2ConnectionChargingInformation = NchfChargingEvent.n2ConnectionChargingInformation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NchfChargingEvent_locationReportingChargingInformation
@@ -457,7 +457,7 @@ const n2ConnectionChargingInformation = NchfChargingEvent.n2ConnectionChargingIn
  * @type {number}
  */
 export
-const NchfChargingEvent_locationReportingChargingInformation = NchfChargingEvent.locationReportingChargingInformation satisfies NchfChargingEvent; /* LONG_NAMED_ENUMERATED_VALUE */
+const NchfChargingEvent_locationReportingChargingInformation = NchfChargingEvent.locationReportingChargingInformation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary locationReportingChargingInformation
@@ -472,7 +472,7 @@ const NchfChargingEvent_locationReportingChargingInformation = NchfChargingEvent
  * @type {number}
  */
 export
-const locationReportingChargingInformation = NchfChargingEvent.locationReportingChargingInformation satisfies NchfChargingEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const locationReportingChargingInformation = NchfChargingEvent.locationReportingChargingInformation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NchfChargingEvent_nSPAChargingInformation
@@ -487,7 +487,7 @@ const locationReportingChargingInformation = NchfChargingEvent.locationReporting
  * @type {number}
  */
 export
-const NchfChargingEvent_nSPAChargingInformation = NchfChargingEvent.nSPAChargingInformation satisfies NchfChargingEvent; /* LONG_NAMED_ENUMERATED_VALUE */
+const NchfChargingEvent_nSPAChargingInformation = NchfChargingEvent.nSPAChargingInformation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary nSPAChargingInformation
@@ -502,7 +502,7 @@ const NchfChargingEvent_nSPAChargingInformation = NchfChargingEvent.nSPACharging
  * @type {number}
  */
 export
-const nSPAChargingInformation = NchfChargingEvent.nSPAChargingInformation satisfies NchfChargingEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const nSPAChargingInformation = NchfChargingEvent.nSPAChargingInformation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NchfChargingEvent_nSMChargingInformation
@@ -517,7 +517,7 @@ const nSPAChargingInformation = NchfChargingEvent.nSPAChargingInformation satisf
  * @type {number}
  */
 export
-const NchfChargingEvent_nSMChargingInformation = NchfChargingEvent.nSMChargingInformation satisfies NchfChargingEvent; /* LONG_NAMED_ENUMERATED_VALUE */
+const NchfChargingEvent_nSMChargingInformation = NchfChargingEvent.nSMChargingInformation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary nSMChargingInformation
@@ -532,7 +532,7 @@ const NchfChargingEvent_nSMChargingInformation = NchfChargingEvent.nSMChargingIn
  * @type {number}
  */
 export
-const nSMChargingInformation = NchfChargingEvent.nSMChargingInformation satisfies NchfChargingEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const nSMChargingInformation = NchfChargingEvent.nSMChargingInformation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NchfChargingEvent_mMTelChargingInformation
@@ -546,7 +546,7 @@ const nSMChargingInformation = NchfChargingEvent.nSMChargingInformation satisfie
  * @type {number}
  */
 export
-const NchfChargingEvent_mMTelChargingInformation = NchfChargingEvent.mMTelChargingInformation satisfies NchfChargingEvent; /* LONG_NAMED_ENUMERATED_VALUE */
+const NchfChargingEvent_mMTelChargingInformation = NchfChargingEvent.mMTelChargingInformation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary mMTelChargingInformation
@@ -560,7 +560,7 @@ const NchfChargingEvent_mMTelChargingInformation = NchfChargingEvent.mMTelChargi
  * @type {number}
  */
 export
-const mMTelChargingInformation = NchfChargingEvent.mMTelChargingInformation satisfies NchfChargingEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const mMTelChargingInformation = NchfChargingEvent.mMTelChargingInformation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NchfChargingEvent_iMSChargingInformation
@@ -574,7 +574,7 @@ const mMTelChargingInformation = NchfChargingEvent.mMTelChargingInformation sati
  * @type {number}
  */
 export
-const NchfChargingEvent_iMSChargingInformation = NchfChargingEvent.iMSChargingInformation satisfies NchfChargingEvent; /* LONG_NAMED_ENUMERATED_VALUE */
+const NchfChargingEvent_iMSChargingInformation = NchfChargingEvent.iMSChargingInformation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary iMSChargingInformation
@@ -588,7 +588,7 @@ const NchfChargingEvent_iMSChargingInformation = NchfChargingEvent.iMSChargingIn
  * @type {number}
  */
 export
-const iMSChargingInformation = NchfChargingEvent.iMSChargingInformation satisfies NchfChargingEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const iMSChargingInformation = NchfChargingEvent.iMSChargingInformation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NchfChargingEvent_edgeInfrastructureUsageChargingInformation
@@ -603,7 +603,7 @@ const iMSChargingInformation = NchfChargingEvent.iMSChargingInformation satisfie
  * @type {number}
  */
 export
-const NchfChargingEvent_edgeInfrastructureUsageChargingInformation = NchfChargingEvent.edgeInfrastructureUsageChargingInformation satisfies NchfChargingEvent; /* LONG_NAMED_ENUMERATED_VALUE */
+const NchfChargingEvent_edgeInfrastructureUsageChargingInformation = NchfChargingEvent.edgeInfrastructureUsageChargingInformation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary edgeInfrastructureUsageChargingInformation
@@ -618,7 +618,7 @@ const NchfChargingEvent_edgeInfrastructureUsageChargingInformation = NchfChargin
  * @type {number}
  */
 export
-const edgeInfrastructureUsageChargingInformation = NchfChargingEvent.edgeInfrastructureUsageChargingInformation satisfies NchfChargingEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const edgeInfrastructureUsageChargingInformation = NchfChargingEvent.edgeInfrastructureUsageChargingInformation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NchfChargingEvent_eASDeploymentChargingInformation
@@ -633,7 +633,7 @@ const edgeInfrastructureUsageChargingInformation = NchfChargingEvent.edgeInfrast
  * @type {number}
  */
 export
-const NchfChargingEvent_eASDeploymentChargingInformation = NchfChargingEvent.eASDeploymentChargingInformation satisfies NchfChargingEvent; /* LONG_NAMED_ENUMERATED_VALUE */
+const NchfChargingEvent_eASDeploymentChargingInformation = NchfChargingEvent.eASDeploymentChargingInformation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary eASDeploymentChargingInformation
@@ -648,7 +648,7 @@ const NchfChargingEvent_eASDeploymentChargingInformation = NchfChargingEvent.eAS
  * @type {number}
  */
 export
-const eASDeploymentChargingInformation = NchfChargingEvent.eASDeploymentChargingInformation satisfies NchfChargingEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const eASDeploymentChargingInformation = NchfChargingEvent.eASDeploymentChargingInformation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NchfChargingEvent_directEdgeEnablingServiceChargingInformation
@@ -663,7 +663,7 @@ const eASDeploymentChargingInformation = NchfChargingEvent.eASDeploymentCharging
  * @type {number}
  */
 export
-const NchfChargingEvent_directEdgeEnablingServiceChargingInformation = NchfChargingEvent.directEdgeEnablingServiceChargingInformation satisfies NchfChargingEvent; /* LONG_NAMED_ENUMERATED_VALUE */
+const NchfChargingEvent_directEdgeEnablingServiceChargingInformation = NchfChargingEvent.directEdgeEnablingServiceChargingInformation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary directEdgeEnablingServiceChargingInformation
@@ -678,7 +678,7 @@ const NchfChargingEvent_directEdgeEnablingServiceChargingInformation = NchfCharg
  * @type {number}
  */
 export
-const directEdgeEnablingServiceChargingInformation = NchfChargingEvent.directEdgeEnablingServiceChargingInformation satisfies NchfChargingEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const directEdgeEnablingServiceChargingInformation = NchfChargingEvent.directEdgeEnablingServiceChargingInformation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NchfChargingEvent_exposedEdgeEnablingServiceChargingInformation
@@ -693,7 +693,7 @@ const directEdgeEnablingServiceChargingInformation = NchfChargingEvent.directEdg
  * @type {number}
  */
 export
-const NchfChargingEvent_exposedEdgeEnablingServiceChargingInformation = NchfChargingEvent.exposedEdgeEnablingServiceChargingInformation satisfies NchfChargingEvent; /* LONG_NAMED_ENUMERATED_VALUE */
+const NchfChargingEvent_exposedEdgeEnablingServiceChargingInformation = NchfChargingEvent.exposedEdgeEnablingServiceChargingInformation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary exposedEdgeEnablingServiceChargingInformation
@@ -708,7 +708,7 @@ const NchfChargingEvent_exposedEdgeEnablingServiceChargingInformation = NchfChar
  * @type {number}
  */
 export
-const exposedEdgeEnablingServiceChargingInformation = NchfChargingEvent.exposedEdgeEnablingServiceChargingInformation satisfies NchfChargingEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const exposedEdgeEnablingServiceChargingInformation = NchfChargingEvent.exposedEdgeEnablingServiceChargingInformation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NchfChargingEvent_proSeChargingInformation
@@ -722,7 +722,7 @@ const exposedEdgeEnablingServiceChargingInformation = NchfChargingEvent.exposedE
  * @type {number}
  */
 export
-const NchfChargingEvent_proSeChargingInformation = NchfChargingEvent.proSeChargingInformation satisfies NchfChargingEvent; /* LONG_NAMED_ENUMERATED_VALUE */
+const NchfChargingEvent_proSeChargingInformation = NchfChargingEvent.proSeChargingInformation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary proSeChargingInformation
@@ -736,7 +736,7 @@ const NchfChargingEvent_proSeChargingInformation = NchfChargingEvent.proSeChargi
  * @type {number}
  */
 export
-const proSeChargingInformation = NchfChargingEvent.proSeChargingInformation satisfies NchfChargingEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const proSeChargingInformation = NchfChargingEvent.proSeChargingInformation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NchfChargingEvent_mMSChargingInformation
@@ -750,7 +750,7 @@ const proSeChargingInformation = NchfChargingEvent.proSeChargingInformation sati
  * @type {number}
  */
 export
-const NchfChargingEvent_mMSChargingInformation = NchfChargingEvent.mMSChargingInformation satisfies NchfChargingEvent; /* LONG_NAMED_ENUMERATED_VALUE */
+const NchfChargingEvent_mMSChargingInformation = NchfChargingEvent.mMSChargingInformation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary mMSChargingInformation
@@ -764,7 +764,7 @@ const NchfChargingEvent_mMSChargingInformation = NchfChargingEvent.mMSChargingIn
  * @type {number}
  */
 export
-const mMSChargingInformation = NchfChargingEvent.mMSChargingInformation satisfies NchfChargingEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const mMSChargingInformation = NchfChargingEvent.mMSChargingInformation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NchfChargingEvent_mBSSessionChargingInformation
@@ -778,7 +778,7 @@ const mMSChargingInformation = NchfChargingEvent.mMSChargingInformation satisfie
  * @type {number}
  */
 export
-const NchfChargingEvent_mBSSessionChargingInformation = NchfChargingEvent.mBSSessionChargingInformation satisfies NchfChargingEvent; /* LONG_NAMED_ENUMERATED_VALUE */
+const NchfChargingEvent_mBSSessionChargingInformation = NchfChargingEvent.mBSSessionChargingInformation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary mBSSessionChargingInformation
@@ -792,7 +792,7 @@ const NchfChargingEvent_mBSSessionChargingInformation = NchfChargingEvent.mBSSes
  * @type {number}
  */
 export
-const mBSSessionChargingInformation = NchfChargingEvent.mBSSessionChargingInformation satisfies NchfChargingEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const mBSSessionChargingInformation = NchfChargingEvent.mBSSessionChargingInformation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NchfChargingEvent_tSNChargingInformation
@@ -806,7 +806,7 @@ const mBSSessionChargingInformation = NchfChargingEvent.mBSSessionChargingInform
  * @type {number}
  */
 export
-const NchfChargingEvent_tSNChargingInformation = NchfChargingEvent.tSNChargingInformation satisfies NchfChargingEvent; /* LONG_NAMED_ENUMERATED_VALUE */
+const NchfChargingEvent_tSNChargingInformation = NchfChargingEvent.tSNChargingInformation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tSNChargingInformation
@@ -820,7 +820,7 @@ const NchfChargingEvent_tSNChargingInformation = NchfChargingEvent.tSNChargingIn
  * @type {number}
  */
 export
-const tSNChargingInformation = NchfChargingEvent.tSNChargingInformation satisfies NchfChargingEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tSNChargingInformation = NchfChargingEvent.tSNChargingInformation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NchfChargingEvent_nSACFChargingInformation
@@ -835,7 +835,7 @@ const tSNChargingInformation = NchfChargingEvent.tSNChargingInformation satisfie
  * @type {number}
  */
 export
-const NchfChargingEvent_nSACFChargingInformation = NchfChargingEvent.nSACFChargingInformation satisfies NchfChargingEvent; /* LONG_NAMED_ENUMERATED_VALUE */
+const NchfChargingEvent_nSACFChargingInformation = NchfChargingEvent.nSACFChargingInformation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary nSACFChargingInformation
@@ -850,7 +850,7 @@ const NchfChargingEvent_nSACFChargingInformation = NchfChargingEvent.nSACFChargi
  * @type {number}
  */
 export
-const nSACFChargingInformation = NchfChargingEvent.nSACFChargingInformation satisfies NchfChargingEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const nSACFChargingInformation = NchfChargingEvent.nSACFChargingInformation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NchfChargingEvent_nSSAAChargingInformation
@@ -865,7 +865,7 @@ const nSACFChargingInformation = NchfChargingEvent.nSACFChargingInformation sati
  * @type {number}
  */
 export
-const NchfChargingEvent_nSSAAChargingInformation = NchfChargingEvent.nSSAAChargingInformation satisfies NchfChargingEvent; /* LONG_NAMED_ENUMERATED_VALUE */
+const NchfChargingEvent_nSSAAChargingInformation = NchfChargingEvent.nSSAAChargingInformation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary nSSAAChargingInformation
@@ -880,7 +880,7 @@ const NchfChargingEvent_nSSAAChargingInformation = NchfChargingEvent.nSSAAChargi
  * @type {number}
  */
 export
-const nSSAAChargingInformation = NchfChargingEvent.nSSAAChargingInformation satisfies NchfChargingEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const nSSAAChargingInformation = NchfChargingEvent.nSSAAChargingInformation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NchfChargingEvent_rangingSLChargingInformation
@@ -895,7 +895,7 @@ const nSSAAChargingInformation = NchfChargingEvent.nSSAAChargingInformation sati
  * @type {number}
  */
 export
-const NchfChargingEvent_rangingSLChargingInformation = NchfChargingEvent.rangingSLChargingInformation satisfies NchfChargingEvent; /* LONG_NAMED_ENUMERATED_VALUE */
+const NchfChargingEvent_rangingSLChargingInformation = NchfChargingEvent.rangingSLChargingInformation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary rangingSLChargingInformation
@@ -910,7 +910,7 @@ const NchfChargingEvent_rangingSLChargingInformation = NchfChargingEvent.ranging
  * @type {number}
  */
 export
-const rangingSLChargingInformation = NchfChargingEvent.rangingSLChargingInformation satisfies NchfChargingEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const rangingSLChargingInformation = NchfChargingEvent.rangingSLChargingInformation; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_NchfChargingEvent: $.ASN1Decoder<NchfChargingEvent> = $._decodeEnumerated;
 export const _encode_NchfChargingEvent: $.ASN1Encoder<NchfChargingEvent> = $._encodeEnumerated;
 

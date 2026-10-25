@@ -71,7 +71,7 @@ export const ArcState = _enum_for_ArcState;
  * @type {number}
  */
 export const ArcState_alm =
-    ArcState.alm satisfies ArcState; /* LONG_NAMED_ENUMERATED_VALUE */
+    ArcState.alm; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -79,7 +79,7 @@ export const ArcState_alm =
  * @constant
  * @type {number}
  */
-export const alm = ArcState.alm satisfies ArcState; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const alm = ArcState.alm; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -88,7 +88,7 @@ export const alm = ArcState.alm satisfies ArcState; /* SHORT_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export const ArcState_nalm =
-    ArcState.nalm satisfies ArcState; /* LONG_NAMED_ENUMERATED_VALUE */
+    ArcState.nalm; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -96,7 +96,7 @@ export const ArcState_nalm =
  * @constant
  * @type {number}
  */
-export const nalm = ArcState.nalm satisfies ArcState; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const nalm = ArcState.nalm; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -105,7 +105,7 @@ export const nalm = ArcState.nalm satisfies ArcState; /* SHORT_NAMED_ENUMERATED_
  * @type {number}
  */
 export const ArcState_nalmQualifiedInhibit =
-    ArcState.nalmQualifiedInhibit satisfies ArcState; /* LONG_NAMED_ENUMERATED_VALUE */
+    ArcState.nalmQualifiedInhibit; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -114,7 +114,7 @@ export const ArcState_nalmQualifiedInhibit =
  * @type {number}
  */
 export const nalmQualifiedInhibit =
-    ArcState.nalmQualifiedInhibit satisfies ArcState; /* SHORT_NAMED_ENUMERATED_VALUE */
+    ArcState.nalmQualifiedInhibit; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -123,7 +123,7 @@ export const nalmQualifiedInhibit =
  * @type {number}
  */
 export const ArcState_nalmTimedInhibit =
-    ArcState.nalmTimedInhibit satisfies ArcState; /* LONG_NAMED_ENUMERATED_VALUE */
+    ArcState.nalmTimedInhibit; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -132,7 +132,7 @@ export const ArcState_nalmTimedInhibit =
  * @type {number}
  */
 export const nalmTimedInhibit =
-    ArcState.nalmTimedInhibit satisfies ArcState; /* SHORT_NAMED_ENUMERATED_VALUE */
+    ArcState.nalmTimedInhibit; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 

@@ -50,7 +50,7 @@ const GetEimPackageResponse_eimPackageError_noEimPackageAvailable = 1 satisfies 
  * @type {number}
  */
 export
-const noEimPackageAvailable = GetEimPackageResponse_eimPackageError_noEimPackageAvailable satisfies GetEimPackageResponse_eimPackageError; /* SHORT_NAMED_INTEGER_VALUE */
+const noEimPackageAvailable = GetEimPackageResponse_eimPackageError_noEimPackageAvailable; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary GetEimPackageResponse_eimPackageError_eidNotFound
@@ -71,7 +71,7 @@ const GetEimPackageResponse_eimPackageError_eidNotFound = 2 satisfies GetEimPack
  * @type {number}
  */
 export
-const eidNotFound = GetEimPackageResponse_eimPackageError_eidNotFound satisfies GetEimPackageResponse_eimPackageError; /* SHORT_NAMED_INTEGER_VALUE */
+const eidNotFound = GetEimPackageResponse_eimPackageError_eidNotFound; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary GetEimPackageResponse_eimPackageError_invalidEid
@@ -94,7 +94,7 @@ const GetEimPackageResponse_eimPackageError_invalidEid = 3 satisfies GetEimPacka
  * @type {number}
  */
 export
-const invalidEid = GetEimPackageResponse_eimPackageError_invalidEid satisfies GetEimPackageResponse_eimPackageError; /* SHORT_NAMED_INTEGER_VALUE */
+const invalidEid = GetEimPackageResponse_eimPackageError_invalidEid; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary GetEimPackageResponse_eimPackageError_missingEid
@@ -115,7 +115,7 @@ const GetEimPackageResponse_eimPackageError_missingEid = 4 satisfies GetEimPacka
  * @type {number}
  */
 export
-const missingEid = GetEimPackageResponse_eimPackageError_missingEid satisfies GetEimPackageResponse_eimPackageError; /* SHORT_NAMED_INTEGER_VALUE */
+const missingEid = GetEimPackageResponse_eimPackageError_missingEid; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary GetEimPackageResponse_eimPackageError_undefinedError
@@ -137,7 +137,7 @@ const GetEimPackageResponse_eimPackageError_undefinedError = 127 satisfies GetEi
  * @type {number}
  */
 export
-const undefinedError = GetEimPackageResponse_eimPackageError_undefinedError satisfies GetEimPackageResponse_eimPackageError; /* SHORT_NAMED_INTEGER_VALUE */
+const undefinedError = GetEimPackageResponse_eimPackageError_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_GetEimPackageResponse_eimPackageError: $.ASN1Decoder<GetEimPackageResponse_eimPackageError> = $._decodeInteger;
 export const _encode_GetEimPackageResponse_eimPackageError: $.ASN1Encoder<GetEimPackageResponse_eimPackageError> = $._encodeInteger;
 

@@ -53,7 +53,7 @@ const ResourceControlRequest_partialResultsAvailable_subset = 1 satisfies Resour
  * @type {number}
  */
 export
-const subset = ResourceControlRequest_partialResultsAvailable_subset satisfies ResourceControlRequest_partialResultsAvailable; /* SHORT_NAMED_INTEGER_VALUE */
+const subset = ResourceControlRequest_partialResultsAvailable_subset; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ResourceControlRequest_partialResultsAvailable_interim
@@ -79,7 +79,7 @@ const ResourceControlRequest_partialResultsAvailable_interim = 2 satisfies Resou
  * @type {number}
  */
 export
-const interim = ResourceControlRequest_partialResultsAvailable_interim satisfies ResourceControlRequest_partialResultsAvailable; /* SHORT_NAMED_INTEGER_VALUE */
+const interim = ResourceControlRequest_partialResultsAvailable_interim; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ResourceControlRequest_partialResultsAvailable_none
@@ -104,7 +104,7 @@ const ResourceControlRequest_partialResultsAvailable_none = 3 satisfies Resource
  * @type {number}
  */
 export
-const none = ResourceControlRequest_partialResultsAvailable_none satisfies ResourceControlRequest_partialResultsAvailable; /* SHORT_NAMED_INTEGER_VALUE */
+const none = ResourceControlRequest_partialResultsAvailable_none; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_ResourceControlRequest_partialResultsAvailable: $.ASN1Decoder<ResourceControlRequest_partialResultsAvailable> = $._decodeInteger;
 export const _encode_ResourceControlRequest_partialResultsAvailable: $.ASN1Encoder<ResourceControlRequest_partialResultsAvailable> = $._encodeInteger;
 

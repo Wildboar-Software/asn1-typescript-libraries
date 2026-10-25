@@ -112,7 +112,7 @@ const SMSMessageType = _enum_for_SMSMessageType;
  * @type {number}
  */
 export
-const SMSMessageType_deliver = SMSMessageType.deliver satisfies SMSMessageType; /* LONG_NAMED_ENUMERATED_VALUE */
+const SMSMessageType_deliver = SMSMessageType.deliver; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary deliver
@@ -120,7 +120,7 @@ const SMSMessageType_deliver = SMSMessageType.deliver satisfies SMSMessageType; 
  * @type {number}
  */
 export
-const deliver = SMSMessageType.deliver satisfies SMSMessageType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const deliver = SMSMessageType.deliver; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SMSMessageType_deliverReportAck
@@ -128,7 +128,7 @@ const deliver = SMSMessageType.deliver satisfies SMSMessageType; /* SHORT_NAMED_
  * @type {number}
  */
 export
-const SMSMessageType_deliverReportAck = SMSMessageType.deliverReportAck satisfies SMSMessageType; /* LONG_NAMED_ENUMERATED_VALUE */
+const SMSMessageType_deliverReportAck = SMSMessageType.deliverReportAck; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary deliverReportAck
@@ -136,7 +136,7 @@ const SMSMessageType_deliverReportAck = SMSMessageType.deliverReportAck satisfie
  * @type {number}
  */
 export
-const deliverReportAck = SMSMessageType.deliverReportAck satisfies SMSMessageType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const deliverReportAck = SMSMessageType.deliverReportAck; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SMSMessageType_deliverReportError
@@ -144,7 +144,7 @@ const deliverReportAck = SMSMessageType.deliverReportAck satisfies SMSMessageTyp
  * @type {number}
  */
 export
-const SMSMessageType_deliverReportError = SMSMessageType.deliverReportError satisfies SMSMessageType; /* LONG_NAMED_ENUMERATED_VALUE */
+const SMSMessageType_deliverReportError = SMSMessageType.deliverReportError; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary deliverReportError
@@ -152,7 +152,7 @@ const SMSMessageType_deliverReportError = SMSMessageType.deliverReportError sati
  * @type {number}
  */
 export
-const deliverReportError = SMSMessageType.deliverReportError satisfies SMSMessageType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const deliverReportError = SMSMessageType.deliverReportError; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SMSMessageType_statusReport
@@ -160,7 +160,7 @@ const deliverReportError = SMSMessageType.deliverReportError satisfies SMSMessag
  * @type {number}
  */
 export
-const SMSMessageType_statusReport = SMSMessageType.statusReport satisfies SMSMessageType; /* LONG_NAMED_ENUMERATED_VALUE */
+const SMSMessageType_statusReport = SMSMessageType.statusReport; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary statusReport
@@ -168,7 +168,7 @@ const SMSMessageType_statusReport = SMSMessageType.statusReport satisfies SMSMes
  * @type {number}
  */
 export
-const statusReport = SMSMessageType.statusReport satisfies SMSMessageType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const statusReport = SMSMessageType.statusReport; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SMSMessageType_command
@@ -176,7 +176,7 @@ const statusReport = SMSMessageType.statusReport satisfies SMSMessageType; /* SH
  * @type {number}
  */
 export
-const SMSMessageType_command = SMSMessageType.command satisfies SMSMessageType; /* LONG_NAMED_ENUMERATED_VALUE */
+const SMSMessageType_command = SMSMessageType.command; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary command
@@ -184,7 +184,7 @@ const SMSMessageType_command = SMSMessageType.command satisfies SMSMessageType; 
  * @type {number}
  */
 export
-const command = SMSMessageType.command satisfies SMSMessageType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const command = SMSMessageType.command; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SMSMessageType_submit
@@ -192,7 +192,7 @@ const command = SMSMessageType.command satisfies SMSMessageType; /* SHORT_NAMED_
  * @type {number}
  */
 export
-const SMSMessageType_submit = SMSMessageType.submit satisfies SMSMessageType; /* LONG_NAMED_ENUMERATED_VALUE */
+const SMSMessageType_submit = SMSMessageType.submit; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary submit
@@ -200,7 +200,7 @@ const SMSMessageType_submit = SMSMessageType.submit satisfies SMSMessageType; /*
  * @type {number}
  */
 export
-const submit = SMSMessageType.submit satisfies SMSMessageType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const submit = SMSMessageType.submit; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SMSMessageType_submitReportAck
@@ -208,7 +208,7 @@ const submit = SMSMessageType.submit satisfies SMSMessageType; /* SHORT_NAMED_EN
  * @type {number}
  */
 export
-const SMSMessageType_submitReportAck = SMSMessageType.submitReportAck satisfies SMSMessageType; /* LONG_NAMED_ENUMERATED_VALUE */
+const SMSMessageType_submitReportAck = SMSMessageType.submitReportAck; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary submitReportAck
@@ -216,7 +216,7 @@ const SMSMessageType_submitReportAck = SMSMessageType.submitReportAck satisfies 
  * @type {number}
  */
 export
-const submitReportAck = SMSMessageType.submitReportAck satisfies SMSMessageType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const submitReportAck = SMSMessageType.submitReportAck; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SMSMessageType_submitReportError
@@ -224,7 +224,7 @@ const submitReportAck = SMSMessageType.submitReportAck satisfies SMSMessageType;
  * @type {number}
  */
 export
-const SMSMessageType_submitReportError = SMSMessageType.submitReportError satisfies SMSMessageType; /* LONG_NAMED_ENUMERATED_VALUE */
+const SMSMessageType_submitReportError = SMSMessageType.submitReportError; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary submitReportError
@@ -232,7 +232,7 @@ const SMSMessageType_submitReportError = SMSMessageType.submitReportError satisf
  * @type {number}
  */
 export
-const submitReportError = SMSMessageType.submitReportError satisfies SMSMessageType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const submitReportError = SMSMessageType.submitReportError; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SMSMessageType_reserved
@@ -240,7 +240,7 @@ const submitReportError = SMSMessageType.submitReportError satisfies SMSMessageT
  * @type {number}
  */
 export
-const SMSMessageType_reserved = SMSMessageType.reserved satisfies SMSMessageType; /* LONG_NAMED_ENUMERATED_VALUE */
+const SMSMessageType_reserved = SMSMessageType.reserved; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary reserved
@@ -248,7 +248,7 @@ const SMSMessageType_reserved = SMSMessageType.reserved satisfies SMSMessageType
  * @type {number}
  */
 export
-const reserved = SMSMessageType.reserved satisfies SMSMessageType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const reserved = SMSMessageType.reserved; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_SMSMessageType: $.ASN1Decoder<SMSMessageType> = $._decodeEnumerated;
 export const _encode_SMSMessageType: $.ASN1Encoder<SMSMessageType> = $._encodeEnumerated;
 

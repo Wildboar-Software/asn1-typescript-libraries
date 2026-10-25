@@ -63,7 +63,7 @@ const SMReplyPathRequested = _enum_for_SMReplyPathRequested;
  * @type {number}
  */
 export
-const SMReplyPathRequested_noReplyPathSet = SMReplyPathRequested.noReplyPathSet satisfies SMReplyPathRequested; /* LONG_NAMED_ENUMERATED_VALUE */
+const SMReplyPathRequested_noReplyPathSet = SMReplyPathRequested.noReplyPathSet; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary noReplyPathSet
@@ -71,7 +71,7 @@ const SMReplyPathRequested_noReplyPathSet = SMReplyPathRequested.noReplyPathSet 
  * @type {number}
  */
 export
-const noReplyPathSet = SMReplyPathRequested.noReplyPathSet satisfies SMReplyPathRequested; /* SHORT_NAMED_ENUMERATED_VALUE */
+const noReplyPathSet = SMReplyPathRequested.noReplyPathSet; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SMReplyPathRequested_replyPathSet
@@ -79,7 +79,7 @@ const noReplyPathSet = SMReplyPathRequested.noReplyPathSet satisfies SMReplyPath
  * @type {number}
  */
 export
-const SMReplyPathRequested_replyPathSet = SMReplyPathRequested.replyPathSet satisfies SMReplyPathRequested; /* LONG_NAMED_ENUMERATED_VALUE */
+const SMReplyPathRequested_replyPathSet = SMReplyPathRequested.replyPathSet; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary replyPathSet
@@ -87,7 +87,7 @@ const SMReplyPathRequested_replyPathSet = SMReplyPathRequested.replyPathSet sati
  * @type {number}
  */
 export
-const replyPathSet = SMReplyPathRequested.replyPathSet satisfies SMReplyPathRequested; /* SHORT_NAMED_ENUMERATED_VALUE */
+const replyPathSet = SMReplyPathRequested.replyPathSet; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_SMReplyPathRequested: $.ASN1Decoder<SMReplyPathRequested> = $._decodeEnumerated;

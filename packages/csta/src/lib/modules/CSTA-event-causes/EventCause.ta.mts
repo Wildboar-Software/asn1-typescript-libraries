@@ -563,7 +563,7 @@ const EventCause = _enum_for_EventCause;
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const EventCause_aCDBusy = EventCause.aCDBusy satisfies EventCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventCause_aCDBusy = EventCause.aCDBusy; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary aCDBusy
@@ -572,7 +572,7 @@ const EventCause_aCDBusy = EventCause.aCDBusy satisfies EventCause; /* LONG_NAME
  * @type {number}
  */
 export
-const aCDBusy = EventCause.aCDBusy satisfies EventCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const aCDBusy = EventCause.aCDBusy; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_aCDForward
@@ -582,7 +582,7 @@ const aCDBusy = EventCause.aCDBusy satisfies EventCause; /* SHORT_NAMED_ENUMERAT
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const EventCause_aCDForward = EventCause.aCDForward satisfies EventCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventCause_aCDForward = EventCause.aCDForward; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary aCDForward
@@ -591,7 +591,7 @@ const EventCause_aCDForward = EventCause.aCDForward satisfies EventCause; /* LON
  * @type {number}
  */
 export
-const aCDForward = EventCause.aCDForward satisfies EventCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const aCDForward = EventCause.aCDForward; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_aCDSaturated
@@ -601,7 +601,7 @@ const aCDForward = EventCause.aCDForward satisfies EventCause; /* SHORT_NAMED_EN
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const EventCause_aCDSaturated = EventCause.aCDSaturated satisfies EventCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventCause_aCDSaturated = EventCause.aCDSaturated; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary aCDSaturated
@@ -610,7 +610,7 @@ const EventCause_aCDSaturated = EventCause.aCDSaturated satisfies EventCause; /*
  * @type {number}
  */
 export
-const aCDSaturated = EventCause.aCDSaturated satisfies EventCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const aCDSaturated = EventCause.aCDSaturated; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_activation
@@ -620,7 +620,7 @@ const aCDSaturated = EventCause.aCDSaturated satisfies EventCause; /* SHORT_NAME
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const EventCause_activation = EventCause.activation satisfies EventCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventCause_activation = EventCause.activation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary activation
@@ -629,7 +629,7 @@ const EventCause_activation = EventCause.activation satisfies EventCause; /* LON
  * @type {number}
  */
 export
-const activation = EventCause.activation satisfies EventCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const activation = EventCause.activation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_activeParticipation
@@ -639,7 +639,7 @@ const activation = EventCause.activation satisfies EventCause; /* SHORT_NAMED_EN
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const EventCause_activeParticipation = EventCause.activeParticipation satisfies EventCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventCause_activeParticipation = EventCause.activeParticipation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary activeParticipation
@@ -648,7 +648,7 @@ const EventCause_activeParticipation = EventCause.activeParticipation satisfies 
  * @type {number}
  */
 export
-const activeParticipation = EventCause.activeParticipation satisfies EventCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const activeParticipation = EventCause.activeParticipation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_alertTimeExpired
@@ -658,7 +658,7 @@ const activeParticipation = EventCause.activeParticipation satisfies EventCause;
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const EventCause_alertTimeExpired = EventCause.alertTimeExpired satisfies EventCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventCause_alertTimeExpired = EventCause.alertTimeExpired; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary alertTimeExpired
@@ -667,7 +667,7 @@ const EventCause_alertTimeExpired = EventCause.alertTimeExpired satisfies EventC
  * @type {number}
  */
 export
-const alertTimeExpired = EventCause.alertTimeExpired satisfies EventCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const alertTimeExpired = EventCause.alertTimeExpired; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_alternate
@@ -677,7 +677,7 @@ const alertTimeExpired = EventCause.alertTimeExpired satisfies EventCause; /* SH
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const EventCause_alternate = EventCause.alternate satisfies EventCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventCause_alternate = EventCause.alternate; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary alternate
@@ -686,7 +686,7 @@ const EventCause_alternate = EventCause.alternate satisfies EventCause; /* LONG_
  * @type {number}
  */
 export
-const alternate = EventCause.alternate satisfies EventCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const alternate = EventCause.alternate; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_autoWork
@@ -696,7 +696,7 @@ const alternate = EventCause.alternate satisfies EventCause; /* SHORT_NAMED_ENUM
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const EventCause_autoWork = EventCause.autoWork satisfies EventCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventCause_autoWork = EventCause.autoWork; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary autoWork
@@ -705,7 +705,7 @@ const EventCause_autoWork = EventCause.autoWork satisfies EventCause; /* LONG_NA
  * @type {number}
  */
 export
-const autoWork = EventCause.autoWork satisfies EventCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const autoWork = EventCause.autoWork; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_babble
@@ -715,7 +715,7 @@ const autoWork = EventCause.autoWork satisfies EventCause; /* SHORT_NAMED_ENUMER
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const EventCause_babble = EventCause.babble satisfies EventCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventCause_babble = EventCause.babble; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary babble
@@ -724,7 +724,7 @@ const EventCause_babble = EventCause.babble satisfies EventCause; /* LONG_NAMED_
  * @type {number}
  */
 export
-const babble = EventCause.babble satisfies EventCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const babble = EventCause.babble; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_badAttribute
@@ -734,7 +734,7 @@ const babble = EventCause.babble satisfies EventCause; /* SHORT_NAMED_ENUMERATED
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const EventCause_badAttribute = EventCause.badAttribute satisfies EventCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventCause_badAttribute = EventCause.badAttribute; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary badAttribute
@@ -743,7 +743,7 @@ const EventCause_badAttribute = EventCause.badAttribute satisfies EventCause; /*
  * @type {number}
  */
 export
-const badAttribute = EventCause.badAttribute satisfies EventCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const badAttribute = EventCause.badAttribute; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_badGrammar
@@ -753,7 +753,7 @@ const badAttribute = EventCause.badAttribute satisfies EventCause; /* SHORT_NAME
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const EventCause_badGrammar = EventCause.badGrammar satisfies EventCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventCause_badGrammar = EventCause.badGrammar; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary badGrammar
@@ -762,7 +762,7 @@ const EventCause_badGrammar = EventCause.badGrammar satisfies EventCause; /* LON
  * @type {number}
  */
 export
-const badGrammar = EventCause.badGrammar satisfies EventCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const badGrammar = EventCause.badGrammar; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_badVoice
@@ -772,7 +772,7 @@ const badGrammar = EventCause.badGrammar satisfies EventCause; /* SHORT_NAMED_EN
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const EventCause_badVoice = EventCause.badVoice satisfies EventCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventCause_badVoice = EventCause.badVoice; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary badVoice
@@ -781,7 +781,7 @@ const EventCause_badVoice = EventCause.badVoice satisfies EventCause; /* LONG_NA
  * @type {number}
  */
 export
-const badVoice = EventCause.badVoice satisfies EventCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const badVoice = EventCause.badVoice; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_badUri
@@ -791,7 +791,7 @@ const badVoice = EventCause.badVoice satisfies EventCause; /* SHORT_NAMED_ENUMER
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const EventCause_badUri = EventCause.badUri satisfies EventCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventCause_badUri = EventCause.badUri; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary badUri
@@ -800,7 +800,7 @@ const EventCause_badUri = EventCause.badUri satisfies EventCause; /* LONG_NAMED_
  * @type {number}
  */
 export
-const badUri = EventCause.badUri satisfies EventCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const badUri = EventCause.badUri; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_blocked
@@ -810,7 +810,7 @@ const badUri = EventCause.badUri satisfies EventCause; /* SHORT_NAMED_ENUMERATED
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const EventCause_blocked = EventCause.blocked satisfies EventCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventCause_blocked = EventCause.blocked; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary blocked
@@ -819,7 +819,7 @@ const EventCause_blocked = EventCause.blocked satisfies EventCause; /* LONG_NAME
  * @type {number}
  */
 export
-const blocked = EventCause.blocked satisfies EventCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const blocked = EventCause.blocked; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_busy
@@ -829,7 +829,7 @@ const blocked = EventCause.blocked satisfies EventCause; /* SHORT_NAMED_ENUMERAT
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const EventCause_busy = EventCause.busy satisfies EventCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventCause_busy = EventCause.busy; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary busy
@@ -838,7 +838,7 @@ const EventCause_busy = EventCause.busy satisfies EventCause; /* LONG_NAMED_ENUM
  * @type {number}
  */
 export
-const busy = EventCause.busy satisfies EventCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const busy = EventCause.busy; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_busyOverflow
@@ -848,7 +848,7 @@ const busy = EventCause.busy satisfies EventCause; /* SHORT_NAMED_ENUMERATED_VAL
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const EventCause_busyOverflow = EventCause.busyOverflow satisfies EventCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventCause_busyOverflow = EventCause.busyOverflow; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary busyOverflow
@@ -857,7 +857,7 @@ const EventCause_busyOverflow = EventCause.busyOverflow satisfies EventCause; /*
  * @type {number}
  */
 export
-const busyOverflow = EventCause.busyOverflow satisfies EventCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const busyOverflow = EventCause.busyOverflow; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_calendarOverflow
@@ -867,7 +867,7 @@ const busyOverflow = EventCause.busyOverflow satisfies EventCause; /* SHORT_NAME
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const EventCause_calendarOverflow = EventCause.calendarOverflow satisfies EventCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventCause_calendarOverflow = EventCause.calendarOverflow; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary calendarOverflow
@@ -876,7 +876,7 @@ const EventCause_calendarOverflow = EventCause.calendarOverflow satisfies EventC
  * @type {number}
  */
 export
-const calendarOverflow = EventCause.calendarOverflow satisfies EventCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const calendarOverflow = EventCause.calendarOverflow; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_callBack
@@ -886,7 +886,7 @@ const calendarOverflow = EventCause.calendarOverflow satisfies EventCause; /* SH
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const EventCause_callBack = EventCause.callBack satisfies EventCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventCause_callBack = EventCause.callBack; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary callBack
@@ -895,7 +895,7 @@ const EventCause_callBack = EventCause.callBack satisfies EventCause; /* LONG_NA
  * @type {number}
  */
 export
-const callBack = EventCause.callBack satisfies EventCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const callBack = EventCause.callBack; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_callCancelled
@@ -905,7 +905,7 @@ const callBack = EventCause.callBack satisfies EventCause; /* SHORT_NAMED_ENUMER
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const EventCause_callCancelled = EventCause.callCancelled satisfies EventCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventCause_callCancelled = EventCause.callCancelled; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary callCancelled
@@ -914,7 +914,7 @@ const EventCause_callCancelled = EventCause.callCancelled satisfies EventCause; 
  * @type {number}
  */
 export
-const callCancelled = EventCause.callCancelled satisfies EventCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const callCancelled = EventCause.callCancelled; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_callForward
@@ -924,7 +924,7 @@ const callCancelled = EventCause.callCancelled satisfies EventCause; /* SHORT_NA
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const EventCause_callForward = EventCause.callForward satisfies EventCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventCause_callForward = EventCause.callForward; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary callForward
@@ -933,7 +933,7 @@ const EventCause_callForward = EventCause.callForward satisfies EventCause; /* L
  * @type {number}
  */
 export
-const callForward = EventCause.callForward satisfies EventCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const callForward = EventCause.callForward; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_callForwardImmediate
@@ -943,7 +943,7 @@ const callForward = EventCause.callForward satisfies EventCause; /* SHORT_NAMED_
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const EventCause_callForwardImmediate = EventCause.callForwardImmediate satisfies EventCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventCause_callForwardImmediate = EventCause.callForwardImmediate; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary callForwardImmediate
@@ -952,7 +952,7 @@ const EventCause_callForwardImmediate = EventCause.callForwardImmediate satisfie
  * @type {number}
  */
 export
-const callForwardImmediate = EventCause.callForwardImmediate satisfies EventCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const callForwardImmediate = EventCause.callForwardImmediate; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_callForwardBusy
@@ -962,7 +962,7 @@ const callForwardImmediate = EventCause.callForwardImmediate satisfies EventCaus
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const EventCause_callForwardBusy = EventCause.callForwardBusy satisfies EventCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventCause_callForwardBusy = EventCause.callForwardBusy; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary callForwardBusy
@@ -971,7 +971,7 @@ const EventCause_callForwardBusy = EventCause.callForwardBusy satisfies EventCau
  * @type {number}
  */
 export
-const callForwardBusy = EventCause.callForwardBusy satisfies EventCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const callForwardBusy = EventCause.callForwardBusy; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_callForwardNoAnswer
@@ -981,7 +981,7 @@ const callForwardBusy = EventCause.callForwardBusy satisfies EventCause; /* SHOR
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const EventCause_callForwardNoAnswer = EventCause.callForwardNoAnswer satisfies EventCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventCause_callForwardNoAnswer = EventCause.callForwardNoAnswer; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary callForwardNoAnswer
@@ -990,7 +990,7 @@ const EventCause_callForwardNoAnswer = EventCause.callForwardNoAnswer satisfies 
  * @type {number}
  */
 export
-const callForwardNoAnswer = EventCause.callForwardNoAnswer satisfies EventCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const callForwardNoAnswer = EventCause.callForwardNoAnswer; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_callInterception
@@ -1000,7 +1000,7 @@ const callForwardNoAnswer = EventCause.callForwardNoAnswer satisfies EventCause;
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const EventCause_callInterception = EventCause.callInterception satisfies EventCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventCause_callInterception = EventCause.callInterception; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary callInterception
@@ -1009,7 +1009,7 @@ const EventCause_callInterception = EventCause.callInterception satisfies EventC
  * @type {number}
  */
 export
-const callInterception = EventCause.callInterception satisfies EventCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const callInterception = EventCause.callInterception; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_callInterceptionBusy
@@ -1019,7 +1019,7 @@ const callInterception = EventCause.callInterception satisfies EventCause; /* SH
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const EventCause_callInterceptionBusy = EventCause.callInterceptionBusy satisfies EventCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventCause_callInterceptionBusy = EventCause.callInterceptionBusy; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary callInterceptionBusy
@@ -1028,7 +1028,7 @@ const EventCause_callInterceptionBusy = EventCause.callInterceptionBusy satisfie
  * @type {number}
  */
 export
-const callInterceptionBusy = EventCause.callInterceptionBusy satisfies EventCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const callInterceptionBusy = EventCause.callInterceptionBusy; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_callInterceptionForwarded
@@ -1038,7 +1038,7 @@ const callInterceptionBusy = EventCause.callInterceptionBusy satisfies EventCaus
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const EventCause_callInterceptionForwarded = EventCause.callInterceptionForwarded satisfies EventCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventCause_callInterceptionForwarded = EventCause.callInterceptionForwarded; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary callInterceptionForwarded
@@ -1047,7 +1047,7 @@ const EventCause_callInterceptionForwarded = EventCause.callInterceptionForwarde
  * @type {number}
  */
 export
-const callInterceptionForwarded = EventCause.callInterceptionForwarded satisfies EventCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const callInterceptionForwarded = EventCause.callInterceptionForwarded; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_callInterceptionNoAnswer
@@ -1057,7 +1057,7 @@ const callInterceptionForwarded = EventCause.callInterceptionForwarded satisfies
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const EventCause_callInterceptionNoAnswer = EventCause.callInterceptionNoAnswer satisfies EventCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventCause_callInterceptionNoAnswer = EventCause.callInterceptionNoAnswer; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary callInterceptionNoAnswer
@@ -1066,7 +1066,7 @@ const EventCause_callInterceptionNoAnswer = EventCause.callInterceptionNoAnswer 
  * @type {number}
  */
 export
-const callInterceptionNoAnswer = EventCause.callInterceptionNoAnswer satisfies EventCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const callInterceptionNoAnswer = EventCause.callInterceptionNoAnswer; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_callInterceptionResourcesNotAvailable
@@ -1076,7 +1076,7 @@ const callInterceptionNoAnswer = EventCause.callInterceptionNoAnswer satisfies E
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const EventCause_callInterceptionResourcesNotAvailable = EventCause.callInterceptionResourcesNotAvailable satisfies EventCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventCause_callInterceptionResourcesNotAvailable = EventCause.callInterceptionResourcesNotAvailable; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary callInterceptionResourcesNotAvailable
@@ -1086,7 +1086,7 @@ const EventCause_callInterceptionResourcesNotAvailable = EventCause.callIntercep
  * @type {number}
  */
 export
-const callInterceptionResourcesNotAvailable = EventCause.callInterceptionResourcesNotAvailable satisfies EventCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const callInterceptionResourcesNotAvailable = EventCause.callInterceptionResourcesNotAvailable; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_callNotAnswered
@@ -1096,7 +1096,7 @@ const callInterceptionResourcesNotAvailable = EventCause.callInterceptionResourc
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const EventCause_callNotAnswered = EventCause.callNotAnswered satisfies EventCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventCause_callNotAnswered = EventCause.callNotAnswered; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary callNotAnswered
@@ -1105,7 +1105,7 @@ const EventCause_callNotAnswered = EventCause.callNotAnswered satisfies EventCau
  * @type {number}
  */
 export
-const callNotAnswered = EventCause.callNotAnswered satisfies EventCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const callNotAnswered = EventCause.callNotAnswered; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_callPickup
@@ -1115,7 +1115,7 @@ const callNotAnswered = EventCause.callNotAnswered satisfies EventCause; /* SHOR
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const EventCause_callPickup = EventCause.callPickup satisfies EventCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventCause_callPickup = EventCause.callPickup; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary callPickup
@@ -1124,7 +1124,7 @@ const EventCause_callPickup = EventCause.callPickup satisfies EventCause; /* LON
  * @type {number}
  */
 export
-const callPickup = EventCause.callPickup satisfies EventCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const callPickup = EventCause.callPickup; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_campOn
@@ -1134,7 +1134,7 @@ const callPickup = EventCause.callPickup satisfies EventCause; /* SHORT_NAMED_EN
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const EventCause_campOn = EventCause.campOn satisfies EventCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventCause_campOn = EventCause.campOn; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary campOn
@@ -1143,7 +1143,7 @@ const EventCause_campOn = EventCause.campOn satisfies EventCause; /* LONG_NAMED_
  * @type {number}
  */
 export
-const campOn = EventCause.campOn satisfies EventCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const campOn = EventCause.campOn; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_campOnTrunks
@@ -1153,7 +1153,7 @@ const campOn = EventCause.campOn satisfies EventCause; /* SHORT_NAMED_ENUMERATED
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const EventCause_campOnTrunks = EventCause.campOnTrunks satisfies EventCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventCause_campOnTrunks = EventCause.campOnTrunks; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary campOnTrunks
@@ -1162,7 +1162,7 @@ const EventCause_campOnTrunks = EventCause.campOnTrunks satisfies EventCause; /*
  * @type {number}
  */
 export
-const campOnTrunks = EventCause.campOnTrunks satisfies EventCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const campOnTrunks = EventCause.campOnTrunks; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_capacityOverflow
@@ -1172,7 +1172,7 @@ const campOnTrunks = EventCause.campOnTrunks satisfies EventCause; /* SHORT_NAME
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const EventCause_capacityOverflow = EventCause.capacityOverflow satisfies EventCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventCause_capacityOverflow = EventCause.capacityOverflow; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary capacityOverflow
@@ -1181,7 +1181,7 @@ const EventCause_capacityOverflow = EventCause.capacityOverflow satisfies EventC
  * @type {number}
  */
 export
-const capacityOverflow = EventCause.capacityOverflow satisfies EventCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const capacityOverflow = EventCause.capacityOverflow; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_characterCountReached
@@ -1191,7 +1191,7 @@ const capacityOverflow = EventCause.capacityOverflow satisfies EventCause; /* SH
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const EventCause_characterCountReached = EventCause.characterCountReached satisfies EventCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventCause_characterCountReached = EventCause.characterCountReached; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary characterCountReached
@@ -1200,7 +1200,7 @@ const EventCause_characterCountReached = EventCause.characterCountReached satisf
  * @type {number}
  */
 export
-const characterCountReached = EventCause.characterCountReached satisfies EventCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const characterCountReached = EventCause.characterCountReached; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_conference
@@ -1210,7 +1210,7 @@ const characterCountReached = EventCause.characterCountReached satisfies EventCa
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const EventCause_conference = EventCause.conference satisfies EventCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventCause_conference = EventCause.conference; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary conference
@@ -1219,7 +1219,7 @@ const EventCause_conference = EventCause.conference satisfies EventCause; /* LON
  * @type {number}
  */
 export
-const conference = EventCause.conference satisfies EventCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const conference = EventCause.conference; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_consultation
@@ -1229,7 +1229,7 @@ const conference = EventCause.conference satisfies EventCause; /* SHORT_NAMED_EN
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const EventCause_consultation = EventCause.consultation satisfies EventCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventCause_consultation = EventCause.consultation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary consultation
@@ -1238,7 +1238,7 @@ const EventCause_consultation = EventCause.consultation satisfies EventCause; /*
  * @type {number}
  */
 export
-const consultation = EventCause.consultation satisfies EventCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const consultation = EventCause.consultation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_destDetected
@@ -1248,7 +1248,7 @@ const consultation = EventCause.consultation satisfies EventCause; /* SHORT_NAME
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const EventCause_destDetected = EventCause.destDetected satisfies EventCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventCause_destDetected = EventCause.destDetected; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary destDetected
@@ -1257,7 +1257,7 @@ const EventCause_destDetected = EventCause.destDetected satisfies EventCause; /*
  * @type {number}
  */
 export
-const destDetected = EventCause.destDetected satisfies EventCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const destDetected = EventCause.destDetected; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_destNotObtainable
@@ -1267,7 +1267,7 @@ const destDetected = EventCause.destDetected satisfies EventCause; /* SHORT_NAME
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const EventCause_destNotObtainable = EventCause.destNotObtainable satisfies EventCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventCause_destNotObtainable = EventCause.destNotObtainable; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary destNotObtainable
@@ -1276,7 +1276,7 @@ const EventCause_destNotObtainable = EventCause.destNotObtainable satisfies Even
  * @type {number}
  */
 export
-const destNotObtainable = EventCause.destNotObtainable satisfies EventCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const destNotObtainable = EventCause.destNotObtainable; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_destOutOfOrder
@@ -1286,7 +1286,7 @@ const destNotObtainable = EventCause.destNotObtainable satisfies EventCause; /* 
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const EventCause_destOutOfOrder = EventCause.destOutOfOrder satisfies EventCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventCause_destOutOfOrder = EventCause.destOutOfOrder; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary destOutOfOrder
@@ -1295,7 +1295,7 @@ const EventCause_destOutOfOrder = EventCause.destOutOfOrder satisfies EventCause
  * @type {number}
  */
 export
-const destOutOfOrder = EventCause.destOutOfOrder satisfies EventCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const destOutOfOrder = EventCause.destOutOfOrder; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_distributed
@@ -1305,7 +1305,7 @@ const destOutOfOrder = EventCause.destOutOfOrder satisfies EventCause; /* SHORT_
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const EventCause_distributed = EventCause.distributed satisfies EventCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventCause_distributed = EventCause.distributed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary distributed
@@ -1314,7 +1314,7 @@ const EventCause_distributed = EventCause.distributed satisfies EventCause; /* L
  * @type {number}
  */
 export
-const distributed = EventCause.distributed satisfies EventCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const distributed = EventCause.distributed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_distributionDelay
@@ -1324,7 +1324,7 @@ const distributed = EventCause.distributed satisfies EventCause; /* SHORT_NAMED_
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const EventCause_distributionDelay = EventCause.distributionDelay satisfies EventCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventCause_distributionDelay = EventCause.distributionDelay; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary distributionDelay
@@ -1333,7 +1333,7 @@ const EventCause_distributionDelay = EventCause.distributionDelay satisfies Even
  * @type {number}
  */
 export
-const distributionDelay = EventCause.distributionDelay satisfies EventCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const distributionDelay = EventCause.distributionDelay; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_doNotDisturb
@@ -1343,7 +1343,7 @@ const distributionDelay = EventCause.distributionDelay satisfies EventCause; /* 
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const EventCause_doNotDisturb = EventCause.doNotDisturb satisfies EventCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventCause_doNotDisturb = EventCause.doNotDisturb; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary doNotDisturb
@@ -1352,7 +1352,7 @@ const EventCause_doNotDisturb = EventCause.doNotDisturb satisfies EventCause; /*
  * @type {number}
  */
 export
-const doNotDisturb = EventCause.doNotDisturb satisfies EventCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const doNotDisturb = EventCause.doNotDisturb; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_dTMFDigitDetected
@@ -1362,7 +1362,7 @@ const doNotDisturb = EventCause.doNotDisturb satisfies EventCause; /* SHORT_NAME
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const EventCause_dTMFDigitDetected = EventCause.dTMFDigitDetected satisfies EventCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventCause_dTMFDigitDetected = EventCause.dTMFDigitDetected; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary dTMFDigitDetected
@@ -1371,7 +1371,7 @@ const EventCause_dTMFDigitDetected = EventCause.dTMFDigitDetected satisfies Even
  * @type {number}
  */
 export
-const dTMFDigitDetected = EventCause.dTMFDigitDetected satisfies EventCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const dTMFDigitDetected = EventCause.dTMFDigitDetected; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_duplicateDTMF
@@ -1381,7 +1381,7 @@ const dTMFDigitDetected = EventCause.dTMFDigitDetected satisfies EventCause; /* 
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const EventCause_duplicateDTMF = EventCause.duplicateDTMF satisfies EventCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventCause_duplicateDTMF = EventCause.duplicateDTMF; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary duplicateDTMF
@@ -1390,7 +1390,7 @@ const EventCause_duplicateDTMF = EventCause.duplicateDTMF satisfies EventCause; 
  * @type {number}
  */
 export
-const duplicateDTMF = EventCause.duplicateDTMF satisfies EventCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const duplicateDTMF = EventCause.duplicateDTMF; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_durationExceeded
@@ -1400,7 +1400,7 @@ const duplicateDTMF = EventCause.duplicateDTMF satisfies EventCause; /* SHORT_NA
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const EventCause_durationExceeded = EventCause.durationExceeded satisfies EventCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventCause_durationExceeded = EventCause.durationExceeded; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary durationExceeded
@@ -1409,7 +1409,7 @@ const EventCause_durationExceeded = EventCause.durationExceeded satisfies EventC
  * @type {number}
  */
 export
-const durationExceeded = EventCause.durationExceeded satisfies EventCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const durationExceeded = EventCause.durationExceeded; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_earlyStop
@@ -1419,7 +1419,7 @@ const durationExceeded = EventCause.durationExceeded satisfies EventCause; /* SH
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const EventCause_earlyStop = EventCause.earlyStop satisfies EventCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventCause_earlyStop = EventCause.earlyStop; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary earlyStop
@@ -1428,7 +1428,7 @@ const EventCause_earlyStop = EventCause.earlyStop satisfies EventCause; /* LONG_
  * @type {number}
  */
 export
-const earlyStop = EventCause.earlyStop satisfies EventCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const earlyStop = EventCause.earlyStop; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_emptyQueue
@@ -1438,7 +1438,7 @@ const earlyStop = EventCause.earlyStop satisfies EventCause; /* SHORT_NAMED_ENUM
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const EventCause_emptyQueue = EventCause.emptyQueue satisfies EventCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventCause_emptyQueue = EventCause.emptyQueue; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary emptyQueue
@@ -1447,7 +1447,7 @@ const EventCause_emptyQueue = EventCause.emptyQueue satisfies EventCause; /* LON
  * @type {number}
  */
 export
-const emptyQueue = EventCause.emptyQueue satisfies EventCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const emptyQueue = EventCause.emptyQueue; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_endOfMessageDetected
@@ -1457,7 +1457,7 @@ const emptyQueue = EventCause.emptyQueue satisfies EventCause; /* SHORT_NAMED_EN
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const EventCause_endOfMessageDetected = EventCause.endOfMessageDetected satisfies EventCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventCause_endOfMessageDetected = EventCause.endOfMessageDetected; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary endOfMessageDetected
@@ -1466,7 +1466,7 @@ const EventCause_endOfMessageDetected = EventCause.endOfMessageDetected satisfie
  * @type {number}
  */
 export
-const endOfMessageDetected = EventCause.endOfMessageDetected satisfies EventCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const endOfMessageDetected = EventCause.endOfMessageDetected; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_enteringDistribution
@@ -1476,7 +1476,7 @@ const endOfMessageDetected = EventCause.endOfMessageDetected satisfies EventCaus
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const EventCause_enteringDistribution = EventCause.enteringDistribution satisfies EventCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventCause_enteringDistribution = EventCause.enteringDistribution; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary enteringDistribution
@@ -1485,7 +1485,7 @@ const EventCause_enteringDistribution = EventCause.enteringDistribution satisfie
  * @type {number}
  */
 export
-const enteringDistribution = EventCause.enteringDistribution satisfies EventCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const enteringDistribution = EventCause.enteringDistribution; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_forcedPause
@@ -1495,7 +1495,7 @@ const enteringDistribution = EventCause.enteringDistribution satisfies EventCaus
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const EventCause_forcedPause = EventCause.forcedPause satisfies EventCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventCause_forcedPause = EventCause.forcedPause; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary forcedPause
@@ -1504,7 +1504,7 @@ const EventCause_forcedPause = EventCause.forcedPause satisfies EventCause; /* L
  * @type {number}
  */
 export
-const forcedPause = EventCause.forcedPause satisfies EventCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const forcedPause = EventCause.forcedPause; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_forcedTransition
@@ -1514,7 +1514,7 @@ const forcedPause = EventCause.forcedPause satisfies EventCause; /* SHORT_NAMED_
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const EventCause_forcedTransition = EventCause.forcedTransition satisfies EventCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventCause_forcedTransition = EventCause.forcedTransition; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary forcedTransition
@@ -1523,7 +1523,7 @@ const EventCause_forcedTransition = EventCause.forcedTransition satisfies EventC
  * @type {number}
  */
 export
-const forcedTransition = EventCause.forcedTransition satisfies EventCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const forcedTransition = EventCause.forcedTransition; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_incompatibleDestination
@@ -1533,7 +1533,7 @@ const forcedTransition = EventCause.forcedTransition satisfies EventCause; /* SH
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const EventCause_incompatibleDestination = EventCause.incompatibleDestination satisfies EventCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventCause_incompatibleDestination = EventCause.incompatibleDestination; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary incompatibleDestination
@@ -1542,7 +1542,7 @@ const EventCause_incompatibleDestination = EventCause.incompatibleDestination sa
  * @type {number}
  */
 export
-const incompatibleDestination = EventCause.incompatibleDestination satisfies EventCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const incompatibleDestination = EventCause.incompatibleDestination; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_interDigitTimeout
@@ -1552,7 +1552,7 @@ const incompatibleDestination = EventCause.incompatibleDestination satisfies Eve
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const EventCause_interDigitTimeout = EventCause.interDigitTimeout satisfies EventCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventCause_interDigitTimeout = EventCause.interDigitTimeout; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary interDigitTimeout
@@ -1561,7 +1561,7 @@ const EventCause_interDigitTimeout = EventCause.interDigitTimeout satisfies Even
  * @type {number}
  */
 export
-const interDigitTimeout = EventCause.interDigitTimeout satisfies EventCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const interDigitTimeout = EventCause.interDigitTimeout; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_intrude
@@ -1571,7 +1571,7 @@ const interDigitTimeout = EventCause.interDigitTimeout satisfies EventCause; /* 
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const EventCause_intrude = EventCause.intrude satisfies EventCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventCause_intrude = EventCause.intrude; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary intrude
@@ -1580,7 +1580,7 @@ const EventCause_intrude = EventCause.intrude satisfies EventCause; /* LONG_NAME
  * @type {number}
  */
 export
-const intrude = EventCause.intrude satisfies EventCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const intrude = EventCause.intrude; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_invalidAccountCode
@@ -1590,7 +1590,7 @@ const intrude = EventCause.intrude satisfies EventCause; /* SHORT_NAMED_ENUMERAT
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const EventCause_invalidAccountCode = EventCause.invalidAccountCode satisfies EventCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventCause_invalidAccountCode = EventCause.invalidAccountCode; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidAccountCode
@@ -1599,7 +1599,7 @@ const EventCause_invalidAccountCode = EventCause.invalidAccountCode satisfies Ev
  * @type {number}
  */
 export
-const invalidAccountCode = EventCause.invalidAccountCode satisfies EventCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const invalidAccountCode = EventCause.invalidAccountCode; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_invalidConnection
@@ -1609,7 +1609,7 @@ const invalidAccountCode = EventCause.invalidAccountCode satisfies EventCause; /
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const EventCause_invalidConnection = EventCause.invalidConnection satisfies EventCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventCause_invalidConnection = EventCause.invalidConnection; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidConnection
@@ -1618,7 +1618,7 @@ const EventCause_invalidConnection = EventCause.invalidConnection satisfies Even
  * @type {number}
  */
 export
-const invalidConnection = EventCause.invalidConnection satisfies EventCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const invalidConnection = EventCause.invalidConnection; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_invalidConnectionState
@@ -1628,7 +1628,7 @@ const invalidConnection = EventCause.invalidConnection satisfies EventCause; /* 
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const EventCause_invalidConnectionState = EventCause.invalidConnectionState satisfies EventCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventCause_invalidConnectionState = EventCause.invalidConnectionState; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidConnectionState
@@ -1637,7 +1637,7 @@ const EventCause_invalidConnectionState = EventCause.invalidConnectionState sati
  * @type {number}
  */
 export
-const invalidConnectionState = EventCause.invalidConnectionState satisfies EventCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const invalidConnectionState = EventCause.invalidConnectionState; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_invalidNumberFormat
@@ -1647,7 +1647,7 @@ const invalidConnectionState = EventCause.invalidConnectionState satisfies Event
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const EventCause_invalidNumberFormat = EventCause.invalidNumberFormat satisfies EventCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventCause_invalidNumberFormat = EventCause.invalidNumberFormat; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidNumberFormat
@@ -1656,7 +1656,7 @@ const EventCause_invalidNumberFormat = EventCause.invalidNumberFormat satisfies 
  * @type {number}
  */
 export
-const invalidNumberFormat = EventCause.invalidNumberFormat satisfies EventCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const invalidNumberFormat = EventCause.invalidNumberFormat; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_joinCall
@@ -1666,7 +1666,7 @@ const invalidNumberFormat = EventCause.invalidNumberFormat satisfies EventCause;
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const EventCause_joinCall = EventCause.joinCall satisfies EventCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventCause_joinCall = EventCause.joinCall; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary joinCall
@@ -1675,7 +1675,7 @@ const EventCause_joinCall = EventCause.joinCall satisfies EventCause; /* LONG_NA
  * @type {number}
  */
 export
-const joinCall = EventCause.joinCall satisfies EventCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const joinCall = EventCause.joinCall; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_keyOperation
@@ -1685,7 +1685,7 @@ const joinCall = EventCause.joinCall satisfies EventCause; /* SHORT_NAMED_ENUMER
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const EventCause_keyOperation = EventCause.keyOperation satisfies EventCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventCause_keyOperation = EventCause.keyOperation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary keyOperation
@@ -1694,7 +1694,7 @@ const EventCause_keyOperation = EventCause.keyOperation satisfies EventCause; /*
  * @type {number}
  */
 export
-const keyOperation = EventCause.keyOperation satisfies EventCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const keyOperation = EventCause.keyOperation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_keyOperationInUse
@@ -1704,7 +1704,7 @@ const keyOperation = EventCause.keyOperation satisfies EventCause; /* SHORT_NAME
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const EventCause_keyOperationInUse = EventCause.keyOperationInUse satisfies EventCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventCause_keyOperationInUse = EventCause.keyOperationInUse; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary keyOperationInUse
@@ -1713,7 +1713,7 @@ const EventCause_keyOperationInUse = EventCause.keyOperationInUse satisfies Even
  * @type {number}
  */
 export
-const keyOperationInUse = EventCause.keyOperationInUse satisfies EventCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const keyOperationInUse = EventCause.keyOperationInUse; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_lawfulInterception
@@ -1723,7 +1723,7 @@ const keyOperationInUse = EventCause.keyOperationInUse satisfies EventCause; /* 
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const EventCause_lawfulInterception = EventCause.lawfulInterception satisfies EventCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventCause_lawfulInterception = EventCause.lawfulInterception; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary lawfulInterception
@@ -1732,7 +1732,7 @@ const EventCause_lawfulInterception = EventCause.lawfulInterception satisfies Ev
  * @type {number}
  */
 export
-const lawfulInterception = EventCause.lawfulInterception satisfies EventCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const lawfulInterception = EventCause.lawfulInterception; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_lockout
@@ -1742,7 +1742,7 @@ const lawfulInterception = EventCause.lawfulInterception satisfies EventCause; /
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const EventCause_lockout = EventCause.lockout satisfies EventCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventCause_lockout = EventCause.lockout; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary lockout
@@ -1751,7 +1751,7 @@ const EventCause_lockout = EventCause.lockout satisfies EventCause; /* LONG_NAME
  * @type {number}
  */
 export
-const lockout = EventCause.lockout satisfies EventCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const lockout = EventCause.lockout; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_maintenance
@@ -1761,7 +1761,7 @@ const lockout = EventCause.lockout satisfies EventCause; /* SHORT_NAMED_ENUMERAT
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const EventCause_maintenance = EventCause.maintenance satisfies EventCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventCause_maintenance = EventCause.maintenance; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary maintenance
@@ -1770,7 +1770,7 @@ const EventCause_maintenance = EventCause.maintenance satisfies EventCause; /* L
  * @type {number}
  */
 export
-const maintenance = EventCause.maintenance satisfies EventCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const maintenance = EventCause.maintenance; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_makeCall
@@ -1780,7 +1780,7 @@ const maintenance = EventCause.maintenance satisfies EventCause; /* SHORT_NAMED_
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const EventCause_makeCall = EventCause.makeCall satisfies EventCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventCause_makeCall = EventCause.makeCall; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary makeCall
@@ -1789,7 +1789,7 @@ const EventCause_makeCall = EventCause.makeCall satisfies EventCause; /* LONG_NA
  * @type {number}
  */
 export
-const makeCall = EventCause.makeCall satisfies EventCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const makeCall = EventCause.makeCall; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_makeConnection
@@ -1799,7 +1799,7 @@ const makeCall = EventCause.makeCall satisfies EventCause; /* SHORT_NAMED_ENUMER
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const EventCause_makeConnection = EventCause.makeConnection satisfies EventCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventCause_makeConnection = EventCause.makeConnection; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary makeConnection
@@ -1808,7 +1808,7 @@ const EventCause_makeConnection = EventCause.makeConnection satisfies EventCause
  * @type {number}
  */
 export
-const makeConnection = EventCause.makeConnection satisfies EventCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const makeConnection = EventCause.makeConnection; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_makePredictiveCall
@@ -1818,7 +1818,7 @@ const makeConnection = EventCause.makeConnection satisfies EventCause; /* SHORT_
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const EventCause_makePredictiveCall = EventCause.makePredictiveCall satisfies EventCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventCause_makePredictiveCall = EventCause.makePredictiveCall; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary makePredictiveCall
@@ -1827,7 +1827,7 @@ const EventCause_makePredictiveCall = EventCause.makePredictiveCall satisfies Ev
  * @type {number}
  */
 export
-const makePredictiveCall = EventCause.makePredictiveCall satisfies EventCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const makePredictiveCall = EventCause.makePredictiveCall; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_maxTimeout
@@ -1837,7 +1837,7 @@ const makePredictiveCall = EventCause.makePredictiveCall satisfies EventCause; /
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const EventCause_maxTimeout = EventCause.maxTimeout satisfies EventCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventCause_maxTimeout = EventCause.maxTimeout; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary maxTimeout
@@ -1846,7 +1846,7 @@ const EventCause_maxTimeout = EventCause.maxTimeout satisfies EventCause; /* LON
  * @type {number}
  */
 export
-const maxTimeout = EventCause.maxTimeout satisfies EventCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const maxTimeout = EventCause.maxTimeout; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_messageDurationExceeded
@@ -1856,7 +1856,7 @@ const maxTimeout = EventCause.maxTimeout satisfies EventCause; /* SHORT_NAMED_EN
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const EventCause_messageDurationExceeded = EventCause.messageDurationExceeded satisfies EventCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventCause_messageDurationExceeded = EventCause.messageDurationExceeded; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary messageDurationExceeded
@@ -1865,7 +1865,7 @@ const EventCause_messageDurationExceeded = EventCause.messageDurationExceeded sa
  * @type {number}
  */
 export
-const messageDurationExceeded = EventCause.messageDurationExceeded satisfies EventCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const messageDurationExceeded = EventCause.messageDurationExceeded; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_messageSizeExceeded
@@ -1875,7 +1875,7 @@ const messageDurationExceeded = EventCause.messageDurationExceeded satisfies Eve
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const EventCause_messageSizeExceeded = EventCause.messageSizeExceeded satisfies EventCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventCause_messageSizeExceeded = EventCause.messageSizeExceeded; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary messageSizeExceeded
@@ -1884,7 +1884,7 @@ const EventCause_messageSizeExceeded = EventCause.messageSizeExceeded satisfies 
  * @type {number}
  */
 export
-const messageSizeExceeded = EventCause.messageSizeExceeded satisfies EventCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const messageSizeExceeded = EventCause.messageSizeExceeded; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_multipleAlerting
@@ -1894,7 +1894,7 @@ const messageSizeExceeded = EventCause.messageSizeExceeded satisfies EventCause;
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const EventCause_multipleAlerting = EventCause.multipleAlerting satisfies EventCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventCause_multipleAlerting = EventCause.multipleAlerting; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary multipleAlerting
@@ -1903,7 +1903,7 @@ const EventCause_multipleAlerting = EventCause.multipleAlerting satisfies EventC
  * @type {number}
  */
 export
-const multipleAlerting = EventCause.multipleAlerting satisfies EventCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const multipleAlerting = EventCause.multipleAlerting; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_multipleQueuing
@@ -1913,7 +1913,7 @@ const multipleAlerting = EventCause.multipleAlerting satisfies EventCause; /* SH
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const EventCause_multipleQueuing = EventCause.multipleQueuing satisfies EventCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventCause_multipleQueuing = EventCause.multipleQueuing; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary multipleQueuing
@@ -1922,7 +1922,7 @@ const EventCause_multipleQueuing = EventCause.multipleQueuing satisfies EventCau
  * @type {number}
  */
 export
-const multipleQueuing = EventCause.multipleQueuing satisfies EventCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const multipleQueuing = EventCause.multipleQueuing; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_networkCongestion
@@ -1932,7 +1932,7 @@ const multipleQueuing = EventCause.multipleQueuing satisfies EventCause; /* SHOR
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const EventCause_networkCongestion = EventCause.networkCongestion satisfies EventCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventCause_networkCongestion = EventCause.networkCongestion; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary networkCongestion
@@ -1941,7 +1941,7 @@ const EventCause_networkCongestion = EventCause.networkCongestion satisfies Even
  * @type {number}
  */
 export
-const networkCongestion = EventCause.networkCongestion satisfies EventCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const networkCongestion = EventCause.networkCongestion; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_networkDialling
@@ -1951,7 +1951,7 @@ const networkCongestion = EventCause.networkCongestion satisfies EventCause; /* 
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const EventCause_networkDialling = EventCause.networkDialling satisfies EventCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventCause_networkDialling = EventCause.networkDialling; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary networkDialling
@@ -1960,7 +1960,7 @@ const EventCause_networkDialling = EventCause.networkDialling satisfies EventCau
  * @type {number}
  */
 export
-const networkDialling = EventCause.networkDialling satisfies EventCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const networkDialling = EventCause.networkDialling; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_networkNotObtainable
@@ -1970,7 +1970,7 @@ const networkDialling = EventCause.networkDialling satisfies EventCause; /* SHOR
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const EventCause_networkNotObtainable = EventCause.networkNotObtainable satisfies EventCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventCause_networkNotObtainable = EventCause.networkNotObtainable; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary networkNotObtainable
@@ -1979,7 +1979,7 @@ const EventCause_networkNotObtainable = EventCause.networkNotObtainable satisfie
  * @type {number}
  */
 export
-const networkNotObtainable = EventCause.networkNotObtainable satisfies EventCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const networkNotObtainable = EventCause.networkNotObtainable; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_networkOutOfOrder
@@ -1989,7 +1989,7 @@ const networkNotObtainable = EventCause.networkNotObtainable satisfies EventCaus
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const EventCause_networkOutOfOrder = EventCause.networkOutOfOrder satisfies EventCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventCause_networkOutOfOrder = EventCause.networkOutOfOrder; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary networkOutOfOrder
@@ -1998,7 +1998,7 @@ const EventCause_networkOutOfOrder = EventCause.networkOutOfOrder satisfies Even
  * @type {number}
  */
 export
-const networkOutOfOrder = EventCause.networkOutOfOrder satisfies EventCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const networkOutOfOrder = EventCause.networkOutOfOrder; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_networkSignal
@@ -2008,7 +2008,7 @@ const networkOutOfOrder = EventCause.networkOutOfOrder satisfies EventCause; /* 
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const EventCause_networkSignal = EventCause.networkSignal satisfies EventCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventCause_networkSignal = EventCause.networkSignal; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary networkSignal
@@ -2017,7 +2017,7 @@ const EventCause_networkSignal = EventCause.networkSignal satisfies EventCause; 
  * @type {number}
  */
 export
-const networkSignal = EventCause.networkSignal satisfies EventCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const networkSignal = EventCause.networkSignal; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_newCall
@@ -2027,7 +2027,7 @@ const networkSignal = EventCause.networkSignal satisfies EventCause; /* SHORT_NA
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const EventCause_newCall = EventCause.newCall satisfies EventCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventCause_newCall = EventCause.newCall; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary newCall
@@ -2036,7 +2036,7 @@ const EventCause_newCall = EventCause.newCall satisfies EventCause; /* LONG_NAME
  * @type {number}
  */
 export
-const newCall = EventCause.newCall satisfies EventCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const newCall = EventCause.newCall; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_nextMessage
@@ -2046,7 +2046,7 @@ const newCall = EventCause.newCall satisfies EventCause; /* SHORT_NAMED_ENUMERAT
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const EventCause_nextMessage = EventCause.nextMessage satisfies EventCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventCause_nextMessage = EventCause.nextMessage; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary nextMessage
@@ -2055,7 +2055,7 @@ const EventCause_nextMessage = EventCause.nextMessage satisfies EventCause; /* L
  * @type {number}
  */
 export
-const nextMessage = EventCause.nextMessage satisfies EventCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const nextMessage = EventCause.nextMessage; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_noAudioSaved
@@ -2065,7 +2065,7 @@ const nextMessage = EventCause.nextMessage satisfies EventCause; /* SHORT_NAMED_
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const EventCause_noAudioSaved = EventCause.noAudioSaved satisfies EventCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventCause_noAudioSaved = EventCause.noAudioSaved; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary noAudioSaved
@@ -2074,7 +2074,7 @@ const EventCause_noAudioSaved = EventCause.noAudioSaved satisfies EventCause; /*
  * @type {number}
  */
 export
-const noAudioSaved = EventCause.noAudioSaved satisfies EventCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const noAudioSaved = EventCause.noAudioSaved; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_noAvailableAgents
@@ -2084,7 +2084,7 @@ const noAudioSaved = EventCause.noAudioSaved satisfies EventCause; /* SHORT_NAME
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const EventCause_noAvailableAgents = EventCause.noAvailableAgents satisfies EventCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventCause_noAvailableAgents = EventCause.noAvailableAgents; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary noAvailableAgents
@@ -2093,7 +2093,7 @@ const EventCause_noAvailableAgents = EventCause.noAvailableAgents satisfies Even
  * @type {number}
  */
 export
-const noAvailableAgents = EventCause.noAvailableAgents satisfies EventCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const noAvailableAgents = EventCause.noAvailableAgents; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_noQueue
@@ -2103,7 +2103,7 @@ const noAvailableAgents = EventCause.noAvailableAgents satisfies EventCause; /* 
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const EventCause_noQueue = EventCause.noQueue satisfies EventCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventCause_noQueue = EventCause.noQueue; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary noQueue
@@ -2112,7 +2112,7 @@ const EventCause_noQueue = EventCause.noQueue satisfies EventCause; /* LONG_NAME
  * @type {number}
  */
 export
-const noQueue = EventCause.noQueue satisfies EventCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const noQueue = EventCause.noQueue; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_normal
@@ -2122,7 +2122,7 @@ const noQueue = EventCause.noQueue satisfies EventCause; /* SHORT_NAMED_ENUMERAT
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const EventCause_normal = EventCause.normal satisfies EventCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventCause_normal = EventCause.normal; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary normal
@@ -2131,7 +2131,7 @@ const EventCause_normal = EventCause.normal satisfies EventCause; /* LONG_NAMED_
  * @type {number}
  */
 export
-const normal = EventCause.normal satisfies EventCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const normal = EventCause.normal; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_normalClearing
@@ -2141,7 +2141,7 @@ const normal = EventCause.normal satisfies EventCause; /* SHORT_NAMED_ENUMERATED
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const EventCause_normalClearing = EventCause.normalClearing satisfies EventCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventCause_normalClearing = EventCause.normalClearing; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary normalClearing
@@ -2150,7 +2150,7 @@ const EventCause_normalClearing = EventCause.normalClearing satisfies EventCause
  * @type {number}
  */
 export
-const normalClearing = EventCause.normalClearing satisfies EventCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const normalClearing = EventCause.normalClearing; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_noRule
@@ -2160,7 +2160,7 @@ const normalClearing = EventCause.normalClearing satisfies EventCause; /* SHORT_
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const EventCause_noRule = EventCause.noRule satisfies EventCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventCause_noRule = EventCause.noRule; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary noRule
@@ -2169,7 +2169,7 @@ const EventCause_noRule = EventCause.noRule satisfies EventCause; /* LONG_NAMED_
  * @type {number}
  */
 export
-const noRule = EventCause.noRule satisfies EventCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const noRule = EventCause.noRule; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_noSpeechDetected
@@ -2179,7 +2179,7 @@ const noRule = EventCause.noRule satisfies EventCause; /* SHORT_NAMED_ENUMERATED
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const EventCause_noSpeechDetected = EventCause.noSpeechDetected satisfies EventCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventCause_noSpeechDetected = EventCause.noSpeechDetected; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary noSpeechDetected
@@ -2188,7 +2188,7 @@ const EventCause_noSpeechDetected = EventCause.noSpeechDetected satisfies EventC
  * @type {number}
  */
 export
-const noSpeechDetected = EventCause.noSpeechDetected satisfies EventCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const noSpeechDetected = EventCause.noSpeechDetected; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_notAvaliableBearerService
@@ -2198,7 +2198,7 @@ const noSpeechDetected = EventCause.noSpeechDetected satisfies EventCause; /* SH
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const EventCause_notAvaliableBearerService = EventCause.notAvaliableBearerService satisfies EventCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventCause_notAvaliableBearerService = EventCause.notAvaliableBearerService; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary notAvaliableBearerService
@@ -2207,7 +2207,7 @@ const EventCause_notAvaliableBearerService = EventCause.notAvaliableBearerServic
  * @type {number}
  */
 export
-const notAvaliableBearerService = EventCause.notAvaliableBearerService satisfies EventCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const notAvaliableBearerService = EventCause.notAvaliableBearerService; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_notSupportedBearerService
@@ -2217,7 +2217,7 @@ const notAvaliableBearerService = EventCause.notAvaliableBearerService satisfies
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const EventCause_notSupportedBearerService = EventCause.notSupportedBearerService satisfies EventCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventCause_notSupportedBearerService = EventCause.notSupportedBearerService; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary notSupportedBearerService
@@ -2226,7 +2226,7 @@ const EventCause_notSupportedBearerService = EventCause.notSupportedBearerServic
  * @type {number}
  */
 export
-const notSupportedBearerService = EventCause.notSupportedBearerService satisfies EventCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const notSupportedBearerService = EventCause.notSupportedBearerService; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_numberChanged
@@ -2236,7 +2236,7 @@ const notSupportedBearerService = EventCause.notSupportedBearerService satisfies
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const EventCause_numberChanged = EventCause.numberChanged satisfies EventCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventCause_numberChanged = EventCause.numberChanged; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary numberChanged
@@ -2245,7 +2245,7 @@ const EventCause_numberChanged = EventCause.numberChanged satisfies EventCause; 
  * @type {number}
  */
 export
-const numberChanged = EventCause.numberChanged satisfies EventCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const numberChanged = EventCause.numberChanged; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_numberUnallocated
@@ -2255,7 +2255,7 @@ const numberChanged = EventCause.numberChanged satisfies EventCause; /* SHORT_NA
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const EventCause_numberUnallocated = EventCause.numberUnallocated satisfies EventCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventCause_numberUnallocated = EventCause.numberUnallocated; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary numberUnallocated
@@ -2264,7 +2264,7 @@ const EventCause_numberUnallocated = EventCause.numberUnallocated satisfies Even
  * @type {number}
  */
 export
-const numberUnallocated = EventCause.numberUnallocated satisfies EventCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const numberUnallocated = EventCause.numberUnallocated; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_outOfGrammar
@@ -2274,7 +2274,7 @@ const numberUnallocated = EventCause.numberUnallocated satisfies EventCause; /* 
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const EventCause_outOfGrammar = EventCause.outOfGrammar satisfies EventCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventCause_outOfGrammar = EventCause.outOfGrammar; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary outOfGrammar
@@ -2283,7 +2283,7 @@ const EventCause_outOfGrammar = EventCause.outOfGrammar satisfies EventCause; /*
  * @type {number}
  */
 export
-const outOfGrammar = EventCause.outOfGrammar satisfies EventCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const outOfGrammar = EventCause.outOfGrammar; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_overflow
@@ -2293,7 +2293,7 @@ const outOfGrammar = EventCause.outOfGrammar satisfies EventCause; /* SHORT_NAME
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const EventCause_overflow = EventCause.overflow satisfies EventCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventCause_overflow = EventCause.overflow; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary overflow
@@ -2302,7 +2302,7 @@ const EventCause_overflow = EventCause.overflow satisfies EventCause; /* LONG_NA
  * @type {number}
  */
 export
-const overflow = EventCause.overflow satisfies EventCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const overflow = EventCause.overflow; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_override
@@ -2312,7 +2312,7 @@ const overflow = EventCause.overflow satisfies EventCause; /* SHORT_NAMED_ENUMER
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const EventCause_override = EventCause.override satisfies EventCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventCause_override = EventCause.override; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary override
@@ -2321,7 +2321,7 @@ const EventCause_override = EventCause.override satisfies EventCause; /* LONG_NA
  * @type {number}
  */
 export
-const override = EventCause.override satisfies EventCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const override = EventCause.override; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_park
@@ -2331,7 +2331,7 @@ const override = EventCause.override satisfies EventCause; /* SHORT_NAMED_ENUMER
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const EventCause_park = EventCause.park satisfies EventCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventCause_park = EventCause.park; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary park
@@ -2340,7 +2340,7 @@ const EventCause_park = EventCause.park satisfies EventCause; /* LONG_NAMED_ENUM
  * @type {number}
  */
 export
-const park = EventCause.park satisfies EventCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const park = EventCause.park; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_pathReplacement
@@ -2350,7 +2350,7 @@ const park = EventCause.park satisfies EventCause; /* SHORT_NAMED_ENUMERATED_VAL
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const EventCause_pathReplacement = EventCause.pathReplacement satisfies EventCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventCause_pathReplacement = EventCause.pathReplacement; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pathReplacement
@@ -2359,7 +2359,7 @@ const EventCause_pathReplacement = EventCause.pathReplacement satisfies EventCau
  * @type {number}
  */
 export
-const pathReplacement = EventCause.pathReplacement satisfies EventCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pathReplacement = EventCause.pathReplacement; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_queueCleared
@@ -2369,7 +2369,7 @@ const pathReplacement = EventCause.pathReplacement satisfies EventCause; /* SHOR
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const EventCause_queueCleared = EventCause.queueCleared satisfies EventCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventCause_queueCleared = EventCause.queueCleared; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary queueCleared
@@ -2378,7 +2378,7 @@ const EventCause_queueCleared = EventCause.queueCleared satisfies EventCause; /*
  * @type {number}
  */
 export
-const queueCleared = EventCause.queueCleared satisfies EventCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const queueCleared = EventCause.queueCleared; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_queueTimeOverflow
@@ -2388,7 +2388,7 @@ const queueCleared = EventCause.queueCleared satisfies EventCause; /* SHORT_NAME
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const EventCause_queueTimeOverflow = EventCause.queueTimeOverflow satisfies EventCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventCause_queueTimeOverflow = EventCause.queueTimeOverflow; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary queueTimeOverflow
@@ -2397,7 +2397,7 @@ const EventCause_queueTimeOverflow = EventCause.queueTimeOverflow satisfies Even
  * @type {number}
  */
 export
-const queueTimeOverflow = EventCause.queueTimeOverflow satisfies EventCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const queueTimeOverflow = EventCause.queueTimeOverflow; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_recall
@@ -2407,7 +2407,7 @@ const queueTimeOverflow = EventCause.queueTimeOverflow satisfies EventCause; /* 
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const EventCause_recall = EventCause.recall satisfies EventCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventCause_recall = EventCause.recall; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary recall
@@ -2416,7 +2416,7 @@ const EventCause_recall = EventCause.recall satisfies EventCause; /* LONG_NAMED_
  * @type {number}
  */
 export
-const recall = EventCause.recall satisfies EventCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const recall = EventCause.recall; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_recallBusy
@@ -2426,7 +2426,7 @@ const recall = EventCause.recall satisfies EventCause; /* SHORT_NAMED_ENUMERATED
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const EventCause_recallBusy = EventCause.recallBusy satisfies EventCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventCause_recallBusy = EventCause.recallBusy; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary recallBusy
@@ -2435,7 +2435,7 @@ const EventCause_recallBusy = EventCause.recallBusy satisfies EventCause; /* LON
  * @type {number}
  */
 export
-const recallBusy = EventCause.recallBusy satisfies EventCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const recallBusy = EventCause.recallBusy; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_recallForwarded
@@ -2445,7 +2445,7 @@ const recallBusy = EventCause.recallBusy satisfies EventCause; /* SHORT_NAMED_EN
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const EventCause_recallForwarded = EventCause.recallForwarded satisfies EventCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventCause_recallForwarded = EventCause.recallForwarded; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary recallForwarded
@@ -2454,7 +2454,7 @@ const EventCause_recallForwarded = EventCause.recallForwarded satisfies EventCau
  * @type {number}
  */
 export
-const recallForwarded = EventCause.recallForwarded satisfies EventCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const recallForwarded = EventCause.recallForwarded; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_recallNoAnswer
@@ -2464,7 +2464,7 @@ const recallForwarded = EventCause.recallForwarded satisfies EventCause; /* SHOR
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const EventCause_recallNoAnswer = EventCause.recallNoAnswer satisfies EventCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventCause_recallNoAnswer = EventCause.recallNoAnswer; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary recallNoAnswer
@@ -2473,7 +2473,7 @@ const EventCause_recallNoAnswer = EventCause.recallNoAnswer satisfies EventCause
  * @type {number}
  */
 export
-const recallNoAnswer = EventCause.recallNoAnswer satisfies EventCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const recallNoAnswer = EventCause.recallNoAnswer; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_recallResourcesNotAvailable
@@ -2483,7 +2483,7 @@ const recallNoAnswer = EventCause.recallNoAnswer satisfies EventCause; /* SHORT_
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const EventCause_recallResourcesNotAvailable = EventCause.recallResourcesNotAvailable satisfies EventCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventCause_recallResourcesNotAvailable = EventCause.recallResourcesNotAvailable; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary recallResourcesNotAvailable
@@ -2492,7 +2492,7 @@ const EventCause_recallResourcesNotAvailable = EventCause.recallResourcesNotAvai
  * @type {number}
  */
 export
-const recallResourcesNotAvailable = EventCause.recallResourcesNotAvailable satisfies EventCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const recallResourcesNotAvailable = EventCause.recallResourcesNotAvailable; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_redirected
@@ -2502,7 +2502,7 @@ const recallResourcesNotAvailable = EventCause.recallResourcesNotAvailable satis
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const EventCause_redirected = EventCause.redirected satisfies EventCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventCause_redirected = EventCause.redirected; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary redirected
@@ -2511,7 +2511,7 @@ const EventCause_redirected = EventCause.redirected satisfies EventCause; /* LON
  * @type {number}
  */
 export
-const redirected = EventCause.redirected satisfies EventCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const redirected = EventCause.redirected; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_remainsInQueue
@@ -2521,7 +2521,7 @@ const redirected = EventCause.redirected satisfies EventCause; /* SHORT_NAMED_EN
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const EventCause_remainsInQueue = EventCause.remainsInQueue satisfies EventCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventCause_remainsInQueue = EventCause.remainsInQueue; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary remainsInQueue
@@ -2530,7 +2530,7 @@ const EventCause_remainsInQueue = EventCause.remainsInQueue satisfies EventCause
  * @type {number}
  */
 export
-const remainsInQueue = EventCause.remainsInQueue satisfies EventCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const remainsInQueue = EventCause.remainsInQueue; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_reorderTone
@@ -2540,7 +2540,7 @@ const remainsInQueue = EventCause.remainsInQueue satisfies EventCause; /* SHORT_
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const EventCause_reorderTone = EventCause.reorderTone satisfies EventCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventCause_reorderTone = EventCause.reorderTone; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary reorderTone
@@ -2549,7 +2549,7 @@ const EventCause_reorderTone = EventCause.reorderTone satisfies EventCause; /* L
  * @type {number}
  */
 export
-const reorderTone = EventCause.reorderTone satisfies EventCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const reorderTone = EventCause.reorderTone; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_reserved
@@ -2559,7 +2559,7 @@ const reorderTone = EventCause.reorderTone satisfies EventCause; /* SHORT_NAMED_
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const EventCause_reserved = EventCause.reserved satisfies EventCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventCause_reserved = EventCause.reserved; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary reserved
@@ -2568,7 +2568,7 @@ const EventCause_reserved = EventCause.reserved satisfies EventCause; /* LONG_NA
  * @type {number}
  */
 export
-const reserved = EventCause.reserved satisfies EventCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const reserved = EventCause.reserved; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_resourcesNotAvailable
@@ -2578,7 +2578,7 @@ const reserved = EventCause.reserved satisfies EventCause; /* SHORT_NAMED_ENUMER
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const EventCause_resourcesNotAvailable = EventCause.resourcesNotAvailable satisfies EventCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventCause_resourcesNotAvailable = EventCause.resourcesNotAvailable; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary resourcesNotAvailable
@@ -2587,7 +2587,7 @@ const EventCause_resourcesNotAvailable = EventCause.resourcesNotAvailable satisf
  * @type {number}
  */
 export
-const resourcesNotAvailable = EventCause.resourcesNotAvailable satisfies EventCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const resourcesNotAvailable = EventCause.resourcesNotAvailable; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_selectedTrunkBusy
@@ -2597,7 +2597,7 @@ const resourcesNotAvailable = EventCause.resourcesNotAvailable satisfies EventCa
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const EventCause_selectedTrunkBusy = EventCause.selectedTrunkBusy satisfies EventCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventCause_selectedTrunkBusy = EventCause.selectedTrunkBusy; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary selectedTrunkBusy
@@ -2606,7 +2606,7 @@ const EventCause_selectedTrunkBusy = EventCause.selectedTrunkBusy satisfies Even
  * @type {number}
  */
 export
-const selectedTrunkBusy = EventCause.selectedTrunkBusy satisfies EventCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const selectedTrunkBusy = EventCause.selectedTrunkBusy; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_silentParticipation
@@ -2616,7 +2616,7 @@ const selectedTrunkBusy = EventCause.selectedTrunkBusy satisfies EventCause; /* 
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const EventCause_silentParticipation = EventCause.silentParticipation satisfies EventCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventCause_silentParticipation = EventCause.silentParticipation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary silentParticipation
@@ -2625,7 +2625,7 @@ const EventCause_silentParticipation = EventCause.silentParticipation satisfies 
  * @type {number}
  */
 export
-const silentParticipation = EventCause.silentParticipation satisfies EventCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const silentParticipation = EventCause.silentParticipation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_singleStepConference
@@ -2635,7 +2635,7 @@ const silentParticipation = EventCause.silentParticipation satisfies EventCause;
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const EventCause_singleStepConference = EventCause.singleStepConference satisfies EventCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventCause_singleStepConference = EventCause.singleStepConference; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary singleStepConference
@@ -2644,7 +2644,7 @@ const EventCause_singleStepConference = EventCause.singleStepConference satisfie
  * @type {number}
  */
 export
-const singleStepConference = EventCause.singleStepConference satisfies EventCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const singleStepConference = EventCause.singleStepConference; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_singleStepTransfer
@@ -2654,7 +2654,7 @@ const singleStepConference = EventCause.singleStepConference satisfies EventCaus
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const EventCause_singleStepTransfer = EventCause.singleStepTransfer satisfies EventCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventCause_singleStepTransfer = EventCause.singleStepTransfer; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary singleStepTransfer
@@ -2663,7 +2663,7 @@ const EventCause_singleStepTransfer = EventCause.singleStepTransfer satisfies Ev
  * @type {number}
  */
 export
-const singleStepTransfer = EventCause.singleStepTransfer satisfies EventCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const singleStepTransfer = EventCause.singleStepTransfer; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_speechDetected
@@ -2673,7 +2673,7 @@ const singleStepTransfer = EventCause.singleStepTransfer satisfies EventCause; /
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const EventCause_speechDetected = EventCause.speechDetected satisfies EventCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventCause_speechDetected = EventCause.speechDetected; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary speechDetected
@@ -2682,7 +2682,7 @@ const EventCause_speechDetected = EventCause.speechDetected satisfies EventCause
  * @type {number}
  */
 export
-const speechDetected = EventCause.speechDetected satisfies EventCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const speechDetected = EventCause.speechDetected; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_suspend
@@ -2692,7 +2692,7 @@ const speechDetected = EventCause.speechDetected satisfies EventCause; /* SHORT_
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const EventCause_suspend = EventCause.suspend satisfies EventCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventCause_suspend = EventCause.suspend; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary suspend
@@ -2701,7 +2701,7 @@ const EventCause_suspend = EventCause.suspend satisfies EventCause; /* LONG_NAME
  * @type {number}
  */
 export
-const suspend = EventCause.suspend satisfies EventCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const suspend = EventCause.suspend; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_switchingFunctionTerminated
@@ -2711,7 +2711,7 @@ const suspend = EventCause.suspend satisfies EventCause; /* SHORT_NAMED_ENUMERAT
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const EventCause_switchingFunctionTerminated = EventCause.switchingFunctionTerminated satisfies EventCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventCause_switchingFunctionTerminated = EventCause.switchingFunctionTerminated; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary switchingFunctionTerminated
@@ -2720,7 +2720,7 @@ const EventCause_switchingFunctionTerminated = EventCause.switchingFunctionTermi
  * @type {number}
  */
 export
-const switchingFunctionTerminated = EventCause.switchingFunctionTerminated satisfies EventCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const switchingFunctionTerminated = EventCause.switchingFunctionTerminated; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_terminationCharacterReceived
@@ -2730,7 +2730,7 @@ const switchingFunctionTerminated = EventCause.switchingFunctionTerminated satis
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const EventCause_terminationCharacterReceived = EventCause.terminationCharacterReceived satisfies EventCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventCause_terminationCharacterReceived = EventCause.terminationCharacterReceived; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary terminationCharacterReceived
@@ -2739,7 +2739,7 @@ const EventCause_terminationCharacterReceived = EventCause.terminationCharacterR
  * @type {number}
  */
 export
-const terminationCharacterReceived = EventCause.terminationCharacterReceived satisfies EventCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const terminationCharacterReceived = EventCause.terminationCharacterReceived; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_timeout
@@ -2749,7 +2749,7 @@ const terminationCharacterReceived = EventCause.terminationCharacterReceived sat
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const EventCause_timeout = EventCause.timeout satisfies EventCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventCause_timeout = EventCause.timeout; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary timeout
@@ -2758,7 +2758,7 @@ const EventCause_timeout = EventCause.timeout satisfies EventCause; /* LONG_NAME
  * @type {number}
  */
 export
-const timeout = EventCause.timeout satisfies EventCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const timeout = EventCause.timeout; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_transfer
@@ -2768,7 +2768,7 @@ const timeout = EventCause.timeout satisfies EventCause; /* SHORT_NAMED_ENUMERAT
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const EventCause_transfer = EventCause.transfer satisfies EventCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventCause_transfer = EventCause.transfer; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary transfer
@@ -2777,7 +2777,7 @@ const EventCause_transfer = EventCause.transfer satisfies EventCause; /* LONG_NA
  * @type {number}
  */
 export
-const transfer = EventCause.transfer satisfies EventCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const transfer = EventCause.transfer; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_trunksBusy
@@ -2787,7 +2787,7 @@ const transfer = EventCause.transfer satisfies EventCause; /* SHORT_NAMED_ENUMER
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const EventCause_trunksBusy = EventCause.trunksBusy satisfies EventCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventCause_trunksBusy = EventCause.trunksBusy; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary trunksBusy
@@ -2796,7 +2796,7 @@ const EventCause_trunksBusy = EventCause.trunksBusy satisfies EventCause; /* LON
  * @type {number}
  */
 export
-const trunksBusy = EventCause.trunksBusy satisfies EventCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const trunksBusy = EventCause.trunksBusy; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_unauthorisedBearerService
@@ -2806,7 +2806,7 @@ const trunksBusy = EventCause.trunksBusy satisfies EventCause; /* SHORT_NAMED_EN
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const EventCause_unauthorisedBearerService = EventCause.unauthorisedBearerService satisfies EventCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventCause_unauthorisedBearerService = EventCause.unauthorisedBearerService; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unauthorisedBearerService
@@ -2815,7 +2815,7 @@ const EventCause_unauthorisedBearerService = EventCause.unauthorisedBearerServic
  * @type {number}
  */
 export
-const unauthorisedBearerService = EventCause.unauthorisedBearerService satisfies EventCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unauthorisedBearerService = EventCause.unauthorisedBearerService; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_unknownOverflow
@@ -2825,7 +2825,7 @@ const unauthorisedBearerService = EventCause.unauthorisedBearerService satisfies
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const EventCause_unknownOverflow = EventCause.unknownOverflow satisfies EventCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventCause_unknownOverflow = EventCause.unknownOverflow; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unknownOverflow
@@ -2834,7 +2834,7 @@ const EventCause_unknownOverflow = EventCause.unknownOverflow satisfies EventCau
  * @type {number}
  */
 export
-const unknownOverflow = EventCause.unknownOverflow satisfies EventCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unknownOverflow = EventCause.unknownOverflow; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 let _cached_decoder_for_EventCause: $.ASN1Decoder<EventCause> | null = null;
 

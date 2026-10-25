@@ -54,7 +54,7 @@ const DisableProfileResponse_disableResult_ok = 0 satisfies DisableProfileRespon
  * @type {number}
  */
 export
-const ok = DisableProfileResponse_disableResult_ok satisfies DisableProfileResponse_disableResult; /* SHORT_NAMED_INTEGER_VALUE */
+const ok = DisableProfileResponse_disableResult_ok; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DisableProfileResponse_disableResult_iccidOrAidNotFound
@@ -78,7 +78,7 @@ const DisableProfileResponse_disableResult_iccidOrAidNotFound = 1 satisfies Disa
  * @type {number}
  */
 export
-const iccidOrAidNotFound = DisableProfileResponse_disableResult_iccidOrAidNotFound satisfies DisableProfileResponse_disableResult; /* SHORT_NAMED_INTEGER_VALUE */
+const iccidOrAidNotFound = DisableProfileResponse_disableResult_iccidOrAidNotFound; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DisableProfileResponse_disableResult_profileNotInEnabledState
@@ -102,7 +102,7 @@ const DisableProfileResponse_disableResult_profileNotInEnabledState = 2 satisfie
  * @type {number}
  */
 export
-const profileNotInEnabledState = DisableProfileResponse_disableResult_profileNotInEnabledState satisfies DisableProfileResponse_disableResult; /* SHORT_NAMED_INTEGER_VALUE */
+const profileNotInEnabledState = DisableProfileResponse_disableResult_profileNotInEnabledState; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DisableProfileResponse_disableResult_disallowedByPolicy
@@ -126,7 +126,7 @@ const DisableProfileResponse_disableResult_disallowedByPolicy = 3 satisfies Disa
  * @type {number}
  */
 export
-const disallowedByPolicy = DisableProfileResponse_disableResult_disallowedByPolicy satisfies DisableProfileResponse_disableResult; /* SHORT_NAMED_INTEGER_VALUE */
+const disallowedByPolicy = DisableProfileResponse_disableResult_disallowedByPolicy; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DisableProfileResponse_disableResult_catBusy
@@ -150,7 +150,7 @@ const DisableProfileResponse_disableResult_catBusy = 5 satisfies DisableProfileR
  * @type {number}
  */
 export
-const catBusy = DisableProfileResponse_disableResult_catBusy satisfies DisableProfileResponse_disableResult; /* SHORT_NAMED_INTEGER_VALUE */
+const catBusy = DisableProfileResponse_disableResult_catBusy; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DisableProfileResponse_disableResult_undefinedError
@@ -174,7 +174,7 @@ const DisableProfileResponse_disableResult_undefinedError = 127 satisfies Disabl
  * @type {number}
  */
 export
-const undefinedError = DisableProfileResponse_disableResult_undefinedError satisfies DisableProfileResponse_disableResult; /* SHORT_NAMED_INTEGER_VALUE */
+const undefinedError = DisableProfileResponse_disableResult_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_DisableProfileResponse_disableResult = $._decodeInteger;
 export const _encode_DisableProfileResponse_disableResult = $._encodeInteger;
 

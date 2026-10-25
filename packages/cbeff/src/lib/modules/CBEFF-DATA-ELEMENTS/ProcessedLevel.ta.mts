@@ -67,7 +67,7 @@ export const ProcessedLevel = _enum_for_ProcessedLevel;
  * @type {number}
  */
 export const ProcessedLevel_no_value_available =
-  ProcessedLevel.no_value_available satisfies ProcessedLevel; /* LONG_NAMED_ENUMERATED_VALUE */
+  ProcessedLevel.no_value_available; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary no_value_available
@@ -75,7 +75,7 @@ export const ProcessedLevel_no_value_available =
  * @type {number}
  */
 export const no_value_available =
-  ProcessedLevel.no_value_available satisfies ProcessedLevel; /* SHORT_NAMED_ENUMERATED_VALUE */
+  ProcessedLevel.no_value_available; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ProcessedLevel_raw
@@ -83,7 +83,7 @@ export const no_value_available =
  * @type {number}
  */
 export const ProcessedLevel_raw =
-  ProcessedLevel.raw satisfies ProcessedLevel; /* LONG_NAMED_ENUMERATED_VALUE */
+  ProcessedLevel.raw; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary raw
@@ -91,7 +91,7 @@ export const ProcessedLevel_raw =
  * @type {number}
  */
 export const raw =
-  ProcessedLevel.raw satisfies ProcessedLevel; /* SHORT_NAMED_ENUMERATED_VALUE */
+  ProcessedLevel.raw; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ProcessedLevel_intermediate
@@ -99,7 +99,7 @@ export const raw =
  * @type {number}
  */
 export const ProcessedLevel_intermediate =
-  ProcessedLevel.intermediate satisfies ProcessedLevel; /* LONG_NAMED_ENUMERATED_VALUE */
+  ProcessedLevel.intermediate; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary intermediate
@@ -107,7 +107,7 @@ export const ProcessedLevel_intermediate =
  * @type {number}
  */
 export const intermediate =
-  ProcessedLevel.intermediate satisfies ProcessedLevel; /* SHORT_NAMED_ENUMERATED_VALUE */
+  ProcessedLevel.intermediate; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ProcessedLevel_processed
@@ -115,7 +115,7 @@ export const intermediate =
  * @type {number}
  */
 export const ProcessedLevel_processed =
-  ProcessedLevel.processed satisfies ProcessedLevel; /* LONG_NAMED_ENUMERATED_VALUE */
+  ProcessedLevel.processed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary processed
@@ -123,7 +123,7 @@ export const ProcessedLevel_processed =
  * @type {number}
  */
 export const processed =
-  ProcessedLevel.processed satisfies ProcessedLevel; /* SHORT_NAMED_ENUMERATED_VALUE */
+  ProcessedLevel.processed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 export const _decode_ProcessedLevel = $._decodeEnumerated;

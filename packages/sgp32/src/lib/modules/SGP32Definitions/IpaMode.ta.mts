@@ -45,7 +45,7 @@ const IpaMode_ipad = 0 satisfies IpaMode; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const ipad = IpaMode_ipad satisfies IpaMode; /* SHORT_NAMED_INTEGER_VALUE */
+const ipad = IpaMode_ipad; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary IpaMode_ipae
@@ -65,7 +65,7 @@ const IpaMode_ipae = 1 satisfies IpaMode; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const ipae = IpaMode_ipae satisfies IpaMode; /* SHORT_NAMED_INTEGER_VALUE */
+const ipae = IpaMode_ipae; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_IpaMode: $.ASN1Decoder<IpaMode> = $._decodeInteger;
 export const _encode_IpaMode: $.ASN1Encoder<IpaMode> = $._encodeInteger;
 

@@ -48,7 +48,7 @@ const ENQcontent_vteChoice_draft = 0 satisfies ENQcontent_vteChoice; /* LONG_NAM
  * @type {number}
  */
 export
-const draft = ENQcontent_vteChoice_draft satisfies ENQcontent_vteChoice; /* SHORT_NAMED_INTEGER_VALUE */
+const draft = ENQcontent_vteChoice_draft; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ENQcontent_vteChoice_current
@@ -68,7 +68,7 @@ const ENQcontent_vteChoice_current = 1 satisfies ENQcontent_vteChoice; /* LONG_N
  * @type {number}
  */
 export
-const current = ENQcontent_vteChoice_current satisfies ENQcontent_vteChoice; /* SHORT_NAMED_INTEGER_VALUE */
+const current = ENQcontent_vteChoice_current; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ENQcontent_vteChoice_either
@@ -88,7 +88,7 @@ const ENQcontent_vteChoice_either = 2 satisfies ENQcontent_vteChoice; /* LONG_NA
  * @type {number}
  */
 export
-const either = ENQcontent_vteChoice_either satisfies ENQcontent_vteChoice; /* SHORT_NAMED_INTEGER_VALUE */
+const either = ENQcontent_vteChoice_either; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_ENQcontent_vteChoice = $._decodeInteger;
 export const _encode_ENQcontent_vteChoice = $._encodeInteger;
 

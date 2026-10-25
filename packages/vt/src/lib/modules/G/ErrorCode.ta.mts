@@ -60,7 +60,7 @@ const ErrorCode_collisionDetected = 0 satisfies ErrorCode; /* LONG_NAMED_INTEGER
  * @type {number}
  */
 export
-const collisionDetected = ErrorCode_collisionDetected satisfies ErrorCode; /* SHORT_NAMED_INTEGER_VALUE */
+const collisionDetected = ErrorCode_collisionDetected; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ErrorCode_vteParamNotSupported
@@ -84,7 +84,7 @@ const ErrorCode_vteParamNotSupported = 1 satisfies ErrorCode; /* LONG_NAMED_INTE
  * @type {number}
  */
 export
-const vteParamNotSupported = ErrorCode_vteParamNotSupported satisfies ErrorCode; /* SHORT_NAMED_INTEGER_VALUE */
+const vteParamNotSupported = ErrorCode_vteParamNotSupported; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ErrorCode_vteParamCombNotSupported
@@ -108,7 +108,7 @@ const ErrorCode_vteParamCombNotSupported = 2 satisfies ErrorCode; /* LONG_NAMED_
  * @type {number}
  */
 export
-const vteParamCombNotSupported = ErrorCode_vteParamCombNotSupported satisfies ErrorCode; /* SHORT_NAMED_INTEGER_VALUE */
+const vteParamCombNotSupported = ErrorCode_vteParamCombNotSupported; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ErrorCode_vteIncomplete
@@ -132,7 +132,7 @@ const ErrorCode_vteIncomplete = 3 satisfies ErrorCode; /* LONG_NAMED_INTEGER_VAL
  * @type {number}
  */
 export
-const vteIncomplete = ErrorCode_vteIncomplete satisfies ErrorCode; /* SHORT_NAMED_INTEGER_VALUE */
+const vteIncomplete = ErrorCode_vteIncomplete; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ErrorCode_vteProfileNotSupported
@@ -156,7 +156,7 @@ const ErrorCode_vteProfileNotSupported = 4 satisfies ErrorCode; /* LONG_NAMED_IN
  * @type {number}
  */
 export
-const vteProfileNotSupported = ErrorCode_vteProfileNotSupported satisfies ErrorCode; /* SHORT_NAMED_INTEGER_VALUE */
+const vteProfileNotSupported = ErrorCode_vteProfileNotSupported; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ErrorCode_vtModeNotSupported
@@ -180,7 +180,7 @@ const ErrorCode_vtModeNotSupported = 5 satisfies ErrorCode; /* LONG_NAMED_INTEGE
  * @type {number}
  */
 export
-const vtModeNotSupported = ErrorCode_vtModeNotSupported satisfies ErrorCode; /* SHORT_NAMED_INTEGER_VALUE */
+const vtModeNotSupported = ErrorCode_vtModeNotSupported; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ErrorCode_lengthExceeded
@@ -204,7 +204,7 @@ const ErrorCode_lengthExceeded = 6 satisfies ErrorCode; /* LONG_NAMED_INTEGER_VA
  * @type {number}
  */
 export
-const lengthExceeded = ErrorCode_lengthExceeded satisfies ErrorCode; /* SHORT_NAMED_INTEGER_VALUE */
+const lengthExceeded = ErrorCode_lengthExceeded; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_ErrorCode = $._decodeInteger;
 export const _encode_ErrorCode = $._encodeInteger;
 

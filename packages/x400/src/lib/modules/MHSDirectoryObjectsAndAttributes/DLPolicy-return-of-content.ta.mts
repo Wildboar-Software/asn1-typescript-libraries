@@ -65,7 +65,7 @@ export const DLPolicy_return_of_content = _enum_for_DLPolicy_return_of_content;
  * @type {number}
  */
 export const DLPolicy_return_of_content_unchanged =
-    DLPolicy_return_of_content.unchanged satisfies DLPolicy_return_of_content; /* LONG_NAMED_ENUMERATED_VALUE */
+    DLPolicy_return_of_content.unchanged; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unchanged
@@ -73,7 +73,7 @@ export const DLPolicy_return_of_content_unchanged =
  * @type {number}
  */
 export const unchanged =
-    DLPolicy_return_of_content.unchanged satisfies DLPolicy_return_of_content; /* SHORT_NAMED_ENUMERATED_VALUE */
+    DLPolicy_return_of_content.unchanged; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary DLPolicy_return_of_content_content_return_not_requested
@@ -81,7 +81,7 @@ export const unchanged =
  * @type {number}
  */
 export const DLPolicy_return_of_content_content_return_not_requested =
-    DLPolicy_return_of_content.content_return_not_requested satisfies DLPolicy_return_of_content; /* LONG_NAMED_ENUMERATED_VALUE */
+    DLPolicy_return_of_content.content_return_not_requested; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary content_return_not_requested
@@ -89,7 +89,7 @@ export const DLPolicy_return_of_content_content_return_not_requested =
  * @type {number}
  */
 export const content_return_not_requested =
-    DLPolicy_return_of_content.content_return_not_requested satisfies DLPolicy_return_of_content; /* SHORT_NAMED_ENUMERATED_VALUE */
+    DLPolicy_return_of_content.content_return_not_requested; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary DLPolicy_return_of_content_content_return_requested
@@ -97,7 +97,7 @@ export const content_return_not_requested =
  * @type {number}
  */
 export const DLPolicy_return_of_content_content_return_requested =
-    DLPolicy_return_of_content.content_return_requested satisfies DLPolicy_return_of_content; /* LONG_NAMED_ENUMERATED_VALUE */
+    DLPolicy_return_of_content.content_return_requested; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary content_return_requested
@@ -105,7 +105,7 @@ export const DLPolicy_return_of_content_content_return_requested =
  * @type {number}
  */
 export const content_return_requested =
-    DLPolicy_return_of_content.content_return_requested satisfies DLPolicy_return_of_content; /* SHORT_NAMED_ENUMERATED_VALUE */
+    DLPolicy_return_of_content.content_return_requested; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 export function _decode_DLPolicy_return_of_content(el: _Element): DLPolicy_return_of_content {

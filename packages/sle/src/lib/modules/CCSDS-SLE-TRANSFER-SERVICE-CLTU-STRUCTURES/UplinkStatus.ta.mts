@@ -50,7 +50,7 @@ const UplinkStatus_uplinkStatusNotAvailable = 0 satisfies UplinkStatus; /* LONG_
  * @type {number}
  */
 export
-const uplinkStatusNotAvailable = UplinkStatus_uplinkStatusNotAvailable satisfies UplinkStatus; /* SHORT_NAMED_INTEGER_VALUE */
+const uplinkStatusNotAvailable = UplinkStatus_uplinkStatusNotAvailable; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary UplinkStatus_noRfAvailable
@@ -73,7 +73,7 @@ const UplinkStatus_noRfAvailable = 1 satisfies UplinkStatus; /* LONG_NAMED_INTEG
  * @type {number}
  */
 export
-const noRfAvailable = UplinkStatus_noRfAvailable satisfies UplinkStatus; /* SHORT_NAMED_INTEGER_VALUE */
+const noRfAvailable = UplinkStatus_noRfAvailable; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary UplinkStatus_noBitLock
@@ -97,7 +97,7 @@ const UplinkStatus_noBitLock = 2 satisfies UplinkStatus; /* LONG_NAMED_INTEGER_V
  * @type {number}
  */
 export
-const noBitLock = UplinkStatus_noBitLock satisfies UplinkStatus; /* SHORT_NAMED_INTEGER_VALUE */
+const noBitLock = UplinkStatus_noBitLock; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary UplinkStatus_nominal
@@ -122,7 +122,7 @@ const UplinkStatus_nominal = 3 satisfies UplinkStatus; /* LONG_NAMED_INTEGER_VAL
  * @type {number}
  */
 export
-const nominal = UplinkStatus_nominal satisfies UplinkStatus; /* SHORT_NAMED_INTEGER_VALUE */
+const nominal = UplinkStatus_nominal; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_UplinkStatus: $.ASN1Decoder<UplinkStatus> = $._decodeInteger;
 export const _encode_UplinkStatus: $.ASN1Encoder<UplinkStatus> = $._encodeInteger;
 

@@ -38,7 +38,7 @@ const MOCallRecord_lrnSoInd_lRN_NP_Database = 1 satisfies MOCallRecord_lrnSoInd;
  * @type {number}
  */
 export
-const lRN_NP_Database = MOCallRecord_lrnSoInd_lRN_NP_Database satisfies MOCallRecord_lrnSoInd; /* SHORT_NAMED_INTEGER_VALUE */
+const lRN_NP_Database = MOCallRecord_lrnSoInd_lRN_NP_Database; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary MOCallRecord_lrnSoInd_switchingSystemData
@@ -54,7 +54,7 @@ const MOCallRecord_lrnSoInd_switchingSystemData = 2 satisfies MOCallRecord_lrnSo
  * @type {number}
  */
 export
-const switchingSystemData = MOCallRecord_lrnSoInd_switchingSystemData satisfies MOCallRecord_lrnSoInd; /* SHORT_NAMED_INTEGER_VALUE */
+const switchingSystemData = MOCallRecord_lrnSoInd_switchingSystemData; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary MOCallRecord_lrnSoInd_incomingsignaling
@@ -70,7 +70,7 @@ const MOCallRecord_lrnSoInd_incomingsignaling = 3 satisfies MOCallRecord_lrnSoIn
  * @type {number}
  */
 export
-const incomingsignaling = MOCallRecord_lrnSoInd_incomingsignaling satisfies MOCallRecord_lrnSoInd; /* SHORT_NAMED_INTEGER_VALUE */
+const incomingsignaling = MOCallRecord_lrnSoInd_incomingsignaling; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary MOCallRecord_lrnSoInd_unknown
@@ -86,7 +86,7 @@ const MOCallRecord_lrnSoInd_unknown = 9 satisfies MOCallRecord_lrnSoInd; /* LONG
  * @type {number}
  */
 export
-const unknown = MOCallRecord_lrnSoInd_unknown satisfies MOCallRecord_lrnSoInd; /* SHORT_NAMED_INTEGER_VALUE */
+const unknown = MOCallRecord_lrnSoInd_unknown; /* SHORT_NAMED_INTEGER_VALUE */
 
 export
 const _decode_MOCallRecord_lrnSoInd: $.ASN1Decoder<MOCallRecord_lrnSoInd> = $._decodeInteger;

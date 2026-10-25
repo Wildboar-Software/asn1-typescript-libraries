@@ -56,7 +56,7 @@ const EnableProfileResult_ok = 0 satisfies EnableProfileResult; /* LONG_NAMED_IN
  * section 3.4.1).
  */
 export
-const ok = EnableProfileResult_ok satisfies EnableProfileResult; /* SHORT_NAMED_INTEGER_VALUE */
+const ok = EnableProfileResult_ok; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EnableProfileResult_iccidOrAidNotFound
@@ -78,7 +78,7 @@ const EnableProfileResult_iccidOrAidNotFound = 1 satisfies EnableProfileResult; 
  * section 3.4.1).
  */
 export
-const iccidOrAidNotFound = EnableProfileResult_iccidOrAidNotFound satisfies EnableProfileResult; /* SHORT_NAMED_INTEGER_VALUE */
+const iccidOrAidNotFound = EnableProfileResult_iccidOrAidNotFound; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EnableProfileResult_profileNotInDisabledState
@@ -100,7 +100,7 @@ const EnableProfileResult_profileNotInDisabledState = 2 satisfies EnableProfileR
  * 3.4.1).
  */
 export
-const profileNotInDisabledState = EnableProfileResult_profileNotInDisabledState satisfies EnableProfileResult; /* SHORT_NAMED_INTEGER_VALUE */
+const profileNotInDisabledState = EnableProfileResult_profileNotInDisabledState; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EnableProfileResult_disallowedByPolicy
@@ -123,7 +123,7 @@ const EnableProfileResult_disallowedByPolicy = 3 satisfies EnableProfileResult; 
  * the condition that produces it.
  */
 export
-const disallowedByPolicy = EnableProfileResult_disallowedByPolicy satisfies EnableProfileResult; /* SHORT_NAMED_INTEGER_VALUE */
+const disallowedByPolicy = EnableProfileResult_disallowedByPolicy; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EnableProfileResult_catBusy
@@ -146,7 +146,7 @@ const EnableProfileResult_catBusy = 5 satisfies EnableProfileResult; /* LONG_NAM
  * the condition that produces it.
  */
 export
-const catBusy = EnableProfileResult_catBusy satisfies EnableProfileResult; /* SHORT_NAMED_INTEGER_VALUE */
+const catBusy = EnableProfileResult_catBusy; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EnableProfileResult_rollbackNotAvailable
@@ -169,7 +169,7 @@ const EnableProfileResult_rollbackNotAvailable = 20 satisfies EnableProfileResul
  * v1.2, section 3.4.1).
  */
 export
-const rollbackNotAvailable = EnableProfileResult_rollbackNotAvailable satisfies EnableProfileResult; /* SHORT_NAMED_INTEGER_VALUE */
+const rollbackNotAvailable = EnableProfileResult_rollbackNotAvailable; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EnableProfileResult_undefinedError
@@ -191,7 +191,7 @@ const EnableProfileResult_undefinedError = 127 satisfies EnableProfileResult; /*
  * v1.2, section 3.4.1).
  */
 export
-const undefinedError = EnableProfileResult_undefinedError satisfies EnableProfileResult; /* SHORT_NAMED_INTEGER_VALUE */
+const undefinedError = EnableProfileResult_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_EnableProfileResult: $.ASN1Decoder<EnableProfileResult> = $._decodeInteger;
 export const _encode_EnableProfileResult: $.ASN1Encoder<EnableProfileResult> = $._encodeInteger;
 

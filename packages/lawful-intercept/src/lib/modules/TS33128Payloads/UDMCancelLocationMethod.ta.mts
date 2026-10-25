@@ -92,7 +92,7 @@ const UDMCancelLocationMethod = _enum_for_UDMCancelLocationMethod;
  * @type {number}
  */
 export
-const UDMCancelLocationMethod_aMF3GPPAccessDeregistration = UDMCancelLocationMethod.aMF3GPPAccessDeregistration satisfies UDMCancelLocationMethod; /* LONG_NAMED_ENUMERATED_VALUE */
+const UDMCancelLocationMethod_aMF3GPPAccessDeregistration = UDMCancelLocationMethod.aMF3GPPAccessDeregistration; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary aMF3GPPAccessDeregistration
@@ -100,7 +100,7 @@ const UDMCancelLocationMethod_aMF3GPPAccessDeregistration = UDMCancelLocationMet
  * @type {number}
  */
 export
-const aMF3GPPAccessDeregistration = UDMCancelLocationMethod.aMF3GPPAccessDeregistration satisfies UDMCancelLocationMethod; /* SHORT_NAMED_ENUMERATED_VALUE */
+const aMF3GPPAccessDeregistration = UDMCancelLocationMethod.aMF3GPPAccessDeregistration; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary UDMCancelLocationMethod_aMFNon3GPPAccessDeregistration
@@ -108,7 +108,7 @@ const aMF3GPPAccessDeregistration = UDMCancelLocationMethod.aMF3GPPAccessDeregis
  * @type {number}
  */
 export
-const UDMCancelLocationMethod_aMFNon3GPPAccessDeregistration = UDMCancelLocationMethod.aMFNon3GPPAccessDeregistration satisfies UDMCancelLocationMethod; /* LONG_NAMED_ENUMERATED_VALUE */
+const UDMCancelLocationMethod_aMFNon3GPPAccessDeregistration = UDMCancelLocationMethod.aMFNon3GPPAccessDeregistration; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary aMFNon3GPPAccessDeregistration
@@ -116,7 +116,7 @@ const UDMCancelLocationMethod_aMFNon3GPPAccessDeregistration = UDMCancelLocation
  * @type {number}
  */
 export
-const aMFNon3GPPAccessDeregistration = UDMCancelLocationMethod.aMFNon3GPPAccessDeregistration satisfies UDMCancelLocationMethod; /* SHORT_NAMED_ENUMERATED_VALUE */
+const aMFNon3GPPAccessDeregistration = UDMCancelLocationMethod.aMFNon3GPPAccessDeregistration; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary UDMCancelLocationMethod_uDMDeregistration
@@ -124,7 +124,7 @@ const aMFNon3GPPAccessDeregistration = UDMCancelLocationMethod.aMFNon3GPPAccessD
  * @type {number}
  */
 export
-const UDMCancelLocationMethod_uDMDeregistration = UDMCancelLocationMethod.uDMDeregistration satisfies UDMCancelLocationMethod; /* LONG_NAMED_ENUMERATED_VALUE */
+const UDMCancelLocationMethod_uDMDeregistration = UDMCancelLocationMethod.uDMDeregistration; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary uDMDeregistration
@@ -132,7 +132,7 @@ const UDMCancelLocationMethod_uDMDeregistration = UDMCancelLocationMethod.uDMDer
  * @type {number}
  */
 export
-const uDMDeregistration = UDMCancelLocationMethod.uDMDeregistration satisfies UDMCancelLocationMethod; /* SHORT_NAMED_ENUMERATED_VALUE */
+const uDMDeregistration = UDMCancelLocationMethod.uDMDeregistration; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary UDMCancelLocationMethod_unknown
@@ -140,7 +140,7 @@ const uDMDeregistration = UDMCancelLocationMethod.uDMDeregistration satisfies UD
  * @type {number}
  */
 export
-const UDMCancelLocationMethod_unknown = UDMCancelLocationMethod.unknown satisfies UDMCancelLocationMethod; /* LONG_NAMED_ENUMERATED_VALUE */
+const UDMCancelLocationMethod_unknown = UDMCancelLocationMethod.unknown; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unknown
@@ -148,7 +148,7 @@ const UDMCancelLocationMethod_unknown = UDMCancelLocationMethod.unknown satisfie
  * @type {number}
  */
 export
-const unknown = UDMCancelLocationMethod.unknown satisfies UDMCancelLocationMethod; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unknown = UDMCancelLocationMethod.unknown; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_UDMCancelLocationMethod: $.ASN1Decoder<UDMCancelLocationMethod> = $._decodeEnumerated;
 export const _encode_UDMCancelLocationMethod: $.ASN1Encoder<UDMCancelLocationMethod> = $._encodeEnumerated;
 

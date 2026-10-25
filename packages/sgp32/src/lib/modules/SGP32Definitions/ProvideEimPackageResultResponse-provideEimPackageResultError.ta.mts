@@ -48,7 +48,7 @@ const ProvideEimPackageResultResponse_provideEimPackageResultError_eidNotFound =
  * @type {number}
  */
 export
-const eidNotFound = ProvideEimPackageResultResponse_provideEimPackageResultError_eidNotFound satisfies ProvideEimPackageResultResponse_provideEimPackageResultError; /* SHORT_NAMED_INTEGER_VALUE */
+const eidNotFound = ProvideEimPackageResultResponse_provideEimPackageResultError_eidNotFound; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProvideEimPackageResultResponse_provideEimPackageResultError_invalidEid
@@ -70,7 +70,7 @@ const ProvideEimPackageResultResponse_provideEimPackageResultError_invalidEid = 
  * @type {number}
  */
 export
-const invalidEid = ProvideEimPackageResultResponse_provideEimPackageResultError_invalidEid satisfies ProvideEimPackageResultResponse_provideEimPackageResultError; /* SHORT_NAMED_INTEGER_VALUE */
+const invalidEid = ProvideEimPackageResultResponse_provideEimPackageResultError_invalidEid; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProvideEimPackageResultResponse_provideEimPackageResultError_missingEid
@@ -93,7 +93,7 @@ const ProvideEimPackageResultResponse_provideEimPackageResultError_missingEid = 
  * @type {number}
  */
 export
-const missingEid = ProvideEimPackageResultResponse_provideEimPackageResultError_missingEid satisfies ProvideEimPackageResultResponse_provideEimPackageResultError; /* SHORT_NAMED_INTEGER_VALUE */
+const missingEid = ProvideEimPackageResultResponse_provideEimPackageResultError_missingEid; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProvideEimPackageResultResponse_provideEimPackageResultError_undefinedError
@@ -114,7 +114,7 @@ const ProvideEimPackageResultResponse_provideEimPackageResultError_undefinedErro
  * @type {number}
  */
 export
-const undefinedError = ProvideEimPackageResultResponse_provideEimPackageResultError_undefinedError satisfies ProvideEimPackageResultResponse_provideEimPackageResultError; /* SHORT_NAMED_INTEGER_VALUE */
+const undefinedError = ProvideEimPackageResultResponse_provideEimPackageResultError_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_ProvideEimPackageResultResponse_provideEimPackageResultError: $.ASN1Decoder<ProvideEimPackageResultResponse_provideEimPackageResultError> = $._decodeInteger;
 export const _encode_ProvideEimPackageResultResponse_provideEimPackageResultError: $.ASN1Encoder<ProvideEimPackageResultResponse_provideEimPackageResultError> = $._encodeInteger;
 

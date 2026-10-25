@@ -49,7 +49,7 @@ type StoreStatus = _enum_for_StoreStatus | ENUMERATED;
  * @type {number}
  */
 export
-const StoreStatus_success = _enum_for_StoreStatus.success satisfies StoreStatus; /* LONG_NAMED_ENUMERATED_VALUE */
+const StoreStatus_success = _enum_for_StoreStatus.success; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary success
@@ -60,7 +60,7 @@ const StoreStatus_success = _enum_for_StoreStatus.success satisfies StoreStatus;
  * @type {number}
  */
 export
-const success = StoreStatus_success satisfies StoreStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
+const success = StoreStatus_success; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary StoreStatus_errorTransient
@@ -71,7 +71,7 @@ const success = StoreStatus_success satisfies StoreStatus; /* SHORT_NAMED_ENUMER
  * @type {number}
  */
 export
-const StoreStatus_errorTransient = _enum_for_StoreStatus.errorTransient satisfies StoreStatus; /* LONG_NAMED_ENUMERATED_VALUE */
+const StoreStatus_errorTransient = _enum_for_StoreStatus.errorTransient; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary errorTransient
@@ -82,7 +82,7 @@ const StoreStatus_errorTransient = _enum_for_StoreStatus.errorTransient satisfie
  * @type {number}
  */
 export
-const errorTransient = StoreStatus_errorTransient satisfies StoreStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
+const errorTransient = StoreStatus_errorTransient; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary StoreStatus_high
@@ -93,7 +93,7 @@ const errorTransient = StoreStatus_errorTransient satisfies StoreStatus; /* SHOR
  * @type {number}
  */
 export
-const StoreStatus_high = _enum_for_StoreStatus.high satisfies StoreStatus; /* LONG_NAMED_ENUMERATED_VALUE */
+const StoreStatus_high = _enum_for_StoreStatus.high; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary high
@@ -104,7 +104,7 @@ const StoreStatus_high = _enum_for_StoreStatus.high satisfies StoreStatus; /* LO
  * @type {number}
  */
 export
-const high = StoreStatus_high satisfies StoreStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
+const high = StoreStatus_high; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_StoreStatus: $.ASN1Decoder<StoreStatus> = $._decodeEnumerated;
 export const _encode_StoreStatus: $.ASN1Encoder<StoreStatus> = $._encodeEnumerated;
 

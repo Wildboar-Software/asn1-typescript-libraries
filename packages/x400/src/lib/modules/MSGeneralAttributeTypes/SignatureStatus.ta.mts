@@ -42,7 +42,7 @@ export const SignatureStatus_signature_absent = 0 satisfies SignatureStatus; /* 
  * @constant
  * @type {number}
  */
-export const signature_absent = SignatureStatus_signature_absent satisfies SignatureStatus; /* SHORT_NAMED_INTEGER_VALUE */
+export const signature_absent = SignatureStatus_signature_absent; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SignatureStatus_verification_in_progress
@@ -56,7 +56,7 @@ export const SignatureStatus_verification_in_progress = 1 satisfies SignatureSta
  * @constant
  * @type {number}
  */
-export const verification_in_progress = SignatureStatus_verification_in_progress satisfies SignatureStatus; /* SHORT_NAMED_INTEGER_VALUE */
+export const verification_in_progress = SignatureStatus_verification_in_progress; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SignatureStatus_verification_succeeded
@@ -70,7 +70,7 @@ export const SignatureStatus_verification_succeeded = 2 satisfies SignatureStatu
  * @constant
  * @type {number}
  */
-export const verification_succeeded = SignatureStatus_verification_succeeded satisfies SignatureStatus; /* SHORT_NAMED_INTEGER_VALUE */
+export const verification_succeeded = SignatureStatus_verification_succeeded; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SignatureStatus_verification_not_possible
@@ -84,7 +84,7 @@ export const SignatureStatus_verification_not_possible = 3 satisfies SignatureSt
  * @constant
  * @type {number}
  */
-export const verification_not_possible = SignatureStatus_verification_not_possible satisfies SignatureStatus; /* SHORT_NAMED_INTEGER_VALUE */
+export const verification_not_possible = SignatureStatus_verification_not_possible; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SignatureStatus_content_converted
@@ -98,7 +98,7 @@ export const SignatureStatus_content_converted = 4 satisfies SignatureStatus; /*
  * @constant
  * @type {number}
  */
-export const content_converted = SignatureStatus_content_converted satisfies SignatureStatus; /* SHORT_NAMED_INTEGER_VALUE */
+export const content_converted = SignatureStatus_content_converted; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SignatureStatus_signature_encrypted
@@ -112,7 +112,7 @@ export const SignatureStatus_signature_encrypted = 5 satisfies SignatureStatus; 
  * @constant
  * @type {number}
  */
-export const signature_encrypted = SignatureStatus_signature_encrypted satisfies SignatureStatus; /* SHORT_NAMED_INTEGER_VALUE */
+export const signature_encrypted = SignatureStatus_signature_encrypted; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SignatureStatus_algorithm_not_supported
@@ -126,7 +126,7 @@ export const SignatureStatus_algorithm_not_supported = 6 satisfies SignatureStat
  * @constant
  * @type {number}
  */
-export const algorithm_not_supported = SignatureStatus_algorithm_not_supported satisfies SignatureStatus; /* SHORT_NAMED_INTEGER_VALUE */
+export const algorithm_not_supported = SignatureStatus_algorithm_not_supported; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SignatureStatus_certificate_not_obtainable
@@ -140,7 +140,7 @@ export const SignatureStatus_certificate_not_obtainable = 7 satisfies SignatureS
  * @constant
  * @type {number}
  */
-export const certificate_not_obtainable = SignatureStatus_certificate_not_obtainable satisfies SignatureStatus; /* SHORT_NAMED_INTEGER_VALUE */
+export const certificate_not_obtainable = SignatureStatus_certificate_not_obtainable; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SignatureStatus_verification_failed
@@ -154,7 +154,7 @@ export const SignatureStatus_verification_failed = 8 satisfies SignatureStatus; 
  * @constant
  * @type {number}
  */
-export const verification_failed = SignatureStatus_verification_failed satisfies SignatureStatus; /* SHORT_NAMED_INTEGER_VALUE */
+export const verification_failed = SignatureStatus_verification_failed; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_SignatureStatus = $._decodeInteger;

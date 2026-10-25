@@ -73,7 +73,7 @@ const TLSCipherType = _enum_for_TLSCipherType;
  * @type {number}
  */
 export
-const TLSCipherType_stream = TLSCipherType.stream satisfies TLSCipherType; /* LONG_NAMED_ENUMERATED_VALUE */
+const TLSCipherType_stream = TLSCipherType.stream; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary stream
@@ -81,7 +81,7 @@ const TLSCipherType_stream = TLSCipherType.stream satisfies TLSCipherType; /* LO
  * @type {number}
  */
 export
-const stream = TLSCipherType.stream satisfies TLSCipherType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const stream = TLSCipherType.stream; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TLSCipherType_block
@@ -89,7 +89,7 @@ const stream = TLSCipherType.stream satisfies TLSCipherType; /* SHORT_NAMED_ENUM
  * @type {number}
  */
 export
-const TLSCipherType_block = TLSCipherType.block satisfies TLSCipherType; /* LONG_NAMED_ENUMERATED_VALUE */
+const TLSCipherType_block = TLSCipherType.block; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary block
@@ -97,7 +97,7 @@ const TLSCipherType_block = TLSCipherType.block satisfies TLSCipherType; /* LONG
  * @type {number}
  */
 export
-const block = TLSCipherType.block satisfies TLSCipherType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const block = TLSCipherType.block; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TLSCipherType_aead
@@ -105,7 +105,7 @@ const block = TLSCipherType.block satisfies TLSCipherType; /* SHORT_NAMED_ENUMER
  * @type {number}
  */
 export
-const TLSCipherType_aead = TLSCipherType.aead satisfies TLSCipherType; /* LONG_NAMED_ENUMERATED_VALUE */
+const TLSCipherType_aead = TLSCipherType.aead; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary aead
@@ -113,7 +113,7 @@ const TLSCipherType_aead = TLSCipherType.aead satisfies TLSCipherType; /* LONG_N
  * @type {number}
  */
 export
-const aead = TLSCipherType.aead satisfies TLSCipherType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const aead = TLSCipherType.aead; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_TLSCipherType: $.ASN1Decoder<TLSCipherType> = $._decodeEnumerated;
 export const _encode_TLSCipherType: $.ASN1Encoder<TLSCipherType> = $._encodeEnumerated;
 

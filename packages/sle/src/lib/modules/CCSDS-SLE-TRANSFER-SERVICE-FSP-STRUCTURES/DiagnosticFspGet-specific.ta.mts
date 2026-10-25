@@ -50,7 +50,7 @@ const DiagnosticFspGet_specific_unknownParameter = 0 satisfies DiagnosticFspGet_
  * @type {number}
  */
 export
-const unknownParameter = DiagnosticFspGet_specific_unknownParameter satisfies DiagnosticFspGet_specific; /* SHORT_NAMED_INTEGER_VALUE */
+const unknownParameter = DiagnosticFspGet_specific_unknownParameter; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_DiagnosticFspGet_specific: $.ASN1Decoder<DiagnosticFspGet_specific> = $._decodeInteger;
 export const _encode_DiagnosticFspGet_specific: $.ASN1Encoder<DiagnosticFspGet_specific> = $._encodeInteger;
 

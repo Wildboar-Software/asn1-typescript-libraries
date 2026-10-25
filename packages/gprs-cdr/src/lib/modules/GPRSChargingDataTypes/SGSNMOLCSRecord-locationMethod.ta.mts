@@ -50,7 +50,7 @@ type SGSNMOLCSRecord_locationMethod = _enum_for_SGSNMOLCSRecord_locationMethod |
  * @type {number}
  */
 export
-const SGSNMOLCSRecord_locationMethod_msBasedEOTD = _enum_for_SGSNMOLCSRecord_locationMethod.msBasedEOTD satisfies SGSNMOLCSRecord_locationMethod; /* LONG_NAMED_ENUMERATED_VALUE */
+const SGSNMOLCSRecord_locationMethod_msBasedEOTD = _enum_for_SGSNMOLCSRecord_locationMethod.msBasedEOTD; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary msBasedEOTD
@@ -58,7 +58,7 @@ const SGSNMOLCSRecord_locationMethod_msBasedEOTD = _enum_for_SGSNMOLCSRecord_loc
  * @type {number}
  */
 export
-const msBasedEOTD = SGSNMOLCSRecord_locationMethod_msBasedEOTD satisfies SGSNMOLCSRecord_locationMethod; /* SHORT_NAMED_ENUMERATED_VALUE */
+const msBasedEOTD = SGSNMOLCSRecord_locationMethod_msBasedEOTD; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SGSNMOLCSRecord_locationMethod_msAssistedEOTD
@@ -66,7 +66,7 @@ const msBasedEOTD = SGSNMOLCSRecord_locationMethod_msBasedEOTD satisfies SGSNMOL
  * @type {number}
  */
 export
-const SGSNMOLCSRecord_locationMethod_msAssistedEOTD = _enum_for_SGSNMOLCSRecord_locationMethod.msAssistedEOTD satisfies SGSNMOLCSRecord_locationMethod; /* LONG_NAMED_ENUMERATED_VALUE */
+const SGSNMOLCSRecord_locationMethod_msAssistedEOTD = _enum_for_SGSNMOLCSRecord_locationMethod.msAssistedEOTD; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary msAssistedEOTD
@@ -74,7 +74,7 @@ const SGSNMOLCSRecord_locationMethod_msAssistedEOTD = _enum_for_SGSNMOLCSRecord_
  * @type {number}
  */
 export
-const msAssistedEOTD = SGSNMOLCSRecord_locationMethod_msAssistedEOTD satisfies SGSNMOLCSRecord_locationMethod; /* SHORT_NAMED_ENUMERATED_VALUE */
+const msAssistedEOTD = SGSNMOLCSRecord_locationMethod_msAssistedEOTD; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SGSNMOLCSRecord_locationMethod_assistedGPS
@@ -82,7 +82,7 @@ const msAssistedEOTD = SGSNMOLCSRecord_locationMethod_msAssistedEOTD satisfies S
  * @type {number}
  */
 export
-const SGSNMOLCSRecord_locationMethod_assistedGPS = _enum_for_SGSNMOLCSRecord_locationMethod.assistedGPS satisfies SGSNMOLCSRecord_locationMethod; /* LONG_NAMED_ENUMERATED_VALUE */
+const SGSNMOLCSRecord_locationMethod_assistedGPS = _enum_for_SGSNMOLCSRecord_locationMethod.assistedGPS; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary assistedGPS
@@ -90,7 +90,7 @@ const SGSNMOLCSRecord_locationMethod_assistedGPS = _enum_for_SGSNMOLCSRecord_loc
  * @type {number}
  */
 export
-const assistedGPS = SGSNMOLCSRecord_locationMethod_assistedGPS satisfies SGSNMOLCSRecord_locationMethod; /* SHORT_NAMED_ENUMERATED_VALUE */
+const assistedGPS = SGSNMOLCSRecord_locationMethod_assistedGPS; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SGSNMOLCSRecord_locationMethod_msBasedOTDOA
@@ -98,7 +98,7 @@ const assistedGPS = SGSNMOLCSRecord_locationMethod_assistedGPS satisfies SGSNMOL
  * @type {number}
  */
 export
-const SGSNMOLCSRecord_locationMethod_msBasedOTDOA = _enum_for_SGSNMOLCSRecord_locationMethod.msBasedOTDOA satisfies SGSNMOLCSRecord_locationMethod; /* LONG_NAMED_ENUMERATED_VALUE */
+const SGSNMOLCSRecord_locationMethod_msBasedOTDOA = _enum_for_SGSNMOLCSRecord_locationMethod.msBasedOTDOA; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary msBasedOTDOA
@@ -106,7 +106,7 @@ const SGSNMOLCSRecord_locationMethod_msBasedOTDOA = _enum_for_SGSNMOLCSRecord_lo
  * @type {number}
  */
 export
-const msBasedOTDOA = SGSNMOLCSRecord_locationMethod_msBasedOTDOA satisfies SGSNMOLCSRecord_locationMethod; /* SHORT_NAMED_ENUMERATED_VALUE */
+const msBasedOTDOA = SGSNMOLCSRecord_locationMethod_msBasedOTDOA; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SGSNMOLCSRecord_locationMethod_assistedGANSS
@@ -114,7 +114,7 @@ const msBasedOTDOA = SGSNMOLCSRecord_locationMethod_msBasedOTDOA satisfies SGSNM
  * @type {number}
  */
 export
-const SGSNMOLCSRecord_locationMethod_assistedGANSS = _enum_for_SGSNMOLCSRecord_locationMethod.assistedGANSS satisfies SGSNMOLCSRecord_locationMethod; /* LONG_NAMED_ENUMERATED_VALUE */
+const SGSNMOLCSRecord_locationMethod_assistedGANSS = _enum_for_SGSNMOLCSRecord_locationMethod.assistedGANSS; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary assistedGANSS
@@ -122,7 +122,7 @@ const SGSNMOLCSRecord_locationMethod_assistedGANSS = _enum_for_SGSNMOLCSRecord_l
  * @type {number}
  */
 export
-const assistedGANSS = SGSNMOLCSRecord_locationMethod_assistedGANSS satisfies SGSNMOLCSRecord_locationMethod; /* SHORT_NAMED_ENUMERATED_VALUE */
+const assistedGANSS = SGSNMOLCSRecord_locationMethod_assistedGANSS; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SGSNMOLCSRecord_locationMethod_assistedGPSandGANSS
@@ -130,7 +130,7 @@ const assistedGANSS = SGSNMOLCSRecord_locationMethod_assistedGANSS satisfies SGS
  * @type {number}
  */
 export
-const SGSNMOLCSRecord_locationMethod_assistedGPSandGANSS = _enum_for_SGSNMOLCSRecord_locationMethod.assistedGPSandGANSS satisfies SGSNMOLCSRecord_locationMethod; /* LONG_NAMED_ENUMERATED_VALUE */
+const SGSNMOLCSRecord_locationMethod_assistedGPSandGANSS = _enum_for_SGSNMOLCSRecord_locationMethod.assistedGPSandGANSS; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary assistedGPSandGANSS
@@ -138,7 +138,7 @@ const SGSNMOLCSRecord_locationMethod_assistedGPSandGANSS = _enum_for_SGSNMOLCSRe
  * @type {number}
  */
 export
-const assistedGPSandGANSS = SGSNMOLCSRecord_locationMethod_assistedGPSandGANSS satisfies SGSNMOLCSRecord_locationMethod; /* SHORT_NAMED_ENUMERATED_VALUE */
+const assistedGPSandGANSS = SGSNMOLCSRecord_locationMethod_assistedGPSandGANSS; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_SGSNMOLCSRecord_locationMethod: $.ASN1Decoder<SGSNMOLCSRecord_locationMethod> = $._decodeEnumerated;

@@ -40,7 +40,7 @@ const RANSecondaryRATUsageReport_secondaryRATType_nR = 0 satisfies RANSecondaryR
  * @type {number}
  */
 export
-const nR = RANSecondaryRATUsageReport_secondaryRATType_nR satisfies RANSecondaryRATUsageReport_secondaryRATType; /* SHORT_NAMED_INTEGER_VALUE */
+const nR = RANSecondaryRATUsageReport_secondaryRATType_nR; /* SHORT_NAMED_INTEGER_VALUE */
 
 export
 const _decode_RANSecondaryRATUsageReport_secondaryRATType: $.ASN1Decoder<RANSecondaryRATUsageReport_secondaryRATType> = $._decodeInteger;

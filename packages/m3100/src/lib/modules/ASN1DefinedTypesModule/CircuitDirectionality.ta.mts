@@ -67,7 +67,7 @@ export const CircuitDirectionality = _enum_for_CircuitDirectionality;
  * @type {number}
  */
 export const CircuitDirectionality_onewayOut =
-    CircuitDirectionality.onewayOut satisfies CircuitDirectionality; /* LONG_NAMED_ENUMERATED_VALUE */
+    CircuitDirectionality.onewayOut; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -76,7 +76,7 @@ export const CircuitDirectionality_onewayOut =
  * @type {number}
  */
 export const onewayOut =
-    CircuitDirectionality.onewayOut satisfies CircuitDirectionality; /* SHORT_NAMED_ENUMERATED_VALUE */
+    CircuitDirectionality.onewayOut; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -85,7 +85,7 @@ export const onewayOut =
  * @type {number}
  */
 export const CircuitDirectionality_onewayIn =
-    CircuitDirectionality.onewayIn satisfies CircuitDirectionality; /* LONG_NAMED_ENUMERATED_VALUE */
+    CircuitDirectionality.onewayIn; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -94,7 +94,7 @@ export const CircuitDirectionality_onewayIn =
  * @type {number}
  */
 export const onewayIn =
-    CircuitDirectionality.onewayIn satisfies CircuitDirectionality; /* SHORT_NAMED_ENUMERATED_VALUE */
+    CircuitDirectionality.onewayIn; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -103,7 +103,7 @@ export const onewayIn =
  * @type {number}
  */
 export const CircuitDirectionality_twoway =
-    CircuitDirectionality.twoway satisfies CircuitDirectionality; /* LONG_NAMED_ENUMERATED_VALUE */
+    CircuitDirectionality.twoway; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -112,7 +112,7 @@ export const CircuitDirectionality_twoway =
  * @type {number}
  */
 export const twoway =
-    CircuitDirectionality.twoway satisfies CircuitDirectionality; /* SHORT_NAMED_ENUMERATED_VALUE */
+    CircuitDirectionality.twoway; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 

@@ -62,7 +62,7 @@ export const BasicServiceIndicator = _enum_for_BasicServiceIndicator;
  * @type {number}
  */
 export const BasicServiceIndicator_speech =
-    BasicServiceIndicator.speech satisfies BasicServiceIndicator; /* LONG_NAMED_ENUMERATED_VALUE */
+    BasicServiceIndicator.speech; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary speech
@@ -70,7 +70,7 @@ export const BasicServiceIndicator_speech =
  * @type {number}
  */
 export const speech =
-    BasicServiceIndicator.speech satisfies BasicServiceIndicator; /* SHORT_NAMED_ENUMERATED_VALUE */
+    BasicServiceIndicator.speech; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary BasicServiceIndicator_unrestrictedDigital
@@ -78,7 +78,7 @@ export const speech =
  * @type {number}
  */
 export const BasicServiceIndicator_unrestrictedDigital =
-    BasicServiceIndicator.unrestrictedDigital satisfies BasicServiceIndicator; /* LONG_NAMED_ENUMERATED_VALUE */
+    BasicServiceIndicator.unrestrictedDigital; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unrestrictedDigital
@@ -86,7 +86,7 @@ export const BasicServiceIndicator_unrestrictedDigital =
  * @type {number}
  */
 export const unrestrictedDigital =
-    BasicServiceIndicator.unrestrictedDigital satisfies BasicServiceIndicator; /* SHORT_NAMED_ENUMERATED_VALUE */
+    BasicServiceIndicator.unrestrictedDigital; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 export const _decode_BasicServiceIndicator = $._decodeEnumerated;

@@ -55,7 +55,7 @@ const StandbyStatus_hotStandby = 0 satisfies StandbyStatus; /* LONG_NAMED_INTEGE
  * @type {number}
  */
 export
-const hotStandby = StandbyStatus_hotStandby satisfies StandbyStatus; /* SHORT_NAMED_INTEGER_VALUE */
+const hotStandby = StandbyStatus_hotStandby; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary StandbyStatus_coldStandby
@@ -81,7 +81,7 @@ const StandbyStatus_coldStandby = 1 satisfies StandbyStatus; /* LONG_NAMED_INTEG
  * @type {number}
  */
 export
-const coldStandby = StandbyStatus_coldStandby satisfies StandbyStatus; /* SHORT_NAMED_INTEGER_VALUE */
+const coldStandby = StandbyStatus_coldStandby; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary StandbyStatus_providingService
@@ -107,7 +107,7 @@ const StandbyStatus_providingService = 2 satisfies StandbyStatus; /* LONG_NAMED_
  * @type {number}
  */
 export
-const providingService = StandbyStatus_providingService satisfies StandbyStatus; /* SHORT_NAMED_INTEGER_VALUE */
+const providingService = StandbyStatus_providingService; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_StandbyStatus = $._decodeInteger;

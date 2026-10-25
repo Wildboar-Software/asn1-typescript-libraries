@@ -294,7 +294,7 @@ const BasicService = _enum_for_BasicService;
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-241/
  */
 export
-const BasicService_allServices = BasicService.allServices satisfies BasicService; /* LONG_NAMED_ENUMERATED_VALUE */
+const BasicService_allServices = BasicService.allServices; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary allServices
@@ -303,7 +303,7 @@ const BasicService_allServices = BasicService.allServices satisfies BasicService
  * @type {number}
  */
 export
-const allServices = BasicService.allServices satisfies BasicService; /* SHORT_NAMED_ENUMERATED_VALUE */
+const allServices = BasicService.allServices; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary BasicService_speech
@@ -318,7 +318,7 @@ const allServices = BasicService.allServices satisfies BasicService; /* SHORT_NA
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-241/
  */
 export
-const BasicService_speech = BasicService.speech satisfies BasicService; /* LONG_NAMED_ENUMERATED_VALUE */
+const BasicService_speech = BasicService.speech; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary speech
@@ -327,7 +327,7 @@ const BasicService_speech = BasicService.speech satisfies BasicService; /* LONG_
  * @type {number}
  */
 export
-const speech = BasicService.speech satisfies BasicService; /* SHORT_NAMED_ENUMERATED_VALUE */
+const speech = BasicService.speech; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary BasicService_unrestrictedDigitalInformation
@@ -343,7 +343,7 @@ const speech = BasicService.speech satisfies BasicService; /* SHORT_NAMED_ENUMER
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-241/
  */
 export
-const BasicService_unrestrictedDigitalInformation = BasicService.unrestrictedDigitalInformation satisfies BasicService; /* LONG_NAMED_ENUMERATED_VALUE */
+const BasicService_unrestrictedDigitalInformation = BasicService.unrestrictedDigitalInformation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unrestrictedDigitalInformation
@@ -352,7 +352,7 @@ const BasicService_unrestrictedDigitalInformation = BasicService.unrestrictedDig
  * @type {number}
  */
 export
-const unrestrictedDigitalInformation = BasicService.unrestrictedDigitalInformation satisfies BasicService; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unrestrictedDigitalInformation = BasicService.unrestrictedDigitalInformation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary BasicService_audio3100Hz
@@ -368,7 +368,7 @@ const unrestrictedDigitalInformation = BasicService.unrestrictedDigitalInformati
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-241/
  */
 export
-const BasicService_audio3100Hz = BasicService.audio3100Hz satisfies BasicService; /* LONG_NAMED_ENUMERATED_VALUE */
+const BasicService_audio3100Hz = BasicService.audio3100Hz; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary audio3100Hz
@@ -377,7 +377,7 @@ const BasicService_audio3100Hz = BasicService.audio3100Hz satisfies BasicService
  * @type {number}
  */
 export
-const audio3100Hz = BasicService.audio3100Hz satisfies BasicService; /* SHORT_NAMED_ENUMERATED_VALUE */
+const audio3100Hz = BasicService.audio3100Hz; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary BasicService_telephony
@@ -393,7 +393,7 @@ const audio3100Hz = BasicService.audio3100Hz satisfies BasicService; /* SHORT_NA
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-241/
  */
 export
-const BasicService_telephony = BasicService.telephony satisfies BasicService; /* LONG_NAMED_ENUMERATED_VALUE */
+const BasicService_telephony = BasicService.telephony; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary telephony
@@ -402,7 +402,7 @@ const BasicService_telephony = BasicService.telephony satisfies BasicService; /*
  * @type {number}
  */
 export
-const telephony = BasicService.telephony satisfies BasicService; /* SHORT_NAMED_ENUMERATED_VALUE */
+const telephony = BasicService.telephony; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary BasicService_teletex
@@ -418,7 +418,7 @@ const telephony = BasicService.telephony satisfies BasicService; /* SHORT_NAMED_
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-241/
  */
 export
-const BasicService_teletex = BasicService.teletex satisfies BasicService; /* LONG_NAMED_ENUMERATED_VALUE */
+const BasicService_teletex = BasicService.teletex; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary teletex
@@ -427,7 +427,7 @@ const BasicService_teletex = BasicService.teletex satisfies BasicService; /* LON
  * @type {number}
  */
 export
-const teletex = BasicService.teletex satisfies BasicService; /* SHORT_NAMED_ENUMERATED_VALUE */
+const teletex = BasicService.teletex; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary BasicService_telefaxGroup4Class1
@@ -443,7 +443,7 @@ const teletex = BasicService.teletex satisfies BasicService; /* SHORT_NAMED_ENUM
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-241/
  */
 export
-const BasicService_telefaxGroup4Class1 = BasicService.telefaxGroup4Class1 satisfies BasicService; /* LONG_NAMED_ENUMERATED_VALUE */
+const BasicService_telefaxGroup4Class1 = BasicService.telefaxGroup4Class1; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary telefaxGroup4Class1
@@ -452,7 +452,7 @@ const BasicService_telefaxGroup4Class1 = BasicService.telefaxGroup4Class1 satisf
  * @type {number}
  */
 export
-const telefaxGroup4Class1 = BasicService.telefaxGroup4Class1 satisfies BasicService; /* SHORT_NAMED_ENUMERATED_VALUE */
+const telefaxGroup4Class1 = BasicService.telefaxGroup4Class1; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary BasicService_videotextSyntaxBased
@@ -468,7 +468,7 @@ const telefaxGroup4Class1 = BasicService.telefaxGroup4Class1 satisfies BasicServ
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-241/
  */
 export
-const BasicService_videotextSyntaxBased = BasicService.videotextSyntaxBased satisfies BasicService; /* LONG_NAMED_ENUMERATED_VALUE */
+const BasicService_videotextSyntaxBased = BasicService.videotextSyntaxBased; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary videotextSyntaxBased
@@ -477,7 +477,7 @@ const BasicService_videotextSyntaxBased = BasicService.videotextSyntaxBased sati
  * @type {number}
  */
 export
-const videotextSyntaxBased = BasicService.videotextSyntaxBased satisfies BasicService; /* SHORT_NAMED_ENUMERATED_VALUE */
+const videotextSyntaxBased = BasicService.videotextSyntaxBased; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary BasicService_videotelephony
@@ -493,7 +493,7 @@ const videotextSyntaxBased = BasicService.videotextSyntaxBased satisfies BasicSe
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-241/
  */
 export
-const BasicService_videotelephony = BasicService.videotelephony satisfies BasicService; /* LONG_NAMED_ENUMERATED_VALUE */
+const BasicService_videotelephony = BasicService.videotelephony; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary videotelephony
@@ -502,7 +502,7 @@ const BasicService_videotelephony = BasicService.videotelephony satisfies BasicS
  * @type {number}
  */
 export
-const videotelephony = BasicService.videotelephony satisfies BasicService; /* SHORT_NAMED_ENUMERATED_VALUE */
+const videotelephony = BasicService.videotelephony; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary BasicService_telefaxGroup2_3
@@ -517,7 +517,7 @@ const videotelephony = BasicService.videotelephony satisfies BasicService; /* SH
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-241/
  */
 export
-const BasicService_telefaxGroup2_3 = BasicService.telefaxGroup2_3 satisfies BasicService; /* LONG_NAMED_ENUMERATED_VALUE */
+const BasicService_telefaxGroup2_3 = BasicService.telefaxGroup2_3; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary telefaxGroup2_3
@@ -526,7 +526,7 @@ const BasicService_telefaxGroup2_3 = BasicService.telefaxGroup2_3 satisfies Basi
  * @type {number}
  */
 export
-const telefaxGroup2_3 = BasicService.telefaxGroup2_3 satisfies BasicService; /* SHORT_NAMED_ENUMERATED_VALUE */
+const telefaxGroup2_3 = BasicService.telefaxGroup2_3; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary BasicService_reservedNotUsed1
@@ -537,7 +537,7 @@ const telefaxGroup2_3 = BasicService.telefaxGroup2_3 satisfies BasicService; /* 
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-241/
  */
 export
-const BasicService_reservedNotUsed1 = BasicService.reservedNotUsed1 satisfies BasicService; /* LONG_NAMED_ENUMERATED_VALUE */
+const BasicService_reservedNotUsed1 = BasicService.reservedNotUsed1; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary reservedNotUsed1
@@ -546,7 +546,7 @@ const BasicService_reservedNotUsed1 = BasicService.reservedNotUsed1 satisfies Ba
  * @type {number}
  */
 export
-const reservedNotUsed1 = BasicService.reservedNotUsed1 satisfies BasicService; /* SHORT_NAMED_ENUMERATED_VALUE */
+const reservedNotUsed1 = BasicService.reservedNotUsed1; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary BasicService_reservedNotUsed2
@@ -557,7 +557,7 @@ const reservedNotUsed1 = BasicService.reservedNotUsed1 satisfies BasicService; /
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-241/
  */
 export
-const BasicService_reservedNotUsed2 = BasicService.reservedNotUsed2 satisfies BasicService; /* LONG_NAMED_ENUMERATED_VALUE */
+const BasicService_reservedNotUsed2 = BasicService.reservedNotUsed2; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary reservedNotUsed2
@@ -566,7 +566,7 @@ const BasicService_reservedNotUsed2 = BasicService.reservedNotUsed2 satisfies Ba
  * @type {number}
  */
 export
-const reservedNotUsed2 = BasicService.reservedNotUsed2 satisfies BasicService; /* SHORT_NAMED_ENUMERATED_VALUE */
+const reservedNotUsed2 = BasicService.reservedNotUsed2; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary BasicService_reservedNotUsed3
@@ -577,7 +577,7 @@ const reservedNotUsed2 = BasicService.reservedNotUsed2 satisfies BasicService; /
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-241/
  */
 export
-const BasicService_reservedNotUsed3 = BasicService.reservedNotUsed3 satisfies BasicService; /* LONG_NAMED_ENUMERATED_VALUE */
+const BasicService_reservedNotUsed3 = BasicService.reservedNotUsed3; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary reservedNotUsed3
@@ -586,7 +586,7 @@ const BasicService_reservedNotUsed3 = BasicService.reservedNotUsed3 satisfies Ba
  * @type {number}
  */
 export
-const reservedNotUsed3 = BasicService.reservedNotUsed3 satisfies BasicService; /* SHORT_NAMED_ENUMERATED_VALUE */
+const reservedNotUsed3 = BasicService.reservedNotUsed3; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary BasicService_reservedNotUsed4
@@ -597,7 +597,7 @@ const reservedNotUsed3 = BasicService.reservedNotUsed3 satisfies BasicService; /
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-241/
  */
 export
-const BasicService_reservedNotUsed4 = BasicService.reservedNotUsed4 satisfies BasicService; /* LONG_NAMED_ENUMERATED_VALUE */
+const BasicService_reservedNotUsed4 = BasicService.reservedNotUsed4; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary reservedNotUsed4
@@ -606,7 +606,7 @@ const BasicService_reservedNotUsed4 = BasicService.reservedNotUsed4 satisfies Ba
  * @type {number}
  */
 export
-const reservedNotUsed4 = BasicService.reservedNotUsed4 satisfies BasicService; /* SHORT_NAMED_ENUMERATED_VALUE */
+const reservedNotUsed4 = BasicService.reservedNotUsed4; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary BasicService_reservedNotUsed5
@@ -617,7 +617,7 @@ const reservedNotUsed4 = BasicService.reservedNotUsed4 satisfies BasicService; /
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-241/
  */
 export
-const BasicService_reservedNotUsed5 = BasicService.reservedNotUsed5 satisfies BasicService; /* LONG_NAMED_ENUMERATED_VALUE */
+const BasicService_reservedNotUsed5 = BasicService.reservedNotUsed5; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary reservedNotUsed5
@@ -626,7 +626,7 @@ const BasicService_reservedNotUsed5 = BasicService.reservedNotUsed5 satisfies Ba
  * @type {number}
  */
 export
-const reservedNotUsed5 = BasicService.reservedNotUsed5 satisfies BasicService; /* SHORT_NAMED_ENUMERATED_VALUE */
+const reservedNotUsed5 = BasicService.reservedNotUsed5; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary BasicService_email
@@ -641,7 +641,7 @@ const reservedNotUsed5 = BasicService.reservedNotUsed5 satisfies BasicService; /
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-241/
  */
 export
-const BasicService_email = BasicService.email satisfies BasicService; /* LONG_NAMED_ENUMERATED_VALUE */
+const BasicService_email = BasicService.email; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary email
@@ -650,7 +650,7 @@ const BasicService_email = BasicService.email satisfies BasicService; /* LONG_NA
  * @type {number}
  */
 export
-const email = BasicService.email satisfies BasicService; /* SHORT_NAMED_ENUMERATED_VALUE */
+const email = BasicService.email; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary BasicService_video
@@ -665,7 +665,7 @@ const email = BasicService.email satisfies BasicService; /* SHORT_NAMED_ENUMERAT
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-241/
  */
 export
-const BasicService_video = BasicService.video satisfies BasicService; /* LONG_NAMED_ENUMERATED_VALUE */
+const BasicService_video = BasicService.video; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary video
@@ -674,7 +674,7 @@ const BasicService_video = BasicService.video satisfies BasicService; /* LONG_NA
  * @type {number}
  */
 export
-const video = BasicService.video satisfies BasicService; /* SHORT_NAMED_ENUMERATED_VALUE */
+const video = BasicService.video; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary BasicService_fileTransfer
@@ -689,7 +689,7 @@ const video = BasicService.video satisfies BasicService; /* SHORT_NAMED_ENUMERAT
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-241/
  */
 export
-const BasicService_fileTransfer = BasicService.fileTransfer satisfies BasicService; /* LONG_NAMED_ENUMERATED_VALUE */
+const BasicService_fileTransfer = BasicService.fileTransfer; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary fileTransfer
@@ -698,7 +698,7 @@ const BasicService_fileTransfer = BasicService.fileTransfer satisfies BasicServi
  * @type {number}
  */
 export
-const fileTransfer = BasicService.fileTransfer satisfies BasicService; /* SHORT_NAMED_ENUMERATED_VALUE */
+const fileTransfer = BasicService.fileTransfer; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary BasicService_shortMessageService
@@ -713,7 +713,7 @@ const fileTransfer = BasicService.fileTransfer satisfies BasicService; /* SHORT_
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-241/
  */
 export
-const BasicService_shortMessageService = BasicService.shortMessageService satisfies BasicService; /* LONG_NAMED_ENUMERATED_VALUE */
+const BasicService_shortMessageService = BasicService.shortMessageService; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary shortMessageService
@@ -722,7 +722,7 @@ const BasicService_shortMessageService = BasicService.shortMessageService satisf
  * @type {number}
  */
 export
-const shortMessageService = BasicService.shortMessageService satisfies BasicService; /* SHORT_NAMED_ENUMERATED_VALUE */
+const shortMessageService = BasicService.shortMessageService; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary BasicService_speechAndVideo
@@ -737,7 +737,7 @@ const shortMessageService = BasicService.shortMessageService satisfies BasicServ
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-241/
  */
 export
-const BasicService_speechAndVideo = BasicService.speechAndVideo satisfies BasicService; /* LONG_NAMED_ENUMERATED_VALUE */
+const BasicService_speechAndVideo = BasicService.speechAndVideo; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary speechAndVideo
@@ -746,7 +746,7 @@ const BasicService_speechAndVideo = BasicService.speechAndVideo satisfies BasicS
  * @type {number}
  */
 export
-const speechAndVideo = BasicService.speechAndVideo satisfies BasicService; /* SHORT_NAMED_ENUMERATED_VALUE */
+const speechAndVideo = BasicService.speechAndVideo; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary BasicService_speechAndFax
@@ -761,7 +761,7 @@ const speechAndVideo = BasicService.speechAndVideo satisfies BasicService; /* SH
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-241/
  */
 export
-const BasicService_speechAndFax = BasicService.speechAndFax satisfies BasicService; /* LONG_NAMED_ENUMERATED_VALUE */
+const BasicService_speechAndFax = BasicService.speechAndFax; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary speechAndFax
@@ -770,7 +770,7 @@ const BasicService_speechAndFax = BasicService.speechAndFax satisfies BasicServi
  * @type {number}
  */
 export
-const speechAndFax = BasicService.speechAndFax satisfies BasicService; /* SHORT_NAMED_ENUMERATED_VALUE */
+const speechAndFax = BasicService.speechAndFax; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary BasicService_speechAndEmail
@@ -785,7 +785,7 @@ const speechAndFax = BasicService.speechAndFax satisfies BasicService; /* SHORT_
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-241/
  */
 export
-const BasicService_speechAndEmail = BasicService.speechAndEmail satisfies BasicService; /* LONG_NAMED_ENUMERATED_VALUE */
+const BasicService_speechAndEmail = BasicService.speechAndEmail; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary speechAndEmail
@@ -794,7 +794,7 @@ const BasicService_speechAndEmail = BasicService.speechAndEmail satisfies BasicS
  * @type {number}
  */
 export
-const speechAndEmail = BasicService.speechAndEmail satisfies BasicService; /* SHORT_NAMED_ENUMERATED_VALUE */
+const speechAndEmail = BasicService.speechAndEmail; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary BasicService_videoAndFax
@@ -809,7 +809,7 @@ const speechAndEmail = BasicService.speechAndEmail satisfies BasicService; /* SH
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-241/
  */
 export
-const BasicService_videoAndFax = BasicService.videoAndFax satisfies BasicService; /* LONG_NAMED_ENUMERATED_VALUE */
+const BasicService_videoAndFax = BasicService.videoAndFax; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary videoAndFax
@@ -818,7 +818,7 @@ const BasicService_videoAndFax = BasicService.videoAndFax satisfies BasicService
  * @type {number}
  */
 export
-const videoAndFax = BasicService.videoAndFax satisfies BasicService; /* SHORT_NAMED_ENUMERATED_VALUE */
+const videoAndFax = BasicService.videoAndFax; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary BasicService_videoAndEmail
@@ -833,7 +833,7 @@ const videoAndFax = BasicService.videoAndFax satisfies BasicService; /* SHORT_NA
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-241/
  */
 export
-const BasicService_videoAndEmail = BasicService.videoAndEmail satisfies BasicService; /* LONG_NAMED_ENUMERATED_VALUE */
+const BasicService_videoAndEmail = BasicService.videoAndEmail; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary videoAndEmail
@@ -842,7 +842,7 @@ const BasicService_videoAndEmail = BasicService.videoAndEmail satisfies BasicSer
  * @type {number}
  */
 export
-const videoAndEmail = BasicService.videoAndEmail satisfies BasicService; /* SHORT_NAMED_ENUMERATED_VALUE */
+const videoAndEmail = BasicService.videoAndEmail; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary BasicService_faxAndEmail
@@ -857,7 +857,7 @@ const videoAndEmail = BasicService.videoAndEmail satisfies BasicService; /* SHOR
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-241/
  */
 export
-const BasicService_faxAndEmail = BasicService.faxAndEmail satisfies BasicService; /* LONG_NAMED_ENUMERATED_VALUE */
+const BasicService_faxAndEmail = BasicService.faxAndEmail; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary faxAndEmail
@@ -866,7 +866,7 @@ const BasicService_faxAndEmail = BasicService.faxAndEmail satisfies BasicService
  * @type {number}
  */
 export
-const faxAndEmail = BasicService.faxAndEmail satisfies BasicService; /* SHORT_NAMED_ENUMERATED_VALUE */
+const faxAndEmail = BasicService.faxAndEmail; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary BasicService_speechVideoAndFax
@@ -881,7 +881,7 @@ const faxAndEmail = BasicService.faxAndEmail satisfies BasicService; /* SHORT_NA
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-241/
  */
 export
-const BasicService_speechVideoAndFax = BasicService.speechVideoAndFax satisfies BasicService; /* LONG_NAMED_ENUMERATED_VALUE */
+const BasicService_speechVideoAndFax = BasicService.speechVideoAndFax; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary speechVideoAndFax
@@ -890,7 +890,7 @@ const BasicService_speechVideoAndFax = BasicService.speechVideoAndFax satisfies 
  * @type {number}
  */
 export
-const speechVideoAndFax = BasicService.speechVideoAndFax satisfies BasicService; /* SHORT_NAMED_ENUMERATED_VALUE */
+const speechVideoAndFax = BasicService.speechVideoAndFax; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary BasicService_speechVideoAndEmail
@@ -905,7 +905,7 @@ const speechVideoAndFax = BasicService.speechVideoAndFax satisfies BasicService;
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-241/
  */
 export
-const BasicService_speechVideoAndEmail = BasicService.speechVideoAndEmail satisfies BasicService; /* LONG_NAMED_ENUMERATED_VALUE */
+const BasicService_speechVideoAndEmail = BasicService.speechVideoAndEmail; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary speechVideoAndEmail
@@ -914,7 +914,7 @@ const BasicService_speechVideoAndEmail = BasicService.speechVideoAndEmail satisf
  * @type {number}
  */
 export
-const speechVideoAndEmail = BasicService.speechVideoAndEmail satisfies BasicService; /* SHORT_NAMED_ENUMERATED_VALUE */
+const speechVideoAndEmail = BasicService.speechVideoAndEmail; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary BasicService_speechFaxAndEmail
@@ -929,7 +929,7 @@ const speechVideoAndEmail = BasicService.speechVideoAndEmail satisfies BasicServ
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-241/
  */
 export
-const BasicService_speechFaxAndEmail = BasicService.speechFaxAndEmail satisfies BasicService; /* LONG_NAMED_ENUMERATED_VALUE */
+const BasicService_speechFaxAndEmail = BasicService.speechFaxAndEmail; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary speechFaxAndEmail
@@ -938,7 +938,7 @@ const BasicService_speechFaxAndEmail = BasicService.speechFaxAndEmail satisfies 
  * @type {number}
  */
 export
-const speechFaxAndEmail = BasicService.speechFaxAndEmail satisfies BasicService; /* SHORT_NAMED_ENUMERATED_VALUE */
+const speechFaxAndEmail = BasicService.speechFaxAndEmail; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary BasicService_videoFaxAndEmail
@@ -953,7 +953,7 @@ const speechFaxAndEmail = BasicService.speechFaxAndEmail satisfies BasicService;
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-241/
  */
 export
-const BasicService_videoFaxAndEmail = BasicService.videoFaxAndEmail satisfies BasicService; /* LONG_NAMED_ENUMERATED_VALUE */
+const BasicService_videoFaxAndEmail = BasicService.videoFaxAndEmail; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary videoFaxAndEmail
@@ -962,7 +962,7 @@ const BasicService_videoFaxAndEmail = BasicService.videoFaxAndEmail satisfies Ba
  * @type {number}
  */
 export
-const videoFaxAndEmail = BasicService.videoFaxAndEmail satisfies BasicService; /* SHORT_NAMED_ENUMERATED_VALUE */
+const videoFaxAndEmail = BasicService.videoFaxAndEmail; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary BasicService_speechVideoFaxAndEmail
@@ -977,7 +977,7 @@ const videoFaxAndEmail = BasicService.videoFaxAndEmail satisfies BasicService; /
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-241/
  */
 export
-const BasicService_speechVideoFaxAndEmail = BasicService.speechVideoFaxAndEmail satisfies BasicService; /* LONG_NAMED_ENUMERATED_VALUE */
+const BasicService_speechVideoFaxAndEmail = BasicService.speechVideoFaxAndEmail; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary speechVideoFaxAndEmail
@@ -986,7 +986,7 @@ const BasicService_speechVideoFaxAndEmail = BasicService.speechVideoFaxAndEmail 
  * @type {number}
  */
 export
-const speechVideoFaxAndEmail = BasicService.speechVideoFaxAndEmail satisfies BasicService; /* SHORT_NAMED_ENUMERATED_VALUE */
+const speechVideoFaxAndEmail = BasicService.speechVideoFaxAndEmail; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary BasicService_multimediaUnknown
@@ -997,7 +997,7 @@ const speechVideoFaxAndEmail = BasicService.speechVideoFaxAndEmail satisfies Bas
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-241/
  */
 export
-const BasicService_multimediaUnknown = BasicService.multimediaUnknown satisfies BasicService; /* LONG_NAMED_ENUMERATED_VALUE */
+const BasicService_multimediaUnknown = BasicService.multimediaUnknown; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary multimediaUnknown
@@ -1006,7 +1006,7 @@ const BasicService_multimediaUnknown = BasicService.multimediaUnknown satisfies 
  * @type {number}
  */
 export
-const multimediaUnknown = BasicService.multimediaUnknown satisfies BasicService; /* SHORT_NAMED_ENUMERATED_VALUE */
+const multimediaUnknown = BasicService.multimediaUnknown; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary BasicService_serviceUnknown
@@ -1017,7 +1017,7 @@ const multimediaUnknown = BasicService.multimediaUnknown satisfies BasicService;
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-241/
  */
 export
-const BasicService_serviceUnknown = BasicService.serviceUnknown satisfies BasicService; /* LONG_NAMED_ENUMERATED_VALUE */
+const BasicService_serviceUnknown = BasicService.serviceUnknown; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary serviceUnknown
@@ -1026,7 +1026,7 @@ const BasicService_serviceUnknown = BasicService.serviceUnknown satisfies BasicS
  * @type {number}
  */
 export
-const serviceUnknown = BasicService.serviceUnknown satisfies BasicService; /* SHORT_NAMED_ENUMERATED_VALUE */
+const serviceUnknown = BasicService.serviceUnknown; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary BasicService_futureReserve1
@@ -1040,7 +1040,7 @@ const serviceUnknown = BasicService.serviceUnknown satisfies BasicService; /* SH
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-241/
  */
 export
-const BasicService_futureReserve1 = BasicService.futureReserve1 satisfies BasicService; /* LONG_NAMED_ENUMERATED_VALUE */
+const BasicService_futureReserve1 = BasicService.futureReserve1; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary futureReserve1
@@ -1049,7 +1049,7 @@ const BasicService_futureReserve1 = BasicService.futureReserve1 satisfies BasicS
  * @type {number}
  */
 export
-const futureReserve1 = BasicService.futureReserve1 satisfies BasicService; /* SHORT_NAMED_ENUMERATED_VALUE */
+const futureReserve1 = BasicService.futureReserve1; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary BasicService_futureReserve2
@@ -1063,7 +1063,7 @@ const futureReserve1 = BasicService.futureReserve1 satisfies BasicService; /* SH
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-241/
  */
 export
-const BasicService_futureReserve2 = BasicService.futureReserve2 satisfies BasicService; /* LONG_NAMED_ENUMERATED_VALUE */
+const BasicService_futureReserve2 = BasicService.futureReserve2; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary futureReserve2
@@ -1072,7 +1072,7 @@ const BasicService_futureReserve2 = BasicService.futureReserve2 satisfies BasicS
  * @type {number}
  */
 export
-const futureReserve2 = BasicService.futureReserve2 satisfies BasicService; /* SHORT_NAMED_ENUMERATED_VALUE */
+const futureReserve2 = BasicService.futureReserve2; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary BasicService_futureReserve3
@@ -1086,7 +1086,7 @@ const futureReserve2 = BasicService.futureReserve2 satisfies BasicService; /* SH
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-241/
  */
 export
-const BasicService_futureReserve3 = BasicService.futureReserve3 satisfies BasicService; /* LONG_NAMED_ENUMERATED_VALUE */
+const BasicService_futureReserve3 = BasicService.futureReserve3; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary futureReserve3
@@ -1095,7 +1095,7 @@ const BasicService_futureReserve3 = BasicService.futureReserve3 satisfies BasicS
  * @type {number}
  */
 export
-const futureReserve3 = BasicService.futureReserve3 satisfies BasicService; /* SHORT_NAMED_ENUMERATED_VALUE */
+const futureReserve3 = BasicService.futureReserve3; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary BasicService_futureReserve4
@@ -1109,7 +1109,7 @@ const futureReserve3 = BasicService.futureReserve3 satisfies BasicService; /* SH
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-241/
  */
 export
-const BasicService_futureReserve4 = BasicService.futureReserve4 satisfies BasicService; /* LONG_NAMED_ENUMERATED_VALUE */
+const BasicService_futureReserve4 = BasicService.futureReserve4; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary futureReserve4
@@ -1118,7 +1118,7 @@ const BasicService_futureReserve4 = BasicService.futureReserve4 satisfies BasicS
  * @type {number}
  */
 export
-const futureReserve4 = BasicService.futureReserve4 satisfies BasicService; /* SHORT_NAMED_ENUMERATED_VALUE */
+const futureReserve4 = BasicService.futureReserve4; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary BasicService_futureReserve5
@@ -1132,7 +1132,7 @@ const futureReserve4 = BasicService.futureReserve4 satisfies BasicService; /* SH
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-241/
  */
 export
-const BasicService_futureReserve5 = BasicService.futureReserve5 satisfies BasicService; /* LONG_NAMED_ENUMERATED_VALUE */
+const BasicService_futureReserve5 = BasicService.futureReserve5; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary futureReserve5
@@ -1141,7 +1141,7 @@ const BasicService_futureReserve5 = BasicService.futureReserve5 satisfies BasicS
  * @type {number}
  */
 export
-const futureReserve5 = BasicService.futureReserve5 satisfies BasicService; /* SHORT_NAMED_ENUMERATED_VALUE */
+const futureReserve5 = BasicService.futureReserve5; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary BasicService_futureReserve6
@@ -1155,7 +1155,7 @@ const futureReserve5 = BasicService.futureReserve5 satisfies BasicService; /* SH
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-241/
  */
 export
-const BasicService_futureReserve6 = BasicService.futureReserve6 satisfies BasicService; /* LONG_NAMED_ENUMERATED_VALUE */
+const BasicService_futureReserve6 = BasicService.futureReserve6; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary futureReserve6
@@ -1164,7 +1164,7 @@ const BasicService_futureReserve6 = BasicService.futureReserve6 satisfies BasicS
  * @type {number}
  */
 export
-const futureReserve6 = BasicService.futureReserve6 satisfies BasicService; /* SHORT_NAMED_ENUMERATED_VALUE */
+const futureReserve6 = BasicService.futureReserve6; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary BasicService_futureReserve7
@@ -1178,7 +1178,7 @@ const futureReserve6 = BasicService.futureReserve6 satisfies BasicService; /* SH
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-241/
  */
 export
-const BasicService_futureReserve7 = BasicService.futureReserve7 satisfies BasicService; /* LONG_NAMED_ENUMERATED_VALUE */
+const BasicService_futureReserve7 = BasicService.futureReserve7; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary futureReserve7
@@ -1187,7 +1187,7 @@ const BasicService_futureReserve7 = BasicService.futureReserve7 satisfies BasicS
  * @type {number}
  */
 export
-const futureReserve7 = BasicService.futureReserve7 satisfies BasicService; /* SHORT_NAMED_ENUMERATED_VALUE */
+const futureReserve7 = BasicService.futureReserve7; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary BasicService_futureReserve8
@@ -1201,7 +1201,7 @@ const futureReserve7 = BasicService.futureReserve7 satisfies BasicService; /* SH
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-241/
  */
 export
-const BasicService_futureReserve8 = BasicService.futureReserve8 satisfies BasicService; /* LONG_NAMED_ENUMERATED_VALUE */
+const BasicService_futureReserve8 = BasicService.futureReserve8; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary futureReserve8
@@ -1210,7 +1210,7 @@ const BasicService_futureReserve8 = BasicService.futureReserve8 satisfies BasicS
  * @type {number}
  */
 export
-const futureReserve8 = BasicService.futureReserve8 satisfies BasicService; /* SHORT_NAMED_ENUMERATED_VALUE */
+const futureReserve8 = BasicService.futureReserve8; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_BasicService: $.ASN1Decoder<BasicService> = $._decodeEnumerated;

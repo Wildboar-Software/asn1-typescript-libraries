@@ -71,7 +71,7 @@ const UnavailableNetworkResource = _enum_for_UnavailableNetworkResource;
  * @type {number}
  */
 export
-const UnavailableNetworkResource_unavailableResources = UnavailableNetworkResource.unavailableResources satisfies UnavailableNetworkResource; /* LONG_NAMED_ENUMERATED_VALUE */
+const UnavailableNetworkResource_unavailableResources = UnavailableNetworkResource.unavailableResources; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unavailableResources
@@ -79,7 +79,7 @@ const UnavailableNetworkResource_unavailableResources = UnavailableNetworkResour
  * @type {number}
  */
 export
-const unavailableResources = UnavailableNetworkResource.unavailableResources satisfies UnavailableNetworkResource; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unavailableResources = UnavailableNetworkResource.unavailableResources; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary UnavailableNetworkResource_componentFailure
@@ -87,7 +87,7 @@ const unavailableResources = UnavailableNetworkResource.unavailableResources sat
  * @type {number}
  */
 export
-const UnavailableNetworkResource_componentFailure = UnavailableNetworkResource.componentFailure satisfies UnavailableNetworkResource; /* LONG_NAMED_ENUMERATED_VALUE */
+const UnavailableNetworkResource_componentFailure = UnavailableNetworkResource.componentFailure; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary componentFailure
@@ -95,7 +95,7 @@ const UnavailableNetworkResource_componentFailure = UnavailableNetworkResource.c
  * @type {number}
  */
 export
-const componentFailure = UnavailableNetworkResource.componentFailure satisfies UnavailableNetworkResource; /* SHORT_NAMED_ENUMERATED_VALUE */
+const componentFailure = UnavailableNetworkResource.componentFailure; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary UnavailableNetworkResource_basicCallProcessingException
@@ -103,7 +103,7 @@ const componentFailure = UnavailableNetworkResource.componentFailure satisfies U
  * @type {number}
  */
 export
-const UnavailableNetworkResource_basicCallProcessingException = UnavailableNetworkResource.basicCallProcessingException satisfies UnavailableNetworkResource; /* LONG_NAMED_ENUMERATED_VALUE */
+const UnavailableNetworkResource_basicCallProcessingException = UnavailableNetworkResource.basicCallProcessingException; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary basicCallProcessingException
@@ -111,7 +111,7 @@ const UnavailableNetworkResource_basicCallProcessingException = UnavailableNetwo
  * @type {number}
  */
 export
-const basicCallProcessingException = UnavailableNetworkResource.basicCallProcessingException satisfies UnavailableNetworkResource; /* SHORT_NAMED_ENUMERATED_VALUE */
+const basicCallProcessingException = UnavailableNetworkResource.basicCallProcessingException; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary UnavailableNetworkResource_resourceStatusFailure
@@ -119,7 +119,7 @@ const basicCallProcessingException = UnavailableNetworkResource.basicCallProcess
  * @type {number}
  */
 export
-const UnavailableNetworkResource_resourceStatusFailure = UnavailableNetworkResource.resourceStatusFailure satisfies UnavailableNetworkResource; /* LONG_NAMED_ENUMERATED_VALUE */
+const UnavailableNetworkResource_resourceStatusFailure = UnavailableNetworkResource.resourceStatusFailure; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary resourceStatusFailure
@@ -127,7 +127,7 @@ const UnavailableNetworkResource_resourceStatusFailure = UnavailableNetworkResou
  * @type {number}
  */
 export
-const resourceStatusFailure = UnavailableNetworkResource.resourceStatusFailure satisfies UnavailableNetworkResource; /* SHORT_NAMED_ENUMERATED_VALUE */
+const resourceStatusFailure = UnavailableNetworkResource.resourceStatusFailure; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary UnavailableNetworkResource_endUserFailure
@@ -135,7 +135,7 @@ const resourceStatusFailure = UnavailableNetworkResource.resourceStatusFailure s
  * @type {number}
  */
 export
-const UnavailableNetworkResource_endUserFailure = UnavailableNetworkResource.endUserFailure satisfies UnavailableNetworkResource; /* LONG_NAMED_ENUMERATED_VALUE */
+const UnavailableNetworkResource_endUserFailure = UnavailableNetworkResource.endUserFailure; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary endUserFailure
@@ -143,7 +143,7 @@ const UnavailableNetworkResource_endUserFailure = UnavailableNetworkResource.end
  * @type {number}
  */
 export
-const endUserFailure = UnavailableNetworkResource.endUserFailure satisfies UnavailableNetworkResource; /* SHORT_NAMED_ENUMERATED_VALUE */
+const endUserFailure = UnavailableNetworkResource.endUserFailure; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary UnavailableNetworkResource_screening
@@ -151,7 +151,7 @@ const endUserFailure = UnavailableNetworkResource.endUserFailure satisfies Unava
  * @type {number}
  */
 export
-const UnavailableNetworkResource_screening = UnavailableNetworkResource.screening satisfies UnavailableNetworkResource; /* LONG_NAMED_ENUMERATED_VALUE */
+const UnavailableNetworkResource_screening = UnavailableNetworkResource.screening; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary screening
@@ -159,7 +159,7 @@ const UnavailableNetworkResource_screening = UnavailableNetworkResource.screenin
  * @type {number}
  */
 export
-const screening = UnavailableNetworkResource.screening satisfies UnavailableNetworkResource; /* SHORT_NAMED_ENUMERATED_VALUE */
+const screening = UnavailableNetworkResource.screening; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 function _decode_UnavailableNetworkResource(el: _Element): UnavailableNetworkResource {

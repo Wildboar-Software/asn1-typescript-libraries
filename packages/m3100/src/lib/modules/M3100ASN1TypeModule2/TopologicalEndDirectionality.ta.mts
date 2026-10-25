@@ -71,7 +71,7 @@ export const TopologicalEndDirectionality = _enum_for_TopologicalEndDirectionali
  * @type {number}
  */
 export const TopologicalEndDirectionality_undefined =
-    TopologicalEndDirectionality.undefined satisfies TopologicalEndDirectionality; /* LONG_NAMED_ENUMERATED_VALUE */
+    TopologicalEndDirectionality.undefined; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -80,7 +80,7 @@ export const TopologicalEndDirectionality_undefined =
  * @type {number}
  */
 export const undefined =
-    TopologicalEndDirectionality.undefined satisfies TopologicalEndDirectionality; /* SHORT_NAMED_ENUMERATED_VALUE */
+    TopologicalEndDirectionality.undefined; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -89,7 +89,7 @@ export const undefined =
  * @type {number}
  */
 export const TopologicalEndDirectionality_sink =
-    TopologicalEndDirectionality.sink satisfies TopologicalEndDirectionality; /* LONG_NAMED_ENUMERATED_VALUE */
+    TopologicalEndDirectionality.sink; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -98,7 +98,7 @@ export const TopologicalEndDirectionality_sink =
  * @type {number}
  */
 export const sink =
-    TopologicalEndDirectionality.sink satisfies TopologicalEndDirectionality; /* SHORT_NAMED_ENUMERATED_VALUE */
+    TopologicalEndDirectionality.sink; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -107,7 +107,7 @@ export const sink =
  * @type {number}
  */
 export const TopologicalEndDirectionality_source =
-    TopologicalEndDirectionality.source satisfies TopologicalEndDirectionality; /* LONG_NAMED_ENUMERATED_VALUE */
+    TopologicalEndDirectionality.source; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -116,7 +116,7 @@ export const TopologicalEndDirectionality_source =
  * @type {number}
  */
 export const source =
-    TopologicalEndDirectionality.source satisfies TopologicalEndDirectionality; /* SHORT_NAMED_ENUMERATED_VALUE */
+    TopologicalEndDirectionality.source; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -125,7 +125,7 @@ export const source =
  * @type {number}
  */
 export const TopologicalEndDirectionality_bidirectional =
-    TopologicalEndDirectionality.bidirectional satisfies TopologicalEndDirectionality; /* LONG_NAMED_ENUMERATED_VALUE */
+    TopologicalEndDirectionality.bidirectional; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -134,7 +134,7 @@ export const TopologicalEndDirectionality_bidirectional =
  * @type {number}
  */
 export const bidirectional =
-    TopologicalEndDirectionality.bidirectional satisfies TopologicalEndDirectionality; /* SHORT_NAMED_ENUMERATED_VALUE */
+    TopologicalEndDirectionality.bidirectional; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 

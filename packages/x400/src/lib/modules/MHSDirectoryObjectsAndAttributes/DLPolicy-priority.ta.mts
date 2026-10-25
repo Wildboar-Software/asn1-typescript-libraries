@@ -38,7 +38,7 @@ export const DLPolicy_priority_unchanged = 0 satisfies DLPolicy_priority; /* LON
  * @constant
  * @type {number}
  */
-export const unchanged = DLPolicy_priority_unchanged satisfies DLPolicy_priority; /* SHORT_NAMED_INTEGER_VALUE */
+export const unchanged = DLPolicy_priority_unchanged; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DLPolicy_priority_normal
@@ -52,7 +52,7 @@ export const DLPolicy_priority_normal = 1 satisfies DLPolicy_priority; /* LONG_N
  * @constant
  * @type {number}
  */
-export const normal = DLPolicy_priority_normal satisfies DLPolicy_priority; /* SHORT_NAMED_INTEGER_VALUE */
+export const normal = DLPolicy_priority_normal; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DLPolicy_priority_non_urgent
@@ -66,7 +66,7 @@ export const DLPolicy_priority_non_urgent = 2 satisfies DLPolicy_priority; /* LO
  * @constant
  * @type {number}
  */
-export const non_urgent = DLPolicy_priority_non_urgent satisfies DLPolicy_priority; /* SHORT_NAMED_INTEGER_VALUE */
+export const non_urgent = DLPolicy_priority_non_urgent; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DLPolicy_priority_urgent
@@ -80,7 +80,7 @@ export const DLPolicy_priority_urgent = 3 satisfies DLPolicy_priority; /* LONG_N
  * @constant
  * @type {number}
  */
-export const urgent = DLPolicy_priority_urgent satisfies DLPolicy_priority; /* SHORT_NAMED_INTEGER_VALUE */
+export const urgent = DLPolicy_priority_urgent; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_DLPolicy_priority = $._decodeInteger;

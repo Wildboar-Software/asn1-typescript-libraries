@@ -31,7 +31,7 @@ export const InvokeProblem_duplicateInvocation = 0 satisfies InvokeProblem; /* L
  * @constant
  * @type {number}
  */
-export const duplicateInvocation = InvokeProblem_duplicateInvocation satisfies InvokeProblem; /* SHORT_NAMED_INTEGER_VALUE */
+export const duplicateInvocation = InvokeProblem_duplicateInvocation; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary InvokeProblem_unrecognizedOperation
@@ -45,7 +45,7 @@ export const InvokeProblem_unrecognizedOperation = 1 satisfies InvokeProblem; /*
  * @constant
  * @type {number}
  */
-export const unrecognizedOperation = InvokeProblem_unrecognizedOperation satisfies InvokeProblem; /* SHORT_NAMED_INTEGER_VALUE */
+export const unrecognizedOperation = InvokeProblem_unrecognizedOperation; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary InvokeProblem_mistypedArgument
@@ -59,7 +59,7 @@ export const InvokeProblem_mistypedArgument = 2 satisfies InvokeProblem; /* LONG
  * @constant
  * @type {number}
  */
-export const mistypedArgument = InvokeProblem_mistypedArgument satisfies InvokeProblem; /* SHORT_NAMED_INTEGER_VALUE */
+export const mistypedArgument = InvokeProblem_mistypedArgument; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary InvokeProblem_resourceLimitation
@@ -73,7 +73,7 @@ export const InvokeProblem_resourceLimitation = 3 satisfies InvokeProblem; /* LO
  * @constant
  * @type {number}
  */
-export const resourceLimitation = InvokeProblem_resourceLimitation satisfies InvokeProblem; /* SHORT_NAMED_INTEGER_VALUE */
+export const resourceLimitation = InvokeProblem_resourceLimitation; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary InvokeProblem_releaseInProgress
@@ -87,7 +87,7 @@ export const InvokeProblem_releaseInProgress = 4 satisfies InvokeProblem; /* LON
  * @constant
  * @type {number}
  */
-export const releaseInProgress = InvokeProblem_releaseInProgress satisfies InvokeProblem; /* SHORT_NAMED_INTEGER_VALUE */
+export const releaseInProgress = InvokeProblem_releaseInProgress; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_InvokeProblem = $._decodeInteger;

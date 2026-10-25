@@ -86,7 +86,7 @@ type Messaging_Property_Priority = _enum_for_Messaging_Property_Priority | ENUME
  * @type {number}
  */
 export
-const Messaging_Property_Priority_low = _enum_for_Messaging_Property_Priority.low satisfies Messaging_Property_Priority; /* LONG_NAMED_ENUMERATED_VALUE */
+const Messaging_Property_Priority_low = _enum_for_Messaging_Property_Priority.low; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary low
@@ -100,7 +100,7 @@ const Messaging_Property_Priority_low = _enum_for_Messaging_Property_Priority.lo
  * @type {number}
  */
 export
-const low = Messaging_Property_Priority_low satisfies Messaging_Property_Priority; /* SHORT_NAMED_ENUMERATED_VALUE */
+const low = Messaging_Property_Priority_low; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Messaging_Property_Priority_medium
@@ -114,7 +114,7 @@ const low = Messaging_Property_Priority_low satisfies Messaging_Property_Priorit
  * @type {number}
  */
 export
-const Messaging_Property_Priority_medium = _enum_for_Messaging_Property_Priority.medium satisfies Messaging_Property_Priority; /* LONG_NAMED_ENUMERATED_VALUE */
+const Messaging_Property_Priority_medium = _enum_for_Messaging_Property_Priority.medium; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary medium
@@ -128,7 +128,7 @@ const Messaging_Property_Priority_medium = _enum_for_Messaging_Property_Priority
  * @type {number}
  */
 export
-const medium = Messaging_Property_Priority_medium satisfies Messaging_Property_Priority; /* SHORT_NAMED_ENUMERATED_VALUE */
+const medium = Messaging_Property_Priority_medium; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Messaging_Property_Priority_high
@@ -142,7 +142,7 @@ const medium = Messaging_Property_Priority_medium satisfies Messaging_Property_P
  * @type {number}
  */
 export
-const Messaging_Property_Priority_high = _enum_for_Messaging_Property_Priority.high satisfies Messaging_Property_Priority; /* LONG_NAMED_ENUMERATED_VALUE */
+const Messaging_Property_Priority_high = _enum_for_Messaging_Property_Priority.high; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary high
@@ -156,7 +156,7 @@ const Messaging_Property_Priority_high = _enum_for_Messaging_Property_Priority.h
  * @type {number}
  */
 export
-const high = Messaging_Property_Priority_high satisfies Messaging_Property_Priority; /* SHORT_NAMED_ENUMERATED_VALUE */
+const high = Messaging_Property_Priority_high; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Messaging_Property_Priority_private_
@@ -171,7 +171,7 @@ const high = Messaging_Property_Priority_high satisfies Messaging_Property_Prior
  * @type {number}
  */
 export
-const Messaging_Property_Priority_private_ = _enum_for_Messaging_Property_Priority.private_ satisfies Messaging_Property_Priority; /* LONG_NAMED_ENUMERATED_VALUE */
+const Messaging_Property_Priority_private_ = _enum_for_Messaging_Property_Priority.private_; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary private_
@@ -186,7 +186,7 @@ const Messaging_Property_Priority_private_ = _enum_for_Messaging_Property_Priori
  * @type {number}
  */
 export
-const private_ = Messaging_Property_Priority_private_ satisfies Messaging_Property_Priority; /* SHORT_NAMED_ENUMERATED_VALUE */
+const private_ = Messaging_Property_Priority_private_; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_Messaging_Property_Priority: $.ASN1Decoder<Messaging_Property_Priority> = $._decodeEnumerated;
 export const _encode_Messaging_Property_Priority: $.ASN1Encoder<Messaging_Property_Priority> = $._encodeEnumerated;
 

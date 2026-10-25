@@ -90,7 +90,7 @@ export const AbortProblem = _enum_for_AbortProblem;
  * @type {number}
  */
 export const AbortProblem_unrecognizedInvocationId =
-  AbortProblem.unrecognizedInvocationId satisfies AbortProblem; /* LONG_NAMED_ENUMERATED_VALUE */
+  AbortProblem.unrecognizedInvocationId; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -99,7 +99,7 @@ export const AbortProblem_unrecognizedInvocationId =
  * @type {number}
  */
 export const unrecognizedInvocationId =
-  AbortProblem.unrecognizedInvocationId satisfies AbortProblem; /* SHORT_NAMED_ENUMERATED_VALUE */
+  AbortProblem.unrecognizedInvocationId; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -113,7 +113,7 @@ export const unrecognizedInvocationId =
  * @type {number}
  */
 export const AbortProblem_abortUnexpected =
-  AbortProblem.abortUnexpected satisfies AbortProblem; /* LONG_NAMED_ENUMERATED_VALUE */
+  AbortProblem.abortUnexpected; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -122,7 +122,7 @@ export const AbortProblem_abortUnexpected =
  * @type {number}
  */
 export const abortUnexpected =
-  AbortProblem.abortUnexpected satisfies AbortProblem; /* SHORT_NAMED_ENUMERATED_VALUE */
+  AbortProblem.abortUnexpected; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -136,7 +136,7 @@ export const abortUnexpected =
  * @type {number}
  */
 export const AbortProblem_unrecognizedError =
-  AbortProblem.unrecognizedError satisfies AbortProblem; /* LONG_NAMED_ENUMERATED_VALUE */
+  AbortProblem.unrecognizedError; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -145,7 +145,7 @@ export const AbortProblem_unrecognizedError =
  * @type {number}
  */
 export const unrecognizedError =
-  AbortProblem.unrecognizedError satisfies AbortProblem; /* SHORT_NAMED_ENUMERATED_VALUE */
+  AbortProblem.unrecognizedError; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -160,7 +160,7 @@ export const unrecognizedError =
  * @type {number}
  */
 export const AbortProblem_unexpectedError =
-  AbortProblem.unexpectedError satisfies AbortProblem; /* LONG_NAMED_ENUMERATED_VALUE */
+  AbortProblem.unexpectedError; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -169,7 +169,7 @@ export const AbortProblem_unexpectedError =
  * @type {number}
  */
 export const unexpectedError =
-  AbortProblem.unexpectedError satisfies AbortProblem; /* SHORT_NAMED_ENUMERATED_VALUE */
+  AbortProblem.unexpectedError; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -184,7 +184,7 @@ export const unexpectedError =
  * @type {number}
  */
 export const AbortProblem_mistypedErrorParameter =
-  AbortProblem.mistypedErrorParameter satisfies AbortProblem; /* LONG_NAMED_ENUMERATED_VALUE */
+  AbortProblem.mistypedErrorParameter; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -193,7 +193,7 @@ export const AbortProblem_mistypedErrorParameter =
  * @type {number}
  */
 export const mistypedErrorParameter =
-  AbortProblem.mistypedErrorParameter satisfies AbortProblem; /* SHORT_NAMED_ENUMERATED_VALUE */
+  AbortProblem.mistypedErrorParameter; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 

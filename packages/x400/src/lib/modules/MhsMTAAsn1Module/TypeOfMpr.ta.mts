@@ -38,7 +38,7 @@ export const TypeOfMpr_message = 0 satisfies TypeOfMpr; /* LONG_NAMED_INTEGER_VA
  * @constant
  * @type {number}
  */
-export const message = TypeOfMpr_message satisfies TypeOfMpr; /* SHORT_NAMED_INTEGER_VALUE */
+export const message = TypeOfMpr_message; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TypeOfMpr_probe
@@ -52,7 +52,7 @@ export const TypeOfMpr_probe = 1 satisfies TypeOfMpr; /* LONG_NAMED_INTEGER_VALU
  * @constant
  * @type {number}
  */
-export const probe = TypeOfMpr_probe satisfies TypeOfMpr; /* SHORT_NAMED_INTEGER_VALUE */
+export const probe = TypeOfMpr_probe; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TypeOfMpr_report
@@ -66,7 +66,7 @@ export const TypeOfMpr_report = 2 satisfies TypeOfMpr; /* LONG_NAMED_INTEGER_VAL
  * @constant
  * @type {number}
  */
-export const report = TypeOfMpr_report satisfies TypeOfMpr; /* SHORT_NAMED_INTEGER_VALUE */
+export const report = TypeOfMpr_report; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_TypeOfMpr = $._decodeInteger;

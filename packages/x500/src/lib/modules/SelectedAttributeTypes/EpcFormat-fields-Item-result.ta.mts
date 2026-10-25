@@ -65,7 +65,7 @@ export const EpcFormat_fields_Item_result = _enum_for_EpcFormat_fields_Item_resu
  * @type {number}
  */
 export const EpcFormat_fields_Item_result_numericPad =
-    EpcFormat_fields_Item_result.numericPad satisfies EpcFormat_fields_Item_result; /* LONG_NAMED_ENUMERATED_VALUE */
+    EpcFormat_fields_Item_result.numericPad; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary numericPad
@@ -78,7 +78,7 @@ export const EpcFormat_fields_Item_result_numericPad =
  * @type {number}
  */
 export const numericPad =
-    EpcFormat_fields_Item_result.numericPad satisfies EpcFormat_fields_Item_result; /* SHORT_NAMED_ENUMERATED_VALUE */
+    EpcFormat_fields_Item_result.numericPad; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EpcFormat_fields_Item_result_numeric
@@ -90,7 +90,7 @@ export const numericPad =
  * @type {number}
  */
 export const EpcFormat_fields_Item_result_numeric =
-    EpcFormat_fields_Item_result.numeric satisfies EpcFormat_fields_Item_result; /* LONG_NAMED_ENUMERATED_VALUE */
+    EpcFormat_fields_Item_result.numeric; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary numeric
@@ -102,7 +102,7 @@ export const EpcFormat_fields_Item_result_numeric =
  * @type {number}
  */
 export const numeric =
-    EpcFormat_fields_Item_result.numeric satisfies EpcFormat_fields_Item_result; /* SHORT_NAMED_ENUMERATED_VALUE */
+    EpcFormat_fields_Item_result.numeric; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EpcFormat_fields_Item_result_alpha7bits
@@ -114,7 +114,7 @@ export const numeric =
  * @type {number}
  */
 export const EpcFormat_fields_Item_result_alpha7bits =
-    EpcFormat_fields_Item_result.alpha7bits satisfies EpcFormat_fields_Item_result; /* LONG_NAMED_ENUMERATED_VALUE */
+    EpcFormat_fields_Item_result.alpha7bits; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary alpha7bits
@@ -126,7 +126,7 @@ export const EpcFormat_fields_Item_result_alpha7bits =
  * @type {number}
  */
 export const alpha7bits =
-    EpcFormat_fields_Item_result.alpha7bits satisfies EpcFormat_fields_Item_result; /* SHORT_NAMED_ENUMERATED_VALUE */
+    EpcFormat_fields_Item_result.alpha7bits; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 export function _decode_EpcFormat_fields_Item_result(el: _Element): EpcFormat_fields_Item_result {

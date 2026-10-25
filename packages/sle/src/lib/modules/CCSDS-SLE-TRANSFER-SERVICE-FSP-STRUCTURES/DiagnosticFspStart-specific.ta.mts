@@ -53,7 +53,7 @@ const DiagnosticFspStart_specific_outOfService = 0 satisfies DiagnosticFspStart_
  * @type {number}
  */
 export
-const outOfService = DiagnosticFspStart_specific_outOfService satisfies DiagnosticFspStart_specific; /* SHORT_NAMED_INTEGER_VALUE */
+const outOfService = DiagnosticFspStart_specific_outOfService; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagnosticFspStart_specific_unableToComply
@@ -79,7 +79,7 @@ const DiagnosticFspStart_specific_unableToComply = 1 satisfies DiagnosticFspStar
  * @type {number}
  */
 export
-const unableToComply = DiagnosticFspStart_specific_unableToComply satisfies DiagnosticFspStart_specific; /* SHORT_NAMED_INTEGER_VALUE */
+const unableToComply = DiagnosticFspStart_specific_unableToComply; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagnosticFspStart_specific_productionTimeExpired
@@ -105,7 +105,7 @@ const DiagnosticFspStart_specific_productionTimeExpired = 2 satisfies Diagnostic
  * @type {number}
  */
 export
-const productionTimeExpired = DiagnosticFspStart_specific_productionTimeExpired satisfies DiagnosticFspStart_specific; /* SHORT_NAMED_INTEGER_VALUE */
+const productionTimeExpired = DiagnosticFspStart_specific_productionTimeExpired; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_DiagnosticFspStart_specific: $.ASN1Decoder<DiagnosticFspStart_specific> = $._decodeInteger;
 export const _encode_DiagnosticFspStart_specific: $.ASN1Encoder<DiagnosticFspStart_specific> = $._encodeInteger;
 

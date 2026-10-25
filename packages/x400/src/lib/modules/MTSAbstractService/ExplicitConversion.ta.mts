@@ -48,7 +48,7 @@ export const ExplicitConversion_ia5_text_to_teletex = 0 satisfies ExplicitConver
  * @constant
  * @type {number}
  */
-export const ia5_text_to_teletex = ExplicitConversion_ia5_text_to_teletex satisfies ExplicitConversion; /* SHORT_NAMED_INTEGER_VALUE */
+export const ia5_text_to_teletex = ExplicitConversion_ia5_text_to_teletex; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ExplicitConversion_ia5_text_to_g3_facsimile
@@ -62,7 +62,7 @@ export const ExplicitConversion_ia5_text_to_g3_facsimile = 8 satisfies ExplicitC
  * @constant
  * @type {number}
  */
-export const ia5_text_to_g3_facsimile = ExplicitConversion_ia5_text_to_g3_facsimile satisfies ExplicitConversion; /* SHORT_NAMED_INTEGER_VALUE */
+export const ia5_text_to_g3_facsimile = ExplicitConversion_ia5_text_to_g3_facsimile; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ExplicitConversion_ia5_text_to_g4_class_1
@@ -76,7 +76,7 @@ export const ExplicitConversion_ia5_text_to_g4_class_1 = 9 satisfies ExplicitCon
  * @constant
  * @type {number}
  */
-export const ia5_text_to_g4_class_1 = ExplicitConversion_ia5_text_to_g4_class_1 satisfies ExplicitConversion; /* SHORT_NAMED_INTEGER_VALUE */
+export const ia5_text_to_g4_class_1 = ExplicitConversion_ia5_text_to_g4_class_1; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ExplicitConversion_ia5_text_to_videotex
@@ -90,7 +90,7 @@ export const ExplicitConversion_ia5_text_to_videotex = 10 satisfies ExplicitConv
  * @constant
  * @type {number}
  */
-export const ia5_text_to_videotex = ExplicitConversion_ia5_text_to_videotex satisfies ExplicitConversion; /* SHORT_NAMED_INTEGER_VALUE */
+export const ia5_text_to_videotex = ExplicitConversion_ia5_text_to_videotex; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ExplicitConversion_teletex_to_ia5_text
@@ -104,7 +104,7 @@ export const ExplicitConversion_teletex_to_ia5_text = 11 satisfies ExplicitConve
  * @constant
  * @type {number}
  */
-export const teletex_to_ia5_text = ExplicitConversion_teletex_to_ia5_text satisfies ExplicitConversion; /* SHORT_NAMED_INTEGER_VALUE */
+export const teletex_to_ia5_text = ExplicitConversion_teletex_to_ia5_text; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ExplicitConversion_teletex_to_g3_facsimile
@@ -118,7 +118,7 @@ export const ExplicitConversion_teletex_to_g3_facsimile = 12 satisfies ExplicitC
  * @constant
  * @type {number}
  */
-export const teletex_to_g3_facsimile = ExplicitConversion_teletex_to_g3_facsimile satisfies ExplicitConversion; /* SHORT_NAMED_INTEGER_VALUE */
+export const teletex_to_g3_facsimile = ExplicitConversion_teletex_to_g3_facsimile; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ExplicitConversion_teletex_to_g4_class_1
@@ -132,7 +132,7 @@ export const ExplicitConversion_teletex_to_g4_class_1 = 13 satisfies ExplicitCon
  * @constant
  * @type {number}
  */
-export const teletex_to_g4_class_1 = ExplicitConversion_teletex_to_g4_class_1 satisfies ExplicitConversion; /* SHORT_NAMED_INTEGER_VALUE */
+export const teletex_to_g4_class_1 = ExplicitConversion_teletex_to_g4_class_1; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ExplicitConversion_teletex_to_videotex
@@ -146,7 +146,7 @@ export const ExplicitConversion_teletex_to_videotex = 14 satisfies ExplicitConve
  * @constant
  * @type {number}
  */
-export const teletex_to_videotex = ExplicitConversion_teletex_to_videotex satisfies ExplicitConversion; /* SHORT_NAMED_INTEGER_VALUE */
+export const teletex_to_videotex = ExplicitConversion_teletex_to_videotex; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ExplicitConversion_videotex_to_ia5_text
@@ -160,7 +160,7 @@ export const ExplicitConversion_videotex_to_ia5_text = 16 satisfies ExplicitConv
  * @constant
  * @type {number}
  */
-export const videotex_to_ia5_text = ExplicitConversion_videotex_to_ia5_text satisfies ExplicitConversion; /* SHORT_NAMED_INTEGER_VALUE */
+export const videotex_to_ia5_text = ExplicitConversion_videotex_to_ia5_text; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ExplicitConversion_videotex_to_teletex
@@ -174,7 +174,7 @@ export const ExplicitConversion_videotex_to_teletex = 17 satisfies ExplicitConve
  * @constant
  * @type {number}
  */
-export const videotex_to_teletex = ExplicitConversion_videotex_to_teletex satisfies ExplicitConversion; /* SHORT_NAMED_INTEGER_VALUE */
+export const videotex_to_teletex = ExplicitConversion_videotex_to_teletex; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_ExplicitConversion = $._decodeInteger;

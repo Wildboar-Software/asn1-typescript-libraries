@@ -42,7 +42,7 @@ export const Release_response_reason_normal = 0 satisfies Release_response_reaso
  * @constant
  * @type {number}
  */
-export const normal = Release_response_reason_normal satisfies Release_response_reason; /* SHORT_NAMED_INTEGER_VALUE */
+export const normal = Release_response_reason_normal; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Release_response_reason_not_finished
@@ -56,7 +56,7 @@ export const Release_response_reason_not_finished = 1 satisfies Release_response
  * @constant
  * @type {number}
  */
-export const not_finished = Release_response_reason_not_finished satisfies Release_response_reason; /* SHORT_NAMED_INTEGER_VALUE */
+export const not_finished = Release_response_reason_not_finished; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Release_response_reason_user_defined
@@ -70,7 +70,7 @@ export const Release_response_reason_user_defined = 30 satisfies Release_respons
  * @constant
  * @type {number}
  */
-export const user_defined = Release_response_reason_user_defined satisfies Release_response_reason; /* SHORT_NAMED_INTEGER_VALUE */
+export const user_defined = Release_response_reason_user_defined; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_Release_response_reason = $._decodeInteger;

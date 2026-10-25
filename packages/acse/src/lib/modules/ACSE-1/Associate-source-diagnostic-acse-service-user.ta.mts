@@ -45,7 +45,7 @@ export const Associate_source_diagnostic_acse_service_user_null_ = 0 satisfies A
  * @constant
  * @type {number}
  */
-export const null_ = Associate_source_diagnostic_acse_service_user_null_ satisfies Associate_source_diagnostic_acse_service_user; /* SHORT_NAMED_INTEGER_VALUE */
+export const null_ = Associate_source_diagnostic_acse_service_user_null_; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Associate_source_diagnostic_acse_service_user_no_reason_given
@@ -59,7 +59,7 @@ export const Associate_source_diagnostic_acse_service_user_no_reason_given = 1 s
  * @constant
  * @type {number}
  */
-export const no_reason_given = Associate_source_diagnostic_acse_service_user_no_reason_given satisfies Associate_source_diagnostic_acse_service_user; /* SHORT_NAMED_INTEGER_VALUE */
+export const no_reason_given = Associate_source_diagnostic_acse_service_user_no_reason_given; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Associate_source_diagnostic_acse_service_user_application_context_name_not_supported
@@ -73,7 +73,7 @@ export const Associate_source_diagnostic_acse_service_user_application_context_n
  * @constant
  * @type {number}
  */
-export const application_context_name_not_supported = Associate_source_diagnostic_acse_service_user_application_context_name_not_supported satisfies Associate_source_diagnostic_acse_service_user; /* SHORT_NAMED_INTEGER_VALUE */
+export const application_context_name_not_supported = Associate_source_diagnostic_acse_service_user_application_context_name_not_supported; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Associate_source_diagnostic_acse_service_user_calling_AP_title_not_recognized
@@ -87,7 +87,7 @@ export const Associate_source_diagnostic_acse_service_user_calling_AP_title_not_
  * @constant
  * @type {number}
  */
-export const calling_AP_title_not_recognized = Associate_source_diagnostic_acse_service_user_calling_AP_title_not_recognized satisfies Associate_source_diagnostic_acse_service_user; /* SHORT_NAMED_INTEGER_VALUE */
+export const calling_AP_title_not_recognized = Associate_source_diagnostic_acse_service_user_calling_AP_title_not_recognized; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Associate_source_diagnostic_acse_service_user_calling_AP_invocation_identifier_not_recognized
@@ -101,7 +101,7 @@ export const Associate_source_diagnostic_acse_service_user_calling_AP_invocation
  * @constant
  * @type {number}
  */
-export const calling_AP_invocation_identifier_not_recognized = Associate_source_diagnostic_acse_service_user_calling_AP_invocation_identifier_not_recognized satisfies Associate_source_diagnostic_acse_service_user; /* SHORT_NAMED_INTEGER_VALUE */
+export const calling_AP_invocation_identifier_not_recognized = Associate_source_diagnostic_acse_service_user_calling_AP_invocation_identifier_not_recognized; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Associate_source_diagnostic_acse_service_user_calling_AE_qualifier_not_recognized
@@ -115,7 +115,7 @@ export const Associate_source_diagnostic_acse_service_user_calling_AE_qualifier_
  * @constant
  * @type {number}
  */
-export const calling_AE_qualifier_not_recognized = Associate_source_diagnostic_acse_service_user_calling_AE_qualifier_not_recognized satisfies Associate_source_diagnostic_acse_service_user; /* SHORT_NAMED_INTEGER_VALUE */
+export const calling_AE_qualifier_not_recognized = Associate_source_diagnostic_acse_service_user_calling_AE_qualifier_not_recognized; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Associate_source_diagnostic_acse_service_user_calling_AE_invocation_identifier_not_recognized
@@ -129,7 +129,7 @@ export const Associate_source_diagnostic_acse_service_user_calling_AE_invocation
  * @constant
  * @type {number}
  */
-export const calling_AE_invocation_identifier_not_recognized = Associate_source_diagnostic_acse_service_user_calling_AE_invocation_identifier_not_recognized satisfies Associate_source_diagnostic_acse_service_user; /* SHORT_NAMED_INTEGER_VALUE */
+export const calling_AE_invocation_identifier_not_recognized = Associate_source_diagnostic_acse_service_user_calling_AE_invocation_identifier_not_recognized; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Associate_source_diagnostic_acse_service_user_called_AP_title_not_recognized
@@ -143,7 +143,7 @@ export const Associate_source_diagnostic_acse_service_user_called_AP_title_not_r
  * @constant
  * @type {number}
  */
-export const called_AP_title_not_recognized = Associate_source_diagnostic_acse_service_user_called_AP_title_not_recognized satisfies Associate_source_diagnostic_acse_service_user; /* SHORT_NAMED_INTEGER_VALUE */
+export const called_AP_title_not_recognized = Associate_source_diagnostic_acse_service_user_called_AP_title_not_recognized; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Associate_source_diagnostic_acse_service_user_called_AP_invocation_identifier_not_recognized
@@ -157,7 +157,7 @@ export const Associate_source_diagnostic_acse_service_user_called_AP_invocation_
  * @constant
  * @type {number}
  */
-export const called_AP_invocation_identifier_not_recognized = Associate_source_diagnostic_acse_service_user_called_AP_invocation_identifier_not_recognized satisfies Associate_source_diagnostic_acse_service_user; /* SHORT_NAMED_INTEGER_VALUE */
+export const called_AP_invocation_identifier_not_recognized = Associate_source_diagnostic_acse_service_user_called_AP_invocation_identifier_not_recognized; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Associate_source_diagnostic_acse_service_user_called_AE_qualifier_not_recognized
@@ -171,7 +171,7 @@ export const Associate_source_diagnostic_acse_service_user_called_AE_qualifier_n
  * @constant
  * @type {number}
  */
-export const called_AE_qualifier_not_recognized = Associate_source_diagnostic_acse_service_user_called_AE_qualifier_not_recognized satisfies Associate_source_diagnostic_acse_service_user; /* SHORT_NAMED_INTEGER_VALUE */
+export const called_AE_qualifier_not_recognized = Associate_source_diagnostic_acse_service_user_called_AE_qualifier_not_recognized; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Associate_source_diagnostic_acse_service_user_called_AE_invocation_identifier_not_recognized
@@ -185,7 +185,7 @@ export const Associate_source_diagnostic_acse_service_user_called_AE_invocation_
  * @constant
  * @type {number}
  */
-export const called_AE_invocation_identifier_not_recognized = Associate_source_diagnostic_acse_service_user_called_AE_invocation_identifier_not_recognized satisfies Associate_source_diagnostic_acse_service_user; /* SHORT_NAMED_INTEGER_VALUE */
+export const called_AE_invocation_identifier_not_recognized = Associate_source_diagnostic_acse_service_user_called_AE_invocation_identifier_not_recognized; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Associate_source_diagnostic_acse_service_user_authentication_mechanism_name_not_recognized
@@ -199,7 +199,7 @@ export const Associate_source_diagnostic_acse_service_user_authentication_mechan
  * @constant
  * @type {number}
  */
-export const authentication_mechanism_name_not_recognized = Associate_source_diagnostic_acse_service_user_authentication_mechanism_name_not_recognized satisfies Associate_source_diagnostic_acse_service_user; /* SHORT_NAMED_INTEGER_VALUE */
+export const authentication_mechanism_name_not_recognized = Associate_source_diagnostic_acse_service_user_authentication_mechanism_name_not_recognized; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Associate_source_diagnostic_acse_service_user_authentication_mechanism_name_required
@@ -213,7 +213,7 @@ export const Associate_source_diagnostic_acse_service_user_authentication_mechan
  * @constant
  * @type {number}
  */
-export const authentication_mechanism_name_required = Associate_source_diagnostic_acse_service_user_authentication_mechanism_name_required satisfies Associate_source_diagnostic_acse_service_user; /* SHORT_NAMED_INTEGER_VALUE */
+export const authentication_mechanism_name_required = Associate_source_diagnostic_acse_service_user_authentication_mechanism_name_required; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Associate_source_diagnostic_acse_service_user_authentication_failure
@@ -227,7 +227,7 @@ export const Associate_source_diagnostic_acse_service_user_authentication_failur
  * @constant
  * @type {number}
  */
-export const authentication_failure = Associate_source_diagnostic_acse_service_user_authentication_failure satisfies Associate_source_diagnostic_acse_service_user; /* SHORT_NAMED_INTEGER_VALUE */
+export const authentication_failure = Associate_source_diagnostic_acse_service_user_authentication_failure; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Associate_source_diagnostic_acse_service_user_authentication_required
@@ -241,7 +241,7 @@ export const Associate_source_diagnostic_acse_service_user_authentication_requir
  * @constant
  * @type {number}
  */
-export const authentication_required = Associate_source_diagnostic_acse_service_user_authentication_required satisfies Associate_source_diagnostic_acse_service_user; /* SHORT_NAMED_INTEGER_VALUE */
+export const authentication_required = Associate_source_diagnostic_acse_service_user_authentication_required; /* SHORT_NAMED_INTEGER_VALUE */
 
 let _cached_decoder_for_Associate_source_diagnostic_acse_service_user: $.ASN1Decoder<Associate_source_diagnostic_acse_service_user> | null = null;
 

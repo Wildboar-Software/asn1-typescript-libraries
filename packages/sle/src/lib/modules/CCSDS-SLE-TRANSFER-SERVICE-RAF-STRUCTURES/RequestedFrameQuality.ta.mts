@@ -52,7 +52,7 @@ const RequestedFrameQuality_goodFramesOnly = 0 satisfies RequestedFrameQuality; 
  * @type {number}
  */
 export
-const goodFramesOnly = RequestedFrameQuality_goodFramesOnly satisfies RequestedFrameQuality; /* SHORT_NAMED_INTEGER_VALUE */
+const goodFramesOnly = RequestedFrameQuality_goodFramesOnly; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RequestedFrameQuality_erredFrameOnly
@@ -77,7 +77,7 @@ const RequestedFrameQuality_erredFrameOnly = 1 satisfies RequestedFrameQuality; 
  * @type {number}
  */
 export
-const erredFrameOnly = RequestedFrameQuality_erredFrameOnly satisfies RequestedFrameQuality; /* SHORT_NAMED_INTEGER_VALUE */
+const erredFrameOnly = RequestedFrameQuality_erredFrameOnly; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RequestedFrameQuality_allFrames
@@ -103,7 +103,7 @@ const RequestedFrameQuality_allFrames = 2 satisfies RequestedFrameQuality; /* LO
  * @type {number}
  */
 export
-const allFrames = RequestedFrameQuality_allFrames satisfies RequestedFrameQuality; /* SHORT_NAMED_INTEGER_VALUE */
+const allFrames = RequestedFrameQuality_allFrames; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_RequestedFrameQuality: $.ASN1Decoder<RequestedFrameQuality> = $._decodeInteger;
 export const _encode_RequestedFrameQuality: $.ASN1Encoder<RequestedFrameQuality> = $._encodeInteger;
 

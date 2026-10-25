@@ -42,7 +42,7 @@ export const AuthenReasonSyntax_unknownUser = 0 satisfies AuthenReasonSyntax; /*
  * @constant
  * @type {number}
  */
-export const unknownUser = AuthenReasonSyntax_unknownUser satisfies AuthenReasonSyntax; /* SHORT_NAMED_INTEGER_VALUE */
+export const unknownUser = AuthenReasonSyntax_unknownUser; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AuthenReasonSyntax_incorrectPassword
@@ -56,7 +56,7 @@ export const AuthenReasonSyntax_incorrectPassword = 1 satisfies AuthenReasonSynt
  * @constant
  * @type {number}
  */
-export const incorrectPassword = AuthenReasonSyntax_incorrectPassword satisfies AuthenReasonSyntax; /* SHORT_NAMED_INTEGER_VALUE */
+export const incorrectPassword = AuthenReasonSyntax_incorrectPassword; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AuthenReasonSyntax_inaccessiblePassword
@@ -78,7 +78,7 @@ export const AuthenReasonSyntax_inaccessiblePassword = 2 satisfies AuthenReasonS
  * @constant
  * @type {number}
  */
-export const inaccessiblePassword = AuthenReasonSyntax_inaccessiblePassword satisfies AuthenReasonSyntax; /* SHORT_NAMED_INTEGER_VALUE */
+export const inaccessiblePassword = AuthenReasonSyntax_inaccessiblePassword; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AuthenReasonSyntax_passwordVerificationLoop
@@ -100,7 +100,7 @@ export const AuthenReasonSyntax_passwordVerificationLoop = 3 satisfies AuthenRea
  * @constant
  * @type {number}
  */
-export const passwordVerificationLoop = AuthenReasonSyntax_passwordVerificationLoop satisfies AuthenReasonSyntax; /* SHORT_NAMED_INTEGER_VALUE */
+export const passwordVerificationLoop = AuthenReasonSyntax_passwordVerificationLoop; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AuthenReasonSyntax_unrecognizedUser
@@ -122,7 +122,7 @@ export const AuthenReasonSyntax_unrecognizedUser = 4 satisfies AuthenReasonSynta
  * @constant
  * @type {number}
  */
-export const unrecognizedUser = AuthenReasonSyntax_unrecognizedUser satisfies AuthenReasonSyntax; /* SHORT_NAMED_INTEGER_VALUE */
+export const unrecognizedUser = AuthenReasonSyntax_unrecognizedUser; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_AuthenReasonSyntax = $._decodeInteger;

@@ -78,7 +78,7 @@ const CONTENTBMSCRecord_causeForRecClosing_normalRelease = 0 satisfies CONTENTBM
  * @type {number}
  */
 export
-const normalRelease = CONTENTBMSCRecord_causeForRecClosing_normalRelease satisfies CONTENTBMSCRecord_causeForRecClosing; /* SHORT_NAMED_INTEGER_VALUE */
+const normalRelease = CONTENTBMSCRecord_causeForRecClosing_normalRelease; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CONTENTBMSCRecord_causeForRecClosing_abnormalRelease
@@ -110,7 +110,7 @@ const CONTENTBMSCRecord_causeForRecClosing_abnormalRelease = 4 satisfies CONTENT
  * @type {number}
  */
 export
-const abnormalRelease = CONTENTBMSCRecord_causeForRecClosing_abnormalRelease satisfies CONTENTBMSCRecord_causeForRecClosing; /* SHORT_NAMED_INTEGER_VALUE */
+const abnormalRelease = CONTENTBMSCRecord_causeForRecClosing_abnormalRelease; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CONTENTBMSCRecord_causeForRecClosing_volumeLimit
@@ -142,7 +142,7 @@ const CONTENTBMSCRecord_causeForRecClosing_volumeLimit = 16 satisfies CONTENTBMS
  * @type {number}
  */
 export
-const volumeLimit = CONTENTBMSCRecord_causeForRecClosing_volumeLimit satisfies CONTENTBMSCRecord_causeForRecClosing; /* SHORT_NAMED_INTEGER_VALUE */
+const volumeLimit = CONTENTBMSCRecord_causeForRecClosing_volumeLimit; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CONTENTBMSCRecord_causeForRecClosing_timeLimit
@@ -174,7 +174,7 @@ const CONTENTBMSCRecord_causeForRecClosing_timeLimit = 17 satisfies CONTENTBMSCR
  * @type {number}
  */
 export
-const timeLimit = CONTENTBMSCRecord_causeForRecClosing_timeLimit satisfies CONTENTBMSCRecord_causeForRecClosing; /* SHORT_NAMED_INTEGER_VALUE */
+const timeLimit = CONTENTBMSCRecord_causeForRecClosing_timeLimit; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CONTENTBMSCRecord_causeForRecClosing_maxChangeCond
@@ -206,7 +206,7 @@ const CONTENTBMSCRecord_causeForRecClosing_maxChangeCond = 19 satisfies CONTENTB
  * @type {number}
  */
 export
-const maxChangeCond = CONTENTBMSCRecord_causeForRecClosing_maxChangeCond satisfies CONTENTBMSCRecord_causeForRecClosing; /* SHORT_NAMED_INTEGER_VALUE */
+const maxChangeCond = CONTENTBMSCRecord_causeForRecClosing_maxChangeCond; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CONTENTBMSCRecord_causeForRecClosing_managementIntervention
@@ -236,7 +236,7 @@ const CONTENTBMSCRecord_causeForRecClosing_managementIntervention = 20 satisfies
  * @type {number}
  */
 export
-const managementIntervention = CONTENTBMSCRecord_causeForRecClosing_managementIntervention satisfies CONTENTBMSCRecord_causeForRecClosing; /* SHORT_NAMED_INTEGER_VALUE */
+const managementIntervention = CONTENTBMSCRecord_causeForRecClosing_managementIntervention; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CONTENTBMSCRecord_causeForRecClosing_listofDownstreamNodeChange
@@ -270,7 +270,7 @@ const CONTENTBMSCRecord_causeForRecClosing_listofDownstreamNodeChange = 59 satis
  * @type {number}
  */
 export
-const listofDownstreamNodeChange = CONTENTBMSCRecord_causeForRecClosing_listofDownstreamNodeChange satisfies CONTENTBMSCRecord_causeForRecClosing; /* SHORT_NAMED_INTEGER_VALUE */
+const listofDownstreamNodeChange = CONTENTBMSCRecord_causeForRecClosing_listofDownstreamNodeChange; /* SHORT_NAMED_INTEGER_VALUE */
 
 export
 const _decode_CONTENTBMSCRecord_causeForRecClosing: $.ASN1Decoder<CONTENTBMSCRecord_causeForRecClosing> = $._decodeInteger;

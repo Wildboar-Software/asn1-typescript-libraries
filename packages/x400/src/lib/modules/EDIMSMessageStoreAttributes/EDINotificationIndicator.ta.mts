@@ -73,7 +73,7 @@ export const EDINotificationIndicator = _enum_for_EDINotificationIndicator;
  * @type {number}
  */
 export const EDINotificationIndicator_no_notification_sent =
-    EDINotificationIndicator.no_notification_sent satisfies EDINotificationIndicator; /* LONG_NAMED_ENUMERATED_VALUE */
+    EDINotificationIndicator.no_notification_sent; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary no_notification_sent
@@ -81,7 +81,7 @@ export const EDINotificationIndicator_no_notification_sent =
  * @type {number}
  */
 export const no_notification_sent =
-    EDINotificationIndicator.no_notification_sent satisfies EDINotificationIndicator; /* SHORT_NAMED_ENUMERATED_VALUE */
+    EDINotificationIndicator.no_notification_sent; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EDINotificationIndicator_pn_sent
@@ -89,7 +89,7 @@ export const no_notification_sent =
  * @type {number}
  */
 export const EDINotificationIndicator_pn_sent =
-    EDINotificationIndicator.pn_sent satisfies EDINotificationIndicator; /* LONG_NAMED_ENUMERATED_VALUE */
+    EDINotificationIndicator.pn_sent; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pn_sent
@@ -97,7 +97,7 @@ export const EDINotificationIndicator_pn_sent =
  * @type {number}
  */
 export const pn_sent =
-    EDINotificationIndicator.pn_sent satisfies EDINotificationIndicator; /* SHORT_NAMED_ENUMERATED_VALUE */
+    EDINotificationIndicator.pn_sent; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EDINotificationIndicator_nn_sent
@@ -105,7 +105,7 @@ export const pn_sent =
  * @type {number}
  */
 export const EDINotificationIndicator_nn_sent =
-    EDINotificationIndicator.nn_sent satisfies EDINotificationIndicator; /* LONG_NAMED_ENUMERATED_VALUE */
+    EDINotificationIndicator.nn_sent; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary nn_sent
@@ -113,7 +113,7 @@ export const EDINotificationIndicator_nn_sent =
  * @type {number}
  */
 export const nn_sent =
-    EDINotificationIndicator.nn_sent satisfies EDINotificationIndicator; /* SHORT_NAMED_ENUMERATED_VALUE */
+    EDINotificationIndicator.nn_sent; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EDINotificationIndicator_fn_sent
@@ -121,7 +121,7 @@ export const nn_sent =
  * @type {number}
  */
 export const EDINotificationIndicator_fn_sent =
-    EDINotificationIndicator.fn_sent satisfies EDINotificationIndicator; /* LONG_NAMED_ENUMERATED_VALUE */
+    EDINotificationIndicator.fn_sent; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary fn_sent
@@ -129,7 +129,7 @@ export const EDINotificationIndicator_fn_sent =
  * @type {number}
  */
 export const fn_sent =
-    EDINotificationIndicator.fn_sent satisfies EDINotificationIndicator; /* SHORT_NAMED_ENUMERATED_VALUE */
+    EDINotificationIndicator.fn_sent; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 export function _decode_EDINotificationIndicator(el: _Element): EDINotificationIndicator {

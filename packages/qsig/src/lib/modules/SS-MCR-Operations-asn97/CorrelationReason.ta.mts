@@ -49,7 +49,7 @@ const CorrelationReason_unknown = 0 satisfies CorrelationReason; /* LONG_NAMED_I
  * @type {number}
  */
 export
-const unknown = CorrelationReason_unknown satisfies CorrelationReason; /* SHORT_NAMED_INTEGER_VALUE */
+const unknown = CorrelationReason_unknown; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CorrelationReason_mCACommunication
@@ -71,7 +71,7 @@ const CorrelationReason_mCACommunication = 1 satisfies CorrelationReason; /* LON
  * @type {number}
  */
 export
-const mCACommunication = CorrelationReason_mCACommunication satisfies CorrelationReason; /* SHORT_NAMED_INTEGER_VALUE */
+const mCACommunication = CorrelationReason_mCACommunication; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CorrelationReason_cTIApplication
@@ -93,7 +93,7 @@ const CorrelationReason_cTIApplication = 2 satisfies CorrelationReason; /* LONG_
  * @type {number}
  */
 export
-const cTIApplication = CorrelationReason_cTIApplication satisfies CorrelationReason; /* SHORT_NAMED_INTEGER_VALUE */
+const cTIApplication = CorrelationReason_cTIApplication; /* SHORT_NAMED_INTEGER_VALUE */
 
 export
 const _decode_CorrelationReason = (el: _Element): CorrelationReason => {

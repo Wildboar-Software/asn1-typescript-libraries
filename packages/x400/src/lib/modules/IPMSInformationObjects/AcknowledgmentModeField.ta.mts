@@ -64,7 +64,7 @@ export const AcknowledgmentModeField = _enum_for_AcknowledgmentModeField;
  * @type {number}
  */
 export const AcknowledgmentModeField_manual =
-    AcknowledgmentModeField.manual satisfies AcknowledgmentModeField; /* LONG_NAMED_ENUMERATED_VALUE */
+    AcknowledgmentModeField.manual; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary manual
@@ -72,7 +72,7 @@ export const AcknowledgmentModeField_manual =
  * @type {number}
  */
 export const manual =
-    AcknowledgmentModeField.manual satisfies AcknowledgmentModeField; /* SHORT_NAMED_ENUMERATED_VALUE */
+    AcknowledgmentModeField.manual; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AcknowledgmentModeField_automatic
@@ -80,7 +80,7 @@ export const manual =
  * @type {number}
  */
 export const AcknowledgmentModeField_automatic =
-    AcknowledgmentModeField.automatic satisfies AcknowledgmentModeField; /* LONG_NAMED_ENUMERATED_VALUE */
+    AcknowledgmentModeField.automatic; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary automatic
@@ -88,7 +88,7 @@ export const AcknowledgmentModeField_automatic =
  * @type {number}
  */
 export const automatic =
-    AcknowledgmentModeField.automatic satisfies AcknowledgmentModeField; /* SHORT_NAMED_ENUMERATED_VALUE */
+    AcknowledgmentModeField.automatic; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 export function _decode_AcknowledgmentModeField(el: _Element): AcknowledgmentModeField {

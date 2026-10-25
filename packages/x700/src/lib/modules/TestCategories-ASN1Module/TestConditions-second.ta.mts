@@ -46,7 +46,7 @@ export const TestConditions_second_customerOverrideTest = 0 satisfies TestCondit
  * @constant
  * @type {number}
  */
-export const customerOverrideTest = TestConditions_second_customerOverrideTest satisfies TestConditions_second; /* SHORT_NAMED_INTEGER_VALUE */
+export const customerOverrideTest = TestConditions_second_customerOverrideTest; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TestConditions_second_noCustomerOverrideTest
@@ -66,7 +66,7 @@ export const TestConditions_second_noCustomerOverrideTest = 1 satisfies TestCond
  * @constant
  * @type {number}
  */
-export const noCustomerOverrideTest = TestConditions_second_noCustomerOverrideTest satisfies TestConditions_second; /* SHORT_NAMED_INTEGER_VALUE */
+export const noCustomerOverrideTest = TestConditions_second_noCustomerOverrideTest; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_TestConditions_second = $._decodeInteger;

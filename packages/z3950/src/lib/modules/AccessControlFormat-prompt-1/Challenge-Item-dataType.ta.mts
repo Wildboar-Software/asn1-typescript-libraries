@@ -51,7 +51,7 @@ const Challenge_Item_dataType_integer = 1 satisfies Challenge_Item_dataType; /* 
  * @type {number}
  */
 export
-const integer = Challenge_Item_dataType_integer satisfies Challenge_Item_dataType; /* SHORT_NAMED_INTEGER_VALUE */
+const integer = Challenge_Item_dataType_integer; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Challenge_Item_dataType_date
@@ -77,7 +77,7 @@ const Challenge_Item_dataType_date = 2 satisfies Challenge_Item_dataType; /* LON
  * @type {number}
  */
 export
-const date = Challenge_Item_dataType_date satisfies Challenge_Item_dataType; /* SHORT_NAMED_INTEGER_VALUE */
+const date = Challenge_Item_dataType_date; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Challenge_Item_dataType_float
@@ -101,7 +101,7 @@ const Challenge_Item_dataType_float = 3 satisfies Challenge_Item_dataType; /* LO
  * @type {number}
  */
 export
-const float = Challenge_Item_dataType_float satisfies Challenge_Item_dataType; /* SHORT_NAMED_INTEGER_VALUE */
+const float = Challenge_Item_dataType_float; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Challenge_Item_dataType_alphaNumeric
@@ -125,7 +125,7 @@ const Challenge_Item_dataType_alphaNumeric = 4 satisfies Challenge_Item_dataType
  * @type {number}
  */
 export
-const alphaNumeric = Challenge_Item_dataType_alphaNumeric satisfies Challenge_Item_dataType; /* SHORT_NAMED_INTEGER_VALUE */
+const alphaNumeric = Challenge_Item_dataType_alphaNumeric; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Challenge_Item_dataType_url_urn
@@ -149,7 +149,7 @@ const Challenge_Item_dataType_url_urn = 5 satisfies Challenge_Item_dataType; /* 
  * @type {number}
  */
 export
-const url_urn = Challenge_Item_dataType_url_urn satisfies Challenge_Item_dataType; /* SHORT_NAMED_INTEGER_VALUE */
+const url_urn = Challenge_Item_dataType_url_urn; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Challenge_Item_dataType_boolean_
@@ -173,7 +173,7 @@ const Challenge_Item_dataType_boolean_ = 6 satisfies Challenge_Item_dataType; /*
  * @type {number}
  */
 export
-const boolean_ = Challenge_Item_dataType_boolean_ satisfies Challenge_Item_dataType; /* SHORT_NAMED_INTEGER_VALUE */
+const boolean_ = Challenge_Item_dataType_boolean_; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_Challenge_Item_dataType: $.ASN1Decoder<Challenge_Item_dataType> = $._decodeInteger;
 export const _encode_Challenge_Item_dataType: $.ASN1Encoder<Challenge_Item_dataType> = $._encodeInteger;
 

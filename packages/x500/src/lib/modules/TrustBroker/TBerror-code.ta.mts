@@ -39,7 +39,7 @@ export type TBerror_code = _enum_for_TBerror_code | ENUMERATED;
  * @constant
  * @type {number}
  */
-export const TBerror_code_caCertInvalid = _enum_for_TBerror_code.caCertInvalid satisfies TBerror_code; /* LONG_NAMED_ENUMERATED_VALUE */
+export const TBerror_code_caCertInvalid = _enum_for_TBerror_code.caCertInvalid; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary caCertInvalid
@@ -50,7 +50,7 @@ export const TBerror_code_caCertInvalid = _enum_for_TBerror_code.caCertInvalid s
  * @constant
  * @type {number}
  */
-export const caCertInvalid = TBerror_code_caCertInvalid satisfies TBerror_code; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const caCertInvalid = TBerror_code_caCertInvalid; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TBerror_code_unknownCert
@@ -61,7 +61,7 @@ export const caCertInvalid = TBerror_code_caCertInvalid satisfies TBerror_code; 
  * @constant
  * @type {number}
  */
-export const TBerror_code_unknownCert = _enum_for_TBerror_code.unknownCert satisfies TBerror_code; /* LONG_NAMED_ENUMERATED_VALUE */
+export const TBerror_code_unknownCert = _enum_for_TBerror_code.unknownCert; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unknownCert
@@ -72,7 +72,7 @@ export const TBerror_code_unknownCert = _enum_for_TBerror_code.unknownCert satis
  * @constant
  * @type {number}
  */
-export const unknownCert = TBerror_code_unknownCert satisfies TBerror_code; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const unknownCert = TBerror_code_unknownCert; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TBerror_code_unknownCertStatus
@@ -83,7 +83,7 @@ export const unknownCert = TBerror_code_unknownCert satisfies TBerror_code; /* S
  * @constant
  * @type {number}
  */
-export const TBerror_code_unknownCertStatus = _enum_for_TBerror_code.unknownCertStatus satisfies TBerror_code; /* LONG_NAMED_ENUMERATED_VALUE */
+export const TBerror_code_unknownCertStatus = _enum_for_TBerror_code.unknownCertStatus; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unknownCertStatus
@@ -94,7 +94,7 @@ export const TBerror_code_unknownCertStatus = _enum_for_TBerror_code.unknownCert
  * @constant
  * @type {number}
  */
-export const unknownCertStatus = TBerror_code_unknownCertStatus satisfies TBerror_code; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const unknownCertStatus = TBerror_code_unknownCertStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TBerror_code_subjectCertRevoked
@@ -105,7 +105,7 @@ export const unknownCertStatus = TBerror_code_unknownCertStatus satisfies TBerro
  * @constant
  * @type {number}
  */
-export const TBerror_code_subjectCertRevoked = _enum_for_TBerror_code.subjectCertRevoked satisfies TBerror_code; /* LONG_NAMED_ENUMERATED_VALUE */
+export const TBerror_code_subjectCertRevoked = _enum_for_TBerror_code.subjectCertRevoked; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary subjectCertRevoked
@@ -116,7 +116,7 @@ export const TBerror_code_subjectCertRevoked = _enum_for_TBerror_code.subjectCer
  * @constant
  * @type {number}
  */
-export const subjectCertRevoked = TBerror_code_subjectCertRevoked satisfies TBerror_code; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const subjectCertRevoked = TBerror_code_subjectCertRevoked; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TBerror_code_incorrectCert
@@ -127,7 +127,7 @@ export const subjectCertRevoked = TBerror_code_subjectCertRevoked satisfies TBer
  * @constant
  * @type {number}
  */
-export const TBerror_code_incorrectCert = _enum_for_TBerror_code.incorrectCert satisfies TBerror_code; /* LONG_NAMED_ENUMERATED_VALUE */
+export const TBerror_code_incorrectCert = _enum_for_TBerror_code.incorrectCert; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary incorrectCert
@@ -138,7 +138,7 @@ export const TBerror_code_incorrectCert = _enum_for_TBerror_code.incorrectCert s
  * @constant
  * @type {number}
  */
-export const incorrectCert = TBerror_code_incorrectCert satisfies TBerror_code; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const incorrectCert = TBerror_code_incorrectCert; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TBerror_code_contractExpired
@@ -149,7 +149,7 @@ export const incorrectCert = TBerror_code_incorrectCert satisfies TBerror_code; 
  * @constant
  * @type {number}
  */
-export const TBerror_code_contractExpired = _enum_for_TBerror_code.contractExpired satisfies TBerror_code; /* LONG_NAMED_ENUMERATED_VALUE */
+export const TBerror_code_contractExpired = _enum_for_TBerror_code.contractExpired; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary contractExpired
@@ -160,7 +160,7 @@ export const TBerror_code_contractExpired = _enum_for_TBerror_code.contractExpir
  * @constant
  * @type {number}
  */
-export const contractExpired = TBerror_code_contractExpired satisfies TBerror_code; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const contractExpired = TBerror_code_contractExpired; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TBerror_code_pathValidationFailed
@@ -171,7 +171,7 @@ export const contractExpired = TBerror_code_contractExpired satisfies TBerror_co
  * @constant
  * @type {number}
  */
-export const TBerror_code_pathValidationFailed = _enum_for_TBerror_code.pathValidationFailed satisfies TBerror_code; /* LONG_NAMED_ENUMERATED_VALUE */
+export const TBerror_code_pathValidationFailed = _enum_for_TBerror_code.pathValidationFailed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pathValidationFailed
@@ -182,7 +182,7 @@ export const TBerror_code_pathValidationFailed = _enum_for_TBerror_code.pathVali
  * @constant
  * @type {number}
  */
-export const pathValidationFailed = TBerror_code_pathValidationFailed satisfies TBerror_code; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const pathValidationFailed = TBerror_code_pathValidationFailed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TBerror_code_timeOut
@@ -193,7 +193,7 @@ export const pathValidationFailed = TBerror_code_pathValidationFailed satisfies 
  * @constant
  * @type {number}
  */
-export const TBerror_code_timeOut = _enum_for_TBerror_code.timeOut satisfies TBerror_code; /* LONG_NAMED_ENUMERATED_VALUE */
+export const TBerror_code_timeOut = _enum_for_TBerror_code.timeOut; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary timeOut
@@ -204,7 +204,7 @@ export const TBerror_code_timeOut = _enum_for_TBerror_code.timeOut satisfies TBe
  * @constant
  * @type {number}
  */
-export const timeOut = TBerror_code_timeOut satisfies TBerror_code; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const timeOut = TBerror_code_timeOut; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TBerror_code_other
@@ -215,7 +215,7 @@ export const timeOut = TBerror_code_timeOut satisfies TBerror_code; /* SHORT_NAM
  * @constant
  * @type {number}
  */
-export const TBerror_code_other = _enum_for_TBerror_code.other satisfies TBerror_code; /* LONG_NAMED_ENUMERATED_VALUE */
+export const TBerror_code_other = _enum_for_TBerror_code.other; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary other
@@ -226,7 +226,7 @@ export const TBerror_code_other = _enum_for_TBerror_code.other satisfies TBerror
  * @constant
  * @type {number}
  */
-export const other = TBerror_code_other satisfies TBerror_code; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const other = TBerror_code_other; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 export const _decode_TBerror_code = $._decodeEnumerated;

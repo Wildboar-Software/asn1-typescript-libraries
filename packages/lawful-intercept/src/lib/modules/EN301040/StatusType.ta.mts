@@ -144,7 +144,7 @@ const StatusType = _enum_for_StatusType;
  * @type {number}
  */
 export
-const StatusType_networkFullyAvailable = StatusType.networkFullyAvailable satisfies StatusType; /* LONG_NAMED_ENUMERATED_VALUE */
+const StatusType_networkFullyAvailable = StatusType.networkFullyAvailable; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary networkFullyAvailable
@@ -159,7 +159,7 @@ const StatusType_networkFullyAvailable = StatusType.networkFullyAvailable satisf
  * @type {number}
  */
 export
-const networkFullyAvailable = StatusType.networkFullyAvailable satisfies StatusType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const networkFullyAvailable = StatusType.networkFullyAvailable; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary StatusType_networkErrorsAffectingIntercept
@@ -176,7 +176,7 @@ const networkFullyAvailable = StatusType.networkFullyAvailable satisfies StatusT
  * @type {number}
  */
 export
-const StatusType_networkErrorsAffectingIntercept = StatusType.networkErrorsAffectingIntercept satisfies StatusType; /* LONG_NAMED_ENUMERATED_VALUE */
+const StatusType_networkErrorsAffectingIntercept = StatusType.networkErrorsAffectingIntercept; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary networkErrorsAffectingIntercept
@@ -193,7 +193,7 @@ const StatusType_networkErrorsAffectingIntercept = StatusType.networkErrorsAffec
  * @type {number}
  */
 export
-const networkErrorsAffectingIntercept = StatusType.networkErrorsAffectingIntercept satisfies StatusType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const networkErrorsAffectingIntercept = StatusType.networkErrorsAffectingIntercept; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary StatusType_reconfigurationInProgress
@@ -209,7 +209,7 @@ const networkErrorsAffectingIntercept = StatusType.networkErrorsAffectingInterce
  * @type {number}
  */
 export
-const StatusType_reconfigurationInProgress = StatusType.reconfigurationInProgress satisfies StatusType; /* LONG_NAMED_ENUMERATED_VALUE */
+const StatusType_reconfigurationInProgress = StatusType.reconfigurationInProgress; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary reconfigurationInProgress
@@ -225,7 +225,7 @@ const StatusType_reconfigurationInProgress = StatusType.reconfigurationInProgres
  * @type {number}
  */
 export
-const reconfigurationInProgress = StatusType.reconfigurationInProgress satisfies StatusType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const reconfigurationInProgress = StatusType.reconfigurationInProgress; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary StatusType_sessionExpired
@@ -241,7 +241,7 @@ const reconfigurationInProgress = StatusType.reconfigurationInProgress satisfies
  * @type {number}
  */
 export
-const StatusType_sessionExpired = StatusType.sessionExpired satisfies StatusType; /* LONG_NAMED_ENUMERATED_VALUE */
+const StatusType_sessionExpired = StatusType.sessionExpired; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sessionExpired
@@ -257,7 +257,7 @@ const StatusType_sessionExpired = StatusType.sessionExpired satisfies StatusType
  * @type {number}
  */
 export
-const sessionExpired = StatusType.sessionExpired satisfies StatusType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sessionExpired = StatusType.sessionExpired; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary StatusType_gatewayServicesUnavailable
@@ -273,7 +273,7 @@ const sessionExpired = StatusType.sessionExpired satisfies StatusType; /* SHORT_
  * @type {number}
  */
 export
-const StatusType_gatewayServicesUnavailable = StatusType.gatewayServicesUnavailable satisfies StatusType; /* LONG_NAMED_ENUMERATED_VALUE */
+const StatusType_gatewayServicesUnavailable = StatusType.gatewayServicesUnavailable; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary gatewayServicesUnavailable
@@ -289,7 +289,7 @@ const StatusType_gatewayServicesUnavailable = StatusType.gatewayServicesUnavaila
  * @type {number}
  */
 export
-const gatewayServicesUnavailable = StatusType.gatewayServicesUnavailable satisfies StatusType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const gatewayServicesUnavailable = StatusType.gatewayServicesUnavailable; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_StatusType: $.ASN1Decoder<StatusType> = $._decodeEnumerated;
 export const _encode_StatusType: $.ASN1Encoder<StatusType> = $._encodeEnumerated;
 

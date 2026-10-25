@@ -67,7 +67,7 @@ export const ImportanceField = _enum_for_ImportanceField;
  * @type {number}
  */
 export const ImportanceField_low =
-    ImportanceField.low satisfies ImportanceField; /* LONG_NAMED_ENUMERATED_VALUE */
+    ImportanceField.low; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary low
@@ -75,7 +75,7 @@ export const ImportanceField_low =
  * @type {number}
  */
 export const low =
-    ImportanceField.low satisfies ImportanceField; /* SHORT_NAMED_ENUMERATED_VALUE */
+    ImportanceField.low; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ImportanceField_normal
@@ -83,7 +83,7 @@ export const low =
  * @type {number}
  */
 export const ImportanceField_normal =
-    ImportanceField.normal satisfies ImportanceField; /* LONG_NAMED_ENUMERATED_VALUE */
+    ImportanceField.normal; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary normal
@@ -91,7 +91,7 @@ export const ImportanceField_normal =
  * @type {number}
  */
 export const normal =
-    ImportanceField.normal satisfies ImportanceField; /* SHORT_NAMED_ENUMERATED_VALUE */
+    ImportanceField.normal; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ImportanceField_high
@@ -99,7 +99,7 @@ export const normal =
  * @type {number}
  */
 export const ImportanceField_high =
-    ImportanceField.high satisfies ImportanceField; /* LONG_NAMED_ENUMERATED_VALUE */
+    ImportanceField.high; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary high
@@ -107,7 +107,7 @@ export const ImportanceField_high =
  * @type {number}
  */
 export const high =
-    ImportanceField.high satisfies ImportanceField; /* SHORT_NAMED_ENUMERATED_VALUE */
+    ImportanceField.high; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 export function _decode_ImportanceField(el: _Element): ImportanceField {

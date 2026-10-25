@@ -51,7 +51,7 @@ const ProfileClass_test = 0 satisfies ProfileClass; /* LONG_NAMED_INTEGER_VALUE 
  * @type {number}
  */
 export
-const test = ProfileClass_test satisfies ProfileClass; /* SHORT_NAMED_INTEGER_VALUE */
+const test = ProfileClass_test; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProfileClass_provisioning
@@ -79,7 +79,7 @@ const ProfileClass_provisioning = 1 satisfies ProfileClass; /* LONG_NAMED_INTEGE
  * @type {number}
  */
 export
-const provisioning = ProfileClass_provisioning satisfies ProfileClass; /* SHORT_NAMED_INTEGER_VALUE */
+const provisioning = ProfileClass_provisioning; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProfileClass_operational
@@ -103,7 +103,7 @@ const ProfileClass_operational = 2 satisfies ProfileClass; /* LONG_NAMED_INTEGER
  * @type {number}
  */
 export
-const operational = ProfileClass_operational satisfies ProfileClass; /* SHORT_NAMED_INTEGER_VALUE */
+const operational = ProfileClass_operational; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_ProfileClass = $._decodeInteger;
 export const _encode_ProfileClass = $._encodeInteger;
 

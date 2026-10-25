@@ -65,7 +65,7 @@ type GroupAuthRule = _enum_for_GroupAuthRule | ENUMERATED;
  * @type {number}
  */
 export
-const GroupAuthRule_allow_Initiating_PtcSession = _enum_for_GroupAuthRule.allow_Initiating_PtcSession satisfies GroupAuthRule; /* LONG_NAMED_ENUMERATED_VALUE */
+const GroupAuthRule_allow_Initiating_PtcSession = _enum_for_GroupAuthRule.allow_Initiating_PtcSession; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary allow_Initiating_PtcSession
@@ -77,7 +77,7 @@ const GroupAuthRule_allow_Initiating_PtcSession = _enum_for_GroupAuthRule.allow_
  * @type {number}
  */
 export
-const allow_Initiating_PtcSession = GroupAuthRule_allow_Initiating_PtcSession satisfies GroupAuthRule; /* SHORT_NAMED_ENUMERATED_VALUE */
+const allow_Initiating_PtcSession = GroupAuthRule_allow_Initiating_PtcSession; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary GroupAuthRule_block_Initiating_PtcSession
@@ -89,7 +89,7 @@ const allow_Initiating_PtcSession = GroupAuthRule_allow_Initiating_PtcSession sa
  * @type {number}
  */
 export
-const GroupAuthRule_block_Initiating_PtcSession = _enum_for_GroupAuthRule.block_Initiating_PtcSession satisfies GroupAuthRule; /* LONG_NAMED_ENUMERATED_VALUE */
+const GroupAuthRule_block_Initiating_PtcSession = _enum_for_GroupAuthRule.block_Initiating_PtcSession; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary block_Initiating_PtcSession
@@ -101,7 +101,7 @@ const GroupAuthRule_block_Initiating_PtcSession = _enum_for_GroupAuthRule.block_
  * @type {number}
  */
 export
-const block_Initiating_PtcSession = GroupAuthRule_block_Initiating_PtcSession satisfies GroupAuthRule; /* SHORT_NAMED_ENUMERATED_VALUE */
+const block_Initiating_PtcSession = GroupAuthRule_block_Initiating_PtcSession; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary GroupAuthRule_allow_Joining_PtcSession
@@ -113,7 +113,7 @@ const block_Initiating_PtcSession = GroupAuthRule_block_Initiating_PtcSession sa
  * @type {number}
  */
 export
-const GroupAuthRule_allow_Joining_PtcSession = _enum_for_GroupAuthRule.allow_Joining_PtcSession satisfies GroupAuthRule; /* LONG_NAMED_ENUMERATED_VALUE */
+const GroupAuthRule_allow_Joining_PtcSession = _enum_for_GroupAuthRule.allow_Joining_PtcSession; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary allow_Joining_PtcSession
@@ -125,7 +125,7 @@ const GroupAuthRule_allow_Joining_PtcSession = _enum_for_GroupAuthRule.allow_Joi
  * @type {number}
  */
 export
-const allow_Joining_PtcSession = GroupAuthRule_allow_Joining_PtcSession satisfies GroupAuthRule; /* SHORT_NAMED_ENUMERATED_VALUE */
+const allow_Joining_PtcSession = GroupAuthRule_allow_Joining_PtcSession; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary GroupAuthRule_block_Joining_PtcSession
@@ -137,7 +137,7 @@ const allow_Joining_PtcSession = GroupAuthRule_allow_Joining_PtcSession satisfie
  * @type {number}
  */
 export
-const GroupAuthRule_block_Joining_PtcSession = _enum_for_GroupAuthRule.block_Joining_PtcSession satisfies GroupAuthRule; /* LONG_NAMED_ENUMERATED_VALUE */
+const GroupAuthRule_block_Joining_PtcSession = _enum_for_GroupAuthRule.block_Joining_PtcSession; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary block_Joining_PtcSession
@@ -149,7 +149,7 @@ const GroupAuthRule_block_Joining_PtcSession = _enum_for_GroupAuthRule.block_Joi
  * @type {number}
  */
 export
-const block_Joining_PtcSession = GroupAuthRule_block_Joining_PtcSession satisfies GroupAuthRule; /* SHORT_NAMED_ENUMERATED_VALUE */
+const block_Joining_PtcSession = GroupAuthRule_block_Joining_PtcSession; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary GroupAuthRule_allow_Add_Participants
@@ -161,7 +161,7 @@ const block_Joining_PtcSession = GroupAuthRule_block_Joining_PtcSession satisfie
  * @type {number}
  */
 export
-const GroupAuthRule_allow_Add_Participants = _enum_for_GroupAuthRule.allow_Add_Participants satisfies GroupAuthRule; /* LONG_NAMED_ENUMERATED_VALUE */
+const GroupAuthRule_allow_Add_Participants = _enum_for_GroupAuthRule.allow_Add_Participants; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary allow_Add_Participants
@@ -173,7 +173,7 @@ const GroupAuthRule_allow_Add_Participants = _enum_for_GroupAuthRule.allow_Add_P
  * @type {number}
  */
 export
-const allow_Add_Participants = GroupAuthRule_allow_Add_Participants satisfies GroupAuthRule; /* SHORT_NAMED_ENUMERATED_VALUE */
+const allow_Add_Participants = GroupAuthRule_allow_Add_Participants; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary GroupAuthRule_block_Add_Participants
@@ -185,7 +185,7 @@ const allow_Add_Participants = GroupAuthRule_allow_Add_Participants satisfies Gr
  * @type {number}
  */
 export
-const GroupAuthRule_block_Add_Participants = _enum_for_GroupAuthRule.block_Add_Participants satisfies GroupAuthRule; /* LONG_NAMED_ENUMERATED_VALUE */
+const GroupAuthRule_block_Add_Participants = _enum_for_GroupAuthRule.block_Add_Participants; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary block_Add_Participants
@@ -197,7 +197,7 @@ const GroupAuthRule_block_Add_Participants = _enum_for_GroupAuthRule.block_Add_P
  * @type {number}
  */
 export
-const block_Add_Participants = GroupAuthRule_block_Add_Participants satisfies GroupAuthRule; /* SHORT_NAMED_ENUMERATED_VALUE */
+const block_Add_Participants = GroupAuthRule_block_Add_Participants; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary GroupAuthRule_allow_Subscription_PtcSession_State
@@ -209,7 +209,7 @@ const block_Add_Participants = GroupAuthRule_block_Add_Participants satisfies Gr
  * @type {number}
  */
 export
-const GroupAuthRule_allow_Subscription_PtcSession_State = _enum_for_GroupAuthRule.allow_Subscription_PtcSession_State satisfies GroupAuthRule; /* LONG_NAMED_ENUMERATED_VALUE */
+const GroupAuthRule_allow_Subscription_PtcSession_State = _enum_for_GroupAuthRule.allow_Subscription_PtcSession_State; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary allow_Subscription_PtcSession_State
@@ -221,7 +221,7 @@ const GroupAuthRule_allow_Subscription_PtcSession_State = _enum_for_GroupAuthRul
  * @type {number}
  */
 export
-const allow_Subscription_PtcSession_State = GroupAuthRule_allow_Subscription_PtcSession_State satisfies GroupAuthRule; /* SHORT_NAMED_ENUMERATED_VALUE */
+const allow_Subscription_PtcSession_State = GroupAuthRule_allow_Subscription_PtcSession_State; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary GroupAuthRule_block_Subscription_PtcSession_State
@@ -233,7 +233,7 @@ const allow_Subscription_PtcSession_State = GroupAuthRule_allow_Subscription_Ptc
  * @type {number}
  */
 export
-const GroupAuthRule_block_Subscription_PtcSession_State = _enum_for_GroupAuthRule.block_Subscription_PtcSession_State satisfies GroupAuthRule; /* LONG_NAMED_ENUMERATED_VALUE */
+const GroupAuthRule_block_Subscription_PtcSession_State = _enum_for_GroupAuthRule.block_Subscription_PtcSession_State; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary block_Subscription_PtcSession_State
@@ -245,7 +245,7 @@ const GroupAuthRule_block_Subscription_PtcSession_State = _enum_for_GroupAuthRul
  * @type {number}
  */
 export
-const block_Subscription_PtcSession_State = GroupAuthRule_block_Subscription_PtcSession_State satisfies GroupAuthRule; /* SHORT_NAMED_ENUMERATED_VALUE */
+const block_Subscription_PtcSession_State = GroupAuthRule_block_Subscription_PtcSession_State; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary GroupAuthRule_allow_Anonymity
@@ -257,7 +257,7 @@ const block_Subscription_PtcSession_State = GroupAuthRule_block_Subscription_Ptc
  * @type {number}
  */
 export
-const GroupAuthRule_allow_Anonymity = _enum_for_GroupAuthRule.allow_Anonymity satisfies GroupAuthRule; /* LONG_NAMED_ENUMERATED_VALUE */
+const GroupAuthRule_allow_Anonymity = _enum_for_GroupAuthRule.allow_Anonymity; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary allow_Anonymity
@@ -269,7 +269,7 @@ const GroupAuthRule_allow_Anonymity = _enum_for_GroupAuthRule.allow_Anonymity sa
  * @type {number}
  */
 export
-const allow_Anonymity = GroupAuthRule_allow_Anonymity satisfies GroupAuthRule; /* SHORT_NAMED_ENUMERATED_VALUE */
+const allow_Anonymity = GroupAuthRule_allow_Anonymity; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary GroupAuthRule_forbid_Anonymity
@@ -281,7 +281,7 @@ const allow_Anonymity = GroupAuthRule_allow_Anonymity satisfies GroupAuthRule; /
  * @type {number}
  */
 export
-const GroupAuthRule_forbid_Anonymity = _enum_for_GroupAuthRule.forbid_Anonymity satisfies GroupAuthRule; /* LONG_NAMED_ENUMERATED_VALUE */
+const GroupAuthRule_forbid_Anonymity = _enum_for_GroupAuthRule.forbid_Anonymity; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary forbid_Anonymity
@@ -293,7 +293,7 @@ const GroupAuthRule_forbid_Anonymity = _enum_for_GroupAuthRule.forbid_Anonymity 
  * @type {number}
  */
 export
-const forbid_Anonymity = GroupAuthRule_forbid_Anonymity satisfies GroupAuthRule; /* SHORT_NAMED_ENUMERATED_VALUE */
+const forbid_Anonymity = GroupAuthRule_forbid_Anonymity; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_GroupAuthRule: $.ASN1Decoder<GroupAuthRule> = $._decodeEnumerated;
 export const _encode_GroupAuthRule: $.ASN1Encoder<GroupAuthRule> = $._encodeEnumerated;
 

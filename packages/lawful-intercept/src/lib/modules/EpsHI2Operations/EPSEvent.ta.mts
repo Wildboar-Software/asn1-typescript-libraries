@@ -151,7 +151,7 @@ type EPSEvent = _enum_for_EPSEvent | ENUMERATED;
  * @type {number}
  */
 export
-const EPSEvent_pDPContextActivation = _enum_for_EPSEvent.pDPContextActivation satisfies EPSEvent; /* LONG_NAMED_ENUMERATED_VALUE */
+const EPSEvent_pDPContextActivation = _enum_for_EPSEvent.pDPContextActivation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pDPContextActivation
@@ -164,7 +164,7 @@ const EPSEvent_pDPContextActivation = _enum_for_EPSEvent.pDPContextActivation sa
  * @type {number}
  */
 export
-const pDPContextActivation = EPSEvent_pDPContextActivation satisfies EPSEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pDPContextActivation = EPSEvent_pDPContextActivation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EPSEvent_startOfInterceptionWithPDPContextActive
@@ -179,7 +179,7 @@ const pDPContextActivation = EPSEvent_pDPContextActivation satisfies EPSEvent; /
  * @type {number}
  */
 export
-const EPSEvent_startOfInterceptionWithPDPContextActive = _enum_for_EPSEvent.startOfInterceptionWithPDPContextActive satisfies EPSEvent; /* LONG_NAMED_ENUMERATED_VALUE */
+const EPSEvent_startOfInterceptionWithPDPContextActive = _enum_for_EPSEvent.startOfInterceptionWithPDPContextActive; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary startOfInterceptionWithPDPContextActive
@@ -192,7 +192,7 @@ const EPSEvent_startOfInterceptionWithPDPContextActive = _enum_for_EPSEvent.star
  * @type {number}
  */
 export
-const startOfInterceptionWithPDPContextActive = EPSEvent_startOfInterceptionWithPDPContextActive satisfies EPSEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const startOfInterceptionWithPDPContextActive = EPSEvent_startOfInterceptionWithPDPContextActive; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EPSEvent_pDPContextDeactivation
@@ -206,7 +206,7 @@ const startOfInterceptionWithPDPContextActive = EPSEvent_startOfInterceptionWith
  * @type {number}
  */
 export
-const EPSEvent_pDPContextDeactivation = _enum_for_EPSEvent.pDPContextDeactivation satisfies EPSEvent; /* LONG_NAMED_ENUMERATED_VALUE */
+const EPSEvent_pDPContextDeactivation = _enum_for_EPSEvent.pDPContextDeactivation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pDPContextDeactivation
@@ -218,7 +218,7 @@ const EPSEvent_pDPContextDeactivation = _enum_for_EPSEvent.pDPContextDeactivatio
  * @type {number}
  */
 export
-const pDPContextDeactivation = EPSEvent_pDPContextDeactivation satisfies EPSEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pDPContextDeactivation = EPSEvent_pDPContextDeactivation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EPSEvent_gPRSAttach
@@ -233,7 +233,7 @@ const pDPContextDeactivation = EPSEvent_pDPContextDeactivation satisfies EPSEven
  * @type {number}
  */
 export
-const EPSEvent_gPRSAttach = _enum_for_EPSEvent.gPRSAttach satisfies EPSEvent; /* LONG_NAMED_ENUMERATED_VALUE */
+const EPSEvent_gPRSAttach = _enum_for_EPSEvent.gPRSAttach; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary gPRSAttach
@@ -246,7 +246,7 @@ const EPSEvent_gPRSAttach = _enum_for_EPSEvent.gPRSAttach satisfies EPSEvent; /*
  * @type {number}
  */
 export
-const gPRSAttach = EPSEvent_gPRSAttach satisfies EPSEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const gPRSAttach = EPSEvent_gPRSAttach; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EPSEvent_gPRSDetach
@@ -260,7 +260,7 @@ const gPRSAttach = EPSEvent_gPRSAttach satisfies EPSEvent; /* SHORT_NAMED_ENUMER
  * @type {number}
  */
 export
-const EPSEvent_gPRSDetach = _enum_for_EPSEvent.gPRSDetach satisfies EPSEvent; /* LONG_NAMED_ENUMERATED_VALUE */
+const EPSEvent_gPRSDetach = _enum_for_EPSEvent.gPRSDetach; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary gPRSDetach
@@ -273,7 +273,7 @@ const EPSEvent_gPRSDetach = _enum_for_EPSEvent.gPRSDetach satisfies EPSEvent; /*
  * @type {number}
  */
 export
-const gPRSDetach = EPSEvent_gPRSDetach satisfies EPSEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const gPRSDetach = EPSEvent_gPRSDetach; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EPSEvent_locationInfoUpdate
@@ -289,7 +289,7 @@ const gPRSDetach = EPSEvent_gPRSDetach satisfies EPSEvent; /* SHORT_NAMED_ENUMER
  * @type {number}
  */
 export
-const EPSEvent_locationInfoUpdate = _enum_for_EPSEvent.locationInfoUpdate satisfies EPSEvent; /* LONG_NAMED_ENUMERATED_VALUE */
+const EPSEvent_locationInfoUpdate = _enum_for_EPSEvent.locationInfoUpdate; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary locationInfoUpdate
@@ -303,7 +303,7 @@ const EPSEvent_locationInfoUpdate = _enum_for_EPSEvent.locationInfoUpdate satisf
  * @type {number}
  */
 export
-const locationInfoUpdate = EPSEvent_locationInfoUpdate satisfies EPSEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const locationInfoUpdate = EPSEvent_locationInfoUpdate; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EPSEvent_sMS
@@ -317,7 +317,7 @@ const locationInfoUpdate = EPSEvent_locationInfoUpdate satisfies EPSEvent; /* SH
  * @type {number}
  */
 export
-const EPSEvent_sMS = _enum_for_EPSEvent.sMS satisfies EPSEvent; /* LONG_NAMED_ENUMERATED_VALUE */
+const EPSEvent_sMS = _enum_for_EPSEvent.sMS; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sMS
@@ -330,7 +330,7 @@ const EPSEvent_sMS = _enum_for_EPSEvent.sMS satisfies EPSEvent; /* LONG_NAMED_EN
  * @type {number}
  */
 export
-const sMS = EPSEvent_sMS satisfies EPSEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sMS = EPSEvent_sMS; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EPSEvent_pDPContextModification
@@ -344,7 +344,7 @@ const sMS = EPSEvent_sMS satisfies EPSEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const EPSEvent_pDPContextModification = _enum_for_EPSEvent.pDPContextModification satisfies EPSEvent; /* LONG_NAMED_ENUMERATED_VALUE */
+const EPSEvent_pDPContextModification = _enum_for_EPSEvent.pDPContextModification; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pDPContextModification
@@ -356,7 +356,7 @@ const EPSEvent_pDPContextModification = _enum_for_EPSEvent.pDPContextModificatio
  * @type {number}
  */
 export
-const pDPContextModification = EPSEvent_pDPContextModification satisfies EPSEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pDPContextModification = EPSEvent_pDPContextModification; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EPSEvent_servingSystem
@@ -372,7 +372,7 @@ const pDPContextModification = EPSEvent_pDPContextModification satisfies EPSEven
  * @type {number}
  */
 export
-const EPSEvent_servingSystem = _enum_for_EPSEvent.servingSystem satisfies EPSEvent; /* LONG_NAMED_ENUMERATED_VALUE */
+const EPSEvent_servingSystem = _enum_for_EPSEvent.servingSystem; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary servingSystem
@@ -386,7 +386,7 @@ const EPSEvent_servingSystem = _enum_for_EPSEvent.servingSystem satisfies EPSEve
  * @type {number}
  */
 export
-const servingSystem = EPSEvent_servingSystem satisfies EPSEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const servingSystem = EPSEvent_servingSystem; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EPSEvent_startOfInterceptionWithMSAttached
@@ -401,7 +401,7 @@ const servingSystem = EPSEvent_servingSystem satisfies EPSEvent; /* SHORT_NAMED_
  * @type {number}
  */
 export
-const EPSEvent_startOfInterceptionWithMSAttached = _enum_for_EPSEvent.startOfInterceptionWithMSAttached satisfies EPSEvent; /* LONG_NAMED_ENUMERATED_VALUE */
+const EPSEvent_startOfInterceptionWithMSAttached = _enum_for_EPSEvent.startOfInterceptionWithMSAttached; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary startOfInterceptionWithMSAttached
@@ -414,7 +414,7 @@ const EPSEvent_startOfInterceptionWithMSAttached = _enum_for_EPSEvent.startOfInt
  * @type {number}
  */
 export
-const startOfInterceptionWithMSAttached = EPSEvent_startOfInterceptionWithMSAttached satisfies EPSEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const startOfInterceptionWithMSAttached = EPSEvent_startOfInterceptionWithMSAttached; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EPSEvent_e_UTRANAttach
@@ -428,7 +428,7 @@ const startOfInterceptionWithMSAttached = EPSEvent_startOfInterceptionWithMSAtta
  * @type {number}
  */
 export
-const EPSEvent_e_UTRANAttach = _enum_for_EPSEvent.e_UTRANAttach satisfies EPSEvent; /* LONG_NAMED_ENUMERATED_VALUE */
+const EPSEvent_e_UTRANAttach = _enum_for_EPSEvent.e_UTRANAttach; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary e_UTRANAttach
@@ -441,7 +441,7 @@ const EPSEvent_e_UTRANAttach = _enum_for_EPSEvent.e_UTRANAttach satisfies EPSEve
  * @type {number}
  */
 export
-const e_UTRANAttach = EPSEvent_e_UTRANAttach satisfies EPSEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const e_UTRANAttach = EPSEvent_e_UTRANAttach; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EPSEvent_e_UTRANDetach
@@ -454,7 +454,7 @@ const e_UTRANAttach = EPSEvent_e_UTRANAttach satisfies EPSEvent; /* SHORT_NAMED_
  * @type {number}
  */
 export
-const EPSEvent_e_UTRANDetach = _enum_for_EPSEvent.e_UTRANDetach satisfies EPSEvent; /* LONG_NAMED_ENUMERATED_VALUE */
+const EPSEvent_e_UTRANDetach = _enum_for_EPSEvent.e_UTRANDetach; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary e_UTRANDetach
@@ -466,7 +466,7 @@ const EPSEvent_e_UTRANDetach = _enum_for_EPSEvent.e_UTRANDetach satisfies EPSEve
  * @type {number}
  */
 export
-const e_UTRANDetach = EPSEvent_e_UTRANDetach satisfies EPSEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const e_UTRANDetach = EPSEvent_e_UTRANDetach; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EPSEvent_bearerActivation
@@ -479,7 +479,7 @@ const e_UTRANDetach = EPSEvent_e_UTRANDetach satisfies EPSEvent; /* SHORT_NAMED_
  * @type {number}
  */
 export
-const EPSEvent_bearerActivation = _enum_for_EPSEvent.bearerActivation satisfies EPSEvent; /* LONG_NAMED_ENUMERATED_VALUE */
+const EPSEvent_bearerActivation = _enum_for_EPSEvent.bearerActivation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary bearerActivation
@@ -491,7 +491,7 @@ const EPSEvent_bearerActivation = _enum_for_EPSEvent.bearerActivation satisfies 
  * @type {number}
  */
 export
-const bearerActivation = EPSEvent_bearerActivation satisfies EPSEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const bearerActivation = EPSEvent_bearerActivation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EPSEvent_startOfInterceptionWithActiveBearer
@@ -507,7 +507,7 @@ const bearerActivation = EPSEvent_bearerActivation satisfies EPSEvent; /* SHORT_
  * @type {number}
  */
 export
-const EPSEvent_startOfInterceptionWithActiveBearer = _enum_for_EPSEvent.startOfInterceptionWithActiveBearer satisfies EPSEvent; /* LONG_NAMED_ENUMERATED_VALUE */
+const EPSEvent_startOfInterceptionWithActiveBearer = _enum_for_EPSEvent.startOfInterceptionWithActiveBearer; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary startOfInterceptionWithActiveBearer
@@ -520,7 +520,7 @@ const EPSEvent_startOfInterceptionWithActiveBearer = _enum_for_EPSEvent.startOfI
  * @type {number}
  */
 export
-const startOfInterceptionWithActiveBearer = EPSEvent_startOfInterceptionWithActiveBearer satisfies EPSEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const startOfInterceptionWithActiveBearer = EPSEvent_startOfInterceptionWithActiveBearer; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EPSEvent_bearerModification
@@ -532,7 +532,7 @@ const startOfInterceptionWithActiveBearer = EPSEvent_startOfInterceptionWithActi
  * @type {number}
  */
 export
-const EPSEvent_bearerModification = _enum_for_EPSEvent.bearerModification satisfies EPSEvent; /* LONG_NAMED_ENUMERATED_VALUE */
+const EPSEvent_bearerModification = _enum_for_EPSEvent.bearerModification; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary bearerModification
@@ -544,7 +544,7 @@ const EPSEvent_bearerModification = _enum_for_EPSEvent.bearerModification satisf
  * @type {number}
  */
 export
-const bearerModification = EPSEvent_bearerModification satisfies EPSEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const bearerModification = EPSEvent_bearerModification; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EPSEvent_bearerDeactivation
@@ -556,7 +556,7 @@ const bearerModification = EPSEvent_bearerModification satisfies EPSEvent; /* SH
  * @type {number}
  */
 export
-const EPSEvent_bearerDeactivation = _enum_for_EPSEvent.bearerDeactivation satisfies EPSEvent; /* LONG_NAMED_ENUMERATED_VALUE */
+const EPSEvent_bearerDeactivation = _enum_for_EPSEvent.bearerDeactivation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary bearerDeactivation
@@ -568,7 +568,7 @@ const EPSEvent_bearerDeactivation = _enum_for_EPSEvent.bearerDeactivation satisf
  * @type {number}
  */
 export
-const bearerDeactivation = EPSEvent_bearerDeactivation satisfies EPSEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const bearerDeactivation = EPSEvent_bearerDeactivation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EPSEvent_uERequestedBearerResourceModification
@@ -580,7 +580,7 @@ const bearerDeactivation = EPSEvent_bearerDeactivation satisfies EPSEvent; /* SH
  * @type {number}
  */
 export
-const EPSEvent_uERequestedBearerResourceModification = _enum_for_EPSEvent.uERequestedBearerResourceModification satisfies EPSEvent; /* LONG_NAMED_ENUMERATED_VALUE */
+const EPSEvent_uERequestedBearerResourceModification = _enum_for_EPSEvent.uERequestedBearerResourceModification; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary uERequestedBearerResourceModification
@@ -592,7 +592,7 @@ const EPSEvent_uERequestedBearerResourceModification = _enum_for_EPSEvent.uERequ
  * @type {number}
  */
 export
-const uERequestedBearerResourceModification = EPSEvent_uERequestedBearerResourceModification satisfies EPSEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const uERequestedBearerResourceModification = EPSEvent_uERequestedBearerResourceModification; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EPSEvent_uERequestedPDNConnectivity
@@ -605,7 +605,7 @@ const uERequestedBearerResourceModification = EPSEvent_uERequestedBearerResource
  * @type {number}
  */
 export
-const EPSEvent_uERequestedPDNConnectivity = _enum_for_EPSEvent.uERequestedPDNConnectivity satisfies EPSEvent; /* LONG_NAMED_ENUMERATED_VALUE */
+const EPSEvent_uERequestedPDNConnectivity = _enum_for_EPSEvent.uERequestedPDNConnectivity; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary uERequestedPDNConnectivity
@@ -617,7 +617,7 @@ const EPSEvent_uERequestedPDNConnectivity = _enum_for_EPSEvent.uERequestedPDNCon
  * @type {number}
  */
 export
-const uERequestedPDNConnectivity = EPSEvent_uERequestedPDNConnectivity satisfies EPSEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const uERequestedPDNConnectivity = EPSEvent_uERequestedPDNConnectivity; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EPSEvent_uERequestedPDNDisconnection
@@ -630,7 +630,7 @@ const uERequestedPDNConnectivity = EPSEvent_uERequestedPDNConnectivity satisfies
  * @type {number}
  */
 export
-const EPSEvent_uERequestedPDNDisconnection = _enum_for_EPSEvent.uERequestedPDNDisconnection satisfies EPSEvent; /* LONG_NAMED_ENUMERATED_VALUE */
+const EPSEvent_uERequestedPDNDisconnection = _enum_for_EPSEvent.uERequestedPDNDisconnection; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary uERequestedPDNDisconnection
@@ -642,7 +642,7 @@ const EPSEvent_uERequestedPDNDisconnection = _enum_for_EPSEvent.uERequestedPDNDi
  * @type {number}
  */
 export
-const uERequestedPDNDisconnection = EPSEvent_uERequestedPDNDisconnection satisfies EPSEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const uERequestedPDNDisconnection = EPSEvent_uERequestedPDNDisconnection; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EPSEvent_trackingAreaEpsLocationUpdate
@@ -658,7 +658,7 @@ const uERequestedPDNDisconnection = EPSEvent_uERequestedPDNDisconnection satisfi
  * @type {number}
  */
 export
-const EPSEvent_trackingAreaEpsLocationUpdate = _enum_for_EPSEvent.trackingAreaEpsLocationUpdate satisfies EPSEvent; /* LONG_NAMED_ENUMERATED_VALUE */
+const EPSEvent_trackingAreaEpsLocationUpdate = _enum_for_EPSEvent.trackingAreaEpsLocationUpdate; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary trackingAreaEpsLocationUpdate
@@ -670,7 +670,7 @@ const EPSEvent_trackingAreaEpsLocationUpdate = _enum_for_EPSEvent.trackingAreaEp
  * @type {number}
  */
 export
-const trackingAreaEpsLocationUpdate = EPSEvent_trackingAreaEpsLocationUpdate satisfies EPSEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const trackingAreaEpsLocationUpdate = EPSEvent_trackingAreaEpsLocationUpdate; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EPSEvent_servingEvolvedPacketSystem
@@ -686,7 +686,7 @@ const trackingAreaEpsLocationUpdate = EPSEvent_trackingAreaEpsLocationUpdate sat
  * @type {number}
  */
 export
-const EPSEvent_servingEvolvedPacketSystem = _enum_for_EPSEvent.servingEvolvedPacketSystem satisfies EPSEvent; /* LONG_NAMED_ENUMERATED_VALUE */
+const EPSEvent_servingEvolvedPacketSystem = _enum_for_EPSEvent.servingEvolvedPacketSystem; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary servingEvolvedPacketSystem
@@ -699,7 +699,7 @@ const EPSEvent_servingEvolvedPacketSystem = _enum_for_EPSEvent.servingEvolvedPac
  * @type {number}
  */
 export
-const servingEvolvedPacketSystem = EPSEvent_servingEvolvedPacketSystem satisfies EPSEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const servingEvolvedPacketSystem = EPSEvent_servingEvolvedPacketSystem; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EPSEvent_pMIPAttachTunnelActivation
@@ -712,7 +712,7 @@ const servingEvolvedPacketSystem = EPSEvent_servingEvolvedPacketSystem satisfies
  * @type {number}
  */
 export
-const EPSEvent_pMIPAttachTunnelActivation = _enum_for_EPSEvent.pMIPAttachTunnelActivation satisfies EPSEvent; /* LONG_NAMED_ENUMERATED_VALUE */
+const EPSEvent_pMIPAttachTunnelActivation = _enum_for_EPSEvent.pMIPAttachTunnelActivation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pMIPAttachTunnelActivation
@@ -724,7 +724,7 @@ const EPSEvent_pMIPAttachTunnelActivation = _enum_for_EPSEvent.pMIPAttachTunnelA
  * @type {number}
  */
 export
-const pMIPAttachTunnelActivation = EPSEvent_pMIPAttachTunnelActivation satisfies EPSEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pMIPAttachTunnelActivation = EPSEvent_pMIPAttachTunnelActivation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EPSEvent_pMIPDetachTunnelDeactivation
@@ -736,7 +736,7 @@ const pMIPAttachTunnelActivation = EPSEvent_pMIPAttachTunnelActivation satisfies
  * @type {number}
  */
 export
-const EPSEvent_pMIPDetachTunnelDeactivation = _enum_for_EPSEvent.pMIPDetachTunnelDeactivation satisfies EPSEvent; /* LONG_NAMED_ENUMERATED_VALUE */
+const EPSEvent_pMIPDetachTunnelDeactivation = _enum_for_EPSEvent.pMIPDetachTunnelDeactivation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pMIPDetachTunnelDeactivation
@@ -748,7 +748,7 @@ const EPSEvent_pMIPDetachTunnelDeactivation = _enum_for_EPSEvent.pMIPDetachTunne
  * @type {number}
  */
 export
-const pMIPDetachTunnelDeactivation = EPSEvent_pMIPDetachTunnelDeactivation satisfies EPSEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pMIPDetachTunnelDeactivation = EPSEvent_pMIPDetachTunnelDeactivation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EPSEvent_startOfInterceptWithActivePMIPTunnel
@@ -761,7 +761,7 @@ const pMIPDetachTunnelDeactivation = EPSEvent_pMIPDetachTunnelDeactivation satis
  * @type {number}
  */
 export
-const EPSEvent_startOfInterceptWithActivePMIPTunnel = _enum_for_EPSEvent.startOfInterceptWithActivePMIPTunnel satisfies EPSEvent; /* LONG_NAMED_ENUMERATED_VALUE */
+const EPSEvent_startOfInterceptWithActivePMIPTunnel = _enum_for_EPSEvent.startOfInterceptWithActivePMIPTunnel; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary startOfInterceptWithActivePMIPTunnel
@@ -773,7 +773,7 @@ const EPSEvent_startOfInterceptWithActivePMIPTunnel = _enum_for_EPSEvent.startOf
  * @type {number}
  */
 export
-const startOfInterceptWithActivePMIPTunnel = EPSEvent_startOfInterceptWithActivePMIPTunnel satisfies EPSEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const startOfInterceptWithActivePMIPTunnel = EPSEvent_startOfInterceptWithActivePMIPTunnel; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EPSEvent_pMIPPdnGwInitiatedPdnDisconnection
@@ -785,7 +785,7 @@ const startOfInterceptWithActivePMIPTunnel = EPSEvent_startOfInterceptWithActive
  * @type {number}
  */
 export
-const EPSEvent_pMIPPdnGwInitiatedPdnDisconnection = _enum_for_EPSEvent.pMIPPdnGwInitiatedPdnDisconnection satisfies EPSEvent; /* LONG_NAMED_ENUMERATED_VALUE */
+const EPSEvent_pMIPPdnGwInitiatedPdnDisconnection = _enum_for_EPSEvent.pMIPPdnGwInitiatedPdnDisconnection; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pMIPPdnGwInitiatedPdnDisconnection
@@ -797,7 +797,7 @@ const EPSEvent_pMIPPdnGwInitiatedPdnDisconnection = _enum_for_EPSEvent.pMIPPdnGw
  * @type {number}
  */
 export
-const pMIPPdnGwInitiatedPdnDisconnection = EPSEvent_pMIPPdnGwInitiatedPdnDisconnection satisfies EPSEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pMIPPdnGwInitiatedPdnDisconnection = EPSEvent_pMIPPdnGwInitiatedPdnDisconnection; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EPSEvent_mIPRegistrationTunnelActivation
@@ -810,7 +810,7 @@ const pMIPPdnGwInitiatedPdnDisconnection = EPSEvent_pMIPPdnGwInitiatedPdnDisconn
  * @type {number}
  */
 export
-const EPSEvent_mIPRegistrationTunnelActivation = _enum_for_EPSEvent.mIPRegistrationTunnelActivation satisfies EPSEvent; /* LONG_NAMED_ENUMERATED_VALUE */
+const EPSEvent_mIPRegistrationTunnelActivation = _enum_for_EPSEvent.mIPRegistrationTunnelActivation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary mIPRegistrationTunnelActivation
@@ -822,7 +822,7 @@ const EPSEvent_mIPRegistrationTunnelActivation = _enum_for_EPSEvent.mIPRegistrat
  * @type {number}
  */
 export
-const mIPRegistrationTunnelActivation = EPSEvent_mIPRegistrationTunnelActivation satisfies EPSEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const mIPRegistrationTunnelActivation = EPSEvent_mIPRegistrationTunnelActivation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EPSEvent_mIPDeregistrationTunnelDeactivation
@@ -834,7 +834,7 @@ const mIPRegistrationTunnelActivation = EPSEvent_mIPRegistrationTunnelActivation
  * @type {number}
  */
 export
-const EPSEvent_mIPDeregistrationTunnelDeactivation = _enum_for_EPSEvent.mIPDeregistrationTunnelDeactivation satisfies EPSEvent; /* LONG_NAMED_ENUMERATED_VALUE */
+const EPSEvent_mIPDeregistrationTunnelDeactivation = _enum_for_EPSEvent.mIPDeregistrationTunnelDeactivation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary mIPDeregistrationTunnelDeactivation
@@ -846,7 +846,7 @@ const EPSEvent_mIPDeregistrationTunnelDeactivation = _enum_for_EPSEvent.mIPDereg
  * @type {number}
  */
 export
-const mIPDeregistrationTunnelDeactivation = EPSEvent_mIPDeregistrationTunnelDeactivation satisfies EPSEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const mIPDeregistrationTunnelDeactivation = EPSEvent_mIPDeregistrationTunnelDeactivation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EPSEvent_startOfInterceptWithActiveMIPTunnel
@@ -860,7 +860,7 @@ const mIPDeregistrationTunnelDeactivation = EPSEvent_mIPDeregistrationTunnelDeac
  * @type {number}
  */
 export
-const EPSEvent_startOfInterceptWithActiveMIPTunnel = _enum_for_EPSEvent.startOfInterceptWithActiveMIPTunnel satisfies EPSEvent; /* LONG_NAMED_ENUMERATED_VALUE */
+const EPSEvent_startOfInterceptWithActiveMIPTunnel = _enum_for_EPSEvent.startOfInterceptWithActiveMIPTunnel; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary startOfInterceptWithActiveMIPTunnel
@@ -872,7 +872,7 @@ const EPSEvent_startOfInterceptWithActiveMIPTunnel = _enum_for_EPSEvent.startOfI
  * @type {number}
  */
 export
-const startOfInterceptWithActiveMIPTunnel = EPSEvent_startOfInterceptWithActiveMIPTunnel satisfies EPSEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const startOfInterceptWithActiveMIPTunnel = EPSEvent_startOfInterceptWithActiveMIPTunnel; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EPSEvent_dSMIPRegistrationTunnelActivation
@@ -885,7 +885,7 @@ const startOfInterceptWithActiveMIPTunnel = EPSEvent_startOfInterceptWithActiveM
  * @type {number}
  */
 export
-const EPSEvent_dSMIPRegistrationTunnelActivation = _enum_for_EPSEvent.dSMIPRegistrationTunnelActivation satisfies EPSEvent; /* LONG_NAMED_ENUMERATED_VALUE */
+const EPSEvent_dSMIPRegistrationTunnelActivation = _enum_for_EPSEvent.dSMIPRegistrationTunnelActivation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary dSMIPRegistrationTunnelActivation
@@ -897,7 +897,7 @@ const EPSEvent_dSMIPRegistrationTunnelActivation = _enum_for_EPSEvent.dSMIPRegis
  * @type {number}
  */
 export
-const dSMIPRegistrationTunnelActivation = EPSEvent_dSMIPRegistrationTunnelActivation satisfies EPSEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const dSMIPRegistrationTunnelActivation = EPSEvent_dSMIPRegistrationTunnelActivation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EPSEvent_dSMIPDeregistrationTunnelDeactivation
@@ -909,7 +909,7 @@ const dSMIPRegistrationTunnelActivation = EPSEvent_dSMIPRegistrationTunnelActiva
  * @type {number}
  */
 export
-const EPSEvent_dSMIPDeregistrationTunnelDeactivation = _enum_for_EPSEvent.dSMIPDeregistrationTunnelDeactivation satisfies EPSEvent; /* LONG_NAMED_ENUMERATED_VALUE */
+const EPSEvent_dSMIPDeregistrationTunnelDeactivation = _enum_for_EPSEvent.dSMIPDeregistrationTunnelDeactivation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary dSMIPDeregistrationTunnelDeactivation
@@ -921,7 +921,7 @@ const EPSEvent_dSMIPDeregistrationTunnelDeactivation = _enum_for_EPSEvent.dSMIPD
  * @type {number}
  */
 export
-const dSMIPDeregistrationTunnelDeactivation = EPSEvent_dSMIPDeregistrationTunnelDeactivation satisfies EPSEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const dSMIPDeregistrationTunnelDeactivation = EPSEvent_dSMIPDeregistrationTunnelDeactivation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EPSEvent_startOfInterceptWithActiveDsmipTunnel
@@ -934,7 +934,7 @@ const dSMIPDeregistrationTunnelDeactivation = EPSEvent_dSMIPDeregistrationTunnel
  * @type {number}
  */
 export
-const EPSEvent_startOfInterceptWithActiveDsmipTunnel = _enum_for_EPSEvent.startOfInterceptWithActiveDsmipTunnel satisfies EPSEvent; /* LONG_NAMED_ENUMERATED_VALUE */
+const EPSEvent_startOfInterceptWithActiveDsmipTunnel = _enum_for_EPSEvent.startOfInterceptWithActiveDsmipTunnel; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary startOfInterceptWithActiveDsmipTunnel
@@ -946,7 +946,7 @@ const EPSEvent_startOfInterceptWithActiveDsmipTunnel = _enum_for_EPSEvent.startO
  * @type {number}
  */
 export
-const startOfInterceptWithActiveDsmipTunnel = EPSEvent_startOfInterceptWithActiveDsmipTunnel satisfies EPSEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const startOfInterceptWithActiveDsmipTunnel = EPSEvent_startOfInterceptWithActiveDsmipTunnel; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EPSEvent_dSMipHaSwitch
@@ -958,7 +958,7 @@ const startOfInterceptWithActiveDsmipTunnel = EPSEvent_startOfInterceptWithActiv
  * @type {number}
  */
 export
-const EPSEvent_dSMipHaSwitch = _enum_for_EPSEvent.dSMipHaSwitch satisfies EPSEvent; /* LONG_NAMED_ENUMERATED_VALUE */
+const EPSEvent_dSMipHaSwitch = _enum_for_EPSEvent.dSMipHaSwitch; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary dSMipHaSwitch
@@ -970,7 +970,7 @@ const EPSEvent_dSMipHaSwitch = _enum_for_EPSEvent.dSMipHaSwitch satisfies EPSEve
  * @type {number}
  */
 export
-const dSMipHaSwitch = EPSEvent_dSMipHaSwitch satisfies EPSEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const dSMipHaSwitch = EPSEvent_dSMipHaSwitch; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EPSEvent_pMIPResourceAllocationDeactivation
@@ -982,7 +982,7 @@ const dSMipHaSwitch = EPSEvent_dSMipHaSwitch satisfies EPSEvent; /* SHORT_NAMED_
  * @type {number}
  */
 export
-const EPSEvent_pMIPResourceAllocationDeactivation = _enum_for_EPSEvent.pMIPResourceAllocationDeactivation satisfies EPSEvent; /* LONG_NAMED_ENUMERATED_VALUE */
+const EPSEvent_pMIPResourceAllocationDeactivation = _enum_for_EPSEvent.pMIPResourceAllocationDeactivation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pMIPResourceAllocationDeactivation
@@ -994,7 +994,7 @@ const EPSEvent_pMIPResourceAllocationDeactivation = _enum_for_EPSEvent.pMIPResou
  * @type {number}
  */
 export
-const pMIPResourceAllocationDeactivation = EPSEvent_pMIPResourceAllocationDeactivation satisfies EPSEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pMIPResourceAllocationDeactivation = EPSEvent_pMIPResourceAllocationDeactivation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EPSEvent_mIPResourceAllocationDeactivation
@@ -1006,7 +1006,7 @@ const pMIPResourceAllocationDeactivation = EPSEvent_pMIPResourceAllocationDeacti
  * @type {number}
  */
 export
-const EPSEvent_mIPResourceAllocationDeactivation = _enum_for_EPSEvent.mIPResourceAllocationDeactivation satisfies EPSEvent; /* LONG_NAMED_ENUMERATED_VALUE */
+const EPSEvent_mIPResourceAllocationDeactivation = _enum_for_EPSEvent.mIPResourceAllocationDeactivation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary mIPResourceAllocationDeactivation
@@ -1018,7 +1018,7 @@ const EPSEvent_mIPResourceAllocationDeactivation = _enum_for_EPSEvent.mIPResourc
  * @type {number}
  */
 export
-const mIPResourceAllocationDeactivation = EPSEvent_mIPResourceAllocationDeactivation satisfies EPSEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const mIPResourceAllocationDeactivation = EPSEvent_mIPResourceAllocationDeactivation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EPSEvent_pMIPsessionModification
@@ -1030,7 +1030,7 @@ const mIPResourceAllocationDeactivation = EPSEvent_mIPResourceAllocationDeactiva
  * @type {number}
  */
 export
-const EPSEvent_pMIPsessionModification = _enum_for_EPSEvent.pMIPsessionModification satisfies EPSEvent; /* LONG_NAMED_ENUMERATED_VALUE */
+const EPSEvent_pMIPsessionModification = _enum_for_EPSEvent.pMIPsessionModification; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pMIPsessionModification
@@ -1042,7 +1042,7 @@ const EPSEvent_pMIPsessionModification = _enum_for_EPSEvent.pMIPsessionModificat
  * @type {number}
  */
 export
-const pMIPsessionModification = EPSEvent_pMIPsessionModification satisfies EPSEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pMIPsessionModification = EPSEvent_pMIPsessionModification; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EPSEvent_startOfInterceptWithEUTRANAttachedUE
@@ -1055,7 +1055,7 @@ const pMIPsessionModification = EPSEvent_pMIPsessionModification satisfies EPSEv
  * @type {number}
  */
 export
-const EPSEvent_startOfInterceptWithEUTRANAttachedUE = _enum_for_EPSEvent.startOfInterceptWithEUTRANAttachedUE satisfies EPSEvent; /* LONG_NAMED_ENUMERATED_VALUE */
+const EPSEvent_startOfInterceptWithEUTRANAttachedUE = _enum_for_EPSEvent.startOfInterceptWithEUTRANAttachedUE; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary startOfInterceptWithEUTRANAttachedUE
@@ -1067,7 +1067,7 @@ const EPSEvent_startOfInterceptWithEUTRANAttachedUE = _enum_for_EPSEvent.startOf
  * @type {number}
  */
 export
-const startOfInterceptWithEUTRANAttachedUE = EPSEvent_startOfInterceptWithEUTRANAttachedUE satisfies EPSEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const startOfInterceptWithEUTRANAttachedUE = EPSEvent_startOfInterceptWithEUTRANAttachedUE; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EPSEvent_dSMIPSessionModification
@@ -1079,7 +1079,7 @@ const startOfInterceptWithEUTRANAttachedUE = EPSEvent_startOfInterceptWithEUTRAN
  * @type {number}
  */
 export
-const EPSEvent_dSMIPSessionModification = _enum_for_EPSEvent.dSMIPSessionModification satisfies EPSEvent; /* LONG_NAMED_ENUMERATED_VALUE */
+const EPSEvent_dSMIPSessionModification = _enum_for_EPSEvent.dSMIPSessionModification; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary dSMIPSessionModification
@@ -1091,7 +1091,7 @@ const EPSEvent_dSMIPSessionModification = _enum_for_EPSEvent.dSMIPSessionModific
  * @type {number}
  */
 export
-const dSMIPSessionModification = EPSEvent_dSMIPSessionModification satisfies EPSEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const dSMIPSessionModification = EPSEvent_dSMIPSessionModification; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EPSEvent_packetDataHeaderInformation
@@ -1105,7 +1105,7 @@ const dSMIPSessionModification = EPSEvent_dSMIPSessionModification satisfies EPS
  * @type {number}
  */
 export
-const EPSEvent_packetDataHeaderInformation = _enum_for_EPSEvent.packetDataHeaderInformation satisfies EPSEvent; /* LONG_NAMED_ENUMERATED_VALUE */
+const EPSEvent_packetDataHeaderInformation = _enum_for_EPSEvent.packetDataHeaderInformation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary packetDataHeaderInformation
@@ -1117,7 +1117,7 @@ const EPSEvent_packetDataHeaderInformation = _enum_for_EPSEvent.packetDataHeader
  * @type {number}
  */
 export
-const packetDataHeaderInformation = EPSEvent_packetDataHeaderInformation satisfies EPSEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const packetDataHeaderInformation = EPSEvent_packetDataHeaderInformation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EPSEvent_hSS_Subscriber_Record_Change
@@ -1131,7 +1131,7 @@ const packetDataHeaderInformation = EPSEvent_packetDataHeaderInformation satisfi
  * @type {number}
  */
 export
-const EPSEvent_hSS_Subscriber_Record_Change = _enum_for_EPSEvent.hSS_Subscriber_Record_Change satisfies EPSEvent; /* LONG_NAMED_ENUMERATED_VALUE */
+const EPSEvent_hSS_Subscriber_Record_Change = _enum_for_EPSEvent.hSS_Subscriber_Record_Change; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary hSS_Subscriber_Record_Change
@@ -1143,7 +1143,7 @@ const EPSEvent_hSS_Subscriber_Record_Change = _enum_for_EPSEvent.hSS_Subscriber_
  * @type {number}
  */
 export
-const hSS_Subscriber_Record_Change = EPSEvent_hSS_Subscriber_Record_Change satisfies EPSEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const hSS_Subscriber_Record_Change = EPSEvent_hSS_Subscriber_Record_Change; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EPSEvent_registration_Termination
@@ -1157,7 +1157,7 @@ const hSS_Subscriber_Record_Change = EPSEvent_hSS_Subscriber_Record_Change satis
  * @type {number}
  */
 export
-const EPSEvent_registration_Termination = _enum_for_EPSEvent.registration_Termination satisfies EPSEvent; /* LONG_NAMED_ENUMERATED_VALUE */
+const EPSEvent_registration_Termination = _enum_for_EPSEvent.registration_Termination; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary registration_Termination
@@ -1169,7 +1169,7 @@ const EPSEvent_registration_Termination = _enum_for_EPSEvent.registration_Termin
  * @type {number}
  */
 export
-const registration_Termination = EPSEvent_registration_Termination satisfies EPSEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const registration_Termination = EPSEvent_registration_Termination; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EPSEvent_location_Up_Date
@@ -1182,7 +1182,7 @@ const registration_Termination = EPSEvent_registration_Termination satisfies EPS
  * @type {number}
  */
 export
-const EPSEvent_location_Up_Date = _enum_for_EPSEvent.location_Up_Date satisfies EPSEvent; /* LONG_NAMED_ENUMERATED_VALUE */
+const EPSEvent_location_Up_Date = _enum_for_EPSEvent.location_Up_Date; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary location_Up_Date
@@ -1194,7 +1194,7 @@ const EPSEvent_location_Up_Date = _enum_for_EPSEvent.location_Up_Date satisfies 
  * @type {number}
  */
 export
-const location_Up_Date = EPSEvent_location_Up_Date satisfies EPSEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const location_Up_Date = EPSEvent_location_Up_Date; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EPSEvent_cancel_Location
@@ -1207,7 +1207,7 @@ const location_Up_Date = EPSEvent_location_Up_Date satisfies EPSEvent; /* SHORT_
  * @type {number}
  */
 export
-const EPSEvent_cancel_Location = _enum_for_EPSEvent.cancel_Location satisfies EPSEvent; /* LONG_NAMED_ENUMERATED_VALUE */
+const EPSEvent_cancel_Location = _enum_for_EPSEvent.cancel_Location; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary cancel_Location
@@ -1219,7 +1219,7 @@ const EPSEvent_cancel_Location = _enum_for_EPSEvent.cancel_Location satisfies EP
  * @type {number}
  */
 export
-const cancel_Location = EPSEvent_cancel_Location satisfies EPSEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const cancel_Location = EPSEvent_cancel_Location; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EPSEvent_register_Location
@@ -1231,7 +1231,7 @@ const cancel_Location = EPSEvent_cancel_Location satisfies EPSEvent; /* SHORT_NA
  * @type {number}
  */
 export
-const EPSEvent_register_Location = _enum_for_EPSEvent.register_Location satisfies EPSEvent; /* LONG_NAMED_ENUMERATED_VALUE */
+const EPSEvent_register_Location = _enum_for_EPSEvent.register_Location; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary register_Location
@@ -1243,7 +1243,7 @@ const EPSEvent_register_Location = _enum_for_EPSEvent.register_Location satisfie
  * @type {number}
  */
 export
-const register_Location = EPSEvent_register_Location satisfies EPSEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const register_Location = EPSEvent_register_Location; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EPSEvent_location_Information_Request
@@ -1255,7 +1255,7 @@ const register_Location = EPSEvent_register_Location satisfies EPSEvent; /* SHOR
  * @type {number}
  */
 export
-const EPSEvent_location_Information_Request = _enum_for_EPSEvent.location_Information_Request satisfies EPSEvent; /* LONG_NAMED_ENUMERATED_VALUE */
+const EPSEvent_location_Information_Request = _enum_for_EPSEvent.location_Information_Request; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary location_Information_Request
@@ -1267,7 +1267,7 @@ const EPSEvent_location_Information_Request = _enum_for_EPSEvent.location_Inform
  * @type {number}
  */
 export
-const location_Information_Request = EPSEvent_location_Information_Request satisfies EPSEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const location_Information_Request = EPSEvent_location_Information_Request; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EPSEvent_proSeRemoteUEReport
@@ -1281,7 +1281,7 @@ const location_Information_Request = EPSEvent_location_Information_Request satis
  * @type {number}
  */
 export
-const EPSEvent_proSeRemoteUEReport = _enum_for_EPSEvent.proSeRemoteUEReport satisfies EPSEvent; /* LONG_NAMED_ENUMERATED_VALUE */
+const EPSEvent_proSeRemoteUEReport = _enum_for_EPSEvent.proSeRemoteUEReport; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary proSeRemoteUEReport
@@ -1293,7 +1293,7 @@ const EPSEvent_proSeRemoteUEReport = _enum_for_EPSEvent.proSeRemoteUEReport sati
  * @type {number}
  */
 export
-const proSeRemoteUEReport = EPSEvent_proSeRemoteUEReport satisfies EPSEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const proSeRemoteUEReport = EPSEvent_proSeRemoteUEReport; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EPSEvent_proSeRemoteUEStartOfCommunication
@@ -1305,7 +1305,7 @@ const proSeRemoteUEReport = EPSEvent_proSeRemoteUEReport satisfies EPSEvent; /* 
  * @type {number}
  */
 export
-const EPSEvent_proSeRemoteUEStartOfCommunication = _enum_for_EPSEvent.proSeRemoteUEStartOfCommunication satisfies EPSEvent; /* LONG_NAMED_ENUMERATED_VALUE */
+const EPSEvent_proSeRemoteUEStartOfCommunication = _enum_for_EPSEvent.proSeRemoteUEStartOfCommunication; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary proSeRemoteUEStartOfCommunication
@@ -1317,7 +1317,7 @@ const EPSEvent_proSeRemoteUEStartOfCommunication = _enum_for_EPSEvent.proSeRemot
  * @type {number}
  */
 export
-const proSeRemoteUEStartOfCommunication = EPSEvent_proSeRemoteUEStartOfCommunication satisfies EPSEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const proSeRemoteUEStartOfCommunication = EPSEvent_proSeRemoteUEStartOfCommunication; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EPSEvent_proSeRemoteUEEndOfCommunication
@@ -1329,7 +1329,7 @@ const proSeRemoteUEStartOfCommunication = EPSEvent_proSeRemoteUEStartOfCommunica
  * @type {number}
  */
 export
-const EPSEvent_proSeRemoteUEEndOfCommunication = _enum_for_EPSEvent.proSeRemoteUEEndOfCommunication satisfies EPSEvent; /* LONG_NAMED_ENUMERATED_VALUE */
+const EPSEvent_proSeRemoteUEEndOfCommunication = _enum_for_EPSEvent.proSeRemoteUEEndOfCommunication; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary proSeRemoteUEEndOfCommunication
@@ -1341,7 +1341,7 @@ const EPSEvent_proSeRemoteUEEndOfCommunication = _enum_for_EPSEvent.proSeRemoteU
  * @type {number}
  */
 export
-const proSeRemoteUEEndOfCommunication = EPSEvent_proSeRemoteUEEndOfCommunication satisfies EPSEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const proSeRemoteUEEndOfCommunication = EPSEvent_proSeRemoteUEEndOfCommunication; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EPSEvent_startOfLIwithProSeRemoteUEOngoingComm
@@ -1354,7 +1354,7 @@ const proSeRemoteUEEndOfCommunication = EPSEvent_proSeRemoteUEEndOfCommunication
  * @type {number}
  */
 export
-const EPSEvent_startOfLIwithProSeRemoteUEOngoingComm = _enum_for_EPSEvent.startOfLIwithProSeRemoteUEOngoingComm satisfies EPSEvent; /* LONG_NAMED_ENUMERATED_VALUE */
+const EPSEvent_startOfLIwithProSeRemoteUEOngoingComm = _enum_for_EPSEvent.startOfLIwithProSeRemoteUEOngoingComm; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary startOfLIwithProSeRemoteUEOngoingComm
@@ -1367,7 +1367,7 @@ const EPSEvent_startOfLIwithProSeRemoteUEOngoingComm = _enum_for_EPSEvent.startO
  * @type {number}
  */
 export
-const startOfLIwithProSeRemoteUEOngoingComm = EPSEvent_startOfLIwithProSeRemoteUEOngoingComm satisfies EPSEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const startOfLIwithProSeRemoteUEOngoingComm = EPSEvent_startOfLIwithProSeRemoteUEOngoingComm; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EPSEvent_startOfLIforProSeUEtoNWRelay
@@ -1380,7 +1380,7 @@ const startOfLIwithProSeRemoteUEOngoingComm = EPSEvent_startOfLIwithProSeRemoteU
  * @type {number}
  */
 export
-const EPSEvent_startOfLIforProSeUEtoNWRelay = _enum_for_EPSEvent.startOfLIforProSeUEtoNWRelay satisfies EPSEvent; /* LONG_NAMED_ENUMERATED_VALUE */
+const EPSEvent_startOfLIforProSeUEtoNWRelay = _enum_for_EPSEvent.startOfLIforProSeUEtoNWRelay; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary startOfLIforProSeUEtoNWRelay
@@ -1392,7 +1392,7 @@ const EPSEvent_startOfLIforProSeUEtoNWRelay = _enum_for_EPSEvent.startOfLIforPro
  * @type {number}
  */
 export
-const startOfLIforProSeUEtoNWRelay = EPSEvent_startOfLIforProSeUEtoNWRelay satisfies EPSEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const startOfLIforProSeUEtoNWRelay = EPSEvent_startOfLIforProSeUEtoNWRelay; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EPSEvent_scefRequestednonIPPDNDisconnection
@@ -1405,7 +1405,7 @@ const startOfLIforProSeUEtoNWRelay = EPSEvent_startOfLIforProSeUEtoNWRelay satis
  * @type {number}
  */
 export
-const EPSEvent_scefRequestednonIPPDNDisconnection = _enum_for_EPSEvent.scefRequestednonIPPDNDisconnection satisfies EPSEvent; /* LONG_NAMED_ENUMERATED_VALUE */
+const EPSEvent_scefRequestednonIPPDNDisconnection = _enum_for_EPSEvent.scefRequestednonIPPDNDisconnection; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary scefRequestednonIPPDNDisconnection
@@ -1417,7 +1417,7 @@ const EPSEvent_scefRequestednonIPPDNDisconnection = _enum_for_EPSEvent.scefReque
  * @type {number}
  */
 export
-const scefRequestednonIPPDNDisconnection = EPSEvent_scefRequestednonIPPDNDisconnection satisfies EPSEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const scefRequestednonIPPDNDisconnection = EPSEvent_scefRequestednonIPPDNDisconnection; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_EPSEvent: $.ASN1Decoder<EPSEvent> = $._decodeEnumerated;
 export const _encode_EPSEvent: $.ASN1Encoder<EPSEvent> = $._encodeEnumerated;
 

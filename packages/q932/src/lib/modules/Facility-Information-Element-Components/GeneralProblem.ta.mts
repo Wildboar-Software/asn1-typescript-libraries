@@ -55,7 +55,7 @@ const GeneralProblem_unrecognizedComponent = 0 satisfies GeneralProblem; /* LONG
  * @type {number}
  */
 export
-const unrecognizedComponent = GeneralProblem_unrecognizedComponent satisfies GeneralProblem; /* SHORT_NAMED_INTEGER_VALUE */
+const unrecognizedComponent = GeneralProblem_unrecognizedComponent; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary GeneralProblem_mistypedComponent
@@ -83,7 +83,7 @@ const GeneralProblem_mistypedComponent = 1 satisfies GeneralProblem; /* LONG_NAM
  * @type {number}
  */
 export
-const mistypedComponent = GeneralProblem_mistypedComponent satisfies GeneralProblem; /* SHORT_NAMED_INTEGER_VALUE */
+const mistypedComponent = GeneralProblem_mistypedComponent; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary GeneralProblem_badlyStructuredComponent
@@ -109,7 +109,7 @@ const GeneralProblem_badlyStructuredComponent = 2 satisfies GeneralProblem; /* L
  * @type {number}
  */
 export
-const badlyStructuredComponent = GeneralProblem_badlyStructuredComponent satisfies GeneralProblem; /* SHORT_NAMED_INTEGER_VALUE */
+const badlyStructuredComponent = GeneralProblem_badlyStructuredComponent; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_GeneralProblem: $.ASN1Decoder<GeneralProblem> = $._decodeInteger;
 export const _encode_GeneralProblem: $.ASN1Encoder<GeneralProblem> = $._encodeInteger;
 

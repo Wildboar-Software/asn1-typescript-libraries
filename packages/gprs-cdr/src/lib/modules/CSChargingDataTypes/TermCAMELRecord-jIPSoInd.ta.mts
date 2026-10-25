@@ -38,7 +38,7 @@ const TermCAMELRecord_jIPSoInd_lRN_NP_Database = 1 satisfies TermCAMELRecord_jIP
  * @type {number}
  */
 export
-const lRN_NP_Database = TermCAMELRecord_jIPSoInd_lRN_NP_Database satisfies TermCAMELRecord_jIPSoInd; /* SHORT_NAMED_INTEGER_VALUE */
+const lRN_NP_Database = TermCAMELRecord_jIPSoInd_lRN_NP_Database; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TermCAMELRecord_jIPSoInd_switchingSystemData
@@ -54,7 +54,7 @@ const TermCAMELRecord_jIPSoInd_switchingSystemData = 2 satisfies TermCAMELRecord
  * @type {number}
  */
 export
-const switchingSystemData = TermCAMELRecord_jIPSoInd_switchingSystemData satisfies TermCAMELRecord_jIPSoInd; /* SHORT_NAMED_INTEGER_VALUE */
+const switchingSystemData = TermCAMELRecord_jIPSoInd_switchingSystemData; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TermCAMELRecord_jIPSoInd_incomingsignaling
@@ -70,7 +70,7 @@ const TermCAMELRecord_jIPSoInd_incomingsignaling = 3 satisfies TermCAMELRecord_j
  * @type {number}
  */
 export
-const incomingsignaling = TermCAMELRecord_jIPSoInd_incomingsignaling satisfies TermCAMELRecord_jIPSoInd; /* SHORT_NAMED_INTEGER_VALUE */
+const incomingsignaling = TermCAMELRecord_jIPSoInd_incomingsignaling; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TermCAMELRecord_jIPSoInd_unknown
@@ -86,7 +86,7 @@ const TermCAMELRecord_jIPSoInd_unknown = 9 satisfies TermCAMELRecord_jIPSoInd; /
  * @type {number}
  */
 export
-const unknown = TermCAMELRecord_jIPSoInd_unknown satisfies TermCAMELRecord_jIPSoInd; /* SHORT_NAMED_INTEGER_VALUE */
+const unknown = TermCAMELRecord_jIPSoInd_unknown; /* SHORT_NAMED_INTEGER_VALUE */
 
 export
 const _decode_TermCAMELRecord_jIPSoInd: $.ASN1Decoder<TermCAMELRecord_jIPSoInd> = $._decodeInteger;

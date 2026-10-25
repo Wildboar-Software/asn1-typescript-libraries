@@ -84,7 +84,7 @@ type OperatorLeaMessagePriority = _enum_for_OperatorLeaMessagePriority | ENUMERA
  * @type {number}
  */
 export
-const OperatorLeaMessagePriority_error = _enum_for_OperatorLeaMessagePriority.error satisfies OperatorLeaMessagePriority; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperatorLeaMessagePriority_error = _enum_for_OperatorLeaMessagePriority.error; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary error
@@ -100,7 +100,7 @@ const OperatorLeaMessagePriority_error = _enum_for_OperatorLeaMessagePriority.er
  * @type {number}
  */
 export
-const error = OperatorLeaMessagePriority_error satisfies OperatorLeaMessagePriority; /* SHORT_NAMED_ENUMERATED_VALUE */
+const error = OperatorLeaMessagePriority_error; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperatorLeaMessagePriority_informational
@@ -117,7 +117,7 @@ const error = OperatorLeaMessagePriority_error satisfies OperatorLeaMessagePrior
  * @type {number}
  */
 export
-const OperatorLeaMessagePriority_informational = _enum_for_OperatorLeaMessagePriority.informational satisfies OperatorLeaMessagePriority; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperatorLeaMessagePriority_informational = _enum_for_OperatorLeaMessagePriority.informational; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary informational
@@ -134,7 +134,7 @@ const OperatorLeaMessagePriority_informational = _enum_for_OperatorLeaMessagePri
  * @type {number}
  */
 export
-const informational = OperatorLeaMessagePriority_informational satisfies OperatorLeaMessagePriority; /* SHORT_NAMED_ENUMERATED_VALUE */
+const informational = OperatorLeaMessagePriority_informational; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_OperatorLeaMessagePriority: $.ASN1Decoder<OperatorLeaMessagePriority> = $._decodeEnumerated;
 export const _encode_OperatorLeaMessagePriority: $.ASN1Encoder<OperatorLeaMessagePriority> = $._encodeEnumerated;
 

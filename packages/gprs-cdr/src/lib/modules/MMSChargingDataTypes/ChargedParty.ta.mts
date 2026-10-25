@@ -108,7 +108,7 @@ const ChargedParty = _enum_for_ChargedParty;
  * @type {number}
  */
 export
-const ChargedParty_sender = ChargedParty.sender satisfies ChargedParty; /* LONG_NAMED_ENUMERATED_VALUE */
+const ChargedParty_sender = ChargedParty.sender; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sender
@@ -122,7 +122,7 @@ const ChargedParty_sender = ChargedParty.sender satisfies ChargedParty; /* LONG_
  * @type {number}
  */
 export
-const sender = ChargedParty.sender satisfies ChargedParty; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sender = ChargedParty.sender; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ChargedParty_recipient
@@ -136,7 +136,7 @@ const sender = ChargedParty.sender satisfies ChargedParty; /* SHORT_NAMED_ENUMER
  * @type {number}
  */
 export
-const ChargedParty_recipient = ChargedParty.recipient satisfies ChargedParty; /* LONG_NAMED_ENUMERATED_VALUE */
+const ChargedParty_recipient = ChargedParty.recipient; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary recipient
@@ -150,7 +150,7 @@ const ChargedParty_recipient = ChargedParty.recipient satisfies ChargedParty; /*
  * @type {number}
  */
 export
-const recipient = ChargedParty.recipient satisfies ChargedParty; /* SHORT_NAMED_ENUMERATED_VALUE */
+const recipient = ChargedParty.recipient; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ChargedParty_both
@@ -164,7 +164,7 @@ const recipient = ChargedParty.recipient satisfies ChargedParty; /* SHORT_NAMED_
  * @type {number}
  */
 export
-const ChargedParty_both = ChargedParty.both satisfies ChargedParty; /* LONG_NAMED_ENUMERATED_VALUE */
+const ChargedParty_both = ChargedParty.both; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary both
@@ -178,7 +178,7 @@ const ChargedParty_both = ChargedParty.both satisfies ChargedParty; /* LONG_NAME
  * @type {number}
  */
 export
-const both = ChargedParty.both satisfies ChargedParty; /* SHORT_NAMED_ENUMERATED_VALUE */
+const both = ChargedParty.both; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ChargedParty_neither
@@ -192,7 +192,7 @@ const both = ChargedParty.both satisfies ChargedParty; /* SHORT_NAMED_ENUMERATED
  * @type {number}
  */
 export
-const ChargedParty_neither = ChargedParty.neither satisfies ChargedParty; /* LONG_NAMED_ENUMERATED_VALUE */
+const ChargedParty_neither = ChargedParty.neither; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary neither
@@ -206,7 +206,7 @@ const ChargedParty_neither = ChargedParty.neither satisfies ChargedParty; /* LON
  * @type {number}
  */
 export
-const neither = ChargedParty.neither satisfies ChargedParty; /* SHORT_NAMED_ENUMERATED_VALUE */
+const neither = ChargedParty.neither; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ChargedParty_notspecifiedbyVASP
@@ -220,7 +220,7 @@ const neither = ChargedParty.neither satisfies ChargedParty; /* SHORT_NAMED_ENUM
  * @type {number}
  */
 export
-const ChargedParty_notspecifiedbyVASP = ChargedParty.notspecifiedbyVASP satisfies ChargedParty; /* LONG_NAMED_ENUMERATED_VALUE */
+const ChargedParty_notspecifiedbyVASP = ChargedParty.notspecifiedbyVASP; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary notspecifiedbyVASP
@@ -234,7 +234,7 @@ const ChargedParty_notspecifiedbyVASP = ChargedParty.notspecifiedbyVASP satisfie
  * @type {number}
  */
 export
-const notspecifiedbyVASP = ChargedParty.notspecifiedbyVASP satisfies ChargedParty; /* SHORT_NAMED_ENUMERATED_VALUE */
+const notspecifiedbyVASP = ChargedParty.notspecifiedbyVASP; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_ChargedParty: $.ASN1Decoder<ChargedParty> = $._decodeEnumerated;

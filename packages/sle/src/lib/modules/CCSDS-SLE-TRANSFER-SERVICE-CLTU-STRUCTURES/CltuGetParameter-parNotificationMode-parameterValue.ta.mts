@@ -55,7 +55,7 @@ const CltuGetParameter_parNotificationMode_parameterValue_deferred = 0 satisfies
  * @type {number}
  */
 export
-const deferred = CltuGetParameter_parNotificationMode_parameterValue_deferred satisfies CltuGetParameter_parNotificationMode_parameterValue; /* SHORT_NAMED_INTEGER_VALUE */
+const deferred = CltuGetParameter_parNotificationMode_parameterValue_deferred; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CltuGetParameter_parNotificationMode_parameterValue_immediate
@@ -79,7 +79,7 @@ const CltuGetParameter_parNotificationMode_parameterValue_immediate = 1 satisfie
  * @type {number}
  */
 export
-const immediate = CltuGetParameter_parNotificationMode_parameterValue_immediate satisfies CltuGetParameter_parNotificationMode_parameterValue; /* SHORT_NAMED_INTEGER_VALUE */
+const immediate = CltuGetParameter_parNotificationMode_parameterValue_immediate; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_CltuGetParameter_parNotificationMode_parameterValue: $.ASN1Decoder<CltuGetParameter_parNotificationMode_parameterValue> = $._decodeInteger;
 export const _encode_CltuGetParameter_parNotificationMode_parameterValue: $.ASN1Encoder<CltuGetParameter_parNotificationMode_parameterValue> = $._encodeInteger;
 

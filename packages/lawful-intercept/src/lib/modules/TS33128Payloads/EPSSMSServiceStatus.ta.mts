@@ -129,7 +129,7 @@ const EPSSMSServiceStatus = _enum_for_EPSSMSServiceStatus;
  * @type {number}
  */
 export
-const EPSSMSServiceStatus_sMSServicesNotAvailable = EPSSMSServiceStatus.sMSServicesNotAvailable satisfies EPSSMSServiceStatus; /* LONG_NAMED_ENUMERATED_VALUE */
+const EPSSMSServiceStatus_sMSServicesNotAvailable = EPSSMSServiceStatus.sMSServicesNotAvailable; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sMSServicesNotAvailable
@@ -143,7 +143,7 @@ const EPSSMSServiceStatus_sMSServicesNotAvailable = EPSSMSServiceStatus.sMSServi
  * @type {number}
  */
 export
-const sMSServicesNotAvailable = EPSSMSServiceStatus.sMSServicesNotAvailable satisfies EPSSMSServiceStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sMSServicesNotAvailable = EPSSMSServiceStatus.sMSServicesNotAvailable; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EPSSMSServiceStatus_sMSServicesNotAvailableInThisPLMN
@@ -157,7 +157,7 @@ const sMSServicesNotAvailable = EPSSMSServiceStatus.sMSServicesNotAvailable sati
  * @type {number}
  */
 export
-const EPSSMSServiceStatus_sMSServicesNotAvailableInThisPLMN = EPSSMSServiceStatus.sMSServicesNotAvailableInThisPLMN satisfies EPSSMSServiceStatus; /* LONG_NAMED_ENUMERATED_VALUE */
+const EPSSMSServiceStatus_sMSServicesNotAvailableInThisPLMN = EPSSMSServiceStatus.sMSServicesNotAvailableInThisPLMN; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sMSServicesNotAvailableInThisPLMN
@@ -171,7 +171,7 @@ const EPSSMSServiceStatus_sMSServicesNotAvailableInThisPLMN = EPSSMSServiceStatu
  * @type {number}
  */
 export
-const sMSServicesNotAvailableInThisPLMN = EPSSMSServiceStatus.sMSServicesNotAvailableInThisPLMN satisfies EPSSMSServiceStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sMSServicesNotAvailableInThisPLMN = EPSSMSServiceStatus.sMSServicesNotAvailableInThisPLMN; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EPSSMSServiceStatus_networkFailure
@@ -185,7 +185,7 @@ const sMSServicesNotAvailableInThisPLMN = EPSSMSServiceStatus.sMSServicesNotAvai
  * @type {number}
  */
 export
-const EPSSMSServiceStatus_networkFailure = EPSSMSServiceStatus.networkFailure satisfies EPSSMSServiceStatus; /* LONG_NAMED_ENUMERATED_VALUE */
+const EPSSMSServiceStatus_networkFailure = EPSSMSServiceStatus.networkFailure; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary networkFailure
@@ -199,7 +199,7 @@ const EPSSMSServiceStatus_networkFailure = EPSSMSServiceStatus.networkFailure sa
  * @type {number}
  */
 export
-const networkFailure = EPSSMSServiceStatus.networkFailure satisfies EPSSMSServiceStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
+const networkFailure = EPSSMSServiceStatus.networkFailure; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EPSSMSServiceStatus_congestion
@@ -213,7 +213,7 @@ const networkFailure = EPSSMSServiceStatus.networkFailure satisfies EPSSMSServic
  * @type {number}
  */
 export
-const EPSSMSServiceStatus_congestion = EPSSMSServiceStatus.congestion satisfies EPSSMSServiceStatus; /* LONG_NAMED_ENUMERATED_VALUE */
+const EPSSMSServiceStatus_congestion = EPSSMSServiceStatus.congestion; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary congestion
@@ -227,7 +227,7 @@ const EPSSMSServiceStatus_congestion = EPSSMSServiceStatus.congestion satisfies 
  * @type {number}
  */
 export
-const congestion = EPSSMSServiceStatus.congestion satisfies EPSSMSServiceStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
+const congestion = EPSSMSServiceStatus.congestion; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_EPSSMSServiceStatus: $.ASN1Decoder<EPSSMSServiceStatus> = $._decodeEnumerated;
 export const _encode_EPSSMSServiceStatus: $.ASN1Encoder<EPSSMSServiceStatus> = $._encodeEnumerated;
 

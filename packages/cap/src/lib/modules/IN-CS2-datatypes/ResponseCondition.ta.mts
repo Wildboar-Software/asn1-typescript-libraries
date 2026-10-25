@@ -76,7 +76,7 @@ const ResponseCondition = _enum_for_ResponseCondition;
  * @type {number}
  */
 export
-const ResponseCondition_intermediateResponse = ResponseCondition.intermediateResponse satisfies ResponseCondition; /* LONG_NAMED_ENUMERATED_VALUE */
+const ResponseCondition_intermediateResponse = ResponseCondition.intermediateResponse; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary intermediateResponse
@@ -84,7 +84,7 @@ const ResponseCondition_intermediateResponse = ResponseCondition.intermediateRes
  * @type {number}
  */
 export
-const intermediateResponse = ResponseCondition.intermediateResponse satisfies ResponseCondition; /* SHORT_NAMED_ENUMERATED_VALUE */
+const intermediateResponse = ResponseCondition.intermediateResponse; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ResponseCondition_lastResponse
@@ -92,7 +92,7 @@ const intermediateResponse = ResponseCondition.intermediateResponse satisfies Re
  * @type {number}
  */
 export
-const ResponseCondition_lastResponse = ResponseCondition.lastResponse satisfies ResponseCondition; /* LONG_NAMED_ENUMERATED_VALUE */
+const ResponseCondition_lastResponse = ResponseCondition.lastResponse; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary lastResponse
@@ -100,7 +100,7 @@ const ResponseCondition_lastResponse = ResponseCondition.lastResponse satisfies 
  * @type {number}
  */
 export
-const lastResponse = ResponseCondition.lastResponse satisfies ResponseCondition; /* SHORT_NAMED_ENUMERATED_VALUE */
+const lastResponse = ResponseCondition.lastResponse; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_ResponseCondition = $._decodeEnumerated;
 export const _encode_ResponseCondition = $._encodeEnumerated;
 

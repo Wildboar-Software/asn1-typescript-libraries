@@ -103,7 +103,7 @@ const IsdnBasicService = _enum_for_IsdnBasicService;
  * @type {number}
  */
 export
-const IsdnBasicService_allServices = IsdnBasicService.allServices satisfies IsdnBasicService; /* LONG_NAMED_ENUMERATED_VALUE */
+const IsdnBasicService_allServices = IsdnBasicService.allServices; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary allServices
@@ -111,7 +111,7 @@ const IsdnBasicService_allServices = IsdnBasicService.allServices satisfies Isdn
  * @type {number}
  */
 export
-const allServices = IsdnBasicService.allServices satisfies IsdnBasicService; /* SHORT_NAMED_ENUMERATED_VALUE */
+const allServices = IsdnBasicService.allServices; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary IsdnBasicService_speech
@@ -119,7 +119,7 @@ const allServices = IsdnBasicService.allServices satisfies IsdnBasicService; /* 
  * @type {number}
  */
 export
-const IsdnBasicService_speech = IsdnBasicService.speech satisfies IsdnBasicService; /* LONG_NAMED_ENUMERATED_VALUE */
+const IsdnBasicService_speech = IsdnBasicService.speech; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary speech
@@ -127,7 +127,7 @@ const IsdnBasicService_speech = IsdnBasicService.speech satisfies IsdnBasicServi
  * @type {number}
  */
 export
-const speech = IsdnBasicService.speech satisfies IsdnBasicService; /* SHORT_NAMED_ENUMERATED_VALUE */
+const speech = IsdnBasicService.speech; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary IsdnBasicService_unrestrictedDigitalInformation
@@ -135,7 +135,7 @@ const speech = IsdnBasicService.speech satisfies IsdnBasicService; /* SHORT_NAME
  * @type {number}
  */
 export
-const IsdnBasicService_unrestrictedDigitalInformation = IsdnBasicService.unrestrictedDigitalInformation satisfies IsdnBasicService; /* LONG_NAMED_ENUMERATED_VALUE */
+const IsdnBasicService_unrestrictedDigitalInformation = IsdnBasicService.unrestrictedDigitalInformation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unrestrictedDigitalInformation
@@ -143,7 +143,7 @@ const IsdnBasicService_unrestrictedDigitalInformation = IsdnBasicService.unrestr
  * @type {number}
  */
 export
-const unrestrictedDigitalInformation = IsdnBasicService.unrestrictedDigitalInformation satisfies IsdnBasicService; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unrestrictedDigitalInformation = IsdnBasicService.unrestrictedDigitalInformation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary IsdnBasicService_audio3k1Hz
@@ -151,7 +151,7 @@ const unrestrictedDigitalInformation = IsdnBasicService.unrestrictedDigitalInfor
  * @type {number}
  */
 export
-const IsdnBasicService_audio3k1Hz = IsdnBasicService.audio3k1Hz satisfies IsdnBasicService; /* LONG_NAMED_ENUMERATED_VALUE */
+const IsdnBasicService_audio3k1Hz = IsdnBasicService.audio3k1Hz; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary audio3k1Hz
@@ -159,7 +159,7 @@ const IsdnBasicService_audio3k1Hz = IsdnBasicService.audio3k1Hz satisfies IsdnBa
  * @type {number}
  */
 export
-const audio3k1Hz = IsdnBasicService.audio3k1Hz satisfies IsdnBasicService; /* SHORT_NAMED_ENUMERATED_VALUE */
+const audio3k1Hz = IsdnBasicService.audio3k1Hz; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary IsdnBasicService_unrestrictedDigitalInformationWithTonesAndAnouncements
@@ -167,7 +167,7 @@ const audio3k1Hz = IsdnBasicService.audio3k1Hz satisfies IsdnBasicService; /* SH
  * @type {number}
  */
 export
-const IsdnBasicService_unrestrictedDigitalInformationWithTonesAndAnouncements = IsdnBasicService.unrestrictedDigitalInformationWithTonesAndAnouncements satisfies IsdnBasicService; /* LONG_NAMED_ENUMERATED_VALUE */
+const IsdnBasicService_unrestrictedDigitalInformationWithTonesAndAnouncements = IsdnBasicService.unrestrictedDigitalInformationWithTonesAndAnouncements; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unrestrictedDigitalInformationWithTonesAndAnouncements
@@ -175,7 +175,7 @@ const IsdnBasicService_unrestrictedDigitalInformationWithTonesAndAnouncements = 
  * @type {number}
  */
 export
-const unrestrictedDigitalInformationWithTonesAndAnouncements = IsdnBasicService.unrestrictedDigitalInformationWithTonesAndAnouncements satisfies IsdnBasicService; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unrestrictedDigitalInformationWithTonesAndAnouncements = IsdnBasicService.unrestrictedDigitalInformationWithTonesAndAnouncements; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary IsdnBasicService_telephony3k1Hz
@@ -183,7 +183,7 @@ const unrestrictedDigitalInformationWithTonesAndAnouncements = IsdnBasicService.
  * @type {number}
  */
 export
-const IsdnBasicService_telephony3k1Hz = IsdnBasicService.telephony3k1Hz satisfies IsdnBasicService; /* LONG_NAMED_ENUMERATED_VALUE */
+const IsdnBasicService_telephony3k1Hz = IsdnBasicService.telephony3k1Hz; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary telephony3k1Hz
@@ -191,7 +191,7 @@ const IsdnBasicService_telephony3k1Hz = IsdnBasicService.telephony3k1Hz satisfie
  * @type {number}
  */
 export
-const telephony3k1Hz = IsdnBasicService.telephony3k1Hz satisfies IsdnBasicService; /* SHORT_NAMED_ENUMERATED_VALUE */
+const telephony3k1Hz = IsdnBasicService.telephony3k1Hz; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary IsdnBasicService_teletex
@@ -199,7 +199,7 @@ const telephony3k1Hz = IsdnBasicService.telephony3k1Hz satisfies IsdnBasicServic
  * @type {number}
  */
 export
-const IsdnBasicService_teletex = IsdnBasicService.teletex satisfies IsdnBasicService; /* LONG_NAMED_ENUMERATED_VALUE */
+const IsdnBasicService_teletex = IsdnBasicService.teletex; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary teletex
@@ -207,7 +207,7 @@ const IsdnBasicService_teletex = IsdnBasicService.teletex satisfies IsdnBasicSer
  * @type {number}
  */
 export
-const teletex = IsdnBasicService.teletex satisfies IsdnBasicService; /* SHORT_NAMED_ENUMERATED_VALUE */
+const teletex = IsdnBasicService.teletex; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary IsdnBasicService_telefaxGroup4Class1
@@ -215,7 +215,7 @@ const teletex = IsdnBasicService.teletex satisfies IsdnBasicService; /* SHORT_NA
  * @type {number}
  */
 export
-const IsdnBasicService_telefaxGroup4Class1 = IsdnBasicService.telefaxGroup4Class1 satisfies IsdnBasicService; /* LONG_NAMED_ENUMERATED_VALUE */
+const IsdnBasicService_telefaxGroup4Class1 = IsdnBasicService.telefaxGroup4Class1; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary telefaxGroup4Class1
@@ -223,7 +223,7 @@ const IsdnBasicService_telefaxGroup4Class1 = IsdnBasicService.telefaxGroup4Class
  * @type {number}
  */
 export
-const telefaxGroup4Class1 = IsdnBasicService.telefaxGroup4Class1 satisfies IsdnBasicService; /* SHORT_NAMED_ENUMERATED_VALUE */
+const telefaxGroup4Class1 = IsdnBasicService.telefaxGroup4Class1; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary IsdnBasicService_videotexSyntaxBased
@@ -231,7 +231,7 @@ const telefaxGroup4Class1 = IsdnBasicService.telefaxGroup4Class1 satisfies IsdnB
  * @type {number}
  */
 export
-const IsdnBasicService_videotexSyntaxBased = IsdnBasicService.videotexSyntaxBased satisfies IsdnBasicService; /* LONG_NAMED_ENUMERATED_VALUE */
+const IsdnBasicService_videotexSyntaxBased = IsdnBasicService.videotexSyntaxBased; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary videotexSyntaxBased
@@ -239,7 +239,7 @@ const IsdnBasicService_videotexSyntaxBased = IsdnBasicService.videotexSyntaxBase
  * @type {number}
  */
 export
-const videotexSyntaxBased = IsdnBasicService.videotexSyntaxBased satisfies IsdnBasicService; /* SHORT_NAMED_ENUMERATED_VALUE */
+const videotexSyntaxBased = IsdnBasicService.videotexSyntaxBased; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary IsdnBasicService_videotelephony
@@ -247,7 +247,7 @@ const videotexSyntaxBased = IsdnBasicService.videotexSyntaxBased satisfies IsdnB
  * @type {number}
  */
 export
-const IsdnBasicService_videotelephony = IsdnBasicService.videotelephony satisfies IsdnBasicService; /* LONG_NAMED_ENUMERATED_VALUE */
+const IsdnBasicService_videotelephony = IsdnBasicService.videotelephony; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary videotelephony
@@ -255,7 +255,7 @@ const IsdnBasicService_videotelephony = IsdnBasicService.videotelephony satisfie
  * @type {number}
  */
 export
-const videotelephony = IsdnBasicService.videotelephony satisfies IsdnBasicService; /* SHORT_NAMED_ENUMERATED_VALUE */
+const videotelephony = IsdnBasicService.videotelephony; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary IsdnBasicService_telefaxGroup2_3
@@ -263,7 +263,7 @@ const videotelephony = IsdnBasicService.videotelephony satisfies IsdnBasicServic
  * @type {number}
  */
 export
-const IsdnBasicService_telefaxGroup2_3 = IsdnBasicService.telefaxGroup2_3 satisfies IsdnBasicService; /* LONG_NAMED_ENUMERATED_VALUE */
+const IsdnBasicService_telefaxGroup2_3 = IsdnBasicService.telefaxGroup2_3; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary telefaxGroup2_3
@@ -271,7 +271,7 @@ const IsdnBasicService_telefaxGroup2_3 = IsdnBasicService.telefaxGroup2_3 satisf
  * @type {number}
  */
 export
-const telefaxGroup2_3 = IsdnBasicService.telefaxGroup2_3 satisfies IsdnBasicService; /* SHORT_NAMED_ENUMERATED_VALUE */
+const telefaxGroup2_3 = IsdnBasicService.telefaxGroup2_3; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary IsdnBasicService_telephony7kHz
@@ -279,7 +279,7 @@ const telefaxGroup2_3 = IsdnBasicService.telefaxGroup2_3 satisfies IsdnBasicServ
  * @type {number}
  */
 export
-const IsdnBasicService_telephony7kHz = IsdnBasicService.telephony7kHz satisfies IsdnBasicService; /* LONG_NAMED_ENUMERATED_VALUE */
+const IsdnBasicService_telephony7kHz = IsdnBasicService.telephony7kHz; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary telephony7kHz
@@ -287,7 +287,7 @@ const IsdnBasicService_telephony7kHz = IsdnBasicService.telephony7kHz satisfies 
  * @type {number}
  */
 export
-const telephony7kHz = IsdnBasicService.telephony7kHz satisfies IsdnBasicService; /* SHORT_NAMED_ENUMERATED_VALUE */
+const telephony7kHz = IsdnBasicService.telephony7kHz; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_IsdnBasicService: $.ASN1Decoder<IsdnBasicService> = $._decodeEnumerated;

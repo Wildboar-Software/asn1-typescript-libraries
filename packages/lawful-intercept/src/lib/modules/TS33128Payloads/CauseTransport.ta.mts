@@ -69,7 +69,7 @@ const CauseTransport = _enum_for_CauseTransport;
  * @type {number}
  */
 export
-const CauseTransport_transportResourceUnavailable = CauseTransport.transportResourceUnavailable satisfies CauseTransport; /* LONG_NAMED_ENUMERATED_VALUE */
+const CauseTransport_transportResourceUnavailable = CauseTransport.transportResourceUnavailable; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary transportResourceUnavailable
@@ -77,7 +77,7 @@ const CauseTransport_transportResourceUnavailable = CauseTransport.transportReso
  * @type {number}
  */
 export
-const transportResourceUnavailable = CauseTransport.transportResourceUnavailable satisfies CauseTransport; /* SHORT_NAMED_ENUMERATED_VALUE */
+const transportResourceUnavailable = CauseTransport.transportResourceUnavailable; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CauseTransport_unspecified
@@ -85,7 +85,7 @@ const transportResourceUnavailable = CauseTransport.transportResourceUnavailable
  * @type {number}
  */
 export
-const CauseTransport_unspecified = CauseTransport.unspecified satisfies CauseTransport; /* LONG_NAMED_ENUMERATED_VALUE */
+const CauseTransport_unspecified = CauseTransport.unspecified; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unspecified
@@ -93,7 +93,7 @@ const CauseTransport_unspecified = CauseTransport.unspecified satisfies CauseTra
  * @type {number}
  */
 export
-const unspecified = CauseTransport.unspecified satisfies CauseTransport; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unspecified = CauseTransport.unspecified; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_CauseTransport: $.ASN1Decoder<CauseTransport> = $._decodeEnumerated;
 export const _encode_CauseTransport: $.ASN1Encoder<CauseTransport> = $._encodeEnumerated;
 

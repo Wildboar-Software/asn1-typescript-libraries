@@ -55,7 +55,7 @@ const DOupdate_copyFromBuffer_structure_none = 0 satisfies DOupdate_copyFromBuff
  * @type {number}
  */
 export
-const none = DOupdate_copyFromBuffer_structure_none satisfies DOupdate_copyFromBuffer_structure; /* SHORT_NAMED_INTEGER_VALUE */
+const none = DOupdate_copyFromBuffer_structure_none; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DOupdate_copyFromBuffer_structure_x
@@ -79,7 +79,7 @@ const DOupdate_copyFromBuffer_structure_x = 1 satisfies DOupdate_copyFromBuffer_
  * @type {number}
  */
 export
-const x = DOupdate_copyFromBuffer_structure_x satisfies DOupdate_copyFromBuffer_structure; /* SHORT_NAMED_INTEGER_VALUE */
+const x = DOupdate_copyFromBuffer_structure_x; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DOupdate_copyFromBuffer_structure_xAndy
@@ -103,7 +103,7 @@ const DOupdate_copyFromBuffer_structure_xAndy = 2 satisfies DOupdate_copyFromBuf
  * @type {number}
  */
 export
-const xAndy = DOupdate_copyFromBuffer_structure_xAndy satisfies DOupdate_copyFromBuffer_structure; /* SHORT_NAMED_INTEGER_VALUE */
+const xAndy = DOupdate_copyFromBuffer_structure_xAndy; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_DOupdate_copyFromBuffer_structure = $._decodeInteger;
 export const _encode_DOupdate_copyFromBuffer_structure = $._encodeInteger;
 

@@ -40,7 +40,7 @@ const ObservedIMEITicket_imeiCheckEvent_mobileOriginatedCall = 0 satisfies Obser
  * @type {number}
  */
 export
-const mobileOriginatedCall = ObservedIMEITicket_imeiCheckEvent_mobileOriginatedCall satisfies ObservedIMEITicket_imeiCheckEvent; /* SHORT_NAMED_INTEGER_VALUE */
+const mobileOriginatedCall = ObservedIMEITicket_imeiCheckEvent_mobileOriginatedCall; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ObservedIMEITicket_imeiCheckEvent_mobileTerminatedCall
@@ -56,7 +56,7 @@ const ObservedIMEITicket_imeiCheckEvent_mobileTerminatedCall = 1 satisfies Obser
  * @type {number}
  */
 export
-const mobileTerminatedCall = ObservedIMEITicket_imeiCheckEvent_mobileTerminatedCall satisfies ObservedIMEITicket_imeiCheckEvent; /* SHORT_NAMED_INTEGER_VALUE */
+const mobileTerminatedCall = ObservedIMEITicket_imeiCheckEvent_mobileTerminatedCall; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ObservedIMEITicket_imeiCheckEvent_smsMobileOriginating
@@ -72,7 +72,7 @@ const ObservedIMEITicket_imeiCheckEvent_smsMobileOriginating = 2 satisfies Obser
  * @type {number}
  */
 export
-const smsMobileOriginating = ObservedIMEITicket_imeiCheckEvent_smsMobileOriginating satisfies ObservedIMEITicket_imeiCheckEvent; /* SHORT_NAMED_INTEGER_VALUE */
+const smsMobileOriginating = ObservedIMEITicket_imeiCheckEvent_smsMobileOriginating; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ObservedIMEITicket_imeiCheckEvent_smsMobileTerminating
@@ -88,7 +88,7 @@ const ObservedIMEITicket_imeiCheckEvent_smsMobileTerminating = 3 satisfies Obser
  * @type {number}
  */
 export
-const smsMobileTerminating = ObservedIMEITicket_imeiCheckEvent_smsMobileTerminating satisfies ObservedIMEITicket_imeiCheckEvent; /* SHORT_NAMED_INTEGER_VALUE */
+const smsMobileTerminating = ObservedIMEITicket_imeiCheckEvent_smsMobileTerminating; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ObservedIMEITicket_imeiCheckEvent_ssAction
@@ -104,7 +104,7 @@ const ObservedIMEITicket_imeiCheckEvent_ssAction = 4 satisfies ObservedIMEITicke
  * @type {number}
  */
 export
-const ssAction = ObservedIMEITicket_imeiCheckEvent_ssAction satisfies ObservedIMEITicket_imeiCheckEvent; /* SHORT_NAMED_INTEGER_VALUE */
+const ssAction = ObservedIMEITicket_imeiCheckEvent_ssAction; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ObservedIMEITicket_imeiCheckEvent_locationUpdate
@@ -120,7 +120,7 @@ const ObservedIMEITicket_imeiCheckEvent_locationUpdate = 5 satisfies ObservedIME
  * @type {number}
  */
 export
-const locationUpdate = ObservedIMEITicket_imeiCheckEvent_locationUpdate satisfies ObservedIMEITicket_imeiCheckEvent; /* SHORT_NAMED_INTEGER_VALUE */
+const locationUpdate = ObservedIMEITicket_imeiCheckEvent_locationUpdate; /* SHORT_NAMED_INTEGER_VALUE */
 
 export
 const _decode_ObservedIMEITicket_imeiCheckEvent: $.ASN1Decoder<ObservedIMEITicket_imeiCheckEvent> = $._decodeInteger;

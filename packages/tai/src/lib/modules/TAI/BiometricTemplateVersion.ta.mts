@@ -53,7 +53,7 @@ const BiometricTemplateVersion_v0 = 0 satisfies BiometricTemplateVersion; /* LON
  * @type {number}
  */
 export
-const v0 = BiometricTemplateVersion_v0 satisfies BiometricTemplateVersion; /* SHORT_NAMED_INTEGER_VALUE */
+const v0 = BiometricTemplateVersion_v0; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_BiometricTemplateVersion = $._decodeInteger;
 export const _encode_BiometricTemplateVersion = $._encodeInteger;
 

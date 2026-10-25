@@ -48,7 +48,7 @@ export const Type_connectionOriented = 0 satisfies Type; /* LONG_NAMED_INTEGER_V
  * @constant
  * @type {number}
  */
-export const connectionOriented = Type_connectionOriented satisfies Type; /* SHORT_NAMED_INTEGER_VALUE */
+export const connectionOriented = Type_connectionOriented; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Type_connectionless
@@ -68,7 +68,7 @@ export const Type_connectionless = 1 satisfies Type; /* LONG_NAMED_INTEGER_VALUE
  * @constant
  * @type {number}
  */
-export const connectionless = Type_connectionless satisfies Type; /* SHORT_NAMED_INTEGER_VALUE */
+export const connectionless = Type_connectionless; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_Type = $._decodeInteger;

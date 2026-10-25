@@ -58,7 +58,7 @@ export const RefuseReason_rtsBusy = 0 satisfies RefuseReason; /* LONG_NAMED_INTE
  * @constant
  * @type {number}
  */
-export const rtsBusy = RefuseReason_rtsBusy satisfies RefuseReason; /* SHORT_NAMED_INTEGER_VALUE */
+export const rtsBusy = RefuseReason_rtsBusy; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -77,7 +77,7 @@ export const RefuseReason_cannotRecover = 1 satisfies RefuseReason; /* LONG_NAME
  * @constant
  * @type {number}
  */
-export const cannotRecover = RefuseReason_cannotRecover satisfies RefuseReason; /* SHORT_NAMED_INTEGER_VALUE */
+export const cannotRecover = RefuseReason_cannotRecover; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -96,7 +96,7 @@ export const RefuseReason_validationFailure = 2 satisfies RefuseReason; /* LONG_
  * @constant
  * @type {number}
  */
-export const validationFailure = RefuseReason_validationFailure satisfies RefuseReason; /* SHORT_NAMED_INTEGER_VALUE */
+export const validationFailure = RefuseReason_validationFailure; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -115,7 +115,7 @@ export const RefuseReason_unacceptableDialogueMode = 3 satisfies RefuseReason; /
  * @constant
  * @type {number}
  */
-export const unacceptableDialogueMode = RefuseReason_unacceptableDialogueMode satisfies RefuseReason; /* SHORT_NAMED_INTEGER_VALUE */
+export const unacceptableDialogueMode = RefuseReason_unacceptableDialogueMode; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 

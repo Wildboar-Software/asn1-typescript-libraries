@@ -99,7 +99,7 @@ const CallStatus = _enum_for_CallStatus;
  * @type {number}
  */
 export
-const CallStatus_answered = CallStatus.answered satisfies CallStatus; /* LONG_NAMED_ENUMERATED_VALUE */
+const CallStatus_answered = CallStatus.answered; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary answered
@@ -108,7 +108,7 @@ const CallStatus_answered = CallStatus.answered satisfies CallStatus; /* LONG_NA
  * @type {number}
  */
 export
-const answered = CallStatus.answered satisfies CallStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
+const answered = CallStatus.answered; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CallStatus_alerting
@@ -124,7 +124,7 @@ const answered = CallStatus.answered satisfies CallStatus; /* SHORT_NAMED_ENUMER
  * @type {number}
  */
 export
-const CallStatus_alerting = CallStatus.alerting satisfies CallStatus; /* LONG_NAMED_ENUMERATED_VALUE */
+const CallStatus_alerting = CallStatus.alerting; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary alerting
@@ -133,7 +133,7 @@ const CallStatus_alerting = CallStatus.alerting satisfies CallStatus; /* LONG_NA
  * @type {number}
  */
 export
-const alerting = CallStatus.alerting satisfies CallStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
+const alerting = CallStatus.alerting; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_CallStatus: $.ASN1Decoder<CallStatus> = $._decodeEnumerated;

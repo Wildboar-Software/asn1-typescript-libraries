@@ -68,7 +68,7 @@ export const EDINInitiatorField = _enum_for_EDINInitiatorField;
  * @type {number}
  */
 export const EDINInitiatorField_internal_ua =
-    EDINInitiatorField.internal_ua satisfies EDINInitiatorField; /* LONG_NAMED_ENUMERATED_VALUE */
+    EDINInitiatorField.internal_ua; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary internal_ua
@@ -76,7 +76,7 @@ export const EDINInitiatorField_internal_ua =
  * @type {number}
  */
 export const internal_ua =
-    EDINInitiatorField.internal_ua satisfies EDINInitiatorField; /* SHORT_NAMED_ENUMERATED_VALUE */
+    EDINInitiatorField.internal_ua; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EDINInitiatorField_external_ua
@@ -84,7 +84,7 @@ export const internal_ua =
  * @type {number}
  */
 export const EDINInitiatorField_external_ua =
-    EDINInitiatorField.external_ua satisfies EDINInitiatorField; /* LONG_NAMED_ENUMERATED_VALUE */
+    EDINInitiatorField.external_ua; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary external_ua
@@ -92,7 +92,7 @@ export const EDINInitiatorField_external_ua =
  * @type {number}
  */
 export const external_ua =
-    EDINInitiatorField.external_ua satisfies EDINInitiatorField; /* SHORT_NAMED_ENUMERATED_VALUE */
+    EDINInitiatorField.external_ua; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EDINInitiatorField_internal_ms
@@ -100,7 +100,7 @@ export const external_ua =
  * @type {number}
  */
 export const EDINInitiatorField_internal_ms =
-    EDINInitiatorField.internal_ms satisfies EDINInitiatorField; /* LONG_NAMED_ENUMERATED_VALUE */
+    EDINInitiatorField.internal_ms; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary internal_ms
@@ -108,7 +108,7 @@ export const EDINInitiatorField_internal_ms =
  * @type {number}
  */
 export const internal_ms =
-    EDINInitiatorField.internal_ms satisfies EDINInitiatorField; /* SHORT_NAMED_ENUMERATED_VALUE */
+    EDINInitiatorField.internal_ms; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 export function _decode_EDINInitiatorField(el: _Element): EDINInitiatorField {

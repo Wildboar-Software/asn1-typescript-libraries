@@ -38,7 +38,7 @@ const TermCAMELRecord_lrnSoInd_lRN_NP_Database = 1 satisfies TermCAMELRecord_lrn
  * @type {number}
  */
 export
-const lRN_NP_Database = TermCAMELRecord_lrnSoInd_lRN_NP_Database satisfies TermCAMELRecord_lrnSoInd; /* SHORT_NAMED_INTEGER_VALUE */
+const lRN_NP_Database = TermCAMELRecord_lrnSoInd_lRN_NP_Database; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TermCAMELRecord_lrnSoInd_switchingSystemData
@@ -54,7 +54,7 @@ const TermCAMELRecord_lrnSoInd_switchingSystemData = 2 satisfies TermCAMELRecord
  * @type {number}
  */
 export
-const switchingSystemData = TermCAMELRecord_lrnSoInd_switchingSystemData satisfies TermCAMELRecord_lrnSoInd; /* SHORT_NAMED_INTEGER_VALUE */
+const switchingSystemData = TermCAMELRecord_lrnSoInd_switchingSystemData; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TermCAMELRecord_lrnSoInd_incomingsignaling
@@ -70,7 +70,7 @@ const TermCAMELRecord_lrnSoInd_incomingsignaling = 3 satisfies TermCAMELRecord_l
  * @type {number}
  */
 export
-const incomingsignaling = TermCAMELRecord_lrnSoInd_incomingsignaling satisfies TermCAMELRecord_lrnSoInd; /* SHORT_NAMED_INTEGER_VALUE */
+const incomingsignaling = TermCAMELRecord_lrnSoInd_incomingsignaling; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TermCAMELRecord_lrnSoInd_unknown
@@ -86,7 +86,7 @@ const TermCAMELRecord_lrnSoInd_unknown = 9 satisfies TermCAMELRecord_lrnSoInd; /
  * @type {number}
  */
 export
-const unknown = TermCAMELRecord_lrnSoInd_unknown satisfies TermCAMELRecord_lrnSoInd; /* SHORT_NAMED_INTEGER_VALUE */
+const unknown = TermCAMELRecord_lrnSoInd_unknown; /* SHORT_NAMED_INTEGER_VALUE */
 
 export
 const _decode_TermCAMELRecord_lrnSoInd: $.ASN1Decoder<TermCAMELRecord_lrnSoInd> = $._decodeInteger;

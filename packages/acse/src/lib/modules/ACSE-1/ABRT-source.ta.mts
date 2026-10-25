@@ -41,7 +41,7 @@ export const ABRT_source_acse_service_user = 0 satisfies ABRT_source; /* LONG_NA
  * @constant
  * @type {number}
  */
-export const acse_service_user = ABRT_source_acse_service_user satisfies ABRT_source; /* SHORT_NAMED_INTEGER_VALUE */
+export const acse_service_user = ABRT_source_acse_service_user; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ABRT_source_acse_service_provider
@@ -55,7 +55,7 @@ export const ABRT_source_acse_service_provider = 1 satisfies ABRT_source; /* LON
  * @constant
  * @type {number}
  */
-export const acse_service_provider = ABRT_source_acse_service_provider satisfies ABRT_source; /* SHORT_NAMED_INTEGER_VALUE */
+export const acse_service_provider = ABRT_source_acse_service_provider; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_ABRT_source = $._decodeInteger;

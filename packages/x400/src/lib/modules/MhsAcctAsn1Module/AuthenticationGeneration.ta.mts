@@ -38,7 +38,7 @@ export const AuthenticationGeneration_generated = 1 satisfies AuthenticationGene
  * @constant
  * @type {number}
  */
-export const generated = AuthenticationGeneration_generated satisfies AuthenticationGeneration; /* SHORT_NAMED_INTEGER_VALUE */
+export const generated = AuthenticationGeneration_generated; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AuthenticationGeneration_non_generated
@@ -52,7 +52,7 @@ export const AuthenticationGeneration_non_generated = 2 satisfies Authentication
  * @constant
  * @type {number}
  */
-export const non_generated = AuthenticationGeneration_non_generated satisfies AuthenticationGeneration; /* SHORT_NAMED_INTEGER_VALUE */
+export const non_generated = AuthenticationGeneration_non_generated; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_AuthenticationGeneration = $._decodeInteger;

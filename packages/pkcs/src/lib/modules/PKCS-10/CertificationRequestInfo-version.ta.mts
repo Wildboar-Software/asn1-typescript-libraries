@@ -29,7 +29,7 @@ export const CertificationRequestInfo_version_v1 = 0 satisfies CertificationRequ
  * @constant
  * @type {number}
  */
-export const v1 = CertificationRequestInfo_version_v1 satisfies CertificationRequestInfo_version; /* SHORT_NAMED_INTEGER_VALUE */
+export const v1 = CertificationRequestInfo_version_v1; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 

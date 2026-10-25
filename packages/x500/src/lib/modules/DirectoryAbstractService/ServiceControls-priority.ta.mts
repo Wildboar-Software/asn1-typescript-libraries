@@ -29,7 +29,7 @@ export const ServiceControls_priority_low = 0 satisfies ServiceControls_priority
  * @constant
  * @type {number}
  */
-export const low = ServiceControls_priority_low satisfies ServiceControls_priority; /* SHORT_NAMED_INTEGER_VALUE */
+export const low = ServiceControls_priority_low; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceControls_priority_medium
@@ -51,7 +51,7 @@ export const ServiceControls_priority_medium = 1 satisfies ServiceControls_prior
  * @constant
  * @type {number}
  */
-export const medium = ServiceControls_priority_medium satisfies ServiceControls_priority; /* SHORT_NAMED_INTEGER_VALUE */
+export const medium = ServiceControls_priority_medium; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceControls_priority_high
@@ -65,7 +65,7 @@ export const ServiceControls_priority_high = 2 satisfies ServiceControls_priorit
  * @constant
  * @type {number}
  */
-export const high = ServiceControls_priority_high satisfies ServiceControls_priority; /* SHORT_NAMED_INTEGER_VALUE */
+export const high = ServiceControls_priority_high; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_ServiceControls_priority = $._decodeInteger;

@@ -237,7 +237,7 @@ type AudibleSignal = _enum_for_AudibleSignal | ENUMERATED;
  * @type {number}
  */
 export
-const AudibleSignal_notUsed = _enum_for_AudibleSignal.notUsed satisfies AudibleSignal; /* LONG_NAMED_ENUMERATED_VALUE */
+const AudibleSignal_notUsed = _enum_for_AudibleSignal.notUsed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary notUsed
@@ -251,7 +251,7 @@ const AudibleSignal_notUsed = _enum_for_AudibleSignal.notUsed satisfies AudibleS
  * @type {number}
  */
 export
-const notUsed = AudibleSignal_notUsed satisfies AudibleSignal; /* SHORT_NAMED_ENUMERATED_VALUE */
+const notUsed = AudibleSignal_notUsed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AudibleSignal_dialTone
@@ -266,7 +266,7 @@ const notUsed = AudibleSignal_notUsed satisfies AudibleSignal; /* SHORT_NAMED_EN
  * @type {number}
  */
 export
-const AudibleSignal_dialTone = _enum_for_AudibleSignal.dialTone satisfies AudibleSignal; /* LONG_NAMED_ENUMERATED_VALUE */
+const AudibleSignal_dialTone = _enum_for_AudibleSignal.dialTone; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary dialTone
@@ -281,7 +281,7 @@ const AudibleSignal_dialTone = _enum_for_AudibleSignal.dialTone satisfies Audibl
  * @type {number}
  */
 export
-const dialTone = AudibleSignal_dialTone satisfies AudibleSignal; /* SHORT_NAMED_ENUMERATED_VALUE */
+const dialTone = AudibleSignal_dialTone; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AudibleSignal_recallDialTone
@@ -295,7 +295,7 @@ const dialTone = AudibleSignal_dialTone satisfies AudibleSignal; /* SHORT_NAMED_
  * @type {number}
  */
 export
-const AudibleSignal_recallDialTone = _enum_for_AudibleSignal.recallDialTone satisfies AudibleSignal; /* LONG_NAMED_ENUMERATED_VALUE */
+const AudibleSignal_recallDialTone = _enum_for_AudibleSignal.recallDialTone; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary recallDialTone
@@ -309,7 +309,7 @@ const AudibleSignal_recallDialTone = _enum_for_AudibleSignal.recallDialTone sati
  * @type {number}
  */
 export
-const recallDialTone = AudibleSignal_recallDialTone satisfies AudibleSignal; /* SHORT_NAMED_ENUMERATED_VALUE */
+const recallDialTone = AudibleSignal_recallDialTone; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AudibleSignal_ringbackTone
@@ -323,7 +323,7 @@ const recallDialTone = AudibleSignal_recallDialTone satisfies AudibleSignal; /* 
  * @type {number}
  */
 export
-const AudibleSignal_ringbackTone = _enum_for_AudibleSignal.ringbackTone satisfies AudibleSignal; /* LONG_NAMED_ENUMERATED_VALUE */
+const AudibleSignal_ringbackTone = _enum_for_AudibleSignal.ringbackTone; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ringbackTone
@@ -337,7 +337,7 @@ const AudibleSignal_ringbackTone = _enum_for_AudibleSignal.ringbackTone satisfie
  * @type {number}
  */
 export
-const ringbackTone = AudibleSignal_ringbackTone satisfies AudibleSignal; /* SHORT_NAMED_ENUMERATED_VALUE */
+const ringbackTone = AudibleSignal_ringbackTone; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AudibleSignal_reorderTone
@@ -351,7 +351,7 @@ const ringbackTone = AudibleSignal_ringbackTone satisfies AudibleSignal; /* SHOR
  * @type {number}
  */
 export
-const AudibleSignal_reorderTone = _enum_for_AudibleSignal.reorderTone satisfies AudibleSignal; /* LONG_NAMED_ENUMERATED_VALUE */
+const AudibleSignal_reorderTone = _enum_for_AudibleSignal.reorderTone; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary reorderTone
@@ -365,7 +365,7 @@ const AudibleSignal_reorderTone = _enum_for_AudibleSignal.reorderTone satisfies 
  * @type {number}
  */
 export
-const reorderTone = AudibleSignal_reorderTone satisfies AudibleSignal; /* SHORT_NAMED_ENUMERATED_VALUE */
+const reorderTone = AudibleSignal_reorderTone; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AudibleSignal_busyTone
@@ -380,7 +380,7 @@ const reorderTone = AudibleSignal_reorderTone satisfies AudibleSignal; /* SHORT_
  * @type {number}
  */
 export
-const AudibleSignal_busyTone = _enum_for_AudibleSignal.busyTone satisfies AudibleSignal; /* LONG_NAMED_ENUMERATED_VALUE */
+const AudibleSignal_busyTone = _enum_for_AudibleSignal.busyTone; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary busyTone
@@ -395,7 +395,7 @@ const AudibleSignal_busyTone = _enum_for_AudibleSignal.busyTone satisfies Audibl
  * @type {number}
  */
 export
-const busyTone = AudibleSignal_busyTone satisfies AudibleSignal; /* SHORT_NAMED_ENUMERATED_VALUE */
+const busyTone = AudibleSignal_busyTone; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AudibleSignal_confirmationTone
@@ -409,7 +409,7 @@ const busyTone = AudibleSignal_busyTone satisfies AudibleSignal; /* SHORT_NAMED_
  * @type {number}
  */
 export
-const AudibleSignal_confirmationTone = _enum_for_AudibleSignal.confirmationTone satisfies AudibleSignal; /* LONG_NAMED_ENUMERATED_VALUE */
+const AudibleSignal_confirmationTone = _enum_for_AudibleSignal.confirmationTone; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary confirmationTone
@@ -423,7 +423,7 @@ const AudibleSignal_confirmationTone = _enum_for_AudibleSignal.confirmationTone 
  * @type {number}
  */
 export
-const confirmationTone = AudibleSignal_confirmationTone satisfies AudibleSignal; /* SHORT_NAMED_ENUMERATED_VALUE */
+const confirmationTone = AudibleSignal_confirmationTone; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AudibleSignal_expensiveRouteTone
@@ -437,7 +437,7 @@ const confirmationTone = AudibleSignal_confirmationTone satisfies AudibleSignal;
  * @type {number}
  */
 export
-const AudibleSignal_expensiveRouteTone = _enum_for_AudibleSignal.expensiveRouteTone satisfies AudibleSignal; /* LONG_NAMED_ENUMERATED_VALUE */
+const AudibleSignal_expensiveRouteTone = _enum_for_AudibleSignal.expensiveRouteTone; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary expensiveRouteTone
@@ -451,7 +451,7 @@ const AudibleSignal_expensiveRouteTone = _enum_for_AudibleSignal.expensiveRouteT
  * @type {number}
  */
 export
-const expensiveRouteTone = AudibleSignal_expensiveRouteTone satisfies AudibleSignal; /* SHORT_NAMED_ENUMERATED_VALUE */
+const expensiveRouteTone = AudibleSignal_expensiveRouteTone; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AudibleSignal_messageWaitingTone
@@ -466,7 +466,7 @@ const expensiveRouteTone = AudibleSignal_expensiveRouteTone satisfies AudibleSig
  * @type {number}
  */
 export
-const AudibleSignal_messageWaitingTone = _enum_for_AudibleSignal.messageWaitingTone satisfies AudibleSignal; /* LONG_NAMED_ENUMERATED_VALUE */
+const AudibleSignal_messageWaitingTone = _enum_for_AudibleSignal.messageWaitingTone; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary messageWaitingTone
@@ -481,7 +481,7 @@ const AudibleSignal_messageWaitingTone = _enum_for_AudibleSignal.messageWaitingT
  * @type {number}
  */
 export
-const messageWaitingTone = AudibleSignal_messageWaitingTone satisfies AudibleSignal; /* SHORT_NAMED_ENUMERATED_VALUE */
+const messageWaitingTone = AudibleSignal_messageWaitingTone; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AudibleSignal_receiverOffHookTone
@@ -495,7 +495,7 @@ const messageWaitingTone = AudibleSignal_messageWaitingTone satisfies AudibleSig
  * @type {number}
  */
 export
-const AudibleSignal_receiverOffHookTone = _enum_for_AudibleSignal.receiverOffHookTone satisfies AudibleSignal; /* LONG_NAMED_ENUMERATED_VALUE */
+const AudibleSignal_receiverOffHookTone = _enum_for_AudibleSignal.receiverOffHookTone; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary receiverOffHookTone
@@ -509,7 +509,7 @@ const AudibleSignal_receiverOffHookTone = _enum_for_AudibleSignal.receiverOffHoo
  * @type {number}
  */
 export
-const receiverOffHookTone = AudibleSignal_receiverOffHookTone satisfies AudibleSignal; /* SHORT_NAMED_ENUMERATED_VALUE */
+const receiverOffHookTone = AudibleSignal_receiverOffHookTone; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AudibleSignal_specialInfoTone
@@ -523,7 +523,7 @@ const receiverOffHookTone = AudibleSignal_receiverOffHookTone satisfies AudibleS
  * @type {number}
  */
 export
-const AudibleSignal_specialInfoTone = _enum_for_AudibleSignal.specialInfoTone satisfies AudibleSignal; /* LONG_NAMED_ENUMERATED_VALUE */
+const AudibleSignal_specialInfoTone = _enum_for_AudibleSignal.specialInfoTone; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary specialInfoTone
@@ -537,7 +537,7 @@ const AudibleSignal_specialInfoTone = _enum_for_AudibleSignal.specialInfoTone sa
  * @type {number}
  */
 export
-const specialInfoTone = AudibleSignal_specialInfoTone satisfies AudibleSignal; /* SHORT_NAMED_ENUMERATED_VALUE */
+const specialInfoTone = AudibleSignal_specialInfoTone; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AudibleSignal_denialTone
@@ -551,7 +551,7 @@ const specialInfoTone = AudibleSignal_specialInfoTone satisfies AudibleSignal; /
  * @type {number}
  */
 export
-const AudibleSignal_denialTone = _enum_for_AudibleSignal.denialTone satisfies AudibleSignal; /* LONG_NAMED_ENUMERATED_VALUE */
+const AudibleSignal_denialTone = _enum_for_AudibleSignal.denialTone; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary denialTone
@@ -565,7 +565,7 @@ const AudibleSignal_denialTone = _enum_for_AudibleSignal.denialTone satisfies Au
  * @type {number}
  */
 export
-const denialTone = AudibleSignal_denialTone satisfies AudibleSignal; /* SHORT_NAMED_ENUMERATED_VALUE */
+const denialTone = AudibleSignal_denialTone; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AudibleSignal_interceptTone
@@ -579,7 +579,7 @@ const denialTone = AudibleSignal_denialTone satisfies AudibleSignal; /* SHORT_NA
  * @type {number}
  */
 export
-const AudibleSignal_interceptTone = _enum_for_AudibleSignal.interceptTone satisfies AudibleSignal; /* LONG_NAMED_ENUMERATED_VALUE */
+const AudibleSignal_interceptTone = _enum_for_AudibleSignal.interceptTone; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary interceptTone
@@ -593,7 +593,7 @@ const AudibleSignal_interceptTone = _enum_for_AudibleSignal.interceptTone satisf
  * @type {number}
  */
 export
-const interceptTone = AudibleSignal_interceptTone satisfies AudibleSignal; /* SHORT_NAMED_ENUMERATED_VALUE */
+const interceptTone = AudibleSignal_interceptTone; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AudibleSignal_answerTone
@@ -607,7 +607,7 @@ const interceptTone = AudibleSignal_interceptTone satisfies AudibleSignal; /* SH
  * @type {number}
  */
 export
-const AudibleSignal_answerTone = _enum_for_AudibleSignal.answerTone satisfies AudibleSignal; /* LONG_NAMED_ENUMERATED_VALUE */
+const AudibleSignal_answerTone = _enum_for_AudibleSignal.answerTone; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary answerTone
@@ -621,7 +621,7 @@ const AudibleSignal_answerTone = _enum_for_AudibleSignal.answerTone satisfies Au
  * @type {number}
  */
 export
-const answerTone = AudibleSignal_answerTone satisfies AudibleSignal; /* SHORT_NAMED_ENUMERATED_VALUE */
+const answerTone = AudibleSignal_answerTone; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AudibleSignal_tonesOff
@@ -635,7 +635,7 @@ const answerTone = AudibleSignal_answerTone satisfies AudibleSignal; /* SHORT_NA
  * @type {number}
  */
 export
-const AudibleSignal_tonesOff = _enum_for_AudibleSignal.tonesOff satisfies AudibleSignal; /* LONG_NAMED_ENUMERATED_VALUE */
+const AudibleSignal_tonesOff = _enum_for_AudibleSignal.tonesOff; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tonesOff
@@ -649,7 +649,7 @@ const AudibleSignal_tonesOff = _enum_for_AudibleSignal.tonesOff satisfies Audibl
  * @type {number}
  */
 export
-const tonesOff = AudibleSignal_tonesOff satisfies AudibleSignal; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tonesOff = AudibleSignal_tonesOff; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AudibleSignal_pipTone
@@ -663,7 +663,7 @@ const tonesOff = AudibleSignal_tonesOff satisfies AudibleSignal; /* SHORT_NAMED_
  * @type {number}
  */
 export
-const AudibleSignal_pipTone = _enum_for_AudibleSignal.pipTone satisfies AudibleSignal; /* LONG_NAMED_ENUMERATED_VALUE */
+const AudibleSignal_pipTone = _enum_for_AudibleSignal.pipTone; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pipTone
@@ -677,7 +677,7 @@ const AudibleSignal_pipTone = _enum_for_AudibleSignal.pipTone satisfies AudibleS
  * @type {number}
  */
 export
-const pipTone = AudibleSignal_pipTone satisfies AudibleSignal; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pipTone = AudibleSignal_pipTone; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AudibleSignal_abbreviatedIntercept
@@ -691,7 +691,7 @@ const pipTone = AudibleSignal_pipTone satisfies AudibleSignal; /* SHORT_NAMED_EN
  * @type {number}
  */
 export
-const AudibleSignal_abbreviatedIntercept = _enum_for_AudibleSignal.abbreviatedIntercept satisfies AudibleSignal; /* LONG_NAMED_ENUMERATED_VALUE */
+const AudibleSignal_abbreviatedIntercept = _enum_for_AudibleSignal.abbreviatedIntercept; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary abbreviatedIntercept
@@ -705,7 +705,7 @@ const AudibleSignal_abbreviatedIntercept = _enum_for_AudibleSignal.abbreviatedIn
  * @type {number}
  */
 export
-const abbreviatedIntercept = AudibleSignal_abbreviatedIntercept satisfies AudibleSignal; /* SHORT_NAMED_ENUMERATED_VALUE */
+const abbreviatedIntercept = AudibleSignal_abbreviatedIntercept; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AudibleSignal_abbreviatedCongestion
@@ -719,7 +719,7 @@ const abbreviatedIntercept = AudibleSignal_abbreviatedIntercept satisfies Audibl
  * @type {number}
  */
 export
-const AudibleSignal_abbreviatedCongestion = _enum_for_AudibleSignal.abbreviatedCongestion satisfies AudibleSignal; /* LONG_NAMED_ENUMERATED_VALUE */
+const AudibleSignal_abbreviatedCongestion = _enum_for_AudibleSignal.abbreviatedCongestion; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary abbreviatedCongestion
@@ -733,7 +733,7 @@ const AudibleSignal_abbreviatedCongestion = _enum_for_AudibleSignal.abbreviatedC
  * @type {number}
  */
 export
-const abbreviatedCongestion = AudibleSignal_abbreviatedCongestion satisfies AudibleSignal; /* SHORT_NAMED_ENUMERATED_VALUE */
+const abbreviatedCongestion = AudibleSignal_abbreviatedCongestion; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AudibleSignal_warningTone
@@ -747,7 +747,7 @@ const abbreviatedCongestion = AudibleSignal_abbreviatedCongestion satisfies Audi
  * @type {number}
  */
 export
-const AudibleSignal_warningTone = _enum_for_AudibleSignal.warningTone satisfies AudibleSignal; /* LONG_NAMED_ENUMERATED_VALUE */
+const AudibleSignal_warningTone = _enum_for_AudibleSignal.warningTone; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary warningTone
@@ -761,7 +761,7 @@ const AudibleSignal_warningTone = _enum_for_AudibleSignal.warningTone satisfies 
  * @type {number}
  */
 export
-const warningTone = AudibleSignal_warningTone satisfies AudibleSignal; /* SHORT_NAMED_ENUMERATED_VALUE */
+const warningTone = AudibleSignal_warningTone; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AudibleSignal_dialToneBurst
@@ -775,7 +775,7 @@ const warningTone = AudibleSignal_warningTone satisfies AudibleSignal; /* SHORT_
  * @type {number}
  */
 export
-const AudibleSignal_dialToneBurst = _enum_for_AudibleSignal.dialToneBurst satisfies AudibleSignal; /* LONG_NAMED_ENUMERATED_VALUE */
+const AudibleSignal_dialToneBurst = _enum_for_AudibleSignal.dialToneBurst; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary dialToneBurst
@@ -789,7 +789,7 @@ const AudibleSignal_dialToneBurst = _enum_for_AudibleSignal.dialToneBurst satisf
  * @type {number}
  */
 export
-const dialToneBurst = AudibleSignal_dialToneBurst satisfies AudibleSignal; /* SHORT_NAMED_ENUMERATED_VALUE */
+const dialToneBurst = AudibleSignal_dialToneBurst; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AudibleSignal_numberUnObtainableTone
@@ -803,7 +803,7 @@ const dialToneBurst = AudibleSignal_dialToneBurst satisfies AudibleSignal; /* SH
  * @type {number}
  */
 export
-const AudibleSignal_numberUnObtainableTone = _enum_for_AudibleSignal.numberUnObtainableTone satisfies AudibleSignal; /* LONG_NAMED_ENUMERATED_VALUE */
+const AudibleSignal_numberUnObtainableTone = _enum_for_AudibleSignal.numberUnObtainableTone; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary numberUnObtainableTone
@@ -817,7 +817,7 @@ const AudibleSignal_numberUnObtainableTone = _enum_for_AudibleSignal.numberUnObt
  * @type {number}
  */
 export
-const numberUnObtainableTone = AudibleSignal_numberUnObtainableTone satisfies AudibleSignal; /* SHORT_NAMED_ENUMERATED_VALUE */
+const numberUnObtainableTone = AudibleSignal_numberUnObtainableTone; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AudibleSignal_authenticationFailureTone
@@ -831,7 +831,7 @@ const numberUnObtainableTone = AudibleSignal_numberUnObtainableTone satisfies Au
  * @type {number}
  */
 export
-const AudibleSignal_authenticationFailureTone = _enum_for_AudibleSignal.authenticationFailureTone satisfies AudibleSignal; /* LONG_NAMED_ENUMERATED_VALUE */
+const AudibleSignal_authenticationFailureTone = _enum_for_AudibleSignal.authenticationFailureTone; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary authenticationFailureTone
@@ -845,7 +845,7 @@ const AudibleSignal_authenticationFailureTone = _enum_for_AudibleSignal.authenti
  * @type {number}
  */
 export
-const authenticationFailureTone = AudibleSignal_authenticationFailureTone satisfies AudibleSignal; /* SHORT_NAMED_ENUMERATED_VALUE */
+const authenticationFailureTone = AudibleSignal_authenticationFailureTone; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_AudibleSignal: $.ASN1Decoder<AudibleSignal> = $._decodeEnumerated;
 export const _encode_AudibleSignal: $.ASN1Encoder<AudibleSignal> = $._encodeEnumerated;
 

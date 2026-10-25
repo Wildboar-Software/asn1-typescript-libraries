@@ -75,7 +75,7 @@ const FailureCause = _enum_for_FailureCause;
  * @type {number}
  */
 export
-const FailureCause_wrongUserResponse = FailureCause.wrongUserResponse satisfies FailureCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const FailureCause_wrongUserResponse = FailureCause.wrongUserResponse; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary wrongUserResponse
@@ -83,7 +83,7 @@ const FailureCause_wrongUserResponse = FailureCause.wrongUserResponse satisfies 
  * @type {number}
  */
 export
-const wrongUserResponse = FailureCause.wrongUserResponse satisfies FailureCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const wrongUserResponse = FailureCause.wrongUserResponse; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary FailureCause_wrongNetworkSignature
@@ -91,7 +91,7 @@ const wrongUserResponse = FailureCause.wrongUserResponse satisfies FailureCause;
  * @type {number}
  */
 export
-const FailureCause_wrongNetworkSignature = FailureCause.wrongNetworkSignature satisfies FailureCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const FailureCause_wrongNetworkSignature = FailureCause.wrongNetworkSignature; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary wrongNetworkSignature
@@ -99,7 +99,7 @@ const FailureCause_wrongNetworkSignature = FailureCause.wrongNetworkSignature sa
  * @type {number}
  */
 export
-const wrongNetworkSignature = FailureCause.wrongNetworkSignature satisfies FailureCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const wrongNetworkSignature = FailureCause.wrongNetworkSignature; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) FailureCause

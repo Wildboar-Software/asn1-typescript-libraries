@@ -47,7 +47,7 @@ const RetrieveNotificationsListResponse_notificationsListResultError_undefinedEr
  * @type {number}
  */
 export
-const undefinedError = RetrieveNotificationsListResponse_notificationsListResultError_undefinedError satisfies RetrieveNotificationsListResponse_notificationsListResultError; /* SHORT_NAMED_INTEGER_VALUE */
+const undefinedError = RetrieveNotificationsListResponse_notificationsListResultError_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_RetrieveNotificationsListResponse_notificationsListResultError = $._decodeInteger;
 export const _encode_RetrieveNotificationsListResponse_notificationsListResultError = $._encodeInteger;
 

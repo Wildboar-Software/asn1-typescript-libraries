@@ -62,7 +62,7 @@ const ActionIndicator = _enum_for_ActionIndicator;
  * @type {number}
  */
 export
-const ActionIndicator_activate = ActionIndicator.activate satisfies ActionIndicator; /* LONG_NAMED_ENUMERATED_VALUE */
+const ActionIndicator_activate = ActionIndicator.activate; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary activate
@@ -70,7 +70,7 @@ const ActionIndicator_activate = ActionIndicator.activate satisfies ActionIndica
  * @type {number}
  */
 export
-const activate = ActionIndicator.activate satisfies ActionIndicator; /* SHORT_NAMED_ENUMERATED_VALUE */
+const activate = ActionIndicator.activate; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ActionIndicator_deactivate
@@ -78,7 +78,7 @@ const activate = ActionIndicator.activate satisfies ActionIndicator; /* SHORT_NA
  * @type {number}
  */
 export
-const ActionIndicator_deactivate = ActionIndicator.deactivate satisfies ActionIndicator; /* LONG_NAMED_ENUMERATED_VALUE */
+const ActionIndicator_deactivate = ActionIndicator.deactivate; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary deactivate
@@ -86,7 +86,7 @@ const ActionIndicator_deactivate = ActionIndicator.deactivate satisfies ActionIn
  * @type {number}
  */
 export
-const deactivate = ActionIndicator.deactivate satisfies ActionIndicator; /* SHORT_NAMED_ENUMERATED_VALUE */
+const deactivate = ActionIndicator.deactivate; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ActionIndicator_retrieve
@@ -94,7 +94,7 @@ const deactivate = ActionIndicator.deactivate satisfies ActionIndicator; /* SHOR
  * @type {number}
  */
 export
-const ActionIndicator_retrieve = ActionIndicator.retrieve satisfies ActionIndicator; /* LONG_NAMED_ENUMERATED_VALUE */
+const ActionIndicator_retrieve = ActionIndicator.retrieve; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary retrieve
@@ -102,7 +102,7 @@ const ActionIndicator_retrieve = ActionIndicator.retrieve satisfies ActionIndica
  * @type {number}
  */
 export
-const retrieve = ActionIndicator.retrieve satisfies ActionIndicator; /* SHORT_NAMED_ENUMERATED_VALUE */
+const retrieve = ActionIndicator.retrieve; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 function _decode_ActionIndicator(el: _Element): ActionIndicator {

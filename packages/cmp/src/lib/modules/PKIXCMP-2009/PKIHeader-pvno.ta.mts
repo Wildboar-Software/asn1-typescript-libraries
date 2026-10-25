@@ -55,7 +55,7 @@ export const PKIHeader_pvno_cmp1999 = 1 satisfies PKIHeader_pvno; /* LONG_NAMED_
  * @constant
  * @type {number}
  */
-export const cmp1999 = PKIHeader_pvno_cmp1999 satisfies PKIHeader_pvno; /* SHORT_NAMED_INTEGER_VALUE */
+export const cmp1999 = PKIHeader_pvno_cmp1999; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -79,7 +79,7 @@ export const PKIHeader_pvno_cmp2000 = 2 satisfies PKIHeader_pvno; /* LONG_NAMED_
  * @constant
  * @type {number}
  */
-export const cmp2000 = PKIHeader_pvno_cmp2000 satisfies PKIHeader_pvno; /* SHORT_NAMED_INTEGER_VALUE */
+export const cmp2000 = PKIHeader_pvno_cmp2000; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 

@@ -40,7 +40,7 @@ export const DLPolicy_proof_of_delivery_dl_expansion_point = 0 satisfies DLPolic
  * @constant
  * @type {number}
  */
-export const dl_expansion_point = DLPolicy_proof_of_delivery_dl_expansion_point satisfies DLPolicy_proof_of_delivery; /* SHORT_NAMED_INTEGER_VALUE */
+export const dl_expansion_point = DLPolicy_proof_of_delivery_dl_expansion_point; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DLPolicy_proof_of_delivery_dl_members
@@ -54,7 +54,7 @@ export const DLPolicy_proof_of_delivery_dl_members = 1 satisfies DLPolicy_proof_
  * @constant
  * @type {number}
  */
-export const dl_members = DLPolicy_proof_of_delivery_dl_members satisfies DLPolicy_proof_of_delivery; /* SHORT_NAMED_INTEGER_VALUE */
+export const dl_members = DLPolicy_proof_of_delivery_dl_members; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DLPolicy_proof_of_delivery_both
@@ -68,7 +68,7 @@ export const DLPolicy_proof_of_delivery_both = 2 satisfies DLPolicy_proof_of_del
  * @constant
  * @type {number}
  */
-export const both = DLPolicy_proof_of_delivery_both satisfies DLPolicy_proof_of_delivery; /* SHORT_NAMED_INTEGER_VALUE */
+export const both = DLPolicy_proof_of_delivery_both; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DLPolicy_proof_of_delivery_neither
@@ -82,7 +82,7 @@ export const DLPolicy_proof_of_delivery_neither = 3 satisfies DLPolicy_proof_of_
  * @constant
  * @type {number}
  */
-export const neither = DLPolicy_proof_of_delivery_neither satisfies DLPolicy_proof_of_delivery; /* SHORT_NAMED_INTEGER_VALUE */
+export const neither = DLPolicy_proof_of_delivery_neither; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_DLPolicy_proof_of_delivery = $._decodeInteger;

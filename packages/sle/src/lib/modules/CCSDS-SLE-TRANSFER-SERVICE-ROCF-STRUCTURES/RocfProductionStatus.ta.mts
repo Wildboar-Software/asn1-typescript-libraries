@@ -59,7 +59,7 @@ const RocfProductionStatus_running = 0 satisfies RocfProductionStatus; /* LONG_N
  * @type {number}
  */
 export
-const running = RocfProductionStatus_running satisfies RocfProductionStatus; /* SHORT_NAMED_INTEGER_VALUE */
+const running = RocfProductionStatus_running; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RocfProductionStatus_interrupted
@@ -83,7 +83,7 @@ const RocfProductionStatus_interrupted = 1 satisfies RocfProductionStatus; /* LO
  * @type {number}
  */
 export
-const interrupted = RocfProductionStatus_interrupted satisfies RocfProductionStatus; /* SHORT_NAMED_INTEGER_VALUE */
+const interrupted = RocfProductionStatus_interrupted; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RocfProductionStatus_halted
@@ -107,7 +107,7 @@ const RocfProductionStatus_halted = 2 satisfies RocfProductionStatus; /* LONG_NA
  * @type {number}
  */
 export
-const halted = RocfProductionStatus_halted satisfies RocfProductionStatus; /* SHORT_NAMED_INTEGER_VALUE */
+const halted = RocfProductionStatus_halted; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_RocfProductionStatus: $.ASN1Decoder<RocfProductionStatus> = $._decodeInteger;
 export const _encode_RocfProductionStatus: $.ASN1Encoder<RocfProductionStatus> = $._encodeInteger;
 

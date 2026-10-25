@@ -63,7 +63,7 @@ const PartialRecordMethod = _enum_for_PartialRecordMethod;
  * @type {number}
  */
 export
-const PartialRecordMethod_default_ = PartialRecordMethod.default_ satisfies PartialRecordMethod; /* LONG_NAMED_ENUMERATED_VALUE */
+const PartialRecordMethod_default_ = PartialRecordMethod.default_; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary default_
@@ -71,7 +71,7 @@ const PartialRecordMethod_default_ = PartialRecordMethod.default_ satisfies Part
  * @type {number}
  */
 export
-const default_ = PartialRecordMethod.default_ satisfies PartialRecordMethod; /* SHORT_NAMED_ENUMERATED_VALUE */
+const default_ = PartialRecordMethod.default_; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PartialRecordMethod_individual
@@ -79,7 +79,7 @@ const default_ = PartialRecordMethod.default_ satisfies PartialRecordMethod; /* 
  * @type {number}
  */
 export
-const PartialRecordMethod_individual = PartialRecordMethod.individual satisfies PartialRecordMethod; /* LONG_NAMED_ENUMERATED_VALUE */
+const PartialRecordMethod_individual = PartialRecordMethod.individual; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary individual
@@ -87,7 +87,7 @@ const PartialRecordMethod_individual = PartialRecordMethod.individual satisfies 
  * @type {number}
  */
 export
-const individual = PartialRecordMethod.individual satisfies PartialRecordMethod; /* SHORT_NAMED_ENUMERATED_VALUE */
+const individual = PartialRecordMethod.individual; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_PartialRecordMethod: $.ASN1Decoder<PartialRecordMethod> = $._decodeEnumerated;

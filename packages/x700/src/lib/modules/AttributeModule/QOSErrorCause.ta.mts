@@ -49,7 +49,7 @@ export const QOSErrorCause_responseTimeExcessive = 0 satisfies QOSErrorCause; /*
  * @constant
  * @type {number}
  */
-export const responseTimeExcessive = QOSErrorCause_responseTimeExcessive satisfies QOSErrorCause; /* SHORT_NAMED_INTEGER_VALUE */
+export const responseTimeExcessive = QOSErrorCause_responseTimeExcessive; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary QOSErrorCause_queueSizeExceeded
@@ -63,7 +63,7 @@ export const QOSErrorCause_queueSizeExceeded = 1 satisfies QOSErrorCause; /* LON
  * @constant
  * @type {number}
  */
-export const queueSizeExceeded = QOSErrorCause_queueSizeExceeded satisfies QOSErrorCause; /* SHORT_NAMED_INTEGER_VALUE */
+export const queueSizeExceeded = QOSErrorCause_queueSizeExceeded; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary QOSErrorCause_bandwidthReduced
@@ -77,7 +77,7 @@ export const QOSErrorCause_bandwidthReduced = 2 satisfies QOSErrorCause; /* LONG
  * @constant
  * @type {number}
  */
-export const bandwidthReduced = QOSErrorCause_bandwidthReduced satisfies QOSErrorCause; /* SHORT_NAMED_INTEGER_VALUE */
+export const bandwidthReduced = QOSErrorCause_bandwidthReduced; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary QOSErrorCause_retransmissionRateExcessive
@@ -91,7 +91,7 @@ export const QOSErrorCause_retransmissionRateExcessive = 3 satisfies QOSErrorCau
  * @constant
  * @type {number}
  */
-export const retransmissionRateExcessive = QOSErrorCause_retransmissionRateExcessive satisfies QOSErrorCause; /* SHORT_NAMED_INTEGER_VALUE */
+export const retransmissionRateExcessive = QOSErrorCause_retransmissionRateExcessive; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_QOSErrorCause = $._decodeInteger;

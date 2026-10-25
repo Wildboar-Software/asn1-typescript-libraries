@@ -44,7 +44,7 @@ export const GeneralProblem_unrecognizedPDU = 0 satisfies GeneralProblem; /* LON
  * @constant
  * @type {number}
  */
-export const unrecognizedPDU = GeneralProblem_unrecognizedPDU satisfies GeneralProblem; /* SHORT_NAMED_INTEGER_VALUE */
+export const unrecognizedPDU = GeneralProblem_unrecognizedPDU; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -62,7 +62,7 @@ export const GeneralProblem_mistypedPDU = 1 satisfies GeneralProblem; /* LONG_NA
  * @constant
  * @type {number}
  */
-export const mistypedPDU = GeneralProblem_mistypedPDU satisfies GeneralProblem; /* SHORT_NAMED_INTEGER_VALUE */
+export const mistypedPDU = GeneralProblem_mistypedPDU; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -80,7 +80,7 @@ export const GeneralProblem_badlyStructuredPDU = 2 satisfies GeneralProblem; /* 
  * @constant
  * @type {number}
  */
-export const badlyStructuredPDU = GeneralProblem_badlyStructuredPDU satisfies GeneralProblem; /* SHORT_NAMED_INTEGER_VALUE */
+export const badlyStructuredPDU = GeneralProblem_badlyStructuredPDU; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 

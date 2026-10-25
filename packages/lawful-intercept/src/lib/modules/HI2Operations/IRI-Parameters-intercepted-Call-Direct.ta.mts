@@ -114,7 +114,7 @@ type IRI_Parameters_intercepted_Call_Direct = _enum_for_IRI_Parameters_intercept
  * @type {number}
  */
 export
-const IRI_Parameters_intercepted_Call_Direct_not_Available = _enum_for_IRI_Parameters_intercepted_Call_Direct.not_Available satisfies IRI_Parameters_intercepted_Call_Direct; /* LONG_NAMED_ENUMERATED_VALUE */
+const IRI_Parameters_intercepted_Call_Direct_not_Available = _enum_for_IRI_Parameters_intercepted_Call_Direct.not_Available; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary not_Available
@@ -130,7 +130,7 @@ const IRI_Parameters_intercepted_Call_Direct_not_Available = _enum_for_IRI_Param
  * @type {number}
  */
 export
-const not_Available = IRI_Parameters_intercepted_Call_Direct_not_Available satisfies IRI_Parameters_intercepted_Call_Direct; /* SHORT_NAMED_ENUMERATED_VALUE */
+const not_Available = IRI_Parameters_intercepted_Call_Direct_not_Available; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary IRI_Parameters_intercepted_Call_Direct_originating_Target
@@ -146,7 +146,7 @@ const not_Available = IRI_Parameters_intercepted_Call_Direct_not_Available satis
  * @type {number}
  */
 export
-const IRI_Parameters_intercepted_Call_Direct_originating_Target = _enum_for_IRI_Parameters_intercepted_Call_Direct.originating_Target satisfies IRI_Parameters_intercepted_Call_Direct; /* LONG_NAMED_ENUMERATED_VALUE */
+const IRI_Parameters_intercepted_Call_Direct_originating_Target = _enum_for_IRI_Parameters_intercepted_Call_Direct.originating_Target; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary originating_Target
@@ -162,7 +162,7 @@ const IRI_Parameters_intercepted_Call_Direct_originating_Target = _enum_for_IRI_
  * @type {number}
  */
 export
-const originating_Target = IRI_Parameters_intercepted_Call_Direct_originating_Target satisfies IRI_Parameters_intercepted_Call_Direct; /* SHORT_NAMED_ENUMERATED_VALUE */
+const originating_Target = IRI_Parameters_intercepted_Call_Direct_originating_Target; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary IRI_Parameters_intercepted_Call_Direct_terminating_Target
@@ -178,7 +178,7 @@ const originating_Target = IRI_Parameters_intercepted_Call_Direct_originating_Ta
  * @type {number}
  */
 export
-const IRI_Parameters_intercepted_Call_Direct_terminating_Target = _enum_for_IRI_Parameters_intercepted_Call_Direct.terminating_Target satisfies IRI_Parameters_intercepted_Call_Direct; /* LONG_NAMED_ENUMERATED_VALUE */
+const IRI_Parameters_intercepted_Call_Direct_terminating_Target = _enum_for_IRI_Parameters_intercepted_Call_Direct.terminating_Target; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary terminating_Target
@@ -194,7 +194,7 @@ const IRI_Parameters_intercepted_Call_Direct_terminating_Target = _enum_for_IRI_
  * @type {number}
  */
 export
-const terminating_Target = IRI_Parameters_intercepted_Call_Direct_terminating_Target satisfies IRI_Parameters_intercepted_Call_Direct; /* SHORT_NAMED_ENUMERATED_VALUE */
+const terminating_Target = IRI_Parameters_intercepted_Call_Direct_terminating_Target; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_IRI_Parameters_intercepted_Call_Direct: $.ASN1Decoder<IRI_Parameters_intercepted_Call_Direct> = $._decodeEnumerated;
 export const _encode_IRI_Parameters_intercepted_Call_Direct: $.ASN1Encoder<IRI_Parameters_intercepted_Call_Direct> = $._encodeEnumerated;
 

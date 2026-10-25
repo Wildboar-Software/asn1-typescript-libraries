@@ -53,7 +53,7 @@ const ClientPartToKeep_action_recordInsert = 1 satisfies ClientPartToKeep_action
  * @type {number}
  */
 export
-const recordInsert = ClientPartToKeep_action_recordInsert satisfies ClientPartToKeep_action; /* SHORT_NAMED_INTEGER_VALUE */
+const recordInsert = ClientPartToKeep_action_recordInsert; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ClientPartToKeep_action_recordReplace
@@ -81,7 +81,7 @@ const ClientPartToKeep_action_recordReplace = 2 satisfies ClientPartToKeep_actio
  * @type {number}
  */
 export
-const recordReplace = ClientPartToKeep_action_recordReplace satisfies ClientPartToKeep_action; /* SHORT_NAMED_INTEGER_VALUE */
+const recordReplace = ClientPartToKeep_action_recordReplace; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ClientPartToKeep_action_recordDelete
@@ -108,7 +108,7 @@ const ClientPartToKeep_action_recordDelete = 3 satisfies ClientPartToKeep_action
  * @type {number}
  */
 export
-const recordDelete = ClientPartToKeep_action_recordDelete satisfies ClientPartToKeep_action; /* SHORT_NAMED_INTEGER_VALUE */
+const recordDelete = ClientPartToKeep_action_recordDelete; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ClientPartToKeep_action_elementUpdate
@@ -138,7 +138,7 @@ const ClientPartToKeep_action_elementUpdate = 4 satisfies ClientPartToKeep_actio
  * @type {number}
  */
 export
-const elementUpdate = ClientPartToKeep_action_elementUpdate satisfies ClientPartToKeep_action; /* SHORT_NAMED_INTEGER_VALUE */
+const elementUpdate = ClientPartToKeep_action_elementUpdate; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_ClientPartToKeep_action: $.ASN1Decoder<ClientPartToKeep_action> = $._decodeInteger;
 export const _encode_ClientPartToKeep_action: $.ASN1Encoder<ClientPartToKeep_action> = $._encodeInteger;
 

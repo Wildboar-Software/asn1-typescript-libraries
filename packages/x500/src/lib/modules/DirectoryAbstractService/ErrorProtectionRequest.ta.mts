@@ -37,7 +37,7 @@ export const ErrorProtectionRequest_none = 0 satisfies ErrorProtectionRequest; /
  * @constant
  * @type {number}
  */
-export const none = ErrorProtectionRequest_none satisfies ErrorProtectionRequest; /* SHORT_NAMED_INTEGER_VALUE */
+export const none = ErrorProtectionRequest_none; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ErrorProtectionRequest_signed
@@ -59,7 +59,7 @@ export const ErrorProtectionRequest_signed = 1 satisfies ErrorProtectionRequest;
  * @constant
  * @type {number}
  */
-export const signed = ErrorProtectionRequest_signed satisfies ErrorProtectionRequest; /* SHORT_NAMED_INTEGER_VALUE */
+export const signed = ErrorProtectionRequest_signed; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_ErrorProtectionRequest = $._decodeInteger;

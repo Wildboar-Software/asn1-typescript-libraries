@@ -92,7 +92,7 @@ const ParticipationType = _enum_for_ParticipationType;
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const ParticipationType_silent = ParticipationType.silent satisfies ParticipationType; /* LONG_NAMED_ENUMERATED_VALUE */
+const ParticipationType_silent = ParticipationType.silent; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary silent
@@ -101,7 +101,7 @@ const ParticipationType_silent = ParticipationType.silent satisfies Participatio
  * @type {number}
  */
 export
-const silent = ParticipationType.silent satisfies ParticipationType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const silent = ParticipationType.silent; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ParticipationType_active
@@ -111,7 +111,7 @@ const silent = ParticipationType.silent satisfies ParticipationType; /* SHORT_NA
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const ParticipationType_active = ParticipationType.active satisfies ParticipationType; /* LONG_NAMED_ENUMERATED_VALUE */
+const ParticipationType_active = ParticipationType.active; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary active
@@ -120,7 +120,7 @@ const ParticipationType_active = ParticipationType.active satisfies Participatio
  * @type {number}
  */
 export
-const active = ParticipationType.active satisfies ParticipationType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const active = ParticipationType.active; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ParticipationType_none
@@ -130,7 +130,7 @@ const active = ParticipationType.active satisfies ParticipationType; /* SHORT_NA
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const ParticipationType_none = ParticipationType.none satisfies ParticipationType; /* LONG_NAMED_ENUMERATED_VALUE */
+const ParticipationType_none = ParticipationType.none; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary none
@@ -139,7 +139,7 @@ const ParticipationType_none = ParticipationType.none satisfies ParticipationTyp
  * @type {number}
  */
 export
-const none = ParticipationType.none satisfies ParticipationType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const none = ParticipationType.none; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 let _cached_decoder_for_ParticipationType: $.ASN1Decoder<ParticipationType> | null = null;
 

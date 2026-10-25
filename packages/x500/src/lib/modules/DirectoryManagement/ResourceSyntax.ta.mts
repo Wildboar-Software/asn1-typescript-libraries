@@ -40,7 +40,7 @@ export const ResourceSyntax_insufficientMemory = 0 satisfies ResourceSyntax; /* 
  * @constant
  * @type {number}
  */
-export const insufficientMemory = ResourceSyntax_insufficientMemory satisfies ResourceSyntax; /* SHORT_NAMED_INTEGER_VALUE */
+export const insufficientMemory = ResourceSyntax_insufficientMemory; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ResourceSyntax_insufficientAssociations
@@ -54,7 +54,7 @@ export const ResourceSyntax_insufficientAssociations = 1 satisfies ResourceSynta
  * @constant
  * @type {number}
  */
-export const insufficientAssociations = ResourceSyntax_insufficientAssociations satisfies ResourceSyntax; /* SHORT_NAMED_INTEGER_VALUE */
+export const insufficientAssociations = ResourceSyntax_insufficientAssociations; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ResourceSyntax_insufficientDiskSpace
@@ -68,7 +68,7 @@ export const ResourceSyntax_insufficientDiskSpace = 2 satisfies ResourceSyntax; 
  * @constant
  * @type {number}
  */
-export const insufficientDiskSpace = ResourceSyntax_insufficientDiskSpace satisfies ResourceSyntax; /* SHORT_NAMED_INTEGER_VALUE */
+export const insufficientDiskSpace = ResourceSyntax_insufficientDiskSpace; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ResourceSyntax_miscellaneousResourceExhausted
@@ -90,7 +90,7 @@ export const ResourceSyntax_miscellaneousResourceExhausted = 4 satisfies Resourc
  * @constant
  * @type {number}
  */
-export const miscellaneousResourceExhausted = ResourceSyntax_miscellaneousResourceExhausted satisfies ResourceSyntax; /* SHORT_NAMED_INTEGER_VALUE */
+export const miscellaneousResourceExhausted = ResourceSyntax_miscellaneousResourceExhausted; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_ResourceSyntax = $._decodeInteger;

@@ -66,7 +66,7 @@ export const Directionality = _enum_for_Directionality;
  * @type {number}
  */
 export const Directionality_unidirectional =
-    Directionality.unidirectional satisfies Directionality; /* LONG_NAMED_ENUMERATED_VALUE */
+    Directionality.unidirectional; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -75,7 +75,7 @@ export const Directionality_unidirectional =
  * @type {number}
  */
 export const unidirectional =
-    Directionality.unidirectional satisfies Directionality; /* SHORT_NAMED_ENUMERATED_VALUE */
+    Directionality.unidirectional; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -84,7 +84,7 @@ export const unidirectional =
  * @type {number}
  */
 export const Directionality_bidirectional =
-    Directionality.bidirectional satisfies Directionality; /* LONG_NAMED_ENUMERATED_VALUE */
+    Directionality.bidirectional; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -93,7 +93,7 @@ export const Directionality_bidirectional =
  * @type {number}
  */
 export const bidirectional =
-    Directionality.bidirectional satisfies Directionality; /* SHORT_NAMED_ENUMERATED_VALUE */
+    Directionality.bidirectional; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 

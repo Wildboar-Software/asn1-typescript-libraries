@@ -50,7 +50,7 @@ type NotificationToMSUser = _enum_for_NotificationToMSUser | ENUMERATED;
  * @type {number}
  */
 export
-const NotificationToMSUser_notifyLocationAllowed = _enum_for_NotificationToMSUser.notifyLocationAllowed satisfies NotificationToMSUser; /* LONG_NAMED_ENUMERATED_VALUE */
+const NotificationToMSUser_notifyLocationAllowed = _enum_for_NotificationToMSUser.notifyLocationAllowed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary notifyLocationAllowed
@@ -62,7 +62,7 @@ const NotificationToMSUser_notifyLocationAllowed = _enum_for_NotificationToMSUse
  * @type {number}
  */
 export
-const notifyLocationAllowed = NotificationToMSUser_notifyLocationAllowed satisfies NotificationToMSUser; /* SHORT_NAMED_ENUMERATED_VALUE */
+const notifyLocationAllowed = NotificationToMSUser_notifyLocationAllowed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NotificationToMSUser_notifyAndVerify_LocationAllowedIfNoResponse
@@ -75,7 +75,7 @@ const notifyLocationAllowed = NotificationToMSUser_notifyLocationAllowed satisfi
  * @type {number}
  */
 export
-const NotificationToMSUser_notifyAndVerify_LocationAllowedIfNoResponse = _enum_for_NotificationToMSUser.notifyAndVerify_LocationAllowedIfNoResponse satisfies NotificationToMSUser; /* LONG_NAMED_ENUMERATED_VALUE */
+const NotificationToMSUser_notifyAndVerify_LocationAllowedIfNoResponse = _enum_for_NotificationToMSUser.notifyAndVerify_LocationAllowedIfNoResponse; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary notifyAndVerify_LocationAllowedIfNoResponse
@@ -88,7 +88,7 @@ const NotificationToMSUser_notifyAndVerify_LocationAllowedIfNoResponse = _enum_f
  * @type {number}
  */
 export
-const notifyAndVerify_LocationAllowedIfNoResponse = NotificationToMSUser_notifyAndVerify_LocationAllowedIfNoResponse satisfies NotificationToMSUser; /* SHORT_NAMED_ENUMERATED_VALUE */
+const notifyAndVerify_LocationAllowedIfNoResponse = NotificationToMSUser_notifyAndVerify_LocationAllowedIfNoResponse; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NotificationToMSUser_notifyAndVerify_LocationNotAllowedIfNoResponse
@@ -101,7 +101,7 @@ const notifyAndVerify_LocationAllowedIfNoResponse = NotificationToMSUser_notifyA
  * @type {number}
  */
 export
-const NotificationToMSUser_notifyAndVerify_LocationNotAllowedIfNoResponse = _enum_for_NotificationToMSUser.notifyAndVerify_LocationNotAllowedIfNoResponse satisfies NotificationToMSUser; /* LONG_NAMED_ENUMERATED_VALUE */
+const NotificationToMSUser_notifyAndVerify_LocationNotAllowedIfNoResponse = _enum_for_NotificationToMSUser.notifyAndVerify_LocationNotAllowedIfNoResponse; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary notifyAndVerify_LocationNotAllowedIfNoResponse
@@ -114,7 +114,7 @@ const NotificationToMSUser_notifyAndVerify_LocationNotAllowedIfNoResponse = _enu
  * @type {number}
  */
 export
-const notifyAndVerify_LocationNotAllowedIfNoResponse = NotificationToMSUser_notifyAndVerify_LocationNotAllowedIfNoResponse satisfies NotificationToMSUser; /* SHORT_NAMED_ENUMERATED_VALUE */
+const notifyAndVerify_LocationNotAllowedIfNoResponse = NotificationToMSUser_notifyAndVerify_LocationNotAllowedIfNoResponse; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NotificationToMSUser_locationNotAllowed
@@ -126,7 +126,7 @@ const notifyAndVerify_LocationNotAllowedIfNoResponse = NotificationToMSUser_noti
  * @type {number}
  */
 export
-const NotificationToMSUser_locationNotAllowed = _enum_for_NotificationToMSUser.locationNotAllowed satisfies NotificationToMSUser; /* LONG_NAMED_ENUMERATED_VALUE */
+const NotificationToMSUser_locationNotAllowed = _enum_for_NotificationToMSUser.locationNotAllowed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary locationNotAllowed
@@ -138,7 +138,7 @@ const NotificationToMSUser_locationNotAllowed = _enum_for_NotificationToMSUser.l
  * @type {number}
  */
 export
-const locationNotAllowed = NotificationToMSUser_locationNotAllowed satisfies NotificationToMSUser; /* SHORT_NAMED_ENUMERATED_VALUE */
+const locationNotAllowed = NotificationToMSUser_locationNotAllowed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) NotificationToMSUser

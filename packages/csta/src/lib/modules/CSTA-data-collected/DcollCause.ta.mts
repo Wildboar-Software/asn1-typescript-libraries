@@ -95,7 +95,7 @@ const DcollCause = _enum_for_DcollCause;
  * @type {number}
  */
 export
-const DcollCause_flushCharReceived = DcollCause.flushCharReceived satisfies DcollCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const DcollCause_flushCharReceived = DcollCause.flushCharReceived; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary flushCharReceived
@@ -107,7 +107,7 @@ const DcollCause_flushCharReceived = DcollCause.flushCharReceived satisfies Dcol
  * @type {number}
  */
 export
-const flushCharReceived = DcollCause.flushCharReceived satisfies DcollCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const flushCharReceived = DcollCause.flushCharReceived; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary DcollCause_charCountReached
@@ -119,7 +119,7 @@ const flushCharReceived = DcollCause.flushCharReceived satisfies DcollCause; /* 
  * @type {number}
  */
 export
-const DcollCause_charCountReached = DcollCause.charCountReached satisfies DcollCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const DcollCause_charCountReached = DcollCause.charCountReached; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary charCountReached
@@ -131,7 +131,7 @@ const DcollCause_charCountReached = DcollCause.charCountReached satisfies DcollC
  * @type {number}
  */
 export
-const charCountReached = DcollCause.charCountReached satisfies DcollCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const charCountReached = DcollCause.charCountReached; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary DcollCause_timeout
@@ -143,7 +143,7 @@ const charCountReached = DcollCause.charCountReached satisfies DcollCause; /* SH
  * @type {number}
  */
 export
-const DcollCause_timeout = DcollCause.timeout satisfies DcollCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const DcollCause_timeout = DcollCause.timeout; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary timeout
@@ -155,7 +155,7 @@ const DcollCause_timeout = DcollCause.timeout satisfies DcollCause; /* LONG_NAME
  * @type {number}
  */
 export
-const timeout = DcollCause.timeout satisfies DcollCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const timeout = DcollCause.timeout; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary DcollCause_sfTerminated
@@ -168,7 +168,7 @@ const timeout = DcollCause.timeout satisfies DcollCause; /* SHORT_NAMED_ENUMERAT
  * @type {number}
  */
 export
-const DcollCause_sfTerminated = DcollCause.sfTerminated satisfies DcollCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const DcollCause_sfTerminated = DcollCause.sfTerminated; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sfTerminated
@@ -181,7 +181,7 @@ const DcollCause_sfTerminated = DcollCause.sfTerminated satisfies DcollCause; /*
  * @type {number}
  */
 export
-const sfTerminated = DcollCause.sfTerminated satisfies DcollCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sfTerminated = DcollCause.sfTerminated; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 let _cached_decoder_for_DcollCause: $.ASN1Decoder<DcollCause> | null = null;
 

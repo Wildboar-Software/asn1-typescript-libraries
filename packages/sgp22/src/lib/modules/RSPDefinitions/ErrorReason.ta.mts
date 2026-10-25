@@ -79,7 +79,7 @@ const ErrorReason_incorrectInputValues = 1 satisfies ErrorReason; /* LONG_NAMED_
  * @type {number}
  */
 export
-const incorrectInputValues = ErrorReason_incorrectInputValues satisfies ErrorReason; /* SHORT_NAMED_INTEGER_VALUE */
+const incorrectInputValues = ErrorReason_incorrectInputValues; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ErrorReason_invalidSignature
@@ -107,7 +107,7 @@ const ErrorReason_invalidSignature = 2 satisfies ErrorReason; /* LONG_NAMED_INTE
  * @type {number}
  */
 export
-const invalidSignature = ErrorReason_invalidSignature satisfies ErrorReason; /* SHORT_NAMED_INTEGER_VALUE */
+const invalidSignature = ErrorReason_invalidSignature; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ErrorReason_invalidTransactionId
@@ -133,7 +133,7 @@ const ErrorReason_invalidTransactionId = 3 satisfies ErrorReason; /* LONG_NAMED_
  * @type {number}
  */
 export
-const invalidTransactionId = ErrorReason_invalidTransactionId satisfies ErrorReason; /* SHORT_NAMED_INTEGER_VALUE */
+const invalidTransactionId = ErrorReason_invalidTransactionId; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ErrorReason_unsupportedCrtValues
@@ -159,7 +159,7 @@ const ErrorReason_unsupportedCrtValues = 4 satisfies ErrorReason; /* LONG_NAMED_
  * @type {number}
  */
 export
-const unsupportedCrtValues = ErrorReason_unsupportedCrtValues satisfies ErrorReason; /* SHORT_NAMED_INTEGER_VALUE */
+const unsupportedCrtValues = ErrorReason_unsupportedCrtValues; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ErrorReason_unsupportedRemoteOperationType
@@ -185,7 +185,7 @@ const ErrorReason_unsupportedRemoteOperationType = 5 satisfies ErrorReason; /* L
  * @type {number}
  */
 export
-const unsupportedRemoteOperationType = ErrorReason_unsupportedRemoteOperationType satisfies ErrorReason; /* SHORT_NAMED_INTEGER_VALUE */
+const unsupportedRemoteOperationType = ErrorReason_unsupportedRemoteOperationType; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ErrorReason_unsupportedProfileClass
@@ -209,7 +209,7 @@ const ErrorReason_unsupportedProfileClass = 6 satisfies ErrorReason; /* LONG_NAM
  * @type {number}
  */
 export
-const unsupportedProfileClass = ErrorReason_unsupportedProfileClass satisfies ErrorReason; /* SHORT_NAMED_INTEGER_VALUE */
+const unsupportedProfileClass = ErrorReason_unsupportedProfileClass; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ErrorReason_scp03tStructureError
@@ -239,7 +239,7 @@ const ErrorReason_scp03tStructureError = 7 satisfies ErrorReason; /* LONG_NAMED_
  * @type {number}
  */
 export
-const scp03tStructureError = ErrorReason_scp03tStructureError satisfies ErrorReason; /* SHORT_NAMED_INTEGER_VALUE */
+const scp03tStructureError = ErrorReason_scp03tStructureError; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ErrorReason_scp03tSecurityError
@@ -267,7 +267,7 @@ const ErrorReason_scp03tSecurityError = 8 satisfies ErrorReason; /* LONG_NAMED_I
  * @type {number}
  */
 export
-const scp03tSecurityError = ErrorReason_scp03tSecurityError satisfies ErrorReason; /* SHORT_NAMED_INTEGER_VALUE */
+const scp03tSecurityError = ErrorReason_scp03tSecurityError; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ErrorReason_installFailedDueToIccidAlreadyExistsOnEuicc
@@ -293,7 +293,7 @@ const ErrorReason_installFailedDueToIccidAlreadyExistsOnEuicc = 9 satisfies Erro
  * @type {number}
  */
 export
-const installFailedDueToIccidAlreadyExistsOnEuicc = ErrorReason_installFailedDueToIccidAlreadyExistsOnEuicc satisfies ErrorReason; /* SHORT_NAMED_INTEGER_VALUE */
+const installFailedDueToIccidAlreadyExistsOnEuicc = ErrorReason_installFailedDueToIccidAlreadyExistsOnEuicc; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ErrorReason_installFailedDueToInsufficientMemoryForProfile
@@ -323,7 +323,7 @@ const ErrorReason_installFailedDueToInsufficientMemoryForProfile = 10 satisfies 
  * @type {number}
  */
 export
-const installFailedDueToInsufficientMemoryForProfile = ErrorReason_installFailedDueToInsufficientMemoryForProfile satisfies ErrorReason; /* SHORT_NAMED_INTEGER_VALUE */
+const installFailedDueToInsufficientMemoryForProfile = ErrorReason_installFailedDueToInsufficientMemoryForProfile; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ErrorReason_installFailedDueToInterruption
@@ -349,7 +349,7 @@ const ErrorReason_installFailedDueToInterruption = 11 satisfies ErrorReason; /* 
  * @type {number}
  */
 export
-const installFailedDueToInterruption = ErrorReason_installFailedDueToInterruption satisfies ErrorReason; /* SHORT_NAMED_INTEGER_VALUE */
+const installFailedDueToInterruption = ErrorReason_installFailedDueToInterruption; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ErrorReason_installFailedDueToPEProcessingError
@@ -377,7 +377,7 @@ const ErrorReason_installFailedDueToPEProcessingError = 12 satisfies ErrorReason
  * @type {number}
  */
 export
-const installFailedDueToPEProcessingError = ErrorReason_installFailedDueToPEProcessingError satisfies ErrorReason; /* SHORT_NAMED_INTEGER_VALUE */
+const installFailedDueToPEProcessingError = ErrorReason_installFailedDueToPEProcessingError; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ErrorReason_installFailedDueToDataMismatch
@@ -405,7 +405,7 @@ const ErrorReason_installFailedDueToDataMismatch = 13 satisfies ErrorReason; /* 
  * @type {number}
  */
 export
-const installFailedDueToDataMismatch = ErrorReason_installFailedDueToDataMismatch satisfies ErrorReason; /* SHORT_NAMED_INTEGER_VALUE */
+const installFailedDueToDataMismatch = ErrorReason_installFailedDueToDataMismatch; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ErrorReason_testProfileInstallFailedDueToInvalidNaaKey
@@ -431,7 +431,7 @@ const ErrorReason_testProfileInstallFailedDueToInvalidNaaKey = 14 satisfies Erro
  * @type {number}
  */
 export
-const testProfileInstallFailedDueToInvalidNaaKey = ErrorReason_testProfileInstallFailedDueToInvalidNaaKey satisfies ErrorReason; /* SHORT_NAMED_INTEGER_VALUE */
+const testProfileInstallFailedDueToInvalidNaaKey = ErrorReason_testProfileInstallFailedDueToInvalidNaaKey; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ErrorReason_pprNotAllowed
@@ -457,7 +457,7 @@ const ErrorReason_pprNotAllowed = 15 satisfies ErrorReason; /* LONG_NAMED_INTEGE
  * @type {number}
  */
 export
-const pprNotAllowed = ErrorReason_pprNotAllowed satisfies ErrorReason; /* SHORT_NAMED_INTEGER_VALUE */
+const pprNotAllowed = ErrorReason_pprNotAllowed; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ErrorReason_installFailedDueToInsufficientMinimumSecurityLevel
@@ -485,7 +485,7 @@ const ErrorReason_installFailedDueToInsufficientMinimumSecurityLevel = 31 satisf
  * @type {number}
  */
 export
-const installFailedDueToInsufficientMinimumSecurityLevel = ErrorReason_installFailedDueToInsufficientMinimumSecurityLevel satisfies ErrorReason; /* SHORT_NAMED_INTEGER_VALUE */
+const installFailedDueToInsufficientMinimumSecurityLevel = ErrorReason_installFailedDueToInsufficientMinimumSecurityLevel; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ErrorReason_installFailedDueToServerAddressAbsentInEuiccAllowList
@@ -513,7 +513,7 @@ const ErrorReason_installFailedDueToServerAddressAbsentInEuiccAllowList = 32 sat
  * @type {number}
  */
 export
-const installFailedDueToServerAddressAbsentInEuiccAllowList = ErrorReason_installFailedDueToServerAddressAbsentInEuiccAllowList satisfies ErrorReason; /* SHORT_NAMED_INTEGER_VALUE */
+const installFailedDueToServerAddressAbsentInEuiccAllowList = ErrorReason_installFailedDueToServerAddressAbsentInEuiccAllowList; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ErrorReason_installFailedDueToUnknownError
@@ -539,7 +539,7 @@ const ErrorReason_installFailedDueToUnknownError = 127 satisfies ErrorReason; /*
  * @type {number}
  */
 export
-const installFailedDueToUnknownError = ErrorReason_installFailedDueToUnknownError satisfies ErrorReason; /* SHORT_NAMED_INTEGER_VALUE */
+const installFailedDueToUnknownError = ErrorReason_installFailedDueToUnknownError; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_ErrorReason = $._decodeInteger;
 export const _encode_ErrorReason = $._encodeInteger;
 

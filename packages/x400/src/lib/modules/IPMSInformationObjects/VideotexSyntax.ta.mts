@@ -39,7 +39,7 @@ export const VideotexSyntax_ids = 0 satisfies VideotexSyntax; /* LONG_NAMED_INTE
  * @constant
  * @type {number}
  */
-export const ids = VideotexSyntax_ids satisfies VideotexSyntax; /* SHORT_NAMED_INTEGER_VALUE */
+export const ids = VideotexSyntax_ids; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary VideotexSyntax_data_syntax1
@@ -53,7 +53,7 @@ export const VideotexSyntax_data_syntax1 = 1 satisfies VideotexSyntax; /* LONG_N
  * @constant
  * @type {number}
  */
-export const data_syntax1 = VideotexSyntax_data_syntax1 satisfies VideotexSyntax; /* SHORT_NAMED_INTEGER_VALUE */
+export const data_syntax1 = VideotexSyntax_data_syntax1; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary VideotexSyntax_data_syntax2
@@ -67,7 +67,7 @@ export const VideotexSyntax_data_syntax2 = 2 satisfies VideotexSyntax; /* LONG_N
  * @constant
  * @type {number}
  */
-export const data_syntax2 = VideotexSyntax_data_syntax2 satisfies VideotexSyntax; /* SHORT_NAMED_INTEGER_VALUE */
+export const data_syntax2 = VideotexSyntax_data_syntax2; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary VideotexSyntax_data_syntax3
@@ -81,7 +81,7 @@ export const VideotexSyntax_data_syntax3 = 3 satisfies VideotexSyntax; /* LONG_N
  * @constant
  * @type {number}
  */
-export const data_syntax3 = VideotexSyntax_data_syntax3 satisfies VideotexSyntax; /* SHORT_NAMED_INTEGER_VALUE */
+export const data_syntax3 = VideotexSyntax_data_syntax3; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_VideotexSyntax = $._decodeInteger;

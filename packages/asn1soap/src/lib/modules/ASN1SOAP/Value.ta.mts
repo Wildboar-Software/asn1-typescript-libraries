@@ -91,7 +91,7 @@ export const Value = _enum_for_Value;
  * @type {number}
  */
 export const Value_versionMismatch =
-  Value.versionMismatch satisfies Value; /* LONG_NAMED_ENUMERATED_VALUE */
+  Value.versionMismatch; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -102,7 +102,7 @@ export const Value_versionMismatch =
  * @type {number}
  */
 export const versionMismatch =
-  Value.versionMismatch satisfies Value; /* SHORT_NAMED_ENUMERATED_VALUE */
+  Value.versionMismatch; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -115,7 +115,7 @@ export const versionMismatch =
  * @type {number}
  */
 export const Value_mustUnderstand =
-  Value.mustUnderstand satisfies Value; /* LONG_NAMED_ENUMERATED_VALUE */
+  Value.mustUnderstand; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -126,7 +126,7 @@ export const Value_mustUnderstand =
  * @type {number}
  */
 export const mustUnderstand =
-  Value.mustUnderstand satisfies Value; /* SHORT_NAMED_ENUMERATED_VALUE */
+  Value.mustUnderstand; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -138,7 +138,7 @@ export const mustUnderstand =
  * @type {number}
  */
 export const Value_dataEncodingUnknown =
-  Value.dataEncodingUnknown satisfies Value; /* LONG_NAMED_ENUMERATED_VALUE */
+  Value.dataEncodingUnknown; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -149,7 +149,7 @@ export const Value_dataEncodingUnknown =
  * @type {number}
  */
 export const dataEncodingUnknown =
-  Value.dataEncodingUnknown satisfies Value; /* SHORT_NAMED_ENUMERATED_VALUE */
+  Value.dataEncodingUnknown; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -164,7 +164,7 @@ export const dataEncodingUnknown =
  * @type {number}
  */
 export const Value_sender =
-  Value.sender satisfies Value; /* LONG_NAMED_ENUMERATED_VALUE */
+  Value.sender; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -173,7 +173,7 @@ export const Value_sender =
  * @constant
  * @type {number}
  */
-export const sender = Value.sender satisfies Value; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const sender = Value.sender; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -186,7 +186,7 @@ export const sender = Value.sender satisfies Value; /* SHORT_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export const Value_receiver =
-  Value.receiver satisfies Value; /* LONG_NAMED_ENUMERATED_VALUE */
+  Value.receiver; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -196,7 +196,7 @@ export const Value_receiver =
  * @type {number}
  */
 export const receiver =
-  Value.receiver satisfies Value; /* SHORT_NAMED_ENUMERATED_VALUE */
+  Value.receiver; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 

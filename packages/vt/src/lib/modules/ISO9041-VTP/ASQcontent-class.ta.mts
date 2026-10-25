@@ -49,7 +49,7 @@ const ASQcontent_class_basic = 1 satisfies ASQcontent_class; /* LONG_NAMED_INTEG
  * @type {number}
  */
 export
-const basic = ASQcontent_class_basic satisfies ASQcontent_class; /* SHORT_NAMED_INTEGER_VALUE */
+const basic = ASQcontent_class_basic; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_ASQcontent_class = $._decodeInteger;
 export const _encode_ASQcontent_class = $._encodeInteger;
 

@@ -42,7 +42,7 @@ export const P_context_result_list_Item_provider_reason_reason_not_specified = 0
  * @constant
  * @type {number}
  */
-export const reason_not_specified = P_context_result_list_Item_provider_reason_reason_not_specified satisfies P_context_result_list_Item_provider_reason; /* SHORT_NAMED_INTEGER_VALUE */
+export const reason_not_specified = P_context_result_list_Item_provider_reason_reason_not_specified; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary P_context_result_list_Item_provider_reason_abstract_syntax_not_supported
@@ -56,7 +56,7 @@ export const P_context_result_list_Item_provider_reason_abstract_syntax_not_supp
  * @constant
  * @type {number}
  */
-export const abstract_syntax_not_supported = P_context_result_list_Item_provider_reason_abstract_syntax_not_supported satisfies P_context_result_list_Item_provider_reason; /* SHORT_NAMED_INTEGER_VALUE */
+export const abstract_syntax_not_supported = P_context_result_list_Item_provider_reason_abstract_syntax_not_supported; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary P_context_result_list_Item_provider_reason_proposed_transfer_syntaxes_not_supported
@@ -70,7 +70,7 @@ export const P_context_result_list_Item_provider_reason_proposed_transfer_syntax
  * @constant
  * @type {number}
  */
-export const proposed_transfer_syntaxes_not_supported = P_context_result_list_Item_provider_reason_proposed_transfer_syntaxes_not_supported satisfies P_context_result_list_Item_provider_reason; /* SHORT_NAMED_INTEGER_VALUE */
+export const proposed_transfer_syntaxes_not_supported = P_context_result_list_Item_provider_reason_proposed_transfer_syntaxes_not_supported; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary P_context_result_list_Item_provider_reason_local_limit_on_DCS_exceeded
@@ -84,7 +84,7 @@ export const P_context_result_list_Item_provider_reason_local_limit_on_DCS_excee
  * @constant
  * @type {number}
  */
-export const local_limit_on_DCS_exceeded = P_context_result_list_Item_provider_reason_local_limit_on_DCS_exceeded satisfies P_context_result_list_Item_provider_reason; /* SHORT_NAMED_INTEGER_VALUE */
+export const local_limit_on_DCS_exceeded = P_context_result_list_Item_provider_reason_local_limit_on_DCS_exceeded; /* SHORT_NAMED_INTEGER_VALUE */
 
 let _cached_decoder_for_P_context_result_list_Item_provider_reason: $.ASN1Decoder<P_context_result_list_Item_provider_reason> | null = null;
 

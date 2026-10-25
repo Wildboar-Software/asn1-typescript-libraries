@@ -41,7 +41,7 @@ export type ServiceAffectingErrorParameter =
  * @constant
  * @type {number}
  */
-export const ServiceAffectingErrorParameter_affectingExistingService = _enum_for_ServiceAffectingErrorParameter.affectingExistingService satisfies ServiceAffectingErrorParameter; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ServiceAffectingErrorParameter_affectingExistingService = _enum_for_ServiceAffectingErrorParameter.affectingExistingService; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -49,7 +49,7 @@ export const ServiceAffectingErrorParameter_affectingExistingService = _enum_for
  * @constant
  * @type {number}
  */
-export const affectingExistingService = ServiceAffectingErrorParameter_affectingExistingService satisfies ServiceAffectingErrorParameter; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const affectingExistingService = ServiceAffectingErrorParameter_affectingExistingService; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 let _cached_decoder_for_ServiceAffectingErrorParameter: $.ASN1Decoder<ServiceAffectingErrorParameter> | null = null;

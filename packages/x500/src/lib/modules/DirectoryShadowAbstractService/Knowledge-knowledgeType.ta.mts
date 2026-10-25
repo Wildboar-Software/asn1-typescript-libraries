@@ -65,7 +65,7 @@ export const Knowledge_knowledgeType = _enum_for_Knowledge_knowledgeType;
  * @type {number}
  */
 export const Knowledge_knowledgeType_master =
-    Knowledge_knowledgeType.master satisfies Knowledge_knowledgeType; /* LONG_NAMED_ENUMERATED_VALUE */
+    Knowledge_knowledgeType.master; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary master
@@ -73,7 +73,7 @@ export const Knowledge_knowledgeType_master =
  * @type {number}
  */
 export const master =
-    Knowledge_knowledgeType.master satisfies Knowledge_knowledgeType; /* SHORT_NAMED_ENUMERATED_VALUE */
+    Knowledge_knowledgeType.master; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Knowledge_knowledgeType_shadow
@@ -81,7 +81,7 @@ export const master =
  * @type {number}
  */
 export const Knowledge_knowledgeType_shadow =
-    Knowledge_knowledgeType.shadow satisfies Knowledge_knowledgeType; /* LONG_NAMED_ENUMERATED_VALUE */
+    Knowledge_knowledgeType.shadow; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary shadow
@@ -89,7 +89,7 @@ export const Knowledge_knowledgeType_shadow =
  * @type {number}
  */
 export const shadow =
-    Knowledge_knowledgeType.shadow satisfies Knowledge_knowledgeType; /* SHORT_NAMED_ENUMERATED_VALUE */
+    Knowledge_knowledgeType.shadow; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Knowledge_knowledgeType_both
@@ -97,7 +97,7 @@ export const shadow =
  * @type {number}
  */
 export const Knowledge_knowledgeType_both =
-    Knowledge_knowledgeType.both satisfies Knowledge_knowledgeType; /* LONG_NAMED_ENUMERATED_VALUE */
+    Knowledge_knowledgeType.both; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary both
@@ -105,7 +105,7 @@ export const Knowledge_knowledgeType_both =
  * @type {number}
  */
 export const both =
-    Knowledge_knowledgeType.both satisfies Knowledge_knowledgeType; /* SHORT_NAMED_ENUMERATED_VALUE */
+    Knowledge_knowledgeType.both; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 export function _decode_Knowledge_knowledgeType(el: _Element): Knowledge_knowledgeType {

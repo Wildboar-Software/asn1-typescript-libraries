@@ -46,7 +46,7 @@ export const TestConditions_first_testIfBusy = 0 satisfies TestConditions_first;
  * @constant
  * @type {number}
  */
-export const testIfBusy = TestConditions_first_testIfBusy satisfies TestConditions_first; /* SHORT_NAMED_INTEGER_VALUE */
+export const testIfBusy = TestConditions_first_testIfBusy; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TestConditions_first_rejectIfBusy
@@ -66,7 +66,7 @@ export const TestConditions_first_rejectIfBusy = 1 satisfies TestConditions_firs
  * @constant
  * @type {number}
  */
-export const rejectIfBusy = TestConditions_first_rejectIfBusy satisfies TestConditions_first; /* SHORT_NAMED_INTEGER_VALUE */
+export const rejectIfBusy = TestConditions_first_rejectIfBusy; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TestConditions_first_waitIfBusy
@@ -86,7 +86,7 @@ export const TestConditions_first_waitIfBusy = 2 satisfies TestConditions_first;
  * @constant
  * @type {number}
  */
-export const waitIfBusy = TestConditions_first_waitIfBusy satisfies TestConditions_first; /* SHORT_NAMED_INTEGER_VALUE */
+export const waitIfBusy = TestConditions_first_waitIfBusy; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_TestConditions_first = $._decodeInteger;

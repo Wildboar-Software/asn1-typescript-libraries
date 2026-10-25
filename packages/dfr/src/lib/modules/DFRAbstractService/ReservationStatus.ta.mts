@@ -88,7 +88,7 @@ const ReservationStatus = _enum_for_ReservationStatus;
  * @type {number}
  */
 export
-const ReservationStatus_uncommitted = ReservationStatus.uncommitted satisfies ReservationStatus; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReservationStatus_uncommitted = ReservationStatus.uncommitted; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary uncommitted
@@ -99,7 +99,7 @@ const ReservationStatus_uncommitted = ReservationStatus.uncommitted satisfies Re
  * @type {number}
  */
 export
-const uncommitted = ReservationStatus.uncommitted satisfies ReservationStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
+const uncommitted = ReservationStatus.uncommitted; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReservationStatus_committed
@@ -111,7 +111,7 @@ const uncommitted = ReservationStatus.uncommitted satisfies ReservationStatus; /
  * @type {number}
  */
 export
-const ReservationStatus_committed = ReservationStatus.committed satisfies ReservationStatus; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReservationStatus_committed = ReservationStatus.committed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary committed
@@ -123,7 +123,7 @@ const ReservationStatus_committed = ReservationStatus.committed satisfies Reserv
  * @type {number}
  */
 export
-const committed = ReservationStatus.committed satisfies ReservationStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
+const committed = ReservationStatus.committed; /* SHORT_NAMED_ENUMERATED_VALUE */
 export function _decode_ReservationStatus(el: _Element): ReservationStatus {
     const enumerated = $._decodeEnumerated(el);
     switch (enumerated) {

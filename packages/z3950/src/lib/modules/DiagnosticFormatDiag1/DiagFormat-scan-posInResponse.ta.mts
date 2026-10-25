@@ -51,7 +51,7 @@ const DiagFormat_scan_posInResponse_mustBeOne = 1 satisfies DiagFormat_scan_posI
  * @type {number}
  */
 export
-const mustBeOne = DiagFormat_scan_posInResponse_mustBeOne satisfies DiagFormat_scan_posInResponse; /* SHORT_NAMED_INTEGER_VALUE */
+const mustBeOne = DiagFormat_scan_posInResponse_mustBeOne; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagFormat_scan_posInResponse_mustBePositive
@@ -75,7 +75,7 @@ const DiagFormat_scan_posInResponse_mustBePositive = 2 satisfies DiagFormat_scan
  * @type {number}
  */
 export
-const mustBePositive = DiagFormat_scan_posInResponse_mustBePositive satisfies DiagFormat_scan_posInResponse; /* SHORT_NAMED_INTEGER_VALUE */
+const mustBePositive = DiagFormat_scan_posInResponse_mustBePositive; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagFormat_scan_posInResponse_mustBeNonNegative
@@ -99,7 +99,7 @@ const DiagFormat_scan_posInResponse_mustBeNonNegative = 3 satisfies DiagFormat_s
  * @type {number}
  */
 export
-const mustBeNonNegative = DiagFormat_scan_posInResponse_mustBeNonNegative satisfies DiagFormat_scan_posInResponse; /* SHORT_NAMED_INTEGER_VALUE */
+const mustBeNonNegative = DiagFormat_scan_posInResponse_mustBeNonNegative; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagFormat_scan_posInResponse_other
@@ -125,7 +125,7 @@ const DiagFormat_scan_posInResponse_other = 4 satisfies DiagFormat_scan_posInRes
  * @type {number}
  */
 export
-const other = DiagFormat_scan_posInResponse_other satisfies DiagFormat_scan_posInResponse; /* SHORT_NAMED_INTEGER_VALUE */
+const other = DiagFormat_scan_posInResponse_other; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_DiagFormat_scan_posInResponse: $.ASN1Decoder<DiagFormat_scan_posInResponse> = $._decodeInteger;
 export const _encode_DiagFormat_scan_posInResponse: $.ASN1Encoder<DiagFormat_scan_posInResponse> = $._encodeInteger;
 

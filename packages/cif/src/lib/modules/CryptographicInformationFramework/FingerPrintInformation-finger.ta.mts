@@ -90,7 +90,7 @@ const FingerPrintInformation_finger = _enum_for_FingerPrintInformation_finger;
  * @type {number}
  */
 export
-const FingerPrintInformation_finger_thumb = FingerPrintInformation_finger.thumb satisfies FingerPrintInformation_finger; /* LONG_NAMED_ENUMERATED_VALUE */
+const FingerPrintInformation_finger_thumb = FingerPrintInformation_finger.thumb; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary thumb
@@ -98,7 +98,7 @@ const FingerPrintInformation_finger_thumb = FingerPrintInformation_finger.thumb 
  * @type {number}
  */
 export
-const thumb = FingerPrintInformation_finger.thumb satisfies FingerPrintInformation_finger; /* SHORT_NAMED_ENUMERATED_VALUE */
+const thumb = FingerPrintInformation_finger.thumb; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary FingerPrintInformation_finger_pointerFinger
@@ -106,7 +106,7 @@ const thumb = FingerPrintInformation_finger.thumb satisfies FingerPrintInformati
  * @type {number}
  */
 export
-const FingerPrintInformation_finger_pointerFinger = FingerPrintInformation_finger.pointerFinger satisfies FingerPrintInformation_finger; /* LONG_NAMED_ENUMERATED_VALUE */
+const FingerPrintInformation_finger_pointerFinger = FingerPrintInformation_finger.pointerFinger; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pointerFinger
@@ -114,7 +114,7 @@ const FingerPrintInformation_finger_pointerFinger = FingerPrintInformation_finge
  * @type {number}
  */
 export
-const pointerFinger = FingerPrintInformation_finger.pointerFinger satisfies FingerPrintInformation_finger; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pointerFinger = FingerPrintInformation_finger.pointerFinger; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary FingerPrintInformation_finger_middleFinger
@@ -122,7 +122,7 @@ const pointerFinger = FingerPrintInformation_finger.pointerFinger satisfies Fing
  * @type {number}
  */
 export
-const FingerPrintInformation_finger_middleFinger = FingerPrintInformation_finger.middleFinger satisfies FingerPrintInformation_finger; /* LONG_NAMED_ENUMERATED_VALUE */
+const FingerPrintInformation_finger_middleFinger = FingerPrintInformation_finger.middleFinger; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary middleFinger
@@ -130,7 +130,7 @@ const FingerPrintInformation_finger_middleFinger = FingerPrintInformation_finger
  * @type {number}
  */
 export
-const middleFinger = FingerPrintInformation_finger.middleFinger satisfies FingerPrintInformation_finger; /* SHORT_NAMED_ENUMERATED_VALUE */
+const middleFinger = FingerPrintInformation_finger.middleFinger; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary FingerPrintInformation_finger_ringFinger
@@ -138,7 +138,7 @@ const middleFinger = FingerPrintInformation_finger.middleFinger satisfies Finger
  * @type {number}
  */
 export
-const FingerPrintInformation_finger_ringFinger = FingerPrintInformation_finger.ringFinger satisfies FingerPrintInformation_finger; /* LONG_NAMED_ENUMERATED_VALUE */
+const FingerPrintInformation_finger_ringFinger = FingerPrintInformation_finger.ringFinger; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ringFinger
@@ -146,7 +146,7 @@ const FingerPrintInformation_finger_ringFinger = FingerPrintInformation_finger.r
  * @type {number}
  */
 export
-const ringFinger = FingerPrintInformation_finger.ringFinger satisfies FingerPrintInformation_finger; /* SHORT_NAMED_ENUMERATED_VALUE */
+const ringFinger = FingerPrintInformation_finger.ringFinger; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary FingerPrintInformation_finger_littleFinger
@@ -154,7 +154,7 @@ const ringFinger = FingerPrintInformation_finger.ringFinger satisfies FingerPrin
  * @type {number}
  */
 export
-const FingerPrintInformation_finger_littleFinger = FingerPrintInformation_finger.littleFinger satisfies FingerPrintInformation_finger; /* LONG_NAMED_ENUMERATED_VALUE */
+const FingerPrintInformation_finger_littleFinger = FingerPrintInformation_finger.littleFinger; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary littleFinger
@@ -162,7 +162,7 @@ const FingerPrintInformation_finger_littleFinger = FingerPrintInformation_finger
  * @type {number}
  */
 export
-const littleFinger = FingerPrintInformation_finger.littleFinger satisfies FingerPrintInformation_finger; /* SHORT_NAMED_ENUMERATED_VALUE */
+const littleFinger = FingerPrintInformation_finger.littleFinger; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_FingerPrintInformation_finger = $._decodeEnumerated;
 export const _encode_FingerPrintInformation_finger = $._encodeEnumerated;
 

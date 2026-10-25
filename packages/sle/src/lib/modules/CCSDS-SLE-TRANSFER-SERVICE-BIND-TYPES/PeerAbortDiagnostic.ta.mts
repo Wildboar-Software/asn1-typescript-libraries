@@ -65,7 +65,7 @@ const PeerAbortDiagnostic_accessDenied = 0 satisfies PeerAbortDiagnostic; /* LON
  * @type {number}
  */
 export
-const accessDenied = PeerAbortDiagnostic_accessDenied satisfies PeerAbortDiagnostic; /* SHORT_NAMED_INTEGER_VALUE */
+const accessDenied = PeerAbortDiagnostic_accessDenied; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PeerAbortDiagnostic_unexpectedResponderId
@@ -92,7 +92,7 @@ const PeerAbortDiagnostic_unexpectedResponderId = 1 satisfies PeerAbortDiagnosti
  * @type {number}
  */
 export
-const unexpectedResponderId = PeerAbortDiagnostic_unexpectedResponderId satisfies PeerAbortDiagnostic; /* SHORT_NAMED_INTEGER_VALUE */
+const unexpectedResponderId = PeerAbortDiagnostic_unexpectedResponderId; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PeerAbortDiagnostic_operationalRequirement
@@ -118,7 +118,7 @@ const PeerAbortDiagnostic_operationalRequirement = 2 satisfies PeerAbortDiagnost
  * @type {number}
  */
 export
-const operationalRequirement = PeerAbortDiagnostic_operationalRequirement satisfies PeerAbortDiagnostic; /* SHORT_NAMED_INTEGER_VALUE */
+const operationalRequirement = PeerAbortDiagnostic_operationalRequirement; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PeerAbortDiagnostic_protocolError
@@ -144,7 +144,7 @@ const PeerAbortDiagnostic_protocolError = 3 satisfies PeerAbortDiagnostic; /* LO
  * @type {number}
  */
 export
-const protocolError = PeerAbortDiagnostic_protocolError satisfies PeerAbortDiagnostic; /* SHORT_NAMED_INTEGER_VALUE */
+const protocolError = PeerAbortDiagnostic_protocolError; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PeerAbortDiagnostic_communicationsFailure
@@ -170,7 +170,7 @@ const PeerAbortDiagnostic_communicationsFailure = 4 satisfies PeerAbortDiagnosti
  * @type {number}
  */
 export
-const communicationsFailure = PeerAbortDiagnostic_communicationsFailure satisfies PeerAbortDiagnostic; /* SHORT_NAMED_INTEGER_VALUE */
+const communicationsFailure = PeerAbortDiagnostic_communicationsFailure; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PeerAbortDiagnostic_encodingError
@@ -197,7 +197,7 @@ const PeerAbortDiagnostic_encodingError = 5 satisfies PeerAbortDiagnostic; /* LO
  * @type {number}
  */
 export
-const encodingError = PeerAbortDiagnostic_encodingError satisfies PeerAbortDiagnostic; /* SHORT_NAMED_INTEGER_VALUE */
+const encodingError = PeerAbortDiagnostic_encodingError; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PeerAbortDiagnostic_returnTimeout
@@ -224,7 +224,7 @@ const PeerAbortDiagnostic_returnTimeout = 6 satisfies PeerAbortDiagnostic; /* LO
  * @type {number}
  */
 export
-const returnTimeout = PeerAbortDiagnostic_returnTimeout satisfies PeerAbortDiagnostic; /* SHORT_NAMED_INTEGER_VALUE */
+const returnTimeout = PeerAbortDiagnostic_returnTimeout; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PeerAbortDiagnostic_endOfServiceProvisionPeriod
@@ -250,7 +250,7 @@ const PeerAbortDiagnostic_endOfServiceProvisionPeriod = 7 satisfies PeerAbortDia
  * @type {number}
  */
 export
-const endOfServiceProvisionPeriod = PeerAbortDiagnostic_endOfServiceProvisionPeriod satisfies PeerAbortDiagnostic; /* SHORT_NAMED_INTEGER_VALUE */
+const endOfServiceProvisionPeriod = PeerAbortDiagnostic_endOfServiceProvisionPeriod; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PeerAbortDiagnostic_unsolicitedInvokeId
@@ -276,7 +276,7 @@ const PeerAbortDiagnostic_unsolicitedInvokeId = 8 satisfies PeerAbortDiagnostic;
  * @type {number}
  */
 export
-const unsolicitedInvokeId = PeerAbortDiagnostic_unsolicitedInvokeId satisfies PeerAbortDiagnostic; /* SHORT_NAMED_INTEGER_VALUE */
+const unsolicitedInvokeId = PeerAbortDiagnostic_unsolicitedInvokeId; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PeerAbortDiagnostic_otherReason
@@ -302,7 +302,7 @@ const PeerAbortDiagnostic_otherReason = 127 satisfies PeerAbortDiagnostic; /* LO
  * @type {number}
  */
 export
-const otherReason = PeerAbortDiagnostic_otherReason satisfies PeerAbortDiagnostic; /* SHORT_NAMED_INTEGER_VALUE */
+const otherReason = PeerAbortDiagnostic_otherReason; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_PeerAbortDiagnostic: $.ASN1Decoder<PeerAbortDiagnostic> = $._decodeInteger;
 export const _encode_PeerAbortDiagnostic: $.ASN1Encoder<PeerAbortDiagnostic> = $._encodeInteger;
 

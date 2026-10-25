@@ -53,7 +53,7 @@ const EUICCInfo2_euiccCategory_other = 0 satisfies EUICCInfo2_euiccCategory; /* 
  * @type {number}
  */
 export
-const other = EUICCInfo2_euiccCategory_other satisfies EUICCInfo2_euiccCategory; /* SHORT_NAMED_INTEGER_VALUE */
+const other = EUICCInfo2_euiccCategory_other; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EUICCInfo2_euiccCategory_basicEuicc
@@ -77,7 +77,7 @@ const EUICCInfo2_euiccCategory_basicEuicc = 1 satisfies EUICCInfo2_euiccCategory
  * @type {number}
  */
 export
-const basicEuicc = EUICCInfo2_euiccCategory_basicEuicc satisfies EUICCInfo2_euiccCategory; /* SHORT_NAMED_INTEGER_VALUE */
+const basicEuicc = EUICCInfo2_euiccCategory_basicEuicc; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EUICCInfo2_euiccCategory_mediumEuicc
@@ -101,7 +101,7 @@ const EUICCInfo2_euiccCategory_mediumEuicc = 2 satisfies EUICCInfo2_euiccCategor
  * @type {number}
  */
 export
-const mediumEuicc = EUICCInfo2_euiccCategory_mediumEuicc satisfies EUICCInfo2_euiccCategory; /* SHORT_NAMED_INTEGER_VALUE */
+const mediumEuicc = EUICCInfo2_euiccCategory_mediumEuicc; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EUICCInfo2_euiccCategory_contactlessEuicc
@@ -125,7 +125,7 @@ const EUICCInfo2_euiccCategory_contactlessEuicc = 3 satisfies EUICCInfo2_euiccCa
  * @type {number}
  */
 export
-const contactlessEuicc = EUICCInfo2_euiccCategory_contactlessEuicc satisfies EUICCInfo2_euiccCategory; /* SHORT_NAMED_INTEGER_VALUE */
+const contactlessEuicc = EUICCInfo2_euiccCategory_contactlessEuicc; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_EUICCInfo2_euiccCategory = $._decodeInteger;
 export const _encode_EUICCInfo2_euiccCategory = $._encodeInteger;
 

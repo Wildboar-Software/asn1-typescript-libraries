@@ -49,7 +49,7 @@ export const Status_operatingWithinNominals = 0 satisfies Status; /* LONG_NAMED_
  * @constant
  * @type {number}
  */
-export const operatingWithinNominals = Status_operatingWithinNominals satisfies Status; /* SHORT_NAMED_INTEGER_VALUE */
+export const operatingWithinNominals = Status_operatingWithinNominals; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Status_replyTimeout
@@ -63,7 +63,7 @@ export const Status_replyTimeout = 1 satisfies Status; /* LONG_NAMED_INTEGER_VAL
  * @constant
  * @type {number}
  */
-export const replyTimeout = Status_replyTimeout satisfies Status; /* SHORT_NAMED_INTEGER_VALUE */
+export const replyTimeout = Status_replyTimeout; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Status_badReplyFormat
@@ -77,7 +77,7 @@ export const Status_badReplyFormat = 2 satisfies Status; /* LONG_NAMED_INTEGER_V
  * @constant
  * @type {number}
  */
-export const badReplyFormat = Status_badReplyFormat satisfies Status; /* SHORT_NAMED_INTEGER_VALUE */
+export const badReplyFormat = Status_badReplyFormat; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Status_hardwareSoftwareFault
@@ -91,7 +91,7 @@ export const Status_hardwareSoftwareFault = 3 satisfies Status; /* LONG_NAMED_IN
  * @constant
  * @type {number}
  */
-export const hardwareSoftwareFault = Status_hardwareSoftwareFault satisfies Status; /* SHORT_NAMED_INTEGER_VALUE */
+export const hardwareSoftwareFault = Status_hardwareSoftwareFault; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Status_propagationFailure
@@ -105,7 +105,7 @@ export const Status_propagationFailure = 4 satisfies Status; /* LONG_NAMED_INTEG
  * @constant
  * @type {number}
  */
-export const propagationFailure = Status_propagationFailure satisfies Status; /* SHORT_NAMED_INTEGER_VALUE */
+export const propagationFailure = Status_propagationFailure; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Status_badDateFormatOrValue
@@ -119,7 +119,7 @@ export const Status_badDateFormatOrValue = 5 satisfies Status; /* LONG_NAMED_INT
  * @constant
  * @type {number}
  */
-export const badDateFormatOrValue = Status_badDateFormatOrValue satisfies Status; /* SHORT_NAMED_INTEGER_VALUE */
+export const badDateFormatOrValue = Status_badDateFormatOrValue; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Status_badTimeFormatOrValue
@@ -133,7 +133,7 @@ export const Status_badTimeFormatOrValue = 6 satisfies Status; /* LONG_NAMED_INT
  * @constant
  * @type {number}
  */
-export const badTimeFormatOrValue = Status_badTimeFormatOrValue satisfies Status; /* SHORT_NAMED_INTEGER_VALUE */
+export const badTimeFormatOrValue = Status_badTimeFormatOrValue; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_Status = $._decodeInteger;

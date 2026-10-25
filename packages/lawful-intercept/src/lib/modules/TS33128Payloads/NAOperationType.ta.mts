@@ -116,7 +116,7 @@ const NAOperationType = _enum_for_NAOperationType;
  * @type {number}
  */
 export
-const NAOperationType_createNetworkAssistanceSession = NAOperationType.createNetworkAssistanceSession satisfies NAOperationType; /* LONG_NAMED_ENUMERATED_VALUE */
+const NAOperationType_createNetworkAssistanceSession = NAOperationType.createNetworkAssistanceSession; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary createNetworkAssistanceSession
@@ -124,7 +124,7 @@ const NAOperationType_createNetworkAssistanceSession = NAOperationType.createNet
  * @type {number}
  */
 export
-const createNetworkAssistanceSession = NAOperationType.createNetworkAssistanceSession satisfies NAOperationType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const createNetworkAssistanceSession = NAOperationType.createNetworkAssistanceSession; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NAOperationType_retrieveNetworkAssistanceSession
@@ -132,7 +132,7 @@ const createNetworkAssistanceSession = NAOperationType.createNetworkAssistanceSe
  * @type {number}
  */
 export
-const NAOperationType_retrieveNetworkAssistanceSession = NAOperationType.retrieveNetworkAssistanceSession satisfies NAOperationType; /* LONG_NAMED_ENUMERATED_VALUE */
+const NAOperationType_retrieveNetworkAssistanceSession = NAOperationType.retrieveNetworkAssistanceSession; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary retrieveNetworkAssistanceSession
@@ -140,7 +140,7 @@ const NAOperationType_retrieveNetworkAssistanceSession = NAOperationType.retriev
  * @type {number}
  */
 export
-const retrieveNetworkAssistanceSession = NAOperationType.retrieveNetworkAssistanceSession satisfies NAOperationType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const retrieveNetworkAssistanceSession = NAOperationType.retrieveNetworkAssistanceSession; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NAOperationType_updateNetworkAssistanceSession
@@ -148,7 +148,7 @@ const retrieveNetworkAssistanceSession = NAOperationType.retrieveNetworkAssistan
  * @type {number}
  */
 export
-const NAOperationType_updateNetworkAssistanceSession = NAOperationType.updateNetworkAssistanceSession satisfies NAOperationType; /* LONG_NAMED_ENUMERATED_VALUE */
+const NAOperationType_updateNetworkAssistanceSession = NAOperationType.updateNetworkAssistanceSession; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary updateNetworkAssistanceSession
@@ -156,7 +156,7 @@ const NAOperationType_updateNetworkAssistanceSession = NAOperationType.updateNet
  * @type {number}
  */
 export
-const updateNetworkAssistanceSession = NAOperationType.updateNetworkAssistanceSession satisfies NAOperationType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const updateNetworkAssistanceSession = NAOperationType.updateNetworkAssistanceSession; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NAOperationType_patchNetworkAssistanceSession
@@ -164,7 +164,7 @@ const updateNetworkAssistanceSession = NAOperationType.updateNetworkAssistanceSe
  * @type {number}
  */
 export
-const NAOperationType_patchNetworkAssistanceSession = NAOperationType.patchNetworkAssistanceSession satisfies NAOperationType; /* LONG_NAMED_ENUMERATED_VALUE */
+const NAOperationType_patchNetworkAssistanceSession = NAOperationType.patchNetworkAssistanceSession; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary patchNetworkAssistanceSession
@@ -172,7 +172,7 @@ const NAOperationType_patchNetworkAssistanceSession = NAOperationType.patchNetwo
  * @type {number}
  */
 export
-const patchNetworkAssistanceSession = NAOperationType.patchNetworkAssistanceSession satisfies NAOperationType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const patchNetworkAssistanceSession = NAOperationType.patchNetworkAssistanceSession; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NAOperationType_destroyNetworkAssistanceSession
@@ -180,7 +180,7 @@ const patchNetworkAssistanceSession = NAOperationType.patchNetworkAssistanceSess
  * @type {number}
  */
 export
-const NAOperationType_destroyNetworkAssistanceSession = NAOperationType.destroyNetworkAssistanceSession satisfies NAOperationType; /* LONG_NAMED_ENUMERATED_VALUE */
+const NAOperationType_destroyNetworkAssistanceSession = NAOperationType.destroyNetworkAssistanceSession; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary destroyNetworkAssistanceSession
@@ -188,7 +188,7 @@ const NAOperationType_destroyNetworkAssistanceSession = NAOperationType.destroyN
  * @type {number}
  */
 export
-const destroyNetworkAssistanceSession = NAOperationType.destroyNetworkAssistanceSession satisfies NAOperationType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const destroyNetworkAssistanceSession = NAOperationType.destroyNetworkAssistanceSession; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NAOperationType_requestBitRateRecommendation
@@ -196,7 +196,7 @@ const destroyNetworkAssistanceSession = NAOperationType.destroyNetworkAssistance
  * @type {number}
  */
 export
-const NAOperationType_requestBitRateRecommendation = NAOperationType.requestBitRateRecommendation satisfies NAOperationType; /* LONG_NAMED_ENUMERATED_VALUE */
+const NAOperationType_requestBitRateRecommendation = NAOperationType.requestBitRateRecommendation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary requestBitRateRecommendation
@@ -204,7 +204,7 @@ const NAOperationType_requestBitRateRecommendation = NAOperationType.requestBitR
  * @type {number}
  */
 export
-const requestBitRateRecommendation = NAOperationType.requestBitRateRecommendation satisfies NAOperationType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const requestBitRateRecommendation = NAOperationType.requestBitRateRecommendation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NAOperationType_requestDeliveryBoost
@@ -212,7 +212,7 @@ const requestBitRateRecommendation = NAOperationType.requestBitRateRecommendatio
  * @type {number}
  */
 export
-const NAOperationType_requestDeliveryBoost = NAOperationType.requestDeliveryBoost satisfies NAOperationType; /* LONG_NAMED_ENUMERATED_VALUE */
+const NAOperationType_requestDeliveryBoost = NAOperationType.requestDeliveryBoost; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary requestDeliveryBoost
@@ -220,7 +220,7 @@ const NAOperationType_requestDeliveryBoost = NAOperationType.requestDeliveryBoos
  * @type {number}
  */
 export
-const requestDeliveryBoost = NAOperationType.requestDeliveryBoost satisfies NAOperationType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const requestDeliveryBoost = NAOperationType.requestDeliveryBoost; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_NAOperationType: $.ASN1Decoder<NAOperationType> = $._decodeEnumerated;
 export const _encode_NAOperationType: $.ASN1Encoder<NAOperationType> = $._encodeEnumerated;
 

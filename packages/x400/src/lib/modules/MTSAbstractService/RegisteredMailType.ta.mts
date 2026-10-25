@@ -44,7 +44,7 @@ export const RegisteredMailType_non_registered_mail = 0 satisfies RegisteredMail
  * @constant
  * @type {number}
  */
-export const non_registered_mail = RegisteredMailType_non_registered_mail satisfies RegisteredMailType; /* SHORT_NAMED_INTEGER_VALUE */
+export const non_registered_mail = RegisteredMailType_non_registered_mail; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RegisteredMailType_registered_mail
@@ -58,7 +58,7 @@ export const RegisteredMailType_registered_mail = 1 satisfies RegisteredMailType
  * @constant
  * @type {number}
  */
-export const registered_mail = RegisteredMailType_registered_mail satisfies RegisteredMailType; /* SHORT_NAMED_INTEGER_VALUE */
+export const registered_mail = RegisteredMailType_registered_mail; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RegisteredMailType_registered_mail_to_addressee_in_person
@@ -72,7 +72,7 @@ export const RegisteredMailType_registered_mail_to_addressee_in_person = 2 satis
  * @constant
  * @type {number}
  */
-export const registered_mail_to_addressee_in_person = RegisteredMailType_registered_mail_to_addressee_in_person satisfies RegisteredMailType; /* SHORT_NAMED_INTEGER_VALUE */
+export const registered_mail_to_addressee_in_person = RegisteredMailType_registered_mail_to_addressee_in_person; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_RegisteredMailType = $._decodeInteger;

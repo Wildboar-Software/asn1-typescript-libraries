@@ -49,7 +49,7 @@ const DiagnosticCltuGetParameter_specific_unknownParameter = 0 satisfies Diagnos
  * @type {number}
  */
 export
-const unknownParameter = DiagnosticCltuGetParameter_specific_unknownParameter satisfies DiagnosticCltuGetParameter_specific; /* SHORT_NAMED_INTEGER_VALUE */
+const unknownParameter = DiagnosticCltuGetParameter_specific_unknownParameter; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_DiagnosticCltuGetParameter_specific: $.ASN1Decoder<DiagnosticCltuGetParameter_specific> = $._decodeInteger;
 export const _encode_DiagnosticCltuGetParameter_specific: $.ASN1Encoder<DiagnosticCltuGetParameter_specific> = $._encodeInteger;
 

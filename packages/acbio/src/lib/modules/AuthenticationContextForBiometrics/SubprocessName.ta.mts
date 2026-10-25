@@ -60,7 +60,7 @@ export type SubprocessName = _enum_for_SubprocessName | ENUMERATED;
  * @constant
  * @type {number}
  */
-export const SubprocessName_data_capture = _enum_for_SubprocessName.data_capture satisfies SubprocessName; /* LONG_NAMED_ENUMERATED_VALUE */
+export const SubprocessName_data_capture = _enum_for_SubprocessName.data_capture; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -68,7 +68,7 @@ export const SubprocessName_data_capture = _enum_for_SubprocessName.data_capture
  * @constant
  * @type {number}
  */
-export const data_capture = SubprocessName_data_capture satisfies SubprocessName; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const data_capture = SubprocessName_data_capture; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -76,7 +76,7 @@ export const data_capture = SubprocessName_data_capture satisfies SubprocessName
  * @constant
  * @type {number}
  */
-export const SubprocessName_intermediate_signal_processing = _enum_for_SubprocessName.intermediate_signal_processing satisfies SubprocessName; /* LONG_NAMED_ENUMERATED_VALUE */
+export const SubprocessName_intermediate_signal_processing = _enum_for_SubprocessName.intermediate_signal_processing; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -84,7 +84,7 @@ export const SubprocessName_intermediate_signal_processing = _enum_for_Subproces
  * @constant
  * @type {number}
  */
-export const intermediate_signal_processing = SubprocessName_intermediate_signal_processing satisfies SubprocessName; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const intermediate_signal_processing = SubprocessName_intermediate_signal_processing; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -92,7 +92,7 @@ export const intermediate_signal_processing = SubprocessName_intermediate_signal
  * @constant
  * @type {number}
  */
-export const SubprocessName_final_signal_processing = _enum_for_SubprocessName.final_signal_processing satisfies SubprocessName; /* LONG_NAMED_ENUMERATED_VALUE */
+export const SubprocessName_final_signal_processing = _enum_for_SubprocessName.final_signal_processing; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -100,7 +100,7 @@ export const SubprocessName_final_signal_processing = _enum_for_SubprocessName.f
  * @constant
  * @type {number}
  */
-export const final_signal_processing = SubprocessName_final_signal_processing satisfies SubprocessName; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const final_signal_processing = SubprocessName_final_signal_processing; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -108,7 +108,7 @@ export const final_signal_processing = SubprocessName_final_signal_processing sa
  * @constant
  * @type {number}
  */
-export const SubprocessName_storage = _enum_for_SubprocessName.storage satisfies SubprocessName; /* LONG_NAMED_ENUMERATED_VALUE */
+export const SubprocessName_storage = _enum_for_SubprocessName.storage; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -116,7 +116,7 @@ export const SubprocessName_storage = _enum_for_SubprocessName.storage satisfies
  * @constant
  * @type {number}
  */
-export const storage = SubprocessName_storage satisfies SubprocessName; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const storage = SubprocessName_storage; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -124,7 +124,7 @@ export const storage = SubprocessName_storage satisfies SubprocessName; /* SHORT
  * @constant
  * @type {number}
  */
-export const SubprocessName_comparison = _enum_for_SubprocessName.comparison satisfies SubprocessName; /* LONG_NAMED_ENUMERATED_VALUE */
+export const SubprocessName_comparison = _enum_for_SubprocessName.comparison; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -132,7 +132,7 @@ export const SubprocessName_comparison = _enum_for_SubprocessName.comparison sat
  * @constant
  * @type {number}
  */
-export const comparison = SubprocessName_comparison satisfies SubprocessName; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const comparison = SubprocessName_comparison; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -140,7 +140,7 @@ export const comparison = SubprocessName_comparison satisfies SubprocessName; /*
  * @constant
  * @type {number}
  */
-export const SubprocessName_decision = _enum_for_SubprocessName.decision satisfies SubprocessName; /* LONG_NAMED_ENUMERATED_VALUE */
+export const SubprocessName_decision = _enum_for_SubprocessName.decision; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -148,7 +148,7 @@ export const SubprocessName_decision = _enum_for_SubprocessName.decision satisfi
  * @constant
  * @type {number}
  */
-export const decision = SubprocessName_decision satisfies SubprocessName; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const decision = SubprocessName_decision; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -156,7 +156,7 @@ export const decision = SubprocessName_decision satisfies SubprocessName; /* SHO
  * @constant
  * @type {number}
  */
-export const SubprocessName_sample_fusion = _enum_for_SubprocessName.sample_fusion satisfies SubprocessName; /* LONG_NAMED_ENUMERATED_VALUE */
+export const SubprocessName_sample_fusion = _enum_for_SubprocessName.sample_fusion; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -164,7 +164,7 @@ export const SubprocessName_sample_fusion = _enum_for_SubprocessName.sample_fusi
  * @constant
  * @type {number}
  */
-export const sample_fusion = SubprocessName_sample_fusion satisfies SubprocessName; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const sample_fusion = SubprocessName_sample_fusion; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -172,7 +172,7 @@ export const sample_fusion = SubprocessName_sample_fusion satisfies SubprocessNa
  * @constant
  * @type {number}
  */
-export const SubprocessName_feature_fusion = _enum_for_SubprocessName.feature_fusion satisfies SubprocessName; /* LONG_NAMED_ENUMERATED_VALUE */
+export const SubprocessName_feature_fusion = _enum_for_SubprocessName.feature_fusion; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -180,7 +180,7 @@ export const SubprocessName_feature_fusion = _enum_for_SubprocessName.feature_fu
  * @constant
  * @type {number}
  */
-export const feature_fusion = SubprocessName_feature_fusion satisfies SubprocessName; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const feature_fusion = SubprocessName_feature_fusion; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -188,7 +188,7 @@ export const feature_fusion = SubprocessName_feature_fusion satisfies Subprocess
  * @constant
  * @type {number}
  */
-export const SubprocessName_score_fusion = _enum_for_SubprocessName.score_fusion satisfies SubprocessName; /* LONG_NAMED_ENUMERATED_VALUE */
+export const SubprocessName_score_fusion = _enum_for_SubprocessName.score_fusion; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -196,7 +196,7 @@ export const SubprocessName_score_fusion = _enum_for_SubprocessName.score_fusion
  * @constant
  * @type {number}
  */
-export const score_fusion = SubprocessName_score_fusion satisfies SubprocessName; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const score_fusion = SubprocessName_score_fusion; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -204,7 +204,7 @@ export const score_fusion = SubprocessName_score_fusion satisfies SubprocessName
  * @constant
  * @type {number}
  */
-export const SubprocessName_decision_fusion = _enum_for_SubprocessName.decision_fusion satisfies SubprocessName; /* LONG_NAMED_ENUMERATED_VALUE */
+export const SubprocessName_decision_fusion = _enum_for_SubprocessName.decision_fusion; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -212,7 +212,7 @@ export const SubprocessName_decision_fusion = _enum_for_SubprocessName.decision_
  * @constant
  * @type {number}
  */
-export const decision_fusion = SubprocessName_decision_fusion satisfies SubprocessName; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const decision_fusion = SubprocessName_decision_fusion; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 

@@ -68,7 +68,7 @@ const AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_eumCertificat
  * @type {number}
  */
 export
-const eumCertificateInvalid = AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_eumCertificateInvalid satisfies AuthenticateClientResponseEsipa_authenticateClientErrorEsipa; /* SHORT_NAMED_INTEGER_VALUE */
+const eumCertificateInvalid = AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_eumCertificateInvalid; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_eumCertificateExpired
@@ -93,7 +93,7 @@ const AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_eumCertificat
  * @type {number}
  */
 export
-const eumCertificateExpired = AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_eumCertificateExpired satisfies AuthenticateClientResponseEsipa_authenticateClientErrorEsipa; /* SHORT_NAMED_INTEGER_VALUE */
+const eumCertificateExpired = AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_eumCertificateExpired; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_euiccCertificateInvalid
@@ -118,7 +118,7 @@ const AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_euiccCertific
  * @type {number}
  */
 export
-const euiccCertificateInvalid = AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_euiccCertificateInvalid satisfies AuthenticateClientResponseEsipa_authenticateClientErrorEsipa; /* SHORT_NAMED_INTEGER_VALUE */
+const euiccCertificateInvalid = AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_euiccCertificateInvalid; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_euiccCertificateExpired
@@ -143,7 +143,7 @@ const AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_euiccCertific
  * @type {number}
  */
 export
-const euiccCertificateExpired = AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_euiccCertificateExpired satisfies AuthenticateClientResponseEsipa_authenticateClientErrorEsipa; /* SHORT_NAMED_INTEGER_VALUE */
+const euiccCertificateExpired = AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_euiccCertificateExpired; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_euiccSignatureInvalid
@@ -168,7 +168,7 @@ const AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_euiccSignatur
  * @type {number}
  */
 export
-const euiccSignatureInvalid = AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_euiccSignatureInvalid satisfies AuthenticateClientResponseEsipa_authenticateClientErrorEsipa; /* SHORT_NAMED_INTEGER_VALUE */
+const euiccSignatureInvalid = AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_euiccSignatureInvalid; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_matchingIdRefused
@@ -193,7 +193,7 @@ const AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_matchingIdRef
  * @type {number}
  */
 export
-const matchingIdRefused = AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_matchingIdRefused satisfies AuthenticateClientResponseEsipa_authenticateClientErrorEsipa; /* SHORT_NAMED_INTEGER_VALUE */
+const matchingIdRefused = AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_matchingIdRefused; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_eidMismatch
@@ -218,7 +218,7 @@ const AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_eidMismatch =
  * @type {number}
  */
 export
-const eidMismatch = AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_eidMismatch satisfies AuthenticateClientResponseEsipa_authenticateClientErrorEsipa; /* SHORT_NAMED_INTEGER_VALUE */
+const eidMismatch = AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_eidMismatch; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_noEligibleProfile
@@ -243,7 +243,7 @@ const AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_noEligiblePro
  * @type {number}
  */
 export
-const noEligibleProfile = AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_noEligibleProfile satisfies AuthenticateClientResponseEsipa_authenticateClientErrorEsipa; /* SHORT_NAMED_INTEGER_VALUE */
+const noEligibleProfile = AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_noEligibleProfile; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_ciPKUnknown
@@ -268,7 +268,7 @@ const AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_ciPKUnknown =
  * @type {number}
  */
 export
-const ciPKUnknown = AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_ciPKUnknown satisfies AuthenticateClientResponseEsipa_authenticateClientErrorEsipa; /* SHORT_NAMED_INTEGER_VALUE */
+const ciPKUnknown = AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_ciPKUnknown; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_invalidTransactionId
@@ -293,7 +293,7 @@ const AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_invalidTransa
  * @type {number}
  */
 export
-const invalidTransactionId = AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_invalidTransactionId satisfies AuthenticateClientResponseEsipa_authenticateClientErrorEsipa; /* SHORT_NAMED_INTEGER_VALUE */
+const invalidTransactionId = AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_invalidTransactionId; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_insufficientMemory
@@ -318,7 +318,7 @@ const AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_insufficientM
  * @type {number}
  */
 export
-const insufficientMemory = AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_insufficientMemory satisfies AuthenticateClientResponseEsipa_authenticateClientErrorEsipa; /* SHORT_NAMED_INTEGER_VALUE */
+const insufficientMemory = AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_insufficientMemory; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_downloadOrderExpired
@@ -341,7 +341,7 @@ const AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_downloadOrder
  * @type {number}
  */
 export
-const downloadOrderExpired = AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_downloadOrderExpired satisfies AuthenticateClientResponseEsipa_authenticateClientErrorEsipa; /* SHORT_NAMED_INTEGER_VALUE */
+const downloadOrderExpired = AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_downloadOrderExpired; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_pprNotAllowed
@@ -369,7 +369,7 @@ const AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_pprNotAllowed
  * @type {number}
  */
 export
-const pprNotAllowed = AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_pprNotAllowed satisfies AuthenticateClientResponseEsipa_authenticateClientErrorEsipa; /* SHORT_NAMED_INTEGER_VALUE */
+const pprNotAllowed = AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_pprNotAllowed; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_eventIdUnknown
@@ -393,7 +393,7 @@ const AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_eventIdUnknow
  * @type {number}
  */
 export
-const eventIdUnknown = AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_eventIdUnknown satisfies AuthenticateClientResponseEsipa_authenticateClientErrorEsipa; /* SHORT_NAMED_INTEGER_VALUE */
+const eventIdUnknown = AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_eventIdUnknown; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_undefinedError
@@ -417,7 +417,7 @@ const AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_undefinedErro
  * @type {number}
  */
 export
-const undefinedError = AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_undefinedError satisfies AuthenticateClientResponseEsipa_authenticateClientErrorEsipa; /* SHORT_NAMED_INTEGER_VALUE */
+const undefinedError = AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_AuthenticateClientResponseEsipa_authenticateClientErrorEsipa: $.ASN1Decoder<AuthenticateClientResponseEsipa_authenticateClientErrorEsipa> = $._decodeInteger;
 export const _encode_AuthenticateClientResponseEsipa_authenticateClientErrorEsipa: $.ASN1Encoder<AuthenticateClientResponseEsipa_authenticateClientErrorEsipa> = $._encodeInteger;
 

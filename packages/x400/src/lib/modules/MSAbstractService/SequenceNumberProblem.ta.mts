@@ -38,7 +38,7 @@ export const SequenceNumberProblem_no_such_entry = 0 satisfies SequenceNumberPro
  * @constant
  * @type {number}
  */
-export const no_such_entry = SequenceNumberProblem_no_such_entry satisfies SequenceNumberProblem; /* SHORT_NAMED_INTEGER_VALUE */
+export const no_such_entry = SequenceNumberProblem_no_such_entry; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_SequenceNumberProblem = $._decodeInteger;

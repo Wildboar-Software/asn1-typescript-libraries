@@ -49,7 +49,7 @@ const DiagFormat_dbUnavail_why_reasonCode_doesNotExist = 0 satisfies DiagFormat_
  * @type {number}
  */
 export
-const doesNotExist = DiagFormat_dbUnavail_why_reasonCode_doesNotExist satisfies DiagFormat_dbUnavail_why_reasonCode; /* SHORT_NAMED_INTEGER_VALUE */
+const doesNotExist = DiagFormat_dbUnavail_why_reasonCode_doesNotExist; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagFormat_dbUnavail_why_reasonCode_existsButUnavail
@@ -73,7 +73,7 @@ const DiagFormat_dbUnavail_why_reasonCode_existsButUnavail = 1 satisfies DiagFor
  * @type {number}
  */
 export
-const existsButUnavail = DiagFormat_dbUnavail_why_reasonCode_existsButUnavail satisfies DiagFormat_dbUnavail_why_reasonCode; /* SHORT_NAMED_INTEGER_VALUE */
+const existsButUnavail = DiagFormat_dbUnavail_why_reasonCode_existsButUnavail; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagFormat_dbUnavail_why_reasonCode_locked
@@ -97,7 +97,7 @@ const DiagFormat_dbUnavail_why_reasonCode_locked = 2 satisfies DiagFormat_dbUnav
  * @type {number}
  */
 export
-const locked = DiagFormat_dbUnavail_why_reasonCode_locked satisfies DiagFormat_dbUnavail_why_reasonCode; /* SHORT_NAMED_INTEGER_VALUE */
+const locked = DiagFormat_dbUnavail_why_reasonCode_locked; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagFormat_dbUnavail_why_reasonCode_accessDenied
@@ -123,7 +123,7 @@ const DiagFormat_dbUnavail_why_reasonCode_accessDenied = 3 satisfies DiagFormat_
  * @type {number}
  */
 export
-const accessDenied = DiagFormat_dbUnavail_why_reasonCode_accessDenied satisfies DiagFormat_dbUnavail_why_reasonCode; /* SHORT_NAMED_INTEGER_VALUE */
+const accessDenied = DiagFormat_dbUnavail_why_reasonCode_accessDenied; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_DiagFormat_dbUnavail_why_reasonCode: $.ASN1Decoder<DiagFormat_dbUnavail_why_reasonCode> = $._decodeInteger;
 export const _encode_DiagFormat_dbUnavail_why_reasonCode: $.ASN1Encoder<DiagFormat_dbUnavail_why_reasonCode> = $._encodeInteger;
 

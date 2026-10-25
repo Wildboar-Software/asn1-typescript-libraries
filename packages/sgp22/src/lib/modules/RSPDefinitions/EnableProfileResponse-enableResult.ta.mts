@@ -54,7 +54,7 @@ const EnableProfileResponse_enableResult_ok = 0 satisfies EnableProfileResponse_
  * @type {number}
  */
 export
-const ok = EnableProfileResponse_enableResult_ok satisfies EnableProfileResponse_enableResult; /* SHORT_NAMED_INTEGER_VALUE */
+const ok = EnableProfileResponse_enableResult_ok; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EnableProfileResponse_enableResult_iccidOrAidNotFound
@@ -78,7 +78,7 @@ const EnableProfileResponse_enableResult_iccidOrAidNotFound = 1 satisfies Enable
  * @type {number}
  */
 export
-const iccidOrAidNotFound = EnableProfileResponse_enableResult_iccidOrAidNotFound satisfies EnableProfileResponse_enableResult; /* SHORT_NAMED_INTEGER_VALUE */
+const iccidOrAidNotFound = EnableProfileResponse_enableResult_iccidOrAidNotFound; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EnableProfileResponse_enableResult_profileNotInDisabledState
@@ -102,7 +102,7 @@ const EnableProfileResponse_enableResult_profileNotInDisabledState = 2 satisfies
  * @type {number}
  */
 export
-const profileNotInDisabledState = EnableProfileResponse_enableResult_profileNotInDisabledState satisfies EnableProfileResponse_enableResult; /* SHORT_NAMED_INTEGER_VALUE */
+const profileNotInDisabledState = EnableProfileResponse_enableResult_profileNotInDisabledState; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EnableProfileResponse_enableResult_disallowedByPolicy
@@ -128,7 +128,7 @@ const EnableProfileResponse_enableResult_disallowedByPolicy = 3 satisfies Enable
  * @type {number}
  */
 export
-const disallowedByPolicy = EnableProfileResponse_enableResult_disallowedByPolicy satisfies EnableProfileResponse_enableResult; /* SHORT_NAMED_INTEGER_VALUE */
+const disallowedByPolicy = EnableProfileResponse_enableResult_disallowedByPolicy; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EnableProfileResponse_enableResult_wrongProfileReenabling
@@ -156,7 +156,7 @@ const EnableProfileResponse_enableResult_wrongProfileReenabling = 4 satisfies En
  * @type {number}
  */
 export
-const wrongProfileReenabling = EnableProfileResponse_enableResult_wrongProfileReenabling satisfies EnableProfileResponse_enableResult; /* SHORT_NAMED_INTEGER_VALUE */
+const wrongProfileReenabling = EnableProfileResponse_enableResult_wrongProfileReenabling; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EnableProfileResponse_enableResult_catBusy
@@ -182,7 +182,7 @@ const EnableProfileResponse_enableResult_catBusy = 5 satisfies EnableProfileResp
  * @type {number}
  */
 export
-const catBusy = EnableProfileResponse_enableResult_catBusy satisfies EnableProfileResponse_enableResult; /* SHORT_NAMED_INTEGER_VALUE */
+const catBusy = EnableProfileResponse_enableResult_catBusy; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EnableProfileResponse_enableResult_undefinedError
@@ -206,7 +206,7 @@ const EnableProfileResponse_enableResult_undefinedError = 127 satisfies EnablePr
  * @type {number}
  */
 export
-const undefinedError = EnableProfileResponse_enableResult_undefinedError satisfies EnableProfileResponse_enableResult; /* SHORT_NAMED_INTEGER_VALUE */
+const undefinedError = EnableProfileResponse_enableResult_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_EnableProfileResponse_enableResult = $._decodeInteger;
 export const _encode_EnableProfileResponse_enableResult = $._encodeInteger;
 

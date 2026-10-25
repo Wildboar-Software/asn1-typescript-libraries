@@ -43,7 +43,7 @@ export const AbandonProblem_noSuchOperation = 1 satisfies AbandonProblem; /* LON
  * @constant
  * @type {number}
  */
-export const noSuchOperation = AbandonProblem_noSuchOperation satisfies AbandonProblem; /* SHORT_NAMED_INTEGER_VALUE */
+export const noSuchOperation = AbandonProblem_noSuchOperation; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AbandonProblem_tooLate
@@ -67,7 +67,7 @@ export const AbandonProblem_tooLate = 2 satisfies AbandonProblem; /* LONG_NAMED_
  * @constant
  * @type {number}
  */
-export const tooLate = AbandonProblem_tooLate satisfies AbandonProblem; /* SHORT_NAMED_INTEGER_VALUE */
+export const tooLate = AbandonProblem_tooLate; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AbandonProblem_cannotAbandon
@@ -89,7 +89,7 @@ export const AbandonProblem_cannotAbandon = 3 satisfies AbandonProblem; /* LONG_
  * @constant
  * @type {number}
  */
-export const cannotAbandon = AbandonProblem_cannotAbandon satisfies AbandonProblem; /* SHORT_NAMED_INTEGER_VALUE */
+export const cannotAbandon = AbandonProblem_cannotAbandon; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_AbandonProblem = $._decodeInteger;

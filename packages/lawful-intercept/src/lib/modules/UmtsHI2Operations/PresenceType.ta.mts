@@ -51,7 +51,7 @@ type PresenceType = _enum_for_PresenceType | ENUMERATED;
  * @type {number}
  */
 export
-const PresenceType_pTCClient = _enum_for_PresenceType.pTCClient satisfies PresenceType; /* LONG_NAMED_ENUMERATED_VALUE */
+const PresenceType_pTCClient = _enum_for_PresenceType.pTCClient; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pTCClient
@@ -63,7 +63,7 @@ const PresenceType_pTCClient = _enum_for_PresenceType.pTCClient satisfies Presen
  * @type {number}
  */
 export
-const pTCClient = PresenceType_pTCClient satisfies PresenceType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pTCClient = PresenceType_pTCClient; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PresenceType_pTCGroup
@@ -77,7 +77,7 @@ const pTCClient = PresenceType_pTCClient satisfies PresenceType; /* SHORT_NAMED_
  * @type {number}
  */
 export
-const PresenceType_pTCGroup = _enum_for_PresenceType.pTCGroup satisfies PresenceType; /* LONG_NAMED_ENUMERATED_VALUE */
+const PresenceType_pTCGroup = _enum_for_PresenceType.pTCGroup; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pTCGroup
@@ -89,7 +89,7 @@ const PresenceType_pTCGroup = _enum_for_PresenceType.pTCGroup satisfies Presence
  * @type {number}
  */
 export
-const pTCGroup = PresenceType_pTCGroup satisfies PresenceType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pTCGroup = PresenceType_pTCGroup; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_PresenceType: $.ASN1Decoder<PresenceType> = $._decodeEnumerated;
 export const _encode_PresenceType: $.ASN1Encoder<PresenceType> = $._encodeEnumerated;
 

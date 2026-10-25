@@ -104,49 +104,49 @@ const LocalConnectionState = _enum_for_LocalConnectionState;
  *
  * No call–device relationship (ECMA-269 §6.1.3).
  */
-export const LocalConnectionState_null = LocalConnectionState.null_ satisfies LocalConnectionState;
+export const LocalConnectionState_null = LocalConnectionState.null_;
 /**
  * @summary initiated
  * @description
  *
  * Requesting a service or dialling (ECMA-269 §6.1.3).
  */
-export const LocalConnectionState_initiated = LocalConnectionState.initiated satisfies LocalConnectionState;
+export const LocalConnectionState_initiated = LocalConnectionState.initiated;
 /**
  * @summary alerting
  * @description
  *
  * Attempting to connect the call to the device (ECMA-269 §6.1.3).
  */
-export const LocalConnectionState_alerting = LocalConnectionState.alerting satisfies LocalConnectionState;
+export const LocalConnectionState_alerting = LocalConnectionState.alerting;
 /**
  * @summary connected
  * @description
  *
  * Actively participating in the call (ECMA-269 §6.1.3).
  */
-export const LocalConnectionState_connected = LocalConnectionState.connected satisfies LocalConnectionState;
+export const LocalConnectionState_connected = LocalConnectionState.connected;
 /**
  * @summary hold
  * @description
  *
  * Inactive (suspended) participation (ECMA-269 §6.1.3).
  */
-export const LocalConnectionState_hold = LocalConnectionState.hold satisfies LocalConnectionState;
+export const LocalConnectionState_hold = LocalConnectionState.hold;
 /**
  * @summary queued
  * @description
  *
  * Progression suspended awaiting action (ECMA-269 §6.1.3).
  */
-export const LocalConnectionState_queued = LocalConnectionState.queued satisfies LocalConnectionState;
+export const LocalConnectionState_queued = LocalConnectionState.queued;
 /**
  * @summary fail
  * @description
  *
  * Call progression aborted (ECMA-269 §6.1.3).
  */
-export const LocalConnectionState_fail = LocalConnectionState.fail satisfies LocalConnectionState;
+export const LocalConnectionState_fail = LocalConnectionState.fail;
 
 export function _decode_LocalConnectionState (el: _Element): LocalConnectionState {
     return $._decode_implicit<LocalConnectionState>(() => $._decodeEnumerated)(el);

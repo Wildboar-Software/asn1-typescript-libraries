@@ -38,7 +38,7 @@ const RateControlTimeUnit_unrestricted = 0 satisfies RateControlTimeUnit; /* LON
  * @type {number}
  */
 export
-const unrestricted = RateControlTimeUnit_unrestricted satisfies RateControlTimeUnit; /* SHORT_NAMED_INTEGER_VALUE */
+const unrestricted = RateControlTimeUnit_unrestricted; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RateControlTimeUnit_minute
@@ -54,7 +54,7 @@ const RateControlTimeUnit_minute = 1 satisfies RateControlTimeUnit; /* LONG_NAME
  * @type {number}
  */
 export
-const minute = RateControlTimeUnit_minute satisfies RateControlTimeUnit; /* SHORT_NAMED_INTEGER_VALUE */
+const minute = RateControlTimeUnit_minute; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RateControlTimeUnit_hour
@@ -70,7 +70,7 @@ const RateControlTimeUnit_hour = 2 satisfies RateControlTimeUnit; /* LONG_NAMED_
  * @type {number}
  */
 export
-const hour = RateControlTimeUnit_hour satisfies RateControlTimeUnit; /* SHORT_NAMED_INTEGER_VALUE */
+const hour = RateControlTimeUnit_hour; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RateControlTimeUnit_day
@@ -86,7 +86,7 @@ const RateControlTimeUnit_day = 3 satisfies RateControlTimeUnit; /* LONG_NAMED_I
  * @type {number}
  */
 export
-const day = RateControlTimeUnit_day satisfies RateControlTimeUnit; /* SHORT_NAMED_INTEGER_VALUE */
+const day = RateControlTimeUnit_day; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RateControlTimeUnit_week
@@ -102,7 +102,7 @@ const RateControlTimeUnit_week = 4 satisfies RateControlTimeUnit; /* LONG_NAMED_
  * @type {number}
  */
 export
-const week = RateControlTimeUnit_week satisfies RateControlTimeUnit; /* SHORT_NAMED_INTEGER_VALUE */
+const week = RateControlTimeUnit_week; /* SHORT_NAMED_INTEGER_VALUE */
 
 export
 const _decode_RateControlTimeUnit: $.ASN1Decoder<RateControlTimeUnit> = $._decodeInteger;

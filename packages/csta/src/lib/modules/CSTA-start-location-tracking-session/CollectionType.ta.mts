@@ -91,7 +91,7 @@ const CollectionType = _enum_for_CollectionType;
  * @type {number}
  */
 export
-const CollectionType_periodic = CollectionType.periodic satisfies CollectionType; /* LONG_NAMED_ENUMERATED_VALUE */
+const CollectionType_periodic = CollectionType.periodic; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary periodic
@@ -103,7 +103,7 @@ const CollectionType_periodic = CollectionType.periodic satisfies CollectionType
  * @type {number}
  */
 export
-const periodic = CollectionType.periodic satisfies CollectionType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const periodic = CollectionType.periodic; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CollectionType_periodicWithUpdates
@@ -115,7 +115,7 @@ const periodic = CollectionType.periodic satisfies CollectionType; /* SHORT_NAME
  * @type {number}
  */
 export
-const CollectionType_periodicWithUpdates = CollectionType.periodicWithUpdates satisfies CollectionType; /* LONG_NAMED_ENUMERATED_VALUE */
+const CollectionType_periodicWithUpdates = CollectionType.periodicWithUpdates; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary periodicWithUpdates
@@ -128,7 +128,7 @@ const CollectionType_periodicWithUpdates = CollectionType.periodicWithUpdates sa
  * @type {number}
  */
 export
-const periodicWithUpdates = CollectionType.periodicWithUpdates satisfies CollectionType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const periodicWithUpdates = CollectionType.periodicWithUpdates; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CollectionType_updatesOnly
@@ -140,7 +140,7 @@ const periodicWithUpdates = CollectionType.periodicWithUpdates satisfies Collect
  * @type {number}
  */
 export
-const CollectionType_updatesOnly = CollectionType.updatesOnly satisfies CollectionType; /* LONG_NAMED_ENUMERATED_VALUE */
+const CollectionType_updatesOnly = CollectionType.updatesOnly; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary updatesOnly
@@ -153,7 +153,7 @@ const CollectionType_updatesOnly = CollectionType.updatesOnly satisfies Collecti
  * @type {number}
  */
 export
-const updatesOnly = CollectionType.updatesOnly satisfies CollectionType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const updatesOnly = CollectionType.updatesOnly; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 let _cached_decoder_for_CollectionType: $.ASN1Decoder<CollectionType> | null = null;
 

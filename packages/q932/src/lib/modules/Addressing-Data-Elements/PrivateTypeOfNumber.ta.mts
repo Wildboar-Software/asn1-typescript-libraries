@@ -92,7 +92,7 @@ const PrivateTypeOfNumber = _enum_for_PrivateTypeOfNumber;
  * @type {number}
  */
 export
-const PrivateTypeOfNumber_unknown = PrivateTypeOfNumber.unknown satisfies PrivateTypeOfNumber; /* LONG_NAMED_ENUMERATED_VALUE */
+const PrivateTypeOfNumber_unknown = PrivateTypeOfNumber.unknown; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unknown
@@ -104,7 +104,7 @@ const PrivateTypeOfNumber_unknown = PrivateTypeOfNumber.unknown satisfies Privat
  * @type {number}
  */
 export
-const unknown = PrivateTypeOfNumber.unknown satisfies PrivateTypeOfNumber; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unknown = PrivateTypeOfNumber.unknown; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PrivateTypeOfNumber_level2RegionalNumber
@@ -117,7 +117,7 @@ const unknown = PrivateTypeOfNumber.unknown satisfies PrivateTypeOfNumber; /* SH
  * @type {number}
  */
 export
-const PrivateTypeOfNumber_level2RegionalNumber = PrivateTypeOfNumber.level2RegionalNumber satisfies PrivateTypeOfNumber; /* LONG_NAMED_ENUMERATED_VALUE */
+const PrivateTypeOfNumber_level2RegionalNumber = PrivateTypeOfNumber.level2RegionalNumber; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary level2RegionalNumber
@@ -130,7 +130,7 @@ const PrivateTypeOfNumber_level2RegionalNumber = PrivateTypeOfNumber.level2Regio
  * @type {number}
  */
 export
-const level2RegionalNumber = PrivateTypeOfNumber.level2RegionalNumber satisfies PrivateTypeOfNumber; /* SHORT_NAMED_ENUMERATED_VALUE */
+const level2RegionalNumber = PrivateTypeOfNumber.level2RegionalNumber; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PrivateTypeOfNumber_level1RegionalNumber
@@ -143,7 +143,7 @@ const level2RegionalNumber = PrivateTypeOfNumber.level2RegionalNumber satisfies 
  * @type {number}
  */
 export
-const PrivateTypeOfNumber_level1RegionalNumber = PrivateTypeOfNumber.level1RegionalNumber satisfies PrivateTypeOfNumber; /* LONG_NAMED_ENUMERATED_VALUE */
+const PrivateTypeOfNumber_level1RegionalNumber = PrivateTypeOfNumber.level1RegionalNumber; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary level1RegionalNumber
@@ -156,7 +156,7 @@ const PrivateTypeOfNumber_level1RegionalNumber = PrivateTypeOfNumber.level1Regio
  * @type {number}
  */
 export
-const level1RegionalNumber = PrivateTypeOfNumber.level1RegionalNumber satisfies PrivateTypeOfNumber; /* SHORT_NAMED_ENUMERATED_VALUE */
+const level1RegionalNumber = PrivateTypeOfNumber.level1RegionalNumber; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PrivateTypeOfNumber_pTNSpecificNumber
@@ -169,7 +169,7 @@ const level1RegionalNumber = PrivateTypeOfNumber.level1RegionalNumber satisfies 
  * @type {number}
  */
 export
-const PrivateTypeOfNumber_pTNSpecificNumber = PrivateTypeOfNumber.pTNSpecificNumber satisfies PrivateTypeOfNumber; /* LONG_NAMED_ENUMERATED_VALUE */
+const PrivateTypeOfNumber_pTNSpecificNumber = PrivateTypeOfNumber.pTNSpecificNumber; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pTNSpecificNumber
@@ -182,7 +182,7 @@ const PrivateTypeOfNumber_pTNSpecificNumber = PrivateTypeOfNumber.pTNSpecificNum
  * @type {number}
  */
 export
-const pTNSpecificNumber = PrivateTypeOfNumber.pTNSpecificNumber satisfies PrivateTypeOfNumber; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pTNSpecificNumber = PrivateTypeOfNumber.pTNSpecificNumber; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PrivateTypeOfNumber_localNumber
@@ -194,7 +194,7 @@ const pTNSpecificNumber = PrivateTypeOfNumber.pTNSpecificNumber satisfies Privat
  * @type {number}
  */
 export
-const PrivateTypeOfNumber_localNumber = PrivateTypeOfNumber.localNumber satisfies PrivateTypeOfNumber; /* LONG_NAMED_ENUMERATED_VALUE */
+const PrivateTypeOfNumber_localNumber = PrivateTypeOfNumber.localNumber; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary localNumber
@@ -206,7 +206,7 @@ const PrivateTypeOfNumber_localNumber = PrivateTypeOfNumber.localNumber satisfie
  * @type {number}
  */
 export
-const localNumber = PrivateTypeOfNumber.localNumber satisfies PrivateTypeOfNumber; /* SHORT_NAMED_ENUMERATED_VALUE */
+const localNumber = PrivateTypeOfNumber.localNumber; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PrivateTypeOfNumber_abbreviatedNumber
@@ -218,7 +218,7 @@ const localNumber = PrivateTypeOfNumber.localNumber satisfies PrivateTypeOfNumbe
  * @type {number}
  */
 export
-const PrivateTypeOfNumber_abbreviatedNumber = PrivateTypeOfNumber.abbreviatedNumber satisfies PrivateTypeOfNumber; /* LONG_NAMED_ENUMERATED_VALUE */
+const PrivateTypeOfNumber_abbreviatedNumber = PrivateTypeOfNumber.abbreviatedNumber; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary abbreviatedNumber
@@ -230,7 +230,7 @@ const PrivateTypeOfNumber_abbreviatedNumber = PrivateTypeOfNumber.abbreviatedNum
  * @type {number}
  */
 export
-const abbreviatedNumber = PrivateTypeOfNumber.abbreviatedNumber satisfies PrivateTypeOfNumber; /* SHORT_NAMED_ENUMERATED_VALUE */
+const abbreviatedNumber = PrivateTypeOfNumber.abbreviatedNumber; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_PrivateTypeOfNumber: $.ASN1Decoder<PrivateTypeOfNumber> = $._decodeEnumerated;
 export const _encode_PrivateTypeOfNumber: $.ASN1Encoder<PrivateTypeOfNumber> = $._encodeEnumerated;
 

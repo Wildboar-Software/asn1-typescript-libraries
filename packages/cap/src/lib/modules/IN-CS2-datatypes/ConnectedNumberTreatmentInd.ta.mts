@@ -71,7 +71,7 @@ const ConnectedNumberTreatmentInd = _enum_for_ConnectedNumberTreatmentInd;
  * @type {number}
  */
 export
-const ConnectedNumberTreatmentInd_noINImpact = ConnectedNumberTreatmentInd.noINImpact satisfies ConnectedNumberTreatmentInd; /* LONG_NAMED_ENUMERATED_VALUE */
+const ConnectedNumberTreatmentInd_noINImpact = ConnectedNumberTreatmentInd.noINImpact; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary noINImpact
@@ -79,7 +79,7 @@ const ConnectedNumberTreatmentInd_noINImpact = ConnectedNumberTreatmentInd.noINI
  * @type {number}
  */
 export
-const noINImpact = ConnectedNumberTreatmentInd.noINImpact satisfies ConnectedNumberTreatmentInd; /* SHORT_NAMED_ENUMERATED_VALUE */
+const noINImpact = ConnectedNumberTreatmentInd.noINImpact; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ConnectedNumberTreatmentInd_presentationRestricted
@@ -87,7 +87,7 @@ const noINImpact = ConnectedNumberTreatmentInd.noINImpact satisfies ConnectedNum
  * @type {number}
  */
 export
-const ConnectedNumberTreatmentInd_presentationRestricted = ConnectedNumberTreatmentInd.presentationRestricted satisfies ConnectedNumberTreatmentInd; /* LONG_NAMED_ENUMERATED_VALUE */
+const ConnectedNumberTreatmentInd_presentationRestricted = ConnectedNumberTreatmentInd.presentationRestricted; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary presentationRestricted
@@ -95,7 +95,7 @@ const ConnectedNumberTreatmentInd_presentationRestricted = ConnectedNumberTreatm
  * @type {number}
  */
 export
-const presentationRestricted = ConnectedNumberTreatmentInd.presentationRestricted satisfies ConnectedNumberTreatmentInd; /* SHORT_NAMED_ENUMERATED_VALUE */
+const presentationRestricted = ConnectedNumberTreatmentInd.presentationRestricted; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ConnectedNumberTreatmentInd_presentCalledINNumber
@@ -103,7 +103,7 @@ const presentationRestricted = ConnectedNumberTreatmentInd.presentationRestricte
  * @type {number}
  */
 export
-const ConnectedNumberTreatmentInd_presentCalledINNumber = ConnectedNumberTreatmentInd.presentCalledINNumber satisfies ConnectedNumberTreatmentInd; /* LONG_NAMED_ENUMERATED_VALUE */
+const ConnectedNumberTreatmentInd_presentCalledINNumber = ConnectedNumberTreatmentInd.presentCalledINNumber; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary presentCalledINNumber
@@ -111,7 +111,7 @@ const ConnectedNumberTreatmentInd_presentCalledINNumber = ConnectedNumberTreatme
  * @type {number}
  */
 export
-const presentCalledINNumber = ConnectedNumberTreatmentInd.presentCalledINNumber satisfies ConnectedNumberTreatmentInd; /* SHORT_NAMED_ENUMERATED_VALUE */
+const presentCalledINNumber = ConnectedNumberTreatmentInd.presentCalledINNumber; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_ConnectedNumberTreatmentInd = $._decodeEnumerated;
 export const _encode_ConnectedNumberTreatmentInd = $._encodeEnumerated;
 

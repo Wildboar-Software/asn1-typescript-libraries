@@ -43,7 +43,7 @@ export const Result_list_Item_provider_reason_reason_not_specified = 0 satisfies
  * @constant
  * @type {number}
  */
-export const reason_not_specified = Result_list_Item_provider_reason_reason_not_specified satisfies Result_list_Item_provider_reason; /* SHORT_NAMED_INTEGER_VALUE */
+export const reason_not_specified = Result_list_Item_provider_reason_reason_not_specified; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -64,7 +64,7 @@ export const Result_list_Item_provider_reason_abstract_syntax_not_supported = 1 
  * @constant
  * @type {number}
  */
-export const abstract_syntax_not_supported = Result_list_Item_provider_reason_abstract_syntax_not_supported satisfies Result_list_Item_provider_reason; /* SHORT_NAMED_INTEGER_VALUE */
+export const abstract_syntax_not_supported = Result_list_Item_provider_reason_abstract_syntax_not_supported; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -81,7 +81,7 @@ export const Result_list_Item_provider_reason_proposed_transfer_syntaxes_not_sup
  * @constant
  * @type {number}
  */
-export const proposed_transfer_syntaxes_not_supported = Result_list_Item_provider_reason_proposed_transfer_syntaxes_not_supported satisfies Result_list_Item_provider_reason; /* SHORT_NAMED_INTEGER_VALUE */
+export const proposed_transfer_syntaxes_not_supported = Result_list_Item_provider_reason_proposed_transfer_syntaxes_not_supported; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -98,7 +98,7 @@ export const Result_list_Item_provider_reason_local_limit_on_DCS_exceeded = 3 sa
  * @constant
  * @type {number}
  */
-export const local_limit_on_DCS_exceeded = Result_list_Item_provider_reason_local_limit_on_DCS_exceeded satisfies Result_list_Item_provider_reason; /* SHORT_NAMED_INTEGER_VALUE */
+export const local_limit_on_DCS_exceeded = Result_list_Item_provider_reason_local_limit_on_DCS_exceeded; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 

@@ -51,7 +51,7 @@ const EimPackageResultErrorCode_invalidPackageFormat = 1 satisfies EimPackageRes
  * Activation Code (SGP.32 v1.2, sections 3.2 and 5.14.4).
  */
 export
-const invalidPackageFormat = EimPackageResultErrorCode_invalidPackageFormat satisfies EimPackageResultErrorCode; /* SHORT_NAMED_INTEGER_VALUE */
+const invalidPackageFormat = EimPackageResultErrorCode_invalidPackageFormat; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EimPackageResultErrorCode_unknownPackage
@@ -74,7 +74,7 @@ const EimPackageResultErrorCode_unknownPackage = 2 satisfies EimPackageResultErr
  * IPA (SGP.32 v1.2, section 5.14.4).
  */
 export
-const unknownPackage = EimPackageResultErrorCode_unknownPackage satisfies EimPackageResultErrorCode; /* SHORT_NAMED_INTEGER_VALUE */
+const unknownPackage = EimPackageResultErrorCode_unknownPackage; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EimPackageResultErrorCode_undefinedError
@@ -97,7 +97,7 @@ const EimPackageResultErrorCode_undefinedError = 127 satisfies EimPackageResultE
  * the condition that produces it.
  */
 export
-const undefinedError = EimPackageResultErrorCode_undefinedError satisfies EimPackageResultErrorCode; /* SHORT_NAMED_INTEGER_VALUE */
+const undefinedError = EimPackageResultErrorCode_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_EimPackageResultErrorCode: $.ASN1Decoder<EimPackageResultErrorCode> = $._decodeInteger;
 export const _encode_EimPackageResultErrorCode: $.ASN1Encoder<EimPackageResultErrorCode> = $._encodeInteger;
 

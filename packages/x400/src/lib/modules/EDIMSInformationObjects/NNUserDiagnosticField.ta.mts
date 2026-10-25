@@ -40,7 +40,7 @@ export const NNUserDiagnosticField_compression_unsupported = 1 satisfies NNUserD
  * @constant
  * @type {number}
  */
-export const compression_unsupported = NNUserDiagnosticField_compression_unsupported satisfies NNUserDiagnosticField; /* SHORT_NAMED_INTEGER_VALUE */
+export const compression_unsupported = NNUserDiagnosticField_compression_unsupported; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_NNUserDiagnosticField = $._decodeInteger;

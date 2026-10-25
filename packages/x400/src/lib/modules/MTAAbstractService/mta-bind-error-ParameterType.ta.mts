@@ -38,7 +38,7 @@ export const mta_bind_error_ParameterType_busy = 0 satisfies mta_bind_error_Para
  * @constant
  * @type {number}
  */
-export const busy = mta_bind_error_ParameterType_busy satisfies mta_bind_error_ParameterType; /* SHORT_NAMED_INTEGER_VALUE */
+export const busy = mta_bind_error_ParameterType_busy; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary mta_bind_error_ParameterType_authentication_error
@@ -52,7 +52,7 @@ export const mta_bind_error_ParameterType_authentication_error = 2 satisfies mta
  * @constant
  * @type {number}
  */
-export const authentication_error = mta_bind_error_ParameterType_authentication_error satisfies mta_bind_error_ParameterType; /* SHORT_NAMED_INTEGER_VALUE */
+export const authentication_error = mta_bind_error_ParameterType_authentication_error; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary mta_bind_error_ParameterType_unacceptable_dialogue_mode
@@ -66,7 +66,7 @@ export const mta_bind_error_ParameterType_unacceptable_dialogue_mode = 3 satisfi
  * @constant
  * @type {number}
  */
-export const unacceptable_dialogue_mode = mta_bind_error_ParameterType_unacceptable_dialogue_mode satisfies mta_bind_error_ParameterType; /* SHORT_NAMED_INTEGER_VALUE */
+export const unacceptable_dialogue_mode = mta_bind_error_ParameterType_unacceptable_dialogue_mode; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary mta_bind_error_ParameterType_unacceptable_security_context
@@ -80,7 +80,7 @@ export const mta_bind_error_ParameterType_unacceptable_security_context = 4 sati
  * @constant
  * @type {number}
  */
-export const unacceptable_security_context = mta_bind_error_ParameterType_unacceptable_security_context satisfies mta_bind_error_ParameterType; /* SHORT_NAMED_INTEGER_VALUE */
+export const unacceptable_security_context = mta_bind_error_ParameterType_unacceptable_security_context; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary mta_bind_error_ParameterType_inadequate_association_confidentiality
@@ -94,7 +94,7 @@ export const mta_bind_error_ParameterType_inadequate_association_confidentiality
  * @constant
  * @type {number}
  */
-export const inadequate_association_confidentiality = mta_bind_error_ParameterType_inadequate_association_confidentiality satisfies mta_bind_error_ParameterType; /* SHORT_NAMED_INTEGER_VALUE */
+export const inadequate_association_confidentiality = mta_bind_error_ParameterType_inadequate_association_confidentiality; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_mta_bind_error_ParameterType = $._decodeInteger;

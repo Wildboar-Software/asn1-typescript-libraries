@@ -86,7 +86,7 @@ export const SearchRequest_derefAliases = _enum_for_SearchRequest_derefAliases;
  * @type {number}
  */
 export const SearchRequest_derefAliases_neverDerefAliases =
-  SearchRequest_derefAliases.neverDerefAliases satisfies SearchRequest_derefAliases; /* LONG_NAMED_ENUMERATED_VALUE */
+  SearchRequest_derefAliases.neverDerefAliases; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -99,7 +99,7 @@ export const SearchRequest_derefAliases_neverDerefAliases =
  * @type {number}
  */
 export const neverDerefAliases =
-  SearchRequest_derefAliases.neverDerefAliases satisfies SearchRequest_derefAliases; /* SHORT_NAMED_ENUMERATED_VALUE */
+  SearchRequest_derefAliases.neverDerefAliases; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -115,7 +115,7 @@ export const neverDerefAliases =
  * @type {number}
  */
 export const SearchRequest_derefAliases_derefInSearching =
-  SearchRequest_derefAliases.derefInSearching satisfies SearchRequest_derefAliases; /* LONG_NAMED_ENUMERATED_VALUE */
+  SearchRequest_derefAliases.derefInSearching; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -131,7 +131,7 @@ export const SearchRequest_derefAliases_derefInSearching =
  * @type {number}
  */
 export const derefInSearching =
-  SearchRequest_derefAliases.derefInSearching satisfies SearchRequest_derefAliases; /* SHORT_NAMED_ENUMERATED_VALUE */
+  SearchRequest_derefAliases.derefInSearching; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -145,7 +145,7 @@ export const derefInSearching =
  * @type {number}
  */
 export const SearchRequest_derefAliases_derefFindingBaseObj =
-  SearchRequest_derefAliases.derefFindingBaseObj satisfies SearchRequest_derefAliases; /* LONG_NAMED_ENUMERATED_VALUE */
+  SearchRequest_derefAliases.derefFindingBaseObj; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -159,7 +159,7 @@ export const SearchRequest_derefAliases_derefFindingBaseObj =
  * @type {number}
  */
 export const derefFindingBaseObj =
-  SearchRequest_derefAliases.derefFindingBaseObj satisfies SearchRequest_derefAliases; /* SHORT_NAMED_ENUMERATED_VALUE */
+  SearchRequest_derefAliases.derefFindingBaseObj; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -172,7 +172,7 @@ export const derefFindingBaseObj =
  * @type {number}
  */
 export const SearchRequest_derefAliases_derefAlways =
-  SearchRequest_derefAliases.derefAlways satisfies SearchRequest_derefAliases; /* LONG_NAMED_ENUMERATED_VALUE */
+  SearchRequest_derefAliases.derefAlways; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -185,7 +185,7 @@ export const SearchRequest_derefAliases_derefAlways =
  * @type {number}
  */
 export const derefAlways =
-  SearchRequest_derefAliases.derefAlways satisfies SearchRequest_derefAliases; /* SHORT_NAMED_ENUMERATED_VALUE */
+  SearchRequest_derefAliases.derefAlways; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**

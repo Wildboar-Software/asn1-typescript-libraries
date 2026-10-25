@@ -60,7 +60,7 @@ const AuthenticateClientResponseEs9_authenticateClientError_eumCertificateInvali
  * @type {number}
  */
 export
-const eumCertificateInvalid = AuthenticateClientResponseEs9_authenticateClientError_eumCertificateInvalid satisfies AuthenticateClientResponseEs9_authenticateClientError; /* SHORT_NAMED_INTEGER_VALUE */
+const eumCertificateInvalid = AuthenticateClientResponseEs9_authenticateClientError_eumCertificateInvalid; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AuthenticateClientResponseEs9_authenticateClientError_eumCertificateExpired
@@ -84,7 +84,7 @@ const AuthenticateClientResponseEs9_authenticateClientError_eumCertificateExpire
  * @type {number}
  */
 export
-const eumCertificateExpired = AuthenticateClientResponseEs9_authenticateClientError_eumCertificateExpired satisfies AuthenticateClientResponseEs9_authenticateClientError; /* SHORT_NAMED_INTEGER_VALUE */
+const eumCertificateExpired = AuthenticateClientResponseEs9_authenticateClientError_eumCertificateExpired; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AuthenticateClientResponseEs9_authenticateClientError_euiccCertificateInvalid
@@ -108,7 +108,7 @@ const AuthenticateClientResponseEs9_authenticateClientError_euiccCertificateInva
  * @type {number}
  */
 export
-const euiccCertificateInvalid = AuthenticateClientResponseEs9_authenticateClientError_euiccCertificateInvalid satisfies AuthenticateClientResponseEs9_authenticateClientError; /* SHORT_NAMED_INTEGER_VALUE */
+const euiccCertificateInvalid = AuthenticateClientResponseEs9_authenticateClientError_euiccCertificateInvalid; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AuthenticateClientResponseEs9_authenticateClientError_euiccCertificateExpired
@@ -132,7 +132,7 @@ const AuthenticateClientResponseEs9_authenticateClientError_euiccCertificateExpi
  * @type {number}
  */
 export
-const euiccCertificateExpired = AuthenticateClientResponseEs9_authenticateClientError_euiccCertificateExpired satisfies AuthenticateClientResponseEs9_authenticateClientError; /* SHORT_NAMED_INTEGER_VALUE */
+const euiccCertificateExpired = AuthenticateClientResponseEs9_authenticateClientError_euiccCertificateExpired; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AuthenticateClientResponseEs9_authenticateClientError_euiccSignatureInvalid
@@ -156,7 +156,7 @@ const AuthenticateClientResponseEs9_authenticateClientError_euiccSignatureInvali
  * @type {number}
  */
 export
-const euiccSignatureInvalid = AuthenticateClientResponseEs9_authenticateClientError_euiccSignatureInvalid satisfies AuthenticateClientResponseEs9_authenticateClientError; /* SHORT_NAMED_INTEGER_VALUE */
+const euiccSignatureInvalid = AuthenticateClientResponseEs9_authenticateClientError_euiccSignatureInvalid; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AuthenticateClientResponseEs9_authenticateClientError_matchingIdRefused
@@ -182,7 +182,7 @@ const AuthenticateClientResponseEs9_authenticateClientError_matchingIdRefused = 
  * @type {number}
  */
 export
-const matchingIdRefused = AuthenticateClientResponseEs9_authenticateClientError_matchingIdRefused satisfies AuthenticateClientResponseEs9_authenticateClientError; /* SHORT_NAMED_INTEGER_VALUE */
+const matchingIdRefused = AuthenticateClientResponseEs9_authenticateClientError_matchingIdRefused; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AuthenticateClientResponseEs9_authenticateClientError_eidMismatch
@@ -208,7 +208,7 @@ const AuthenticateClientResponseEs9_authenticateClientError_eidMismatch = 7 sati
  * @type {number}
  */
 export
-const eidMismatch = AuthenticateClientResponseEs9_authenticateClientError_eidMismatch satisfies AuthenticateClientResponseEs9_authenticateClientError; /* SHORT_NAMED_INTEGER_VALUE */
+const eidMismatch = AuthenticateClientResponseEs9_authenticateClientError_eidMismatch; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AuthenticateClientResponseEs9_authenticateClientError_noEligibleProfile
@@ -234,7 +234,7 @@ const AuthenticateClientResponseEs9_authenticateClientError_noEligibleProfile = 
  * @type {number}
  */
 export
-const noEligibleProfile = AuthenticateClientResponseEs9_authenticateClientError_noEligibleProfile satisfies AuthenticateClientResponseEs9_authenticateClientError; /* SHORT_NAMED_INTEGER_VALUE */
+const noEligibleProfile = AuthenticateClientResponseEs9_authenticateClientError_noEligibleProfile; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AuthenticateClientResponseEs9_authenticateClientError_ciPKUnknown
@@ -260,7 +260,7 @@ const AuthenticateClientResponseEs9_authenticateClientError_ciPKUnknown = 9 sati
  * @type {number}
  */
 export
-const ciPKUnknown = AuthenticateClientResponseEs9_authenticateClientError_ciPKUnknown satisfies AuthenticateClientResponseEs9_authenticateClientError; /* SHORT_NAMED_INTEGER_VALUE */
+const ciPKUnknown = AuthenticateClientResponseEs9_authenticateClientError_ciPKUnknown; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AuthenticateClientResponseEs9_authenticateClientError_invalidTransactionId
@@ -284,7 +284,7 @@ const AuthenticateClientResponseEs9_authenticateClientError_invalidTransactionId
  * @type {number}
  */
 export
-const invalidTransactionId = AuthenticateClientResponseEs9_authenticateClientError_invalidTransactionId satisfies AuthenticateClientResponseEs9_authenticateClientError; /* SHORT_NAMED_INTEGER_VALUE */
+const invalidTransactionId = AuthenticateClientResponseEs9_authenticateClientError_invalidTransactionId; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AuthenticateClientResponseEs9_authenticateClientError_insufficientMemory
@@ -310,7 +310,7 @@ const AuthenticateClientResponseEs9_authenticateClientError_insufficientMemory =
  * @type {number}
  */
 export
-const insufficientMemory = AuthenticateClientResponseEs9_authenticateClientError_insufficientMemory satisfies AuthenticateClientResponseEs9_authenticateClientError; /* SHORT_NAMED_INTEGER_VALUE */
+const insufficientMemory = AuthenticateClientResponseEs9_authenticateClientError_insufficientMemory; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AuthenticateClientResponseEs9_authenticateClientError_downloadOrderExpired
@@ -336,7 +336,7 @@ const AuthenticateClientResponseEs9_authenticateClientError_downloadOrderExpired
  * @type {number}
  */
 export
-const downloadOrderExpired = AuthenticateClientResponseEs9_authenticateClientError_downloadOrderExpired satisfies AuthenticateClientResponseEs9_authenticateClientError; /* SHORT_NAMED_INTEGER_VALUE */
+const downloadOrderExpired = AuthenticateClientResponseEs9_authenticateClientError_downloadOrderExpired; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AuthenticateClientResponseEs9_authenticateClientError_undefinedError
@@ -360,7 +360,7 @@ const AuthenticateClientResponseEs9_authenticateClientError_undefinedError = 127
  * @type {number}
  */
 export
-const undefinedError = AuthenticateClientResponseEs9_authenticateClientError_undefinedError satisfies AuthenticateClientResponseEs9_authenticateClientError; /* SHORT_NAMED_INTEGER_VALUE */
+const undefinedError = AuthenticateClientResponseEs9_authenticateClientError_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_AuthenticateClientResponseEs9_authenticateClientError = $._decodeInteger;
 export const _encode_AuthenticateClientResponseEs9_authenticateClientError = $._encodeInteger;
 

@@ -81,7 +81,7 @@ const SubscriberStatus = _enum_for_SubscriberStatus;
  * @type {number}
  */
 export
-const SubscriberStatus_serviceGranted = SubscriberStatus.serviceGranted satisfies SubscriberStatus; /* LONG_NAMED_ENUMERATED_VALUE */
+const SubscriberStatus_serviceGranted = SubscriberStatus.serviceGranted; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary serviceGranted
@@ -89,7 +89,7 @@ const SubscriberStatus_serviceGranted = SubscriberStatus.serviceGranted satisfie
  * @type {number}
  */
 export
-const serviceGranted = SubscriberStatus.serviceGranted satisfies SubscriberStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
+const serviceGranted = SubscriberStatus.serviceGranted; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SubscriberStatus_operatorDeterminedBarring
@@ -97,7 +97,7 @@ const serviceGranted = SubscriberStatus.serviceGranted satisfies SubscriberStatu
  * @type {number}
  */
 export
-const SubscriberStatus_operatorDeterminedBarring = SubscriberStatus.operatorDeterminedBarring satisfies SubscriberStatus; /* LONG_NAMED_ENUMERATED_VALUE */
+const SubscriberStatus_operatorDeterminedBarring = SubscriberStatus.operatorDeterminedBarring; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary operatorDeterminedBarring
@@ -105,7 +105,7 @@ const SubscriberStatus_operatorDeterminedBarring = SubscriberStatus.operatorDete
  * @type {number}
  */
 export
-const operatorDeterminedBarring = SubscriberStatus.operatorDeterminedBarring satisfies SubscriberStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
+const operatorDeterminedBarring = SubscriberStatus.operatorDeterminedBarring; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) SubscriberStatus

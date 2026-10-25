@@ -42,7 +42,7 @@ export const FNUAMSDiagnosticField_recipient_name_changed = 1 satisfies FNUAMSDi
  * @constant
  * @type {number}
  */
-export const recipient_name_changed = FNUAMSDiagnosticField_recipient_name_changed satisfies FNUAMSDiagnosticField; /* SHORT_NAMED_INTEGER_VALUE */
+export const recipient_name_changed = FNUAMSDiagnosticField_recipient_name_changed; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary FNUAMSDiagnosticField_recipient_name_deleted
@@ -56,7 +56,7 @@ export const FNUAMSDiagnosticField_recipient_name_deleted = 2 satisfies FNUAMSDi
  * @constant
  * @type {number}
  */
-export const recipient_name_deleted = FNUAMSDiagnosticField_recipient_name_deleted satisfies FNUAMSDiagnosticField; /* SHORT_NAMED_INTEGER_VALUE */
+export const recipient_name_deleted = FNUAMSDiagnosticField_recipient_name_deleted; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_FNUAMSDiagnosticField = $._decodeInteger;

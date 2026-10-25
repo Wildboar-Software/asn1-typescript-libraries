@@ -85,7 +85,7 @@ const MonitorType = _enum_for_MonitorType;
  * @type {number}
  */
 export
-const MonitorType_call = MonitorType.call satisfies MonitorType; /* LONG_NAMED_ENUMERATED_VALUE */
+const MonitorType_call = MonitorType.call; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary call
@@ -93,7 +93,7 @@ const MonitorType_call = MonitorType.call satisfies MonitorType; /* LONG_NAMED_E
  * @type {number}
  */
 export
-const call = MonitorType.call satisfies MonitorType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const call = MonitorType.call; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MonitorType_device
@@ -106,7 +106,7 @@ const call = MonitorType.call satisfies MonitorType; /* SHORT_NAMED_ENUMERATED_V
  * @type {number}
  */
 export
-const MonitorType_device = MonitorType.device satisfies MonitorType; /* LONG_NAMED_ENUMERATED_VALUE */
+const MonitorType_device = MonitorType.device; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary device
@@ -114,7 +114,7 @@ const MonitorType_device = MonitorType.device satisfies MonitorType; /* LONG_NAM
  * @type {number}
  */
 export
-const device = MonitorType.device satisfies MonitorType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const device = MonitorType.device; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 let _cached_decoder_for_MonitorType: $.ASN1Decoder<MonitorType> | null = null;
 

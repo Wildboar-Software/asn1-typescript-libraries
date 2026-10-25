@@ -50,7 +50,7 @@ const ExtendedServicesRequest_function_create = 1 satisfies ExtendedServicesRequ
  * @type {number}
  */
 export
-const create = ExtendedServicesRequest_function_create satisfies ExtendedServicesRequest_function; /* SHORT_NAMED_INTEGER_VALUE */
+const create = ExtendedServicesRequest_function_create; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ExtendedServicesRequest_function_delete_
@@ -77,7 +77,7 @@ const ExtendedServicesRequest_function_delete_ = 2 satisfies ExtendedServicesReq
  * @type {number}
  */
 export
-const delete_ = ExtendedServicesRequest_function_delete_ satisfies ExtendedServicesRequest_function; /* SHORT_NAMED_INTEGER_VALUE */
+const delete_ = ExtendedServicesRequest_function_delete_; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ExtendedServicesRequest_function_modify
@@ -104,7 +104,7 @@ const ExtendedServicesRequest_function_modify = 3 satisfies ExtendedServicesRequ
  * @type {number}
  */
 export
-const modify = ExtendedServicesRequest_function_modify satisfies ExtendedServicesRequest_function; /* SHORT_NAMED_INTEGER_VALUE */
+const modify = ExtendedServicesRequest_function_modify; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_ExtendedServicesRequest_function: $.ASN1Decoder<ExtendedServicesRequest_function> = $._decodeInteger;
 export const _encode_ExtendedServicesRequest_function: $.ASN1Encoder<ExtendedServicesRequest_function> = $._encodeInteger;
 

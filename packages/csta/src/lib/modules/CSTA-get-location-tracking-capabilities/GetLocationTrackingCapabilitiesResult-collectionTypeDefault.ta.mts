@@ -94,7 +94,7 @@ const GetLocationTrackingCapabilitiesResult_collectionTypeDefault = _enum_for_Ge
  * @type {number}
  */
 export
-const GetLocationTrackingCapabilitiesResult_collectionTypeDefault_periodic = GetLocationTrackingCapabilitiesResult_collectionTypeDefault.periodic satisfies GetLocationTrackingCapabilitiesResult_collectionTypeDefault; /* LONG_NAMED_ENUMERATED_VALUE */
+const GetLocationTrackingCapabilitiesResult_collectionTypeDefault_periodic = GetLocationTrackingCapabilitiesResult_collectionTypeDefault.periodic; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary periodic
@@ -106,7 +106,7 @@ const GetLocationTrackingCapabilitiesResult_collectionTypeDefault_periodic = Get
  * @type {number}
  */
 export
-const periodic = GetLocationTrackingCapabilitiesResult_collectionTypeDefault.periodic satisfies GetLocationTrackingCapabilitiesResult_collectionTypeDefault; /* SHORT_NAMED_ENUMERATED_VALUE */
+const periodic = GetLocationTrackingCapabilitiesResult_collectionTypeDefault.periodic; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary GetLocationTrackingCapabilitiesResult_collectionTypeDefault_updatesOnly
@@ -118,7 +118,7 @@ const periodic = GetLocationTrackingCapabilitiesResult_collectionTypeDefault.per
  * @type {number}
  */
 export
-const GetLocationTrackingCapabilitiesResult_collectionTypeDefault_updatesOnly = GetLocationTrackingCapabilitiesResult_collectionTypeDefault.updatesOnly satisfies GetLocationTrackingCapabilitiesResult_collectionTypeDefault; /* LONG_NAMED_ENUMERATED_VALUE */
+const GetLocationTrackingCapabilitiesResult_collectionTypeDefault_updatesOnly = GetLocationTrackingCapabilitiesResult_collectionTypeDefault.updatesOnly; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary updatesOnly
@@ -130,7 +130,7 @@ const GetLocationTrackingCapabilitiesResult_collectionTypeDefault_updatesOnly = 
  * @type {number}
  */
 export
-const updatesOnly = GetLocationTrackingCapabilitiesResult_collectionTypeDefault.updatesOnly satisfies GetLocationTrackingCapabilitiesResult_collectionTypeDefault; /* SHORT_NAMED_ENUMERATED_VALUE */
+const updatesOnly = GetLocationTrackingCapabilitiesResult_collectionTypeDefault.updatesOnly; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary GetLocationTrackingCapabilitiesResult_collectionTypeDefault_periodicWithUpdates
@@ -142,7 +142,7 @@ const updatesOnly = GetLocationTrackingCapabilitiesResult_collectionTypeDefault.
  * @type {number}
  */
 export
-const GetLocationTrackingCapabilitiesResult_collectionTypeDefault_periodicWithUpdates = GetLocationTrackingCapabilitiesResult_collectionTypeDefault.periodicWithUpdates satisfies GetLocationTrackingCapabilitiesResult_collectionTypeDefault; /* LONG_NAMED_ENUMERATED_VALUE */
+const GetLocationTrackingCapabilitiesResult_collectionTypeDefault_periodicWithUpdates = GetLocationTrackingCapabilitiesResult_collectionTypeDefault.periodicWithUpdates; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary periodicWithUpdates
@@ -154,7 +154,7 @@ const GetLocationTrackingCapabilitiesResult_collectionTypeDefault_periodicWithUp
  * @type {number}
  */
 export
-const periodicWithUpdates = GetLocationTrackingCapabilitiesResult_collectionTypeDefault.periodicWithUpdates satisfies GetLocationTrackingCapabilitiesResult_collectionTypeDefault; /* SHORT_NAMED_ENUMERATED_VALUE */
+const periodicWithUpdates = GetLocationTrackingCapabilitiesResult_collectionTypeDefault.periodicWithUpdates; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 let _cached_decoder_for_GetLocationTrackingCapabilitiesResult_collectionTypeDefault: $.ASN1Decoder<GetLocationTrackingCapabilitiesResult_collectionTypeDefault> | null = null;
 

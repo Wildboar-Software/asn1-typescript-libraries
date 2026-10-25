@@ -166,7 +166,7 @@ const OPERATOR_STATION_stationType = _enum_for_OPERATOR_STATION_stationType;
  * @type {number}
  */
 export
-const OPERATOR_STATION_stationType_entry = OPERATOR_STATION_stationType.entry satisfies OPERATOR_STATION_stationType; /* LONG_NAMED_ENUMERATED_VALUE */
+const OPERATOR_STATION_stationType_entry = OPERATOR_STATION_stationType.entry; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OPERATOR_STATION_stationType_display
@@ -174,7 +174,7 @@ const OPERATOR_STATION_stationType_entry = OPERATOR_STATION_stationType.entry sa
  * @type {number}
  */
 export
-const OPERATOR_STATION_stationType_display = OPERATOR_STATION_stationType.display satisfies OPERATOR_STATION_stationType; /* LONG_NAMED_ENUMERATED_VALUE */
+const OPERATOR_STATION_stationType_display = OPERATOR_STATION_stationType.display; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OPERATOR_STATION_stationType_entry_display
@@ -182,7 +182,7 @@ const OPERATOR_STATION_stationType_display = OPERATOR_STATION_stationType.displa
  * @type {number}
  */
 export
-const OPERATOR_STATION_stationType_entry_display = OPERATOR_STATION_stationType.entry_display satisfies OPERATOR_STATION_stationType; /* LONG_NAMED_ENUMERATED_VALUE */
+const OPERATOR_STATION_stationType_entry_display = OPERATOR_STATION_stationType.entry_display; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OPERATOR_STATION_state
@@ -234,7 +234,7 @@ const OPERATOR_STATION_state = _enum_for_OPERATOR_STATION_state;
  * @type {number}
  */
 export
-const OPERATOR_STATION_state_idle = OPERATOR_STATION_state.idle satisfies OPERATOR_STATION_state; /* LONG_NAMED_ENUMERATED_VALUE */
+const OPERATOR_STATION_state_idle = OPERATOR_STATION_state.idle; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OPERATOR_STATION_state_display_prompt_data
@@ -242,7 +242,7 @@ const OPERATOR_STATION_state_idle = OPERATOR_STATION_state.idle satisfies OPERAT
  * @type {number}
  */
 export
-const OPERATOR_STATION_state_display_prompt_data = OPERATOR_STATION_state.display_prompt_data satisfies OPERATOR_STATION_state; /* LONG_NAMED_ENUMERATED_VALUE */
+const OPERATOR_STATION_state_display_prompt_data = OPERATOR_STATION_state.display_prompt_data; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OPERATOR_STATION_state_waiting_for_input
@@ -250,7 +250,7 @@ const OPERATOR_STATION_state_display_prompt_data = OPERATOR_STATION_state.displa
  * @type {number}
  */
 export
-const OPERATOR_STATION_state_waiting_for_input = OPERATOR_STATION_state.waiting_for_input satisfies OPERATOR_STATION_state; /* LONG_NAMED_ENUMERATED_VALUE */
+const OPERATOR_STATION_state_waiting_for_input = OPERATOR_STATION_state.waiting_for_input; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OPERATOR_STATION_state_input_buffer_filled
@@ -258,7 +258,7 @@ const OPERATOR_STATION_state_waiting_for_input = OPERATOR_STATION_state.waiting_
  * @type {number}
  */
 export
-const OPERATOR_STATION_state_input_buffer_filled = OPERATOR_STATION_state.input_buffer_filled satisfies OPERATOR_STATION_state; /* LONG_NAMED_ENUMERATED_VALUE */
+const OPERATOR_STATION_state_input_buffer_filled = OPERATOR_STATION_state.input_buffer_filled; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OPERATOR_STATION_state_output_buffers_filled
@@ -266,6 +266,6 @@ const OPERATOR_STATION_state_input_buffer_filled = OPERATOR_STATION_state.input_
  * @type {number}
  */
 export
-const OPERATOR_STATION_state_output_buffers_filled = OPERATOR_STATION_state.output_buffers_filled satisfies OPERATOR_STATION_state; /* LONG_NAMED_ENUMERATED_VALUE */
+const OPERATOR_STATION_state_output_buffers_filled = OPERATOR_STATION_state.output_buffers_filled; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /* eslint-enable */

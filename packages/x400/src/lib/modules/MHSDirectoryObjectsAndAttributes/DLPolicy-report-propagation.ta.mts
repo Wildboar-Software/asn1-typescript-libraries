@@ -38,7 +38,7 @@ export const DLPolicy_report_propagation_previous_dl_or_originator = 0 satisfies
  * @constant
  * @type {number}
  */
-export const previous_dl_or_originator = DLPolicy_report_propagation_previous_dl_or_originator satisfies DLPolicy_report_propagation; /* SHORT_NAMED_INTEGER_VALUE */
+export const previous_dl_or_originator = DLPolicy_report_propagation_previous_dl_or_originator; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DLPolicy_report_propagation_dl_owner
@@ -52,7 +52,7 @@ export const DLPolicy_report_propagation_dl_owner = 1 satisfies DLPolicy_report_
  * @constant
  * @type {number}
  */
-export const dl_owner = DLPolicy_report_propagation_dl_owner satisfies DLPolicy_report_propagation; /* SHORT_NAMED_INTEGER_VALUE */
+export const dl_owner = DLPolicy_report_propagation_dl_owner; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DLPolicy_report_propagation_both_previous_and_owner
@@ -66,7 +66,7 @@ export const DLPolicy_report_propagation_both_previous_and_owner = 2 satisfies D
  * @constant
  * @type {number}
  */
-export const both_previous_and_owner = DLPolicy_report_propagation_both_previous_and_owner satisfies DLPolicy_report_propagation; /* SHORT_NAMED_INTEGER_VALUE */
+export const both_previous_and_owner = DLPolicy_report_propagation_both_previous_and_owner; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_DLPolicy_report_propagation = $._decodeInteger;

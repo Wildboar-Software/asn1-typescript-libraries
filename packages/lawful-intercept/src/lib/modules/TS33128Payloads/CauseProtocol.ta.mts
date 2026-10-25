@@ -89,7 +89,7 @@ const CauseProtocol = _enum_for_CauseProtocol;
  * @type {number}
  */
 export
-const CauseProtocol_transferSyntaxError = CauseProtocol.transferSyntaxError satisfies CauseProtocol; /* LONG_NAMED_ENUMERATED_VALUE */
+const CauseProtocol_transferSyntaxError = CauseProtocol.transferSyntaxError; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary transferSyntaxError
@@ -97,7 +97,7 @@ const CauseProtocol_transferSyntaxError = CauseProtocol.transferSyntaxError sati
  * @type {number}
  */
 export
-const transferSyntaxError = CauseProtocol.transferSyntaxError satisfies CauseProtocol; /* SHORT_NAMED_ENUMERATED_VALUE */
+const transferSyntaxError = CauseProtocol.transferSyntaxError; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CauseProtocol_abstractSyntaxError_reject
@@ -105,7 +105,7 @@ const transferSyntaxError = CauseProtocol.transferSyntaxError satisfies CausePro
  * @type {number}
  */
 export
-const CauseProtocol_abstractSyntaxError_reject = CauseProtocol.abstractSyntaxError_reject satisfies CauseProtocol; /* LONG_NAMED_ENUMERATED_VALUE */
+const CauseProtocol_abstractSyntaxError_reject = CauseProtocol.abstractSyntaxError_reject; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary abstractSyntaxError_reject
@@ -113,7 +113,7 @@ const CauseProtocol_abstractSyntaxError_reject = CauseProtocol.abstractSyntaxErr
  * @type {number}
  */
 export
-const abstractSyntaxError_reject = CauseProtocol.abstractSyntaxError_reject satisfies CauseProtocol; /* SHORT_NAMED_ENUMERATED_VALUE */
+const abstractSyntaxError_reject = CauseProtocol.abstractSyntaxError_reject; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CauseProtocol_abstractSyntaxErrorIgnoreAndNotify
@@ -121,7 +121,7 @@ const abstractSyntaxError_reject = CauseProtocol.abstractSyntaxError_reject sati
  * @type {number}
  */
 export
-const CauseProtocol_abstractSyntaxErrorIgnoreAndNotify = CauseProtocol.abstractSyntaxErrorIgnoreAndNotify satisfies CauseProtocol; /* LONG_NAMED_ENUMERATED_VALUE */
+const CauseProtocol_abstractSyntaxErrorIgnoreAndNotify = CauseProtocol.abstractSyntaxErrorIgnoreAndNotify; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary abstractSyntaxErrorIgnoreAndNotify
@@ -129,7 +129,7 @@ const CauseProtocol_abstractSyntaxErrorIgnoreAndNotify = CauseProtocol.abstractS
  * @type {number}
  */
 export
-const abstractSyntaxErrorIgnoreAndNotify = CauseProtocol.abstractSyntaxErrorIgnoreAndNotify satisfies CauseProtocol; /* SHORT_NAMED_ENUMERATED_VALUE */
+const abstractSyntaxErrorIgnoreAndNotify = CauseProtocol.abstractSyntaxErrorIgnoreAndNotify; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CauseProtocol_messageNotCompatibleWithReceiverState
@@ -137,7 +137,7 @@ const abstractSyntaxErrorIgnoreAndNotify = CauseProtocol.abstractSyntaxErrorIgno
  * @type {number}
  */
 export
-const CauseProtocol_messageNotCompatibleWithReceiverState = CauseProtocol.messageNotCompatibleWithReceiverState satisfies CauseProtocol; /* LONG_NAMED_ENUMERATED_VALUE */
+const CauseProtocol_messageNotCompatibleWithReceiverState = CauseProtocol.messageNotCompatibleWithReceiverState; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary messageNotCompatibleWithReceiverState
@@ -145,7 +145,7 @@ const CauseProtocol_messageNotCompatibleWithReceiverState = CauseProtocol.messag
  * @type {number}
  */
 export
-const messageNotCompatibleWithReceiverState = CauseProtocol.messageNotCompatibleWithReceiverState satisfies CauseProtocol; /* SHORT_NAMED_ENUMERATED_VALUE */
+const messageNotCompatibleWithReceiverState = CauseProtocol.messageNotCompatibleWithReceiverState; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CauseProtocol_semanticError
@@ -153,7 +153,7 @@ const messageNotCompatibleWithReceiverState = CauseProtocol.messageNotCompatible
  * @type {number}
  */
 export
-const CauseProtocol_semanticError = CauseProtocol.semanticError satisfies CauseProtocol; /* LONG_NAMED_ENUMERATED_VALUE */
+const CauseProtocol_semanticError = CauseProtocol.semanticError; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary semanticError
@@ -161,7 +161,7 @@ const CauseProtocol_semanticError = CauseProtocol.semanticError satisfies CauseP
  * @type {number}
  */
 export
-const semanticError = CauseProtocol.semanticError satisfies CauseProtocol; /* SHORT_NAMED_ENUMERATED_VALUE */
+const semanticError = CauseProtocol.semanticError; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CauseProtocol_abstractSyntaxErrorFalselyConstructedMessage
@@ -169,7 +169,7 @@ const semanticError = CauseProtocol.semanticError satisfies CauseProtocol; /* SH
  * @type {number}
  */
 export
-const CauseProtocol_abstractSyntaxErrorFalselyConstructedMessage = CauseProtocol.abstractSyntaxErrorFalselyConstructedMessage satisfies CauseProtocol; /* LONG_NAMED_ENUMERATED_VALUE */
+const CauseProtocol_abstractSyntaxErrorFalselyConstructedMessage = CauseProtocol.abstractSyntaxErrorFalselyConstructedMessage; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary abstractSyntaxErrorFalselyConstructedMessage
@@ -177,7 +177,7 @@ const CauseProtocol_abstractSyntaxErrorFalselyConstructedMessage = CauseProtocol
  * @type {number}
  */
 export
-const abstractSyntaxErrorFalselyConstructedMessage = CauseProtocol.abstractSyntaxErrorFalselyConstructedMessage satisfies CauseProtocol; /* SHORT_NAMED_ENUMERATED_VALUE */
+const abstractSyntaxErrorFalselyConstructedMessage = CauseProtocol.abstractSyntaxErrorFalselyConstructedMessage; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CauseProtocol_unspecified
@@ -185,7 +185,7 @@ const abstractSyntaxErrorFalselyConstructedMessage = CauseProtocol.abstractSynta
  * @type {number}
  */
 export
-const CauseProtocol_unspecified = CauseProtocol.unspecified satisfies CauseProtocol; /* LONG_NAMED_ENUMERATED_VALUE */
+const CauseProtocol_unspecified = CauseProtocol.unspecified; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unspecified
@@ -193,7 +193,7 @@ const CauseProtocol_unspecified = CauseProtocol.unspecified satisfies CauseProto
  * @type {number}
  */
 export
-const unspecified = CauseProtocol.unspecified satisfies CauseProtocol; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unspecified = CauseProtocol.unspecified; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_CauseProtocol: $.ASN1Decoder<CauseProtocol> = $._decodeEnumerated;
 export const _encode_CauseProtocol: $.ASN1Encoder<CauseProtocol> = $._encodeEnumerated;
 

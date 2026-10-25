@@ -54,7 +54,7 @@ const ClientPartNotToKeep_replaceOrAppend_replace = 1 satisfies ClientPartNotToK
  * @type {number}
  */
 export
-const replace = ClientPartNotToKeep_replaceOrAppend_replace satisfies ClientPartNotToKeep_replaceOrAppend; /* SHORT_NAMED_INTEGER_VALUE */
+const replace = ClientPartNotToKeep_replaceOrAppend_replace; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ClientPartNotToKeep_replaceOrAppend_append
@@ -81,7 +81,7 @@ const ClientPartNotToKeep_replaceOrAppend_append = 2 satisfies ClientPartNotToKe
  * @type {number}
  */
 export
-const append = ClientPartNotToKeep_replaceOrAppend_append satisfies ClientPartNotToKeep_replaceOrAppend; /* SHORT_NAMED_INTEGER_VALUE */
+const append = ClientPartNotToKeep_replaceOrAppend_append; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_ClientPartNotToKeep_replaceOrAppend: $.ASN1Decoder<ClientPartNotToKeep_replaceOrAppend> = $._decodeInteger;
 export const _encode_ClientPartNotToKeep_replaceOrAppend: $.ASN1Encoder<ClientPartNotToKeep_replaceOrAppend> = $._encodeInteger;
 

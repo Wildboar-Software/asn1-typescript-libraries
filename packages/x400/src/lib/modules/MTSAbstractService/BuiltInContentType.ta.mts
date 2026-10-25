@@ -44,7 +44,7 @@ export const BuiltInContentType_unidentified = 0 satisfies BuiltInContentType; /
  * @constant
  * @type {number}
  */
-export const unidentified = BuiltInContentType_unidentified satisfies BuiltInContentType; /* SHORT_NAMED_INTEGER_VALUE */
+export const unidentified = BuiltInContentType_unidentified; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary BuiltInContentType_external
@@ -58,7 +58,7 @@ export const BuiltInContentType_external = 1 satisfies BuiltInContentType; /* LO
  * @constant
  * @type {number}
  */
-export const external = BuiltInContentType_external satisfies BuiltInContentType; /* SHORT_NAMED_INTEGER_VALUE */
+export const external = BuiltInContentType_external; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary BuiltInContentType_interpersonal_messaging_1984
@@ -72,7 +72,7 @@ export const BuiltInContentType_interpersonal_messaging_1984 = 2 satisfies Built
  * @constant
  * @type {number}
  */
-export const interpersonal_messaging_1984 = BuiltInContentType_interpersonal_messaging_1984 satisfies BuiltInContentType; /* SHORT_NAMED_INTEGER_VALUE */
+export const interpersonal_messaging_1984 = BuiltInContentType_interpersonal_messaging_1984; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary BuiltInContentType_interpersonal_messaging_1988
@@ -86,7 +86,7 @@ export const BuiltInContentType_interpersonal_messaging_1988 = 22 satisfies Buil
  * @constant
  * @type {number}
  */
-export const interpersonal_messaging_1988 = BuiltInContentType_interpersonal_messaging_1988 satisfies BuiltInContentType; /* SHORT_NAMED_INTEGER_VALUE */
+export const interpersonal_messaging_1988 = BuiltInContentType_interpersonal_messaging_1988; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary BuiltInContentType_edi_messaging
@@ -100,7 +100,7 @@ export const BuiltInContentType_edi_messaging = 35 satisfies BuiltInContentType;
  * @constant
  * @type {number}
  */
-export const edi_messaging = BuiltInContentType_edi_messaging satisfies BuiltInContentType; /* SHORT_NAMED_INTEGER_VALUE */
+export const edi_messaging = BuiltInContentType_edi_messaging; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary BuiltInContentType_voice_messaging
@@ -114,7 +114,7 @@ export const BuiltInContentType_voice_messaging = 40 satisfies BuiltInContentTyp
  * @constant
  * @type {number}
  */
-export const voice_messaging = BuiltInContentType_voice_messaging satisfies BuiltInContentType; /* SHORT_NAMED_INTEGER_VALUE */
+export const voice_messaging = BuiltInContentType_voice_messaging; /* SHORT_NAMED_INTEGER_VALUE */
 
 let _cached_decoder_for_BuiltInContentType: $.ASN1Decoder<BuiltInContentType> | null = null;
 

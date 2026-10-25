@@ -104,7 +104,7 @@ const PrivateTypeOfNumber = _enum_for_PrivateTypeOfNumber;
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
  */
 export
-const PrivateTypeOfNumber_unknown = PrivateTypeOfNumber.unknown satisfies PrivateTypeOfNumber; /* LONG_NAMED_ENUMERATED_VALUE */
+const PrivateTypeOfNumber_unknown = PrivateTypeOfNumber.unknown; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unknown
@@ -113,7 +113,7 @@ const PrivateTypeOfNumber_unknown = PrivateTypeOfNumber.unknown satisfies Privat
  * @type {number}
  */
 export
-const unknown = PrivateTypeOfNumber.unknown satisfies PrivateTypeOfNumber; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unknown = PrivateTypeOfNumber.unknown; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PrivateTypeOfNumber_level2RegionalNumber
@@ -128,7 +128,7 @@ const unknown = PrivateTypeOfNumber.unknown satisfies PrivateTypeOfNumber; /* SH
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
  */
 export
-const PrivateTypeOfNumber_level2RegionalNumber = PrivateTypeOfNumber.level2RegionalNumber satisfies PrivateTypeOfNumber; /* LONG_NAMED_ENUMERATED_VALUE */
+const PrivateTypeOfNumber_level2RegionalNumber = PrivateTypeOfNumber.level2RegionalNumber; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary level2RegionalNumber
@@ -137,7 +137,7 @@ const PrivateTypeOfNumber_level2RegionalNumber = PrivateTypeOfNumber.level2Regio
  * @type {number}
  */
 export
-const level2RegionalNumber = PrivateTypeOfNumber.level2RegionalNumber satisfies PrivateTypeOfNumber; /* SHORT_NAMED_ENUMERATED_VALUE */
+const level2RegionalNumber = PrivateTypeOfNumber.level2RegionalNumber; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PrivateTypeOfNumber_level1RegionalNumber
@@ -151,7 +151,7 @@ const level2RegionalNumber = PrivateTypeOfNumber.level2RegionalNumber satisfies 
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
  */
 export
-const PrivateTypeOfNumber_level1RegionalNumber = PrivateTypeOfNumber.level1RegionalNumber satisfies PrivateTypeOfNumber; /* LONG_NAMED_ENUMERATED_VALUE */
+const PrivateTypeOfNumber_level1RegionalNumber = PrivateTypeOfNumber.level1RegionalNumber; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary level1RegionalNumber
@@ -160,7 +160,7 @@ const PrivateTypeOfNumber_level1RegionalNumber = PrivateTypeOfNumber.level1Regio
  * @type {number}
  */
 export
-const level1RegionalNumber = PrivateTypeOfNumber.level1RegionalNumber satisfies PrivateTypeOfNumber; /* SHORT_NAMED_ENUMERATED_VALUE */
+const level1RegionalNumber = PrivateTypeOfNumber.level1RegionalNumber; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PrivateTypeOfNumber_pISNSpecificNumber
@@ -175,7 +175,7 @@ const level1RegionalNumber = PrivateTypeOfNumber.level1RegionalNumber satisfies 
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
  */
 export
-const PrivateTypeOfNumber_pISNSpecificNumber = PrivateTypeOfNumber.pISNSpecificNumber satisfies PrivateTypeOfNumber; /* LONG_NAMED_ENUMERATED_VALUE */
+const PrivateTypeOfNumber_pISNSpecificNumber = PrivateTypeOfNumber.pISNSpecificNumber; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pISNSpecificNumber
@@ -184,7 +184,7 @@ const PrivateTypeOfNumber_pISNSpecificNumber = PrivateTypeOfNumber.pISNSpecificN
  * @type {number}
  */
 export
-const pISNSpecificNumber = PrivateTypeOfNumber.pISNSpecificNumber satisfies PrivateTypeOfNumber; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pISNSpecificNumber = PrivateTypeOfNumber.pISNSpecificNumber; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PrivateTypeOfNumber_localNumber
@@ -197,7 +197,7 @@ const pISNSpecificNumber = PrivateTypeOfNumber.pISNSpecificNumber satisfies Priv
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
  */
 export
-const PrivateTypeOfNumber_localNumber = PrivateTypeOfNumber.localNumber satisfies PrivateTypeOfNumber; /* LONG_NAMED_ENUMERATED_VALUE */
+const PrivateTypeOfNumber_localNumber = PrivateTypeOfNumber.localNumber; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary localNumber
@@ -206,7 +206,7 @@ const PrivateTypeOfNumber_localNumber = PrivateTypeOfNumber.localNumber satisfie
  * @type {number}
  */
 export
-const localNumber = PrivateTypeOfNumber.localNumber satisfies PrivateTypeOfNumber; /* SHORT_NAMED_ENUMERATED_VALUE */
+const localNumber = PrivateTypeOfNumber.localNumber; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PrivateTypeOfNumber_abbreviatedNumber
@@ -220,7 +220,7 @@ const localNumber = PrivateTypeOfNumber.localNumber satisfies PrivateTypeOfNumbe
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
  */
 export
-const PrivateTypeOfNumber_abbreviatedNumber = PrivateTypeOfNumber.abbreviatedNumber satisfies PrivateTypeOfNumber; /* LONG_NAMED_ENUMERATED_VALUE */
+const PrivateTypeOfNumber_abbreviatedNumber = PrivateTypeOfNumber.abbreviatedNumber; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary abbreviatedNumber
@@ -229,7 +229,7 @@ const PrivateTypeOfNumber_abbreviatedNumber = PrivateTypeOfNumber.abbreviatedNum
  * @type {number}
  */
 export
-const abbreviatedNumber = PrivateTypeOfNumber.abbreviatedNumber satisfies PrivateTypeOfNumber; /* SHORT_NAMED_ENUMERATED_VALUE */
+const abbreviatedNumber = PrivateTypeOfNumber.abbreviatedNumber; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_PrivateTypeOfNumber: $.ASN1Decoder<PrivateTypeOfNumber> = $._decodeEnumerated;

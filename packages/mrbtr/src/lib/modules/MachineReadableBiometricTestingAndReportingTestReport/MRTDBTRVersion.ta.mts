@@ -49,7 +49,7 @@ const MRTDBTRVersion_v0 = 0 satisfies MRTDBTRVersion; /* LONG_NAMED_INTEGER_VALU
  * @type {number}
  */
 export
-const v0 = MRTDBTRVersion_v0 satisfies MRTDBTRVersion; /* SHORT_NAMED_INTEGER_VALUE */
+const v0 = MRTDBTRVersion_v0; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**

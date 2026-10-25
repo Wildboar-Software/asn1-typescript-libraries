@@ -66,7 +66,7 @@ const MBMSInformation_cNIPMulticastDistribution = _enum_for_MBMSInformation_cNIP
  * @type {number}
  */
 export
-const MBMSInformation_cNIPMulticastDistribution_nO_IP_MULTICAST = MBMSInformation_cNIPMulticastDistribution.nO_IP_MULTICAST satisfies MBMSInformation_cNIPMulticastDistribution; /* LONG_NAMED_ENUMERATED_VALUE */
+const MBMSInformation_cNIPMulticastDistribution_nO_IP_MULTICAST = MBMSInformation_cNIPMulticastDistribution.nO_IP_MULTICAST; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary nO_IP_MULTICAST
@@ -74,7 +74,7 @@ const MBMSInformation_cNIPMulticastDistribution_nO_IP_MULTICAST = MBMSInformatio
  * @type {number}
  */
 export
-const nO_IP_MULTICAST = MBMSInformation_cNIPMulticastDistribution.nO_IP_MULTICAST satisfies MBMSInformation_cNIPMulticastDistribution; /* SHORT_NAMED_ENUMERATED_VALUE */
+const nO_IP_MULTICAST = MBMSInformation_cNIPMulticastDistribution.nO_IP_MULTICAST; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MBMSInformation_cNIPMulticastDistribution_iP_MULTICAST
@@ -82,7 +82,7 @@ const nO_IP_MULTICAST = MBMSInformation_cNIPMulticastDistribution.nO_IP_MULTICAS
  * @type {number}
  */
 export
-const MBMSInformation_cNIPMulticastDistribution_iP_MULTICAST = MBMSInformation_cNIPMulticastDistribution.iP_MULTICAST satisfies MBMSInformation_cNIPMulticastDistribution; /* LONG_NAMED_ENUMERATED_VALUE */
+const MBMSInformation_cNIPMulticastDistribution_iP_MULTICAST = MBMSInformation_cNIPMulticastDistribution.iP_MULTICAST; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary iP_MULTICAST
@@ -90,7 +90,7 @@ const MBMSInformation_cNIPMulticastDistribution_iP_MULTICAST = MBMSInformation_c
  * @type {number}
  */
 export
-const iP_MULTICAST = MBMSInformation_cNIPMulticastDistribution.iP_MULTICAST satisfies MBMSInformation_cNIPMulticastDistribution; /* SHORT_NAMED_ENUMERATED_VALUE */
+const iP_MULTICAST = MBMSInformation_cNIPMulticastDistribution.iP_MULTICAST; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_MBMSInformation_cNIPMulticastDistribution: $.ASN1Decoder<MBMSInformation_cNIPMulticastDistribution> = $._decodeEnumerated;

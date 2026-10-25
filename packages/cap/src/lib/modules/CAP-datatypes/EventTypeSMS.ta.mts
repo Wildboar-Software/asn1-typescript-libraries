@@ -44,7 +44,7 @@ export const EventTypeSMS = _enum_for_EventTypeSMS;
  *
  * @constant
  */
-export const EventTypeSMS_sms_CollectedInfo = EventTypeSMS.sms_CollectedInfo satisfies EventTypeSMS;
+export const EventTypeSMS_sms_CollectedInfo = EventTypeSMS.sms_CollectedInfo;
 /**
  * @summary sms_CollectedInfo
  * @description
@@ -54,7 +54,7 @@ export const EventTypeSMS_sms_CollectedInfo = EventTypeSMS.sms_CollectedInfo sat
  *
  * @constant
  */
-export const sms_CollectedInfo = EventTypeSMS.sms_CollectedInfo satisfies EventTypeSMS;
+export const sms_CollectedInfo = EventTypeSMS.sms_CollectedInfo;
 /**
  * @summary EventTypeSMS_o_smsFailure
  * @description
@@ -63,7 +63,7 @@ export const sms_CollectedInfo = EventTypeSMS.sms_CollectedInfo satisfies EventT
  *
  * @constant
  */
-export const EventTypeSMS_o_smsFailure = EventTypeSMS.o_smsFailure satisfies EventTypeSMS;
+export const EventTypeSMS_o_smsFailure = EventTypeSMS.o_smsFailure;
 /**
  * @summary o_smsFailure
  * @description
@@ -72,7 +72,7 @@ export const EventTypeSMS_o_smsFailure = EventTypeSMS.o_smsFailure satisfies Eve
  *
  * @constant
  */
-export const o_smsFailure = EventTypeSMS.o_smsFailure satisfies EventTypeSMS;
+export const o_smsFailure = EventTypeSMS.o_smsFailure;
 /**
  * @summary EventTypeSMS_o_smsSubmission
  * @description
@@ -81,7 +81,7 @@ export const o_smsFailure = EventTypeSMS.o_smsFailure satisfies EventTypeSMS;
  *
  * @constant
  */
-export const EventTypeSMS_o_smsSubmission = EventTypeSMS.o_smsSubmission satisfies EventTypeSMS;
+export const EventTypeSMS_o_smsSubmission = EventTypeSMS.o_smsSubmission;
 /**
  * @summary o_smsSubmission
  * @description
@@ -90,7 +90,7 @@ export const EventTypeSMS_o_smsSubmission = EventTypeSMS.o_smsSubmission satisfi
  *
  * @constant
  */
-export const o_smsSubmission = EventTypeSMS.o_smsSubmission satisfies EventTypeSMS;
+export const o_smsSubmission = EventTypeSMS.o_smsSubmission;
 /**
  * @summary EventTypeSMS_sms_DeliveryRequested
  * @description
@@ -100,7 +100,7 @@ export const o_smsSubmission = EventTypeSMS.o_smsSubmission satisfies EventTypeS
  *
  * @constant
  */
-export const EventTypeSMS_sms_DeliveryRequested = EventTypeSMS.sms_DeliveryRequested satisfies EventTypeSMS;
+export const EventTypeSMS_sms_DeliveryRequested = EventTypeSMS.sms_DeliveryRequested;
 /**
  * @summary sms_DeliveryRequested
  * @description
@@ -110,7 +110,7 @@ export const EventTypeSMS_sms_DeliveryRequested = EventTypeSMS.sms_DeliveryReque
  *
  * @constant
  */
-export const sms_DeliveryRequested = EventTypeSMS.sms_DeliveryRequested satisfies EventTypeSMS;
+export const sms_DeliveryRequested = EventTypeSMS.sms_DeliveryRequested;
 /**
  * @summary EventTypeSMS_t_smsFailure
  * @description
@@ -119,7 +119,7 @@ export const sms_DeliveryRequested = EventTypeSMS.sms_DeliveryRequested satisfie
  *
  * @constant
  */
-export const EventTypeSMS_t_smsFailure = EventTypeSMS.t_smsFailure satisfies EventTypeSMS;
+export const EventTypeSMS_t_smsFailure = EventTypeSMS.t_smsFailure;
 /**
  * @summary t_smsFailure
  * @description
@@ -128,7 +128,7 @@ export const EventTypeSMS_t_smsFailure = EventTypeSMS.t_smsFailure satisfies Eve
  *
  * @constant
  */
-export const t_smsFailure = EventTypeSMS.t_smsFailure satisfies EventTypeSMS;
+export const t_smsFailure = EventTypeSMS.t_smsFailure;
 /**
  * @summary EventTypeSMS_t_smsDelivery
  * @description
@@ -137,7 +137,7 @@ export const t_smsFailure = EventTypeSMS.t_smsFailure satisfies EventTypeSMS;
  *
  * @constant
  */
-export const EventTypeSMS_t_smsDelivery = EventTypeSMS.t_smsDelivery satisfies EventTypeSMS;
+export const EventTypeSMS_t_smsDelivery = EventTypeSMS.t_smsDelivery;
 /**
  * @summary t_smsDelivery
  * @description
@@ -146,6 +146,6 @@ export const EventTypeSMS_t_smsDelivery = EventTypeSMS.t_smsDelivery satisfies E
  *
  * @constant
  */
-export const t_smsDelivery = EventTypeSMS.t_smsDelivery satisfies EventTypeSMS;
+export const t_smsDelivery = EventTypeSMS.t_smsDelivery;
 export const _decode_EventTypeSMS = $._decodeEnumerated;
 export const _encode_EventTypeSMS = $._encodeEnumerated;

@@ -80,7 +80,7 @@ const MatchType = _enum_for_MatchType;
  * @type {number}
  */
 export
-const MatchType_inhibiting = MatchType.inhibiting satisfies MatchType; /* LONG_NAMED_ENUMERATED_VALUE */
+const MatchType_inhibiting = MatchType.inhibiting; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary inhibiting
@@ -93,7 +93,7 @@ const MatchType_inhibiting = MatchType.inhibiting satisfies MatchType; /* LONG_N
  * @type {number}
  */
 export
-const inhibiting = MatchType.inhibiting satisfies MatchType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const inhibiting = MatchType.inhibiting; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MatchType_enabling
@@ -106,7 +106,7 @@ const inhibiting = MatchType.inhibiting satisfies MatchType; /* SHORT_NAMED_ENUM
  * @type {number}
  */
 export
-const MatchType_enabling = MatchType.enabling satisfies MatchType; /* LONG_NAMED_ENUMERATED_VALUE */
+const MatchType_enabling = MatchType.enabling; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary enabling
@@ -119,7 +119,7 @@ const MatchType_enabling = MatchType.enabling satisfies MatchType; /* LONG_NAMED
  * @type {number}
  */
 export
-const enabling = MatchType.enabling satisfies MatchType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const enabling = MatchType.enabling; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) MatchType

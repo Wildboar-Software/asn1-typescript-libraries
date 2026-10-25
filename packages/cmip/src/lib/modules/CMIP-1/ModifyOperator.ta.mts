@@ -50,7 +50,7 @@ export const ModifyOperator_replace = 0 satisfies ModifyOperator; /* LONG_NAMED_
  * @constant
  * @type {number}
  */
-export const replace = ModifyOperator_replace satisfies ModifyOperator; /* SHORT_NAMED_INTEGER_VALUE */
+export const replace = ModifyOperator_replace; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -70,7 +70,7 @@ export const ModifyOperator_addValues = 1 satisfies ModifyOperator; /* LONG_NAME
  * @constant
  * @type {number}
  */
-export const addValues = ModifyOperator_addValues satisfies ModifyOperator; /* SHORT_NAMED_INTEGER_VALUE */
+export const addValues = ModifyOperator_addValues; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -90,7 +90,7 @@ export const ModifyOperator_removeValues = 2 satisfies ModifyOperator; /* LONG_N
  * @constant
  * @type {number}
  */
-export const removeValues = ModifyOperator_removeValues satisfies ModifyOperator; /* SHORT_NAMED_INTEGER_VALUE */
+export const removeValues = ModifyOperator_removeValues; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -111,7 +111,7 @@ export const ModifyOperator_setToDefault = 3 satisfies ModifyOperator; /* LONG_N
  * @constant
  * @type {number}
  */
-export const setToDefault = ModifyOperator_setToDefault satisfies ModifyOperator; /* SHORT_NAMED_INTEGER_VALUE */
+export const setToDefault = ModifyOperator_setToDefault; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 

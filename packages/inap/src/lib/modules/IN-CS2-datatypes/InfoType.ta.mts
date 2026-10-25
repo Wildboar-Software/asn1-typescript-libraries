@@ -59,7 +59,7 @@ const InfoType = _enum_for_InfoType;
  * @type {number}
  */
 export
-const InfoType_numericString = InfoType.numericString satisfies InfoType; /* LONG_NAMED_ENUMERATED_VALUE */
+const InfoType_numericString = InfoType.numericString; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary numericString
@@ -67,7 +67,7 @@ const InfoType_numericString = InfoType.numericString satisfies InfoType; /* LON
  * @type {number}
  */
 export
-const numericString = InfoType.numericString satisfies InfoType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const numericString = InfoType.numericString; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary InfoType_characterString
@@ -75,7 +75,7 @@ const numericString = InfoType.numericString satisfies InfoType; /* SHORT_NAMED_
  * @type {number}
  */
 export
-const InfoType_characterString = InfoType.characterString satisfies InfoType; /* LONG_NAMED_ENUMERATED_VALUE */
+const InfoType_characterString = InfoType.characterString; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary characterString
@@ -83,7 +83,7 @@ const InfoType_characterString = InfoType.characterString satisfies InfoType; /*
  * @type {number}
  */
 export
-const characterString = InfoType.characterString satisfies InfoType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const characterString = InfoType.characterString; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary InfoType_iA5String
@@ -91,7 +91,7 @@ const characterString = InfoType.characterString satisfies InfoType; /* SHORT_NA
  * @type {number}
  */
 export
-const InfoType_iA5String = InfoType.iA5String satisfies InfoType; /* LONG_NAMED_ENUMERATED_VALUE */
+const InfoType_iA5String = InfoType.iA5String; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary iA5String
@@ -99,7 +99,7 @@ const InfoType_iA5String = InfoType.iA5String satisfies InfoType; /* LONG_NAMED_
  * @type {number}
  */
 export
-const iA5String = InfoType.iA5String satisfies InfoType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const iA5String = InfoType.iA5String; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 function _decode_InfoType(el: _Element): InfoType {

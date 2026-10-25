@@ -50,7 +50,7 @@ const DiagnosticRafGet_specific_unknownParameter = 0 satisfies DiagnosticRafGet_
  * @type {number}
  */
 export
-const unknownParameter = DiagnosticRafGet_specific_unknownParameter satisfies DiagnosticRafGet_specific; /* SHORT_NAMED_INTEGER_VALUE */
+const unknownParameter = DiagnosticRafGet_specific_unknownParameter; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_DiagnosticRafGet_specific: $.ASN1Decoder<DiagnosticRafGet_specific> = $._decodeInteger;
 export const _encode_DiagnosticRafGet_specific: $.ASN1Encoder<DiagnosticRafGet_specific> = $._encodeInteger;
 

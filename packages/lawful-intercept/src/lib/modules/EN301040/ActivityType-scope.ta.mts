@@ -133,7 +133,7 @@ const ActivityType_scope = _enum_for_ActivityType_scope;
  * @type {number}
  */
 export
-const ActivityType_scope_point2Point = ActivityType_scope.point2Point satisfies ActivityType_scope; /* LONG_NAMED_ENUMERATED_VALUE */
+const ActivityType_scope_point2Point = ActivityType_scope.point2Point; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary point2Point
@@ -149,7 +149,7 @@ const ActivityType_scope_point2Point = ActivityType_scope.point2Point satisfies 
  * @type {number}
  */
 export
-const point2Point = ActivityType_scope.point2Point satisfies ActivityType_scope; /* SHORT_NAMED_ENUMERATED_VALUE */
+const point2Point = ActivityType_scope.point2Point; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ActivityType_scope_point2MultiPoint
@@ -165,7 +165,7 @@ const point2Point = ActivityType_scope.point2Point satisfies ActivityType_scope;
  * @type {number}
  */
 export
-const ActivityType_scope_point2MultiPoint = ActivityType_scope.point2MultiPoint satisfies ActivityType_scope; /* LONG_NAMED_ENUMERATED_VALUE */
+const ActivityType_scope_point2MultiPoint = ActivityType_scope.point2MultiPoint; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary point2MultiPoint
@@ -181,7 +181,7 @@ const ActivityType_scope_point2MultiPoint = ActivityType_scope.point2MultiPoint 
  * @type {number}
  */
 export
-const point2MultiPoint = ActivityType_scope.point2MultiPoint satisfies ActivityType_scope; /* SHORT_NAMED_ENUMERATED_VALUE */
+const point2MultiPoint = ActivityType_scope.point2MultiPoint; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ActivityType_scope_broadcast
@@ -199,7 +199,7 @@ const point2MultiPoint = ActivityType_scope.point2MultiPoint satisfies ActivityT
  * @type {number}
  */
 export
-const ActivityType_scope_broadcast = ActivityType_scope.broadcast satisfies ActivityType_scope; /* LONG_NAMED_ENUMERATED_VALUE */
+const ActivityType_scope_broadcast = ActivityType_scope.broadcast; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary broadcast
@@ -217,7 +217,7 @@ const ActivityType_scope_broadcast = ActivityType_scope.broadcast satisfies Acti
  * @type {number}
  */
 export
-const broadcast = ActivityType_scope.broadcast satisfies ActivityType_scope; /* SHORT_NAMED_ENUMERATED_VALUE */
+const broadcast = ActivityType_scope.broadcast; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_ActivityType_scope: $.ASN1Decoder<ActivityType_scope> = $._decodeEnumerated;
 export const _encode_ActivityType_scope: $.ASN1Encoder<ActivityType_scope> = $._encodeEnumerated;
 

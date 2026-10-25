@@ -53,7 +53,7 @@ const MCMMode_compressed = 0 satisfies MCMMode; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const compressed = MCMMode_compressed satisfies MCMMode; /* SHORT_NAMED_INTEGER_VALUE */
+const compressed = MCMMode_compressed; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary MCMMode_complete
@@ -78,7 +78,7 @@ const MCMMode_complete = 1 satisfies MCMMode; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const complete = MCMMode_complete satisfies MCMMode; /* SHORT_NAMED_INTEGER_VALUE */
+const complete = MCMMode_complete; /* SHORT_NAMED_INTEGER_VALUE */
 
 export
 const _decode_MCMMode: $.ASN1Decoder<MCMMode> = $._decodeInteger;

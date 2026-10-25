@@ -130,7 +130,7 @@ export const DenialGranularity = _enum_for_DenialGranularity;
  * @type {number}
  */
 export const DenialGranularity_request =
-    DenialGranularity.request satisfies DenialGranularity; /* LONG_NAMED_ENUMERATED_VALUE */
+    DenialGranularity.request; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary request
@@ -143,7 +143,7 @@ export const DenialGranularity_request =
  * @type {number}
  */
 export const request =
-    DenialGranularity.request satisfies DenialGranularity; /* SHORT_NAMED_ENUMERATED_VALUE */
+    DenialGranularity.request; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary DenialGranularity_object
@@ -157,7 +157,7 @@ export const request =
  * @type {number}
  */
 export const DenialGranularity_object =
-    DenialGranularity.object satisfies DenialGranularity; /* LONG_NAMED_ENUMERATED_VALUE */
+    DenialGranularity.object; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary object
@@ -170,7 +170,7 @@ export const DenialGranularity_object =
  * @type {number}
  */
 export const object =
-    DenialGranularity.object satisfies DenialGranularity; /* SHORT_NAMED_ENUMERATED_VALUE */
+    DenialGranularity.object; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary DenialGranularity_attribute
@@ -183,7 +183,7 @@ export const object =
  * @type {number}
  */
 export const DenialGranularity_attribute =
-    DenialGranularity.attribute satisfies DenialGranularity; /* LONG_NAMED_ENUMERATED_VALUE */
+    DenialGranularity.attribute; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary attribute
@@ -195,7 +195,7 @@ export const DenialGranularity_attribute =
  * @type {number}
  */
 export const attribute =
-    DenialGranularity.attribute satisfies DenialGranularity; /* SHORT_NAMED_ENUMERATED_VALUE */
+    DenialGranularity.attribute; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 export function _decode_DenialGranularity(el: _Element): DenialGranularity {

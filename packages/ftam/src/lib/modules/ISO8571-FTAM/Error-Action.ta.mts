@@ -51,7 +51,7 @@ export const Error_Action_terminate = 0 satisfies Error_Action; /* LONG_NAMED_IN
  * @constant
  * @type {number}
  */
-export const terminate = Error_Action_terminate satisfies Error_Action; /* SHORT_NAMED_INTEGER_VALUE */
+export const terminate = Error_Action_terminate; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -75,7 +75,7 @@ export const Error_Action_continue_ = 1 satisfies Error_Action; /* LONG_NAMED_IN
  * @constant
  * @type {number}
  */
-export const continue_ = Error_Action_continue_ satisfies Error_Action; /* SHORT_NAMED_INTEGER_VALUE */
+export const continue_ = Error_Action_continue_; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 

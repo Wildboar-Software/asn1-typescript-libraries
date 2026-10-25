@@ -95,7 +95,7 @@ const Priority = _enum_for_Priority;
  * @type {number}
  */
 export
-const Priority_low = Priority.low satisfies Priority; /* LONG_NAMED_ENUMERATED_VALUE */
+const Priority_low = Priority.low; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary low
@@ -106,7 +106,7 @@ const Priority_low = Priority.low satisfies Priority; /* LONG_NAMED_ENUMERATED_V
  * @type {number}
  */
 export
-const low = Priority.low satisfies Priority; /* SHORT_NAMED_ENUMERATED_VALUE */
+const low = Priority.low; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Priority_medium
@@ -117,7 +117,7 @@ const low = Priority.low satisfies Priority; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const Priority_medium = Priority.medium satisfies Priority; /* LONG_NAMED_ENUMERATED_VALUE */
+const Priority_medium = Priority.medium; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary medium
@@ -128,7 +128,7 @@ const Priority_medium = Priority.medium satisfies Priority; /* LONG_NAMED_ENUMER
  * @type {number}
  */
 export
-const medium = Priority.medium satisfies Priority; /* SHORT_NAMED_ENUMERATED_VALUE */
+const medium = Priority.medium; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Priority_high
@@ -139,7 +139,7 @@ const medium = Priority.medium satisfies Priority; /* SHORT_NAMED_ENUMERATED_VAL
  * @type {number}
  */
 export
-const Priority_high = Priority.high satisfies Priority; /* LONG_NAMED_ENUMERATED_VALUE */
+const Priority_high = Priority.high; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary high
@@ -150,7 +150,7 @@ const Priority_high = Priority.high satisfies Priority; /* LONG_NAMED_ENUMERATED
  * @type {number}
  */
 export
-const high = Priority.high satisfies Priority; /* SHORT_NAMED_ENUMERATED_VALUE */
+const high = Priority.high; /* SHORT_NAMED_ENUMERATED_VALUE */
 export function _decode_Priority(el: _Element): Priority {
     const enumerated = $._decodeEnumerated(el);
     switch (enumerated) {

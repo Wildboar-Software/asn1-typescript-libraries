@@ -42,7 +42,7 @@ export const Associate_source_diagnostic_dialogue_service_user_null_ = 0 satisfi
  * @constant
  * @type {number}
  */
-export const null_ = Associate_source_diagnostic_dialogue_service_user_null_ satisfies Associate_source_diagnostic_dialogue_service_user; /* SHORT_NAMED_INTEGER_VALUE */
+export const null_ = Associate_source_diagnostic_dialogue_service_user_null_; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Associate_source_diagnostic_dialogue_service_user_no_reason_given
@@ -56,7 +56,7 @@ export const Associate_source_diagnostic_dialogue_service_user_no_reason_given =
  * @constant
  * @type {number}
  */
-export const no_reason_given = Associate_source_diagnostic_dialogue_service_user_no_reason_given satisfies Associate_source_diagnostic_dialogue_service_user; /* SHORT_NAMED_INTEGER_VALUE */
+export const no_reason_given = Associate_source_diagnostic_dialogue_service_user_no_reason_given; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Associate_source_diagnostic_dialogue_service_user_application_context_name_not_supported
@@ -76,7 +76,7 @@ export const Associate_source_diagnostic_dialogue_service_user_application_conte
  * @constant
  * @type {number}
  */
-export const application_context_name_not_supported = Associate_source_diagnostic_dialogue_service_user_application_context_name_not_supported satisfies Associate_source_diagnostic_dialogue_service_user; /* SHORT_NAMED_INTEGER_VALUE */
+export const application_context_name_not_supported = Associate_source_diagnostic_dialogue_service_user_application_context_name_not_supported; /* SHORT_NAMED_INTEGER_VALUE */
 
 let _cached_decoder_for_Associate_source_diagnostic_dialogue_service_user: $.ASN1Decoder<Associate_source_diagnostic_dialogue_service_user> | null = null;
 

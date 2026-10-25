@@ -45,7 +45,7 @@ export const PhysicalDeliveryReportRequest_return_of_undeliverable_mail_by_PDS =
  * @constant
  * @type {number}
  */
-export const return_of_undeliverable_mail_by_PDS = PhysicalDeliveryReportRequest_return_of_undeliverable_mail_by_PDS satisfies PhysicalDeliveryReportRequest; /* SHORT_NAMED_INTEGER_VALUE */
+export const return_of_undeliverable_mail_by_PDS = PhysicalDeliveryReportRequest_return_of_undeliverable_mail_by_PDS; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PhysicalDeliveryReportRequest_return_of_notification_by_PDS
@@ -59,7 +59,7 @@ export const PhysicalDeliveryReportRequest_return_of_notification_by_PDS = 1 sat
  * @constant
  * @type {number}
  */
-export const return_of_notification_by_PDS = PhysicalDeliveryReportRequest_return_of_notification_by_PDS satisfies PhysicalDeliveryReportRequest; /* SHORT_NAMED_INTEGER_VALUE */
+export const return_of_notification_by_PDS = PhysicalDeliveryReportRequest_return_of_notification_by_PDS; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PhysicalDeliveryReportRequest_return_of_notification_by_MHS
@@ -73,7 +73,7 @@ export const PhysicalDeliveryReportRequest_return_of_notification_by_MHS = 2 sat
  * @constant
  * @type {number}
  */
-export const return_of_notification_by_MHS = PhysicalDeliveryReportRequest_return_of_notification_by_MHS satisfies PhysicalDeliveryReportRequest; /* SHORT_NAMED_INTEGER_VALUE */
+export const return_of_notification_by_MHS = PhysicalDeliveryReportRequest_return_of_notification_by_MHS; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PhysicalDeliveryReportRequest_return_of_notification_by_MHS_and_PDS
@@ -87,7 +87,7 @@ export const PhysicalDeliveryReportRequest_return_of_notification_by_MHS_and_PDS
  * @constant
  * @type {number}
  */
-export const return_of_notification_by_MHS_and_PDS = PhysicalDeliveryReportRequest_return_of_notification_by_MHS_and_PDS satisfies PhysicalDeliveryReportRequest; /* SHORT_NAMED_INTEGER_VALUE */
+export const return_of_notification_by_MHS_and_PDS = PhysicalDeliveryReportRequest_return_of_notification_by_MHS_and_PDS; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_PhysicalDeliveryReportRequest = $._decodeInteger;

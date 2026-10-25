@@ -76,7 +76,7 @@ const MMSRecipientType = _enum_for_MMSRecipientType;
  * @type {number}
  */
 export
-const MMSRecipientType_tO = MMSRecipientType.tO satisfies MMSRecipientType; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMSRecipientType_tO = MMSRecipientType.tO; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tO
@@ -84,7 +84,7 @@ const MMSRecipientType_tO = MMSRecipientType.tO satisfies MMSRecipientType; /* L
  * @type {number}
  */
 export
-const tO = MMSRecipientType.tO satisfies MMSRecipientType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tO = MMSRecipientType.tO; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMSRecipientType_cC
@@ -92,7 +92,7 @@ const tO = MMSRecipientType.tO satisfies MMSRecipientType; /* SHORT_NAMED_ENUMER
  * @type {number}
  */
 export
-const MMSRecipientType_cC = MMSRecipientType.cC satisfies MMSRecipientType; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMSRecipientType_cC = MMSRecipientType.cC; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary cC
@@ -100,7 +100,7 @@ const MMSRecipientType_cC = MMSRecipientType.cC satisfies MMSRecipientType; /* L
  * @type {number}
  */
 export
-const cC = MMSRecipientType.cC satisfies MMSRecipientType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const cC = MMSRecipientType.cC; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMSRecipientType_bCC
@@ -108,7 +108,7 @@ const cC = MMSRecipientType.cC satisfies MMSRecipientType; /* SHORT_NAMED_ENUMER
  * @type {number}
  */
 export
-const MMSRecipientType_bCC = MMSRecipientType.bCC satisfies MMSRecipientType; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMSRecipientType_bCC = MMSRecipientType.bCC; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary bCC
@@ -116,7 +116,7 @@ const MMSRecipientType_bCC = MMSRecipientType.bCC satisfies MMSRecipientType; /*
  * @type {number}
  */
 export
-const bCC = MMSRecipientType.bCC satisfies MMSRecipientType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const bCC = MMSRecipientType.bCC; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_MMSRecipientType: $.ASN1Decoder<MMSRecipientType> = $._decodeEnumerated;

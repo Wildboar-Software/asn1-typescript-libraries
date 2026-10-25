@@ -69,7 +69,7 @@ const AuthorizationType = _enum_for_AuthorizationType;
  * @type {number}
  */
 export
-const AuthorizationType_registration = AuthorizationType.registration satisfies AuthorizationType; /* LONG_NAMED_ENUMERATED_VALUE */
+const AuthorizationType_registration = AuthorizationType.registration; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary registration
@@ -77,7 +77,7 @@ const AuthorizationType_registration = AuthorizationType.registration satisfies 
  * @type {number}
  */
 export
-const registration = AuthorizationType.registration satisfies AuthorizationType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const registration = AuthorizationType.registration; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AuthorizationType_deregistration
@@ -85,7 +85,7 @@ const registration = AuthorizationType.registration satisfies AuthorizationType;
  * @type {number}
  */
 export
-const AuthorizationType_deregistration = AuthorizationType.deregistration satisfies AuthorizationType; /* LONG_NAMED_ENUMERATED_VALUE */
+const AuthorizationType_deregistration = AuthorizationType.deregistration; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary deregistration
@@ -93,7 +93,7 @@ const AuthorizationType_deregistration = AuthorizationType.deregistration satisf
  * @type {number}
  */
 export
-const deregistration = AuthorizationType.deregistration satisfies AuthorizationType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const deregistration = AuthorizationType.deregistration; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_AuthorizationType: $.ASN1Decoder<AuthorizationType> = $._decodeEnumerated;
 export const _encode_AuthorizationType: $.ASN1Encoder<AuthorizationType> = $._encodeEnumerated;
 

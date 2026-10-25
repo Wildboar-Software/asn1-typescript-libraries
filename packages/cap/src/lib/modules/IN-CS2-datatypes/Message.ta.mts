@@ -68,7 +68,7 @@ const Message = _enum_for_Message;
  * @type {number}
  */
 export
-const Message_rELease = Message.rELease satisfies Message; /* LONG_NAMED_ENUMERATED_VALUE */
+const Message_rELease = Message.rELease; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary rELease
@@ -76,7 +76,7 @@ const Message_rELease = Message.rELease satisfies Message; /* LONG_NAMED_ENUMERA
  * @type {number}
  */
 export
-const rELease = Message.rELease satisfies Message; /* SHORT_NAMED_ENUMERATED_VALUE */
+const rELease = Message.rELease; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Message_rELeaseCOMPlete
@@ -84,7 +84,7 @@ const rELease = Message.rELease satisfies Message; /* SHORT_NAMED_ENUMERATED_VAL
  * @type {number}
  */
 export
-const Message_rELeaseCOMPlete = Message.rELeaseCOMPlete satisfies Message; /* LONG_NAMED_ENUMERATED_VALUE */
+const Message_rELeaseCOMPlete = Message.rELeaseCOMPlete; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary rELeaseCOMPlete
@@ -92,7 +92,7 @@ const Message_rELeaseCOMPlete = Message.rELeaseCOMPlete satisfies Message; /* LO
  * @type {number}
  */
 export
-const rELeaseCOMPlete = Message.rELeaseCOMPlete satisfies Message; /* SHORT_NAMED_ENUMERATED_VALUE */
+const rELeaseCOMPlete = Message.rELeaseCOMPlete; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Message_fACility
@@ -100,7 +100,7 @@ const rELeaseCOMPlete = Message.rELeaseCOMPlete satisfies Message; /* SHORT_NAME
  * @type {number}
  */
 export
-const Message_fACility = Message.fACility satisfies Message; /* LONG_NAMED_ENUMERATED_VALUE */
+const Message_fACility = Message.fACility; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary fACility
@@ -108,7 +108,7 @@ const Message_fACility = Message.fACility satisfies Message; /* LONG_NAMED_ENUME
  * @type {number}
  */
 export
-const fACility = Message.fACility satisfies Message; /* SHORT_NAMED_ENUMERATED_VALUE */
+const fACility = Message.fACility; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_Message = $._decodeEnumerated;
 export const _encode_Message = $._encodeEnumerated;
 

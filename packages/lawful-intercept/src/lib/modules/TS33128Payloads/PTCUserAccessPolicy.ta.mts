@@ -104,7 +104,7 @@ const PTCUserAccessPolicy = _enum_for_PTCUserAccessPolicy;
  * @type {number}
  */
 export
-const PTCUserAccessPolicy_allowIncomingPTCSessionRequest = PTCUserAccessPolicy.allowIncomingPTCSessionRequest satisfies PTCUserAccessPolicy; /* LONG_NAMED_ENUMERATED_VALUE */
+const PTCUserAccessPolicy_allowIncomingPTCSessionRequest = PTCUserAccessPolicy.allowIncomingPTCSessionRequest; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary allowIncomingPTCSessionRequest
@@ -112,7 +112,7 @@ const PTCUserAccessPolicy_allowIncomingPTCSessionRequest = PTCUserAccessPolicy.a
  * @type {number}
  */
 export
-const allowIncomingPTCSessionRequest = PTCUserAccessPolicy.allowIncomingPTCSessionRequest satisfies PTCUserAccessPolicy; /* SHORT_NAMED_ENUMERATED_VALUE */
+const allowIncomingPTCSessionRequest = PTCUserAccessPolicy.allowIncomingPTCSessionRequest; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PTCUserAccessPolicy_blockIncomingPTCSessionRequest
@@ -120,7 +120,7 @@ const allowIncomingPTCSessionRequest = PTCUserAccessPolicy.allowIncomingPTCSessi
  * @type {number}
  */
 export
-const PTCUserAccessPolicy_blockIncomingPTCSessionRequest = PTCUserAccessPolicy.blockIncomingPTCSessionRequest satisfies PTCUserAccessPolicy; /* LONG_NAMED_ENUMERATED_VALUE */
+const PTCUserAccessPolicy_blockIncomingPTCSessionRequest = PTCUserAccessPolicy.blockIncomingPTCSessionRequest; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary blockIncomingPTCSessionRequest
@@ -128,7 +128,7 @@ const PTCUserAccessPolicy_blockIncomingPTCSessionRequest = PTCUserAccessPolicy.b
  * @type {number}
  */
 export
-const blockIncomingPTCSessionRequest = PTCUserAccessPolicy.blockIncomingPTCSessionRequest satisfies PTCUserAccessPolicy; /* SHORT_NAMED_ENUMERATED_VALUE */
+const blockIncomingPTCSessionRequest = PTCUserAccessPolicy.blockIncomingPTCSessionRequest; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PTCUserAccessPolicy_allowAutoAnswerMode
@@ -136,7 +136,7 @@ const blockIncomingPTCSessionRequest = PTCUserAccessPolicy.blockIncomingPTCSessi
  * @type {number}
  */
 export
-const PTCUserAccessPolicy_allowAutoAnswerMode = PTCUserAccessPolicy.allowAutoAnswerMode satisfies PTCUserAccessPolicy; /* LONG_NAMED_ENUMERATED_VALUE */
+const PTCUserAccessPolicy_allowAutoAnswerMode = PTCUserAccessPolicy.allowAutoAnswerMode; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary allowAutoAnswerMode
@@ -144,7 +144,7 @@ const PTCUserAccessPolicy_allowAutoAnswerMode = PTCUserAccessPolicy.allowAutoAns
  * @type {number}
  */
 export
-const allowAutoAnswerMode = PTCUserAccessPolicy.allowAutoAnswerMode satisfies PTCUserAccessPolicy; /* SHORT_NAMED_ENUMERATED_VALUE */
+const allowAutoAnswerMode = PTCUserAccessPolicy.allowAutoAnswerMode; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PTCUserAccessPolicy_allowOverrideManualAnswerMode
@@ -152,7 +152,7 @@ const allowAutoAnswerMode = PTCUserAccessPolicy.allowAutoAnswerMode satisfies PT
  * @type {number}
  */
 export
-const PTCUserAccessPolicy_allowOverrideManualAnswerMode = PTCUserAccessPolicy.allowOverrideManualAnswerMode satisfies PTCUserAccessPolicy; /* LONG_NAMED_ENUMERATED_VALUE */
+const PTCUserAccessPolicy_allowOverrideManualAnswerMode = PTCUserAccessPolicy.allowOverrideManualAnswerMode; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary allowOverrideManualAnswerMode
@@ -160,7 +160,7 @@ const PTCUserAccessPolicy_allowOverrideManualAnswerMode = PTCUserAccessPolicy.al
  * @type {number}
  */
 export
-const allowOverrideManualAnswerMode = PTCUserAccessPolicy.allowOverrideManualAnswerMode satisfies PTCUserAccessPolicy; /* SHORT_NAMED_ENUMERATED_VALUE */
+const allowOverrideManualAnswerMode = PTCUserAccessPolicy.allowOverrideManualAnswerMode; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_PTCUserAccessPolicy: $.ASN1Decoder<PTCUserAccessPolicy> = $._decodeEnumerated;
 export const _encode_PTCUserAccessPolicy: $.ASN1Encoder<PTCUserAccessPolicy> = $._encodeEnumerated;
 

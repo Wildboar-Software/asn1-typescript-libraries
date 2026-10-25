@@ -59,7 +59,7 @@ type AdditionalNetworkResource = _enum_for_AdditionalNetworkResource | ENUMERATE
  * @type {number}
  */
 export
-const AdditionalNetworkResource_sgsn = _enum_for_AdditionalNetworkResource.sgsn satisfies AdditionalNetworkResource; /* LONG_NAMED_ENUMERATED_VALUE */
+const AdditionalNetworkResource_sgsn = _enum_for_AdditionalNetworkResource.sgsn; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sgsn
@@ -71,7 +71,7 @@ const AdditionalNetworkResource_sgsn = _enum_for_AdditionalNetworkResource.sgsn 
  * @type {number}
  */
 export
-const sgsn = AdditionalNetworkResource_sgsn satisfies AdditionalNetworkResource; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sgsn = AdditionalNetworkResource_sgsn; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AdditionalNetworkResource_ggsn
@@ -83,7 +83,7 @@ const sgsn = AdditionalNetworkResource_sgsn satisfies AdditionalNetworkResource;
  * @type {number}
  */
 export
-const AdditionalNetworkResource_ggsn = _enum_for_AdditionalNetworkResource.ggsn satisfies AdditionalNetworkResource; /* LONG_NAMED_ENUMERATED_VALUE */
+const AdditionalNetworkResource_ggsn = _enum_for_AdditionalNetworkResource.ggsn; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ggsn
@@ -95,7 +95,7 @@ const AdditionalNetworkResource_ggsn = _enum_for_AdditionalNetworkResource.ggsn 
  * @type {number}
  */
 export
-const ggsn = AdditionalNetworkResource_ggsn satisfies AdditionalNetworkResource; /* SHORT_NAMED_ENUMERATED_VALUE */
+const ggsn = AdditionalNetworkResource_ggsn; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AdditionalNetworkResource_gmlc
@@ -107,7 +107,7 @@ const ggsn = AdditionalNetworkResource_ggsn satisfies AdditionalNetworkResource;
  * @type {number}
  */
 export
-const AdditionalNetworkResource_gmlc = _enum_for_AdditionalNetworkResource.gmlc satisfies AdditionalNetworkResource; /* LONG_NAMED_ENUMERATED_VALUE */
+const AdditionalNetworkResource_gmlc = _enum_for_AdditionalNetworkResource.gmlc; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary gmlc
@@ -119,7 +119,7 @@ const AdditionalNetworkResource_gmlc = _enum_for_AdditionalNetworkResource.gmlc 
  * @type {number}
  */
 export
-const gmlc = AdditionalNetworkResource_gmlc satisfies AdditionalNetworkResource; /* SHORT_NAMED_ENUMERATED_VALUE */
+const gmlc = AdditionalNetworkResource_gmlc; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AdditionalNetworkResource_gsmSCF
@@ -131,7 +131,7 @@ const gmlc = AdditionalNetworkResource_gmlc satisfies AdditionalNetworkResource;
  * @type {number}
  */
 export
-const AdditionalNetworkResource_gsmSCF = _enum_for_AdditionalNetworkResource.gsmSCF satisfies AdditionalNetworkResource; /* LONG_NAMED_ENUMERATED_VALUE */
+const AdditionalNetworkResource_gsmSCF = _enum_for_AdditionalNetworkResource.gsmSCF; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary gsmSCF
@@ -143,7 +143,7 @@ const AdditionalNetworkResource_gsmSCF = _enum_for_AdditionalNetworkResource.gsm
  * @type {number}
  */
 export
-const gsmSCF = AdditionalNetworkResource_gsmSCF satisfies AdditionalNetworkResource; /* SHORT_NAMED_ENUMERATED_VALUE */
+const gsmSCF = AdditionalNetworkResource_gsmSCF; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AdditionalNetworkResource_nplr
@@ -155,7 +155,7 @@ const gsmSCF = AdditionalNetworkResource_gsmSCF satisfies AdditionalNetworkResou
  * @type {number}
  */
 export
-const AdditionalNetworkResource_nplr = _enum_for_AdditionalNetworkResource.nplr satisfies AdditionalNetworkResource; /* LONG_NAMED_ENUMERATED_VALUE */
+const AdditionalNetworkResource_nplr = _enum_for_AdditionalNetworkResource.nplr; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary nplr
@@ -167,7 +167,7 @@ const AdditionalNetworkResource_nplr = _enum_for_AdditionalNetworkResource.nplr 
  * @type {number}
  */
 export
-const nplr = AdditionalNetworkResource_nplr satisfies AdditionalNetworkResource; /* SHORT_NAMED_ENUMERATED_VALUE */
+const nplr = AdditionalNetworkResource_nplr; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AdditionalNetworkResource_auc
@@ -179,7 +179,7 @@ const nplr = AdditionalNetworkResource_nplr satisfies AdditionalNetworkResource;
  * @type {number}
  */
 export
-const AdditionalNetworkResource_auc = _enum_for_AdditionalNetworkResource.auc satisfies AdditionalNetworkResource; /* LONG_NAMED_ENUMERATED_VALUE */
+const AdditionalNetworkResource_auc = _enum_for_AdditionalNetworkResource.auc; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary auc
@@ -191,7 +191,7 @@ const AdditionalNetworkResource_auc = _enum_for_AdditionalNetworkResource.auc sa
  * @type {number}
  */
 export
-const auc = AdditionalNetworkResource_auc satisfies AdditionalNetworkResource; /* SHORT_NAMED_ENUMERATED_VALUE */
+const auc = AdditionalNetworkResource_auc; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AdditionalNetworkResource_ue
@@ -204,7 +204,7 @@ const auc = AdditionalNetworkResource_auc satisfies AdditionalNetworkResource; /
  * @type {number}
  */
 export
-const AdditionalNetworkResource_ue = _enum_for_AdditionalNetworkResource.ue satisfies AdditionalNetworkResource; /* LONG_NAMED_ENUMERATED_VALUE */
+const AdditionalNetworkResource_ue = _enum_for_AdditionalNetworkResource.ue; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ue
@@ -217,7 +217,7 @@ const AdditionalNetworkResource_ue = _enum_for_AdditionalNetworkResource.ue sati
  * @type {number}
  */
 export
-const ue = AdditionalNetworkResource_ue satisfies AdditionalNetworkResource; /* SHORT_NAMED_ENUMERATED_VALUE */
+const ue = AdditionalNetworkResource_ue; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AdditionalNetworkResource_mme
@@ -230,7 +230,7 @@ const ue = AdditionalNetworkResource_ue satisfies AdditionalNetworkResource; /* 
  * @type {number}
  */
 export
-const AdditionalNetworkResource_mme = _enum_for_AdditionalNetworkResource.mme satisfies AdditionalNetworkResource; /* LONG_NAMED_ENUMERATED_VALUE */
+const AdditionalNetworkResource_mme = _enum_for_AdditionalNetworkResource.mme; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary mme
@@ -243,7 +243,7 @@ const AdditionalNetworkResource_mme = _enum_for_AdditionalNetworkResource.mme sa
  * @type {number}
  */
 export
-const mme = AdditionalNetworkResource_mme satisfies AdditionalNetworkResource; /* SHORT_NAMED_ENUMERATED_VALUE */
+const mme = AdditionalNetworkResource_mme; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) AdditionalNetworkResource

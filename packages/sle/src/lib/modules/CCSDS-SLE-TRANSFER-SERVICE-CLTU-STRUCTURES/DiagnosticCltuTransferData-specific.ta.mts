@@ -62,7 +62,7 @@ const DiagnosticCltuTransferData_specific_unableToProcess = 0 satisfies Diagnost
  * @type {number}
  */
 export
-const unableToProcess = DiagnosticCltuTransferData_specific_unableToProcess satisfies DiagnosticCltuTransferData_specific; /* SHORT_NAMED_INTEGER_VALUE */
+const unableToProcess = DiagnosticCltuTransferData_specific_unableToProcess; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagnosticCltuTransferData_specific_unableToStore
@@ -86,7 +86,7 @@ const DiagnosticCltuTransferData_specific_unableToStore = 1 satisfies Diagnostic
  * @type {number}
  */
 export
-const unableToStore = DiagnosticCltuTransferData_specific_unableToStore satisfies DiagnosticCltuTransferData_specific; /* SHORT_NAMED_INTEGER_VALUE */
+const unableToStore = DiagnosticCltuTransferData_specific_unableToStore; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagnosticCltuTransferData_specific_outOfSequence
@@ -111,7 +111,7 @@ const DiagnosticCltuTransferData_specific_outOfSequence = 2 satisfies Diagnostic
  * @type {number}
  */
 export
-const outOfSequence = DiagnosticCltuTransferData_specific_outOfSequence satisfies DiagnosticCltuTransferData_specific; /* SHORT_NAMED_INTEGER_VALUE */
+const outOfSequence = DiagnosticCltuTransferData_specific_outOfSequence; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagnosticCltuTransferData_specific_inconsistentTimeRange
@@ -135,7 +135,7 @@ const DiagnosticCltuTransferData_specific_inconsistentTimeRange = 3 satisfies Di
  * @type {number}
  */
 export
-const inconsistentTimeRange = DiagnosticCltuTransferData_specific_inconsistentTimeRange satisfies DiagnosticCltuTransferData_specific; /* SHORT_NAMED_INTEGER_VALUE */
+const inconsistentTimeRange = DiagnosticCltuTransferData_specific_inconsistentTimeRange; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagnosticCltuTransferData_specific_invalidTime
@@ -162,7 +162,7 @@ const DiagnosticCltuTransferData_specific_invalidTime = 4 satisfies DiagnosticCl
  * @type {number}
  */
 export
-const invalidTime = DiagnosticCltuTransferData_specific_invalidTime satisfies DiagnosticCltuTransferData_specific; /* SHORT_NAMED_INTEGER_VALUE */
+const invalidTime = DiagnosticCltuTransferData_specific_invalidTime; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagnosticCltuTransferData_specific_lateSldu
@@ -186,7 +186,7 @@ const DiagnosticCltuTransferData_specific_lateSldu = 5 satisfies DiagnosticCltuT
  * @type {number}
  */
 export
-const lateSldu = DiagnosticCltuTransferData_specific_lateSldu satisfies DiagnosticCltuTransferData_specific; /* SHORT_NAMED_INTEGER_VALUE */
+const lateSldu = DiagnosticCltuTransferData_specific_lateSldu; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagnosticCltuTransferData_specific_invalidDelayTime
@@ -209,7 +209,7 @@ const DiagnosticCltuTransferData_specific_invalidDelayTime = 6 satisfies Diagnos
  * @type {number}
  */
 export
-const invalidDelayTime = DiagnosticCltuTransferData_specific_invalidDelayTime satisfies DiagnosticCltuTransferData_specific; /* SHORT_NAMED_INTEGER_VALUE */
+const invalidDelayTime = DiagnosticCltuTransferData_specific_invalidDelayTime; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagnosticCltuTransferData_specific_cltuError
@@ -234,7 +234,7 @@ const DiagnosticCltuTransferData_specific_cltuError = 7 satisfies DiagnosticCltu
  * @type {number}
  */
 export
-const cltuError = DiagnosticCltuTransferData_specific_cltuError satisfies DiagnosticCltuTransferData_specific; /* SHORT_NAMED_INTEGER_VALUE */
+const cltuError = DiagnosticCltuTransferData_specific_cltuError; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_DiagnosticCltuTransferData_specific: $.ASN1Decoder<DiagnosticCltuTransferData_specific> = $._decodeInteger;
 export const _encode_DiagnosticCltuTransferData_specific: $.ASN1Encoder<DiagnosticCltuTransferData_specific> = $._encodeInteger;
 

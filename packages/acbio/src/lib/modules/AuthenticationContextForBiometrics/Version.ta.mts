@@ -39,7 +39,7 @@ export const Version_v0 = 0 satisfies Version; /* LONG_NAMED_INTEGER_VALUE */
  * @constant
  * @type {number}
  */
-export const v0 = Version_v0 satisfies Version; /* SHORT_NAMED_INTEGER_VALUE */
+export const v0 = Version_v0; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 

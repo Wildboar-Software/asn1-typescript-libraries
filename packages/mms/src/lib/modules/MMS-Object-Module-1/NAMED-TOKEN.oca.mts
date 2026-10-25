@@ -110,7 +110,7 @@ const NAMED_TOKEN_state = _enum_for_NAMED_TOKEN_state;
  * @type {number}
  */
 export
-const NAMED_TOKEN_state_free = NAMED_TOKEN_state.free satisfies NAMED_TOKEN_state; /* LONG_NAMED_ENUMERATED_VALUE */
+const NAMED_TOKEN_state_free = NAMED_TOKEN_state.free; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NAMED_TOKEN_state_owned
@@ -118,6 +118,6 @@ const NAMED_TOKEN_state_free = NAMED_TOKEN_state.free satisfies NAMED_TOKEN_stat
  * @type {number}
  */
 export
-const NAMED_TOKEN_state_owned = NAMED_TOKEN_state.owned satisfies NAMED_TOKEN_state; /* LONG_NAMED_ENUMERATED_VALUE */
+const NAMED_TOKEN_state_owned = NAMED_TOKEN_state.owned; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /* eslint-enable */

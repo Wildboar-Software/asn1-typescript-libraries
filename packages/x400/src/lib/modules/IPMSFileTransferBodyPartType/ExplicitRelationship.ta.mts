@@ -39,7 +39,7 @@ export const ExplicitRelationship_unspecified = 0 satisfies ExplicitRelationship
  * @constant
  * @type {number}
  */
-export const unspecified = ExplicitRelationship_unspecified satisfies ExplicitRelationship; /* SHORT_NAMED_INTEGER_VALUE */
+export const unspecified = ExplicitRelationship_unspecified; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ExplicitRelationship_new_file
@@ -53,7 +53,7 @@ export const ExplicitRelationship_new_file = 1 satisfies ExplicitRelationship; /
  * @constant
  * @type {number}
  */
-export const new_file = ExplicitRelationship_new_file satisfies ExplicitRelationship; /* SHORT_NAMED_INTEGER_VALUE */
+export const new_file = ExplicitRelationship_new_file; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ExplicitRelationship_replacement
@@ -67,7 +67,7 @@ export const ExplicitRelationship_replacement = 2 satisfies ExplicitRelationship
  * @constant
  * @type {number}
  */
-export const replacement = ExplicitRelationship_replacement satisfies ExplicitRelationship; /* SHORT_NAMED_INTEGER_VALUE */
+export const replacement = ExplicitRelationship_replacement; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ExplicitRelationship_extension
@@ -81,7 +81,7 @@ export const ExplicitRelationship_extension = 3 satisfies ExplicitRelationship; 
  * @constant
  * @type {number}
  */
-export const extension = ExplicitRelationship_extension satisfies ExplicitRelationship; /* SHORT_NAMED_INTEGER_VALUE */
+export const extension = ExplicitRelationship_extension; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_ExplicitRelationship = $._decodeInteger;

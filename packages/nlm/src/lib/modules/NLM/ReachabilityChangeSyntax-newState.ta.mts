@@ -86,7 +86,7 @@ export const ReachabilityChangeSyntax_newState = _enum_for_ReachabilityChangeSyn
  * @type {number}
  */
 export const ReachabilityChangeSyntax_newState_down =
-    ReachabilityChangeSyntax_newState.down satisfies ReachabilityChangeSyntax_newState; /* LONG_NAMED_ENUMERATED_VALUE */
+    ReachabilityChangeSyntax_newState.down; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -101,7 +101,7 @@ export const ReachabilityChangeSyntax_newState_down =
  * @type {number}
  */
 export const down =
-    ReachabilityChangeSyntax_newState.down satisfies ReachabilityChangeSyntax_newState; /* SHORT_NAMED_ENUMERATED_VALUE */
+    ReachabilityChangeSyntax_newState.down; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -116,7 +116,7 @@ export const down =
  * @type {number}
  */
 export const ReachabilityChangeSyntax_newState_up =
-    ReachabilityChangeSyntax_newState.up satisfies ReachabilityChangeSyntax_newState; /* LONG_NAMED_ENUMERATED_VALUE */
+    ReachabilityChangeSyntax_newState.up; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -131,7 +131,7 @@ export const ReachabilityChangeSyntax_newState_up =
  * @type {number}
  */
 export const up =
-    ReachabilityChangeSyntax_newState.up satisfies ReachabilityChangeSyntax_newState; /* SHORT_NAMED_ENUMERATED_VALUE */
+    ReachabilityChangeSyntax_newState.up; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 let _cached_decoder_for_ReachabilityChangeSyntax_newState: $.ASN1Decoder<ReachabilityChangeSyntax_newState> | null = null;

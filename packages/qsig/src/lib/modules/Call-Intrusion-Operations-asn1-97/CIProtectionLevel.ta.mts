@@ -108,7 +108,7 @@ const CIProtectionLevel = _enum_for_CIProtectionLevel;
  * @type {number}
  */
 export
-const CIProtectionLevel_lowProtection = CIProtectionLevel.lowProtection satisfies CIProtectionLevel; /* LONG_NAMED_ENUMERATED_VALUE */
+const CIProtectionLevel_lowProtection = CIProtectionLevel.lowProtection; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary lowProtection
@@ -117,7 +117,7 @@ const CIProtectionLevel_lowProtection = CIProtectionLevel.lowProtection satisfie
  * @type {number}
  */
 export
-const lowProtection = CIProtectionLevel.lowProtection satisfies CIProtectionLevel; /* SHORT_NAMED_ENUMERATED_VALUE */
+const lowProtection = CIProtectionLevel.lowProtection; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CIProtectionLevel_mediumProtection
@@ -132,7 +132,7 @@ const lowProtection = CIProtectionLevel.lowProtection satisfies CIProtectionLeve
  * @type {number}
  */
 export
-const CIProtectionLevel_mediumProtection = CIProtectionLevel.mediumProtection satisfies CIProtectionLevel; /* LONG_NAMED_ENUMERATED_VALUE */
+const CIProtectionLevel_mediumProtection = CIProtectionLevel.mediumProtection; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary mediumProtection
@@ -141,7 +141,7 @@ const CIProtectionLevel_mediumProtection = CIProtectionLevel.mediumProtection sa
  * @type {number}
  */
 export
-const mediumProtection = CIProtectionLevel.mediumProtection satisfies CIProtectionLevel; /* SHORT_NAMED_ENUMERATED_VALUE */
+const mediumProtection = CIProtectionLevel.mediumProtection; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CIProtectionLevel_highProtection
@@ -156,7 +156,7 @@ const mediumProtection = CIProtectionLevel.mediumProtection satisfies CIProtecti
  * @type {number}
  */
 export
-const CIProtectionLevel_highProtection = CIProtectionLevel.highProtection satisfies CIProtectionLevel; /* LONG_NAMED_ENUMERATED_VALUE */
+const CIProtectionLevel_highProtection = CIProtectionLevel.highProtection; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary highProtection
@@ -165,7 +165,7 @@ const CIProtectionLevel_highProtection = CIProtectionLevel.highProtection satisf
  * @type {number}
  */
 export
-const highProtection = CIProtectionLevel.highProtection satisfies CIProtectionLevel; /* SHORT_NAMED_ENUMERATED_VALUE */
+const highProtection = CIProtectionLevel.highProtection; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CIProtectionLevel_fullProtection
@@ -179,7 +179,7 @@ const highProtection = CIProtectionLevel.highProtection satisfies CIProtectionLe
  * @type {number}
  */
 export
-const CIProtectionLevel_fullProtection = CIProtectionLevel.fullProtection satisfies CIProtectionLevel; /* LONG_NAMED_ENUMERATED_VALUE */
+const CIProtectionLevel_fullProtection = CIProtectionLevel.fullProtection; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary fullProtection
@@ -188,7 +188,7 @@ const CIProtectionLevel_fullProtection = CIProtectionLevel.fullProtection satisf
  * @type {number}
  */
 export
-const fullProtection = CIProtectionLevel.fullProtection satisfies CIProtectionLevel; /* SHORT_NAMED_ENUMERATED_VALUE */
+const fullProtection = CIProtectionLevel.fullProtection; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_CIProtectionLevel: $.ASN1Decoder<CIProtectionLevel> = $._decodeEnumerated;

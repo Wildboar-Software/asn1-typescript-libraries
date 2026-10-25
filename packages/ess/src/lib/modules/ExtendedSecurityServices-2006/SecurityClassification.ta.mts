@@ -44,7 +44,7 @@ export const SecurityClassification_unmarked = 0 satisfies SecurityClassificatio
  * @constant
  * @type {number}
  */
-export const unmarked = SecurityClassification_unmarked satisfies SecurityClassification; /* SHORT_NAMED_INTEGER_VALUE */
+export const unmarked = SecurityClassification_unmarked; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -60,7 +60,7 @@ export const SecurityClassification_unclassified = 1 satisfies SecurityClassific
  * @constant
  * @type {number}
  */
-export const unclassified = SecurityClassification_unclassified satisfies SecurityClassification; /* SHORT_NAMED_INTEGER_VALUE */
+export const unclassified = SecurityClassification_unclassified; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -76,7 +76,7 @@ export const SecurityClassification_restricted = 2 satisfies SecurityClassificat
  * @constant
  * @type {number}
  */
-export const restricted = SecurityClassification_restricted satisfies SecurityClassification; /* SHORT_NAMED_INTEGER_VALUE */
+export const restricted = SecurityClassification_restricted; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -92,7 +92,7 @@ export const SecurityClassification_confidential = 3 satisfies SecurityClassific
  * @constant
  * @type {number}
  */
-export const confidential = SecurityClassification_confidential satisfies SecurityClassification; /* SHORT_NAMED_INTEGER_VALUE */
+export const confidential = SecurityClassification_confidential; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -108,7 +108,7 @@ export const SecurityClassification_secret = 4 satisfies SecurityClassification;
  * @constant
  * @type {number}
  */
-export const secret = SecurityClassification_secret satisfies SecurityClassification; /* SHORT_NAMED_INTEGER_VALUE */
+export const secret = SecurityClassification_secret; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -124,7 +124,7 @@ export const SecurityClassification_top_secret = 5 satisfies SecurityClassificat
  * @constant
  * @type {number}
  */
-export const top_secret = SecurityClassification_top_secret satisfies SecurityClassification; /* SHORT_NAMED_INTEGER_VALUE */
+export const top_secret = SecurityClassification_top_secret; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 

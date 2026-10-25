@@ -94,7 +94,7 @@ const ProximityAlertIndication = _enum_for_ProximityAlertIndication;
  * @type {number}
  */
 export
-const ProximityAlertIndication_alerted = ProximityAlertIndication.alerted satisfies ProximityAlertIndication; /* LONG_NAMED_ENUMERATED_VALUE */
+const ProximityAlertIndication_alerted = ProximityAlertIndication.alerted; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary alerted
@@ -106,7 +106,7 @@ const ProximityAlertIndication_alerted = ProximityAlertIndication.alerted satisf
  * @type {number}
  */
 export
-const alerted = ProximityAlertIndication.alerted satisfies ProximityAlertIndication; /* SHORT_NAMED_ENUMERATED_VALUE */
+const alerted = ProximityAlertIndication.alerted; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ProximityAlertIndication_noAlert
@@ -120,7 +120,7 @@ const alerted = ProximityAlertIndication.alerted satisfies ProximityAlertIndicat
  * @type {number}
  */
 export
-const ProximityAlertIndication_noAlert = ProximityAlertIndication.noAlert satisfies ProximityAlertIndication; /* LONG_NAMED_ENUMERATED_VALUE */
+const ProximityAlertIndication_noAlert = ProximityAlertIndication.noAlert; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary noAlert
@@ -132,7 +132,7 @@ const ProximityAlertIndication_noAlert = ProximityAlertIndication.noAlert satisf
  * @type {number}
  */
 export
-const noAlert = ProximityAlertIndication.noAlert satisfies ProximityAlertIndication; /* SHORT_NAMED_ENUMERATED_VALUE */
+const noAlert = ProximityAlertIndication.noAlert; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_ProximityAlertIndication: $.ASN1Decoder<ProximityAlertIndication> = $._decodeEnumerated;

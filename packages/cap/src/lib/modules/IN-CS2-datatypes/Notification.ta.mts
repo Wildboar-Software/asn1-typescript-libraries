@@ -83,7 +83,7 @@ const Notification = _enum_for_Notification;
  * @type {number}
  */
 export
-const Notification_userAbandon = Notification.userAbandon satisfies Notification; /* LONG_NAMED_ENUMERATED_VALUE */
+const Notification_userAbandon = Notification.userAbandon; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary userAbandon
@@ -91,7 +91,7 @@ const Notification_userAbandon = Notification.userAbandon satisfies Notification
  * @type {number}
  */
 export
-const userAbandon = Notification.userAbandon satisfies Notification; /* SHORT_NAMED_ENUMERATED_VALUE */
+const userAbandon = Notification.userAbandon; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Notification_callFailure
@@ -99,7 +99,7 @@ const userAbandon = Notification.userAbandon satisfies Notification; /* SHORT_NA
  * @type {number}
  */
 export
-const Notification_callFailure = Notification.callFailure satisfies Notification; /* LONG_NAMED_ENUMERATED_VALUE */
+const Notification_callFailure = Notification.callFailure; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary callFailure
@@ -107,7 +107,7 @@ const Notification_callFailure = Notification.callFailure satisfies Notification
  * @type {number}
  */
 export
-const callFailure = Notification.callFailure satisfies Notification; /* SHORT_NAMED_ENUMERATED_VALUE */
+const callFailure = Notification.callFailure; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Notification_noReply
@@ -115,7 +115,7 @@ const callFailure = Notification.callFailure satisfies Notification; /* SHORT_NA
  * @type {number}
  */
 export
-const Notification_noReply = Notification.noReply satisfies Notification; /* LONG_NAMED_ENUMERATED_VALUE */
+const Notification_noReply = Notification.noReply; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary noReply
@@ -123,7 +123,7 @@ const Notification_noReply = Notification.noReply satisfies Notification; /* LON
  * @type {number}
  */
 export
-const noReply = Notification.noReply satisfies Notification; /* SHORT_NAMED_ENUMERATED_VALUE */
+const noReply = Notification.noReply; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Notification_callRelease
@@ -131,7 +131,7 @@ const noReply = Notification.noReply satisfies Notification; /* SHORT_NAMED_ENUM
  * @type {number}
  */
 export
-const Notification_callRelease = Notification.callRelease satisfies Notification; /* LONG_NAMED_ENUMERATED_VALUE */
+const Notification_callRelease = Notification.callRelease; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary callRelease
@@ -139,7 +139,7 @@ const Notification_callRelease = Notification.callRelease satisfies Notification
  * @type {number}
  */
 export
-const callRelease = Notification.callRelease satisfies Notification; /* SHORT_NAMED_ENUMERATED_VALUE */
+const callRelease = Notification.callRelease; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Notification_ssInvocation
@@ -147,7 +147,7 @@ const callRelease = Notification.callRelease satisfies Notification; /* SHORT_NA
  * @type {number}
  */
 export
-const Notification_ssInvocation = Notification.ssInvocation satisfies Notification; /* LONG_NAMED_ENUMERATED_VALUE */
+const Notification_ssInvocation = Notification.ssInvocation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ssInvocation
@@ -155,7 +155,7 @@ const Notification_ssInvocation = Notification.ssInvocation satisfies Notificati
  * @type {number}
  */
 export
-const ssInvocation = Notification.ssInvocation satisfies Notification; /* SHORT_NAMED_ENUMERATED_VALUE */
+const ssInvocation = Notification.ssInvocation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Notification_creditLimitReached
@@ -163,7 +163,7 @@ const ssInvocation = Notification.ssInvocation satisfies Notification; /* SHORT_
  * @type {number}
  */
 export
-const Notification_creditLimitReached = Notification.creditLimitReached satisfies Notification; /* LONG_NAMED_ENUMERATED_VALUE */
+const Notification_creditLimitReached = Notification.creditLimitReached; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary creditLimitReached
@@ -171,7 +171,7 @@ const Notification_creditLimitReached = Notification.creditLimitReached satisfie
  * @type {number}
  */
 export
-const creditLimitReached = Notification.creditLimitReached satisfies Notification; /* SHORT_NAMED_ENUMERATED_VALUE */
+const creditLimitReached = Notification.creditLimitReached; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Notification_callDuration
@@ -179,7 +179,7 @@ const creditLimitReached = Notification.creditLimitReached satisfies Notificatio
  * @type {number}
  */
 export
-const Notification_callDuration = Notification.callDuration satisfies Notification; /* LONG_NAMED_ENUMERATED_VALUE */
+const Notification_callDuration = Notification.callDuration; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary callDuration
@@ -187,7 +187,7 @@ const Notification_callDuration = Notification.callDuration satisfies Notificati
  * @type {number}
  */
 export
-const callDuration = Notification.callDuration satisfies Notification; /* SHORT_NAMED_ENUMERATED_VALUE */
+const callDuration = Notification.callDuration; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Notification_calledNumber
@@ -195,7 +195,7 @@ const callDuration = Notification.callDuration satisfies Notification; /* SHORT_
  * @type {number}
  */
 export
-const Notification_calledNumber = Notification.calledNumber satisfies Notification; /* LONG_NAMED_ENUMERATED_VALUE */
+const Notification_calledNumber = Notification.calledNumber; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary calledNumber
@@ -203,7 +203,7 @@ const Notification_calledNumber = Notification.calledNumber satisfies Notificati
  * @type {number}
  */
 export
-const calledNumber = Notification.calledNumber satisfies Notification; /* SHORT_NAMED_ENUMERATED_VALUE */
+const calledNumber = Notification.calledNumber; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Notification_answeredCall
@@ -211,7 +211,7 @@ const calledNumber = Notification.calledNumber satisfies Notification; /* SHORT_
  * @type {number}
  */
 export
-const Notification_answeredCall = Notification.answeredCall satisfies Notification; /* LONG_NAMED_ENUMERATED_VALUE */
+const Notification_answeredCall = Notification.answeredCall; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary answeredCall
@@ -219,7 +219,7 @@ const Notification_answeredCall = Notification.answeredCall satisfies Notificati
  * @type {number}
  */
 export
-const answeredCall = Notification.answeredCall satisfies Notification; /* SHORT_NAMED_ENUMERATED_VALUE */
+const answeredCall = Notification.answeredCall; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_Notification = $._decodeEnumerated;
 export const _encode_Notification = $._encodeEnumerated;
 

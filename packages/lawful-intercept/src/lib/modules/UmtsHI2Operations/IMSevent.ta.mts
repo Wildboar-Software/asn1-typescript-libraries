@@ -84,7 +84,7 @@ type IMSevent = _enum_for_IMSevent | ENUMERATED;
  * @type {number}
  */
 export
-const IMSevent_unfilteredSIPmessage = _enum_for_IMSevent.unfilteredSIPmessage satisfies IMSevent; /* LONG_NAMED_ENUMERATED_VALUE */
+const IMSevent_unfilteredSIPmessage = _enum_for_IMSevent.unfilteredSIPmessage; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unfilteredSIPmessage
@@ -95,7 +95,7 @@ const IMSevent_unfilteredSIPmessage = _enum_for_IMSevent.unfilteredSIPmessage sa
  * @type {number}
  */
 export
-const unfilteredSIPmessage = IMSevent_unfilteredSIPmessage satisfies IMSevent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unfilteredSIPmessage = IMSevent_unfilteredSIPmessage; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary IMSevent_sIPheaderOnly
@@ -110,7 +110,7 @@ const unfilteredSIPmessage = IMSevent_unfilteredSIPmessage satisfies IMSevent; /
  * @type {number}
  */
 export
-const IMSevent_sIPheaderOnly = _enum_for_IMSevent.sIPheaderOnly satisfies IMSevent; /* LONG_NAMED_ENUMERATED_VALUE */
+const IMSevent_sIPheaderOnly = _enum_for_IMSevent.sIPheaderOnly; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sIPheaderOnly
@@ -121,7 +121,7 @@ const IMSevent_sIPheaderOnly = _enum_for_IMSevent.sIPheaderOnly satisfies IMSeve
  * @type {number}
  */
 export
-const sIPheaderOnly = IMSevent_sIPheaderOnly satisfies IMSevent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sIPheaderOnly = IMSevent_sIPheaderOnly; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary IMSevent_decryptionKeysAvailable
@@ -134,7 +134,7 @@ const sIPheaderOnly = IMSevent_sIPheaderOnly satisfies IMSevent; /* SHORT_NAMED_
  * @type {number}
  */
 export
-const IMSevent_decryptionKeysAvailable = _enum_for_IMSevent.decryptionKeysAvailable satisfies IMSevent; /* LONG_NAMED_ENUMERATED_VALUE */
+const IMSevent_decryptionKeysAvailable = _enum_for_IMSevent.decryptionKeysAvailable; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary decryptionKeysAvailable
@@ -145,7 +145,7 @@ const IMSevent_decryptionKeysAvailable = _enum_for_IMSevent.decryptionKeysAvaila
  * @type {number}
  */
 export
-const decryptionKeysAvailable = IMSevent_decryptionKeysAvailable satisfies IMSevent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const decryptionKeysAvailable = IMSevent_decryptionKeysAvailable; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary IMSevent_startOfInterceptionForIMSEstablishedSession
@@ -159,7 +159,7 @@ const decryptionKeysAvailable = IMSevent_decryptionKeysAvailable satisfies IMSev
  * @type {number}
  */
 export
-const IMSevent_startOfInterceptionForIMSEstablishedSession = _enum_for_IMSevent.startOfInterceptionForIMSEstablishedSession satisfies IMSevent; /* LONG_NAMED_ENUMERATED_VALUE */
+const IMSevent_startOfInterceptionForIMSEstablishedSession = _enum_for_IMSevent.startOfInterceptionForIMSEstablishedSession; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary startOfInterceptionForIMSEstablishedSession
@@ -170,7 +170,7 @@ const IMSevent_startOfInterceptionForIMSEstablishedSession = _enum_for_IMSevent.
  * @type {number}
  */
 export
-const startOfInterceptionForIMSEstablishedSession = IMSevent_startOfInterceptionForIMSEstablishedSession satisfies IMSevent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const startOfInterceptionForIMSEstablishedSession = IMSevent_startOfInterceptionForIMSEstablishedSession; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary IMSevent_xCAPRequest
@@ -184,7 +184,7 @@ const startOfInterceptionForIMSEstablishedSession = IMSevent_startOfInterception
  * @type {number}
  */
 export
-const IMSevent_xCAPRequest = _enum_for_IMSevent.xCAPRequest satisfies IMSevent; /* LONG_NAMED_ENUMERATED_VALUE */
+const IMSevent_xCAPRequest = _enum_for_IMSevent.xCAPRequest; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary xCAPRequest
@@ -195,7 +195,7 @@ const IMSevent_xCAPRequest = _enum_for_IMSevent.xCAPRequest satisfies IMSevent; 
  * @type {number}
  */
 export
-const xCAPRequest = IMSevent_xCAPRequest satisfies IMSevent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const xCAPRequest = IMSevent_xCAPRequest; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary IMSevent_xCAPResponse
@@ -209,7 +209,7 @@ const xCAPRequest = IMSevent_xCAPRequest satisfies IMSevent; /* SHORT_NAMED_ENUM
  * @type {number}
  */
 export
-const IMSevent_xCAPResponse = _enum_for_IMSevent.xCAPResponse satisfies IMSevent; /* LONG_NAMED_ENUMERATED_VALUE */
+const IMSevent_xCAPResponse = _enum_for_IMSevent.xCAPResponse; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary xCAPResponse
@@ -220,7 +220,7 @@ const IMSevent_xCAPResponse = _enum_for_IMSevent.xCAPResponse satisfies IMSevent
  * @type {number}
  */
 export
-const xCAPResponse = IMSevent_xCAPResponse satisfies IMSevent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const xCAPResponse = IMSevent_xCAPResponse; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary IMSevent_ccUnavailable
@@ -234,7 +234,7 @@ const xCAPResponse = IMSevent_xCAPResponse satisfies IMSevent; /* SHORT_NAMED_EN
  * @type {number}
  */
 export
-const IMSevent_ccUnavailable = _enum_for_IMSevent.ccUnavailable satisfies IMSevent; /* LONG_NAMED_ENUMERATED_VALUE */
+const IMSevent_ccUnavailable = _enum_for_IMSevent.ccUnavailable; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ccUnavailable
@@ -245,7 +245,7 @@ const IMSevent_ccUnavailable = _enum_for_IMSevent.ccUnavailable satisfies IMSeve
  * @type {number}
  */
 export
-const ccUnavailable = IMSevent_ccUnavailable satisfies IMSevent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const ccUnavailable = IMSevent_ccUnavailable; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_IMSevent: $.ASN1Decoder<IMSevent> = $._decodeEnumerated;
 export const _encode_IMSevent: $.ASN1Encoder<IMSevent> = $._encodeEnumerated;
 

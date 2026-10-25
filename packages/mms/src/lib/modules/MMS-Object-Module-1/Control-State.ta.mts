@@ -59,7 +59,7 @@ const Control_State_normal = 0 satisfies Control_State; /* LONG_NAMED_INTEGER_VA
  * @type {number}
  */
 export
-const normal = Control_State_normal satisfies Control_State; /* SHORT_NAMED_INTEGER_VALUE */
+const normal = Control_State_normal; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Control_State_controlling
@@ -85,7 +85,7 @@ const Control_State_controlling = 1 satisfies Control_State; /* LONG_NAMED_INTEG
  * @type {number}
  */
 export
-const controlling = Control_State_controlling satisfies Control_State; /* SHORT_NAMED_INTEGER_VALUE */
+const controlling = Control_State_controlling; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Control_State_controlled
@@ -109,7 +109,7 @@ const Control_State_controlled = 2 satisfies Control_State; /* LONG_NAMED_INTEGE
  * @type {number}
  */
 export
-const controlled = Control_State_controlled satisfies Control_State; /* SHORT_NAMED_INTEGER_VALUE */
+const controlled = Control_State_controlled; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_Control_State = $._decodeInteger;
 export const _encode_Control_State = $._encodeInteger;
 

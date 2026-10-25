@@ -74,7 +74,7 @@ const SMSChargingInformation_messageClass = _enum_for_SMSChargingInformation_mes
  * @type {number}
  */
 export
-const SMSChargingInformation_messageClass_personal = SMSChargingInformation_messageClass.personal satisfies SMSChargingInformation_messageClass; /* LONG_NAMED_ENUMERATED_VALUE */
+const SMSChargingInformation_messageClass_personal = SMSChargingInformation_messageClass.personal; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary personal
@@ -82,7 +82,7 @@ const SMSChargingInformation_messageClass_personal = SMSChargingInformation_mess
  * @type {number}
  */
 export
-const personal = SMSChargingInformation_messageClass.personal satisfies SMSChargingInformation_messageClass; /* SHORT_NAMED_ENUMERATED_VALUE */
+const personal = SMSChargingInformation_messageClass.personal; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SMSChargingInformation_messageClass_advertisement
@@ -90,7 +90,7 @@ const personal = SMSChargingInformation_messageClass.personal satisfies SMSCharg
  * @type {number}
  */
 export
-const SMSChargingInformation_messageClass_advertisement = SMSChargingInformation_messageClass.advertisement satisfies SMSChargingInformation_messageClass; /* LONG_NAMED_ENUMERATED_VALUE */
+const SMSChargingInformation_messageClass_advertisement = SMSChargingInformation_messageClass.advertisement; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary advertisement
@@ -98,7 +98,7 @@ const SMSChargingInformation_messageClass_advertisement = SMSChargingInformation
  * @type {number}
  */
 export
-const advertisement = SMSChargingInformation_messageClass.advertisement satisfies SMSChargingInformation_messageClass; /* SHORT_NAMED_ENUMERATED_VALUE */
+const advertisement = SMSChargingInformation_messageClass.advertisement; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SMSChargingInformation_messageClass_information_service
@@ -106,7 +106,7 @@ const advertisement = SMSChargingInformation_messageClass.advertisement satisfie
  * @type {number}
  */
 export
-const SMSChargingInformation_messageClass_information_service = SMSChargingInformation_messageClass.information_service satisfies SMSChargingInformation_messageClass; /* LONG_NAMED_ENUMERATED_VALUE */
+const SMSChargingInformation_messageClass_information_service = SMSChargingInformation_messageClass.information_service; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary information_service
@@ -114,7 +114,7 @@ const SMSChargingInformation_messageClass_information_service = SMSChargingInfor
  * @type {number}
  */
 export
-const information_service = SMSChargingInformation_messageClass.information_service satisfies SMSChargingInformation_messageClass; /* SHORT_NAMED_ENUMERATED_VALUE */
+const information_service = SMSChargingInformation_messageClass.information_service; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SMSChargingInformation_messageClass_auto
@@ -122,7 +122,7 @@ const information_service = SMSChargingInformation_messageClass.information_serv
  * @type {number}
  */
 export
-const SMSChargingInformation_messageClass_auto = SMSChargingInformation_messageClass.auto satisfies SMSChargingInformation_messageClass; /* LONG_NAMED_ENUMERATED_VALUE */
+const SMSChargingInformation_messageClass_auto = SMSChargingInformation_messageClass.auto; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary auto
@@ -130,7 +130,7 @@ const SMSChargingInformation_messageClass_auto = SMSChargingInformation_messageC
  * @type {number}
  */
 export
-const auto = SMSChargingInformation_messageClass.auto satisfies SMSChargingInformation_messageClass; /* SHORT_NAMED_ENUMERATED_VALUE */
+const auto = SMSChargingInformation_messageClass.auto; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_SMSChargingInformation_messageClass: $.ASN1Decoder<SMSChargingInformation_messageClass> = $._decodeEnumerated;

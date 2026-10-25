@@ -53,7 +53,7 @@ const Diagnostics_duplicateInvokeId = 100 satisfies Diagnostics; /* LONG_NAMED_I
  * @type {number}
  */
 export
-const duplicateInvokeId = Diagnostics_duplicateInvokeId satisfies Diagnostics; /* SHORT_NAMED_INTEGER_VALUE */
+const duplicateInvokeId = Diagnostics_duplicateInvokeId; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Diagnostics_otherReason
@@ -79,7 +79,7 @@ const Diagnostics_otherReason = 127 satisfies Diagnostics; /* LONG_NAMED_INTEGER
  * @type {number}
  */
 export
-const otherReason = Diagnostics_otherReason satisfies Diagnostics; /* SHORT_NAMED_INTEGER_VALUE */
+const otherReason = Diagnostics_otherReason; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_Diagnostics: $.ASN1Decoder<Diagnostics> = $._decodeInteger;
 export const _encode_Diagnostics: $.ASN1Encoder<Diagnostics> = $._encodeInteger;
 

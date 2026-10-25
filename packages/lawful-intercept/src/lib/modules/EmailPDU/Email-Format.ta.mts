@@ -151,7 +151,7 @@ const Email_Format = _enum_for_Email_Format;
  * @type {number}
  */
 export
-const Email_Format_ip_packet = Email_Format.ip_packet satisfies Email_Format; /* LONG_NAMED_ENUMERATED_VALUE */
+const Email_Format_ip_packet = Email_Format.ip_packet; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ip_packet
@@ -166,7 +166,7 @@ const Email_Format_ip_packet = Email_Format.ip_packet satisfies Email_Format; /*
  * @type {number}
  */
 export
-const ip_packet = Email_Format.ip_packet satisfies Email_Format; /* SHORT_NAMED_ENUMERATED_VALUE */
+const ip_packet = Email_Format.ip_packet; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Email_Format_application
@@ -181,7 +181,7 @@ const ip_packet = Email_Format.ip_packet satisfies Email_Format; /* SHORT_NAMED_
  * @type {number}
  */
 export
-const Email_Format_application = Email_Format.application satisfies Email_Format; /* LONG_NAMED_ENUMERATED_VALUE */
+const Email_Format_application = Email_Format.application; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary application
@@ -196,7 +196,7 @@ const Email_Format_application = Email_Format.application satisfies Email_Format
  * @type {number}
  */
 export
-const application = Email_Format.application satisfies Email_Format; /* SHORT_NAMED_ENUMERATED_VALUE */
+const application = Email_Format.application; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_Email_Format: $.ASN1Decoder<Email_Format> = $._decodeEnumerated;
 export const _encode_Email_Format: $.ASN1Encoder<Email_Format> = $._encodeEnumerated;
 

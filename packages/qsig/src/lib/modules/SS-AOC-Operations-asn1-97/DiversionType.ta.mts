@@ -103,7 +103,7 @@ const DiversionType = _enum_for_DiversionType;
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-211/
  */
 export
-const DiversionType_callForwardingUnconditional = DiversionType.callForwardingUnconditional satisfies DiversionType; /* LONG_NAMED_ENUMERATED_VALUE */
+const DiversionType_callForwardingUnconditional = DiversionType.callForwardingUnconditional; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary callForwardingUnconditional
@@ -112,7 +112,7 @@ const DiversionType_callForwardingUnconditional = DiversionType.callForwardingUn
  * @type {number}
  */
 export
-const callForwardingUnconditional = DiversionType.callForwardingUnconditional satisfies DiversionType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const callForwardingUnconditional = DiversionType.callForwardingUnconditional; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary DiversionType_callForwardingBusy
@@ -126,7 +126,7 @@ const callForwardingUnconditional = DiversionType.callForwardingUnconditional sa
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-211/
  */
 export
-const DiversionType_callForwardingBusy = DiversionType.callForwardingBusy satisfies DiversionType; /* LONG_NAMED_ENUMERATED_VALUE */
+const DiversionType_callForwardingBusy = DiversionType.callForwardingBusy; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary callForwardingBusy
@@ -135,7 +135,7 @@ const DiversionType_callForwardingBusy = DiversionType.callForwardingBusy satisf
  * @type {number}
  */
 export
-const callForwardingBusy = DiversionType.callForwardingBusy satisfies DiversionType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const callForwardingBusy = DiversionType.callForwardingBusy; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary DiversionType_callForwardingNoReply
@@ -150,7 +150,7 @@ const callForwardingBusy = DiversionType.callForwardingBusy satisfies DiversionT
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-211/
  */
 export
-const DiversionType_callForwardingNoReply = DiversionType.callForwardingNoReply satisfies DiversionType; /* LONG_NAMED_ENUMERATED_VALUE */
+const DiversionType_callForwardingNoReply = DiversionType.callForwardingNoReply; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary callForwardingNoReply
@@ -159,7 +159,7 @@ const DiversionType_callForwardingNoReply = DiversionType.callForwardingNoReply 
  * @type {number}
  */
 export
-const callForwardingNoReply = DiversionType.callForwardingNoReply satisfies DiversionType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const callForwardingNoReply = DiversionType.callForwardingNoReply; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary DiversionType_callDeflection
@@ -173,7 +173,7 @@ const callForwardingNoReply = DiversionType.callForwardingNoReply satisfies Dive
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-211/
  */
 export
-const DiversionType_callDeflection = DiversionType.callDeflection satisfies DiversionType; /* LONG_NAMED_ENUMERATED_VALUE */
+const DiversionType_callDeflection = DiversionType.callDeflection; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary callDeflection
@@ -182,7 +182,7 @@ const DiversionType_callDeflection = DiversionType.callDeflection satisfies Dive
  * @type {number}
  */
 export
-const callDeflection = DiversionType.callDeflection satisfies DiversionType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const callDeflection = DiversionType.callDeflection; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_DiversionType: $.ASN1Decoder<DiversionType> = $._decodeEnumerated;

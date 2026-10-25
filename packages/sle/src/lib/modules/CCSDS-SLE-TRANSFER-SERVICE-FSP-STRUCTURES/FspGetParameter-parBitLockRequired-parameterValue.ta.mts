@@ -50,7 +50,7 @@ const FspGetParameter_parBitLockRequired_parameterValue_yes = 0 satisfies FspGet
  * @type {number}
  */
 export
-const yes = FspGetParameter_parBitLockRequired_parameterValue_yes satisfies FspGetParameter_parBitLockRequired_parameterValue; /* SHORT_NAMED_INTEGER_VALUE */
+const yes = FspGetParameter_parBitLockRequired_parameterValue_yes; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary FspGetParameter_parBitLockRequired_parameterValue_no
@@ -74,7 +74,7 @@ const FspGetParameter_parBitLockRequired_parameterValue_no = 1 satisfies FspGetP
  * @type {number}
  */
 export
-const no = FspGetParameter_parBitLockRequired_parameterValue_no satisfies FspGetParameter_parBitLockRequired_parameterValue; /* SHORT_NAMED_INTEGER_VALUE */
+const no = FspGetParameter_parBitLockRequired_parameterValue_no; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_FspGetParameter_parBitLockRequired_parameterValue: $.ASN1Decoder<FspGetParameter_parBitLockRequired_parameterValue> = $._decodeInteger;
 export const _encode_FspGetParameter_parBitLockRequired_parameterValue: $.ASN1Encoder<FspGetParameter_parBitLockRequired_parameterValue> = $._encodeInteger;
 

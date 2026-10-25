@@ -63,7 +63,7 @@ const CNIPMulticastDistribution = _enum_for_CNIPMulticastDistribution;
  * @type {number}
  */
 export
-const CNIPMulticastDistribution_nO_IP_MULTICAST = CNIPMulticastDistribution.nO_IP_MULTICAST satisfies CNIPMulticastDistribution; /* LONG_NAMED_ENUMERATED_VALUE */
+const CNIPMulticastDistribution_nO_IP_MULTICAST = CNIPMulticastDistribution.nO_IP_MULTICAST; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary nO_IP_MULTICAST
@@ -71,7 +71,7 @@ const CNIPMulticastDistribution_nO_IP_MULTICAST = CNIPMulticastDistribution.nO_I
  * @type {number}
  */
 export
-const nO_IP_MULTICAST = CNIPMulticastDistribution.nO_IP_MULTICAST satisfies CNIPMulticastDistribution; /* SHORT_NAMED_ENUMERATED_VALUE */
+const nO_IP_MULTICAST = CNIPMulticastDistribution.nO_IP_MULTICAST; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CNIPMulticastDistribution_iP_MULTICAST
@@ -79,7 +79,7 @@ const nO_IP_MULTICAST = CNIPMulticastDistribution.nO_IP_MULTICAST satisfies CNIP
  * @type {number}
  */
 export
-const CNIPMulticastDistribution_iP_MULTICAST = CNIPMulticastDistribution.iP_MULTICAST satisfies CNIPMulticastDistribution; /* LONG_NAMED_ENUMERATED_VALUE */
+const CNIPMulticastDistribution_iP_MULTICAST = CNIPMulticastDistribution.iP_MULTICAST; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary iP_MULTICAST
@@ -87,7 +87,7 @@ const CNIPMulticastDistribution_iP_MULTICAST = CNIPMulticastDistribution.iP_MULT
  * @type {number}
  */
 export
-const iP_MULTICAST = CNIPMulticastDistribution.iP_MULTICAST satisfies CNIPMulticastDistribution; /* SHORT_NAMED_ENUMERATED_VALUE */
+const iP_MULTICAST = CNIPMulticastDistribution.iP_MULTICAST; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_CNIPMulticastDistribution: $.ASN1Decoder<CNIPMulticastDistribution> = $._decodeEnumerated;

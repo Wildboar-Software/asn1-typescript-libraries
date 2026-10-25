@@ -51,7 +51,7 @@ export const ClockEventCode_unspecified = 0 satisfies ClockEventCode; /* LONG_NA
  * @constant
  * @type {number}
  */
-export const unspecified = ClockEventCode_unspecified satisfies ClockEventCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const unspecified = ClockEventCode_unspecified; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ClockEventCode_restart
@@ -65,7 +65,7 @@ export const ClockEventCode_restart = 1 satisfies ClockEventCode; /* LONG_NAMED_
  * @constant
  * @type {number}
  */
-export const restart = ClockEventCode_restart satisfies ClockEventCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const restart = ClockEventCode_restart; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ClockEventCode_systemOrHardwareFault
@@ -79,7 +79,7 @@ export const ClockEventCode_systemOrHardwareFault = 2 satisfies ClockEventCode; 
  * @constant
  * @type {number}
  */
-export const systemOrHardwareFault = ClockEventCode_systemOrHardwareFault satisfies ClockEventCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const systemOrHardwareFault = ClockEventCode_systemOrHardwareFault; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ClockEventCode_newStatusWord
@@ -93,7 +93,7 @@ export const ClockEventCode_newStatusWord = 3 satisfies ClockEventCode; /* LONG_
  * @constant
  * @type {number}
  */
-export const newStatusWord = ClockEventCode_newStatusWord satisfies ClockEventCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const newStatusWord = ClockEventCode_newStatusWord; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ClockEventCode_newSynchSourceOrStratum
@@ -107,7 +107,7 @@ export const ClockEventCode_newSynchSourceOrStratum = 4 satisfies ClockEventCode
  * @constant
  * @type {number}
  */
-export const newSynchSourceOrStratum = ClockEventCode_newSynchSourceOrStratum satisfies ClockEventCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const newSynchSourceOrStratum = ClockEventCode_newSynchSourceOrStratum; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ClockEventCode_systemClockReset
@@ -121,7 +121,7 @@ export const ClockEventCode_systemClockReset = 5 satisfies ClockEventCode; /* LO
  * @constant
  * @type {number}
  */
-export const systemClockReset = ClockEventCode_systemClockReset satisfies ClockEventCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const systemClockReset = ClockEventCode_systemClockReset; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ClockEventCode_systemInvalidTimeOrDate
@@ -135,7 +135,7 @@ export const ClockEventCode_systemInvalidTimeOrDate = 6 satisfies ClockEventCode
  * @constant
  * @type {number}
  */
-export const systemInvalidTimeOrDate = ClockEventCode_systemInvalidTimeOrDate satisfies ClockEventCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const systemInvalidTimeOrDate = ClockEventCode_systemInvalidTimeOrDate; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ClockEventCode_systemClockException
@@ -149,7 +149,7 @@ export const ClockEventCode_systemClockException = 7 satisfies ClockEventCode; /
  * @constant
  * @type {number}
  */
-export const systemClockException = ClockEventCode_systemClockException satisfies ClockEventCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const systemClockException = ClockEventCode_systemClockException; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ClockEventCode_reserved8
@@ -163,7 +163,7 @@ export const ClockEventCode_reserved8 = 8 satisfies ClockEventCode; /* LONG_NAME
  * @constant
  * @type {number}
  */
-export const reserved8 = ClockEventCode_reserved8 satisfies ClockEventCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const reserved8 = ClockEventCode_reserved8; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ClockEventCode_reserved9
@@ -177,7 +177,7 @@ export const ClockEventCode_reserved9 = 9 satisfies ClockEventCode; /* LONG_NAME
  * @constant
  * @type {number}
  */
-export const reserved9 = ClockEventCode_reserved9 satisfies ClockEventCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const reserved9 = ClockEventCode_reserved9; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ClockEventCode_reserved10
@@ -191,7 +191,7 @@ export const ClockEventCode_reserved10 = 10 satisfies ClockEventCode; /* LONG_NA
  * @constant
  * @type {number}
  */
-export const reserved10 = ClockEventCode_reserved10 satisfies ClockEventCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const reserved10 = ClockEventCode_reserved10; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ClockEventCode_reserved11
@@ -205,7 +205,7 @@ export const ClockEventCode_reserved11 = 11 satisfies ClockEventCode; /* LONG_NA
  * @constant
  * @type {number}
  */
-export const reserved11 = ClockEventCode_reserved11 satisfies ClockEventCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const reserved11 = ClockEventCode_reserved11; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ClockEventCode_reserved12
@@ -219,7 +219,7 @@ export const ClockEventCode_reserved12 = 12 satisfies ClockEventCode; /* LONG_NA
  * @constant
  * @type {number}
  */
-export const reserved12 = ClockEventCode_reserved12 satisfies ClockEventCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const reserved12 = ClockEventCode_reserved12; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ClockEventCode_reserved13
@@ -233,7 +233,7 @@ export const ClockEventCode_reserved13 = 13 satisfies ClockEventCode; /* LONG_NA
  * @constant
  * @type {number}
  */
-export const reserved13 = ClockEventCode_reserved13 satisfies ClockEventCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const reserved13 = ClockEventCode_reserved13; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ClockEventCode_reserved14
@@ -247,7 +247,7 @@ export const ClockEventCode_reserved14 = 14 satisfies ClockEventCode; /* LONG_NA
  * @constant
  * @type {number}
  */
-export const reserved14 = ClockEventCode_reserved14 satisfies ClockEventCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const reserved14 = ClockEventCode_reserved14; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ClockEventCode_reserved15
@@ -261,7 +261,7 @@ export const ClockEventCode_reserved15 = 15 satisfies ClockEventCode; /* LONG_NA
  * @constant
  * @type {number}
  */
-export const reserved15 = ClockEventCode_reserved15 satisfies ClockEventCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const reserved15 = ClockEventCode_reserved15; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_ClockEventCode = $._decodeInteger;

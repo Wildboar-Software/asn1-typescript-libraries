@@ -71,7 +71,7 @@ const TariffSystemStatus = _enum_for_TariffSystemStatus;
  * @type {number}
  */
 export
-const TariffSystemStatus_available = TariffSystemStatus.available satisfies TariffSystemStatus; /* LONG_NAMED_ENUMERATED_VALUE */
+const TariffSystemStatus_available = TariffSystemStatus.available; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary available
@@ -79,7 +79,7 @@ const TariffSystemStatus_available = TariffSystemStatus.available satisfies Tari
  * @type {number}
  */
 export
-const available = TariffSystemStatus.available satisfies TariffSystemStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
+const available = TariffSystemStatus.available; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TariffSystemStatus_checked
@@ -87,7 +87,7 @@ const available = TariffSystemStatus.available satisfies TariffSystemStatus; /* 
  * @type {number}
  */
 export
-const TariffSystemStatus_checked = TariffSystemStatus.checked satisfies TariffSystemStatus; /* LONG_NAMED_ENUMERATED_VALUE */
+const TariffSystemStatus_checked = TariffSystemStatus.checked; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary checked
@@ -95,7 +95,7 @@ const TariffSystemStatus_checked = TariffSystemStatus.checked satisfies TariffSy
  * @type {number}
  */
 export
-const checked = TariffSystemStatus.checked satisfies TariffSystemStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
+const checked = TariffSystemStatus.checked; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TariffSystemStatus_standby
@@ -103,7 +103,7 @@ const checked = TariffSystemStatus.checked satisfies TariffSystemStatus; /* SHOR
  * @type {number}
  */
 export
-const TariffSystemStatus_standby = TariffSystemStatus.standby satisfies TariffSystemStatus; /* LONG_NAMED_ENUMERATED_VALUE */
+const TariffSystemStatus_standby = TariffSystemStatus.standby; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary standby
@@ -111,7 +111,7 @@ const TariffSystemStatus_standby = TariffSystemStatus.standby satisfies TariffSy
  * @type {number}
  */
 export
-const standby = TariffSystemStatus.standby satisfies TariffSystemStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
+const standby = TariffSystemStatus.standby; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TariffSystemStatus_active
@@ -119,7 +119,7 @@ const standby = TariffSystemStatus.standby satisfies TariffSystemStatus; /* SHOR
  * @type {number}
  */
 export
-const TariffSystemStatus_active = TariffSystemStatus.active satisfies TariffSystemStatus; /* LONG_NAMED_ENUMERATED_VALUE */
+const TariffSystemStatus_active = TariffSystemStatus.active; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary active
@@ -127,7 +127,7 @@ const TariffSystemStatus_active = TariffSystemStatus.active satisfies TariffSyst
  * @type {number}
  */
 export
-const active = TariffSystemStatus.active satisfies TariffSystemStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
+const active = TariffSystemStatus.active; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_TariffSystemStatus: $.ASN1Decoder<TariffSystemStatus> = $._decodeEnumerated;

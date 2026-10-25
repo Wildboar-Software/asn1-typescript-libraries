@@ -77,7 +77,7 @@ const AForASSessionWithQoSOpType = _enum_for_AForASSessionWithQoSOpType;
  * @type {number}
  */
 export
-const AForASSessionWithQoSOpType_pOST = AForASSessionWithQoSOpType.pOST satisfies AForASSessionWithQoSOpType; /* LONG_NAMED_ENUMERATED_VALUE */
+const AForASSessionWithQoSOpType_pOST = AForASSessionWithQoSOpType.pOST; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pOST
@@ -85,7 +85,7 @@ const AForASSessionWithQoSOpType_pOST = AForASSessionWithQoSOpType.pOST satisfie
  * @type {number}
  */
 export
-const pOST = AForASSessionWithQoSOpType.pOST satisfies AForASSessionWithQoSOpType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pOST = AForASSessionWithQoSOpType.pOST; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AForASSessionWithQoSOpType_pUT
@@ -93,7 +93,7 @@ const pOST = AForASSessionWithQoSOpType.pOST satisfies AForASSessionWithQoSOpTyp
  * @type {number}
  */
 export
-const AForASSessionWithQoSOpType_pUT = AForASSessionWithQoSOpType.pUT satisfies AForASSessionWithQoSOpType; /* LONG_NAMED_ENUMERATED_VALUE */
+const AForASSessionWithQoSOpType_pUT = AForASSessionWithQoSOpType.pUT; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pUT
@@ -101,7 +101,7 @@ const AForASSessionWithQoSOpType_pUT = AForASSessionWithQoSOpType.pUT satisfies 
  * @type {number}
  */
 export
-const pUT = AForASSessionWithQoSOpType.pUT satisfies AForASSessionWithQoSOpType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pUT = AForASSessionWithQoSOpType.pUT; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AForASSessionWithQoSOpType_pATCH
@@ -109,7 +109,7 @@ const pUT = AForASSessionWithQoSOpType.pUT satisfies AForASSessionWithQoSOpType;
  * @type {number}
  */
 export
-const AForASSessionWithQoSOpType_pATCH = AForASSessionWithQoSOpType.pATCH satisfies AForASSessionWithQoSOpType; /* LONG_NAMED_ENUMERATED_VALUE */
+const AForASSessionWithQoSOpType_pATCH = AForASSessionWithQoSOpType.pATCH; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pATCH
@@ -117,7 +117,7 @@ const AForASSessionWithQoSOpType_pATCH = AForASSessionWithQoSOpType.pATCH satisf
  * @type {number}
  */
 export
-const pATCH = AForASSessionWithQoSOpType.pATCH satisfies AForASSessionWithQoSOpType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pATCH = AForASSessionWithQoSOpType.pATCH; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AForASSessionWithQoSOpType_dELETE
@@ -125,7 +125,7 @@ const pATCH = AForASSessionWithQoSOpType.pATCH satisfies AForASSessionWithQoSOpT
  * @type {number}
  */
 export
-const AForASSessionWithQoSOpType_dELETE = AForASSessionWithQoSOpType.dELETE satisfies AForASSessionWithQoSOpType; /* LONG_NAMED_ENUMERATED_VALUE */
+const AForASSessionWithQoSOpType_dELETE = AForASSessionWithQoSOpType.dELETE; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary dELETE
@@ -133,7 +133,7 @@ const AForASSessionWithQoSOpType_dELETE = AForASSessionWithQoSOpType.dELETE sati
  * @type {number}
  */
 export
-const dELETE = AForASSessionWithQoSOpType.dELETE satisfies AForASSessionWithQoSOpType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const dELETE = AForASSessionWithQoSOpType.dELETE; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_AForASSessionWithQoSOpType: $.ASN1Decoder<AForASSessionWithQoSOpType> = $._decodeEnumerated;
 export const _encode_AForASSessionWithQoSOpType: $.ASN1Encoder<AForASSessionWithQoSOpType> = $._encodeEnumerated;
 

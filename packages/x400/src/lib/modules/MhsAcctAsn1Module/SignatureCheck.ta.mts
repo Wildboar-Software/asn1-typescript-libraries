@@ -38,7 +38,7 @@ export const SignatureCheck_valid = 1 satisfies SignatureCheck; /* LONG_NAMED_IN
  * @constant
  * @type {number}
  */
-export const valid = SignatureCheck_valid satisfies SignatureCheck; /* SHORT_NAMED_INTEGER_VALUE */
+export const valid = SignatureCheck_valid; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SignatureCheck_failed
@@ -52,7 +52,7 @@ export const SignatureCheck_failed = 2 satisfies SignatureCheck; /* LONG_NAMED_I
  * @constant
  * @type {number}
  */
-export const failed = SignatureCheck_failed satisfies SignatureCheck; /* SHORT_NAMED_INTEGER_VALUE */
+export const failed = SignatureCheck_failed; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_SignatureCheck = $._decodeInteger;

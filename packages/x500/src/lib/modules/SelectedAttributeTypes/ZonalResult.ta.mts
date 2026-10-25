@@ -39,7 +39,7 @@ export type ZonalResult = _enum_for_ZonalResult | ENUMERATED;
  * @constant
  * @type {number}
  */
-export const ZonalResult_cannot_select_mapping = _enum_for_ZonalResult.cannot_select_mapping satisfies ZonalResult; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ZonalResult_cannot_select_mapping = _enum_for_ZonalResult.cannot_select_mapping; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary cannot_select_mapping
@@ -50,7 +50,7 @@ export const ZonalResult_cannot_select_mapping = _enum_for_ZonalResult.cannot_se
  * @constant
  * @type {number}
  */
-export const cannot_select_mapping = ZonalResult_cannot_select_mapping satisfies ZonalResult; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const cannot_select_mapping = ZonalResult_cannot_select_mapping; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ZonalResult_zero_mappings
@@ -62,7 +62,7 @@ export const cannot_select_mapping = ZonalResult_cannot_select_mapping satisfies
  * @constant
  * @type {number}
  */
-export const ZonalResult_zero_mappings = _enum_for_ZonalResult.zero_mappings satisfies ZonalResult; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ZonalResult_zero_mappings = _enum_for_ZonalResult.zero_mappings; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary zero_mappings
@@ -74,7 +74,7 @@ export const ZonalResult_zero_mappings = _enum_for_ZonalResult.zero_mappings sat
  * @constant
  * @type {number}
  */
-export const zero_mappings = ZonalResult_zero_mappings satisfies ZonalResult; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const zero_mappings = ZonalResult_zero_mappings; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ZonalResult_multiple_mappings
@@ -86,7 +86,7 @@ export const zero_mappings = ZonalResult_zero_mappings satisfies ZonalResult; /*
  * @constant
  * @type {number}
  */
-export const ZonalResult_multiple_mappings = _enum_for_ZonalResult.multiple_mappings satisfies ZonalResult; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ZonalResult_multiple_mappings = _enum_for_ZonalResult.multiple_mappings; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary multiple_mappings
@@ -98,7 +98,7 @@ export const ZonalResult_multiple_mappings = _enum_for_ZonalResult.multiple_mapp
  * @constant
  * @type {number}
  */
-export const multiple_mappings = ZonalResult_multiple_mappings satisfies ZonalResult; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const multiple_mappings = ZonalResult_multiple_mappings; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 export const _decode_ZonalResult = $._decodeEnumerated;

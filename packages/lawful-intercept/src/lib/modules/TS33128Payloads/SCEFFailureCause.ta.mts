@@ -85,7 +85,7 @@ const SCEFFailureCause = _enum_for_SCEFFailureCause;
  * @type {number}
  */
 export
-const SCEFFailureCause_userUnknown = SCEFFailureCause.userUnknown satisfies SCEFFailureCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const SCEFFailureCause_userUnknown = SCEFFailureCause.userUnknown; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary userUnknown
@@ -93,7 +93,7 @@ const SCEFFailureCause_userUnknown = SCEFFailureCause.userUnknown satisfies SCEF
  * @type {number}
  */
 export
-const userUnknown = SCEFFailureCause.userUnknown satisfies SCEFFailureCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const userUnknown = SCEFFailureCause.userUnknown; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SCEFFailureCause_niddConfigurationNotAvailable
@@ -101,7 +101,7 @@ const userUnknown = SCEFFailureCause.userUnknown satisfies SCEFFailureCause; /* 
  * @type {number}
  */
 export
-const SCEFFailureCause_niddConfigurationNotAvailable = SCEFFailureCause.niddConfigurationNotAvailable satisfies SCEFFailureCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const SCEFFailureCause_niddConfigurationNotAvailable = SCEFFailureCause.niddConfigurationNotAvailable; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary niddConfigurationNotAvailable
@@ -109,7 +109,7 @@ const SCEFFailureCause_niddConfigurationNotAvailable = SCEFFailureCause.niddConf
  * @type {number}
  */
 export
-const niddConfigurationNotAvailable = SCEFFailureCause.niddConfigurationNotAvailable satisfies SCEFFailureCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const niddConfigurationNotAvailable = SCEFFailureCause.niddConfigurationNotAvailable; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SCEFFailureCause_invalidEPSBearer
@@ -117,7 +117,7 @@ const niddConfigurationNotAvailable = SCEFFailureCause.niddConfigurationNotAvail
  * @type {number}
  */
 export
-const SCEFFailureCause_invalidEPSBearer = SCEFFailureCause.invalidEPSBearer satisfies SCEFFailureCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const SCEFFailureCause_invalidEPSBearer = SCEFFailureCause.invalidEPSBearer; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidEPSBearer
@@ -125,7 +125,7 @@ const SCEFFailureCause_invalidEPSBearer = SCEFFailureCause.invalidEPSBearer sati
  * @type {number}
  */
 export
-const invalidEPSBearer = SCEFFailureCause.invalidEPSBearer satisfies SCEFFailureCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const invalidEPSBearer = SCEFFailureCause.invalidEPSBearer; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SCEFFailureCause_operationNotAllowed
@@ -133,7 +133,7 @@ const invalidEPSBearer = SCEFFailureCause.invalidEPSBearer satisfies SCEFFailure
  * @type {number}
  */
 export
-const SCEFFailureCause_operationNotAllowed = SCEFFailureCause.operationNotAllowed satisfies SCEFFailureCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const SCEFFailureCause_operationNotAllowed = SCEFFailureCause.operationNotAllowed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary operationNotAllowed
@@ -141,7 +141,7 @@ const SCEFFailureCause_operationNotAllowed = SCEFFailureCause.operationNotAllowe
  * @type {number}
  */
 export
-const operationNotAllowed = SCEFFailureCause.operationNotAllowed satisfies SCEFFailureCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const operationNotAllowed = SCEFFailureCause.operationNotAllowed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SCEFFailureCause_portNotFree
@@ -149,7 +149,7 @@ const operationNotAllowed = SCEFFailureCause.operationNotAllowed satisfies SCEFF
  * @type {number}
  */
 export
-const SCEFFailureCause_portNotFree = SCEFFailureCause.portNotFree satisfies SCEFFailureCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const SCEFFailureCause_portNotFree = SCEFFailureCause.portNotFree; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary portNotFree
@@ -157,7 +157,7 @@ const SCEFFailureCause_portNotFree = SCEFFailureCause.portNotFree satisfies SCEF
  * @type {number}
  */
 export
-const portNotFree = SCEFFailureCause.portNotFree satisfies SCEFFailureCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const portNotFree = SCEFFailureCause.portNotFree; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SCEFFailureCause_portNotAssociatedWithSpecifiedApplication
@@ -165,7 +165,7 @@ const portNotFree = SCEFFailureCause.portNotFree satisfies SCEFFailureCause; /* 
  * @type {number}
  */
 export
-const SCEFFailureCause_portNotAssociatedWithSpecifiedApplication = SCEFFailureCause.portNotAssociatedWithSpecifiedApplication satisfies SCEFFailureCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const SCEFFailureCause_portNotAssociatedWithSpecifiedApplication = SCEFFailureCause.portNotAssociatedWithSpecifiedApplication; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary portNotAssociatedWithSpecifiedApplication
@@ -173,7 +173,7 @@ const SCEFFailureCause_portNotAssociatedWithSpecifiedApplication = SCEFFailureCa
  * @type {number}
  */
 export
-const portNotAssociatedWithSpecifiedApplication = SCEFFailureCause.portNotAssociatedWithSpecifiedApplication satisfies SCEFFailureCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const portNotAssociatedWithSpecifiedApplication = SCEFFailureCause.portNotAssociatedWithSpecifiedApplication; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_SCEFFailureCause: $.ASN1Decoder<SCEFFailureCause> = $._decodeEnumerated;
 export const _encode_SCEFFailureCause: $.ASN1Encoder<SCEFFailureCause> = $._encodeEnumerated;
 

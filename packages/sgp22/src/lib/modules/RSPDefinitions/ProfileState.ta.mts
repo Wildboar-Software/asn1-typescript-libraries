@@ -49,7 +49,7 @@ const ProfileState_disabled = 0 satisfies ProfileState; /* LONG_NAMED_INTEGER_VA
  * @type {number}
  */
 export
-const disabled = ProfileState_disabled satisfies ProfileState; /* SHORT_NAMED_INTEGER_VALUE */
+const disabled = ProfileState_disabled; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProfileState_enabled
@@ -75,7 +75,7 @@ const ProfileState_enabled = 1 satisfies ProfileState; /* LONG_NAMED_INTEGER_VAL
  * @type {number}
  */
 export
-const enabled = ProfileState_enabled satisfies ProfileState; /* SHORT_NAMED_INTEGER_VALUE */
+const enabled = ProfileState_enabled; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_ProfileState = $._decodeInteger;
 export const _encode_ProfileState = $._encodeInteger;
 

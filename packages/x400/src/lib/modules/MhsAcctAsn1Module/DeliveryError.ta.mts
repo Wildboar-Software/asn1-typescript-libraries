@@ -41,7 +41,7 @@ export const DeliveryError_delivery_control_violation = 1 satisfies DeliveryErro
  * @constant
  * @type {number}
  */
-export const delivery_control_violation = DeliveryError_delivery_control_violation satisfies DeliveryError; /* SHORT_NAMED_INTEGER_VALUE */
+export const delivery_control_violation = DeliveryError_delivery_control_violation; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeliveryError_control_violates_registration
@@ -55,7 +55,7 @@ export const DeliveryError_control_violates_registration = 2 satisfies DeliveryE
  * @constant
  * @type {number}
  */
-export const control_violates_registration = DeliveryError_control_violates_registration satisfies DeliveryError; /* SHORT_NAMED_INTEGER_VALUE */
+export const control_violates_registration = DeliveryError_control_violates_registration; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeliveryError_security_error
@@ -69,7 +69,7 @@ export const DeliveryError_security_error = 3 satisfies DeliveryError; /* LONG_N
  * @constant
  * @type {number}
  */
-export const security_error = DeliveryError_security_error satisfies DeliveryError; /* SHORT_NAMED_INTEGER_VALUE */
+export const security_error = DeliveryError_security_error; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeliveryError_unsupported_critical_function
@@ -83,7 +83,7 @@ export const DeliveryError_unsupported_critical_function = 4 satisfies DeliveryE
  * @constant
  * @type {number}
  */
-export const unsupported_critical_function = DeliveryError_unsupported_critical_function satisfies DeliveryError; /* SHORT_NAMED_INTEGER_VALUE */
+export const unsupported_critical_function = DeliveryError_unsupported_critical_function; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_DeliveryError = $._decodeInteger;

@@ -64,7 +64,7 @@ export const Repertoire = _enum_for_Repertoire;
  * @type {number}
  */
 export const Repertoire_ita2 =
-    Repertoire.ita2 satisfies Repertoire; /* LONG_NAMED_ENUMERATED_VALUE */
+    Repertoire.ita2; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ita2
@@ -72,7 +72,7 @@ export const Repertoire_ita2 =
  * @type {number}
  */
 export const ita2 =
-    Repertoire.ita2 satisfies Repertoire; /* SHORT_NAMED_ENUMERATED_VALUE */
+    Repertoire.ita2; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Repertoire_ia5
@@ -80,7 +80,7 @@ export const ita2 =
  * @type {number}
  */
 export const Repertoire_ia5 =
-    Repertoire.ia5 satisfies Repertoire; /* LONG_NAMED_ENUMERATED_VALUE */
+    Repertoire.ia5; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ia5
@@ -88,7 +88,7 @@ export const Repertoire_ia5 =
  * @type {number}
  */
 export const ia5 =
-    Repertoire.ia5 satisfies Repertoire; /* SHORT_NAMED_ENUMERATED_VALUE */
+    Repertoire.ia5; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 export function _decode_Repertoire(el: _Element): Repertoire {

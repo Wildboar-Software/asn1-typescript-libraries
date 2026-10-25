@@ -44,7 +44,7 @@ const MRZField_generic = 0 satisfies MRZField; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const generic = MRZField_generic satisfies MRZField; /* SHORT_NAMED_INTEGER_VALUE */
+const generic = MRZField_generic; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * MRZ document code.
@@ -62,7 +62,7 @@ const MRZField_documentCode = 1 satisfies MRZField; /* LONG_NAMED_INTEGER_VALUE 
  * @type {number}
  */
 export
-const documentCode = MRZField_documentCode satisfies MRZField; /* SHORT_NAMED_INTEGER_VALUE */
+const documentCode = MRZField_documentCode; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * MRZ issuing state.
@@ -80,7 +80,7 @@ const MRZField_issuingState = 2 satisfies MRZField; /* LONG_NAMED_INTEGER_VALUE 
  * @type {number}
  */
 export
-const issuingState = MRZField_issuingState satisfies MRZField; /* SHORT_NAMED_INTEGER_VALUE */
+const issuingState = MRZField_issuingState; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * MRZ holder name.
@@ -98,7 +98,7 @@ const MRZField_personName = 3 satisfies MRZField; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const personName = MRZField_personName satisfies MRZField; /* SHORT_NAMED_INTEGER_VALUE */
+const personName = MRZField_personName; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * MRZ document number.
@@ -116,7 +116,7 @@ const MRZField_documentNumber = 4 satisfies MRZField; /* LONG_NAMED_INTEGER_VALU
  * @type {number}
  */
 export
-const documentNumber = MRZField_documentNumber satisfies MRZField; /* SHORT_NAMED_INTEGER_VALUE */
+const documentNumber = MRZField_documentNumber; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * MRZ nationality.
@@ -134,7 +134,7 @@ const MRZField_nationality = 5 satisfies MRZField; /* LONG_NAMED_INTEGER_VALUE *
  * @type {number}
  */
 export
-const nationality = MRZField_nationality satisfies MRZField; /* SHORT_NAMED_INTEGER_VALUE */
+const nationality = MRZField_nationality; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * MRZ date of birth.
@@ -152,7 +152,7 @@ const MRZField_dateOfBirth = 6 satisfies MRZField; /* LONG_NAMED_INTEGER_VALUE *
  * @type {number}
  */
 export
-const dateOfBirth = MRZField_dateOfBirth satisfies MRZField; /* SHORT_NAMED_INTEGER_VALUE */
+const dateOfBirth = MRZField_dateOfBirth; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * MRZ sex.
@@ -170,7 +170,7 @@ const MRZField_sex = 7 satisfies MRZField; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const sex = MRZField_sex satisfies MRZField; /* SHORT_NAMED_INTEGER_VALUE */
+const sex = MRZField_sex; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * MRZ date of expiry.
@@ -188,7 +188,7 @@ const MRZField_dateOfExpiry = 8 satisfies MRZField; /* LONG_NAMED_INTEGER_VALUE 
  * @type {number}
  */
 export
-const dateOfExpiry = MRZField_dateOfExpiry satisfies MRZField; /* SHORT_NAMED_INTEGER_VALUE */
+const dateOfExpiry = MRZField_dateOfExpiry; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * MRZ optional data.
@@ -206,7 +206,7 @@ const MRZField_optionalData = 9 satisfies MRZField; /* LONG_NAMED_INTEGER_VALUE 
  * @type {number}
  */
 export
-const optionalData = MRZField_optionalData satisfies MRZField; /* SHORT_NAMED_INTEGER_VALUE */
+const optionalData = MRZField_optionalData; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_MRZField = $._decodeInteger;
 export const _encode_MRZField = $._encodeInteger;
 

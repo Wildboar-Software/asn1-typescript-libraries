@@ -38,7 +38,7 @@ export const ECParameters_version_ecpVerl = 1 satisfies ECParameters_version; /*
  * @constant
  * @type {number}
  */
-export const ecpVerl = ECParameters_version_ecpVerl satisfies ECParameters_version; /* SHORT_NAMED_INTEGER_VALUE */
+export const ecpVerl = ECParameters_version_ecpVerl; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_ECParameters_version = $._decodeInteger;

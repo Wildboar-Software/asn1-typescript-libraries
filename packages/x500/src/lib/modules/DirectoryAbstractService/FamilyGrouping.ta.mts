@@ -42,7 +42,7 @@ export type FamilyGrouping = _enum_for_FamilyGrouping | ENUMERATED;
  * @constant
  * @type {number}
  */
-export const FamilyGrouping_entryOnly = _enum_for_FamilyGrouping.entryOnly satisfies FamilyGrouping; /* LONG_NAMED_ENUMERATED_VALUE */
+export const FamilyGrouping_entryOnly = _enum_for_FamilyGrouping.entryOnly; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary entryOnly
@@ -53,7 +53,7 @@ export const FamilyGrouping_entryOnly = _enum_for_FamilyGrouping.entryOnly satis
  * @constant
  * @type {number}
  */
-export const entryOnly = FamilyGrouping_entryOnly satisfies FamilyGrouping; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const entryOnly = FamilyGrouping_entryOnly; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary FamilyGrouping_compoundEntry
@@ -65,7 +65,7 @@ export const entryOnly = FamilyGrouping_entryOnly satisfies FamilyGrouping; /* S
  * @constant
  * @type {number}
  */
-export const FamilyGrouping_compoundEntry = _enum_for_FamilyGrouping.compoundEntry satisfies FamilyGrouping; /* LONG_NAMED_ENUMERATED_VALUE */
+export const FamilyGrouping_compoundEntry = _enum_for_FamilyGrouping.compoundEntry; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary compoundEntry
@@ -77,7 +77,7 @@ export const FamilyGrouping_compoundEntry = _enum_for_FamilyGrouping.compoundEnt
  * @constant
  * @type {number}
  */
-export const compoundEntry = FamilyGrouping_compoundEntry satisfies FamilyGrouping; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const compoundEntry = FamilyGrouping_compoundEntry; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary FamilyGrouping_strands
@@ -90,7 +90,7 @@ export const compoundEntry = FamilyGrouping_compoundEntry satisfies FamilyGroupi
  * @constant
  * @type {number}
  */
-export const FamilyGrouping_strands = _enum_for_FamilyGrouping.strands satisfies FamilyGrouping; /* LONG_NAMED_ENUMERATED_VALUE */
+export const FamilyGrouping_strands = _enum_for_FamilyGrouping.strands; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary strands
@@ -103,7 +103,7 @@ export const FamilyGrouping_strands = _enum_for_FamilyGrouping.strands satisfies
  * @constant
  * @type {number}
  */
-export const strands = FamilyGrouping_strands satisfies FamilyGrouping; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const strands = FamilyGrouping_strands; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary FamilyGrouping_multiStrand
@@ -116,7 +116,7 @@ export const strands = FamilyGrouping_strands satisfies FamilyGrouping; /* SHORT
  * @constant
  * @type {number}
  */
-export const FamilyGrouping_multiStrand = _enum_for_FamilyGrouping.multiStrand satisfies FamilyGrouping; /* LONG_NAMED_ENUMERATED_VALUE */
+export const FamilyGrouping_multiStrand = _enum_for_FamilyGrouping.multiStrand; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary multiStrand
@@ -129,7 +129,7 @@ export const FamilyGrouping_multiStrand = _enum_for_FamilyGrouping.multiStrand s
  * @constant
  * @type {number}
  */
-export const multiStrand = FamilyGrouping_multiStrand satisfies FamilyGrouping; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const multiStrand = FamilyGrouping_multiStrand; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 export const _decode_FamilyGrouping = $._decodeEnumerated;

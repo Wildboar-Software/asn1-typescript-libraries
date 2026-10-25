@@ -68,7 +68,7 @@ const TerminalType = _enum_for_TerminalType;
  * @type {number}
  */
 export
-const TerminalType_unknown = TerminalType.unknown satisfies TerminalType; /* LONG_NAMED_ENUMERATED_VALUE */
+const TerminalType_unknown = TerminalType.unknown; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unknown
@@ -76,7 +76,7 @@ const TerminalType_unknown = TerminalType.unknown satisfies TerminalType; /* LON
  * @type {number}
  */
 export
-const unknown = TerminalType.unknown satisfies TerminalType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unknown = TerminalType.unknown; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TerminalType_dialPulse
@@ -84,7 +84,7 @@ const unknown = TerminalType.unknown satisfies TerminalType; /* SHORT_NAMED_ENUM
  * @type {number}
  */
 export
-const TerminalType_dialPulse = TerminalType.dialPulse satisfies TerminalType; /* LONG_NAMED_ENUMERATED_VALUE */
+const TerminalType_dialPulse = TerminalType.dialPulse; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary dialPulse
@@ -92,7 +92,7 @@ const TerminalType_dialPulse = TerminalType.dialPulse satisfies TerminalType; /*
  * @type {number}
  */
 export
-const dialPulse = TerminalType.dialPulse satisfies TerminalType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const dialPulse = TerminalType.dialPulse; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TerminalType_dtmf
@@ -100,7 +100,7 @@ const dialPulse = TerminalType.dialPulse satisfies TerminalType; /* SHORT_NAMED_
  * @type {number}
  */
 export
-const TerminalType_dtmf = TerminalType.dtmf satisfies TerminalType; /* LONG_NAMED_ENUMERATED_VALUE */
+const TerminalType_dtmf = TerminalType.dtmf; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary dtmf
@@ -108,7 +108,7 @@ const TerminalType_dtmf = TerminalType.dtmf satisfies TerminalType; /* LONG_NAME
  * @type {number}
  */
 export
-const dtmf = TerminalType.dtmf satisfies TerminalType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const dtmf = TerminalType.dtmf; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TerminalType_isdn
@@ -116,7 +116,7 @@ const dtmf = TerminalType.dtmf satisfies TerminalType; /* SHORT_NAMED_ENUMERATED
  * @type {number}
  */
 export
-const TerminalType_isdn = TerminalType.isdn satisfies TerminalType; /* LONG_NAMED_ENUMERATED_VALUE */
+const TerminalType_isdn = TerminalType.isdn; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary isdn
@@ -124,7 +124,7 @@ const TerminalType_isdn = TerminalType.isdn satisfies TerminalType; /* LONG_NAME
  * @type {number}
  */
 export
-const isdn = TerminalType.isdn satisfies TerminalType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const isdn = TerminalType.isdn; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TerminalType_isdnNoDtmf
@@ -132,7 +132,7 @@ const isdn = TerminalType.isdn satisfies TerminalType; /* SHORT_NAMED_ENUMERATED
  * @type {number}
  */
 export
-const TerminalType_isdnNoDtmf = TerminalType.isdnNoDtmf satisfies TerminalType; /* LONG_NAMED_ENUMERATED_VALUE */
+const TerminalType_isdnNoDtmf = TerminalType.isdnNoDtmf; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary isdnNoDtmf
@@ -140,7 +140,7 @@ const TerminalType_isdnNoDtmf = TerminalType.isdnNoDtmf satisfies TerminalType; 
  * @type {number}
  */
 export
-const isdnNoDtmf = TerminalType.isdnNoDtmf satisfies TerminalType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const isdnNoDtmf = TerminalType.isdnNoDtmf; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TerminalType_spare
@@ -148,7 +148,7 @@ const isdnNoDtmf = TerminalType.isdnNoDtmf satisfies TerminalType; /* SHORT_NAME
  * @type {number}
  */
 export
-const TerminalType_spare = TerminalType.spare satisfies TerminalType; /* LONG_NAMED_ENUMERATED_VALUE */
+const TerminalType_spare = TerminalType.spare; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary spare
@@ -156,7 +156,7 @@ const TerminalType_spare = TerminalType.spare satisfies TerminalType; /* LONG_NA
  * @type {number}
  */
 export
-const spare = TerminalType.spare satisfies TerminalType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const spare = TerminalType.spare; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 function _decode_TerminalType(el: _Element): TerminalType {

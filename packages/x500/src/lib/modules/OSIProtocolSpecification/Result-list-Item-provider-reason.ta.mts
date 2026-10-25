@@ -26,7 +26,7 @@ export const Result_list_Item_provider_reason_reason_not_specified = 0 satisfies
  * @constant
  * @type {number}
  */
-export const reason_not_specified = Result_list_Item_provider_reason_reason_not_specified satisfies Result_list_Item_provider_reason; /* SHORT_NAMED_INTEGER_VALUE */
+export const reason_not_specified = Result_list_Item_provider_reason_reason_not_specified; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Result_list_Item_provider_reason_abstract_syntax_not_supported
@@ -40,7 +40,7 @@ export const Result_list_Item_provider_reason_abstract_syntax_not_supported = 1 
  * @constant
  * @type {number}
  */
-export const abstract_syntax_not_supported = Result_list_Item_provider_reason_abstract_syntax_not_supported satisfies Result_list_Item_provider_reason; /* SHORT_NAMED_INTEGER_VALUE */
+export const abstract_syntax_not_supported = Result_list_Item_provider_reason_abstract_syntax_not_supported; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Result_list_Item_provider_reason_proposed_transfer_syntaxes_not_supported
@@ -54,7 +54,7 @@ export const Result_list_Item_provider_reason_proposed_transfer_syntaxes_not_sup
  * @constant
  * @type {number}
  */
-export const proposed_transfer_syntaxes_not_supported = Result_list_Item_provider_reason_proposed_transfer_syntaxes_not_supported satisfies Result_list_Item_provider_reason; /* SHORT_NAMED_INTEGER_VALUE */
+export const proposed_transfer_syntaxes_not_supported = Result_list_Item_provider_reason_proposed_transfer_syntaxes_not_supported; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_Result_list_Item_provider_reason = $._decodeInteger;

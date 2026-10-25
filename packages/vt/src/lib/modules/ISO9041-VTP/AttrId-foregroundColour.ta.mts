@@ -54,7 +54,7 @@ const AttrId_foregroundColour_null_ = 0 satisfies AttrId_foregroundColour; /* LO
  * @type {number}
  */
 export
-const null_ = AttrId_foregroundColour_null_ satisfies AttrId_foregroundColour; /* SHORT_NAMED_INTEGER_VALUE */
+const null_ = AttrId_foregroundColour_null_; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_AttrId_foregroundColour = $._decodeInteger;
 export const _encode_AttrId_foregroundColour = $._encodeInteger;
 

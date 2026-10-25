@@ -51,7 +51,7 @@ const SortKeySpec_sortRelation_ascending = 0 satisfies SortKeySpec_sortRelation;
  * @type {number}
  */
 export
-const ascending = SortKeySpec_sortRelation_ascending satisfies SortKeySpec_sortRelation; /* SHORT_NAMED_INTEGER_VALUE */
+const ascending = SortKeySpec_sortRelation_ascending; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SortKeySpec_sortRelation_descending
@@ -76,7 +76,7 @@ const SortKeySpec_sortRelation_descending = 1 satisfies SortKeySpec_sortRelation
  * @type {number}
  */
 export
-const descending = SortKeySpec_sortRelation_descending satisfies SortKeySpec_sortRelation; /* SHORT_NAMED_INTEGER_VALUE */
+const descending = SortKeySpec_sortRelation_descending; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SortKeySpec_sortRelation_ascendingByFrequency
@@ -102,7 +102,7 @@ const SortKeySpec_sortRelation_ascendingByFrequency = 3 satisfies SortKeySpec_so
  * @type {number}
  */
 export
-const ascendingByFrequency = SortKeySpec_sortRelation_ascendingByFrequency satisfies SortKeySpec_sortRelation; /* SHORT_NAMED_INTEGER_VALUE */
+const ascendingByFrequency = SortKeySpec_sortRelation_ascendingByFrequency; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SortKeySpec_sortRelation_descendingByfrequency
@@ -130,7 +130,7 @@ const SortKeySpec_sortRelation_descendingByfrequency = 4 satisfies SortKeySpec_s
  * @type {number}
  */
 export
-const descendingByfrequency = SortKeySpec_sortRelation_descendingByfrequency satisfies SortKeySpec_sortRelation; /* SHORT_NAMED_INTEGER_VALUE */
+const descendingByfrequency = SortKeySpec_sortRelation_descendingByfrequency; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_SortKeySpec_sortRelation: $.ASN1Decoder<SortKeySpec_sortRelation> = $._decodeInteger;
 export const _encode_SortKeySpec_sortRelation: $.ASN1Encoder<SortKeySpec_sortRelation> = $._encodeInteger;
 

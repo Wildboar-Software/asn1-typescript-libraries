@@ -98,7 +98,7 @@ const ConsultOptions = _enum_for_ConsultOptions;
  * @type {number}
  */
 export
-const ConsultOptions_unrestricted = ConsultOptions.unrestricted satisfies ConsultOptions; /* LONG_NAMED_ENUMERATED_VALUE */
+const ConsultOptions_unrestricted = ConsultOptions.unrestricted; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unrestricted
@@ -106,7 +106,7 @@ const ConsultOptions_unrestricted = ConsultOptions.unrestricted satisfies Consul
  * @type {number}
  */
 export
-const unrestricted = ConsultOptions.unrestricted satisfies ConsultOptions; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unrestricted = ConsultOptions.unrestricted; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ConsultOptions_consultOnly
@@ -118,7 +118,7 @@ const unrestricted = ConsultOptions.unrestricted satisfies ConsultOptions; /* SH
  * @type {number}
  */
 export
-const ConsultOptions_consultOnly = ConsultOptions.consultOnly satisfies ConsultOptions; /* LONG_NAMED_ENUMERATED_VALUE */
+const ConsultOptions_consultOnly = ConsultOptions.consultOnly; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary consultOnly
@@ -126,7 +126,7 @@ const ConsultOptions_consultOnly = ConsultOptions.consultOnly satisfies ConsultO
  * @type {number}
  */
 export
-const consultOnly = ConsultOptions.consultOnly satisfies ConsultOptions; /* SHORT_NAMED_ENUMERATED_VALUE */
+const consultOnly = ConsultOptions.consultOnly; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ConsultOptions_transferOnly
@@ -138,7 +138,7 @@ const consultOnly = ConsultOptions.consultOnly satisfies ConsultOptions; /* SHOR
  * @type {number}
  */
 export
-const ConsultOptions_transferOnly = ConsultOptions.transferOnly satisfies ConsultOptions; /* LONG_NAMED_ENUMERATED_VALUE */
+const ConsultOptions_transferOnly = ConsultOptions.transferOnly; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary transferOnly
@@ -146,7 +146,7 @@ const ConsultOptions_transferOnly = ConsultOptions.transferOnly satisfies Consul
  * @type {number}
  */
 export
-const transferOnly = ConsultOptions.transferOnly satisfies ConsultOptions; /* SHORT_NAMED_ENUMERATED_VALUE */
+const transferOnly = ConsultOptions.transferOnly; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ConsultOptions_conferenceOnly
@@ -158,7 +158,7 @@ const transferOnly = ConsultOptions.transferOnly satisfies ConsultOptions; /* SH
  * @type {number}
  */
 export
-const ConsultOptions_conferenceOnly = ConsultOptions.conferenceOnly satisfies ConsultOptions; /* LONG_NAMED_ENUMERATED_VALUE */
+const ConsultOptions_conferenceOnly = ConsultOptions.conferenceOnly; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary conferenceOnly
@@ -166,7 +166,7 @@ const ConsultOptions_conferenceOnly = ConsultOptions.conferenceOnly satisfies Co
  * @type {number}
  */
 export
-const conferenceOnly = ConsultOptions.conferenceOnly satisfies ConsultOptions; /* SHORT_NAMED_ENUMERATED_VALUE */
+const conferenceOnly = ConsultOptions.conferenceOnly; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 let _cached_decoder_for_ConsultOptions: $.ASN1Decoder<ConsultOptions> | null = null;
 

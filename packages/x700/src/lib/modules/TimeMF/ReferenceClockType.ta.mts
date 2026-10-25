@@ -51,7 +51,7 @@ export const ReferenceClockType_unspecifiedOrUnknown = 0 satisfies ReferenceCloc
  * @constant
  * @type {number}
  */
-export const unspecifiedOrUnknown = ReferenceClockType_unspecifiedOrUnknown satisfies ReferenceClockType; /* SHORT_NAMED_INTEGER_VALUE */
+export const unspecifiedOrUnknown = ReferenceClockType_unspecifiedOrUnknown; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ReferenceClockType_calibratedAtomicClock
@@ -65,7 +65,7 @@ export const ReferenceClockType_calibratedAtomicClock = 1 satisfies ReferenceClo
  * @constant
  * @type {number}
  */
-export const calibratedAtomicClock = ReferenceClockType_calibratedAtomicClock satisfies ReferenceClockType; /* SHORT_NAMED_INTEGER_VALUE */
+export const calibratedAtomicClock = ReferenceClockType_calibratedAtomicClock; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ReferenceClockType_radioVLForLF
@@ -79,7 +79,7 @@ export const ReferenceClockType_radioVLForLF = 2 satisfies ReferenceClockType; /
  * @constant
  * @type {number}
  */
-export const radioVLForLF = ReferenceClockType_radioVLForLF satisfies ReferenceClockType; /* SHORT_NAMED_INTEGER_VALUE */
+export const radioVLForLF = ReferenceClockType_radioVLForLF; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ReferenceClockType_radioHF
@@ -93,7 +93,7 @@ export const ReferenceClockType_radioHF = 3 satisfies ReferenceClockType; /* LON
  * @constant
  * @type {number}
  */
-export const radioHF = ReferenceClockType_radioHF satisfies ReferenceClockType; /* SHORT_NAMED_INTEGER_VALUE */
+export const radioHF = ReferenceClockType_radioHF; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ReferenceClockType_radioUHF
@@ -107,7 +107,7 @@ export const ReferenceClockType_radioUHF = 4 satisfies ReferenceClockType; /* LO
  * @constant
  * @type {number}
  */
-export const radioUHF = ReferenceClockType_radioUHF satisfies ReferenceClockType; /* SHORT_NAMED_INTEGER_VALUE */
+export const radioUHF = ReferenceClockType_radioUHF; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ReferenceClockType_localNet
@@ -121,7 +121,7 @@ export const ReferenceClockType_localNet = 5 satisfies ReferenceClockType; /* LO
  * @constant
  * @type {number}
  */
-export const localNet = ReferenceClockType_localNet satisfies ReferenceClockType; /* SHORT_NAMED_INTEGER_VALUE */
+export const localNet = ReferenceClockType_localNet; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ReferenceClockType_synch
@@ -135,7 +135,7 @@ export const ReferenceClockType_synch = 6 satisfies ReferenceClockType; /* LONG_
  * @constant
  * @type {number}
  */
-export const synch = ReferenceClockType_synch satisfies ReferenceClockType; /* SHORT_NAMED_INTEGER_VALUE */
+export const synch = ReferenceClockType_synch; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ReferenceClockType_wallclock
@@ -149,7 +149,7 @@ export const ReferenceClockType_wallclock = 7 satisfies ReferenceClockType; /* L
  * @constant
  * @type {number}
  */
-export const wallclock = ReferenceClockType_wallclock satisfies ReferenceClockType; /* SHORT_NAMED_INTEGER_VALUE */
+export const wallclock = ReferenceClockType_wallclock; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ReferenceClockType_telephoneModem
@@ -163,7 +163,7 @@ export const ReferenceClockType_telephoneModem = 8 satisfies ReferenceClockType;
  * @constant
  * @type {number}
  */
-export const telephoneModem = ReferenceClockType_telephoneModem satisfies ReferenceClockType; /* SHORT_NAMED_INTEGER_VALUE */
+export const telephoneModem = ReferenceClockType_telephoneModem; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ReferenceClockType_gps
@@ -177,7 +177,7 @@ export const ReferenceClockType_gps = 9 satisfies ReferenceClockType; /* LONG_NA
  * @constant
  * @type {number}
  */
-export const gps = ReferenceClockType_gps satisfies ReferenceClockType; /* SHORT_NAMED_INTEGER_VALUE */
+export const gps = ReferenceClockType_gps; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ReferenceClockType_loranC
@@ -191,7 +191,7 @@ export const ReferenceClockType_loranC = 10 satisfies ReferenceClockType; /* LON
  * @constant
  * @type {number}
  */
-export const loranC = ReferenceClockType_loranC satisfies ReferenceClockType; /* SHORT_NAMED_INTEGER_VALUE */
+export const loranC = ReferenceClockType_loranC; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ReferenceClockType_other
@@ -205,7 +205,7 @@ export const ReferenceClockType_other = 11 satisfies ReferenceClockType; /* LONG
  * @constant
  * @type {number}
  */
-export const other = ReferenceClockType_other satisfies ReferenceClockType; /* SHORT_NAMED_INTEGER_VALUE */
+export const other = ReferenceClockType_other; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_ReferenceClockType = $._decodeInteger;

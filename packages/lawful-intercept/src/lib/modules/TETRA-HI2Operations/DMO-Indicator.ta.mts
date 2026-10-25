@@ -98,7 +98,7 @@ type DMO_Indicator = _enum_for_DMO_Indicator | ENUMERATED;
  * @type {number}
  */
 export
-const DMO_Indicator_dMOSTATETUNKNOWNC = _enum_for_DMO_Indicator.dMOSTATETUNKNOWNC satisfies DMO_Indicator; /* LONG_NAMED_ENUMERATED_VALUE */
+const DMO_Indicator_dMOSTATETUNKNOWNC = _enum_for_DMO_Indicator.dMOSTATETUNKNOWNC; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary dMOSTATETUNKNOWNC
@@ -113,7 +113,7 @@ const DMO_Indicator_dMOSTATETUNKNOWNC = _enum_for_DMO_Indicator.dMOSTATETUNKNOWN
  * @type {number}
  */
 export
-const dMOSTATETUNKNOWNC = DMO_Indicator_dMOSTATETUNKNOWNC satisfies DMO_Indicator; /* SHORT_NAMED_ENUMERATED_VALUE */
+const dMOSTATETUNKNOWNC = DMO_Indicator_dMOSTATETUNKNOWNC; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary DMO_Indicator_dMOSTATETTMOC
@@ -128,7 +128,7 @@ const dMOSTATETUNKNOWNC = DMO_Indicator_dMOSTATETUNKNOWNC satisfies DMO_Indicato
  * @type {number}
  */
 export
-const DMO_Indicator_dMOSTATETTMOC = _enum_for_DMO_Indicator.dMOSTATETTMOC satisfies DMO_Indicator; /* LONG_NAMED_ENUMERATED_VALUE */
+const DMO_Indicator_dMOSTATETTMOC = _enum_for_DMO_Indicator.dMOSTATETTMOC; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary dMOSTATETTMOC
@@ -143,7 +143,7 @@ const DMO_Indicator_dMOSTATETTMOC = _enum_for_DMO_Indicator.dMOSTATETTMOC satisf
  * @type {number}
  */
 export
-const dMOSTATETTMOC = DMO_Indicator_dMOSTATETTMOC satisfies DMO_Indicator; /* SHORT_NAMED_ENUMERATED_VALUE */
+const dMOSTATETTMOC = DMO_Indicator_dMOSTATETTMOC; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary DMO_Indicator_dMOSTATETDMOC
@@ -158,7 +158,7 @@ const dMOSTATETTMOC = DMO_Indicator_dMOSTATETTMOC satisfies DMO_Indicator; /* SH
  * @type {number}
  */
 export
-const DMO_Indicator_dMOSTATETDMOC = _enum_for_DMO_Indicator.dMOSTATETDMOC satisfies DMO_Indicator; /* LONG_NAMED_ENUMERATED_VALUE */
+const DMO_Indicator_dMOSTATETDMOC = _enum_for_DMO_Indicator.dMOSTATETDMOC; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary dMOSTATETDMOC
@@ -173,7 +173,7 @@ const DMO_Indicator_dMOSTATETDMOC = _enum_for_DMO_Indicator.dMOSTATETDMOC satisf
  * @type {number}
  */
 export
-const dMOSTATETDMOC = DMO_Indicator_dMOSTATETDMOC satisfies DMO_Indicator; /* SHORT_NAMED_ENUMERATED_VALUE */
+const dMOSTATETDMOC = DMO_Indicator_dMOSTATETDMOC; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary DMO_Indicator_dMOSTATETIDLEDUALWATCHC
@@ -188,7 +188,7 @@ const dMOSTATETDMOC = DMO_Indicator_dMOSTATETDMOC satisfies DMO_Indicator; /* SH
  * @type {number}
  */
 export
-const DMO_Indicator_dMOSTATETIDLEDUALWATCHC = _enum_for_DMO_Indicator.dMOSTATETIDLEDUALWATCHC satisfies DMO_Indicator; /* LONG_NAMED_ENUMERATED_VALUE */
+const DMO_Indicator_dMOSTATETIDLEDUALWATCHC = _enum_for_DMO_Indicator.dMOSTATETIDLEDUALWATCHC; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary dMOSTATETIDLEDUALWATCHC
@@ -203,7 +203,7 @@ const DMO_Indicator_dMOSTATETIDLEDUALWATCHC = _enum_for_DMO_Indicator.dMOSTATETI
  * @type {number}
  */
 export
-const dMOSTATETIDLEDUALWATCHC = DMO_Indicator_dMOSTATETIDLEDUALWATCHC satisfies DMO_Indicator; /* SHORT_NAMED_ENUMERATED_VALUE */
+const dMOSTATETIDLEDUALWATCHC = DMO_Indicator_dMOSTATETIDLEDUALWATCHC; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary DMO_Indicator_dMOSTATETFULLDUALWATCHC
@@ -218,7 +218,7 @@ const dMOSTATETIDLEDUALWATCHC = DMO_Indicator_dMOSTATETIDLEDUALWATCHC satisfies 
  * @type {number}
  */
 export
-const DMO_Indicator_dMOSTATETFULLDUALWATCHC = _enum_for_DMO_Indicator.dMOSTATETFULLDUALWATCHC satisfies DMO_Indicator; /* LONG_NAMED_ENUMERATED_VALUE */
+const DMO_Indicator_dMOSTATETFULLDUALWATCHC = _enum_for_DMO_Indicator.dMOSTATETFULLDUALWATCHC; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary dMOSTATETFULLDUALWATCHC
@@ -233,7 +233,7 @@ const DMO_Indicator_dMOSTATETFULLDUALWATCHC = _enum_for_DMO_Indicator.dMOSTATETF
  * @type {number}
  */
 export
-const dMOSTATETFULLDUALWATCHC = DMO_Indicator_dMOSTATETFULLDUALWATCHC satisfies DMO_Indicator; /* SHORT_NAMED_ENUMERATED_VALUE */
+const dMOSTATETFULLDUALWATCHC = DMO_Indicator_dMOSTATETFULLDUALWATCHC; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary DMO_Indicator_dMOSTATETTXINHIBITC
@@ -248,7 +248,7 @@ const dMOSTATETFULLDUALWATCHC = DMO_Indicator_dMOSTATETFULLDUALWATCHC satisfies 
  * @type {number}
  */
 export
-const DMO_Indicator_dMOSTATETTXINHIBITC = _enum_for_DMO_Indicator.dMOSTATETTXINHIBITC satisfies DMO_Indicator; /* LONG_NAMED_ENUMERATED_VALUE */
+const DMO_Indicator_dMOSTATETTXINHIBITC = _enum_for_DMO_Indicator.dMOSTATETTXINHIBITC; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary dMOSTATETTXINHIBITC
@@ -263,7 +263,7 @@ const DMO_Indicator_dMOSTATETTXINHIBITC = _enum_for_DMO_Indicator.dMOSTATETTXINH
  * @type {number}
  */
 export
-const dMOSTATETTXINHIBITC = DMO_Indicator_dMOSTATETTXINHIBITC satisfies DMO_Indicator; /* SHORT_NAMED_ENUMERATED_VALUE */
+const dMOSTATETTXINHIBITC = DMO_Indicator_dMOSTATETTXINHIBITC; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_DMO_Indicator: $.ASN1Decoder<DMO_Indicator> = $._decodeEnumerated;
 export const _encode_DMO_Indicator: $.ASN1Encoder<DMO_Indicator> = $._encodeEnumerated;
 

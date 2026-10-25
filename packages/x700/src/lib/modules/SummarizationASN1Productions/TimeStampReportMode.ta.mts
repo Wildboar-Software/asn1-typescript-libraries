@@ -97,7 +97,7 @@ export const TimeStampReportMode = _enum_for_TimeStampReportMode;
  * @type {number}
  */
 export const TimeStampReportMode_timeStampingOff =
-    TimeStampReportMode.timeStampingOff satisfies TimeStampReportMode; /* LONG_NAMED_ENUMERATED_VALUE */
+    TimeStampReportMode.timeStampingOff; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary timeStampingOff
@@ -110,7 +110,7 @@ export const TimeStampReportMode_timeStampingOff =
  * @type {number}
  */
 export const timeStampingOff =
-    TimeStampReportMode.timeStampingOff satisfies TimeStampReportMode; /* SHORT_NAMED_ENUMERATED_VALUE */
+    TimeStampReportMode.timeStampingOff; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TimeStampReportMode_globalTimeStampOnly
@@ -124,7 +124,7 @@ export const timeStampingOff =
  * @type {number}
  */
 export const TimeStampReportMode_globalTimeStampOnly =
-    TimeStampReportMode.globalTimeStampOnly satisfies TimeStampReportMode; /* LONG_NAMED_ENUMERATED_VALUE */
+    TimeStampReportMode.globalTimeStampOnly; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary globalTimeStampOnly
@@ -138,7 +138,7 @@ export const TimeStampReportMode_globalTimeStampOnly =
  * @type {number}
  */
 export const globalTimeStampOnly =
-    TimeStampReportMode.globalTimeStampOnly satisfies TimeStampReportMode; /* SHORT_NAMED_ENUMERATED_VALUE */
+    TimeStampReportMode.globalTimeStampOnly; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TimeStampReportMode_individualTimeStamping
@@ -153,7 +153,7 @@ export const globalTimeStampOnly =
  * @type {number}
  */
 export const TimeStampReportMode_individualTimeStamping =
-    TimeStampReportMode.individualTimeStamping satisfies TimeStampReportMode; /* LONG_NAMED_ENUMERATED_VALUE */
+    TimeStampReportMode.individualTimeStamping; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary individualTimeStamping
@@ -166,7 +166,7 @@ export const TimeStampReportMode_individualTimeStamping =
  * @type {number}
  */
 export const individualTimeStamping =
-    TimeStampReportMode.individualTimeStamping satisfies TimeStampReportMode; /* SHORT_NAMED_ENUMERATED_VALUE */
+    TimeStampReportMode.individualTimeStamping; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 export function _decode_TimeStampReportMode(el: _Element): TimeStampReportMode {

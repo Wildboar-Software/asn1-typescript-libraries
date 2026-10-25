@@ -50,7 +50,7 @@ const InitiateAuthenticationResponse_initiateAuthenticationError_invalidDpAddres
  * @type {number}
  */
 export
-const invalidDpAddress = InitiateAuthenticationResponse_initiateAuthenticationError_invalidDpAddress satisfies InitiateAuthenticationResponse_initiateAuthenticationError; /* SHORT_NAMED_INTEGER_VALUE */
+const invalidDpAddress = InitiateAuthenticationResponse_initiateAuthenticationError_invalidDpAddress; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary InitiateAuthenticationResponse_initiateAuthenticationError_euiccVersionNotSupportedByDp
@@ -76,7 +76,7 @@ const InitiateAuthenticationResponse_initiateAuthenticationError_euiccVersionNot
  * @type {number}
  */
 export
-const euiccVersionNotSupportedByDp = InitiateAuthenticationResponse_initiateAuthenticationError_euiccVersionNotSupportedByDp satisfies InitiateAuthenticationResponse_initiateAuthenticationError; /* SHORT_NAMED_INTEGER_VALUE */
+const euiccVersionNotSupportedByDp = InitiateAuthenticationResponse_initiateAuthenticationError_euiccVersionNotSupportedByDp; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary InitiateAuthenticationResponse_initiateAuthenticationError_ciPKIdNotSupported
@@ -104,7 +104,7 @@ const InitiateAuthenticationResponse_initiateAuthenticationError_ciPKIdNotSuppor
  * @type {number}
  */
 export
-const ciPKIdNotSupported = InitiateAuthenticationResponse_initiateAuthenticationError_ciPKIdNotSupported satisfies InitiateAuthenticationResponse_initiateAuthenticationError; /* SHORT_NAMED_INTEGER_VALUE */
+const ciPKIdNotSupported = InitiateAuthenticationResponse_initiateAuthenticationError_ciPKIdNotSupported; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_InitiateAuthenticationResponse_initiateAuthenticationError = $._decodeInteger;
 export const _encode_InitiateAuthenticationResponse_initiateAuthenticationError = $._encodeInteger;
 

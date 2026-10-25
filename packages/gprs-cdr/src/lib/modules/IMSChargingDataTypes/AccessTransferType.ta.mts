@@ -121,7 +121,7 @@ const AccessTransferType = _enum_for_AccessTransferType;
  * @type {number}
  */
 export
-const AccessTransferType_pSToCS = AccessTransferType.pSToCS satisfies AccessTransferType; /* LONG_NAMED_ENUMERATED_VALUE */
+const AccessTransferType_pSToCS = AccessTransferType.pSToCS; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pSToCS
@@ -134,7 +134,7 @@ const AccessTransferType_pSToCS = AccessTransferType.pSToCS satisfies AccessTran
  * @type {number}
  */
 export
-const pSToCS = AccessTransferType.pSToCS satisfies AccessTransferType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pSToCS = AccessTransferType.pSToCS; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AccessTransferType_cSToPS
@@ -147,7 +147,7 @@ const pSToCS = AccessTransferType.pSToCS satisfies AccessTransferType; /* SHORT_
  * @type {number}
  */
 export
-const AccessTransferType_cSToPS = AccessTransferType.cSToPS satisfies AccessTransferType; /* LONG_NAMED_ENUMERATED_VALUE */
+const AccessTransferType_cSToPS = AccessTransferType.cSToPS; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary cSToPS
@@ -160,7 +160,7 @@ const AccessTransferType_cSToPS = AccessTransferType.cSToPS satisfies AccessTran
  * @type {number}
  */
 export
-const cSToPS = AccessTransferType.cSToPS satisfies AccessTransferType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const cSToPS = AccessTransferType.cSToPS; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AccessTransferType_pSToPS
@@ -173,7 +173,7 @@ const cSToPS = AccessTransferType.cSToPS satisfies AccessTransferType; /* SHORT_
  * @type {number}
  */
 export
-const AccessTransferType_pSToPS = AccessTransferType.pSToPS satisfies AccessTransferType; /* LONG_NAMED_ENUMERATED_VALUE */
+const AccessTransferType_pSToPS = AccessTransferType.pSToPS; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pSToPS
@@ -186,7 +186,7 @@ const AccessTransferType_pSToPS = AccessTransferType.pSToPS satisfies AccessTran
  * @type {number}
  */
 export
-const pSToPS = AccessTransferType.pSToPS satisfies AccessTransferType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pSToPS = AccessTransferType.pSToPS; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AccessTransferType_cSToCS
@@ -200,7 +200,7 @@ const pSToPS = AccessTransferType.pSToPS satisfies AccessTransferType; /* SHORT_
  * @type {number}
  */
 export
-const AccessTransferType_cSToCS = AccessTransferType.cSToCS satisfies AccessTransferType; /* LONG_NAMED_ENUMERATED_VALUE */
+const AccessTransferType_cSToCS = AccessTransferType.cSToCS; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary cSToCS
@@ -214,7 +214,7 @@ const AccessTransferType_cSToCS = AccessTransferType.cSToCS satisfies AccessTran
  * @type {number}
  */
 export
-const cSToCS = AccessTransferType.cSToCS satisfies AccessTransferType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const cSToCS = AccessTransferType.cSToCS; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_AccessTransferType: $.ASN1Decoder<AccessTransferType> = $._decodeEnumerated;

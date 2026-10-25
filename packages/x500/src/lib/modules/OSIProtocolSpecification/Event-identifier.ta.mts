@@ -34,7 +34,7 @@ export const Event_identifier_cp_PPDU = 0 satisfies Event_identifier; /* LONG_NA
  * @constant
  * @type {number}
  */
-export const cp_PPDU = Event_identifier_cp_PPDU satisfies Event_identifier; /* SHORT_NAMED_INTEGER_VALUE */
+export const cp_PPDU = Event_identifier_cp_PPDU; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Event_identifier_cpa_PPDU
@@ -48,7 +48,7 @@ export const Event_identifier_cpa_PPDU = 1 satisfies Event_identifier; /* LONG_N
  * @constant
  * @type {number}
  */
-export const cpa_PPDU = Event_identifier_cpa_PPDU satisfies Event_identifier; /* SHORT_NAMED_INTEGER_VALUE */
+export const cpa_PPDU = Event_identifier_cpa_PPDU; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Event_identifier_cpr_PPDU
@@ -62,7 +62,7 @@ export const Event_identifier_cpr_PPDU = 2 satisfies Event_identifier; /* LONG_N
  * @constant
  * @type {number}
  */
-export const cpr_PPDU = Event_identifier_cpr_PPDU satisfies Event_identifier; /* SHORT_NAMED_INTEGER_VALUE */
+export const cpr_PPDU = Event_identifier_cpr_PPDU; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Event_identifier_aru_PPDU
@@ -76,7 +76,7 @@ export const Event_identifier_aru_PPDU = 3 satisfies Event_identifier; /* LONG_N
  * @constant
  * @type {number}
  */
-export const aru_PPDU = Event_identifier_aru_PPDU satisfies Event_identifier; /* SHORT_NAMED_INTEGER_VALUE */
+export const aru_PPDU = Event_identifier_aru_PPDU; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Event_identifier_arp_PPDU
@@ -90,7 +90,7 @@ export const Event_identifier_arp_PPDU = 4 satisfies Event_identifier; /* LONG_N
  * @constant
  * @type {number}
  */
-export const arp_PPDU = Event_identifier_arp_PPDU satisfies Event_identifier; /* SHORT_NAMED_INTEGER_VALUE */
+export const arp_PPDU = Event_identifier_arp_PPDU; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Event_identifier_td_PPDU
@@ -104,7 +104,7 @@ export const Event_identifier_td_PPDU = 7 satisfies Event_identifier; /* LONG_NA
  * @constant
  * @type {number}
  */
-export const td_PPDU = Event_identifier_td_PPDU satisfies Event_identifier; /* SHORT_NAMED_INTEGER_VALUE */
+export const td_PPDU = Event_identifier_td_PPDU; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Event_identifier_s_release_indication
@@ -118,7 +118,7 @@ export const Event_identifier_s_release_indication = 14 satisfies Event_identifi
  * @constant
  * @type {number}
  */
-export const s_release_indication = Event_identifier_s_release_indication satisfies Event_identifier; /* SHORT_NAMED_INTEGER_VALUE */
+export const s_release_indication = Event_identifier_s_release_indication; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Event_identifier_s_release_confirm
@@ -132,7 +132,7 @@ export const Event_identifier_s_release_confirm = 15 satisfies Event_identifier;
  * @constant
  * @type {number}
  */
-export const s_release_confirm = Event_identifier_s_release_confirm satisfies Event_identifier; /* SHORT_NAMED_INTEGER_VALUE */
+export const s_release_confirm = Event_identifier_s_release_confirm; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_Event_identifier = $._decodeInteger;

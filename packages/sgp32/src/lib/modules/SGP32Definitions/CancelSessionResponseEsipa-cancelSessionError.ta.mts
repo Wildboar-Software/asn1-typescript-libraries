@@ -53,7 +53,7 @@ const CancelSessionResponseEsipa_cancelSessionError_invalidTransactionId = 1 sat
  * @type {number}
  */
 export
-const invalidTransactionId = CancelSessionResponseEsipa_cancelSessionError_invalidTransactionId satisfies CancelSessionResponseEsipa_cancelSessionError; /* SHORT_NAMED_INTEGER_VALUE */
+const invalidTransactionId = CancelSessionResponseEsipa_cancelSessionError_invalidTransactionId; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CancelSessionResponseEsipa_cancelSessionError_euiccSignatureInvalid
@@ -78,7 +78,7 @@ const CancelSessionResponseEsipa_cancelSessionError_euiccSignatureInvalid = 2 sa
  * @type {number}
  */
 export
-const euiccSignatureInvalid = CancelSessionResponseEsipa_cancelSessionError_euiccSignatureInvalid satisfies CancelSessionResponseEsipa_cancelSessionError; /* SHORT_NAMED_INTEGER_VALUE */
+const euiccSignatureInvalid = CancelSessionResponseEsipa_cancelSessionError_euiccSignatureInvalid; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CancelSessionResponseEsipa_cancelSessionError_undefinedError
@@ -103,7 +103,7 @@ const CancelSessionResponseEsipa_cancelSessionError_undefinedError = 127 satisfi
  * @type {number}
  */
 export
-const undefinedError = CancelSessionResponseEsipa_cancelSessionError_undefinedError satisfies CancelSessionResponseEsipa_cancelSessionError; /* SHORT_NAMED_INTEGER_VALUE */
+const undefinedError = CancelSessionResponseEsipa_cancelSessionError_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_CancelSessionResponseEsipa_cancelSessionError: $.ASN1Decoder<CancelSessionResponseEsipa_cancelSessionError> = $._decodeInteger;
 export const _encode_CancelSessionResponseEsipa_cancelSessionError: $.ASN1Encoder<CancelSessionResponseEsipa_cancelSessionError> = $._encodeInteger;
 

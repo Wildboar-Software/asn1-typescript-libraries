@@ -107,7 +107,7 @@ const EPSAttachResult = _enum_for_EPSAttachResult;
  * @type {number}
  */
 export
-const EPSAttachResult_ePSOnly = EPSAttachResult.ePSOnly satisfies EPSAttachResult; /* LONG_NAMED_ENUMERATED_VALUE */
+const EPSAttachResult_ePSOnly = EPSAttachResult.ePSOnly; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ePSOnly
@@ -121,7 +121,7 @@ const EPSAttachResult_ePSOnly = EPSAttachResult.ePSOnly satisfies EPSAttachResul
  * @type {number}
  */
 export
-const ePSOnly = EPSAttachResult.ePSOnly satisfies EPSAttachResult; /* SHORT_NAMED_ENUMERATED_VALUE */
+const ePSOnly = EPSAttachResult.ePSOnly; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EPSAttachResult_combinedEPSIMSI
@@ -135,7 +135,7 @@ const ePSOnly = EPSAttachResult.ePSOnly satisfies EPSAttachResult; /* SHORT_NAME
  * @type {number}
  */
 export
-const EPSAttachResult_combinedEPSIMSI = EPSAttachResult.combinedEPSIMSI satisfies EPSAttachResult; /* LONG_NAMED_ENUMERATED_VALUE */
+const EPSAttachResult_combinedEPSIMSI = EPSAttachResult.combinedEPSIMSI; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary combinedEPSIMSI
@@ -149,7 +149,7 @@ const EPSAttachResult_combinedEPSIMSI = EPSAttachResult.combinedEPSIMSI satisfie
  * @type {number}
  */
 export
-const combinedEPSIMSI = EPSAttachResult.combinedEPSIMSI satisfies EPSAttachResult; /* SHORT_NAMED_ENUMERATED_VALUE */
+const combinedEPSIMSI = EPSAttachResult.combinedEPSIMSI; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_EPSAttachResult: $.ASN1Decoder<EPSAttachResult> = $._decodeEnumerated;
 export const _encode_EPSAttachResult: $.ASN1Encoder<EPSAttachResult> = $._encodeEnumerated;
 

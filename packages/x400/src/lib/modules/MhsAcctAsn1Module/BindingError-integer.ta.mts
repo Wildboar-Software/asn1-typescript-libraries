@@ -38,7 +38,7 @@ export const BindingError_integer_busy = 0 satisfies BindingError_integer; /* LO
  * @constant
  * @type {number}
  */
-export const busy = BindingError_integer_busy satisfies BindingError_integer; /* SHORT_NAMED_INTEGER_VALUE */
+export const busy = BindingError_integer_busy; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary BindingError_integer_authentication_error
@@ -52,7 +52,7 @@ export const BindingError_integer_authentication_error = 2 satisfies BindingErro
  * @constant
  * @type {number}
  */
-export const authentication_error = BindingError_integer_authentication_error satisfies BindingError_integer; /* SHORT_NAMED_INTEGER_VALUE */
+export const authentication_error = BindingError_integer_authentication_error; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary BindingError_integer_unacceptable_dialogue_mode
@@ -66,7 +66,7 @@ export const BindingError_integer_unacceptable_dialogue_mode = 3 satisfies Bindi
  * @constant
  * @type {number}
  */
-export const unacceptable_dialogue_mode = BindingError_integer_unacceptable_dialogue_mode satisfies BindingError_integer; /* SHORT_NAMED_INTEGER_VALUE */
+export const unacceptable_dialogue_mode = BindingError_integer_unacceptable_dialogue_mode; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary BindingError_integer_unacceptable_security_context
@@ -80,7 +80,7 @@ export const BindingError_integer_unacceptable_security_context = 4 satisfies Bi
  * @constant
  * @type {number}
  */
-export const unacceptable_security_context = BindingError_integer_unacceptable_security_context satisfies BindingError_integer; /* SHORT_NAMED_INTEGER_VALUE */
+export const unacceptable_security_context = BindingError_integer_unacceptable_security_context; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_BindingError_integer = $._decodeInteger;

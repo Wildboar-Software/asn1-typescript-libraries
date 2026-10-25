@@ -30,7 +30,7 @@ export const SearchArgumentData_subset_baseObject = 0 satisfies SearchArgumentDa
  * @constant
  * @type {number}
  */
-export const baseObject = SearchArgumentData_subset_baseObject satisfies SearchArgumentData_subset; /* SHORT_NAMED_INTEGER_VALUE */
+export const baseObject = SearchArgumentData_subset_baseObject; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SearchArgumentData_subset_oneLevel
@@ -44,7 +44,7 @@ export const SearchArgumentData_subset_oneLevel = 1 satisfies SearchArgumentData
  * @constant
  * @type {number}
  */
-export const oneLevel = SearchArgumentData_subset_oneLevel satisfies SearchArgumentData_subset; /* SHORT_NAMED_INTEGER_VALUE */
+export const oneLevel = SearchArgumentData_subset_oneLevel; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SearchArgumentData_subset_wholeSubtree
@@ -58,7 +58,7 @@ export const SearchArgumentData_subset_wholeSubtree = 2 satisfies SearchArgument
  * @constant
  * @type {number}
  */
-export const wholeSubtree = SearchArgumentData_subset_wholeSubtree satisfies SearchArgumentData_subset; /* SHORT_NAMED_INTEGER_VALUE */
+export const wholeSubtree = SearchArgumentData_subset_wholeSubtree; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_SearchArgumentData_subset = $._decodeInteger;

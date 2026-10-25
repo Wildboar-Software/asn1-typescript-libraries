@@ -93,7 +93,7 @@ const StationaryIndication = _enum_for_StationaryIndication;
  * @type {number}
  */
 export
-const StationaryIndication_stationary = StationaryIndication.stationary satisfies StationaryIndication; /* LONG_NAMED_ENUMERATED_VALUE */
+const StationaryIndication_stationary = StationaryIndication.stationary; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary stationary
@@ -101,7 +101,7 @@ const StationaryIndication_stationary = StationaryIndication.stationary satisfie
  * @type {number}
  */
 export
-const stationary = StationaryIndication.stationary satisfies StationaryIndication; /* SHORT_NAMED_ENUMERATED_VALUE */
+const stationary = StationaryIndication.stationary; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary StationaryIndication_mobile
@@ -109,7 +109,7 @@ const stationary = StationaryIndication.stationary satisfies StationaryIndicatio
  * @type {number}
  */
 export
-const StationaryIndication_mobile = StationaryIndication.mobile satisfies StationaryIndication; /* LONG_NAMED_ENUMERATED_VALUE */
+const StationaryIndication_mobile = StationaryIndication.mobile; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary mobile
@@ -117,7 +117,7 @@ const StationaryIndication_mobile = StationaryIndication.mobile satisfies Statio
  * @type {number}
  */
 export
-const mobile = StationaryIndication.mobile satisfies StationaryIndication; /* SHORT_NAMED_ENUMERATED_VALUE */
+const mobile = StationaryIndication.mobile; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_StationaryIndication: $.ASN1Decoder<StationaryIndication> = $._decodeEnumerated;
 export const _encode_StationaryIndication: $.ASN1Encoder<StationaryIndication> = $._encodeEnumerated;
 

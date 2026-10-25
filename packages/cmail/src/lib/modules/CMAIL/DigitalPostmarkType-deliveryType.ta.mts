@@ -52,7 +52,7 @@ export type DigitalPostmarkType_deliveryType =
  * @constant
  * @type {number}
  */
-export const DigitalPostmarkType_deliveryType_certifiedMail = _enum_for_DigitalPostmarkType_deliveryType.certifiedMail satisfies DigitalPostmarkType_deliveryType; /* LONG_NAMED_ENUMERATED_VALUE */
+export const DigitalPostmarkType_deliveryType_certifiedMail = _enum_for_DigitalPostmarkType_deliveryType.certifiedMail; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -61,7 +61,7 @@ export const DigitalPostmarkType_deliveryType_certifiedMail = _enum_for_DigitalP
  * @constant
  * @type {number}
  */
-export const certifiedMail = DigitalPostmarkType_deliveryType_certifiedMail satisfies DigitalPostmarkType_deliveryType; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const certifiedMail = DigitalPostmarkType_deliveryType_certifiedMail; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 

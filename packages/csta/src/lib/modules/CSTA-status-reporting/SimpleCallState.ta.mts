@@ -142,7 +142,7 @@ const SimpleCallState = _enum_for_SimpleCallState;
  * @type {number}
  */
 export
-const SimpleCallState_callNull = SimpleCallState.callNull satisfies SimpleCallState; /* LONG_NAMED_ENUMERATED_VALUE */
+const SimpleCallState_callNull = SimpleCallState.callNull; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary callNull
@@ -150,7 +150,7 @@ const SimpleCallState_callNull = SimpleCallState.callNull satisfies SimpleCallSt
  * @type {number}
  */
 export
-const callNull = SimpleCallState.callNull satisfies SimpleCallState; /* SHORT_NAMED_ENUMERATED_VALUE */
+const callNull = SimpleCallState.callNull; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SimpleCallState_callPending
@@ -162,7 +162,7 @@ const callNull = SimpleCallState.callNull satisfies SimpleCallState; /* SHORT_NA
  * @type {number}
  */
 export
-const SimpleCallState_callPending = SimpleCallState.callPending satisfies SimpleCallState; /* LONG_NAMED_ENUMERATED_VALUE */
+const SimpleCallState_callPending = SimpleCallState.callPending; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary callPending
@@ -170,7 +170,7 @@ const SimpleCallState_callPending = SimpleCallState.callPending satisfies Simple
  * @type {number}
  */
 export
-const callPending = SimpleCallState.callPending satisfies SimpleCallState; /* SHORT_NAMED_ENUMERATED_VALUE */
+const callPending = SimpleCallState.callPending; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SimpleCallState_callOriginated
@@ -182,7 +182,7 @@ const callPending = SimpleCallState.callPending satisfies SimpleCallState; /* SH
  * @type {number}
  */
 export
-const SimpleCallState_callOriginated = SimpleCallState.callOriginated satisfies SimpleCallState; /* LONG_NAMED_ENUMERATED_VALUE */
+const SimpleCallState_callOriginated = SimpleCallState.callOriginated; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary callOriginated
@@ -190,7 +190,7 @@ const SimpleCallState_callOriginated = SimpleCallState.callOriginated satisfies 
  * @type {number}
  */
 export
-const callOriginated = SimpleCallState.callOriginated satisfies SimpleCallState; /* SHORT_NAMED_ENUMERATED_VALUE */
+const callOriginated = SimpleCallState.callOriginated; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SimpleCallState_callDelivered
@@ -202,7 +202,7 @@ const callOriginated = SimpleCallState.callOriginated satisfies SimpleCallState;
  * @type {number}
  */
 export
-const SimpleCallState_callDelivered = SimpleCallState.callDelivered satisfies SimpleCallState; /* LONG_NAMED_ENUMERATED_VALUE */
+const SimpleCallState_callDelivered = SimpleCallState.callDelivered; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary callDelivered
@@ -210,7 +210,7 @@ const SimpleCallState_callDelivered = SimpleCallState.callDelivered satisfies Si
  * @type {number}
  */
 export
-const callDelivered = SimpleCallState.callDelivered satisfies SimpleCallState; /* SHORT_NAMED_ENUMERATED_VALUE */
+const callDelivered = SimpleCallState.callDelivered; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SimpleCallState_callDeliveredHeld
@@ -222,7 +222,7 @@ const callDelivered = SimpleCallState.callDelivered satisfies SimpleCallState; /
  * @type {number}
  */
 export
-const SimpleCallState_callDeliveredHeld = SimpleCallState.callDeliveredHeld satisfies SimpleCallState; /* LONG_NAMED_ENUMERATED_VALUE */
+const SimpleCallState_callDeliveredHeld = SimpleCallState.callDeliveredHeld; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary callDeliveredHeld
@@ -230,7 +230,7 @@ const SimpleCallState_callDeliveredHeld = SimpleCallState.callDeliveredHeld sati
  * @type {number}
  */
 export
-const callDeliveredHeld = SimpleCallState.callDeliveredHeld satisfies SimpleCallState; /* SHORT_NAMED_ENUMERATED_VALUE */
+const callDeliveredHeld = SimpleCallState.callDeliveredHeld; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SimpleCallState_callReceived
@@ -242,7 +242,7 @@ const callDeliveredHeld = SimpleCallState.callDeliveredHeld satisfies SimpleCall
  * @type {number}
  */
 export
-const SimpleCallState_callReceived = SimpleCallState.callReceived satisfies SimpleCallState; /* LONG_NAMED_ENUMERATED_VALUE */
+const SimpleCallState_callReceived = SimpleCallState.callReceived; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary callReceived
@@ -250,7 +250,7 @@ const SimpleCallState_callReceived = SimpleCallState.callReceived satisfies Simp
  * @type {number}
  */
 export
-const callReceived = SimpleCallState.callReceived satisfies SimpleCallState; /* SHORT_NAMED_ENUMERATED_VALUE */
+const callReceived = SimpleCallState.callReceived; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SimpleCallState_callEstablished
@@ -262,7 +262,7 @@ const callReceived = SimpleCallState.callReceived satisfies SimpleCallState; /* 
  * @type {number}
  */
 export
-const SimpleCallState_callEstablished = SimpleCallState.callEstablished satisfies SimpleCallState; /* LONG_NAMED_ENUMERATED_VALUE */
+const SimpleCallState_callEstablished = SimpleCallState.callEstablished; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary callEstablished
@@ -270,7 +270,7 @@ const SimpleCallState_callEstablished = SimpleCallState.callEstablished satisfie
  * @type {number}
  */
 export
-const callEstablished = SimpleCallState.callEstablished satisfies SimpleCallState; /* SHORT_NAMED_ENUMERATED_VALUE */
+const callEstablished = SimpleCallState.callEstablished; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SimpleCallState_callEstablishedHeld
@@ -282,7 +282,7 @@ const callEstablished = SimpleCallState.callEstablished satisfies SimpleCallStat
  * @type {number}
  */
 export
-const SimpleCallState_callEstablishedHeld = SimpleCallState.callEstablishedHeld satisfies SimpleCallState; /* LONG_NAMED_ENUMERATED_VALUE */
+const SimpleCallState_callEstablishedHeld = SimpleCallState.callEstablishedHeld; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary callEstablishedHeld
@@ -290,7 +290,7 @@ const SimpleCallState_callEstablishedHeld = SimpleCallState.callEstablishedHeld 
  * @type {number}
  */
 export
-const callEstablishedHeld = SimpleCallState.callEstablishedHeld satisfies SimpleCallState; /* SHORT_NAMED_ENUMERATED_VALUE */
+const callEstablishedHeld = SimpleCallState.callEstablishedHeld; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SimpleCallState_callReceivedOnHold
@@ -302,7 +302,7 @@ const callEstablishedHeld = SimpleCallState.callEstablishedHeld satisfies Simple
  * @type {number}
  */
 export
-const SimpleCallState_callReceivedOnHold = SimpleCallState.callReceivedOnHold satisfies SimpleCallState; /* LONG_NAMED_ENUMERATED_VALUE */
+const SimpleCallState_callReceivedOnHold = SimpleCallState.callReceivedOnHold; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary callReceivedOnHold
@@ -310,7 +310,7 @@ const SimpleCallState_callReceivedOnHold = SimpleCallState.callReceivedOnHold sa
  * @type {number}
  */
 export
-const callReceivedOnHold = SimpleCallState.callReceivedOnHold satisfies SimpleCallState; /* SHORT_NAMED_ENUMERATED_VALUE */
+const callReceivedOnHold = SimpleCallState.callReceivedOnHold; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SimpleCallState_callEstablishedOnHold
@@ -322,7 +322,7 @@ const callReceivedOnHold = SimpleCallState.callReceivedOnHold satisfies SimpleCa
  * @type {number}
  */
 export
-const SimpleCallState_callEstablishedOnHold = SimpleCallState.callEstablishedOnHold satisfies SimpleCallState; /* LONG_NAMED_ENUMERATED_VALUE */
+const SimpleCallState_callEstablishedOnHold = SimpleCallState.callEstablishedOnHold; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary callEstablishedOnHold
@@ -330,7 +330,7 @@ const SimpleCallState_callEstablishedOnHold = SimpleCallState.callEstablishedOnH
  * @type {number}
  */
 export
-const callEstablishedOnHold = SimpleCallState.callEstablishedOnHold satisfies SimpleCallState; /* SHORT_NAMED_ENUMERATED_VALUE */
+const callEstablishedOnHold = SimpleCallState.callEstablishedOnHold; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SimpleCallState_callQueued
@@ -342,7 +342,7 @@ const callEstablishedOnHold = SimpleCallState.callEstablishedOnHold satisfies Si
  * @type {number}
  */
 export
-const SimpleCallState_callQueued = SimpleCallState.callQueued satisfies SimpleCallState; /* LONG_NAMED_ENUMERATED_VALUE */
+const SimpleCallState_callQueued = SimpleCallState.callQueued; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary callQueued
@@ -350,7 +350,7 @@ const SimpleCallState_callQueued = SimpleCallState.callQueued satisfies SimpleCa
  * @type {number}
  */
 export
-const callQueued = SimpleCallState.callQueued satisfies SimpleCallState; /* SHORT_NAMED_ENUMERATED_VALUE */
+const callQueued = SimpleCallState.callQueued; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SimpleCallState_callQueuedHeld
@@ -362,7 +362,7 @@ const callQueued = SimpleCallState.callQueued satisfies SimpleCallState; /* SHOR
  * @type {number}
  */
 export
-const SimpleCallState_callQueuedHeld = SimpleCallState.callQueuedHeld satisfies SimpleCallState; /* LONG_NAMED_ENUMERATED_VALUE */
+const SimpleCallState_callQueuedHeld = SimpleCallState.callQueuedHeld; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary callQueuedHeld
@@ -370,7 +370,7 @@ const SimpleCallState_callQueuedHeld = SimpleCallState.callQueuedHeld satisfies 
  * @type {number}
  */
 export
-const callQueuedHeld = SimpleCallState.callQueuedHeld satisfies SimpleCallState; /* SHORT_NAMED_ENUMERATED_VALUE */
+const callQueuedHeld = SimpleCallState.callQueuedHeld; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SimpleCallState_callFailed
@@ -382,7 +382,7 @@ const callQueuedHeld = SimpleCallState.callQueuedHeld satisfies SimpleCallState;
  * @type {number}
  */
 export
-const SimpleCallState_callFailed = SimpleCallState.callFailed satisfies SimpleCallState; /* LONG_NAMED_ENUMERATED_VALUE */
+const SimpleCallState_callFailed = SimpleCallState.callFailed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary callFailed
@@ -390,7 +390,7 @@ const SimpleCallState_callFailed = SimpleCallState.callFailed satisfies SimpleCa
  * @type {number}
  */
 export
-const callFailed = SimpleCallState.callFailed satisfies SimpleCallState; /* SHORT_NAMED_ENUMERATED_VALUE */
+const callFailed = SimpleCallState.callFailed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SimpleCallState_callFailedHeld
@@ -402,7 +402,7 @@ const callFailed = SimpleCallState.callFailed satisfies SimpleCallState; /* SHOR
  * @type {number}
  */
 export
-const SimpleCallState_callFailedHeld = SimpleCallState.callFailedHeld satisfies SimpleCallState; /* LONG_NAMED_ENUMERATED_VALUE */
+const SimpleCallState_callFailedHeld = SimpleCallState.callFailedHeld; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary callFailedHeld
@@ -410,7 +410,7 @@ const SimpleCallState_callFailedHeld = SimpleCallState.callFailedHeld satisfies 
  * @type {number}
  */
 export
-const callFailedHeld = SimpleCallState.callFailedHeld satisfies SimpleCallState; /* SHORT_NAMED_ENUMERATED_VALUE */
+const callFailedHeld = SimpleCallState.callFailedHeld; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SimpleCallState_callBlocked
@@ -422,7 +422,7 @@ const callFailedHeld = SimpleCallState.callFailedHeld satisfies SimpleCallState;
  * @type {number}
  */
 export
-const SimpleCallState_callBlocked = SimpleCallState.callBlocked satisfies SimpleCallState; /* LONG_NAMED_ENUMERATED_VALUE */
+const SimpleCallState_callBlocked = SimpleCallState.callBlocked; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary callBlocked
@@ -430,7 +430,7 @@ const SimpleCallState_callBlocked = SimpleCallState.callBlocked satisfies Simple
  * @type {number}
  */
 export
-const callBlocked = SimpleCallState.callBlocked satisfies SimpleCallState; /* SHORT_NAMED_ENUMERATED_VALUE */
+const callBlocked = SimpleCallState.callBlocked; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 let _cached_decoder_for_SimpleCallState: $.ASN1Decoder<SimpleCallState> | null = null;
 

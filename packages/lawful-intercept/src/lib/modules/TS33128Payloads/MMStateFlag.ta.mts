@@ -73,7 +73,7 @@ const MMStateFlag = _enum_for_MMStateFlag;
  * @type {number}
  */
 export
-const MMStateFlag_add = MMStateFlag.add satisfies MMStateFlag; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMStateFlag_add = MMStateFlag.add; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary add
@@ -81,7 +81,7 @@ const MMStateFlag_add = MMStateFlag.add satisfies MMStateFlag; /* LONG_NAMED_ENU
  * @type {number}
  */
 export
-const add = MMStateFlag.add satisfies MMStateFlag; /* SHORT_NAMED_ENUMERATED_VALUE */
+const add = MMStateFlag.add; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMStateFlag_remove
@@ -89,7 +89,7 @@ const add = MMStateFlag.add satisfies MMStateFlag; /* SHORT_NAMED_ENUMERATED_VAL
  * @type {number}
  */
 export
-const MMStateFlag_remove = MMStateFlag.remove satisfies MMStateFlag; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMStateFlag_remove = MMStateFlag.remove; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary remove
@@ -97,7 +97,7 @@ const MMStateFlag_remove = MMStateFlag.remove satisfies MMStateFlag; /* LONG_NAM
  * @type {number}
  */
 export
-const remove = MMStateFlag.remove satisfies MMStateFlag; /* SHORT_NAMED_ENUMERATED_VALUE */
+const remove = MMStateFlag.remove; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMStateFlag_filter
@@ -105,7 +105,7 @@ const remove = MMStateFlag.remove satisfies MMStateFlag; /* SHORT_NAMED_ENUMERAT
  * @type {number}
  */
 export
-const MMStateFlag_filter = MMStateFlag.filter satisfies MMStateFlag; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMStateFlag_filter = MMStateFlag.filter; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary filter
@@ -113,7 +113,7 @@ const MMStateFlag_filter = MMStateFlag.filter satisfies MMStateFlag; /* LONG_NAM
  * @type {number}
  */
 export
-const filter = MMStateFlag.filter satisfies MMStateFlag; /* SHORT_NAMED_ENUMERATED_VALUE */
+const filter = MMStateFlag.filter; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_MMStateFlag: $.ASN1Decoder<MMStateFlag> = $._decodeEnumerated;
 export const _encode_MMStateFlag: $.ASN1Encoder<MMStateFlag> = $._encodeEnumerated;
 

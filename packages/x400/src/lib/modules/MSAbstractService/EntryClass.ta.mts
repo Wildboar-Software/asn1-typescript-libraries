@@ -44,7 +44,7 @@ export const EntryClass_delivery = 0 satisfies EntryClass; /* LONG_NAMED_INTEGER
  * @constant
  * @type {number}
  */
-export const delivery = EntryClass_delivery satisfies EntryClass; /* SHORT_NAMED_INTEGER_VALUE */
+export const delivery = EntryClass_delivery; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EntryClass_submission
@@ -58,7 +58,7 @@ export const EntryClass_submission = 1 satisfies EntryClass; /* LONG_NAMED_INTEG
  * @constant
  * @type {number}
  */
-export const submission = EntryClass_submission satisfies EntryClass; /* SHORT_NAMED_INTEGER_VALUE */
+export const submission = EntryClass_submission; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EntryClass_draft
@@ -72,7 +72,7 @@ export const EntryClass_draft = 2 satisfies EntryClass; /* LONG_NAMED_INTEGER_VA
  * @constant
  * @type {number}
  */
-export const draft = EntryClass_draft satisfies EntryClass; /* SHORT_NAMED_INTEGER_VALUE */
+export const draft = EntryClass_draft; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EntryClass_stored_message
@@ -86,7 +86,7 @@ export const EntryClass_stored_message = 3 satisfies EntryClass; /* LONG_NAMED_I
  * @constant
  * @type {number}
  */
-export const stored_message = EntryClass_stored_message satisfies EntryClass; /* SHORT_NAMED_INTEGER_VALUE */
+export const stored_message = EntryClass_stored_message; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EntryClass_delivery_log
@@ -100,7 +100,7 @@ export const EntryClass_delivery_log = 4 satisfies EntryClass; /* LONG_NAMED_INT
  * @constant
  * @type {number}
  */
-export const delivery_log = EntryClass_delivery_log satisfies EntryClass; /* SHORT_NAMED_INTEGER_VALUE */
+export const delivery_log = EntryClass_delivery_log; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EntryClass_submission_log
@@ -114,7 +114,7 @@ export const EntryClass_submission_log = 5 satisfies EntryClass; /* LONG_NAMED_I
  * @constant
  * @type {number}
  */
-export const submission_log = EntryClass_submission_log satisfies EntryClass; /* SHORT_NAMED_INTEGER_VALUE */
+export const submission_log = EntryClass_submission_log; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EntryClass_message_log
@@ -128,7 +128,7 @@ export const EntryClass_message_log = 6 satisfies EntryClass; /* LONG_NAMED_INTE
  * @constant
  * @type {number}
  */
-export const message_log = EntryClass_message_log satisfies EntryClass; /* SHORT_NAMED_INTEGER_VALUE */
+export const message_log = EntryClass_message_log; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EntryClass_auto_action_log
@@ -142,7 +142,7 @@ export const EntryClass_auto_action_log = 7 satisfies EntryClass; /* LONG_NAMED_
  * @constant
  * @type {number}
  */
-export const auto_action_log = EntryClass_auto_action_log satisfies EntryClass; /* SHORT_NAMED_INTEGER_VALUE */
+export const auto_action_log = EntryClass_auto_action_log; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_EntryClass = $._decodeInteger;

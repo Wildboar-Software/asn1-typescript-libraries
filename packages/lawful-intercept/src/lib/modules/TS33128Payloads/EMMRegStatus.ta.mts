@@ -107,7 +107,7 @@ const EMMRegStatus = _enum_for_EMMRegStatus;
  * @type {number}
  */
 export
-const EMMRegStatus_uEEMMRegistered = EMMRegStatus.uEEMMRegistered satisfies EMMRegStatus; /* LONG_NAMED_ENUMERATED_VALUE */
+const EMMRegStatus_uEEMMRegistered = EMMRegStatus.uEEMMRegistered; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary uEEMMRegistered
@@ -121,7 +121,7 @@ const EMMRegStatus_uEEMMRegistered = EMMRegStatus.uEEMMRegistered satisfies EMMR
  * @type {number}
  */
 export
-const uEEMMRegistered = EMMRegStatus.uEEMMRegistered satisfies EMMRegStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
+const uEEMMRegistered = EMMRegStatus.uEEMMRegistered; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EMMRegStatus_uENotEMMRegistered
@@ -135,7 +135,7 @@ const uEEMMRegistered = EMMRegStatus.uEEMMRegistered satisfies EMMRegStatus; /* 
  * @type {number}
  */
 export
-const EMMRegStatus_uENotEMMRegistered = EMMRegStatus.uENotEMMRegistered satisfies EMMRegStatus; /* LONG_NAMED_ENUMERATED_VALUE */
+const EMMRegStatus_uENotEMMRegistered = EMMRegStatus.uENotEMMRegistered; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary uENotEMMRegistered
@@ -149,7 +149,7 @@ const EMMRegStatus_uENotEMMRegistered = EMMRegStatus.uENotEMMRegistered satisfie
  * @type {number}
  */
 export
-const uENotEMMRegistered = EMMRegStatus.uENotEMMRegistered satisfies EMMRegStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
+const uENotEMMRegistered = EMMRegStatus.uENotEMMRegistered; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_EMMRegStatus: $.ASN1Decoder<EMMRegStatus> = $._decodeEnumerated;
 export const _encode_EMMRegStatus: $.ASN1Encoder<EMMRegStatus> = $._encodeEnumerated;
 

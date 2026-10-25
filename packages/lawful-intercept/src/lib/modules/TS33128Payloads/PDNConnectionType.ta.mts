@@ -96,7 +96,7 @@ const PDNConnectionType = _enum_for_PDNConnectionType;
  * @type {number}
  */
 export
-const PDNConnectionType_iPv4 = PDNConnectionType.iPv4 satisfies PDNConnectionType; /* LONG_NAMED_ENUMERATED_VALUE */
+const PDNConnectionType_iPv4 = PDNConnectionType.iPv4; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary iPv4
@@ -104,7 +104,7 @@ const PDNConnectionType_iPv4 = PDNConnectionType.iPv4 satisfies PDNConnectionTyp
  * @type {number}
  */
 export
-const iPv4 = PDNConnectionType.iPv4 satisfies PDNConnectionType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const iPv4 = PDNConnectionType.iPv4; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PDNConnectionType_iPv6
@@ -112,7 +112,7 @@ const iPv4 = PDNConnectionType.iPv4 satisfies PDNConnectionType; /* SHORT_NAMED_
  * @type {number}
  */
 export
-const PDNConnectionType_iPv6 = PDNConnectionType.iPv6 satisfies PDNConnectionType; /* LONG_NAMED_ENUMERATED_VALUE */
+const PDNConnectionType_iPv6 = PDNConnectionType.iPv6; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary iPv6
@@ -120,7 +120,7 @@ const PDNConnectionType_iPv6 = PDNConnectionType.iPv6 satisfies PDNConnectionTyp
  * @type {number}
  */
 export
-const iPv6 = PDNConnectionType.iPv6 satisfies PDNConnectionType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const iPv6 = PDNConnectionType.iPv6; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PDNConnectionType_iPv4v6
@@ -128,7 +128,7 @@ const iPv6 = PDNConnectionType.iPv6 satisfies PDNConnectionType; /* SHORT_NAMED_
  * @type {number}
  */
 export
-const PDNConnectionType_iPv4v6 = PDNConnectionType.iPv4v6 satisfies PDNConnectionType; /* LONG_NAMED_ENUMERATED_VALUE */
+const PDNConnectionType_iPv4v6 = PDNConnectionType.iPv4v6; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary iPv4v6
@@ -136,7 +136,7 @@ const PDNConnectionType_iPv4v6 = PDNConnectionType.iPv4v6 satisfies PDNConnectio
  * @type {number}
  */
 export
-const iPv4v6 = PDNConnectionType.iPv4v6 satisfies PDNConnectionType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const iPv4v6 = PDNConnectionType.iPv4v6; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PDNConnectionType_nonIP
@@ -144,7 +144,7 @@ const iPv4v6 = PDNConnectionType.iPv4v6 satisfies PDNConnectionType; /* SHORT_NA
  * @type {number}
  */
 export
-const PDNConnectionType_nonIP = PDNConnectionType.nonIP satisfies PDNConnectionType; /* LONG_NAMED_ENUMERATED_VALUE */
+const PDNConnectionType_nonIP = PDNConnectionType.nonIP; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary nonIP
@@ -152,7 +152,7 @@ const PDNConnectionType_nonIP = PDNConnectionType.nonIP satisfies PDNConnectionT
  * @type {number}
  */
 export
-const nonIP = PDNConnectionType.nonIP satisfies PDNConnectionType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const nonIP = PDNConnectionType.nonIP; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PDNConnectionType_ethernet
@@ -160,7 +160,7 @@ const nonIP = PDNConnectionType.nonIP satisfies PDNConnectionType; /* SHORT_NAME
  * @type {number}
  */
 export
-const PDNConnectionType_ethernet = PDNConnectionType.ethernet satisfies PDNConnectionType; /* LONG_NAMED_ENUMERATED_VALUE */
+const PDNConnectionType_ethernet = PDNConnectionType.ethernet; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ethernet
@@ -168,7 +168,7 @@ const PDNConnectionType_ethernet = PDNConnectionType.ethernet satisfies PDNConne
  * @type {number}
  */
 export
-const ethernet = PDNConnectionType.ethernet satisfies PDNConnectionType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const ethernet = PDNConnectionType.ethernet; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_PDNConnectionType: $.ASN1Decoder<PDNConnectionType> = $._decodeEnumerated;
 export const _encode_PDNConnectionType: $.ASN1Encoder<PDNConnectionType> = $._encodeEnumerated;
 

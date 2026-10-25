@@ -42,7 +42,7 @@ export const PKIPublicationInfo_action_dontPublish = 0 satisfies PKIPublicationI
  * @constant
  * @type {number}
  */
-export const dontPublish = PKIPublicationInfo_action_dontPublish satisfies PKIPublicationInfo_action; /* SHORT_NAMED_INTEGER_VALUE */
+export const dontPublish = PKIPublicationInfo_action_dontPublish; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -68,7 +68,7 @@ export const PKIPublicationInfo_action_pleasePublish = 1 satisfies PKIPublicatio
  * @constant
  * @type {number}
  */
-export const pleasePublish = PKIPublicationInfo_action_pleasePublish satisfies PKIPublicationInfo_action; /* SHORT_NAMED_INTEGER_VALUE */
+export const pleasePublish = PKIPublicationInfo_action_pleasePublish; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 

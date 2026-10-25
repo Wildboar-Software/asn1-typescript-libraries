@@ -51,7 +51,7 @@ const DiagnosticCltuStart_specific_outOfService = 0 satisfies DiagnosticCltuStar
  * @type {number}
  */
 export
-const outOfService = DiagnosticCltuStart_specific_outOfService satisfies DiagnosticCltuStart_specific; /* SHORT_NAMED_INTEGER_VALUE */
+const outOfService = DiagnosticCltuStart_specific_outOfService; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagnosticCltuStart_specific_unableToComply
@@ -77,7 +77,7 @@ const DiagnosticCltuStart_specific_unableToComply = 1 satisfies DiagnosticCltuSt
  * @type {number}
  */
 export
-const unableToComply = DiagnosticCltuStart_specific_unableToComply satisfies DiagnosticCltuStart_specific; /* SHORT_NAMED_INTEGER_VALUE */
+const unableToComply = DiagnosticCltuStart_specific_unableToComply; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagnosticCltuStart_specific_productionTimeExpired
@@ -101,7 +101,7 @@ const DiagnosticCltuStart_specific_productionTimeExpired = 2 satisfies Diagnosti
  * @type {number}
  */
 export
-const productionTimeExpired = DiagnosticCltuStart_specific_productionTimeExpired satisfies DiagnosticCltuStart_specific; /* SHORT_NAMED_INTEGER_VALUE */
+const productionTimeExpired = DiagnosticCltuStart_specific_productionTimeExpired; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagnosticCltuStart_specific_invalidCltuId
@@ -125,7 +125,7 @@ const DiagnosticCltuStart_specific_invalidCltuId = 3 satisfies DiagnosticCltuSta
  * @type {number}
  */
 export
-const invalidCltuId = DiagnosticCltuStart_specific_invalidCltuId satisfies DiagnosticCltuStart_specific; /* SHORT_NAMED_INTEGER_VALUE */
+const invalidCltuId = DiagnosticCltuStart_specific_invalidCltuId; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_DiagnosticCltuStart_specific: $.ASN1Decoder<DiagnosticCltuStart_specific> = $._decodeInteger;
 export const _encode_DiagnosticCltuStart_specific: $.ASN1Encoder<DiagnosticCltuStart_specific> = $._encodeInteger;
 

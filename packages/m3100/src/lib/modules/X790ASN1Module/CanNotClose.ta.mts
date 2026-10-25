@@ -39,7 +39,7 @@ export const CanNotClose_alreadyCleared = 0 satisfies CanNotClose; /* LONG_NAMED
  * @constant
  * @type {number}
  */
-export const alreadyCleared = CanNotClose_alreadyCleared satisfies CanNotClose; /* SHORT_NAMED_INTEGER_VALUE */
+export const alreadyCleared = CanNotClose_alreadyCleared; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 

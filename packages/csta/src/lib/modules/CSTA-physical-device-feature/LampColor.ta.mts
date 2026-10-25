@@ -47,7 +47,7 @@ const LampColor_noColor = 0 satisfies LampColor; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const noColor = LampColor_noColor satisfies LampColor; /* SHORT_NAMED_INTEGER_VALUE */
+const noColor = LampColor_noColor; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary LampColor_red
@@ -67,7 +67,7 @@ const LampColor_red = 1 satisfies LampColor; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const red = LampColor_red satisfies LampColor; /* SHORT_NAMED_INTEGER_VALUE */
+const red = LampColor_red; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary LampColor_yellow
@@ -87,7 +87,7 @@ const LampColor_yellow = 2 satisfies LampColor; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const yellow = LampColor_yellow satisfies LampColor; /* SHORT_NAMED_INTEGER_VALUE */
+const yellow = LampColor_yellow; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary LampColor_green
@@ -107,7 +107,7 @@ const LampColor_green = 3 satisfies LampColor; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const green = LampColor_green satisfies LampColor; /* SHORT_NAMED_INTEGER_VALUE */
+const green = LampColor_green; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary LampColor_blue
@@ -127,7 +127,7 @@ const LampColor_blue = 4 satisfies LampColor; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const blue = LampColor_blue satisfies LampColor; /* SHORT_NAMED_INTEGER_VALUE */
+const blue = LampColor_blue; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary LampColor_unknown
@@ -148,7 +148,7 @@ const LampColor_unknown = 5 satisfies LampColor; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const unknown = LampColor_unknown satisfies LampColor; /* SHORT_NAMED_INTEGER_VALUE */
+const unknown = LampColor_unknown; /* SHORT_NAMED_INTEGER_VALUE */
 
 let _cached_decoder_for_LampColor: $.ASN1Decoder<LampColor> | null = null;
 

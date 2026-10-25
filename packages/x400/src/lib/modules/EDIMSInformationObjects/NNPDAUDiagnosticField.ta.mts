@@ -56,7 +56,7 @@ export const NNPDAUDiagnosticField_undeliverable_mail_physical_delivery_address_
  * @constant
  * @type {number}
  */
-export const undeliverable_mail_physical_delivery_address_incorrect = NNPDAUDiagnosticField_undeliverable_mail_physical_delivery_address_incorrect satisfies NNPDAUDiagnosticField; /* SHORT_NAMED_INTEGER_VALUE */
+export const undeliverable_mail_physical_delivery_address_incorrect = NNPDAUDiagnosticField_undeliverable_mail_physical_delivery_address_incorrect; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NNPDAUDiagnosticField_undeliverable_mail_physical_delivery_office_incorrect_or_invalid
@@ -70,7 +70,7 @@ export const NNPDAUDiagnosticField_undeliverable_mail_physical_delivery_office_i
  * @constant
  * @type {number}
  */
-export const undeliverable_mail_physical_delivery_office_incorrect_or_invalid = NNPDAUDiagnosticField_undeliverable_mail_physical_delivery_office_incorrect_or_invalid satisfies NNPDAUDiagnosticField; /* SHORT_NAMED_INTEGER_VALUE */
+export const undeliverable_mail_physical_delivery_office_incorrect_or_invalid = NNPDAUDiagnosticField_undeliverable_mail_physical_delivery_office_incorrect_or_invalid; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NNPDAUDiagnosticField_undeliverable_mail_physical_delivery_address_incomplete
@@ -84,7 +84,7 @@ export const NNPDAUDiagnosticField_undeliverable_mail_physical_delivery_address_
  * @constant
  * @type {number}
  */
-export const undeliverable_mail_physical_delivery_address_incomplete = NNPDAUDiagnosticField_undeliverable_mail_physical_delivery_address_incomplete satisfies NNPDAUDiagnosticField; /* SHORT_NAMED_INTEGER_VALUE */
+export const undeliverable_mail_physical_delivery_address_incomplete = NNPDAUDiagnosticField_undeliverable_mail_physical_delivery_address_incomplete; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NNPDAUDiagnosticField_undeliverable_mail_recipient_unknown
@@ -98,7 +98,7 @@ export const NNPDAUDiagnosticField_undeliverable_mail_recipient_unknown = 35 sat
  * @constant
  * @type {number}
  */
-export const undeliverable_mail_recipient_unknown = NNPDAUDiagnosticField_undeliverable_mail_recipient_unknown satisfies NNPDAUDiagnosticField; /* SHORT_NAMED_INTEGER_VALUE */
+export const undeliverable_mail_recipient_unknown = NNPDAUDiagnosticField_undeliverable_mail_recipient_unknown; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NNPDAUDiagnosticField_undeliverable_mail_recipient_deceased
@@ -112,7 +112,7 @@ export const NNPDAUDiagnosticField_undeliverable_mail_recipient_deceased = 36 sa
  * @constant
  * @type {number}
  */
-export const undeliverable_mail_recipient_deceased = NNPDAUDiagnosticField_undeliverable_mail_recipient_deceased satisfies NNPDAUDiagnosticField; /* SHORT_NAMED_INTEGER_VALUE */
+export const undeliverable_mail_recipient_deceased = NNPDAUDiagnosticField_undeliverable_mail_recipient_deceased; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NNPDAUDiagnosticField_undeliverable_mail_organization_expired
@@ -126,7 +126,7 @@ export const NNPDAUDiagnosticField_undeliverable_mail_organization_expired = 37 
  * @constant
  * @type {number}
  */
-export const undeliverable_mail_organization_expired = NNPDAUDiagnosticField_undeliverable_mail_organization_expired satisfies NNPDAUDiagnosticField; /* SHORT_NAMED_INTEGER_VALUE */
+export const undeliverable_mail_organization_expired = NNPDAUDiagnosticField_undeliverable_mail_organization_expired; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NNPDAUDiagnosticField_undeliverable_mail_recipient_refused_to_accept
@@ -140,7 +140,7 @@ export const NNPDAUDiagnosticField_undeliverable_mail_recipient_refused_to_accep
  * @constant
  * @type {number}
  */
-export const undeliverable_mail_recipient_refused_to_accept = NNPDAUDiagnosticField_undeliverable_mail_recipient_refused_to_accept satisfies NNPDAUDiagnosticField; /* SHORT_NAMED_INTEGER_VALUE */
+export const undeliverable_mail_recipient_refused_to_accept = NNPDAUDiagnosticField_undeliverable_mail_recipient_refused_to_accept; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NNPDAUDiagnosticField_undeliverable_mail_recipient_did_not_claim
@@ -154,7 +154,7 @@ export const NNPDAUDiagnosticField_undeliverable_mail_recipient_did_not_claim = 
  * @constant
  * @type {number}
  */
-export const undeliverable_mail_recipient_did_not_claim = NNPDAUDiagnosticField_undeliverable_mail_recipient_did_not_claim satisfies NNPDAUDiagnosticField; /* SHORT_NAMED_INTEGER_VALUE */
+export const undeliverable_mail_recipient_did_not_claim = NNPDAUDiagnosticField_undeliverable_mail_recipient_did_not_claim; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NNPDAUDiagnosticField_undeliverable_mail_recipient_changed_address_permanently
@@ -168,7 +168,7 @@ export const NNPDAUDiagnosticField_undeliverable_mail_recipient_changed_address_
  * @constant
  * @type {number}
  */
-export const undeliverable_mail_recipient_changed_address_permanently = NNPDAUDiagnosticField_undeliverable_mail_recipient_changed_address_permanently satisfies NNPDAUDiagnosticField; /* SHORT_NAMED_INTEGER_VALUE */
+export const undeliverable_mail_recipient_changed_address_permanently = NNPDAUDiagnosticField_undeliverable_mail_recipient_changed_address_permanently; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NNPDAUDiagnosticField_undeliverable_mail_recipient_changed_address_temporarily
@@ -182,7 +182,7 @@ export const NNPDAUDiagnosticField_undeliverable_mail_recipient_changed_address_
  * @constant
  * @type {number}
  */
-export const undeliverable_mail_recipient_changed_address_temporarily = NNPDAUDiagnosticField_undeliverable_mail_recipient_changed_address_temporarily satisfies NNPDAUDiagnosticField; /* SHORT_NAMED_INTEGER_VALUE */
+export const undeliverable_mail_recipient_changed_address_temporarily = NNPDAUDiagnosticField_undeliverable_mail_recipient_changed_address_temporarily; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NNPDAUDiagnosticField_undeliverable_mail_recipient_changed_temporary_address
@@ -196,7 +196,7 @@ export const NNPDAUDiagnosticField_undeliverable_mail_recipient_changed_temporar
  * @constant
  * @type {number}
  */
-export const undeliverable_mail_recipient_changed_temporary_address = NNPDAUDiagnosticField_undeliverable_mail_recipient_changed_temporary_address satisfies NNPDAUDiagnosticField; /* SHORT_NAMED_INTEGER_VALUE */
+export const undeliverable_mail_recipient_changed_temporary_address = NNPDAUDiagnosticField_undeliverable_mail_recipient_changed_temporary_address; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NNPDAUDiagnosticField_undeliverable_mail_new_address_unknown
@@ -210,7 +210,7 @@ export const NNPDAUDiagnosticField_undeliverable_mail_new_address_unknown = 43 s
  * @constant
  * @type {number}
  */
-export const undeliverable_mail_new_address_unknown = NNPDAUDiagnosticField_undeliverable_mail_new_address_unknown satisfies NNPDAUDiagnosticField; /* SHORT_NAMED_INTEGER_VALUE */
+export const undeliverable_mail_new_address_unknown = NNPDAUDiagnosticField_undeliverable_mail_new_address_unknown; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NNPDAUDiagnosticField_undeliverable_mail_recipient_did_not_want_forwarding
@@ -224,7 +224,7 @@ export const NNPDAUDiagnosticField_undeliverable_mail_recipient_did_not_want_for
  * @constant
  * @type {number}
  */
-export const undeliverable_mail_recipient_did_not_want_forwarding = NNPDAUDiagnosticField_undeliverable_mail_recipient_did_not_want_forwarding satisfies NNPDAUDiagnosticField; /* SHORT_NAMED_INTEGER_VALUE */
+export const undeliverable_mail_recipient_did_not_want_forwarding = NNPDAUDiagnosticField_undeliverable_mail_recipient_did_not_want_forwarding; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NNPDAUDiagnosticField_undeliverable_mail_originator_prohibited_forwarding
@@ -238,7 +238,7 @@ export const NNPDAUDiagnosticField_undeliverable_mail_originator_prohibited_forw
  * @constant
  * @type {number}
  */
-export const undeliverable_mail_originator_prohibited_forwarding = NNPDAUDiagnosticField_undeliverable_mail_originator_prohibited_forwarding satisfies NNPDAUDiagnosticField; /* SHORT_NAMED_INTEGER_VALUE */
+export const undeliverable_mail_originator_prohibited_forwarding = NNPDAUDiagnosticField_undeliverable_mail_originator_prohibited_forwarding; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NNPDAUDiagnosticField_physical_rendition_attributes_not_supported
@@ -252,7 +252,7 @@ export const NNPDAUDiagnosticField_physical_rendition_attributes_not_supported =
  * @constant
  * @type {number}
  */
-export const physical_rendition_attributes_not_supported = NNPDAUDiagnosticField_physical_rendition_attributes_not_supported satisfies NNPDAUDiagnosticField; /* SHORT_NAMED_INTEGER_VALUE */
+export const physical_rendition_attributes_not_supported = NNPDAUDiagnosticField_physical_rendition_attributes_not_supported; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_NNPDAUDiagnosticField = $._decodeInteger;

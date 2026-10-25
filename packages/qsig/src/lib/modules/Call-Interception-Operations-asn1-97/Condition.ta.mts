@@ -66,7 +66,7 @@ const Condition_unknown = 0 satisfies Condition; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const unknown = Condition_unknown satisfies Condition; /* SHORT_NAMED_INTEGER_VALUE */
+const unknown = Condition_unknown; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Condition_cintBus
@@ -87,7 +87,7 @@ const Condition_cintBus = 2 satisfies Condition; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const cintBus = Condition_cintBus satisfies Condition; /* SHORT_NAMED_INTEGER_VALUE */
+const cintBus = Condition_cintBus; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Condition_cintCug
@@ -108,7 +108,7 @@ const Condition_cintCug = 3 satisfies Condition; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const cintCug = Condition_cintCug satisfies Condition; /* SHORT_NAMED_INTEGER_VALUE */
+const cintCug = Condition_cintCug; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Condition_cintDnd
@@ -129,7 +129,7 @@ const Condition_cintDnd = 4 satisfies Condition; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const cintDnd = Condition_cintDnd satisfies Condition; /* SHORT_NAMED_INTEGER_VALUE */
+const cintDnd = Condition_cintDnd; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Condition_cintIbd
@@ -150,7 +150,7 @@ const Condition_cintIbd = 5 satisfies Condition; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const cintIbd = Condition_cintIbd satisfies Condition; /* SHORT_NAMED_INTEGER_VALUE */
+const cintIbd = Condition_cintIbd; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Condition_cintInn
@@ -171,7 +171,7 @@ const Condition_cintInn = 6 satisfies Condition; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const cintInn = Condition_cintInn satisfies Condition; /* SHORT_NAMED_INTEGER_VALUE */
+const cintInn = Condition_cintInn; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Condition_cintMob1
@@ -192,7 +192,7 @@ const Condition_cintMob1 = 7 satisfies Condition; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const cintMob1 = Condition_cintMob1 satisfies Condition; /* SHORT_NAMED_INTEGER_VALUE */
+const cintMob1 = Condition_cintMob1; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Condition_cintMob2
@@ -213,7 +213,7 @@ const Condition_cintMob2 = 8 satisfies Condition; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const cintMob2 = Condition_cintMob2 satisfies Condition; /* SHORT_NAMED_INTEGER_VALUE */
+const cintMob2 = Condition_cintMob2; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Condition_cintMob3
@@ -234,7 +234,7 @@ const Condition_cintMob3 = 9 satisfies Condition; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const cintMob3 = Condition_cintMob3 satisfies Condition; /* SHORT_NAMED_INTEGER_VALUE */
+const cintMob3 = Condition_cintMob3; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Condition_cintNcmp
@@ -257,7 +257,7 @@ const Condition_cintNcmp = 10 satisfies Condition; /* LONG_NAMED_INTEGER_VALUE *
  * @type {number}
  */
 export
-const cintNcmp = Condition_cintNcmp satisfies Condition; /* SHORT_NAMED_INTEGER_VALUE */
+const cintNcmp = Condition_cintNcmp; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Condition_cintNcong
@@ -278,7 +278,7 @@ const Condition_cintNcong = 11 satisfies Condition; /* LONG_NAMED_INTEGER_VALUE 
  * @type {number}
  */
 export
-const cintNcong = Condition_cintNcong satisfies Condition; /* SHORT_NAMED_INTEGER_VALUE */
+const cintNcong = Condition_cintNcong; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Condition_cintOos
@@ -301,7 +301,7 @@ const Condition_cintOos = 13 satisfies Condition; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const cintOos = Condition_cintOos satisfies Condition; /* SHORT_NAMED_INTEGER_VALUE */
+const cintOos = Condition_cintOos; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Condition_cintRrs
@@ -323,7 +323,7 @@ const Condition_cintRrs = 14 satisfies Condition; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const cintRrs = Condition_cintRrs satisfies Condition; /* SHORT_NAMED_INTEGER_VALUE */
+const cintRrs = Condition_cintRrs; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Condition_cintTrans
@@ -344,7 +344,7 @@ const Condition_cintTrans = 17 satisfies Condition; /* LONG_NAMED_INTEGER_VALUE 
  * @type {number}
  */
 export
-const cintTrans = Condition_cintTrans satisfies Condition; /* SHORT_NAMED_INTEGER_VALUE */
+const cintTrans = Condition_cintTrans; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Condition_cintUpl
@@ -365,7 +365,7 @@ const Condition_cintUpl = 18 satisfies Condition; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const cintUpl = Condition_cintUpl satisfies Condition; /* SHORT_NAMED_INTEGER_VALUE */
+const cintUpl = Condition_cintUpl; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Condition_cintInvDiv
@@ -386,7 +386,7 @@ const Condition_cintInvDiv = 19 satisfies Condition; /* LONG_NAMED_INTEGER_VALUE
  * @type {number}
  */
 export
-const cintInvDiv = Condition_cintInvDiv satisfies Condition; /* SHORT_NAMED_INTEGER_VALUE */
+const cintInvDiv = Condition_cintInvDiv; /* SHORT_NAMED_INTEGER_VALUE */
 
 export
 const _decode_Condition = (el: _Element): Condition => {

@@ -90,7 +90,7 @@ const ReachabilityType = _enum_for_ReachabilityType;
  * @type {number}
  */
 export
-const ReachabilityType_reachabilityforSMS = ReachabilityType.reachabilityforSMS satisfies ReachabilityType; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReachabilityType_reachabilityforSMS = ReachabilityType.reachabilityforSMS; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary reachabilityforSMS
@@ -103,7 +103,7 @@ const ReachabilityType_reachabilityforSMS = ReachabilityType.reachabilityforSMS 
  * @type {number}
  */
 export
-const reachabilityforSMS = ReachabilityType.reachabilityforSMS satisfies ReachabilityType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const reachabilityforSMS = ReachabilityType.reachabilityforSMS; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReachabilityType_reachabilityforData
@@ -117,7 +117,7 @@ const reachabilityforSMS = ReachabilityType.reachabilityforSMS satisfies Reachab
  * @type {number}
  */
 export
-const ReachabilityType_reachabilityforData = ReachabilityType.reachabilityforData satisfies ReachabilityType; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReachabilityType_reachabilityforData = ReachabilityType.reachabilityforData; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary reachabilityforData
@@ -130,7 +130,7 @@ const ReachabilityType_reachabilityforData = ReachabilityType.reachabilityforDat
  * @type {number}
  */
 export
-const reachabilityforData = ReachabilityType.reachabilityforData satisfies ReachabilityType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const reachabilityforData = ReachabilityType.reachabilityforData; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_ReachabilityType: $.ASN1Decoder<ReachabilityType> = $._decodeEnumerated;

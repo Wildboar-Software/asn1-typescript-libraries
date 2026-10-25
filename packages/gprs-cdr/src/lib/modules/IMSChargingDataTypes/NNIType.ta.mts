@@ -107,7 +107,7 @@ const NNIType = _enum_for_NNIType;
  * @type {number}
  */
 export
-const NNIType_non_roaming = NNIType.non_roaming satisfies NNIType; /* LONG_NAMED_ENUMERATED_VALUE */
+const NNIType_non_roaming = NNIType.non_roaming; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary non_roaming
@@ -119,7 +119,7 @@ const NNIType_non_roaming = NNIType.non_roaming satisfies NNIType; /* LONG_NAMED
  * @type {number}
  */
 export
-const non_roaming = NNIType.non_roaming satisfies NNIType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const non_roaming = NNIType.non_roaming; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NNIType_roaming_without_loopback
@@ -131,7 +131,7 @@ const non_roaming = NNIType.non_roaming satisfies NNIType; /* SHORT_NAMED_ENUMER
  * @type {number}
  */
 export
-const NNIType_roaming_without_loopback = NNIType.roaming_without_loopback satisfies NNIType; /* LONG_NAMED_ENUMERATED_VALUE */
+const NNIType_roaming_without_loopback = NNIType.roaming_without_loopback; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary roaming_without_loopback
@@ -143,7 +143,7 @@ const NNIType_roaming_without_loopback = NNIType.roaming_without_loopback satisf
  * @type {number}
  */
 export
-const roaming_without_loopback = NNIType.roaming_without_loopback satisfies NNIType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const roaming_without_loopback = NNIType.roaming_without_loopback; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NNIType_roaming_with_loopback
@@ -156,7 +156,7 @@ const roaming_without_loopback = NNIType.roaming_without_loopback satisfies NNIT
  * @type {number}
  */
 export
-const NNIType_roaming_with_loopback = NNIType.roaming_with_loopback satisfies NNIType; /* LONG_NAMED_ENUMERATED_VALUE */
+const NNIType_roaming_with_loopback = NNIType.roaming_with_loopback; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary roaming_with_loopback
@@ -169,7 +169,7 @@ const NNIType_roaming_with_loopback = NNIType.roaming_with_loopback satisfies NN
  * @type {number}
  */
 export
-const roaming_with_loopback = NNIType.roaming_with_loopback satisfies NNIType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const roaming_with_loopback = NNIType.roaming_with_loopback; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_NNIType: $.ASN1Decoder<NNIType> = $._decodeEnumerated;

@@ -96,7 +96,7 @@ const ServiceOption = _enum_for_ServiceOption;
  * @type {number}
  */
 export
-const ServiceOption_inCallRegistration = ServiceOption.inCallRegistration satisfies ServiceOption; /* LONG_NAMED_ENUMERATED_VALUE */
+const ServiceOption_inCallRegistration = ServiceOption.inCallRegistration; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary inCallRegistration
@@ -105,7 +105,7 @@ const ServiceOption_inCallRegistration = ServiceOption.inCallRegistration satisf
  * @type {number}
  */
 export
-const inCallRegistration = ServiceOption.inCallRegistration satisfies ServiceOption; /* SHORT_NAMED_ENUMERATED_VALUE */
+const inCallRegistration = ServiceOption.inCallRegistration; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ServiceOption_outCallRegistration
@@ -121,7 +121,7 @@ const inCallRegistration = ServiceOption.inCallRegistration satisfies ServiceOpt
  * @type {number}
  */
 export
-const ServiceOption_outCallRegistration = ServiceOption.outCallRegistration satisfies ServiceOption; /* LONG_NAMED_ENUMERATED_VALUE */
+const ServiceOption_outCallRegistration = ServiceOption.outCallRegistration; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary outCallRegistration
@@ -130,7 +130,7 @@ const ServiceOption_outCallRegistration = ServiceOption.outCallRegistration sati
  * @type {number}
  */
 export
-const outCallRegistration = ServiceOption.outCallRegistration satisfies ServiceOption; /* SHORT_NAMED_ENUMERATED_VALUE */
+const outCallRegistration = ServiceOption.outCallRegistration; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ServiceOption_allCallRegistration
@@ -146,7 +146,7 @@ const outCallRegistration = ServiceOption.outCallRegistration satisfies ServiceO
  * @type {number}
  */
 export
-const ServiceOption_allCallRegistration = ServiceOption.allCallRegistration satisfies ServiceOption; /* LONG_NAMED_ENUMERATED_VALUE */
+const ServiceOption_allCallRegistration = ServiceOption.allCallRegistration; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary allCallRegistration
@@ -155,7 +155,7 @@ const ServiceOption_allCallRegistration = ServiceOption.allCallRegistration sati
  * @type {number}
  */
 export
-const allCallRegistration = ServiceOption.allCallRegistration satisfies ServiceOption; /* SHORT_NAMED_ENUMERATED_VALUE */
+const allCallRegistration = ServiceOption.allCallRegistration; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_ServiceOption: $.ASN1Decoder<ServiceOption> = $._decodeEnumerated;

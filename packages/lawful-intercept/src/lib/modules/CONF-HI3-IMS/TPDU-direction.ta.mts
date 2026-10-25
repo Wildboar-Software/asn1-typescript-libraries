@@ -131,7 +131,7 @@ const TPDU_direction = _enum_for_TPDU_direction;
  * @type {number}
  */
 export
-const TPDU_direction_from_target = TPDU_direction.from_target satisfies TPDU_direction; /* LONG_NAMED_ENUMERATED_VALUE */
+const TPDU_direction_from_target = TPDU_direction.from_target; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary from_target
@@ -142,7 +142,7 @@ const TPDU_direction_from_target = TPDU_direction.from_target satisfies TPDU_dir
  * @type {number}
  */
 export
-const from_target = TPDU_direction.from_target satisfies TPDU_direction; /* SHORT_NAMED_ENUMERATED_VALUE */
+const from_target = TPDU_direction.from_target; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TPDU_direction_to_target
@@ -154,7 +154,7 @@ const from_target = TPDU_direction.from_target satisfies TPDU_direction; /* SHOR
  * @type {number}
  */
 export
-const TPDU_direction_to_target = TPDU_direction.to_target satisfies TPDU_direction; /* LONG_NAMED_ENUMERATED_VALUE */
+const TPDU_direction_to_target = TPDU_direction.to_target; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary to_target
@@ -165,7 +165,7 @@ const TPDU_direction_to_target = TPDU_direction.to_target satisfies TPDU_directi
  * @type {number}
  */
 export
-const to_target = TPDU_direction.to_target satisfies TPDU_direction; /* SHORT_NAMED_ENUMERATED_VALUE */
+const to_target = TPDU_direction.to_target; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TPDU_direction_unknown
@@ -176,7 +176,7 @@ const to_target = TPDU_direction.to_target satisfies TPDU_direction; /* SHORT_NA
  * @type {number}
  */
 export
-const TPDU_direction_unknown = TPDU_direction.unknown satisfies TPDU_direction; /* LONG_NAMED_ENUMERATED_VALUE */
+const TPDU_direction_unknown = TPDU_direction.unknown; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unknown
@@ -187,7 +187,7 @@ const TPDU_direction_unknown = TPDU_direction.unknown satisfies TPDU_direction; 
  * @type {number}
  */
 export
-const unknown = TPDU_direction.unknown satisfies TPDU_direction; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unknown = TPDU_direction.unknown; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TPDU_direction_conftarget
@@ -199,7 +199,7 @@ const unknown = TPDU_direction.unknown satisfies TPDU_direction; /* SHORT_NAMED_
  * @type {number}
  */
 export
-const TPDU_direction_conftarget = TPDU_direction.conftarget satisfies TPDU_direction; /* LONG_NAMED_ENUMERATED_VALUE */
+const TPDU_direction_conftarget = TPDU_direction.conftarget; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary conftarget
@@ -210,7 +210,7 @@ const TPDU_direction_conftarget = TPDU_direction.conftarget satisfies TPDU_direc
  * @type {number}
  */
 export
-const conftarget = TPDU_direction.conftarget satisfies TPDU_direction; /* SHORT_NAMED_ENUMERATED_VALUE */
+const conftarget = TPDU_direction.conftarget; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TPDU_direction_from_mixer
@@ -222,7 +222,7 @@ const conftarget = TPDU_direction.conftarget satisfies TPDU_direction; /* SHORT_
  * @type {number}
  */
 export
-const TPDU_direction_from_mixer = TPDU_direction.from_mixer satisfies TPDU_direction; /* LONG_NAMED_ENUMERATED_VALUE */
+const TPDU_direction_from_mixer = TPDU_direction.from_mixer; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary from_mixer
@@ -233,7 +233,7 @@ const TPDU_direction_from_mixer = TPDU_direction.from_mixer satisfies TPDU_direc
  * @type {number}
  */
 export
-const from_mixer = TPDU_direction.from_mixer satisfies TPDU_direction; /* SHORT_NAMED_ENUMERATED_VALUE */
+const from_mixer = TPDU_direction.from_mixer; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TPDU_direction_to_mixer
@@ -245,7 +245,7 @@ const from_mixer = TPDU_direction.from_mixer satisfies TPDU_direction; /* SHORT_
  * @type {number}
  */
 export
-const TPDU_direction_to_mixer = TPDU_direction.to_mixer satisfies TPDU_direction; /* LONG_NAMED_ENUMERATED_VALUE */
+const TPDU_direction_to_mixer = TPDU_direction.to_mixer; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary to_mixer
@@ -256,7 +256,7 @@ const TPDU_direction_to_mixer = TPDU_direction.to_mixer satisfies TPDU_direction
  * @type {number}
  */
 export
-const to_mixer = TPDU_direction.to_mixer satisfies TPDU_direction; /* SHORT_NAMED_ENUMERATED_VALUE */
+const to_mixer = TPDU_direction.to_mixer; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TPDU_direction_combined
@@ -268,7 +268,7 @@ const to_mixer = TPDU_direction.to_mixer satisfies TPDU_direction; /* SHORT_NAME
  * @type {number}
  */
 export
-const TPDU_direction_combined = TPDU_direction.combined satisfies TPDU_direction; /* LONG_NAMED_ENUMERATED_VALUE */
+const TPDU_direction_combined = TPDU_direction.combined; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary combined
@@ -279,7 +279,7 @@ const TPDU_direction_combined = TPDU_direction.combined satisfies TPDU_direction
  * @type {number}
  */
 export
-const combined = TPDU_direction.combined satisfies TPDU_direction; /* SHORT_NAMED_ENUMERATED_VALUE */
+const combined = TPDU_direction.combined; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_TPDU_direction: $.ASN1Decoder<TPDU_direction> = $._decodeEnumerated;
 export const _encode_TPDU_direction: $.ASN1Encoder<TPDU_direction> = $._encodeEnumerated;
 

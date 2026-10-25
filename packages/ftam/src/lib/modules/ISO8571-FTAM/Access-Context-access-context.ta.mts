@@ -46,7 +46,7 @@ export const Access_Context_access_context_hierarchical_all_data_units = 0 satis
  * @constant
  * @type {number}
  */
-export const hierarchical_all_data_units = Access_Context_access_context_hierarchical_all_data_units satisfies Access_Context_access_context; /* SHORT_NAMED_INTEGER_VALUE */
+export const hierarchical_all_data_units = Access_Context_access_context_hierarchical_all_data_units; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -64,7 +64,7 @@ export const Access_Context_access_context_hierarchical_no_data_units = 1 satisf
  * @constant
  * @type {number}
  */
-export const hierarchical_no_data_units = Access_Context_access_context_hierarchical_no_data_units satisfies Access_Context_access_context; /* SHORT_NAMED_INTEGER_VALUE */
+export const hierarchical_no_data_units = Access_Context_access_context_hierarchical_no_data_units; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -82,7 +82,7 @@ export const Access_Context_access_context_flat_all_data_units = 2 satisfies Acc
  * @constant
  * @type {number}
  */
-export const flat_all_data_units = Access_Context_access_context_flat_all_data_units satisfies Access_Context_access_context; /* SHORT_NAMED_INTEGER_VALUE */
+export const flat_all_data_units = Access_Context_access_context_flat_all_data_units; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -101,7 +101,7 @@ export const Access_Context_access_context_flat_one_level_data_unit = 3 satisfie
  * @constant
  * @type {number}
  */
-export const flat_one_level_data_unit = Access_Context_access_context_flat_one_level_data_unit satisfies Access_Context_access_context; /* SHORT_NAMED_INTEGER_VALUE */
+export const flat_one_level_data_unit = Access_Context_access_context_flat_one_level_data_unit; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -119,7 +119,7 @@ export const Access_Context_access_context_flat_Single_data_unit = 4 satisfies A
  * @constant
  * @type {number}
  */
-export const flat_Single_data_unit = Access_Context_access_context_flat_Single_data_unit satisfies Access_Context_access_context; /* SHORT_NAMED_INTEGER_VALUE */
+export const flat_Single_data_unit = Access_Context_access_context_flat_Single_data_unit; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -137,7 +137,7 @@ export const Access_Context_access_context_unstructured_all_data_units = 5 satis
  * @constant
  * @type {number}
  */
-export const unstructured_all_data_units = Access_Context_access_context_unstructured_all_data_units satisfies Access_Context_access_context; /* SHORT_NAMED_INTEGER_VALUE */
+export const unstructured_all_data_units = Access_Context_access_context_unstructured_all_data_units; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -155,7 +155,7 @@ export const Access_Context_access_context_unstructured_Single_data_unit = 6 sat
  * @constant
  * @type {number}
  */
-export const unstructured_Single_data_unit = Access_Context_access_context_unstructured_Single_data_unit satisfies Access_Context_access_context; /* SHORT_NAMED_INTEGER_VALUE */
+export const unstructured_Single_data_unit = Access_Context_access_context_unstructured_Single_data_unit; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 

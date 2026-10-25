@@ -51,7 +51,7 @@ const ContentType_ShortForm_unidentified = 0 satisfies ContentType_ShortForm; /*
  * @type {number}
  */
 export
-const unidentified = ContentType_ShortForm_unidentified satisfies ContentType_ShortForm; /* SHORT_NAMED_INTEGER_VALUE */
+const unidentified = ContentType_ShortForm_unidentified; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ContentType_ShortForm_external
@@ -75,7 +75,7 @@ const ContentType_ShortForm_external = 1 satisfies ContentType_ShortForm; /* LON
  * @type {number}
  */
 export
-const external = ContentType_ShortForm_external satisfies ContentType_ShortForm; /* SHORT_NAMED_INTEGER_VALUE */
+const external = ContentType_ShortForm_external; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ContentType_ShortForm_p1
@@ -99,7 +99,7 @@ const ContentType_ShortForm_p1 = 2 satisfies ContentType_ShortForm; /* LONG_NAME
  * @type {number}
  */
 export
-const p1 = ContentType_ShortForm_p1 satisfies ContentType_ShortForm; /* SHORT_NAMED_INTEGER_VALUE */
+const p1 = ContentType_ShortForm_p1; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ContentType_ShortForm_p3
@@ -123,7 +123,7 @@ const ContentType_ShortForm_p3 = 3 satisfies ContentType_ShortForm; /* LONG_NAME
  * @type {number}
  */
 export
-const p3 = ContentType_ShortForm_p3 satisfies ContentType_ShortForm; /* SHORT_NAMED_INTEGER_VALUE */
+const p3 = ContentType_ShortForm_p3; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ContentType_ShortForm_p7
@@ -147,7 +147,7 @@ const ContentType_ShortForm_p7 = 4 satisfies ContentType_ShortForm; /* LONG_NAME
  * @type {number}
  */
 export
-const p7 = ContentType_ShortForm_p7 satisfies ContentType_ShortForm; /* SHORT_NAMED_INTEGER_VALUE */
+const p7 = ContentType_ShortForm_p7; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_ContentType_ShortForm: $.ASN1Decoder<ContentType_ShortForm> = $._decodeInteger;
 export const _encode_ContentType_ShortForm: $.ASN1Encoder<ContentType_ShortForm> = $._encodeInteger;
 

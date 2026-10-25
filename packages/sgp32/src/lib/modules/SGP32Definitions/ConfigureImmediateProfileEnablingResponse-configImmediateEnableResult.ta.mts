@@ -53,7 +53,7 @@ const ConfigureImmediateProfileEnablingResponse_configImmediateEnableResult_ok =
  * @type {number}
  */
 export
-const ok = ConfigureImmediateProfileEnablingResponse_configImmediateEnableResult_ok satisfies ConfigureImmediateProfileEnablingResponse_configImmediateEnableResult; /* SHORT_NAMED_INTEGER_VALUE */
+const ok = ConfigureImmediateProfileEnablingResponse_configImmediateEnableResult_ok; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ConfigureImmediateProfileEnablingResponse_configImmediateEnableResult_insufficientMemory
@@ -79,7 +79,7 @@ const ConfigureImmediateProfileEnablingResponse_configImmediateEnableResult_insu
  * @type {number}
  */
 export
-const insufficientMemory = ConfigureImmediateProfileEnablingResponse_configImmediateEnableResult_insufficientMemory satisfies ConfigureImmediateProfileEnablingResponse_configImmediateEnableResult; /* SHORT_NAMED_INTEGER_VALUE */
+const insufficientMemory = ConfigureImmediateProfileEnablingResponse_configImmediateEnableResult_insufficientMemory; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ConfigureImmediateProfileEnablingResponse_configImmediateEnableResult_associatedEimAlreadyExists
@@ -104,7 +104,7 @@ const ConfigureImmediateProfileEnablingResponse_configImmediateEnableResult_asso
  * @type {number}
  */
 export
-const associatedEimAlreadyExists = ConfigureImmediateProfileEnablingResponse_configImmediateEnableResult_associatedEimAlreadyExists satisfies ConfigureImmediateProfileEnablingResponse_configImmediateEnableResult; /* SHORT_NAMED_INTEGER_VALUE */
+const associatedEimAlreadyExists = ConfigureImmediateProfileEnablingResponse_configImmediateEnableResult_associatedEimAlreadyExists; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ConfigureImmediateProfileEnablingResponse_configImmediateEnableResult_undefinedError
@@ -128,7 +128,7 @@ const ConfigureImmediateProfileEnablingResponse_configImmediateEnableResult_unde
  * @type {number}
  */
 export
-const undefinedError = ConfigureImmediateProfileEnablingResponse_configImmediateEnableResult_undefinedError satisfies ConfigureImmediateProfileEnablingResponse_configImmediateEnableResult; /* SHORT_NAMED_INTEGER_VALUE */
+const undefinedError = ConfigureImmediateProfileEnablingResponse_configImmediateEnableResult_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_ConfigureImmediateProfileEnablingResponse_configImmediateEnableResult: $.ASN1Decoder<ConfigureImmediateProfileEnablingResponse_configImmediateEnableResult> = $._decodeInteger;
 export const _encode_ConfigureImmediateProfileEnablingResponse_configImmediateEnableResult: $.ASN1Encoder<ConfigureImmediateProfileEnablingResponse_configImmediateEnableResult> = $._encodeInteger;
 

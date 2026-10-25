@@ -96,7 +96,7 @@ const Compression_Item_compressionNegotiationResult = _enum_for_Compression_Item
  * @type {number}
  */
 export
-const Compression_Item_compressionNegotiationResult_none = Compression_Item_compressionNegotiationResult.none satisfies Compression_Item_compressionNegotiationResult; /* LONG_NAMED_ENUMERATED_VALUE */
+const Compression_Item_compressionNegotiationResult_none = Compression_Item_compressionNegotiationResult.none; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary none
@@ -104,7 +104,7 @@ const Compression_Item_compressionNegotiationResult_none = Compression_Item_comp
  * @type {number}
  */
 export
-const none = Compression_Item_compressionNegotiationResult.none satisfies Compression_Item_compressionNegotiationResult; /* SHORT_NAMED_ENUMERATED_VALUE */
+const none = Compression_Item_compressionNegotiationResult.none; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Compression_Item_compressionNegotiationResult_v42bisOnly
@@ -116,7 +116,7 @@ const none = Compression_Item_compressionNegotiationResult.none satisfies Compre
  * @type {number}
  */
 export
-const Compression_Item_compressionNegotiationResult_v42bisOnly = Compression_Item_compressionNegotiationResult.v42bisOnly satisfies Compression_Item_compressionNegotiationResult; /* LONG_NAMED_ENUMERATED_VALUE */
+const Compression_Item_compressionNegotiationResult_v42bisOnly = Compression_Item_compressionNegotiationResult.v42bisOnly; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary v42bisOnly
@@ -124,7 +124,7 @@ const Compression_Item_compressionNegotiationResult_v42bisOnly = Compression_Ite
  * @type {number}
  */
 export
-const v42bisOnly = Compression_Item_compressionNegotiationResult.v42bisOnly satisfies Compression_Item_compressionNegotiationResult; /* SHORT_NAMED_ENUMERATED_VALUE */
+const v42bisOnly = Compression_Item_compressionNegotiationResult.v42bisOnly; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Compression_Item_compressionNegotiationResult_v42bisBoth
@@ -136,7 +136,7 @@ const v42bisOnly = Compression_Item_compressionNegotiationResult.v42bisOnly sati
  * @type {number}
  */
 export
-const Compression_Item_compressionNegotiationResult_v42bisBoth = Compression_Item_compressionNegotiationResult.v42bisBoth satisfies Compression_Item_compressionNegotiationResult; /* LONG_NAMED_ENUMERATED_VALUE */
+const Compression_Item_compressionNegotiationResult_v42bisBoth = Compression_Item_compressionNegotiationResult.v42bisBoth; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary v42bisBoth
@@ -144,7 +144,7 @@ const Compression_Item_compressionNegotiationResult_v42bisBoth = Compression_Ite
  * @type {number}
  */
 export
-const v42bisBoth = Compression_Item_compressionNegotiationResult.v42bisBoth satisfies Compression_Item_compressionNegotiationResult; /* SHORT_NAMED_ENUMERATED_VALUE */
+const v42bisBoth = Compression_Item_compressionNegotiationResult.v42bisBoth; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Compression_Item_compressionNegotiationResult_v44Both
@@ -156,7 +156,7 @@ const v42bisBoth = Compression_Item_compressionNegotiationResult.v42bisBoth sati
  * @type {number}
  */
 export
-const Compression_Item_compressionNegotiationResult_v44Both = Compression_Item_compressionNegotiationResult.v44Both satisfies Compression_Item_compressionNegotiationResult; /* LONG_NAMED_ENUMERATED_VALUE */
+const Compression_Item_compressionNegotiationResult_v44Both = Compression_Item_compressionNegotiationResult.v44Both; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary v44Both
@@ -164,7 +164,7 @@ const Compression_Item_compressionNegotiationResult_v44Both = Compression_Item_c
  * @type {number}
  */
 export
-const v44Both = Compression_Item_compressionNegotiationResult.v44Both satisfies Compression_Item_compressionNegotiationResult; /* SHORT_NAMED_ENUMERATED_VALUE */
+const v44Both = Compression_Item_compressionNegotiationResult.v44Both; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Compression_Item_compressionNegotiationResult_v44Only
@@ -176,7 +176,7 @@ const v44Both = Compression_Item_compressionNegotiationResult.v44Both satisfies 
  * @type {number}
  */
 export
-const Compression_Item_compressionNegotiationResult_v44Only = Compression_Item_compressionNegotiationResult.v44Only satisfies Compression_Item_compressionNegotiationResult; /* LONG_NAMED_ENUMERATED_VALUE */
+const Compression_Item_compressionNegotiationResult_v44Only = Compression_Item_compressionNegotiationResult.v44Only; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary v44Only
@@ -184,7 +184,7 @@ const Compression_Item_compressionNegotiationResult_v44Only = Compression_Item_c
  * @type {number}
  */
 export
-const v44Only = Compression_Item_compressionNegotiationResult.v44Only satisfies Compression_Item_compressionNegotiationResult; /* SHORT_NAMED_ENUMERATED_VALUE */
+const v44Only = Compression_Item_compressionNegotiationResult.v44Only; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Compression_Item_compressionNegotiationResult_other
@@ -196,7 +196,7 @@ const v44Only = Compression_Item_compressionNegotiationResult.v44Only satisfies 
  * @type {number}
  */
 export
-const Compression_Item_compressionNegotiationResult_other = Compression_Item_compressionNegotiationResult.other satisfies Compression_Item_compressionNegotiationResult; /* LONG_NAMED_ENUMERATED_VALUE */
+const Compression_Item_compressionNegotiationResult_other = Compression_Item_compressionNegotiationResult.other; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary other
@@ -204,7 +204,7 @@ const Compression_Item_compressionNegotiationResult_other = Compression_Item_com
  * @type {number}
  */
 export
-const other = Compression_Item_compressionNegotiationResult.other satisfies Compression_Item_compressionNegotiationResult; /* SHORT_NAMED_ENUMERATED_VALUE */
+const other = Compression_Item_compressionNegotiationResult.other; /* SHORT_NAMED_ENUMERATED_VALUE */
 export function _decode_Compression_Item_compressionNegotiationResult(el: _Element): Compression_Item_compressionNegotiationResult {
     const enumerated = $._decodeEnumerated(el);
     switch (enumerated) {

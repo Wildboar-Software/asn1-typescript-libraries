@@ -55,7 +55,7 @@ const TransmissionMode_sequenceControlled = 0 satisfies TransmissionMode; /* LON
  * @type {number}
  */
 export
-const sequenceControlled = TransmissionMode_sequenceControlled satisfies TransmissionMode; /* SHORT_NAMED_INTEGER_VALUE */
+const sequenceControlled = TransmissionMode_sequenceControlled; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TransmissionMode_expedited
@@ -80,7 +80,7 @@ const TransmissionMode_expedited = 1 satisfies TransmissionMode; /* LONG_NAMED_I
  * @type {number}
  */
 export
-const expedited = TransmissionMode_expedited satisfies TransmissionMode; /* SHORT_NAMED_INTEGER_VALUE */
+const expedited = TransmissionMode_expedited; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TransmissionMode_sequenceControlledUnblock
@@ -106,7 +106,7 @@ const TransmissionMode_sequenceControlledUnblock = 2 satisfies TransmissionMode;
  * @type {number}
  */
 export
-const sequenceControlledUnblock = TransmissionMode_sequenceControlledUnblock satisfies TransmissionMode; /* SHORT_NAMED_INTEGER_VALUE */
+const sequenceControlledUnblock = TransmissionMode_sequenceControlledUnblock; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_TransmissionMode: $.ASN1Decoder<TransmissionMode> = $._decodeInteger;
 export const _encode_TransmissionMode: $.ASN1Encoder<TransmissionMode> = $._encodeInteger;
 

@@ -85,7 +85,7 @@ export const InformationTransferCapabilities = _enum_for_InformationTransferCapa
  * @type {number}
  */
 export const InformationTransferCapabilities_speech =
-    InformationTransferCapabilities.speech satisfies InformationTransferCapabilities; /* LONG_NAMED_ENUMERATED_VALUE */
+    InformationTransferCapabilities.speech; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -94,7 +94,7 @@ export const InformationTransferCapabilities_speech =
  * @type {number}
  */
 export const speech =
-    InformationTransferCapabilities.speech satisfies InformationTransferCapabilities; /* SHORT_NAMED_ENUMERATED_VALUE */
+    InformationTransferCapabilities.speech; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -103,7 +103,7 @@ export const speech =
  * @type {number}
  */
 export const InformationTransferCapabilities_audio3pt1 =
-    InformationTransferCapabilities.audio3pt1 satisfies InformationTransferCapabilities; /* LONG_NAMED_ENUMERATED_VALUE */
+    InformationTransferCapabilities.audio3pt1; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -112,7 +112,7 @@ export const InformationTransferCapabilities_audio3pt1 =
  * @type {number}
  */
 export const audio3pt1 =
-    InformationTransferCapabilities.audio3pt1 satisfies InformationTransferCapabilities; /* SHORT_NAMED_ENUMERATED_VALUE */
+    InformationTransferCapabilities.audio3pt1; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -121,7 +121,7 @@ export const audio3pt1 =
  * @type {number}
  */
 export const InformationTransferCapabilities_audio7 =
-    InformationTransferCapabilities.audio7 satisfies InformationTransferCapabilities; /* LONG_NAMED_ENUMERATED_VALUE */
+    InformationTransferCapabilities.audio7; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -130,7 +130,7 @@ export const InformationTransferCapabilities_audio7 =
  * @type {number}
  */
 export const audio7 =
-    InformationTransferCapabilities.audio7 satisfies InformationTransferCapabilities; /* SHORT_NAMED_ENUMERATED_VALUE */
+    InformationTransferCapabilities.audio7; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -139,7 +139,7 @@ export const audio7 =
  * @type {number}
  */
 export const InformationTransferCapabilities_audioComb =
-    InformationTransferCapabilities.audioComb satisfies InformationTransferCapabilities; /* LONG_NAMED_ENUMERATED_VALUE */
+    InformationTransferCapabilities.audioComb; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -148,7 +148,7 @@ export const InformationTransferCapabilities_audioComb =
  * @type {number}
  */
 export const audioComb =
-    InformationTransferCapabilities.audioComb satisfies InformationTransferCapabilities; /* SHORT_NAMED_ENUMERATED_VALUE */
+    InformationTransferCapabilities.audioComb; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -157,7 +157,7 @@ export const audioComb =
  * @type {number}
  */
 export const InformationTransferCapabilities_digitalRestricted56 =
-    InformationTransferCapabilities.digitalRestricted56 satisfies InformationTransferCapabilities; /* LONG_NAMED_ENUMERATED_VALUE */
+    InformationTransferCapabilities.digitalRestricted56; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -166,7 +166,7 @@ export const InformationTransferCapabilities_digitalRestricted56 =
  * @type {number}
  */
 export const digitalRestricted56 =
-    InformationTransferCapabilities.digitalRestricted56 satisfies InformationTransferCapabilities; /* SHORT_NAMED_ENUMERATED_VALUE */
+    InformationTransferCapabilities.digitalRestricted56; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -175,7 +175,7 @@ export const digitalRestricted56 =
  * @type {number}
  */
 export const InformationTransferCapabilities_digitalUnrestricted64 =
-    InformationTransferCapabilities.digitalUnrestricted64 satisfies InformationTransferCapabilities; /* LONG_NAMED_ENUMERATED_VALUE */
+    InformationTransferCapabilities.digitalUnrestricted64; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -184,7 +184,7 @@ export const InformationTransferCapabilities_digitalUnrestricted64 =
  * @type {number}
  */
 export const digitalUnrestricted64 =
-    InformationTransferCapabilities.digitalUnrestricted64 satisfies InformationTransferCapabilities; /* SHORT_NAMED_ENUMERATED_VALUE */
+    InformationTransferCapabilities.digitalUnrestricted64; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 let _cached_decoder_for_InformationTransferCapabilities: $.ASN1Decoder<InformationTransferCapabilities> | null = null;

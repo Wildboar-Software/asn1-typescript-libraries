@@ -51,7 +51,7 @@ const ExtendedServicesInfo_waitAction_waitSupported = 1 satisfies ExtendedServic
  * @type {number}
  */
 export
-const waitSupported = ExtendedServicesInfo_waitAction_waitSupported satisfies ExtendedServicesInfo_waitAction; /* SHORT_NAMED_INTEGER_VALUE */
+const waitSupported = ExtendedServicesInfo_waitAction_waitSupported; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ExtendedServicesInfo_waitAction_waitAlways
@@ -72,7 +72,7 @@ const ExtendedServicesInfo_waitAction_waitAlways = 2 satisfies ExtendedServicesI
  * @type {number}
  */
 export
-const waitAlways = ExtendedServicesInfo_waitAction_waitAlways satisfies ExtendedServicesInfo_waitAction; /* SHORT_NAMED_INTEGER_VALUE */
+const waitAlways = ExtendedServicesInfo_waitAction_waitAlways; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ExtendedServicesInfo_waitAction_waitNotSupported
@@ -93,7 +93,7 @@ const ExtendedServicesInfo_waitAction_waitNotSupported = 3 satisfies ExtendedSer
  * @type {number}
  */
 export
-const waitNotSupported = ExtendedServicesInfo_waitAction_waitNotSupported satisfies ExtendedServicesInfo_waitAction; /* SHORT_NAMED_INTEGER_VALUE */
+const waitNotSupported = ExtendedServicesInfo_waitAction_waitNotSupported; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ExtendedServicesInfo_waitAction_depends
@@ -114,7 +114,7 @@ const ExtendedServicesInfo_waitAction_depends = 4 satisfies ExtendedServicesInfo
  * @type {number}
  */
 export
-const depends = ExtendedServicesInfo_waitAction_depends satisfies ExtendedServicesInfo_waitAction; /* SHORT_NAMED_INTEGER_VALUE */
+const depends = ExtendedServicesInfo_waitAction_depends; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ExtendedServicesInfo_waitAction_notSaying
@@ -135,7 +135,7 @@ const ExtendedServicesInfo_waitAction_notSaying = 5 satisfies ExtendedServicesIn
  * @type {number}
  */
 export
-const notSaying = ExtendedServicesInfo_waitAction_notSaying satisfies ExtendedServicesInfo_waitAction; /* SHORT_NAMED_INTEGER_VALUE */
+const notSaying = ExtendedServicesInfo_waitAction_notSaying; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_ExtendedServicesInfo_waitAction: $.ASN1Decoder<ExtendedServicesInfo_waitAction> = $._decodeInteger;
 export const _encode_ExtendedServicesInfo_waitAction: $.ASN1Encoder<ExtendedServicesInfo_waitAction> = $._encodeInteger;
 

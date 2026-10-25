@@ -72,7 +72,7 @@ export const DiscardReasonField = _enum_for_DiscardReasonField;
  * @type {number}
  */
 export const DiscardReasonField_ipm_expired =
-    DiscardReasonField.ipm_expired satisfies DiscardReasonField; /* LONG_NAMED_ENUMERATED_VALUE */
+    DiscardReasonField.ipm_expired; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ipm_expired
@@ -80,7 +80,7 @@ export const DiscardReasonField_ipm_expired =
  * @type {number}
  */
 export const ipm_expired =
-    DiscardReasonField.ipm_expired satisfies DiscardReasonField; /* SHORT_NAMED_ENUMERATED_VALUE */
+    DiscardReasonField.ipm_expired; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary DiscardReasonField_ipm_obsoleted
@@ -88,7 +88,7 @@ export const ipm_expired =
  * @type {number}
  */
 export const DiscardReasonField_ipm_obsoleted =
-    DiscardReasonField.ipm_obsoleted satisfies DiscardReasonField; /* LONG_NAMED_ENUMERATED_VALUE */
+    DiscardReasonField.ipm_obsoleted; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ipm_obsoleted
@@ -96,7 +96,7 @@ export const DiscardReasonField_ipm_obsoleted =
  * @type {number}
  */
 export const ipm_obsoleted =
-    DiscardReasonField.ipm_obsoleted satisfies DiscardReasonField; /* SHORT_NAMED_ENUMERATED_VALUE */
+    DiscardReasonField.ipm_obsoleted; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary DiscardReasonField_user_subscription_terminated
@@ -104,7 +104,7 @@ export const ipm_obsoleted =
  * @type {number}
  */
 export const DiscardReasonField_user_subscription_terminated =
-    DiscardReasonField.user_subscription_terminated satisfies DiscardReasonField; /* LONG_NAMED_ENUMERATED_VALUE */
+    DiscardReasonField.user_subscription_terminated; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary user_subscription_terminated
@@ -112,7 +112,7 @@ export const DiscardReasonField_user_subscription_terminated =
  * @type {number}
  */
 export const user_subscription_terminated =
-    DiscardReasonField.user_subscription_terminated satisfies DiscardReasonField; /* SHORT_NAMED_ENUMERATED_VALUE */
+    DiscardReasonField.user_subscription_terminated; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary DiscardReasonField_not_used
@@ -120,7 +120,7 @@ export const user_subscription_terminated =
  * @type {number}
  */
 export const DiscardReasonField_not_used =
-    DiscardReasonField.not_used satisfies DiscardReasonField; /* LONG_NAMED_ENUMERATED_VALUE */
+    DiscardReasonField.not_used; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary not_used
@@ -128,7 +128,7 @@ export const DiscardReasonField_not_used =
  * @type {number}
  */
 export const not_used =
-    DiscardReasonField.not_used satisfies DiscardReasonField; /* SHORT_NAMED_ENUMERATED_VALUE */
+    DiscardReasonField.not_used; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 export function _decode_DiscardReasonField(el: _Element): DiscardReasonField {

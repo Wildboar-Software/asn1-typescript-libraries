@@ -39,7 +39,7 @@ const DocumentTypeListVersion_v0 = 0 satisfies DocumentTypeListVersion; /* LONG_
  * @type {number}
  */
 export
-const v0 = DocumentTypeListVersion_v0 satisfies DocumentTypeListVersion; /* SHORT_NAMED_INTEGER_VALUE */
+const v0 = DocumentTypeListVersion_v0; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_DocumentTypeListVersion = $._decodeInteger;
 export const _encode_DocumentTypeListVersion = $._encodeInteger;
 

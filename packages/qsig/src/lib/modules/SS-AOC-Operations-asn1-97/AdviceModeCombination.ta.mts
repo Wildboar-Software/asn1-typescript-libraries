@@ -132,7 +132,7 @@ const AdviceModeCombination = _enum_for_AdviceModeCombination;
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-211/
  */
 export
-const AdviceModeCombination_rate = AdviceModeCombination.rate satisfies AdviceModeCombination; /* LONG_NAMED_ENUMERATED_VALUE */
+const AdviceModeCombination_rate = AdviceModeCombination.rate; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary rate
@@ -141,7 +141,7 @@ const AdviceModeCombination_rate = AdviceModeCombination.rate satisfies AdviceMo
  * @type {number}
  */
 export
-const rate = AdviceModeCombination.rate satisfies AdviceModeCombination; /* SHORT_NAMED_ENUMERATED_VALUE */
+const rate = AdviceModeCombination.rate; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AdviceModeCombination_rateInterim
@@ -156,7 +156,7 @@ const rate = AdviceModeCombination.rate satisfies AdviceModeCombination; /* SHOR
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-211/
  */
 export
-const AdviceModeCombination_rateInterim = AdviceModeCombination.rateInterim satisfies AdviceModeCombination; /* LONG_NAMED_ENUMERATED_VALUE */
+const AdviceModeCombination_rateInterim = AdviceModeCombination.rateInterim; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary rateInterim
@@ -165,7 +165,7 @@ const AdviceModeCombination_rateInterim = AdviceModeCombination.rateInterim sati
  * @type {number}
  */
 export
-const rateInterim = AdviceModeCombination.rateInterim satisfies AdviceModeCombination; /* SHORT_NAMED_ENUMERATED_VALUE */
+const rateInterim = AdviceModeCombination.rateInterim; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AdviceModeCombination_rateFinal
@@ -179,7 +179,7 @@ const rateInterim = AdviceModeCombination.rateInterim satisfies AdviceModeCombin
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-211/
  */
 export
-const AdviceModeCombination_rateFinal = AdviceModeCombination.rateFinal satisfies AdviceModeCombination; /* LONG_NAMED_ENUMERATED_VALUE */
+const AdviceModeCombination_rateFinal = AdviceModeCombination.rateFinal; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary rateFinal
@@ -188,7 +188,7 @@ const AdviceModeCombination_rateFinal = AdviceModeCombination.rateFinal satisfie
  * @type {number}
  */
 export
-const rateFinal = AdviceModeCombination.rateFinal satisfies AdviceModeCombination; /* SHORT_NAMED_ENUMERATED_VALUE */
+const rateFinal = AdviceModeCombination.rateFinal; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AdviceModeCombination_interim
@@ -199,7 +199,7 @@ const rateFinal = AdviceModeCombination.rateFinal satisfies AdviceModeCombinatio
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-211/
  */
 export
-const AdviceModeCombination_interim = AdviceModeCombination.interim satisfies AdviceModeCombination; /* LONG_NAMED_ENUMERATED_VALUE */
+const AdviceModeCombination_interim = AdviceModeCombination.interim; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary interim
@@ -208,7 +208,7 @@ const AdviceModeCombination_interim = AdviceModeCombination.interim satisfies Ad
  * @type {number}
  */
 export
-const interim = AdviceModeCombination.interim satisfies AdviceModeCombination; /* SHORT_NAMED_ENUMERATED_VALUE */
+const interim = AdviceModeCombination.interim; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AdviceModeCombination_final
@@ -219,7 +219,7 @@ const interim = AdviceModeCombination.interim satisfies AdviceModeCombination; /
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-211/
  */
 export
-const AdviceModeCombination_final = AdviceModeCombination.final satisfies AdviceModeCombination; /* LONG_NAMED_ENUMERATED_VALUE */
+const AdviceModeCombination_final = AdviceModeCombination.final; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary final
@@ -228,7 +228,7 @@ const AdviceModeCombination_final = AdviceModeCombination.final satisfies Advice
  * @type {number}
  */
 export
-const final = AdviceModeCombination.final satisfies AdviceModeCombination; /* SHORT_NAMED_ENUMERATED_VALUE */
+const final = AdviceModeCombination.final; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AdviceModeCombination_interimFinal
@@ -243,7 +243,7 @@ const final = AdviceModeCombination.final satisfies AdviceModeCombination; /* SH
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-211/
  */
 export
-const AdviceModeCombination_interimFinal = AdviceModeCombination.interimFinal satisfies AdviceModeCombination; /* LONG_NAMED_ENUMERATED_VALUE */
+const AdviceModeCombination_interimFinal = AdviceModeCombination.interimFinal; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary interimFinal
@@ -252,7 +252,7 @@ const AdviceModeCombination_interimFinal = AdviceModeCombination.interimFinal sa
  * @type {number}
  */
 export
-const interimFinal = AdviceModeCombination.interimFinal satisfies AdviceModeCombination; /* SHORT_NAMED_ENUMERATED_VALUE */
+const interimFinal = AdviceModeCombination.interimFinal; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AdviceModeCombination_rateInterimFinal
@@ -267,7 +267,7 @@ const interimFinal = AdviceModeCombination.interimFinal satisfies AdviceModeComb
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-211/
  */
 export
-const AdviceModeCombination_rateInterimFinal = AdviceModeCombination.rateInterimFinal satisfies AdviceModeCombination; /* LONG_NAMED_ENUMERATED_VALUE */
+const AdviceModeCombination_rateInterimFinal = AdviceModeCombination.rateInterimFinal; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary rateInterimFinal
@@ -276,7 +276,7 @@ const AdviceModeCombination_rateInterimFinal = AdviceModeCombination.rateInterim
  * @type {number}
  */
 export
-const rateInterimFinal = AdviceModeCombination.rateInterimFinal satisfies AdviceModeCombination; /* SHORT_NAMED_ENUMERATED_VALUE */
+const rateInterimFinal = AdviceModeCombination.rateInterimFinal; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_AdviceModeCombination: $.ASN1Decoder<AdviceModeCombination> = $._decodeEnumerated;

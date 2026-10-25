@@ -97,7 +97,7 @@ const SecurityProblem = _enum_for_SecurityProblem;
  * @type {number}
  */
 export
-const SecurityProblem_inappropriate_authentication = SecurityProblem.inappropriate_authentication satisfies SecurityProblem; /* LONG_NAMED_ENUMERATED_VALUE */
+const SecurityProblem_inappropriate_authentication = SecurityProblem.inappropriate_authentication; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary inappropriate_authentication
@@ -108,7 +108,7 @@ const SecurityProblem_inappropriate_authentication = SecurityProblem.inappropria
  * @type {number}
  */
 export
-const inappropriate_authentication = SecurityProblem.inappropriate_authentication satisfies SecurityProblem; /* SHORT_NAMED_ENUMERATED_VALUE */
+const inappropriate_authentication = SecurityProblem.inappropriate_authentication; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SecurityProblem_invalid_creds
@@ -119,7 +119,7 @@ const inappropriate_authentication = SecurityProblem.inappropriate_authenticatio
  * @type {number}
  */
 export
-const SecurityProblem_invalid_creds = SecurityProblem.invalid_creds satisfies SecurityProblem; /* LONG_NAMED_ENUMERATED_VALUE */
+const SecurityProblem_invalid_creds = SecurityProblem.invalid_creds; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalid_creds
@@ -130,7 +130,7 @@ const SecurityProblem_invalid_creds = SecurityProblem.invalid_creds satisfies Se
  * @type {number}
  */
 export
-const invalid_creds = SecurityProblem.invalid_creds satisfies SecurityProblem; /* SHORT_NAMED_ENUMERATED_VALUE */
+const invalid_creds = SecurityProblem.invalid_creds; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SecurityProblem_invalid_privilege
@@ -141,7 +141,7 @@ const invalid_creds = SecurityProblem.invalid_creds satisfies SecurityProblem; /
  * @type {number}
  */
 export
-const SecurityProblem_invalid_privilege = SecurityProblem.invalid_privilege satisfies SecurityProblem; /* LONG_NAMED_ENUMERATED_VALUE */
+const SecurityProblem_invalid_privilege = SecurityProblem.invalid_privilege; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalid_privilege
@@ -152,7 +152,7 @@ const SecurityProblem_invalid_privilege = SecurityProblem.invalid_privilege sati
  * @type {number}
  */
 export
-const invalid_privilege = SecurityProblem.invalid_privilege satisfies SecurityProblem; /* SHORT_NAMED_ENUMERATED_VALUE */
+const invalid_privilege = SecurityProblem.invalid_privilege; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SecurityProblem_invalid_pac
@@ -160,7 +160,7 @@ const invalid_privilege = SecurityProblem.invalid_privilege satisfies SecurityPr
  * @type {number}
  */
 export
-const SecurityProblem_invalid_pac = SecurityProblem.invalid_pac satisfies SecurityProblem; /* LONG_NAMED_ENUMERATED_VALUE */
+const SecurityProblem_invalid_pac = SecurityProblem.invalid_pac; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalid_pac
@@ -168,7 +168,7 @@ const SecurityProblem_invalid_pac = SecurityProblem.invalid_pac satisfies Securi
  * @type {number}
  */
 export
-const invalid_pac = SecurityProblem.invalid_pac satisfies SecurityProblem; /* SHORT_NAMED_ENUMERATED_VALUE */
+const invalid_pac = SecurityProblem.invalid_pac; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SecurityProblem_already_active
@@ -179,7 +179,7 @@ const invalid_pac = SecurityProblem.invalid_pac satisfies SecurityProblem; /* SH
  * @type {number}
  */
 export
-const SecurityProblem_already_active = SecurityProblem.already_active satisfies SecurityProblem; /* LONG_NAMED_ENUMERATED_VALUE */
+const SecurityProblem_already_active = SecurityProblem.already_active; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary already_active
@@ -190,7 +190,7 @@ const SecurityProblem_already_active = SecurityProblem.already_active satisfies 
  * @type {number}
  */
 export
-const already_active = SecurityProblem.already_active satisfies SecurityProblem; /* SHORT_NAMED_ENUMERATED_VALUE */
+const already_active = SecurityProblem.already_active; /* SHORT_NAMED_ENUMERATED_VALUE */
 export function _decode_SecurityProblem(el: _Element): SecurityProblem {
     const enumerated = $._decodeEnumerated(el);
     switch (enumerated) {

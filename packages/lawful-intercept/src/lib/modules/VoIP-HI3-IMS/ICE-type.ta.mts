@@ -65,7 +65,7 @@ type ICE_type = _enum_for_ICE_type | ENUMERATED;
  * @type {number}
  */
 export
-const ICE_type_ggsn = _enum_for_ICE_type.ggsn satisfies ICE_type; /* LONG_NAMED_ENUMERATED_VALUE */
+const ICE_type_ggsn = _enum_for_ICE_type.ggsn; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ggsn
@@ -76,7 +76,7 @@ const ICE_type_ggsn = _enum_for_ICE_type.ggsn satisfies ICE_type; /* LONG_NAMED_
  * @type {number}
  */
 export
-const ggsn = ICE_type_ggsn satisfies ICE_type; /* SHORT_NAMED_ENUMERATED_VALUE */
+const ggsn = ICE_type_ggsn; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ICE_type_pDN_GW
@@ -87,7 +87,7 @@ const ggsn = ICE_type_ggsn satisfies ICE_type; /* SHORT_NAMED_ENUMERATED_VALUE *
  * @type {number}
  */
 export
-const ICE_type_pDN_GW = _enum_for_ICE_type.pDN_GW satisfies ICE_type; /* LONG_NAMED_ENUMERATED_VALUE */
+const ICE_type_pDN_GW = _enum_for_ICE_type.pDN_GW; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pDN_GW
@@ -98,7 +98,7 @@ const ICE_type_pDN_GW = _enum_for_ICE_type.pDN_GW satisfies ICE_type; /* LONG_NA
  * @type {number}
  */
 export
-const pDN_GW = ICE_type_pDN_GW satisfies ICE_type; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pDN_GW = ICE_type_pDN_GW; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ICE_type_aGW
@@ -109,7 +109,7 @@ const pDN_GW = ICE_type_pDN_GW satisfies ICE_type; /* SHORT_NAMED_ENUMERATED_VAL
  * @type {number}
  */
 export
-const ICE_type_aGW = _enum_for_ICE_type.aGW satisfies ICE_type; /* LONG_NAMED_ENUMERATED_VALUE */
+const ICE_type_aGW = _enum_for_ICE_type.aGW; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary aGW
@@ -120,7 +120,7 @@ const ICE_type_aGW = _enum_for_ICE_type.aGW satisfies ICE_type; /* LONG_NAMED_EN
  * @type {number}
  */
 export
-const aGW = ICE_type_aGW satisfies ICE_type; /* SHORT_NAMED_ENUMERATED_VALUE */
+const aGW = ICE_type_aGW; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ICE_type_trGW
@@ -131,7 +131,7 @@ const aGW = ICE_type_aGW satisfies ICE_type; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const ICE_type_trGW = _enum_for_ICE_type.trGW satisfies ICE_type; /* LONG_NAMED_ENUMERATED_VALUE */
+const ICE_type_trGW = _enum_for_ICE_type.trGW; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary trGW
@@ -142,7 +142,7 @@ const ICE_type_trGW = _enum_for_ICE_type.trGW satisfies ICE_type; /* LONG_NAMED_
  * @type {number}
  */
 export
-const trGW = ICE_type_trGW satisfies ICE_type; /* SHORT_NAMED_ENUMERATED_VALUE */
+const trGW = ICE_type_trGW; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ICE_type_mGW
@@ -153,7 +153,7 @@ const trGW = ICE_type_trGW satisfies ICE_type; /* SHORT_NAMED_ENUMERATED_VALUE *
  * @type {number}
  */
 export
-const ICE_type_mGW = _enum_for_ICE_type.mGW satisfies ICE_type; /* LONG_NAMED_ENUMERATED_VALUE */
+const ICE_type_mGW = _enum_for_ICE_type.mGW; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary mGW
@@ -164,7 +164,7 @@ const ICE_type_mGW = _enum_for_ICE_type.mGW satisfies ICE_type; /* LONG_NAMED_EN
  * @type {number}
  */
 export
-const mGW = ICE_type_mGW satisfies ICE_type; /* SHORT_NAMED_ENUMERATED_VALUE */
+const mGW = ICE_type_mGW; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ICE_type_other
@@ -176,7 +176,7 @@ const mGW = ICE_type_mGW satisfies ICE_type; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const ICE_type_other = _enum_for_ICE_type.other satisfies ICE_type; /* LONG_NAMED_ENUMERATED_VALUE */
+const ICE_type_other = _enum_for_ICE_type.other; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary other
@@ -187,7 +187,7 @@ const ICE_type_other = _enum_for_ICE_type.other satisfies ICE_type; /* LONG_NAME
  * @type {number}
  */
 export
-const other = ICE_type_other satisfies ICE_type; /* SHORT_NAMED_ENUMERATED_VALUE */
+const other = ICE_type_other; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ICE_type_unknown
@@ -199,7 +199,7 @@ const other = ICE_type_other satisfies ICE_type; /* SHORT_NAMED_ENUMERATED_VALUE
  * @type {number}
  */
 export
-const ICE_type_unknown = _enum_for_ICE_type.unknown satisfies ICE_type; /* LONG_NAMED_ENUMERATED_VALUE */
+const ICE_type_unknown = _enum_for_ICE_type.unknown; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unknown
@@ -210,7 +210,7 @@ const ICE_type_unknown = _enum_for_ICE_type.unknown satisfies ICE_type; /* LONG_
  * @type {number}
  */
 export
-const unknown = ICE_type_unknown satisfies ICE_type; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unknown = ICE_type_unknown; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ICE_type_mRF
@@ -223,7 +223,7 @@ const unknown = ICE_type_unknown satisfies ICE_type; /* SHORT_NAMED_ENUMERATED_V
  * @type {number}
  */
 export
-const ICE_type_mRF = _enum_for_ICE_type.mRF satisfies ICE_type; /* LONG_NAMED_ENUMERATED_VALUE */
+const ICE_type_mRF = _enum_for_ICE_type.mRF; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary mRF
@@ -234,7 +234,7 @@ const ICE_type_mRF = _enum_for_ICE_type.mRF satisfies ICE_type; /* LONG_NAMED_EN
  * @type {number}
  */
 export
-const mRF = ICE_type_mRF satisfies ICE_type; /* SHORT_NAMED_ENUMERATED_VALUE */
+const mRF = ICE_type_mRF; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ICE_type_lmISF
@@ -246,7 +246,7 @@ const mRF = ICE_type_mRF satisfies ICE_type; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const ICE_type_lmISF = _enum_for_ICE_type.lmISF satisfies ICE_type; /* LONG_NAMED_ENUMERATED_VALUE */
+const ICE_type_lmISF = _enum_for_ICE_type.lmISF; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary lmISF
@@ -257,7 +257,7 @@ const ICE_type_lmISF = _enum_for_ICE_type.lmISF satisfies ICE_type; /* LONG_NAME
  * @type {number}
  */
 export
-const lmISF = ICE_type_lmISF satisfies ICE_type; /* SHORT_NAMED_ENUMERATED_VALUE */
+const lmISF = ICE_type_lmISF; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ICE_type_sGW
@@ -269,7 +269,7 @@ const lmISF = ICE_type_lmISF satisfies ICE_type; /* SHORT_NAMED_ENUMERATED_VALUE
  * @type {number}
  */
 export
-const ICE_type_sGW = _enum_for_ICE_type.sGW satisfies ICE_type; /* LONG_NAMED_ENUMERATED_VALUE */
+const ICE_type_sGW = _enum_for_ICE_type.sGW; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sGW
@@ -280,7 +280,7 @@ const ICE_type_sGW = _enum_for_ICE_type.sGW satisfies ICE_type; /* LONG_NAMED_EN
  * @type {number}
  */
 export
-const sGW = ICE_type_sGW satisfies ICE_type; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sGW = ICE_type_sGW; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_ICE_type: $.ASN1Decoder<ICE_type> = $._decodeEnumerated;
 export const _encode_ICE_type: $.ASN1Encoder<ICE_type> = $._encodeEnumerated;
 

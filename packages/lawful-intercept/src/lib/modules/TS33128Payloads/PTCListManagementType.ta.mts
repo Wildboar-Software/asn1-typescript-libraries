@@ -120,7 +120,7 @@ const PTCListManagementType = _enum_for_PTCListManagementType;
  * @type {number}
  */
 export
-const PTCListManagementType_contactListManagementAttempt = PTCListManagementType.contactListManagementAttempt satisfies PTCListManagementType; /* LONG_NAMED_ENUMERATED_VALUE */
+const PTCListManagementType_contactListManagementAttempt = PTCListManagementType.contactListManagementAttempt; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary contactListManagementAttempt
@@ -128,7 +128,7 @@ const PTCListManagementType_contactListManagementAttempt = PTCListManagementType
  * @type {number}
  */
 export
-const contactListManagementAttempt = PTCListManagementType.contactListManagementAttempt satisfies PTCListManagementType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const contactListManagementAttempt = PTCListManagementType.contactListManagementAttempt; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PTCListManagementType_groupListManagementAttempt
@@ -136,7 +136,7 @@ const contactListManagementAttempt = PTCListManagementType.contactListManagement
  * @type {number}
  */
 export
-const PTCListManagementType_groupListManagementAttempt = PTCListManagementType.groupListManagementAttempt satisfies PTCListManagementType; /* LONG_NAMED_ENUMERATED_VALUE */
+const PTCListManagementType_groupListManagementAttempt = PTCListManagementType.groupListManagementAttempt; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary groupListManagementAttempt
@@ -144,7 +144,7 @@ const PTCListManagementType_groupListManagementAttempt = PTCListManagementType.g
  * @type {number}
  */
 export
-const groupListManagementAttempt = PTCListManagementType.groupListManagementAttempt satisfies PTCListManagementType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const groupListManagementAttempt = PTCListManagementType.groupListManagementAttempt; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PTCListManagementType_contactListManagementResult
@@ -152,7 +152,7 @@ const groupListManagementAttempt = PTCListManagementType.groupListManagementAtte
  * @type {number}
  */
 export
-const PTCListManagementType_contactListManagementResult = PTCListManagementType.contactListManagementResult satisfies PTCListManagementType; /* LONG_NAMED_ENUMERATED_VALUE */
+const PTCListManagementType_contactListManagementResult = PTCListManagementType.contactListManagementResult; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary contactListManagementResult
@@ -160,7 +160,7 @@ const PTCListManagementType_contactListManagementResult = PTCListManagementType.
  * @type {number}
  */
 export
-const contactListManagementResult = PTCListManagementType.contactListManagementResult satisfies PTCListManagementType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const contactListManagementResult = PTCListManagementType.contactListManagementResult; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PTCListManagementType_groupListManagementResult
@@ -168,7 +168,7 @@ const contactListManagementResult = PTCListManagementType.contactListManagementR
  * @type {number}
  */
 export
-const PTCListManagementType_groupListManagementResult = PTCListManagementType.groupListManagementResult satisfies PTCListManagementType; /* LONG_NAMED_ENUMERATED_VALUE */
+const PTCListManagementType_groupListManagementResult = PTCListManagementType.groupListManagementResult; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary groupListManagementResult
@@ -176,7 +176,7 @@ const PTCListManagementType_groupListManagementResult = PTCListManagementType.gr
  * @type {number}
  */
 export
-const groupListManagementResult = PTCListManagementType.groupListManagementResult satisfies PTCListManagementType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const groupListManagementResult = PTCListManagementType.groupListManagementResult; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PTCListManagementType_requestUnsuccessful
@@ -184,7 +184,7 @@ const groupListManagementResult = PTCListManagementType.groupListManagementResul
  * @type {number}
  */
 export
-const PTCListManagementType_requestUnsuccessful = PTCListManagementType.requestUnsuccessful satisfies PTCListManagementType; /* LONG_NAMED_ENUMERATED_VALUE */
+const PTCListManagementType_requestUnsuccessful = PTCListManagementType.requestUnsuccessful; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary requestUnsuccessful
@@ -192,7 +192,7 @@ const PTCListManagementType_requestUnsuccessful = PTCListManagementType.requestU
  * @type {number}
  */
 export
-const requestUnsuccessful = PTCListManagementType.requestUnsuccessful satisfies PTCListManagementType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const requestUnsuccessful = PTCListManagementType.requestUnsuccessful; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_PTCListManagementType: $.ASN1Decoder<PTCListManagementType> = $._decodeEnumerated;
 export const _encode_PTCListManagementType: $.ASN1Encoder<PTCListManagementType> = $._encodeEnumerated;
 

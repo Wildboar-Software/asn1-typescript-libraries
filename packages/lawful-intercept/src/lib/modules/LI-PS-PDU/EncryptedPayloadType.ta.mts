@@ -146,7 +146,7 @@ type EncryptedPayloadType = _enum_for_EncryptedPayloadType | ENUMERATED;
  * @type {number}
  */
 export
-const EncryptedPayloadType_unknown = _enum_for_EncryptedPayloadType.unknown satisfies EncryptedPayloadType; /* LONG_NAMED_ENUMERATED_VALUE */
+const EncryptedPayloadType_unknown = _enum_for_EncryptedPayloadType.unknown; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unknown
@@ -163,7 +163,7 @@ const EncryptedPayloadType_unknown = _enum_for_EncryptedPayloadType.unknown sati
  * @type {number}
  */
 export
-const unknown = EncryptedPayloadType_unknown satisfies EncryptedPayloadType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unknown = EncryptedPayloadType_unknown; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EncryptedPayloadType_part2
@@ -179,7 +179,7 @@ const unknown = EncryptedPayloadType_unknown satisfies EncryptedPayloadType; /* 
  * @type {number}
  */
 export
-const EncryptedPayloadType_part2 = _enum_for_EncryptedPayloadType.part2 satisfies EncryptedPayloadType; /* LONG_NAMED_ENUMERATED_VALUE */
+const EncryptedPayloadType_part2 = _enum_for_EncryptedPayloadType.part2; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary part2
@@ -195,7 +195,7 @@ const EncryptedPayloadType_part2 = _enum_for_EncryptedPayloadType.part2 satisfie
  * @type {number}
  */
 export
-const part2 = EncryptedPayloadType_part2 satisfies EncryptedPayloadType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const part2 = EncryptedPayloadType_part2; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EncryptedPayloadType_part3
@@ -211,7 +211,7 @@ const part2 = EncryptedPayloadType_part2 satisfies EncryptedPayloadType; /* SHOR
  * @type {number}
  */
 export
-const EncryptedPayloadType_part3 = _enum_for_EncryptedPayloadType.part3 satisfies EncryptedPayloadType; /* LONG_NAMED_ENUMERATED_VALUE */
+const EncryptedPayloadType_part3 = _enum_for_EncryptedPayloadType.part3; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary part3
@@ -227,7 +227,7 @@ const EncryptedPayloadType_part3 = _enum_for_EncryptedPayloadType.part3 satisfie
  * @type {number}
  */
 export
-const part3 = EncryptedPayloadType_part3 satisfies EncryptedPayloadType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const part3 = EncryptedPayloadType_part3; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EncryptedPayloadType_part4
@@ -243,7 +243,7 @@ const part3 = EncryptedPayloadType_part3 satisfies EncryptedPayloadType; /* SHOR
  * @type {number}
  */
 export
-const EncryptedPayloadType_part4 = _enum_for_EncryptedPayloadType.part4 satisfies EncryptedPayloadType; /* LONG_NAMED_ENUMERATED_VALUE */
+const EncryptedPayloadType_part4 = _enum_for_EncryptedPayloadType.part4; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary part4
@@ -259,7 +259,7 @@ const EncryptedPayloadType_part4 = _enum_for_EncryptedPayloadType.part4 satisfie
  * @type {number}
  */
 export
-const part4 = EncryptedPayloadType_part4 satisfies EncryptedPayloadType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const part4 = EncryptedPayloadType_part4; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EncryptedPayloadType_part5
@@ -275,7 +275,7 @@ const part4 = EncryptedPayloadType_part4 satisfies EncryptedPayloadType; /* SHOR
  * @type {number}
  */
 export
-const EncryptedPayloadType_part5 = _enum_for_EncryptedPayloadType.part5 satisfies EncryptedPayloadType; /* LONG_NAMED_ENUMERATED_VALUE */
+const EncryptedPayloadType_part5 = _enum_for_EncryptedPayloadType.part5; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary part5
@@ -291,7 +291,7 @@ const EncryptedPayloadType_part5 = _enum_for_EncryptedPayloadType.part5 satisfie
  * @type {number}
  */
 export
-const part5 = EncryptedPayloadType_part5 satisfies EncryptedPayloadType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const part5 = EncryptedPayloadType_part5; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EncryptedPayloadType_part6
@@ -307,7 +307,7 @@ const part5 = EncryptedPayloadType_part5 satisfies EncryptedPayloadType; /* SHOR
  * @type {number}
  */
 export
-const EncryptedPayloadType_part6 = _enum_for_EncryptedPayloadType.part6 satisfies EncryptedPayloadType; /* LONG_NAMED_ENUMERATED_VALUE */
+const EncryptedPayloadType_part6 = _enum_for_EncryptedPayloadType.part6; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary part6
@@ -323,7 +323,7 @@ const EncryptedPayloadType_part6 = _enum_for_EncryptedPayloadType.part6 satisfie
  * @type {number}
  */
 export
-const part6 = EncryptedPayloadType_part6 satisfies EncryptedPayloadType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const part6 = EncryptedPayloadType_part6; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EncryptedPayloadType_part7
@@ -339,7 +339,7 @@ const part6 = EncryptedPayloadType_part6 satisfies EncryptedPayloadType; /* SHOR
  * @type {number}
  */
 export
-const EncryptedPayloadType_part7 = _enum_for_EncryptedPayloadType.part7 satisfies EncryptedPayloadType; /* LONG_NAMED_ENUMERATED_VALUE */
+const EncryptedPayloadType_part7 = _enum_for_EncryptedPayloadType.part7; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary part7
@@ -355,7 +355,7 @@ const EncryptedPayloadType_part7 = _enum_for_EncryptedPayloadType.part7 satisfie
  * @type {number}
  */
 export
-const part7 = EncryptedPayloadType_part7 satisfies EncryptedPayloadType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const part7 = EncryptedPayloadType_part7; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EncryptedPayloadType_part1
@@ -372,7 +372,7 @@ const part7 = EncryptedPayloadType_part7 satisfies EncryptedPayloadType; /* SHOR
  * @type {number}
  */
 export
-const EncryptedPayloadType_part1 = _enum_for_EncryptedPayloadType.part1 satisfies EncryptedPayloadType; /* LONG_NAMED_ENUMERATED_VALUE */
+const EncryptedPayloadType_part1 = _enum_for_EncryptedPayloadType.part1; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary part1
@@ -389,7 +389,7 @@ const EncryptedPayloadType_part1 = _enum_for_EncryptedPayloadType.part1 satisfie
  * @type {number}
  */
 export
-const part1 = EncryptedPayloadType_part1 satisfies EncryptedPayloadType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const part1 = EncryptedPayloadType_part1; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_EncryptedPayloadType: $.ASN1Decoder<EncryptedPayloadType> = $._decodeEnumerated;
 export const _encode_EncryptedPayloadType: $.ASN1Encoder<EncryptedPayloadType> = $._encodeEnumerated;
 

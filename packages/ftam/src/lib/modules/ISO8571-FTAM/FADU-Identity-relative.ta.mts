@@ -44,7 +44,7 @@ export const FADU_Identity_relative_previous = 0 satisfies FADU_Identity_relativ
  * @constant
  * @type {number}
  */
-export const previous = FADU_Identity_relative_previous satisfies FADU_Identity_relative; /* SHORT_NAMED_INTEGER_VALUE */
+export const previous = FADU_Identity_relative_previous; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -61,7 +61,7 @@ export const FADU_Identity_relative_current = 1 satisfies FADU_Identity_relative
  * @constant
  * @type {number}
  */
-export const current = FADU_Identity_relative_current satisfies FADU_Identity_relative; /* SHORT_NAMED_INTEGER_VALUE */
+export const current = FADU_Identity_relative_current; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -79,7 +79,7 @@ export const FADU_Identity_relative_next = 2 satisfies FADU_Identity_relative; /
  * @constant
  * @type {number}
  */
-export const next = FADU_Identity_relative_next satisfies FADU_Identity_relative; /* SHORT_NAMED_INTEGER_VALUE */
+export const next = FADU_Identity_relative_next; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 

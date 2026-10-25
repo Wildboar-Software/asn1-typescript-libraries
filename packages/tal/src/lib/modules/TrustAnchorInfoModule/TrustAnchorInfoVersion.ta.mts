@@ -54,7 +54,7 @@ const TrustAnchorInfoVersion_v1 = 1 satisfies TrustAnchorInfoVersion; /* LONG_NA
  * @type {number}
  */
 export
-const v1 = TrustAnchorInfoVersion_v1 satisfies TrustAnchorInfoVersion; /* SHORT_NAMED_INTEGER_VALUE */
+const v1 = TrustAnchorInfoVersion_v1; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) TrustAnchorInfoVersion

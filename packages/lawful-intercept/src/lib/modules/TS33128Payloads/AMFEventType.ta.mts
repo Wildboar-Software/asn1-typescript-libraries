@@ -110,7 +110,7 @@ const AMFEventType = _enum_for_AMFEventType;
  * @type {number}
  */
 export
-const AMFEventType_locationReport = AMFEventType.locationReport satisfies AMFEventType; /* LONG_NAMED_ENUMERATED_VALUE */
+const AMFEventType_locationReport = AMFEventType.locationReport; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary locationReport
@@ -125,7 +125,7 @@ const AMFEventType_locationReport = AMFEventType.locationReport satisfies AMFEve
  * @type {number}
  */
 export
-const locationReport = AMFEventType.locationReport satisfies AMFEventType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const locationReport = AMFEventType.locationReport; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AMFEventType_presenceInAOIReport
@@ -140,7 +140,7 @@ const locationReport = AMFEventType.locationReport satisfies AMFEventType; /* SH
  * @type {number}
  */
 export
-const AMFEventType_presenceInAOIReport = AMFEventType.presenceInAOIReport satisfies AMFEventType; /* LONG_NAMED_ENUMERATED_VALUE */
+const AMFEventType_presenceInAOIReport = AMFEventType.presenceInAOIReport; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary presenceInAOIReport
@@ -155,7 +155,7 @@ const AMFEventType_presenceInAOIReport = AMFEventType.presenceInAOIReport satisf
  * @type {number}
  */
 export
-const presenceInAOIReport = AMFEventType.presenceInAOIReport satisfies AMFEventType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const presenceInAOIReport = AMFEventType.presenceInAOIReport; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_AMFEventType: $.ASN1Decoder<AMFEventType> = $._decodeEnumerated;
 export const _encode_AMFEventType: $.ASN1Encoder<AMFEventType> = $._encodeEnumerated;
 

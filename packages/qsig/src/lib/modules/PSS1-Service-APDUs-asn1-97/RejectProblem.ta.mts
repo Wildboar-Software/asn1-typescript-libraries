@@ -66,7 +66,7 @@ const RejectProblem_general_unrecognisedPDU = 0 satisfies RejectProblem; /* LONG
  * @type {number}
  */
 export
-const general_unrecognisedPDU = RejectProblem_general_unrecognisedPDU satisfies RejectProblem; /* SHORT_NAMED_INTEGER_VALUE */
+const general_unrecognisedPDU = RejectProblem_general_unrecognisedPDU; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RejectProblem_general_mistypedPDU
@@ -89,7 +89,7 @@ const RejectProblem_general_mistypedPDU = 1 satisfies RejectProblem; /* LONG_NAM
  * @type {number}
  */
 export
-const general_mistypedPDU = RejectProblem_general_mistypedPDU satisfies RejectProblem; /* SHORT_NAMED_INTEGER_VALUE */
+const general_mistypedPDU = RejectProblem_general_mistypedPDU; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RejectProblem_general_badlyStructuredPDU
@@ -112,7 +112,7 @@ const RejectProblem_general_badlyStructuredPDU = 2 satisfies RejectProblem; /* L
  * @type {number}
  */
 export
-const general_badlyStructuredPDU = RejectProblem_general_badlyStructuredPDU satisfies RejectProblem; /* SHORT_NAMED_INTEGER_VALUE */
+const general_badlyStructuredPDU = RejectProblem_general_badlyStructuredPDU; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RejectProblem_invoke_duplicateInvocation
@@ -134,7 +134,7 @@ const RejectProblem_invoke_duplicateInvocation = 10 satisfies RejectProblem; /* 
  * @type {number}
  */
 export
-const invoke_duplicateInvocation = RejectProblem_invoke_duplicateInvocation satisfies RejectProblem; /* SHORT_NAMED_INTEGER_VALUE */
+const invoke_duplicateInvocation = RejectProblem_invoke_duplicateInvocation; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RejectProblem_invoke_unrecognisedOperation
@@ -156,7 +156,7 @@ const RejectProblem_invoke_unrecognisedOperation = 11 satisfies RejectProblem; /
  * @type {number}
  */
 export
-const invoke_unrecognisedOperation = RejectProblem_invoke_unrecognisedOperation satisfies RejectProblem; /* SHORT_NAMED_INTEGER_VALUE */
+const invoke_unrecognisedOperation = RejectProblem_invoke_unrecognisedOperation; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RejectProblem_invoke_mistypedArgument
@@ -178,7 +178,7 @@ const RejectProblem_invoke_mistypedArgument = 12 satisfies RejectProblem; /* LON
  * @type {number}
  */
 export
-const invoke_mistypedArgument = RejectProblem_invoke_mistypedArgument satisfies RejectProblem; /* SHORT_NAMED_INTEGER_VALUE */
+const invoke_mistypedArgument = RejectProblem_invoke_mistypedArgument; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RejectProblem_invoke_resourceLimitation
@@ -201,7 +201,7 @@ const RejectProblem_invoke_resourceLimitation = 13 satisfies RejectProblem; /* L
  * @type {number}
  */
 export
-const invoke_resourceLimitation = RejectProblem_invoke_resourceLimitation satisfies RejectProblem; /* SHORT_NAMED_INTEGER_VALUE */
+const invoke_resourceLimitation = RejectProblem_invoke_resourceLimitation; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RejectProblem_invoke_releaseInProgress
@@ -224,7 +224,7 @@ const RejectProblem_invoke_releaseInProgress = 14 satisfies RejectProblem; /* LO
  * @type {number}
  */
 export
-const invoke_releaseInProgress = RejectProblem_invoke_releaseInProgress satisfies RejectProblem; /* SHORT_NAMED_INTEGER_VALUE */
+const invoke_releaseInProgress = RejectProblem_invoke_releaseInProgress; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RejectProblem_invoke_unrecognisedLinkedId
@@ -246,7 +246,7 @@ const RejectProblem_invoke_unrecognisedLinkedId = 15 satisfies RejectProblem; /*
  * @type {number}
  */
 export
-const invoke_unrecognisedLinkedId = RejectProblem_invoke_unrecognisedLinkedId satisfies RejectProblem; /* SHORT_NAMED_INTEGER_VALUE */
+const invoke_unrecognisedLinkedId = RejectProblem_invoke_unrecognisedLinkedId; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RejectProblem_invoke_linkedResponseUnexpected
@@ -268,7 +268,7 @@ const RejectProblem_invoke_linkedResponseUnexpected = 16 satisfies RejectProblem
  * @type {number}
  */
 export
-const invoke_linkedResponseUnexpected = RejectProblem_invoke_linkedResponseUnexpected satisfies RejectProblem; /* SHORT_NAMED_INTEGER_VALUE */
+const invoke_linkedResponseUnexpected = RejectProblem_invoke_linkedResponseUnexpected; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RejectProblem_invoke_unexpectedLinkedOperation
@@ -291,7 +291,7 @@ const RejectProblem_invoke_unexpectedLinkedOperation = 17 satisfies RejectProble
  * @type {number}
  */
 export
-const invoke_unexpectedLinkedOperation = RejectProblem_invoke_unexpectedLinkedOperation satisfies RejectProblem; /* SHORT_NAMED_INTEGER_VALUE */
+const invoke_unexpectedLinkedOperation = RejectProblem_invoke_unexpectedLinkedOperation; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RejectProblem_returnResult_unrecognisedInvocation
@@ -315,7 +315,7 @@ const RejectProblem_returnResult_unrecognisedInvocation = 20 satisfies RejectPro
  * @type {number}
  */
 export
-const returnResult_unrecognisedInvocation = RejectProblem_returnResult_unrecognisedInvocation satisfies RejectProblem; /* SHORT_NAMED_INTEGER_VALUE */
+const returnResult_unrecognisedInvocation = RejectProblem_returnResult_unrecognisedInvocation; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RejectProblem_returnResult_resultResponseUnexpected
@@ -339,7 +339,7 @@ const RejectProblem_returnResult_resultResponseUnexpected = 21 satisfies RejectP
  * @type {number}
  */
 export
-const returnResult_resultResponseUnexpected = RejectProblem_returnResult_resultResponseUnexpected satisfies RejectProblem; /* SHORT_NAMED_INTEGER_VALUE */
+const returnResult_resultResponseUnexpected = RejectProblem_returnResult_resultResponseUnexpected; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RejectProblem_returnResult_mistypedResult
@@ -360,7 +360,7 @@ const RejectProblem_returnResult_mistypedResult = 22 satisfies RejectProblem; /*
  * @type {number}
  */
 export
-const returnResult_mistypedResult = RejectProblem_returnResult_mistypedResult satisfies RejectProblem; /* SHORT_NAMED_INTEGER_VALUE */
+const returnResult_mistypedResult = RejectProblem_returnResult_mistypedResult; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RejectProblem_returnError_unrecognisedInvocation
@@ -384,7 +384,7 @@ const RejectProblem_returnError_unrecognisedInvocation = 30 satisfies RejectProb
  * @type {number}
  */
 export
-const returnError_unrecognisedInvocation = RejectProblem_returnError_unrecognisedInvocation satisfies RejectProblem; /* SHORT_NAMED_INTEGER_VALUE */
+const returnError_unrecognisedInvocation = RejectProblem_returnError_unrecognisedInvocation; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RejectProblem_returnError_errorResponseUnexpected
@@ -408,7 +408,7 @@ const RejectProblem_returnError_errorResponseUnexpected = 31 satisfies RejectPro
  * @type {number}
  */
 export
-const returnError_errorResponseUnexpected = RejectProblem_returnError_errorResponseUnexpected satisfies RejectProblem; /* SHORT_NAMED_INTEGER_VALUE */
+const returnError_errorResponseUnexpected = RejectProblem_returnError_errorResponseUnexpected; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RejectProblem_returnError_unrecognisedError
@@ -430,7 +430,7 @@ const RejectProblem_returnError_unrecognisedError = 32 satisfies RejectProblem; 
  * @type {number}
  */
 export
-const returnError_unrecognisedError = RejectProblem_returnError_unrecognisedError satisfies RejectProblem; /* SHORT_NAMED_INTEGER_VALUE */
+const returnError_unrecognisedError = RejectProblem_returnError_unrecognisedError; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RejectProblem_returnError_unexpectedError
@@ -452,7 +452,7 @@ const RejectProblem_returnError_unexpectedError = 33 satisfies RejectProblem; /*
  * @type {number}
  */
 export
-const returnError_unexpectedError = RejectProblem_returnError_unexpectedError satisfies RejectProblem; /* SHORT_NAMED_INTEGER_VALUE */
+const returnError_unexpectedError = RejectProblem_returnError_unexpectedError; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RejectProblem_returnError_mistypedParameter
@@ -474,7 +474,7 @@ const RejectProblem_returnError_mistypedParameter = 34 satisfies RejectProblem; 
  * @type {number}
  */
 export
-const returnError_mistypedParameter = RejectProblem_returnError_mistypedParameter satisfies RejectProblem; /* SHORT_NAMED_INTEGER_VALUE */
+const returnError_mistypedParameter = RejectProblem_returnError_mistypedParameter; /* SHORT_NAMED_INTEGER_VALUE */
 
 export
 const _decode_RejectProblem: $.ASN1Decoder<RejectProblem> = $._decodeInteger;

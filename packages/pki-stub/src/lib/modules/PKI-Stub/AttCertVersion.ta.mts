@@ -40,7 +40,7 @@ export const AttCertVersion_v2 = 1 satisfies AttCertVersion; /* LONG_NAMED_INTEG
  * @type {number}
  */
 export const v2 =
-    AttCertVersion_v2 satisfies AttCertVersion; /* SHORT_NAMED_INTEGER_VALUE */
+    AttCertVersion_v2; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) AttCertVersion

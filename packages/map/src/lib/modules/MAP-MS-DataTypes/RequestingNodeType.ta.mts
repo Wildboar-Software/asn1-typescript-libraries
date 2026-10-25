@@ -56,7 +56,7 @@ type RequestingNodeType = _enum_for_RequestingNodeType | ENUMERATED;
  * @type {number}
  */
 export
-const RequestingNodeType_vlr = _enum_for_RequestingNodeType.vlr satisfies RequestingNodeType; /* LONG_NAMED_ENUMERATED_VALUE */
+const RequestingNodeType_vlr = _enum_for_RequestingNodeType.vlr; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary vlr
@@ -64,7 +64,7 @@ const RequestingNodeType_vlr = _enum_for_RequestingNodeType.vlr satisfies Reques
  * @type {number}
  */
 export
-const vlr = RequestingNodeType_vlr satisfies RequestingNodeType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const vlr = RequestingNodeType_vlr; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RequestingNodeType_sgsn
@@ -72,7 +72,7 @@ const vlr = RequestingNodeType_vlr satisfies RequestingNodeType; /* SHORT_NAMED_
  * @type {number}
  */
 export
-const RequestingNodeType_sgsn = _enum_for_RequestingNodeType.sgsn satisfies RequestingNodeType; /* LONG_NAMED_ENUMERATED_VALUE */
+const RequestingNodeType_sgsn = _enum_for_RequestingNodeType.sgsn; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sgsn
@@ -80,7 +80,7 @@ const RequestingNodeType_sgsn = _enum_for_RequestingNodeType.sgsn satisfies Requ
  * @type {number}
  */
 export
-const sgsn = RequestingNodeType_sgsn satisfies RequestingNodeType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sgsn = RequestingNodeType_sgsn; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RequestingNodeType_s_cscf
@@ -88,7 +88,7 @@ const sgsn = RequestingNodeType_sgsn satisfies RequestingNodeType; /* SHORT_NAME
  * @type {number}
  */
 export
-const RequestingNodeType_s_cscf = _enum_for_RequestingNodeType.s_cscf satisfies RequestingNodeType; /* LONG_NAMED_ENUMERATED_VALUE */
+const RequestingNodeType_s_cscf = _enum_for_RequestingNodeType.s_cscf; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary s_cscf
@@ -96,7 +96,7 @@ const RequestingNodeType_s_cscf = _enum_for_RequestingNodeType.s_cscf satisfies 
  * @type {number}
  */
 export
-const s_cscf = RequestingNodeType_s_cscf satisfies RequestingNodeType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const s_cscf = RequestingNodeType_s_cscf; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RequestingNodeType_bsf
@@ -104,7 +104,7 @@ const s_cscf = RequestingNodeType_s_cscf satisfies RequestingNodeType; /* SHORT_
  * @type {number}
  */
 export
-const RequestingNodeType_bsf = _enum_for_RequestingNodeType.bsf satisfies RequestingNodeType; /* LONG_NAMED_ENUMERATED_VALUE */
+const RequestingNodeType_bsf = _enum_for_RequestingNodeType.bsf; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary bsf
@@ -112,7 +112,7 @@ const RequestingNodeType_bsf = _enum_for_RequestingNodeType.bsf satisfies Reques
  * @type {number}
  */
 export
-const bsf = RequestingNodeType_bsf satisfies RequestingNodeType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const bsf = RequestingNodeType_bsf; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RequestingNodeType_gan_aaa_server
@@ -120,7 +120,7 @@ const bsf = RequestingNodeType_bsf satisfies RequestingNodeType; /* SHORT_NAMED_
  * @type {number}
  */
 export
-const RequestingNodeType_gan_aaa_server = _enum_for_RequestingNodeType.gan_aaa_server satisfies RequestingNodeType; /* LONG_NAMED_ENUMERATED_VALUE */
+const RequestingNodeType_gan_aaa_server = _enum_for_RequestingNodeType.gan_aaa_server; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary gan_aaa_server
@@ -128,7 +128,7 @@ const RequestingNodeType_gan_aaa_server = _enum_for_RequestingNodeType.gan_aaa_s
  * @type {number}
  */
 export
-const gan_aaa_server = RequestingNodeType_gan_aaa_server satisfies RequestingNodeType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const gan_aaa_server = RequestingNodeType_gan_aaa_server; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RequestingNodeType_wlan_aaa_server
@@ -136,7 +136,7 @@ const gan_aaa_server = RequestingNodeType_gan_aaa_server satisfies RequestingNod
  * @type {number}
  */
 export
-const RequestingNodeType_wlan_aaa_server = _enum_for_RequestingNodeType.wlan_aaa_server satisfies RequestingNodeType; /* LONG_NAMED_ENUMERATED_VALUE */
+const RequestingNodeType_wlan_aaa_server = _enum_for_RequestingNodeType.wlan_aaa_server; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary wlan_aaa_server
@@ -144,7 +144,7 @@ const RequestingNodeType_wlan_aaa_server = _enum_for_RequestingNodeType.wlan_aaa
  * @type {number}
  */
 export
-const wlan_aaa_server = RequestingNodeType_wlan_aaa_server satisfies RequestingNodeType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const wlan_aaa_server = RequestingNodeType_wlan_aaa_server; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RequestingNodeType_mme
@@ -152,7 +152,7 @@ const wlan_aaa_server = RequestingNodeType_wlan_aaa_server satisfies RequestingN
  * @type {number}
  */
 export
-const RequestingNodeType_mme = _enum_for_RequestingNodeType.mme satisfies RequestingNodeType; /* LONG_NAMED_ENUMERATED_VALUE */
+const RequestingNodeType_mme = _enum_for_RequestingNodeType.mme; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary mme
@@ -160,7 +160,7 @@ const RequestingNodeType_mme = _enum_for_RequestingNodeType.mme satisfies Reques
  * @type {number}
  */
 export
-const mme = RequestingNodeType_mme satisfies RequestingNodeType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const mme = RequestingNodeType_mme; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RequestingNodeType_mme_sgsn
@@ -168,7 +168,7 @@ const mme = RequestingNodeType_mme satisfies RequestingNodeType; /* SHORT_NAMED_
  * @type {number}
  */
 export
-const RequestingNodeType_mme_sgsn = _enum_for_RequestingNodeType.mme_sgsn satisfies RequestingNodeType; /* LONG_NAMED_ENUMERATED_VALUE */
+const RequestingNodeType_mme_sgsn = _enum_for_RequestingNodeType.mme_sgsn; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary mme_sgsn
@@ -176,7 +176,7 @@ const RequestingNodeType_mme_sgsn = _enum_for_RequestingNodeType.mme_sgsn satisf
  * @type {number}
  */
 export
-const mme_sgsn = RequestingNodeType_mme_sgsn satisfies RequestingNodeType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const mme_sgsn = RequestingNodeType_mme_sgsn; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) RequestingNodeType

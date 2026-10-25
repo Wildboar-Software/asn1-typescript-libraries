@@ -97,7 +97,7 @@ const ReservationProblem = _enum_for_ReservationProblem;
  * @type {number}
  */
 export
-const ReservationProblem_cannot_reserve = ReservationProblem.cannot_reserve satisfies ReservationProblem; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReservationProblem_cannot_reserve = ReservationProblem.cannot_reserve; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary cannot_reserve
@@ -108,7 +108,7 @@ const ReservationProblem_cannot_reserve = ReservationProblem.cannot_reserve sati
  * @type {number}
  */
 export
-const cannot_reserve = ReservationProblem.cannot_reserve satisfies ReservationProblem; /* SHORT_NAMED_ENUMERATED_VALUE */
+const cannot_reserve = ReservationProblem.cannot_reserve; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReservationProblem_already_reserved
@@ -119,7 +119,7 @@ const cannot_reserve = ReservationProblem.cannot_reserve satisfies ReservationPr
  * @type {number}
  */
 export
-const ReservationProblem_already_reserved = ReservationProblem.already_reserved satisfies ReservationProblem; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReservationProblem_already_reserved = ReservationProblem.already_reserved; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary already_reserved
@@ -130,7 +130,7 @@ const ReservationProblem_already_reserved = ReservationProblem.already_reserved 
  * @type {number}
  */
 export
-const already_reserved = ReservationProblem.already_reserved satisfies ReservationProblem; /* SHORT_NAMED_ENUMERATED_VALUE */
+const already_reserved = ReservationProblem.already_reserved; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReservationProblem_not_yet_reserved
@@ -141,7 +141,7 @@ const already_reserved = ReservationProblem.already_reserved satisfies Reservati
  * @type {number}
  */
 export
-const ReservationProblem_not_yet_reserved = ReservationProblem.not_yet_reserved satisfies ReservationProblem; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReservationProblem_not_yet_reserved = ReservationProblem.not_yet_reserved; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary not_yet_reserved
@@ -152,7 +152,7 @@ const ReservationProblem_not_yet_reserved = ReservationProblem.not_yet_reserved 
  * @type {number}
  */
 export
-const not_yet_reserved = ReservationProblem.not_yet_reserved satisfies ReservationProblem; /* SHORT_NAMED_ENUMERATED_VALUE */
+const not_yet_reserved = ReservationProblem.not_yet_reserved; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReservationProblem_cannot_unreserve
@@ -163,7 +163,7 @@ const not_yet_reserved = ReservationProblem.not_yet_reserved satisfies Reservati
  * @type {number}
  */
 export
-const ReservationProblem_cannot_unreserve = ReservationProblem.cannot_unreserve satisfies ReservationProblem; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReservationProblem_cannot_unreserve = ReservationProblem.cannot_unreserve; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary cannot_unreserve
@@ -174,7 +174,7 @@ const ReservationProblem_cannot_unreserve = ReservationProblem.cannot_unreserve 
  * @type {number}
  */
 export
-const cannot_unreserve = ReservationProblem.cannot_unreserve satisfies ReservationProblem; /* SHORT_NAMED_ENUMERATED_VALUE */
+const cannot_unreserve = ReservationProblem.cannot_unreserve; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReservationProblem_reservation_not_changed
@@ -186,7 +186,7 @@ const cannot_unreserve = ReservationProblem.cannot_unreserve satisfies Reservati
  * @type {number}
  */
 export
-const ReservationProblem_reservation_not_changed = ReservationProblem.reservation_not_changed satisfies ReservationProblem; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReservationProblem_reservation_not_changed = ReservationProblem.reservation_not_changed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary reservation_not_changed
@@ -198,7 +198,7 @@ const ReservationProblem_reservation_not_changed = ReservationProblem.reservatio
  * @type {number}
  */
 export
-const reservation_not_changed = ReservationProblem.reservation_not_changed satisfies ReservationProblem; /* SHORT_NAMED_ENUMERATED_VALUE */
+const reservation_not_changed = ReservationProblem.reservation_not_changed; /* SHORT_NAMED_ENUMERATED_VALUE */
 export function _decode_ReservationProblem(el: _Element): ReservationProblem {
     const enumerated = $._decodeEnumerated(el);
     switch (enumerated) {

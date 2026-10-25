@@ -37,7 +37,7 @@ export const ProtectionRequest_none = 0 satisfies ProtectionRequest; /* LONG_NAM
  * @constant
  * @type {number}
  */
-export const none = ProtectionRequest_none satisfies ProtectionRequest; /* SHORT_NAMED_INTEGER_VALUE */
+export const none = ProtectionRequest_none; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProtectionRequest_signed
@@ -59,7 +59,7 @@ export const ProtectionRequest_signed = 1 satisfies ProtectionRequest; /* LONG_N
  * @constant
  * @type {number}
  */
-export const signed = ProtectionRequest_signed satisfies ProtectionRequest; /* SHORT_NAMED_INTEGER_VALUE */
+export const signed = ProtectionRequest_signed; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_ProtectionRequest = $._decodeInteger;

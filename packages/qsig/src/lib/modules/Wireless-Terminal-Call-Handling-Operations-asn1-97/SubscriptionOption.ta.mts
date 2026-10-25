@@ -92,7 +92,7 @@ const SubscriptionOption = _enum_for_SubscriptionOption;
  * @type {number}
  */
 export
-const SubscriptionOption_noNotification = SubscriptionOption.noNotification satisfies SubscriptionOption; /* LONG_NAMED_ENUMERATED_VALUE */
+const SubscriptionOption_noNotification = SubscriptionOption.noNotification; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary noNotification
@@ -101,7 +101,7 @@ const SubscriptionOption_noNotification = SubscriptionOption.noNotification sati
  * @type {number}
  */
 export
-const noNotification = SubscriptionOption.noNotification satisfies SubscriptionOption; /* SHORT_NAMED_ENUMERATED_VALUE */
+const noNotification = SubscriptionOption.noNotification; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SubscriptionOption_notificationWithoutDivertedToNr
@@ -111,7 +111,7 @@ const noNotification = SubscriptionOption.noNotification satisfies SubscriptionO
  * @type {number}
  */
 export
-const SubscriptionOption_notificationWithoutDivertedToNr = SubscriptionOption.notificationWithoutDivertedToNr satisfies SubscriptionOption; /* LONG_NAMED_ENUMERATED_VALUE */
+const SubscriptionOption_notificationWithoutDivertedToNr = SubscriptionOption.notificationWithoutDivertedToNr; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary notificationWithoutDivertedToNr
@@ -121,7 +121,7 @@ const SubscriptionOption_notificationWithoutDivertedToNr = SubscriptionOption.no
  * @type {number}
  */
 export
-const notificationWithoutDivertedToNr = SubscriptionOption.notificationWithoutDivertedToNr satisfies SubscriptionOption; /* SHORT_NAMED_ENUMERATED_VALUE */
+const notificationWithoutDivertedToNr = SubscriptionOption.notificationWithoutDivertedToNr; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SubscriptionOption_notificationWithDivertedToNr
@@ -131,7 +131,7 @@ const notificationWithoutDivertedToNr = SubscriptionOption.notificationWithoutDi
  * @type {number}
  */
 export
-const SubscriptionOption_notificationWithDivertedToNr = SubscriptionOption.notificationWithDivertedToNr satisfies SubscriptionOption; /* LONG_NAMED_ENUMERATED_VALUE */
+const SubscriptionOption_notificationWithDivertedToNr = SubscriptionOption.notificationWithDivertedToNr; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary notificationWithDivertedToNr
@@ -141,7 +141,7 @@ const SubscriptionOption_notificationWithDivertedToNr = SubscriptionOption.notif
  * @type {number}
  */
 export
-const notificationWithDivertedToNr = SubscriptionOption.notificationWithDivertedToNr satisfies SubscriptionOption; /* SHORT_NAMED_ENUMERATED_VALUE */
+const notificationWithDivertedToNr = SubscriptionOption.notificationWithDivertedToNr; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_SubscriptionOption: $.ASN1Decoder<SubscriptionOption> = $._decodeEnumerated;

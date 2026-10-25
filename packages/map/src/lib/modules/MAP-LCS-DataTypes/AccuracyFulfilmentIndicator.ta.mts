@@ -43,7 +43,7 @@ type AccuracyFulfilmentIndicator = _enum_for_AccuracyFulfilmentIndicator | ENUME
  * @type {number}
  */
 export
-const AccuracyFulfilmentIndicator_requestedAccuracyFulfilled = _enum_for_AccuracyFulfilmentIndicator.requestedAccuracyFulfilled satisfies AccuracyFulfilmentIndicator; /* LONG_NAMED_ENUMERATED_VALUE */
+const AccuracyFulfilmentIndicator_requestedAccuracyFulfilled = _enum_for_AccuracyFulfilmentIndicator.requestedAccuracyFulfilled; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary requestedAccuracyFulfilled
@@ -55,7 +55,7 @@ const AccuracyFulfilmentIndicator_requestedAccuracyFulfilled = _enum_for_Accurac
  * @type {number}
  */
 export
-const requestedAccuracyFulfilled = AccuracyFulfilmentIndicator_requestedAccuracyFulfilled satisfies AccuracyFulfilmentIndicator; /* SHORT_NAMED_ENUMERATED_VALUE */
+const requestedAccuracyFulfilled = AccuracyFulfilmentIndicator_requestedAccuracyFulfilled; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AccuracyFulfilmentIndicator_requestedAccuracyNotFulfilled
@@ -68,7 +68,7 @@ const requestedAccuracyFulfilled = AccuracyFulfilmentIndicator_requestedAccuracy
  * @type {number}
  */
 export
-const AccuracyFulfilmentIndicator_requestedAccuracyNotFulfilled = _enum_for_AccuracyFulfilmentIndicator.requestedAccuracyNotFulfilled satisfies AccuracyFulfilmentIndicator; /* LONG_NAMED_ENUMERATED_VALUE */
+const AccuracyFulfilmentIndicator_requestedAccuracyNotFulfilled = _enum_for_AccuracyFulfilmentIndicator.requestedAccuracyNotFulfilled; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary requestedAccuracyNotFulfilled
@@ -81,7 +81,7 @@ const AccuracyFulfilmentIndicator_requestedAccuracyNotFulfilled = _enum_for_Accu
  * @type {number}
  */
 export
-const requestedAccuracyNotFulfilled = AccuracyFulfilmentIndicator_requestedAccuracyNotFulfilled satisfies AccuracyFulfilmentIndicator; /* SHORT_NAMED_ENUMERATED_VALUE */
+const requestedAccuracyNotFulfilled = AccuracyFulfilmentIndicator_requestedAccuracyNotFulfilled; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) AccuracyFulfilmentIndicator

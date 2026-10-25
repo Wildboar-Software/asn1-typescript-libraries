@@ -66,7 +66,7 @@ export const IPMEntryType = _enum_for_IPMEntryType;
  * @type {number}
  */
 export const IPMEntryType_ipm =
-    IPMEntryType.ipm satisfies IPMEntryType; /* LONG_NAMED_ENUMERATED_VALUE */
+    IPMEntryType.ipm; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ipm
@@ -74,7 +74,7 @@ export const IPMEntryType_ipm =
  * @type {number}
  */
 export const ipm =
-    IPMEntryType.ipm satisfies IPMEntryType; /* SHORT_NAMED_ENUMERATED_VALUE */
+    IPMEntryType.ipm; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary IPMEntryType_rn
@@ -82,7 +82,7 @@ export const ipm =
  * @type {number}
  */
 export const IPMEntryType_rn =
-    IPMEntryType.rn satisfies IPMEntryType; /* LONG_NAMED_ENUMERATED_VALUE */
+    IPMEntryType.rn; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary rn
@@ -90,7 +90,7 @@ export const IPMEntryType_rn =
  * @type {number}
  */
 export const rn =
-    IPMEntryType.rn satisfies IPMEntryType; /* SHORT_NAMED_ENUMERATED_VALUE */
+    IPMEntryType.rn; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary IPMEntryType_nrn
@@ -98,7 +98,7 @@ export const rn =
  * @type {number}
  */
 export const IPMEntryType_nrn =
-    IPMEntryType.nrn satisfies IPMEntryType; /* LONG_NAMED_ENUMERATED_VALUE */
+    IPMEntryType.nrn; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary nrn
@@ -106,7 +106,7 @@ export const IPMEntryType_nrn =
  * @type {number}
  */
 export const nrn =
-    IPMEntryType.nrn satisfies IPMEntryType; /* SHORT_NAMED_ENUMERATED_VALUE */
+    IPMEntryType.nrn; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary IPMEntryType_on
@@ -114,7 +114,7 @@ export const nrn =
  * @type {number}
  */
 export const IPMEntryType_on =
-    IPMEntryType.on satisfies IPMEntryType; /* LONG_NAMED_ENUMERATED_VALUE */
+    IPMEntryType.on; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary on
@@ -122,7 +122,7 @@ export const IPMEntryType_on =
  * @type {number}
  */
 export const on =
-    IPMEntryType.on satisfies IPMEntryType; /* SHORT_NAMED_ENUMERATED_VALUE */
+    IPMEntryType.on; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 export function _decode_IPMEntryType(el: _Element): IPMEntryType {

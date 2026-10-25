@@ -84,7 +84,7 @@ const PerformanceManagementErrors = _enum_for_PerformanceManagementErrors;
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const PerformanceManagementErrors_generic = PerformanceManagementErrors.generic satisfies PerformanceManagementErrors; /* LONG_NAMED_ENUMERATED_VALUE */
+const PerformanceManagementErrors_generic = PerformanceManagementErrors.generic; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary generic
@@ -93,7 +93,7 @@ const PerformanceManagementErrors_generic = PerformanceManagementErrors.generic 
  * @type {number}
  */
 export
-const generic = PerformanceManagementErrors.generic satisfies PerformanceManagementErrors; /* SHORT_NAMED_ENUMERATED_VALUE */
+const generic = PerformanceManagementErrors.generic; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PerformanceManagementErrors_performanceLimitExceeded
@@ -103,7 +103,7 @@ const generic = PerformanceManagementErrors.generic satisfies PerformanceManagem
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const PerformanceManagementErrors_performanceLimitExceeded = PerformanceManagementErrors.performanceLimitExceeded satisfies PerformanceManagementErrors; /* LONG_NAMED_ENUMERATED_VALUE */
+const PerformanceManagementErrors_performanceLimitExceeded = PerformanceManagementErrors.performanceLimitExceeded; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary performanceLimitExceeded
@@ -113,7 +113,7 @@ const PerformanceManagementErrors_performanceLimitExceeded = PerformanceManageme
  * @type {number}
  */
 export
-const performanceLimitExceeded = PerformanceManagementErrors.performanceLimitExceeded satisfies PerformanceManagementErrors; /* SHORT_NAMED_ENUMERATED_VALUE */
+const performanceLimitExceeded = PerformanceManagementErrors.performanceLimitExceeded; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 let _cached_decoder_for_PerformanceManagementErrors: $.ASN1Decoder<PerformanceManagementErrors> | null = null;
 

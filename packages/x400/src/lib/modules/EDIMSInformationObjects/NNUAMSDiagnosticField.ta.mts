@@ -104,7 +104,7 @@ export const NNUAMSDiagnosticField_protocol_violation = 1 satisfies NNUAMSDiagno
  * @constant
  * @type {number}
  */
-export const protocol_violation = NNUAMSDiagnosticField_protocol_violation satisfies NNUAMSDiagnosticField; /* SHORT_NAMED_INTEGER_VALUE */
+export const protocol_violation = NNUAMSDiagnosticField_protocol_violation; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NNUAMSDiagnosticField_edim_originator_unknown
@@ -118,7 +118,7 @@ export const NNUAMSDiagnosticField_edim_originator_unknown = 2 satisfies NNUAMSD
  * @constant
  * @type {number}
  */
-export const edim_originator_unknown = NNUAMSDiagnosticField_edim_originator_unknown satisfies NNUAMSDiagnosticField; /* SHORT_NAMED_INTEGER_VALUE */
+export const edim_originator_unknown = NNUAMSDiagnosticField_edim_originator_unknown; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NNUAMSDiagnosticField_edim_recipient_unknown
@@ -132,7 +132,7 @@ export const NNUAMSDiagnosticField_edim_recipient_unknown = 3 satisfies NNUAMSDi
  * @constant
  * @type {number}
  */
-export const edim_recipient_unknown = NNUAMSDiagnosticField_edim_recipient_unknown satisfies NNUAMSDiagnosticField; /* SHORT_NAMED_INTEGER_VALUE */
+export const edim_recipient_unknown = NNUAMSDiagnosticField_edim_recipient_unknown; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NNUAMSDiagnosticField_edim_recipient_ambiguous
@@ -146,7 +146,7 @@ export const NNUAMSDiagnosticField_edim_recipient_ambiguous = 4 satisfies NNUAMS
  * @constant
  * @type {number}
  */
-export const edim_recipient_ambiguous = NNUAMSDiagnosticField_edim_recipient_ambiguous satisfies NNUAMSDiagnosticField; /* SHORT_NAMED_INTEGER_VALUE */
+export const edim_recipient_ambiguous = NNUAMSDiagnosticField_edim_recipient_ambiguous; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NNUAMSDiagnosticField_action_request_not_supported
@@ -160,7 +160,7 @@ export const NNUAMSDiagnosticField_action_request_not_supported = 5 satisfies NN
  * @constant
  * @type {number}
  */
-export const action_request_not_supported = NNUAMSDiagnosticField_action_request_not_supported satisfies NNUAMSDiagnosticField; /* SHORT_NAMED_INTEGER_VALUE */
+export const action_request_not_supported = NNUAMSDiagnosticField_action_request_not_supported; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NNUAMSDiagnosticField_edim_expired
@@ -174,7 +174,7 @@ export const NNUAMSDiagnosticField_edim_expired = 6 satisfies NNUAMSDiagnosticFi
  * @constant
  * @type {number}
  */
-export const edim_expired = NNUAMSDiagnosticField_edim_expired satisfies NNUAMSDiagnosticField; /* SHORT_NAMED_INTEGER_VALUE */
+export const edim_expired = NNUAMSDiagnosticField_edim_expired; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NNUAMSDiagnosticField_edim_obsoleted
@@ -188,7 +188,7 @@ export const NNUAMSDiagnosticField_edim_obsoleted = 7 satisfies NNUAMSDiagnostic
  * @constant
  * @type {number}
  */
-export const edim_obsoleted = NNUAMSDiagnosticField_edim_obsoleted satisfies NNUAMSDiagnosticField; /* SHORT_NAMED_INTEGER_VALUE */
+export const edim_obsoleted = NNUAMSDiagnosticField_edim_obsoleted; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NNUAMSDiagnosticField_duplicate_edim
@@ -202,7 +202,7 @@ export const NNUAMSDiagnosticField_duplicate_edim = 8 satisfies NNUAMSDiagnostic
  * @constant
  * @type {number}
  */
-export const duplicate_edim = NNUAMSDiagnosticField_duplicate_edim satisfies NNUAMSDiagnosticField; /* SHORT_NAMED_INTEGER_VALUE */
+export const duplicate_edim = NNUAMSDiagnosticField_duplicate_edim; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NNUAMSDiagnosticField_unsupported_extension
@@ -216,7 +216,7 @@ export const NNUAMSDiagnosticField_unsupported_extension = 9 satisfies NNUAMSDia
  * @constant
  * @type {number}
  */
-export const unsupported_extension = NNUAMSDiagnosticField_unsupported_extension satisfies NNUAMSDiagnosticField; /* SHORT_NAMED_INTEGER_VALUE */
+export const unsupported_extension = NNUAMSDiagnosticField_unsupported_extension; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NNUAMSDiagnosticField_incomplete_copy_rejected
@@ -230,7 +230,7 @@ export const NNUAMSDiagnosticField_incomplete_copy_rejected = 10 satisfies NNUAM
  * @constant
  * @type {number}
  */
-export const incomplete_copy_rejected = NNUAMSDiagnosticField_incomplete_copy_rejected satisfies NNUAMSDiagnosticField; /* SHORT_NAMED_INTEGER_VALUE */
+export const incomplete_copy_rejected = NNUAMSDiagnosticField_incomplete_copy_rejected; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NNUAMSDiagnosticField_edim_too_large_for_application
@@ -244,7 +244,7 @@ export const NNUAMSDiagnosticField_edim_too_large_for_application = 11 satisfies
  * @constant
  * @type {number}
  */
-export const edim_too_large_for_application = NNUAMSDiagnosticField_edim_too_large_for_application satisfies NNUAMSDiagnosticField; /* SHORT_NAMED_INTEGER_VALUE */
+export const edim_too_large_for_application = NNUAMSDiagnosticField_edim_too_large_for_application; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NNUAMSDiagnosticField_forwarded_edim_not_delivered
@@ -258,7 +258,7 @@ export const NNUAMSDiagnosticField_forwarded_edim_not_delivered = 12 satisfies N
  * @constant
  * @type {number}
  */
-export const forwarded_edim_not_delivered = NNUAMSDiagnosticField_forwarded_edim_not_delivered satisfies NNUAMSDiagnosticField; /* SHORT_NAMED_INTEGER_VALUE */
+export const forwarded_edim_not_delivered = NNUAMSDiagnosticField_forwarded_edim_not_delivered; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NNUAMSDiagnosticField_forwarded_edim_delivery_time_out
@@ -272,7 +272,7 @@ export const NNUAMSDiagnosticField_forwarded_edim_delivery_time_out = 13 satisfi
  * @constant
  * @type {number}
  */
-export const forwarded_edim_delivery_time_out = NNUAMSDiagnosticField_forwarded_edim_delivery_time_out satisfies NNUAMSDiagnosticField; /* SHORT_NAMED_INTEGER_VALUE */
+export const forwarded_edim_delivery_time_out = NNUAMSDiagnosticField_forwarded_edim_delivery_time_out; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NNUAMSDiagnosticField_forwarding_loop_detected
@@ -286,7 +286,7 @@ export const NNUAMSDiagnosticField_forwarding_loop_detected = 14 satisfies NNUAM
  * @constant
  * @type {number}
  */
-export const forwarding_loop_detected = NNUAMSDiagnosticField_forwarding_loop_detected satisfies NNUAMSDiagnosticField; /* SHORT_NAMED_INTEGER_VALUE */
+export const forwarding_loop_detected = NNUAMSDiagnosticField_forwarding_loop_detected; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NNUAMSDiagnosticField_unable_to_accept_responsibility
@@ -300,7 +300,7 @@ export const NNUAMSDiagnosticField_unable_to_accept_responsibility = 15 satisfie
  * @constant
  * @type {number}
  */
-export const unable_to_accept_responsibility = NNUAMSDiagnosticField_unable_to_accept_responsibility satisfies NNUAMSDiagnosticField; /* SHORT_NAMED_INTEGER_VALUE */
+export const unable_to_accept_responsibility = NNUAMSDiagnosticField_unable_to_accept_responsibility; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NNUAMSDiagnosticField_interchange_sender_unknown
@@ -314,7 +314,7 @@ export const NNUAMSDiagnosticField_interchange_sender_unknown = 16 satisfies NNU
  * @constant
  * @type {number}
  */
-export const interchange_sender_unknown = NNUAMSDiagnosticField_interchange_sender_unknown satisfies NNUAMSDiagnosticField; /* SHORT_NAMED_INTEGER_VALUE */
+export const interchange_sender_unknown = NNUAMSDiagnosticField_interchange_sender_unknown; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NNUAMSDiagnosticField_interchange_recipient_unknown
@@ -328,7 +328,7 @@ export const NNUAMSDiagnosticField_interchange_recipient_unknown = 17 satisfies 
  * @constant
  * @type {number}
  */
-export const interchange_recipient_unknown = NNUAMSDiagnosticField_interchange_recipient_unknown satisfies NNUAMSDiagnosticField; /* SHORT_NAMED_INTEGER_VALUE */
+export const interchange_recipient_unknown = NNUAMSDiagnosticField_interchange_recipient_unknown; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NNUAMSDiagnosticField_invalid_heading_field
@@ -342,7 +342,7 @@ export const NNUAMSDiagnosticField_invalid_heading_field = 18 satisfies NNUAMSDi
  * @constant
  * @type {number}
  */
-export const invalid_heading_field = NNUAMSDiagnosticField_invalid_heading_field satisfies NNUAMSDiagnosticField; /* SHORT_NAMED_INTEGER_VALUE */
+export const invalid_heading_field = NNUAMSDiagnosticField_invalid_heading_field; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NNUAMSDiagnosticField_invalid_bodypart_type
@@ -356,7 +356,7 @@ export const NNUAMSDiagnosticField_invalid_bodypart_type = 19 satisfies NNUAMSDi
  * @constant
  * @type {number}
  */
-export const invalid_bodypart_type = NNUAMSDiagnosticField_invalid_bodypart_type satisfies NNUAMSDiagnosticField; /* SHORT_NAMED_INTEGER_VALUE */
+export const invalid_bodypart_type = NNUAMSDiagnosticField_invalid_bodypart_type; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NNUAMSDiagnosticField_invalid_message_type
@@ -370,7 +370,7 @@ export const NNUAMSDiagnosticField_invalid_message_type = 20 satisfies NNUAMSDia
  * @constant
  * @type {number}
  */
-export const invalid_message_type = NNUAMSDiagnosticField_invalid_message_type satisfies NNUAMSDiagnosticField; /* SHORT_NAMED_INTEGER_VALUE */
+export const invalid_message_type = NNUAMSDiagnosticField_invalid_message_type; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NNUAMSDiagnosticField_invalid_syntax_id
@@ -384,7 +384,7 @@ export const NNUAMSDiagnosticField_invalid_syntax_id = 21 satisfies NNUAMSDiagno
  * @constant
  * @type {number}
  */
-export const invalid_syntax_id = NNUAMSDiagnosticField_invalid_syntax_id satisfies NNUAMSDiagnosticField; /* SHORT_NAMED_INTEGER_VALUE */
+export const invalid_syntax_id = NNUAMSDiagnosticField_invalid_syntax_id; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NNUAMSDiagnosticField_message_integrity_failure
@@ -398,7 +398,7 @@ export const NNUAMSDiagnosticField_message_integrity_failure = 22 satisfies NNUA
  * @constant
  * @type {number}
  */
-export const message_integrity_failure = NNUAMSDiagnosticField_message_integrity_failure satisfies NNUAMSDiagnosticField; /* SHORT_NAMED_INTEGER_VALUE */
+export const message_integrity_failure = NNUAMSDiagnosticField_message_integrity_failure; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NNUAMSDiagnosticField_forwarded_message_integrity_failure
@@ -412,7 +412,7 @@ export const NNUAMSDiagnosticField_forwarded_message_integrity_failure = 23 sati
  * @constant
  * @type {number}
  */
-export const forwarded_message_integrity_failure = NNUAMSDiagnosticField_forwarded_message_integrity_failure satisfies NNUAMSDiagnosticField; /* SHORT_NAMED_INTEGER_VALUE */
+export const forwarded_message_integrity_failure = NNUAMSDiagnosticField_forwarded_message_integrity_failure; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NNUAMSDiagnosticField_unsupported_algorithm
@@ -426,7 +426,7 @@ export const NNUAMSDiagnosticField_unsupported_algorithm = 24 satisfies NNUAMSDi
  * @constant
  * @type {number}
  */
-export const unsupported_algorithm = NNUAMSDiagnosticField_unsupported_algorithm satisfies NNUAMSDiagnosticField; /* SHORT_NAMED_INTEGER_VALUE */
+export const unsupported_algorithm = NNUAMSDiagnosticField_unsupported_algorithm; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NNUAMSDiagnosticField_decryption_failed
@@ -440,7 +440,7 @@ export const NNUAMSDiagnosticField_decryption_failed = 25 satisfies NNUAMSDiagno
  * @constant
  * @type {number}
  */
-export const decryption_failed = NNUAMSDiagnosticField_decryption_failed satisfies NNUAMSDiagnosticField; /* SHORT_NAMED_INTEGER_VALUE */
+export const decryption_failed = NNUAMSDiagnosticField_decryption_failed; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NNUAMSDiagnosticField_token_error
@@ -454,7 +454,7 @@ export const NNUAMSDiagnosticField_token_error = 26 satisfies NNUAMSDiagnosticFi
  * @constant
  * @type {number}
  */
-export const token_error = NNUAMSDiagnosticField_token_error satisfies NNUAMSDiagnosticField; /* SHORT_NAMED_INTEGER_VALUE */
+export const token_error = NNUAMSDiagnosticField_token_error; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NNUAMSDiagnosticField_unable_to_sign_notification
@@ -468,7 +468,7 @@ export const NNUAMSDiagnosticField_unable_to_sign_notification = 27 satisfies NN
  * @constant
  * @type {number}
  */
-export const unable_to_sign_notification = NNUAMSDiagnosticField_unable_to_sign_notification satisfies NNUAMSDiagnosticField; /* SHORT_NAMED_INTEGER_VALUE */
+export const unable_to_sign_notification = NNUAMSDiagnosticField_unable_to_sign_notification; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NNUAMSDiagnosticField_unable_to_sign_message_receipt
@@ -482,7 +482,7 @@ export const NNUAMSDiagnosticField_unable_to_sign_message_receipt = 28 satisfies
  * @constant
  * @type {number}
  */
-export const unable_to_sign_message_receipt = NNUAMSDiagnosticField_unable_to_sign_message_receipt satisfies NNUAMSDiagnosticField; /* SHORT_NAMED_INTEGER_VALUE */
+export const unable_to_sign_message_receipt = NNUAMSDiagnosticField_unable_to_sign_message_receipt; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NNUAMSDiagnosticField_authentication_failure
@@ -496,7 +496,7 @@ export const NNUAMSDiagnosticField_authentication_failure = 29 satisfies NNUAMSD
  * @constant
  * @type {number}
  */
-export const authentication_failure = NNUAMSDiagnosticField_authentication_failure satisfies NNUAMSDiagnosticField; /* SHORT_NAMED_INTEGER_VALUE */
+export const authentication_failure = NNUAMSDiagnosticField_authentication_failure; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NNUAMSDiagnosticField_security_context_failure
@@ -510,7 +510,7 @@ export const NNUAMSDiagnosticField_security_context_failure = 30 satisfies NNUAM
  * @constant
  * @type {number}
  */
-export const security_context_failure = NNUAMSDiagnosticField_security_context_failure satisfies NNUAMSDiagnosticField; /* SHORT_NAMED_INTEGER_VALUE */
+export const security_context_failure = NNUAMSDiagnosticField_security_context_failure; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NNUAMSDiagnosticField_message_sequence_failure
@@ -524,7 +524,7 @@ export const NNUAMSDiagnosticField_message_sequence_failure = 31 satisfies NNUAM
  * @constant
  * @type {number}
  */
-export const message_sequence_failure = NNUAMSDiagnosticField_message_sequence_failure satisfies NNUAMSDiagnosticField; /* SHORT_NAMED_INTEGER_VALUE */
+export const message_sequence_failure = NNUAMSDiagnosticField_message_sequence_failure; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NNUAMSDiagnosticField_message_security_labelling_failure
@@ -538,7 +538,7 @@ export const NNUAMSDiagnosticField_message_security_labelling_failure = 32 satis
  * @constant
  * @type {number}
  */
-export const message_security_labelling_failure = NNUAMSDiagnosticField_message_security_labelling_failure satisfies NNUAMSDiagnosticField; /* SHORT_NAMED_INTEGER_VALUE */
+export const message_security_labelling_failure = NNUAMSDiagnosticField_message_security_labelling_failure; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NNUAMSDiagnosticField_repudiation_failure
@@ -552,7 +552,7 @@ export const NNUAMSDiagnosticField_repudiation_failure = 33 satisfies NNUAMSDiag
  * @constant
  * @type {number}
  */
-export const repudiation_failure = NNUAMSDiagnosticField_repudiation_failure satisfies NNUAMSDiagnosticField; /* SHORT_NAMED_INTEGER_VALUE */
+export const repudiation_failure = NNUAMSDiagnosticField_repudiation_failure; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NNUAMSDiagnosticField_proof_service_failure
@@ -566,7 +566,7 @@ export const NNUAMSDiagnosticField_proof_service_failure = 34 satisfies NNUAMSDi
  * @constant
  * @type {number}
  */
-export const proof_service_failure = NNUAMSDiagnosticField_proof_service_failure satisfies NNUAMSDiagnosticField; /* SHORT_NAMED_INTEGER_VALUE */
+export const proof_service_failure = NNUAMSDiagnosticField_proof_service_failure; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NNUAMSDiagnosticField_compression_unsupported
@@ -580,7 +580,7 @@ export const NNUAMSDiagnosticField_compression_unsupported = 35 satisfies NNUAMS
  * @constant
  * @type {number}
  */
-export const compression_unsupported = NNUAMSDiagnosticField_compression_unsupported satisfies NNUAMSDiagnosticField; /* SHORT_NAMED_INTEGER_VALUE */
+export const compression_unsupported = NNUAMSDiagnosticField_compression_unsupported; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_NNUAMSDiagnosticField = $._decodeInteger;

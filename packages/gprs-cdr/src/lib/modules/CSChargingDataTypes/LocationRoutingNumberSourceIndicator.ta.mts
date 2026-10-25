@@ -37,7 +37,7 @@ const LocationRoutingNumberSourceIndicator_lRN_NP_Database = 1 satisfies Locatio
  * @type {number}
  */
 export
-const lRN_NP_Database = LocationRoutingNumberSourceIndicator_lRN_NP_Database satisfies LocationRoutingNumberSourceIndicator; /* SHORT_NAMED_INTEGER_VALUE */
+const lRN_NP_Database = LocationRoutingNumberSourceIndicator_lRN_NP_Database; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary LocationRoutingNumberSourceIndicator_switchingSystemData
@@ -53,7 +53,7 @@ const LocationRoutingNumberSourceIndicator_switchingSystemData = 2 satisfies Loc
  * @type {number}
  */
 export
-const switchingSystemData = LocationRoutingNumberSourceIndicator_switchingSystemData satisfies LocationRoutingNumberSourceIndicator; /* SHORT_NAMED_INTEGER_VALUE */
+const switchingSystemData = LocationRoutingNumberSourceIndicator_switchingSystemData; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary LocationRoutingNumberSourceIndicator_incomingsignaling
@@ -69,7 +69,7 @@ const LocationRoutingNumberSourceIndicator_incomingsignaling = 3 satisfies Locat
  * @type {number}
  */
 export
-const incomingsignaling = LocationRoutingNumberSourceIndicator_incomingsignaling satisfies LocationRoutingNumberSourceIndicator; /* SHORT_NAMED_INTEGER_VALUE */
+const incomingsignaling = LocationRoutingNumberSourceIndicator_incomingsignaling; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary LocationRoutingNumberSourceIndicator_unknown
@@ -85,7 +85,7 @@ const LocationRoutingNumberSourceIndicator_unknown = 9 satisfies LocationRouting
  * @type {number}
  */
 export
-const unknown = LocationRoutingNumberSourceIndicator_unknown satisfies LocationRoutingNumberSourceIndicator; /* SHORT_NAMED_INTEGER_VALUE */
+const unknown = LocationRoutingNumberSourceIndicator_unknown; /* SHORT_NAMED_INTEGER_VALUE */
 
 export
 const _decode_LocationRoutingNumberSourceIndicator: $.ASN1Decoder<LocationRoutingNumberSourceIndicator> = $._decodeInteger;

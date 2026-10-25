@@ -107,7 +107,7 @@ const DfrObjectClass = _enum_for_DfrObjectClass;
  * @type {number}
  */
 export
-const DfrObjectClass_dfr_document = DfrObjectClass.dfr_document satisfies DfrObjectClass; /* LONG_NAMED_ENUMERATED_VALUE */
+const DfrObjectClass_dfr_document = DfrObjectClass.dfr_document; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary dfr_document
@@ -119,7 +119,7 @@ const DfrObjectClass_dfr_document = DfrObjectClass.dfr_document satisfies DfrObj
  * @type {number}
  */
 export
-const dfr_document = DfrObjectClass.dfr_document satisfies DfrObjectClass; /* SHORT_NAMED_ENUMERATED_VALUE */
+const dfr_document = DfrObjectClass.dfr_document; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary DfrObjectClass_dfr_root_group
@@ -131,7 +131,7 @@ const dfr_document = DfrObjectClass.dfr_document satisfies DfrObjectClass; /* SH
  * @type {number}
  */
 export
-const DfrObjectClass_dfr_root_group = DfrObjectClass.dfr_root_group satisfies DfrObjectClass; /* LONG_NAMED_ENUMERATED_VALUE */
+const DfrObjectClass_dfr_root_group = DfrObjectClass.dfr_root_group; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary dfr_root_group
@@ -143,7 +143,7 @@ const DfrObjectClass_dfr_root_group = DfrObjectClass.dfr_root_group satisfies Df
  * @type {number}
  */
 export
-const dfr_root_group = DfrObjectClass.dfr_root_group satisfies DfrObjectClass; /* SHORT_NAMED_ENUMERATED_VALUE */
+const dfr_root_group = DfrObjectClass.dfr_root_group; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary DfrObjectClass_dfr_proper_group
@@ -154,7 +154,7 @@ const dfr_root_group = DfrObjectClass.dfr_root_group satisfies DfrObjectClass; /
  * @type {number}
  */
 export
-const DfrObjectClass_dfr_proper_group = DfrObjectClass.dfr_proper_group satisfies DfrObjectClass; /* LONG_NAMED_ENUMERATED_VALUE */
+const DfrObjectClass_dfr_proper_group = DfrObjectClass.dfr_proper_group; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary dfr_proper_group
@@ -165,7 +165,7 @@ const DfrObjectClass_dfr_proper_group = DfrObjectClass.dfr_proper_group satisfie
  * @type {number}
  */
 export
-const dfr_proper_group = DfrObjectClass.dfr_proper_group satisfies DfrObjectClass; /* SHORT_NAMED_ENUMERATED_VALUE */
+const dfr_proper_group = DfrObjectClass.dfr_proper_group; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary DfrObjectClass_dfr_reference
@@ -177,7 +177,7 @@ const dfr_proper_group = DfrObjectClass.dfr_proper_group satisfies DfrObjectClas
  * @type {number}
  */
 export
-const DfrObjectClass_dfr_reference = DfrObjectClass.dfr_reference satisfies DfrObjectClass; /* LONG_NAMED_ENUMERATED_VALUE */
+const DfrObjectClass_dfr_reference = DfrObjectClass.dfr_reference; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary dfr_reference
@@ -189,7 +189,7 @@ const DfrObjectClass_dfr_reference = DfrObjectClass.dfr_reference satisfies DfrO
  * @type {number}
  */
 export
-const dfr_reference = DfrObjectClass.dfr_reference satisfies DfrObjectClass; /* SHORT_NAMED_ENUMERATED_VALUE */
+const dfr_reference = DfrObjectClass.dfr_reference; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary DfrObjectClass_dfr_search_result_list
@@ -201,7 +201,7 @@ const dfr_reference = DfrObjectClass.dfr_reference satisfies DfrObjectClass; /* 
  * @type {number}
  */
 export
-const DfrObjectClass_dfr_search_result_list = DfrObjectClass.dfr_search_result_list satisfies DfrObjectClass; /* LONG_NAMED_ENUMERATED_VALUE */
+const DfrObjectClass_dfr_search_result_list = DfrObjectClass.dfr_search_result_list; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary dfr_search_result_list
@@ -213,7 +213,7 @@ const DfrObjectClass_dfr_search_result_list = DfrObjectClass.dfr_search_result_l
  * @type {number}
  */
 export
-const dfr_search_result_list = DfrObjectClass.dfr_search_result_list satisfies DfrObjectClass; /* SHORT_NAMED_ENUMERATED_VALUE */
+const dfr_search_result_list = DfrObjectClass.dfr_search_result_list; /* SHORT_NAMED_ENUMERATED_VALUE */
 export function _decode_DfrObjectClass(el: _Element): DfrObjectClass {
     const enumerated = $._decodeEnumerated(el);
     switch (enumerated) {

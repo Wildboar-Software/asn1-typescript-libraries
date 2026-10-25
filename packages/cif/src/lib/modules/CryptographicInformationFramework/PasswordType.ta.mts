@@ -56,7 +56,7 @@ type PasswordType = _enum_for_PasswordType | ENUMERATED;
  * @type {number}
  */
 export
-const PasswordType_bcd = _enum_for_PasswordType.bcd satisfies PasswordType; /* LONG_NAMED_ENUMERATED_VALUE */
+const PasswordType_bcd = _enum_for_PasswordType.bcd; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary bcd
@@ -64,7 +64,7 @@ const PasswordType_bcd = _enum_for_PasswordType.bcd satisfies PasswordType; /* L
  * @type {number}
  */
 export
-const bcd = PasswordType_bcd satisfies PasswordType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const bcd = PasswordType_bcd; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PasswordType_ascii_numeric
@@ -74,7 +74,7 @@ const bcd = PasswordType_bcd satisfies PasswordType; /* SHORT_NAMED_ENUMERATED_V
  * @type {number}
  */
 export
-const PasswordType_ascii_numeric = _enum_for_PasswordType.ascii_numeric satisfies PasswordType; /* LONG_NAMED_ENUMERATED_VALUE */
+const PasswordType_ascii_numeric = _enum_for_PasswordType.ascii_numeric; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ascii_numeric
@@ -82,7 +82,7 @@ const PasswordType_ascii_numeric = _enum_for_PasswordType.ascii_numeric satisfie
  * @type {number}
  */
 export
-const ascii_numeric = PasswordType_ascii_numeric satisfies PasswordType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const ascii_numeric = PasswordType_ascii_numeric; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PasswordType_utf8
@@ -93,7 +93,7 @@ const ascii_numeric = PasswordType_ascii_numeric satisfies PasswordType; /* SHOR
  * @type {number}
  */
 export
-const PasswordType_utf8 = _enum_for_PasswordType.utf8 satisfies PasswordType; /* LONG_NAMED_ENUMERATED_VALUE */
+const PasswordType_utf8 = _enum_for_PasswordType.utf8; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary utf8
@@ -101,7 +101,7 @@ const PasswordType_utf8 = _enum_for_PasswordType.utf8 satisfies PasswordType; /*
  * @type {number}
  */
 export
-const utf8 = PasswordType_utf8 satisfies PasswordType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const utf8 = PasswordType_utf8; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PasswordType_half_nibble_bcd
@@ -111,7 +111,7 @@ const utf8 = PasswordType_utf8 satisfies PasswordType; /* SHORT_NAMED_ENUMERATED
  * @type {number}
  */
 export
-const PasswordType_half_nibble_bcd = _enum_for_PasswordType.half_nibble_bcd satisfies PasswordType; /* LONG_NAMED_ENUMERATED_VALUE */
+const PasswordType_half_nibble_bcd = _enum_for_PasswordType.half_nibble_bcd; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary half_nibble_bcd
@@ -119,7 +119,7 @@ const PasswordType_half_nibble_bcd = _enum_for_PasswordType.half_nibble_bcd sati
  * @type {number}
  */
 export
-const half_nibble_bcd = PasswordType_half_nibble_bcd satisfies PasswordType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const half_nibble_bcd = PasswordType_half_nibble_bcd; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PasswordType_iso9564_1
@@ -129,7 +129,7 @@ const half_nibble_bcd = PasswordType_half_nibble_bcd satisfies PasswordType; /* 
  * @type {number}
  */
 export
-const PasswordType_iso9564_1 = _enum_for_PasswordType.iso9564_1 satisfies PasswordType; /* LONG_NAMED_ENUMERATED_VALUE */
+const PasswordType_iso9564_1 = _enum_for_PasswordType.iso9564_1; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary iso9564_1
@@ -137,7 +137,7 @@ const PasswordType_iso9564_1 = _enum_for_PasswordType.iso9564_1 satisfies Passwo
  * @type {number}
  */
 export
-const iso9564_1 = PasswordType_iso9564_1 satisfies PasswordType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const iso9564_1 = PasswordType_iso9564_1; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_PasswordType = $._decodeEnumerated;
 export const _encode_PasswordType = $._encodeEnumerated;
 

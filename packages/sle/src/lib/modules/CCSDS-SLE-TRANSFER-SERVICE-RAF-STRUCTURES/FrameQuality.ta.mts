@@ -59,7 +59,7 @@ const FrameQuality_good = 0 satisfies FrameQuality; /* LONG_NAMED_INTEGER_VALUE 
  * @type {number}
  */
 export
-const good = FrameQuality_good satisfies FrameQuality; /* SHORT_NAMED_INTEGER_VALUE */
+const good = FrameQuality_good; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary FrameQuality_erred
@@ -88,7 +88,7 @@ const FrameQuality_erred = 1 satisfies FrameQuality; /* LONG_NAMED_INTEGER_VALUE
  * @type {number}
  */
 export
-const erred = FrameQuality_erred satisfies FrameQuality; /* SHORT_NAMED_INTEGER_VALUE */
+const erred = FrameQuality_erred; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary FrameQuality_undetermined
@@ -116,7 +116,7 @@ const FrameQuality_undetermined = 2 satisfies FrameQuality; /* LONG_NAMED_INTEGE
  * @type {number}
  */
 export
-const undetermined = FrameQuality_undetermined satisfies FrameQuality; /* SHORT_NAMED_INTEGER_VALUE */
+const undetermined = FrameQuality_undetermined; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_FrameQuality: $.ASN1Decoder<FrameQuality> = $._decodeInteger;
 export const _encode_FrameQuality: $.ASN1Encoder<FrameQuality> = $._encodeInteger;
 

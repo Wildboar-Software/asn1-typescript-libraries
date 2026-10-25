@@ -48,7 +48,7 @@ const TypeMessage_exercise = 0 satisfies TypeMessage; /* LONG_NAMED_INTEGER_VALU
  * @type {number}
  */
 export
-const exercise = TypeMessage_exercise satisfies TypeMessage; /* SHORT_NAMED_INTEGER_VALUE */
+const exercise = TypeMessage_exercise; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TypeMessage_operation
@@ -72,7 +72,7 @@ const TypeMessage_operation = 1 satisfies TypeMessage; /* LONG_NAMED_INTEGER_VAL
  * @type {number}
  */
 export
-const operation = TypeMessage_operation satisfies TypeMessage; /* SHORT_NAMED_INTEGER_VALUE */
+const operation = TypeMessage_operation; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TypeMessage_project
@@ -96,7 +96,7 @@ const TypeMessage_project = 2 satisfies TypeMessage; /* LONG_NAMED_INTEGER_VALUE
  * @type {number}
  */
 export
-const project = TypeMessage_project satisfies TypeMessage; /* SHORT_NAMED_INTEGER_VALUE */
+const project = TypeMessage_project; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TypeMessage_drill
@@ -120,7 +120,7 @@ const TypeMessage_drill = 3 satisfies TypeMessage; /* LONG_NAMED_INTEGER_VALUE *
  * @type {number}
  */
 export
-const drill = TypeMessage_drill satisfies TypeMessage; /* SHORT_NAMED_INTEGER_VALUE */
+const drill = TypeMessage_drill; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_TypeMessage: $.ASN1Decoder<TypeMessage> = $._decodeInteger;
 export const _encode_TypeMessage: $.ASN1Encoder<TypeMessage> = $._encodeInteger;
 

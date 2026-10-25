@@ -159,7 +159,7 @@ const PTCFloorActivity = _enum_for_PTCFloorActivity;
  * @type {number}
  */
 export
-const PTCFloorActivity_tBCPRequest = PTCFloorActivity.tBCPRequest satisfies PTCFloorActivity; /* LONG_NAMED_ENUMERATED_VALUE */
+const PTCFloorActivity_tBCPRequest = PTCFloorActivity.tBCPRequest; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tBCPRequest
@@ -167,7 +167,7 @@ const PTCFloorActivity_tBCPRequest = PTCFloorActivity.tBCPRequest satisfies PTCF
  * @type {number}
  */
 export
-const tBCPRequest = PTCFloorActivity.tBCPRequest satisfies PTCFloorActivity; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tBCPRequest = PTCFloorActivity.tBCPRequest; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PTCFloorActivity_tBCPGranted
@@ -175,7 +175,7 @@ const tBCPRequest = PTCFloorActivity.tBCPRequest satisfies PTCFloorActivity; /* 
  * @type {number}
  */
 export
-const PTCFloorActivity_tBCPGranted = PTCFloorActivity.tBCPGranted satisfies PTCFloorActivity; /* LONG_NAMED_ENUMERATED_VALUE */
+const PTCFloorActivity_tBCPGranted = PTCFloorActivity.tBCPGranted; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tBCPGranted
@@ -183,7 +183,7 @@ const PTCFloorActivity_tBCPGranted = PTCFloorActivity.tBCPGranted satisfies PTCF
  * @type {number}
  */
 export
-const tBCPGranted = PTCFloorActivity.tBCPGranted satisfies PTCFloorActivity; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tBCPGranted = PTCFloorActivity.tBCPGranted; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PTCFloorActivity_tBCPDeny
@@ -191,7 +191,7 @@ const tBCPGranted = PTCFloorActivity.tBCPGranted satisfies PTCFloorActivity; /* 
  * @type {number}
  */
 export
-const PTCFloorActivity_tBCPDeny = PTCFloorActivity.tBCPDeny satisfies PTCFloorActivity; /* LONG_NAMED_ENUMERATED_VALUE */
+const PTCFloorActivity_tBCPDeny = PTCFloorActivity.tBCPDeny; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tBCPDeny
@@ -199,7 +199,7 @@ const PTCFloorActivity_tBCPDeny = PTCFloorActivity.tBCPDeny satisfies PTCFloorAc
  * @type {number}
  */
 export
-const tBCPDeny = PTCFloorActivity.tBCPDeny satisfies PTCFloorActivity; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tBCPDeny = PTCFloorActivity.tBCPDeny; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PTCFloorActivity_tBCPIdle
@@ -207,7 +207,7 @@ const tBCPDeny = PTCFloorActivity.tBCPDeny satisfies PTCFloorActivity; /* SHORT_
  * @type {number}
  */
 export
-const PTCFloorActivity_tBCPIdle = PTCFloorActivity.tBCPIdle satisfies PTCFloorActivity; /* LONG_NAMED_ENUMERATED_VALUE */
+const PTCFloorActivity_tBCPIdle = PTCFloorActivity.tBCPIdle; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tBCPIdle
@@ -215,7 +215,7 @@ const PTCFloorActivity_tBCPIdle = PTCFloorActivity.tBCPIdle satisfies PTCFloorAc
  * @type {number}
  */
 export
-const tBCPIdle = PTCFloorActivity.tBCPIdle satisfies PTCFloorActivity; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tBCPIdle = PTCFloorActivity.tBCPIdle; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PTCFloorActivity_tBCPTaken
@@ -223,7 +223,7 @@ const tBCPIdle = PTCFloorActivity.tBCPIdle satisfies PTCFloorActivity; /* SHORT_
  * @type {number}
  */
 export
-const PTCFloorActivity_tBCPTaken = PTCFloorActivity.tBCPTaken satisfies PTCFloorActivity; /* LONG_NAMED_ENUMERATED_VALUE */
+const PTCFloorActivity_tBCPTaken = PTCFloorActivity.tBCPTaken; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tBCPTaken
@@ -231,7 +231,7 @@ const PTCFloorActivity_tBCPTaken = PTCFloorActivity.tBCPTaken satisfies PTCFloor
  * @type {number}
  */
 export
-const tBCPTaken = PTCFloorActivity.tBCPTaken satisfies PTCFloorActivity; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tBCPTaken = PTCFloorActivity.tBCPTaken; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PTCFloorActivity_tBCPRevoke
@@ -239,7 +239,7 @@ const tBCPTaken = PTCFloorActivity.tBCPTaken satisfies PTCFloorActivity; /* SHOR
  * @type {number}
  */
 export
-const PTCFloorActivity_tBCPRevoke = PTCFloorActivity.tBCPRevoke satisfies PTCFloorActivity; /* LONG_NAMED_ENUMERATED_VALUE */
+const PTCFloorActivity_tBCPRevoke = PTCFloorActivity.tBCPRevoke; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tBCPRevoke
@@ -247,7 +247,7 @@ const PTCFloorActivity_tBCPRevoke = PTCFloorActivity.tBCPRevoke satisfies PTCFlo
  * @type {number}
  */
 export
-const tBCPRevoke = PTCFloorActivity.tBCPRevoke satisfies PTCFloorActivity; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tBCPRevoke = PTCFloorActivity.tBCPRevoke; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PTCFloorActivity_tBCPQueued
@@ -255,7 +255,7 @@ const tBCPRevoke = PTCFloorActivity.tBCPRevoke satisfies PTCFloorActivity; /* SH
  * @type {number}
  */
 export
-const PTCFloorActivity_tBCPQueued = PTCFloorActivity.tBCPQueued satisfies PTCFloorActivity; /* LONG_NAMED_ENUMERATED_VALUE */
+const PTCFloorActivity_tBCPQueued = PTCFloorActivity.tBCPQueued; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tBCPQueued
@@ -263,7 +263,7 @@ const PTCFloorActivity_tBCPQueued = PTCFloorActivity.tBCPQueued satisfies PTCFlo
  * @type {number}
  */
 export
-const tBCPQueued = PTCFloorActivity.tBCPQueued satisfies PTCFloorActivity; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tBCPQueued = PTCFloorActivity.tBCPQueued; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PTCFloorActivity_tBCPRelease
@@ -271,7 +271,7 @@ const tBCPQueued = PTCFloorActivity.tBCPQueued satisfies PTCFloorActivity; /* SH
  * @type {number}
  */
 export
-const PTCFloorActivity_tBCPRelease = PTCFloorActivity.tBCPRelease satisfies PTCFloorActivity; /* LONG_NAMED_ENUMERATED_VALUE */
+const PTCFloorActivity_tBCPRelease = PTCFloorActivity.tBCPRelease; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tBCPRelease
@@ -279,7 +279,7 @@ const PTCFloorActivity_tBCPRelease = PTCFloorActivity.tBCPRelease satisfies PTCF
  * @type {number}
  */
 export
-const tBCPRelease = PTCFloorActivity.tBCPRelease satisfies PTCFloorActivity; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tBCPRelease = PTCFloorActivity.tBCPRelease; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_PTCFloorActivity: $.ASN1Decoder<PTCFloorActivity> = $._decodeEnumerated;
 export const _encode_PTCFloorActivity: $.ASN1Encoder<PTCFloorActivity> = $._encodeEnumerated;
 

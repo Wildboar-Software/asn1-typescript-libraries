@@ -129,7 +129,7 @@ const ForwardingType = _enum_for_ForwardingType;
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const ForwardingType_forwardImmediate = ForwardingType.forwardImmediate satisfies ForwardingType; /* LONG_NAMED_ENUMERATED_VALUE */
+const ForwardingType_forwardImmediate = ForwardingType.forwardImmediate; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary forwardImmediate
@@ -138,7 +138,7 @@ const ForwardingType_forwardImmediate = ForwardingType.forwardImmediate satisfie
  * @type {number}
  */
 export
-const forwardImmediate = ForwardingType.forwardImmediate satisfies ForwardingType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const forwardImmediate = ForwardingType.forwardImmediate; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ForwardingType_forwardBusy
@@ -149,7 +149,7 @@ const forwardImmediate = ForwardingType.forwardImmediate satisfies ForwardingTyp
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const ForwardingType_forwardBusy = ForwardingType.forwardBusy satisfies ForwardingType; /* LONG_NAMED_ENUMERATED_VALUE */
+const ForwardingType_forwardBusy = ForwardingType.forwardBusy; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary forwardBusy
@@ -158,7 +158,7 @@ const ForwardingType_forwardBusy = ForwardingType.forwardBusy satisfies Forwardi
  * @type {number}
  */
 export
-const forwardBusy = ForwardingType.forwardBusy satisfies ForwardingType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const forwardBusy = ForwardingType.forwardBusy; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ForwardingType_forwardNoAns
@@ -170,7 +170,7 @@ const forwardBusy = ForwardingType.forwardBusy satisfies ForwardingType; /* SHOR
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const ForwardingType_forwardNoAns = ForwardingType.forwardNoAns satisfies ForwardingType; /* LONG_NAMED_ENUMERATED_VALUE */
+const ForwardingType_forwardNoAns = ForwardingType.forwardNoAns; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary forwardNoAns
@@ -179,7 +179,7 @@ const ForwardingType_forwardNoAns = ForwardingType.forwardNoAns satisfies Forwar
  * @type {number}
  */
 export
-const forwardNoAns = ForwardingType.forwardNoAns satisfies ForwardingType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const forwardNoAns = ForwardingType.forwardNoAns; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ForwardingType_forwardDND
@@ -190,7 +190,7 @@ const forwardNoAns = ForwardingType.forwardNoAns satisfies ForwardingType; /* SH
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const ForwardingType_forwardDND = ForwardingType.forwardDND satisfies ForwardingType; /* LONG_NAMED_ENUMERATED_VALUE */
+const ForwardingType_forwardDND = ForwardingType.forwardDND; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary forwardDND
@@ -199,7 +199,7 @@ const ForwardingType_forwardDND = ForwardingType.forwardDND satisfies Forwarding
  * @type {number}
  */
 export
-const forwardDND = ForwardingType.forwardDND satisfies ForwardingType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const forwardDND = ForwardingType.forwardDND; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ForwardingType_forwardBusyInt
@@ -209,7 +209,7 @@ const forwardDND = ForwardingType.forwardDND satisfies ForwardingType; /* SHORT_
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const ForwardingType_forwardBusyInt = ForwardingType.forwardBusyInt satisfies ForwardingType; /* LONG_NAMED_ENUMERATED_VALUE */
+const ForwardingType_forwardBusyInt = ForwardingType.forwardBusyInt; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary forwardBusyInt
@@ -218,7 +218,7 @@ const ForwardingType_forwardBusyInt = ForwardingType.forwardBusyInt satisfies Fo
  * @type {number}
  */
 export
-const forwardBusyInt = ForwardingType.forwardBusyInt satisfies ForwardingType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const forwardBusyInt = ForwardingType.forwardBusyInt; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ForwardingType_forwardBusyExt
@@ -228,7 +228,7 @@ const forwardBusyInt = ForwardingType.forwardBusyInt satisfies ForwardingType; /
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const ForwardingType_forwardBusyExt = ForwardingType.forwardBusyExt satisfies ForwardingType; /* LONG_NAMED_ENUMERATED_VALUE */
+const ForwardingType_forwardBusyExt = ForwardingType.forwardBusyExt; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary forwardBusyExt
@@ -237,7 +237,7 @@ const ForwardingType_forwardBusyExt = ForwardingType.forwardBusyExt satisfies Fo
  * @type {number}
  */
 export
-const forwardBusyExt = ForwardingType.forwardBusyExt satisfies ForwardingType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const forwardBusyExt = ForwardingType.forwardBusyExt; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ForwardingType_forwardNoAnsInt
@@ -247,7 +247,7 @@ const forwardBusyExt = ForwardingType.forwardBusyExt satisfies ForwardingType; /
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const ForwardingType_forwardNoAnsInt = ForwardingType.forwardNoAnsInt satisfies ForwardingType; /* LONG_NAMED_ENUMERATED_VALUE */
+const ForwardingType_forwardNoAnsInt = ForwardingType.forwardNoAnsInt; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary forwardNoAnsInt
@@ -256,7 +256,7 @@ const ForwardingType_forwardNoAnsInt = ForwardingType.forwardNoAnsInt satisfies 
  * @type {number}
  */
 export
-const forwardNoAnsInt = ForwardingType.forwardNoAnsInt satisfies ForwardingType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const forwardNoAnsInt = ForwardingType.forwardNoAnsInt; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ForwardingType_forwardNoAnsExt
@@ -266,7 +266,7 @@ const forwardNoAnsInt = ForwardingType.forwardNoAnsInt satisfies ForwardingType;
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const ForwardingType_forwardNoAnsExt = ForwardingType.forwardNoAnsExt satisfies ForwardingType; /* LONG_NAMED_ENUMERATED_VALUE */
+const ForwardingType_forwardNoAnsExt = ForwardingType.forwardNoAnsExt; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary forwardNoAnsExt
@@ -275,7 +275,7 @@ const ForwardingType_forwardNoAnsExt = ForwardingType.forwardNoAnsExt satisfies 
  * @type {number}
  */
 export
-const forwardNoAnsExt = ForwardingType.forwardNoAnsExt satisfies ForwardingType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const forwardNoAnsExt = ForwardingType.forwardNoAnsExt; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ForwardingType_forwardImmInt
@@ -285,7 +285,7 @@ const forwardNoAnsExt = ForwardingType.forwardNoAnsExt satisfies ForwardingType;
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const ForwardingType_forwardImmInt = ForwardingType.forwardImmInt satisfies ForwardingType; /* LONG_NAMED_ENUMERATED_VALUE */
+const ForwardingType_forwardImmInt = ForwardingType.forwardImmInt; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary forwardImmInt
@@ -294,7 +294,7 @@ const ForwardingType_forwardImmInt = ForwardingType.forwardImmInt satisfies Forw
  * @type {number}
  */
 export
-const forwardImmInt = ForwardingType.forwardImmInt satisfies ForwardingType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const forwardImmInt = ForwardingType.forwardImmInt; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ForwardingType_forwardImmExt
@@ -304,7 +304,7 @@ const forwardImmInt = ForwardingType.forwardImmInt satisfies ForwardingType; /* 
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const ForwardingType_forwardImmExt = ForwardingType.forwardImmExt satisfies ForwardingType; /* LONG_NAMED_ENUMERATED_VALUE */
+const ForwardingType_forwardImmExt = ForwardingType.forwardImmExt; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary forwardImmExt
@@ -313,7 +313,7 @@ const ForwardingType_forwardImmExt = ForwardingType.forwardImmExt satisfies Forw
  * @type {number}
  */
 export
-const forwardImmExt = ForwardingType.forwardImmExt satisfies ForwardingType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const forwardImmExt = ForwardingType.forwardImmExt; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ForwardingType_forwardDNDInt
@@ -323,7 +323,7 @@ const forwardImmExt = ForwardingType.forwardImmExt satisfies ForwardingType; /* 
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const ForwardingType_forwardDNDInt = ForwardingType.forwardDNDInt satisfies ForwardingType; /* LONG_NAMED_ENUMERATED_VALUE */
+const ForwardingType_forwardDNDInt = ForwardingType.forwardDNDInt; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary forwardDNDInt
@@ -332,7 +332,7 @@ const ForwardingType_forwardDNDInt = ForwardingType.forwardDNDInt satisfies Forw
  * @type {number}
  */
 export
-const forwardDNDInt = ForwardingType.forwardDNDInt satisfies ForwardingType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const forwardDNDInt = ForwardingType.forwardDNDInt; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ForwardingType_forwardDNDExt
@@ -342,7 +342,7 @@ const forwardDNDInt = ForwardingType.forwardDNDInt satisfies ForwardingType; /* 
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const ForwardingType_forwardDNDExt = ForwardingType.forwardDNDExt satisfies ForwardingType; /* LONG_NAMED_ENUMERATED_VALUE */
+const ForwardingType_forwardDNDExt = ForwardingType.forwardDNDExt; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary forwardDNDExt
@@ -351,7 +351,7 @@ const ForwardingType_forwardDNDExt = ForwardingType.forwardDNDExt satisfies Forw
  * @type {number}
  */
 export
-const forwardDNDExt = ForwardingType.forwardDNDExt satisfies ForwardingType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const forwardDNDExt = ForwardingType.forwardDNDExt; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 let _cached_decoder_for_ForwardingType: $.ASN1Decoder<ForwardingType> | null = null;
 

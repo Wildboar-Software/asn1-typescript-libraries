@@ -54,7 +54,7 @@ const ProceduralStatus_Item_initializationRequired = 0 satisfies ProceduralStatu
  * @type {number}
  */
 export
-const initializationRequired = ProceduralStatus_Item_initializationRequired satisfies ProceduralStatus_Item; /* SHORT_NAMED_INTEGER_VALUE */
+const initializationRequired = ProceduralStatus_Item_initializationRequired; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProceduralStatus_Item_notInitialized
@@ -80,7 +80,7 @@ const ProceduralStatus_Item_notInitialized = 1 satisfies ProceduralStatus_Item; 
  * @type {number}
  */
 export
-const notInitialized = ProceduralStatus_Item_notInitialized satisfies ProceduralStatus_Item; /* SHORT_NAMED_INTEGER_VALUE */
+const notInitialized = ProceduralStatus_Item_notInitialized; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProceduralStatus_Item_initializing
@@ -106,7 +106,7 @@ const ProceduralStatus_Item_initializing = 2 satisfies ProceduralStatus_Item; /*
  * @type {number}
  */
 export
-const initializing = ProceduralStatus_Item_initializing satisfies ProceduralStatus_Item; /* SHORT_NAMED_INTEGER_VALUE */
+const initializing = ProceduralStatus_Item_initializing; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProceduralStatus_Item_reporting
@@ -132,7 +132,7 @@ const ProceduralStatus_Item_reporting = 3 satisfies ProceduralStatus_Item; /* LO
  * @type {number}
  */
 export
-const reporting = ProceduralStatus_Item_reporting satisfies ProceduralStatus_Item; /* SHORT_NAMED_INTEGER_VALUE */
+const reporting = ProceduralStatus_Item_reporting; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProceduralStatus_Item_terminating
@@ -158,7 +158,7 @@ const ProceduralStatus_Item_terminating = 4 satisfies ProceduralStatus_Item; /* 
  * @type {number}
  */
 export
-const terminating = ProceduralStatus_Item_terminating satisfies ProceduralStatus_Item; /* SHORT_NAMED_INTEGER_VALUE */
+const terminating = ProceduralStatus_Item_terminating; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_ProceduralStatus_Item = $._decodeInteger;

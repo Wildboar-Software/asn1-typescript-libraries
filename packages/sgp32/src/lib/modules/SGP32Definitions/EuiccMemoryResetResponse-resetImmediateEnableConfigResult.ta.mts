@@ -49,7 +49,7 @@ const EuiccMemoryResetResponse_resetImmediateEnableConfigResult_ok = 0 satisfies
  * 5.9.5).
  */
 export
-const ok = EuiccMemoryResetResponse_resetImmediateEnableConfigResult_ok satisfies EuiccMemoryResetResponse_resetImmediateEnableConfigResult; /* SHORT_NAMED_INTEGER_VALUE */
+const ok = EuiccMemoryResetResponse_resetImmediateEnableConfigResult_ok; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EuiccMemoryResetResponse_resetImmediateEnableConfigResult_resetIECNotSupported
@@ -71,7 +71,7 @@ const EuiccMemoryResetResponse_resetImmediateEnableConfigResult_resetIECNotSuppo
  * v1.2, section 5.9.5).
  */
 export
-const resetIECNotSupported = EuiccMemoryResetResponse_resetImmediateEnableConfigResult_resetIECNotSupported satisfies EuiccMemoryResetResponse_resetImmediateEnableConfigResult; /* SHORT_NAMED_INTEGER_VALUE */
+const resetIECNotSupported = EuiccMemoryResetResponse_resetImmediateEnableConfigResult_resetIECNotSupported; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EuiccMemoryResetResponse_resetImmediateEnableConfigResult_undefinedError
@@ -93,7 +93,7 @@ const EuiccMemoryResetResponse_resetImmediateEnableConfigResult_undefinedError =
  * condition that produces it.
  */
 export
-const undefinedError = EuiccMemoryResetResponse_resetImmediateEnableConfigResult_undefinedError satisfies EuiccMemoryResetResponse_resetImmediateEnableConfigResult; /* SHORT_NAMED_INTEGER_VALUE */
+const undefinedError = EuiccMemoryResetResponse_resetImmediateEnableConfigResult_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_EuiccMemoryResetResponse_resetImmediateEnableConfigResult: $.ASN1Decoder<EuiccMemoryResetResponse_resetImmediateEnableConfigResult> = $._decodeInteger;
 export const _encode_EuiccMemoryResetResponse_resetImmediateEnableConfigResult: $.ASN1Encoder<EuiccMemoryResetResponse_resetImmediateEnableConfigResult> = $._encodeInteger;
 

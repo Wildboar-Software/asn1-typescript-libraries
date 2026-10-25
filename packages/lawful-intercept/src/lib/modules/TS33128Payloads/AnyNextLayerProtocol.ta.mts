@@ -65,7 +65,7 @@ const AnyNextLayerProtocol = _enum_for_AnyNextLayerProtocol;
  * @type {number}
  */
 export
-const AnyNextLayerProtocol_ip = AnyNextLayerProtocol.ip satisfies AnyNextLayerProtocol; /* LONG_NAMED_ENUMERATED_VALUE */
+const AnyNextLayerProtocol_ip = AnyNextLayerProtocol.ip; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ip
@@ -73,7 +73,7 @@ const AnyNextLayerProtocol_ip = AnyNextLayerProtocol.ip satisfies AnyNextLayerPr
  * @type {number}
  */
 export
-const ip = AnyNextLayerProtocol.ip satisfies AnyNextLayerProtocol; /* SHORT_NAMED_ENUMERATED_VALUE */
+const ip = AnyNextLayerProtocol.ip; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_AnyNextLayerProtocol: $.ASN1Decoder<AnyNextLayerProtocol> = $._decodeEnumerated;
 export const _encode_AnyNextLayerProtocol: $.ASN1Encoder<AnyNextLayerProtocol> = $._encodeEnumerated;
 

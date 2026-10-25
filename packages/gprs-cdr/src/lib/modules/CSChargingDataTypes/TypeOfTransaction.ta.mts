@@ -67,7 +67,7 @@ const TypeOfTransaction = _enum_for_TypeOfTransaction;
  * @type {number}
  */
 export
-const TypeOfTransaction_successful = TypeOfTransaction.successful satisfies TypeOfTransaction; /* LONG_NAMED_ENUMERATED_VALUE */
+const TypeOfTransaction_successful = TypeOfTransaction.successful; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary successful
@@ -75,7 +75,7 @@ const TypeOfTransaction_successful = TypeOfTransaction.successful satisfies Type
  * @type {number}
  */
 export
-const successful = TypeOfTransaction.successful satisfies TypeOfTransaction; /* SHORT_NAMED_ENUMERATED_VALUE */
+const successful = TypeOfTransaction.successful; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TypeOfTransaction_unsuccessful
@@ -83,7 +83,7 @@ const successful = TypeOfTransaction.successful satisfies TypeOfTransaction; /* 
  * @type {number}
  */
 export
-const TypeOfTransaction_unsuccessful = TypeOfTransaction.unsuccessful satisfies TypeOfTransaction; /* LONG_NAMED_ENUMERATED_VALUE */
+const TypeOfTransaction_unsuccessful = TypeOfTransaction.unsuccessful; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unsuccessful
@@ -91,7 +91,7 @@ const TypeOfTransaction_unsuccessful = TypeOfTransaction.unsuccessful satisfies 
  * @type {number}
  */
 export
-const unsuccessful = TypeOfTransaction.unsuccessful satisfies TypeOfTransaction; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unsuccessful = TypeOfTransaction.unsuccessful; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TypeOfTransaction_all
@@ -99,7 +99,7 @@ const unsuccessful = TypeOfTransaction.unsuccessful satisfies TypeOfTransaction;
  * @type {number}
  */
 export
-const TypeOfTransaction_all = TypeOfTransaction.all satisfies TypeOfTransaction; /* LONG_NAMED_ENUMERATED_VALUE */
+const TypeOfTransaction_all = TypeOfTransaction.all; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary all
@@ -107,7 +107,7 @@ const TypeOfTransaction_all = TypeOfTransaction.all satisfies TypeOfTransaction;
  * @type {number}
  */
 export
-const all = TypeOfTransaction.all satisfies TypeOfTransaction; /* SHORT_NAMED_ENUMERATED_VALUE */
+const all = TypeOfTransaction.all; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_TypeOfTransaction: $.ASN1Decoder<TypeOfTransaction> = $._decodeEnumerated;

@@ -69,7 +69,7 @@ const ACREventIDs = _enum_for_ACREventIDs;
  * @type {number}
  */
 export
-const ACREventIDs_targetInformation = ACREventIDs.targetInformation satisfies ACREventIDs; /* LONG_NAMED_ENUMERATED_VALUE */
+const ACREventIDs_targetInformation = ACREventIDs.targetInformation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary targetInformation
@@ -77,7 +77,7 @@ const ACREventIDs_targetInformation = ACREventIDs.targetInformation satisfies AC
  * @type {number}
  */
 export
-const targetInformation = ACREventIDs.targetInformation satisfies ACREventIDs; /* SHORT_NAMED_ENUMERATED_VALUE */
+const targetInformation = ACREventIDs.targetInformation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ACREventIDs_aCRComplete
@@ -85,7 +85,7 @@ const targetInformation = ACREventIDs.targetInformation satisfies ACREventIDs; /
  * @type {number}
  */
 export
-const ACREventIDs_aCRComplete = ACREventIDs.aCRComplete satisfies ACREventIDs; /* LONG_NAMED_ENUMERATED_VALUE */
+const ACREventIDs_aCRComplete = ACREventIDs.aCRComplete; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary aCRComplete
@@ -93,7 +93,7 @@ const ACREventIDs_aCRComplete = ACREventIDs.aCRComplete satisfies ACREventIDs; /
  * @type {number}
  */
 export
-const aCRComplete = ACREventIDs.aCRComplete satisfies ACREventIDs; /* SHORT_NAMED_ENUMERATED_VALUE */
+const aCRComplete = ACREventIDs.aCRComplete; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_ACREventIDs: $.ASN1Decoder<ACREventIDs> = $._decodeEnumerated;
 export const _encode_ACREventIDs: $.ASN1Encoder<ACREventIDs> = $._encodeEnumerated;
 

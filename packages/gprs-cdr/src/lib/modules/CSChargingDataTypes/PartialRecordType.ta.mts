@@ -147,7 +147,7 @@ const PartialRecordType = _enum_for_PartialRecordType;
  * @type {number}
  */
 export
-const PartialRecordType_timeLimit = PartialRecordType.timeLimit satisfies PartialRecordType; /* LONG_NAMED_ENUMERATED_VALUE */
+const PartialRecordType_timeLimit = PartialRecordType.timeLimit; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary timeLimit
@@ -161,7 +161,7 @@ const PartialRecordType_timeLimit = PartialRecordType.timeLimit satisfies Partia
  * @type {number}
  */
 export
-const timeLimit = PartialRecordType.timeLimit satisfies PartialRecordType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const timeLimit = PartialRecordType.timeLimit; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PartialRecordType_serviceChange
@@ -174,7 +174,7 @@ const timeLimit = PartialRecordType.timeLimit satisfies PartialRecordType; /* SH
  * @type {number}
  */
 export
-const PartialRecordType_serviceChange = PartialRecordType.serviceChange satisfies PartialRecordType; /* LONG_NAMED_ENUMERATED_VALUE */
+const PartialRecordType_serviceChange = PartialRecordType.serviceChange; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary serviceChange
@@ -187,7 +187,7 @@ const PartialRecordType_serviceChange = PartialRecordType.serviceChange satisfie
  * @type {number}
  */
 export
-const serviceChange = PartialRecordType.serviceChange satisfies PartialRecordType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const serviceChange = PartialRecordType.serviceChange; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PartialRecordType_locationChange
@@ -201,7 +201,7 @@ const serviceChange = PartialRecordType.serviceChange satisfies PartialRecordTyp
  * @type {number}
  */
 export
-const PartialRecordType_locationChange = PartialRecordType.locationChange satisfies PartialRecordType; /* LONG_NAMED_ENUMERATED_VALUE */
+const PartialRecordType_locationChange = PartialRecordType.locationChange; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary locationChange
@@ -215,7 +215,7 @@ const PartialRecordType_locationChange = PartialRecordType.locationChange satisf
  * @type {number}
  */
 export
-const locationChange = PartialRecordType.locationChange satisfies PartialRecordType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const locationChange = PartialRecordType.locationChange; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PartialRecordType_classmarkChange
@@ -228,7 +228,7 @@ const locationChange = PartialRecordType.locationChange satisfies PartialRecordT
  * @type {number}
  */
 export
-const PartialRecordType_classmarkChange = PartialRecordType.classmarkChange satisfies PartialRecordType; /* LONG_NAMED_ENUMERATED_VALUE */
+const PartialRecordType_classmarkChange = PartialRecordType.classmarkChange; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary classmarkChange
@@ -241,7 +241,7 @@ const PartialRecordType_classmarkChange = PartialRecordType.classmarkChange sati
  * @type {number}
  */
 export
-const classmarkChange = PartialRecordType.classmarkChange satisfies PartialRecordType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const classmarkChange = PartialRecordType.classmarkChange; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PartialRecordType_aocParmChange
@@ -254,7 +254,7 @@ const classmarkChange = PartialRecordType.classmarkChange satisfies PartialRecor
  * @type {number}
  */
 export
-const PartialRecordType_aocParmChange = PartialRecordType.aocParmChange satisfies PartialRecordType; /* LONG_NAMED_ENUMERATED_VALUE */
+const PartialRecordType_aocParmChange = PartialRecordType.aocParmChange; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary aocParmChange
@@ -267,7 +267,7 @@ const PartialRecordType_aocParmChange = PartialRecordType.aocParmChange satisfie
  * @type {number}
  */
 export
-const aocParmChange = PartialRecordType.aocParmChange satisfies PartialRecordType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const aocParmChange = PartialRecordType.aocParmChange; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PartialRecordType_radioChannelChange
@@ -281,7 +281,7 @@ const aocParmChange = PartialRecordType.aocParmChange satisfies PartialRecordTyp
  * @type {number}
  */
 export
-const PartialRecordType_radioChannelChange = PartialRecordType.radioChannelChange satisfies PartialRecordType; /* LONG_NAMED_ENUMERATED_VALUE */
+const PartialRecordType_radioChannelChange = PartialRecordType.radioChannelChange; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary radioChannelChange
@@ -295,7 +295,7 @@ const PartialRecordType_radioChannelChange = PartialRecordType.radioChannelChang
  * @type {number}
  */
 export
-const radioChannelChange = PartialRecordType.radioChannelChange satisfies PartialRecordType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const radioChannelChange = PartialRecordType.radioChannelChange; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PartialRecordType_hSCSDParmChange
@@ -308,7 +308,7 @@ const radioChannelChange = PartialRecordType.radioChannelChange satisfies Partia
  * @type {number}
  */
 export
-const PartialRecordType_hSCSDParmChange = PartialRecordType.hSCSDParmChange satisfies PartialRecordType; /* LONG_NAMED_ENUMERATED_VALUE */
+const PartialRecordType_hSCSDParmChange = PartialRecordType.hSCSDParmChange; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary hSCSDParmChange
@@ -321,7 +321,7 @@ const PartialRecordType_hSCSDParmChange = PartialRecordType.hSCSDParmChange sati
  * @type {number}
  */
 export
-const hSCSDParmChange = PartialRecordType.hSCSDParmChange satisfies PartialRecordType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const hSCSDParmChange = PartialRecordType.hSCSDParmChange; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PartialRecordType_changeOfCAMELDestination
@@ -334,7 +334,7 @@ const hSCSDParmChange = PartialRecordType.hSCSDParmChange satisfies PartialRecor
  * @type {number}
  */
 export
-const PartialRecordType_changeOfCAMELDestination = PartialRecordType.changeOfCAMELDestination satisfies PartialRecordType; /* LONG_NAMED_ENUMERATED_VALUE */
+const PartialRecordType_changeOfCAMELDestination = PartialRecordType.changeOfCAMELDestination; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary changeOfCAMELDestination
@@ -347,7 +347,7 @@ const PartialRecordType_changeOfCAMELDestination = PartialRecordType.changeOfCAM
  * @type {number}
  */
 export
-const changeOfCAMELDestination = PartialRecordType.changeOfCAMELDestination satisfies PartialRecordType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const changeOfCAMELDestination = PartialRecordType.changeOfCAMELDestination; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_PartialRecordType: $.ASN1Decoder<PartialRecordType> = $._decodeEnumerated;

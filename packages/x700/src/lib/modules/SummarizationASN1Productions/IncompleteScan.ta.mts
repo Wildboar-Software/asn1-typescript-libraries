@@ -55,7 +55,7 @@ export const IncompleteScan_sizeExceeded = 0 satisfies IncompleteScan; /* LONG_N
  * @constant
  * @type {number}
  */
-export const sizeExceeded = IncompleteScan_sizeExceeded satisfies IncompleteScan; /* SHORT_NAMED_INTEGER_VALUE */
+export const sizeExceeded = IncompleteScan_sizeExceeded; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary IncompleteScan_timeExceeded
@@ -79,7 +79,7 @@ export const IncompleteScan_timeExceeded = 1 satisfies IncompleteScan; /* LONG_N
  * @constant
  * @type {number}
  */
-export const timeExceeded = IncompleteScan_timeExceeded satisfies IncompleteScan; /* SHORT_NAMED_INTEGER_VALUE */
+export const timeExceeded = IncompleteScan_timeExceeded; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary IncompleteScan_other
@@ -103,7 +103,7 @@ export const IncompleteScan_other = 2 satisfies IncompleteScan; /* LONG_NAMED_IN
  * @constant
  * @type {number}
  */
-export const other = IncompleteScan_other satisfies IncompleteScan; /* SHORT_NAMED_INTEGER_VALUE */
+export const other = IncompleteScan_other; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_IncompleteScan = $._decodeInteger;

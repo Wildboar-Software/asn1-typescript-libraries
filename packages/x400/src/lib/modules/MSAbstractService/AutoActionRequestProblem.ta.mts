@@ -42,7 +42,7 @@ export const AutoActionRequestProblem_unavailable_auto_action_type = 0 satisfies
  * @constant
  * @type {number}
  */
-export const unavailable_auto_action_type = AutoActionRequestProblem_unavailable_auto_action_type satisfies AutoActionRequestProblem; /* SHORT_NAMED_INTEGER_VALUE */
+export const unavailable_auto_action_type = AutoActionRequestProblem_unavailable_auto_action_type; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AutoActionRequestProblem_auto_action_type_not_subscribed
@@ -56,7 +56,7 @@ export const AutoActionRequestProblem_auto_action_type_not_subscribed = 1 satisf
  * @constant
  * @type {number}
  */
-export const auto_action_type_not_subscribed = AutoActionRequestProblem_auto_action_type_not_subscribed satisfies AutoActionRequestProblem; /* SHORT_NAMED_INTEGER_VALUE */
+export const auto_action_type_not_subscribed = AutoActionRequestProblem_auto_action_type_not_subscribed; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AutoActionRequestProblem_not_willing_to_perform
@@ -70,7 +70,7 @@ export const AutoActionRequestProblem_not_willing_to_perform = 2 satisfies AutoA
  * @constant
  * @type {number}
  */
-export const not_willing_to_perform = AutoActionRequestProblem_not_willing_to_perform satisfies AutoActionRequestProblem; /* SHORT_NAMED_INTEGER_VALUE */
+export const not_willing_to_perform = AutoActionRequestProblem_not_willing_to_perform; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_AutoActionRequestProblem = $._decodeInteger;

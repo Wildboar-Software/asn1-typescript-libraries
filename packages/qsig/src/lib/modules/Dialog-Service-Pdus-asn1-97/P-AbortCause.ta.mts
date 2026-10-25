@@ -53,7 +53,7 @@ const P_AbortCause_unrecognisedDseApdu = 0 satisfies P_AbortCause; /* LONG_NAMED
  * @type {number}
  */
 export
-const unrecognisedDseApdu = P_AbortCause_unrecognisedDseApdu satisfies P_AbortCause; /* SHORT_NAMED_INTEGER_VALUE */
+const unrecognisedDseApdu = P_AbortCause_unrecognisedDseApdu; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary P_AbortCause_unrecognisedDialogId
@@ -75,7 +75,7 @@ const P_AbortCause_unrecognisedDialogId = 1 satisfies P_AbortCause; /* LONG_NAME
  * @type {number}
  */
 export
-const unrecognisedDialogId = P_AbortCause_unrecognisedDialogId satisfies P_AbortCause; /* SHORT_NAMED_INTEGER_VALUE */
+const unrecognisedDialogId = P_AbortCause_unrecognisedDialogId; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary P_AbortCause_badlyFormattedDseApdu
@@ -97,7 +97,7 @@ const P_AbortCause_badlyFormattedDseApdu = 2 satisfies P_AbortCause; /* LONG_NAM
  * @type {number}
  */
 export
-const badlyFormattedDseApdu = P_AbortCause_badlyFormattedDseApdu satisfies P_AbortCause; /* SHORT_NAMED_INTEGER_VALUE */
+const badlyFormattedDseApdu = P_AbortCause_badlyFormattedDseApdu; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary P_AbortCause_incorrectDseApdu
@@ -119,7 +119,7 @@ const P_AbortCause_incorrectDseApdu = 3 satisfies P_AbortCause; /* LONG_NAMED_IN
  * @type {number}
  */
 export
-const incorrectDseApdu = P_AbortCause_incorrectDseApdu satisfies P_AbortCause; /* SHORT_NAMED_INTEGER_VALUE */
+const incorrectDseApdu = P_AbortCause_incorrectDseApdu; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary P_AbortCause_resourceLimitation
@@ -141,7 +141,7 @@ const P_AbortCause_resourceLimitation = 4 satisfies P_AbortCause; /* LONG_NAMED_
  * @type {number}
  */
 export
-const resourceLimitation = P_AbortCause_resourceLimitation satisfies P_AbortCause; /* SHORT_NAMED_INTEGER_VALUE */
+const resourceLimitation = P_AbortCause_resourceLimitation; /* SHORT_NAMED_INTEGER_VALUE */
 
 let _cached_decoder_for_P_AbortCause: $.ASN1Decoder<P_AbortCause> | null = null;
 

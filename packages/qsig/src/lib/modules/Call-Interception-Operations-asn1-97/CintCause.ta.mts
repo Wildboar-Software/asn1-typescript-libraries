@@ -72,7 +72,7 @@ const CintCause_unknown = 0 satisfies CintCause; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const unknown = CintCause_unknown satisfies CintCause; /* SHORT_NAMED_INTEGER_VALUE */
+const unknown = CintCause_unknown; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CintCause_cintBnan
@@ -93,7 +93,7 @@ const CintCause_cintBnan = 1 satisfies CintCause; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const cintBnan = CintCause_cintBnan satisfies CintCause; /* SHORT_NAMED_INTEGER_VALUE */
+const cintBnan = CintCause_cintBnan; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CintCause_cintBus
@@ -115,7 +115,7 @@ const CintCause_cintBus = 2 satisfies CintCause; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const cintBus = CintCause_cintBus satisfies CintCause; /* SHORT_NAMED_INTEGER_VALUE */
+const cintBus = CintCause_cintBus; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CintCause_cintCug
@@ -136,7 +136,7 @@ const CintCause_cintCug = 3 satisfies CintCause; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const cintCug = CintCause_cintCug satisfies CintCause; /* SHORT_NAMED_INTEGER_VALUE */
+const cintCug = CintCause_cintCug; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CintCause_cintDnd
@@ -157,7 +157,7 @@ const CintCause_cintDnd = 4 satisfies CintCause; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const cintDnd = CintCause_cintDnd satisfies CintCause; /* SHORT_NAMED_INTEGER_VALUE */
+const cintDnd = CintCause_cintDnd; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CintCause_cintIbd
@@ -178,7 +178,7 @@ const CintCause_cintIbd = 5 satisfies CintCause; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const cintIbd = CintCause_cintIbd satisfies CintCause; /* SHORT_NAMED_INTEGER_VALUE */
+const cintIbd = CintCause_cintIbd; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CintCause_cintInn
@@ -199,7 +199,7 @@ const CintCause_cintInn = 6 satisfies CintCause; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const cintInn = CintCause_cintInn satisfies CintCause; /* SHORT_NAMED_INTEGER_VALUE */
+const cintInn = CintCause_cintInn; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CintCause_cintMob1
@@ -220,7 +220,7 @@ const CintCause_cintMob1 = 7 satisfies CintCause; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const cintMob1 = CintCause_cintMob1 satisfies CintCause; /* SHORT_NAMED_INTEGER_VALUE */
+const cintMob1 = CintCause_cintMob1; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CintCause_cintMob2
@@ -241,7 +241,7 @@ const CintCause_cintMob2 = 8 satisfies CintCause; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const cintMob2 = CintCause_cintMob2 satisfies CintCause; /* SHORT_NAMED_INTEGER_VALUE */
+const cintMob2 = CintCause_cintMob2; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CintCause_cintMob3
@@ -262,7 +262,7 @@ const CintCause_cintMob3 = 9 satisfies CintCause; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const cintMob3 = CintCause_cintMob3 satisfies CintCause; /* SHORT_NAMED_INTEGER_VALUE */
+const cintMob3 = CintCause_cintMob3; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CintCause_cintNcmp
@@ -285,7 +285,7 @@ const CintCause_cintNcmp = 10 satisfies CintCause; /* LONG_NAMED_INTEGER_VALUE *
  * @type {number}
  */
 export
-const cintNcmp = CintCause_cintNcmp satisfies CintCause; /* SHORT_NAMED_INTEGER_VALUE */
+const cintNcmp = CintCause_cintNcmp; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CintCause_cintNcong
@@ -306,7 +306,7 @@ const CintCause_cintNcong = 11 satisfies CintCause; /* LONG_NAMED_INTEGER_VALUE 
  * @type {number}
  */
 export
-const cintNcong = CintCause_cintNcong satisfies CintCause; /* SHORT_NAMED_INTEGER_VALUE */
+const cintNcong = CintCause_cintNcong; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CintCause_cintNre
@@ -329,7 +329,7 @@ const CintCause_cintNre = 12 satisfies CintCause; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const cintNre = CintCause_cintNre satisfies CintCause; /* SHORT_NAMED_INTEGER_VALUE */
+const cintNre = CintCause_cintNre; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CintCause_cintOos
@@ -352,7 +352,7 @@ const CintCause_cintOos = 13 satisfies CintCause; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const cintOos = CintCause_cintOos satisfies CintCause; /* SHORT_NAMED_INTEGER_VALUE */
+const cintOos = CintCause_cintOos; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CintCause_cintRrs
@@ -374,7 +374,7 @@ const CintCause_cintRrs = 14 satisfies CintCause; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const cintRrs = CintCause_cintRrs satisfies CintCause; /* SHORT_NAMED_INTEGER_VALUE */
+const cintRrs = CintCause_cintRrs; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CintCause_cintTbnan
@@ -395,7 +395,7 @@ const CintCause_cintTbnan = 15 satisfies CintCause; /* LONG_NAMED_INTEGER_VALUE 
  * @type {number}
  */
 export
-const cintTbnan = CintCause_cintTbnan satisfies CintCause; /* SHORT_NAMED_INTEGER_VALUE */
+const cintTbnan = CintCause_cintTbnan; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CintCause_cintTnre
@@ -417,7 +417,7 @@ const CintCause_cintTnre = 16 satisfies CintCause; /* LONG_NAMED_INTEGER_VALUE *
  * @type {number}
  */
 export
-const cintTnre = CintCause_cintTnre satisfies CintCause; /* SHORT_NAMED_INTEGER_VALUE */
+const cintTnre = CintCause_cintTnre; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CintCause_cintTrans
@@ -438,7 +438,7 @@ const CintCause_cintTrans = 17 satisfies CintCause; /* LONG_NAMED_INTEGER_VALUE 
  * @type {number}
  */
 export
-const cintTrans = CintCause_cintTrans satisfies CintCause; /* SHORT_NAMED_INTEGER_VALUE */
+const cintTrans = CintCause_cintTrans; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CintCause_cintUpl
@@ -459,7 +459,7 @@ const CintCause_cintUpl = 18 satisfies CintCause; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const cintUpl = CintCause_cintUpl satisfies CintCause; /* SHORT_NAMED_INTEGER_VALUE */
+const cintUpl = CintCause_cintUpl; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CintCause_cintInvDiv
@@ -480,7 +480,7 @@ const CintCause_cintInvDiv = 19 satisfies CintCause; /* LONG_NAMED_INTEGER_VALUE
  * @type {number}
  */
 export
-const cintInvDiv = CintCause_cintInvDiv satisfies CintCause; /* SHORT_NAMED_INTEGER_VALUE */
+const cintInvDiv = CintCause_cintInvDiv; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CintCause_cintHold
@@ -501,7 +501,7 @@ const CintCause_cintHold = 20 satisfies CintCause; /* LONG_NAMED_INTEGER_VALUE *
  * @type {number}
  */
 export
-const cintHold = CintCause_cintHold satisfies CintCause; /* SHORT_NAMED_INTEGER_VALUE */
+const cintHold = CintCause_cintHold; /* SHORT_NAMED_INTEGER_VALUE */
 
 export
 const _decode_CintCause = (el: _Element): CintCause => {

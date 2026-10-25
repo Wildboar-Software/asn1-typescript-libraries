@@ -44,7 +44,7 @@ type SMSRegisterRequest = _enum_for_SMSRegisterRequest | ENUMERATED;
  * @type {number}
  */
 export
-const SMSRegisterRequest_sms_registration_required = _enum_for_SMSRegisterRequest.sms_registration_required satisfies SMSRegisterRequest; /* LONG_NAMED_ENUMERATED_VALUE */
+const SMSRegisterRequest_sms_registration_required = _enum_for_SMSRegisterRequest.sms_registration_required; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sms_registration_required
@@ -52,7 +52,7 @@ const SMSRegisterRequest_sms_registration_required = _enum_for_SMSRegisterReques
  * @type {number}
  */
 export
-const sms_registration_required = SMSRegisterRequest_sms_registration_required satisfies SMSRegisterRequest; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sms_registration_required = SMSRegisterRequest_sms_registration_required; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SMSRegisterRequest_sms_registration_not_preferred
@@ -60,7 +60,7 @@ const sms_registration_required = SMSRegisterRequest_sms_registration_required s
  * @type {number}
  */
 export
-const SMSRegisterRequest_sms_registration_not_preferred = _enum_for_SMSRegisterRequest.sms_registration_not_preferred satisfies SMSRegisterRequest; /* LONG_NAMED_ENUMERATED_VALUE */
+const SMSRegisterRequest_sms_registration_not_preferred = _enum_for_SMSRegisterRequest.sms_registration_not_preferred; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sms_registration_not_preferred
@@ -68,7 +68,7 @@ const SMSRegisterRequest_sms_registration_not_preferred = _enum_for_SMSRegisterR
  * @type {number}
  */
 export
-const sms_registration_not_preferred = SMSRegisterRequest_sms_registration_not_preferred satisfies SMSRegisterRequest; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sms_registration_not_preferred = SMSRegisterRequest_sms_registration_not_preferred; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SMSRegisterRequest_no_preference
@@ -76,7 +76,7 @@ const sms_registration_not_preferred = SMSRegisterRequest_sms_registration_not_p
  * @type {number}
  */
 export
-const SMSRegisterRequest_no_preference = _enum_for_SMSRegisterRequest.no_preference satisfies SMSRegisterRequest; /* LONG_NAMED_ENUMERATED_VALUE */
+const SMSRegisterRequest_no_preference = _enum_for_SMSRegisterRequest.no_preference; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary no_preference
@@ -84,7 +84,7 @@ const SMSRegisterRequest_no_preference = _enum_for_SMSRegisterRequest.no_prefere
  * @type {number}
  */
 export
-const no_preference = SMSRegisterRequest_no_preference satisfies SMSRegisterRequest; /* SHORT_NAMED_ENUMERATED_VALUE */
+const no_preference = SMSRegisterRequest_no_preference; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) SMSRegisterRequest

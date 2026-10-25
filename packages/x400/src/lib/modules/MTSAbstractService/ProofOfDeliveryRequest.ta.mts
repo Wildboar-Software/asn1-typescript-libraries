@@ -71,7 +71,7 @@ export const ProofOfDeliveryRequest = _enum_for_ProofOfDeliveryRequest;
  * @type {number}
  */
 export const ProofOfDeliveryRequest_proof_of_delivery_not_requested =
-    ProofOfDeliveryRequest.proof_of_delivery_not_requested satisfies ProofOfDeliveryRequest; /* LONG_NAMED_ENUMERATED_VALUE */
+    ProofOfDeliveryRequest.proof_of_delivery_not_requested; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary proof_of_delivery_not_requested
@@ -79,7 +79,7 @@ export const ProofOfDeliveryRequest_proof_of_delivery_not_requested =
  * @type {number}
  */
 export const proof_of_delivery_not_requested =
-    ProofOfDeliveryRequest.proof_of_delivery_not_requested satisfies ProofOfDeliveryRequest; /* SHORT_NAMED_ENUMERATED_VALUE */
+    ProofOfDeliveryRequest.proof_of_delivery_not_requested; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ProofOfDeliveryRequest_proof_of_delivery_requested
@@ -87,7 +87,7 @@ export const proof_of_delivery_not_requested =
  * @type {number}
  */
 export const ProofOfDeliveryRequest_proof_of_delivery_requested =
-    ProofOfDeliveryRequest.proof_of_delivery_requested satisfies ProofOfDeliveryRequest; /* LONG_NAMED_ENUMERATED_VALUE */
+    ProofOfDeliveryRequest.proof_of_delivery_requested; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary proof_of_delivery_requested
@@ -95,7 +95,7 @@ export const ProofOfDeliveryRequest_proof_of_delivery_requested =
  * @type {number}
  */
 export const proof_of_delivery_requested =
-    ProofOfDeliveryRequest.proof_of_delivery_requested satisfies ProofOfDeliveryRequest; /* SHORT_NAMED_ENUMERATED_VALUE */
+    ProofOfDeliveryRequest.proof_of_delivery_requested; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 export function _decode_ProofOfDeliveryRequest(el: _Element): ProofOfDeliveryRequest {

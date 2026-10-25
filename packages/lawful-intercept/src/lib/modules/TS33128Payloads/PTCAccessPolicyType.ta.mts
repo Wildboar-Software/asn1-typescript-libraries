@@ -125,7 +125,7 @@ const PTCAccessPolicyType = _enum_for_PTCAccessPolicyType;
  * @type {number}
  */
 export
-const PTCAccessPolicyType_pTCUserAccessPolicyAttempt = PTCAccessPolicyType.pTCUserAccessPolicyAttempt satisfies PTCAccessPolicyType; /* LONG_NAMED_ENUMERATED_VALUE */
+const PTCAccessPolicyType_pTCUserAccessPolicyAttempt = PTCAccessPolicyType.pTCUserAccessPolicyAttempt; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pTCUserAccessPolicyAttempt
@@ -133,7 +133,7 @@ const PTCAccessPolicyType_pTCUserAccessPolicyAttempt = PTCAccessPolicyType.pTCUs
  * @type {number}
  */
 export
-const pTCUserAccessPolicyAttempt = PTCAccessPolicyType.pTCUserAccessPolicyAttempt satisfies PTCAccessPolicyType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pTCUserAccessPolicyAttempt = PTCAccessPolicyType.pTCUserAccessPolicyAttempt; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PTCAccessPolicyType_groupAuthorizationRulesAttempt
@@ -141,7 +141,7 @@ const pTCUserAccessPolicyAttempt = PTCAccessPolicyType.pTCUserAccessPolicyAttemp
  * @type {number}
  */
 export
-const PTCAccessPolicyType_groupAuthorizationRulesAttempt = PTCAccessPolicyType.groupAuthorizationRulesAttempt satisfies PTCAccessPolicyType; /* LONG_NAMED_ENUMERATED_VALUE */
+const PTCAccessPolicyType_groupAuthorizationRulesAttempt = PTCAccessPolicyType.groupAuthorizationRulesAttempt; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary groupAuthorizationRulesAttempt
@@ -149,7 +149,7 @@ const PTCAccessPolicyType_groupAuthorizationRulesAttempt = PTCAccessPolicyType.g
  * @type {number}
  */
 export
-const groupAuthorizationRulesAttempt = PTCAccessPolicyType.groupAuthorizationRulesAttempt satisfies PTCAccessPolicyType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const groupAuthorizationRulesAttempt = PTCAccessPolicyType.groupAuthorizationRulesAttempt; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PTCAccessPolicyType_pTCUserAccessPolicyQuery
@@ -157,7 +157,7 @@ const groupAuthorizationRulesAttempt = PTCAccessPolicyType.groupAuthorizationRul
  * @type {number}
  */
 export
-const PTCAccessPolicyType_pTCUserAccessPolicyQuery = PTCAccessPolicyType.pTCUserAccessPolicyQuery satisfies PTCAccessPolicyType; /* LONG_NAMED_ENUMERATED_VALUE */
+const PTCAccessPolicyType_pTCUserAccessPolicyQuery = PTCAccessPolicyType.pTCUserAccessPolicyQuery; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pTCUserAccessPolicyQuery
@@ -165,7 +165,7 @@ const PTCAccessPolicyType_pTCUserAccessPolicyQuery = PTCAccessPolicyType.pTCUser
  * @type {number}
  */
 export
-const pTCUserAccessPolicyQuery = PTCAccessPolicyType.pTCUserAccessPolicyQuery satisfies PTCAccessPolicyType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pTCUserAccessPolicyQuery = PTCAccessPolicyType.pTCUserAccessPolicyQuery; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PTCAccessPolicyType_groupAuthorizationRulesQuery
@@ -173,7 +173,7 @@ const pTCUserAccessPolicyQuery = PTCAccessPolicyType.pTCUserAccessPolicyQuery sa
  * @type {number}
  */
 export
-const PTCAccessPolicyType_groupAuthorizationRulesQuery = PTCAccessPolicyType.groupAuthorizationRulesQuery satisfies PTCAccessPolicyType; /* LONG_NAMED_ENUMERATED_VALUE */
+const PTCAccessPolicyType_groupAuthorizationRulesQuery = PTCAccessPolicyType.groupAuthorizationRulesQuery; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary groupAuthorizationRulesQuery
@@ -181,7 +181,7 @@ const PTCAccessPolicyType_groupAuthorizationRulesQuery = PTCAccessPolicyType.gro
  * @type {number}
  */
 export
-const groupAuthorizationRulesQuery = PTCAccessPolicyType.groupAuthorizationRulesQuery satisfies PTCAccessPolicyType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const groupAuthorizationRulesQuery = PTCAccessPolicyType.groupAuthorizationRulesQuery; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PTCAccessPolicyType_pTCUserAccessPolicyResult
@@ -189,7 +189,7 @@ const groupAuthorizationRulesQuery = PTCAccessPolicyType.groupAuthorizationRules
  * @type {number}
  */
 export
-const PTCAccessPolicyType_pTCUserAccessPolicyResult = PTCAccessPolicyType.pTCUserAccessPolicyResult satisfies PTCAccessPolicyType; /* LONG_NAMED_ENUMERATED_VALUE */
+const PTCAccessPolicyType_pTCUserAccessPolicyResult = PTCAccessPolicyType.pTCUserAccessPolicyResult; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pTCUserAccessPolicyResult
@@ -197,7 +197,7 @@ const PTCAccessPolicyType_pTCUserAccessPolicyResult = PTCAccessPolicyType.pTCUse
  * @type {number}
  */
 export
-const pTCUserAccessPolicyResult = PTCAccessPolicyType.pTCUserAccessPolicyResult satisfies PTCAccessPolicyType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pTCUserAccessPolicyResult = PTCAccessPolicyType.pTCUserAccessPolicyResult; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PTCAccessPolicyType_groupAuthorizationRulesResult
@@ -205,7 +205,7 @@ const pTCUserAccessPolicyResult = PTCAccessPolicyType.pTCUserAccessPolicyResult 
  * @type {number}
  */
 export
-const PTCAccessPolicyType_groupAuthorizationRulesResult = PTCAccessPolicyType.groupAuthorizationRulesResult satisfies PTCAccessPolicyType; /* LONG_NAMED_ENUMERATED_VALUE */
+const PTCAccessPolicyType_groupAuthorizationRulesResult = PTCAccessPolicyType.groupAuthorizationRulesResult; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary groupAuthorizationRulesResult
@@ -213,7 +213,7 @@ const PTCAccessPolicyType_groupAuthorizationRulesResult = PTCAccessPolicyType.gr
  * @type {number}
  */
 export
-const groupAuthorizationRulesResult = PTCAccessPolicyType.groupAuthorizationRulesResult satisfies PTCAccessPolicyType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const groupAuthorizationRulesResult = PTCAccessPolicyType.groupAuthorizationRulesResult; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PTCAccessPolicyType_requestUnsuccessful
@@ -221,7 +221,7 @@ const groupAuthorizationRulesResult = PTCAccessPolicyType.groupAuthorizationRule
  * @type {number}
  */
 export
-const PTCAccessPolicyType_requestUnsuccessful = PTCAccessPolicyType.requestUnsuccessful satisfies PTCAccessPolicyType; /* LONG_NAMED_ENUMERATED_VALUE */
+const PTCAccessPolicyType_requestUnsuccessful = PTCAccessPolicyType.requestUnsuccessful; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary requestUnsuccessful
@@ -229,7 +229,7 @@ const PTCAccessPolicyType_requestUnsuccessful = PTCAccessPolicyType.requestUnsuc
  * @type {number}
  */
 export
-const requestUnsuccessful = PTCAccessPolicyType.requestUnsuccessful satisfies PTCAccessPolicyType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const requestUnsuccessful = PTCAccessPolicyType.requestUnsuccessful; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_PTCAccessPolicyType: $.ASN1Decoder<PTCAccessPolicyType> = $._decodeEnumerated;
 export const _encode_PTCAccessPolicyType: $.ASN1Encoder<PTCAccessPolicyType> = $._encodeEnumerated;
 

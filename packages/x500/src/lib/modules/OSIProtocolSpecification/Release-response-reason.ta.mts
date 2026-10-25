@@ -26,7 +26,7 @@ export const Release_response_reason_normal = 0 satisfies Release_response_reaso
  * @constant
  * @type {number}
  */
-export const normal = Release_response_reason_normal satisfies Release_response_reason; /* SHORT_NAMED_INTEGER_VALUE */
+export const normal = Release_response_reason_normal; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_Release_response_reason = $._decodeInteger;

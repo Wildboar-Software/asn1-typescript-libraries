@@ -54,7 +54,7 @@ const ExtendedServicesRequest_waitAction_wait = 1 satisfies ExtendedServicesRequ
  * @type {number}
  */
 export
-const wait = ExtendedServicesRequest_waitAction_wait satisfies ExtendedServicesRequest_waitAction; /* SHORT_NAMED_INTEGER_VALUE */
+const wait = ExtendedServicesRequest_waitAction_wait; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ExtendedServicesRequest_waitAction_waitIfPossible
@@ -80,7 +80,7 @@ const ExtendedServicesRequest_waitAction_waitIfPossible = 2 satisfies ExtendedSe
  * @type {number}
  */
 export
-const waitIfPossible = ExtendedServicesRequest_waitAction_waitIfPossible satisfies ExtendedServicesRequest_waitAction; /* SHORT_NAMED_INTEGER_VALUE */
+const waitIfPossible = ExtendedServicesRequest_waitAction_waitIfPossible; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ExtendedServicesRequest_waitAction_dontWait
@@ -107,7 +107,7 @@ const ExtendedServicesRequest_waitAction_dontWait = 3 satisfies ExtendedServices
  * @type {number}
  */
 export
-const dontWait = ExtendedServicesRequest_waitAction_dontWait satisfies ExtendedServicesRequest_waitAction; /* SHORT_NAMED_INTEGER_VALUE */
+const dontWait = ExtendedServicesRequest_waitAction_dontWait; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ExtendedServicesRequest_waitAction_dontReturnPackage
@@ -133,7 +133,7 @@ const ExtendedServicesRequest_waitAction_dontReturnPackage = 4 satisfies Extende
  * @type {number}
  */
 export
-const dontReturnPackage = ExtendedServicesRequest_waitAction_dontReturnPackage satisfies ExtendedServicesRequest_waitAction; /* SHORT_NAMED_INTEGER_VALUE */
+const dontReturnPackage = ExtendedServicesRequest_waitAction_dontReturnPackage; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_ExtendedServicesRequest_waitAction: $.ASN1Decoder<ExtendedServicesRequest_waitAction> = $._decodeInteger;
 export const _encode_ExtendedServicesRequest_waitAction: $.ASN1Encoder<ExtendedServicesRequest_waitAction> = $._encodeInteger;
 

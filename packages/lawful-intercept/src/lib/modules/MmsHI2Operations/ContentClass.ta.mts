@@ -59,7 +59,7 @@ type ContentClass = _enum_for_ContentClass | ENUMERATED;
  * @type {number}
  */
 export
-const ContentClass_text = _enum_for_ContentClass.text satisfies ContentClass; /* LONG_NAMED_ENUMERATED_VALUE */
+const ContentClass_text = _enum_for_ContentClass.text; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary text
@@ -70,7 +70,7 @@ const ContentClass_text = _enum_for_ContentClass.text satisfies ContentClass; /*
  * @type {number}
  */
 export
-const text = ContentClass_text satisfies ContentClass; /* SHORT_NAMED_ENUMERATED_VALUE */
+const text = ContentClass_text; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ContentClass_image_basic
@@ -81,7 +81,7 @@ const text = ContentClass_text satisfies ContentClass; /* SHORT_NAMED_ENUMERATED
  * @type {number}
  */
 export
-const ContentClass_image_basic = _enum_for_ContentClass.image_basic satisfies ContentClass; /* LONG_NAMED_ENUMERATED_VALUE */
+const ContentClass_image_basic = _enum_for_ContentClass.image_basic; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary image_basic
@@ -92,7 +92,7 @@ const ContentClass_image_basic = _enum_for_ContentClass.image_basic satisfies Co
  * @type {number}
  */
 export
-const image_basic = ContentClass_image_basic satisfies ContentClass; /* SHORT_NAMED_ENUMERATED_VALUE */
+const image_basic = ContentClass_image_basic; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ContentClass_image_rich
@@ -103,7 +103,7 @@ const image_basic = ContentClass_image_basic satisfies ContentClass; /* SHORT_NA
  * @type {number}
  */
 export
-const ContentClass_image_rich = _enum_for_ContentClass.image_rich satisfies ContentClass; /* LONG_NAMED_ENUMERATED_VALUE */
+const ContentClass_image_rich = _enum_for_ContentClass.image_rich; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary image_rich
@@ -114,7 +114,7 @@ const ContentClass_image_rich = _enum_for_ContentClass.image_rich satisfies Cont
  * @type {number}
  */
 export
-const image_rich = ContentClass_image_rich satisfies ContentClass; /* SHORT_NAMED_ENUMERATED_VALUE */
+const image_rich = ContentClass_image_rich; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ContentClass_video_basic
@@ -125,7 +125,7 @@ const image_rich = ContentClass_image_rich satisfies ContentClass; /* SHORT_NAME
  * @type {number}
  */
 export
-const ContentClass_video_basic = _enum_for_ContentClass.video_basic satisfies ContentClass; /* LONG_NAMED_ENUMERATED_VALUE */
+const ContentClass_video_basic = _enum_for_ContentClass.video_basic; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary video_basic
@@ -136,7 +136,7 @@ const ContentClass_video_basic = _enum_for_ContentClass.video_basic satisfies Co
  * @type {number}
  */
 export
-const video_basic = ContentClass_video_basic satisfies ContentClass; /* SHORT_NAMED_ENUMERATED_VALUE */
+const video_basic = ContentClass_video_basic; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ContentClass_video_rich
@@ -147,7 +147,7 @@ const video_basic = ContentClass_video_basic satisfies ContentClass; /* SHORT_NA
  * @type {number}
  */
 export
-const ContentClass_video_rich = _enum_for_ContentClass.video_rich satisfies ContentClass; /* LONG_NAMED_ENUMERATED_VALUE */
+const ContentClass_video_rich = _enum_for_ContentClass.video_rich; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary video_rich
@@ -158,7 +158,7 @@ const ContentClass_video_rich = _enum_for_ContentClass.video_rich satisfies Cont
  * @type {number}
  */
 export
-const video_rich = ContentClass_video_rich satisfies ContentClass; /* SHORT_NAMED_ENUMERATED_VALUE */
+const video_rich = ContentClass_video_rich; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ContentClass_megapixel
@@ -169,7 +169,7 @@ const video_rich = ContentClass_video_rich satisfies ContentClass; /* SHORT_NAME
  * @type {number}
  */
 export
-const ContentClass_megapixel = _enum_for_ContentClass.megapixel satisfies ContentClass; /* LONG_NAMED_ENUMERATED_VALUE */
+const ContentClass_megapixel = _enum_for_ContentClass.megapixel; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary megapixel
@@ -180,7 +180,7 @@ const ContentClass_megapixel = _enum_for_ContentClass.megapixel satisfies Conten
  * @type {number}
  */
 export
-const megapixel = ContentClass_megapixel satisfies ContentClass; /* SHORT_NAMED_ENUMERATED_VALUE */
+const megapixel = ContentClass_megapixel; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ContentClass_content_basic
@@ -191,7 +191,7 @@ const megapixel = ContentClass_megapixel satisfies ContentClass; /* SHORT_NAMED_
  * @type {number}
  */
 export
-const ContentClass_content_basic = _enum_for_ContentClass.content_basic satisfies ContentClass; /* LONG_NAMED_ENUMERATED_VALUE */
+const ContentClass_content_basic = _enum_for_ContentClass.content_basic; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary content_basic
@@ -202,7 +202,7 @@ const ContentClass_content_basic = _enum_for_ContentClass.content_basic satisfie
  * @type {number}
  */
 export
-const content_basic = ContentClass_content_basic satisfies ContentClass; /* SHORT_NAMED_ENUMERATED_VALUE */
+const content_basic = ContentClass_content_basic; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ContentClass_content_rich
@@ -213,7 +213,7 @@ const content_basic = ContentClass_content_basic satisfies ContentClass; /* SHOR
  * @type {number}
  */
 export
-const ContentClass_content_rich = _enum_for_ContentClass.content_rich satisfies ContentClass; /* LONG_NAMED_ENUMERATED_VALUE */
+const ContentClass_content_rich = _enum_for_ContentClass.content_rich; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary content_rich
@@ -224,7 +224,7 @@ const ContentClass_content_rich = _enum_for_ContentClass.content_rich satisfies 
  * @type {number}
  */
 export
-const content_rich = ContentClass_content_rich satisfies ContentClass; /* SHORT_NAMED_ENUMERATED_VALUE */
+const content_rich = ContentClass_content_rich; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_ContentClass: $.ASN1Decoder<ContentClass> = $._decodeEnumerated;
 export const _encode_ContentClass: $.ASN1Encoder<ContentClass> = $._encodeEnumerated;
 

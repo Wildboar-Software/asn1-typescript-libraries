@@ -63,7 +63,7 @@ const BindDiagnostic_accessDenied = 0 satisfies BindDiagnostic; /* LONG_NAMED_IN
  * @type {number}
  */
 export
-const accessDenied = BindDiagnostic_accessDenied satisfies BindDiagnostic; /* SHORT_NAMED_INTEGER_VALUE */
+const accessDenied = BindDiagnostic_accessDenied; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary BindDiagnostic_serviceTypeNotSupported
@@ -88,7 +88,7 @@ const BindDiagnostic_serviceTypeNotSupported = 1 satisfies BindDiagnostic; /* LO
  * @type {number}
  */
 export
-const serviceTypeNotSupported = BindDiagnostic_serviceTypeNotSupported satisfies BindDiagnostic; /* SHORT_NAMED_INTEGER_VALUE */
+const serviceTypeNotSupported = BindDiagnostic_serviceTypeNotSupported; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary BindDiagnostic_versionNotSupported
@@ -114,7 +114,7 @@ const BindDiagnostic_versionNotSupported = 2 satisfies BindDiagnostic; /* LONG_N
  * @type {number}
  */
 export
-const versionNotSupported = BindDiagnostic_versionNotSupported satisfies BindDiagnostic; /* SHORT_NAMED_INTEGER_VALUE */
+const versionNotSupported = BindDiagnostic_versionNotSupported; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary BindDiagnostic_noSuchServiceInstance
@@ -141,7 +141,7 @@ const BindDiagnostic_noSuchServiceInstance = 3 satisfies BindDiagnostic; /* LONG
  * @type {number}
  */
 export
-const noSuchServiceInstance = BindDiagnostic_noSuchServiceInstance satisfies BindDiagnostic; /* SHORT_NAMED_INTEGER_VALUE */
+const noSuchServiceInstance = BindDiagnostic_noSuchServiceInstance; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary BindDiagnostic_alreadyBound
@@ -166,7 +166,7 @@ const BindDiagnostic_alreadyBound = 4 satisfies BindDiagnostic; /* LONG_NAMED_IN
  * @type {number}
  */
 export
-const alreadyBound = BindDiagnostic_alreadyBound satisfies BindDiagnostic; /* SHORT_NAMED_INTEGER_VALUE */
+const alreadyBound = BindDiagnostic_alreadyBound; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary BindDiagnostic_siNotAccessibleToThisInitiator
@@ -193,7 +193,7 @@ const BindDiagnostic_siNotAccessibleToThisInitiator = 5 satisfies BindDiagnostic
  * @type {number}
  */
 export
-const siNotAccessibleToThisInitiator = BindDiagnostic_siNotAccessibleToThisInitiator satisfies BindDiagnostic; /* SHORT_NAMED_INTEGER_VALUE */
+const siNotAccessibleToThisInitiator = BindDiagnostic_siNotAccessibleToThisInitiator; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary BindDiagnostic_inconsistentServiceType
@@ -219,7 +219,7 @@ const BindDiagnostic_inconsistentServiceType = 6 satisfies BindDiagnostic; /* LO
  * @type {number}
  */
 export
-const inconsistentServiceType = BindDiagnostic_inconsistentServiceType satisfies BindDiagnostic; /* SHORT_NAMED_INTEGER_VALUE */
+const inconsistentServiceType = BindDiagnostic_inconsistentServiceType; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary BindDiagnostic_invalidTime
@@ -246,7 +246,7 @@ const BindDiagnostic_invalidTime = 7 satisfies BindDiagnostic; /* LONG_NAMED_INT
  * @type {number}
  */
 export
-const invalidTime = BindDiagnostic_invalidTime satisfies BindDiagnostic; /* SHORT_NAMED_INTEGER_VALUE */
+const invalidTime = BindDiagnostic_invalidTime; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary BindDiagnostic_outOfService
@@ -272,7 +272,7 @@ const BindDiagnostic_outOfService = 8 satisfies BindDiagnostic; /* LONG_NAMED_IN
  * @type {number}
  */
 export
-const outOfService = BindDiagnostic_outOfService satisfies BindDiagnostic; /* SHORT_NAMED_INTEGER_VALUE */
+const outOfService = BindDiagnostic_outOfService; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary BindDiagnostic_otherReason
@@ -298,7 +298,7 @@ const BindDiagnostic_otherReason = 127 satisfies BindDiagnostic; /* LONG_NAMED_I
  * @type {number}
  */
 export
-const otherReason = BindDiagnostic_otherReason satisfies BindDiagnostic; /* SHORT_NAMED_INTEGER_VALUE */
+const otherReason = BindDiagnostic_otherReason; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_BindDiagnostic: $.ASN1Decoder<BindDiagnostic> = $._decodeInteger;
 export const _encode_BindDiagnostic: $.ASN1Encoder<BindDiagnostic> = $._encodeInteger;
 

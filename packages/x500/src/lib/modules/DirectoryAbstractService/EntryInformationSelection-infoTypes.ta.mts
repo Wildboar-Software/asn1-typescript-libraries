@@ -40,7 +40,7 @@ export const EntryInformationSelection_infoTypes_attributeTypesOnly = 0 satisfie
  * @constant
  * @type {number}
  */
-export const attributeTypesOnly = EntryInformationSelection_infoTypes_attributeTypesOnly satisfies EntryInformationSelection_infoTypes; /* SHORT_NAMED_INTEGER_VALUE */
+export const attributeTypesOnly = EntryInformationSelection_infoTypes_attributeTypesOnly; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EntryInformationSelection_infoTypes_attributeTypesAndValues
@@ -64,7 +64,7 @@ export const EntryInformationSelection_infoTypes_attributeTypesAndValues = 1 sat
  * @constant
  * @type {number}
  */
-export const attributeTypesAndValues = EntryInformationSelection_infoTypes_attributeTypesAndValues satisfies EntryInformationSelection_infoTypes; /* SHORT_NAMED_INTEGER_VALUE */
+export const attributeTypesAndValues = EntryInformationSelection_infoTypes_attributeTypesAndValues; /* SHORT_NAMED_INTEGER_VALUE */
 
 let _cached_decoder_for_EntryInformationSelection_infoTypes: $.ASN1Decoder<EntryInformationSelection_infoTypes> | null = null;
 

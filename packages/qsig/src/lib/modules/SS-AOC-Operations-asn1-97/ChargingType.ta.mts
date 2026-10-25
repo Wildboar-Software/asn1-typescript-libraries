@@ -91,7 +91,7 @@ const ChargingType = _enum_for_ChargingType;
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-211/
  */
 export
-const ChargingType_continuousCharging = ChargingType.continuousCharging satisfies ChargingType; /* LONG_NAMED_ENUMERATED_VALUE */
+const ChargingType_continuousCharging = ChargingType.continuousCharging; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary continuousCharging
@@ -100,7 +100,7 @@ const ChargingType_continuousCharging = ChargingType.continuousCharging satisfie
  * @type {number}
  */
 export
-const continuousCharging = ChargingType.continuousCharging satisfies ChargingType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const continuousCharging = ChargingType.continuousCharging; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ChargingType_stepFunction
@@ -115,7 +115,7 @@ const continuousCharging = ChargingType.continuousCharging satisfies ChargingTyp
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-211/
  */
 export
-const ChargingType_stepFunction = ChargingType.stepFunction satisfies ChargingType; /* LONG_NAMED_ENUMERATED_VALUE */
+const ChargingType_stepFunction = ChargingType.stepFunction; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary stepFunction
@@ -124,7 +124,7 @@ const ChargingType_stepFunction = ChargingType.stepFunction satisfies ChargingTy
  * @type {number}
  */
 export
-const stepFunction = ChargingType.stepFunction satisfies ChargingType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const stepFunction = ChargingType.stepFunction; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_ChargingType: $.ASN1Decoder<ChargingType> = $._decodeEnumerated;

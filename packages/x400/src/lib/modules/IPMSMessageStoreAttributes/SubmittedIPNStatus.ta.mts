@@ -42,7 +42,7 @@ export const SubmittedIPNStatus_no_ipn_requested = 0 satisfies SubmittedIPNStatu
  * @constant
  * @type {number}
  */
-export const no_ipn_requested = SubmittedIPNStatus_no_ipn_requested satisfies SubmittedIPNStatus; /* SHORT_NAMED_INTEGER_VALUE */
+export const no_ipn_requested = SubmittedIPNStatus_no_ipn_requested; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SubmittedIPNStatus_nrn_requested
@@ -56,7 +56,7 @@ export const SubmittedIPNStatus_nrn_requested = 5 satisfies SubmittedIPNStatus; 
  * @constant
  * @type {number}
  */
-export const nrn_requested = SubmittedIPNStatus_nrn_requested satisfies SubmittedIPNStatus; /* SHORT_NAMED_INTEGER_VALUE */
+export const nrn_requested = SubmittedIPNStatus_nrn_requested; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SubmittedIPNStatus_nrn_with_ipm_return_requested
@@ -70,7 +70,7 @@ export const SubmittedIPNStatus_nrn_with_ipm_return_requested = 10 satisfies Sub
  * @constant
  * @type {number}
  */
-export const nrn_with_ipm_return_requested = SubmittedIPNStatus_nrn_with_ipm_return_requested satisfies SubmittedIPNStatus; /* SHORT_NAMED_INTEGER_VALUE */
+export const nrn_with_ipm_return_requested = SubmittedIPNStatus_nrn_with_ipm_return_requested; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SubmittedIPNStatus_rn_requested
@@ -84,7 +84,7 @@ export const SubmittedIPNStatus_rn_requested = 15 satisfies SubmittedIPNStatus; 
  * @constant
  * @type {number}
  */
-export const rn_requested = SubmittedIPNStatus_rn_requested satisfies SubmittedIPNStatus; /* SHORT_NAMED_INTEGER_VALUE */
+export const rn_requested = SubmittedIPNStatus_rn_requested; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SubmittedIPNStatus_rn_with_ipm_return_requested
@@ -98,7 +98,7 @@ export const SubmittedIPNStatus_rn_with_ipm_return_requested = 20 satisfies Subm
  * @constant
  * @type {number}
  */
-export const rn_with_ipm_return_requested = SubmittedIPNStatus_rn_with_ipm_return_requested satisfies SubmittedIPNStatus; /* SHORT_NAMED_INTEGER_VALUE */
+export const rn_with_ipm_return_requested = SubmittedIPNStatus_rn_with_ipm_return_requested; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SubmittedIPNStatus_ipm_auto_forwarded
@@ -112,7 +112,7 @@ export const SubmittedIPNStatus_ipm_auto_forwarded = 25 satisfies SubmittedIPNSt
  * @constant
  * @type {number}
  */
-export const ipm_auto_forwarded = SubmittedIPNStatus_ipm_auto_forwarded satisfies SubmittedIPNStatus; /* SHORT_NAMED_INTEGER_VALUE */
+export const ipm_auto_forwarded = SubmittedIPNStatus_ipm_auto_forwarded; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SubmittedIPNStatus_ipm_discarded
@@ -126,7 +126,7 @@ export const SubmittedIPNStatus_ipm_discarded = 30 satisfies SubmittedIPNStatus;
  * @constant
  * @type {number}
  */
-export const ipm_discarded = SubmittedIPNStatus_ipm_discarded satisfies SubmittedIPNStatus; /* SHORT_NAMED_INTEGER_VALUE */
+export const ipm_discarded = SubmittedIPNStatus_ipm_discarded; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SubmittedIPNStatus_rn_sent
@@ -140,7 +140,7 @@ export const SubmittedIPNStatus_rn_sent = 35 satisfies SubmittedIPNStatus; /* LO
  * @constant
  * @type {number}
  */
-export const rn_sent = SubmittedIPNStatus_rn_sent satisfies SubmittedIPNStatus; /* SHORT_NAMED_INTEGER_VALUE */
+export const rn_sent = SubmittedIPNStatus_rn_sent; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_SubmittedIPNStatus = $._decodeInteger;

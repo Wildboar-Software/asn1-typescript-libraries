@@ -39,7 +39,7 @@ export const TimeStampReq_version_v1 = 1 satisfies TimeStampReq_version; /* LONG
  * @constant
  * @type {number}
  */
-export const v1 = TimeStampReq_version_v1 satisfies TimeStampReq_version; /* SHORT_NAMED_INTEGER_VALUE */
+export const v1 = TimeStampReq_version_v1; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_TimeStampReq_version = $._decodeInteger;

@@ -58,7 +58,7 @@ const ServiceError_errorClass_time_resolution_other = 0 satisfies ServiceError_e
  * @type {number}
  */
 export
-const other = ServiceError_errorClass_time_resolution_other satisfies ServiceError_errorClass_time_resolution; /* SHORT_NAMED_INTEGER_VALUE */
+const other = ServiceError_errorClass_time_resolution_other; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceError_errorClass_time_resolution_unsupportable_time_resolution
@@ -84,7 +84,7 @@ const ServiceError_errorClass_time_resolution_unsupportable_time_resolution = 1 
  * @type {number}
  */
 export
-const unsupportable_time_resolution = ServiceError_errorClass_time_resolution_unsupportable_time_resolution satisfies ServiceError_errorClass_time_resolution; /* SHORT_NAMED_INTEGER_VALUE */
+const unsupportable_time_resolution = ServiceError_errorClass_time_resolution_unsupportable_time_resolution; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_ServiceError_errorClass_time_resolution = $._decodeInteger;
 export const _encode_ServiceError_errorClass_time_resolution = $._encodeInteger;
 

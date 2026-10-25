@@ -62,7 +62,7 @@ const ElementParamValue_category_character = 0 satisfies ElementParamValue_categ
  * @type {number}
  */
 export
-const character = ElementParamValue_category_character satisfies ElementParamValue_category; /* SHORT_NAMED_INTEGER_VALUE */
+const character = ElementParamValue_category_character; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ElementParamValue_category_boolean_
@@ -90,7 +90,7 @@ const ElementParamValue_category_boolean_ = 1 satisfies ElementParamValue_catego
  * @type {number}
  */
 export
-const boolean_ = ElementParamValue_category_boolean_ satisfies ElementParamValue_category; /* SHORT_NAMED_INTEGER_VALUE */
+const boolean_ = ElementParamValue_category_boolean_; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ElementParamValue_category_symbolic
@@ -116,7 +116,7 @@ const ElementParamValue_category_symbolic = 2 satisfies ElementParamValue_catego
  * @type {number}
  */
 export
-const symbolic = ElementParamValue_category_symbolic satisfies ElementParamValue_category; /* SHORT_NAMED_INTEGER_VALUE */
+const symbolic = ElementParamValue_category_symbolic; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ElementParamValue_category_integer
@@ -140,7 +140,7 @@ const ElementParamValue_category_integer = 3 satisfies ElementParamValue_categor
  * @type {number}
  */
 export
-const integer = ElementParamValue_category_integer satisfies ElementParamValue_category; /* SHORT_NAMED_INTEGER_VALUE */
+const integer = ElementParamValue_category_integer; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ElementParamValue_category_transparent
@@ -164,7 +164,7 @@ const ElementParamValue_category_transparent = 4 satisfies ElementParamValue_cat
  * @type {number}
  */
 export
-const transparent = ElementParamValue_category_transparent satisfies ElementParamValue_category; /* SHORT_NAMED_INTEGER_VALUE */
+const transparent = ElementParamValue_category_transparent; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_ElementParamValue_category = $._decodeInteger;
 export const _encode_ElementParamValue_category = $._encodeInteger;
 

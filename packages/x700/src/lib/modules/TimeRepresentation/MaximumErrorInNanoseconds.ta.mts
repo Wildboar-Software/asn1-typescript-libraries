@@ -60,7 +60,7 @@ export const MaximumErrorInNanoseconds_noEstimate = 281474976710655 satisfies Ma
  * @constant
  * @type {number}
  */
-export const noEstimate = MaximumErrorInNanoseconds_noEstimate satisfies MaximumErrorInNanoseconds; /* SHORT_NAMED_INTEGER_VALUE */
+export const noEstimate = MaximumErrorInNanoseconds_noEstimate; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_MaximumErrorInNanoseconds = $._decodeInteger;

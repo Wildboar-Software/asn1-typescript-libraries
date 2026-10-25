@@ -110,7 +110,7 @@ const SystemStatus = _enum_for_SystemStatus;
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const SystemStatus_disabled = SystemStatus.disabled satisfies SystemStatus; /* LONG_NAMED_ENUMERATED_VALUE */
+const SystemStatus_disabled = SystemStatus.disabled; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary disabled
@@ -119,7 +119,7 @@ const SystemStatus_disabled = SystemStatus.disabled satisfies SystemStatus; /* L
  * @type {number}
  */
 export
-const disabled = SystemStatus.disabled satisfies SystemStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
+const disabled = SystemStatus.disabled; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SystemStatus_partiallyDisabled
@@ -131,7 +131,7 @@ const disabled = SystemStatus.disabled satisfies SystemStatus; /* SHORT_NAMED_EN
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const SystemStatus_partiallyDisabled = SystemStatus.partiallyDisabled satisfies SystemStatus; /* LONG_NAMED_ENUMERATED_VALUE */
+const SystemStatus_partiallyDisabled = SystemStatus.partiallyDisabled; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary partiallyDisabled
@@ -140,7 +140,7 @@ const SystemStatus_partiallyDisabled = SystemStatus.partiallyDisabled satisfies 
  * @type {number}
  */
 export
-const partiallyDisabled = SystemStatus.partiallyDisabled satisfies SystemStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
+const partiallyDisabled = SystemStatus.partiallyDisabled; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SystemStatus_enabled
@@ -153,7 +153,7 @@ const partiallyDisabled = SystemStatus.partiallyDisabled satisfies SystemStatus;
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const SystemStatus_enabled = SystemStatus.enabled satisfies SystemStatus; /* LONG_NAMED_ENUMERATED_VALUE */
+const SystemStatus_enabled = SystemStatus.enabled; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary enabled
@@ -162,7 +162,7 @@ const SystemStatus_enabled = SystemStatus.enabled satisfies SystemStatus; /* LON
  * @type {number}
  */
 export
-const enabled = SystemStatus.enabled satisfies SystemStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
+const enabled = SystemStatus.enabled; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SystemStatus_initializing
@@ -175,7 +175,7 @@ const enabled = SystemStatus.enabled satisfies SystemStatus; /* SHORT_NAMED_ENUM
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const SystemStatus_initializing = SystemStatus.initializing satisfies SystemStatus; /* LONG_NAMED_ENUMERATED_VALUE */
+const SystemStatus_initializing = SystemStatus.initializing; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary initializing
@@ -184,7 +184,7 @@ const SystemStatus_initializing = SystemStatus.initializing satisfies SystemStat
  * @type {number}
  */
 export
-const initializing = SystemStatus.initializing satisfies SystemStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
+const initializing = SystemStatus.initializing; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SystemStatus_messagesLost
@@ -196,7 +196,7 @@ const initializing = SystemStatus.initializing satisfies SystemStatus; /* SHORT_
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const SystemStatus_messagesLost = SystemStatus.messagesLost satisfies SystemStatus; /* LONG_NAMED_ENUMERATED_VALUE */
+const SystemStatus_messagesLost = SystemStatus.messagesLost; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary messagesLost
@@ -205,7 +205,7 @@ const SystemStatus_messagesLost = SystemStatus.messagesLost satisfies SystemStat
  * @type {number}
  */
 export
-const messagesLost = SystemStatus.messagesLost satisfies SystemStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
+const messagesLost = SystemStatus.messagesLost; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SystemStatus_normal
@@ -217,7 +217,7 @@ const messagesLost = SystemStatus.messagesLost satisfies SystemStatus; /* SHORT_
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const SystemStatus_normal = SystemStatus.normal satisfies SystemStatus; /* LONG_NAMED_ENUMERATED_VALUE */
+const SystemStatus_normal = SystemStatus.normal; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary normal
@@ -226,7 +226,7 @@ const SystemStatus_normal = SystemStatus.normal satisfies SystemStatus; /* LONG_
  * @type {number}
  */
 export
-const normal = SystemStatus.normal satisfies SystemStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
+const normal = SystemStatus.normal; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SystemStatus_overloadImminent
@@ -237,7 +237,7 @@ const normal = SystemStatus.normal satisfies SystemStatus; /* SHORT_NAMED_ENUMER
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const SystemStatus_overloadImminent = SystemStatus.overloadImminent satisfies SystemStatus; /* LONG_NAMED_ENUMERATED_VALUE */
+const SystemStatus_overloadImminent = SystemStatus.overloadImminent; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary overloadImminent
@@ -246,7 +246,7 @@ const SystemStatus_overloadImminent = SystemStatus.overloadImminent satisfies Sy
  * @type {number}
  */
 export
-const overloadImminent = SystemStatus.overloadImminent satisfies SystemStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
+const overloadImminent = SystemStatus.overloadImminent; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SystemStatus_overloadReached
@@ -258,7 +258,7 @@ const overloadImminent = SystemStatus.overloadImminent satisfies SystemStatus; /
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const SystemStatus_overloadReached = SystemStatus.overloadReached satisfies SystemStatus; /* LONG_NAMED_ENUMERATED_VALUE */
+const SystemStatus_overloadReached = SystemStatus.overloadReached; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary overloadReached
@@ -267,7 +267,7 @@ const SystemStatus_overloadReached = SystemStatus.overloadReached satisfies Syst
  * @type {number}
  */
 export
-const overloadReached = SystemStatus.overloadReached satisfies SystemStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
+const overloadReached = SystemStatus.overloadReached; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SystemStatus_overloadRelieved
@@ -277,7 +277,7 @@ const overloadReached = SystemStatus.overloadReached satisfies SystemStatus; /* 
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const SystemStatus_overloadRelieved = SystemStatus.overloadRelieved satisfies SystemStatus; /* LONG_NAMED_ENUMERATED_VALUE */
+const SystemStatus_overloadRelieved = SystemStatus.overloadRelieved; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary overloadRelieved
@@ -286,7 +286,7 @@ const SystemStatus_overloadRelieved = SystemStatus.overloadRelieved satisfies Sy
  * @type {number}
  */
 export
-const overloadRelieved = SystemStatus.overloadRelieved satisfies SystemStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
+const overloadRelieved = SystemStatus.overloadRelieved; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 let _cached_decoder_for_SystemStatus: $.ASN1Decoder<SystemStatus> | null = null;
 

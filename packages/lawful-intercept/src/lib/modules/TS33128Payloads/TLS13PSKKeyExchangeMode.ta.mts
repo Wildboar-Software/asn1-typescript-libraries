@@ -69,7 +69,7 @@ const TLS13PSKKeyExchangeMode = _enum_for_TLS13PSKKeyExchangeMode;
  * @type {number}
  */
 export
-const TLS13PSKKeyExchangeMode_pSKKE = TLS13PSKKeyExchangeMode.pSKKE satisfies TLS13PSKKeyExchangeMode; /* LONG_NAMED_ENUMERATED_VALUE */
+const TLS13PSKKeyExchangeMode_pSKKE = TLS13PSKKeyExchangeMode.pSKKE; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pSKKE
@@ -77,7 +77,7 @@ const TLS13PSKKeyExchangeMode_pSKKE = TLS13PSKKeyExchangeMode.pSKKE satisfies TL
  * @type {number}
  */
 export
-const pSKKE = TLS13PSKKeyExchangeMode.pSKKE satisfies TLS13PSKKeyExchangeMode; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pSKKE = TLS13PSKKeyExchangeMode.pSKKE; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TLS13PSKKeyExchangeMode_pSKDHEKE
@@ -85,7 +85,7 @@ const pSKKE = TLS13PSKKeyExchangeMode.pSKKE satisfies TLS13PSKKeyExchangeMode; /
  * @type {number}
  */
 export
-const TLS13PSKKeyExchangeMode_pSKDHEKE = TLS13PSKKeyExchangeMode.pSKDHEKE satisfies TLS13PSKKeyExchangeMode; /* LONG_NAMED_ENUMERATED_VALUE */
+const TLS13PSKKeyExchangeMode_pSKDHEKE = TLS13PSKKeyExchangeMode.pSKDHEKE; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pSKDHEKE
@@ -93,7 +93,7 @@ const TLS13PSKKeyExchangeMode_pSKDHEKE = TLS13PSKKeyExchangeMode.pSKDHEKE satisf
  * @type {number}
  */
 export
-const pSKDHEKE = TLS13PSKKeyExchangeMode.pSKDHEKE satisfies TLS13PSKKeyExchangeMode; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pSKDHEKE = TLS13PSKKeyExchangeMode.pSKDHEKE; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_TLS13PSKKeyExchangeMode: $.ASN1Decoder<TLS13PSKKeyExchangeMode> = $._decodeEnumerated;
 export const _encode_TLS13PSKKeyExchangeMode: $.ASN1Encoder<TLS13PSKKeyExchangeMode> = $._encodeEnumerated;
 

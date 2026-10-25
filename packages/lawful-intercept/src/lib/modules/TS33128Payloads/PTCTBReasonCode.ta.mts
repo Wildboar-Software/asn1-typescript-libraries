@@ -81,7 +81,7 @@ const PTCTBReasonCode = _enum_for_PTCTBReasonCode;
  * @type {number}
  */
 export
-const PTCTBReasonCode_noQueuingAllowed = PTCTBReasonCode.noQueuingAllowed satisfies PTCTBReasonCode; /* LONG_NAMED_ENUMERATED_VALUE */
+const PTCTBReasonCode_noQueuingAllowed = PTCTBReasonCode.noQueuingAllowed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary noQueuingAllowed
@@ -89,7 +89,7 @@ const PTCTBReasonCode_noQueuingAllowed = PTCTBReasonCode.noQueuingAllowed satisf
  * @type {number}
  */
 export
-const noQueuingAllowed = PTCTBReasonCode.noQueuingAllowed satisfies PTCTBReasonCode; /* SHORT_NAMED_ENUMERATED_VALUE */
+const noQueuingAllowed = PTCTBReasonCode.noQueuingAllowed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PTCTBReasonCode_oneParticipantSession
@@ -97,7 +97,7 @@ const noQueuingAllowed = PTCTBReasonCode.noQueuingAllowed satisfies PTCTBReasonC
  * @type {number}
  */
 export
-const PTCTBReasonCode_oneParticipantSession = PTCTBReasonCode.oneParticipantSession satisfies PTCTBReasonCode; /* LONG_NAMED_ENUMERATED_VALUE */
+const PTCTBReasonCode_oneParticipantSession = PTCTBReasonCode.oneParticipantSession; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary oneParticipantSession
@@ -105,7 +105,7 @@ const PTCTBReasonCode_oneParticipantSession = PTCTBReasonCode.oneParticipantSess
  * @type {number}
  */
 export
-const oneParticipantSession = PTCTBReasonCode.oneParticipantSession satisfies PTCTBReasonCode; /* SHORT_NAMED_ENUMERATED_VALUE */
+const oneParticipantSession = PTCTBReasonCode.oneParticipantSession; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PTCTBReasonCode_listenOnly
@@ -113,7 +113,7 @@ const oneParticipantSession = PTCTBReasonCode.oneParticipantSession satisfies PT
  * @type {number}
  */
 export
-const PTCTBReasonCode_listenOnly = PTCTBReasonCode.listenOnly satisfies PTCTBReasonCode; /* LONG_NAMED_ENUMERATED_VALUE */
+const PTCTBReasonCode_listenOnly = PTCTBReasonCode.listenOnly; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary listenOnly
@@ -121,7 +121,7 @@ const PTCTBReasonCode_listenOnly = PTCTBReasonCode.listenOnly satisfies PTCTBRea
  * @type {number}
  */
 export
-const listenOnly = PTCTBReasonCode.listenOnly satisfies PTCTBReasonCode; /* SHORT_NAMED_ENUMERATED_VALUE */
+const listenOnly = PTCTBReasonCode.listenOnly; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PTCTBReasonCode_exceededMaxDuration
@@ -129,7 +129,7 @@ const listenOnly = PTCTBReasonCode.listenOnly satisfies PTCTBReasonCode; /* SHOR
  * @type {number}
  */
 export
-const PTCTBReasonCode_exceededMaxDuration = PTCTBReasonCode.exceededMaxDuration satisfies PTCTBReasonCode; /* LONG_NAMED_ENUMERATED_VALUE */
+const PTCTBReasonCode_exceededMaxDuration = PTCTBReasonCode.exceededMaxDuration; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary exceededMaxDuration
@@ -137,7 +137,7 @@ const PTCTBReasonCode_exceededMaxDuration = PTCTBReasonCode.exceededMaxDuration 
  * @type {number}
  */
 export
-const exceededMaxDuration = PTCTBReasonCode.exceededMaxDuration satisfies PTCTBReasonCode; /* SHORT_NAMED_ENUMERATED_VALUE */
+const exceededMaxDuration = PTCTBReasonCode.exceededMaxDuration; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PTCTBReasonCode_tBPrevented
@@ -145,7 +145,7 @@ const exceededMaxDuration = PTCTBReasonCode.exceededMaxDuration satisfies PTCTBR
  * @type {number}
  */
 export
-const PTCTBReasonCode_tBPrevented = PTCTBReasonCode.tBPrevented satisfies PTCTBReasonCode; /* LONG_NAMED_ENUMERATED_VALUE */
+const PTCTBReasonCode_tBPrevented = PTCTBReasonCode.tBPrevented; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tBPrevented
@@ -153,7 +153,7 @@ const PTCTBReasonCode_tBPrevented = PTCTBReasonCode.tBPrevented satisfies PTCTBR
  * @type {number}
  */
 export
-const tBPrevented = PTCTBReasonCode.tBPrevented satisfies PTCTBReasonCode; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tBPrevented = PTCTBReasonCode.tBPrevented; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_PTCTBReasonCode: $.ASN1Decoder<PTCTBReasonCode> = $._decodeEnumerated;
 export const _encode_PTCTBReasonCode: $.ASN1Encoder<PTCTBReasonCode> = $._encodeEnumerated;
 

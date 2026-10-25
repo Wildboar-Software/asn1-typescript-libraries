@@ -41,7 +41,7 @@ type GMLC_Restriction = _enum_for_GMLC_Restriction | ENUMERATED;
  * @type {number}
  */
 export
-const GMLC_Restriction_gmlc_List = _enum_for_GMLC_Restriction.gmlc_List satisfies GMLC_Restriction; /* LONG_NAMED_ENUMERATED_VALUE */
+const GMLC_Restriction_gmlc_List = _enum_for_GMLC_Restriction.gmlc_List; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary gmlc_List
@@ -49,7 +49,7 @@ const GMLC_Restriction_gmlc_List = _enum_for_GMLC_Restriction.gmlc_List satisfie
  * @type {number}
  */
 export
-const gmlc_List = GMLC_Restriction_gmlc_List satisfies GMLC_Restriction; /* SHORT_NAMED_ENUMERATED_VALUE */
+const gmlc_List = GMLC_Restriction_gmlc_List; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary GMLC_Restriction_home_Country
@@ -57,7 +57,7 @@ const gmlc_List = GMLC_Restriction_gmlc_List satisfies GMLC_Restriction; /* SHOR
  * @type {number}
  */
 export
-const GMLC_Restriction_home_Country = _enum_for_GMLC_Restriction.home_Country satisfies GMLC_Restriction; /* LONG_NAMED_ENUMERATED_VALUE */
+const GMLC_Restriction_home_Country = _enum_for_GMLC_Restriction.home_Country; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary home_Country
@@ -65,7 +65,7 @@ const GMLC_Restriction_home_Country = _enum_for_GMLC_Restriction.home_Country sa
  * @type {number}
  */
 export
-const home_Country = GMLC_Restriction_home_Country satisfies GMLC_Restriction; /* SHORT_NAMED_ENUMERATED_VALUE */
+const home_Country = GMLC_Restriction_home_Country; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) GMLC_Restriction

@@ -65,7 +65,7 @@ const TLS13KDFAlgorithm = _enum_for_TLS13KDFAlgorithm;
  * @type {number}
  */
 export
-const TLS13KDFAlgorithm_rfc5869 = TLS13KDFAlgorithm.rfc5869 satisfies TLS13KDFAlgorithm; /* LONG_NAMED_ENUMERATED_VALUE */
+const TLS13KDFAlgorithm_rfc5869 = TLS13KDFAlgorithm.rfc5869; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary rfc5869
@@ -73,7 +73,7 @@ const TLS13KDFAlgorithm_rfc5869 = TLS13KDFAlgorithm.rfc5869 satisfies TLS13KDFAl
  * @type {number}
  */
 export
-const rfc5869 = TLS13KDFAlgorithm.rfc5869 satisfies TLS13KDFAlgorithm; /* SHORT_NAMED_ENUMERATED_VALUE */
+const rfc5869 = TLS13KDFAlgorithm.rfc5869; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_TLS13KDFAlgorithm: $.ASN1Decoder<TLS13KDFAlgorithm> = $._decodeEnumerated;
 export const _encode_TLS13KDFAlgorithm: $.ASN1Encoder<TLS13KDFAlgorithm> = $._encodeEnumerated;
 

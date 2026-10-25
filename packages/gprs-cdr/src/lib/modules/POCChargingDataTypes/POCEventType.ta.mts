@@ -181,7 +181,7 @@ const POCEventType = _enum_for_POCEventType;
  * @type {number}
  */
 export
-const POCEventType_normal = POCEventType.normal satisfies POCEventType; /* LONG_NAMED_ENUMERATED_VALUE */
+const POCEventType_normal = POCEventType.normal; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary normal
@@ -189,7 +189,7 @@ const POCEventType_normal = POCEventType.normal satisfies POCEventType; /* LONG_
  * @type {number}
  */
 export
-const normal = POCEventType.normal satisfies POCEventType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const normal = POCEventType.normal; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary POCEventType_instantPersonalAlert
@@ -206,7 +206,7 @@ const normal = POCEventType.normal satisfies POCEventType; /* SHORT_NAMED_ENUMER
  * @type {number}
  */
 export
-const POCEventType_instantPersonalAlert = POCEventType.instantPersonalAlert satisfies POCEventType; /* LONG_NAMED_ENUMERATED_VALUE */
+const POCEventType_instantPersonalAlert = POCEventType.instantPersonalAlert; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary instantPersonalAlert
@@ -214,7 +214,7 @@ const POCEventType_instantPersonalAlert = POCEventType.instantPersonalAlert sati
  * @type {number}
  */
 export
-const instantPersonalAlert = POCEventType.instantPersonalAlert satisfies POCEventType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const instantPersonalAlert = POCEventType.instantPersonalAlert; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary POCEventType_pOCGroupAdvertisement
@@ -229,7 +229,7 @@ const instantPersonalAlert = POCEventType.instantPersonalAlert satisfies POCEven
  * @type {number}
  */
 export
-const POCEventType_pOCGroupAdvertisement = POCEventType.pOCGroupAdvertisement satisfies POCEventType; /* LONG_NAMED_ENUMERATED_VALUE */
+const POCEventType_pOCGroupAdvertisement = POCEventType.pOCGroupAdvertisement; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pOCGroupAdvertisement
@@ -237,7 +237,7 @@ const POCEventType_pOCGroupAdvertisement = POCEventType.pOCGroupAdvertisement sa
  * @type {number}
  */
 export
-const pOCGroupAdvertisement = POCEventType.pOCGroupAdvertisement satisfies POCEventType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pOCGroupAdvertisement = POCEventType.pOCGroupAdvertisement; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary POCEventType_earlySessionSettingup
@@ -255,7 +255,7 @@ const pOCGroupAdvertisement = POCEventType.pOCGroupAdvertisement satisfies POCEv
  * @type {number}
  */
 export
-const POCEventType_earlySessionSettingup = POCEventType.earlySessionSettingup satisfies POCEventType; /* LONG_NAMED_ENUMERATED_VALUE */
+const POCEventType_earlySessionSettingup = POCEventType.earlySessionSettingup; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary earlySessionSettingup
@@ -263,7 +263,7 @@ const POCEventType_earlySessionSettingup = POCEventType.earlySessionSettingup sa
  * @type {number}
  */
 export
-const earlySessionSettingup = POCEventType.earlySessionSettingup satisfies POCEventType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const earlySessionSettingup = POCEventType.earlySessionSettingup; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary POCEventType_pOCTalkBurst
@@ -281,7 +281,7 @@ const earlySessionSettingup = POCEventType.earlySessionSettingup satisfies POCEv
  * @type {number}
  */
 export
-const POCEventType_pOCTalkBurst = POCEventType.pOCTalkBurst satisfies POCEventType; /* LONG_NAMED_ENUMERATED_VALUE */
+const POCEventType_pOCTalkBurst = POCEventType.pOCTalkBurst; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pOCTalkBurst
@@ -289,7 +289,7 @@ const POCEventType_pOCTalkBurst = POCEventType.pOCTalkBurst satisfies POCEventTy
  * @type {number}
  */
 export
-const pOCTalkBurst = POCEventType.pOCTalkBurst satisfies POCEventType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pOCTalkBurst = POCEventType.pOCTalkBurst; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_POCEventType: $.ASN1Decoder<POCEventType> = $._decodeEnumerated;

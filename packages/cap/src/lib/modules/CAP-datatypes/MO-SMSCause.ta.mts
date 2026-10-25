@@ -40,7 +40,7 @@ export const MO_SMSCause = _enum_for_MO_SMSCause;
  *
  * @constant
  */
-export const MO_SMSCause_systemFailure = MO_SMSCause.systemFailure satisfies MO_SMSCause;
+export const MO_SMSCause_systemFailure = MO_SMSCause.systemFailure;
 /**
  * @summary systemFailure
  * @description
@@ -49,7 +49,7 @@ export const MO_SMSCause_systemFailure = MO_SMSCause.systemFailure satisfies MO_
  *
  * @constant
  */
-export const systemFailure = MO_SMSCause.systemFailure satisfies MO_SMSCause;
+export const systemFailure = MO_SMSCause.systemFailure;
 /**
  * @summary MO_SMSCause_unexpectedDataValue
  * @description
@@ -58,7 +58,7 @@ export const systemFailure = MO_SMSCause.systemFailure satisfies MO_SMSCause;
  *
  * @constant
  */
-export const MO_SMSCause_unexpectedDataValue = MO_SMSCause.unexpectedDataValue satisfies MO_SMSCause;
+export const MO_SMSCause_unexpectedDataValue = MO_SMSCause.unexpectedDataValue;
 /**
  * @summary unexpectedDataValue
  * @description
@@ -67,7 +67,7 @@ export const MO_SMSCause_unexpectedDataValue = MO_SMSCause.unexpectedDataValue s
  *
  * @constant
  */
-export const unexpectedDataValue = MO_SMSCause.unexpectedDataValue satisfies MO_SMSCause;
+export const unexpectedDataValue = MO_SMSCause.unexpectedDataValue;
 /**
  * @summary MO_SMSCause_facilityNotSupported
  * @description
@@ -76,7 +76,7 @@ export const unexpectedDataValue = MO_SMSCause.unexpectedDataValue satisfies MO_
  *
  * @constant
  */
-export const MO_SMSCause_facilityNotSupported = MO_SMSCause.facilityNotSupported satisfies MO_SMSCause;
+export const MO_SMSCause_facilityNotSupported = MO_SMSCause.facilityNotSupported;
 /**
  * @summary facilityNotSupported
  * @description
@@ -85,7 +85,7 @@ export const MO_SMSCause_facilityNotSupported = MO_SMSCause.facilityNotSupported
  *
  * @constant
  */
-export const facilityNotSupported = MO_SMSCause.facilityNotSupported satisfies MO_SMSCause;
+export const facilityNotSupported = MO_SMSCause.facilityNotSupported;
 /**
  * @summary MO_SMSCause_sM_DeliveryFailure
  * @description
@@ -94,7 +94,7 @@ export const facilityNotSupported = MO_SMSCause.facilityNotSupported satisfies M
  *
  * @constant
  */
-export const MO_SMSCause_sM_DeliveryFailure = MO_SMSCause.sM_DeliveryFailure satisfies MO_SMSCause;
+export const MO_SMSCause_sM_DeliveryFailure = MO_SMSCause.sM_DeliveryFailure;
 /**
  * @summary sM_DeliveryFailure
  * @description
@@ -103,7 +103,7 @@ export const MO_SMSCause_sM_DeliveryFailure = MO_SMSCause.sM_DeliveryFailure sat
  *
  * @constant
  */
-export const sM_DeliveryFailure = MO_SMSCause.sM_DeliveryFailure satisfies MO_SMSCause;
+export const sM_DeliveryFailure = MO_SMSCause.sM_DeliveryFailure;
 /**
  * @summary MO_SMSCause_releaseFromRadioInterface
  * @description
@@ -112,7 +112,7 @@ export const sM_DeliveryFailure = MO_SMSCause.sM_DeliveryFailure satisfies MO_SM
  *
  * @constant
  */
-export const MO_SMSCause_releaseFromRadioInterface = MO_SMSCause.releaseFromRadioInterface satisfies MO_SMSCause;
+export const MO_SMSCause_releaseFromRadioInterface = MO_SMSCause.releaseFromRadioInterface;
 /**
  * @summary releaseFromRadioInterface
  * @description
@@ -121,6 +121,6 @@ export const MO_SMSCause_releaseFromRadioInterface = MO_SMSCause.releaseFromRadi
  *
  * @constant
  */
-export const releaseFromRadioInterface = MO_SMSCause.releaseFromRadioInterface satisfies MO_SMSCause;
+export const releaseFromRadioInterface = MO_SMSCause.releaseFromRadioInterface;
 export const _decode_MO_SMSCause = $._decodeEnumerated;
 export const _encode_MO_SMSCause = $._encodeEnumerated;

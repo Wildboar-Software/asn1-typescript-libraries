@@ -92,7 +92,7 @@ export const WeekDay = _enum_for_WeekDay;
  * @type {number}
  */
 export const WeekDay_sunday =
-    WeekDay.sunday satisfies WeekDay; /* LONG_NAMED_ENUMERATED_VALUE */
+    WeekDay.sunday; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -101,7 +101,7 @@ export const WeekDay_sunday =
  * @type {number}
  */
 export const sunday =
-    WeekDay.sunday satisfies WeekDay; /* SHORT_NAMED_ENUMERATED_VALUE */
+    WeekDay.sunday; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -110,7 +110,7 @@ export const sunday =
  * @type {number}
  */
 export const WeekDay_monday =
-    WeekDay.monday satisfies WeekDay; /* LONG_NAMED_ENUMERATED_VALUE */
+    WeekDay.monday; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -119,7 +119,7 @@ export const WeekDay_monday =
  * @type {number}
  */
 export const monday =
-    WeekDay.monday satisfies WeekDay; /* SHORT_NAMED_ENUMERATED_VALUE */
+    WeekDay.monday; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -128,7 +128,7 @@ export const monday =
  * @type {number}
  */
 export const WeekDay_tuesday =
-    WeekDay.tuesday satisfies WeekDay; /* LONG_NAMED_ENUMERATED_VALUE */
+    WeekDay.tuesday; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -137,7 +137,7 @@ export const WeekDay_tuesday =
  * @type {number}
  */
 export const tuesday =
-    WeekDay.tuesday satisfies WeekDay; /* SHORT_NAMED_ENUMERATED_VALUE */
+    WeekDay.tuesday; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -146,7 +146,7 @@ export const tuesday =
  * @type {number}
  */
 export const WeekDay_wednesday =
-    WeekDay.wednesday satisfies WeekDay; /* LONG_NAMED_ENUMERATED_VALUE */
+    WeekDay.wednesday; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -155,7 +155,7 @@ export const WeekDay_wednesday =
  * @type {number}
  */
 export const wednesday =
-    WeekDay.wednesday satisfies WeekDay; /* SHORT_NAMED_ENUMERATED_VALUE */
+    WeekDay.wednesday; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -164,7 +164,7 @@ export const wednesday =
  * @type {number}
  */
 export const WeekDay_thursday =
-    WeekDay.thursday satisfies WeekDay; /* LONG_NAMED_ENUMERATED_VALUE */
+    WeekDay.thursday; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -173,7 +173,7 @@ export const WeekDay_thursday =
  * @type {number}
  */
 export const thursday =
-    WeekDay.thursday satisfies WeekDay; /* SHORT_NAMED_ENUMERATED_VALUE */
+    WeekDay.thursday; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -182,7 +182,7 @@ export const thursday =
  * @type {number}
  */
 export const WeekDay_friday =
-    WeekDay.friday satisfies WeekDay; /* LONG_NAMED_ENUMERATED_VALUE */
+    WeekDay.friday; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -191,7 +191,7 @@ export const WeekDay_friday =
  * @type {number}
  */
 export const friday =
-    WeekDay.friday satisfies WeekDay; /* SHORT_NAMED_ENUMERATED_VALUE */
+    WeekDay.friday; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -200,7 +200,7 @@ export const friday =
  * @type {number}
  */
 export const WeekDay_saturday =
-    WeekDay.saturday satisfies WeekDay; /* LONG_NAMED_ENUMERATED_VALUE */
+    WeekDay.saturday; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -209,7 +209,7 @@ export const WeekDay_saturday =
  * @type {number}
  */
 export const saturday =
-    WeekDay.saturday satisfies WeekDay; /* SHORT_NAMED_ENUMERATED_VALUE */
+    WeekDay.saturday; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 

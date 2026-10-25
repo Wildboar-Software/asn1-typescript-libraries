@@ -52,7 +52,7 @@ const DiagnosticFspThrowEvent_specific_operationNotSupported = 0 satisfies Diagn
  * @type {number}
  */
 export
-const operationNotSupported = DiagnosticFspThrowEvent_specific_operationNotSupported satisfies DiagnosticFspThrowEvent_specific; /* SHORT_NAMED_INTEGER_VALUE */
+const operationNotSupported = DiagnosticFspThrowEvent_specific_operationNotSupported; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagnosticFspThrowEvent_specific_eventIdentificationOutOfSequence
@@ -79,7 +79,7 @@ const DiagnosticFspThrowEvent_specific_eventIdentificationOutOfSequence = 1 sati
  * @type {number}
  */
 export
-const eventIdentificationOutOfSequence = DiagnosticFspThrowEvent_specific_eventIdentificationOutOfSequence satisfies DiagnosticFspThrowEvent_specific; /* SHORT_NAMED_INTEGER_VALUE */
+const eventIdentificationOutOfSequence = DiagnosticFspThrowEvent_specific_eventIdentificationOutOfSequence; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagnosticFspThrowEvent_specific_noSuchEvent
@@ -104,7 +104,7 @@ const DiagnosticFspThrowEvent_specific_noSuchEvent = 2 satisfies DiagnosticFspTh
  * @type {number}
  */
 export
-const noSuchEvent = DiagnosticFspThrowEvent_specific_noSuchEvent satisfies DiagnosticFspThrowEvent_specific; /* SHORT_NAMED_INTEGER_VALUE */
+const noSuchEvent = DiagnosticFspThrowEvent_specific_noSuchEvent; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_DiagnosticFspThrowEvent_specific: $.ASN1Decoder<DiagnosticFspThrowEvent_specific> = $._decodeInteger;
 export const _encode_DiagnosticFspThrowEvent_specific: $.ASN1Encoder<DiagnosticFspThrowEvent_specific> = $._encodeInteger;
 

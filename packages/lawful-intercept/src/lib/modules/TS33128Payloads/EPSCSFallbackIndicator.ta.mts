@@ -110,7 +110,7 @@ const EPSCSFallbackIndicator = _enum_for_EPSCSFallbackIndicator;
  * @type {number}
  */
 export
-const EPSCSFallbackIndicator_cSFallbackRequired = EPSCSFallbackIndicator.cSFallbackRequired satisfies EPSCSFallbackIndicator; /* LONG_NAMED_ENUMERATED_VALUE */
+const EPSCSFallbackIndicator_cSFallbackRequired = EPSCSFallbackIndicator.cSFallbackRequired; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary cSFallbackRequired
@@ -124,7 +124,7 @@ const EPSCSFallbackIndicator_cSFallbackRequired = EPSCSFallbackIndicator.cSFallb
  * @type {number}
  */
 export
-const cSFallbackRequired = EPSCSFallbackIndicator.cSFallbackRequired satisfies EPSCSFallbackIndicator; /* SHORT_NAMED_ENUMERATED_VALUE */
+const cSFallbackRequired = EPSCSFallbackIndicator.cSFallbackRequired; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EPSCSFallbackIndicator_cSFallbackHighPriority
@@ -138,7 +138,7 @@ const cSFallbackRequired = EPSCSFallbackIndicator.cSFallbackRequired satisfies E
  * @type {number}
  */
 export
-const EPSCSFallbackIndicator_cSFallbackHighPriority = EPSCSFallbackIndicator.cSFallbackHighPriority satisfies EPSCSFallbackIndicator; /* LONG_NAMED_ENUMERATED_VALUE */
+const EPSCSFallbackIndicator_cSFallbackHighPriority = EPSCSFallbackIndicator.cSFallbackHighPriority; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary cSFallbackHighPriority
@@ -152,7 +152,7 @@ const EPSCSFallbackIndicator_cSFallbackHighPriority = EPSCSFallbackIndicator.cSF
  * @type {number}
  */
 export
-const cSFallbackHighPriority = EPSCSFallbackIndicator.cSFallbackHighPriority satisfies EPSCSFallbackIndicator; /* SHORT_NAMED_ENUMERATED_VALUE */
+const cSFallbackHighPriority = EPSCSFallbackIndicator.cSFallbackHighPriority; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_EPSCSFallbackIndicator: $.ASN1Decoder<EPSCSFallbackIndicator> = $._decodeEnumerated;
 export const _encode_EPSCSFallbackIndicator: $.ASN1Encoder<EPSCSFallbackIndicator> = $._encodeEnumerated;
 

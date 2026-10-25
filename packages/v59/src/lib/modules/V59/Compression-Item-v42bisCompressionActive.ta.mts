@@ -85,7 +85,7 @@ const Compression_Item_v42bisCompressionActive = _enum_for_Compression_Item_v42b
  * @type {number}
  */
 export
-const Compression_Item_v42bisCompressionActive_none = Compression_Item_v42bisCompressionActive.none satisfies Compression_Item_v42bisCompressionActive; /* LONG_NAMED_ENUMERATED_VALUE */
+const Compression_Item_v42bisCompressionActive_none = Compression_Item_v42bisCompressionActive.none; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary none
@@ -93,7 +93,7 @@ const Compression_Item_v42bisCompressionActive_none = Compression_Item_v42bisCom
  * @type {number}
  */
 export
-const none = Compression_Item_v42bisCompressionActive.none satisfies Compression_Item_v42bisCompressionActive; /* SHORT_NAMED_ENUMERATED_VALUE */
+const none = Compression_Item_v42bisCompressionActive.none; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Compression_Item_v42bisCompressionActive_initOnly
@@ -105,7 +105,7 @@ const none = Compression_Item_v42bisCompressionActive.none satisfies Compression
  * @type {number}
  */
 export
-const Compression_Item_v42bisCompressionActive_initOnly = Compression_Item_v42bisCompressionActive.initOnly satisfies Compression_Item_v42bisCompressionActive; /* LONG_NAMED_ENUMERATED_VALUE */
+const Compression_Item_v42bisCompressionActive_initOnly = Compression_Item_v42bisCompressionActive.initOnly; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary initOnly
@@ -113,7 +113,7 @@ const Compression_Item_v42bisCompressionActive_initOnly = Compression_Item_v42bi
  * @type {number}
  */
 export
-const initOnly = Compression_Item_v42bisCompressionActive.initOnly satisfies Compression_Item_v42bisCompressionActive; /* SHORT_NAMED_ENUMERATED_VALUE */
+const initOnly = Compression_Item_v42bisCompressionActive.initOnly; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Compression_Item_v42bisCompressionActive_respOnly
@@ -125,7 +125,7 @@ const initOnly = Compression_Item_v42bisCompressionActive.initOnly satisfies Com
  * @type {number}
  */
 export
-const Compression_Item_v42bisCompressionActive_respOnly = Compression_Item_v42bisCompressionActive.respOnly satisfies Compression_Item_v42bisCompressionActive; /* LONG_NAMED_ENUMERATED_VALUE */
+const Compression_Item_v42bisCompressionActive_respOnly = Compression_Item_v42bisCompressionActive.respOnly; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary respOnly
@@ -133,7 +133,7 @@ const Compression_Item_v42bisCompressionActive_respOnly = Compression_Item_v42bi
  * @type {number}
  */
 export
-const respOnly = Compression_Item_v42bisCompressionActive.respOnly satisfies Compression_Item_v42bisCompressionActive; /* SHORT_NAMED_ENUMERATED_VALUE */
+const respOnly = Compression_Item_v42bisCompressionActive.respOnly; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Compression_Item_v42bisCompressionActive_both
@@ -144,7 +144,7 @@ const respOnly = Compression_Item_v42bisCompressionActive.respOnly satisfies Com
  * @type {number}
  */
 export
-const Compression_Item_v42bisCompressionActive_both = Compression_Item_v42bisCompressionActive.both satisfies Compression_Item_v42bisCompressionActive; /* LONG_NAMED_ENUMERATED_VALUE */
+const Compression_Item_v42bisCompressionActive_both = Compression_Item_v42bisCompressionActive.both; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary both
@@ -152,7 +152,7 @@ const Compression_Item_v42bisCompressionActive_both = Compression_Item_v42bisCom
  * @type {number}
  */
 export
-const both = Compression_Item_v42bisCompressionActive.both satisfies Compression_Item_v42bisCompressionActive; /* SHORT_NAMED_ENUMERATED_VALUE */
+const both = Compression_Item_v42bisCompressionActive.both; /* SHORT_NAMED_ENUMERATED_VALUE */
 export function _decode_Compression_Item_v42bisCompressionActive(el: _Element): Compression_Item_v42bisCompressionActive {
     const enumerated = $._decodeEnumerated(el);
     switch (enumerated) {

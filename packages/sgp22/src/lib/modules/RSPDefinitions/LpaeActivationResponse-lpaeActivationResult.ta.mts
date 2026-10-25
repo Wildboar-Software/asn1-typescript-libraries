@@ -47,7 +47,7 @@ const LpaeActivationResponse_lpaeActivationResult_ok = 0 satisfies LpaeActivatio
  * @type {number}
  */
 export
-const ok = LpaeActivationResponse_lpaeActivationResult_ok satisfies LpaeActivationResponse_lpaeActivationResult; /* SHORT_NAMED_INTEGER_VALUE */
+const ok = LpaeActivationResponse_lpaeActivationResult_ok; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary LpaeActivationResponse_lpaeActivationResult_notSupported
@@ -71,7 +71,7 @@ const LpaeActivationResponse_lpaeActivationResult_notSupported = 1 satisfies Lpa
  * @type {number}
  */
 export
-const notSupported = LpaeActivationResponse_lpaeActivationResult_notSupported satisfies LpaeActivationResponse_lpaeActivationResult; /* SHORT_NAMED_INTEGER_VALUE */
+const notSupported = LpaeActivationResponse_lpaeActivationResult_notSupported; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_LpaeActivationResponse_lpaeActivationResult = $._decodeInteger;
 export const _encode_LpaeActivationResponse_lpaeActivationResult = $._encodeInteger;
 

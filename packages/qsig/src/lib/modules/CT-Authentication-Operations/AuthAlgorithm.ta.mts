@@ -51,7 +51,7 @@ const AuthAlgorithm_ct2 = 0 satisfies AuthAlgorithm; /* LONG_NAMED_INTEGER_VALUE
  * @type {number}
  */
 export
-const ct2 = AuthAlgorithm_ct2 satisfies AuthAlgorithm; /* SHORT_NAMED_INTEGER_VALUE */
+const ct2 = AuthAlgorithm_ct2; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AuthAlgorithm_dect
@@ -71,7 +71,7 @@ const AuthAlgorithm_dect = 1 satisfies AuthAlgorithm; /* LONG_NAMED_INTEGER_VALU
  * @type {number}
  */
 export
-const dect = AuthAlgorithm_dect satisfies AuthAlgorithm; /* SHORT_NAMED_INTEGER_VALUE */
+const dect = AuthAlgorithm_dect; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AuthAlgorithm_gsm
@@ -90,7 +90,7 @@ const AuthAlgorithm_gsm = 2 satisfies AuthAlgorithm; /* LONG_NAMED_INTEGER_VALUE
  * @type {number}
  */
 export
-const gsm = AuthAlgorithm_gsm satisfies AuthAlgorithm; /* SHORT_NAMED_INTEGER_VALUE */
+const gsm = AuthAlgorithm_gsm; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AuthAlgorithm_us_ct2
@@ -110,7 +110,7 @@ const AuthAlgorithm_us_ct2 = 3 satisfies AuthAlgorithm; /* LONG_NAMED_INTEGER_VA
  * @type {number}
  */
 export
-const us_ct2 = AuthAlgorithm_us_ct2 satisfies AuthAlgorithm; /* SHORT_NAMED_INTEGER_VALUE */
+const us_ct2 = AuthAlgorithm_us_ct2; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AuthAlgorithm_us_dect
@@ -130,7 +130,7 @@ const AuthAlgorithm_us_dect = 4 satisfies AuthAlgorithm; /* LONG_NAMED_INTEGER_V
  * @type {number}
  */
 export
-const us_dect = AuthAlgorithm_us_dect satisfies AuthAlgorithm; /* SHORT_NAMED_INTEGER_VALUE */
+const us_dect = AuthAlgorithm_us_dect; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AuthAlgorithm_us_gsm
@@ -150,7 +150,7 @@ const AuthAlgorithm_us_gsm = 5 satisfies AuthAlgorithm; /* LONG_NAMED_INTEGER_VA
  * @type {number}
  */
 export
-const us_gsm = AuthAlgorithm_us_gsm satisfies AuthAlgorithm; /* SHORT_NAMED_INTEGER_VALUE */
+const us_gsm = AuthAlgorithm_us_gsm; /* SHORT_NAMED_INTEGER_VALUE */
 
 export
 const _decode_AuthAlgorithm: $.ASN1Decoder<AuthAlgorithm> = $._decodeInteger;

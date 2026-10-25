@@ -40,7 +40,7 @@ export const FetchRestrictionProblem_content_type_problem = 1 satisfies FetchRes
  * @constant
  * @type {number}
  */
-export const content_type_problem = FetchRestrictionProblem_content_type_problem satisfies FetchRestrictionProblem; /* SHORT_NAMED_INTEGER_VALUE */
+export const content_type_problem = FetchRestrictionProblem_content_type_problem; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary FetchRestrictionProblem_eit_problem
@@ -54,7 +54,7 @@ export const FetchRestrictionProblem_eit_problem = 2 satisfies FetchRestrictionP
  * @constant
  * @type {number}
  */
-export const eit_problem = FetchRestrictionProblem_eit_problem satisfies FetchRestrictionProblem; /* SHORT_NAMED_INTEGER_VALUE */
+export const eit_problem = FetchRestrictionProblem_eit_problem; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary FetchRestrictionProblem_maximum_length_problem
@@ -68,7 +68,7 @@ export const FetchRestrictionProblem_maximum_length_problem = 3 satisfies FetchR
  * @constant
  * @type {number}
  */
-export const maximum_length_problem = FetchRestrictionProblem_maximum_length_problem satisfies FetchRestrictionProblem; /* SHORT_NAMED_INTEGER_VALUE */
+export const maximum_length_problem = FetchRestrictionProblem_maximum_length_problem; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_FetchRestrictionProblem = $._decodeInteger;

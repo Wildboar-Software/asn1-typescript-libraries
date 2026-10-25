@@ -53,7 +53,7 @@ export const Request_Operation_Result_summary = 0 satisfies Request_Operation_Re
  * @constant
  * @type {number}
  */
-export const summary = Request_Operation_Result_summary satisfies Request_Operation_Result; /* SHORT_NAMED_INTEGER_VALUE */
+export const summary = Request_Operation_Result_summary; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -79,7 +79,7 @@ export const Request_Operation_Result_fiii_list = 1 satisfies Request_Operation_
  * @constant
  * @type {number}
  */
-export const fiii_list = Request_Operation_Result_fiii_list satisfies Request_Operation_Result; /* SHORT_NAMED_INTEGER_VALUE */
+export const fiii_list = Request_Operation_Result_fiii_list; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 let _cached_decoder_for_Request_Operation_Result: $.ASN1Decoder<Request_Operation_Result> | null = null;

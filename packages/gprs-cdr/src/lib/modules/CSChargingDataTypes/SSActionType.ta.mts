@@ -113,7 +113,7 @@ const SSActionType = _enum_for_SSActionType;
  * @type {number}
  */
 export
-const SSActionType_registration = SSActionType.registration satisfies SSActionType; /* LONG_NAMED_ENUMERATED_VALUE */
+const SSActionType_registration = SSActionType.registration; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary registration
@@ -127,7 +127,7 @@ const SSActionType_registration = SSActionType.registration satisfies SSActionTy
  * @type {number}
  */
 export
-const registration = SSActionType.registration satisfies SSActionType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const registration = SSActionType.registration; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SSActionType_erasure
@@ -139,7 +139,7 @@ const registration = SSActionType.registration satisfies SSActionType; /* SHORT_
  * @type {number}
  */
 export
-const SSActionType_erasure = SSActionType.erasure satisfies SSActionType; /* LONG_NAMED_ENUMERATED_VALUE */
+const SSActionType_erasure = SSActionType.erasure; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary erasure
@@ -151,7 +151,7 @@ const SSActionType_erasure = SSActionType.erasure satisfies SSActionType; /* LON
  * @type {number}
  */
 export
-const erasure = SSActionType.erasure satisfies SSActionType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const erasure = SSActionType.erasure; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SSActionType_activation
@@ -164,7 +164,7 @@ const erasure = SSActionType.erasure satisfies SSActionType; /* SHORT_NAMED_ENUM
  * @type {number}
  */
 export
-const SSActionType_activation = SSActionType.activation satisfies SSActionType; /* LONG_NAMED_ENUMERATED_VALUE */
+const SSActionType_activation = SSActionType.activation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary activation
@@ -177,7 +177,7 @@ const SSActionType_activation = SSActionType.activation satisfies SSActionType; 
  * @type {number}
  */
 export
-const activation = SSActionType.activation satisfies SSActionType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const activation = SSActionType.activation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SSActionType_deactivation
@@ -190,7 +190,7 @@ const activation = SSActionType.activation satisfies SSActionType; /* SHORT_NAME
  * @type {number}
  */
 export
-const SSActionType_deactivation = SSActionType.deactivation satisfies SSActionType; /* LONG_NAMED_ENUMERATED_VALUE */
+const SSActionType_deactivation = SSActionType.deactivation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary deactivation
@@ -203,7 +203,7 @@ const SSActionType_deactivation = SSActionType.deactivation satisfies SSActionTy
  * @type {number}
  */
 export
-const deactivation = SSActionType.deactivation satisfies SSActionType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const deactivation = SSActionType.deactivation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SSActionType_interrogation
@@ -216,7 +216,7 @@ const deactivation = SSActionType.deactivation satisfies SSActionType; /* SHORT_
  * @type {number}
  */
 export
-const SSActionType_interrogation = SSActionType.interrogation satisfies SSActionType; /* LONG_NAMED_ENUMERATED_VALUE */
+const SSActionType_interrogation = SSActionType.interrogation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary interrogation
@@ -229,7 +229,7 @@ const SSActionType_interrogation = SSActionType.interrogation satisfies SSAction
  * @type {number}
  */
 export
-const interrogation = SSActionType.interrogation satisfies SSActionType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const interrogation = SSActionType.interrogation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SSActionType_invocation
@@ -244,7 +244,7 @@ const interrogation = SSActionType.interrogation satisfies SSActionType; /* SHOR
  * @type {number}
  */
 export
-const SSActionType_invocation = SSActionType.invocation satisfies SSActionType; /* LONG_NAMED_ENUMERATED_VALUE */
+const SSActionType_invocation = SSActionType.invocation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invocation
@@ -259,7 +259,7 @@ const SSActionType_invocation = SSActionType.invocation satisfies SSActionType; 
  * @type {number}
  */
 export
-const invocation = SSActionType.invocation satisfies SSActionType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const invocation = SSActionType.invocation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SSActionType_passwordRegistration
@@ -272,7 +272,7 @@ const invocation = SSActionType.invocation satisfies SSActionType; /* SHORT_NAME
  * @type {number}
  */
 export
-const SSActionType_passwordRegistration = SSActionType.passwordRegistration satisfies SSActionType; /* LONG_NAMED_ENUMERATED_VALUE */
+const SSActionType_passwordRegistration = SSActionType.passwordRegistration; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary passwordRegistration
@@ -285,7 +285,7 @@ const SSActionType_passwordRegistration = SSActionType.passwordRegistration sati
  * @type {number}
  */
 export
-const passwordRegistration = SSActionType.passwordRegistration satisfies SSActionType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const passwordRegistration = SSActionType.passwordRegistration; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_SSActionType: $.ASN1Decoder<SSActionType> = $._decodeEnumerated;

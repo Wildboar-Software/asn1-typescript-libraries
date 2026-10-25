@@ -32,7 +32,7 @@ export type PinType = _enum_for_PinType | ENUMERATED;
  * @constant
  * @type {number}
  */
-export const PinType_bcd = _enum_for_PinType.bcd satisfies PinType; /* LONG_NAMED_ENUMERATED_VALUE */
+export const PinType_bcd = _enum_for_PinType.bcd; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -40,7 +40,7 @@ export const PinType_bcd = _enum_for_PinType.bcd satisfies PinType; /* LONG_NAME
  * @constant
  * @type {number}
  */
-export const bcd = PinType_bcd satisfies PinType; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const bcd = PinType_bcd; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -48,7 +48,7 @@ export const bcd = PinType_bcd satisfies PinType; /* SHORT_NAMED_ENUMERATED_VALU
  * @constant
  * @type {number}
  */
-export const PinType_ascii_numeric = _enum_for_PinType.ascii_numeric satisfies PinType; /* LONG_NAMED_ENUMERATED_VALUE */
+export const PinType_ascii_numeric = _enum_for_PinType.ascii_numeric; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -56,7 +56,7 @@ export const PinType_ascii_numeric = _enum_for_PinType.ascii_numeric satisfies P
  * @constant
  * @type {number}
  */
-export const ascii_numeric = PinType_ascii_numeric satisfies PinType; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const ascii_numeric = PinType_ascii_numeric; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -64,7 +64,7 @@ export const ascii_numeric = PinType_ascii_numeric satisfies PinType; /* SHORT_N
  * @constant
  * @type {number}
  */
-export const PinType_utf8 = _enum_for_PinType.utf8 satisfies PinType; /* LONG_NAMED_ENUMERATED_VALUE */
+export const PinType_utf8 = _enum_for_PinType.utf8; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -72,7 +72,7 @@ export const PinType_utf8 = _enum_for_PinType.utf8 satisfies PinType; /* LONG_NA
  * @constant
  * @type {number}
  */
-export const utf8 = PinType_utf8 satisfies PinType; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const utf8 = PinType_utf8; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -80,7 +80,7 @@ export const utf8 = PinType_utf8 satisfies PinType; /* SHORT_NAMED_ENUMERATED_VA
  * @constant
  * @type {number}
  */
-export const PinType_half_nibble_bcd = _enum_for_PinType.half_nibble_bcd satisfies PinType; /* LONG_NAMED_ENUMERATED_VALUE */
+export const PinType_half_nibble_bcd = _enum_for_PinType.half_nibble_bcd; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -88,7 +88,7 @@ export const PinType_half_nibble_bcd = _enum_for_PinType.half_nibble_bcd satisfi
  * @constant
  * @type {number}
  */
-export const half_nibble_bcd = PinType_half_nibble_bcd satisfies PinType; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const half_nibble_bcd = PinType_half_nibble_bcd; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -96,7 +96,7 @@ export const half_nibble_bcd = PinType_half_nibble_bcd satisfies PinType; /* SHO
  * @constant
  * @type {number}
  */
-export const PinType_iso9564_1 = _enum_for_PinType.iso9564_1 satisfies PinType; /* LONG_NAMED_ENUMERATED_VALUE */
+export const PinType_iso9564_1 = _enum_for_PinType.iso9564_1; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -104,7 +104,7 @@ export const PinType_iso9564_1 = _enum_for_PinType.iso9564_1 satisfies PinType; 
  * @constant
  * @type {number}
  */
-export const iso9564_1 = PinType_iso9564_1 satisfies PinType; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const iso9564_1 = PinType_iso9564_1; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 

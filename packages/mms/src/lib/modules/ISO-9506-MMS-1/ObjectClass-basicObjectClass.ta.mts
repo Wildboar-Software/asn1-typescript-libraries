@@ -68,7 +68,7 @@ const ObjectClass_basicObjectClass_namedVariable = 0 satisfies ObjectClass_basic
  * @type {number}
  */
 export
-const namedVariable = ObjectClass_basicObjectClass_namedVariable satisfies ObjectClass_basicObjectClass; /* SHORT_NAMED_INTEGER_VALUE */
+const namedVariable = ObjectClass_basicObjectClass_namedVariable; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ObjectClass_basicObjectClass_scatteredAccess
@@ -92,7 +92,7 @@ const ObjectClass_basicObjectClass_scatteredAccess = 1 satisfies ObjectClass_bas
  * @type {number}
  */
 export
-const scatteredAccess = ObjectClass_basicObjectClass_scatteredAccess satisfies ObjectClass_basicObjectClass; /* SHORT_NAMED_INTEGER_VALUE */
+const scatteredAccess = ObjectClass_basicObjectClass_scatteredAccess; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ObjectClass_basicObjectClass_namedVariableList
@@ -116,7 +116,7 @@ const ObjectClass_basicObjectClass_namedVariableList = 2 satisfies ObjectClass_b
  * @type {number}
  */
 export
-const namedVariableList = ObjectClass_basicObjectClass_namedVariableList satisfies ObjectClass_basicObjectClass; /* SHORT_NAMED_INTEGER_VALUE */
+const namedVariableList = ObjectClass_basicObjectClass_namedVariableList; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ObjectClass_basicObjectClass_namedType
@@ -138,7 +138,7 @@ const ObjectClass_basicObjectClass_namedType = 3 satisfies ObjectClass_basicObje
  * @type {number}
  */
 export
-const namedType = ObjectClass_basicObjectClass_namedType satisfies ObjectClass_basicObjectClass; /* SHORT_NAMED_INTEGER_VALUE */
+const namedType = ObjectClass_basicObjectClass_namedType; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ObjectClass_basicObjectClass_semaphore
@@ -162,7 +162,7 @@ const ObjectClass_basicObjectClass_semaphore = 4 satisfies ObjectClass_basicObje
  * @type {number}
  */
 export
-const semaphore = ObjectClass_basicObjectClass_semaphore satisfies ObjectClass_basicObjectClass; /* SHORT_NAMED_INTEGER_VALUE */
+const semaphore = ObjectClass_basicObjectClass_semaphore; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ObjectClass_basicObjectClass_eventCondition
@@ -184,7 +184,7 @@ const ObjectClass_basicObjectClass_eventCondition = 5 satisfies ObjectClass_basi
  * @type {number}
  */
 export
-const eventCondition = ObjectClass_basicObjectClass_eventCondition satisfies ObjectClass_basicObjectClass; /* SHORT_NAMED_INTEGER_VALUE */
+const eventCondition = ObjectClass_basicObjectClass_eventCondition; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ObjectClass_basicObjectClass_eventAction
@@ -206,7 +206,7 @@ const ObjectClass_basicObjectClass_eventAction = 6 satisfies ObjectClass_basicOb
  * @type {number}
  */
 export
-const eventAction = ObjectClass_basicObjectClass_eventAction satisfies ObjectClass_basicObjectClass; /* SHORT_NAMED_INTEGER_VALUE */
+const eventAction = ObjectClass_basicObjectClass_eventAction; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ObjectClass_basicObjectClass_eventEnrollment
@@ -228,7 +228,7 @@ const ObjectClass_basicObjectClass_eventEnrollment = 7 satisfies ObjectClass_bas
  * @type {number}
  */
 export
-const eventEnrollment = ObjectClass_basicObjectClass_eventEnrollment satisfies ObjectClass_basicObjectClass; /* SHORT_NAMED_INTEGER_VALUE */
+const eventEnrollment = ObjectClass_basicObjectClass_eventEnrollment; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ObjectClass_basicObjectClass_journal
@@ -250,7 +250,7 @@ const ObjectClass_basicObjectClass_journal = 8 satisfies ObjectClass_basicObject
  * @type {number}
  */
 export
-const journal = ObjectClass_basicObjectClass_journal satisfies ObjectClass_basicObjectClass; /* SHORT_NAMED_INTEGER_VALUE */
+const journal = ObjectClass_basicObjectClass_journal; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ObjectClass_basicObjectClass_domain
@@ -272,7 +272,7 @@ const ObjectClass_basicObjectClass_domain = 9 satisfies ObjectClass_basicObjectC
  * @type {number}
  */
 export
-const domain = ObjectClass_basicObjectClass_domain satisfies ObjectClass_basicObjectClass; /* SHORT_NAMED_INTEGER_VALUE */
+const domain = ObjectClass_basicObjectClass_domain; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ObjectClass_basicObjectClass_programInvocation
@@ -298,7 +298,7 @@ const ObjectClass_basicObjectClass_programInvocation = 10 satisfies ObjectClass_
  * @type {number}
  */
 export
-const programInvocation = ObjectClass_basicObjectClass_programInvocation satisfies ObjectClass_basicObjectClass; /* SHORT_NAMED_INTEGER_VALUE */
+const programInvocation = ObjectClass_basicObjectClass_programInvocation; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ObjectClass_basicObjectClass_operatorStation
@@ -320,7 +320,7 @@ const ObjectClass_basicObjectClass_operatorStation = 11 satisfies ObjectClass_ba
  * @type {number}
  */
 export
-const operatorStation = ObjectClass_basicObjectClass_operatorStation satisfies ObjectClass_basicObjectClass; /* SHORT_NAMED_INTEGER_VALUE */
+const operatorStation = ObjectClass_basicObjectClass_operatorStation; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ObjectClass_basicObjectClass_dataExchange
@@ -344,7 +344,7 @@ const ObjectClass_basicObjectClass_dataExchange = 12 satisfies ObjectClass_basic
  * @type {number}
  */
 export
-const dataExchange = ObjectClass_basicObjectClass_dataExchange satisfies ObjectClass_basicObjectClass; /* SHORT_NAMED_INTEGER_VALUE */
+const dataExchange = ObjectClass_basicObjectClass_dataExchange; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ObjectClass_basicObjectClass_accessControlList
@@ -368,7 +368,7 @@ const ObjectClass_basicObjectClass_accessControlList = 13 satisfies ObjectClass_
  * @type {number}
  */
 export
-const accessControlList = ObjectClass_basicObjectClass_accessControlList satisfies ObjectClass_basicObjectClass; /* SHORT_NAMED_INTEGER_VALUE */
+const accessControlList = ObjectClass_basicObjectClass_accessControlList; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_ObjectClass_basicObjectClass = $._decodeInteger;
 export const _encode_ObjectClass_basicObjectClass = $._encodeInteger;
 

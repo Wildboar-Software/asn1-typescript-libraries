@@ -38,7 +38,7 @@ export const DLPolicy_originator_report_unchanged = 0 satisfies DLPolicy_origina
  * @constant
  * @type {number}
  */
-export const unchanged = DLPolicy_originator_report_unchanged satisfies DLPolicy_originator_report; /* SHORT_NAMED_INTEGER_VALUE */
+export const unchanged = DLPolicy_originator_report_unchanged; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DLPolicy_originator_report_no_report
@@ -52,7 +52,7 @@ export const DLPolicy_originator_report_no_report = 1 satisfies DLPolicy_origina
  * @constant
  * @type {number}
  */
-export const no_report = DLPolicy_originator_report_no_report satisfies DLPolicy_originator_report; /* SHORT_NAMED_INTEGER_VALUE */
+export const no_report = DLPolicy_originator_report_no_report; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DLPolicy_originator_report_report
@@ -66,7 +66,7 @@ export const DLPolicy_originator_report_report = 2 satisfies DLPolicy_originator
  * @constant
  * @type {number}
  */
-export const report = DLPolicy_originator_report_report satisfies DLPolicy_originator_report; /* SHORT_NAMED_INTEGER_VALUE */
+export const report = DLPolicy_originator_report_report; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DLPolicy_originator_report_non_delivery_report
@@ -80,7 +80,7 @@ export const DLPolicy_originator_report_non_delivery_report = 3 satisfies DLPoli
  * @constant
  * @type {number}
  */
-export const non_delivery_report = DLPolicy_originator_report_non_delivery_report satisfies DLPolicy_originator_report; /* SHORT_NAMED_INTEGER_VALUE */
+export const non_delivery_report = DLPolicy_originator_report_non_delivery_report; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_DLPolicy_originator_report = $._decodeInteger;

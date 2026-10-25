@@ -37,7 +37,7 @@ const GlbErrors_other = 0 satisfies GlbErrors; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const other = GlbErrors_other satisfies GlbErrors; /* SHORT_NAMED_INTEGER_VALUE */
+const other = GlbErrors_other; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary GlbErrors_unknownControlBlock
@@ -53,7 +53,7 @@ const GlbErrors_unknownControlBlock = 1 satisfies GlbErrors; /* LONG_NAMED_INTEG
  * @type {number}
  */
 export
-const unknownControlBlock = GlbErrors_unknownControlBlock satisfies GlbErrors; /* SHORT_NAMED_INTEGER_VALUE */
+const unknownControlBlock = GlbErrors_unknownControlBlock; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary GlbErrors_responseTooLarge
@@ -69,7 +69,7 @@ const GlbErrors_responseTooLarge = 2 satisfies GlbErrors; /* LONG_NAMED_INTEGER_
  * @type {number}
  */
 export
-const responseTooLarge = GlbErrors_responseTooLarge satisfies GlbErrors; /* SHORT_NAMED_INTEGER_VALUE */
+const responseTooLarge = GlbErrors_responseTooLarge; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary GlbErrors_controlBlockConfigurationError
@@ -85,7 +85,7 @@ const GlbErrors_controlBlockConfigurationError = 3 satisfies GlbErrors; /* LONG_
  * @type {number}
  */
 export
-const controlBlockConfigurationError = GlbErrors_controlBlockConfigurationError satisfies GlbErrors; /* SHORT_NAMED_INTEGER_VALUE */
+const controlBlockConfigurationError = GlbErrors_controlBlockConfigurationError; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_GlbErrors: $.ASN1Decoder<GlbErrors> = $._decodeInteger;
 export const _encode_GlbErrors: $.ASN1Encoder<GlbErrors> = $._encodeInteger;
 

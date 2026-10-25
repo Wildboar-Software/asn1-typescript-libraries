@@ -53,7 +53,7 @@ export type TerminateError = _enum_for_TerminateError | ENUMERATED;
  * @constant
  * @type {number}
  */
-export const TerminateError_terminationNotAllowed = _enum_for_TerminateError.terminationNotAllowed satisfies TerminateError; /* LONG_NAMED_ENUMERATED_VALUE */
+export const TerminateError_terminationNotAllowed = _enum_for_TerminateError.terminationNotAllowed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -66,7 +66,7 @@ export const TerminateError_terminationNotAllowed = _enum_for_TerminateError.ter
  * @constant
  * @type {number}
  */
-export const terminationNotAllowed = TerminateError_terminationNotAllowed satisfies TerminateError; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const terminationNotAllowed = TerminateError_terminationNotAllowed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -79,7 +79,7 @@ export const terminationNotAllowed = TerminateError_terminationNotAllowed satisf
  * @constant
  * @type {number}
  */
-export const TerminateError_invalidSessionType = _enum_for_TerminateError.invalidSessionType satisfies TerminateError; /* LONG_NAMED_ENUMERATED_VALUE */
+export const TerminateError_invalidSessionType = _enum_for_TerminateError.invalidSessionType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -92,7 +92,7 @@ export const TerminateError_invalidSessionType = _enum_for_TerminateError.invali
  * @constant
  * @type {number}
  */
-export const invalidSessionType = TerminateError_invalidSessionType satisfies TerminateError; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const invalidSessionType = TerminateError_invalidSessionType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -105,7 +105,7 @@ export const invalidSessionType = TerminateError_invalidSessionType satisfies Te
  * @constant
  * @type {number}
  */
-export const TerminateError_invalidSessionId = _enum_for_TerminateError.invalidSessionId satisfies TerminateError; /* LONG_NAMED_ENUMERATED_VALUE */
+export const TerminateError_invalidSessionId = _enum_for_TerminateError.invalidSessionId; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -118,7 +118,7 @@ export const TerminateError_invalidSessionId = _enum_for_TerminateError.invalidS
  * @constant
  * @type {number}
  */
-export const invalidSessionId = TerminateError_invalidSessionId satisfies TerminateError; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const invalidSessionId = TerminateError_invalidSessionId; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 

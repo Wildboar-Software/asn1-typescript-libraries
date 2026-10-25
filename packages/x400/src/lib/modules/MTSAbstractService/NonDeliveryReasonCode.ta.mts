@@ -46,7 +46,7 @@ export const NonDeliveryReasonCode_transfer_failure = 0 satisfies NonDeliveryRea
  * @constant
  * @type {number}
  */
-export const transfer_failure = NonDeliveryReasonCode_transfer_failure satisfies NonDeliveryReasonCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const transfer_failure = NonDeliveryReasonCode_transfer_failure; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NonDeliveryReasonCode_unable_to_transfer
@@ -60,7 +60,7 @@ export const NonDeliveryReasonCode_unable_to_transfer = 1 satisfies NonDeliveryR
  * @constant
  * @type {number}
  */
-export const unable_to_transfer = NonDeliveryReasonCode_unable_to_transfer satisfies NonDeliveryReasonCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const unable_to_transfer = NonDeliveryReasonCode_unable_to_transfer; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NonDeliveryReasonCode_conversion_not_performed
@@ -74,7 +74,7 @@ export const NonDeliveryReasonCode_conversion_not_performed = 2 satisfies NonDel
  * @constant
  * @type {number}
  */
-export const conversion_not_performed = NonDeliveryReasonCode_conversion_not_performed satisfies NonDeliveryReasonCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const conversion_not_performed = NonDeliveryReasonCode_conversion_not_performed; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NonDeliveryReasonCode_physical_rendition_not_performed
@@ -88,7 +88,7 @@ export const NonDeliveryReasonCode_physical_rendition_not_performed = 3 satisfie
  * @constant
  * @type {number}
  */
-export const physical_rendition_not_performed = NonDeliveryReasonCode_physical_rendition_not_performed satisfies NonDeliveryReasonCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const physical_rendition_not_performed = NonDeliveryReasonCode_physical_rendition_not_performed; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NonDeliveryReasonCode_physical_delivery_not_performed
@@ -102,7 +102,7 @@ export const NonDeliveryReasonCode_physical_delivery_not_performed = 4 satisfies
  * @constant
  * @type {number}
  */
-export const physical_delivery_not_performed = NonDeliveryReasonCode_physical_delivery_not_performed satisfies NonDeliveryReasonCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const physical_delivery_not_performed = NonDeliveryReasonCode_physical_delivery_not_performed; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NonDeliveryReasonCode_restricted_delivery
@@ -116,7 +116,7 @@ export const NonDeliveryReasonCode_restricted_delivery = 5 satisfies NonDelivery
  * @constant
  * @type {number}
  */
-export const restricted_delivery = NonDeliveryReasonCode_restricted_delivery satisfies NonDeliveryReasonCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const restricted_delivery = NonDeliveryReasonCode_restricted_delivery; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NonDeliveryReasonCode_directory_operation_unsuccessful
@@ -130,7 +130,7 @@ export const NonDeliveryReasonCode_directory_operation_unsuccessful = 6 satisfie
  * @constant
  * @type {number}
  */
-export const directory_operation_unsuccessful = NonDeliveryReasonCode_directory_operation_unsuccessful satisfies NonDeliveryReasonCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const directory_operation_unsuccessful = NonDeliveryReasonCode_directory_operation_unsuccessful; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NonDeliveryReasonCode_deferred_delivery_not_performed
@@ -144,7 +144,7 @@ export const NonDeliveryReasonCode_deferred_delivery_not_performed = 7 satisfies
  * @constant
  * @type {number}
  */
-export const deferred_delivery_not_performed = NonDeliveryReasonCode_deferred_delivery_not_performed satisfies NonDeliveryReasonCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const deferred_delivery_not_performed = NonDeliveryReasonCode_deferred_delivery_not_performed; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NonDeliveryReasonCode_transfer_failure_for_security_reason
@@ -158,7 +158,7 @@ export const NonDeliveryReasonCode_transfer_failure_for_security_reason = 8 sati
  * @constant
  * @type {number}
  */
-export const transfer_failure_for_security_reason = NonDeliveryReasonCode_transfer_failure_for_security_reason satisfies NonDeliveryReasonCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const transfer_failure_for_security_reason = NonDeliveryReasonCode_transfer_failure_for_security_reason; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_NonDeliveryReasonCode = $._decodeInteger;

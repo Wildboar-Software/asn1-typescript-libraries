@@ -49,7 +49,7 @@ const DiagnosticCltuThrowEvent_specific_operationNotSupported = 0 satisfies Diag
  * @type {number}
  */
 export
-const operationNotSupported = DiagnosticCltuThrowEvent_specific_operationNotSupported satisfies DiagnosticCltuThrowEvent_specific; /* SHORT_NAMED_INTEGER_VALUE */
+const operationNotSupported = DiagnosticCltuThrowEvent_specific_operationNotSupported; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagnosticCltuThrowEvent_specific_eventInvocIdOutOfSequence
@@ -74,7 +74,7 @@ const DiagnosticCltuThrowEvent_specific_eventInvocIdOutOfSequence = 1 satisfies 
  * @type {number}
  */
 export
-const eventInvocIdOutOfSequence = DiagnosticCltuThrowEvent_specific_eventInvocIdOutOfSequence satisfies DiagnosticCltuThrowEvent_specific; /* SHORT_NAMED_INTEGER_VALUE */
+const eventInvocIdOutOfSequence = DiagnosticCltuThrowEvent_specific_eventInvocIdOutOfSequence; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagnosticCltuThrowEvent_specific_noSuchEvent
@@ -98,7 +98,7 @@ const DiagnosticCltuThrowEvent_specific_noSuchEvent = 2 satisfies DiagnosticCltu
  * @type {number}
  */
 export
-const noSuchEvent = DiagnosticCltuThrowEvent_specific_noSuchEvent satisfies DiagnosticCltuThrowEvent_specific; /* SHORT_NAMED_INTEGER_VALUE */
+const noSuchEvent = DiagnosticCltuThrowEvent_specific_noSuchEvent; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_DiagnosticCltuThrowEvent_specific: $.ASN1Decoder<DiagnosticCltuThrowEvent_specific> = $._decodeInteger;
 export const _encode_DiagnosticCltuThrowEvent_specific: $.ASN1Encoder<DiagnosticCltuThrowEvent_specific> = $._encodeInteger;
 

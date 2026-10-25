@@ -36,7 +36,7 @@ export const CBEFFVersion_cbeff_major_version2 = 2 satisfies CBEFFVersion_cbeff_
  * @constant
  * @type {number}
  */
-export const version2 = CBEFFVersion_cbeff_major_version2 satisfies CBEFFVersion_cbeff_major; /* SHORT_NAMED_INTEGER_VALUE */
+export const version2 = CBEFFVersion_cbeff_major_version2; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_CBEFFVersion_cbeff_major = $._decodeInteger;

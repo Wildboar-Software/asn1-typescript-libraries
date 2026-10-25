@@ -39,7 +39,7 @@ export const RetrievalStatus_new_ = 0 satisfies RetrievalStatus; /* LONG_NAMED_I
  * @constant
  * @type {number}
  */
-export const new_ = RetrievalStatus_new_ satisfies RetrievalStatus; /* SHORT_NAMED_INTEGER_VALUE */
+export const new_ = RetrievalStatus_new_; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RetrievalStatus_listed
@@ -53,7 +53,7 @@ export const RetrievalStatus_listed = 1 satisfies RetrievalStatus; /* LONG_NAMED
  * @constant
  * @type {number}
  */
-export const listed = RetrievalStatus_listed satisfies RetrievalStatus; /* SHORT_NAMED_INTEGER_VALUE */
+export const listed = RetrievalStatus_listed; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RetrievalStatus_processed
@@ -67,7 +67,7 @@ export const RetrievalStatus_processed = 2 satisfies RetrievalStatus; /* LONG_NA
  * @constant
  * @type {number}
  */
-export const processed = RetrievalStatus_processed satisfies RetrievalStatus; /* SHORT_NAMED_INTEGER_VALUE */
+export const processed = RetrievalStatus_processed; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_RetrievalStatus = $._decodeInteger;

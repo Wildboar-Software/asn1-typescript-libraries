@@ -56,7 +56,7 @@ const ParamValueList_deliveryControl_none = 0 satisfies ParamValueList_deliveryC
  * @type {number}
  */
 export
-const none = ParamValueList_deliveryControl_none satisfies ParamValueList_deliveryControl; /* SHORT_NAMED_INTEGER_VALUE */
+const none = ParamValueList_deliveryControl_none; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParamValueList_deliveryControl_simple
@@ -78,7 +78,7 @@ const ParamValueList_deliveryControl_simple = 1 satisfies ParamValueList_deliver
  * @type {number}
  */
 export
-const simple = ParamValueList_deliveryControl_simple satisfies ParamValueList_deliveryControl; /* SHORT_NAMED_INTEGER_VALUE */
+const simple = ParamValueList_deliveryControl_simple; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParamValueList_deliveryControl_quarantine
@@ -102,7 +102,7 @@ const ParamValueList_deliveryControl_quarantine = 2 satisfies ParamValueList_del
  * @type {number}
  */
 export
-const quarantine = ParamValueList_deliveryControl_quarantine satisfies ParamValueList_deliveryControl; /* SHORT_NAMED_INTEGER_VALUE */
+const quarantine = ParamValueList_deliveryControl_quarantine; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_ParamValueList_deliveryControl = $._decodeInteger;
 export const _encode_ParamValueList_deliveryControl = $._encodeInteger;
 

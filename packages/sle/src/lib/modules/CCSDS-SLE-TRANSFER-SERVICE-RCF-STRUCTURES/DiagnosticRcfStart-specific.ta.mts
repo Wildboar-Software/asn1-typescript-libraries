@@ -57,7 +57,7 @@ const DiagnosticRcfStart_specific_outOfService = 0 satisfies DiagnosticRcfStart_
  * @type {number}
  */
 export
-const outOfService = DiagnosticRcfStart_specific_outOfService satisfies DiagnosticRcfStart_specific; /* SHORT_NAMED_INTEGER_VALUE */
+const outOfService = DiagnosticRcfStart_specific_outOfService; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagnosticRcfStart_specific_unableToComply
@@ -84,7 +84,7 @@ const DiagnosticRcfStart_specific_unableToComply = 1 satisfies DiagnosticRcfStar
  * @type {number}
  */
 export
-const unableToComply = DiagnosticRcfStart_specific_unableToComply satisfies DiagnosticRcfStart_specific; /* SHORT_NAMED_INTEGER_VALUE */
+const unableToComply = DiagnosticRcfStart_specific_unableToComply; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagnosticRcfStart_specific_invalidStartTime
@@ -111,7 +111,7 @@ const DiagnosticRcfStart_specific_invalidStartTime = 2 satisfies DiagnosticRcfSt
  * @type {number}
  */
 export
-const invalidStartTime = DiagnosticRcfStart_specific_invalidStartTime satisfies DiagnosticRcfStart_specific; /* SHORT_NAMED_INTEGER_VALUE */
+const invalidStartTime = DiagnosticRcfStart_specific_invalidStartTime; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagnosticRcfStart_specific_invalidStopTime
@@ -138,7 +138,7 @@ const DiagnosticRcfStart_specific_invalidStopTime = 3 satisfies DiagnosticRcfSta
  * @type {number}
  */
 export
-const invalidStopTime = DiagnosticRcfStart_specific_invalidStopTime satisfies DiagnosticRcfStart_specific; /* SHORT_NAMED_INTEGER_VALUE */
+const invalidStopTime = DiagnosticRcfStart_specific_invalidStopTime; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagnosticRcfStart_specific_missingTimeValue
@@ -164,7 +164,7 @@ const DiagnosticRcfStart_specific_missingTimeValue = 4 satisfies DiagnosticRcfSt
  * @type {number}
  */
 export
-const missingTimeValue = DiagnosticRcfStart_specific_missingTimeValue satisfies DiagnosticRcfStart_specific; /* SHORT_NAMED_INTEGER_VALUE */
+const missingTimeValue = DiagnosticRcfStart_specific_missingTimeValue; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagnosticRcfStart_specific_invalidGvcid
@@ -193,7 +193,7 @@ const DiagnosticRcfStart_specific_invalidGvcid = 5 satisfies DiagnosticRcfStart_
  * @type {number}
  */
 export
-const invalidGvcid = DiagnosticRcfStart_specific_invalidGvcid satisfies DiagnosticRcfStart_specific; /* SHORT_NAMED_INTEGER_VALUE */
+const invalidGvcid = DiagnosticRcfStart_specific_invalidGvcid; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_DiagnosticRcfStart_specific: $.ASN1Decoder<DiagnosticRcfStart_specific> = $._decodeInteger;
 export const _encode_DiagnosticRcfStart_specific: $.ASN1Encoder<DiagnosticRcfStart_specific> = $._encodeInteger;
 

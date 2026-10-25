@@ -51,7 +51,7 @@ export const AttributeProblem_noSuchAttributeOrValue = 1 satisfies AttributeProb
  * @constant
  * @type {number}
  */
-export const noSuchAttributeOrValue = AttributeProblem_noSuchAttributeOrValue satisfies AttributeProblem; /* SHORT_NAMED_INTEGER_VALUE */
+export const noSuchAttributeOrValue = AttributeProblem_noSuchAttributeOrValue; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AttributeProblem_invalidAttributeSyntax
@@ -73,7 +73,7 @@ export const AttributeProblem_invalidAttributeSyntax = 2 satisfies AttributeProb
  * @constant
  * @type {number}
  */
-export const invalidAttributeSyntax = AttributeProblem_invalidAttributeSyntax satisfies AttributeProblem; /* SHORT_NAMED_INTEGER_VALUE */
+export const invalidAttributeSyntax = AttributeProblem_invalidAttributeSyntax; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AttributeProblem_undefinedAttributeType
@@ -95,7 +95,7 @@ export const AttributeProblem_undefinedAttributeType = 3 satisfies AttributeProb
  * @constant
  * @type {number}
  */
-export const undefinedAttributeType = AttributeProblem_undefinedAttributeType satisfies AttributeProblem; /* SHORT_NAMED_INTEGER_VALUE */
+export const undefinedAttributeType = AttributeProblem_undefinedAttributeType; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AttributeProblem_inappropriateMatching
@@ -117,7 +117,7 @@ export const AttributeProblem_inappropriateMatching = 4 satisfies AttributeProbl
  * @constant
  * @type {number}
  */
-export const inappropriateMatching = AttributeProblem_inappropriateMatching satisfies AttributeProblem; /* SHORT_NAMED_INTEGER_VALUE */
+export const inappropriateMatching = AttributeProblem_inappropriateMatching; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AttributeProblem_constraintViolation
@@ -139,7 +139,7 @@ export const AttributeProblem_constraintViolation = 5 satisfies AttributeProblem
  * @constant
  * @type {number}
  */
-export const constraintViolation = AttributeProblem_constraintViolation satisfies AttributeProblem; /* SHORT_NAMED_INTEGER_VALUE */
+export const constraintViolation = AttributeProblem_constraintViolation; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AttributeProblem_attributeOrValueAlreadyExists
@@ -161,7 +161,7 @@ export const AttributeProblem_attributeOrValueAlreadyExists = 6 satisfies Attrib
  * @constant
  * @type {number}
  */
-export const attributeOrValueAlreadyExists = AttributeProblem_attributeOrValueAlreadyExists satisfies AttributeProblem; /* SHORT_NAMED_INTEGER_VALUE */
+export const attributeOrValueAlreadyExists = AttributeProblem_attributeOrValueAlreadyExists; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AttributeProblem_contextViolation
@@ -183,7 +183,7 @@ export const AttributeProblem_contextViolation = 7 satisfies AttributeProblem; /
  * @constant
  * @type {number}
  */
-export const contextViolation = AttributeProblem_contextViolation satisfies AttributeProblem; /* SHORT_NAMED_INTEGER_VALUE */
+export const contextViolation = AttributeProblem_contextViolation; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_AttributeProblem = $._decodeInteger;

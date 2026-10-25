@@ -54,7 +54,7 @@ const ProximityOperator_relationType_lessThan = 1 satisfies ProximityOperator_re
  * @type {number}
  */
 export
-const lessThan = ProximityOperator_relationType_lessThan satisfies ProximityOperator_relationType; /* SHORT_NAMED_INTEGER_VALUE */
+const lessThan = ProximityOperator_relationType_lessThan; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProximityOperator_relationType_lessThanOrEqual
@@ -80,7 +80,7 @@ const ProximityOperator_relationType_lessThanOrEqual = 2 satisfies ProximityOper
  * @type {number}
  */
 export
-const lessThanOrEqual = ProximityOperator_relationType_lessThanOrEqual satisfies ProximityOperator_relationType; /* SHORT_NAMED_INTEGER_VALUE */
+const lessThanOrEqual = ProximityOperator_relationType_lessThanOrEqual; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProximityOperator_relationType_equal
@@ -106,7 +106,7 @@ const ProximityOperator_relationType_equal = 3 satisfies ProximityOperator_relat
  * @type {number}
  */
 export
-const equal = ProximityOperator_relationType_equal satisfies ProximityOperator_relationType; /* SHORT_NAMED_INTEGER_VALUE */
+const equal = ProximityOperator_relationType_equal; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProximityOperator_relationType_greaterThanOrEqual
@@ -132,7 +132,7 @@ const ProximityOperator_relationType_greaterThanOrEqual = 4 satisfies ProximityO
  * @type {number}
  */
 export
-const greaterThanOrEqual = ProximityOperator_relationType_greaterThanOrEqual satisfies ProximityOperator_relationType; /* SHORT_NAMED_INTEGER_VALUE */
+const greaterThanOrEqual = ProximityOperator_relationType_greaterThanOrEqual; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProximityOperator_relationType_greaterThan
@@ -158,7 +158,7 @@ const ProximityOperator_relationType_greaterThan = 5 satisfies ProximityOperator
  * @type {number}
  */
 export
-const greaterThan = ProximityOperator_relationType_greaterThan satisfies ProximityOperator_relationType; /* SHORT_NAMED_INTEGER_VALUE */
+const greaterThan = ProximityOperator_relationType_greaterThan; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProximityOperator_relationType_notEqual
@@ -184,7 +184,7 @@ const ProximityOperator_relationType_notEqual = 6 satisfies ProximityOperator_re
  * @type {number}
  */
 export
-const notEqual = ProximityOperator_relationType_notEqual satisfies ProximityOperator_relationType; /* SHORT_NAMED_INTEGER_VALUE */
+const notEqual = ProximityOperator_relationType_notEqual; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_ProximityOperator_relationType: $.ASN1Decoder<ProximityOperator_relationType> = $._decodeInteger;
 export const _encode_ProximityOperator_relationType: $.ASN1Encoder<ProximityOperator_relationType> = $._encodeInteger;
 

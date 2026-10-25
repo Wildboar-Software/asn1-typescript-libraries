@@ -56,7 +56,7 @@ type IRI_Parameters_initiator = _enum_for_IRI_Parameters_initiator | ENUMERATED;
  * @type {number}
  */
 export
-const IRI_Parameters_initiator_not_Available = _enum_for_IRI_Parameters_initiator.not_Available satisfies IRI_Parameters_initiator; /* LONG_NAMED_ENUMERATED_VALUE */
+const IRI_Parameters_initiator_not_Available = _enum_for_IRI_Parameters_initiator.not_Available; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary not_Available
@@ -67,7 +67,7 @@ const IRI_Parameters_initiator_not_Available = _enum_for_IRI_Parameters_initiato
  * @type {number}
  */
 export
-const not_Available = IRI_Parameters_initiator_not_Available satisfies IRI_Parameters_initiator; /* SHORT_NAMED_ENUMERATED_VALUE */
+const not_Available = IRI_Parameters_initiator_not_Available; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary IRI_Parameters_initiator_originating_Target
@@ -80,7 +80,7 @@ const not_Available = IRI_Parameters_initiator_not_Available satisfies IRI_Param
  * @type {number}
  */
 export
-const IRI_Parameters_initiator_originating_Target = _enum_for_IRI_Parameters_initiator.originating_Target satisfies IRI_Parameters_initiator; /* LONG_NAMED_ENUMERATED_VALUE */
+const IRI_Parameters_initiator_originating_Target = _enum_for_IRI_Parameters_initiator.originating_Target; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary originating_Target
@@ -91,7 +91,7 @@ const IRI_Parameters_initiator_originating_Target = _enum_for_IRI_Parameters_ini
  * @type {number}
  */
 export
-const originating_Target = IRI_Parameters_initiator_originating_Target satisfies IRI_Parameters_initiator; /* SHORT_NAMED_ENUMERATED_VALUE */
+const originating_Target = IRI_Parameters_initiator_originating_Target; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary IRI_Parameters_initiator_network_initiated
@@ -103,7 +103,7 @@ const originating_Target = IRI_Parameters_initiator_originating_Target satisfies
  * @type {number}
  */
 export
-const IRI_Parameters_initiator_network_initiated = _enum_for_IRI_Parameters_initiator.network_initiated satisfies IRI_Parameters_initiator; /* LONG_NAMED_ENUMERATED_VALUE */
+const IRI_Parameters_initiator_network_initiated = _enum_for_IRI_Parameters_initiator.network_initiated; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary network_initiated
@@ -114,7 +114,7 @@ const IRI_Parameters_initiator_network_initiated = _enum_for_IRI_Parameters_init
  * @type {number}
  */
 export
-const network_initiated = IRI_Parameters_initiator_network_initiated satisfies IRI_Parameters_initiator; /* SHORT_NAMED_ENUMERATED_VALUE */
+const network_initiated = IRI_Parameters_initiator_network_initiated; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary IRI_Parameters_initiator_off_online_action
@@ -127,7 +127,7 @@ const network_initiated = IRI_Parameters_initiator_network_initiated satisfies I
  * @type {number}
  */
 export
-const IRI_Parameters_initiator_off_online_action = _enum_for_IRI_Parameters_initiator.off_online_action satisfies IRI_Parameters_initiator; /* LONG_NAMED_ENUMERATED_VALUE */
+const IRI_Parameters_initiator_off_online_action = _enum_for_IRI_Parameters_initiator.off_online_action; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary off_online_action
@@ -138,7 +138,7 @@ const IRI_Parameters_initiator_off_online_action = _enum_for_IRI_Parameters_init
  * @type {number}
  */
 export
-const off_online_action = IRI_Parameters_initiator_off_online_action satisfies IRI_Parameters_initiator; /* SHORT_NAMED_ENUMERATED_VALUE */
+const off_online_action = IRI_Parameters_initiator_off_online_action; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_IRI_Parameters_initiator: $.ASN1Decoder<IRI_Parameters_initiator> = $._decodeEnumerated;
 export const _encode_IRI_Parameters_initiator: $.ASN1Encoder<IRI_Parameters_initiator> = $._encodeEnumerated;
 

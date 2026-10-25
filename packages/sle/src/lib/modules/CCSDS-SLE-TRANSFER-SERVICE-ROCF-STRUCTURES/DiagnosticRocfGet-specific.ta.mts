@@ -51,7 +51,7 @@ const DiagnosticRocfGet_specific_unknownParameter = 0 satisfies DiagnosticRocfGe
  * @type {number}
  */
 export
-const unknownParameter = DiagnosticRocfGet_specific_unknownParameter satisfies DiagnosticRocfGet_specific; /* SHORT_NAMED_INTEGER_VALUE */
+const unknownParameter = DiagnosticRocfGet_specific_unknownParameter; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_DiagnosticRocfGet_specific: $.ASN1Decoder<DiagnosticRocfGet_specific> = $._decodeInteger;
 export const _encode_DiagnosticRocfGet_specific: $.ASN1Encoder<DiagnosticRocfGet_specific> = $._encodeInteger;
 

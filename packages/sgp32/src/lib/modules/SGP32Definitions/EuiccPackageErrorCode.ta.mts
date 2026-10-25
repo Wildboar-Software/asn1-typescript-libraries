@@ -50,7 +50,7 @@ const EuiccPackageErrorCode_invalidEid = 3 satisfies EuiccPackageErrorCode; /* L
  * eidValue does not match this eUICC's EID (SGP.32 v1.2, section 5.9.1).
  */
 export
-const invalidEid = EuiccPackageErrorCode_invalidEid satisfies EuiccPackageErrorCode; /* SHORT_NAMED_INTEGER_VALUE */
+const invalidEid = EuiccPackageErrorCode_invalidEid; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EuiccPackageErrorCode_replayError
@@ -73,7 +73,7 @@ const EuiccPackageErrorCode_replayError = 4 satisfies EuiccPackageErrorCode; /* 
  * (SGP.32 v1.2, section 5.9.1).
  */
 export
-const replayError = EuiccPackageErrorCode_replayError satisfies EuiccPackageErrorCode; /* SHORT_NAMED_INTEGER_VALUE */
+const replayError = EuiccPackageErrorCode_replayError; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EuiccPackageErrorCode_counterValueOutOfRange
@@ -96,7 +96,7 @@ const EuiccPackageErrorCode_counterValueOutOfRange = 6 satisfies EuiccPackageErr
  * 2.11.1.1).
  */
 export
-const counterValueOutOfRange = EuiccPackageErrorCode_counterValueOutOfRange satisfies EuiccPackageErrorCode; /* SHORT_NAMED_INTEGER_VALUE */
+const counterValueOutOfRange = EuiccPackageErrorCode_counterValueOutOfRange; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EuiccPackageErrorCode_sizeOverflow
@@ -118,7 +118,7 @@ const EuiccPackageErrorCode_sizeOverflow = 15 satisfies EuiccPackageErrorCode; /
  * the condition that produces it.
  */
 export
-const sizeOverflow = EuiccPackageErrorCode_sizeOverflow satisfies EuiccPackageErrorCode; /* SHORT_NAMED_INTEGER_VALUE */
+const sizeOverflow = EuiccPackageErrorCode_sizeOverflow; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EuiccPackageErrorCode_ecallActive
@@ -141,7 +141,7 @@ const EuiccPackageErrorCode_ecallActive = 104 satisfies EuiccPackageErrorCode; /
  * v1.2, section 2.11.2.1).
  */
 export
-const ecallActive = EuiccPackageErrorCode_ecallActive satisfies EuiccPackageErrorCode; /* SHORT_NAMED_INTEGER_VALUE */
+const ecallActive = EuiccPackageErrorCode_ecallActive; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EuiccPackageErrorCode_undefinedError
@@ -163,7 +163,7 @@ const EuiccPackageErrorCode_undefinedError = 127 satisfies EuiccPackageErrorCode
  * the condition that produces it.
  */
 export
-const undefinedError = EuiccPackageErrorCode_undefinedError satisfies EuiccPackageErrorCode; /* SHORT_NAMED_INTEGER_VALUE */
+const undefinedError = EuiccPackageErrorCode_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_EuiccPackageErrorCode: $.ASN1Decoder<EuiccPackageErrorCode> = $._decodeInteger;
 export const _encode_EuiccPackageErrorCode: $.ASN1Encoder<EuiccPackageErrorCode> = $._encodeInteger;
 

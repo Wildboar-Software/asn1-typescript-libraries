@@ -89,7 +89,7 @@ const GuidanceInfo = _enum_for_GuidanceInfo;
  * @type {number}
  */
 export
-const GuidanceInfo_enterPW = GuidanceInfo.enterPW satisfies GuidanceInfo; /* LONG_NAMED_ENUMERATED_VALUE */
+const GuidanceInfo_enterPW = GuidanceInfo.enterPW; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary enterPW
@@ -101,7 +101,7 @@ const GuidanceInfo_enterPW = GuidanceInfo.enterPW satisfies GuidanceInfo; /* LON
  * @type {number}
  */
 export
-const enterPW = GuidanceInfo.enterPW satisfies GuidanceInfo; /* SHORT_NAMED_ENUMERATED_VALUE */
+const enterPW = GuidanceInfo.enterPW; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary GuidanceInfo_enterNewPW
@@ -114,7 +114,7 @@ const enterPW = GuidanceInfo.enterPW satisfies GuidanceInfo; /* SHORT_NAMED_ENUM
  * @type {number}
  */
 export
-const GuidanceInfo_enterNewPW = GuidanceInfo.enterNewPW satisfies GuidanceInfo; /* LONG_NAMED_ENUMERATED_VALUE */
+const GuidanceInfo_enterNewPW = GuidanceInfo.enterNewPW; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary enterNewPW
@@ -127,7 +127,7 @@ const GuidanceInfo_enterNewPW = GuidanceInfo.enterNewPW satisfies GuidanceInfo; 
  * @type {number}
  */
 export
-const enterNewPW = GuidanceInfo.enterNewPW satisfies GuidanceInfo; /* SHORT_NAMED_ENUMERATED_VALUE */
+const enterNewPW = GuidanceInfo.enterNewPW; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary GuidanceInfo_enterNewPW_Again
@@ -140,7 +140,7 @@ const enterNewPW = GuidanceInfo.enterNewPW satisfies GuidanceInfo; /* SHORT_NAME
  * @type {number}
  */
 export
-const GuidanceInfo_enterNewPW_Again = GuidanceInfo.enterNewPW_Again satisfies GuidanceInfo; /* LONG_NAMED_ENUMERATED_VALUE */
+const GuidanceInfo_enterNewPW_Again = GuidanceInfo.enterNewPW_Again; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary enterNewPW_Again
@@ -153,7 +153,7 @@ const GuidanceInfo_enterNewPW_Again = GuidanceInfo.enterNewPW_Again satisfies Gu
  * @type {number}
  */
 export
-const enterNewPW_Again = GuidanceInfo.enterNewPW_Again satisfies GuidanceInfo; /* SHORT_NAMED_ENUMERATED_VALUE */
+const enterNewPW_Again = GuidanceInfo.enterNewPW_Again; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) GuidanceInfo

@@ -48,7 +48,7 @@ const SetFallbackAttributeResult_ok = 0 satisfies SetFallbackAttributeResult; /*
  * @type {number}
  */
 export
-const ok = SetFallbackAttributeResult_ok satisfies SetFallbackAttributeResult; /* SHORT_NAMED_INTEGER_VALUE */
+const ok = SetFallbackAttributeResult_ok; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SetFallbackAttributeResult_iccidOrAidNotFound
@@ -70,7 +70,7 @@ const SetFallbackAttributeResult_iccidOrAidNotFound = 1 satisfies SetFallbackAtt
  * @type {number}
  */
 export
-const iccidOrAidNotFound = SetFallbackAttributeResult_iccidOrAidNotFound satisfies SetFallbackAttributeResult; /* SHORT_NAMED_INTEGER_VALUE */
+const iccidOrAidNotFound = SetFallbackAttributeResult_iccidOrAidNotFound; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SetFallbackAttributeResult_fallbackNotAllowed
@@ -91,7 +91,7 @@ const SetFallbackAttributeResult_fallbackNotAllowed = 2 satisfies SetFallbackAtt
  * @type {number}
  */
 export
-const fallbackNotAllowed = SetFallbackAttributeResult_fallbackNotAllowed satisfies SetFallbackAttributeResult; /* SHORT_NAMED_INTEGER_VALUE */
+const fallbackNotAllowed = SetFallbackAttributeResult_fallbackNotAllowed; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SetFallbackAttributeResult_fallbackProfileEnabled
@@ -112,7 +112,7 @@ const SetFallbackAttributeResult_fallbackProfileEnabled = 3 satisfies SetFallbac
  * @type {number}
  */
 export
-const fallbackProfileEnabled = SetFallbackAttributeResult_fallbackProfileEnabled satisfies SetFallbackAttributeResult; /* SHORT_NAMED_INTEGER_VALUE */
+const fallbackProfileEnabled = SetFallbackAttributeResult_fallbackProfileEnabled; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SetFallbackAttributeResult_undefinedError
@@ -133,7 +133,7 @@ const SetFallbackAttributeResult_undefinedError = 127 satisfies SetFallbackAttri
  * @type {number}
  */
 export
-const undefinedError = SetFallbackAttributeResult_undefinedError satisfies SetFallbackAttributeResult; /* SHORT_NAMED_INTEGER_VALUE */
+const undefinedError = SetFallbackAttributeResult_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_SetFallbackAttributeResult: $.ASN1Decoder<SetFallbackAttributeResult> = $._decodeInteger;
 export const _encode_SetFallbackAttributeResult: $.ASN1Encoder<SetFallbackAttributeResult> = $._encodeInteger;
 

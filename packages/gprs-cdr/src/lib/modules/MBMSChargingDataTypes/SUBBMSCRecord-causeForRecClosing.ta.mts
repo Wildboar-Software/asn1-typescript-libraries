@@ -78,7 +78,7 @@ const SUBBMSCRecord_causeForRecClosing_normalRelease = 0 satisfies SUBBMSCRecord
  * @type {number}
  */
 export
-const normalRelease = SUBBMSCRecord_causeForRecClosing_normalRelease satisfies SUBBMSCRecord_causeForRecClosing; /* SHORT_NAMED_INTEGER_VALUE */
+const normalRelease = SUBBMSCRecord_causeForRecClosing_normalRelease; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SUBBMSCRecord_causeForRecClosing_abnormalRelease
@@ -110,7 +110,7 @@ const SUBBMSCRecord_causeForRecClosing_abnormalRelease = 4 satisfies SUBBMSCReco
  * @type {number}
  */
 export
-const abnormalRelease = SUBBMSCRecord_causeForRecClosing_abnormalRelease satisfies SUBBMSCRecord_causeForRecClosing; /* SHORT_NAMED_INTEGER_VALUE */
+const abnormalRelease = SUBBMSCRecord_causeForRecClosing_abnormalRelease; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SUBBMSCRecord_causeForRecClosing_volumeLimit
@@ -142,7 +142,7 @@ const SUBBMSCRecord_causeForRecClosing_volumeLimit = 16 satisfies SUBBMSCRecord_
  * @type {number}
  */
 export
-const volumeLimit = SUBBMSCRecord_causeForRecClosing_volumeLimit satisfies SUBBMSCRecord_causeForRecClosing; /* SHORT_NAMED_INTEGER_VALUE */
+const volumeLimit = SUBBMSCRecord_causeForRecClosing_volumeLimit; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SUBBMSCRecord_causeForRecClosing_timeLimit
@@ -174,7 +174,7 @@ const SUBBMSCRecord_causeForRecClosing_timeLimit = 17 satisfies SUBBMSCRecord_ca
  * @type {number}
  */
 export
-const timeLimit = SUBBMSCRecord_causeForRecClosing_timeLimit satisfies SUBBMSCRecord_causeForRecClosing; /* SHORT_NAMED_INTEGER_VALUE */
+const timeLimit = SUBBMSCRecord_causeForRecClosing_timeLimit; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SUBBMSCRecord_causeForRecClosing_maxChangeCond
@@ -206,7 +206,7 @@ const SUBBMSCRecord_causeForRecClosing_maxChangeCond = 19 satisfies SUBBMSCRecor
  * @type {number}
  */
 export
-const maxChangeCond = SUBBMSCRecord_causeForRecClosing_maxChangeCond satisfies SUBBMSCRecord_causeForRecClosing; /* SHORT_NAMED_INTEGER_VALUE */
+const maxChangeCond = SUBBMSCRecord_causeForRecClosing_maxChangeCond; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SUBBMSCRecord_causeForRecClosing_managementIntervention
@@ -236,7 +236,7 @@ const SUBBMSCRecord_causeForRecClosing_managementIntervention = 20 satisfies SUB
  * @type {number}
  */
 export
-const managementIntervention = SUBBMSCRecord_causeForRecClosing_managementIntervention satisfies SUBBMSCRecord_causeForRecClosing; /* SHORT_NAMED_INTEGER_VALUE */
+const managementIntervention = SUBBMSCRecord_causeForRecClosing_managementIntervention; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SUBBMSCRecord_causeForRecClosing_listofDownstreamNodeChange
@@ -268,7 +268,7 @@ const SUBBMSCRecord_causeForRecClosing_listofDownstreamNodeChange = 59 satisfies
  * @type {number}
  */
 export
-const listofDownstreamNodeChange = SUBBMSCRecord_causeForRecClosing_listofDownstreamNodeChange satisfies SUBBMSCRecord_causeForRecClosing; /* SHORT_NAMED_INTEGER_VALUE */
+const listofDownstreamNodeChange = SUBBMSCRecord_causeForRecClosing_listofDownstreamNodeChange; /* SHORT_NAMED_INTEGER_VALUE */
 
 export
 const _decode_SUBBMSCRecord_causeForRecClosing: $.ASN1Decoder<SUBBMSCRecord_causeForRecClosing> = $._decodeInteger;

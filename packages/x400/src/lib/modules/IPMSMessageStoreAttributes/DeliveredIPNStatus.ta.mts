@@ -41,7 +41,7 @@ export const DeliveredIPNStatus_no_ipn_requested = 0 satisfies DeliveredIPNStatu
  * @constant
  * @type {number}
  */
-export const no_ipn_requested = DeliveredIPNStatus_no_ipn_requested satisfies DeliveredIPNStatus; /* SHORT_NAMED_INTEGER_VALUE */
+export const no_ipn_requested = DeliveredIPNStatus_no_ipn_requested; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeliveredIPNStatus_an_requested
@@ -55,7 +55,7 @@ export const DeliveredIPNStatus_an_requested = 3 satisfies DeliveredIPNStatus; /
  * @constant
  * @type {number}
  */
-export const an_requested = DeliveredIPNStatus_an_requested satisfies DeliveredIPNStatus; /* SHORT_NAMED_INTEGER_VALUE */
+export const an_requested = DeliveredIPNStatus_an_requested; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeliveredIPNStatus_nrn_requested
@@ -69,7 +69,7 @@ export const DeliveredIPNStatus_nrn_requested = 5 satisfies DeliveredIPNStatus; 
  * @constant
  * @type {number}
  */
-export const nrn_requested = DeliveredIPNStatus_nrn_requested satisfies DeliveredIPNStatus; /* SHORT_NAMED_INTEGER_VALUE */
+export const nrn_requested = DeliveredIPNStatus_nrn_requested; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeliveredIPNStatus_rn_requested
@@ -83,7 +83,7 @@ export const DeliveredIPNStatus_rn_requested = 10 satisfies DeliveredIPNStatus; 
  * @constant
  * @type {number}
  */
-export const rn_requested = DeliveredIPNStatus_rn_requested satisfies DeliveredIPNStatus; /* SHORT_NAMED_INTEGER_VALUE */
+export const rn_requested = DeliveredIPNStatus_rn_requested; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeliveredIPNStatus_an_received
@@ -97,7 +97,7 @@ export const DeliveredIPNStatus_an_received = 13 satisfies DeliveredIPNStatus; /
  * @constant
  * @type {number}
  */
-export const an_received = DeliveredIPNStatus_an_received satisfies DeliveredIPNStatus; /* SHORT_NAMED_INTEGER_VALUE */
+export const an_received = DeliveredIPNStatus_an_received; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeliveredIPNStatus_ipm_auto_forwarded
@@ -111,7 +111,7 @@ export const DeliveredIPNStatus_ipm_auto_forwarded = 15 satisfies DeliveredIPNSt
  * @constant
  * @type {number}
  */
-export const ipm_auto_forwarded = DeliveredIPNStatus_ipm_auto_forwarded satisfies DeliveredIPNStatus; /* SHORT_NAMED_INTEGER_VALUE */
+export const ipm_auto_forwarded = DeliveredIPNStatus_ipm_auto_forwarded; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeliveredIPNStatus_ipm_discarded
@@ -125,7 +125,7 @@ export const DeliveredIPNStatus_ipm_discarded = 20 satisfies DeliveredIPNStatus;
  * @constant
  * @type {number}
  */
-export const ipm_discarded = DeliveredIPNStatus_ipm_discarded satisfies DeliveredIPNStatus; /* SHORT_NAMED_INTEGER_VALUE */
+export const ipm_discarded = DeliveredIPNStatus_ipm_discarded; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeliveredIPNStatus_rn_received
@@ -139,7 +139,7 @@ export const DeliveredIPNStatus_rn_received = 25 satisfies DeliveredIPNStatus; /
  * @constant
  * @type {number}
  */
-export const rn_received = DeliveredIPNStatus_rn_received satisfies DeliveredIPNStatus; /* SHORT_NAMED_INTEGER_VALUE */
+export const rn_received = DeliveredIPNStatus_rn_received; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_DeliveredIPNStatus = $._decodeInteger;

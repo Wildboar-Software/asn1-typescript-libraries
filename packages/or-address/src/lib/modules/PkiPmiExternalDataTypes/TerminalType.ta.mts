@@ -33,7 +33,7 @@ export const TerminalType_telex = 3 satisfies TerminalType; /* LONG_NAMED_INTEGE
  * @constant
  * @type {number}
  */
-export const telex = TerminalType_telex satisfies TerminalType; /* SHORT_NAMED_INTEGER_VALUE */
+export const telex = TerminalType_telex; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TerminalType_teletex
@@ -47,7 +47,7 @@ export const TerminalType_teletex = 4 satisfies TerminalType; /* LONG_NAMED_INTE
  * @constant
  * @type {number}
  */
-export const teletex = TerminalType_teletex satisfies TerminalType; /* SHORT_NAMED_INTEGER_VALUE */
+export const teletex = TerminalType_teletex; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TerminalType_g3_facsimile
@@ -61,7 +61,7 @@ export const TerminalType_g3_facsimile = 5 satisfies TerminalType; /* LONG_NAMED
  * @constant
  * @type {number}
  */
-export const g3_facsimile = TerminalType_g3_facsimile satisfies TerminalType; /* SHORT_NAMED_INTEGER_VALUE */
+export const g3_facsimile = TerminalType_g3_facsimile; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TerminalType_g4_facsimile
@@ -75,7 +75,7 @@ export const TerminalType_g4_facsimile = 6 satisfies TerminalType; /* LONG_NAMED
  * @constant
  * @type {number}
  */
-export const g4_facsimile = TerminalType_g4_facsimile satisfies TerminalType; /* SHORT_NAMED_INTEGER_VALUE */
+export const g4_facsimile = TerminalType_g4_facsimile; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TerminalType_ia5_terminal
@@ -89,7 +89,7 @@ export const TerminalType_ia5_terminal = 7 satisfies TerminalType; /* LONG_NAMED
  * @constant
  * @type {number}
  */
-export const ia5_terminal = TerminalType_ia5_terminal satisfies TerminalType; /* SHORT_NAMED_INTEGER_VALUE */
+export const ia5_terminal = TerminalType_ia5_terminal; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TerminalType_videotex
@@ -103,7 +103,7 @@ export const TerminalType_videotex = 8 satisfies TerminalType; /* LONG_NAMED_INT
  * @constant
  * @type {number}
  */
-export const videotex = TerminalType_videotex satisfies TerminalType; /* SHORT_NAMED_INTEGER_VALUE */
+export const videotex = TerminalType_videotex; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_TerminalType: $.ASN1Decoder<TerminalType> = $._decodeInteger;

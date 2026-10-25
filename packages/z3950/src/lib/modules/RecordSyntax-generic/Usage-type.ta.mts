@@ -48,7 +48,7 @@ const Usage_type_redistributable = 1 satisfies Usage_type; /* LONG_NAMED_INTEGER
  * @type {number}
  */
 export
-const redistributable = Usage_type_redistributable satisfies Usage_type; /* SHORT_NAMED_INTEGER_VALUE */
+const redistributable = Usage_type_redistributable; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Usage_type_restricted
@@ -71,7 +71,7 @@ const Usage_type_restricted = 2 satisfies Usage_type; /* LONG_NAMED_INTEGER_VALU
  * @type {number}
  */
 export
-const restricted = Usage_type_restricted satisfies Usage_type; /* SHORT_NAMED_INTEGER_VALUE */
+const restricted = Usage_type_restricted; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Usage_type_licensePointer
@@ -94,7 +94,7 @@ const Usage_type_licensePointer = 3 satisfies Usage_type; /* LONG_NAMED_INTEGER_
  * @type {number}
  */
 export
-const licensePointer = Usage_type_licensePointer satisfies Usage_type; /* SHORT_NAMED_INTEGER_VALUE */
+const licensePointer = Usage_type_licensePointer; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_Usage_type: $.ASN1Decoder<Usage_type> = $._decodeInteger;
 export const _encode_Usage_type: $.ASN1Encoder<Usage_type> = $._encodeInteger;
 

@@ -96,7 +96,7 @@ type Messaging_Copy_Qualifier = _enum_for_Messaging_Copy_Qualifier | ENUMERATED;
  * @type {number}
  */
 export
-const Messaging_Copy_Qualifier_unknown = _enum_for_Messaging_Copy_Qualifier.unknown satisfies Messaging_Copy_Qualifier; /* LONG_NAMED_ENUMERATED_VALUE */
+const Messaging_Copy_Qualifier_unknown = _enum_for_Messaging_Copy_Qualifier.unknown; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unknown
@@ -111,7 +111,7 @@ const Messaging_Copy_Qualifier_unknown = _enum_for_Messaging_Copy_Qualifier.unkn
  * @type {number}
  */
 export
-const unknown = Messaging_Copy_Qualifier_unknown satisfies Messaging_Copy_Qualifier; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unknown = Messaging_Copy_Qualifier_unknown; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Messaging_Copy_Qualifier_none
@@ -126,7 +126,7 @@ const unknown = Messaging_Copy_Qualifier_unknown satisfies Messaging_Copy_Qualif
  * @type {number}
  */
 export
-const Messaging_Copy_Qualifier_none = _enum_for_Messaging_Copy_Qualifier.none satisfies Messaging_Copy_Qualifier; /* LONG_NAMED_ENUMERATED_VALUE */
+const Messaging_Copy_Qualifier_none = _enum_for_Messaging_Copy_Qualifier.none; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary none
@@ -141,7 +141,7 @@ const Messaging_Copy_Qualifier_none = _enum_for_Messaging_Copy_Qualifier.none sa
  * @type {number}
  */
 export
-const none = Messaging_Copy_Qualifier_none satisfies Messaging_Copy_Qualifier; /* SHORT_NAMED_ENUMERATED_VALUE */
+const none = Messaging_Copy_Qualifier_none; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Messaging_Copy_Qualifier_cc
@@ -155,7 +155,7 @@ const none = Messaging_Copy_Qualifier_none satisfies Messaging_Copy_Qualifier; /
  * @type {number}
  */
 export
-const Messaging_Copy_Qualifier_cc = _enum_for_Messaging_Copy_Qualifier.cc satisfies Messaging_Copy_Qualifier; /* LONG_NAMED_ENUMERATED_VALUE */
+const Messaging_Copy_Qualifier_cc = _enum_for_Messaging_Copy_Qualifier.cc; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary cc
@@ -169,7 +169,7 @@ const Messaging_Copy_Qualifier_cc = _enum_for_Messaging_Copy_Qualifier.cc satisf
  * @type {number}
  */
 export
-const cc = Messaging_Copy_Qualifier_cc satisfies Messaging_Copy_Qualifier; /* SHORT_NAMED_ENUMERATED_VALUE */
+const cc = Messaging_Copy_Qualifier_cc; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Messaging_Copy_Qualifier_bcc
@@ -183,7 +183,7 @@ const cc = Messaging_Copy_Qualifier_cc satisfies Messaging_Copy_Qualifier; /* SH
  * @type {number}
  */
 export
-const Messaging_Copy_Qualifier_bcc = _enum_for_Messaging_Copy_Qualifier.bcc satisfies Messaging_Copy_Qualifier; /* LONG_NAMED_ENUMERATED_VALUE */
+const Messaging_Copy_Qualifier_bcc = _enum_for_Messaging_Copy_Qualifier.bcc; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary bcc
@@ -197,7 +197,7 @@ const Messaging_Copy_Qualifier_bcc = _enum_for_Messaging_Copy_Qualifier.bcc sati
  * @type {number}
  */
 export
-const bcc = Messaging_Copy_Qualifier_bcc satisfies Messaging_Copy_Qualifier; /* SHORT_NAMED_ENUMERATED_VALUE */
+const bcc = Messaging_Copy_Qualifier_bcc; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_Messaging_Copy_Qualifier: $.ASN1Decoder<Messaging_Copy_Qualifier> = $._decodeEnumerated;
 export const _encode_Messaging_Copy_Qualifier: $.ASN1Encoder<Messaging_Copy_Qualifier> = $._encodeEnumerated;
 

@@ -38,7 +38,7 @@ const IncGatewayRecord_lrnSoInd_lRN_NP_Database = 1 satisfies IncGatewayRecord_l
  * @type {number}
  */
 export
-const lRN_NP_Database = IncGatewayRecord_lrnSoInd_lRN_NP_Database satisfies IncGatewayRecord_lrnSoInd; /* SHORT_NAMED_INTEGER_VALUE */
+const lRN_NP_Database = IncGatewayRecord_lrnSoInd_lRN_NP_Database; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary IncGatewayRecord_lrnSoInd_switchingSystemData
@@ -54,7 +54,7 @@ const IncGatewayRecord_lrnSoInd_switchingSystemData = 2 satisfies IncGatewayReco
  * @type {number}
  */
 export
-const switchingSystemData = IncGatewayRecord_lrnSoInd_switchingSystemData satisfies IncGatewayRecord_lrnSoInd; /* SHORT_NAMED_INTEGER_VALUE */
+const switchingSystemData = IncGatewayRecord_lrnSoInd_switchingSystemData; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary IncGatewayRecord_lrnSoInd_incomingsignaling
@@ -70,7 +70,7 @@ const IncGatewayRecord_lrnSoInd_incomingsignaling = 3 satisfies IncGatewayRecord
  * @type {number}
  */
 export
-const incomingsignaling = IncGatewayRecord_lrnSoInd_incomingsignaling satisfies IncGatewayRecord_lrnSoInd; /* SHORT_NAMED_INTEGER_VALUE */
+const incomingsignaling = IncGatewayRecord_lrnSoInd_incomingsignaling; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary IncGatewayRecord_lrnSoInd_unknown
@@ -86,7 +86,7 @@ const IncGatewayRecord_lrnSoInd_unknown = 9 satisfies IncGatewayRecord_lrnSoInd;
  * @type {number}
  */
 export
-const unknown = IncGatewayRecord_lrnSoInd_unknown satisfies IncGatewayRecord_lrnSoInd; /* SHORT_NAMED_INTEGER_VALUE */
+const unknown = IncGatewayRecord_lrnSoInd_unknown; /* SHORT_NAMED_INTEGER_VALUE */
 
 export
 const _decode_IncGatewayRecord_lrnSoInd: $.ASN1Decoder<IncGatewayRecord_lrnSoInd> = $._decodeInteger;

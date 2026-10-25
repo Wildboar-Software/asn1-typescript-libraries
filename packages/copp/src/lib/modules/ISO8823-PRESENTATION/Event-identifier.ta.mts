@@ -59,7 +59,7 @@ export const Event_identifier_cp_PPDU = 0 satisfies Event_identifier; /* LONG_NA
  * @constant
  * @type {number}
  */
-export const cp_PPDU = Event_identifier_cp_PPDU satisfies Event_identifier; /* SHORT_NAMED_INTEGER_VALUE */
+export const cp_PPDU = Event_identifier_cp_PPDU; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -75,7 +75,7 @@ export const Event_identifier_cpa_PPDU = 1 satisfies Event_identifier; /* LONG_N
  * @constant
  * @type {number}
  */
-export const cpa_PPDU = Event_identifier_cpa_PPDU satisfies Event_identifier; /* SHORT_NAMED_INTEGER_VALUE */
+export const cpa_PPDU = Event_identifier_cpa_PPDU; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -91,7 +91,7 @@ export const Event_identifier_cpr_PPDU = 2 satisfies Event_identifier; /* LONG_N
  * @constant
  * @type {number}
  */
-export const cpr_PPDU = Event_identifier_cpr_PPDU satisfies Event_identifier; /* SHORT_NAMED_INTEGER_VALUE */
+export const cpr_PPDU = Event_identifier_cpr_PPDU; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -107,7 +107,7 @@ export const Event_identifier_aru_PPDU = 3 satisfies Event_identifier; /* LONG_N
  * @constant
  * @type {number}
  */
-export const aru_PPDU = Event_identifier_aru_PPDU satisfies Event_identifier; /* SHORT_NAMED_INTEGER_VALUE */
+export const aru_PPDU = Event_identifier_aru_PPDU; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -123,7 +123,7 @@ export const Event_identifier_arp_PPDU = 4 satisfies Event_identifier; /* LONG_N
  * @constant
  * @type {number}
  */
-export const arp_PPDU = Event_identifier_arp_PPDU satisfies Event_identifier; /* SHORT_NAMED_INTEGER_VALUE */
+export const arp_PPDU = Event_identifier_arp_PPDU; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -139,7 +139,7 @@ export const Event_identifier_ac_PPDU = 5 satisfies Event_identifier; /* LONG_NA
  * @constant
  * @type {number}
  */
-export const ac_PPDU = Event_identifier_ac_PPDU satisfies Event_identifier; /* SHORT_NAMED_INTEGER_VALUE */
+export const ac_PPDU = Event_identifier_ac_PPDU; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -155,7 +155,7 @@ export const Event_identifier_aca_PPDU = 6 satisfies Event_identifier; /* LONG_N
  * @constant
  * @type {number}
  */
-export const aca_PPDU = Event_identifier_aca_PPDU satisfies Event_identifier; /* SHORT_NAMED_INTEGER_VALUE */
+export const aca_PPDU = Event_identifier_aca_PPDU; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -171,7 +171,7 @@ export const Event_identifier_td_PPDU = 7 satisfies Event_identifier; /* LONG_NA
  * @constant
  * @type {number}
  */
-export const td_PPDU = Event_identifier_td_PPDU satisfies Event_identifier; /* SHORT_NAMED_INTEGER_VALUE */
+export const td_PPDU = Event_identifier_td_PPDU; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -187,7 +187,7 @@ export const Event_identifier_ttd_PPDU = 8 satisfies Event_identifier; /* LONG_N
  * @constant
  * @type {number}
  */
-export const ttd_PPDU = Event_identifier_ttd_PPDU satisfies Event_identifier; /* SHORT_NAMED_INTEGER_VALUE */
+export const ttd_PPDU = Event_identifier_ttd_PPDU; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -203,7 +203,7 @@ export const Event_identifier_te_PPDU = 9 satisfies Event_identifier; /* LONG_NA
  * @constant
  * @type {number}
  */
-export const te_PPDU = Event_identifier_te_PPDU satisfies Event_identifier; /* SHORT_NAMED_INTEGER_VALUE */
+export const te_PPDU = Event_identifier_te_PPDU; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -219,7 +219,7 @@ export const Event_identifier_tc_PPDU = 10 satisfies Event_identifier; /* LONG_N
  * @constant
  * @type {number}
  */
-export const tc_PPDU = Event_identifier_tc_PPDU satisfies Event_identifier; /* SHORT_NAMED_INTEGER_VALUE */
+export const tc_PPDU = Event_identifier_tc_PPDU; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -235,7 +235,7 @@ export const Event_identifier_tcc_PPDU = 11 satisfies Event_identifier; /* LONG_
  * @constant
  * @type {number}
  */
-export const tcc_PPDU = Event_identifier_tcc_PPDU satisfies Event_identifier; /* SHORT_NAMED_INTEGER_VALUE */
+export const tcc_PPDU = Event_identifier_tcc_PPDU; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -251,7 +251,7 @@ export const Event_identifier_rs_PPDU = 12 satisfies Event_identifier; /* LONG_N
  * @constant
  * @type {number}
  */
-export const rs_PPDU = Event_identifier_rs_PPDU satisfies Event_identifier; /* SHORT_NAMED_INTEGER_VALUE */
+export const rs_PPDU = Event_identifier_rs_PPDU; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -267,7 +267,7 @@ export const Event_identifier_rsa_PPDU = 13 satisfies Event_identifier; /* LONG_
  * @constant
  * @type {number}
  */
-export const rsa_PPDU = Event_identifier_rsa_PPDU satisfies Event_identifier; /* SHORT_NAMED_INTEGER_VALUE */
+export const rsa_PPDU = Event_identifier_rsa_PPDU; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -283,7 +283,7 @@ export const Event_identifier_s_release_indication = 14 satisfies Event_identifi
  * @constant
  * @type {number}
  */
-export const s_release_indication = Event_identifier_s_release_indication satisfies Event_identifier; /* SHORT_NAMED_INTEGER_VALUE */
+export const s_release_indication = Event_identifier_s_release_indication; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -299,7 +299,7 @@ export const Event_identifier_s_release_confirm = 15 satisfies Event_identifier;
  * @constant
  * @type {number}
  */
-export const s_release_confirm = Event_identifier_s_release_confirm satisfies Event_identifier; /* SHORT_NAMED_INTEGER_VALUE */
+export const s_release_confirm = Event_identifier_s_release_confirm; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -315,7 +315,7 @@ export const Event_identifier_s_token_give_indication = 16 satisfies Event_ident
  * @constant
  * @type {number}
  */
-export const s_token_give_indication = Event_identifier_s_token_give_indication satisfies Event_identifier; /* SHORT_NAMED_INTEGER_VALUE */
+export const s_token_give_indication = Event_identifier_s_token_give_indication; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -331,7 +331,7 @@ export const Event_identifier_s_token_please_indication = 17 satisfies Event_ide
  * @constant
  * @type {number}
  */
-export const s_token_please_indication = Event_identifier_s_token_please_indication satisfies Event_identifier; /* SHORT_NAMED_INTEGER_VALUE */
+export const s_token_please_indication = Event_identifier_s_token_please_indication; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -347,7 +347,7 @@ export const Event_identifier_s_control_give_indication = 18 satisfies Event_ide
  * @constant
  * @type {number}
  */
-export const s_control_give_indication = Event_identifier_s_control_give_indication satisfies Event_identifier; /* SHORT_NAMED_INTEGER_VALUE */
+export const s_control_give_indication = Event_identifier_s_control_give_indication; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -363,7 +363,7 @@ export const Event_identifier_s_sync_minor_indication = 19 satisfies Event_ident
  * @constant
  * @type {number}
  */
-export const s_sync_minor_indication = Event_identifier_s_sync_minor_indication satisfies Event_identifier; /* SHORT_NAMED_INTEGER_VALUE */
+export const s_sync_minor_indication = Event_identifier_s_sync_minor_indication; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -379,7 +379,7 @@ export const Event_identifier_s_sync_minor_confirm = 20 satisfies Event_identifi
  * @constant
  * @type {number}
  */
-export const s_sync_minor_confirm = Event_identifier_s_sync_minor_confirm satisfies Event_identifier; /* SHORT_NAMED_INTEGER_VALUE */
+export const s_sync_minor_confirm = Event_identifier_s_sync_minor_confirm; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -395,7 +395,7 @@ export const Event_identifier_s_sync_major_indication = 21 satisfies Event_ident
  * @constant
  * @type {number}
  */
-export const s_sync_major_indication = Event_identifier_s_sync_major_indication satisfies Event_identifier; /* SHORT_NAMED_INTEGER_VALUE */
+export const s_sync_major_indication = Event_identifier_s_sync_major_indication; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -411,7 +411,7 @@ export const Event_identifier_s_sync_major_confirm = 22 satisfies Event_identifi
  * @constant
  * @type {number}
  */
-export const s_sync_major_confirm = Event_identifier_s_sync_major_confirm satisfies Event_identifier; /* SHORT_NAMED_INTEGER_VALUE */
+export const s_sync_major_confirm = Event_identifier_s_sync_major_confirm; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -427,7 +427,7 @@ export const Event_identifier_s_p_exception_report_indication = 23 satisfies Eve
  * @constant
  * @type {number}
  */
-export const s_p_exception_report_indication = Event_identifier_s_p_exception_report_indication satisfies Event_identifier; /* SHORT_NAMED_INTEGER_VALUE */
+export const s_p_exception_report_indication = Event_identifier_s_p_exception_report_indication; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -443,7 +443,7 @@ export const Event_identifier_s_u_exception_report_indication = 24 satisfies Eve
  * @constant
  * @type {number}
  */
-export const s_u_exception_report_indication = Event_identifier_s_u_exception_report_indication satisfies Event_identifier; /* SHORT_NAMED_INTEGER_VALUE */
+export const s_u_exception_report_indication = Event_identifier_s_u_exception_report_indication; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -459,7 +459,7 @@ export const Event_identifier_s_activity_start_indication = 25 satisfies Event_i
  * @constant
  * @type {number}
  */
-export const s_activity_start_indication = Event_identifier_s_activity_start_indication satisfies Event_identifier; /* SHORT_NAMED_INTEGER_VALUE */
+export const s_activity_start_indication = Event_identifier_s_activity_start_indication; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -475,7 +475,7 @@ export const Event_identifier_s_activity_resume_indication = 26 satisfies Event_
  * @constant
  * @type {number}
  */
-export const s_activity_resume_indication = Event_identifier_s_activity_resume_indication satisfies Event_identifier; /* SHORT_NAMED_INTEGER_VALUE */
+export const s_activity_resume_indication = Event_identifier_s_activity_resume_indication; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -491,7 +491,7 @@ export const Event_identifier_s_activity_interrupt_indication = 27 satisfies Eve
  * @constant
  * @type {number}
  */
-export const s_activity_interrupt_indication = Event_identifier_s_activity_interrupt_indication satisfies Event_identifier; /* SHORT_NAMED_INTEGER_VALUE */
+export const s_activity_interrupt_indication = Event_identifier_s_activity_interrupt_indication; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -507,7 +507,7 @@ export const Event_identifier_s_activity_interrupt_confirm = 28 satisfies Event_
  * @constant
  * @type {number}
  */
-export const s_activity_interrupt_confirm = Event_identifier_s_activity_interrupt_confirm satisfies Event_identifier; /* SHORT_NAMED_INTEGER_VALUE */
+export const s_activity_interrupt_confirm = Event_identifier_s_activity_interrupt_confirm; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -523,7 +523,7 @@ export const Event_identifier_s_activity_discard_indication = 29 satisfies Event
  * @constant
  * @type {number}
  */
-export const s_activity_discard_indication = Event_identifier_s_activity_discard_indication satisfies Event_identifier; /* SHORT_NAMED_INTEGER_VALUE */
+export const s_activity_discard_indication = Event_identifier_s_activity_discard_indication; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -539,7 +539,7 @@ export const Event_identifier_s_activity_discard_confirm = 30 satisfies Event_id
  * @constant
  * @type {number}
  */
-export const s_activity_discard_confirm = Event_identifier_s_activity_discard_confirm satisfies Event_identifier; /* SHORT_NAMED_INTEGER_VALUE */
+export const s_activity_discard_confirm = Event_identifier_s_activity_discard_confirm; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -555,7 +555,7 @@ export const Event_identifier_s_activity_end_indication = 31 satisfies Event_ide
  * @constant
  * @type {number}
  */
-export const s_activity_end_indication = Event_identifier_s_activity_end_indication satisfies Event_identifier; /* SHORT_NAMED_INTEGER_VALUE */
+export const s_activity_end_indication = Event_identifier_s_activity_end_indication; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -571,7 +571,7 @@ export const Event_identifier_s_activity_end_confirm = 32 satisfies Event_identi
  * @constant
  * @type {number}
  */
-export const s_activity_end_confirm = Event_identifier_s_activity_end_confirm satisfies Event_identifier; /* SHORT_NAMED_INTEGER_VALUE */
+export const s_activity_end_confirm = Event_identifier_s_activity_end_confirm; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 

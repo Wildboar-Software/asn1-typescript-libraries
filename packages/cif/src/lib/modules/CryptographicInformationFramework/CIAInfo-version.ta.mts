@@ -46,7 +46,7 @@ const CIAInfo_version_v1 = 0 satisfies CIAInfo_version; /* LONG_NAMED_INTEGER_VA
  * @type {number}
  */
 export
-const v1 = CIAInfo_version_v1 satisfies CIAInfo_version; /* SHORT_NAMED_INTEGER_VALUE */
+const v1 = CIAInfo_version_v1; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CIAInfo_version_v2
@@ -64,7 +64,7 @@ const CIAInfo_version_v2 = 1 satisfies CIAInfo_version; /* LONG_NAMED_INTEGER_VA
  * @type {number}
  */
 export
-const v2 = CIAInfo_version_v2 satisfies CIAInfo_version; /* SHORT_NAMED_INTEGER_VALUE */
+const v2 = CIAInfo_version_v2; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_CIAInfo_version = $._decodeInteger;
 export const _encode_CIAInfo_version = $._encodeInteger;
 

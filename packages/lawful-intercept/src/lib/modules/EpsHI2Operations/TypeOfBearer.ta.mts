@@ -51,7 +51,7 @@ type TypeOfBearer = _enum_for_TypeOfBearer | ENUMERATED;
  * @type {number}
  */
 export
-const TypeOfBearer_defaultBearer = _enum_for_TypeOfBearer.defaultBearer satisfies TypeOfBearer; /* LONG_NAMED_ENUMERATED_VALUE */
+const TypeOfBearer_defaultBearer = _enum_for_TypeOfBearer.defaultBearer; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary defaultBearer
@@ -62,7 +62,7 @@ const TypeOfBearer_defaultBearer = _enum_for_TypeOfBearer.defaultBearer satisfie
  * @type {number}
  */
 export
-const defaultBearer = TypeOfBearer_defaultBearer satisfies TypeOfBearer; /* SHORT_NAMED_ENUMERATED_VALUE */
+const defaultBearer = TypeOfBearer_defaultBearer; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TypeOfBearer_dedicatedBearer
@@ -75,7 +75,7 @@ const defaultBearer = TypeOfBearer_defaultBearer satisfies TypeOfBearer; /* SHOR
  * @type {number}
  */
 export
-const TypeOfBearer_dedicatedBearer = _enum_for_TypeOfBearer.dedicatedBearer satisfies TypeOfBearer; /* LONG_NAMED_ENUMERATED_VALUE */
+const TypeOfBearer_dedicatedBearer = _enum_for_TypeOfBearer.dedicatedBearer; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary dedicatedBearer
@@ -86,7 +86,7 @@ const TypeOfBearer_dedicatedBearer = _enum_for_TypeOfBearer.dedicatedBearer sati
  * @type {number}
  */
 export
-const dedicatedBearer = TypeOfBearer_dedicatedBearer satisfies TypeOfBearer; /* SHORT_NAMED_ENUMERATED_VALUE */
+const dedicatedBearer = TypeOfBearer_dedicatedBearer; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_TypeOfBearer: $.ASN1Decoder<TypeOfBearer> = $._decodeEnumerated;
 export const _encode_TypeOfBearer: $.ASN1Encoder<TypeOfBearer> = $._encodeEnumerated;
 

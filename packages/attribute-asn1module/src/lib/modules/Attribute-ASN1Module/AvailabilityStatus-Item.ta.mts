@@ -54,7 +54,7 @@ const AvailabilityStatus_Item_inTest = 0 satisfies AvailabilityStatus_Item; /* L
  * @type {number}
  */
 export
-const inTest = AvailabilityStatus_Item_inTest satisfies AvailabilityStatus_Item; /* SHORT_NAMED_INTEGER_VALUE */
+const inTest = AvailabilityStatus_Item_inTest; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AvailabilityStatus_Item_failed
@@ -80,7 +80,7 @@ const AvailabilityStatus_Item_failed = 1 satisfies AvailabilityStatus_Item; /* L
  * @type {number}
  */
 export
-const failed = AvailabilityStatus_Item_failed satisfies AvailabilityStatus_Item; /* SHORT_NAMED_INTEGER_VALUE */
+const failed = AvailabilityStatus_Item_failed; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AvailabilityStatus_Item_powerOff
@@ -106,7 +106,7 @@ const AvailabilityStatus_Item_powerOff = 2 satisfies AvailabilityStatus_Item; /*
  * @type {number}
  */
 export
-const powerOff = AvailabilityStatus_Item_powerOff satisfies AvailabilityStatus_Item; /* SHORT_NAMED_INTEGER_VALUE */
+const powerOff = AvailabilityStatus_Item_powerOff; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AvailabilityStatus_Item_offLine
@@ -132,7 +132,7 @@ const AvailabilityStatus_Item_offLine = 3 satisfies AvailabilityStatus_Item; /* 
  * @type {number}
  */
 export
-const offLine = AvailabilityStatus_Item_offLine satisfies AvailabilityStatus_Item; /* SHORT_NAMED_INTEGER_VALUE */
+const offLine = AvailabilityStatus_Item_offLine; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AvailabilityStatus_Item_offDuty
@@ -160,7 +160,7 @@ const AvailabilityStatus_Item_offDuty = 4 satisfies AvailabilityStatus_Item; /* 
  * @type {number}
  */
 export
-const offDuty = AvailabilityStatus_Item_offDuty satisfies AvailabilityStatus_Item; /* SHORT_NAMED_INTEGER_VALUE */
+const offDuty = AvailabilityStatus_Item_offDuty; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AvailabilityStatus_Item_dependency
@@ -186,7 +186,7 @@ const AvailabilityStatus_Item_dependency = 5 satisfies AvailabilityStatus_Item; 
  * @type {number}
  */
 export
-const dependency = AvailabilityStatus_Item_dependency satisfies AvailabilityStatus_Item; /* SHORT_NAMED_INTEGER_VALUE */
+const dependency = AvailabilityStatus_Item_dependency; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AvailabilityStatus_Item_degraded
@@ -212,7 +212,7 @@ const AvailabilityStatus_Item_degraded = 6 satisfies AvailabilityStatus_Item; /*
  * @type {number}
  */
 export
-const degraded = AvailabilityStatus_Item_degraded satisfies AvailabilityStatus_Item; /* SHORT_NAMED_INTEGER_VALUE */
+const degraded = AvailabilityStatus_Item_degraded; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AvailabilityStatus_Item_notInstalled
@@ -238,7 +238,7 @@ const AvailabilityStatus_Item_notInstalled = 7 satisfies AvailabilityStatus_Item
  * @type {number}
  */
 export
-const notInstalled = AvailabilityStatus_Item_notInstalled satisfies AvailabilityStatus_Item; /* SHORT_NAMED_INTEGER_VALUE */
+const notInstalled = AvailabilityStatus_Item_notInstalled; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AvailabilityStatus_Item_logFull
@@ -264,7 +264,7 @@ const AvailabilityStatus_Item_logFull = 8 satisfies AvailabilityStatus_Item; /* 
  * @type {number}
  */
 export
-const logFull = AvailabilityStatus_Item_logFull satisfies AvailabilityStatus_Item; /* SHORT_NAMED_INTEGER_VALUE */
+const logFull = AvailabilityStatus_Item_logFull; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_AvailabilityStatus_Item = $._decodeInteger;

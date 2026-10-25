@@ -87,7 +87,7 @@ const AlertLevel = _enum_for_AlertLevel;
  * @type {number}
  */
 export
-const AlertLevel_warning = AlertLevel.warning satisfies AlertLevel; /* LONG_NAMED_ENUMERATED_VALUE */
+const AlertLevel_warning = AlertLevel.warning; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary warning
@@ -97,7 +97,7 @@ const AlertLevel_warning = AlertLevel.warning satisfies AlertLevel; /* LONG_NAME
  * @type {number}
  */
 export
-const warning = AlertLevel.warning satisfies AlertLevel; /* SHORT_NAMED_ENUMERATED_VALUE */
+const warning = AlertLevel.warning; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AlertLevel_fatal
@@ -107,7 +107,7 @@ const warning = AlertLevel.warning satisfies AlertLevel; /* SHORT_NAMED_ENUMERAT
  * @type {number}
  */
 export
-const AlertLevel_fatal = AlertLevel.fatal satisfies AlertLevel; /* LONG_NAMED_ENUMERATED_VALUE */
+const AlertLevel_fatal = AlertLevel.fatal; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary fatal
@@ -117,7 +117,7 @@ const AlertLevel_fatal = AlertLevel.fatal satisfies AlertLevel; /* LONG_NAMED_EN
  * @type {number}
  */
 export
-const fatal = AlertLevel.fatal satisfies AlertLevel; /* SHORT_NAMED_ENUMERATED_VALUE */
+const fatal = AlertLevel.fatal; /* SHORT_NAMED_ENUMERATED_VALUE */
 export function _decode_AlertLevel(el: _Element): AlertLevel {
     const enumerated = $._decodeEnumerated(el);
     switch (enumerated) {

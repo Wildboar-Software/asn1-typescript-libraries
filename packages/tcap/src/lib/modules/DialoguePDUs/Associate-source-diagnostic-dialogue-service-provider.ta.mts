@@ -41,7 +41,7 @@ export const Associate_source_diagnostic_dialogue_service_provider_null_ = 0 sat
  * @constant
  * @type {number}
  */
-export const null_ = Associate_source_diagnostic_dialogue_service_provider_null_ satisfies Associate_source_diagnostic_dialogue_service_provider; /* SHORT_NAMED_INTEGER_VALUE */
+export const null_ = Associate_source_diagnostic_dialogue_service_provider_null_; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Associate_source_diagnostic_dialogue_service_provider_no_reason_given
@@ -55,7 +55,7 @@ export const Associate_source_diagnostic_dialogue_service_provider_no_reason_giv
  * @constant
  * @type {number}
  */
-export const no_reason_given = Associate_source_diagnostic_dialogue_service_provider_no_reason_given satisfies Associate_source_diagnostic_dialogue_service_provider; /* SHORT_NAMED_INTEGER_VALUE */
+export const no_reason_given = Associate_source_diagnostic_dialogue_service_provider_no_reason_given; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Associate_source_diagnostic_dialogue_service_provider_no_common_dialogue_portion
@@ -73,7 +73,7 @@ export const Associate_source_diagnostic_dialogue_service_provider_no_common_dia
  * @constant
  * @type {number}
  */
-export const no_common_dialogue_portion = Associate_source_diagnostic_dialogue_service_provider_no_common_dialogue_portion satisfies Associate_source_diagnostic_dialogue_service_provider; /* SHORT_NAMED_INTEGER_VALUE */
+export const no_common_dialogue_portion = Associate_source_diagnostic_dialogue_service_provider_no_common_dialogue_portion; /* SHORT_NAMED_INTEGER_VALUE */
 
 let _cached_decoder_for_Associate_source_diagnostic_dialogue_service_provider: $.ASN1Decoder<Associate_source_diagnostic_dialogue_service_provider> | null = null;
 

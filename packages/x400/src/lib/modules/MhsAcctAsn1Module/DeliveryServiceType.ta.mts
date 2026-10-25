@@ -41,7 +41,7 @@ export const DeliveryServiceType_mhs_delivery = 0 satisfies DeliveryServiceType;
  * @constant
  * @type {number}
  */
-export const mhs_delivery = DeliveryServiceType_mhs_delivery satisfies DeliveryServiceType; /* SHORT_NAMED_INTEGER_VALUE */
+export const mhs_delivery = DeliveryServiceType_mhs_delivery; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeliveryServiceType_physical_delivery
@@ -55,7 +55,7 @@ export const DeliveryServiceType_physical_delivery = 1 satisfies DeliveryService
  * @constant
  * @type {number}
  */
-export const physical_delivery = DeliveryServiceType_physical_delivery satisfies DeliveryServiceType; /* SHORT_NAMED_INTEGER_VALUE */
+export const physical_delivery = DeliveryServiceType_physical_delivery; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeliveryServiceType_telex_delivery
@@ -69,7 +69,7 @@ export const DeliveryServiceType_telex_delivery = 2 satisfies DeliveryServiceTyp
  * @constant
  * @type {number}
  */
-export const telex_delivery = DeliveryServiceType_telex_delivery satisfies DeliveryServiceType; /* SHORT_NAMED_INTEGER_VALUE */
+export const telex_delivery = DeliveryServiceType_telex_delivery; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeliveryServiceType_teletex_delivery
@@ -83,7 +83,7 @@ export const DeliveryServiceType_teletex_delivery = 3 satisfies DeliveryServiceT
  * @constant
  * @type {number}
  */
-export const teletex_delivery = DeliveryServiceType_teletex_delivery satisfies DeliveryServiceType; /* SHORT_NAMED_INTEGER_VALUE */
+export const teletex_delivery = DeliveryServiceType_teletex_delivery; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeliveryServiceType_g3_facsimile_delivery
@@ -97,7 +97,7 @@ export const DeliveryServiceType_g3_facsimile_delivery = 4 satisfies DeliverySer
  * @constant
  * @type {number}
  */
-export const g3_facsimile_delivery = DeliveryServiceType_g3_facsimile_delivery satisfies DeliveryServiceType; /* SHORT_NAMED_INTEGER_VALUE */
+export const g3_facsimile_delivery = DeliveryServiceType_g3_facsimile_delivery; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeliveryServiceType_g4_facsimile_delivery
@@ -111,7 +111,7 @@ export const DeliveryServiceType_g4_facsimile_delivery = 5 satisfies DeliverySer
  * @constant
  * @type {number}
  */
-export const g4_facsimile_delivery = DeliveryServiceType_g4_facsimile_delivery satisfies DeliveryServiceType; /* SHORT_NAMED_INTEGER_VALUE */
+export const g4_facsimile_delivery = DeliveryServiceType_g4_facsimile_delivery; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeliveryServiceType_videotex_delivery
@@ -125,7 +125,7 @@ export const DeliveryServiceType_videotex_delivery = 6 satisfies DeliveryService
  * @constant
  * @type {number}
  */
-export const videotex_delivery = DeliveryServiceType_videotex_delivery satisfies DeliveryServiceType; /* SHORT_NAMED_INTEGER_VALUE */
+export const videotex_delivery = DeliveryServiceType_videotex_delivery; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeliveryServiceType_telephone_delivery
@@ -139,7 +139,7 @@ export const DeliveryServiceType_telephone_delivery = 7 satisfies DeliveryServic
  * @constant
  * @type {number}
  */
-export const telephone_delivery = DeliveryServiceType_telephone_delivery satisfies DeliveryServiceType; /* SHORT_NAMED_INTEGER_VALUE */
+export const telephone_delivery = DeliveryServiceType_telephone_delivery; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeliveryServiceType_other_delivery
@@ -153,7 +153,7 @@ export const DeliveryServiceType_other_delivery = 8 satisfies DeliveryServiceTyp
  * @constant
  * @type {number}
  */
-export const other_delivery = DeliveryServiceType_other_delivery satisfies DeliveryServiceType; /* SHORT_NAMED_INTEGER_VALUE */
+export const other_delivery = DeliveryServiceType_other_delivery; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_DeliveryServiceType = $._decodeInteger;

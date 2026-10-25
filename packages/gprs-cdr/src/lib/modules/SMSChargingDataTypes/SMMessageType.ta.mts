@@ -121,7 +121,7 @@ const SMMessageType = _enum_for_SMMessageType;
  * @type {number}
  */
 export
-const SMMessageType_submission = SMMessageType.submission satisfies SMMessageType; /* LONG_NAMED_ENUMERATED_VALUE */
+const SMMessageType_submission = SMMessageType.submission; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary submission
@@ -129,7 +129,7 @@ const SMMessageType_submission = SMMessageType.submission satisfies SMMessageTyp
  * @type {number}
  */
 export
-const submission = SMMessageType.submission satisfies SMMessageType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const submission = SMMessageType.submission; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SMMessageType_deliveryReport
@@ -143,7 +143,7 @@ const submission = SMMessageType.submission satisfies SMMessageType; /* SHORT_NA
  * @type {number}
  */
 export
-const SMMessageType_deliveryReport = SMMessageType.deliveryReport satisfies SMMessageType; /* LONG_NAMED_ENUMERATED_VALUE */
+const SMMessageType_deliveryReport = SMMessageType.deliveryReport; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary deliveryReport
@@ -151,7 +151,7 @@ const SMMessageType_deliveryReport = SMMessageType.deliveryReport satisfies SMMe
  * @type {number}
  */
 export
-const deliveryReport = SMMessageType.deliveryReport satisfies SMMessageType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const deliveryReport = SMMessageType.deliveryReport; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SMMessageType_sMServiceRequest
@@ -167,7 +167,7 @@ const deliveryReport = SMMessageType.deliveryReport satisfies SMMessageType; /* 
  * @type {number}
  */
 export
-const SMMessageType_sMServiceRequest = SMMessageType.sMServiceRequest satisfies SMMessageType; /* LONG_NAMED_ENUMERATED_VALUE */
+const SMMessageType_sMServiceRequest = SMMessageType.sMServiceRequest; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sMServiceRequest
@@ -175,7 +175,7 @@ const SMMessageType_sMServiceRequest = SMMessageType.sMServiceRequest satisfies 
  * @type {number}
  */
 export
-const sMServiceRequest = SMMessageType.sMServiceRequest satisfies SMMessageType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sMServiceRequest = SMMessageType.sMServiceRequest; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SMMessageType_delivery
@@ -190,7 +190,7 @@ const sMServiceRequest = SMMessageType.sMServiceRequest satisfies SMMessageType;
  * @type {number}
  */
 export
-const SMMessageType_delivery = SMMessageType.delivery satisfies SMMessageType; /* LONG_NAMED_ENUMERATED_VALUE */
+const SMMessageType_delivery = SMMessageType.delivery; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary delivery
@@ -198,7 +198,7 @@ const SMMessageType_delivery = SMMessageType.delivery satisfies SMMessageType; /
  * @type {number}
  */
 export
-const delivery = SMMessageType.delivery satisfies SMMessageType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const delivery = SMMessageType.delivery; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SMMessageType_t4DeviceTrigger
@@ -212,7 +212,7 @@ const delivery = SMMessageType.delivery satisfies SMMessageType; /* SHORT_NAMED_
  * @type {number}
  */
 export
-const SMMessageType_t4DeviceTrigger = SMMessageType.t4DeviceTrigger satisfies SMMessageType; /* LONG_NAMED_ENUMERATED_VALUE */
+const SMMessageType_t4DeviceTrigger = SMMessageType.t4DeviceTrigger; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary t4DeviceTrigger
@@ -220,7 +220,7 @@ const SMMessageType_t4DeviceTrigger = SMMessageType.t4DeviceTrigger satisfies SM
  * @type {number}
  */
 export
-const t4DeviceTrigger = SMMessageType.t4DeviceTrigger satisfies SMMessageType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const t4DeviceTrigger = SMMessageType.t4DeviceTrigger; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SMMessageType_sMDeviceTrigger
@@ -234,7 +234,7 @@ const t4DeviceTrigger = SMMessageType.t4DeviceTrigger satisfies SMMessageType; /
  * @type {number}
  */
 export
-const SMMessageType_sMDeviceTrigger = SMMessageType.sMDeviceTrigger satisfies SMMessageType; /* LONG_NAMED_ENUMERATED_VALUE */
+const SMMessageType_sMDeviceTrigger = SMMessageType.sMDeviceTrigger; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sMDeviceTrigger
@@ -242,7 +242,7 @@ const SMMessageType_sMDeviceTrigger = SMMessageType.sMDeviceTrigger satisfies SM
  * @type {number}
  */
 export
-const sMDeviceTrigger = SMMessageType.sMDeviceTrigger satisfies SMMessageType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sMDeviceTrigger = SMMessageType.sMDeviceTrigger; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_SMMessageType: $.ASN1Decoder<SMMessageType> = $._decodeEnumerated;

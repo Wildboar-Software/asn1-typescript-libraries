@@ -84,7 +84,7 @@ const PTCListManagementFailure = _enum_for_PTCListManagementFailure;
  * @type {number}
  */
 export
-const PTCListManagementFailure_requestUnsuccessful = PTCListManagementFailure.requestUnsuccessful satisfies PTCListManagementFailure; /* LONG_NAMED_ENUMERATED_VALUE */
+const PTCListManagementFailure_requestUnsuccessful = PTCListManagementFailure.requestUnsuccessful; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary requestUnsuccessful
@@ -92,7 +92,7 @@ const PTCListManagementFailure_requestUnsuccessful = PTCListManagementFailure.re
  * @type {number}
  */
 export
-const requestUnsuccessful = PTCListManagementFailure.requestUnsuccessful satisfies PTCListManagementFailure; /* SHORT_NAMED_ENUMERATED_VALUE */
+const requestUnsuccessful = PTCListManagementFailure.requestUnsuccessful; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PTCListManagementFailure_requestUnknown
@@ -100,7 +100,7 @@ const requestUnsuccessful = PTCListManagementFailure.requestUnsuccessful satisfi
  * @type {number}
  */
 export
-const PTCListManagementFailure_requestUnknown = PTCListManagementFailure.requestUnknown satisfies PTCListManagementFailure; /* LONG_NAMED_ENUMERATED_VALUE */
+const PTCListManagementFailure_requestUnknown = PTCListManagementFailure.requestUnknown; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary requestUnknown
@@ -108,7 +108,7 @@ const PTCListManagementFailure_requestUnknown = PTCListManagementFailure.request
  * @type {number}
  */
 export
-const requestUnknown = PTCListManagementFailure.requestUnknown satisfies PTCListManagementFailure; /* SHORT_NAMED_ENUMERATED_VALUE */
+const requestUnknown = PTCListManagementFailure.requestUnknown; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_PTCListManagementFailure: $.ASN1Decoder<PTCListManagementFailure> = $._decodeEnumerated;
 export const _encode_PTCListManagementFailure: $.ASN1Encoder<PTCListManagementFailure> = $._encodeEnumerated;
 

@@ -79,7 +79,7 @@ export const GeneralProblem = _enum_for_GeneralProblem;
  * @type {number}
  */
 export const GeneralProblem_invalidAPDU =
-  GeneralProblem.invalidAPDU satisfies GeneralProblem; /* LONG_NAMED_ENUMERATED_VALUE */
+  GeneralProblem.invalidAPDU; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -88,7 +88,7 @@ export const GeneralProblem_invalidAPDU =
  * @type {number}
  */
 export const invalidAPDU =
-  GeneralProblem.invalidAPDU satisfies GeneralProblem; /* SHORT_NAMED_ENUMERATED_VALUE */
+  GeneralProblem.invalidAPDU; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 

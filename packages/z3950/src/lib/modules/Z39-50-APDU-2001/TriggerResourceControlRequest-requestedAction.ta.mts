@@ -51,7 +51,7 @@ const TriggerResourceControlRequest_requestedAction_resourceReport = 1 satisfies
  * @type {number}
  */
 export
-const resourceReport = TriggerResourceControlRequest_requestedAction_resourceReport satisfies TriggerResourceControlRequest_requestedAction; /* SHORT_NAMED_INTEGER_VALUE */
+const resourceReport = TriggerResourceControlRequest_requestedAction_resourceReport; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TriggerResourceControlRequest_requestedAction_resourceControl
@@ -78,7 +78,7 @@ const TriggerResourceControlRequest_requestedAction_resourceControl = 2 satisfie
  * @type {number}
  */
 export
-const resourceControl = TriggerResourceControlRequest_requestedAction_resourceControl satisfies TriggerResourceControlRequest_requestedAction; /* SHORT_NAMED_INTEGER_VALUE */
+const resourceControl = TriggerResourceControlRequest_requestedAction_resourceControl; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TriggerResourceControlRequest_requestedAction_cancel
@@ -105,7 +105,7 @@ const TriggerResourceControlRequest_requestedAction_cancel = 3 satisfies Trigger
  * @type {number}
  */
 export
-const cancel = TriggerResourceControlRequest_requestedAction_cancel satisfies TriggerResourceControlRequest_requestedAction; /* SHORT_NAMED_INTEGER_VALUE */
+const cancel = TriggerResourceControlRequest_requestedAction_cancel; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_TriggerResourceControlRequest_requestedAction: $.ASN1Decoder<TriggerResourceControlRequest_requestedAction> = $._decodeInteger;
 export const _encode_TriggerResourceControlRequest_requestedAction: $.ASN1Encoder<TriggerResourceControlRequest_requestedAction> = $._encodeInteger;
 

@@ -23,9 +23,9 @@ export enum _enum_for_NatureOfServiceChange {
 }
 export type NatureOfServiceChange = _enum_for_NatureOfServiceChange;
 export const NatureOfServiceChange = _enum_for_NatureOfServiceChange;
-export const NatureOfServiceChange_userInitiated = NatureOfServiceChange.userInitiated satisfies NatureOfServiceChange;
-export const userInitiated = NatureOfServiceChange.userInitiated satisfies NatureOfServiceChange;
-export const NatureOfServiceChange_networkInitiated = NatureOfServiceChange.networkInitiated satisfies NatureOfServiceChange;
-export const networkInitiated = NatureOfServiceChange.networkInitiated satisfies NatureOfServiceChange;
+export const NatureOfServiceChange_userInitiated = NatureOfServiceChange.userInitiated;
+export const userInitiated = NatureOfServiceChange.userInitiated;
+export const NatureOfServiceChange_networkInitiated = NatureOfServiceChange.networkInitiated;
+export const networkInitiated = NatureOfServiceChange.networkInitiated;
 export const _decode_NatureOfServiceChange = $._decodeEnumerated;
 export const _encode_NatureOfServiceChange = $._encodeEnumerated;

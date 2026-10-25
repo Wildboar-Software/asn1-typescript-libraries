@@ -84,7 +84,7 @@ const JobType = _enum_for_JobType;
  * @type {number}
  */
 export
-const JobType_immediate_MDT_only = JobType.immediate_MDT_only satisfies JobType; /* LONG_NAMED_ENUMERATED_VALUE */
+const JobType_immediate_MDT_only = JobType.immediate_MDT_only; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary immediate_MDT_only
@@ -96,7 +96,7 @@ const JobType_immediate_MDT_only = JobType.immediate_MDT_only satisfies JobType;
  * @type {number}
  */
 export
-const immediate_MDT_only = JobType.immediate_MDT_only satisfies JobType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const immediate_MDT_only = JobType.immediate_MDT_only; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary JobType_logged_MDT_only
@@ -108,7 +108,7 @@ const immediate_MDT_only = JobType.immediate_MDT_only satisfies JobType; /* SHOR
  * @type {number}
  */
 export
-const JobType_logged_MDT_only = JobType.logged_MDT_only satisfies JobType; /* LONG_NAMED_ENUMERATED_VALUE */
+const JobType_logged_MDT_only = JobType.logged_MDT_only; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary logged_MDT_only
@@ -120,7 +120,7 @@ const JobType_logged_MDT_only = JobType.logged_MDT_only satisfies JobType; /* LO
  * @type {number}
  */
 export
-const logged_MDT_only = JobType.logged_MDT_only satisfies JobType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const logged_MDT_only = JobType.logged_MDT_only; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary JobType_trace_only
@@ -132,7 +132,7 @@ const logged_MDT_only = JobType.logged_MDT_only satisfies JobType; /* SHORT_NAME
  * @type {number}
  */
 export
-const JobType_trace_only = JobType.trace_only satisfies JobType; /* LONG_NAMED_ENUMERATED_VALUE */
+const JobType_trace_only = JobType.trace_only; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary trace_only
@@ -144,7 +144,7 @@ const JobType_trace_only = JobType.trace_only satisfies JobType; /* LONG_NAMED_E
  * @type {number}
  */
 export
-const trace_only = JobType.trace_only satisfies JobType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const trace_only = JobType.trace_only; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary JobType_immediate_MDT_and_trace
@@ -156,7 +156,7 @@ const trace_only = JobType.trace_only satisfies JobType; /* SHORT_NAMED_ENUMERAT
  * @type {number}
  */
 export
-const JobType_immediate_MDT_and_trace = JobType.immediate_MDT_and_trace satisfies JobType; /* LONG_NAMED_ENUMERATED_VALUE */
+const JobType_immediate_MDT_and_trace = JobType.immediate_MDT_and_trace; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary immediate_MDT_and_trace
@@ -168,7 +168,7 @@ const JobType_immediate_MDT_and_trace = JobType.immediate_MDT_and_trace satisfie
  * @type {number}
  */
 export
-const immediate_MDT_and_trace = JobType.immediate_MDT_and_trace satisfies JobType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const immediate_MDT_and_trace = JobType.immediate_MDT_and_trace; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) JobType

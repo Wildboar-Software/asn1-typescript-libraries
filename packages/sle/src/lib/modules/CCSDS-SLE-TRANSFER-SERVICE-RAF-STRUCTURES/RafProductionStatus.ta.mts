@@ -58,7 +58,7 @@ const RafProductionStatus_running = 0 satisfies RafProductionStatus; /* LONG_NAM
  * @type {number}
  */
 export
-const running = RafProductionStatus_running satisfies RafProductionStatus; /* SHORT_NAMED_INTEGER_VALUE */
+const running = RafProductionStatus_running; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RafProductionStatus_interrupted
@@ -85,7 +85,7 @@ const RafProductionStatus_interrupted = 1 satisfies RafProductionStatus; /* LONG
  * @type {number}
  */
 export
-const interrupted = RafProductionStatus_interrupted satisfies RafProductionStatus; /* SHORT_NAMED_INTEGER_VALUE */
+const interrupted = RafProductionStatus_interrupted; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RafProductionStatus_halted
@@ -114,7 +114,7 @@ const RafProductionStatus_halted = 2 satisfies RafProductionStatus; /* LONG_NAME
  * @type {number}
  */
 export
-const halted = RafProductionStatus_halted satisfies RafProductionStatus; /* SHORT_NAMED_INTEGER_VALUE */
+const halted = RafProductionStatus_halted; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_RafProductionStatus: $.ASN1Decoder<RafProductionStatus> = $._decodeInteger;
 export const _encode_RafProductionStatus: $.ASN1Encoder<RafProductionStatus> = $._encodeInteger;
 

@@ -91,7 +91,7 @@ const SMSNFType = _enum_for_SMSNFType;
  * @type {number}
  */
 export
-const SMSNFType_sMSGMSC = SMSNFType.sMSGMSC satisfies SMSNFType; /* LONG_NAMED_ENUMERATED_VALUE */
+const SMSNFType_sMSGMSC = SMSNFType.sMSGMSC; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sMSGMSC
@@ -99,7 +99,7 @@ const SMSNFType_sMSGMSC = SMSNFType.sMSGMSC satisfies SMSNFType; /* LONG_NAMED_E
  * @type {number}
  */
 export
-const sMSGMSC = SMSNFType.sMSGMSC satisfies SMSNFType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sMSGMSC = SMSNFType.sMSGMSC; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SMSNFType_iWMSC
@@ -107,7 +107,7 @@ const sMSGMSC = SMSNFType.sMSGMSC satisfies SMSNFType; /* SHORT_NAMED_ENUMERATED
  * @type {number}
  */
 export
-const SMSNFType_iWMSC = SMSNFType.iWMSC satisfies SMSNFType; /* LONG_NAMED_ENUMERATED_VALUE */
+const SMSNFType_iWMSC = SMSNFType.iWMSC; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary iWMSC
@@ -115,7 +115,7 @@ const SMSNFType_iWMSC = SMSNFType.iWMSC satisfies SMSNFType; /* LONG_NAMED_ENUME
  * @type {number}
  */
 export
-const iWMSC = SMSNFType.iWMSC satisfies SMSNFType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const iWMSC = SMSNFType.iWMSC; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SMSNFType_sMSRouter
@@ -123,7 +123,7 @@ const iWMSC = SMSNFType.iWMSC satisfies SMSNFType; /* SHORT_NAMED_ENUMERATED_VAL
  * @type {number}
  */
 export
-const SMSNFType_sMSRouter = SMSNFType.sMSRouter satisfies SMSNFType; /* LONG_NAMED_ENUMERATED_VALUE */
+const SMSNFType_sMSRouter = SMSNFType.sMSRouter; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sMSRouter
@@ -131,7 +131,7 @@ const SMSNFType_sMSRouter = SMSNFType.sMSRouter satisfies SMSNFType; /* LONG_NAM
  * @type {number}
  */
 export
-const sMSRouter = SMSNFType.sMSRouter satisfies SMSNFType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sMSRouter = SMSNFType.sMSRouter; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_SMSNFType: $.ASN1Decoder<SMSNFType> = $._decodeEnumerated;
 export const _encode_SMSNFType: $.ASN1Encoder<SMSNFType> = $._encodeEnumerated;
 

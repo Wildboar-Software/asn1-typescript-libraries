@@ -95,7 +95,7 @@ export const ResponseSync = _enum_for_ResponseSync;
  * @type {number}
  */
 export const ResponseSync_singleCast =
-    ResponseSync.singleCast satisfies ResponseSync; /* LONG_NAMED_ENUMERATED_VALUE */
+    ResponseSync.singleCast; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary singleCast
@@ -108,7 +108,7 @@ export const ResponseSync_singleCast =
  * @type {number}
  */
 export const singleCast =
-    ResponseSync.singleCast satisfies ResponseSync; /* SHORT_NAMED_ENUMERATED_VALUE */
+    ResponseSync.singleCast; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ResponseSync_bestEffort
@@ -121,7 +121,7 @@ export const singleCast =
  * @type {number}
  */
 export const ResponseSync_bestEffort =
-    ResponseSync.bestEffort satisfies ResponseSync; /* LONG_NAMED_ENUMERATED_VALUE */
+    ResponseSync.bestEffort; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary bestEffort
@@ -134,7 +134,7 @@ export const ResponseSync_bestEffort =
  * @type {number}
  */
 export const bestEffort =
-    ResponseSync.bestEffort satisfies ResponseSync; /* SHORT_NAMED_ENUMERATED_VALUE */
+    ResponseSync.bestEffort; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ResponseSync_atomic
@@ -146,7 +146,7 @@ export const bestEffort =
  * @type {number}
  */
 export const ResponseSync_atomic =
-    ResponseSync.atomic satisfies ResponseSync; /* LONG_NAMED_ENUMERATED_VALUE */
+    ResponseSync.atomic; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary atomic
@@ -158,7 +158,7 @@ export const ResponseSync_atomic =
  * @type {number}
  */
 export const atomic =
-    ResponseSync.atomic satisfies ResponseSync; /* SHORT_NAMED_ENUMERATED_VALUE */
+    ResponseSync.atomic; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 export function _decode_ResponseSync(el: _Element): ResponseSync {

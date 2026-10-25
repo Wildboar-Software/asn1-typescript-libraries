@@ -45,7 +45,7 @@ const ProfileInfoListError_incorrectInputValues = 1 satisfies ProfileInfoListErr
  * @type {number}
  */
 export
-const incorrectInputValues = ProfileInfoListError_incorrectInputValues satisfies ProfileInfoListError; /* SHORT_NAMED_INTEGER_VALUE */
+const incorrectInputValues = ProfileInfoListError_incorrectInputValues; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProfileInfoListError_undefinedError
@@ -69,7 +69,7 @@ const ProfileInfoListError_undefinedError = 127 satisfies ProfileInfoListError; 
  * @type {number}
  */
 export
-const undefinedError = ProfileInfoListError_undefinedError satisfies ProfileInfoListError; /* SHORT_NAMED_INTEGER_VALUE */
+const undefinedError = ProfileInfoListError_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_ProfileInfoListError = $._decodeInteger;
 export const _encode_ProfileInfoListError = $._encodeInteger;
 

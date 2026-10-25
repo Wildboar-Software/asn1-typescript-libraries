@@ -47,7 +47,7 @@ type O_BcsmTriggerDetectionPoint = _enum_for_O_BcsmTriggerDetectionPoint | ENUME
  * @type {number}
  */
 export
-const O_BcsmTriggerDetectionPoint_collectedInfo = _enum_for_O_BcsmTriggerDetectionPoint.collectedInfo satisfies O_BcsmTriggerDetectionPoint; /* LONG_NAMED_ENUMERATED_VALUE */
+const O_BcsmTriggerDetectionPoint_collectedInfo = _enum_for_O_BcsmTriggerDetectionPoint.collectedInfo; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary collectedInfo
@@ -60,7 +60,7 @@ const O_BcsmTriggerDetectionPoint_collectedInfo = _enum_for_O_BcsmTriggerDetecti
  * @type {number}
  */
 export
-const collectedInfo = O_BcsmTriggerDetectionPoint_collectedInfo satisfies O_BcsmTriggerDetectionPoint; /* SHORT_NAMED_ENUMERATED_VALUE */
+const collectedInfo = O_BcsmTriggerDetectionPoint_collectedInfo; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary O_BcsmTriggerDetectionPoint_routeSelectFailure
@@ -72,7 +72,7 @@ const collectedInfo = O_BcsmTriggerDetectionPoint_collectedInfo satisfies O_Bcsm
  * @type {number}
  */
 export
-const O_BcsmTriggerDetectionPoint_routeSelectFailure = _enum_for_O_BcsmTriggerDetectionPoint.routeSelectFailure satisfies O_BcsmTriggerDetectionPoint; /* LONG_NAMED_ENUMERATED_VALUE */
+const O_BcsmTriggerDetectionPoint_routeSelectFailure = _enum_for_O_BcsmTriggerDetectionPoint.routeSelectFailure; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary routeSelectFailure
@@ -84,7 +84,7 @@ const O_BcsmTriggerDetectionPoint_routeSelectFailure = _enum_for_O_BcsmTriggerDe
  * @type {number}
  */
 export
-const routeSelectFailure = O_BcsmTriggerDetectionPoint_routeSelectFailure satisfies O_BcsmTriggerDetectionPoint; /* SHORT_NAMED_ENUMERATED_VALUE */
+const routeSelectFailure = O_BcsmTriggerDetectionPoint_routeSelectFailure; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) O_BcsmTriggerDetectionPoint

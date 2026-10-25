@@ -45,7 +45,7 @@ export const Associate_result_accepted = 0 satisfies Associate_result; /* LONG_N
  * @constant
  * @type {number}
  */
-export const accepted = Associate_result_accepted satisfies Associate_result; /* SHORT_NAMED_INTEGER_VALUE */
+export const accepted = Associate_result_accepted; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Associate_result_reject_permanent
@@ -63,7 +63,7 @@ export const Associate_result_reject_permanent = 1 satisfies Associate_result; /
  * @constant
  * @type {number}
  */
-export const reject_permanent = Associate_result_reject_permanent satisfies Associate_result; /* SHORT_NAMED_INTEGER_VALUE */
+export const reject_permanent = Associate_result_reject_permanent; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_Associate_result = $._decodeInteger;

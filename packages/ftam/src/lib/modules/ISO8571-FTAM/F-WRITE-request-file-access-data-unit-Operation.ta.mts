@@ -46,7 +46,7 @@ export const F_WRITE_request_file_access_data_unit_Operation_insert = 0 satisfie
  * @constant
  * @type {number}
  */
-export const insert = F_WRITE_request_file_access_data_unit_Operation_insert satisfies F_WRITE_request_file_access_data_unit_Operation; /* SHORT_NAMED_INTEGER_VALUE */
+export const insert = F_WRITE_request_file_access_data_unit_Operation_insert; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -65,7 +65,7 @@ export const F_WRITE_request_file_access_data_unit_Operation_replace = 1 satisfi
  * @constant
  * @type {number}
  */
-export const replace = F_WRITE_request_file_access_data_unit_Operation_replace satisfies F_WRITE_request_file_access_data_unit_Operation; /* SHORT_NAMED_INTEGER_VALUE */
+export const replace = F_WRITE_request_file_access_data_unit_Operation_replace; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -84,7 +84,7 @@ export const F_WRITE_request_file_access_data_unit_Operation_extend = 2 satisfie
  * @constant
  * @type {number}
  */
-export const extend = F_WRITE_request_file_access_data_unit_Operation_extend satisfies F_WRITE_request_file_access_data_unit_Operation; /* SHORT_NAMED_INTEGER_VALUE */
+export const extend = F_WRITE_request_file_access_data_unit_Operation_extend; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 let _cached_decoder_for_F_WRITE_request_file_access_data_unit_Operation: $.ASN1Decoder<F_WRITE_request_file_access_data_unit_Operation> | null = null;

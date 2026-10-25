@@ -93,7 +93,7 @@ type Messaging_Trigger = _enum_for_Messaging_Trigger | ENUMERATED;
  * @type {number}
  */
 export
-const Messaging_Trigger_unknown = _enum_for_Messaging_Trigger.unknown satisfies Messaging_Trigger; /* LONG_NAMED_ENUMERATED_VALUE */
+const Messaging_Trigger_unknown = _enum_for_Messaging_Trigger.unknown; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unknown
@@ -107,7 +107,7 @@ const Messaging_Trigger_unknown = _enum_for_Messaging_Trigger.unknown satisfies 
  * @type {number}
  */
 export
-const unknown = Messaging_Trigger_unknown satisfies Messaging_Trigger; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unknown = Messaging_Trigger_unknown; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Messaging_Trigger_user
@@ -122,7 +122,7 @@ const unknown = Messaging_Trigger_unknown satisfies Messaging_Trigger; /* SHORT_
  * @type {number}
  */
 export
-const Messaging_Trigger_user = _enum_for_Messaging_Trigger.user satisfies Messaging_Trigger; /* LONG_NAMED_ENUMERATED_VALUE */
+const Messaging_Trigger_user = _enum_for_Messaging_Trigger.user; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary user
@@ -137,7 +137,7 @@ const Messaging_Trigger_user = _enum_for_Messaging_Trigger.user satisfies Messag
  * @type {number}
  */
 export
-const user = Messaging_Trigger_user satisfies Messaging_Trigger; /* SHORT_NAMED_ENUMERATED_VALUE */
+const user = Messaging_Trigger_user; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Messaging_Trigger_user_agent
@@ -152,7 +152,7 @@ const user = Messaging_Trigger_user satisfies Messaging_Trigger; /* SHORT_NAMED_
  * @type {number}
  */
 export
-const Messaging_Trigger_user_agent = _enum_for_Messaging_Trigger.user_agent satisfies Messaging_Trigger; /* LONG_NAMED_ENUMERATED_VALUE */
+const Messaging_Trigger_user_agent = _enum_for_Messaging_Trigger.user_agent; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary user_agent
@@ -167,7 +167,7 @@ const Messaging_Trigger_user_agent = _enum_for_Messaging_Trigger.user_agent sati
  * @type {number}
  */
 export
-const user_agent = Messaging_Trigger_user_agent satisfies Messaging_Trigger; /* SHORT_NAMED_ENUMERATED_VALUE */
+const user_agent = Messaging_Trigger_user_agent; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Messaging_Trigger_system
@@ -181,7 +181,7 @@ const user_agent = Messaging_Trigger_user_agent satisfies Messaging_Trigger; /* 
  * @type {number}
  */
 export
-const Messaging_Trigger_system = _enum_for_Messaging_Trigger.system satisfies Messaging_Trigger; /* LONG_NAMED_ENUMERATED_VALUE */
+const Messaging_Trigger_system = _enum_for_Messaging_Trigger.system; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary system
@@ -195,7 +195,7 @@ const Messaging_Trigger_system = _enum_for_Messaging_Trigger.system satisfies Me
  * @type {number}
  */
 export
-const system = Messaging_Trigger_system satisfies Messaging_Trigger; /* SHORT_NAMED_ENUMERATED_VALUE */
+const system = Messaging_Trigger_system; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Messaging_Trigger_system_operator
@@ -209,7 +209,7 @@ const system = Messaging_Trigger_system satisfies Messaging_Trigger; /* SHORT_NA
  * @type {number}
  */
 export
-const Messaging_Trigger_system_operator = _enum_for_Messaging_Trigger.system_operator satisfies Messaging_Trigger; /* LONG_NAMED_ENUMERATED_VALUE */
+const Messaging_Trigger_system_operator = _enum_for_Messaging_Trigger.system_operator; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary system_operator
@@ -223,7 +223,7 @@ const Messaging_Trigger_system_operator = _enum_for_Messaging_Trigger.system_ope
  * @type {number}
  */
 export
-const system_operator = Messaging_Trigger_system_operator satisfies Messaging_Trigger; /* SHORT_NAMED_ENUMERATED_VALUE */
+const system_operator = Messaging_Trigger_system_operator; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_Messaging_Trigger: $.ASN1Decoder<Messaging_Trigger> = $._decodeEnumerated;
 export const _encode_Messaging_Trigger: $.ASN1Encoder<Messaging_Trigger> = $._encodeEnumerated;
 

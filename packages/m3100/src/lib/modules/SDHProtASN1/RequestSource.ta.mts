@@ -66,7 +66,7 @@ export const RequestSource = _enum_for_RequestSource;
  * @type {number}
  */
 export const RequestSource_local =
-    RequestSource.local satisfies RequestSource; /* LONG_NAMED_ENUMERATED_VALUE */
+    RequestSource.local; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -75,7 +75,7 @@ export const RequestSource_local =
  * @type {number}
  */
 export const local =
-    RequestSource.local satisfies RequestSource; /* SHORT_NAMED_ENUMERATED_VALUE */
+    RequestSource.local; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -84,7 +84,7 @@ export const local =
  * @type {number}
  */
 export const RequestSource_remote =
-    RequestSource.remote satisfies RequestSource; /* LONG_NAMED_ENUMERATED_VALUE */
+    RequestSource.remote; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -93,7 +93,7 @@ export const RequestSource_remote =
  * @type {number}
  */
 export const remote =
-    RequestSource.remote satisfies RequestSource; /* SHORT_NAMED_ENUMERATED_VALUE */
+    RequestSource.remote; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 

@@ -52,7 +52,7 @@ const EuiccResultData_processingTerminated_resultSizeOverflow = 1 satisfies Euic
  * section 5.9.1).
  */
 export
-const resultSizeOverflow = EuiccResultData_processingTerminated_resultSizeOverflow satisfies EuiccResultData_processingTerminated; /* SHORT_NAMED_INTEGER_VALUE */
+const resultSizeOverflow = EuiccResultData_processingTerminated_resultSizeOverflow; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EuiccResultData_processingTerminated_unknownOrDamagedCommand
@@ -76,7 +76,7 @@ const EuiccResultData_processingTerminated_unknownOrDamagedCommand = 2 satisfies
  * (SGP.32 v1.2, section 5.9.1).
  */
 export
-const unknownOrDamagedCommand = EuiccResultData_processingTerminated_unknownOrDamagedCommand satisfies EuiccResultData_processingTerminated; /* SHORT_NAMED_INTEGER_VALUE */
+const unknownOrDamagedCommand = EuiccResultData_processingTerminated_unknownOrDamagedCommand; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EuiccResultData_processingTerminated_interruption
@@ -100,7 +100,7 @@ const EuiccResultData_processingTerminated_interruption = 3 satisfies EuiccResul
  * the condition that produces it.
  */
 export
-const interruption = EuiccResultData_processingTerminated_interruption satisfies EuiccResultData_processingTerminated; /* SHORT_NAMED_INTEGER_VALUE */
+const interruption = EuiccResultData_processingTerminated_interruption; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EuiccResultData_processingTerminated_undefinedError
@@ -122,7 +122,7 @@ const EuiccResultData_processingTerminated_undefinedError = 127 satisfies EuiccR
  * and does not further define the condition that produces it.
  */
 export
-const undefinedError = EuiccResultData_processingTerminated_undefinedError satisfies EuiccResultData_processingTerminated; /* SHORT_NAMED_INTEGER_VALUE */
+const undefinedError = EuiccResultData_processingTerminated_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_EuiccResultData_processingTerminated: $.ASN1Decoder<EuiccResultData_processingTerminated> = $._decodeInteger;
 export const _encode_EuiccResultData_processingTerminated: $.ASN1Encoder<EuiccResultData_processingTerminated> = $._encodeInteger;
 

@@ -83,7 +83,7 @@ const CliRestrictionOption = _enum_for_CliRestrictionOption;
  * @type {number}
  */
 export
-const CliRestrictionOption_permanent = CliRestrictionOption.permanent satisfies CliRestrictionOption; /* LONG_NAMED_ENUMERATED_VALUE */
+const CliRestrictionOption_permanent = CliRestrictionOption.permanent; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary permanent
@@ -95,7 +95,7 @@ const CliRestrictionOption_permanent = CliRestrictionOption.permanent satisfies 
  * @type {number}
  */
 export
-const permanent = CliRestrictionOption.permanent satisfies CliRestrictionOption; /* SHORT_NAMED_ENUMERATED_VALUE */
+const permanent = CliRestrictionOption.permanent; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CliRestrictionOption_temporaryDefaultRestricted
@@ -107,7 +107,7 @@ const permanent = CliRestrictionOption.permanent satisfies CliRestrictionOption;
  * @type {number}
  */
 export
-const CliRestrictionOption_temporaryDefaultRestricted = CliRestrictionOption.temporaryDefaultRestricted satisfies CliRestrictionOption; /* LONG_NAMED_ENUMERATED_VALUE */
+const CliRestrictionOption_temporaryDefaultRestricted = CliRestrictionOption.temporaryDefaultRestricted; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary temporaryDefaultRestricted
@@ -119,7 +119,7 @@ const CliRestrictionOption_temporaryDefaultRestricted = CliRestrictionOption.tem
  * @type {number}
  */
 export
-const temporaryDefaultRestricted = CliRestrictionOption.temporaryDefaultRestricted satisfies CliRestrictionOption; /* SHORT_NAMED_ENUMERATED_VALUE */
+const temporaryDefaultRestricted = CliRestrictionOption.temporaryDefaultRestricted; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CliRestrictionOption_temporaryDefaultAllowed
@@ -131,7 +131,7 @@ const temporaryDefaultRestricted = CliRestrictionOption.temporaryDefaultRestrict
  * @type {number}
  */
 export
-const CliRestrictionOption_temporaryDefaultAllowed = CliRestrictionOption.temporaryDefaultAllowed satisfies CliRestrictionOption; /* LONG_NAMED_ENUMERATED_VALUE */
+const CliRestrictionOption_temporaryDefaultAllowed = CliRestrictionOption.temporaryDefaultAllowed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary temporaryDefaultAllowed
@@ -143,7 +143,7 @@ const CliRestrictionOption_temporaryDefaultAllowed = CliRestrictionOption.tempor
  * @type {number}
  */
 export
-const temporaryDefaultAllowed = CliRestrictionOption.temporaryDefaultAllowed satisfies CliRestrictionOption; /* SHORT_NAMED_ENUMERATED_VALUE */
+const temporaryDefaultAllowed = CliRestrictionOption.temporaryDefaultAllowed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) CliRestrictionOption

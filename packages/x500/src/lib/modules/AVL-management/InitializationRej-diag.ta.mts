@@ -33,7 +33,7 @@ export type InitializationRej_diag =
  * @constant
  * @type {number}
  */
-export const InitializationRej_diag_unsupportedVersion = _enum_for_InitializationRej_diag.unsupportedVersion satisfies InitializationRej_diag; /* LONG_NAMED_ENUMERATED_VALUE */
+export const InitializationRej_diag_unsupportedVersion = _enum_for_InitializationRej_diag.unsupportedVersion; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unsupportedVersion
@@ -44,7 +44,7 @@ export const InitializationRej_diag_unsupportedVersion = _enum_for_Initializatio
  * @constant
  * @type {number}
  */
-export const unsupportedVersion = InitializationRej_diag_unsupportedVersion satisfies InitializationRej_diag; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const unsupportedVersion = InitializationRej_diag_unsupportedVersion; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 export const _decode_InitializationRej_diag = $._decodeEnumerated;

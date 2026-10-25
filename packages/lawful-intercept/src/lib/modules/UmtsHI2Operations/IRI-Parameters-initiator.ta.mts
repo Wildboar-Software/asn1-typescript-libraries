@@ -59,7 +59,7 @@ type IRI_Parameters_initiator = _enum_for_IRI_Parameters_initiator | ENUMERATED;
  * @type {number}
  */
 export
-const IRI_Parameters_initiator_not_Available = _enum_for_IRI_Parameters_initiator.not_Available satisfies IRI_Parameters_initiator; /* LONG_NAMED_ENUMERATED_VALUE */
+const IRI_Parameters_initiator_not_Available = _enum_for_IRI_Parameters_initiator.not_Available; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary not_Available
@@ -70,7 +70,7 @@ const IRI_Parameters_initiator_not_Available = _enum_for_IRI_Parameters_initiato
  * @type {number}
  */
 export
-const not_Available = IRI_Parameters_initiator_not_Available satisfies IRI_Parameters_initiator; /* SHORT_NAMED_ENUMERATED_VALUE */
+const not_Available = IRI_Parameters_initiator_not_Available; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary IRI_Parameters_initiator_originating_Target
@@ -84,7 +84,7 @@ const not_Available = IRI_Parameters_initiator_not_Available satisfies IRI_Param
  * @type {number}
  */
 export
-const IRI_Parameters_initiator_originating_Target = _enum_for_IRI_Parameters_initiator.originating_Target satisfies IRI_Parameters_initiator; /* LONG_NAMED_ENUMERATED_VALUE */
+const IRI_Parameters_initiator_originating_Target = _enum_for_IRI_Parameters_initiator.originating_Target; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary originating_Target
@@ -95,7 +95,7 @@ const IRI_Parameters_initiator_originating_Target = _enum_for_IRI_Parameters_ini
  * @type {number}
  */
 export
-const originating_Target = IRI_Parameters_initiator_originating_Target satisfies IRI_Parameters_initiator; /* SHORT_NAMED_ENUMERATED_VALUE */
+const originating_Target = IRI_Parameters_initiator_originating_Target; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary IRI_Parameters_initiator_terminating_Target
@@ -109,7 +109,7 @@ const originating_Target = IRI_Parameters_initiator_originating_Target satisfies
  * @type {number}
  */
 export
-const IRI_Parameters_initiator_terminating_Target = _enum_for_IRI_Parameters_initiator.terminating_Target satisfies IRI_Parameters_initiator; /* LONG_NAMED_ENUMERATED_VALUE */
+const IRI_Parameters_initiator_terminating_Target = _enum_for_IRI_Parameters_initiator.terminating_Target; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary terminating_Target
@@ -120,7 +120,7 @@ const IRI_Parameters_initiator_terminating_Target = _enum_for_IRI_Parameters_ini
  * @type {number}
  */
 export
-const terminating_Target = IRI_Parameters_initiator_terminating_Target satisfies IRI_Parameters_initiator; /* SHORT_NAMED_ENUMERATED_VALUE */
+const terminating_Target = IRI_Parameters_initiator_terminating_Target; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_IRI_Parameters_initiator: $.ASN1Decoder<IRI_Parameters_initiator> = $._decodeEnumerated;
 export const _encode_IRI_Parameters_initiator: $.ASN1Encoder<IRI_Parameters_initiator> = $._encodeEnumerated;
 

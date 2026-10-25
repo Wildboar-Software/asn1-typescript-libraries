@@ -87,7 +87,7 @@ const PeriodicCommunicationIndicator = _enum_for_PeriodicCommunicationIndicator;
  * @type {number}
  */
 export
-const PeriodicCommunicationIndicator_periodic = PeriodicCommunicationIndicator.periodic satisfies PeriodicCommunicationIndicator; /* LONG_NAMED_ENUMERATED_VALUE */
+const PeriodicCommunicationIndicator_periodic = PeriodicCommunicationIndicator.periodic; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary periodic
@@ -95,7 +95,7 @@ const PeriodicCommunicationIndicator_periodic = PeriodicCommunicationIndicator.p
  * @type {number}
  */
 export
-const periodic = PeriodicCommunicationIndicator.periodic satisfies PeriodicCommunicationIndicator; /* SHORT_NAMED_ENUMERATED_VALUE */
+const periodic = PeriodicCommunicationIndicator.periodic; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PeriodicCommunicationIndicator_nonPeriodic
@@ -103,7 +103,7 @@ const periodic = PeriodicCommunicationIndicator.periodic satisfies PeriodicCommu
  * @type {number}
  */
 export
-const PeriodicCommunicationIndicator_nonPeriodic = PeriodicCommunicationIndicator.nonPeriodic satisfies PeriodicCommunicationIndicator; /* LONG_NAMED_ENUMERATED_VALUE */
+const PeriodicCommunicationIndicator_nonPeriodic = PeriodicCommunicationIndicator.nonPeriodic; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary nonPeriodic
@@ -111,7 +111,7 @@ const PeriodicCommunicationIndicator_nonPeriodic = PeriodicCommunicationIndicato
  * @type {number}
  */
 export
-const nonPeriodic = PeriodicCommunicationIndicator.nonPeriodic satisfies PeriodicCommunicationIndicator; /* SHORT_NAMED_ENUMERATED_VALUE */
+const nonPeriodic = PeriodicCommunicationIndicator.nonPeriodic; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_PeriodicCommunicationIndicator: $.ASN1Decoder<PeriodicCommunicationIndicator> = $._decodeEnumerated;
 export const _encode_PeriodicCommunicationIndicator: $.ASN1Encoder<PeriodicCommunicationIndicator> = $._encodeEnumerated;
 

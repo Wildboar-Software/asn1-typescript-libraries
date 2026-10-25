@@ -36,7 +36,7 @@ const FileType_callRecords = 1 satisfies FileType; /* LONG_NAMED_INTEGER_VALUE *
  * @type {number}
  */
 export
-const callRecords = FileType_callRecords satisfies FileType; /* SHORT_NAMED_INTEGER_VALUE */
+const callRecords = FileType_callRecords; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary FileType_traceRecords
@@ -52,7 +52,7 @@ const FileType_traceRecords = 9 satisfies FileType; /* LONG_NAMED_INTEGER_VALUE 
  * @type {number}
  */
 export
-const traceRecords = FileType_traceRecords satisfies FileType; /* SHORT_NAMED_INTEGER_VALUE */
+const traceRecords = FileType_traceRecords; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary FileType_observedIMEITicket
@@ -68,7 +68,7 @@ const FileType_observedIMEITicket = 14 satisfies FileType; /* LONG_NAMED_INTEGER
  * @type {number}
  */
 export
-const observedIMEITicket = FileType_observedIMEITicket satisfies FileType; /* SHORT_NAMED_INTEGER_VALUE */
+const observedIMEITicket = FileType_observedIMEITicket; /* SHORT_NAMED_INTEGER_VALUE */
 
 export
 const _decode_FileType: $.ASN1Decoder<FileType> = $._decodeInteger;

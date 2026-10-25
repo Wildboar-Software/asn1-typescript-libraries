@@ -37,7 +37,7 @@ const LDSSecurityObjectVersion_v0 = 0 satisfies LDSSecurityObjectVersion; /* LON
  * @type {number}
  */
 export
-const v0 = LDSSecurityObjectVersion_v0 satisfies LDSSecurityObjectVersion; /* SHORT_NAMED_INTEGER_VALUE */
+const v0 = LDSSecurityObjectVersion_v0; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary LDSSecurityObjectVersion_v1
@@ -53,7 +53,7 @@ const LDSSecurityObjectVersion_v1 = 1 satisfies LDSSecurityObjectVersion; /* LON
  * @type {number}
  */
 export
-const v1 = LDSSecurityObjectVersion_v1 satisfies LDSSecurityObjectVersion; /* SHORT_NAMED_INTEGER_VALUE */
+const v1 = LDSSecurityObjectVersion_v1; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_LDSSecurityObjectVersion = $._decodeInteger;
 export const _encode_LDSSecurityObjectVersion = $._encodeInteger;
 

@@ -52,7 +52,7 @@ type CancellationType = _enum_for_CancellationType | ENUMERATED;
  * @type {number}
  */
 export
-const CancellationType_updateProcedure = _enum_for_CancellationType.updateProcedure satisfies CancellationType; /* LONG_NAMED_ENUMERATED_VALUE */
+const CancellationType_updateProcedure = _enum_for_CancellationType.updateProcedure; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary updateProcedure
@@ -60,7 +60,7 @@ const CancellationType_updateProcedure = _enum_for_CancellationType.updateProced
  * @type {number}
  */
 export
-const updateProcedure = CancellationType_updateProcedure satisfies CancellationType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const updateProcedure = CancellationType_updateProcedure; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CancellationType_subscriptionWithdraw
@@ -68,7 +68,7 @@ const updateProcedure = CancellationType_updateProcedure satisfies CancellationT
  * @type {number}
  */
 export
-const CancellationType_subscriptionWithdraw = _enum_for_CancellationType.subscriptionWithdraw satisfies CancellationType; /* LONG_NAMED_ENUMERATED_VALUE */
+const CancellationType_subscriptionWithdraw = _enum_for_CancellationType.subscriptionWithdraw; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary subscriptionWithdraw
@@ -76,7 +76,7 @@ const CancellationType_subscriptionWithdraw = _enum_for_CancellationType.subscri
  * @type {number}
  */
 export
-const subscriptionWithdraw = CancellationType_subscriptionWithdraw satisfies CancellationType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const subscriptionWithdraw = CancellationType_subscriptionWithdraw; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CancellationType_initialAttachProcedure
@@ -84,7 +84,7 @@ const subscriptionWithdraw = CancellationType_subscriptionWithdraw satisfies Can
  * @type {number}
  */
 export
-const CancellationType_initialAttachProcedure = _enum_for_CancellationType.initialAttachProcedure satisfies CancellationType; /* LONG_NAMED_ENUMERATED_VALUE */
+const CancellationType_initialAttachProcedure = _enum_for_CancellationType.initialAttachProcedure; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary initialAttachProcedure
@@ -92,7 +92,7 @@ const CancellationType_initialAttachProcedure = _enum_for_CancellationType.initi
  * @type {number}
  */
 export
-const initialAttachProcedure = CancellationType_initialAttachProcedure satisfies CancellationType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const initialAttachProcedure = CancellationType_initialAttachProcedure; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) CancellationType

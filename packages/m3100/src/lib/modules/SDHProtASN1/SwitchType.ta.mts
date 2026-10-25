@@ -67,7 +67,7 @@ export const SwitchType = _enum_for_SwitchType;
  * @type {number}
  */
 export const SwitchType_manual =
-    SwitchType.manual satisfies SwitchType; /* LONG_NAMED_ENUMERATED_VALUE */
+    SwitchType.manual; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -76,7 +76,7 @@ export const SwitchType_manual =
  * @type {number}
  */
 export const manual =
-    SwitchType.manual satisfies SwitchType; /* SHORT_NAMED_ENUMERATED_VALUE */
+    SwitchType.manual; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -85,7 +85,7 @@ export const manual =
  * @type {number}
  */
 export const SwitchType_forced =
-    SwitchType.forced satisfies SwitchType; /* LONG_NAMED_ENUMERATED_VALUE */
+    SwitchType.forced; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -94,7 +94,7 @@ export const SwitchType_forced =
  * @type {number}
  */
 export const forced =
-    SwitchType.forced satisfies SwitchType; /* SHORT_NAMED_ENUMERATED_VALUE */
+    SwitchType.forced; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -103,7 +103,7 @@ export const forced =
  * @type {number}
  */
 export const SwitchType_lockout =
-    SwitchType.lockout satisfies SwitchType; /* LONG_NAMED_ENUMERATED_VALUE */
+    SwitchType.lockout; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -112,7 +112,7 @@ export const SwitchType_lockout =
  * @type {number}
  */
 export const lockout =
-    SwitchType.lockout satisfies SwitchType; /* SHORT_NAMED_ENUMERATED_VALUE */
+    SwitchType.lockout; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 

@@ -38,7 +38,7 @@ export const DLPolicy_originating_MTA_report_unchanged = 0 satisfies DLPolicy_or
  * @constant
  * @type {number}
  */
-export const unchanged = DLPolicy_originating_MTA_report_unchanged satisfies DLPolicy_originating_MTA_report; /* SHORT_NAMED_INTEGER_VALUE */
+export const unchanged = DLPolicy_originating_MTA_report_unchanged; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DLPolicy_originating_MTA_report_report
@@ -52,7 +52,7 @@ export const DLPolicy_originating_MTA_report_report = 2 satisfies DLPolicy_origi
  * @constant
  * @type {number}
  */
-export const report = DLPolicy_originating_MTA_report_report satisfies DLPolicy_originating_MTA_report; /* SHORT_NAMED_INTEGER_VALUE */
+export const report = DLPolicy_originating_MTA_report_report; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DLPolicy_originating_MTA_report_non_delivery_report
@@ -66,7 +66,7 @@ export const DLPolicy_originating_MTA_report_non_delivery_report = 3 satisfies D
  * @constant
  * @type {number}
  */
-export const non_delivery_report = DLPolicy_originating_MTA_report_non_delivery_report satisfies DLPolicy_originating_MTA_report; /* SHORT_NAMED_INTEGER_VALUE */
+export const non_delivery_report = DLPolicy_originating_MTA_report_non_delivery_report; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DLPolicy_originating_MTA_report_audited_report
@@ -80,7 +80,7 @@ export const DLPolicy_originating_MTA_report_audited_report = 4 satisfies DLPoli
  * @constant
  * @type {number}
  */
-export const audited_report = DLPolicy_originating_MTA_report_audited_report satisfies DLPolicy_originating_MTA_report; /* SHORT_NAMED_INTEGER_VALUE */
+export const audited_report = DLPolicy_originating_MTA_report_audited_report; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_DLPolicy_originating_MTA_report = $._decodeInteger;

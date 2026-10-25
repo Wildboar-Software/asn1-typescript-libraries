@@ -49,7 +49,7 @@ export const SubsequentMessage_encrCert = 0 satisfies SubsequentMessage; /* LONG
  * @constant
  * @type {number}
  */
-export const encrCert = SubsequentMessage_encrCert satisfies SubsequentMessage; /* SHORT_NAMED_INTEGER_VALUE */
+export const encrCert = SubsequentMessage_encrCert; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -75,7 +75,7 @@ export const SubsequentMessage_challengeResp = 1 satisfies SubsequentMessage; /*
  * @constant
  * @type {number}
  */
-export const challengeResp = SubsequentMessage_challengeResp satisfies SubsequentMessage; /* SHORT_NAMED_INTEGER_VALUE */
+export const challengeResp = SubsequentMessage_challengeResp; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 

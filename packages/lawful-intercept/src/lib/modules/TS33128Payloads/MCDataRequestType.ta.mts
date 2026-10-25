@@ -87,7 +87,7 @@ const MCDataRequestType = _enum_for_MCDataRequestType;
  * @type {number}
  */
 export
-const MCDataRequestType_oneToOneFD = MCDataRequestType.oneToOneFD satisfies MCDataRequestType; /* LONG_NAMED_ENUMERATED_VALUE */
+const MCDataRequestType_oneToOneFD = MCDataRequestType.oneToOneFD; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary oneToOneFD
@@ -95,7 +95,7 @@ const MCDataRequestType_oneToOneFD = MCDataRequestType.oneToOneFD satisfies MCDa
  * @type {number}
  */
 export
-const oneToOneFD = MCDataRequestType.oneToOneFD satisfies MCDataRequestType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const oneToOneFD = MCDataRequestType.oneToOneFD; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MCDataRequestType_groupFD
@@ -103,7 +103,7 @@ const oneToOneFD = MCDataRequestType.oneToOneFD satisfies MCDataRequestType; /* 
  * @type {number}
  */
 export
-const MCDataRequestType_groupFD = MCDataRequestType.groupFD satisfies MCDataRequestType; /* LONG_NAMED_ENUMERATED_VALUE */
+const MCDataRequestType_groupFD = MCDataRequestType.groupFD; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary groupFD
@@ -111,7 +111,7 @@ const MCDataRequestType_groupFD = MCDataRequestType.groupFD satisfies MCDataRequ
  * @type {number}
  */
 export
-const groupFD = MCDataRequestType.groupFD satisfies MCDataRequestType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const groupFD = MCDataRequestType.groupFD; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_MCDataRequestType: $.ASN1Decoder<MCDataRequestType> = $._decodeEnumerated;
 export const _encode_MCDataRequestType: $.ASN1Encoder<MCDataRequestType> = $._encodeEnumerated;
 

@@ -123,7 +123,7 @@ const FailureResponse = _enum_for_FailureResponse;
  * @type {number}
  */
 export
-const FailureResponse_error400 = FailureResponse.error400 satisfies FailureResponse; /* LONG_NAMED_ENUMERATED_VALUE */
+const FailureResponse_error400 = FailureResponse.error400; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary error400
@@ -131,7 +131,7 @@ const FailureResponse_error400 = FailureResponse.error400 satisfies FailureRespo
  * @type {number}
  */
 export
-const error400 = FailureResponse.error400 satisfies FailureResponse; /* SHORT_NAMED_ENUMERATED_VALUE */
+const error400 = FailureResponse.error400; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary FailureResponse_error401
@@ -139,7 +139,7 @@ const error400 = FailureResponse.error400 satisfies FailureResponse; /* SHORT_NA
  * @type {number}
  */
 export
-const FailureResponse_error401 = FailureResponse.error401 satisfies FailureResponse; /* LONG_NAMED_ENUMERATED_VALUE */
+const FailureResponse_error401 = FailureResponse.error401; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary error401
@@ -147,7 +147,7 @@ const FailureResponse_error401 = FailureResponse.error401 satisfies FailureRespo
  * @type {number}
  */
 export
-const error401 = FailureResponse.error401 satisfies FailureResponse; /* SHORT_NAMED_ENUMERATED_VALUE */
+const error401 = FailureResponse.error401; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary FailureResponse_error403
@@ -155,7 +155,7 @@ const error401 = FailureResponse.error401 satisfies FailureResponse; /* SHORT_NA
  * @type {number}
  */
 export
-const FailureResponse_error403 = FailureResponse.error403 satisfies FailureResponse; /* LONG_NAMED_ENUMERATED_VALUE */
+const FailureResponse_error403 = FailureResponse.error403; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary error403
@@ -163,7 +163,7 @@ const FailureResponse_error403 = FailureResponse.error403 satisfies FailureRespo
  * @type {number}
  */
 export
-const error403 = FailureResponse.error403 satisfies FailureResponse; /* SHORT_NAMED_ENUMERATED_VALUE */
+const error403 = FailureResponse.error403; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary FailureResponse_error404
@@ -171,7 +171,7 @@ const error403 = FailureResponse.error403 satisfies FailureResponse; /* SHORT_NA
  * @type {number}
  */
 export
-const FailureResponse_error404 = FailureResponse.error404 satisfies FailureResponse; /* LONG_NAMED_ENUMERATED_VALUE */
+const FailureResponse_error404 = FailureResponse.error404; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary error404
@@ -179,7 +179,7 @@ const FailureResponse_error404 = FailureResponse.error404 satisfies FailureRespo
  * @type {number}
  */
 export
-const error404 = FailureResponse.error404 satisfies FailureResponse; /* SHORT_NAMED_ENUMERATED_VALUE */
+const error404 = FailureResponse.error404; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary FailureResponse_error406
@@ -187,7 +187,7 @@ const error404 = FailureResponse.error404 satisfies FailureResponse; /* SHORT_NA
  * @type {number}
  */
 export
-const FailureResponse_error406 = FailureResponse.error406 satisfies FailureResponse; /* LONG_NAMED_ENUMERATED_VALUE */
+const FailureResponse_error406 = FailureResponse.error406; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary error406
@@ -195,7 +195,7 @@ const FailureResponse_error406 = FailureResponse.error406 satisfies FailureRespo
  * @type {number}
  */
 export
-const error406 = FailureResponse.error406 satisfies FailureResponse; /* SHORT_NAMED_ENUMERATED_VALUE */
+const error406 = FailureResponse.error406; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary FailureResponse_error411
@@ -203,7 +203,7 @@ const error406 = FailureResponse.error406 satisfies FailureResponse; /* SHORT_NA
  * @type {number}
  */
 export
-const FailureResponse_error411 = FailureResponse.error411 satisfies FailureResponse; /* LONG_NAMED_ENUMERATED_VALUE */
+const FailureResponse_error411 = FailureResponse.error411; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary error411
@@ -211,7 +211,7 @@ const FailureResponse_error411 = FailureResponse.error411 satisfies FailureRespo
  * @type {number}
  */
 export
-const error411 = FailureResponse.error411 satisfies FailureResponse; /* SHORT_NAMED_ENUMERATED_VALUE */
+const error411 = FailureResponse.error411; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary FailureResponse_error413
@@ -219,7 +219,7 @@ const error411 = FailureResponse.error411 satisfies FailureResponse; /* SHORT_NA
  * @type {number}
  */
 export
-const FailureResponse_error413 = FailureResponse.error413 satisfies FailureResponse; /* LONG_NAMED_ENUMERATED_VALUE */
+const FailureResponse_error413 = FailureResponse.error413; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary error413
@@ -227,7 +227,7 @@ const FailureResponse_error413 = FailureResponse.error413 satisfies FailureRespo
  * @type {number}
  */
 export
-const error413 = FailureResponse.error413 satisfies FailureResponse; /* SHORT_NAMED_ENUMERATED_VALUE */
+const error413 = FailureResponse.error413; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary FailureResponse_error415
@@ -235,7 +235,7 @@ const error413 = FailureResponse.error413 satisfies FailureResponse; /* SHORT_NA
  * @type {number}
  */
 export
-const FailureResponse_error415 = FailureResponse.error415 satisfies FailureResponse; /* LONG_NAMED_ENUMERATED_VALUE */
+const FailureResponse_error415 = FailureResponse.error415; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary error415
@@ -243,7 +243,7 @@ const FailureResponse_error415 = FailureResponse.error415 satisfies FailureRespo
  * @type {number}
  */
 export
-const error415 = FailureResponse.error415 satisfies FailureResponse; /* SHORT_NAMED_ENUMERATED_VALUE */
+const error415 = FailureResponse.error415; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary FailureResponse_error429
@@ -251,7 +251,7 @@ const error415 = FailureResponse.error415 satisfies FailureResponse; /* SHORT_NA
  * @type {number}
  */
 export
-const FailureResponse_error429 = FailureResponse.error429 satisfies FailureResponse; /* LONG_NAMED_ENUMERATED_VALUE */
+const FailureResponse_error429 = FailureResponse.error429; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary error429
@@ -259,7 +259,7 @@ const FailureResponse_error429 = FailureResponse.error429 satisfies FailureRespo
  * @type {number}
  */
 export
-const error429 = FailureResponse.error429 satisfies FailureResponse; /* SHORT_NAMED_ENUMERATED_VALUE */
+const error429 = FailureResponse.error429; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary FailureResponse_error500
@@ -267,7 +267,7 @@ const error429 = FailureResponse.error429 satisfies FailureResponse; /* SHORT_NA
  * @type {number}
  */
 export
-const FailureResponse_error500 = FailureResponse.error500 satisfies FailureResponse; /* LONG_NAMED_ENUMERATED_VALUE */
+const FailureResponse_error500 = FailureResponse.error500; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary error500
@@ -275,7 +275,7 @@ const FailureResponse_error500 = FailureResponse.error500 satisfies FailureRespo
  * @type {number}
  */
 export
-const error500 = FailureResponse.error500 satisfies FailureResponse; /* SHORT_NAMED_ENUMERATED_VALUE */
+const error500 = FailureResponse.error500; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary FailureResponse_error503
@@ -283,7 +283,7 @@ const error500 = FailureResponse.error500 satisfies FailureResponse; /* SHORT_NA
  * @type {number}
  */
 export
-const FailureResponse_error503 = FailureResponse.error503 satisfies FailureResponse; /* LONG_NAMED_ENUMERATED_VALUE */
+const FailureResponse_error503 = FailureResponse.error503; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary error503
@@ -291,7 +291,7 @@ const FailureResponse_error503 = FailureResponse.error503 satisfies FailureRespo
  * @type {number}
  */
 export
-const error503 = FailureResponse.error503 satisfies FailureResponse; /* SHORT_NAMED_ENUMERATED_VALUE */
+const error503 = FailureResponse.error503; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_FailureResponse: $.ASN1Decoder<FailureResponse> = $._decodeEnumerated;
 export const _encode_FailureResponse: $.ASN1Encoder<FailureResponse> = $._encodeEnumerated;
 

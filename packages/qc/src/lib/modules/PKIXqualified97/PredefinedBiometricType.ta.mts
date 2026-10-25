@@ -47,7 +47,7 @@ export const PredefinedBiometricType_picture = 0 satisfies PredefinedBiometricTy
  * @constant
  * @type {number}
  */
-export const picture = PredefinedBiometricType_picture satisfies PredefinedBiometricType; /* SHORT_NAMED_INTEGER_VALUE */
+export const picture = PredefinedBiometricType_picture; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -75,7 +75,7 @@ export const PredefinedBiometricType_handwritten_signature = 1 satisfies Predefi
  * @constant
  * @type {number}
  */
-export const handwritten_signature = PredefinedBiometricType_handwritten_signature satisfies PredefinedBiometricType; /* SHORT_NAMED_INTEGER_VALUE */
+export const handwritten_signature = PredefinedBiometricType_handwritten_signature; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 

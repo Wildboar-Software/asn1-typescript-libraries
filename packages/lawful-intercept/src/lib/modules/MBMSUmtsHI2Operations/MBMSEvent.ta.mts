@@ -56,7 +56,7 @@ type MBMSEvent = _enum_for_MBMSEvent | ENUMERATED;
  * @type {number}
  */
 export
-const MBMSEvent_mBMSServiceJoining = _enum_for_MBMSEvent.mBMSServiceJoining satisfies MBMSEvent; /* LONG_NAMED_ENUMERATED_VALUE */
+const MBMSEvent_mBMSServiceJoining = _enum_for_MBMSEvent.mBMSServiceJoining; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary mBMSServiceJoining
@@ -67,7 +67,7 @@ const MBMSEvent_mBMSServiceJoining = _enum_for_MBMSEvent.mBMSServiceJoining sati
  * @type {number}
  */
 export
-const mBMSServiceJoining = MBMSEvent_mBMSServiceJoining satisfies MBMSEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const mBMSServiceJoining = MBMSEvent_mBMSServiceJoining; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MBMSEvent_mBMSServiceLeaving
@@ -80,7 +80,7 @@ const mBMSServiceJoining = MBMSEvent_mBMSServiceJoining satisfies MBMSEvent; /* 
  * @type {number}
  */
 export
-const MBMSEvent_mBMSServiceLeaving = _enum_for_MBMSEvent.mBMSServiceLeaving satisfies MBMSEvent; /* LONG_NAMED_ENUMERATED_VALUE */
+const MBMSEvent_mBMSServiceLeaving = _enum_for_MBMSEvent.mBMSServiceLeaving; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary mBMSServiceLeaving
@@ -92,7 +92,7 @@ const MBMSEvent_mBMSServiceLeaving = _enum_for_MBMSEvent.mBMSServiceLeaving sati
  * @type {number}
  */
 export
-const mBMSServiceLeaving = MBMSEvent_mBMSServiceLeaving satisfies MBMSEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const mBMSServiceLeaving = MBMSEvent_mBMSServiceLeaving; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MBMSEvent_mBMSSubscriptionActivation
@@ -105,7 +105,7 @@ const mBMSServiceLeaving = MBMSEvent_mBMSServiceLeaving satisfies MBMSEvent; /* 
  * @type {number}
  */
 export
-const MBMSEvent_mBMSSubscriptionActivation = _enum_for_MBMSEvent.mBMSSubscriptionActivation satisfies MBMSEvent; /* LONG_NAMED_ENUMERATED_VALUE */
+const MBMSEvent_mBMSSubscriptionActivation = _enum_for_MBMSEvent.mBMSSubscriptionActivation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary mBMSSubscriptionActivation
@@ -117,7 +117,7 @@ const MBMSEvent_mBMSSubscriptionActivation = _enum_for_MBMSEvent.mBMSSubscriptio
  * @type {number}
  */
 export
-const mBMSSubscriptionActivation = MBMSEvent_mBMSSubscriptionActivation satisfies MBMSEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const mBMSSubscriptionActivation = MBMSEvent_mBMSSubscriptionActivation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MBMSEvent_mBMSSubscriptionModification
@@ -130,7 +130,7 @@ const mBMSSubscriptionActivation = MBMSEvent_mBMSSubscriptionActivation satisfie
  * @type {number}
  */
 export
-const MBMSEvent_mBMSSubscriptionModification = _enum_for_MBMSEvent.mBMSSubscriptionModification satisfies MBMSEvent; /* LONG_NAMED_ENUMERATED_VALUE */
+const MBMSEvent_mBMSSubscriptionModification = _enum_for_MBMSEvent.mBMSSubscriptionModification; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary mBMSSubscriptionModification
@@ -142,7 +142,7 @@ const MBMSEvent_mBMSSubscriptionModification = _enum_for_MBMSEvent.mBMSSubscript
  * @type {number}
  */
 export
-const mBMSSubscriptionModification = MBMSEvent_mBMSSubscriptionModification satisfies MBMSEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const mBMSSubscriptionModification = MBMSEvent_mBMSSubscriptionModification; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MBMSEvent_mBMSSubscriptionTermination
@@ -156,7 +156,7 @@ const mBMSSubscriptionModification = MBMSEvent_mBMSSubscriptionModification sati
  * @type {number}
  */
 export
-const MBMSEvent_mBMSSubscriptionTermination = _enum_for_MBMSEvent.mBMSSubscriptionTermination satisfies MBMSEvent; /* LONG_NAMED_ENUMERATED_VALUE */
+const MBMSEvent_mBMSSubscriptionTermination = _enum_for_MBMSEvent.mBMSSubscriptionTermination; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary mBMSSubscriptionTermination
@@ -168,7 +168,7 @@ const MBMSEvent_mBMSSubscriptionTermination = _enum_for_MBMSEvent.mBMSSubscripti
  * @type {number}
  */
 export
-const mBMSSubscriptionTermination = MBMSEvent_mBMSSubscriptionTermination satisfies MBMSEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const mBMSSubscriptionTermination = MBMSEvent_mBMSSubscriptionTermination; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MBMSEvent_startofInterceptWithMBMSServiceActive
@@ -184,7 +184,7 @@ const mBMSSubscriptionTermination = MBMSEvent_mBMSSubscriptionTermination satisf
  * @type {number}
  */
 export
-const MBMSEvent_startofInterceptWithMBMSServiceActive = _enum_for_MBMSEvent.startofInterceptWithMBMSServiceActive satisfies MBMSEvent; /* LONG_NAMED_ENUMERATED_VALUE */
+const MBMSEvent_startofInterceptWithMBMSServiceActive = _enum_for_MBMSEvent.startofInterceptWithMBMSServiceActive; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary startofInterceptWithMBMSServiceActive
@@ -195,7 +195,7 @@ const MBMSEvent_startofInterceptWithMBMSServiceActive = _enum_for_MBMSEvent.star
  * @type {number}
  */
 export
-const startofInterceptWithMBMSServiceActive = MBMSEvent_startofInterceptWithMBMSServiceActive satisfies MBMSEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const startofInterceptWithMBMSServiceActive = MBMSEvent_startofInterceptWithMBMSServiceActive; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_MBMSEvent: $.ASN1Decoder<MBMSEvent> = $._decodeEnumerated;
 export const _encode_MBMSEvent: $.ASN1Encoder<MBMSEvent> = $._encodeEnumerated;
 

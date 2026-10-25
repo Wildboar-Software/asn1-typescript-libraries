@@ -48,7 +48,7 @@ const SortResponse_sortStatus_success = 0 satisfies SortResponse_sortStatus; /* 
  * @type {number}
  */
 export
-const success = SortResponse_sortStatus_success satisfies SortResponse_sortStatus; /* SHORT_NAMED_INTEGER_VALUE */
+const success = SortResponse_sortStatus_success; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SortResponse_sortStatus_partial_1
@@ -74,7 +74,7 @@ const SortResponse_sortStatus_partial_1 = 1 satisfies SortResponse_sortStatus; /
  * @type {number}
  */
 export
-const partial_1 = SortResponse_sortStatus_partial_1 satisfies SortResponse_sortStatus; /* SHORT_NAMED_INTEGER_VALUE */
+const partial_1 = SortResponse_sortStatus_partial_1; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SortResponse_sortStatus_failure
@@ -100,7 +100,7 @@ const SortResponse_sortStatus_failure = 2 satisfies SortResponse_sortStatus; /* 
  * @type {number}
  */
 export
-const failure = SortResponse_sortStatus_failure satisfies SortResponse_sortStatus; /* SHORT_NAMED_INTEGER_VALUE */
+const failure = SortResponse_sortStatus_failure; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_SortResponse_sortStatus: $.ASN1Decoder<SortResponse_sortStatus> = $._decodeInteger;
 export const _encode_SortResponse_sortStatus: $.ASN1Encoder<SortResponse_sortStatus> = $._encodeInteger;
 

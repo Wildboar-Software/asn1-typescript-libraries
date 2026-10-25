@@ -140,7 +140,7 @@ const EPSAttachType = _enum_for_EPSAttachType;
  * @type {number}
  */
 export
-const EPSAttachType_ePSAttach = EPSAttachType.ePSAttach satisfies EPSAttachType; /* LONG_NAMED_ENUMERATED_VALUE */
+const EPSAttachType_ePSAttach = EPSAttachType.ePSAttach; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ePSAttach
@@ -154,7 +154,7 @@ const EPSAttachType_ePSAttach = EPSAttachType.ePSAttach satisfies EPSAttachType;
  * @type {number}
  */
 export
-const ePSAttach = EPSAttachType.ePSAttach satisfies EPSAttachType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const ePSAttach = EPSAttachType.ePSAttach; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EPSAttachType_combinedEPSIMSIAttach
@@ -168,7 +168,7 @@ const ePSAttach = EPSAttachType.ePSAttach satisfies EPSAttachType; /* SHORT_NAME
  * @type {number}
  */
 export
-const EPSAttachType_combinedEPSIMSIAttach = EPSAttachType.combinedEPSIMSIAttach satisfies EPSAttachType; /* LONG_NAMED_ENUMERATED_VALUE */
+const EPSAttachType_combinedEPSIMSIAttach = EPSAttachType.combinedEPSIMSIAttach; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary combinedEPSIMSIAttach
@@ -182,7 +182,7 @@ const EPSAttachType_combinedEPSIMSIAttach = EPSAttachType.combinedEPSIMSIAttach 
  * @type {number}
  */
 export
-const combinedEPSIMSIAttach = EPSAttachType.combinedEPSIMSIAttach satisfies EPSAttachType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const combinedEPSIMSIAttach = EPSAttachType.combinedEPSIMSIAttach; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EPSAttachType_ePSRLOSAttach
@@ -196,7 +196,7 @@ const combinedEPSIMSIAttach = EPSAttachType.combinedEPSIMSIAttach satisfies EPSA
  * @type {number}
  */
 export
-const EPSAttachType_ePSRLOSAttach = EPSAttachType.ePSRLOSAttach satisfies EPSAttachType; /* LONG_NAMED_ENUMERATED_VALUE */
+const EPSAttachType_ePSRLOSAttach = EPSAttachType.ePSRLOSAttach; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ePSRLOSAttach
@@ -210,7 +210,7 @@ const EPSAttachType_ePSRLOSAttach = EPSAttachType.ePSRLOSAttach satisfies EPSAtt
  * @type {number}
  */
 export
-const ePSRLOSAttach = EPSAttachType.ePSRLOSAttach satisfies EPSAttachType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const ePSRLOSAttach = EPSAttachType.ePSRLOSAttach; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EPSAttachType_ePSEmergencyAttach
@@ -224,7 +224,7 @@ const ePSRLOSAttach = EPSAttachType.ePSRLOSAttach satisfies EPSAttachType; /* SH
  * @type {number}
  */
 export
-const EPSAttachType_ePSEmergencyAttach = EPSAttachType.ePSEmergencyAttach satisfies EPSAttachType; /* LONG_NAMED_ENUMERATED_VALUE */
+const EPSAttachType_ePSEmergencyAttach = EPSAttachType.ePSEmergencyAttach; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ePSEmergencyAttach
@@ -238,7 +238,7 @@ const EPSAttachType_ePSEmergencyAttach = EPSAttachType.ePSEmergencyAttach satisf
  * @type {number}
  */
 export
-const ePSEmergencyAttach = EPSAttachType.ePSEmergencyAttach satisfies EPSAttachType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const ePSEmergencyAttach = EPSAttachType.ePSEmergencyAttach; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EPSAttachType_reserved
@@ -252,7 +252,7 @@ const ePSEmergencyAttach = EPSAttachType.ePSEmergencyAttach satisfies EPSAttachT
  * @type {number}
  */
 export
-const EPSAttachType_reserved = EPSAttachType.reserved satisfies EPSAttachType; /* LONG_NAMED_ENUMERATED_VALUE */
+const EPSAttachType_reserved = EPSAttachType.reserved; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary reserved
@@ -266,7 +266,7 @@ const EPSAttachType_reserved = EPSAttachType.reserved satisfies EPSAttachType; /
  * @type {number}
  */
 export
-const reserved = EPSAttachType.reserved satisfies EPSAttachType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const reserved = EPSAttachType.reserved; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_EPSAttachType: $.ASN1Decoder<EPSAttachType> = $._decodeEnumerated;
 export const _encode_EPSAttachType: $.ASN1Encoder<EPSAttachType> = $._encodeEnumerated;
 

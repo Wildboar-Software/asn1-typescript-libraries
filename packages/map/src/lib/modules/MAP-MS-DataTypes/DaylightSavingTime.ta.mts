@@ -88,7 +88,7 @@ const DaylightSavingTime = _enum_for_DaylightSavingTime;
  * @type {number}
  */
 export
-const DaylightSavingTime_noAdjustment = DaylightSavingTime.noAdjustment satisfies DaylightSavingTime; /* LONG_NAMED_ENUMERATED_VALUE */
+const DaylightSavingTime_noAdjustment = DaylightSavingTime.noAdjustment; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary noAdjustment
@@ -96,7 +96,7 @@ const DaylightSavingTime_noAdjustment = DaylightSavingTime.noAdjustment satisfie
  * @type {number}
  */
 export
-const noAdjustment = DaylightSavingTime.noAdjustment satisfies DaylightSavingTime; /* SHORT_NAMED_ENUMERATED_VALUE */
+const noAdjustment = DaylightSavingTime.noAdjustment; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary DaylightSavingTime_plusOneHourAdjustment
@@ -104,7 +104,7 @@ const noAdjustment = DaylightSavingTime.noAdjustment satisfies DaylightSavingTim
  * @type {number}
  */
 export
-const DaylightSavingTime_plusOneHourAdjustment = DaylightSavingTime.plusOneHourAdjustment satisfies DaylightSavingTime; /* LONG_NAMED_ENUMERATED_VALUE */
+const DaylightSavingTime_plusOneHourAdjustment = DaylightSavingTime.plusOneHourAdjustment; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary plusOneHourAdjustment
@@ -112,7 +112,7 @@ const DaylightSavingTime_plusOneHourAdjustment = DaylightSavingTime.plusOneHourA
  * @type {number}
  */
 export
-const plusOneHourAdjustment = DaylightSavingTime.plusOneHourAdjustment satisfies DaylightSavingTime; /* SHORT_NAMED_ENUMERATED_VALUE */
+const plusOneHourAdjustment = DaylightSavingTime.plusOneHourAdjustment; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary DaylightSavingTime_plusTwoHoursAdjustment
@@ -120,7 +120,7 @@ const plusOneHourAdjustment = DaylightSavingTime.plusOneHourAdjustment satisfies
  * @type {number}
  */
 export
-const DaylightSavingTime_plusTwoHoursAdjustment = DaylightSavingTime.plusTwoHoursAdjustment satisfies DaylightSavingTime; /* LONG_NAMED_ENUMERATED_VALUE */
+const DaylightSavingTime_plusTwoHoursAdjustment = DaylightSavingTime.plusTwoHoursAdjustment; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary plusTwoHoursAdjustment
@@ -128,7 +128,7 @@ const DaylightSavingTime_plusTwoHoursAdjustment = DaylightSavingTime.plusTwoHour
  * @type {number}
  */
 export
-const plusTwoHoursAdjustment = DaylightSavingTime.plusTwoHoursAdjustment satisfies DaylightSavingTime; /* SHORT_NAMED_ENUMERATED_VALUE */
+const plusTwoHoursAdjustment = DaylightSavingTime.plusTwoHoursAdjustment; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) DaylightSavingTime

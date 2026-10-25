@@ -32,28 +32,28 @@ export type OrderedListSyntax = _enum_for_OrderedListSyntax | ENUMERATED;
  * @constant
  * @type {number}
  */
-export const OrderedListSyntax_ascSerialNum = _enum_for_OrderedListSyntax.ascSerialNum satisfies OrderedListSyntax; /* LONG_NAMED_ENUMERATED_VALUE */
+export const OrderedListSyntax_ascSerialNum = _enum_for_OrderedListSyntax.ascSerialNum; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ascSerialNum
  * @constant
  * @type {number}
  */
-export const ascSerialNum = OrderedListSyntax_ascSerialNum satisfies OrderedListSyntax; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const ascSerialNum = OrderedListSyntax_ascSerialNum; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OrderedListSyntax_ascRevDate
  * @constant
  * @type {number}
  */
-export const OrderedListSyntax_ascRevDate = _enum_for_OrderedListSyntax.ascRevDate satisfies OrderedListSyntax; /* LONG_NAMED_ENUMERATED_VALUE */
+export const OrderedListSyntax_ascRevDate = _enum_for_OrderedListSyntax.ascRevDate; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ascRevDate
  * @constant
  * @type {number}
  */
-export const ascRevDate = OrderedListSyntax_ascRevDate satisfies OrderedListSyntax; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const ascRevDate = OrderedListSyntax_ascRevDate; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 export const _decode_OrderedListSyntax = $._decodeEnumerated;

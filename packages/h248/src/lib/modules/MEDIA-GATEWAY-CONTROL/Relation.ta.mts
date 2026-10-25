@@ -63,7 +63,7 @@ type Relation = _enum_for_Relation | ENUMERATED;
  * @type {number}
  */
 export
-const Relation_greaterThan = _enum_for_Relation.greaterThan satisfies Relation; /* LONG_NAMED_ENUMERATED_VALUE */
+const Relation_greaterThan = _enum_for_Relation.greaterThan; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary greaterThan
@@ -71,7 +71,7 @@ const Relation_greaterThan = _enum_for_Relation.greaterThan satisfies Relation; 
  * @type {number}
  */
 export
-const greaterThan = Relation_greaterThan satisfies Relation; /* SHORT_NAMED_ENUMERATED_VALUE */
+const greaterThan = Relation_greaterThan; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Relation_smallerThan
@@ -84,7 +84,7 @@ const greaterThan = Relation_greaterThan satisfies Relation; /* SHORT_NAMED_ENUM
  * @type {number}
  */
 export
-const Relation_smallerThan = _enum_for_Relation.smallerThan satisfies Relation; /* LONG_NAMED_ENUMERATED_VALUE */
+const Relation_smallerThan = _enum_for_Relation.smallerThan; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary smallerThan
@@ -92,7 +92,7 @@ const Relation_smallerThan = _enum_for_Relation.smallerThan satisfies Relation; 
  * @type {number}
  */
 export
-const smallerThan = Relation_smallerThan satisfies Relation; /* SHORT_NAMED_ENUMERATED_VALUE */
+const smallerThan = Relation_smallerThan; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Relation_unequalTo
@@ -104,7 +104,7 @@ const smallerThan = Relation_smallerThan satisfies Relation; /* SHORT_NAMED_ENUM
  * @type {number}
  */
 export
-const Relation_unequalTo = _enum_for_Relation.unequalTo satisfies Relation; /* LONG_NAMED_ENUMERATED_VALUE */
+const Relation_unequalTo = _enum_for_Relation.unequalTo; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unequalTo
@@ -112,7 +112,7 @@ const Relation_unequalTo = _enum_for_Relation.unequalTo satisfies Relation; /* L
  * @type {number}
  */
 export
-const unequalTo = Relation_unequalTo satisfies Relation; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unequalTo = Relation_unequalTo; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_Relation = $._decodeEnumerated;
 export const _encode_Relation = $._encodeEnumerated;
 

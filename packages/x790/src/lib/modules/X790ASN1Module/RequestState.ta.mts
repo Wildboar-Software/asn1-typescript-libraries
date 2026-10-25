@@ -35,7 +35,7 @@ type RequestState = _enum_for_RequestState | ENUMERATED;
  * @type {number}
  */
 export
-const RequestState_requested = _enum_for_RequestState.requested satisfies RequestState; /* LONG_NAMED_ENUMERATED_VALUE */
+const RequestState_requested = _enum_for_RequestState.requested; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary requested
@@ -43,7 +43,7 @@ const RequestState_requested = _enum_for_RequestState.requested satisfies Reques
  * @type {number}
  */
 export
-const requested = RequestState_requested satisfies RequestState; /* SHORT_NAMED_ENUMERATED_VALUE */
+const requested = RequestState_requested; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RequestState_provided
@@ -51,7 +51,7 @@ const requested = RequestState_requested satisfies RequestState; /* SHORT_NAMED_
  * @type {number}
  */
 export
-const RequestState_provided = _enum_for_RequestState.provided satisfies RequestState; /* LONG_NAMED_ENUMERATED_VALUE */
+const RequestState_provided = _enum_for_RequestState.provided; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary provided
@@ -59,7 +59,7 @@ const RequestState_provided = _enum_for_RequestState.provided satisfies RequestS
  * @type {number}
  */
 export
-const provided = RequestState_provided satisfies RequestState; /* SHORT_NAMED_ENUMERATED_VALUE */
+const provided = RequestState_provided; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RequestState_denied
@@ -67,7 +67,7 @@ const provided = RequestState_provided satisfies RequestState; /* SHORT_NAMED_EN
  * @type {number}
  */
 export
-const RequestState_denied = _enum_for_RequestState.denied satisfies RequestState; /* LONG_NAMED_ENUMERATED_VALUE */
+const RequestState_denied = _enum_for_RequestState.denied; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary denied
@@ -75,7 +75,7 @@ const RequestState_denied = _enum_for_RequestState.denied satisfies RequestState
  * @type {number}
  */
 export
-const denied = RequestState_denied satisfies RequestState; /* SHORT_NAMED_ENUMERATED_VALUE */
+const denied = RequestState_denied; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_RequestState = $._decodeEnumerated;
 export const _encode_RequestState = $._encodeEnumerated;
 

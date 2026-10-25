@@ -62,7 +62,7 @@ const VMDState_idle = 0 satisfies VMDState; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const idle = VMDState_idle satisfies VMDState; /* SHORT_NAMED_INTEGER_VALUE */
+const idle = VMDState_idle; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary VMDState_loaded
@@ -86,7 +86,7 @@ const VMDState_loaded = 1 satisfies VMDState; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const loaded = VMDState_loaded satisfies VMDState; /* SHORT_NAMED_INTEGER_VALUE */
+const loaded = VMDState_loaded; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary VMDState_ready
@@ -110,7 +110,7 @@ const VMDState_ready = 2 satisfies VMDState; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const ready = VMDState_ready satisfies VMDState; /* SHORT_NAMED_INTEGER_VALUE */
+const ready = VMDState_ready; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary VMDState_executing
@@ -134,7 +134,7 @@ const VMDState_executing = 3 satisfies VMDState; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const executing = VMDState_executing satisfies VMDState; /* SHORT_NAMED_INTEGER_VALUE */
+const executing = VMDState_executing; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary VMDState_motion_paused
@@ -158,7 +158,7 @@ const VMDState_motion_paused = 4 satisfies VMDState; /* LONG_NAMED_INTEGER_VALUE
  * @type {number}
  */
 export
-const motion_paused = VMDState_motion_paused satisfies VMDState; /* SHORT_NAMED_INTEGER_VALUE */
+const motion_paused = VMDState_motion_paused; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary VMDState_manualInterventionRequired
@@ -184,7 +184,7 @@ const VMDState_manualInterventionRequired = 5 satisfies VMDState; /* LONG_NAMED_
  * @type {number}
  */
 export
-const manualInterventionRequired = VMDState_manualInterventionRequired satisfies VMDState; /* SHORT_NAMED_INTEGER_VALUE */
+const manualInterventionRequired = VMDState_manualInterventionRequired; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_VMDState = $._decodeInteger;
 export const _encode_VMDState = $._encodeInteger;
 

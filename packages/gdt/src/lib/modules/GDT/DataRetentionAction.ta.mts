@@ -38,7 +38,7 @@ const DataRetentionAction_ra_store = 0 satisfies DataRetentionAction; /* LONG_NA
  * @type {number}
  */
 export
-const ra_store = DataRetentionAction_ra_store satisfies DataRetentionAction; /* SHORT_NAMED_INTEGER_VALUE */
+const ra_store = DataRetentionAction_ra_store; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DataRetentionAction_ra_delete
@@ -54,7 +54,7 @@ const DataRetentionAction_ra_delete = 1 satisfies DataRetentionAction; /* LONG_N
  * @type {number}
  */
 export
-const ra_delete = DataRetentionAction_ra_delete satisfies DataRetentionAction; /* SHORT_NAMED_INTEGER_VALUE */
+const ra_delete = DataRetentionAction_ra_delete; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DataRetentionAction_ra_fetch
@@ -70,7 +70,7 @@ const DataRetentionAction_ra_fetch = 2 satisfies DataRetentionAction; /* LONG_NA
  * @type {number}
  */
 export
-const ra_fetch = DataRetentionAction_ra_fetch satisfies DataRetentionAction; /* SHORT_NAMED_INTEGER_VALUE */
+const ra_fetch = DataRetentionAction_ra_fetch; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DataRetentionAction_ra_result
@@ -86,7 +86,7 @@ const DataRetentionAction_ra_result = 3 satisfies DataRetentionAction; /* LONG_N
  * @type {number}
  */
 export
-const ra_result = DataRetentionAction_ra_result satisfies DataRetentionAction; /* SHORT_NAMED_INTEGER_VALUE */
+const ra_result = DataRetentionAction_ra_result; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_DataRetentionAction = $._decodeInteger;
 export const _encode_DataRetentionAction = $._encodeInteger;
 

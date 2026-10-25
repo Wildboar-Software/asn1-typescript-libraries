@@ -94,7 +94,7 @@ export const ProtocolVersion = _enum_for_ProtocolVersion;
  * @type {number}
  */
 export const ProtocolVersion_iSO8208V1 =
-    ProtocolVersion.iSO8208V1 satisfies ProtocolVersion; /* LONG_NAMED_ENUMERATED_VALUE */
+    ProtocolVersion.iSO8208V1; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -109,7 +109,7 @@ export const ProtocolVersion_iSO8208V1 =
  * @type {number}
  */
 export const iSO8208V1 =
-    ProtocolVersion.iSO8208V1 satisfies ProtocolVersion; /* SHORT_NAMED_ENUMERATED_VALUE */
+    ProtocolVersion.iSO8208V1; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -124,7 +124,7 @@ export const iSO8208V1 =
  * @type {number}
  */
 export const ProtocolVersion_iSO8208V2 =
-    ProtocolVersion.iSO8208V2 satisfies ProtocolVersion; /* LONG_NAMED_ENUMERATED_VALUE */
+    ProtocolVersion.iSO8208V2; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -139,7 +139,7 @@ export const ProtocolVersion_iSO8208V2 =
  * @type {number}
  */
 export const iSO8208V2 =
-    ProtocolVersion.iSO8208V2 satisfies ProtocolVersion; /* SHORT_NAMED_ENUMERATED_VALUE */
+    ProtocolVersion.iSO8208V2; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -154,7 +154,7 @@ export const iSO8208V2 =
  * @type {number}
  */
 export const ProtocolVersion_x2584 =
-    ProtocolVersion.x2584 satisfies ProtocolVersion; /* LONG_NAMED_ENUMERATED_VALUE */
+    ProtocolVersion.x2584; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -169,7 +169,7 @@ export const ProtocolVersion_x2584 =
  * @type {number}
  */
 export const x2584 =
-    ProtocolVersion.x2584 satisfies ProtocolVersion; /* SHORT_NAMED_ENUMERATED_VALUE */
+    ProtocolVersion.x2584; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -184,7 +184,7 @@ export const x2584 =
  * @type {number}
  */
 export const ProtocolVersion_x2588 =
-    ProtocolVersion.x2588 satisfies ProtocolVersion; /* LONG_NAMED_ENUMERATED_VALUE */
+    ProtocolVersion.x2588; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -199,7 +199,7 @@ export const ProtocolVersion_x2588 =
  * @type {number}
  */
 export const x2588 =
-    ProtocolVersion.x2588 satisfies ProtocolVersion; /* SHORT_NAMED_ENUMERATED_VALUE */
+    ProtocolVersion.x2588; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 

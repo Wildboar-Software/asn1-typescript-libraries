@@ -39,7 +39,7 @@ export const ActivityCode_number_approved = 0 satisfies ActivityCode_number; /* 
  * @constant
  * @type {number}
  */
-export const approved = ActivityCode_number_approved satisfies ActivityCode_number; /* SHORT_NAMED_INTEGER_VALUE */
+export const approved = ActivityCode_number_approved; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -55,7 +55,7 @@ export const ActivityCode_number_assign = 1 satisfies ActivityCode_number; /* LO
  * @constant
  * @type {number}
  */
-export const assign = ActivityCode_number_assign satisfies ActivityCode_number; /* SHORT_NAMED_INTEGER_VALUE */
+export const assign = ActivityCode_number_assign; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -71,7 +71,7 @@ export const ActivityCode_number_cancel = 2 satisfies ActivityCode_number; /* LO
  * @constant
  * @type {number}
  */
-export const cancel = ActivityCode_number_cancel satisfies ActivityCode_number; /* SHORT_NAMED_INTEGER_VALUE */
+export const cancel = ActivityCode_number_cancel; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -87,7 +87,7 @@ export const ActivityCode_number_clear = 3 satisfies ActivityCode_number; /* LON
  * @constant
  * @type {number}
  */
-export const clear = ActivityCode_number_clear satisfies ActivityCode_number; /* SHORT_NAMED_INTEGER_VALUE */
+export const clear = ActivityCode_number_clear; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -103,7 +103,7 @@ export const ActivityCode_number_close = 4 satisfies ActivityCode_number; /* LON
  * @constant
  * @type {number}
  */
-export const close = ActivityCode_number_close satisfies ActivityCode_number; /* SHORT_NAMED_INTEGER_VALUE */
+export const close = ActivityCode_number_close; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -119,7 +119,7 @@ export const ActivityCode_number_defer = 5 satisfies ActivityCode_number; /* LON
  * @constant
  * @type {number}
  */
-export const defer = ActivityCode_number_defer satisfies ActivityCode_number; /* SHORT_NAMED_INTEGER_VALUE */
+export const defer = ActivityCode_number_defer; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -135,7 +135,7 @@ export const ActivityCode_number_dispatch = 6 satisfies ActivityCode_number; /* 
  * @constant
  * @type {number}
  */
-export const dispatch = ActivityCode_number_dispatch satisfies ActivityCode_number; /* SHORT_NAMED_INTEGER_VALUE */
+export const dispatch = ActivityCode_number_dispatch; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -151,7 +151,7 @@ export const ActivityCode_number_refer = 7 satisfies ActivityCode_number; /* LON
  * @constant
  * @type {number}
  */
-export const refer = ActivityCode_number_refer satisfies ActivityCode_number; /* SHORT_NAMED_INTEGER_VALUE */
+export const refer = ActivityCode_number_refer; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -167,7 +167,7 @@ export const ActivityCode_number_release = 8 satisfies ActivityCode_number; /* L
  * @constant
  * @type {number}
  */
-export const release = ActivityCode_number_release satisfies ActivityCode_number; /* SHORT_NAMED_INTEGER_VALUE */
+export const release = ActivityCode_number_release; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -183,7 +183,7 @@ export const ActivityCode_number_re_open = 9 satisfies ActivityCode_number; /* L
  * @constant
  * @type {number}
  */
-export const re_open = ActivityCode_number_re_open satisfies ActivityCode_number; /* SHORT_NAMED_INTEGER_VALUE */
+export const re_open = ActivityCode_number_re_open; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -199,7 +199,7 @@ export const ActivityCode_number_repair = 10 satisfies ActivityCode_number; /* L
  * @constant
  * @type {number}
  */
-export const repair = ActivityCode_number_repair satisfies ActivityCode_number; /* SHORT_NAMED_INTEGER_VALUE */
+export const repair = ActivityCode_number_repair; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -215,7 +215,7 @@ export const ActivityCode_number_test = 11 satisfies ActivityCode_number; /* LON
  * @constant
  * @type {number}
  */
-export const test = ActivityCode_number_test satisfies ActivityCode_number; /* SHORT_NAMED_INTEGER_VALUE */
+export const test = ActivityCode_number_test; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -231,7 +231,7 @@ export const ActivityCode_number_transfer = 12 satisfies ActivityCode_number; /*
  * @constant
  * @type {number}
  */
-export const transfer = ActivityCode_number_transfer satisfies ActivityCode_number; /* SHORT_NAMED_INTEGER_VALUE */
+export const transfer = ActivityCode_number_transfer; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 

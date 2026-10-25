@@ -89,7 +89,7 @@ const AdministrativeState = _enum_for_AdministrativeState;
  * @type {number}
  */
 export
-const AdministrativeState_locked = AdministrativeState.locked satisfies AdministrativeState; /* LONG_NAMED_ENUMERATED_VALUE */
+const AdministrativeState_locked = AdministrativeState.locked; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary locked
@@ -103,7 +103,7 @@ const AdministrativeState_locked = AdministrativeState.locked satisfies Administ
  * @type {number}
  */
 export
-const locked = AdministrativeState.locked satisfies AdministrativeState; /* SHORT_NAMED_ENUMERATED_VALUE */
+const locked = AdministrativeState.locked; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AdministrativeState_unlocked
@@ -116,7 +116,7 @@ const locked = AdministrativeState.locked satisfies AdministrativeState; /* SHOR
  * @type {number}
  */
 export
-const AdministrativeState_unlocked = AdministrativeState.unlocked satisfies AdministrativeState; /* LONG_NAMED_ENUMERATED_VALUE */
+const AdministrativeState_unlocked = AdministrativeState.unlocked; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unlocked
@@ -129,7 +129,7 @@ const AdministrativeState_unlocked = AdministrativeState.unlocked satisfies Admi
  * @type {number}
  */
 export
-const unlocked = AdministrativeState.unlocked satisfies AdministrativeState; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unlocked = AdministrativeState.unlocked; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AdministrativeState_shuttingDown
@@ -142,7 +142,7 @@ const unlocked = AdministrativeState.unlocked satisfies AdministrativeState; /* 
  * @type {number}
  */
 export
-const AdministrativeState_shuttingDown = AdministrativeState.shuttingDown satisfies AdministrativeState; /* LONG_NAMED_ENUMERATED_VALUE */
+const AdministrativeState_shuttingDown = AdministrativeState.shuttingDown; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary shuttingDown
@@ -155,7 +155,7 @@ const AdministrativeState_shuttingDown = AdministrativeState.shuttingDown satisf
  * @type {number}
  */
 export
-const shuttingDown = AdministrativeState.shuttingDown satisfies AdministrativeState; /* SHORT_NAMED_ENUMERATED_VALUE */
+const shuttingDown = AdministrativeState.shuttingDown; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 export function _decode_AdministrativeState(el: _Element): AdministrativeState {

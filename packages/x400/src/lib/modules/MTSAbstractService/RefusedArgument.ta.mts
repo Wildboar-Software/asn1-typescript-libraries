@@ -48,7 +48,7 @@ export const RefusedArgument_user_name = 0 satisfies RefusedArgument; /* LONG_NA
  * @constant
  * @type {number}
  */
-export const user_name = RefusedArgument_user_name satisfies RefusedArgument; /* SHORT_NAMED_INTEGER_VALUE */
+export const user_name = RefusedArgument_user_name; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RefusedArgument_user_address
@@ -62,7 +62,7 @@ export const RefusedArgument_user_address = 1 satisfies RefusedArgument; /* LONG
  * @constant
  * @type {number}
  */
-export const user_address = RefusedArgument_user_address satisfies RefusedArgument; /* SHORT_NAMED_INTEGER_VALUE */
+export const user_address = RefusedArgument_user_address; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RefusedArgument_deliverable_content_types
@@ -76,7 +76,7 @@ export const RefusedArgument_deliverable_content_types = 2 satisfies RefusedArgu
  * @constant
  * @type {number}
  */
-export const deliverable_content_types = RefusedArgument_deliverable_content_types satisfies RefusedArgument; /* SHORT_NAMED_INTEGER_VALUE */
+export const deliverable_content_types = RefusedArgument_deliverable_content_types; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RefusedArgument_deliverable_maximum_content_length
@@ -90,7 +90,7 @@ export const RefusedArgument_deliverable_maximum_content_length = 3 satisfies Re
  * @constant
  * @type {number}
  */
-export const deliverable_maximum_content_length = RefusedArgument_deliverable_maximum_content_length satisfies RefusedArgument; /* SHORT_NAMED_INTEGER_VALUE */
+export const deliverable_maximum_content_length = RefusedArgument_deliverable_maximum_content_length; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RefusedArgument_deliverable_encoded_information_types_constraints
@@ -104,7 +104,7 @@ export const RefusedArgument_deliverable_encoded_information_types_constraints =
  * @constant
  * @type {number}
  */
-export const deliverable_encoded_information_types_constraints = RefusedArgument_deliverable_encoded_information_types_constraints satisfies RefusedArgument; /* SHORT_NAMED_INTEGER_VALUE */
+export const deliverable_encoded_information_types_constraints = RefusedArgument_deliverable_encoded_information_types_constraints; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RefusedArgument_deliverable_security_labels
@@ -118,7 +118,7 @@ export const RefusedArgument_deliverable_security_labels = 5 satisfies RefusedAr
  * @constant
  * @type {number}
  */
-export const deliverable_security_labels = RefusedArgument_deliverable_security_labels satisfies RefusedArgument; /* SHORT_NAMED_INTEGER_VALUE */
+export const deliverable_security_labels = RefusedArgument_deliverable_security_labels; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RefusedArgument_recipient_assigned_redirections
@@ -132,7 +132,7 @@ export const RefusedArgument_recipient_assigned_redirections = 6 satisfies Refus
  * @constant
  * @type {number}
  */
-export const recipient_assigned_redirections = RefusedArgument_recipient_assigned_redirections satisfies RefusedArgument; /* SHORT_NAMED_INTEGER_VALUE */
+export const recipient_assigned_redirections = RefusedArgument_recipient_assigned_redirections; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RefusedArgument_restricted_delivery
@@ -146,7 +146,7 @@ export const RefusedArgument_restricted_delivery = 7 satisfies RefusedArgument; 
  * @constant
  * @type {number}
  */
-export const restricted_delivery = RefusedArgument_restricted_delivery satisfies RefusedArgument; /* SHORT_NAMED_INTEGER_VALUE */
+export const restricted_delivery = RefusedArgument_restricted_delivery; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RefusedArgument_retrieve_registrations
@@ -160,7 +160,7 @@ export const RefusedArgument_retrieve_registrations = 8 satisfies RefusedArgumen
  * @constant
  * @type {number}
  */
-export const retrieve_registrations = RefusedArgument_retrieve_registrations satisfies RefusedArgument; /* SHORT_NAMED_INTEGER_VALUE */
+export const retrieve_registrations = RefusedArgument_retrieve_registrations; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RefusedArgument_restrict
@@ -174,7 +174,7 @@ export const RefusedArgument_restrict = 10 satisfies RefusedArgument; /* LONG_NA
  * @constant
  * @type {number}
  */
-export const restrict = RefusedArgument_restrict satisfies RefusedArgument; /* SHORT_NAMED_INTEGER_VALUE */
+export const restrict = RefusedArgument_restrict; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RefusedArgument_permissible_operations
@@ -188,7 +188,7 @@ export const RefusedArgument_permissible_operations = 11 satisfies RefusedArgume
  * @constant
  * @type {number}
  */
-export const permissible_operations = RefusedArgument_permissible_operations satisfies RefusedArgument; /* SHORT_NAMED_INTEGER_VALUE */
+export const permissible_operations = RefusedArgument_permissible_operations; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RefusedArgument_permissible_lowest_priority
@@ -202,7 +202,7 @@ export const RefusedArgument_permissible_lowest_priority = 12 satisfies RefusedA
  * @constant
  * @type {number}
  */
-export const permissible_lowest_priority = RefusedArgument_permissible_lowest_priority satisfies RefusedArgument; /* SHORT_NAMED_INTEGER_VALUE */
+export const permissible_lowest_priority = RefusedArgument_permissible_lowest_priority; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RefusedArgument_permissible_encoded_information_types
@@ -216,7 +216,7 @@ export const RefusedArgument_permissible_encoded_information_types = 13 satisfie
  * @constant
  * @type {number}
  */
-export const permissible_encoded_information_types = RefusedArgument_permissible_encoded_information_types satisfies RefusedArgument; /* SHORT_NAMED_INTEGER_VALUE */
+export const permissible_encoded_information_types = RefusedArgument_permissible_encoded_information_types; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RefusedArgument_permissible_content_types
@@ -230,7 +230,7 @@ export const RefusedArgument_permissible_content_types = 14 satisfies RefusedArg
  * @constant
  * @type {number}
  */
-export const permissible_content_types = RefusedArgument_permissible_content_types satisfies RefusedArgument; /* SHORT_NAMED_INTEGER_VALUE */
+export const permissible_content_types = RefusedArgument_permissible_content_types; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RefusedArgument_permissible_maximum_content_length
@@ -244,7 +244,7 @@ export const RefusedArgument_permissible_maximum_content_length = 15 satisfies R
  * @constant
  * @type {number}
  */
-export const permissible_maximum_content_length = RefusedArgument_permissible_maximum_content_length satisfies RefusedArgument; /* SHORT_NAMED_INTEGER_VALUE */
+export const permissible_maximum_content_length = RefusedArgument_permissible_maximum_content_length; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RefusedArgument_permissible_security_context
@@ -258,7 +258,7 @@ export const RefusedArgument_permissible_security_context = 16 satisfies Refused
  * @constant
  * @type {number}
  */
-export const permissible_security_context = RefusedArgument_permissible_security_context satisfies RefusedArgument; /* SHORT_NAMED_INTEGER_VALUE */
+export const permissible_security_context = RefusedArgument_permissible_security_context; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_RefusedArgument = $._decodeInteger;

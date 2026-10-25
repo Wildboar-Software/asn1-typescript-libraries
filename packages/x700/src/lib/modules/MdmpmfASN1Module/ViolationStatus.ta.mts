@@ -98,7 +98,7 @@ export const ViolationStatus = _enum_for_ViolationStatus;
  * @type {number}
  */
 export const ViolationStatus_unknown =
-    ViolationStatus.unknown satisfies ViolationStatus; /* LONG_NAMED_ENUMERATED_VALUE */
+    ViolationStatus.unknown; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unknown
@@ -111,7 +111,7 @@ export const ViolationStatus_unknown =
  * @type {number}
  */
 export const unknown =
-    ViolationStatus.unknown satisfies ViolationStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
+    ViolationStatus.unknown; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ViolationStatus_no_violation
@@ -123,7 +123,7 @@ export const unknown =
  * @type {number}
  */
 export const ViolationStatus_no_violation =
-    ViolationStatus.no_violation satisfies ViolationStatus; /* LONG_NAMED_ENUMERATED_VALUE */
+    ViolationStatus.no_violation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary no_violation
@@ -135,7 +135,7 @@ export const ViolationStatus_no_violation =
  * @type {number}
  */
 export const no_violation =
-    ViolationStatus.no_violation satisfies ViolationStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
+    ViolationStatus.no_violation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ViolationStatus_violation_detected
@@ -147,7 +147,7 @@ export const no_violation =
  * @type {number}
  */
 export const ViolationStatus_violation_detected =
-    ViolationStatus.violation_detected satisfies ViolationStatus; /* LONG_NAMED_ENUMERATED_VALUE */
+    ViolationStatus.violation_detected; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary violation_detected
@@ -159,7 +159,7 @@ export const ViolationStatus_violation_detected =
  * @type {number}
  */
 export const violation_detected =
-    ViolationStatus.violation_detected satisfies ViolationStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
+    ViolationStatus.violation_detected; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 export function _decode_ViolationStatus(el: _Element): ViolationStatus {

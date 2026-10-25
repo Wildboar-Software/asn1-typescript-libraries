@@ -54,7 +54,7 @@ const ControlStatus_Item_subjectToTest = 0 satisfies ControlStatus_Item; /* LONG
  * @type {number}
  */
 export
-const subjectToTest = ControlStatus_Item_subjectToTest satisfies ControlStatus_Item; /* SHORT_NAMED_INTEGER_VALUE */
+const subjectToTest = ControlStatus_Item_subjectToTest; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ControlStatus_Item_partOfServicesLocked
@@ -80,7 +80,7 @@ const ControlStatus_Item_partOfServicesLocked = 1 satisfies ControlStatus_Item; 
  * @type {number}
  */
 export
-const partOfServicesLocked = ControlStatus_Item_partOfServicesLocked satisfies ControlStatus_Item; /* SHORT_NAMED_INTEGER_VALUE */
+const partOfServicesLocked = ControlStatus_Item_partOfServicesLocked; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ControlStatus_Item_reservedForTest
@@ -106,7 +106,7 @@ const ControlStatus_Item_reservedForTest = 2 satisfies ControlStatus_Item; /* LO
  * @type {number}
  */
 export
-const reservedForTest = ControlStatus_Item_reservedForTest satisfies ControlStatus_Item; /* SHORT_NAMED_INTEGER_VALUE */
+const reservedForTest = ControlStatus_Item_reservedForTest; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ControlStatus_Item_suspended
@@ -132,7 +132,7 @@ const ControlStatus_Item_suspended = 3 satisfies ControlStatus_Item; /* LONG_NAM
  * @type {number}
  */
 export
-const suspended = ControlStatus_Item_suspended satisfies ControlStatus_Item; /* SHORT_NAMED_INTEGER_VALUE */
+const suspended = ControlStatus_Item_suspended; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_ControlStatus_Item = $._decodeInteger;

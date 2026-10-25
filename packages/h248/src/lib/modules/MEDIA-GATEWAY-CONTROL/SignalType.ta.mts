@@ -68,7 +68,7 @@ type SignalType = _enum_for_SignalType | ENUMERATED;
  * @type {number}
  */
 export
-const SignalType_brief = _enum_for_SignalType.brief satisfies SignalType; /* LONG_NAMED_ENUMERATED_VALUE */
+const SignalType_brief = _enum_for_SignalType.brief; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary brief
@@ -76,7 +76,7 @@ const SignalType_brief = _enum_for_SignalType.brief satisfies SignalType; /* LON
  * @type {number}
  */
 export
-const brief = SignalType_brief satisfies SignalType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const brief = SignalType_brief; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SignalType_onOff
@@ -89,7 +89,7 @@ const brief = SignalType_brief satisfies SignalType; /* SHORT_NAMED_ENUMERATED_V
  * @type {number}
  */
 export
-const SignalType_onOff = _enum_for_SignalType.onOff satisfies SignalType; /* LONG_NAMED_ENUMERATED_VALUE */
+const SignalType_onOff = _enum_for_SignalType.onOff; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary onOff
@@ -97,7 +97,7 @@ const SignalType_onOff = _enum_for_SignalType.onOff satisfies SignalType; /* LON
  * @type {number}
  */
 export
-const onOff = SignalType_onOff satisfies SignalType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const onOff = SignalType_onOff; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SignalType_timeOut
@@ -110,7 +110,7 @@ const onOff = SignalType_onOff satisfies SignalType; /* SHORT_NAMED_ENUMERATED_V
  * @type {number}
  */
 export
-const SignalType_timeOut = _enum_for_SignalType.timeOut satisfies SignalType; /* LONG_NAMED_ENUMERATED_VALUE */
+const SignalType_timeOut = _enum_for_SignalType.timeOut; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary timeOut
@@ -118,7 +118,7 @@ const SignalType_timeOut = _enum_for_SignalType.timeOut satisfies SignalType; /*
  * @type {number}
  */
 export
-const timeOut = SignalType_timeOut satisfies SignalType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const timeOut = SignalType_timeOut; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_SignalType = $._decodeEnumerated;
 export const _encode_SignalType = $._encodeEnumerated;
 

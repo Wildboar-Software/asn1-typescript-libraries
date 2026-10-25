@@ -49,7 +49,7 @@ const AlgorithmID_ShortForm_zlibCompress = 0 satisfies AlgorithmID_ShortForm; /*
  * @type {number}
  */
 export
-const zlibCompress = AlgorithmID_ShortForm_zlibCompress satisfies AlgorithmID_ShortForm; /* SHORT_NAMED_INTEGER_VALUE */
+const zlibCompress = AlgorithmID_ShortForm_zlibCompress; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_AlgorithmID_ShortForm: $.ASN1Decoder<AlgorithmID_ShortForm> = $._decodeInteger;
 export const _encode_AlgorithmID_ShortForm: $.ASN1Encoder<AlgorithmID_ShortForm> = $._encodeInteger;
 

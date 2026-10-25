@@ -52,7 +52,7 @@ const ALType_aig = 0 satisfies ALType; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const aig = ALType_aig satisfies ALType; /* SHORT_NAMED_INTEGER_VALUE */
+const aig = ALType_aig; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * Type Organization Collective. Units of one type, such as destroyers.
@@ -70,7 +70,7 @@ const ALType_type_ = 1 satisfies ALType; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const type_ = ALType_type_ satisfies ALType; /* SHORT_NAMED_INTEGER_VALUE */
+const type_ = ALType_type_; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * Collective Address Designator.
@@ -88,7 +88,7 @@ const ALType_cad = 2 satisfies ALType; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const cad = ALType_cad satisfies ALType; /* SHORT_NAMED_INTEGER_VALUE */
+const cad = ALType_cad; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * Task Force address list.
@@ -106,7 +106,7 @@ const ALType_taskforce = 3 satisfies ALType; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const taskforce = ALType_taskforce satisfies ALType; /* SHORT_NAMED_INTEGER_VALUE */
+const taskforce = ALType_taskforce; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * DSSCS Address Group. Named in ACP 133 SUPP-1(A).
@@ -124,7 +124,7 @@ const ALType_dag = 4 satisfies ALType; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const dag = ALType_dag satisfies ALType; /* SHORT_NAMED_INTEGER_VALUE */
+const dag = ALType_dag; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_ALType = $._decodeInteger;
 export const _encode_ALType = $._encodeInteger;
 

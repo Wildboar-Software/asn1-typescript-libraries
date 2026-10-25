@@ -49,7 +49,7 @@ const DiagFormat_extServices_permission_id = 1 satisfies DiagFormat_extServices_
  * @type {number}
  */
 export
-const id = DiagFormat_extServices_permission_id satisfies DiagFormat_extServices_permission; /* SHORT_NAMED_INTEGER_VALUE */
+const id = DiagFormat_extServices_permission_id; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagFormat_extServices_permission_modifyDelete
@@ -73,7 +73,7 @@ const DiagFormat_extServices_permission_modifyDelete = 2 satisfies DiagFormat_ex
  * @type {number}
  */
 export
-const modifyDelete = DiagFormat_extServices_permission_modifyDelete satisfies DiagFormat_extServices_permission; /* SHORT_NAMED_INTEGER_VALUE */
+const modifyDelete = DiagFormat_extServices_permission_modifyDelete; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_DiagFormat_extServices_permission: $.ASN1Decoder<DiagFormat_extServices_permission> = $._decodeInteger;
 export const _encode_DiagFormat_extServices_permission: $.ASN1Encoder<DiagFormat_extServices_permission> = $._encodeInteger;
 

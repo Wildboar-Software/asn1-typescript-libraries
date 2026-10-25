@@ -70,7 +70,7 @@ export const ArcQIStatus = _enum_for_ArcQIStatus;
  * @type {number}
  */
 export const ArcQIStatus_notApplicable =
-    ArcQIStatus.notApplicable satisfies ArcQIStatus; /* LONG_NAMED_ENUMERATED_VALUE */
+    ArcQIStatus.notApplicable; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -79,7 +79,7 @@ export const ArcQIStatus_notApplicable =
  * @type {number}
  */
 export const notApplicable =
-    ArcQIStatus.notApplicable satisfies ArcQIStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
+    ArcQIStatus.notApplicable; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -88,7 +88,7 @@ export const notApplicable =
  * @type {number}
  */
 export const ArcQIStatus_nalmNotReported =
-    ArcQIStatus.nalmNotReported satisfies ArcQIStatus; /* LONG_NAMED_ENUMERATED_VALUE */
+    ArcQIStatus.nalmNotReported; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -97,7 +97,7 @@ export const ArcQIStatus_nalmNotReported =
  * @type {number}
  */
 export const nalmNotReported =
-    ArcQIStatus.nalmNotReported satisfies ArcQIStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
+    ArcQIStatus.nalmNotReported; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -106,7 +106,7 @@ export const nalmNotReported =
  * @type {number}
  */
 export const ArcQIStatus_nalmCountDown =
-    ArcQIStatus.nalmCountDown satisfies ArcQIStatus; /* LONG_NAMED_ENUMERATED_VALUE */
+    ArcQIStatus.nalmCountDown; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -115,7 +115,7 @@ export const ArcQIStatus_nalmCountDown =
  * @type {number}
  */
 export const nalmCountDown =
-    ArcQIStatus.nalmCountDown satisfies ArcQIStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
+    ArcQIStatus.nalmCountDown; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 

@@ -140,7 +140,7 @@ const DeviceCategory = _enum_for_DeviceCategory;
  * ACD device (ECMA-269 §13.1.2–13.1.4).
  */
 export
-const DeviceCategory_acd = DeviceCategory.acd satisfies DeviceCategory; /* LONG_NAMED_ENUMERATED_VALUE */
+const DeviceCategory_acd = DeviceCategory.acd; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary acd
@@ -150,7 +150,7 @@ const DeviceCategory_acd = DeviceCategory.acd satisfies DeviceCategory; /* LONG_
  * Alias of `DeviceCategory_acd`.
  */
 export
-const acd = DeviceCategory.acd satisfies DeviceCategory; /* SHORT_NAMED_ENUMERATED_VALUE */
+const acd = DeviceCategory.acd; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary DeviceCategory_group
@@ -160,7 +160,7 @@ const acd = DeviceCategory.acd satisfies DeviceCategory; /* SHORT_NAMED_ENUMERAT
  * Group device (ECMA-269 §13.1.2–13.1.4).
  */
 export
-const DeviceCategory_group = DeviceCategory.group satisfies DeviceCategory; /* LONG_NAMED_ENUMERATED_VALUE */
+const DeviceCategory_group = DeviceCategory.group; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary group
@@ -170,7 +170,7 @@ const DeviceCategory_group = DeviceCategory.group satisfies DeviceCategory; /* L
  * Alias of `DeviceCategory_group`.
  */
 export
-const group = DeviceCategory.group satisfies DeviceCategory; /* SHORT_NAMED_ENUMERATED_VALUE */
+const group = DeviceCategory.group; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary DeviceCategory_networkInterface
@@ -180,7 +180,7 @@ const group = DeviceCategory.group satisfies DeviceCategory; /* SHORT_NAMED_ENUM
  * Network Interface (e.g. trunk, CO line) (ECMA-269 §13.1.2–13.1.4).
  */
 export
-const DeviceCategory_networkInterface = DeviceCategory.networkInterface satisfies DeviceCategory; /* LONG_NAMED_ENUMERATED_VALUE */
+const DeviceCategory_networkInterface = DeviceCategory.networkInterface; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary networkInterface
@@ -190,7 +190,7 @@ const DeviceCategory_networkInterface = DeviceCategory.networkInterface satisfie
  * Alias of `DeviceCategory_networkInterface`.
  */
 export
-const networkInterface = DeviceCategory.networkInterface satisfies DeviceCategory; /* SHORT_NAMED_ENUMERATED_VALUE */
+const networkInterface = DeviceCategory.networkInterface; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary DeviceCategory_park
@@ -200,7 +200,7 @@ const networkInterface = DeviceCategory.networkInterface satisfies DeviceCategor
  * Park device (ECMA-269 §13.1.2–13.1.4).
  */
 export
-const DeviceCategory_park = DeviceCategory.park satisfies DeviceCategory; /* LONG_NAMED_ENUMERATED_VALUE */
+const DeviceCategory_park = DeviceCategory.park; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary park
@@ -210,7 +210,7 @@ const DeviceCategory_park = DeviceCategory.park satisfies DeviceCategory; /* LON
  * Alias of `DeviceCategory_park`.
  */
 export
-const park = DeviceCategory.park satisfies DeviceCategory; /* SHORT_NAMED_ENUMERATED_VALUE */
+const park = DeviceCategory.park; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary DeviceCategory_routeingDevice
@@ -220,7 +220,7 @@ const park = DeviceCategory.park satisfies DeviceCategory; /* SHORT_NAMED_ENUMER
  * Routeing Device (ECMA-269 §13.1.2–13.1.4).
  */
 export
-const DeviceCategory_routeingDevice = DeviceCategory.routeingDevice satisfies DeviceCategory; /* LONG_NAMED_ENUMERATED_VALUE */
+const DeviceCategory_routeingDevice = DeviceCategory.routeingDevice; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary routeingDevice
@@ -230,7 +230,7 @@ const DeviceCategory_routeingDevice = DeviceCategory.routeingDevice satisfies De
  * Alias of `DeviceCategory_routeingDevice`.
  */
 export
-const routeingDevice = DeviceCategory.routeingDevice satisfies DeviceCategory; /* SHORT_NAMED_ENUMERATED_VALUE */
+const routeingDevice = DeviceCategory.routeingDevice; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary DeviceCategory_station
@@ -240,7 +240,7 @@ const routeingDevice = DeviceCategory.routeingDevice satisfies DeviceCategory; /
  * Station (default) (ECMA-269 §13.1.2–13.1.4).
  */
 export
-const DeviceCategory_station = DeviceCategory.station satisfies DeviceCategory; /* LONG_NAMED_ENUMERATED_VALUE */
+const DeviceCategory_station = DeviceCategory.station; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary station
@@ -250,7 +250,7 @@ const DeviceCategory_station = DeviceCategory.station satisfies DeviceCategory; 
  * Alias of `DeviceCategory_station`.
  */
 export
-const station = DeviceCategory.station satisfies DeviceCategory; /* SHORT_NAMED_ENUMERATED_VALUE */
+const station = DeviceCategory.station; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary DeviceCategory_voiceUnit
@@ -260,7 +260,7 @@ const station = DeviceCategory.station satisfies DeviceCategory; /* SHORT_NAMED_
  * Voice Unit (ECMA-269 §13.1.2–13.1.4).
  */
 export
-const DeviceCategory_voiceUnit = DeviceCategory.voiceUnit satisfies DeviceCategory; /* LONG_NAMED_ENUMERATED_VALUE */
+const DeviceCategory_voiceUnit = DeviceCategory.voiceUnit; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary voiceUnit
@@ -270,7 +270,7 @@ const DeviceCategory_voiceUnit = DeviceCategory.voiceUnit satisfies DeviceCatego
  * Alias of `DeviceCategory_voiceUnit`.
  */
 export
-const voiceUnit = DeviceCategory.voiceUnit satisfies DeviceCategory; /* SHORT_NAMED_ENUMERATED_VALUE */
+const voiceUnit = DeviceCategory.voiceUnit; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary DeviceCategory_genericInteractiveVoice
@@ -280,7 +280,7 @@ const voiceUnit = DeviceCategory.voiceUnit satisfies DeviceCategory; /* SHORT_NA
  * Generic Interactive Voice (ECMA-269 §13.1.2–13.1.4).
  */
 export
-const DeviceCategory_genericInteractiveVoice = DeviceCategory.genericInteractiveVoice satisfies DeviceCategory; /* LONG_NAMED_ENUMERATED_VALUE */
+const DeviceCategory_genericInteractiveVoice = DeviceCategory.genericInteractiveVoice; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary genericInteractiveVoice
@@ -290,7 +290,7 @@ const DeviceCategory_genericInteractiveVoice = DeviceCategory.genericInteractive
  * Alias of `DeviceCategory_genericInteractiveVoice`.
  */
 export
-const genericInteractiveVoice = DeviceCategory.genericInteractiveVoice satisfies DeviceCategory; /* SHORT_NAMED_ENUMERATED_VALUE */
+const genericInteractiveVoice = DeviceCategory.genericInteractiveVoice; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary DeviceCategory_listenerInteractiveVoice
@@ -300,7 +300,7 @@ const genericInteractiveVoice = DeviceCategory.genericInteractiveVoice satisfies
  * Listener Interactive Voice (ECMA-269 §13.1.2–13.1.4).
  */
 export
-const DeviceCategory_listenerInteractiveVoice = DeviceCategory.listenerInteractiveVoice satisfies DeviceCategory; /* LONG_NAMED_ENUMERATED_VALUE */
+const DeviceCategory_listenerInteractiveVoice = DeviceCategory.listenerInteractiveVoice; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary listenerInteractiveVoice
@@ -310,7 +310,7 @@ const DeviceCategory_listenerInteractiveVoice = DeviceCategory.listenerInteracti
  * Alias of `DeviceCategory_listenerInteractiveVoice`.
  */
 export
-const listenerInteractiveVoice = DeviceCategory.listenerInteractiveVoice satisfies DeviceCategory; /* SHORT_NAMED_ENUMERATED_VALUE */
+const listenerInteractiveVoice = DeviceCategory.listenerInteractiveVoice; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary DeviceCategory_dtmfInteractiveVoice
@@ -320,7 +320,7 @@ const listenerInteractiveVoice = DeviceCategory.listenerInteractiveVoice satisfi
  * DTMF Interactive Voice (ECMA-269 §13.1.2–13.1.4).
  */
 export
-const DeviceCategory_dtmfInteractiveVoice = DeviceCategory.dtmfInteractiveVoice satisfies DeviceCategory; /* LONG_NAMED_ENUMERATED_VALUE */
+const DeviceCategory_dtmfInteractiveVoice = DeviceCategory.dtmfInteractiveVoice; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary dtmfInteractiveVoice
@@ -330,7 +330,7 @@ const DeviceCategory_dtmfInteractiveVoice = DeviceCategory.dtmfInteractiveVoice 
  * Alias of `DeviceCategory_dtmfInteractiveVoice`.
  */
 export
-const dtmfInteractiveVoice = DeviceCategory.dtmfInteractiveVoice satisfies DeviceCategory; /* SHORT_NAMED_ENUMERATED_VALUE */
+const dtmfInteractiveVoice = DeviceCategory.dtmfInteractiveVoice; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary DeviceCategory_promptInteractiveVoice
@@ -340,7 +340,7 @@ const dtmfInteractiveVoice = DeviceCategory.dtmfInteractiveVoice satisfies Devic
  * Prompt Interactive Voice (ECMA-269 §13.1.2–13.1.4).
  */
 export
-const DeviceCategory_promptInteractiveVoice = DeviceCategory.promptInteractiveVoice satisfies DeviceCategory; /* LONG_NAMED_ENUMERATED_VALUE */
+const DeviceCategory_promptInteractiveVoice = DeviceCategory.promptInteractiveVoice; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary promptInteractiveVoice
@@ -350,7 +350,7 @@ const DeviceCategory_promptInteractiveVoice = DeviceCategory.promptInteractiveVo
  * Alias of `DeviceCategory_promptInteractiveVoice`.
  */
 export
-const promptInteractiveVoice = DeviceCategory.promptInteractiveVoice satisfies DeviceCategory; /* SHORT_NAMED_ENUMERATED_VALUE */
+const promptInteractiveVoice = DeviceCategory.promptInteractiveVoice; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary DeviceCategory_promptQueueInteractiveVoice
@@ -360,7 +360,7 @@ const promptInteractiveVoice = DeviceCategory.promptInteractiveVoice satisfies D
  * Prompt Queue Interactive Voice (ECMA-269 §13.1.2–13.1.4).
  */
 export
-const DeviceCategory_promptQueueInteractiveVoice = DeviceCategory.promptQueueInteractiveVoice satisfies DeviceCategory; /* LONG_NAMED_ENUMERATED_VALUE */
+const DeviceCategory_promptQueueInteractiveVoice = DeviceCategory.promptQueueInteractiveVoice; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary promptQueueInteractiveVoice
@@ -370,7 +370,7 @@ const DeviceCategory_promptQueueInteractiveVoice = DeviceCategory.promptQueueInt
  * Alias of `DeviceCategory_promptQueueInteractiveVoice`.
  */
 export
-const promptQueueInteractiveVoice = DeviceCategory.promptQueueInteractiveVoice satisfies DeviceCategory; /* SHORT_NAMED_ENUMERATED_VALUE */
+const promptQueueInteractiveVoice = DeviceCategory.promptQueueInteractiveVoice; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary DeviceCategory_messageInteractiveVoice
@@ -380,7 +380,7 @@ const promptQueueInteractiveVoice = DeviceCategory.promptQueueInteractiveVoice s
  * Message Interactive Voice (ECMA-269 §13.1.2–13.1.4).
  */
 export
-const DeviceCategory_messageInteractiveVoice = DeviceCategory.messageInteractiveVoice satisfies DeviceCategory; /* LONG_NAMED_ENUMERATED_VALUE */
+const DeviceCategory_messageInteractiveVoice = DeviceCategory.messageInteractiveVoice; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary messageInteractiveVoice
@@ -390,7 +390,7 @@ const DeviceCategory_messageInteractiveVoice = DeviceCategory.messageInteractive
  * Alias of `DeviceCategory_messageInteractiveVoice`.
  */
 export
-const messageInteractiveVoice = DeviceCategory.messageInteractiveVoice satisfies DeviceCategory; /* SHORT_NAMED_ENUMERATED_VALUE */
+const messageInteractiveVoice = DeviceCategory.messageInteractiveVoice; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary DeviceCategory_conference
@@ -400,7 +400,7 @@ const messageInteractiveVoice = DeviceCategory.messageInteractiveVoice satisfies
  * Conference (ECMA-269 §13.1.2–13.1.4).
  */
 export
-const DeviceCategory_conference = DeviceCategory.conference satisfies DeviceCategory; /* LONG_NAMED_ENUMERATED_VALUE */
+const DeviceCategory_conference = DeviceCategory.conference; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary conference
@@ -410,7 +410,7 @@ const DeviceCategory_conference = DeviceCategory.conference satisfies DeviceCate
  * Alias of `DeviceCategory_conference`.
  */
 export
-const conference = DeviceCategory.conference satisfies DeviceCategory; /* SHORT_NAMED_ENUMERATED_VALUE */
+const conference = DeviceCategory.conference; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary DeviceCategory_other
@@ -420,7 +420,7 @@ const conference = DeviceCategory.conference satisfies DeviceCategory; /* SHORT_
  * Other (ECMA-269 §13.1.2–13.1.4).
  */
 export
-const DeviceCategory_other = DeviceCategory.other satisfies DeviceCategory; /* LONG_NAMED_ENUMERATED_VALUE */
+const DeviceCategory_other = DeviceCategory.other; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary other
@@ -430,7 +430,7 @@ const DeviceCategory_other = DeviceCategory.other satisfies DeviceCategory; /* L
  * Alias of `DeviceCategory_other`.
  */
 export
-const other = DeviceCategory.other satisfies DeviceCategory; /* SHORT_NAMED_ENUMERATED_VALUE */
+const other = DeviceCategory.other; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 let _cached_decoder_for_DeviceCategory: $.ASN1Decoder<DeviceCategory> | null = null;
 

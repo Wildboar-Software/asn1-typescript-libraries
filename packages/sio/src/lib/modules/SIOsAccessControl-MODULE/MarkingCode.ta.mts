@@ -37,7 +37,7 @@ export const MarkingCode_pageTop = 1 satisfies MarkingCode; /* LONG_NAMED_INTEGE
  * @constant
  * @type {number}
  */
-export const pageTop = MarkingCode_pageTop satisfies MarkingCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const pageTop = MarkingCode_pageTop; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -53,7 +53,7 @@ export const MarkingCode_pageBottom = 2 satisfies MarkingCode; /* LONG_NAMED_INT
  * @constant
  * @type {number}
  */
-export const pageBottom = MarkingCode_pageBottom satisfies MarkingCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const pageBottom = MarkingCode_pageBottom; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -69,7 +69,7 @@ export const MarkingCode_pageTopBottom = 3 satisfies MarkingCode; /* LONG_NAMED_
  * @constant
  * @type {number}
  */
-export const pageTopBottom = MarkingCode_pageTopBottom satisfies MarkingCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const pageTopBottom = MarkingCode_pageTopBottom; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -85,7 +85,7 @@ export const MarkingCode_documentEnd = 4 satisfies MarkingCode; /* LONG_NAMED_IN
  * @constant
  * @type {number}
  */
-export const documentEnd = MarkingCode_documentEnd satisfies MarkingCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const documentEnd = MarkingCode_documentEnd; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -101,7 +101,7 @@ export const MarkingCode_noNameDisplay = 5 satisfies MarkingCode; /* LONG_NAMED_
  * @constant
  * @type {number}
  */
-export const noNameDisplay = MarkingCode_noNameDisplay satisfies MarkingCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const noNameDisplay = MarkingCode_noNameDisplay; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -117,7 +117,7 @@ export const MarkingCode_noMarkingDisplay = 6 satisfies MarkingCode; /* LONG_NAM
  * @constant
  * @type {number}
  */
-export const noMarkingDisplay = MarkingCode_noMarkingDisplay satisfies MarkingCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const noMarkingDisplay = MarkingCode_noMarkingDisplay; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -133,7 +133,7 @@ export const MarkingCode_unused = 7 satisfies MarkingCode; /* LONG_NAMED_INTEGER
  * @constant
  * @type {number}
  */
-export const unused = MarkingCode_unused satisfies MarkingCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const unused = MarkingCode_unused; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -149,7 +149,7 @@ export const MarkingCode_documentStart = 8 satisfies MarkingCode; /* LONG_NAMED_
  * @constant
  * @type {number}
  */
-export const documentStart = MarkingCode_documentStart satisfies MarkingCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const documentStart = MarkingCode_documentStart; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -165,7 +165,7 @@ export const MarkingCode_suppressClassName = 9 satisfies MarkingCode; /* LONG_NA
  * @constant
  * @type {number}
  */
-export const suppressClassName = MarkingCode_suppressClassName satisfies MarkingCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const suppressClassName = MarkingCode_suppressClassName; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 

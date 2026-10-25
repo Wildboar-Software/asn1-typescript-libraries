@@ -113,7 +113,7 @@ const AccuracyFulfilmentIndicator = _enum_for_AccuracyFulfilmentIndicator;
  * @type {number}
  */
 export
-const AccuracyFulfilmentIndicator_requestedAccuracyFulfilled = AccuracyFulfilmentIndicator.requestedAccuracyFulfilled satisfies AccuracyFulfilmentIndicator; /* LONG_NAMED_ENUMERATED_VALUE */
+const AccuracyFulfilmentIndicator_requestedAccuracyFulfilled = AccuracyFulfilmentIndicator.requestedAccuracyFulfilled; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary requestedAccuracyFulfilled
@@ -127,7 +127,7 @@ const AccuracyFulfilmentIndicator_requestedAccuracyFulfilled = AccuracyFulfilmen
  * @type {number}
  */
 export
-const requestedAccuracyFulfilled = AccuracyFulfilmentIndicator.requestedAccuracyFulfilled satisfies AccuracyFulfilmentIndicator; /* SHORT_NAMED_ENUMERATED_VALUE */
+const requestedAccuracyFulfilled = AccuracyFulfilmentIndicator.requestedAccuracyFulfilled; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AccuracyFulfilmentIndicator_requestedAccuracyNotFulfilled
@@ -141,7 +141,7 @@ const requestedAccuracyFulfilled = AccuracyFulfilmentIndicator.requestedAccuracy
  * @type {number}
  */
 export
-const AccuracyFulfilmentIndicator_requestedAccuracyNotFulfilled = AccuracyFulfilmentIndicator.requestedAccuracyNotFulfilled satisfies AccuracyFulfilmentIndicator; /* LONG_NAMED_ENUMERATED_VALUE */
+const AccuracyFulfilmentIndicator_requestedAccuracyNotFulfilled = AccuracyFulfilmentIndicator.requestedAccuracyNotFulfilled; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary requestedAccuracyNotFulfilled
@@ -155,7 +155,7 @@ const AccuracyFulfilmentIndicator_requestedAccuracyNotFulfilled = AccuracyFulfil
  * @type {number}
  */
 export
-const requestedAccuracyNotFulfilled = AccuracyFulfilmentIndicator.requestedAccuracyNotFulfilled satisfies AccuracyFulfilmentIndicator; /* SHORT_NAMED_ENUMERATED_VALUE */
+const requestedAccuracyNotFulfilled = AccuracyFulfilmentIndicator.requestedAccuracyNotFulfilled; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_AccuracyFulfilmentIndicator: $.ASN1Decoder<AccuracyFulfilmentIndicator> = $._decodeEnumerated;
 export const _encode_AccuracyFulfilmentIndicator: $.ASN1Encoder<AccuracyFulfilmentIndicator> = $._encodeEnumerated;
 

@@ -138,7 +138,7 @@ const Classification = _enum_for_Classification;
  * @type {number}
  */
 export
-const Classification_unmarked = Classification.unmarked satisfies Classification; /* LONG_NAMED_ENUMERATED_VALUE */
+const Classification_unmarked = Classification.unmarked; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * Short name for {@link Classification_unmarked}.
@@ -147,7 +147,7 @@ const Classification_unmarked = Classification.unmarked satisfies Classification
  * @type {number}
  */
 export
-const unmarked = Classification.unmarked satisfies Classification; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unmarked = Classification.unmarked; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * Lowest classification in paragraph 409.b.
@@ -156,7 +156,7 @@ const unmarked = Classification.unmarked satisfies Classification; /* SHORT_NAME
  * @type {number}
  */
 export
-const Classification_unclassified = Classification.unclassified satisfies Classification; /* LONG_NAMED_ENUMERATED_VALUE */
+const Classification_unclassified = Classification.unclassified; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * Short name for {@link Classification_unclassified}.
@@ -165,7 +165,7 @@ const Classification_unclassified = Classification.unclassified satisfies Classi
  * @type {number}
  */
 export
-const unclassified = Classification.unclassified satisfies Classification; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unclassified = Classification.unclassified; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * Above unclassified and below confidential.
@@ -174,7 +174,7 @@ const unclassified = Classification.unclassified satisfies Classification; /* SH
  * @type {number}
  */
 export
-const Classification_restricted = Classification.restricted satisfies Classification; /* LONG_NAMED_ENUMERATED_VALUE */
+const Classification_restricted = Classification.restricted; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * Short name for {@link Classification_restricted}.
@@ -183,7 +183,7 @@ const Classification_restricted = Classification.restricted satisfies Classifica
  * @type {number}
  */
 export
-const restricted = Classification.restricted satisfies Classification; /* SHORT_NAMED_ENUMERATED_VALUE */
+const restricted = Classification.restricted; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * Above restricted and below secret.
@@ -192,7 +192,7 @@ const restricted = Classification.restricted satisfies Classification; /* SHORT_
  * @type {number}
  */
 export
-const Classification_confidential = Classification.confidential satisfies Classification; /* LONG_NAMED_ENUMERATED_VALUE */
+const Classification_confidential = Classification.confidential; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * Short name for {@link Classification_confidential}.
@@ -201,7 +201,7 @@ const Classification_confidential = Classification.confidential satisfies Classi
  * @type {number}
  */
 export
-const confidential = Classification.confidential satisfies Classification; /* SHORT_NAMED_ENUMERATED_VALUE */
+const confidential = Classification.confidential; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * Above confidential and below top secret.
@@ -210,7 +210,7 @@ const confidential = Classification.confidential satisfies Classification; /* SH
  * @type {number}
  */
 export
-const Classification_secret = Classification.secret satisfies Classification; /* LONG_NAMED_ENUMERATED_VALUE */
+const Classification_secret = Classification.secret; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * Short name for {@link Classification_secret}.
@@ -219,7 +219,7 @@ const Classification_secret = Classification.secret satisfies Classification; /*
  * @type {number}
  */
 export
-const secret = Classification.secret satisfies Classification; /* SHORT_NAMED_ENUMERATED_VALUE */
+const secret = Classification.secret; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * Dominates the lower classifications in paragraph 409.b.
@@ -228,7 +228,7 @@ const secret = Classification.secret satisfies Classification; /* SHORT_NAMED_EN
  * @type {number}
  */
 export
-const Classification_top_secret = Classification.top_secret satisfies Classification; /* LONG_NAMED_ENUMERATED_VALUE */
+const Classification_top_secret = Classification.top_secret; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * Short name for {@link Classification_top_secret}.
@@ -237,7 +237,7 @@ const Classification_top_secret = Classification.top_secret satisfies Classifica
  * @type {number}
  */
 export
-const top_secret = Classification.top_secret satisfies Classification; /* SHORT_NAMED_ENUMERATED_VALUE */
+const top_secret = Classification.top_secret; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_Classification: $.ASN1Decoder<Classification> =
     $._decodeEnumerated as $.ASN1Decoder<Classification>;
 export const _encode_Classification: $.ASN1Encoder<Classification> =

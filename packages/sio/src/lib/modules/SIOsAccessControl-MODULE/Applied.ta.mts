@@ -36,7 +36,7 @@ export const Applied_encrypt = 0 satisfies Applied; /* LONG_NAMED_INTEGER_VALUE 
  * @constant
  * @type {number}
  */
-export const encrypt = Applied_encrypt satisfies Applied; /* SHORT_NAMED_INTEGER_VALUE */
+export const encrypt = Applied_encrypt; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -54,7 +54,7 @@ export const Applied_decrypt = 1 satisfies Applied; /* LONG_NAMED_INTEGER_VALUE 
  * @constant
  * @type {number}
  */
-export const decrypt = Applied_decrypt satisfies Applied; /* SHORT_NAMED_INTEGER_VALUE */
+export const decrypt = Applied_decrypt; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -72,7 +72,7 @@ export const Applied_both = 2 satisfies Applied; /* LONG_NAMED_INTEGER_VALUE */
  * @constant
  * @type {number}
  */
-export const both = Applied_both satisfies Applied; /* SHORT_NAMED_INTEGER_VALUE */
+export const both = Applied_both; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 

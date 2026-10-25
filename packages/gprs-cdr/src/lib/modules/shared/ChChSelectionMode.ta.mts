@@ -83,7 +83,7 @@ const ChChSelectionMode = _enum_for_ChChSelectionMode;
  * @type {number}
  */
 export
-const ChChSelectionMode_servingNodeSupplied = ChChSelectionMode.servingNodeSupplied satisfies ChChSelectionMode; /* LONG_NAMED_ENUMERATED_VALUE */
+const ChChSelectionMode_servingNodeSupplied = ChChSelectionMode.servingNodeSupplied; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary servingNodeSupplied
@@ -91,7 +91,7 @@ const ChChSelectionMode_servingNodeSupplied = ChChSelectionMode.servingNodeSuppl
  * @type {number}
  */
 export
-const servingNodeSupplied = ChChSelectionMode.servingNodeSupplied satisfies ChChSelectionMode; /* SHORT_NAMED_ENUMERATED_VALUE */
+const servingNodeSupplied = ChChSelectionMode.servingNodeSupplied; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ChChSelectionMode_subscriptionSpecific
@@ -99,7 +99,7 @@ const servingNodeSupplied = ChChSelectionMode.servingNodeSupplied satisfies ChCh
  * @type {number}
  */
 export
-const ChChSelectionMode_subscriptionSpecific = ChChSelectionMode.subscriptionSpecific satisfies ChChSelectionMode; /* LONG_NAMED_ENUMERATED_VALUE */
+const ChChSelectionMode_subscriptionSpecific = ChChSelectionMode.subscriptionSpecific; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary subscriptionSpecific
@@ -107,7 +107,7 @@ const ChChSelectionMode_subscriptionSpecific = ChChSelectionMode.subscriptionSpe
  * @type {number}
  */
 export
-const subscriptionSpecific = ChChSelectionMode.subscriptionSpecific satisfies ChChSelectionMode; /* SHORT_NAMED_ENUMERATED_VALUE */
+const subscriptionSpecific = ChChSelectionMode.subscriptionSpecific; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ChChSelectionMode_aPNSpecific
@@ -115,7 +115,7 @@ const subscriptionSpecific = ChChSelectionMode.subscriptionSpecific satisfies Ch
  * @type {number}
  */
 export
-const ChChSelectionMode_aPNSpecific = ChChSelectionMode.aPNSpecific satisfies ChChSelectionMode; /* LONG_NAMED_ENUMERATED_VALUE */
+const ChChSelectionMode_aPNSpecific = ChChSelectionMode.aPNSpecific; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary aPNSpecific
@@ -123,7 +123,7 @@ const ChChSelectionMode_aPNSpecific = ChChSelectionMode.aPNSpecific satisfies Ch
  * @type {number}
  */
 export
-const aPNSpecific = ChChSelectionMode.aPNSpecific satisfies ChChSelectionMode; /* SHORT_NAMED_ENUMERATED_VALUE */
+const aPNSpecific = ChChSelectionMode.aPNSpecific; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ChChSelectionMode_homeDefault
@@ -131,7 +131,7 @@ const aPNSpecific = ChChSelectionMode.aPNSpecific satisfies ChChSelectionMode; /
  * @type {number}
  */
 export
-const ChChSelectionMode_homeDefault = ChChSelectionMode.homeDefault satisfies ChChSelectionMode; /* LONG_NAMED_ENUMERATED_VALUE */
+const ChChSelectionMode_homeDefault = ChChSelectionMode.homeDefault; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary homeDefault
@@ -139,7 +139,7 @@ const ChChSelectionMode_homeDefault = ChChSelectionMode.homeDefault satisfies Ch
  * @type {number}
  */
 export
-const homeDefault = ChChSelectionMode.homeDefault satisfies ChChSelectionMode; /* SHORT_NAMED_ENUMERATED_VALUE */
+const homeDefault = ChChSelectionMode.homeDefault; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ChChSelectionMode_roamingDefault
@@ -147,7 +147,7 @@ const homeDefault = ChChSelectionMode.homeDefault satisfies ChChSelectionMode; /
  * @type {number}
  */
 export
-const ChChSelectionMode_roamingDefault = ChChSelectionMode.roamingDefault satisfies ChChSelectionMode; /* LONG_NAMED_ENUMERATED_VALUE */
+const ChChSelectionMode_roamingDefault = ChChSelectionMode.roamingDefault; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary roamingDefault
@@ -155,7 +155,7 @@ const ChChSelectionMode_roamingDefault = ChChSelectionMode.roamingDefault satisf
  * @type {number}
  */
 export
-const roamingDefault = ChChSelectionMode.roamingDefault satisfies ChChSelectionMode; /* SHORT_NAMED_ENUMERATED_VALUE */
+const roamingDefault = ChChSelectionMode.roamingDefault; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ChChSelectionMode_visitingDefault
@@ -163,7 +163,7 @@ const roamingDefault = ChChSelectionMode.roamingDefault satisfies ChChSelectionM
  * @type {number}
  */
 export
-const ChChSelectionMode_visitingDefault = ChChSelectionMode.visitingDefault satisfies ChChSelectionMode; /* LONG_NAMED_ENUMERATED_VALUE */
+const ChChSelectionMode_visitingDefault = ChChSelectionMode.visitingDefault; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary visitingDefault
@@ -171,7 +171,7 @@ const ChChSelectionMode_visitingDefault = ChChSelectionMode.visitingDefault sati
  * @type {number}
  */
 export
-const visitingDefault = ChChSelectionMode.visitingDefault satisfies ChChSelectionMode; /* SHORT_NAMED_ENUMERATED_VALUE */
+const visitingDefault = ChChSelectionMode.visitingDefault; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ChChSelectionMode_fixedDefault
@@ -179,7 +179,7 @@ const visitingDefault = ChChSelectionMode.visitingDefault satisfies ChChSelectio
  * @type {number}
  */
 export
-const ChChSelectionMode_fixedDefault = ChChSelectionMode.fixedDefault satisfies ChChSelectionMode; /* LONG_NAMED_ENUMERATED_VALUE */
+const ChChSelectionMode_fixedDefault = ChChSelectionMode.fixedDefault; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary fixedDefault
@@ -187,7 +187,7 @@ const ChChSelectionMode_fixedDefault = ChChSelectionMode.fixedDefault satisfies 
  * @type {number}
  */
 export
-const fixedDefault = ChChSelectionMode.fixedDefault satisfies ChChSelectionMode; /* SHORT_NAMED_ENUMERATED_VALUE */
+const fixedDefault = ChChSelectionMode.fixedDefault; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_ChChSelectionMode: $.ASN1Decoder<ChChSelectionMode> = $._decodeEnumerated;

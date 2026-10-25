@@ -45,7 +45,7 @@ export type CloseOutVerification = _enum_for_CloseOutVerification | ENUMERATED;
  * @constant
  * @type {number}
  */
-export const CloseOutVerification_noAction = _enum_for_CloseOutVerification.noAction satisfies CloseOutVerification; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CloseOutVerification_noAction = _enum_for_CloseOutVerification.noAction; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -53,7 +53,7 @@ export const CloseOutVerification_noAction = _enum_for_CloseOutVerification.noAc
  * @constant
  * @type {number}
  */
-export const noAction = CloseOutVerification_noAction satisfies CloseOutVerification; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const noAction = CloseOutVerification_noAction; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -61,7 +61,7 @@ export const noAction = CloseOutVerification_noAction satisfies CloseOutVerifica
  * @constant
  * @type {number}
  */
-export const CloseOutVerification_verified = _enum_for_CloseOutVerification.verified satisfies CloseOutVerification; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CloseOutVerification_verified = _enum_for_CloseOutVerification.verified; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -69,7 +69,7 @@ export const CloseOutVerification_verified = _enum_for_CloseOutVerification.veri
  * @constant
  * @type {number}
  */
-export const verified = CloseOutVerification_verified satisfies CloseOutVerification; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const verified = CloseOutVerification_verified; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -77,7 +77,7 @@ export const verified = CloseOutVerification_verified satisfies CloseOutVerifica
  * @constant
  * @type {number}
  */
-export const CloseOutVerification_denied = _enum_for_CloseOutVerification.denied satisfies CloseOutVerification; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CloseOutVerification_denied = _enum_for_CloseOutVerification.denied; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -85,7 +85,7 @@ export const CloseOutVerification_denied = _enum_for_CloseOutVerification.denied
  * @constant
  * @type {number}
  */
-export const denied = CloseOutVerification_denied satisfies CloseOutVerification; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const denied = CloseOutVerification_denied; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -93,7 +93,7 @@ export const denied = CloseOutVerification_denied satisfies CloseOutVerification
  * @constant
  * @type {number}
  */
-export const CloseOutVerification_deniedActivityDurationDisputed = _enum_for_CloseOutVerification.deniedActivityDurationDisputed satisfies CloseOutVerification; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CloseOutVerification_deniedActivityDurationDisputed = _enum_for_CloseOutVerification.deniedActivityDurationDisputed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -101,7 +101,7 @@ export const CloseOutVerification_deniedActivityDurationDisputed = _enum_for_Clo
  * @constant
  * @type {number}
  */
-export const deniedActivityDurationDisputed = CloseOutVerification_deniedActivityDurationDisputed satisfies CloseOutVerification; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const deniedActivityDurationDisputed = CloseOutVerification_deniedActivityDurationDisputed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -109,7 +109,7 @@ export const deniedActivityDurationDisputed = CloseOutVerification_deniedActivit
  * @constant
  * @type {number}
  */
-export const CloseOutVerification_deniedCloseOutNarrDisputed = _enum_for_CloseOutVerification.deniedCloseOutNarrDisputed satisfies CloseOutVerification; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CloseOutVerification_deniedCloseOutNarrDisputed = _enum_for_CloseOutVerification.deniedCloseOutNarrDisputed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -117,7 +117,7 @@ export const CloseOutVerification_deniedCloseOutNarrDisputed = _enum_for_CloseOu
  * @constant
  * @type {number}
  */
-export const deniedCloseOutNarrDisputed = CloseOutVerification_deniedCloseOutNarrDisputed satisfies CloseOutVerification; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const deniedCloseOutNarrDisputed = CloseOutVerification_deniedCloseOutNarrDisputed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 

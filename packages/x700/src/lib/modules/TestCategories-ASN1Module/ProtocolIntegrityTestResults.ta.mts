@@ -51,7 +51,7 @@ export const ProtocolIntegrityTestResults_wrongPDUResponse = 0 satisfies Protoco
  * @constant
  * @type {number}
  */
-export const wrongPDUResponse = ProtocolIntegrityTestResults_wrongPDUResponse satisfies ProtocolIntegrityTestResults; /* SHORT_NAMED_INTEGER_VALUE */
+export const wrongPDUResponse = ProtocolIntegrityTestResults_wrongPDUResponse; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProtocolIntegrityTestResults_pDUResponseNotReceived
@@ -71,7 +71,7 @@ export const ProtocolIntegrityTestResults_pDUResponseNotReceived = 1 satisfies P
  * @constant
  * @type {number}
  */
-export const pDUResponseNotReceived = ProtocolIntegrityTestResults_pDUResponseNotReceived satisfies ProtocolIntegrityTestResults; /* SHORT_NAMED_INTEGER_VALUE */
+export const pDUResponseNotReceived = ProtocolIntegrityTestResults_pDUResponseNotReceived; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_ProtocolIntegrityTestResults = $._decodeInteger;

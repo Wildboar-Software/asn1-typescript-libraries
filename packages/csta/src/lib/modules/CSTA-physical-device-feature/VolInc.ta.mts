@@ -81,7 +81,7 @@ const VolInc = _enum_for_VolInc;
  * @type {number}
  */
 export
-const VolInc_increment = VolInc.increment satisfies VolInc; /* LONG_NAMED_ENUMERATED_VALUE */
+const VolInc_increment = VolInc.increment; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary increment
@@ -89,7 +89,7 @@ const VolInc_increment = VolInc.increment satisfies VolInc; /* LONG_NAMED_ENUMER
  * @type {number}
  */
 export
-const increment = VolInc.increment satisfies VolInc; /* SHORT_NAMED_ENUMERATED_VALUE */
+const increment = VolInc.increment; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary VolInc_decrement
@@ -101,7 +101,7 @@ const increment = VolInc.increment satisfies VolInc; /* SHORT_NAMED_ENUMERATED_V
  * @type {number}
  */
 export
-const VolInc_decrement = VolInc.decrement satisfies VolInc; /* LONG_NAMED_ENUMERATED_VALUE */
+const VolInc_decrement = VolInc.decrement; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary decrement
@@ -109,7 +109,7 @@ const VolInc_decrement = VolInc.decrement satisfies VolInc; /* LONG_NAMED_ENUMER
  * @type {number}
  */
 export
-const decrement = VolInc.decrement satisfies VolInc; /* SHORT_NAMED_ENUMERATED_VALUE */
+const decrement = VolInc.decrement; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 let _cached_decoder_for_VolInc: $.ASN1Decoder<VolInc> | null = null;
 

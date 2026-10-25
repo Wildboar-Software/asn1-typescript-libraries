@@ -52,7 +52,7 @@ export const Action_Result_success = 0 satisfies Action_Result; /* LONG_NAMED_IN
  * @constant
  * @type {number}
  */
-export const success = Action_Result_success satisfies Action_Result; /* SHORT_NAMED_INTEGER_VALUE */
+export const success = Action_Result_success; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -73,7 +73,7 @@ export const Action_Result_transient_error = 1 satisfies Action_Result; /* LONG_
  * @constant
  * @type {number}
  */
-export const transient_error = Action_Result_transient_error satisfies Action_Result; /* SHORT_NAMED_INTEGER_VALUE */
+export const transient_error = Action_Result_transient_error; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -94,7 +94,7 @@ export const Action_Result_permanent_error = 2 satisfies Action_Result; /* LONG_
  * @constant
  * @type {number}
  */
-export const permanent_error = Action_Result_permanent_error satisfies Action_Result; /* SHORT_NAMED_INTEGER_VALUE */
+export const permanent_error = Action_Result_permanent_error; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 let _cached_decoder_for_Action_Result: $.ASN1Decoder<Action_Result> | null = null;

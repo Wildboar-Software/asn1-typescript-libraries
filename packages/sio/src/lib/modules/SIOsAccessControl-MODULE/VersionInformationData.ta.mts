@@ -36,7 +36,7 @@ export const VersionInformationData_v1 = 0 satisfies VersionInformationData; /* 
  * @constant
  * @type {number}
  */
-export const v1 = VersionInformationData_v1 satisfies VersionInformationData; /* SHORT_NAMED_INTEGER_VALUE */
+export const v1 = VersionInformationData_v1; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 

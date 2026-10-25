@@ -105,7 +105,7 @@ export const DeniedMeteringAction = _enum_for_DeniedMeteringAction;
  * @type {number}
  */
 export const DeniedMeteringAction_canNotStart =
-    DeniedMeteringAction.canNotStart satisfies DeniedMeteringAction; /* LONG_NAMED_ENUMERATED_VALUE */
+    DeniedMeteringAction.canNotStart; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -119,7 +119,7 @@ export const DeniedMeteringAction_canNotStart =
  * @type {number}
  */
 export const canNotStart =
-    DeniedMeteringAction.canNotStart satisfies DeniedMeteringAction; /* SHORT_NAMED_ENUMERATED_VALUE */
+    DeniedMeteringAction.canNotStart; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -133,7 +133,7 @@ export const canNotStart =
  * @type {number}
  */
 export const DeniedMeteringAction_canNotSuspend =
-    DeniedMeteringAction.canNotSuspend satisfies DeniedMeteringAction; /* LONG_NAMED_ENUMERATED_VALUE */
+    DeniedMeteringAction.canNotSuspend; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -147,7 +147,7 @@ export const DeniedMeteringAction_canNotSuspend =
  * @type {number}
  */
 export const canNotSuspend =
-    DeniedMeteringAction.canNotSuspend satisfies DeniedMeteringAction; /* SHORT_NAMED_ENUMERATED_VALUE */
+    DeniedMeteringAction.canNotSuspend; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -161,7 +161,7 @@ export const canNotSuspend =
  * @type {number}
  */
 export const DeniedMeteringAction_canNotResume =
-    DeniedMeteringAction.canNotResume satisfies DeniedMeteringAction; /* LONG_NAMED_ENUMERATED_VALUE */
+    DeniedMeteringAction.canNotResume; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -175,7 +175,7 @@ export const DeniedMeteringAction_canNotResume =
  * @type {number}
  */
 export const canNotResume =
-    DeniedMeteringAction.canNotResume satisfies DeniedMeteringAction; /* SHORT_NAMED_ENUMERATED_VALUE */
+    DeniedMeteringAction.canNotResume; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 

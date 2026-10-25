@@ -81,7 +81,7 @@ const RingMode = _enum_for_RingMode;
  * @type {number}
  */
 export
-const RingMode_ringing = RingMode.ringing satisfies RingMode; /* LONG_NAMED_ENUMERATED_VALUE */
+const RingMode_ringing = RingMode.ringing; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ringing
@@ -89,7 +89,7 @@ const RingMode_ringing = RingMode.ringing satisfies RingMode; /* LONG_NAMED_ENUM
  * @type {number}
  */
 export
-const ringing = RingMode.ringing satisfies RingMode; /* SHORT_NAMED_ENUMERATED_VALUE */
+const ringing = RingMode.ringing; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RingMode_notRinging
@@ -101,7 +101,7 @@ const ringing = RingMode.ringing satisfies RingMode; /* SHORT_NAMED_ENUMERATED_V
  * @type {number}
  */
 export
-const RingMode_notRinging = RingMode.notRinging satisfies RingMode; /* LONG_NAMED_ENUMERATED_VALUE */
+const RingMode_notRinging = RingMode.notRinging; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary notRinging
@@ -109,7 +109,7 @@ const RingMode_notRinging = RingMode.notRinging satisfies RingMode; /* LONG_NAME
  * @type {number}
  */
 export
-const notRinging = RingMode.notRinging satisfies RingMode; /* SHORT_NAMED_ENUMERATED_VALUE */
+const notRinging = RingMode.notRinging; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 let _cached_decoder_for_RingMode: $.ASN1Decoder<RingMode> | null = null;
 

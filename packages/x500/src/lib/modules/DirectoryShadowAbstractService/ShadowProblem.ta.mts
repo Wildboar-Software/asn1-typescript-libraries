@@ -56,7 +56,7 @@ export const ShadowProblem_invalidAgreementID = 1 satisfies ShadowProblem; /* LO
  * @constant
  * @type {number}
  */
-export const invalidAgreementID = ShadowProblem_invalidAgreementID satisfies ShadowProblem; /* SHORT_NAMED_INTEGER_VALUE */
+export const invalidAgreementID = ShadowProblem_invalidAgreementID; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ShadowProblem_inactiveAgreement
@@ -70,7 +70,7 @@ export const ShadowProblem_inactiveAgreement = 2 satisfies ShadowProblem; /* LON
  * @constant
  * @type {number}
  */
-export const inactiveAgreement = ShadowProblem_inactiveAgreement satisfies ShadowProblem; /* SHORT_NAMED_INTEGER_VALUE */
+export const inactiveAgreement = ShadowProblem_inactiveAgreement; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ShadowProblem_invalidInformationReceived
@@ -84,7 +84,7 @@ export const ShadowProblem_invalidInformationReceived = 3 satisfies ShadowProble
  * @constant
  * @type {number}
  */
-export const invalidInformationReceived = ShadowProblem_invalidInformationReceived satisfies ShadowProblem; /* SHORT_NAMED_INTEGER_VALUE */
+export const invalidInformationReceived = ShadowProblem_invalidInformationReceived; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ShadowProblem_unsupportedStrategy
@@ -98,7 +98,7 @@ export const ShadowProblem_unsupportedStrategy = 4 satisfies ShadowProblem; /* L
  * @constant
  * @type {number}
  */
-export const unsupportedStrategy = ShadowProblem_unsupportedStrategy satisfies ShadowProblem; /* SHORT_NAMED_INTEGER_VALUE */
+export const unsupportedStrategy = ShadowProblem_unsupportedStrategy; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ShadowProblem_missedPrevious
@@ -112,7 +112,7 @@ export const ShadowProblem_missedPrevious = 5 satisfies ShadowProblem; /* LONG_N
  * @constant
  * @type {number}
  */
-export const missedPrevious = ShadowProblem_missedPrevious satisfies ShadowProblem; /* SHORT_NAMED_INTEGER_VALUE */
+export const missedPrevious = ShadowProblem_missedPrevious; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ShadowProblem_fullUpdateRequired
@@ -126,7 +126,7 @@ export const ShadowProblem_fullUpdateRequired = 6 satisfies ShadowProblem; /* LO
  * @constant
  * @type {number}
  */
-export const fullUpdateRequired = ShadowProblem_fullUpdateRequired satisfies ShadowProblem; /* SHORT_NAMED_INTEGER_VALUE */
+export const fullUpdateRequired = ShadowProblem_fullUpdateRequired; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ShadowProblem_unwillingToPerform
@@ -140,7 +140,7 @@ export const ShadowProblem_unwillingToPerform = 7 satisfies ShadowProblem; /* LO
  * @constant
  * @type {number}
  */
-export const unwillingToPerform = ShadowProblem_unwillingToPerform satisfies ShadowProblem; /* SHORT_NAMED_INTEGER_VALUE */
+export const unwillingToPerform = ShadowProblem_unwillingToPerform; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ShadowProblem_unsuitableTiming
@@ -154,7 +154,7 @@ export const ShadowProblem_unsuitableTiming = 8 satisfies ShadowProblem; /* LONG
  * @constant
  * @type {number}
  */
-export const unsuitableTiming = ShadowProblem_unsuitableTiming satisfies ShadowProblem; /* SHORT_NAMED_INTEGER_VALUE */
+export const unsuitableTiming = ShadowProblem_unsuitableTiming; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ShadowProblem_updateAlreadyReceived
@@ -168,7 +168,7 @@ export const ShadowProblem_updateAlreadyReceived = 9 satisfies ShadowProblem; /*
  * @constant
  * @type {number}
  */
-export const updateAlreadyReceived = ShadowProblem_updateAlreadyReceived satisfies ShadowProblem; /* SHORT_NAMED_INTEGER_VALUE */
+export const updateAlreadyReceived = ShadowProblem_updateAlreadyReceived; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ShadowProblem_invalidSequencing
@@ -182,7 +182,7 @@ export const ShadowProblem_invalidSequencing = 10 satisfies ShadowProblem; /* LO
  * @constant
  * @type {number}
  */
-export const invalidSequencing = ShadowProblem_invalidSequencing satisfies ShadowProblem; /* SHORT_NAMED_INTEGER_VALUE */
+export const invalidSequencing = ShadowProblem_invalidSequencing; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ShadowProblem_insufficientResources
@@ -196,7 +196,7 @@ export const ShadowProblem_insufficientResources = 11 satisfies ShadowProblem; /
  * @constant
  * @type {number}
  */
-export const insufficientResources = ShadowProblem_insufficientResources satisfies ShadowProblem; /* SHORT_NAMED_INTEGER_VALUE */
+export const insufficientResources = ShadowProblem_insufficientResources; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_ShadowProblem = $._decodeInteger;

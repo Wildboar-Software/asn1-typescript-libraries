@@ -60,7 +60,7 @@ const PresentStatus_success = 0 satisfies PresentStatus; /* LONG_NAMED_INTEGER_V
  * @type {number}
  */
 export
-const success = PresentStatus_success satisfies PresentStatus; /* SHORT_NAMED_INTEGER_VALUE */
+const success = PresentStatus_success; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PresentStatus_partial_1
@@ -87,7 +87,7 @@ const PresentStatus_partial_1 = 1 satisfies PresentStatus; /* LONG_NAMED_INTEGER
  * @type {number}
  */
 export
-const partial_1 = PresentStatus_partial_1 satisfies PresentStatus; /* SHORT_NAMED_INTEGER_VALUE */
+const partial_1 = PresentStatus_partial_1; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PresentStatus_partial_2
@@ -113,7 +113,7 @@ const PresentStatus_partial_2 = 2 satisfies PresentStatus; /* LONG_NAMED_INTEGER
  * @type {number}
  */
 export
-const partial_2 = PresentStatus_partial_2 satisfies PresentStatus; /* SHORT_NAMED_INTEGER_VALUE */
+const partial_2 = PresentStatus_partial_2; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PresentStatus_partial_3
@@ -142,7 +142,7 @@ const PresentStatus_partial_3 = 3 satisfies PresentStatus; /* LONG_NAMED_INTEGER
  * @type {number}
  */
 export
-const partial_3 = PresentStatus_partial_3 satisfies PresentStatus; /* SHORT_NAMED_INTEGER_VALUE */
+const partial_3 = PresentStatus_partial_3; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PresentStatus_partial_4
@@ -170,7 +170,7 @@ const PresentStatus_partial_4 = 4 satisfies PresentStatus; /* LONG_NAMED_INTEGER
  * @type {number}
  */
 export
-const partial_4 = PresentStatus_partial_4 satisfies PresentStatus; /* SHORT_NAMED_INTEGER_VALUE */
+const partial_4 = PresentStatus_partial_4; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PresentStatus_failure
@@ -197,7 +197,7 @@ const PresentStatus_failure = 5 satisfies PresentStatus; /* LONG_NAMED_INTEGER_V
  * @type {number}
  */
 export
-const failure = PresentStatus_failure satisfies PresentStatus; /* SHORT_NAMED_INTEGER_VALUE */
+const failure = PresentStatus_failure; /* SHORT_NAMED_INTEGER_VALUE */
 
 let _cached_decoder_for_PresentStatus: $.ASN1Decoder<PresentStatus> | null = null;
 

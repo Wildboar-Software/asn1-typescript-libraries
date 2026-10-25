@@ -53,7 +53,7 @@ const InvokeProblem_duplicateInvocation = 0 satisfies InvokeProblem; /* LONG_NAM
  * @type {number}
  */
 export
-const duplicateInvocation = InvokeProblem_duplicateInvocation satisfies InvokeProblem; /* SHORT_NAMED_INTEGER_VALUE */
+const duplicateInvocation = InvokeProblem_duplicateInvocation; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary InvokeProblem_unrecognisedOperation
@@ -76,7 +76,7 @@ const InvokeProblem_unrecognisedOperation = 1 satisfies InvokeProblem; /* LONG_N
  * @type {number}
  */
 export
-const unrecognisedOperation = InvokeProblem_unrecognisedOperation satisfies InvokeProblem; /* SHORT_NAMED_INTEGER_VALUE */
+const unrecognisedOperation = InvokeProblem_unrecognisedOperation; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary InvokeProblem_mistypedArgument
@@ -98,7 +98,7 @@ const InvokeProblem_mistypedArgument = 2 satisfies InvokeProblem; /* LONG_NAMED_
  * @type {number}
  */
 export
-const mistypedArgument = InvokeProblem_mistypedArgument satisfies InvokeProblem; /* SHORT_NAMED_INTEGER_VALUE */
+const mistypedArgument = InvokeProblem_mistypedArgument; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary InvokeProblem_resourceLimitation
@@ -122,7 +122,7 @@ const InvokeProblem_resourceLimitation = 3 satisfies InvokeProblem; /* LONG_NAME
  * @type {number}
  */
 export
-const resourceLimitation = InvokeProblem_resourceLimitation satisfies InvokeProblem; /* SHORT_NAMED_INTEGER_VALUE */
+const resourceLimitation = InvokeProblem_resourceLimitation; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary InvokeProblem_initiatorReleasing
@@ -145,7 +145,7 @@ const InvokeProblem_initiatorReleasing = 4 satisfies InvokeProblem; /* LONG_NAME
  * @type {number}
  */
 export
-const initiatorReleasing = InvokeProblem_initiatorReleasing satisfies InvokeProblem; /* SHORT_NAMED_INTEGER_VALUE */
+const initiatorReleasing = InvokeProblem_initiatorReleasing; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary InvokeProblem_unrecognisedLinkedId
@@ -168,7 +168,7 @@ const InvokeProblem_unrecognisedLinkedId = 5 satisfies InvokeProblem; /* LONG_NA
  * @type {number}
  */
 export
-const unrecognisedLinkedId = InvokeProblem_unrecognisedLinkedId satisfies InvokeProblem; /* SHORT_NAMED_INTEGER_VALUE */
+const unrecognisedLinkedId = InvokeProblem_unrecognisedLinkedId; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary InvokeProblem_linkedResponseUnexpected
@@ -191,7 +191,7 @@ const InvokeProblem_linkedResponseUnexpected = 6 satisfies InvokeProblem; /* LON
  * @type {number}
  */
 export
-const linkedResponseUnexpected = InvokeProblem_linkedResponseUnexpected satisfies InvokeProblem; /* SHORT_NAMED_INTEGER_VALUE */
+const linkedResponseUnexpected = InvokeProblem_linkedResponseUnexpected; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary InvokeProblem_unexpectedChildOperation
@@ -215,7 +215,7 @@ const InvokeProblem_unexpectedChildOperation = 7 satisfies InvokeProblem; /* LON
  * @type {number}
  */
 export
-const unexpectedChildOperation = InvokeProblem_unexpectedChildOperation satisfies InvokeProblem; /* SHORT_NAMED_INTEGER_VALUE */
+const unexpectedChildOperation = InvokeProblem_unexpectedChildOperation; /* SHORT_NAMED_INTEGER_VALUE */
 
 export
 const _decode_InvokeProblem: $.ASN1Decoder<InvokeProblem> = $._decodeInteger;

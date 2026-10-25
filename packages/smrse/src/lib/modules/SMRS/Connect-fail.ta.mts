@@ -57,7 +57,7 @@ const Connect_fail_not_entitled = 0 satisfies Connect_fail; /* LONG_NAMED_INTEGE
  * @type {number}
  */
 export
-const not_entitled = Connect_fail_not_entitled satisfies Connect_fail; /* SHORT_NAMED_INTEGER_VALUE */
+const not_entitled = Connect_fail_not_entitled; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Connect_fail_tmp_overload
@@ -85,7 +85,7 @@ const Connect_fail_tmp_overload = 1 satisfies Connect_fail; /* LONG_NAMED_INTEGE
  * @type {number}
  */
 export
-const tmp_overload = Connect_fail_tmp_overload satisfies Connect_fail; /* SHORT_NAMED_INTEGER_VALUE */
+const tmp_overload = Connect_fail_tmp_overload; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Connect_fail_tmp_failure
@@ -113,7 +113,7 @@ const Connect_fail_tmp_failure = 2 satisfies Connect_fail; /* LONG_NAMED_INTEGER
  * @type {number}
  */
 export
-const tmp_failure = Connect_fail_tmp_failure satisfies Connect_fail; /* SHORT_NAMED_INTEGER_VALUE */
+const tmp_failure = Connect_fail_tmp_failure; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Connect_fail_id_or_passwd
@@ -141,7 +141,7 @@ const Connect_fail_id_or_passwd = 3 satisfies Connect_fail; /* LONG_NAMED_INTEGE
  * @type {number}
  */
 export
-const id_or_passwd = Connect_fail_id_or_passwd satisfies Connect_fail; /* SHORT_NAMED_INTEGER_VALUE */
+const id_or_passwd = Connect_fail_id_or_passwd; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Connect_fail_not_supported
@@ -171,7 +171,7 @@ const Connect_fail_not_supported = 4 satisfies Connect_fail; /* LONG_NAMED_INTEG
  * @type {number}
  */
 export
-const not_supported = Connect_fail_not_supported satisfies Connect_fail; /* SHORT_NAMED_INTEGER_VALUE */
+const not_supported = Connect_fail_not_supported; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Connect_fail_inv_SC_addr
@@ -199,7 +199,7 @@ const Connect_fail_inv_SC_addr = 5 satisfies Connect_fail; /* LONG_NAMED_INTEGER
  * @type {number}
  */
 export
-const inv_SC_addr = Connect_fail_inv_SC_addr satisfies Connect_fail; /* SHORT_NAMED_INTEGER_VALUE */
+const inv_SC_addr = Connect_fail_inv_SC_addr; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_Connect_fail = $._decodeInteger;
 export const _encode_Connect_fail = $._encodeInteger;
 

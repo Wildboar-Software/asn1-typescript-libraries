@@ -37,7 +37,7 @@ export const PreferredDeliveryMethod_Item_any_delivery_method = 0 satisfies Pref
  * @constant
  * @type {number}
  */
-export const any_delivery_method = PreferredDeliveryMethod_Item_any_delivery_method satisfies PreferredDeliveryMethod_Item; /* SHORT_NAMED_INTEGER_VALUE */
+export const any_delivery_method = PreferredDeliveryMethod_Item_any_delivery_method; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PreferredDeliveryMethod_Item_mhs_delivery
@@ -51,7 +51,7 @@ export const PreferredDeliveryMethod_Item_mhs_delivery = 1 satisfies PreferredDe
  * @constant
  * @type {number}
  */
-export const mhs_delivery = PreferredDeliveryMethod_Item_mhs_delivery satisfies PreferredDeliveryMethod_Item; /* SHORT_NAMED_INTEGER_VALUE */
+export const mhs_delivery = PreferredDeliveryMethod_Item_mhs_delivery; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PreferredDeliveryMethod_Item_physical_delivery
@@ -65,7 +65,7 @@ export const PreferredDeliveryMethod_Item_physical_delivery = 2 satisfies Prefer
  * @constant
  * @type {number}
  */
-export const physical_delivery = PreferredDeliveryMethod_Item_physical_delivery satisfies PreferredDeliveryMethod_Item; /* SHORT_NAMED_INTEGER_VALUE */
+export const physical_delivery = PreferredDeliveryMethod_Item_physical_delivery; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PreferredDeliveryMethod_Item_telex_delivery
@@ -79,7 +79,7 @@ export const PreferredDeliveryMethod_Item_telex_delivery = 3 satisfies Preferred
  * @constant
  * @type {number}
  */
-export const telex_delivery = PreferredDeliveryMethod_Item_telex_delivery satisfies PreferredDeliveryMethod_Item; /* SHORT_NAMED_INTEGER_VALUE */
+export const telex_delivery = PreferredDeliveryMethod_Item_telex_delivery; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PreferredDeliveryMethod_Item_teletex_delivery
@@ -93,7 +93,7 @@ export const PreferredDeliveryMethod_Item_teletex_delivery = 4 satisfies Preferr
  * @constant
  * @type {number}
  */
-export const teletex_delivery = PreferredDeliveryMethod_Item_teletex_delivery satisfies PreferredDeliveryMethod_Item; /* SHORT_NAMED_INTEGER_VALUE */
+export const teletex_delivery = PreferredDeliveryMethod_Item_teletex_delivery; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PreferredDeliveryMethod_Item_g3_facsimile_delivery
@@ -107,7 +107,7 @@ export const PreferredDeliveryMethod_Item_g3_facsimile_delivery = 5 satisfies Pr
  * @constant
  * @type {number}
  */
-export const g3_facsimile_delivery = PreferredDeliveryMethod_Item_g3_facsimile_delivery satisfies PreferredDeliveryMethod_Item; /* SHORT_NAMED_INTEGER_VALUE */
+export const g3_facsimile_delivery = PreferredDeliveryMethod_Item_g3_facsimile_delivery; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PreferredDeliveryMethod_Item_g4_facsimile_delivery
@@ -121,7 +121,7 @@ export const PreferredDeliveryMethod_Item_g4_facsimile_delivery = 6 satisfies Pr
  * @constant
  * @type {number}
  */
-export const g4_facsimile_delivery = PreferredDeliveryMethod_Item_g4_facsimile_delivery satisfies PreferredDeliveryMethod_Item; /* SHORT_NAMED_INTEGER_VALUE */
+export const g4_facsimile_delivery = PreferredDeliveryMethod_Item_g4_facsimile_delivery; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PreferredDeliveryMethod_Item_ia5_terminal_delivery
@@ -135,7 +135,7 @@ export const PreferredDeliveryMethod_Item_ia5_terminal_delivery = 7 satisfies Pr
  * @constant
  * @type {number}
  */
-export const ia5_terminal_delivery = PreferredDeliveryMethod_Item_ia5_terminal_delivery satisfies PreferredDeliveryMethod_Item; /* SHORT_NAMED_INTEGER_VALUE */
+export const ia5_terminal_delivery = PreferredDeliveryMethod_Item_ia5_terminal_delivery; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PreferredDeliveryMethod_Item_videotex_delivery
@@ -149,7 +149,7 @@ export const PreferredDeliveryMethod_Item_videotex_delivery = 8 satisfies Prefer
  * @constant
  * @type {number}
  */
-export const videotex_delivery = PreferredDeliveryMethod_Item_videotex_delivery satisfies PreferredDeliveryMethod_Item; /* SHORT_NAMED_INTEGER_VALUE */
+export const videotex_delivery = PreferredDeliveryMethod_Item_videotex_delivery; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PreferredDeliveryMethod_Item_telephone_delivery
@@ -163,7 +163,7 @@ export const PreferredDeliveryMethod_Item_telephone_delivery = 9 satisfies Prefe
  * @constant
  * @type {number}
  */
-export const telephone_delivery = PreferredDeliveryMethod_Item_telephone_delivery satisfies PreferredDeliveryMethod_Item; /* SHORT_NAMED_INTEGER_VALUE */
+export const telephone_delivery = PreferredDeliveryMethod_Item_telephone_delivery; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_PreferredDeliveryMethod_Item = $._decodeInteger;

@@ -91,7 +91,7 @@ const PTCPreEstStatus = _enum_for_PTCPreEstStatus;
  * @type {number}
  */
 export
-const PTCPreEstStatus_established = PTCPreEstStatus.established satisfies PTCPreEstStatus; /* LONG_NAMED_ENUMERATED_VALUE */
+const PTCPreEstStatus_established = PTCPreEstStatus.established; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary established
@@ -99,7 +99,7 @@ const PTCPreEstStatus_established = PTCPreEstStatus.established satisfies PTCPre
  * @type {number}
  */
 export
-const established = PTCPreEstStatus.established satisfies PTCPreEstStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
+const established = PTCPreEstStatus.established; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PTCPreEstStatus_modified
@@ -107,7 +107,7 @@ const established = PTCPreEstStatus.established satisfies PTCPreEstStatus; /* SH
  * @type {number}
  */
 export
-const PTCPreEstStatus_modified = PTCPreEstStatus.modified satisfies PTCPreEstStatus; /* LONG_NAMED_ENUMERATED_VALUE */
+const PTCPreEstStatus_modified = PTCPreEstStatus.modified; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary modified
@@ -115,7 +115,7 @@ const PTCPreEstStatus_modified = PTCPreEstStatus.modified satisfies PTCPreEstSta
  * @type {number}
  */
 export
-const modified = PTCPreEstStatus.modified satisfies PTCPreEstStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
+const modified = PTCPreEstStatus.modified; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PTCPreEstStatus_released
@@ -123,7 +123,7 @@ const modified = PTCPreEstStatus.modified satisfies PTCPreEstStatus; /* SHORT_NA
  * @type {number}
  */
 export
-const PTCPreEstStatus_released = PTCPreEstStatus.released satisfies PTCPreEstStatus; /* LONG_NAMED_ENUMERATED_VALUE */
+const PTCPreEstStatus_released = PTCPreEstStatus.released; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary released
@@ -131,7 +131,7 @@ const PTCPreEstStatus_released = PTCPreEstStatus.released satisfies PTCPreEstSta
  * @type {number}
  */
 export
-const released = PTCPreEstStatus.released satisfies PTCPreEstStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
+const released = PTCPreEstStatus.released; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_PTCPreEstStatus: $.ASN1Decoder<PTCPreEstStatus> = $._decodeEnumerated;
 export const _encode_PTCPreEstStatus: $.ASN1Encoder<PTCPreEstStatus> = $._encodeEnumerated;
 

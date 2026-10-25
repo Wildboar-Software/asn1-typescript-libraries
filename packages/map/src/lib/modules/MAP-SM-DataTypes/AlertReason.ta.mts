@@ -79,7 +79,7 @@ const AlertReason = _enum_for_AlertReason;
  * @type {number}
  */
 export
-const AlertReason_ms_Present = AlertReason.ms_Present satisfies AlertReason; /* LONG_NAMED_ENUMERATED_VALUE */
+const AlertReason_ms_Present = AlertReason.ms_Present; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ms_Present
@@ -91,7 +91,7 @@ const AlertReason_ms_Present = AlertReason.ms_Present satisfies AlertReason; /* 
  * @type {number}
  */
 export
-const ms_Present = AlertReason.ms_Present satisfies AlertReason; /* SHORT_NAMED_ENUMERATED_VALUE */
+const ms_Present = AlertReason.ms_Present; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AlertReason_memoryAvailable
@@ -103,7 +103,7 @@ const ms_Present = AlertReason.ms_Present satisfies AlertReason; /* SHORT_NAMED_
  * @type {number}
  */
 export
-const AlertReason_memoryAvailable = AlertReason.memoryAvailable satisfies AlertReason; /* LONG_NAMED_ENUMERATED_VALUE */
+const AlertReason_memoryAvailable = AlertReason.memoryAvailable; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary memoryAvailable
@@ -115,7 +115,7 @@ const AlertReason_memoryAvailable = AlertReason.memoryAvailable satisfies AlertR
  * @type {number}
  */
 export
-const memoryAvailable = AlertReason.memoryAvailable satisfies AlertReason; /* SHORT_NAMED_ENUMERATED_VALUE */
+const memoryAvailable = AlertReason.memoryAvailable; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) AlertReason

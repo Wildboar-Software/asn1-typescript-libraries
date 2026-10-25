@@ -67,7 +67,7 @@ const TypeOfSubscribers = _enum_for_TypeOfSubscribers;
  * @type {number}
  */
 export
-const TypeOfSubscribers_home = TypeOfSubscribers.home satisfies TypeOfSubscribers; /* LONG_NAMED_ENUMERATED_VALUE */
+const TypeOfSubscribers_home = TypeOfSubscribers.home; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary home
@@ -75,7 +75,7 @@ const TypeOfSubscribers_home = TypeOfSubscribers.home satisfies TypeOfSubscriber
  * @type {number}
  */
 export
-const home = TypeOfSubscribers.home satisfies TypeOfSubscribers; /* SHORT_NAMED_ENUMERATED_VALUE */
+const home = TypeOfSubscribers.home; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TypeOfSubscribers_visiting
@@ -83,7 +83,7 @@ const home = TypeOfSubscribers.home satisfies TypeOfSubscribers; /* SHORT_NAMED_
  * @type {number}
  */
 export
-const TypeOfSubscribers_visiting = TypeOfSubscribers.visiting satisfies TypeOfSubscribers; /* LONG_NAMED_ENUMERATED_VALUE */
+const TypeOfSubscribers_visiting = TypeOfSubscribers.visiting; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary visiting
@@ -91,7 +91,7 @@ const TypeOfSubscribers_visiting = TypeOfSubscribers.visiting satisfies TypeOfSu
  * @type {number}
  */
 export
-const visiting = TypeOfSubscribers.visiting satisfies TypeOfSubscribers; /* SHORT_NAMED_ENUMERATED_VALUE */
+const visiting = TypeOfSubscribers.visiting; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TypeOfSubscribers_all
@@ -99,7 +99,7 @@ const visiting = TypeOfSubscribers.visiting satisfies TypeOfSubscribers; /* SHOR
  * @type {number}
  */
 export
-const TypeOfSubscribers_all = TypeOfSubscribers.all satisfies TypeOfSubscribers; /* LONG_NAMED_ENUMERATED_VALUE */
+const TypeOfSubscribers_all = TypeOfSubscribers.all; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary all
@@ -107,7 +107,7 @@ const TypeOfSubscribers_all = TypeOfSubscribers.all satisfies TypeOfSubscribers;
  * @type {number}
  */
 export
-const all = TypeOfSubscribers.all satisfies TypeOfSubscribers; /* SHORT_NAMED_ENUMERATED_VALUE */
+const all = TypeOfSubscribers.all; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_TypeOfSubscribers: $.ASN1Decoder<TypeOfSubscribers> = $._decodeEnumerated;

@@ -47,7 +47,7 @@ const SMS_Address_address_type_unknown_type = 0 satisfies SMS_Address_address_ty
  * @type {number}
  */
 export
-const unknown_type = SMS_Address_address_type_unknown_type satisfies SMS_Address_address_type; /* SHORT_NAMED_INTEGER_VALUE */
+const unknown_type = SMS_Address_address_type_unknown_type; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SMS_Address_address_type_internat_number
@@ -73,7 +73,7 @@ const SMS_Address_address_type_internat_number = 1 satisfies SMS_Address_address
  * @type {number}
  */
 export
-const internat_number = SMS_Address_address_type_internat_number satisfies SMS_Address_address_type; /* SHORT_NAMED_INTEGER_VALUE */
+const internat_number = SMS_Address_address_type_internat_number; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SMS_Address_address_type_national_number
@@ -89,7 +89,7 @@ const SMS_Address_address_type_national_number = 2 satisfies SMS_Address_address
  * @type {number}
  */
 export
-const national_number = SMS_Address_address_type_national_number satisfies SMS_Address_address_type; /* SHORT_NAMED_INTEGER_VALUE */
+const national_number = SMS_Address_address_type_national_number; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SMS_Address_address_type_net_spec_number
@@ -115,7 +115,7 @@ const SMS_Address_address_type_net_spec_number = 3 satisfies SMS_Address_address
  * @type {number}
  */
 export
-const net_spec_number = SMS_Address_address_type_net_spec_number satisfies SMS_Address_address_type; /* SHORT_NAMED_INTEGER_VALUE */
+const net_spec_number = SMS_Address_address_type_net_spec_number; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SMS_Address_address_type_short_number
@@ -143,7 +143,7 @@ const SMS_Address_address_type_short_number = 4 satisfies SMS_Address_address_ty
  * @type {number}
  */
 export
-const short_number = SMS_Address_address_type_short_number satisfies SMS_Address_address_type; /* SHORT_NAMED_INTEGER_VALUE */
+const short_number = SMS_Address_address_type_short_number; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_SMS_Address_address_type = $._decodeInteger;
 export const _encode_SMS_Address_address_type = $._encodeInteger;
 

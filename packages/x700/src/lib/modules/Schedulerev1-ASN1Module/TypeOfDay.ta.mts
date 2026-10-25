@@ -64,7 +64,7 @@ export const TypeOfDay_workday = 0 satisfies TypeOfDay; /* LONG_NAMED_INTEGER_VA
  * @constant
  * @type {number}
  */
-export const workday = TypeOfDay_workday satisfies TypeOfDay; /* SHORT_NAMED_INTEGER_VALUE */
+export const workday = TypeOfDay_workday; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -90,7 +90,7 @@ export const TypeOfDay_weekend = 1 satisfies TypeOfDay; /* LONG_NAMED_INTEGER_VA
  * @constant
  * @type {number}
  */
-export const weekend = TypeOfDay_weekend satisfies TypeOfDay; /* SHORT_NAMED_INTEGER_VALUE */
+export const weekend = TypeOfDay_weekend; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -106,7 +106,7 @@ export const TypeOfDay_specialDay1 = 2 satisfies TypeOfDay; /* LONG_NAMED_INTEGE
  * @constant
  * @type {number}
  */
-export const specialDay1 = TypeOfDay_specialDay1 satisfies TypeOfDay; /* SHORT_NAMED_INTEGER_VALUE */
+export const specialDay1 = TypeOfDay_specialDay1; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -122,7 +122,7 @@ export const TypeOfDay_specialDay2 = 3 satisfies TypeOfDay; /* LONG_NAMED_INTEGE
  * @constant
  * @type {number}
  */
-export const specialDay2 = TypeOfDay_specialDay2 satisfies TypeOfDay; /* SHORT_NAMED_INTEGER_VALUE */
+export const specialDay2 = TypeOfDay_specialDay2; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -138,7 +138,7 @@ export const TypeOfDay_specialDay3 = 4 satisfies TypeOfDay; /* LONG_NAMED_INTEGE
  * @constant
  * @type {number}
  */
-export const specialDay3 = TypeOfDay_specialDay3 satisfies TypeOfDay; /* SHORT_NAMED_INTEGER_VALUE */
+export const specialDay3 = TypeOfDay_specialDay3; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -154,7 +154,7 @@ export const TypeOfDay_specialDay4 = 5 satisfies TypeOfDay; /* LONG_NAMED_INTEGE
  * @constant
  * @type {number}
  */
-export const specialDay4 = TypeOfDay_specialDay4 satisfies TypeOfDay; /* SHORT_NAMED_INTEGER_VALUE */
+export const specialDay4 = TypeOfDay_specialDay4; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -170,7 +170,7 @@ export const TypeOfDay_specialDay5 = 6 satisfies TypeOfDay; /* LONG_NAMED_INTEGE
  * @constant
  * @type {number}
  */
-export const specialDay5 = TypeOfDay_specialDay5 satisfies TypeOfDay; /* SHORT_NAMED_INTEGER_VALUE */
+export const specialDay5 = TypeOfDay_specialDay5; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -186,7 +186,7 @@ export const TypeOfDay_specialDay6 = 7 satisfies TypeOfDay; /* LONG_NAMED_INTEGE
  * @constant
  * @type {number}
  */
-export const specialDay6 = TypeOfDay_specialDay6 satisfies TypeOfDay; /* SHORT_NAMED_INTEGER_VALUE */
+export const specialDay6 = TypeOfDay_specialDay6; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -202,7 +202,7 @@ export const TypeOfDay_specialDay7 = 8 satisfies TypeOfDay; /* LONG_NAMED_INTEGE
  * @constant
  * @type {number}
  */
-export const specialDay7 = TypeOfDay_specialDay7 satisfies TypeOfDay; /* SHORT_NAMED_INTEGER_VALUE */
+export const specialDay7 = TypeOfDay_specialDay7; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -218,7 +218,7 @@ export const TypeOfDay_specialDay8 = 9 satisfies TypeOfDay; /* LONG_NAMED_INTEGE
  * @constant
  * @type {number}
  */
-export const specialDay8 = TypeOfDay_specialDay8 satisfies TypeOfDay; /* SHORT_NAMED_INTEGER_VALUE */
+export const specialDay8 = TypeOfDay_specialDay8; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -234,7 +234,7 @@ export const TypeOfDay_specialDay9 = 10 satisfies TypeOfDay; /* LONG_NAMED_INTEG
  * @constant
  * @type {number}
  */
-export const specialDay9 = TypeOfDay_specialDay9 satisfies TypeOfDay; /* SHORT_NAMED_INTEGER_VALUE */
+export const specialDay9 = TypeOfDay_specialDay9; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -250,7 +250,7 @@ export const TypeOfDay_specialDay10 = 11 satisfies TypeOfDay; /* LONG_NAMED_INTE
  * @constant
  * @type {number}
  */
-export const specialDay10 = TypeOfDay_specialDay10 satisfies TypeOfDay; /* SHORT_NAMED_INTEGER_VALUE */
+export const specialDay10 = TypeOfDay_specialDay10; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -266,7 +266,7 @@ export const TypeOfDay_specialDay11 = 12 satisfies TypeOfDay; /* LONG_NAMED_INTE
  * @constant
  * @type {number}
  */
-export const specialDay11 = TypeOfDay_specialDay11 satisfies TypeOfDay; /* SHORT_NAMED_INTEGER_VALUE */
+export const specialDay11 = TypeOfDay_specialDay11; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -282,7 +282,7 @@ export const TypeOfDay_specialDay12 = 13 satisfies TypeOfDay; /* LONG_NAMED_INTE
  * @constant
  * @type {number}
  */
-export const specialDay12 = TypeOfDay_specialDay12 satisfies TypeOfDay; /* SHORT_NAMED_INTEGER_VALUE */
+export const specialDay12 = TypeOfDay_specialDay12; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -298,7 +298,7 @@ export const TypeOfDay_specialDay13 = 14 satisfies TypeOfDay; /* LONG_NAMED_INTE
  * @constant
  * @type {number}
  */
-export const specialDay13 = TypeOfDay_specialDay13 satisfies TypeOfDay; /* SHORT_NAMED_INTEGER_VALUE */
+export const specialDay13 = TypeOfDay_specialDay13; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -314,7 +314,7 @@ export const TypeOfDay_specialDay14 = 15 satisfies TypeOfDay; /* LONG_NAMED_INTE
  * @constant
  * @type {number}
  */
-export const specialDay14 = TypeOfDay_specialDay14 satisfies TypeOfDay; /* SHORT_NAMED_INTEGER_VALUE */
+export const specialDay14 = TypeOfDay_specialDay14; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -330,7 +330,7 @@ export const TypeOfDay_specialDay15 = 16 satisfies TypeOfDay; /* LONG_NAMED_INTE
  * @constant
  * @type {number}
  */
-export const specialDay15 = TypeOfDay_specialDay15 satisfies TypeOfDay; /* SHORT_NAMED_INTEGER_VALUE */
+export const specialDay15 = TypeOfDay_specialDay15; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -346,7 +346,7 @@ export const TypeOfDay_specialDay16 = 17 satisfies TypeOfDay; /* LONG_NAMED_INTE
  * @constant
  * @type {number}
  */
-export const specialDay16 = TypeOfDay_specialDay16 satisfies TypeOfDay; /* SHORT_NAMED_INTEGER_VALUE */
+export const specialDay16 = TypeOfDay_specialDay16; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 

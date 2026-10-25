@@ -43,7 +43,7 @@ export const FNUserBasicCodeField_unspecified = 0 satisfies FNUserBasicCodeField
  * @constant
  * @type {number}
  */
-export const unspecified = FNUserBasicCodeField_unspecified satisfies FNUserBasicCodeField; /* SHORT_NAMED_INTEGER_VALUE */
+export const unspecified = FNUserBasicCodeField_unspecified; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary FNUserBasicCodeField_forwarded_for_archiving
@@ -57,7 +57,7 @@ export const FNUserBasicCodeField_forwarded_for_archiving = 1 satisfies FNUserBa
  * @constant
  * @type {number}
  */
-export const forwarded_for_archiving = FNUserBasicCodeField_forwarded_for_archiving satisfies FNUserBasicCodeField; /* SHORT_NAMED_INTEGER_VALUE */
+export const forwarded_for_archiving = FNUserBasicCodeField_forwarded_for_archiving; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary FNUserBasicCodeField_forwarded_for_information
@@ -71,7 +71,7 @@ export const FNUserBasicCodeField_forwarded_for_information = 2 satisfies FNUser
  * @constant
  * @type {number}
  */
-export const forwarded_for_information = FNUserBasicCodeField_forwarded_for_information satisfies FNUserBasicCodeField; /* SHORT_NAMED_INTEGER_VALUE */
+export const forwarded_for_information = FNUserBasicCodeField_forwarded_for_information; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary FNUserBasicCodeField_forwarded_for_additional_action
@@ -85,7 +85,7 @@ export const FNUserBasicCodeField_forwarded_for_additional_action = 3 satisfies 
  * @constant
  * @type {number}
  */
-export const forwarded_for_additional_action = FNUserBasicCodeField_forwarded_for_additional_action satisfies FNUserBasicCodeField; /* SHORT_NAMED_INTEGER_VALUE */
+export const forwarded_for_additional_action = FNUserBasicCodeField_forwarded_for_additional_action; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary FNUserBasicCodeField_subscription_changed
@@ -99,7 +99,7 @@ export const FNUserBasicCodeField_subscription_changed = 4 satisfies FNUserBasic
  * @constant
  * @type {number}
  */
-export const subscription_changed = FNUserBasicCodeField_subscription_changed satisfies FNUserBasicCodeField; /* SHORT_NAMED_INTEGER_VALUE */
+export const subscription_changed = FNUserBasicCodeField_subscription_changed; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary FNUserBasicCodeField_heading_field_not_supported
@@ -113,7 +113,7 @@ export const FNUserBasicCodeField_heading_field_not_supported = 5 satisfies FNUs
  * @constant
  * @type {number}
  */
-export const heading_field_not_supported = FNUserBasicCodeField_heading_field_not_supported satisfies FNUserBasicCodeField; /* SHORT_NAMED_INTEGER_VALUE */
+export const heading_field_not_supported = FNUserBasicCodeField_heading_field_not_supported; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary FNUserBasicCodeField_bodypart_type_not_supported
@@ -127,7 +127,7 @@ export const FNUserBasicCodeField_bodypart_type_not_supported = 6 satisfies FNUs
  * @constant
  * @type {number}
  */
-export const bodypart_type_not_supported = FNUserBasicCodeField_bodypart_type_not_supported satisfies FNUserBasicCodeField; /* SHORT_NAMED_INTEGER_VALUE */
+export const bodypart_type_not_supported = FNUserBasicCodeField_bodypart_type_not_supported; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary FNUserBasicCodeField_message_type_not_supported
@@ -141,7 +141,7 @@ export const FNUserBasicCodeField_message_type_not_supported = 7 satisfies FNUse
  * @constant
  * @type {number}
  */
-export const message_type_not_supported = FNUserBasicCodeField_message_type_not_supported satisfies FNUserBasicCodeField; /* SHORT_NAMED_INTEGER_VALUE */
+export const message_type_not_supported = FNUserBasicCodeField_message_type_not_supported; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary FNUserBasicCodeField_syntax_identifier_not_supported
@@ -155,7 +155,7 @@ export const FNUserBasicCodeField_syntax_identifier_not_supported = 8 satisfies 
  * @constant
  * @type {number}
  */
-export const syntax_identifier_not_supported = FNUserBasicCodeField_syntax_identifier_not_supported satisfies FNUserBasicCodeField; /* SHORT_NAMED_INTEGER_VALUE */
+export const syntax_identifier_not_supported = FNUserBasicCodeField_syntax_identifier_not_supported; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary FNUserBasicCodeField_interchange_sender_unknown
@@ -169,7 +169,7 @@ export const FNUserBasicCodeField_interchange_sender_unknown = 9 satisfies FNUse
  * @constant
  * @type {number}
  */
-export const interchange_sender_unknown = FNUserBasicCodeField_interchange_sender_unknown satisfies FNUserBasicCodeField; /* SHORT_NAMED_INTEGER_VALUE */
+export const interchange_sender_unknown = FNUserBasicCodeField_interchange_sender_unknown; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary FNUserBasicCodeField_user_defined_reason
@@ -183,7 +183,7 @@ export const FNUserBasicCodeField_user_defined_reason = 10 satisfies FNUserBasic
  * @constant
  * @type {number}
  */
-export const user_defined_reason = FNUserBasicCodeField_user_defined_reason satisfies FNUserBasicCodeField; /* SHORT_NAMED_INTEGER_VALUE */
+export const user_defined_reason = FNUserBasicCodeField_user_defined_reason; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_FNUserBasicCodeField = $._decodeInteger;

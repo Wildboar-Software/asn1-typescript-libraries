@@ -100,7 +100,7 @@ export const FastSelect = _enum_for_FastSelect;
  * @type {number}
  */
 export const FastSelect_notSpecified =
-    FastSelect.notSpecified satisfies FastSelect; /* LONG_NAMED_ENUMERATED_VALUE */
+    FastSelect.notSpecified; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -115,7 +115,7 @@ export const FastSelect_notSpecified =
  * @type {number}
  */
 export const notSpecified =
-    FastSelect.notSpecified satisfies FastSelect; /* SHORT_NAMED_ENUMERATED_VALUE */
+    FastSelect.notSpecified; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -130,7 +130,7 @@ export const notSpecified =
  * @type {number}
  */
 export const FastSelect_fastSelect =
-    FastSelect.fastSelect satisfies FastSelect; /* LONG_NAMED_ENUMERATED_VALUE */
+    FastSelect.fastSelect; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -145,7 +145,7 @@ export const FastSelect_fastSelect =
  * @type {number}
  */
 export const fastSelect =
-    FastSelect.fastSelect satisfies FastSelect; /* SHORT_NAMED_ENUMERATED_VALUE */
+    FastSelect.fastSelect; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -160,7 +160,7 @@ export const fastSelect =
  * @type {number}
  */
 export const FastSelect_fastSelectWithRestrictedResponse =
-    FastSelect.fastSelectWithRestrictedResponse satisfies FastSelect; /* LONG_NAMED_ENUMERATED_VALUE */
+    FastSelect.fastSelectWithRestrictedResponse; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -175,7 +175,7 @@ export const FastSelect_fastSelectWithRestrictedResponse =
  * @type {number}
  */
 export const fastSelectWithRestrictedResponse =
-    FastSelect.fastSelectWithRestrictedResponse satisfies FastSelect; /* SHORT_NAMED_ENUMERATED_VALUE */
+    FastSelect.fastSelectWithRestrictedResponse; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -190,7 +190,7 @@ export const fastSelectWithRestrictedResponse =
  * @type {number}
  */
 export const FastSelect_noFastSelect =
-    FastSelect.noFastSelect satisfies FastSelect; /* LONG_NAMED_ENUMERATED_VALUE */
+    FastSelect.noFastSelect; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -205,7 +205,7 @@ export const FastSelect_noFastSelect =
  * @type {number}
  */
 export const noFastSelect =
-    FastSelect.noFastSelect satisfies FastSelect; /* SHORT_NAMED_ENUMERATED_VALUE */
+    FastSelect.noFastSelect; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 

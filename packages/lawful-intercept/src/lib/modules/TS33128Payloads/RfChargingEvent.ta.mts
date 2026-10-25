@@ -146,7 +146,7 @@ const RfChargingEvent = _enum_for_RfChargingEvent;
  * @type {number}
  */
 export
-const RfChargingEvent_aoC_Information = RfChargingEvent.aoC_Information satisfies RfChargingEvent; /* LONG_NAMED_ENUMERATED_VALUE */
+const RfChargingEvent_aoC_Information = RfChargingEvent.aoC_Information; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary aoC_Information
@@ -154,7 +154,7 @@ const RfChargingEvent_aoC_Information = RfChargingEvent.aoC_Information satisfie
  * @type {number}
  */
 export
-const aoC_Information = RfChargingEvent.aoC_Information satisfies RfChargingEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const aoC_Information = RfChargingEvent.aoC_Information; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RfChargingEvent_pS_Information
@@ -162,7 +162,7 @@ const aoC_Information = RfChargingEvent.aoC_Information satisfies RfChargingEven
  * @type {number}
  */
 export
-const RfChargingEvent_pS_Information = RfChargingEvent.pS_Information satisfies RfChargingEvent; /* LONG_NAMED_ENUMERATED_VALUE */
+const RfChargingEvent_pS_Information = RfChargingEvent.pS_Information; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pS_Information
@@ -170,7 +170,7 @@ const RfChargingEvent_pS_Information = RfChargingEvent.pS_Information satisfies 
  * @type {number}
  */
 export
-const pS_Information = RfChargingEvent.pS_Information satisfies RfChargingEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pS_Information = RfChargingEvent.pS_Information; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RfChargingEvent_iMS_Information
@@ -178,7 +178,7 @@ const pS_Information = RfChargingEvent.pS_Information satisfies RfChargingEvent;
  * @type {number}
  */
 export
-const RfChargingEvent_iMS_Information = RfChargingEvent.iMS_Information satisfies RfChargingEvent; /* LONG_NAMED_ENUMERATED_VALUE */
+const RfChargingEvent_iMS_Information = RfChargingEvent.iMS_Information; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary iMS_Information
@@ -186,7 +186,7 @@ const RfChargingEvent_iMS_Information = RfChargingEvent.iMS_Information satisfie
  * @type {number}
  */
 export
-const iMS_Information = RfChargingEvent.iMS_Information satisfies RfChargingEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const iMS_Information = RfChargingEvent.iMS_Information; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RfChargingEvent_mMS_Information
@@ -194,7 +194,7 @@ const iMS_Information = RfChargingEvent.iMS_Information satisfies RfChargingEven
  * @type {number}
  */
 export
-const RfChargingEvent_mMS_Information = RfChargingEvent.mMS_Information satisfies RfChargingEvent; /* LONG_NAMED_ENUMERATED_VALUE */
+const RfChargingEvent_mMS_Information = RfChargingEvent.mMS_Information; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary mMS_Information
@@ -202,7 +202,7 @@ const RfChargingEvent_mMS_Information = RfChargingEvent.mMS_Information satisfie
  * @type {number}
  */
 export
-const mMS_Information = RfChargingEvent.mMS_Information satisfies RfChargingEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const mMS_Information = RfChargingEvent.mMS_Information; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RfChargingEvent_lCS_Information
@@ -210,7 +210,7 @@ const mMS_Information = RfChargingEvent.mMS_Information satisfies RfChargingEven
  * @type {number}
  */
 export
-const RfChargingEvent_lCS_Information = RfChargingEvent.lCS_Information satisfies RfChargingEvent; /* LONG_NAMED_ENUMERATED_VALUE */
+const RfChargingEvent_lCS_Information = RfChargingEvent.lCS_Information; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary lCS_Information
@@ -218,7 +218,7 @@ const RfChargingEvent_lCS_Information = RfChargingEvent.lCS_Information satisfie
  * @type {number}
  */
 export
-const lCS_Information = RfChargingEvent.lCS_Information satisfies RfChargingEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const lCS_Information = RfChargingEvent.lCS_Information; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RfChargingEvent_poC_Information
@@ -226,7 +226,7 @@ const lCS_Information = RfChargingEvent.lCS_Information satisfies RfChargingEven
  * @type {number}
  */
 export
-const RfChargingEvent_poC_Information = RfChargingEvent.poC_Information satisfies RfChargingEvent; /* LONG_NAMED_ENUMERATED_VALUE */
+const RfChargingEvent_poC_Information = RfChargingEvent.poC_Information; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary poC_Information
@@ -234,7 +234,7 @@ const RfChargingEvent_poC_Information = RfChargingEvent.poC_Information satisfie
  * @type {number}
  */
 export
-const poC_Information = RfChargingEvent.poC_Information satisfies RfChargingEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const poC_Information = RfChargingEvent.poC_Information; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RfChargingEvent_mBMS_Inform
@@ -242,7 +242,7 @@ const poC_Information = RfChargingEvent.poC_Information satisfies RfChargingEven
  * @type {number}
  */
 export
-const RfChargingEvent_mBMS_Inform = RfChargingEvent.mBMS_Inform satisfies RfChargingEvent; /* LONG_NAMED_ENUMERATED_VALUE */
+const RfChargingEvent_mBMS_Inform = RfChargingEvent.mBMS_Inform; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary mBMS_Inform
@@ -250,7 +250,7 @@ const RfChargingEvent_mBMS_Inform = RfChargingEvent.mBMS_Inform satisfies RfChar
  * @type {number}
  */
 export
-const mBMS_Inform = RfChargingEvent.mBMS_Inform satisfies RfChargingEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const mBMS_Inform = RfChargingEvent.mBMS_Inform; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RfChargingEvent_sMS_Information
@@ -258,7 +258,7 @@ const mBMS_Inform = RfChargingEvent.mBMS_Inform satisfies RfChargingEvent; /* SH
  * @type {number}
  */
 export
-const RfChargingEvent_sMS_Information = RfChargingEvent.sMS_Information satisfies RfChargingEvent; /* LONG_NAMED_ENUMERATED_VALUE */
+const RfChargingEvent_sMS_Information = RfChargingEvent.sMS_Information; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sMS_Information
@@ -266,7 +266,7 @@ const RfChargingEvent_sMS_Information = RfChargingEvent.sMS_Information satisfie
  * @type {number}
  */
 export
-const sMS_Information = RfChargingEvent.sMS_Information satisfies RfChargingEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sMS_Information = RfChargingEvent.sMS_Information; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RfChargingEvent_vCS_Information
@@ -274,7 +274,7 @@ const sMS_Information = RfChargingEvent.sMS_Information satisfies RfChargingEven
  * @type {number}
  */
 export
-const RfChargingEvent_vCS_Information = RfChargingEvent.vCS_Information satisfies RfChargingEvent; /* LONG_NAMED_ENUMERATED_VALUE */
+const RfChargingEvent_vCS_Information = RfChargingEvent.vCS_Information; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary vCS_Information
@@ -282,7 +282,7 @@ const RfChargingEvent_vCS_Information = RfChargingEvent.vCS_Information satisfie
  * @type {number}
  */
 export
-const vCS_Information = RfChargingEvent.vCS_Information satisfies RfChargingEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const vCS_Information = RfChargingEvent.vCS_Information; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RfChargingEvent_mMTel_Information
@@ -290,7 +290,7 @@ const vCS_Information = RfChargingEvent.vCS_Information satisfies RfChargingEven
  * @type {number}
  */
 export
-const RfChargingEvent_mMTel_Information = RfChargingEvent.mMTel_Information satisfies RfChargingEvent; /* LONG_NAMED_ENUMERATED_VALUE */
+const RfChargingEvent_mMTel_Information = RfChargingEvent.mMTel_Information; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary mMTel_Information
@@ -298,7 +298,7 @@ const RfChargingEvent_mMTel_Information = RfChargingEvent.mMTel_Information sati
  * @type {number}
  */
 export
-const mMTel_Information = RfChargingEvent.mMTel_Information satisfies RfChargingEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const mMTel_Information = RfChargingEvent.mMTel_Information; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RfChargingEvent_proSe_Information
@@ -306,7 +306,7 @@ const mMTel_Information = RfChargingEvent.mMTel_Information satisfies RfCharging
  * @type {number}
  */
 export
-const RfChargingEvent_proSe_Information = RfChargingEvent.proSe_Information satisfies RfChargingEvent; /* LONG_NAMED_ENUMERATED_VALUE */
+const RfChargingEvent_proSe_Information = RfChargingEvent.proSe_Information; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary proSe_Information
@@ -314,7 +314,7 @@ const RfChargingEvent_proSe_Information = RfChargingEvent.proSe_Information sati
  * @type {number}
  */
 export
-const proSe_Information = RfChargingEvent.proSe_Information satisfies RfChargingEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const proSe_Information = RfChargingEvent.proSe_Information; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RfChargingEvent_service_Generic_Information
@@ -322,7 +322,7 @@ const proSe_Information = RfChargingEvent.proSe_Information satisfies RfCharging
  * @type {number}
  */
 export
-const RfChargingEvent_service_Generic_Information = RfChargingEvent.service_Generic_Information satisfies RfChargingEvent; /* LONG_NAMED_ENUMERATED_VALUE */
+const RfChargingEvent_service_Generic_Information = RfChargingEvent.service_Generic_Information; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary service_Generic_Information
@@ -330,7 +330,7 @@ const RfChargingEvent_service_Generic_Information = RfChargingEvent.service_Gene
  * @type {number}
  */
 export
-const service_Generic_Information = RfChargingEvent.service_Generic_Information satisfies RfChargingEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const service_Generic_Information = RfChargingEvent.service_Generic_Information; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RfChargingEvent_iM_Information
@@ -338,7 +338,7 @@ const service_Generic_Information = RfChargingEvent.service_Generic_Information 
  * @type {number}
  */
 export
-const RfChargingEvent_iM_Information = RfChargingEvent.iM_Information satisfies RfChargingEvent; /* LONG_NAMED_ENUMERATED_VALUE */
+const RfChargingEvent_iM_Information = RfChargingEvent.iM_Information; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary iM_Information
@@ -346,7 +346,7 @@ const RfChargingEvent_iM_Information = RfChargingEvent.iM_Information satisfies 
  * @type {number}
  */
 export
-const iM_Information = RfChargingEvent.iM_Information satisfies RfChargingEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const iM_Information = RfChargingEvent.iM_Information; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RfChargingEvent_dCD_Information
@@ -354,7 +354,7 @@ const iM_Information = RfChargingEvent.iM_Information satisfies RfChargingEvent;
  * @type {number}
  */
 export
-const RfChargingEvent_dCD_Information = RfChargingEvent.dCD_Information satisfies RfChargingEvent; /* LONG_NAMED_ENUMERATED_VALUE */
+const RfChargingEvent_dCD_Information = RfChargingEvent.dCD_Information; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary dCD_Information
@@ -362,7 +362,7 @@ const RfChargingEvent_dCD_Information = RfChargingEvent.dCD_Information satisfie
  * @type {number}
  */
 export
-const dCD_Information = RfChargingEvent.dCD_Information satisfies RfChargingEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const dCD_Information = RfChargingEvent.dCD_Information; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RfChargingEvent_m2M_Information
@@ -370,7 +370,7 @@ const dCD_Information = RfChargingEvent.dCD_Information satisfies RfChargingEven
  * @type {number}
  */
 export
-const RfChargingEvent_m2M_Information = RfChargingEvent.m2M_Information satisfies RfChargingEvent; /* LONG_NAMED_ENUMERATED_VALUE */
+const RfChargingEvent_m2M_Information = RfChargingEvent.m2M_Information; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary m2M_Information
@@ -378,7 +378,7 @@ const RfChargingEvent_m2M_Information = RfChargingEvent.m2M_Information satisfie
  * @type {number}
  */
 export
-const m2M_Information = RfChargingEvent.m2M_Information satisfies RfChargingEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const m2M_Information = RfChargingEvent.m2M_Information; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RfChargingEvent_cPDT_Information
@@ -386,7 +386,7 @@ const m2M_Information = RfChargingEvent.m2M_Information satisfies RfChargingEven
  * @type {number}
  */
 export
-const RfChargingEvent_cPDT_Information = RfChargingEvent.cPDT_Information satisfies RfChargingEvent; /* LONG_NAMED_ENUMERATED_VALUE */
+const RfChargingEvent_cPDT_Information = RfChargingEvent.cPDT_Information; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary cPDT_Information
@@ -394,7 +394,7 @@ const RfChargingEvent_cPDT_Information = RfChargingEvent.cPDT_Information satisf
  * @type {number}
  */
 export
-const cPDT_Information = RfChargingEvent.cPDT_Information satisfies RfChargingEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const cPDT_Information = RfChargingEvent.cPDT_Information; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_RfChargingEvent: $.ASN1Decoder<RfChargingEvent> = $._decodeEnumerated;
 export const _encode_RfChargingEvent: $.ASN1Encoder<RfChargingEvent> = $._encodeEnumerated;
 

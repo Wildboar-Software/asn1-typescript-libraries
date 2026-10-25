@@ -55,7 +55,7 @@ const RequestStatusCodeType_normalRelease = 0 satisfies RequestStatusCodeType; /
  * @type {number}
  */
 export
-const normalRelease = RequestStatusCodeType_normalRelease satisfies RequestStatusCodeType; /* SHORT_NAMED_INTEGER_VALUE */
+const normalRelease = RequestStatusCodeType_normalRelease; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RequestStatusCodeType_abnormalRelease
@@ -71,7 +71,7 @@ const RequestStatusCodeType_abnormalRelease = 4 satisfies RequestStatusCodeType;
  * @type {number}
  */
 export
-const abnormalRelease = RequestStatusCodeType_abnormalRelease satisfies RequestStatusCodeType; /* SHORT_NAMED_INTEGER_VALUE */
+const abnormalRelease = RequestStatusCodeType_abnormalRelease; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RequestStatusCodeType_serviceDenied
@@ -87,7 +87,7 @@ const RequestStatusCodeType_serviceDenied = 30 satisfies RequestStatusCodeType; 
  * @type {number}
  */
 export
-const serviceDenied = RequestStatusCodeType_serviceDenied satisfies RequestStatusCodeType; /* SHORT_NAMED_INTEGER_VALUE */
+const serviceDenied = RequestStatusCodeType_serviceDenied; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RequestStatusCodeType_messageFormatCorrupt
@@ -103,7 +103,7 @@ const RequestStatusCodeType_messageFormatCorrupt = 31 satisfies RequestStatusCod
  * @type {number}
  */
 export
-const messageFormatCorrupt = RequestStatusCodeType_messageFormatCorrupt satisfies RequestStatusCodeType; /* SHORT_NAMED_INTEGER_VALUE */
+const messageFormatCorrupt = RequestStatusCodeType_messageFormatCorrupt; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RequestStatusCodeType_sendingAddressUnresolved
@@ -119,7 +119,7 @@ const RequestStatusCodeType_sendingAddressUnresolved = 32 satisfies RequestStatu
  * @type {number}
  */
 export
-const sendingAddressUnresolved = RequestStatusCodeType_sendingAddressUnresolved satisfies RequestStatusCodeType; /* SHORT_NAMED_INTEGER_VALUE */
+const sendingAddressUnresolved = RequestStatusCodeType_sendingAddressUnresolved; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RequestStatusCodeType_messageNotFound
@@ -135,7 +135,7 @@ const RequestStatusCodeType_messageNotFound = 33 satisfies RequestStatusCodeType
  * @type {number}
  */
 export
-const messageNotFound = RequestStatusCodeType_messageNotFound satisfies RequestStatusCodeType; /* SHORT_NAMED_INTEGER_VALUE */
+const messageNotFound = RequestStatusCodeType_messageNotFound; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RequestStatusCodeType_networkProblem
@@ -151,7 +151,7 @@ const RequestStatusCodeType_networkProblem = 34 satisfies RequestStatusCodeType;
  * @type {number}
  */
 export
-const networkProblem = RequestStatusCodeType_networkProblem satisfies RequestStatusCodeType; /* SHORT_NAMED_INTEGER_VALUE */
+const networkProblem = RequestStatusCodeType_networkProblem; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RequestStatusCodeType_contentNotAccepted
@@ -167,7 +167,7 @@ const RequestStatusCodeType_contentNotAccepted = 35 satisfies RequestStatusCodeT
  * @type {number}
  */
 export
-const contentNotAccepted = RequestStatusCodeType_contentNotAccepted satisfies RequestStatusCodeType; /* SHORT_NAMED_INTEGER_VALUE */
+const contentNotAccepted = RequestStatusCodeType_contentNotAccepted; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RequestStatusCodeType_unsupportedMessage
@@ -183,7 +183,7 @@ const RequestStatusCodeType_unsupportedMessage = 36 satisfies RequestStatusCodeT
  * @type {number}
  */
 export
-const unsupportedMessage = RequestStatusCodeType_unsupportedMessage satisfies RequestStatusCodeType; /* SHORT_NAMED_INTEGER_VALUE */
+const unsupportedMessage = RequestStatusCodeType_unsupportedMessage; /* SHORT_NAMED_INTEGER_VALUE */
 
 export
 const _decode_RequestStatusCodeType: $.ASN1Decoder<RequestStatusCodeType> = $._decodeInteger;

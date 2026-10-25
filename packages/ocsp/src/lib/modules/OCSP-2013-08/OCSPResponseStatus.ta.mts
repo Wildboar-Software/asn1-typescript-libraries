@@ -110,7 +110,7 @@ export const OCSPResponseStatus = _enum_for_OCSPResponseStatus;
  * @type {number}
  */
 export const OCSPResponseStatus_successful =
-    OCSPResponseStatus.successful satisfies OCSPResponseStatus; /* LONG_NAMED_ENUMERATED_VALUE */
+    OCSPResponseStatus.successful; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -124,7 +124,7 @@ export const OCSPResponseStatus_successful =
  * @type {number}
  */
 export const successful =
-    OCSPResponseStatus.successful satisfies OCSPResponseStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
+    OCSPResponseStatus.successful; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -139,7 +139,7 @@ export const successful =
  * @type {number}
  */
 export const OCSPResponseStatus_malformedRequest =
-    OCSPResponseStatus.malformedRequest satisfies OCSPResponseStatus; /* LONG_NAMED_ENUMERATED_VALUE */
+    OCSPResponseStatus.malformedRequest; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -154,7 +154,7 @@ export const OCSPResponseStatus_malformedRequest =
  * @type {number}
  */
 export const malformedRequest =
-    OCSPResponseStatus.malformedRequest satisfies OCSPResponseStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
+    OCSPResponseStatus.malformedRequest; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -170,7 +170,7 @@ export const malformedRequest =
  * @type {number}
  */
 export const OCSPResponseStatus_internalError =
-    OCSPResponseStatus.internalError satisfies OCSPResponseStatus; /* LONG_NAMED_ENUMERATED_VALUE */
+    OCSPResponseStatus.internalError; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -186,7 +186,7 @@ export const OCSPResponseStatus_internalError =
  * @type {number}
  */
 export const internalError =
-    OCSPResponseStatus.internalError satisfies OCSPResponseStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
+    OCSPResponseStatus.internalError; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -201,7 +201,7 @@ export const internalError =
  * @type {number}
  */
 export const OCSPResponseStatus_tryLater =
-    OCSPResponseStatus.tryLater satisfies OCSPResponseStatus; /* LONG_NAMED_ENUMERATED_VALUE */
+    OCSPResponseStatus.tryLater; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -216,7 +216,7 @@ export const OCSPResponseStatus_tryLater =
  * @type {number}
  */
 export const tryLater =
-    OCSPResponseStatus.tryLater satisfies OCSPResponseStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
+    OCSPResponseStatus.tryLater; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -230,7 +230,7 @@ export const tryLater =
  * @type {number}
  */
 export const OCSPResponseStatus_sigRequired =
-    OCSPResponseStatus.sigRequired satisfies OCSPResponseStatus; /* LONG_NAMED_ENUMERATED_VALUE */
+    OCSPResponseStatus.sigRequired; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -244,7 +244,7 @@ export const OCSPResponseStatus_sigRequired =
  * @type {number}
  */
 export const sigRequired =
-    OCSPResponseStatus.sigRequired satisfies OCSPResponseStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
+    OCSPResponseStatus.sigRequired; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -261,7 +261,7 @@ export const sigRequired =
  * @type {number}
  */
 export const OCSPResponseStatus_unauthorized =
-    OCSPResponseStatus.unauthorized satisfies OCSPResponseStatus; /* LONG_NAMED_ENUMERATED_VALUE */
+    OCSPResponseStatus.unauthorized; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -278,7 +278,7 @@ export const OCSPResponseStatus_unauthorized =
  * @type {number}
  */
 export const unauthorized =
-    OCSPResponseStatus.unauthorized satisfies OCSPResponseStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
+    OCSPResponseStatus.unauthorized; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 

@@ -91,7 +91,7 @@ const ServiceMode_cFunCond = 0 satisfies ServiceMode; /* LONG_NAMED_INTEGER_VALU
  * @type {number}
  */
 export
-const cFunCond = ServiceMode_cFunCond satisfies ServiceMode; /* SHORT_NAMED_INTEGER_VALUE */
+const cFunCond = ServiceMode_cFunCond; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceMode_cFbusy
@@ -121,7 +121,7 @@ const ServiceMode_cFbusy = 1 satisfies ServiceMode; /* LONG_NAMED_INTEGER_VALUE 
  * @type {number}
  */
 export
-const cFbusy = ServiceMode_cFbusy satisfies ServiceMode; /* SHORT_NAMED_INTEGER_VALUE */
+const cFbusy = ServiceMode_cFbusy; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceMode_cFnoReply
@@ -153,7 +153,7 @@ const ServiceMode_cFnoReply = 2 satisfies ServiceMode; /* LONG_NAMED_INTEGER_VAL
  * @type {number}
  */
 export
-const cFnoReply = ServiceMode_cFnoReply satisfies ServiceMode; /* SHORT_NAMED_INTEGER_VALUE */
+const cFnoReply = ServiceMode_cFnoReply; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceMode_cFnotLogged
@@ -182,7 +182,7 @@ const ServiceMode_cFnotLogged = 3 satisfies ServiceMode; /* LONG_NAMED_INTEGER_V
  * @type {number}
  */
 export
-const cFnotLogged = ServiceMode_cFnotLogged satisfies ServiceMode; /* SHORT_NAMED_INTEGER_VALUE */
+const cFnotLogged = ServiceMode_cFnotLogged; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceMode_deflection
@@ -211,7 +211,7 @@ const ServiceMode_deflection = 4 satisfies ServiceMode; /* LONG_NAMED_INTEGER_VA
  * @type {number}
  */
 export
-const deflection = ServiceMode_deflection satisfies ServiceMode; /* SHORT_NAMED_INTEGER_VALUE */
+const deflection = ServiceMode_deflection; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceMode_notReach
@@ -241,7 +241,7 @@ const ServiceMode_notReach = 5 satisfies ServiceMode; /* LONG_NAMED_INTEGER_VALU
  * @type {number}
  */
 export
-const notReach = ServiceMode_notReach satisfies ServiceMode; /* SHORT_NAMED_INTEGER_VALUE */
+const notReach = ServiceMode_notReach; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceMode_iCBarring
@@ -271,7 +271,7 @@ const ServiceMode_iCBarring = 6 satisfies ServiceMode; /* LONG_NAMED_INTEGER_VAL
  * @type {number}
  */
 export
-const iCBarring = ServiceMode_iCBarring satisfies ServiceMode; /* SHORT_NAMED_INTEGER_VALUE */
+const iCBarring = ServiceMode_iCBarring; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceMode_oCBarring
@@ -304,7 +304,7 @@ const ServiceMode_oCBarring = 7 satisfies ServiceMode; /* LONG_NAMED_INTEGER_VAL
  * @type {number}
  */
 export
-const oCBarring = ServiceMode_oCBarring satisfies ServiceMode; /* SHORT_NAMED_INTEGER_VALUE */
+const oCBarring = ServiceMode_oCBarring; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceMode_aCRejection
@@ -334,7 +334,7 @@ const ServiceMode_aCRejection = 8 satisfies ServiceMode; /* LONG_NAMED_INTEGER_V
  * @type {number}
  */
 export
-const aCRejection = ServiceMode_aCRejection satisfies ServiceMode; /* SHORT_NAMED_INTEGER_VALUE */
+const aCRejection = ServiceMode_aCRejection; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceMode_eCTBlind
@@ -366,7 +366,7 @@ const ServiceMode_eCTBlind = 9 satisfies ServiceMode; /* LONG_NAMED_INTEGER_VALU
  * @type {number}
  */
 export
-const eCTBlind = ServiceMode_eCTBlind satisfies ServiceMode; /* SHORT_NAMED_INTEGER_VALUE */
+const eCTBlind = ServiceMode_eCTBlind; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceMode_eCTConsultative
@@ -399,7 +399,7 @@ const ServiceMode_eCTConsultative = 10 satisfies ServiceMode; /* LONG_NAMED_INTE
  * @type {number}
  */
 export
-const eCTConsultative = ServiceMode_eCTConsultative satisfies ServiceMode; /* SHORT_NAMED_INTEGER_VALUE */
+const eCTConsultative = ServiceMode_eCTConsultative; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceMode_threePTY
@@ -433,7 +433,7 @@ const ServiceMode_threePTY = 11 satisfies ServiceMode; /* LONG_NAMED_INTEGER_VAL
  * @type {number}
  */
 export
-const threePTY = ServiceMode_threePTY satisfies ServiceMode; /* SHORT_NAMED_INTEGER_VALUE */
+const threePTY = ServiceMode_threePTY; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceMode_aoC_S
@@ -462,7 +462,7 @@ const ServiceMode_aoC_S = 12 satisfies ServiceMode; /* LONG_NAMED_INTEGER_VALUE 
  * @type {number}
  */
 export
-const aoC_S = ServiceMode_aoC_S satisfies ServiceMode; /* SHORT_NAMED_INTEGER_VALUE */
+const aoC_S = ServiceMode_aoC_S; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceMode_aoC_D
@@ -491,7 +491,7 @@ const ServiceMode_aoC_D = 13 satisfies ServiceMode; /* LONG_NAMED_INTEGER_VALUE 
  * @type {number}
  */
 export
-const aoC_D = ServiceMode_aoC_D satisfies ServiceMode; /* SHORT_NAMED_INTEGER_VALUE */
+const aoC_D = ServiceMode_aoC_D; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceMode_aoC_E
@@ -520,7 +520,7 @@ const ServiceMode_aoC_E = 14 satisfies ServiceMode; /* LONG_NAMED_INTEGER_VALUE 
  * @type {number}
  */
 export
-const aoC_E = ServiceMode_aoC_E satisfies ServiceMode; /* SHORT_NAMED_INTEGER_VALUE */
+const aoC_E = ServiceMode_aoC_E; /* SHORT_NAMED_INTEGER_VALUE */
 
 export
 const _decode_ServiceMode: $.ASN1Decoder<ServiceMode> = $._decodeInteger;

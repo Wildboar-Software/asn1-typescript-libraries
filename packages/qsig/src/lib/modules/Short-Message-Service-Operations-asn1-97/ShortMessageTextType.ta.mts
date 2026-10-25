@@ -49,7 +49,7 @@ const ShortMessageTextType_iA5Coded = 0 satisfies ShortMessageTextType; /* LONG_
  * @type {number}
  */
 export
-const iA5Coded = ShortMessageTextType_iA5Coded satisfies ShortMessageTextType; /* SHORT_NAMED_INTEGER_VALUE */
+const iA5Coded = ShortMessageTextType_iA5Coded; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ShortMessageTextType_octetCoded
@@ -71,7 +71,7 @@ const ShortMessageTextType_octetCoded = 1 satisfies ShortMessageTextType; /* LON
  * @type {number}
  */
 export
-const octetCoded = ShortMessageTextType_octetCoded satisfies ShortMessageTextType; /* SHORT_NAMED_INTEGER_VALUE */
+const octetCoded = ShortMessageTextType_octetCoded; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ShortMessageTextType_uniCoded
@@ -93,7 +93,7 @@ const ShortMessageTextType_uniCoded = 2 satisfies ShortMessageTextType; /* LONG_
  * @type {number}
  */
 export
-const uniCoded = ShortMessageTextType_uniCoded satisfies ShortMessageTextType; /* SHORT_NAMED_INTEGER_VALUE */
+const uniCoded = ShortMessageTextType_uniCoded; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ShortMessageTextType_compressedCoded
@@ -116,7 +116,7 @@ const ShortMessageTextType_compressedCoded = 3 satisfies ShortMessageTextType; /
  * @type {number}
  */
 export
-const compressedCoded = ShortMessageTextType_compressedCoded satisfies ShortMessageTextType; /* SHORT_NAMED_INTEGER_VALUE */
+const compressedCoded = ShortMessageTextType_compressedCoded; /* SHORT_NAMED_INTEGER_VALUE */
 
 export
 const _decode_ShortMessageTextType = (el: _Element): ShortMessageTextType => {

@@ -47,7 +47,7 @@ type AccessType = _enum_for_AccessType | ENUMERATED;
  * @type {number}
  */
 export
-const AccessType_ePS_Unicast = _enum_for_AccessType.ePS_Unicast satisfies AccessType; /* LONG_NAMED_ENUMERATED_VALUE */
+const AccessType_ePS_Unicast = _enum_for_AccessType.ePS_Unicast; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ePS_Unicast
@@ -59,7 +59,7 @@ const AccessType_ePS_Unicast = _enum_for_AccessType.ePS_Unicast satisfies Access
  * @type {number}
  */
 export
-const ePS_Unicast = AccessType_ePS_Unicast satisfies AccessType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const ePS_Unicast = AccessType_ePS_Unicast; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AccessType_ePS_Multicast
@@ -72,7 +72,7 @@ const ePS_Unicast = AccessType_ePS_Unicast satisfies AccessType; /* SHORT_NAMED_
  * @type {number}
  */
 export
-const AccessType_ePS_Multicast = _enum_for_AccessType.ePS_Multicast satisfies AccessType; /* LONG_NAMED_ENUMERATED_VALUE */
+const AccessType_ePS_Multicast = _enum_for_AccessType.ePS_Multicast; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ePS_Multicast
@@ -84,7 +84,7 @@ const AccessType_ePS_Multicast = _enum_for_AccessType.ePS_Multicast satisfies Ac
  * @type {number}
  */
 export
-const ePS_Multicast = AccessType_ePS_Multicast satisfies AccessType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const ePS_Multicast = AccessType_ePS_Multicast; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_AccessType: $.ASN1Decoder<AccessType> = $._decodeEnumerated;
 export const _encode_AccessType: $.ASN1Encoder<AccessType> = $._encodeEnumerated;
 

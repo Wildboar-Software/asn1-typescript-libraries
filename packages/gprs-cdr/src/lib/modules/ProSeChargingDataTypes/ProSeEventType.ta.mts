@@ -135,7 +135,7 @@ const ProSeEventType = _enum_for_ProSeEventType;
  * @type {number}
  */
 export
-const ProSeEventType_openAnnouncing = ProSeEventType.openAnnouncing satisfies ProSeEventType; /* LONG_NAMED_ENUMERATED_VALUE */
+const ProSeEventType_openAnnouncing = ProSeEventType.openAnnouncing; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary openAnnouncing
@@ -147,7 +147,7 @@ const ProSeEventType_openAnnouncing = ProSeEventType.openAnnouncing satisfies Pr
  * @type {number}
  */
 export
-const openAnnouncing = ProSeEventType.openAnnouncing satisfies ProSeEventType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const openAnnouncing = ProSeEventType.openAnnouncing; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ProSeEventType_openMonitoring
@@ -163,7 +163,7 @@ const openAnnouncing = ProSeEventType.openAnnouncing satisfies ProSeEventType; /
  * @type {number}
  */
 export
-const ProSeEventType_openMonitoring = ProSeEventType.openMonitoring satisfies ProSeEventType; /* LONG_NAMED_ENUMERATED_VALUE */
+const ProSeEventType_openMonitoring = ProSeEventType.openMonitoring; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary openMonitoring
@@ -175,7 +175,7 @@ const ProSeEventType_openMonitoring = ProSeEventType.openMonitoring satisfies Pr
  * @type {number}
  */
 export
-const openMonitoring = ProSeEventType.openMonitoring satisfies ProSeEventType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const openMonitoring = ProSeEventType.openMonitoring; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ProSeEventType_openMatchReport
@@ -192,7 +192,7 @@ const openMonitoring = ProSeEventType.openMonitoring satisfies ProSeEventType; /
  * @type {number}
  */
 export
-const ProSeEventType_openMatchReport = ProSeEventType.openMatchReport satisfies ProSeEventType; /* LONG_NAMED_ENUMERATED_VALUE */
+const ProSeEventType_openMatchReport = ProSeEventType.openMatchReport; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary openMatchReport
@@ -204,7 +204,7 @@ const ProSeEventType_openMatchReport = ProSeEventType.openMatchReport satisfies 
  * @type {number}
  */
 export
-const openMatchReport = ProSeEventType.openMatchReport satisfies ProSeEventType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const openMatchReport = ProSeEventType.openMatchReport; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ProSeEventType_restrictedAnnouncing
@@ -219,7 +219,7 @@ const openMatchReport = ProSeEventType.openMatchReport satisfies ProSeEventType;
  * @type {number}
  */
 export
-const ProSeEventType_restrictedAnnouncing = ProSeEventType.restrictedAnnouncing satisfies ProSeEventType; /* LONG_NAMED_ENUMERATED_VALUE */
+const ProSeEventType_restrictedAnnouncing = ProSeEventType.restrictedAnnouncing; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary restrictedAnnouncing
@@ -231,7 +231,7 @@ const ProSeEventType_restrictedAnnouncing = ProSeEventType.restrictedAnnouncing 
  * @type {number}
  */
 export
-const restrictedAnnouncing = ProSeEventType.restrictedAnnouncing satisfies ProSeEventType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const restrictedAnnouncing = ProSeEventType.restrictedAnnouncing; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ProSeEventType_restrictedMonitoring
@@ -246,7 +246,7 @@ const restrictedAnnouncing = ProSeEventType.restrictedAnnouncing satisfies ProSe
  * @type {number}
  */
 export
-const ProSeEventType_restrictedMonitoring = ProSeEventType.restrictedMonitoring satisfies ProSeEventType; /* LONG_NAMED_ENUMERATED_VALUE */
+const ProSeEventType_restrictedMonitoring = ProSeEventType.restrictedMonitoring; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary restrictedMonitoring
@@ -258,7 +258,7 @@ const ProSeEventType_restrictedMonitoring = ProSeEventType.restrictedMonitoring 
  * @type {number}
  */
 export
-const restrictedMonitoring = ProSeEventType.restrictedMonitoring satisfies ProSeEventType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const restrictedMonitoring = ProSeEventType.restrictedMonitoring; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ProSeEventType_restrictedMatchReport
@@ -272,7 +272,7 @@ const restrictedMonitoring = ProSeEventType.restrictedMonitoring satisfies ProSe
  * @type {number}
  */
 export
-const ProSeEventType_restrictedMatchReport = ProSeEventType.restrictedMatchReport satisfies ProSeEventType; /* LONG_NAMED_ENUMERATED_VALUE */
+const ProSeEventType_restrictedMatchReport = ProSeEventType.restrictedMatchReport; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary restrictedMatchReport
@@ -284,7 +284,7 @@ const ProSeEventType_restrictedMatchReport = ProSeEventType.restrictedMatchRepor
  * @type {number}
  */
 export
-const restrictedMatchReport = ProSeEventType.restrictedMatchReport satisfies ProSeEventType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const restrictedMatchReport = ProSeEventType.restrictedMatchReport; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ProSeEventType_restrictedDiscoveryRequest
@@ -301,7 +301,7 @@ const restrictedMatchReport = ProSeEventType.restrictedMatchReport satisfies Pro
  * @type {number}
  */
 export
-const ProSeEventType_restrictedDiscoveryRequest = ProSeEventType.restrictedDiscoveryRequest satisfies ProSeEventType; /* LONG_NAMED_ENUMERATED_VALUE */
+const ProSeEventType_restrictedDiscoveryRequest = ProSeEventType.restrictedDiscoveryRequest; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary restrictedDiscoveryRequest
@@ -314,7 +314,7 @@ const ProSeEventType_restrictedDiscoveryRequest = ProSeEventType.restrictedDisco
  * @type {number}
  */
 export
-const restrictedDiscoveryRequest = ProSeEventType.restrictedDiscoveryRequest satisfies ProSeEventType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const restrictedDiscoveryRequest = ProSeEventType.restrictedDiscoveryRequest; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ProSeEventType_restrictedDiscoveryReporting
@@ -329,7 +329,7 @@ const restrictedDiscoveryRequest = ProSeEventType.restrictedDiscoveryRequest sat
  * @type {number}
  */
 export
-const ProSeEventType_restrictedDiscoveryReporting = ProSeEventType.restrictedDiscoveryReporting satisfies ProSeEventType; /* LONG_NAMED_ENUMERATED_VALUE */
+const ProSeEventType_restrictedDiscoveryReporting = ProSeEventType.restrictedDiscoveryReporting; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary restrictedDiscoveryReporting
@@ -342,7 +342,7 @@ const ProSeEventType_restrictedDiscoveryReporting = ProSeEventType.restrictedDis
  * @type {number}
  */
 export
-const restrictedDiscoveryReporting = ProSeEventType.restrictedDiscoveryReporting satisfies ProSeEventType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const restrictedDiscoveryReporting = ProSeEventType.restrictedDiscoveryReporting; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_ProSeEventType: $.ASN1Decoder<ProSeEventType> = $._decodeEnumerated;

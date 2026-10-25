@@ -88,7 +88,7 @@ type Messaging_Party_Validity = _enum_for_Messaging_Party_Validity | ENUMERATED;
  * @type {number}
  */
 export
-const Messaging_Party_Validity_unknown = _enum_for_Messaging_Party_Validity.unknown satisfies Messaging_Party_Validity; /* LONG_NAMED_ENUMERATED_VALUE */
+const Messaging_Party_Validity_unknown = _enum_for_Messaging_Party_Validity.unknown; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unknown
@@ -103,7 +103,7 @@ const Messaging_Party_Validity_unknown = _enum_for_Messaging_Party_Validity.unkn
  * @type {number}
  */
 export
-const unknown = Messaging_Party_Validity_unknown satisfies Messaging_Party_Validity; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unknown = Messaging_Party_Validity_unknown; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Messaging_Party_Validity_trusted
@@ -118,7 +118,7 @@ const unknown = Messaging_Party_Validity_unknown satisfies Messaging_Party_Valid
  * @type {number}
  */
 export
-const Messaging_Party_Validity_trusted = _enum_for_Messaging_Party_Validity.trusted satisfies Messaging_Party_Validity; /* LONG_NAMED_ENUMERATED_VALUE */
+const Messaging_Party_Validity_trusted = _enum_for_Messaging_Party_Validity.trusted; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary trusted
@@ -133,7 +133,7 @@ const Messaging_Party_Validity_trusted = _enum_for_Messaging_Party_Validity.trus
  * @type {number}
  */
 export
-const trusted = Messaging_Party_Validity_trusted satisfies Messaging_Party_Validity; /* SHORT_NAMED_ENUMERATED_VALUE */
+const trusted = Messaging_Party_Validity_trusted; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Messaging_Party_Validity_untrusted
@@ -148,7 +148,7 @@ const trusted = Messaging_Party_Validity_trusted satisfies Messaging_Party_Valid
  * @type {number}
  */
 export
-const Messaging_Party_Validity_untrusted = _enum_for_Messaging_Party_Validity.untrusted satisfies Messaging_Party_Validity; /* LONG_NAMED_ENUMERATED_VALUE */
+const Messaging_Party_Validity_untrusted = _enum_for_Messaging_Party_Validity.untrusted; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary untrusted
@@ -163,7 +163,7 @@ const Messaging_Party_Validity_untrusted = _enum_for_Messaging_Party_Validity.un
  * @type {number}
  */
 export
-const untrusted = Messaging_Party_Validity_untrusted satisfies Messaging_Party_Validity; /* SHORT_NAMED_ENUMERATED_VALUE */
+const untrusted = Messaging_Party_Validity_untrusted; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_Messaging_Party_Validity: $.ASN1Decoder<Messaging_Party_Validity> = $._decodeEnumerated;
 export const _encode_Messaging_Party_Validity: $.ASN1Encoder<Messaging_Party_Validity> = $._encodeEnumerated;
 

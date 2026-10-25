@@ -37,7 +37,7 @@ export const Operation_onlyOne = 1 satisfies Operation; /* LONG_NAMED_INTEGER_VA
  * @constant
  * @type {number}
  */
-export const onlyOne = Operation_onlyOne satisfies Operation; /* SHORT_NAMED_INTEGER_VALUE */
+export const onlyOne = Operation_onlyOne; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -55,7 +55,7 @@ export const Operation_oneOrMore = 2 satisfies Operation; /* LONG_NAMED_INTEGER_
  * @constant
  * @type {number}
  */
-export const oneOrMore = Operation_oneOrMore satisfies Operation; /* SHORT_NAMED_INTEGER_VALUE */
+export const oneOrMore = Operation_oneOrMore; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -73,7 +73,7 @@ export const Operation_all = 3 satisfies Operation; /* LONG_NAMED_INTEGER_VALUE 
  * @constant
  * @type {number}
  */
-export const all = Operation_all satisfies Operation; /* SHORT_NAMED_INTEGER_VALUE */
+export const all = Operation_all; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 

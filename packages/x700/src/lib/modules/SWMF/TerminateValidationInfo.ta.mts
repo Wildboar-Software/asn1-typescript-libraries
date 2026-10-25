@@ -94,7 +94,7 @@ export const TerminateValidationInfo = _enum_for_TerminateValidationInfo;
  * @type {number}
  */
 export const TerminateValidationInfo_cancel =
-    TerminateValidationInfo.cancel satisfies TerminateValidationInfo; /* LONG_NAMED_ENUMERATED_VALUE */
+    TerminateValidationInfo.cancel; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary cancel
@@ -106,7 +106,7 @@ export const TerminateValidationInfo_cancel =
  * @type {number}
  */
 export const cancel =
-    TerminateValidationInfo.cancel satisfies TerminateValidationInfo; /* SHORT_NAMED_ENUMERATED_VALUE */
+    TerminateValidationInfo.cancel; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TerminateValidationInfo_truncate
@@ -119,7 +119,7 @@ export const cancel =
  * @type {number}
  */
 export const TerminateValidationInfo_truncate =
-    TerminateValidationInfo.truncate satisfies TerminateValidationInfo; /* LONG_NAMED_ENUMERATED_VALUE */
+    TerminateValidationInfo.truncate; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary truncate
@@ -131,7 +131,7 @@ export const TerminateValidationInfo_truncate =
  * @type {number}
  */
 export const truncate =
-    TerminateValidationInfo.truncate satisfies TerminateValidationInfo; /* SHORT_NAMED_ENUMERATED_VALUE */
+    TerminateValidationInfo.truncate; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 export function _decode_TerminateValidationInfo(el: _Element): TerminateValidationInfo {

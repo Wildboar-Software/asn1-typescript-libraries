@@ -97,7 +97,7 @@ const VoiceAttributesChangeEvent_mode = _enum_for_VoiceAttributesChangeEvent_mod
  * @type {number}
  */
 export
-const VoiceAttributesChangeEvent_mode_automatic = VoiceAttributesChangeEvent_mode.automatic satisfies VoiceAttributesChangeEvent_mode; /* LONG_NAMED_ENUMERATED_VALUE */
+const VoiceAttributesChangeEvent_mode_automatic = VoiceAttributesChangeEvent_mode.automatic; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary automatic
@@ -109,7 +109,7 @@ const VoiceAttributesChangeEvent_mode_automatic = VoiceAttributesChangeEvent_mod
  * @type {number}
  */
 export
-const automatic = VoiceAttributesChangeEvent_mode.automatic satisfies VoiceAttributesChangeEvent_mode; /* SHORT_NAMED_ENUMERATED_VALUE */
+const automatic = VoiceAttributesChangeEvent_mode.automatic; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary VoiceAttributesChangeEvent_mode_single
@@ -121,7 +121,7 @@ const automatic = VoiceAttributesChangeEvent_mode.automatic satisfies VoiceAttri
  * @type {number}
  */
 export
-const VoiceAttributesChangeEvent_mode_single = VoiceAttributesChangeEvent_mode.single satisfies VoiceAttributesChangeEvent_mode; /* LONG_NAMED_ENUMERATED_VALUE */
+const VoiceAttributesChangeEvent_mode_single = VoiceAttributesChangeEvent_mode.single; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary single
@@ -133,7 +133,7 @@ const VoiceAttributesChangeEvent_mode_single = VoiceAttributesChangeEvent_mode.s
  * @type {number}
  */
 export
-const single = VoiceAttributesChangeEvent_mode.single satisfies VoiceAttributesChangeEvent_mode; /* SHORT_NAMED_ENUMERATED_VALUE */
+const single = VoiceAttributesChangeEvent_mode.single; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary VoiceAttributesChangeEvent_mode_multiple
@@ -145,7 +145,7 @@ const single = VoiceAttributesChangeEvent_mode.single satisfies VoiceAttributesC
  * @type {number}
  */
 export
-const VoiceAttributesChangeEvent_mode_multiple = VoiceAttributesChangeEvent_mode.multiple satisfies VoiceAttributesChangeEvent_mode; /* LONG_NAMED_ENUMERATED_VALUE */
+const VoiceAttributesChangeEvent_mode_multiple = VoiceAttributesChangeEvent_mode.multiple; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary multiple
@@ -157,7 +157,7 @@ const VoiceAttributesChangeEvent_mode_multiple = VoiceAttributesChangeEvent_mode
  * @type {number}
  */
 export
-const multiple = VoiceAttributesChangeEvent_mode.multiple satisfies VoiceAttributesChangeEvent_mode; /* SHORT_NAMED_ENUMERATED_VALUE */
+const multiple = VoiceAttributesChangeEvent_mode.multiple; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 let _cached_decoder_for_VoiceAttributesChangeEvent_mode: $.ASN1Decoder<VoiceAttributesChangeEvent_mode> | null = null;
 

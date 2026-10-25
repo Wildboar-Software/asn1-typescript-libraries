@@ -225,7 +225,7 @@ const PredefinedPayloadModification = _enum_for_PredefinedPayloadModification;
  * @type {number}
  */
 export
-const PredefinedPayloadModification_pANILocationRemoval = PredefinedPayloadModification.pANILocationRemoval satisfies PredefinedPayloadModification; /* LONG_NAMED_ENUMERATED_VALUE */
+const PredefinedPayloadModification_pANILocationRemoval = PredefinedPayloadModification.pANILocationRemoval; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pANILocationRemoval
@@ -239,7 +239,7 @@ const PredefinedPayloadModification_pANILocationRemoval = PredefinedPayloadModif
  * @type {number}
  */
 export
-const pANILocationRemoval = PredefinedPayloadModification.pANILocationRemoval satisfies PredefinedPayloadModification; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pANILocationRemoval = PredefinedPayloadModification.pANILocationRemoval; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PredefinedPayloadModification_cNILocationRemoval
@@ -253,7 +253,7 @@ const pANILocationRemoval = PredefinedPayloadModification.pANILocationRemoval sa
  * @type {number}
  */
 export
-const PredefinedPayloadModification_cNILocationRemoval = PredefinedPayloadModification.cNILocationRemoval satisfies PredefinedPayloadModification; /* LONG_NAMED_ENUMERATED_VALUE */
+const PredefinedPayloadModification_cNILocationRemoval = PredefinedPayloadModification.cNILocationRemoval; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary cNILocationRemoval
@@ -267,7 +267,7 @@ const PredefinedPayloadModification_cNILocationRemoval = PredefinedPayloadModifi
  * @type {number}
  */
 export
-const cNILocationRemoval = PredefinedPayloadModification.cNILocationRemoval satisfies PredefinedPayloadModification; /* SHORT_NAMED_ENUMERATED_VALUE */
+const cNILocationRemoval = PredefinedPayloadModification.cNILocationRemoval; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PredefinedPayloadModification_sIPGeolocationInfoRemoval
@@ -280,7 +280,7 @@ const cNILocationRemoval = PredefinedPayloadModification.cNILocationRemoval sati
  * @type {number}
  */
 export
-const PredefinedPayloadModification_sIPGeolocationInfoRemoval = PredefinedPayloadModification.sIPGeolocationInfoRemoval satisfies PredefinedPayloadModification; /* LONG_NAMED_ENUMERATED_VALUE */
+const PredefinedPayloadModification_sIPGeolocationInfoRemoval = PredefinedPayloadModification.sIPGeolocationInfoRemoval; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sIPGeolocationInfoRemoval
@@ -293,7 +293,7 @@ const PredefinedPayloadModification_sIPGeolocationInfoRemoval = PredefinedPayloa
  * @type {number}
  */
 export
-const sIPGeolocationInfoRemoval = PredefinedPayloadModification.sIPGeolocationInfoRemoval satisfies PredefinedPayloadModification; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sIPGeolocationInfoRemoval = PredefinedPayloadModification.sIPGeolocationInfoRemoval; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PredefinedPayloadModification_presenceInformationLocationRemoval
@@ -307,7 +307,7 @@ const sIPGeolocationInfoRemoval = PredefinedPayloadModification.sIPGeolocationIn
  * @type {number}
  */
 export
-const PredefinedPayloadModification_presenceInformationLocationRemoval = PredefinedPayloadModification.presenceInformationLocationRemoval satisfies PredefinedPayloadModification; /* LONG_NAMED_ENUMERATED_VALUE */
+const PredefinedPayloadModification_presenceInformationLocationRemoval = PredefinedPayloadModification.presenceInformationLocationRemoval; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary presenceInformationLocationRemoval
@@ -321,7 +321,7 @@ const PredefinedPayloadModification_presenceInformationLocationRemoval = Predefi
  * @type {number}
  */
 export
-const presenceInformationLocationRemoval = PredefinedPayloadModification.presenceInformationLocationRemoval satisfies PredefinedPayloadModification; /* SHORT_NAMED_ENUMERATED_VALUE */
+const presenceInformationLocationRemoval = PredefinedPayloadModification.presenceInformationLocationRemoval; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PredefinedPayloadModification_tS33128SMSTPDURedaction
@@ -334,7 +334,7 @@ const presenceInformationLocationRemoval = PredefinedPayloadModification.presenc
  * @type {number}
  */
 export
-const PredefinedPayloadModification_tS33128SMSTPDURedaction = PredefinedPayloadModification.tS33128SMSTPDURedaction satisfies PredefinedPayloadModification; /* LONG_NAMED_ENUMERATED_VALUE */
+const PredefinedPayloadModification_tS33128SMSTPDURedaction = PredefinedPayloadModification.tS33128SMSTPDURedaction; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tS33128SMSTPDURedaction
@@ -347,7 +347,7 @@ const PredefinedPayloadModification_tS33128SMSTPDURedaction = PredefinedPayloadM
  * @type {number}
  */
 export
-const tS33128SMSTPDURedaction = PredefinedPayloadModification.tS33128SMSTPDURedaction satisfies PredefinedPayloadModification; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tS33128SMSTPDURedaction = PredefinedPayloadModification.tS33128SMSTPDURedaction; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PredefinedPayloadModification_tS33128TruncatedSMSTPDU
@@ -360,7 +360,7 @@ const tS33128SMSTPDURedaction = PredefinedPayloadModification.tS33128SMSTPDUReda
  * @type {number}
  */
 export
-const PredefinedPayloadModification_tS33128TruncatedSMSTPDU = PredefinedPayloadModification.tS33128TruncatedSMSTPDU satisfies PredefinedPayloadModification; /* LONG_NAMED_ENUMERATED_VALUE */
+const PredefinedPayloadModification_tS33128TruncatedSMSTPDU = PredefinedPayloadModification.tS33128TruncatedSMSTPDU; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tS33128TruncatedSMSTPDU
@@ -373,7 +373,7 @@ const PredefinedPayloadModification_tS33128TruncatedSMSTPDU = PredefinedPayloadM
  * @type {number}
  */
 export
-const tS33128TruncatedSMSTPDU = PredefinedPayloadModification.tS33128TruncatedSMSTPDU satisfies PredefinedPayloadModification; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tS33128TruncatedSMSTPDU = PredefinedPayloadModification.tS33128TruncatedSMSTPDU; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PredefinedPayloadModification_iMSTextContentRemoval
@@ -386,7 +386,7 @@ const tS33128TruncatedSMSTPDU = PredefinedPayloadModification.tS33128TruncatedSM
  * @type {number}
  */
 export
-const PredefinedPayloadModification_iMSTextContentRemoval = PredefinedPayloadModification.iMSTextContentRemoval satisfies PredefinedPayloadModification; /* LONG_NAMED_ENUMERATED_VALUE */
+const PredefinedPayloadModification_iMSTextContentRemoval = PredefinedPayloadModification.iMSTextContentRemoval; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary iMSTextContentRemoval
@@ -399,7 +399,7 @@ const PredefinedPayloadModification_iMSTextContentRemoval = PredefinedPayloadMod
  * @type {number}
  */
 export
-const iMSTextContentRemoval = PredefinedPayloadModification.iMSTextContentRemoval satisfies PredefinedPayloadModification; /* SHORT_NAMED_ENUMERATED_VALUE */
+const iMSTextContentRemoval = PredefinedPayloadModification.iMSTextContentRemoval; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PredefinedPayloadModification_iMSSubjectContentRemoval
@@ -412,7 +412,7 @@ const iMSTextContentRemoval = PredefinedPayloadModification.iMSTextContentRemova
  * @type {number}
  */
 export
-const PredefinedPayloadModification_iMSSubjectContentRemoval = PredefinedPayloadModification.iMSSubjectContentRemoval satisfies PredefinedPayloadModification; /* LONG_NAMED_ENUMERATED_VALUE */
+const PredefinedPayloadModification_iMSSubjectContentRemoval = PredefinedPayloadModification.iMSSubjectContentRemoval; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary iMSSubjectContentRemoval
@@ -425,7 +425,7 @@ const PredefinedPayloadModification_iMSSubjectContentRemoval = PredefinedPayload
  * @type {number}
  */
 export
-const iMSSubjectContentRemoval = PredefinedPayloadModification.iMSSubjectContentRemoval satisfies PredefinedPayloadModification; /* SHORT_NAMED_ENUMERATED_VALUE */
+const iMSSubjectContentRemoval = PredefinedPayloadModification.iMSSubjectContentRemoval; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PredefinedPayloadModification_rCSPresenceLocationRemoval
@@ -439,7 +439,7 @@ const iMSSubjectContentRemoval = PredefinedPayloadModification.iMSSubjectContent
  * @type {number}
  */
 export
-const PredefinedPayloadModification_rCSPresenceLocationRemoval = PredefinedPayloadModification.rCSPresenceLocationRemoval satisfies PredefinedPayloadModification; /* LONG_NAMED_ENUMERATED_VALUE */
+const PredefinedPayloadModification_rCSPresenceLocationRemoval = PredefinedPayloadModification.rCSPresenceLocationRemoval; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary rCSPresenceLocationRemoval
@@ -453,7 +453,7 @@ const PredefinedPayloadModification_rCSPresenceLocationRemoval = PredefinedPaylo
  * @type {number}
  */
 export
-const rCSPresenceLocationRemoval = PredefinedPayloadModification.rCSPresenceLocationRemoval satisfies PredefinedPayloadModification; /* SHORT_NAMED_ENUMERATED_VALUE */
+const rCSPresenceLocationRemoval = PredefinedPayloadModification.rCSPresenceLocationRemoval; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PredefinedPayloadModification_rCSCPIMLocationRemoval
@@ -467,7 +467,7 @@ const rCSPresenceLocationRemoval = PredefinedPayloadModification.rCSPresenceLoca
  * @type {number}
  */
 export
-const PredefinedPayloadModification_rCSCPIMLocationRemoval = PredefinedPayloadModification.rCSCPIMLocationRemoval satisfies PredefinedPayloadModification; /* LONG_NAMED_ENUMERATED_VALUE */
+const PredefinedPayloadModification_rCSCPIMLocationRemoval = PredefinedPayloadModification.rCSCPIMLocationRemoval; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary rCSCPIMLocationRemoval
@@ -481,7 +481,7 @@ const PredefinedPayloadModification_rCSCPIMLocationRemoval = PredefinedPayloadMo
  * @type {number}
  */
 export
-const rCSCPIMLocationRemoval = PredefinedPayloadModification.rCSCPIMLocationRemoval satisfies PredefinedPayloadModification; /* SHORT_NAMED_ENUMERATED_VALUE */
+const rCSCPIMLocationRemoval = PredefinedPayloadModification.rCSCPIMLocationRemoval; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PredefinedPayloadModification_rCSTextContentRemoval
@@ -493,7 +493,7 @@ const rCSCPIMLocationRemoval = PredefinedPayloadModification.rCSCPIMLocationRemo
  * @type {number}
  */
 export
-const PredefinedPayloadModification_rCSTextContentRemoval = PredefinedPayloadModification.rCSTextContentRemoval satisfies PredefinedPayloadModification; /* LONG_NAMED_ENUMERATED_VALUE */
+const PredefinedPayloadModification_rCSTextContentRemoval = PredefinedPayloadModification.rCSTextContentRemoval; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary rCSTextContentRemoval
@@ -505,7 +505,7 @@ const PredefinedPayloadModification_rCSTextContentRemoval = PredefinedPayloadMod
  * @type {number}
  */
 export
-const rCSTextContentRemoval = PredefinedPayloadModification.rCSTextContentRemoval satisfies PredefinedPayloadModification; /* SHORT_NAMED_ENUMERATED_VALUE */
+const rCSTextContentRemoval = PredefinedPayloadModification.rCSTextContentRemoval; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PredefinedPayloadModification_rCSSubjectContentRemoval
@@ -518,7 +518,7 @@ const rCSTextContentRemoval = PredefinedPayloadModification.rCSTextContentRemova
  * @type {number}
  */
 export
-const PredefinedPayloadModification_rCSSubjectContentRemoval = PredefinedPayloadModification.rCSSubjectContentRemoval satisfies PredefinedPayloadModification; /* LONG_NAMED_ENUMERATED_VALUE */
+const PredefinedPayloadModification_rCSSubjectContentRemoval = PredefinedPayloadModification.rCSSubjectContentRemoval; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary rCSSubjectContentRemoval
@@ -531,7 +531,7 @@ const PredefinedPayloadModification_rCSSubjectContentRemoval = PredefinedPayload
  * @type {number}
  */
 export
-const rCSSubjectContentRemoval = PredefinedPayloadModification.rCSSubjectContentRemoval satisfies PredefinedPayloadModification; /* SHORT_NAMED_ENUMERATED_VALUE */
+const rCSSubjectContentRemoval = PredefinedPayloadModification.rCSSubjectContentRemoval; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PredefinedPayloadModification_rCSGeolocationPUSHContentRemoval
@@ -544,7 +544,7 @@ const rCSSubjectContentRemoval = PredefinedPayloadModification.rCSSubjectContent
  * @type {number}
  */
 export
-const PredefinedPayloadModification_rCSGeolocationPUSHContentRemoval = PredefinedPayloadModification.rCSGeolocationPUSHContentRemoval satisfies PredefinedPayloadModification; /* LONG_NAMED_ENUMERATED_VALUE */
+const PredefinedPayloadModification_rCSGeolocationPUSHContentRemoval = PredefinedPayloadModification.rCSGeolocationPUSHContentRemoval; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary rCSGeolocationPUSHContentRemoval
@@ -557,7 +557,7 @@ const PredefinedPayloadModification_rCSGeolocationPUSHContentRemoval = Predefine
  * @type {number}
  */
 export
-const rCSGeolocationPUSHContentRemoval = PredefinedPayloadModification.rCSGeolocationPUSHContentRemoval satisfies PredefinedPayloadModification; /* SHORT_NAMED_ENUMERATED_VALUE */
+const rCSGeolocationPUSHContentRemoval = PredefinedPayloadModification.rCSGeolocationPUSHContentRemoval; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PredefinedPayloadModification_rCSFileURLContentRemoval
@@ -565,7 +565,7 @@ const rCSGeolocationPUSHContentRemoval = PredefinedPayloadModification.rCSGeoloc
  * @type {number}
  */
 export
-const PredefinedPayloadModification_rCSFileURLContentRemoval = PredefinedPayloadModification.rCSFileURLContentRemoval satisfies PredefinedPayloadModification; /* LONG_NAMED_ENUMERATED_VALUE */
+const PredefinedPayloadModification_rCSFileURLContentRemoval = PredefinedPayloadModification.rCSFileURLContentRemoval; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary rCSFileURLContentRemoval
@@ -573,7 +573,7 @@ const PredefinedPayloadModification_rCSFileURLContentRemoval = PredefinedPayload
  * @type {number}
  */
 export
-const rCSFileURLContentRemoval = PredefinedPayloadModification.rCSFileURLContentRemoval satisfies PredefinedPayloadModification; /* SHORT_NAMED_ENUMERATED_VALUE */
+const rCSFileURLContentRemoval = PredefinedPayloadModification.rCSFileURLContentRemoval; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PredefinedPayloadModification_threeGPP2SMSUserDataRedaction
@@ -581,7 +581,7 @@ const rCSFileURLContentRemoval = PredefinedPayloadModification.rCSFileURLContent
  * @type {number}
  */
 export
-const PredefinedPayloadModification_threeGPP2SMSUserDataRedaction = PredefinedPayloadModification.threeGPP2SMSUserDataRedaction satisfies PredefinedPayloadModification; /* LONG_NAMED_ENUMERATED_VALUE */
+const PredefinedPayloadModification_threeGPP2SMSUserDataRedaction = PredefinedPayloadModification.threeGPP2SMSUserDataRedaction; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary threeGPP2SMSUserDataRedaction
@@ -589,7 +589,7 @@ const PredefinedPayloadModification_threeGPP2SMSUserDataRedaction = PredefinedPa
  * @type {number}
  */
 export
-const threeGPP2SMSUserDataRedaction = PredefinedPayloadModification.threeGPP2SMSUserDataRedaction satisfies PredefinedPayloadModification; /* SHORT_NAMED_ENUMERATED_VALUE */
+const threeGPP2SMSUserDataRedaction = PredefinedPayloadModification.threeGPP2SMSUserDataRedaction; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_PredefinedPayloadModification: $.ASN1Decoder<PredefinedPayloadModification> = $._decodeEnumerated;
 export const _encode_PredefinedPayloadModification: $.ASN1Encoder<PredefinedPayloadModification> = $._encodeEnumerated;
 

@@ -56,7 +56,7 @@ const RejectPDU_rejectReason_cancel_requestPDU_other = 0 satisfies RejectPDU_rej
  * @type {number}
  */
 export
-const other = RejectPDU_rejectReason_cancel_requestPDU_other satisfies RejectPDU_rejectReason_cancel_requestPDU; /* SHORT_NAMED_INTEGER_VALUE */
+const other = RejectPDU_rejectReason_cancel_requestPDU_other; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RejectPDU_rejectReason_cancel_requestPDU_invalid_invokeID
@@ -78,7 +78,7 @@ const RejectPDU_rejectReason_cancel_requestPDU_invalid_invokeID = 1 satisfies Re
  * @type {number}
  */
 export
-const invalid_invokeID = RejectPDU_rejectReason_cancel_requestPDU_invalid_invokeID satisfies RejectPDU_rejectReason_cancel_requestPDU; /* SHORT_NAMED_INTEGER_VALUE */
+const invalid_invokeID = RejectPDU_rejectReason_cancel_requestPDU_invalid_invokeID; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_RejectPDU_rejectReason_cancel_requestPDU = $._decodeInteger;
 export const _encode_RejectPDU_rejectReason_cancel_requestPDU = $._encodeInteger;
 

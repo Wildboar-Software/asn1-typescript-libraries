@@ -61,7 +61,7 @@ const Running_Mode_free_run = 0 satisfies Running_Mode; /* LONG_NAMED_INTEGER_VA
  * @type {number}
  */
 export
-const free_run = Running_Mode_free_run satisfies Running_Mode; /* SHORT_NAMED_INTEGER_VALUE */
+const free_run = Running_Mode_free_run; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Running_Mode_cycle_limited
@@ -87,7 +87,7 @@ const Running_Mode_cycle_limited = 1 satisfies Running_Mode; /* LONG_NAMED_INTEG
  * @type {number}
  */
 export
-const cycle_limited = Running_Mode_cycle_limited satisfies Running_Mode; /* SHORT_NAMED_INTEGER_VALUE */
+const cycle_limited = Running_Mode_cycle_limited; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Running_Mode_step_limited
@@ -113,7 +113,7 @@ const Running_Mode_step_limited = 2 satisfies Running_Mode; /* LONG_NAMED_INTEGE
  * @type {number}
  */
 export
-const step_limited = Running_Mode_step_limited satisfies Running_Mode; /* SHORT_NAMED_INTEGER_VALUE */
+const step_limited = Running_Mode_step_limited; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_Running_Mode = $._decodeInteger;
 export const _encode_Running_Mode = $._encodeInteger;
 

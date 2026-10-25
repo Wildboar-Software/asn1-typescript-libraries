@@ -86,7 +86,7 @@ export const DesignatedISChange = _enum_for_DesignatedISChange;
  * @type {number}
  */
 export const DesignatedISChange_resigned =
-  DesignatedISChange.resigned satisfies DesignatedISChange; /* LONG_NAMED_ENUMERATED_VALUE */
+  DesignatedISChange.resigned; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary resigned
@@ -94,7 +94,7 @@ export const DesignatedISChange_resigned =
  * @type {number}
  */
 export const resigned =
-  DesignatedISChange.resigned satisfies DesignatedISChange; /* SHORT_NAMED_ENUMERATED_VALUE */
+  DesignatedISChange.resigned; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary DesignatedISChange_elected
@@ -108,7 +108,7 @@ export const resigned =
  * @type {number}
  */
 export const DesignatedISChange_elected =
-  DesignatedISChange.elected satisfies DesignatedISChange; /* LONG_NAMED_ENUMERATED_VALUE */
+  DesignatedISChange.elected; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary elected
@@ -116,7 +116,7 @@ export const DesignatedISChange_elected =
  * @type {number}
  */
 export const elected =
-  DesignatedISChange.elected satisfies DesignatedISChange; /* SHORT_NAMED_ENUMERATED_VALUE */
+  DesignatedISChange.elected; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 export function _decode_DesignatedISChange(el: _Element): DesignatedISChange {

@@ -51,7 +51,7 @@ const SlduStatusNotification_produceNotification = 0 satisfies SlduStatusNotific
  * @type {number}
  */
 export
-const produceNotification = SlduStatusNotification_produceNotification satisfies SlduStatusNotification; /* SHORT_NAMED_INTEGER_VALUE */
+const produceNotification = SlduStatusNotification_produceNotification; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SlduStatusNotification_doNotProduceNotification
@@ -77,7 +77,7 @@ const SlduStatusNotification_doNotProduceNotification = 1 satisfies SlduStatusNo
  * @type {number}
  */
 export
-const doNotProduceNotification = SlduStatusNotification_doNotProduceNotification satisfies SlduStatusNotification; /* SHORT_NAMED_INTEGER_VALUE */
+const doNotProduceNotification = SlduStatusNotification_doNotProduceNotification; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_SlduStatusNotification: $.ASN1Decoder<SlduStatusNotification> = $._decodeInteger;
 export const _encode_SlduStatusNotification: $.ASN1Encoder<SlduStatusNotification> = $._encodeInteger;
 

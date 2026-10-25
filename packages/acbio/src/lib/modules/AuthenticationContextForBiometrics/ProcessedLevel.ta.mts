@@ -50,7 +50,7 @@ export type ProcessedLevel = _enum_for_ProcessedLevel | ENUMERATED;
  * @constant
  * @type {number}
  */
-export const ProcessedLevel_raw_data = _enum_for_ProcessedLevel.raw_data satisfies ProcessedLevel; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ProcessedLevel_raw_data = _enum_for_ProcessedLevel.raw_data; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -58,7 +58,7 @@ export const ProcessedLevel_raw_data = _enum_for_ProcessedLevel.raw_data satisfi
  * @constant
  * @type {number}
  */
-export const raw_data = ProcessedLevel_raw_data satisfies ProcessedLevel; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const raw_data = ProcessedLevel_raw_data; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -66,7 +66,7 @@ export const raw_data = ProcessedLevel_raw_data satisfies ProcessedLevel; /* SHO
  * @constant
  * @type {number}
  */
-export const ProcessedLevel_intermediate_data = _enum_for_ProcessedLevel.intermediate_data satisfies ProcessedLevel; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ProcessedLevel_intermediate_data = _enum_for_ProcessedLevel.intermediate_data; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -74,7 +74,7 @@ export const ProcessedLevel_intermediate_data = _enum_for_ProcessedLevel.interme
  * @constant
  * @type {number}
  */
-export const intermediate_data = ProcessedLevel_intermediate_data satisfies ProcessedLevel; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const intermediate_data = ProcessedLevel_intermediate_data; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -82,7 +82,7 @@ export const intermediate_data = ProcessedLevel_intermediate_data satisfies Proc
  * @constant
  * @type {number}
  */
-export const ProcessedLevel_processed_data = _enum_for_ProcessedLevel.processed_data satisfies ProcessedLevel; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ProcessedLevel_processed_data = _enum_for_ProcessedLevel.processed_data; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -90,7 +90,7 @@ export const ProcessedLevel_processed_data = _enum_for_ProcessedLevel.processed_
  * @constant
  * @type {number}
  */
-export const processed_data = ProcessedLevel_processed_data satisfies ProcessedLevel; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const processed_data = ProcessedLevel_processed_data; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -98,7 +98,7 @@ export const processed_data = ProcessedLevel_processed_data satisfies ProcessedL
  * @constant
  * @type {number}
  */
-export const ProcessedLevel_comparison_score = _enum_for_ProcessedLevel.comparison_score satisfies ProcessedLevel; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ProcessedLevel_comparison_score = _enum_for_ProcessedLevel.comparison_score; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -106,7 +106,7 @@ export const ProcessedLevel_comparison_score = _enum_for_ProcessedLevel.comparis
  * @constant
  * @type {number}
  */
-export const comparison_score = ProcessedLevel_comparison_score satisfies ProcessedLevel; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const comparison_score = ProcessedLevel_comparison_score; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -114,7 +114,7 @@ export const comparison_score = ProcessedLevel_comparison_score satisfies Proces
  * @constant
  * @type {number}
  */
-export const ProcessedLevel_comparison_decision = _enum_for_ProcessedLevel.comparison_decision satisfies ProcessedLevel; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ProcessedLevel_comparison_decision = _enum_for_ProcessedLevel.comparison_decision; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -122,7 +122,7 @@ export const ProcessedLevel_comparison_decision = _enum_for_ProcessedLevel.compa
  * @constant
  * @type {number}
  */
-export const comparison_decision = ProcessedLevel_comparison_decision satisfies ProcessedLevel; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const comparison_decision = ProcessedLevel_comparison_decision; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 

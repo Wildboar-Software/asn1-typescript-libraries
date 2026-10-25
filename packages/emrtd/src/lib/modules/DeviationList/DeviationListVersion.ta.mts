@@ -39,7 +39,7 @@ const DeviationListVersion_v0 = 0 satisfies DeviationListVersion; /* LONG_NAMED_
  * @type {number}
  */
 export
-const v0 = DeviationListVersion_v0 satisfies DeviationListVersion; /* SHORT_NAMED_INTEGER_VALUE */
+const v0 = DeviationListVersion_v0; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_DeviationListVersion = $._decodeInteger;
 export const _encode_DeviationListVersion = $._encodeInteger;
 

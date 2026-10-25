@@ -53,7 +53,7 @@ export const MaxCounterSize_unlimited = 0 satisfies MaxCounterSize; /* LONG_NAME
  * @constant
  * @type {number}
  */
-export const unlimited = MaxCounterSize_unlimited satisfies MaxCounterSize; /* SHORT_NAMED_INTEGER_VALUE */
+export const unlimited = MaxCounterSize_unlimited; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_MaxCounterSize = $._decodeInteger;

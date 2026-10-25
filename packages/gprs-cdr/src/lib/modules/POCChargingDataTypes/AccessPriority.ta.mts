@@ -92,7 +92,7 @@ const AccessPriority = _enum_for_AccessPriority;
  * @type {number}
  */
 export
-const AccessPriority_pre_emptive = AccessPriority.pre_emptive satisfies AccessPriority; /* LONG_NAMED_ENUMERATED_VALUE */
+const AccessPriority_pre_emptive = AccessPriority.pre_emptive; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pre_emptive
@@ -100,7 +100,7 @@ const AccessPriority_pre_emptive = AccessPriority.pre_emptive satisfies AccessPr
  * @type {number}
  */
 export
-const pre_emptive = AccessPriority.pre_emptive satisfies AccessPriority; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pre_emptive = AccessPriority.pre_emptive; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AccessPriority_high
@@ -108,7 +108,7 @@ const pre_emptive = AccessPriority.pre_emptive satisfies AccessPriority; /* SHOR
  * @type {number}
  */
 export
-const AccessPriority_high = AccessPriority.high satisfies AccessPriority; /* LONG_NAMED_ENUMERATED_VALUE */
+const AccessPriority_high = AccessPriority.high; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary high
@@ -116,7 +116,7 @@ const AccessPriority_high = AccessPriority.high satisfies AccessPriority; /* LON
  * @type {number}
  */
 export
-const high = AccessPriority.high satisfies AccessPriority; /* SHORT_NAMED_ENUMERATED_VALUE */
+const high = AccessPriority.high; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AccessPriority_normal
@@ -124,7 +124,7 @@ const high = AccessPriority.high satisfies AccessPriority; /* SHORT_NAMED_ENUMER
  * @type {number}
  */
 export
-const AccessPriority_normal = AccessPriority.normal satisfies AccessPriority; /* LONG_NAMED_ENUMERATED_VALUE */
+const AccessPriority_normal = AccessPriority.normal; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary normal
@@ -132,7 +132,7 @@ const AccessPriority_normal = AccessPriority.normal satisfies AccessPriority; /*
  * @type {number}
  */
 export
-const normal = AccessPriority.normal satisfies AccessPriority; /* SHORT_NAMED_ENUMERATED_VALUE */
+const normal = AccessPriority.normal; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AccessPriority_low
@@ -140,7 +140,7 @@ const normal = AccessPriority.normal satisfies AccessPriority; /* SHORT_NAMED_EN
  * @type {number}
  */
 export
-const AccessPriority_low = AccessPriority.low satisfies AccessPriority; /* LONG_NAMED_ENUMERATED_VALUE */
+const AccessPriority_low = AccessPriority.low; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary low
@@ -148,7 +148,7 @@ const AccessPriority_low = AccessPriority.low satisfies AccessPriority; /* LONG_
  * @type {number}
  */
 export
-const low = AccessPriority.low satisfies AccessPriority; /* SHORT_NAMED_ENUMERATED_VALUE */
+const low = AccessPriority.low; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_AccessPriority: $.ASN1Decoder<AccessPriority> = $._decodeEnumerated;

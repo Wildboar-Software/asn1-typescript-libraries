@@ -179,7 +179,7 @@ const ReportInterval = _enum_for_ReportInterval;
  * @type {number}
  */
 export
-const ReportInterval_umts250ms = ReportInterval.umts250ms satisfies ReportInterval; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReportInterval_umts250ms = ReportInterval.umts250ms; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary umts250ms
@@ -187,7 +187,7 @@ const ReportInterval_umts250ms = ReportInterval.umts250ms satisfies ReportInterv
  * @type {number}
  */
 export
-const umts250ms = ReportInterval.umts250ms satisfies ReportInterval; /* SHORT_NAMED_ENUMERATED_VALUE */
+const umts250ms = ReportInterval.umts250ms; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReportInterval_umts500ms
@@ -195,7 +195,7 @@ const umts250ms = ReportInterval.umts250ms satisfies ReportInterval; /* SHORT_NA
  * @type {number}
  */
 export
-const ReportInterval_umts500ms = ReportInterval.umts500ms satisfies ReportInterval; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReportInterval_umts500ms = ReportInterval.umts500ms; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary umts500ms
@@ -203,7 +203,7 @@ const ReportInterval_umts500ms = ReportInterval.umts500ms satisfies ReportInterv
  * @type {number}
  */
 export
-const umts500ms = ReportInterval.umts500ms satisfies ReportInterval; /* SHORT_NAMED_ENUMERATED_VALUE */
+const umts500ms = ReportInterval.umts500ms; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReportInterval_umts1000ms
@@ -211,7 +211,7 @@ const umts500ms = ReportInterval.umts500ms satisfies ReportInterval; /* SHORT_NA
  * @type {number}
  */
 export
-const ReportInterval_umts1000ms = ReportInterval.umts1000ms satisfies ReportInterval; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReportInterval_umts1000ms = ReportInterval.umts1000ms; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary umts1000ms
@@ -219,7 +219,7 @@ const ReportInterval_umts1000ms = ReportInterval.umts1000ms satisfies ReportInte
  * @type {number}
  */
 export
-const umts1000ms = ReportInterval.umts1000ms satisfies ReportInterval; /* SHORT_NAMED_ENUMERATED_VALUE */
+const umts1000ms = ReportInterval.umts1000ms; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReportInterval_umts2000ms
@@ -227,7 +227,7 @@ const umts1000ms = ReportInterval.umts1000ms satisfies ReportInterval; /* SHORT_
  * @type {number}
  */
 export
-const ReportInterval_umts2000ms = ReportInterval.umts2000ms satisfies ReportInterval; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReportInterval_umts2000ms = ReportInterval.umts2000ms; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary umts2000ms
@@ -235,7 +235,7 @@ const ReportInterval_umts2000ms = ReportInterval.umts2000ms satisfies ReportInte
  * @type {number}
  */
 export
-const umts2000ms = ReportInterval.umts2000ms satisfies ReportInterval; /* SHORT_NAMED_ENUMERATED_VALUE */
+const umts2000ms = ReportInterval.umts2000ms; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReportInterval_umts3000ms
@@ -243,7 +243,7 @@ const umts2000ms = ReportInterval.umts2000ms satisfies ReportInterval; /* SHORT_
  * @type {number}
  */
 export
-const ReportInterval_umts3000ms = ReportInterval.umts3000ms satisfies ReportInterval; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReportInterval_umts3000ms = ReportInterval.umts3000ms; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary umts3000ms
@@ -251,7 +251,7 @@ const ReportInterval_umts3000ms = ReportInterval.umts3000ms satisfies ReportInte
  * @type {number}
  */
 export
-const umts3000ms = ReportInterval.umts3000ms satisfies ReportInterval; /* SHORT_NAMED_ENUMERATED_VALUE */
+const umts3000ms = ReportInterval.umts3000ms; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReportInterval_umts4000ms
@@ -259,7 +259,7 @@ const umts3000ms = ReportInterval.umts3000ms satisfies ReportInterval; /* SHORT_
  * @type {number}
  */
 export
-const ReportInterval_umts4000ms = ReportInterval.umts4000ms satisfies ReportInterval; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReportInterval_umts4000ms = ReportInterval.umts4000ms; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary umts4000ms
@@ -267,7 +267,7 @@ const ReportInterval_umts4000ms = ReportInterval.umts4000ms satisfies ReportInte
  * @type {number}
  */
 export
-const umts4000ms = ReportInterval.umts4000ms satisfies ReportInterval; /* SHORT_NAMED_ENUMERATED_VALUE */
+const umts4000ms = ReportInterval.umts4000ms; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReportInterval_umts6000ms
@@ -275,7 +275,7 @@ const umts4000ms = ReportInterval.umts4000ms satisfies ReportInterval; /* SHORT_
  * @type {number}
  */
 export
-const ReportInterval_umts6000ms = ReportInterval.umts6000ms satisfies ReportInterval; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReportInterval_umts6000ms = ReportInterval.umts6000ms; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary umts6000ms
@@ -283,7 +283,7 @@ const ReportInterval_umts6000ms = ReportInterval.umts6000ms satisfies ReportInte
  * @type {number}
  */
 export
-const umts6000ms = ReportInterval.umts6000ms satisfies ReportInterval; /* SHORT_NAMED_ENUMERATED_VALUE */
+const umts6000ms = ReportInterval.umts6000ms; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReportInterval_umts8000ms
@@ -291,7 +291,7 @@ const umts6000ms = ReportInterval.umts6000ms satisfies ReportInterval; /* SHORT_
  * @type {number}
  */
 export
-const ReportInterval_umts8000ms = ReportInterval.umts8000ms satisfies ReportInterval; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReportInterval_umts8000ms = ReportInterval.umts8000ms; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary umts8000ms
@@ -299,7 +299,7 @@ const ReportInterval_umts8000ms = ReportInterval.umts8000ms satisfies ReportInte
  * @type {number}
  */
 export
-const umts8000ms = ReportInterval.umts8000ms satisfies ReportInterval; /* SHORT_NAMED_ENUMERATED_VALUE */
+const umts8000ms = ReportInterval.umts8000ms; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReportInterval_umts12000ms
@@ -307,7 +307,7 @@ const umts8000ms = ReportInterval.umts8000ms satisfies ReportInterval; /* SHORT_
  * @type {number}
  */
 export
-const ReportInterval_umts12000ms = ReportInterval.umts12000ms satisfies ReportInterval; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReportInterval_umts12000ms = ReportInterval.umts12000ms; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary umts12000ms
@@ -315,7 +315,7 @@ const ReportInterval_umts12000ms = ReportInterval.umts12000ms satisfies ReportIn
  * @type {number}
  */
 export
-const umts12000ms = ReportInterval.umts12000ms satisfies ReportInterval; /* SHORT_NAMED_ENUMERATED_VALUE */
+const umts12000ms = ReportInterval.umts12000ms; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReportInterval_umts16000ms
@@ -323,7 +323,7 @@ const umts12000ms = ReportInterval.umts12000ms satisfies ReportInterval; /* SHOR
  * @type {number}
  */
 export
-const ReportInterval_umts16000ms = ReportInterval.umts16000ms satisfies ReportInterval; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReportInterval_umts16000ms = ReportInterval.umts16000ms; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary umts16000ms
@@ -331,7 +331,7 @@ const ReportInterval_umts16000ms = ReportInterval.umts16000ms satisfies ReportIn
  * @type {number}
  */
 export
-const umts16000ms = ReportInterval.umts16000ms satisfies ReportInterval; /* SHORT_NAMED_ENUMERATED_VALUE */
+const umts16000ms = ReportInterval.umts16000ms; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReportInterval_umts20000ms
@@ -339,7 +339,7 @@ const umts16000ms = ReportInterval.umts16000ms satisfies ReportInterval; /* SHOR
  * @type {number}
  */
 export
-const ReportInterval_umts20000ms = ReportInterval.umts20000ms satisfies ReportInterval; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReportInterval_umts20000ms = ReportInterval.umts20000ms; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary umts20000ms
@@ -347,7 +347,7 @@ const ReportInterval_umts20000ms = ReportInterval.umts20000ms satisfies ReportIn
  * @type {number}
  */
 export
-const umts20000ms = ReportInterval.umts20000ms satisfies ReportInterval; /* SHORT_NAMED_ENUMERATED_VALUE */
+const umts20000ms = ReportInterval.umts20000ms; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReportInterval_umts24000ms
@@ -355,7 +355,7 @@ const umts20000ms = ReportInterval.umts20000ms satisfies ReportInterval; /* SHOR
  * @type {number}
  */
 export
-const ReportInterval_umts24000ms = ReportInterval.umts24000ms satisfies ReportInterval; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReportInterval_umts24000ms = ReportInterval.umts24000ms; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary umts24000ms
@@ -363,7 +363,7 @@ const ReportInterval_umts24000ms = ReportInterval.umts24000ms satisfies ReportIn
  * @type {number}
  */
 export
-const umts24000ms = ReportInterval.umts24000ms satisfies ReportInterval; /* SHORT_NAMED_ENUMERATED_VALUE */
+const umts24000ms = ReportInterval.umts24000ms; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReportInterval_umts28000ms
@@ -371,7 +371,7 @@ const umts24000ms = ReportInterval.umts24000ms satisfies ReportInterval; /* SHOR
  * @type {number}
  */
 export
-const ReportInterval_umts28000ms = ReportInterval.umts28000ms satisfies ReportInterval; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReportInterval_umts28000ms = ReportInterval.umts28000ms; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary umts28000ms
@@ -379,7 +379,7 @@ const ReportInterval_umts28000ms = ReportInterval.umts28000ms satisfies ReportIn
  * @type {number}
  */
 export
-const umts28000ms = ReportInterval.umts28000ms satisfies ReportInterval; /* SHORT_NAMED_ENUMERATED_VALUE */
+const umts28000ms = ReportInterval.umts28000ms; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReportInterval_umts32000ms
@@ -387,7 +387,7 @@ const umts28000ms = ReportInterval.umts28000ms satisfies ReportInterval; /* SHOR
  * @type {number}
  */
 export
-const ReportInterval_umts32000ms = ReportInterval.umts32000ms satisfies ReportInterval; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReportInterval_umts32000ms = ReportInterval.umts32000ms; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary umts32000ms
@@ -395,7 +395,7 @@ const ReportInterval_umts32000ms = ReportInterval.umts32000ms satisfies ReportIn
  * @type {number}
  */
 export
-const umts32000ms = ReportInterval.umts32000ms satisfies ReportInterval; /* SHORT_NAMED_ENUMERATED_VALUE */
+const umts32000ms = ReportInterval.umts32000ms; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReportInterval_umts64000ms
@@ -403,7 +403,7 @@ const umts32000ms = ReportInterval.umts32000ms satisfies ReportInterval; /* SHOR
  * @type {number}
  */
 export
-const ReportInterval_umts64000ms = ReportInterval.umts64000ms satisfies ReportInterval; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReportInterval_umts64000ms = ReportInterval.umts64000ms; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary umts64000ms
@@ -411,7 +411,7 @@ const ReportInterval_umts64000ms = ReportInterval.umts64000ms satisfies ReportIn
  * @type {number}
  */
 export
-const umts64000ms = ReportInterval.umts64000ms satisfies ReportInterval; /* SHORT_NAMED_ENUMERATED_VALUE */
+const umts64000ms = ReportInterval.umts64000ms; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReportInterval_lte120ms
@@ -419,7 +419,7 @@ const umts64000ms = ReportInterval.umts64000ms satisfies ReportInterval; /* SHOR
  * @type {number}
  */
 export
-const ReportInterval_lte120ms = ReportInterval.lte120ms satisfies ReportInterval; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReportInterval_lte120ms = ReportInterval.lte120ms; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary lte120ms
@@ -427,7 +427,7 @@ const ReportInterval_lte120ms = ReportInterval.lte120ms satisfies ReportInterval
  * @type {number}
  */
 export
-const lte120ms = ReportInterval.lte120ms satisfies ReportInterval; /* SHORT_NAMED_ENUMERATED_VALUE */
+const lte120ms = ReportInterval.lte120ms; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReportInterval_lte240ms
@@ -435,7 +435,7 @@ const lte120ms = ReportInterval.lte120ms satisfies ReportInterval; /* SHORT_NAME
  * @type {number}
  */
 export
-const ReportInterval_lte240ms = ReportInterval.lte240ms satisfies ReportInterval; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReportInterval_lte240ms = ReportInterval.lte240ms; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary lte240ms
@@ -443,7 +443,7 @@ const ReportInterval_lte240ms = ReportInterval.lte240ms satisfies ReportInterval
  * @type {number}
  */
 export
-const lte240ms = ReportInterval.lte240ms satisfies ReportInterval; /* SHORT_NAMED_ENUMERATED_VALUE */
+const lte240ms = ReportInterval.lte240ms; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReportInterval_lte480ms
@@ -451,7 +451,7 @@ const lte240ms = ReportInterval.lte240ms satisfies ReportInterval; /* SHORT_NAME
  * @type {number}
  */
 export
-const ReportInterval_lte480ms = ReportInterval.lte480ms satisfies ReportInterval; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReportInterval_lte480ms = ReportInterval.lte480ms; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary lte480ms
@@ -459,7 +459,7 @@ const ReportInterval_lte480ms = ReportInterval.lte480ms satisfies ReportInterval
  * @type {number}
  */
 export
-const lte480ms = ReportInterval.lte480ms satisfies ReportInterval; /* SHORT_NAMED_ENUMERATED_VALUE */
+const lte480ms = ReportInterval.lte480ms; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReportInterval_lte640ms
@@ -467,7 +467,7 @@ const lte480ms = ReportInterval.lte480ms satisfies ReportInterval; /* SHORT_NAME
  * @type {number}
  */
 export
-const ReportInterval_lte640ms = ReportInterval.lte640ms satisfies ReportInterval; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReportInterval_lte640ms = ReportInterval.lte640ms; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary lte640ms
@@ -475,7 +475,7 @@ const ReportInterval_lte640ms = ReportInterval.lte640ms satisfies ReportInterval
  * @type {number}
  */
 export
-const lte640ms = ReportInterval.lte640ms satisfies ReportInterval; /* SHORT_NAMED_ENUMERATED_VALUE */
+const lte640ms = ReportInterval.lte640ms; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReportInterval_lte1024ms
@@ -483,7 +483,7 @@ const lte640ms = ReportInterval.lte640ms satisfies ReportInterval; /* SHORT_NAME
  * @type {number}
  */
 export
-const ReportInterval_lte1024ms = ReportInterval.lte1024ms satisfies ReportInterval; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReportInterval_lte1024ms = ReportInterval.lte1024ms; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary lte1024ms
@@ -491,7 +491,7 @@ const ReportInterval_lte1024ms = ReportInterval.lte1024ms satisfies ReportInterv
  * @type {number}
  */
 export
-const lte1024ms = ReportInterval.lte1024ms satisfies ReportInterval; /* SHORT_NAMED_ENUMERATED_VALUE */
+const lte1024ms = ReportInterval.lte1024ms; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReportInterval_lte2048ms
@@ -499,7 +499,7 @@ const lte1024ms = ReportInterval.lte1024ms satisfies ReportInterval; /* SHORT_NA
  * @type {number}
  */
 export
-const ReportInterval_lte2048ms = ReportInterval.lte2048ms satisfies ReportInterval; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReportInterval_lte2048ms = ReportInterval.lte2048ms; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary lte2048ms
@@ -507,7 +507,7 @@ const ReportInterval_lte2048ms = ReportInterval.lte2048ms satisfies ReportInterv
  * @type {number}
  */
 export
-const lte2048ms = ReportInterval.lte2048ms satisfies ReportInterval; /* SHORT_NAMED_ENUMERATED_VALUE */
+const lte2048ms = ReportInterval.lte2048ms; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReportInterval_lte5120ms
@@ -515,7 +515,7 @@ const lte2048ms = ReportInterval.lte2048ms satisfies ReportInterval; /* SHORT_NA
  * @type {number}
  */
 export
-const ReportInterval_lte5120ms = ReportInterval.lte5120ms satisfies ReportInterval; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReportInterval_lte5120ms = ReportInterval.lte5120ms; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary lte5120ms
@@ -523,7 +523,7 @@ const ReportInterval_lte5120ms = ReportInterval.lte5120ms satisfies ReportInterv
  * @type {number}
  */
 export
-const lte5120ms = ReportInterval.lte5120ms satisfies ReportInterval; /* SHORT_NAMED_ENUMERATED_VALUE */
+const lte5120ms = ReportInterval.lte5120ms; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReportInterval_lte10240ms
@@ -531,7 +531,7 @@ const lte5120ms = ReportInterval.lte5120ms satisfies ReportInterval; /* SHORT_NA
  * @type {number}
  */
 export
-const ReportInterval_lte10240ms = ReportInterval.lte10240ms satisfies ReportInterval; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReportInterval_lte10240ms = ReportInterval.lte10240ms; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary lte10240ms
@@ -539,7 +539,7 @@ const ReportInterval_lte10240ms = ReportInterval.lte10240ms satisfies ReportInte
  * @type {number}
  */
 export
-const lte10240ms = ReportInterval.lte10240ms satisfies ReportInterval; /* SHORT_NAMED_ENUMERATED_VALUE */
+const lte10240ms = ReportInterval.lte10240ms; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReportInterval_lte1min
@@ -547,7 +547,7 @@ const lte10240ms = ReportInterval.lte10240ms satisfies ReportInterval; /* SHORT_
  * @type {number}
  */
 export
-const ReportInterval_lte1min = ReportInterval.lte1min satisfies ReportInterval; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReportInterval_lte1min = ReportInterval.lte1min; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary lte1min
@@ -555,7 +555,7 @@ const ReportInterval_lte1min = ReportInterval.lte1min satisfies ReportInterval; 
  * @type {number}
  */
 export
-const lte1min = ReportInterval.lte1min satisfies ReportInterval; /* SHORT_NAMED_ENUMERATED_VALUE */
+const lte1min = ReportInterval.lte1min; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReportInterval_lte6min
@@ -563,7 +563,7 @@ const lte1min = ReportInterval.lte1min satisfies ReportInterval; /* SHORT_NAMED_
  * @type {number}
  */
 export
-const ReportInterval_lte6min = ReportInterval.lte6min satisfies ReportInterval; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReportInterval_lte6min = ReportInterval.lte6min; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary lte6min
@@ -571,7 +571,7 @@ const ReportInterval_lte6min = ReportInterval.lte6min satisfies ReportInterval; 
  * @type {number}
  */
 export
-const lte6min = ReportInterval.lte6min satisfies ReportInterval; /* SHORT_NAMED_ENUMERATED_VALUE */
+const lte6min = ReportInterval.lte6min; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReportInterval_lte12min
@@ -579,7 +579,7 @@ const lte6min = ReportInterval.lte6min satisfies ReportInterval; /* SHORT_NAMED_
  * @type {number}
  */
 export
-const ReportInterval_lte12min = ReportInterval.lte12min satisfies ReportInterval; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReportInterval_lte12min = ReportInterval.lte12min; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary lte12min
@@ -587,7 +587,7 @@ const ReportInterval_lte12min = ReportInterval.lte12min satisfies ReportInterval
  * @type {number}
  */
 export
-const lte12min = ReportInterval.lte12min satisfies ReportInterval; /* SHORT_NAMED_ENUMERATED_VALUE */
+const lte12min = ReportInterval.lte12min; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReportInterval_lte30min
@@ -595,7 +595,7 @@ const lte12min = ReportInterval.lte12min satisfies ReportInterval; /* SHORT_NAME
  * @type {number}
  */
 export
-const ReportInterval_lte30min = ReportInterval.lte30min satisfies ReportInterval; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReportInterval_lte30min = ReportInterval.lte30min; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary lte30min
@@ -603,7 +603,7 @@ const ReportInterval_lte30min = ReportInterval.lte30min satisfies ReportInterval
  * @type {number}
  */
 export
-const lte30min = ReportInterval.lte30min satisfies ReportInterval; /* SHORT_NAMED_ENUMERATED_VALUE */
+const lte30min = ReportInterval.lte30min; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReportInterval_lte60min
@@ -611,7 +611,7 @@ const lte30min = ReportInterval.lte30min satisfies ReportInterval; /* SHORT_NAME
  * @type {number}
  */
 export
-const ReportInterval_lte60min = ReportInterval.lte60min satisfies ReportInterval; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReportInterval_lte60min = ReportInterval.lte60min; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary lte60min
@@ -619,7 +619,7 @@ const ReportInterval_lte60min = ReportInterval.lte60min satisfies ReportInterval
  * @type {number}
  */
 export
-const lte60min = ReportInterval.lte60min satisfies ReportInterval; /* SHORT_NAMED_ENUMERATED_VALUE */
+const lte60min = ReportInterval.lte60min; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) ReportInterval

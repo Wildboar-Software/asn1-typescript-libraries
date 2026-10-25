@@ -61,7 +61,7 @@ const Abort_reason_unspecified = 0 satisfies Abort_reason; /* LONG_NAMED_INTEGER
  * @type {number}
  */
 export
-const unspecified = Abort_reason_unspecified satisfies Abort_reason; /* SHORT_NAMED_INTEGER_VALUE */
+const unspecified = Abort_reason_unspecified; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Abort_reason_unrecognized_ppdu
@@ -87,7 +87,7 @@ const Abort_reason_unrecognized_ppdu = 1 satisfies Abort_reason; /* LONG_NAMED_I
  * @type {number}
  */
 export
-const unrecognized_ppdu = Abort_reason_unrecognized_ppdu satisfies Abort_reason; /* SHORT_NAMED_INTEGER_VALUE */
+const unrecognized_ppdu = Abort_reason_unrecognized_ppdu; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Abort_reason_unexpected_ppdu
@@ -121,7 +121,7 @@ const Abort_reason_unexpected_ppdu = 2 satisfies Abort_reason; /* LONG_NAMED_INT
  * @type {number}
  */
 export
-const unexpected_ppdu = Abort_reason_unexpected_ppdu satisfies Abort_reason; /* SHORT_NAMED_INTEGER_VALUE */
+const unexpected_ppdu = Abort_reason_unexpected_ppdu; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Abort_reason_unrecognized_ppdu_parameter
@@ -151,7 +151,7 @@ const Abort_reason_unrecognized_ppdu_parameter = 4 satisfies Abort_reason; /* LO
  * @type {number}
  */
 export
-const unrecognized_ppdu_parameter = Abort_reason_unrecognized_ppdu_parameter satisfies Abort_reason; /* SHORT_NAMED_INTEGER_VALUE */
+const unrecognized_ppdu_parameter = Abort_reason_unrecognized_ppdu_parameter; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Abort_reason_invalid_ppdu_parameter
@@ -177,7 +177,7 @@ const Abort_reason_invalid_ppdu_parameter = 5 satisfies Abort_reason; /* LONG_NA
  * @type {number}
  */
 export
-const invalid_ppdu_parameter = Abort_reason_invalid_ppdu_parameter satisfies Abort_reason; /* SHORT_NAMED_INTEGER_VALUE */
+const invalid_ppdu_parameter = Abort_reason_invalid_ppdu_parameter; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Abort_reason_reference_mismatch
@@ -205,7 +205,7 @@ const Abort_reason_reference_mismatch = 9 satisfies Abort_reason; /* LONG_NAMED_
  * @type {number}
  */
 export
-const reference_mismatch = Abort_reason_reference_mismatch satisfies Abort_reason; /* SHORT_NAMED_INTEGER_VALUE */
+const reference_mismatch = Abort_reason_reference_mismatch; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_Abort_reason: $.ASN1Decoder<Abort_reason> = $._decodeInteger;
 export const _encode_Abort_reason: $.ASN1Encoder<Abort_reason> = $._encodeInteger;
 

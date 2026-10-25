@@ -90,7 +90,7 @@ const IMS_VoiceOverPS_SessionsInd = _enum_for_IMS_VoiceOverPS_SessionsInd;
  * @type {number}
  */
 export
-const IMS_VoiceOverPS_SessionsInd_imsVoiceOverPS_SessionsNotSupported = IMS_VoiceOverPS_SessionsInd.imsVoiceOverPS_SessionsNotSupported satisfies IMS_VoiceOverPS_SessionsInd; /* LONG_NAMED_ENUMERATED_VALUE */
+const IMS_VoiceOverPS_SessionsInd_imsVoiceOverPS_SessionsNotSupported = IMS_VoiceOverPS_SessionsInd.imsVoiceOverPS_SessionsNotSupported; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary imsVoiceOverPS_SessionsNotSupported
@@ -103,7 +103,7 @@ const IMS_VoiceOverPS_SessionsInd_imsVoiceOverPS_SessionsNotSupported = IMS_Voic
  * @type {number}
  */
 export
-const imsVoiceOverPS_SessionsNotSupported = IMS_VoiceOverPS_SessionsInd.imsVoiceOverPS_SessionsNotSupported satisfies IMS_VoiceOverPS_SessionsInd; /* SHORT_NAMED_ENUMERATED_VALUE */
+const imsVoiceOverPS_SessionsNotSupported = IMS_VoiceOverPS_SessionsInd.imsVoiceOverPS_SessionsNotSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary IMS_VoiceOverPS_SessionsInd_imsVoiceOverPS_SessionsSupported
@@ -115,7 +115,7 @@ const imsVoiceOverPS_SessionsNotSupported = IMS_VoiceOverPS_SessionsInd.imsVoice
  * @type {number}
  */
 export
-const IMS_VoiceOverPS_SessionsInd_imsVoiceOverPS_SessionsSupported = IMS_VoiceOverPS_SessionsInd.imsVoiceOverPS_SessionsSupported satisfies IMS_VoiceOverPS_SessionsInd; /* LONG_NAMED_ENUMERATED_VALUE */
+const IMS_VoiceOverPS_SessionsInd_imsVoiceOverPS_SessionsSupported = IMS_VoiceOverPS_SessionsInd.imsVoiceOverPS_SessionsSupported; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary imsVoiceOverPS_SessionsSupported
@@ -127,7 +127,7 @@ const IMS_VoiceOverPS_SessionsInd_imsVoiceOverPS_SessionsSupported = IMS_VoiceOv
  * @type {number}
  */
 export
-const imsVoiceOverPS_SessionsSupported = IMS_VoiceOverPS_SessionsInd.imsVoiceOverPS_SessionsSupported satisfies IMS_VoiceOverPS_SessionsInd; /* SHORT_NAMED_ENUMERATED_VALUE */
+const imsVoiceOverPS_SessionsSupported = IMS_VoiceOverPS_SessionsInd.imsVoiceOverPS_SessionsSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary IMS_VoiceOverPS_SessionsInd_unknown
@@ -140,7 +140,7 @@ const imsVoiceOverPS_SessionsSupported = IMS_VoiceOverPS_SessionsInd.imsVoiceOve
  * @type {number}
  */
 export
-const IMS_VoiceOverPS_SessionsInd_unknown = IMS_VoiceOverPS_SessionsInd.unknown satisfies IMS_VoiceOverPS_SessionsInd; /* LONG_NAMED_ENUMERATED_VALUE */
+const IMS_VoiceOverPS_SessionsInd_unknown = IMS_VoiceOverPS_SessionsInd.unknown; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unknown
@@ -153,7 +153,7 @@ const IMS_VoiceOverPS_SessionsInd_unknown = IMS_VoiceOverPS_SessionsInd.unknown 
  * @type {number}
  */
 export
-const unknown = IMS_VoiceOverPS_SessionsInd.unknown satisfies IMS_VoiceOverPS_SessionsInd; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unknown = IMS_VoiceOverPS_SessionsInd.unknown; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) IMS_VoiceOverPS_SessionsInd

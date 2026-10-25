@@ -117,7 +117,7 @@ type PayloadDirection = _enum_for_PayloadDirection | ENUMERATED;
  * @type {number}
  */
 export
-const PayloadDirection_fromTarget = _enum_for_PayloadDirection.fromTarget satisfies PayloadDirection; /* LONG_NAMED_ENUMERATED_VALUE */
+const PayloadDirection_fromTarget = _enum_for_PayloadDirection.fromTarget; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary fromTarget
@@ -133,7 +133,7 @@ const PayloadDirection_fromTarget = _enum_for_PayloadDirection.fromTarget satisf
  * @type {number}
  */
 export
-const fromTarget = PayloadDirection_fromTarget satisfies PayloadDirection; /* SHORT_NAMED_ENUMERATED_VALUE */
+const fromTarget = PayloadDirection_fromTarget; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PayloadDirection_toTarget
@@ -149,7 +149,7 @@ const fromTarget = PayloadDirection_fromTarget satisfies PayloadDirection; /* SH
  * @type {number}
  */
 export
-const PayloadDirection_toTarget = _enum_for_PayloadDirection.toTarget satisfies PayloadDirection; /* LONG_NAMED_ENUMERATED_VALUE */
+const PayloadDirection_toTarget = _enum_for_PayloadDirection.toTarget; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary toTarget
@@ -165,7 +165,7 @@ const PayloadDirection_toTarget = _enum_for_PayloadDirection.toTarget satisfies 
  * @type {number}
  */
 export
-const toTarget = PayloadDirection_toTarget satisfies PayloadDirection; /* SHORT_NAMED_ENUMERATED_VALUE */
+const toTarget = PayloadDirection_toTarget; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PayloadDirection_indeterminate
@@ -181,7 +181,7 @@ const toTarget = PayloadDirection_toTarget satisfies PayloadDirection; /* SHORT_
  * @type {number}
  */
 export
-const PayloadDirection_indeterminate = _enum_for_PayloadDirection.indeterminate satisfies PayloadDirection; /* LONG_NAMED_ENUMERATED_VALUE */
+const PayloadDirection_indeterminate = _enum_for_PayloadDirection.indeterminate; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary indeterminate
@@ -197,7 +197,7 @@ const PayloadDirection_indeterminate = _enum_for_PayloadDirection.indeterminate 
  * @type {number}
  */
 export
-const indeterminate = PayloadDirection_indeterminate satisfies PayloadDirection; /* SHORT_NAMED_ENUMERATED_VALUE */
+const indeterminate = PayloadDirection_indeterminate; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PayloadDirection_combined
@@ -213,7 +213,7 @@ const indeterminate = PayloadDirection_indeterminate satisfies PayloadDirection;
  * @type {number}
  */
 export
-const PayloadDirection_combined = _enum_for_PayloadDirection.combined satisfies PayloadDirection; /* LONG_NAMED_ENUMERATED_VALUE */
+const PayloadDirection_combined = _enum_for_PayloadDirection.combined; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary combined
@@ -229,7 +229,7 @@ const PayloadDirection_combined = _enum_for_PayloadDirection.combined satisfies 
  * @type {number}
  */
 export
-const combined = PayloadDirection_combined satisfies PayloadDirection; /* SHORT_NAMED_ENUMERATED_VALUE */
+const combined = PayloadDirection_combined; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PayloadDirection_notapplicable
@@ -245,7 +245,7 @@ const combined = PayloadDirection_combined satisfies PayloadDirection; /* SHORT_
  * @type {number}
  */
 export
-const PayloadDirection_notapplicable = _enum_for_PayloadDirection.notapplicable satisfies PayloadDirection; /* LONG_NAMED_ENUMERATED_VALUE */
+const PayloadDirection_notapplicable = _enum_for_PayloadDirection.notapplicable; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary notapplicable
@@ -261,7 +261,7 @@ const PayloadDirection_notapplicable = _enum_for_PayloadDirection.notapplicable 
  * @type {number}
  */
 export
-const notapplicable = PayloadDirection_notapplicable satisfies PayloadDirection; /* SHORT_NAMED_ENUMERATED_VALUE */
+const notapplicable = PayloadDirection_notapplicable; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_PayloadDirection: $.ASN1Decoder<PayloadDirection> = $._decodeEnumerated;
 export const _encode_PayloadDirection: $.ASN1Encoder<PayloadDirection> = $._encodeEnumerated;
 

@@ -43,7 +43,7 @@ const ErrorCode_err_ok = 0 satisfies ErrorCode; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const err_ok = ErrorCode_err_ok satisfies ErrorCode; /* SHORT_NAMED_INTEGER_VALUE */
+const err_ok = ErrorCode_err_ok; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ErrorCode_err_out_of_sequence
@@ -59,7 +59,7 @@ const ErrorCode_err_out_of_sequence = 1 satisfies ErrorCode; /* LONG_NAMED_INTEG
  * @type {number}
  */
 export
-const err_out_of_sequence = ErrorCode_err_out_of_sequence satisfies ErrorCode; /* SHORT_NAMED_INTEGER_VALUE */
+const err_out_of_sequence = ErrorCode_err_out_of_sequence; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ErrorCode_err_unknown_sequence
@@ -75,7 +75,7 @@ const ErrorCode_err_unknown_sequence = 2 satisfies ErrorCode; /* LONG_NAMED_INTE
  * @type {number}
  */
 export
-const err_unknown_sequence = ErrorCode_err_unknown_sequence satisfies ErrorCode; /* SHORT_NAMED_INTEGER_VALUE */
+const err_unknown_sequence = ErrorCode_err_unknown_sequence; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ErrorCode_err_unsupported_version
@@ -91,7 +91,7 @@ const ErrorCode_err_unsupported_version = 3 satisfies ErrorCode; /* LONG_NAMED_I
  * @type {number}
  */
 export
-const err_unsupported_version = ErrorCode_err_unsupported_version satisfies ErrorCode; /* SHORT_NAMED_INTEGER_VALUE */
+const err_unsupported_version = ErrorCode_err_unsupported_version; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ErrorCode_err_timeout
@@ -107,7 +107,7 @@ const ErrorCode_err_timeout = 4 satisfies ErrorCode; /* LONG_NAMED_INTEGER_VALUE
  * @type {number}
  */
 export
-const err_timeout = ErrorCode_err_timeout satisfies ErrorCode; /* SHORT_NAMED_INTEGER_VALUE */
+const err_timeout = ErrorCode_err_timeout; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ErrorCode_err_unknown_route
@@ -123,7 +123,7 @@ const ErrorCode_err_unknown_route = 5 satisfies ErrorCode; /* LONG_NAMED_INTEGER
  * @type {number}
  */
 export
-const err_unknown_route = ErrorCode_err_unknown_route satisfies ErrorCode; /* SHORT_NAMED_INTEGER_VALUE */
+const err_unknown_route = ErrorCode_err_unknown_route; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ErrorCode_err_routing_not_supported
@@ -139,7 +139,7 @@ const ErrorCode_err_routing_not_supported = 6 satisfies ErrorCode; /* LONG_NAMED
  * @type {number}
  */
 export
-const err_routing_not_supported = ErrorCode_err_routing_not_supported satisfies ErrorCode; /* SHORT_NAMED_INTEGER_VALUE */
+const err_routing_not_supported = ErrorCode_err_routing_not_supported; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ErrorCode_err_max_hops_exceeded
@@ -155,7 +155,7 @@ const ErrorCode_err_max_hops_exceeded = 7 satisfies ErrorCode; /* LONG_NAMED_INT
  * @type {number}
  */
 export
-const err_max_hops_exceeded = ErrorCode_err_max_hops_exceeded satisfies ErrorCode; /* SHORT_NAMED_INTEGER_VALUE */
+const err_max_hops_exceeded = ErrorCode_err_max_hops_exceeded; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ErrorCode_err_unknown_error
@@ -171,7 +171,7 @@ const ErrorCode_err_unknown_error = 255 satisfies ErrorCode; /* LONG_NAMED_INTEG
  * @type {number}
  */
 export
-const err_unknown_error = ErrorCode_err_unknown_error satisfies ErrorCode; /* SHORT_NAMED_INTEGER_VALUE */
+const err_unknown_error = ErrorCode_err_unknown_error; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_ErrorCode = $._decodeInteger;
 export const _encode_ErrorCode = $._encodeInteger;
 

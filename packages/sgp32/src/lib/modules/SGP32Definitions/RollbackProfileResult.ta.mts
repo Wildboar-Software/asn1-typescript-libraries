@@ -49,7 +49,7 @@ const RollbackProfileResult_ok = 0 satisfies RollbackProfileResult; /* LONG_NAME
  * @type {number}
  */
 export
-const ok = RollbackProfileResult_ok satisfies RollbackProfileResult; /* SHORT_NAMED_INTEGER_VALUE */
+const ok = RollbackProfileResult_ok; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RollbackProfileResult_undefinedError
@@ -71,7 +71,7 @@ const RollbackProfileResult_undefinedError = 127 satisfies RollbackProfileResult
  * @type {number}
  */
 export
-const undefinedError = RollbackProfileResult_undefinedError satisfies RollbackProfileResult; /* SHORT_NAMED_INTEGER_VALUE */
+const undefinedError = RollbackProfileResult_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_RollbackProfileResult: $.ASN1Decoder<RollbackProfileResult> = $._decodeInteger;
 export const _encode_RollbackProfileResult: $.ASN1Encoder<RollbackProfileResult> = $._encodeInteger;
 

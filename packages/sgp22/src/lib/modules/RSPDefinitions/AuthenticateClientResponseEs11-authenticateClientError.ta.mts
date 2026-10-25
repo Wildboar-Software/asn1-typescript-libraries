@@ -53,7 +53,7 @@ const AuthenticateClientResponseEs11_authenticateClientError_eumCertificateInval
  * @type {number}
  */
 export
-const eumCertificateInvalid = AuthenticateClientResponseEs11_authenticateClientError_eumCertificateInvalid satisfies AuthenticateClientResponseEs11_authenticateClientError; /* SHORT_NAMED_INTEGER_VALUE */
+const eumCertificateInvalid = AuthenticateClientResponseEs11_authenticateClientError_eumCertificateInvalid; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AuthenticateClientResponseEs11_authenticateClientError_eumCertificateExpired
@@ -77,7 +77,7 @@ const AuthenticateClientResponseEs11_authenticateClientError_eumCertificateExpir
  * @type {number}
  */
 export
-const eumCertificateExpired = AuthenticateClientResponseEs11_authenticateClientError_eumCertificateExpired satisfies AuthenticateClientResponseEs11_authenticateClientError; /* SHORT_NAMED_INTEGER_VALUE */
+const eumCertificateExpired = AuthenticateClientResponseEs11_authenticateClientError_eumCertificateExpired; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AuthenticateClientResponseEs11_authenticateClientError_euiccCertificateInvalid
@@ -101,7 +101,7 @@ const AuthenticateClientResponseEs11_authenticateClientError_euiccCertificateInv
  * @type {number}
  */
 export
-const euiccCertificateInvalid = AuthenticateClientResponseEs11_authenticateClientError_euiccCertificateInvalid satisfies AuthenticateClientResponseEs11_authenticateClientError; /* SHORT_NAMED_INTEGER_VALUE */
+const euiccCertificateInvalid = AuthenticateClientResponseEs11_authenticateClientError_euiccCertificateInvalid; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AuthenticateClientResponseEs11_authenticateClientError_euiccCertificateExpired
@@ -125,7 +125,7 @@ const AuthenticateClientResponseEs11_authenticateClientError_euiccCertificateExp
  * @type {number}
  */
 export
-const euiccCertificateExpired = AuthenticateClientResponseEs11_authenticateClientError_euiccCertificateExpired satisfies AuthenticateClientResponseEs11_authenticateClientError; /* SHORT_NAMED_INTEGER_VALUE */
+const euiccCertificateExpired = AuthenticateClientResponseEs11_authenticateClientError_euiccCertificateExpired; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AuthenticateClientResponseEs11_authenticateClientError_euiccSignatureInvalid
@@ -149,7 +149,7 @@ const AuthenticateClientResponseEs11_authenticateClientError_euiccSignatureInval
  * @type {number}
  */
 export
-const euiccSignatureInvalid = AuthenticateClientResponseEs11_authenticateClientError_euiccSignatureInvalid satisfies AuthenticateClientResponseEs11_authenticateClientError; /* SHORT_NAMED_INTEGER_VALUE */
+const euiccSignatureInvalid = AuthenticateClientResponseEs11_authenticateClientError_euiccSignatureInvalid; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AuthenticateClientResponseEs11_authenticateClientError_eventIdUnknown
@@ -175,7 +175,7 @@ const AuthenticateClientResponseEs11_authenticateClientError_eventIdUnknown = 6 
  * @type {number}
  */
 export
-const eventIdUnknown = AuthenticateClientResponseEs11_authenticateClientError_eventIdUnknown satisfies AuthenticateClientResponseEs11_authenticateClientError; /* SHORT_NAMED_INTEGER_VALUE */
+const eventIdUnknown = AuthenticateClientResponseEs11_authenticateClientError_eventIdUnknown; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AuthenticateClientResponseEs11_authenticateClientError_invalidTransactionId
@@ -199,7 +199,7 @@ const AuthenticateClientResponseEs11_authenticateClientError_invalidTransactionI
  * @type {number}
  */
 export
-const invalidTransactionId = AuthenticateClientResponseEs11_authenticateClientError_invalidTransactionId satisfies AuthenticateClientResponseEs11_authenticateClientError; /* SHORT_NAMED_INTEGER_VALUE */
+const invalidTransactionId = AuthenticateClientResponseEs11_authenticateClientError_invalidTransactionId; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AuthenticateClientResponseEs11_authenticateClientError_undefinedError
@@ -223,7 +223,7 @@ const AuthenticateClientResponseEs11_authenticateClientError_undefinedError = 12
  * @type {number}
  */
 export
-const undefinedError = AuthenticateClientResponseEs11_authenticateClientError_undefinedError satisfies AuthenticateClientResponseEs11_authenticateClientError; /* SHORT_NAMED_INTEGER_VALUE */
+const undefinedError = AuthenticateClientResponseEs11_authenticateClientError_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_AuthenticateClientResponseEs11_authenticateClientError = $._decodeInteger;
 export const _encode_AuthenticateClientResponseEs11_authenticateClientError = $._encodeInteger;
 

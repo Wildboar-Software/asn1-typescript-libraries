@@ -87,7 +87,7 @@ const SwitchOffIndicator = _enum_for_SwitchOffIndicator;
  * @type {number}
  */
 export
-const SwitchOffIndicator_normalDetach = SwitchOffIndicator.normalDetach satisfies SwitchOffIndicator; /* LONG_NAMED_ENUMERATED_VALUE */
+const SwitchOffIndicator_normalDetach = SwitchOffIndicator.normalDetach; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary normalDetach
@@ -95,7 +95,7 @@ const SwitchOffIndicator_normalDetach = SwitchOffIndicator.normalDetach satisfie
  * @type {number}
  */
 export
-const normalDetach = SwitchOffIndicator.normalDetach satisfies SwitchOffIndicator; /* SHORT_NAMED_ENUMERATED_VALUE */
+const normalDetach = SwitchOffIndicator.normalDetach; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SwitchOffIndicator_switchOff
@@ -103,7 +103,7 @@ const normalDetach = SwitchOffIndicator.normalDetach satisfies SwitchOffIndicato
  * @type {number}
  */
 export
-const SwitchOffIndicator_switchOff = SwitchOffIndicator.switchOff satisfies SwitchOffIndicator; /* LONG_NAMED_ENUMERATED_VALUE */
+const SwitchOffIndicator_switchOff = SwitchOffIndicator.switchOff; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary switchOff
@@ -111,7 +111,7 @@ const SwitchOffIndicator_switchOff = SwitchOffIndicator.switchOff satisfies Swit
  * @type {number}
  */
 export
-const switchOff = SwitchOffIndicator.switchOff satisfies SwitchOffIndicator; /* SHORT_NAMED_ENUMERATED_VALUE */
+const switchOff = SwitchOffIndicator.switchOff; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_SwitchOffIndicator: $.ASN1Decoder<SwitchOffIndicator> = $._decodeEnumerated;
 export const _encode_SwitchOffIndicator: $.ASN1Encoder<SwitchOffIndicator> = $._encodeEnumerated;
 

@@ -54,7 +54,7 @@ const FspGetParameter_parFopState_fopState_active = 0 satisfies FspGetParameter_
  * @type {number}
  */
 export
-const active = FspGetParameter_parFopState_fopState_active satisfies FspGetParameter_parFopState_fopState; /* SHORT_NAMED_INTEGER_VALUE */
+const active = FspGetParameter_parFopState_fopState_active; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary FspGetParameter_parFopState_fopState_retransmitWithoutWait
@@ -79,7 +79,7 @@ const FspGetParameter_parFopState_fopState_retransmitWithoutWait = 1 satisfies F
  * @type {number}
  */
 export
-const retransmitWithoutWait = FspGetParameter_parFopState_fopState_retransmitWithoutWait satisfies FspGetParameter_parFopState_fopState; /* SHORT_NAMED_INTEGER_VALUE */
+const retransmitWithoutWait = FspGetParameter_parFopState_fopState_retransmitWithoutWait; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary FspGetParameter_parFopState_fopState_retransmitWithWait
@@ -103,7 +103,7 @@ const FspGetParameter_parFopState_fopState_retransmitWithWait = 2 satisfies FspG
  * @type {number}
  */
 export
-const retransmitWithWait = FspGetParameter_parFopState_fopState_retransmitWithWait satisfies FspGetParameter_parFopState_fopState; /* SHORT_NAMED_INTEGER_VALUE */
+const retransmitWithWait = FspGetParameter_parFopState_fopState_retransmitWithWait; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary FspGetParameter_parFopState_fopState_initialisingWithoutBCFrame
@@ -128,7 +128,7 @@ const FspGetParameter_parFopState_fopState_initialisingWithoutBCFrame = 3 satisf
  * @type {number}
  */
 export
-const initialisingWithoutBCFrame = FspGetParameter_parFopState_fopState_initialisingWithoutBCFrame satisfies FspGetParameter_parFopState_fopState; /* SHORT_NAMED_INTEGER_VALUE */
+const initialisingWithoutBCFrame = FspGetParameter_parFopState_fopState_initialisingWithoutBCFrame; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary FspGetParameter_parFopState_fopState_initialisingWithBCFrame
@@ -153,7 +153,7 @@ const FspGetParameter_parFopState_fopState_initialisingWithBCFrame = 4 satisfies
  * @type {number}
  */
 export
-const initialisingWithBCFrame = FspGetParameter_parFopState_fopState_initialisingWithBCFrame satisfies FspGetParameter_parFopState_fopState; /* SHORT_NAMED_INTEGER_VALUE */
+const initialisingWithBCFrame = FspGetParameter_parFopState_fopState_initialisingWithBCFrame; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary FspGetParameter_parFopState_fopState_initial
@@ -177,7 +177,7 @@ const FspGetParameter_parFopState_fopState_initial = 5 satisfies FspGetParameter
  * @type {number}
  */
 export
-const initial = FspGetParameter_parFopState_fopState_initial satisfies FspGetParameter_parFopState_fopState; /* SHORT_NAMED_INTEGER_VALUE */
+const initial = FspGetParameter_parFopState_fopState_initial; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_FspGetParameter_parFopState_fopState: $.ASN1Decoder<FspGetParameter_parFopState_fopState> = $._decodeInteger;
 export const _encode_FspGetParameter_parFopState_fopState: $.ASN1Encoder<FspGetParameter_parFopState_fopState> = $._encodeInteger;
 

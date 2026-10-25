@@ -54,7 +54,7 @@ const DiagFormat_tooMany_tooManyWhat_argumentWords = 1 satisfies DiagFormat_tooM
  * @type {number}
  */
 export
-const argumentWords = DiagFormat_tooMany_tooManyWhat_argumentWords satisfies DiagFormat_tooMany_tooManyWhat; /* SHORT_NAMED_INTEGER_VALUE */
+const argumentWords = DiagFormat_tooMany_tooManyWhat_argumentWords; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagFormat_tooMany_tooManyWhat_truncatedWords
@@ -78,7 +78,7 @@ const DiagFormat_tooMany_tooManyWhat_truncatedWords = 2 satisfies DiagFormat_too
  * @type {number}
  */
 export
-const truncatedWords = DiagFormat_tooMany_tooManyWhat_truncatedWords satisfies DiagFormat_tooMany_tooManyWhat; /* SHORT_NAMED_INTEGER_VALUE */
+const truncatedWords = DiagFormat_tooMany_tooManyWhat_truncatedWords; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagFormat_tooMany_tooManyWhat_booleanOperators
@@ -102,7 +102,7 @@ const DiagFormat_tooMany_tooManyWhat_booleanOperators = 3 satisfies DiagFormat_t
  * @type {number}
  */
 export
-const booleanOperators = DiagFormat_tooMany_tooManyWhat_booleanOperators satisfies DiagFormat_tooMany_tooManyWhat; /* SHORT_NAMED_INTEGER_VALUE */
+const booleanOperators = DiagFormat_tooMany_tooManyWhat_booleanOperators; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagFormat_tooMany_tooManyWhat_incompleteSubfields
@@ -126,7 +126,7 @@ const DiagFormat_tooMany_tooManyWhat_incompleteSubfields = 4 satisfies DiagForma
  * @type {number}
  */
 export
-const incompleteSubfields = DiagFormat_tooMany_tooManyWhat_incompleteSubfields satisfies DiagFormat_tooMany_tooManyWhat; /* SHORT_NAMED_INTEGER_VALUE */
+const incompleteSubfields = DiagFormat_tooMany_tooManyWhat_incompleteSubfields; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagFormat_tooMany_tooManyWhat_characters
@@ -150,7 +150,7 @@ const DiagFormat_tooMany_tooManyWhat_characters = 5 satisfies DiagFormat_tooMany
  * @type {number}
  */
 export
-const characters = DiagFormat_tooMany_tooManyWhat_characters satisfies DiagFormat_tooMany_tooManyWhat; /* SHORT_NAMED_INTEGER_VALUE */
+const characters = DiagFormat_tooMany_tooManyWhat_characters; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagFormat_tooMany_tooManyWhat_recordsRetrieved
@@ -174,7 +174,7 @@ const DiagFormat_tooMany_tooManyWhat_recordsRetrieved = 6 satisfies DiagFormat_t
  * @type {number}
  */
 export
-const recordsRetrieved = DiagFormat_tooMany_tooManyWhat_recordsRetrieved satisfies DiagFormat_tooMany_tooManyWhat; /* SHORT_NAMED_INTEGER_VALUE */
+const recordsRetrieved = DiagFormat_tooMany_tooManyWhat_recordsRetrieved; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagFormat_tooMany_tooManyWhat_dataBasesSpecified
@@ -198,7 +198,7 @@ const DiagFormat_tooMany_tooManyWhat_dataBasesSpecified = 7 satisfies DiagFormat
  * @type {number}
  */
 export
-const dataBasesSpecified = DiagFormat_tooMany_tooManyWhat_dataBasesSpecified satisfies DiagFormat_tooMany_tooManyWhat; /* SHORT_NAMED_INTEGER_VALUE */
+const dataBasesSpecified = DiagFormat_tooMany_tooManyWhat_dataBasesSpecified; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagFormat_tooMany_tooManyWhat_resultSetsCreated
@@ -222,7 +222,7 @@ const DiagFormat_tooMany_tooManyWhat_resultSetsCreated = 8 satisfies DiagFormat_
  * @type {number}
  */
 export
-const resultSetsCreated = DiagFormat_tooMany_tooManyWhat_resultSetsCreated satisfies DiagFormat_tooMany_tooManyWhat; /* SHORT_NAMED_INTEGER_VALUE */
+const resultSetsCreated = DiagFormat_tooMany_tooManyWhat_resultSetsCreated; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagFormat_tooMany_tooManyWhat_indexTermsProcessed
@@ -248,7 +248,7 @@ const DiagFormat_tooMany_tooManyWhat_indexTermsProcessed = 9 satisfies DiagForma
  * @type {number}
  */
 export
-const indexTermsProcessed = DiagFormat_tooMany_tooManyWhat_indexTermsProcessed satisfies DiagFormat_tooMany_tooManyWhat; /* SHORT_NAMED_INTEGER_VALUE */
+const indexTermsProcessed = DiagFormat_tooMany_tooManyWhat_indexTermsProcessed; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_DiagFormat_tooMany_tooManyWhat: $.ASN1Decoder<DiagFormat_tooMany_tooManyWhat> = $._decodeInteger;
 export const _encode_DiagFormat_tooMany_tooManyWhat: $.ASN1Encoder<DiagFormat_tooMany_tooManyWhat> = $._encodeInteger;
 

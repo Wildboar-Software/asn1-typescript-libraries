@@ -41,7 +41,7 @@ export const ModifyProblem_attribute_not_present = 0 satisfies ModifyProblem; /*
  * @constant
  * @type {number}
  */
-export const attribute_not_present = ModifyProblem_attribute_not_present satisfies ModifyProblem; /* SHORT_NAMED_INTEGER_VALUE */
+export const attribute_not_present = ModifyProblem_attribute_not_present; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ModifyProblem_value_not_present
@@ -55,7 +55,7 @@ export const ModifyProblem_value_not_present = 1 satisfies ModifyProblem; /* LON
  * @constant
  * @type {number}
  */
-export const value_not_present = ModifyProblem_value_not_present satisfies ModifyProblem; /* SHORT_NAMED_INTEGER_VALUE */
+export const value_not_present = ModifyProblem_value_not_present; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ModifyProblem_attribute_or_value_already_exists
@@ -69,7 +69,7 @@ export const ModifyProblem_attribute_or_value_already_exists = 2 satisfies Modif
  * @constant
  * @type {number}
  */
-export const attribute_or_value_already_exists = ModifyProblem_attribute_or_value_already_exists satisfies ModifyProblem; /* SHORT_NAMED_INTEGER_VALUE */
+export const attribute_or_value_already_exists = ModifyProblem_attribute_or_value_already_exists; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ModifyProblem_invalid_position
@@ -83,7 +83,7 @@ export const ModifyProblem_invalid_position = 3 satisfies ModifyProblem; /* LONG
  * @constant
  * @type {number}
  */
-export const invalid_position = ModifyProblem_invalid_position satisfies ModifyProblem; /* SHORT_NAMED_INTEGER_VALUE */
+export const invalid_position = ModifyProblem_invalid_position; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ModifyProblem_modify_restriction_problem
@@ -97,7 +97,7 @@ export const ModifyProblem_modify_restriction_problem = 4 satisfies ModifyProble
  * @constant
  * @type {number}
  */
-export const modify_restriction_problem = ModifyProblem_modify_restriction_problem satisfies ModifyProblem; /* SHORT_NAMED_INTEGER_VALUE */
+export const modify_restriction_problem = ModifyProblem_modify_restriction_problem; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_ModifyProblem = $._decodeInteger;

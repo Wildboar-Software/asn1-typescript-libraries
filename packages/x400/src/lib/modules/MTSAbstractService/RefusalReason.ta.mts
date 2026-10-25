@@ -40,7 +40,7 @@ export const RefusalReason_facility_unavailable = 0 satisfies RefusalReason; /* 
  * @constant
  * @type {number}
  */
-export const facility_unavailable = RefusalReason_facility_unavailable satisfies RefusalReason; /* SHORT_NAMED_INTEGER_VALUE */
+export const facility_unavailable = RefusalReason_facility_unavailable; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RefusalReason_facility_not_subscribed
@@ -54,7 +54,7 @@ export const RefusalReason_facility_not_subscribed = 1 satisfies RefusalReason; 
  * @constant
  * @type {number}
  */
-export const facility_not_subscribed = RefusalReason_facility_not_subscribed satisfies RefusalReason; /* SHORT_NAMED_INTEGER_VALUE */
+export const facility_not_subscribed = RefusalReason_facility_not_subscribed; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RefusalReason_parameter_unacceptable
@@ -68,7 +68,7 @@ export const RefusalReason_parameter_unacceptable = 2 satisfies RefusalReason; /
  * @constant
  * @type {number}
  */
-export const parameter_unacceptable = RefusalReason_parameter_unacceptable satisfies RefusalReason; /* SHORT_NAMED_INTEGER_VALUE */
+export const parameter_unacceptable = RefusalReason_parameter_unacceptable; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_RefusalReason = $._decodeInteger;

@@ -167,7 +167,7 @@ const AttributeToQuery = _enum_for_AttributeToQuery;
  * @type {number}
  */
 export
-const AttributeToQuery_encodingAlgorithm = AttributeToQuery.encodingAlgorithm satisfies AttributeToQuery; /* LONG_NAMED_ENUMERATED_VALUE */
+const AttributeToQuery_encodingAlgorithm = AttributeToQuery.encodingAlgorithm; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary encodingAlgorithm
@@ -179,7 +179,7 @@ const AttributeToQuery_encodingAlgorithm = AttributeToQuery.encodingAlgorithm sa
  * @type {number}
  */
 export
-const encodingAlgorithm = AttributeToQuery.encodingAlgorithm satisfies AttributeToQuery; /* SHORT_NAMED_ENUMERATED_VALUE */
+const encodingAlgorithm = AttributeToQuery.encodingAlgorithm; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AttributeToQuery_samplingRate
@@ -191,7 +191,7 @@ const encodingAlgorithm = AttributeToQuery.encodingAlgorithm satisfies Attribute
  * @type {number}
  */
 export
-const AttributeToQuery_samplingRate = AttributeToQuery.samplingRate satisfies AttributeToQuery; /* LONG_NAMED_ENUMERATED_VALUE */
+const AttributeToQuery_samplingRate = AttributeToQuery.samplingRate; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary samplingRate
@@ -203,7 +203,7 @@ const AttributeToQuery_samplingRate = AttributeToQuery.samplingRate satisfies At
  * @type {number}
  */
 export
-const samplingRate = AttributeToQuery.samplingRate satisfies AttributeToQuery; /* SHORT_NAMED_ENUMERATED_VALUE */
+const samplingRate = AttributeToQuery.samplingRate; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AttributeToQuery_duration
@@ -215,7 +215,7 @@ const samplingRate = AttributeToQuery.samplingRate satisfies AttributeToQuery; /
  * @type {number}
  */
 export
-const AttributeToQuery_duration = AttributeToQuery.duration satisfies AttributeToQuery; /* LONG_NAMED_ENUMERATED_VALUE */
+const AttributeToQuery_duration = AttributeToQuery.duration; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary duration
@@ -227,7 +227,7 @@ const AttributeToQuery_duration = AttributeToQuery.duration satisfies AttributeT
  * @type {number}
  */
 export
-const duration = AttributeToQuery.duration satisfies AttributeToQuery; /* SHORT_NAMED_ENUMERATED_VALUE */
+const duration = AttributeToQuery.duration; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AttributeToQuery_fileName
@@ -239,7 +239,7 @@ const duration = AttributeToQuery.duration satisfies AttributeToQuery; /* SHORT_
  * @type {number}
  */
 export
-const AttributeToQuery_fileName = AttributeToQuery.fileName satisfies AttributeToQuery; /* LONG_NAMED_ENUMERATED_VALUE */
+const AttributeToQuery_fileName = AttributeToQuery.fileName; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary fileName
@@ -251,7 +251,7 @@ const AttributeToQuery_fileName = AttributeToQuery.fileName satisfies AttributeT
  * @type {number}
  */
 export
-const fileName = AttributeToQuery.fileName satisfies AttributeToQuery; /* SHORT_NAMED_ENUMERATED_VALUE */
+const fileName = AttributeToQuery.fileName; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AttributeToQuery_currentPosition
@@ -263,7 +263,7 @@ const fileName = AttributeToQuery.fileName satisfies AttributeToQuery; /* SHORT_
  * @type {number}
  */
 export
-const AttributeToQuery_currentPosition = AttributeToQuery.currentPosition satisfies AttributeToQuery; /* LONG_NAMED_ENUMERATED_VALUE */
+const AttributeToQuery_currentPosition = AttributeToQuery.currentPosition; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary currentPosition
@@ -275,7 +275,7 @@ const AttributeToQuery_currentPosition = AttributeToQuery.currentPosition satisf
  * @type {number}
  */
 export
-const currentPosition = AttributeToQuery.currentPosition satisfies AttributeToQuery; /* SHORT_NAMED_ENUMERATED_VALUE */
+const currentPosition = AttributeToQuery.currentPosition; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AttributeToQuery_currentSpeed
@@ -288,7 +288,7 @@ const currentPosition = AttributeToQuery.currentPosition satisfies AttributeToQu
  * @type {number}
  */
 export
-const AttributeToQuery_currentSpeed = AttributeToQuery.currentSpeed satisfies AttributeToQuery; /* LONG_NAMED_ENUMERATED_VALUE */
+const AttributeToQuery_currentSpeed = AttributeToQuery.currentSpeed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary currentSpeed
@@ -301,7 +301,7 @@ const AttributeToQuery_currentSpeed = AttributeToQuery.currentSpeed satisfies At
  * @type {number}
  */
 export
-const currentSpeed = AttributeToQuery.currentSpeed satisfies AttributeToQuery; /* SHORT_NAMED_ENUMERATED_VALUE */
+const currentSpeed = AttributeToQuery.currentSpeed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AttributeToQuery_currentVolume
@@ -313,7 +313,7 @@ const currentSpeed = AttributeToQuery.currentSpeed satisfies AttributeToQuery; /
  * @type {number}
  */
 export
-const AttributeToQuery_currentVolume = AttributeToQuery.currentVolume satisfies AttributeToQuery; /* LONG_NAMED_ENUMERATED_VALUE */
+const AttributeToQuery_currentVolume = AttributeToQuery.currentVolume; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary currentVolume
@@ -325,7 +325,7 @@ const AttributeToQuery_currentVolume = AttributeToQuery.currentVolume satisfies 
  * @type {number}
  */
 export
-const currentVolume = AttributeToQuery.currentVolume satisfies AttributeToQuery; /* SHORT_NAMED_ENUMERATED_VALUE */
+const currentVolume = AttributeToQuery.currentVolume; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AttributeToQuery_currentLevel
@@ -337,7 +337,7 @@ const currentVolume = AttributeToQuery.currentVolume satisfies AttributeToQuery;
  * @type {number}
  */
 export
-const AttributeToQuery_currentLevel = AttributeToQuery.currentLevel satisfies AttributeToQuery; /* LONG_NAMED_ENUMERATED_VALUE */
+const AttributeToQuery_currentLevel = AttributeToQuery.currentLevel; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary currentLevel
@@ -349,7 +349,7 @@ const AttributeToQuery_currentLevel = AttributeToQuery.currentLevel satisfies At
  * @type {number}
  */
 export
-const currentLevel = AttributeToQuery.currentLevel satisfies AttributeToQuery; /* SHORT_NAMED_ENUMERATED_VALUE */
+const currentLevel = AttributeToQuery.currentLevel; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AttributeToQuery_currentState
@@ -361,7 +361,7 @@ const currentLevel = AttributeToQuery.currentLevel satisfies AttributeToQuery; /
  * @type {number}
  */
 export
-const AttributeToQuery_currentState = AttributeToQuery.currentState satisfies AttributeToQuery; /* LONG_NAMED_ENUMERATED_VALUE */
+const AttributeToQuery_currentState = AttributeToQuery.currentState; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary currentState
@@ -373,7 +373,7 @@ const AttributeToQuery_currentState = AttributeToQuery.currentState satisfies At
  * @type {number}
  */
 export
-const currentState = AttributeToQuery.currentState satisfies AttributeToQuery; /* SHORT_NAMED_ENUMERATED_VALUE */
+const currentState = AttributeToQuery.currentState; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AttributeToQuery_grammars
@@ -385,7 +385,7 @@ const currentState = AttributeToQuery.currentState satisfies AttributeToQuery; /
  * @type {number}
  */
 export
-const AttributeToQuery_grammars = AttributeToQuery.grammars satisfies AttributeToQuery; /* LONG_NAMED_ENUMERATED_VALUE */
+const AttributeToQuery_grammars = AttributeToQuery.grammars; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary grammars
@@ -397,7 +397,7 @@ const AttributeToQuery_grammars = AttributeToQuery.grammars satisfies AttributeT
  * @type {number}
  */
 export
-const grammars = AttributeToQuery.grammars satisfies AttributeToQuery; /* SHORT_NAMED_ENUMERATED_VALUE */
+const grammars = AttributeToQuery.grammars; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AttributeToQuery_language
@@ -409,7 +409,7 @@ const grammars = AttributeToQuery.grammars satisfies AttributeToQuery; /* SHORT_
  * @type {number}
  */
 export
-const AttributeToQuery_language = AttributeToQuery.language satisfies AttributeToQuery; /* LONG_NAMED_ENUMERATED_VALUE */
+const AttributeToQuery_language = AttributeToQuery.language; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary language
@@ -421,7 +421,7 @@ const AttributeToQuery_language = AttributeToQuery.language satisfies AttributeT
  * @type {number}
  */
 export
-const language = AttributeToQuery.language satisfies AttributeToQuery; /* SHORT_NAMED_ENUMERATED_VALUE */
+const language = AttributeToQuery.language; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AttributeToQuery_mode
@@ -433,7 +433,7 @@ const language = AttributeToQuery.language satisfies AttributeToQuery; /* SHORT_
  * @type {number}
  */
 export
-const AttributeToQuery_mode = AttributeToQuery.mode satisfies AttributeToQuery; /* LONG_NAMED_ENUMERATED_VALUE */
+const AttributeToQuery_mode = AttributeToQuery.mode; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary mode
@@ -445,7 +445,7 @@ const AttributeToQuery_mode = AttributeToQuery.mode satisfies AttributeToQuery; 
  * @type {number}
  */
 export
-const mode = AttributeToQuery.mode satisfies AttributeToQuery; /* SHORT_NAMED_ENUMERATED_VALUE */
+const mode = AttributeToQuery.mode; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AttributeToQuery_retainAudio
@@ -457,7 +457,7 @@ const mode = AttributeToQuery.mode satisfies AttributeToQuery; /* SHORT_NAMED_EN
  * @type {number}
  */
 export
-const AttributeToQuery_retainAudio = AttributeToQuery.retainAudio satisfies AttributeToQuery; /* LONG_NAMED_ENUMERATED_VALUE */
+const AttributeToQuery_retainAudio = AttributeToQuery.retainAudio; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary retainAudio
@@ -469,7 +469,7 @@ const AttributeToQuery_retainAudio = AttributeToQuery.retainAudio satisfies Attr
  * @type {number}
  */
 export
-const retainAudio = AttributeToQuery.retainAudio satisfies AttributeToQuery; /* SHORT_NAMED_ENUMERATED_VALUE */
+const retainAudio = AttributeToQuery.retainAudio; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AttributeToQuery_silenceTimeout
@@ -481,7 +481,7 @@ const retainAudio = AttributeToQuery.retainAudio satisfies AttributeToQuery; /* 
  * @type {number}
  */
 export
-const AttributeToQuery_silenceTimeout = AttributeToQuery.silenceTimeout satisfies AttributeToQuery; /* LONG_NAMED_ENUMERATED_VALUE */
+const AttributeToQuery_silenceTimeout = AttributeToQuery.silenceTimeout; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary silenceTimeout
@@ -493,7 +493,7 @@ const AttributeToQuery_silenceTimeout = AttributeToQuery.silenceTimeout satisfie
  * @type {number}
  */
 export
-const silenceTimeout = AttributeToQuery.silenceTimeout satisfies AttributeToQuery; /* SHORT_NAMED_ENUMERATED_VALUE */
+const silenceTimeout = AttributeToQuery.silenceTimeout; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AttributeToQuery_maxTimeout
@@ -505,7 +505,7 @@ const silenceTimeout = AttributeToQuery.silenceTimeout satisfies AttributeToQuer
  * @type {number}
  */
 export
-const AttributeToQuery_maxTimeout = AttributeToQuery.maxTimeout satisfies AttributeToQuery; /* LONG_NAMED_ENUMERATED_VALUE */
+const AttributeToQuery_maxTimeout = AttributeToQuery.maxTimeout; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary maxTimeout
@@ -517,7 +517,7 @@ const AttributeToQuery_maxTimeout = AttributeToQuery.maxTimeout satisfies Attrib
  * @type {number}
  */
 export
-const maxTimeout = AttributeToQuery.maxTimeout satisfies AttributeToQuery; /* SHORT_NAMED_ENUMERATED_VALUE */
+const maxTimeout = AttributeToQuery.maxTimeout; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AttributeToQuery_babbleTimeout
@@ -529,7 +529,7 @@ const maxTimeout = AttributeToQuery.maxTimeout satisfies AttributeToQuery; /* SH
  * @type {number}
  */
 export
-const AttributeToQuery_babbleTimeout = AttributeToQuery.babbleTimeout satisfies AttributeToQuery; /* LONG_NAMED_ENUMERATED_VALUE */
+const AttributeToQuery_babbleTimeout = AttributeToQuery.babbleTimeout; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary babbleTimeout
@@ -541,7 +541,7 @@ const AttributeToQuery_babbleTimeout = AttributeToQuery.babbleTimeout satisfies 
  * @type {number}
  */
 export
-const babbleTimeout = AttributeToQuery.babbleTimeout satisfies AttributeToQuery; /* SHORT_NAMED_ENUMERATED_VALUE */
+const babbleTimeout = AttributeToQuery.babbleTimeout; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AttributeToQuery_endSilence
@@ -553,7 +553,7 @@ const babbleTimeout = AttributeToQuery.babbleTimeout satisfies AttributeToQuery;
  * @type {number}
  */
 export
-const AttributeToQuery_endSilence = AttributeToQuery.endSilence satisfies AttributeToQuery; /* LONG_NAMED_ENUMERATED_VALUE */
+const AttributeToQuery_endSilence = AttributeToQuery.endSilence; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary endSilence
@@ -565,7 +565,7 @@ const AttributeToQuery_endSilence = AttributeToQuery.endSilence satisfies Attrib
  * @type {number}
  */
 export
-const endSilence = AttributeToQuery.endSilence satisfies AttributeToQuery; /* SHORT_NAMED_ENUMERATED_VALUE */
+const endSilence = AttributeToQuery.endSilence; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AttributeToQuery_rejectionThreshold
@@ -578,7 +578,7 @@ const endSilence = AttributeToQuery.endSilence satisfies AttributeToQuery; /* SH
  * @type {number}
  */
 export
-const AttributeToQuery_rejectionThreshold = AttributeToQuery.rejectionThreshold satisfies AttributeToQuery; /* LONG_NAMED_ENUMERATED_VALUE */
+const AttributeToQuery_rejectionThreshold = AttributeToQuery.rejectionThreshold; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary rejectionThreshold
@@ -591,7 +591,7 @@ const AttributeToQuery_rejectionThreshold = AttributeToQuery.rejectionThreshold 
  * @type {number}
  */
 export
-const rejectionThreshold = AttributeToQuery.rejectionThreshold satisfies AttributeToQuery; /* SHORT_NAMED_ENUMERATED_VALUE */
+const rejectionThreshold = AttributeToQuery.rejectionThreshold; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AttributeToQuery_autoInterruptible
@@ -603,7 +603,7 @@ const rejectionThreshold = AttributeToQuery.rejectionThreshold satisfies Attribu
  * @type {number}
  */
 export
-const AttributeToQuery_autoInterruptible = AttributeToQuery.autoInterruptible satisfies AttributeToQuery; /* LONG_NAMED_ENUMERATED_VALUE */
+const AttributeToQuery_autoInterruptible = AttributeToQuery.autoInterruptible; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary autoInterruptible
@@ -615,7 +615,7 @@ const AttributeToQuery_autoInterruptible = AttributeToQuery.autoInterruptible sa
  * @type {number}
  */
 export
-const autoInterruptible = AttributeToQuery.autoInterruptible satisfies AttributeToQuery; /* SHORT_NAMED_ENUMERATED_VALUE */
+const autoInterruptible = AttributeToQuery.autoInterruptible; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AttributeToQuery_innerXml
@@ -627,7 +627,7 @@ const autoInterruptible = AttributeToQuery.autoInterruptible satisfies Attribute
  * @type {number}
  */
 export
-const AttributeToQuery_innerXml = AttributeToQuery.innerXml satisfies AttributeToQuery; /* LONG_NAMED_ENUMERATED_VALUE */
+const AttributeToQuery_innerXml = AttributeToQuery.innerXml; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary innerXml
@@ -639,7 +639,7 @@ const AttributeToQuery_innerXml = AttributeToQuery.innerXml satisfies AttributeT
  * @type {number}
  */
 export
-const innerXml = AttributeToQuery.innerXml satisfies AttributeToQuery; /* SHORT_NAMED_ENUMERATED_VALUE */
+const innerXml = AttributeToQuery.innerXml; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AttributeToQuery_interDigitTimeout
@@ -651,7 +651,7 @@ const innerXml = AttributeToQuery.innerXml satisfies AttributeToQuery; /* SHORT_
  * @type {number}
  */
 export
-const AttributeToQuery_interDigitTimeout = AttributeToQuery.interDigitTimeout satisfies AttributeToQuery; /* LONG_NAMED_ENUMERATED_VALUE */
+const AttributeToQuery_interDigitTimeout = AttributeToQuery.interDigitTimeout; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary interDigitTimeout
@@ -663,7 +663,7 @@ const AttributeToQuery_interDigitTimeout = AttributeToQuery.interDigitTimeout sa
  * @type {number}
  */
 export
-const interDigitTimeout = AttributeToQuery.interDigitTimeout satisfies AttributeToQuery; /* SHORT_NAMED_ENUMERATED_VALUE */
+const interDigitTimeout = AttributeToQuery.interDigitTimeout; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AttributeToQuery_preflush
@@ -675,7 +675,7 @@ const interDigitTimeout = AttributeToQuery.interDigitTimeout satisfies Attribute
  * @type {number}
  */
 export
-const AttributeToQuery_preflush = AttributeToQuery.preflush satisfies AttributeToQuery; /* LONG_NAMED_ENUMERATED_VALUE */
+const AttributeToQuery_preflush = AttributeToQuery.preflush; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary preflush
@@ -687,7 +687,7 @@ const AttributeToQuery_preflush = AttributeToQuery.preflush satisfies AttributeT
  * @type {number}
  */
 export
-const preflush = AttributeToQuery.preflush satisfies AttributeToQuery; /* SHORT_NAMED_ENUMERATED_VALUE */
+const preflush = AttributeToQuery.preflush; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 let _cached_decoder_for_AttributeToQuery: $.ASN1Decoder<AttributeToQuery> | null = null;
 

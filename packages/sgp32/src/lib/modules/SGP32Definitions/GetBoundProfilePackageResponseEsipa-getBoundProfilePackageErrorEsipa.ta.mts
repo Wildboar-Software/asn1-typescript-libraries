@@ -57,7 +57,7 @@ const GetBoundProfilePackageResponseEsipa_getBoundProfilePackageErrorEsipa_euicc
  * @type {number}
  */
 export
-const euiccSignatureInvalid = GetBoundProfilePackageResponseEsipa_getBoundProfilePackageErrorEsipa_euiccSignatureInvalid satisfies GetBoundProfilePackageResponseEsipa_getBoundProfilePackageErrorEsipa; /* SHORT_NAMED_INTEGER_VALUE */
+const euiccSignatureInvalid = GetBoundProfilePackageResponseEsipa_getBoundProfilePackageErrorEsipa_euiccSignatureInvalid; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary GetBoundProfilePackageResponseEsipa_getBoundProfilePackageErrorEsipa_confirmationCodeMissing
@@ -80,7 +80,7 @@ const GetBoundProfilePackageResponseEsipa_getBoundProfilePackageErrorEsipa_confi
  * @type {number}
  */
 export
-const confirmationCodeMissing = GetBoundProfilePackageResponseEsipa_getBoundProfilePackageErrorEsipa_confirmationCodeMissing satisfies GetBoundProfilePackageResponseEsipa_getBoundProfilePackageErrorEsipa; /* SHORT_NAMED_INTEGER_VALUE */
+const confirmationCodeMissing = GetBoundProfilePackageResponseEsipa_getBoundProfilePackageErrorEsipa_confirmationCodeMissing; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary GetBoundProfilePackageResponseEsipa_getBoundProfilePackageErrorEsipa_confirmationCodeRefused
@@ -103,7 +103,7 @@ const GetBoundProfilePackageResponseEsipa_getBoundProfilePackageErrorEsipa_confi
  * @type {number}
  */
 export
-const confirmationCodeRefused = GetBoundProfilePackageResponseEsipa_getBoundProfilePackageErrorEsipa_confirmationCodeRefused satisfies GetBoundProfilePackageResponseEsipa_getBoundProfilePackageErrorEsipa; /* SHORT_NAMED_INTEGER_VALUE */
+const confirmationCodeRefused = GetBoundProfilePackageResponseEsipa_getBoundProfilePackageErrorEsipa_confirmationCodeRefused; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary GetBoundProfilePackageResponseEsipa_getBoundProfilePackageErrorEsipa_confirmationCodeRetriesExceeded
@@ -126,7 +126,7 @@ const GetBoundProfilePackageResponseEsipa_getBoundProfilePackageErrorEsipa_confi
  * @type {number}
  */
 export
-const confirmationCodeRetriesExceeded = GetBoundProfilePackageResponseEsipa_getBoundProfilePackageErrorEsipa_confirmationCodeRetriesExceeded satisfies GetBoundProfilePackageResponseEsipa_getBoundProfilePackageErrorEsipa; /* SHORT_NAMED_INTEGER_VALUE */
+const confirmationCodeRetriesExceeded = GetBoundProfilePackageResponseEsipa_getBoundProfilePackageErrorEsipa_confirmationCodeRetriesExceeded; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary GetBoundProfilePackageResponseEsipa_getBoundProfilePackageErrorEsipa_bppRebindingRefused
@@ -149,7 +149,7 @@ const GetBoundProfilePackageResponseEsipa_getBoundProfilePackageErrorEsipa_bppRe
  * @type {number}
  */
 export
-const bppRebindingRefused = GetBoundProfilePackageResponseEsipa_getBoundProfilePackageErrorEsipa_bppRebindingRefused satisfies GetBoundProfilePackageResponseEsipa_getBoundProfilePackageErrorEsipa; /* SHORT_NAMED_INTEGER_VALUE */
+const bppRebindingRefused = GetBoundProfilePackageResponseEsipa_getBoundProfilePackageErrorEsipa_bppRebindingRefused; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary GetBoundProfilePackageResponseEsipa_getBoundProfilePackageErrorEsipa_deprecated
@@ -173,7 +173,7 @@ const GetBoundProfilePackageResponseEsipa_getBoundProfilePackageErrorEsipa_depre
  * @type {number}
  */
 export
-const deprecated = GetBoundProfilePackageResponseEsipa_getBoundProfilePackageErrorEsipa_deprecated satisfies GetBoundProfilePackageResponseEsipa_getBoundProfilePackageErrorEsipa; /* SHORT_NAMED_INTEGER_VALUE */
+const deprecated = GetBoundProfilePackageResponseEsipa_getBoundProfilePackageErrorEsipa_deprecated; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary GetBoundProfilePackageResponseEsipa_getBoundProfilePackageErrorEsipa_metadataMismatch
@@ -198,7 +198,7 @@ const GetBoundProfilePackageResponseEsipa_getBoundProfilePackageErrorEsipa_metad
  * @type {number}
  */
 export
-const metadataMismatch = GetBoundProfilePackageResponseEsipa_getBoundProfilePackageErrorEsipa_metadataMismatch satisfies GetBoundProfilePackageResponseEsipa_getBoundProfilePackageErrorEsipa; /* SHORT_NAMED_INTEGER_VALUE */
+const metadataMismatch = GetBoundProfilePackageResponseEsipa_getBoundProfilePackageErrorEsipa_metadataMismatch; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary GetBoundProfilePackageResponseEsipa_getBoundProfilePackageErrorEsipa_invalidTransactionId
@@ -221,7 +221,7 @@ const GetBoundProfilePackageResponseEsipa_getBoundProfilePackageErrorEsipa_inval
  * @type {number}
  */
 export
-const invalidTransactionId = GetBoundProfilePackageResponseEsipa_getBoundProfilePackageErrorEsipa_invalidTransactionId satisfies GetBoundProfilePackageResponseEsipa_getBoundProfilePackageErrorEsipa; /* SHORT_NAMED_INTEGER_VALUE */
+const invalidTransactionId = GetBoundProfilePackageResponseEsipa_getBoundProfilePackageErrorEsipa_invalidTransactionId; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary GetBoundProfilePackageResponseEsipa_getBoundProfilePackageErrorEsipa_undefinedError
@@ -245,7 +245,7 @@ const GetBoundProfilePackageResponseEsipa_getBoundProfilePackageErrorEsipa_undef
  * @type {number}
  */
 export
-const undefinedError = GetBoundProfilePackageResponseEsipa_getBoundProfilePackageErrorEsipa_undefinedError satisfies GetBoundProfilePackageResponseEsipa_getBoundProfilePackageErrorEsipa; /* SHORT_NAMED_INTEGER_VALUE */
+const undefinedError = GetBoundProfilePackageResponseEsipa_getBoundProfilePackageErrorEsipa_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_GetBoundProfilePackageResponseEsipa_getBoundProfilePackageErrorEsipa: $.ASN1Decoder<GetBoundProfilePackageResponseEsipa_getBoundProfilePackageErrorEsipa> = $._decodeInteger;
 export const _encode_GetBoundProfilePackageResponseEsipa_getBoundProfilePackageErrorEsipa: $.ASN1Encoder<GetBoundProfilePackageResponseEsipa_getBoundProfilePackageErrorEsipa> = $._encodeInteger;
 

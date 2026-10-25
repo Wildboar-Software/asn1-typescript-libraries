@@ -53,7 +53,7 @@ const StateChangeCause_otherEim = 0 satisfies StateChangeCause; /* LONG_NAMED_IN
  * @type {number}
  */
 export
-const otherEim = StateChangeCause_otherEim satisfies StateChangeCause; /* SHORT_NAMED_INTEGER_VALUE */
+const otherEim = StateChangeCause_otherEim; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary StateChangeCause_fallback
@@ -75,7 +75,7 @@ const StateChangeCause_fallback = 1 satisfies StateChangeCause; /* LONG_NAMED_IN
  * @type {number}
  */
 export
-const fallback = StateChangeCause_fallback satisfies StateChangeCause; /* SHORT_NAMED_INTEGER_VALUE */
+const fallback = StateChangeCause_fallback; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary StateChangeCause_emergencyProfile
@@ -97,7 +97,7 @@ const StateChangeCause_emergencyProfile = 2 satisfies StateChangeCause; /* LONG_
  * @type {number}
  */
 export
-const emergencyProfile = StateChangeCause_emergencyProfile satisfies StateChangeCause; /* SHORT_NAMED_INTEGER_VALUE */
+const emergencyProfile = StateChangeCause_emergencyProfile; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary StateChangeCause_local
@@ -119,7 +119,7 @@ const StateChangeCause_local = 3 satisfies StateChangeCause; /* LONG_NAMED_INTEG
  * @type {number}
  */
 export
-const local = StateChangeCause_local satisfies StateChangeCause; /* SHORT_NAMED_INTEGER_VALUE */
+const local = StateChangeCause_local; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary StateChangeCause_reset
@@ -139,7 +139,7 @@ const StateChangeCause_reset = 4 satisfies StateChangeCause; /* LONG_NAMED_INTEG
  * @type {number}
  */
 export
-const reset = StateChangeCause_reset satisfies StateChangeCause; /* SHORT_NAMED_INTEGER_VALUE */
+const reset = StateChangeCause_reset; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary StateChangeCause_immediateEnableProfile
@@ -161,7 +161,7 @@ const StateChangeCause_immediateEnableProfile = 5 satisfies StateChangeCause; /*
  * @type {number}
  */
 export
-const immediateEnableProfile = StateChangeCause_immediateEnableProfile satisfies StateChangeCause; /* SHORT_NAMED_INTEGER_VALUE */
+const immediateEnableProfile = StateChangeCause_immediateEnableProfile; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary StateChangeCause_deviceChange
@@ -183,7 +183,7 @@ const StateChangeCause_deviceChange = 6 satisfies StateChangeCause; /* LONG_NAME
  * @type {number}
  */
 export
-const deviceChange = StateChangeCause_deviceChange satisfies StateChangeCause; /* SHORT_NAMED_INTEGER_VALUE */
+const deviceChange = StateChangeCause_deviceChange; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary StateChangeCause_undefined
@@ -204,7 +204,7 @@ const StateChangeCause_undefined = 127 satisfies StateChangeCause; /* LONG_NAMED
  * @type {number}
  */
 export
-const undefined = StateChangeCause_undefined satisfies StateChangeCause; /* SHORT_NAMED_INTEGER_VALUE */
+const undefined = StateChangeCause_undefined; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_StateChangeCause: $.ASN1Decoder<StateChangeCause> = $._decodeInteger;
 export const _encode_StateChangeCause: $.ASN1Encoder<StateChangeCause> = $._encodeInteger;
 

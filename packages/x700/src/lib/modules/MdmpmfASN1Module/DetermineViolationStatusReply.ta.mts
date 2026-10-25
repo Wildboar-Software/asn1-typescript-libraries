@@ -104,7 +104,7 @@ export const DetermineViolationStatusReply = _enum_for_DetermineViolationStatusR
  * @type {number}
  */
 export const DetermineViolationStatusReply_unknown =
-    DetermineViolationStatusReply.unknown satisfies DetermineViolationStatusReply; /* LONG_NAMED_ENUMERATED_VALUE */
+    DetermineViolationStatusReply.unknown; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unknown
@@ -116,7 +116,7 @@ export const DetermineViolationStatusReply_unknown =
  * @type {number}
  */
 export const unknown =
-    DetermineViolationStatusReply.unknown satisfies DetermineViolationStatusReply; /* SHORT_NAMED_ENUMERATED_VALUE */
+    DetermineViolationStatusReply.unknown; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary DetermineViolationStatusReply_no_violation
@@ -129,7 +129,7 @@ export const unknown =
  * @type {number}
  */
 export const DetermineViolationStatusReply_no_violation =
-    DetermineViolationStatusReply.no_violation satisfies DetermineViolationStatusReply; /* LONG_NAMED_ENUMERATED_VALUE */
+    DetermineViolationStatusReply.no_violation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary no_violation
@@ -142,7 +142,7 @@ export const DetermineViolationStatusReply_no_violation =
  * @type {number}
  */
 export const no_violation =
-    DetermineViolationStatusReply.no_violation satisfies DetermineViolationStatusReply; /* SHORT_NAMED_ENUMERATED_VALUE */
+    DetermineViolationStatusReply.no_violation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary DetermineViolationStatusReply_violation_detected
@@ -155,7 +155,7 @@ export const no_violation =
  * @type {number}
  */
 export const DetermineViolationStatusReply_violation_detected =
-    DetermineViolationStatusReply.violation_detected satisfies DetermineViolationStatusReply; /* LONG_NAMED_ENUMERATED_VALUE */
+    DetermineViolationStatusReply.violation_detected; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary violation_detected
@@ -168,7 +168,7 @@ export const DetermineViolationStatusReply_violation_detected =
  * @type {number}
  */
 export const violation_detected =
-    DetermineViolationStatusReply.violation_detected satisfies DetermineViolationStatusReply; /* SHORT_NAMED_ENUMERATED_VALUE */
+    DetermineViolationStatusReply.violation_detected; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary DetermineViolationStatusReply_non_member
@@ -180,7 +180,7 @@ export const violation_detected =
  * @type {number}
  */
 export const DetermineViolationStatusReply_non_member =
-    DetermineViolationStatusReply.non_member satisfies DetermineViolationStatusReply; /* LONG_NAMED_ENUMERATED_VALUE */
+    DetermineViolationStatusReply.non_member; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary non_member
@@ -192,7 +192,7 @@ export const DetermineViolationStatusReply_non_member =
  * @type {number}
  */
 export const non_member =
-    DetermineViolationStatusReply.non_member satisfies DetermineViolationStatusReply; /* SHORT_NAMED_ENUMERATED_VALUE */
+    DetermineViolationStatusReply.non_member; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 export function _decode_DetermineViolationStatusReply(el: _Element): DetermineViolationStatusReply {

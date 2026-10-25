@@ -50,7 +50,7 @@ export const Provider_reason_reason_not_specified = 0 satisfies Provider_reason;
  * @constant
  * @type {number}
  */
-export const reason_not_specified = Provider_reason_reason_not_specified satisfies Provider_reason; /* SHORT_NAMED_INTEGER_VALUE */
+export const reason_not_specified = Provider_reason_reason_not_specified; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -67,7 +67,7 @@ export const Provider_reason_temporary_congestion = 1 satisfies Provider_reason;
  * @constant
  * @type {number}
  */
-export const temporary_congestion = Provider_reason_temporary_congestion satisfies Provider_reason; /* SHORT_NAMED_INTEGER_VALUE */
+export const temporary_congestion = Provider_reason_temporary_congestion; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -84,7 +84,7 @@ export const Provider_reason_local_limit_exceeded = 2 satisfies Provider_reason;
  * @constant
  * @type {number}
  */
-export const local_limit_exceeded = Provider_reason_local_limit_exceeded satisfies Provider_reason; /* SHORT_NAMED_INTEGER_VALUE */
+export const local_limit_exceeded = Provider_reason_local_limit_exceeded; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -101,7 +101,7 @@ export const Provider_reason_called_presentation_address_unknown = 3 satisfies P
  * @constant
  * @type {number}
  */
-export const called_presentation_address_unknown = Provider_reason_called_presentation_address_unknown satisfies Provider_reason; /* SHORT_NAMED_INTEGER_VALUE */
+export const called_presentation_address_unknown = Provider_reason_called_presentation_address_unknown; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -118,7 +118,7 @@ export const Provider_reason_protocol_version_not_supported = 4 satisfies Provid
  * @constant
  * @type {number}
  */
-export const protocol_version_not_supported = Provider_reason_protocol_version_not_supported satisfies Provider_reason; /* SHORT_NAMED_INTEGER_VALUE */
+export const protocol_version_not_supported = Provider_reason_protocol_version_not_supported; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -139,7 +139,7 @@ export const Provider_reason_default_context_not_supported = 5 satisfies Provide
  * @constant
  * @type {number}
  */
-export const default_context_not_supported = Provider_reason_default_context_not_supported satisfies Provider_reason; /* SHORT_NAMED_INTEGER_VALUE */
+export const default_context_not_supported = Provider_reason_default_context_not_supported; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -160,7 +160,7 @@ export const Provider_reason_user_data_not_readable = 6 satisfies Provider_reaso
  * @constant
  * @type {number}
  */
-export const user_data_not_readable = Provider_reason_user_data_not_readable satisfies Provider_reason; /* SHORT_NAMED_INTEGER_VALUE */
+export const user_data_not_readable = Provider_reason_user_data_not_readable; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -181,7 +181,7 @@ export const Provider_reason_no_PSAP_available = 7 satisfies Provider_reason; /*
  * @constant
  * @type {number}
  */
-export const no_PSAP_available = Provider_reason_no_PSAP_available satisfies Provider_reason; /* SHORT_NAMED_INTEGER_VALUE */
+export const no_PSAP_available = Provider_reason_no_PSAP_available; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 

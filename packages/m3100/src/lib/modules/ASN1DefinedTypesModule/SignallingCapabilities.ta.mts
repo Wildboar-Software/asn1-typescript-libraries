@@ -82,7 +82,7 @@ export const SignallingCapabilities = _enum_for_SignallingCapabilities;
  * @type {number}
  */
 export const SignallingCapabilities_isup =
-    SignallingCapabilities.isup satisfies SignallingCapabilities; /* LONG_NAMED_ENUMERATED_VALUE */
+    SignallingCapabilities.isup; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -91,7 +91,7 @@ export const SignallingCapabilities_isup =
  * @type {number}
  */
 export const isup =
-    SignallingCapabilities.isup satisfies SignallingCapabilities; /* SHORT_NAMED_ENUMERATED_VALUE */
+    SignallingCapabilities.isup; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -100,7 +100,7 @@ export const isup =
  * @type {number}
  */
 export const SignallingCapabilities_isup92 =
-    SignallingCapabilities.isup92 satisfies SignallingCapabilities; /* LONG_NAMED_ENUMERATED_VALUE */
+    SignallingCapabilities.isup92; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -109,7 +109,7 @@ export const SignallingCapabilities_isup92 =
  * @type {number}
  */
 export const isup92 =
-    SignallingCapabilities.isup92 satisfies SignallingCapabilities; /* SHORT_NAMED_ENUMERATED_VALUE */
+    SignallingCapabilities.isup92; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -118,7 +118,7 @@ export const isup92 =
  * @type {number}
  */
 export const SignallingCapabilities_itu_tNo5 =
-    SignallingCapabilities.itu_tNo5 satisfies SignallingCapabilities; /* LONG_NAMED_ENUMERATED_VALUE */
+    SignallingCapabilities.itu_tNo5; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -127,7 +127,7 @@ export const SignallingCapabilities_itu_tNo5 =
  * @type {number}
  */
 export const itu_tNo5 =
-    SignallingCapabilities.itu_tNo5 satisfies SignallingCapabilities; /* SHORT_NAMED_ENUMERATED_VALUE */
+    SignallingCapabilities.itu_tNo5; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -136,7 +136,7 @@ export const itu_tNo5 =
  * @type {number}
  */
 export const SignallingCapabilities_r2 =
-    SignallingCapabilities.r2 satisfies SignallingCapabilities; /* LONG_NAMED_ENUMERATED_VALUE */
+    SignallingCapabilities.r2; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -145,7 +145,7 @@ export const SignallingCapabilities_r2 =
  * @type {number}
  */
 export const r2 =
-    SignallingCapabilities.r2 satisfies SignallingCapabilities; /* SHORT_NAMED_ENUMERATED_VALUE */
+    SignallingCapabilities.r2; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -154,7 +154,7 @@ export const r2 =
  * @type {number}
  */
 export const SignallingCapabilities_itu_tNo6 =
-    SignallingCapabilities.itu_tNo6 satisfies SignallingCapabilities; /* LONG_NAMED_ENUMERATED_VALUE */
+    SignallingCapabilities.itu_tNo6; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -163,7 +163,7 @@ export const SignallingCapabilities_itu_tNo6 =
  * @type {number}
  */
 export const itu_tNo6 =
-    SignallingCapabilities.itu_tNo6 satisfies SignallingCapabilities; /* SHORT_NAMED_ENUMERATED_VALUE */
+    SignallingCapabilities.itu_tNo6; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -172,7 +172,7 @@ export const itu_tNo6 =
  * @type {number}
  */
 export const SignallingCapabilities_tup =
-    SignallingCapabilities.tup satisfies SignallingCapabilities; /* LONG_NAMED_ENUMERATED_VALUE */
+    SignallingCapabilities.tup; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -181,7 +181,7 @@ export const SignallingCapabilities_tup =
  * @type {number}
  */
 export const tup =
-    SignallingCapabilities.tup satisfies SignallingCapabilities; /* SHORT_NAMED_ENUMERATED_VALUE */
+    SignallingCapabilities.tup; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 

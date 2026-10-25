@@ -54,7 +54,7 @@ const UpdateEimResult_ok = 0 satisfies UpdateEimResult; /* LONG_NAMED_INTEGER_VA
  * @type {number}
  */
 export
-const ok = UpdateEimResult_ok satisfies UpdateEimResult; /* SHORT_NAMED_INTEGER_VALUE */
+const ok = UpdateEimResult_ok; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary UpdateEimResult_eimNotFound
@@ -76,7 +76,7 @@ const UpdateEimResult_eimNotFound = 1 satisfies UpdateEimResult; /* LONG_NAMED_I
  * @type {number}
  */
 export
-const eimNotFound = UpdateEimResult_eimNotFound satisfies UpdateEimResult; /* SHORT_NAMED_INTEGER_VALUE */
+const eimNotFound = UpdateEimResult_eimNotFound; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary UpdateEimResult_ciPKUnknown
@@ -98,7 +98,7 @@ const UpdateEimResult_ciPKUnknown = 3 satisfies UpdateEimResult; /* LONG_NAMED_I
  * @type {number}
  */
 export
-const ciPKUnknown = UpdateEimResult_ciPKUnknown satisfies UpdateEimResult; /* SHORT_NAMED_INTEGER_VALUE */
+const ciPKUnknown = UpdateEimResult_ciPKUnknown; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary UpdateEimResult_counterValueOutOfRange
@@ -121,7 +121,7 @@ const UpdateEimResult_counterValueOutOfRange = 6 satisfies UpdateEimResult; /* L
  * @type {number}
  */
 export
-const counterValueOutOfRange = UpdateEimResult_counterValueOutOfRange satisfies UpdateEimResult; /* SHORT_NAMED_INTEGER_VALUE */
+const counterValueOutOfRange = UpdateEimResult_counterValueOutOfRange; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary UpdateEimResult_commandError
@@ -148,7 +148,7 @@ const UpdateEimResult_commandError = 7 satisfies UpdateEimResult; /* LONG_NAMED_
  * @type {number}
  */
 export
-const commandError = UpdateEimResult_commandError satisfies UpdateEimResult; /* SHORT_NAMED_INTEGER_VALUE */
+const commandError = UpdateEimResult_commandError; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary UpdateEimResult_undefinedError
@@ -168,7 +168,7 @@ const UpdateEimResult_undefinedError = 127 satisfies UpdateEimResult; /* LONG_NA
  * @type {number}
  */
 export
-const undefinedError = UpdateEimResult_undefinedError satisfies UpdateEimResult; /* SHORT_NAMED_INTEGER_VALUE */
+const undefinedError = UpdateEimResult_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_UpdateEimResult: $.ASN1Decoder<UpdateEimResult> = $._decodeInteger;
 export const _encode_UpdateEimResult: $.ASN1Encoder<UpdateEimResult> = $._encodeInteger;
 

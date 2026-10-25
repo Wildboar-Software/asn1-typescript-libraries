@@ -50,7 +50,7 @@ const ExtendedServicesResponse_operationStatus_done = 1 satisfies ExtendedServic
  * @type {number}
  */
 export
-const done = ExtendedServicesResponse_operationStatus_done satisfies ExtendedServicesResponse_operationStatus; /* SHORT_NAMED_INTEGER_VALUE */
+const done = ExtendedServicesResponse_operationStatus_done; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ExtendedServicesResponse_operationStatus_accepted
@@ -77,7 +77,7 @@ const ExtendedServicesResponse_operationStatus_accepted = 2 satisfies ExtendedSe
  * @type {number}
  */
 export
-const accepted = ExtendedServicesResponse_operationStatus_accepted satisfies ExtendedServicesResponse_operationStatus; /* SHORT_NAMED_INTEGER_VALUE */
+const accepted = ExtendedServicesResponse_operationStatus_accepted; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ExtendedServicesResponse_operationStatus_failure
@@ -104,7 +104,7 @@ const ExtendedServicesResponse_operationStatus_failure = 3 satisfies ExtendedSer
  * @type {number}
  */
 export
-const failure = ExtendedServicesResponse_operationStatus_failure satisfies ExtendedServicesResponse_operationStatus; /* SHORT_NAMED_INTEGER_VALUE */
+const failure = ExtendedServicesResponse_operationStatus_failure; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_ExtendedServicesResponse_operationStatus: $.ASN1Decoder<ExtendedServicesResponse_operationStatus> = $._decodeInteger;
 export const _encode_ExtendedServicesResponse_operationStatus: $.ASN1Encoder<ExtendedServicesResponse_operationStatus> = $._encodeInteger;
 

@@ -118,7 +118,7 @@ const AccessType = _enum_for_AccessType;
  * @type {number}
  */
 export
-const AccessType_threeGPPAccess = AccessType.threeGPPAccess satisfies AccessType; /* LONG_NAMED_ENUMERATED_VALUE */
+const AccessType_threeGPPAccess = AccessType.threeGPPAccess; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary threeGPPAccess
@@ -132,7 +132,7 @@ const AccessType_threeGPPAccess = AccessType.threeGPPAccess satisfies AccessType
  * @type {number}
  */
 export
-const threeGPPAccess = AccessType.threeGPPAccess satisfies AccessType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const threeGPPAccess = AccessType.threeGPPAccess; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AccessType_nonThreeGPPAccess
@@ -146,7 +146,7 @@ const threeGPPAccess = AccessType.threeGPPAccess satisfies AccessType; /* SHORT_
  * @type {number}
  */
 export
-const AccessType_nonThreeGPPAccess = AccessType.nonThreeGPPAccess satisfies AccessType; /* LONG_NAMED_ENUMERATED_VALUE */
+const AccessType_nonThreeGPPAccess = AccessType.nonThreeGPPAccess; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary nonThreeGPPAccess
@@ -160,7 +160,7 @@ const AccessType_nonThreeGPPAccess = AccessType.nonThreeGPPAccess satisfies Acce
  * @type {number}
  */
 export
-const nonThreeGPPAccess = AccessType.nonThreeGPPAccess satisfies AccessType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const nonThreeGPPAccess = AccessType.nonThreeGPPAccess; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AccessType_threeGPPandNonThreeGPPAccess
@@ -174,7 +174,7 @@ const nonThreeGPPAccess = AccessType.nonThreeGPPAccess satisfies AccessType; /* 
  * @type {number}
  */
 export
-const AccessType_threeGPPandNonThreeGPPAccess = AccessType.threeGPPandNonThreeGPPAccess satisfies AccessType; /* LONG_NAMED_ENUMERATED_VALUE */
+const AccessType_threeGPPandNonThreeGPPAccess = AccessType.threeGPPandNonThreeGPPAccess; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary threeGPPandNonThreeGPPAccess
@@ -188,7 +188,7 @@ const AccessType_threeGPPandNonThreeGPPAccess = AccessType.threeGPPandNonThreeGP
  * @type {number}
  */
 export
-const threeGPPandNonThreeGPPAccess = AccessType.threeGPPandNonThreeGPPAccess satisfies AccessType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const threeGPPandNonThreeGPPAccess = AccessType.threeGPPandNonThreeGPPAccess; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_AccessType: $.ASN1Decoder<AccessType> = $._decodeEnumerated;
 export const _encode_AccessType: $.ASN1Encoder<AccessType> = $._encodeEnumerated;
 

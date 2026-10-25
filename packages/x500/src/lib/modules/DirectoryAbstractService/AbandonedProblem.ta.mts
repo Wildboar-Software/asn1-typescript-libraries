@@ -68,7 +68,7 @@ export const AbandonedProblem = _enum_for_AbandonedProblem;
  * @type {number}
  */
 export const AbandonedProblem_pagingAbandoned =
-    AbandonedProblem.pagingAbandoned satisfies AbandonedProblem; /* LONG_NAMED_ENUMERATED_VALUE */
+    AbandonedProblem.pagingAbandoned; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pagingAbandoned
@@ -80,7 +80,7 @@ export const AbandonedProblem_pagingAbandoned =
  * @type {number}
  */
 export const pagingAbandoned =
-    AbandonedProblem.pagingAbandoned satisfies AbandonedProblem; /* SHORT_NAMED_ENUMERATED_VALUE */
+    AbandonedProblem.pagingAbandoned; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 export function _decode_AbandonedProblem(el: _Element): AbandonedProblem {

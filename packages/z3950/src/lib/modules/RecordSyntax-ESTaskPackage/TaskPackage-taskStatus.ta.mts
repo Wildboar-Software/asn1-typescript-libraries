@@ -52,7 +52,7 @@ const TaskPackage_taskStatus_pending = 0 satisfies TaskPackage_taskStatus; /* LO
  * @type {number}
  */
 export
-const pending = TaskPackage_taskStatus_pending satisfies TaskPackage_taskStatus; /* SHORT_NAMED_INTEGER_VALUE */
+const pending = TaskPackage_taskStatus_pending; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TaskPackage_taskStatus_active
@@ -75,7 +75,7 @@ const TaskPackage_taskStatus_active = 1 satisfies TaskPackage_taskStatus; /* LON
  * @type {number}
  */
 export
-const active = TaskPackage_taskStatus_active satisfies TaskPackage_taskStatus; /* SHORT_NAMED_INTEGER_VALUE */
+const active = TaskPackage_taskStatus_active; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TaskPackage_taskStatus_complete
@@ -98,7 +98,7 @@ const TaskPackage_taskStatus_complete = 2 satisfies TaskPackage_taskStatus; /* L
  * @type {number}
  */
 export
-const complete = TaskPackage_taskStatus_complete satisfies TaskPackage_taskStatus; /* SHORT_NAMED_INTEGER_VALUE */
+const complete = TaskPackage_taskStatus_complete; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TaskPackage_taskStatus_aborted
@@ -121,7 +121,7 @@ const TaskPackage_taskStatus_aborted = 3 satisfies TaskPackage_taskStatus; /* LO
  * @type {number}
  */
 export
-const aborted = TaskPackage_taskStatus_aborted satisfies TaskPackage_taskStatus; /* SHORT_NAMED_INTEGER_VALUE */
+const aborted = TaskPackage_taskStatus_aborted; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_TaskPackage_taskStatus: $.ASN1Decoder<TaskPackage_taskStatus> = $._decodeInteger;
 export const _encode_TaskPackage_taskStatus: $.ASN1Encoder<TaskPackage_taskStatus> = $._encodeInteger;
 

@@ -55,7 +55,7 @@ const MuxScheme_fifo = 0 satisfies MuxScheme; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const fifo = MuxScheme_fifo satisfies MuxScheme; /* SHORT_NAMED_INTEGER_VALUE */
+const fifo = MuxScheme_fifo; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary MuxScheme_absolute_priority
@@ -82,7 +82,7 @@ const MuxScheme_absolute_priority = 1 satisfies MuxScheme; /* LONG_NAMED_INTEGER
  * @type {number}
  */
 export
-const absolute_priority = MuxScheme_absolute_priority satisfies MuxScheme; /* SHORT_NAMED_INTEGER_VALUE */
+const absolute_priority = MuxScheme_absolute_priority; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary MuxScheme_polling_vector
@@ -108,7 +108,7 @@ const MuxScheme_polling_vector = 2 satisfies MuxScheme; /* LONG_NAMED_INTEGER_VA
  * @type {number}
  */
 export
-const polling_vector = MuxScheme_polling_vector satisfies MuxScheme; /* SHORT_NAMED_INTEGER_VALUE */
+const polling_vector = MuxScheme_polling_vector; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_MuxScheme: $.ASN1Decoder<MuxScheme> = $._decodeInteger;
 export const _encode_MuxScheme: $.ASN1Encoder<MuxScheme> = $._encodeInteger;
 

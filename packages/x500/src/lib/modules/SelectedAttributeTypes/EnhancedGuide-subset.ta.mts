@@ -29,7 +29,7 @@ export const EnhancedGuide_subset_baseObject = 0 satisfies EnhancedGuide_subset;
  * @constant
  * @type {number}
  */
-export const baseObject = EnhancedGuide_subset_baseObject satisfies EnhancedGuide_subset; /* SHORT_NAMED_INTEGER_VALUE */
+export const baseObject = EnhancedGuide_subset_baseObject; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EnhancedGuide_subset_oneLevel
@@ -51,7 +51,7 @@ export const EnhancedGuide_subset_oneLevel = 1 satisfies EnhancedGuide_subset; /
  * @constant
  * @type {number}
  */
-export const oneLevel = EnhancedGuide_subset_oneLevel satisfies EnhancedGuide_subset; /* SHORT_NAMED_INTEGER_VALUE */
+export const oneLevel = EnhancedGuide_subset_oneLevel; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EnhancedGuide_subset_wholeSubtree
@@ -65,7 +65,7 @@ export const EnhancedGuide_subset_wholeSubtree = 2 satisfies EnhancedGuide_subse
  * @constant
  * @type {number}
  */
-export const wholeSubtree = EnhancedGuide_subset_wholeSubtree satisfies EnhancedGuide_subset; /* SHORT_NAMED_INTEGER_VALUE */
+export const wholeSubtree = EnhancedGuide_subset_wholeSubtree; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_EnhancedGuide_subset = $._decodeInteger;

@@ -82,7 +82,7 @@ const ModificationInstruction = _enum_for_ModificationInstruction;
  * @type {number}
  */
 export
-const ModificationInstruction_deactivate = ModificationInstruction.deactivate satisfies ModificationInstruction; /* LONG_NAMED_ENUMERATED_VALUE */
+const ModificationInstruction_deactivate = ModificationInstruction.deactivate; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary deactivate
@@ -94,7 +94,7 @@ const ModificationInstruction_deactivate = ModificationInstruction.deactivate sa
  * @type {number}
  */
 export
-const deactivate = ModificationInstruction.deactivate satisfies ModificationInstruction; /* SHORT_NAMED_ENUMERATED_VALUE */
+const deactivate = ModificationInstruction.deactivate; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ModificationInstruction_activate
@@ -106,7 +106,7 @@ const deactivate = ModificationInstruction.deactivate satisfies ModificationInst
  * @type {number}
  */
 export
-const ModificationInstruction_activate = ModificationInstruction.activate satisfies ModificationInstruction; /* LONG_NAMED_ENUMERATED_VALUE */
+const ModificationInstruction_activate = ModificationInstruction.activate; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary activate
@@ -118,7 +118,7 @@ const ModificationInstruction_activate = ModificationInstruction.activate satisf
  * @type {number}
  */
 export
-const activate = ModificationInstruction.activate satisfies ModificationInstruction; /* SHORT_NAMED_ENUMERATED_VALUE */
+const activate = ModificationInstruction.activate; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) ModificationInstruction

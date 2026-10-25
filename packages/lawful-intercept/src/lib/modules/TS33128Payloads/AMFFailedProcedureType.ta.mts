@@ -88,7 +88,7 @@ const AMFFailedProcedureType = _enum_for_AMFFailedProcedureType;
  * @type {number}
  */
 export
-const AMFFailedProcedureType_registration = AMFFailedProcedureType.registration satisfies AMFFailedProcedureType; /* LONG_NAMED_ENUMERATED_VALUE */
+const AMFFailedProcedureType_registration = AMFFailedProcedureType.registration; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary registration
@@ -96,7 +96,7 @@ const AMFFailedProcedureType_registration = AMFFailedProcedureType.registration 
  * @type {number}
  */
 export
-const registration = AMFFailedProcedureType.registration satisfies AMFFailedProcedureType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const registration = AMFFailedProcedureType.registration; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AMFFailedProcedureType_sMS
@@ -104,7 +104,7 @@ const registration = AMFFailedProcedureType.registration satisfies AMFFailedProc
  * @type {number}
  */
 export
-const AMFFailedProcedureType_sMS = AMFFailedProcedureType.sMS satisfies AMFFailedProcedureType; /* LONG_NAMED_ENUMERATED_VALUE */
+const AMFFailedProcedureType_sMS = AMFFailedProcedureType.sMS; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sMS
@@ -112,7 +112,7 @@ const AMFFailedProcedureType_sMS = AMFFailedProcedureType.sMS satisfies AMFFaile
  * @type {number}
  */
 export
-const sMS = AMFFailedProcedureType.sMS satisfies AMFFailedProcedureType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sMS = AMFFailedProcedureType.sMS; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AMFFailedProcedureType_pDUSessionEstablishment
@@ -120,7 +120,7 @@ const sMS = AMFFailedProcedureType.sMS satisfies AMFFailedProcedureType; /* SHOR
  * @type {number}
  */
 export
-const AMFFailedProcedureType_pDUSessionEstablishment = AMFFailedProcedureType.pDUSessionEstablishment satisfies AMFFailedProcedureType; /* LONG_NAMED_ENUMERATED_VALUE */
+const AMFFailedProcedureType_pDUSessionEstablishment = AMFFailedProcedureType.pDUSessionEstablishment; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pDUSessionEstablishment
@@ -128,7 +128,7 @@ const AMFFailedProcedureType_pDUSessionEstablishment = AMFFailedProcedureType.pD
  * @type {number}
  */
 export
-const pDUSessionEstablishment = AMFFailedProcedureType.pDUSessionEstablishment satisfies AMFFailedProcedureType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pDUSessionEstablishment = AMFFailedProcedureType.pDUSessionEstablishment; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_AMFFailedProcedureType: $.ASN1Decoder<AMFFailedProcedureType> = $._decodeEnumerated;
 export const _encode_AMFFailedProcedureType: $.ASN1Encoder<AMFFailedProcedureType> = $._encodeEnumerated;
 

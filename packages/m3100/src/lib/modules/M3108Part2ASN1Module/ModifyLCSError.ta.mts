@@ -52,7 +52,7 @@ export type ModifyLCSError = _enum_for_ModifyLCSError | ENUMERATED;
  * @constant
  * @type {number}
  */
-export const ModifyLCSError_contractViolation = _enum_for_ModifyLCSError.contractViolation satisfies ModifyLCSError; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ModifyLCSError_contractViolation = _enum_for_ModifyLCSError.contractViolation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -60,7 +60,7 @@ export const ModifyLCSError_contractViolation = _enum_for_ModifyLCSError.contrac
  * @constant
  * @type {number}
  */
-export const contractViolation = ModifyLCSError_contractViolation satisfies ModifyLCSError; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const contractViolation = ModifyLCSError_contractViolation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -68,7 +68,7 @@ export const contractViolation = ModifyLCSError_contractViolation satisfies Modi
  * @constant
  * @type {number}
  */
-export const ModifyLCSError_invalidAliasName = _enum_for_ModifyLCSError.invalidAliasName satisfies ModifyLCSError; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ModifyLCSError_invalidAliasName = _enum_for_ModifyLCSError.invalidAliasName; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -76,7 +76,7 @@ export const ModifyLCSError_invalidAliasName = _enum_for_ModifyLCSError.invalidA
  * @constant
  * @type {number}
  */
-export const invalidAliasName = ModifyLCSError_invalidAliasName satisfies ModifyLCSError; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const invalidAliasName = ModifyLCSError_invalidAliasName; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -84,7 +84,7 @@ export const invalidAliasName = ModifyLCSError_invalidAliasName satisfies Modify
  * @constant
  * @type {number}
  */
-export const ModifyLCSError_invalidCircuitNumber = _enum_for_ModifyLCSError.invalidCircuitNumber satisfies ModifyLCSError; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ModifyLCSError_invalidCircuitNumber = _enum_for_ModifyLCSError.invalidCircuitNumber; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -92,7 +92,7 @@ export const ModifyLCSError_invalidCircuitNumber = _enum_for_ModifyLCSError.inva
  * @constant
  * @type {number}
  */
-export const invalidCircuitNumber = ModifyLCSError_invalidCircuitNumber satisfies ModifyLCSError; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const invalidCircuitNumber = ModifyLCSError_invalidCircuitNumber; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -100,7 +100,7 @@ export const invalidCircuitNumber = ModifyLCSError_invalidCircuitNumber satisfie
  * @constant
  * @type {number}
  */
-export const ModifyLCSError_invalidCPEType = _enum_for_ModifyLCSError.invalidCPEType satisfies ModifyLCSError; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ModifyLCSError_invalidCPEType = _enum_for_ModifyLCSError.invalidCPEType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -108,7 +108,7 @@ export const ModifyLCSError_invalidCPEType = _enum_for_ModifyLCSError.invalidCPE
  * @constant
  * @type {number}
  */
-export const invalidCPEType = ModifyLCSError_invalidCPEType satisfies ModifyLCSError; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const invalidCPEType = ModifyLCSError_invalidCPEType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -116,7 +116,7 @@ export const invalidCPEType = ModifyLCSError_invalidCPEType satisfies ModifyLCSE
  * @constant
  * @type {number}
  */
-export const ModifyLCSError_invalidSchedule = _enum_for_ModifyLCSError.invalidSchedule satisfies ModifyLCSError; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ModifyLCSError_invalidSchedule = _enum_for_ModifyLCSError.invalidSchedule; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -124,7 +124,7 @@ export const ModifyLCSError_invalidSchedule = _enum_for_ModifyLCSError.invalidSc
  * @constant
  * @type {number}
  */
-export const invalidSchedule = ModifyLCSError_invalidSchedule satisfies ModifyLCSError; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const invalidSchedule = ModifyLCSError_invalidSchedule; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -132,7 +132,7 @@ export const invalidSchedule = ModifyLCSError_invalidSchedule satisfies ModifyLC
  * @constant
  * @type {number}
  */
-export const ModifyLCSError_invalidServiceTerminationDate = _enum_for_ModifyLCSError.invalidServiceTerminationDate satisfies ModifyLCSError; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ModifyLCSError_invalidServiceTerminationDate = _enum_for_ModifyLCSError.invalidServiceTerminationDate; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -140,7 +140,7 @@ export const ModifyLCSError_invalidServiceTerminationDate = _enum_for_ModifyLCSE
  * @constant
  * @type {number}
  */
-export const invalidServiceTerminationDate = ModifyLCSError_invalidServiceTerminationDate satisfies ModifyLCSError; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const invalidServiceTerminationDate = ModifyLCSError_invalidServiceTerminationDate; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -148,7 +148,7 @@ export const invalidServiceTerminationDate = ModifyLCSError_invalidServiceTermin
  * @constant
  * @type {number}
  */
-export const ModifyLCSError_invalidValue = _enum_for_ModifyLCSError.invalidValue satisfies ModifyLCSError; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ModifyLCSError_invalidValue = _enum_for_ModifyLCSError.invalidValue; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -156,7 +156,7 @@ export const ModifyLCSError_invalidValue = _enum_for_ModifyLCSError.invalidValue
  * @constant
  * @type {number}
  */
-export const invalidValue = ModifyLCSError_invalidValue satisfies ModifyLCSError; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const invalidValue = ModifyLCSError_invalidValue; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -164,7 +164,7 @@ export const invalidValue = ModifyLCSError_invalidValue satisfies ModifyLCSError
  * @constant
  * @type {number}
  */
-export const ModifyLCSError_requestedBandwidthNotAvailable = _enum_for_ModifyLCSError.requestedBandwidthNotAvailable satisfies ModifyLCSError; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ModifyLCSError_requestedBandwidthNotAvailable = _enum_for_ModifyLCSError.requestedBandwidthNotAvailable; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -172,7 +172,7 @@ export const ModifyLCSError_requestedBandwidthNotAvailable = _enum_for_ModifyLCS
  * @constant
  * @type {number}
  */
-export const requestedBandwidthNotAvailable = ModifyLCSError_requestedBandwidthNotAvailable satisfies ModifyLCSError; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const requestedBandwidthNotAvailable = ModifyLCSError_requestedBandwidthNotAvailable; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -180,7 +180,7 @@ export const requestedBandwidthNotAvailable = ModifyLCSError_requestedBandwidthN
  * @constant
  * @type {number}
  */
-export const ModifyLCSError_resourceUnavailable = _enum_for_ModifyLCSError.resourceUnavailable satisfies ModifyLCSError; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ModifyLCSError_resourceUnavailable = _enum_for_ModifyLCSError.resourceUnavailable; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -188,7 +188,7 @@ export const ModifyLCSError_resourceUnavailable = _enum_for_ModifyLCSError.resou
  * @constant
  * @type {number}
  */
-export const resourceUnavailable = ModifyLCSError_resourceUnavailable satisfies ModifyLCSError; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const resourceUnavailable = ModifyLCSError_resourceUnavailable; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -196,7 +196,7 @@ export const resourceUnavailable = ModifyLCSError_resourceUnavailable satisfies 
  * @constant
  * @type {number}
  */
-export const ModifyLCSError_scheduleConflicts = _enum_for_ModifyLCSError.scheduleConflicts satisfies ModifyLCSError; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ModifyLCSError_scheduleConflicts = _enum_for_ModifyLCSError.scheduleConflicts; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -204,7 +204,7 @@ export const ModifyLCSError_scheduleConflicts = _enum_for_ModifyLCSError.schedul
  * @constant
  * @type {number}
  */
-export const scheduleConflicts = ModifyLCSError_scheduleConflicts satisfies ModifyLCSError; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const scheduleConflicts = ModifyLCSError_scheduleConflicts; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 

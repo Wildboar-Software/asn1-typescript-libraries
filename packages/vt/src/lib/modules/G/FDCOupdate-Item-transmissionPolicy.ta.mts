@@ -57,7 +57,7 @@ const FDCOupdate_Item_transmissionPolicy_all = 0 satisfies FDCOupdate_Item_trans
  * @type {number}
  */
 export
-const all = FDCOupdate_Item_transmissionPolicy_all satisfies FDCOupdate_Item_transmissionPolicy; /* SHORT_NAMED_INTEGER_VALUE */
+const all = FDCOupdate_Item_transmissionPolicy_all; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary FDCOupdate_Item_transmissionPolicy_modifiedAllContent
@@ -81,7 +81,7 @@ const FDCOupdate_Item_transmissionPolicy_modifiedAllContent = 1 satisfies FDCOup
  * @type {number}
  */
 export
-const modifiedAllContent = FDCOupdate_Item_transmissionPolicy_modifiedAllContent satisfies FDCOupdate_Item_transmissionPolicy; /* SHORT_NAMED_INTEGER_VALUE */
+const modifiedAllContent = FDCOupdate_Item_transmissionPolicy_modifiedAllContent; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary FDCOupdate_Item_transmissionPolicy_modifiedPart
@@ -103,7 +103,7 @@ const FDCOupdate_Item_transmissionPolicy_modifiedPart = 2 satisfies FDCOupdate_I
  * @type {number}
  */
 export
-const modifiedPart = FDCOupdate_Item_transmissionPolicy_modifiedPart satisfies FDCOupdate_Item_transmissionPolicy; /* SHORT_NAMED_INTEGER_VALUE */
+const modifiedPart = FDCOupdate_Item_transmissionPolicy_modifiedPart; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary FDCOupdate_Item_transmissionPolicy_none
@@ -125,7 +125,7 @@ const FDCOupdate_Item_transmissionPolicy_none = 3 satisfies FDCOupdate_Item_tran
  * @type {number}
  */
 export
-const none = FDCOupdate_Item_transmissionPolicy_none satisfies FDCOupdate_Item_transmissionPolicy; /* SHORT_NAMED_INTEGER_VALUE */
+const none = FDCOupdate_Item_transmissionPolicy_none; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary FDCOupdate_Item_transmissionPolicy_refTPCO
@@ -149,7 +149,7 @@ const FDCOupdate_Item_transmissionPolicy_refTPCO = 4 satisfies FDCOupdate_Item_t
  * @type {number}
  */
 export
-const refTPCO = FDCOupdate_Item_transmissionPolicy_refTPCO satisfies FDCOupdate_Item_transmissionPolicy; /* SHORT_NAMED_INTEGER_VALUE */
+const refTPCO = FDCOupdate_Item_transmissionPolicy_refTPCO; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_FDCOupdate_Item_transmissionPolicy = $._decodeInteger;
 export const _encode_FDCOupdate_Item_transmissionPolicy = $._encodeInteger;
 

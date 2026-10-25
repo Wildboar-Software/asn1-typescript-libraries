@@ -59,7 +59,7 @@ const EE_Class_modifier = 0 satisfies EE_Class; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const modifier = EE_Class_modifier satisfies EE_Class; /* SHORT_NAMED_INTEGER_VALUE */
+const modifier = EE_Class_modifier; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EE_Class_notification
@@ -85,7 +85,7 @@ const EE_Class_notification = 1 satisfies EE_Class; /* LONG_NAMED_INTEGER_VALUE 
  * @type {number}
  */
 export
-const notification = EE_Class_notification satisfies EE_Class; /* SHORT_NAMED_INTEGER_VALUE */
+const notification = EE_Class_notification; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_EE_Class = $._decodeInteger;
 export const _encode_EE_Class = $._encodeInteger;
 

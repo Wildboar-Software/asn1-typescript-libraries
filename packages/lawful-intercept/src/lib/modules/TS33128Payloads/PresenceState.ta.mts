@@ -140,7 +140,7 @@ const PresenceState = _enum_for_PresenceState;
  * @type {number}
  */
 export
-const PresenceState_inArea = PresenceState.inArea satisfies PresenceState; /* LONG_NAMED_ENUMERATED_VALUE */
+const PresenceState_inArea = PresenceState.inArea; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary inArea
@@ -154,7 +154,7 @@ const PresenceState_inArea = PresenceState.inArea satisfies PresenceState; /* LO
  * @type {number}
  */
 export
-const inArea = PresenceState.inArea satisfies PresenceState; /* SHORT_NAMED_ENUMERATED_VALUE */
+const inArea = PresenceState.inArea; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PresenceState_outOfArea
@@ -168,7 +168,7 @@ const inArea = PresenceState.inArea satisfies PresenceState; /* SHORT_NAMED_ENUM
  * @type {number}
  */
 export
-const PresenceState_outOfArea = PresenceState.outOfArea satisfies PresenceState; /* LONG_NAMED_ENUMERATED_VALUE */
+const PresenceState_outOfArea = PresenceState.outOfArea; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary outOfArea
@@ -182,7 +182,7 @@ const PresenceState_outOfArea = PresenceState.outOfArea satisfies PresenceState;
  * @type {number}
  */
 export
-const outOfArea = PresenceState.outOfArea satisfies PresenceState; /* SHORT_NAMED_ENUMERATED_VALUE */
+const outOfArea = PresenceState.outOfArea; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PresenceState_unknown
@@ -197,7 +197,7 @@ const outOfArea = PresenceState.outOfArea satisfies PresenceState; /* SHORT_NAME
  * @type {number}
  */
 export
-const PresenceState_unknown = PresenceState.unknown satisfies PresenceState; /* LONG_NAMED_ENUMERATED_VALUE */
+const PresenceState_unknown = PresenceState.unknown; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unknown
@@ -212,7 +212,7 @@ const PresenceState_unknown = PresenceState.unknown satisfies PresenceState; /* 
  * @type {number}
  */
 export
-const unknown = PresenceState.unknown satisfies PresenceState; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unknown = PresenceState.unknown; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PresenceState_inactive
@@ -226,7 +226,7 @@ const unknown = PresenceState.unknown satisfies PresenceState; /* SHORT_NAMED_EN
  * @type {number}
  */
 export
-const PresenceState_inactive = PresenceState.inactive satisfies PresenceState; /* LONG_NAMED_ENUMERATED_VALUE */
+const PresenceState_inactive = PresenceState.inactive; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary inactive
@@ -240,7 +240,7 @@ const PresenceState_inactive = PresenceState.inactive satisfies PresenceState; /
  * @type {number}
  */
 export
-const inactive = PresenceState.inactive satisfies PresenceState; /* SHORT_NAMED_ENUMERATED_VALUE */
+const inactive = PresenceState.inactive; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_PresenceState: $.ASN1Decoder<PresenceState> = $._decodeEnumerated;
 export const _encode_PresenceState: $.ASN1Encoder<PresenceState> = $._encodeEnumerated;
 

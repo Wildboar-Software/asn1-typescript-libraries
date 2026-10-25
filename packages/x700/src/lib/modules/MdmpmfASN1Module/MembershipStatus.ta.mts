@@ -95,7 +95,7 @@ export const MembershipStatus = _enum_for_MembershipStatus;
  * @type {number}
  */
 export const MembershipStatus_unknown =
-    MembershipStatus.unknown satisfies MembershipStatus; /* LONG_NAMED_ENUMERATED_VALUE */
+    MembershipStatus.unknown; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unknown
@@ -108,7 +108,7 @@ export const MembershipStatus_unknown =
  * @type {number}
  */
 export const unknown =
-    MembershipStatus.unknown satisfies MembershipStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
+    MembershipStatus.unknown; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MembershipStatus_member
@@ -120,7 +120,7 @@ export const unknown =
  * @type {number}
  */
 export const MembershipStatus_member =
-    MembershipStatus.member satisfies MembershipStatus; /* LONG_NAMED_ENUMERATED_VALUE */
+    MembershipStatus.member; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary member
@@ -132,7 +132,7 @@ export const MembershipStatus_member =
  * @type {number}
  */
 export const member =
-    MembershipStatus.member satisfies MembershipStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
+    MembershipStatus.member; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MembershipStatus_non_member
@@ -144,7 +144,7 @@ export const member =
  * @type {number}
  */
 export const MembershipStatus_non_member =
-    MembershipStatus.non_member satisfies MembershipStatus; /* LONG_NAMED_ENUMERATED_VALUE */
+    MembershipStatus.non_member; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary non_member
@@ -156,7 +156,7 @@ export const MembershipStatus_non_member =
  * @type {number}
  */
 export const non_member =
-    MembershipStatus.non_member satisfies MembershipStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
+    MembershipStatus.non_member; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 export function _decode_MembershipStatus(el: _Element): MembershipStatus {

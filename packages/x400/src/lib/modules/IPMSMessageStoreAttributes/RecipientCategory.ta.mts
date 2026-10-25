@@ -44,7 +44,7 @@ export const RecipientCategory_primary_recipient = 0 satisfies RecipientCategory
  * @constant
  * @type {number}
  */
-export const primary_recipient = RecipientCategory_primary_recipient satisfies RecipientCategory; /* SHORT_NAMED_INTEGER_VALUE */
+export const primary_recipient = RecipientCategory_primary_recipient; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecipientCategory_copy_recipient
@@ -58,7 +58,7 @@ export const RecipientCategory_copy_recipient = 1 satisfies RecipientCategory; /
  * @constant
  * @type {number}
  */
-export const copy_recipient = RecipientCategory_copy_recipient satisfies RecipientCategory; /* SHORT_NAMED_INTEGER_VALUE */
+export const copy_recipient = RecipientCategory_copy_recipient; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecipientCategory_blind_copy_recipient
@@ -72,7 +72,7 @@ export const RecipientCategory_blind_copy_recipient = 2 satisfies RecipientCateg
  * @constant
  * @type {number}
  */
-export const blind_copy_recipient = RecipientCategory_blind_copy_recipient satisfies RecipientCategory; /* SHORT_NAMED_INTEGER_VALUE */
+export const blind_copy_recipient = RecipientCategory_blind_copy_recipient; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecipientCategory_category_unknown
@@ -86,7 +86,7 @@ export const RecipientCategory_category_unknown = 3 satisfies RecipientCategory;
  * @constant
  * @type {number}
  */
-export const category_unknown = RecipientCategory_category_unknown satisfies RecipientCategory; /* SHORT_NAMED_INTEGER_VALUE */
+export const category_unknown = RecipientCategory_category_unknown; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecipientCategory_circulation_list
@@ -100,7 +100,7 @@ export const RecipientCategory_circulation_list = 4 satisfies RecipientCategory;
  * @constant
  * @type {number}
  */
-export const circulation_list = RecipientCategory_circulation_list satisfies RecipientCategory; /* SHORT_NAMED_INTEGER_VALUE */
+export const circulation_list = RecipientCategory_circulation_list; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_RecipientCategory = $._decodeInteger;

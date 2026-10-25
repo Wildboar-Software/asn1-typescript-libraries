@@ -77,7 +77,7 @@ export const ErrorRatioReportType = _enum_for_ErrorRatioReportType;
  * @type {number}
  */
 export const ErrorRatioReportType_errorBitNumber =
-    ErrorRatioReportType.errorBitNumber satisfies ErrorRatioReportType; /* LONG_NAMED_ENUMERATED_VALUE */
+    ErrorRatioReportType.errorBitNumber; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary errorBitNumber
@@ -88,7 +88,7 @@ export const ErrorRatioReportType_errorBitNumber =
  * @type {number}
  */
 export const errorBitNumber =
-    ErrorRatioReportType.errorBitNumber satisfies ErrorRatioReportType; /* SHORT_NAMED_ENUMERATED_VALUE */
+    ErrorRatioReportType.errorBitNumber; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ErrorRatioReportType_percentErrorSecond
@@ -99,7 +99,7 @@ export const errorBitNumber =
  * @type {number}
  */
 export const ErrorRatioReportType_percentErrorSecond =
-    ErrorRatioReportType.percentErrorSecond satisfies ErrorRatioReportType; /* LONG_NAMED_ENUMERATED_VALUE */
+    ErrorRatioReportType.percentErrorSecond; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary percentErrorSecond
@@ -110,7 +110,7 @@ export const ErrorRatioReportType_percentErrorSecond =
  * @type {number}
  */
 export const percentErrorSecond =
-    ErrorRatioReportType.percentErrorSecond satisfies ErrorRatioReportType; /* SHORT_NAMED_ENUMERATED_VALUE */
+    ErrorRatioReportType.percentErrorSecond; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 export function _decode_ErrorRatioReportType(el: _Element): ErrorRatioReportType {

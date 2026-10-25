@@ -63,7 +63,7 @@ const TrafficChannel = _enum_for_TrafficChannel;
  * @type {number}
  */
 export
-const TrafficChannel_fullRate = TrafficChannel.fullRate satisfies TrafficChannel; /* LONG_NAMED_ENUMERATED_VALUE */
+const TrafficChannel_fullRate = TrafficChannel.fullRate; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary fullRate
@@ -71,7 +71,7 @@ const TrafficChannel_fullRate = TrafficChannel.fullRate satisfies TrafficChannel
  * @type {number}
  */
 export
-const fullRate = TrafficChannel.fullRate satisfies TrafficChannel; /* SHORT_NAMED_ENUMERATED_VALUE */
+const fullRate = TrafficChannel.fullRate; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TrafficChannel_halfRate
@@ -79,7 +79,7 @@ const fullRate = TrafficChannel.fullRate satisfies TrafficChannel; /* SHORT_NAME
  * @type {number}
  */
 export
-const TrafficChannel_halfRate = TrafficChannel.halfRate satisfies TrafficChannel; /* LONG_NAMED_ENUMERATED_VALUE */
+const TrafficChannel_halfRate = TrafficChannel.halfRate; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary halfRate
@@ -87,7 +87,7 @@ const TrafficChannel_halfRate = TrafficChannel.halfRate satisfies TrafficChannel
  * @type {number}
  */
 export
-const halfRate = TrafficChannel.halfRate satisfies TrafficChannel; /* SHORT_NAMED_ENUMERATED_VALUE */
+const halfRate = TrafficChannel.halfRate; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_TrafficChannel: $.ASN1Decoder<TrafficChannel> = $._decodeEnumerated;

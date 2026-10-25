@@ -41,7 +41,7 @@ export const TSTInfo_version_v1 = 1 satisfies TSTInfo_version; /* LONG_NAMED_INT
  * @constant
  * @type {number}
  */
-export const v1 = TSTInfo_version_v1 satisfies TSTInfo_version; /* SHORT_NAMED_INTEGER_VALUE */
+export const v1 = TSTInfo_version_v1; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_TSTInfo_version = $._decodeInteger;

@@ -51,7 +51,7 @@ export const ActivateReply_responseCode_successResponse = 0 satisfies ActivateRe
  * @constant
  * @type {number}
  */
-export const successResponse = ActivateReply_responseCode_successResponse satisfies ActivateReply_responseCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const successResponse = ActivateReply_responseCode_successResponse; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ActivateReply_responseCode_serviceProviderErrorResponse
@@ -73,7 +73,7 @@ export const ActivateReply_responseCode_serviceProviderErrorResponse = 1 satisfi
  * @constant
  * @type {number}
  */
-export const serviceProviderErrorResponse = ActivateReply_responseCode_serviceProviderErrorResponse satisfies ActivateReply_responseCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const serviceProviderErrorResponse = ActivateReply_responseCode_serviceProviderErrorResponse; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_ActivateReply_responseCode = $._decodeInteger;

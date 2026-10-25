@@ -91,7 +91,7 @@ const PTCRegistrationRequest = _enum_for_PTCRegistrationRequest;
  * @type {number}
  */
 export
-const PTCRegistrationRequest_register = PTCRegistrationRequest.register satisfies PTCRegistrationRequest; /* LONG_NAMED_ENUMERATED_VALUE */
+const PTCRegistrationRequest_register = PTCRegistrationRequest.register; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary register
@@ -99,7 +99,7 @@ const PTCRegistrationRequest_register = PTCRegistrationRequest.register satisfie
  * @type {number}
  */
 export
-const register = PTCRegistrationRequest.register satisfies PTCRegistrationRequest; /* SHORT_NAMED_ENUMERATED_VALUE */
+const register = PTCRegistrationRequest.register; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PTCRegistrationRequest_reRegister
@@ -107,7 +107,7 @@ const register = PTCRegistrationRequest.register satisfies PTCRegistrationReques
  * @type {number}
  */
 export
-const PTCRegistrationRequest_reRegister = PTCRegistrationRequest.reRegister satisfies PTCRegistrationRequest; /* LONG_NAMED_ENUMERATED_VALUE */
+const PTCRegistrationRequest_reRegister = PTCRegistrationRequest.reRegister; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary reRegister
@@ -115,7 +115,7 @@ const PTCRegistrationRequest_reRegister = PTCRegistrationRequest.reRegister sati
  * @type {number}
  */
 export
-const reRegister = PTCRegistrationRequest.reRegister satisfies PTCRegistrationRequest; /* SHORT_NAMED_ENUMERATED_VALUE */
+const reRegister = PTCRegistrationRequest.reRegister; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PTCRegistrationRequest_deRegister
@@ -123,7 +123,7 @@ const reRegister = PTCRegistrationRequest.reRegister satisfies PTCRegistrationRe
  * @type {number}
  */
 export
-const PTCRegistrationRequest_deRegister = PTCRegistrationRequest.deRegister satisfies PTCRegistrationRequest; /* LONG_NAMED_ENUMERATED_VALUE */
+const PTCRegistrationRequest_deRegister = PTCRegistrationRequest.deRegister; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary deRegister
@@ -131,7 +131,7 @@ const PTCRegistrationRequest_deRegister = PTCRegistrationRequest.deRegister sati
  * @type {number}
  */
 export
-const deRegister = PTCRegistrationRequest.deRegister satisfies PTCRegistrationRequest; /* SHORT_NAMED_ENUMERATED_VALUE */
+const deRegister = PTCRegistrationRequest.deRegister; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_PTCRegistrationRequest: $.ASN1Decoder<PTCRegistrationRequest> = $._decodeEnumerated;
 export const _encode_PTCRegistrationRequest: $.ASN1Encoder<PTCRegistrationRequest> = $._encodeEnumerated;
 

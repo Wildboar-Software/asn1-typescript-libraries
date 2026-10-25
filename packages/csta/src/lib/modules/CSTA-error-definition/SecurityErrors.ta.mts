@@ -88,7 +88,7 @@ const SecurityErrors = _enum_for_SecurityErrors;
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const SecurityErrors_generic = SecurityErrors.generic satisfies SecurityErrors; /* LONG_NAMED_ENUMERATED_VALUE */
+const SecurityErrors_generic = SecurityErrors.generic; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary generic
@@ -97,7 +97,7 @@ const SecurityErrors_generic = SecurityErrors.generic satisfies SecurityErrors; 
  * @type {number}
  */
 export
-const generic = SecurityErrors.generic satisfies SecurityErrors; /* SHORT_NAMED_ENUMERATED_VALUE */
+const generic = SecurityErrors.generic; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SecurityErrors_sequenceNumberViolated
@@ -108,7 +108,7 @@ const generic = SecurityErrors.generic satisfies SecurityErrors; /* SHORT_NAMED_
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const SecurityErrors_sequenceNumberViolated = SecurityErrors.sequenceNumberViolated satisfies SecurityErrors; /* LONG_NAMED_ENUMERATED_VALUE */
+const SecurityErrors_sequenceNumberViolated = SecurityErrors.sequenceNumberViolated; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sequenceNumberViolated
@@ -117,7 +117,7 @@ const SecurityErrors_sequenceNumberViolated = SecurityErrors.sequenceNumberViola
  * @type {number}
  */
 export
-const sequenceNumberViolated = SecurityErrors.sequenceNumberViolated satisfies SecurityErrors; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sequenceNumberViolated = SecurityErrors.sequenceNumberViolated; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SecurityErrors_timeStampViolated
@@ -127,7 +127,7 @@ const sequenceNumberViolated = SecurityErrors.sequenceNumberViolated satisfies S
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const SecurityErrors_timeStampViolated = SecurityErrors.timeStampViolated satisfies SecurityErrors; /* LONG_NAMED_ENUMERATED_VALUE */
+const SecurityErrors_timeStampViolated = SecurityErrors.timeStampViolated; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary timeStampViolated
@@ -136,7 +136,7 @@ const SecurityErrors_timeStampViolated = SecurityErrors.timeStampViolated satisf
  * @type {number}
  */
 export
-const timeStampViolated = SecurityErrors.timeStampViolated satisfies SecurityErrors; /* SHORT_NAMED_ENUMERATED_VALUE */
+const timeStampViolated = SecurityErrors.timeStampViolated; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SecurityErrors_securityInfoViolated
@@ -146,7 +146,7 @@ const timeStampViolated = SecurityErrors.timeStampViolated satisfies SecurityErr
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const SecurityErrors_securityInfoViolated = SecurityErrors.securityInfoViolated satisfies SecurityErrors; /* LONG_NAMED_ENUMERATED_VALUE */
+const SecurityErrors_securityInfoViolated = SecurityErrors.securityInfoViolated; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary securityInfoViolated
@@ -155,7 +155,7 @@ const SecurityErrors_securityInfoViolated = SecurityErrors.securityInfoViolated 
  * @type {number}
  */
 export
-const securityInfoViolated = SecurityErrors.securityInfoViolated satisfies SecurityErrors; /* SHORT_NAMED_ENUMERATED_VALUE */
+const securityInfoViolated = SecurityErrors.securityInfoViolated; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 let _cached_decoder_for_SecurityErrors: $.ASN1Decoder<SecurityErrors> | null = null;
 

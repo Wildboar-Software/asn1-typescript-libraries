@@ -55,7 +55,7 @@ const ProcessingInformation_processingContext_access = 0 satisfies ProcessingInf
  * @type {number}
  */
 export
-const access = ProcessingInformation_processingContext_access satisfies ProcessingInformation_processingContext; /* SHORT_NAMED_INTEGER_VALUE */
+const access = ProcessingInformation_processingContext_access; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProcessingInformation_processingContext_search
@@ -77,7 +77,7 @@ const ProcessingInformation_processingContext_search = 1 satisfies ProcessingInf
  * @type {number}
  */
 export
-const search = ProcessingInformation_processingContext_search satisfies ProcessingInformation_processingContext; /* SHORT_NAMED_INTEGER_VALUE */
+const search = ProcessingInformation_processingContext_search; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProcessingInformation_processingContext_retrieval
@@ -99,7 +99,7 @@ const ProcessingInformation_processingContext_retrieval = 2 satisfies Processing
  * @type {number}
  */
 export
-const retrieval = ProcessingInformation_processingContext_retrieval satisfies ProcessingInformation_processingContext; /* SHORT_NAMED_INTEGER_VALUE */
+const retrieval = ProcessingInformation_processingContext_retrieval; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProcessingInformation_processingContext_record_presentation
@@ -121,7 +121,7 @@ const ProcessingInformation_processingContext_record_presentation = 3 satisfies 
  * @type {number}
  */
 export
-const record_presentation = ProcessingInformation_processingContext_record_presentation satisfies ProcessingInformation_processingContext; /* SHORT_NAMED_INTEGER_VALUE */
+const record_presentation = ProcessingInformation_processingContext_record_presentation; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProcessingInformation_processingContext_record_handling
@@ -143,7 +143,7 @@ const ProcessingInformation_processingContext_record_handling = 4 satisfies Proc
  * @type {number}
  */
 export
-const record_handling = ProcessingInformation_processingContext_record_handling satisfies ProcessingInformation_processingContext; /* SHORT_NAMED_INTEGER_VALUE */
+const record_handling = ProcessingInformation_processingContext_record_handling; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_ProcessingInformation_processingContext: $.ASN1Decoder<ProcessingInformation_processingContext> = $._decodeInteger;
 export const _encode_ProcessingInformation_processingContext: $.ASN1Encoder<ProcessingInformation_processingContext> = $._encodeInteger;
 

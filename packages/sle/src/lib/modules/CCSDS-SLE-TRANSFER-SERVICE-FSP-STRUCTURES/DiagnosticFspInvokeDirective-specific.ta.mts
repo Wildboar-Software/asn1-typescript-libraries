@@ -52,7 +52,7 @@ const DiagnosticFspInvokeDirective_specific_directiveInvocationNotAllowed = 0 sa
  * @type {number}
  */
 export
-const directiveInvocationNotAllowed = DiagnosticFspInvokeDirective_specific_directiveInvocationNotAllowed satisfies DiagnosticFspInvokeDirective_specific; /* SHORT_NAMED_INTEGER_VALUE */
+const directiveInvocationNotAllowed = DiagnosticFspInvokeDirective_specific_directiveInvocationNotAllowed; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagnosticFspInvokeDirective_specific_directiveIdentificationOutOfSequence
@@ -77,7 +77,7 @@ const DiagnosticFspInvokeDirective_specific_directiveIdentificationOutOfSequence
  * @type {number}
  */
 export
-const directiveIdentificationOutOfSequence = DiagnosticFspInvokeDirective_specific_directiveIdentificationOutOfSequence satisfies DiagnosticFspInvokeDirective_specific; /* SHORT_NAMED_INTEGER_VALUE */
+const directiveIdentificationOutOfSequence = DiagnosticFspInvokeDirective_specific_directiveIdentificationOutOfSequence; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagnosticFspInvokeDirective_specific_directiveError
@@ -103,7 +103,7 @@ const DiagnosticFspInvokeDirective_specific_directiveError = 2 satisfies Diagnos
  * @type {number}
  */
 export
-const directiveError = DiagnosticFspInvokeDirective_specific_directiveError satisfies DiagnosticFspInvokeDirective_specific; /* SHORT_NAMED_INTEGER_VALUE */
+const directiveError = DiagnosticFspInvokeDirective_specific_directiveError; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_DiagnosticFspInvokeDirective_specific: $.ASN1Decoder<DiagnosticFspInvokeDirective_specific> = $._decodeInteger;
 export const _encode_DiagnosticFspInvokeDirective_specific: $.ASN1Encoder<DiagnosticFspInvokeDirective_specific> = $._encodeInteger;
 

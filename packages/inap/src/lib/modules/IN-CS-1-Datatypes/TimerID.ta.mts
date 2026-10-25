@@ -63,7 +63,7 @@ const TimerID = _enum_for_TimerID;
  * @type {number}
  */
 export
-const TimerID_tssf = TimerID.tssf satisfies TimerID; /* LONG_NAMED_ENUMERATED_VALUE */
+const TimerID_tssf = TimerID.tssf; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tssf
@@ -71,7 +71,7 @@ const TimerID_tssf = TimerID.tssf satisfies TimerID; /* LONG_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const tssf = TimerID.tssf satisfies TimerID; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tssf = TimerID.tssf; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 function _decode_TimerID(el: _Element): TimerID {

@@ -75,7 +75,7 @@ const CallTypeCriteria = _enum_for_CallTypeCriteria;
  * @type {number}
  */
 export
-const CallTypeCriteria_forwarded = CallTypeCriteria.forwarded satisfies CallTypeCriteria; /* LONG_NAMED_ENUMERATED_VALUE */
+const CallTypeCriteria_forwarded = CallTypeCriteria.forwarded; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary forwarded
@@ -83,7 +83,7 @@ const CallTypeCriteria_forwarded = CallTypeCriteria.forwarded satisfies CallType
  * @type {number}
  */
 export
-const forwarded = CallTypeCriteria.forwarded satisfies CallTypeCriteria; /* SHORT_NAMED_ENUMERATED_VALUE */
+const forwarded = CallTypeCriteria.forwarded; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CallTypeCriteria_notForwarded
@@ -91,7 +91,7 @@ const forwarded = CallTypeCriteria.forwarded satisfies CallTypeCriteria; /* SHOR
  * @type {number}
  */
 export
-const CallTypeCriteria_notForwarded = CallTypeCriteria.notForwarded satisfies CallTypeCriteria; /* LONG_NAMED_ENUMERATED_VALUE */
+const CallTypeCriteria_notForwarded = CallTypeCriteria.notForwarded; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary notForwarded
@@ -99,7 +99,7 @@ const CallTypeCriteria_notForwarded = CallTypeCriteria.notForwarded satisfies Ca
  * @type {number}
  */
 export
-const notForwarded = CallTypeCriteria.notForwarded satisfies CallTypeCriteria; /* SHORT_NAMED_ENUMERATED_VALUE */
+const notForwarded = CallTypeCriteria.notForwarded; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) CallTypeCriteria

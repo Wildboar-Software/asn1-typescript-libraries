@@ -46,7 +46,7 @@ const IMEICheckEvent_mobileOriginatedCall = 0 satisfies IMEICheckEvent; /* LONG_
  * @type {number}
  */
 export
-const mobileOriginatedCall = IMEICheckEvent_mobileOriginatedCall satisfies IMEICheckEvent; /* SHORT_NAMED_INTEGER_VALUE */
+const mobileOriginatedCall = IMEICheckEvent_mobileOriginatedCall; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary IMEICheckEvent_mobileTerminatedCall
@@ -62,7 +62,7 @@ const IMEICheckEvent_mobileTerminatedCall = 1 satisfies IMEICheckEvent; /* LONG_
  * @type {number}
  */
 export
-const mobileTerminatedCall = IMEICheckEvent_mobileTerminatedCall satisfies IMEICheckEvent; /* SHORT_NAMED_INTEGER_VALUE */
+const mobileTerminatedCall = IMEICheckEvent_mobileTerminatedCall; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary IMEICheckEvent_smsMobileOriginating
@@ -78,7 +78,7 @@ const IMEICheckEvent_smsMobileOriginating = 2 satisfies IMEICheckEvent; /* LONG_
  * @type {number}
  */
 export
-const smsMobileOriginating = IMEICheckEvent_smsMobileOriginating satisfies IMEICheckEvent; /* SHORT_NAMED_INTEGER_VALUE */
+const smsMobileOriginating = IMEICheckEvent_smsMobileOriginating; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary IMEICheckEvent_smsMobileTerminating
@@ -94,7 +94,7 @@ const IMEICheckEvent_smsMobileTerminating = 3 satisfies IMEICheckEvent; /* LONG_
  * @type {number}
  */
 export
-const smsMobileTerminating = IMEICheckEvent_smsMobileTerminating satisfies IMEICheckEvent; /* SHORT_NAMED_INTEGER_VALUE */
+const smsMobileTerminating = IMEICheckEvent_smsMobileTerminating; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary IMEICheckEvent_ssAction
@@ -110,7 +110,7 @@ const IMEICheckEvent_ssAction = 4 satisfies IMEICheckEvent; /* LONG_NAMED_INTEGE
  * @type {number}
  */
 export
-const ssAction = IMEICheckEvent_ssAction satisfies IMEICheckEvent; /* SHORT_NAMED_INTEGER_VALUE */
+const ssAction = IMEICheckEvent_ssAction; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary IMEICheckEvent_locationUpdate
@@ -126,7 +126,7 @@ const IMEICheckEvent_locationUpdate = 5 satisfies IMEICheckEvent; /* LONG_NAMED_
  * @type {number}
  */
 export
-const locationUpdate = IMEICheckEvent_locationUpdate satisfies IMEICheckEvent; /* SHORT_NAMED_INTEGER_VALUE */
+const locationUpdate = IMEICheckEvent_locationUpdate; /* SHORT_NAMED_INTEGER_VALUE */
 
 export
 const _decode_IMEICheckEvent: $.ASN1Decoder<IMEICheckEvent> = $._decodeInteger;

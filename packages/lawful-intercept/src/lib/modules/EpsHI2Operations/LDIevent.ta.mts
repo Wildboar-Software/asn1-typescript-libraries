@@ -51,7 +51,7 @@ type LDIevent = _enum_for_LDIevent | ENUMERATED;
  * @type {number}
  */
 export
-const LDIevent_targetEntersIA = _enum_for_LDIevent.targetEntersIA satisfies LDIevent; /* LONG_NAMED_ENUMERATED_VALUE */
+const LDIevent_targetEntersIA = _enum_for_LDIevent.targetEntersIA; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary targetEntersIA
@@ -63,7 +63,7 @@ const LDIevent_targetEntersIA = _enum_for_LDIevent.targetEntersIA satisfies LDIe
  * @type {number}
  */
 export
-const targetEntersIA = LDIevent_targetEntersIA satisfies LDIevent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const targetEntersIA = LDIevent_targetEntersIA; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LDIevent_targetLeavesIA
@@ -76,7 +76,7 @@ const targetEntersIA = LDIevent_targetEntersIA satisfies LDIevent; /* SHORT_NAME
  * @type {number}
  */
 export
-const LDIevent_targetLeavesIA = _enum_for_LDIevent.targetLeavesIA satisfies LDIevent; /* LONG_NAMED_ENUMERATED_VALUE */
+const LDIevent_targetLeavesIA = _enum_for_LDIevent.targetLeavesIA; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary targetLeavesIA
@@ -88,7 +88,7 @@ const LDIevent_targetLeavesIA = _enum_for_LDIevent.targetLeavesIA satisfies LDIe
  * @type {number}
  */
 export
-const targetLeavesIA = LDIevent_targetLeavesIA satisfies LDIevent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const targetLeavesIA = LDIevent_targetLeavesIA; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_LDIevent: $.ASN1Decoder<LDIevent> = $._decodeEnumerated;
 export const _encode_LDIevent: $.ASN1Encoder<LDIevent> = $._encodeEnumerated;
 

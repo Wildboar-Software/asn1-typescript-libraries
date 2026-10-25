@@ -48,7 +48,7 @@ const SortKeySpec_caseSensitivity_caseSensitive = 0 satisfies SortKeySpec_caseSe
  * @type {number}
  */
 export
-const caseSensitive = SortKeySpec_caseSensitivity_caseSensitive satisfies SortKeySpec_caseSensitivity; /* SHORT_NAMED_INTEGER_VALUE */
+const caseSensitive = SortKeySpec_caseSensitivity_caseSensitive; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SortKeySpec_caseSensitivity_caseInsensitive
@@ -74,7 +74,7 @@ const SortKeySpec_caseSensitivity_caseInsensitive = 1 satisfies SortKeySpec_case
  * @type {number}
  */
 export
-const caseInsensitive = SortKeySpec_caseSensitivity_caseInsensitive satisfies SortKeySpec_caseSensitivity; /* SHORT_NAMED_INTEGER_VALUE */
+const caseInsensitive = SortKeySpec_caseSensitivity_caseInsensitive; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_SortKeySpec_caseSensitivity: $.ASN1Decoder<SortKeySpec_caseSensitivity> = $._decodeInteger;
 export const _encode_SortKeySpec_caseSensitivity: $.ASN1Encoder<SortKeySpec_caseSensitivity> = $._encodeInteger;
 

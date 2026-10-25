@@ -45,7 +45,7 @@ const SetDefaultDpAddressResponse_setDefaultDpAddressResult_ok = 0 satisfies Set
  * @type {number}
  */
 export
-const ok = SetDefaultDpAddressResponse_setDefaultDpAddressResult_ok satisfies SetDefaultDpAddressResponse_setDefaultDpAddressResult; /* SHORT_NAMED_INTEGER_VALUE */
+const ok = SetDefaultDpAddressResponse_setDefaultDpAddressResult_ok; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SetDefaultDpAddressResponse_setDefaultDpAddressResult_undefinedError
@@ -68,7 +68,7 @@ const SetDefaultDpAddressResponse_setDefaultDpAddressResult_undefinedError = 127
  * @type {number}
  */
 export
-const undefinedError = SetDefaultDpAddressResponse_setDefaultDpAddressResult_undefinedError satisfies SetDefaultDpAddressResponse_setDefaultDpAddressResult; /* SHORT_NAMED_INTEGER_VALUE */
+const undefinedError = SetDefaultDpAddressResponse_setDefaultDpAddressResult_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_SetDefaultDpAddressResponse_setDefaultDpAddressResult: $.ASN1Decoder<SetDefaultDpAddressResponse_setDefaultDpAddressResult> = $._decodeInteger;
 export const _encode_SetDefaultDpAddressResponse_setDefaultDpAddressResult: $.ASN1Encoder<SetDefaultDpAddressResponse_setDefaultDpAddressResult> = $._encodeInteger;
 

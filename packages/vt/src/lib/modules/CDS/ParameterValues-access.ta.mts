@@ -53,7 +53,7 @@ const ParameterValues_access_wavar = 0 satisfies ParameterValues_access; /* LONG
  * @type {number}
  */
 export
-const wavar = ParameterValues_access_wavar satisfies ParameterValues_access; /* SHORT_NAMED_INTEGER_VALUE */
+const wavar = ParameterValues_access_wavar; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterValues_access_waci
@@ -77,7 +77,7 @@ const ParameterValues_access_waci = 1 satisfies ParameterValues_access; /* LONG_
  * @type {number}
  */
 export
-const waci = ParameterValues_access_waci satisfies ParameterValues_access; /* SHORT_NAMED_INTEGER_VALUE */
+const waci = ParameterValues_access_waci; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterValues_access_waca
@@ -101,7 +101,7 @@ const ParameterValues_access_waca = 2 satisfies ParameterValues_access; /* LONG_
  * @type {number}
  */
 export
-const waca = ParameterValues_access_waca satisfies ParameterValues_access; /* SHORT_NAMED_INTEGER_VALUE */
+const waca = ParameterValues_access_waca; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_ParameterValues_access = $._decodeInteger;
 export const _encode_ParameterValues_access = $._encodeInteger;
 

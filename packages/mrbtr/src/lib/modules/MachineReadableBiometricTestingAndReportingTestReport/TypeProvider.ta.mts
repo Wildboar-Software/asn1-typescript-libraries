@@ -97,7 +97,7 @@ const TypeProvider = _enum_for_TypeProvider;
  * @type {number}
  */
 export
-const TypeProvider_non_profit = TypeProvider.non_profit satisfies TypeProvider; /* LONG_NAMED_ENUMERATED_VALUE */
+const TypeProvider_non_profit = TypeProvider.non_profit; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary non_profit
@@ -105,7 +105,7 @@ const TypeProvider_non_profit = TypeProvider.non_profit satisfies TypeProvider; 
  * @type {number}
  */
 export
-const non_profit = TypeProvider.non_profit satisfies TypeProvider; /* SHORT_NAMED_ENUMERATED_VALUE */
+const non_profit = TypeProvider.non_profit; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TypeProvider_university
@@ -113,7 +113,7 @@ const non_profit = TypeProvider.non_profit satisfies TypeProvider; /* SHORT_NAME
  * @type {number}
  */
 export
-const TypeProvider_university = TypeProvider.university satisfies TypeProvider; /* LONG_NAMED_ENUMERATED_VALUE */
+const TypeProvider_university = TypeProvider.university; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary university
@@ -121,7 +121,7 @@ const TypeProvider_university = TypeProvider.university satisfies TypeProvider; 
  * @type {number}
  */
 export
-const university = TypeProvider.university satisfies TypeProvider; /* SHORT_NAMED_ENUMERATED_VALUE */
+const university = TypeProvider.university; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TypeProvider_corporation
@@ -129,7 +129,7 @@ const university = TypeProvider.university satisfies TypeProvider; /* SHORT_NAME
  * @type {number}
  */
 export
-const TypeProvider_corporation = TypeProvider.corporation satisfies TypeProvider; /* LONG_NAMED_ENUMERATED_VALUE */
+const TypeProvider_corporation = TypeProvider.corporation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary corporation
@@ -137,7 +137,7 @@ const TypeProvider_corporation = TypeProvider.corporation satisfies TypeProvider
  * @type {number}
  */
 export
-const corporation = TypeProvider.corporation satisfies TypeProvider; /* SHORT_NAMED_ENUMERATED_VALUE */
+const corporation = TypeProvider.corporation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TypeProvider_individual
@@ -145,7 +145,7 @@ const corporation = TypeProvider.corporation satisfies TypeProvider; /* SHORT_NA
  * @type {number}
  */
 export
-const TypeProvider_individual = TypeProvider.individual satisfies TypeProvider; /* LONG_NAMED_ENUMERATED_VALUE */
+const TypeProvider_individual = TypeProvider.individual; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary individual
@@ -153,7 +153,7 @@ const TypeProvider_individual = TypeProvider.individual satisfies TypeProvider; 
  * @type {number}
  */
 export
-const individual = TypeProvider.individual satisfies TypeProvider; /* SHORT_NAMED_ENUMERATED_VALUE */
+const individual = TypeProvider.individual; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TypeProvider_government
@@ -161,7 +161,7 @@ const individual = TypeProvider.individual satisfies TypeProvider; /* SHORT_NAME
  * @type {number}
  */
 export
-const TypeProvider_government = TypeProvider.government satisfies TypeProvider; /* LONG_NAMED_ENUMERATED_VALUE */
+const TypeProvider_government = TypeProvider.government; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary government
@@ -169,7 +169,7 @@ const TypeProvider_government = TypeProvider.government satisfies TypeProvider; 
  * @type {number}
  */
 export
-const government = TypeProvider.government satisfies TypeProvider; /* SHORT_NAMED_ENUMERATED_VALUE */
+const government = TypeProvider.government; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**

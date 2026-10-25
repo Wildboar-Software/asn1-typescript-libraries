@@ -44,7 +44,7 @@ export type InitiateLoopbackError =
  * @constant
  * @type {number}
  */
-export const InitiateLoopbackError_unavailableLCS = _enum_for_InitiateLoopbackError.unavailableLCS satisfies InitiateLoopbackError; /* LONG_NAMED_ENUMERATED_VALUE */
+export const InitiateLoopbackError_unavailableLCS = _enum_for_InitiateLoopbackError.unavailableLCS; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -52,7 +52,7 @@ export const InitiateLoopbackError_unavailableLCS = _enum_for_InitiateLoopbackEr
  * @constant
  * @type {number}
  */
-export const unavailableLCS = InitiateLoopbackError_unavailableLCS satisfies InitiateLoopbackError; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const unavailableLCS = InitiateLoopbackError_unavailableLCS; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -60,7 +60,7 @@ export const unavailableLCS = InitiateLoopbackError_unavailableLCS satisfies Ini
  * @constant
  * @type {number}
  */
-export const InitiateLoopbackError_offDutyLCS = _enum_for_InitiateLoopbackError.offDutyLCS satisfies InitiateLoopbackError; /* LONG_NAMED_ENUMERATED_VALUE */
+export const InitiateLoopbackError_offDutyLCS = _enum_for_InitiateLoopbackError.offDutyLCS; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -68,7 +68,7 @@ export const InitiateLoopbackError_offDutyLCS = _enum_for_InitiateLoopbackError.
  * @constant
  * @type {number}
  */
-export const offDutyLCS = InitiateLoopbackError_offDutyLCS satisfies InitiateLoopbackError; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const offDutyLCS = InitiateLoopbackError_offDutyLCS; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -76,7 +76,7 @@ export const offDutyLCS = InitiateLoopbackError_offDutyLCS satisfies InitiateLoo
  * @constant
  * @type {number}
  */
-export const InitiateLoopbackError_loopbackNotSupported = _enum_for_InitiateLoopbackError.loopbackNotSupported satisfies InitiateLoopbackError; /* LONG_NAMED_ENUMERATED_VALUE */
+export const InitiateLoopbackError_loopbackNotSupported = _enum_for_InitiateLoopbackError.loopbackNotSupported; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -84,7 +84,7 @@ export const InitiateLoopbackError_loopbackNotSupported = _enum_for_InitiateLoop
  * @constant
  * @type {number}
  */
-export const loopbackNotSupported = InitiateLoopbackError_loopbackNotSupported satisfies InitiateLoopbackError; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const loopbackNotSupported = InitiateLoopbackError_loopbackNotSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 

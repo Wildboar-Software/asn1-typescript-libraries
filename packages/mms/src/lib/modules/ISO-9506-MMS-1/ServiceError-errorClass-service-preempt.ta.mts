@@ -60,7 +60,7 @@ const ServiceError_errorClass_service_preempt_other = 0 satisfies ServiceError_e
  * @type {number}
  */
 export
-const other = ServiceError_errorClass_service_preempt_other satisfies ServiceError_errorClass_service_preempt; /* SHORT_NAMED_INTEGER_VALUE */
+const other = ServiceError_errorClass_service_preempt_other; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceError_errorClass_service_preempt_timeout
@@ -86,7 +86,7 @@ const ServiceError_errorClass_service_preempt_timeout = 1 satisfies ServiceError
  * @type {number}
  */
 export
-const timeout = ServiceError_errorClass_service_preempt_timeout satisfies ServiceError_errorClass_service_preempt; /* SHORT_NAMED_INTEGER_VALUE */
+const timeout = ServiceError_errorClass_service_preempt_timeout; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceError_errorClass_service_preempt_deadlock
@@ -112,7 +112,7 @@ const ServiceError_errorClass_service_preempt_deadlock = 2 satisfies ServiceErro
  * @type {number}
  */
 export
-const deadlock = ServiceError_errorClass_service_preempt_deadlock satisfies ServiceError_errorClass_service_preempt; /* SHORT_NAMED_INTEGER_VALUE */
+const deadlock = ServiceError_errorClass_service_preempt_deadlock; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceError_errorClass_service_preempt_cancel
@@ -136,7 +136,7 @@ const ServiceError_errorClass_service_preempt_cancel = 3 satisfies ServiceError_
  * @type {number}
  */
 export
-const cancel = ServiceError_errorClass_service_preempt_cancel satisfies ServiceError_errorClass_service_preempt; /* SHORT_NAMED_INTEGER_VALUE */
+const cancel = ServiceError_errorClass_service_preempt_cancel; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_ServiceError_errorClass_service_preempt = $._decodeInteger;
 export const _encode_ServiceError_errorClass_service_preempt = $._encodeInteger;
 

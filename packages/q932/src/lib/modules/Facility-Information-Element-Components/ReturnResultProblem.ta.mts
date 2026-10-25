@@ -53,7 +53,7 @@ const ReturnResultProblem_unrecognizedInvocation = 0 satisfies ReturnResultProbl
  * @type {number}
  */
 export
-const unrecognizedInvocation = ReturnResultProblem_unrecognizedInvocation satisfies ReturnResultProblem; /* SHORT_NAMED_INTEGER_VALUE */
+const unrecognizedInvocation = ReturnResultProblem_unrecognizedInvocation; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ReturnResultProblem_resultResponseUnexpected
@@ -79,7 +79,7 @@ const ReturnResultProblem_resultResponseUnexpected = 1 satisfies ReturnResultPro
  * @type {number}
  */
 export
-const resultResponseUnexpected = ReturnResultProblem_resultResponseUnexpected satisfies ReturnResultProblem; /* SHORT_NAMED_INTEGER_VALUE */
+const resultResponseUnexpected = ReturnResultProblem_resultResponseUnexpected; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ReturnResultProblem_mistypedResult
@@ -105,7 +105,7 @@ const ReturnResultProblem_mistypedResult = 2 satisfies ReturnResultProblem; /* L
  * @type {number}
  */
 export
-const mistypedResult = ReturnResultProblem_mistypedResult satisfies ReturnResultProblem; /* SHORT_NAMED_INTEGER_VALUE */
+const mistypedResult = ReturnResultProblem_mistypedResult; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_ReturnResultProblem: $.ASN1Decoder<ReturnResultProblem> = $._decodeInteger;
 export const _encode_ReturnResultProblem: $.ASN1Encoder<ReturnResultProblem> = $._encodeInteger;
 

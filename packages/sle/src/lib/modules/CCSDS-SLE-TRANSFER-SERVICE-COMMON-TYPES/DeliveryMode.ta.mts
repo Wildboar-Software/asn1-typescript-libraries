@@ -59,7 +59,7 @@ const DeliveryMode_rtnTimelyOnline = 0 satisfies DeliveryMode; /* LONG_NAMED_INT
  * @type {number}
  */
 export
-const rtnTimelyOnline = DeliveryMode_rtnTimelyOnline satisfies DeliveryMode; /* SHORT_NAMED_INTEGER_VALUE */
+const rtnTimelyOnline = DeliveryMode_rtnTimelyOnline; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeliveryMode_rtnCompleteOnline
@@ -90,7 +90,7 @@ const DeliveryMode_rtnCompleteOnline = 1 satisfies DeliveryMode; /* LONG_NAMED_I
  * @type {number}
  */
 export
-const rtnCompleteOnline = DeliveryMode_rtnCompleteOnline satisfies DeliveryMode; /* SHORT_NAMED_INTEGER_VALUE */
+const rtnCompleteOnline = DeliveryMode_rtnCompleteOnline; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeliveryMode_rtnOffline
@@ -120,7 +120,7 @@ const DeliveryMode_rtnOffline = 2 satisfies DeliveryMode; /* LONG_NAMED_INTEGER_
  * @type {number}
  */
 export
-const rtnOffline = DeliveryMode_rtnOffline satisfies DeliveryMode; /* SHORT_NAMED_INTEGER_VALUE */
+const rtnOffline = DeliveryMode_rtnOffline; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeliveryMode_fwdOnline
@@ -146,7 +146,7 @@ const DeliveryMode_fwdOnline = 3 satisfies DeliveryMode; /* LONG_NAMED_INTEGER_V
  * @type {number}
  */
 export
-const fwdOnline = DeliveryMode_fwdOnline satisfies DeliveryMode; /* SHORT_NAMED_INTEGER_VALUE */
+const fwdOnline = DeliveryMode_fwdOnline; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeliveryMode_fwdOffline
@@ -172,7 +172,7 @@ const DeliveryMode_fwdOffline = 4 satisfies DeliveryMode; /* LONG_NAMED_INTEGER_
  * @type {number}
  */
 export
-const fwdOffline = DeliveryMode_fwdOffline satisfies DeliveryMode; /* SHORT_NAMED_INTEGER_VALUE */
+const fwdOffline = DeliveryMode_fwdOffline; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_DeliveryMode: $.ASN1Decoder<DeliveryMode> = $._decodeInteger;
 export const _encode_DeliveryMode: $.ASN1Encoder<DeliveryMode> = $._encodeInteger;
 

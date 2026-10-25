@@ -78,7 +78,7 @@ const AuthCtmRes_result = _enum_for_AuthCtmRes_result;
  * @type {number}
  */
 export
-const AuthCtmRes_result_auth_res_correct = AuthCtmRes_result.auth_res_correct satisfies AuthCtmRes_result; /* LONG_NAMED_ENUMERATED_VALUE */
+const AuthCtmRes_result_auth_res_correct = AuthCtmRes_result.auth_res_correct; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary auth_res_correct
@@ -87,7 +87,7 @@ const AuthCtmRes_result_auth_res_correct = AuthCtmRes_result.auth_res_correct sa
  * @type {number}
  */
 export
-const auth_res_correct = AuthCtmRes_result.auth_res_correct satisfies AuthCtmRes_result; /* SHORT_NAMED_ENUMERATED_VALUE */
+const auth_res_correct = AuthCtmRes_result.auth_res_correct; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AuthCtmRes_result_auth_res_incorrect
@@ -98,7 +98,7 @@ const auth_res_correct = AuthCtmRes_result.auth_res_correct satisfies AuthCtmRes
  * @type {number}
  */
 export
-const AuthCtmRes_result_auth_res_incorrect = AuthCtmRes_result.auth_res_incorrect satisfies AuthCtmRes_result; /* LONG_NAMED_ENUMERATED_VALUE */
+const AuthCtmRes_result_auth_res_incorrect = AuthCtmRes_result.auth_res_incorrect; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary auth_res_incorrect
@@ -107,7 +107,7 @@ const AuthCtmRes_result_auth_res_incorrect = AuthCtmRes_result.auth_res_incorrec
  * @type {number}
  */
 export
-const auth_res_incorrect = AuthCtmRes_result.auth_res_incorrect satisfies AuthCtmRes_result; /* SHORT_NAMED_ENUMERATED_VALUE */
+const auth_res_incorrect = AuthCtmRes_result.auth_res_incorrect; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_AuthCtmRes_result: $.ASN1Decoder<AuthCtmRes_result> = $._decodeEnumerated;

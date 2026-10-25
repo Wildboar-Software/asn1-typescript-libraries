@@ -29,7 +29,7 @@ export const PFX_version_v3 = 3 satisfies PFX_version; /* LONG_NAMED_INTEGER_VAL
  * @constant
  * @type {number}
  */
-export const v3 = PFX_version_v3 satisfies PFX_version; /* SHORT_NAMED_INTEGER_VALUE */
+export const v3 = PFX_version_v3; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 

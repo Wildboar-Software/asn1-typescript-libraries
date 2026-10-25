@@ -44,7 +44,7 @@ export const FADU_Identity_begin_end_begin = 0 satisfies FADU_Identity_begin_end
  * @constant
  * @type {number}
  */
-export const begin = FADU_Identity_begin_end_begin satisfies FADU_Identity_begin_end; /* SHORT_NAMED_INTEGER_VALUE */
+export const begin = FADU_Identity_begin_end_begin; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -62,7 +62,7 @@ export const FADU_Identity_begin_end_end = 1 satisfies FADU_Identity_begin_end; 
  * @constant
  * @type {number}
  */
-export const end = FADU_Identity_begin_end_end satisfies FADU_Identity_begin_end; /* SHORT_NAMED_INTEGER_VALUE */
+export const end = FADU_Identity_begin_end_end; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 

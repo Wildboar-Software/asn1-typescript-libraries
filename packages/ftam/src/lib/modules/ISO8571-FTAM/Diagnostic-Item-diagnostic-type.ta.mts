@@ -49,7 +49,7 @@ export const Diagnostic_Item_diagnostic_type_informative = 0 satisfies Diagnosti
  * @constant
  * @type {number}
  */
-export const informative = Diagnostic_Item_diagnostic_type_informative satisfies Diagnostic_Item_diagnostic_type; /* SHORT_NAMED_INTEGER_VALUE */
+export const informative = Diagnostic_Item_diagnostic_type_informative; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -70,7 +70,7 @@ export const Diagnostic_Item_diagnostic_type_transient = 1 satisfies Diagnostic_
  * @constant
  * @type {number}
  */
-export const transient = Diagnostic_Item_diagnostic_type_transient satisfies Diagnostic_Item_diagnostic_type; /* SHORT_NAMED_INTEGER_VALUE */
+export const transient = Diagnostic_Item_diagnostic_type_transient; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -91,7 +91,7 @@ export const Diagnostic_Item_diagnostic_type_permanent = 2 satisfies Diagnostic_
  * @constant
  * @type {number}
  */
-export const permanent = Diagnostic_Item_diagnostic_type_permanent satisfies Diagnostic_Item_diagnostic_type; /* SHORT_NAMED_INTEGER_VALUE */
+export const permanent = Diagnostic_Item_diagnostic_type_permanent; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 

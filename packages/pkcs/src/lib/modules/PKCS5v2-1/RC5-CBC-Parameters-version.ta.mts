@@ -29,7 +29,7 @@ export const RC5_CBC_Parameters_version_v1_0 = 16 satisfies RC5_CBC_Parameters_v
  * @constant
  * @type {number}
  */
-export const v1_0 = RC5_CBC_Parameters_version_v1_0 satisfies RC5_CBC_Parameters_version; /* SHORT_NAMED_INTEGER_VALUE */
+export const v1_0 = RC5_CBC_Parameters_version_v1_0; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 

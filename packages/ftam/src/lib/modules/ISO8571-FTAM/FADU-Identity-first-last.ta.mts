@@ -43,7 +43,7 @@ export const FADU_Identity_first_last_first = 0 satisfies FADU_Identity_first_la
  * @constant
  * @type {number}
  */
-export const first = FADU_Identity_first_last_first satisfies FADU_Identity_first_last; /* SHORT_NAMED_INTEGER_VALUE */
+export const first = FADU_Identity_first_last_first; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -61,7 +61,7 @@ export const FADU_Identity_first_last_last = 1 satisfies FADU_Identity_first_las
  * @constant
  * @type {number}
  */
-export const last = FADU_Identity_first_last_last satisfies FADU_Identity_first_last; /* SHORT_NAMED_INTEGER_VALUE */
+export const last = FADU_Identity_first_last_last; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 

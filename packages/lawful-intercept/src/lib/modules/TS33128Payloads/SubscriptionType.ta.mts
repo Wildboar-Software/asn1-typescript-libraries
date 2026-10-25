@@ -91,7 +91,7 @@ const SubscriptionType = _enum_for_SubscriptionType;
  * @type {number}
  */
 export
-const SubscriptionType_subscription = SubscriptionType.subscription satisfies SubscriptionType; /* LONG_NAMED_ENUMERATED_VALUE */
+const SubscriptionType_subscription = SubscriptionType.subscription; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary subscription
@@ -99,7 +99,7 @@ const SubscriptionType_subscription = SubscriptionType.subscription satisfies Su
  * @type {number}
  */
 export
-const subscription = SubscriptionType.subscription satisfies SubscriptionType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const subscription = SubscriptionType.subscription; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SubscriptionType_subscriptionUpdate
@@ -107,7 +107,7 @@ const subscription = SubscriptionType.subscription satisfies SubscriptionType; /
  * @type {number}
  */
 export
-const SubscriptionType_subscriptionUpdate = SubscriptionType.subscriptionUpdate satisfies SubscriptionType; /* LONG_NAMED_ENUMERATED_VALUE */
+const SubscriptionType_subscriptionUpdate = SubscriptionType.subscriptionUpdate; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary subscriptionUpdate
@@ -115,7 +115,7 @@ const SubscriptionType_subscriptionUpdate = SubscriptionType.subscriptionUpdate 
  * @type {number}
  */
 export
-const subscriptionUpdate = SubscriptionType.subscriptionUpdate satisfies SubscriptionType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const subscriptionUpdate = SubscriptionType.subscriptionUpdate; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SubscriptionType_unsubscription
@@ -123,7 +123,7 @@ const subscriptionUpdate = SubscriptionType.subscriptionUpdate satisfies Subscri
  * @type {number}
  */
 export
-const SubscriptionType_unsubscription = SubscriptionType.unsubscription satisfies SubscriptionType; /* LONG_NAMED_ENUMERATED_VALUE */
+const SubscriptionType_unsubscription = SubscriptionType.unsubscription; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unsubscription
@@ -131,7 +131,7 @@ const SubscriptionType_unsubscription = SubscriptionType.unsubscription satisfie
  * @type {number}
  */
 export
-const unsubscription = SubscriptionType.unsubscription satisfies SubscriptionType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unsubscription = SubscriptionType.unsubscription; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_SubscriptionType: $.ASN1Decoder<SubscriptionType> = $._decodeEnumerated;
 export const _encode_SubscriptionType: $.ASN1Encoder<SubscriptionType> = $._encodeEnumerated;
 

@@ -88,7 +88,7 @@ const LampBrightness = _enum_for_LampBrightness;
  * @type {number}
  */
 export
-const LampBrightness_unspecified = LampBrightness.unspecified satisfies LampBrightness; /* LONG_NAMED_ENUMERATED_VALUE */
+const LampBrightness_unspecified = LampBrightness.unspecified; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unspecified
@@ -96,7 +96,7 @@ const LampBrightness_unspecified = LampBrightness.unspecified satisfies LampBrig
  * @type {number}
  */
 export
-const unspecified = LampBrightness.unspecified satisfies LampBrightness; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unspecified = LampBrightness.unspecified; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LampBrightness_dim
@@ -108,7 +108,7 @@ const unspecified = LampBrightness.unspecified satisfies LampBrightness; /* SHOR
  * @type {number}
  */
 export
-const LampBrightness_dim = LampBrightness.dim satisfies LampBrightness; /* LONG_NAMED_ENUMERATED_VALUE */
+const LampBrightness_dim = LampBrightness.dim; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary dim
@@ -116,7 +116,7 @@ const LampBrightness_dim = LampBrightness.dim satisfies LampBrightness; /* LONG_
  * @type {number}
  */
 export
-const dim = LampBrightness.dim satisfies LampBrightness; /* SHORT_NAMED_ENUMERATED_VALUE */
+const dim = LampBrightness.dim; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LampBrightness_bright
@@ -128,7 +128,7 @@ const dim = LampBrightness.dim satisfies LampBrightness; /* SHORT_NAMED_ENUMERAT
  * @type {number}
  */
 export
-const LampBrightness_bright = LampBrightness.bright satisfies LampBrightness; /* LONG_NAMED_ENUMERATED_VALUE */
+const LampBrightness_bright = LampBrightness.bright; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary bright
@@ -136,7 +136,7 @@ const LampBrightness_bright = LampBrightness.bright satisfies LampBrightness; /*
  * @type {number}
  */
 export
-const bright = LampBrightness.bright satisfies LampBrightness; /* SHORT_NAMED_ENUMERATED_VALUE */
+const bright = LampBrightness.bright; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 let _cached_decoder_for_LampBrightness: $.ASN1Decoder<LampBrightness> | null = null;
 

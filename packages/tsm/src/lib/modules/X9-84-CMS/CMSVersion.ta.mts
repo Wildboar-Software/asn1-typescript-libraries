@@ -42,7 +42,7 @@ const CMSVersion_v84 = 84 satisfies CMSVersion; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const v84 = CMSVersion_v84 satisfies CMSVersion; /* SHORT_NAMED_INTEGER_VALUE */
+const v84 = CMSVersion_v84; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_CMSVersion = (el: _Element): CMSVersion => {
     const value = $._decodeInteger(el);
     const n = typeof value === "bigint" ? value : BigInt(value);

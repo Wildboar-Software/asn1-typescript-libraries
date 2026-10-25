@@ -54,7 +54,7 @@ const AttrId_graphicCharacterRepertoire_null_ = 0 satisfies AttrId_graphicCharac
  * @type {number}
  */
 export
-const null_ = AttrId_graphicCharacterRepertoire_null_ satisfies AttrId_graphicCharacterRepertoire; /* SHORT_NAMED_INTEGER_VALUE */
+const null_ = AttrId_graphicCharacterRepertoire_null_; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_AttrId_graphicCharacterRepertoire = $._decodeInteger;
 export const _encode_AttrId_graphicCharacterRepertoire = $._encodeInteger;
 

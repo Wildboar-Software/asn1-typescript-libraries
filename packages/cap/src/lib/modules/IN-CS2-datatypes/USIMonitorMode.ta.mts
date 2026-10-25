@@ -67,7 +67,7 @@ const USIMonitorMode = _enum_for_USIMonitorMode;
  * @type {number}
  */
 export
-const USIMonitorMode_monitoringActive = USIMonitorMode.monitoringActive satisfies USIMonitorMode; /* LONG_NAMED_ENUMERATED_VALUE */
+const USIMonitorMode_monitoringActive = USIMonitorMode.monitoringActive; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary monitoringActive
@@ -75,7 +75,7 @@ const USIMonitorMode_monitoringActive = USIMonitorMode.monitoringActive satisfie
  * @type {number}
  */
 export
-const monitoringActive = USIMonitorMode.monitoringActive satisfies USIMonitorMode; /* SHORT_NAMED_ENUMERATED_VALUE */
+const monitoringActive = USIMonitorMode.monitoringActive; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary USIMonitorMode_monitoringInactive
@@ -83,7 +83,7 @@ const monitoringActive = USIMonitorMode.monitoringActive satisfies USIMonitorMod
  * @type {number}
  */
 export
-const USIMonitorMode_monitoringInactive = USIMonitorMode.monitoringInactive satisfies USIMonitorMode; /* LONG_NAMED_ENUMERATED_VALUE */
+const USIMonitorMode_monitoringInactive = USIMonitorMode.monitoringInactive; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary monitoringInactive
@@ -91,7 +91,7 @@ const USIMonitorMode_monitoringInactive = USIMonitorMode.monitoringInactive sati
  * @type {number}
  */
 export
-const monitoringInactive = USIMonitorMode.monitoringInactive satisfies USIMonitorMode; /* SHORT_NAMED_ENUMERATED_VALUE */
+const monitoringInactive = USIMonitorMode.monitoringInactive; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_USIMonitorMode = $._decodeEnumerated;
 export const _encode_USIMonitorMode = $._encodeEnumerated;
 

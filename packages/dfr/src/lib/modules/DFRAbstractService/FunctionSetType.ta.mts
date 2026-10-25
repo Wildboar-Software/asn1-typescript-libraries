@@ -98,7 +98,7 @@ const FunctionSetType = _enum_for_FunctionSetType;
  * @type {number}
  */
 export
-const FunctionSetType_flat_store = FunctionSetType.flat_store satisfies FunctionSetType; /* LONG_NAMED_ENUMERATED_VALUE */
+const FunctionSetType_flat_store = FunctionSetType.flat_store; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary flat_store
@@ -109,7 +109,7 @@ const FunctionSetType_flat_store = FunctionSetType.flat_store satisfies Function
  * @type {number}
  */
 export
-const flat_store = FunctionSetType.flat_store satisfies FunctionSetType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const flat_store = FunctionSetType.flat_store; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary FunctionSetType_pre_defined_store
@@ -120,7 +120,7 @@ const flat_store = FunctionSetType.flat_store satisfies FunctionSetType; /* SHOR
  * @type {number}
  */
 export
-const FunctionSetType_pre_defined_store = FunctionSetType.pre_defined_store satisfies FunctionSetType; /* LONG_NAMED_ENUMERATED_VALUE */
+const FunctionSetType_pre_defined_store = FunctionSetType.pre_defined_store; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pre_defined_store
@@ -131,7 +131,7 @@ const FunctionSetType_pre_defined_store = FunctionSetType.pre_defined_store sati
  * @type {number}
  */
 export
-const pre_defined_store = FunctionSetType.pre_defined_store satisfies FunctionSetType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pre_defined_store = FunctionSetType.pre_defined_store; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary FunctionSetType_full_set
@@ -142,7 +142,7 @@ const pre_defined_store = FunctionSetType.pre_defined_store satisfies FunctionSe
  * @type {number}
  */
 export
-const FunctionSetType_full_set = FunctionSetType.full_set satisfies FunctionSetType; /* LONG_NAMED_ENUMERATED_VALUE */
+const FunctionSetType_full_set = FunctionSetType.full_set; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary full_set
@@ -153,7 +153,7 @@ const FunctionSetType_full_set = FunctionSetType.full_set satisfies FunctionSetT
  * @type {number}
  */
 export
-const full_set = FunctionSetType.full_set satisfies FunctionSetType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const full_set = FunctionSetType.full_set; /* SHORT_NAMED_ENUMERATED_VALUE */
 export function _decode_FunctionSetType(el: _Element): FunctionSetType {
     const enumerated = $._decodeEnumerated(el);
     switch (enumerated) {

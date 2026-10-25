@@ -53,7 +53,7 @@ const GetBoundProfilePackageResponse_getBoundProfilePackageError_euiccSignatureI
  * @type {number}
  */
 export
-const euiccSignatureInvalid = GetBoundProfilePackageResponse_getBoundProfilePackageError_euiccSignatureInvalid satisfies GetBoundProfilePackageResponse_getBoundProfilePackageError; /* SHORT_NAMED_INTEGER_VALUE */
+const euiccSignatureInvalid = GetBoundProfilePackageResponse_getBoundProfilePackageError_euiccSignatureInvalid; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary GetBoundProfilePackageResponse_getBoundProfilePackageError_confirmationCodeMissing
@@ -79,7 +79,7 @@ const GetBoundProfilePackageResponse_getBoundProfilePackageError_confirmationCod
  * @type {number}
  */
 export
-const confirmationCodeMissing = GetBoundProfilePackageResponse_getBoundProfilePackageError_confirmationCodeMissing satisfies GetBoundProfilePackageResponse_getBoundProfilePackageError; /* SHORT_NAMED_INTEGER_VALUE */
+const confirmationCodeMissing = GetBoundProfilePackageResponse_getBoundProfilePackageError_confirmationCodeMissing; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary GetBoundProfilePackageResponse_getBoundProfilePackageError_confirmationCodeRefused
@@ -105,7 +105,7 @@ const GetBoundProfilePackageResponse_getBoundProfilePackageError_confirmationCod
  * @type {number}
  */
 export
-const confirmationCodeRefused = GetBoundProfilePackageResponse_getBoundProfilePackageError_confirmationCodeRefused satisfies GetBoundProfilePackageResponse_getBoundProfilePackageError; /* SHORT_NAMED_INTEGER_VALUE */
+const confirmationCodeRefused = GetBoundProfilePackageResponse_getBoundProfilePackageError_confirmationCodeRefused; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary GetBoundProfilePackageResponse_getBoundProfilePackageError_confirmationCodeRetriesExceeded
@@ -131,7 +131,7 @@ const GetBoundProfilePackageResponse_getBoundProfilePackageError_confirmationCod
  * @type {number}
  */
 export
-const confirmationCodeRetriesExceeded = GetBoundProfilePackageResponse_getBoundProfilePackageError_confirmationCodeRetriesExceeded satisfies GetBoundProfilePackageResponse_getBoundProfilePackageError; /* SHORT_NAMED_INTEGER_VALUE */
+const confirmationCodeRetriesExceeded = GetBoundProfilePackageResponse_getBoundProfilePackageError_confirmationCodeRetriesExceeded; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary GetBoundProfilePackageResponse_getBoundProfilePackageError_bppRebindingRefused
@@ -159,7 +159,7 @@ const GetBoundProfilePackageResponse_getBoundProfilePackageError_bppRebindingRef
  * @type {number}
  */
 export
-const bppRebindingRefused = GetBoundProfilePackageResponse_getBoundProfilePackageError_bppRebindingRefused satisfies GetBoundProfilePackageResponse_getBoundProfilePackageError; /* SHORT_NAMED_INTEGER_VALUE */
+const bppRebindingRefused = GetBoundProfilePackageResponse_getBoundProfilePackageError_bppRebindingRefused; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary GetBoundProfilePackageResponse_getBoundProfilePackageError_deprecated
@@ -187,7 +187,7 @@ const GetBoundProfilePackageResponse_getBoundProfilePackageError_deprecated = 6 
  * @type {number}
  */
 export
-const deprecated = GetBoundProfilePackageResponse_getBoundProfilePackageError_deprecated satisfies GetBoundProfilePackageResponse_getBoundProfilePackageError; /* SHORT_NAMED_INTEGER_VALUE */
+const deprecated = GetBoundProfilePackageResponse_getBoundProfilePackageError_deprecated; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary GetBoundProfilePackageResponse_getBoundProfilePackageError_invalidTransactionId
@@ -213,7 +213,7 @@ const GetBoundProfilePackageResponse_getBoundProfilePackageError_invalidTransact
  * @type {number}
  */
 export
-const invalidTransactionId = GetBoundProfilePackageResponse_getBoundProfilePackageError_invalidTransactionId satisfies GetBoundProfilePackageResponse_getBoundProfilePackageError; /* SHORT_NAMED_INTEGER_VALUE */
+const invalidTransactionId = GetBoundProfilePackageResponse_getBoundProfilePackageError_invalidTransactionId; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary GetBoundProfilePackageResponse_getBoundProfilePackageError_undefinedError
@@ -237,7 +237,7 @@ const GetBoundProfilePackageResponse_getBoundProfilePackageError_undefinedError 
  * @type {number}
  */
 export
-const undefinedError = GetBoundProfilePackageResponse_getBoundProfilePackageError_undefinedError satisfies GetBoundProfilePackageResponse_getBoundProfilePackageError; /* SHORT_NAMED_INTEGER_VALUE */
+const undefinedError = GetBoundProfilePackageResponse_getBoundProfilePackageError_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_GetBoundProfilePackageResponse_getBoundProfilePackageError = $._decodeInteger;
 export const _encode_GetBoundProfilePackageResponse_getBoundProfilePackageError = $._encodeInteger;
 

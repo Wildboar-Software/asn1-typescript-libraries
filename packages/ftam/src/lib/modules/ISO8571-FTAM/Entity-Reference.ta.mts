@@ -54,7 +54,7 @@ export const Entity_Reference_no_categorization_possible = 0 satisfies Entity_Re
  * @constant
  * @type {number}
  */
-export const no_categorization_possible = Entity_Reference_no_categorization_possible satisfies Entity_Reference; /* SHORT_NAMED_INTEGER_VALUE */
+export const no_categorization_possible = Entity_Reference_no_categorization_possible; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -75,7 +75,7 @@ export const Entity_Reference_initiating_file_service_user = 1 satisfies Entity_
  * @constant
  * @type {number}
  */
-export const initiating_file_service_user = Entity_Reference_initiating_file_service_user satisfies Entity_Reference; /* SHORT_NAMED_INTEGER_VALUE */
+export const initiating_file_service_user = Entity_Reference_initiating_file_service_user; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -96,7 +96,7 @@ export const Entity_Reference_initiating_file_protocol_machine = 2 satisfies Ent
  * @constant
  * @type {number}
  */
-export const initiating_file_protocol_machine = Entity_Reference_initiating_file_protocol_machine satisfies Entity_Reference; /* SHORT_NAMED_INTEGER_VALUE */
+export const initiating_file_protocol_machine = Entity_Reference_initiating_file_protocol_machine; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -118,7 +118,7 @@ export const Entity_Reference_service_supporting_the_file_protocol_machine = 3 s
  * @constant
  * @type {number}
  */
-export const service_supporting_the_file_protocol_machine = Entity_Reference_service_supporting_the_file_protocol_machine satisfies Entity_Reference; /* SHORT_NAMED_INTEGER_VALUE */
+export const service_supporting_the_file_protocol_machine = Entity_Reference_service_supporting_the_file_protocol_machine; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -139,7 +139,7 @@ export const Entity_Reference_responding_file_protocol_machine = 4 satisfies Ent
  * @constant
  * @type {number}
  */
-export const responding_file_protocol_machine = Entity_Reference_responding_file_protocol_machine satisfies Entity_Reference; /* SHORT_NAMED_INTEGER_VALUE */
+export const responding_file_protocol_machine = Entity_Reference_responding_file_protocol_machine; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -161,7 +161,7 @@ export const Entity_Reference_responding_file_service_user = 5 satisfies Entity_
  * @constant
  * @type {number}
  */
-export const responding_file_service_user = Entity_Reference_responding_file_service_user satisfies Entity_Reference; /* SHORT_NAMED_INTEGER_VALUE */
+export const responding_file_service_user = Entity_Reference_responding_file_service_user; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 

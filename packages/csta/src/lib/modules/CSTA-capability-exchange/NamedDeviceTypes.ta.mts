@@ -141,7 +141,7 @@ const NamedDeviceTypes = _enum_for_NamedDeviceTypes;
  * ACD (ECMA-269 §13.1.2–13.1.4).
  */
 export
-const NamedDeviceTypes_acd = NamedDeviceTypes.acd satisfies NamedDeviceTypes; /* LONG_NAMED_ENUMERATED_VALUE */
+const NamedDeviceTypes_acd = NamedDeviceTypes.acd; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary acd
@@ -151,7 +151,7 @@ const NamedDeviceTypes_acd = NamedDeviceTypes.acd satisfies NamedDeviceTypes; /*
  * Alias of `NamedDeviceTypes_acd`.
  */
 export
-const acd = NamedDeviceTypes.acd satisfies NamedDeviceTypes; /* SHORT_NAMED_ENUMERATED_VALUE */
+const acd = NamedDeviceTypes.acd; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NamedDeviceTypes_acdGroup
@@ -161,7 +161,7 @@ const acd = NamedDeviceTypes.acd satisfies NamedDeviceTypes; /* SHORT_NAMED_ENUM
  * ACD Group (ECMA-269 §13.1.2–13.1.4).
  */
 export
-const NamedDeviceTypes_acdGroup = NamedDeviceTypes.acdGroup satisfies NamedDeviceTypes; /* LONG_NAMED_ENUMERATED_VALUE */
+const NamedDeviceTypes_acdGroup = NamedDeviceTypes.acdGroup; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary acdGroup
@@ -171,7 +171,7 @@ const NamedDeviceTypes_acdGroup = NamedDeviceTypes.acdGroup satisfies NamedDevic
  * Alias of `NamedDeviceTypes_acdGroup`.
  */
 export
-const acdGroup = NamedDeviceTypes.acdGroup satisfies NamedDeviceTypes; /* SHORT_NAMED_ENUMERATED_VALUE */
+const acdGroup = NamedDeviceTypes.acdGroup; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NamedDeviceTypes_button
@@ -181,7 +181,7 @@ const acdGroup = NamedDeviceTypes.acdGroup satisfies NamedDeviceTypes; /* SHORT_
  * Button (ECMA-269 §13.1.2–13.1.4).
  */
 export
-const NamedDeviceTypes_button = NamedDeviceTypes.button satisfies NamedDeviceTypes; /* LONG_NAMED_ENUMERATED_VALUE */
+const NamedDeviceTypes_button = NamedDeviceTypes.button; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary button
@@ -191,7 +191,7 @@ const NamedDeviceTypes_button = NamedDeviceTypes.button satisfies NamedDeviceTyp
  * Alias of `NamedDeviceTypes_button`.
  */
 export
-const button = NamedDeviceTypes.button satisfies NamedDeviceTypes; /* SHORT_NAMED_ENUMERATED_VALUE */
+const button = NamedDeviceTypes.button; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NamedDeviceTypes_buttonGroup
@@ -201,7 +201,7 @@ const button = NamedDeviceTypes.button satisfies NamedDeviceTypes; /* SHORT_NAME
  * Button Group (ECMA-269 §13.1.2–13.1.4).
  */
 export
-const NamedDeviceTypes_buttonGroup = NamedDeviceTypes.buttonGroup satisfies NamedDeviceTypes; /* LONG_NAMED_ENUMERATED_VALUE */
+const NamedDeviceTypes_buttonGroup = NamedDeviceTypes.buttonGroup; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary buttonGroup
@@ -211,7 +211,7 @@ const NamedDeviceTypes_buttonGroup = NamedDeviceTypes.buttonGroup satisfies Name
  * Alias of `NamedDeviceTypes_buttonGroup`.
  */
 export
-const buttonGroup = NamedDeviceTypes.buttonGroup satisfies NamedDeviceTypes; /* SHORT_NAMED_ENUMERATED_VALUE */
+const buttonGroup = NamedDeviceTypes.buttonGroup; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NamedDeviceTypes_conferenceBridge
@@ -221,7 +221,7 @@ const buttonGroup = NamedDeviceTypes.buttonGroup satisfies NamedDeviceTypes; /* 
  * Conference Bridge (ECMA-269 §13.1.2–13.1.4).
  */
 export
-const NamedDeviceTypes_conferenceBridge = NamedDeviceTypes.conferenceBridge satisfies NamedDeviceTypes; /* LONG_NAMED_ENUMERATED_VALUE */
+const NamedDeviceTypes_conferenceBridge = NamedDeviceTypes.conferenceBridge; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary conferenceBridge
@@ -231,7 +231,7 @@ const NamedDeviceTypes_conferenceBridge = NamedDeviceTypes.conferenceBridge sati
  * Alias of `NamedDeviceTypes_conferenceBridge`.
  */
 export
-const conferenceBridge = NamedDeviceTypes.conferenceBridge satisfies NamedDeviceTypes; /* SHORT_NAMED_ENUMERATED_VALUE */
+const conferenceBridge = NamedDeviceTypes.conferenceBridge; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NamedDeviceTypes_line
@@ -241,7 +241,7 @@ const conferenceBridge = NamedDeviceTypes.conferenceBridge satisfies NamedDevice
  * Line (ECMA-269 §13.1.2–13.1.4).
  */
 export
-const NamedDeviceTypes_line = NamedDeviceTypes.line satisfies NamedDeviceTypes; /* LONG_NAMED_ENUMERATED_VALUE */
+const NamedDeviceTypes_line = NamedDeviceTypes.line; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary line
@@ -251,7 +251,7 @@ const NamedDeviceTypes_line = NamedDeviceTypes.line satisfies NamedDeviceTypes; 
  * Alias of `NamedDeviceTypes_line`.
  */
 export
-const line = NamedDeviceTypes.line satisfies NamedDeviceTypes; /* SHORT_NAMED_ENUMERATED_VALUE */
+const line = NamedDeviceTypes.line; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NamedDeviceTypes_lineGroup
@@ -261,7 +261,7 @@ const line = NamedDeviceTypes.line satisfies NamedDeviceTypes; /* SHORT_NAMED_EN
  * Line Group (ECMA-269 §13.1.2–13.1.4).
  */
 export
-const NamedDeviceTypes_lineGroup = NamedDeviceTypes.lineGroup satisfies NamedDeviceTypes; /* LONG_NAMED_ENUMERATED_VALUE */
+const NamedDeviceTypes_lineGroup = NamedDeviceTypes.lineGroup; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary lineGroup
@@ -271,7 +271,7 @@ const NamedDeviceTypes_lineGroup = NamedDeviceTypes.lineGroup satisfies NamedDev
  * Alias of `NamedDeviceTypes_lineGroup`.
  */
 export
-const lineGroup = NamedDeviceTypes.lineGroup satisfies NamedDeviceTypes; /* SHORT_NAMED_ENUMERATED_VALUE */
+const lineGroup = NamedDeviceTypes.lineGroup; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NamedDeviceTypes_operator
@@ -281,7 +281,7 @@ const lineGroup = NamedDeviceTypes.lineGroup satisfies NamedDeviceTypes; /* SHOR
  * Operator (ECMA-269 §13.1.2–13.1.4).
  */
 export
-const NamedDeviceTypes_operator = NamedDeviceTypes.operator satisfies NamedDeviceTypes; /* LONG_NAMED_ENUMERATED_VALUE */
+const NamedDeviceTypes_operator = NamedDeviceTypes.operator; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary operator
@@ -291,7 +291,7 @@ const NamedDeviceTypes_operator = NamedDeviceTypes.operator satisfies NamedDevic
  * Alias of `NamedDeviceTypes_operator`.
  */
 export
-const operator = NamedDeviceTypes.operator satisfies NamedDeviceTypes; /* SHORT_NAMED_ENUMERATED_VALUE */
+const operator = NamedDeviceTypes.operator; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NamedDeviceTypes_operatorGroup
@@ -301,7 +301,7 @@ const operator = NamedDeviceTypes.operator satisfies NamedDeviceTypes; /* SHORT_
  * Operator Group (ECMA-269 §13.1.2–13.1.4).
  */
 export
-const NamedDeviceTypes_operatorGroup = NamedDeviceTypes.operatorGroup satisfies NamedDeviceTypes; /* LONG_NAMED_ENUMERATED_VALUE */
+const NamedDeviceTypes_operatorGroup = NamedDeviceTypes.operatorGroup; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary operatorGroup
@@ -311,7 +311,7 @@ const NamedDeviceTypes_operatorGroup = NamedDeviceTypes.operatorGroup satisfies 
  * Alias of `NamedDeviceTypes_operatorGroup`.
  */
 export
-const operatorGroup = NamedDeviceTypes.operatorGroup satisfies NamedDeviceTypes; /* SHORT_NAMED_ENUMERATED_VALUE */
+const operatorGroup = NamedDeviceTypes.operatorGroup; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NamedDeviceTypes_parkingDevice
@@ -321,7 +321,7 @@ const operatorGroup = NamedDeviceTypes.operatorGroup satisfies NamedDeviceTypes;
  * Parking Device (ECMA-269 §13.1.2–13.1.4).
  */
 export
-const NamedDeviceTypes_parkingDevice = NamedDeviceTypes.parkingDevice satisfies NamedDeviceTypes; /* LONG_NAMED_ENUMERATED_VALUE */
+const NamedDeviceTypes_parkingDevice = NamedDeviceTypes.parkingDevice; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary parkingDevice
@@ -331,7 +331,7 @@ const NamedDeviceTypes_parkingDevice = NamedDeviceTypes.parkingDevice satisfies 
  * Alias of `NamedDeviceTypes_parkingDevice`.
  */
 export
-const parkingDevice = NamedDeviceTypes.parkingDevice satisfies NamedDeviceTypes; /* SHORT_NAMED_ENUMERATED_VALUE */
+const parkingDevice = NamedDeviceTypes.parkingDevice; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NamedDeviceTypes_station
@@ -341,7 +341,7 @@ const parkingDevice = NamedDeviceTypes.parkingDevice satisfies NamedDeviceTypes;
  * Station (ECMA-269 §13.1.2–13.1.4).
  */
 export
-const NamedDeviceTypes_station = NamedDeviceTypes.station satisfies NamedDeviceTypes; /* LONG_NAMED_ENUMERATED_VALUE */
+const NamedDeviceTypes_station = NamedDeviceTypes.station; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary station
@@ -351,7 +351,7 @@ const NamedDeviceTypes_station = NamedDeviceTypes.station satisfies NamedDeviceT
  * Alias of `NamedDeviceTypes_station`.
  */
 export
-const station = NamedDeviceTypes.station satisfies NamedDeviceTypes; /* SHORT_NAMED_ENUMERATED_VALUE */
+const station = NamedDeviceTypes.station; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NamedDeviceTypes_stationGroup
@@ -361,7 +361,7 @@ const station = NamedDeviceTypes.station satisfies NamedDeviceTypes; /* SHORT_NA
  * Station Group (ECMA-269 §13.1.2–13.1.4).
  */
 export
-const NamedDeviceTypes_stationGroup = NamedDeviceTypes.stationGroup satisfies NamedDeviceTypes; /* LONG_NAMED_ENUMERATED_VALUE */
+const NamedDeviceTypes_stationGroup = NamedDeviceTypes.stationGroup; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary stationGroup
@@ -371,7 +371,7 @@ const NamedDeviceTypes_stationGroup = NamedDeviceTypes.stationGroup satisfies Na
  * Alias of `NamedDeviceTypes_stationGroup`.
  */
 export
-const stationGroup = NamedDeviceTypes.stationGroup satisfies NamedDeviceTypes; /* SHORT_NAMED_ENUMERATED_VALUE */
+const stationGroup = NamedDeviceTypes.stationGroup; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NamedDeviceTypes_trunk
@@ -381,7 +381,7 @@ const stationGroup = NamedDeviceTypes.stationGroup satisfies NamedDeviceTypes; /
  * Trunk (ECMA-269 §13.1.2–13.1.4).
  */
 export
-const NamedDeviceTypes_trunk = NamedDeviceTypes.trunk satisfies NamedDeviceTypes; /* LONG_NAMED_ENUMERATED_VALUE */
+const NamedDeviceTypes_trunk = NamedDeviceTypes.trunk; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary trunk
@@ -391,7 +391,7 @@ const NamedDeviceTypes_trunk = NamedDeviceTypes.trunk satisfies NamedDeviceTypes
  * Alias of `NamedDeviceTypes_trunk`.
  */
 export
-const trunk = NamedDeviceTypes.trunk satisfies NamedDeviceTypes; /* SHORT_NAMED_ENUMERATED_VALUE */
+const trunk = NamedDeviceTypes.trunk; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NamedDeviceTypes_trunkGroup
@@ -401,7 +401,7 @@ const trunk = NamedDeviceTypes.trunk satisfies NamedDeviceTypes; /* SHORT_NAMED_
  * Trunk Group (ECMA-269 §13.1.2–13.1.4).
  */
 export
-const NamedDeviceTypes_trunkGroup = NamedDeviceTypes.trunkGroup satisfies NamedDeviceTypes; /* LONG_NAMED_ENUMERATED_VALUE */
+const NamedDeviceTypes_trunkGroup = NamedDeviceTypes.trunkGroup; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary trunkGroup
@@ -411,7 +411,7 @@ const NamedDeviceTypes_trunkGroup = NamedDeviceTypes.trunkGroup satisfies NamedD
  * Alias of `NamedDeviceTypes_trunkGroup`.
  */
 export
-const trunkGroup = NamedDeviceTypes.trunkGroup satisfies NamedDeviceTypes; /* SHORT_NAMED_ENUMERATED_VALUE */
+const trunkGroup = NamedDeviceTypes.trunkGroup; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NamedDeviceTypes_other
@@ -421,7 +421,7 @@ const trunkGroup = NamedDeviceTypes.trunkGroup satisfies NamedDeviceTypes; /* SH
  * Other (ECMA-269 §13.1.2–13.1.4).
  */
 export
-const NamedDeviceTypes_other = NamedDeviceTypes.other satisfies NamedDeviceTypes; /* LONG_NAMED_ENUMERATED_VALUE */
+const NamedDeviceTypes_other = NamedDeviceTypes.other; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary other
@@ -431,7 +431,7 @@ const NamedDeviceTypes_other = NamedDeviceTypes.other satisfies NamedDeviceTypes
  * Alias of `NamedDeviceTypes_other`.
  */
 export
-const other = NamedDeviceTypes.other satisfies NamedDeviceTypes; /* SHORT_NAMED_ENUMERATED_VALUE */
+const other = NamedDeviceTypes.other; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NamedDeviceTypes_otherGroup
@@ -441,7 +441,7 @@ const other = NamedDeviceTypes.other satisfies NamedDeviceTypes; /* SHORT_NAMED_
  * Other Group (ECMA-269 §13.1.2–13.1.4).
  */
 export
-const NamedDeviceTypes_otherGroup = NamedDeviceTypes.otherGroup satisfies NamedDeviceTypes; /* LONG_NAMED_ENUMERATED_VALUE */
+const NamedDeviceTypes_otherGroup = NamedDeviceTypes.otherGroup; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary otherGroup
@@ -451,7 +451,7 @@ const NamedDeviceTypes_otherGroup = NamedDeviceTypes.otherGroup satisfies NamedD
  * Alias of `NamedDeviceTypes_otherGroup`.
  */
 export
-const otherGroup = NamedDeviceTypes.otherGroup satisfies NamedDeviceTypes; /* SHORT_NAMED_ENUMERATED_VALUE */
+const otherGroup = NamedDeviceTypes.otherGroup; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 let _cached_decoder_for_NamedDeviceTypes: $.ASN1Decoder<NamedDeviceTypes> | null = null;
 

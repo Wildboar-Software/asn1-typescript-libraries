@@ -38,7 +38,7 @@ export const RangeProblem_reversed = 0 satisfies RangeProblem; /* LONG_NAMED_INT
  * @constant
  * @type {number}
  */
-export const reversed = RangeProblem_reversed satisfies RangeProblem; /* SHORT_NAMED_INTEGER_VALUE */
+export const reversed = RangeProblem_reversed; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_RangeProblem = $._decodeInteger;

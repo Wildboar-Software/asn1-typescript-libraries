@@ -88,7 +88,7 @@ const VersionConstraint = _enum_for_VersionConstraint;
  * @type {number}
  */
 export
-const VersionConstraint_no_version_constraint = VersionConstraint.no_version_constraint satisfies VersionConstraint; /* LONG_NAMED_ENUMERATED_VALUE */
+const VersionConstraint_no_version_constraint = VersionConstraint.no_version_constraint; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary no_version_constraint
@@ -99,7 +99,7 @@ const VersionConstraint_no_version_constraint = VersionConstraint.no_version_con
  * @type {number}
  */
 export
-const no_version_constraint = VersionConstraint.no_version_constraint satisfies VersionConstraint; /* SHORT_NAMED_ENUMERATED_VALUE */
+const no_version_constraint = VersionConstraint.no_version_constraint; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary VersionConstraint_version_unambiguity
@@ -111,7 +111,7 @@ const no_version_constraint = VersionConstraint.no_version_constraint satisfies 
  * @type {number}
  */
 export
-const VersionConstraint_version_unambiguity = VersionConstraint.version_unambiguity satisfies VersionConstraint; /* LONG_NAMED_ENUMERATED_VALUE */
+const VersionConstraint_version_unambiguity = VersionConstraint.version_unambiguity; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary version_unambiguity
@@ -123,7 +123,7 @@ const VersionConstraint_version_unambiguity = VersionConstraint.version_unambigu
  * @type {number}
  */
 export
-const version_unambiguity = VersionConstraint.version_unambiguity satisfies VersionConstraint; /* SHORT_NAMED_ENUMERATED_VALUE */
+const version_unambiguity = VersionConstraint.version_unambiguity; /* SHORT_NAMED_ENUMERATED_VALUE */
 export function _decode_VersionConstraint(el: _Element): VersionConstraint {
     const enumerated = $._decodeEnumerated(el);
     switch (enumerated) {

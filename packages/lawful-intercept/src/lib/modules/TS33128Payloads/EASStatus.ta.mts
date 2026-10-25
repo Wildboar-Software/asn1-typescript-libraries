@@ -84,7 +84,7 @@ const EASStatus = _enum_for_EASStatus;
  * @type {number}
  */
 export
-const EASStatus_enabled = EASStatus.enabled satisfies EASStatus; /* LONG_NAMED_ENUMERATED_VALUE */
+const EASStatus_enabled = EASStatus.enabled; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary enabled
@@ -92,7 +92,7 @@ const EASStatus_enabled = EASStatus.enabled satisfies EASStatus; /* LONG_NAMED_E
  * @type {number}
  */
 export
-const enabled = EASStatus.enabled satisfies EASStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
+const enabled = EASStatus.enabled; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EASStatus_disabled
@@ -100,7 +100,7 @@ const enabled = EASStatus.enabled satisfies EASStatus; /* SHORT_NAMED_ENUMERATED
  * @type {number}
  */
 export
-const EASStatus_disabled = EASStatus.disabled satisfies EASStatus; /* LONG_NAMED_ENUMERATED_VALUE */
+const EASStatus_disabled = EASStatus.disabled; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary disabled
@@ -108,7 +108,7 @@ const EASStatus_disabled = EASStatus.disabled satisfies EASStatus; /* LONG_NAMED
  * @type {number}
  */
 export
-const disabled = EASStatus.disabled satisfies EASStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
+const disabled = EASStatus.disabled; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_EASStatus: $.ASN1Decoder<EASStatus> = $._decodeEnumerated;
 export const _encode_EASStatus: $.ASN1Encoder<EASStatus> = $._encodeEnumerated;
 

@@ -67,7 +67,7 @@ type ParamOptions = _enum_for_ParamOptions | ENUMERATED;
  * @type {number}
  */
 export
-const ParamOptions_required = _enum_for_ParamOptions.required satisfies ParamOptions; /* LONG_NAMED_ENUMERATED_VALUE */
+const ParamOptions_required = _enum_for_ParamOptions.required; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -80,7 +80,7 @@ const ParamOptions_required = _enum_for_ParamOptions.required satisfies ParamOpt
  * @type {number}
  */
 export
-const required = ParamOptions_required satisfies ParamOptions; /* SHORT_NAMED_ENUMERATED_VALUE */
+const required = ParamOptions_required; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -93,7 +93,7 @@ const required = ParamOptions_required satisfies ParamOptions; /* SHORT_NAMED_EN
  * @type {number}
  */
 export
-const ParamOptions_preferredPresent = _enum_for_ParamOptions.preferredPresent satisfies ParamOptions; /* LONG_NAMED_ENUMERATED_VALUE */
+const ParamOptions_preferredPresent = _enum_for_ParamOptions.preferredPresent; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -106,7 +106,7 @@ const ParamOptions_preferredPresent = _enum_for_ParamOptions.preferredPresent sa
  * @type {number}
  */
 export
-const preferredPresent = ParamOptions_preferredPresent satisfies ParamOptions; /* SHORT_NAMED_ENUMERATED_VALUE */
+const preferredPresent = ParamOptions_preferredPresent; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -119,7 +119,7 @@ const preferredPresent = ParamOptions_preferredPresent satisfies ParamOptions; /
  * @type {number}
  */
 export
-const ParamOptions_preferredAbsent = _enum_for_ParamOptions.preferredAbsent satisfies ParamOptions; /* LONG_NAMED_ENUMERATED_VALUE */
+const ParamOptions_preferredAbsent = _enum_for_ParamOptions.preferredAbsent; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -132,7 +132,7 @@ const ParamOptions_preferredAbsent = _enum_for_ParamOptions.preferredAbsent sati
  * @type {number}
  */
 export
-const preferredAbsent = ParamOptions_preferredAbsent satisfies ParamOptions; /* SHORT_NAMED_ENUMERATED_VALUE */
+const preferredAbsent = ParamOptions_preferredAbsent; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -145,7 +145,7 @@ const preferredAbsent = ParamOptions_preferredAbsent satisfies ParamOptions; /* 
  * @type {number}
  */
 export
-const ParamOptions_absent = _enum_for_ParamOptions.absent satisfies ParamOptions; /* LONG_NAMED_ENUMERATED_VALUE */
+const ParamOptions_absent = _enum_for_ParamOptions.absent; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -158,7 +158,7 @@ const ParamOptions_absent = _enum_for_ParamOptions.absent satisfies ParamOptions
  * @type {number}
  */
 export
-const absent = ParamOptions_absent satisfies ParamOptions; /* SHORT_NAMED_ENUMERATED_VALUE */
+const absent = ParamOptions_absent; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -171,7 +171,7 @@ const absent = ParamOptions_absent satisfies ParamOptions; /* SHORT_NAMED_ENUMER
  * @type {number}
  */
 export
-const ParamOptions_inheritable = _enum_for_ParamOptions.inheritable satisfies ParamOptions; /* LONG_NAMED_ENUMERATED_VALUE */
+const ParamOptions_inheritable = _enum_for_ParamOptions.inheritable; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -184,7 +184,7 @@ const ParamOptions_inheritable = _enum_for_ParamOptions.inheritable satisfies Pa
  * @type {number}
  */
 export
-const inheritable = ParamOptions_inheritable satisfies ParamOptions; /* SHORT_NAMED_ENUMERATED_VALUE */
+const inheritable = ParamOptions_inheritable; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -197,7 +197,7 @@ const inheritable = ParamOptions_inheritable satisfies ParamOptions; /* SHORT_NA
  * @type {number}
  */
 export
-const ParamOptions_optional = _enum_for_ParamOptions.optional satisfies ParamOptions; /* LONG_NAMED_ENUMERATED_VALUE */
+const ParamOptions_optional = _enum_for_ParamOptions.optional; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -210,7 +210,7 @@ const ParamOptions_optional = _enum_for_ParamOptions.optional satisfies ParamOpt
  * @type {number}
  */
 export
-const optional = ParamOptions_optional satisfies ParamOptions; /* SHORT_NAMED_ENUMERATED_VALUE */
+const optional = ParamOptions_optional; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 

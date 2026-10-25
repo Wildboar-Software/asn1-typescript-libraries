@@ -80,7 +80,7 @@ export const AlarmStatus = _enum_for_AlarmStatus;
  * @type {number}
  */
 export const AlarmStatus_cleared =
-    AlarmStatus.cleared satisfies AlarmStatus; /* LONG_NAMED_ENUMERATED_VALUE */
+    AlarmStatus.cleared; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -89,7 +89,7 @@ export const AlarmStatus_cleared =
  * @type {number}
  */
 export const cleared =
-    AlarmStatus.cleared satisfies AlarmStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
+    AlarmStatus.cleared; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -98,7 +98,7 @@ export const cleared =
  * @type {number}
  */
 export const AlarmStatus_activeReportable_Indeterminate =
-    AlarmStatus.activeReportable_Indeterminate satisfies AlarmStatus; /* LONG_NAMED_ENUMERATED_VALUE */
+    AlarmStatus.activeReportable_Indeterminate; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -107,7 +107,7 @@ export const AlarmStatus_activeReportable_Indeterminate =
  * @type {number}
  */
 export const activeReportable_Indeterminate =
-    AlarmStatus.activeReportable_Indeterminate satisfies AlarmStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
+    AlarmStatus.activeReportable_Indeterminate; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -116,7 +116,7 @@ export const activeReportable_Indeterminate =
  * @type {number}
  */
 export const AlarmStatus_activeReportable_Warning =
-    AlarmStatus.activeReportable_Warning satisfies AlarmStatus; /* LONG_NAMED_ENUMERATED_VALUE */
+    AlarmStatus.activeReportable_Warning; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -125,7 +125,7 @@ export const AlarmStatus_activeReportable_Warning =
  * @type {number}
  */
 export const activeReportable_Warning =
-    AlarmStatus.activeReportable_Warning satisfies AlarmStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
+    AlarmStatus.activeReportable_Warning; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -134,7 +134,7 @@ export const activeReportable_Warning =
  * @type {number}
  */
 export const AlarmStatus_activeReportable_Minor =
-    AlarmStatus.activeReportable_Minor satisfies AlarmStatus; /* LONG_NAMED_ENUMERATED_VALUE */
+    AlarmStatus.activeReportable_Minor; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -143,7 +143,7 @@ export const AlarmStatus_activeReportable_Minor =
  * @type {number}
  */
 export const activeReportable_Minor =
-    AlarmStatus.activeReportable_Minor satisfies AlarmStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
+    AlarmStatus.activeReportable_Minor; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -152,7 +152,7 @@ export const activeReportable_Minor =
  * @type {number}
  */
 export const AlarmStatus_activeReportable_Major =
-    AlarmStatus.activeReportable_Major satisfies AlarmStatus; /* LONG_NAMED_ENUMERATED_VALUE */
+    AlarmStatus.activeReportable_Major; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -161,7 +161,7 @@ export const AlarmStatus_activeReportable_Major =
  * @type {number}
  */
 export const activeReportable_Major =
-    AlarmStatus.activeReportable_Major satisfies AlarmStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
+    AlarmStatus.activeReportable_Major; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -170,7 +170,7 @@ export const activeReportable_Major =
  * @type {number}
  */
 export const AlarmStatus_activeReportable_Critical =
-    AlarmStatus.activeReportable_Critical satisfies AlarmStatus; /* LONG_NAMED_ENUMERATED_VALUE */
+    AlarmStatus.activeReportable_Critical; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -179,7 +179,7 @@ export const AlarmStatus_activeReportable_Critical =
  * @type {number}
  */
 export const activeReportable_Critical =
-    AlarmStatus.activeReportable_Critical satisfies AlarmStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
+    AlarmStatus.activeReportable_Critical; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -188,7 +188,7 @@ export const activeReportable_Critical =
  * @type {number}
  */
 export const AlarmStatus_activePending =
-    AlarmStatus.activePending satisfies AlarmStatus; /* LONG_NAMED_ENUMERATED_VALUE */
+    AlarmStatus.activePending; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -197,7 +197,7 @@ export const AlarmStatus_activePending =
  * @type {number}
  */
 export const activePending =
-    AlarmStatus.activePending satisfies AlarmStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
+    AlarmStatus.activePending; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 

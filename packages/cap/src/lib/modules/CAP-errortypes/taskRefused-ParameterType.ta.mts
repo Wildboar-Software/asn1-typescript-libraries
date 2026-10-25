@@ -100,7 +100,7 @@ const taskRefused_ParameterType = _enum_for_taskRefused_ParameterType;
  * @type {number}
  */
 export
-const taskRefused_ParameterType_generic = taskRefused_ParameterType.generic satisfies taskRefused_ParameterType; /* LONG_NAMED_ENUMERATED_VALUE */
+const taskRefused_ParameterType_generic = taskRefused_ParameterType.generic; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary generic
@@ -113,7 +113,7 @@ const taskRefused_ParameterType_generic = taskRefused_ParameterType.generic sati
  * @type {number}
  */
 export
-const generic = taskRefused_ParameterType.generic satisfies taskRefused_ParameterType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const generic = taskRefused_ParameterType.generic; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary taskRefused_ParameterType_unobtainable
@@ -126,7 +126,7 @@ const generic = taskRefused_ParameterType.generic satisfies taskRefused_Paramete
  * @type {number}
  */
 export
-const taskRefused_ParameterType_unobtainable = taskRefused_ParameterType.unobtainable satisfies taskRefused_ParameterType; /* LONG_NAMED_ENUMERATED_VALUE */
+const taskRefused_ParameterType_unobtainable = taskRefused_ParameterType.unobtainable; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unobtainable
@@ -139,7 +139,7 @@ const taskRefused_ParameterType_unobtainable = taskRefused_ParameterType.unobtai
  * @type {number}
  */
 export
-const unobtainable = taskRefused_ParameterType.unobtainable satisfies taskRefused_ParameterType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unobtainable = taskRefused_ParameterType.unobtainable; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary taskRefused_ParameterType_congestion
@@ -152,7 +152,7 @@ const unobtainable = taskRefused_ParameterType.unobtainable satisfies taskRefuse
  * @type {number}
  */
 export
-const taskRefused_ParameterType_congestion = taskRefused_ParameterType.congestion satisfies taskRefused_ParameterType; /* LONG_NAMED_ENUMERATED_VALUE */
+const taskRefused_ParameterType_congestion = taskRefused_ParameterType.congestion; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary congestion
@@ -165,7 +165,7 @@ const taskRefused_ParameterType_congestion = taskRefused_ParameterType.congestio
  * @type {number}
  */
 export
-const congestion = taskRefused_ParameterType.congestion satisfies taskRefused_ParameterType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const congestion = taskRefused_ParameterType.congestion; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_taskRefused_ParameterType = $._decodeEnumerated;
 export const _encode_taskRefused_ParameterType = $._encodeEnumerated;
 

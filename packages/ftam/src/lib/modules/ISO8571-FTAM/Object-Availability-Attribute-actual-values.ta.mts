@@ -49,7 +49,7 @@ export const Object_Availability_Attribute_actual_values_immediate_availability 
  * @constant
  * @type {number}
  */
-export const immediate_availability = Object_Availability_Attribute_actual_values_immediate_availability satisfies Object_Availability_Attribute_actual_values; /* SHORT_NAMED_INTEGER_VALUE */
+export const immediate_availability = Object_Availability_Attribute_actual_values_immediate_availability; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -70,7 +70,7 @@ export const Object_Availability_Attribute_actual_values_deferred_availability =
  * @constant
  * @type {number}
  */
-export const deferred_availability = Object_Availability_Attribute_actual_values_deferred_availability satisfies Object_Availability_Attribute_actual_values; /* SHORT_NAMED_INTEGER_VALUE */
+export const deferred_availability = Object_Availability_Attribute_actual_values_deferred_availability; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 let _cached_decoder_for_Object_Availability_Attribute_actual_values: $.ASN1Decoder<Object_Availability_Attribute_actual_values> | null = null;

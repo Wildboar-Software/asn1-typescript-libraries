@@ -26,7 +26,7 @@ export const Associate_source_diagnostic_acse_service_provider_null_ = 0 satisfi
  * @constant
  * @type {number}
  */
-export const null_ = Associate_source_diagnostic_acse_service_provider_null_ satisfies Associate_source_diagnostic_acse_service_provider; /* SHORT_NAMED_INTEGER_VALUE */
+export const null_ = Associate_source_diagnostic_acse_service_provider_null_; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Associate_source_diagnostic_acse_service_provider_no_reason_given
@@ -40,7 +40,7 @@ export const Associate_source_diagnostic_acse_service_provider_no_reason_given =
  * @constant
  * @type {number}
  */
-export const no_reason_given = Associate_source_diagnostic_acse_service_provider_no_reason_given satisfies Associate_source_diagnostic_acse_service_provider; /* SHORT_NAMED_INTEGER_VALUE */
+export const no_reason_given = Associate_source_diagnostic_acse_service_provider_no_reason_given; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Associate_source_diagnostic_acse_service_provider_no_common_acse_version
@@ -54,7 +54,7 @@ export const Associate_source_diagnostic_acse_service_provider_no_common_acse_ve
  * @constant
  * @type {number}
  */
-export const no_common_acse_version = Associate_source_diagnostic_acse_service_provider_no_common_acse_version satisfies Associate_source_diagnostic_acse_service_provider; /* SHORT_NAMED_INTEGER_VALUE */
+export const no_common_acse_version = Associate_source_diagnostic_acse_service_provider_no_common_acse_version; /* SHORT_NAMED_INTEGER_VALUE */
 
 let _cached_decoder_for_Associate_source_diagnostic_acse_service_provider: $.ASN1Decoder<Associate_source_diagnostic_acse_service_provider> | null = null;
 

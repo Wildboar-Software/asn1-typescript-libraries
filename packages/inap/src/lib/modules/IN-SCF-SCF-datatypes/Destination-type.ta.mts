@@ -70,7 +70,7 @@ const Destination_type = _enum_for_Destination_type;
  * @type {number}
  */
 export
-const Destination_type_e164 = Destination_type.e164 satisfies Destination_type; /* LONG_NAMED_ENUMERATED_VALUE */
+const Destination_type_e164 = Destination_type.e164; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary e164
@@ -78,7 +78,7 @@ const Destination_type_e164 = Destination_type.e164 satisfies Destination_type; 
  * @type {number}
  */
 export
-const e164 = Destination_type.e164 satisfies Destination_type; /* SHORT_NAMED_ENUMERATED_VALUE */
+const e164 = Destination_type.e164; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Destination_type_x121
@@ -86,7 +86,7 @@ const e164 = Destination_type.e164 satisfies Destination_type; /* SHORT_NAMED_EN
  * @type {number}
  */
 export
-const Destination_type_x121 = Destination_type.x121 satisfies Destination_type; /* LONG_NAMED_ENUMERATED_VALUE */
+const Destination_type_x121 = Destination_type.x121; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary x121
@@ -94,7 +94,7 @@ const Destination_type_x121 = Destination_type.x121 satisfies Destination_type; 
  * @type {number}
  */
 export
-const x121 = Destination_type.x121 satisfies Destination_type; /* SHORT_NAMED_ENUMERATED_VALUE */
+const x121 = Destination_type.x121; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 function _decode_Destination_type(el: _Element): Destination_type {

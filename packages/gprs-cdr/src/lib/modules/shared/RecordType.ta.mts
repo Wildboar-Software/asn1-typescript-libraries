@@ -143,7 +143,7 @@ const RecordType_moCallRecord = 0 satisfies RecordType; /* LONG_NAMED_INTEGER_VA
  * @type {number}
  */
 export
-const moCallRecord = RecordType_moCallRecord satisfies RecordType; /* SHORT_NAMED_INTEGER_VALUE */
+const moCallRecord = RecordType_moCallRecord; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecordType_mtCallRecord
@@ -159,7 +159,7 @@ const RecordType_mtCallRecord = 1 satisfies RecordType; /* LONG_NAMED_INTEGER_VA
  * @type {number}
  */
 export
-const mtCallRecord = RecordType_mtCallRecord satisfies RecordType; /* SHORT_NAMED_INTEGER_VALUE */
+const mtCallRecord = RecordType_mtCallRecord; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecordType_roamingRecord
@@ -175,7 +175,7 @@ const RecordType_roamingRecord = 2 satisfies RecordType; /* LONG_NAMED_INTEGER_V
  * @type {number}
  */
 export
-const roamingRecord = RecordType_roamingRecord satisfies RecordType; /* SHORT_NAMED_INTEGER_VALUE */
+const roamingRecord = RecordType_roamingRecord; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecordType_incGatewayRecord
@@ -191,7 +191,7 @@ const RecordType_incGatewayRecord = 3 satisfies RecordType; /* LONG_NAMED_INTEGE
  * @type {number}
  */
 export
-const incGatewayRecord = RecordType_incGatewayRecord satisfies RecordType; /* SHORT_NAMED_INTEGER_VALUE */
+const incGatewayRecord = RecordType_incGatewayRecord; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecordType_outGatewayRecord
@@ -207,7 +207,7 @@ const RecordType_outGatewayRecord = 4 satisfies RecordType; /* LONG_NAMED_INTEGE
  * @type {number}
  */
 export
-const outGatewayRecord = RecordType_outGatewayRecord satisfies RecordType; /* SHORT_NAMED_INTEGER_VALUE */
+const outGatewayRecord = RecordType_outGatewayRecord; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecordType_transitCallRecord
@@ -223,7 +223,7 @@ const RecordType_transitCallRecord = 5 satisfies RecordType; /* LONG_NAMED_INTEG
  * @type {number}
  */
 export
-const transitCallRecord = RecordType_transitCallRecord satisfies RecordType; /* SHORT_NAMED_INTEGER_VALUE */
+const transitCallRecord = RecordType_transitCallRecord; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecordType_moSMSRecord
@@ -239,7 +239,7 @@ const RecordType_moSMSRecord = 6 satisfies RecordType; /* LONG_NAMED_INTEGER_VAL
  * @type {number}
  */
 export
-const moSMSRecord = RecordType_moSMSRecord satisfies RecordType; /* SHORT_NAMED_INTEGER_VALUE */
+const moSMSRecord = RecordType_moSMSRecord; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecordType_mtSMSRecord
@@ -255,7 +255,7 @@ const RecordType_mtSMSRecord = 7 satisfies RecordType; /* LONG_NAMED_INTEGER_VAL
  * @type {number}
  */
 export
-const mtSMSRecord = RecordType_mtSMSRecord satisfies RecordType; /* SHORT_NAMED_INTEGER_VALUE */
+const mtSMSRecord = RecordType_mtSMSRecord; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecordType_moSMSIWRecord
@@ -271,7 +271,7 @@ const RecordType_moSMSIWRecord = 8 satisfies RecordType; /* LONG_NAMED_INTEGER_V
  * @type {number}
  */
 export
-const moSMSIWRecord = RecordType_moSMSIWRecord satisfies RecordType; /* SHORT_NAMED_INTEGER_VALUE */
+const moSMSIWRecord = RecordType_moSMSIWRecord; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecordType_mtSMSGWRecord
@@ -287,7 +287,7 @@ const RecordType_mtSMSGWRecord = 9 satisfies RecordType; /* LONG_NAMED_INTEGER_V
  * @type {number}
  */
 export
-const mtSMSGWRecord = RecordType_mtSMSGWRecord satisfies RecordType; /* SHORT_NAMED_INTEGER_VALUE */
+const mtSMSGWRecord = RecordType_mtSMSGWRecord; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecordType_ssActionRecord
@@ -303,7 +303,7 @@ const RecordType_ssActionRecord = 10 satisfies RecordType; /* LONG_NAMED_INTEGER
  * @type {number}
  */
 export
-const ssActionRecord = RecordType_ssActionRecord satisfies RecordType; /* SHORT_NAMED_INTEGER_VALUE */
+const ssActionRecord = RecordType_ssActionRecord; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecordType_hlrIntRecord
@@ -319,7 +319,7 @@ const RecordType_hlrIntRecord = 11 satisfies RecordType; /* LONG_NAMED_INTEGER_V
  * @type {number}
  */
 export
-const hlrIntRecord = RecordType_hlrIntRecord satisfies RecordType; /* SHORT_NAMED_INTEGER_VALUE */
+const hlrIntRecord = RecordType_hlrIntRecord; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecordType_locUpdateHLRRecord
@@ -335,7 +335,7 @@ const RecordType_locUpdateHLRRecord = 12 satisfies RecordType; /* LONG_NAMED_INT
  * @type {number}
  */
 export
-const locUpdateHLRRecord = RecordType_locUpdateHLRRecord satisfies RecordType; /* SHORT_NAMED_INTEGER_VALUE */
+const locUpdateHLRRecord = RecordType_locUpdateHLRRecord; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecordType_locUpdateVLRRecord
@@ -351,7 +351,7 @@ const RecordType_locUpdateVLRRecord = 13 satisfies RecordType; /* LONG_NAMED_INT
  * @type {number}
  */
 export
-const locUpdateVLRRecord = RecordType_locUpdateVLRRecord satisfies RecordType; /* SHORT_NAMED_INTEGER_VALUE */
+const locUpdateVLRRecord = RecordType_locUpdateVLRRecord; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecordType_commonEquipRecord
@@ -367,7 +367,7 @@ const RecordType_commonEquipRecord = 14 satisfies RecordType; /* LONG_NAMED_INTE
  * @type {number}
  */
 export
-const commonEquipRecord = RecordType_commonEquipRecord satisfies RecordType; /* SHORT_NAMED_INTEGER_VALUE */
+const commonEquipRecord = RecordType_commonEquipRecord; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecordType_moTraceRecord
@@ -383,7 +383,7 @@ const RecordType_moTraceRecord = 15 satisfies RecordType; /* LONG_NAMED_INTEGER_
  * @type {number}
  */
 export
-const moTraceRecord = RecordType_moTraceRecord satisfies RecordType; /* SHORT_NAMED_INTEGER_VALUE */
+const moTraceRecord = RecordType_moTraceRecord; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecordType_mtTraceRecord
@@ -399,7 +399,7 @@ const RecordType_mtTraceRecord = 16 satisfies RecordType; /* LONG_NAMED_INTEGER_
  * @type {number}
  */
 export
-const mtTraceRecord = RecordType_mtTraceRecord satisfies RecordType; /* SHORT_NAMED_INTEGER_VALUE */
+const mtTraceRecord = RecordType_mtTraceRecord; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecordType_termCAMELRecord
@@ -415,7 +415,7 @@ const RecordType_termCAMELRecord = 17 satisfies RecordType; /* LONG_NAMED_INTEGE
  * @type {number}
  */
 export
-const termCAMELRecord = RecordType_termCAMELRecord satisfies RecordType; /* SHORT_NAMED_INTEGER_VALUE */
+const termCAMELRecord = RecordType_termCAMELRecord; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecordType_sgsnPDPRecord
@@ -431,7 +431,7 @@ const RecordType_sgsnPDPRecord = 18 satisfies RecordType; /* LONG_NAMED_INTEGER_
  * @type {number}
  */
 export
-const sgsnPDPRecord = RecordType_sgsnPDPRecord satisfies RecordType; /* SHORT_NAMED_INTEGER_VALUE */
+const sgsnPDPRecord = RecordType_sgsnPDPRecord; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecordType_sgsnMMRecord
@@ -447,7 +447,7 @@ const RecordType_sgsnMMRecord = 20 satisfies RecordType; /* LONG_NAMED_INTEGER_V
  * @type {number}
  */
 export
-const sgsnMMRecord = RecordType_sgsnMMRecord satisfies RecordType; /* SHORT_NAMED_INTEGER_VALUE */
+const sgsnMMRecord = RecordType_sgsnMMRecord; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecordType_sgsnSMORecord
@@ -463,7 +463,7 @@ const RecordType_sgsnSMORecord = 21 satisfies RecordType; /* LONG_NAMED_INTEGER_
  * @type {number}
  */
 export
-const sgsnSMORecord = RecordType_sgsnSMORecord satisfies RecordType; /* SHORT_NAMED_INTEGER_VALUE */
+const sgsnSMORecord = RecordType_sgsnSMORecord; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecordType_sgsnSMTRecord
@@ -479,7 +479,7 @@ const RecordType_sgsnSMTRecord = 22 satisfies RecordType; /* LONG_NAMED_INTEGER_
  * @type {number}
  */
 export
-const sgsnSMTRecord = RecordType_sgsnSMTRecord satisfies RecordType; /* SHORT_NAMED_INTEGER_VALUE */
+const sgsnSMTRecord = RecordType_sgsnSMTRecord; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecordType_mtLCSRecord
@@ -495,7 +495,7 @@ const RecordType_mtLCSRecord = 23 satisfies RecordType; /* LONG_NAMED_INTEGER_VA
  * @type {number}
  */
 export
-const mtLCSRecord = RecordType_mtLCSRecord satisfies RecordType; /* SHORT_NAMED_INTEGER_VALUE */
+const mtLCSRecord = RecordType_mtLCSRecord; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecordType_moLCSRecord
@@ -511,7 +511,7 @@ const RecordType_moLCSRecord = 24 satisfies RecordType; /* LONG_NAMED_INTEGER_VA
  * @type {number}
  */
 export
-const moLCSRecord = RecordType_moLCSRecord satisfies RecordType; /* SHORT_NAMED_INTEGER_VALUE */
+const moLCSRecord = RecordType_moLCSRecord; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecordType_niLCSRecord
@@ -527,7 +527,7 @@ const RecordType_niLCSRecord = 25 satisfies RecordType; /* LONG_NAMED_INTEGER_VA
  * @type {number}
  */
 export
-const niLCSRecord = RecordType_niLCSRecord satisfies RecordType; /* SHORT_NAMED_INTEGER_VALUE */
+const niLCSRecord = RecordType_niLCSRecord; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecordType_sgsnMTLCSRecord
@@ -543,7 +543,7 @@ const RecordType_sgsnMTLCSRecord = 26 satisfies RecordType; /* LONG_NAMED_INTEGE
  * @type {number}
  */
 export
-const sgsnMTLCSRecord = RecordType_sgsnMTLCSRecord satisfies RecordType; /* SHORT_NAMED_INTEGER_VALUE */
+const sgsnMTLCSRecord = RecordType_sgsnMTLCSRecord; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecordType_sgsnMOLCSRecord
@@ -559,7 +559,7 @@ const RecordType_sgsnMOLCSRecord = 27 satisfies RecordType; /* LONG_NAMED_INTEGE
  * @type {number}
  */
 export
-const sgsnMOLCSRecord = RecordType_sgsnMOLCSRecord satisfies RecordType; /* SHORT_NAMED_INTEGER_VALUE */
+const sgsnMOLCSRecord = RecordType_sgsnMOLCSRecord; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecordType_sgsnNILCSRecord
@@ -575,7 +575,7 @@ const RecordType_sgsnNILCSRecord = 28 satisfies RecordType; /* LONG_NAMED_INTEGE
  * @type {number}
  */
 export
-const sgsnNILCSRecord = RecordType_sgsnNILCSRecord satisfies RecordType; /* SHORT_NAMED_INTEGER_VALUE */
+const sgsnNILCSRecord = RecordType_sgsnNILCSRecord; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecordType_mMO1SRecord
@@ -591,7 +591,7 @@ const RecordType_mMO1SRecord = 30 satisfies RecordType; /* LONG_NAMED_INTEGER_VA
  * @type {number}
  */
 export
-const mMO1SRecord = RecordType_mMO1SRecord satisfies RecordType; /* SHORT_NAMED_INTEGER_VALUE */
+const mMO1SRecord = RecordType_mMO1SRecord; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecordType_mMO4FRqRecord
@@ -607,7 +607,7 @@ const RecordType_mMO4FRqRecord = 31 satisfies RecordType; /* LONG_NAMED_INTEGER_
  * @type {number}
  */
 export
-const mMO4FRqRecord = RecordType_mMO4FRqRecord satisfies RecordType; /* SHORT_NAMED_INTEGER_VALUE */
+const mMO4FRqRecord = RecordType_mMO4FRqRecord; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecordType_mMO4FRsRecord
@@ -623,7 +623,7 @@ const RecordType_mMO4FRsRecord = 32 satisfies RecordType; /* LONG_NAMED_INTEGER_
  * @type {number}
  */
 export
-const mMO4FRsRecord = RecordType_mMO4FRsRecord satisfies RecordType; /* SHORT_NAMED_INTEGER_VALUE */
+const mMO4FRsRecord = RecordType_mMO4FRsRecord; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecordType_mMO4DRecord
@@ -639,7 +639,7 @@ const RecordType_mMO4DRecord = 33 satisfies RecordType; /* LONG_NAMED_INTEGER_VA
  * @type {number}
  */
 export
-const mMO4DRecord = RecordType_mMO4DRecord satisfies RecordType; /* SHORT_NAMED_INTEGER_VALUE */
+const mMO4DRecord = RecordType_mMO4DRecord; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecordType_mMO1DRecord
@@ -655,7 +655,7 @@ const RecordType_mMO1DRecord = 34 satisfies RecordType; /* LONG_NAMED_INTEGER_VA
  * @type {number}
  */
 export
-const mMO1DRecord = RecordType_mMO1DRecord satisfies RecordType; /* SHORT_NAMED_INTEGER_VALUE */
+const mMO1DRecord = RecordType_mMO1DRecord; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecordType_mMO4RRecord
@@ -671,7 +671,7 @@ const RecordType_mMO4RRecord = 35 satisfies RecordType; /* LONG_NAMED_INTEGER_VA
  * @type {number}
  */
 export
-const mMO4RRecord = RecordType_mMO4RRecord satisfies RecordType; /* SHORT_NAMED_INTEGER_VALUE */
+const mMO4RRecord = RecordType_mMO4RRecord; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecordType_mMO1RRecord
@@ -687,7 +687,7 @@ const RecordType_mMO1RRecord = 36 satisfies RecordType; /* LONG_NAMED_INTEGER_VA
  * @type {number}
  */
 export
-const mMO1RRecord = RecordType_mMO1RRecord satisfies RecordType; /* SHORT_NAMED_INTEGER_VALUE */
+const mMO1RRecord = RecordType_mMO1RRecord; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecordType_mMOMDRecord
@@ -703,7 +703,7 @@ const RecordType_mMOMDRecord = 37 satisfies RecordType; /* LONG_NAMED_INTEGER_VA
  * @type {number}
  */
 export
-const mMOMDRecord = RecordType_mMOMDRecord satisfies RecordType; /* SHORT_NAMED_INTEGER_VALUE */
+const mMOMDRecord = RecordType_mMOMDRecord; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecordType_mMR4FRecord
@@ -719,7 +719,7 @@ const RecordType_mMR4FRecord = 38 satisfies RecordType; /* LONG_NAMED_INTEGER_VA
  * @type {number}
  */
 export
-const mMR4FRecord = RecordType_mMR4FRecord satisfies RecordType; /* SHORT_NAMED_INTEGER_VALUE */
+const mMR4FRecord = RecordType_mMR4FRecord; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecordType_mMR1NRqRecord
@@ -735,7 +735,7 @@ const RecordType_mMR1NRqRecord = 39 satisfies RecordType; /* LONG_NAMED_INTEGER_
  * @type {number}
  */
 export
-const mMR1NRqRecord = RecordType_mMR1NRqRecord satisfies RecordType; /* SHORT_NAMED_INTEGER_VALUE */
+const mMR1NRqRecord = RecordType_mMR1NRqRecord; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecordType_mMR1NRsRecord
@@ -751,7 +751,7 @@ const RecordType_mMR1NRsRecord = 40 satisfies RecordType; /* LONG_NAMED_INTEGER_
  * @type {number}
  */
 export
-const mMR1NRsRecord = RecordType_mMR1NRsRecord satisfies RecordType; /* SHORT_NAMED_INTEGER_VALUE */
+const mMR1NRsRecord = RecordType_mMR1NRsRecord; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecordType_mMR1RtRecord
@@ -767,7 +767,7 @@ const RecordType_mMR1RtRecord = 41 satisfies RecordType; /* LONG_NAMED_INTEGER_V
  * @type {number}
  */
 export
-const mMR1RtRecord = RecordType_mMR1RtRecord satisfies RecordType; /* SHORT_NAMED_INTEGER_VALUE */
+const mMR1RtRecord = RecordType_mMR1RtRecord; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecordType_mMR1AFRecord
@@ -783,7 +783,7 @@ const RecordType_mMR1AFRecord = 42 satisfies RecordType; /* LONG_NAMED_INTEGER_V
  * @type {number}
  */
 export
-const mMR1AFRecord = RecordType_mMR1AFRecord satisfies RecordType; /* SHORT_NAMED_INTEGER_VALUE */
+const mMR1AFRecord = RecordType_mMR1AFRecord; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecordType_mMR4DRqRecord
@@ -799,7 +799,7 @@ const RecordType_mMR4DRqRecord = 43 satisfies RecordType; /* LONG_NAMED_INTEGER_
  * @type {number}
  */
 export
-const mMR4DRqRecord = RecordType_mMR4DRqRecord satisfies RecordType; /* SHORT_NAMED_INTEGER_VALUE */
+const mMR4DRqRecord = RecordType_mMR4DRqRecord; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecordType_mMR4DRsRecord
@@ -815,7 +815,7 @@ const RecordType_mMR4DRsRecord = 44 satisfies RecordType; /* LONG_NAMED_INTEGER_
  * @type {number}
  */
 export
-const mMR4DRsRecord = RecordType_mMR4DRsRecord satisfies RecordType; /* SHORT_NAMED_INTEGER_VALUE */
+const mMR4DRsRecord = RecordType_mMR4DRsRecord; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecordType_mMR1RRRecord
@@ -831,7 +831,7 @@ const RecordType_mMR1RRRecord = 45 satisfies RecordType; /* LONG_NAMED_INTEGER_V
  * @type {number}
  */
 export
-const mMR1RRRecord = RecordType_mMR1RRRecord satisfies RecordType; /* SHORT_NAMED_INTEGER_VALUE */
+const mMR1RRRecord = RecordType_mMR1RRRecord; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecordType_mMR4RRqRecord
@@ -847,7 +847,7 @@ const RecordType_mMR4RRqRecord = 46 satisfies RecordType; /* LONG_NAMED_INTEGER_
  * @type {number}
  */
 export
-const mMR4RRqRecord = RecordType_mMR4RRqRecord satisfies RecordType; /* SHORT_NAMED_INTEGER_VALUE */
+const mMR4RRqRecord = RecordType_mMR4RRqRecord; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecordType_mMR4RRsRecord
@@ -863,7 +863,7 @@ const RecordType_mMR4RRsRecord = 47 satisfies RecordType; /* LONG_NAMED_INTEGER_
  * @type {number}
  */
 export
-const mMR4RRsRecord = RecordType_mMR4RRsRecord satisfies RecordType; /* SHORT_NAMED_INTEGER_VALUE */
+const mMR4RRsRecord = RecordType_mMR4RRsRecord; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecordType_mMRMDRecord
@@ -879,7 +879,7 @@ const RecordType_mMRMDRecord = 48 satisfies RecordType; /* LONG_NAMED_INTEGER_VA
  * @type {number}
  */
 export
-const mMRMDRecord = RecordType_mMRMDRecord satisfies RecordType; /* SHORT_NAMED_INTEGER_VALUE */
+const mMRMDRecord = RecordType_mMRMDRecord; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecordType_mMFRecord
@@ -895,7 +895,7 @@ const RecordType_mMFRecord = 49 satisfies RecordType; /* LONG_NAMED_INTEGER_VALU
  * @type {number}
  */
 export
-const mMFRecord = RecordType_mMFRecord satisfies RecordType; /* SHORT_NAMED_INTEGER_VALUE */
+const mMFRecord = RecordType_mMFRecord; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecordType_mMBx1SRecord
@@ -911,7 +911,7 @@ const RecordType_mMBx1SRecord = 50 satisfies RecordType; /* LONG_NAMED_INTEGER_V
  * @type {number}
  */
 export
-const mMBx1SRecord = RecordType_mMBx1SRecord satisfies RecordType; /* SHORT_NAMED_INTEGER_VALUE */
+const mMBx1SRecord = RecordType_mMBx1SRecord; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecordType_mMBx1VRecord
@@ -927,7 +927,7 @@ const RecordType_mMBx1VRecord = 51 satisfies RecordType; /* LONG_NAMED_INTEGER_V
  * @type {number}
  */
 export
-const mMBx1VRecord = RecordType_mMBx1VRecord satisfies RecordType; /* SHORT_NAMED_INTEGER_VALUE */
+const mMBx1VRecord = RecordType_mMBx1VRecord; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecordType_mMBx1URecord
@@ -943,7 +943,7 @@ const RecordType_mMBx1URecord = 52 satisfies RecordType; /* LONG_NAMED_INTEGER_V
  * @type {number}
  */
 export
-const mMBx1URecord = RecordType_mMBx1URecord satisfies RecordType; /* SHORT_NAMED_INTEGER_VALUE */
+const mMBx1URecord = RecordType_mMBx1URecord; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecordType_mMBx1DRecord
@@ -959,7 +959,7 @@ const RecordType_mMBx1DRecord = 53 satisfies RecordType; /* LONG_NAMED_INTEGER_V
  * @type {number}
  */
 export
-const mMBx1DRecord = RecordType_mMBx1DRecord satisfies RecordType; /* SHORT_NAMED_INTEGER_VALUE */
+const mMBx1DRecord = RecordType_mMBx1DRecord; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecordType_mM7SRecord
@@ -975,7 +975,7 @@ const RecordType_mM7SRecord = 54 satisfies RecordType; /* LONG_NAMED_INTEGER_VAL
  * @type {number}
  */
 export
-const mM7SRecord = RecordType_mM7SRecord satisfies RecordType; /* SHORT_NAMED_INTEGER_VALUE */
+const mM7SRecord = RecordType_mM7SRecord; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecordType_mM7DRqRecord
@@ -991,7 +991,7 @@ const RecordType_mM7DRqRecord = 55 satisfies RecordType; /* LONG_NAMED_INTEGER_V
  * @type {number}
  */
 export
-const mM7DRqRecord = RecordType_mM7DRqRecord satisfies RecordType; /* SHORT_NAMED_INTEGER_VALUE */
+const mM7DRqRecord = RecordType_mM7DRqRecord; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecordType_mM7DRsRecord
@@ -1007,7 +1007,7 @@ const RecordType_mM7DRsRecord = 56 satisfies RecordType; /* LONG_NAMED_INTEGER_V
  * @type {number}
  */
 export
-const mM7DRsRecord = RecordType_mM7DRsRecord satisfies RecordType; /* SHORT_NAMED_INTEGER_VALUE */
+const mM7DRsRecord = RecordType_mM7DRsRecord; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecordType_mM7CRecord
@@ -1023,7 +1023,7 @@ const RecordType_mM7CRecord = 57 satisfies RecordType; /* LONG_NAMED_INTEGER_VAL
  * @type {number}
  */
 export
-const mM7CRecord = RecordType_mM7CRecord satisfies RecordType; /* SHORT_NAMED_INTEGER_VALUE */
+const mM7CRecord = RecordType_mM7CRecord; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecordType_mM7RRecord
@@ -1039,7 +1039,7 @@ const RecordType_mM7RRecord = 58 satisfies RecordType; /* LONG_NAMED_INTEGER_VAL
  * @type {number}
  */
 export
-const mM7RRecord = RecordType_mM7RRecord satisfies RecordType; /* SHORT_NAMED_INTEGER_VALUE */
+const mM7RRecord = RecordType_mM7RRecord; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecordType_mM7DRRqRecord
@@ -1055,7 +1055,7 @@ const RecordType_mM7DRRqRecord = 59 satisfies RecordType; /* LONG_NAMED_INTEGER_
  * @type {number}
  */
 export
-const mM7DRRqRecord = RecordType_mM7DRRqRecord satisfies RecordType; /* SHORT_NAMED_INTEGER_VALUE */
+const mM7DRRqRecord = RecordType_mM7DRRqRecord; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecordType_mM7DRRsRecord
@@ -1071,7 +1071,7 @@ const RecordType_mM7DRRsRecord = 60 satisfies RecordType; /* LONG_NAMED_INTEGER_
  * @type {number}
  */
 export
-const mM7DRRsRecord = RecordType_mM7DRRsRecord satisfies RecordType; /* SHORT_NAMED_INTEGER_VALUE */
+const mM7DRRsRecord = RecordType_mM7DRRsRecord; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecordType_mM7RRqRecord
@@ -1087,7 +1087,7 @@ const RecordType_mM7RRqRecord = 61 satisfies RecordType; /* LONG_NAMED_INTEGER_V
  * @type {number}
  */
 export
-const mM7RRqRecord = RecordType_mM7RRqRecord satisfies RecordType; /* SHORT_NAMED_INTEGER_VALUE */
+const mM7RRqRecord = RecordType_mM7RRqRecord; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecordType_mM7RRsRecord
@@ -1103,7 +1103,7 @@ const RecordType_mM7RRsRecord = 62 satisfies RecordType; /* LONG_NAMED_INTEGER_V
  * @type {number}
  */
 export
-const mM7RRsRecord = RecordType_mM7RRsRecord satisfies RecordType; /* SHORT_NAMED_INTEGER_VALUE */
+const mM7RRsRecord = RecordType_mM7RRsRecord; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecordType_sCSCFRecord
@@ -1119,7 +1119,7 @@ const RecordType_sCSCFRecord = 63 satisfies RecordType; /* LONG_NAMED_INTEGER_VA
  * @type {number}
  */
 export
-const sCSCFRecord = RecordType_sCSCFRecord satisfies RecordType; /* SHORT_NAMED_INTEGER_VALUE */
+const sCSCFRecord = RecordType_sCSCFRecord; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecordType_pCSCFRecord
@@ -1135,7 +1135,7 @@ const RecordType_pCSCFRecord = 64 satisfies RecordType; /* LONG_NAMED_INTEGER_VA
  * @type {number}
  */
 export
-const pCSCFRecord = RecordType_pCSCFRecord satisfies RecordType; /* SHORT_NAMED_INTEGER_VALUE */
+const pCSCFRecord = RecordType_pCSCFRecord; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecordType_iCSCFRecord
@@ -1151,7 +1151,7 @@ const RecordType_iCSCFRecord = 65 satisfies RecordType; /* LONG_NAMED_INTEGER_VA
  * @type {number}
  */
 export
-const iCSCFRecord = RecordType_iCSCFRecord satisfies RecordType; /* SHORT_NAMED_INTEGER_VALUE */
+const iCSCFRecord = RecordType_iCSCFRecord; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecordType_mRFCRecord
@@ -1167,7 +1167,7 @@ const RecordType_mRFCRecord = 66 satisfies RecordType; /* LONG_NAMED_INTEGER_VAL
  * @type {number}
  */
 export
-const mRFCRecord = RecordType_mRFCRecord satisfies RecordType; /* SHORT_NAMED_INTEGER_VALUE */
+const mRFCRecord = RecordType_mRFCRecord; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecordType_mGCFRecord
@@ -1183,7 +1183,7 @@ const RecordType_mGCFRecord = 67 satisfies RecordType; /* LONG_NAMED_INTEGER_VAL
  * @type {number}
  */
 export
-const mGCFRecord = RecordType_mGCFRecord satisfies RecordType; /* SHORT_NAMED_INTEGER_VALUE */
+const mGCFRecord = RecordType_mGCFRecord; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecordType_bGCFRecord
@@ -1199,7 +1199,7 @@ const RecordType_bGCFRecord = 68 satisfies RecordType; /* LONG_NAMED_INTEGER_VAL
  * @type {number}
  */
 export
-const bGCFRecord = RecordType_bGCFRecord satisfies RecordType; /* SHORT_NAMED_INTEGER_VALUE */
+const bGCFRecord = RecordType_bGCFRecord; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecordType_aSRecord
@@ -1215,7 +1215,7 @@ const RecordType_aSRecord = 69 satisfies RecordType; /* LONG_NAMED_INTEGER_VALUE
  * @type {number}
  */
 export
-const aSRecord = RecordType_aSRecord satisfies RecordType; /* SHORT_NAMED_INTEGER_VALUE */
+const aSRecord = RecordType_aSRecord; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecordType_eCSCFRecord
@@ -1231,7 +1231,7 @@ const RecordType_eCSCFRecord = 70 satisfies RecordType; /* LONG_NAMED_INTEGER_VA
  * @type {number}
  */
 export
-const eCSCFRecord = RecordType_eCSCFRecord satisfies RecordType; /* SHORT_NAMED_INTEGER_VALUE */
+const eCSCFRecord = RecordType_eCSCFRecord; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecordType_iBCFRecord
@@ -1247,7 +1247,7 @@ const RecordType_iBCFRecord = 82 satisfies RecordType; /* LONG_NAMED_INTEGER_VAL
  * @type {number}
  */
 export
-const iBCFRecord = RecordType_iBCFRecord satisfies RecordType; /* SHORT_NAMED_INTEGER_VALUE */
+const iBCFRecord = RecordType_iBCFRecord; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecordType_tRFRecord
@@ -1263,7 +1263,7 @@ const RecordType_tRFRecord = 89 satisfies RecordType; /* LONG_NAMED_INTEGER_VALU
  * @type {number}
  */
 export
-const tRFRecord = RecordType_tRFRecord satisfies RecordType; /* SHORT_NAMED_INTEGER_VALUE */
+const tRFRecord = RecordType_tRFRecord; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecordType_tFRecord
@@ -1279,7 +1279,7 @@ const RecordType_tFRecord = 90 satisfies RecordType; /* LONG_NAMED_INTEGER_VALUE
  * @type {number}
  */
 export
-const tFRecord = RecordType_tFRecord satisfies RecordType; /* SHORT_NAMED_INTEGER_VALUE */
+const tFRecord = RecordType_tFRecord; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecordType_aTCFRecord
@@ -1295,7 +1295,7 @@ const RecordType_aTCFRecord = 91 satisfies RecordType; /* LONG_NAMED_INTEGER_VAL
  * @type {number}
  */
 export
-const aTCFRecord = RecordType_aTCFRecord satisfies RecordType; /* SHORT_NAMED_INTEGER_VALUE */
+const aTCFRecord = RecordType_aTCFRecord; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecordType_lCSGMORecord
@@ -1311,7 +1311,7 @@ const RecordType_lCSGMORecord = 71 satisfies RecordType; /* LONG_NAMED_INTEGER_V
  * @type {number}
  */
 export
-const lCSGMORecord = RecordType_lCSGMORecord satisfies RecordType; /* SHORT_NAMED_INTEGER_VALUE */
+const lCSGMORecord = RecordType_lCSGMORecord; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecordType_lCSRGMTRecord
@@ -1327,7 +1327,7 @@ const RecordType_lCSRGMTRecord = 72 satisfies RecordType; /* LONG_NAMED_INTEGER_
  * @type {number}
  */
 export
-const lCSRGMTRecord = RecordType_lCSRGMTRecord satisfies RecordType; /* SHORT_NAMED_INTEGER_VALUE */
+const lCSRGMTRecord = RecordType_lCSRGMTRecord; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecordType_lCSHGMTRecord
@@ -1343,7 +1343,7 @@ const RecordType_lCSHGMTRecord = 73 satisfies RecordType; /* LONG_NAMED_INTEGER_
  * @type {number}
  */
 export
-const lCSHGMTRecord = RecordType_lCSHGMTRecord satisfies RecordType; /* SHORT_NAMED_INTEGER_VALUE */
+const lCSHGMTRecord = RecordType_lCSHGMTRecord; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecordType_lCSVGMTRecord
@@ -1359,7 +1359,7 @@ const RecordType_lCSVGMTRecord = 74 satisfies RecordType; /* LONG_NAMED_INTEGER_
  * @type {number}
  */
 export
-const lCSVGMTRecord = RecordType_lCSVGMTRecord satisfies RecordType; /* SHORT_NAMED_INTEGER_VALUE */
+const lCSVGMTRecord = RecordType_lCSVGMTRecord; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecordType_lCSGNIRecord
@@ -1375,7 +1375,7 @@ const RecordType_lCSGNIRecord = 75 satisfies RecordType; /* LONG_NAMED_INTEGER_V
  * @type {number}
  */
 export
-const lCSGNIRecord = RecordType_lCSGNIRecord satisfies RecordType; /* SHORT_NAMED_INTEGER_VALUE */
+const lCSGNIRecord = RecordType_lCSGNIRecord; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecordType_sgsnMBMSRecord
@@ -1391,7 +1391,7 @@ const RecordType_sgsnMBMSRecord = 76 satisfies RecordType; /* LONG_NAMED_INTEGER
  * @type {number}
  */
 export
-const sgsnMBMSRecord = RecordType_sgsnMBMSRecord satisfies RecordType; /* SHORT_NAMED_INTEGER_VALUE */
+const sgsnMBMSRecord = RecordType_sgsnMBMSRecord; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecordType_ggsnMBMSRecord
@@ -1407,7 +1407,7 @@ const RecordType_ggsnMBMSRecord = 77 satisfies RecordType; /* LONG_NAMED_INTEGER
  * @type {number}
  */
 export
-const ggsnMBMSRecord = RecordType_ggsnMBMSRecord satisfies RecordType; /* SHORT_NAMED_INTEGER_VALUE */
+const ggsnMBMSRecord = RecordType_ggsnMBMSRecord; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecordType_gwMBMSRecord
@@ -1423,7 +1423,7 @@ const RecordType_gwMBMSRecord = 86 satisfies RecordType; /* LONG_NAMED_INTEGER_V
  * @type {number}
  */
 export
-const gwMBMSRecord = RecordType_gwMBMSRecord satisfies RecordType; /* SHORT_NAMED_INTEGER_VALUE */
+const gwMBMSRecord = RecordType_gwMBMSRecord; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecordType_sUBBMSCRecord
@@ -1439,7 +1439,7 @@ const RecordType_sUBBMSCRecord = 78 satisfies RecordType; /* LONG_NAMED_INTEGER_
  * @type {number}
  */
 export
-const sUBBMSCRecord = RecordType_sUBBMSCRecord satisfies RecordType; /* SHORT_NAMED_INTEGER_VALUE */
+const sUBBMSCRecord = RecordType_sUBBMSCRecord; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecordType_cONTENTBMSCRecord
@@ -1455,7 +1455,7 @@ const RecordType_cONTENTBMSCRecord = 79 satisfies RecordType; /* LONG_NAMED_INTE
  * @type {number}
  */
 export
-const cONTENTBMSCRecord = RecordType_cONTENTBMSCRecord satisfies RecordType; /* SHORT_NAMED_INTEGER_VALUE */
+const cONTENTBMSCRecord = RecordType_cONTENTBMSCRecord; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecordType_pPFRecord
@@ -1471,7 +1471,7 @@ const RecordType_pPFRecord = 80 satisfies RecordType; /* LONG_NAMED_INTEGER_VALU
  * @type {number}
  */
 export
-const pPFRecord = RecordType_pPFRecord satisfies RecordType; /* SHORT_NAMED_INTEGER_VALUE */
+const pPFRecord = RecordType_pPFRecord; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecordType_cPFRecord
@@ -1487,7 +1487,7 @@ const RecordType_cPFRecord = 81 satisfies RecordType; /* LONG_NAMED_INTEGER_VALU
  * @type {number}
  */
 export
-const cPFRecord = RecordType_cPFRecord satisfies RecordType; /* SHORT_NAMED_INTEGER_VALUE */
+const cPFRecord = RecordType_cPFRecord; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecordType_sGWRecord
@@ -1503,7 +1503,7 @@ const RecordType_sGWRecord = 84 satisfies RecordType; /* LONG_NAMED_INTEGER_VALU
  * @type {number}
  */
 export
-const sGWRecord = RecordType_sGWRecord satisfies RecordType; /* SHORT_NAMED_INTEGER_VALUE */
+const sGWRecord = RecordType_sGWRecord; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecordType_pGWRecord
@@ -1519,7 +1519,7 @@ const RecordType_pGWRecord = 85 satisfies RecordType; /* LONG_NAMED_INTEGER_VALU
  * @type {number}
  */
 export
-const pGWRecord = RecordType_pGWRecord satisfies RecordType; /* SHORT_NAMED_INTEGER_VALUE */
+const pGWRecord = RecordType_pGWRecord; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecordType_tDFRecord
@@ -1535,7 +1535,7 @@ const RecordType_tDFRecord = 92 satisfies RecordType; /* LONG_NAMED_INTEGER_VALU
  * @type {number}
  */
 export
-const tDFRecord = RecordType_tDFRecord satisfies RecordType; /* SHORT_NAMED_INTEGER_VALUE */
+const tDFRecord = RecordType_tDFRecord; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecordType_iPERecord
@@ -1551,7 +1551,7 @@ const RecordType_iPERecord = 95 satisfies RecordType; /* LONG_NAMED_INTEGER_VALU
  * @type {number}
  */
 export
-const iPERecord = RecordType_iPERecord satisfies RecordType; /* SHORT_NAMED_INTEGER_VALUE */
+const iPERecord = RecordType_iPERecord; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecordType_ePDGRecord
@@ -1567,7 +1567,7 @@ const RecordType_ePDGRecord = 96 satisfies RecordType; /* LONG_NAMED_INTEGER_VAL
  * @type {number}
  */
 export
-const ePDGRecord = RecordType_ePDGRecord satisfies RecordType; /* SHORT_NAMED_INTEGER_VALUE */
+const ePDGRecord = RecordType_ePDGRecord; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecordType_tWAGRecord
@@ -1583,7 +1583,7 @@ const RecordType_tWAGRecord = 97 satisfies RecordType; /* LONG_NAMED_INTEGER_VAL
  * @type {number}
  */
 export
-const tWAGRecord = RecordType_tWAGRecord satisfies RecordType; /* SHORT_NAMED_INTEGER_VALUE */
+const tWAGRecord = RecordType_tWAGRecord; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecordType_mMTelRecord
@@ -1599,7 +1599,7 @@ const RecordType_mMTelRecord = 83 satisfies RecordType; /* LONG_NAMED_INTEGER_VA
  * @type {number}
  */
 export
-const mMTelRecord = RecordType_mMTelRecord satisfies RecordType; /* SHORT_NAMED_INTEGER_VALUE */
+const mMTelRecord = RecordType_mMTelRecord; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecordType_mSCsRVCCRecord
@@ -1615,7 +1615,7 @@ const RecordType_mSCsRVCCRecord = 87 satisfies RecordType; /* LONG_NAMED_INTEGER
  * @type {number}
  */
 export
-const mSCsRVCCRecord = RecordType_mSCsRVCCRecord satisfies RecordType; /* SHORT_NAMED_INTEGER_VALUE */
+const mSCsRVCCRecord = RecordType_mSCsRVCCRecord; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecordType_mMTRFRecord
@@ -1631,7 +1631,7 @@ const RecordType_mMTRFRecord = 88 satisfies RecordType; /* LONG_NAMED_INTEGER_VA
  * @type {number}
  */
 export
-const mMTRFRecord = RecordType_mMTRFRecord satisfies RecordType; /* SHORT_NAMED_INTEGER_VALUE */
+const mMTRFRecord = RecordType_mMTRFRecord; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecordType_iCSRegisterRecord
@@ -1647,7 +1647,7 @@ const RecordType_iCSRegisterRecord = 99 satisfies RecordType; /* LONG_NAMED_INTE
  * @type {number}
  */
 export
-const iCSRegisterRecord = RecordType_iCSRegisterRecord satisfies RecordType; /* SHORT_NAMED_INTEGER_VALUE */
+const iCSRegisterRecord = RecordType_iCSRegisterRecord; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecordType_sCSMORecord
@@ -1663,7 +1663,7 @@ const RecordType_sCSMORecord = 93 satisfies RecordType; /* LONG_NAMED_INTEGER_VA
  * @type {number}
  */
 export
-const sCSMORecord = RecordType_sCSMORecord satisfies RecordType; /* SHORT_NAMED_INTEGER_VALUE */
+const sCSMORecord = RecordType_sCSMORecord; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecordType_sCSMTRecord
@@ -1679,7 +1679,7 @@ const RecordType_sCSMTRecord = 94 satisfies RecordType; /* LONG_NAMED_INTEGER_VA
  * @type {number}
  */
 export
-const sCSMTRecord = RecordType_sCSMTRecord satisfies RecordType; /* SHORT_NAMED_INTEGER_VALUE */
+const sCSMTRecord = RecordType_sCSMTRecord; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecordType_pFDDRecord
@@ -1695,7 +1695,7 @@ const RecordType_pFDDRecord = 100 satisfies RecordType; /* LONG_NAMED_INTEGER_VA
  * @type {number}
  */
 export
-const pFDDRecord = RecordType_pFDDRecord satisfies RecordType; /* SHORT_NAMED_INTEGER_VALUE */
+const pFDDRecord = RecordType_pFDDRecord; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecordType_pFEDRecord
@@ -1711,7 +1711,7 @@ const RecordType_pFEDRecord = 101 satisfies RecordType; /* LONG_NAMED_INTEGER_VA
  * @type {number}
  */
 export
-const pFEDRecord = RecordType_pFEDRecord satisfies RecordType; /* SHORT_NAMED_INTEGER_VALUE */
+const pFEDRecord = RecordType_pFEDRecord; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecordType_pFDCRecord
@@ -1727,7 +1727,7 @@ const RecordType_pFDCRecord = 102 satisfies RecordType; /* LONG_NAMED_INTEGER_VA
  * @type {number}
  */
 export
-const pFDCRecord = RecordType_pFDCRecord satisfies RecordType; /* SHORT_NAMED_INTEGER_VALUE */
+const pFDCRecord = RecordType_pFDCRecord; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecordType_mECORecord
@@ -1743,7 +1743,7 @@ const RecordType_mECORecord = 103 satisfies RecordType; /* LONG_NAMED_INTEGER_VA
  * @type {number}
  */
 export
-const mECORecord = RecordType_mECORecord satisfies RecordType; /* SHORT_NAMED_INTEGER_VALUE */
+const mECORecord = RecordType_mECORecord; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecordType_mERERecord
@@ -1759,7 +1759,7 @@ const RecordType_mERERecord = 104 satisfies RecordType; /* LONG_NAMED_INTEGER_VA
  * @type {number}
  */
 export
-const mERERecord = RecordType_mERERecord satisfies RecordType; /* SHORT_NAMED_INTEGER_VALUE */
+const mERERecord = RecordType_mERERecord; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecordType_cPDTSCERecord
@@ -1775,7 +1775,7 @@ const RecordType_cPDTSCERecord = 105 satisfies RecordType; /* LONG_NAMED_INTEGER
  * @type {number}
  */
 export
-const cPDTSCERecord = RecordType_cPDTSCERecord satisfies RecordType; /* SHORT_NAMED_INTEGER_VALUE */
+const cPDTSCERecord = RecordType_cPDTSCERecord; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecordType_cPDTSNNRecord
@@ -1791,7 +1791,7 @@ const RecordType_cPDTSNNRecord = 106 satisfies RecordType; /* LONG_NAMED_INTEGER
  * @type {number}
  */
 export
-const cPDTSNNRecord = RecordType_cPDTSNNRecord satisfies RecordType; /* SHORT_NAMED_INTEGER_VALUE */
+const cPDTSNNRecord = RecordType_cPDTSNNRecord; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecordType_sCDVTT4Record
@@ -1807,7 +1807,7 @@ const RecordType_sCDVTT4Record = 110 satisfies RecordType; /* LONG_NAMED_INTEGER
  * @type {number}
  */
 export
-const sCDVTT4Record = RecordType_sCDVTT4Record satisfies RecordType; /* SHORT_NAMED_INTEGER_VALUE */
+const sCDVTT4Record = RecordType_sCDVTT4Record; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecordType_sCSMOT4Record
@@ -1823,7 +1823,7 @@ const RecordType_sCSMOT4Record = 111 satisfies RecordType; /* LONG_NAMED_INTEGER
  * @type {number}
  */
 export
-const sCSMOT4Record = RecordType_sCSMOT4Record satisfies RecordType; /* SHORT_NAMED_INTEGER_VALUE */
+const sCSMOT4Record = RecordType_sCSMOT4Record; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecordType_iSMSMORecord
@@ -1839,7 +1839,7 @@ const RecordType_iSMSMORecord = 112 satisfies RecordType; /* LONG_NAMED_INTEGER_
  * @type {number}
  */
 export
-const iSMSMORecord = RecordType_iSMSMORecord satisfies RecordType; /* SHORT_NAMED_INTEGER_VALUE */
+const iSMSMORecord = RecordType_iSMSMORecord; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecordType_iSMSMTRecord
@@ -1855,7 +1855,7 @@ const RecordType_iSMSMTRecord = 113 satisfies RecordType; /* LONG_NAMED_INTEGER_
  * @type {number}
  */
 export
-const iSMSMTRecord = RecordType_iSMSMTRecord satisfies RecordType; /* SHORT_NAMED_INTEGER_VALUE */
+const iSMSMTRecord = RecordType_iSMSMTRecord; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecordType_eASCERecord
@@ -1871,7 +1871,7 @@ const RecordType_eASCERecord = 120 satisfies RecordType; /* LONG_NAMED_INTEGER_V
  * @type {number}
  */
 export
-const eASCERecord = RecordType_eASCERecord satisfies RecordType; /* SHORT_NAMED_INTEGER_VALUE */
+const eASCERecord = RecordType_eASCERecord; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecordType_chargingFunctionRecord
@@ -1887,7 +1887,7 @@ const RecordType_chargingFunctionRecord = 200 satisfies RecordType; /* LONG_NAME
  * @type {number}
  */
 export
-const chargingFunctionRecord = RecordType_chargingFunctionRecord satisfies RecordType; /* SHORT_NAMED_INTEGER_VALUE */
+const chargingFunctionRecord = RecordType_chargingFunctionRecord; /* SHORT_NAMED_INTEGER_VALUE */
 
 export
 const _decode_RecordType: $.ASN1Decoder<RecordType> = $._decodeInteger;

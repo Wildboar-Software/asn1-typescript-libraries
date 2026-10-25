@@ -66,7 +66,7 @@ const MBMSInformation_mBMSUserServiceType = _enum_for_MBMSInformation_mBMSUserSe
  * @type {number}
  */
 export
-const MBMSInformation_mBMSUserServiceType_dOWNLOAD = MBMSInformation_mBMSUserServiceType.dOWNLOAD satisfies MBMSInformation_mBMSUserServiceType; /* LONG_NAMED_ENUMERATED_VALUE */
+const MBMSInformation_mBMSUserServiceType_dOWNLOAD = MBMSInformation_mBMSUserServiceType.dOWNLOAD; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary dOWNLOAD
@@ -74,7 +74,7 @@ const MBMSInformation_mBMSUserServiceType_dOWNLOAD = MBMSInformation_mBMSUserSer
  * @type {number}
  */
 export
-const dOWNLOAD = MBMSInformation_mBMSUserServiceType.dOWNLOAD satisfies MBMSInformation_mBMSUserServiceType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const dOWNLOAD = MBMSInformation_mBMSUserServiceType.dOWNLOAD; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MBMSInformation_mBMSUserServiceType_sTREAMING
@@ -82,7 +82,7 @@ const dOWNLOAD = MBMSInformation_mBMSUserServiceType.dOWNLOAD satisfies MBMSInfo
  * @type {number}
  */
 export
-const MBMSInformation_mBMSUserServiceType_sTREAMING = MBMSInformation_mBMSUserServiceType.sTREAMING satisfies MBMSInformation_mBMSUserServiceType; /* LONG_NAMED_ENUMERATED_VALUE */
+const MBMSInformation_mBMSUserServiceType_sTREAMING = MBMSInformation_mBMSUserServiceType.sTREAMING; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sTREAMING
@@ -90,7 +90,7 @@ const MBMSInformation_mBMSUserServiceType_sTREAMING = MBMSInformation_mBMSUserSe
  * @type {number}
  */
 export
-const sTREAMING = MBMSInformation_mBMSUserServiceType.sTREAMING satisfies MBMSInformation_mBMSUserServiceType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sTREAMING = MBMSInformation_mBMSUserServiceType.sTREAMING; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_MBMSInformation_mBMSUserServiceType: $.ASN1Decoder<MBMSInformation_mBMSUserServiceType> = $._decodeEnumerated;

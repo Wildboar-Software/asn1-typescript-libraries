@@ -54,7 +54,7 @@ const AttrId_font_null_ = 0 satisfies AttrId_font; /* LONG_NAMED_INTEGER_VALUE *
  * @type {number}
  */
 export
-const null_ = AttrId_font_null_ satisfies AttrId_font; /* SHORT_NAMED_INTEGER_VALUE */
+const null_ = AttrId_font_null_; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_AttrId_font = $._decodeInteger;
 export const _encode_AttrId_font = $._encodeInteger;
 

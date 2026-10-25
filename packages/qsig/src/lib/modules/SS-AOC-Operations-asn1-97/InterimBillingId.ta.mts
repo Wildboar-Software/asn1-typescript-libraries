@@ -95,7 +95,7 @@ const InterimBillingId = _enum_for_InterimBillingId;
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-211/
  */
 export
-const InterimBillingId_normalCharging = InterimBillingId.normalCharging satisfies InterimBillingId; /* LONG_NAMED_ENUMERATED_VALUE */
+const InterimBillingId_normalCharging = InterimBillingId.normalCharging; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary normalCharging
@@ -104,7 +104,7 @@ const InterimBillingId_normalCharging = InterimBillingId.normalCharging satisfie
  * @type {number}
  */
 export
-const normalCharging = InterimBillingId.normalCharging satisfies InterimBillingId; /* SHORT_NAMED_ENUMERATED_VALUE */
+const normalCharging = InterimBillingId.normalCharging; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary InterimBillingId_creditCardCharging
@@ -115,7 +115,7 @@ const normalCharging = InterimBillingId.normalCharging satisfies InterimBillingI
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-211/
  */
 export
-const InterimBillingId_creditCardCharging = InterimBillingId.creditCardCharging satisfies InterimBillingId; /* LONG_NAMED_ENUMERATED_VALUE */
+const InterimBillingId_creditCardCharging = InterimBillingId.creditCardCharging; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary creditCardCharging
@@ -124,7 +124,7 @@ const InterimBillingId_creditCardCharging = InterimBillingId.creditCardCharging 
  * @type {number}
  */
 export
-const creditCardCharging = InterimBillingId.creditCardCharging satisfies InterimBillingId; /* SHORT_NAMED_ENUMERATED_VALUE */
+const creditCardCharging = InterimBillingId.creditCardCharging; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_InterimBillingId: $.ASN1Decoder<InterimBillingId> = $._decodeEnumerated;

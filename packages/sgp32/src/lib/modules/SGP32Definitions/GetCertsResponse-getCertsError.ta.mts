@@ -48,7 +48,7 @@ const GetCertsResponse_getCertsError_invalidCiPKId = 1 satisfies GetCertsRespons
  * @type {number}
  */
 export
-const invalidCiPKId = GetCertsResponse_getCertsError_invalidCiPKId satisfies GetCertsResponse_getCertsError; /* SHORT_NAMED_INTEGER_VALUE */
+const invalidCiPKId = GetCertsResponse_getCertsError_invalidCiPKId; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary GetCertsResponse_getCertsError_undfinedError
@@ -71,7 +71,7 @@ const GetCertsResponse_getCertsError_undfinedError = 127 satisfies GetCertsRespo
  * @type {number}
  */
 export
-const undfinedError = GetCertsResponse_getCertsError_undfinedError satisfies GetCertsResponse_getCertsError; /* SHORT_NAMED_INTEGER_VALUE */
+const undfinedError = GetCertsResponse_getCertsError_undfinedError; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_GetCertsResponse_getCertsError: $.ASN1Decoder<GetCertsResponse_getCertsError> = $._decodeInteger;
 export const _encode_GetCertsResponse_getCertsError: $.ASN1Encoder<GetCertsResponse_getCertsError> = $._encodeInteger;
 

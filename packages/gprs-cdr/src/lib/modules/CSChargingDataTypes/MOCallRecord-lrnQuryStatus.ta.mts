@@ -41,7 +41,7 @@ const MOCallRecord_lrnQuryStatus_successfulQuery = 1 satisfies MOCallRecord_lrnQ
  * @type {number}
  */
 export
-const successfulQuery = MOCallRecord_lrnQuryStatus_successfulQuery satisfies MOCallRecord_lrnQuryStatus; /* SHORT_NAMED_INTEGER_VALUE */
+const successfulQuery = MOCallRecord_lrnQuryStatus_successfulQuery; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary MOCallRecord_lrnQuryStatus_noQueryResponseMsg
@@ -57,7 +57,7 @@ const MOCallRecord_lrnQuryStatus_noQueryResponseMsg = 2 satisfies MOCallRecord_l
  * @type {number}
  */
 export
-const noQueryResponseMsg = MOCallRecord_lrnQuryStatus_noQueryResponseMsg satisfies MOCallRecord_lrnQuryStatus; /* SHORT_NAMED_INTEGER_VALUE */
+const noQueryResponseMsg = MOCallRecord_lrnQuryStatus_noQueryResponseMsg; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary MOCallRecord_lrnQuryStatus_queryProtocolErr
@@ -73,7 +73,7 @@ const MOCallRecord_lrnQuryStatus_queryProtocolErr = 4 satisfies MOCallRecord_lrn
  * @type {number}
  */
 export
-const queryProtocolErr = MOCallRecord_lrnQuryStatus_queryProtocolErr satisfies MOCallRecord_lrnQuryStatus; /* SHORT_NAMED_INTEGER_VALUE */
+const queryProtocolErr = MOCallRecord_lrnQuryStatus_queryProtocolErr; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary MOCallRecord_lrnQuryStatus_queryResponseDataErr
@@ -89,7 +89,7 @@ const MOCallRecord_lrnQuryStatus_queryResponseDataErr = 5 satisfies MOCallRecord
  * @type {number}
  */
 export
-const queryResponseDataErr = MOCallRecord_lrnQuryStatus_queryResponseDataErr satisfies MOCallRecord_lrnQuryStatus; /* SHORT_NAMED_INTEGER_VALUE */
+const queryResponseDataErr = MOCallRecord_lrnQuryStatus_queryResponseDataErr; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary MOCallRecord_lrnQuryStatus_queryRejected
@@ -105,7 +105,7 @@ const MOCallRecord_lrnQuryStatus_queryRejected = 6 satisfies MOCallRecord_lrnQur
  * @type {number}
  */
 export
-const queryRejected = MOCallRecord_lrnQuryStatus_queryRejected satisfies MOCallRecord_lrnQuryStatus; /* SHORT_NAMED_INTEGER_VALUE */
+const queryRejected = MOCallRecord_lrnQuryStatus_queryRejected; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary MOCallRecord_lrnQuryStatus_queryNotPerformed
@@ -121,7 +121,7 @@ const MOCallRecord_lrnQuryStatus_queryNotPerformed = 9 satisfies MOCallRecord_lr
  * @type {number}
  */
 export
-const queryNotPerformed = MOCallRecord_lrnQuryStatus_queryNotPerformed satisfies MOCallRecord_lrnQuryStatus; /* SHORT_NAMED_INTEGER_VALUE */
+const queryNotPerformed = MOCallRecord_lrnQuryStatus_queryNotPerformed; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary MOCallRecord_lrnQuryStatus_queryUnsuccessful
@@ -137,7 +137,7 @@ const MOCallRecord_lrnQuryStatus_queryUnsuccessful = 99 satisfies MOCallRecord_l
  * @type {number}
  */
 export
-const queryUnsuccessful = MOCallRecord_lrnQuryStatus_queryUnsuccessful satisfies MOCallRecord_lrnQuryStatus; /* SHORT_NAMED_INTEGER_VALUE */
+const queryUnsuccessful = MOCallRecord_lrnQuryStatus_queryUnsuccessful; /* SHORT_NAMED_INTEGER_VALUE */
 
 export
 const _decode_MOCallRecord_lrnQuryStatus: $.ASN1Decoder<MOCallRecord_lrnQuryStatus> = $._decodeInteger;

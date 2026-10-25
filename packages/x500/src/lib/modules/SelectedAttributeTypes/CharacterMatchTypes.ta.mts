@@ -40,7 +40,7 @@ export type CharacterMatchTypes = _enum_for_CharacterMatchTypes | ENUMERATED;
  * @constant
  * @type {number}
  */
-export const CharacterMatchTypes_characterExact = _enum_for_CharacterMatchTypes.characterExact satisfies CharacterMatchTypes; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CharacterMatchTypes_characterExact = _enum_for_CharacterMatchTypes.characterExact; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary characterExact
@@ -51,7 +51,7 @@ export const CharacterMatchTypes_characterExact = _enum_for_CharacterMatchTypes.
  * @constant
  * @type {number}
  */
-export const characterExact = CharacterMatchTypes_characterExact satisfies CharacterMatchTypes; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const characterExact = CharacterMatchTypes_characterExact; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CharacterMatchTypes_characterCaseIgnore
@@ -62,7 +62,7 @@ export const characterExact = CharacterMatchTypes_characterExact satisfies Chara
  * @constant
  * @type {number}
  */
-export const CharacterMatchTypes_characterCaseIgnore = _enum_for_CharacterMatchTypes.characterCaseIgnore satisfies CharacterMatchTypes; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CharacterMatchTypes_characterCaseIgnore = _enum_for_CharacterMatchTypes.characterCaseIgnore; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary characterCaseIgnore
@@ -73,7 +73,7 @@ export const CharacterMatchTypes_characterCaseIgnore = _enum_for_CharacterMatchT
  * @constant
  * @type {number}
  */
-export const characterCaseIgnore = CharacterMatchTypes_characterCaseIgnore satisfies CharacterMatchTypes; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const characterCaseIgnore = CharacterMatchTypes_characterCaseIgnore; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CharacterMatchTypes_characterMapped
@@ -85,7 +85,7 @@ export const characterCaseIgnore = CharacterMatchTypes_characterCaseIgnore satis
  * @constant
  * @type {number}
  */
-export const CharacterMatchTypes_characterMapped = _enum_for_CharacterMatchTypes.characterMapped satisfies CharacterMatchTypes; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CharacterMatchTypes_characterMapped = _enum_for_CharacterMatchTypes.characterMapped; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary characterMapped
@@ -97,7 +97,7 @@ export const CharacterMatchTypes_characterMapped = _enum_for_CharacterMatchTypes
  * @constant
  * @type {number}
  */
-export const characterMapped = CharacterMatchTypes_characterMapped satisfies CharacterMatchTypes; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const characterMapped = CharacterMatchTypes_characterMapped; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 export const _decode_CharacterMatchTypes = $._decodeEnumerated;

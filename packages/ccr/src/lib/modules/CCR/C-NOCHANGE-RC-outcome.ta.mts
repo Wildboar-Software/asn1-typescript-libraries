@@ -52,7 +52,7 @@ export type C_NOCHANGE_RC_outcome =
  * @constant
  * @type {number}
  */
-export const C_NOCHANGE_RC_outcome_not_determined = _enum_for_C_NOCHANGE_RC_outcome.not_determined satisfies C_NOCHANGE_RC_outcome; /* LONG_NAMED_ENUMERATED_VALUE */
+export const C_NOCHANGE_RC_outcome_not_determined = _enum_for_C_NOCHANGE_RC_outcome.not_determined; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -60,7 +60,7 @@ export const C_NOCHANGE_RC_outcome_not_determined = _enum_for_C_NOCHANGE_RC_outc
  * @constant
  * @type {number}
  */
-export const not_determined = C_NOCHANGE_RC_outcome_not_determined satisfies C_NOCHANGE_RC_outcome; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const not_determined = C_NOCHANGE_RC_outcome_not_determined; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -69,7 +69,7 @@ export const not_determined = C_NOCHANGE_RC_outcome_not_determined satisfies C_N
  * @constant
  * @type {number}
  */
-export const C_NOCHANGE_RC_outcome_committed = _enum_for_C_NOCHANGE_RC_outcome.committed satisfies C_NOCHANGE_RC_outcome; /* LONG_NAMED_ENUMERATED_VALUE */
+export const C_NOCHANGE_RC_outcome_committed = _enum_for_C_NOCHANGE_RC_outcome.committed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -77,7 +77,7 @@ export const C_NOCHANGE_RC_outcome_committed = _enum_for_C_NOCHANGE_RC_outcome.c
  * @constant
  * @type {number}
  */
-export const committed = C_NOCHANGE_RC_outcome_committed satisfies C_NOCHANGE_RC_outcome; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const committed = C_NOCHANGE_RC_outcome_committed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -86,7 +86,7 @@ export const committed = C_NOCHANGE_RC_outcome_committed satisfies C_NOCHANGE_RC
  * @constant
  * @type {number}
  */
-export const C_NOCHANGE_RC_outcome_rolled_back = _enum_for_C_NOCHANGE_RC_outcome.rolled_back satisfies C_NOCHANGE_RC_outcome; /* LONG_NAMED_ENUMERATED_VALUE */
+export const C_NOCHANGE_RC_outcome_rolled_back = _enum_for_C_NOCHANGE_RC_outcome.rolled_back; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -94,7 +94,7 @@ export const C_NOCHANGE_RC_outcome_rolled_back = _enum_for_C_NOCHANGE_RC_outcome
  * @constant
  * @type {number}
  */
-export const rolled_back = C_NOCHANGE_RC_outcome_rolled_back satisfies C_NOCHANGE_RC_outcome; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const rolled_back = C_NOCHANGE_RC_outcome_rolled_back; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -103,7 +103,7 @@ export const rolled_back = C_NOCHANGE_RC_outcome_rolled_back satisfies C_NOCHANG
  * @constant
  * @type {number}
  */
-export const C_NOCHANGE_RC_outcome_no_change = _enum_for_C_NOCHANGE_RC_outcome.no_change satisfies C_NOCHANGE_RC_outcome; /* LONG_NAMED_ENUMERATED_VALUE */
+export const C_NOCHANGE_RC_outcome_no_change = _enum_for_C_NOCHANGE_RC_outcome.no_change; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -111,7 +111,7 @@ export const C_NOCHANGE_RC_outcome_no_change = _enum_for_C_NOCHANGE_RC_outcome.n
  * @constant
  * @type {number}
  */
-export const no_change = C_NOCHANGE_RC_outcome_no_change satisfies C_NOCHANGE_RC_outcome; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const no_change = C_NOCHANGE_RC_outcome_no_change; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 

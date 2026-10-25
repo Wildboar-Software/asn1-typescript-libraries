@@ -82,7 +82,7 @@ const RoamingNotAllowedCause = _enum_for_RoamingNotAllowedCause;
  * @type {number}
  */
 export
-const RoamingNotAllowedCause_plmnRoamingNotAllowed = RoamingNotAllowedCause.plmnRoamingNotAllowed satisfies RoamingNotAllowedCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const RoamingNotAllowedCause_plmnRoamingNotAllowed = RoamingNotAllowedCause.plmnRoamingNotAllowed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary plmnRoamingNotAllowed
@@ -94,7 +94,7 @@ const RoamingNotAllowedCause_plmnRoamingNotAllowed = RoamingNotAllowedCause.plmn
  * @type {number}
  */
 export
-const plmnRoamingNotAllowed = RoamingNotAllowedCause.plmnRoamingNotAllowed satisfies RoamingNotAllowedCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const plmnRoamingNotAllowed = RoamingNotAllowedCause.plmnRoamingNotAllowed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RoamingNotAllowedCause_operatorDeterminedBarring
@@ -106,7 +106,7 @@ const plmnRoamingNotAllowed = RoamingNotAllowedCause.plmnRoamingNotAllowed satis
  * @type {number}
  */
 export
-const RoamingNotAllowedCause_operatorDeterminedBarring = RoamingNotAllowedCause.operatorDeterminedBarring satisfies RoamingNotAllowedCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const RoamingNotAllowedCause_operatorDeterminedBarring = RoamingNotAllowedCause.operatorDeterminedBarring; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary operatorDeterminedBarring
@@ -118,7 +118,7 @@ const RoamingNotAllowedCause_operatorDeterminedBarring = RoamingNotAllowedCause.
  * @type {number}
  */
 export
-const operatorDeterminedBarring = RoamingNotAllowedCause.operatorDeterminedBarring satisfies RoamingNotAllowedCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const operatorDeterminedBarring = RoamingNotAllowedCause.operatorDeterminedBarring; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) RoamingNotAllowedCause

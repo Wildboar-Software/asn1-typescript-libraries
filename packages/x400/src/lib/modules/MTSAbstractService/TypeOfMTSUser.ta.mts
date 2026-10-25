@@ -42,7 +42,7 @@ export const TypeOfMTSUser_public_ = 0 satisfies TypeOfMTSUser; /* LONG_NAMED_IN
  * @constant
  * @type {number}
  */
-export const public_ = TypeOfMTSUser_public_ satisfies TypeOfMTSUser; /* SHORT_NAMED_INTEGER_VALUE */
+export const public_ = TypeOfMTSUser_public_; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TypeOfMTSUser_private_
@@ -56,7 +56,7 @@ export const TypeOfMTSUser_private_ = 1 satisfies TypeOfMTSUser; /* LONG_NAMED_I
  * @constant
  * @type {number}
  */
-export const private_ = TypeOfMTSUser_private_ satisfies TypeOfMTSUser; /* SHORT_NAMED_INTEGER_VALUE */
+export const private_ = TypeOfMTSUser_private_; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TypeOfMTSUser_ms
@@ -70,7 +70,7 @@ export const TypeOfMTSUser_ms = 2 satisfies TypeOfMTSUser; /* LONG_NAMED_INTEGER
  * @constant
  * @type {number}
  */
-export const ms = TypeOfMTSUser_ms satisfies TypeOfMTSUser; /* SHORT_NAMED_INTEGER_VALUE */
+export const ms = TypeOfMTSUser_ms; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TypeOfMTSUser_dl
@@ -84,7 +84,7 @@ export const TypeOfMTSUser_dl = 3 satisfies TypeOfMTSUser; /* LONG_NAMED_INTEGER
  * @constant
  * @type {number}
  */
-export const dl = TypeOfMTSUser_dl satisfies TypeOfMTSUser; /* SHORT_NAMED_INTEGER_VALUE */
+export const dl = TypeOfMTSUser_dl; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TypeOfMTSUser_pdau
@@ -98,7 +98,7 @@ export const TypeOfMTSUser_pdau = 4 satisfies TypeOfMTSUser; /* LONG_NAMED_INTEG
  * @constant
  * @type {number}
  */
-export const pdau = TypeOfMTSUser_pdau satisfies TypeOfMTSUser; /* SHORT_NAMED_INTEGER_VALUE */
+export const pdau = TypeOfMTSUser_pdau; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TypeOfMTSUser_physical_recipient
@@ -112,7 +112,7 @@ export const TypeOfMTSUser_physical_recipient = 5 satisfies TypeOfMTSUser; /* LO
  * @constant
  * @type {number}
  */
-export const physical_recipient = TypeOfMTSUser_physical_recipient satisfies TypeOfMTSUser; /* SHORT_NAMED_INTEGER_VALUE */
+export const physical_recipient = TypeOfMTSUser_physical_recipient; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TypeOfMTSUser_other
@@ -126,7 +126,7 @@ export const TypeOfMTSUser_other = 6 satisfies TypeOfMTSUser; /* LONG_NAMED_INTE
  * @constant
  * @type {number}
  */
-export const other = TypeOfMTSUser_other satisfies TypeOfMTSUser; /* SHORT_NAMED_INTEGER_VALUE */
+export const other = TypeOfMTSUser_other; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_TypeOfMTSUser = $._decodeInteger;

@@ -120,7 +120,7 @@ const EKGenerationLocation = _enum_for_EKGenerationLocation;
  * @type {number}
  */
 export
-const EKGenerationLocation_tpmManufacturer = EKGenerationLocation.tpmManufacturer satisfies EKGenerationLocation; /* LONG_NAMED_ENUMERATED_VALUE */
+const EKGenerationLocation_tpmManufacturer = EKGenerationLocation.tpmManufacturer; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tpmManufacturer
@@ -136,7 +136,7 @@ const EKGenerationLocation_tpmManufacturer = EKGenerationLocation.tpmManufacture
  * @type {number}
  */
 export
-const tpmManufacturer = EKGenerationLocation.tpmManufacturer satisfies EKGenerationLocation; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tpmManufacturer = EKGenerationLocation.tpmManufacturer; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EKGenerationLocation_platformManufacturer
@@ -152,7 +152,7 @@ const tpmManufacturer = EKGenerationLocation.tpmManufacturer satisfies EKGenerat
  * @type {number}
  */
 export
-const EKGenerationLocation_platformManufacturer = EKGenerationLocation.platformManufacturer satisfies EKGenerationLocation; /* LONG_NAMED_ENUMERATED_VALUE */
+const EKGenerationLocation_platformManufacturer = EKGenerationLocation.platformManufacturer; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary platformManufacturer
@@ -168,7 +168,7 @@ const EKGenerationLocation_platformManufacturer = EKGenerationLocation.platformM
  * @type {number}
  */
 export
-const platformManufacturer = EKGenerationLocation.platformManufacturer satisfies EKGenerationLocation; /* SHORT_NAMED_ENUMERATED_VALUE */
+const platformManufacturer = EKGenerationLocation.platformManufacturer; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EKGenerationLocation_ekCertSigner
@@ -184,7 +184,7 @@ const platformManufacturer = EKGenerationLocation.platformManufacturer satisfies
  * @type {number}
  */
 export
-const EKGenerationLocation_ekCertSigner = EKGenerationLocation.ekCertSigner satisfies EKGenerationLocation; /* LONG_NAMED_ENUMERATED_VALUE */
+const EKGenerationLocation_ekCertSigner = EKGenerationLocation.ekCertSigner; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ekCertSigner
@@ -200,7 +200,7 @@ const EKGenerationLocation_ekCertSigner = EKGenerationLocation.ekCertSigner sati
  * @type {number}
  */
 export
-const ekCertSigner = EKGenerationLocation.ekCertSigner satisfies EKGenerationLocation; /* SHORT_NAMED_ENUMERATED_VALUE */
+const ekCertSigner = EKGenerationLocation.ekCertSigner; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_EKGenerationLocation: $.ASN1Decoder<EKGenerationLocation> = $._decodeEnumerated;

@@ -54,7 +54,7 @@ const PrimitiveDataType_octetString = 0 satisfies PrimitiveDataType; /* LONG_NAM
  * @type {number}
  */
 export
-const octetString = PrimitiveDataType_octetString satisfies PrimitiveDataType; /* SHORT_NAMED_INTEGER_VALUE */
+const octetString = PrimitiveDataType_octetString; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PrimitiveDataType_numeric
@@ -75,7 +75,7 @@ const PrimitiveDataType_numeric = 1 satisfies PrimitiveDataType; /* LONG_NAMED_I
  * @type {number}
  */
 export
-const numeric = PrimitiveDataType_numeric satisfies PrimitiveDataType; /* SHORT_NAMED_INTEGER_VALUE */
+const numeric = PrimitiveDataType_numeric; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PrimitiveDataType_date
@@ -96,7 +96,7 @@ const PrimitiveDataType_date = 2 satisfies PrimitiveDataType; /* LONG_NAMED_INTE
  * @type {number}
  */
 export
-const date = PrimitiveDataType_date satisfies PrimitiveDataType; /* SHORT_NAMED_INTEGER_VALUE */
+const date = PrimitiveDataType_date; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PrimitiveDataType_external
@@ -117,7 +117,7 @@ const PrimitiveDataType_external = 3 satisfies PrimitiveDataType; /* LONG_NAMED_
  * @type {number}
  */
 export
-const external = PrimitiveDataType_external satisfies PrimitiveDataType; /* SHORT_NAMED_INTEGER_VALUE */
+const external = PrimitiveDataType_external; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PrimitiveDataType_string_
@@ -138,7 +138,7 @@ const PrimitiveDataType_string_ = 4 satisfies PrimitiveDataType; /* LONG_NAMED_I
  * @type {number}
  */
 export
-const string_ = PrimitiveDataType_string_ satisfies PrimitiveDataType; /* SHORT_NAMED_INTEGER_VALUE */
+const string_ = PrimitiveDataType_string_; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PrimitiveDataType_trueOrFalse
@@ -159,7 +159,7 @@ const PrimitiveDataType_trueOrFalse = 5 satisfies PrimitiveDataType; /* LONG_NAM
  * @type {number}
  */
 export
-const trueOrFalse = PrimitiveDataType_trueOrFalse satisfies PrimitiveDataType; /* SHORT_NAMED_INTEGER_VALUE */
+const trueOrFalse = PrimitiveDataType_trueOrFalse; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PrimitiveDataType_oid
@@ -180,7 +180,7 @@ const PrimitiveDataType_oid = 6 satisfies PrimitiveDataType; /* LONG_NAMED_INTEG
  * @type {number}
  */
 export
-const oid = PrimitiveDataType_oid satisfies PrimitiveDataType; /* SHORT_NAMED_INTEGER_VALUE */
+const oid = PrimitiveDataType_oid; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PrimitiveDataType_intUnit
@@ -201,7 +201,7 @@ const PrimitiveDataType_intUnit = 7 satisfies PrimitiveDataType; /* LONG_NAMED_I
  * @type {number}
  */
 export
-const intUnit = PrimitiveDataType_intUnit satisfies PrimitiveDataType; /* SHORT_NAMED_INTEGER_VALUE */
+const intUnit = PrimitiveDataType_intUnit; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PrimitiveDataType_empty
@@ -222,7 +222,7 @@ const PrimitiveDataType_empty = 8 satisfies PrimitiveDataType; /* LONG_NAMED_INT
  * @type {number}
  */
 export
-const empty = PrimitiveDataType_empty satisfies PrimitiveDataType; /* SHORT_NAMED_INTEGER_VALUE */
+const empty = PrimitiveDataType_empty; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PrimitiveDataType_noneOfTheAbove
@@ -243,7 +243,7 @@ const PrimitiveDataType_noneOfTheAbove = 100 satisfies PrimitiveDataType; /* LON
  * @type {number}
  */
 export
-const noneOfTheAbove = PrimitiveDataType_noneOfTheAbove satisfies PrimitiveDataType; /* SHORT_NAMED_INTEGER_VALUE */
+const noneOfTheAbove = PrimitiveDataType_noneOfTheAbove; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_PrimitiveDataType: $.ASN1Decoder<PrimitiveDataType> = $._decodeInteger;
 export const _encode_PrimitiveDataType: $.ASN1Encoder<PrimitiveDataType> = $._encodeInteger;
 

@@ -50,7 +50,7 @@ export type BRANCH_IDENTIFIER_initiators_name_side =
  * @constant
  * @type {number}
  */
-export const BRANCH_IDENTIFIER_initiators_name_side_sender = _enum_for_BRANCH_IDENTIFIER_initiators_name_side.sender satisfies BRANCH_IDENTIFIER_initiators_name_side; /* LONG_NAMED_ENUMERATED_VALUE */
+export const BRANCH_IDENTIFIER_initiators_name_side_sender = _enum_for_BRANCH_IDENTIFIER_initiators_name_side.sender; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -58,7 +58,7 @@ export const BRANCH_IDENTIFIER_initiators_name_side_sender = _enum_for_BRANCH_ID
  * @constant
  * @type {number}
  */
-export const sender = BRANCH_IDENTIFIER_initiators_name_side_sender satisfies BRANCH_IDENTIFIER_initiators_name_side; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const sender = BRANCH_IDENTIFIER_initiators_name_side_sender; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -67,7 +67,7 @@ export const sender = BRANCH_IDENTIFIER_initiators_name_side_sender satisfies BR
  * @constant
  * @type {number}
  */
-export const BRANCH_IDENTIFIER_initiators_name_side_receiver = _enum_for_BRANCH_IDENTIFIER_initiators_name_side.receiver satisfies BRANCH_IDENTIFIER_initiators_name_side; /* LONG_NAMED_ENUMERATED_VALUE */
+export const BRANCH_IDENTIFIER_initiators_name_side_receiver = _enum_for_BRANCH_IDENTIFIER_initiators_name_side.receiver; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -75,7 +75,7 @@ export const BRANCH_IDENTIFIER_initiators_name_side_receiver = _enum_for_BRANCH_
  * @constant
  * @type {number}
  */
-export const receiver = BRANCH_IDENTIFIER_initiators_name_side_receiver satisfies BRANCH_IDENTIFIER_initiators_name_side; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const receiver = BRANCH_IDENTIFIER_initiators_name_side_receiver; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 let _cached_decoder_for_BRANCH_IDENTIFIER_initiators_name_side: $.ASN1Decoder<BRANCH_IDENTIFIER_initiators_name_side> | null = null;

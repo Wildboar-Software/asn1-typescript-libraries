@@ -43,7 +43,7 @@ type OccurrenceInfo = _enum_for_OccurrenceInfo | ENUMERATED;
  * @type {number}
  */
 export
-const OccurrenceInfo_oneTimeEvent = _enum_for_OccurrenceInfo.oneTimeEvent satisfies OccurrenceInfo; /* LONG_NAMED_ENUMERATED_VALUE */
+const OccurrenceInfo_oneTimeEvent = _enum_for_OccurrenceInfo.oneTimeEvent; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary oneTimeEvent
@@ -55,7 +55,7 @@ const OccurrenceInfo_oneTimeEvent = _enum_for_OccurrenceInfo.oneTimeEvent satisf
  * @type {number}
  */
 export
-const oneTimeEvent = OccurrenceInfo_oneTimeEvent satisfies OccurrenceInfo; /* SHORT_NAMED_ENUMERATED_VALUE */
+const oneTimeEvent = OccurrenceInfo_oneTimeEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OccurrenceInfo_multipleTimeEvent
@@ -67,7 +67,7 @@ const oneTimeEvent = OccurrenceInfo_oneTimeEvent satisfies OccurrenceInfo; /* SH
  * @type {number}
  */
 export
-const OccurrenceInfo_multipleTimeEvent = _enum_for_OccurrenceInfo.multipleTimeEvent satisfies OccurrenceInfo; /* LONG_NAMED_ENUMERATED_VALUE */
+const OccurrenceInfo_multipleTimeEvent = _enum_for_OccurrenceInfo.multipleTimeEvent; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary multipleTimeEvent
@@ -79,7 +79,7 @@ const OccurrenceInfo_multipleTimeEvent = _enum_for_OccurrenceInfo.multipleTimeEv
  * @type {number}
  */
 export
-const multipleTimeEvent = OccurrenceInfo_multipleTimeEvent satisfies OccurrenceInfo; /* SHORT_NAMED_ENUMERATED_VALUE */
+const multipleTimeEvent = OccurrenceInfo_multipleTimeEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) OccurrenceInfo

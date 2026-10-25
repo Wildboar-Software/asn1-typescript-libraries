@@ -86,7 +86,7 @@ export const ObjectDigestInfo_digestedObjectType =
  * @type {number}
  */
 export const ObjectDigestInfo_digestedObjectType_publicKey =
-    ObjectDigestInfo_digestedObjectType.publicKey satisfies ObjectDigestInfo_digestedObjectType; /* LONG_NAMED_ENUMERATED_VALUE */
+    ObjectDigestInfo_digestedObjectType.publicKey; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary publicKey
@@ -94,7 +94,7 @@ export const ObjectDigestInfo_digestedObjectType_publicKey =
  * @type {number}
  */
 export const publicKey =
-    ObjectDigestInfo_digestedObjectType.publicKey satisfies ObjectDigestInfo_digestedObjectType; /* SHORT_NAMED_ENUMERATED_VALUE */
+    ObjectDigestInfo_digestedObjectType.publicKey; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ObjectDigestInfo_digestedObjectType_publicKeyCert
@@ -102,7 +102,7 @@ export const publicKey =
  * @type {number}
  */
 export const ObjectDigestInfo_digestedObjectType_publicKeyCert =
-    ObjectDigestInfo_digestedObjectType.publicKeyCert satisfies ObjectDigestInfo_digestedObjectType; /* LONG_NAMED_ENUMERATED_VALUE */
+    ObjectDigestInfo_digestedObjectType.publicKeyCert; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary publicKeyCert
@@ -110,7 +110,7 @@ export const ObjectDigestInfo_digestedObjectType_publicKeyCert =
  * @type {number}
  */
 export const publicKeyCert =
-    ObjectDigestInfo_digestedObjectType.publicKeyCert satisfies ObjectDigestInfo_digestedObjectType; /* SHORT_NAMED_ENUMERATED_VALUE */
+    ObjectDigestInfo_digestedObjectType.publicKeyCert; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ObjectDigestInfo_digestedObjectType_otherObjectTypes
@@ -118,7 +118,7 @@ export const publicKeyCert =
  * @type {number}
  */
 export const ObjectDigestInfo_digestedObjectType_otherObjectTypes =
-    ObjectDigestInfo_digestedObjectType.otherObjectTypes satisfies ObjectDigestInfo_digestedObjectType; /* LONG_NAMED_ENUMERATED_VALUE */
+    ObjectDigestInfo_digestedObjectType.otherObjectTypes; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary otherObjectTypes
@@ -126,7 +126,7 @@ export const ObjectDigestInfo_digestedObjectType_otherObjectTypes =
  * @type {number}
  */
 export const otherObjectTypes =
-    ObjectDigestInfo_digestedObjectType.otherObjectTypes satisfies ObjectDigestInfo_digestedObjectType; /* SHORT_NAMED_ENUMERATED_VALUE */
+    ObjectDigestInfo_digestedObjectType.otherObjectTypes; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) ObjectDigestInfo_digestedObjectType

@@ -50,7 +50,7 @@ const CancelSessionReason_endUserRejection = 0 satisfies CancelSessionReason; /*
  * @type {number}
  */
 export
-const endUserRejection = CancelSessionReason_endUserRejection satisfies CancelSessionReason; /* SHORT_NAMED_INTEGER_VALUE */
+const endUserRejection = CancelSessionReason_endUserRejection; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CancelSessionReason_postponed
@@ -76,7 +76,7 @@ const CancelSessionReason_postponed = 1 satisfies CancelSessionReason; /* LONG_N
  * @type {number}
  */
 export
-const postponed = CancelSessionReason_postponed satisfies CancelSessionReason; /* SHORT_NAMED_INTEGER_VALUE */
+const postponed = CancelSessionReason_postponed; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CancelSessionReason_timeout
@@ -102,7 +102,7 @@ const CancelSessionReason_timeout = 2 satisfies CancelSessionReason; /* LONG_NAM
  * @type {number}
  */
 export
-const timeout = CancelSessionReason_timeout satisfies CancelSessionReason; /* SHORT_NAMED_INTEGER_VALUE */
+const timeout = CancelSessionReason_timeout; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CancelSessionReason_pprNotAllowed
@@ -128,7 +128,7 @@ const CancelSessionReason_pprNotAllowed = 3 satisfies CancelSessionReason; /* LO
  * @type {number}
  */
 export
-const pprNotAllowed = CancelSessionReason_pprNotAllowed satisfies CancelSessionReason; /* SHORT_NAMED_INTEGER_VALUE */
+const pprNotAllowed = CancelSessionReason_pprNotAllowed; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CancelSessionReason_metadataMismatch
@@ -154,7 +154,7 @@ const CancelSessionReason_metadataMismatch = 4 satisfies CancelSessionReason; /*
  * @type {number}
  */
 export
-const metadataMismatch = CancelSessionReason_metadataMismatch satisfies CancelSessionReason; /* SHORT_NAMED_INTEGER_VALUE */
+const metadataMismatch = CancelSessionReason_metadataMismatch; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CancelSessionReason_loadBppExecutionError
@@ -180,7 +180,7 @@ const CancelSessionReason_loadBppExecutionError = 5 satisfies CancelSessionReaso
  * @type {number}
  */
 export
-const loadBppExecutionError = CancelSessionReason_loadBppExecutionError satisfies CancelSessionReason; /* SHORT_NAMED_INTEGER_VALUE */
+const loadBppExecutionError = CancelSessionReason_loadBppExecutionError; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CancelSessionReason_undefinedReason
@@ -204,7 +204,7 @@ const CancelSessionReason_undefinedReason = 127 satisfies CancelSessionReason; /
  * @type {number}
  */
 export
-const undefinedReason = CancelSessionReason_undefinedReason satisfies CancelSessionReason; /* SHORT_NAMED_INTEGER_VALUE */
+const undefinedReason = CancelSessionReason_undefinedReason; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_CancelSessionReason = $._decodeInteger;
 export const _encode_CancelSessionReason = $._encodeInteger;
 

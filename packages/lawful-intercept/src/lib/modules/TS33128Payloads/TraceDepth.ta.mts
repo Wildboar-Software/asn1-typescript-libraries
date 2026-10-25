@@ -85,7 +85,7 @@ const TraceDepth = _enum_for_TraceDepth;
  * @type {number}
  */
 export
-const TraceDepth_minimum = TraceDepth.minimum satisfies TraceDepth; /* LONG_NAMED_ENUMERATED_VALUE */
+const TraceDepth_minimum = TraceDepth.minimum; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary minimum
@@ -93,7 +93,7 @@ const TraceDepth_minimum = TraceDepth.minimum satisfies TraceDepth; /* LONG_NAME
  * @type {number}
  */
 export
-const minimum = TraceDepth.minimum satisfies TraceDepth; /* SHORT_NAMED_ENUMERATED_VALUE */
+const minimum = TraceDepth.minimum; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TraceDepth_medium
@@ -101,7 +101,7 @@ const minimum = TraceDepth.minimum satisfies TraceDepth; /* SHORT_NAMED_ENUMERAT
  * @type {number}
  */
 export
-const TraceDepth_medium = TraceDepth.medium satisfies TraceDepth; /* LONG_NAMED_ENUMERATED_VALUE */
+const TraceDepth_medium = TraceDepth.medium; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary medium
@@ -109,7 +109,7 @@ const TraceDepth_medium = TraceDepth.medium satisfies TraceDepth; /* LONG_NAMED_
  * @type {number}
  */
 export
-const medium = TraceDepth.medium satisfies TraceDepth; /* SHORT_NAMED_ENUMERATED_VALUE */
+const medium = TraceDepth.medium; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TraceDepth_maximum
@@ -117,7 +117,7 @@ const medium = TraceDepth.medium satisfies TraceDepth; /* SHORT_NAMED_ENUMERATED
  * @type {number}
  */
 export
-const TraceDepth_maximum = TraceDepth.maximum satisfies TraceDepth; /* LONG_NAMED_ENUMERATED_VALUE */
+const TraceDepth_maximum = TraceDepth.maximum; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary maximum
@@ -125,7 +125,7 @@ const TraceDepth_maximum = TraceDepth.maximum satisfies TraceDepth; /* LONG_NAME
  * @type {number}
  */
 export
-const maximum = TraceDepth.maximum satisfies TraceDepth; /* SHORT_NAMED_ENUMERATED_VALUE */
+const maximum = TraceDepth.maximum; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TraceDepth_minimumWithoutVendorSpecificExtension
@@ -133,7 +133,7 @@ const maximum = TraceDepth.maximum satisfies TraceDepth; /* SHORT_NAMED_ENUMERAT
  * @type {number}
  */
 export
-const TraceDepth_minimumWithoutVendorSpecificExtension = TraceDepth.minimumWithoutVendorSpecificExtension satisfies TraceDepth; /* LONG_NAMED_ENUMERATED_VALUE */
+const TraceDepth_minimumWithoutVendorSpecificExtension = TraceDepth.minimumWithoutVendorSpecificExtension; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary minimumWithoutVendorSpecificExtension
@@ -141,7 +141,7 @@ const TraceDepth_minimumWithoutVendorSpecificExtension = TraceDepth.minimumWitho
  * @type {number}
  */
 export
-const minimumWithoutVendorSpecificExtension = TraceDepth.minimumWithoutVendorSpecificExtension satisfies TraceDepth; /* SHORT_NAMED_ENUMERATED_VALUE */
+const minimumWithoutVendorSpecificExtension = TraceDepth.minimumWithoutVendorSpecificExtension; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TraceDepth_mediumWithoutVendorSpecificExtension
@@ -149,7 +149,7 @@ const minimumWithoutVendorSpecificExtension = TraceDepth.minimumWithoutVendorSpe
  * @type {number}
  */
 export
-const TraceDepth_mediumWithoutVendorSpecificExtension = TraceDepth.mediumWithoutVendorSpecificExtension satisfies TraceDepth; /* LONG_NAMED_ENUMERATED_VALUE */
+const TraceDepth_mediumWithoutVendorSpecificExtension = TraceDepth.mediumWithoutVendorSpecificExtension; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary mediumWithoutVendorSpecificExtension
@@ -157,7 +157,7 @@ const TraceDepth_mediumWithoutVendorSpecificExtension = TraceDepth.mediumWithout
  * @type {number}
  */
 export
-const mediumWithoutVendorSpecificExtension = TraceDepth.mediumWithoutVendorSpecificExtension satisfies TraceDepth; /* SHORT_NAMED_ENUMERATED_VALUE */
+const mediumWithoutVendorSpecificExtension = TraceDepth.mediumWithoutVendorSpecificExtension; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TraceDepth_maximumWithoutVendorSpecificExtension
@@ -165,7 +165,7 @@ const mediumWithoutVendorSpecificExtension = TraceDepth.mediumWithoutVendorSpeci
  * @type {number}
  */
 export
-const TraceDepth_maximumWithoutVendorSpecificExtension = TraceDepth.maximumWithoutVendorSpecificExtension satisfies TraceDepth; /* LONG_NAMED_ENUMERATED_VALUE */
+const TraceDepth_maximumWithoutVendorSpecificExtension = TraceDepth.maximumWithoutVendorSpecificExtension; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary maximumWithoutVendorSpecificExtension
@@ -173,7 +173,7 @@ const TraceDepth_maximumWithoutVendorSpecificExtension = TraceDepth.maximumWitho
  * @type {number}
  */
 export
-const maximumWithoutVendorSpecificExtension = TraceDepth.maximumWithoutVendorSpecificExtension satisfies TraceDepth; /* SHORT_NAMED_ENUMERATED_VALUE */
+const maximumWithoutVendorSpecificExtension = TraceDepth.maximumWithoutVendorSpecificExtension; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_TraceDepth: $.ASN1Decoder<TraceDepth> = $._decodeEnumerated;
 export const _encode_TraceDepth: $.ASN1Encoder<TraceDepth> = $._encodeEnumerated;
 

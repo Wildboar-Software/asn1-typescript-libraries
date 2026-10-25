@@ -119,7 +119,7 @@ type Intercepted_Call_State = _enum_for_Intercepted_Call_State | ENUMERATED;
  * @type {number}
  */
 export
-const Intercepted_Call_State_idle = _enum_for_Intercepted_Call_State.idle satisfies Intercepted_Call_State; /* LONG_NAMED_ENUMERATED_VALUE */
+const Intercepted_Call_State_idle = _enum_for_Intercepted_Call_State.idle; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary idle
@@ -135,7 +135,7 @@ const Intercepted_Call_State_idle = _enum_for_Intercepted_Call_State.idle satisf
  * @type {number}
  */
 export
-const idle = Intercepted_Call_State_idle satisfies Intercepted_Call_State; /* SHORT_NAMED_ENUMERATED_VALUE */
+const idle = Intercepted_Call_State_idle; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Intercepted_Call_State_setUpInProcess
@@ -150,7 +150,7 @@ const idle = Intercepted_Call_State_idle satisfies Intercepted_Call_State; /* SH
  * @type {number}
  */
 export
-const Intercepted_Call_State_setUpInProcess = _enum_for_Intercepted_Call_State.setUpInProcess satisfies Intercepted_Call_State; /* LONG_NAMED_ENUMERATED_VALUE */
+const Intercepted_Call_State_setUpInProcess = _enum_for_Intercepted_Call_State.setUpInProcess; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary setUpInProcess
@@ -165,7 +165,7 @@ const Intercepted_Call_State_setUpInProcess = _enum_for_Intercepted_Call_State.s
  * @type {number}
  */
 export
-const setUpInProcess = Intercepted_Call_State_setUpInProcess satisfies Intercepted_Call_State; /* SHORT_NAMED_ENUMERATED_VALUE */
+const setUpInProcess = Intercepted_Call_State_setUpInProcess; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Intercepted_Call_State_connected
@@ -180,7 +180,7 @@ const setUpInProcess = Intercepted_Call_State_setUpInProcess satisfies Intercept
  * @type {number}
  */
 export
-const Intercepted_Call_State_connected = _enum_for_Intercepted_Call_State.connected satisfies Intercepted_Call_State; /* LONG_NAMED_ENUMERATED_VALUE */
+const Intercepted_Call_State_connected = _enum_for_Intercepted_Call_State.connected; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary connected
@@ -195,7 +195,7 @@ const Intercepted_Call_State_connected = _enum_for_Intercepted_Call_State.connec
  * @type {number}
  */
 export
-const connected = Intercepted_Call_State_connected satisfies Intercepted_Call_State; /* SHORT_NAMED_ENUMERATED_VALUE */
+const connected = Intercepted_Call_State_connected; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_Intercepted_Call_State: $.ASN1Decoder<Intercepted_Call_State> = $._decodeEnumerated;
 export const _encode_Intercepted_Call_State: $.ASN1Encoder<Intercepted_Call_State> = $._encodeEnumerated;
 

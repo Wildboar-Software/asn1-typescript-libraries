@@ -77,7 +77,7 @@ const PTCTBPriorityLevel = _enum_for_PTCTBPriorityLevel;
  * @type {number}
  */
 export
-const PTCTBPriorityLevel_preEmptive = PTCTBPriorityLevel.preEmptive satisfies PTCTBPriorityLevel; /* LONG_NAMED_ENUMERATED_VALUE */
+const PTCTBPriorityLevel_preEmptive = PTCTBPriorityLevel.preEmptive; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary preEmptive
@@ -85,7 +85,7 @@ const PTCTBPriorityLevel_preEmptive = PTCTBPriorityLevel.preEmptive satisfies PT
  * @type {number}
  */
 export
-const preEmptive = PTCTBPriorityLevel.preEmptive satisfies PTCTBPriorityLevel; /* SHORT_NAMED_ENUMERATED_VALUE */
+const preEmptive = PTCTBPriorityLevel.preEmptive; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PTCTBPriorityLevel_highPriority
@@ -93,7 +93,7 @@ const preEmptive = PTCTBPriorityLevel.preEmptive satisfies PTCTBPriorityLevel; /
  * @type {number}
  */
 export
-const PTCTBPriorityLevel_highPriority = PTCTBPriorityLevel.highPriority satisfies PTCTBPriorityLevel; /* LONG_NAMED_ENUMERATED_VALUE */
+const PTCTBPriorityLevel_highPriority = PTCTBPriorityLevel.highPriority; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary highPriority
@@ -101,7 +101,7 @@ const PTCTBPriorityLevel_highPriority = PTCTBPriorityLevel.highPriority satisfie
  * @type {number}
  */
 export
-const highPriority = PTCTBPriorityLevel.highPriority satisfies PTCTBPriorityLevel; /* SHORT_NAMED_ENUMERATED_VALUE */
+const highPriority = PTCTBPriorityLevel.highPriority; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PTCTBPriorityLevel_normalPriority
@@ -109,7 +109,7 @@ const highPriority = PTCTBPriorityLevel.highPriority satisfies PTCTBPriorityLeve
  * @type {number}
  */
 export
-const PTCTBPriorityLevel_normalPriority = PTCTBPriorityLevel.normalPriority satisfies PTCTBPriorityLevel; /* LONG_NAMED_ENUMERATED_VALUE */
+const PTCTBPriorityLevel_normalPriority = PTCTBPriorityLevel.normalPriority; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary normalPriority
@@ -117,7 +117,7 @@ const PTCTBPriorityLevel_normalPriority = PTCTBPriorityLevel.normalPriority sati
  * @type {number}
  */
 export
-const normalPriority = PTCTBPriorityLevel.normalPriority satisfies PTCTBPriorityLevel; /* SHORT_NAMED_ENUMERATED_VALUE */
+const normalPriority = PTCTBPriorityLevel.normalPriority; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PTCTBPriorityLevel_listenOnly
@@ -125,7 +125,7 @@ const normalPriority = PTCTBPriorityLevel.normalPriority satisfies PTCTBPriority
  * @type {number}
  */
 export
-const PTCTBPriorityLevel_listenOnly = PTCTBPriorityLevel.listenOnly satisfies PTCTBPriorityLevel; /* LONG_NAMED_ENUMERATED_VALUE */
+const PTCTBPriorityLevel_listenOnly = PTCTBPriorityLevel.listenOnly; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary listenOnly
@@ -133,7 +133,7 @@ const PTCTBPriorityLevel_listenOnly = PTCTBPriorityLevel.listenOnly satisfies PT
  * @type {number}
  */
 export
-const listenOnly = PTCTBPriorityLevel.listenOnly satisfies PTCTBPriorityLevel; /* SHORT_NAMED_ENUMERATED_VALUE */
+const listenOnly = PTCTBPriorityLevel.listenOnly; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_PTCTBPriorityLevel: $.ASN1Decoder<PTCTBPriorityLevel> = $._decodeEnumerated;
 export const _encode_PTCTBPriorityLevel: $.ASN1Encoder<PTCTBPriorityLevel> = $._encodeEnumerated;
 

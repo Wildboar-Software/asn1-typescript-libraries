@@ -29,7 +29,7 @@ export const TokenInfo_version_v1 = 0 satisfies TokenInfo_version; /* LONG_NAMED
  * @constant
  * @type {number}
  */
-export const v1 = TokenInfo_version_v1 satisfies TokenInfo_version; /* SHORT_NAMED_INTEGER_VALUE */
+export const v1 = TokenInfo_version_v1; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 

@@ -74,7 +74,7 @@ export const PhysicalForwardingAddressRequest = _enum_for_PhysicalForwardingAddr
  * @type {number}
  */
 export const PhysicalForwardingAddressRequest_physical_forwarding_address_not_requested =
-    PhysicalForwardingAddressRequest.physical_forwarding_address_not_requested satisfies PhysicalForwardingAddressRequest; /* LONG_NAMED_ENUMERATED_VALUE */
+    PhysicalForwardingAddressRequest.physical_forwarding_address_not_requested; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary physical_forwarding_address_not_requested
@@ -82,7 +82,7 @@ export const PhysicalForwardingAddressRequest_physical_forwarding_address_not_re
  * @type {number}
  */
 export const physical_forwarding_address_not_requested =
-    PhysicalForwardingAddressRequest.physical_forwarding_address_not_requested satisfies PhysicalForwardingAddressRequest; /* SHORT_NAMED_ENUMERATED_VALUE */
+    PhysicalForwardingAddressRequest.physical_forwarding_address_not_requested; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PhysicalForwardingAddressRequest_physical_forwarding_address_requested
@@ -90,7 +90,7 @@ export const physical_forwarding_address_not_requested =
  * @type {number}
  */
 export const PhysicalForwardingAddressRequest_physical_forwarding_address_requested =
-    PhysicalForwardingAddressRequest.physical_forwarding_address_requested satisfies PhysicalForwardingAddressRequest; /* LONG_NAMED_ENUMERATED_VALUE */
+    PhysicalForwardingAddressRequest.physical_forwarding_address_requested; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary physical_forwarding_address_requested
@@ -98,7 +98,7 @@ export const PhysicalForwardingAddressRequest_physical_forwarding_address_reques
  * @type {number}
  */
 export const physical_forwarding_address_requested =
-    PhysicalForwardingAddressRequest.physical_forwarding_address_requested satisfies PhysicalForwardingAddressRequest; /* SHORT_NAMED_ENUMERATED_VALUE */
+    PhysicalForwardingAddressRequest.physical_forwarding_address_requested; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 let _cached_decoder_for_PhysicalForwardingAddressRequest: $.ASN1Decoder<PhysicalForwardingAddressRequest> | null = null;
 

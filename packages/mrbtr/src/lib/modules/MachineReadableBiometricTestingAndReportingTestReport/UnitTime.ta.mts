@@ -85,7 +85,7 @@ const UnitTime = _enum_for_UnitTime;
  * @type {number}
  */
 export
-const UnitTime_millisecond = UnitTime.millisecond satisfies UnitTime; /* LONG_NAMED_ENUMERATED_VALUE */
+const UnitTime_millisecond = UnitTime.millisecond; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary millisecond
@@ -93,7 +93,7 @@ const UnitTime_millisecond = UnitTime.millisecond satisfies UnitTime; /* LONG_NA
  * @type {number}
  */
 export
-const millisecond = UnitTime.millisecond satisfies UnitTime; /* SHORT_NAMED_ENUMERATED_VALUE */
+const millisecond = UnitTime.millisecond; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary UnitTime_second
@@ -101,7 +101,7 @@ const millisecond = UnitTime.millisecond satisfies UnitTime; /* SHORT_NAMED_ENUM
  * @type {number}
  */
 export
-const UnitTime_second = UnitTime.second satisfies UnitTime; /* LONG_NAMED_ENUMERATED_VALUE */
+const UnitTime_second = UnitTime.second; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary second
@@ -109,7 +109,7 @@ const UnitTime_second = UnitTime.second satisfies UnitTime; /* LONG_NAMED_ENUMER
  * @type {number}
  */
 export
-const second = UnitTime.second satisfies UnitTime; /* SHORT_NAMED_ENUMERATED_VALUE */
+const second = UnitTime.second; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**

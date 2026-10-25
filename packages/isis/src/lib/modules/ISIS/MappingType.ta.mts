@@ -85,7 +85,7 @@ export const MappingType = _enum_for_MappingType;
  * @type {number}
  */
 export const MappingType_none =
-  MappingType.none satisfies MappingType; /* LONG_NAMED_ENUMERATED_VALUE */
+  MappingType.none; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary none
@@ -93,7 +93,7 @@ export const MappingType_none =
  * @type {number}
  */
 export const none =
-  MappingType.none satisfies MappingType; /* SHORT_NAMED_ENUMERATED_VALUE */
+  MappingType.none; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MappingType_explicit
@@ -108,7 +108,7 @@ export const none =
  * @type {number}
  */
 export const MappingType_explicit =
-  MappingType.explicit satisfies MappingType; /* LONG_NAMED_ENUMERATED_VALUE */
+  MappingType.explicit; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary explicit
@@ -116,7 +116,7 @@ export const MappingType_explicit =
  * @type {number}
  */
 export const explicit =
-  MappingType.explicit satisfies MappingType; /* SHORT_NAMED_ENUMERATED_VALUE */
+  MappingType.explicit; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MappingType_extractIDI
@@ -131,7 +131,7 @@ export const explicit =
  * @type {number}
  */
 export const MappingType_extractIDI =
-  MappingType.extractIDI satisfies MappingType; /* LONG_NAMED_ENUMERATED_VALUE */
+  MappingType.extractIDI; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary extractIDI
@@ -139,7 +139,7 @@ export const MappingType_extractIDI =
  * @type {number}
  */
 export const extractIDI =
-  MappingType.extractIDI satisfies MappingType; /* SHORT_NAMED_ENUMERATED_VALUE */
+  MappingType.extractIDI; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MappingType_extractDSP
@@ -154,7 +154,7 @@ export const extractIDI =
  * @type {number}
  */
 export const MappingType_extractDSP =
-  MappingType.extractDSP satisfies MappingType; /* LONG_NAMED_ENUMERATED_VALUE */
+  MappingType.extractDSP; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary extractDSP
@@ -162,7 +162,7 @@ export const MappingType_extractDSP =
  * @type {number}
  */
 export const extractDSP =
-  MappingType.extractDSP satisfies MappingType; /* SHORT_NAMED_ENUMERATED_VALUE */
+  MappingType.extractDSP; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 export function _decode_MappingType(el: _Element): MappingType {

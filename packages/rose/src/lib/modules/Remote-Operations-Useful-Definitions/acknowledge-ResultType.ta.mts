@@ -47,7 +47,7 @@ export type acknowledge_ResultType =
  * @constant
  * @type {number}
  */
-export const acknowledge_ResultType_acknowledged = _enum_for_acknowledge_ResultType.acknowledged satisfies acknowledge_ResultType; /* LONG_NAMED_ENUMERATED_VALUE */
+export const acknowledge_ResultType_acknowledged = _enum_for_acknowledge_ResultType.acknowledged; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -56,7 +56,7 @@ export const acknowledge_ResultType_acknowledged = _enum_for_acknowledge_ResultT
  * @constant
  * @type {number}
  */
-export const acknowledged = acknowledge_ResultType_acknowledged satisfies acknowledge_ResultType; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const acknowledged = acknowledge_ResultType_acknowledged; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -65,7 +65,7 @@ export const acknowledged = acknowledge_ResultType_acknowledged satisfies acknow
  * @constant
  * @type {number}
  */
-export const acknowledge_ResultType_unknown = _enum_for_acknowledge_ResultType.unknown satisfies acknowledge_ResultType; /* LONG_NAMED_ENUMERATED_VALUE */
+export const acknowledge_ResultType_unknown = _enum_for_acknowledge_ResultType.unknown; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -74,7 +74,7 @@ export const acknowledge_ResultType_unknown = _enum_for_acknowledge_ResultType.u
  * @constant
  * @type {number}
  */
-export const unknown = acknowledge_ResultType_unknown satisfies acknowledge_ResultType; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const unknown = acknowledge_ResultType_unknown; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 

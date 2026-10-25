@@ -75,7 +75,7 @@ export const ProofOfSubmissionRequest = _enum_for_ProofOfSubmissionRequest;
  * @type {number}
  */
 export const ProofOfSubmissionRequest_proof_of_submission_not_requested =
-    ProofOfSubmissionRequest.proof_of_submission_not_requested satisfies ProofOfSubmissionRequest; /* LONG_NAMED_ENUMERATED_VALUE */
+    ProofOfSubmissionRequest.proof_of_submission_not_requested; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary proof_of_submission_not_requested
@@ -83,7 +83,7 @@ export const ProofOfSubmissionRequest_proof_of_submission_not_requested =
  * @type {number}
  */
 export const proof_of_submission_not_requested =
-    ProofOfSubmissionRequest.proof_of_submission_not_requested satisfies ProofOfSubmissionRequest; /* SHORT_NAMED_ENUMERATED_VALUE */
+    ProofOfSubmissionRequest.proof_of_submission_not_requested; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ProofOfSubmissionRequest_proof_of_submission_requested
@@ -91,7 +91,7 @@ export const proof_of_submission_not_requested =
  * @type {number}
  */
 export const ProofOfSubmissionRequest_proof_of_submission_requested =
-    ProofOfSubmissionRequest.proof_of_submission_requested satisfies ProofOfSubmissionRequest; /* LONG_NAMED_ENUMERATED_VALUE */
+    ProofOfSubmissionRequest.proof_of_submission_requested; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary proof_of_submission_requested
@@ -99,7 +99,7 @@ export const ProofOfSubmissionRequest_proof_of_submission_requested =
  * @type {number}
  */
 export const proof_of_submission_requested =
-    ProofOfSubmissionRequest.proof_of_submission_requested satisfies ProofOfSubmissionRequest; /* SHORT_NAMED_ENUMERATED_VALUE */
+    ProofOfSubmissionRequest.proof_of_submission_requested; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 export function _decode_ProofOfSubmissionRequest(el: _Element): ProofOfSubmissionRequest {

@@ -57,7 +57,7 @@ export const SecurityDiagnosticCode_integrity_failure_on_subject_message = 0 sat
  * @constant
  * @type {number}
  */
-export const integrity_failure_on_subject_message = SecurityDiagnosticCode_integrity_failure_on_subject_message satisfies SecurityDiagnosticCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const integrity_failure_on_subject_message = SecurityDiagnosticCode_integrity_failure_on_subject_message; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SecurityDiagnosticCode_integrity_failure_on_forwarded_message
@@ -71,7 +71,7 @@ export const SecurityDiagnosticCode_integrity_failure_on_forwarded_message = 1 s
  * @constant
  * @type {number}
  */
-export const integrity_failure_on_forwarded_message = SecurityDiagnosticCode_integrity_failure_on_forwarded_message satisfies SecurityDiagnosticCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const integrity_failure_on_forwarded_message = SecurityDiagnosticCode_integrity_failure_on_forwarded_message; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SecurityDiagnosticCode_moac_failure_on_subject_message
@@ -85,7 +85,7 @@ export const SecurityDiagnosticCode_moac_failure_on_subject_message = 2 satisfie
  * @constant
  * @type {number}
  */
-export const moac_failure_on_subject_message = SecurityDiagnosticCode_moac_failure_on_subject_message satisfies SecurityDiagnosticCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const moac_failure_on_subject_message = SecurityDiagnosticCode_moac_failure_on_subject_message; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SecurityDiagnosticCode_unsupported_security_policy
@@ -99,7 +99,7 @@ export const SecurityDiagnosticCode_unsupported_security_policy = 3 satisfies Se
  * @constant
  * @type {number}
  */
-export const unsupported_security_policy = SecurityDiagnosticCode_unsupported_security_policy satisfies SecurityDiagnosticCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const unsupported_security_policy = SecurityDiagnosticCode_unsupported_security_policy; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SecurityDiagnosticCode_unsupported_algorithm_identifier
@@ -113,7 +113,7 @@ export const SecurityDiagnosticCode_unsupported_algorithm_identifier = 4 satisfi
  * @constant
  * @type {number}
  */
-export const unsupported_algorithm_identifier = SecurityDiagnosticCode_unsupported_algorithm_identifier satisfies SecurityDiagnosticCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const unsupported_algorithm_identifier = SecurityDiagnosticCode_unsupported_algorithm_identifier; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SecurityDiagnosticCode_decryption_failed
@@ -127,7 +127,7 @@ export const SecurityDiagnosticCode_decryption_failed = 5 satisfies SecurityDiag
  * @constant
  * @type {number}
  */
-export const decryption_failed = SecurityDiagnosticCode_decryption_failed satisfies SecurityDiagnosticCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const decryption_failed = SecurityDiagnosticCode_decryption_failed; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SecurityDiagnosticCode_token_error
@@ -141,7 +141,7 @@ export const SecurityDiagnosticCode_token_error = 6 satisfies SecurityDiagnostic
  * @constant
  * @type {number}
  */
-export const token_error = SecurityDiagnosticCode_token_error satisfies SecurityDiagnosticCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const token_error = SecurityDiagnosticCode_token_error; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SecurityDiagnosticCode_unable_to_sign_notification
@@ -155,7 +155,7 @@ export const SecurityDiagnosticCode_unable_to_sign_notification = 7 satisfies Se
  * @constant
  * @type {number}
  */
-export const unable_to_sign_notification = SecurityDiagnosticCode_unable_to_sign_notification satisfies SecurityDiagnosticCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const unable_to_sign_notification = SecurityDiagnosticCode_unable_to_sign_notification; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SecurityDiagnosticCode_unable_to_sign_message_receipt
@@ -169,7 +169,7 @@ export const SecurityDiagnosticCode_unable_to_sign_message_receipt = 8 satisfies
  * @constant
  * @type {number}
  */
-export const unable_to_sign_message_receipt = SecurityDiagnosticCode_unable_to_sign_message_receipt satisfies SecurityDiagnosticCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const unable_to_sign_message_receipt = SecurityDiagnosticCode_unable_to_sign_message_receipt; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SecurityDiagnosticCode_authentication_failure_on_subject_message
@@ -183,7 +183,7 @@ export const SecurityDiagnosticCode_authentication_failure_on_subject_message = 
  * @constant
  * @type {number}
  */
-export const authentication_failure_on_subject_message = SecurityDiagnosticCode_authentication_failure_on_subject_message satisfies SecurityDiagnosticCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const authentication_failure_on_subject_message = SecurityDiagnosticCode_authentication_failure_on_subject_message; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SecurityDiagnosticCode_security_context_failure_message
@@ -197,7 +197,7 @@ export const SecurityDiagnosticCode_security_context_failure_message = 10 satisf
  * @constant
  * @type {number}
  */
-export const security_context_failure_message = SecurityDiagnosticCode_security_context_failure_message satisfies SecurityDiagnosticCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const security_context_failure_message = SecurityDiagnosticCode_security_context_failure_message; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SecurityDiagnosticCode_message_sequence_failure
@@ -211,7 +211,7 @@ export const SecurityDiagnosticCode_message_sequence_failure = 11 satisfies Secu
  * @constant
  * @type {number}
  */
-export const message_sequence_failure = SecurityDiagnosticCode_message_sequence_failure satisfies SecurityDiagnosticCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const message_sequence_failure = SecurityDiagnosticCode_message_sequence_failure; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SecurityDiagnosticCode_message_security_labelling_failure
@@ -225,7 +225,7 @@ export const SecurityDiagnosticCode_message_security_labelling_failure = 12 sati
  * @constant
  * @type {number}
  */
-export const message_security_labelling_failure = SecurityDiagnosticCode_message_security_labelling_failure satisfies SecurityDiagnosticCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const message_security_labelling_failure = SecurityDiagnosticCode_message_security_labelling_failure; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SecurityDiagnosticCode_repudiation_failure_of_message
@@ -239,7 +239,7 @@ export const SecurityDiagnosticCode_repudiation_failure_of_message = 13 satisfie
  * @constant
  * @type {number}
  */
-export const repudiation_failure_of_message = SecurityDiagnosticCode_repudiation_failure_of_message satisfies SecurityDiagnosticCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const repudiation_failure_of_message = SecurityDiagnosticCode_repudiation_failure_of_message; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SecurityDiagnosticCode_failure_of_proof_of_message
@@ -253,7 +253,7 @@ export const SecurityDiagnosticCode_failure_of_proof_of_message = 14 satisfies S
  * @constant
  * @type {number}
  */
-export const failure_of_proof_of_message = SecurityDiagnosticCode_failure_of_proof_of_message satisfies SecurityDiagnosticCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const failure_of_proof_of_message = SecurityDiagnosticCode_failure_of_proof_of_message; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SecurityDiagnosticCode_signature_key_unobtainable
@@ -267,7 +267,7 @@ export const SecurityDiagnosticCode_signature_key_unobtainable = 15 satisfies Se
  * @constant
  * @type {number}
  */
-export const signature_key_unobtainable = SecurityDiagnosticCode_signature_key_unobtainable satisfies SecurityDiagnosticCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const signature_key_unobtainable = SecurityDiagnosticCode_signature_key_unobtainable; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SecurityDiagnosticCode_decryption_key_unobtainable
@@ -281,7 +281,7 @@ export const SecurityDiagnosticCode_decryption_key_unobtainable = 16 satisfies S
  * @constant
  * @type {number}
  */
-export const decryption_key_unobtainable = SecurityDiagnosticCode_decryption_key_unobtainable satisfies SecurityDiagnosticCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const decryption_key_unobtainable = SecurityDiagnosticCode_decryption_key_unobtainable; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SecurityDiagnosticCode_key_failure
@@ -295,7 +295,7 @@ export const SecurityDiagnosticCode_key_failure = 17 satisfies SecurityDiagnosti
  * @constant
  * @type {number}
  */
-export const key_failure = SecurityDiagnosticCode_key_failure satisfies SecurityDiagnosticCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const key_failure = SecurityDiagnosticCode_key_failure; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SecurityDiagnosticCode_unsupported_request_for_security_service
@@ -309,7 +309,7 @@ export const SecurityDiagnosticCode_unsupported_request_for_security_service = 1
  * @constant
  * @type {number}
  */
-export const unsupported_request_for_security_service = SecurityDiagnosticCode_unsupported_request_for_security_service satisfies SecurityDiagnosticCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const unsupported_request_for_security_service = SecurityDiagnosticCode_unsupported_request_for_security_service; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SecurityDiagnosticCode_inconsistent_request_for_security_service
@@ -323,7 +323,7 @@ export const SecurityDiagnosticCode_inconsistent_request_for_security_service = 
  * @constant
  * @type {number}
  */
-export const inconsistent_request_for_security_service = SecurityDiagnosticCode_inconsistent_request_for_security_service satisfies SecurityDiagnosticCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const inconsistent_request_for_security_service = SecurityDiagnosticCode_inconsistent_request_for_security_service; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SecurityDiagnosticCode_ipn_non_repudiation_provided_instead_of_content_proof
@@ -337,7 +337,7 @@ export const SecurityDiagnosticCode_ipn_non_repudiation_provided_instead_of_cont
  * @constant
  * @type {number}
  */
-export const ipn_non_repudiation_provided_instead_of_content_proof = SecurityDiagnosticCode_ipn_non_repudiation_provided_instead_of_content_proof satisfies SecurityDiagnosticCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const ipn_non_repudiation_provided_instead_of_content_proof = SecurityDiagnosticCode_ipn_non_repudiation_provided_instead_of_content_proof; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SecurityDiagnosticCode_token_decryption_failed
@@ -351,7 +351,7 @@ export const SecurityDiagnosticCode_token_decryption_failed = 21 satisfies Secur
  * @constant
  * @type {number}
  */
-export const token_decryption_failed = SecurityDiagnosticCode_token_decryption_failed satisfies SecurityDiagnosticCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const token_decryption_failed = SecurityDiagnosticCode_token_decryption_failed; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SecurityDiagnosticCode_double_enveloping_message_restoring_failure
@@ -365,7 +365,7 @@ export const SecurityDiagnosticCode_double_enveloping_message_restoring_failure 
  * @constant
  * @type {number}
  */
-export const double_enveloping_message_restoring_failure = SecurityDiagnosticCode_double_enveloping_message_restoring_failure satisfies SecurityDiagnosticCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const double_enveloping_message_restoring_failure = SecurityDiagnosticCode_double_enveloping_message_restoring_failure; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SecurityDiagnosticCode_unauthorised_dl_member
@@ -379,7 +379,7 @@ export const SecurityDiagnosticCode_unauthorised_dl_member = 23 satisfies Securi
  * @constant
  * @type {number}
  */
-export const unauthorised_dl_member = SecurityDiagnosticCode_unauthorised_dl_member satisfies SecurityDiagnosticCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const unauthorised_dl_member = SecurityDiagnosticCode_unauthorised_dl_member; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SecurityDiagnosticCode_reception_security_failure
@@ -393,7 +393,7 @@ export const SecurityDiagnosticCode_reception_security_failure = 24 satisfies Se
  * @constant
  * @type {number}
  */
-export const reception_security_failure = SecurityDiagnosticCode_reception_security_failure satisfies SecurityDiagnosticCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const reception_security_failure = SecurityDiagnosticCode_reception_security_failure; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SecurityDiagnosticCode_unsuitable_alternate_recipient
@@ -407,7 +407,7 @@ export const SecurityDiagnosticCode_unsuitable_alternate_recipient = 25 satisfie
  * @constant
  * @type {number}
  */
-export const unsuitable_alternate_recipient = SecurityDiagnosticCode_unsuitable_alternate_recipient satisfies SecurityDiagnosticCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const unsuitable_alternate_recipient = SecurityDiagnosticCode_unsuitable_alternate_recipient; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SecurityDiagnosticCode_security_services_refusal
@@ -421,7 +421,7 @@ export const SecurityDiagnosticCode_security_services_refusal = 26 satisfies Sec
  * @constant
  * @type {number}
  */
-export const security_services_refusal = SecurityDiagnosticCode_security_services_refusal satisfies SecurityDiagnosticCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const security_services_refusal = SecurityDiagnosticCode_security_services_refusal; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SecurityDiagnosticCode_unauthorised_recipient
@@ -435,7 +435,7 @@ export const SecurityDiagnosticCode_unauthorised_recipient = 27 satisfies Securi
  * @constant
  * @type {number}
  */
-export const unauthorised_recipient = SecurityDiagnosticCode_unauthorised_recipient satisfies SecurityDiagnosticCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const unauthorised_recipient = SecurityDiagnosticCode_unauthorised_recipient; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SecurityDiagnosticCode_unknown_certification_authority_name
@@ -449,7 +449,7 @@ export const SecurityDiagnosticCode_unknown_certification_authority_name = 28 sa
  * @constant
  * @type {number}
  */
-export const unknown_certification_authority_name = SecurityDiagnosticCode_unknown_certification_authority_name satisfies SecurityDiagnosticCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const unknown_certification_authority_name = SecurityDiagnosticCode_unknown_certification_authority_name; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SecurityDiagnosticCode_unknown_dl_name
@@ -463,7 +463,7 @@ export const SecurityDiagnosticCode_unknown_dl_name = 29 satisfies SecurityDiagn
  * @constant
  * @type {number}
  */
-export const unknown_dl_name = SecurityDiagnosticCode_unknown_dl_name satisfies SecurityDiagnosticCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const unknown_dl_name = SecurityDiagnosticCode_unknown_dl_name; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SecurityDiagnosticCode_unknown_originator_name
@@ -477,7 +477,7 @@ export const SecurityDiagnosticCode_unknown_originator_name = 30 satisfies Secur
  * @constant
  * @type {number}
  */
-export const unknown_originator_name = SecurityDiagnosticCode_unknown_originator_name satisfies SecurityDiagnosticCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const unknown_originator_name = SecurityDiagnosticCode_unknown_originator_name; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SecurityDiagnosticCode_unknown_recipient_name
@@ -491,7 +491,7 @@ export const SecurityDiagnosticCode_unknown_recipient_name = 31 satisfies Securi
  * @constant
  * @type {number}
  */
-export const unknown_recipient_name = SecurityDiagnosticCode_unknown_recipient_name satisfies SecurityDiagnosticCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const unknown_recipient_name = SecurityDiagnosticCode_unknown_recipient_name; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SecurityDiagnosticCode_security_policy_violation
@@ -505,7 +505,7 @@ export const SecurityDiagnosticCode_security_policy_violation = 32 satisfies Sec
  * @constant
  * @type {number}
  */
-export const security_policy_violation = SecurityDiagnosticCode_security_policy_violation satisfies SecurityDiagnosticCode; /* SHORT_NAMED_INTEGER_VALUE */
+export const security_policy_violation = SecurityDiagnosticCode_security_policy_violation; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_SecurityDiagnosticCode = $._decodeInteger;

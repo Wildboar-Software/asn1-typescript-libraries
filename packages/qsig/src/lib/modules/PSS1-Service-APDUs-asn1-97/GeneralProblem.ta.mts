@@ -46,7 +46,7 @@ const GeneralProblem_unrecognisedPDU = 0 satisfies GeneralProblem; /* LONG_NAMED
  * @type {number}
  */
 export
-const unrecognisedPDU = GeneralProblem_unrecognisedPDU satisfies GeneralProblem; /* SHORT_NAMED_INTEGER_VALUE */
+const unrecognisedPDU = GeneralProblem_unrecognisedPDU; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary GeneralProblem_mistypedPDU
@@ -68,7 +68,7 @@ const GeneralProblem_mistypedPDU = 1 satisfies GeneralProblem; /* LONG_NAMED_INT
  * @type {number}
  */
 export
-const mistypedPDU = GeneralProblem_mistypedPDU satisfies GeneralProblem; /* SHORT_NAMED_INTEGER_VALUE */
+const mistypedPDU = GeneralProblem_mistypedPDU; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary GeneralProblem_badlyStructuredPDU
@@ -90,7 +90,7 @@ const GeneralProblem_badlyStructuredPDU = 2 satisfies GeneralProblem; /* LONG_NA
  * @type {number}
  */
 export
-const badlyStructuredPDU = GeneralProblem_badlyStructuredPDU satisfies GeneralProblem; /* SHORT_NAMED_INTEGER_VALUE */
+const badlyStructuredPDU = GeneralProblem_badlyStructuredPDU; /* SHORT_NAMED_INTEGER_VALUE */
 
 export
 const _decode_GeneralProblem: $.ASN1Decoder<GeneralProblem> = $._decodeInteger;

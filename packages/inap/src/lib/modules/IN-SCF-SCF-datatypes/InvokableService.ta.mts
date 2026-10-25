@@ -75,7 +75,7 @@ const InvokableService = _enum_for_InvokableService;
  * @type {number}
  */
 export
-const InvokableService_callingLineIdentificationRestriction = InvokableService.callingLineIdentificationRestriction satisfies InvokableService; /* LONG_NAMED_ENUMERATED_VALUE */
+const InvokableService_callingLineIdentificationRestriction = InvokableService.callingLineIdentificationRestriction; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary callingLineIdentificationRestriction
@@ -83,7 +83,7 @@ const InvokableService_callingLineIdentificationRestriction = InvokableService.c
  * @type {number}
  */
 export
-const callingLineIdentificationRestriction = InvokableService.callingLineIdentificationRestriction satisfies InvokableService; /* SHORT_NAMED_ENUMERATED_VALUE */
+const callingLineIdentificationRestriction = InvokableService.callingLineIdentificationRestriction; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary InvokableService_connectedLineIdentificationRestriction
@@ -91,7 +91,7 @@ const callingLineIdentificationRestriction = InvokableService.callingLineIdentif
  * @type {number}
  */
 export
-const InvokableService_connectedLineIdentificationRestriction = InvokableService.connectedLineIdentificationRestriction satisfies InvokableService; /* LONG_NAMED_ENUMERATED_VALUE */
+const InvokableService_connectedLineIdentificationRestriction = InvokableService.connectedLineIdentificationRestriction; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary connectedLineIdentificationRestriction
@@ -99,7 +99,7 @@ const InvokableService_connectedLineIdentificationRestriction = InvokableService
  * @type {number}
  */
 export
-const connectedLineIdentificationRestriction = InvokableService.connectedLineIdentificationRestriction satisfies InvokableService; /* SHORT_NAMED_ENUMERATED_VALUE */
+const connectedLineIdentificationRestriction = InvokableService.connectedLineIdentificationRestriction; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary InvokableService_callWaiting
@@ -107,7 +107,7 @@ const connectedLineIdentificationRestriction = InvokableService.connectedLineIde
  * @type {number}
  */
 export
-const InvokableService_callWaiting = InvokableService.callWaiting satisfies InvokableService; /* LONG_NAMED_ENUMERATED_VALUE */
+const InvokableService_callWaiting = InvokableService.callWaiting; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary callWaiting
@@ -115,7 +115,7 @@ const InvokableService_callWaiting = InvokableService.callWaiting satisfies Invo
  * @type {number}
  */
 export
-const callWaiting = InvokableService.callWaiting satisfies InvokableService; /* SHORT_NAMED_ENUMERATED_VALUE */
+const callWaiting = InvokableService.callWaiting; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary InvokableService_callHold
@@ -123,7 +123,7 @@ const callWaiting = InvokableService.callWaiting satisfies InvokableService; /* 
  * @type {number}
  */
 export
-const InvokableService_callHold = InvokableService.callHold satisfies InvokableService; /* LONG_NAMED_ENUMERATED_VALUE */
+const InvokableService_callHold = InvokableService.callHold; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary callHold
@@ -131,7 +131,7 @@ const InvokableService_callHold = InvokableService.callHold satisfies InvokableS
  * @type {number}
  */
 export
-const callHold = InvokableService.callHold satisfies InvokableService; /* SHORT_NAMED_ENUMERATED_VALUE */
+const callHold = InvokableService.callHold; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary InvokableService_reverseCharging
@@ -139,7 +139,7 @@ const callHold = InvokableService.callHold satisfies InvokableService; /* SHORT_
  * @type {number}
  */
 export
-const InvokableService_reverseCharging = InvokableService.reverseCharging satisfies InvokableService; /* LONG_NAMED_ENUMERATED_VALUE */
+const InvokableService_reverseCharging = InvokableService.reverseCharging; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary reverseCharging
@@ -147,7 +147,7 @@ const InvokableService_reverseCharging = InvokableService.reverseCharging satisf
  * @type {number}
  */
 export
-const reverseCharging = InvokableService.reverseCharging satisfies InvokableService; /* SHORT_NAMED_ENUMERATED_VALUE */
+const reverseCharging = InvokableService.reverseCharging; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary InvokableService_explicitCallTransfer
@@ -155,7 +155,7 @@ const reverseCharging = InvokableService.reverseCharging satisfies InvokableServ
  * @type {number}
  */
 export
-const InvokableService_explicitCallTransfer = InvokableService.explicitCallTransfer satisfies InvokableService; /* LONG_NAMED_ENUMERATED_VALUE */
+const InvokableService_explicitCallTransfer = InvokableService.explicitCallTransfer; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary explicitCallTransfer
@@ -163,7 +163,7 @@ const InvokableService_explicitCallTransfer = InvokableService.explicitCallTrans
  * @type {number}
  */
 export
-const explicitCallTransfer = InvokableService.explicitCallTransfer satisfies InvokableService; /* SHORT_NAMED_ENUMERATED_VALUE */
+const explicitCallTransfer = InvokableService.explicitCallTransfer; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary InvokableService_callCompletionOnBusySubscriber
@@ -171,7 +171,7 @@ const explicitCallTransfer = InvokableService.explicitCallTransfer satisfies Inv
  * @type {number}
  */
 export
-const InvokableService_callCompletionOnBusySubscriber = InvokableService.callCompletionOnBusySubscriber satisfies InvokableService; /* LONG_NAMED_ENUMERATED_VALUE */
+const InvokableService_callCompletionOnBusySubscriber = InvokableService.callCompletionOnBusySubscriber; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary callCompletionOnBusySubscriber
@@ -179,7 +179,7 @@ const InvokableService_callCompletionOnBusySubscriber = InvokableService.callCom
  * @type {number}
  */
 export
-const callCompletionOnBusySubscriber = InvokableService.callCompletionOnBusySubscriber satisfies InvokableService; /* SHORT_NAMED_ENUMERATED_VALUE */
+const callCompletionOnBusySubscriber = InvokableService.callCompletionOnBusySubscriber; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 function _decode_InvokableService(el: _Element): InvokableService {

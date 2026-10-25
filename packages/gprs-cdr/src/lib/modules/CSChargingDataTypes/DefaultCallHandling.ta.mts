@@ -52,7 +52,7 @@ type DefaultCallHandling = _enum_for_DefaultCallHandling | ENUMERATED;
  * @type {number}
  */
 export
-const DefaultCallHandling_continueCall = _enum_for_DefaultCallHandling.continueCall satisfies DefaultCallHandling; /* LONG_NAMED_ENUMERATED_VALUE */
+const DefaultCallHandling_continueCall = _enum_for_DefaultCallHandling.continueCall; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary continueCall
@@ -67,7 +67,7 @@ const DefaultCallHandling_continueCall = _enum_for_DefaultCallHandling.continueC
  * @type {number}
  */
 export
-const continueCall = DefaultCallHandling_continueCall satisfies DefaultCallHandling; /* SHORT_NAMED_ENUMERATED_VALUE */
+const continueCall = DefaultCallHandling_continueCall; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary DefaultCallHandling_releaseCall
@@ -82,7 +82,7 @@ const continueCall = DefaultCallHandling_continueCall satisfies DefaultCallHandl
  * @type {number}
  */
 export
-const DefaultCallHandling_releaseCall = _enum_for_DefaultCallHandling.releaseCall satisfies DefaultCallHandling; /* LONG_NAMED_ENUMERATED_VALUE */
+const DefaultCallHandling_releaseCall = _enum_for_DefaultCallHandling.releaseCall; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary releaseCall
@@ -97,7 +97,7 @@ const DefaultCallHandling_releaseCall = _enum_for_DefaultCallHandling.releaseCal
  * @type {number}
  */
 export
-const releaseCall = DefaultCallHandling_releaseCall satisfies DefaultCallHandling; /* SHORT_NAMED_ENUMERATED_VALUE */
+const releaseCall = DefaultCallHandling_releaseCall; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_DefaultCallHandling: $.ASN1Decoder<DefaultCallHandling> = $._decodeEnumerated;

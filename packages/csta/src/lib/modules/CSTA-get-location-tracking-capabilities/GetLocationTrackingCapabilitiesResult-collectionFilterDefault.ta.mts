@@ -98,7 +98,7 @@ const GetLocationTrackingCapabilitiesResult_collectionFilterDefault = _enum_for_
  * @type {number}
  */
 export
-const GetLocationTrackingCapabilitiesResult_collectionFilterDefault_horizontalMovement = GetLocationTrackingCapabilitiesResult_collectionFilterDefault.horizontalMovement satisfies GetLocationTrackingCapabilitiesResult_collectionFilterDefault; /* LONG_NAMED_ENUMERATED_VALUE */
+const GetLocationTrackingCapabilitiesResult_collectionFilterDefault_horizontalMovement = GetLocationTrackingCapabilitiesResult_collectionFilterDefault.horizontalMovement; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary horizontalMovement
@@ -110,7 +110,7 @@ const GetLocationTrackingCapabilitiesResult_collectionFilterDefault_horizontalMo
  * @type {number}
  */
 export
-const horizontalMovement = GetLocationTrackingCapabilitiesResult_collectionFilterDefault.horizontalMovement satisfies GetLocationTrackingCapabilitiesResult_collectionFilterDefault; /* SHORT_NAMED_ENUMERATED_VALUE */
+const horizontalMovement = GetLocationTrackingCapabilitiesResult_collectionFilterDefault.horizontalMovement; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary GetLocationTrackingCapabilitiesResult_collectionFilterDefault_verticalMovement
@@ -122,7 +122,7 @@ const horizontalMovement = GetLocationTrackingCapabilitiesResult_collectionFilte
  * @type {number}
  */
 export
-const GetLocationTrackingCapabilitiesResult_collectionFilterDefault_verticalMovement = GetLocationTrackingCapabilitiesResult_collectionFilterDefault.verticalMovement satisfies GetLocationTrackingCapabilitiesResult_collectionFilterDefault; /* LONG_NAMED_ENUMERATED_VALUE */
+const GetLocationTrackingCapabilitiesResult_collectionFilterDefault_verticalMovement = GetLocationTrackingCapabilitiesResult_collectionFilterDefault.verticalMovement; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary verticalMovement
@@ -134,7 +134,7 @@ const GetLocationTrackingCapabilitiesResult_collectionFilterDefault_verticalMove
  * @type {number}
  */
 export
-const verticalMovement = GetLocationTrackingCapabilitiesResult_collectionFilterDefault.verticalMovement satisfies GetLocationTrackingCapabilitiesResult_collectionFilterDefault; /* SHORT_NAMED_ENUMERATED_VALUE */
+const verticalMovement = GetLocationTrackingCapabilitiesResult_collectionFilterDefault.verticalMovement; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary GetLocationTrackingCapabilitiesResult_collectionFilterDefault_civicAddressChange
@@ -146,7 +146,7 @@ const verticalMovement = GetLocationTrackingCapabilitiesResult_collectionFilterD
  * @type {number}
  */
 export
-const GetLocationTrackingCapabilitiesResult_collectionFilterDefault_civicAddressChange = GetLocationTrackingCapabilitiesResult_collectionFilterDefault.civicAddressChange satisfies GetLocationTrackingCapabilitiesResult_collectionFilterDefault; /* LONG_NAMED_ENUMERATED_VALUE */
+const GetLocationTrackingCapabilitiesResult_collectionFilterDefault_civicAddressChange = GetLocationTrackingCapabilitiesResult_collectionFilterDefault.civicAddressChange; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary civicAddressChange
@@ -158,7 +158,7 @@ const GetLocationTrackingCapabilitiesResult_collectionFilterDefault_civicAddress
  * @type {number}
  */
 export
-const civicAddressChange = GetLocationTrackingCapabilitiesResult_collectionFilterDefault.civicAddressChange satisfies GetLocationTrackingCapabilitiesResult_collectionFilterDefault; /* SHORT_NAMED_ENUMERATED_VALUE */
+const civicAddressChange = GetLocationTrackingCapabilitiesResult_collectionFilterDefault.civicAddressChange; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary GetLocationTrackingCapabilitiesResult_collectionFilterDefault_none
@@ -170,7 +170,7 @@ const civicAddressChange = GetLocationTrackingCapabilitiesResult_collectionFilte
  * @type {number}
  */
 export
-const GetLocationTrackingCapabilitiesResult_collectionFilterDefault_none = GetLocationTrackingCapabilitiesResult_collectionFilterDefault.none satisfies GetLocationTrackingCapabilitiesResult_collectionFilterDefault; /* LONG_NAMED_ENUMERATED_VALUE */
+const GetLocationTrackingCapabilitiesResult_collectionFilterDefault_none = GetLocationTrackingCapabilitiesResult_collectionFilterDefault.none; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary none
@@ -182,7 +182,7 @@ const GetLocationTrackingCapabilitiesResult_collectionFilterDefault_none = GetLo
  * @type {number}
  */
 export
-const none = GetLocationTrackingCapabilitiesResult_collectionFilterDefault.none satisfies GetLocationTrackingCapabilitiesResult_collectionFilterDefault; /* SHORT_NAMED_ENUMERATED_VALUE */
+const none = GetLocationTrackingCapabilitiesResult_collectionFilterDefault.none; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 let _cached_decoder_for_GetLocationTrackingCapabilitiesResult_collectionFilterDefault: $.ASN1Decoder<GetLocationTrackingCapabilitiesResult_collectionFilterDefault> | null = null;
 

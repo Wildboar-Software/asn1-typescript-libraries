@@ -52,7 +52,7 @@ const CltuGetParameter_parProtocolAbortMode_parameterValue_abort = 0 satisfies C
  * @type {number}
  */
 export
-const abort = CltuGetParameter_parProtocolAbortMode_parameterValue_abort satisfies CltuGetParameter_parProtocolAbortMode_parameterValue; /* SHORT_NAMED_INTEGER_VALUE */
+const abort = CltuGetParameter_parProtocolAbortMode_parameterValue_abort; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CltuGetParameter_parProtocolAbortMode_parameterValue_continue_
@@ -80,7 +80,7 @@ const CltuGetParameter_parProtocolAbortMode_parameterValue_continue_ = 1 satisfi
  * @type {number}
  */
 export
-const continue_ = CltuGetParameter_parProtocolAbortMode_parameterValue_continue_ satisfies CltuGetParameter_parProtocolAbortMode_parameterValue; /* SHORT_NAMED_INTEGER_VALUE */
+const continue_ = CltuGetParameter_parProtocolAbortMode_parameterValue_continue_; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_CltuGetParameter_parProtocolAbortMode_parameterValue: $.ASN1Decoder<CltuGetParameter_parProtocolAbortMode_parameterValue> = $._decodeInteger;
 export const _encode_CltuGetParameter_parProtocolAbortMode_parameterValue: $.ASN1Encoder<CltuGetParameter_parProtocolAbortMode_parameterValue> = $._encodeInteger;
 

@@ -103,7 +103,7 @@ const PartyCategory = _enum_for_PartyCategory;
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-251/
  */
 export
-const PartyCategory_unknown = PartyCategory.unknown satisfies PartyCategory; /* LONG_NAMED_ENUMERATED_VALUE */
+const PartyCategory_unknown = PartyCategory.unknown; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unknown
@@ -112,7 +112,7 @@ const PartyCategory_unknown = PartyCategory.unknown satisfies PartyCategory; /* 
  * @type {number}
  */
 export
-const unknown = PartyCategory.unknown satisfies PartyCategory; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unknown = PartyCategory.unknown; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PartyCategory_extension
@@ -125,7 +125,7 @@ const unknown = PartyCategory.unknown satisfies PartyCategory; /* SHORT_NAMED_EN
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-251/
  */
 export
-const PartyCategory_extension = PartyCategory.extension satisfies PartyCategory; /* LONG_NAMED_ENUMERATED_VALUE */
+const PartyCategory_extension = PartyCategory.extension; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary extension
@@ -134,7 +134,7 @@ const PartyCategory_extension = PartyCategory.extension satisfies PartyCategory;
  * @type {number}
  */
 export
-const extension = PartyCategory.extension satisfies PartyCategory; /* SHORT_NAMED_ENUMERATED_VALUE */
+const extension = PartyCategory.extension; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PartyCategory_pisnAttendant
@@ -147,7 +147,7 @@ const extension = PartyCategory.extension satisfies PartyCategory; /* SHORT_NAME
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-251/
  */
 export
-const PartyCategory_pisnAttendant = PartyCategory.pisnAttendant satisfies PartyCategory; /* LONG_NAMED_ENUMERATED_VALUE */
+const PartyCategory_pisnAttendant = PartyCategory.pisnAttendant; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pisnAttendant
@@ -156,7 +156,7 @@ const PartyCategory_pisnAttendant = PartyCategory.pisnAttendant satisfies PartyC
  * @type {number}
  */
 export
-const pisnAttendant = PartyCategory.pisnAttendant satisfies PartyCategory; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pisnAttendant = PartyCategory.pisnAttendant; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PartyCategory_emergExt
@@ -169,7 +169,7 @@ const pisnAttendant = PartyCategory.pisnAttendant satisfies PartyCategory; /* SH
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-251/
  */
 export
-const PartyCategory_emergExt = PartyCategory.emergExt satisfies PartyCategory; /* LONG_NAMED_ENUMERATED_VALUE */
+const PartyCategory_emergExt = PartyCategory.emergExt; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary emergExt
@@ -178,7 +178,7 @@ const PartyCategory_emergExt = PartyCategory.emergExt satisfies PartyCategory; /
  * @type {number}
  */
 export
-const emergExt = PartyCategory.emergExt satisfies PartyCategory; /* SHORT_NAMED_ENUMERATED_VALUE */
+const emergExt = PartyCategory.emergExt; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_PartyCategory: $.ASN1Decoder<PartyCategory> = $._decodeEnumerated;

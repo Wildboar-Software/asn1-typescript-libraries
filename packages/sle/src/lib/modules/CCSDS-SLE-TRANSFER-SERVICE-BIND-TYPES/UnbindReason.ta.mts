@@ -59,7 +59,7 @@ const UnbindReason_end = 0 satisfies UnbindReason; /* LONG_NAMED_INTEGER_VALUE *
  * @type {number}
  */
 export
-const end = UnbindReason_end satisfies UnbindReason; /* SHORT_NAMED_INTEGER_VALUE */
+const end = UnbindReason_end; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary UnbindReason_suspend
@@ -87,7 +87,7 @@ const UnbindReason_suspend = 1 satisfies UnbindReason; /* LONG_NAMED_INTEGER_VAL
  * @type {number}
  */
 export
-const suspend = UnbindReason_suspend satisfies UnbindReason; /* SHORT_NAMED_INTEGER_VALUE */
+const suspend = UnbindReason_suspend; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary UnbindReason_versionNotSupported
@@ -116,7 +116,7 @@ const UnbindReason_versionNotSupported = 2 satisfies UnbindReason; /* LONG_NAMED
  * @type {number}
  */
 export
-const versionNotSupported = UnbindReason_versionNotSupported satisfies UnbindReason; /* SHORT_NAMED_INTEGER_VALUE */
+const versionNotSupported = UnbindReason_versionNotSupported; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary UnbindReason_other
@@ -141,7 +141,7 @@ const UnbindReason_other = 127 satisfies UnbindReason; /* LONG_NAMED_INTEGER_VAL
  * @type {number}
  */
 export
-const other = UnbindReason_other satisfies UnbindReason; /* SHORT_NAMED_INTEGER_VALUE */
+const other = UnbindReason_other; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_UnbindReason: $.ASN1Decoder<UnbindReason> = $._decodeInteger;
 export const _encode_UnbindReason: $.ASN1Encoder<UnbindReason> = $._encodeInteger;
 

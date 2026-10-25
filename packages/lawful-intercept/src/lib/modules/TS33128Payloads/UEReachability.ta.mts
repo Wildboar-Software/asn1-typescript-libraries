@@ -122,7 +122,7 @@ const UEReachability = _enum_for_UEReachability;
  * @type {number}
  */
 export
-const UEReachability_unreachable = UEReachability.unreachable satisfies UEReachability; /* LONG_NAMED_ENUMERATED_VALUE */
+const UEReachability_unreachable = UEReachability.unreachable; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unreachable
@@ -136,7 +136,7 @@ const UEReachability_unreachable = UEReachability.unreachable satisfies UEReacha
  * @type {number}
  */
 export
-const unreachable = UEReachability.unreachable satisfies UEReachability; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unreachable = UEReachability.unreachable; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary UEReachability_reachable
@@ -150,7 +150,7 @@ const unreachable = UEReachability.unreachable satisfies UEReachability; /* SHOR
  * @type {number}
  */
 export
-const UEReachability_reachable = UEReachability.reachable satisfies UEReachability; /* LONG_NAMED_ENUMERATED_VALUE */
+const UEReachability_reachable = UEReachability.reachable; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary reachable
@@ -164,7 +164,7 @@ const UEReachability_reachable = UEReachability.reachable satisfies UEReachabili
  * @type {number}
  */
 export
-const reachable = UEReachability.reachable satisfies UEReachability; /* SHORT_NAMED_ENUMERATED_VALUE */
+const reachable = UEReachability.reachable; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary UEReachability_regulatoryOnly
@@ -179,7 +179,7 @@ const reachable = UEReachability.reachable satisfies UEReachability; /* SHORT_NA
  * @type {number}
  */
 export
-const UEReachability_regulatoryOnly = UEReachability.regulatoryOnly satisfies UEReachability; /* LONG_NAMED_ENUMERATED_VALUE */
+const UEReachability_regulatoryOnly = UEReachability.regulatoryOnly; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary regulatoryOnly
@@ -194,7 +194,7 @@ const UEReachability_regulatoryOnly = UEReachability.regulatoryOnly satisfies UE
  * @type {number}
  */
 export
-const regulatoryOnly = UEReachability.regulatoryOnly satisfies UEReachability; /* SHORT_NAMED_ENUMERATED_VALUE */
+const regulatoryOnly = UEReachability.regulatoryOnly; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_UEReachability: $.ASN1Decoder<UEReachability> = $._decodeEnumerated;
 export const _encode_UEReachability: $.ASN1Encoder<UEReachability> = $._encodeEnumerated;
 

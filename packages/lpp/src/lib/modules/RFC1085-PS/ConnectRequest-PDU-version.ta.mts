@@ -52,7 +52,7 @@ const ConnectRequest_PDU_version_version_1 = 0 satisfies ConnectRequest_PDU_vers
  * @type {number}
  */
 export
-const version_1 = ConnectRequest_PDU_version_version_1 satisfies ConnectRequest_PDU_version; /* SHORT_NAMED_INTEGER_VALUE */
+const version_1 = ConnectRequest_PDU_version_version_1; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_ConnectRequest_PDU_version: $.ASN1Decoder<ConnectRequest_PDU_version> = $._decodeInteger;
 export const _encode_ConnectRequest_PDU_version: $.ASN1Encoder<ConnectRequest_PDU_version> = $._encodeInteger;
 

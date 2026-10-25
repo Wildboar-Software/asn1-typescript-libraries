@@ -64,7 +64,7 @@ export const RoutingAction = _enum_for_RoutingAction;
  * @type {number}
  */
 export const RoutingAction_relayed =
-    RoutingAction.relayed satisfies RoutingAction; /* LONG_NAMED_ENUMERATED_VALUE */
+    RoutingAction.relayed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary relayed
@@ -72,7 +72,7 @@ export const RoutingAction_relayed =
  * @type {number}
  */
 export const relayed =
-    RoutingAction.relayed satisfies RoutingAction; /* SHORT_NAMED_ENUMERATED_VALUE */
+    RoutingAction.relayed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RoutingAction_rerouted
@@ -80,7 +80,7 @@ export const relayed =
  * @type {number}
  */
 export const RoutingAction_rerouted =
-    RoutingAction.rerouted satisfies RoutingAction; /* LONG_NAMED_ENUMERATED_VALUE */
+    RoutingAction.rerouted; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary rerouted
@@ -88,7 +88,7 @@ export const RoutingAction_rerouted =
  * @type {number}
  */
 export const rerouted =
-    RoutingAction.rerouted satisfies RoutingAction; /* SHORT_NAMED_ENUMERATED_VALUE */
+    RoutingAction.rerouted; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 export function _decode_RoutingAction(el: _Element): RoutingAction {

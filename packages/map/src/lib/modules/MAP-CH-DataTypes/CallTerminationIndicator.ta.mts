@@ -45,7 +45,7 @@ type CallTerminationIndicator = _enum_for_CallTerminationIndicator | ENUMERATED;
  * @type {number}
  */
 export
-const CallTerminationIndicator_terminateCallActivityReferred = _enum_for_CallTerminationIndicator.terminateCallActivityReferred satisfies CallTerminationIndicator; /* LONG_NAMED_ENUMERATED_VALUE */
+const CallTerminationIndicator_terminateCallActivityReferred = _enum_for_CallTerminationIndicator.terminateCallActivityReferred; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary terminateCallActivityReferred
@@ -57,7 +57,7 @@ const CallTerminationIndicator_terminateCallActivityReferred = _enum_for_CallTer
  * @type {number}
  */
 export
-const terminateCallActivityReferred = CallTerminationIndicator_terminateCallActivityReferred satisfies CallTerminationIndicator; /* SHORT_NAMED_ENUMERATED_VALUE */
+const terminateCallActivityReferred = CallTerminationIndicator_terminateCallActivityReferred; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CallTerminationIndicator_terminateAllCallActivities
@@ -69,7 +69,7 @@ const terminateCallActivityReferred = CallTerminationIndicator_terminateCallActi
  * @type {number}
  */
 export
-const CallTerminationIndicator_terminateAllCallActivities = _enum_for_CallTerminationIndicator.terminateAllCallActivities satisfies CallTerminationIndicator; /* LONG_NAMED_ENUMERATED_VALUE */
+const CallTerminationIndicator_terminateAllCallActivities = _enum_for_CallTerminationIndicator.terminateAllCallActivities; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary terminateAllCallActivities
@@ -81,7 +81,7 @@ const CallTerminationIndicator_terminateAllCallActivities = _enum_for_CallTermin
  * @type {number}
  */
 export
-const terminateAllCallActivities = CallTerminationIndicator_terminateAllCallActivities satisfies CallTerminationIndicator; /* SHORT_NAMED_ENUMERATED_VALUE */
+const terminateAllCallActivities = CallTerminationIndicator_terminateAllCallActivities; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) CallTerminationIndicator

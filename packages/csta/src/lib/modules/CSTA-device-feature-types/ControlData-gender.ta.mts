@@ -82,7 +82,7 @@ const ControlData_gender = _enum_for_ControlData_gender;
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const ControlData_gender_male = ControlData_gender.male satisfies ControlData_gender; /* LONG_NAMED_ENUMERATED_VALUE */
+const ControlData_gender_male = ControlData_gender.male; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary male
@@ -91,7 +91,7 @@ const ControlData_gender_male = ControlData_gender.male satisfies ControlData_ge
  * @type {number}
  */
 export
-const male = ControlData_gender.male satisfies ControlData_gender; /* SHORT_NAMED_ENUMERATED_VALUE */
+const male = ControlData_gender.male; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ControlData_gender_female
@@ -101,7 +101,7 @@ const male = ControlData_gender.male satisfies ControlData_gender; /* SHORT_NAME
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const ControlData_gender_female = ControlData_gender.female satisfies ControlData_gender; /* LONG_NAMED_ENUMERATED_VALUE */
+const ControlData_gender_female = ControlData_gender.female; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary female
@@ -110,7 +110,7 @@ const ControlData_gender_female = ControlData_gender.female satisfies ControlDat
  * @type {number}
  */
 export
-const female = ControlData_gender.female satisfies ControlData_gender; /* SHORT_NAMED_ENUMERATED_VALUE */
+const female = ControlData_gender.female; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 let _cached_decoder_for_ControlData_gender: $.ASN1Decoder<ControlData_gender> | null = null;
 

@@ -83,7 +83,7 @@ const SM_DeliveryOutcome = _enum_for_SM_DeliveryOutcome;
  * @type {number}
  */
 export
-const SM_DeliveryOutcome_memoryCapacityExceeded = SM_DeliveryOutcome.memoryCapacityExceeded satisfies SM_DeliveryOutcome; /* LONG_NAMED_ENUMERATED_VALUE */
+const SM_DeliveryOutcome_memoryCapacityExceeded = SM_DeliveryOutcome.memoryCapacityExceeded; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary memoryCapacityExceeded
@@ -95,7 +95,7 @@ const SM_DeliveryOutcome_memoryCapacityExceeded = SM_DeliveryOutcome.memoryCapac
  * @type {number}
  */
 export
-const memoryCapacityExceeded = SM_DeliveryOutcome.memoryCapacityExceeded satisfies SM_DeliveryOutcome; /* SHORT_NAMED_ENUMERATED_VALUE */
+const memoryCapacityExceeded = SM_DeliveryOutcome.memoryCapacityExceeded; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SM_DeliveryOutcome_absentSubscriber
@@ -107,7 +107,7 @@ const memoryCapacityExceeded = SM_DeliveryOutcome.memoryCapacityExceeded satisfi
  * @type {number}
  */
 export
-const SM_DeliveryOutcome_absentSubscriber = SM_DeliveryOutcome.absentSubscriber satisfies SM_DeliveryOutcome; /* LONG_NAMED_ENUMERATED_VALUE */
+const SM_DeliveryOutcome_absentSubscriber = SM_DeliveryOutcome.absentSubscriber; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary absentSubscriber
@@ -119,7 +119,7 @@ const SM_DeliveryOutcome_absentSubscriber = SM_DeliveryOutcome.absentSubscriber 
  * @type {number}
  */
 export
-const absentSubscriber = SM_DeliveryOutcome.absentSubscriber satisfies SM_DeliveryOutcome; /* SHORT_NAMED_ENUMERATED_VALUE */
+const absentSubscriber = SM_DeliveryOutcome.absentSubscriber; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SM_DeliveryOutcome_successfulTransfer
@@ -131,7 +131,7 @@ const absentSubscriber = SM_DeliveryOutcome.absentSubscriber satisfies SM_Delive
  * @type {number}
  */
 export
-const SM_DeliveryOutcome_successfulTransfer = SM_DeliveryOutcome.successfulTransfer satisfies SM_DeliveryOutcome; /* LONG_NAMED_ENUMERATED_VALUE */
+const SM_DeliveryOutcome_successfulTransfer = SM_DeliveryOutcome.successfulTransfer; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary successfulTransfer
@@ -143,7 +143,7 @@ const SM_DeliveryOutcome_successfulTransfer = SM_DeliveryOutcome.successfulTrans
  * @type {number}
  */
 export
-const successfulTransfer = SM_DeliveryOutcome.successfulTransfer satisfies SM_DeliveryOutcome; /* SHORT_NAMED_ENUMERATED_VALUE */
+const successfulTransfer = SM_DeliveryOutcome.successfulTransfer; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) SM_DeliveryOutcome

@@ -49,7 +49,7 @@ const DuplicateDetectionResponse_status_success = 0 satisfies DuplicateDetection
  * @type {number}
  */
 export
-const success = DuplicateDetectionResponse_status_success satisfies DuplicateDetectionResponse_status; /* SHORT_NAMED_INTEGER_VALUE */
+const success = DuplicateDetectionResponse_status_success; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DuplicateDetectionResponse_status_failure
@@ -75,7 +75,7 @@ const DuplicateDetectionResponse_status_failure = 1 satisfies DuplicateDetection
  * @type {number}
  */
 export
-const failure = DuplicateDetectionResponse_status_failure satisfies DuplicateDetectionResponse_status; /* SHORT_NAMED_INTEGER_VALUE */
+const failure = DuplicateDetectionResponse_status_failure; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_DuplicateDetectionResponse_status: $.ASN1Decoder<DuplicateDetectionResponse_status> = $._decodeInteger;
 export const _encode_DuplicateDetectionResponse_status: $.ASN1Encoder<DuplicateDetectionResponse_status> = $._encodeInteger;
 

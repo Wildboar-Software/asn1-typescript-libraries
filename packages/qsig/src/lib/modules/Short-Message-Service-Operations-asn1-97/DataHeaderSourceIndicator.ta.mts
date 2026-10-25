@@ -53,7 +53,7 @@ const DataHeaderSourceIndicator_originalSender = 1 satisfies DataHeaderSourceInd
  * @type {number}
  */
 export
-const originalSender = DataHeaderSourceIndicator_originalSender satisfies DataHeaderSourceIndicator; /* SHORT_NAMED_INTEGER_VALUE */
+const originalSender = DataHeaderSourceIndicator_originalSender; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DataHeaderSourceIndicator_originalReceiver
@@ -75,7 +75,7 @@ const DataHeaderSourceIndicator_originalReceiver = 2 satisfies DataHeaderSourceI
  * @type {number}
  */
 export
-const originalReceiver = DataHeaderSourceIndicator_originalReceiver satisfies DataHeaderSourceIndicator; /* SHORT_NAMED_INTEGER_VALUE */
+const originalReceiver = DataHeaderSourceIndicator_originalReceiver; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DataHeaderSourceIndicator_sMSC
@@ -97,7 +97,7 @@ const DataHeaderSourceIndicator_sMSC = 3 satisfies DataHeaderSourceIndicator; /*
  * @type {number}
  */
 export
-const sMSC = DataHeaderSourceIndicator_sMSC satisfies DataHeaderSourceIndicator; /* SHORT_NAMED_INTEGER_VALUE */
+const sMSC = DataHeaderSourceIndicator_sMSC; /* SHORT_NAMED_INTEGER_VALUE */
 
 export
 const _decode_DataHeaderSourceIndicator = (el: _Element): DataHeaderSourceIndicator => {

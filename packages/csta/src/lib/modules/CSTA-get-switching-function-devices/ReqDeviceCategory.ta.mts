@@ -154,7 +154,7 @@ const ReqDeviceCategory = _enum_for_ReqDeviceCategory;
  * @type {number}
  */
 export
-const ReqDeviceCategory_acd = ReqDeviceCategory.acd satisfies ReqDeviceCategory; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReqDeviceCategory_acd = ReqDeviceCategory.acd; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary acd
@@ -162,7 +162,7 @@ const ReqDeviceCategory_acd = ReqDeviceCategory.acd satisfies ReqDeviceCategory;
  * @type {number}
  */
 export
-const acd = ReqDeviceCategory.acd satisfies ReqDeviceCategory; /* SHORT_NAMED_ENUMERATED_VALUE */
+const acd = ReqDeviceCategory.acd; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReqDeviceCategory_conference
@@ -170,7 +170,7 @@ const acd = ReqDeviceCategory.acd satisfies ReqDeviceCategory; /* SHORT_NAMED_EN
  * @type {number}
  */
 export
-const ReqDeviceCategory_conference = ReqDeviceCategory.conference satisfies ReqDeviceCategory; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReqDeviceCategory_conference = ReqDeviceCategory.conference; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary conference
@@ -178,7 +178,7 @@ const ReqDeviceCategory_conference = ReqDeviceCategory.conference satisfies ReqD
  * @type {number}
  */
 export
-const conference = ReqDeviceCategory.conference satisfies ReqDeviceCategory; /* SHORT_NAMED_ENUMERATED_VALUE */
+const conference = ReqDeviceCategory.conference; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReqDeviceCategory_dtmfIV
@@ -186,7 +186,7 @@ const conference = ReqDeviceCategory.conference satisfies ReqDeviceCategory; /* 
  * @type {number}
  */
 export
-const ReqDeviceCategory_dtmfIV = ReqDeviceCategory.dtmfIV satisfies ReqDeviceCategory; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReqDeviceCategory_dtmfIV = ReqDeviceCategory.dtmfIV; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary dtmfIV
@@ -194,7 +194,7 @@ const ReqDeviceCategory_dtmfIV = ReqDeviceCategory.dtmfIV satisfies ReqDeviceCat
  * @type {number}
  */
 export
-const dtmfIV = ReqDeviceCategory.dtmfIV satisfies ReqDeviceCategory; /* SHORT_NAMED_ENUMERATED_VALUE */
+const dtmfIV = ReqDeviceCategory.dtmfIV; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReqDeviceCategory_genericIV
@@ -202,7 +202,7 @@ const dtmfIV = ReqDeviceCategory.dtmfIV satisfies ReqDeviceCategory; /* SHORT_NA
  * @type {number}
  */
 export
-const ReqDeviceCategory_genericIV = ReqDeviceCategory.genericIV satisfies ReqDeviceCategory; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReqDeviceCategory_genericIV = ReqDeviceCategory.genericIV; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary genericIV
@@ -210,7 +210,7 @@ const ReqDeviceCategory_genericIV = ReqDeviceCategory.genericIV satisfies ReqDev
  * @type {number}
  */
 export
-const genericIV = ReqDeviceCategory.genericIV satisfies ReqDeviceCategory; /* SHORT_NAMED_ENUMERATED_VALUE */
+const genericIV = ReqDeviceCategory.genericIV; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReqDeviceCategory_groupACD
@@ -218,7 +218,7 @@ const genericIV = ReqDeviceCategory.genericIV satisfies ReqDeviceCategory; /* SH
  * @type {number}
  */
 export
-const ReqDeviceCategory_groupACD = ReqDeviceCategory.groupACD satisfies ReqDeviceCategory; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReqDeviceCategory_groupACD = ReqDeviceCategory.groupACD; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary groupACD
@@ -226,7 +226,7 @@ const ReqDeviceCategory_groupACD = ReqDeviceCategory.groupACD satisfies ReqDevic
  * @type {number}
  */
 export
-const groupACD = ReqDeviceCategory.groupACD satisfies ReqDeviceCategory; /* SHORT_NAMED_ENUMERATED_VALUE */
+const groupACD = ReqDeviceCategory.groupACD; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReqDeviceCategory_groupHunt
@@ -234,7 +234,7 @@ const groupACD = ReqDeviceCategory.groupACD satisfies ReqDeviceCategory; /* SHOR
  * @type {number}
  */
 export
-const ReqDeviceCategory_groupHunt = ReqDeviceCategory.groupHunt satisfies ReqDeviceCategory; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReqDeviceCategory_groupHunt = ReqDeviceCategory.groupHunt; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary groupHunt
@@ -242,7 +242,7 @@ const ReqDeviceCategory_groupHunt = ReqDeviceCategory.groupHunt satisfies ReqDev
  * @type {number}
  */
 export
-const groupHunt = ReqDeviceCategory.groupHunt satisfies ReqDeviceCategory; /* SHORT_NAMED_ENUMERATED_VALUE */
+const groupHunt = ReqDeviceCategory.groupHunt; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReqDeviceCategory_groupPick
@@ -250,7 +250,7 @@ const groupHunt = ReqDeviceCategory.groupHunt satisfies ReqDeviceCategory; /* SH
  * @type {number}
  */
 export
-const ReqDeviceCategory_groupPick = ReqDeviceCategory.groupPick satisfies ReqDeviceCategory; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReqDeviceCategory_groupPick = ReqDeviceCategory.groupPick; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary groupPick
@@ -258,7 +258,7 @@ const ReqDeviceCategory_groupPick = ReqDeviceCategory.groupPick satisfies ReqDev
  * @type {number}
  */
 export
-const groupPick = ReqDeviceCategory.groupPick satisfies ReqDeviceCategory; /* SHORT_NAMED_ENUMERATED_VALUE */
+const groupPick = ReqDeviceCategory.groupPick; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReqDeviceCategory_groupOther
@@ -266,7 +266,7 @@ const groupPick = ReqDeviceCategory.groupPick satisfies ReqDeviceCategory; /* SH
  * @type {number}
  */
 export
-const ReqDeviceCategory_groupOther = ReqDeviceCategory.groupOther satisfies ReqDeviceCategory; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReqDeviceCategory_groupOther = ReqDeviceCategory.groupOther; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary groupOther
@@ -274,7 +274,7 @@ const ReqDeviceCategory_groupOther = ReqDeviceCategory.groupOther satisfies ReqD
  * @type {number}
  */
 export
-const groupOther = ReqDeviceCategory.groupOther satisfies ReqDeviceCategory; /* SHORT_NAMED_ENUMERATED_VALUE */
+const groupOther = ReqDeviceCategory.groupOther; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReqDeviceCategory_groupUser
@@ -282,7 +282,7 @@ const groupOther = ReqDeviceCategory.groupOther satisfies ReqDeviceCategory; /* 
  * @type {number}
  */
 export
-const ReqDeviceCategory_groupUser = ReqDeviceCategory.groupUser satisfies ReqDeviceCategory; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReqDeviceCategory_groupUser = ReqDeviceCategory.groupUser; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary groupUser
@@ -290,7 +290,7 @@ const ReqDeviceCategory_groupUser = ReqDeviceCategory.groupUser satisfies ReqDev
  * @type {number}
  */
 export
-const groupUser = ReqDeviceCategory.groupUser satisfies ReqDeviceCategory; /* SHORT_NAMED_ENUMERATED_VALUE */
+const groupUser = ReqDeviceCategory.groupUser; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReqDeviceCategory_listenerIV
@@ -298,7 +298,7 @@ const groupUser = ReqDeviceCategory.groupUser satisfies ReqDeviceCategory; /* SH
  * @type {number}
  */
 export
-const ReqDeviceCategory_listenerIV = ReqDeviceCategory.listenerIV satisfies ReqDeviceCategory; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReqDeviceCategory_listenerIV = ReqDeviceCategory.listenerIV; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary listenerIV
@@ -306,7 +306,7 @@ const ReqDeviceCategory_listenerIV = ReqDeviceCategory.listenerIV satisfies ReqD
  * @type {number}
  */
 export
-const listenerIV = ReqDeviceCategory.listenerIV satisfies ReqDeviceCategory; /* SHORT_NAMED_ENUMERATED_VALUE */
+const listenerIV = ReqDeviceCategory.listenerIV; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReqDeviceCategory_messageIV
@@ -314,7 +314,7 @@ const listenerIV = ReqDeviceCategory.listenerIV satisfies ReqDeviceCategory; /* 
  * @type {number}
  */
 export
-const ReqDeviceCategory_messageIV = ReqDeviceCategory.messageIV satisfies ReqDeviceCategory; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReqDeviceCategory_messageIV = ReqDeviceCategory.messageIV; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary messageIV
@@ -322,7 +322,7 @@ const ReqDeviceCategory_messageIV = ReqDeviceCategory.messageIV satisfies ReqDev
  * @type {number}
  */
 export
-const messageIV = ReqDeviceCategory.messageIV satisfies ReqDeviceCategory; /* SHORT_NAMED_ENUMERATED_VALUE */
+const messageIV = ReqDeviceCategory.messageIV; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReqDeviceCategory_networkInterface
@@ -330,7 +330,7 @@ const messageIV = ReqDeviceCategory.messageIV satisfies ReqDeviceCategory; /* SH
  * @type {number}
  */
 export
-const ReqDeviceCategory_networkInterface = ReqDeviceCategory.networkInterface satisfies ReqDeviceCategory; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReqDeviceCategory_networkInterface = ReqDeviceCategory.networkInterface; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary networkInterface
@@ -338,7 +338,7 @@ const ReqDeviceCategory_networkInterface = ReqDeviceCategory.networkInterface sa
  * @type {number}
  */
 export
-const networkInterface = ReqDeviceCategory.networkInterface satisfies ReqDeviceCategory; /* SHORT_NAMED_ENUMERATED_VALUE */
+const networkInterface = ReqDeviceCategory.networkInterface; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReqDeviceCategory_park
@@ -346,7 +346,7 @@ const networkInterface = ReqDeviceCategory.networkInterface satisfies ReqDeviceC
  * @type {number}
  */
 export
-const ReqDeviceCategory_park = ReqDeviceCategory.park satisfies ReqDeviceCategory; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReqDeviceCategory_park = ReqDeviceCategory.park; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary park
@@ -354,7 +354,7 @@ const ReqDeviceCategory_park = ReqDeviceCategory.park satisfies ReqDeviceCategor
  * @type {number}
  */
 export
-const park = ReqDeviceCategory.park satisfies ReqDeviceCategory; /* SHORT_NAMED_ENUMERATED_VALUE */
+const park = ReqDeviceCategory.park; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReqDeviceCategory_promptIV
@@ -362,7 +362,7 @@ const park = ReqDeviceCategory.park satisfies ReqDeviceCategory; /* SHORT_NAMED_
  * @type {number}
  */
 export
-const ReqDeviceCategory_promptIV = ReqDeviceCategory.promptIV satisfies ReqDeviceCategory; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReqDeviceCategory_promptIV = ReqDeviceCategory.promptIV; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary promptIV
@@ -370,7 +370,7 @@ const ReqDeviceCategory_promptIV = ReqDeviceCategory.promptIV satisfies ReqDevic
  * @type {number}
  */
 export
-const promptIV = ReqDeviceCategory.promptIV satisfies ReqDeviceCategory; /* SHORT_NAMED_ENUMERATED_VALUE */
+const promptIV = ReqDeviceCategory.promptIV; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReqDeviceCategory_promptQueue
@@ -378,7 +378,7 @@ const promptIV = ReqDeviceCategory.promptIV satisfies ReqDeviceCategory; /* SHOR
  * @type {number}
  */
 export
-const ReqDeviceCategory_promptQueue = ReqDeviceCategory.promptQueue satisfies ReqDeviceCategory; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReqDeviceCategory_promptQueue = ReqDeviceCategory.promptQueue; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary promptQueue
@@ -386,7 +386,7 @@ const ReqDeviceCategory_promptQueue = ReqDeviceCategory.promptQueue satisfies Re
  * @type {number}
  */
 export
-const promptQueue = ReqDeviceCategory.promptQueue satisfies ReqDeviceCategory; /* SHORT_NAMED_ENUMERATED_VALUE */
+const promptQueue = ReqDeviceCategory.promptQueue; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReqDeviceCategory_routeingDevice
@@ -394,7 +394,7 @@ const promptQueue = ReqDeviceCategory.promptQueue satisfies ReqDeviceCategory; /
  * @type {number}
  */
 export
-const ReqDeviceCategory_routeingDevice = ReqDeviceCategory.routeingDevice satisfies ReqDeviceCategory; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReqDeviceCategory_routeingDevice = ReqDeviceCategory.routeingDevice; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary routeingDevice
@@ -402,7 +402,7 @@ const ReqDeviceCategory_routeingDevice = ReqDeviceCategory.routeingDevice satisf
  * @type {number}
  */
 export
-const routeingDevice = ReqDeviceCategory.routeingDevice satisfies ReqDeviceCategory; /* SHORT_NAMED_ENUMERATED_VALUE */
+const routeingDevice = ReqDeviceCategory.routeingDevice; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReqDeviceCategory_station
@@ -410,7 +410,7 @@ const routeingDevice = ReqDeviceCategory.routeingDevice satisfies ReqDeviceCateg
  * @type {number}
  */
 export
-const ReqDeviceCategory_station = ReqDeviceCategory.station satisfies ReqDeviceCategory; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReqDeviceCategory_station = ReqDeviceCategory.station; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary station
@@ -418,7 +418,7 @@ const ReqDeviceCategory_station = ReqDeviceCategory.station satisfies ReqDeviceC
  * @type {number}
  */
 export
-const station = ReqDeviceCategory.station satisfies ReqDeviceCategory; /* SHORT_NAMED_ENUMERATED_VALUE */
+const station = ReqDeviceCategory.station; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReqDeviceCategory_voiceUnit
@@ -426,7 +426,7 @@ const station = ReqDeviceCategory.station satisfies ReqDeviceCategory; /* SHORT_
  * @type {number}
  */
 export
-const ReqDeviceCategory_voiceUnit = ReqDeviceCategory.voiceUnit satisfies ReqDeviceCategory; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReqDeviceCategory_voiceUnit = ReqDeviceCategory.voiceUnit; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary voiceUnit
@@ -434,7 +434,7 @@ const ReqDeviceCategory_voiceUnit = ReqDeviceCategory.voiceUnit satisfies ReqDev
  * @type {number}
  */
 export
-const voiceUnit = ReqDeviceCategory.voiceUnit satisfies ReqDeviceCategory; /* SHORT_NAMED_ENUMERATED_VALUE */
+const voiceUnit = ReqDeviceCategory.voiceUnit; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReqDeviceCategory_other
@@ -442,7 +442,7 @@ const voiceUnit = ReqDeviceCategory.voiceUnit satisfies ReqDeviceCategory; /* SH
  * @type {number}
  */
 export
-const ReqDeviceCategory_other = ReqDeviceCategory.other satisfies ReqDeviceCategory; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReqDeviceCategory_other = ReqDeviceCategory.other; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary other
@@ -450,7 +450,7 @@ const ReqDeviceCategory_other = ReqDeviceCategory.other satisfies ReqDeviceCateg
  * @type {number}
  */
 export
-const other = ReqDeviceCategory.other satisfies ReqDeviceCategory; /* SHORT_NAMED_ENUMERATED_VALUE */
+const other = ReqDeviceCategory.other; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 let _cached_decoder_for_ReqDeviceCategory: $.ASN1Decoder<ReqDeviceCategory> | null = null;
 

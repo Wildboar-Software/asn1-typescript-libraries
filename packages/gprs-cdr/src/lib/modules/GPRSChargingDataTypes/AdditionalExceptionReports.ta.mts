@@ -63,7 +63,7 @@ const AdditionalExceptionReports = _enum_for_AdditionalExceptionReports;
  * @type {number}
  */
 export
-const AdditionalExceptionReports_notAllowed = AdditionalExceptionReports.notAllowed satisfies AdditionalExceptionReports; /* LONG_NAMED_ENUMERATED_VALUE */
+const AdditionalExceptionReports_notAllowed = AdditionalExceptionReports.notAllowed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary notAllowed
@@ -71,7 +71,7 @@ const AdditionalExceptionReports_notAllowed = AdditionalExceptionReports.notAllo
  * @type {number}
  */
 export
-const notAllowed = AdditionalExceptionReports.notAllowed satisfies AdditionalExceptionReports; /* SHORT_NAMED_ENUMERATED_VALUE */
+const notAllowed = AdditionalExceptionReports.notAllowed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AdditionalExceptionReports_allowed
@@ -79,7 +79,7 @@ const notAllowed = AdditionalExceptionReports.notAllowed satisfies AdditionalExc
  * @type {number}
  */
 export
-const AdditionalExceptionReports_allowed = AdditionalExceptionReports.allowed satisfies AdditionalExceptionReports; /* LONG_NAMED_ENUMERATED_VALUE */
+const AdditionalExceptionReports_allowed = AdditionalExceptionReports.allowed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary allowed
@@ -87,7 +87,7 @@ const AdditionalExceptionReports_allowed = AdditionalExceptionReports.allowed sa
  * @type {number}
  */
 export
-const allowed = AdditionalExceptionReports.allowed satisfies AdditionalExceptionReports; /* SHORT_NAMED_ENUMERATED_VALUE */
+const allowed = AdditionalExceptionReports.allowed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_AdditionalExceptionReports: $.ASN1Decoder<AdditionalExceptionReports> = $._decodeEnumerated;

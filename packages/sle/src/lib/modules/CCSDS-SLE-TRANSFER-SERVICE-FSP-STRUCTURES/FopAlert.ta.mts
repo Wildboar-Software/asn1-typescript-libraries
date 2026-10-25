@@ -60,7 +60,7 @@ const FopAlert_noAlert = 0 satisfies FopAlert; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const noAlert = FopAlert_noAlert satisfies FopAlert; /* SHORT_NAMED_INTEGER_VALUE */
+const noAlert = FopAlert_noAlert; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary FopAlert_limit
@@ -87,7 +87,7 @@ const FopAlert_limit = 1 satisfies FopAlert; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const limit = FopAlert_limit satisfies FopAlert; /* SHORT_NAMED_INTEGER_VALUE */
+const limit = FopAlert_limit; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary FopAlert_lockOutDetected
@@ -111,7 +111,7 @@ const FopAlert_lockOutDetected = 2 satisfies FopAlert; /* LONG_NAMED_INTEGER_VAL
  * @type {number}
  */
 export
-const lockOutDetected = FopAlert_lockOutDetected satisfies FopAlert; /* SHORT_NAMED_INTEGER_VALUE */
+const lockOutDetected = FopAlert_lockOutDetected; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary FopAlert_synch
@@ -139,7 +139,7 @@ const FopAlert_synch = 3 satisfies FopAlert; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const synch = FopAlert_synch satisfies FopAlert; /* SHORT_NAMED_INTEGER_VALUE */
+const synch = FopAlert_synch; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary FopAlert_invalidNR
@@ -164,7 +164,7 @@ const FopAlert_invalidNR = 4 satisfies FopAlert; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const invalidNR = FopAlert_invalidNR satisfies FopAlert; /* SHORT_NAMED_INTEGER_VALUE */
+const invalidNR = FopAlert_invalidNR; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary FopAlert_clcw
@@ -190,7 +190,7 @@ const FopAlert_clcw = 5 satisfies FopAlert; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const clcw = FopAlert_clcw satisfies FopAlert; /* SHORT_NAMED_INTEGER_VALUE */
+const clcw = FopAlert_clcw; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary FopAlert_lowerLayerOutOfSync
@@ -216,7 +216,7 @@ const FopAlert_lowerLayerOutOfSync = 6 satisfies FopAlert; /* LONG_NAMED_INTEGER
  * @type {number}
  */
 export
-const lowerLayerOutOfSync = FopAlert_lowerLayerOutOfSync satisfies FopAlert; /* SHORT_NAMED_INTEGER_VALUE */
+const lowerLayerOutOfSync = FopAlert_lowerLayerOutOfSync; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary FopAlert_terminateADService
@@ -242,7 +242,7 @@ const FopAlert_terminateADService = 7 satisfies FopAlert; /* LONG_NAMED_INTEGER_
  * @type {number}
  */
 export
-const terminateADService = FopAlert_terminateADService satisfies FopAlert; /* SHORT_NAMED_INTEGER_VALUE */
+const terminateADService = FopAlert_terminateADService; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_FopAlert: $.ASN1Decoder<FopAlert> = $._decodeInteger;
 export const _encode_FopAlert: $.ASN1Encoder<FopAlert> = $._encodeInteger;
 

@@ -41,7 +41,7 @@ export const TroubleReportState_queued = 0 satisfies TroubleReportState; /* LONG
  * @constant
  * @type {number}
  */
-export const queued = TroubleReportState_queued satisfies TroubleReportState; /* SHORT_NAMED_INTEGER_VALUE */
+export const queued = TroubleReportState_queued; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -57,7 +57,7 @@ export const TroubleReportState_openActive = 1 satisfies TroubleReportState; /* 
  * @constant
  * @type {number}
  */
-export const openActive = TroubleReportState_openActive satisfies TroubleReportState; /* SHORT_NAMED_INTEGER_VALUE */
+export const openActive = TroubleReportState_openActive; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -73,7 +73,7 @@ export const TroubleReportState_deferred = 2 satisfies TroubleReportState; /* LO
  * @constant
  * @type {number}
  */
-export const deferred = TroubleReportState_deferred satisfies TroubleReportState; /* SHORT_NAMED_INTEGER_VALUE */
+export const deferred = TroubleReportState_deferred; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -89,7 +89,7 @@ export const TroubleReportState_cleared = 3 satisfies TroubleReportState; /* LON
  * @constant
  * @type {number}
  */
-export const cleared = TroubleReportState_cleared satisfies TroubleReportState; /* SHORT_NAMED_INTEGER_VALUE */
+export const cleared = TroubleReportState_cleared; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -105,7 +105,7 @@ export const TroubleReportState_closed = 4 satisfies TroubleReportState; /* LONG
  * @constant
  * @type {number}
  */
-export const closed = TroubleReportState_closed satisfies TroubleReportState; /* SHORT_NAMED_INTEGER_VALUE */
+export const closed = TroubleReportState_closed; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -121,7 +121,7 @@ export const TroubleReportState_disabled = 5 satisfies TroubleReportState; /* LO
  * @constant
  * @type {number}
  */
-export const disabled = TroubleReportState_disabled satisfies TroubleReportState; /* SHORT_NAMED_INTEGER_VALUE */
+export const disabled = TroubleReportState_disabled; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 

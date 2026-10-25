@@ -60,7 +60,7 @@ const EC_State_disabled = 0 satisfies EC_State; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const disabled = EC_State_disabled satisfies EC_State; /* SHORT_NAMED_INTEGER_VALUE */
+const disabled = EC_State_disabled; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EC_State_idle
@@ -84,7 +84,7 @@ const EC_State_idle = 1 satisfies EC_State; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const idle = EC_State_idle satisfies EC_State; /* SHORT_NAMED_INTEGER_VALUE */
+const idle = EC_State_idle; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EC_State_active
@@ -108,7 +108,7 @@ const EC_State_active = 2 satisfies EC_State; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const active = EC_State_active satisfies EC_State; /* SHORT_NAMED_INTEGER_VALUE */
+const active = EC_State_active; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_EC_State = $._decodeInteger;
 export const _encode_EC_State = $._encodeInteger;
 

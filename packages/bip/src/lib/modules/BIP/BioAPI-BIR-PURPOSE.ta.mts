@@ -53,7 +53,7 @@ export type BioAPI_BIR_PURPOSE = _enum_for_BioAPI_BIR_PURPOSE | ENUMERATED;
  * @constant
  * @type {number}
  */
-export const BioAPI_BIR_PURPOSE_verify = _enum_for_BioAPI_BIR_PURPOSE.verify satisfies BioAPI_BIR_PURPOSE; /* LONG_NAMED_ENUMERATED_VALUE */
+export const BioAPI_BIR_PURPOSE_verify = _enum_for_BioAPI_BIR_PURPOSE.verify; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -61,7 +61,7 @@ export const BioAPI_BIR_PURPOSE_verify = _enum_for_BioAPI_BIR_PURPOSE.verify sat
  * @constant
  * @type {number}
  */
-export const verify = BioAPI_BIR_PURPOSE_verify satisfies BioAPI_BIR_PURPOSE; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const verify = BioAPI_BIR_PURPOSE_verify; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -69,7 +69,7 @@ export const verify = BioAPI_BIR_PURPOSE_verify satisfies BioAPI_BIR_PURPOSE; /*
  * @constant
  * @type {number}
  */
-export const BioAPI_BIR_PURPOSE_identify = _enum_for_BioAPI_BIR_PURPOSE.identify satisfies BioAPI_BIR_PURPOSE; /* LONG_NAMED_ENUMERATED_VALUE */
+export const BioAPI_BIR_PURPOSE_identify = _enum_for_BioAPI_BIR_PURPOSE.identify; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -77,7 +77,7 @@ export const BioAPI_BIR_PURPOSE_identify = _enum_for_BioAPI_BIR_PURPOSE.identify
  * @constant
  * @type {number}
  */
-export const identify = BioAPI_BIR_PURPOSE_identify satisfies BioAPI_BIR_PURPOSE; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const identify = BioAPI_BIR_PURPOSE_identify; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -85,7 +85,7 @@ export const identify = BioAPI_BIR_PURPOSE_identify satisfies BioAPI_BIR_PURPOSE
  * @constant
  * @type {number}
  */
-export const BioAPI_BIR_PURPOSE_enroll = _enum_for_BioAPI_BIR_PURPOSE.enroll satisfies BioAPI_BIR_PURPOSE; /* LONG_NAMED_ENUMERATED_VALUE */
+export const BioAPI_BIR_PURPOSE_enroll = _enum_for_BioAPI_BIR_PURPOSE.enroll; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -93,7 +93,7 @@ export const BioAPI_BIR_PURPOSE_enroll = _enum_for_BioAPI_BIR_PURPOSE.enroll sat
  * @constant
  * @type {number}
  */
-export const enroll = BioAPI_BIR_PURPOSE_enroll satisfies BioAPI_BIR_PURPOSE; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const enroll = BioAPI_BIR_PURPOSE_enroll; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -101,7 +101,7 @@ export const enroll = BioAPI_BIR_PURPOSE_enroll satisfies BioAPI_BIR_PURPOSE; /*
  * @constant
  * @type {number}
  */
-export const BioAPI_BIR_PURPOSE_enrollVerify = _enum_for_BioAPI_BIR_PURPOSE.enrollVerify satisfies BioAPI_BIR_PURPOSE; /* LONG_NAMED_ENUMERATED_VALUE */
+export const BioAPI_BIR_PURPOSE_enrollVerify = _enum_for_BioAPI_BIR_PURPOSE.enrollVerify; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -109,7 +109,7 @@ export const BioAPI_BIR_PURPOSE_enrollVerify = _enum_for_BioAPI_BIR_PURPOSE.enro
  * @constant
  * @type {number}
  */
-export const enrollVerify = BioAPI_BIR_PURPOSE_enrollVerify satisfies BioAPI_BIR_PURPOSE; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const enrollVerify = BioAPI_BIR_PURPOSE_enrollVerify; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -117,7 +117,7 @@ export const enrollVerify = BioAPI_BIR_PURPOSE_enrollVerify satisfies BioAPI_BIR
  * @constant
  * @type {number}
  */
-export const BioAPI_BIR_PURPOSE_enrollIdentify = _enum_for_BioAPI_BIR_PURPOSE.enrollIdentify satisfies BioAPI_BIR_PURPOSE; /* LONG_NAMED_ENUMERATED_VALUE */
+export const BioAPI_BIR_PURPOSE_enrollIdentify = _enum_for_BioAPI_BIR_PURPOSE.enrollIdentify; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -125,7 +125,7 @@ export const BioAPI_BIR_PURPOSE_enrollIdentify = _enum_for_BioAPI_BIR_PURPOSE.en
  * @constant
  * @type {number}
  */
-export const enrollIdentify = BioAPI_BIR_PURPOSE_enrollIdentify satisfies BioAPI_BIR_PURPOSE; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const enrollIdentify = BioAPI_BIR_PURPOSE_enrollIdentify; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -133,7 +133,7 @@ export const enrollIdentify = BioAPI_BIR_PURPOSE_enrollIdentify satisfies BioAPI
  * @constant
  * @type {number}
  */
-export const BioAPI_BIR_PURPOSE_audit = _enum_for_BioAPI_BIR_PURPOSE.audit satisfies BioAPI_BIR_PURPOSE; /* LONG_NAMED_ENUMERATED_VALUE */
+export const BioAPI_BIR_PURPOSE_audit = _enum_for_BioAPI_BIR_PURPOSE.audit; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -141,7 +141,7 @@ export const BioAPI_BIR_PURPOSE_audit = _enum_for_BioAPI_BIR_PURPOSE.audit satis
  * @constant
  * @type {number}
  */
-export const audit = BioAPI_BIR_PURPOSE_audit satisfies BioAPI_BIR_PURPOSE; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const audit = BioAPI_BIR_PURPOSE_audit; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -153,7 +153,7 @@ export const audit = BioAPI_BIR_PURPOSE_audit satisfies BioAPI_BIR_PURPOSE; /* S
  * @constant
  * @type {number}
  */
-export const BioAPI_BIR_PURPOSE_any_ = _enum_for_BioAPI_BIR_PURPOSE.any_ satisfies BioAPI_BIR_PURPOSE; /* LONG_NAMED_ENUMERATED_VALUE */
+export const BioAPI_BIR_PURPOSE_any_ = _enum_for_BioAPI_BIR_PURPOSE.any_; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -165,7 +165,7 @@ export const BioAPI_BIR_PURPOSE_any_ = _enum_for_BioAPI_BIR_PURPOSE.any_ satisfi
  * @constant
  * @type {number}
  */
-export const any_ = BioAPI_BIR_PURPOSE_any_ satisfies BioAPI_BIR_PURPOSE; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const any_ = BioAPI_BIR_PURPOSE_any_; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 

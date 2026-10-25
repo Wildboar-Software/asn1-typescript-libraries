@@ -51,7 +51,7 @@ type ImminentPerilInd = _enum_for_ImminentPerilInd | ENUMERATED;
  * @type {number}
  */
 export
-const ImminentPerilInd_request = _enum_for_ImminentPerilInd.request satisfies ImminentPerilInd; /* LONG_NAMED_ENUMERATED_VALUE */
+const ImminentPerilInd_request = _enum_for_ImminentPerilInd.request; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary request
@@ -63,7 +63,7 @@ const ImminentPerilInd_request = _enum_for_ImminentPerilInd.request satisfies Im
  * @type {number}
  */
 export
-const request = ImminentPerilInd_request satisfies ImminentPerilInd; /* SHORT_NAMED_ENUMERATED_VALUE */
+const request = ImminentPerilInd_request; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ImminentPerilInd_response
@@ -75,7 +75,7 @@ const request = ImminentPerilInd_request satisfies ImminentPerilInd; /* SHORT_NA
  * @type {number}
  */
 export
-const ImminentPerilInd_response = _enum_for_ImminentPerilInd.response satisfies ImminentPerilInd; /* LONG_NAMED_ENUMERATED_VALUE */
+const ImminentPerilInd_response = _enum_for_ImminentPerilInd.response; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary response
@@ -87,7 +87,7 @@ const ImminentPerilInd_response = _enum_for_ImminentPerilInd.response satisfies 
  * @type {number}
  */
 export
-const response = ImminentPerilInd_response satisfies ImminentPerilInd; /* SHORT_NAMED_ENUMERATED_VALUE */
+const response = ImminentPerilInd_response; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ImminentPerilInd_cancel
@@ -99,7 +99,7 @@ const response = ImminentPerilInd_response satisfies ImminentPerilInd; /* SHORT_
  * @type {number}
  */
 export
-const ImminentPerilInd_cancel = _enum_for_ImminentPerilInd.cancel satisfies ImminentPerilInd; /* LONG_NAMED_ENUMERATED_VALUE */
+const ImminentPerilInd_cancel = _enum_for_ImminentPerilInd.cancel; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary cancel
@@ -111,7 +111,7 @@ const ImminentPerilInd_cancel = _enum_for_ImminentPerilInd.cancel satisfies Immi
  * @type {number}
  */
 export
-const cancel = ImminentPerilInd_cancel satisfies ImminentPerilInd; /* SHORT_NAMED_ENUMERATED_VALUE */
+const cancel = ImminentPerilInd_cancel; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_ImminentPerilInd: $.ASN1Decoder<ImminentPerilInd> = $._decodeEnumerated;
 export const _encode_ImminentPerilInd: $.ASN1Encoder<ImminentPerilInd> = $._encodeEnumerated;
 

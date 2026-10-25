@@ -64,7 +64,7 @@ export const DeliverResult_pass = 0 satisfies DeliverResult; /* LONG_NAMED_INTEG
  * @constant
  * @type {number}
  */
-export const pass = DeliverResult_pass satisfies DeliverResult; /* SHORT_NAMED_INTEGER_VALUE */
+export const pass = DeliverResult_pass; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeliverResult_communicationError
@@ -78,7 +78,7 @@ export const DeliverResult_communicationError = 1 satisfies DeliverResult; /* LO
  * @constant
  * @type {number}
  */
-export const communicationError = DeliverResult_communicationError satisfies DeliverResult; /* SHORT_NAMED_INTEGER_VALUE */
+export const communicationError = DeliverResult_communicationError; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeliverResult_equipmentError
@@ -92,7 +92,7 @@ export const DeliverResult_equipmentError = 2 satisfies DeliverResult; /* LONG_N
  * @constant
  * @type {number}
  */
-export const equipmentError = DeliverResult_equipmentError satisfies DeliverResult; /* SHORT_NAMED_INTEGER_VALUE */
+export const equipmentError = DeliverResult_equipmentError; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeliverResult_qosError
@@ -106,7 +106,7 @@ export const DeliverResult_qosError = 3 satisfies DeliverResult; /* LONG_NAMED_I
  * @constant
  * @type {number}
  */
-export const qosError = DeliverResult_qosError satisfies DeliverResult; /* SHORT_NAMED_INTEGER_VALUE */
+export const qosError = DeliverResult_qosError; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeliverResult_accessDenied
@@ -120,7 +120,7 @@ export const DeliverResult_accessDenied = 4 satisfies DeliverResult; /* LONG_NAM
  * @constant
  * @type {number}
  */
-export const accessDenied = DeliverResult_accessDenied satisfies DeliverResult; /* SHORT_NAMED_INTEGER_VALUE */
+export const accessDenied = DeliverResult_accessDenied; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeliverResult_notFound
@@ -134,7 +134,7 @@ export const DeliverResult_notFound = 5 satisfies DeliverResult; /* LONG_NAMED_I
  * @constant
  * @type {number}
  */
-export const notFound = DeliverResult_notFound satisfies DeliverResult; /* SHORT_NAMED_INTEGER_VALUE */
+export const notFound = DeliverResult_notFound; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeliverResult_insufficientSpace
@@ -148,7 +148,7 @@ export const DeliverResult_insufficientSpace = 6 satisfies DeliverResult; /* LON
  * @constant
  * @type {number}
  */
-export const insufficientSpace = DeliverResult_insufficientSpace satisfies DeliverResult; /* SHORT_NAMED_INTEGER_VALUE */
+export const insufficientSpace = DeliverResult_insufficientSpace; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeliverResult_alreadyDelivered
@@ -162,7 +162,7 @@ export const DeliverResult_alreadyDelivered = 7 satisfies DeliverResult; /* LONG
  * @constant
  * @type {number}
  */
-export const alreadyDelivered = DeliverResult_alreadyDelivered satisfies DeliverResult; /* SHORT_NAMED_INTEGER_VALUE */
+export const alreadyDelivered = DeliverResult_alreadyDelivered; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeliverResult_inProgress
@@ -176,7 +176,7 @@ export const DeliverResult_inProgress = 8 satisfies DeliverResult; /* LONG_NAMED
  * @constant
  * @type {number}
  */
-export const inProgress = DeliverResult_inProgress satisfies DeliverResult; /* SHORT_NAMED_INTEGER_VALUE */
+export const inProgress = DeliverResult_inProgress; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeliverResult_unknown
@@ -193,7 +193,7 @@ export const DeliverResult_unknown = 9 satisfies DeliverResult; /* LONG_NAMED_IN
  * @constant
  * @type {number}
  */
-export const unknown = DeliverResult_unknown satisfies DeliverResult; /* SHORT_NAMED_INTEGER_VALUE */
+export const unknown = DeliverResult_unknown; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_DeliverResult = $._decodeInteger;

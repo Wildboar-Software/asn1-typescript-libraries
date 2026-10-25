@@ -49,7 +49,7 @@ const FDCOupdate_Item_status_active = 0 satisfies FDCOupdate_Item_status; /* LON
  * @type {number}
  */
 export
-const active = FDCOupdate_Item_status_active satisfies FDCOupdate_Item_status; /* SHORT_NAMED_INTEGER_VALUE */
+const active = FDCOupdate_Item_status_active; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary FDCOupdate_Item_status_inactive
@@ -71,7 +71,7 @@ const FDCOupdate_Item_status_inactive = 1 satisfies FDCOupdate_Item_status; /* L
  * @type {number}
  */
 export
-const inactive = FDCOupdate_Item_status_inactive satisfies FDCOupdate_Item_status; /* SHORT_NAMED_INTEGER_VALUE */
+const inactive = FDCOupdate_Item_status_inactive; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary FDCOupdate_Item_status_void_
@@ -93,7 +93,7 @@ const FDCOupdate_Item_status_void_ = 2 satisfies FDCOupdate_Item_status; /* LONG
  * @type {number}
  */
 export
-const void_ = FDCOupdate_Item_status_void_ satisfies FDCOupdate_Item_status; /* SHORT_NAMED_INTEGER_VALUE */
+const void_ = FDCOupdate_Item_status_void_; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_FDCOupdate_Item_status = $._decodeInteger;
 export const _encode_FDCOupdate_Item_status = $._encodeInteger;
 

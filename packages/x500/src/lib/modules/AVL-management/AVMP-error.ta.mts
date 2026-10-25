@@ -55,7 +55,7 @@ export type AVMP_error = _enum_for_AVMP_error | ENUMERATED;
  * @constant
  * @type {number}
  */
-export const AVMP_error_noReason = _enum_for_AVMP_error.noReason satisfies AVMP_error; /* LONG_NAMED_ENUMERATED_VALUE */
+export const AVMP_error_noReason = _enum_for_AVMP_error.noReason; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary noReason
@@ -66,7 +66,7 @@ export const AVMP_error_noReason = _enum_for_AVMP_error.noReason satisfies AVMP_
  * @constant
  * @type {number}
  */
-export const noReason = AVMP_error_noReason satisfies AVMP_error; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const noReason = AVMP_error_noReason; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AVMP_error_protocolError
@@ -77,7 +77,7 @@ export const noReason = AVMP_error_noReason satisfies AVMP_error; /* SHORT_NAMED
  * @constant
  * @type {number}
  */
-export const AVMP_error_protocolError = _enum_for_AVMP_error.protocolError satisfies AVMP_error; /* LONG_NAMED_ENUMERATED_VALUE */
+export const AVMP_error_protocolError = _enum_for_AVMP_error.protocolError; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary protocolError
@@ -88,7 +88,7 @@ export const AVMP_error_protocolError = _enum_for_AVMP_error.protocolError satis
  * @constant
  * @type {number}
  */
-export const protocolError = AVMP_error_protocolError satisfies AVMP_error; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const protocolError = AVMP_error_protocolError; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AVMP_error_duplicateAVL
@@ -99,7 +99,7 @@ export const protocolError = AVMP_error_protocolError satisfies AVMP_error; /* S
  * @constant
  * @type {number}
  */
-export const AVMP_error_duplicateAVL = _enum_for_AVMP_error.duplicateAVL satisfies AVMP_error; /* LONG_NAMED_ENUMERATED_VALUE */
+export const AVMP_error_duplicateAVL = _enum_for_AVMP_error.duplicateAVL; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary duplicateAVL
@@ -110,7 +110,7 @@ export const AVMP_error_duplicateAVL = _enum_for_AVMP_error.duplicateAVL satisfi
  * @constant
  * @type {number}
  */
-export const duplicateAVL = AVMP_error_duplicateAVL satisfies AVMP_error; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const duplicateAVL = AVMP_error_duplicateAVL; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AVMP_error_missingAvlComponent
@@ -121,7 +121,7 @@ export const duplicateAVL = AVMP_error_duplicateAVL satisfies AVMP_error; /* SHO
  * @constant
  * @type {number}
  */
-export const AVMP_error_missingAvlComponent = _enum_for_AVMP_error.missingAvlComponent satisfies AVMP_error; /* LONG_NAMED_ENUMERATED_VALUE */
+export const AVMP_error_missingAvlComponent = _enum_for_AVMP_error.missingAvlComponent; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary missingAvlComponent
@@ -132,7 +132,7 @@ export const AVMP_error_missingAvlComponent = _enum_for_AVMP_error.missingAvlCom
  * @constant
  * @type {number}
  */
-export const missingAvlComponent = AVMP_error_missingAvlComponent satisfies AVMP_error; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const missingAvlComponent = AVMP_error_missingAvlComponent; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AVMP_error_invalidAvlVersion
@@ -143,7 +143,7 @@ export const missingAvlComponent = AVMP_error_missingAvlComponent satisfies AVMP
  * @constant
  * @type {number}
  */
-export const AVMP_error_invalidAvlVersion = _enum_for_AVMP_error.invalidAvlVersion satisfies AVMP_error; /* LONG_NAMED_ENUMERATED_VALUE */
+export const AVMP_error_invalidAvlVersion = _enum_for_AVMP_error.invalidAvlVersion; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidAvlVersion
@@ -154,7 +154,7 @@ export const AVMP_error_invalidAvlVersion = _enum_for_AVMP_error.invalidAvlVersi
  * @constant
  * @type {number}
  */
-export const invalidAvlVersion = AVMP_error_invalidAvlVersion satisfies AVMP_error; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const invalidAvlVersion = AVMP_error_invalidAvlVersion; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AVMP_error_notAllowedForConstrainedAVLEntity
@@ -165,7 +165,7 @@ export const invalidAvlVersion = AVMP_error_invalidAvlVersion satisfies AVMP_err
  * @constant
  * @type {number}
  */
-export const AVMP_error_notAllowedForConstrainedAVLEntity = _enum_for_AVMP_error.notAllowedForConstrainedAVLEntity satisfies AVMP_error; /* LONG_NAMED_ENUMERATED_VALUE */
+export const AVMP_error_notAllowedForConstrainedAVLEntity = _enum_for_AVMP_error.notAllowedForConstrainedAVLEntity; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary notAllowedForConstrainedAVLEntity
@@ -176,7 +176,7 @@ export const AVMP_error_notAllowedForConstrainedAVLEntity = _enum_for_AVMP_error
  * @constant
  * @type {number}
  */
-export const notAllowedForConstrainedAVLEntity = AVMP_error_notAllowedForConstrainedAVLEntity satisfies AVMP_error; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const notAllowedForConstrainedAVLEntity = AVMP_error_notAllowedForConstrainedAVLEntity; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AVMP_error_constrainedRequired
@@ -187,7 +187,7 @@ export const notAllowedForConstrainedAVLEntity = AVMP_error_notAllowedForConstra
  * @constant
  * @type {number}
  */
-export const AVMP_error_constrainedRequired = _enum_for_AVMP_error.constrainedRequired satisfies AVMP_error; /* LONG_NAMED_ENUMERATED_VALUE */
+export const AVMP_error_constrainedRequired = _enum_for_AVMP_error.constrainedRequired; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary constrainedRequired
@@ -198,7 +198,7 @@ export const AVMP_error_constrainedRequired = _enum_for_AVMP_error.constrainedRe
  * @constant
  * @type {number}
  */
-export const constrainedRequired = AVMP_error_constrainedRequired satisfies AVMP_error; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const constrainedRequired = AVMP_error_constrainedRequired; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AVMP_error_nonConstrainedRequired
@@ -209,7 +209,7 @@ export const constrainedRequired = AVMP_error_constrainedRequired satisfies AVMP
  * @constant
  * @type {number}
  */
-export const AVMP_error_nonConstrainedRequired = _enum_for_AVMP_error.nonConstrainedRequired satisfies AVMP_error; /* LONG_NAMED_ENUMERATED_VALUE */
+export const AVMP_error_nonConstrainedRequired = _enum_for_AVMP_error.nonConstrainedRequired; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary nonConstrainedRequired
@@ -220,7 +220,7 @@ export const AVMP_error_nonConstrainedRequired = _enum_for_AVMP_error.nonConstra
  * @constant
  * @type {number}
  */
-export const nonConstrainedRequired = AVMP_error_nonConstrainedRequired satisfies AVMP_error; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const nonConstrainedRequired = AVMP_error_nonConstrainedRequired; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AVMP_error_unsupportedCriticalEntryExtenssion
@@ -231,7 +231,7 @@ export const nonConstrainedRequired = AVMP_error_nonConstrainedRequired satisfie
  * @constant
  * @type {number}
  */
-export const AVMP_error_unsupportedCriticalEntryExtenssion = _enum_for_AVMP_error.unsupportedCriticalEntryExtenssion satisfies AVMP_error; /* LONG_NAMED_ENUMERATED_VALUE */
+export const AVMP_error_unsupportedCriticalEntryExtenssion = _enum_for_AVMP_error.unsupportedCriticalEntryExtenssion; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unsupportedCriticalEntryExtenssion
@@ -242,7 +242,7 @@ export const AVMP_error_unsupportedCriticalEntryExtenssion = _enum_for_AVMP_erro
  * @constant
  * @type {number}
  */
-export const unsupportedCriticalEntryExtenssion = AVMP_error_unsupportedCriticalEntryExtenssion satisfies AVMP_error; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const unsupportedCriticalEntryExtenssion = AVMP_error_unsupportedCriticalEntryExtenssion; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AVMP_error_unsupportedCriticalExtenssion
@@ -253,7 +253,7 @@ export const unsupportedCriticalEntryExtenssion = AVMP_error_unsupportedCritical
  * @constant
  * @type {number}
  */
-export const AVMP_error_unsupportedCriticalExtenssion = _enum_for_AVMP_error.unsupportedCriticalExtenssion satisfies AVMP_error; /* LONG_NAMED_ENUMERATED_VALUE */
+export const AVMP_error_unsupportedCriticalExtenssion = _enum_for_AVMP_error.unsupportedCriticalExtenssion; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unsupportedCriticalExtenssion
@@ -264,7 +264,7 @@ export const AVMP_error_unsupportedCriticalExtenssion = _enum_for_AVMP_error.uns
  * @constant
  * @type {number}
  */
-export const unsupportedCriticalExtenssion = AVMP_error_unsupportedCriticalExtenssion satisfies AVMP_error; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const unsupportedCriticalExtenssion = AVMP_error_unsupportedCriticalExtenssion; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AVMP_error_maxAVLsExceeded
@@ -275,7 +275,7 @@ export const unsupportedCriticalExtenssion = AVMP_error_unsupportedCriticalExten
  * @constant
  * @type {number}
  */
-export const AVMP_error_maxAVLsExceeded = _enum_for_AVMP_error.maxAVLsExceeded satisfies AVMP_error; /* LONG_NAMED_ENUMERATED_VALUE */
+export const AVMP_error_maxAVLsExceeded = _enum_for_AVMP_error.maxAVLsExceeded; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary maxAVLsExceeded
@@ -286,7 +286,7 @@ export const AVMP_error_maxAVLsExceeded = _enum_for_AVMP_error.maxAVLsExceeded s
  * @constant
  * @type {number}
  */
-export const maxAVLsExceeded = AVMP_error_maxAVLsExceeded satisfies AVMP_error; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const maxAVLsExceeded = AVMP_error_maxAVLsExceeded; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AVMP_error_unknownAVL
@@ -297,7 +297,7 @@ export const maxAVLsExceeded = AVMP_error_maxAVLsExceeded satisfies AVMP_error; 
  * @constant
  * @type {number}
  */
-export const AVMP_error_unknownAVL = _enum_for_AVMP_error.unknownAVL satisfies AVMP_error; /* LONG_NAMED_ENUMERATED_VALUE */
+export const AVMP_error_unknownAVL = _enum_for_AVMP_error.unknownAVL; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unknownAVL
@@ -308,7 +308,7 @@ export const AVMP_error_unknownAVL = _enum_for_AVMP_error.unknownAVL satisfies A
  * @constant
  * @type {number}
  */
-export const unknownAVL = AVMP_error_unknownAVL satisfies AVMP_error; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const unknownAVL = AVMP_error_unknownAVL; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 export const _decode_AVMP_error = $._decodeEnumerated;

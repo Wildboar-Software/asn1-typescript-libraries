@@ -38,7 +38,7 @@ const MTCallRecord_lrnSoInd_lRN_NP_Database = 1 satisfies MTCallRecord_lrnSoInd;
  * @type {number}
  */
 export
-const lRN_NP_Database = MTCallRecord_lrnSoInd_lRN_NP_Database satisfies MTCallRecord_lrnSoInd; /* SHORT_NAMED_INTEGER_VALUE */
+const lRN_NP_Database = MTCallRecord_lrnSoInd_lRN_NP_Database; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary MTCallRecord_lrnSoInd_switchingSystemData
@@ -54,7 +54,7 @@ const MTCallRecord_lrnSoInd_switchingSystemData = 2 satisfies MTCallRecord_lrnSo
  * @type {number}
  */
 export
-const switchingSystemData = MTCallRecord_lrnSoInd_switchingSystemData satisfies MTCallRecord_lrnSoInd; /* SHORT_NAMED_INTEGER_VALUE */
+const switchingSystemData = MTCallRecord_lrnSoInd_switchingSystemData; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary MTCallRecord_lrnSoInd_incomingsignaling
@@ -70,7 +70,7 @@ const MTCallRecord_lrnSoInd_incomingsignaling = 3 satisfies MTCallRecord_lrnSoIn
  * @type {number}
  */
 export
-const incomingsignaling = MTCallRecord_lrnSoInd_incomingsignaling satisfies MTCallRecord_lrnSoInd; /* SHORT_NAMED_INTEGER_VALUE */
+const incomingsignaling = MTCallRecord_lrnSoInd_incomingsignaling; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary MTCallRecord_lrnSoInd_unknown
@@ -86,7 +86,7 @@ const MTCallRecord_lrnSoInd_unknown = 9 satisfies MTCallRecord_lrnSoInd; /* LONG
  * @type {number}
  */
 export
-const unknown = MTCallRecord_lrnSoInd_unknown satisfies MTCallRecord_lrnSoInd; /* SHORT_NAMED_INTEGER_VALUE */
+const unknown = MTCallRecord_lrnSoInd_unknown; /* SHORT_NAMED_INTEGER_VALUE */
 
 export
 const _decode_MTCallRecord_lrnSoInd: $.ASN1Decoder<MTCallRecord_lrnSoInd> = $._decodeInteger;

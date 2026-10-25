@@ -43,7 +43,7 @@ export type TerminateLoopbackError =
  * @constant
  * @type {number}
  */
-export const TerminateLoopbackError_loopbackNotSet = _enum_for_TerminateLoopbackError.loopbackNotSet satisfies TerminateLoopbackError; /* LONG_NAMED_ENUMERATED_VALUE */
+export const TerminateLoopbackError_loopbackNotSet = _enum_for_TerminateLoopbackError.loopbackNotSet; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -51,7 +51,7 @@ export const TerminateLoopbackError_loopbackNotSet = _enum_for_TerminateLoopback
  * @constant
  * @type {number}
  */
-export const loopbackNotSet = TerminateLoopbackError_loopbackNotSet satisfies TerminateLoopbackError; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const loopbackNotSet = TerminateLoopbackError_loopbackNotSet; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -59,7 +59,7 @@ export const loopbackNotSet = TerminateLoopbackError_loopbackNotSet satisfies Te
  * @constant
  * @type {number}
  */
-export const TerminateLoopbackError_loopbackNotSupported = _enum_for_TerminateLoopbackError.loopbackNotSupported satisfies TerminateLoopbackError; /* LONG_NAMED_ENUMERATED_VALUE */
+export const TerminateLoopbackError_loopbackNotSupported = _enum_for_TerminateLoopbackError.loopbackNotSupported; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -67,7 +67,7 @@ export const TerminateLoopbackError_loopbackNotSupported = _enum_for_TerminateLo
  * @constant
  * @type {number}
  */
-export const loopbackNotSupported = TerminateLoopbackError_loopbackNotSupported satisfies TerminateLoopbackError; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const loopbackNotSupported = TerminateLoopbackError_loopbackNotSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 

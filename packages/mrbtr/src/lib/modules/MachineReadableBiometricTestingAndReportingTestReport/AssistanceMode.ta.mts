@@ -97,7 +97,7 @@ const AssistanceMode = _enum_for_AssistanceMode;
  * @type {number}
  */
 export
-const AssistanceMode_physical = AssistanceMode.physical satisfies AssistanceMode; /* LONG_NAMED_ENUMERATED_VALUE */
+const AssistanceMode_physical = AssistanceMode.physical; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary physical
@@ -105,7 +105,7 @@ const AssistanceMode_physical = AssistanceMode.physical satisfies AssistanceMode
  * @type {number}
  */
 export
-const physical = AssistanceMode.physical satisfies AssistanceMode; /* SHORT_NAMED_ENUMERATED_VALUE */
+const physical = AssistanceMode.physical; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AssistanceMode_audio_only
@@ -113,7 +113,7 @@ const physical = AssistanceMode.physical satisfies AssistanceMode; /* SHORT_NAME
  * @type {number}
  */
 export
-const AssistanceMode_audio_only = AssistanceMode.audio_only satisfies AssistanceMode; /* LONG_NAMED_ENUMERATED_VALUE */
+const AssistanceMode_audio_only = AssistanceMode.audio_only; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary audio_only
@@ -121,7 +121,7 @@ const AssistanceMode_audio_only = AssistanceMode.audio_only satisfies Assistance
  * @type {number}
  */
 export
-const audio_only = AssistanceMode.audio_only satisfies AssistanceMode; /* SHORT_NAMED_ENUMERATED_VALUE */
+const audio_only = AssistanceMode.audio_only; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AssistanceMode_audio_video
@@ -129,7 +129,7 @@ const audio_only = AssistanceMode.audio_only satisfies AssistanceMode; /* SHORT_
  * @type {number}
  */
 export
-const AssistanceMode_audio_video = AssistanceMode.audio_video satisfies AssistanceMode; /* LONG_NAMED_ENUMERATED_VALUE */
+const AssistanceMode_audio_video = AssistanceMode.audio_video; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary audio_video
@@ -137,7 +137,7 @@ const AssistanceMode_audio_video = AssistanceMode.audio_video satisfies Assistan
  * @type {number}
  */
 export
-const audio_video = AssistanceMode.audio_video satisfies AssistanceMode; /* SHORT_NAMED_ENUMERATED_VALUE */
+const audio_video = AssistanceMode.audio_video; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AssistanceMode_none
@@ -145,7 +145,7 @@ const audio_video = AssistanceMode.audio_video satisfies AssistanceMode; /* SHOR
  * @type {number}
  */
 export
-const AssistanceMode_none = AssistanceMode.none satisfies AssistanceMode; /* LONG_NAMED_ENUMERATED_VALUE */
+const AssistanceMode_none = AssistanceMode.none; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary none
@@ -153,7 +153,7 @@ const AssistanceMode_none = AssistanceMode.none satisfies AssistanceMode; /* LON
  * @type {number}
  */
 export
-const none = AssistanceMode.none satisfies AssistanceMode; /* SHORT_NAMED_ENUMERATED_VALUE */
+const none = AssistanceMode.none; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AssistanceMode_video_only
@@ -161,7 +161,7 @@ const none = AssistanceMode.none satisfies AssistanceMode; /* SHORT_NAMED_ENUMER
  * @type {number}
  */
 export
-const AssistanceMode_video_only = AssistanceMode.video_only satisfies AssistanceMode; /* LONG_NAMED_ENUMERATED_VALUE */
+const AssistanceMode_video_only = AssistanceMode.video_only; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary video_only
@@ -169,7 +169,7 @@ const AssistanceMode_video_only = AssistanceMode.video_only satisfies Assistance
  * @type {number}
  */
 export
-const video_only = AssistanceMode.video_only satisfies AssistanceMode; /* SHORT_NAMED_ENUMERATED_VALUE */
+const video_only = AssistanceMode.video_only; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**

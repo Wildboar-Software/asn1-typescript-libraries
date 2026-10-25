@@ -67,7 +67,7 @@ const ResourceStatus = _enum_for_ResourceStatus;
  * @type {number}
  */
 export
-const ResourceStatus_busy = ResourceStatus.busy satisfies ResourceStatus; /* LONG_NAMED_ENUMERATED_VALUE */
+const ResourceStatus_busy = ResourceStatus.busy; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary busy
@@ -75,7 +75,7 @@ const ResourceStatus_busy = ResourceStatus.busy satisfies ResourceStatus; /* LON
  * @type {number}
  */
 export
-const busy = ResourceStatus.busy satisfies ResourceStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
+const busy = ResourceStatus.busy; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ResourceStatus_idle
@@ -83,7 +83,7 @@ const busy = ResourceStatus.busy satisfies ResourceStatus; /* SHORT_NAMED_ENUMER
  * @type {number}
  */
 export
-const ResourceStatus_idle = ResourceStatus.idle satisfies ResourceStatus; /* LONG_NAMED_ENUMERATED_VALUE */
+const ResourceStatus_idle = ResourceStatus.idle; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary idle
@@ -91,7 +91,7 @@ const ResourceStatus_idle = ResourceStatus.idle satisfies ResourceStatus; /* LON
  * @type {number}
  */
 export
-const idle = ResourceStatus.idle satisfies ResourceStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
+const idle = ResourceStatus.idle; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_ResourceStatus = $._decodeEnumerated;
 export const _encode_ResourceStatus = $._encodeEnumerated;
 

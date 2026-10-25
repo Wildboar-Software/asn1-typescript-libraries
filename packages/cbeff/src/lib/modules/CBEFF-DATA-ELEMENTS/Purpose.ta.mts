@@ -73,7 +73,7 @@ export const Purpose = _enum_for_Purpose;
  * @type {number}
  */
 export const Purpose_no_value_available =
-  Purpose.no_value_available satisfies Purpose; /* LONG_NAMED_ENUMERATED_VALUE */
+  Purpose.no_value_available; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary no_value_available
@@ -81,7 +81,7 @@ export const Purpose_no_value_available =
  * @type {number}
  */
 export const no_value_available =
-  Purpose.no_value_available satisfies Purpose; /* SHORT_NAMED_ENUMERATED_VALUE */
+  Purpose.no_value_available; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Purpose_verify
@@ -89,7 +89,7 @@ export const no_value_available =
  * @type {number}
  */
 export const Purpose_verify =
-  Purpose.verify satisfies Purpose; /* LONG_NAMED_ENUMERATED_VALUE */
+  Purpose.verify; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary verify
@@ -97,7 +97,7 @@ export const Purpose_verify =
  * @type {number}
  */
 export const verify =
-  Purpose.verify satisfies Purpose; /* SHORT_NAMED_ENUMERATED_VALUE */
+  Purpose.verify; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Purpose_identify
@@ -105,7 +105,7 @@ export const verify =
  * @type {number}
  */
 export const Purpose_identify =
-  Purpose.identify satisfies Purpose; /* LONG_NAMED_ENUMERATED_VALUE */
+  Purpose.identify; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary identify
@@ -113,7 +113,7 @@ export const Purpose_identify =
  * @type {number}
  */
 export const identify =
-  Purpose.identify satisfies Purpose; /* SHORT_NAMED_ENUMERATED_VALUE */
+  Purpose.identify; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Purpose_enroll
@@ -121,7 +121,7 @@ export const identify =
  * @type {number}
  */
 export const Purpose_enroll =
-  Purpose.enroll satisfies Purpose; /* LONG_NAMED_ENUMERATED_VALUE */
+  Purpose.enroll; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary enroll
@@ -129,7 +129,7 @@ export const Purpose_enroll =
  * @type {number}
  */
 export const enroll =
-  Purpose.enroll satisfies Purpose; /* SHORT_NAMED_ENUMERATED_VALUE */
+  Purpose.enroll; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Purpose_enroll_verify
@@ -137,7 +137,7 @@ export const enroll =
  * @type {number}
  */
 export const Purpose_enroll_verify =
-  Purpose.enroll_verify satisfies Purpose; /* LONG_NAMED_ENUMERATED_VALUE */
+  Purpose.enroll_verify; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary enroll_verify
@@ -145,7 +145,7 @@ export const Purpose_enroll_verify =
  * @type {number}
  */
 export const enroll_verify =
-  Purpose.enroll_verify satisfies Purpose; /* SHORT_NAMED_ENUMERATED_VALUE */
+  Purpose.enroll_verify; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Purpose_enroll_identify
@@ -153,7 +153,7 @@ export const enroll_verify =
  * @type {number}
  */
 export const Purpose_enroll_identify =
-  Purpose.enroll_identify satisfies Purpose; /* LONG_NAMED_ENUMERATED_VALUE */
+  Purpose.enroll_identify; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary enroll_identify
@@ -161,7 +161,7 @@ export const Purpose_enroll_identify =
  * @type {number}
  */
 export const enroll_identify =
-  Purpose.enroll_identify satisfies Purpose; /* SHORT_NAMED_ENUMERATED_VALUE */
+  Purpose.enroll_identify; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Purpose_audit
@@ -169,14 +169,14 @@ export const enroll_identify =
  * @type {number}
  */
 export const Purpose_audit =
-  Purpose.audit satisfies Purpose; /* LONG_NAMED_ENUMERATED_VALUE */
+  Purpose.audit; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary audit
  * @constant
  * @type {number}
  */
-export const audit = Purpose.audit satisfies Purpose; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const audit = Purpose.audit; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 export const _decode_Purpose = $._decodeEnumerated;

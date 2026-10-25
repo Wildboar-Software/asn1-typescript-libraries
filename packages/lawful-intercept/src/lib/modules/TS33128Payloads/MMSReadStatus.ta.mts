@@ -84,7 +84,7 @@ const MMSReadStatus = _enum_for_MMSReadStatus;
  * @type {number}
  */
 export
-const MMSReadStatus_read = MMSReadStatus.read satisfies MMSReadStatus; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMSReadStatus_read = MMSReadStatus.read; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary read
@@ -92,7 +92,7 @@ const MMSReadStatus_read = MMSReadStatus.read satisfies MMSReadStatus; /* LONG_N
  * @type {number}
  */
 export
-const read = MMSReadStatus.read satisfies MMSReadStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
+const read = MMSReadStatus.read; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMSReadStatus_deletedWithoutBeingRead
@@ -100,7 +100,7 @@ const read = MMSReadStatus.read satisfies MMSReadStatus; /* SHORT_NAMED_ENUMERAT
  * @type {number}
  */
 export
-const MMSReadStatus_deletedWithoutBeingRead = MMSReadStatus.deletedWithoutBeingRead satisfies MMSReadStatus; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMSReadStatus_deletedWithoutBeingRead = MMSReadStatus.deletedWithoutBeingRead; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary deletedWithoutBeingRead
@@ -108,7 +108,7 @@ const MMSReadStatus_deletedWithoutBeingRead = MMSReadStatus.deletedWithoutBeingR
  * @type {number}
  */
 export
-const deletedWithoutBeingRead = MMSReadStatus.deletedWithoutBeingRead satisfies MMSReadStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
+const deletedWithoutBeingRead = MMSReadStatus.deletedWithoutBeingRead; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_MMSReadStatus: $.ASN1Decoder<MMSReadStatus> = $._decodeEnumerated;
 export const _encode_MMSReadStatus: $.ASN1Encoder<MMSReadStatus> = $._encodeEnumerated;
 

@@ -56,7 +56,7 @@ const DocumentArchitectureClass_formatted = 0 satisfies DocumentArchitectureClas
  * @type {number}
  */
 export
-const formatted = DocumentArchitectureClass_formatted satisfies DocumentArchitectureClass; /* SHORT_NAMED_INTEGER_VALUE */
+const formatted = DocumentArchitectureClass_formatted; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DocumentArchitectureClass_processable
@@ -78,7 +78,7 @@ const DocumentArchitectureClass_processable = 1 satisfies DocumentArchitectureCl
  * @type {number}
  */
 export
-const processable = DocumentArchitectureClass_processable satisfies DocumentArchitectureClass; /* SHORT_NAMED_INTEGER_VALUE */
+const processable = DocumentArchitectureClass_processable; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DocumentArchitectureClass_formatted_processable
@@ -100,7 +100,7 @@ const DocumentArchitectureClass_formatted_processable = 2 satisfies DocumentArch
  * @type {number}
  */
 export
-const formatted_processable = DocumentArchitectureClass_formatted_processable satisfies DocumentArchitectureClass; /* SHORT_NAMED_INTEGER_VALUE */
+const formatted_processable = DocumentArchitectureClass_formatted_processable; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_DocumentArchitectureClass = $._decodeInteger;
 export const _encode_DocumentArchitectureClass = $._encodeInteger;
 

@@ -59,7 +59,7 @@ const SpecifiedECDomainVersion_ecdpVer1 = 1 satisfies SpecifiedECDomainVersion; 
  * @type {number}
  */
 export
-const ecdpVer1 = SpecifiedECDomainVersion_ecdpVer1 satisfies SpecifiedECDomainVersion; /* SHORT_NAMED_INTEGER_VALUE */
+const ecdpVer1 = SpecifiedECDomainVersion_ecdpVer1; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SpecifiedECDomainVersion_ecdpVer2
@@ -85,7 +85,7 @@ const SpecifiedECDomainVersion_ecdpVer2 = 2 satisfies SpecifiedECDomainVersion; 
  * @type {number}
  */
 export
-const ecdpVer2 = SpecifiedECDomainVersion_ecdpVer2 satisfies SpecifiedECDomainVersion; /* SHORT_NAMED_INTEGER_VALUE */
+const ecdpVer2 = SpecifiedECDomainVersion_ecdpVer2; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SpecifiedECDomainVersion_ecdpVer3
@@ -110,7 +110,7 @@ const SpecifiedECDomainVersion_ecdpVer3 = 3 satisfies SpecifiedECDomainVersion; 
  * @type {number}
  */
 export
-const ecdpVer3 = SpecifiedECDomainVersion_ecdpVer3 satisfies SpecifiedECDomainVersion; /* SHORT_NAMED_INTEGER_VALUE */
+const ecdpVer3 = SpecifiedECDomainVersion_ecdpVer3; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_SpecifiedECDomainVersion = $._decodeInteger;

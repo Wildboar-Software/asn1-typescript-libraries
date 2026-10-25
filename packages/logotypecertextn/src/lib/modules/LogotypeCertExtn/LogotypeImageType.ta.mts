@@ -38,7 +38,7 @@ const LogotypeImageType_grayScale = 0 satisfies LogotypeImageType; /* LONG_NAMED
  * @constant
  */
 export
-const grayScale = LogotypeImageType_grayScale satisfies LogotypeImageType; /* SHORT_NAMED_INTEGER_VALUE */
+const grayScale = LogotypeImageType_grayScale; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * Color image (`color(1)`). Default for {@link LogotypeImageInfo.type_}
@@ -55,7 +55,7 @@ const LogotypeImageType_color = 1 satisfies LogotypeImageType; /* LONG_NAMED_INT
  * @constant
  */
 export
-const color = LogotypeImageType_color satisfies LogotypeImageType; /* SHORT_NAMED_INTEGER_VALUE */
+const color = LogotypeImageType_color; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_LogotypeImageType = $._decodeInteger;
 export const _encode_LogotypeImageType = $._encodeInteger;
 

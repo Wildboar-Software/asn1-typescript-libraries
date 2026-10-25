@@ -36,7 +36,7 @@ const AdditionalChgInfo_chargeIndicator_noCharge = 0 satisfies AdditionalChgInfo
  * @type {number}
  */
 export
-const noCharge = AdditionalChgInfo_chargeIndicator_noCharge satisfies AdditionalChgInfo_chargeIndicator; /* SHORT_NAMED_INTEGER_VALUE */
+const noCharge = AdditionalChgInfo_chargeIndicator_noCharge; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AdditionalChgInfo_chargeIndicator_charge
@@ -52,7 +52,7 @@ const AdditionalChgInfo_chargeIndicator_charge = 1 satisfies AdditionalChgInfo_c
  * @type {number}
  */
 export
-const charge = AdditionalChgInfo_chargeIndicator_charge satisfies AdditionalChgInfo_chargeIndicator; /* SHORT_NAMED_INTEGER_VALUE */
+const charge = AdditionalChgInfo_chargeIndicator_charge; /* SHORT_NAMED_INTEGER_VALUE */
 
 export
 const _decode_AdditionalChgInfo_chargeIndicator: $.ASN1Decoder<AdditionalChgInfo_chargeIndicator> = $._decodeInteger;

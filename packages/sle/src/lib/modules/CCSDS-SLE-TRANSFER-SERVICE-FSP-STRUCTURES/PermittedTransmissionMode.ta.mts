@@ -53,7 +53,7 @@ const PermittedTransmissionMode_sequenceControlled = 0 satisfies PermittedTransm
  * @type {number}
  */
 export
-const sequenceControlled = PermittedTransmissionMode_sequenceControlled satisfies PermittedTransmissionMode; /* SHORT_NAMED_INTEGER_VALUE */
+const sequenceControlled = PermittedTransmissionMode_sequenceControlled; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PermittedTransmissionMode_expedited
@@ -77,7 +77,7 @@ const PermittedTransmissionMode_expedited = 1 satisfies PermittedTransmissionMod
  * @type {number}
  */
 export
-const expedited = PermittedTransmissionMode_expedited satisfies PermittedTransmissionMode; /* SHORT_NAMED_INTEGER_VALUE */
+const expedited = PermittedTransmissionMode_expedited; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PermittedTransmissionMode_any_
@@ -103,7 +103,7 @@ const PermittedTransmissionMode_any_ = 2 satisfies PermittedTransmissionMode; /*
  * @type {number}
  */
 export
-const any_ = PermittedTransmissionMode_any_ satisfies PermittedTransmissionMode; /* SHORT_NAMED_INTEGER_VALUE */
+const any_ = PermittedTransmissionMode_any_; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_PermittedTransmissionMode: $.ASN1Decoder<PermittedTransmissionMode> = $._decodeInteger;
 export const _encode_PermittedTransmissionMode: $.ASN1Encoder<PermittedTransmissionMode> = $._encodeInteger;
 

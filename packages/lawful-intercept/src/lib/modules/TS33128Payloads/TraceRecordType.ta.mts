@@ -130,7 +130,7 @@ const TraceRecordType = _enum_for_TraceRecordType;
  * @type {number}
  */
 export
-const TraceRecordType_traceStart = TraceRecordType.traceStart satisfies TraceRecordType; /* LONG_NAMED_ENUMERATED_VALUE */
+const TraceRecordType_traceStart = TraceRecordType.traceStart; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary traceStart
@@ -144,7 +144,7 @@ const TraceRecordType_traceStart = TraceRecordType.traceStart satisfies TraceRec
  * @type {number}
  */
 export
-const traceStart = TraceRecordType.traceStart satisfies TraceRecordType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const traceStart = TraceRecordType.traceStart; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TraceRecordType_cellTrafficTrace
@@ -158,7 +158,7 @@ const traceStart = TraceRecordType.traceStart satisfies TraceRecordType; /* SHOR
  * @type {number}
  */
 export
-const TraceRecordType_cellTrafficTrace = TraceRecordType.cellTrafficTrace satisfies TraceRecordType; /* LONG_NAMED_ENUMERATED_VALUE */
+const TraceRecordType_cellTrafficTrace = TraceRecordType.cellTrafficTrace; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary cellTrafficTrace
@@ -172,7 +172,7 @@ const TraceRecordType_cellTrafficTrace = TraceRecordType.cellTrafficTrace satisf
  * @type {number}
  */
 export
-const cellTrafficTrace = TraceRecordType.cellTrafficTrace satisfies TraceRecordType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const cellTrafficTrace = TraceRecordType.cellTrafficTrace; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TraceRecordType_traceDataDelivery
@@ -187,7 +187,7 @@ const cellTrafficTrace = TraceRecordType.cellTrafficTrace satisfies TraceRecordT
  * @type {number}
  */
 export
-const TraceRecordType_traceDataDelivery = TraceRecordType.traceDataDelivery satisfies TraceRecordType; /* LONG_NAMED_ENUMERATED_VALUE */
+const TraceRecordType_traceDataDelivery = TraceRecordType.traceDataDelivery; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary traceDataDelivery
@@ -202,7 +202,7 @@ const TraceRecordType_traceDataDelivery = TraceRecordType.traceDataDelivery sati
  * @type {number}
  */
 export
-const traceDataDelivery = TraceRecordType.traceDataDelivery satisfies TraceRecordType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const traceDataDelivery = TraceRecordType.traceDataDelivery; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TraceRecordType_traceDeactivation
@@ -216,7 +216,7 @@ const traceDataDelivery = TraceRecordType.traceDataDelivery satisfies TraceRecor
  * @type {number}
  */
 export
-const TraceRecordType_traceDeactivation = TraceRecordType.traceDeactivation satisfies TraceRecordType; /* LONG_NAMED_ENUMERATED_VALUE */
+const TraceRecordType_traceDeactivation = TraceRecordType.traceDeactivation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary traceDeactivation
@@ -230,7 +230,7 @@ const TraceRecordType_traceDeactivation = TraceRecordType.traceDeactivation sati
  * @type {number}
  */
 export
-const traceDeactivation = TraceRecordType.traceDeactivation satisfies TraceRecordType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const traceDeactivation = TraceRecordType.traceDeactivation; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_TraceRecordType: $.ASN1Decoder<TraceRecordType> = $._decodeEnumerated;
 export const _encode_TraceRecordType: $.ASN1Encoder<TraceRecordType> = $._encodeEnumerated;
 

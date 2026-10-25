@@ -65,7 +65,7 @@ const FDir = _enum_for_FDir;
  * @type {number}
  */
 export
-const FDir_downlink = FDir.downlink satisfies FDir; /* LONG_NAMED_ENUMERATED_VALUE */
+const FDir_downlink = FDir.downlink; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary downlink
@@ -73,7 +73,7 @@ const FDir_downlink = FDir.downlink satisfies FDir; /* LONG_NAMED_ENUMERATED_VAL
  * @type {number}
  */
 export
-const downlink = FDir.downlink satisfies FDir; /* SHORT_NAMED_ENUMERATED_VALUE */
+const downlink = FDir.downlink; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_FDir: $.ASN1Decoder<FDir> = $._decodeEnumerated;
 export const _encode_FDir: $.ASN1Encoder<FDir> = $._encodeEnumerated;
 

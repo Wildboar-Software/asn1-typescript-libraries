@@ -47,7 +47,7 @@ export const RTORQapdu_dialogueMode_monologue = 0 satisfies RTORQapdu_dialogueMo
  * @constant
  * @type {number}
  */
-export const monologue = RTORQapdu_dialogueMode_monologue satisfies RTORQapdu_dialogueMode; /* SHORT_NAMED_INTEGER_VALUE */
+export const monologue = RTORQapdu_dialogueMode_monologue; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -66,7 +66,7 @@ export const RTORQapdu_dialogueMode_twa = 1 satisfies RTORQapdu_dialogueMode; /*
  * @constant
  * @type {number}
  */
-export const twa = RTORQapdu_dialogueMode_twa satisfies RTORQapdu_dialogueMode; /* SHORT_NAMED_INTEGER_VALUE */
+export const twa = RTORQapdu_dialogueMode_twa; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 

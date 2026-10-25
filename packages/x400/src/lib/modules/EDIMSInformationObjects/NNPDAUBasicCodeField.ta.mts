@@ -46,7 +46,7 @@ export const NNPDAUBasicCodeField_unspecified = 0 satisfies NNPDAUBasicCodeField
  * @constant
  * @type {number}
  */
-export const unspecified = NNPDAUBasicCodeField_unspecified satisfies NNPDAUBasicCodeField; /* SHORT_NAMED_INTEGER_VALUE */
+export const unspecified = NNPDAUBasicCodeField_unspecified; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NNPDAUBasicCodeField_undeliverable_mail
@@ -60,7 +60,7 @@ export const NNPDAUBasicCodeField_undeliverable_mail = 1 satisfies NNPDAUBasicCo
  * @constant
  * @type {number}
  */
-export const undeliverable_mail = NNPDAUBasicCodeField_undeliverable_mail satisfies NNPDAUBasicCodeField; /* SHORT_NAMED_INTEGER_VALUE */
+export const undeliverable_mail = NNPDAUBasicCodeField_undeliverable_mail; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NNPDAUBasicCodeField_physical_rendition_not_performed
@@ -74,7 +74,7 @@ export const NNPDAUBasicCodeField_physical_rendition_not_performed = 2 satisfies
  * @constant
  * @type {number}
  */
-export const physical_rendition_not_performed = NNPDAUBasicCodeField_physical_rendition_not_performed satisfies NNPDAUBasicCodeField; /* SHORT_NAMED_INTEGER_VALUE */
+export const physical_rendition_not_performed = NNPDAUBasicCodeField_physical_rendition_not_performed; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_NNPDAUBasicCodeField = $._decodeInteger;

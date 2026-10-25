@@ -110,7 +110,7 @@ const explicitReservationCreationControl_ArgumentType_controlOption = _enum_for_
  * @type {number}
  */
 export
-const explicitReservationCreationControl_ArgumentType_controlOption_noReservationRequired = explicitReservationCreationControl_ArgumentType_controlOption.noReservationRequired satisfies explicitReservationCreationControl_ArgumentType_controlOption; /* LONG_NAMED_ENUMERATED_VALUE */
+const explicitReservationCreationControl_ArgumentType_controlOption_noReservationRequired = explicitReservationCreationControl_ArgumentType_controlOption.noReservationRequired; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary noReservationRequired
@@ -122,7 +122,7 @@ const explicitReservationCreationControl_ArgumentType_controlOption_noReservatio
  * @type {number}
  */
 export
-const noReservationRequired = explicitReservationCreationControl_ArgumentType_controlOption.noReservationRequired satisfies explicitReservationCreationControl_ArgumentType_controlOption; /* SHORT_NAMED_ENUMERATED_VALUE */
+const noReservationRequired = explicitReservationCreationControl_ArgumentType_controlOption.noReservationRequired; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary explicitReservationCreationControl_ArgumentType_controlOption_reservationRequiredWithReservationIndicator
@@ -136,7 +136,7 @@ const noReservationRequired = explicitReservationCreationControl_ArgumentType_co
  * @type {number}
  */
 export
-const explicitReservationCreationControl_ArgumentType_controlOption_reservationRequiredWithReservationIndicator = explicitReservationCreationControl_ArgumentType_controlOption.reservationRequiredWithReservationIndicator satisfies explicitReservationCreationControl_ArgumentType_controlOption; /* LONG_NAMED_ENUMERATED_VALUE */
+const explicitReservationCreationControl_ArgumentType_controlOption_reservationRequiredWithReservationIndicator = explicitReservationCreationControl_ArgumentType_controlOption.reservationRequiredWithReservationIndicator; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary reservationRequiredWithReservationIndicator
@@ -150,7 +150,7 @@ const explicitReservationCreationControl_ArgumentType_controlOption_reservationR
  * @type {number}
  */
 export
-const reservationRequiredWithReservationIndicator = explicitReservationCreationControl_ArgumentType_controlOption.reservationRequiredWithReservationIndicator satisfies explicitReservationCreationControl_ArgumentType_controlOption; /* SHORT_NAMED_ENUMERATED_VALUE */
+const reservationRequiredWithReservationIndicator = explicitReservationCreationControl_ArgumentType_controlOption.reservationRequiredWithReservationIndicator; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary explicitReservationCreationControl_ArgumentType_controlOption_reservationRequiredWithoutReservationIndicator
@@ -164,7 +164,7 @@ const reservationRequiredWithReservationIndicator = explicitReservationCreationC
  * @type {number}
  */
 export
-const explicitReservationCreationControl_ArgumentType_controlOption_reservationRequiredWithoutReservationIndicator = explicitReservationCreationControl_ArgumentType_controlOption.reservationRequiredWithoutReservationIndicator satisfies explicitReservationCreationControl_ArgumentType_controlOption; /* LONG_NAMED_ENUMERATED_VALUE */
+const explicitReservationCreationControl_ArgumentType_controlOption_reservationRequiredWithoutReservationIndicator = explicitReservationCreationControl_ArgumentType_controlOption.reservationRequiredWithoutReservationIndicator; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary reservationRequiredWithoutReservationIndicator
@@ -178,7 +178,7 @@ const explicitReservationCreationControl_ArgumentType_controlOption_reservationR
  * @type {number}
  */
 export
-const reservationRequiredWithoutReservationIndicator = explicitReservationCreationControl_ArgumentType_controlOption.reservationRequiredWithoutReservationIndicator satisfies explicitReservationCreationControl_ArgumentType_controlOption; /* SHORT_NAMED_ENUMERATED_VALUE */
+const reservationRequiredWithoutReservationIndicator = explicitReservationCreationControl_ArgumentType_controlOption.reservationRequiredWithoutReservationIndicator; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_explicitReservationCreationControl_ArgumentType_controlOption: $.ASN1Decoder<explicitReservationCreationControl_ArgumentType_controlOption> = $._decodeEnumerated;
 export const _encode_explicitReservationCreationControl_ArgumentType_controlOption: $.ASN1Encoder<explicitReservationCreationControl_ArgumentType_controlOption> = $._encodeEnumerated;
 

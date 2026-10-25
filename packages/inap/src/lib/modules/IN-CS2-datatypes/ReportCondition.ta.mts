@@ -59,7 +59,7 @@ const ReportCondition = _enum_for_ReportCondition;
  * @type {number}
  */
 export
-const ReportCondition_statusReport = ReportCondition.statusReport satisfies ReportCondition; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReportCondition_statusReport = ReportCondition.statusReport; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary statusReport
@@ -67,7 +67,7 @@ const ReportCondition_statusReport = ReportCondition.statusReport satisfies Repo
  * @type {number}
  */
 export
-const statusReport = ReportCondition.statusReport satisfies ReportCondition; /* SHORT_NAMED_ENUMERATED_VALUE */
+const statusReport = ReportCondition.statusReport; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReportCondition_timerExpired
@@ -75,7 +75,7 @@ const statusReport = ReportCondition.statusReport satisfies ReportCondition; /* 
  * @type {number}
  */
 export
-const ReportCondition_timerExpired = ReportCondition.timerExpired satisfies ReportCondition; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReportCondition_timerExpired = ReportCondition.timerExpired; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary timerExpired
@@ -83,7 +83,7 @@ const ReportCondition_timerExpired = ReportCondition.timerExpired satisfies Repo
  * @type {number}
  */
 export
-const timerExpired = ReportCondition.timerExpired satisfies ReportCondition; /* SHORT_NAMED_ENUMERATED_VALUE */
+const timerExpired = ReportCondition.timerExpired; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReportCondition_cancelled
@@ -91,7 +91,7 @@ const timerExpired = ReportCondition.timerExpired satisfies ReportCondition; /* 
  * @type {number}
  */
 export
-const ReportCondition_cancelled = ReportCondition.cancelled satisfies ReportCondition; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReportCondition_cancelled = ReportCondition.cancelled; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary cancelled
@@ -99,7 +99,7 @@ const ReportCondition_cancelled = ReportCondition.cancelled satisfies ReportCond
  * @type {number}
  */
 export
-const cancelled = ReportCondition.cancelled satisfies ReportCondition; /* SHORT_NAMED_ENUMERATED_VALUE */
+const cancelled = ReportCondition.cancelled; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 function _decode_ReportCondition(el: _Element): ReportCondition {

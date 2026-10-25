@@ -143,6 +143,6 @@ const UNNAMED_VARIABLE_accessMethod = _enum_for_UNNAMED_VARIABLE_accessMethod;
  * @type {number}
  */
 export
-const UNNAMED_VARIABLE_accessMethod_public = UNNAMED_VARIABLE_accessMethod.public satisfies UNNAMED_VARIABLE_accessMethod; /* LONG_NAMED_ENUMERATED_VALUE */
+const UNNAMED_VARIABLE_accessMethod_public = UNNAMED_VARIABLE_accessMethod.public; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /* eslint-enable */

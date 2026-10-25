@@ -37,7 +37,7 @@ const JurisdictionInformationParameterSourceIndicator_lRN_NP_Database = 1 satisf
  * @type {number}
  */
 export
-const lRN_NP_Database = JurisdictionInformationParameterSourceIndicator_lRN_NP_Database satisfies JurisdictionInformationParameterSourceIndicator; /* SHORT_NAMED_INTEGER_VALUE */
+const lRN_NP_Database = JurisdictionInformationParameterSourceIndicator_lRN_NP_Database; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary JurisdictionInformationParameterSourceIndicator_switchingSystemData
@@ -53,7 +53,7 @@ const JurisdictionInformationParameterSourceIndicator_switchingSystemData = 2 sa
  * @type {number}
  */
 export
-const switchingSystemData = JurisdictionInformationParameterSourceIndicator_switchingSystemData satisfies JurisdictionInformationParameterSourceIndicator; /* SHORT_NAMED_INTEGER_VALUE */
+const switchingSystemData = JurisdictionInformationParameterSourceIndicator_switchingSystemData; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary JurisdictionInformationParameterSourceIndicator_incomingsignaling
@@ -69,7 +69,7 @@ const JurisdictionInformationParameterSourceIndicator_incomingsignaling = 3 sati
  * @type {number}
  */
 export
-const incomingsignaling = JurisdictionInformationParameterSourceIndicator_incomingsignaling satisfies JurisdictionInformationParameterSourceIndicator; /* SHORT_NAMED_INTEGER_VALUE */
+const incomingsignaling = JurisdictionInformationParameterSourceIndicator_incomingsignaling; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary JurisdictionInformationParameterSourceIndicator_unknown
@@ -85,7 +85,7 @@ const JurisdictionInformationParameterSourceIndicator_unknown = 9 satisfies Juri
  * @type {number}
  */
 export
-const unknown = JurisdictionInformationParameterSourceIndicator_unknown satisfies JurisdictionInformationParameterSourceIndicator; /* SHORT_NAMED_INTEGER_VALUE */
+const unknown = JurisdictionInformationParameterSourceIndicator_unknown; /* SHORT_NAMED_INTEGER_VALUE */
 
 export
 const _decode_JurisdictionInformationParameterSourceIndicator: $.ASN1Decoder<JurisdictionInformationParameterSourceIndicator> = $._decodeInteger;

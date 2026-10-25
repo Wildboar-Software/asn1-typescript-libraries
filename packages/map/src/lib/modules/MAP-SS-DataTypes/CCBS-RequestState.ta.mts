@@ -102,7 +102,7 @@ const CCBS_RequestState = _enum_for_CCBS_RequestState;
  * @type {number}
  */
 export
-const CCBS_RequestState_request = CCBS_RequestState.request satisfies CCBS_RequestState; /* LONG_NAMED_ENUMERATED_VALUE */
+const CCBS_RequestState_request = CCBS_RequestState.request; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary request
@@ -114,7 +114,7 @@ const CCBS_RequestState_request = CCBS_RequestState.request satisfies CCBS_Reque
  * @type {number}
  */
 export
-const request = CCBS_RequestState.request satisfies CCBS_RequestState; /* SHORT_NAMED_ENUMERATED_VALUE */
+const request = CCBS_RequestState.request; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CCBS_RequestState_recall
@@ -126,7 +126,7 @@ const request = CCBS_RequestState.request satisfies CCBS_RequestState; /* SHORT_
  * @type {number}
  */
 export
-const CCBS_RequestState_recall = CCBS_RequestState.recall satisfies CCBS_RequestState; /* LONG_NAMED_ENUMERATED_VALUE */
+const CCBS_RequestState_recall = CCBS_RequestState.recall; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary recall
@@ -138,7 +138,7 @@ const CCBS_RequestState_recall = CCBS_RequestState.recall satisfies CCBS_Request
  * @type {number}
  */
 export
-const recall = CCBS_RequestState.recall satisfies CCBS_RequestState; /* SHORT_NAMED_ENUMERATED_VALUE */
+const recall = CCBS_RequestState.recall; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CCBS_RequestState_active
@@ -150,7 +150,7 @@ const recall = CCBS_RequestState.recall satisfies CCBS_RequestState; /* SHORT_NA
  * @type {number}
  */
 export
-const CCBS_RequestState_active = CCBS_RequestState.active satisfies CCBS_RequestState; /* LONG_NAMED_ENUMERATED_VALUE */
+const CCBS_RequestState_active = CCBS_RequestState.active; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary active
@@ -162,7 +162,7 @@ const CCBS_RequestState_active = CCBS_RequestState.active satisfies CCBS_Request
  * @type {number}
  */
 export
-const active = CCBS_RequestState.active satisfies CCBS_RequestState; /* SHORT_NAMED_ENUMERATED_VALUE */
+const active = CCBS_RequestState.active; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CCBS_RequestState_completed
@@ -174,7 +174,7 @@ const active = CCBS_RequestState.active satisfies CCBS_RequestState; /* SHORT_NA
  * @type {number}
  */
 export
-const CCBS_RequestState_completed = CCBS_RequestState.completed satisfies CCBS_RequestState; /* LONG_NAMED_ENUMERATED_VALUE */
+const CCBS_RequestState_completed = CCBS_RequestState.completed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary completed
@@ -186,7 +186,7 @@ const CCBS_RequestState_completed = CCBS_RequestState.completed satisfies CCBS_R
  * @type {number}
  */
 export
-const completed = CCBS_RequestState.completed satisfies CCBS_RequestState; /* SHORT_NAMED_ENUMERATED_VALUE */
+const completed = CCBS_RequestState.completed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CCBS_RequestState_suspended
@@ -198,7 +198,7 @@ const completed = CCBS_RequestState.completed satisfies CCBS_RequestState; /* SH
  * @type {number}
  */
 export
-const CCBS_RequestState_suspended = CCBS_RequestState.suspended satisfies CCBS_RequestState; /* LONG_NAMED_ENUMERATED_VALUE */
+const CCBS_RequestState_suspended = CCBS_RequestState.suspended; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary suspended
@@ -210,7 +210,7 @@ const CCBS_RequestState_suspended = CCBS_RequestState.suspended satisfies CCBS_R
  * @type {number}
  */
 export
-const suspended = CCBS_RequestState.suspended satisfies CCBS_RequestState; /* SHORT_NAMED_ENUMERATED_VALUE */
+const suspended = CCBS_RequestState.suspended; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CCBS_RequestState_frozen
@@ -222,7 +222,7 @@ const suspended = CCBS_RequestState.suspended satisfies CCBS_RequestState; /* SH
  * @type {number}
  */
 export
-const CCBS_RequestState_frozen = CCBS_RequestState.frozen satisfies CCBS_RequestState; /* LONG_NAMED_ENUMERATED_VALUE */
+const CCBS_RequestState_frozen = CCBS_RequestState.frozen; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary frozen
@@ -234,7 +234,7 @@ const CCBS_RequestState_frozen = CCBS_RequestState.frozen satisfies CCBS_Request
  * @type {number}
  */
 export
-const frozen = CCBS_RequestState.frozen satisfies CCBS_RequestState; /* SHORT_NAMED_ENUMERATED_VALUE */
+const frozen = CCBS_RequestState.frozen; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CCBS_RequestState_deleted
@@ -246,7 +246,7 @@ const frozen = CCBS_RequestState.frozen satisfies CCBS_RequestState; /* SHORT_NA
  * @type {number}
  */
 export
-const CCBS_RequestState_deleted = CCBS_RequestState.deleted satisfies CCBS_RequestState; /* LONG_NAMED_ENUMERATED_VALUE */
+const CCBS_RequestState_deleted = CCBS_RequestState.deleted; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary deleted
@@ -258,7 +258,7 @@ const CCBS_RequestState_deleted = CCBS_RequestState.deleted satisfies CCBS_Reque
  * @type {number}
  */
 export
-const deleted = CCBS_RequestState.deleted satisfies CCBS_RequestState; /* SHORT_NAMED_ENUMERATED_VALUE */
+const deleted = CCBS_RequestState.deleted; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) CCBS_RequestState

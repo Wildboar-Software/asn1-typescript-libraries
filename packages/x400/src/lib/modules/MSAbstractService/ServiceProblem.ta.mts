@@ -39,7 +39,7 @@ export const ServiceProblem_busy = 0 satisfies ServiceProblem; /* LONG_NAMED_INT
  * @constant
  * @type {number}
  */
-export const busy = ServiceProblem_busy satisfies ServiceProblem; /* SHORT_NAMED_INTEGER_VALUE */
+export const busy = ServiceProblem_busy; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceProblem_unavailable
@@ -53,7 +53,7 @@ export const ServiceProblem_unavailable = 1 satisfies ServiceProblem; /* LONG_NA
  * @constant
  * @type {number}
  */
-export const unavailable = ServiceProblem_unavailable satisfies ServiceProblem; /* SHORT_NAMED_INTEGER_VALUE */
+export const unavailable = ServiceProblem_unavailable; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceProblem_unwilling_to_perform
@@ -67,7 +67,7 @@ export const ServiceProblem_unwilling_to_perform = 2 satisfies ServiceProblem; /
  * @constant
  * @type {number}
  */
-export const unwilling_to_perform = ServiceProblem_unwilling_to_perform satisfies ServiceProblem; /* SHORT_NAMED_INTEGER_VALUE */
+export const unwilling_to_perform = ServiceProblem_unwilling_to_perform; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_ServiceProblem = $._decodeInteger;

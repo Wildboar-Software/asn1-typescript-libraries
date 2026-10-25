@@ -40,7 +40,7 @@ const SecondaryRATType_nR = 0 satisfies SecondaryRATType; /* LONG_NAMED_INTEGER_
  * @type {number}
  */
 export
-const nR = SecondaryRATType_nR satisfies SecondaryRATType; /* SHORT_NAMED_INTEGER_VALUE */
+const nR = SecondaryRATType_nR; /* SHORT_NAMED_INTEGER_VALUE */
 
 export
 const _decode_SecondaryRATType: $.ASN1Decoder<SecondaryRATType> = $._decodeInteger;

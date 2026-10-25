@@ -96,7 +96,7 @@ const InterServerAccessProblem = _enum_for_InterServerAccessProblem;
  * @type {number}
  */
 export
-const InterServerAccessProblem_referent_store_not_found = InterServerAccessProblem.referent_store_not_found satisfies InterServerAccessProblem; /* LONG_NAMED_ENUMERATED_VALUE */
+const InterServerAccessProblem_referent_store_not_found = InterServerAccessProblem.referent_store_not_found; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary referent_store_not_found
@@ -107,7 +107,7 @@ const InterServerAccessProblem_referent_store_not_found = InterServerAccessProbl
  * @type {number}
  */
 export
-const referent_store_not_found = InterServerAccessProblem.referent_store_not_found satisfies InterServerAccessProblem; /* SHORT_NAMED_ENUMERATED_VALUE */
+const referent_store_not_found = InterServerAccessProblem.referent_store_not_found; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary InterServerAccessProblem_referent_store_unreachable
@@ -118,7 +118,7 @@ const referent_store_not_found = InterServerAccessProblem.referent_store_not_fou
  * @type {number}
  */
 export
-const InterServerAccessProblem_referent_store_unreachable = InterServerAccessProblem.referent_store_unreachable satisfies InterServerAccessProblem; /* LONG_NAMED_ENUMERATED_VALUE */
+const InterServerAccessProblem_referent_store_unreachable = InterServerAccessProblem.referent_store_unreachable; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary referent_store_unreachable
@@ -129,7 +129,7 @@ const InterServerAccessProblem_referent_store_unreachable = InterServerAccessPro
  * @type {number}
  */
 export
-const referent_store_unreachable = InterServerAccessProblem.referent_store_unreachable satisfies InterServerAccessProblem; /* SHORT_NAMED_ENUMERATED_VALUE */
+const referent_store_unreachable = InterServerAccessProblem.referent_store_unreachable; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary InterServerAccessProblem_referent_store_unavailable
@@ -140,7 +140,7 @@ const referent_store_unreachable = InterServerAccessProblem.referent_store_unrea
  * @type {number}
  */
 export
-const InterServerAccessProblem_referent_store_unavailable = InterServerAccessProblem.referent_store_unavailable satisfies InterServerAccessProblem; /* LONG_NAMED_ENUMERATED_VALUE */
+const InterServerAccessProblem_referent_store_unavailable = InterServerAccessProblem.referent_store_unavailable; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary referent_store_unavailable
@@ -151,7 +151,7 @@ const InterServerAccessProblem_referent_store_unavailable = InterServerAccessPro
  * @type {number}
  */
 export
-const referent_store_unavailable = InterServerAccessProblem.referent_store_unavailable satisfies InterServerAccessProblem; /* SHORT_NAMED_ENUMERATED_VALUE */
+const referent_store_unavailable = InterServerAccessProblem.referent_store_unavailable; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary InterServerAccessProblem_referent_store_security_problem
@@ -162,7 +162,7 @@ const referent_store_unavailable = InterServerAccessProblem.referent_store_unava
  * @type {number}
  */
 export
-const InterServerAccessProblem_referent_store_security_problem = InterServerAccessProblem.referent_store_security_problem satisfies InterServerAccessProblem; /* LONG_NAMED_ENUMERATED_VALUE */
+const InterServerAccessProblem_referent_store_security_problem = InterServerAccessProblem.referent_store_security_problem; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary referent_store_security_problem
@@ -173,7 +173,7 @@ const InterServerAccessProblem_referent_store_security_problem = InterServerAcce
  * @type {number}
  */
 export
-const referent_store_security_problem = InterServerAccessProblem.referent_store_security_problem satisfies InterServerAccessProblem; /* SHORT_NAMED_ENUMERATED_VALUE */
+const referent_store_security_problem = InterServerAccessProblem.referent_store_security_problem; /* SHORT_NAMED_ENUMERATED_VALUE */
 export function _decode_InterServerAccessProblem(el: _Element): InterServerAccessProblem {
     const enumerated = $._decodeEnumerated(el);
     switch (enumerated) {

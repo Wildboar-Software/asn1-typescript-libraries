@@ -52,7 +52,7 @@ const PromptId_enummeratedPrompt_type_groupId = 0 satisfies PromptId_enummerated
  * @type {number}
  */
 export
-const groupId = PromptId_enummeratedPrompt_type_groupId satisfies PromptId_enummeratedPrompt_type; /* SHORT_NAMED_INTEGER_VALUE */
+const groupId = PromptId_enummeratedPrompt_type_groupId; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PromptId_enummeratedPrompt_type_userId
@@ -76,7 +76,7 @@ const PromptId_enummeratedPrompt_type_userId = 1 satisfies PromptId_enummeratedP
  * @type {number}
  */
 export
-const userId = PromptId_enummeratedPrompt_type_userId satisfies PromptId_enummeratedPrompt_type; /* SHORT_NAMED_INTEGER_VALUE */
+const userId = PromptId_enummeratedPrompt_type_userId; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PromptId_enummeratedPrompt_type_password
@@ -100,7 +100,7 @@ const PromptId_enummeratedPrompt_type_password = 2 satisfies PromptId_enummerate
  * @type {number}
  */
 export
-const password = PromptId_enummeratedPrompt_type_password satisfies PromptId_enummeratedPrompt_type; /* SHORT_NAMED_INTEGER_VALUE */
+const password = PromptId_enummeratedPrompt_type_password; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PromptId_enummeratedPrompt_type_newPassword
@@ -126,7 +126,7 @@ const PromptId_enummeratedPrompt_type_newPassword = 3 satisfies PromptId_enummer
  * @type {number}
  */
 export
-const newPassword = PromptId_enummeratedPrompt_type_newPassword satisfies PromptId_enummeratedPrompt_type; /* SHORT_NAMED_INTEGER_VALUE */
+const newPassword = PromptId_enummeratedPrompt_type_newPassword; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PromptId_enummeratedPrompt_type_copyright
@@ -152,7 +152,7 @@ const PromptId_enummeratedPrompt_type_copyright = 4 satisfies PromptId_enummerat
  * @type {number}
  */
 export
-const copyright = PromptId_enummeratedPrompt_type_copyright satisfies PromptId_enummeratedPrompt_type; /* SHORT_NAMED_INTEGER_VALUE */
+const copyright = PromptId_enummeratedPrompt_type_copyright; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PromptId_enummeratedPrompt_type_sessionId
@@ -178,7 +178,7 @@ const PromptId_enummeratedPrompt_type_sessionId = 5 satisfies PromptId_enummerat
  * @type {number}
  */
 export
-const sessionId = PromptId_enummeratedPrompt_type_sessionId satisfies PromptId_enummeratedPrompt_type; /* SHORT_NAMED_INTEGER_VALUE */
+const sessionId = PromptId_enummeratedPrompt_type_sessionId; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_PromptId_enummeratedPrompt_type: $.ASN1Decoder<PromptId_enummeratedPrompt_type> = $._decodeInteger;
 export const _encode_PromptId_enummeratedPrompt_type: $.ASN1Encoder<PromptId_enummeratedPrompt_type> = $._encodeInteger;
 

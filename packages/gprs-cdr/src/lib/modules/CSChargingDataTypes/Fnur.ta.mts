@@ -103,7 +103,7 @@ const Fnur = _enum_for_Fnur;
  * @type {number}
  */
 export
-const Fnur_fnurNotApplicable = Fnur.fnurNotApplicable satisfies Fnur; /* LONG_NAMED_ENUMERATED_VALUE */
+const Fnur_fnurNotApplicable = Fnur.fnurNotApplicable; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary fnurNotApplicable
@@ -111,7 +111,7 @@ const Fnur_fnurNotApplicable = Fnur.fnurNotApplicable satisfies Fnur; /* LONG_NA
  * @type {number}
  */
 export
-const fnurNotApplicable = Fnur.fnurNotApplicable satisfies Fnur; /* SHORT_NAMED_ENUMERATED_VALUE */
+const fnurNotApplicable = Fnur.fnurNotApplicable; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Fnur_fnur9600_BitsPerSecond
@@ -119,7 +119,7 @@ const fnurNotApplicable = Fnur.fnurNotApplicable satisfies Fnur; /* SHORT_NAMED_
  * @type {number}
  */
 export
-const Fnur_fnur9600_BitsPerSecond = Fnur.fnur9600_BitsPerSecond satisfies Fnur; /* LONG_NAMED_ENUMERATED_VALUE */
+const Fnur_fnur9600_BitsPerSecond = Fnur.fnur9600_BitsPerSecond; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary fnur9600_BitsPerSecond
@@ -127,7 +127,7 @@ const Fnur_fnur9600_BitsPerSecond = Fnur.fnur9600_BitsPerSecond satisfies Fnur; 
  * @type {number}
  */
 export
-const fnur9600_BitsPerSecond = Fnur.fnur9600_BitsPerSecond satisfies Fnur; /* SHORT_NAMED_ENUMERATED_VALUE */
+const fnur9600_BitsPerSecond = Fnur.fnur9600_BitsPerSecond; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Fnur_fnur14400BitsPerSecond
@@ -135,7 +135,7 @@ const fnur9600_BitsPerSecond = Fnur.fnur9600_BitsPerSecond satisfies Fnur; /* SH
  * @type {number}
  */
 export
-const Fnur_fnur14400BitsPerSecond = Fnur.fnur14400BitsPerSecond satisfies Fnur; /* LONG_NAMED_ENUMERATED_VALUE */
+const Fnur_fnur14400BitsPerSecond = Fnur.fnur14400BitsPerSecond; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary fnur14400BitsPerSecond
@@ -143,7 +143,7 @@ const Fnur_fnur14400BitsPerSecond = Fnur.fnur14400BitsPerSecond satisfies Fnur; 
  * @type {number}
  */
 export
-const fnur14400BitsPerSecond = Fnur.fnur14400BitsPerSecond satisfies Fnur; /* SHORT_NAMED_ENUMERATED_VALUE */
+const fnur14400BitsPerSecond = Fnur.fnur14400BitsPerSecond; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Fnur_fnur19200BitsPerSecond
@@ -151,7 +151,7 @@ const fnur14400BitsPerSecond = Fnur.fnur14400BitsPerSecond satisfies Fnur; /* SH
  * @type {number}
  */
 export
-const Fnur_fnur19200BitsPerSecond = Fnur.fnur19200BitsPerSecond satisfies Fnur; /* LONG_NAMED_ENUMERATED_VALUE */
+const Fnur_fnur19200BitsPerSecond = Fnur.fnur19200BitsPerSecond; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary fnur19200BitsPerSecond
@@ -159,7 +159,7 @@ const Fnur_fnur19200BitsPerSecond = Fnur.fnur19200BitsPerSecond satisfies Fnur; 
  * @type {number}
  */
 export
-const fnur19200BitsPerSecond = Fnur.fnur19200BitsPerSecond satisfies Fnur; /* SHORT_NAMED_ENUMERATED_VALUE */
+const fnur19200BitsPerSecond = Fnur.fnur19200BitsPerSecond; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Fnur_fnur28800BitsPerSecond
@@ -167,7 +167,7 @@ const fnur19200BitsPerSecond = Fnur.fnur19200BitsPerSecond satisfies Fnur; /* SH
  * @type {number}
  */
 export
-const Fnur_fnur28800BitsPerSecond = Fnur.fnur28800BitsPerSecond satisfies Fnur; /* LONG_NAMED_ENUMERATED_VALUE */
+const Fnur_fnur28800BitsPerSecond = Fnur.fnur28800BitsPerSecond; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary fnur28800BitsPerSecond
@@ -175,7 +175,7 @@ const Fnur_fnur28800BitsPerSecond = Fnur.fnur28800BitsPerSecond satisfies Fnur; 
  * @type {number}
  */
 export
-const fnur28800BitsPerSecond = Fnur.fnur28800BitsPerSecond satisfies Fnur; /* SHORT_NAMED_ENUMERATED_VALUE */
+const fnur28800BitsPerSecond = Fnur.fnur28800BitsPerSecond; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Fnur_fnur38400BitsPerSecond
@@ -183,7 +183,7 @@ const fnur28800BitsPerSecond = Fnur.fnur28800BitsPerSecond satisfies Fnur; /* SH
  * @type {number}
  */
 export
-const Fnur_fnur38400BitsPerSecond = Fnur.fnur38400BitsPerSecond satisfies Fnur; /* LONG_NAMED_ENUMERATED_VALUE */
+const Fnur_fnur38400BitsPerSecond = Fnur.fnur38400BitsPerSecond; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary fnur38400BitsPerSecond
@@ -191,7 +191,7 @@ const Fnur_fnur38400BitsPerSecond = Fnur.fnur38400BitsPerSecond satisfies Fnur; 
  * @type {number}
  */
 export
-const fnur38400BitsPerSecond = Fnur.fnur38400BitsPerSecond satisfies Fnur; /* SHORT_NAMED_ENUMERATED_VALUE */
+const fnur38400BitsPerSecond = Fnur.fnur38400BitsPerSecond; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Fnur_fnur48000BitsPerSecond
@@ -199,7 +199,7 @@ const fnur38400BitsPerSecond = Fnur.fnur38400BitsPerSecond satisfies Fnur; /* SH
  * @type {number}
  */
 export
-const Fnur_fnur48000BitsPerSecond = Fnur.fnur48000BitsPerSecond satisfies Fnur; /* LONG_NAMED_ENUMERATED_VALUE */
+const Fnur_fnur48000BitsPerSecond = Fnur.fnur48000BitsPerSecond; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary fnur48000BitsPerSecond
@@ -207,7 +207,7 @@ const Fnur_fnur48000BitsPerSecond = Fnur.fnur48000BitsPerSecond satisfies Fnur; 
  * @type {number}
  */
 export
-const fnur48000BitsPerSecond = Fnur.fnur48000BitsPerSecond satisfies Fnur; /* SHORT_NAMED_ENUMERATED_VALUE */
+const fnur48000BitsPerSecond = Fnur.fnur48000BitsPerSecond; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Fnur_fnur56000BitsPerSecond
@@ -215,7 +215,7 @@ const fnur48000BitsPerSecond = Fnur.fnur48000BitsPerSecond satisfies Fnur; /* SH
  * @type {number}
  */
 export
-const Fnur_fnur56000BitsPerSecond = Fnur.fnur56000BitsPerSecond satisfies Fnur; /* LONG_NAMED_ENUMERATED_VALUE */
+const Fnur_fnur56000BitsPerSecond = Fnur.fnur56000BitsPerSecond; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary fnur56000BitsPerSecond
@@ -223,7 +223,7 @@ const Fnur_fnur56000BitsPerSecond = Fnur.fnur56000BitsPerSecond satisfies Fnur; 
  * @type {number}
  */
 export
-const fnur56000BitsPerSecond = Fnur.fnur56000BitsPerSecond satisfies Fnur; /* SHORT_NAMED_ENUMERATED_VALUE */
+const fnur56000BitsPerSecond = Fnur.fnur56000BitsPerSecond; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Fnur_fnur64000BitsPerSecond
@@ -231,7 +231,7 @@ const fnur56000BitsPerSecond = Fnur.fnur56000BitsPerSecond satisfies Fnur; /* SH
  * @type {number}
  */
 export
-const Fnur_fnur64000BitsPerSecond = Fnur.fnur64000BitsPerSecond satisfies Fnur; /* LONG_NAMED_ENUMERATED_VALUE */
+const Fnur_fnur64000BitsPerSecond = Fnur.fnur64000BitsPerSecond; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary fnur64000BitsPerSecond
@@ -239,7 +239,7 @@ const Fnur_fnur64000BitsPerSecond = Fnur.fnur64000BitsPerSecond satisfies Fnur; 
  * @type {number}
  */
 export
-const fnur64000BitsPerSecond = Fnur.fnur64000BitsPerSecond satisfies Fnur; /* SHORT_NAMED_ENUMERATED_VALUE */
+const fnur64000BitsPerSecond = Fnur.fnur64000BitsPerSecond; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Fnur_fnur33600BitsPerSecond
@@ -247,7 +247,7 @@ const fnur64000BitsPerSecond = Fnur.fnur64000BitsPerSecond satisfies Fnur; /* SH
  * @type {number}
  */
 export
-const Fnur_fnur33600BitsPerSecond = Fnur.fnur33600BitsPerSecond satisfies Fnur; /* LONG_NAMED_ENUMERATED_VALUE */
+const Fnur_fnur33600BitsPerSecond = Fnur.fnur33600BitsPerSecond; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary fnur33600BitsPerSecond
@@ -255,7 +255,7 @@ const Fnur_fnur33600BitsPerSecond = Fnur.fnur33600BitsPerSecond satisfies Fnur; 
  * @type {number}
  */
 export
-const fnur33600BitsPerSecond = Fnur.fnur33600BitsPerSecond satisfies Fnur; /* SHORT_NAMED_ENUMERATED_VALUE */
+const fnur33600BitsPerSecond = Fnur.fnur33600BitsPerSecond; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Fnur_fnur32000BitsPerSecond
@@ -263,7 +263,7 @@ const fnur33600BitsPerSecond = Fnur.fnur33600BitsPerSecond satisfies Fnur; /* SH
  * @type {number}
  */
 export
-const Fnur_fnur32000BitsPerSecond = Fnur.fnur32000BitsPerSecond satisfies Fnur; /* LONG_NAMED_ENUMERATED_VALUE */
+const Fnur_fnur32000BitsPerSecond = Fnur.fnur32000BitsPerSecond; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary fnur32000BitsPerSecond
@@ -271,7 +271,7 @@ const Fnur_fnur32000BitsPerSecond = Fnur.fnur32000BitsPerSecond satisfies Fnur; 
  * @type {number}
  */
 export
-const fnur32000BitsPerSecond = Fnur.fnur32000BitsPerSecond satisfies Fnur; /* SHORT_NAMED_ENUMERATED_VALUE */
+const fnur32000BitsPerSecond = Fnur.fnur32000BitsPerSecond; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Fnur_fnur31200BitsPerSecond
@@ -279,7 +279,7 @@ const fnur32000BitsPerSecond = Fnur.fnur32000BitsPerSecond satisfies Fnur; /* SH
  * @type {number}
  */
 export
-const Fnur_fnur31200BitsPerSecond = Fnur.fnur31200BitsPerSecond satisfies Fnur; /* LONG_NAMED_ENUMERATED_VALUE */
+const Fnur_fnur31200BitsPerSecond = Fnur.fnur31200BitsPerSecond; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary fnur31200BitsPerSecond
@@ -287,7 +287,7 @@ const Fnur_fnur31200BitsPerSecond = Fnur.fnur31200BitsPerSecond satisfies Fnur; 
  * @type {number}
  */
 export
-const fnur31200BitsPerSecond = Fnur.fnur31200BitsPerSecond satisfies Fnur; /* SHORT_NAMED_ENUMERATED_VALUE */
+const fnur31200BitsPerSecond = Fnur.fnur31200BitsPerSecond; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_Fnur: $.ASN1Decoder<Fnur> = $._decodeEnumerated;

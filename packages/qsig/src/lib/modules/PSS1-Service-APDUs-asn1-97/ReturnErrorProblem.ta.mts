@@ -48,7 +48,7 @@ const ReturnErrorProblem_unrecognisedInvocation = 0 satisfies ReturnErrorProblem
  * @type {number}
  */
 export
-const unrecognisedInvocation = ReturnErrorProblem_unrecognisedInvocation satisfies ReturnErrorProblem; /* SHORT_NAMED_INTEGER_VALUE */
+const unrecognisedInvocation = ReturnErrorProblem_unrecognisedInvocation; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ReturnErrorProblem_errorResponseUnexpected
@@ -69,7 +69,7 @@ const ReturnErrorProblem_errorResponseUnexpected = 1 satisfies ReturnErrorProble
  * @type {number}
  */
 export
-const errorResponseUnexpected = ReturnErrorProblem_errorResponseUnexpected satisfies ReturnErrorProblem; /* SHORT_NAMED_INTEGER_VALUE */
+const errorResponseUnexpected = ReturnErrorProblem_errorResponseUnexpected; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ReturnErrorProblem_unrecognisedError
@@ -91,7 +91,7 @@ const ReturnErrorProblem_unrecognisedError = 2 satisfies ReturnErrorProblem; /* 
  * @type {number}
  */
 export
-const unrecognisedError = ReturnErrorProblem_unrecognisedError satisfies ReturnErrorProblem; /* SHORT_NAMED_INTEGER_VALUE */
+const unrecognisedError = ReturnErrorProblem_unrecognisedError; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ReturnErrorProblem_unexpectedError
@@ -113,7 +113,7 @@ const ReturnErrorProblem_unexpectedError = 3 satisfies ReturnErrorProblem; /* LO
  * @type {number}
  */
 export
-const unexpectedError = ReturnErrorProblem_unexpectedError satisfies ReturnErrorProblem; /* SHORT_NAMED_INTEGER_VALUE */
+const unexpectedError = ReturnErrorProblem_unexpectedError; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ReturnErrorProblem_mistypedParameter
@@ -135,7 +135,7 @@ const ReturnErrorProblem_mistypedParameter = 4 satisfies ReturnErrorProblem; /* 
  * @type {number}
  */
 export
-const mistypedParameter = ReturnErrorProblem_mistypedParameter satisfies ReturnErrorProblem; /* SHORT_NAMED_INTEGER_VALUE */
+const mistypedParameter = ReturnErrorProblem_mistypedParameter; /* SHORT_NAMED_INTEGER_VALUE */
 
 export
 const _decode_ReturnErrorProblem: $.ASN1Decoder<ReturnErrorProblem> = $._decodeInteger;

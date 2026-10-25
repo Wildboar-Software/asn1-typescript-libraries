@@ -59,7 +59,7 @@ const ReportSemaphoreEntryStatus_Request_state_queued = 0 satisfies ReportSemaph
  * @type {number}
  */
 export
-const queued = ReportSemaphoreEntryStatus_Request_state_queued satisfies ReportSemaphoreEntryStatus_Request_state; /* SHORT_NAMED_INTEGER_VALUE */
+const queued = ReportSemaphoreEntryStatus_Request_state_queued; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ReportSemaphoreEntryStatus_Request_state_owner
@@ -85,7 +85,7 @@ const ReportSemaphoreEntryStatus_Request_state_owner = 1 satisfies ReportSemapho
  * @type {number}
  */
 export
-const owner = ReportSemaphoreEntryStatus_Request_state_owner satisfies ReportSemaphoreEntryStatus_Request_state; /* SHORT_NAMED_INTEGER_VALUE */
+const owner = ReportSemaphoreEntryStatus_Request_state_owner; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ReportSemaphoreEntryStatus_Request_state_hung
@@ -113,7 +113,7 @@ const ReportSemaphoreEntryStatus_Request_state_hung = 2 satisfies ReportSemaphor
  * @type {number}
  */
 export
-const hung = ReportSemaphoreEntryStatus_Request_state_hung satisfies ReportSemaphoreEntryStatus_Request_state; /* SHORT_NAMED_INTEGER_VALUE */
+const hung = ReportSemaphoreEntryStatus_Request_state_hung; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_ReportSemaphoreEntryStatus_Request_state = $._decodeInteger;
 export const _encode_ReportSemaphoreEntryStatus_Request_state = $._encodeInteger;
 

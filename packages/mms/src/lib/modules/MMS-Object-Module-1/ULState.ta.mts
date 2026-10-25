@@ -62,7 +62,7 @@ const ULState_non_existent = 0 satisfies ULState; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const non_existent = ULState_non_existent satisfies ULState; /* SHORT_NAMED_INTEGER_VALUE */
+const non_existent = ULState_non_existent; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ULState_uploading
@@ -86,7 +86,7 @@ const ULState_uploading = 1 satisfies ULState; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const uploading = ULState_uploading satisfies ULState; /* SHORT_NAMED_INTEGER_VALUE */
+const uploading = ULState_uploading; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ULState_uploaded
@@ -110,7 +110,7 @@ const ULState_uploaded = 2 satisfies ULState; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const uploaded = ULState_uploaded satisfies ULState; /* SHORT_NAMED_INTEGER_VALUE */
+const uploaded = ULState_uploaded; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ULState_u1
@@ -134,7 +134,7 @@ const ULState_u1 = 3 satisfies ULState; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const u1 = ULState_u1 satisfies ULState; /* SHORT_NAMED_INTEGER_VALUE */
+const u1 = ULState_u1; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ULState_u2
@@ -158,7 +158,7 @@ const ULState_u2 = 4 satisfies ULState; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const u2 = ULState_u2 satisfies ULState; /* SHORT_NAMED_INTEGER_VALUE */
+const u2 = ULState_u2; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ULState_u3
@@ -182,7 +182,7 @@ const ULState_u3 = 5 satisfies ULState; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const u3 = ULState_u3 satisfies ULState; /* SHORT_NAMED_INTEGER_VALUE */
+const u3 = ULState_u3; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ULState_u4
@@ -206,7 +206,7 @@ const ULState_u4 = 6 satisfies ULState; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const u4 = ULState_u4 satisfies ULState; /* SHORT_NAMED_INTEGER_VALUE */
+const u4 = ULState_u4; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_ULState = $._decodeInteger;
 export const _encode_ULState = $._encodeInteger;
 

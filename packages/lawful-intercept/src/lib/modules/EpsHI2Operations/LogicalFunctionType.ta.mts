@@ -52,7 +52,7 @@ type LogicalFunctionType = _enum_for_LogicalFunctionType | ENUMERATED;
  * @type {number}
  */
 export
-const LogicalFunctionType_pDNGW = _enum_for_LogicalFunctionType.pDNGW satisfies LogicalFunctionType; /* LONG_NAMED_ENUMERATED_VALUE */
+const LogicalFunctionType_pDNGW = _enum_for_LogicalFunctionType.pDNGW; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pDNGW
@@ -64,7 +64,7 @@ const LogicalFunctionType_pDNGW = _enum_for_LogicalFunctionType.pDNGW satisfies 
  * @type {number}
  */
 export
-const pDNGW = LogicalFunctionType_pDNGW satisfies LogicalFunctionType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pDNGW = LogicalFunctionType_pDNGW; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LogicalFunctionType_mME
@@ -76,7 +76,7 @@ const pDNGW = LogicalFunctionType_pDNGW satisfies LogicalFunctionType; /* SHORT_
  * @type {number}
  */
 export
-const LogicalFunctionType_mME = _enum_for_LogicalFunctionType.mME satisfies LogicalFunctionType; /* LONG_NAMED_ENUMERATED_VALUE */
+const LogicalFunctionType_mME = _enum_for_LogicalFunctionType.mME; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary mME
@@ -88,7 +88,7 @@ const LogicalFunctionType_mME = _enum_for_LogicalFunctionType.mME satisfies Logi
  * @type {number}
  */
 export
-const mME = LogicalFunctionType_mME satisfies LogicalFunctionType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const mME = LogicalFunctionType_mME; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LogicalFunctionType_sGW
@@ -100,7 +100,7 @@ const mME = LogicalFunctionType_mME satisfies LogicalFunctionType; /* SHORT_NAME
  * @type {number}
  */
 export
-const LogicalFunctionType_sGW = _enum_for_LogicalFunctionType.sGW satisfies LogicalFunctionType; /* LONG_NAMED_ENUMERATED_VALUE */
+const LogicalFunctionType_sGW = _enum_for_LogicalFunctionType.sGW; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sGW
@@ -112,7 +112,7 @@ const LogicalFunctionType_sGW = _enum_for_LogicalFunctionType.sGW satisfies Logi
  * @type {number}
  */
 export
-const sGW = LogicalFunctionType_sGW satisfies LogicalFunctionType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sGW = LogicalFunctionType_sGW; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LogicalFunctionType_ePDG
@@ -126,7 +126,7 @@ const sGW = LogicalFunctionType_sGW satisfies LogicalFunctionType; /* SHORT_NAME
  * @type {number}
  */
 export
-const LogicalFunctionType_ePDG = _enum_for_LogicalFunctionType.ePDG satisfies LogicalFunctionType; /* LONG_NAMED_ENUMERATED_VALUE */
+const LogicalFunctionType_ePDG = _enum_for_LogicalFunctionType.ePDG; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ePDG
@@ -138,7 +138,7 @@ const LogicalFunctionType_ePDG = _enum_for_LogicalFunctionType.ePDG satisfies Lo
  * @type {number}
  */
 export
-const ePDG = LogicalFunctionType_ePDG satisfies LogicalFunctionType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const ePDG = LogicalFunctionType_ePDG; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LogicalFunctionType_hSS
@@ -150,7 +150,7 @@ const ePDG = LogicalFunctionType_ePDG satisfies LogicalFunctionType; /* SHORT_NA
  * @type {number}
  */
 export
-const LogicalFunctionType_hSS = _enum_for_LogicalFunctionType.hSS satisfies LogicalFunctionType; /* LONG_NAMED_ENUMERATED_VALUE */
+const LogicalFunctionType_hSS = _enum_for_LogicalFunctionType.hSS; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary hSS
@@ -162,7 +162,7 @@ const LogicalFunctionType_hSS = _enum_for_LogicalFunctionType.hSS satisfies Logi
  * @type {number}
  */
 export
-const hSS = LogicalFunctionType_hSS satisfies LogicalFunctionType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const hSS = LogicalFunctionType_hSS; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_LogicalFunctionType: $.ASN1Decoder<LogicalFunctionType> = $._decodeEnumerated;
 export const _encode_LogicalFunctionType: $.ASN1Encoder<LogicalFunctionType> = $._encodeEnumerated;
 

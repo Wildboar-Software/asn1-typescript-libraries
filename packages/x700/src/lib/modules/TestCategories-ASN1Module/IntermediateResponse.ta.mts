@@ -98,7 +98,7 @@ export const IntermediateResponse = _enum_for_IntermediateResponse;
  * @type {number}
  */
 export const IntermediateResponse_inProgress =
-    IntermediateResponse.inProgress satisfies IntermediateResponse; /* LONG_NAMED_ENUMERATED_VALUE */
+    IntermediateResponse.inProgress; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary inProgress
@@ -109,7 +109,7 @@ export const IntermediateResponse_inProgress =
  * @type {number}
  */
 export const inProgress =
-    IntermediateResponse.inProgress satisfies IntermediateResponse; /* SHORT_NAMED_ENUMERATED_VALUE */
+    IntermediateResponse.inProgress; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary IntermediateResponse_delayedMeasurement
@@ -120,7 +120,7 @@ export const inProgress =
  * @type {number}
  */
 export const IntermediateResponse_delayedMeasurement =
-    IntermediateResponse.delayedMeasurement satisfies IntermediateResponse; /* LONG_NAMED_ENUMERATED_VALUE */
+    IntermediateResponse.delayedMeasurement; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary delayedMeasurement
@@ -131,7 +131,7 @@ export const IntermediateResponse_delayedMeasurement =
  * @type {number}
  */
 export const delayedMeasurement =
-    IntermediateResponse.delayedMeasurement satisfies IntermediateResponse; /* SHORT_NAMED_ENUMERATED_VALUE */
+    IntermediateResponse.delayedMeasurement; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary IntermediateResponse_interruptedMeasurement
@@ -142,7 +142,7 @@ export const delayedMeasurement =
  * @type {number}
  */
 export const IntermediateResponse_interruptedMeasurement =
-    IntermediateResponse.interruptedMeasurement satisfies IntermediateResponse; /* LONG_NAMED_ENUMERATED_VALUE */
+    IntermediateResponse.interruptedMeasurement; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary interruptedMeasurement
@@ -153,7 +153,7 @@ export const IntermediateResponse_interruptedMeasurement =
  * @type {number}
  */
 export const interruptedMeasurement =
-    IntermediateResponse.interruptedMeasurement satisfies IntermediateResponse; /* SHORT_NAMED_ENUMERATED_VALUE */
+    IntermediateResponse.interruptedMeasurement; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary IntermediateResponse_repeatLater
@@ -164,7 +164,7 @@ export const interruptedMeasurement =
  * @type {number}
  */
 export const IntermediateResponse_repeatLater =
-    IntermediateResponse.repeatLater satisfies IntermediateResponse; /* LONG_NAMED_ENUMERATED_VALUE */
+    IntermediateResponse.repeatLater; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary repeatLater
@@ -175,7 +175,7 @@ export const IntermediateResponse_repeatLater =
  * @type {number}
  */
 export const repeatLater =
-    IntermediateResponse.repeatLater satisfies IntermediateResponse; /* SHORT_NAMED_ENUMERATED_VALUE */
+    IntermediateResponse.repeatLater; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary IntermediateResponse_noAcknowledgement
@@ -186,7 +186,7 @@ export const repeatLater =
  * @type {number}
  */
 export const IntermediateResponse_noAcknowledgement =
-    IntermediateResponse.noAcknowledgement satisfies IntermediateResponse; /* LONG_NAMED_ENUMERATED_VALUE */
+    IntermediateResponse.noAcknowledgement; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary noAcknowledgement
@@ -197,7 +197,7 @@ export const IntermediateResponse_noAcknowledgement =
  * @type {number}
  */
 export const noAcknowledgement =
-    IntermediateResponse.noAcknowledgement satisfies IntermediateResponse; /* SHORT_NAMED_ENUMERATED_VALUE */
+    IntermediateResponse.noAcknowledgement; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 export function _decode_IntermediateResponse(el: _Element): IntermediateResponse {

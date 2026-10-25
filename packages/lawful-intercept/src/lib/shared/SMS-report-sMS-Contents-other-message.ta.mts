@@ -93,7 +93,7 @@ type SMS_report_sMS_Contents_other_message = _enum_for_SMS_report_sMS_Contents_o
  * @type {number}
  */
 export
-const SMS_report_sMS_Contents_other_message_yes = _enum_for_SMS_report_sMS_Contents_other_message.yes satisfies SMS_report_sMS_Contents_other_message; /* LONG_NAMED_ENUMERATED_VALUE */
+const SMS_report_sMS_Contents_other_message_yes = _enum_for_SMS_report_sMS_Contents_other_message.yes; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary yes
@@ -109,7 +109,7 @@ const SMS_report_sMS_Contents_other_message_yes = _enum_for_SMS_report_sMS_Conte
  * @type {number}
  */
 export
-const yes = SMS_report_sMS_Contents_other_message_yes satisfies SMS_report_sMS_Contents_other_message; /* SHORT_NAMED_ENUMERATED_VALUE */
+const yes = SMS_report_sMS_Contents_other_message_yes; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SMS_report_sMS_Contents_other_message_no
@@ -125,7 +125,7 @@ const yes = SMS_report_sMS_Contents_other_message_yes satisfies SMS_report_sMS_C
  * @type {number}
  */
 export
-const SMS_report_sMS_Contents_other_message_no = _enum_for_SMS_report_sMS_Contents_other_message.no satisfies SMS_report_sMS_Contents_other_message; /* LONG_NAMED_ENUMERATED_VALUE */
+const SMS_report_sMS_Contents_other_message_no = _enum_for_SMS_report_sMS_Contents_other_message.no; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary no
@@ -141,7 +141,7 @@ const SMS_report_sMS_Contents_other_message_no = _enum_for_SMS_report_sMS_Conten
  * @type {number}
  */
 export
-const no = SMS_report_sMS_Contents_other_message_no satisfies SMS_report_sMS_Contents_other_message; /* SHORT_NAMED_ENUMERATED_VALUE */
+const no = SMS_report_sMS_Contents_other_message_no; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SMS_report_sMS_Contents_other_message_undefined
@@ -158,7 +158,7 @@ const no = SMS_report_sMS_Contents_other_message_no satisfies SMS_report_sMS_Con
  * @type {number}
  */
 export
-const SMS_report_sMS_Contents_other_message_undefined = _enum_for_SMS_report_sMS_Contents_other_message.undefined satisfies SMS_report_sMS_Contents_other_message; /* LONG_NAMED_ENUMERATED_VALUE */
+const SMS_report_sMS_Contents_other_message_undefined = _enum_for_SMS_report_sMS_Contents_other_message.undefined; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary undefined
@@ -175,7 +175,7 @@ const SMS_report_sMS_Contents_other_message_undefined = _enum_for_SMS_report_sMS
  * @type {number}
  */
 export
-const undefined = SMS_report_sMS_Contents_other_message_undefined satisfies SMS_report_sMS_Contents_other_message; /* SHORT_NAMED_ENUMERATED_VALUE */
+const undefined = SMS_report_sMS_Contents_other_message_undefined; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_SMS_report_sMS_Contents_other_message: $.ASN1Decoder<SMS_report_sMS_Contents_other_message> = $._decodeEnumerated;
 export const _encode_SMS_report_sMS_Contents_other_message: $.ASN1Encoder<SMS_report_sMS_Contents_other_message> = $._encodeEnumerated;
 

@@ -98,7 +98,7 @@ type AccessEventType = _enum_for_AccessEventType | ENUMERATED;
  * @type {number}
  */
 export
-const AccessEventType_accessAttempt = _enum_for_AccessEventType.accessAttempt satisfies AccessEventType; /* LONG_NAMED_ENUMERATED_VALUE */
+const AccessEventType_accessAttempt = _enum_for_AccessEventType.accessAttempt; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary accessAttempt
@@ -110,7 +110,7 @@ const AccessEventType_accessAttempt = _enum_for_AccessEventType.accessAttempt sa
  * @type {number}
  */
 export
-const accessAttempt = AccessEventType_accessAttempt satisfies AccessEventType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const accessAttempt = AccessEventType_accessAttempt; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AccessEventType_accessAccept
@@ -133,7 +133,7 @@ const accessAttempt = AccessEventType_accessAttempt satisfies AccessEventType; /
  * @type {number}
  */
 export
-const AccessEventType_accessAccept = _enum_for_AccessEventType.accessAccept satisfies AccessEventType; /* LONG_NAMED_ENUMERATED_VALUE */
+const AccessEventType_accessAccept = _enum_for_AccessEventType.accessAccept; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary accessAccept
@@ -145,7 +145,7 @@ const AccessEventType_accessAccept = _enum_for_AccessEventType.accessAccept sati
  * @type {number}
  */
 export
-const accessAccept = AccessEventType_accessAccept satisfies AccessEventType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const accessAccept = AccessEventType_accessAccept; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AccessEventType_accessReject
@@ -166,7 +166,7 @@ const accessAccept = AccessEventType_accessAccept satisfies AccessEventType; /* 
  * @type {number}
  */
 export
-const AccessEventType_accessReject = _enum_for_AccessEventType.accessReject satisfies AccessEventType; /* LONG_NAMED_ENUMERATED_VALUE */
+const AccessEventType_accessReject = _enum_for_AccessEventType.accessReject; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary accessReject
@@ -178,7 +178,7 @@ const AccessEventType_accessReject = _enum_for_AccessEventType.accessReject sati
  * @type {number}
  */
 export
-const accessReject = AccessEventType_accessReject satisfies AccessEventType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const accessReject = AccessEventType_accessReject; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AccessEventType_accessFailed
@@ -198,7 +198,7 @@ const accessReject = AccessEventType_accessReject satisfies AccessEventType; /* 
  * @type {number}
  */
 export
-const AccessEventType_accessFailed = _enum_for_AccessEventType.accessFailed satisfies AccessEventType; /* LONG_NAMED_ENUMERATED_VALUE */
+const AccessEventType_accessFailed = _enum_for_AccessEventType.accessFailed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary accessFailed
@@ -211,7 +211,7 @@ const AccessEventType_accessFailed = _enum_for_AccessEventType.accessFailed sati
  * @type {number}
  */
 export
-const accessFailed = AccessEventType_accessFailed satisfies AccessEventType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const accessFailed = AccessEventType_accessFailed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AccessEventType_sessionStart
@@ -225,7 +225,7 @@ const accessFailed = AccessEventType_accessFailed satisfies AccessEventType; /* 
  * @type {number}
  */
 export
-const AccessEventType_sessionStart = _enum_for_AccessEventType.sessionStart satisfies AccessEventType; /* LONG_NAMED_ENUMERATED_VALUE */
+const AccessEventType_sessionStart = _enum_for_AccessEventType.sessionStart; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sessionStart
@@ -237,7 +237,7 @@ const AccessEventType_sessionStart = _enum_for_AccessEventType.sessionStart sati
  * @type {number}
  */
 export
-const sessionStart = AccessEventType_sessionStart satisfies AccessEventType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sessionStart = AccessEventType_sessionStart; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AccessEventType_sessionEnd
@@ -250,7 +250,7 @@ const sessionStart = AccessEventType_sessionStart satisfies AccessEventType; /* 
  * @type {number}
  */
 export
-const AccessEventType_sessionEnd = _enum_for_AccessEventType.sessionEnd satisfies AccessEventType; /* LONG_NAMED_ENUMERATED_VALUE */
+const AccessEventType_sessionEnd = _enum_for_AccessEventType.sessionEnd; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sessionEnd
@@ -262,7 +262,7 @@ const AccessEventType_sessionEnd = _enum_for_AccessEventType.sessionEnd satisfie
  * @type {number}
  */
 export
-const sessionEnd = AccessEventType_sessionEnd satisfies AccessEventType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sessionEnd = AccessEventType_sessionEnd; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AccessEventType_interimUpdate
@@ -282,7 +282,7 @@ const sessionEnd = AccessEventType_sessionEnd satisfies AccessEventType; /* SHOR
  * @type {number}
  */
 export
-const AccessEventType_interimUpdate = _enum_for_AccessEventType.interimUpdate satisfies AccessEventType; /* LONG_NAMED_ENUMERATED_VALUE */
+const AccessEventType_interimUpdate = _enum_for_AccessEventType.interimUpdate; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary interimUpdate
@@ -294,7 +294,7 @@ const AccessEventType_interimUpdate = _enum_for_AccessEventType.interimUpdate sa
  * @type {number}
  */
 export
-const interimUpdate = AccessEventType_interimUpdate satisfies AccessEventType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const interimUpdate = AccessEventType_interimUpdate; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AccessEventType_startOfInterceptionWithSessionActive
@@ -311,7 +311,7 @@ const interimUpdate = AccessEventType_interimUpdate satisfies AccessEventType; /
  * @type {number}
  */
 export
-const AccessEventType_startOfInterceptionWithSessionActive = _enum_for_AccessEventType.startOfInterceptionWithSessionActive satisfies AccessEventType; /* LONG_NAMED_ENUMERATED_VALUE */
+const AccessEventType_startOfInterceptionWithSessionActive = _enum_for_AccessEventType.startOfInterceptionWithSessionActive; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary startOfInterceptionWithSessionActive
@@ -323,7 +323,7 @@ const AccessEventType_startOfInterceptionWithSessionActive = _enum_for_AccessEve
  * @type {number}
  */
 export
-const startOfInterceptionWithSessionActive = AccessEventType_startOfInterceptionWithSessionActive satisfies AccessEventType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const startOfInterceptionWithSessionActive = AccessEventType_startOfInterceptionWithSessionActive; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AccessEventType_accessEnd
@@ -350,7 +350,7 @@ const startOfInterceptionWithSessionActive = AccessEventType_startOfInterception
  * @type {number}
  */
 export
-const AccessEventType_accessEnd = _enum_for_AccessEventType.accessEnd satisfies AccessEventType; /* LONG_NAMED_ENUMERATED_VALUE */
+const AccessEventType_accessEnd = _enum_for_AccessEventType.accessEnd; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary accessEnd
@@ -363,7 +363,7 @@ const AccessEventType_accessEnd = _enum_for_AccessEventType.accessEnd satisfies 
  * @type {number}
  */
 export
-const accessEnd = AccessEventType_accessEnd satisfies AccessEventType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const accessEnd = AccessEventType_accessEnd; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AccessEventType_endOfInterceptionWithSessionActive
@@ -377,7 +377,7 @@ const accessEnd = AccessEventType_accessEnd satisfies AccessEventType; /* SHORT_
  * @type {number}
  */
 export
-const AccessEventType_endOfInterceptionWithSessionActive = _enum_for_AccessEventType.endOfInterceptionWithSessionActive satisfies AccessEventType; /* LONG_NAMED_ENUMERATED_VALUE */
+const AccessEventType_endOfInterceptionWithSessionActive = _enum_for_AccessEventType.endOfInterceptionWithSessionActive; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary endOfInterceptionWithSessionActive
@@ -390,7 +390,7 @@ const AccessEventType_endOfInterceptionWithSessionActive = _enum_for_AccessEvent
  * @type {number}
  */
 export
-const endOfInterceptionWithSessionActive = AccessEventType_endOfInterceptionWithSessionActive satisfies AccessEventType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const endOfInterceptionWithSessionActive = AccessEventType_endOfInterceptionWithSessionActive; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AccessEventType_unknown
@@ -403,7 +403,7 @@ const endOfInterceptionWithSessionActive = AccessEventType_endOfInterceptionWith
  * @type {number}
  */
 export
-const AccessEventType_unknown = _enum_for_AccessEventType.unknown satisfies AccessEventType; /* LONG_NAMED_ENUMERATED_VALUE */
+const AccessEventType_unknown = _enum_for_AccessEventType.unknown; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unknown
@@ -415,7 +415,7 @@ const AccessEventType_unknown = _enum_for_AccessEventType.unknown satisfies Acce
  * @type {number}
  */
 export
-const unknown = AccessEventType_unknown satisfies AccessEventType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unknown = AccessEventType_unknown; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AccessEventType_startOfInterceptionWithoutNetworkSession
@@ -429,7 +429,7 @@ const unknown = AccessEventType_unknown satisfies AccessEventType; /* SHORT_NAME
  * @type {number}
  */
 export
-const AccessEventType_startOfInterceptionWithoutNetworkSession = _enum_for_AccessEventType.startOfInterceptionWithoutNetworkSession satisfies AccessEventType; /* LONG_NAMED_ENUMERATED_VALUE */
+const AccessEventType_startOfInterceptionWithoutNetworkSession = _enum_for_AccessEventType.startOfInterceptionWithoutNetworkSession; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary startOfInterceptionWithoutNetworkSession
@@ -442,7 +442,7 @@ const AccessEventType_startOfInterceptionWithoutNetworkSession = _enum_for_Acces
  * @type {number}
  */
 export
-const startOfInterceptionWithoutNetworkSession = AccessEventType_startOfInterceptionWithoutNetworkSession satisfies AccessEventType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const startOfInterceptionWithoutNetworkSession = AccessEventType_startOfInterceptionWithoutNetworkSession; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AccessEventType_endOfInterceptionWithoutNetworkSession
@@ -455,7 +455,7 @@ const startOfInterceptionWithoutNetworkSession = AccessEventType_startOfIntercep
  * @type {number}
  */
 export
-const AccessEventType_endOfInterceptionWithoutNetworkSession = _enum_for_AccessEventType.endOfInterceptionWithoutNetworkSession satisfies AccessEventType; /* LONG_NAMED_ENUMERATED_VALUE */
+const AccessEventType_endOfInterceptionWithoutNetworkSession = _enum_for_AccessEventType.endOfInterceptionWithoutNetworkSession; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary endOfInterceptionWithoutNetworkSession
@@ -468,7 +468,7 @@ const AccessEventType_endOfInterceptionWithoutNetworkSession = _enum_for_AccessE
  * @type {number}
  */
 export
-const endOfInterceptionWithoutNetworkSession = AccessEventType_endOfInterceptionWithoutNetworkSession satisfies AccessEventType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const endOfInterceptionWithoutNetworkSession = AccessEventType_endOfInterceptionWithoutNetworkSession; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AccessEventType_sessionExpired
@@ -483,7 +483,7 @@ const endOfInterceptionWithoutNetworkSession = AccessEventType_endOfInterception
  * @type {number}
  */
 export
-const AccessEventType_sessionExpired = _enum_for_AccessEventType.sessionExpired satisfies AccessEventType; /* LONG_NAMED_ENUMERATED_VALUE */
+const AccessEventType_sessionExpired = _enum_for_AccessEventType.sessionExpired; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sessionExpired
@@ -496,7 +496,7 @@ const AccessEventType_sessionExpired = _enum_for_AccessEventType.sessionExpired 
  * @type {number}
  */
 export
-const sessionExpired = AccessEventType_sessionExpired satisfies AccessEventType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sessionExpired = AccessEventType_sessionExpired; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_AccessEventType: $.ASN1Decoder<AccessEventType> = $._decodeEnumerated;
 export const _encode_AccessEventType: $.ASN1Encoder<AccessEventType> = $._encodeEnumerated;
 

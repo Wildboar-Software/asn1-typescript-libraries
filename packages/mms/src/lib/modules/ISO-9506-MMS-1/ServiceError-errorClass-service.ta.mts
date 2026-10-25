@@ -60,7 +60,7 @@ const ServiceError_errorClass_service_other = 0 satisfies ServiceError_errorClas
  * @type {number}
  */
 export
-const other = ServiceError_errorClass_service_other satisfies ServiceError_errorClass_service; /* SHORT_NAMED_INTEGER_VALUE */
+const other = ServiceError_errorClass_service_other; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceError_errorClass_service_primitives_out_of_sequence
@@ -84,7 +84,7 @@ const ServiceError_errorClass_service_primitives_out_of_sequence = 1 satisfies S
  * @type {number}
  */
 export
-const primitives_out_of_sequence = ServiceError_errorClass_service_primitives_out_of_sequence satisfies ServiceError_errorClass_service; /* SHORT_NAMED_INTEGER_VALUE */
+const primitives_out_of_sequence = ServiceError_errorClass_service_primitives_out_of_sequence; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceError_errorClass_service_object_state_conflict
@@ -110,7 +110,7 @@ const ServiceError_errorClass_service_object_state_conflict = 2 satisfies Servic
  * @type {number}
  */
 export
-const object_state_conflict = ServiceError_errorClass_service_object_state_conflict satisfies ServiceError_errorClass_service; /* SHORT_NAMED_INTEGER_VALUE */
+const object_state_conflict = ServiceError_errorClass_service_object_state_conflict; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceError_errorClass_service_continuation_invalid
@@ -136,7 +136,7 @@ const ServiceError_errorClass_service_continuation_invalid = 4 satisfies Service
  * @type {number}
  */
 export
-const continuation_invalid = ServiceError_errorClass_service_continuation_invalid satisfies ServiceError_errorClass_service; /* SHORT_NAMED_INTEGER_VALUE */
+const continuation_invalid = ServiceError_errorClass_service_continuation_invalid; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceError_errorClass_service_object_constraint_conflict
@@ -162,7 +162,7 @@ const ServiceError_errorClass_service_object_constraint_conflict = 5 satisfies S
  * @type {number}
  */
 export
-const object_constraint_conflict = ServiceError_errorClass_service_object_constraint_conflict satisfies ServiceError_errorClass_service; /* SHORT_NAMED_INTEGER_VALUE */
+const object_constraint_conflict = ServiceError_errorClass_service_object_constraint_conflict; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_ServiceError_errorClass_service = $._decodeInteger;
 export const _encode_ServiceError_errorClass_service = $._encodeInteger;
 

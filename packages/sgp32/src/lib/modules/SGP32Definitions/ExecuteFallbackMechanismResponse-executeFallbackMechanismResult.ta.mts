@@ -52,7 +52,7 @@ const ExecuteFallbackMechanismResponse_executeFallbackMechanismResult_ok = 0 sat
  * section 5.9.20).
  */
 export
-const ok = ExecuteFallbackMechanismResponse_executeFallbackMechanismResult_ok satisfies ExecuteFallbackMechanismResponse_executeFallbackMechanismResult; /* SHORT_NAMED_INTEGER_VALUE */
+const ok = ExecuteFallbackMechanismResponse_executeFallbackMechanismResult_ok; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ExecuteFallbackMechanismResponse_executeFallbackMechanismResult_profileNotInDisabledState
@@ -72,7 +72,7 @@ const ExecuteFallbackMechanismResponse_executeFallbackMechanismResult_profileNot
  * The Fallback Profile is already enabled (SGP.32 v1.2, section 5.9.20).
  */
 export
-const profileNotInDisabledState = ExecuteFallbackMechanismResponse_executeFallbackMechanismResult_profileNotInDisabledState satisfies ExecuteFallbackMechanismResponse_executeFallbackMechanismResult; /* SHORT_NAMED_INTEGER_VALUE */
+const profileNotInDisabledState = ExecuteFallbackMechanismResponse_executeFallbackMechanismResult_profileNotInDisabledState; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ExecuteFallbackMechanismResponse_executeFallbackMechanismResult_catBusy
@@ -95,7 +95,7 @@ const ExecuteFallbackMechanismResponse_executeFallbackMechanismResult_catBusy = 
  * section 5.9.20).
  */
 export
-const catBusy = ExecuteFallbackMechanismResponse_executeFallbackMechanismResult_catBusy satisfies ExecuteFallbackMechanismResponse_executeFallbackMechanismResult; /* SHORT_NAMED_INTEGER_VALUE */
+const catBusy = ExecuteFallbackMechanismResponse_executeFallbackMechanismResult_catBusy; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ExecuteFallbackMechanismResponse_executeFallbackMechanismResult_fallbackNotAvailable
@@ -116,7 +116,7 @@ const ExecuteFallbackMechanismResponse_executeFallbackMechanismResult_fallbackNo
  * No Profile has the Fallback Attribute set (SGP.32 v1.2, section 5.9.20).
  */
 export
-const fallbackNotAvailable = ExecuteFallbackMechanismResponse_executeFallbackMechanismResult_fallbackNotAvailable satisfies ExecuteFallbackMechanismResponse_executeFallbackMechanismResult; /* SHORT_NAMED_INTEGER_VALUE */
+const fallbackNotAvailable = ExecuteFallbackMechanismResponse_executeFallbackMechanismResult_fallbackNotAvailable; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ExecuteFallbackMechanismResponse_executeFallbackMechanismResult_commandError
@@ -136,7 +136,7 @@ const ExecuteFallbackMechanismResponse_executeFallbackMechanismResult_commandErr
  * No Profile is currently enabled (SGP.32 v1.2, section 5.9.20).
  */
 export
-const commandError = ExecuteFallbackMechanismResponse_executeFallbackMechanismResult_commandError satisfies ExecuteFallbackMechanismResponse_executeFallbackMechanismResult; /* SHORT_NAMED_INTEGER_VALUE */
+const commandError = ExecuteFallbackMechanismResponse_executeFallbackMechanismResult_commandError; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ExecuteFallbackMechanismResponse_executeFallbackMechanismResult_ecallActive
@@ -158,7 +158,7 @@ const ExecuteFallbackMechanismResponse_executeFallbackMechanismResult_ecallActiv
  * section 5.9.20).
  */
 export
-const ecallActive = ExecuteFallbackMechanismResponse_executeFallbackMechanismResult_ecallActive satisfies ExecuteFallbackMechanismResponse_executeFallbackMechanismResult; /* SHORT_NAMED_INTEGER_VALUE */
+const ecallActive = ExecuteFallbackMechanismResponse_executeFallbackMechanismResult_ecallActive; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ExecuteFallbackMechanismResponse_executeFallbackMechanismResult_undefinedError
@@ -180,7 +180,7 @@ const ExecuteFallbackMechanismResponse_executeFallbackMechanismResult_undefinedE
  * the condition that produces it.
  */
 export
-const undefinedError = ExecuteFallbackMechanismResponse_executeFallbackMechanismResult_undefinedError satisfies ExecuteFallbackMechanismResponse_executeFallbackMechanismResult; /* SHORT_NAMED_INTEGER_VALUE */
+const undefinedError = ExecuteFallbackMechanismResponse_executeFallbackMechanismResult_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_ExecuteFallbackMechanismResponse_executeFallbackMechanismResult: $.ASN1Decoder<ExecuteFallbackMechanismResponse_executeFallbackMechanismResult> = $._decodeInteger;
 export const _encode_ExecuteFallbackMechanismResponse_executeFallbackMechanismResult: $.ASN1Encoder<ExecuteFallbackMechanismResponse_executeFallbackMechanismResult> = $._encodeInteger;
 

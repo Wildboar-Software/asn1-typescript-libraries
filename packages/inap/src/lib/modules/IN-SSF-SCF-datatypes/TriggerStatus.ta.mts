@@ -63,7 +63,7 @@ const TriggerStatus = _enum_for_TriggerStatus;
  * @type {number}
  */
 export
-const TriggerStatus_created = TriggerStatus.created satisfies TriggerStatus; /* LONG_NAMED_ENUMERATED_VALUE */
+const TriggerStatus_created = TriggerStatus.created; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary created
@@ -71,7 +71,7 @@ const TriggerStatus_created = TriggerStatus.created satisfies TriggerStatus; /* 
  * @type {number}
  */
 export
-const created = TriggerStatus.created satisfies TriggerStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
+const created = TriggerStatus.created; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TriggerStatus_alreadyExist
@@ -79,7 +79,7 @@ const created = TriggerStatus.created satisfies TriggerStatus; /* SHORT_NAMED_EN
  * @type {number}
  */
 export
-const TriggerStatus_alreadyExist = TriggerStatus.alreadyExist satisfies TriggerStatus; /* LONG_NAMED_ENUMERATED_VALUE */
+const TriggerStatus_alreadyExist = TriggerStatus.alreadyExist; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary alreadyExist
@@ -87,7 +87,7 @@ const TriggerStatus_alreadyExist = TriggerStatus.alreadyExist satisfies TriggerS
  * @type {number}
  */
 export
-const alreadyExist = TriggerStatus.alreadyExist satisfies TriggerStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
+const alreadyExist = TriggerStatus.alreadyExist; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TriggerStatus_deleted
@@ -95,7 +95,7 @@ const alreadyExist = TriggerStatus.alreadyExist satisfies TriggerStatus; /* SHOR
  * @type {number}
  */
 export
-const TriggerStatus_deleted = TriggerStatus.deleted satisfies TriggerStatus; /* LONG_NAMED_ENUMERATED_VALUE */
+const TriggerStatus_deleted = TriggerStatus.deleted; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary deleted
@@ -103,7 +103,7 @@ const TriggerStatus_deleted = TriggerStatus.deleted satisfies TriggerStatus; /* 
  * @type {number}
  */
 export
-const deleted = TriggerStatus.deleted satisfies TriggerStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
+const deleted = TriggerStatus.deleted; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TriggerStatus_unknownTrigger
@@ -111,7 +111,7 @@ const deleted = TriggerStatus.deleted satisfies TriggerStatus; /* SHORT_NAMED_EN
  * @type {number}
  */
 export
-const TriggerStatus_unknownTrigger = TriggerStatus.unknownTrigger satisfies TriggerStatus; /* LONG_NAMED_ENUMERATED_VALUE */
+const TriggerStatus_unknownTrigger = TriggerStatus.unknownTrigger; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unknownTrigger
@@ -119,7 +119,7 @@ const TriggerStatus_unknownTrigger = TriggerStatus.unknownTrigger satisfies Trig
  * @type {number}
  */
 export
-const unknownTrigger = TriggerStatus.unknownTrigger satisfies TriggerStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unknownTrigger = TriggerStatus.unknownTrigger; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 function _decode_TriggerStatus(el: _Element): TriggerStatus {

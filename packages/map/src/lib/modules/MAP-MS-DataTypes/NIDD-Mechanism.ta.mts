@@ -88,7 +88,7 @@ const NIDD_Mechanism = _enum_for_NIDD_Mechanism;
  * @type {number}
  */
 export
-const NIDD_Mechanism_sGi_based_data_delivery = NIDD_Mechanism.sGi_based_data_delivery satisfies NIDD_Mechanism; /* LONG_NAMED_ENUMERATED_VALUE */
+const NIDD_Mechanism_sGi_based_data_delivery = NIDD_Mechanism.sGi_based_data_delivery; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sGi_based_data_delivery
@@ -100,7 +100,7 @@ const NIDD_Mechanism_sGi_based_data_delivery = NIDD_Mechanism.sGi_based_data_del
  * @type {number}
  */
 export
-const sGi_based_data_delivery = NIDD_Mechanism.sGi_based_data_delivery satisfies NIDD_Mechanism; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sGi_based_data_delivery = NIDD_Mechanism.sGi_based_data_delivery; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NIDD_Mechanism_sCEF_based_data_delivery
@@ -112,7 +112,7 @@ const sGi_based_data_delivery = NIDD_Mechanism.sGi_based_data_delivery satisfies
  * @type {number}
  */
 export
-const NIDD_Mechanism_sCEF_based_data_delivery = NIDD_Mechanism.sCEF_based_data_delivery satisfies NIDD_Mechanism; /* LONG_NAMED_ENUMERATED_VALUE */
+const NIDD_Mechanism_sCEF_based_data_delivery = NIDD_Mechanism.sCEF_based_data_delivery; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sCEF_based_data_delivery
@@ -124,7 +124,7 @@ const NIDD_Mechanism_sCEF_based_data_delivery = NIDD_Mechanism.sCEF_based_data_d
  * @type {number}
  */
 export
-const sCEF_based_data_delivery = NIDD_Mechanism.sCEF_based_data_delivery satisfies NIDD_Mechanism; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sCEF_based_data_delivery = NIDD_Mechanism.sCEF_based_data_delivery; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) NIDD_Mechanism

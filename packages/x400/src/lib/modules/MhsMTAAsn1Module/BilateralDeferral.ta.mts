@@ -38,7 +38,7 @@ export const BilateralDeferral_agreement = 0 satisfies BilateralDeferral; /* LON
  * @constant
  * @type {number}
  */
-export const agreement = BilateralDeferral_agreement satisfies BilateralDeferral; /* SHORT_NAMED_INTEGER_VALUE */
+export const agreement = BilateralDeferral_agreement; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary BilateralDeferral_no_agreement
@@ -52,7 +52,7 @@ export const BilateralDeferral_no_agreement = 1 satisfies BilateralDeferral; /* 
  * @constant
  * @type {number}
  */
-export const no_agreement = BilateralDeferral_no_agreement satisfies BilateralDeferral; /* SHORT_NAMED_INTEGER_VALUE */
+export const no_agreement = BilateralDeferral_no_agreement; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_BilateralDeferral = $._decodeInteger;

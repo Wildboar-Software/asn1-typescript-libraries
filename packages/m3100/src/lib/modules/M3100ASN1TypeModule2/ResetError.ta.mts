@@ -40,7 +40,7 @@ export type ResetError = _enum_for_ResetError | ENUMERATED;
  * @constant
  * @type {number}
  */
-export const ResetError_resetFail = _enum_for_ResetError.resetFail satisfies ResetError; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ResetError_resetFail = _enum_for_ResetError.resetFail; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -48,7 +48,7 @@ export const ResetError_resetFail = _enum_for_ResetError.resetFail satisfies Res
  * @constant
  * @type {number}
  */
-export const resetFail = ResetError_resetFail satisfies ResetError; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const resetFail = ResetError_resetFail; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -56,7 +56,7 @@ export const resetFail = ResetError_resetFail satisfies ResetError; /* SHORT_NAM
  * @constant
  * @type {number}
  */
-export const ResetError_entityInService = _enum_for_ResetError.entityInService satisfies ResetError; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ResetError_entityInService = _enum_for_ResetError.entityInService; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -64,7 +64,7 @@ export const ResetError_entityInService = _enum_for_ResetError.entityInService s
  * @constant
  * @type {number}
  */
-export const entityInService = ResetError_entityInService satisfies ResetError; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const entityInService = ResetError_entityInService; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 

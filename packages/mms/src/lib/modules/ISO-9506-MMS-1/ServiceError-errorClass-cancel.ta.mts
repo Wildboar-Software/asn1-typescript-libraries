@@ -58,7 +58,7 @@ const ServiceError_errorClass_cancel_other = 0 satisfies ServiceError_errorClass
  * @type {number}
  */
 export
-const other = ServiceError_errorClass_cancel_other satisfies ServiceError_errorClass_cancel; /* SHORT_NAMED_INTEGER_VALUE */
+const other = ServiceError_errorClass_cancel_other; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceError_errorClass_cancel_invoke_id_unknown
@@ -84,7 +84,7 @@ const ServiceError_errorClass_cancel_invoke_id_unknown = 1 satisfies ServiceErro
  * @type {number}
  */
 export
-const invoke_id_unknown = ServiceError_errorClass_cancel_invoke_id_unknown satisfies ServiceError_errorClass_cancel; /* SHORT_NAMED_INTEGER_VALUE */
+const invoke_id_unknown = ServiceError_errorClass_cancel_invoke_id_unknown; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceError_errorClass_cancel_cancel_not_possible
@@ -110,7 +110,7 @@ const ServiceError_errorClass_cancel_cancel_not_possible = 2 satisfies ServiceEr
  * @type {number}
  */
 export
-const cancel_not_possible = ServiceError_errorClass_cancel_cancel_not_possible satisfies ServiceError_errorClass_cancel; /* SHORT_NAMED_INTEGER_VALUE */
+const cancel_not_possible = ServiceError_errorClass_cancel_cancel_not_possible; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_ServiceError_errorClass_cancel = $._decodeInteger;
 export const _encode_ServiceError_errorClass_cancel = $._encodeInteger;
 

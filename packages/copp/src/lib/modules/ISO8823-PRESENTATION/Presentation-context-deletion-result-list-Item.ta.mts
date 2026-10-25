@@ -42,7 +42,7 @@ export const Presentation_context_deletion_result_list_Item_acceptance = 0 satis
  * @constant
  * @type {number}
  */
-export const acceptance = Presentation_context_deletion_result_list_Item_acceptance satisfies Presentation_context_deletion_result_list_Item; /* SHORT_NAMED_INTEGER_VALUE */
+export const acceptance = Presentation_context_deletion_result_list_Item_acceptance; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -58,7 +58,7 @@ export const Presentation_context_deletion_result_list_Item_user_rejection = 1 s
  * @constant
  * @type {number}
  */
-export const user_rejection = Presentation_context_deletion_result_list_Item_user_rejection satisfies Presentation_context_deletion_result_list_Item; /* SHORT_NAMED_INTEGER_VALUE */
+export const user_rejection = Presentation_context_deletion_result_list_Item_user_rejection; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 let _cached_decoder_for_Presentation_context_deletion_result_list_Item: $.ASN1Decoder<Presentation_context_deletion_result_list_Item> | null = null;

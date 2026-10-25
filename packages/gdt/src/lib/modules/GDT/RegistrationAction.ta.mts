@@ -36,7 +36,7 @@ const RegistrationAction_ra_reg_request = 0 satisfies RegistrationAction; /* LON
  * @type {number}
  */
 export
-const ra_reg_request = RegistrationAction_ra_reg_request satisfies RegistrationAction; /* SHORT_NAMED_INTEGER_VALUE */
+const ra_reg_request = RegistrationAction_ra_reg_request; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RegistrationAction_ra_reg_result
@@ -52,7 +52,7 @@ const RegistrationAction_ra_reg_result = 1 satisfies RegistrationAction; /* LONG
  * @type {number}
  */
 export
-const ra_reg_result = RegistrationAction_ra_reg_result satisfies RegistrationAction; /* SHORT_NAMED_INTEGER_VALUE */
+const ra_reg_result = RegistrationAction_ra_reg_result; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_RegistrationAction = $._decodeInteger;
 export const _encode_RegistrationAction = $._encodeInteger;
 

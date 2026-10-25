@@ -58,7 +58,7 @@ const PartyToBeCharged = _enum_for_PartyToBeCharged;
  * @type {number}
  */
 export
-const PartyToBeCharged_orignating = PartyToBeCharged.orignating satisfies PartyToBeCharged; /* LONG_NAMED_ENUMERATED_VALUE */
+const PartyToBeCharged_orignating = PartyToBeCharged.orignating; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary orignating
@@ -66,7 +66,7 @@ const PartyToBeCharged_orignating = PartyToBeCharged.orignating satisfies PartyT
  * @type {number}
  */
 export
-const orignating = PartyToBeCharged.orignating satisfies PartyToBeCharged; /* SHORT_NAMED_ENUMERATED_VALUE */
+const orignating = PartyToBeCharged.orignating; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PartyToBeCharged_terminating
@@ -74,7 +74,7 @@ const orignating = PartyToBeCharged.orignating satisfies PartyToBeCharged; /* SH
  * @type {number}
  */
 export
-const PartyToBeCharged_terminating = PartyToBeCharged.terminating satisfies PartyToBeCharged; /* LONG_NAMED_ENUMERATED_VALUE */
+const PartyToBeCharged_terminating = PartyToBeCharged.terminating; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary terminating
@@ -82,7 +82,7 @@ const PartyToBeCharged_terminating = PartyToBeCharged.terminating satisfies Part
  * @type {number}
  */
 export
-const terminating = PartyToBeCharged.terminating satisfies PartyToBeCharged; /* SHORT_NAMED_ENUMERATED_VALUE */
+const terminating = PartyToBeCharged.terminating; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 function _decode_PartyToBeCharged(el: _Element): PartyToBeCharged {

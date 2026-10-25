@@ -144,7 +144,7 @@ export const ReportingEvent = _enum_for_ReportingEvent;
  * @type {number}
  */
 export const ReportingEvent_registration =
-    ReportingEvent.registration satisfies ReportingEvent; /* LONG_NAMED_ENUMERATED_VALUE */
+    ReportingEvent.registration; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary registration
@@ -157,7 +157,7 @@ export const ReportingEvent_registration =
  * @type {number}
  */
 export const registration =
-    ReportingEvent.registration satisfies ReportingEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
+    ReportingEvent.registration; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReportingEvent_request
@@ -170,7 +170,7 @@ export const registration =
  * @type {number}
  */
 export const ReportingEvent_request =
-    ReportingEvent.request satisfies ReportingEvent; /* LONG_NAMED_ENUMERATED_VALUE */
+    ReportingEvent.request; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary request
@@ -183,7 +183,7 @@ export const ReportingEvent_request =
  * @type {number}
  */
 export const request =
-    ReportingEvent.request satisfies ReportingEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
+    ReportingEvent.request; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReportingEvent_accept
@@ -196,7 +196,7 @@ export const request =
  * @type {number}
  */
 export const ReportingEvent_accept =
-    ReportingEvent.accept satisfies ReportingEvent; /* LONG_NAMED_ENUMERATED_VALUE */
+    ReportingEvent.accept; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary accept
@@ -209,7 +209,7 @@ export const ReportingEvent_accept =
  * @type {number}
  */
 export const accept =
-    ReportingEvent.accept satisfies ReportingEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
+    ReportingEvent.accept; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReportingEvent_complete
@@ -221,7 +221,7 @@ export const accept =
  * @type {number}
  */
 export const ReportingEvent_complete =
-    ReportingEvent.complete satisfies ReportingEvent; /* LONG_NAMED_ENUMERATED_VALUE */
+    ReportingEvent.complete; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary complete
@@ -233,7 +233,7 @@ export const ReportingEvent_complete =
  * @type {number}
  */
 export const complete =
-    ReportingEvent.complete satisfies ReportingEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
+    ReportingEvent.complete; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReportingEvent_corresponding
@@ -246,7 +246,7 @@ export const complete =
  * @type {number}
  */
 export const ReportingEvent_corresponding =
-    ReportingEvent.corresponding satisfies ReportingEvent; /* LONG_NAMED_ENUMERATED_VALUE */
+    ReportingEvent.corresponding; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary corresponding
@@ -259,7 +259,7 @@ export const ReportingEvent_corresponding =
  * @type {number}
  */
 export const corresponding =
-    ReportingEvent.corresponding satisfies ReportingEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
+    ReportingEvent.corresponding; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReportingEvent_bulk
@@ -272,7 +272,7 @@ export const corresponding =
  * @type {number}
  */
 export const ReportingEvent_bulk =
-    ReportingEvent.bulk satisfies ReportingEvent; /* LONG_NAMED_ENUMERATED_VALUE */
+    ReportingEvent.bulk; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary bulk
@@ -285,7 +285,7 @@ export const ReportingEvent_bulk =
  * @type {number}
  */
 export const bulk =
-    ReportingEvent.bulk satisfies ReportingEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
+    ReportingEvent.bulk; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReportingEvent_interruption
@@ -298,7 +298,7 @@ export const bulk =
  * @type {number}
  */
 export const ReportingEvent_interruption =
-    ReportingEvent.interruption satisfies ReportingEvent; /* LONG_NAMED_ENUMERATED_VALUE */
+    ReportingEvent.interruption; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary interruption
@@ -311,7 +311,7 @@ export const ReportingEvent_interruption =
  * @type {number}
  */
 export const interruption =
-    ReportingEvent.interruption satisfies ReportingEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
+    ReportingEvent.interruption; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 export function _decode_ReportingEvent(el: _Element): ReportingEvent {

@@ -50,7 +50,7 @@ const CancelSessionResponse_cancelSessionResponseError_invalidTransactionId = 5 
  * @type {number}
  */
 export
-const invalidTransactionId = CancelSessionResponse_cancelSessionResponseError_invalidTransactionId satisfies CancelSessionResponse_cancelSessionResponseError; /* SHORT_NAMED_INTEGER_VALUE */
+const invalidTransactionId = CancelSessionResponse_cancelSessionResponseError_invalidTransactionId; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CancelSessionResponse_cancelSessionResponseError_undefinedError
@@ -74,7 +74,7 @@ const CancelSessionResponse_cancelSessionResponseError_undefinedError = 127 sati
  * @type {number}
  */
 export
-const undefinedError = CancelSessionResponse_cancelSessionResponseError_undefinedError satisfies CancelSessionResponse_cancelSessionResponseError; /* SHORT_NAMED_INTEGER_VALUE */
+const undefinedError = CancelSessionResponse_cancelSessionResponseError_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_CancelSessionResponse_cancelSessionResponseError = $._decodeInteger;
 export const _encode_CancelSessionResponse_cancelSessionResponseError = $._encodeInteger;
 

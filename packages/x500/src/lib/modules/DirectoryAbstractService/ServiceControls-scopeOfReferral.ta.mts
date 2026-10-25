@@ -37,7 +37,7 @@ export const ServiceControls_scopeOfReferral_dmd = 0 satisfies ServiceControls_s
  * @constant
  * @type {number}
  */
-export const dmd = ServiceControls_scopeOfReferral_dmd satisfies ServiceControls_scopeOfReferral; /* SHORT_NAMED_INTEGER_VALUE */
+export const dmd = ServiceControls_scopeOfReferral_dmd; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceControls_scopeOfReferral_country
@@ -59,7 +59,7 @@ export const ServiceControls_scopeOfReferral_country = 1 satisfies ServiceContro
  * @constant
  * @type {number}
  */
-export const country = ServiceControls_scopeOfReferral_country satisfies ServiceControls_scopeOfReferral; /* SHORT_NAMED_INTEGER_VALUE */
+export const country = ServiceControls_scopeOfReferral_country; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_ServiceControls_scopeOfReferral = $._decodeInteger;

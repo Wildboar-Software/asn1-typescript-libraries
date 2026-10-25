@@ -80,7 +80,7 @@ const MonitorMode = _enum_for_MonitorMode;
  * @type {number}
  */
 export
-const MonitorMode_interrupted = MonitorMode.interrupted satisfies MonitorMode; /* LONG_NAMED_ENUMERATED_VALUE */
+const MonitorMode_interrupted = MonitorMode.interrupted; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary interrupted
@@ -88,7 +88,7 @@ const MonitorMode_interrupted = MonitorMode.interrupted satisfies MonitorMode; /
  * @type {number}
  */
 export
-const interrupted = MonitorMode.interrupted satisfies MonitorMode; /* SHORT_NAMED_ENUMERATED_VALUE */
+const interrupted = MonitorMode.interrupted; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MonitorMode_notifyAndContinue
@@ -96,7 +96,7 @@ const interrupted = MonitorMode.interrupted satisfies MonitorMode; /* SHORT_NAME
  * @type {number}
  */
 export
-const MonitorMode_notifyAndContinue = MonitorMode.notifyAndContinue satisfies MonitorMode; /* LONG_NAMED_ENUMERATED_VALUE */
+const MonitorMode_notifyAndContinue = MonitorMode.notifyAndContinue; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary notifyAndContinue
@@ -104,7 +104,7 @@ const MonitorMode_notifyAndContinue = MonitorMode.notifyAndContinue satisfies Mo
  * @type {number}
  */
 export
-const notifyAndContinue = MonitorMode.notifyAndContinue satisfies MonitorMode; /* SHORT_NAMED_ENUMERATED_VALUE */
+const notifyAndContinue = MonitorMode.notifyAndContinue; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MonitorMode_transparent
@@ -112,7 +112,7 @@ const notifyAndContinue = MonitorMode.notifyAndContinue satisfies MonitorMode; /
  * @type {number}
  */
 export
-const MonitorMode_transparent = MonitorMode.transparent satisfies MonitorMode; /* LONG_NAMED_ENUMERATED_VALUE */
+const MonitorMode_transparent = MonitorMode.transparent; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary transparent
@@ -120,7 +120,7 @@ const MonitorMode_transparent = MonitorMode.transparent satisfies MonitorMode; /
  * @type {number}
  */
 export
-const transparent = MonitorMode.transparent satisfies MonitorMode; /* SHORT_NAMED_ENUMERATED_VALUE */
+const transparent = MonitorMode.transparent; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_MonitorMode = $._decodeEnumerated;
 export const _encode_MonitorMode = $._encodeEnumerated;
 

@@ -38,7 +38,7 @@ export const AuthenticationCheck_validated = 1 satisfies AuthenticationCheck; /*
  * @constant
  * @type {number}
  */
-export const validated = AuthenticationCheck_validated satisfies AuthenticationCheck; /* SHORT_NAMED_INTEGER_VALUE */
+export const validated = AuthenticationCheck_validated; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AuthenticationCheck_failed
@@ -52,7 +52,7 @@ export const AuthenticationCheck_failed = 2 satisfies AuthenticationCheck; /* LO
  * @constant
  * @type {number}
  */
-export const failed = AuthenticationCheck_failed satisfies AuthenticationCheck; /* SHORT_NAMED_INTEGER_VALUE */
+export const failed = AuthenticationCheck_failed; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_AuthenticationCheck = $._decodeInteger;

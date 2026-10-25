@@ -80,7 +80,7 @@ const REDCAPIndication = _enum_for_REDCAPIndication;
  * @type {number}
  */
 export
-const REDCAPIndication_redCAP = REDCAPIndication.redCAP satisfies REDCAPIndication; /* LONG_NAMED_ENUMERATED_VALUE */
+const REDCAPIndication_redCAP = REDCAPIndication.redCAP; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary redCAP
@@ -88,7 +88,7 @@ const REDCAPIndication_redCAP = REDCAPIndication.redCAP satisfies REDCAPIndicati
  * @type {number}
  */
 export
-const redCAP = REDCAPIndication.redCAP satisfies REDCAPIndication; /* SHORT_NAMED_ENUMERATED_VALUE */
+const redCAP = REDCAPIndication.redCAP; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_REDCAPIndication: $.ASN1Decoder<REDCAPIndication> = $._decodeEnumerated;
 export const _encode_REDCAPIndication: $.ASN1Encoder<REDCAPIndication> = $._encodeEnumerated;
 

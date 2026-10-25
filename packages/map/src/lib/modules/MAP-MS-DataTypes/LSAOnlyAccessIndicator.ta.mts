@@ -80,7 +80,7 @@ const LSAOnlyAccessIndicator = _enum_for_LSAOnlyAccessIndicator;
  * @type {number}
  */
 export
-const LSAOnlyAccessIndicator_accessOutsideLSAsAllowed = LSAOnlyAccessIndicator.accessOutsideLSAsAllowed satisfies LSAOnlyAccessIndicator; /* LONG_NAMED_ENUMERATED_VALUE */
+const LSAOnlyAccessIndicator_accessOutsideLSAsAllowed = LSAOnlyAccessIndicator.accessOutsideLSAsAllowed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary accessOutsideLSAsAllowed
@@ -93,7 +93,7 @@ const LSAOnlyAccessIndicator_accessOutsideLSAsAllowed = LSAOnlyAccessIndicator.a
  * @type {number}
  */
 export
-const accessOutsideLSAsAllowed = LSAOnlyAccessIndicator.accessOutsideLSAsAllowed satisfies LSAOnlyAccessIndicator; /* SHORT_NAMED_ENUMERATED_VALUE */
+const accessOutsideLSAsAllowed = LSAOnlyAccessIndicator.accessOutsideLSAsAllowed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LSAOnlyAccessIndicator_accessOutsideLSAsRestricted
@@ -106,7 +106,7 @@ const accessOutsideLSAsAllowed = LSAOnlyAccessIndicator.accessOutsideLSAsAllowed
  * @type {number}
  */
 export
-const LSAOnlyAccessIndicator_accessOutsideLSAsRestricted = LSAOnlyAccessIndicator.accessOutsideLSAsRestricted satisfies LSAOnlyAccessIndicator; /* LONG_NAMED_ENUMERATED_VALUE */
+const LSAOnlyAccessIndicator_accessOutsideLSAsRestricted = LSAOnlyAccessIndicator.accessOutsideLSAsRestricted; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary accessOutsideLSAsRestricted
@@ -119,7 +119,7 @@ const LSAOnlyAccessIndicator_accessOutsideLSAsRestricted = LSAOnlyAccessIndicato
  * @type {number}
  */
 export
-const accessOutsideLSAsRestricted = LSAOnlyAccessIndicator.accessOutsideLSAsRestricted satisfies LSAOnlyAccessIndicator; /* SHORT_NAMED_ENUMERATED_VALUE */
+const accessOutsideLSAsRestricted = LSAOnlyAccessIndicator.accessOutsideLSAsRestricted; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) LSAOnlyAccessIndicator

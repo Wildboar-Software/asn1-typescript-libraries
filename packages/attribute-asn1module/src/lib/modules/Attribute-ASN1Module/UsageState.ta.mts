@@ -88,7 +88,7 @@ const UsageState = _enum_for_UsageState;
  * @type {number}
  */
 export
-const UsageState_idle = UsageState.idle satisfies UsageState; /* LONG_NAMED_ENUMERATED_VALUE */
+const UsageState_idle = UsageState.idle; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary idle
@@ -101,7 +101,7 @@ const UsageState_idle = UsageState.idle satisfies UsageState; /* LONG_NAMED_ENUM
  * @type {number}
  */
 export
-const idle = UsageState.idle satisfies UsageState; /* SHORT_NAMED_ENUMERATED_VALUE */
+const idle = UsageState.idle; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary UsageState_active
@@ -114,7 +114,7 @@ const idle = UsageState.idle satisfies UsageState; /* SHORT_NAMED_ENUMERATED_VAL
  * @type {number}
  */
 export
-const UsageState_active = UsageState.active satisfies UsageState; /* LONG_NAMED_ENUMERATED_VALUE */
+const UsageState_active = UsageState.active; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary active
@@ -127,7 +127,7 @@ const UsageState_active = UsageState.active satisfies UsageState; /* LONG_NAMED_
  * @type {number}
  */
 export
-const active = UsageState.active satisfies UsageState; /* SHORT_NAMED_ENUMERATED_VALUE */
+const active = UsageState.active; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary UsageState_busy
@@ -140,7 +140,7 @@ const active = UsageState.active satisfies UsageState; /* SHORT_NAMED_ENUMERATED
  * @type {number}
  */
 export
-const UsageState_busy = UsageState.busy satisfies UsageState; /* LONG_NAMED_ENUMERATED_VALUE */
+const UsageState_busy = UsageState.busy; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary busy
@@ -153,7 +153,7 @@ const UsageState_busy = UsageState.busy satisfies UsageState; /* LONG_NAMED_ENUM
  * @type {number}
  */
 export
-const busy = UsageState.busy satisfies UsageState; /* SHORT_NAMED_ENUMERATED_VALUE */
+const busy = UsageState.busy; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 export function _decode_UsageState(el: _Element): UsageState {

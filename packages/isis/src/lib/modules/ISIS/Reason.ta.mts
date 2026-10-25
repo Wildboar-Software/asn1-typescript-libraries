@@ -107,7 +107,7 @@ export const Reason = _enum_for_Reason;
  * @type {number}
  */
 export const Reason_holdingTimerExpired =
-  Reason.holdingTimerExpired satisfies Reason; /* LONG_NAMED_ENUMERATED_VALUE */
+  Reason.holdingTimerExpired; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary holdingTimerExpired
@@ -115,7 +115,7 @@ export const Reason_holdingTimerExpired =
  * @type {number}
  */
 export const holdingTimerExpired =
-  Reason.holdingTimerExpired satisfies Reason; /* SHORT_NAMED_ENUMERATED_VALUE */
+  Reason.holdingTimerExpired; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Reason_checksumError
@@ -129,7 +129,7 @@ export const holdingTimerExpired =
  * @type {number}
  */
 export const Reason_checksumError =
-  Reason.checksumError satisfies Reason; /* LONG_NAMED_ENUMERATED_VALUE */
+  Reason.checksumError; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary checksumError
@@ -137,7 +137,7 @@ export const Reason_checksumError =
  * @type {number}
  */
 export const checksumError =
-  Reason.checksumError satisfies Reason; /* SHORT_NAMED_ENUMERATED_VALUE */
+  Reason.checksumError; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Reason_oneWayConnectivity
@@ -151,7 +151,7 @@ export const checksumError =
  * @type {number}
  */
 export const Reason_oneWayConnectivity =
-  Reason.oneWayConnectivity satisfies Reason; /* LONG_NAMED_ENUMERATED_VALUE */
+  Reason.oneWayConnectivity; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary oneWayConnectivity
@@ -159,7 +159,7 @@ export const Reason_oneWayConnectivity =
  * @type {number}
  */
 export const oneWayConnectivity =
-  Reason.oneWayConnectivity satisfies Reason; /* SHORT_NAMED_ENUMERATED_VALUE */
+  Reason.oneWayConnectivity; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Reason_callRejected
@@ -173,7 +173,7 @@ export const oneWayConnectivity =
  * @type {number}
  */
 export const Reason_callRejected =
-  Reason.callRejected satisfies Reason; /* LONG_NAMED_ENUMERATED_VALUE */
+  Reason.callRejected; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary callRejected
@@ -181,7 +181,7 @@ export const Reason_callRejected =
  * @type {number}
  */
 export const callRejected =
-  Reason.callRejected satisfies Reason; /* SHORT_NAMED_ENUMERATED_VALUE */
+  Reason.callRejected; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Reason_reserveTimerExpired
@@ -195,7 +195,7 @@ export const callRejected =
  * @type {number}
  */
 export const Reason_reserveTimerExpired =
-  Reason.reserveTimerExpired satisfies Reason; /* LONG_NAMED_ENUMERATED_VALUE */
+  Reason.reserveTimerExpired; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary reserveTimerExpired
@@ -203,7 +203,7 @@ export const Reason_reserveTimerExpired =
  * @type {number}
  */
 export const reserveTimerExpired =
-  Reason.reserveTimerExpired satisfies Reason; /* SHORT_NAMED_ENUMERATED_VALUE */
+  Reason.reserveTimerExpired; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Reason_circuitDisabled
@@ -217,7 +217,7 @@ export const reserveTimerExpired =
  * @type {number}
  */
 export const Reason_circuitDisabled =
-  Reason.circuitDisabled satisfies Reason; /* LONG_NAMED_ENUMERATED_VALUE */
+  Reason.circuitDisabled; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary circuitDisabled
@@ -225,7 +225,7 @@ export const Reason_circuitDisabled =
  * @type {number}
  */
 export const circuitDisabled =
-  Reason.circuitDisabled satisfies Reason; /* SHORT_NAMED_ENUMERATED_VALUE */
+  Reason.circuitDisabled; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Reason_versionSkew
@@ -239,7 +239,7 @@ export const circuitDisabled =
  * @type {number}
  */
 export const Reason_versionSkew =
-  Reason.versionSkew satisfies Reason; /* LONG_NAMED_ENUMERATED_VALUE */
+  Reason.versionSkew; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary versionSkew
@@ -247,7 +247,7 @@ export const Reason_versionSkew =
  * @type {number}
  */
 export const versionSkew =
-  Reason.versionSkew satisfies Reason; /* SHORT_NAMED_ENUMERATED_VALUE */
+  Reason.versionSkew; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Reason_areaMismatch
@@ -261,7 +261,7 @@ export const versionSkew =
  * @type {number}
  */
 export const Reason_areaMismatch =
-  Reason.areaMismatch satisfies Reason; /* LONG_NAMED_ENUMERATED_VALUE */
+  Reason.areaMismatch; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary areaMismatch
@@ -269,7 +269,7 @@ export const Reason_areaMismatch =
  * @type {number}
  */
 export const areaMismatch =
-  Reason.areaMismatch satisfies Reason; /* SHORT_NAMED_ENUMERATED_VALUE */
+  Reason.areaMismatch; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Reason_maximumBroadcastIntermediateSystemsExceeded
@@ -283,7 +283,7 @@ export const areaMismatch =
  * @type {number}
  */
 export const Reason_maximumBroadcastIntermediateSystemsExceeded =
-  Reason.maximumBroadcastIntermediateSystemsExceeded satisfies Reason; /* LONG_NAMED_ENUMERATED_VALUE */
+  Reason.maximumBroadcastIntermediateSystemsExceeded; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary maximumBroadcastIntermediateSystemsExceeded
@@ -291,7 +291,7 @@ export const Reason_maximumBroadcastIntermediateSystemsExceeded =
  * @type {number}
  */
 export const maximumBroadcastIntermediateSystemsExceeded =
-  Reason.maximumBroadcastIntermediateSystemsExceeded satisfies Reason; /* SHORT_NAMED_ENUMERATED_VALUE */
+  Reason.maximumBroadcastIntermediateSystemsExceeded; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Reason_maximumBroadcastEndSystemsExceeded
@@ -305,7 +305,7 @@ export const maximumBroadcastIntermediateSystemsExceeded =
  * @type {number}
  */
 export const Reason_maximumBroadcastEndSystemsExceeded =
-  Reason.maximumBroadcastEndSystemsExceeded satisfies Reason; /* LONG_NAMED_ENUMERATED_VALUE */
+  Reason.maximumBroadcastEndSystemsExceeded; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary maximumBroadcastEndSystemsExceeded
@@ -313,7 +313,7 @@ export const Reason_maximumBroadcastEndSystemsExceeded =
  * @type {number}
  */
 export const maximumBroadcastEndSystemsExceeded =
-  Reason.maximumBroadcastEndSystemsExceeded satisfies Reason; /* SHORT_NAMED_ENUMERATED_VALUE */
+  Reason.maximumBroadcastEndSystemsExceeded; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Reason_wrongSystemType
@@ -327,7 +327,7 @@ export const maximumBroadcastEndSystemsExceeded =
  * @type {number}
  */
 export const Reason_wrongSystemType =
-  Reason.wrongSystemType satisfies Reason; /* LONG_NAMED_ENUMERATED_VALUE */
+  Reason.wrongSystemType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary wrongSystemType
@@ -335,7 +335,7 @@ export const Reason_wrongSystemType =
  * @type {number}
  */
 export const wrongSystemType =
-  Reason.wrongSystemType satisfies Reason; /* SHORT_NAMED_ENUMERATED_VALUE */
+  Reason.wrongSystemType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 export function _decode_Reason(el: _Element): Reason {

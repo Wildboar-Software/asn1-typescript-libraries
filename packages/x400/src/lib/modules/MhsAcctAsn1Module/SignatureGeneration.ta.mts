@@ -38,7 +38,7 @@ export const SignatureGeneration_generated = 1 satisfies SignatureGeneration; /*
  * @constant
  * @type {number}
  */
-export const generated = SignatureGeneration_generated satisfies SignatureGeneration; /* SHORT_NAMED_INTEGER_VALUE */
+export const generated = SignatureGeneration_generated; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SignatureGeneration_non_generated
@@ -52,7 +52,7 @@ export const SignatureGeneration_non_generated = 2 satisfies SignatureGeneration
  * @constant
  * @type {number}
  */
-export const non_generated = SignatureGeneration_non_generated satisfies SignatureGeneration; /* SHORT_NAMED_INTEGER_VALUE */
+export const non_generated = SignatureGeneration_non_generated; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_SignatureGeneration = $._decodeInteger;

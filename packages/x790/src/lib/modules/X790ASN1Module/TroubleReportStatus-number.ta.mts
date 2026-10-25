@@ -48,7 +48,7 @@ const TroubleReportStatus_number_screening = 1 satisfies TroubleReportStatus_num
  * @type {number}
  */
 export
-const screening = TroubleReportStatus_number_screening satisfies TroubleReportStatus_number; /* SHORT_NAMED_INTEGER_VALUE */
+const screening = TroubleReportStatus_number_screening; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleReportStatus_number_testing
@@ -64,7 +64,7 @@ const TroubleReportStatus_number_testing = 2 satisfies TroubleReportStatus_numbe
  * @type {number}
  */
 export
-const testing = TroubleReportStatus_number_testing satisfies TroubleReportStatus_number; /* SHORT_NAMED_INTEGER_VALUE */
+const testing = TroubleReportStatus_number_testing; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleReportStatus_number_dispatchedIn
@@ -80,7 +80,7 @@ const TroubleReportStatus_number_dispatchedIn = 3 satisfies TroubleReportStatus_
  * @type {number}
  */
 export
-const dispatchedIn = TroubleReportStatus_number_dispatchedIn satisfies TroubleReportStatus_number; /* SHORT_NAMED_INTEGER_VALUE */
+const dispatchedIn = TroubleReportStatus_number_dispatchedIn; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleReportStatus_number_dispatchedOut
@@ -96,7 +96,7 @@ const TroubleReportStatus_number_dispatchedOut = 4 satisfies TroubleReportStatus
  * @type {number}
  */
 export
-const dispatchedOut = TroubleReportStatus_number_dispatchedOut satisfies TroubleReportStatus_number; /* SHORT_NAMED_INTEGER_VALUE */
+const dispatchedOut = TroubleReportStatus_number_dispatchedOut; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleReportStatus_number_preassignedOut
@@ -112,7 +112,7 @@ const TroubleReportStatus_number_preassignedOut = 5 satisfies TroubleReportStatu
  * @type {number}
  */
 export
-const preassignedOut = TroubleReportStatus_number_preassignedOut satisfies TroubleReportStatus_number; /* SHORT_NAMED_INTEGER_VALUE */
+const preassignedOut = TroubleReportStatus_number_preassignedOut; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleReportStatus_number_bulkDispatchedOut
@@ -128,7 +128,7 @@ const TroubleReportStatus_number_bulkDispatchedOut = 6 satisfies TroubleReportSt
  * @type {number}
  */
 export
-const bulkDispatchedOut = TroubleReportStatus_number_bulkDispatchedOut satisfies TroubleReportStatus_number; /* SHORT_NAMED_INTEGER_VALUE */
+const bulkDispatchedOut = TroubleReportStatus_number_bulkDispatchedOut; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleReportStatus_number_startRepair
@@ -144,7 +144,7 @@ const TroubleReportStatus_number_startRepair = 7 satisfies TroubleReportStatus_n
  * @type {number}
  */
 export
-const startRepair = TroubleReportStatus_number_startRepair satisfies TroubleReportStatus_number; /* SHORT_NAMED_INTEGER_VALUE */
+const startRepair = TroubleReportStatus_number_startRepair; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleReportStatus_number_pendingTest
@@ -160,7 +160,7 @@ const TroubleReportStatus_number_pendingTest = 8 satisfies TroubleReportStatus_n
  * @type {number}
  */
 export
-const pendingTest = TroubleReportStatus_number_pendingTest satisfies TroubleReportStatus_number; /* SHORT_NAMED_INTEGER_VALUE */
+const pendingTest = TroubleReportStatus_number_pendingTest; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleReportStatus_number_pendingDispatch
@@ -176,7 +176,7 @@ const TroubleReportStatus_number_pendingDispatch = 9 satisfies TroubleReportStat
  * @type {number}
  */
 export
-const pendingDispatch = TroubleReportStatus_number_pendingDispatch satisfies TroubleReportStatus_number; /* SHORT_NAMED_INTEGER_VALUE */
+const pendingDispatch = TroubleReportStatus_number_pendingDispatch; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleReportStatus_number_requestRepair
@@ -192,7 +192,7 @@ const TroubleReportStatus_number_requestRepair = 10 satisfies TroubleReportStatu
  * @type {number}
  */
 export
-const requestRepair = TroubleReportStatus_number_requestRepair satisfies TroubleReportStatus_number; /* SHORT_NAMED_INTEGER_VALUE */
+const requestRepair = TroubleReportStatus_number_requestRepair; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleReportStatus_number_referMtceCenter
@@ -208,7 +208,7 @@ const TroubleReportStatus_number_referMtceCenter = 11 satisfies TroubleReportSta
  * @type {number}
  */
 export
-const referMtceCenter = TroubleReportStatus_number_referMtceCenter satisfies TroubleReportStatus_number; /* SHORT_NAMED_INTEGER_VALUE */
+const referMtceCenter = TroubleReportStatus_number_referMtceCenter; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleReportStatus_number_referVendor
@@ -224,7 +224,7 @@ const TroubleReportStatus_number_referVendor = 12 satisfies TroubleReportStatus_
  * @type {number}
  */
 export
-const referVendor = TroubleReportStatus_number_referVendor satisfies TroubleReportStatus_number; /* SHORT_NAMED_INTEGER_VALUE */
+const referVendor = TroubleReportStatus_number_referVendor; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleReportStatus_number_noAccessOther
@@ -240,7 +240,7 @@ const TroubleReportStatus_number_noAccessOther = 13 satisfies TroubleReportStatu
  * @type {number}
  */
 export
-const noAccessOther = TroubleReportStatus_number_noAccessOther satisfies TroubleReportStatus_number; /* SHORT_NAMED_INTEGER_VALUE */
+const noAccessOther = TroubleReportStatus_number_noAccessOther; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleReportStatus_number_startNoAccess
@@ -256,7 +256,7 @@ const TroubleReportStatus_number_startNoAccess = 14 satisfies TroubleReportStatu
  * @type {number}
  */
 export
-const startNoAccess = TroubleReportStatus_number_startNoAccess satisfies TroubleReportStatus_number; /* SHORT_NAMED_INTEGER_VALUE */
+const startNoAccess = TroubleReportStatus_number_startNoAccess; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleReportStatus_number_stopNoAccess
@@ -272,7 +272,7 @@ const TroubleReportStatus_number_stopNoAccess = 15 satisfies TroubleReportStatus
  * @type {number}
  */
 export
-const stopNoAccess = TroubleReportStatus_number_stopNoAccess satisfies TroubleReportStatus_number; /* SHORT_NAMED_INTEGER_VALUE */
+const stopNoAccess = TroubleReportStatus_number_stopNoAccess; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleReportStatus_number_startDelayedMtce
@@ -288,7 +288,7 @@ const TroubleReportStatus_number_startDelayedMtce = 16 satisfies TroubleReportSt
  * @type {number}
  */
 export
-const startDelayedMtce = TroubleReportStatus_number_startDelayedMtce satisfies TroubleReportStatus_number; /* SHORT_NAMED_INTEGER_VALUE */
+const startDelayedMtce = TroubleReportStatus_number_startDelayedMtce; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleReportStatus_number_stopDelayedMtce
@@ -304,7 +304,7 @@ const TroubleReportStatus_number_stopDelayedMtce = 17 satisfies TroubleReportSta
  * @type {number}
  */
 export
-const stopDelayedMtce = TroubleReportStatus_number_stopDelayedMtce satisfies TroubleReportStatus_number; /* SHORT_NAMED_INTEGER_VALUE */
+const stopDelayedMtce = TroubleReportStatus_number_stopDelayedMtce; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleReportStatus_number_troubleEscalated
@@ -320,7 +320,7 @@ const TroubleReportStatus_number_troubleEscalated = 18 satisfies TroubleReportSt
  * @type {number}
  */
 export
-const troubleEscalated = TroubleReportStatus_number_troubleEscalated satisfies TroubleReportStatus_number; /* SHORT_NAMED_INTEGER_VALUE */
+const troubleEscalated = TroubleReportStatus_number_troubleEscalated; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleReportStatus_number_craftDispatched
@@ -336,7 +336,7 @@ const TroubleReportStatus_number_craftDispatched = 19 satisfies TroubleReportSta
  * @type {number}
  */
 export
-const craftDispatched = TroubleReportStatus_number_craftDispatched satisfies TroubleReportStatus_number; /* SHORT_NAMED_INTEGER_VALUE */
+const craftDispatched = TroubleReportStatus_number_craftDispatched; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleReportStatus_number_temporaryOK
@@ -352,7 +352,7 @@ const TroubleReportStatus_number_temporaryOK = 20 satisfies TroubleReportStatus_
  * @type {number}
  */
 export
-const temporaryOK = TroubleReportStatus_number_temporaryOK satisfies TroubleReportStatus_number; /* SHORT_NAMED_INTEGER_VALUE */
+const temporaryOK = TroubleReportStatus_number_temporaryOK; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleReportStatus_number_cableFailure
@@ -368,7 +368,7 @@ const TroubleReportStatus_number_cableFailure = 21 satisfies TroubleReportStatus
  * @type {number}
  */
 export
-const cableFailure = TroubleReportStatus_number_cableFailure satisfies TroubleReportStatus_number; /* SHORT_NAMED_INTEGER_VALUE */
+const cableFailure = TroubleReportStatus_number_cableFailure; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleReportStatus_number_originatingEquipFailure
@@ -384,7 +384,7 @@ const TroubleReportStatus_number_originatingEquipFailure = 22 satisfies TroubleR
  * @type {number}
  */
 export
-const originatingEquipFailure = TroubleReportStatus_number_originatingEquipFailure satisfies TroubleReportStatus_number; /* SHORT_NAMED_INTEGER_VALUE */
+const originatingEquipFailure = TroubleReportStatus_number_originatingEquipFailure; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleReportStatus_number_backOrder
@@ -400,7 +400,7 @@ const TroubleReportStatus_number_backOrder = 23 satisfies TroubleReportStatus_nu
  * @type {number}
  */
 export
-const backOrder = TroubleReportStatus_number_backOrder satisfies TroubleReportStatus_number; /* SHORT_NAMED_INTEGER_VALUE */
+const backOrder = TroubleReportStatus_number_backOrder; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleReportStatus_number_clearedCustNotAdvised
@@ -416,7 +416,7 @@ const TroubleReportStatus_number_clearedCustNotAdvised = 24 satisfies TroubleRep
  * @type {number}
  */
 export
-const clearedCustNotAdvised = TroubleReportStatus_number_clearedCustNotAdvised satisfies TroubleReportStatus_number; /* SHORT_NAMED_INTEGER_VALUE */
+const clearedCustNotAdvised = TroubleReportStatus_number_clearedCustNotAdvised; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleReportStatus_number_clearedCustAdvised
@@ -432,7 +432,7 @@ const TroubleReportStatus_number_clearedCustAdvised = 25 satisfies TroubleReport
  * @type {number}
  */
 export
-const clearedCustAdvised = TroubleReportStatus_number_clearedCustAdvised satisfies TroubleReportStatus_number; /* SHORT_NAMED_INTEGER_VALUE */
+const clearedCustAdvised = TroubleReportStatus_number_clearedCustAdvised; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleReportStatus_number_clearedAwaitingCustVerification
@@ -448,7 +448,7 @@ const TroubleReportStatus_number_clearedAwaitingCustVerification = 26 satisfies 
  * @type {number}
  */
 export
-const clearedAwaitingCustVerification = TroubleReportStatus_number_clearedAwaitingCustVerification satisfies TroubleReportStatus_number; /* SHORT_NAMED_INTEGER_VALUE */
+const clearedAwaitingCustVerification = TroubleReportStatus_number_clearedAwaitingCustVerification; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleReportStatus_number_closedOut
@@ -464,7 +464,7 @@ const TroubleReportStatus_number_closedOut = 27 satisfies TroubleReportStatus_nu
  * @type {number}
  */
 export
-const closedOut = TroubleReportStatus_number_closedOut satisfies TroubleReportStatus_number; /* SHORT_NAMED_INTEGER_VALUE */
+const closedOut = TroubleReportStatus_number_closedOut; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleReportStatus_number_closedOutByCustReq
@@ -480,7 +480,7 @@ const TroubleReportStatus_number_closedOutByCustReq = 28 satisfies TroubleReport
  * @type {number}
  */
 export
-const closedOutByCustReq = TroubleReportStatus_number_closedOutByCustReq satisfies TroubleReportStatus_number; /* SHORT_NAMED_INTEGER_VALUE */
+const closedOutByCustReq = TroubleReportStatus_number_closedOutByCustReq; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleReportStatus_number_closedOutCustVerified
@@ -496,7 +496,7 @@ const TroubleReportStatus_number_closedOutCustVerified = 29 satisfies TroubleRep
  * @type {number}
  */
 export
-const closedOutCustVerified = TroubleReportStatus_number_closedOutCustVerified satisfies TroubleReportStatus_number; /* SHORT_NAMED_INTEGER_VALUE */
+const closedOutCustVerified = TroubleReportStatus_number_closedOutCustVerified; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleReportStatus_number_closedOutCustDenied
@@ -512,7 +512,7 @@ const TroubleReportStatus_number_closedOutCustDenied = 30 satisfies TroubleRepor
  * @type {number}
  */
 export
-const closedOutCustDenied = TroubleReportStatus_number_closedOutCustDenied satisfies TroubleReportStatus_number; /* SHORT_NAMED_INTEGER_VALUE */
+const closedOutCustDenied = TroubleReportStatus_number_closedOutCustDenied; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleReportStatus_number_canceledPendingWorkInProgress
@@ -528,7 +528,7 @@ const TroubleReportStatus_number_canceledPendingWorkInProgress = 31 satisfies Tr
  * @type {number}
  */
 export
-const canceledPendingWorkInProgress = TroubleReportStatus_number_canceledPendingWorkInProgress satisfies TroubleReportStatus_number; /* SHORT_NAMED_INTEGER_VALUE */
+const canceledPendingWorkInProgress = TroubleReportStatus_number_canceledPendingWorkInProgress; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleReportStatus_number_canceledPendingTestCompletion
@@ -544,7 +544,7 @@ const TroubleReportStatus_number_canceledPendingTestCompletion = 32 satisfies Tr
  * @type {number}
  */
 export
-const canceledPendingTestCompletion = TroubleReportStatus_number_canceledPendingTestCompletion satisfies TroubleReportStatus_number; /* SHORT_NAMED_INTEGER_VALUE */
+const canceledPendingTestCompletion = TroubleReportStatus_number_canceledPendingTestCompletion; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleReportStatus_number_canceledPendingDispatchCompl
@@ -560,7 +560,7 @@ const TroubleReportStatus_number_canceledPendingDispatchCompl = 33 satisfies Tro
  * @type {number}
  */
 export
-const canceledPendingDispatchCompl = TroubleReportStatus_number_canceledPendingDispatchCompl satisfies TroubleReportStatus_number; /* SHORT_NAMED_INTEGER_VALUE */
+const canceledPendingDispatchCompl = TroubleReportStatus_number_canceledPendingDispatchCompl; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleReportStatus_number_techOnSite
@@ -576,7 +576,7 @@ const TroubleReportStatus_number_techOnSite = 34 satisfies TroubleReportStatus_n
  * @type {number}
  */
 export
-const techOnSite = TroubleReportStatus_number_techOnSite satisfies TroubleReportStatus_number; /* SHORT_NAMED_INTEGER_VALUE */
+const techOnSite = TroubleReportStatus_number_techOnSite; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleReportStatus_number_techLeftSite
@@ -592,7 +592,7 @@ const TroubleReportStatus_number_techLeftSite = 35 satisfies TroubleReportStatus
  * @type {number}
  */
 export
-const techLeftSite = TroubleReportStatus_number_techLeftSite satisfies TroubleReportStatus_number; /* SHORT_NAMED_INTEGER_VALUE */
+const techLeftSite = TroubleReportStatus_number_techLeftSite; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_TroubleReportStatus_number = $._decodeInteger;
 export const _encode_TroubleReportStatus_number = $._encodeInteger;
 

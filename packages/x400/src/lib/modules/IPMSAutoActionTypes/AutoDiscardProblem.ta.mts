@@ -38,7 +38,7 @@ export const AutoDiscardProblem_not_obsoleted_by_originator = 0 satisfies AutoDi
  * @constant
  * @type {number}
  */
-export const not_obsoleted_by_originator = AutoDiscardProblem_not_obsoleted_by_originator satisfies AutoDiscardProblem; /* SHORT_NAMED_INTEGER_VALUE */
+export const not_obsoleted_by_originator = AutoDiscardProblem_not_obsoleted_by_originator; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_AutoDiscardProblem = $._decodeInteger;

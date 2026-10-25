@@ -56,7 +56,7 @@ const DiagnosticScheduleStatusReport_specific_notSupportedInThisDeliveryMode = 0
  * @type {number}
  */
 export
-const notSupportedInThisDeliveryMode = DiagnosticScheduleStatusReport_specific_notSupportedInThisDeliveryMode satisfies DiagnosticScheduleStatusReport_specific; /* SHORT_NAMED_INTEGER_VALUE */
+const notSupportedInThisDeliveryMode = DiagnosticScheduleStatusReport_specific_notSupportedInThisDeliveryMode; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagnosticScheduleStatusReport_specific_alreadyStopped
@@ -82,7 +82,7 @@ const DiagnosticScheduleStatusReport_specific_alreadyStopped = 1 satisfies Diagn
  * @type {number}
  */
 export
-const alreadyStopped = DiagnosticScheduleStatusReport_specific_alreadyStopped satisfies DiagnosticScheduleStatusReport_specific; /* SHORT_NAMED_INTEGER_VALUE */
+const alreadyStopped = DiagnosticScheduleStatusReport_specific_alreadyStopped; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagnosticScheduleStatusReport_specific_invalidReportingCycle
@@ -109,7 +109,7 @@ const DiagnosticScheduleStatusReport_specific_invalidReportingCycle = 2 satisfie
  * @type {number}
  */
 export
-const invalidReportingCycle = DiagnosticScheduleStatusReport_specific_invalidReportingCycle satisfies DiagnosticScheduleStatusReport_specific; /* SHORT_NAMED_INTEGER_VALUE */
+const invalidReportingCycle = DiagnosticScheduleStatusReport_specific_invalidReportingCycle; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_DiagnosticScheduleStatusReport_specific: $.ASN1Decoder<DiagnosticScheduleStatusReport_specific> = $._decodeInteger;
 export const _encode_DiagnosticScheduleStatusReport_specific: $.ASN1Encoder<DiagnosticScheduleStatusReport_specific> = $._encodeInteger;
 

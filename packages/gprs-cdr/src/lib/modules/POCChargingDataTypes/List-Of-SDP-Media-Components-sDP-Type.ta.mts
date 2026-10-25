@@ -90,7 +90,7 @@ const List_Of_SDP_Media_Components_sDP_Type = _enum_for_List_Of_SDP_Media_Compon
  * @type {number}
  */
 export
-const List_Of_SDP_Media_Components_sDP_Type_sDP_offer = List_Of_SDP_Media_Components_sDP_Type.sDP_offer satisfies List_Of_SDP_Media_Components_sDP_Type; /* LONG_NAMED_ENUMERATED_VALUE */
+const List_Of_SDP_Media_Components_sDP_Type_sDP_offer = List_Of_SDP_Media_Components_sDP_Type.sDP_offer; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sDP_offer
@@ -98,7 +98,7 @@ const List_Of_SDP_Media_Components_sDP_Type_sDP_offer = List_Of_SDP_Media_Compon
  * @type {number}
  */
 export
-const sDP_offer = List_Of_SDP_Media_Components_sDP_Type.sDP_offer satisfies List_Of_SDP_Media_Components_sDP_Type; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sDP_offer = List_Of_SDP_Media_Components_sDP_Type.sDP_offer; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary List_Of_SDP_Media_Components_sDP_Type_sDP_answer
@@ -106,7 +106,7 @@ const sDP_offer = List_Of_SDP_Media_Components_sDP_Type.sDP_offer satisfies List
  * @type {number}
  */
 export
-const List_Of_SDP_Media_Components_sDP_Type_sDP_answer = List_Of_SDP_Media_Components_sDP_Type.sDP_answer satisfies List_Of_SDP_Media_Components_sDP_Type; /* LONG_NAMED_ENUMERATED_VALUE */
+const List_Of_SDP_Media_Components_sDP_Type_sDP_answer = List_Of_SDP_Media_Components_sDP_Type.sDP_answer; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sDP_answer
@@ -114,7 +114,7 @@ const List_Of_SDP_Media_Components_sDP_Type_sDP_answer = List_Of_SDP_Media_Compo
  * @type {number}
  */
 export
-const sDP_answer = List_Of_SDP_Media_Components_sDP_Type.sDP_answer satisfies List_Of_SDP_Media_Components_sDP_Type; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sDP_answer = List_Of_SDP_Media_Components_sDP_Type.sDP_answer; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_List_Of_SDP_Media_Components_sDP_Type: $.ASN1Decoder<List_Of_SDP_Media_Components_sDP_Type> = $._decodeEnumerated;

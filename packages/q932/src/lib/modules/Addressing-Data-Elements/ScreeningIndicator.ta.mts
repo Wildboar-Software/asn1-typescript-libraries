@@ -143,7 +143,7 @@ const ScreeningIndicator = _enum_for_ScreeningIndicator;
  * @type {number}
  */
 export
-const ScreeningIndicator_userProvidedNotScreened = ScreeningIndicator.userProvidedNotScreened satisfies ScreeningIndicator; /* LONG_NAMED_ENUMERATED_VALUE */
+const ScreeningIndicator_userProvidedNotScreened = ScreeningIndicator.userProvidedNotScreened; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary userProvidedNotScreened
@@ -157,7 +157,7 @@ const ScreeningIndicator_userProvidedNotScreened = ScreeningIndicator.userProvid
  * @type {number}
  */
 export
-const userProvidedNotScreened = ScreeningIndicator.userProvidedNotScreened satisfies ScreeningIndicator; /* SHORT_NAMED_ENUMERATED_VALUE */
+const userProvidedNotScreened = ScreeningIndicator.userProvidedNotScreened; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ScreeningIndicator_userProvidedVerifiedAndPassed
@@ -171,7 +171,7 @@ const userProvidedNotScreened = ScreeningIndicator.userProvidedNotScreened satis
  * @type {number}
  */
 export
-const ScreeningIndicator_userProvidedVerifiedAndPassed = ScreeningIndicator.userProvidedVerifiedAndPassed satisfies ScreeningIndicator; /* LONG_NAMED_ENUMERATED_VALUE */
+const ScreeningIndicator_userProvidedVerifiedAndPassed = ScreeningIndicator.userProvidedVerifiedAndPassed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary userProvidedVerifiedAndPassed
@@ -185,7 +185,7 @@ const ScreeningIndicator_userProvidedVerifiedAndPassed = ScreeningIndicator.user
  * @type {number}
  */
 export
-const userProvidedVerifiedAndPassed = ScreeningIndicator.userProvidedVerifiedAndPassed satisfies ScreeningIndicator; /* SHORT_NAMED_ENUMERATED_VALUE */
+const userProvidedVerifiedAndPassed = ScreeningIndicator.userProvidedVerifiedAndPassed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ScreeningIndicator_userProvidedVerifiedAndFailed
@@ -198,7 +198,7 @@ const userProvidedVerifiedAndPassed = ScreeningIndicator.userProvidedVerifiedAnd
  * @type {number}
  */
 export
-const ScreeningIndicator_userProvidedVerifiedAndFailed = ScreeningIndicator.userProvidedVerifiedAndFailed satisfies ScreeningIndicator; /* LONG_NAMED_ENUMERATED_VALUE */
+const ScreeningIndicator_userProvidedVerifiedAndFailed = ScreeningIndicator.userProvidedVerifiedAndFailed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary userProvidedVerifiedAndFailed
@@ -211,7 +211,7 @@ const ScreeningIndicator_userProvidedVerifiedAndFailed = ScreeningIndicator.user
  * @type {number}
  */
 export
-const userProvidedVerifiedAndFailed = ScreeningIndicator.userProvidedVerifiedAndFailed satisfies ScreeningIndicator; /* SHORT_NAMED_ENUMERATED_VALUE */
+const userProvidedVerifiedAndFailed = ScreeningIndicator.userProvidedVerifiedAndFailed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ScreeningIndicator_networkProvided
@@ -224,7 +224,7 @@ const userProvidedVerifiedAndFailed = ScreeningIndicator.userProvidedVerifiedAnd
  * @type {number}
  */
 export
-const ScreeningIndicator_networkProvided = ScreeningIndicator.networkProvided satisfies ScreeningIndicator; /* LONG_NAMED_ENUMERATED_VALUE */
+const ScreeningIndicator_networkProvided = ScreeningIndicator.networkProvided; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary networkProvided
@@ -237,7 +237,7 @@ const ScreeningIndicator_networkProvided = ScreeningIndicator.networkProvided sa
  * @type {number}
  */
 export
-const networkProvided = ScreeningIndicator.networkProvided satisfies ScreeningIndicator; /* SHORT_NAMED_ENUMERATED_VALUE */
+const networkProvided = ScreeningIndicator.networkProvided; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_ScreeningIndicator: $.ASN1Decoder<ScreeningIndicator> = $._decodeEnumerated;
 export const _encode_ScreeningIndicator: $.ASN1Encoder<ScreeningIndicator> = $._encodeEnumerated;
 

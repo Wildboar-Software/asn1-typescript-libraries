@@ -88,7 +88,7 @@ const AMFRegistrationResult = _enum_for_AMFRegistrationResult;
  * @type {number}
  */
 export
-const AMFRegistrationResult_threeGPPAccess = AMFRegistrationResult.threeGPPAccess satisfies AMFRegistrationResult; /* LONG_NAMED_ENUMERATED_VALUE */
+const AMFRegistrationResult_threeGPPAccess = AMFRegistrationResult.threeGPPAccess; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary threeGPPAccess
@@ -96,7 +96,7 @@ const AMFRegistrationResult_threeGPPAccess = AMFRegistrationResult.threeGPPAcces
  * @type {number}
  */
 export
-const threeGPPAccess = AMFRegistrationResult.threeGPPAccess satisfies AMFRegistrationResult; /* SHORT_NAMED_ENUMERATED_VALUE */
+const threeGPPAccess = AMFRegistrationResult.threeGPPAccess; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AMFRegistrationResult_nonThreeGPPAccess
@@ -104,7 +104,7 @@ const threeGPPAccess = AMFRegistrationResult.threeGPPAccess satisfies AMFRegistr
  * @type {number}
  */
 export
-const AMFRegistrationResult_nonThreeGPPAccess = AMFRegistrationResult.nonThreeGPPAccess satisfies AMFRegistrationResult; /* LONG_NAMED_ENUMERATED_VALUE */
+const AMFRegistrationResult_nonThreeGPPAccess = AMFRegistrationResult.nonThreeGPPAccess; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary nonThreeGPPAccess
@@ -112,7 +112,7 @@ const AMFRegistrationResult_nonThreeGPPAccess = AMFRegistrationResult.nonThreeGP
  * @type {number}
  */
 export
-const nonThreeGPPAccess = AMFRegistrationResult.nonThreeGPPAccess satisfies AMFRegistrationResult; /* SHORT_NAMED_ENUMERATED_VALUE */
+const nonThreeGPPAccess = AMFRegistrationResult.nonThreeGPPAccess; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AMFRegistrationResult_threeGPPAndNonThreeGPPAccess
@@ -120,7 +120,7 @@ const nonThreeGPPAccess = AMFRegistrationResult.nonThreeGPPAccess satisfies AMFR
  * @type {number}
  */
 export
-const AMFRegistrationResult_threeGPPAndNonThreeGPPAccess = AMFRegistrationResult.threeGPPAndNonThreeGPPAccess satisfies AMFRegistrationResult; /* LONG_NAMED_ENUMERATED_VALUE */
+const AMFRegistrationResult_threeGPPAndNonThreeGPPAccess = AMFRegistrationResult.threeGPPAndNonThreeGPPAccess; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary threeGPPAndNonThreeGPPAccess
@@ -128,7 +128,7 @@ const AMFRegistrationResult_threeGPPAndNonThreeGPPAccess = AMFRegistrationResult
  * @type {number}
  */
 export
-const threeGPPAndNonThreeGPPAccess = AMFRegistrationResult.threeGPPAndNonThreeGPPAccess satisfies AMFRegistrationResult; /* SHORT_NAMED_ENUMERATED_VALUE */
+const threeGPPAndNonThreeGPPAccess = AMFRegistrationResult.threeGPPAndNonThreeGPPAccess; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_AMFRegistrationResult: $.ASN1Decoder<AMFRegistrationResult> = $._decodeEnumerated;
 export const _encode_AMFRegistrationResult: $.ASN1Encoder<AMFRegistrationResult> = $._encodeEnumerated;
 

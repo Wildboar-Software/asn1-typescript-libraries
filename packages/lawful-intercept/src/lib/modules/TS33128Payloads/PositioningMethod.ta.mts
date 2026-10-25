@@ -299,7 +299,7 @@ const PositioningMethod = _enum_for_PositioningMethod;
  * @type {number}
  */
 export
-const PositioningMethod_cellID = PositioningMethod.cellID satisfies PositioningMethod; /* LONG_NAMED_ENUMERATED_VALUE */
+const PositioningMethod_cellID = PositioningMethod.cellID; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary cellID
@@ -313,7 +313,7 @@ const PositioningMethod_cellID = PositioningMethod.cellID satisfies PositioningM
  * @type {number}
  */
 export
-const cellID = PositioningMethod.cellID satisfies PositioningMethod; /* SHORT_NAMED_ENUMERATED_VALUE */
+const cellID = PositioningMethod.cellID; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PositioningMethod_eCID
@@ -327,7 +327,7 @@ const cellID = PositioningMethod.cellID satisfies PositioningMethod; /* SHORT_NA
  * @type {number}
  */
 export
-const PositioningMethod_eCID = PositioningMethod.eCID satisfies PositioningMethod; /* LONG_NAMED_ENUMERATED_VALUE */
+const PositioningMethod_eCID = PositioningMethod.eCID; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary eCID
@@ -341,7 +341,7 @@ const PositioningMethod_eCID = PositioningMethod.eCID satisfies PositioningMetho
  * @type {number}
  */
 export
-const eCID = PositioningMethod.eCID satisfies PositioningMethod; /* SHORT_NAMED_ENUMERATED_VALUE */
+const eCID = PositioningMethod.eCID; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PositioningMethod_oTDOA
@@ -355,7 +355,7 @@ const eCID = PositioningMethod.eCID satisfies PositioningMethod; /* SHORT_NAMED_
  * @type {number}
  */
 export
-const PositioningMethod_oTDOA = PositioningMethod.oTDOA satisfies PositioningMethod; /* LONG_NAMED_ENUMERATED_VALUE */
+const PositioningMethod_oTDOA = PositioningMethod.oTDOA; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary oTDOA
@@ -369,7 +369,7 @@ const PositioningMethod_oTDOA = PositioningMethod.oTDOA satisfies PositioningMet
  * @type {number}
  */
 export
-const oTDOA = PositioningMethod.oTDOA satisfies PositioningMethod; /* SHORT_NAMED_ENUMERATED_VALUE */
+const oTDOA = PositioningMethod.oTDOA; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PositioningMethod_barometricPressure
@@ -383,7 +383,7 @@ const oTDOA = PositioningMethod.oTDOA satisfies PositioningMethod; /* SHORT_NAME
  * @type {number}
  */
 export
-const PositioningMethod_barometricPressure = PositioningMethod.barometricPressure satisfies PositioningMethod; /* LONG_NAMED_ENUMERATED_VALUE */
+const PositioningMethod_barometricPressure = PositioningMethod.barometricPressure; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary barometricPressure
@@ -397,7 +397,7 @@ const PositioningMethod_barometricPressure = PositioningMethod.barometricPressur
  * @type {number}
  */
 export
-const barometricPressure = PositioningMethod.barometricPressure satisfies PositioningMethod; /* SHORT_NAMED_ENUMERATED_VALUE */
+const barometricPressure = PositioningMethod.barometricPressure; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PositioningMethod_wLAN
@@ -411,7 +411,7 @@ const barometricPressure = PositioningMethod.barometricPressure satisfies Positi
  * @type {number}
  */
 export
-const PositioningMethod_wLAN = PositioningMethod.wLAN satisfies PositioningMethod; /* LONG_NAMED_ENUMERATED_VALUE */
+const PositioningMethod_wLAN = PositioningMethod.wLAN; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary wLAN
@@ -425,7 +425,7 @@ const PositioningMethod_wLAN = PositioningMethod.wLAN satisfies PositioningMetho
  * @type {number}
  */
 export
-const wLAN = PositioningMethod.wLAN satisfies PositioningMethod; /* SHORT_NAMED_ENUMERATED_VALUE */
+const wLAN = PositioningMethod.wLAN; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PositioningMethod_bluetooth
@@ -439,7 +439,7 @@ const wLAN = PositioningMethod.wLAN satisfies PositioningMethod; /* SHORT_NAMED_
  * @type {number}
  */
 export
-const PositioningMethod_bluetooth = PositioningMethod.bluetooth satisfies PositioningMethod; /* LONG_NAMED_ENUMERATED_VALUE */
+const PositioningMethod_bluetooth = PositioningMethod.bluetooth; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary bluetooth
@@ -453,7 +453,7 @@ const PositioningMethod_bluetooth = PositioningMethod.bluetooth satisfies Positi
  * @type {number}
  */
 export
-const bluetooth = PositioningMethod.bluetooth satisfies PositioningMethod; /* SHORT_NAMED_ENUMERATED_VALUE */
+const bluetooth = PositioningMethod.bluetooth; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PositioningMethod_mBS
@@ -467,7 +467,7 @@ const bluetooth = PositioningMethod.bluetooth satisfies PositioningMethod; /* SH
  * @type {number}
  */
 export
-const PositioningMethod_mBS = PositioningMethod.mBS satisfies PositioningMethod; /* LONG_NAMED_ENUMERATED_VALUE */
+const PositioningMethod_mBS = PositioningMethod.mBS; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary mBS
@@ -481,7 +481,7 @@ const PositioningMethod_mBS = PositioningMethod.mBS satisfies PositioningMethod;
  * @type {number}
  */
 export
-const mBS = PositioningMethod.mBS satisfies PositioningMethod; /* SHORT_NAMED_ENUMERATED_VALUE */
+const mBS = PositioningMethod.mBS; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PositioningMethod_motionSensor
@@ -495,7 +495,7 @@ const mBS = PositioningMethod.mBS satisfies PositioningMethod; /* SHORT_NAMED_EN
  * @type {number}
  */
 export
-const PositioningMethod_motionSensor = PositioningMethod.motionSensor satisfies PositioningMethod; /* LONG_NAMED_ENUMERATED_VALUE */
+const PositioningMethod_motionSensor = PositioningMethod.motionSensor; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary motionSensor
@@ -509,7 +509,7 @@ const PositioningMethod_motionSensor = PositioningMethod.motionSensor satisfies 
  * @type {number}
  */
 export
-const motionSensor = PositioningMethod.motionSensor satisfies PositioningMethod; /* SHORT_NAMED_ENUMERATED_VALUE */
+const motionSensor = PositioningMethod.motionSensor; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PositioningMethod_dLTDOA
@@ -523,7 +523,7 @@ const motionSensor = PositioningMethod.motionSensor satisfies PositioningMethod;
  * @type {number}
  */
 export
-const PositioningMethod_dLTDOA = PositioningMethod.dLTDOA satisfies PositioningMethod; /* LONG_NAMED_ENUMERATED_VALUE */
+const PositioningMethod_dLTDOA = PositioningMethod.dLTDOA; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary dLTDOA
@@ -537,7 +537,7 @@ const PositioningMethod_dLTDOA = PositioningMethod.dLTDOA satisfies PositioningM
  * @type {number}
  */
 export
-const dLTDOA = PositioningMethod.dLTDOA satisfies PositioningMethod; /* SHORT_NAMED_ENUMERATED_VALUE */
+const dLTDOA = PositioningMethod.dLTDOA; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PositioningMethod_dLAOD
@@ -551,7 +551,7 @@ const dLTDOA = PositioningMethod.dLTDOA satisfies PositioningMethod; /* SHORT_NA
  * @type {number}
  */
 export
-const PositioningMethod_dLAOD = PositioningMethod.dLAOD satisfies PositioningMethod; /* LONG_NAMED_ENUMERATED_VALUE */
+const PositioningMethod_dLAOD = PositioningMethod.dLAOD; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary dLAOD
@@ -565,7 +565,7 @@ const PositioningMethod_dLAOD = PositioningMethod.dLAOD satisfies PositioningMet
  * @type {number}
  */
 export
-const dLAOD = PositioningMethod.dLAOD satisfies PositioningMethod; /* SHORT_NAMED_ENUMERATED_VALUE */
+const dLAOD = PositioningMethod.dLAOD; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PositioningMethod_multiRTT
@@ -579,7 +579,7 @@ const dLAOD = PositioningMethod.dLAOD satisfies PositioningMethod; /* SHORT_NAME
  * @type {number}
  */
 export
-const PositioningMethod_multiRTT = PositioningMethod.multiRTT satisfies PositioningMethod; /* LONG_NAMED_ENUMERATED_VALUE */
+const PositioningMethod_multiRTT = PositioningMethod.multiRTT; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary multiRTT
@@ -593,7 +593,7 @@ const PositioningMethod_multiRTT = PositioningMethod.multiRTT satisfies Position
  * @type {number}
  */
 export
-const multiRTT = PositioningMethod.multiRTT satisfies PositioningMethod; /* SHORT_NAMED_ENUMERATED_VALUE */
+const multiRTT = PositioningMethod.multiRTT; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PositioningMethod_nRECID
@@ -607,7 +607,7 @@ const multiRTT = PositioningMethod.multiRTT satisfies PositioningMethod; /* SHOR
  * @type {number}
  */
 export
-const PositioningMethod_nRECID = PositioningMethod.nRECID satisfies PositioningMethod; /* LONG_NAMED_ENUMERATED_VALUE */
+const PositioningMethod_nRECID = PositioningMethod.nRECID; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary nRECID
@@ -621,7 +621,7 @@ const PositioningMethod_nRECID = PositioningMethod.nRECID satisfies PositioningM
  * @type {number}
  */
 export
-const nRECID = PositioningMethod.nRECID satisfies PositioningMethod; /* SHORT_NAMED_ENUMERATED_VALUE */
+const nRECID = PositioningMethod.nRECID; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PositioningMethod_uLTDOA
@@ -635,7 +635,7 @@ const nRECID = PositioningMethod.nRECID satisfies PositioningMethod; /* SHORT_NA
  * @type {number}
  */
 export
-const PositioningMethod_uLTDOA = PositioningMethod.uLTDOA satisfies PositioningMethod; /* LONG_NAMED_ENUMERATED_VALUE */
+const PositioningMethod_uLTDOA = PositioningMethod.uLTDOA; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary uLTDOA
@@ -649,7 +649,7 @@ const PositioningMethod_uLTDOA = PositioningMethod.uLTDOA satisfies PositioningM
  * @type {number}
  */
 export
-const uLTDOA = PositioningMethod.uLTDOA satisfies PositioningMethod; /* SHORT_NAMED_ENUMERATED_VALUE */
+const uLTDOA = PositioningMethod.uLTDOA; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PositioningMethod_uLAOA
@@ -664,7 +664,7 @@ const uLTDOA = PositioningMethod.uLTDOA satisfies PositioningMethod; /* SHORT_NA
  * @type {number}
  */
 export
-const PositioningMethod_uLAOA = PositioningMethod.uLAOA satisfies PositioningMethod; /* LONG_NAMED_ENUMERATED_VALUE */
+const PositioningMethod_uLAOA = PositioningMethod.uLAOA; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary uLAOA
@@ -679,7 +679,7 @@ const PositioningMethod_uLAOA = PositioningMethod.uLAOA satisfies PositioningMet
  * @type {number}
  */
 export
-const uLAOA = PositioningMethod.uLAOA satisfies PositioningMethod; /* SHORT_NAMED_ENUMERATED_VALUE */
+const uLAOA = PositioningMethod.uLAOA; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PositioningMethod_networkSpecific
@@ -693,7 +693,7 @@ const uLAOA = PositioningMethod.uLAOA satisfies PositioningMethod; /* SHORT_NAME
  * @type {number}
  */
 export
-const PositioningMethod_networkSpecific = PositioningMethod.networkSpecific satisfies PositioningMethod; /* LONG_NAMED_ENUMERATED_VALUE */
+const PositioningMethod_networkSpecific = PositioningMethod.networkSpecific; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary networkSpecific
@@ -707,7 +707,7 @@ const PositioningMethod_networkSpecific = PositioningMethod.networkSpecific sati
  * @type {number}
  */
 export
-const networkSpecific = PositioningMethod.networkSpecific satisfies PositioningMethod; /* SHORT_NAMED_ENUMERATED_VALUE */
+const networkSpecific = PositioningMethod.networkSpecific; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PositioningMethod_sLTDOA
@@ -722,7 +722,7 @@ const networkSpecific = PositioningMethod.networkSpecific satisfies PositioningM
  * @type {number}
  */
 export
-const PositioningMethod_sLTDOA = PositioningMethod.sLTDOA satisfies PositioningMethod; /* LONG_NAMED_ENUMERATED_VALUE */
+const PositioningMethod_sLTDOA = PositioningMethod.sLTDOA; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sLTDOA
@@ -737,7 +737,7 @@ const PositioningMethod_sLTDOA = PositioningMethod.sLTDOA satisfies PositioningM
  * @type {number}
  */
 export
-const sLTDOA = PositioningMethod.sLTDOA satisfies PositioningMethod; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sLTDOA = PositioningMethod.sLTDOA; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PositioningMethod_sLTOA
@@ -751,7 +751,7 @@ const sLTDOA = PositioningMethod.sLTDOA satisfies PositioningMethod; /* SHORT_NA
  * @type {number}
  */
 export
-const PositioningMethod_sLTOA = PositioningMethod.sLTOA satisfies PositioningMethod; /* LONG_NAMED_ENUMERATED_VALUE */
+const PositioningMethod_sLTOA = PositioningMethod.sLTOA; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sLTOA
@@ -765,7 +765,7 @@ const PositioningMethod_sLTOA = PositioningMethod.sLTOA satisfies PositioningMet
  * @type {number}
  */
 export
-const sLTOA = PositioningMethod.sLTOA satisfies PositioningMethod; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sLTOA = PositioningMethod.sLTOA; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PositioningMethod_sLAOA
@@ -779,7 +779,7 @@ const sLTOA = PositioningMethod.sLTOA satisfies PositioningMethod; /* SHORT_NAME
  * @type {number}
  */
 export
-const PositioningMethod_sLAOA = PositioningMethod.sLAOA satisfies PositioningMethod; /* LONG_NAMED_ENUMERATED_VALUE */
+const PositioningMethod_sLAOA = PositioningMethod.sLAOA; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sLAOA
@@ -793,7 +793,7 @@ const PositioningMethod_sLAOA = PositioningMethod.sLAOA satisfies PositioningMet
  * @type {number}
  */
 export
-const sLAOA = PositioningMethod.sLAOA satisfies PositioningMethod; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sLAOA = PositioningMethod.sLAOA; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PositioningMethod_sLRT
@@ -807,7 +807,7 @@ const sLAOA = PositioningMethod.sLAOA satisfies PositioningMethod; /* SHORT_NAME
  * @type {number}
  */
 export
-const PositioningMethod_sLRT = PositioningMethod.sLRT satisfies PositioningMethod; /* LONG_NAMED_ENUMERATED_VALUE */
+const PositioningMethod_sLRT = PositioningMethod.sLRT; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sLRT
@@ -821,7 +821,7 @@ const PositioningMethod_sLRT = PositioningMethod.sLRT satisfies PositioningMetho
  * @type {number}
  */
 export
-const sLRT = PositioningMethod.sLRT satisfies PositioningMethod; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sLRT = PositioningMethod.sLRT; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_PositioningMethod: $.ASN1Decoder<PositioningMethod> = $._decodeEnumerated;
 export const _encode_PositioningMethod: $.ASN1Encoder<PositioningMethod> = $._encodeEnumerated;
 

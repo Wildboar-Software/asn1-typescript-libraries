@@ -31,7 +31,7 @@ export const Version_two_prime = 0 satisfies Version; /* LONG_NAMED_INTEGER_VALU
  * @constant
  * @type {number}
  */
-export const two_prime = Version_two_prime satisfies Version; /* SHORT_NAMED_INTEGER_VALUE */
+export const two_prime = Version_two_prime; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -47,7 +47,7 @@ export const Version_multi = 1 satisfies Version; /* LONG_NAMED_INTEGER_VALUE */
  * @constant
  * @type {number}
  */
-export const multi = Version_multi satisfies Version; /* SHORT_NAMED_INTEGER_VALUE */
+export const multi = Version_multi; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 

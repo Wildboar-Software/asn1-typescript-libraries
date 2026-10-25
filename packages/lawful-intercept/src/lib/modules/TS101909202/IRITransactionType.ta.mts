@@ -172,7 +172,7 @@ const IRITransactionType = _enum_for_IRITransactionType;
  * @type {number}
  */
 export
-const IRITransactionType_iRIbegin = IRITransactionType.iRIbegin satisfies IRITransactionType; /* LONG_NAMED_ENUMERATED_VALUE */
+const IRITransactionType_iRIbegin = IRITransactionType.iRIbegin; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary iRIbegin
@@ -189,7 +189,7 @@ const IRITransactionType_iRIbegin = IRITransactionType.iRIbegin satisfies IRITra
  * @type {number}
  */
 export
-const iRIbegin = IRITransactionType.iRIbegin satisfies IRITransactionType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const iRIbegin = IRITransactionType.iRIbegin; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary IRITransactionType_iRIcontinue
@@ -206,7 +206,7 @@ const iRIbegin = IRITransactionType.iRIbegin satisfies IRITransactionType; /* SH
  * @type {number}
  */
 export
-const IRITransactionType_iRIcontinue = IRITransactionType.iRIcontinue satisfies IRITransactionType; /* LONG_NAMED_ENUMERATED_VALUE */
+const IRITransactionType_iRIcontinue = IRITransactionType.iRIcontinue; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary iRIcontinue
@@ -223,7 +223,7 @@ const IRITransactionType_iRIcontinue = IRITransactionType.iRIcontinue satisfies 
  * @type {number}
  */
 export
-const iRIcontinue = IRITransactionType.iRIcontinue satisfies IRITransactionType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const iRIcontinue = IRITransactionType.iRIcontinue; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary IRITransactionType_iRIend
@@ -240,7 +240,7 @@ const iRIcontinue = IRITransactionType.iRIcontinue satisfies IRITransactionType;
  * @type {number}
  */
 export
-const IRITransactionType_iRIend = IRITransactionType.iRIend satisfies IRITransactionType; /* LONG_NAMED_ENUMERATED_VALUE */
+const IRITransactionType_iRIend = IRITransactionType.iRIend; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary iRIend
@@ -257,7 +257,7 @@ const IRITransactionType_iRIend = IRITransactionType.iRIend satisfies IRITransac
  * @type {number}
  */
 export
-const iRIend = IRITransactionType.iRIend satisfies IRITransactionType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const iRIend = IRITransactionType.iRIend; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary IRITransactionType_iRIreport
@@ -274,7 +274,7 @@ const iRIend = IRITransactionType.iRIend satisfies IRITransactionType; /* SHORT_
  * @type {number}
  */
 export
-const IRITransactionType_iRIreport = IRITransactionType.iRIreport satisfies IRITransactionType; /* LONG_NAMED_ENUMERATED_VALUE */
+const IRITransactionType_iRIreport = IRITransactionType.iRIreport; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary iRIreport
@@ -291,7 +291,7 @@ const IRITransactionType_iRIreport = IRITransactionType.iRIreport satisfies IRIT
  * @type {number}
  */
 export
-const iRIreport = IRITransactionType.iRIreport satisfies IRITransactionType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const iRIreport = IRITransactionType.iRIreport; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_IRITransactionType: $.ASN1Decoder<IRITransactionType> = $._decodeEnumerated;
 export const _encode_IRITransactionType: $.ASN1Encoder<IRITransactionType> = $._encodeEnumerated;
 

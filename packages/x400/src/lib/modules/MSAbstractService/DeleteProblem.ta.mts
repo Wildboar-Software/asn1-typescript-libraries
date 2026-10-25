@@ -43,7 +43,7 @@ export const DeleteProblem_child_entry_specified = 0 satisfies DeleteProblem; /*
  * @constant
  * @type {number}
  */
-export const child_entry_specified = DeleteProblem_child_entry_specified satisfies DeleteProblem; /* SHORT_NAMED_INTEGER_VALUE */
+export const child_entry_specified = DeleteProblem_child_entry_specified; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeleteProblem_delete_restriction_problem
@@ -57,7 +57,7 @@ export const DeleteProblem_delete_restriction_problem = 1 satisfies DeleteProble
  * @constant
  * @type {number}
  */
-export const delete_restriction_problem = DeleteProblem_delete_restriction_problem satisfies DeleteProblem; /* SHORT_NAMED_INTEGER_VALUE */
+export const delete_restriction_problem = DeleteProblem_delete_restriction_problem; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeleteProblem_new_entry_specified
@@ -71,7 +71,7 @@ export const DeleteProblem_new_entry_specified = 2 satisfies DeleteProblem; /* L
  * @constant
  * @type {number}
  */
-export const new_entry_specified = DeleteProblem_new_entry_specified satisfies DeleteProblem; /* SHORT_NAMED_INTEGER_VALUE */
+export const new_entry_specified = DeleteProblem_new_entry_specified; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeleteProblem_entry_class_restriction
@@ -85,7 +85,7 @@ export const DeleteProblem_entry_class_restriction = 3 satisfies DeleteProblem; 
  * @constant
  * @type {number}
  */
-export const entry_class_restriction = DeleteProblem_entry_class_restriction satisfies DeleteProblem; /* SHORT_NAMED_INTEGER_VALUE */
+export const entry_class_restriction = DeleteProblem_entry_class_restriction; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeleteProblem_stored_message_exists
@@ -99,7 +99,7 @@ export const DeleteProblem_stored_message_exists = 4 satisfies DeleteProblem; /*
  * @constant
  * @type {number}
  */
-export const stored_message_exists = DeleteProblem_stored_message_exists satisfies DeleteProblem; /* SHORT_NAMED_INTEGER_VALUE */
+export const stored_message_exists = DeleteProblem_stored_message_exists; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_DeleteProblem = $._decodeInteger;

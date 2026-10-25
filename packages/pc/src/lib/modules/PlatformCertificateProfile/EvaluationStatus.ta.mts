@@ -93,7 +93,7 @@ const EvaluationStatus = _enum_for_EvaluationStatus;
  * @type {number}
  */
 export
-const EvaluationStatus_designedToMeet = EvaluationStatus.designedToMeet satisfies EvaluationStatus; /* LONG_NAMED_ENUMERATED_VALUE */
+const EvaluationStatus_designedToMeet = EvaluationStatus.designedToMeet; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary designedToMeet
@@ -105,7 +105,7 @@ const EvaluationStatus_designedToMeet = EvaluationStatus.designedToMeet satisfie
  * @type {number}
  */
 export
-const designedToMeet = EvaluationStatus.designedToMeet satisfies EvaluationStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
+const designedToMeet = EvaluationStatus.designedToMeet; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EvaluationStatus_evaluationInProgress
@@ -117,7 +117,7 @@ const designedToMeet = EvaluationStatus.designedToMeet satisfies EvaluationStatu
  * @type {number}
  */
 export
-const EvaluationStatus_evaluationInProgress = EvaluationStatus.evaluationInProgress satisfies EvaluationStatus; /* LONG_NAMED_ENUMERATED_VALUE */
+const EvaluationStatus_evaluationInProgress = EvaluationStatus.evaluationInProgress; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary evaluationInProgress
@@ -129,7 +129,7 @@ const EvaluationStatus_evaluationInProgress = EvaluationStatus.evaluationInProgr
  * @type {number}
  */
 export
-const evaluationInProgress = EvaluationStatus.evaluationInProgress satisfies EvaluationStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
+const evaluationInProgress = EvaluationStatus.evaluationInProgress; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EvaluationStatus_evaluationCompleted
@@ -141,7 +141,7 @@ const evaluationInProgress = EvaluationStatus.evaluationInProgress satisfies Eva
  * @type {number}
  */
 export
-const EvaluationStatus_evaluationCompleted = EvaluationStatus.evaluationCompleted satisfies EvaluationStatus; /* LONG_NAMED_ENUMERATED_VALUE */
+const EvaluationStatus_evaluationCompleted = EvaluationStatus.evaluationCompleted; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary evaluationCompleted
@@ -153,7 +153,7 @@ const EvaluationStatus_evaluationCompleted = EvaluationStatus.evaluationComplete
  * @type {number}
  */
 export
-const evaluationCompleted = EvaluationStatus.evaluationCompleted satisfies EvaluationStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
+const evaluationCompleted = EvaluationStatus.evaluationCompleted; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 export function _decode_EvaluationStatus(el: _Element): EvaluationStatus {

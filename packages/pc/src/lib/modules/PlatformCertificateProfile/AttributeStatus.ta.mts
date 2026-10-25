@@ -96,7 +96,7 @@ const AttributeStatus = _enum_for_AttributeStatus;
  * @type {number}
  */
 export
-const AttributeStatus_added = AttributeStatus.added satisfies AttributeStatus; /* LONG_NAMED_ENUMERATED_VALUE */
+const AttributeStatus_added = AttributeStatus.added; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary added
@@ -108,7 +108,7 @@ const AttributeStatus_added = AttributeStatus.added satisfies AttributeStatus; /
  * @type {number}
  */
 export
-const added = AttributeStatus.added satisfies AttributeStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
+const added = AttributeStatus.added; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AttributeStatus_modified
@@ -120,7 +120,7 @@ const added = AttributeStatus.added satisfies AttributeStatus; /* SHORT_NAMED_EN
  * @type {number}
  */
 export
-const AttributeStatus_modified = AttributeStatus.modified satisfies AttributeStatus; /* LONG_NAMED_ENUMERATED_VALUE */
+const AttributeStatus_modified = AttributeStatus.modified; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary modified
@@ -132,7 +132,7 @@ const AttributeStatus_modified = AttributeStatus.modified satisfies AttributeSta
  * @type {number}
  */
 export
-const modified = AttributeStatus.modified satisfies AttributeStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
+const modified = AttributeStatus.modified; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AttributeStatus_removed
@@ -144,7 +144,7 @@ const modified = AttributeStatus.modified satisfies AttributeStatus; /* SHORT_NA
  * @type {number}
  */
 export
-const AttributeStatus_removed = AttributeStatus.removed satisfies AttributeStatus; /* LONG_NAMED_ENUMERATED_VALUE */
+const AttributeStatus_removed = AttributeStatus.removed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary removed
@@ -156,7 +156,7 @@ const AttributeStatus_removed = AttributeStatus.removed satisfies AttributeStatu
  * @type {number}
  */
 export
-const removed = AttributeStatus.removed satisfies AttributeStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
+const removed = AttributeStatus.removed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 export function _decode_AttributeStatus(el: _Element): AttributeStatus {

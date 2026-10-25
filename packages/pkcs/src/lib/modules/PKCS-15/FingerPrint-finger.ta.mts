@@ -60,7 +60,7 @@ export const FingerPrint_finger = _enum_for_FingerPrint_finger;
  * @type {number}
  */
 export const FingerPrint_finger_thumb =
-    FingerPrint_finger.thumb satisfies FingerPrint_finger; /* LONG_NAMED_ENUMERATED_VALUE */
+    FingerPrint_finger.thumb; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -69,7 +69,7 @@ export const FingerPrint_finger_thumb =
  * @type {number}
  */
 export const thumb =
-    FingerPrint_finger.thumb satisfies FingerPrint_finger; /* SHORT_NAMED_ENUMERATED_VALUE */
+    FingerPrint_finger.thumb; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -78,7 +78,7 @@ export const thumb =
  * @type {number}
  */
 export const FingerPrint_finger_pointerFinger =
-    FingerPrint_finger.pointerFinger satisfies FingerPrint_finger; /* LONG_NAMED_ENUMERATED_VALUE */
+    FingerPrint_finger.pointerFinger; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -87,7 +87,7 @@ export const FingerPrint_finger_pointerFinger =
  * @type {number}
  */
 export const pointerFinger =
-    FingerPrint_finger.pointerFinger satisfies FingerPrint_finger; /* SHORT_NAMED_ENUMERATED_VALUE */
+    FingerPrint_finger.pointerFinger; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -96,7 +96,7 @@ export const pointerFinger =
  * @type {number}
  */
 export const FingerPrint_finger_middleFinger =
-    FingerPrint_finger.middleFinger satisfies FingerPrint_finger; /* LONG_NAMED_ENUMERATED_VALUE */
+    FingerPrint_finger.middleFinger; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -105,7 +105,7 @@ export const FingerPrint_finger_middleFinger =
  * @type {number}
  */
 export const middleFinger =
-    FingerPrint_finger.middleFinger satisfies FingerPrint_finger; /* SHORT_NAMED_ENUMERATED_VALUE */
+    FingerPrint_finger.middleFinger; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -114,7 +114,7 @@ export const middleFinger =
  * @type {number}
  */
 export const FingerPrint_finger_ringFinger =
-    FingerPrint_finger.ringFinger satisfies FingerPrint_finger; /* LONG_NAMED_ENUMERATED_VALUE */
+    FingerPrint_finger.ringFinger; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -123,7 +123,7 @@ export const FingerPrint_finger_ringFinger =
  * @type {number}
  */
 export const ringFinger =
-    FingerPrint_finger.ringFinger satisfies FingerPrint_finger; /* SHORT_NAMED_ENUMERATED_VALUE */
+    FingerPrint_finger.ringFinger; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -132,7 +132,7 @@ export const ringFinger =
  * @type {number}
  */
 export const FingerPrint_finger_littleFinger =
-    FingerPrint_finger.littleFinger satisfies FingerPrint_finger; /* LONG_NAMED_ENUMERATED_VALUE */
+    FingerPrint_finger.littleFinger; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -141,7 +141,7 @@ export const FingerPrint_finger_littleFinger =
  * @type {number}
  */
 export const littleFinger =
-    FingerPrint_finger.littleFinger satisfies FingerPrint_finger; /* SHORT_NAMED_ENUMERATED_VALUE */
+    FingerPrint_finger.littleFinger; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 

@@ -45,7 +45,7 @@ type SMS_TriggerDetectionPoint = _enum_for_SMS_TriggerDetectionPoint | ENUMERATE
  * @type {number}
  */
 export
-const SMS_TriggerDetectionPoint_sms_CollectedInfo = _enum_for_SMS_TriggerDetectionPoint.sms_CollectedInfo satisfies SMS_TriggerDetectionPoint; /* LONG_NAMED_ENUMERATED_VALUE */
+const SMS_TriggerDetectionPoint_sms_CollectedInfo = _enum_for_SMS_TriggerDetectionPoint.sms_CollectedInfo; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sms_CollectedInfo
@@ -53,7 +53,7 @@ const SMS_TriggerDetectionPoint_sms_CollectedInfo = _enum_for_SMS_TriggerDetecti
  * @type {number}
  */
 export
-const sms_CollectedInfo = SMS_TriggerDetectionPoint_sms_CollectedInfo satisfies SMS_TriggerDetectionPoint; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sms_CollectedInfo = SMS_TriggerDetectionPoint_sms_CollectedInfo; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SMS_TriggerDetectionPoint_sms_DeliveryRequest
@@ -61,7 +61,7 @@ const sms_CollectedInfo = SMS_TriggerDetectionPoint_sms_CollectedInfo satisfies 
  * @type {number}
  */
 export
-const SMS_TriggerDetectionPoint_sms_DeliveryRequest = _enum_for_SMS_TriggerDetectionPoint.sms_DeliveryRequest satisfies SMS_TriggerDetectionPoint; /* LONG_NAMED_ENUMERATED_VALUE */
+const SMS_TriggerDetectionPoint_sms_DeliveryRequest = _enum_for_SMS_TriggerDetectionPoint.sms_DeliveryRequest; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sms_DeliveryRequest
@@ -69,7 +69,7 @@ const SMS_TriggerDetectionPoint_sms_DeliveryRequest = _enum_for_SMS_TriggerDetec
  * @type {number}
  */
 export
-const sms_DeliveryRequest = SMS_TriggerDetectionPoint_sms_DeliveryRequest satisfies SMS_TriggerDetectionPoint; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sms_DeliveryRequest = SMS_TriggerDetectionPoint_sms_DeliveryRequest; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) SMS_TriggerDetectionPoint

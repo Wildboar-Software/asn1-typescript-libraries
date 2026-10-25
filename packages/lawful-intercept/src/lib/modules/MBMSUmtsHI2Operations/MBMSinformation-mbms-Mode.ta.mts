@@ -44,7 +44,7 @@ type MBMSinformation_mbms_Mode = _enum_for_MBMSinformation_mbms_Mode | ENUMERATE
  * @type {number}
  */
 export
-const MBMSinformation_mbms_Mode_multicast = _enum_for_MBMSinformation_mbms_Mode.multicast satisfies MBMSinformation_mbms_Mode; /* LONG_NAMED_ENUMERATED_VALUE */
+const MBMSinformation_mbms_Mode_multicast = _enum_for_MBMSinformation_mbms_Mode.multicast; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary multicast
@@ -55,7 +55,7 @@ const MBMSinformation_mbms_Mode_multicast = _enum_for_MBMSinformation_mbms_Mode.
  * @type {number}
  */
 export
-const multicast = MBMSinformation_mbms_Mode_multicast satisfies MBMSinformation_mbms_Mode; /* SHORT_NAMED_ENUMERATED_VALUE */
+const multicast = MBMSinformation_mbms_Mode_multicast; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MBMSinformation_mbms_Mode_broadcast
@@ -68,7 +68,7 @@ const multicast = MBMSinformation_mbms_Mode_multicast satisfies MBMSinformation_
  * @type {number}
  */
 export
-const MBMSinformation_mbms_Mode_broadcast = _enum_for_MBMSinformation_mbms_Mode.broadcast satisfies MBMSinformation_mbms_Mode; /* LONG_NAMED_ENUMERATED_VALUE */
+const MBMSinformation_mbms_Mode_broadcast = _enum_for_MBMSinformation_mbms_Mode.broadcast; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary broadcast
@@ -79,7 +79,7 @@ const MBMSinformation_mbms_Mode_broadcast = _enum_for_MBMSinformation_mbms_Mode.
  * @type {number}
  */
 export
-const broadcast = MBMSinformation_mbms_Mode_broadcast satisfies MBMSinformation_mbms_Mode; /* SHORT_NAMED_ENUMERATED_VALUE */
+const broadcast = MBMSinformation_mbms_Mode_broadcast; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_MBMSinformation_mbms_Mode: $.ASN1Decoder<MBMSinformation_mbms_Mode> = $._decodeEnumerated;
 export const _encode_MBMSinformation_mbms_Mode: $.ASN1Encoder<MBMSinformation_mbms_Mode> = $._encodeEnumerated;
 

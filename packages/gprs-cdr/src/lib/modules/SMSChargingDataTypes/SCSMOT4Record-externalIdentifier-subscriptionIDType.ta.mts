@@ -101,7 +101,7 @@ const SCSMOT4Record_externalIdentifier_subscriptionIDType = _enum_for_SCSMOT4Rec
  * @type {number}
  */
 export
-const SCSMOT4Record_externalIdentifier_subscriptionIDType_eND_USER_E164 = SCSMOT4Record_externalIdentifier_subscriptionIDType.eND_USER_E164 satisfies SCSMOT4Record_externalIdentifier_subscriptionIDType; /* LONG_NAMED_ENUMERATED_VALUE */
+const SCSMOT4Record_externalIdentifier_subscriptionIDType_eND_USER_E164 = SCSMOT4Record_externalIdentifier_subscriptionIDType.eND_USER_E164; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary eND_USER_E164
@@ -109,7 +109,7 @@ const SCSMOT4Record_externalIdentifier_subscriptionIDType_eND_USER_E164 = SCSMOT
  * @type {number}
  */
 export
-const eND_USER_E164 = SCSMOT4Record_externalIdentifier_subscriptionIDType.eND_USER_E164 satisfies SCSMOT4Record_externalIdentifier_subscriptionIDType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const eND_USER_E164 = SCSMOT4Record_externalIdentifier_subscriptionIDType.eND_USER_E164; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SCSMOT4Record_externalIdentifier_subscriptionIDType_eND_USER_IMSI
@@ -122,7 +122,7 @@ const eND_USER_E164 = SCSMOT4Record_externalIdentifier_subscriptionIDType.eND_US
  * @type {number}
  */
 export
-const SCSMOT4Record_externalIdentifier_subscriptionIDType_eND_USER_IMSI = SCSMOT4Record_externalIdentifier_subscriptionIDType.eND_USER_IMSI satisfies SCSMOT4Record_externalIdentifier_subscriptionIDType; /* LONG_NAMED_ENUMERATED_VALUE */
+const SCSMOT4Record_externalIdentifier_subscriptionIDType_eND_USER_IMSI = SCSMOT4Record_externalIdentifier_subscriptionIDType.eND_USER_IMSI; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary eND_USER_IMSI
@@ -130,7 +130,7 @@ const SCSMOT4Record_externalIdentifier_subscriptionIDType_eND_USER_IMSI = SCSMOT
  * @type {number}
  */
 export
-const eND_USER_IMSI = SCSMOT4Record_externalIdentifier_subscriptionIDType.eND_USER_IMSI satisfies SCSMOT4Record_externalIdentifier_subscriptionIDType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const eND_USER_IMSI = SCSMOT4Record_externalIdentifier_subscriptionIDType.eND_USER_IMSI; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SCSMOT4Record_externalIdentifier_subscriptionIDType_eND_USER_SIP_URI
@@ -143,7 +143,7 @@ const eND_USER_IMSI = SCSMOT4Record_externalIdentifier_subscriptionIDType.eND_US
  * @type {number}
  */
 export
-const SCSMOT4Record_externalIdentifier_subscriptionIDType_eND_USER_SIP_URI = SCSMOT4Record_externalIdentifier_subscriptionIDType.eND_USER_SIP_URI satisfies SCSMOT4Record_externalIdentifier_subscriptionIDType; /* LONG_NAMED_ENUMERATED_VALUE */
+const SCSMOT4Record_externalIdentifier_subscriptionIDType_eND_USER_SIP_URI = SCSMOT4Record_externalIdentifier_subscriptionIDType.eND_USER_SIP_URI; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary eND_USER_SIP_URI
@@ -151,7 +151,7 @@ const SCSMOT4Record_externalIdentifier_subscriptionIDType_eND_USER_SIP_URI = SCS
  * @type {number}
  */
 export
-const eND_USER_SIP_URI = SCSMOT4Record_externalIdentifier_subscriptionIDType.eND_USER_SIP_URI satisfies SCSMOT4Record_externalIdentifier_subscriptionIDType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const eND_USER_SIP_URI = SCSMOT4Record_externalIdentifier_subscriptionIDType.eND_USER_SIP_URI; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SCSMOT4Record_externalIdentifier_subscriptionIDType_eND_USER_NAI
@@ -164,7 +164,7 @@ const eND_USER_SIP_URI = SCSMOT4Record_externalIdentifier_subscriptionIDType.eND
  * @type {number}
  */
 export
-const SCSMOT4Record_externalIdentifier_subscriptionIDType_eND_USER_NAI = SCSMOT4Record_externalIdentifier_subscriptionIDType.eND_USER_NAI satisfies SCSMOT4Record_externalIdentifier_subscriptionIDType; /* LONG_NAMED_ENUMERATED_VALUE */
+const SCSMOT4Record_externalIdentifier_subscriptionIDType_eND_USER_NAI = SCSMOT4Record_externalIdentifier_subscriptionIDType.eND_USER_NAI; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary eND_USER_NAI
@@ -172,7 +172,7 @@ const SCSMOT4Record_externalIdentifier_subscriptionIDType_eND_USER_NAI = SCSMOT4
  * @type {number}
  */
 export
-const eND_USER_NAI = SCSMOT4Record_externalIdentifier_subscriptionIDType.eND_USER_NAI satisfies SCSMOT4Record_externalIdentifier_subscriptionIDType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const eND_USER_NAI = SCSMOT4Record_externalIdentifier_subscriptionIDType.eND_USER_NAI; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SCSMOT4Record_externalIdentifier_subscriptionIDType_eND_USER_PRIVATE
@@ -185,7 +185,7 @@ const eND_USER_NAI = SCSMOT4Record_externalIdentifier_subscriptionIDType.eND_USE
  * @type {number}
  */
 export
-const SCSMOT4Record_externalIdentifier_subscriptionIDType_eND_USER_PRIVATE = SCSMOT4Record_externalIdentifier_subscriptionIDType.eND_USER_PRIVATE satisfies SCSMOT4Record_externalIdentifier_subscriptionIDType; /* LONG_NAMED_ENUMERATED_VALUE */
+const SCSMOT4Record_externalIdentifier_subscriptionIDType_eND_USER_PRIVATE = SCSMOT4Record_externalIdentifier_subscriptionIDType.eND_USER_PRIVATE; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary eND_USER_PRIVATE
@@ -193,7 +193,7 @@ const SCSMOT4Record_externalIdentifier_subscriptionIDType_eND_USER_PRIVATE = SCS
  * @type {number}
  */
 export
-const eND_USER_PRIVATE = SCSMOT4Record_externalIdentifier_subscriptionIDType.eND_USER_PRIVATE satisfies SCSMOT4Record_externalIdentifier_subscriptionIDType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const eND_USER_PRIVATE = SCSMOT4Record_externalIdentifier_subscriptionIDType.eND_USER_PRIVATE; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_SCSMOT4Record_externalIdentifier_subscriptionIDType: $.ASN1Decoder<SCSMOT4Record_externalIdentifier_subscriptionIDType> = $._decodeEnumerated;

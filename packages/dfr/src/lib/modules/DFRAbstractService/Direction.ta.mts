@@ -88,7 +88,7 @@ const Direction = _enum_for_Direction;
  * @type {number}
  */
 export
-const Direction_ascending = Direction.ascending satisfies Direction; /* LONG_NAMED_ENUMERATED_VALUE */
+const Direction_ascending = Direction.ascending; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ascending
@@ -99,7 +99,7 @@ const Direction_ascending = Direction.ascending satisfies Direction; /* LONG_NAM
  * @type {number}
  */
 export
-const ascending = Direction.ascending satisfies Direction; /* SHORT_NAMED_ENUMERATED_VALUE */
+const ascending = Direction.ascending; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Direction_descending
@@ -110,7 +110,7 @@ const ascending = Direction.ascending satisfies Direction; /* SHORT_NAMED_ENUMER
  * @type {number}
  */
 export
-const Direction_descending = Direction.descending satisfies Direction; /* LONG_NAMED_ENUMERATED_VALUE */
+const Direction_descending = Direction.descending; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary descending
@@ -121,7 +121,7 @@ const Direction_descending = Direction.descending satisfies Direction; /* LONG_N
  * @type {number}
  */
 export
-const descending = Direction.descending satisfies Direction; /* SHORT_NAMED_ENUMERATED_VALUE */
+const descending = Direction.descending; /* SHORT_NAMED_ENUMERATED_VALUE */
 export function _decode_Direction(el: _Element): Direction {
     const enumerated = $._decodeEnumerated(el);
     switch (enumerated) {

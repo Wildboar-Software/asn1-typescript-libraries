@@ -39,7 +39,7 @@ const APNRateControlParameters_rateControlTimeUnit_unrestricted = 0 satisfies AP
  * @type {number}
  */
 export
-const unrestricted = APNRateControlParameters_rateControlTimeUnit_unrestricted satisfies APNRateControlParameters_rateControlTimeUnit; /* SHORT_NAMED_INTEGER_VALUE */
+const unrestricted = APNRateControlParameters_rateControlTimeUnit_unrestricted; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary APNRateControlParameters_rateControlTimeUnit_minute
@@ -55,7 +55,7 @@ const APNRateControlParameters_rateControlTimeUnit_minute = 1 satisfies APNRateC
  * @type {number}
  */
 export
-const minute = APNRateControlParameters_rateControlTimeUnit_minute satisfies APNRateControlParameters_rateControlTimeUnit; /* SHORT_NAMED_INTEGER_VALUE */
+const minute = APNRateControlParameters_rateControlTimeUnit_minute; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary APNRateControlParameters_rateControlTimeUnit_hour
@@ -71,7 +71,7 @@ const APNRateControlParameters_rateControlTimeUnit_hour = 2 satisfies APNRateCon
  * @type {number}
  */
 export
-const hour = APNRateControlParameters_rateControlTimeUnit_hour satisfies APNRateControlParameters_rateControlTimeUnit; /* SHORT_NAMED_INTEGER_VALUE */
+const hour = APNRateControlParameters_rateControlTimeUnit_hour; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary APNRateControlParameters_rateControlTimeUnit_day
@@ -87,7 +87,7 @@ const APNRateControlParameters_rateControlTimeUnit_day = 3 satisfies APNRateCont
  * @type {number}
  */
 export
-const day = APNRateControlParameters_rateControlTimeUnit_day satisfies APNRateControlParameters_rateControlTimeUnit; /* SHORT_NAMED_INTEGER_VALUE */
+const day = APNRateControlParameters_rateControlTimeUnit_day; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary APNRateControlParameters_rateControlTimeUnit_week
@@ -103,7 +103,7 @@ const APNRateControlParameters_rateControlTimeUnit_week = 4 satisfies APNRateCon
  * @type {number}
  */
 export
-const week = APNRateControlParameters_rateControlTimeUnit_week satisfies APNRateControlParameters_rateControlTimeUnit; /* SHORT_NAMED_INTEGER_VALUE */
+const week = APNRateControlParameters_rateControlTimeUnit_week; /* SHORT_NAMED_INTEGER_VALUE */
 
 export
 const _decode_APNRateControlParameters_rateControlTimeUnit: $.ASN1Decoder<APNRateControlParameters_rateControlTimeUnit> = $._decodeInteger;

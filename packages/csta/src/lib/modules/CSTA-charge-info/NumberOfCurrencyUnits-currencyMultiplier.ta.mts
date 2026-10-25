@@ -104,7 +104,7 @@ const NumberOfCurrencyUnits_currencyMultiplier = _enum_for_NumberOfCurrencyUnits
  * @type {number}
  */
 export
-const NumberOfCurrencyUnits_currencyMultiplier_oneThousandth = NumberOfCurrencyUnits_currencyMultiplier.oneThousandth satisfies NumberOfCurrencyUnits_currencyMultiplier; /* LONG_NAMED_ENUMERATED_VALUE */
+const NumberOfCurrencyUnits_currencyMultiplier_oneThousandth = NumberOfCurrencyUnits_currencyMultiplier.oneThousandth; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary oneThousandth
@@ -112,7 +112,7 @@ const NumberOfCurrencyUnits_currencyMultiplier_oneThousandth = NumberOfCurrencyU
  * @type {number}
  */
 export
-const oneThousandth = NumberOfCurrencyUnits_currencyMultiplier.oneThousandth satisfies NumberOfCurrencyUnits_currencyMultiplier; /* SHORT_NAMED_ENUMERATED_VALUE */
+const oneThousandth = NumberOfCurrencyUnits_currencyMultiplier.oneThousandth; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NumberOfCurrencyUnits_currencyMultiplier_oneHundredth
@@ -124,7 +124,7 @@ const oneThousandth = NumberOfCurrencyUnits_currencyMultiplier.oneThousandth sat
  * @type {number}
  */
 export
-const NumberOfCurrencyUnits_currencyMultiplier_oneHundredth = NumberOfCurrencyUnits_currencyMultiplier.oneHundredth satisfies NumberOfCurrencyUnits_currencyMultiplier; /* LONG_NAMED_ENUMERATED_VALUE */
+const NumberOfCurrencyUnits_currencyMultiplier_oneHundredth = NumberOfCurrencyUnits_currencyMultiplier.oneHundredth; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary oneHundredth
@@ -132,7 +132,7 @@ const NumberOfCurrencyUnits_currencyMultiplier_oneHundredth = NumberOfCurrencyUn
  * @type {number}
  */
 export
-const oneHundredth = NumberOfCurrencyUnits_currencyMultiplier.oneHundredth satisfies NumberOfCurrencyUnits_currencyMultiplier; /* SHORT_NAMED_ENUMERATED_VALUE */
+const oneHundredth = NumberOfCurrencyUnits_currencyMultiplier.oneHundredth; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NumberOfCurrencyUnits_currencyMultiplier_oneTenth
@@ -144,7 +144,7 @@ const oneHundredth = NumberOfCurrencyUnits_currencyMultiplier.oneHundredth satis
  * @type {number}
  */
 export
-const NumberOfCurrencyUnits_currencyMultiplier_oneTenth = NumberOfCurrencyUnits_currencyMultiplier.oneTenth satisfies NumberOfCurrencyUnits_currencyMultiplier; /* LONG_NAMED_ENUMERATED_VALUE */
+const NumberOfCurrencyUnits_currencyMultiplier_oneTenth = NumberOfCurrencyUnits_currencyMultiplier.oneTenth; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary oneTenth
@@ -152,7 +152,7 @@ const NumberOfCurrencyUnits_currencyMultiplier_oneTenth = NumberOfCurrencyUnits_
  * @type {number}
  */
 export
-const oneTenth = NumberOfCurrencyUnits_currencyMultiplier.oneTenth satisfies NumberOfCurrencyUnits_currencyMultiplier; /* SHORT_NAMED_ENUMERATED_VALUE */
+const oneTenth = NumberOfCurrencyUnits_currencyMultiplier.oneTenth; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NumberOfCurrencyUnits_currencyMultiplier_one
@@ -164,7 +164,7 @@ const oneTenth = NumberOfCurrencyUnits_currencyMultiplier.oneTenth satisfies Num
  * @type {number}
  */
 export
-const NumberOfCurrencyUnits_currencyMultiplier_one = NumberOfCurrencyUnits_currencyMultiplier.one satisfies NumberOfCurrencyUnits_currencyMultiplier; /* LONG_NAMED_ENUMERATED_VALUE */
+const NumberOfCurrencyUnits_currencyMultiplier_one = NumberOfCurrencyUnits_currencyMultiplier.one; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary one
@@ -172,7 +172,7 @@ const NumberOfCurrencyUnits_currencyMultiplier_one = NumberOfCurrencyUnits_curre
  * @type {number}
  */
 export
-const one = NumberOfCurrencyUnits_currencyMultiplier.one satisfies NumberOfCurrencyUnits_currencyMultiplier; /* SHORT_NAMED_ENUMERATED_VALUE */
+const one = NumberOfCurrencyUnits_currencyMultiplier.one; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NumberOfCurrencyUnits_currencyMultiplier_ten
@@ -184,7 +184,7 @@ const one = NumberOfCurrencyUnits_currencyMultiplier.one satisfies NumberOfCurre
  * @type {number}
  */
 export
-const NumberOfCurrencyUnits_currencyMultiplier_ten = NumberOfCurrencyUnits_currencyMultiplier.ten satisfies NumberOfCurrencyUnits_currencyMultiplier; /* LONG_NAMED_ENUMERATED_VALUE */
+const NumberOfCurrencyUnits_currencyMultiplier_ten = NumberOfCurrencyUnits_currencyMultiplier.ten; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ten
@@ -192,7 +192,7 @@ const NumberOfCurrencyUnits_currencyMultiplier_ten = NumberOfCurrencyUnits_curre
  * @type {number}
  */
 export
-const ten = NumberOfCurrencyUnits_currencyMultiplier.ten satisfies NumberOfCurrencyUnits_currencyMultiplier; /* SHORT_NAMED_ENUMERATED_VALUE */
+const ten = NumberOfCurrencyUnits_currencyMultiplier.ten; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NumberOfCurrencyUnits_currencyMultiplier_hundred
@@ -204,7 +204,7 @@ const ten = NumberOfCurrencyUnits_currencyMultiplier.ten satisfies NumberOfCurre
  * @type {number}
  */
 export
-const NumberOfCurrencyUnits_currencyMultiplier_hundred = NumberOfCurrencyUnits_currencyMultiplier.hundred satisfies NumberOfCurrencyUnits_currencyMultiplier; /* LONG_NAMED_ENUMERATED_VALUE */
+const NumberOfCurrencyUnits_currencyMultiplier_hundred = NumberOfCurrencyUnits_currencyMultiplier.hundred; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary hundred
@@ -212,7 +212,7 @@ const NumberOfCurrencyUnits_currencyMultiplier_hundred = NumberOfCurrencyUnits_c
  * @type {number}
  */
 export
-const hundred = NumberOfCurrencyUnits_currencyMultiplier.hundred satisfies NumberOfCurrencyUnits_currencyMultiplier; /* SHORT_NAMED_ENUMERATED_VALUE */
+const hundred = NumberOfCurrencyUnits_currencyMultiplier.hundred; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NumberOfCurrencyUnits_currencyMultiplier_thousand
@@ -224,7 +224,7 @@ const hundred = NumberOfCurrencyUnits_currencyMultiplier.hundred satisfies Numbe
  * @type {number}
  */
 export
-const NumberOfCurrencyUnits_currencyMultiplier_thousand = NumberOfCurrencyUnits_currencyMultiplier.thousand satisfies NumberOfCurrencyUnits_currencyMultiplier; /* LONG_NAMED_ENUMERATED_VALUE */
+const NumberOfCurrencyUnits_currencyMultiplier_thousand = NumberOfCurrencyUnits_currencyMultiplier.thousand; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary thousand
@@ -232,7 +232,7 @@ const NumberOfCurrencyUnits_currencyMultiplier_thousand = NumberOfCurrencyUnits_
  * @type {number}
  */
 export
-const thousand = NumberOfCurrencyUnits_currencyMultiplier.thousand satisfies NumberOfCurrencyUnits_currencyMultiplier; /* SHORT_NAMED_ENUMERATED_VALUE */
+const thousand = NumberOfCurrencyUnits_currencyMultiplier.thousand; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 let _cached_decoder_for_NumberOfCurrencyUnits_currencyMultiplier: $.ASN1Decoder<NumberOfCurrencyUnits_currencyMultiplier> | null = null;
 

@@ -42,7 +42,7 @@ export const RetrievalError_attribute_error = 1 satisfies RetrievalError; /* LON
  * @constant
  * @type {number}
  */
-export const attribute_error = RetrievalError_attribute_error satisfies RetrievalError; /* SHORT_NAMED_INTEGER_VALUE */
+export const attribute_error = RetrievalError_attribute_error; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RetrievalError_auto_action_request_error
@@ -56,7 +56,7 @@ export const RetrievalError_auto_action_request_error = 2 satisfies RetrievalErr
  * @constant
  * @type {number}
  */
-export const auto_action_request_error = RetrievalError_auto_action_request_error satisfies RetrievalError; /* SHORT_NAMED_INTEGER_VALUE */
+export const auto_action_request_error = RetrievalError_auto_action_request_error; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RetrievalError_delete_error
@@ -70,7 +70,7 @@ export const RetrievalError_delete_error = 3 satisfies RetrievalError; /* LONG_N
  * @constant
  * @type {number}
  */
-export const delete_error = RetrievalError_delete_error satisfies RetrievalError; /* SHORT_NAMED_INTEGER_VALUE */
+export const delete_error = RetrievalError_delete_error; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RetrievalError_fetch_restriction_error
@@ -84,7 +84,7 @@ export const RetrievalError_fetch_restriction_error = 4 satisfies RetrievalError
  * @constant
  * @type {number}
  */
-export const fetch_restriction_error = RetrievalError_fetch_restriction_error satisfies RetrievalError; /* SHORT_NAMED_INTEGER_VALUE */
+export const fetch_restriction_error = RetrievalError_fetch_restriction_error; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RetrievalError_invalid_parameter_error
@@ -98,7 +98,7 @@ export const RetrievalError_invalid_parameter_error = 5 satisfies RetrievalError
  * @constant
  * @type {number}
  */
-export const invalid_parameter_error = RetrievalError_invalid_parameter_error satisfies RetrievalError; /* SHORT_NAMED_INTEGER_VALUE */
+export const invalid_parameter_error = RetrievalError_invalid_parameter_error; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RetrievalError_range_error
@@ -112,7 +112,7 @@ export const RetrievalError_range_error = 6 satisfies RetrievalError; /* LONG_NA
  * @constant
  * @type {number}
  */
-export const range_error = RetrievalError_range_error satisfies RetrievalError; /* SHORT_NAMED_INTEGER_VALUE */
+export const range_error = RetrievalError_range_error; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RetrievalError_security_error
@@ -126,7 +126,7 @@ export const RetrievalError_security_error = 7 satisfies RetrievalError; /* LONG
  * @constant
  * @type {number}
  */
-export const security_error = RetrievalError_security_error satisfies RetrievalError; /* SHORT_NAMED_INTEGER_VALUE */
+export const security_error = RetrievalError_security_error; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RetrievalError_sequence_number_error
@@ -140,7 +140,7 @@ export const RetrievalError_sequence_number_error = 8 satisfies RetrievalError; 
  * @constant
  * @type {number}
  */
-export const sequence_number_error = RetrievalError_sequence_number_error satisfies RetrievalError; /* SHORT_NAMED_INTEGER_VALUE */
+export const sequence_number_error = RetrievalError_sequence_number_error; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RetrievalError_service_error
@@ -154,7 +154,7 @@ export const RetrievalError_service_error = 9 satisfies RetrievalError; /* LONG_
  * @constant
  * @type {number}
  */
-export const service_error = RetrievalError_service_error satisfies RetrievalError; /* SHORT_NAMED_INTEGER_VALUE */
+export const service_error = RetrievalError_service_error; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_RetrievalError = $._decodeInteger;

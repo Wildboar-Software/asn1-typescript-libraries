@@ -87,7 +87,7 @@ const MMSDirection = _enum_for_MMSDirection;
  * @type {number}
  */
 export
-const MMSDirection_fromTarget = MMSDirection.fromTarget satisfies MMSDirection; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMSDirection_fromTarget = MMSDirection.fromTarget; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary fromTarget
@@ -95,7 +95,7 @@ const MMSDirection_fromTarget = MMSDirection.fromTarget satisfies MMSDirection; 
  * @type {number}
  */
 export
-const fromTarget = MMSDirection.fromTarget satisfies MMSDirection; /* SHORT_NAMED_ENUMERATED_VALUE */
+const fromTarget = MMSDirection.fromTarget; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMSDirection_toTarget
@@ -103,7 +103,7 @@ const fromTarget = MMSDirection.fromTarget satisfies MMSDirection; /* SHORT_NAME
  * @type {number}
  */
 export
-const MMSDirection_toTarget = MMSDirection.toTarget satisfies MMSDirection; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMSDirection_toTarget = MMSDirection.toTarget; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary toTarget
@@ -111,7 +111,7 @@ const MMSDirection_toTarget = MMSDirection.toTarget satisfies MMSDirection; /* L
  * @type {number}
  */
 export
-const toTarget = MMSDirection.toTarget satisfies MMSDirection; /* SHORT_NAMED_ENUMERATED_VALUE */
+const toTarget = MMSDirection.toTarget; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_MMSDirection: $.ASN1Decoder<MMSDirection> = $._decodeEnumerated;
 export const _encode_MMSDirection: $.ASN1Encoder<MMSDirection> = $._encodeEnumerated;
 

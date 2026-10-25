@@ -55,7 +55,7 @@ export const NNUAMSBasicCodeField_unspecified = 0 satisfies NNUAMSBasicCodeField
  * @constant
  * @type {number}
  */
-export const unspecified = NNUAMSBasicCodeField_unspecified satisfies NNUAMSBasicCodeField; /* SHORT_NAMED_INTEGER_VALUE */
+export const unspecified = NNUAMSBasicCodeField_unspecified; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NNUAMSBasicCodeField_cannot_deliver_to_user
@@ -69,7 +69,7 @@ export const NNUAMSBasicCodeField_cannot_deliver_to_user = 1 satisfies NNUAMSBas
  * @constant
  * @type {number}
  */
-export const cannot_deliver_to_user = NNUAMSBasicCodeField_cannot_deliver_to_user satisfies NNUAMSBasicCodeField; /* SHORT_NAMED_INTEGER_VALUE */
+export const cannot_deliver_to_user = NNUAMSBasicCodeField_cannot_deliver_to_user; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NNUAMSBasicCodeField_delivery_timeout
@@ -83,7 +83,7 @@ export const NNUAMSBasicCodeField_delivery_timeout = 2 satisfies NNUAMSBasicCode
  * @constant
  * @type {number}
  */
-export const delivery_timeout = NNUAMSBasicCodeField_delivery_timeout satisfies NNUAMSBasicCodeField; /* SHORT_NAMED_INTEGER_VALUE */
+export const delivery_timeout = NNUAMSBasicCodeField_delivery_timeout; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NNUAMSBasicCodeField_message_discarded
@@ -97,7 +97,7 @@ export const NNUAMSBasicCodeField_message_discarded = 3 satisfies NNUAMSBasicCod
  * @constant
  * @type {number}
  */
-export const message_discarded = NNUAMSBasicCodeField_message_discarded satisfies NNUAMSBasicCodeField; /* SHORT_NAMED_INTEGER_VALUE */
+export const message_discarded = NNUAMSBasicCodeField_message_discarded; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NNUAMSBasicCodeField_subscription_terminated
@@ -111,7 +111,7 @@ export const NNUAMSBasicCodeField_subscription_terminated = 4 satisfies NNUAMSBa
  * @constant
  * @type {number}
  */
-export const subscription_terminated = NNUAMSBasicCodeField_subscription_terminated satisfies NNUAMSBasicCodeField; /* SHORT_NAMED_INTEGER_VALUE */
+export const subscription_terminated = NNUAMSBasicCodeField_subscription_terminated; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NNUAMSBasicCodeField_forwarding_error
@@ -125,7 +125,7 @@ export const NNUAMSBasicCodeField_forwarding_error = 5 satisfies NNUAMSBasicCode
  * @constant
  * @type {number}
  */
-export const forwarding_error = NNUAMSBasicCodeField_forwarding_error satisfies NNUAMSBasicCodeField; /* SHORT_NAMED_INTEGER_VALUE */
+export const forwarding_error = NNUAMSBasicCodeField_forwarding_error; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NNUAMSBasicCodeField_security_error
@@ -139,7 +139,7 @@ export const NNUAMSBasicCodeField_security_error = 6 satisfies NNUAMSBasicCodeFi
  * @constant
  * @type {number}
  */
-export const security_error = NNUAMSBasicCodeField_security_error satisfies NNUAMSBasicCodeField; /* SHORT_NAMED_INTEGER_VALUE */
+export const security_error = NNUAMSBasicCodeField_security_error; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_NNUAMSBasicCodeField = $._decodeInteger;

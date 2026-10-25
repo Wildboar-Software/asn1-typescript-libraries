@@ -39,7 +39,7 @@ export const TroubleFound_number_pending = 0 satisfies TroubleFound_number; /* L
  * @constant
  * @type {number}
  */
-export const pending = TroubleFound_number_pending satisfies TroubleFound_number; /* SHORT_NAMED_INTEGER_VALUE */
+export const pending = TroubleFound_number_pending; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -55,7 +55,7 @@ export const TroubleFound_number_cameClear = 1 satisfies TroubleFound_number; /*
  * @constant
  * @type {number}
  */
-export const cameClear = TroubleFound_number_cameClear satisfies TroubleFound_number; /* SHORT_NAMED_INTEGER_VALUE */
+export const cameClear = TroubleFound_number_cameClear; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -71,7 +71,7 @@ export const TroubleFound_number_centralOffice = 2 satisfies TroubleFound_number
  * @constant
  * @type {number}
  */
-export const centralOffice = TroubleFound_number_centralOffice satisfies TroubleFound_number; /* SHORT_NAMED_INTEGER_VALUE */
+export const centralOffice = TroubleFound_number_centralOffice; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -87,7 +87,7 @@ export const TroubleFound_number_switchTrouble = 3 satisfies TroubleFound_number
  * @constant
  * @type {number}
  */
-export const switchTrouble = TroubleFound_number_switchTrouble satisfies TroubleFound_number; /* SHORT_NAMED_INTEGER_VALUE */
+export const switchTrouble = TroubleFound_number_switchTrouble; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -103,7 +103,7 @@ export const TroubleFound_number_customerProvidedEquipment = 4 satisfies Trouble
  * @constant
  * @type {number}
  */
-export const customerProvidedEquipment = TroubleFound_number_customerProvidedEquipment satisfies TroubleFound_number; /* SHORT_NAMED_INTEGER_VALUE */
+export const customerProvidedEquipment = TroubleFound_number_customerProvidedEquipment; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -119,7 +119,7 @@ export const TroubleFound_number_facility = 5 satisfies TroubleFound_number; /* 
  * @constant
  * @type {number}
  */
-export const facility = TroubleFound_number_facility satisfies TroubleFound_number; /* SHORT_NAMED_INTEGER_VALUE */
+export const facility = TroubleFound_number_facility; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -135,7 +135,7 @@ export const TroubleFound_number_centralOfficeFacility = 6 satisfies TroubleFoun
  * @constant
  * @type {number}
  */
-export const centralOfficeFacility = TroubleFound_number_centralOfficeFacility satisfies TroubleFound_number; /* SHORT_NAMED_INTEGER_VALUE */
+export const centralOfficeFacility = TroubleFound_number_centralOfficeFacility; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -151,7 +151,7 @@ export const TroubleFound_number_iCfacility = 7 satisfies TroubleFound_number; /
  * @constant
  * @type {number}
  */
-export const iCfacility = TroubleFound_number_iCfacility satisfies TroubleFound_number; /* SHORT_NAMED_INTEGER_VALUE */
+export const iCfacility = TroubleFound_number_iCfacility; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -167,7 +167,7 @@ export const TroubleFound_number_interexchangeCarrier = 8 satisfies TroubleFound
  * @constant
  * @type {number}
  */
-export const interexchangeCarrier = TroubleFound_number_interexchangeCarrier satisfies TroubleFound_number; /* SHORT_NAMED_INTEGER_VALUE */
+export const interexchangeCarrier = TroubleFound_number_interexchangeCarrier; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -183,7 +183,7 @@ export const TroubleFound_number_information = 9 satisfies TroubleFound_number; 
  * @constant
  * @type {number}
  */
-export const information = TroubleFound_number_information satisfies TroubleFound_number; /* SHORT_NAMED_INTEGER_VALUE */
+export const information = TroubleFound_number_information; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -199,7 +199,7 @@ export const TroubleFound_number_nonplanClassified = 10 satisfies TroubleFound_n
  * @constant
  * @type {number}
  */
-export const nonplanClassified = TroubleFound_number_nonplanClassified satisfies TroubleFound_number; /* SHORT_NAMED_INTEGER_VALUE */
+export const nonplanClassified = TroubleFound_number_nonplanClassified; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -215,7 +215,7 @@ export const TroubleFound_number_nonplanClassifiedIC = 11 satisfies TroubleFound
  * @constant
  * @type {number}
  */
-export const nonplanClassifiedIC = TroubleFound_number_nonplanClassifiedIC satisfies TroubleFound_number; /* SHORT_NAMED_INTEGER_VALUE */
+export const nonplanClassifiedIC = TroubleFound_number_nonplanClassifiedIC; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -231,7 +231,7 @@ export const TroubleFound_number_nonplanClassifiedEA = 12 satisfies TroubleFound
  * @constant
  * @type {number}
  */
-export const nonplanClassifiedEA = TroubleFound_number_nonplanClassifiedEA satisfies TroubleFound_number; /* SHORT_NAMED_INTEGER_VALUE */
+export const nonplanClassifiedEA = TroubleFound_number_nonplanClassifiedEA; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -247,7 +247,7 @@ export const TroubleFound_number_noTroubleFound = 13 satisfies TroubleFound_numb
  * @constant
  * @type {number}
  */
-export const noTroubleFound = TroubleFound_number_noTroubleFound satisfies TroubleFound_number; /* SHORT_NAMED_INTEGER_VALUE */
+export const noTroubleFound = TroubleFound_number_noTroubleFound; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -263,7 +263,7 @@ export const TroubleFound_number_station = 14 satisfies TroubleFound_number; /* 
  * @constant
  * @type {number}
  */
-export const station = TroubleFound_number_station satisfies TroubleFound_number; /* SHORT_NAMED_INTEGER_VALUE */
+export const station = TroubleFound_number_station; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -279,7 +279,7 @@ export const TroubleFound_number_stationProductData = 15 satisfies TroubleFound_
  * @constant
  * @type {number}
  */
-export const stationProductData = TroubleFound_number_stationProductData satisfies TroubleFound_number; /* SHORT_NAMED_INTEGER_VALUE */
+export const stationProductData = TroubleFound_number_stationProductData; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -295,7 +295,7 @@ export const TroubleFound_number_stationProductTerminal = 16 satisfies TroubleFo
  * @constant
  * @type {number}
  */
-export const stationProductTerminal = TroubleFound_number_stationProductTerminal satisfies TroubleFound_number; /* SHORT_NAMED_INTEGER_VALUE */
+export const stationProductTerminal = TroubleFound_number_stationProductTerminal; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -311,7 +311,7 @@ export const TroubleFound_number_stationProductVideo = 17 satisfies TroubleFound
  * @constant
  * @type {number}
  */
-export const stationProductVideo = TroubleFound_number_stationProductVideo satisfies TroubleFound_number; /* SHORT_NAMED_INTEGER_VALUE */
+export const stationProductVideo = TroubleFound_number_stationProductVideo; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -327,7 +327,7 @@ export const TroubleFound_number_stationProductVoice = 18 satisfies TroubleFound
  * @constant
  * @type {number}
  */
-export const stationProductVoice = TroubleFound_number_stationProductVoice satisfies TroubleFound_number; /* SHORT_NAMED_INTEGER_VALUE */
+export const stationProductVoice = TroubleFound_number_stationProductVoice; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -343,7 +343,7 @@ export const TroubleFound_number_stationWiring = 19 satisfies TroubleFound_numbe
  * @constant
  * @type {number}
  */
-export const stationWiring = TroubleFound_number_stationWiring satisfies TroubleFound_number; /* SHORT_NAMED_INTEGER_VALUE */
+export const stationWiring = TroubleFound_number_stationWiring; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -359,7 +359,7 @@ export const TroubleFound_number_otherStationEquipment = 20 satisfies TroubleFou
  * @constant
  * @type {number}
  */
-export const otherStationEquipment = TroubleFound_number_otherStationEquipment satisfies TroubleFound_number; /* SHORT_NAMED_INTEGER_VALUE */
+export const otherStationEquipment = TroubleFound_number_otherStationEquipment; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -375,7 +375,7 @@ export const TroubleFound_number_foundOKStation = 21 satisfies TroubleFound_numb
  * @constant
  * @type {number}
  */
-export const foundOKStation = TroubleFound_number_foundOKStation satisfies TroubleFound_number; /* SHORT_NAMED_INTEGER_VALUE */
+export const foundOKStation = TroubleFound_number_foundOKStation; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -391,7 +391,7 @@ export const TroubleFound_number_servingBureau = 22 satisfies TroubleFound_numbe
  * @constant
  * @type {number}
  */
-export const servingBureau = TroubleFound_number_servingBureau satisfies TroubleFound_number; /* SHORT_NAMED_INTEGER_VALUE */
+export const servingBureau = TroubleFound_number_servingBureau; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -407,7 +407,7 @@ export const TroubleFound_number_testOK = 23 satisfies TroubleFound_number; /* L
  * @constant
  * @type {number}
  */
-export const testOK = TroubleFound_number_testOK satisfies TroubleFound_number; /* SHORT_NAMED_INTEGER_VALUE */
+export const testOK = TroubleFound_number_testOK; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -423,7 +423,7 @@ export const TroubleFound_number_publicServicesCoinSet = 24 satisfies TroubleFou
  * @constant
  * @type {number}
  */
-export const publicServicesCoinSet = TroubleFound_number_publicServicesCoinSet satisfies TroubleFound_number; /* SHORT_NAMED_INTEGER_VALUE */
+export const publicServicesCoinSet = TroubleFound_number_publicServicesCoinSet; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -439,7 +439,7 @@ export const TroubleFound_number_customerOperatingInstructions = 25 satisfies Tr
  * @constant
  * @type {number}
  */
-export const customerOperatingInstructions = TroubleFound_number_customerOperatingInstructions satisfies TroubleFound_number; /* SHORT_NAMED_INTEGER_VALUE */
+export const customerOperatingInstructions = TroubleFound_number_customerOperatingInstructions; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -455,7 +455,7 @@ export const TroubleFound_number_testedOKVerifiedOK = 26 satisfies TroubleFound_
  * @constant
  * @type {number}
  */
-export const testedOKVerifiedOK = TroubleFound_number_testedOKVerifiedOK satisfies TroubleFound_number; /* SHORT_NAMED_INTEGER_VALUE */
+export const testedOKVerifiedOK = TroubleFound_number_testedOKVerifiedOK; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -471,7 +471,7 @@ export const TroubleFound_number_coFacilityTestedFoundOK = 27 satisfies TroubleF
  * @constant
  * @type {number}
  */
-export const coFacilityTestedFoundOK = TroubleFound_number_coFacilityTestedFoundOK satisfies TroubleFound_number; /* SHORT_NAMED_INTEGER_VALUE */
+export const coFacilityTestedFoundOK = TroubleFound_number_coFacilityTestedFoundOK; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -487,7 +487,7 @@ export const TroubleFound_number_outsideFacilityTestedFoundOK = 28 satisfies Tro
  * @constant
  * @type {number}
  */
-export const outsideFacilityTestedFoundOK = TroubleFound_number_outsideFacilityTestedFoundOK satisfies TroubleFound_number; /* SHORT_NAMED_INTEGER_VALUE */
+export const outsideFacilityTestedFoundOK = TroubleFound_number_outsideFacilityTestedFoundOK; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -503,7 +503,7 @@ export const TroubleFound_number_referredOutToOtherDept = 29 satisfies TroubleFo
  * @constant
  * @type {number}
  */
-export const referredOutToOtherDept = TroubleFound_number_referredOutToOtherDept satisfies TroubleFound_number; /* SHORT_NAMED_INTEGER_VALUE */
+export const referredOutToOtherDept = TroubleFound_number_referredOutToOtherDept; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -519,7 +519,7 @@ export const TroubleFound_number_protectiveConnectingArrang = 30 satisfies Troub
  * @constant
  * @type {number}
  */
-export const protectiveConnectingArrang = TroubleFound_number_protectiveConnectingArrang satisfies TroubleFound_number; /* SHORT_NAMED_INTEGER_VALUE */
+export const protectiveConnectingArrang = TroubleFound_number_protectiveConnectingArrang; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -535,7 +535,7 @@ export const TroubleFound_number_cpeCustomerResponsibility = 31 satisfies Troubl
  * @constant
  * @type {number}
  */
-export const cpeCustomerResponsibility = TroubleFound_number_cpeCustomerResponsibility satisfies TroubleFound_number; /* SHORT_NAMED_INTEGER_VALUE */
+export const cpeCustomerResponsibility = TroubleFound_number_cpeCustomerResponsibility; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -551,7 +551,7 @@ export const TroubleFound_number_preService = 32 satisfies TroubleFound_number; 
  * @constant
  * @type {number}
  */
-export const preService = TroubleFound_number_preService satisfies TroubleFound_number; /* SHORT_NAMED_INTEGER_VALUE */
+export const preService = TroubleFound_number_preService; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -567,7 +567,7 @@ export const TroubleFound_number_preServiceIC = 33 satisfies TroubleFound_number
  * @constant
  * @type {number}
  */
-export const preServiceIC = TroubleFound_number_preServiceIC satisfies TroubleFound_number; /* SHORT_NAMED_INTEGER_VALUE */
+export const preServiceIC = TroubleFound_number_preServiceIC; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -583,7 +583,7 @@ export const TroubleFound_number_preServiceEA = 34 satisfies TroubleFound_number
  * @constant
  * @type {number}
  */
-export const preServiceEA = TroubleFound_number_preServiceEA satisfies TroubleFound_number; /* SHORT_NAMED_INTEGER_VALUE */
+export const preServiceEA = TroubleFound_number_preServiceEA; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -599,7 +599,7 @@ export const TroubleFound_number_serviceNode = 35 satisfies TroubleFound_number;
  * @constant
  * @type {number}
  */
-export const serviceNode = TroubleFound_number_serviceNode satisfies TroubleFound_number; /* SHORT_NAMED_INTEGER_VALUE */
+export const serviceNode = TroubleFound_number_serviceNode; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -615,7 +615,7 @@ export const TroubleFound_number_data = 36 satisfies TroubleFound_number; /* LON
  * @constant
  * @type {number}
  */
-export const data = TroubleFound_number_data satisfies TroubleFound_number; /* SHORT_NAMED_INTEGER_VALUE */
+export const data = TroubleFound_number_data; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -631,7 +631,7 @@ export const TroubleFound_number_customerReferredToVendor = 37 satisfies Trouble
  * @constant
  * @type {number}
  */
-export const customerReferredToVendor = TroubleFound_number_customerReferredToVendor satisfies TroubleFound_number; /* SHORT_NAMED_INTEGER_VALUE */
+export const customerReferredToVendor = TroubleFound_number_customerReferredToVendor; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -647,7 +647,7 @@ export const TroubleFound_number_exchangeAccess = 38 satisfies TroubleFound_numb
  * @constant
  * @type {number}
  */
-export const exchangeAccess = TroubleFound_number_exchangeAccess satisfies TroubleFound_number; /* SHORT_NAMED_INTEGER_VALUE */
+export const exchangeAccess = TroubleFound_number_exchangeAccess; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -663,7 +663,7 @@ export const TroubleFound_number_international = 39 satisfies TroubleFound_numbe
  * @constant
  * @type {number}
  */
-export const international = TroubleFound_number_international satisfies TroubleFound_number; /* SHORT_NAMED_INTEGER_VALUE */
+export const international = TroubleFound_number_international; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -679,7 +679,7 @@ export const TroubleFound_number_otherProvidedAccess = 40 satisfies TroubleFound
  * @constant
  * @type {number}
  */
-export const otherProvidedAccess = TroubleFound_number_otherProvidedAccess satisfies TroubleFound_number; /* SHORT_NAMED_INTEGER_VALUE */
+export const otherProvidedAccess = TroubleFound_number_otherProvidedAccess; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -695,7 +695,7 @@ export const TroubleFound_number_existingReport = 41 satisfies TroubleFound_numb
  * @constant
  * @type {number}
  */
-export const existingReport = TroubleFound_number_existingReport satisfies TroubleFound_number; /* SHORT_NAMED_INTEGER_VALUE */
+export const existingReport = TroubleFound_number_existingReport; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -711,7 +711,7 @@ export const TroubleFound_number_cancelExclude = 42 satisfies TroubleFound_numbe
  * @constant
  * @type {number}
  */
-export const cancelExclude = TroubleFound_number_cancelExclude satisfies TroubleFound_number; /* SHORT_NAMED_INTEGER_VALUE */
+export const cancelExclude = TroubleFound_number_cancelExclude; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -727,7 +727,7 @@ export const TroubleFound_number_paBX = 43 satisfies TroubleFound_number; /* LON
  * @constant
  * @type {number}
  */
-export const paBX = TroubleFound_number_paBX satisfies TroubleFound_number; /* SHORT_NAMED_INTEGER_VALUE */
+export const paBX = TroubleFound_number_paBX; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -743,7 +743,7 @@ export const TroubleFound_number_outsideWire = 44 satisfies TroubleFound_number;
  * @constant
  * @type {number}
  */
-export const outsideWire = TroubleFound_number_outsideWire satisfies TroubleFound_number; /* SHORT_NAMED_INTEGER_VALUE */
+export const outsideWire = TroubleFound_number_outsideWire; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -759,7 +759,7 @@ export const TroubleFound_number_outsideTerminals = 45 satisfies TroubleFound_nu
  * @constant
  * @type {number}
  */
-export const outsideTerminals = TroubleFound_number_outsideTerminals satisfies TroubleFound_number; /* SHORT_NAMED_INTEGER_VALUE */
+export const outsideTerminals = TroubleFound_number_outsideTerminals; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -775,7 +775,7 @@ export const TroubleFound_number_outsidePlantEquipment = 46 satisfies TroubleFou
  * @constant
  * @type {number}
  */
-export const outsidePlantEquipment = TroubleFound_number_outsidePlantEquipment satisfies TroubleFound_number; /* SHORT_NAMED_INTEGER_VALUE */
+export const outsidePlantEquipment = TroubleFound_number_outsidePlantEquipment; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -791,7 +791,7 @@ export const TroubleFound_number_outsidePlantFiberOptic = 47 satisfies TroubleFo
  * @constant
  * @type {number}
  */
-export const outsidePlantFiberOptic = TroubleFound_number_outsidePlantFiberOptic satisfies TroubleFound_number; /* SHORT_NAMED_INTEGER_VALUE */
+export const outsidePlantFiberOptic = TroubleFound_number_outsidePlantFiberOptic; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -807,7 +807,7 @@ export const TroubleFound_number_outsidePlantOther = 48 satisfies TroubleFound_n
  * @constant
  * @type {number}
  */
-export const outsidePlantOther = TroubleFound_number_outsidePlantOther satisfies TroubleFound_number; /* SHORT_NAMED_INTEGER_VALUE */
+export const outsidePlantOther = TroubleFound_number_outsidePlantOther; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -823,7 +823,7 @@ export const TroubleFound_number_coEquipmentOther = 49 satisfies TroubleFound_nu
  * @constant
  * @type {number}
  */
-export const coEquipmentOther = TroubleFound_number_coEquipmentOther satisfies TroubleFound_number; /* SHORT_NAMED_INTEGER_VALUE */
+export const coEquipmentOther = TroubleFound_number_coEquipmentOther; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -839,7 +839,7 @@ export const TroubleFound_number_coEquipmentFrames = 50 satisfies TroubleFound_n
  * @constant
  * @type {number}
  */
-export const coEquipmentFrames = TroubleFound_number_coEquipmentFrames satisfies TroubleFound_number; /* SHORT_NAMED_INTEGER_VALUE */
+export const coEquipmentFrames = TroubleFound_number_coEquipmentFrames; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -855,7 +855,7 @@ export const TroubleFound_number_coConcentrator = 51 satisfies TroubleFound_numb
  * @constant
  * @type {number}
  */
-export const coConcentrator = TroubleFound_number_coConcentrator satisfies TroubleFound_number; /* SHORT_NAMED_INTEGER_VALUE */
+export const coConcentrator = TroubleFound_number_coConcentrator; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -871,7 +871,7 @@ export const TroubleFound_number_receiverOffHook = 52 satisfies TroubleFound_num
  * @constant
  * @type {number}
  */
-export const receiverOffHook = TroubleFound_number_receiverOffHook satisfies TroubleFound_number; /* SHORT_NAMED_INTEGER_VALUE */
+export const receiverOffHook = TroubleFound_number_receiverOffHook; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -887,7 +887,7 @@ export const TroubleFound_number_cpeAuthorized = 53 satisfies TroubleFound_numbe
  * @constant
  * @type {number}
  */
-export const cpeAuthorized = TroubleFound_number_cpeAuthorized satisfies TroubleFound_number; /* SHORT_NAMED_INTEGER_VALUE */
+export const cpeAuthorized = TroubleFound_number_cpeAuthorized; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -903,7 +903,7 @@ export const TroubleFound_number_cpeTelcoMaintained = 54 satisfies TroubleFound_
  * @constant
  * @type {number}
  */
-export const cpeTelcoMaintained = TroubleFound_number_cpeTelcoMaintained satisfies TroubleFound_number; /* SHORT_NAMED_INTEGER_VALUE */
+export const cpeTelcoMaintained = TroubleFound_number_cpeTelcoMaintained; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -919,7 +919,7 @@ export const TroubleFound_number_independentCompany = 55 satisfies TroubleFound_
  * @constant
  * @type {number}
  */
-export const independentCompany = TroubleFound_number_independentCompany satisfies TroubleFound_number; /* SHORT_NAMED_INTEGER_VALUE */
+export const independentCompany = TroubleFound_number_independentCompany; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -935,7 +935,7 @@ export const TroubleFound_number_cpeCalledNumber = 56 satisfies TroubleFound_num
  * @constant
  * @type {number}
  */
-export const cpeCalledNumber = TroubleFound_number_cpeCalledNumber satisfies TroubleFound_number; /* SHORT_NAMED_INTEGER_VALUE */
+export const cpeCalledNumber = TroubleFound_number_cpeCalledNumber; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -951,7 +951,7 @@ export const TroubleFound_number_assigningProvisioning = 57 satisfies TroubleFou
  * @constant
  * @type {number}
  */
-export const assigningProvisioning = TroubleFound_number_assigningProvisioning satisfies TroubleFound_number; /* SHORT_NAMED_INTEGER_VALUE */
+export const assigningProvisioning = TroubleFound_number_assigningProvisioning; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -967,7 +967,7 @@ export const TroubleFound_number_interServiceCenter = 58 satisfies TroubleFound_
  * @constant
  * @type {number}
  */
-export const interServiceCenter = TroubleFound_number_interServiceCenter satisfies TroubleFound_number; /* SHORT_NAMED_INTEGER_VALUE */
+export const interServiceCenter = TroubleFound_number_interServiceCenter; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -983,7 +983,7 @@ export const TroubleFound_number_referredOut = 59 satisfies TroubleFound_number;
  * @constant
  * @type {number}
  */
-export const referredOut = TroubleFound_number_referredOut satisfies TroubleFound_number; /* SHORT_NAMED_INTEGER_VALUE */
+export const referredOut = TroubleFound_number_referredOut; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -999,7 +999,7 @@ export const TroubleFound_number_network = 60 satisfies TroubleFound_number; /* 
  * @constant
  * @type {number}
  */
-export const network = TroubleFound_number_network satisfies TroubleFound_number; /* SHORT_NAMED_INTEGER_VALUE */
+export const network = TroubleFound_number_network; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 

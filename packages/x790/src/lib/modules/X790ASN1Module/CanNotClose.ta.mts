@@ -33,7 +33,7 @@ const CanNotClose_alreadyCleared = 0 satisfies CanNotClose; /* LONG_NAMED_INTEGE
  * @type {number}
  */
 export
-const alreadyCleared = CanNotClose_alreadyCleared satisfies CanNotClose; /* SHORT_NAMED_INTEGER_VALUE */
+const alreadyCleared = CanNotClose_alreadyCleared; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_CanNotClose = $._decodeInteger;
 export const _encode_CanNotClose = $._encodeInteger;
 

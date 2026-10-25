@@ -54,7 +54,7 @@ const RejectPDU_rejectReason_pdu_error_unknown_pdu_type = 0 satisfies RejectPDU_
  * @type {number}
  */
 export
-const unknown_pdu_type = RejectPDU_rejectReason_pdu_error_unknown_pdu_type satisfies RejectPDU_rejectReason_pdu_error; /* SHORT_NAMED_INTEGER_VALUE */
+const unknown_pdu_type = RejectPDU_rejectReason_pdu_error_unknown_pdu_type; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RejectPDU_rejectReason_pdu_error_invalid_pdu
@@ -78,7 +78,7 @@ const RejectPDU_rejectReason_pdu_error_invalid_pdu = 1 satisfies RejectPDU_rejec
  * @type {number}
  */
 export
-const invalid_pdu = RejectPDU_rejectReason_pdu_error_invalid_pdu satisfies RejectPDU_rejectReason_pdu_error; /* SHORT_NAMED_INTEGER_VALUE */
+const invalid_pdu = RejectPDU_rejectReason_pdu_error_invalid_pdu; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RejectPDU_rejectReason_pdu_error_illegal_acse_mapping
@@ -102,7 +102,7 @@ const RejectPDU_rejectReason_pdu_error_illegal_acse_mapping = 2 satisfies Reject
  * @type {number}
  */
 export
-const illegal_acse_mapping = RejectPDU_rejectReason_pdu_error_illegal_acse_mapping satisfies RejectPDU_rejectReason_pdu_error; /* SHORT_NAMED_INTEGER_VALUE */
+const illegal_acse_mapping = RejectPDU_rejectReason_pdu_error_illegal_acse_mapping; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_RejectPDU_rejectReason_pdu_error = $._decodeInteger;
 export const _encode_RejectPDU_rejectReason_pdu_error = $._encodeInteger;
 

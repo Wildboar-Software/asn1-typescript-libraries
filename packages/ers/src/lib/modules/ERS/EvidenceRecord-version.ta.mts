@@ -57,7 +57,7 @@ const EvidenceRecord_version_v1 = 1 satisfies EvidenceRecord_version; /* LONG_NA
  * @type {number}
  */
 export
-const v1 = EvidenceRecord_version_v1 satisfies EvidenceRecord_version; /* SHORT_NAMED_INTEGER_VALUE */
+const v1 = EvidenceRecord_version_v1; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 

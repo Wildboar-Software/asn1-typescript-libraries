@@ -41,7 +41,7 @@ export const LimitProblem_timeLimitExceeded = 0 satisfies LimitProblem; /* LONG_
  * @constant
  * @type {number}
  */
-export const timeLimitExceeded = LimitProblem_timeLimitExceeded satisfies LimitProblem; /* SHORT_NAMED_INTEGER_VALUE */
+export const timeLimitExceeded = LimitProblem_timeLimitExceeded; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary LimitProblem_sizeLimitExceeded
@@ -63,7 +63,7 @@ export const LimitProblem_sizeLimitExceeded = 1 satisfies LimitProblem; /* LONG_
  * @constant
  * @type {number}
  */
-export const sizeLimitExceeded = LimitProblem_sizeLimitExceeded satisfies LimitProblem; /* SHORT_NAMED_INTEGER_VALUE */
+export const sizeLimitExceeded = LimitProblem_sizeLimitExceeded; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary LimitProblem_administrativeLimitExceeded
@@ -85,7 +85,7 @@ export const LimitProblem_administrativeLimitExceeded = 2 satisfies LimitProblem
  * @constant
  * @type {number}
  */
-export const administrativeLimitExceeded = LimitProblem_administrativeLimitExceeded satisfies LimitProblem; /* SHORT_NAMED_INTEGER_VALUE */
+export const administrativeLimitExceeded = LimitProblem_administrativeLimitExceeded; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_LimitProblem = $._decodeInteger;

@@ -92,7 +92,7 @@ const AssistanceLocation = _enum_for_AssistanceLocation;
  * @type {number}
  */
 export
-const AssistanceLocation_separate_from_transaction = AssistanceLocation.separate_from_transaction satisfies AssistanceLocation; /* LONG_NAMED_ENUMERATED_VALUE */
+const AssistanceLocation_separate_from_transaction = AssistanceLocation.separate_from_transaction; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary separate_from_transaction
@@ -100,7 +100,7 @@ const AssistanceLocation_separate_from_transaction = AssistanceLocation.separate
  * @type {number}
  */
 export
-const separate_from_transaction = AssistanceLocation.separate_from_transaction satisfies AssistanceLocation; /* SHORT_NAMED_ENUMERATED_VALUE */
+const separate_from_transaction = AssistanceLocation.separate_from_transaction; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AssistanceLocation_interactively_with_transaction
@@ -108,7 +108,7 @@ const separate_from_transaction = AssistanceLocation.separate_from_transaction s
  * @type {number}
  */
 export
-const AssistanceLocation_interactively_with_transaction = AssistanceLocation.interactively_with_transaction satisfies AssistanceLocation; /* LONG_NAMED_ENUMERATED_VALUE */
+const AssistanceLocation_interactively_with_transaction = AssistanceLocation.interactively_with_transaction; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary interactively_with_transaction
@@ -116,7 +116,7 @@ const AssistanceLocation_interactively_with_transaction = AssistanceLocation.int
  * @type {number}
  */
 export
-const interactively_with_transaction = AssistanceLocation.interactively_with_transaction satisfies AssistanceLocation; /* SHORT_NAMED_ENUMERATED_VALUE */
+const interactively_with_transaction = AssistanceLocation.interactively_with_transaction; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AssistanceLocation_after_failure
@@ -124,7 +124,7 @@ const interactively_with_transaction = AssistanceLocation.interactively_with_tra
  * @type {number}
  */
 export
-const AssistanceLocation_after_failure = AssistanceLocation.after_failure satisfies AssistanceLocation; /* LONG_NAMED_ENUMERATED_VALUE */
+const AssistanceLocation_after_failure = AssistanceLocation.after_failure; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary after_failure
@@ -132,7 +132,7 @@ const AssistanceLocation_after_failure = AssistanceLocation.after_failure satisf
  * @type {number}
  */
 export
-const after_failure = AssistanceLocation.after_failure satisfies AssistanceLocation; /* SHORT_NAMED_ENUMERATED_VALUE */
+const after_failure = AssistanceLocation.after_failure; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**

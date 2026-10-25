@@ -90,7 +90,7 @@ type FlowDirection = _enum_for_FlowDirection | ENUMERATED;
  * @type {number}
  */
 export
-const FlowDirection_downstream = _enum_for_FlowDirection.downstream satisfies FlowDirection; /* LONG_NAMED_ENUMERATED_VALUE */
+const FlowDirection_downstream = _enum_for_FlowDirection.downstream; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary downstream
@@ -105,7 +105,7 @@ const FlowDirection_downstream = _enum_for_FlowDirection.downstream satisfies Fl
  * @type {number}
  */
 export
-const downstream = FlowDirection_downstream satisfies FlowDirection; /* SHORT_NAMED_ENUMERATED_VALUE */
+const downstream = FlowDirection_downstream; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary FlowDirection_upstream
@@ -120,7 +120,7 @@ const downstream = FlowDirection_downstream satisfies FlowDirection; /* SHORT_NA
  * @type {number}
  */
 export
-const FlowDirection_upstream = _enum_for_FlowDirection.upstream satisfies FlowDirection; /* LONG_NAMED_ENUMERATED_VALUE */
+const FlowDirection_upstream = _enum_for_FlowDirection.upstream; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary upstream
@@ -135,7 +135,7 @@ const FlowDirection_upstream = _enum_for_FlowDirection.upstream satisfies FlowDi
  * @type {number}
  */
 export
-const upstream = FlowDirection_upstream satisfies FlowDirection; /* SHORT_NAMED_ENUMERATED_VALUE */
+const upstream = FlowDirection_upstream; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary FlowDirection_downstream_and_upstream
@@ -150,7 +150,7 @@ const upstream = FlowDirection_upstream satisfies FlowDirection; /* SHORT_NAMED_
  * @type {number}
  */
 export
-const FlowDirection_downstream_and_upstream = _enum_for_FlowDirection.downstream_and_upstream satisfies FlowDirection; /* LONG_NAMED_ENUMERATED_VALUE */
+const FlowDirection_downstream_and_upstream = _enum_for_FlowDirection.downstream_and_upstream; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary downstream_and_upstream
@@ -165,7 +165,7 @@ const FlowDirection_downstream_and_upstream = _enum_for_FlowDirection.downstream
  * @type {number}
  */
 export
-const downstream_and_upstream = FlowDirection_downstream_and_upstream satisfies FlowDirection; /* SHORT_NAMED_ENUMERATED_VALUE */
+const downstream_and_upstream = FlowDirection_downstream_and_upstream; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_FlowDirection: $.ASN1Decoder<FlowDirection> = $._decodeEnumerated;
 export const _encode_FlowDirection: $.ASN1Encoder<FlowDirection> = $._encodeEnumerated;
 

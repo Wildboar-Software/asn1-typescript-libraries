@@ -33,56 +33,56 @@ export type CertStatus = _enum_for_CertStatus | ENUMERATED;
  * @constant
  * @type {number}
  */
-export const CertStatus_good = _enum_for_CertStatus.good satisfies CertStatus; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CertStatus_good = _enum_for_CertStatus.good; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary good
  * @constant
  * @type {number}
  */
-export const good = CertStatus_good satisfies CertStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const good = CertStatus_good; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CertStatus_revoked
  * @constant
  * @type {number}
  */
-export const CertStatus_revoked = _enum_for_CertStatus.revoked satisfies CertStatus; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CertStatus_revoked = _enum_for_CertStatus.revoked; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary revoked
  * @constant
  * @type {number}
  */
-export const revoked = CertStatus_revoked satisfies CertStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const revoked = CertStatus_revoked; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CertStatus_on_hold
  * @constant
  * @type {number}
  */
-export const CertStatus_on_hold = _enum_for_CertStatus.on_hold satisfies CertStatus; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CertStatus_on_hold = _enum_for_CertStatus.on_hold; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary on_hold
  * @constant
  * @type {number}
  */
-export const on_hold = CertStatus_on_hold satisfies CertStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const on_hold = CertStatus_on_hold; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CertStatus_expired
  * @constant
  * @type {number}
  */
-export const CertStatus_expired = _enum_for_CertStatus.expired satisfies CertStatus; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CertStatus_expired = _enum_for_CertStatus.expired; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary expired
  * @constant
  * @type {number}
  */
-export const expired = CertStatus_expired satisfies CertStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const expired = CertStatus_expired; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 export const _decode_CertStatus = $._decodeEnumerated;

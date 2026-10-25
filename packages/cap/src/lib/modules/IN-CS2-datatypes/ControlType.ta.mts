@@ -80,7 +80,7 @@ const ControlType = _enum_for_ControlType;
  * @type {number}
  */
 export
-const ControlType_sCPOverloaded = ControlType.sCPOverloaded satisfies ControlType; /* LONG_NAMED_ENUMERATED_VALUE */
+const ControlType_sCPOverloaded = ControlType.sCPOverloaded; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sCPOverloaded
@@ -88,7 +88,7 @@ const ControlType_sCPOverloaded = ControlType.sCPOverloaded satisfies ControlTyp
  * @type {number}
  */
 export
-const sCPOverloaded = ControlType.sCPOverloaded satisfies ControlType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sCPOverloaded = ControlType.sCPOverloaded; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ControlType_manuallyInitiated
@@ -96,7 +96,7 @@ const sCPOverloaded = ControlType.sCPOverloaded satisfies ControlType; /* SHORT_
  * @type {number}
  */
 export
-const ControlType_manuallyInitiated = ControlType.manuallyInitiated satisfies ControlType; /* LONG_NAMED_ENUMERATED_VALUE */
+const ControlType_manuallyInitiated = ControlType.manuallyInitiated; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary manuallyInitiated
@@ -104,7 +104,7 @@ const ControlType_manuallyInitiated = ControlType.manuallyInitiated satisfies Co
  * @type {number}
  */
 export
-const manuallyInitiated = ControlType.manuallyInitiated satisfies ControlType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const manuallyInitiated = ControlType.manuallyInitiated; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ControlType_destinationOverload
@@ -112,7 +112,7 @@ const manuallyInitiated = ControlType.manuallyInitiated satisfies ControlType; /
  * @type {number}
  */
 export
-const ControlType_destinationOverload = ControlType.destinationOverload satisfies ControlType; /* LONG_NAMED_ENUMERATED_VALUE */
+const ControlType_destinationOverload = ControlType.destinationOverload; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary destinationOverload
@@ -120,7 +120,7 @@ const ControlType_destinationOverload = ControlType.destinationOverload satisfie
  * @type {number}
  */
 export
-const destinationOverload = ControlType.destinationOverload satisfies ControlType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const destinationOverload = ControlType.destinationOverload; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_ControlType = $._decodeEnumerated;
 export const _encode_ControlType = $._encodeEnumerated;
 

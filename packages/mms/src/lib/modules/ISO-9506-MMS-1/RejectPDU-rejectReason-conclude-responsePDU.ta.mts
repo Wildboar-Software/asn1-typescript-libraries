@@ -56,7 +56,7 @@ const RejectPDU_rejectReason_conclude_responsePDU_other = 0 satisfies RejectPDU_
  * @type {number}
  */
 export
-const other = RejectPDU_rejectReason_conclude_responsePDU_other satisfies RejectPDU_rejectReason_conclude_responsePDU; /* SHORT_NAMED_INTEGER_VALUE */
+const other = RejectPDU_rejectReason_conclude_responsePDU_other; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RejectPDU_rejectReason_conclude_responsePDU_invalid_result
@@ -80,7 +80,7 @@ const RejectPDU_rejectReason_conclude_responsePDU_invalid_result = 1 satisfies R
  * @type {number}
  */
 export
-const invalid_result = RejectPDU_rejectReason_conclude_responsePDU_invalid_result satisfies RejectPDU_rejectReason_conclude_responsePDU; /* SHORT_NAMED_INTEGER_VALUE */
+const invalid_result = RejectPDU_rejectReason_conclude_responsePDU_invalid_result; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_RejectPDU_rejectReason_conclude_responsePDU = $._decodeInteger;
 export const _encode_RejectPDU_rejectReason_conclude_responsePDU = $._encodeInteger;
 

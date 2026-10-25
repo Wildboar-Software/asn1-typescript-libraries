@@ -69,7 +69,7 @@ const IrisInformation_eye = _enum_for_IrisInformation_eye;
  * @type {number}
  */
 export
-const IrisInformation_eye_left = IrisInformation_eye.left satisfies IrisInformation_eye; /* LONG_NAMED_ENUMERATED_VALUE */
+const IrisInformation_eye_left = IrisInformation_eye.left; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary left
@@ -77,7 +77,7 @@ const IrisInformation_eye_left = IrisInformation_eye.left satisfies IrisInformat
  * @type {number}
  */
 export
-const left = IrisInformation_eye.left satisfies IrisInformation_eye; /* SHORT_NAMED_ENUMERATED_VALUE */
+const left = IrisInformation_eye.left; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary IrisInformation_eye_right
@@ -85,7 +85,7 @@ const left = IrisInformation_eye.left satisfies IrisInformation_eye; /* SHORT_NA
  * @type {number}
  */
 export
-const IrisInformation_eye_right = IrisInformation_eye.right satisfies IrisInformation_eye; /* LONG_NAMED_ENUMERATED_VALUE */
+const IrisInformation_eye_right = IrisInformation_eye.right; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary right
@@ -93,7 +93,7 @@ const IrisInformation_eye_right = IrisInformation_eye.right satisfies IrisInform
  * @type {number}
  */
 export
-const right = IrisInformation_eye.right satisfies IrisInformation_eye; /* SHORT_NAMED_ENUMERATED_VALUE */
+const right = IrisInformation_eye.right; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_IrisInformation_eye = $._decodeEnumerated;
 export const _encode_IrisInformation_eye = $._encodeEnumerated;
 

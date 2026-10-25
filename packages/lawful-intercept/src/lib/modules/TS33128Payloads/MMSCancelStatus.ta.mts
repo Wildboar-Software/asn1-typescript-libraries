@@ -69,7 +69,7 @@ const MMSCancelStatus = _enum_for_MMSCancelStatus;
  * @type {number}
  */
 export
-const MMSCancelStatus_cancelRequestSuccessfullyReceived = MMSCancelStatus.cancelRequestSuccessfullyReceived satisfies MMSCancelStatus; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMSCancelStatus_cancelRequestSuccessfullyReceived = MMSCancelStatus.cancelRequestSuccessfullyReceived; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary cancelRequestSuccessfullyReceived
@@ -77,7 +77,7 @@ const MMSCancelStatus_cancelRequestSuccessfullyReceived = MMSCancelStatus.cancel
  * @type {number}
  */
 export
-const cancelRequestSuccessfullyReceived = MMSCancelStatus.cancelRequestSuccessfullyReceived satisfies MMSCancelStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
+const cancelRequestSuccessfullyReceived = MMSCancelStatus.cancelRequestSuccessfullyReceived; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMSCancelStatus_cancelRequestCorrupted
@@ -85,7 +85,7 @@ const cancelRequestSuccessfullyReceived = MMSCancelStatus.cancelRequestSuccessfu
  * @type {number}
  */
 export
-const MMSCancelStatus_cancelRequestCorrupted = MMSCancelStatus.cancelRequestCorrupted satisfies MMSCancelStatus; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMSCancelStatus_cancelRequestCorrupted = MMSCancelStatus.cancelRequestCorrupted; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary cancelRequestCorrupted
@@ -93,7 +93,7 @@ const MMSCancelStatus_cancelRequestCorrupted = MMSCancelStatus.cancelRequestCorr
  * @type {number}
  */
 export
-const cancelRequestCorrupted = MMSCancelStatus.cancelRequestCorrupted satisfies MMSCancelStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
+const cancelRequestCorrupted = MMSCancelStatus.cancelRequestCorrupted; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_MMSCancelStatus: $.ASN1Decoder<MMSCancelStatus> = $._decodeEnumerated;
 export const _encode_MMSCancelStatus: $.ASN1Encoder<MMSCancelStatus> = $._encodeEnumerated;
 

@@ -114,7 +114,7 @@ const MMSContentClass = _enum_for_MMSContentClass;
  * @type {number}
  */
 export
-const MMSContentClass_text = MMSContentClass.text satisfies MMSContentClass; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMSContentClass_text = MMSContentClass.text; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary text
@@ -122,7 +122,7 @@ const MMSContentClass_text = MMSContentClass.text satisfies MMSContentClass; /* 
  * @type {number}
  */
 export
-const text = MMSContentClass.text satisfies MMSContentClass; /* SHORT_NAMED_ENUMERATED_VALUE */
+const text = MMSContentClass.text; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMSContentClass_imageBasic
@@ -130,7 +130,7 @@ const text = MMSContentClass.text satisfies MMSContentClass; /* SHORT_NAMED_ENUM
  * @type {number}
  */
 export
-const MMSContentClass_imageBasic = MMSContentClass.imageBasic satisfies MMSContentClass; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMSContentClass_imageBasic = MMSContentClass.imageBasic; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary imageBasic
@@ -138,7 +138,7 @@ const MMSContentClass_imageBasic = MMSContentClass.imageBasic satisfies MMSConte
  * @type {number}
  */
 export
-const imageBasic = MMSContentClass.imageBasic satisfies MMSContentClass; /* SHORT_NAMED_ENUMERATED_VALUE */
+const imageBasic = MMSContentClass.imageBasic; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMSContentClass_imageRich
@@ -146,7 +146,7 @@ const imageBasic = MMSContentClass.imageBasic satisfies MMSContentClass; /* SHOR
  * @type {number}
  */
 export
-const MMSContentClass_imageRich = MMSContentClass.imageRich satisfies MMSContentClass; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMSContentClass_imageRich = MMSContentClass.imageRich; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary imageRich
@@ -154,7 +154,7 @@ const MMSContentClass_imageRich = MMSContentClass.imageRich satisfies MMSContent
  * @type {number}
  */
 export
-const imageRich = MMSContentClass.imageRich satisfies MMSContentClass; /* SHORT_NAMED_ENUMERATED_VALUE */
+const imageRich = MMSContentClass.imageRich; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMSContentClass_videoBasic
@@ -162,7 +162,7 @@ const imageRich = MMSContentClass.imageRich satisfies MMSContentClass; /* SHORT_
  * @type {number}
  */
 export
-const MMSContentClass_videoBasic = MMSContentClass.videoBasic satisfies MMSContentClass; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMSContentClass_videoBasic = MMSContentClass.videoBasic; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary videoBasic
@@ -170,7 +170,7 @@ const MMSContentClass_videoBasic = MMSContentClass.videoBasic satisfies MMSConte
  * @type {number}
  */
 export
-const videoBasic = MMSContentClass.videoBasic satisfies MMSContentClass; /* SHORT_NAMED_ENUMERATED_VALUE */
+const videoBasic = MMSContentClass.videoBasic; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMSContentClass_videoRich
@@ -178,7 +178,7 @@ const videoBasic = MMSContentClass.videoBasic satisfies MMSContentClass; /* SHOR
  * @type {number}
  */
 export
-const MMSContentClass_videoRich = MMSContentClass.videoRich satisfies MMSContentClass; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMSContentClass_videoRich = MMSContentClass.videoRich; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary videoRich
@@ -186,7 +186,7 @@ const MMSContentClass_videoRich = MMSContentClass.videoRich satisfies MMSContent
  * @type {number}
  */
 export
-const videoRich = MMSContentClass.videoRich satisfies MMSContentClass; /* SHORT_NAMED_ENUMERATED_VALUE */
+const videoRich = MMSContentClass.videoRich; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMSContentClass_megaPixel
@@ -194,7 +194,7 @@ const videoRich = MMSContentClass.videoRich satisfies MMSContentClass; /* SHORT_
  * @type {number}
  */
 export
-const MMSContentClass_megaPixel = MMSContentClass.megaPixel satisfies MMSContentClass; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMSContentClass_megaPixel = MMSContentClass.megaPixel; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary megaPixel
@@ -202,7 +202,7 @@ const MMSContentClass_megaPixel = MMSContentClass.megaPixel satisfies MMSContent
  * @type {number}
  */
 export
-const megaPixel = MMSContentClass.megaPixel satisfies MMSContentClass; /* SHORT_NAMED_ENUMERATED_VALUE */
+const megaPixel = MMSContentClass.megaPixel; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMSContentClass_contentBasic
@@ -210,7 +210,7 @@ const megaPixel = MMSContentClass.megaPixel satisfies MMSContentClass; /* SHORT_
  * @type {number}
  */
 export
-const MMSContentClass_contentBasic = MMSContentClass.contentBasic satisfies MMSContentClass; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMSContentClass_contentBasic = MMSContentClass.contentBasic; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary contentBasic
@@ -218,7 +218,7 @@ const MMSContentClass_contentBasic = MMSContentClass.contentBasic satisfies MMSC
  * @type {number}
  */
 export
-const contentBasic = MMSContentClass.contentBasic satisfies MMSContentClass; /* SHORT_NAMED_ENUMERATED_VALUE */
+const contentBasic = MMSContentClass.contentBasic; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMSContentClass_contentRich
@@ -226,7 +226,7 @@ const contentBasic = MMSContentClass.contentBasic satisfies MMSContentClass; /* 
  * @type {number}
  */
 export
-const MMSContentClass_contentRich = MMSContentClass.contentRich satisfies MMSContentClass; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMSContentClass_contentRich = MMSContentClass.contentRich; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary contentRich
@@ -234,7 +234,7 @@ const MMSContentClass_contentRich = MMSContentClass.contentRich satisfies MMSCon
  * @type {number}
  */
 export
-const contentRich = MMSContentClass.contentRich satisfies MMSContentClass; /* SHORT_NAMED_ENUMERATED_VALUE */
+const contentRich = MMSContentClass.contentRich; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_MMSContentClass: $.ASN1Decoder<MMSContentClass> = $._decodeEnumerated;
 export const _encode_MMSContentClass: $.ASN1Encoder<MMSContentClass> = $._encodeEnumerated;
 

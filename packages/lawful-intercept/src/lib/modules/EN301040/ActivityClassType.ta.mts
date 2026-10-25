@@ -793,7 +793,7 @@ const ActivityClassType = _enum_for_ActivityClassType;
  * @type {number}
  */
 export
-const ActivityClassType_allServices = ActivityClassType.allServices satisfies ActivityClassType; /* LONG_NAMED_ENUMERATED_VALUE */
+const ActivityClassType_allServices = ActivityClassType.allServices; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary allServices
@@ -809,7 +809,7 @@ const ActivityClassType_allServices = ActivityClassType.allServices satisfies Ac
  * @type {number}
  */
 export
-const allServices = ActivityClassType.allServices satisfies ActivityClassType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const allServices = ActivityClassType.allServices; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ActivityClassType_tETRASpeech
@@ -828,7 +828,7 @@ const allServices = ActivityClassType.allServices satisfies ActivityClassType; /
  * @type {number}
  */
 export
-const ActivityClassType_tETRASpeech = ActivityClassType.tETRASpeech satisfies ActivityClassType; /* LONG_NAMED_ENUMERATED_VALUE */
+const ActivityClassType_tETRASpeech = ActivityClassType.tETRASpeech; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tETRASpeech
@@ -847,7 +847,7 @@ const ActivityClassType_tETRASpeech = ActivityClassType.tETRASpeech satisfies Ac
  * @type {number}
  */
 export
-const tETRASpeech = ActivityClassType.tETRASpeech satisfies ActivityClassType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tETRASpeech = ActivityClassType.tETRASpeech; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ActivityClassType_singleSlotData24
@@ -867,7 +867,7 @@ const tETRASpeech = ActivityClassType.tETRASpeech satisfies ActivityClassType; /
  * @type {number}
  */
 export
-const ActivityClassType_singleSlotData24 = ActivityClassType.singleSlotData24 satisfies ActivityClassType; /* LONG_NAMED_ENUMERATED_VALUE */
+const ActivityClassType_singleSlotData24 = ActivityClassType.singleSlotData24; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary singleSlotData24
@@ -887,7 +887,7 @@ const ActivityClassType_singleSlotData24 = ActivityClassType.singleSlotData24 sa
  * @type {number}
  */
 export
-const singleSlotData24 = ActivityClassType.singleSlotData24 satisfies ActivityClassType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const singleSlotData24 = ActivityClassType.singleSlotData24; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ActivityClassType_singleSlotData48
@@ -907,7 +907,7 @@ const singleSlotData24 = ActivityClassType.singleSlotData24 satisfies ActivityCl
  * @type {number}
  */
 export
-const ActivityClassType_singleSlotData48 = ActivityClassType.singleSlotData48 satisfies ActivityClassType; /* LONG_NAMED_ENUMERATED_VALUE */
+const ActivityClassType_singleSlotData48 = ActivityClassType.singleSlotData48; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary singleSlotData48
@@ -927,7 +927,7 @@ const ActivityClassType_singleSlotData48 = ActivityClassType.singleSlotData48 sa
  * @type {number}
  */
 export
-const singleSlotData48 = ActivityClassType.singleSlotData48 satisfies ActivityClassType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const singleSlotData48 = ActivityClassType.singleSlotData48; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ActivityClassType_singleSlotData72
@@ -947,7 +947,7 @@ const singleSlotData48 = ActivityClassType.singleSlotData48 satisfies ActivityCl
  * @type {number}
  */
 export
-const ActivityClassType_singleSlotData72 = ActivityClassType.singleSlotData72 satisfies ActivityClassType; /* LONG_NAMED_ENUMERATED_VALUE */
+const ActivityClassType_singleSlotData72 = ActivityClassType.singleSlotData72; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary singleSlotData72
@@ -967,7 +967,7 @@ const ActivityClassType_singleSlotData72 = ActivityClassType.singleSlotData72 sa
  * @type {number}
  */
 export
-const singleSlotData72 = ActivityClassType.singleSlotData72 satisfies ActivityClassType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const singleSlotData72 = ActivityClassType.singleSlotData72; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ActivityClassType_multiSlotData224
@@ -989,7 +989,7 @@ const singleSlotData72 = ActivityClassType.singleSlotData72 satisfies ActivityCl
  * @type {number}
  */
 export
-const ActivityClassType_multiSlotData224 = ActivityClassType.multiSlotData224 satisfies ActivityClassType; /* LONG_NAMED_ENUMERATED_VALUE */
+const ActivityClassType_multiSlotData224 = ActivityClassType.multiSlotData224; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary multiSlotData224
@@ -1011,7 +1011,7 @@ const ActivityClassType_multiSlotData224 = ActivityClassType.multiSlotData224 sa
  * @type {number}
  */
 export
-const multiSlotData224 = ActivityClassType.multiSlotData224 satisfies ActivityClassType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const multiSlotData224 = ActivityClassType.multiSlotData224; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ActivityClassType_multiSlotData248
@@ -1033,7 +1033,7 @@ const multiSlotData224 = ActivityClassType.multiSlotData224 satisfies ActivityCl
  * @type {number}
  */
 export
-const ActivityClassType_multiSlotData248 = ActivityClassType.multiSlotData248 satisfies ActivityClassType; /* LONG_NAMED_ENUMERATED_VALUE */
+const ActivityClassType_multiSlotData248 = ActivityClassType.multiSlotData248; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary multiSlotData248
@@ -1055,7 +1055,7 @@ const ActivityClassType_multiSlotData248 = ActivityClassType.multiSlotData248 sa
  * @type {number}
  */
 export
-const multiSlotData248 = ActivityClassType.multiSlotData248 satisfies ActivityClassType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const multiSlotData248 = ActivityClassType.multiSlotData248; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ActivityClassType_multiSlotData272
@@ -1077,7 +1077,7 @@ const multiSlotData248 = ActivityClassType.multiSlotData248 satisfies ActivityCl
  * @type {number}
  */
 export
-const ActivityClassType_multiSlotData272 = ActivityClassType.multiSlotData272 satisfies ActivityClassType; /* LONG_NAMED_ENUMERATED_VALUE */
+const ActivityClassType_multiSlotData272 = ActivityClassType.multiSlotData272; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary multiSlotData272
@@ -1099,7 +1099,7 @@ const ActivityClassType_multiSlotData272 = ActivityClassType.multiSlotData272 sa
  * @type {number}
  */
 export
-const multiSlotData272 = ActivityClassType.multiSlotData272 satisfies ActivityClassType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const multiSlotData272 = ActivityClassType.multiSlotData272; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ActivityClassType_multiSlotData324
@@ -1121,7 +1121,7 @@ const multiSlotData272 = ActivityClassType.multiSlotData272 satisfies ActivityCl
  * @type {number}
  */
 export
-const ActivityClassType_multiSlotData324 = ActivityClassType.multiSlotData324 satisfies ActivityClassType; /* LONG_NAMED_ENUMERATED_VALUE */
+const ActivityClassType_multiSlotData324 = ActivityClassType.multiSlotData324; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary multiSlotData324
@@ -1143,7 +1143,7 @@ const ActivityClassType_multiSlotData324 = ActivityClassType.multiSlotData324 sa
  * @type {number}
  */
 export
-const multiSlotData324 = ActivityClassType.multiSlotData324 satisfies ActivityClassType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const multiSlotData324 = ActivityClassType.multiSlotData324; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ActivityClassType_multiSlotData348
@@ -1165,7 +1165,7 @@ const multiSlotData324 = ActivityClassType.multiSlotData324 satisfies ActivityCl
  * @type {number}
  */
 export
-const ActivityClassType_multiSlotData348 = ActivityClassType.multiSlotData348 satisfies ActivityClassType; /* LONG_NAMED_ENUMERATED_VALUE */
+const ActivityClassType_multiSlotData348 = ActivityClassType.multiSlotData348; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary multiSlotData348
@@ -1187,7 +1187,7 @@ const ActivityClassType_multiSlotData348 = ActivityClassType.multiSlotData348 sa
  * @type {number}
  */
 export
-const multiSlotData348 = ActivityClassType.multiSlotData348 satisfies ActivityClassType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const multiSlotData348 = ActivityClassType.multiSlotData348; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ActivityClassType_multiSlotData372
@@ -1209,7 +1209,7 @@ const multiSlotData348 = ActivityClassType.multiSlotData348 satisfies ActivityCl
  * @type {number}
  */
 export
-const ActivityClassType_multiSlotData372 = ActivityClassType.multiSlotData372 satisfies ActivityClassType; /* LONG_NAMED_ENUMERATED_VALUE */
+const ActivityClassType_multiSlotData372 = ActivityClassType.multiSlotData372; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary multiSlotData372
@@ -1231,7 +1231,7 @@ const ActivityClassType_multiSlotData372 = ActivityClassType.multiSlotData372 sa
  * @type {number}
  */
 export
-const multiSlotData372 = ActivityClassType.multiSlotData372 satisfies ActivityClassType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const multiSlotData372 = ActivityClassType.multiSlotData372; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ActivityClassType_multiSlotData424
@@ -1253,7 +1253,7 @@ const multiSlotData372 = ActivityClassType.multiSlotData372 satisfies ActivityCl
  * @type {number}
  */
 export
-const ActivityClassType_multiSlotData424 = ActivityClassType.multiSlotData424 satisfies ActivityClassType; /* LONG_NAMED_ENUMERATED_VALUE */
+const ActivityClassType_multiSlotData424 = ActivityClassType.multiSlotData424; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary multiSlotData424
@@ -1275,7 +1275,7 @@ const ActivityClassType_multiSlotData424 = ActivityClassType.multiSlotData424 sa
  * @type {number}
  */
 export
-const multiSlotData424 = ActivityClassType.multiSlotData424 satisfies ActivityClassType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const multiSlotData424 = ActivityClassType.multiSlotData424; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ActivityClassType_multiSlotData448
@@ -1297,7 +1297,7 @@ const multiSlotData424 = ActivityClassType.multiSlotData424 satisfies ActivityCl
  * @type {number}
  */
 export
-const ActivityClassType_multiSlotData448 = ActivityClassType.multiSlotData448 satisfies ActivityClassType; /* LONG_NAMED_ENUMERATED_VALUE */
+const ActivityClassType_multiSlotData448 = ActivityClassType.multiSlotData448; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary multiSlotData448
@@ -1319,7 +1319,7 @@ const ActivityClassType_multiSlotData448 = ActivityClassType.multiSlotData448 sa
  * @type {number}
  */
 export
-const multiSlotData448 = ActivityClassType.multiSlotData448 satisfies ActivityClassType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const multiSlotData448 = ActivityClassType.multiSlotData448; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ActivityClassType_multiSlotData472
@@ -1341,7 +1341,7 @@ const multiSlotData448 = ActivityClassType.multiSlotData448 satisfies ActivityCl
  * @type {number}
  */
 export
-const ActivityClassType_multiSlotData472 = ActivityClassType.multiSlotData472 satisfies ActivityClassType; /* LONG_NAMED_ENUMERATED_VALUE */
+const ActivityClassType_multiSlotData472 = ActivityClassType.multiSlotData472; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary multiSlotData472
@@ -1363,7 +1363,7 @@ const ActivityClassType_multiSlotData472 = ActivityClassType.multiSlotData472 sa
  * @type {number}
  */
 export
-const multiSlotData472 = ActivityClassType.multiSlotData472 satisfies ActivityClassType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const multiSlotData472 = ActivityClassType.multiSlotData472; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ActivityClassType_sDSType1
@@ -1383,7 +1383,7 @@ const multiSlotData472 = ActivityClassType.multiSlotData472 satisfies ActivityCl
  * @type {number}
  */
 export
-const ActivityClassType_sDSType1 = ActivityClassType.sDSType1 satisfies ActivityClassType; /* LONG_NAMED_ENUMERATED_VALUE */
+const ActivityClassType_sDSType1 = ActivityClassType.sDSType1; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sDSType1
@@ -1403,7 +1403,7 @@ const ActivityClassType_sDSType1 = ActivityClassType.sDSType1 satisfies Activity
  * @type {number}
  */
 export
-const sDSType1 = ActivityClassType.sDSType1 satisfies ActivityClassType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sDSType1 = ActivityClassType.sDSType1; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ActivityClassType_sDSType2
@@ -1423,7 +1423,7 @@ const sDSType1 = ActivityClassType.sDSType1 satisfies ActivityClassType; /* SHOR
  * @type {number}
  */
 export
-const ActivityClassType_sDSType2 = ActivityClassType.sDSType2 satisfies ActivityClassType; /* LONG_NAMED_ENUMERATED_VALUE */
+const ActivityClassType_sDSType2 = ActivityClassType.sDSType2; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sDSType2
@@ -1443,7 +1443,7 @@ const ActivityClassType_sDSType2 = ActivityClassType.sDSType2 satisfies Activity
  * @type {number}
  */
 export
-const sDSType2 = ActivityClassType.sDSType2 satisfies ActivityClassType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sDSType2 = ActivityClassType.sDSType2; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ActivityClassType_sDSType3
@@ -1463,7 +1463,7 @@ const sDSType2 = ActivityClassType.sDSType2 satisfies ActivityClassType; /* SHOR
  * @type {number}
  */
 export
-const ActivityClassType_sDSType3 = ActivityClassType.sDSType3 satisfies ActivityClassType; /* LONG_NAMED_ENUMERATED_VALUE */
+const ActivityClassType_sDSType3 = ActivityClassType.sDSType3; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sDSType3
@@ -1483,7 +1483,7 @@ const ActivityClassType_sDSType3 = ActivityClassType.sDSType3 satisfies Activity
  * @type {number}
  */
 export
-const sDSType3 = ActivityClassType.sDSType3 satisfies ActivityClassType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sDSType3 = ActivityClassType.sDSType3; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ActivityClassType_sDSType4
@@ -1503,7 +1503,7 @@ const sDSType3 = ActivityClassType.sDSType3 satisfies ActivityClassType; /* SHOR
  * @type {number}
  */
 export
-const ActivityClassType_sDSType4 = ActivityClassType.sDSType4 satisfies ActivityClassType; /* LONG_NAMED_ENUMERATED_VALUE */
+const ActivityClassType_sDSType4 = ActivityClassType.sDSType4; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sDSType4
@@ -1523,7 +1523,7 @@ const ActivityClassType_sDSType4 = ActivityClassType.sDSType4 satisfies Activity
  * @type {number}
  */
 export
-const sDSType4 = ActivityClassType.sDSType4 satisfies ActivityClassType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sDSType4 = ActivityClassType.sDSType4; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ActivityClassType_status
@@ -1543,7 +1543,7 @@ const sDSType4 = ActivityClassType.sDSType4 satisfies ActivityClassType; /* SHOR
  * @type {number}
  */
 export
-const ActivityClassType_status = ActivityClassType.status satisfies ActivityClassType; /* LONG_NAMED_ENUMERATED_VALUE */
+const ActivityClassType_status = ActivityClassType.status; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary status
@@ -1563,7 +1563,7 @@ const ActivityClassType_status = ActivityClassType.status satisfies ActivityClas
  * @type {number}
  */
 export
-const status = ActivityClassType.status satisfies ActivityClassType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const status = ActivityClassType.status; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ActivityClassType_sDSACKType1
@@ -1583,7 +1583,7 @@ const status = ActivityClassType.status satisfies ActivityClassType; /* SHORT_NA
  * @type {number}
  */
 export
-const ActivityClassType_sDSACKType1 = ActivityClassType.sDSACKType1 satisfies ActivityClassType; /* LONG_NAMED_ENUMERATED_VALUE */
+const ActivityClassType_sDSACKType1 = ActivityClassType.sDSACKType1; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sDSACKType1
@@ -1603,7 +1603,7 @@ const ActivityClassType_sDSACKType1 = ActivityClassType.sDSACKType1 satisfies Ac
  * @type {number}
  */
 export
-const sDSACKType1 = ActivityClassType.sDSACKType1 satisfies ActivityClassType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sDSACKType1 = ActivityClassType.sDSACKType1; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ActivityClassType_sDSACKType2
@@ -1623,7 +1623,7 @@ const sDSACKType1 = ActivityClassType.sDSACKType1 satisfies ActivityClassType; /
  * @type {number}
  */
 export
-const ActivityClassType_sDSACKType2 = ActivityClassType.sDSACKType2 satisfies ActivityClassType; /* LONG_NAMED_ENUMERATED_VALUE */
+const ActivityClassType_sDSACKType2 = ActivityClassType.sDSACKType2; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sDSACKType2
@@ -1643,7 +1643,7 @@ const ActivityClassType_sDSACKType2 = ActivityClassType.sDSACKType2 satisfies Ac
  * @type {number}
  */
 export
-const sDSACKType2 = ActivityClassType.sDSACKType2 satisfies ActivityClassType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sDSACKType2 = ActivityClassType.sDSACKType2; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ActivityClassType_sDSACKType3
@@ -1663,7 +1663,7 @@ const sDSACKType2 = ActivityClassType.sDSACKType2 satisfies ActivityClassType; /
  * @type {number}
  */
 export
-const ActivityClassType_sDSACKType3 = ActivityClassType.sDSACKType3 satisfies ActivityClassType; /* LONG_NAMED_ENUMERATED_VALUE */
+const ActivityClassType_sDSACKType3 = ActivityClassType.sDSACKType3; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sDSACKType3
@@ -1683,7 +1683,7 @@ const ActivityClassType_sDSACKType3 = ActivityClassType.sDSACKType3 satisfies Ac
  * @type {number}
  */
 export
-const sDSACKType3 = ActivityClassType.sDSACKType3 satisfies ActivityClassType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sDSACKType3 = ActivityClassType.sDSACKType3; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ActivityClassType_sDSACKType4
@@ -1703,7 +1703,7 @@ const sDSACKType3 = ActivityClassType.sDSACKType3 satisfies ActivityClassType; /
  * @type {number}
  */
 export
-const ActivityClassType_sDSACKType4 = ActivityClassType.sDSACKType4 satisfies ActivityClassType; /* LONG_NAMED_ENUMERATED_VALUE */
+const ActivityClassType_sDSACKType4 = ActivityClassType.sDSACKType4; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sDSACKType4
@@ -1723,7 +1723,7 @@ const ActivityClassType_sDSACKType4 = ActivityClassType.sDSACKType4 satisfies Ac
  * @type {number}
  */
 export
-const sDSACKType4 = ActivityClassType.sDSACKType4 satisfies ActivityClassType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sDSACKType4 = ActivityClassType.sDSACKType4; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ActivityClassType_statusack
@@ -1743,7 +1743,7 @@ const sDSACKType4 = ActivityClassType.sDSACKType4 satisfies ActivityClassType; /
  * @type {number}
  */
 export
-const ActivityClassType_statusack = ActivityClassType.statusack satisfies ActivityClassType; /* LONG_NAMED_ENUMERATED_VALUE */
+const ActivityClassType_statusack = ActivityClassType.statusack; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary statusack
@@ -1763,7 +1763,7 @@ const ActivityClassType_statusack = ActivityClassType.statusack satisfies Activi
  * @type {number}
  */
 export
-const statusack = ActivityClassType.statusack satisfies ActivityClassType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const statusack = ActivityClassType.statusack; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ActivityClassType_sDSAcknowledgementsuccess
@@ -1779,7 +1779,7 @@ const statusack = ActivityClassType.statusack satisfies ActivityClassType; /* SH
  * @type {number}
  */
 export
-const ActivityClassType_sDSAcknowledgementsuccess = ActivityClassType.sDSAcknowledgementsuccess satisfies ActivityClassType; /* LONG_NAMED_ENUMERATED_VALUE */
+const ActivityClassType_sDSAcknowledgementsuccess = ActivityClassType.sDSAcknowledgementsuccess; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sDSAcknowledgementsuccess
@@ -1795,7 +1795,7 @@ const ActivityClassType_sDSAcknowledgementsuccess = ActivityClassType.sDSAcknowl
  * @type {number}
  */
 export
-const sDSAcknowledgementsuccess = ActivityClassType.sDSAcknowledgementsuccess satisfies ActivityClassType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sDSAcknowledgementsuccess = ActivityClassType.sDSAcknowledgementsuccess; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ActivityClassType_sDSAcknowledgementfail
@@ -1811,7 +1811,7 @@ const sDSAcknowledgementsuccess = ActivityClassType.sDSAcknowledgementsuccess sa
  * @type {number}
  */
 export
-const ActivityClassType_sDSAcknowledgementfail = ActivityClassType.sDSAcknowledgementfail satisfies ActivityClassType; /* LONG_NAMED_ENUMERATED_VALUE */
+const ActivityClassType_sDSAcknowledgementfail = ActivityClassType.sDSAcknowledgementfail; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sDSAcknowledgementfail
@@ -1827,7 +1827,7 @@ const ActivityClassType_sDSAcknowledgementfail = ActivityClassType.sDSAcknowledg
  * @type {number}
  */
 export
-const sDSAcknowledgementfail = ActivityClassType.sDSAcknowledgementfail satisfies ActivityClassType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sDSAcknowledgementfail = ActivityClassType.sDSAcknowledgementfail; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ActivityClassType_sCLNSPacketData
@@ -1846,7 +1846,7 @@ const sDSAcknowledgementfail = ActivityClassType.sDSAcknowledgementfail satisfie
  * @type {number}
  */
 export
-const ActivityClassType_sCLNSPacketData = ActivityClassType.sCLNSPacketData satisfies ActivityClassType; /* LONG_NAMED_ENUMERATED_VALUE */
+const ActivityClassType_sCLNSPacketData = ActivityClassType.sCLNSPacketData; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sCLNSPacketData
@@ -1865,7 +1865,7 @@ const ActivityClassType_sCLNSPacketData = ActivityClassType.sCLNSPacketData sati
  * @type {number}
  */
 export
-const sCLNSPacketData = ActivityClassType.sCLNSPacketData satisfies ActivityClassType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sCLNSPacketData = ActivityClassType.sCLNSPacketData; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ActivityClassType_cONSPacketData
@@ -1884,7 +1884,7 @@ const sCLNSPacketData = ActivityClassType.sCLNSPacketData satisfies ActivityClas
  * @type {number}
  */
 export
-const ActivityClassType_cONSPacketData = ActivityClassType.cONSPacketData satisfies ActivityClassType; /* LONG_NAMED_ENUMERATED_VALUE */
+const ActivityClassType_cONSPacketData = ActivityClassType.cONSPacketData; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary cONSPacketData
@@ -1903,7 +1903,7 @@ const ActivityClassType_cONSPacketData = ActivityClassType.cONSPacketData satisf
  * @type {number}
  */
 export
-const cONSPacketData = ActivityClassType.cONSPacketData satisfies ActivityClassType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const cONSPacketData = ActivityClassType.cONSPacketData; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ActivityClassType_internetProtocol
@@ -1921,7 +1921,7 @@ const cONSPacketData = ActivityClassType.cONSPacketData satisfies ActivityClassT
  * @type {number}
  */
 export
-const ActivityClassType_internetProtocol = ActivityClassType.internetProtocol satisfies ActivityClassType; /* LONG_NAMED_ENUMERATED_VALUE */
+const ActivityClassType_internetProtocol = ActivityClassType.internetProtocol; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary internetProtocol
@@ -1939,7 +1939,7 @@ const ActivityClassType_internetProtocol = ActivityClassType.internetProtocol sa
  * @type {number}
  */
 export
-const internetProtocol = ActivityClassType.internetProtocol satisfies ActivityClassType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const internetProtocol = ActivityClassType.internetProtocol; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ActivityClassType_swMIauthenticationsuccess
@@ -1957,7 +1957,7 @@ const internetProtocol = ActivityClassType.internetProtocol satisfies ActivityCl
  * @type {number}
  */
 export
-const ActivityClassType_swMIauthenticationsuccess = ActivityClassType.swMIauthenticationsuccess satisfies ActivityClassType; /* LONG_NAMED_ENUMERATED_VALUE */
+const ActivityClassType_swMIauthenticationsuccess = ActivityClassType.swMIauthenticationsuccess; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary swMIauthenticationsuccess
@@ -1975,7 +1975,7 @@ const ActivityClassType_swMIauthenticationsuccess = ActivityClassType.swMIauthen
  * @type {number}
  */
 export
-const swMIauthenticationsuccess = ActivityClassType.swMIauthenticationsuccess satisfies ActivityClassType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const swMIauthenticationsuccess = ActivityClassType.swMIauthenticationsuccess; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ActivityClassType_swMIauthenticationfail
@@ -1993,7 +1993,7 @@ const swMIauthenticationsuccess = ActivityClassType.swMIauthenticationsuccess sa
  * @type {number}
  */
 export
-const ActivityClassType_swMIauthenticationfail = ActivityClassType.swMIauthenticationfail satisfies ActivityClassType; /* LONG_NAMED_ENUMERATED_VALUE */
+const ActivityClassType_swMIauthenticationfail = ActivityClassType.swMIauthenticationfail; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary swMIauthenticationfail
@@ -2011,7 +2011,7 @@ const ActivityClassType_swMIauthenticationfail = ActivityClassType.swMIauthentic
  * @type {number}
  */
 export
-const swMIauthenticationfail = ActivityClassType.swMIauthenticationfail satisfies ActivityClassType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const swMIauthenticationfail = ActivityClassType.swMIauthenticationfail; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ActivityClassType_iTSIauthenticationsuccess
@@ -2029,7 +2029,7 @@ const swMIauthenticationfail = ActivityClassType.swMIauthenticationfail satisfie
  * @type {number}
  */
 export
-const ActivityClassType_iTSIauthenticationsuccess = ActivityClassType.iTSIauthenticationsuccess satisfies ActivityClassType; /* LONG_NAMED_ENUMERATED_VALUE */
+const ActivityClassType_iTSIauthenticationsuccess = ActivityClassType.iTSIauthenticationsuccess; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary iTSIauthenticationsuccess
@@ -2047,7 +2047,7 @@ const ActivityClassType_iTSIauthenticationsuccess = ActivityClassType.iTSIauthen
  * @type {number}
  */
 export
-const iTSIauthenticationsuccess = ActivityClassType.iTSIauthenticationsuccess satisfies ActivityClassType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const iTSIauthenticationsuccess = ActivityClassType.iTSIauthenticationsuccess; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ActivityClassType_iTSIauthenticationfail
@@ -2065,7 +2065,7 @@ const iTSIauthenticationsuccess = ActivityClassType.iTSIauthenticationsuccess sa
  * @type {number}
  */
 export
-const ActivityClassType_iTSIauthenticationfail = ActivityClassType.iTSIauthenticationfail satisfies ActivityClassType; /* LONG_NAMED_ENUMERATED_VALUE */
+const ActivityClassType_iTSIauthenticationfail = ActivityClassType.iTSIauthenticationfail; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary iTSIauthenticationfail
@@ -2083,7 +2083,7 @@ const ActivityClassType_iTSIauthenticationfail = ActivityClassType.iTSIauthentic
  * @type {number}
  */
 export
-const iTSIauthenticationfail = ActivityClassType.iTSIauthenticationfail satisfies ActivityClassType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const iTSIauthenticationfail = ActivityClassType.iTSIauthenticationfail; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ActivityClassType_oTARSCKsuccess
@@ -2100,7 +2100,7 @@ const iTSIauthenticationfail = ActivityClassType.iTSIauthenticationfail satisfie
  * @type {number}
  */
 export
-const ActivityClassType_oTARSCKsuccess = ActivityClassType.oTARSCKsuccess satisfies ActivityClassType; /* LONG_NAMED_ENUMERATED_VALUE */
+const ActivityClassType_oTARSCKsuccess = ActivityClassType.oTARSCKsuccess; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary oTARSCKsuccess
@@ -2117,7 +2117,7 @@ const ActivityClassType_oTARSCKsuccess = ActivityClassType.oTARSCKsuccess satisf
  * @type {number}
  */
 export
-const oTARSCKsuccess = ActivityClassType.oTARSCKsuccess satisfies ActivityClassType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const oTARSCKsuccess = ActivityClassType.oTARSCKsuccess; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ActivityClassType_oTARSCKfail
@@ -2132,7 +2132,7 @@ const oTARSCKsuccess = ActivityClassType.oTARSCKsuccess satisfies ActivityClassT
  * @type {number}
  */
 export
-const ActivityClassType_oTARSCKfail = ActivityClassType.oTARSCKfail satisfies ActivityClassType; /* LONG_NAMED_ENUMERATED_VALUE */
+const ActivityClassType_oTARSCKfail = ActivityClassType.oTARSCKfail; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary oTARSCKfail
@@ -2147,7 +2147,7 @@ const ActivityClassType_oTARSCKfail = ActivityClassType.oTARSCKfail satisfies Ac
  * @type {number}
  */
 export
-const oTARSCKfail = ActivityClassType.oTARSCKfail satisfies ActivityClassType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const oTARSCKfail = ActivityClassType.oTARSCKfail; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ActivityClassType_oTARGCKsuccess
@@ -2162,7 +2162,7 @@ const oTARSCKfail = ActivityClassType.oTARSCKfail satisfies ActivityClassType; /
  * @type {number}
  */
 export
-const ActivityClassType_oTARGCKsuccess = ActivityClassType.oTARGCKsuccess satisfies ActivityClassType; /* LONG_NAMED_ENUMERATED_VALUE */
+const ActivityClassType_oTARGCKsuccess = ActivityClassType.oTARGCKsuccess; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary oTARGCKsuccess
@@ -2177,7 +2177,7 @@ const ActivityClassType_oTARGCKsuccess = ActivityClassType.oTARGCKsuccess satisf
  * @type {number}
  */
 export
-const oTARGCKsuccess = ActivityClassType.oTARGCKsuccess satisfies ActivityClassType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const oTARGCKsuccess = ActivityClassType.oTARGCKsuccess; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ActivityClassType_oTARGCKfail
@@ -2192,7 +2192,7 @@ const oTARGCKsuccess = ActivityClassType.oTARGCKsuccess satisfies ActivityClassT
  * @type {number}
  */
 export
-const ActivityClassType_oTARGCKfail = ActivityClassType.oTARGCKfail satisfies ActivityClassType; /* LONG_NAMED_ENUMERATED_VALUE */
+const ActivityClassType_oTARGCKfail = ActivityClassType.oTARGCKfail; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary oTARGCKfail
@@ -2207,7 +2207,7 @@ const ActivityClassType_oTARGCKfail = ActivityClassType.oTARGCKfail satisfies Ac
  * @type {number}
  */
 export
-const oTARGCKfail = ActivityClassType.oTARGCKfail satisfies ActivityClassType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const oTARGCKfail = ActivityClassType.oTARGCKfail; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ActivityClassType_oTARCCKsuccess
@@ -2223,7 +2223,7 @@ const oTARGCKfail = ActivityClassType.oTARGCKfail satisfies ActivityClassType; /
  * @type {number}
  */
 export
-const ActivityClassType_oTARCCKsuccess = ActivityClassType.oTARCCKsuccess satisfies ActivityClassType; /* LONG_NAMED_ENUMERATED_VALUE */
+const ActivityClassType_oTARCCKsuccess = ActivityClassType.oTARCCKsuccess; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary oTARCCKsuccess
@@ -2239,7 +2239,7 @@ const ActivityClassType_oTARCCKsuccess = ActivityClassType.oTARCCKsuccess satisf
  * @type {number}
  */
 export
-const oTARCCKsuccess = ActivityClassType.oTARCCKsuccess satisfies ActivityClassType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const oTARCCKsuccess = ActivityClassType.oTARCCKsuccess; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ActivityClassType_oTARCCKfail
@@ -2254,7 +2254,7 @@ const oTARCCKsuccess = ActivityClassType.oTARCCKsuccess satisfies ActivityClassT
  * @type {number}
  */
 export
-const ActivityClassType_oTARCCKfail = ActivityClassType.oTARCCKfail satisfies ActivityClassType; /* LONG_NAMED_ENUMERATED_VALUE */
+const ActivityClassType_oTARCCKfail = ActivityClassType.oTARCCKfail; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary oTARCCKfail
@@ -2269,7 +2269,7 @@ const ActivityClassType_oTARCCKfail = ActivityClassType.oTARCCKfail satisfies Ac
  * @type {number}
  */
 export
-const oTARCCKfail = ActivityClassType.oTARCCKfail satisfies ActivityClassType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const oTARCCKfail = ActivityClassType.oTARCCKfail; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ActivityClassType_tARGETSUSCRIPTIONDISABLEDT
@@ -2288,7 +2288,7 @@ const oTARCCKfail = ActivityClassType.oTARCCKfail satisfies ActivityClassType; /
  * @type {number}
  */
 export
-const ActivityClassType_tARGETSUSCRIPTIONDISABLEDT = ActivityClassType.tARGETSUSCRIPTIONDISABLEDT satisfies ActivityClassType; /* LONG_NAMED_ENUMERATED_VALUE */
+const ActivityClassType_tARGETSUSCRIPTIONDISABLEDT = ActivityClassType.tARGETSUSCRIPTIONDISABLEDT; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tARGETSUSCRIPTIONDISABLEDT
@@ -2307,7 +2307,7 @@ const ActivityClassType_tARGETSUSCRIPTIONDISABLEDT = ActivityClassType.tARGETSUS
  * @type {number}
  */
 export
-const tARGETSUSCRIPTIONDISABLEDT = ActivityClassType.tARGETSUSCRIPTIONDISABLEDT satisfies ActivityClassType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tARGETSUSCRIPTIONDISABLEDT = ActivityClassType.tARGETSUSCRIPTIONDISABLEDT; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ActivityClassType_tARGETEQUIPMENTDISABLEDT
@@ -2323,7 +2323,7 @@ const tARGETSUSCRIPTIONDISABLEDT = ActivityClassType.tARGETSUSCRIPTIONDISABLEDT 
  * @type {number}
  */
 export
-const ActivityClassType_tARGETEQUIPMENTDISABLEDT = ActivityClassType.tARGETEQUIPMENTDISABLEDT satisfies ActivityClassType; /* LONG_NAMED_ENUMERATED_VALUE */
+const ActivityClassType_tARGETEQUIPMENTDISABLEDT = ActivityClassType.tARGETEQUIPMENTDISABLEDT; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tARGETEQUIPMENTDISABLEDT
@@ -2339,7 +2339,7 @@ const ActivityClassType_tARGETEQUIPMENTDISABLEDT = ActivityClassType.tARGETEQUIP
  * @type {number}
  */
 export
-const tARGETEQUIPMENTDISABLEDT = ActivityClassType.tARGETEQUIPMENTDISABLEDT satisfies ActivityClassType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tARGETEQUIPMENTDISABLEDT = ActivityClassType.tARGETEQUIPMENTDISABLEDT; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ActivityClassType_tARGETSUSCRIPTIONDISABLEDP
@@ -2356,7 +2356,7 @@ const tARGETEQUIPMENTDISABLEDT = ActivityClassType.tARGETEQUIPMENTDISABLEDT sati
  * @type {number}
  */
 export
-const ActivityClassType_tARGETSUSCRIPTIONDISABLEDP = ActivityClassType.tARGETSUSCRIPTIONDISABLEDP satisfies ActivityClassType; /* LONG_NAMED_ENUMERATED_VALUE */
+const ActivityClassType_tARGETSUSCRIPTIONDISABLEDP = ActivityClassType.tARGETSUSCRIPTIONDISABLEDP; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tARGETSUSCRIPTIONDISABLEDP
@@ -2373,7 +2373,7 @@ const ActivityClassType_tARGETSUSCRIPTIONDISABLEDP = ActivityClassType.tARGETSUS
  * @type {number}
  */
 export
-const tARGETSUSCRIPTIONDISABLEDP = ActivityClassType.tARGETSUSCRIPTIONDISABLEDP satisfies ActivityClassType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tARGETSUSCRIPTIONDISABLEDP = ActivityClassType.tARGETSUSCRIPTIONDISABLEDP; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ActivityClassType_tARGETEQUIPEMENTDISABLEDP
@@ -2390,7 +2390,7 @@ const tARGETSUSCRIPTIONDISABLEDP = ActivityClassType.tARGETSUSCRIPTIONDISABLEDP 
  * @type {number}
  */
 export
-const ActivityClassType_tARGETEQUIPEMENTDISABLEDP = ActivityClassType.tARGETEQUIPEMENTDISABLEDP satisfies ActivityClassType; /* LONG_NAMED_ENUMERATED_VALUE */
+const ActivityClassType_tARGETEQUIPEMENTDISABLEDP = ActivityClassType.tARGETEQUIPEMENTDISABLEDP; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tARGETEQUIPEMENTDISABLEDP
@@ -2407,7 +2407,7 @@ const ActivityClassType_tARGETEQUIPEMENTDISABLEDP = ActivityClassType.tARGETEQUI
  * @type {number}
  */
 export
-const tARGETEQUIPEMENTDISABLEDP = ActivityClassType.tARGETEQUIPEMENTDISABLEDP satisfies ActivityClassType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tARGETEQUIPEMENTDISABLEDP = ActivityClassType.tARGETEQUIPEMENTDISABLEDP; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ActivityClassType_tARGETSUBSCRIPTIONENABLED
@@ -2422,7 +2422,7 @@ const tARGETEQUIPEMENTDISABLEDP = ActivityClassType.tARGETEQUIPEMENTDISABLEDP sa
  * @type {number}
  */
 export
-const ActivityClassType_tARGETSUBSCRIPTIONENABLED = ActivityClassType.tARGETSUBSCRIPTIONENABLED satisfies ActivityClassType; /* LONG_NAMED_ENUMERATED_VALUE */
+const ActivityClassType_tARGETSUBSCRIPTIONENABLED = ActivityClassType.tARGETSUBSCRIPTIONENABLED; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tARGETSUBSCRIPTIONENABLED
@@ -2437,7 +2437,7 @@ const ActivityClassType_tARGETSUBSCRIPTIONENABLED = ActivityClassType.tARGETSUBS
  * @type {number}
  */
 export
-const tARGETSUBSCRIPTIONENABLED = ActivityClassType.tARGETSUBSCRIPTIONENABLED satisfies ActivityClassType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tARGETSUBSCRIPTIONENABLED = ActivityClassType.tARGETSUBSCRIPTIONENABLED; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ActivityClassType_tARGETEQUIPMENTENABLED
@@ -2452,7 +2452,7 @@ const tARGETSUBSCRIPTIONENABLED = ActivityClassType.tARGETSUBSCRIPTIONENABLED sa
  * @type {number}
  */
 export
-const ActivityClassType_tARGETEQUIPMENTENABLED = ActivityClassType.tARGETEQUIPMENTENABLED satisfies ActivityClassType; /* LONG_NAMED_ENUMERATED_VALUE */
+const ActivityClassType_tARGETEQUIPMENTENABLED = ActivityClassType.tARGETEQUIPMENTENABLED; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tARGETEQUIPMENTENABLED
@@ -2467,7 +2467,7 @@ const ActivityClassType_tARGETEQUIPMENTENABLED = ActivityClassType.tARGETEQUIPME
  * @type {number}
  */
 export
-const tARGETEQUIPMENTENABLED = ActivityClassType.tARGETEQUIPMENTENABLED satisfies ActivityClassType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tARGETEQUIPMENTENABLED = ActivityClassType.tARGETEQUIPMENTENABLED; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ActivityClassType_sessionregistration
@@ -2486,7 +2486,7 @@ const tARGETEQUIPMENTENABLED = ActivityClassType.tARGETEQUIPMENTENABLED satisfie
  * @type {number}
  */
 export
-const ActivityClassType_sessionregistration = ActivityClassType.sessionregistration satisfies ActivityClassType; /* LONG_NAMED_ENUMERATED_VALUE */
+const ActivityClassType_sessionregistration = ActivityClassType.sessionregistration; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sessionregistration
@@ -2505,7 +2505,7 @@ const ActivityClassType_sessionregistration = ActivityClassType.sessionregistrat
  * @type {number}
  */
 export
-const sessionregistration = ActivityClassType.sessionregistration satisfies ActivityClassType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sessionregistration = ActivityClassType.sessionregistration; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ActivityClassType_sessionderegistration
@@ -2520,7 +2520,7 @@ const sessionregistration = ActivityClassType.sessionregistration satisfies Acti
  * @type {number}
  */
 export
-const ActivityClassType_sessionderegistration = ActivityClassType.sessionderegistration satisfies ActivityClassType; /* LONG_NAMED_ENUMERATED_VALUE */
+const ActivityClassType_sessionderegistration = ActivityClassType.sessionderegistration; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sessionderegistration
@@ -2535,7 +2535,7 @@ const ActivityClassType_sessionderegistration = ActivityClassType.sessionderegis
  * @type {number}
  */
 export
-const sessionderegistration = ActivityClassType.sessionderegistration satisfies ActivityClassType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sessionderegistration = ActivityClassType.sessionderegistration; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ActivityClassType_mIGRATION
@@ -2555,7 +2555,7 @@ const sessionderegistration = ActivityClassType.sessionderegistration satisfies 
  * @type {number}
  */
 export
-const ActivityClassType_mIGRATION = ActivityClassType.mIGRATION satisfies ActivityClassType; /* LONG_NAMED_ENUMERATED_VALUE */
+const ActivityClassType_mIGRATION = ActivityClassType.mIGRATION; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary mIGRATION
@@ -2575,7 +2575,7 @@ const ActivityClassType_mIGRATION = ActivityClassType.mIGRATION satisfies Activi
  * @type {number}
  */
 export
-const mIGRATION = ActivityClassType.mIGRATION satisfies ActivityClassType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const mIGRATION = ActivityClassType.mIGRATION; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ActivityClassType_rOAMING
@@ -2592,7 +2592,7 @@ const mIGRATION = ActivityClassType.mIGRATION satisfies ActivityClassType; /* SH
  * @type {number}
  */
 export
-const ActivityClassType_rOAMING = ActivityClassType.rOAMING satisfies ActivityClassType; /* LONG_NAMED_ENUMERATED_VALUE */
+const ActivityClassType_rOAMING = ActivityClassType.rOAMING; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary rOAMING
@@ -2609,7 +2609,7 @@ const ActivityClassType_rOAMING = ActivityClassType.rOAMING satisfies ActivityCl
  * @type {number}
  */
 export
-const rOAMING = ActivityClassType.rOAMING satisfies ActivityClassType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const rOAMING = ActivityClassType.rOAMING; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ActivityClassType_supplementaryService
@@ -2627,7 +2627,7 @@ const rOAMING = ActivityClassType.rOAMING satisfies ActivityClassType; /* SHORT_
  * @type {number}
  */
 export
-const ActivityClassType_supplementaryService = ActivityClassType.supplementaryService satisfies ActivityClassType; /* LONG_NAMED_ENUMERATED_VALUE */
+const ActivityClassType_supplementaryService = ActivityClassType.supplementaryService; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary supplementaryService
@@ -2645,7 +2645,7 @@ const ActivityClassType_supplementaryService = ActivityClassType.supplementarySe
  * @type {number}
  */
 export
-const supplementaryService = ActivityClassType.supplementaryService satisfies ActivityClassType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const supplementaryService = ActivityClassType.supplementaryService; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_ActivityClassType: $.ASN1Decoder<ActivityClassType> = $._decodeEnumerated;
 export const _encode_ActivityClassType: $.ASN1Encoder<ActivityClassType> = $._encodeEnumerated;
 

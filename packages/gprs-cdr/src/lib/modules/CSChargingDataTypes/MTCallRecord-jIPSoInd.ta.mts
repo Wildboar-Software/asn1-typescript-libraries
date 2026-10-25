@@ -38,7 +38,7 @@ const MTCallRecord_jIPSoInd_lRN_NP_Database = 1 satisfies MTCallRecord_jIPSoInd;
  * @type {number}
  */
 export
-const lRN_NP_Database = MTCallRecord_jIPSoInd_lRN_NP_Database satisfies MTCallRecord_jIPSoInd; /* SHORT_NAMED_INTEGER_VALUE */
+const lRN_NP_Database = MTCallRecord_jIPSoInd_lRN_NP_Database; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary MTCallRecord_jIPSoInd_switchingSystemData
@@ -54,7 +54,7 @@ const MTCallRecord_jIPSoInd_switchingSystemData = 2 satisfies MTCallRecord_jIPSo
  * @type {number}
  */
 export
-const switchingSystemData = MTCallRecord_jIPSoInd_switchingSystemData satisfies MTCallRecord_jIPSoInd; /* SHORT_NAMED_INTEGER_VALUE */
+const switchingSystemData = MTCallRecord_jIPSoInd_switchingSystemData; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary MTCallRecord_jIPSoInd_incomingsignaling
@@ -70,7 +70,7 @@ const MTCallRecord_jIPSoInd_incomingsignaling = 3 satisfies MTCallRecord_jIPSoIn
  * @type {number}
  */
 export
-const incomingsignaling = MTCallRecord_jIPSoInd_incomingsignaling satisfies MTCallRecord_jIPSoInd; /* SHORT_NAMED_INTEGER_VALUE */
+const incomingsignaling = MTCallRecord_jIPSoInd_incomingsignaling; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary MTCallRecord_jIPSoInd_unknown
@@ -86,7 +86,7 @@ const MTCallRecord_jIPSoInd_unknown = 9 satisfies MTCallRecord_jIPSoInd; /* LONG
  * @type {number}
  */
 export
-const unknown = MTCallRecord_jIPSoInd_unknown satisfies MTCallRecord_jIPSoInd; /* SHORT_NAMED_INTEGER_VALUE */
+const unknown = MTCallRecord_jIPSoInd_unknown; /* SHORT_NAMED_INTEGER_VALUE */
 
 export
 const _decode_MTCallRecord_jIPSoInd: $.ASN1Decoder<MTCallRecord_jIPSoInd> = $._decodeInteger;

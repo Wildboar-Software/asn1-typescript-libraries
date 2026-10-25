@@ -61,7 +61,7 @@ const ServiceError_errorClass_initiate_other = 0 satisfies ServiceError_errorCla
  * @type {number}
  */
 export
-const other = ServiceError_errorClass_initiate_other satisfies ServiceError_errorClass_initiate; /* SHORT_NAMED_INTEGER_VALUE */
+const other = ServiceError_errorClass_initiate_other; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceError_errorClass_initiate_max_services_outstanding_calling_insufficient
@@ -87,7 +87,7 @@ const ServiceError_errorClass_initiate_max_services_outstanding_calling_insuffic
  * @type {number}
  */
 export
-const max_services_outstanding_calling_insufficient = ServiceError_errorClass_initiate_max_services_outstanding_calling_insufficient satisfies ServiceError_errorClass_initiate; /* SHORT_NAMED_INTEGER_VALUE */
+const max_services_outstanding_calling_insufficient = ServiceError_errorClass_initiate_max_services_outstanding_calling_insufficient; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceError_errorClass_initiate_max_services_outstanding_called_insufficient
@@ -113,7 +113,7 @@ const ServiceError_errorClass_initiate_max_services_outstanding_called_insuffici
  * @type {number}
  */
 export
-const max_services_outstanding_called_insufficient = ServiceError_errorClass_initiate_max_services_outstanding_called_insufficient satisfies ServiceError_errorClass_initiate; /* SHORT_NAMED_INTEGER_VALUE */
+const max_services_outstanding_called_insufficient = ServiceError_errorClass_initiate_max_services_outstanding_called_insufficient; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceError_errorClass_initiate_service_CBB_insufficient
@@ -139,7 +139,7 @@ const ServiceError_errorClass_initiate_service_CBB_insufficient = 5 satisfies Se
  * @type {number}
  */
 export
-const service_CBB_insufficient = ServiceError_errorClass_initiate_service_CBB_insufficient satisfies ServiceError_errorClass_initiate; /* SHORT_NAMED_INTEGER_VALUE */
+const service_CBB_insufficient = ServiceError_errorClass_initiate_service_CBB_insufficient; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceError_errorClass_initiate_parameter_CBB_insufficient
@@ -165,7 +165,7 @@ const ServiceError_errorClass_initiate_parameter_CBB_insufficient = 6 satisfies 
  * @type {number}
  */
 export
-const parameter_CBB_insufficient = ServiceError_errorClass_initiate_parameter_CBB_insufficient satisfies ServiceError_errorClass_initiate; /* SHORT_NAMED_INTEGER_VALUE */
+const parameter_CBB_insufficient = ServiceError_errorClass_initiate_parameter_CBB_insufficient; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceError_errorClass_initiate_nesting_level_insufficient
@@ -191,7 +191,7 @@ const ServiceError_errorClass_initiate_nesting_level_insufficient = 7 satisfies 
  * @type {number}
  */
 export
-const nesting_level_insufficient = ServiceError_errorClass_initiate_nesting_level_insufficient satisfies ServiceError_errorClass_initiate; /* SHORT_NAMED_INTEGER_VALUE */
+const nesting_level_insufficient = ServiceError_errorClass_initiate_nesting_level_insufficient; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_ServiceError_errorClass_initiate = $._decodeInteger;
 export const _encode_ServiceError_errorClass_initiate = $._encodeInteger;
 

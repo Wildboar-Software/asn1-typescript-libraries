@@ -93,7 +93,7 @@ type SMS_report_sMS_Contents_initiator = _enum_for_SMS_report_sMS_Contents_initi
  * @type {number}
  */
 export
-const SMS_report_sMS_Contents_initiator_target = _enum_for_SMS_report_sMS_Contents_initiator.target satisfies SMS_report_sMS_Contents_initiator; /* LONG_NAMED_ENUMERATED_VALUE */
+const SMS_report_sMS_Contents_initiator_target = _enum_for_SMS_report_sMS_Contents_initiator.target; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary target
@@ -109,7 +109,7 @@ const SMS_report_sMS_Contents_initiator_target = _enum_for_SMS_report_sMS_Conten
  * @type {number}
  */
 export
-const target = SMS_report_sMS_Contents_initiator_target satisfies SMS_report_sMS_Contents_initiator; /* SHORT_NAMED_ENUMERATED_VALUE */
+const target = SMS_report_sMS_Contents_initiator_target; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SMS_report_sMS_Contents_initiator_server
@@ -125,7 +125,7 @@ const target = SMS_report_sMS_Contents_initiator_target satisfies SMS_report_sMS
  * @type {number}
  */
 export
-const SMS_report_sMS_Contents_initiator_server = _enum_for_SMS_report_sMS_Contents_initiator.server satisfies SMS_report_sMS_Contents_initiator; /* LONG_NAMED_ENUMERATED_VALUE */
+const SMS_report_sMS_Contents_initiator_server = _enum_for_SMS_report_sMS_Contents_initiator.server; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary server
@@ -141,7 +141,7 @@ const SMS_report_sMS_Contents_initiator_server = _enum_for_SMS_report_sMS_Conten
  * @type {number}
  */
 export
-const server = SMS_report_sMS_Contents_initiator_server satisfies SMS_report_sMS_Contents_initiator; /* SHORT_NAMED_ENUMERATED_VALUE */
+const server = SMS_report_sMS_Contents_initiator_server; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SMS_report_sMS_Contents_initiator_undefined_party
@@ -158,7 +158,7 @@ const server = SMS_report_sMS_Contents_initiator_server satisfies SMS_report_sMS
  * @type {number}
  */
 export
-const SMS_report_sMS_Contents_initiator_undefined_party = _enum_for_SMS_report_sMS_Contents_initiator.undefined_party satisfies SMS_report_sMS_Contents_initiator; /* LONG_NAMED_ENUMERATED_VALUE */
+const SMS_report_sMS_Contents_initiator_undefined_party = _enum_for_SMS_report_sMS_Contents_initiator.undefined_party; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary undefined_party
@@ -175,7 +175,7 @@ const SMS_report_sMS_Contents_initiator_undefined_party = _enum_for_SMS_report_s
  * @type {number}
  */
 export
-const undefined_party = SMS_report_sMS_Contents_initiator_undefined_party satisfies SMS_report_sMS_Contents_initiator; /* SHORT_NAMED_ENUMERATED_VALUE */
+const undefined_party = SMS_report_sMS_Contents_initiator_undefined_party; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_SMS_report_sMS_Contents_initiator: $.ASN1Decoder<SMS_report_sMS_Contents_initiator> = $._decodeEnumerated;
 export const _encode_SMS_report_sMS_Contents_initiator: $.ASN1Encoder<SMS_report_sMS_Contents_initiator> = $._encodeEnumerated;
 

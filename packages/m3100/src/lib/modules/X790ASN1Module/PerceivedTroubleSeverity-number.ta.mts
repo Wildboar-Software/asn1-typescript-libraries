@@ -39,7 +39,7 @@ export const PerceivedTroubleSeverity_number_outOfService = 0 satisfies Perceive
  * @constant
  * @type {number}
  */
-export const outOfService = PerceivedTroubleSeverity_number_outOfService satisfies PerceivedTroubleSeverity_number; /* SHORT_NAMED_INTEGER_VALUE */
+export const outOfService = PerceivedTroubleSeverity_number_outOfService; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -55,7 +55,7 @@ export const PerceivedTroubleSeverity_number_backInService = 1 satisfies Perceiv
  * @constant
  * @type {number}
  */
-export const backInService = PerceivedTroubleSeverity_number_backInService satisfies PerceivedTroubleSeverity_number; /* SHORT_NAMED_INTEGER_VALUE */
+export const backInService = PerceivedTroubleSeverity_number_backInService; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -71,7 +71,7 @@ export const PerceivedTroubleSeverity_number_serviceImpairment = 2 satisfies Per
  * @constant
  * @type {number}
  */
-export const serviceImpairment = PerceivedTroubleSeverity_number_serviceImpairment satisfies PerceivedTroubleSeverity_number; /* SHORT_NAMED_INTEGER_VALUE */
+export const serviceImpairment = PerceivedTroubleSeverity_number_serviceImpairment; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -87,7 +87,7 @@ export const PerceivedTroubleSeverity_number_nonServiceAffectingTrouble = 3 sati
  * @constant
  * @type {number}
  */
-export const nonServiceAffectingTrouble = PerceivedTroubleSeverity_number_nonServiceAffectingTrouble satisfies PerceivedTroubleSeverity_number; /* SHORT_NAMED_INTEGER_VALUE */
+export const nonServiceAffectingTrouble = PerceivedTroubleSeverity_number_nonServiceAffectingTrouble; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 

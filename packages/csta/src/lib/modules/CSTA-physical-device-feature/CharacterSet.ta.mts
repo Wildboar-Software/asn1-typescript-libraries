@@ -85,7 +85,7 @@ const CharacterSet = _enum_for_CharacterSet;
  * @type {number}
  */
 export
-const CharacterSet_ascii = CharacterSet.ascii satisfies CharacterSet; /* LONG_NAMED_ENUMERATED_VALUE */
+const CharacterSet_ascii = CharacterSet.ascii; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ascii
@@ -93,7 +93,7 @@ const CharacterSet_ascii = CharacterSet.ascii satisfies CharacterSet; /* LONG_NA
  * @type {number}
  */
 export
-const ascii = CharacterSet.ascii satisfies CharacterSet; /* SHORT_NAMED_ENUMERATED_VALUE */
+const ascii = CharacterSet.ascii; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CharacterSet_unicode
@@ -105,7 +105,7 @@ const ascii = CharacterSet.ascii satisfies CharacterSet; /* SHORT_NAMED_ENUMERAT
  * @type {number}
  */
 export
-const CharacterSet_unicode = CharacterSet.unicode satisfies CharacterSet; /* LONG_NAMED_ENUMERATED_VALUE */
+const CharacterSet_unicode = CharacterSet.unicode; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unicode
@@ -113,7 +113,7 @@ const CharacterSet_unicode = CharacterSet.unicode satisfies CharacterSet; /* LON
  * @type {number}
  */
 export
-const unicode = CharacterSet.unicode satisfies CharacterSet; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unicode = CharacterSet.unicode; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CharacterSet_proprietary
@@ -125,7 +125,7 @@ const unicode = CharacterSet.unicode satisfies CharacterSet; /* SHORT_NAMED_ENUM
  * @type {number}
  */
 export
-const CharacterSet_proprietary = CharacterSet.proprietary satisfies CharacterSet; /* LONG_NAMED_ENUMERATED_VALUE */
+const CharacterSet_proprietary = CharacterSet.proprietary; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary proprietary
@@ -133,7 +133,7 @@ const CharacterSet_proprietary = CharacterSet.proprietary satisfies CharacterSet
  * @type {number}
  */
 export
-const proprietary = CharacterSet.proprietary satisfies CharacterSet; /* SHORT_NAMED_ENUMERATED_VALUE */
+const proprietary = CharacterSet.proprietary; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 let _cached_decoder_for_CharacterSet: $.ASN1Decoder<CharacterSet> | null = null;
 

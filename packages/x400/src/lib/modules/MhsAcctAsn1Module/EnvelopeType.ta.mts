@@ -42,7 +42,7 @@ export const EnvelopeType_message_delivery_envelope = 0 satisfies EnvelopeType; 
  * @constant
  * @type {number}
  */
-export const message_delivery_envelope = EnvelopeType_message_delivery_envelope satisfies EnvelopeType; /* SHORT_NAMED_INTEGER_VALUE */
+export const message_delivery_envelope = EnvelopeType_message_delivery_envelope; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EnvelopeType_message_submission_envelope
@@ -56,7 +56,7 @@ export const EnvelopeType_message_submission_envelope = 1 satisfies EnvelopeType
  * @constant
  * @type {number}
  */
-export const message_submission_envelope = EnvelopeType_message_submission_envelope satisfies EnvelopeType; /* SHORT_NAMED_INTEGER_VALUE */
+export const message_submission_envelope = EnvelopeType_message_submission_envelope; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EnvelopeType_message_transfer_envelope
@@ -70,7 +70,7 @@ export const EnvelopeType_message_transfer_envelope = 2 satisfies EnvelopeType; 
  * @constant
  * @type {number}
  */
-export const message_transfer_envelope = EnvelopeType_message_transfer_envelope satisfies EnvelopeType; /* SHORT_NAMED_INTEGER_VALUE */
+export const message_transfer_envelope = EnvelopeType_message_transfer_envelope; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EnvelopeType_probe_submission_envelope
@@ -84,7 +84,7 @@ export const EnvelopeType_probe_submission_envelope = 3 satisfies EnvelopeType; 
  * @constant
  * @type {number}
  */
-export const probe_submission_envelope = EnvelopeType_probe_submission_envelope satisfies EnvelopeType; /* SHORT_NAMED_INTEGER_VALUE */
+export const probe_submission_envelope = EnvelopeType_probe_submission_envelope; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EnvelopeType_probe_transfer_envelope
@@ -98,7 +98,7 @@ export const EnvelopeType_probe_transfer_envelope = 4 satisfies EnvelopeType; /*
  * @constant
  * @type {number}
  */
-export const probe_transfer_envelope = EnvelopeType_probe_transfer_envelope satisfies EnvelopeType; /* SHORT_NAMED_INTEGER_VALUE */
+export const probe_transfer_envelope = EnvelopeType_probe_transfer_envelope; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EnvelopeType_report_delivery_envelope
@@ -112,7 +112,7 @@ export const EnvelopeType_report_delivery_envelope = 5 satisfies EnvelopeType; /
  * @constant
  * @type {number}
  */
-export const report_delivery_envelope = EnvelopeType_report_delivery_envelope satisfies EnvelopeType; /* SHORT_NAMED_INTEGER_VALUE */
+export const report_delivery_envelope = EnvelopeType_report_delivery_envelope; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EnvelopeType_report_transfer_envelope
@@ -126,7 +126,7 @@ export const EnvelopeType_report_transfer_envelope = 6 satisfies EnvelopeType; /
  * @constant
  * @type {number}
  */
-export const report_transfer_envelope = EnvelopeType_report_transfer_envelope satisfies EnvelopeType; /* SHORT_NAMED_INTEGER_VALUE */
+export const report_transfer_envelope = EnvelopeType_report_transfer_envelope; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_EnvelopeType = $._decodeInteger;

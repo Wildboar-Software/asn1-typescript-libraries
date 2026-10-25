@@ -41,7 +41,7 @@ const OutGatewayRecord_lrnQuryStatus_successfulQuery = 1 satisfies OutGatewayRec
  * @type {number}
  */
 export
-const successfulQuery = OutGatewayRecord_lrnQuryStatus_successfulQuery satisfies OutGatewayRecord_lrnQuryStatus; /* SHORT_NAMED_INTEGER_VALUE */
+const successfulQuery = OutGatewayRecord_lrnQuryStatus_successfulQuery; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary OutGatewayRecord_lrnQuryStatus_noQueryResponseMsg
@@ -57,7 +57,7 @@ const OutGatewayRecord_lrnQuryStatus_noQueryResponseMsg = 2 satisfies OutGateway
  * @type {number}
  */
 export
-const noQueryResponseMsg = OutGatewayRecord_lrnQuryStatus_noQueryResponseMsg satisfies OutGatewayRecord_lrnQuryStatus; /* SHORT_NAMED_INTEGER_VALUE */
+const noQueryResponseMsg = OutGatewayRecord_lrnQuryStatus_noQueryResponseMsg; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary OutGatewayRecord_lrnQuryStatus_queryProtocolErr
@@ -73,7 +73,7 @@ const OutGatewayRecord_lrnQuryStatus_queryProtocolErr = 4 satisfies OutGatewayRe
  * @type {number}
  */
 export
-const queryProtocolErr = OutGatewayRecord_lrnQuryStatus_queryProtocolErr satisfies OutGatewayRecord_lrnQuryStatus; /* SHORT_NAMED_INTEGER_VALUE */
+const queryProtocolErr = OutGatewayRecord_lrnQuryStatus_queryProtocolErr; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary OutGatewayRecord_lrnQuryStatus_queryResponseDataErr
@@ -89,7 +89,7 @@ const OutGatewayRecord_lrnQuryStatus_queryResponseDataErr = 5 satisfies OutGatew
  * @type {number}
  */
 export
-const queryResponseDataErr = OutGatewayRecord_lrnQuryStatus_queryResponseDataErr satisfies OutGatewayRecord_lrnQuryStatus; /* SHORT_NAMED_INTEGER_VALUE */
+const queryResponseDataErr = OutGatewayRecord_lrnQuryStatus_queryResponseDataErr; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary OutGatewayRecord_lrnQuryStatus_queryRejected
@@ -105,7 +105,7 @@ const OutGatewayRecord_lrnQuryStatus_queryRejected = 6 satisfies OutGatewayRecor
  * @type {number}
  */
 export
-const queryRejected = OutGatewayRecord_lrnQuryStatus_queryRejected satisfies OutGatewayRecord_lrnQuryStatus; /* SHORT_NAMED_INTEGER_VALUE */
+const queryRejected = OutGatewayRecord_lrnQuryStatus_queryRejected; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary OutGatewayRecord_lrnQuryStatus_queryNotPerformed
@@ -121,7 +121,7 @@ const OutGatewayRecord_lrnQuryStatus_queryNotPerformed = 9 satisfies OutGatewayR
  * @type {number}
  */
 export
-const queryNotPerformed = OutGatewayRecord_lrnQuryStatus_queryNotPerformed satisfies OutGatewayRecord_lrnQuryStatus; /* SHORT_NAMED_INTEGER_VALUE */
+const queryNotPerformed = OutGatewayRecord_lrnQuryStatus_queryNotPerformed; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary OutGatewayRecord_lrnQuryStatus_queryUnsuccessful
@@ -137,7 +137,7 @@ const OutGatewayRecord_lrnQuryStatus_queryUnsuccessful = 99 satisfies OutGateway
  * @type {number}
  */
 export
-const queryUnsuccessful = OutGatewayRecord_lrnQuryStatus_queryUnsuccessful satisfies OutGatewayRecord_lrnQuryStatus; /* SHORT_NAMED_INTEGER_VALUE */
+const queryUnsuccessful = OutGatewayRecord_lrnQuryStatus_queryUnsuccessful; /* SHORT_NAMED_INTEGER_VALUE */
 
 export
 const _decode_OutGatewayRecord_lrnQuryStatus: $.ASN1Decoder<OutGatewayRecord_lrnQuryStatus> = $._decodeInteger;

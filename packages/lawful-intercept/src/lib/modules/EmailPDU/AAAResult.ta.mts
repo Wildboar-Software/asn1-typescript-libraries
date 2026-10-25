@@ -88,7 +88,7 @@ type AAAResult = _enum_for_AAAResult | ENUMERATED;
  * @type {number}
  */
 export
-const AAAResult_resultUnknown = _enum_for_AAAResult.resultUnknown satisfies AAAResult; /* LONG_NAMED_ENUMERATED_VALUE */
+const AAAResult_resultUnknown = _enum_for_AAAResult.resultUnknown; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary resultUnknown
@@ -103,7 +103,7 @@ const AAAResult_resultUnknown = _enum_for_AAAResult.resultUnknown satisfies AAAR
  * @type {number}
  */
 export
-const resultUnknown = AAAResult_resultUnknown satisfies AAAResult; /* SHORT_NAMED_ENUMERATED_VALUE */
+const resultUnknown = AAAResult_resultUnknown; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AAAResult_aAAFailed
@@ -118,7 +118,7 @@ const resultUnknown = AAAResult_resultUnknown satisfies AAAResult; /* SHORT_NAME
  * @type {number}
  */
 export
-const AAAResult_aAAFailed = _enum_for_AAAResult.aAAFailed satisfies AAAResult; /* LONG_NAMED_ENUMERATED_VALUE */
+const AAAResult_aAAFailed = _enum_for_AAAResult.aAAFailed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary aAAFailed
@@ -133,7 +133,7 @@ const AAAResult_aAAFailed = _enum_for_AAAResult.aAAFailed satisfies AAAResult; /
  * @type {number}
  */
 export
-const aAAFailed = AAAResult_aAAFailed satisfies AAAResult; /* SHORT_NAMED_ENUMERATED_VALUE */
+const aAAFailed = AAAResult_aAAFailed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AAAResult_aAASucceeded
@@ -148,7 +148,7 @@ const aAAFailed = AAAResult_aAAFailed satisfies AAAResult; /* SHORT_NAMED_ENUMER
  * @type {number}
  */
 export
-const AAAResult_aAASucceeded = _enum_for_AAAResult.aAASucceeded satisfies AAAResult; /* LONG_NAMED_ENUMERATED_VALUE */
+const AAAResult_aAASucceeded = _enum_for_AAAResult.aAASucceeded; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary aAASucceeded
@@ -163,7 +163,7 @@ const AAAResult_aAASucceeded = _enum_for_AAAResult.aAASucceeded satisfies AAARes
  * @type {number}
  */
 export
-const aAASucceeded = AAAResult_aAASucceeded satisfies AAAResult; /* SHORT_NAMED_ENUMERATED_VALUE */
+const aAASucceeded = AAAResult_aAASucceeded; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_AAAResult: $.ASN1Decoder<AAAResult> = $._decodeEnumerated;
 export const _encode_AAAResult: $.ASN1Encoder<AAAResult> = $._encodeEnumerated;
 

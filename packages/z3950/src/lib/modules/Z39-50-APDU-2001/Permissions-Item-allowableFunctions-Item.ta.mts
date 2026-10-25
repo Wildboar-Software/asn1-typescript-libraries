@@ -52,7 +52,7 @@ const Permissions_Item_allowableFunctions_Item_delete_ = 1 satisfies Permissions
  * @type {number}
  */
 export
-const delete_ = Permissions_Item_allowableFunctions_Item_delete_ satisfies Permissions_Item_allowableFunctions_Item; /* SHORT_NAMED_INTEGER_VALUE */
+const delete_ = Permissions_Item_allowableFunctions_Item_delete_; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Permissions_Item_allowableFunctions_Item_modifyContents
@@ -77,7 +77,7 @@ const Permissions_Item_allowableFunctions_Item_modifyContents = 2 satisfies Perm
  * @type {number}
  */
 export
-const modifyContents = Permissions_Item_allowableFunctions_Item_modifyContents satisfies Permissions_Item_allowableFunctions_Item; /* SHORT_NAMED_INTEGER_VALUE */
+const modifyContents = Permissions_Item_allowableFunctions_Item_modifyContents; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Permissions_Item_allowableFunctions_Item_modifyPermissions
@@ -102,7 +102,7 @@ const Permissions_Item_allowableFunctions_Item_modifyPermissions = 3 satisfies P
  * @type {number}
  */
 export
-const modifyPermissions = Permissions_Item_allowableFunctions_Item_modifyPermissions satisfies Permissions_Item_allowableFunctions_Item; /* SHORT_NAMED_INTEGER_VALUE */
+const modifyPermissions = Permissions_Item_allowableFunctions_Item_modifyPermissions; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Permissions_Item_allowableFunctions_Item_present
@@ -127,7 +127,7 @@ const Permissions_Item_allowableFunctions_Item_present = 4 satisfies Permissions
  * @type {number}
  */
 export
-const present = Permissions_Item_allowableFunctions_Item_present satisfies Permissions_Item_allowableFunctions_Item; /* SHORT_NAMED_INTEGER_VALUE */
+const present = Permissions_Item_allowableFunctions_Item_present; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Permissions_Item_allowableFunctions_Item_invoke
@@ -153,7 +153,7 @@ const Permissions_Item_allowableFunctions_Item_invoke = 5 satisfies Permissions_
  * @type {number}
  */
 export
-const invoke = Permissions_Item_allowableFunctions_Item_invoke satisfies Permissions_Item_allowableFunctions_Item; /* SHORT_NAMED_INTEGER_VALUE */
+const invoke = Permissions_Item_allowableFunctions_Item_invoke; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_Permissions_Item_allowableFunctions_Item: $.ASN1Decoder<Permissions_Item_allowableFunctions_Item> = $._decodeInteger;
 export const _encode_Permissions_Item_allowableFunctions_Item: $.ASN1Encoder<Permissions_Item_allowableFunctions_Item> = $._encodeInteger;
 

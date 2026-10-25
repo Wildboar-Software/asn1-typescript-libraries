@@ -40,7 +40,7 @@ const CommonEquipRecord_equipmentType_conferenceBridge = 0 satisfies CommonEquip
  * @type {number}
  */
 export
-const conferenceBridge = CommonEquipRecord_equipmentType_conferenceBridge satisfies CommonEquipRecord_equipmentType; /* SHORT_NAMED_INTEGER_VALUE */
+const conferenceBridge = CommonEquipRecord_equipmentType_conferenceBridge; /* SHORT_NAMED_INTEGER_VALUE */
 
 export
 const _decode_CommonEquipRecord_equipmentType: $.ASN1Decoder<CommonEquipRecord_equipmentType> = $._decodeInteger;

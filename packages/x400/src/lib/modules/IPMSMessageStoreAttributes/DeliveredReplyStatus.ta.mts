@@ -40,7 +40,7 @@ export const DeliveredReplyStatus_no_reply_requested = 0 satisfies DeliveredRepl
  * @constant
  * @type {number}
  */
-export const no_reply_requested = DeliveredReplyStatus_no_reply_requested satisfies DeliveredReplyStatus; /* SHORT_NAMED_INTEGER_VALUE */
+export const no_reply_requested = DeliveredReplyStatus_no_reply_requested; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeliveredReplyStatus_reply_outstanding
@@ -54,7 +54,7 @@ export const DeliveredReplyStatus_reply_outstanding = 1 satisfies DeliveredReply
  * @constant
  * @type {number}
  */
-export const reply_outstanding = DeliveredReplyStatus_reply_outstanding satisfies DeliveredReplyStatus; /* SHORT_NAMED_INTEGER_VALUE */
+export const reply_outstanding = DeliveredReplyStatus_reply_outstanding; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeliveredReplyStatus_reply_received
@@ -68,7 +68,7 @@ export const DeliveredReplyStatus_reply_received = 2 satisfies DeliveredReplySta
  * @constant
  * @type {number}
  */
-export const reply_received = DeliveredReplyStatus_reply_received satisfies DeliveredReplyStatus; /* SHORT_NAMED_INTEGER_VALUE */
+export const reply_received = DeliveredReplyStatus_reply_received; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_DeliveredReplyStatus = $._decodeInteger;

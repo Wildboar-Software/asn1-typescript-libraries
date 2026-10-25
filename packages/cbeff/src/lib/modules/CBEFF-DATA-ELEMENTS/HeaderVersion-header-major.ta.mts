@@ -36,7 +36,7 @@ export const HeaderVersion_header_major_version1 = 1 satisfies HeaderVersion_hea
  * @constant
  * @type {number}
  */
-export const version1 = HeaderVersion_header_major_version1 satisfies HeaderVersion_header_major; /* SHORT_NAMED_INTEGER_VALUE */
+export const version1 = HeaderVersion_header_major_version1; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_HeaderVersion_header_major = $._decodeInteger;

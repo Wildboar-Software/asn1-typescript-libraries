@@ -54,7 +54,7 @@ const MaxLogSize_unlimited = 0 satisfies MaxLogSize; /* LONG_NAMED_INTEGER_VALUE
  * @type {number}
  */
 export
-const unlimited = MaxLogSize_unlimited satisfies MaxLogSize; /* SHORT_NAMED_INTEGER_VALUE */
+const unlimited = MaxLogSize_unlimited; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_MaxLogSize = $._decodeInteger;

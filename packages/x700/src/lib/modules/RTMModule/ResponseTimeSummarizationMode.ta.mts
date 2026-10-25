@@ -94,7 +94,7 @@ export const ResponseTimeSummarizationMode = _enum_for_ResponseTimeSummarization
  * @type {number}
  */
 export const ResponseTimeSummarizationMode_rawResponseTime =
-    ResponseTimeSummarizationMode.rawResponseTime satisfies ResponseTimeSummarizationMode; /* LONG_NAMED_ENUMERATED_VALUE */
+    ResponseTimeSummarizationMode.rawResponseTime; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary rawResponseTime
@@ -107,7 +107,7 @@ export const ResponseTimeSummarizationMode_rawResponseTime =
  * @type {number}
  */
 export const rawResponseTime =
-    ResponseTimeSummarizationMode.rawResponseTime satisfies ResponseTimeSummarizationMode; /* SHORT_NAMED_ENUMERATED_VALUE */
+    ResponseTimeSummarizationMode.rawResponseTime; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ResponseTimeSummarizationMode_responseTimePerBit
@@ -120,7 +120,7 @@ export const rawResponseTime =
  * @type {number}
  */
 export const ResponseTimeSummarizationMode_responseTimePerBit =
-    ResponseTimeSummarizationMode.responseTimePerBit satisfies ResponseTimeSummarizationMode; /* LONG_NAMED_ENUMERATED_VALUE */
+    ResponseTimeSummarizationMode.responseTimePerBit; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary responseTimePerBit
@@ -133,7 +133,7 @@ export const ResponseTimeSummarizationMode_responseTimePerBit =
  * @type {number}
  */
 export const responseTimePerBit =
-    ResponseTimeSummarizationMode.responseTimePerBit satisfies ResponseTimeSummarizationMode; /* SHORT_NAMED_ENUMERATED_VALUE */
+    ResponseTimeSummarizationMode.responseTimePerBit; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 export function _decode_ResponseTimeSummarizationMode(el: _Element): ResponseTimeSummarizationMode {

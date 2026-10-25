@@ -118,7 +118,7 @@ type E_mail_Protocol = _enum_for_E_mail_Protocol | ENUMERATED;
  * @type {number}
  */
 export
-const E_mail_Protocol_smtp = _enum_for_E_mail_Protocol.smtp satisfies E_mail_Protocol; /* LONG_NAMED_ENUMERATED_VALUE */
+const E_mail_Protocol_smtp = _enum_for_E_mail_Protocol.smtp; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary smtp
@@ -135,7 +135,7 @@ const E_mail_Protocol_smtp = _enum_for_E_mail_Protocol.smtp satisfies E_mail_Pro
  * @type {number}
  */
 export
-const smtp = E_mail_Protocol_smtp satisfies E_mail_Protocol; /* SHORT_NAMED_ENUMERATED_VALUE */
+const smtp = E_mail_Protocol_smtp; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary E_mail_Protocol_pop3
@@ -151,7 +151,7 @@ const smtp = E_mail_Protocol_smtp satisfies E_mail_Protocol; /* SHORT_NAMED_ENUM
  * @type {number}
  */
 export
-const E_mail_Protocol_pop3 = _enum_for_E_mail_Protocol.pop3 satisfies E_mail_Protocol; /* LONG_NAMED_ENUMERATED_VALUE */
+const E_mail_Protocol_pop3 = _enum_for_E_mail_Protocol.pop3; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pop3
@@ -167,7 +167,7 @@ const E_mail_Protocol_pop3 = _enum_for_E_mail_Protocol.pop3 satisfies E_mail_Pro
  * @type {number}
  */
 export
-const pop3 = E_mail_Protocol_pop3 satisfies E_mail_Protocol; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pop3 = E_mail_Protocol_pop3; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary E_mail_Protocol_imap4
@@ -183,7 +183,7 @@ const pop3 = E_mail_Protocol_pop3 satisfies E_mail_Protocol; /* SHORT_NAMED_ENUM
  * @type {number}
  */
 export
-const E_mail_Protocol_imap4 = _enum_for_E_mail_Protocol.imap4 satisfies E_mail_Protocol; /* LONG_NAMED_ENUMERATED_VALUE */
+const E_mail_Protocol_imap4 = _enum_for_E_mail_Protocol.imap4; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary imap4
@@ -199,7 +199,7 @@ const E_mail_Protocol_imap4 = _enum_for_E_mail_Protocol.imap4 satisfies E_mail_P
  * @type {number}
  */
 export
-const imap4 = E_mail_Protocol_imap4 satisfies E_mail_Protocol; /* SHORT_NAMED_ENUMERATED_VALUE */
+const imap4 = E_mail_Protocol_imap4; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary E_mail_Protocol_webmail
@@ -215,7 +215,7 @@ const imap4 = E_mail_Protocol_imap4 satisfies E_mail_Protocol; /* SHORT_NAMED_EN
  * @type {number}
  */
 export
-const E_mail_Protocol_webmail = _enum_for_E_mail_Protocol.webmail satisfies E_mail_Protocol; /* LONG_NAMED_ENUMERATED_VALUE */
+const E_mail_Protocol_webmail = _enum_for_E_mail_Protocol.webmail; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary webmail
@@ -231,7 +231,7 @@ const E_mail_Protocol_webmail = _enum_for_E_mail_Protocol.webmail satisfies E_ma
  * @type {number}
  */
 export
-const webmail = E_mail_Protocol_webmail satisfies E_mail_Protocol; /* SHORT_NAMED_ENUMERATED_VALUE */
+const webmail = E_mail_Protocol_webmail; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary E_mail_Protocol_undefined
@@ -246,7 +246,7 @@ const webmail = E_mail_Protocol_webmail satisfies E_mail_Protocol; /* SHORT_NAME
  * @type {number}
  */
 export
-const E_mail_Protocol_undefined = _enum_for_E_mail_Protocol.undefined satisfies E_mail_Protocol; /* LONG_NAMED_ENUMERATED_VALUE */
+const E_mail_Protocol_undefined = _enum_for_E_mail_Protocol.undefined; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary undefined
@@ -261,7 +261,7 @@ const E_mail_Protocol_undefined = _enum_for_E_mail_Protocol.undefined satisfies 
  * @type {number}
  */
 export
-const undefined = E_mail_Protocol_undefined satisfies E_mail_Protocol; /* SHORT_NAMED_ENUMERATED_VALUE */
+const undefined = E_mail_Protocol_undefined; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_E_mail_Protocol: $.ASN1Decoder<E_mail_Protocol> = $._decodeEnumerated;
 export const _encode_E_mail_Protocol: $.ASN1Encoder<E_mail_Protocol> = $._encodeEnumerated;
 

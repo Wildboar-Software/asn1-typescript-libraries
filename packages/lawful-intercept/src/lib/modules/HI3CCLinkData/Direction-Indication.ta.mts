@@ -130,7 +130,7 @@ type Direction_Indication = _enum_for_Direction_Indication | ENUMERATED;
  * @type {number}
  */
 export
-const Direction_Indication_mono_mode = _enum_for_Direction_Indication.mono_mode satisfies Direction_Indication; /* LONG_NAMED_ENUMERATED_VALUE */
+const Direction_Indication_mono_mode = _enum_for_Direction_Indication.mono_mode; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary mono_mode
@@ -150,7 +150,7 @@ const Direction_Indication_mono_mode = _enum_for_Direction_Indication.mono_mode 
  * @type {number}
  */
 export
-const mono_mode = Direction_Indication_mono_mode satisfies Direction_Indication; /* SHORT_NAMED_ENUMERATED_VALUE */
+const mono_mode = Direction_Indication_mono_mode; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Direction_Indication_cc_from_target
@@ -168,7 +168,7 @@ const mono_mode = Direction_Indication_mono_mode satisfies Direction_Indication;
  * @type {number}
  */
 export
-const Direction_Indication_cc_from_target = _enum_for_Direction_Indication.cc_from_target satisfies Direction_Indication; /* LONG_NAMED_ENUMERATED_VALUE */
+const Direction_Indication_cc_from_target = _enum_for_Direction_Indication.cc_from_target; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary cc_from_target
@@ -186,7 +186,7 @@ const Direction_Indication_cc_from_target = _enum_for_Direction_Indication.cc_fr
  * @type {number}
  */
 export
-const cc_from_target = Direction_Indication_cc_from_target satisfies Direction_Indication; /* SHORT_NAMED_ENUMERATED_VALUE */
+const cc_from_target = Direction_Indication_cc_from_target; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Direction_Indication_cc_from_other_party
@@ -203,7 +203,7 @@ const cc_from_target = Direction_Indication_cc_from_target satisfies Direction_I
  * @type {number}
  */
 export
-const Direction_Indication_cc_from_other_party = _enum_for_Direction_Indication.cc_from_other_party satisfies Direction_Indication; /* LONG_NAMED_ENUMERATED_VALUE */
+const Direction_Indication_cc_from_other_party = _enum_for_Direction_Indication.cc_from_other_party; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary cc_from_other_party
@@ -220,7 +220,7 @@ const Direction_Indication_cc_from_other_party = _enum_for_Direction_Indication.
  * @type {number}
  */
 export
-const cc_from_other_party = Direction_Indication_cc_from_other_party satisfies Direction_Indication; /* SHORT_NAMED_ENUMERATED_VALUE */
+const cc_from_other_party = Direction_Indication_cc_from_other_party; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Direction_Indication_direction_unknown
@@ -239,7 +239,7 @@ const cc_from_other_party = Direction_Indication_cc_from_other_party satisfies D
  * @type {number}
  */
 export
-const Direction_Indication_direction_unknown = _enum_for_Direction_Indication.direction_unknown satisfies Direction_Indication; /* LONG_NAMED_ENUMERATED_VALUE */
+const Direction_Indication_direction_unknown = _enum_for_Direction_Indication.direction_unknown; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary direction_unknown
@@ -258,7 +258,7 @@ const Direction_Indication_direction_unknown = _enum_for_Direction_Indication.di
  * @type {number}
  */
 export
-const direction_unknown = Direction_Indication_direction_unknown satisfies Direction_Indication; /* SHORT_NAMED_ENUMERATED_VALUE */
+const direction_unknown = Direction_Indication_direction_unknown; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_Direction_Indication: $.ASN1Decoder<Direction_Indication> = $._decodeEnumerated;
 export const _encode_Direction_Indication: $.ASN1Encoder<Direction_Indication> = $._encodeEnumerated;
 

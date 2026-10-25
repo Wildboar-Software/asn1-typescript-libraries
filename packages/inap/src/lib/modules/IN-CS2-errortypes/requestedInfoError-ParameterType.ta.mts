@@ -70,7 +70,7 @@ const requestedInfoError_ParameterType = _enum_for_requestedInfoError_ParameterT
  * @type {number}
  */
 export
-const requestedInfoError_ParameterType_unknownRequestedInfo = requestedInfoError_ParameterType.unknownRequestedInfo satisfies requestedInfoError_ParameterType; /* LONG_NAMED_ENUMERATED_VALUE */
+const requestedInfoError_ParameterType_unknownRequestedInfo = requestedInfoError_ParameterType.unknownRequestedInfo; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unknownRequestedInfo
@@ -78,7 +78,7 @@ const requestedInfoError_ParameterType_unknownRequestedInfo = requestedInfoError
  * @type {number}
  */
 export
-const unknownRequestedInfo = requestedInfoError_ParameterType.unknownRequestedInfo satisfies requestedInfoError_ParameterType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unknownRequestedInfo = requestedInfoError_ParameterType.unknownRequestedInfo; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary requestedInfoError_ParameterType_requestedInfoNotAvailable
@@ -86,7 +86,7 @@ const unknownRequestedInfo = requestedInfoError_ParameterType.unknownRequestedIn
  * @type {number}
  */
 export
-const requestedInfoError_ParameterType_requestedInfoNotAvailable = requestedInfoError_ParameterType.requestedInfoNotAvailable satisfies requestedInfoError_ParameterType; /* LONG_NAMED_ENUMERATED_VALUE */
+const requestedInfoError_ParameterType_requestedInfoNotAvailable = requestedInfoError_ParameterType.requestedInfoNotAvailable; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary requestedInfoNotAvailable
@@ -94,7 +94,7 @@ const requestedInfoError_ParameterType_requestedInfoNotAvailable = requestedInfo
  * @type {number}
  */
 export
-const requestedInfoNotAvailable = requestedInfoError_ParameterType.requestedInfoNotAvailable satisfies requestedInfoError_ParameterType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const requestedInfoNotAvailable = requestedInfoError_ParameterType.requestedInfoNotAvailable; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 function _decode_requestedInfoError_ParameterType(el: _Element): requestedInfoError_ParameterType {

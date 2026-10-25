@@ -48,7 +48,7 @@ const ProfileInfoListError_incorrectInputValues = 1 satisfies ProfileInfoListErr
  * @type {number}
  */
 export
-const incorrectInputValues = ProfileInfoListError_incorrectInputValues satisfies ProfileInfoListError; /* SHORT_NAMED_INTEGER_VALUE */
+const incorrectInputValues = ProfileInfoListError_incorrectInputValues; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProfileInfoListError_profileChangeOngoing
@@ -70,7 +70,7 @@ const ProfileInfoListError_profileChangeOngoing = 11 satisfies ProfileInfoListEr
  * @type {number}
  */
 export
-const profileChangeOngoing = ProfileInfoListError_profileChangeOngoing satisfies ProfileInfoListError; /* SHORT_NAMED_INTEGER_VALUE */
+const profileChangeOngoing = ProfileInfoListError_profileChangeOngoing; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProfileInfoListError_undefinedError
@@ -91,7 +91,7 @@ const ProfileInfoListError_undefinedError = 127 satisfies ProfileInfoListError; 
  * @type {number}
  */
 export
-const undefinedError = ProfileInfoListError_undefinedError satisfies ProfileInfoListError; /* SHORT_NAMED_INTEGER_VALUE */
+const undefinedError = ProfileInfoListError_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_ProfileInfoListError: $.ASN1Decoder<ProfileInfoListError> = $._decodeInteger;
 export const _encode_ProfileInfoListError: $.ASN1Encoder<ProfileInfoListError> = $._encodeInteger;
 

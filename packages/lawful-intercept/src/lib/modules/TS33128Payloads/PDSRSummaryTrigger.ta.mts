@@ -102,7 +102,7 @@ const PDSRSummaryTrigger = _enum_for_PDSRSummaryTrigger;
  * @type {number}
  */
 export
-const PDSRSummaryTrigger_timerExpiry = PDSRSummaryTrigger.timerExpiry satisfies PDSRSummaryTrigger; /* LONG_NAMED_ENUMERATED_VALUE */
+const PDSRSummaryTrigger_timerExpiry = PDSRSummaryTrigger.timerExpiry; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary timerExpiry
@@ -110,7 +110,7 @@ const PDSRSummaryTrigger_timerExpiry = PDSRSummaryTrigger.timerExpiry satisfies 
  * @type {number}
  */
 export
-const timerExpiry = PDSRSummaryTrigger.timerExpiry satisfies PDSRSummaryTrigger; /* SHORT_NAMED_ENUMERATED_VALUE */
+const timerExpiry = PDSRSummaryTrigger.timerExpiry; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PDSRSummaryTrigger_packetCount
@@ -118,7 +118,7 @@ const timerExpiry = PDSRSummaryTrigger.timerExpiry satisfies PDSRSummaryTrigger;
  * @type {number}
  */
 export
-const PDSRSummaryTrigger_packetCount = PDSRSummaryTrigger.packetCount satisfies PDSRSummaryTrigger; /* LONG_NAMED_ENUMERATED_VALUE */
+const PDSRSummaryTrigger_packetCount = PDSRSummaryTrigger.packetCount; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary packetCount
@@ -126,7 +126,7 @@ const PDSRSummaryTrigger_packetCount = PDSRSummaryTrigger.packetCount satisfies 
  * @type {number}
  */
 export
-const packetCount = PDSRSummaryTrigger.packetCount satisfies PDSRSummaryTrigger; /* SHORT_NAMED_ENUMERATED_VALUE */
+const packetCount = PDSRSummaryTrigger.packetCount; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PDSRSummaryTrigger_byteCount
@@ -134,7 +134,7 @@ const packetCount = PDSRSummaryTrigger.packetCount satisfies PDSRSummaryTrigger;
  * @type {number}
  */
 export
-const PDSRSummaryTrigger_byteCount = PDSRSummaryTrigger.byteCount satisfies PDSRSummaryTrigger; /* LONG_NAMED_ENUMERATED_VALUE */
+const PDSRSummaryTrigger_byteCount = PDSRSummaryTrigger.byteCount; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary byteCount
@@ -142,7 +142,7 @@ const PDSRSummaryTrigger_byteCount = PDSRSummaryTrigger.byteCount satisfies PDSR
  * @type {number}
  */
 export
-const byteCount = PDSRSummaryTrigger.byteCount satisfies PDSRSummaryTrigger; /* SHORT_NAMED_ENUMERATED_VALUE */
+const byteCount = PDSRSummaryTrigger.byteCount; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PDSRSummaryTrigger_startOfFlow
@@ -150,7 +150,7 @@ const byteCount = PDSRSummaryTrigger.byteCount satisfies PDSRSummaryTrigger; /* 
  * @type {number}
  */
 export
-const PDSRSummaryTrigger_startOfFlow = PDSRSummaryTrigger.startOfFlow satisfies PDSRSummaryTrigger; /* LONG_NAMED_ENUMERATED_VALUE */
+const PDSRSummaryTrigger_startOfFlow = PDSRSummaryTrigger.startOfFlow; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary startOfFlow
@@ -158,7 +158,7 @@ const PDSRSummaryTrigger_startOfFlow = PDSRSummaryTrigger.startOfFlow satisfies 
  * @type {number}
  */
 export
-const startOfFlow = PDSRSummaryTrigger.startOfFlow satisfies PDSRSummaryTrigger; /* SHORT_NAMED_ENUMERATED_VALUE */
+const startOfFlow = PDSRSummaryTrigger.startOfFlow; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PDSRSummaryTrigger_endOfFlow
@@ -166,7 +166,7 @@ const startOfFlow = PDSRSummaryTrigger.startOfFlow satisfies PDSRSummaryTrigger;
  * @type {number}
  */
 export
-const PDSRSummaryTrigger_endOfFlow = PDSRSummaryTrigger.endOfFlow satisfies PDSRSummaryTrigger; /* LONG_NAMED_ENUMERATED_VALUE */
+const PDSRSummaryTrigger_endOfFlow = PDSRSummaryTrigger.endOfFlow; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary endOfFlow
@@ -174,7 +174,7 @@ const PDSRSummaryTrigger_endOfFlow = PDSRSummaryTrigger.endOfFlow satisfies PDSR
  * @type {number}
  */
 export
-const endOfFlow = PDSRSummaryTrigger.endOfFlow satisfies PDSRSummaryTrigger; /* SHORT_NAMED_ENUMERATED_VALUE */
+const endOfFlow = PDSRSummaryTrigger.endOfFlow; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_PDSRSummaryTrigger: $.ASN1Decoder<PDSRSummaryTrigger> = $._decodeEnumerated;
 export const _encode_PDSRSummaryTrigger: $.ASN1Encoder<PDSRSummaryTrigger> = $._encodeEnumerated;
 

@@ -110,7 +110,7 @@ export const LeapIndication = _enum_for_LeapIndication;
  * @type {number}
  */
 export const LeapIndication_noWarning =
-    LeapIndication.noWarning satisfies LeapIndication; /* LONG_NAMED_ENUMERATED_VALUE */
+    LeapIndication.noWarning; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary noWarning
@@ -118,7 +118,7 @@ export const LeapIndication_noWarning =
  * @type {number}
  */
 export const noWarning =
-    LeapIndication.noWarning satisfies LeapIndication; /* SHORT_NAMED_ENUMERATED_VALUE */
+    LeapIndication.noWarning; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LeapIndication_minuteHas61Seconds
@@ -131,7 +131,7 @@ export const noWarning =
  * @type {number}
  */
 export const LeapIndication_minuteHas61Seconds =
-    LeapIndication.minuteHas61Seconds satisfies LeapIndication; /* LONG_NAMED_ENUMERATED_VALUE */
+    LeapIndication.minuteHas61Seconds; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary minuteHas61Seconds
@@ -139,7 +139,7 @@ export const LeapIndication_minuteHas61Seconds =
  * @type {number}
  */
 export const minuteHas61Seconds =
-    LeapIndication.minuteHas61Seconds satisfies LeapIndication; /* SHORT_NAMED_ENUMERATED_VALUE */
+    LeapIndication.minuteHas61Seconds; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LeapIndication_minuteHas59Seconds
@@ -152,7 +152,7 @@ export const minuteHas61Seconds =
  * @type {number}
  */
 export const LeapIndication_minuteHas59Seconds =
-    LeapIndication.minuteHas59Seconds satisfies LeapIndication; /* LONG_NAMED_ENUMERATED_VALUE */
+    LeapIndication.minuteHas59Seconds; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary minuteHas59Seconds
@@ -160,7 +160,7 @@ export const LeapIndication_minuteHas59Seconds =
  * @type {number}
  */
 export const minuteHas59Seconds =
-    LeapIndication.minuteHas59Seconds satisfies LeapIndication; /* SHORT_NAMED_ENUMERATED_VALUE */
+    LeapIndication.minuteHas59Seconds; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LeapIndication_alarmCondition
@@ -173,7 +173,7 @@ export const minuteHas59Seconds =
  * @type {number}
  */
 export const LeapIndication_alarmCondition =
-    LeapIndication.alarmCondition satisfies LeapIndication; /* LONG_NAMED_ENUMERATED_VALUE */
+    LeapIndication.alarmCondition; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary alarmCondition
@@ -181,7 +181,7 @@ export const LeapIndication_alarmCondition =
  * @type {number}
  */
 export const alarmCondition =
-    LeapIndication.alarmCondition satisfies LeapIndication; /* SHORT_NAMED_ENUMERATED_VALUE */
+    LeapIndication.alarmCondition; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 export function _decode_LeapIndication(el: _Element): LeapIndication {

@@ -65,7 +65,7 @@ type SignalDirection = _enum_for_SignalDirection | ENUMERATED;
  * @type {number}
  */
 export
-const SignalDirection_internal = _enum_for_SignalDirection.internal satisfies SignalDirection; /* LONG_NAMED_ENUMERATED_VALUE */
+const SignalDirection_internal = _enum_for_SignalDirection.internal; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary internal
@@ -73,7 +73,7 @@ const SignalDirection_internal = _enum_for_SignalDirection.internal satisfies Si
  * @type {number}
  */
 export
-const internal = SignalDirection_internal satisfies SignalDirection; /* SHORT_NAMED_ENUMERATED_VALUE */
+const internal = SignalDirection_internal; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SignalDirection_external
@@ -86,7 +86,7 @@ const internal = SignalDirection_internal satisfies SignalDirection; /* SHORT_NA
  * @type {number}
  */
 export
-const SignalDirection_external = _enum_for_SignalDirection.external satisfies SignalDirection; /* LONG_NAMED_ENUMERATED_VALUE */
+const SignalDirection_external = _enum_for_SignalDirection.external; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary external
@@ -94,7 +94,7 @@ const SignalDirection_external = _enum_for_SignalDirection.external satisfies Si
  * @type {number}
  */
 export
-const external = SignalDirection_external satisfies SignalDirection; /* SHORT_NAMED_ENUMERATED_VALUE */
+const external = SignalDirection_external; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SignalDirection_both
@@ -107,7 +107,7 @@ const external = SignalDirection_external satisfies SignalDirection; /* SHORT_NA
  * @type {number}
  */
 export
-const SignalDirection_both = _enum_for_SignalDirection.both satisfies SignalDirection; /* LONG_NAMED_ENUMERATED_VALUE */
+const SignalDirection_both = _enum_for_SignalDirection.both; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary both
@@ -115,7 +115,7 @@ const SignalDirection_both = _enum_for_SignalDirection.both satisfies SignalDire
  * @type {number}
  */
 export
-const both = SignalDirection_both satisfies SignalDirection; /* SHORT_NAMED_ENUMERATED_VALUE */
+const both = SignalDirection_both; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_SignalDirection = $._decodeEnumerated;
 export const _encode_SignalDirection = $._encodeEnumerated;
 

@@ -91,7 +91,7 @@ const ReportingType = _enum_for_ReportingType;
  * @type {number}
  */
 export
-const ReportingType_immediate = ReportingType.immediate satisfies ReportingType; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReportingType_immediate = ReportingType.immediate; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary immediate
@@ -103,7 +103,7 @@ const ReportingType_immediate = ReportingType.immediate satisfies ReportingType;
  * @type {number}
  */
 export
-const immediate = ReportingType.immediate satisfies ReportingType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const immediate = ReportingType.immediate; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReportingType_periodic
@@ -115,7 +115,7 @@ const immediate = ReportingType.immediate satisfies ReportingType; /* SHORT_NAME
  * @type {number}
  */
 export
-const ReportingType_periodic = ReportingType.periodic satisfies ReportingType; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReportingType_periodic = ReportingType.periodic; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary periodic
@@ -127,7 +127,7 @@ const ReportingType_periodic = ReportingType.periodic satisfies ReportingType; /
  * @type {number}
  */
 export
-const periodic = ReportingType.periodic satisfies ReportingType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const periodic = ReportingType.periodic; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReportingType_count
@@ -139,7 +139,7 @@ const periodic = ReportingType.periodic satisfies ReportingType; /* SHORT_NAMED_
  * @type {number}
  */
 export
-const ReportingType_count = ReportingType.count satisfies ReportingType; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReportingType_count = ReportingType.count; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary count
@@ -151,7 +151,7 @@ const ReportingType_count = ReportingType.count satisfies ReportingType; /* LONG
  * @type {number}
  */
 export
-const count = ReportingType.count satisfies ReportingType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const count = ReportingType.count; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 let _cached_decoder_for_ReportingType: $.ASN1Decoder<ReportingType> | null = null;
 

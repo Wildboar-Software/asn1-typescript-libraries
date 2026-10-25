@@ -41,7 +41,7 @@ export const DSAScopeOfReferralValue_dmd = 0 satisfies DSAScopeOfReferralValue; 
  * @constant
  * @type {number}
  */
-export const dmd = DSAScopeOfReferralValue_dmd satisfies DSAScopeOfReferralValue; /* SHORT_NAMED_INTEGER_VALUE */
+export const dmd = DSAScopeOfReferralValue_dmd; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DSAScopeOfReferralValue_country
@@ -63,7 +63,7 @@ export const DSAScopeOfReferralValue_country = 1 satisfies DSAScopeOfReferralVal
  * @constant
  * @type {number}
  */
-export const country = DSAScopeOfReferralValue_country satisfies DSAScopeOfReferralValue; /* SHORT_NAMED_INTEGER_VALUE */
+export const country = DSAScopeOfReferralValue_country; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DSAScopeOfReferralValue_global
@@ -85,7 +85,7 @@ export const DSAScopeOfReferralValue_global = 2 satisfies DSAScopeOfReferralValu
  * @constant
  * @type {number}
  */
-export const global = DSAScopeOfReferralValue_global satisfies DSAScopeOfReferralValue; /* SHORT_NAMED_INTEGER_VALUE */
+export const global = DSAScopeOfReferralValue_global; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_DSAScopeOfReferralValue = $._decodeInteger;

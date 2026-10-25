@@ -87,7 +87,7 @@ type CheckType = _enum_for_CheckType | ENUMERATED;
  * @type {number}
  */
 export
-const CheckType_hash = _enum_for_CheckType.hash satisfies CheckType; /* LONG_NAMED_ENUMERATED_VALUE */
+const CheckType_hash = _enum_for_CheckType.hash; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary hash
@@ -104,7 +104,7 @@ const CheckType_hash = _enum_for_CheckType.hash satisfies CheckType; /* LONG_NAM
  * @type {number}
  */
 export
-const hash = CheckType_hash satisfies CheckType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const hash = CheckType_hash; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CheckType_signature
@@ -123,7 +123,7 @@ const hash = CheckType_hash satisfies CheckType; /* SHORT_NAMED_ENUMERATED_VALUE
  * @type {number}
  */
 export
-const CheckType_signature = _enum_for_CheckType.signature satisfies CheckType; /* LONG_NAMED_ENUMERATED_VALUE */
+const CheckType_signature = _enum_for_CheckType.signature; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary signature
@@ -142,7 +142,7 @@ const CheckType_signature = _enum_for_CheckType.signature satisfies CheckType; /
  * @type {number}
  */
 export
-const signature = CheckType_signature satisfies CheckType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const signature = CheckType_signature; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_CheckType: $.ASN1Decoder<CheckType> = $._decodeEnumerated;
 export const _encode_CheckType: $.ASN1Encoder<CheckType> = $._encodeEnumerated;
 

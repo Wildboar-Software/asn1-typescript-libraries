@@ -60,7 +60,7 @@ const ECPrivateKey_version_ecPrivkeyVer1 = 1 satisfies ECPrivateKey_version; /* 
  * @type {number}
  */
 export
-const ecPrivkeyVer1 = ECPrivateKey_version_ecPrivkeyVer1 satisfies ECPrivateKey_version; /* SHORT_NAMED_INTEGER_VALUE */
+const ecPrivkeyVer1 = ECPrivateKey_version_ecPrivkeyVer1; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 

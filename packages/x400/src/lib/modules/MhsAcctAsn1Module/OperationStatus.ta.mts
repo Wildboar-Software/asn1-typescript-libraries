@@ -38,7 +38,7 @@ export const OperationStatus_in_progress = 0 satisfies OperationStatus; /* LONG_
  * @constant
  * @type {number}
  */
-export const in_progress = OperationStatus_in_progress satisfies OperationStatus; /* SHORT_NAMED_INTEGER_VALUE */
+export const in_progress = OperationStatus_in_progress; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary OperationStatus_ok
@@ -52,7 +52,7 @@ export const OperationStatus_ok = 1 satisfies OperationStatus; /* LONG_NAMED_INT
  * @constant
  * @type {number}
  */
-export const ok = OperationStatus_ok satisfies OperationStatus; /* SHORT_NAMED_INTEGER_VALUE */
+export const ok = OperationStatus_ok; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary OperationStatus_error
@@ -66,7 +66,7 @@ export const OperationStatus_error = 2 satisfies OperationStatus; /* LONG_NAMED_
  * @constant
  * @type {number}
  */
-export const error = OperationStatus_error satisfies OperationStatus; /* SHORT_NAMED_INTEGER_VALUE */
+export const error = OperationStatus_error; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_OperationStatus = $._decodeInteger;

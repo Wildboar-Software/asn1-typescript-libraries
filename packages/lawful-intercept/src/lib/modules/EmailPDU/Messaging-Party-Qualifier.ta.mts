@@ -103,7 +103,7 @@ type Messaging_Party_Qualifier = _enum_for_Messaging_Party_Qualifier | ENUMERATE
  * @type {number}
  */
 export
-const Messaging_Party_Qualifier_unknown_party = _enum_for_Messaging_Party_Qualifier.unknown_party satisfies Messaging_Party_Qualifier; /* LONG_NAMED_ENUMERATED_VALUE */
+const Messaging_Party_Qualifier_unknown_party = _enum_for_Messaging_Party_Qualifier.unknown_party; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unknown_party
@@ -117,7 +117,7 @@ const Messaging_Party_Qualifier_unknown_party = _enum_for_Messaging_Party_Qualif
  * @type {number}
  */
 export
-const unknown_party = Messaging_Party_Qualifier_unknown_party satisfies Messaging_Party_Qualifier; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unknown_party = Messaging_Party_Qualifier_unknown_party; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Messaging_Party_Qualifier_originating_party
@@ -131,7 +131,7 @@ const unknown_party = Messaging_Party_Qualifier_unknown_party satisfies Messagin
  * @type {number}
  */
 export
-const Messaging_Party_Qualifier_originating_party = _enum_for_Messaging_Party_Qualifier.originating_party satisfies Messaging_Party_Qualifier; /* LONG_NAMED_ENUMERATED_VALUE */
+const Messaging_Party_Qualifier_originating_party = _enum_for_Messaging_Party_Qualifier.originating_party; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary originating_party
@@ -145,7 +145,7 @@ const Messaging_Party_Qualifier_originating_party = _enum_for_Messaging_Party_Qu
  * @type {number}
  */
 export
-const originating_party = Messaging_Party_Qualifier_originating_party satisfies Messaging_Party_Qualifier; /* SHORT_NAMED_ENUMERATED_VALUE */
+const originating_party = Messaging_Party_Qualifier_originating_party; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Messaging_Party_Qualifier_terminating_party
@@ -159,7 +159,7 @@ const originating_party = Messaging_Party_Qualifier_originating_party satisfies 
  * @type {number}
  */
 export
-const Messaging_Party_Qualifier_terminating_party = _enum_for_Messaging_Party_Qualifier.terminating_party satisfies Messaging_Party_Qualifier; /* LONG_NAMED_ENUMERATED_VALUE */
+const Messaging_Party_Qualifier_terminating_party = _enum_for_Messaging_Party_Qualifier.terminating_party; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary terminating_party
@@ -173,7 +173,7 @@ const Messaging_Party_Qualifier_terminating_party = _enum_for_Messaging_Party_Qu
  * @type {number}
  */
 export
-const terminating_party = Messaging_Party_Qualifier_terminating_party satisfies Messaging_Party_Qualifier; /* SHORT_NAMED_ENUMERATED_VALUE */
+const terminating_party = Messaging_Party_Qualifier_terminating_party; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Messaging_Party_Qualifier_associated_party
@@ -189,7 +189,7 @@ const terminating_party = Messaging_Party_Qualifier_terminating_party satisfies 
  * @type {number}
  */
 export
-const Messaging_Party_Qualifier_associated_party = _enum_for_Messaging_Party_Qualifier.associated_party satisfies Messaging_Party_Qualifier; /* LONG_NAMED_ENUMERATED_VALUE */
+const Messaging_Party_Qualifier_associated_party = _enum_for_Messaging_Party_Qualifier.associated_party; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary associated_party
@@ -205,7 +205,7 @@ const Messaging_Party_Qualifier_associated_party = _enum_for_Messaging_Party_Qua
  * @type {number}
  */
 export
-const associated_party = Messaging_Party_Qualifier_associated_party satisfies Messaging_Party_Qualifier; /* SHORT_NAMED_ENUMERATED_VALUE */
+const associated_party = Messaging_Party_Qualifier_associated_party; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_Messaging_Party_Qualifier: $.ASN1Decoder<Messaging_Party_Qualifier> = $._decodeEnumerated;
 export const _encode_Messaging_Party_Qualifier: $.ASN1Encoder<Messaging_Party_Qualifier> = $._encodeEnumerated;
 

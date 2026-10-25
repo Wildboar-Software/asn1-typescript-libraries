@@ -49,7 +49,7 @@ const FspGetParameter_parDirInvocOnl_parameterValue_yes = 0 satisfies FspGetPara
  * @type {number}
  */
 export
-const yes = FspGetParameter_parDirInvocOnl_parameterValue_yes satisfies FspGetParameter_parDirInvocOnl_parameterValue; /* SHORT_NAMED_INTEGER_VALUE */
+const yes = FspGetParameter_parDirInvocOnl_parameterValue_yes; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary FspGetParameter_parDirInvocOnl_parameterValue_no
@@ -73,7 +73,7 @@ const FspGetParameter_parDirInvocOnl_parameterValue_no = 1 satisfies FspGetParam
  * @type {number}
  */
 export
-const no = FspGetParameter_parDirInvocOnl_parameterValue_no satisfies FspGetParameter_parDirInvocOnl_parameterValue; /* SHORT_NAMED_INTEGER_VALUE */
+const no = FspGetParameter_parDirInvocOnl_parameterValue_no; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_FspGetParameter_parDirInvocOnl_parameterValue: $.ASN1Decoder<FspGetParameter_parDirInvocOnl_parameterValue> = $._decodeInteger;
 export const _encode_FspGetParameter_parDirInvocOnl_parameterValue: $.ASN1Encoder<FspGetParameter_parDirInvocOnl_parameterValue> = $._encodeInteger;
 

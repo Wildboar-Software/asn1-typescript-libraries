@@ -85,7 +85,7 @@ const ACRScenario = _enum_for_ACRScenario;
  * @type {number}
  */
 export
-const ACRScenario_eECInitiated = ACRScenario.eECInitiated satisfies ACRScenario; /* LONG_NAMED_ENUMERATED_VALUE */
+const ACRScenario_eECInitiated = ACRScenario.eECInitiated; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary eECInitiated
@@ -93,7 +93,7 @@ const ACRScenario_eECInitiated = ACRScenario.eECInitiated satisfies ACRScenario;
  * @type {number}
  */
 export
-const eECInitiated = ACRScenario.eECInitiated satisfies ACRScenario; /* SHORT_NAMED_ENUMERATED_VALUE */
+const eECInitiated = ACRScenario.eECInitiated; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ACRScenario_eECExecutedViaSourceEES
@@ -101,7 +101,7 @@ const eECInitiated = ACRScenario.eECInitiated satisfies ACRScenario; /* SHORT_NA
  * @type {number}
  */
 export
-const ACRScenario_eECExecutedViaSourceEES = ACRScenario.eECExecutedViaSourceEES satisfies ACRScenario; /* LONG_NAMED_ENUMERATED_VALUE */
+const ACRScenario_eECExecutedViaSourceEES = ACRScenario.eECExecutedViaSourceEES; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary eECExecutedViaSourceEES
@@ -109,7 +109,7 @@ const ACRScenario_eECExecutedViaSourceEES = ACRScenario.eECExecutedViaSourceEES 
  * @type {number}
  */
 export
-const eECExecutedViaSourceEES = ACRScenario.eECExecutedViaSourceEES satisfies ACRScenario; /* SHORT_NAMED_ENUMERATED_VALUE */
+const eECExecutedViaSourceEES = ACRScenario.eECExecutedViaSourceEES; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ACRScenario_eECExecutedViaTargetEES
@@ -117,7 +117,7 @@ const eECExecutedViaSourceEES = ACRScenario.eECExecutedViaSourceEES satisfies AC
  * @type {number}
  */
 export
-const ACRScenario_eECExecutedViaTargetEES = ACRScenario.eECExecutedViaTargetEES satisfies ACRScenario; /* LONG_NAMED_ENUMERATED_VALUE */
+const ACRScenario_eECExecutedViaTargetEES = ACRScenario.eECExecutedViaTargetEES; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary eECExecutedViaTargetEES
@@ -125,7 +125,7 @@ const ACRScenario_eECExecutedViaTargetEES = ACRScenario.eECExecutedViaTargetEES 
  * @type {number}
  */
 export
-const eECExecutedViaTargetEES = ACRScenario.eECExecutedViaTargetEES satisfies ACRScenario; /* SHORT_NAMED_ENUMERATED_VALUE */
+const eECExecutedViaTargetEES = ACRScenario.eECExecutedViaTargetEES; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ACRScenario_sourceEASDecided
@@ -133,7 +133,7 @@ const eECExecutedViaTargetEES = ACRScenario.eECExecutedViaTargetEES satisfies AC
  * @type {number}
  */
 export
-const ACRScenario_sourceEASDecided = ACRScenario.sourceEASDecided satisfies ACRScenario; /* LONG_NAMED_ENUMERATED_VALUE */
+const ACRScenario_sourceEASDecided = ACRScenario.sourceEASDecided; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sourceEASDecided
@@ -141,7 +141,7 @@ const ACRScenario_sourceEASDecided = ACRScenario.sourceEASDecided satisfies ACRS
  * @type {number}
  */
 export
-const sourceEASDecided = ACRScenario.sourceEASDecided satisfies ACRScenario; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sourceEASDecided = ACRScenario.sourceEASDecided; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ACRScenario_sourceEESExecuted
@@ -149,7 +149,7 @@ const sourceEASDecided = ACRScenario.sourceEASDecided satisfies ACRScenario; /* 
  * @type {number}
  */
 export
-const ACRScenario_sourceEESExecuted = ACRScenario.sourceEESExecuted satisfies ACRScenario; /* LONG_NAMED_ENUMERATED_VALUE */
+const ACRScenario_sourceEESExecuted = ACRScenario.sourceEESExecuted; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sourceEESExecuted
@@ -157,7 +157,7 @@ const ACRScenario_sourceEESExecuted = ACRScenario.sourceEESExecuted satisfies AC
  * @type {number}
  */
 export
-const sourceEESExecuted = ACRScenario.sourceEESExecuted satisfies ACRScenario; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sourceEESExecuted = ACRScenario.sourceEESExecuted; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ACRScenario_eELManagedACR
@@ -165,7 +165,7 @@ const sourceEESExecuted = ACRScenario.sourceEESExecuted satisfies ACRScenario; /
  * @type {number}
  */
 export
-const ACRScenario_eELManagedACR = ACRScenario.eELManagedACR satisfies ACRScenario; /* LONG_NAMED_ENUMERATED_VALUE */
+const ACRScenario_eELManagedACR = ACRScenario.eELManagedACR; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary eELManagedACR
@@ -173,7 +173,7 @@ const ACRScenario_eELManagedACR = ACRScenario.eELManagedACR satisfies ACRScenari
  * @type {number}
  */
 export
-const eELManagedACR = ACRScenario.eELManagedACR satisfies ACRScenario; /* SHORT_NAMED_ENUMERATED_VALUE */
+const eELManagedACR = ACRScenario.eELManagedACR; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_ACRScenario: $.ASN1Decoder<ACRScenario> = $._decodeEnumerated;
 export const _encode_ACRScenario: $.ASN1Encoder<ACRScenario> = $._encodeEnumerated;
 

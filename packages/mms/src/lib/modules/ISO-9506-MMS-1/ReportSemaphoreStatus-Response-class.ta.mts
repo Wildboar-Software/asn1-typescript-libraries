@@ -59,7 +59,7 @@ const ReportSemaphoreStatus_Response_class_token = 0 satisfies ReportSemaphoreSt
  * @type {number}
  */
 export
-const token = ReportSemaphoreStatus_Response_class_token satisfies ReportSemaphoreStatus_Response_class; /* SHORT_NAMED_INTEGER_VALUE */
+const token = ReportSemaphoreStatus_Response_class_token; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ReportSemaphoreStatus_Response_class_pool
@@ -87,7 +87,7 @@ const ReportSemaphoreStatus_Response_class_pool = 1 satisfies ReportSemaphoreSta
  * @type {number}
  */
 export
-const pool = ReportSemaphoreStatus_Response_class_pool satisfies ReportSemaphoreStatus_Response_class; /* SHORT_NAMED_INTEGER_VALUE */
+const pool = ReportSemaphoreStatus_Response_class_pool; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_ReportSemaphoreStatus_Response_class = $._decodeInteger;
 export const _encode_ReportSemaphoreStatus_Response_class = $._encodeInteger;
 

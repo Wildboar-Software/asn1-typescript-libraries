@@ -110,7 +110,7 @@ const RCSSessionType = _enum_for_RCSSessionType;
  * @type {number}
  */
 export
-const RCSSessionType_largeMessageStandalone = RCSSessionType.largeMessageStandalone satisfies RCSSessionType; /* LONG_NAMED_ENUMERATED_VALUE */
+const RCSSessionType_largeMessageStandalone = RCSSessionType.largeMessageStandalone; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary largeMessageStandalone
@@ -125,7 +125,7 @@ const RCSSessionType_largeMessageStandalone = RCSSessionType.largeMessageStandal
  * @type {number}
  */
 export
-const largeMessageStandalone = RCSSessionType.largeMessageStandalone satisfies RCSSessionType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const largeMessageStandalone = RCSSessionType.largeMessageStandalone; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RCSSessionType_oneTo1Chat
@@ -140,7 +140,7 @@ const largeMessageStandalone = RCSSessionType.largeMessageStandalone satisfies R
  * @type {number}
  */
 export
-const RCSSessionType_oneTo1Chat = RCSSessionType.oneTo1Chat satisfies RCSSessionType; /* LONG_NAMED_ENUMERATED_VALUE */
+const RCSSessionType_oneTo1Chat = RCSSessionType.oneTo1Chat; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary oneTo1Chat
@@ -155,7 +155,7 @@ const RCSSessionType_oneTo1Chat = RCSSessionType.oneTo1Chat satisfies RCSSession
  * @type {number}
  */
 export
-const oneTo1Chat = RCSSessionType.oneTo1Chat satisfies RCSSessionType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const oneTo1Chat = RCSSessionType.oneTo1Chat; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_RCSSessionType: $.ASN1Decoder<RCSSessionType> = $._decodeEnumerated;
 export const _encode_RCSSessionType: $.ASN1Encoder<RCSSessionType> = $._encodeEnumerated;
 

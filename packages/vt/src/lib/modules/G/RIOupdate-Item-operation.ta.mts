@@ -54,7 +54,7 @@ const RIOupdate_Item_operation_eraseRIO = 0 satisfies RIOupdate_Item_operation; 
  * @type {number}
  */
 export
-const eraseRIO = RIOupdate_Item_operation_eraseRIO satisfies RIOupdate_Item_operation; /* SHORT_NAMED_INTEGER_VALUE */
+const eraseRIO = RIOupdate_Item_operation_eraseRIO; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RIOupdate_Item_operation_deleteRecord
@@ -76,7 +76,7 @@ const RIOupdate_Item_operation_deleteRecord = 1 satisfies RIOupdate_Item_operati
  * @type {number}
  */
 export
-const deleteRecord = RIOupdate_Item_operation_deleteRecord satisfies RIOupdate_Item_operation; /* SHORT_NAMED_INTEGER_VALUE */
+const deleteRecord = RIOupdate_Item_operation_deleteRecord; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RIOupdate_Item_operation_createRecord
@@ -100,7 +100,7 @@ const RIOupdate_Item_operation_createRecord = 2 satisfies RIOupdate_Item_operati
  * @type {number}
  */
 export
-const createRecord = RIOupdate_Item_operation_createRecord satisfies RIOupdate_Item_operation; /* SHORT_NAMED_INTEGER_VALUE */
+const createRecord = RIOupdate_Item_operation_createRecord; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_RIOupdate_Item_operation = $._decodeInteger;
 export const _encode_RIOupdate_Item_operation = $._encodeInteger;
 

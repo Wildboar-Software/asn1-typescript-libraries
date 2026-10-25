@@ -66,7 +66,7 @@ const GetAlarmEnrollmentSummary_Request_acknowledgementFilter_not_acked = 0 sati
  * @type {number}
  */
 export
-const not_acked = GetAlarmEnrollmentSummary_Request_acknowledgementFilter_not_acked satisfies GetAlarmEnrollmentSummary_Request_acknowledgementFilter; /* SHORT_NAMED_INTEGER_VALUE */
+const not_acked = GetAlarmEnrollmentSummary_Request_acknowledgementFilter_not_acked; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary GetAlarmEnrollmentSummary_Request_acknowledgementFilter_acked
@@ -96,7 +96,7 @@ const GetAlarmEnrollmentSummary_Request_acknowledgementFilter_acked = 1 satisfie
  * @type {number}
  */
 export
-const acked = GetAlarmEnrollmentSummary_Request_acknowledgementFilter_acked satisfies GetAlarmEnrollmentSummary_Request_acknowledgementFilter; /* SHORT_NAMED_INTEGER_VALUE */
+const acked = GetAlarmEnrollmentSummary_Request_acknowledgementFilter_acked; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary GetAlarmEnrollmentSummary_Request_acknowledgementFilter_all
@@ -126,7 +126,7 @@ const GetAlarmEnrollmentSummary_Request_acknowledgementFilter_all = 2 satisfies 
  * @type {number}
  */
 export
-const all = GetAlarmEnrollmentSummary_Request_acknowledgementFilter_all satisfies GetAlarmEnrollmentSummary_Request_acknowledgementFilter; /* SHORT_NAMED_INTEGER_VALUE */
+const all = GetAlarmEnrollmentSummary_Request_acknowledgementFilter_all; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_GetAlarmEnrollmentSummary_Request_acknowledgementFilter = $._decodeInteger;
 export const _encode_GetAlarmEnrollmentSummary_Request_acknowledgementFilter = $._encodeInteger;
 

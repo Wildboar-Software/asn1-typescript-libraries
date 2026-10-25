@@ -59,7 +59,7 @@ const ConsumedCreditAction = _enum_for_ConsumedCreditAction;
  * @type {number}
  */
 export
-const ConsumedCreditAction_disconnect = ConsumedCreditAction.disconnect satisfies ConsumedCreditAction; /* LONG_NAMED_ENUMERATED_VALUE */
+const ConsumedCreditAction_disconnect = ConsumedCreditAction.disconnect; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary disconnect
@@ -67,7 +67,7 @@ const ConsumedCreditAction_disconnect = ConsumedCreditAction.disconnect satisfie
  * @type {number}
  */
 export
-const disconnect = ConsumedCreditAction.disconnect satisfies ConsumedCreditAction; /* SHORT_NAMED_ENUMERATED_VALUE */
+const disconnect = ConsumedCreditAction.disconnect; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ConsumedCreditAction_message
@@ -75,7 +75,7 @@ const disconnect = ConsumedCreditAction.disconnect satisfies ConsumedCreditActio
  * @type {number}
  */
 export
-const ConsumedCreditAction_message = ConsumedCreditAction.message satisfies ConsumedCreditAction; /* LONG_NAMED_ENUMERATED_VALUE */
+const ConsumedCreditAction_message = ConsumedCreditAction.message; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary message
@@ -83,7 +83,7 @@ const ConsumedCreditAction_message = ConsumedCreditAction.message satisfies Cons
  * @type {number}
  */
 export
-const message = ConsumedCreditAction.message satisfies ConsumedCreditAction; /* SHORT_NAMED_ENUMERATED_VALUE */
+const message = ConsumedCreditAction.message; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ConsumedCreditAction_tone
@@ -91,7 +91,7 @@ const message = ConsumedCreditAction.message satisfies ConsumedCreditAction; /* 
  * @type {number}
  */
 export
-const ConsumedCreditAction_tone = ConsumedCreditAction.tone satisfies ConsumedCreditAction; /* LONG_NAMED_ENUMERATED_VALUE */
+const ConsumedCreditAction_tone = ConsumedCreditAction.tone; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tone
@@ -99,7 +99,7 @@ const ConsumedCreditAction_tone = ConsumedCreditAction.tone satisfies ConsumedCr
  * @type {number}
  */
 export
-const tone = ConsumedCreditAction.tone satisfies ConsumedCreditAction; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tone = ConsumedCreditAction.tone; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 function _decode_ConsumedCreditAction(el: _Element): ConsumedCreditAction {

@@ -40,7 +40,7 @@ export const FNPDAUBasicCodeField_unspecified = 0 satisfies FNPDAUBasicCodeField
  * @constant
  * @type {number}
  */
-export const unspecified = FNPDAUBasicCodeField_unspecified satisfies FNPDAUBasicCodeField; /* SHORT_NAMED_INTEGER_VALUE */
+export const unspecified = FNPDAUBasicCodeField_unspecified; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary FNPDAUBasicCodeField_forwarded_for_physical_rendition_and_delivery
@@ -54,7 +54,7 @@ export const FNPDAUBasicCodeField_forwarded_for_physical_rendition_and_delivery 
  * @constant
  * @type {number}
  */
-export const forwarded_for_physical_rendition_and_delivery = FNPDAUBasicCodeField_forwarded_for_physical_rendition_and_delivery satisfies FNPDAUBasicCodeField; /* SHORT_NAMED_INTEGER_VALUE */
+export const forwarded_for_physical_rendition_and_delivery = FNPDAUBasicCodeField_forwarded_for_physical_rendition_and_delivery; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_FNPDAUBasicCodeField = $._decodeInteger;

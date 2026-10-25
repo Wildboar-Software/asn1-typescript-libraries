@@ -83,7 +83,7 @@ const TalkerPriority = _enum_for_TalkerPriority;
  * @type {number}
  */
 export
-const TalkerPriority_normal = TalkerPriority.normal satisfies TalkerPriority; /* LONG_NAMED_ENUMERATED_VALUE */
+const TalkerPriority_normal = TalkerPriority.normal; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary normal
@@ -95,7 +95,7 @@ const TalkerPriority_normal = TalkerPriority.normal satisfies TalkerPriority; /*
  * @type {number}
  */
 export
-const normal = TalkerPriority.normal satisfies TalkerPriority; /* SHORT_NAMED_ENUMERATED_VALUE */
+const normal = TalkerPriority.normal; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TalkerPriority_privileged
@@ -107,7 +107,7 @@ const normal = TalkerPriority.normal satisfies TalkerPriority; /* SHORT_NAMED_EN
  * @type {number}
  */
 export
-const TalkerPriority_privileged = TalkerPriority.privileged satisfies TalkerPriority; /* LONG_NAMED_ENUMERATED_VALUE */
+const TalkerPriority_privileged = TalkerPriority.privileged; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary privileged
@@ -119,7 +119,7 @@ const TalkerPriority_privileged = TalkerPriority.privileged satisfies TalkerPrio
  * @type {number}
  */
 export
-const privileged = TalkerPriority.privileged satisfies TalkerPriority; /* SHORT_NAMED_ENUMERATED_VALUE */
+const privileged = TalkerPriority.privileged; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TalkerPriority_emergency
@@ -131,7 +131,7 @@ const privileged = TalkerPriority.privileged satisfies TalkerPriority; /* SHORT_
  * @type {number}
  */
 export
-const TalkerPriority_emergency = TalkerPriority.emergency satisfies TalkerPriority; /* LONG_NAMED_ENUMERATED_VALUE */
+const TalkerPriority_emergency = TalkerPriority.emergency; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary emergency
@@ -143,7 +143,7 @@ const TalkerPriority_emergency = TalkerPriority.emergency satisfies TalkerPriori
  * @type {number}
  */
 export
-const emergency = TalkerPriority.emergency satisfies TalkerPriority; /* SHORT_NAMED_ENUMERATED_VALUE */
+const emergency = TalkerPriority.emergency; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) TalkerPriority

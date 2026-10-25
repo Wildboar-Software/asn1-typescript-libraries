@@ -52,7 +52,7 @@ export const FTAM_Quality_of_Service_no_recovery = 0 satisfies FTAM_Quality_of_S
  * @constant
  * @type {number}
  */
-export const no_recovery = FTAM_Quality_of_Service_no_recovery satisfies FTAM_Quality_of_Service; /* SHORT_NAMED_INTEGER_VALUE */
+export const no_recovery = FTAM_Quality_of_Service_no_recovery; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -72,7 +72,7 @@ export const FTAM_Quality_of_Service_class_1_recovery = 1 satisfies FTAM_Quality
  * @constant
  * @type {number}
  */
-export const class_1_recovery = FTAM_Quality_of_Service_class_1_recovery satisfies FTAM_Quality_of_Service; /* SHORT_NAMED_INTEGER_VALUE */
+export const class_1_recovery = FTAM_Quality_of_Service_class_1_recovery; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -93,7 +93,7 @@ export const FTAM_Quality_of_Service_class_2_recovery = 2 satisfies FTAM_Quality
  * @constant
  * @type {number}
  */
-export const class_2_recovery = FTAM_Quality_of_Service_class_2_recovery satisfies FTAM_Quality_of_Service; /* SHORT_NAMED_INTEGER_VALUE */
+export const class_2_recovery = FTAM_Quality_of_Service_class_2_recovery; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -114,7 +114,7 @@ export const FTAM_Quality_of_Service_class_3_recovery = 3 satisfies FTAM_Quality
  * @constant
  * @type {number}
  */
-export const class_3_recovery = FTAM_Quality_of_Service_class_3_recovery satisfies FTAM_Quality_of_Service; /* SHORT_NAMED_INTEGER_VALUE */
+export const class_3_recovery = FTAM_Quality_of_Service_class_3_recovery; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 let _cached_decoder_for_FTAM_Quality_of_Service: $.ASN1Decoder<FTAM_Quality_of_Service> | null = null;

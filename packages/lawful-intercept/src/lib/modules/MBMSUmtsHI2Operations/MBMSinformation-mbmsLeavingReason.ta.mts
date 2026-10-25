@@ -45,7 +45,7 @@ type MBMSinformation_mbmsLeavingReason = _enum_for_MBMSinformation_mbmsLeavingRe
  * @type {number}
  */
 export
-const MBMSinformation_mbmsLeavingReason_uEinitiatedRequested = _enum_for_MBMSinformation_mbmsLeavingReason.uEinitiatedRequested satisfies MBMSinformation_mbmsLeavingReason; /* LONG_NAMED_ENUMERATED_VALUE */
+const MBMSinformation_mbmsLeavingReason_uEinitiatedRequested = _enum_for_MBMSinformation_mbmsLeavingReason.uEinitiatedRequested; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary uEinitiatedRequested
@@ -56,7 +56,7 @@ const MBMSinformation_mbmsLeavingReason_uEinitiatedRequested = _enum_for_MBMSinf
  * @type {number}
  */
 export
-const uEinitiatedRequested = MBMSinformation_mbmsLeavingReason_uEinitiatedRequested satisfies MBMSinformation_mbmsLeavingReason; /* SHORT_NAMED_ENUMERATED_VALUE */
+const uEinitiatedRequested = MBMSinformation_mbmsLeavingReason_uEinitiatedRequested; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MBMSinformation_mbmsLeavingReason_bMSCorNetworkTerminated
@@ -69,7 +69,7 @@ const uEinitiatedRequested = MBMSinformation_mbmsLeavingReason_uEinitiatedReques
  * @type {number}
  */
 export
-const MBMSinformation_mbmsLeavingReason_bMSCorNetworkTerminated = _enum_for_MBMSinformation_mbmsLeavingReason.bMSCorNetworkTerminated satisfies MBMSinformation_mbmsLeavingReason; /* LONG_NAMED_ENUMERATED_VALUE */
+const MBMSinformation_mbmsLeavingReason_bMSCorNetworkTerminated = _enum_for_MBMSinformation_mbmsLeavingReason.bMSCorNetworkTerminated; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary bMSCorNetworkTerminated
@@ -80,7 +80,7 @@ const MBMSinformation_mbmsLeavingReason_bMSCorNetworkTerminated = _enum_for_MBMS
  * @type {number}
  */
 export
-const bMSCorNetworkTerminated = MBMSinformation_mbmsLeavingReason_bMSCorNetworkTerminated satisfies MBMSinformation_mbmsLeavingReason; /* SHORT_NAMED_ENUMERATED_VALUE */
+const bMSCorNetworkTerminated = MBMSinformation_mbmsLeavingReason_bMSCorNetworkTerminated; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_MBMSinformation_mbmsLeavingReason: $.ASN1Decoder<MBMSinformation_mbmsLeavingReason> = $._decodeEnumerated;
 export const _encode_MBMSinformation_mbmsLeavingReason: $.ASN1Encoder<MBMSinformation_mbmsLeavingReason> = $._encodeEnumerated;
 

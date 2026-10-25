@@ -56,7 +56,7 @@ const EXQcontent_exceptionType_stdException_rioFull = 0 satisfies EXQcontent_exc
  * @type {number}
  */
 export
-const rioFull = EXQcontent_exceptionType_stdException_rioFull satisfies EXQcontent_exceptionType_stdException; /* SHORT_NAMED_INTEGER_VALUE */
+const rioFull = EXQcontent_exceptionType_stdException_rioFull; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EXQcontent_exceptionType_stdException_tooManyFields
@@ -76,7 +76,7 @@ const EXQcontent_exceptionType_stdException_tooManyFields = 1 satisfies EXQconte
  * @type {number}
  */
 export
-const tooManyFields = EXQcontent_exceptionType_stdException_tooManyFields satisfies EXQcontent_exceptionType_stdException; /* SHORT_NAMED_INTEGER_VALUE */
+const tooManyFields = EXQcontent_exceptionType_stdException_tooManyFields; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EXQcontent_exceptionType_stdException_tooManyFieldElements
@@ -98,7 +98,7 @@ const EXQcontent_exceptionType_stdException_tooManyFieldElements = 2 satisfies E
  * @type {number}
  */
 export
-const tooManyFieldElements = EXQcontent_exceptionType_stdException_tooManyFieldElements satisfies EXQcontent_exceptionType_stdException; /* SHORT_NAMED_INTEGER_VALUE */
+const tooManyFieldElements = EXQcontent_exceptionType_stdException_tooManyFieldElements; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EXQcontent_exceptionType_stdException_tooManyFERs
@@ -118,7 +118,7 @@ const EXQcontent_exceptionType_stdException_tooManyFERs = 3 satisfies EXQcontent
  * @type {number}
  */
 export
-const tooManyFERs = EXQcontent_exceptionType_stdException_tooManyFERs satisfies EXQcontent_exceptionType_stdException; /* SHORT_NAMED_INTEGER_VALUE */
+const tooManyFERs = EXQcontent_exceptionType_stdException_tooManyFERs; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EXQcontent_exceptionType_stdException_tooManyFEIs
@@ -138,7 +138,7 @@ const EXQcontent_exceptionType_stdException_tooManyFEIs = 4 satisfies EXQcontent
  * @type {number}
  */
 export
-const tooManyFEIs = EXQcontent_exceptionType_stdException_tooManyFEIs satisfies EXQcontent_exceptionType_stdException; /* SHORT_NAMED_INTEGER_VALUE */
+const tooManyFEIs = EXQcontent_exceptionType_stdException_tooManyFEIs; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_EXQcontent_exceptionType_stdException = $._decodeInteger;
 export const _encode_EXQcontent_exceptionType_stdException = $._encodeInteger;
 

@@ -50,7 +50,7 @@ const DiagFormat_extServices_immediate_failed = 1 satisfies DiagFormat_extServic
  * @type {number}
  */
 export
-const failed = DiagFormat_extServices_immediate_failed satisfies DiagFormat_extServices_immediate; /* SHORT_NAMED_INTEGER_VALUE */
+const failed = DiagFormat_extServices_immediate_failed; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagFormat_extServices_immediate_service
@@ -74,7 +74,7 @@ const DiagFormat_extServices_immediate_service = 2 satisfies DiagFormat_extServi
  * @type {number}
  */
 export
-const service = DiagFormat_extServices_immediate_service satisfies DiagFormat_extServices_immediate; /* SHORT_NAMED_INTEGER_VALUE */
+const service = DiagFormat_extServices_immediate_service; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagFormat_extServices_immediate_parameters
@@ -100,7 +100,7 @@ const DiagFormat_extServices_immediate_parameters = 3 satisfies DiagFormat_extSe
  * @type {number}
  */
 export
-const parameters = DiagFormat_extServices_immediate_parameters satisfies DiagFormat_extServices_immediate; /* SHORT_NAMED_INTEGER_VALUE */
+const parameters = DiagFormat_extServices_immediate_parameters; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_DiagFormat_extServices_immediate: $.ASN1Decoder<DiagFormat_extServices_immediate> = $._decodeInteger;
 export const _encode_DiagFormat_extServices_immediate: $.ASN1Encoder<DiagFormat_extServices_immediate> = $._encodeInteger;
 

@@ -41,7 +41,7 @@ const OutGatewayRecord_jIPQuryStatus_successfulQuery = 1 satisfies OutGatewayRec
  * @type {number}
  */
 export
-const successfulQuery = OutGatewayRecord_jIPQuryStatus_successfulQuery satisfies OutGatewayRecord_jIPQuryStatus; /* SHORT_NAMED_INTEGER_VALUE */
+const successfulQuery = OutGatewayRecord_jIPQuryStatus_successfulQuery; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary OutGatewayRecord_jIPQuryStatus_noQueryResponseMsg
@@ -57,7 +57,7 @@ const OutGatewayRecord_jIPQuryStatus_noQueryResponseMsg = 2 satisfies OutGateway
  * @type {number}
  */
 export
-const noQueryResponseMsg = OutGatewayRecord_jIPQuryStatus_noQueryResponseMsg satisfies OutGatewayRecord_jIPQuryStatus; /* SHORT_NAMED_INTEGER_VALUE */
+const noQueryResponseMsg = OutGatewayRecord_jIPQuryStatus_noQueryResponseMsg; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary OutGatewayRecord_jIPQuryStatus_queryProtocolErr
@@ -73,7 +73,7 @@ const OutGatewayRecord_jIPQuryStatus_queryProtocolErr = 4 satisfies OutGatewayRe
  * @type {number}
  */
 export
-const queryProtocolErr = OutGatewayRecord_jIPQuryStatus_queryProtocolErr satisfies OutGatewayRecord_jIPQuryStatus; /* SHORT_NAMED_INTEGER_VALUE */
+const queryProtocolErr = OutGatewayRecord_jIPQuryStatus_queryProtocolErr; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary OutGatewayRecord_jIPQuryStatus_queryResponseDataErr
@@ -89,7 +89,7 @@ const OutGatewayRecord_jIPQuryStatus_queryResponseDataErr = 5 satisfies OutGatew
  * @type {number}
  */
 export
-const queryResponseDataErr = OutGatewayRecord_jIPQuryStatus_queryResponseDataErr satisfies OutGatewayRecord_jIPQuryStatus; /* SHORT_NAMED_INTEGER_VALUE */
+const queryResponseDataErr = OutGatewayRecord_jIPQuryStatus_queryResponseDataErr; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary OutGatewayRecord_jIPQuryStatus_queryRejected
@@ -105,7 +105,7 @@ const OutGatewayRecord_jIPQuryStatus_queryRejected = 6 satisfies OutGatewayRecor
  * @type {number}
  */
 export
-const queryRejected = OutGatewayRecord_jIPQuryStatus_queryRejected satisfies OutGatewayRecord_jIPQuryStatus; /* SHORT_NAMED_INTEGER_VALUE */
+const queryRejected = OutGatewayRecord_jIPQuryStatus_queryRejected; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary OutGatewayRecord_jIPQuryStatus_queryNotPerformed
@@ -121,7 +121,7 @@ const OutGatewayRecord_jIPQuryStatus_queryNotPerformed = 9 satisfies OutGatewayR
  * @type {number}
  */
 export
-const queryNotPerformed = OutGatewayRecord_jIPQuryStatus_queryNotPerformed satisfies OutGatewayRecord_jIPQuryStatus; /* SHORT_NAMED_INTEGER_VALUE */
+const queryNotPerformed = OutGatewayRecord_jIPQuryStatus_queryNotPerformed; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary OutGatewayRecord_jIPQuryStatus_queryUnsuccessful
@@ -137,7 +137,7 @@ const OutGatewayRecord_jIPQuryStatus_queryUnsuccessful = 99 satisfies OutGateway
  * @type {number}
  */
 export
-const queryUnsuccessful = OutGatewayRecord_jIPQuryStatus_queryUnsuccessful satisfies OutGatewayRecord_jIPQuryStatus; /* SHORT_NAMED_INTEGER_VALUE */
+const queryUnsuccessful = OutGatewayRecord_jIPQuryStatus_queryUnsuccessful; /* SHORT_NAMED_INTEGER_VALUE */
 
 export
 const _decode_OutGatewayRecord_jIPQuryStatus: $.ASN1Decoder<OutGatewayRecord_jIPQuryStatus> = $._decodeInteger;

@@ -99,7 +99,7 @@ const Operator_Station_instance_definition_details_stationType = _enum_for_Opera
  * @type {number}
  */
 export
-const Operator_Station_instance_definition_details_stationType_entry = Operator_Station_instance_definition_details_stationType.entry satisfies Operator_Station_instance_definition_details_stationType; /* LONG_NAMED_ENUMERATED_VALUE */
+const Operator_Station_instance_definition_details_stationType_entry = Operator_Station_instance_definition_details_stationType.entry; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary entry
@@ -111,7 +111,7 @@ const Operator_Station_instance_definition_details_stationType_entry = Operator_
  * @type {number}
  */
 export
-const entry = Operator_Station_instance_definition_details_stationType.entry satisfies Operator_Station_instance_definition_details_stationType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const entry = Operator_Station_instance_definition_details_stationType.entry; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Operator_Station_instance_definition_details_stationType_display
@@ -123,7 +123,7 @@ const entry = Operator_Station_instance_definition_details_stationType.entry sat
  * @type {number}
  */
 export
-const Operator_Station_instance_definition_details_stationType_display = Operator_Station_instance_definition_details_stationType.display satisfies Operator_Station_instance_definition_details_stationType; /* LONG_NAMED_ENUMERATED_VALUE */
+const Operator_Station_instance_definition_details_stationType_display = Operator_Station_instance_definition_details_stationType.display; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary display
@@ -135,7 +135,7 @@ const Operator_Station_instance_definition_details_stationType_display = Operato
  * @type {number}
  */
 export
-const display = Operator_Station_instance_definition_details_stationType.display satisfies Operator_Station_instance_definition_details_stationType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const display = Operator_Station_instance_definition_details_stationType.display; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Operator_Station_instance_definition_details_stationType_entry_display
@@ -148,7 +148,7 @@ const display = Operator_Station_instance_definition_details_stationType.display
  * @type {number}
  */
 export
-const Operator_Station_instance_definition_details_stationType_entry_display = Operator_Station_instance_definition_details_stationType.entry_display satisfies Operator_Station_instance_definition_details_stationType; /* LONG_NAMED_ENUMERATED_VALUE */
+const Operator_Station_instance_definition_details_stationType_entry_display = Operator_Station_instance_definition_details_stationType.entry_display; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary entry_display
@@ -161,7 +161,7 @@ const Operator_Station_instance_definition_details_stationType_entry_display = O
  * @type {number}
  */
 export
-const entry_display = Operator_Station_instance_definition_details_stationType.entry_display satisfies Operator_Station_instance_definition_details_stationType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const entry_display = Operator_Station_instance_definition_details_stationType.entry_display; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_Operator_Station_instance_definition_details_stationType = $._decodeEnumerated;
 export const _encode_Operator_Station_instance_definition_details_stationType = $._encodeEnumerated;
 

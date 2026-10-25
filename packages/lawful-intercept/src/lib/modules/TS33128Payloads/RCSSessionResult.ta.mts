@@ -157,7 +157,7 @@ const RCSSessionResult = _enum_for_RCSSessionResult;
  * @type {number}
  */
 export
-const RCSSessionResult_newLegRequested = RCSSessionResult.newLegRequested satisfies RCSSessionResult; /* LONG_NAMED_ENUMERATED_VALUE */
+const RCSSessionResult_newLegRequested = RCSSessionResult.newLegRequested; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary newLegRequested
@@ -172,7 +172,7 @@ const RCSSessionResult_newLegRequested = RCSSessionResult.newLegRequested satisf
  * @type {number}
  */
 export
-const newLegRequested = RCSSessionResult.newLegRequested satisfies RCSSessionResult; /* SHORT_NAMED_ENUMERATED_VALUE */
+const newLegRequested = RCSSessionResult.newLegRequested; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RCSSessionResult_newLegEstablished
@@ -187,7 +187,7 @@ const newLegRequested = RCSSessionResult.newLegRequested satisfies RCSSessionRes
  * @type {number}
  */
 export
-const RCSSessionResult_newLegEstablished = RCSSessionResult.newLegEstablished satisfies RCSSessionResult; /* LONG_NAMED_ENUMERATED_VALUE */
+const RCSSessionResult_newLegEstablished = RCSSessionResult.newLegEstablished; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary newLegEstablished
@@ -202,7 +202,7 @@ const RCSSessionResult_newLegEstablished = RCSSessionResult.newLegEstablished sa
  * @type {number}
  */
 export
-const newLegEstablished = RCSSessionResult.newLegEstablished satisfies RCSSessionResult; /* SHORT_NAMED_ENUMERATED_VALUE */
+const newLegEstablished = RCSSessionResult.newLegEstablished; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RCSSessionResult_legModificationRequested
@@ -217,7 +217,7 @@ const newLegEstablished = RCSSessionResult.newLegEstablished satisfies RCSSessio
  * @type {number}
  */
 export
-const RCSSessionResult_legModificationRequested = RCSSessionResult.legModificationRequested satisfies RCSSessionResult; /* LONG_NAMED_ENUMERATED_VALUE */
+const RCSSessionResult_legModificationRequested = RCSSessionResult.legModificationRequested; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary legModificationRequested
@@ -232,7 +232,7 @@ const RCSSessionResult_legModificationRequested = RCSSessionResult.legModificati
  * @type {number}
  */
 export
-const legModificationRequested = RCSSessionResult.legModificationRequested satisfies RCSSessionResult; /* SHORT_NAMED_ENUMERATED_VALUE */
+const legModificationRequested = RCSSessionResult.legModificationRequested; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RCSSessionResult_legModificationComplete
@@ -247,7 +247,7 @@ const legModificationRequested = RCSSessionResult.legModificationRequested satis
  * @type {number}
  */
 export
-const RCSSessionResult_legModificationComplete = RCSSessionResult.legModificationComplete satisfies RCSSessionResult; /* LONG_NAMED_ENUMERATED_VALUE */
+const RCSSessionResult_legModificationComplete = RCSSessionResult.legModificationComplete; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary legModificationComplete
@@ -262,7 +262,7 @@ const RCSSessionResult_legModificationComplete = RCSSessionResult.legModificatio
  * @type {number}
  */
 export
-const legModificationComplete = RCSSessionResult.legModificationComplete satisfies RCSSessionResult; /* SHORT_NAMED_ENUMERATED_VALUE */
+const legModificationComplete = RCSSessionResult.legModificationComplete; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RCSSessionResult_legRemovalRequest
@@ -276,7 +276,7 @@ const legModificationComplete = RCSSessionResult.legModificationComplete satisfi
  * @type {number}
  */
 export
-const RCSSessionResult_legRemovalRequest = RCSSessionResult.legRemovalRequest satisfies RCSSessionResult; /* LONG_NAMED_ENUMERATED_VALUE */
+const RCSSessionResult_legRemovalRequest = RCSSessionResult.legRemovalRequest; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary legRemovalRequest
@@ -290,7 +290,7 @@ const RCSSessionResult_legRemovalRequest = RCSSessionResult.legRemovalRequest sa
  * @type {number}
  */
 export
-const legRemovalRequest = RCSSessionResult.legRemovalRequest satisfies RCSSessionResult; /* SHORT_NAMED_ENUMERATED_VALUE */
+const legRemovalRequest = RCSSessionResult.legRemovalRequest; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RCSSessionResult_legRemovalComplete
@@ -305,7 +305,7 @@ const legRemovalRequest = RCSSessionResult.legRemovalRequest satisfies RCSSessio
  * @type {number}
  */
 export
-const RCSSessionResult_legRemovalComplete = RCSSessionResult.legRemovalComplete satisfies RCSSessionResult; /* LONG_NAMED_ENUMERATED_VALUE */
+const RCSSessionResult_legRemovalComplete = RCSSessionResult.legRemovalComplete; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary legRemovalComplete
@@ -320,7 +320,7 @@ const RCSSessionResult_legRemovalComplete = RCSSessionResult.legRemovalComplete 
  * @type {number}
  */
 export
-const legRemovalComplete = RCSSessionResult.legRemovalComplete satisfies RCSSessionResult; /* SHORT_NAMED_ENUMERATED_VALUE */
+const legRemovalComplete = RCSSessionResult.legRemovalComplete; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_RCSSessionResult: $.ASN1Decoder<RCSSessionResult> = $._decodeEnumerated;
 export const _encode_RCSSessionResult: $.ASN1Encoder<RCSSessionResult> = $._encodeEnumerated;
 

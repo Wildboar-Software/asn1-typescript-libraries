@@ -67,7 +67,7 @@ const InteractionStrategy = _enum_for_InteractionStrategy;
  * @type {number}
  */
 export
-const InteractionStrategy_stopOnError = InteractionStrategy.stopOnError satisfies InteractionStrategy; /* LONG_NAMED_ENUMERATED_VALUE */
+const InteractionStrategy_stopOnError = InteractionStrategy.stopOnError; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary stopOnError
@@ -75,7 +75,7 @@ const InteractionStrategy_stopOnError = InteractionStrategy.stopOnError satisfie
  * @type {number}
  */
 export
-const stopOnError = InteractionStrategy.stopOnError satisfies InteractionStrategy; /* SHORT_NAMED_ENUMERATED_VALUE */
+const stopOnError = InteractionStrategy.stopOnError; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary InteractionStrategy_bestEffort
@@ -83,7 +83,7 @@ const stopOnError = InteractionStrategy.stopOnError satisfies InteractionStrateg
  * @type {number}
  */
 export
-const InteractionStrategy_bestEffort = InteractionStrategy.bestEffort satisfies InteractionStrategy; /* LONG_NAMED_ENUMERATED_VALUE */
+const InteractionStrategy_bestEffort = InteractionStrategy.bestEffort; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary bestEffort
@@ -91,7 +91,7 @@ const InteractionStrategy_bestEffort = InteractionStrategy.bestEffort satisfies 
  * @type {number}
  */
 export
-const bestEffort = InteractionStrategy.bestEffort satisfies InteractionStrategy; /* SHORT_NAMED_ENUMERATED_VALUE */
+const bestEffort = InteractionStrategy.bestEffort; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_InteractionStrategy = $._decodeEnumerated;
 export const _encode_InteractionStrategy = $._encodeEnumerated;
 

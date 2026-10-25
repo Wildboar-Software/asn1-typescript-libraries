@@ -86,7 +86,7 @@ const CPCauseForRecClosing_normalRelease = 0 satisfies CPCauseForRecClosing; /* 
  * @type {number}
  */
 export
-const normalRelease = CPCauseForRecClosing_normalRelease satisfies CPCauseForRecClosing; /* SHORT_NAMED_INTEGER_VALUE */
+const normalRelease = CPCauseForRecClosing_normalRelease; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CPCauseForRecClosing_abnormalRelease
@@ -120,7 +120,7 @@ const CPCauseForRecClosing_abnormalRelease = 1 satisfies CPCauseForRecClosing; /
  * @type {number}
  */
 export
-const abnormalRelease = CPCauseForRecClosing_abnormalRelease satisfies CPCauseForRecClosing; /* SHORT_NAMED_INTEGER_VALUE */
+const abnormalRelease = CPCauseForRecClosing_abnormalRelease; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CPCauseForRecClosing_volumeLimit
@@ -156,7 +156,7 @@ const CPCauseForRecClosing_volumeLimit = 2 satisfies CPCauseForRecClosing; /* LO
  * @type {number}
  */
 export
-const volumeLimit = CPCauseForRecClosing_volumeLimit satisfies CPCauseForRecClosing; /* SHORT_NAMED_INTEGER_VALUE */
+const volumeLimit = CPCauseForRecClosing_volumeLimit; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CPCauseForRecClosing_timeLimit
@@ -192,7 +192,7 @@ const CPCauseForRecClosing_timeLimit = 3 satisfies CPCauseForRecClosing; /* LONG
  * @type {number}
  */
 export
-const timeLimit = CPCauseForRecClosing_timeLimit satisfies CPCauseForRecClosing; /* SHORT_NAMED_INTEGER_VALUE */
+const timeLimit = CPCauseForRecClosing_timeLimit; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CPCauseForRecClosing_maxNIDDsubmissions
@@ -230,7 +230,7 @@ const CPCauseForRecClosing_maxNIDDsubmissions = 4 satisfies CPCauseForRecClosing
  * @type {number}
  */
 export
-const maxNIDDsubmissions = CPCauseForRecClosing_maxNIDDsubmissions satisfies CPCauseForRecClosing; /* SHORT_NAMED_INTEGER_VALUE */
+const maxNIDDsubmissions = CPCauseForRecClosing_maxNIDDsubmissions; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CPCauseForRecClosing_servingNodeChange
@@ -270,7 +270,7 @@ const CPCauseForRecClosing_servingNodeChange = 5 satisfies CPCauseForRecClosing;
  * @type {number}
  */
 export
-const servingNodeChange = CPCauseForRecClosing_servingNodeChange satisfies CPCauseForRecClosing; /* SHORT_NAMED_INTEGER_VALUE */
+const servingNodeChange = CPCauseForRecClosing_servingNodeChange; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CPCauseForRecClosing_pLMNChange
@@ -310,7 +310,7 @@ const CPCauseForRecClosing_pLMNChange = 6 satisfies CPCauseForRecClosing; /* LON
  * @type {number}
  */
 export
-const pLMNChange = CPCauseForRecClosing_pLMNChange satisfies CPCauseForRecClosing; /* SHORT_NAMED_INTEGER_VALUE */
+const pLMNChange = CPCauseForRecClosing_pLMNChange; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CPCauseForRecClosing_servingPLMNRateControlChange
@@ -346,7 +346,7 @@ const CPCauseForRecClosing_servingPLMNRateControlChange = 7 satisfies CPCauseFor
  * @type {number}
  */
 export
-const servingPLMNRateControlChange = CPCauseForRecClosing_servingPLMNRateControlChange satisfies CPCauseForRecClosing; /* SHORT_NAMED_INTEGER_VALUE */
+const servingPLMNRateControlChange = CPCauseForRecClosing_servingPLMNRateControlChange; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CPCauseForRecClosing_aPNRateControlChange
@@ -380,7 +380,7 @@ const CPCauseForRecClosing_aPNRateControlChange = 8 satisfies CPCauseForRecClosi
  * @type {number}
  */
 export
-const aPNRateControlChange = CPCauseForRecClosing_aPNRateControlChange satisfies CPCauseForRecClosing; /* SHORT_NAMED_INTEGER_VALUE */
+const aPNRateControlChange = CPCauseForRecClosing_aPNRateControlChange; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CPCauseForRecClosing_rATTypeChange
@@ -418,7 +418,7 @@ const CPCauseForRecClosing_rATTypeChange = 9 satisfies CPCauseForRecClosing; /* 
  * @type {number}
  */
 export
-const rATTypeChange = CPCauseForRecClosing_rATTypeChange satisfies CPCauseForRecClosing; /* SHORT_NAMED_INTEGER_VALUE */
+const rATTypeChange = CPCauseForRecClosing_rATTypeChange; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CPCauseForRecClosing_managementIntervention
@@ -454,7 +454,7 @@ const CPCauseForRecClosing_managementIntervention = 10 satisfies CPCauseForRecCl
  * @type {number}
  */
 export
-const managementIntervention = CPCauseForRecClosing_managementIntervention satisfies CPCauseForRecClosing; /* SHORT_NAMED_INTEGER_VALUE */
+const managementIntervention = CPCauseForRecClosing_managementIntervention; /* SHORT_NAMED_INTEGER_VALUE */
 
 export
 const _decode_CPCauseForRecClosing: $.ASN1Decoder<CPCauseForRecClosing> = $._decodeInteger;

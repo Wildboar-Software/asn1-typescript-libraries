@@ -99,7 +99,7 @@ const NetworkCapability_networkType = _enum_for_NetworkCapability_networkType;
  * @type {number}
  */
 export
-const NetworkCapability_networkType_iSDNPublic = NetworkCapability_networkType.iSDNPublic satisfies NetworkCapability_networkType; /* LONG_NAMED_ENUMERATED_VALUE */
+const NetworkCapability_networkType_iSDNPublic = NetworkCapability_networkType.iSDNPublic; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary iSDNPublic
@@ -107,7 +107,7 @@ const NetworkCapability_networkType_iSDNPublic = NetworkCapability_networkType.i
  * @type {number}
  */
 export
-const iSDNPublic = NetworkCapability_networkType.iSDNPublic satisfies NetworkCapability_networkType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const iSDNPublic = NetworkCapability_networkType.iSDNPublic; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NetworkCapability_networkType_nonISDNPublic
@@ -119,7 +119,7 @@ const iSDNPublic = NetworkCapability_networkType.iSDNPublic satisfies NetworkCap
  * @type {number}
  */
 export
-const NetworkCapability_networkType_nonISDNPublic = NetworkCapability_networkType.nonISDNPublic satisfies NetworkCapability_networkType; /* LONG_NAMED_ENUMERATED_VALUE */
+const NetworkCapability_networkType_nonISDNPublic = NetworkCapability_networkType.nonISDNPublic; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary nonISDNPublic
@@ -127,7 +127,7 @@ const NetworkCapability_networkType_nonISDNPublic = NetworkCapability_networkTyp
  * @type {number}
  */
 export
-const nonISDNPublic = NetworkCapability_networkType.nonISDNPublic satisfies NetworkCapability_networkType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const nonISDNPublic = NetworkCapability_networkType.nonISDNPublic; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NetworkCapability_networkType_iSDNPrivate
@@ -139,7 +139,7 @@ const nonISDNPublic = NetworkCapability_networkType.nonISDNPublic satisfies Netw
  * @type {number}
  */
 export
-const NetworkCapability_networkType_iSDNPrivate = NetworkCapability_networkType.iSDNPrivate satisfies NetworkCapability_networkType; /* LONG_NAMED_ENUMERATED_VALUE */
+const NetworkCapability_networkType_iSDNPrivate = NetworkCapability_networkType.iSDNPrivate; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary iSDNPrivate
@@ -147,7 +147,7 @@ const NetworkCapability_networkType_iSDNPrivate = NetworkCapability_networkType.
  * @type {number}
  */
 export
-const iSDNPrivate = NetworkCapability_networkType.iSDNPrivate satisfies NetworkCapability_networkType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const iSDNPrivate = NetworkCapability_networkType.iSDNPrivate; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NetworkCapability_networkType_nonISDNPrivate
@@ -159,7 +159,7 @@ const iSDNPrivate = NetworkCapability_networkType.iSDNPrivate satisfies NetworkC
  * @type {number}
  */
 export
-const NetworkCapability_networkType_nonISDNPrivate = NetworkCapability_networkType.nonISDNPrivate satisfies NetworkCapability_networkType; /* LONG_NAMED_ENUMERATED_VALUE */
+const NetworkCapability_networkType_nonISDNPrivate = NetworkCapability_networkType.nonISDNPrivate; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary nonISDNPrivate
@@ -167,7 +167,7 @@ const NetworkCapability_networkType_nonISDNPrivate = NetworkCapability_networkTy
  * @type {number}
  */
 export
-const nonISDNPrivate = NetworkCapability_networkType.nonISDNPrivate satisfies NetworkCapability_networkType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const nonISDNPrivate = NetworkCapability_networkType.nonISDNPrivate; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NetworkCapability_networkType_other
@@ -179,7 +179,7 @@ const nonISDNPrivate = NetworkCapability_networkType.nonISDNPrivate satisfies Ne
  * @type {number}
  */
 export
-const NetworkCapability_networkType_other = NetworkCapability_networkType.other satisfies NetworkCapability_networkType; /* LONG_NAMED_ENUMERATED_VALUE */
+const NetworkCapability_networkType_other = NetworkCapability_networkType.other; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary other
@@ -187,7 +187,7 @@ const NetworkCapability_networkType_other = NetworkCapability_networkType.other 
  * @type {number}
  */
 export
-const other = NetworkCapability_networkType.other satisfies NetworkCapability_networkType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const other = NetworkCapability_networkType.other; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 let _cached_decoder_for_NetworkCapability_networkType: $.ASN1Decoder<NetworkCapability_networkType> | null = null;
 

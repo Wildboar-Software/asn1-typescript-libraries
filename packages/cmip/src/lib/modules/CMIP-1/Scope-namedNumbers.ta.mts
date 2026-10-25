@@ -51,7 +51,7 @@ export const Scope_namedNumbers_baseObject = 0 satisfies Scope_namedNumbers; /* 
  * @constant
  * @type {number}
  */
-export const baseObject = Scope_namedNumbers_baseObject satisfies Scope_namedNumbers; /* SHORT_NAMED_INTEGER_VALUE */
+export const baseObject = Scope_namedNumbers_baseObject; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -76,7 +76,7 @@ export const Scope_namedNumbers_firstLevelOnly = 1 satisfies Scope_namedNumbers;
  * @constant
  * @type {number}
  */
-export const firstLevelOnly = Scope_namedNumbers_firstLevelOnly satisfies Scope_namedNumbers; /* SHORT_NAMED_INTEGER_VALUE */
+export const firstLevelOnly = Scope_namedNumbers_firstLevelOnly; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -100,7 +100,7 @@ export const Scope_namedNumbers_wholeSubtree = 2 satisfies Scope_namedNumbers; /
  * @constant
  * @type {number}
  */
-export const wholeSubtree = Scope_namedNumbers_wholeSubtree satisfies Scope_namedNumbers; /* SHORT_NAMED_INTEGER_VALUE */
+export const wholeSubtree = Scope_namedNumbers_wholeSubtree; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 

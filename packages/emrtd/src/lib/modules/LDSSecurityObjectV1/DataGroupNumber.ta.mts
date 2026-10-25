@@ -50,7 +50,7 @@ const DataGroupNumber_dataGroup1 = 1 satisfies DataGroupNumber; /* LONG_NAMED_IN
  * @type {number}
  */
 export
-const dataGroup1 = DataGroupNumber_dataGroup1 satisfies DataGroupNumber; /* SHORT_NAMED_INTEGER_VALUE */
+const dataGroup1 = DataGroupNumber_dataGroup1; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DataGroupNumber_dataGroup2
@@ -66,7 +66,7 @@ const DataGroupNumber_dataGroup2 = 2 satisfies DataGroupNumber; /* LONG_NAMED_IN
  * @type {number}
  */
 export
-const dataGroup2 = DataGroupNumber_dataGroup2 satisfies DataGroupNumber; /* SHORT_NAMED_INTEGER_VALUE */
+const dataGroup2 = DataGroupNumber_dataGroup2; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DataGroupNumber_dataGroup3
@@ -82,7 +82,7 @@ const DataGroupNumber_dataGroup3 = 3 satisfies DataGroupNumber; /* LONG_NAMED_IN
  * @type {number}
  */
 export
-const dataGroup3 = DataGroupNumber_dataGroup3 satisfies DataGroupNumber; /* SHORT_NAMED_INTEGER_VALUE */
+const dataGroup3 = DataGroupNumber_dataGroup3; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DataGroupNumber_dataGroup4
@@ -98,7 +98,7 @@ const DataGroupNumber_dataGroup4 = 4 satisfies DataGroupNumber; /* LONG_NAMED_IN
  * @type {number}
  */
 export
-const dataGroup4 = DataGroupNumber_dataGroup4 satisfies DataGroupNumber; /* SHORT_NAMED_INTEGER_VALUE */
+const dataGroup4 = DataGroupNumber_dataGroup4; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DataGroupNumber_dataGroup5
@@ -114,7 +114,7 @@ const DataGroupNumber_dataGroup5 = 5 satisfies DataGroupNumber; /* LONG_NAMED_IN
  * @type {number}
  */
 export
-const dataGroup5 = DataGroupNumber_dataGroup5 satisfies DataGroupNumber; /* SHORT_NAMED_INTEGER_VALUE */
+const dataGroup5 = DataGroupNumber_dataGroup5; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DataGroupNumber_dataGroup6
@@ -130,7 +130,7 @@ const DataGroupNumber_dataGroup6 = 6 satisfies DataGroupNumber; /* LONG_NAMED_IN
  * @type {number}
  */
 export
-const dataGroup6 = DataGroupNumber_dataGroup6 satisfies DataGroupNumber; /* SHORT_NAMED_INTEGER_VALUE */
+const dataGroup6 = DataGroupNumber_dataGroup6; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DataGroupNumber_dataGroup7
@@ -146,7 +146,7 @@ const DataGroupNumber_dataGroup7 = 7 satisfies DataGroupNumber; /* LONG_NAMED_IN
  * @type {number}
  */
 export
-const dataGroup7 = DataGroupNumber_dataGroup7 satisfies DataGroupNumber; /* SHORT_NAMED_INTEGER_VALUE */
+const dataGroup7 = DataGroupNumber_dataGroup7; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DataGroupNumber_dataGroup8
@@ -162,7 +162,7 @@ const DataGroupNumber_dataGroup8 = 8 satisfies DataGroupNumber; /* LONG_NAMED_IN
  * @type {number}
  */
 export
-const dataGroup8 = DataGroupNumber_dataGroup8 satisfies DataGroupNumber; /* SHORT_NAMED_INTEGER_VALUE */
+const dataGroup8 = DataGroupNumber_dataGroup8; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DataGroupNumber_dataGroup9
@@ -178,7 +178,7 @@ const DataGroupNumber_dataGroup9 = 9 satisfies DataGroupNumber; /* LONG_NAMED_IN
  * @type {number}
  */
 export
-const dataGroup9 = DataGroupNumber_dataGroup9 satisfies DataGroupNumber; /* SHORT_NAMED_INTEGER_VALUE */
+const dataGroup9 = DataGroupNumber_dataGroup9; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DataGroupNumber_dataGroup10
@@ -194,7 +194,7 @@ const DataGroupNumber_dataGroup10 = 10 satisfies DataGroupNumber; /* LONG_NAMED_
  * @type {number}
  */
 export
-const dataGroup10 = DataGroupNumber_dataGroup10 satisfies DataGroupNumber; /* SHORT_NAMED_INTEGER_VALUE */
+const dataGroup10 = DataGroupNumber_dataGroup10; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DataGroupNumber_dataGroup11
@@ -210,7 +210,7 @@ const DataGroupNumber_dataGroup11 = 11 satisfies DataGroupNumber; /* LONG_NAMED_
  * @type {number}
  */
 export
-const dataGroup11 = DataGroupNumber_dataGroup11 satisfies DataGroupNumber; /* SHORT_NAMED_INTEGER_VALUE */
+const dataGroup11 = DataGroupNumber_dataGroup11; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DataGroupNumber_dataGroup12
@@ -226,7 +226,7 @@ const DataGroupNumber_dataGroup12 = 12 satisfies DataGroupNumber; /* LONG_NAMED_
  * @type {number}
  */
 export
-const dataGroup12 = DataGroupNumber_dataGroup12 satisfies DataGroupNumber; /* SHORT_NAMED_INTEGER_VALUE */
+const dataGroup12 = DataGroupNumber_dataGroup12; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DataGroupNumber_dataGroup13
@@ -242,7 +242,7 @@ const DataGroupNumber_dataGroup13 = 13 satisfies DataGroupNumber; /* LONG_NAMED_
  * @type {number}
  */
 export
-const dataGroup13 = DataGroupNumber_dataGroup13 satisfies DataGroupNumber; /* SHORT_NAMED_INTEGER_VALUE */
+const dataGroup13 = DataGroupNumber_dataGroup13; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DataGroupNumber_dataGroup14
@@ -258,7 +258,7 @@ const DataGroupNumber_dataGroup14 = 14 satisfies DataGroupNumber; /* LONG_NAMED_
  * @type {number}
  */
 export
-const dataGroup14 = DataGroupNumber_dataGroup14 satisfies DataGroupNumber; /* SHORT_NAMED_INTEGER_VALUE */
+const dataGroup14 = DataGroupNumber_dataGroup14; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DataGroupNumber_dataGroup15
@@ -274,7 +274,7 @@ const DataGroupNumber_dataGroup15 = 15 satisfies DataGroupNumber; /* LONG_NAMED_
  * @type {number}
  */
 export
-const dataGroup15 = DataGroupNumber_dataGroup15 satisfies DataGroupNumber; /* SHORT_NAMED_INTEGER_VALUE */
+const dataGroup15 = DataGroupNumber_dataGroup15; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DataGroupNumber_dataGroup16
@@ -290,7 +290,7 @@ const DataGroupNumber_dataGroup16 = 16 satisfies DataGroupNumber; /* LONG_NAMED_
  * @type {number}
  */
 export
-const dataGroup16 = DataGroupNumber_dataGroup16 satisfies DataGroupNumber; /* SHORT_NAMED_INTEGER_VALUE */
+const dataGroup16 = DataGroupNumber_dataGroup16; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_DataGroupNumber = $._decodeInteger;
 export const _encode_DataGroupNumber = $._encodeInteger;
 

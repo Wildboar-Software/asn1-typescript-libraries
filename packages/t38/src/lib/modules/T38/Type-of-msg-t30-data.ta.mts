@@ -96,7 +96,7 @@ export type Type_of_msg_t30_data = _enum_for_Type_of_msg_t30_data | ENUMERATED;
  * @constant
  * @type {number}
  */
-export const Type_of_msg_t30_data_v21 = _enum_for_Type_of_msg_t30_data.v21 satisfies Type_of_msg_t30_data; /* LONG_NAMED_ENUMERATED_VALUE */
+export const Type_of_msg_t30_data_v21 = _enum_for_Type_of_msg_t30_data.v21; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -106,7 +106,7 @@ export const Type_of_msg_t30_data_v21 = _enum_for_Type_of_msg_t30_data.v21 satis
  * @constant
  * @type {number}
  */
-export const v21 = Type_of_msg_t30_data_v21 satisfies Type_of_msg_t30_data; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const v21 = Type_of_msg_t30_data_v21; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -115,7 +115,7 @@ export const v21 = Type_of_msg_t30_data_v21 satisfies Type_of_msg_t30_data; /* S
  * @constant
  * @type {number}
  */
-export const Type_of_msg_t30_data_v27_2400 = _enum_for_Type_of_msg_t30_data.v27_2400 satisfies Type_of_msg_t30_data; /* LONG_NAMED_ENUMERATED_VALUE */
+export const Type_of_msg_t30_data_v27_2400 = _enum_for_Type_of_msg_t30_data.v27_2400; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -124,7 +124,7 @@ export const Type_of_msg_t30_data_v27_2400 = _enum_for_Type_of_msg_t30_data.v27_
  * @constant
  * @type {number}
  */
-export const v27_2400 = Type_of_msg_t30_data_v27_2400 satisfies Type_of_msg_t30_data; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const v27_2400 = Type_of_msg_t30_data_v27_2400; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -133,7 +133,7 @@ export const v27_2400 = Type_of_msg_t30_data_v27_2400 satisfies Type_of_msg_t30_
  * @constant
  * @type {number}
  */
-export const Type_of_msg_t30_data_v27_4800 = _enum_for_Type_of_msg_t30_data.v27_4800 satisfies Type_of_msg_t30_data; /* LONG_NAMED_ENUMERATED_VALUE */
+export const Type_of_msg_t30_data_v27_4800 = _enum_for_Type_of_msg_t30_data.v27_4800; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -142,7 +142,7 @@ export const Type_of_msg_t30_data_v27_4800 = _enum_for_Type_of_msg_t30_data.v27_
  * @constant
  * @type {number}
  */
-export const v27_4800 = Type_of_msg_t30_data_v27_4800 satisfies Type_of_msg_t30_data; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const v27_4800 = Type_of_msg_t30_data_v27_4800; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -151,7 +151,7 @@ export const v27_4800 = Type_of_msg_t30_data_v27_4800 satisfies Type_of_msg_t30_
  * @constant
  * @type {number}
  */
-export const Type_of_msg_t30_data_v29_7200 = _enum_for_Type_of_msg_t30_data.v29_7200 satisfies Type_of_msg_t30_data; /* LONG_NAMED_ENUMERATED_VALUE */
+export const Type_of_msg_t30_data_v29_7200 = _enum_for_Type_of_msg_t30_data.v29_7200; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -160,7 +160,7 @@ export const Type_of_msg_t30_data_v29_7200 = _enum_for_Type_of_msg_t30_data.v29_
  * @constant
  * @type {number}
  */
-export const v29_7200 = Type_of_msg_t30_data_v29_7200 satisfies Type_of_msg_t30_data; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const v29_7200 = Type_of_msg_t30_data_v29_7200; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -169,7 +169,7 @@ export const v29_7200 = Type_of_msg_t30_data_v29_7200 satisfies Type_of_msg_t30_
  * @constant
  * @type {number}
  */
-export const Type_of_msg_t30_data_v29_9600 = _enum_for_Type_of_msg_t30_data.v29_9600 satisfies Type_of_msg_t30_data; /* LONG_NAMED_ENUMERATED_VALUE */
+export const Type_of_msg_t30_data_v29_9600 = _enum_for_Type_of_msg_t30_data.v29_9600; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -178,7 +178,7 @@ export const Type_of_msg_t30_data_v29_9600 = _enum_for_Type_of_msg_t30_data.v29_
  * @constant
  * @type {number}
  */
-export const v29_9600 = Type_of_msg_t30_data_v29_9600 satisfies Type_of_msg_t30_data; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const v29_9600 = Type_of_msg_t30_data_v29_9600; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -187,7 +187,7 @@ export const v29_9600 = Type_of_msg_t30_data_v29_9600 satisfies Type_of_msg_t30_
  * @constant
  * @type {number}
  */
-export const Type_of_msg_t30_data_v17_7200 = _enum_for_Type_of_msg_t30_data.v17_7200 satisfies Type_of_msg_t30_data; /* LONG_NAMED_ENUMERATED_VALUE */
+export const Type_of_msg_t30_data_v17_7200 = _enum_for_Type_of_msg_t30_data.v17_7200; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -196,7 +196,7 @@ export const Type_of_msg_t30_data_v17_7200 = _enum_for_Type_of_msg_t30_data.v17_
  * @constant
  * @type {number}
  */
-export const v17_7200 = Type_of_msg_t30_data_v17_7200 satisfies Type_of_msg_t30_data; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const v17_7200 = Type_of_msg_t30_data_v17_7200; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -205,7 +205,7 @@ export const v17_7200 = Type_of_msg_t30_data_v17_7200 satisfies Type_of_msg_t30_
  * @constant
  * @type {number}
  */
-export const Type_of_msg_t30_data_v17_9600 = _enum_for_Type_of_msg_t30_data.v17_9600 satisfies Type_of_msg_t30_data; /* LONG_NAMED_ENUMERATED_VALUE */
+export const Type_of_msg_t30_data_v17_9600 = _enum_for_Type_of_msg_t30_data.v17_9600; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -214,7 +214,7 @@ export const Type_of_msg_t30_data_v17_9600 = _enum_for_Type_of_msg_t30_data.v17_
  * @constant
  * @type {number}
  */
-export const v17_9600 = Type_of_msg_t30_data_v17_9600 satisfies Type_of_msg_t30_data; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const v17_9600 = Type_of_msg_t30_data_v17_9600; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -223,7 +223,7 @@ export const v17_9600 = Type_of_msg_t30_data_v17_9600 satisfies Type_of_msg_t30_
  * @constant
  * @type {number}
  */
-export const Type_of_msg_t30_data_v17_12000 = _enum_for_Type_of_msg_t30_data.v17_12000 satisfies Type_of_msg_t30_data; /* LONG_NAMED_ENUMERATED_VALUE */
+export const Type_of_msg_t30_data_v17_12000 = _enum_for_Type_of_msg_t30_data.v17_12000; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -232,7 +232,7 @@ export const Type_of_msg_t30_data_v17_12000 = _enum_for_Type_of_msg_t30_data.v17
  * @constant
  * @type {number}
  */
-export const v17_12000 = Type_of_msg_t30_data_v17_12000 satisfies Type_of_msg_t30_data; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const v17_12000 = Type_of_msg_t30_data_v17_12000; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -241,7 +241,7 @@ export const v17_12000 = Type_of_msg_t30_data_v17_12000 satisfies Type_of_msg_t3
  * @constant
  * @type {number}
  */
-export const Type_of_msg_t30_data_v17_14400 = _enum_for_Type_of_msg_t30_data.v17_14400 satisfies Type_of_msg_t30_data; /* LONG_NAMED_ENUMERATED_VALUE */
+export const Type_of_msg_t30_data_v17_14400 = _enum_for_Type_of_msg_t30_data.v17_14400; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -250,7 +250,7 @@ export const Type_of_msg_t30_data_v17_14400 = _enum_for_Type_of_msg_t30_data.v17
  * @constant
  * @type {number}
  */
-export const v17_14400 = Type_of_msg_t30_data_v17_14400 satisfies Type_of_msg_t30_data; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const v17_14400 = Type_of_msg_t30_data_v17_14400; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -260,7 +260,7 @@ export const v17_14400 = Type_of_msg_t30_data_v17_14400 satisfies Type_of_msg_t3
  * @constant
  * @type {number}
  */
-export const Type_of_msg_t30_data_v8 = _enum_for_Type_of_msg_t30_data.v8 satisfies Type_of_msg_t30_data; /* LONG_NAMED_ENUMERATED_VALUE */
+export const Type_of_msg_t30_data_v8 = _enum_for_Type_of_msg_t30_data.v8; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -270,7 +270,7 @@ export const Type_of_msg_t30_data_v8 = _enum_for_Type_of_msg_t30_data.v8 satisfi
  * @constant
  * @type {number}
  */
-export const v8 = Type_of_msg_t30_data_v8 satisfies Type_of_msg_t30_data; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const v8 = Type_of_msg_t30_data_v8; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -280,7 +280,7 @@ export const v8 = Type_of_msg_t30_data_v8 satisfies Type_of_msg_t30_data; /* SHO
  * @constant
  * @type {number}
  */
-export const Type_of_msg_t30_data_v34_pri_rate = _enum_for_Type_of_msg_t30_data.v34_pri_rate satisfies Type_of_msg_t30_data; /* LONG_NAMED_ENUMERATED_VALUE */
+export const Type_of_msg_t30_data_v34_pri_rate = _enum_for_Type_of_msg_t30_data.v34_pri_rate; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -290,7 +290,7 @@ export const Type_of_msg_t30_data_v34_pri_rate = _enum_for_Type_of_msg_t30_data.
  * @constant
  * @type {number}
  */
-export const v34_pri_rate = Type_of_msg_t30_data_v34_pri_rate satisfies Type_of_msg_t30_data; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const v34_pri_rate = Type_of_msg_t30_data_v34_pri_rate; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -300,7 +300,7 @@ export const v34_pri_rate = Type_of_msg_t30_data_v34_pri_rate satisfies Type_of_
  * @constant
  * @type {number}
  */
-export const Type_of_msg_t30_data_v34_CC_1200 = _enum_for_Type_of_msg_t30_data.v34_CC_1200 satisfies Type_of_msg_t30_data; /* LONG_NAMED_ENUMERATED_VALUE */
+export const Type_of_msg_t30_data_v34_CC_1200 = _enum_for_Type_of_msg_t30_data.v34_CC_1200; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -310,7 +310,7 @@ export const Type_of_msg_t30_data_v34_CC_1200 = _enum_for_Type_of_msg_t30_data.v
  * @constant
  * @type {number}
  */
-export const v34_CC_1200 = Type_of_msg_t30_data_v34_CC_1200 satisfies Type_of_msg_t30_data; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const v34_CC_1200 = Type_of_msg_t30_data_v34_CC_1200; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -320,7 +320,7 @@ export const v34_CC_1200 = Type_of_msg_t30_data_v34_CC_1200 satisfies Type_of_ms
  * @constant
  * @type {number}
  */
-export const Type_of_msg_t30_data_v34_pri_ch = _enum_for_Type_of_msg_t30_data.v34_pri_ch satisfies Type_of_msg_t30_data; /* LONG_NAMED_ENUMERATED_VALUE */
+export const Type_of_msg_t30_data_v34_pri_ch = _enum_for_Type_of_msg_t30_data.v34_pri_ch; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -330,7 +330,7 @@ export const Type_of_msg_t30_data_v34_pri_ch = _enum_for_Type_of_msg_t30_data.v3
  * @constant
  * @type {number}
  */
-export const v34_pri_ch = Type_of_msg_t30_data_v34_pri_ch satisfies Type_of_msg_t30_data; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const v34_pri_ch = Type_of_msg_t30_data_v34_pri_ch; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -340,7 +340,7 @@ export const v34_pri_ch = Type_of_msg_t30_data_v34_pri_ch satisfies Type_of_msg_
  * @constant
  * @type {number}
  */
-export const Type_of_msg_t30_data_v33_12000 = _enum_for_Type_of_msg_t30_data.v33_12000 satisfies Type_of_msg_t30_data; /* LONG_NAMED_ENUMERATED_VALUE */
+export const Type_of_msg_t30_data_v33_12000 = _enum_for_Type_of_msg_t30_data.v33_12000; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -350,7 +350,7 @@ export const Type_of_msg_t30_data_v33_12000 = _enum_for_Type_of_msg_t30_data.v33
  * @constant
  * @type {number}
  */
-export const v33_12000 = Type_of_msg_t30_data_v33_12000 satisfies Type_of_msg_t30_data; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const v33_12000 = Type_of_msg_t30_data_v33_12000; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -360,7 +360,7 @@ export const v33_12000 = Type_of_msg_t30_data_v33_12000 satisfies Type_of_msg_t3
  * @constant
  * @type {number}
  */
-export const Type_of_msg_t30_data_v33_14400 = _enum_for_Type_of_msg_t30_data.v33_14400 satisfies Type_of_msg_t30_data; /* LONG_NAMED_ENUMERATED_VALUE */
+export const Type_of_msg_t30_data_v33_14400 = _enum_for_Type_of_msg_t30_data.v33_14400; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -370,7 +370,7 @@ export const Type_of_msg_t30_data_v33_14400 = _enum_for_Type_of_msg_t30_data.v33
  * @constant
  * @type {number}
  */
-export const v33_14400 = Type_of_msg_t30_data_v33_14400 satisfies Type_of_msg_t30_data; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const v33_14400 = Type_of_msg_t30_data_v33_14400; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 

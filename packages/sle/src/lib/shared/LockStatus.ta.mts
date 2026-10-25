@@ -54,7 +54,7 @@ const LockStatus_inLock = 0 satisfies LockStatus; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const inLock = LockStatus_inLock satisfies LockStatus; /* SHORT_NAMED_INTEGER_VALUE */
+const inLock = LockStatus_inLock; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary LockStatus_outOfLock
@@ -83,7 +83,7 @@ const LockStatus_outOfLock = 1 satisfies LockStatus; /* LONG_NAMED_INTEGER_VALUE
  * @type {number}
  */
 export
-const outOfLock = LockStatus_outOfLock satisfies LockStatus; /* SHORT_NAMED_INTEGER_VALUE */
+const outOfLock = LockStatus_outOfLock; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary LockStatus_notInUse
@@ -109,7 +109,7 @@ const LockStatus_notInUse = 2 satisfies LockStatus; /* LONG_NAMED_INTEGER_VALUE 
  * @type {number}
  */
 export
-const notInUse = LockStatus_notInUse satisfies LockStatus; /* SHORT_NAMED_INTEGER_VALUE */
+const notInUse = LockStatus_notInUse; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary LockStatus_unknown
@@ -136,7 +136,7 @@ const LockStatus_unknown = 3 satisfies LockStatus; /* LONG_NAMED_INTEGER_VALUE *
  * @type {number}
  */
 export
-const unknown = LockStatus_unknown satisfies LockStatus; /* SHORT_NAMED_INTEGER_VALUE */
+const unknown = LockStatus_unknown; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_LockStatus: $.ASN1Decoder<LockStatus> = $._decodeInteger;
 export const _encode_LockStatus: $.ASN1Encoder<LockStatus> = $._encodeInteger;
 

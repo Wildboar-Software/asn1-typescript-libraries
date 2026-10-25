@@ -94,7 +94,7 @@ const AttributeToSet_mode = _enum_for_AttributeToSet_mode;
  * @type {number}
  */
 export
-const AttributeToSet_mode_automatic = AttributeToSet_mode.automatic satisfies AttributeToSet_mode; /* LONG_NAMED_ENUMERATED_VALUE */
+const AttributeToSet_mode_automatic = AttributeToSet_mode.automatic; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary automatic
@@ -106,7 +106,7 @@ const AttributeToSet_mode_automatic = AttributeToSet_mode.automatic satisfies At
  * @type {number}
  */
 export
-const automatic = AttributeToSet_mode.automatic satisfies AttributeToSet_mode; /* SHORT_NAMED_ENUMERATED_VALUE */
+const automatic = AttributeToSet_mode.automatic; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AttributeToSet_mode_single
@@ -118,7 +118,7 @@ const automatic = AttributeToSet_mode.automatic satisfies AttributeToSet_mode; /
  * @type {number}
  */
 export
-const AttributeToSet_mode_single = AttributeToSet_mode.single satisfies AttributeToSet_mode; /* LONG_NAMED_ENUMERATED_VALUE */
+const AttributeToSet_mode_single = AttributeToSet_mode.single; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary single
@@ -130,7 +130,7 @@ const AttributeToSet_mode_single = AttributeToSet_mode.single satisfies Attribut
  * @type {number}
  */
 export
-const single = AttributeToSet_mode.single satisfies AttributeToSet_mode; /* SHORT_NAMED_ENUMERATED_VALUE */
+const single = AttributeToSet_mode.single; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AttributeToSet_mode_multiple
@@ -142,7 +142,7 @@ const single = AttributeToSet_mode.single satisfies AttributeToSet_mode; /* SHOR
  * @type {number}
  */
 export
-const AttributeToSet_mode_multiple = AttributeToSet_mode.multiple satisfies AttributeToSet_mode; /* LONG_NAMED_ENUMERATED_VALUE */
+const AttributeToSet_mode_multiple = AttributeToSet_mode.multiple; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary multiple
@@ -154,7 +154,7 @@ const AttributeToSet_mode_multiple = AttributeToSet_mode.multiple satisfies Attr
  * @type {number}
  */
 export
-const multiple = AttributeToSet_mode.multiple satisfies AttributeToSet_mode; /* SHORT_NAMED_ENUMERATED_VALUE */
+const multiple = AttributeToSet_mode.multiple; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 let _cached_decoder_for_AttributeToSet_mode: $.ASN1Decoder<AttributeToSet_mode> | null = null;
 

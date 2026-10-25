@@ -119,7 +119,7 @@ const ProgressIndicator_progressLocation = _enum_for_ProgressIndicator_progressL
  * @type {number}
  */
 export
-const ProgressIndicator_progressLocation_user = ProgressIndicator_progressLocation.user satisfies ProgressIndicator_progressLocation; /* LONG_NAMED_ENUMERATED_VALUE */
+const ProgressIndicator_progressLocation_user = ProgressIndicator_progressLocation.user; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary user
@@ -127,7 +127,7 @@ const ProgressIndicator_progressLocation_user = ProgressIndicator_progressLocati
  * @type {number}
  */
 export
-const user = ProgressIndicator_progressLocation.user satisfies ProgressIndicator_progressLocation; /* SHORT_NAMED_ENUMERATED_VALUE */
+const user = ProgressIndicator_progressLocation.user; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ProgressIndicator_progressLocation_privateNetServingLocal
@@ -140,7 +140,7 @@ const user = ProgressIndicator_progressLocation.user satisfies ProgressIndicator
  * @type {number}
  */
 export
-const ProgressIndicator_progressLocation_privateNetServingLocal = ProgressIndicator_progressLocation.privateNetServingLocal satisfies ProgressIndicator_progressLocation; /* LONG_NAMED_ENUMERATED_VALUE */
+const ProgressIndicator_progressLocation_privateNetServingLocal = ProgressIndicator_progressLocation.privateNetServingLocal; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary privateNetServingLocal
@@ -148,7 +148,7 @@ const ProgressIndicator_progressLocation_privateNetServingLocal = ProgressIndica
  * @type {number}
  */
 export
-const privateNetServingLocal = ProgressIndicator_progressLocation.privateNetServingLocal satisfies ProgressIndicator_progressLocation; /* SHORT_NAMED_ENUMERATED_VALUE */
+const privateNetServingLocal = ProgressIndicator_progressLocation.privateNetServingLocal; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ProgressIndicator_progressLocation_publicNetServingLocal
@@ -160,7 +160,7 @@ const privateNetServingLocal = ProgressIndicator_progressLocation.privateNetServ
  * @type {number}
  */
 export
-const ProgressIndicator_progressLocation_publicNetServingLocal = ProgressIndicator_progressLocation.publicNetServingLocal satisfies ProgressIndicator_progressLocation; /* LONG_NAMED_ENUMERATED_VALUE */
+const ProgressIndicator_progressLocation_publicNetServingLocal = ProgressIndicator_progressLocation.publicNetServingLocal; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary publicNetServingLocal
@@ -168,7 +168,7 @@ const ProgressIndicator_progressLocation_publicNetServingLocal = ProgressIndicat
  * @type {number}
  */
 export
-const publicNetServingLocal = ProgressIndicator_progressLocation.publicNetServingLocal satisfies ProgressIndicator_progressLocation; /* SHORT_NAMED_ENUMERATED_VALUE */
+const publicNetServingLocal = ProgressIndicator_progressLocation.publicNetServingLocal; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ProgressIndicator_progressLocation_transitNetwork
@@ -180,7 +180,7 @@ const publicNetServingLocal = ProgressIndicator_progressLocation.publicNetServin
  * @type {number}
  */
 export
-const ProgressIndicator_progressLocation_transitNetwork = ProgressIndicator_progressLocation.transitNetwork satisfies ProgressIndicator_progressLocation; /* LONG_NAMED_ENUMERATED_VALUE */
+const ProgressIndicator_progressLocation_transitNetwork = ProgressIndicator_progressLocation.transitNetwork; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary transitNetwork
@@ -188,7 +188,7 @@ const ProgressIndicator_progressLocation_transitNetwork = ProgressIndicator_prog
  * @type {number}
  */
 export
-const transitNetwork = ProgressIndicator_progressLocation.transitNetwork satisfies ProgressIndicator_progressLocation; /* SHORT_NAMED_ENUMERATED_VALUE */
+const transitNetwork = ProgressIndicator_progressLocation.transitNetwork; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ProgressIndicator_progressLocation_publicNetServingRemote
@@ -201,7 +201,7 @@ const transitNetwork = ProgressIndicator_progressLocation.transitNetwork satisfi
  * @type {number}
  */
 export
-const ProgressIndicator_progressLocation_publicNetServingRemote = ProgressIndicator_progressLocation.publicNetServingRemote satisfies ProgressIndicator_progressLocation; /* LONG_NAMED_ENUMERATED_VALUE */
+const ProgressIndicator_progressLocation_publicNetServingRemote = ProgressIndicator_progressLocation.publicNetServingRemote; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary publicNetServingRemote
@@ -209,7 +209,7 @@ const ProgressIndicator_progressLocation_publicNetServingRemote = ProgressIndica
  * @type {number}
  */
 export
-const publicNetServingRemote = ProgressIndicator_progressLocation.publicNetServingRemote satisfies ProgressIndicator_progressLocation; /* SHORT_NAMED_ENUMERATED_VALUE */
+const publicNetServingRemote = ProgressIndicator_progressLocation.publicNetServingRemote; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ProgressIndicator_progressLocation_privateNetServingRemote
@@ -222,7 +222,7 @@ const publicNetServingRemote = ProgressIndicator_progressLocation.publicNetServi
  * @type {number}
  */
 export
-const ProgressIndicator_progressLocation_privateNetServingRemote = ProgressIndicator_progressLocation.privateNetServingRemote satisfies ProgressIndicator_progressLocation; /* LONG_NAMED_ENUMERATED_VALUE */
+const ProgressIndicator_progressLocation_privateNetServingRemote = ProgressIndicator_progressLocation.privateNetServingRemote; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary privateNetServingRemote
@@ -230,7 +230,7 @@ const ProgressIndicator_progressLocation_privateNetServingRemote = ProgressIndic
  * @type {number}
  */
 export
-const privateNetServingRemote = ProgressIndicator_progressLocation.privateNetServingRemote satisfies ProgressIndicator_progressLocation; /* SHORT_NAMED_ENUMERATED_VALUE */
+const privateNetServingRemote = ProgressIndicator_progressLocation.privateNetServingRemote; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ProgressIndicator_progressLocation_localInterface
@@ -243,7 +243,7 @@ const privateNetServingRemote = ProgressIndicator_progressLocation.privateNetSer
  * @type {number}
  */
 export
-const ProgressIndicator_progressLocation_localInterface = ProgressIndicator_progressLocation.localInterface satisfies ProgressIndicator_progressLocation; /* LONG_NAMED_ENUMERATED_VALUE */
+const ProgressIndicator_progressLocation_localInterface = ProgressIndicator_progressLocation.localInterface; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary localInterface
@@ -251,7 +251,7 @@ const ProgressIndicator_progressLocation_localInterface = ProgressIndicator_prog
  * @type {number}
  */
 export
-const localInterface = ProgressIndicator_progressLocation.localInterface satisfies ProgressIndicator_progressLocation; /* SHORT_NAMED_ENUMERATED_VALUE */
+const localInterface = ProgressIndicator_progressLocation.localInterface; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ProgressIndicator_progressLocation_internationalNetwork
@@ -263,7 +263,7 @@ const localInterface = ProgressIndicator_progressLocation.localInterface satisfi
  * @type {number}
  */
 export
-const ProgressIndicator_progressLocation_internationalNetwork = ProgressIndicator_progressLocation.internationalNetwork satisfies ProgressIndicator_progressLocation; /* LONG_NAMED_ENUMERATED_VALUE */
+const ProgressIndicator_progressLocation_internationalNetwork = ProgressIndicator_progressLocation.internationalNetwork; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary internationalNetwork
@@ -271,7 +271,7 @@ const ProgressIndicator_progressLocation_internationalNetwork = ProgressIndicato
  * @type {number}
  */
 export
-const internationalNetwork = ProgressIndicator_progressLocation.internationalNetwork satisfies ProgressIndicator_progressLocation; /* SHORT_NAMED_ENUMERATED_VALUE */
+const internationalNetwork = ProgressIndicator_progressLocation.internationalNetwork; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ProgressIndicator_progressLocation_networkBeyondInterwk
@@ -283,7 +283,7 @@ const internationalNetwork = ProgressIndicator_progressLocation.internationalNet
  * @type {number}
  */
 export
-const ProgressIndicator_progressLocation_networkBeyondInterwk = ProgressIndicator_progressLocation.networkBeyondInterwk satisfies ProgressIndicator_progressLocation; /* LONG_NAMED_ENUMERATED_VALUE */
+const ProgressIndicator_progressLocation_networkBeyondInterwk = ProgressIndicator_progressLocation.networkBeyondInterwk; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary networkBeyondInterwk
@@ -291,7 +291,7 @@ const ProgressIndicator_progressLocation_networkBeyondInterwk = ProgressIndicato
  * @type {number}
  */
 export
-const networkBeyondInterwk = ProgressIndicator_progressLocation.networkBeyondInterwk satisfies ProgressIndicator_progressLocation; /* SHORT_NAMED_ENUMERATED_VALUE */
+const networkBeyondInterwk = ProgressIndicator_progressLocation.networkBeyondInterwk; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ProgressIndicator_progressLocation_other
@@ -303,7 +303,7 @@ const networkBeyondInterwk = ProgressIndicator_progressLocation.networkBeyondInt
  * @type {number}
  */
 export
-const ProgressIndicator_progressLocation_other = ProgressIndicator_progressLocation.other satisfies ProgressIndicator_progressLocation; /* LONG_NAMED_ENUMERATED_VALUE */
+const ProgressIndicator_progressLocation_other = ProgressIndicator_progressLocation.other; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary other
@@ -311,7 +311,7 @@ const ProgressIndicator_progressLocation_other = ProgressIndicator_progressLocat
  * @type {number}
  */
 export
-const other = ProgressIndicator_progressLocation.other satisfies ProgressIndicator_progressLocation; /* SHORT_NAMED_ENUMERATED_VALUE */
+const other = ProgressIndicator_progressLocation.other; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 let _cached_decoder_for_ProgressIndicator_progressLocation: $.ASN1Decoder<ProgressIndicator_progressLocation> | null = null;
 

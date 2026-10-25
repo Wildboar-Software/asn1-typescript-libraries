@@ -40,7 +40,7 @@ export const AdministrationError_register_rejected = 1 satisfies AdministrationE
  * @constant
  * @type {number}
  */
-export const register_rejected = AdministrationError_register_rejected satisfies AdministrationError; /* SHORT_NAMED_INTEGER_VALUE */
+export const register_rejected = AdministrationError_register_rejected; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AdministrationError_new_credentials_unacceptable
@@ -54,7 +54,7 @@ export const AdministrationError_new_credentials_unacceptable = 2 satisfies Admi
  * @constant
  * @type {number}
  */
-export const new_credentials_unacceptable = AdministrationError_new_credentials_unacceptable satisfies AdministrationError; /* SHORT_NAMED_INTEGER_VALUE */
+export const new_credentials_unacceptable = AdministrationError_new_credentials_unacceptable; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AdministrationError_old_credentials_incorrectly_specified
@@ -68,7 +68,7 @@ export const AdministrationError_old_credentials_incorrectly_specified = 3 satis
  * @constant
  * @type {number}
  */
-export const old_credentials_incorrectly_specified = AdministrationError_old_credentials_incorrectly_specified satisfies AdministrationError; /* SHORT_NAMED_INTEGER_VALUE */
+export const old_credentials_incorrectly_specified = AdministrationError_old_credentials_incorrectly_specified; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AdministrationError_remote_bind_error
@@ -82,7 +82,7 @@ export const AdministrationError_remote_bind_error = 10 satisfies Administration
  * @constant
  * @type {number}
  */
-export const remote_bind_error = AdministrationError_remote_bind_error satisfies AdministrationError; /* SHORT_NAMED_INTEGER_VALUE */
+export const remote_bind_error = AdministrationError_remote_bind_error; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_AdministrationError = $._decodeInteger;

@@ -59,7 +59,7 @@ const ParameterValues_priority_normal = 0 satisfies ParameterValues_priority; /*
  * @type {number}
  */
 export
-const normal = ParameterValues_priority_normal satisfies ParameterValues_priority; /* SHORT_NAMED_INTEGER_VALUE */
+const normal = ParameterValues_priority_normal; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterValues_priority_high
@@ -85,7 +85,7 @@ const ParameterValues_priority_high = 1 satisfies ParameterValues_priority; /* L
  * @type {number}
  */
 export
-const high = ParameterValues_priority_high satisfies ParameterValues_priority; /* SHORT_NAMED_INTEGER_VALUE */
+const high = ParameterValues_priority_high; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterValues_priority_urgent
@@ -113,7 +113,7 @@ const ParameterValues_priority_urgent = 2 satisfies ParameterValues_priority; /*
  * @type {number}
  */
 export
-const urgent = ParameterValues_priority_urgent satisfies ParameterValues_priority; /* SHORT_NAMED_INTEGER_VALUE */
+const urgent = ParameterValues_priority_urgent; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_ParameterValues_priority = $._decodeInteger;
 export const _encode_ParameterValues_priority = $._encodeInteger;
 

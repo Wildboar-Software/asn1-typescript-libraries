@@ -112,7 +112,7 @@ const PublicTypeOfNumber = _enum_for_PublicTypeOfNumber;
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
  */
 export
-const PublicTypeOfNumber_unknown = PublicTypeOfNumber.unknown satisfies PublicTypeOfNumber; /* LONG_NAMED_ENUMERATED_VALUE */
+const PublicTypeOfNumber_unknown = PublicTypeOfNumber.unknown; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unknown
@@ -121,7 +121,7 @@ const PublicTypeOfNumber_unknown = PublicTypeOfNumber.unknown satisfies PublicTy
  * @type {number}
  */
 export
-const unknown = PublicTypeOfNumber.unknown satisfies PublicTypeOfNumber; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unknown = PublicTypeOfNumber.unknown; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PublicTypeOfNumber_internationalNumber
@@ -135,7 +135,7 @@ const unknown = PublicTypeOfNumber.unknown satisfies PublicTypeOfNumber; /* SHOR
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
  */
 export
-const PublicTypeOfNumber_internationalNumber = PublicTypeOfNumber.internationalNumber satisfies PublicTypeOfNumber; /* LONG_NAMED_ENUMERATED_VALUE */
+const PublicTypeOfNumber_internationalNumber = PublicTypeOfNumber.internationalNumber; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary internationalNumber
@@ -144,7 +144,7 @@ const PublicTypeOfNumber_internationalNumber = PublicTypeOfNumber.internationalN
  * @type {number}
  */
 export
-const internationalNumber = PublicTypeOfNumber.internationalNumber satisfies PublicTypeOfNumber; /* SHORT_NAMED_ENUMERATED_VALUE */
+const internationalNumber = PublicTypeOfNumber.internationalNumber; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PublicTypeOfNumber_nationalNumber
@@ -157,7 +157,7 @@ const internationalNumber = PublicTypeOfNumber.internationalNumber satisfies Pub
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
  */
 export
-const PublicTypeOfNumber_nationalNumber = PublicTypeOfNumber.nationalNumber satisfies PublicTypeOfNumber; /* LONG_NAMED_ENUMERATED_VALUE */
+const PublicTypeOfNumber_nationalNumber = PublicTypeOfNumber.nationalNumber; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary nationalNumber
@@ -166,7 +166,7 @@ const PublicTypeOfNumber_nationalNumber = PublicTypeOfNumber.nationalNumber sati
  * @type {number}
  */
 export
-const nationalNumber = PublicTypeOfNumber.nationalNumber satisfies PublicTypeOfNumber; /* SHORT_NAMED_ENUMERATED_VALUE */
+const nationalNumber = PublicTypeOfNumber.nationalNumber; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PublicTypeOfNumber_networkSpecificNumber
@@ -178,7 +178,7 @@ const nationalNumber = PublicTypeOfNumber.nationalNumber satisfies PublicTypeOfN
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
  */
 export
-const PublicTypeOfNumber_networkSpecificNumber = PublicTypeOfNumber.networkSpecificNumber satisfies PublicTypeOfNumber; /* LONG_NAMED_ENUMERATED_VALUE */
+const PublicTypeOfNumber_networkSpecificNumber = PublicTypeOfNumber.networkSpecificNumber; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary networkSpecificNumber
@@ -187,7 +187,7 @@ const PublicTypeOfNumber_networkSpecificNumber = PublicTypeOfNumber.networkSpeci
  * @type {number}
  */
 export
-const networkSpecificNumber = PublicTypeOfNumber.networkSpecificNumber satisfies PublicTypeOfNumber; /* SHORT_NAMED_ENUMERATED_VALUE */
+const networkSpecificNumber = PublicTypeOfNumber.networkSpecificNumber; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PublicTypeOfNumber_subscriberNumber
@@ -200,7 +200,7 @@ const networkSpecificNumber = PublicTypeOfNumber.networkSpecificNumber satisfies
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
  */
 export
-const PublicTypeOfNumber_subscriberNumber = PublicTypeOfNumber.subscriberNumber satisfies PublicTypeOfNumber; /* LONG_NAMED_ENUMERATED_VALUE */
+const PublicTypeOfNumber_subscriberNumber = PublicTypeOfNumber.subscriberNumber; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary subscriberNumber
@@ -209,7 +209,7 @@ const PublicTypeOfNumber_subscriberNumber = PublicTypeOfNumber.subscriberNumber 
  * @type {number}
  */
 export
-const subscriberNumber = PublicTypeOfNumber.subscriberNumber satisfies PublicTypeOfNumber; /* SHORT_NAMED_ENUMERATED_VALUE */
+const subscriberNumber = PublicTypeOfNumber.subscriberNumber; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PublicTypeOfNumber_abbreviatedNumber
@@ -222,7 +222,7 @@ const subscriberNumber = PublicTypeOfNumber.subscriberNumber satisfies PublicTyp
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
  */
 export
-const PublicTypeOfNumber_abbreviatedNumber = PublicTypeOfNumber.abbreviatedNumber satisfies PublicTypeOfNumber; /* LONG_NAMED_ENUMERATED_VALUE */
+const PublicTypeOfNumber_abbreviatedNumber = PublicTypeOfNumber.abbreviatedNumber; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary abbreviatedNumber
@@ -231,7 +231,7 @@ const PublicTypeOfNumber_abbreviatedNumber = PublicTypeOfNumber.abbreviatedNumbe
  * @type {number}
  */
 export
-const abbreviatedNumber = PublicTypeOfNumber.abbreviatedNumber satisfies PublicTypeOfNumber; /* SHORT_NAMED_ENUMERATED_VALUE */
+const abbreviatedNumber = PublicTypeOfNumber.abbreviatedNumber; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_PublicTypeOfNumber: $.ASN1Decoder<PublicTypeOfNumber> = $._decodeEnumerated;

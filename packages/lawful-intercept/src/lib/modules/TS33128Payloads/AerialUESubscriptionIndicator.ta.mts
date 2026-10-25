@@ -93,7 +93,7 @@ const AerialUESubscriptionIndicator = _enum_for_AerialUESubscriptionIndicator;
  * @type {number}
  */
 export
-const AerialUESubscriptionIndicator_authorized = AerialUESubscriptionIndicator.authorized satisfies AerialUESubscriptionIndicator; /* LONG_NAMED_ENUMERATED_VALUE */
+const AerialUESubscriptionIndicator_authorized = AerialUESubscriptionIndicator.authorized; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary authorized
@@ -101,7 +101,7 @@ const AerialUESubscriptionIndicator_authorized = AerialUESubscriptionIndicator.a
  * @type {number}
  */
 export
-const authorized = AerialUESubscriptionIndicator.authorized satisfies AerialUESubscriptionIndicator; /* SHORT_NAMED_ENUMERATED_VALUE */
+const authorized = AerialUESubscriptionIndicator.authorized; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AerialUESubscriptionIndicator_notAuthorized
@@ -109,7 +109,7 @@ const authorized = AerialUESubscriptionIndicator.authorized satisfies AerialUESu
  * @type {number}
  */
 export
-const AerialUESubscriptionIndicator_notAuthorized = AerialUESubscriptionIndicator.notAuthorized satisfies AerialUESubscriptionIndicator; /* LONG_NAMED_ENUMERATED_VALUE */
+const AerialUESubscriptionIndicator_notAuthorized = AerialUESubscriptionIndicator.notAuthorized; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary notAuthorized
@@ -117,7 +117,7 @@ const AerialUESubscriptionIndicator_notAuthorized = AerialUESubscriptionIndicato
  * @type {number}
  */
 export
-const notAuthorized = AerialUESubscriptionIndicator.notAuthorized satisfies AerialUESubscriptionIndicator; /* SHORT_NAMED_ENUMERATED_VALUE */
+const notAuthorized = AerialUESubscriptionIndicator.notAuthorized; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_AerialUESubscriptionIndicator: $.ASN1Decoder<AerialUESubscriptionIndicator> = $._decodeEnumerated;
 export const _encode_AerialUESubscriptionIndicator: $.ASN1Encoder<AerialUESubscriptionIndicator> = $._encodeEnumerated;
 

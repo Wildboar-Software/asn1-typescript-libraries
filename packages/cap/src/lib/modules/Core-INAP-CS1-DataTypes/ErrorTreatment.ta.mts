@@ -77,7 +77,7 @@ const ErrorTreatment = _enum_for_ErrorTreatment;
  * @type {number}
  */
 export
-const ErrorTreatment_stdErrorAndInfo = ErrorTreatment.stdErrorAndInfo satisfies ErrorTreatment; /* LONG_NAMED_ENUMERATED_VALUE */
+const ErrorTreatment_stdErrorAndInfo = ErrorTreatment.stdErrorAndInfo; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary stdErrorAndInfo
@@ -85,7 +85,7 @@ const ErrorTreatment_stdErrorAndInfo = ErrorTreatment.stdErrorAndInfo satisfies 
  * @type {number}
  */
 export
-const stdErrorAndInfo = ErrorTreatment.stdErrorAndInfo satisfies ErrorTreatment; /* SHORT_NAMED_ENUMERATED_VALUE */
+const stdErrorAndInfo = ErrorTreatment.stdErrorAndInfo; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ErrorTreatment_help
@@ -93,7 +93,7 @@ const stdErrorAndInfo = ErrorTreatment.stdErrorAndInfo satisfies ErrorTreatment;
  * @type {number}
  */
 export
-const ErrorTreatment_help = ErrorTreatment.help satisfies ErrorTreatment; /* LONG_NAMED_ENUMERATED_VALUE */
+const ErrorTreatment_help = ErrorTreatment.help; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary help
@@ -101,7 +101,7 @@ const ErrorTreatment_help = ErrorTreatment.help satisfies ErrorTreatment; /* LON
  * @type {number}
  */
 export
-const help = ErrorTreatment.help satisfies ErrorTreatment; /* SHORT_NAMED_ENUMERATED_VALUE */
+const help = ErrorTreatment.help; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ErrorTreatment_repeatPrompt
@@ -109,7 +109,7 @@ const help = ErrorTreatment.help satisfies ErrorTreatment; /* SHORT_NAMED_ENUMER
  * @type {number}
  */
 export
-const ErrorTreatment_repeatPrompt = ErrorTreatment.repeatPrompt satisfies ErrorTreatment; /* LONG_NAMED_ENUMERATED_VALUE */
+const ErrorTreatment_repeatPrompt = ErrorTreatment.repeatPrompt; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary repeatPrompt
@@ -117,7 +117,7 @@ const ErrorTreatment_repeatPrompt = ErrorTreatment.repeatPrompt satisfies ErrorT
  * @type {number}
  */
 export
-const repeatPrompt = ErrorTreatment.repeatPrompt satisfies ErrorTreatment; /* SHORT_NAMED_ENUMERATED_VALUE */
+const repeatPrompt = ErrorTreatment.repeatPrompt; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_ErrorTreatment = $._decodeEnumerated;
 export const _encode_ErrorTreatment = $._encodeEnumerated;
 

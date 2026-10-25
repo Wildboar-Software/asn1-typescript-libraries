@@ -46,7 +46,7 @@ export const ABRT_source_dialogue_service_user = 0 satisfies ABRT_source; /* LON
  * @constant
  * @type {number}
  */
-export const dialogue_service_user = ABRT_source_dialogue_service_user satisfies ABRT_source; /* SHORT_NAMED_INTEGER_VALUE */
+export const dialogue_service_user = ABRT_source_dialogue_service_user; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ABRT_source_dialogue_service_provider
@@ -65,7 +65,7 @@ export const ABRT_source_dialogue_service_provider = 1 satisfies ABRT_source; /*
  * @constant
  * @type {number}
  */
-export const dialogue_service_provider = ABRT_source_dialogue_service_provider satisfies ABRT_source; /* SHORT_NAMED_INTEGER_VALUE */
+export const dialogue_service_provider = ABRT_source_dialogue_service_provider; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_ABRT_source = $._decodeInteger;

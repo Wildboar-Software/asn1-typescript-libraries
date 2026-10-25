@@ -41,7 +41,7 @@ const TermCAMELRecord_lrnQuryStatus_successfulQuery = 1 satisfies TermCAMELRecor
  * @type {number}
  */
 export
-const successfulQuery = TermCAMELRecord_lrnQuryStatus_successfulQuery satisfies TermCAMELRecord_lrnQuryStatus; /* SHORT_NAMED_INTEGER_VALUE */
+const successfulQuery = TermCAMELRecord_lrnQuryStatus_successfulQuery; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TermCAMELRecord_lrnQuryStatus_noQueryResponseMsg
@@ -57,7 +57,7 @@ const TermCAMELRecord_lrnQuryStatus_noQueryResponseMsg = 2 satisfies TermCAMELRe
  * @type {number}
  */
 export
-const noQueryResponseMsg = TermCAMELRecord_lrnQuryStatus_noQueryResponseMsg satisfies TermCAMELRecord_lrnQuryStatus; /* SHORT_NAMED_INTEGER_VALUE */
+const noQueryResponseMsg = TermCAMELRecord_lrnQuryStatus_noQueryResponseMsg; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TermCAMELRecord_lrnQuryStatus_queryProtocolErr
@@ -73,7 +73,7 @@ const TermCAMELRecord_lrnQuryStatus_queryProtocolErr = 4 satisfies TermCAMELReco
  * @type {number}
  */
 export
-const queryProtocolErr = TermCAMELRecord_lrnQuryStatus_queryProtocolErr satisfies TermCAMELRecord_lrnQuryStatus; /* SHORT_NAMED_INTEGER_VALUE */
+const queryProtocolErr = TermCAMELRecord_lrnQuryStatus_queryProtocolErr; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TermCAMELRecord_lrnQuryStatus_queryResponseDataErr
@@ -89,7 +89,7 @@ const TermCAMELRecord_lrnQuryStatus_queryResponseDataErr = 5 satisfies TermCAMEL
  * @type {number}
  */
 export
-const queryResponseDataErr = TermCAMELRecord_lrnQuryStatus_queryResponseDataErr satisfies TermCAMELRecord_lrnQuryStatus; /* SHORT_NAMED_INTEGER_VALUE */
+const queryResponseDataErr = TermCAMELRecord_lrnQuryStatus_queryResponseDataErr; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TermCAMELRecord_lrnQuryStatus_queryRejected
@@ -105,7 +105,7 @@ const TermCAMELRecord_lrnQuryStatus_queryRejected = 6 satisfies TermCAMELRecord_
  * @type {number}
  */
 export
-const queryRejected = TermCAMELRecord_lrnQuryStatus_queryRejected satisfies TermCAMELRecord_lrnQuryStatus; /* SHORT_NAMED_INTEGER_VALUE */
+const queryRejected = TermCAMELRecord_lrnQuryStatus_queryRejected; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TermCAMELRecord_lrnQuryStatus_queryNotPerformed
@@ -121,7 +121,7 @@ const TermCAMELRecord_lrnQuryStatus_queryNotPerformed = 9 satisfies TermCAMELRec
  * @type {number}
  */
 export
-const queryNotPerformed = TermCAMELRecord_lrnQuryStatus_queryNotPerformed satisfies TermCAMELRecord_lrnQuryStatus; /* SHORT_NAMED_INTEGER_VALUE */
+const queryNotPerformed = TermCAMELRecord_lrnQuryStatus_queryNotPerformed; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TermCAMELRecord_lrnQuryStatus_queryUnsuccessful
@@ -137,7 +137,7 @@ const TermCAMELRecord_lrnQuryStatus_queryUnsuccessful = 99 satisfies TermCAMELRe
  * @type {number}
  */
 export
-const queryUnsuccessful = TermCAMELRecord_lrnQuryStatus_queryUnsuccessful satisfies TermCAMELRecord_lrnQuryStatus; /* SHORT_NAMED_INTEGER_VALUE */
+const queryUnsuccessful = TermCAMELRecord_lrnQuryStatus_queryUnsuccessful; /* SHORT_NAMED_INTEGER_VALUE */
 
 export
 const _decode_TermCAMELRecord_lrnQuryStatus: $.ASN1Decoder<TermCAMELRecord_lrnQuryStatus> = $._decodeInteger;

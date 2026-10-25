@@ -37,7 +37,7 @@ const PdCommandId_pdci_add = 1 satisfies PdCommandId; /* LONG_NAMED_INTEGER_VALU
  * @type {number}
  */
 export
-const pdci_add = PdCommandId_pdci_add satisfies PdCommandId; /* SHORT_NAMED_INTEGER_VALUE */
+const pdci_add = PdCommandId_pdci_add; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PdCommandId_pdci_del
@@ -53,7 +53,7 @@ const PdCommandId_pdci_del = 2 satisfies PdCommandId; /* LONG_NAMED_INTEGER_VALU
  * @type {number}
  */
 export
-const pdci_del = PdCommandId_pdci_del satisfies PdCommandId; /* SHORT_NAMED_INTEGER_VALUE */
+const pdci_del = PdCommandId_pdci_del; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PdCommandId_pdci_match
@@ -69,7 +69,7 @@ const PdCommandId_pdci_match = 3 satisfies PdCommandId; /* LONG_NAMED_INTEGER_VA
  * @type {number}
  */
 export
-const pdci_match = PdCommandId_pdci_match satisfies PdCommandId; /* SHORT_NAMED_INTEGER_VALUE */
+const pdci_match = PdCommandId_pdci_match; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_PdCommandId = $._decodeInteger;
 export const _encode_PdCommandId = $._encodeInteger;
 

@@ -53,7 +53,7 @@ export const TimeZone_unknown = 781 satisfies TimeZone; /* LONG_NAMED_INTEGER_VA
  * @constant
  * @type {number}
  */
-export const unknown = TimeZone_unknown satisfies TimeZone; /* SHORT_NAMED_INTEGER_VALUE */
+export const unknown = TimeZone_unknown; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_TimeZone = $._decodeInteger;

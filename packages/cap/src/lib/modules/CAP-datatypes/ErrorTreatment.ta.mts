@@ -28,11 +28,11 @@ export enum _enum_for_ErrorTreatment {
 }
 export type ErrorTreatment = _enum_for_ErrorTreatment;
 export const ErrorTreatment = _enum_for_ErrorTreatment;
-export const ErrorTreatment_stdErrorAndInfo = ErrorTreatment.stdErrorAndInfo satisfies ErrorTreatment;
-export const stdErrorAndInfo = ErrorTreatment.stdErrorAndInfo satisfies ErrorTreatment;
-export const ErrorTreatment_help = ErrorTreatment.help satisfies ErrorTreatment;
-export const help = ErrorTreatment.help satisfies ErrorTreatment;
-export const ErrorTreatment_repeatPrompt = ErrorTreatment.repeatPrompt satisfies ErrorTreatment;
-export const repeatPrompt = ErrorTreatment.repeatPrompt satisfies ErrorTreatment;
+export const ErrorTreatment_stdErrorAndInfo = ErrorTreatment.stdErrorAndInfo;
+export const stdErrorAndInfo = ErrorTreatment.stdErrorAndInfo;
+export const ErrorTreatment_help = ErrorTreatment.help;
+export const help = ErrorTreatment.help;
+export const ErrorTreatment_repeatPrompt = ErrorTreatment.repeatPrompt;
+export const repeatPrompt = ErrorTreatment.repeatPrompt;
 export const _decode_ErrorTreatment = $._decodeEnumerated;
 export const _encode_ErrorTreatment = $._encodeEnumerated;

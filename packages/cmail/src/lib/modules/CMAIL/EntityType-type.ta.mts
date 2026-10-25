@@ -82,7 +82,7 @@ export const EntityType_type = _enum_for_EntityType_type;
  * @type {number}
  */
 export const EntityType_type_from_ =
-  EntityType_type.from_ satisfies EntityType_type; /* LONG_NAMED_ENUMERATED_VALUE */
+  EntityType_type.from_; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -92,7 +92,7 @@ export const EntityType_type_from_ =
  * @type {number}
  */
 export const from_ =
-  EntityType_type.from_ satisfies EntityType_type; /* SHORT_NAMED_ENUMERATED_VALUE */
+  EntityType_type.from_; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -102,7 +102,7 @@ export const from_ =
  * @type {number}
  */
 export const EntityType_type_to =
-  EntityType_type.to satisfies EntityType_type; /* LONG_NAMED_ENUMERATED_VALUE */
+  EntityType_type.to; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -112,7 +112,7 @@ export const EntityType_type_to =
  * @type {number}
  */
 export const to =
-  EntityType_type.to satisfies EntityType_type; /* SHORT_NAMED_ENUMERATED_VALUE */
+  EntityType_type.to; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -122,7 +122,7 @@ export const to =
  * @type {number}
  */
 export const EntityType_type_cc =
-  EntityType_type.cc satisfies EntityType_type; /* LONG_NAMED_ENUMERATED_VALUE */
+  EntityType_type.cc; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -132,7 +132,7 @@ export const EntityType_type_cc =
  * @type {number}
  */
 export const cc =
-  EntityType_type.cc satisfies EntityType_type; /* SHORT_NAMED_ENUMERATED_VALUE */
+  EntityType_type.cc; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -142,7 +142,7 @@ export const cc =
  * @type {number}
  */
 export const EntityType_type_transit =
-  EntityType_type.transit satisfies EntityType_type; /* LONG_NAMED_ENUMERATED_VALUE */
+  EntityType_type.transit; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -152,7 +152,7 @@ export const EntityType_type_transit =
  * @type {number}
  */
 export const transit =
-  EntityType_type.transit satisfies EntityType_type; /* SHORT_NAMED_ENUMERATED_VALUE */
+  EntityType_type.transit; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 

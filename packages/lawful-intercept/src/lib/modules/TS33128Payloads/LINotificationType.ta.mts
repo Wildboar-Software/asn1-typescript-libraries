@@ -73,7 +73,7 @@ const LINotificationType = _enum_for_LINotificationType;
  * @type {number}
  */
 export
-const LINotificationType_activation = LINotificationType.activation satisfies LINotificationType; /* LONG_NAMED_ENUMERATED_VALUE */
+const LINotificationType_activation = LINotificationType.activation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary activation
@@ -81,7 +81,7 @@ const LINotificationType_activation = LINotificationType.activation satisfies LI
  * @type {number}
  */
 export
-const activation = LINotificationType.activation satisfies LINotificationType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const activation = LINotificationType.activation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LINotificationType_deactivation
@@ -89,7 +89,7 @@ const activation = LINotificationType.activation satisfies LINotificationType; /
  * @type {number}
  */
 export
-const LINotificationType_deactivation = LINotificationType.deactivation satisfies LINotificationType; /* LONG_NAMED_ENUMERATED_VALUE */
+const LINotificationType_deactivation = LINotificationType.deactivation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary deactivation
@@ -97,7 +97,7 @@ const LINotificationType_deactivation = LINotificationType.deactivation satisfie
  * @type {number}
  */
 export
-const deactivation = LINotificationType.deactivation satisfies LINotificationType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const deactivation = LINotificationType.deactivation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LINotificationType_modification
@@ -105,7 +105,7 @@ const deactivation = LINotificationType.deactivation satisfies LINotificationTyp
  * @type {number}
  */
 export
-const LINotificationType_modification = LINotificationType.modification satisfies LINotificationType; /* LONG_NAMED_ENUMERATED_VALUE */
+const LINotificationType_modification = LINotificationType.modification; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary modification
@@ -113,7 +113,7 @@ const LINotificationType_modification = LINotificationType.modification satisfie
  * @type {number}
  */
 export
-const modification = LINotificationType.modification satisfies LINotificationType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const modification = LINotificationType.modification; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_LINotificationType: $.ASN1Decoder<LINotificationType> = $._decodeEnumerated;
 export const _encode_LINotificationType: $.ASN1Encoder<LINotificationType> = $._encodeEnumerated;
 

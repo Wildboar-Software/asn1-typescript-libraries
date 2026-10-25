@@ -73,7 +73,7 @@ const MCServiceGroupSessionType = _enum_for_MCServiceGroupSessionType;
  * @type {number}
  */
 export
-const MCServiceGroupSessionType_chat = MCServiceGroupSessionType.chat satisfies MCServiceGroupSessionType; /* LONG_NAMED_ENUMERATED_VALUE */
+const MCServiceGroupSessionType_chat = MCServiceGroupSessionType.chat; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary chat
@@ -81,7 +81,7 @@ const MCServiceGroupSessionType_chat = MCServiceGroupSessionType.chat satisfies 
  * @type {number}
  */
 export
-const chat = MCServiceGroupSessionType.chat satisfies MCServiceGroupSessionType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const chat = MCServiceGroupSessionType.chat; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MCServiceGroupSessionType_preArranged
@@ -89,7 +89,7 @@ const chat = MCServiceGroupSessionType.chat satisfies MCServiceGroupSessionType;
  * @type {number}
  */
 export
-const MCServiceGroupSessionType_preArranged = MCServiceGroupSessionType.preArranged satisfies MCServiceGroupSessionType; /* LONG_NAMED_ENUMERATED_VALUE */
+const MCServiceGroupSessionType_preArranged = MCServiceGroupSessionType.preArranged; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary preArranged
@@ -97,7 +97,7 @@ const MCServiceGroupSessionType_preArranged = MCServiceGroupSessionType.preArran
  * @type {number}
  */
 export
-const preArranged = MCServiceGroupSessionType.preArranged satisfies MCServiceGroupSessionType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const preArranged = MCServiceGroupSessionType.preArranged; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MCServiceGroupSessionType_adHoc
@@ -105,7 +105,7 @@ const preArranged = MCServiceGroupSessionType.preArranged satisfies MCServiceGro
  * @type {number}
  */
 export
-const MCServiceGroupSessionType_adHoc = MCServiceGroupSessionType.adHoc satisfies MCServiceGroupSessionType; /* LONG_NAMED_ENUMERATED_VALUE */
+const MCServiceGroupSessionType_adHoc = MCServiceGroupSessionType.adHoc; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary adHoc
@@ -113,7 +113,7 @@ const MCServiceGroupSessionType_adHoc = MCServiceGroupSessionType.adHoc satisfie
  * @type {number}
  */
 export
-const adHoc = MCServiceGroupSessionType.adHoc satisfies MCServiceGroupSessionType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const adHoc = MCServiceGroupSessionType.adHoc; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_MCServiceGroupSessionType: $.ASN1Decoder<MCServiceGroupSessionType> = $._decodeEnumerated;
 export const _encode_MCServiceGroupSessionType: $.ASN1Encoder<MCServiceGroupSessionType> = $._encodeEnumerated;
 

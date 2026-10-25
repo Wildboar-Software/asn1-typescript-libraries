@@ -52,7 +52,7 @@ const CertificateBodyField_generic = 0 satisfies CertificateBodyField; /* LONG_N
  * @type {number}
  */
 export
-const generic = CertificateBodyField_generic satisfies CertificateBodyField; /* SHORT_NAMED_INTEGER_VALUE */
+const generic = CertificateBodyField_generic; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * The certificate version.
@@ -70,7 +70,7 @@ const CertificateBodyField_version = 1 satisfies CertificateBodyField; /* LONG_N
  * @type {number}
  */
 export
-const version = CertificateBodyField_version satisfies CertificateBodyField; /* SHORT_NAMED_INTEGER_VALUE */
+const version = CertificateBodyField_version; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * The certificate serial number.
@@ -88,7 +88,7 @@ const CertificateBodyField_serialNumber = 2 satisfies CertificateBodyField; /* L
  * @type {number}
  */
 export
-const serialNumber = CertificateBodyField_serialNumber satisfies CertificateBodyField; /* SHORT_NAMED_INTEGER_VALUE */
+const serialNumber = CertificateBodyField_serialNumber; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * The certificate signature algorithm.
@@ -106,7 +106,7 @@ const CertificateBodyField_signature = 3 satisfies CertificateBodyField; /* LONG
  * @type {number}
  */
 export
-const signature = CertificateBodyField_signature satisfies CertificateBodyField; /* SHORT_NAMED_INTEGER_VALUE */
+const signature = CertificateBodyField_signature; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * The certificate issuer.
@@ -124,7 +124,7 @@ const CertificateBodyField_issuer = 4 satisfies CertificateBodyField; /* LONG_NA
  * @type {number}
  */
 export
-const issuer = CertificateBodyField_issuer satisfies CertificateBodyField; /* SHORT_NAMED_INTEGER_VALUE */
+const issuer = CertificateBodyField_issuer; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * The certificate validity.
@@ -142,7 +142,7 @@ const CertificateBodyField_validity = 5 satisfies CertificateBodyField; /* LONG_
  * @type {number}
  */
 export
-const validity = CertificateBodyField_validity satisfies CertificateBodyField; /* SHORT_NAMED_INTEGER_VALUE */
+const validity = CertificateBodyField_validity; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * The certificate subject.
@@ -160,7 +160,7 @@ const CertificateBodyField_subject = 6 satisfies CertificateBodyField; /* LONG_N
  * @type {number}
  */
 export
-const subject = CertificateBodyField_subject satisfies CertificateBodyField; /* SHORT_NAMED_INTEGER_VALUE */
+const subject = CertificateBodyField_subject; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * The subject public key.
@@ -178,7 +178,7 @@ const CertificateBodyField_subjectPublicKeyInfo = 7 satisfies CertificateBodyFie
  * @type {number}
  */
 export
-const subjectPublicKeyInfo = CertificateBodyField_subjectPublicKeyInfo satisfies CertificateBodyField; /* SHORT_NAMED_INTEGER_VALUE */
+const subjectPublicKeyInfo = CertificateBodyField_subjectPublicKeyInfo; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * The issuer unique identifier.
@@ -196,7 +196,7 @@ const CertificateBodyField_issuerUniqueID = 8 satisfies CertificateBodyField; /*
  * @type {number}
  */
 export
-const issuerUniqueID = CertificateBodyField_issuerUniqueID satisfies CertificateBodyField; /* SHORT_NAMED_INTEGER_VALUE */
+const issuerUniqueID = CertificateBodyField_issuerUniqueID; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * The subject unique identifier.
@@ -214,7 +214,7 @@ const CertificateBodyField_subjectUniqueID = 9 satisfies CertificateBodyField; /
  * @type {number}
  */
 export
-const subjectUniqueID = CertificateBodyField_subjectUniqueID satisfies CertificateBodyField; /* SHORT_NAMED_INTEGER_VALUE */
+const subjectUniqueID = CertificateBodyField_subjectUniqueID; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_CertificateBodyField = $._decodeInteger;
 export const _encode_CertificateBodyField = $._encodeInteger;
 

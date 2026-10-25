@@ -59,7 +59,7 @@ export const SecurityProblem_assemby_instructions_conflict_with_security_service
  * @constant
  * @type {number}
  */
-export const assemby_instructions_conflict_with_security_services = SecurityProblem_assemby_instructions_conflict_with_security_services satisfies SecurityProblem; /* SHORT_NAMED_INTEGER_VALUE */
+export const assemby_instructions_conflict_with_security_services = SecurityProblem_assemby_instructions_conflict_with_security_services; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SecurityProblem_authentication_problem
@@ -73,7 +73,7 @@ export const SecurityProblem_authentication_problem = 1 satisfies SecurityProble
  * @constant
  * @type {number}
  */
-export const authentication_problem = SecurityProblem_authentication_problem satisfies SecurityProblem; /* SHORT_NAMED_INTEGER_VALUE */
+export const authentication_problem = SecurityProblem_authentication_problem; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SecurityProblem_authentication_failure_on_subject_message
@@ -87,7 +87,7 @@ export const SecurityProblem_authentication_failure_on_subject_message = 2 satis
  * @constant
  * @type {number}
  */
-export const authentication_failure_on_subject_message = SecurityProblem_authentication_failure_on_subject_message satisfies SecurityProblem; /* SHORT_NAMED_INTEGER_VALUE */
+export const authentication_failure_on_subject_message = SecurityProblem_authentication_failure_on_subject_message; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SecurityProblem_confidentiality_association_problem
@@ -101,7 +101,7 @@ export const SecurityProblem_confidentiality_association_problem = 3 satisfies S
  * @constant
  * @type {number}
  */
-export const confidentiality_association_problem = SecurityProblem_confidentiality_association_problem satisfies SecurityProblem; /* SHORT_NAMED_INTEGER_VALUE */
+export const confidentiality_association_problem = SecurityProblem_confidentiality_association_problem; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SecurityProblem_decryption_failed
@@ -115,7 +115,7 @@ export const SecurityProblem_decryption_failed = 4 satisfies SecurityProblem; /*
  * @constant
  * @type {number}
  */
-export const decryption_failed = SecurityProblem_decryption_failed satisfies SecurityProblem; /* SHORT_NAMED_INTEGER_VALUE */
+export const decryption_failed = SecurityProblem_decryption_failed; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SecurityProblem_decryption_key_unobtainable
@@ -129,7 +129,7 @@ export const SecurityProblem_decryption_key_unobtainable = 5 satisfies SecurityP
  * @constant
  * @type {number}
  */
-export const decryption_key_unobtainable = SecurityProblem_decryption_key_unobtainable satisfies SecurityProblem; /* SHORT_NAMED_INTEGER_VALUE */
+export const decryption_key_unobtainable = SecurityProblem_decryption_key_unobtainable; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SecurityProblem_failure_of_proof_of_message
@@ -143,7 +143,7 @@ export const SecurityProblem_failure_of_proof_of_message = 6 satisfies SecurityP
  * @constant
  * @type {number}
  */
-export const failure_of_proof_of_message = SecurityProblem_failure_of_proof_of_message satisfies SecurityProblem; /* SHORT_NAMED_INTEGER_VALUE */
+export const failure_of_proof_of_message = SecurityProblem_failure_of_proof_of_message; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SecurityProblem_forbidden_user_security_label_register
@@ -157,7 +157,7 @@ export const SecurityProblem_forbidden_user_security_label_register = 7 satisfie
  * @constant
  * @type {number}
  */
-export const forbidden_user_security_label_register = SecurityProblem_forbidden_user_security_label_register satisfies SecurityProblem; /* SHORT_NAMED_INTEGER_VALUE */
+export const forbidden_user_security_label_register = SecurityProblem_forbidden_user_security_label_register; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SecurityProblem_incompatible_change_with_original_security_context
@@ -171,7 +171,7 @@ export const SecurityProblem_incompatible_change_with_original_security_context 
  * @constant
  * @type {number}
  */
-export const incompatible_change_with_original_security_context = SecurityProblem_incompatible_change_with_original_security_context satisfies SecurityProblem; /* SHORT_NAMED_INTEGER_VALUE */
+export const incompatible_change_with_original_security_context = SecurityProblem_incompatible_change_with_original_security_context; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SecurityProblem_integrity_failure_on_subject_message
@@ -185,7 +185,7 @@ export const SecurityProblem_integrity_failure_on_subject_message = 9 satisfies 
  * @constant
  * @type {number}
  */
-export const integrity_failure_on_subject_message = SecurityProblem_integrity_failure_on_subject_message satisfies SecurityProblem; /* SHORT_NAMED_INTEGER_VALUE */
+export const integrity_failure_on_subject_message = SecurityProblem_integrity_failure_on_subject_message; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SecurityProblem_invalid_security_label
@@ -199,7 +199,7 @@ export const SecurityProblem_invalid_security_label = 10 satisfies SecurityProbl
  * @constant
  * @type {number}
  */
-export const invalid_security_label = SecurityProblem_invalid_security_label satisfies SecurityProblem; /* SHORT_NAMED_INTEGER_VALUE */
+export const invalid_security_label = SecurityProblem_invalid_security_label; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SecurityProblem_invalid_security_label_update
@@ -213,7 +213,7 @@ export const SecurityProblem_invalid_security_label_update = 11 satisfies Securi
  * @constant
  * @type {number}
  */
-export const invalid_security_label_update = SecurityProblem_invalid_security_label_update satisfies SecurityProblem; /* SHORT_NAMED_INTEGER_VALUE */
+export const invalid_security_label_update = SecurityProblem_invalid_security_label_update; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SecurityProblem_key_failure
@@ -227,7 +227,7 @@ export const SecurityProblem_key_failure = 12 satisfies SecurityProblem; /* LONG
  * @constant
  * @type {number}
  */
-export const key_failure = SecurityProblem_key_failure satisfies SecurityProblem; /* SHORT_NAMED_INTEGER_VALUE */
+export const key_failure = SecurityProblem_key_failure; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SecurityProblem_mandatory_parameter_absence
@@ -241,7 +241,7 @@ export const SecurityProblem_mandatory_parameter_absence = 13 satisfies Security
  * @constant
  * @type {number}
  */
-export const mandatory_parameter_absence = SecurityProblem_mandatory_parameter_absence satisfies SecurityProblem; /* SHORT_NAMED_INTEGER_VALUE */
+export const mandatory_parameter_absence = SecurityProblem_mandatory_parameter_absence; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SecurityProblem_operation_security_failure
@@ -255,7 +255,7 @@ export const SecurityProblem_operation_security_failure = 14 satisfies SecurityP
  * @constant
  * @type {number}
  */
-export const operation_security_failure = SecurityProblem_operation_security_failure satisfies SecurityProblem; /* SHORT_NAMED_INTEGER_VALUE */
+export const operation_security_failure = SecurityProblem_operation_security_failure; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SecurityProblem_redirection_prohibited
@@ -269,7 +269,7 @@ export const SecurityProblem_redirection_prohibited = 15 satisfies SecurityProbl
  * @constant
  * @type {number}
  */
-export const redirection_prohibited = SecurityProblem_redirection_prohibited satisfies SecurityProblem; /* SHORT_NAMED_INTEGER_VALUE */
+export const redirection_prohibited = SecurityProblem_redirection_prohibited; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SecurityProblem_refused_alternate_recipient_name
@@ -283,7 +283,7 @@ export const SecurityProblem_refused_alternate_recipient_name = 16 satisfies Sec
  * @constant
  * @type {number}
  */
-export const refused_alternate_recipient_name = SecurityProblem_refused_alternate_recipient_name satisfies SecurityProblem; /* SHORT_NAMED_INTEGER_VALUE */
+export const refused_alternate_recipient_name = SecurityProblem_refused_alternate_recipient_name; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SecurityProblem_repudiation_failure_of_message
@@ -297,7 +297,7 @@ export const SecurityProblem_repudiation_failure_of_message = 17 satisfies Secur
  * @constant
  * @type {number}
  */
-export const repudiation_failure_of_message = SecurityProblem_repudiation_failure_of_message satisfies SecurityProblem; /* SHORT_NAMED_INTEGER_VALUE */
+export const repudiation_failure_of_message = SecurityProblem_repudiation_failure_of_message; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SecurityProblem_responder_credentials_checking_problem
@@ -311,7 +311,7 @@ export const SecurityProblem_responder_credentials_checking_problem = 18 satisfi
  * @constant
  * @type {number}
  */
-export const responder_credentials_checking_problem = SecurityProblem_responder_credentials_checking_problem satisfies SecurityProblem; /* SHORT_NAMED_INTEGER_VALUE */
+export const responder_credentials_checking_problem = SecurityProblem_responder_credentials_checking_problem; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SecurityProblem_security_context_failure
@@ -325,7 +325,7 @@ export const SecurityProblem_security_context_failure = 19 satisfies SecurityPro
  * @constant
  * @type {number}
  */
-export const security_context_failure = SecurityProblem_security_context_failure satisfies SecurityProblem; /* SHORT_NAMED_INTEGER_VALUE */
+export const security_context_failure = SecurityProblem_security_context_failure; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SecurityProblem_security_context_problem
@@ -339,7 +339,7 @@ export const SecurityProblem_security_context_problem = 20 satisfies SecurityPro
  * @constant
  * @type {number}
  */
-export const security_context_problem = SecurityProblem_security_context_problem satisfies SecurityProblem; /* SHORT_NAMED_INTEGER_VALUE */
+export const security_context_problem = SecurityProblem_security_context_problem; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SecurityProblem_security_policy_violation
@@ -353,7 +353,7 @@ export const SecurityProblem_security_policy_violation = 21 satisfies SecurityPr
  * @constant
  * @type {number}
  */
-export const security_policy_violation = SecurityProblem_security_policy_violation satisfies SecurityProblem; /* SHORT_NAMED_INTEGER_VALUE */
+export const security_policy_violation = SecurityProblem_security_policy_violation; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SecurityProblem_security_services_refusal
@@ -367,7 +367,7 @@ export const SecurityProblem_security_services_refusal = 22 satisfies SecurityPr
  * @constant
  * @type {number}
  */
-export const security_services_refusal = SecurityProblem_security_services_refusal satisfies SecurityProblem; /* SHORT_NAMED_INTEGER_VALUE */
+export const security_services_refusal = SecurityProblem_security_services_refusal; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SecurityProblem_token_decryption_failed
@@ -381,7 +381,7 @@ export const SecurityProblem_token_decryption_failed = 23 satisfies SecurityProb
  * @constant
  * @type {number}
  */
-export const token_decryption_failed = SecurityProblem_token_decryption_failed satisfies SecurityProblem; /* SHORT_NAMED_INTEGER_VALUE */
+export const token_decryption_failed = SecurityProblem_token_decryption_failed; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SecurityProblem_token_error
@@ -395,7 +395,7 @@ export const SecurityProblem_token_error = 24 satisfies SecurityProblem; /* LONG
  * @constant
  * @type {number}
  */
-export const token_error = SecurityProblem_token_error satisfies SecurityProblem; /* SHORT_NAMED_INTEGER_VALUE */
+export const token_error = SecurityProblem_token_error; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SecurityProblem_unable_to_aggregate_security_labels
@@ -409,7 +409,7 @@ export const SecurityProblem_unable_to_aggregate_security_labels = 25 satisfies 
  * @constant
  * @type {number}
  */
-export const unable_to_aggregate_security_labels = SecurityProblem_unable_to_aggregate_security_labels satisfies SecurityProblem; /* SHORT_NAMED_INTEGER_VALUE */
+export const unable_to_aggregate_security_labels = SecurityProblem_unable_to_aggregate_security_labels; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SecurityProblem_unauthorised_dl_name
@@ -423,7 +423,7 @@ export const SecurityProblem_unauthorised_dl_name = 26 satisfies SecurityProblem
  * @constant
  * @type {number}
  */
-export const unauthorised_dl_name = SecurityProblem_unauthorised_dl_name satisfies SecurityProblem; /* SHORT_NAMED_INTEGER_VALUE */
+export const unauthorised_dl_name = SecurityProblem_unauthorised_dl_name; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SecurityProblem_unauthorised_entry_class
@@ -437,7 +437,7 @@ export const SecurityProblem_unauthorised_entry_class = 27 satisfies SecurityPro
  * @constant
  * @type {number}
  */
-export const unauthorised_entry_class = SecurityProblem_unauthorised_entry_class satisfies SecurityProblem; /* SHORT_NAMED_INTEGER_VALUE */
+export const unauthorised_entry_class = SecurityProblem_unauthorised_entry_class; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SecurityProblem_unauthorised_originally_intended_recipient_name
@@ -451,7 +451,7 @@ export const SecurityProblem_unauthorised_originally_intended_recipient_name = 2
  * @constant
  * @type {number}
  */
-export const unauthorised_originally_intended_recipient_name = SecurityProblem_unauthorised_originally_intended_recipient_name satisfies SecurityProblem; /* SHORT_NAMED_INTEGER_VALUE */
+export const unauthorised_originally_intended_recipient_name = SecurityProblem_unauthorised_originally_intended_recipient_name; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SecurityProblem_unauthorised_originator_name
@@ -465,7 +465,7 @@ export const SecurityProblem_unauthorised_originator_name = 29 satisfies Securit
  * @constant
  * @type {number}
  */
-export const unauthorised_originator_name = SecurityProblem_unauthorised_originator_name satisfies SecurityProblem; /* SHORT_NAMED_INTEGER_VALUE */
+export const unauthorised_originator_name = SecurityProblem_unauthorised_originator_name; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SecurityProblem_unauthorised_recipient_name
@@ -479,7 +479,7 @@ export const SecurityProblem_unauthorised_recipient_name = 30 satisfies Security
  * @constant
  * @type {number}
  */
-export const unauthorised_recipient_name = SecurityProblem_unauthorised_recipient_name satisfies SecurityProblem; /* SHORT_NAMED_INTEGER_VALUE */
+export const unauthorised_recipient_name = SecurityProblem_unauthorised_recipient_name; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SecurityProblem_unauthorised_security_label_update
@@ -493,7 +493,7 @@ export const SecurityProblem_unauthorised_security_label_update = 31 satisfies S
  * @constant
  * @type {number}
  */
-export const unauthorised_security_label_update = SecurityProblem_unauthorised_security_label_update satisfies SecurityProblem; /* SHORT_NAMED_INTEGER_VALUE */
+export const unauthorised_security_label_update = SecurityProblem_unauthorised_security_label_update; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SecurityProblem_unauthorised_user_name
@@ -507,7 +507,7 @@ export const SecurityProblem_unauthorised_user_name = 32 satisfies SecurityProbl
  * @constant
  * @type {number}
  */
-export const unauthorised_user_name = SecurityProblem_unauthorised_user_name satisfies SecurityProblem; /* SHORT_NAMED_INTEGER_VALUE */
+export const unauthorised_user_name = SecurityProblem_unauthorised_user_name; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SecurityProblem_unknown_security_label
@@ -521,7 +521,7 @@ export const SecurityProblem_unknown_security_label = 33 satisfies SecurityProbl
  * @constant
  * @type {number}
  */
-export const unknown_security_label = SecurityProblem_unknown_security_label satisfies SecurityProblem; /* SHORT_NAMED_INTEGER_VALUE */
+export const unknown_security_label = SecurityProblem_unknown_security_label; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SecurityProblem_unsupported_algorithm_identifier
@@ -535,7 +535,7 @@ export const SecurityProblem_unsupported_algorithm_identifier = 34 satisfies Sec
  * @constant
  * @type {number}
  */
-export const unsupported_algorithm_identifier = SecurityProblem_unsupported_algorithm_identifier satisfies SecurityProblem; /* SHORT_NAMED_INTEGER_VALUE */
+export const unsupported_algorithm_identifier = SecurityProblem_unsupported_algorithm_identifier; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SecurityProblem_unsupported_security_policy
@@ -549,7 +549,7 @@ export const SecurityProblem_unsupported_security_policy = 35 satisfies Security
  * @constant
  * @type {number}
  */
-export const unsupported_security_policy = SecurityProblem_unsupported_security_policy satisfies SecurityProblem; /* SHORT_NAMED_INTEGER_VALUE */
+export const unsupported_security_policy = SecurityProblem_unsupported_security_policy; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_SecurityProblem = $._decodeInteger;

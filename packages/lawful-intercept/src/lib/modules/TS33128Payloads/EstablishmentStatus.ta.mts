@@ -69,7 +69,7 @@ const EstablishmentStatus = _enum_for_EstablishmentStatus;
  * @type {number}
  */
 export
-const EstablishmentStatus_established = EstablishmentStatus.established satisfies EstablishmentStatus; /* LONG_NAMED_ENUMERATED_VALUE */
+const EstablishmentStatus_established = EstablishmentStatus.established; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary established
@@ -77,7 +77,7 @@ const EstablishmentStatus_established = EstablishmentStatus.established satisfie
  * @type {number}
  */
 export
-const established = EstablishmentStatus.established satisfies EstablishmentStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
+const established = EstablishmentStatus.established; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EstablishmentStatus_released
@@ -85,7 +85,7 @@ const established = EstablishmentStatus.established satisfies EstablishmentStatu
  * @type {number}
  */
 export
-const EstablishmentStatus_released = EstablishmentStatus.released satisfies EstablishmentStatus; /* LONG_NAMED_ENUMERATED_VALUE */
+const EstablishmentStatus_released = EstablishmentStatus.released; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary released
@@ -93,7 +93,7 @@ const EstablishmentStatus_released = EstablishmentStatus.released satisfies Esta
  * @type {number}
  */
 export
-const released = EstablishmentStatus.released satisfies EstablishmentStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
+const released = EstablishmentStatus.released; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_EstablishmentStatus: $.ASN1Decoder<EstablishmentStatus> = $._decodeEnumerated;
 export const _encode_EstablishmentStatus: $.ASN1Encoder<EstablishmentStatus> = $._encodeEnumerated;
 

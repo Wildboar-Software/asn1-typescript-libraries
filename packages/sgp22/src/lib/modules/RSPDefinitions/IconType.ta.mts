@@ -48,7 +48,7 @@ const IconType_jpg = 0 satisfies IconType; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const jpg = IconType_jpg satisfies IconType; /* SHORT_NAMED_INTEGER_VALUE */
+const jpg = IconType_jpg; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary IconType_png
@@ -72,7 +72,7 @@ const IconType_png = 1 satisfies IconType; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const png = IconType_png satisfies IconType; /* SHORT_NAMED_INTEGER_VALUE */
+const png = IconType_png; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_IconType = $._decodeInteger;
 export const _encode_IconType = $._encodeInteger;
 

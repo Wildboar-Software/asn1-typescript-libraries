@@ -133,7 +133,7 @@ const ProSeCauseForRecClosing = _enum_for_ProSeCauseForRecClosing;
  * @type {number}
  */
 export
-const ProSeCauseForRecClosing_proximityAlerted = ProSeCauseForRecClosing.proximityAlerted satisfies ProSeCauseForRecClosing; /* LONG_NAMED_ENUMERATED_VALUE */
+const ProSeCauseForRecClosing_proximityAlerted = ProSeCauseForRecClosing.proximityAlerted; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary proximityAlerted
@@ -145,7 +145,7 @@ const ProSeCauseForRecClosing_proximityAlerted = ProSeCauseForRecClosing.proximi
  * @type {number}
  */
 export
-const proximityAlerted = ProSeCauseForRecClosing.proximityAlerted satisfies ProSeCauseForRecClosing; /* SHORT_NAMED_ENUMERATED_VALUE */
+const proximityAlerted = ProSeCauseForRecClosing.proximityAlerted; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ProSeCauseForRecClosing_timeExpiredWithNoRrenewal
@@ -160,7 +160,7 @@ const proximityAlerted = ProSeCauseForRecClosing.proximityAlerted satisfies ProS
  * @type {number}
  */
 export
-const ProSeCauseForRecClosing_timeExpiredWithNoRrenewal = ProSeCauseForRecClosing.timeExpiredWithNoRrenewal satisfies ProSeCauseForRecClosing; /* LONG_NAMED_ENUMERATED_VALUE */
+const ProSeCauseForRecClosing_timeExpiredWithNoRrenewal = ProSeCauseForRecClosing.timeExpiredWithNoRrenewal; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary timeExpiredWithNoRrenewal
@@ -173,7 +173,7 @@ const ProSeCauseForRecClosing_timeExpiredWithNoRrenewal = ProSeCauseForRecClosin
  * @type {number}
  */
 export
-const timeExpiredWithNoRrenewal = ProSeCauseForRecClosing.timeExpiredWithNoRrenewal satisfies ProSeCauseForRecClosing; /* SHORT_NAMED_ENUMERATED_VALUE */
+const timeExpiredWithNoRrenewal = ProSeCauseForRecClosing.timeExpiredWithNoRrenewal; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ProSeCauseForRecClosing_requestorCancellation
@@ -190,7 +190,7 @@ const timeExpiredWithNoRrenewal = ProSeCauseForRecClosing.timeExpiredWithNoRrene
  * @type {number}
  */
 export
-const ProSeCauseForRecClosing_requestorCancellation = ProSeCauseForRecClosing.requestorCancellation satisfies ProSeCauseForRecClosing; /* LONG_NAMED_ENUMERATED_VALUE */
+const ProSeCauseForRecClosing_requestorCancellation = ProSeCauseForRecClosing.requestorCancellation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary requestorCancellation
@@ -202,7 +202,7 @@ const ProSeCauseForRecClosing_requestorCancellation = ProSeCauseForRecClosing.re
  * @type {number}
  */
 export
-const requestorCancellation = ProSeCauseForRecClosing.requestorCancellation satisfies ProSeCauseForRecClosing; /* SHORT_NAMED_ENUMERATED_VALUE */
+const requestorCancellation = ProSeCauseForRecClosing.requestorCancellation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ProSeCauseForRecClosing_timeLimited
@@ -221,7 +221,7 @@ const requestorCancellation = ProSeCauseForRecClosing.requestorCancellation sati
  * @type {number}
  */
 export
-const ProSeCauseForRecClosing_timeLimited = ProSeCauseForRecClosing.timeLimited satisfies ProSeCauseForRecClosing; /* LONG_NAMED_ENUMERATED_VALUE */
+const ProSeCauseForRecClosing_timeLimited = ProSeCauseForRecClosing.timeLimited; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary timeLimited
@@ -233,7 +233,7 @@ const ProSeCauseForRecClosing_timeLimited = ProSeCauseForRecClosing.timeLimited 
  * @type {number}
  */
 export
-const timeLimited = ProSeCauseForRecClosing.timeLimited satisfies ProSeCauseForRecClosing; /* SHORT_NAMED_ENUMERATED_VALUE */
+const timeLimited = ProSeCauseForRecClosing.timeLimited; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ProSeCauseForRecClosing_maxNumberOfReports
@@ -251,7 +251,7 @@ const timeLimited = ProSeCauseForRecClosing.timeLimited satisfies ProSeCauseForR
  * @type {number}
  */
 export
-const ProSeCauseForRecClosing_maxNumberOfReports = ProSeCauseForRecClosing.maxNumberOfReports satisfies ProSeCauseForRecClosing; /* LONG_NAMED_ENUMERATED_VALUE */
+const ProSeCauseForRecClosing_maxNumberOfReports = ProSeCauseForRecClosing.maxNumberOfReports; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary maxNumberOfReports
@@ -264,7 +264,7 @@ const ProSeCauseForRecClosing_maxNumberOfReports = ProSeCauseForRecClosing.maxNu
  * @type {number}
  */
 export
-const maxNumberOfReports = ProSeCauseForRecClosing.maxNumberOfReports satisfies ProSeCauseForRecClosing; /* SHORT_NAMED_ENUMERATED_VALUE */
+const maxNumberOfReports = ProSeCauseForRecClosing.maxNumberOfReports; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ProSeCauseForRecClosing_abnormalRelease
@@ -279,7 +279,7 @@ const maxNumberOfReports = ProSeCauseForRecClosing.maxNumberOfReports satisfies 
  * @type {number}
  */
 export
-const ProSeCauseForRecClosing_abnormalRelease = ProSeCauseForRecClosing.abnormalRelease satisfies ProSeCauseForRecClosing; /* LONG_NAMED_ENUMERATED_VALUE */
+const ProSeCauseForRecClosing_abnormalRelease = ProSeCauseForRecClosing.abnormalRelease; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary abnormalRelease
@@ -291,7 +291,7 @@ const ProSeCauseForRecClosing_abnormalRelease = ProSeCauseForRecClosing.abnormal
  * @type {number}
  */
 export
-const abnormalRelease = ProSeCauseForRecClosing.abnormalRelease satisfies ProSeCauseForRecClosing; /* SHORT_NAMED_ENUMERATED_VALUE */
+const abnormalRelease = ProSeCauseForRecClosing.abnormalRelease; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_ProSeCauseForRecClosing: $.ASN1Decoder<ProSeCauseForRecClosing> = $._decodeEnumerated;

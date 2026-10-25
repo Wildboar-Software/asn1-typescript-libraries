@@ -90,7 +90,7 @@ const LocationType = _enum_for_LocationType;
  * @type {number}
  */
 export
-const LocationType_currentLocation = LocationType.currentLocation satisfies LocationType; /* LONG_NAMED_ENUMERATED_VALUE */
+const LocationType_currentLocation = LocationType.currentLocation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary currentLocation
@@ -102,7 +102,7 @@ const LocationType_currentLocation = LocationType.currentLocation satisfies Loca
  * @type {number}
  */
 export
-const currentLocation = LocationType.currentLocation satisfies LocationType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const currentLocation = LocationType.currentLocation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LocationType_lastKnownLocation
@@ -116,7 +116,7 @@ const currentLocation = LocationType.currentLocation satisfies LocationType; /* 
  * @type {number}
  */
 export
-const LocationType_lastKnownLocation = LocationType.lastKnownLocation satisfies LocationType; /* LONG_NAMED_ENUMERATED_VALUE */
+const LocationType_lastKnownLocation = LocationType.lastKnownLocation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary lastKnownLocation
@@ -129,7 +129,7 @@ const LocationType_lastKnownLocation = LocationType.lastKnownLocation satisfies 
  * @type {number}
  */
 export
-const lastKnownLocation = LocationType.lastKnownLocation satisfies LocationType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const lastKnownLocation = LocationType.lastKnownLocation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_LocationType: $.ASN1Decoder<LocationType> = $._decodeEnumerated;

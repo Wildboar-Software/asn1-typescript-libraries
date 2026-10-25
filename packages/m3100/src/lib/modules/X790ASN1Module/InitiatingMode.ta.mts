@@ -43,7 +43,7 @@ export const InitiatingMode_managerDirect = 0 satisfies InitiatingMode; /* LONG_
  * @constant
  * @type {number}
  */
-export const managerDirect = InitiatingMode_managerDirect satisfies InitiatingMode; /* SHORT_NAMED_INTEGER_VALUE */
+export const managerDirect = InitiatingMode_managerDirect; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -59,7 +59,7 @@ export const InitiatingMode_managerIndirect = 1 satisfies InitiatingMode; /* LON
  * @constant
  * @type {number}
  */
-export const managerIndirect = InitiatingMode_managerIndirect satisfies InitiatingMode; /* SHORT_NAMED_INTEGER_VALUE */
+export const managerIndirect = InitiatingMode_managerIndirect; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -75,7 +75,7 @@ export const InitiatingMode_agentOriginated = 2 satisfies InitiatingMode; /* LON
  * @constant
  * @type {number}
  */
-export const agentOriginated = InitiatingMode_agentOriginated satisfies InitiatingMode; /* SHORT_NAMED_INTEGER_VALUE */
+export const agentOriginated = InitiatingMode_agentOriginated; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -91,7 +91,7 @@ export const InitiatingMode_managerIndirectEMail = 4 satisfies InitiatingMode; /
  * @constant
  * @type {number}
  */
-export const managerIndirectEMail = InitiatingMode_managerIndirectEMail satisfies InitiatingMode; /* SHORT_NAMED_INTEGER_VALUE */
+export const managerIndirectEMail = InitiatingMode_managerIndirectEMail; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -107,7 +107,7 @@ export const InitiatingMode_managerIndirectFax = 5 satisfies InitiatingMode; /* 
  * @constant
  * @type {number}
  */
-export const managerIndirectFax = InitiatingMode_managerIndirectFax satisfies InitiatingMode; /* SHORT_NAMED_INTEGER_VALUE */
+export const managerIndirectFax = InitiatingMode_managerIndirectFax; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -123,7 +123,7 @@ export const InitiatingMode_managerIndirectPersonal = 6 satisfies InitiatingMode
  * @constant
  * @type {number}
  */
-export const managerIndirectPersonal = InitiatingMode_managerIndirectPersonal satisfies InitiatingMode; /* SHORT_NAMED_INTEGER_VALUE */
+export const managerIndirectPersonal = InitiatingMode_managerIndirectPersonal; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -139,7 +139,7 @@ export const InitiatingMode_managerIndirectPhone = 7 satisfies InitiatingMode; /
  * @constant
  * @type {number}
  */
-export const managerIndirectPhone = InitiatingMode_managerIndirectPhone satisfies InitiatingMode; /* SHORT_NAMED_INTEGER_VALUE */
+export const managerIndirectPhone = InitiatingMode_managerIndirectPhone; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 

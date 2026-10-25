@@ -145,7 +145,7 @@ type L2ProtocolInformation = _enum_for_L2ProtocolInformation | ENUMERATED;
  * @type {number}
  */
 export
-const L2ProtocolInformation_l2ProtocolL2tp = _enum_for_L2ProtocolInformation.l2ProtocolL2tp satisfies L2ProtocolInformation; /* LONG_NAMED_ENUMERATED_VALUE */
+const L2ProtocolInformation_l2ProtocolL2tp = _enum_for_L2ProtocolInformation.l2ProtocolL2tp; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary l2ProtocolL2tp
@@ -163,7 +163,7 @@ const L2ProtocolInformation_l2ProtocolL2tp = _enum_for_L2ProtocolInformation.l2P
  * @type {number}
  */
 export
-const l2ProtocolL2tp = L2ProtocolInformation_l2ProtocolL2tp satisfies L2ProtocolInformation; /* SHORT_NAMED_ENUMERATED_VALUE */
+const l2ProtocolL2tp = L2ProtocolInformation_l2ProtocolL2tp; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary L2ProtocolInformation_l2ProtocolL2f
@@ -180,7 +180,7 @@ const l2ProtocolL2tp = L2ProtocolInformation_l2ProtocolL2tp satisfies L2Protocol
  * @type {number}
  */
 export
-const L2ProtocolInformation_l2ProtocolL2f = _enum_for_L2ProtocolInformation.l2ProtocolL2f satisfies L2ProtocolInformation; /* LONG_NAMED_ENUMERATED_VALUE */
+const L2ProtocolInformation_l2ProtocolL2f = _enum_for_L2ProtocolInformation.l2ProtocolL2f; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary l2ProtocolL2f
@@ -197,7 +197,7 @@ const L2ProtocolInformation_l2ProtocolL2f = _enum_for_L2ProtocolInformation.l2Pr
  * @type {number}
  */
 export
-const l2ProtocolL2f = L2ProtocolInformation_l2ProtocolL2f satisfies L2ProtocolInformation; /* SHORT_NAMED_ENUMERATED_VALUE */
+const l2ProtocolL2f = L2ProtocolInformation_l2ProtocolL2f; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary L2ProtocolInformation_l2ProtocolPptp
@@ -214,7 +214,7 @@ const l2ProtocolL2f = L2ProtocolInformation_l2ProtocolL2f satisfies L2ProtocolIn
  * @type {number}
  */
 export
-const L2ProtocolInformation_l2ProtocolPptp = _enum_for_L2ProtocolInformation.l2ProtocolPptp satisfies L2ProtocolInformation; /* LONG_NAMED_ENUMERATED_VALUE */
+const L2ProtocolInformation_l2ProtocolPptp = _enum_for_L2ProtocolInformation.l2ProtocolPptp; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary l2ProtocolPptp
@@ -231,7 +231,7 @@ const L2ProtocolInformation_l2ProtocolPptp = _enum_for_L2ProtocolInformation.l2P
  * @type {number}
  */
 export
-const l2ProtocolPptp = L2ProtocolInformation_l2ProtocolPptp satisfies L2ProtocolInformation; /* SHORT_NAMED_ENUMERATED_VALUE */
+const l2ProtocolPptp = L2ProtocolInformation_l2ProtocolPptp; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary L2ProtocolInformation_l2ProtocolPpp
@@ -249,7 +249,7 @@ const l2ProtocolPptp = L2ProtocolInformation_l2ProtocolPptp satisfies L2Protocol
  * @type {number}
  */
 export
-const L2ProtocolInformation_l2ProtocolPpp = _enum_for_L2ProtocolInformation.l2ProtocolPpp satisfies L2ProtocolInformation; /* LONG_NAMED_ENUMERATED_VALUE */
+const L2ProtocolInformation_l2ProtocolPpp = _enum_for_L2ProtocolInformation.l2ProtocolPpp; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary l2ProtocolPpp
@@ -267,7 +267,7 @@ const L2ProtocolInformation_l2ProtocolPpp = _enum_for_L2ProtocolInformation.l2Pr
  * @type {number}
  */
 export
-const l2ProtocolPpp = L2ProtocolInformation_l2ProtocolPpp satisfies L2ProtocolInformation; /* SHORT_NAMED_ENUMERATED_VALUE */
+const l2ProtocolPpp = L2ProtocolInformation_l2ProtocolPpp; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary L2ProtocolInformation_ethernetProtocol
@@ -283,7 +283,7 @@ const l2ProtocolPpp = L2ProtocolInformation_l2ProtocolPpp satisfies L2ProtocolIn
  * @type {number}
  */
 export
-const L2ProtocolInformation_ethernetProtocol = _enum_for_L2ProtocolInformation.ethernetProtocol satisfies L2ProtocolInformation; /* LONG_NAMED_ENUMERATED_VALUE */
+const L2ProtocolInformation_ethernetProtocol = _enum_for_L2ProtocolInformation.ethernetProtocol; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ethernetProtocol
@@ -299,7 +299,7 @@ const L2ProtocolInformation_ethernetProtocol = _enum_for_L2ProtocolInformation.e
  * @type {number}
  */
 export
-const ethernetProtocol = L2ProtocolInformation_ethernetProtocol satisfies L2ProtocolInformation; /* SHORT_NAMED_ENUMERATED_VALUE */
+const ethernetProtocol = L2ProtocolInformation_ethernetProtocol; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary L2ProtocolInformation_undefined
@@ -315,7 +315,7 @@ const ethernetProtocol = L2ProtocolInformation_ethernetProtocol satisfies L2Prot
  * @type {number}
  */
 export
-const L2ProtocolInformation_undefined = _enum_for_L2ProtocolInformation.undefined satisfies L2ProtocolInformation; /* LONG_NAMED_ENUMERATED_VALUE */
+const L2ProtocolInformation_undefined = _enum_for_L2ProtocolInformation.undefined; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary undefined
@@ -332,7 +332,7 @@ const L2ProtocolInformation_undefined = _enum_for_L2ProtocolInformation.undefine
  * @type {number}
  */
 export
-const undefined = L2ProtocolInformation_undefined satisfies L2ProtocolInformation; /* SHORT_NAMED_ENUMERATED_VALUE */
+const undefined = L2ProtocolInformation_undefined; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary L2ProtocolInformation_l2ProtocolATM2684
@@ -349,7 +349,7 @@ const undefined = L2ProtocolInformation_undefined satisfies L2ProtocolInformatio
  * @type {number}
  */
 export
-const L2ProtocolInformation_l2ProtocolATM2684 = _enum_for_L2ProtocolInformation.l2ProtocolATM2684 satisfies L2ProtocolInformation; /* LONG_NAMED_ENUMERATED_VALUE */
+const L2ProtocolInformation_l2ProtocolATM2684 = _enum_for_L2ProtocolInformation.l2ProtocolATM2684; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary l2ProtocolATM2684
@@ -366,7 +366,7 @@ const L2ProtocolInformation_l2ProtocolATM2684 = _enum_for_L2ProtocolInformation.
  * @type {number}
  */
 export
-const l2ProtocolATM2684 = L2ProtocolInformation_l2ProtocolATM2684 satisfies L2ProtocolInformation; /* SHORT_NAMED_ENUMERATED_VALUE */
+const l2ProtocolATM2684 = L2ProtocolInformation_l2ProtocolATM2684; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary L2ProtocolInformation_l2ProtocolFR2427
@@ -383,7 +383,7 @@ const l2ProtocolATM2684 = L2ProtocolInformation_l2ProtocolATM2684 satisfies L2Pr
  * @type {number}
  */
 export
-const L2ProtocolInformation_l2ProtocolFR2427 = _enum_for_L2ProtocolInformation.l2ProtocolFR2427 satisfies L2ProtocolInformation; /* LONG_NAMED_ENUMERATED_VALUE */
+const L2ProtocolInformation_l2ProtocolFR2427 = _enum_for_L2ProtocolInformation.l2ProtocolFR2427; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary l2ProtocolFR2427
@@ -400,7 +400,7 @@ const L2ProtocolInformation_l2ProtocolFR2427 = _enum_for_L2ProtocolInformation.l
  * @type {number}
  */
 export
-const l2ProtocolFR2427 = L2ProtocolInformation_l2ProtocolFR2427 satisfies L2ProtocolInformation; /* SHORT_NAMED_ENUMERATED_VALUE */
+const l2ProtocolFR2427 = L2ProtocolInformation_l2ProtocolFR2427; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_L2ProtocolInformation: $.ASN1Decoder<L2ProtocolInformation> = $._decodeEnumerated;
 export const _encode_L2ProtocolInformation: $.ASN1Encoder<L2ProtocolInformation> = $._encodeEnumerated;
 
