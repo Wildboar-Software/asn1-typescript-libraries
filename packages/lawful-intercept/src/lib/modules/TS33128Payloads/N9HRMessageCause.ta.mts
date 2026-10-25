@@ -89,7 +89,7 @@ const N9HRMessageCause = _enum_for_N9HRMessageCause;
  * @type {number}
  */
 export
-const N9HRMessageCause_pDUSessionEstablished: N9HRMessageCause = N9HRMessageCause.pDUSessionEstablished; /* LONG_NAMED_ENUMERATED_VALUE */
+const N9HRMessageCause_pDUSessionEstablished = N9HRMessageCause.pDUSessionEstablished satisfies N9HRMessageCause; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pDUSessionEstablished
@@ -97,7 +97,7 @@ const N9HRMessageCause_pDUSessionEstablished: N9HRMessageCause = N9HRMessageCaus
  * @type {number}
  */
 export
-const pDUSessionEstablished: N9HRMessageCause = N9HRMessageCause.pDUSessionEstablished; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pDUSessionEstablished = N9HRMessageCause.pDUSessionEstablished satisfies N9HRMessageCause; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary N9HRMessageCause_pDUSessionModified
@@ -105,7 +105,7 @@ const pDUSessionEstablished: N9HRMessageCause = N9HRMessageCause.pDUSessionEstab
  * @type {number}
  */
 export
-const N9HRMessageCause_pDUSessionModified: N9HRMessageCause = N9HRMessageCause.pDUSessionModified; /* LONG_NAMED_ENUMERATED_VALUE */
+const N9HRMessageCause_pDUSessionModified = N9HRMessageCause.pDUSessionModified satisfies N9HRMessageCause; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pDUSessionModified
@@ -113,7 +113,7 @@ const N9HRMessageCause_pDUSessionModified: N9HRMessageCause = N9HRMessageCause.p
  * @type {number}
  */
 export
-const pDUSessionModified: N9HRMessageCause = N9HRMessageCause.pDUSessionModified; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pDUSessionModified = N9HRMessageCause.pDUSessionModified satisfies N9HRMessageCause; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary N9HRMessageCause_pDUSessionReleased
@@ -121,7 +121,7 @@ const pDUSessionModified: N9HRMessageCause = N9HRMessageCause.pDUSessionModified
  * @type {number}
  */
 export
-const N9HRMessageCause_pDUSessionReleased: N9HRMessageCause = N9HRMessageCause.pDUSessionReleased; /* LONG_NAMED_ENUMERATED_VALUE */
+const N9HRMessageCause_pDUSessionReleased = N9HRMessageCause.pDUSessionReleased satisfies N9HRMessageCause; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pDUSessionReleased
@@ -129,7 +129,7 @@ const N9HRMessageCause_pDUSessionReleased: N9HRMessageCause = N9HRMessageCause.p
  * @type {number}
  */
 export
-const pDUSessionReleased: N9HRMessageCause = N9HRMessageCause.pDUSessionReleased; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pDUSessionReleased = N9HRMessageCause.pDUSessionReleased satisfies N9HRMessageCause; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary N9HRMessageCause_updatedLocationAvailable
@@ -137,7 +137,7 @@ const pDUSessionReleased: N9HRMessageCause = N9HRMessageCause.pDUSessionReleased
  * @type {number}
  */
 export
-const N9HRMessageCause_updatedLocationAvailable: N9HRMessageCause = N9HRMessageCause.updatedLocationAvailable; /* LONG_NAMED_ENUMERATED_VALUE */
+const N9HRMessageCause_updatedLocationAvailable = N9HRMessageCause.updatedLocationAvailable satisfies N9HRMessageCause; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary updatedLocationAvailable
@@ -145,7 +145,7 @@ const N9HRMessageCause_updatedLocationAvailable: N9HRMessageCause = N9HRMessageC
  * @type {number}
  */
 export
-const updatedLocationAvailable: N9HRMessageCause = N9HRMessageCause.updatedLocationAvailable; /* SHORT_NAMED_ENUMERATED_VALUE */
+const updatedLocationAvailable = N9HRMessageCause.updatedLocationAvailable satisfies N9HRMessageCause; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary N9HRMessageCause_sMFChanged
@@ -153,7 +153,7 @@ const updatedLocationAvailable: N9HRMessageCause = N9HRMessageCause.updatedLocat
  * @type {number}
  */
 export
-const N9HRMessageCause_sMFChanged: N9HRMessageCause = N9HRMessageCause.sMFChanged; /* LONG_NAMED_ENUMERATED_VALUE */
+const N9HRMessageCause_sMFChanged = N9HRMessageCause.sMFChanged satisfies N9HRMessageCause; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sMFChanged
@@ -161,7 +161,7 @@ const N9HRMessageCause_sMFChanged: N9HRMessageCause = N9HRMessageCause.sMFChange
  * @type {number}
  */
 export
-const sMFChanged: N9HRMessageCause = N9HRMessageCause.sMFChanged; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sMFChanged = N9HRMessageCause.sMFChanged satisfies N9HRMessageCause; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary N9HRMessageCause_other
@@ -169,7 +169,7 @@ const sMFChanged: N9HRMessageCause = N9HRMessageCause.sMFChanged; /* SHORT_NAMED
  * @type {number}
  */
 export
-const N9HRMessageCause_other: N9HRMessageCause = N9HRMessageCause.other; /* LONG_NAMED_ENUMERATED_VALUE */
+const N9HRMessageCause_other = N9HRMessageCause.other satisfies N9HRMessageCause; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary other
@@ -177,7 +177,7 @@ const N9HRMessageCause_other: N9HRMessageCause = N9HRMessageCause.other; /* LONG
  * @type {number}
  */
 export
-const other: N9HRMessageCause = N9HRMessageCause.other; /* SHORT_NAMED_ENUMERATED_VALUE */
+const other = N9HRMessageCause.other satisfies N9HRMessageCause; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary N9HRMessageCause_hRLIEnabled
@@ -185,7 +185,7 @@ const other: N9HRMessageCause = N9HRMessageCause.other; /* SHORT_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const N9HRMessageCause_hRLIEnabled: N9HRMessageCause = N9HRMessageCause.hRLIEnabled; /* LONG_NAMED_ENUMERATED_VALUE */
+const N9HRMessageCause_hRLIEnabled = N9HRMessageCause.hRLIEnabled satisfies N9HRMessageCause; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary hRLIEnabled
@@ -193,7 +193,7 @@ const N9HRMessageCause_hRLIEnabled: N9HRMessageCause = N9HRMessageCause.hRLIEnab
  * @type {number}
  */
 export
-const hRLIEnabled: N9HRMessageCause = N9HRMessageCause.hRLIEnabled; /* SHORT_NAMED_ENUMERATED_VALUE */
+const hRLIEnabled = N9HRMessageCause.hRLIEnabled satisfies N9HRMessageCause; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_N9HRMessageCause: $.ASN1Decoder<N9HRMessageCause> = $._decodeEnumerated;
 export const _encode_N9HRMessageCause: $.ASN1Encoder<N9HRMessageCause> = $._encodeEnumerated;
 

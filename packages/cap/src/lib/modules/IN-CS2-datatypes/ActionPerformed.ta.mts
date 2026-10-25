@@ -77,7 +77,7 @@ const ActionPerformed = _enum_for_ActionPerformed;
  * @type {number}
  */
 export
-const ActionPerformed_activated: ActionPerformed = ActionPerformed.activated; /* LONG_NAMED_ENUMERATED_VALUE */
+const ActionPerformed_activated = ActionPerformed.activated satisfies ActionPerformed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary activated
@@ -85,7 +85,7 @@ const ActionPerformed_activated: ActionPerformed = ActionPerformed.activated; /*
  * @type {number}
  */
 export
-const activated: ActionPerformed = ActionPerformed.activated; /* SHORT_NAMED_ENUMERATED_VALUE */
+const activated = ActionPerformed.activated satisfies ActionPerformed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ActionPerformed_deactivated
@@ -93,7 +93,7 @@ const activated: ActionPerformed = ActionPerformed.activated; /* SHORT_NAMED_ENU
  * @type {number}
  */
 export
-const ActionPerformed_deactivated: ActionPerformed = ActionPerformed.deactivated; /* LONG_NAMED_ENUMERATED_VALUE */
+const ActionPerformed_deactivated = ActionPerformed.deactivated satisfies ActionPerformed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary deactivated
@@ -101,7 +101,7 @@ const ActionPerformed_deactivated: ActionPerformed = ActionPerformed.deactivated
  * @type {number}
  */
 export
-const deactivated: ActionPerformed = ActionPerformed.deactivated; /* SHORT_NAMED_ENUMERATED_VALUE */
+const deactivated = ActionPerformed.deactivated satisfies ActionPerformed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ActionPerformed_alreadyActive
@@ -109,7 +109,7 @@ const deactivated: ActionPerformed = ActionPerformed.deactivated; /* SHORT_NAMED
  * @type {number}
  */
 export
-const ActionPerformed_alreadyActive: ActionPerformed = ActionPerformed.alreadyActive; /* LONG_NAMED_ENUMERATED_VALUE */
+const ActionPerformed_alreadyActive = ActionPerformed.alreadyActive satisfies ActionPerformed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary alreadyActive
@@ -117,7 +117,7 @@ const ActionPerformed_alreadyActive: ActionPerformed = ActionPerformed.alreadyAc
  * @type {number}
  */
 export
-const alreadyActive: ActionPerformed = ActionPerformed.alreadyActive; /* SHORT_NAMED_ENUMERATED_VALUE */
+const alreadyActive = ActionPerformed.alreadyActive satisfies ActionPerformed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ActionPerformed_alreadyInactive
@@ -125,7 +125,7 @@ const alreadyActive: ActionPerformed = ActionPerformed.alreadyActive; /* SHORT_N
  * @type {number}
  */
 export
-const ActionPerformed_alreadyInactive: ActionPerformed = ActionPerformed.alreadyInactive; /* LONG_NAMED_ENUMERATED_VALUE */
+const ActionPerformed_alreadyInactive = ActionPerformed.alreadyInactive satisfies ActionPerformed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary alreadyInactive
@@ -133,7 +133,7 @@ const ActionPerformed_alreadyInactive: ActionPerformed = ActionPerformed.already
  * @type {number}
  */
 export
-const alreadyInactive: ActionPerformed = ActionPerformed.alreadyInactive; /* SHORT_NAMED_ENUMERATED_VALUE */
+const alreadyInactive = ActionPerformed.alreadyInactive satisfies ActionPerformed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ActionPerformed_isActive
@@ -141,7 +141,7 @@ const alreadyInactive: ActionPerformed = ActionPerformed.alreadyInactive; /* SHO
  * @type {number}
  */
 export
-const ActionPerformed_isActive: ActionPerformed = ActionPerformed.isActive; /* LONG_NAMED_ENUMERATED_VALUE */
+const ActionPerformed_isActive = ActionPerformed.isActive satisfies ActionPerformed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary isActive
@@ -149,7 +149,7 @@ const ActionPerformed_isActive: ActionPerformed = ActionPerformed.isActive; /* L
  * @type {number}
  */
 export
-const isActive: ActionPerformed = ActionPerformed.isActive; /* SHORT_NAMED_ENUMERATED_VALUE */
+const isActive = ActionPerformed.isActive satisfies ActionPerformed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ActionPerformed_isInactive
@@ -157,7 +157,7 @@ const isActive: ActionPerformed = ActionPerformed.isActive; /* SHORT_NAMED_ENUME
  * @type {number}
  */
 export
-const ActionPerformed_isInactive: ActionPerformed = ActionPerformed.isInactive; /* LONG_NAMED_ENUMERATED_VALUE */
+const ActionPerformed_isInactive = ActionPerformed.isInactive satisfies ActionPerformed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary isInactive
@@ -165,7 +165,7 @@ const ActionPerformed_isInactive: ActionPerformed = ActionPerformed.isInactive; 
  * @type {number}
  */
 export
-const isInactive: ActionPerformed = ActionPerformed.isInactive; /* SHORT_NAMED_ENUMERATED_VALUE */
+const isInactive = ActionPerformed.isInactive satisfies ActionPerformed; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_ActionPerformed = $._decodeEnumerated;
 export const _encode_ActionPerformed = $._encodeEnumerated;
 

@@ -32,42 +32,42 @@ export type AuthenticationMethod = INTEGER;
  * @constant
  * @type {number}
  */
-export const AuthenticationMethod_no_authentication: AuthenticationMethod = 0; /* LONG_NAMED_INTEGER_VALUE */
+export const AuthenticationMethod_no_authentication = 0 satisfies AuthenticationMethod; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AuthenticationMethod_no_authentication
  * @constant
  * @type {number}
  */
-export const no_authentication: AuthenticationMethod = AuthenticationMethod_no_authentication; /* SHORT_NAMED_INTEGER_VALUE */
+export const no_authentication = AuthenticationMethod_no_authentication satisfies AuthenticationMethod; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AuthenticationMethod_simple_password
  * @constant
  * @type {number}
  */
-export const AuthenticationMethod_simple_password: AuthenticationMethod = 1; /* LONG_NAMED_INTEGER_VALUE */
+export const AuthenticationMethod_simple_password = 1 satisfies AuthenticationMethod; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AuthenticationMethod_simple_password
  * @constant
  * @type {number}
  */
-export const simple_password: AuthenticationMethod = AuthenticationMethod_simple_password; /* SHORT_NAMED_INTEGER_VALUE */
+export const simple_password = AuthenticationMethod_simple_password satisfies AuthenticationMethod; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AuthenticationMethod_strong_authentication
  * @constant
  * @type {number}
  */
-export const AuthenticationMethod_strong_authentication: AuthenticationMethod = 2; /* LONG_NAMED_INTEGER_VALUE */
+export const AuthenticationMethod_strong_authentication = 2 satisfies AuthenticationMethod; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AuthenticationMethod_strong_authentication
  * @constant
  * @type {number}
  */
-export const strong_authentication: AuthenticationMethod = AuthenticationMethod_strong_authentication; /* SHORT_NAMED_INTEGER_VALUE */
+export const strong_authentication = AuthenticationMethod_strong_authentication satisfies AuthenticationMethod; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_AuthenticationMethod = $._decodeInteger;

@@ -40,7 +40,7 @@ export type F_OPEN_response_recovery_mode = INTEGER;
  * @constant
  * @type {number}
  */
-export const F_OPEN_response_recovery_mode_none: F_OPEN_response_recovery_mode = 0; /* LONG_NAMED_INTEGER_VALUE */
+export const F_OPEN_response_recovery_mode_none = 0 satisfies F_OPEN_response_recovery_mode; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -48,7 +48,7 @@ export const F_OPEN_response_recovery_mode_none: F_OPEN_response_recovery_mode =
  * @constant
  * @type {number}
  */
-export const none: F_OPEN_response_recovery_mode = F_OPEN_response_recovery_mode_none; /* SHORT_NAMED_INTEGER_VALUE */
+export const none = F_OPEN_response_recovery_mode_none satisfies F_OPEN_response_recovery_mode; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -60,7 +60,7 @@ export const none: F_OPEN_response_recovery_mode = F_OPEN_response_recovery_mode
  * @constant
  * @type {number}
  */
-export const F_OPEN_response_recovery_mode_at_start_of_file: F_OPEN_response_recovery_mode = 1; /* LONG_NAMED_INTEGER_VALUE */
+export const F_OPEN_response_recovery_mode_at_start_of_file = 1 satisfies F_OPEN_response_recovery_mode; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -68,7 +68,7 @@ export const F_OPEN_response_recovery_mode_at_start_of_file: F_OPEN_response_rec
  * @constant
  * @type {number}
  */
-export const at_start_of_file: F_OPEN_response_recovery_mode = F_OPEN_response_recovery_mode_at_start_of_file; /* SHORT_NAMED_INTEGER_VALUE */
+export const at_start_of_file = F_OPEN_response_recovery_mode_at_start_of_file satisfies F_OPEN_response_recovery_mode; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -81,7 +81,7 @@ export const at_start_of_file: F_OPEN_response_recovery_mode = F_OPEN_response_r
  * @constant
  * @type {number}
  */
-export const F_OPEN_response_recovery_mode_at_any_active_Checkpoint: F_OPEN_response_recovery_mode = 2; /* LONG_NAMED_INTEGER_VALUE */
+export const F_OPEN_response_recovery_mode_at_any_active_Checkpoint = 2 satisfies F_OPEN_response_recovery_mode; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -89,7 +89,7 @@ export const F_OPEN_response_recovery_mode_at_any_active_Checkpoint: F_OPEN_resp
  * @constant
  * @type {number}
  */
-export const at_any_active_Checkpoint: F_OPEN_response_recovery_mode = F_OPEN_response_recovery_mode_at_any_active_Checkpoint; /* SHORT_NAMED_INTEGER_VALUE */
+export const at_any_active_Checkpoint = F_OPEN_response_recovery_mode_at_any_active_Checkpoint satisfies F_OPEN_response_recovery_mode; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 

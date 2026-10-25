@@ -88,8 +88,8 @@ export const TransferProblem = _enum_for_TransferProblem;
  * @constant
  * @type {number}
  */
-export const TransferProblem_duplicateInvocationId: TransferProblem =
-  TransferProblem.duplicateInvocationId; /* LONG_NAMED_ENUMERATED_VALUE */
+export const TransferProblem_duplicateInvocationId =
+  TransferProblem.duplicateInvocationId satisfies TransferProblem; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -97,8 +97,8 @@ export const TransferProblem_duplicateInvocationId: TransferProblem =
  * @constant
  * @type {number}
  */
-export const duplicateInvocationId: TransferProblem =
-  TransferProblem.duplicateInvocationId; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const duplicateInvocationId =
+  TransferProblem.duplicateInvocationId satisfies TransferProblem; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -112,8 +112,8 @@ export const duplicateInvocationId: TransferProblem =
  * @constant
  * @type {number}
  */
-export const TransferProblem_unrecognizedSecurityExchange: TransferProblem =
-  TransferProblem.unrecognizedSecurityExchange; /* LONG_NAMED_ENUMERATED_VALUE */
+export const TransferProblem_unrecognizedSecurityExchange =
+  TransferProblem.unrecognizedSecurityExchange satisfies TransferProblem; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -121,8 +121,8 @@ export const TransferProblem_unrecognizedSecurityExchange: TransferProblem =
  * @constant
  * @type {number}
  */
-export const unrecognizedSecurityExchange: TransferProblem =
-  TransferProblem.unrecognizedSecurityExchange; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const unrecognizedSecurityExchange =
+  TransferProblem.unrecognizedSecurityExchange satisfies TransferProblem; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -135,8 +135,8 @@ export const unrecognizedSecurityExchange: TransferProblem =
  * @constant
  * @type {number}
  */
-export const TransferProblem_mistypedItem: TransferProblem =
-  TransferProblem.mistypedItem; /* LONG_NAMED_ENUMERATED_VALUE */
+export const TransferProblem_mistypedItem =
+  TransferProblem.mistypedItem satisfies TransferProblem; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -144,8 +144,8 @@ export const TransferProblem_mistypedItem: TransferProblem =
  * @constant
  * @type {number}
  */
-export const mistypedItem: TransferProblem =
-  TransferProblem.mistypedItem; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const mistypedItem =
+  TransferProblem.mistypedItem satisfies TransferProblem; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -159,8 +159,8 @@ export const mistypedItem: TransferProblem =
  * @constant
  * @type {number}
  */
-export const TransferProblem_inappropriateInvocationId: TransferProblem =
-  TransferProblem.inappropriateInvocationId; /* LONG_NAMED_ENUMERATED_VALUE */
+export const TransferProblem_inappropriateInvocationId =
+  TransferProblem.inappropriateInvocationId satisfies TransferProblem; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -168,8 +168,8 @@ export const TransferProblem_inappropriateInvocationId: TransferProblem =
  * @constant
  * @type {number}
  */
-export const inappropriateInvocationId: TransferProblem =
-  TransferProblem.inappropriateInvocationId; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const inappropriateInvocationId =
+  TransferProblem.inappropriateInvocationId satisfies TransferProblem; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -183,8 +183,8 @@ export const inappropriateInvocationId: TransferProblem =
  * @constant
  * @type {number}
  */
-export const TransferProblem_alternatingSequenceError: TransferProblem =
-  TransferProblem.alternatingSequenceError; /* LONG_NAMED_ENUMERATED_VALUE */
+export const TransferProblem_alternatingSequenceError =
+  TransferProblem.alternatingSequenceError satisfies TransferProblem; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -192,8 +192,8 @@ export const TransferProblem_alternatingSequenceError: TransferProblem =
  * @constant
  * @type {number}
  */
-export const alternatingSequenceError: TransferProblem =
-  TransferProblem.alternatingSequenceError; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const alternatingSequenceError =
+  TransferProblem.alternatingSequenceError satisfies TransferProblem; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 

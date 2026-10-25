@@ -53,7 +53,7 @@ type FileRename_Error = INTEGER;
  * @type {number}
  */
 export
-const FileRename_Error_source_file: FileRename_Error = 0; /* LONG_NAMED_INTEGER_VALUE */
+const FileRename_Error_source_file = 0 satisfies FileRename_Error; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary FileRename_Error_source_file
@@ -67,7 +67,7 @@ const FileRename_Error_source_file: FileRename_Error = 0; /* LONG_NAMED_INTEGER_
  * @type {number}
  */
 export
-const source_file: FileRename_Error = FileRename_Error_source_file; /* SHORT_NAMED_INTEGER_VALUE */
+const source_file = FileRename_Error_source_file satisfies FileRename_Error; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary FileRename_Error_destination_file
@@ -81,7 +81,7 @@ const source_file: FileRename_Error = FileRename_Error_source_file; /* SHORT_NAM
  * @type {number}
  */
 export
-const FileRename_Error_destination_file: FileRename_Error = 1; /* LONG_NAMED_INTEGER_VALUE */
+const FileRename_Error_destination_file = 1 satisfies FileRename_Error; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary FileRename_Error_destination_file
@@ -95,7 +95,7 @@ const FileRename_Error_destination_file: FileRename_Error = 1; /* LONG_NAMED_INT
  * @type {number}
  */
 export
-const destination_file: FileRename_Error = FileRename_Error_destination_file; /* SHORT_NAMED_INTEGER_VALUE */
+const destination_file = FileRename_Error_destination_file satisfies FileRename_Error; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_FileRename_Error = $._decodeInteger;
 export const _encode_FileRename_Error = $._encodeInteger;
 

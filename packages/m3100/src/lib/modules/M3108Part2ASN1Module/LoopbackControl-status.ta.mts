@@ -66,8 +66,8 @@ export const LoopbackControl_status = _enum_for_LoopbackControl_status;
  * @constant
  * @type {number}
  */
-export const LoopbackControl_status_noLoopback: LoopbackControl_status =
-    LoopbackControl_status.noLoopback; /* LONG_NAMED_ENUMERATED_VALUE */
+export const LoopbackControl_status_noLoopback =
+    LoopbackControl_status.noLoopback satisfies LoopbackControl_status; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -75,8 +75,8 @@ export const LoopbackControl_status_noLoopback: LoopbackControl_status =
  * @constant
  * @type {number}
  */
-export const noLoopback: LoopbackControl_status =
-    LoopbackControl_status.noLoopback; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const noLoopback =
+    LoopbackControl_status.noLoopback satisfies LoopbackControl_status; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -84,8 +84,8 @@ export const noLoopback: LoopbackControl_status =
  * @constant
  * @type {number}
  */
-export const LoopbackControl_status_endALoopedBack: LoopbackControl_status =
-    LoopbackControl_status.endALoopedBack; /* LONG_NAMED_ENUMERATED_VALUE */
+export const LoopbackControl_status_endALoopedBack =
+    LoopbackControl_status.endALoopedBack satisfies LoopbackControl_status; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -93,8 +93,8 @@ export const LoopbackControl_status_endALoopedBack: LoopbackControl_status =
  * @constant
  * @type {number}
  */
-export const endALoopedBack: LoopbackControl_status =
-    LoopbackControl_status.endALoopedBack; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const endALoopedBack =
+    LoopbackControl_status.endALoopedBack satisfies LoopbackControl_status; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -102,8 +102,8 @@ export const endALoopedBack: LoopbackControl_status =
  * @constant
  * @type {number}
  */
-export const LoopbackControl_status_endBLoopedBack: LoopbackControl_status =
-    LoopbackControl_status.endBLoopedBack; /* LONG_NAMED_ENUMERATED_VALUE */
+export const LoopbackControl_status_endBLoopedBack =
+    LoopbackControl_status.endBLoopedBack satisfies LoopbackControl_status; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -111,8 +111,8 @@ export const LoopbackControl_status_endBLoopedBack: LoopbackControl_status =
  * @constant
  * @type {number}
  */
-export const endBLoopedBack: LoopbackControl_status =
-    LoopbackControl_status.endBLoopedBack; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const endBLoopedBack =
+    LoopbackControl_status.endBLoopedBack satisfies LoopbackControl_status; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 

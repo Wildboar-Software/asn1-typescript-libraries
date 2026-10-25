@@ -95,7 +95,7 @@ const RejectCause = _enum_for_RejectCause;
  * @type {number}
  */
 export
-const RejectCause_busyOverflow: RejectCause = RejectCause.busyOverflow; /* LONG_NAMED_ENUMERATED_VALUE */
+const RejectCause_busyOverflow = RejectCause.busyOverflow satisfies RejectCause; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary busyOverflow
@@ -103,7 +103,7 @@ const RejectCause_busyOverflow: RejectCause = RejectCause.busyOverflow; /* LONG_
  * @type {number}
  */
 export
-const busyOverflow: RejectCause = RejectCause.busyOverflow; /* SHORT_NAMED_ENUMERATED_VALUE */
+const busyOverflow = RejectCause.busyOverflow satisfies RejectCause; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RejectCause_queueTimeOverflow
@@ -111,7 +111,7 @@ const busyOverflow: RejectCause = RejectCause.busyOverflow; /* SHORT_NAMED_ENUME
  * @type {number}
  */
 export
-const RejectCause_queueTimeOverflow: RejectCause = RejectCause.queueTimeOverflow; /* LONG_NAMED_ENUMERATED_VALUE */
+const RejectCause_queueTimeOverflow = RejectCause.queueTimeOverflow satisfies RejectCause; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary queueTimeOverflow
@@ -119,7 +119,7 @@ const RejectCause_queueTimeOverflow: RejectCause = RejectCause.queueTimeOverflow
  * @type {number}
  */
 export
-const queueTimeOverflow: RejectCause = RejectCause.queueTimeOverflow; /* SHORT_NAMED_ENUMERATED_VALUE */
+const queueTimeOverflow = RejectCause.queueTimeOverflow satisfies RejectCause; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RejectCause_capacityOverflow
@@ -127,7 +127,7 @@ const queueTimeOverflow: RejectCause = RejectCause.queueTimeOverflow; /* SHORT_N
  * @type {number}
  */
 export
-const RejectCause_capacityOverflow: RejectCause = RejectCause.capacityOverflow; /* LONG_NAMED_ENUMERATED_VALUE */
+const RejectCause_capacityOverflow = RejectCause.capacityOverflow satisfies RejectCause; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary capacityOverflow
@@ -135,7 +135,7 @@ const RejectCause_capacityOverflow: RejectCause = RejectCause.capacityOverflow; 
  * @type {number}
  */
 export
-const capacityOverflow: RejectCause = RejectCause.capacityOverflow; /* SHORT_NAMED_ENUMERATED_VALUE */
+const capacityOverflow = RejectCause.capacityOverflow satisfies RejectCause; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RejectCause_calendarOverflow
@@ -143,7 +143,7 @@ const capacityOverflow: RejectCause = RejectCause.capacityOverflow; /* SHORT_NAM
  * @type {number}
  */
 export
-const RejectCause_calendarOverflow: RejectCause = RejectCause.calendarOverflow; /* LONG_NAMED_ENUMERATED_VALUE */
+const RejectCause_calendarOverflow = RejectCause.calendarOverflow satisfies RejectCause; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary calendarOverflow
@@ -151,7 +151,7 @@ const RejectCause_calendarOverflow: RejectCause = RejectCause.calendarOverflow; 
  * @type {number}
  */
 export
-const calendarOverflow: RejectCause = RejectCause.calendarOverflow; /* SHORT_NAMED_ENUMERATED_VALUE */
+const calendarOverflow = RejectCause.calendarOverflow satisfies RejectCause; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RejectCause_unknownOverflow
@@ -159,7 +159,7 @@ const calendarOverflow: RejectCause = RejectCause.calendarOverflow; /* SHORT_NAM
  * @type {number}
  */
 export
-const RejectCause_unknownOverflow: RejectCause = RejectCause.unknownOverflow; /* LONG_NAMED_ENUMERATED_VALUE */
+const RejectCause_unknownOverflow = RejectCause.unknownOverflow satisfies RejectCause; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unknownOverflow
@@ -167,7 +167,7 @@ const RejectCause_unknownOverflow: RejectCause = RejectCause.unknownOverflow; /*
  * @type {number}
  */
 export
-const unknownOverflow: RejectCause = RejectCause.unknownOverflow; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unknownOverflow = RejectCause.unknownOverflow satisfies RejectCause; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 let _cached_decoder_for_RejectCause: $.ASN1Decoder<RejectCause> | null = null;
 

@@ -64,7 +64,7 @@ export type SetupError = _enum_for_SetupError | ENUMERATED;
  * @constant
  * @type {number}
  */
-export const SetupError_setupNotAllowed: SetupError = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+export const SetupError_setupNotAllowed = _enum_for_SetupError.setupNotAllowed satisfies SetupError; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -77,7 +77,7 @@ export const SetupError_setupNotAllowed: SetupError = 0; /* LONG_NAMED_ENUMERATE
  * @constant
  * @type {number}
  */
-export const setupNotAllowed: SetupError = SetupError_setupNotAllowed; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const setupNotAllowed = SetupError_setupNotAllowed satisfies SetupError; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -90,7 +90,7 @@ export const setupNotAllowed: SetupError = SetupError_setupNotAllowed; /* SHORT_
  * @constant
  * @type {number}
  */
-export const SetupError_facilityTemporarilyUnavailable: SetupError = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+export const SetupError_facilityTemporarilyUnavailable = _enum_for_SetupError.facilityTemporarilyUnavailable satisfies SetupError; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -103,7 +103,7 @@ export const SetupError_facilityTemporarilyUnavailable: SetupError = 1; /* LONG_
  * @constant
  * @type {number}
  */
-export const facilityTemporarilyUnavailable: SetupError = SetupError_facilityTemporarilyUnavailable; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const facilityTemporarilyUnavailable = SetupError_facilityTemporarilyUnavailable satisfies SetupError; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -117,7 +117,7 @@ export const facilityTemporarilyUnavailable: SetupError = SetupError_facilityTem
  * @constant
  * @type {number}
  */
-export const SetupError_facilityPermanentlyUnavailable: SetupError = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+export const SetupError_facilityPermanentlyUnavailable = _enum_for_SetupError.facilityPermanentlyUnavailable satisfies SetupError; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -131,7 +131,7 @@ export const SetupError_facilityPermanentlyUnavailable: SetupError = 2; /* LONG_
  * @constant
  * @type {number}
  */
-export const facilityPermanentlyUnavailable: SetupError = SetupError_facilityPermanentlyUnavailable; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const facilityPermanentlyUnavailable = SetupError_facilityPermanentlyUnavailable satisfies SetupError; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -144,7 +144,7 @@ export const facilityPermanentlyUnavailable: SetupError = SetupError_facilityPer
  * @constant
  * @type {number}
  */
-export const SetupError_unknownSessionType: SetupError = 3; /* LONG_NAMED_ENUMERATED_VALUE */
+export const SetupError_unknownSessionType = _enum_for_SetupError.unknownSessionType satisfies SetupError; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -157,7 +157,7 @@ export const SetupError_unknownSessionType: SetupError = 3; /* LONG_NAMED_ENUMER
  * @constant
  * @type {number}
  */
-export const unknownSessionType: SetupError = SetupError_unknownSessionType; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const unknownSessionType = SetupError_unknownSessionType satisfies SetupError; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -170,7 +170,7 @@ export const unknownSessionType: SetupError = SetupError_unknownSessionType; /* 
  * @constant
  * @type {number}
  */
-export const SetupError_sessionTypeNotSupported: SetupError = 4; /* LONG_NAMED_ENUMERATED_VALUE */
+export const SetupError_sessionTypeNotSupported = _enum_for_SetupError.sessionTypeNotSupported satisfies SetupError; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -183,7 +183,7 @@ export const SetupError_sessionTypeNotSupported: SetupError = 4; /* LONG_NAMED_E
  * @constant
  * @type {number}
  */
-export const sessionTypeNotSupported: SetupError = SetupError_sessionTypeNotSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const sessionTypeNotSupported = SetupError_sessionTypeNotSupported satisfies SetupError; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -197,7 +197,7 @@ export const sessionTypeNotSupported: SetupError = SetupError_sessionTypeNotSupp
  * @constant
  * @type {number}
  */
-export const SetupError_batchModeNotSupported: SetupError = 5; /* LONG_NAMED_ENUMERATED_VALUE */
+export const SetupError_batchModeNotSupported = _enum_for_SetupError.batchModeNotSupported satisfies SetupError; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -211,7 +211,7 @@ export const SetupError_batchModeNotSupported: SetupError = 5; /* LONG_NAMED_ENU
  * @constant
  * @type {number}
  */
-export const batchModeNotSupported: SetupError = SetupError_batchModeNotSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const batchModeNotSupported = SetupError_batchModeNotSupported satisfies SetupError; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -225,7 +225,7 @@ export const batchModeNotSupported: SetupError = SetupError_batchModeNotSupporte
  * @constant
  * @type {number}
  */
-export const SetupError_continuousReturnNotSupported: SetupError = 6; /* LONG_NAMED_ENUMERATED_VALUE */
+export const SetupError_continuousReturnNotSupported = _enum_for_SetupError.continuousReturnNotSupported satisfies SetupError; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -239,7 +239,7 @@ export const SetupError_continuousReturnNotSupported: SetupError = 6; /* LONG_NA
  * @constant
  * @type {number}
  */
-export const continuousReturnNotSupported: SetupError = SetupError_continuousReturnNotSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const continuousReturnNotSupported = SetupError_continuousReturnNotSupported satisfies SetupError; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -252,7 +252,7 @@ export const continuousReturnNotSupported: SetupError = SetupError_continuousRet
  * @constant
  * @type {number}
  */
-export const SetupError_sensorTemporarilyUnavailable: SetupError = 7; /* LONG_NAMED_ENUMERATED_VALUE */
+export const SetupError_sensorTemporarilyUnavailable = _enum_for_SetupError.sensorTemporarilyUnavailable satisfies SetupError; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -265,7 +265,7 @@ export const SetupError_sensorTemporarilyUnavailable: SetupError = 7; /* LONG_NA
  * @constant
  * @type {number}
  */
-export const sensorTemporarilyUnavailable: SetupError = SetupError_sensorTemporarilyUnavailable; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const sensorTemporarilyUnavailable = SetupError_sensorTemporarilyUnavailable satisfies SetupError; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -278,7 +278,7 @@ export const sensorTemporarilyUnavailable: SetupError = SetupError_sensorTempora
  * @constant
  * @type {number}
  */
-export const SetupError_sensorPermanentlyUnavailable: SetupError = 8; /* LONG_NAMED_ENUMERATED_VALUE */
+export const SetupError_sensorPermanentlyUnavailable = _enum_for_SetupError.sensorPermanentlyUnavailable satisfies SetupError; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -291,7 +291,7 @@ export const SetupError_sensorPermanentlyUnavailable: SetupError = 8; /* LONG_NA
  * @constant
  * @type {number}
  */
-export const sensorPermanentlyUnavailable: SetupError = SetupError_sensorPermanentlyUnavailable; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const sensorPermanentlyUnavailable = SetupError_sensorPermanentlyUnavailable satisfies SetupError; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 

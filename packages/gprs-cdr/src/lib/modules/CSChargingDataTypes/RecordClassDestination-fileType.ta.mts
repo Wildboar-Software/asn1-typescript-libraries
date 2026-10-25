@@ -29,7 +29,7 @@ type RecordClassDestination_fileType = INTEGER;
  * @type {number}
  */
 export
-const RecordClassDestination_fileType_callRecords: RecordClassDestination_fileType = 1; /* LONG_NAMED_INTEGER_VALUE */
+const RecordClassDestination_fileType_callRecords = 1 satisfies RecordClassDestination_fileType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecordClassDestination_fileType_callRecords
@@ -37,7 +37,7 @@ const RecordClassDestination_fileType_callRecords: RecordClassDestination_fileTy
  * @type {number}
  */
 export
-const callRecords: RecordClassDestination_fileType = RecordClassDestination_fileType_callRecords; /* SHORT_NAMED_INTEGER_VALUE */
+const callRecords = RecordClassDestination_fileType_callRecords satisfies RecordClassDestination_fileType; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecordClassDestination_fileType_traceRecords
@@ -45,7 +45,7 @@ const callRecords: RecordClassDestination_fileType = RecordClassDestination_file
  * @type {number}
  */
 export
-const RecordClassDestination_fileType_traceRecords: RecordClassDestination_fileType = 9; /* LONG_NAMED_INTEGER_VALUE */
+const RecordClassDestination_fileType_traceRecords = 9 satisfies RecordClassDestination_fileType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecordClassDestination_fileType_traceRecords
@@ -53,7 +53,7 @@ const RecordClassDestination_fileType_traceRecords: RecordClassDestination_fileT
  * @type {number}
  */
 export
-const traceRecords: RecordClassDestination_fileType = RecordClassDestination_fileType_traceRecords; /* SHORT_NAMED_INTEGER_VALUE */
+const traceRecords = RecordClassDestination_fileType_traceRecords satisfies RecordClassDestination_fileType; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecordClassDestination_fileType_observedIMEITicket
@@ -61,7 +61,7 @@ const traceRecords: RecordClassDestination_fileType = RecordClassDestination_fil
  * @type {number}
  */
 export
-const RecordClassDestination_fileType_observedIMEITicket: RecordClassDestination_fileType = 14; /* LONG_NAMED_INTEGER_VALUE */
+const RecordClassDestination_fileType_observedIMEITicket = 14 satisfies RecordClassDestination_fileType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecordClassDestination_fileType_observedIMEITicket
@@ -69,7 +69,7 @@ const RecordClassDestination_fileType_observedIMEITicket: RecordClassDestination
  * @type {number}
  */
 export
-const observedIMEITicket: RecordClassDestination_fileType = RecordClassDestination_fileType_observedIMEITicket; /* SHORT_NAMED_INTEGER_VALUE */
+const observedIMEITicket = RecordClassDestination_fileType_observedIMEITicket satisfies RecordClassDestination_fileType; /* SHORT_NAMED_INTEGER_VALUE */
 
 export
 const _decode_RecordClassDestination_fileType: $.ASN1Decoder<RecordClassDestination_fileType> = $._decodeInteger;

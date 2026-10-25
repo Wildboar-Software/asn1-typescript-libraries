@@ -95,7 +95,7 @@ const HandoverType = _enum_for_HandoverType;
  * @type {number}
  */
 export
-const HandoverType_intra5GS: HandoverType = HandoverType.intra5GS; /* LONG_NAMED_ENUMERATED_VALUE */
+const HandoverType_intra5GS = HandoverType.intra5GS satisfies HandoverType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary intra5GS
@@ -103,7 +103,7 @@ const HandoverType_intra5GS: HandoverType = HandoverType.intra5GS; /* LONG_NAMED
  * @type {number}
  */
 export
-const intra5GS: HandoverType = HandoverType.intra5GS; /* SHORT_NAMED_ENUMERATED_VALUE */
+const intra5GS = HandoverType.intra5GS satisfies HandoverType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary HandoverType_fiveGStoEPS
@@ -111,7 +111,7 @@ const intra5GS: HandoverType = HandoverType.intra5GS; /* SHORT_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const HandoverType_fiveGStoEPS: HandoverType = HandoverType.fiveGStoEPS; /* LONG_NAMED_ENUMERATED_VALUE */
+const HandoverType_fiveGStoEPS = HandoverType.fiveGStoEPS satisfies HandoverType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary fiveGStoEPS
@@ -119,7 +119,7 @@ const HandoverType_fiveGStoEPS: HandoverType = HandoverType.fiveGStoEPS; /* LONG
  * @type {number}
  */
 export
-const fiveGStoEPS: HandoverType = HandoverType.fiveGStoEPS; /* SHORT_NAMED_ENUMERATED_VALUE */
+const fiveGStoEPS = HandoverType.fiveGStoEPS satisfies HandoverType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary HandoverType_ePSto5GS
@@ -127,7 +127,7 @@ const fiveGStoEPS: HandoverType = HandoverType.fiveGStoEPS; /* SHORT_NAMED_ENUME
  * @type {number}
  */
 export
-const HandoverType_ePSto5GS: HandoverType = HandoverType.ePSto5GS; /* LONG_NAMED_ENUMERATED_VALUE */
+const HandoverType_ePSto5GS = HandoverType.ePSto5GS satisfies HandoverType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ePSto5GS
@@ -135,7 +135,7 @@ const HandoverType_ePSto5GS: HandoverType = HandoverType.ePSto5GS; /* LONG_NAMED
  * @type {number}
  */
 export
-const ePSto5GS: HandoverType = HandoverType.ePSto5GS; /* SHORT_NAMED_ENUMERATED_VALUE */
+const ePSto5GS = HandoverType.ePSto5GS satisfies HandoverType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary HandoverType_fiveGStoUTRA
@@ -143,7 +143,7 @@ const ePSto5GS: HandoverType = HandoverType.ePSto5GS; /* SHORT_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const HandoverType_fiveGStoUTRA: HandoverType = HandoverType.fiveGStoUTRA; /* LONG_NAMED_ENUMERATED_VALUE */
+const HandoverType_fiveGStoUTRA = HandoverType.fiveGStoUTRA satisfies HandoverType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary fiveGStoUTRA
@@ -151,7 +151,7 @@ const HandoverType_fiveGStoUTRA: HandoverType = HandoverType.fiveGStoUTRA; /* LO
  * @type {number}
  */
 export
-const fiveGStoUTRA: HandoverType = HandoverType.fiveGStoUTRA; /* SHORT_NAMED_ENUMERATED_VALUE */
+const fiveGStoUTRA = HandoverType.fiveGStoUTRA satisfies HandoverType; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_HandoverType: $.ASN1Decoder<HandoverType> = $._decodeEnumerated;
 export const _encode_HandoverType: $.ASN1Encoder<HandoverType> = $._encodeEnumerated;
 

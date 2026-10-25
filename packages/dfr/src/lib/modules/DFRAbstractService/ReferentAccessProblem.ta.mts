@@ -116,7 +116,7 @@ const ReferentAccessProblem = _enum_for_ReferentAccessProblem;
  * @type {number}
  */
 export
-const ReferentAccessProblem_inappropriate_object_class: ReferentAccessProblem = ReferentAccessProblem.inappropriate_object_class; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReferentAccessProblem_inappropriate_object_class = ReferentAccessProblem.inappropriate_object_class satisfies ReferentAccessProblem; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary inappropriate_object_class
@@ -127,7 +127,7 @@ const ReferentAccessProblem_inappropriate_object_class: ReferentAccessProblem = 
  * @type {number}
  */
 export
-const inappropriate_object_class: ReferentAccessProblem = ReferentAccessProblem.inappropriate_object_class; /* SHORT_NAMED_ENUMERATED_VALUE */
+const inappropriate_object_class = ReferentAccessProblem.inappropriate_object_class satisfies ReferentAccessProblem; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReferentAccessProblem_insufficient_access_rights
@@ -138,7 +138,7 @@ const inappropriate_object_class: ReferentAccessProblem = ReferentAccessProblem.
  * @type {number}
  */
 export
-const ReferentAccessProblem_insufficient_access_rights: ReferentAccessProblem = ReferentAccessProblem.insufficient_access_rights; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReferentAccessProblem_insufficient_access_rights = ReferentAccessProblem.insufficient_access_rights satisfies ReferentAccessProblem; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary insufficient_access_rights
@@ -149,7 +149,7 @@ const ReferentAccessProblem_insufficient_access_rights: ReferentAccessProblem = 
  * @type {number}
  */
 export
-const insufficient_access_rights: ReferentAccessProblem = ReferentAccessProblem.insufficient_access_rights; /* SHORT_NAMED_ENUMERATED_VALUE */
+const insufficient_access_rights = ReferentAccessProblem.insufficient_access_rights satisfies ReferentAccessProblem; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReferentAccessProblem_reserved_by_a_user
@@ -160,7 +160,7 @@ const insufficient_access_rights: ReferentAccessProblem = ReferentAccessProblem.
  * @type {number}
  */
 export
-const ReferentAccessProblem_reserved_by_a_user: ReferentAccessProblem = ReferentAccessProblem.reserved_by_a_user; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReferentAccessProblem_reserved_by_a_user = ReferentAccessProblem.reserved_by_a_user satisfies ReferentAccessProblem; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary reserved_by_a_user
@@ -171,7 +171,7 @@ const ReferentAccessProblem_reserved_by_a_user: ReferentAccessProblem = Referent
  * @type {number}
  */
 export
-const reserved_by_a_user: ReferentAccessProblem = ReferentAccessProblem.reserved_by_a_user; /* SHORT_NAMED_ENUMERATED_VALUE */
+const reserved_by_a_user = ReferentAccessProblem.reserved_by_a_user satisfies ReferentAccessProblem; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReferentAccessProblem_referent_no_longer_exists
@@ -182,7 +182,7 @@ const reserved_by_a_user: ReferentAccessProblem = ReferentAccessProblem.reserved
  * @type {number}
  */
 export
-const ReferentAccessProblem_referent_no_longer_exists: ReferentAccessProblem = ReferentAccessProblem.referent_no_longer_exists; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReferentAccessProblem_referent_no_longer_exists = ReferentAccessProblem.referent_no_longer_exists satisfies ReferentAccessProblem; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary referent_no_longer_exists
@@ -193,7 +193,7 @@ const ReferentAccessProblem_referent_no_longer_exists: ReferentAccessProblem = R
  * @type {number}
  */
 export
-const referent_no_longer_exists: ReferentAccessProblem = ReferentAccessProblem.referent_no_longer_exists; /* SHORT_NAMED_ENUMERATED_VALUE */
+const referent_no_longer_exists = ReferentAccessProblem.referent_no_longer_exists satisfies ReferentAccessProblem; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReferentAccessProblem_referent_modified
@@ -205,7 +205,7 @@ const referent_no_longer_exists: ReferentAccessProblem = ReferentAccessProblem.r
  * @type {number}
  */
 export
-const ReferentAccessProblem_referent_modified: ReferentAccessProblem = ReferentAccessProblem.referent_modified; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReferentAccessProblem_referent_modified = ReferentAccessProblem.referent_modified satisfies ReferentAccessProblem; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary referent_modified
@@ -217,7 +217,7 @@ const ReferentAccessProblem_referent_modified: ReferentAccessProblem = ReferentA
  * @type {number}
  */
 export
-const referent_modified: ReferentAccessProblem = ReferentAccessProblem.referent_modified; /* SHORT_NAMED_ENUMERATED_VALUE */
+const referent_modified = ReferentAccessProblem.referent_modified satisfies ReferentAccessProblem; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReferentAccessProblem_reference_content_empty
@@ -228,7 +228,7 @@ const referent_modified: ReferentAccessProblem = ReferentAccessProblem.referent_
  * @type {number}
  */
 export
-const ReferentAccessProblem_reference_content_empty: ReferentAccessProblem = ReferentAccessProblem.reference_content_empty; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReferentAccessProblem_reference_content_empty = ReferentAccessProblem.reference_content_empty satisfies ReferentAccessProblem; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary reference_content_empty
@@ -239,7 +239,7 @@ const ReferentAccessProblem_reference_content_empty: ReferentAccessProblem = Ref
  * @type {number}
  */
 export
-const reference_content_empty: ReferentAccessProblem = ReferentAccessProblem.reference_content_empty; /* SHORT_NAMED_ENUMERATED_VALUE */
+const reference_content_empty = ReferentAccessProblem.reference_content_empty satisfies ReferentAccessProblem; /* SHORT_NAMED_ENUMERATED_VALUE */
 export function _decode_ReferentAccessProblem(el: _Element): ReferentAccessProblem {
     const enumerated = $._decodeEnumerated(el);
     switch (enumerated) {

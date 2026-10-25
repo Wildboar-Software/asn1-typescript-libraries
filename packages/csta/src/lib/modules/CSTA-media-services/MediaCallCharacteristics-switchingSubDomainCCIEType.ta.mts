@@ -103,7 +103,7 @@ const MediaCallCharacteristics_switchingSubDomainCCIEType = _enum_for_MediaCallC
  * @type {number}
  */
 export
-const MediaCallCharacteristics_switchingSubDomainCCIEType_isdn: MediaCallCharacteristics_switchingSubDomainCCIEType = MediaCallCharacteristics_switchingSubDomainCCIEType.isdn; /* LONG_NAMED_ENUMERATED_VALUE */
+const MediaCallCharacteristics_switchingSubDomainCCIEType_isdn = MediaCallCharacteristics_switchingSubDomainCCIEType.isdn satisfies MediaCallCharacteristics_switchingSubDomainCCIEType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary isdn
@@ -111,7 +111,7 @@ const MediaCallCharacteristics_switchingSubDomainCCIEType_isdn: MediaCallCharact
  * @type {number}
  */
 export
-const isdn: MediaCallCharacteristics_switchingSubDomainCCIEType = MediaCallCharacteristics_switchingSubDomainCCIEType.isdn; /* SHORT_NAMED_ENUMERATED_VALUE */
+const isdn = MediaCallCharacteristics_switchingSubDomainCCIEType.isdn satisfies MediaCallCharacteristics_switchingSubDomainCCIEType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MediaCallCharacteristics_switchingSubDomainCCIEType_atm
@@ -123,7 +123,7 @@ const isdn: MediaCallCharacteristics_switchingSubDomainCCIEType = MediaCallChara
  * @type {number}
  */
 export
-const MediaCallCharacteristics_switchingSubDomainCCIEType_atm: MediaCallCharacteristics_switchingSubDomainCCIEType = MediaCallCharacteristics_switchingSubDomainCCIEType.atm; /* LONG_NAMED_ENUMERATED_VALUE */
+const MediaCallCharacteristics_switchingSubDomainCCIEType_atm = MediaCallCharacteristics_switchingSubDomainCCIEType.atm satisfies MediaCallCharacteristics_switchingSubDomainCCIEType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary atm
@@ -131,7 +131,7 @@ const MediaCallCharacteristics_switchingSubDomainCCIEType_atm: MediaCallCharacte
  * @type {number}
  */
 export
-const atm: MediaCallCharacteristics_switchingSubDomainCCIEType = MediaCallCharacteristics_switchingSubDomainCCIEType.atm; /* SHORT_NAMED_ENUMERATED_VALUE */
+const atm = MediaCallCharacteristics_switchingSubDomainCCIEType.atm satisfies MediaCallCharacteristics_switchingSubDomainCCIEType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MediaCallCharacteristics_switchingSubDomainCCIEType_isoEthernet
@@ -143,7 +143,7 @@ const atm: MediaCallCharacteristics_switchingSubDomainCCIEType = MediaCallCharac
  * @type {number}
  */
 export
-const MediaCallCharacteristics_switchingSubDomainCCIEType_isoEthernet: MediaCallCharacteristics_switchingSubDomainCCIEType = MediaCallCharacteristics_switchingSubDomainCCIEType.isoEthernet; /* LONG_NAMED_ENUMERATED_VALUE */
+const MediaCallCharacteristics_switchingSubDomainCCIEType_isoEthernet = MediaCallCharacteristics_switchingSubDomainCCIEType.isoEthernet satisfies MediaCallCharacteristics_switchingSubDomainCCIEType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary isoEthernet
@@ -151,7 +151,7 @@ const MediaCallCharacteristics_switchingSubDomainCCIEType_isoEthernet: MediaCall
  * @type {number}
  */
 export
-const isoEthernet: MediaCallCharacteristics_switchingSubDomainCCIEType = MediaCallCharacteristics_switchingSubDomainCCIEType.isoEthernet; /* SHORT_NAMED_ENUMERATED_VALUE */
+const isoEthernet = MediaCallCharacteristics_switchingSubDomainCCIEType.isoEthernet satisfies MediaCallCharacteristics_switchingSubDomainCCIEType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MediaCallCharacteristics_switchingSubDomainCCIEType_rsvp
@@ -163,7 +163,7 @@ const isoEthernet: MediaCallCharacteristics_switchingSubDomainCCIEType = MediaCa
  * @type {number}
  */
 export
-const MediaCallCharacteristics_switchingSubDomainCCIEType_rsvp: MediaCallCharacteristics_switchingSubDomainCCIEType = MediaCallCharacteristics_switchingSubDomainCCIEType.rsvp; /* LONG_NAMED_ENUMERATED_VALUE */
+const MediaCallCharacteristics_switchingSubDomainCCIEType_rsvp = MediaCallCharacteristics_switchingSubDomainCCIEType.rsvp satisfies MediaCallCharacteristics_switchingSubDomainCCIEType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary rsvp
@@ -171,7 +171,7 @@ const MediaCallCharacteristics_switchingSubDomainCCIEType_rsvp: MediaCallCharact
  * @type {number}
  */
 export
-const rsvp: MediaCallCharacteristics_switchingSubDomainCCIEType = MediaCallCharacteristics_switchingSubDomainCCIEType.rsvp; /* SHORT_NAMED_ENUMERATED_VALUE */
+const rsvp = MediaCallCharacteristics_switchingSubDomainCCIEType.rsvp satisfies MediaCallCharacteristics_switchingSubDomainCCIEType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MediaCallCharacteristics_switchingSubDomainCCIEType_other
@@ -183,7 +183,7 @@ const rsvp: MediaCallCharacteristics_switchingSubDomainCCIEType = MediaCallChara
  * @type {number}
  */
 export
-const MediaCallCharacteristics_switchingSubDomainCCIEType_other: MediaCallCharacteristics_switchingSubDomainCCIEType = MediaCallCharacteristics_switchingSubDomainCCIEType.other; /* LONG_NAMED_ENUMERATED_VALUE */
+const MediaCallCharacteristics_switchingSubDomainCCIEType_other = MediaCallCharacteristics_switchingSubDomainCCIEType.other satisfies MediaCallCharacteristics_switchingSubDomainCCIEType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary other
@@ -191,7 +191,7 @@ const MediaCallCharacteristics_switchingSubDomainCCIEType_other: MediaCallCharac
  * @type {number}
  */
 export
-const other: MediaCallCharacteristics_switchingSubDomainCCIEType = MediaCallCharacteristics_switchingSubDomainCCIEType.other; /* SHORT_NAMED_ENUMERATED_VALUE */
+const other = MediaCallCharacteristics_switchingSubDomainCCIEType.other satisfies MediaCallCharacteristics_switchingSubDomainCCIEType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MediaCallCharacteristics_switchingSubDomainCCIEType_sip
@@ -203,7 +203,7 @@ const other: MediaCallCharacteristics_switchingSubDomainCCIEType = MediaCallChar
  * @type {number}
  */
 export
-const MediaCallCharacteristics_switchingSubDomainCCIEType_sip: MediaCallCharacteristics_switchingSubDomainCCIEType = MediaCallCharacteristics_switchingSubDomainCCIEType.sip; /* LONG_NAMED_ENUMERATED_VALUE */
+const MediaCallCharacteristics_switchingSubDomainCCIEType_sip = MediaCallCharacteristics_switchingSubDomainCCIEType.sip satisfies MediaCallCharacteristics_switchingSubDomainCCIEType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sip
@@ -211,7 +211,7 @@ const MediaCallCharacteristics_switchingSubDomainCCIEType_sip: MediaCallCharacte
  * @type {number}
  */
 export
-const sip: MediaCallCharacteristics_switchingSubDomainCCIEType = MediaCallCharacteristics_switchingSubDomainCCIEType.sip; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sip = MediaCallCharacteristics_switchingSubDomainCCIEType.sip satisfies MediaCallCharacteristics_switchingSubDomainCCIEType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 let _cached_decoder_for_MediaCallCharacteristics_switchingSubDomainCCIEType: $.ASN1Decoder<MediaCallCharacteristics_switchingSubDomainCCIEType> | null = null;
 

@@ -136,7 +136,7 @@ const EventTypeBCSM = _enum_for_EventTypeBCSM;
  * @type {number}
  */
 export
-const EventTypeBCSM_origAttemptAuthorized: EventTypeBCSM = EventTypeBCSM.origAttemptAuthorized; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventTypeBCSM_origAttemptAuthorized = EventTypeBCSM.origAttemptAuthorized satisfies EventTypeBCSM; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary origAttemptAuthorized
@@ -144,7 +144,7 @@ const EventTypeBCSM_origAttemptAuthorized: EventTypeBCSM = EventTypeBCSM.origAtt
  * @type {number}
  */
 export
-const origAttemptAuthorized: EventTypeBCSM = EventTypeBCSM.origAttemptAuthorized; /* SHORT_NAMED_ENUMERATED_VALUE */
+const origAttemptAuthorized = EventTypeBCSM.origAttemptAuthorized satisfies EventTypeBCSM; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventTypeBCSM_collectedInfo
@@ -152,7 +152,7 @@ const origAttemptAuthorized: EventTypeBCSM = EventTypeBCSM.origAttemptAuthorized
  * @type {number}
  */
 export
-const EventTypeBCSM_collectedInfo: EventTypeBCSM = EventTypeBCSM.collectedInfo; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventTypeBCSM_collectedInfo = EventTypeBCSM.collectedInfo satisfies EventTypeBCSM; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary collectedInfo
@@ -160,7 +160,7 @@ const EventTypeBCSM_collectedInfo: EventTypeBCSM = EventTypeBCSM.collectedInfo; 
  * @type {number}
  */
 export
-const collectedInfo: EventTypeBCSM = EventTypeBCSM.collectedInfo; /* SHORT_NAMED_ENUMERATED_VALUE */
+const collectedInfo = EventTypeBCSM.collectedInfo satisfies EventTypeBCSM; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventTypeBCSM_analyzedInformation
@@ -168,7 +168,7 @@ const collectedInfo: EventTypeBCSM = EventTypeBCSM.collectedInfo; /* SHORT_NAMED
  * @type {number}
  */
 export
-const EventTypeBCSM_analyzedInformation: EventTypeBCSM = EventTypeBCSM.analyzedInformation; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventTypeBCSM_analyzedInformation = EventTypeBCSM.analyzedInformation satisfies EventTypeBCSM; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary analyzedInformation
@@ -176,7 +176,7 @@ const EventTypeBCSM_analyzedInformation: EventTypeBCSM = EventTypeBCSM.analyzedI
  * @type {number}
  */
 export
-const analyzedInformation: EventTypeBCSM = EventTypeBCSM.analyzedInformation; /* SHORT_NAMED_ENUMERATED_VALUE */
+const analyzedInformation = EventTypeBCSM.analyzedInformation satisfies EventTypeBCSM; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventTypeBCSM_routeSelectFailure
@@ -184,7 +184,7 @@ const analyzedInformation: EventTypeBCSM = EventTypeBCSM.analyzedInformation; /*
  * @type {number}
  */
 export
-const EventTypeBCSM_routeSelectFailure: EventTypeBCSM = EventTypeBCSM.routeSelectFailure; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventTypeBCSM_routeSelectFailure = EventTypeBCSM.routeSelectFailure satisfies EventTypeBCSM; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary routeSelectFailure
@@ -192,7 +192,7 @@ const EventTypeBCSM_routeSelectFailure: EventTypeBCSM = EventTypeBCSM.routeSelec
  * @type {number}
  */
 export
-const routeSelectFailure: EventTypeBCSM = EventTypeBCSM.routeSelectFailure; /* SHORT_NAMED_ENUMERATED_VALUE */
+const routeSelectFailure = EventTypeBCSM.routeSelectFailure satisfies EventTypeBCSM; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventTypeBCSM_oCalledPartyBusy
@@ -200,7 +200,7 @@ const routeSelectFailure: EventTypeBCSM = EventTypeBCSM.routeSelectFailure; /* S
  * @type {number}
  */
 export
-const EventTypeBCSM_oCalledPartyBusy: EventTypeBCSM = EventTypeBCSM.oCalledPartyBusy; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventTypeBCSM_oCalledPartyBusy = EventTypeBCSM.oCalledPartyBusy satisfies EventTypeBCSM; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary oCalledPartyBusy
@@ -208,7 +208,7 @@ const EventTypeBCSM_oCalledPartyBusy: EventTypeBCSM = EventTypeBCSM.oCalledParty
  * @type {number}
  */
 export
-const oCalledPartyBusy: EventTypeBCSM = EventTypeBCSM.oCalledPartyBusy; /* SHORT_NAMED_ENUMERATED_VALUE */
+const oCalledPartyBusy = EventTypeBCSM.oCalledPartyBusy satisfies EventTypeBCSM; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventTypeBCSM_oNoAnswer
@@ -216,7 +216,7 @@ const oCalledPartyBusy: EventTypeBCSM = EventTypeBCSM.oCalledPartyBusy; /* SHORT
  * @type {number}
  */
 export
-const EventTypeBCSM_oNoAnswer: EventTypeBCSM = EventTypeBCSM.oNoAnswer; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventTypeBCSM_oNoAnswer = EventTypeBCSM.oNoAnswer satisfies EventTypeBCSM; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary oNoAnswer
@@ -224,7 +224,7 @@ const EventTypeBCSM_oNoAnswer: EventTypeBCSM = EventTypeBCSM.oNoAnswer; /* LONG_
  * @type {number}
  */
 export
-const oNoAnswer: EventTypeBCSM = EventTypeBCSM.oNoAnswer; /* SHORT_NAMED_ENUMERATED_VALUE */
+const oNoAnswer = EventTypeBCSM.oNoAnswer satisfies EventTypeBCSM; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventTypeBCSM_oAnswer
@@ -232,7 +232,7 @@ const oNoAnswer: EventTypeBCSM = EventTypeBCSM.oNoAnswer; /* SHORT_NAMED_ENUMERA
  * @type {number}
  */
 export
-const EventTypeBCSM_oAnswer: EventTypeBCSM = EventTypeBCSM.oAnswer; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventTypeBCSM_oAnswer = EventTypeBCSM.oAnswer satisfies EventTypeBCSM; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary oAnswer
@@ -240,7 +240,7 @@ const EventTypeBCSM_oAnswer: EventTypeBCSM = EventTypeBCSM.oAnswer; /* LONG_NAME
  * @type {number}
  */
 export
-const oAnswer: EventTypeBCSM = EventTypeBCSM.oAnswer; /* SHORT_NAMED_ENUMERATED_VALUE */
+const oAnswer = EventTypeBCSM.oAnswer satisfies EventTypeBCSM; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventTypeBCSM_oMidCall
@@ -248,7 +248,7 @@ const oAnswer: EventTypeBCSM = EventTypeBCSM.oAnswer; /* SHORT_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const EventTypeBCSM_oMidCall: EventTypeBCSM = EventTypeBCSM.oMidCall; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventTypeBCSM_oMidCall = EventTypeBCSM.oMidCall satisfies EventTypeBCSM; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary oMidCall
@@ -256,7 +256,7 @@ const EventTypeBCSM_oMidCall: EventTypeBCSM = EventTypeBCSM.oMidCall; /* LONG_NA
  * @type {number}
  */
 export
-const oMidCall: EventTypeBCSM = EventTypeBCSM.oMidCall; /* SHORT_NAMED_ENUMERATED_VALUE */
+const oMidCall = EventTypeBCSM.oMidCall satisfies EventTypeBCSM; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventTypeBCSM_oDisconnect
@@ -264,7 +264,7 @@ const oMidCall: EventTypeBCSM = EventTypeBCSM.oMidCall; /* SHORT_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const EventTypeBCSM_oDisconnect: EventTypeBCSM = EventTypeBCSM.oDisconnect; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventTypeBCSM_oDisconnect = EventTypeBCSM.oDisconnect satisfies EventTypeBCSM; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary oDisconnect
@@ -272,7 +272,7 @@ const EventTypeBCSM_oDisconnect: EventTypeBCSM = EventTypeBCSM.oDisconnect; /* L
  * @type {number}
  */
 export
-const oDisconnect: EventTypeBCSM = EventTypeBCSM.oDisconnect; /* SHORT_NAMED_ENUMERATED_VALUE */
+const oDisconnect = EventTypeBCSM.oDisconnect satisfies EventTypeBCSM; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventTypeBCSM_oAbandon
@@ -280,7 +280,7 @@ const oDisconnect: EventTypeBCSM = EventTypeBCSM.oDisconnect; /* SHORT_NAMED_ENU
  * @type {number}
  */
 export
-const EventTypeBCSM_oAbandon: EventTypeBCSM = EventTypeBCSM.oAbandon; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventTypeBCSM_oAbandon = EventTypeBCSM.oAbandon satisfies EventTypeBCSM; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary oAbandon
@@ -288,7 +288,7 @@ const EventTypeBCSM_oAbandon: EventTypeBCSM = EventTypeBCSM.oAbandon; /* LONG_NA
  * @type {number}
  */
 export
-const oAbandon: EventTypeBCSM = EventTypeBCSM.oAbandon; /* SHORT_NAMED_ENUMERATED_VALUE */
+const oAbandon = EventTypeBCSM.oAbandon satisfies EventTypeBCSM; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventTypeBCSM_termAttemptAuthorized
@@ -296,7 +296,7 @@ const oAbandon: EventTypeBCSM = EventTypeBCSM.oAbandon; /* SHORT_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const EventTypeBCSM_termAttemptAuthorized: EventTypeBCSM = EventTypeBCSM.termAttemptAuthorized; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventTypeBCSM_termAttemptAuthorized = EventTypeBCSM.termAttemptAuthorized satisfies EventTypeBCSM; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary termAttemptAuthorized
@@ -304,7 +304,7 @@ const EventTypeBCSM_termAttemptAuthorized: EventTypeBCSM = EventTypeBCSM.termAtt
  * @type {number}
  */
 export
-const termAttemptAuthorized: EventTypeBCSM = EventTypeBCSM.termAttemptAuthorized; /* SHORT_NAMED_ENUMERATED_VALUE */
+const termAttemptAuthorized = EventTypeBCSM.termAttemptAuthorized satisfies EventTypeBCSM; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventTypeBCSM_tCalledPartyBusy
@@ -312,7 +312,7 @@ const termAttemptAuthorized: EventTypeBCSM = EventTypeBCSM.termAttemptAuthorized
  * @type {number}
  */
 export
-const EventTypeBCSM_tCalledPartyBusy: EventTypeBCSM = EventTypeBCSM.tCalledPartyBusy; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventTypeBCSM_tCalledPartyBusy = EventTypeBCSM.tCalledPartyBusy satisfies EventTypeBCSM; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tCalledPartyBusy
@@ -320,7 +320,7 @@ const EventTypeBCSM_tCalledPartyBusy: EventTypeBCSM = EventTypeBCSM.tCalledParty
  * @type {number}
  */
 export
-const tCalledPartyBusy: EventTypeBCSM = EventTypeBCSM.tCalledPartyBusy; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tCalledPartyBusy = EventTypeBCSM.tCalledPartyBusy satisfies EventTypeBCSM; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventTypeBCSM_tNoAnswer
@@ -328,7 +328,7 @@ const tCalledPartyBusy: EventTypeBCSM = EventTypeBCSM.tCalledPartyBusy; /* SHORT
  * @type {number}
  */
 export
-const EventTypeBCSM_tNoAnswer: EventTypeBCSM = EventTypeBCSM.tNoAnswer; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventTypeBCSM_tNoAnswer = EventTypeBCSM.tNoAnswer satisfies EventTypeBCSM; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tNoAnswer
@@ -336,7 +336,7 @@ const EventTypeBCSM_tNoAnswer: EventTypeBCSM = EventTypeBCSM.tNoAnswer; /* LONG_
  * @type {number}
  */
 export
-const tNoAnswer: EventTypeBCSM = EventTypeBCSM.tNoAnswer; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tNoAnswer = EventTypeBCSM.tNoAnswer satisfies EventTypeBCSM; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventTypeBCSM_tAnswer
@@ -344,7 +344,7 @@ const tNoAnswer: EventTypeBCSM = EventTypeBCSM.tNoAnswer; /* SHORT_NAMED_ENUMERA
  * @type {number}
  */
 export
-const EventTypeBCSM_tAnswer: EventTypeBCSM = EventTypeBCSM.tAnswer; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventTypeBCSM_tAnswer = EventTypeBCSM.tAnswer satisfies EventTypeBCSM; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tAnswer
@@ -352,7 +352,7 @@ const EventTypeBCSM_tAnswer: EventTypeBCSM = EventTypeBCSM.tAnswer; /* LONG_NAME
  * @type {number}
  */
 export
-const tAnswer: EventTypeBCSM = EventTypeBCSM.tAnswer; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tAnswer = EventTypeBCSM.tAnswer satisfies EventTypeBCSM; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventTypeBCSM_tMidCall
@@ -360,7 +360,7 @@ const tAnswer: EventTypeBCSM = EventTypeBCSM.tAnswer; /* SHORT_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const EventTypeBCSM_tMidCall: EventTypeBCSM = EventTypeBCSM.tMidCall; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventTypeBCSM_tMidCall = EventTypeBCSM.tMidCall satisfies EventTypeBCSM; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tMidCall
@@ -368,7 +368,7 @@ const EventTypeBCSM_tMidCall: EventTypeBCSM = EventTypeBCSM.tMidCall; /* LONG_NA
  * @type {number}
  */
 export
-const tMidCall: EventTypeBCSM = EventTypeBCSM.tMidCall; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tMidCall = EventTypeBCSM.tMidCall satisfies EventTypeBCSM; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventTypeBCSM_tDisconnect
@@ -376,7 +376,7 @@ const tMidCall: EventTypeBCSM = EventTypeBCSM.tMidCall; /* SHORT_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const EventTypeBCSM_tDisconnect: EventTypeBCSM = EventTypeBCSM.tDisconnect; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventTypeBCSM_tDisconnect = EventTypeBCSM.tDisconnect satisfies EventTypeBCSM; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tDisconnect
@@ -384,7 +384,7 @@ const EventTypeBCSM_tDisconnect: EventTypeBCSM = EventTypeBCSM.tDisconnect; /* L
  * @type {number}
  */
 export
-const tDisconnect: EventTypeBCSM = EventTypeBCSM.tDisconnect; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tDisconnect = EventTypeBCSM.tDisconnect satisfies EventTypeBCSM; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventTypeBCSM_tAbandon
@@ -392,7 +392,7 @@ const tDisconnect: EventTypeBCSM = EventTypeBCSM.tDisconnect; /* SHORT_NAMED_ENU
  * @type {number}
  */
 export
-const EventTypeBCSM_tAbandon: EventTypeBCSM = EventTypeBCSM.tAbandon; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventTypeBCSM_tAbandon = EventTypeBCSM.tAbandon satisfies EventTypeBCSM; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tAbandon
@@ -400,7 +400,7 @@ const EventTypeBCSM_tAbandon: EventTypeBCSM = EventTypeBCSM.tAbandon; /* LONG_NA
  * @type {number}
  */
 export
-const tAbandon: EventTypeBCSM = EventTypeBCSM.tAbandon; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tAbandon = EventTypeBCSM.tAbandon satisfies EventTypeBCSM; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_EventTypeBCSM = $._decodeEnumerated;
 export const _encode_EventTypeBCSM = $._encodeEnumerated;
 

@@ -85,7 +85,7 @@ const NEFReleaseCause = _enum_for_NEFReleaseCause;
  * @type {number}
  */
 export
-const NEFReleaseCause_sMFRelease: NEFReleaseCause = NEFReleaseCause.sMFRelease; /* LONG_NAMED_ENUMERATED_VALUE */
+const NEFReleaseCause_sMFRelease = NEFReleaseCause.sMFRelease satisfies NEFReleaseCause; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sMFRelease
@@ -93,7 +93,7 @@ const NEFReleaseCause_sMFRelease: NEFReleaseCause = NEFReleaseCause.sMFRelease; 
  * @type {number}
  */
 export
-const sMFRelease: NEFReleaseCause = NEFReleaseCause.sMFRelease; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sMFRelease = NEFReleaseCause.sMFRelease satisfies NEFReleaseCause; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NEFReleaseCause_dNRelease
@@ -101,7 +101,7 @@ const sMFRelease: NEFReleaseCause = NEFReleaseCause.sMFRelease; /* SHORT_NAMED_E
  * @type {number}
  */
 export
-const NEFReleaseCause_dNRelease: NEFReleaseCause = NEFReleaseCause.dNRelease; /* LONG_NAMED_ENUMERATED_VALUE */
+const NEFReleaseCause_dNRelease = NEFReleaseCause.dNRelease satisfies NEFReleaseCause; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary dNRelease
@@ -109,7 +109,7 @@ const NEFReleaseCause_dNRelease: NEFReleaseCause = NEFReleaseCause.dNRelease; /*
  * @type {number}
  */
 export
-const dNRelease: NEFReleaseCause = NEFReleaseCause.dNRelease; /* SHORT_NAMED_ENUMERATED_VALUE */
+const dNRelease = NEFReleaseCause.dNRelease satisfies NEFReleaseCause; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NEFReleaseCause_uDMRelease
@@ -117,7 +117,7 @@ const dNRelease: NEFReleaseCause = NEFReleaseCause.dNRelease; /* SHORT_NAMED_ENU
  * @type {number}
  */
 export
-const NEFReleaseCause_uDMRelease: NEFReleaseCause = NEFReleaseCause.uDMRelease; /* LONG_NAMED_ENUMERATED_VALUE */
+const NEFReleaseCause_uDMRelease = NEFReleaseCause.uDMRelease satisfies NEFReleaseCause; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary uDMRelease
@@ -125,7 +125,7 @@ const NEFReleaseCause_uDMRelease: NEFReleaseCause = NEFReleaseCause.uDMRelease; 
  * @type {number}
  */
 export
-const uDMRelease: NEFReleaseCause = NEFReleaseCause.uDMRelease; /* SHORT_NAMED_ENUMERATED_VALUE */
+const uDMRelease = NEFReleaseCause.uDMRelease satisfies NEFReleaseCause; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NEFReleaseCause_cHFRelease
@@ -133,7 +133,7 @@ const uDMRelease: NEFReleaseCause = NEFReleaseCause.uDMRelease; /* SHORT_NAMED_E
  * @type {number}
  */
 export
-const NEFReleaseCause_cHFRelease: NEFReleaseCause = NEFReleaseCause.cHFRelease; /* LONG_NAMED_ENUMERATED_VALUE */
+const NEFReleaseCause_cHFRelease = NEFReleaseCause.cHFRelease satisfies NEFReleaseCause; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary cHFRelease
@@ -141,7 +141,7 @@ const NEFReleaseCause_cHFRelease: NEFReleaseCause = NEFReleaseCause.cHFRelease; 
  * @type {number}
  */
 export
-const cHFRelease: NEFReleaseCause = NEFReleaseCause.cHFRelease; /* SHORT_NAMED_ENUMERATED_VALUE */
+const cHFRelease = NEFReleaseCause.cHFRelease satisfies NEFReleaseCause; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NEFReleaseCause_localConfigurationPolicy
@@ -149,7 +149,7 @@ const cHFRelease: NEFReleaseCause = NEFReleaseCause.cHFRelease; /* SHORT_NAMED_E
  * @type {number}
  */
 export
-const NEFReleaseCause_localConfigurationPolicy: NEFReleaseCause = NEFReleaseCause.localConfigurationPolicy; /* LONG_NAMED_ENUMERATED_VALUE */
+const NEFReleaseCause_localConfigurationPolicy = NEFReleaseCause.localConfigurationPolicy satisfies NEFReleaseCause; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary localConfigurationPolicy
@@ -157,7 +157,7 @@ const NEFReleaseCause_localConfigurationPolicy: NEFReleaseCause = NEFReleaseCaus
  * @type {number}
  */
 export
-const localConfigurationPolicy: NEFReleaseCause = NEFReleaseCause.localConfigurationPolicy; /* SHORT_NAMED_ENUMERATED_VALUE */
+const localConfigurationPolicy = NEFReleaseCause.localConfigurationPolicy satisfies NEFReleaseCause; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NEFReleaseCause_unknownCause
@@ -165,7 +165,7 @@ const localConfigurationPolicy: NEFReleaseCause = NEFReleaseCause.localConfigura
  * @type {number}
  */
 export
-const NEFReleaseCause_unknownCause: NEFReleaseCause = NEFReleaseCause.unknownCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const NEFReleaseCause_unknownCause = NEFReleaseCause.unknownCause satisfies NEFReleaseCause; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unknownCause
@@ -173,7 +173,7 @@ const NEFReleaseCause_unknownCause: NEFReleaseCause = NEFReleaseCause.unknownCau
  * @type {number}
  */
 export
-const unknownCause: NEFReleaseCause = NEFReleaseCause.unknownCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unknownCause = NEFReleaseCause.unknownCause satisfies NEFReleaseCause; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_NEFReleaseCause: $.ASN1Decoder<NEFReleaseCause> = $._decodeEnumerated;
 export const _encode_NEFReleaseCause: $.ASN1Encoder<NEFReleaseCause> = $._encodeEnumerated;
 

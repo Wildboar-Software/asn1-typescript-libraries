@@ -100,7 +100,7 @@ const ProSeFunctionRole = _enum_for_ProSeFunctionRole;
  * @type {number}
  */
 export
-const ProSeFunctionRole_hPLMN: ProSeFunctionRole = ProSeFunctionRole.hPLMN; /* LONG_NAMED_ENUMERATED_VALUE */
+const ProSeFunctionRole_hPLMN = ProSeFunctionRole.hPLMN satisfies ProSeFunctionRole; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary hPLMN
@@ -112,7 +112,7 @@ const ProSeFunctionRole_hPLMN: ProSeFunctionRole = ProSeFunctionRole.hPLMN; /* L
  * @type {number}
  */
 export
-const hPLMN: ProSeFunctionRole = ProSeFunctionRole.hPLMN; /* SHORT_NAMED_ENUMERATED_VALUE */
+const hPLMN = ProSeFunctionRole.hPLMN satisfies ProSeFunctionRole; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ProSeFunctionRole_vPLMN
@@ -127,7 +127,7 @@ const hPLMN: ProSeFunctionRole = ProSeFunctionRole.hPLMN; /* SHORT_NAMED_ENUMERA
  * @type {number}
  */
 export
-const ProSeFunctionRole_vPLMN: ProSeFunctionRole = ProSeFunctionRole.vPLMN; /* LONG_NAMED_ENUMERATED_VALUE */
+const ProSeFunctionRole_vPLMN = ProSeFunctionRole.vPLMN satisfies ProSeFunctionRole; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary vPLMN
@@ -139,7 +139,7 @@ const ProSeFunctionRole_vPLMN: ProSeFunctionRole = ProSeFunctionRole.vPLMN; /* L
  * @type {number}
  */
 export
-const vPLMN: ProSeFunctionRole = ProSeFunctionRole.vPLMN; /* SHORT_NAMED_ENUMERATED_VALUE */
+const vPLMN = ProSeFunctionRole.vPLMN satisfies ProSeFunctionRole; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ProSeFunctionRole_localPLMN
@@ -155,7 +155,7 @@ const vPLMN: ProSeFunctionRole = ProSeFunctionRole.vPLMN; /* SHORT_NAMED_ENUMERA
  * @type {number}
  */
 export
-const ProSeFunctionRole_localPLMN: ProSeFunctionRole = ProSeFunctionRole.localPLMN; /* LONG_NAMED_ENUMERATED_VALUE */
+const ProSeFunctionRole_localPLMN = ProSeFunctionRole.localPLMN satisfies ProSeFunctionRole; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary localPLMN
@@ -167,7 +167,7 @@ const ProSeFunctionRole_localPLMN: ProSeFunctionRole = ProSeFunctionRole.localPL
  * @type {number}
  */
 export
-const localPLMN: ProSeFunctionRole = ProSeFunctionRole.localPLMN; /* SHORT_NAMED_ENUMERATED_VALUE */
+const localPLMN = ProSeFunctionRole.localPLMN satisfies ProSeFunctionRole; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_ProSeFunctionRole: $.ASN1Decoder<ProSeFunctionRole> = $._decodeEnumerated;

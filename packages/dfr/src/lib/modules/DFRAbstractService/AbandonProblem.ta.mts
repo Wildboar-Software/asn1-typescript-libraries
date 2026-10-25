@@ -89,7 +89,7 @@ const AbandonProblem = _enum_for_AbandonProblem;
  * @type {number}
  */
 export
-const AbandonProblem_no_such_operation: AbandonProblem = AbandonProblem.no_such_operation; /* LONG_NAMED_ENUMERATED_VALUE */
+const AbandonProblem_no_such_operation = AbandonProblem.no_such_operation satisfies AbandonProblem; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary no_such_operation
@@ -100,7 +100,7 @@ const AbandonProblem_no_such_operation: AbandonProblem = AbandonProblem.no_such_
  * @type {number}
  */
 export
-const no_such_operation: AbandonProblem = AbandonProblem.no_such_operation; /* SHORT_NAMED_ENUMERATED_VALUE */
+const no_such_operation = AbandonProblem.no_such_operation satisfies AbandonProblem; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AbandonProblem_too_late
@@ -111,7 +111,7 @@ const no_such_operation: AbandonProblem = AbandonProblem.no_such_operation; /* S
  * @type {number}
  */
 export
-const AbandonProblem_too_late: AbandonProblem = AbandonProblem.too_late; /* LONG_NAMED_ENUMERATED_VALUE */
+const AbandonProblem_too_late = AbandonProblem.too_late satisfies AbandonProblem; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary too_late
@@ -122,7 +122,7 @@ const AbandonProblem_too_late: AbandonProblem = AbandonProblem.too_late; /* LONG
  * @type {number}
  */
 export
-const too_late: AbandonProblem = AbandonProblem.too_late; /* SHORT_NAMED_ENUMERATED_VALUE */
+const too_late = AbandonProblem.too_late satisfies AbandonProblem; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AbandonProblem_cannot_abandon
@@ -133,7 +133,7 @@ const too_late: AbandonProblem = AbandonProblem.too_late; /* SHORT_NAMED_ENUMERA
  * @type {number}
  */
 export
-const AbandonProblem_cannot_abandon: AbandonProblem = AbandonProblem.cannot_abandon; /* LONG_NAMED_ENUMERATED_VALUE */
+const AbandonProblem_cannot_abandon = AbandonProblem.cannot_abandon satisfies AbandonProblem; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary cannot_abandon
@@ -144,7 +144,7 @@ const AbandonProblem_cannot_abandon: AbandonProblem = AbandonProblem.cannot_aban
  * @type {number}
  */
 export
-const cannot_abandon: AbandonProblem = AbandonProblem.cannot_abandon; /* SHORT_NAMED_ENUMERATED_VALUE */
+const cannot_abandon = AbandonProblem.cannot_abandon satisfies AbandonProblem; /* SHORT_NAMED_ENUMERATED_VALUE */
 export function _decode_AbandonProblem(el: _Element): AbandonProblem {
     const enumerated = $._decodeEnumerated(el);
     switch (enumerated) {

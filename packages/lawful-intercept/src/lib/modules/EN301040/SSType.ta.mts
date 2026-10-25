@@ -562,7 +562,7 @@ const SSType = _enum_for_SSType;
  * @type {number}
  */
 export
-const SSType_ambienceListening: SSType = SSType.ambienceListening; /* LONG_NAMED_ENUMERATED_VALUE */
+const SSType_ambienceListening = SSType.ambienceListening satisfies SSType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ambienceListening
@@ -582,7 +582,7 @@ const SSType_ambienceListening: SSType = SSType.ambienceListening; /* LONG_NAMED
  * @type {number}
  */
 export
-const ambienceListening: SSType = SSType.ambienceListening; /* SHORT_NAMED_ENUMERATED_VALUE */
+const ambienceListening = SSType.ambienceListening satisfies SSType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SSType_adviceofCharge
@@ -602,7 +602,7 @@ const ambienceListening: SSType = SSType.ambienceListening; /* SHORT_NAMED_ENUME
  * @type {number}
  */
 export
-const SSType_adviceofCharge: SSType = SSType.adviceofCharge; /* LONG_NAMED_ENUMERATED_VALUE */
+const SSType_adviceofCharge = SSType.adviceofCharge satisfies SSType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary adviceofCharge
@@ -622,7 +622,7 @@ const SSType_adviceofCharge: SSType = SSType.adviceofCharge; /* LONG_NAMED_ENUME
  * @type {number}
  */
 export
-const adviceofCharge: SSType = SSType.adviceofCharge; /* SHORT_NAMED_ENUMERATED_VALUE */
+const adviceofCharge = SSType.adviceofCharge satisfies SSType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SSType_accessPriority
@@ -642,7 +642,7 @@ const adviceofCharge: SSType = SSType.adviceofCharge; /* SHORT_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const SSType_accessPriority: SSType = SSType.accessPriority; /* LONG_NAMED_ENUMERATED_VALUE */
+const SSType_accessPriority = SSType.accessPriority satisfies SSType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary accessPriority
@@ -662,7 +662,7 @@ const SSType_accessPriority: SSType = SSType.accessPriority; /* LONG_NAMED_ENUME
  * @type {number}
  */
 export
-const accessPriority: SSType = SSType.accessPriority; /* SHORT_NAMED_ENUMERATED_VALUE */
+const accessPriority = SSType.accessPriority satisfies SSType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SSType_areaSelection
@@ -682,7 +682,7 @@ const accessPriority: SSType = SSType.accessPriority; /* SHORT_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const SSType_areaSelection: SSType = SSType.areaSelection; /* LONG_NAMED_ENUMERATED_VALUE */
+const SSType_areaSelection = SSType.areaSelection satisfies SSType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary areaSelection
@@ -702,7 +702,7 @@ const SSType_areaSelection: SSType = SSType.areaSelection; /* LONG_NAMED_ENUMERA
  * @type {number}
  */
 export
-const areaSelection: SSType = SSType.areaSelection; /* SHORT_NAMED_ENUMERATED_VALUE */
+const areaSelection = SSType.areaSelection satisfies SSType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SSType_barringofIncomingCalls
@@ -722,7 +722,7 @@ const areaSelection: SSType = SSType.areaSelection; /* SHORT_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const SSType_barringofIncomingCalls: SSType = SSType.barringofIncomingCalls; /* LONG_NAMED_ENUMERATED_VALUE */
+const SSType_barringofIncomingCalls = SSType.barringofIncomingCalls satisfies SSType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary barringofIncomingCalls
@@ -742,7 +742,7 @@ const SSType_barringofIncomingCalls: SSType = SSType.barringofIncomingCalls; /* 
  * @type {number}
  */
 export
-const barringofIncomingCalls: SSType = SSType.barringofIncomingCalls; /* SHORT_NAMED_ENUMERATED_VALUE */
+const barringofIncomingCalls = SSType.barringofIncomingCalls satisfies SSType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SSType_barringofOutgoingCalls
@@ -762,7 +762,7 @@ const barringofIncomingCalls: SSType = SSType.barringofIncomingCalls; /* SHORT_N
  * @type {number}
  */
 export
-const SSType_barringofOutgoingCalls: SSType = SSType.barringofOutgoingCalls; /* LONG_NAMED_ENUMERATED_VALUE */
+const SSType_barringofOutgoingCalls = SSType.barringofOutgoingCalls satisfies SSType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary barringofOutgoingCalls
@@ -782,7 +782,7 @@ const SSType_barringofOutgoingCalls: SSType = SSType.barringofOutgoingCalls; /* 
  * @type {number}
  */
 export
-const barringofOutgoingCalls: SSType = SSType.barringofOutgoingCalls; /* SHORT_NAMED_ENUMERATED_VALUE */
+const barringofOutgoingCalls = SSType.barringofOutgoingCalls satisfies SSType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SSType_callAuthorizedbyDispatcher
@@ -802,7 +802,7 @@ const barringofOutgoingCalls: SSType = SSType.barringofOutgoingCalls; /* SHORT_N
  * @type {number}
  */
 export
-const SSType_callAuthorizedbyDispatcher: SSType = SSType.callAuthorizedbyDispatcher; /* LONG_NAMED_ENUMERATED_VALUE */
+const SSType_callAuthorizedbyDispatcher = SSType.callAuthorizedbyDispatcher satisfies SSType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary callAuthorizedbyDispatcher
@@ -822,7 +822,7 @@ const SSType_callAuthorizedbyDispatcher: SSType = SSType.callAuthorizedbyDispatc
  * @type {number}
  */
 export
-const callAuthorizedbyDispatcher: SSType = SSType.callAuthorizedbyDispatcher; /* SHORT_NAMED_ENUMERATED_VALUE */
+const callAuthorizedbyDispatcher = SSType.callAuthorizedbyDispatcher satisfies SSType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SSType_callCompletiontoBusySubscriber
@@ -842,7 +842,7 @@ const callAuthorizedbyDispatcher: SSType = SSType.callAuthorizedbyDispatcher; /*
  * @type {number}
  */
 export
-const SSType_callCompletiontoBusySubscriber: SSType = SSType.callCompletiontoBusySubscriber; /* LONG_NAMED_ENUMERATED_VALUE */
+const SSType_callCompletiontoBusySubscriber = SSType.callCompletiontoBusySubscriber satisfies SSType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary callCompletiontoBusySubscriber
@@ -862,7 +862,7 @@ const SSType_callCompletiontoBusySubscriber: SSType = SSType.callCompletiontoBus
  * @type {number}
  */
 export
-const callCompletiontoBusySubscriber: SSType = SSType.callCompletiontoBusySubscriber; /* SHORT_NAMED_ENUMERATED_VALUE */
+const callCompletiontoBusySubscriber = SSType.callCompletiontoBusySubscriber satisfies SSType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SSType_callCompletiononNoReply
@@ -882,7 +882,7 @@ const callCompletiontoBusySubscriber: SSType = SSType.callCompletiontoBusySubscr
  * @type {number}
  */
 export
-const SSType_callCompletiononNoReply: SSType = SSType.callCompletiononNoReply; /* LONG_NAMED_ENUMERATED_VALUE */
+const SSType_callCompletiononNoReply = SSType.callCompletiononNoReply satisfies SSType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary callCompletiononNoReply
@@ -902,7 +902,7 @@ const SSType_callCompletiononNoReply: SSType = SSType.callCompletiononNoReply; /
  * @type {number}
  */
 export
-const callCompletiononNoReply: SSType = SSType.callCompletiononNoReply; /* SHORT_NAMED_ENUMERATED_VALUE */
+const callCompletiononNoReply = SSType.callCompletiononNoReply satisfies SSType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SSType_callForwardingonBusy
@@ -922,7 +922,7 @@ const callCompletiononNoReply: SSType = SSType.callCompletiononNoReply; /* SHORT
  * @type {number}
  */
 export
-const SSType_callForwardingonBusy: SSType = SSType.callForwardingonBusy; /* LONG_NAMED_ENUMERATED_VALUE */
+const SSType_callForwardingonBusy = SSType.callForwardingonBusy satisfies SSType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary callForwardingonBusy
@@ -942,7 +942,7 @@ const SSType_callForwardingonBusy: SSType = SSType.callForwardingonBusy; /* LONG
  * @type {number}
  */
 export
-const callForwardingonBusy: SSType = SSType.callForwardingonBusy; /* SHORT_NAMED_ENUMERATED_VALUE */
+const callForwardingonBusy = SSType.callForwardingonBusy satisfies SSType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SSType_callForwardingonNoReply
@@ -962,7 +962,7 @@ const callForwardingonBusy: SSType = SSType.callForwardingonBusy; /* SHORT_NAMED
  * @type {number}
  */
 export
-const SSType_callForwardingonNoReply: SSType = SSType.callForwardingonNoReply; /* LONG_NAMED_ENUMERATED_VALUE */
+const SSType_callForwardingonNoReply = SSType.callForwardingonNoReply satisfies SSType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary callForwardingonNoReply
@@ -982,7 +982,7 @@ const SSType_callForwardingonNoReply: SSType = SSType.callForwardingonNoReply; /
  * @type {number}
  */
 export
-const callForwardingonNoReply: SSType = SSType.callForwardingonNoReply; /* SHORT_NAMED_ENUMERATED_VALUE */
+const callForwardingonNoReply = SSType.callForwardingonNoReply satisfies SSType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SSType_callForwardingonNotReachable
@@ -1002,7 +1002,7 @@ const callForwardingonNoReply: SSType = SSType.callForwardingonNoReply; /* SHORT
  * @type {number}
  */
 export
-const SSType_callForwardingonNotReachable: SSType = SSType.callForwardingonNotReachable; /* LONG_NAMED_ENUMERATED_VALUE */
+const SSType_callForwardingonNotReachable = SSType.callForwardingonNotReachable satisfies SSType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary callForwardingonNotReachable
@@ -1022,7 +1022,7 @@ const SSType_callForwardingonNotReachable: SSType = SSType.callForwardingonNotRe
  * @type {number}
  */
 export
-const callForwardingonNotReachable: SSType = SSType.callForwardingonNotReachable; /* SHORT_NAMED_ENUMERATED_VALUE */
+const callForwardingonNotReachable = SSType.callForwardingonNotReachable satisfies SSType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SSType_callForwardingUnconditional
@@ -1042,7 +1042,7 @@ const callForwardingonNotReachable: SSType = SSType.callForwardingonNotReachable
  * @type {number}
  */
 export
-const SSType_callForwardingUnconditional: SSType = SSType.callForwardingUnconditional; /* LONG_NAMED_ENUMERATED_VALUE */
+const SSType_callForwardingUnconditional = SSType.callForwardingUnconditional satisfies SSType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary callForwardingUnconditional
@@ -1062,7 +1062,7 @@ const SSType_callForwardingUnconditional: SSType = SSType.callForwardingUncondit
  * @type {number}
  */
 export
-const callForwardingUnconditional: SSType = SSType.callForwardingUnconditional; /* SHORT_NAMED_ENUMERATED_VALUE */
+const callForwardingUnconditional = SSType.callForwardingUnconditional satisfies SSType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SSType_callingLineIdentificationPresentation
@@ -1082,7 +1082,7 @@ const callForwardingUnconditional: SSType = SSType.callForwardingUnconditional; 
  * @type {number}
  */
 export
-const SSType_callingLineIdentificationPresentation: SSType = SSType.callingLineIdentificationPresentation; /* LONG_NAMED_ENUMERATED_VALUE */
+const SSType_callingLineIdentificationPresentation = SSType.callingLineIdentificationPresentation satisfies SSType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary callingLineIdentificationPresentation
@@ -1102,7 +1102,7 @@ const SSType_callingLineIdentificationPresentation: SSType = SSType.callingLineI
  * @type {number}
  */
 export
-const callingLineIdentificationPresentation: SSType = SSType.callingLineIdentificationPresentation; /* SHORT_NAMED_ENUMERATED_VALUE */
+const callingLineIdentificationPresentation = SSType.callingLineIdentificationPresentation satisfies SSType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SSType_callingConnectedLineIdentificationRestriction
@@ -1122,7 +1122,7 @@ const callingLineIdentificationPresentation: SSType = SSType.callingLineIdentifi
  * @type {number}
  */
 export
-const SSType_callingConnectedLineIdentificationRestriction: SSType = SSType.callingConnectedLineIdentificationRestriction; /* LONG_NAMED_ENUMERATED_VALUE */
+const SSType_callingConnectedLineIdentificationRestriction = SSType.callingConnectedLineIdentificationRestriction satisfies SSType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary callingConnectedLineIdentificationRestriction
@@ -1142,7 +1142,7 @@ const SSType_callingConnectedLineIdentificationRestriction: SSType = SSType.call
  * @type {number}
  */
 export
-const callingConnectedLineIdentificationRestriction: SSType = SSType.callingConnectedLineIdentificationRestriction; /* SHORT_NAMED_ENUMERATED_VALUE */
+const callingConnectedLineIdentificationRestriction = SSType.callingConnectedLineIdentificationRestriction satisfies SSType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SSType_connectedLineIdentificationPresentation
@@ -1162,7 +1162,7 @@ const callingConnectedLineIdentificationRestriction: SSType = SSType.callingConn
  * @type {number}
  */
 export
-const SSType_connectedLineIdentificationPresentation: SSType = SSType.connectedLineIdentificationPresentation; /* LONG_NAMED_ENUMERATED_VALUE */
+const SSType_connectedLineIdentificationPresentation = SSType.connectedLineIdentificationPresentation satisfies SSType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary connectedLineIdentificationPresentation
@@ -1182,7 +1182,7 @@ const SSType_connectedLineIdentificationPresentation: SSType = SSType.connectedL
  * @type {number}
  */
 export
-const connectedLineIdentificationPresentation: SSType = SSType.connectedLineIdentificationPresentation; /* SHORT_NAMED_ENUMERATED_VALUE */
+const connectedLineIdentificationPresentation = SSType.connectedLineIdentificationPresentation satisfies SSType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SSType_callReport
@@ -1202,7 +1202,7 @@ const connectedLineIdentificationPresentation: SSType = SSType.connectedLineIden
  * @type {number}
  */
 export
-const SSType_callReport: SSType = SSType.callReport; /* LONG_NAMED_ENUMERATED_VALUE */
+const SSType_callReport = SSType.callReport satisfies SSType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary callReport
@@ -1222,7 +1222,7 @@ const SSType_callReport: SSType = SSType.callReport; /* LONG_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const callReport: SSType = SSType.callReport; /* SHORT_NAMED_ENUMERATED_VALUE */
+const callReport = SSType.callReport satisfies SSType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SSType_callRetention
@@ -1242,7 +1242,7 @@ const callReport: SSType = SSType.callReport; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const SSType_callRetention: SSType = SSType.callRetention; /* LONG_NAMED_ENUMERATED_VALUE */
+const SSType_callRetention = SSType.callRetention satisfies SSType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary callRetention
@@ -1262,7 +1262,7 @@ const SSType_callRetention: SSType = SSType.callRetention; /* LONG_NAMED_ENUMERA
  * @type {number}
  */
 export
-const callRetention: SSType = SSType.callRetention; /* SHORT_NAMED_ENUMERATED_VALUE */
+const callRetention = SSType.callRetention satisfies SSType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SSType_callWaiting
@@ -1282,7 +1282,7 @@ const callRetention: SSType = SSType.callRetention; /* SHORT_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const SSType_callWaiting: SSType = SSType.callWaiting; /* LONG_NAMED_ENUMERATED_VALUE */
+const SSType_callWaiting = SSType.callWaiting satisfies SSType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary callWaiting
@@ -1302,7 +1302,7 @@ const SSType_callWaiting: SSType = SSType.callWaiting; /* LONG_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const callWaiting: SSType = SSType.callWaiting; /* SHORT_NAMED_ENUMERATED_VALUE */
+const callWaiting = SSType.callWaiting satisfies SSType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SSType_dynamicGroupNumberAssignment
@@ -1322,7 +1322,7 @@ const callWaiting: SSType = SSType.callWaiting; /* SHORT_NAMED_ENUMERATED_VALUE 
  * @type {number}
  */
 export
-const SSType_dynamicGroupNumberAssignment: SSType = SSType.dynamicGroupNumberAssignment; /* LONG_NAMED_ENUMERATED_VALUE */
+const SSType_dynamicGroupNumberAssignment = SSType.dynamicGroupNumberAssignment satisfies SSType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary dynamicGroupNumberAssignment
@@ -1342,7 +1342,7 @@ const SSType_dynamicGroupNumberAssignment: SSType = SSType.dynamicGroupNumberAss
  * @type {number}
  */
 export
-const dynamicGroupNumberAssignment: SSType = SSType.dynamicGroupNumberAssignment; /* SHORT_NAMED_ENUMERATED_VALUE */
+const dynamicGroupNumberAssignment = SSType.dynamicGroupNumberAssignment satisfies SSType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SSType_discreetListening
@@ -1362,7 +1362,7 @@ const dynamicGroupNumberAssignment: SSType = SSType.dynamicGroupNumberAssignment
  * @type {number}
  */
 export
-const SSType_discreetListening: SSType = SSType.discreetListening; /* LONG_NAMED_ENUMERATED_VALUE */
+const SSType_discreetListening = SSType.discreetListening satisfies SSType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary discreetListening
@@ -1382,7 +1382,7 @@ const SSType_discreetListening: SSType = SSType.discreetListening; /* LONG_NAMED
  * @type {number}
  */
 export
-const discreetListening: SSType = SSType.discreetListening; /* SHORT_NAMED_ENUMERATED_VALUE */
+const discreetListening = SSType.discreetListening satisfies SSType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SSType_callHold
@@ -1402,7 +1402,7 @@ const discreetListening: SSType = SSType.discreetListening; /* SHORT_NAMED_ENUME
  * @type {number}
  */
 export
-const SSType_callHold: SSType = SSType.callHold; /* LONG_NAMED_ENUMERATED_VALUE */
+const SSType_callHold = SSType.callHold satisfies SSType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary callHold
@@ -1422,7 +1422,7 @@ const SSType_callHold: SSType = SSType.callHold; /* LONG_NAMED_ENUMERATED_VALUE 
  * @type {number}
  */
 export
-const callHold: SSType = SSType.callHold; /* SHORT_NAMED_ENUMERATED_VALUE */
+const callHold = SSType.callHold satisfies SSType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SSType_includeCall
@@ -1442,7 +1442,7 @@ const callHold: SSType = SSType.callHold; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const SSType_includeCall: SSType = SSType.includeCall; /* LONG_NAMED_ENUMERATED_VALUE */
+const SSType_includeCall = SSType.includeCall satisfies SSType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary includeCall
@@ -1462,7 +1462,7 @@ const SSType_includeCall: SSType = SSType.includeCall; /* LONG_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const includeCall: SSType = SSType.includeCall; /* SHORT_NAMED_ENUMERATED_VALUE */
+const includeCall = SSType.includeCall satisfies SSType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SSType_lateEntry
@@ -1482,7 +1482,7 @@ const includeCall: SSType = SSType.includeCall; /* SHORT_NAMED_ENUMERATED_VALUE 
  * @type {number}
  */
 export
-const SSType_lateEntry: SSType = SSType.lateEntry; /* LONG_NAMED_ENUMERATED_VALUE */
+const SSType_lateEntry = SSType.lateEntry satisfies SSType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary lateEntry
@@ -1502,7 +1502,7 @@ const SSType_lateEntry: SSType = SSType.lateEntry; /* LONG_NAMED_ENUMERATED_VALU
  * @type {number}
  */
 export
-const lateEntry: SSType = SSType.lateEntry; /* SHORT_NAMED_ENUMERATED_VALUE */
+const lateEntry = SSType.lateEntry satisfies SSType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SSType_listSearchCall
@@ -1522,7 +1522,7 @@ const lateEntry: SSType = SSType.lateEntry; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const SSType_listSearchCall: SSType = SSType.listSearchCall; /* LONG_NAMED_ENUMERATED_VALUE */
+const SSType_listSearchCall = SSType.listSearchCall satisfies SSType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary listSearchCall
@@ -1542,7 +1542,7 @@ const SSType_listSearchCall: SSType = SSType.listSearchCall; /* LONG_NAMED_ENUME
  * @type {number}
  */
 export
-const listSearchCall: SSType = SSType.listSearchCall; /* SHORT_NAMED_ENUMERATED_VALUE */
+const listSearchCall = SSType.listSearchCall satisfies SSType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SSType_priorityCall
@@ -1562,7 +1562,7 @@ const listSearchCall: SSType = SSType.listSearchCall; /* SHORT_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const SSType_priorityCall: SSType = SSType.priorityCall; /* LONG_NAMED_ENUMERATED_VALUE */
+const SSType_priorityCall = SSType.priorityCall satisfies SSType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary priorityCall
@@ -1582,7 +1582,7 @@ const SSType_priorityCall: SSType = SSType.priorityCall; /* LONG_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const priorityCall: SSType = SSType.priorityCall; /* SHORT_NAMED_ENUMERATED_VALUE */
+const priorityCall = SSType.priorityCall satisfies SSType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SSType_preemptivePriorityCall
@@ -1602,7 +1602,7 @@ const priorityCall: SSType = SSType.priorityCall; /* SHORT_NAMED_ENUMERATED_VALU
  * @type {number}
  */
 export
-const SSType_preemptivePriorityCall: SSType = SSType.preemptivePriorityCall; /* LONG_NAMED_ENUMERATED_VALUE */
+const SSType_preemptivePriorityCall = SSType.preemptivePriorityCall satisfies SSType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary preemptivePriorityCall
@@ -1622,7 +1622,7 @@ const SSType_preemptivePriorityCall: SSType = SSType.preemptivePriorityCall; /* 
  * @type {number}
  */
 export
-const preemptivePriorityCall: SSType = SSType.preemptivePriorityCall; /* SHORT_NAMED_ENUMERATED_VALUE */
+const preemptivePriorityCall = SSType.preemptivePriorityCall satisfies SSType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SSType_shortNumberAddressing
@@ -1642,7 +1642,7 @@ const preemptivePriorityCall: SSType = SSType.preemptivePriorityCall; /* SHORT_N
  * @type {number}
  */
 export
-const SSType_shortNumberAddressing: SSType = SSType.shortNumberAddressing; /* LONG_NAMED_ENUMERATED_VALUE */
+const SSType_shortNumberAddressing = SSType.shortNumberAddressing satisfies SSType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary shortNumberAddressing
@@ -1662,7 +1662,7 @@ const SSType_shortNumberAddressing: SSType = SSType.shortNumberAddressing; /* LO
  * @type {number}
  */
 export
-const shortNumberAddressing: SSType = SSType.shortNumberAddressing; /* SHORT_NAMED_ENUMERATED_VALUE */
+const shortNumberAddressing = SSType.shortNumberAddressing satisfies SSType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SSType_transferofControl
@@ -1682,7 +1682,7 @@ const shortNumberAddressing: SSType = SSType.shortNumberAddressing; /* SHORT_NAM
  * @type {number}
  */
 export
-const SSType_transferofControl: SSType = SSType.transferofControl; /* LONG_NAMED_ENUMERATED_VALUE */
+const SSType_transferofControl = SSType.transferofControl satisfies SSType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary transferofControl
@@ -1702,7 +1702,7 @@ const SSType_transferofControl: SSType = SSType.transferofControl; /* LONG_NAMED
  * @type {number}
  */
 export
-const transferofControl: SSType = SSType.transferofControl; /* SHORT_NAMED_ENUMERATED_VALUE */
+const transferofControl = SSType.transferofControl satisfies SSType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SSType_talkingPartyIdentification
@@ -1722,7 +1722,7 @@ const transferofControl: SSType = SSType.transferofControl; /* SHORT_NAMED_ENUME
  * @type {number}
  */
 export
-const SSType_talkingPartyIdentification: SSType = SSType.talkingPartyIdentification; /* LONG_NAMED_ENUMERATED_VALUE */
+const SSType_talkingPartyIdentification = SSType.talkingPartyIdentification satisfies SSType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary talkingPartyIdentification
@@ -1742,7 +1742,7 @@ const SSType_talkingPartyIdentification: SSType = SSType.talkingPartyIdentificat
  * @type {number}
  */
 export
-const talkingPartyIdentification: SSType = SSType.talkingPartyIdentification; /* SHORT_NAMED_ENUMERATED_VALUE */
+const talkingPartyIdentification = SSType.talkingPartyIdentification satisfies SSType; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_SSType: $.ASN1Decoder<SSType> = $._decodeEnumerated;
 export const _encode_SSType: $.ASN1Encoder<SSType> = $._encodeEnumerated;
 

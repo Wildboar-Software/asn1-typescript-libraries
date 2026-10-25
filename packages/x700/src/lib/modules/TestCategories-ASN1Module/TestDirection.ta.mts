@@ -40,7 +40,7 @@ export type TestDirection = INTEGER;
  * @constant
  * @type {number}
  */
-export const TestDirection_atoZ: TestDirection = 0; /* LONG_NAMED_INTEGER_VALUE */
+export const TestDirection_atoZ = 0 satisfies TestDirection; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TestDirection_atoZ
@@ -50,7 +50,7 @@ export const TestDirection_atoZ: TestDirection = 0; /* LONG_NAMED_INTEGER_VALUE 
  * @constant
  * @type {number}
  */
-export const atoZ: TestDirection = TestDirection_atoZ; /* SHORT_NAMED_INTEGER_VALUE */
+export const atoZ = TestDirection_atoZ satisfies TestDirection; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TestDirection_ztoA
@@ -60,7 +60,7 @@ export const atoZ: TestDirection = TestDirection_atoZ; /* SHORT_NAMED_INTEGER_VA
  * @constant
  * @type {number}
  */
-export const TestDirection_ztoA: TestDirection = 1; /* LONG_NAMED_INTEGER_VALUE */
+export const TestDirection_ztoA = 1 satisfies TestDirection; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TestDirection_ztoA
@@ -70,7 +70,7 @@ export const TestDirection_ztoA: TestDirection = 1; /* LONG_NAMED_INTEGER_VALUE 
  * @constant
  * @type {number}
  */
-export const ztoA: TestDirection = TestDirection_ztoA; /* SHORT_NAMED_INTEGER_VALUE */
+export const ztoA = TestDirection_ztoA satisfies TestDirection; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TestDirection_bothDirections
@@ -80,7 +80,7 @@ export const ztoA: TestDirection = TestDirection_ztoA; /* SHORT_NAMED_INTEGER_VA
  * @constant
  * @type {number}
  */
-export const TestDirection_bothDirections: TestDirection = 2; /* LONG_NAMED_INTEGER_VALUE */
+export const TestDirection_bothDirections = 2 satisfies TestDirection; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TestDirection_bothDirections
@@ -90,7 +90,7 @@ export const TestDirection_bothDirections: TestDirection = 2; /* LONG_NAMED_INTE
  * @constant
  * @type {number}
  */
-export const bothDirections: TestDirection = TestDirection_bothDirections; /* SHORT_NAMED_INTEGER_VALUE */
+export const bothDirections = TestDirection_bothDirections satisfies TestDirection; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TestDirection_transmitFromNearEnd
@@ -100,7 +100,7 @@ export const bothDirections: TestDirection = TestDirection_bothDirections; /* SH
  * @constant
  * @type {number}
  */
-export const TestDirection_transmitFromNearEnd: TestDirection = 3; /* LONG_NAMED_INTEGER_VALUE */
+export const TestDirection_transmitFromNearEnd = 3 satisfies TestDirection; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TestDirection_transmitFromNearEnd
@@ -110,7 +110,7 @@ export const TestDirection_transmitFromNearEnd: TestDirection = 3; /* LONG_NAMED
  * @constant
  * @type {number}
  */
-export const transmitFromNearEnd: TestDirection = TestDirection_transmitFromNearEnd; /* SHORT_NAMED_INTEGER_VALUE */
+export const transmitFromNearEnd = TestDirection_transmitFromNearEnd satisfies TestDirection; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TestDirection_receiveFromNearEnd
@@ -120,7 +120,7 @@ export const transmitFromNearEnd: TestDirection = TestDirection_transmitFromNear
  * @constant
  * @type {number}
  */
-export const TestDirection_receiveFromNearEnd: TestDirection = 4; /* LONG_NAMED_INTEGER_VALUE */
+export const TestDirection_receiveFromNearEnd = 4 satisfies TestDirection; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TestDirection_receiveFromNearEnd
@@ -130,7 +130,7 @@ export const TestDirection_receiveFromNearEnd: TestDirection = 4; /* LONG_NAMED_
  * @constant
  * @type {number}
  */
-export const receiveFromNearEnd: TestDirection = TestDirection_receiveFromNearEnd; /* SHORT_NAMED_INTEGER_VALUE */
+export const receiveFromNearEnd = TestDirection_receiveFromNearEnd satisfies TestDirection; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_TestDirection = $._decodeInteger;

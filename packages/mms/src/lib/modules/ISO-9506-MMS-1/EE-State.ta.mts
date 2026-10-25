@@ -58,7 +58,7 @@ type EE_State = INTEGER;
  * @type {number}
  */
 export
-const EE_State_disabled: EE_State = 0; /* LONG_NAMED_INTEGER_VALUE */
+const EE_State_disabled = 0 satisfies EE_State; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EE_State_disabled
@@ -72,7 +72,7 @@ const EE_State_disabled: EE_State = 0; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const disabled: EE_State = EE_State_disabled; /* SHORT_NAMED_INTEGER_VALUE */
+const disabled = EE_State_disabled satisfies EE_State; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EE_State_idle
@@ -87,7 +87,7 @@ const disabled: EE_State = EE_State_disabled; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const EE_State_idle: EE_State = 1; /* LONG_NAMED_INTEGER_VALUE */
+const EE_State_idle = 1 satisfies EE_State; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EE_State_idle
@@ -101,7 +101,7 @@ const EE_State_idle: EE_State = 1; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const idle: EE_State = EE_State_idle; /* SHORT_NAMED_INTEGER_VALUE */
+const idle = EE_State_idle satisfies EE_State; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EE_State_active
@@ -115,7 +115,7 @@ const idle: EE_State = EE_State_idle; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const EE_State_active: EE_State = 2; /* LONG_NAMED_INTEGER_VALUE */
+const EE_State_active = 2 satisfies EE_State; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EE_State_active
@@ -129,7 +129,7 @@ const EE_State_active: EE_State = 2; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const active: EE_State = EE_State_active; /* SHORT_NAMED_INTEGER_VALUE */
+const active = EE_State_active satisfies EE_State; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EE_State_activeNoAckA
@@ -145,7 +145,7 @@ const active: EE_State = EE_State_active; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const EE_State_activeNoAckA: EE_State = 3; /* LONG_NAMED_INTEGER_VALUE */
+const EE_State_activeNoAckA = 3 satisfies EE_State; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EE_State_activeNoAckA
@@ -159,7 +159,7 @@ const EE_State_activeNoAckA: EE_State = 3; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const activeNoAckA: EE_State = EE_State_activeNoAckA; /* SHORT_NAMED_INTEGER_VALUE */
+const activeNoAckA = EE_State_activeNoAckA satisfies EE_State; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EE_State_idleNoAckI
@@ -174,7 +174,7 @@ const activeNoAckA: EE_State = EE_State_activeNoAckA; /* SHORT_NAMED_INTEGER_VAL
  * @type {number}
  */
 export
-const EE_State_idleNoAckI: EE_State = 4; /* LONG_NAMED_INTEGER_VALUE */
+const EE_State_idleNoAckI = 4 satisfies EE_State; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EE_State_idleNoAckI
@@ -188,7 +188,7 @@ const EE_State_idleNoAckI: EE_State = 4; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const idleNoAckI: EE_State = EE_State_idleNoAckI; /* SHORT_NAMED_INTEGER_VALUE */
+const idleNoAckI = EE_State_idleNoAckI satisfies EE_State; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EE_State_idleNoAckA
@@ -203,7 +203,7 @@ const idleNoAckI: EE_State = EE_State_idleNoAckI; /* SHORT_NAMED_INTEGER_VALUE *
  * @type {number}
  */
 export
-const EE_State_idleNoAckA: EE_State = 5; /* LONG_NAMED_INTEGER_VALUE */
+const EE_State_idleNoAckA = 5 satisfies EE_State; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EE_State_idleNoAckA
@@ -217,7 +217,7 @@ const EE_State_idleNoAckA: EE_State = 5; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const idleNoAckA: EE_State = EE_State_idleNoAckA; /* SHORT_NAMED_INTEGER_VALUE */
+const idleNoAckA = EE_State_idleNoAckA satisfies EE_State; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EE_State_idleAcked
@@ -232,7 +232,7 @@ const idleNoAckA: EE_State = EE_State_idleNoAckA; /* SHORT_NAMED_INTEGER_VALUE *
  * @type {number}
  */
 export
-const EE_State_idleAcked: EE_State = 6; /* LONG_NAMED_INTEGER_VALUE */
+const EE_State_idleAcked = 6 satisfies EE_State; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EE_State_idleAcked
@@ -246,7 +246,7 @@ const EE_State_idleAcked: EE_State = 6; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const idleAcked: EE_State = EE_State_idleAcked; /* SHORT_NAMED_INTEGER_VALUE */
+const idleAcked = EE_State_idleAcked satisfies EE_State; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EE_State_activeAcked
@@ -261,7 +261,7 @@ const idleAcked: EE_State = EE_State_idleAcked; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const EE_State_activeAcked: EE_State = 7; /* LONG_NAMED_INTEGER_VALUE */
+const EE_State_activeAcked = 7 satisfies EE_State; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EE_State_activeAcked
@@ -275,7 +275,7 @@ const EE_State_activeAcked: EE_State = 7; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const activeAcked: EE_State = EE_State_activeAcked; /* SHORT_NAMED_INTEGER_VALUE */
+const activeAcked = EE_State_activeAcked satisfies EE_State; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EE_State_undefined
@@ -293,7 +293,7 @@ const activeAcked: EE_State = EE_State_activeAcked; /* SHORT_NAMED_INTEGER_VALUE
  * @type {number}
  */
 export
-const EE_State_undefined: EE_State = 8; /* LONG_NAMED_INTEGER_VALUE */
+const EE_State_undefined = 8 satisfies EE_State; /* LONG_NAMED_INTEGER_VALUE */
 /* The compiler also emitted `export const undefined = EE_State_undefined`,
  * which shadows the JavaScript global and is omitted. Use EE_State_undefined. */
 export const _decode_EE_State = $._decodeInteger;

@@ -116,7 +116,7 @@ const RCSMessageType = _enum_for_RCSMessageType;
  * @type {number}
  */
 export
-const RCSMessageType_messageWithUserContent: RCSMessageType = RCSMessageType.messageWithUserContent; /* LONG_NAMED_ENUMERATED_VALUE */
+const RCSMessageType_messageWithUserContent = RCSMessageType.messageWithUserContent satisfies RCSMessageType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary messageWithUserContent
@@ -131,7 +131,7 @@ const RCSMessageType_messageWithUserContent: RCSMessageType = RCSMessageType.mes
  * @type {number}
  */
 export
-const messageWithUserContent: RCSMessageType = RCSMessageType.messageWithUserContent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const messageWithUserContent = RCSMessageType.messageWithUserContent satisfies RCSMessageType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RCSMessageType_fileTransferMessage
@@ -146,7 +146,7 @@ const messageWithUserContent: RCSMessageType = RCSMessageType.messageWithUserCon
  * @type {number}
  */
 export
-const RCSMessageType_fileTransferMessage: RCSMessageType = RCSMessageType.fileTransferMessage; /* LONG_NAMED_ENUMERATED_VALUE */
+const RCSMessageType_fileTransferMessage = RCSMessageType.fileTransferMessage satisfies RCSMessageType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary fileTransferMessage
@@ -161,7 +161,7 @@ const RCSMessageType_fileTransferMessage: RCSMessageType = RCSMessageType.fileTr
  * @type {number}
  */
 export
-const fileTransferMessage: RCSMessageType = RCSMessageType.fileTransferMessage; /* SHORT_NAMED_ENUMERATED_VALUE */
+const fileTransferMessage = RCSMessageType.fileTransferMessage satisfies RCSMessageType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RCSMessageType_geoLocationPUSHMessage
@@ -176,7 +176,7 @@ const fileTransferMessage: RCSMessageType = RCSMessageType.fileTransferMessage; 
  * @type {number}
  */
 export
-const RCSMessageType_geoLocationPUSHMessage: RCSMessageType = RCSMessageType.geoLocationPUSHMessage; /* LONG_NAMED_ENUMERATED_VALUE */
+const RCSMessageType_geoLocationPUSHMessage = RCSMessageType.geoLocationPUSHMessage satisfies RCSMessageType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary geoLocationPUSHMessage
@@ -191,7 +191,7 @@ const RCSMessageType_geoLocationPUSHMessage: RCSMessageType = RCSMessageType.geo
  * @type {number}
  */
 export
-const geoLocationPUSHMessage: RCSMessageType = RCSMessageType.geoLocationPUSHMessage; /* SHORT_NAMED_ENUMERATED_VALUE */
+const geoLocationPUSHMessage = RCSMessageType.geoLocationPUSHMessage satisfies RCSMessageType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RCSMessageType_iMDNNotification
@@ -206,7 +206,7 @@ const geoLocationPUSHMessage: RCSMessageType = RCSMessageType.geoLocationPUSHMes
  * @type {number}
  */
 export
-const RCSMessageType_iMDNNotification: RCSMessageType = RCSMessageType.iMDNNotification; /* LONG_NAMED_ENUMERATED_VALUE */
+const RCSMessageType_iMDNNotification = RCSMessageType.iMDNNotification satisfies RCSMessageType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary iMDNNotification
@@ -221,7 +221,7 @@ const RCSMessageType_iMDNNotification: RCSMessageType = RCSMessageType.iMDNNotif
  * @type {number}
  */
 export
-const iMDNNotification: RCSMessageType = RCSMessageType.iMDNNotification; /* SHORT_NAMED_ENUMERATED_VALUE */
+const iMDNNotification = RCSMessageType.iMDNNotification satisfies RCSMessageType; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_RCSMessageType: $.ASN1Decoder<RCSMessageType> = $._decodeEnumerated;
 export const _encode_RCSMessageType: $.ASN1Encoder<RCSMessageType> = $._encodeEnumerated;
 

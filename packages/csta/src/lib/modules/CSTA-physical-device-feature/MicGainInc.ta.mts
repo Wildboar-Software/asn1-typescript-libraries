@@ -81,7 +81,7 @@ const MicGainInc = _enum_for_MicGainInc;
  * @type {number}
  */
 export
-const MicGainInc_increment: MicGainInc = MicGainInc.increment; /* LONG_NAMED_ENUMERATED_VALUE */
+const MicGainInc_increment = MicGainInc.increment satisfies MicGainInc; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary increment
@@ -89,7 +89,7 @@ const MicGainInc_increment: MicGainInc = MicGainInc.increment; /* LONG_NAMED_ENU
  * @type {number}
  */
 export
-const increment: MicGainInc = MicGainInc.increment; /* SHORT_NAMED_ENUMERATED_VALUE */
+const increment = MicGainInc.increment satisfies MicGainInc; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MicGainInc_decrement
@@ -101,7 +101,7 @@ const increment: MicGainInc = MicGainInc.increment; /* SHORT_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const MicGainInc_decrement: MicGainInc = MicGainInc.decrement; /* LONG_NAMED_ENUMERATED_VALUE */
+const MicGainInc_decrement = MicGainInc.decrement satisfies MicGainInc; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary decrement
@@ -109,7 +109,7 @@ const MicGainInc_decrement: MicGainInc = MicGainInc.decrement; /* LONG_NAMED_ENU
  * @type {number}
  */
 export
-const decrement: MicGainInc = MicGainInc.decrement; /* SHORT_NAMED_ENUMERATED_VALUE */
+const decrement = MicGainInc.decrement satisfies MicGainInc; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 let _cached_decoder_for_MicGainInc: $.ASN1Decoder<MicGainInc> | null = null;
 

@@ -52,7 +52,7 @@ export type BioAPI_CATEGORY = _enum_for_BioAPI_CATEGORY | ENUMERATED;
  * @constant
  * @type {number}
  */
-export const BioAPI_CATEGORY_archive: BioAPI_CATEGORY = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+export const BioAPI_CATEGORY_archive = _enum_for_BioAPI_CATEGORY.archive satisfies BioAPI_CATEGORY; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -60,7 +60,7 @@ export const BioAPI_CATEGORY_archive: BioAPI_CATEGORY = 0; /* LONG_NAMED_ENUMERA
  * @constant
  * @type {number}
  */
-export const archive: BioAPI_CATEGORY = BioAPI_CATEGORY_archive; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const archive = BioAPI_CATEGORY_archive satisfies BioAPI_CATEGORY; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -68,7 +68,7 @@ export const archive: BioAPI_CATEGORY = BioAPI_CATEGORY_archive; /* SHORT_NAMED_
  * @constant
  * @type {number}
  */
-export const BioAPI_CATEGORY_comparisonAlgorithm: BioAPI_CATEGORY = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+export const BioAPI_CATEGORY_comparisonAlgorithm = _enum_for_BioAPI_CATEGORY.comparisonAlgorithm satisfies BioAPI_CATEGORY; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -76,7 +76,7 @@ export const BioAPI_CATEGORY_comparisonAlgorithm: BioAPI_CATEGORY = 1; /* LONG_N
  * @constant
  * @type {number}
  */
-export const comparisonAlgorithm: BioAPI_CATEGORY = BioAPI_CATEGORY_comparisonAlgorithm; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const comparisonAlgorithm = BioAPI_CATEGORY_comparisonAlgorithm satisfies BioAPI_CATEGORY; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -84,7 +84,7 @@ export const comparisonAlgorithm: BioAPI_CATEGORY = BioAPI_CATEGORY_comparisonAl
  * @constant
  * @type {number}
  */
-export const BioAPI_CATEGORY_processingAlgorithm: BioAPI_CATEGORY = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+export const BioAPI_CATEGORY_processingAlgorithm = _enum_for_BioAPI_CATEGORY.processingAlgorithm satisfies BioAPI_CATEGORY; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -92,7 +92,7 @@ export const BioAPI_CATEGORY_processingAlgorithm: BioAPI_CATEGORY = 2; /* LONG_N
  * @constant
  * @type {number}
  */
-export const processingAlgorithm: BioAPI_CATEGORY = BioAPI_CATEGORY_processingAlgorithm; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const processingAlgorithm = BioAPI_CATEGORY_processingAlgorithm satisfies BioAPI_CATEGORY; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -100,7 +100,7 @@ export const processingAlgorithm: BioAPI_CATEGORY = BioAPI_CATEGORY_processingAl
  * @constant
  * @type {number}
  */
-export const BioAPI_CATEGORY_sensor: BioAPI_CATEGORY = 3; /* LONG_NAMED_ENUMERATED_VALUE */
+export const BioAPI_CATEGORY_sensor = _enum_for_BioAPI_CATEGORY.sensor satisfies BioAPI_CATEGORY; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -108,7 +108,7 @@ export const BioAPI_CATEGORY_sensor: BioAPI_CATEGORY = 3; /* LONG_NAMED_ENUMERAT
  * @constant
  * @type {number}
  */
-export const sensor: BioAPI_CATEGORY = BioAPI_CATEGORY_sensor; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const sensor = BioAPI_CATEGORY_sensor satisfies BioAPI_CATEGORY; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 

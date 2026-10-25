@@ -44,7 +44,7 @@ type ContactFunction = _enum_for_ContactFunction | ENUMERATED;
  * @type {number}
  */
 export
-const ContactFunction_other: ContactFunction = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+const ContactFunction_other = _enum_for_ContactFunction.other satisfies ContactFunction; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary other
@@ -52,7 +52,7 @@ const ContactFunction_other: ContactFunction = 0; /* LONG_NAMED_ENUMERATED_VALUE
  * @type {number}
  */
 export
-const other: ContactFunction = ContactFunction_other; /* SHORT_NAMED_ENUMERATED_VALUE */
+const other = ContactFunction_other satisfies ContactFunction; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ContactFunction_customerMaintenanceManager
@@ -60,7 +60,7 @@ const other: ContactFunction = ContactFunction_other; /* SHORT_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const ContactFunction_customerMaintenanceManager: ContactFunction = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const ContactFunction_customerMaintenanceManager = _enum_for_ContactFunction.customerMaintenanceManager satisfies ContactFunction; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary customerMaintenanceManager
@@ -68,7 +68,7 @@ const ContactFunction_customerMaintenanceManager: ContactFunction = 1; /* LONG_N
  * @type {number}
  */
 export
-const customerMaintenanceManager: ContactFunction = ContactFunction_customerMaintenanceManager; /* SHORT_NAMED_ENUMERATED_VALUE */
+const customerMaintenanceManager = ContactFunction_customerMaintenanceManager satisfies ContactFunction; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ContactFunction_providerMaintenanceManager
@@ -76,7 +76,7 @@ const customerMaintenanceManager: ContactFunction = ContactFunction_customerMain
  * @type {number}
  */
 export
-const ContactFunction_providerMaintenanceManager: ContactFunction = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+const ContactFunction_providerMaintenanceManager = _enum_for_ContactFunction.providerMaintenanceManager satisfies ContactFunction; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary providerMaintenanceManager
@@ -84,7 +84,7 @@ const ContactFunction_providerMaintenanceManager: ContactFunction = 2; /* LONG_N
  * @type {number}
  */
 export
-const providerMaintenanceManager: ContactFunction = ContactFunction_providerMaintenanceManager; /* SHORT_NAMED_ENUMERATED_VALUE */
+const providerMaintenanceManager = ContactFunction_providerMaintenanceManager satisfies ContactFunction; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ContactFunction_customerAccountManager
@@ -92,7 +92,7 @@ const providerMaintenanceManager: ContactFunction = ContactFunction_providerMain
  * @type {number}
  */
 export
-const ContactFunction_customerAccountManager: ContactFunction = 3; /* LONG_NAMED_ENUMERATED_VALUE */
+const ContactFunction_customerAccountManager = _enum_for_ContactFunction.customerAccountManager satisfies ContactFunction; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary customerAccountManager
@@ -100,7 +100,7 @@ const ContactFunction_customerAccountManager: ContactFunction = 3; /* LONG_NAMED
  * @type {number}
  */
 export
-const customerAccountManager: ContactFunction = ContactFunction_customerAccountManager; /* SHORT_NAMED_ENUMERATED_VALUE */
+const customerAccountManager = ContactFunction_customerAccountManager satisfies ContactFunction; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ContactFunction_providerAccountManager
@@ -108,7 +108,7 @@ const customerAccountManager: ContactFunction = ContactFunction_customerAccountM
  * @type {number}
  */
 export
-const ContactFunction_providerAccountManager: ContactFunction = 4; /* LONG_NAMED_ENUMERATED_VALUE */
+const ContactFunction_providerAccountManager = _enum_for_ContactFunction.providerAccountManager satisfies ContactFunction; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary providerAccountManager
@@ -116,7 +116,7 @@ const ContactFunction_providerAccountManager: ContactFunction = 4; /* LONG_NAMED
  * @type {number}
  */
 export
-const providerAccountManager: ContactFunction = ContactFunction_providerAccountManager; /* SHORT_NAMED_ENUMERATED_VALUE */
+const providerAccountManager = ContactFunction_providerAccountManager satisfies ContactFunction; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ContactFunction_fieldServiceManager
@@ -124,7 +124,7 @@ const providerAccountManager: ContactFunction = ContactFunction_providerAccountM
  * @type {number}
  */
 export
-const ContactFunction_fieldServiceManager: ContactFunction = 5; /* LONG_NAMED_ENUMERATED_VALUE */
+const ContactFunction_fieldServiceManager = _enum_for_ContactFunction.fieldServiceManager satisfies ContactFunction; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary fieldServiceManager
@@ -132,7 +132,7 @@ const ContactFunction_fieldServiceManager: ContactFunction = 5; /* LONG_NAMED_EN
  * @type {number}
  */
 export
-const fieldServiceManager: ContactFunction = ContactFunction_fieldServiceManager; /* SHORT_NAMED_ENUMERATED_VALUE */
+const fieldServiceManager = ContactFunction_fieldServiceManager satisfies ContactFunction; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ContactFunction_repairman
@@ -140,7 +140,7 @@ const fieldServiceManager: ContactFunction = ContactFunction_fieldServiceManager
  * @type {number}
  */
 export
-const ContactFunction_repairman: ContactFunction = 6; /* LONG_NAMED_ENUMERATED_VALUE */
+const ContactFunction_repairman = _enum_for_ContactFunction.repairman satisfies ContactFunction; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary repairman
@@ -148,7 +148,7 @@ const ContactFunction_repairman: ContactFunction = 6; /* LONG_NAMED_ENUMERATED_V
  * @type {number}
  */
 export
-const repairman: ContactFunction = ContactFunction_repairman; /* SHORT_NAMED_ENUMERATED_VALUE */
+const repairman = ContactFunction_repairman satisfies ContactFunction; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ContactFunction_tester
@@ -156,7 +156,7 @@ const repairman: ContactFunction = ContactFunction_repairman; /* SHORT_NAMED_ENU
  * @type {number}
  */
 export
-const ContactFunction_tester: ContactFunction = 7; /* LONG_NAMED_ENUMERATED_VALUE */
+const ContactFunction_tester = _enum_for_ContactFunction.tester satisfies ContactFunction; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tester
@@ -164,7 +164,7 @@ const ContactFunction_tester: ContactFunction = 7; /* LONG_NAMED_ENUMERATED_VALU
  * @type {number}
  */
 export
-const tester: ContactFunction = ContactFunction_tester; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tester = ContactFunction_tester satisfies ContactFunction; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ContactFunction_screener
@@ -172,7 +172,7 @@ const tester: ContactFunction = ContactFunction_tester; /* SHORT_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const ContactFunction_screener: ContactFunction = 8; /* LONG_NAMED_ENUMERATED_VALUE */
+const ContactFunction_screener = _enum_for_ContactFunction.screener satisfies ContactFunction; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary screener
@@ -180,7 +180,7 @@ const ContactFunction_screener: ContactFunction = 8; /* LONG_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const screener: ContactFunction = ContactFunction_screener; /* SHORT_NAMED_ENUMERATED_VALUE */
+const screener = ContactFunction_screener satisfies ContactFunction; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_ContactFunction = $._decodeEnumerated;
 export const _encode_ContactFunction = $._encodeEnumerated;
 

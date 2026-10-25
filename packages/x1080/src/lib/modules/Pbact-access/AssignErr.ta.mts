@@ -52,7 +52,7 @@ export type AssignErr = _enum_for_AssignErr | ENUMERATED;
  * @constant
  * @type {number}
  */
-export const AssignErr_invalidAttributeCertificate: AssignErr = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+export const AssignErr_invalidAttributeCertificate = _enum_for_AssignErr.invalidAttributeCertificate satisfies AssignErr; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -66,7 +66,7 @@ export const AssignErr_invalidAttributeCertificate: AssignErr = 0; /* LONG_NAMED
  * @constant
  * @type {number}
  */
-export const invalidAttributeCertificate: AssignErr = AssignErr_invalidAttributeCertificate; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const invalidAttributeCertificate = AssignErr_invalidAttributeCertificate satisfies AssignErr; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 

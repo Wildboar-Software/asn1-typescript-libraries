@@ -78,7 +78,7 @@ type EmailIRI_e_mail_Sender_Validity = _enum_for_EmailIRI_e_mail_Sender_Validity
  * @type {number}
  */
 export
-const EmailIRI_e_mail_Sender_Validity_validated: EmailIRI_e_mail_Sender_Validity = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+const EmailIRI_e_mail_Sender_Validity_validated = _enum_for_EmailIRI_e_mail_Sender_Validity.validated satisfies EmailIRI_e_mail_Sender_Validity; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary validated
@@ -92,7 +92,7 @@ const EmailIRI_e_mail_Sender_Validity_validated: EmailIRI_e_mail_Sender_Validity
  * @type {number}
  */
 export
-const validated: EmailIRI_e_mail_Sender_Validity = EmailIRI_e_mail_Sender_Validity_validated; /* SHORT_NAMED_ENUMERATED_VALUE */
+const validated = EmailIRI_e_mail_Sender_Validity_validated satisfies EmailIRI_e_mail_Sender_Validity; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EmailIRI_e_mail_Sender_Validity_nonvalidated
@@ -106,7 +106,7 @@ const validated: EmailIRI_e_mail_Sender_Validity = EmailIRI_e_mail_Sender_Validi
  * @type {number}
  */
 export
-const EmailIRI_e_mail_Sender_Validity_nonvalidated: EmailIRI_e_mail_Sender_Validity = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const EmailIRI_e_mail_Sender_Validity_nonvalidated = _enum_for_EmailIRI_e_mail_Sender_Validity.nonvalidated satisfies EmailIRI_e_mail_Sender_Validity; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary nonvalidated
@@ -120,7 +120,7 @@ const EmailIRI_e_mail_Sender_Validity_nonvalidated: EmailIRI_e_mail_Sender_Valid
  * @type {number}
  */
 export
-const nonvalidated: EmailIRI_e_mail_Sender_Validity = EmailIRI_e_mail_Sender_Validity_nonvalidated; /* SHORT_NAMED_ENUMERATED_VALUE */
+const nonvalidated = EmailIRI_e_mail_Sender_Validity_nonvalidated satisfies EmailIRI_e_mail_Sender_Validity; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_EmailIRI_e_mail_Sender_Validity: $.ASN1Decoder<EmailIRI_e_mail_Sender_Validity> = $._decodeEnumerated;
 export const _encode_EmailIRI_e_mail_Sender_Validity: $.ASN1Encoder<EmailIRI_e_mail_Sender_Validity> = $._encodeEnumerated;
 

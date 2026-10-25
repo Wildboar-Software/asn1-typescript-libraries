@@ -31,14 +31,14 @@ export type SequenceNumberProblem = INTEGER;
  * @constant
  * @type {number}
  */
-export const SequenceNumberProblem_no_such_entry: SequenceNumberProblem = 0; /* LONG_NAMED_INTEGER_VALUE */
+export const SequenceNumberProblem_no_such_entry = 0 satisfies SequenceNumberProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SequenceNumberProblem_no_such_entry
  * @constant
  * @type {number}
  */
-export const no_such_entry: SequenceNumberProblem = SequenceNumberProblem_no_such_entry; /* SHORT_NAMED_INTEGER_VALUE */
+export const no_such_entry = SequenceNumberProblem_no_such_entry satisfies SequenceNumberProblem; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_SequenceNumberProblem = $._decodeInteger;

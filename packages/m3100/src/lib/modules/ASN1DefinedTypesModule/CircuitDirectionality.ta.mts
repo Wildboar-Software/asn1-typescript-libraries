@@ -66,8 +66,8 @@ export const CircuitDirectionality = _enum_for_CircuitDirectionality;
  * @constant
  * @type {number}
  */
-export const CircuitDirectionality_onewayOut: CircuitDirectionality =
-    CircuitDirectionality.onewayOut; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CircuitDirectionality_onewayOut =
+    CircuitDirectionality.onewayOut satisfies CircuitDirectionality; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -75,8 +75,8 @@ export const CircuitDirectionality_onewayOut: CircuitDirectionality =
  * @constant
  * @type {number}
  */
-export const onewayOut: CircuitDirectionality =
-    CircuitDirectionality.onewayOut; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const onewayOut =
+    CircuitDirectionality.onewayOut satisfies CircuitDirectionality; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -84,8 +84,8 @@ export const onewayOut: CircuitDirectionality =
  * @constant
  * @type {number}
  */
-export const CircuitDirectionality_onewayIn: CircuitDirectionality =
-    CircuitDirectionality.onewayIn; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CircuitDirectionality_onewayIn =
+    CircuitDirectionality.onewayIn satisfies CircuitDirectionality; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -93,8 +93,8 @@ export const CircuitDirectionality_onewayIn: CircuitDirectionality =
  * @constant
  * @type {number}
  */
-export const onewayIn: CircuitDirectionality =
-    CircuitDirectionality.onewayIn; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const onewayIn =
+    CircuitDirectionality.onewayIn satisfies CircuitDirectionality; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -102,8 +102,8 @@ export const onewayIn: CircuitDirectionality =
  * @constant
  * @type {number}
  */
-export const CircuitDirectionality_twoway: CircuitDirectionality =
-    CircuitDirectionality.twoway; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CircuitDirectionality_twoway =
+    CircuitDirectionality.twoway satisfies CircuitDirectionality; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -111,8 +111,8 @@ export const CircuitDirectionality_twoway: CircuitDirectionality =
  * @constant
  * @type {number}
  */
-export const twoway: CircuitDirectionality =
-    CircuitDirectionality.twoway; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const twoway =
+    CircuitDirectionality.twoway satisfies CircuitDirectionality; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 

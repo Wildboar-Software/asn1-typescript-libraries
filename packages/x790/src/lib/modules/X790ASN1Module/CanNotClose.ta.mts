@@ -25,7 +25,7 @@ type CanNotClose = INTEGER;
  * @type {number}
  */
 export
-const CanNotClose_alreadyCleared: CanNotClose = 0; /* LONG_NAMED_INTEGER_VALUE */
+const CanNotClose_alreadyCleared = 0 satisfies CanNotClose; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CanNotClose_alreadyCleared
@@ -33,7 +33,7 @@ const CanNotClose_alreadyCleared: CanNotClose = 0; /* LONG_NAMED_INTEGER_VALUE *
  * @type {number}
  */
 export
-const alreadyCleared: CanNotClose = CanNotClose_alreadyCleared; /* SHORT_NAMED_INTEGER_VALUE */
+const alreadyCleared = CanNotClose_alreadyCleared satisfies CanNotClose; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_CanNotClose = $._decodeInteger;
 export const _encode_CanNotClose = $._encodeInteger;
 

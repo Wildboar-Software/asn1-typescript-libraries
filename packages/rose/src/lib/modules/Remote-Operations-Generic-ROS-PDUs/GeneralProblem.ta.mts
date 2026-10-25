@@ -35,7 +35,7 @@ export type GeneralProblem = INTEGER;
  * @constant
  * @type {number}
  */
-export const GeneralProblem_unrecognizedPDU: GeneralProblem = 0; /* LONG_NAMED_INTEGER_VALUE */
+export const GeneralProblem_unrecognizedPDU = 0 satisfies GeneralProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -44,7 +44,7 @@ export const GeneralProblem_unrecognizedPDU: GeneralProblem = 0; /* LONG_NAMED_I
  * @constant
  * @type {number}
  */
-export const unrecognizedPDU: GeneralProblem = GeneralProblem_unrecognizedPDU; /* SHORT_NAMED_INTEGER_VALUE */
+export const unrecognizedPDU = GeneralProblem_unrecognizedPDU satisfies GeneralProblem; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -53,7 +53,7 @@ export const unrecognizedPDU: GeneralProblem = GeneralProblem_unrecognizedPDU; /
  * @constant
  * @type {number}
  */
-export const GeneralProblem_mistypedPDU: GeneralProblem = 1; /* LONG_NAMED_INTEGER_VALUE */
+export const GeneralProblem_mistypedPDU = 1 satisfies GeneralProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -62,7 +62,7 @@ export const GeneralProblem_mistypedPDU: GeneralProblem = 1; /* LONG_NAMED_INTEG
  * @constant
  * @type {number}
  */
-export const mistypedPDU: GeneralProblem = GeneralProblem_mistypedPDU; /* SHORT_NAMED_INTEGER_VALUE */
+export const mistypedPDU = GeneralProblem_mistypedPDU satisfies GeneralProblem; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -71,7 +71,7 @@ export const mistypedPDU: GeneralProblem = GeneralProblem_mistypedPDU; /* SHORT_
  * @constant
  * @type {number}
  */
-export const GeneralProblem_badlyStructuredPDU: GeneralProblem = 2; /* LONG_NAMED_INTEGER_VALUE */
+export const GeneralProblem_badlyStructuredPDU = 2 satisfies GeneralProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -80,7 +80,7 @@ export const GeneralProblem_badlyStructuredPDU: GeneralProblem = 2; /* LONG_NAME
  * @constant
  * @type {number}
  */
-export const badlyStructuredPDU: GeneralProblem = GeneralProblem_badlyStructuredPDU; /* SHORT_NAMED_INTEGER_VALUE */
+export const badlyStructuredPDU = GeneralProblem_badlyStructuredPDU satisfies GeneralProblem; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 

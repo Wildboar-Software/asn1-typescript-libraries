@@ -166,7 +166,7 @@ const ToneDetected = _enum_for_ToneDetected;
  * @type {number}
  */
 export
-const ToneDetected_beep: ToneDetected = ToneDetected.beep; /* LONG_NAMED_ENUMERATED_VALUE */
+const ToneDetected_beep = ToneDetected.beep satisfies ToneDetected; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary beep
@@ -178,7 +178,7 @@ const ToneDetected_beep: ToneDetected = ToneDetected.beep; /* LONG_NAMED_ENUMERA
  * @type {number}
  */
 export
-const beep: ToneDetected = ToneDetected.beep; /* SHORT_NAMED_ENUMERATED_VALUE */
+const beep = ToneDetected.beep satisfies ToneDetected; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ToneDetected_billing
@@ -190,7 +190,7 @@ const beep: ToneDetected = ToneDetected.beep; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const ToneDetected_billing: ToneDetected = ToneDetected.billing; /* LONG_NAMED_ENUMERATED_VALUE */
+const ToneDetected_billing = ToneDetected.billing satisfies ToneDetected; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary billing
@@ -202,7 +202,7 @@ const ToneDetected_billing: ToneDetected = ToneDetected.billing; /* LONG_NAMED_E
  * @type {number}
  */
 export
-const billing: ToneDetected = ToneDetected.billing; /* SHORT_NAMED_ENUMERATED_VALUE */
+const billing = ToneDetected.billing satisfies ToneDetected; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ToneDetected_busy
@@ -214,7 +214,7 @@ const billing: ToneDetected = ToneDetected.billing; /* SHORT_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const ToneDetected_busy: ToneDetected = ToneDetected.busy; /* LONG_NAMED_ENUMERATED_VALUE */
+const ToneDetected_busy = ToneDetected.busy satisfies ToneDetected; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary busy
@@ -226,7 +226,7 @@ const ToneDetected_busy: ToneDetected = ToneDetected.busy; /* LONG_NAMED_ENUMERA
  * @type {number}
  */
 export
-const busy: ToneDetected = ToneDetected.busy; /* SHORT_NAMED_ENUMERATED_VALUE */
+const busy = ToneDetected.busy satisfies ToneDetected; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ToneDetected_carrier
@@ -238,7 +238,7 @@ const busy: ToneDetected = ToneDetected.busy; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const ToneDetected_carrier: ToneDetected = ToneDetected.carrier; /* LONG_NAMED_ENUMERATED_VALUE */
+const ToneDetected_carrier = ToneDetected.carrier satisfies ToneDetected; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary carrier
@@ -250,7 +250,7 @@ const ToneDetected_carrier: ToneDetected = ToneDetected.carrier; /* LONG_NAMED_E
  * @type {number}
  */
 export
-const carrier: ToneDetected = ToneDetected.carrier; /* SHORT_NAMED_ENUMERATED_VALUE */
+const carrier = ToneDetected.carrier satisfies ToneDetected; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ToneDetected_confirmation
@@ -262,7 +262,7 @@ const carrier: ToneDetected = ToneDetected.carrier; /* SHORT_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const ToneDetected_confirmation: ToneDetected = ToneDetected.confirmation; /* LONG_NAMED_ENUMERATED_VALUE */
+const ToneDetected_confirmation = ToneDetected.confirmation satisfies ToneDetected; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary confirmation
@@ -274,7 +274,7 @@ const ToneDetected_confirmation: ToneDetected = ToneDetected.confirmation; /* LO
  * @type {number}
  */
 export
-const confirmation: ToneDetected = ToneDetected.confirmation; /* SHORT_NAMED_ENUMERATED_VALUE */
+const confirmation = ToneDetected.confirmation satisfies ToneDetected; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ToneDetected_dial
@@ -286,7 +286,7 @@ const confirmation: ToneDetected = ToneDetected.confirmation; /* SHORT_NAMED_ENU
  * @type {number}
  */
 export
-const ToneDetected_dial: ToneDetected = ToneDetected.dial; /* LONG_NAMED_ENUMERATED_VALUE */
+const ToneDetected_dial = ToneDetected.dial satisfies ToneDetected; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary dial
@@ -298,7 +298,7 @@ const ToneDetected_dial: ToneDetected = ToneDetected.dial; /* LONG_NAMED_ENUMERA
  * @type {number}
  */
 export
-const dial: ToneDetected = ToneDetected.dial; /* SHORT_NAMED_ENUMERATED_VALUE */
+const dial = ToneDetected.dial satisfies ToneDetected; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ToneDetected_faxCNG
@@ -310,7 +310,7 @@ const dial: ToneDetected = ToneDetected.dial; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const ToneDetected_faxCNG: ToneDetected = ToneDetected.faxCNG; /* LONG_NAMED_ENUMERATED_VALUE */
+const ToneDetected_faxCNG = ToneDetected.faxCNG satisfies ToneDetected; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary faxCNG
@@ -322,7 +322,7 @@ const ToneDetected_faxCNG: ToneDetected = ToneDetected.faxCNG; /* LONG_NAMED_ENU
  * @type {number}
  */
 export
-const faxCNG: ToneDetected = ToneDetected.faxCNG; /* SHORT_NAMED_ENUMERATED_VALUE */
+const faxCNG = ToneDetected.faxCNG satisfies ToneDetected; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ToneDetected_hold
@@ -334,7 +334,7 @@ const faxCNG: ToneDetected = ToneDetected.faxCNG; /* SHORT_NAMED_ENUMERATED_VALU
  * @type {number}
  */
 export
-const ToneDetected_hold: ToneDetected = ToneDetected.hold; /* LONG_NAMED_ENUMERATED_VALUE */
+const ToneDetected_hold = ToneDetected.hold satisfies ToneDetected; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary hold
@@ -346,7 +346,7 @@ const ToneDetected_hold: ToneDetected = ToneDetected.hold; /* LONG_NAMED_ENUMERA
  * @type {number}
  */
 export
-const hold: ToneDetected = ToneDetected.hold; /* SHORT_NAMED_ENUMERATED_VALUE */
+const hold = ToneDetected.hold satisfies ToneDetected; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ToneDetected_howler
@@ -358,7 +358,7 @@ const hold: ToneDetected = ToneDetected.hold; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const ToneDetected_howler: ToneDetected = ToneDetected.howler; /* LONG_NAMED_ENUMERATED_VALUE */
+const ToneDetected_howler = ToneDetected.howler satisfies ToneDetected; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary howler
@@ -370,7 +370,7 @@ const ToneDetected_howler: ToneDetected = ToneDetected.howler; /* LONG_NAMED_ENU
  * @type {number}
  */
 export
-const howler: ToneDetected = ToneDetected.howler; /* SHORT_NAMED_ENUMERATED_VALUE */
+const howler = ToneDetected.howler satisfies ToneDetected; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ToneDetected_intrusion
@@ -382,7 +382,7 @@ const howler: ToneDetected = ToneDetected.howler; /* SHORT_NAMED_ENUMERATED_VALU
  * @type {number}
  */
 export
-const ToneDetected_intrusion: ToneDetected = ToneDetected.intrusion; /* LONG_NAMED_ENUMERATED_VALUE */
+const ToneDetected_intrusion = ToneDetected.intrusion satisfies ToneDetected; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary intrusion
@@ -394,7 +394,7 @@ const ToneDetected_intrusion: ToneDetected = ToneDetected.intrusion; /* LONG_NAM
  * @type {number}
  */
 export
-const intrusion: ToneDetected = ToneDetected.intrusion; /* SHORT_NAMED_ENUMERATED_VALUE */
+const intrusion = ToneDetected.intrusion satisfies ToneDetected; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ToneDetected_modemCNG
@@ -406,7 +406,7 @@ const intrusion: ToneDetected = ToneDetected.intrusion; /* SHORT_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const ToneDetected_modemCNG: ToneDetected = ToneDetected.modemCNG; /* LONG_NAMED_ENUMERATED_VALUE */
+const ToneDetected_modemCNG = ToneDetected.modemCNG satisfies ToneDetected; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary modemCNG
@@ -418,7 +418,7 @@ const ToneDetected_modemCNG: ToneDetected = ToneDetected.modemCNG; /* LONG_NAMED
  * @type {number}
  */
 export
-const modemCNG: ToneDetected = ToneDetected.modemCNG; /* SHORT_NAMED_ENUMERATED_VALUE */
+const modemCNG = ToneDetected.modemCNG satisfies ToneDetected; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ToneDetected_park
@@ -430,7 +430,7 @@ const modemCNG: ToneDetected = ToneDetected.modemCNG; /* SHORT_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const ToneDetected_park: ToneDetected = ToneDetected.park; /* LONG_NAMED_ENUMERATED_VALUE */
+const ToneDetected_park = ToneDetected.park satisfies ToneDetected; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary park
@@ -442,7 +442,7 @@ const ToneDetected_park: ToneDetected = ToneDetected.park; /* LONG_NAMED_ENUMERA
  * @type {number}
  */
 export
-const park: ToneDetected = ToneDetected.park; /* SHORT_NAMED_ENUMERATED_VALUE */
+const park = ToneDetected.park satisfies ToneDetected; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ToneDetected_recordWarning
@@ -454,7 +454,7 @@ const park: ToneDetected = ToneDetected.park; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const ToneDetected_recordWarning: ToneDetected = ToneDetected.recordWarning; /* LONG_NAMED_ENUMERATED_VALUE */
+const ToneDetected_recordWarning = ToneDetected.recordWarning satisfies ToneDetected; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary recordWarning
@@ -466,7 +466,7 @@ const ToneDetected_recordWarning: ToneDetected = ToneDetected.recordWarning; /* 
  * @type {number}
  */
 export
-const recordWarning: ToneDetected = ToneDetected.recordWarning; /* SHORT_NAMED_ENUMERATED_VALUE */
+const recordWarning = ToneDetected.recordWarning satisfies ToneDetected; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ToneDetected_reorder
@@ -478,7 +478,7 @@ const recordWarning: ToneDetected = ToneDetected.recordWarning; /* SHORT_NAMED_E
  * @type {number}
  */
 export
-const ToneDetected_reorder: ToneDetected = ToneDetected.reorder; /* LONG_NAMED_ENUMERATED_VALUE */
+const ToneDetected_reorder = ToneDetected.reorder satisfies ToneDetected; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary reorder
@@ -490,7 +490,7 @@ const ToneDetected_reorder: ToneDetected = ToneDetected.reorder; /* LONG_NAMED_E
  * @type {number}
  */
 export
-const reorder: ToneDetected = ToneDetected.reorder; /* SHORT_NAMED_ENUMERATED_VALUE */
+const reorder = ToneDetected.reorder satisfies ToneDetected; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ToneDetected_ringback
@@ -502,7 +502,7 @@ const reorder: ToneDetected = ToneDetected.reorder; /* SHORT_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const ToneDetected_ringback: ToneDetected = ToneDetected.ringback; /* LONG_NAMED_ENUMERATED_VALUE */
+const ToneDetected_ringback = ToneDetected.ringback satisfies ToneDetected; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ringback
@@ -514,7 +514,7 @@ const ToneDetected_ringback: ToneDetected = ToneDetected.ringback; /* LONG_NAMED
  * @type {number}
  */
 export
-const ringback: ToneDetected = ToneDetected.ringback; /* SHORT_NAMED_ENUMERATED_VALUE */
+const ringback = ToneDetected.ringback satisfies ToneDetected; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ToneDetected_silence
@@ -526,7 +526,7 @@ const ringback: ToneDetected = ToneDetected.ringback; /* SHORT_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const ToneDetected_silence: ToneDetected = ToneDetected.silence; /* LONG_NAMED_ENUMERATED_VALUE */
+const ToneDetected_silence = ToneDetected.silence satisfies ToneDetected; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary silence
@@ -538,7 +538,7 @@ const ToneDetected_silence: ToneDetected = ToneDetected.silence; /* LONG_NAMED_E
  * @type {number}
  */
 export
-const silence: ToneDetected = ToneDetected.silence; /* SHORT_NAMED_ENUMERATED_VALUE */
+const silence = ToneDetected.silence satisfies ToneDetected; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ToneDetected_sitVC
@@ -550,7 +550,7 @@ const silence: ToneDetected = ToneDetected.silence; /* SHORT_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const ToneDetected_sitVC: ToneDetected = ToneDetected.sitVC; /* LONG_NAMED_ENUMERATED_VALUE */
+const ToneDetected_sitVC = ToneDetected.sitVC satisfies ToneDetected; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sitVC
@@ -562,7 +562,7 @@ const ToneDetected_sitVC: ToneDetected = ToneDetected.sitVC; /* LONG_NAMED_ENUME
  * @type {number}
  */
 export
-const sitVC: ToneDetected = ToneDetected.sitVC; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sitVC = ToneDetected.sitVC satisfies ToneDetected; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ToneDetected_sitIC
@@ -574,7 +574,7 @@ const sitVC: ToneDetected = ToneDetected.sitVC; /* SHORT_NAMED_ENUMERATED_VALUE 
  * @type {number}
  */
 export
-const ToneDetected_sitIC: ToneDetected = ToneDetected.sitIC; /* LONG_NAMED_ENUMERATED_VALUE */
+const ToneDetected_sitIC = ToneDetected.sitIC satisfies ToneDetected; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sitIC
@@ -586,7 +586,7 @@ const ToneDetected_sitIC: ToneDetected = ToneDetected.sitIC; /* LONG_NAMED_ENUME
  * @type {number}
  */
 export
-const sitIC: ToneDetected = ToneDetected.sitIC; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sitIC = ToneDetected.sitIC satisfies ToneDetected; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ToneDetected_sitRO
@@ -598,7 +598,7 @@ const sitIC: ToneDetected = ToneDetected.sitIC; /* SHORT_NAMED_ENUMERATED_VALUE 
  * @type {number}
  */
 export
-const ToneDetected_sitRO: ToneDetected = ToneDetected.sitRO; /* LONG_NAMED_ENUMERATED_VALUE */
+const ToneDetected_sitRO = ToneDetected.sitRO satisfies ToneDetected; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sitRO
@@ -610,7 +610,7 @@ const ToneDetected_sitRO: ToneDetected = ToneDetected.sitRO; /* LONG_NAMED_ENUME
  * @type {number}
  */
 export
-const sitRO: ToneDetected = ToneDetected.sitRO; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sitRO = ToneDetected.sitRO satisfies ToneDetected; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ToneDetected_sitNC
@@ -622,7 +622,7 @@ const sitRO: ToneDetected = ToneDetected.sitRO; /* SHORT_NAMED_ENUMERATED_VALUE 
  * @type {number}
  */
 export
-const ToneDetected_sitNC: ToneDetected = ToneDetected.sitNC; /* LONG_NAMED_ENUMERATED_VALUE */
+const ToneDetected_sitNC = ToneDetected.sitNC satisfies ToneDetected; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sitNC
@@ -634,7 +634,7 @@ const ToneDetected_sitNC: ToneDetected = ToneDetected.sitNC; /* LONG_NAMED_ENUME
  * @type {number}
  */
 export
-const sitNC: ToneDetected = ToneDetected.sitNC; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sitNC = ToneDetected.sitNC satisfies ToneDetected; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ToneDetected_other
@@ -646,7 +646,7 @@ const sitNC: ToneDetected = ToneDetected.sitNC; /* SHORT_NAMED_ENUMERATED_VALUE 
  * @type {number}
  */
 export
-const ToneDetected_other: ToneDetected = ToneDetected.other; /* LONG_NAMED_ENUMERATED_VALUE */
+const ToneDetected_other = ToneDetected.other satisfies ToneDetected; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary other
@@ -658,7 +658,7 @@ const ToneDetected_other: ToneDetected = ToneDetected.other; /* LONG_NAMED_ENUME
  * @type {number}
  */
 export
-const other: ToneDetected = ToneDetected.other; /* SHORT_NAMED_ENUMERATED_VALUE */
+const other = ToneDetected.other satisfies ToneDetected; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 let _cached_decoder_for_ToneDetected: $.ASN1Decoder<ToneDetected> | null = null;
 

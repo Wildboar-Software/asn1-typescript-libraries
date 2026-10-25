@@ -85,16 +85,16 @@ export const OverloadStateChange = _enum_for_OverloadStateChange;
  * @constant
  * @type {number}
  */
-export const OverloadStateChange_on: OverloadStateChange =
-  OverloadStateChange.on; /* LONG_NAMED_ENUMERATED_VALUE */
+export const OverloadStateChange_on =
+  OverloadStateChange.on satisfies OverloadStateChange; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary on
  * @constant
  * @type {number}
  */
-export const on: OverloadStateChange =
-  OverloadStateChange.on; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const on =
+  OverloadStateChange.on satisfies OverloadStateChange; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OverloadStateChange_waiting
@@ -107,16 +107,16 @@ export const on: OverloadStateChange =
  * @constant
  * @type {number}
  */
-export const OverloadStateChange_waiting: OverloadStateChange =
-  OverloadStateChange.waiting; /* LONG_NAMED_ENUMERATED_VALUE */
+export const OverloadStateChange_waiting =
+  OverloadStateChange.waiting satisfies OverloadStateChange; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary waiting
  * @constant
  * @type {number}
  */
-export const waiting: OverloadStateChange =
-  OverloadStateChange.waiting; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const waiting =
+  OverloadStateChange.waiting satisfies OverloadStateChange; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 export function _decode_OverloadStateChange(el: _Element): OverloadStateChange {

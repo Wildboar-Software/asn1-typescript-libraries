@@ -31,28 +31,28 @@ export type SignatureCheck = INTEGER;
  * @constant
  * @type {number}
  */
-export const SignatureCheck_valid: SignatureCheck = 1; /* LONG_NAMED_INTEGER_VALUE */
+export const SignatureCheck_valid = 1 satisfies SignatureCheck; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SignatureCheck_valid
  * @constant
  * @type {number}
  */
-export const valid: SignatureCheck = SignatureCheck_valid; /* SHORT_NAMED_INTEGER_VALUE */
+export const valid = SignatureCheck_valid satisfies SignatureCheck; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SignatureCheck_failed
  * @constant
  * @type {number}
  */
-export const SignatureCheck_failed: SignatureCheck = 2; /* LONG_NAMED_INTEGER_VALUE */
+export const SignatureCheck_failed = 2 satisfies SignatureCheck; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SignatureCheck_failed
  * @constant
  * @type {number}
  */
-export const failed: SignatureCheck = SignatureCheck_failed; /* SHORT_NAMED_INTEGER_VALUE */
+export const failed = SignatureCheck_failed satisfies SignatureCheck; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_SignatureCheck = $._decodeInteger;

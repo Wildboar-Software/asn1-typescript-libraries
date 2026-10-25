@@ -94,7 +94,7 @@ const MACRestrictionIndicator = _enum_for_MACRestrictionIndicator;
  * @type {number}
  */
 export
-const MACRestrictionIndicator_noResrictions: MACRestrictionIndicator = MACRestrictionIndicator.noResrictions; /* LONG_NAMED_ENUMERATED_VALUE */
+const MACRestrictionIndicator_noResrictions = MACRestrictionIndicator.noResrictions satisfies MACRestrictionIndicator; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary noResrictions
@@ -102,7 +102,7 @@ const MACRestrictionIndicator_noResrictions: MACRestrictionIndicator = MACRestri
  * @type {number}
  */
 export
-const noResrictions: MACRestrictionIndicator = MACRestrictionIndicator.noResrictions; /* SHORT_NAMED_ENUMERATED_VALUE */
+const noResrictions = MACRestrictionIndicator.noResrictions satisfies MACRestrictionIndicator; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MACRestrictionIndicator_mACAddressNotUseableAsEquipmentIdentifier
@@ -110,7 +110,7 @@ const noResrictions: MACRestrictionIndicator = MACRestrictionIndicator.noResrict
  * @type {number}
  */
 export
-const MACRestrictionIndicator_mACAddressNotUseableAsEquipmentIdentifier: MACRestrictionIndicator = MACRestrictionIndicator.mACAddressNotUseableAsEquipmentIdentifier; /* LONG_NAMED_ENUMERATED_VALUE */
+const MACRestrictionIndicator_mACAddressNotUseableAsEquipmentIdentifier = MACRestrictionIndicator.mACAddressNotUseableAsEquipmentIdentifier satisfies MACRestrictionIndicator; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary mACAddressNotUseableAsEquipmentIdentifier
@@ -118,7 +118,7 @@ const MACRestrictionIndicator_mACAddressNotUseableAsEquipmentIdentifier: MACRest
  * @type {number}
  */
 export
-const mACAddressNotUseableAsEquipmentIdentifier: MACRestrictionIndicator = MACRestrictionIndicator.mACAddressNotUseableAsEquipmentIdentifier; /* SHORT_NAMED_ENUMERATED_VALUE */
+const mACAddressNotUseableAsEquipmentIdentifier = MACRestrictionIndicator.mACAddressNotUseableAsEquipmentIdentifier satisfies MACRestrictionIndicator; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MACRestrictionIndicator_unknown
@@ -126,7 +126,7 @@ const mACAddressNotUseableAsEquipmentIdentifier: MACRestrictionIndicator = MACRe
  * @type {number}
  */
 export
-const MACRestrictionIndicator_unknown: MACRestrictionIndicator = MACRestrictionIndicator.unknown; /* LONG_NAMED_ENUMERATED_VALUE */
+const MACRestrictionIndicator_unknown = MACRestrictionIndicator.unknown satisfies MACRestrictionIndicator; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unknown
@@ -134,7 +134,7 @@ const MACRestrictionIndicator_unknown: MACRestrictionIndicator = MACRestrictionI
  * @type {number}
  */
 export
-const unknown: MACRestrictionIndicator = MACRestrictionIndicator.unknown; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unknown = MACRestrictionIndicator.unknown satisfies MACRestrictionIndicator; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_MACRestrictionIndicator: $.ASN1Decoder<MACRestrictionIndicator> = $._decodeEnumerated;
 export const _encode_MACRestrictionIndicator: $.ASN1Encoder<MACRestrictionIndicator> = $._encodeEnumerated;
 

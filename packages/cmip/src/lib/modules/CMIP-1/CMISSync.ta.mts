@@ -75,8 +75,8 @@ export const CMISSync = _enum_for_CMISSync;
  * @constant
  * @type {number}
  */
-export const CMISSync_bestEffort: CMISSync =
-  CMISSync.bestEffort; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CMISSync_bestEffort =
+  CMISSync.bestEffort satisfies CMISSync; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -84,8 +84,8 @@ export const CMISSync_bestEffort: CMISSync =
  * @constant
  * @type {number}
  */
-export const bestEffort: CMISSync =
-  CMISSync.bestEffort; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const bestEffort =
+  CMISSync.bestEffort satisfies CMISSync; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -98,8 +98,8 @@ export const bestEffort: CMISSync =
  * @constant
  * @type {number}
  */
-export const CMISSync_atomic: CMISSync =
-  CMISSync.atomic; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CMISSync_atomic =
+  CMISSync.atomic satisfies CMISSync; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -107,8 +107,8 @@ export const CMISSync_atomic: CMISSync =
  * @constant
  * @type {number}
  */
-export const atomic: CMISSync =
-  CMISSync.atomic; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const atomic =
+  CMISSync.atomic satisfies CMISSync; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 

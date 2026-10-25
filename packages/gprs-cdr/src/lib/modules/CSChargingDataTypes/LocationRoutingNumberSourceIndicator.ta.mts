@@ -29,7 +29,7 @@ type LocationRoutingNumberSourceIndicator = INTEGER;
  * @type {number}
  */
 export
-const LocationRoutingNumberSourceIndicator_lRN_NP_Database: LocationRoutingNumberSourceIndicator = 1; /* LONG_NAMED_INTEGER_VALUE */
+const LocationRoutingNumberSourceIndicator_lRN_NP_Database = 1 satisfies LocationRoutingNumberSourceIndicator; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary LocationRoutingNumberSourceIndicator_lRN_NP_Database
@@ -37,7 +37,7 @@ const LocationRoutingNumberSourceIndicator_lRN_NP_Database: LocationRoutingNumbe
  * @type {number}
  */
 export
-const lRN_NP_Database: LocationRoutingNumberSourceIndicator = LocationRoutingNumberSourceIndicator_lRN_NP_Database; /* SHORT_NAMED_INTEGER_VALUE */
+const lRN_NP_Database = LocationRoutingNumberSourceIndicator_lRN_NP_Database satisfies LocationRoutingNumberSourceIndicator; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary LocationRoutingNumberSourceIndicator_switchingSystemData
@@ -45,7 +45,7 @@ const lRN_NP_Database: LocationRoutingNumberSourceIndicator = LocationRoutingNum
  * @type {number}
  */
 export
-const LocationRoutingNumberSourceIndicator_switchingSystemData: LocationRoutingNumberSourceIndicator = 2; /* LONG_NAMED_INTEGER_VALUE */
+const LocationRoutingNumberSourceIndicator_switchingSystemData = 2 satisfies LocationRoutingNumberSourceIndicator; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary LocationRoutingNumberSourceIndicator_switchingSystemData
@@ -53,7 +53,7 @@ const LocationRoutingNumberSourceIndicator_switchingSystemData: LocationRoutingN
  * @type {number}
  */
 export
-const switchingSystemData: LocationRoutingNumberSourceIndicator = LocationRoutingNumberSourceIndicator_switchingSystemData; /* SHORT_NAMED_INTEGER_VALUE */
+const switchingSystemData = LocationRoutingNumberSourceIndicator_switchingSystemData satisfies LocationRoutingNumberSourceIndicator; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary LocationRoutingNumberSourceIndicator_incomingsignaling
@@ -61,7 +61,7 @@ const switchingSystemData: LocationRoutingNumberSourceIndicator = LocationRoutin
  * @type {number}
  */
 export
-const LocationRoutingNumberSourceIndicator_incomingsignaling: LocationRoutingNumberSourceIndicator = 3; /* LONG_NAMED_INTEGER_VALUE */
+const LocationRoutingNumberSourceIndicator_incomingsignaling = 3 satisfies LocationRoutingNumberSourceIndicator; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary LocationRoutingNumberSourceIndicator_incomingsignaling
@@ -69,7 +69,7 @@ const LocationRoutingNumberSourceIndicator_incomingsignaling: LocationRoutingNum
  * @type {number}
  */
 export
-const incomingsignaling: LocationRoutingNumberSourceIndicator = LocationRoutingNumberSourceIndicator_incomingsignaling; /* SHORT_NAMED_INTEGER_VALUE */
+const incomingsignaling = LocationRoutingNumberSourceIndicator_incomingsignaling satisfies LocationRoutingNumberSourceIndicator; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary LocationRoutingNumberSourceIndicator_unknown
@@ -77,7 +77,7 @@ const incomingsignaling: LocationRoutingNumberSourceIndicator = LocationRoutingN
  * @type {number}
  */
 export
-const LocationRoutingNumberSourceIndicator_unknown: LocationRoutingNumberSourceIndicator = 9; /* LONG_NAMED_INTEGER_VALUE */
+const LocationRoutingNumberSourceIndicator_unknown = 9 satisfies LocationRoutingNumberSourceIndicator; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary LocationRoutingNumberSourceIndicator_unknown
@@ -85,7 +85,7 @@ const LocationRoutingNumberSourceIndicator_unknown: LocationRoutingNumberSourceI
  * @type {number}
  */
 export
-const unknown: LocationRoutingNumberSourceIndicator = LocationRoutingNumberSourceIndicator_unknown; /* SHORT_NAMED_INTEGER_VALUE */
+const unknown = LocationRoutingNumberSourceIndicator_unknown satisfies LocationRoutingNumberSourceIndicator; /* SHORT_NAMED_INTEGER_VALUE */
 
 export
 const _decode_LocationRoutingNumberSourceIndicator: $.ASN1Decoder<LocationRoutingNumberSourceIndicator> = $._decodeInteger;

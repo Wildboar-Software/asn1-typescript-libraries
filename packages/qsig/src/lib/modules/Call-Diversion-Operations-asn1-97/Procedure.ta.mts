@@ -95,7 +95,7 @@ const Procedure = _enum_for_Procedure;
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-173/
  */
 export
-const Procedure_cfu: Procedure = Procedure.cfu; /* LONG_NAMED_ENUMERATED_VALUE */
+const Procedure_cfu = Procedure.cfu satisfies Procedure; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary cfu
@@ -104,7 +104,7 @@ const Procedure_cfu: Procedure = Procedure.cfu; /* LONG_NAMED_ENUMERATED_VALUE *
  * @type {number}
  */
 export
-const cfu: Procedure = Procedure.cfu; /* SHORT_NAMED_ENUMERATED_VALUE */
+const cfu = Procedure.cfu satisfies Procedure; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Procedure_cfb
@@ -118,7 +118,7 @@ const cfu: Procedure = Procedure.cfu; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-173/
  */
 export
-const Procedure_cfb: Procedure = Procedure.cfb; /* LONG_NAMED_ENUMERATED_VALUE */
+const Procedure_cfb = Procedure.cfb satisfies Procedure; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary cfb
@@ -127,7 +127,7 @@ const Procedure_cfb: Procedure = Procedure.cfb; /* LONG_NAMED_ENUMERATED_VALUE *
  * @type {number}
  */
 export
-const cfb: Procedure = Procedure.cfb; /* SHORT_NAMED_ENUMERATED_VALUE */
+const cfb = Procedure.cfb satisfies Procedure; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Procedure_cfnr
@@ -141,7 +141,7 @@ const cfb: Procedure = Procedure.cfb; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-173/
  */
 export
-const Procedure_cfnr: Procedure = Procedure.cfnr; /* LONG_NAMED_ENUMERATED_VALUE */
+const Procedure_cfnr = Procedure.cfnr satisfies Procedure; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary cfnr
@@ -150,7 +150,7 @@ const Procedure_cfnr: Procedure = Procedure.cfnr; /* LONG_NAMED_ENUMERATED_VALUE
  * @type {number}
  */
 export
-const cfnr: Procedure = Procedure.cfnr; /* SHORT_NAMED_ENUMERATED_VALUE */
+const cfnr = Procedure.cfnr satisfies Procedure; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_Procedure: $.ASN1Decoder<Procedure> = $._decodeEnumerated;

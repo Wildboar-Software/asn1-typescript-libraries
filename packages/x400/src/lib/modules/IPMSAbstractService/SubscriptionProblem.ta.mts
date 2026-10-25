@@ -66,32 +66,32 @@ export const SubscriptionProblem = _enum_for_SubscriptionProblem;
  * @constant
  * @type {number}
  */
-export const SubscriptionProblem_ipms_eos_not_subscribed: SubscriptionProblem =
-    SubscriptionProblem.ipms_eos_not_subscribed; /* LONG_NAMED_ENUMERATED_VALUE */
+export const SubscriptionProblem_ipms_eos_not_subscribed =
+    SubscriptionProblem.ipms_eos_not_subscribed satisfies SubscriptionProblem; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ipms_eos_not_subscribed
  * @constant
  * @type {number}
  */
-export const ipms_eos_not_subscribed: SubscriptionProblem =
-    SubscriptionProblem.ipms_eos_not_subscribed; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const ipms_eos_not_subscribed =
+    SubscriptionProblem.ipms_eos_not_subscribed satisfies SubscriptionProblem; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SubscriptionProblem_mts_eos_not_subscribed
  * @constant
  * @type {number}
  */
-export const SubscriptionProblem_mts_eos_not_subscribed: SubscriptionProblem =
-    SubscriptionProblem.mts_eos_not_subscribed; /* LONG_NAMED_ENUMERATED_VALUE */
+export const SubscriptionProblem_mts_eos_not_subscribed =
+    SubscriptionProblem.mts_eos_not_subscribed satisfies SubscriptionProblem; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary mts_eos_not_subscribed
  * @constant
  * @type {number}
  */
-export const mts_eos_not_subscribed: SubscriptionProblem =
-    SubscriptionProblem.mts_eos_not_subscribed; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const mts_eos_not_subscribed =
+    SubscriptionProblem.mts_eos_not_subscribed satisfies SubscriptionProblem; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 export function _decode_SubscriptionProblem(el: _Element): SubscriptionProblem {

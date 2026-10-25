@@ -89,16 +89,16 @@ export const MetricType = _enum_for_MetricType;
  * @constant
  * @type {number}
  */
-export const MetricType_internal: MetricType =
-  MetricType.internal; /* LONG_NAMED_ENUMERATED_VALUE */
+export const MetricType_internal =
+  MetricType.internal satisfies MetricType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary internal
  * @constant
  * @type {number}
  */
-export const internal: MetricType =
-  MetricType.internal; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const internal =
+  MetricType.internal satisfies MetricType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MetricType_external
@@ -111,16 +111,16 @@ export const internal: MetricType =
  * @constant
  * @type {number}
  */
-export const MetricType_external: MetricType =
-  MetricType.external; /* LONG_NAMED_ENUMERATED_VALUE */
+export const MetricType_external =
+  MetricType.external satisfies MetricType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary external
  * @constant
  * @type {number}
  */
-export const external: MetricType =
-  MetricType.external; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const external =
+  MetricType.external satisfies MetricType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 export function _decode_MetricType(el: _Element): MetricType {

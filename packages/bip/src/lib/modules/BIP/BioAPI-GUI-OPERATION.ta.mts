@@ -55,7 +55,7 @@ export type BioAPI_GUI_OPERATION = _enum_for_BioAPI_GUI_OPERATION | ENUMERATED;
  * @constant
  * @type {number}
  */
-export const BioAPI_GUI_OPERATION_capture: BioAPI_GUI_OPERATION = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+export const BioAPI_GUI_OPERATION_capture = _enum_for_BioAPI_GUI_OPERATION.capture satisfies BioAPI_GUI_OPERATION; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -63,7 +63,7 @@ export const BioAPI_GUI_OPERATION_capture: BioAPI_GUI_OPERATION = 0; /* LONG_NAM
  * @constant
  * @type {number}
  */
-export const capture: BioAPI_GUI_OPERATION = BioAPI_GUI_OPERATION_capture; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const capture = BioAPI_GUI_OPERATION_capture satisfies BioAPI_GUI_OPERATION; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -71,7 +71,7 @@ export const capture: BioAPI_GUI_OPERATION = BioAPI_GUI_OPERATION_capture; /* SH
  * @constant
  * @type {number}
  */
-export const BioAPI_GUI_OPERATION_process: BioAPI_GUI_OPERATION = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+export const BioAPI_GUI_OPERATION_process = _enum_for_BioAPI_GUI_OPERATION.process satisfies BioAPI_GUI_OPERATION; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -79,7 +79,7 @@ export const BioAPI_GUI_OPERATION_process: BioAPI_GUI_OPERATION = 1; /* LONG_NAM
  * @constant
  * @type {number}
  */
-export const process: BioAPI_GUI_OPERATION = BioAPI_GUI_OPERATION_process; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const process = BioAPI_GUI_OPERATION_process satisfies BioAPI_GUI_OPERATION; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -87,7 +87,7 @@ export const process: BioAPI_GUI_OPERATION = BioAPI_GUI_OPERATION_process; /* SH
  * @constant
  * @type {number}
  */
-export const BioAPI_GUI_OPERATION_createtemplate: BioAPI_GUI_OPERATION = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+export const BioAPI_GUI_OPERATION_createtemplate = _enum_for_BioAPI_GUI_OPERATION.createtemplate satisfies BioAPI_GUI_OPERATION; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -95,7 +95,7 @@ export const BioAPI_GUI_OPERATION_createtemplate: BioAPI_GUI_OPERATION = 2; /* L
  * @constant
  * @type {number}
  */
-export const createtemplate: BioAPI_GUI_OPERATION = BioAPI_GUI_OPERATION_createtemplate; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const createtemplate = BioAPI_GUI_OPERATION_createtemplate satisfies BioAPI_GUI_OPERATION; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -103,7 +103,7 @@ export const createtemplate: BioAPI_GUI_OPERATION = BioAPI_GUI_OPERATION_createt
  * @constant
  * @type {number}
  */
-export const BioAPI_GUI_OPERATION_verifymatch: BioAPI_GUI_OPERATION = 3; /* LONG_NAMED_ENUMERATED_VALUE */
+export const BioAPI_GUI_OPERATION_verifymatch = _enum_for_BioAPI_GUI_OPERATION.verifymatch satisfies BioAPI_GUI_OPERATION; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -111,7 +111,7 @@ export const BioAPI_GUI_OPERATION_verifymatch: BioAPI_GUI_OPERATION = 3; /* LONG
  * @constant
  * @type {number}
  */
-export const verifymatch: BioAPI_GUI_OPERATION = BioAPI_GUI_OPERATION_verifymatch; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const verifymatch = BioAPI_GUI_OPERATION_verifymatch satisfies BioAPI_GUI_OPERATION; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -119,7 +119,7 @@ export const verifymatch: BioAPI_GUI_OPERATION = BioAPI_GUI_OPERATION_verifymatc
  * @constant
  * @type {number}
  */
-export const BioAPI_GUI_OPERATION_identifymatch: BioAPI_GUI_OPERATION = 4; /* LONG_NAMED_ENUMERATED_VALUE */
+export const BioAPI_GUI_OPERATION_identifymatch = _enum_for_BioAPI_GUI_OPERATION.identifymatch satisfies BioAPI_GUI_OPERATION; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -127,7 +127,7 @@ export const BioAPI_GUI_OPERATION_identifymatch: BioAPI_GUI_OPERATION = 4; /* LO
  * @constant
  * @type {number}
  */
-export const identifymatch: BioAPI_GUI_OPERATION = BioAPI_GUI_OPERATION_identifymatch; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const identifymatch = BioAPI_GUI_OPERATION_identifymatch satisfies BioAPI_GUI_OPERATION; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -135,7 +135,7 @@ export const identifymatch: BioAPI_GUI_OPERATION = BioAPI_GUI_OPERATION_identify
  * @constant
  * @type {number}
  */
-export const BioAPI_GUI_OPERATION_verify: BioAPI_GUI_OPERATION = 5; /* LONG_NAMED_ENUMERATED_VALUE */
+export const BioAPI_GUI_OPERATION_verify = _enum_for_BioAPI_GUI_OPERATION.verify satisfies BioAPI_GUI_OPERATION; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -143,7 +143,7 @@ export const BioAPI_GUI_OPERATION_verify: BioAPI_GUI_OPERATION = 5; /* LONG_NAME
  * @constant
  * @type {number}
  */
-export const verify: BioAPI_GUI_OPERATION = BioAPI_GUI_OPERATION_verify; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const verify = BioAPI_GUI_OPERATION_verify satisfies BioAPI_GUI_OPERATION; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -151,7 +151,7 @@ export const verify: BioAPI_GUI_OPERATION = BioAPI_GUI_OPERATION_verify; /* SHOR
  * @constant
  * @type {number}
  */
-export const BioAPI_GUI_OPERATION_identify: BioAPI_GUI_OPERATION = 6; /* LONG_NAMED_ENUMERATED_VALUE */
+export const BioAPI_GUI_OPERATION_identify = _enum_for_BioAPI_GUI_OPERATION.identify satisfies BioAPI_GUI_OPERATION; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -159,7 +159,7 @@ export const BioAPI_GUI_OPERATION_identify: BioAPI_GUI_OPERATION = 6; /* LONG_NA
  * @constant
  * @type {number}
  */
-export const identify: BioAPI_GUI_OPERATION = BioAPI_GUI_OPERATION_identify; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const identify = BioAPI_GUI_OPERATION_identify satisfies BioAPI_GUI_OPERATION; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -167,7 +167,7 @@ export const identify: BioAPI_GUI_OPERATION = BioAPI_GUI_OPERATION_identify; /* 
  * @constant
  * @type {number}
  */
-export const BioAPI_GUI_OPERATION_enroll: BioAPI_GUI_OPERATION = 7; /* LONG_NAMED_ENUMERATED_VALUE */
+export const BioAPI_GUI_OPERATION_enroll = _enum_for_BioAPI_GUI_OPERATION.enroll satisfies BioAPI_GUI_OPERATION; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -175,7 +175,7 @@ export const BioAPI_GUI_OPERATION_enroll: BioAPI_GUI_OPERATION = 7; /* LONG_NAME
  * @constant
  * @type {number}
  */
-export const enroll: BioAPI_GUI_OPERATION = BioAPI_GUI_OPERATION_enroll; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const enroll = BioAPI_GUI_OPERATION_enroll satisfies BioAPI_GUI_OPERATION; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 

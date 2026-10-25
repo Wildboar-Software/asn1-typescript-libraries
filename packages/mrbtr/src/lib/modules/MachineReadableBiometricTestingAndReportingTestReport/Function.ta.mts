@@ -53,7 +53,7 @@ type Function = _enum_for_Function | ENUMERATED;
  * @type {number}
  */
 export
-const Function_acquisition: Function = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const Function_acquisition = _enum_for_Function.acquisition satisfies Function; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary acquisition
@@ -61,7 +61,7 @@ const Function_acquisition: Function = 1; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const acquisition: Function = Function_acquisition; /* SHORT_NAMED_ENUMERATED_VALUE */
+const acquisition = Function_acquisition satisfies Function; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Function_enrolment
@@ -69,7 +69,7 @@ const acquisition: Function = Function_acquisition; /* SHORT_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const Function_enrolment: Function = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+const Function_enrolment = _enum_for_Function.enrolment satisfies Function; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary enrolment
@@ -77,7 +77,7 @@ const Function_enrolment: Function = 2; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const enrolment: Function = Function_enrolment; /* SHORT_NAMED_ENUMERATED_VALUE */
+const enrolment = Function_enrolment satisfies Function; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Function_verification
@@ -85,7 +85,7 @@ const enrolment: Function = Function_enrolment; /* SHORT_NAMED_ENUMERATED_VALUE 
  * @type {number}
  */
 export
-const Function_verification: Function = 3; /* LONG_NAMED_ENUMERATED_VALUE */
+const Function_verification = _enum_for_Function.verification satisfies Function; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary verification
@@ -93,7 +93,7 @@ const Function_verification: Function = 3; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const verification: Function = Function_verification; /* SHORT_NAMED_ENUMERATED_VALUE */
+const verification = Function_verification satisfies Function; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Function_identification
@@ -101,7 +101,7 @@ const verification: Function = Function_verification; /* SHORT_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const Function_identification: Function = 4; /* LONG_NAMED_ENUMERATED_VALUE */
+const Function_identification = _enum_for_Function.identification satisfies Function; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary identification
@@ -109,7 +109,7 @@ const Function_identification: Function = 4; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const identification: Function = Function_identification; /* SHORT_NAMED_ENUMERATED_VALUE */
+const identification = Function_identification satisfies Function; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**

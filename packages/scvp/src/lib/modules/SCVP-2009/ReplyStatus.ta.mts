@@ -120,8 +120,8 @@ export const ReplyStatus = _enum_for_ReplyStatus;
  * @constant
  * @type {number}
  */
-export const ReplyStatus_success: ReplyStatus =
-  ReplyStatus.success; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ReplyStatus_success =
+  ReplyStatus.success satisfies ReplyStatus; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary success
@@ -132,8 +132,8 @@ export const ReplyStatus_success: ReplyStatus =
  * @constant
  * @type {number}
  */
-export const success: ReplyStatus =
-  ReplyStatus.success; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const success =
+  ReplyStatus.success satisfies ReplyStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReplyStatus_malformedPKC
@@ -144,8 +144,8 @@ export const success: ReplyStatus =
  * @constant
  * @type {number}
  */
-export const ReplyStatus_malformedPKC: ReplyStatus =
-  ReplyStatus.malformedPKC; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ReplyStatus_malformedPKC =
+  ReplyStatus.malformedPKC satisfies ReplyStatus; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary malformedPKC
@@ -156,8 +156,8 @@ export const ReplyStatus_malformedPKC: ReplyStatus =
  * @constant
  * @type {number}
  */
-export const malformedPKC: ReplyStatus =
-  ReplyStatus.malformedPKC; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const malformedPKC =
+  ReplyStatus.malformedPKC satisfies ReplyStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReplyStatus_malformedAC
@@ -168,8 +168,8 @@ export const malformedPKC: ReplyStatus =
  * @constant
  * @type {number}
  */
-export const ReplyStatus_malformedAC: ReplyStatus =
-  ReplyStatus.malformedAC; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ReplyStatus_malformedAC =
+  ReplyStatus.malformedAC satisfies ReplyStatus; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary malformedAC
@@ -180,8 +180,8 @@ export const ReplyStatus_malformedAC: ReplyStatus =
  * @constant
  * @type {number}
  */
-export const malformedAC: ReplyStatus =
-  ReplyStatus.malformedAC; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const malformedAC =
+  ReplyStatus.malformedAC satisfies ReplyStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReplyStatus_unavailableValidationTime
@@ -192,8 +192,8 @@ export const malformedAC: ReplyStatus =
  * @constant
  * @type {number}
  */
-export const ReplyStatus_unavailableValidationTime: ReplyStatus =
-  ReplyStatus.unavailableValidationTime; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ReplyStatus_unavailableValidationTime =
+  ReplyStatus.unavailableValidationTime satisfies ReplyStatus; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unavailableValidationTime
@@ -204,8 +204,8 @@ export const ReplyStatus_unavailableValidationTime: ReplyStatus =
  * @constant
  * @type {number}
  */
-export const unavailableValidationTime: ReplyStatus =
-  ReplyStatus.unavailableValidationTime; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const unavailableValidationTime =
+  ReplyStatus.unavailableValidationTime satisfies ReplyStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReplyStatus_referenceCertHashFail
@@ -216,8 +216,8 @@ export const unavailableValidationTime: ReplyStatus =
  * @constant
  * @type {number}
  */
-export const ReplyStatus_referenceCertHashFail: ReplyStatus =
-  ReplyStatus.referenceCertHashFail; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ReplyStatus_referenceCertHashFail =
+  ReplyStatus.referenceCertHashFail satisfies ReplyStatus; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary referenceCertHashFail
@@ -228,8 +228,8 @@ export const ReplyStatus_referenceCertHashFail: ReplyStatus =
  * @constant
  * @type {number}
  */
-export const referenceCertHashFail: ReplyStatus =
-  ReplyStatus.referenceCertHashFail; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const referenceCertHashFail =
+  ReplyStatus.referenceCertHashFail satisfies ReplyStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReplyStatus_certPathConstructFail
@@ -240,8 +240,8 @@ export const referenceCertHashFail: ReplyStatus =
  * @constant
  * @type {number}
  */
-export const ReplyStatus_certPathConstructFail: ReplyStatus =
-  ReplyStatus.certPathConstructFail; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ReplyStatus_certPathConstructFail =
+  ReplyStatus.certPathConstructFail satisfies ReplyStatus; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary certPathConstructFail
@@ -252,8 +252,8 @@ export const ReplyStatus_certPathConstructFail: ReplyStatus =
  * @constant
  * @type {number}
  */
-export const certPathConstructFail: ReplyStatus =
-  ReplyStatus.certPathConstructFail; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const certPathConstructFail =
+  ReplyStatus.certPathConstructFail satisfies ReplyStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReplyStatus_certPathNotValid
@@ -264,8 +264,8 @@ export const certPathConstructFail: ReplyStatus =
  * @constant
  * @type {number}
  */
-export const ReplyStatus_certPathNotValid: ReplyStatus =
-  ReplyStatus.certPathNotValid; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ReplyStatus_certPathNotValid =
+  ReplyStatus.certPathNotValid satisfies ReplyStatus; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary certPathNotValid
@@ -276,8 +276,8 @@ export const ReplyStatus_certPathNotValid: ReplyStatus =
  * @constant
  * @type {number}
  */
-export const certPathNotValid: ReplyStatus =
-  ReplyStatus.certPathNotValid; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const certPathNotValid =
+  ReplyStatus.certPathNotValid satisfies ReplyStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReplyStatus_certPathNotValidNow
@@ -288,8 +288,8 @@ export const certPathNotValid: ReplyStatus =
  * @constant
  * @type {number}
  */
-export const ReplyStatus_certPathNotValidNow: ReplyStatus =
-  ReplyStatus.certPathNotValidNow; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ReplyStatus_certPathNotValidNow =
+  ReplyStatus.certPathNotValidNow satisfies ReplyStatus; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary certPathNotValidNow
@@ -300,8 +300,8 @@ export const ReplyStatus_certPathNotValidNow: ReplyStatus =
  * @constant
  * @type {number}
  */
-export const certPathNotValidNow: ReplyStatus =
-  ReplyStatus.certPathNotValidNow; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const certPathNotValidNow =
+  ReplyStatus.certPathNotValidNow satisfies ReplyStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReplyStatus_wantBackUnsatisfied
@@ -312,8 +312,8 @@ export const certPathNotValidNow: ReplyStatus =
  * @constant
  * @type {number}
  */
-export const ReplyStatus_wantBackUnsatisfied: ReplyStatus =
-  ReplyStatus.wantBackUnsatisfied; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ReplyStatus_wantBackUnsatisfied =
+  ReplyStatus.wantBackUnsatisfied satisfies ReplyStatus; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary wantBackUnsatisfied
@@ -324,8 +324,8 @@ export const ReplyStatus_wantBackUnsatisfied: ReplyStatus =
  * @constant
  * @type {number}
  */
-export const wantBackUnsatisfied: ReplyStatus =
-  ReplyStatus.wantBackUnsatisfied; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const wantBackUnsatisfied =
+  ReplyStatus.wantBackUnsatisfied satisfies ReplyStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 export function _decode_ReplyStatus(el: _Element): ReplyStatus {

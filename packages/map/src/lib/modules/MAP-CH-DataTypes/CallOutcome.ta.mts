@@ -46,7 +46,7 @@ type CallOutcome = _enum_for_CallOutcome | ENUMERATED;
  * @type {number}
  */
 export
-const CallOutcome_success: CallOutcome = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+const CallOutcome_success = _enum_for_CallOutcome.success satisfies CallOutcome; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary success
@@ -58,7 +58,7 @@ const CallOutcome_success: CallOutcome = 0; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const success: CallOutcome = CallOutcome_success; /* SHORT_NAMED_ENUMERATED_VALUE */
+const success = CallOutcome_success satisfies CallOutcome; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CallOutcome_failure
@@ -70,7 +70,7 @@ const success: CallOutcome = CallOutcome_success; /* SHORT_NAMED_ENUMERATED_VALU
  * @type {number}
  */
 export
-const CallOutcome_failure: CallOutcome = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const CallOutcome_failure = _enum_for_CallOutcome.failure satisfies CallOutcome; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary failure
@@ -82,7 +82,7 @@ const CallOutcome_failure: CallOutcome = 1; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const failure: CallOutcome = CallOutcome_failure; /* SHORT_NAMED_ENUMERATED_VALUE */
+const failure = CallOutcome_failure satisfies CallOutcome; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CallOutcome_busy
@@ -94,7 +94,7 @@ const failure: CallOutcome = CallOutcome_failure; /* SHORT_NAMED_ENUMERATED_VALU
  * @type {number}
  */
 export
-const CallOutcome_busy: CallOutcome = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+const CallOutcome_busy = _enum_for_CallOutcome.busy satisfies CallOutcome; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary busy
@@ -106,7 +106,7 @@ const CallOutcome_busy: CallOutcome = 2; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const busy: CallOutcome = CallOutcome_busy; /* SHORT_NAMED_ENUMERATED_VALUE */
+const busy = CallOutcome_busy satisfies CallOutcome; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) CallOutcome

@@ -85,7 +85,7 @@ const EmConState = _enum_for_EmConState;
  * @type {number}
  */
 export
-const EmConState_enabled: EmConState = EmConState.enabled; /* LONG_NAMED_ENUMERATED_VALUE */
+const EmConState_enabled = EmConState.enabled satisfies EmConState; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * Short name for {@link EmConState_enabled}.
@@ -94,7 +94,7 @@ const EmConState_enabled: EmConState = EmConState.enabled; /* LONG_NAMED_ENUMERA
  * @type {number}
  */
 export
-const enabled: EmConState = EmConState.enabled; /* SHORT_NAMED_ENUMERATED_VALUE */
+const enabled = EmConState.enabled satisfies EmConState; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * Receive only.
@@ -103,7 +103,7 @@ const enabled: EmConState = EmConState.enabled; /* SHORT_NAMED_ENUMERATED_VALUE 
  * @type {number}
  */
 export
-const EmConState_receive_only: EmConState = EmConState.receive_only; /* LONG_NAMED_ENUMERATED_VALUE */
+const EmConState_receive_only = EmConState.receive_only satisfies EmConState; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * Short name for {@link EmConState_receive_only}.
@@ -112,7 +112,7 @@ const EmConState_receive_only: EmConState = EmConState.receive_only; /* LONG_NAM
  * @type {number}
  */
 export
-const receive_only: EmConState = EmConState.receive_only; /* SHORT_NAMED_ENUMERATED_VALUE */
+const receive_only = EmConState.receive_only satisfies EmConState; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * Electrical or electronic silence.
@@ -121,7 +121,7 @@ const receive_only: EmConState = EmConState.receive_only; /* SHORT_NAMED_ENUMERA
  * @type {number}
  */
 export
-const EmConState_electronic_silence: EmConState = EmConState.electronic_silence; /* LONG_NAMED_ENUMERATED_VALUE */
+const EmConState_electronic_silence = EmConState.electronic_silence satisfies EmConState; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * Short name for {@link EmConState_electronic_silence}.
@@ -130,7 +130,7 @@ const EmConState_electronic_silence: EmConState = EmConState.electronic_silence;
  * @type {number}
  */
 export
-const electronic_silence: EmConState = EmConState.electronic_silence; /* SHORT_NAMED_ENUMERATED_VALUE */
+const electronic_silence = EmConState.electronic_silence satisfies EmConState; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * Disabled.
@@ -139,7 +139,7 @@ const electronic_silence: EmConState = EmConState.electronic_silence; /* SHORT_N
  * @type {number}
  */
 export
-const EmConState_disabled: EmConState = EmConState.disabled; /* LONG_NAMED_ENUMERATED_VALUE */
+const EmConState_disabled = EmConState.disabled satisfies EmConState; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * Short name for {@link EmConState_disabled}.
@@ -148,7 +148,7 @@ const EmConState_disabled: EmConState = EmConState.disabled; /* LONG_NAMED_ENUME
  * @type {number}
  */
 export
-const disabled: EmConState = EmConState.disabled; /* SHORT_NAMED_ENUMERATED_VALUE */
+const disabled = EmConState.disabled satisfies EmConState; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_EmConState: $.ASN1Decoder<EmConState> =
     $._decodeEnumerated as $.ASN1Decoder<EmConState>;
 export const _encode_EmConState: $.ASN1Encoder<EmConState> =

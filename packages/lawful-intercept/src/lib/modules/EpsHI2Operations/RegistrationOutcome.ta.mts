@@ -48,7 +48,7 @@ type RegistrationOutcome = _enum_for_RegistrationOutcome | ENUMERATED;
  * @type {number}
  */
 export
-const RegistrationOutcome_success: RegistrationOutcome = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+const RegistrationOutcome_success = _enum_for_RegistrationOutcome.success satisfies RegistrationOutcome; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary success
@@ -59,7 +59,7 @@ const RegistrationOutcome_success: RegistrationOutcome = 0; /* LONG_NAMED_ENUMER
  * @type {number}
  */
 export
-const success: RegistrationOutcome = RegistrationOutcome_success; /* SHORT_NAMED_ENUMERATED_VALUE */
+const success = RegistrationOutcome_success satisfies RegistrationOutcome; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RegistrationOutcome_failure
@@ -71,7 +71,7 @@ const success: RegistrationOutcome = RegistrationOutcome_success; /* SHORT_NAMED
  * @type {number}
  */
 export
-const RegistrationOutcome_failure: RegistrationOutcome = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const RegistrationOutcome_failure = _enum_for_RegistrationOutcome.failure satisfies RegistrationOutcome; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary failure
@@ -82,7 +82,7 @@ const RegistrationOutcome_failure: RegistrationOutcome = 1; /* LONG_NAMED_ENUMER
  * @type {number}
  */
 export
-const failure: RegistrationOutcome = RegistrationOutcome_failure; /* SHORT_NAMED_ENUMERATED_VALUE */
+const failure = RegistrationOutcome_failure satisfies RegistrationOutcome; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_RegistrationOutcome: $.ASN1Decoder<RegistrationOutcome> = $._decodeEnumerated;
 export const _encode_RegistrationOutcome: $.ASN1Encoder<RegistrationOutcome> = $._encodeEnumerated;
 

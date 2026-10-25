@@ -61,7 +61,7 @@ type PacketReportTrigger = _enum_for_PacketReportTrigger | ENUMERATED;
  * @type {number}
  */
 export
-const PacketReportTrigger_flowStart: PacketReportTrigger = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const PacketReportTrigger_flowStart = _enum_for_PacketReportTrigger.flowStart satisfies PacketReportTrigger; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary flowStart
@@ -73,7 +73,7 @@ const PacketReportTrigger_flowStart: PacketReportTrigger = 1; /* LONG_NAMED_ENUM
  * @type {number}
  */
 export
-const flowStart: PacketReportTrigger = PacketReportTrigger_flowStart; /* SHORT_NAMED_ENUMERATED_VALUE */
+const flowStart = PacketReportTrigger_flowStart satisfies PacketReportTrigger; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PacketReportTrigger_flowEnd
@@ -85,7 +85,7 @@ const flowStart: PacketReportTrigger = PacketReportTrigger_flowStart; /* SHORT_N
  * @type {number}
  */
 export
-const PacketReportTrigger_flowEnd: PacketReportTrigger = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+const PacketReportTrigger_flowEnd = _enum_for_PacketReportTrigger.flowEnd satisfies PacketReportTrigger; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary flowEnd
@@ -97,7 +97,7 @@ const PacketReportTrigger_flowEnd: PacketReportTrigger = 2; /* LONG_NAMED_ENUMER
  * @type {number}
  */
 export
-const flowEnd: PacketReportTrigger = PacketReportTrigger_flowEnd; /* SHORT_NAMED_ENUMERATED_VALUE */
+const flowEnd = PacketReportTrigger_flowEnd satisfies PacketReportTrigger; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PacketReportTrigger_flowTimeout
@@ -109,7 +109,7 @@ const flowEnd: PacketReportTrigger = PacketReportTrigger_flowEnd; /* SHORT_NAMED
  * @type {number}
  */
 export
-const PacketReportTrigger_flowTimeout: PacketReportTrigger = 3; /* LONG_NAMED_ENUMERATED_VALUE */
+const PacketReportTrigger_flowTimeout = _enum_for_PacketReportTrigger.flowTimeout satisfies PacketReportTrigger; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary flowTimeout
@@ -121,7 +121,7 @@ const PacketReportTrigger_flowTimeout: PacketReportTrigger = 3; /* LONG_NAMED_EN
  * @type {number}
  */
 export
-const flowTimeout: PacketReportTrigger = PacketReportTrigger_flowTimeout; /* SHORT_NAMED_ENUMERATED_VALUE */
+const flowTimeout = PacketReportTrigger_flowTimeout satisfies PacketReportTrigger; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PacketReportTrigger_flowTimerExpiration
@@ -133,7 +133,7 @@ const flowTimeout: PacketReportTrigger = PacketReportTrigger_flowTimeout; /* SHO
  * @type {number}
  */
 export
-const PacketReportTrigger_flowTimerExpiration: PacketReportTrigger = 4; /* LONG_NAMED_ENUMERATED_VALUE */
+const PacketReportTrigger_flowTimerExpiration = _enum_for_PacketReportTrigger.flowTimerExpiration satisfies PacketReportTrigger; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary flowTimerExpiration
@@ -145,7 +145,7 @@ const PacketReportTrigger_flowTimerExpiration: PacketReportTrigger = 4; /* LONG_
  * @type {number}
  */
 export
-const flowTimerExpiration: PacketReportTrigger = PacketReportTrigger_flowTimerExpiration; /* SHORT_NAMED_ENUMERATED_VALUE */
+const flowTimerExpiration = PacketReportTrigger_flowTimerExpiration satisfies PacketReportTrigger; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PacketReportTrigger_flowPacketCount
@@ -157,7 +157,7 @@ const flowTimerExpiration: PacketReportTrigger = PacketReportTrigger_flowTimerEx
  * @type {number}
  */
 export
-const PacketReportTrigger_flowPacketCount: PacketReportTrigger = 5; /* LONG_NAMED_ENUMERATED_VALUE */
+const PacketReportTrigger_flowPacketCount = _enum_for_PacketReportTrigger.flowPacketCount satisfies PacketReportTrigger; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary flowPacketCount
@@ -169,7 +169,7 @@ const PacketReportTrigger_flowPacketCount: PacketReportTrigger = 5; /* LONG_NAME
  * @type {number}
  */
 export
-const flowPacketCount: PacketReportTrigger = PacketReportTrigger_flowPacketCount; /* SHORT_NAMED_ENUMERATED_VALUE */
+const flowPacketCount = PacketReportTrigger_flowPacketCount satisfies PacketReportTrigger; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PacketReportTrigger_flowByteCount
@@ -181,7 +181,7 @@ const flowPacketCount: PacketReportTrigger = PacketReportTrigger_flowPacketCount
  * @type {number}
  */
 export
-const PacketReportTrigger_flowByteCount: PacketReportTrigger = 6; /* LONG_NAMED_ENUMERATED_VALUE */
+const PacketReportTrigger_flowByteCount = _enum_for_PacketReportTrigger.flowByteCount satisfies PacketReportTrigger; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary flowByteCount
@@ -193,7 +193,7 @@ const PacketReportTrigger_flowByteCount: PacketReportTrigger = 6; /* LONG_NAMED_
  * @type {number}
  */
 export
-const flowByteCount: PacketReportTrigger = PacketReportTrigger_flowByteCount; /* SHORT_NAMED_ENUMERATED_VALUE */
+const flowByteCount = PacketReportTrigger_flowByteCount satisfies PacketReportTrigger; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PacketReportTrigger_sessionTimerExpiration
@@ -205,7 +205,7 @@ const flowByteCount: PacketReportTrigger = PacketReportTrigger_flowByteCount; /*
  * @type {number}
  */
 export
-const PacketReportTrigger_sessionTimerExpiration: PacketReportTrigger = 7; /* LONG_NAMED_ENUMERATED_VALUE */
+const PacketReportTrigger_sessionTimerExpiration = _enum_for_PacketReportTrigger.sessionTimerExpiration satisfies PacketReportTrigger; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sessionTimerExpiration
@@ -217,7 +217,7 @@ const PacketReportTrigger_sessionTimerExpiration: PacketReportTrigger = 7; /* LO
  * @type {number}
  */
 export
-const sessionTimerExpiration: PacketReportTrigger = PacketReportTrigger_sessionTimerExpiration; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sessionTimerExpiration = PacketReportTrigger_sessionTimerExpiration satisfies PacketReportTrigger; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PacketReportTrigger_sessionPacketCount
@@ -229,7 +229,7 @@ const sessionTimerExpiration: PacketReportTrigger = PacketReportTrigger_sessionT
  * @type {number}
  */
 export
-const PacketReportTrigger_sessionPacketCount: PacketReportTrigger = 8; /* LONG_NAMED_ENUMERATED_VALUE */
+const PacketReportTrigger_sessionPacketCount = _enum_for_PacketReportTrigger.sessionPacketCount satisfies PacketReportTrigger; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sessionPacketCount
@@ -241,7 +241,7 @@ const PacketReportTrigger_sessionPacketCount: PacketReportTrigger = 8; /* LONG_N
  * @type {number}
  */
 export
-const sessionPacketCount: PacketReportTrigger = PacketReportTrigger_sessionPacketCount; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sessionPacketCount = PacketReportTrigger_sessionPacketCount satisfies PacketReportTrigger; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PacketReportTrigger_sessionByteCount
@@ -253,7 +253,7 @@ const sessionPacketCount: PacketReportTrigger = PacketReportTrigger_sessionPacke
  * @type {number}
  */
 export
-const PacketReportTrigger_sessionByteCount: PacketReportTrigger = 9; /* LONG_NAMED_ENUMERATED_VALUE */
+const PacketReportTrigger_sessionByteCount = _enum_for_PacketReportTrigger.sessionByteCount satisfies PacketReportTrigger; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sessionByteCount
@@ -265,7 +265,7 @@ const PacketReportTrigger_sessionByteCount: PacketReportTrigger = 9; /* LONG_NAM
  * @type {number}
  */
 export
-const sessionByteCount: PacketReportTrigger = PacketReportTrigger_sessionByteCount; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sessionByteCount = PacketReportTrigger_sessionByteCount satisfies PacketReportTrigger; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PacketReportTrigger_reportEnd
@@ -277,7 +277,7 @@ const sessionByteCount: PacketReportTrigger = PacketReportTrigger_sessionByteCou
  * @type {number}
  */
 export
-const PacketReportTrigger_reportEnd: PacketReportTrigger = 10; /* LONG_NAMED_ENUMERATED_VALUE */
+const PacketReportTrigger_reportEnd = _enum_for_PacketReportTrigger.reportEnd satisfies PacketReportTrigger; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary reportEnd
@@ -289,7 +289,7 @@ const PacketReportTrigger_reportEnd: PacketReportTrigger = 10; /* LONG_NAMED_ENU
  * @type {number}
  */
 export
-const reportEnd: PacketReportTrigger = PacketReportTrigger_reportEnd; /* SHORT_NAMED_ENUMERATED_VALUE */
+const reportEnd = PacketReportTrigger_reportEnd satisfies PacketReportTrigger; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_PacketReportTrigger: $.ASN1Decoder<PacketReportTrigger> = $._decodeEnumerated;
 export const _encode_PacketReportTrigger: $.ASN1Encoder<PacketReportTrigger> = $._encodeEnumerated;
 

@@ -94,8 +94,8 @@ export const SystemType = _enum_for_SystemType;
  * @constant
  * @type {number}
  */
-export const SystemType_eS: SystemType =
-    SystemType.eS; /* LONG_NAMED_ENUMERATED_VALUE */
+export const SystemType_eS =
+    SystemType.eS satisfies SystemType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -109,7 +109,7 @@ export const SystemType_eS: SystemType =
  * @constant
  * @type {number}
  */
-export const eS: SystemType = SystemType.eS; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const eS = SystemType.eS satisfies SystemType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -123,8 +123,8 @@ export const eS: SystemType = SystemType.eS; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @constant
  * @type {number}
  */
-export const SystemType_iS: SystemType =
-    SystemType.iS; /* LONG_NAMED_ENUMERATED_VALUE */
+export const SystemType_iS =
+    SystemType.iS satisfies SystemType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -138,7 +138,7 @@ export const SystemType_iS: SystemType =
  * @constant
  * @type {number}
  */
-export const iS: SystemType = SystemType.iS; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const iS = SystemType.iS satisfies SystemType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 

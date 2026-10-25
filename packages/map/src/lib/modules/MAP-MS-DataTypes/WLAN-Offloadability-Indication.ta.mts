@@ -81,7 +81,7 @@ const WLAN_Offloadability_Indication = _enum_for_WLAN_Offloadability_Indication;
  * @type {number}
  */
 export
-const WLAN_Offloadability_Indication_notAllowed: WLAN_Offloadability_Indication = WLAN_Offloadability_Indication.notAllowed; /* LONG_NAMED_ENUMERATED_VALUE */
+const WLAN_Offloadability_Indication_notAllowed = WLAN_Offloadability_Indication.notAllowed satisfies WLAN_Offloadability_Indication; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary notAllowed
@@ -89,7 +89,7 @@ const WLAN_Offloadability_Indication_notAllowed: WLAN_Offloadability_Indication 
  * @type {number}
  */
 export
-const notAllowed: WLAN_Offloadability_Indication = WLAN_Offloadability_Indication.notAllowed; /* SHORT_NAMED_ENUMERATED_VALUE */
+const notAllowed = WLAN_Offloadability_Indication.notAllowed satisfies WLAN_Offloadability_Indication; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary WLAN_Offloadability_Indication_allowed
@@ -97,7 +97,7 @@ const notAllowed: WLAN_Offloadability_Indication = WLAN_Offloadability_Indicatio
  * @type {number}
  */
 export
-const WLAN_Offloadability_Indication_allowed: WLAN_Offloadability_Indication = WLAN_Offloadability_Indication.allowed; /* LONG_NAMED_ENUMERATED_VALUE */
+const WLAN_Offloadability_Indication_allowed = WLAN_Offloadability_Indication.allowed satisfies WLAN_Offloadability_Indication; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary allowed
@@ -105,7 +105,7 @@ const WLAN_Offloadability_Indication_allowed: WLAN_Offloadability_Indication = W
  * @type {number}
  */
 export
-const allowed: WLAN_Offloadability_Indication = WLAN_Offloadability_Indication.allowed; /* SHORT_NAMED_ENUMERATED_VALUE */
+const allowed = WLAN_Offloadability_Indication.allowed satisfies WLAN_Offloadability_Indication; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) WLAN_Offloadability_Indication

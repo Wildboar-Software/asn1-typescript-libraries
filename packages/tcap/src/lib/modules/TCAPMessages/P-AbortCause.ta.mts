@@ -42,70 +42,70 @@ export type P_AbortCause = INTEGER;
  * @constant
  * @type {number}
  */
-export const P_AbortCause_unrecognizedMessageType: P_AbortCause = 0; /* LONG_NAMED_INTEGER_VALUE */
+export const P_AbortCause_unrecognizedMessageType = 0 satisfies P_AbortCause; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary P_AbortCause_unrecognizedMessageType
  * @constant
  * @type {number}
  */
-export const unrecognizedMessageType: P_AbortCause = P_AbortCause_unrecognizedMessageType; /* SHORT_NAMED_INTEGER_VALUE */
+export const unrecognizedMessageType = P_AbortCause_unrecognizedMessageType satisfies P_AbortCause; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary P_AbortCause_unrecognizedTransactionID
  * @constant
  * @type {number}
  */
-export const P_AbortCause_unrecognizedTransactionID: P_AbortCause = 1; /* LONG_NAMED_INTEGER_VALUE */
+export const P_AbortCause_unrecognizedTransactionID = 1 satisfies P_AbortCause; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary P_AbortCause_unrecognizedTransactionID
  * @constant
  * @type {number}
  */
-export const unrecognizedTransactionID: P_AbortCause = P_AbortCause_unrecognizedTransactionID; /* SHORT_NAMED_INTEGER_VALUE */
+export const unrecognizedTransactionID = P_AbortCause_unrecognizedTransactionID satisfies P_AbortCause; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary P_AbortCause_badlyFormattedTransactionPortion
  * @constant
  * @type {number}
  */
-export const P_AbortCause_badlyFormattedTransactionPortion: P_AbortCause = 2; /* LONG_NAMED_INTEGER_VALUE */
+export const P_AbortCause_badlyFormattedTransactionPortion = 2 satisfies P_AbortCause; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary P_AbortCause_badlyFormattedTransactionPortion
  * @constant
  * @type {number}
  */
-export const badlyFormattedTransactionPortion: P_AbortCause = P_AbortCause_badlyFormattedTransactionPortion; /* SHORT_NAMED_INTEGER_VALUE */
+export const badlyFormattedTransactionPortion = P_AbortCause_badlyFormattedTransactionPortion satisfies P_AbortCause; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary P_AbortCause_incorrectTransactionPortion
  * @constant
  * @type {number}
  */
-export const P_AbortCause_incorrectTransactionPortion: P_AbortCause = 3; /* LONG_NAMED_INTEGER_VALUE */
+export const P_AbortCause_incorrectTransactionPortion = 3 satisfies P_AbortCause; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary P_AbortCause_incorrectTransactionPortion
  * @constant
  * @type {number}
  */
-export const incorrectTransactionPortion: P_AbortCause = P_AbortCause_incorrectTransactionPortion; /* SHORT_NAMED_INTEGER_VALUE */
+export const incorrectTransactionPortion = P_AbortCause_incorrectTransactionPortion satisfies P_AbortCause; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary P_AbortCause_resourceLimitation
  * @constant
  * @type {number}
  */
-export const P_AbortCause_resourceLimitation: P_AbortCause = 4; /* LONG_NAMED_INTEGER_VALUE */
+export const P_AbortCause_resourceLimitation = 4 satisfies P_AbortCause; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary P_AbortCause_resourceLimitation
  * @constant
  * @type {number}
  */
-export const resourceLimitation: P_AbortCause = P_AbortCause_resourceLimitation; /* SHORT_NAMED_INTEGER_VALUE */
+export const resourceLimitation = P_AbortCause_resourceLimitation satisfies P_AbortCause; /* SHORT_NAMED_INTEGER_VALUE */
 
 let _cached_decoder_for_P_AbortCause: $.ASN1Decoder<P_AbortCause> | null = null;
 

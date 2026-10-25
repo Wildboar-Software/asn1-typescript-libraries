@@ -45,7 +45,7 @@ export type DeleteError_deleteErrorInfo =
  * @constant
  * @type {number}
  */
-export const DeleteError_deleteErrorInfo_accessDenied: DeleteError_deleteErrorInfo = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+export const DeleteError_deleteErrorInfo_accessDenied = _enum_for_DeleteError_deleteErrorInfo.accessDenied satisfies DeleteError_deleteErrorInfo; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -53,7 +53,7 @@ export const DeleteError_deleteErrorInfo_accessDenied: DeleteError_deleteErrorIn
  * @constant
  * @type {number}
  */
-export const accessDenied: DeleteError_deleteErrorInfo = DeleteError_deleteErrorInfo_accessDenied; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const accessDenied = DeleteError_deleteErrorInfo_accessDenied satisfies DeleteError_deleteErrorInfo; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 

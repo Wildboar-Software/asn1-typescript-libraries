@@ -60,7 +60,7 @@ type Tetra_IRI_Parameters_iRIversion = _enum_for_Tetra_IRI_Parameters_iRIversion
  * @type {number}
  */
 export
-const Tetra_IRI_Parameters_iRIversion_version0: Tetra_IRI_Parameters_iRIversion = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+const Tetra_IRI_Parameters_iRIversion_version0 = _enum_for_Tetra_IRI_Parameters_iRIversion.version0 satisfies Tetra_IRI_Parameters_iRIversion; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary version0
@@ -77,7 +77,7 @@ const Tetra_IRI_Parameters_iRIversion_version0: Tetra_IRI_Parameters_iRIversion 
  * @type {number}
  */
 export
-const version0: Tetra_IRI_Parameters_iRIversion = Tetra_IRI_Parameters_iRIversion_version0; /* SHORT_NAMED_ENUMERATED_VALUE */
+const version0 = Tetra_IRI_Parameters_iRIversion_version0 satisfies Tetra_IRI_Parameters_iRIversion; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_Tetra_IRI_Parameters_iRIversion: $.ASN1Decoder<Tetra_IRI_Parameters_iRIversion> = $._decodeEnumerated;
 export const _encode_Tetra_IRI_Parameters_iRIversion: $.ASN1Encoder<Tetra_IRI_Parameters_iRIversion> = $._encodeEnumerated;
 

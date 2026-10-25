@@ -141,7 +141,7 @@ const CauseForRecordClosing = _enum_for_CauseForRecordClosing;
  * @type {number}
  */
 export
-const CauseForRecordClosing_serviceDeliveryEndSuccessfully: CauseForRecordClosing = CauseForRecordClosing.serviceDeliveryEndSuccessfully; /* LONG_NAMED_ENUMERATED_VALUE */
+const CauseForRecordClosing_serviceDeliveryEndSuccessfully = CauseForRecordClosing.serviceDeliveryEndSuccessfully satisfies CauseForRecordClosing; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary serviceDeliveryEndSuccessfully
@@ -155,7 +155,7 @@ const CauseForRecordClosing_serviceDeliveryEndSuccessfully: CauseForRecordClosin
  * @type {number}
  */
 export
-const serviceDeliveryEndSuccessfully: CauseForRecordClosing = CauseForRecordClosing.serviceDeliveryEndSuccessfully; /* SHORT_NAMED_ENUMERATED_VALUE */
+const serviceDeliveryEndSuccessfully = CauseForRecordClosing.serviceDeliveryEndSuccessfully satisfies CauseForRecordClosing; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CauseForRecordClosing_unSuccessfulServiceDelivery
@@ -168,7 +168,7 @@ const serviceDeliveryEndSuccessfully: CauseForRecordClosing = CauseForRecordClos
  * @type {number}
  */
 export
-const CauseForRecordClosing_unSuccessfulServiceDelivery: CauseForRecordClosing = CauseForRecordClosing.unSuccessfulServiceDelivery; /* LONG_NAMED_ENUMERATED_VALUE */
+const CauseForRecordClosing_unSuccessfulServiceDelivery = CauseForRecordClosing.unSuccessfulServiceDelivery satisfies CauseForRecordClosing; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unSuccessfulServiceDelivery
@@ -181,7 +181,7 @@ const CauseForRecordClosing_unSuccessfulServiceDelivery: CauseForRecordClosing =
  * @type {number}
  */
 export
-const unSuccessfulServiceDelivery: CauseForRecordClosing = CauseForRecordClosing.unSuccessfulServiceDelivery; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unSuccessfulServiceDelivery = CauseForRecordClosing.unSuccessfulServiceDelivery satisfies CauseForRecordClosing; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CauseForRecordClosing_timeLimit
@@ -195,7 +195,7 @@ const unSuccessfulServiceDelivery: CauseForRecordClosing = CauseForRecordClosing
  * @type {number}
  */
 export
-const CauseForRecordClosing_timeLimit: CauseForRecordClosing = CauseForRecordClosing.timeLimit; /* LONG_NAMED_ENUMERATED_VALUE */
+const CauseForRecordClosing_timeLimit = CauseForRecordClosing.timeLimit satisfies CauseForRecordClosing; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary timeLimit
@@ -209,7 +209,7 @@ const CauseForRecordClosing_timeLimit: CauseForRecordClosing = CauseForRecordClo
  * @type {number}
  */
 export
-const timeLimit: CauseForRecordClosing = CauseForRecordClosing.timeLimit; /* SHORT_NAMED_ENUMERATED_VALUE */
+const timeLimit = CauseForRecordClosing.timeLimit satisfies CauseForRecordClosing; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CauseForRecordClosing_serviceChange
@@ -224,7 +224,7 @@ const timeLimit: CauseForRecordClosing = CauseForRecordClosing.timeLimit; /* SHO
  * @type {number}
  */
 export
-const CauseForRecordClosing_serviceChange: CauseForRecordClosing = CauseForRecordClosing.serviceChange; /* LONG_NAMED_ENUMERATED_VALUE */
+const CauseForRecordClosing_serviceChange = CauseForRecordClosing.serviceChange satisfies CauseForRecordClosing; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary serviceChange
@@ -239,7 +239,7 @@ const CauseForRecordClosing_serviceChange: CauseForRecordClosing = CauseForRecor
  * @type {number}
  */
 export
-const serviceChange: CauseForRecordClosing = CauseForRecordClosing.serviceChange; /* SHORT_NAMED_ENUMERATED_VALUE */
+const serviceChange = CauseForRecordClosing.serviceChange satisfies CauseForRecordClosing; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CauseForRecordClosing_managementIntervention
@@ -252,7 +252,7 @@ const serviceChange: CauseForRecordClosing = CauseForRecordClosing.serviceChange
  * @type {number}
  */
 export
-const CauseForRecordClosing_managementIntervention: CauseForRecordClosing = CauseForRecordClosing.managementIntervention; /* LONG_NAMED_ENUMERATED_VALUE */
+const CauseForRecordClosing_managementIntervention = CauseForRecordClosing.managementIntervention satisfies CauseForRecordClosing; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary managementIntervention
@@ -265,7 +265,7 @@ const CauseForRecordClosing_managementIntervention: CauseForRecordClosing = Caus
  * @type {number}
  */
 export
-const managementIntervention: CauseForRecordClosing = CauseForRecordClosing.managementIntervention; /* SHORT_NAMED_ENUMERATED_VALUE */
+const managementIntervention = CauseForRecordClosing.managementIntervention satisfies CauseForRecordClosing; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_CauseForRecordClosing: $.ASN1Decoder<CauseForRecordClosing> = $._decodeEnumerated;

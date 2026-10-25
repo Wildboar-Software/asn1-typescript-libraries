@@ -94,8 +94,8 @@ export const ResponseSync = _enum_for_ResponseSync;
  * @constant
  * @type {number}
  */
-export const ResponseSync_singleCast: ResponseSync =
-    ResponseSync.singleCast; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ResponseSync_singleCast =
+    ResponseSync.singleCast satisfies ResponseSync; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary singleCast
@@ -107,8 +107,8 @@ export const ResponseSync_singleCast: ResponseSync =
  * @constant
  * @type {number}
  */
-export const singleCast: ResponseSync =
-    ResponseSync.singleCast; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const singleCast =
+    ResponseSync.singleCast satisfies ResponseSync; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ResponseSync_bestEffort
@@ -120,8 +120,8 @@ export const singleCast: ResponseSync =
  * @constant
  * @type {number}
  */
-export const ResponseSync_bestEffort: ResponseSync =
-    ResponseSync.bestEffort; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ResponseSync_bestEffort =
+    ResponseSync.bestEffort satisfies ResponseSync; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary bestEffort
@@ -133,8 +133,8 @@ export const ResponseSync_bestEffort: ResponseSync =
  * @constant
  * @type {number}
  */
-export const bestEffort: ResponseSync =
-    ResponseSync.bestEffort; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const bestEffort =
+    ResponseSync.bestEffort satisfies ResponseSync; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ResponseSync_atomic
@@ -145,8 +145,8 @@ export const bestEffort: ResponseSync =
  * @constant
  * @type {number}
  */
-export const ResponseSync_atomic: ResponseSync =
-    ResponseSync.atomic; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ResponseSync_atomic =
+    ResponseSync.atomic satisfies ResponseSync; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary atomic
@@ -157,8 +157,8 @@ export const ResponseSync_atomic: ResponseSync =
  * @constant
  * @type {number}
  */
-export const atomic: ResponseSync =
-    ResponseSync.atomic; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const atomic =
+    ResponseSync.atomic satisfies ResponseSync; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 export function _decode_ResponseSync(el: _Element): ResponseSync {

@@ -77,7 +77,7 @@ const CauseNas = _enum_for_CauseNas;
  * @type {number}
  */
 export
-const CauseNas_normalRelease: CauseNas = CauseNas.normalRelease; /* LONG_NAMED_ENUMERATED_VALUE */
+const CauseNas_normalRelease = CauseNas.normalRelease satisfies CauseNas; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary normalRelease
@@ -85,7 +85,7 @@ const CauseNas_normalRelease: CauseNas = CauseNas.normalRelease; /* LONG_NAMED_E
  * @type {number}
  */
 export
-const normalRelease: CauseNas = CauseNas.normalRelease; /* SHORT_NAMED_ENUMERATED_VALUE */
+const normalRelease = CauseNas.normalRelease satisfies CauseNas; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CauseNas_authenticationFailure
@@ -93,7 +93,7 @@ const normalRelease: CauseNas = CauseNas.normalRelease; /* SHORT_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const CauseNas_authenticationFailure: CauseNas = CauseNas.authenticationFailure; /* LONG_NAMED_ENUMERATED_VALUE */
+const CauseNas_authenticationFailure = CauseNas.authenticationFailure satisfies CauseNas; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary authenticationFailure
@@ -101,7 +101,7 @@ const CauseNas_authenticationFailure: CauseNas = CauseNas.authenticationFailure;
  * @type {number}
  */
 export
-const authenticationFailure: CauseNas = CauseNas.authenticationFailure; /* SHORT_NAMED_ENUMERATED_VALUE */
+const authenticationFailure = CauseNas.authenticationFailure satisfies CauseNas; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CauseNas_deregister
@@ -109,7 +109,7 @@ const authenticationFailure: CauseNas = CauseNas.authenticationFailure; /* SHORT
  * @type {number}
  */
 export
-const CauseNas_deregister: CauseNas = CauseNas.deregister; /* LONG_NAMED_ENUMERATED_VALUE */
+const CauseNas_deregister = CauseNas.deregister satisfies CauseNas; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary deregister
@@ -117,7 +117,7 @@ const CauseNas_deregister: CauseNas = CauseNas.deregister; /* LONG_NAMED_ENUMERA
  * @type {number}
  */
 export
-const deregister: CauseNas = CauseNas.deregister; /* SHORT_NAMED_ENUMERATED_VALUE */
+const deregister = CauseNas.deregister satisfies CauseNas; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CauseNas_unspecified
@@ -125,7 +125,7 @@ const deregister: CauseNas = CauseNas.deregister; /* SHORT_NAMED_ENUMERATED_VALU
  * @type {number}
  */
 export
-const CauseNas_unspecified: CauseNas = CauseNas.unspecified; /* LONG_NAMED_ENUMERATED_VALUE */
+const CauseNas_unspecified = CauseNas.unspecified satisfies CauseNas; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unspecified
@@ -133,7 +133,7 @@ const CauseNas_unspecified: CauseNas = CauseNas.unspecified; /* LONG_NAMED_ENUME
  * @type {number}
  */
 export
-const unspecified: CauseNas = CauseNas.unspecified; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unspecified = CauseNas.unspecified satisfies CauseNas; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_CauseNas: $.ASN1Decoder<CauseNas> = $._decodeEnumerated;
 export const _encode_CauseNas: $.ASN1Encoder<CauseNas> = $._encodeEnumerated;
 

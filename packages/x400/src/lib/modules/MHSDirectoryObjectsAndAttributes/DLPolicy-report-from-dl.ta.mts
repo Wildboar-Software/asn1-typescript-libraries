@@ -31,28 +31,28 @@ export type DLPolicy_report_from_dl = INTEGER;
  * @constant
  * @type {number}
  */
-export const DLPolicy_report_from_dl_whenever_requested: DLPolicy_report_from_dl = 0; /* LONG_NAMED_INTEGER_VALUE */
+export const DLPolicy_report_from_dl_whenever_requested = 0 satisfies DLPolicy_report_from_dl; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DLPolicy_report_from_dl_whenever_requested
  * @constant
  * @type {number}
  */
-export const whenever_requested: DLPolicy_report_from_dl = DLPolicy_report_from_dl_whenever_requested; /* SHORT_NAMED_INTEGER_VALUE */
+export const whenever_requested = DLPolicy_report_from_dl_whenever_requested satisfies DLPolicy_report_from_dl; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DLPolicy_report_from_dl_when_no_propagation
  * @constant
  * @type {number}
  */
-export const DLPolicy_report_from_dl_when_no_propagation: DLPolicy_report_from_dl = 1; /* LONG_NAMED_INTEGER_VALUE */
+export const DLPolicy_report_from_dl_when_no_propagation = 1 satisfies DLPolicy_report_from_dl; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DLPolicy_report_from_dl_when_no_propagation
  * @constant
  * @type {number}
  */
-export const when_no_propagation: DLPolicy_report_from_dl = DLPolicy_report_from_dl_when_no_propagation; /* SHORT_NAMED_INTEGER_VALUE */
+export const when_no_propagation = DLPolicy_report_from_dl_when_no_propagation satisfies DLPolicy_report_from_dl; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_DLPolicy_report_from_dl = $._decodeInteger;

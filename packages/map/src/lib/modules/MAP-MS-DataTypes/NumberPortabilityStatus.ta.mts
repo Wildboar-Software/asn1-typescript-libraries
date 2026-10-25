@@ -53,7 +53,7 @@ type NumberPortabilityStatus = _enum_for_NumberPortabilityStatus | ENUMERATED;
  * @type {number}
  */
 export
-const NumberPortabilityStatus_notKnownToBePorted: NumberPortabilityStatus = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+const NumberPortabilityStatus_notKnownToBePorted = _enum_for_NumberPortabilityStatus.notKnownToBePorted satisfies NumberPortabilityStatus; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary notKnownToBePorted
@@ -65,7 +65,7 @@ const NumberPortabilityStatus_notKnownToBePorted: NumberPortabilityStatus = 0; /
  * @type {number}
  */
 export
-const notKnownToBePorted: NumberPortabilityStatus = NumberPortabilityStatus_notKnownToBePorted; /* SHORT_NAMED_ENUMERATED_VALUE */
+const notKnownToBePorted = NumberPortabilityStatus_notKnownToBePorted satisfies NumberPortabilityStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NumberPortabilityStatus_ownNumberPortedOut
@@ -77,7 +77,7 @@ const notKnownToBePorted: NumberPortabilityStatus = NumberPortabilityStatus_notK
  * @type {number}
  */
 export
-const NumberPortabilityStatus_ownNumberPortedOut: NumberPortabilityStatus = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const NumberPortabilityStatus_ownNumberPortedOut = _enum_for_NumberPortabilityStatus.ownNumberPortedOut satisfies NumberPortabilityStatus; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ownNumberPortedOut
@@ -89,7 +89,7 @@ const NumberPortabilityStatus_ownNumberPortedOut: NumberPortabilityStatus = 1; /
  * @type {number}
  */
 export
-const ownNumberPortedOut: NumberPortabilityStatus = NumberPortabilityStatus_ownNumberPortedOut; /* SHORT_NAMED_ENUMERATED_VALUE */
+const ownNumberPortedOut = NumberPortabilityStatus_ownNumberPortedOut satisfies NumberPortabilityStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NumberPortabilityStatus_foreignNumberPortedToForeignNetwork
@@ -102,7 +102,7 @@ const ownNumberPortedOut: NumberPortabilityStatus = NumberPortabilityStatus_ownN
  * @type {number}
  */
 export
-const NumberPortabilityStatus_foreignNumberPortedToForeignNetwork: NumberPortabilityStatus = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+const NumberPortabilityStatus_foreignNumberPortedToForeignNetwork = _enum_for_NumberPortabilityStatus.foreignNumberPortedToForeignNetwork satisfies NumberPortabilityStatus; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary foreignNumberPortedToForeignNetwork
@@ -115,7 +115,7 @@ const NumberPortabilityStatus_foreignNumberPortedToForeignNetwork: NumberPortabi
  * @type {number}
  */
 export
-const foreignNumberPortedToForeignNetwork: NumberPortabilityStatus = NumberPortabilityStatus_foreignNumberPortedToForeignNetwork; /* SHORT_NAMED_ENUMERATED_VALUE */
+const foreignNumberPortedToForeignNetwork = NumberPortabilityStatus_foreignNumberPortedToForeignNetwork satisfies NumberPortabilityStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NumberPortabilityStatus_ownNumberNotPortedOut
@@ -128,7 +128,7 @@ const foreignNumberPortedToForeignNetwork: NumberPortabilityStatus = NumberPorta
  * @type {number}
  */
 export
-const NumberPortabilityStatus_ownNumberNotPortedOut: NumberPortabilityStatus = 4; /* LONG_NAMED_ENUMERATED_VALUE */
+const NumberPortabilityStatus_ownNumberNotPortedOut = _enum_for_NumberPortabilityStatus.ownNumberNotPortedOut satisfies NumberPortabilityStatus; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ownNumberNotPortedOut
@@ -141,7 +141,7 @@ const NumberPortabilityStatus_ownNumberNotPortedOut: NumberPortabilityStatus = 4
  * @type {number}
  */
 export
-const ownNumberNotPortedOut: NumberPortabilityStatus = NumberPortabilityStatus_ownNumberNotPortedOut; /* SHORT_NAMED_ENUMERATED_VALUE */
+const ownNumberNotPortedOut = NumberPortabilityStatus_ownNumberNotPortedOut satisfies NumberPortabilityStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NumberPortabilityStatus_foreignNumberPortedIn
@@ -154,7 +154,7 @@ const ownNumberNotPortedOut: NumberPortabilityStatus = NumberPortabilityStatus_o
  * @type {number}
  */
 export
-const NumberPortabilityStatus_foreignNumberPortedIn: NumberPortabilityStatus = 5; /* LONG_NAMED_ENUMERATED_VALUE */
+const NumberPortabilityStatus_foreignNumberPortedIn = _enum_for_NumberPortabilityStatus.foreignNumberPortedIn satisfies NumberPortabilityStatus; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary foreignNumberPortedIn
@@ -167,7 +167,7 @@ const NumberPortabilityStatus_foreignNumberPortedIn: NumberPortabilityStatus = 5
  * @type {number}
  */
 export
-const foreignNumberPortedIn: NumberPortabilityStatus = NumberPortabilityStatus_foreignNumberPortedIn; /* SHORT_NAMED_ENUMERATED_VALUE */
+const foreignNumberPortedIn = NumberPortabilityStatus_foreignNumberPortedIn satisfies NumberPortabilityStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) NumberPortabilityStatus

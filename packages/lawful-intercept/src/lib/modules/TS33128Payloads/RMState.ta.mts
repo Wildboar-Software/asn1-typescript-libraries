@@ -107,7 +107,7 @@ const RMState = _enum_for_RMState;
  * @type {number}
  */
 export
-const RMState_registered: RMState = RMState.registered; /* LONG_NAMED_ENUMERATED_VALUE */
+const RMState_registered = RMState.registered satisfies RMState; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary registered
@@ -121,7 +121,7 @@ const RMState_registered: RMState = RMState.registered; /* LONG_NAMED_ENUMERATED
  * @type {number}
  */
 export
-const registered: RMState = RMState.registered; /* SHORT_NAMED_ENUMERATED_VALUE */
+const registered = RMState.registered satisfies RMState; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RMState_deregistered
@@ -135,7 +135,7 @@ const registered: RMState = RMState.registered; /* SHORT_NAMED_ENUMERATED_VALUE 
  * @type {number}
  */
 export
-const RMState_deregistered: RMState = RMState.deregistered; /* LONG_NAMED_ENUMERATED_VALUE */
+const RMState_deregistered = RMState.deregistered satisfies RMState; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary deregistered
@@ -149,7 +149,7 @@ const RMState_deregistered: RMState = RMState.deregistered; /* LONG_NAMED_ENUMER
  * @type {number}
  */
 export
-const deregistered: RMState = RMState.deregistered; /* SHORT_NAMED_ENUMERATED_VALUE */
+const deregistered = RMState.deregistered satisfies RMState; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_RMState: $.ASN1Decoder<RMState> = $._decodeEnumerated;
 export const _encode_RMState: $.ASN1Encoder<RMState> = $._encodeEnumerated;
 

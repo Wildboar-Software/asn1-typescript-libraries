@@ -51,7 +51,7 @@ type ICE_type = _enum_for_ICE_type | ENUMERATED;
  * @type {number}
  */
 export
-const ICE_type_sgsn: ICE_type = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const ICE_type_sgsn = _enum_for_ICE_type.sgsn satisfies ICE_type; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sgsn
@@ -62,7 +62,7 @@ const ICE_type_sgsn: ICE_type = 1; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const sgsn: ICE_type = ICE_type_sgsn; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sgsn = ICE_type_sgsn satisfies ICE_type; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ICE_type_ggsn
@@ -75,7 +75,7 @@ const sgsn: ICE_type = ICE_type_sgsn; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const ICE_type_ggsn: ICE_type = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+const ICE_type_ggsn = _enum_for_ICE_type.ggsn satisfies ICE_type; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ggsn
@@ -86,7 +86,7 @@ const ICE_type_ggsn: ICE_type = 2; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const ggsn: ICE_type = ICE_type_ggsn; /* SHORT_NAMED_ENUMERATED_VALUE */
+const ggsn = ICE_type_ggsn satisfies ICE_type; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_ICE_type: $.ASN1Decoder<ICE_type> = $._decodeEnumerated;
 export const _encode_ICE_type: $.ASN1Encoder<ICE_type> = $._encodeEnumerated;
 

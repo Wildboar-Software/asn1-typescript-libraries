@@ -235,7 +235,7 @@ const MediaServiceType = _enum_for_MediaServiceType;
  * @type {number}
  */
 export
-const MediaServiceType_cstaVoiceUnit: MediaServiceType = MediaServiceType.cstaVoiceUnit; /* LONG_NAMED_ENUMERATED_VALUE */
+const MediaServiceType_cstaVoiceUnit = MediaServiceType.cstaVoiceUnit satisfies MediaServiceType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary cstaVoiceUnit
@@ -243,7 +243,7 @@ const MediaServiceType_cstaVoiceUnit: MediaServiceType = MediaServiceType.cstaVo
  * @type {number}
  */
 export
-const cstaVoiceUnit: MediaServiceType = MediaServiceType.cstaVoiceUnit; /* SHORT_NAMED_ENUMERATED_VALUE */
+const cstaVoiceUnit = MediaServiceType.cstaVoiceUnit satisfies MediaServiceType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MediaServiceType_dataModem
@@ -255,7 +255,7 @@ const cstaVoiceUnit: MediaServiceType = MediaServiceType.cstaVoiceUnit; /* SHORT
  * @type {number}
  */
 export
-const MediaServiceType_dataModem: MediaServiceType = MediaServiceType.dataModem; /* LONG_NAMED_ENUMERATED_VALUE */
+const MediaServiceType_dataModem = MediaServiceType.dataModem satisfies MediaServiceType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary dataModem
@@ -263,7 +263,7 @@ const MediaServiceType_dataModem: MediaServiceType = MediaServiceType.dataModem;
  * @type {number}
  */
 export
-const dataModem: MediaServiceType = MediaServiceType.dataModem; /* SHORT_NAMED_ENUMERATED_VALUE */
+const dataModem = MediaServiceType.dataModem satisfies MediaServiceType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MediaServiceType_digitalDataIsochronousIeee1394
@@ -275,7 +275,7 @@ const dataModem: MediaServiceType = MediaServiceType.dataModem; /* SHORT_NAMED_E
  * @type {number}
  */
 export
-const MediaServiceType_digitalDataIsochronousIeee1394: MediaServiceType = MediaServiceType.digitalDataIsochronousIeee1394; /* LONG_NAMED_ENUMERATED_VALUE */
+const MediaServiceType_digitalDataIsochronousIeee1394 = MediaServiceType.digitalDataIsochronousIeee1394 satisfies MediaServiceType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary digitalDataIsochronousIeee1394
@@ -283,7 +283,7 @@ const MediaServiceType_digitalDataIsochronousIeee1394: MediaServiceType = MediaS
  * @type {number}
  */
 export
-const digitalDataIsochronousIeee1394: MediaServiceType = MediaServiceType.digitalDataIsochronousIeee1394; /* SHORT_NAMED_ENUMERATED_VALUE */
+const digitalDataIsochronousIeee1394 = MediaServiceType.digitalDataIsochronousIeee1394 satisfies MediaServiceType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MediaServiceType_digitalDataIsochronousGeoport
@@ -295,7 +295,7 @@ const digitalDataIsochronousIeee1394: MediaServiceType = MediaServiceType.digita
  * @type {number}
  */
 export
-const MediaServiceType_digitalDataIsochronousGeoport: MediaServiceType = MediaServiceType.digitalDataIsochronousGeoport; /* LONG_NAMED_ENUMERATED_VALUE */
+const MediaServiceType_digitalDataIsochronousGeoport = MediaServiceType.digitalDataIsochronousGeoport satisfies MediaServiceType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary digitalDataIsochronousGeoport
@@ -303,7 +303,7 @@ const MediaServiceType_digitalDataIsochronousGeoport: MediaServiceType = MediaSe
  * @type {number}
  */
 export
-const digitalDataIsochronousGeoport: MediaServiceType = MediaServiceType.digitalDataIsochronousGeoport; /* SHORT_NAMED_ENUMERATED_VALUE */
+const digitalDataIsochronousGeoport = MediaServiceType.digitalDataIsochronousGeoport satisfies MediaServiceType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MediaServiceType_digitalDataIsochronousIeeeAtm
@@ -315,7 +315,7 @@ const digitalDataIsochronousGeoport: MediaServiceType = MediaServiceType.digital
  * @type {number}
  */
 export
-const MediaServiceType_digitalDataIsochronousIeeeAtm: MediaServiceType = MediaServiceType.digitalDataIsochronousIeeeAtm; /* LONG_NAMED_ENUMERATED_VALUE */
+const MediaServiceType_digitalDataIsochronousIeeeAtm = MediaServiceType.digitalDataIsochronousIeeeAtm satisfies MediaServiceType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary digitalDataIsochronousIeeeAtm
@@ -323,7 +323,7 @@ const MediaServiceType_digitalDataIsochronousIeeeAtm: MediaServiceType = MediaSe
  * @type {number}
  */
 export
-const digitalDataIsochronousIeeeAtm: MediaServiceType = MediaServiceType.digitalDataIsochronousIeeeAtm; /* SHORT_NAMED_ENUMERATED_VALUE */
+const digitalDataIsochronousIeeeAtm = MediaServiceType.digitalDataIsochronousIeeeAtm satisfies MediaServiceType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MediaServiceType_digitalDataIsochronousIeeeIsdn
@@ -335,7 +335,7 @@ const digitalDataIsochronousIeeeAtm: MediaServiceType = MediaServiceType.digital
  * @type {number}
  */
 export
-const MediaServiceType_digitalDataIsochronousIeeeIsdn: MediaServiceType = MediaServiceType.digitalDataIsochronousIeeeIsdn; /* LONG_NAMED_ENUMERATED_VALUE */
+const MediaServiceType_digitalDataIsochronousIeeeIsdn = MediaServiceType.digitalDataIsochronousIeeeIsdn satisfies MediaServiceType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary digitalDataIsochronousIeeeIsdn
@@ -343,7 +343,7 @@ const MediaServiceType_digitalDataIsochronousIeeeIsdn: MediaServiceType = MediaS
  * @type {number}
  */
 export
-const digitalDataIsochronousIeeeIsdn: MediaServiceType = MediaServiceType.digitalDataIsochronousIeeeIsdn; /* SHORT_NAMED_ENUMERATED_VALUE */
+const digitalDataIsochronousIeeeIsdn = MediaServiceType.digitalDataIsochronousIeeeIsdn satisfies MediaServiceType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MediaServiceType_digitalDataApi
@@ -355,7 +355,7 @@ const digitalDataIsochronousIeeeIsdn: MediaServiceType = MediaServiceType.digita
  * @type {number}
  */
 export
-const MediaServiceType_digitalDataApi: MediaServiceType = MediaServiceType.digitalDataApi; /* LONG_NAMED_ENUMERATED_VALUE */
+const MediaServiceType_digitalDataApi = MediaServiceType.digitalDataApi satisfies MediaServiceType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary digitalDataApi
@@ -363,7 +363,7 @@ const MediaServiceType_digitalDataApi: MediaServiceType = MediaServiceType.digit
  * @type {number}
  */
 export
-const digitalDataApi: MediaServiceType = MediaServiceType.digitalDataApi; /* SHORT_NAMED_ENUMERATED_VALUE */
+const digitalDataApi = MediaServiceType.digitalDataApi satisfies MediaServiceType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MediaServiceType_ectfS100MediaServicesDefault
@@ -375,7 +375,7 @@ const digitalDataApi: MediaServiceType = MediaServiceType.digitalDataApi; /* SHO
  * @type {number}
  */
 export
-const MediaServiceType_ectfS100MediaServicesDefault: MediaServiceType = MediaServiceType.ectfS100MediaServicesDefault; /* LONG_NAMED_ENUMERATED_VALUE */
+const MediaServiceType_ectfS100MediaServicesDefault = MediaServiceType.ectfS100MediaServicesDefault satisfies MediaServiceType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ectfS100MediaServicesDefault
@@ -383,7 +383,7 @@ const MediaServiceType_ectfS100MediaServicesDefault: MediaServiceType = MediaSer
  * @type {number}
  */
 export
-const ectfS100MediaServicesDefault: MediaServiceType = MediaServiceType.ectfS100MediaServicesDefault; /* SHORT_NAMED_ENUMERATED_VALUE */
+const ectfS100MediaServicesDefault = MediaServiceType.ectfS100MediaServicesDefault satisfies MediaServiceType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MediaServiceType_ectfS100MediaServicesAppServices
@@ -395,7 +395,7 @@ const ectfS100MediaServicesDefault: MediaServiceType = MediaServiceType.ectfS100
  * @type {number}
  */
 export
-const MediaServiceType_ectfS100MediaServicesAppServices: MediaServiceType = MediaServiceType.ectfS100MediaServicesAppServices; /* LONG_NAMED_ENUMERATED_VALUE */
+const MediaServiceType_ectfS100MediaServicesAppServices = MediaServiceType.ectfS100MediaServicesAppServices satisfies MediaServiceType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ectfS100MediaServicesAppServices
@@ -403,7 +403,7 @@ const MediaServiceType_ectfS100MediaServicesAppServices: MediaServiceType = Medi
  * @type {number}
  */
 export
-const ectfS100MediaServicesAppServices: MediaServiceType = MediaServiceType.ectfS100MediaServicesAppServices; /* SHORT_NAMED_ENUMERATED_VALUE */
+const ectfS100MediaServicesAppServices = MediaServiceType.ectfS100MediaServicesAppServices satisfies MediaServiceType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MediaServiceType_cstaIVRScript1
@@ -416,7 +416,7 @@ const ectfS100MediaServicesAppServices: MediaServiceType = MediaServiceType.ectf
  * @type {number}
  */
 export
-const MediaServiceType_cstaIVRScript1: MediaServiceType = MediaServiceType.cstaIVRScript1; /* LONG_NAMED_ENUMERATED_VALUE */
+const MediaServiceType_cstaIVRScript1 = MediaServiceType.cstaIVRScript1 satisfies MediaServiceType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary cstaIVRScript1
@@ -424,7 +424,7 @@ const MediaServiceType_cstaIVRScript1: MediaServiceType = MediaServiceType.cstaI
  * @type {number}
  */
 export
-const cstaIVRScript1: MediaServiceType = MediaServiceType.cstaIVRScript1; /* SHORT_NAMED_ENUMERATED_VALUE */
+const cstaIVRScript1 = MediaServiceType.cstaIVRScript1 satisfies MediaServiceType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MediaServiceType_cstaIVRScript2
@@ -437,7 +437,7 @@ const cstaIVRScript1: MediaServiceType = MediaServiceType.cstaIVRScript1; /* SHO
  * @type {number}
  */
 export
-const MediaServiceType_cstaIVRScript2: MediaServiceType = MediaServiceType.cstaIVRScript2; /* LONG_NAMED_ENUMERATED_VALUE */
+const MediaServiceType_cstaIVRScript2 = MediaServiceType.cstaIVRScript2 satisfies MediaServiceType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary cstaIVRScript2
@@ -445,7 +445,7 @@ const MediaServiceType_cstaIVRScript2: MediaServiceType = MediaServiceType.cstaI
  * @type {number}
  */
 export
-const cstaIVRScript2: MediaServiceType = MediaServiceType.cstaIVRScript2; /* SHORT_NAMED_ENUMERATED_VALUE */
+const cstaIVRScript2 = MediaServiceType.cstaIVRScript2 satisfies MediaServiceType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MediaServiceType_cstaIVRScript3
@@ -458,7 +458,7 @@ const cstaIVRScript2: MediaServiceType = MediaServiceType.cstaIVRScript2; /* SHO
  * @type {number}
  */
 export
-const MediaServiceType_cstaIVRScript3: MediaServiceType = MediaServiceType.cstaIVRScript3; /* LONG_NAMED_ENUMERATED_VALUE */
+const MediaServiceType_cstaIVRScript3 = MediaServiceType.cstaIVRScript3 satisfies MediaServiceType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary cstaIVRScript3
@@ -466,7 +466,7 @@ const MediaServiceType_cstaIVRScript3: MediaServiceType = MediaServiceType.cstaI
  * @type {number}
  */
 export
-const cstaIVRScript3: MediaServiceType = MediaServiceType.cstaIVRScript3; /* SHORT_NAMED_ENUMERATED_VALUE */
+const cstaIVRScript3 = MediaServiceType.cstaIVRScript3 satisfies MediaServiceType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MediaServiceType_cstaIVRScript4
@@ -479,7 +479,7 @@ const cstaIVRScript3: MediaServiceType = MediaServiceType.cstaIVRScript3; /* SHO
  * @type {number}
  */
 export
-const MediaServiceType_cstaIVRScript4: MediaServiceType = MediaServiceType.cstaIVRScript4; /* LONG_NAMED_ENUMERATED_VALUE */
+const MediaServiceType_cstaIVRScript4 = MediaServiceType.cstaIVRScript4 satisfies MediaServiceType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary cstaIVRScript4
@@ -487,7 +487,7 @@ const MediaServiceType_cstaIVRScript4: MediaServiceType = MediaServiceType.cstaI
  * @type {number}
  */
 export
-const cstaIVRScript4: MediaServiceType = MediaServiceType.cstaIVRScript4; /* SHORT_NAMED_ENUMERATED_VALUE */
+const cstaIVRScript4 = MediaServiceType.cstaIVRScript4 satisfies MediaServiceType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MediaServiceType_cstaIVRScript5
@@ -500,7 +500,7 @@ const cstaIVRScript4: MediaServiceType = MediaServiceType.cstaIVRScript4; /* SHO
  * @type {number}
  */
 export
-const MediaServiceType_cstaIVRScript5: MediaServiceType = MediaServiceType.cstaIVRScript5; /* LONG_NAMED_ENUMERATED_VALUE */
+const MediaServiceType_cstaIVRScript5 = MediaServiceType.cstaIVRScript5 satisfies MediaServiceType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary cstaIVRScript5
@@ -508,7 +508,7 @@ const MediaServiceType_cstaIVRScript5: MediaServiceType = MediaServiceType.cstaI
  * @type {number}
  */
 export
-const cstaIVRScript5: MediaServiceType = MediaServiceType.cstaIVRScript5; /* SHORT_NAMED_ENUMERATED_VALUE */
+const cstaIVRScript5 = MediaServiceType.cstaIVRScript5 satisfies MediaServiceType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MediaServiceType_cstaIVRScript6
@@ -521,7 +521,7 @@ const cstaIVRScript5: MediaServiceType = MediaServiceType.cstaIVRScript5; /* SHO
  * @type {number}
  */
 export
-const MediaServiceType_cstaIVRScript6: MediaServiceType = MediaServiceType.cstaIVRScript6; /* LONG_NAMED_ENUMERATED_VALUE */
+const MediaServiceType_cstaIVRScript6 = MediaServiceType.cstaIVRScript6 satisfies MediaServiceType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary cstaIVRScript6
@@ -529,7 +529,7 @@ const MediaServiceType_cstaIVRScript6: MediaServiceType = MediaServiceType.cstaI
  * @type {number}
  */
 export
-const cstaIVRScript6: MediaServiceType = MediaServiceType.cstaIVRScript6; /* SHORT_NAMED_ENUMERATED_VALUE */
+const cstaIVRScript6 = MediaServiceType.cstaIVRScript6 satisfies MediaServiceType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MediaServiceType_cstaIVRScript7
@@ -542,7 +542,7 @@ const cstaIVRScript6: MediaServiceType = MediaServiceType.cstaIVRScript6; /* SHO
  * @type {number}
  */
 export
-const MediaServiceType_cstaIVRScript7: MediaServiceType = MediaServiceType.cstaIVRScript7; /* LONG_NAMED_ENUMERATED_VALUE */
+const MediaServiceType_cstaIVRScript7 = MediaServiceType.cstaIVRScript7 satisfies MediaServiceType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary cstaIVRScript7
@@ -550,7 +550,7 @@ const MediaServiceType_cstaIVRScript7: MediaServiceType = MediaServiceType.cstaI
  * @type {number}
  */
 export
-const cstaIVRScript7: MediaServiceType = MediaServiceType.cstaIVRScript7; /* SHORT_NAMED_ENUMERATED_VALUE */
+const cstaIVRScript7 = MediaServiceType.cstaIVRScript7 satisfies MediaServiceType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MediaServiceType_cstaIVRScript8
@@ -563,7 +563,7 @@ const cstaIVRScript7: MediaServiceType = MediaServiceType.cstaIVRScript7; /* SHO
  * @type {number}
  */
 export
-const MediaServiceType_cstaIVRScript8: MediaServiceType = MediaServiceType.cstaIVRScript8; /* LONG_NAMED_ENUMERATED_VALUE */
+const MediaServiceType_cstaIVRScript8 = MediaServiceType.cstaIVRScript8 satisfies MediaServiceType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary cstaIVRScript8
@@ -571,7 +571,7 @@ const MediaServiceType_cstaIVRScript8: MediaServiceType = MediaServiceType.cstaI
  * @type {number}
  */
 export
-const cstaIVRScript8: MediaServiceType = MediaServiceType.cstaIVRScript8; /* SHORT_NAMED_ENUMERATED_VALUE */
+const cstaIVRScript8 = MediaServiceType.cstaIVRScript8 satisfies MediaServiceType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MediaServiceType_cstaIVRScript9
@@ -584,7 +584,7 @@ const cstaIVRScript8: MediaServiceType = MediaServiceType.cstaIVRScript8; /* SHO
  * @type {number}
  */
 export
-const MediaServiceType_cstaIVRScript9: MediaServiceType = MediaServiceType.cstaIVRScript9; /* LONG_NAMED_ENUMERATED_VALUE */
+const MediaServiceType_cstaIVRScript9 = MediaServiceType.cstaIVRScript9 satisfies MediaServiceType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary cstaIVRScript9
@@ -592,7 +592,7 @@ const MediaServiceType_cstaIVRScript9: MediaServiceType = MediaServiceType.cstaI
  * @type {number}
  */
 export
-const cstaIVRScript9: MediaServiceType = MediaServiceType.cstaIVRScript9; /* SHORT_NAMED_ENUMERATED_VALUE */
+const cstaIVRScript9 = MediaServiceType.cstaIVRScript9 satisfies MediaServiceType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MediaServiceType_cstaIVRScript10
@@ -605,7 +605,7 @@ const cstaIVRScript9: MediaServiceType = MediaServiceType.cstaIVRScript9; /* SHO
  * @type {number}
  */
 export
-const MediaServiceType_cstaIVRScript10: MediaServiceType = MediaServiceType.cstaIVRScript10; /* LONG_NAMED_ENUMERATED_VALUE */
+const MediaServiceType_cstaIVRScript10 = MediaServiceType.cstaIVRScript10 satisfies MediaServiceType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary cstaIVRScript10
@@ -613,7 +613,7 @@ const MediaServiceType_cstaIVRScript10: MediaServiceType = MediaServiceType.csta
  * @type {number}
  */
 export
-const cstaIVRScript10: MediaServiceType = MediaServiceType.cstaIVRScript10; /* SHORT_NAMED_ENUMERATED_VALUE */
+const cstaIVRScript10 = MediaServiceType.cstaIVRScript10 satisfies MediaServiceType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MediaServiceType_liveSoundCaptureAnalog
@@ -625,7 +625,7 @@ const cstaIVRScript10: MediaServiceType = MediaServiceType.cstaIVRScript10; /* S
  * @type {number}
  */
 export
-const MediaServiceType_liveSoundCaptureAnalog: MediaServiceType = MediaServiceType.liveSoundCaptureAnalog; /* LONG_NAMED_ENUMERATED_VALUE */
+const MediaServiceType_liveSoundCaptureAnalog = MediaServiceType.liveSoundCaptureAnalog satisfies MediaServiceType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary liveSoundCaptureAnalog
@@ -633,7 +633,7 @@ const MediaServiceType_liveSoundCaptureAnalog: MediaServiceType = MediaServiceTy
  * @type {number}
  */
 export
-const liveSoundCaptureAnalog: MediaServiceType = MediaServiceType.liveSoundCaptureAnalog; /* SHORT_NAMED_ENUMERATED_VALUE */
+const liveSoundCaptureAnalog = MediaServiceType.liveSoundCaptureAnalog satisfies MediaServiceType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MediaServiceType_liveSoundTransmitAnalog
@@ -645,7 +645,7 @@ const liveSoundCaptureAnalog: MediaServiceType = MediaServiceType.liveSoundCaptu
  * @type {number}
  */
 export
-const MediaServiceType_liveSoundTransmitAnalog: MediaServiceType = MediaServiceType.liveSoundTransmitAnalog; /* LONG_NAMED_ENUMERATED_VALUE */
+const MediaServiceType_liveSoundTransmitAnalog = MediaServiceType.liveSoundTransmitAnalog satisfies MediaServiceType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary liveSoundTransmitAnalog
@@ -653,7 +653,7 @@ const MediaServiceType_liveSoundTransmitAnalog: MediaServiceType = MediaServiceT
  * @type {number}
  */
 export
-const liveSoundTransmitAnalog: MediaServiceType = MediaServiceType.liveSoundTransmitAnalog; /* SHORT_NAMED_ENUMERATED_VALUE */
+const liveSoundTransmitAnalog = MediaServiceType.liveSoundTransmitAnalog satisfies MediaServiceType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MediaServiceType_liveSoundCaptureIeee1394
@@ -665,7 +665,7 @@ const liveSoundTransmitAnalog: MediaServiceType = MediaServiceType.liveSoundTran
  * @type {number}
  */
 export
-const MediaServiceType_liveSoundCaptureIeee1394: MediaServiceType = MediaServiceType.liveSoundCaptureIeee1394; /* LONG_NAMED_ENUMERATED_VALUE */
+const MediaServiceType_liveSoundCaptureIeee1394 = MediaServiceType.liveSoundCaptureIeee1394 satisfies MediaServiceType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary liveSoundCaptureIeee1394
@@ -673,7 +673,7 @@ const MediaServiceType_liveSoundCaptureIeee1394: MediaServiceType = MediaService
  * @type {number}
  */
 export
-const liveSoundCaptureIeee1394: MediaServiceType = MediaServiceType.liveSoundCaptureIeee1394; /* SHORT_NAMED_ENUMERATED_VALUE */
+const liveSoundCaptureIeee1394 = MediaServiceType.liveSoundCaptureIeee1394 satisfies MediaServiceType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MediaServiceType_liveSoundTransmitIeee1394
@@ -685,7 +685,7 @@ const liveSoundCaptureIeee1394: MediaServiceType = MediaServiceType.liveSoundCap
  * @type {number}
  */
 export
-const MediaServiceType_liveSoundTransmitIeee1394: MediaServiceType = MediaServiceType.liveSoundTransmitIeee1394; /* LONG_NAMED_ENUMERATED_VALUE */
+const MediaServiceType_liveSoundTransmitIeee1394 = MediaServiceType.liveSoundTransmitIeee1394 satisfies MediaServiceType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary liveSoundTransmitIeee1394
@@ -693,7 +693,7 @@ const MediaServiceType_liveSoundTransmitIeee1394: MediaServiceType = MediaServic
  * @type {number}
  */
 export
-const liveSoundTransmitIeee1394: MediaServiceType = MediaServiceType.liveSoundTransmitIeee1394; /* SHORT_NAMED_ENUMERATED_VALUE */
+const liveSoundTransmitIeee1394 = MediaServiceType.liveSoundTransmitIeee1394 satisfies MediaServiceType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MediaServiceType_liveSoundCaptureTransmitGeoport
@@ -705,7 +705,7 @@ const liveSoundTransmitIeee1394: MediaServiceType = MediaServiceType.liveSoundTr
  * @type {number}
  */
 export
-const MediaServiceType_liveSoundCaptureTransmitGeoport: MediaServiceType = MediaServiceType.liveSoundCaptureTransmitGeoport; /* LONG_NAMED_ENUMERATED_VALUE */
+const MediaServiceType_liveSoundCaptureTransmitGeoport = MediaServiceType.liveSoundCaptureTransmitGeoport satisfies MediaServiceType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary liveSoundCaptureTransmitGeoport
@@ -713,7 +713,7 @@ const MediaServiceType_liveSoundCaptureTransmitGeoport: MediaServiceType = Media
  * @type {number}
  */
 export
-const liveSoundCaptureTransmitGeoport: MediaServiceType = MediaServiceType.liveSoundCaptureTransmitGeoport; /* SHORT_NAMED_ENUMERATED_VALUE */
+const liveSoundCaptureTransmitGeoport = MediaServiceType.liveSoundCaptureTransmitGeoport satisfies MediaServiceType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MediaServiceType_liveSoundCaptureTransmitAtm
@@ -725,7 +725,7 @@ const liveSoundCaptureTransmitGeoport: MediaServiceType = MediaServiceType.liveS
  * @type {number}
  */
 export
-const MediaServiceType_liveSoundCaptureTransmitAtm: MediaServiceType = MediaServiceType.liveSoundCaptureTransmitAtm; /* LONG_NAMED_ENUMERATED_VALUE */
+const MediaServiceType_liveSoundCaptureTransmitAtm = MediaServiceType.liveSoundCaptureTransmitAtm satisfies MediaServiceType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary liveSoundCaptureTransmitAtm
@@ -733,7 +733,7 @@ const MediaServiceType_liveSoundCaptureTransmitAtm: MediaServiceType = MediaServ
  * @type {number}
  */
 export
-const liveSoundCaptureTransmitAtm: MediaServiceType = MediaServiceType.liveSoundCaptureTransmitAtm; /* SHORT_NAMED_ENUMERATED_VALUE */
+const liveSoundCaptureTransmitAtm = MediaServiceType.liveSoundCaptureTransmitAtm satisfies MediaServiceType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MediaServiceType_liveSoundCaptureTransmitISDN
@@ -745,7 +745,7 @@ const liveSoundCaptureTransmitAtm: MediaServiceType = MediaServiceType.liveSound
  * @type {number}
  */
 export
-const MediaServiceType_liveSoundCaptureTransmitISDN: MediaServiceType = MediaServiceType.liveSoundCaptureTransmitISDN; /* LONG_NAMED_ENUMERATED_VALUE */
+const MediaServiceType_liveSoundCaptureTransmitISDN = MediaServiceType.liveSoundCaptureTransmitISDN satisfies MediaServiceType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary liveSoundCaptureTransmitISDN
@@ -753,7 +753,7 @@ const MediaServiceType_liveSoundCaptureTransmitISDN: MediaServiceType = MediaSer
  * @type {number}
  */
 export
-const liveSoundCaptureTransmitISDN: MediaServiceType = MediaServiceType.liveSoundCaptureTransmitISDN; /* SHORT_NAMED_ENUMERATED_VALUE */
+const liveSoundCaptureTransmitISDN = MediaServiceType.liveSoundCaptureTransmitISDN satisfies MediaServiceType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MediaServiceType_soundCaptureTransmitADPCM
@@ -765,7 +765,7 @@ const liveSoundCaptureTransmitISDN: MediaServiceType = MediaServiceType.liveSoun
  * @type {number}
  */
 export
-const MediaServiceType_soundCaptureTransmitADPCM: MediaServiceType = MediaServiceType.soundCaptureTransmitADPCM; /* LONG_NAMED_ENUMERATED_VALUE */
+const MediaServiceType_soundCaptureTransmitADPCM = MediaServiceType.soundCaptureTransmitADPCM satisfies MediaServiceType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary soundCaptureTransmitADPCM
@@ -773,7 +773,7 @@ const MediaServiceType_soundCaptureTransmitADPCM: MediaServiceType = MediaServic
  * @type {number}
  */
 export
-const soundCaptureTransmitADPCM: MediaServiceType = MediaServiceType.soundCaptureTransmitADPCM; /* SHORT_NAMED_ENUMERATED_VALUE */
+const soundCaptureTransmitADPCM = MediaServiceType.soundCaptureTransmitADPCM satisfies MediaServiceType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MediaServiceType_soundCaptureTransmitApi
@@ -785,7 +785,7 @@ const soundCaptureTransmitADPCM: MediaServiceType = MediaServiceType.soundCaptur
  * @type {number}
  */
 export
-const MediaServiceType_soundCaptureTransmitApi: MediaServiceType = MediaServiceType.soundCaptureTransmitApi; /* LONG_NAMED_ENUMERATED_VALUE */
+const MediaServiceType_soundCaptureTransmitApi = MediaServiceType.soundCaptureTransmitApi satisfies MediaServiceType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary soundCaptureTransmitApi
@@ -793,7 +793,7 @@ const MediaServiceType_soundCaptureTransmitApi: MediaServiceType = MediaServiceT
  * @type {number}
  */
 export
-const soundCaptureTransmitApi: MediaServiceType = MediaServiceType.soundCaptureTransmitApi; /* SHORT_NAMED_ENUMERATED_VALUE */
+const soundCaptureTransmitApi = MediaServiceType.soundCaptureTransmitApi satisfies MediaServiceType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MediaServiceType_usb
@@ -805,7 +805,7 @@ const soundCaptureTransmitApi: MediaServiceType = MediaServiceType.soundCaptureT
  * @type {number}
  */
 export
-const MediaServiceType_usb: MediaServiceType = MediaServiceType.usb; /* LONG_NAMED_ENUMERATED_VALUE */
+const MediaServiceType_usb = MediaServiceType.usb satisfies MediaServiceType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary usb
@@ -813,7 +813,7 @@ const MediaServiceType_usb: MediaServiceType = MediaServiceType.usb; /* LONG_NAM
  * @type {number}
  */
 export
-const usb: MediaServiceType = MediaServiceType.usb; /* SHORT_NAMED_ENUMERATED_VALUE */
+const usb = MediaServiceType.usb satisfies MediaServiceType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MediaServiceType_sfSpecific1
@@ -826,7 +826,7 @@ const usb: MediaServiceType = MediaServiceType.usb; /* SHORT_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const MediaServiceType_sfSpecific1: MediaServiceType = MediaServiceType.sfSpecific1; /* LONG_NAMED_ENUMERATED_VALUE */
+const MediaServiceType_sfSpecific1 = MediaServiceType.sfSpecific1 satisfies MediaServiceType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sfSpecific1
@@ -834,7 +834,7 @@ const MediaServiceType_sfSpecific1: MediaServiceType = MediaServiceType.sfSpecif
  * @type {number}
  */
 export
-const sfSpecific1: MediaServiceType = MediaServiceType.sfSpecific1; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sfSpecific1 = MediaServiceType.sfSpecific1 satisfies MediaServiceType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MediaServiceType_sfSpecific2
@@ -847,7 +847,7 @@ const sfSpecific1: MediaServiceType = MediaServiceType.sfSpecific1; /* SHORT_NAM
  * @type {number}
  */
 export
-const MediaServiceType_sfSpecific2: MediaServiceType = MediaServiceType.sfSpecific2; /* LONG_NAMED_ENUMERATED_VALUE */
+const MediaServiceType_sfSpecific2 = MediaServiceType.sfSpecific2 satisfies MediaServiceType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sfSpecific2
@@ -855,7 +855,7 @@ const MediaServiceType_sfSpecific2: MediaServiceType = MediaServiceType.sfSpecif
  * @type {number}
  */
 export
-const sfSpecific2: MediaServiceType = MediaServiceType.sfSpecific2; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sfSpecific2 = MediaServiceType.sfSpecific2 satisfies MediaServiceType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MediaServiceType_sfSpecific3
@@ -868,7 +868,7 @@ const sfSpecific2: MediaServiceType = MediaServiceType.sfSpecific2; /* SHORT_NAM
  * @type {number}
  */
 export
-const MediaServiceType_sfSpecific3: MediaServiceType = MediaServiceType.sfSpecific3; /* LONG_NAMED_ENUMERATED_VALUE */
+const MediaServiceType_sfSpecific3 = MediaServiceType.sfSpecific3 satisfies MediaServiceType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sfSpecific3
@@ -876,7 +876,7 @@ const MediaServiceType_sfSpecific3: MediaServiceType = MediaServiceType.sfSpecif
  * @type {number}
  */
 export
-const sfSpecific3: MediaServiceType = MediaServiceType.sfSpecific3; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sfSpecific3 = MediaServiceType.sfSpecific3 satisfies MediaServiceType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MediaServiceType_sfSpecific4
@@ -889,7 +889,7 @@ const sfSpecific3: MediaServiceType = MediaServiceType.sfSpecific3; /* SHORT_NAM
  * @type {number}
  */
 export
-const MediaServiceType_sfSpecific4: MediaServiceType = MediaServiceType.sfSpecific4; /* LONG_NAMED_ENUMERATED_VALUE */
+const MediaServiceType_sfSpecific4 = MediaServiceType.sfSpecific4 satisfies MediaServiceType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sfSpecific4
@@ -897,7 +897,7 @@ const MediaServiceType_sfSpecific4: MediaServiceType = MediaServiceType.sfSpecif
  * @type {number}
  */
 export
-const sfSpecific4: MediaServiceType = MediaServiceType.sfSpecific4; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sfSpecific4 = MediaServiceType.sfSpecific4 satisfies MediaServiceType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MediaServiceType_sfSpecific5
@@ -910,7 +910,7 @@ const sfSpecific4: MediaServiceType = MediaServiceType.sfSpecific4; /* SHORT_NAM
  * @type {number}
  */
 export
-const MediaServiceType_sfSpecific5: MediaServiceType = MediaServiceType.sfSpecific5; /* LONG_NAMED_ENUMERATED_VALUE */
+const MediaServiceType_sfSpecific5 = MediaServiceType.sfSpecific5 satisfies MediaServiceType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sfSpecific5
@@ -918,7 +918,7 @@ const MediaServiceType_sfSpecific5: MediaServiceType = MediaServiceType.sfSpecif
  * @type {number}
  */
 export
-const sfSpecific5: MediaServiceType = MediaServiceType.sfSpecific5; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sfSpecific5 = MediaServiceType.sfSpecific5 satisfies MediaServiceType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MediaServiceType_sfSpecific6
@@ -931,7 +931,7 @@ const sfSpecific5: MediaServiceType = MediaServiceType.sfSpecific5; /* SHORT_NAM
  * @type {number}
  */
 export
-const MediaServiceType_sfSpecific6: MediaServiceType = MediaServiceType.sfSpecific6; /* LONG_NAMED_ENUMERATED_VALUE */
+const MediaServiceType_sfSpecific6 = MediaServiceType.sfSpecific6 satisfies MediaServiceType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sfSpecific6
@@ -939,7 +939,7 @@ const MediaServiceType_sfSpecific6: MediaServiceType = MediaServiceType.sfSpecif
  * @type {number}
  */
 export
-const sfSpecific6: MediaServiceType = MediaServiceType.sfSpecific6; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sfSpecific6 = MediaServiceType.sfSpecific6 satisfies MediaServiceType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MediaServiceType_sfSpecific7
@@ -952,7 +952,7 @@ const sfSpecific6: MediaServiceType = MediaServiceType.sfSpecific6; /* SHORT_NAM
  * @type {number}
  */
 export
-const MediaServiceType_sfSpecific7: MediaServiceType = MediaServiceType.sfSpecific7; /* LONG_NAMED_ENUMERATED_VALUE */
+const MediaServiceType_sfSpecific7 = MediaServiceType.sfSpecific7 satisfies MediaServiceType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sfSpecific7
@@ -960,7 +960,7 @@ const MediaServiceType_sfSpecific7: MediaServiceType = MediaServiceType.sfSpecif
  * @type {number}
  */
 export
-const sfSpecific7: MediaServiceType = MediaServiceType.sfSpecific7; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sfSpecific7 = MediaServiceType.sfSpecific7 satisfies MediaServiceType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MediaServiceType_sfSpecific8
@@ -973,7 +973,7 @@ const sfSpecific7: MediaServiceType = MediaServiceType.sfSpecific7; /* SHORT_NAM
  * @type {number}
  */
 export
-const MediaServiceType_sfSpecific8: MediaServiceType = MediaServiceType.sfSpecific8; /* LONG_NAMED_ENUMERATED_VALUE */
+const MediaServiceType_sfSpecific8 = MediaServiceType.sfSpecific8 satisfies MediaServiceType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sfSpecific8
@@ -981,7 +981,7 @@ const MediaServiceType_sfSpecific8: MediaServiceType = MediaServiceType.sfSpecif
  * @type {number}
  */
 export
-const sfSpecific8: MediaServiceType = MediaServiceType.sfSpecific8; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sfSpecific8 = MediaServiceType.sfSpecific8 satisfies MediaServiceType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MediaServiceType_sfSpecific9
@@ -994,7 +994,7 @@ const sfSpecific8: MediaServiceType = MediaServiceType.sfSpecific8; /* SHORT_NAM
  * @type {number}
  */
 export
-const MediaServiceType_sfSpecific9: MediaServiceType = MediaServiceType.sfSpecific9; /* LONG_NAMED_ENUMERATED_VALUE */
+const MediaServiceType_sfSpecific9 = MediaServiceType.sfSpecific9 satisfies MediaServiceType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sfSpecific9
@@ -1002,7 +1002,7 @@ const MediaServiceType_sfSpecific9: MediaServiceType = MediaServiceType.sfSpecif
  * @type {number}
  */
 export
-const sfSpecific9: MediaServiceType = MediaServiceType.sfSpecific9; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sfSpecific9 = MediaServiceType.sfSpecific9 satisfies MediaServiceType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MediaServiceType_sfSpecific10
@@ -1015,7 +1015,7 @@ const sfSpecific9: MediaServiceType = MediaServiceType.sfSpecific9; /* SHORT_NAM
  * @type {number}
  */
 export
-const MediaServiceType_sfSpecific10: MediaServiceType = MediaServiceType.sfSpecific10; /* LONG_NAMED_ENUMERATED_VALUE */
+const MediaServiceType_sfSpecific10 = MediaServiceType.sfSpecific10 satisfies MediaServiceType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sfSpecific10
@@ -1023,7 +1023,7 @@ const MediaServiceType_sfSpecific10: MediaServiceType = MediaServiceType.sfSpeci
  * @type {number}
  */
 export
-const sfSpecific10: MediaServiceType = MediaServiceType.sfSpecific10; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sfSpecific10 = MediaServiceType.sfSpecific10 satisfies MediaServiceType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 let _cached_decoder_for_MediaServiceType: $.ASN1Decoder<MediaServiceType> | null = null;
 

@@ -103,7 +103,7 @@ const POCSessionInitType = _enum_for_POCSessionInitType;
  * @type {number}
  */
 export
-const POCSessionInitType_pre_established: POCSessionInitType = POCSessionInitType.pre_established; /* LONG_NAMED_ENUMERATED_VALUE */
+const POCSessionInitType_pre_established = POCSessionInitType.pre_established satisfies POCSessionInitType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pre_established
@@ -111,7 +111,7 @@ const POCSessionInitType_pre_established: POCSessionInitType = POCSessionInitTyp
  * @type {number}
  */
 export
-const pre_established: POCSessionInitType = POCSessionInitType.pre_established; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pre_established = POCSessionInitType.pre_established satisfies POCSessionInitType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary POCSessionInitType_on_demand
@@ -126,7 +126,7 @@ const pre_established: POCSessionInitType = POCSessionInitType.pre_established; 
  * @type {number}
  */
 export
-const POCSessionInitType_on_demand: POCSessionInitType = POCSessionInitType.on_demand; /* LONG_NAMED_ENUMERATED_VALUE */
+const POCSessionInitType_on_demand = POCSessionInitType.on_demand satisfies POCSessionInitType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary on_demand
@@ -134,7 +134,7 @@ const POCSessionInitType_on_demand: POCSessionInitType = POCSessionInitType.on_d
  * @type {number}
  */
 export
-const on_demand: POCSessionInitType = POCSessionInitType.on_demand; /* SHORT_NAMED_ENUMERATED_VALUE */
+const on_demand = POCSessionInitType.on_demand satisfies POCSessionInitType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_POCSessionInitType: $.ASN1Decoder<POCSessionInitType> = $._decodeEnumerated;

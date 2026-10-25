@@ -44,7 +44,7 @@ type RejectPDU_rejectReason_cancel_responsePDU = INTEGER;
  * @type {number}
  */
 export
-const RejectPDU_rejectReason_cancel_responsePDU_other: RejectPDU_rejectReason_cancel_responsePDU = 0; /* LONG_NAMED_INTEGER_VALUE */
+const RejectPDU_rejectReason_cancel_responsePDU_other = 0 satisfies RejectPDU_rejectReason_cancel_responsePDU; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RejectPDU_rejectReason_cancel_responsePDU_other
@@ -56,7 +56,7 @@ const RejectPDU_rejectReason_cancel_responsePDU_other: RejectPDU_rejectReason_ca
  * @type {number}
  */
 export
-const other: RejectPDU_rejectReason_cancel_responsePDU = RejectPDU_rejectReason_cancel_responsePDU_other; /* SHORT_NAMED_INTEGER_VALUE */
+const other = RejectPDU_rejectReason_cancel_responsePDU_other satisfies RejectPDU_rejectReason_cancel_responsePDU; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RejectPDU_rejectReason_cancel_responsePDU_invalid_invokeID
@@ -68,7 +68,7 @@ const other: RejectPDU_rejectReason_cancel_responsePDU = RejectPDU_rejectReason_
  * @type {number}
  */
 export
-const RejectPDU_rejectReason_cancel_responsePDU_invalid_invokeID: RejectPDU_rejectReason_cancel_responsePDU = 1; /* LONG_NAMED_INTEGER_VALUE */
+const RejectPDU_rejectReason_cancel_responsePDU_invalid_invokeID = 1 satisfies RejectPDU_rejectReason_cancel_responsePDU; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RejectPDU_rejectReason_cancel_responsePDU_invalid_invokeID
@@ -80,7 +80,7 @@ const RejectPDU_rejectReason_cancel_responsePDU_invalid_invokeID: RejectPDU_reje
  * @type {number}
  */
 export
-const invalid_invokeID: RejectPDU_rejectReason_cancel_responsePDU = RejectPDU_rejectReason_cancel_responsePDU_invalid_invokeID; /* SHORT_NAMED_INTEGER_VALUE */
+const invalid_invokeID = RejectPDU_rejectReason_cancel_responsePDU_invalid_invokeID satisfies RejectPDU_rejectReason_cancel_responsePDU; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_RejectPDU_rejectReason_cancel_responsePDU = $._decodeInteger;
 export const _encode_RejectPDU_rejectReason_cancel_responsePDU = $._encodeInteger;
 

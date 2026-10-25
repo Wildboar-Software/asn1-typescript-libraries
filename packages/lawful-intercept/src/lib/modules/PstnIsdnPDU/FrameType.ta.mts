@@ -119,7 +119,7 @@ type FrameType = _enum_for_FrameType | ENUMERATED;
  * @type {number}
  */
 export
-const FrameType_ipFrame: FrameType = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+const FrameType_ipFrame = _enum_for_FrameType.ipFrame satisfies FrameType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ipFrame
@@ -134,7 +134,7 @@ const FrameType_ipFrame: FrameType = 0; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const ipFrame: FrameType = FrameType_ipFrame; /* SHORT_NAMED_ENUMERATED_VALUE */
+const ipFrame = FrameType_ipFrame satisfies FrameType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary FrameType_udpFrame
@@ -149,7 +149,7 @@ const ipFrame: FrameType = FrameType_ipFrame; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const FrameType_udpFrame: FrameType = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const FrameType_udpFrame = _enum_for_FrameType.udpFrame satisfies FrameType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary udpFrame
@@ -164,7 +164,7 @@ const FrameType_udpFrame: FrameType = 1; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const udpFrame: FrameType = FrameType_udpFrame; /* SHORT_NAMED_ENUMERATED_VALUE */
+const udpFrame = FrameType_udpFrame satisfies FrameType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary FrameType_applicationFrame
@@ -179,7 +179,7 @@ const udpFrame: FrameType = FrameType_udpFrame; /* SHORT_NAMED_ENUMERATED_VALUE 
  * @type {number}
  */
 export
-const FrameType_applicationFrame: FrameType = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+const FrameType_applicationFrame = _enum_for_FrameType.applicationFrame satisfies FrameType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary applicationFrame
@@ -194,7 +194,7 @@ const FrameType_applicationFrame: FrameType = 2; /* LONG_NAMED_ENUMERATED_VALUE 
  * @type {number}
  */
 export
-const applicationFrame: FrameType = FrameType_applicationFrame; /* SHORT_NAMED_ENUMERATED_VALUE */
+const applicationFrame = FrameType_applicationFrame satisfies FrameType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary FrameType_audioFrame
@@ -209,7 +209,7 @@ const applicationFrame: FrameType = FrameType_applicationFrame; /* SHORT_NAMED_E
  * @type {number}
  */
 export
-const FrameType_audioFrame: FrameType = 3; /* LONG_NAMED_ENUMERATED_VALUE */
+const FrameType_audioFrame = _enum_for_FrameType.audioFrame satisfies FrameType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary audioFrame
@@ -224,7 +224,7 @@ const FrameType_audioFrame: FrameType = 3; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const audioFrame: FrameType = FrameType_audioFrame; /* SHORT_NAMED_ENUMERATED_VALUE */
+const audioFrame = FrameType_audioFrame satisfies FrameType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary FrameType_artificialRtpFrame
@@ -241,7 +241,7 @@ const audioFrame: FrameType = FrameType_audioFrame; /* SHORT_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const FrameType_artificialRtpFrame: FrameType = 4; /* LONG_NAMED_ENUMERATED_VALUE */
+const FrameType_artificialRtpFrame = _enum_for_FrameType.artificialRtpFrame satisfies FrameType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary artificialRtpFrame
@@ -258,7 +258,7 @@ const FrameType_artificialRtpFrame: FrameType = 4; /* LONG_NAMED_ENUMERATED_VALU
  * @type {number}
  */
 export
-const artificialRtpFrame: FrameType = FrameType_artificialRtpFrame; /* SHORT_NAMED_ENUMERATED_VALUE */
+const artificialRtpFrame = FrameType_artificialRtpFrame satisfies FrameType; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_FrameType: $.ASN1Decoder<FrameType> = $._decodeEnumerated;
 export const _encode_FrameType: $.ASN1Encoder<FrameType> = $._encodeEnumerated;
 

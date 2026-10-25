@@ -35,7 +35,7 @@ type SetDefaultDpAddressResponse_setDefaultDpAddressResult = INTEGER;
  * @type {number}
  */
 export
-const SetDefaultDpAddressResponse_setDefaultDpAddressResult_ok: SetDefaultDpAddressResponse_setDefaultDpAddressResult = 0; /* LONG_NAMED_INTEGER_VALUE */
+const SetDefaultDpAddressResponse_setDefaultDpAddressResult_ok = 0 satisfies SetDefaultDpAddressResponse_setDefaultDpAddressResult; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SetDefaultDpAddressResponse_setDefaultDpAddressResult_ok
@@ -47,7 +47,7 @@ const SetDefaultDpAddressResponse_setDefaultDpAddressResult_ok: SetDefaultDpAddr
  * @type {number}
  */
 export
-const ok: SetDefaultDpAddressResponse_setDefaultDpAddressResult = SetDefaultDpAddressResponse_setDefaultDpAddressResult_ok; /* SHORT_NAMED_INTEGER_VALUE */
+const ok = SetDefaultDpAddressResponse_setDefaultDpAddressResult_ok satisfies SetDefaultDpAddressResponse_setDefaultDpAddressResult; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SetDefaultDpAddressResponse_setDefaultDpAddressResult_undefinedError
@@ -59,7 +59,7 @@ const ok: SetDefaultDpAddressResponse_setDefaultDpAddressResult = SetDefaultDpAd
  * @type {number}
  */
 export
-const SetDefaultDpAddressResponse_setDefaultDpAddressResult_undefinedError: SetDefaultDpAddressResponse_setDefaultDpAddressResult = 127; /* LONG_NAMED_INTEGER_VALUE */
+const SetDefaultDpAddressResponse_setDefaultDpAddressResult_undefinedError = 127 satisfies SetDefaultDpAddressResponse_setDefaultDpAddressResult; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SetDefaultDpAddressResponse_setDefaultDpAddressResult_undefinedError
@@ -71,7 +71,7 @@ const SetDefaultDpAddressResponse_setDefaultDpAddressResult_undefinedError: SetD
  * @type {number}
  */
 export
-const undefinedError: SetDefaultDpAddressResponse_setDefaultDpAddressResult = SetDefaultDpAddressResponse_setDefaultDpAddressResult_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
+const undefinedError = SetDefaultDpAddressResponse_setDefaultDpAddressResult_undefinedError satisfies SetDefaultDpAddressResponse_setDefaultDpAddressResult; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_SetDefaultDpAddressResponse_setDefaultDpAddressResult = $._decodeInteger;
 export const _encode_SetDefaultDpAddressResponse_setDefaultDpAddressResult = $._encodeInteger;
 

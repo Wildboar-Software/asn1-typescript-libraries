@@ -127,7 +127,7 @@ const SessionPriority = _enum_for_SessionPriority;
  * @type {number}
  */
 export
-const SessionPriority_pRIORITY_0: SessionPriority = SessionPriority.pRIORITY_0; /* LONG_NAMED_ENUMERATED_VALUE */
+const SessionPriority_pRIORITY_0 = SessionPriority.pRIORITY_0 satisfies SessionPriority; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pRIORITY_0
@@ -142,7 +142,7 @@ const SessionPriority_pRIORITY_0: SessionPriority = SessionPriority.pRIORITY_0; 
  * @type {number}
  */
 export
-const pRIORITY_0: SessionPriority = SessionPriority.pRIORITY_0; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pRIORITY_0 = SessionPriority.pRIORITY_0 satisfies SessionPriority; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SessionPriority_pRIORITY_1
@@ -155,7 +155,7 @@ const pRIORITY_0: SessionPriority = SessionPriority.pRIORITY_0; /* SHORT_NAMED_E
  * @type {number}
  */
 export
-const SessionPriority_pRIORITY_1: SessionPriority = SessionPriority.pRIORITY_1; /* LONG_NAMED_ENUMERATED_VALUE */
+const SessionPriority_pRIORITY_1 = SessionPriority.pRIORITY_1 satisfies SessionPriority; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pRIORITY_1
@@ -168,7 +168,7 @@ const SessionPriority_pRIORITY_1: SessionPriority = SessionPriority.pRIORITY_1; 
  * @type {number}
  */
 export
-const pRIORITY_1: SessionPriority = SessionPriority.pRIORITY_1; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pRIORITY_1 = SessionPriority.pRIORITY_1 satisfies SessionPriority; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SessionPriority_pRIORITY_2
@@ -181,7 +181,7 @@ const pRIORITY_1: SessionPriority = SessionPriority.pRIORITY_1; /* SHORT_NAMED_E
  * @type {number}
  */
 export
-const SessionPriority_pRIORITY_2: SessionPriority = SessionPriority.pRIORITY_2; /* LONG_NAMED_ENUMERATED_VALUE */
+const SessionPriority_pRIORITY_2 = SessionPriority.pRIORITY_2 satisfies SessionPriority; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pRIORITY_2
@@ -194,7 +194,7 @@ const SessionPriority_pRIORITY_2: SessionPriority = SessionPriority.pRIORITY_2; 
  * @type {number}
  */
 export
-const pRIORITY_2: SessionPriority = SessionPriority.pRIORITY_2; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pRIORITY_2 = SessionPriority.pRIORITY_2 satisfies SessionPriority; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SessionPriority_pRIORITY_3
@@ -207,7 +207,7 @@ const pRIORITY_2: SessionPriority = SessionPriority.pRIORITY_2; /* SHORT_NAMED_E
  * @type {number}
  */
 export
-const SessionPriority_pRIORITY_3: SessionPriority = SessionPriority.pRIORITY_3; /* LONG_NAMED_ENUMERATED_VALUE */
+const SessionPriority_pRIORITY_3 = SessionPriority.pRIORITY_3 satisfies SessionPriority; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pRIORITY_3
@@ -220,7 +220,7 @@ const SessionPriority_pRIORITY_3: SessionPriority = SessionPriority.pRIORITY_3; 
  * @type {number}
  */
 export
-const pRIORITY_3: SessionPriority = SessionPriority.pRIORITY_3; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pRIORITY_3 = SessionPriority.pRIORITY_3 satisfies SessionPriority; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SessionPriority_pRIORITY_4
@@ -233,7 +233,7 @@ const pRIORITY_3: SessionPriority = SessionPriority.pRIORITY_3; /* SHORT_NAMED_E
  * @type {number}
  */
 export
-const SessionPriority_pRIORITY_4: SessionPriority = SessionPriority.pRIORITY_4; /* LONG_NAMED_ENUMERATED_VALUE */
+const SessionPriority_pRIORITY_4 = SessionPriority.pRIORITY_4 satisfies SessionPriority; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pRIORITY_4
@@ -246,7 +246,7 @@ const SessionPriority_pRIORITY_4: SessionPriority = SessionPriority.pRIORITY_4; 
  * @type {number}
  */
 export
-const pRIORITY_4: SessionPriority = SessionPriority.pRIORITY_4; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pRIORITY_4 = SessionPriority.pRIORITY_4 satisfies SessionPriority; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_SessionPriority: $.ASN1Decoder<SessionPriority> = $._decodeEnumerated;

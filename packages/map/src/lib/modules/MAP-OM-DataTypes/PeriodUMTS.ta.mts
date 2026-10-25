@@ -127,7 +127,7 @@ const PeriodUMTS = _enum_for_PeriodUMTS;
  * @type {number}
  */
 export
-const PeriodUMTS_d250ms: PeriodUMTS = PeriodUMTS.d250ms; /* LONG_NAMED_ENUMERATED_VALUE */
+const PeriodUMTS_d250ms = PeriodUMTS.d250ms satisfies PeriodUMTS; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary d250ms
@@ -135,7 +135,7 @@ const PeriodUMTS_d250ms: PeriodUMTS = PeriodUMTS.d250ms; /* LONG_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const d250ms: PeriodUMTS = PeriodUMTS.d250ms; /* SHORT_NAMED_ENUMERATED_VALUE */
+const d250ms = PeriodUMTS.d250ms satisfies PeriodUMTS; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PeriodUMTS_d500ms
@@ -143,7 +143,7 @@ const d250ms: PeriodUMTS = PeriodUMTS.d250ms; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const PeriodUMTS_d500ms: PeriodUMTS = PeriodUMTS.d500ms; /* LONG_NAMED_ENUMERATED_VALUE */
+const PeriodUMTS_d500ms = PeriodUMTS.d500ms satisfies PeriodUMTS; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary d500ms
@@ -151,7 +151,7 @@ const PeriodUMTS_d500ms: PeriodUMTS = PeriodUMTS.d500ms; /* LONG_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const d500ms: PeriodUMTS = PeriodUMTS.d500ms; /* SHORT_NAMED_ENUMERATED_VALUE */
+const d500ms = PeriodUMTS.d500ms satisfies PeriodUMTS; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PeriodUMTS_d1000ms
@@ -159,7 +159,7 @@ const d500ms: PeriodUMTS = PeriodUMTS.d500ms; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const PeriodUMTS_d1000ms: PeriodUMTS = PeriodUMTS.d1000ms; /* LONG_NAMED_ENUMERATED_VALUE */
+const PeriodUMTS_d1000ms = PeriodUMTS.d1000ms satisfies PeriodUMTS; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary d1000ms
@@ -167,7 +167,7 @@ const PeriodUMTS_d1000ms: PeriodUMTS = PeriodUMTS.d1000ms; /* LONG_NAMED_ENUMERA
  * @type {number}
  */
 export
-const d1000ms: PeriodUMTS = PeriodUMTS.d1000ms; /* SHORT_NAMED_ENUMERATED_VALUE */
+const d1000ms = PeriodUMTS.d1000ms satisfies PeriodUMTS; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PeriodUMTS_d2000ms
@@ -175,7 +175,7 @@ const d1000ms: PeriodUMTS = PeriodUMTS.d1000ms; /* SHORT_NAMED_ENUMERATED_VALUE 
  * @type {number}
  */
 export
-const PeriodUMTS_d2000ms: PeriodUMTS = PeriodUMTS.d2000ms; /* LONG_NAMED_ENUMERATED_VALUE */
+const PeriodUMTS_d2000ms = PeriodUMTS.d2000ms satisfies PeriodUMTS; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary d2000ms
@@ -183,7 +183,7 @@ const PeriodUMTS_d2000ms: PeriodUMTS = PeriodUMTS.d2000ms; /* LONG_NAMED_ENUMERA
  * @type {number}
  */
 export
-const d2000ms: PeriodUMTS = PeriodUMTS.d2000ms; /* SHORT_NAMED_ENUMERATED_VALUE */
+const d2000ms = PeriodUMTS.d2000ms satisfies PeriodUMTS; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PeriodUMTS_d3000ms
@@ -191,7 +191,7 @@ const d2000ms: PeriodUMTS = PeriodUMTS.d2000ms; /* SHORT_NAMED_ENUMERATED_VALUE 
  * @type {number}
  */
 export
-const PeriodUMTS_d3000ms: PeriodUMTS = PeriodUMTS.d3000ms; /* LONG_NAMED_ENUMERATED_VALUE */
+const PeriodUMTS_d3000ms = PeriodUMTS.d3000ms satisfies PeriodUMTS; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary d3000ms
@@ -199,7 +199,7 @@ const PeriodUMTS_d3000ms: PeriodUMTS = PeriodUMTS.d3000ms; /* LONG_NAMED_ENUMERA
  * @type {number}
  */
 export
-const d3000ms: PeriodUMTS = PeriodUMTS.d3000ms; /* SHORT_NAMED_ENUMERATED_VALUE */
+const d3000ms = PeriodUMTS.d3000ms satisfies PeriodUMTS; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PeriodUMTS_d4000ms
@@ -207,7 +207,7 @@ const d3000ms: PeriodUMTS = PeriodUMTS.d3000ms; /* SHORT_NAMED_ENUMERATED_VALUE 
  * @type {number}
  */
 export
-const PeriodUMTS_d4000ms: PeriodUMTS = PeriodUMTS.d4000ms; /* LONG_NAMED_ENUMERATED_VALUE */
+const PeriodUMTS_d4000ms = PeriodUMTS.d4000ms satisfies PeriodUMTS; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary d4000ms
@@ -215,7 +215,7 @@ const PeriodUMTS_d4000ms: PeriodUMTS = PeriodUMTS.d4000ms; /* LONG_NAMED_ENUMERA
  * @type {number}
  */
 export
-const d4000ms: PeriodUMTS = PeriodUMTS.d4000ms; /* SHORT_NAMED_ENUMERATED_VALUE */
+const d4000ms = PeriodUMTS.d4000ms satisfies PeriodUMTS; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PeriodUMTS_d6000ms
@@ -223,7 +223,7 @@ const d4000ms: PeriodUMTS = PeriodUMTS.d4000ms; /* SHORT_NAMED_ENUMERATED_VALUE 
  * @type {number}
  */
 export
-const PeriodUMTS_d6000ms: PeriodUMTS = PeriodUMTS.d6000ms; /* LONG_NAMED_ENUMERATED_VALUE */
+const PeriodUMTS_d6000ms = PeriodUMTS.d6000ms satisfies PeriodUMTS; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary d6000ms
@@ -231,7 +231,7 @@ const PeriodUMTS_d6000ms: PeriodUMTS = PeriodUMTS.d6000ms; /* LONG_NAMED_ENUMERA
  * @type {number}
  */
 export
-const d6000ms: PeriodUMTS = PeriodUMTS.d6000ms; /* SHORT_NAMED_ENUMERATED_VALUE */
+const d6000ms = PeriodUMTS.d6000ms satisfies PeriodUMTS; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PeriodUMTS_d8000ms
@@ -239,7 +239,7 @@ const d6000ms: PeriodUMTS = PeriodUMTS.d6000ms; /* SHORT_NAMED_ENUMERATED_VALUE 
  * @type {number}
  */
 export
-const PeriodUMTS_d8000ms: PeriodUMTS = PeriodUMTS.d8000ms; /* LONG_NAMED_ENUMERATED_VALUE */
+const PeriodUMTS_d8000ms = PeriodUMTS.d8000ms satisfies PeriodUMTS; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary d8000ms
@@ -247,7 +247,7 @@ const PeriodUMTS_d8000ms: PeriodUMTS = PeriodUMTS.d8000ms; /* LONG_NAMED_ENUMERA
  * @type {number}
  */
 export
-const d8000ms: PeriodUMTS = PeriodUMTS.d8000ms; /* SHORT_NAMED_ENUMERATED_VALUE */
+const d8000ms = PeriodUMTS.d8000ms satisfies PeriodUMTS; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PeriodUMTS_d12000ms
@@ -255,7 +255,7 @@ const d8000ms: PeriodUMTS = PeriodUMTS.d8000ms; /* SHORT_NAMED_ENUMERATED_VALUE 
  * @type {number}
  */
 export
-const PeriodUMTS_d12000ms: PeriodUMTS = PeriodUMTS.d12000ms; /* LONG_NAMED_ENUMERATED_VALUE */
+const PeriodUMTS_d12000ms = PeriodUMTS.d12000ms satisfies PeriodUMTS; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary d12000ms
@@ -263,7 +263,7 @@ const PeriodUMTS_d12000ms: PeriodUMTS = PeriodUMTS.d12000ms; /* LONG_NAMED_ENUME
  * @type {number}
  */
 export
-const d12000ms: PeriodUMTS = PeriodUMTS.d12000ms; /* SHORT_NAMED_ENUMERATED_VALUE */
+const d12000ms = PeriodUMTS.d12000ms satisfies PeriodUMTS; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PeriodUMTS_d16000ms
@@ -271,7 +271,7 @@ const d12000ms: PeriodUMTS = PeriodUMTS.d12000ms; /* SHORT_NAMED_ENUMERATED_VALU
  * @type {number}
  */
 export
-const PeriodUMTS_d16000ms: PeriodUMTS = PeriodUMTS.d16000ms; /* LONG_NAMED_ENUMERATED_VALUE */
+const PeriodUMTS_d16000ms = PeriodUMTS.d16000ms satisfies PeriodUMTS; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary d16000ms
@@ -279,7 +279,7 @@ const PeriodUMTS_d16000ms: PeriodUMTS = PeriodUMTS.d16000ms; /* LONG_NAMED_ENUME
  * @type {number}
  */
 export
-const d16000ms: PeriodUMTS = PeriodUMTS.d16000ms; /* SHORT_NAMED_ENUMERATED_VALUE */
+const d16000ms = PeriodUMTS.d16000ms satisfies PeriodUMTS; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PeriodUMTS_d20000ms
@@ -287,7 +287,7 @@ const d16000ms: PeriodUMTS = PeriodUMTS.d16000ms; /* SHORT_NAMED_ENUMERATED_VALU
  * @type {number}
  */
 export
-const PeriodUMTS_d20000ms: PeriodUMTS = PeriodUMTS.d20000ms; /* LONG_NAMED_ENUMERATED_VALUE */
+const PeriodUMTS_d20000ms = PeriodUMTS.d20000ms satisfies PeriodUMTS; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary d20000ms
@@ -295,7 +295,7 @@ const PeriodUMTS_d20000ms: PeriodUMTS = PeriodUMTS.d20000ms; /* LONG_NAMED_ENUME
  * @type {number}
  */
 export
-const d20000ms: PeriodUMTS = PeriodUMTS.d20000ms; /* SHORT_NAMED_ENUMERATED_VALUE */
+const d20000ms = PeriodUMTS.d20000ms satisfies PeriodUMTS; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PeriodUMTS_d24000ms
@@ -303,7 +303,7 @@ const d20000ms: PeriodUMTS = PeriodUMTS.d20000ms; /* SHORT_NAMED_ENUMERATED_VALU
  * @type {number}
  */
 export
-const PeriodUMTS_d24000ms: PeriodUMTS = PeriodUMTS.d24000ms; /* LONG_NAMED_ENUMERATED_VALUE */
+const PeriodUMTS_d24000ms = PeriodUMTS.d24000ms satisfies PeriodUMTS; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary d24000ms
@@ -311,7 +311,7 @@ const PeriodUMTS_d24000ms: PeriodUMTS = PeriodUMTS.d24000ms; /* LONG_NAMED_ENUME
  * @type {number}
  */
 export
-const d24000ms: PeriodUMTS = PeriodUMTS.d24000ms; /* SHORT_NAMED_ENUMERATED_VALUE */
+const d24000ms = PeriodUMTS.d24000ms satisfies PeriodUMTS; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PeriodUMTS_d28000ms
@@ -319,7 +319,7 @@ const d24000ms: PeriodUMTS = PeriodUMTS.d24000ms; /* SHORT_NAMED_ENUMERATED_VALU
  * @type {number}
  */
 export
-const PeriodUMTS_d28000ms: PeriodUMTS = PeriodUMTS.d28000ms; /* LONG_NAMED_ENUMERATED_VALUE */
+const PeriodUMTS_d28000ms = PeriodUMTS.d28000ms satisfies PeriodUMTS; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary d28000ms
@@ -327,7 +327,7 @@ const PeriodUMTS_d28000ms: PeriodUMTS = PeriodUMTS.d28000ms; /* LONG_NAMED_ENUME
  * @type {number}
  */
 export
-const d28000ms: PeriodUMTS = PeriodUMTS.d28000ms; /* SHORT_NAMED_ENUMERATED_VALUE */
+const d28000ms = PeriodUMTS.d28000ms satisfies PeriodUMTS; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PeriodUMTS_d32000ms
@@ -335,7 +335,7 @@ const d28000ms: PeriodUMTS = PeriodUMTS.d28000ms; /* SHORT_NAMED_ENUMERATED_VALU
  * @type {number}
  */
 export
-const PeriodUMTS_d32000ms: PeriodUMTS = PeriodUMTS.d32000ms; /* LONG_NAMED_ENUMERATED_VALUE */
+const PeriodUMTS_d32000ms = PeriodUMTS.d32000ms satisfies PeriodUMTS; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary d32000ms
@@ -343,7 +343,7 @@ const PeriodUMTS_d32000ms: PeriodUMTS = PeriodUMTS.d32000ms; /* LONG_NAMED_ENUME
  * @type {number}
  */
 export
-const d32000ms: PeriodUMTS = PeriodUMTS.d32000ms; /* SHORT_NAMED_ENUMERATED_VALUE */
+const d32000ms = PeriodUMTS.d32000ms satisfies PeriodUMTS; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PeriodUMTS_d64000ms
@@ -351,7 +351,7 @@ const d32000ms: PeriodUMTS = PeriodUMTS.d32000ms; /* SHORT_NAMED_ENUMERATED_VALU
  * @type {number}
  */
 export
-const PeriodUMTS_d64000ms: PeriodUMTS = PeriodUMTS.d64000ms; /* LONG_NAMED_ENUMERATED_VALUE */
+const PeriodUMTS_d64000ms = PeriodUMTS.d64000ms satisfies PeriodUMTS; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary d64000ms
@@ -359,7 +359,7 @@ const PeriodUMTS_d64000ms: PeriodUMTS = PeriodUMTS.d64000ms; /* LONG_NAMED_ENUME
  * @type {number}
  */
 export
-const d64000ms: PeriodUMTS = PeriodUMTS.d64000ms; /* SHORT_NAMED_ENUMERATED_VALUE */
+const d64000ms = PeriodUMTS.d64000ms satisfies PeriodUMTS; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) PeriodUMTS

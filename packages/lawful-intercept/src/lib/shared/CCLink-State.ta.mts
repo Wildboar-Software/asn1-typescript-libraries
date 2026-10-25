@@ -123,7 +123,7 @@ type CCLink_State = _enum_for_CCLink_State | ENUMERATED;
  * @type {number}
  */
 export
-const CCLink_State_setUpInProcess: CCLink_State = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const CCLink_State_setUpInProcess = _enum_for_CCLink_State.setUpInProcess satisfies CCLink_State; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary setUpInProcess
@@ -138,7 +138,7 @@ const CCLink_State_setUpInProcess: CCLink_State = 1; /* LONG_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const setUpInProcess: CCLink_State = CCLink_State_setUpInProcess; /* SHORT_NAMED_ENUMERATED_VALUE */
+const setUpInProcess = CCLink_State_setUpInProcess satisfies CCLink_State; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CCLink_State_callActive
@@ -154,7 +154,7 @@ const setUpInProcess: CCLink_State = CCLink_State_setUpInProcess; /* SHORT_NAMED
  * @type {number}
  */
 export
-const CCLink_State_callActive: CCLink_State = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+const CCLink_State_callActive = _enum_for_CCLink_State.callActive satisfies CCLink_State; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary callActive
@@ -170,7 +170,7 @@ const CCLink_State_callActive: CCLink_State = 2; /* LONG_NAMED_ENUMERATED_VALUE 
  * @type {number}
  */
 export
-const callActive: CCLink_State = CCLink_State_callActive; /* SHORT_NAMED_ENUMERATED_VALUE */
+const callActive = CCLink_State_callActive satisfies CCLink_State; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CCLink_State_callReleased
@@ -186,7 +186,7 @@ const callActive: CCLink_State = CCLink_State_callActive; /* SHORT_NAMED_ENUMERA
  * @type {number}
  */
 export
-const CCLink_State_callReleased: CCLink_State = 3; /* LONG_NAMED_ENUMERATED_VALUE */
+const CCLink_State_callReleased = _enum_for_CCLink_State.callReleased satisfies CCLink_State; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary callReleased
@@ -202,7 +202,7 @@ const CCLink_State_callReleased: CCLink_State = 3; /* LONG_NAMED_ENUMERATED_VALU
  * @type {number}
  */
 export
-const callReleased: CCLink_State = CCLink_State_callReleased; /* SHORT_NAMED_ENUMERATED_VALUE */
+const callReleased = CCLink_State_callReleased satisfies CCLink_State; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CCLink_State_lack_of_resource
@@ -218,7 +218,7 @@ const callReleased: CCLink_State = CCLink_State_callReleased; /* SHORT_NAMED_ENU
  * @type {number}
  */
 export
-const CCLink_State_lack_of_resource: CCLink_State = 4; /* LONG_NAMED_ENUMERATED_VALUE */
+const CCLink_State_lack_of_resource = _enum_for_CCLink_State.lack_of_resource satisfies CCLink_State; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary lack_of_resource
@@ -234,7 +234,7 @@ const CCLink_State_lack_of_resource: CCLink_State = 4; /* LONG_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const lack_of_resource: CCLink_State = CCLink_State_lack_of_resource; /* SHORT_NAMED_ENUMERATED_VALUE */
+const lack_of_resource = CCLink_State_lack_of_resource satisfies CCLink_State; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_CCLink_State: $.ASN1Decoder<CCLink_State> = $._decodeEnumerated;
 export const _encode_CCLink_State: $.ASN1Encoder<CCLink_State> = $._encodeEnumerated;
 

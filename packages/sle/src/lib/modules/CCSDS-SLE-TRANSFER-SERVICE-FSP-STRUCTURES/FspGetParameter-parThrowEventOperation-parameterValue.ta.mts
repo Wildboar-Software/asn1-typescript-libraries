@@ -37,7 +37,7 @@ type FspGetParameter_parThrowEventOperation_parameterValue = INTEGER;
  * @type {number}
  */
 export
-const FspGetParameter_parThrowEventOperation_parameterValue_enabled: FspGetParameter_parThrowEventOperation_parameterValue = 0; /* LONG_NAMED_INTEGER_VALUE */
+const FspGetParameter_parThrowEventOperation_parameterValue_enabled = 0 satisfies FspGetParameter_parThrowEventOperation_parameterValue; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary FspGetParameter_parThrowEventOperation_parameterValue_enabled
@@ -48,7 +48,7 @@ const FspGetParameter_parThrowEventOperation_parameterValue_enabled: FspGetParam
  * @type {number}
  */
 export
-const enabled: FspGetParameter_parThrowEventOperation_parameterValue = FspGetParameter_parThrowEventOperation_parameterValue_enabled; /* SHORT_NAMED_INTEGER_VALUE */
+const enabled = FspGetParameter_parThrowEventOperation_parameterValue_enabled satisfies FspGetParameter_parThrowEventOperation_parameterValue; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary FspGetParameter_parThrowEventOperation_parameterValue_disabled
@@ -60,7 +60,7 @@ const enabled: FspGetParameter_parThrowEventOperation_parameterValue = FspGetPar
  * @type {number}
  */
 export
-const FspGetParameter_parThrowEventOperation_parameterValue_disabled: FspGetParameter_parThrowEventOperation_parameterValue = 1; /* LONG_NAMED_INTEGER_VALUE */
+const FspGetParameter_parThrowEventOperation_parameterValue_disabled = 1 satisfies FspGetParameter_parThrowEventOperation_parameterValue; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary FspGetParameter_parThrowEventOperation_parameterValue_disabled
@@ -71,7 +71,7 @@ const FspGetParameter_parThrowEventOperation_parameterValue_disabled: FspGetPara
  * @type {number}
  */
 export
-const disabled: FspGetParameter_parThrowEventOperation_parameterValue = FspGetParameter_parThrowEventOperation_parameterValue_disabled; /* SHORT_NAMED_INTEGER_VALUE */
+const disabled = FspGetParameter_parThrowEventOperation_parameterValue_disabled satisfies FspGetParameter_parThrowEventOperation_parameterValue; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_FspGetParameter_parThrowEventOperation_parameterValue: $.ASN1Decoder<FspGetParameter_parThrowEventOperation_parameterValue> = $._decodeInteger;
 export const _encode_FspGetParameter_parThrowEventOperation_parameterValue: $.ASN1Encoder<FspGetParameter_parThrowEventOperation_parameterValue> = $._encodeInteger;
 

@@ -53,7 +53,7 @@ type AbsentSubscriberReason = _enum_for_AbsentSubscriberReason | ENUMERATED;
  * @type {number}
  */
 export
-const AbsentSubscriberReason_imsiDetach: AbsentSubscriberReason = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+const AbsentSubscriberReason_imsiDetach = _enum_for_AbsentSubscriberReason.imsiDetach satisfies AbsentSubscriberReason; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary imsiDetach
@@ -65,7 +65,7 @@ const AbsentSubscriberReason_imsiDetach: AbsentSubscriberReason = 0; /* LONG_NAM
  * @type {number}
  */
 export
-const imsiDetach: AbsentSubscriberReason = AbsentSubscriberReason_imsiDetach; /* SHORT_NAMED_ENUMERATED_VALUE */
+const imsiDetach = AbsentSubscriberReason_imsiDetach satisfies AbsentSubscriberReason; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AbsentSubscriberReason_restrictedArea
@@ -77,7 +77,7 @@ const imsiDetach: AbsentSubscriberReason = AbsentSubscriberReason_imsiDetach; /*
  * @type {number}
  */
 export
-const AbsentSubscriberReason_restrictedArea: AbsentSubscriberReason = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const AbsentSubscriberReason_restrictedArea = _enum_for_AbsentSubscriberReason.restrictedArea satisfies AbsentSubscriberReason; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary restrictedArea
@@ -89,7 +89,7 @@ const AbsentSubscriberReason_restrictedArea: AbsentSubscriberReason = 1; /* LONG
  * @type {number}
  */
 export
-const restrictedArea: AbsentSubscriberReason = AbsentSubscriberReason_restrictedArea; /* SHORT_NAMED_ENUMERATED_VALUE */
+const restrictedArea = AbsentSubscriberReason_restrictedArea satisfies AbsentSubscriberReason; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AbsentSubscriberReason_noPageResponse
@@ -101,7 +101,7 @@ const restrictedArea: AbsentSubscriberReason = AbsentSubscriberReason_restricted
  * @type {number}
  */
 export
-const AbsentSubscriberReason_noPageResponse: AbsentSubscriberReason = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+const AbsentSubscriberReason_noPageResponse = _enum_for_AbsentSubscriberReason.noPageResponse satisfies AbsentSubscriberReason; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary noPageResponse
@@ -113,7 +113,7 @@ const AbsentSubscriberReason_noPageResponse: AbsentSubscriberReason = 2; /* LONG
  * @type {number}
  */
 export
-const noPageResponse: AbsentSubscriberReason = AbsentSubscriberReason_noPageResponse; /* SHORT_NAMED_ENUMERATED_VALUE */
+const noPageResponse = AbsentSubscriberReason_noPageResponse satisfies AbsentSubscriberReason; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AbsentSubscriberReason_purgedMS
@@ -127,7 +127,7 @@ const noPageResponse: AbsentSubscriberReason = AbsentSubscriberReason_noPageResp
  * @type {number}
  */
 export
-const AbsentSubscriberReason_purgedMS: AbsentSubscriberReason = 3; /* LONG_NAMED_ENUMERATED_VALUE */
+const AbsentSubscriberReason_purgedMS = _enum_for_AbsentSubscriberReason.purgedMS satisfies AbsentSubscriberReason; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary purgedMS
@@ -141,7 +141,7 @@ const AbsentSubscriberReason_purgedMS: AbsentSubscriberReason = 3; /* LONG_NAMED
  * @type {number}
  */
 export
-const purgedMS: AbsentSubscriberReason = AbsentSubscriberReason_purgedMS; /* SHORT_NAMED_ENUMERATED_VALUE */
+const purgedMS = AbsentSubscriberReason_purgedMS satisfies AbsentSubscriberReason; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AbsentSubscriberReason_mtRoamingRetry
@@ -154,7 +154,7 @@ const purgedMS: AbsentSubscriberReason = AbsentSubscriberReason_purgedMS; /* SHO
  * @type {number}
  */
 export
-const AbsentSubscriberReason_mtRoamingRetry: AbsentSubscriberReason = 4; /* LONG_NAMED_ENUMERATED_VALUE */
+const AbsentSubscriberReason_mtRoamingRetry = _enum_for_AbsentSubscriberReason.mtRoamingRetry satisfies AbsentSubscriberReason; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary mtRoamingRetry
@@ -167,7 +167,7 @@ const AbsentSubscriberReason_mtRoamingRetry: AbsentSubscriberReason = 4; /* LONG
  * @type {number}
  */
 export
-const mtRoamingRetry: AbsentSubscriberReason = AbsentSubscriberReason_mtRoamingRetry; /* SHORT_NAMED_ENUMERATED_VALUE */
+const mtRoamingRetry = AbsentSubscriberReason_mtRoamingRetry satisfies AbsentSubscriberReason; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AbsentSubscriberReason_busySubscriber
@@ -180,7 +180,7 @@ const mtRoamingRetry: AbsentSubscriberReason = AbsentSubscriberReason_mtRoamingR
  * @type {number}
  */
 export
-const AbsentSubscriberReason_busySubscriber: AbsentSubscriberReason = 5; /* LONG_NAMED_ENUMERATED_VALUE */
+const AbsentSubscriberReason_busySubscriber = _enum_for_AbsentSubscriberReason.busySubscriber satisfies AbsentSubscriberReason; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary busySubscriber
@@ -193,7 +193,7 @@ const AbsentSubscriberReason_busySubscriber: AbsentSubscriberReason = 5; /* LONG
  * @type {number}
  */
 export
-const busySubscriber: AbsentSubscriberReason = AbsentSubscriberReason_busySubscriber; /* SHORT_NAMED_ENUMERATED_VALUE */
+const busySubscriber = AbsentSubscriberReason_busySubscriber satisfies AbsentSubscriberReason; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) AbsentSubscriberReason

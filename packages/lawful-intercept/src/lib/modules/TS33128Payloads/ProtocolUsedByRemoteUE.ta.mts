@@ -81,7 +81,7 @@ const ProtocolUsedByRemoteUE = _enum_for_ProtocolUsedByRemoteUE;
  * @type {number}
  */
 export
-const ProtocolUsedByRemoteUE_noIPInfo: ProtocolUsedByRemoteUE = ProtocolUsedByRemoteUE.noIPInfo; /* LONG_NAMED_ENUMERATED_VALUE */
+const ProtocolUsedByRemoteUE_noIPInfo = ProtocolUsedByRemoteUE.noIPInfo satisfies ProtocolUsedByRemoteUE; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary noIPInfo
@@ -89,7 +89,7 @@ const ProtocolUsedByRemoteUE_noIPInfo: ProtocolUsedByRemoteUE = ProtocolUsedByRe
  * @type {number}
  */
 export
-const noIPInfo: ProtocolUsedByRemoteUE = ProtocolUsedByRemoteUE.noIPInfo; /* SHORT_NAMED_ENUMERATED_VALUE */
+const noIPInfo = ProtocolUsedByRemoteUE.noIPInfo satisfies ProtocolUsedByRemoteUE; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ProtocolUsedByRemoteUE_iPv4
@@ -97,7 +97,7 @@ const noIPInfo: ProtocolUsedByRemoteUE = ProtocolUsedByRemoteUE.noIPInfo; /* SHO
  * @type {number}
  */
 export
-const ProtocolUsedByRemoteUE_iPv4: ProtocolUsedByRemoteUE = ProtocolUsedByRemoteUE.iPv4; /* LONG_NAMED_ENUMERATED_VALUE */
+const ProtocolUsedByRemoteUE_iPv4 = ProtocolUsedByRemoteUE.iPv4 satisfies ProtocolUsedByRemoteUE; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary iPv4
@@ -105,7 +105,7 @@ const ProtocolUsedByRemoteUE_iPv4: ProtocolUsedByRemoteUE = ProtocolUsedByRemote
  * @type {number}
  */
 export
-const iPv4: ProtocolUsedByRemoteUE = ProtocolUsedByRemoteUE.iPv4; /* SHORT_NAMED_ENUMERATED_VALUE */
+const iPv4 = ProtocolUsedByRemoteUE.iPv4 satisfies ProtocolUsedByRemoteUE; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ProtocolUsedByRemoteUE_iPv6
@@ -113,7 +113,7 @@ const iPv4: ProtocolUsedByRemoteUE = ProtocolUsedByRemoteUE.iPv4; /* SHORT_NAMED
  * @type {number}
  */
 export
-const ProtocolUsedByRemoteUE_iPv6: ProtocolUsedByRemoteUE = ProtocolUsedByRemoteUE.iPv6; /* LONG_NAMED_ENUMERATED_VALUE */
+const ProtocolUsedByRemoteUE_iPv6 = ProtocolUsedByRemoteUE.iPv6 satisfies ProtocolUsedByRemoteUE; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary iPv6
@@ -121,7 +121,7 @@ const ProtocolUsedByRemoteUE_iPv6: ProtocolUsedByRemoteUE = ProtocolUsedByRemote
  * @type {number}
  */
 export
-const iPv6: ProtocolUsedByRemoteUE = ProtocolUsedByRemoteUE.iPv6; /* SHORT_NAMED_ENUMERATED_VALUE */
+const iPv6 = ProtocolUsedByRemoteUE.iPv6 satisfies ProtocolUsedByRemoteUE; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ProtocolUsedByRemoteUE_unstructured
@@ -129,7 +129,7 @@ const iPv6: ProtocolUsedByRemoteUE = ProtocolUsedByRemoteUE.iPv6; /* SHORT_NAMED
  * @type {number}
  */
 export
-const ProtocolUsedByRemoteUE_unstructured: ProtocolUsedByRemoteUE = ProtocolUsedByRemoteUE.unstructured; /* LONG_NAMED_ENUMERATED_VALUE */
+const ProtocolUsedByRemoteUE_unstructured = ProtocolUsedByRemoteUE.unstructured satisfies ProtocolUsedByRemoteUE; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unstructured
@@ -137,7 +137,7 @@ const ProtocolUsedByRemoteUE_unstructured: ProtocolUsedByRemoteUE = ProtocolUsed
  * @type {number}
  */
 export
-const unstructured: ProtocolUsedByRemoteUE = ProtocolUsedByRemoteUE.unstructured; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unstructured = ProtocolUsedByRemoteUE.unstructured satisfies ProtocolUsedByRemoteUE; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ProtocolUsedByRemoteUE_ethernet
@@ -145,7 +145,7 @@ const unstructured: ProtocolUsedByRemoteUE = ProtocolUsedByRemoteUE.unstructured
  * @type {number}
  */
 export
-const ProtocolUsedByRemoteUE_ethernet: ProtocolUsedByRemoteUE = ProtocolUsedByRemoteUE.ethernet; /* LONG_NAMED_ENUMERATED_VALUE */
+const ProtocolUsedByRemoteUE_ethernet = ProtocolUsedByRemoteUE.ethernet satisfies ProtocolUsedByRemoteUE; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ethernet
@@ -153,7 +153,7 @@ const ProtocolUsedByRemoteUE_ethernet: ProtocolUsedByRemoteUE = ProtocolUsedByRe
  * @type {number}
  */
 export
-const ethernet: ProtocolUsedByRemoteUE = ProtocolUsedByRemoteUE.ethernet; /* SHORT_NAMED_ENUMERATED_VALUE */
+const ethernet = ProtocolUsedByRemoteUE.ethernet satisfies ProtocolUsedByRemoteUE; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_ProtocolUsedByRemoteUE: $.ASN1Decoder<ProtocolUsedByRemoteUE> = $._decodeEnumerated;
 export const _encode_ProtocolUsedByRemoteUE: $.ASN1Encoder<ProtocolUsedByRemoteUE> = $._encodeEnumerated;
 

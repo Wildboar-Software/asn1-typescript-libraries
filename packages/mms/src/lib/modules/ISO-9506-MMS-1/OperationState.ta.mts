@@ -53,7 +53,7 @@ type OperationState = INTEGER;
  * @type {number}
  */
 export
-const OperationState_idle: OperationState = 0; /* LONG_NAMED_INTEGER_VALUE */
+const OperationState_idle = 0 satisfies OperationState; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary OperationState_idle
@@ -66,7 +66,7 @@ const OperationState_idle: OperationState = 0; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const idle: OperationState = OperationState_idle; /* SHORT_NAMED_INTEGER_VALUE */
+const idle = OperationState_idle satisfies OperationState; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary OperationState_loaded
@@ -79,7 +79,7 @@ const idle: OperationState = OperationState_idle; /* SHORT_NAMED_INTEGER_VALUE *
  * @type {number}
  */
 export
-const OperationState_loaded: OperationState = 1; /* LONG_NAMED_INTEGER_VALUE */
+const OperationState_loaded = 1 satisfies OperationState; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary OperationState_loaded
@@ -92,7 +92,7 @@ const OperationState_loaded: OperationState = 1; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const loaded: OperationState = OperationState_loaded; /* SHORT_NAMED_INTEGER_VALUE */
+const loaded = OperationState_loaded satisfies OperationState; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary OperationState_ready
@@ -105,7 +105,7 @@ const loaded: OperationState = OperationState_loaded; /* SHORT_NAMED_INTEGER_VAL
  * @type {number}
  */
 export
-const OperationState_ready: OperationState = 2; /* LONG_NAMED_INTEGER_VALUE */
+const OperationState_ready = 2 satisfies OperationState; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary OperationState_ready
@@ -118,7 +118,7 @@ const OperationState_ready: OperationState = 2; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const ready: OperationState = OperationState_ready; /* SHORT_NAMED_INTEGER_VALUE */
+const ready = OperationState_ready satisfies OperationState; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary OperationState_executing
@@ -131,7 +131,7 @@ const ready: OperationState = OperationState_ready; /* SHORT_NAMED_INTEGER_VALUE
  * @type {number}
  */
 export
-const OperationState_executing: OperationState = 3; /* LONG_NAMED_INTEGER_VALUE */
+const OperationState_executing = 3 satisfies OperationState; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary OperationState_executing
@@ -144,7 +144,7 @@ const OperationState_executing: OperationState = 3; /* LONG_NAMED_INTEGER_VALUE 
  * @type {number}
  */
 export
-const executing: OperationState = OperationState_executing; /* SHORT_NAMED_INTEGER_VALUE */
+const executing = OperationState_executing satisfies OperationState; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary OperationState_motion_paused
@@ -157,7 +157,7 @@ const executing: OperationState = OperationState_executing; /* SHORT_NAMED_INTEG
  * @type {number}
  */
 export
-const OperationState_motion_paused: OperationState = 4; /* LONG_NAMED_INTEGER_VALUE */
+const OperationState_motion_paused = 4 satisfies OperationState; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary OperationState_motion_paused
@@ -170,7 +170,7 @@ const OperationState_motion_paused: OperationState = 4; /* LONG_NAMED_INTEGER_VA
  * @type {number}
  */
 export
-const motion_paused: OperationState = OperationState_motion_paused; /* SHORT_NAMED_INTEGER_VALUE */
+const motion_paused = OperationState_motion_paused satisfies OperationState; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary OperationState_manualInterventionRequired
@@ -183,7 +183,7 @@ const motion_paused: OperationState = OperationState_motion_paused; /* SHORT_NAM
  * @type {number}
  */
 export
-const OperationState_manualInterventionRequired: OperationState = 5; /* LONG_NAMED_INTEGER_VALUE */
+const OperationState_manualInterventionRequired = 5 satisfies OperationState; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary OperationState_manualInterventionRequired
@@ -196,7 +196,7 @@ const OperationState_manualInterventionRequired: OperationState = 5; /* LONG_NAM
  * @type {number}
  */
 export
-const manualInterventionRequired: OperationState = OperationState_manualInterventionRequired; /* SHORT_NAMED_INTEGER_VALUE */
+const manualInterventionRequired = OperationState_manualInterventionRequired satisfies OperationState; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_OperationState = $._decodeInteger;
 export const _encode_OperationState = $._encodeInteger;
 

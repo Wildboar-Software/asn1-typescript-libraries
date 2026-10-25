@@ -33,7 +33,7 @@ type MTCallRecord_lrnQuryStatus = INTEGER;
  * @type {number}
  */
 export
-const MTCallRecord_lrnQuryStatus_successfulQuery: MTCallRecord_lrnQuryStatus = 1; /* LONG_NAMED_INTEGER_VALUE */
+const MTCallRecord_lrnQuryStatus_successfulQuery = 1 satisfies MTCallRecord_lrnQuryStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary MTCallRecord_lrnQuryStatus_successfulQuery
@@ -41,7 +41,7 @@ const MTCallRecord_lrnQuryStatus_successfulQuery: MTCallRecord_lrnQuryStatus = 1
  * @type {number}
  */
 export
-const successfulQuery: MTCallRecord_lrnQuryStatus = MTCallRecord_lrnQuryStatus_successfulQuery; /* SHORT_NAMED_INTEGER_VALUE */
+const successfulQuery = MTCallRecord_lrnQuryStatus_successfulQuery satisfies MTCallRecord_lrnQuryStatus; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary MTCallRecord_lrnQuryStatus_noQueryResponseMsg
@@ -49,7 +49,7 @@ const successfulQuery: MTCallRecord_lrnQuryStatus = MTCallRecord_lrnQuryStatus_s
  * @type {number}
  */
 export
-const MTCallRecord_lrnQuryStatus_noQueryResponseMsg: MTCallRecord_lrnQuryStatus = 2; /* LONG_NAMED_INTEGER_VALUE */
+const MTCallRecord_lrnQuryStatus_noQueryResponseMsg = 2 satisfies MTCallRecord_lrnQuryStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary MTCallRecord_lrnQuryStatus_noQueryResponseMsg
@@ -57,7 +57,7 @@ const MTCallRecord_lrnQuryStatus_noQueryResponseMsg: MTCallRecord_lrnQuryStatus 
  * @type {number}
  */
 export
-const noQueryResponseMsg: MTCallRecord_lrnQuryStatus = MTCallRecord_lrnQuryStatus_noQueryResponseMsg; /* SHORT_NAMED_INTEGER_VALUE */
+const noQueryResponseMsg = MTCallRecord_lrnQuryStatus_noQueryResponseMsg satisfies MTCallRecord_lrnQuryStatus; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary MTCallRecord_lrnQuryStatus_queryProtocolErr
@@ -65,7 +65,7 @@ const noQueryResponseMsg: MTCallRecord_lrnQuryStatus = MTCallRecord_lrnQuryStatu
  * @type {number}
  */
 export
-const MTCallRecord_lrnQuryStatus_queryProtocolErr: MTCallRecord_lrnQuryStatus = 4; /* LONG_NAMED_INTEGER_VALUE */
+const MTCallRecord_lrnQuryStatus_queryProtocolErr = 4 satisfies MTCallRecord_lrnQuryStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary MTCallRecord_lrnQuryStatus_queryProtocolErr
@@ -73,7 +73,7 @@ const MTCallRecord_lrnQuryStatus_queryProtocolErr: MTCallRecord_lrnQuryStatus = 
  * @type {number}
  */
 export
-const queryProtocolErr: MTCallRecord_lrnQuryStatus = MTCallRecord_lrnQuryStatus_queryProtocolErr; /* SHORT_NAMED_INTEGER_VALUE */
+const queryProtocolErr = MTCallRecord_lrnQuryStatus_queryProtocolErr satisfies MTCallRecord_lrnQuryStatus; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary MTCallRecord_lrnQuryStatus_queryResponseDataErr
@@ -81,7 +81,7 @@ const queryProtocolErr: MTCallRecord_lrnQuryStatus = MTCallRecord_lrnQuryStatus_
  * @type {number}
  */
 export
-const MTCallRecord_lrnQuryStatus_queryResponseDataErr: MTCallRecord_lrnQuryStatus = 5; /* LONG_NAMED_INTEGER_VALUE */
+const MTCallRecord_lrnQuryStatus_queryResponseDataErr = 5 satisfies MTCallRecord_lrnQuryStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary MTCallRecord_lrnQuryStatus_queryResponseDataErr
@@ -89,7 +89,7 @@ const MTCallRecord_lrnQuryStatus_queryResponseDataErr: MTCallRecord_lrnQuryStatu
  * @type {number}
  */
 export
-const queryResponseDataErr: MTCallRecord_lrnQuryStatus = MTCallRecord_lrnQuryStatus_queryResponseDataErr; /* SHORT_NAMED_INTEGER_VALUE */
+const queryResponseDataErr = MTCallRecord_lrnQuryStatus_queryResponseDataErr satisfies MTCallRecord_lrnQuryStatus; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary MTCallRecord_lrnQuryStatus_queryRejected
@@ -97,7 +97,7 @@ const queryResponseDataErr: MTCallRecord_lrnQuryStatus = MTCallRecord_lrnQurySta
  * @type {number}
  */
 export
-const MTCallRecord_lrnQuryStatus_queryRejected: MTCallRecord_lrnQuryStatus = 6; /* LONG_NAMED_INTEGER_VALUE */
+const MTCallRecord_lrnQuryStatus_queryRejected = 6 satisfies MTCallRecord_lrnQuryStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary MTCallRecord_lrnQuryStatus_queryRejected
@@ -105,7 +105,7 @@ const MTCallRecord_lrnQuryStatus_queryRejected: MTCallRecord_lrnQuryStatus = 6; 
  * @type {number}
  */
 export
-const queryRejected: MTCallRecord_lrnQuryStatus = MTCallRecord_lrnQuryStatus_queryRejected; /* SHORT_NAMED_INTEGER_VALUE */
+const queryRejected = MTCallRecord_lrnQuryStatus_queryRejected satisfies MTCallRecord_lrnQuryStatus; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary MTCallRecord_lrnQuryStatus_queryNotPerformed
@@ -113,7 +113,7 @@ const queryRejected: MTCallRecord_lrnQuryStatus = MTCallRecord_lrnQuryStatus_que
  * @type {number}
  */
 export
-const MTCallRecord_lrnQuryStatus_queryNotPerformed: MTCallRecord_lrnQuryStatus = 9; /* LONG_NAMED_INTEGER_VALUE */
+const MTCallRecord_lrnQuryStatus_queryNotPerformed = 9 satisfies MTCallRecord_lrnQuryStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary MTCallRecord_lrnQuryStatus_queryNotPerformed
@@ -121,7 +121,7 @@ const MTCallRecord_lrnQuryStatus_queryNotPerformed: MTCallRecord_lrnQuryStatus =
  * @type {number}
  */
 export
-const queryNotPerformed: MTCallRecord_lrnQuryStatus = MTCallRecord_lrnQuryStatus_queryNotPerformed; /* SHORT_NAMED_INTEGER_VALUE */
+const queryNotPerformed = MTCallRecord_lrnQuryStatus_queryNotPerformed satisfies MTCallRecord_lrnQuryStatus; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary MTCallRecord_lrnQuryStatus_queryUnsuccessful
@@ -129,7 +129,7 @@ const queryNotPerformed: MTCallRecord_lrnQuryStatus = MTCallRecord_lrnQuryStatus
  * @type {number}
  */
 export
-const MTCallRecord_lrnQuryStatus_queryUnsuccessful: MTCallRecord_lrnQuryStatus = 99; /* LONG_NAMED_INTEGER_VALUE */
+const MTCallRecord_lrnQuryStatus_queryUnsuccessful = 99 satisfies MTCallRecord_lrnQuryStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary MTCallRecord_lrnQuryStatus_queryUnsuccessful
@@ -137,7 +137,7 @@ const MTCallRecord_lrnQuryStatus_queryUnsuccessful: MTCallRecord_lrnQuryStatus =
  * @type {number}
  */
 export
-const queryUnsuccessful: MTCallRecord_lrnQuryStatus = MTCallRecord_lrnQuryStatus_queryUnsuccessful; /* SHORT_NAMED_INTEGER_VALUE */
+const queryUnsuccessful = MTCallRecord_lrnQuryStatus_queryUnsuccessful satisfies MTCallRecord_lrnQuryStatus; /* SHORT_NAMED_INTEGER_VALUE */
 
 export
 const _decode_MTCallRecord_lrnQuryStatus: $.ASN1Decoder<MTCallRecord_lrnQuryStatus> = $._decodeInteger;

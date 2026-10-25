@@ -32,7 +32,7 @@ export type AllOrFirstTier = INTEGER;
  * @constant
  * @type {number}
  */
-export const AllOrFirstTier_allReceipts: AllOrFirstTier = 0; /* LONG_NAMED_INTEGER_VALUE */
+export const AllOrFirstTier_allReceipts = 0 satisfies AllOrFirstTier; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -40,7 +40,7 @@ export const AllOrFirstTier_allReceipts: AllOrFirstTier = 0; /* LONG_NAMED_INTEG
  * @constant
  * @type {number}
  */
-export const allReceipts: AllOrFirstTier = AllOrFirstTier_allReceipts; /* SHORT_NAMED_INTEGER_VALUE */
+export const allReceipts = AllOrFirstTier_allReceipts satisfies AllOrFirstTier; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -48,7 +48,7 @@ export const allReceipts: AllOrFirstTier = AllOrFirstTier_allReceipts; /* SHORT_
  * @constant
  * @type {number}
  */
-export const AllOrFirstTier_firstTierRecipients: AllOrFirstTier = 1; /* LONG_NAMED_INTEGER_VALUE */
+export const AllOrFirstTier_firstTierRecipients = 1 satisfies AllOrFirstTier; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -56,7 +56,7 @@ export const AllOrFirstTier_firstTierRecipients: AllOrFirstTier = 1; /* LONG_NAM
  * @constant
  * @type {number}
  */
-export const firstTierRecipients: AllOrFirstTier = AllOrFirstTier_firstTierRecipients; /* SHORT_NAMED_INTEGER_VALUE */
+export const firstTierRecipients = AllOrFirstTier_firstTierRecipients satisfies AllOrFirstTier; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 

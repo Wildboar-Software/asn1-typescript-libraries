@@ -44,7 +44,7 @@ type ReportingState = _enum_for_ReportingState | ENUMERATED;
  * @type {number}
  */
 export
-const ReportingState_stopMonitoring: ReportingState = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReportingState_stopMonitoring = _enum_for_ReportingState.stopMonitoring satisfies ReportingState; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary stopMonitoring
@@ -56,7 +56,7 @@ const ReportingState_stopMonitoring: ReportingState = 0; /* LONG_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const stopMonitoring: ReportingState = ReportingState_stopMonitoring; /* SHORT_NAMED_ENUMERATED_VALUE */
+const stopMonitoring = ReportingState_stopMonitoring satisfies ReportingState; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReportingState_startMonitoring
@@ -68,7 +68,7 @@ const stopMonitoring: ReportingState = ReportingState_stopMonitoring; /* SHORT_N
  * @type {number}
  */
 export
-const ReportingState_startMonitoring: ReportingState = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReportingState_startMonitoring = _enum_for_ReportingState.startMonitoring satisfies ReportingState; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary startMonitoring
@@ -80,7 +80,7 @@ const ReportingState_startMonitoring: ReportingState = 1; /* LONG_NAMED_ENUMERAT
  * @type {number}
  */
 export
-const startMonitoring: ReportingState = ReportingState_startMonitoring; /* SHORT_NAMED_ENUMERATED_VALUE */
+const startMonitoring = ReportingState_startMonitoring satisfies ReportingState; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) ReportingState

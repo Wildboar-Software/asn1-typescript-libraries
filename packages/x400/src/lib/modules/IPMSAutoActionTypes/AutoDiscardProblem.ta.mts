@@ -31,14 +31,14 @@ export type AutoDiscardProblem = INTEGER;
  * @constant
  * @type {number}
  */
-export const AutoDiscardProblem_not_obsoleted_by_originator: AutoDiscardProblem = 0; /* LONG_NAMED_INTEGER_VALUE */
+export const AutoDiscardProblem_not_obsoleted_by_originator = 0 satisfies AutoDiscardProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AutoDiscardProblem_not_obsoleted_by_originator
  * @constant
  * @type {number}
  */
-export const not_obsoleted_by_originator: AutoDiscardProblem = AutoDiscardProblem_not_obsoleted_by_originator; /* SHORT_NAMED_INTEGER_VALUE */
+export const not_obsoleted_by_originator = AutoDiscardProblem_not_obsoleted_by_originator satisfies AutoDiscardProblem; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_AutoDiscardProblem = $._decodeInteger;

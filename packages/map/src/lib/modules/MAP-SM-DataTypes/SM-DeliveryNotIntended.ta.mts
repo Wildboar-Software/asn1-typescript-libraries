@@ -44,7 +44,7 @@ type SM_DeliveryNotIntended = _enum_for_SM_DeliveryNotIntended | ENUMERATED;
  * @type {number}
  */
 export
-const SM_DeliveryNotIntended_onlyIMSI_requested: SM_DeliveryNotIntended = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+const SM_DeliveryNotIntended_onlyIMSI_requested = _enum_for_SM_DeliveryNotIntended.onlyIMSI_requested satisfies SM_DeliveryNotIntended; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary onlyIMSI_requested
@@ -56,7 +56,7 @@ const SM_DeliveryNotIntended_onlyIMSI_requested: SM_DeliveryNotIntended = 0; /* 
  * @type {number}
  */
 export
-const onlyIMSI_requested: SM_DeliveryNotIntended = SM_DeliveryNotIntended_onlyIMSI_requested; /* SHORT_NAMED_ENUMERATED_VALUE */
+const onlyIMSI_requested = SM_DeliveryNotIntended_onlyIMSI_requested satisfies SM_DeliveryNotIntended; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SM_DeliveryNotIntended_onlyMCC_MNC_requested
@@ -68,7 +68,7 @@ const onlyIMSI_requested: SM_DeliveryNotIntended = SM_DeliveryNotIntended_onlyIM
  * @type {number}
  */
 export
-const SM_DeliveryNotIntended_onlyMCC_MNC_requested: SM_DeliveryNotIntended = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const SM_DeliveryNotIntended_onlyMCC_MNC_requested = _enum_for_SM_DeliveryNotIntended.onlyMCC_MNC_requested satisfies SM_DeliveryNotIntended; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary onlyMCC_MNC_requested
@@ -80,7 +80,7 @@ const SM_DeliveryNotIntended_onlyMCC_MNC_requested: SM_DeliveryNotIntended = 1; 
  * @type {number}
  */
 export
-const onlyMCC_MNC_requested: SM_DeliveryNotIntended = SM_DeliveryNotIntended_onlyMCC_MNC_requested; /* SHORT_NAMED_ENUMERATED_VALUE */
+const onlyMCC_MNC_requested = SM_DeliveryNotIntended_onlyMCC_MNC_requested satisfies SM_DeliveryNotIntended; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) SM_DeliveryNotIntended

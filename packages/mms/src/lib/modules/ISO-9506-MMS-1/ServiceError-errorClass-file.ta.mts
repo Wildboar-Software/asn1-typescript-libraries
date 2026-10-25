@@ -53,7 +53,7 @@ type ServiceError_errorClass_file = INTEGER;
  * @type {number}
  */
 export
-const ServiceError_errorClass_file_other: ServiceError_errorClass_file = 0; /* LONG_NAMED_INTEGER_VALUE */
+const ServiceError_errorClass_file_other = 0 satisfies ServiceError_errorClass_file; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceError_errorClass_file_other
@@ -65,7 +65,7 @@ const ServiceError_errorClass_file_other: ServiceError_errorClass_file = 0; /* L
  * @type {number}
  */
 export
-const other: ServiceError_errorClass_file = ServiceError_errorClass_file_other; /* SHORT_NAMED_INTEGER_VALUE */
+const other = ServiceError_errorClass_file_other satisfies ServiceError_errorClass_file; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceError_errorClass_file_filename_ambiguous
@@ -78,7 +78,7 @@ const other: ServiceError_errorClass_file = ServiceError_errorClass_file_other; 
  * @type {number}
  */
 export
-const ServiceError_errorClass_file_filename_ambiguous: ServiceError_errorClass_file = 1; /* LONG_NAMED_INTEGER_VALUE */
+const ServiceError_errorClass_file_filename_ambiguous = 1 satisfies ServiceError_errorClass_file; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceError_errorClass_file_filename_ambiguous
@@ -91,7 +91,7 @@ const ServiceError_errorClass_file_filename_ambiguous: ServiceError_errorClass_f
  * @type {number}
  */
 export
-const filename_ambiguous: ServiceError_errorClass_file = ServiceError_errorClass_file_filename_ambiguous; /* SHORT_NAMED_INTEGER_VALUE */
+const filename_ambiguous = ServiceError_errorClass_file_filename_ambiguous satisfies ServiceError_errorClass_file; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceError_errorClass_file_file_busy
@@ -103,7 +103,7 @@ const filename_ambiguous: ServiceError_errorClass_file = ServiceError_errorClass
  * @type {number}
  */
 export
-const ServiceError_errorClass_file_file_busy: ServiceError_errorClass_file = 2; /* LONG_NAMED_INTEGER_VALUE */
+const ServiceError_errorClass_file_file_busy = 2 satisfies ServiceError_errorClass_file; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceError_errorClass_file_file_busy
@@ -115,7 +115,7 @@ const ServiceError_errorClass_file_file_busy: ServiceError_errorClass_file = 2; 
  * @type {number}
  */
 export
-const file_busy: ServiceError_errorClass_file = ServiceError_errorClass_file_file_busy; /* SHORT_NAMED_INTEGER_VALUE */
+const file_busy = ServiceError_errorClass_file_file_busy satisfies ServiceError_errorClass_file; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceError_errorClass_file_filename_syntax_error
@@ -127,7 +127,7 @@ const file_busy: ServiceError_errorClass_file = ServiceError_errorClass_file_fil
  * @type {number}
  */
 export
-const ServiceError_errorClass_file_filename_syntax_error: ServiceError_errorClass_file = 3; /* LONG_NAMED_INTEGER_VALUE */
+const ServiceError_errorClass_file_filename_syntax_error = 3 satisfies ServiceError_errorClass_file; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceError_errorClass_file_filename_syntax_error
@@ -139,7 +139,7 @@ const ServiceError_errorClass_file_filename_syntax_error: ServiceError_errorClas
  * @type {number}
  */
 export
-const filename_syntax_error: ServiceError_errorClass_file = ServiceError_errorClass_file_filename_syntax_error; /* SHORT_NAMED_INTEGER_VALUE */
+const filename_syntax_error = ServiceError_errorClass_file_filename_syntax_error satisfies ServiceError_errorClass_file; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceError_errorClass_file_content_type_invalid
@@ -151,7 +151,7 @@ const filename_syntax_error: ServiceError_errorClass_file = ServiceError_errorCl
  * @type {number}
  */
 export
-const ServiceError_errorClass_file_content_type_invalid: ServiceError_errorClass_file = 4; /* LONG_NAMED_INTEGER_VALUE */
+const ServiceError_errorClass_file_content_type_invalid = 4 satisfies ServiceError_errorClass_file; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceError_errorClass_file_content_type_invalid
@@ -163,7 +163,7 @@ const ServiceError_errorClass_file_content_type_invalid: ServiceError_errorClass
  * @type {number}
  */
 export
-const content_type_invalid: ServiceError_errorClass_file = ServiceError_errorClass_file_content_type_invalid; /* SHORT_NAMED_INTEGER_VALUE */
+const content_type_invalid = ServiceError_errorClass_file_content_type_invalid satisfies ServiceError_errorClass_file; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceError_errorClass_file_position_invalid
@@ -175,7 +175,7 @@ const content_type_invalid: ServiceError_errorClass_file = ServiceError_errorCla
  * @type {number}
  */
 export
-const ServiceError_errorClass_file_position_invalid: ServiceError_errorClass_file = 5; /* LONG_NAMED_INTEGER_VALUE */
+const ServiceError_errorClass_file_position_invalid = 5 satisfies ServiceError_errorClass_file; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceError_errorClass_file_position_invalid
@@ -187,7 +187,7 @@ const ServiceError_errorClass_file_position_invalid: ServiceError_errorClass_fil
  * @type {number}
  */
 export
-const position_invalid: ServiceError_errorClass_file = ServiceError_errorClass_file_position_invalid; /* SHORT_NAMED_INTEGER_VALUE */
+const position_invalid = ServiceError_errorClass_file_position_invalid satisfies ServiceError_errorClass_file; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceError_errorClass_file_file_access_denied
@@ -199,7 +199,7 @@ const position_invalid: ServiceError_errorClass_file = ServiceError_errorClass_f
  * @type {number}
  */
 export
-const ServiceError_errorClass_file_file_access_denied: ServiceError_errorClass_file = 6; /* LONG_NAMED_INTEGER_VALUE */
+const ServiceError_errorClass_file_file_access_denied = 6 satisfies ServiceError_errorClass_file; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceError_errorClass_file_file_access_denied
@@ -211,7 +211,7 @@ const ServiceError_errorClass_file_file_access_denied: ServiceError_errorClass_f
  * @type {number}
  */
 export
-const file_access_denied: ServiceError_errorClass_file = ServiceError_errorClass_file_file_access_denied; /* SHORT_NAMED_INTEGER_VALUE */
+const file_access_denied = ServiceError_errorClass_file_file_access_denied satisfies ServiceError_errorClass_file; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceError_errorClass_file_file_non_existent
@@ -223,7 +223,7 @@ const file_access_denied: ServiceError_errorClass_file = ServiceError_errorClass
  * @type {number}
  */
 export
-const ServiceError_errorClass_file_file_non_existent: ServiceError_errorClass_file = 7; /* LONG_NAMED_INTEGER_VALUE */
+const ServiceError_errorClass_file_file_non_existent = 7 satisfies ServiceError_errorClass_file; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceError_errorClass_file_file_non_existent
@@ -235,7 +235,7 @@ const ServiceError_errorClass_file_file_non_existent: ServiceError_errorClass_fi
  * @type {number}
  */
 export
-const file_non_existent: ServiceError_errorClass_file = ServiceError_errorClass_file_file_non_existent; /* SHORT_NAMED_INTEGER_VALUE */
+const file_non_existent = ServiceError_errorClass_file_file_non_existent satisfies ServiceError_errorClass_file; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceError_errorClass_file_duplicate_filename
@@ -248,7 +248,7 @@ const file_non_existent: ServiceError_errorClass_file = ServiceError_errorClass_
  * @type {number}
  */
 export
-const ServiceError_errorClass_file_duplicate_filename: ServiceError_errorClass_file = 8; /* LONG_NAMED_INTEGER_VALUE */
+const ServiceError_errorClass_file_duplicate_filename = 8 satisfies ServiceError_errorClass_file; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceError_errorClass_file_duplicate_filename
@@ -261,7 +261,7 @@ const ServiceError_errorClass_file_duplicate_filename: ServiceError_errorClass_f
  * @type {number}
  */
 export
-const duplicate_filename: ServiceError_errorClass_file = ServiceError_errorClass_file_duplicate_filename; /* SHORT_NAMED_INTEGER_VALUE */
+const duplicate_filename = ServiceError_errorClass_file_duplicate_filename satisfies ServiceError_errorClass_file; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceError_errorClass_file_insufficient_space_in_filestore
@@ -273,7 +273,7 @@ const duplicate_filename: ServiceError_errorClass_file = ServiceError_errorClass
  * @type {number}
  */
 export
-const ServiceError_errorClass_file_insufficient_space_in_filestore: ServiceError_errorClass_file = 9; /* LONG_NAMED_INTEGER_VALUE */
+const ServiceError_errorClass_file_insufficient_space_in_filestore = 9 satisfies ServiceError_errorClass_file; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceError_errorClass_file_insufficient_space_in_filestore
@@ -285,7 +285,7 @@ const ServiceError_errorClass_file_insufficient_space_in_filestore: ServiceError
  * @type {number}
  */
 export
-const insufficient_space_in_filestore: ServiceError_errorClass_file = ServiceError_errorClass_file_insufficient_space_in_filestore; /* SHORT_NAMED_INTEGER_VALUE */
+const insufficient_space_in_filestore = ServiceError_errorClass_file_insufficient_space_in_filestore satisfies ServiceError_errorClass_file; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_ServiceError_errorClass_file = $._decodeInteger;
 export const _encode_ServiceError_errorClass_file = $._encodeInteger;
 

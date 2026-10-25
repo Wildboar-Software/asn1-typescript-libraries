@@ -78,7 +78,7 @@ const CNOperatorSelectionEntity = _enum_for_CNOperatorSelectionEntity;
  * @type {number}
  */
 export
-const CNOperatorSelectionEntity_servCNSelectedbyUE: CNOperatorSelectionEntity = CNOperatorSelectionEntity.servCNSelectedbyUE; /* LONG_NAMED_ENUMERATED_VALUE */
+const CNOperatorSelectionEntity_servCNSelectedbyUE = CNOperatorSelectionEntity.servCNSelectedbyUE satisfies CNOperatorSelectionEntity; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary servCNSelectedbyUE
@@ -86,7 +86,7 @@ const CNOperatorSelectionEntity_servCNSelectedbyUE: CNOperatorSelectionEntity = 
  * @type {number}
  */
 export
-const servCNSelectedbyUE: CNOperatorSelectionEntity = CNOperatorSelectionEntity.servCNSelectedbyUE; /* SHORT_NAMED_ENUMERATED_VALUE */
+const servCNSelectedbyUE = CNOperatorSelectionEntity.servCNSelectedbyUE satisfies CNOperatorSelectionEntity; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CNOperatorSelectionEntity_servCNSelectedbyNtw
@@ -94,7 +94,7 @@ const servCNSelectedbyUE: CNOperatorSelectionEntity = CNOperatorSelectionEntity.
  * @type {number}
  */
 export
-const CNOperatorSelectionEntity_servCNSelectedbyNtw: CNOperatorSelectionEntity = CNOperatorSelectionEntity.servCNSelectedbyNtw; /* LONG_NAMED_ENUMERATED_VALUE */
+const CNOperatorSelectionEntity_servCNSelectedbyNtw = CNOperatorSelectionEntity.servCNSelectedbyNtw satisfies CNOperatorSelectionEntity; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary servCNSelectedbyNtw
@@ -102,7 +102,7 @@ const CNOperatorSelectionEntity_servCNSelectedbyNtw: CNOperatorSelectionEntity =
  * @type {number}
  */
 export
-const servCNSelectedbyNtw: CNOperatorSelectionEntity = CNOperatorSelectionEntity.servCNSelectedbyNtw; /* SHORT_NAMED_ENUMERATED_VALUE */
+const servCNSelectedbyNtw = CNOperatorSelectionEntity.servCNSelectedbyNtw satisfies CNOperatorSelectionEntity; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_CNOperatorSelectionEntity: $.ASN1Decoder<CNOperatorSelectionEntity> = $._decodeEnumerated;

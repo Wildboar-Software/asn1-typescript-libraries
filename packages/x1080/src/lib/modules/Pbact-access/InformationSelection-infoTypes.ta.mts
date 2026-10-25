@@ -51,7 +51,7 @@ export type InformationSelection_infoTypes =
  * @constant
  * @type {number}
  */
-export const InformationSelection_infoTypes_attributeTypesOnly: InformationSelection_infoTypes = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+export const InformationSelection_infoTypes_attributeTypesOnly = _enum_for_InformationSelection_infoTypes.attributeTypesOnly satisfies InformationSelection_infoTypes; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -65,7 +65,7 @@ export const InformationSelection_infoTypes_attributeTypesOnly: InformationSelec
  * @constant
  * @type {number}
  */
-export const attributeTypesOnly: InformationSelection_infoTypes = InformationSelection_infoTypes_attributeTypesOnly; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const attributeTypesOnly = InformationSelection_infoTypes_attributeTypesOnly satisfies InformationSelection_infoTypes; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -79,7 +79,7 @@ export const attributeTypesOnly: InformationSelection_infoTypes = InformationSel
  * @constant
  * @type {number}
  */
-export const InformationSelection_infoTypes_attributeTypeAndValue: InformationSelection_infoTypes = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+export const InformationSelection_infoTypes_attributeTypeAndValue = _enum_for_InformationSelection_infoTypes.attributeTypeAndValue satisfies InformationSelection_infoTypes; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -93,7 +93,7 @@ export const InformationSelection_infoTypes_attributeTypeAndValue: InformationSe
  * @constant
  * @type {number}
  */
-export const attributeTypeAndValue: InformationSelection_infoTypes = InformationSelection_infoTypes_attributeTypeAndValue; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const attributeTypeAndValue = InformationSelection_infoTypes_attributeTypeAndValue satisfies InformationSelection_infoTypes; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 let _cached_decoder_for_InformationSelection_infoTypes: $.ASN1Decoder<InformationSelection_infoTypes> | null = null;

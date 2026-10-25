@@ -69,7 +69,7 @@ const MMSQuotaUnit = _enum_for_MMSQuotaUnit;
  * @type {number}
  */
 export
-const MMSQuotaUnit_numMessages: MMSQuotaUnit = MMSQuotaUnit.numMessages; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMSQuotaUnit_numMessages = MMSQuotaUnit.numMessages satisfies MMSQuotaUnit; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary numMessages
@@ -77,7 +77,7 @@ const MMSQuotaUnit_numMessages: MMSQuotaUnit = MMSQuotaUnit.numMessages; /* LONG
  * @type {number}
  */
 export
-const numMessages: MMSQuotaUnit = MMSQuotaUnit.numMessages; /* SHORT_NAMED_ENUMERATED_VALUE */
+const numMessages = MMSQuotaUnit.numMessages satisfies MMSQuotaUnit; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMSQuotaUnit_bytes
@@ -85,7 +85,7 @@ const numMessages: MMSQuotaUnit = MMSQuotaUnit.numMessages; /* SHORT_NAMED_ENUME
  * @type {number}
  */
 export
-const MMSQuotaUnit_bytes: MMSQuotaUnit = MMSQuotaUnit.bytes; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMSQuotaUnit_bytes = MMSQuotaUnit.bytes satisfies MMSQuotaUnit; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary bytes
@@ -93,7 +93,7 @@ const MMSQuotaUnit_bytes: MMSQuotaUnit = MMSQuotaUnit.bytes; /* LONG_NAMED_ENUME
  * @type {number}
  */
 export
-const bytes: MMSQuotaUnit = MMSQuotaUnit.bytes; /* SHORT_NAMED_ENUMERATED_VALUE */
+const bytes = MMSQuotaUnit.bytes satisfies MMSQuotaUnit; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_MMSQuotaUnit: $.ASN1Decoder<MMSQuotaUnit> = $._decodeEnumerated;
 export const _encode_MMSQuotaUnit: $.ASN1Encoder<MMSQuotaUnit> = $._encodeEnumerated;
 

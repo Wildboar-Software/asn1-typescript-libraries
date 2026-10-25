@@ -28,7 +28,7 @@ type StateAction = INTEGER;
  * @type {number}
  */
 export
-const StateAction_sta_update: StateAction = 0; /* LONG_NAMED_INTEGER_VALUE */
+const StateAction_sta_update = 0 satisfies StateAction; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary StateAction_sta_update
@@ -36,7 +36,7 @@ const StateAction_sta_update: StateAction = 0; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const sta_update: StateAction = StateAction_sta_update; /* SHORT_NAMED_INTEGER_VALUE */
+const sta_update = StateAction_sta_update satisfies StateAction; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_StateAction = $._decodeInteger;
 export const _encode_StateAction = $._encodeInteger;
 

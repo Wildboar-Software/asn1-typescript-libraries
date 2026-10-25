@@ -63,7 +63,7 @@ type Version = _enum_for_Version | ENUMERATED;
  * @type {number}
  */
 export
-const Version_version1: Version = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const Version_version1 = _enum_for_Version.version1 satisfies Version; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary version1
@@ -74,7 +74,7 @@ const Version_version1: Version = 1; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const version1: Version = Version_version1; /* SHORT_NAMED_ENUMERATED_VALUE */
+const version1 = Version_version1 satisfies Version; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Version_version3
@@ -87,7 +87,7 @@ const version1: Version = Version_version1; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const Version_version3: Version = 3; /* LONG_NAMED_ENUMERATED_VALUE */
+const Version_version3 = _enum_for_Version.version3 satisfies Version; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary version3
@@ -98,7 +98,7 @@ const Version_version3: Version = 3; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const version3: Version = Version_version3; /* SHORT_NAMED_ENUMERATED_VALUE */
+const version3 = Version_version3 satisfies Version; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Version_lastVersion
@@ -111,7 +111,7 @@ const version3: Version = Version_version3; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const Version_lastVersion: Version = 8; /* LONG_NAMED_ENUMERATED_VALUE */
+const Version_lastVersion = _enum_for_Version.lastVersion satisfies Version; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary lastVersion
@@ -122,7 +122,7 @@ const Version_lastVersion: Version = 8; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const lastVersion: Version = Version_lastVersion; /* SHORT_NAMED_ENUMERATED_VALUE */
+const lastVersion = Version_lastVersion satisfies Version; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_Version: $.ASN1Decoder<Version> = $._decodeEnumerated;
 export const _encode_Version: $.ASN1Encoder<Version> = $._encodeEnumerated;
 

@@ -63,7 +63,7 @@ const RecordingMethod = _enum_for_RecordingMethod;
  * @type {number}
  */
 export
-const RecordingMethod_inCallRecord: RecordingMethod = RecordingMethod.inCallRecord; /* LONG_NAMED_ENUMERATED_VALUE */
+const RecordingMethod_inCallRecord = RecordingMethod.inCallRecord satisfies RecordingMethod; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary inCallRecord
@@ -71,7 +71,7 @@ const RecordingMethod_inCallRecord: RecordingMethod = RecordingMethod.inCallReco
  * @type {number}
  */
 export
-const inCallRecord: RecordingMethod = RecordingMethod.inCallRecord; /* SHORT_NAMED_ENUMERATED_VALUE */
+const inCallRecord = RecordingMethod.inCallRecord satisfies RecordingMethod; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RecordingMethod_inSSRecord
@@ -79,7 +79,7 @@ const inCallRecord: RecordingMethod = RecordingMethod.inCallRecord; /* SHORT_NAM
  * @type {number}
  */
 export
-const RecordingMethod_inSSRecord: RecordingMethod = RecordingMethod.inSSRecord; /* LONG_NAMED_ENUMERATED_VALUE */
+const RecordingMethod_inSSRecord = RecordingMethod.inSSRecord satisfies RecordingMethod; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary inSSRecord
@@ -87,7 +87,7 @@ const RecordingMethod_inSSRecord: RecordingMethod = RecordingMethod.inSSRecord; 
  * @type {number}
  */
 export
-const inSSRecord: RecordingMethod = RecordingMethod.inSSRecord; /* SHORT_NAMED_ENUMERATED_VALUE */
+const inSSRecord = RecordingMethod.inSSRecord satisfies RecordingMethod; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_RecordingMethod: $.ASN1Decoder<RecordingMethod> = $._decodeEnumerated;

@@ -79,7 +79,7 @@ type Tetra_IRI_Parameters_intercepted_Call_Direct = _enum_for_Tetra_IRI_Paramete
  * @type {number}
  */
 export
-const Tetra_IRI_Parameters_intercepted_Call_Direct_not_Available: Tetra_IRI_Parameters_intercepted_Call_Direct = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+const Tetra_IRI_Parameters_intercepted_Call_Direct_not_Available = _enum_for_Tetra_IRI_Parameters_intercepted_Call_Direct.not_Available satisfies Tetra_IRI_Parameters_intercepted_Call_Direct; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary not_Available
@@ -94,7 +94,7 @@ const Tetra_IRI_Parameters_intercepted_Call_Direct_not_Available: Tetra_IRI_Para
  * @type {number}
  */
 export
-const not_Available: Tetra_IRI_Parameters_intercepted_Call_Direct = Tetra_IRI_Parameters_intercepted_Call_Direct_not_Available; /* SHORT_NAMED_ENUMERATED_VALUE */
+const not_Available = Tetra_IRI_Parameters_intercepted_Call_Direct_not_Available satisfies Tetra_IRI_Parameters_intercepted_Call_Direct; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Tetra_IRI_Parameters_intercepted_Call_Direct_originating_Target
@@ -110,7 +110,7 @@ const not_Available: Tetra_IRI_Parameters_intercepted_Call_Direct = Tetra_IRI_Pa
  * @type {number}
  */
 export
-const Tetra_IRI_Parameters_intercepted_Call_Direct_originating_Target: Tetra_IRI_Parameters_intercepted_Call_Direct = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const Tetra_IRI_Parameters_intercepted_Call_Direct_originating_Target = _enum_for_Tetra_IRI_Parameters_intercepted_Call_Direct.originating_Target satisfies Tetra_IRI_Parameters_intercepted_Call_Direct; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary originating_Target
@@ -126,7 +126,7 @@ const Tetra_IRI_Parameters_intercepted_Call_Direct_originating_Target: Tetra_IRI
  * @type {number}
  */
 export
-const originating_Target: Tetra_IRI_Parameters_intercepted_Call_Direct = Tetra_IRI_Parameters_intercepted_Call_Direct_originating_Target; /* SHORT_NAMED_ENUMERATED_VALUE */
+const originating_Target = Tetra_IRI_Parameters_intercepted_Call_Direct_originating_Target satisfies Tetra_IRI_Parameters_intercepted_Call_Direct; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Tetra_IRI_Parameters_intercepted_Call_Direct_terminating_Target
@@ -142,7 +142,7 @@ const originating_Target: Tetra_IRI_Parameters_intercepted_Call_Direct = Tetra_I
  * @type {number}
  */
 export
-const Tetra_IRI_Parameters_intercepted_Call_Direct_terminating_Target: Tetra_IRI_Parameters_intercepted_Call_Direct = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+const Tetra_IRI_Parameters_intercepted_Call_Direct_terminating_Target = _enum_for_Tetra_IRI_Parameters_intercepted_Call_Direct.terminating_Target satisfies Tetra_IRI_Parameters_intercepted_Call_Direct; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary terminating_Target
@@ -158,7 +158,7 @@ const Tetra_IRI_Parameters_intercepted_Call_Direct_terminating_Target: Tetra_IRI
  * @type {number}
  */
 export
-const terminating_Target: Tetra_IRI_Parameters_intercepted_Call_Direct = Tetra_IRI_Parameters_intercepted_Call_Direct_terminating_Target; /* SHORT_NAMED_ENUMERATED_VALUE */
+const terminating_Target = Tetra_IRI_Parameters_intercepted_Call_Direct_terminating_Target satisfies Tetra_IRI_Parameters_intercepted_Call_Direct; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_Tetra_IRI_Parameters_intercepted_Call_Direct: $.ASN1Decoder<Tetra_IRI_Parameters_intercepted_Call_Direct> = $._decodeEnumerated;
 export const _encode_Tetra_IRI_Parameters_intercepted_Call_Direct: $.ASN1Encoder<Tetra_IRI_Parameters_intercepted_Call_Direct> = $._encodeEnumerated;
 

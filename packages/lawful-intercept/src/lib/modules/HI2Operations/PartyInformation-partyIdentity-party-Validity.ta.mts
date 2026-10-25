@@ -101,7 +101,7 @@ type PartyInformation_partyIdentity_party_Validity = _enum_for_PartyInformation_
  * @type {number}
  */
 export
-const PartyInformation_partyIdentity_party_Validity_trusted: PartyInformation_partyIdentity_party_Validity = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+const PartyInformation_partyIdentity_party_Validity_trusted = _enum_for_PartyInformation_partyIdentity_party_Validity.trusted satisfies PartyInformation_partyIdentity_party_Validity; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary trusted
@@ -116,7 +116,7 @@ const PartyInformation_partyIdentity_party_Validity_trusted: PartyInformation_pa
  * @type {number}
  */
 export
-const trusted: PartyInformation_partyIdentity_party_Validity = PartyInformation_partyIdentity_party_Validity_trusted; /* SHORT_NAMED_ENUMERATED_VALUE */
+const trusted = PartyInformation_partyIdentity_party_Validity_trusted satisfies PartyInformation_partyIdentity_party_Validity; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PartyInformation_partyIdentity_party_Validity_untrusted
@@ -131,7 +131,7 @@ const trusted: PartyInformation_partyIdentity_party_Validity = PartyInformation_
  * @type {number}
  */
 export
-const PartyInformation_partyIdentity_party_Validity_untrusted: PartyInformation_partyIdentity_party_Validity = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const PartyInformation_partyIdentity_party_Validity_untrusted = _enum_for_PartyInformation_partyIdentity_party_Validity.untrusted satisfies PartyInformation_partyIdentity_party_Validity; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary untrusted
@@ -146,7 +146,7 @@ const PartyInformation_partyIdentity_party_Validity_untrusted: PartyInformation_
  * @type {number}
  */
 export
-const untrusted: PartyInformation_partyIdentity_party_Validity = PartyInformation_partyIdentity_party_Validity_untrusted; /* SHORT_NAMED_ENUMERATED_VALUE */
+const untrusted = PartyInformation_partyIdentity_party_Validity_untrusted satisfies PartyInformation_partyIdentity_party_Validity; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PartyInformation_partyIdentity_party_Validity_operator_added
@@ -161,7 +161,7 @@ const untrusted: PartyInformation_partyIdentity_party_Validity = PartyInformatio
  * @type {number}
  */
 export
-const PartyInformation_partyIdentity_party_Validity_operator_added: PartyInformation_partyIdentity_party_Validity = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+const PartyInformation_partyIdentity_party_Validity_operator_added = _enum_for_PartyInformation_partyIdentity_party_Validity.operator_added satisfies PartyInformation_partyIdentity_party_Validity; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary operator_added
@@ -176,7 +176,7 @@ const PartyInformation_partyIdentity_party_Validity_operator_added: PartyInforma
  * @type {number}
  */
 export
-const operator_added: PartyInformation_partyIdentity_party_Validity = PartyInformation_partyIdentity_party_Validity_operator_added; /* SHORT_NAMED_ENUMERATED_VALUE */
+const operator_added = PartyInformation_partyIdentity_party_Validity_operator_added satisfies PartyInformation_partyIdentity_party_Validity; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_PartyInformation_partyIdentity_party_Validity: $.ASN1Decoder<PartyInformation_partyIdentity_party_Validity> = $._decodeEnumerated;
 export const _encode_PartyInformation_partyIdentity_party_Validity: $.ASN1Encoder<PartyInformation_partyIdentity_party_Validity> = $._encodeEnumerated;
 

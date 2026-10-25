@@ -181,8 +181,8 @@ AttributeUsage ::= ENUMERATED {
 Produces Typescript like (but not exactly):
 
 ```typescript
-export const AttributeUsage_dSAOperation: number = 3;
-export const dSAOperation: number = AttributeUsage_dSAOperation;
+export const AttributeUsage_dSAOperation = _enum_for_AttributeUsage.dSAOperation satisfies AttributeUsage;
+export const dSAOperation = AttributeUsage_dSAOperation satisfies AttributeUsage;
 ```
 
 That means if that some other `ENUMERATED` within the same ASN.1 module (or

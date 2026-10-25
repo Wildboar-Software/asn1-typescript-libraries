@@ -66,8 +66,8 @@ export const UiiFormat_subset = _enum_for_UiiFormat_subset;
  * @constant
  * @type {number}
  */
-export const UiiFormat_subset_baseObject: UiiFormat_subset =
-    UiiFormat_subset.baseObject; /* LONG_NAMED_ENUMERATED_VALUE */
+export const UiiFormat_subset_baseObject =
+    UiiFormat_subset.baseObject satisfies UiiFormat_subset; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary baseObject
@@ -78,40 +78,40 @@ export const UiiFormat_subset_baseObject: UiiFormat_subset =
  * @constant
  * @type {number}
  */
-export const baseObject: UiiFormat_subset =
-    UiiFormat_subset.baseObject; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const baseObject =
+    UiiFormat_subset.baseObject satisfies UiiFormat_subset; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary UiiFormat_subset_oneLevel
  * @constant
  * @type {number}
  */
-export const UiiFormat_subset_oneLevel: UiiFormat_subset =
-    UiiFormat_subset.oneLevel; /* LONG_NAMED_ENUMERATED_VALUE */
+export const UiiFormat_subset_oneLevel =
+    UiiFormat_subset.oneLevel satisfies UiiFormat_subset; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary oneLevel
  * @constant
  * @type {number}
  */
-export const oneLevel: UiiFormat_subset =
-    UiiFormat_subset.oneLevel; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const oneLevel =
+    UiiFormat_subset.oneLevel satisfies UiiFormat_subset; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary UiiFormat_subset_wholeSubtree
  * @constant
  * @type {number}
  */
-export const UiiFormat_subset_wholeSubtree: UiiFormat_subset =
-    UiiFormat_subset.wholeSubtree; /* LONG_NAMED_ENUMERATED_VALUE */
+export const UiiFormat_subset_wholeSubtree =
+    UiiFormat_subset.wholeSubtree satisfies UiiFormat_subset; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary wholeSubtree
  * @constant
  * @type {number}
  */
-export const wholeSubtree: UiiFormat_subset =
-    UiiFormat_subset.wholeSubtree; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const wholeSubtree =
+    UiiFormat_subset.wholeSubtree satisfies UiiFormat_subset; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 export function _decode_UiiFormat_subset(el: _Element): UiiFormat_subset {

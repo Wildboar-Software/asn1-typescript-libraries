@@ -59,7 +59,7 @@ type TopologyRequest_topologyDirectionExtension = _enum_for_TopologyRequest_topo
  * @type {number}
  */
 export
-const TopologyRequest_topologyDirectionExtension_onewayexternal: TopologyRequest_topologyDirectionExtension = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+const TopologyRequest_topologyDirectionExtension_onewayexternal = _enum_for_TopologyRequest_topologyDirectionExtension.onewayexternal satisfies TopologyRequest_topologyDirectionExtension; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary onewayexternal
@@ -67,7 +67,7 @@ const TopologyRequest_topologyDirectionExtension_onewayexternal: TopologyRequest
  * @type {number}
  */
 export
-const onewayexternal: TopologyRequest_topologyDirectionExtension = TopologyRequest_topologyDirectionExtension_onewayexternal; /* SHORT_NAMED_ENUMERATED_VALUE */
+const onewayexternal = TopologyRequest_topologyDirectionExtension_onewayexternal satisfies TopologyRequest_topologyDirectionExtension; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TopologyRequest_topologyDirectionExtension_onewayboth
@@ -80,7 +80,7 @@ const onewayexternal: TopologyRequest_topologyDirectionExtension = TopologyReque
  * @type {number}
  */
 export
-const TopologyRequest_topologyDirectionExtension_onewayboth: TopologyRequest_topologyDirectionExtension = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const TopologyRequest_topologyDirectionExtension_onewayboth = _enum_for_TopologyRequest_topologyDirectionExtension.onewayboth satisfies TopologyRequest_topologyDirectionExtension; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary onewayboth
@@ -88,7 +88,7 @@ const TopologyRequest_topologyDirectionExtension_onewayboth: TopologyRequest_top
  * @type {number}
  */
 export
-const onewayboth: TopologyRequest_topologyDirectionExtension = TopologyRequest_topologyDirectionExtension_onewayboth; /* SHORT_NAMED_ENUMERATED_VALUE */
+const onewayboth = TopologyRequest_topologyDirectionExtension_onewayboth satisfies TopologyRequest_topologyDirectionExtension; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_TopologyRequest_topologyDirectionExtension = $._decodeEnumerated;
 export const _encode_TopologyRequest_topologyDirectionExtension = $._encodeEnumerated;
 

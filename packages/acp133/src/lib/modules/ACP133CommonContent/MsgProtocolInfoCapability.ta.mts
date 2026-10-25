@@ -80,7 +80,7 @@ const MsgProtocolInfoCapability = _enum_for_MsgProtocolInfoCapability;
  * @type {number}
  */
 export
-const MsgProtocolInfoCapability_acp_127: MsgProtocolInfoCapability = MsgProtocolInfoCapability.acp_127; /* LONG_NAMED_ENUMERATED_VALUE */
+const MsgProtocolInfoCapability_acp_127 = MsgProtocolInfoCapability.acp_127 satisfies MsgProtocolInfoCapability; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * Short name for {@link MsgProtocolInfoCapability_acp_127}.
@@ -89,7 +89,7 @@ const MsgProtocolInfoCapability_acp_127: MsgProtocolInfoCapability = MsgProtocol
  * @type {number}
  */
 export
-const acp_127: MsgProtocolInfoCapability = MsgProtocolInfoCapability.acp_127; /* SHORT_NAMED_ENUMERATED_VALUE */
+const acp_127 = MsgProtocolInfoCapability.acp_127 satisfies MsgProtocolInfoCapability; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * The mailbox supports ACP 123.
@@ -98,7 +98,7 @@ const acp_127: MsgProtocolInfoCapability = MsgProtocolInfoCapability.acp_127; /*
  * @type {number}
  */
 export
-const MsgProtocolInfoCapability_acp_123: MsgProtocolInfoCapability = MsgProtocolInfoCapability.acp_123; /* LONG_NAMED_ENUMERATED_VALUE */
+const MsgProtocolInfoCapability_acp_123 = MsgProtocolInfoCapability.acp_123 satisfies MsgProtocolInfoCapability; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * Short name for {@link MsgProtocolInfoCapability_acp_123}.
@@ -107,7 +107,7 @@ const MsgProtocolInfoCapability_acp_123: MsgProtocolInfoCapability = MsgProtocol
  * @type {number}
  */
 export
-const acp_123: MsgProtocolInfoCapability = MsgProtocolInfoCapability.acp_123; /* SHORT_NAMED_ENUMERATED_VALUE */
+const acp_123 = MsgProtocolInfoCapability.acp_123 satisfies MsgProtocolInfoCapability; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_MsgProtocolInfoCapability: $.ASN1Decoder<MsgProtocolInfoCapability> =
     $._decodeEnumerated as $.ASN1Decoder<MsgProtocolInfoCapability>;
 export const _encode_MsgProtocolInfoCapability: $.ASN1Encoder<MsgProtocolInfoCapability> =

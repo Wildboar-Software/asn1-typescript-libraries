@@ -46,95 +46,95 @@ export const AlarmStatus = _enum_for_AlarmStatus;
  * @summary AlarmStatus_cleared
  * @constant
  */
-export const AlarmStatus_cleared: AlarmStatus = AlarmStatus.cleared;
+export const AlarmStatus_cleared = AlarmStatus.cleared satisfies AlarmStatus;
 
 /**
  * @summary cleared
  * @constant
  */
-export const cleared: AlarmStatus = AlarmStatus.cleared;
+export const cleared = AlarmStatus.cleared satisfies AlarmStatus;
 
 /**
  * @summary AlarmStatus_activeReportable_Indeterminate
  * @constant
  */
-export const AlarmStatus_activeReportable_Indeterminate: AlarmStatus =
-    AlarmStatus.activeReportable_Indeterminate;
+export const AlarmStatus_activeReportable_Indeterminate =
+    AlarmStatus.activeReportable_Indeterminate satisfies AlarmStatus;
 
 /**
  * @summary activeReportable_Indeterminate
  * @constant
  */
-export const activeReportable_Indeterminate: AlarmStatus =
-    AlarmStatus.activeReportable_Indeterminate;
+export const activeReportable_Indeterminate =
+    AlarmStatus.activeReportable_Indeterminate satisfies AlarmStatus;
 
 /**
  * @summary AlarmStatus_activeReportable_Warning
  * @constant
  */
-export const AlarmStatus_activeReportable_Warning: AlarmStatus =
-    AlarmStatus.activeReportable_Warning;
+export const AlarmStatus_activeReportable_Warning =
+    AlarmStatus.activeReportable_Warning satisfies AlarmStatus;
 
 /**
  * @summary activeReportable_Warning
  * @constant
  */
-export const activeReportable_Warning: AlarmStatus =
-    AlarmStatus.activeReportable_Warning;
+export const activeReportable_Warning =
+    AlarmStatus.activeReportable_Warning satisfies AlarmStatus;
 
 /**
  * @summary AlarmStatus_activeReportable_Minor
  * @constant
  */
-export const AlarmStatus_activeReportable_Minor: AlarmStatus =
-    AlarmStatus.activeReportable_Minor;
+export const AlarmStatus_activeReportable_Minor =
+    AlarmStatus.activeReportable_Minor satisfies AlarmStatus;
 
 /**
  * @summary activeReportable_Minor
  * @constant
  */
-export const activeReportable_Minor: AlarmStatus =
-    AlarmStatus.activeReportable_Minor;
+export const activeReportable_Minor =
+    AlarmStatus.activeReportable_Minor satisfies AlarmStatus;
 
 /**
  * @summary AlarmStatus_activeReportable_Major
  * @constant
  */
-export const AlarmStatus_activeReportable_Major: AlarmStatus =
-    AlarmStatus.activeReportable_Major;
+export const AlarmStatus_activeReportable_Major =
+    AlarmStatus.activeReportable_Major satisfies AlarmStatus;
 
 /**
  * @summary activeReportable_Major
  * @constant
  */
-export const activeReportable_Major: AlarmStatus =
-    AlarmStatus.activeReportable_Major;
+export const activeReportable_Major =
+    AlarmStatus.activeReportable_Major satisfies AlarmStatus;
 
 /**
  * @summary AlarmStatus_activeReportable_Critical
  * @constant
  */
-export const AlarmStatus_activeReportable_Critical: AlarmStatus =
-    AlarmStatus.activeReportable_Critical;
+export const AlarmStatus_activeReportable_Critical =
+    AlarmStatus.activeReportable_Critical satisfies AlarmStatus;
 
 /**
  * @summary activeReportable_Critical
  * @constant
  */
-export const activeReportable_Critical: AlarmStatus =
-    AlarmStatus.activeReportable_Critical;
+export const activeReportable_Critical =
+    AlarmStatus.activeReportable_Critical satisfies AlarmStatus;
 
 /**
  * @summary AlarmStatus_activePending
  * @constant
  */
-export const AlarmStatus_activePending: AlarmStatus = AlarmStatus.activePending;
+export const AlarmStatus_activePending = AlarmStatus.activePending satisfies AlarmStatus;
 
 /**
  * @summary activePending
  * @constant
  */
-export const activePending: AlarmStatus = AlarmStatus.activePending;
+export const activePending = AlarmStatus.activePending satisfies AlarmStatus;
 
 export function _decode_AlarmStatus(el: _Element): AlarmStatus {
     const enumerated = $._decodeEnumerated(el);

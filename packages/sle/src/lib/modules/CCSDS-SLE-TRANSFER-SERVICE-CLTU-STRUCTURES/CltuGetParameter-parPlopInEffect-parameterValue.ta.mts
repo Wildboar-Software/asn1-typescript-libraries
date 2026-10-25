@@ -40,7 +40,7 @@ type CltuGetParameter_parPlopInEffect_parameterValue = INTEGER;
  * @type {number}
  */
 export
-const CltuGetParameter_parPlopInEffect_parameterValue_plop1: CltuGetParameter_parPlopInEffect_parameterValue = 0; /* LONG_NAMED_INTEGER_VALUE */
+const CltuGetParameter_parPlopInEffect_parameterValue_plop1 = 0 satisfies CltuGetParameter_parPlopInEffect_parameterValue; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CltuGetParameter_parPlopInEffect_parameterValue_plop1
@@ -52,7 +52,7 @@ const CltuGetParameter_parPlopInEffect_parameterValue_plop1: CltuGetParameter_pa
  * @type {number}
  */
 export
-const plop1: CltuGetParameter_parPlopInEffect_parameterValue = CltuGetParameter_parPlopInEffect_parameterValue_plop1; /* SHORT_NAMED_INTEGER_VALUE */
+const plop1 = CltuGetParameter_parPlopInEffect_parameterValue_plop1 satisfies CltuGetParameter_parPlopInEffect_parameterValue; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CltuGetParameter_parPlopInEffect_parameterValue_plop2
@@ -68,7 +68,7 @@ const plop1: CltuGetParameter_parPlopInEffect_parameterValue = CltuGetParameter_
  * @type {number}
  */
 export
-const CltuGetParameter_parPlopInEffect_parameterValue_plop2: CltuGetParameter_parPlopInEffect_parameterValue = 1; /* LONG_NAMED_INTEGER_VALUE */
+const CltuGetParameter_parPlopInEffect_parameterValue_plop2 = 1 satisfies CltuGetParameter_parPlopInEffect_parameterValue; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CltuGetParameter_parPlopInEffect_parameterValue_plop2
@@ -80,7 +80,7 @@ const CltuGetParameter_parPlopInEffect_parameterValue_plop2: CltuGetParameter_pa
  * @type {number}
  */
 export
-const plop2: CltuGetParameter_parPlopInEffect_parameterValue = CltuGetParameter_parPlopInEffect_parameterValue_plop2; /* SHORT_NAMED_INTEGER_VALUE */
+const plop2 = CltuGetParameter_parPlopInEffect_parameterValue_plop2 satisfies CltuGetParameter_parPlopInEffect_parameterValue; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_CltuGetParameter_parPlopInEffect_parameterValue: $.ASN1Decoder<CltuGetParameter_parPlopInEffect_parameterValue> = $._decodeInteger;
 export const _encode_CltuGetParameter_parPlopInEffect_parameterValue: $.ASN1Encoder<CltuGetParameter_parPlopInEffect_parameterValue> = $._encodeInteger;
 

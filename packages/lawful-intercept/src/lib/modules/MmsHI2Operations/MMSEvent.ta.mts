@@ -75,7 +75,7 @@ type MMSEvent = _enum_for_MMSEvent | ENUMERATED;
  * @type {number}
  */
 export
-const MMSEvent_send: MMSEvent = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMSEvent_send = _enum_for_MMSEvent.send satisfies MMSEvent; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary send
@@ -86,7 +86,7 @@ const MMSEvent_send: MMSEvent = 0; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const send: MMSEvent = MMSEvent_send; /* SHORT_NAMED_ENUMERATED_VALUE */
+const send = MMSEvent_send satisfies MMSEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMSEvent_notification
@@ -98,7 +98,7 @@ const send: MMSEvent = MMSEvent_send; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const MMSEvent_notification: MMSEvent = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMSEvent_notification = _enum_for_MMSEvent.notification satisfies MMSEvent; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary notification
@@ -109,7 +109,7 @@ const MMSEvent_notification: MMSEvent = 1; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const notification: MMSEvent = MMSEvent_notification; /* SHORT_NAMED_ENUMERATED_VALUE */
+const notification = MMSEvent_notification satisfies MMSEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMSEvent_notificationResponse
@@ -121,7 +121,7 @@ const notification: MMSEvent = MMSEvent_notification; /* SHORT_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const MMSEvent_notificationResponse: MMSEvent = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMSEvent_notificationResponse = _enum_for_MMSEvent.notificationResponse satisfies MMSEvent; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary notificationResponse
@@ -132,7 +132,7 @@ const MMSEvent_notificationResponse: MMSEvent = 2; /* LONG_NAMED_ENUMERATED_VALU
  * @type {number}
  */
 export
-const notificationResponse: MMSEvent = MMSEvent_notificationResponse; /* SHORT_NAMED_ENUMERATED_VALUE */
+const notificationResponse = MMSEvent_notificationResponse satisfies MMSEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMSEvent_retrieval
@@ -144,7 +144,7 @@ const notificationResponse: MMSEvent = MMSEvent_notificationResponse; /* SHORT_N
  * @type {number}
  */
 export
-const MMSEvent_retrieval: MMSEvent = 3; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMSEvent_retrieval = _enum_for_MMSEvent.retrieval satisfies MMSEvent; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary retrieval
@@ -155,7 +155,7 @@ const MMSEvent_retrieval: MMSEvent = 3; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const retrieval: MMSEvent = MMSEvent_retrieval; /* SHORT_NAMED_ENUMERATED_VALUE */
+const retrieval = MMSEvent_retrieval satisfies MMSEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMSEvent_retrievalAcknowledgement
@@ -166,7 +166,7 @@ const retrieval: MMSEvent = MMSEvent_retrieval; /* SHORT_NAMED_ENUMERATED_VALUE 
  * @type {number}
  */
 export
-const MMSEvent_retrievalAcknowledgement: MMSEvent = 4; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMSEvent_retrievalAcknowledgement = _enum_for_MMSEvent.retrievalAcknowledgement satisfies MMSEvent; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary retrievalAcknowledgement
@@ -177,7 +177,7 @@ const MMSEvent_retrievalAcknowledgement: MMSEvent = 4; /* LONG_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const retrievalAcknowledgement: MMSEvent = MMSEvent_retrievalAcknowledgement; /* SHORT_NAMED_ENUMERATED_VALUE */
+const retrievalAcknowledgement = MMSEvent_retrievalAcknowledgement satisfies MMSEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMSEvent_forwarding
@@ -188,7 +188,7 @@ const retrievalAcknowledgement: MMSEvent = MMSEvent_retrievalAcknowledgement; /*
  * @type {number}
  */
 export
-const MMSEvent_forwarding: MMSEvent = 5; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMSEvent_forwarding = _enum_for_MMSEvent.forwarding satisfies MMSEvent; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary forwarding
@@ -199,7 +199,7 @@ const MMSEvent_forwarding: MMSEvent = 5; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const forwarding: MMSEvent = MMSEvent_forwarding; /* SHORT_NAMED_ENUMERATED_VALUE */
+const forwarding = MMSEvent_forwarding satisfies MMSEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMSEvent_store
@@ -212,7 +212,7 @@ const forwarding: MMSEvent = MMSEvent_forwarding; /* SHORT_NAMED_ENUMERATED_VALU
  * @type {number}
  */
 export
-const MMSEvent_store: MMSEvent = 6; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMSEvent_store = _enum_for_MMSEvent.store satisfies MMSEvent; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary store
@@ -223,7 +223,7 @@ const MMSEvent_store: MMSEvent = 6; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const store: MMSEvent = MMSEvent_store; /* SHORT_NAMED_ENUMERATED_VALUE */
+const store = MMSEvent_store satisfies MMSEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMSEvent_upload
@@ -235,7 +235,7 @@ const store: MMSEvent = MMSEvent_store; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const MMSEvent_upload: MMSEvent = 7; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMSEvent_upload = _enum_for_MMSEvent.upload satisfies MMSEvent; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary upload
@@ -246,7 +246,7 @@ const MMSEvent_upload: MMSEvent = 7; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const upload: MMSEvent = MMSEvent_upload; /* SHORT_NAMED_ENUMERATED_VALUE */
+const upload = MMSEvent_upload satisfies MMSEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMSEvent_delete_
@@ -258,7 +258,7 @@ const upload: MMSEvent = MMSEvent_upload; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const MMSEvent_delete_: MMSEvent = 8; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMSEvent_delete_ = _enum_for_MMSEvent.delete_ satisfies MMSEvent; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary delete_
@@ -269,7 +269,7 @@ const MMSEvent_delete_: MMSEvent = 8; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const delete_: MMSEvent = MMSEvent_delete_; /* SHORT_NAMED_ENUMERATED_VALUE */
+const delete_ = MMSEvent_delete_ satisfies MMSEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMSEvent_delivery
@@ -281,7 +281,7 @@ const delete_: MMSEvent = MMSEvent_delete_; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const MMSEvent_delivery: MMSEvent = 9; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMSEvent_delivery = _enum_for_MMSEvent.delivery satisfies MMSEvent; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary delivery
@@ -292,7 +292,7 @@ const MMSEvent_delivery: MMSEvent = 9; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const delivery: MMSEvent = MMSEvent_delivery; /* SHORT_NAMED_ENUMERATED_VALUE */
+const delivery = MMSEvent_delivery satisfies MMSEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMSEvent_readReplyFromTarget
@@ -304,7 +304,7 @@ const delivery: MMSEvent = MMSEvent_delivery; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const MMSEvent_readReplyFromTarget: MMSEvent = 10; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMSEvent_readReplyFromTarget = _enum_for_MMSEvent.readReplyFromTarget satisfies MMSEvent; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary readReplyFromTarget
@@ -315,7 +315,7 @@ const MMSEvent_readReplyFromTarget: MMSEvent = 10; /* LONG_NAMED_ENUMERATED_VALU
  * @type {number}
  */
 export
-const readReplyFromTarget: MMSEvent = MMSEvent_readReplyFromTarget; /* SHORT_NAMED_ENUMERATED_VALUE */
+const readReplyFromTarget = MMSEvent_readReplyFromTarget satisfies MMSEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMSEvent_readReplyToTarget
@@ -327,7 +327,7 @@ const readReplyFromTarget: MMSEvent = MMSEvent_readReplyFromTarget; /* SHORT_NAM
  * @type {number}
  */
 export
-const MMSEvent_readReplyToTarget: MMSEvent = 11; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMSEvent_readReplyToTarget = _enum_for_MMSEvent.readReplyToTarget satisfies MMSEvent; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary readReplyToTarget
@@ -338,7 +338,7 @@ const MMSEvent_readReplyToTarget: MMSEvent = 11; /* LONG_NAMED_ENUMERATED_VALUE 
  * @type {number}
  */
 export
-const readReplyToTarget: MMSEvent = MMSEvent_readReplyToTarget; /* SHORT_NAMED_ENUMERATED_VALUE */
+const readReplyToTarget = MMSEvent_readReplyToTarget satisfies MMSEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMSEvent_cancel
@@ -350,7 +350,7 @@ const readReplyToTarget: MMSEvent = MMSEvent_readReplyToTarget; /* SHORT_NAMED_E
  * @type {number}
  */
 export
-const MMSEvent_cancel: MMSEvent = 12; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMSEvent_cancel = _enum_for_MMSEvent.cancel satisfies MMSEvent; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary cancel
@@ -361,7 +361,7 @@ const MMSEvent_cancel: MMSEvent = 12; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const cancel: MMSEvent = MMSEvent_cancel; /* SHORT_NAMED_ENUMERATED_VALUE */
+const cancel = MMSEvent_cancel satisfies MMSEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMSEvent_viewRequest
@@ -373,7 +373,7 @@ const cancel: MMSEvent = MMSEvent_cancel; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const MMSEvent_viewRequest: MMSEvent = 13; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMSEvent_viewRequest = _enum_for_MMSEvent.viewRequest satisfies MMSEvent; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary viewRequest
@@ -384,7 +384,7 @@ const MMSEvent_viewRequest: MMSEvent = 13; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const viewRequest: MMSEvent = MMSEvent_viewRequest; /* SHORT_NAMED_ENUMERATED_VALUE */
+const viewRequest = MMSEvent_viewRequest satisfies MMSEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMSEvent_viewConfirm
@@ -396,7 +396,7 @@ const viewRequest: MMSEvent = MMSEvent_viewRequest; /* SHORT_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const MMSEvent_viewConfirm: MMSEvent = 14; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMSEvent_viewConfirm = _enum_for_MMSEvent.viewConfirm satisfies MMSEvent; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary viewConfirm
@@ -407,7 +407,7 @@ const MMSEvent_viewConfirm: MMSEvent = 14; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const viewConfirm: MMSEvent = MMSEvent_viewConfirm; /* SHORT_NAMED_ENUMERATED_VALUE */
+const viewConfirm = MMSEvent_viewConfirm satisfies MMSEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_MMSEvent: $.ASN1Decoder<MMSEvent> = $._decodeEnumerated;
 export const _encode_MMSEvent: $.ASN1Encoder<MMSEvent> = $._encodeEnumerated;
 

@@ -140,7 +140,7 @@ const EPSAttachType = _enum_for_EPSAttachType;
  * @type {number}
  */
 export
-const EPSAttachType_ePSAttach: EPSAttachType = EPSAttachType.ePSAttach; /* LONG_NAMED_ENUMERATED_VALUE */
+const EPSAttachType_ePSAttach = EPSAttachType.ePSAttach satisfies EPSAttachType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ePSAttach
@@ -154,7 +154,7 @@ const EPSAttachType_ePSAttach: EPSAttachType = EPSAttachType.ePSAttach; /* LONG_
  * @type {number}
  */
 export
-const ePSAttach: EPSAttachType = EPSAttachType.ePSAttach; /* SHORT_NAMED_ENUMERATED_VALUE */
+const ePSAttach = EPSAttachType.ePSAttach satisfies EPSAttachType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EPSAttachType_combinedEPSIMSIAttach
@@ -168,7 +168,7 @@ const ePSAttach: EPSAttachType = EPSAttachType.ePSAttach; /* SHORT_NAMED_ENUMERA
  * @type {number}
  */
 export
-const EPSAttachType_combinedEPSIMSIAttach: EPSAttachType = EPSAttachType.combinedEPSIMSIAttach; /* LONG_NAMED_ENUMERATED_VALUE */
+const EPSAttachType_combinedEPSIMSIAttach = EPSAttachType.combinedEPSIMSIAttach satisfies EPSAttachType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary combinedEPSIMSIAttach
@@ -182,7 +182,7 @@ const EPSAttachType_combinedEPSIMSIAttach: EPSAttachType = EPSAttachType.combine
  * @type {number}
  */
 export
-const combinedEPSIMSIAttach: EPSAttachType = EPSAttachType.combinedEPSIMSIAttach; /* SHORT_NAMED_ENUMERATED_VALUE */
+const combinedEPSIMSIAttach = EPSAttachType.combinedEPSIMSIAttach satisfies EPSAttachType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EPSAttachType_ePSRLOSAttach
@@ -196,7 +196,7 @@ const combinedEPSIMSIAttach: EPSAttachType = EPSAttachType.combinedEPSIMSIAttach
  * @type {number}
  */
 export
-const EPSAttachType_ePSRLOSAttach: EPSAttachType = EPSAttachType.ePSRLOSAttach; /* LONG_NAMED_ENUMERATED_VALUE */
+const EPSAttachType_ePSRLOSAttach = EPSAttachType.ePSRLOSAttach satisfies EPSAttachType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ePSRLOSAttach
@@ -210,7 +210,7 @@ const EPSAttachType_ePSRLOSAttach: EPSAttachType = EPSAttachType.ePSRLOSAttach; 
  * @type {number}
  */
 export
-const ePSRLOSAttach: EPSAttachType = EPSAttachType.ePSRLOSAttach; /* SHORT_NAMED_ENUMERATED_VALUE */
+const ePSRLOSAttach = EPSAttachType.ePSRLOSAttach satisfies EPSAttachType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EPSAttachType_ePSEmergencyAttach
@@ -224,7 +224,7 @@ const ePSRLOSAttach: EPSAttachType = EPSAttachType.ePSRLOSAttach; /* SHORT_NAMED
  * @type {number}
  */
 export
-const EPSAttachType_ePSEmergencyAttach: EPSAttachType = EPSAttachType.ePSEmergencyAttach; /* LONG_NAMED_ENUMERATED_VALUE */
+const EPSAttachType_ePSEmergencyAttach = EPSAttachType.ePSEmergencyAttach satisfies EPSAttachType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ePSEmergencyAttach
@@ -238,7 +238,7 @@ const EPSAttachType_ePSEmergencyAttach: EPSAttachType = EPSAttachType.ePSEmergen
  * @type {number}
  */
 export
-const ePSEmergencyAttach: EPSAttachType = EPSAttachType.ePSEmergencyAttach; /* SHORT_NAMED_ENUMERATED_VALUE */
+const ePSEmergencyAttach = EPSAttachType.ePSEmergencyAttach satisfies EPSAttachType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EPSAttachType_reserved
@@ -252,7 +252,7 @@ const ePSEmergencyAttach: EPSAttachType = EPSAttachType.ePSEmergencyAttach; /* S
  * @type {number}
  */
 export
-const EPSAttachType_reserved: EPSAttachType = EPSAttachType.reserved; /* LONG_NAMED_ENUMERATED_VALUE */
+const EPSAttachType_reserved = EPSAttachType.reserved satisfies EPSAttachType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary reserved
@@ -266,7 +266,7 @@ const EPSAttachType_reserved: EPSAttachType = EPSAttachType.reserved; /* LONG_NA
  * @type {number}
  */
 export
-const reserved: EPSAttachType = EPSAttachType.reserved; /* SHORT_NAMED_ENUMERATED_VALUE */
+const reserved = EPSAttachType.reserved satisfies EPSAttachType; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_EPSAttachType: $.ASN1Decoder<EPSAttachType> = $._decodeEnumerated;
 export const _encode_EPSAttachType: $.ASN1Encoder<EPSAttachType> = $._encodeEnumerated;
 

@@ -73,7 +73,7 @@ const AFKeyRemovalCause = _enum_for_AFKeyRemovalCause;
  * @type {number}
  */
 export
-const AFKeyRemovalCause_unknown: AFKeyRemovalCause = AFKeyRemovalCause.unknown; /* LONG_NAMED_ENUMERATED_VALUE */
+const AFKeyRemovalCause_unknown = AFKeyRemovalCause.unknown satisfies AFKeyRemovalCause; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unknown
@@ -81,7 +81,7 @@ const AFKeyRemovalCause_unknown: AFKeyRemovalCause = AFKeyRemovalCause.unknown; 
  * @type {number}
  */
 export
-const unknown: AFKeyRemovalCause = AFKeyRemovalCause.unknown; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unknown = AFKeyRemovalCause.unknown satisfies AFKeyRemovalCause; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AFKeyRemovalCause_keyExpiry
@@ -89,7 +89,7 @@ const unknown: AFKeyRemovalCause = AFKeyRemovalCause.unknown; /* SHORT_NAMED_ENU
  * @type {number}
  */
 export
-const AFKeyRemovalCause_keyExpiry: AFKeyRemovalCause = AFKeyRemovalCause.keyExpiry; /* LONG_NAMED_ENUMERATED_VALUE */
+const AFKeyRemovalCause_keyExpiry = AFKeyRemovalCause.keyExpiry satisfies AFKeyRemovalCause; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary keyExpiry
@@ -97,7 +97,7 @@ const AFKeyRemovalCause_keyExpiry: AFKeyRemovalCause = AFKeyRemovalCause.keyExpi
  * @type {number}
  */
 export
-const keyExpiry: AFKeyRemovalCause = AFKeyRemovalCause.keyExpiry; /* SHORT_NAMED_ENUMERATED_VALUE */
+const keyExpiry = AFKeyRemovalCause.keyExpiry satisfies AFKeyRemovalCause; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AFKeyRemovalCause_applicationSpecific
@@ -105,7 +105,7 @@ const keyExpiry: AFKeyRemovalCause = AFKeyRemovalCause.keyExpiry; /* SHORT_NAMED
  * @type {number}
  */
 export
-const AFKeyRemovalCause_applicationSpecific: AFKeyRemovalCause = AFKeyRemovalCause.applicationSpecific; /* LONG_NAMED_ENUMERATED_VALUE */
+const AFKeyRemovalCause_applicationSpecific = AFKeyRemovalCause.applicationSpecific satisfies AFKeyRemovalCause; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary applicationSpecific
@@ -113,7 +113,7 @@ const AFKeyRemovalCause_applicationSpecific: AFKeyRemovalCause = AFKeyRemovalCau
  * @type {number}
  */
 export
-const applicationSpecific: AFKeyRemovalCause = AFKeyRemovalCause.applicationSpecific; /* SHORT_NAMED_ENUMERATED_VALUE */
+const applicationSpecific = AFKeyRemovalCause.applicationSpecific satisfies AFKeyRemovalCause; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_AFKeyRemovalCause: $.ASN1Decoder<AFKeyRemovalCause> = $._decodeEnumerated;
 export const _encode_AFKeyRemovalCause: $.ASN1Encoder<AFKeyRemovalCause> = $._encodeEnumerated;
 

@@ -33,7 +33,7 @@ type IncGatewayRecord_jIPQuryStatus = INTEGER;
  * @type {number}
  */
 export
-const IncGatewayRecord_jIPQuryStatus_successfulQuery: IncGatewayRecord_jIPQuryStatus = 1; /* LONG_NAMED_INTEGER_VALUE */
+const IncGatewayRecord_jIPQuryStatus_successfulQuery = 1 satisfies IncGatewayRecord_jIPQuryStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary IncGatewayRecord_jIPQuryStatus_successfulQuery
@@ -41,7 +41,7 @@ const IncGatewayRecord_jIPQuryStatus_successfulQuery: IncGatewayRecord_jIPQurySt
  * @type {number}
  */
 export
-const successfulQuery: IncGatewayRecord_jIPQuryStatus = IncGatewayRecord_jIPQuryStatus_successfulQuery; /* SHORT_NAMED_INTEGER_VALUE */
+const successfulQuery = IncGatewayRecord_jIPQuryStatus_successfulQuery satisfies IncGatewayRecord_jIPQuryStatus; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary IncGatewayRecord_jIPQuryStatus_noQueryResponseMsg
@@ -49,7 +49,7 @@ const successfulQuery: IncGatewayRecord_jIPQuryStatus = IncGatewayRecord_jIPQury
  * @type {number}
  */
 export
-const IncGatewayRecord_jIPQuryStatus_noQueryResponseMsg: IncGatewayRecord_jIPQuryStatus = 2; /* LONG_NAMED_INTEGER_VALUE */
+const IncGatewayRecord_jIPQuryStatus_noQueryResponseMsg = 2 satisfies IncGatewayRecord_jIPQuryStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary IncGatewayRecord_jIPQuryStatus_noQueryResponseMsg
@@ -57,7 +57,7 @@ const IncGatewayRecord_jIPQuryStatus_noQueryResponseMsg: IncGatewayRecord_jIPQur
  * @type {number}
  */
 export
-const noQueryResponseMsg: IncGatewayRecord_jIPQuryStatus = IncGatewayRecord_jIPQuryStatus_noQueryResponseMsg; /* SHORT_NAMED_INTEGER_VALUE */
+const noQueryResponseMsg = IncGatewayRecord_jIPQuryStatus_noQueryResponseMsg satisfies IncGatewayRecord_jIPQuryStatus; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary IncGatewayRecord_jIPQuryStatus_queryProtocolErr
@@ -65,7 +65,7 @@ const noQueryResponseMsg: IncGatewayRecord_jIPQuryStatus = IncGatewayRecord_jIPQ
  * @type {number}
  */
 export
-const IncGatewayRecord_jIPQuryStatus_queryProtocolErr: IncGatewayRecord_jIPQuryStatus = 4; /* LONG_NAMED_INTEGER_VALUE */
+const IncGatewayRecord_jIPQuryStatus_queryProtocolErr = 4 satisfies IncGatewayRecord_jIPQuryStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary IncGatewayRecord_jIPQuryStatus_queryProtocolErr
@@ -73,7 +73,7 @@ const IncGatewayRecord_jIPQuryStatus_queryProtocolErr: IncGatewayRecord_jIPQuryS
  * @type {number}
  */
 export
-const queryProtocolErr: IncGatewayRecord_jIPQuryStatus = IncGatewayRecord_jIPQuryStatus_queryProtocolErr; /* SHORT_NAMED_INTEGER_VALUE */
+const queryProtocolErr = IncGatewayRecord_jIPQuryStatus_queryProtocolErr satisfies IncGatewayRecord_jIPQuryStatus; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary IncGatewayRecord_jIPQuryStatus_queryResponseDataErr
@@ -81,7 +81,7 @@ const queryProtocolErr: IncGatewayRecord_jIPQuryStatus = IncGatewayRecord_jIPQur
  * @type {number}
  */
 export
-const IncGatewayRecord_jIPQuryStatus_queryResponseDataErr: IncGatewayRecord_jIPQuryStatus = 5; /* LONG_NAMED_INTEGER_VALUE */
+const IncGatewayRecord_jIPQuryStatus_queryResponseDataErr = 5 satisfies IncGatewayRecord_jIPQuryStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary IncGatewayRecord_jIPQuryStatus_queryResponseDataErr
@@ -89,7 +89,7 @@ const IncGatewayRecord_jIPQuryStatus_queryResponseDataErr: IncGatewayRecord_jIPQ
  * @type {number}
  */
 export
-const queryResponseDataErr: IncGatewayRecord_jIPQuryStatus = IncGatewayRecord_jIPQuryStatus_queryResponseDataErr; /* SHORT_NAMED_INTEGER_VALUE */
+const queryResponseDataErr = IncGatewayRecord_jIPQuryStatus_queryResponseDataErr satisfies IncGatewayRecord_jIPQuryStatus; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary IncGatewayRecord_jIPQuryStatus_queryRejected
@@ -97,7 +97,7 @@ const queryResponseDataErr: IncGatewayRecord_jIPQuryStatus = IncGatewayRecord_jI
  * @type {number}
  */
 export
-const IncGatewayRecord_jIPQuryStatus_queryRejected: IncGatewayRecord_jIPQuryStatus = 6; /* LONG_NAMED_INTEGER_VALUE */
+const IncGatewayRecord_jIPQuryStatus_queryRejected = 6 satisfies IncGatewayRecord_jIPQuryStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary IncGatewayRecord_jIPQuryStatus_queryRejected
@@ -105,7 +105,7 @@ const IncGatewayRecord_jIPQuryStatus_queryRejected: IncGatewayRecord_jIPQuryStat
  * @type {number}
  */
 export
-const queryRejected: IncGatewayRecord_jIPQuryStatus = IncGatewayRecord_jIPQuryStatus_queryRejected; /* SHORT_NAMED_INTEGER_VALUE */
+const queryRejected = IncGatewayRecord_jIPQuryStatus_queryRejected satisfies IncGatewayRecord_jIPQuryStatus; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary IncGatewayRecord_jIPQuryStatus_queryNotPerformed
@@ -113,7 +113,7 @@ const queryRejected: IncGatewayRecord_jIPQuryStatus = IncGatewayRecord_jIPQurySt
  * @type {number}
  */
 export
-const IncGatewayRecord_jIPQuryStatus_queryNotPerformed: IncGatewayRecord_jIPQuryStatus = 9; /* LONG_NAMED_INTEGER_VALUE */
+const IncGatewayRecord_jIPQuryStatus_queryNotPerformed = 9 satisfies IncGatewayRecord_jIPQuryStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary IncGatewayRecord_jIPQuryStatus_queryNotPerformed
@@ -121,7 +121,7 @@ const IncGatewayRecord_jIPQuryStatus_queryNotPerformed: IncGatewayRecord_jIPQury
  * @type {number}
  */
 export
-const queryNotPerformed: IncGatewayRecord_jIPQuryStatus = IncGatewayRecord_jIPQuryStatus_queryNotPerformed; /* SHORT_NAMED_INTEGER_VALUE */
+const queryNotPerformed = IncGatewayRecord_jIPQuryStatus_queryNotPerformed satisfies IncGatewayRecord_jIPQuryStatus; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary IncGatewayRecord_jIPQuryStatus_queryUnsuccessful
@@ -129,7 +129,7 @@ const queryNotPerformed: IncGatewayRecord_jIPQuryStatus = IncGatewayRecord_jIPQu
  * @type {number}
  */
 export
-const IncGatewayRecord_jIPQuryStatus_queryUnsuccessful: IncGatewayRecord_jIPQuryStatus = 99; /* LONG_NAMED_INTEGER_VALUE */
+const IncGatewayRecord_jIPQuryStatus_queryUnsuccessful = 99 satisfies IncGatewayRecord_jIPQuryStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary IncGatewayRecord_jIPQuryStatus_queryUnsuccessful
@@ -137,7 +137,7 @@ const IncGatewayRecord_jIPQuryStatus_queryUnsuccessful: IncGatewayRecord_jIPQury
  * @type {number}
  */
 export
-const queryUnsuccessful: IncGatewayRecord_jIPQuryStatus = IncGatewayRecord_jIPQuryStatus_queryUnsuccessful; /* SHORT_NAMED_INTEGER_VALUE */
+const queryUnsuccessful = IncGatewayRecord_jIPQuryStatus_queryUnsuccessful satisfies IncGatewayRecord_jIPQuryStatus; /* SHORT_NAMED_INTEGER_VALUE */
 
 export
 const _decode_IncGatewayRecord_jIPQuryStatus: $.ASN1Decoder<IncGatewayRecord_jIPQuryStatus> = $._decodeInteger;

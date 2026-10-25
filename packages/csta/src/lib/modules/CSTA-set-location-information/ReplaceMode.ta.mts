@@ -87,7 +87,7 @@ const ReplaceMode = _enum_for_ReplaceMode;
  * @type {number}
  */
 export
-const ReplaceMode_replaceAll: ReplaceMode = ReplaceMode.replaceAll; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReplaceMode_replaceAll = ReplaceMode.replaceAll satisfies ReplaceMode; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary replaceAll
@@ -99,7 +99,7 @@ const ReplaceMode_replaceAll: ReplaceMode = ReplaceMode.replaceAll; /* LONG_NAME
  * @type {number}
  */
 export
-const replaceAll: ReplaceMode = ReplaceMode.replaceAll; /* SHORT_NAMED_ENUMERATED_VALUE */
+const replaceAll = ReplaceMode.replaceAll satisfies ReplaceMode; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReplaceMode_replacePortion
@@ -112,7 +112,7 @@ const replaceAll: ReplaceMode = ReplaceMode.replaceAll; /* SHORT_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const ReplaceMode_replacePortion: ReplaceMode = ReplaceMode.replacePortion; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReplaceMode_replacePortion = ReplaceMode.replacePortion satisfies ReplaceMode; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary replacePortion
@@ -125,7 +125,7 @@ const ReplaceMode_replacePortion: ReplaceMode = ReplaceMode.replacePortion; /* L
  * @type {number}
  */
 export
-const replacePortion: ReplaceMode = ReplaceMode.replacePortion; /* SHORT_NAMED_ENUMERATED_VALUE */
+const replacePortion = ReplaceMode.replacePortion satisfies ReplaceMode; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 let _cached_decoder_for_ReplaceMode: $.ASN1Decoder<ReplaceMode> | null = null;
 

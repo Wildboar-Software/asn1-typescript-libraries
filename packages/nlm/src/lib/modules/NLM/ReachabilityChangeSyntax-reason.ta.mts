@@ -88,8 +88,8 @@ export const ReachabilityChangeSyntax_reason = _enum_for_ReachabilityChangeSynta
  * @constant
  * @type {number}
  */
-export const ReachabilityChangeSyntax_reason_holdingTimerExpired: ReachabilityChangeSyntax_reason =
-    ReachabilityChangeSyntax_reason.holdingTimerExpired; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ReachabilityChangeSyntax_reason_holdingTimerExpired =
+    ReachabilityChangeSyntax_reason.holdingTimerExpired satisfies ReachabilityChangeSyntax_reason; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -103,8 +103,8 @@ export const ReachabilityChangeSyntax_reason_holdingTimerExpired: ReachabilityCh
  * @constant
  * @type {number}
  */
-export const holdingTimerExpired: ReachabilityChangeSyntax_reason =
-    ReachabilityChangeSyntax_reason.holdingTimerExpired; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const holdingTimerExpired =
+    ReachabilityChangeSyntax_reason.holdingTimerExpired satisfies ReachabilityChangeSyntax_reason; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -118,8 +118,8 @@ export const holdingTimerExpired: ReachabilityChangeSyntax_reason =
  * @constant
  * @type {number}
  */
-export const ReachabilityChangeSyntax_reason_circuitDisabled: ReachabilityChangeSyntax_reason =
-    ReachabilityChangeSyntax_reason.circuitDisabled; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ReachabilityChangeSyntax_reason_circuitDisabled =
+    ReachabilityChangeSyntax_reason.circuitDisabled satisfies ReachabilityChangeSyntax_reason; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -133,8 +133,8 @@ export const ReachabilityChangeSyntax_reason_circuitDisabled: ReachabilityChange
  * @constant
  * @type {number}
  */
-export const circuitDisabled: ReachabilityChangeSyntax_reason =
-    ReachabilityChangeSyntax_reason.circuitDisabled; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const circuitDisabled =
+    ReachabilityChangeSyntax_reason.circuitDisabled satisfies ReachabilityChangeSyntax_reason; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 let _cached_decoder_for_ReachabilityChangeSyntax_reason: $.ASN1Decoder<ReachabilityChangeSyntax_reason> | null = null;

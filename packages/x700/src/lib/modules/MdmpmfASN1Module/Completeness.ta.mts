@@ -97,8 +97,8 @@ export const Completeness = _enum_for_Completeness;
  * @constant
  * @type {number}
  */
-export const Completeness_completenessUnknown: Completeness =
-    Completeness.completenessUnknown; /* LONG_NAMED_ENUMERATED_VALUE */
+export const Completeness_completenessUnknown =
+    Completeness.completenessUnknown satisfies Completeness; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary completenessUnknown
@@ -110,8 +110,8 @@ export const Completeness_completenessUnknown: Completeness =
  * @constant
  * @type {number}
  */
-export const completenessUnknown: Completeness =
-    Completeness.completenessUnknown; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const completenessUnknown =
+    Completeness.completenessUnknown satisfies Completeness; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Completeness_knownComplete
@@ -123,8 +123,8 @@ export const completenessUnknown: Completeness =
  * @constant
  * @type {number}
  */
-export const Completeness_knownComplete: Completeness =
-    Completeness.knownComplete; /* LONG_NAMED_ENUMERATED_VALUE */
+export const Completeness_knownComplete =
+    Completeness.knownComplete satisfies Completeness; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary knownComplete
@@ -136,8 +136,8 @@ export const Completeness_knownComplete: Completeness =
  * @constant
  * @type {number}
  */
-export const knownComplete: Completeness =
-    Completeness.knownComplete; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const knownComplete =
+    Completeness.knownComplete satisfies Completeness; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Completeness_knownNotComplete
@@ -149,8 +149,8 @@ export const knownComplete: Completeness =
  * @constant
  * @type {number}
  */
-export const Completeness_knownNotComplete: Completeness =
-    Completeness.knownNotComplete; /* LONG_NAMED_ENUMERATED_VALUE */
+export const Completeness_knownNotComplete =
+    Completeness.knownNotComplete satisfies Completeness; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary knownNotComplete
@@ -162,8 +162,8 @@ export const Completeness_knownNotComplete: Completeness =
  * @constant
  * @type {number}
  */
-export const knownNotComplete: Completeness =
-    Completeness.knownNotComplete; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const knownNotComplete =
+    Completeness.knownNotComplete satisfies Completeness; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 export function _decode_Completeness(el: _Element): Completeness {

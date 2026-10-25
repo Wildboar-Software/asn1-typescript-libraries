@@ -89,7 +89,7 @@ const Day = _enum_for_Day;
  * @type {number}
  */
 export
-const Day_monday: Day = Day.monday; /* LONG_NAMED_ENUMERATED_VALUE */
+const Day_monday = Day.monday satisfies Day; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary monday
@@ -97,7 +97,7 @@ const Day_monday: Day = Day.monday; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const monday: Day = Day.monday; /* SHORT_NAMED_ENUMERATED_VALUE */
+const monday = Day.monday satisfies Day; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Day_tuesday
@@ -105,7 +105,7 @@ const monday: Day = Day.monday; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const Day_tuesday: Day = Day.tuesday; /* LONG_NAMED_ENUMERATED_VALUE */
+const Day_tuesday = Day.tuesday satisfies Day; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tuesday
@@ -113,7 +113,7 @@ const Day_tuesday: Day = Day.tuesday; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const tuesday: Day = Day.tuesday; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tuesday = Day.tuesday satisfies Day; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Day_wednesday
@@ -121,7 +121,7 @@ const tuesday: Day = Day.tuesday; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const Day_wednesday: Day = Day.wednesday; /* LONG_NAMED_ENUMERATED_VALUE */
+const Day_wednesday = Day.wednesday satisfies Day; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary wednesday
@@ -129,7 +129,7 @@ const Day_wednesday: Day = Day.wednesday; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const wednesday: Day = Day.wednesday; /* SHORT_NAMED_ENUMERATED_VALUE */
+const wednesday = Day.wednesday satisfies Day; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Day_thursday
@@ -137,7 +137,7 @@ const wednesday: Day = Day.wednesday; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const Day_thursday: Day = Day.thursday; /* LONG_NAMED_ENUMERATED_VALUE */
+const Day_thursday = Day.thursday satisfies Day; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary thursday
@@ -145,7 +145,7 @@ const Day_thursday: Day = Day.thursday; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const thursday: Day = Day.thursday; /* SHORT_NAMED_ENUMERATED_VALUE */
+const thursday = Day.thursday satisfies Day; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Day_friday
@@ -153,7 +153,7 @@ const thursday: Day = Day.thursday; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const Day_friday: Day = Day.friday; /* LONG_NAMED_ENUMERATED_VALUE */
+const Day_friday = Day.friday satisfies Day; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary friday
@@ -161,7 +161,7 @@ const Day_friday: Day = Day.friday; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const friday: Day = Day.friday; /* SHORT_NAMED_ENUMERATED_VALUE */
+const friday = Day.friday satisfies Day; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Day_saturday
@@ -169,7 +169,7 @@ const friday: Day = Day.friday; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const Day_saturday: Day = Day.saturday; /* LONG_NAMED_ENUMERATED_VALUE */
+const Day_saturday = Day.saturday satisfies Day; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary saturday
@@ -177,7 +177,7 @@ const Day_saturday: Day = Day.saturday; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const saturday: Day = Day.saturday; /* SHORT_NAMED_ENUMERATED_VALUE */
+const saturday = Day.saturday satisfies Day; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Day_sunday
@@ -185,7 +185,7 @@ const saturday: Day = Day.saturday; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const Day_sunday: Day = Day.sunday; /* LONG_NAMED_ENUMERATED_VALUE */
+const Day_sunday = Day.sunday satisfies Day; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sunday
@@ -193,7 +193,7 @@ const Day_sunday: Day = Day.sunday; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const sunday: Day = Day.sunday; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sunday = Day.sunday satisfies Day; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_Day: $.ASN1Decoder<Day> = $._decodeEnumerated;
 export const _encode_Day: $.ASN1Encoder<Day> = $._encodeEnumerated;
 

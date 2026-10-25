@@ -53,7 +53,7 @@ type LCS_Event = _enum_for_LCS_Event | ENUMERATED;
  * @type {number}
  */
 export
-const LCS_Event_emergencyCallOrigination: LCS_Event = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+const LCS_Event_emergencyCallOrigination = _enum_for_LCS_Event.emergencyCallOrigination satisfies LCS_Event; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary emergencyCallOrigination
@@ -65,7 +65,7 @@ const LCS_Event_emergencyCallOrigination: LCS_Event = 0; /* LONG_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const emergencyCallOrigination: LCS_Event = LCS_Event_emergencyCallOrigination; /* SHORT_NAMED_ENUMERATED_VALUE */
+const emergencyCallOrigination = LCS_Event_emergencyCallOrigination satisfies LCS_Event; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LCS_Event_emergencyCallRelease
@@ -77,7 +77,7 @@ const emergencyCallOrigination: LCS_Event = LCS_Event_emergencyCallOrigination; 
  * @type {number}
  */
 export
-const LCS_Event_emergencyCallRelease: LCS_Event = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const LCS_Event_emergencyCallRelease = _enum_for_LCS_Event.emergencyCallRelease satisfies LCS_Event; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary emergencyCallRelease
@@ -89,7 +89,7 @@ const LCS_Event_emergencyCallRelease: LCS_Event = 1; /* LONG_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const emergencyCallRelease: LCS_Event = LCS_Event_emergencyCallRelease; /* SHORT_NAMED_ENUMERATED_VALUE */
+const emergencyCallRelease = LCS_Event_emergencyCallRelease satisfies LCS_Event; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LCS_Event_mo_lr
@@ -101,7 +101,7 @@ const emergencyCallRelease: LCS_Event = LCS_Event_emergencyCallRelease; /* SHORT
  * @type {number}
  */
 export
-const LCS_Event_mo_lr: LCS_Event = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+const LCS_Event_mo_lr = _enum_for_LCS_Event.mo_lr satisfies LCS_Event; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary mo_lr
@@ -113,7 +113,7 @@ const LCS_Event_mo_lr: LCS_Event = 2; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const mo_lr: LCS_Event = LCS_Event_mo_lr; /* SHORT_NAMED_ENUMERATED_VALUE */
+const mo_lr = LCS_Event_mo_lr satisfies LCS_Event; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LCS_Event_deferredmt_lrResponse
@@ -125,7 +125,7 @@ const mo_lr: LCS_Event = LCS_Event_mo_lr; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const LCS_Event_deferredmt_lrResponse: LCS_Event = 3; /* LONG_NAMED_ENUMERATED_VALUE */
+const LCS_Event_deferredmt_lrResponse = _enum_for_LCS_Event.deferredmt_lrResponse satisfies LCS_Event; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary deferredmt_lrResponse
@@ -137,7 +137,7 @@ const LCS_Event_deferredmt_lrResponse: LCS_Event = 3; /* LONG_NAMED_ENUMERATED_V
  * @type {number}
  */
 export
-const deferredmt_lrResponse: LCS_Event = LCS_Event_deferredmt_lrResponse; /* SHORT_NAMED_ENUMERATED_VALUE */
+const deferredmt_lrResponse = LCS_Event_deferredmt_lrResponse satisfies LCS_Event; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LCS_Event_deferredmo_lrTTTPInitiation
@@ -149,7 +149,7 @@ const deferredmt_lrResponse: LCS_Event = LCS_Event_deferredmt_lrResponse; /* SHO
  * @type {number}
  */
 export
-const LCS_Event_deferredmo_lrTTTPInitiation: LCS_Event = 4; /* LONG_NAMED_ENUMERATED_VALUE */
+const LCS_Event_deferredmo_lrTTTPInitiation = _enum_for_LCS_Event.deferredmo_lrTTTPInitiation satisfies LCS_Event; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary deferredmo_lrTTTPInitiation
@@ -161,7 +161,7 @@ const LCS_Event_deferredmo_lrTTTPInitiation: LCS_Event = 4; /* LONG_NAMED_ENUMER
  * @type {number}
  */
 export
-const deferredmo_lrTTTPInitiation: LCS_Event = LCS_Event_deferredmo_lrTTTPInitiation; /* SHORT_NAMED_ENUMERATED_VALUE */
+const deferredmo_lrTTTPInitiation = LCS_Event_deferredmo_lrTTTPInitiation satisfies LCS_Event; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LCS_Event_emergencyCallHandover
@@ -173,7 +173,7 @@ const deferredmo_lrTTTPInitiation: LCS_Event = LCS_Event_deferredmo_lrTTTPInitia
  * @type {number}
  */
 export
-const LCS_Event_emergencyCallHandover: LCS_Event = 5; /* LONG_NAMED_ENUMERATED_VALUE */
+const LCS_Event_emergencyCallHandover = _enum_for_LCS_Event.emergencyCallHandover satisfies LCS_Event; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary emergencyCallHandover
@@ -185,7 +185,7 @@ const LCS_Event_emergencyCallHandover: LCS_Event = 5; /* LONG_NAMED_ENUMERATED_V
  * @type {number}
  */
 export
-const emergencyCallHandover: LCS_Event = LCS_Event_emergencyCallHandover; /* SHORT_NAMED_ENUMERATED_VALUE */
+const emergencyCallHandover = LCS_Event_emergencyCallHandover satisfies LCS_Event; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) LCS_Event

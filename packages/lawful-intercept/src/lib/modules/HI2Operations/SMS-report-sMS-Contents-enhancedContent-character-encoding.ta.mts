@@ -129,7 +129,7 @@ type SMS_report_sMS_Contents_enhancedContent_character_encoding = _enum_for_SMS_
  * @type {number}
  */
 export
-const SMS_report_sMS_Contents_enhancedContent_character_encoding_gsm_7_bit_ascii: SMS_report_sMS_Contents_enhancedContent_character_encoding = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+const SMS_report_sMS_Contents_enhancedContent_character_encoding_gsm_7_bit_ascii = _enum_for_SMS_report_sMS_Contents_enhancedContent_character_encoding.gsm_7_bit_ascii satisfies SMS_report_sMS_Contents_enhancedContent_character_encoding; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary gsm_7_bit_ascii
@@ -145,7 +145,7 @@ const SMS_report_sMS_Contents_enhancedContent_character_encoding_gsm_7_bit_ascii
  * @type {number}
  */
 export
-const gsm_7_bit_ascii: SMS_report_sMS_Contents_enhancedContent_character_encoding = SMS_report_sMS_Contents_enhancedContent_character_encoding_gsm_7_bit_ascii; /* SHORT_NAMED_ENUMERATED_VALUE */
+const gsm_7_bit_ascii = SMS_report_sMS_Contents_enhancedContent_character_encoding_gsm_7_bit_ascii satisfies SMS_report_sMS_Contents_enhancedContent_character_encoding; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SMS_report_sMS_Contents_enhancedContent_character_encoding_eight_bit_ascii
@@ -161,7 +161,7 @@ const gsm_7_bit_ascii: SMS_report_sMS_Contents_enhancedContent_character_encodin
  * @type {number}
  */
 export
-const SMS_report_sMS_Contents_enhancedContent_character_encoding_eight_bit_ascii: SMS_report_sMS_Contents_enhancedContent_character_encoding = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const SMS_report_sMS_Contents_enhancedContent_character_encoding_eight_bit_ascii = _enum_for_SMS_report_sMS_Contents_enhancedContent_character_encoding.eight_bit_ascii satisfies SMS_report_sMS_Contents_enhancedContent_character_encoding; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary eight_bit_ascii
@@ -177,7 +177,7 @@ const SMS_report_sMS_Contents_enhancedContent_character_encoding_eight_bit_ascii
  * @type {number}
  */
 export
-const eight_bit_ascii: SMS_report_sMS_Contents_enhancedContent_character_encoding = SMS_report_sMS_Contents_enhancedContent_character_encoding_eight_bit_ascii; /* SHORT_NAMED_ENUMERATED_VALUE */
+const eight_bit_ascii = SMS_report_sMS_Contents_enhancedContent_character_encoding_eight_bit_ascii satisfies SMS_report_sMS_Contents_enhancedContent_character_encoding; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SMS_report_sMS_Contents_enhancedContent_character_encoding_eight_bit_binary
@@ -193,7 +193,7 @@ const eight_bit_ascii: SMS_report_sMS_Contents_enhancedContent_character_encodin
  * @type {number}
  */
 export
-const SMS_report_sMS_Contents_enhancedContent_character_encoding_eight_bit_binary: SMS_report_sMS_Contents_enhancedContent_character_encoding = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+const SMS_report_sMS_Contents_enhancedContent_character_encoding_eight_bit_binary = _enum_for_SMS_report_sMS_Contents_enhancedContent_character_encoding.eight_bit_binary satisfies SMS_report_sMS_Contents_enhancedContent_character_encoding; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary eight_bit_binary
@@ -209,7 +209,7 @@ const SMS_report_sMS_Contents_enhancedContent_character_encoding_eight_bit_binar
  * @type {number}
  */
 export
-const eight_bit_binary: SMS_report_sMS_Contents_enhancedContent_character_encoding = SMS_report_sMS_Contents_enhancedContent_character_encoding_eight_bit_binary; /* SHORT_NAMED_ENUMERATED_VALUE */
+const eight_bit_binary = SMS_report_sMS_Contents_enhancedContent_character_encoding_eight_bit_binary satisfies SMS_report_sMS_Contents_enhancedContent_character_encoding; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SMS_report_sMS_Contents_enhancedContent_character_encoding_ucs_2
@@ -225,7 +225,7 @@ const eight_bit_binary: SMS_report_sMS_Contents_enhancedContent_character_encodi
  * @type {number}
  */
 export
-const SMS_report_sMS_Contents_enhancedContent_character_encoding_ucs_2: SMS_report_sMS_Contents_enhancedContent_character_encoding = 3; /* LONG_NAMED_ENUMERATED_VALUE */
+const SMS_report_sMS_Contents_enhancedContent_character_encoding_ucs_2 = _enum_for_SMS_report_sMS_Contents_enhancedContent_character_encoding.ucs_2 satisfies SMS_report_sMS_Contents_enhancedContent_character_encoding; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ucs_2
@@ -241,7 +241,7 @@ const SMS_report_sMS_Contents_enhancedContent_character_encoding_ucs_2: SMS_repo
  * @type {number}
  */
 export
-const ucs_2: SMS_report_sMS_Contents_enhancedContent_character_encoding = SMS_report_sMS_Contents_enhancedContent_character_encoding_ucs_2; /* SHORT_NAMED_ENUMERATED_VALUE */
+const ucs_2 = SMS_report_sMS_Contents_enhancedContent_character_encoding_ucs_2 satisfies SMS_report_sMS_Contents_enhancedContent_character_encoding; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SMS_report_sMS_Contents_enhancedContent_character_encoding_utf_8
@@ -257,7 +257,7 @@ const ucs_2: SMS_report_sMS_Contents_enhancedContent_character_encoding = SMS_re
  * @type {number}
  */
 export
-const SMS_report_sMS_Contents_enhancedContent_character_encoding_utf_8: SMS_report_sMS_Contents_enhancedContent_character_encoding = 4; /* LONG_NAMED_ENUMERATED_VALUE */
+const SMS_report_sMS_Contents_enhancedContent_character_encoding_utf_8 = _enum_for_SMS_report_sMS_Contents_enhancedContent_character_encoding.utf_8 satisfies SMS_report_sMS_Contents_enhancedContent_character_encoding; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary utf_8
@@ -273,7 +273,7 @@ const SMS_report_sMS_Contents_enhancedContent_character_encoding_utf_8: SMS_repo
  * @type {number}
  */
 export
-const utf_8: SMS_report_sMS_Contents_enhancedContent_character_encoding = SMS_report_sMS_Contents_enhancedContent_character_encoding_utf_8; /* SHORT_NAMED_ENUMERATED_VALUE */
+const utf_8 = SMS_report_sMS_Contents_enhancedContent_character_encoding_utf_8 satisfies SMS_report_sMS_Contents_enhancedContent_character_encoding; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SMS_report_sMS_Contents_enhancedContent_character_encoding_utf_16
@@ -289,7 +289,7 @@ const utf_8: SMS_report_sMS_Contents_enhancedContent_character_encoding = SMS_re
  * @type {number}
  */
 export
-const SMS_report_sMS_Contents_enhancedContent_character_encoding_utf_16: SMS_report_sMS_Contents_enhancedContent_character_encoding = 5; /* LONG_NAMED_ENUMERATED_VALUE */
+const SMS_report_sMS_Contents_enhancedContent_character_encoding_utf_16 = _enum_for_SMS_report_sMS_Contents_enhancedContent_character_encoding.utf_16 satisfies SMS_report_sMS_Contents_enhancedContent_character_encoding; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary utf_16
@@ -305,7 +305,7 @@ const SMS_report_sMS_Contents_enhancedContent_character_encoding_utf_16: SMS_rep
  * @type {number}
  */
 export
-const utf_16: SMS_report_sMS_Contents_enhancedContent_character_encoding = SMS_report_sMS_Contents_enhancedContent_character_encoding_utf_16; /* SHORT_NAMED_ENUMERATED_VALUE */
+const utf_16 = SMS_report_sMS_Contents_enhancedContent_character_encoding_utf_16 satisfies SMS_report_sMS_Contents_enhancedContent_character_encoding; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SMS_report_sMS_Contents_enhancedContent_character_encoding_other
@@ -322,7 +322,7 @@ const utf_16: SMS_report_sMS_Contents_enhancedContent_character_encoding = SMS_r
  * @type {number}
  */
 export
-const SMS_report_sMS_Contents_enhancedContent_character_encoding_other: SMS_report_sMS_Contents_enhancedContent_character_encoding = 6; /* LONG_NAMED_ENUMERATED_VALUE */
+const SMS_report_sMS_Contents_enhancedContent_character_encoding_other = _enum_for_SMS_report_sMS_Contents_enhancedContent_character_encoding.other satisfies SMS_report_sMS_Contents_enhancedContent_character_encoding; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary other
@@ -339,7 +339,7 @@ const SMS_report_sMS_Contents_enhancedContent_character_encoding_other: SMS_repo
  * @type {number}
  */
 export
-const other: SMS_report_sMS_Contents_enhancedContent_character_encoding = SMS_report_sMS_Contents_enhancedContent_character_encoding_other; /* SHORT_NAMED_ENUMERATED_VALUE */
+const other = SMS_report_sMS_Contents_enhancedContent_character_encoding_other satisfies SMS_report_sMS_Contents_enhancedContent_character_encoding; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_SMS_report_sMS_Contents_enhancedContent_character_encoding: $.ASN1Decoder<SMS_report_sMS_Contents_enhancedContent_character_encoding> = $._decodeEnumerated;
 export const _encode_SMS_report_sMS_Contents_enhancedContent_character_encoding: $.ASN1Encoder<SMS_report_sMS_Contents_enhancedContent_character_encoding> = $._encodeEnumerated;
 

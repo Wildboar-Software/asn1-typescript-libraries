@@ -101,7 +101,7 @@ const BillingID = _enum_for_BillingID;
  * @type {number}
  */
 export
-const BillingID_normalCharging: BillingID = BillingID.normalCharging; /* LONG_NAMED_ENUMERATED_VALUE */
+const BillingID_normalCharging = BillingID.normalCharging satisfies BillingID; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary normalCharging
@@ -109,7 +109,7 @@ const BillingID_normalCharging: BillingID = BillingID.normalCharging; /* LONG_NA
  * @type {number}
  */
 export
-const normalCharging: BillingID = BillingID.normalCharging; /* SHORT_NAMED_ENUMERATED_VALUE */
+const normalCharging = BillingID.normalCharging satisfies BillingID; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary BillingID_reverseCharging
@@ -121,7 +121,7 @@ const normalCharging: BillingID = BillingID.normalCharging; /* SHORT_NAMED_ENUME
  * @type {number}
  */
 export
-const BillingID_reverseCharging: BillingID = BillingID.reverseCharging; /* LONG_NAMED_ENUMERATED_VALUE */
+const BillingID_reverseCharging = BillingID.reverseCharging satisfies BillingID; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary reverseCharging
@@ -129,7 +129,7 @@ const BillingID_reverseCharging: BillingID = BillingID.reverseCharging; /* LONG_
  * @type {number}
  */
 export
-const reverseCharging: BillingID = BillingID.reverseCharging; /* SHORT_NAMED_ENUMERATED_VALUE */
+const reverseCharging = BillingID.reverseCharging satisfies BillingID; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary BillingID_creditCardCharging
@@ -141,7 +141,7 @@ const reverseCharging: BillingID = BillingID.reverseCharging; /* SHORT_NAMED_ENU
  * @type {number}
  */
 export
-const BillingID_creditCardCharging: BillingID = BillingID.creditCardCharging; /* LONG_NAMED_ENUMERATED_VALUE */
+const BillingID_creditCardCharging = BillingID.creditCardCharging satisfies BillingID; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary creditCardCharging
@@ -149,7 +149,7 @@ const BillingID_creditCardCharging: BillingID = BillingID.creditCardCharging; /*
  * @type {number}
  */
 export
-const creditCardCharging: BillingID = BillingID.creditCardCharging; /* SHORT_NAMED_ENUMERATED_VALUE */
+const creditCardCharging = BillingID.creditCardCharging satisfies BillingID; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary BillingID_callForwarding
@@ -161,7 +161,7 @@ const creditCardCharging: BillingID = BillingID.creditCardCharging; /* SHORT_NAM
  * @type {number}
  */
 export
-const BillingID_callForwarding: BillingID = BillingID.callForwarding; /* LONG_NAMED_ENUMERATED_VALUE */
+const BillingID_callForwarding = BillingID.callForwarding satisfies BillingID; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary callForwarding
@@ -169,7 +169,7 @@ const BillingID_callForwarding: BillingID = BillingID.callForwarding; /* LONG_NA
  * @type {number}
  */
 export
-const callForwarding: BillingID = BillingID.callForwarding; /* SHORT_NAMED_ENUMERATED_VALUE */
+const callForwarding = BillingID.callForwarding satisfies BillingID; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary BillingID_callDeflection
@@ -181,7 +181,7 @@ const callForwarding: BillingID = BillingID.callForwarding; /* SHORT_NAMED_ENUME
  * @type {number}
  */
 export
-const BillingID_callDeflection: BillingID = BillingID.callDeflection; /* LONG_NAMED_ENUMERATED_VALUE */
+const BillingID_callDeflection = BillingID.callDeflection satisfies BillingID; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary callDeflection
@@ -189,7 +189,7 @@ const BillingID_callDeflection: BillingID = BillingID.callDeflection; /* LONG_NA
  * @type {number}
  */
 export
-const callDeflection: BillingID = BillingID.callDeflection; /* SHORT_NAMED_ENUMERATED_VALUE */
+const callDeflection = BillingID.callDeflection satisfies BillingID; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary BillingID_callTransfer
@@ -201,7 +201,7 @@ const callDeflection: BillingID = BillingID.callDeflection; /* SHORT_NAMED_ENUME
  * @type {number}
  */
 export
-const BillingID_callTransfer: BillingID = BillingID.callTransfer; /* LONG_NAMED_ENUMERATED_VALUE */
+const BillingID_callTransfer = BillingID.callTransfer satisfies BillingID; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary callTransfer
@@ -209,7 +209,7 @@ const BillingID_callTransfer: BillingID = BillingID.callTransfer; /* LONG_NAMED_
  * @type {number}
  */
 export
-const callTransfer: BillingID = BillingID.callTransfer; /* SHORT_NAMED_ENUMERATED_VALUE */
+const callTransfer = BillingID.callTransfer satisfies BillingID; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary BillingID_other
@@ -221,7 +221,7 @@ const callTransfer: BillingID = BillingID.callTransfer; /* SHORT_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const BillingID_other: BillingID = BillingID.other; /* LONG_NAMED_ENUMERATED_VALUE */
+const BillingID_other = BillingID.other satisfies BillingID; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary other
@@ -229,7 +229,7 @@ const BillingID_other: BillingID = BillingID.other; /* LONG_NAMED_ENUMERATED_VAL
  * @type {number}
  */
 export
-const other: BillingID = BillingID.other; /* SHORT_NAMED_ENUMERATED_VALUE */
+const other = BillingID.other satisfies BillingID; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 let _cached_decoder_for_BillingID: $.ASN1Decoder<BillingID> | null = null;
 

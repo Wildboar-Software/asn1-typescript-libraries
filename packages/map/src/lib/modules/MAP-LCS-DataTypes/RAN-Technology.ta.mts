@@ -43,7 +43,7 @@ type RAN_Technology = _enum_for_RAN_Technology | ENUMERATED;
  * @type {number}
  */
 export
-const RAN_Technology_gsm: RAN_Technology = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+const RAN_Technology_gsm = _enum_for_RAN_Technology.gsm satisfies RAN_Technology; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary gsm
@@ -55,7 +55,7 @@ const RAN_Technology_gsm: RAN_Technology = 0; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const gsm: RAN_Technology = RAN_Technology_gsm; /* SHORT_NAMED_ENUMERATED_VALUE */
+const gsm = RAN_Technology_gsm satisfies RAN_Technology; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RAN_Technology_umts
@@ -67,7 +67,7 @@ const gsm: RAN_Technology = RAN_Technology_gsm; /* SHORT_NAMED_ENUMERATED_VALUE 
  * @type {number}
  */
 export
-const RAN_Technology_umts: RAN_Technology = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const RAN_Technology_umts = _enum_for_RAN_Technology.umts satisfies RAN_Technology; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary umts
@@ -79,7 +79,7 @@ const RAN_Technology_umts: RAN_Technology = 1; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const umts: RAN_Technology = RAN_Technology_umts; /* SHORT_NAMED_ENUMERATED_VALUE */
+const umts = RAN_Technology_umts satisfies RAN_Technology; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) RAN_Technology

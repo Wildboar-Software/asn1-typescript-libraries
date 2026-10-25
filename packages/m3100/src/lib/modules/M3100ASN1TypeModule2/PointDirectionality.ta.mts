@@ -66,8 +66,8 @@ export const PointDirectionality = _enum_for_PointDirectionality;
  * @constant
  * @type {number}
  */
-export const PointDirectionality_sink: PointDirectionality =
-    PointDirectionality.sink; /* LONG_NAMED_ENUMERATED_VALUE */
+export const PointDirectionality_sink =
+    PointDirectionality.sink satisfies PointDirectionality; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -75,8 +75,8 @@ export const PointDirectionality_sink: PointDirectionality =
  * @constant
  * @type {number}
  */
-export const sink: PointDirectionality =
-    PointDirectionality.sink; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const sink =
+    PointDirectionality.sink satisfies PointDirectionality; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -84,8 +84,8 @@ export const sink: PointDirectionality =
  * @constant
  * @type {number}
  */
-export const PointDirectionality_source: PointDirectionality =
-    PointDirectionality.source; /* LONG_NAMED_ENUMERATED_VALUE */
+export const PointDirectionality_source =
+    PointDirectionality.source satisfies PointDirectionality; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -93,8 +93,8 @@ export const PointDirectionality_source: PointDirectionality =
  * @constant
  * @type {number}
  */
-export const source: PointDirectionality =
-    PointDirectionality.source; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const source =
+    PointDirectionality.source satisfies PointDirectionality; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -102,8 +102,8 @@ export const source: PointDirectionality =
  * @constant
  * @type {number}
  */
-export const PointDirectionality_bidirectional: PointDirectionality =
-    PointDirectionality.bidirectional; /* LONG_NAMED_ENUMERATED_VALUE */
+export const PointDirectionality_bidirectional =
+    PointDirectionality.bidirectional satisfies PointDirectionality; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -111,8 +111,8 @@ export const PointDirectionality_bidirectional: PointDirectionality =
  * @constant
  * @type {number}
  */
-export const bidirectional: PointDirectionality =
-    PointDirectionality.bidirectional; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const bidirectional =
+    PointDirectionality.bidirectional satisfies PointDirectionality; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 

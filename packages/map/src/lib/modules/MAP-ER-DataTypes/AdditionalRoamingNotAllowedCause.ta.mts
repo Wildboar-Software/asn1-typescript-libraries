@@ -43,7 +43,7 @@ type AdditionalRoamingNotAllowedCause = _enum_for_AdditionalRoamingNotAllowedCau
  * @type {number}
  */
 export
-const AdditionalRoamingNotAllowedCause_supportedRAT_TypesNotAllowed: AdditionalRoamingNotAllowedCause = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+const AdditionalRoamingNotAllowedCause_supportedRAT_TypesNotAllowed = _enum_for_AdditionalRoamingNotAllowedCause.supportedRAT_TypesNotAllowed satisfies AdditionalRoamingNotAllowedCause; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary supportedRAT_TypesNotAllowed
@@ -55,7 +55,7 @@ const AdditionalRoamingNotAllowedCause_supportedRAT_TypesNotAllowed: AdditionalR
  * @type {number}
  */
 export
-const supportedRAT_TypesNotAllowed: AdditionalRoamingNotAllowedCause = AdditionalRoamingNotAllowedCause_supportedRAT_TypesNotAllowed; /* SHORT_NAMED_ENUMERATED_VALUE */
+const supportedRAT_TypesNotAllowed = AdditionalRoamingNotAllowedCause_supportedRAT_TypesNotAllowed satisfies AdditionalRoamingNotAllowedCause; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) AdditionalRoamingNotAllowedCause

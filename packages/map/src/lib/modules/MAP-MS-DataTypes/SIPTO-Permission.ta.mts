@@ -84,7 +84,7 @@ const SIPTO_Permission = _enum_for_SIPTO_Permission;
  * @type {number}
  */
 export
-const SIPTO_Permission_siptoAboveRanAllowed: SIPTO_Permission = SIPTO_Permission.siptoAboveRanAllowed; /* LONG_NAMED_ENUMERATED_VALUE */
+const SIPTO_Permission_siptoAboveRanAllowed = SIPTO_Permission.siptoAboveRanAllowed satisfies SIPTO_Permission; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary siptoAboveRanAllowed
@@ -92,7 +92,7 @@ const SIPTO_Permission_siptoAboveRanAllowed: SIPTO_Permission = SIPTO_Permission
  * @type {number}
  */
 export
-const siptoAboveRanAllowed: SIPTO_Permission = SIPTO_Permission.siptoAboveRanAllowed; /* SHORT_NAMED_ENUMERATED_VALUE */
+const siptoAboveRanAllowed = SIPTO_Permission.siptoAboveRanAllowed satisfies SIPTO_Permission; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SIPTO_Permission_siptoAboveRanNotAllowed
@@ -100,7 +100,7 @@ const siptoAboveRanAllowed: SIPTO_Permission = SIPTO_Permission.siptoAboveRanAll
  * @type {number}
  */
 export
-const SIPTO_Permission_siptoAboveRanNotAllowed: SIPTO_Permission = SIPTO_Permission.siptoAboveRanNotAllowed; /* LONG_NAMED_ENUMERATED_VALUE */
+const SIPTO_Permission_siptoAboveRanNotAllowed = SIPTO_Permission.siptoAboveRanNotAllowed satisfies SIPTO_Permission; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary siptoAboveRanNotAllowed
@@ -108,7 +108,7 @@ const SIPTO_Permission_siptoAboveRanNotAllowed: SIPTO_Permission = SIPTO_Permiss
  * @type {number}
  */
 export
-const siptoAboveRanNotAllowed: SIPTO_Permission = SIPTO_Permission.siptoAboveRanNotAllowed; /* SHORT_NAMED_ENUMERATED_VALUE */
+const siptoAboveRanNotAllowed = SIPTO_Permission.siptoAboveRanNotAllowed satisfies SIPTO_Permission; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) SIPTO_Permission

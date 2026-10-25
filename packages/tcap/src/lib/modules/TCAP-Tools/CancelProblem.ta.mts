@@ -65,48 +65,48 @@ export const CancelProblem = _enum_for_CancelProblem;
  * @constant
  * @type {number}
  */
-export const CancelProblem_unknownInvocation: CancelProblem =
-  CancelProblem.unknownInvocation; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CancelProblem_unknownInvocation =
+  CancelProblem.unknownInvocation satisfies CancelProblem; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unknownInvocation
  * @constant
  * @type {number}
  */
-export const unknownInvocation: CancelProblem =
-  CancelProblem.unknownInvocation; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const unknownInvocation =
+  CancelProblem.unknownInvocation satisfies CancelProblem; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CancelProblem_tooLate
  * @constant
  * @type {number}
  */
-export const CancelProblem_tooLate: CancelProblem =
-  CancelProblem.tooLate; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CancelProblem_tooLate =
+  CancelProblem.tooLate satisfies CancelProblem; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tooLate
  * @constant
  * @type {number}
  */
-export const tooLate: CancelProblem =
-  CancelProblem.tooLate; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const tooLate =
+  CancelProblem.tooLate satisfies CancelProblem; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CancelProblem_notCancellable
  * @constant
  * @type {number}
  */
-export const CancelProblem_notCancellable: CancelProblem =
-  CancelProblem.notCancellable; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CancelProblem_notCancellable =
+  CancelProblem.notCancellable satisfies CancelProblem; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary notCancellable
  * @constant
  * @type {number}
  */
-export const notCancellable: CancelProblem =
-  CancelProblem.notCancellable; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const notCancellable =
+  CancelProblem.notCancellable satisfies CancelProblem; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 export const _decode_CancelProblem = $._decodeEnumerated;

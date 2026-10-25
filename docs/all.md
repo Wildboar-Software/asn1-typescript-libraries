@@ -79,15 +79,22 @@ gets compiled to:
 
 ```typescript
 export type AbandonProblem = INTEGER;
-export const AbandonProblem_noSuchOperation: AbandonProblem = 1;
-export const noSuchOperation: AbandonProblem = AbandonProblem_noSuchOperation;
-export const AbandonProblem_tooLate: AbandonProblem = 2;
-export const tooLate: AbandonProblem = AbandonProblem_tooLate;
-export const AbandonProblem_cannotAbandon: AbandonProblem = 3;
-export const cannotAbandon: AbandonProblem = AbandonProblem_cannotAbandon;
+export const AbandonProblem_noSuchOperation = 1 satisfies AbandonProblem;
+export const noSuchOperation = AbandonProblem_noSuchOperation satisfies AbandonProblem;
+export const AbandonProblem_tooLate = 2 satisfies AbandonProblem;
+export const tooLate = AbandonProblem_tooLate satisfies AbandonProblem;
+export const AbandonProblem_cannotAbandon = 3 satisfies AbandonProblem;
+export const cannotAbandon = AbandonProblem_cannotAbandon satisfies AbandonProblem;
 ```
 
 (Note that the above was cleaned up a bit for readability.)
+
+`satisfies` checks that the literal is a value of the integer type, and the
+constant keeps that literal type. A named number such as `1` is a `number`, so
+callers can pass it where a `number` is required. The alias stays `INTEGER`
+(`number | bigint`): a named number list does not restrict the value set, and a
+decoded integer may still be a `bigint`. A named number that does not fit in a
+safe integer is emitted as a `bigint` literal instead.
 
 ### Bit Strings
 
@@ -155,12 +162,12 @@ export enum _enum_for_ObjectClassKind {
 }
 export type ObjectClassKind = _enum_for_ObjectClassKind;
 export const ObjectClassKind = _enum_for_ObjectClassKind;
-export const ObjectClassKind_abstract: ObjectClassKind = ObjectClassKind.abstract;
-export const abstract: ObjectClassKind = ObjectClassKind.abstract;
-export const ObjectClassKind_structural: ObjectClassKind = ObjectClassKind.structural;
-export const structural: ObjectClassKind = ObjectClassKind.structural;
-export const ObjectClassKind_auxiliary: ObjectClassKind = ObjectClassKind.auxiliary;
-export const auxiliary: ObjectClassKind = ObjectClassKind.auxiliary;
+export const ObjectClassKind_abstract = ObjectClassKind.abstract satisfies ObjectClassKind;
+export const abstract = ObjectClassKind.abstract satisfies ObjectClassKind;
+export const ObjectClassKind_structural = ObjectClassKind.structural satisfies ObjectClassKind;
+export const structural = ObjectClassKind.structural satisfies ObjectClassKind;
+export const ObjectClassKind_auxiliary = ObjectClassKind.auxiliary satisfies ObjectClassKind;
+export const auxiliary = ObjectClassKind.auxiliary satisfies ObjectClassKind;
 ```
 
 (Note that the above was cleaned up a bit for readability.)
@@ -180,15 +187,22 @@ export enum _enum_for_AVMPversion {
     v3 = 3,
 }
 export type AVMPversion = _enum_for_AVMPversion | ENUMERATED; // <- This is the key difference.
-export const AVMPversion_v1: AVMPversion = 1;
-export const v1: AVMPversion = AVMPversion_v1;
-export const AVMPversion_v2: AVMPversion = 2;
-export const v2: AVMPversion = AVMPversion_v2;
-export const AVMPversion_v3: AVMPversion = 3;
-export const v3: AVMPversion = AVMPversion_v3;
+export const AVMPversion_v1 = _enum_for_AVMPversion.v1 satisfies AVMPversion;
+export const v1 = AVMPversion_v1 satisfies AVMPversion;
+export const AVMPversion_v2 = _enum_for_AVMPversion.v2 satisfies AVMPversion;
+export const v2 = AVMPversion_v2 satisfies AVMPversion;
+export const AVMPversion_v3 = _enum_for_AVMPversion.v3 satisfies AVMPversion;
+export const v3 = AVMPversion_v3 satisfies AVMPversion;
 ```
 
 (Note that the above was cleaned up a bit for readability.)
+
+`satisfies` keeps each named constant typed as that enum member. Comparing a
+value with the constant then narrows to the member. Annotating the constant as
+the whole enum (or as `enum | ENUMERATED`, which reduces to `number`) would
+discard that. The type alias itself is unchanged: a non-extensible enumeration
+is only the enum, and an extensible one is still the enum unioned with
+`ENUMERATED` so a later alternative still typechecks.
 
 ### Structured Types
 

@@ -30,7 +30,7 @@ type TransitCallRecord_lrnSoInd = INTEGER;
  * @type {number}
  */
 export
-const TransitCallRecord_lrnSoInd_lRN_NP_Database: TransitCallRecord_lrnSoInd = 1; /* LONG_NAMED_INTEGER_VALUE */
+const TransitCallRecord_lrnSoInd_lRN_NP_Database = 1 satisfies TransitCallRecord_lrnSoInd; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TransitCallRecord_lrnSoInd_lRN_NP_Database
@@ -38,7 +38,7 @@ const TransitCallRecord_lrnSoInd_lRN_NP_Database: TransitCallRecord_lrnSoInd = 1
  * @type {number}
  */
 export
-const lRN_NP_Database: TransitCallRecord_lrnSoInd = TransitCallRecord_lrnSoInd_lRN_NP_Database; /* SHORT_NAMED_INTEGER_VALUE */
+const lRN_NP_Database = TransitCallRecord_lrnSoInd_lRN_NP_Database satisfies TransitCallRecord_lrnSoInd; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TransitCallRecord_lrnSoInd_switchingSystemData
@@ -46,7 +46,7 @@ const lRN_NP_Database: TransitCallRecord_lrnSoInd = TransitCallRecord_lrnSoInd_l
  * @type {number}
  */
 export
-const TransitCallRecord_lrnSoInd_switchingSystemData: TransitCallRecord_lrnSoInd = 2; /* LONG_NAMED_INTEGER_VALUE */
+const TransitCallRecord_lrnSoInd_switchingSystemData = 2 satisfies TransitCallRecord_lrnSoInd; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TransitCallRecord_lrnSoInd_switchingSystemData
@@ -54,7 +54,7 @@ const TransitCallRecord_lrnSoInd_switchingSystemData: TransitCallRecord_lrnSoInd
  * @type {number}
  */
 export
-const switchingSystemData: TransitCallRecord_lrnSoInd = TransitCallRecord_lrnSoInd_switchingSystemData; /* SHORT_NAMED_INTEGER_VALUE */
+const switchingSystemData = TransitCallRecord_lrnSoInd_switchingSystemData satisfies TransitCallRecord_lrnSoInd; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TransitCallRecord_lrnSoInd_incomingsignaling
@@ -62,7 +62,7 @@ const switchingSystemData: TransitCallRecord_lrnSoInd = TransitCallRecord_lrnSoI
  * @type {number}
  */
 export
-const TransitCallRecord_lrnSoInd_incomingsignaling: TransitCallRecord_lrnSoInd = 3; /* LONG_NAMED_INTEGER_VALUE */
+const TransitCallRecord_lrnSoInd_incomingsignaling = 3 satisfies TransitCallRecord_lrnSoInd; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TransitCallRecord_lrnSoInd_incomingsignaling
@@ -70,7 +70,7 @@ const TransitCallRecord_lrnSoInd_incomingsignaling: TransitCallRecord_lrnSoInd =
  * @type {number}
  */
 export
-const incomingsignaling: TransitCallRecord_lrnSoInd = TransitCallRecord_lrnSoInd_incomingsignaling; /* SHORT_NAMED_INTEGER_VALUE */
+const incomingsignaling = TransitCallRecord_lrnSoInd_incomingsignaling satisfies TransitCallRecord_lrnSoInd; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TransitCallRecord_lrnSoInd_unknown
@@ -78,7 +78,7 @@ const incomingsignaling: TransitCallRecord_lrnSoInd = TransitCallRecord_lrnSoInd
  * @type {number}
  */
 export
-const TransitCallRecord_lrnSoInd_unknown: TransitCallRecord_lrnSoInd = 9; /* LONG_NAMED_INTEGER_VALUE */
+const TransitCallRecord_lrnSoInd_unknown = 9 satisfies TransitCallRecord_lrnSoInd; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TransitCallRecord_lrnSoInd_unknown
@@ -86,7 +86,7 @@ const TransitCallRecord_lrnSoInd_unknown: TransitCallRecord_lrnSoInd = 9; /* LON
  * @type {number}
  */
 export
-const unknown: TransitCallRecord_lrnSoInd = TransitCallRecord_lrnSoInd_unknown; /* SHORT_NAMED_INTEGER_VALUE */
+const unknown = TransitCallRecord_lrnSoInd_unknown satisfies TransitCallRecord_lrnSoInd; /* SHORT_NAMED_INTEGER_VALUE */
 
 export
 const _decode_TransitCallRecord_lrnSoInd: $.ASN1Decoder<TransitCallRecord_lrnSoInd> = $._decodeInteger;

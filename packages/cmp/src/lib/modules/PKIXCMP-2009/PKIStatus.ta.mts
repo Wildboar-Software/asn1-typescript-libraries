@@ -61,7 +61,7 @@ export type PKIStatus = INTEGER;
  * @constant
  * @type {number}
  */
-export const PKIStatus_accepted: PKIStatus = 0; /* LONG_NAMED_INTEGER_VALUE */
+export const PKIStatus_accepted = 0 satisfies PKIStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -74,7 +74,7 @@ export const PKIStatus_accepted: PKIStatus = 0; /* LONG_NAMED_INTEGER_VALUE */
  * @constant
  * @type {number}
  */
-export const accepted: PKIStatus = PKIStatus_accepted; /* SHORT_NAMED_INTEGER_VALUE */
+export const accepted = PKIStatus_accepted satisfies PKIStatus; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -88,7 +88,7 @@ export const accepted: PKIStatus = PKIStatus_accepted; /* SHORT_NAMED_INTEGER_VA
  * @constant
  * @type {number}
  */
-export const PKIStatus_grantedWithMods: PKIStatus = 1; /* LONG_NAMED_INTEGER_VALUE */
+export const PKIStatus_grantedWithMods = 1 satisfies PKIStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -102,7 +102,7 @@ export const PKIStatus_grantedWithMods: PKIStatus = 1; /* LONG_NAMED_INTEGER_VAL
  * @constant
  * @type {number}
  */
-export const grantedWithMods: PKIStatus = PKIStatus_grantedWithMods; /* SHORT_NAMED_INTEGER_VALUE */
+export const grantedWithMods = PKIStatus_grantedWithMods satisfies PKIStatus; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -115,7 +115,7 @@ export const grantedWithMods: PKIStatus = PKIStatus_grantedWithMods; /* SHORT_NA
  * @constant
  * @type {number}
  */
-export const PKIStatus_rejection: PKIStatus = 2; /* LONG_NAMED_INTEGER_VALUE */
+export const PKIStatus_rejection = 2 satisfies PKIStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -128,7 +128,7 @@ export const PKIStatus_rejection: PKIStatus = 2; /* LONG_NAMED_INTEGER_VALUE */
  * @constant
  * @type {number}
  */
-export const rejection: PKIStatus = PKIStatus_rejection; /* SHORT_NAMED_INTEGER_VALUE */
+export const rejection = PKIStatus_rejection satisfies PKIStatus; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -142,7 +142,7 @@ export const rejection: PKIStatus = PKIStatus_rejection; /* SHORT_NAMED_INTEGER_
  * @constant
  * @type {number}
  */
-export const PKIStatus_waiting: PKIStatus = 3; /* LONG_NAMED_INTEGER_VALUE */
+export const PKIStatus_waiting = 3 satisfies PKIStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -156,7 +156,7 @@ export const PKIStatus_waiting: PKIStatus = 3; /* LONG_NAMED_INTEGER_VALUE */
  * @constant
  * @type {number}
  */
-export const waiting: PKIStatus = PKIStatus_waiting; /* SHORT_NAMED_INTEGER_VALUE */
+export const waiting = PKIStatus_waiting satisfies PKIStatus; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -169,7 +169,7 @@ export const waiting: PKIStatus = PKIStatus_waiting; /* SHORT_NAMED_INTEGER_VALU
  * @constant
  * @type {number}
  */
-export const PKIStatus_revocationWarning: PKIStatus = 4; /* LONG_NAMED_INTEGER_VALUE */
+export const PKIStatus_revocationWarning = 4 satisfies PKIStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -182,7 +182,7 @@ export const PKIStatus_revocationWarning: PKIStatus = 4; /* LONG_NAMED_INTEGER_V
  * @constant
  * @type {number}
  */
-export const revocationWarning: PKIStatus = PKIStatus_revocationWarning; /* SHORT_NAMED_INTEGER_VALUE */
+export const revocationWarning = PKIStatus_revocationWarning satisfies PKIStatus; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -195,7 +195,7 @@ export const revocationWarning: PKIStatus = PKIStatus_revocationWarning; /* SHOR
  * @constant
  * @type {number}
  */
-export const PKIStatus_revocationNotification: PKIStatus = 5; /* LONG_NAMED_INTEGER_VALUE */
+export const PKIStatus_revocationNotification = 5 satisfies PKIStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -208,7 +208,7 @@ export const PKIStatus_revocationNotification: PKIStatus = 5; /* LONG_NAMED_INTE
  * @constant
  * @type {number}
  */
-export const revocationNotification: PKIStatus = PKIStatus_revocationNotification; /* SHORT_NAMED_INTEGER_VALUE */
+export const revocationNotification = PKIStatus_revocationNotification satisfies PKIStatus; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -221,7 +221,7 @@ export const revocationNotification: PKIStatus = PKIStatus_revocationNotificatio
  * @constant
  * @type {number}
  */
-export const PKIStatus_keyUpdateWarning: PKIStatus = 6; /* LONG_NAMED_INTEGER_VALUE */
+export const PKIStatus_keyUpdateWarning = 6 satisfies PKIStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -234,7 +234,7 @@ export const PKIStatus_keyUpdateWarning: PKIStatus = 6; /* LONG_NAMED_INTEGER_VA
  * @constant
  * @type {number}
  */
-export const keyUpdateWarning: PKIStatus = PKIStatus_keyUpdateWarning; /* SHORT_NAMED_INTEGER_VALUE */
+export const keyUpdateWarning = PKIStatus_keyUpdateWarning satisfies PKIStatus; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 

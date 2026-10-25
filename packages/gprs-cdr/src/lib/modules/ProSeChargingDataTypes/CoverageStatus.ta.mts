@@ -92,7 +92,7 @@ const CoverageStatus = _enum_for_CoverageStatus;
  * @type {number}
  */
 export
-const CoverageStatus_outOfCoverage: CoverageStatus = CoverageStatus.outOfCoverage; /* LONG_NAMED_ENUMERATED_VALUE */
+const CoverageStatus_outOfCoverage = CoverageStatus.outOfCoverage satisfies CoverageStatus; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary outOfCoverage
@@ -104,7 +104,7 @@ const CoverageStatus_outOfCoverage: CoverageStatus = CoverageStatus.outOfCoverag
  * @type {number}
  */
 export
-const outOfCoverage: CoverageStatus = CoverageStatus.outOfCoverage; /* SHORT_NAMED_ENUMERATED_VALUE */
+const outOfCoverage = CoverageStatus.outOfCoverage satisfies CoverageStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CoverageStatus_inCoverage
@@ -119,7 +119,7 @@ const outOfCoverage: CoverageStatus = CoverageStatus.outOfCoverage; /* SHORT_NAM
  * @type {number}
  */
 export
-const CoverageStatus_inCoverage: CoverageStatus = CoverageStatus.inCoverage; /* LONG_NAMED_ENUMERATED_VALUE */
+const CoverageStatus_inCoverage = CoverageStatus.inCoverage satisfies CoverageStatus; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary inCoverage
@@ -131,7 +131,7 @@ const CoverageStatus_inCoverage: CoverageStatus = CoverageStatus.inCoverage; /* 
  * @type {number}
  */
 export
-const inCoverage: CoverageStatus = CoverageStatus.inCoverage; /* SHORT_NAMED_ENUMERATED_VALUE */
+const inCoverage = CoverageStatus.inCoverage satisfies CoverageStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_CoverageStatus: $.ASN1Decoder<CoverageStatus> = $._decodeEnumerated;

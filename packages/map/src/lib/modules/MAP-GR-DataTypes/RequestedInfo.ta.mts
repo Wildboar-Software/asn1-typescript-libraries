@@ -46,7 +46,7 @@ type RequestedInfo = _enum_for_RequestedInfo | ENUMERATED;
  * @type {number}
  */
 export
-const RequestedInfo_anchorMSC_AddressAndASCI_CallReference: RequestedInfo = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+const RequestedInfo_anchorMSC_AddressAndASCI_CallReference = _enum_for_RequestedInfo.anchorMSC_AddressAndASCI_CallReference satisfies RequestedInfo; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary anchorMSC_AddressAndASCI_CallReference
@@ -59,7 +59,7 @@ const RequestedInfo_anchorMSC_AddressAndASCI_CallReference: RequestedInfo = 0; /
  * @type {number}
  */
 export
-const anchorMSC_AddressAndASCI_CallReference: RequestedInfo = RequestedInfo_anchorMSC_AddressAndASCI_CallReference; /* SHORT_NAMED_ENUMERATED_VALUE */
+const anchorMSC_AddressAndASCI_CallReference = RequestedInfo_anchorMSC_AddressAndASCI_CallReference satisfies RequestedInfo; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RequestedInfo_imsiAndAdditionalInfoAndAdditionalSubscription
@@ -72,7 +72,7 @@ const anchorMSC_AddressAndASCI_CallReference: RequestedInfo = RequestedInfo_anch
  * @type {number}
  */
 export
-const RequestedInfo_imsiAndAdditionalInfoAndAdditionalSubscription: RequestedInfo = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const RequestedInfo_imsiAndAdditionalInfoAndAdditionalSubscription = _enum_for_RequestedInfo.imsiAndAdditionalInfoAndAdditionalSubscription satisfies RequestedInfo; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary imsiAndAdditionalInfoAndAdditionalSubscription
@@ -85,7 +85,7 @@ const RequestedInfo_imsiAndAdditionalInfoAndAdditionalSubscription: RequestedInf
  * @type {number}
  */
 export
-const imsiAndAdditionalInfoAndAdditionalSubscription: RequestedInfo = RequestedInfo_imsiAndAdditionalInfoAndAdditionalSubscription; /* SHORT_NAMED_ENUMERATED_VALUE */
+const imsiAndAdditionalInfoAndAdditionalSubscription = RequestedInfo_imsiAndAdditionalInfoAndAdditionalSubscription satisfies RequestedInfo; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) RequestedInfo

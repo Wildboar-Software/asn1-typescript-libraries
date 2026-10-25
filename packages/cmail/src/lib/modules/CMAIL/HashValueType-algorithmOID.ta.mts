@@ -78,8 +78,8 @@ export const HashValueType_algorithmOID = _enum_for_HashValueType_algorithmOID;
  * @constant
  * @type {number}
  */
-export const HashValueType_algorithmOID_sha_1: HashValueType_algorithmOID =
-  HashValueType_algorithmOID.sha_1; /* LONG_NAMED_ENUMERATED_VALUE */
+export const HashValueType_algorithmOID_sha_1 =
+  HashValueType_algorithmOID.sha_1 satisfies HashValueType_algorithmOID; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -88,8 +88,8 @@ export const HashValueType_algorithmOID_sha_1: HashValueType_algorithmOID =
  * @constant
  * @type {number}
  */
-export const sha_1: HashValueType_algorithmOID =
-  HashValueType_algorithmOID.sha_1; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const sha_1 =
+  HashValueType_algorithmOID.sha_1 satisfies HashValueType_algorithmOID; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -98,8 +98,8 @@ export const sha_1: HashValueType_algorithmOID =
  * @constant
  * @type {number}
  */
-export const HashValueType_algorithmOID_sha_256: HashValueType_algorithmOID =
-  HashValueType_algorithmOID.sha_256; /* LONG_NAMED_ENUMERATED_VALUE */
+export const HashValueType_algorithmOID_sha_256 =
+  HashValueType_algorithmOID.sha_256 satisfies HashValueType_algorithmOID; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -108,8 +108,8 @@ export const HashValueType_algorithmOID_sha_256: HashValueType_algorithmOID =
  * @constant
  * @type {number}
  */
-export const sha_256: HashValueType_algorithmOID =
-  HashValueType_algorithmOID.sha_256; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const sha_256 =
+  HashValueType_algorithmOID.sha_256 satisfies HashValueType_algorithmOID; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 

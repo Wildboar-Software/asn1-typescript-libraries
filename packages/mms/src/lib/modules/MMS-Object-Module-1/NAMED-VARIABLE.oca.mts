@@ -176,7 +176,7 @@ const NAMED_VARIABLE_accessMethod = _enum_for_NAMED_VARIABLE_accessMethod;
  * @type {number}
  */
 export
-const NAMED_VARIABLE_accessMethod_public: NAMED_VARIABLE_accessMethod = NAMED_VARIABLE_accessMethod.public; /* LONG_NAMED_ENUMERATED_VALUE */
+const NAMED_VARIABLE_accessMethod_public = NAMED_VARIABLE_accessMethod.public satisfies NAMED_VARIABLE_accessMethod; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NAMED_VARIABLE_accessMethod_anythingElse
@@ -184,7 +184,7 @@ const NAMED_VARIABLE_accessMethod_public: NAMED_VARIABLE_accessMethod = NAMED_VA
  * @type {number}
  */
 export
-const NAMED_VARIABLE_accessMethod_anythingElse: NAMED_VARIABLE_accessMethod = NAMED_VARIABLE_accessMethod.anythingElse; /* LONG_NAMED_ENUMERATED_VALUE */
+const NAMED_VARIABLE_accessMethod_anythingElse = NAMED_VARIABLE_accessMethod.anythingElse satisfies NAMED_VARIABLE_accessMethod; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary anythingElse
@@ -192,6 +192,6 @@ const NAMED_VARIABLE_accessMethod_anythingElse: NAMED_VARIABLE_accessMethod = NA
  * @type {number}
  */
 export
-const anythingElse: NAMED_VARIABLE_accessMethod = NAMED_VARIABLE_accessMethod.anythingElse; /* SHORT_NAMED_ENUMERATED_VALUE */
+const anythingElse = NAMED_VARIABLE_accessMethod.anythingElse satisfies NAMED_VARIABLE_accessMethod; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /* eslint-enable */

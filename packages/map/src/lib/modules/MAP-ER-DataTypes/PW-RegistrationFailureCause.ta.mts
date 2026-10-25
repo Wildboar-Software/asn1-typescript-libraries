@@ -87,7 +87,7 @@ const PW_RegistrationFailureCause = _enum_for_PW_RegistrationFailureCause;
  * @type {number}
  */
 export
-const PW_RegistrationFailureCause_undetermined: PW_RegistrationFailureCause = PW_RegistrationFailureCause.undetermined; /* LONG_NAMED_ENUMERATED_VALUE */
+const PW_RegistrationFailureCause_undetermined = PW_RegistrationFailureCause.undetermined satisfies PW_RegistrationFailureCause; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary undetermined
@@ -100,7 +100,7 @@ const PW_RegistrationFailureCause_undetermined: PW_RegistrationFailureCause = PW
  * @type {number}
  */
 export
-const undetermined: PW_RegistrationFailureCause = PW_RegistrationFailureCause.undetermined; /* SHORT_NAMED_ENUMERATED_VALUE */
+const undetermined = PW_RegistrationFailureCause.undetermined satisfies PW_RegistrationFailureCause; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PW_RegistrationFailureCause_invalidFormat
@@ -113,7 +113,7 @@ const undetermined: PW_RegistrationFailureCause = PW_RegistrationFailureCause.un
  * @type {number}
  */
 export
-const PW_RegistrationFailureCause_invalidFormat: PW_RegistrationFailureCause = PW_RegistrationFailureCause.invalidFormat; /* LONG_NAMED_ENUMERATED_VALUE */
+const PW_RegistrationFailureCause_invalidFormat = PW_RegistrationFailureCause.invalidFormat satisfies PW_RegistrationFailureCause; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidFormat
@@ -126,7 +126,7 @@ const PW_RegistrationFailureCause_invalidFormat: PW_RegistrationFailureCause = P
  * @type {number}
  */
 export
-const invalidFormat: PW_RegistrationFailureCause = PW_RegistrationFailureCause.invalidFormat; /* SHORT_NAMED_ENUMERATED_VALUE */
+const invalidFormat = PW_RegistrationFailureCause.invalidFormat satisfies PW_RegistrationFailureCause; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PW_RegistrationFailureCause_newPasswordsMismatch
@@ -139,7 +139,7 @@ const invalidFormat: PW_RegistrationFailureCause = PW_RegistrationFailureCause.i
  * @type {number}
  */
 export
-const PW_RegistrationFailureCause_newPasswordsMismatch: PW_RegistrationFailureCause = PW_RegistrationFailureCause.newPasswordsMismatch; /* LONG_NAMED_ENUMERATED_VALUE */
+const PW_RegistrationFailureCause_newPasswordsMismatch = PW_RegistrationFailureCause.newPasswordsMismatch satisfies PW_RegistrationFailureCause; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary newPasswordsMismatch
@@ -152,7 +152,7 @@ const PW_RegistrationFailureCause_newPasswordsMismatch: PW_RegistrationFailureCa
  * @type {number}
  */
 export
-const newPasswordsMismatch: PW_RegistrationFailureCause = PW_RegistrationFailureCause.newPasswordsMismatch; /* SHORT_NAMED_ENUMERATED_VALUE */
+const newPasswordsMismatch = PW_RegistrationFailureCause.newPasswordsMismatch satisfies PW_RegistrationFailureCause; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) PW_RegistrationFailureCause

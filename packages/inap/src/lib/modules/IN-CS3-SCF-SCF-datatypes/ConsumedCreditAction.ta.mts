@@ -59,7 +59,7 @@ const ConsumedCreditAction = _enum_for_ConsumedCreditAction;
  * @type {number}
  */
 export
-const ConsumedCreditAction_disconnect: ConsumedCreditAction = ConsumedCreditAction.disconnect; /* LONG_NAMED_ENUMERATED_VALUE */
+const ConsumedCreditAction_disconnect = ConsumedCreditAction.disconnect satisfies ConsumedCreditAction; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary disconnect
@@ -67,7 +67,7 @@ const ConsumedCreditAction_disconnect: ConsumedCreditAction = ConsumedCreditActi
  * @type {number}
  */
 export
-const disconnect: ConsumedCreditAction = ConsumedCreditAction.disconnect; /* SHORT_NAMED_ENUMERATED_VALUE */
+const disconnect = ConsumedCreditAction.disconnect satisfies ConsumedCreditAction; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ConsumedCreditAction_message
@@ -75,7 +75,7 @@ const disconnect: ConsumedCreditAction = ConsumedCreditAction.disconnect; /* SHO
  * @type {number}
  */
 export
-const ConsumedCreditAction_message: ConsumedCreditAction = ConsumedCreditAction.message; /* LONG_NAMED_ENUMERATED_VALUE */
+const ConsumedCreditAction_message = ConsumedCreditAction.message satisfies ConsumedCreditAction; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary message
@@ -83,7 +83,7 @@ const ConsumedCreditAction_message: ConsumedCreditAction = ConsumedCreditAction.
  * @type {number}
  */
 export
-const message: ConsumedCreditAction = ConsumedCreditAction.message; /* SHORT_NAMED_ENUMERATED_VALUE */
+const message = ConsumedCreditAction.message satisfies ConsumedCreditAction; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ConsumedCreditAction_tone
@@ -91,7 +91,7 @@ const message: ConsumedCreditAction = ConsumedCreditAction.message; /* SHORT_NAM
  * @type {number}
  */
 export
-const ConsumedCreditAction_tone: ConsumedCreditAction = ConsumedCreditAction.tone; /* LONG_NAMED_ENUMERATED_VALUE */
+const ConsumedCreditAction_tone = ConsumedCreditAction.tone satisfies ConsumedCreditAction; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tone
@@ -99,7 +99,7 @@ const ConsumedCreditAction_tone: ConsumedCreditAction = ConsumedCreditAction.ton
  * @type {number}
  */
 export
-const tone: ConsumedCreditAction = ConsumedCreditAction.tone; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tone = ConsumedCreditAction.tone satisfies ConsumedCreditAction; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 function _decode_ConsumedCreditAction(el: _Element): ConsumedCreditAction {

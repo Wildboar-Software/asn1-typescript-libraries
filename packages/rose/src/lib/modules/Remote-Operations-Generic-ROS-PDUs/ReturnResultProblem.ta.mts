@@ -36,7 +36,7 @@ export type ReturnResultProblem = INTEGER;
  * @constant
  * @type {number}
  */
-export const ReturnResultProblem_unrecognizedInvocation: ReturnResultProblem = 0; /* LONG_NAMED_INTEGER_VALUE */
+export const ReturnResultProblem_unrecognizedInvocation = 0 satisfies ReturnResultProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -45,7 +45,7 @@ export const ReturnResultProblem_unrecognizedInvocation: ReturnResultProblem = 0
  * @constant
  * @type {number}
  */
-export const unrecognizedInvocation: ReturnResultProblem = ReturnResultProblem_unrecognizedInvocation; /* SHORT_NAMED_INTEGER_VALUE */
+export const unrecognizedInvocation = ReturnResultProblem_unrecognizedInvocation satisfies ReturnResultProblem; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -54,7 +54,7 @@ export const unrecognizedInvocation: ReturnResultProblem = ReturnResultProblem_u
  * @constant
  * @type {number}
  */
-export const ReturnResultProblem_resultResponseUnexpected: ReturnResultProblem = 1; /* LONG_NAMED_INTEGER_VALUE */
+export const ReturnResultProblem_resultResponseUnexpected = 1 satisfies ReturnResultProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -63,7 +63,7 @@ export const ReturnResultProblem_resultResponseUnexpected: ReturnResultProblem =
  * @constant
  * @type {number}
  */
-export const resultResponseUnexpected: ReturnResultProblem = ReturnResultProblem_resultResponseUnexpected; /* SHORT_NAMED_INTEGER_VALUE */
+export const resultResponseUnexpected = ReturnResultProblem_resultResponseUnexpected satisfies ReturnResultProblem; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -72,7 +72,7 @@ export const resultResponseUnexpected: ReturnResultProblem = ReturnResultProblem
  * @constant
  * @type {number}
  */
-export const ReturnResultProblem_mistypedResult: ReturnResultProblem = 2; /* LONG_NAMED_INTEGER_VALUE */
+export const ReturnResultProblem_mistypedResult = 2 satisfies ReturnResultProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -81,7 +81,7 @@ export const ReturnResultProblem_mistypedResult: ReturnResultProblem = 2; /* LON
  * @constant
  * @type {number}
  */
-export const mistypedResult: ReturnResultProblem = ReturnResultProblem_mistypedResult; /* SHORT_NAMED_INTEGER_VALUE */
+export const mistypedResult = ReturnResultProblem_mistypedResult satisfies ReturnResultProblem; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 

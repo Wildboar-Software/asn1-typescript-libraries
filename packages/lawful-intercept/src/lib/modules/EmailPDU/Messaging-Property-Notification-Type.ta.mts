@@ -148,7 +148,7 @@ type Messaging_Property_Notification_Type = _enum_for_Messaging_Property_Notific
  * @type {number}
  */
 export
-const Messaging_Property_Notification_Type_empty_call: Messaging_Property_Notification_Type = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const Messaging_Property_Notification_Type_empty_call = _enum_for_Messaging_Property_Notification_Type.empty_call satisfies Messaging_Property_Notification_Type; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary empty_call
@@ -163,7 +163,7 @@ const Messaging_Property_Notification_Type_empty_call: Messaging_Property_Notifi
  * @type {number}
  */
 export
-const empty_call: Messaging_Property_Notification_Type = Messaging_Property_Notification_Type_empty_call; /* SHORT_NAMED_ENUMERATED_VALUE */
+const empty_call = Messaging_Property_Notification_Type_empty_call satisfies Messaging_Property_Notification_Type; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Messaging_Property_Notification_Type_lost_call
@@ -177,7 +177,7 @@ const empty_call: Messaging_Property_Notification_Type = Messaging_Property_Noti
  * @type {number}
  */
 export
-const Messaging_Property_Notification_Type_lost_call: Messaging_Property_Notification_Type = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+const Messaging_Property_Notification_Type_lost_call = _enum_for_Messaging_Property_Notification_Type.lost_call satisfies Messaging_Property_Notification_Type; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary lost_call
@@ -191,7 +191,7 @@ const Messaging_Property_Notification_Type_lost_call: Messaging_Property_Notific
  * @type {number}
  */
 export
-const lost_call: Messaging_Property_Notification_Type = Messaging_Property_Notification_Type_lost_call; /* SHORT_NAMED_ENUMERATED_VALUE */
+const lost_call = Messaging_Property_Notification_Type_lost_call satisfies Messaging_Property_Notification_Type; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Messaging_Property_Notification_Type_message_to_email
@@ -205,7 +205,7 @@ const lost_call: Messaging_Property_Notification_Type = Messaging_Property_Notif
  * @type {number}
  */
 export
-const Messaging_Property_Notification_Type_message_to_email: Messaging_Property_Notification_Type = 3; /* LONG_NAMED_ENUMERATED_VALUE */
+const Messaging_Property_Notification_Type_message_to_email = _enum_for_Messaging_Property_Notification_Type.message_to_email satisfies Messaging_Property_Notification_Type; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary message_to_email
@@ -219,7 +219,7 @@ const Messaging_Property_Notification_Type_message_to_email: Messaging_Property_
  * @type {number}
  */
 export
-const message_to_email: Messaging_Property_Notification_Type = Messaging_Property_Notification_Type_message_to_email; /* SHORT_NAMED_ENUMERATED_VALUE */
+const message_to_email = Messaging_Property_Notification_Type_message_to_email satisfies Messaging_Property_Notification_Type; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Messaging_Property_Notification_Type_read_report
@@ -233,7 +233,7 @@ const message_to_email: Messaging_Property_Notification_Type = Messaging_Propert
  * @type {number}
  */
 export
-const Messaging_Property_Notification_Type_read_report: Messaging_Property_Notification_Type = 4; /* LONG_NAMED_ENUMERATED_VALUE */
+const Messaging_Property_Notification_Type_read_report = _enum_for_Messaging_Property_Notification_Type.read_report satisfies Messaging_Property_Notification_Type; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary read_report
@@ -247,7 +247,7 @@ const Messaging_Property_Notification_Type_read_report: Messaging_Property_Notif
  * @type {number}
  */
 export
-const read_report: Messaging_Property_Notification_Type = Messaging_Property_Notification_Type_read_report; /* SHORT_NAMED_ENUMERATED_VALUE */
+const read_report = Messaging_Property_Notification_Type_read_report satisfies Messaging_Property_Notification_Type; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Messaging_Property_Notification_Type_delivery_report
@@ -261,7 +261,7 @@ const read_report: Messaging_Property_Notification_Type = Messaging_Property_Not
  * @type {number}
  */
 export
-const Messaging_Property_Notification_Type_delivery_report: Messaging_Property_Notification_Type = 5; /* LONG_NAMED_ENUMERATED_VALUE */
+const Messaging_Property_Notification_Type_delivery_report = _enum_for_Messaging_Property_Notification_Type.delivery_report satisfies Messaging_Property_Notification_Type; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary delivery_report
@@ -275,7 +275,7 @@ const Messaging_Property_Notification_Type_delivery_report: Messaging_Property_N
  * @type {number}
  */
 export
-const delivery_report: Messaging_Property_Notification_Type = Messaging_Property_Notification_Type_delivery_report; /* SHORT_NAMED_ENUMERATED_VALUE */
+const delivery_report = Messaging_Property_Notification_Type_delivery_report satisfies Messaging_Property_Notification_Type; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Messaging_Property_Notification_Type_allow_delivery_report
@@ -290,7 +290,7 @@ const delivery_report: Messaging_Property_Notification_Type = Messaging_Property
  * @type {number}
  */
 export
-const Messaging_Property_Notification_Type_allow_delivery_report: Messaging_Property_Notification_Type = 6; /* LONG_NAMED_ENUMERATED_VALUE */
+const Messaging_Property_Notification_Type_allow_delivery_report = _enum_for_Messaging_Property_Notification_Type.allow_delivery_report satisfies Messaging_Property_Notification_Type; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary allow_delivery_report
@@ -305,7 +305,7 @@ const Messaging_Property_Notification_Type_allow_delivery_report: Messaging_Prop
  * @type {number}
  */
 export
-const allow_delivery_report: Messaging_Property_Notification_Type = Messaging_Property_Notification_Type_allow_delivery_report; /* SHORT_NAMED_ENUMERATED_VALUE */
+const allow_delivery_report = Messaging_Property_Notification_Type_allow_delivery_report satisfies Messaging_Property_Notification_Type; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Messaging_Property_Notification_Type_deny_delivery_report
@@ -320,7 +320,7 @@ const allow_delivery_report: Messaging_Property_Notification_Type = Messaging_Pr
  * @type {number}
  */
 export
-const Messaging_Property_Notification_Type_deny_delivery_report: Messaging_Property_Notification_Type = 7; /* LONG_NAMED_ENUMERATED_VALUE */
+const Messaging_Property_Notification_Type_deny_delivery_report = _enum_for_Messaging_Property_Notification_Type.deny_delivery_report satisfies Messaging_Property_Notification_Type; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary deny_delivery_report
@@ -335,7 +335,7 @@ const Messaging_Property_Notification_Type_deny_delivery_report: Messaging_Prope
  * @type {number}
  */
 export
-const deny_delivery_report: Messaging_Property_Notification_Type = Messaging_Property_Notification_Type_deny_delivery_report; /* SHORT_NAMED_ENUMERATED_VALUE */
+const deny_delivery_report = Messaging_Property_Notification_Type_deny_delivery_report satisfies Messaging_Property_Notification_Type; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Messaging_Property_Notification_Type_message_wait_indication
@@ -349,7 +349,7 @@ const deny_delivery_report: Messaging_Property_Notification_Type = Messaging_Pro
  * @type {number}
  */
 export
-const Messaging_Property_Notification_Type_message_wait_indication: Messaging_Property_Notification_Type = 8; /* LONG_NAMED_ENUMERATED_VALUE */
+const Messaging_Property_Notification_Type_message_wait_indication = _enum_for_Messaging_Property_Notification_Type.message_wait_indication satisfies Messaging_Property_Notification_Type; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary message_wait_indication
@@ -363,7 +363,7 @@ const Messaging_Property_Notification_Type_message_wait_indication: Messaging_Pr
  * @type {number}
  */
 export
-const message_wait_indication: Messaging_Property_Notification_Type = Messaging_Property_Notification_Type_message_wait_indication; /* SHORT_NAMED_ENUMERATED_VALUE */
+const message_wait_indication = Messaging_Property_Notification_Type_message_wait_indication satisfies Messaging_Property_Notification_Type; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Messaging_Property_Notification_Type_voice_to_text
@@ -378,7 +378,7 @@ const message_wait_indication: Messaging_Property_Notification_Type = Messaging_
  * @type {number}
  */
 export
-const Messaging_Property_Notification_Type_voice_to_text: Messaging_Property_Notification_Type = 9; /* LONG_NAMED_ENUMERATED_VALUE */
+const Messaging_Property_Notification_Type_voice_to_text = _enum_for_Messaging_Property_Notification_Type.voice_to_text satisfies Messaging_Property_Notification_Type; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary voice_to_text
@@ -393,7 +393,7 @@ const Messaging_Property_Notification_Type_voice_to_text: Messaging_Property_Not
  * @type {number}
  */
 export
-const voice_to_text: Messaging_Property_Notification_Type = Messaging_Property_Notification_Type_voice_to_text; /* SHORT_NAMED_ENUMERATED_VALUE */
+const voice_to_text = Messaging_Property_Notification_Type_voice_to_text satisfies Messaging_Property_Notification_Type; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Messaging_Property_Notification_Type_new_message_sms
@@ -407,7 +407,7 @@ const voice_to_text: Messaging_Property_Notification_Type = Messaging_Property_N
  * @type {number}
  */
 export
-const Messaging_Property_Notification_Type_new_message_sms: Messaging_Property_Notification_Type = 10; /* LONG_NAMED_ENUMERATED_VALUE */
+const Messaging_Property_Notification_Type_new_message_sms = _enum_for_Messaging_Property_Notification_Type.new_message_sms satisfies Messaging_Property_Notification_Type; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary new_message_sms
@@ -421,7 +421,7 @@ const Messaging_Property_Notification_Type_new_message_sms: Messaging_Property_N
  * @type {number}
  */
 export
-const new_message_sms: Messaging_Property_Notification_Type = Messaging_Property_Notification_Type_new_message_sms; /* SHORT_NAMED_ENUMERATED_VALUE */
+const new_message_sms = Messaging_Property_Notification_Type_new_message_sms satisfies Messaging_Property_Notification_Type; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Messaging_Property_Notification_Type_new_message_outcall
@@ -436,7 +436,7 @@ const new_message_sms: Messaging_Property_Notification_Type = Messaging_Property
  * @type {number}
  */
 export
-const Messaging_Property_Notification_Type_new_message_outcall: Messaging_Property_Notification_Type = 11; /* LONG_NAMED_ENUMERATED_VALUE */
+const Messaging_Property_Notification_Type_new_message_outcall = _enum_for_Messaging_Property_Notification_Type.new_message_outcall satisfies Messaging_Property_Notification_Type; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary new_message_outcall
@@ -451,7 +451,7 @@ const Messaging_Property_Notification_Type_new_message_outcall: Messaging_Proper
  * @type {number}
  */
 export
-const new_message_outcall: Messaging_Property_Notification_Type = Messaging_Property_Notification_Type_new_message_outcall; /* SHORT_NAMED_ENUMERATED_VALUE */
+const new_message_outcall = Messaging_Property_Notification_Type_new_message_outcall satisfies Messaging_Property_Notification_Type; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Messaging_Property_Notification_Type_new_message_reminder
@@ -465,7 +465,7 @@ const new_message_outcall: Messaging_Property_Notification_Type = Messaging_Prop
  * @type {number}
  */
 export
-const Messaging_Property_Notification_Type_new_message_reminder: Messaging_Property_Notification_Type = 12; /* LONG_NAMED_ENUMERATED_VALUE */
+const Messaging_Property_Notification_Type_new_message_reminder = _enum_for_Messaging_Property_Notification_Type.new_message_reminder satisfies Messaging_Property_Notification_Type; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary new_message_reminder
@@ -479,7 +479,7 @@ const Messaging_Property_Notification_Type_new_message_reminder: Messaging_Prope
  * @type {number}
  */
 export
-const new_message_reminder: Messaging_Property_Notification_Type = Messaging_Property_Notification_Type_new_message_reminder; /* SHORT_NAMED_ENUMERATED_VALUE */
+const new_message_reminder = Messaging_Property_Notification_Type_new_message_reminder satisfies Messaging_Property_Notification_Type; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_Messaging_Property_Notification_Type: $.ASN1Decoder<Messaging_Property_Notification_Type> = $._decodeEnumerated;
 export const _encode_Messaging_Property_Notification_Type: $.ASN1Encoder<Messaging_Property_Notification_Type> = $._encodeEnumerated;
 

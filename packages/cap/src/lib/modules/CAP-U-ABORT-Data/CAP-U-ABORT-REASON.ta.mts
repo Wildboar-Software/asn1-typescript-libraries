@@ -120,7 +120,7 @@ const CAP_U_ABORT_REASON = _enum_for_CAP_U_ABORT_REASON;
  * @type {number}
  */
 export
-const CAP_U_ABORT_REASON_no_reason_given: CAP_U_ABORT_REASON = CAP_U_ABORT_REASON.no_reason_given; /* LONG_NAMED_ENUMERATED_VALUE */
+const CAP_U_ABORT_REASON_no_reason_given = CAP_U_ABORT_REASON.no_reason_given satisfies CAP_U_ABORT_REASON; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary no_reason_given
@@ -133,7 +133,7 @@ const CAP_U_ABORT_REASON_no_reason_given: CAP_U_ABORT_REASON = CAP_U_ABORT_REASO
  * @type {number}
  */
 export
-const no_reason_given: CAP_U_ABORT_REASON = CAP_U_ABORT_REASON.no_reason_given; /* SHORT_NAMED_ENUMERATED_VALUE */
+const no_reason_given = CAP_U_ABORT_REASON.no_reason_given satisfies CAP_U_ABORT_REASON; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CAP_U_ABORT_REASON_application_timer_expired
@@ -149,7 +149,7 @@ const no_reason_given: CAP_U_ABORT_REASON = CAP_U_ABORT_REASON.no_reason_given; 
  * @type {number}
  */
 export
-const CAP_U_ABORT_REASON_application_timer_expired: CAP_U_ABORT_REASON = CAP_U_ABORT_REASON.application_timer_expired; /* LONG_NAMED_ENUMERATED_VALUE */
+const CAP_U_ABORT_REASON_application_timer_expired = CAP_U_ABORT_REASON.application_timer_expired satisfies CAP_U_ABORT_REASON; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary application_timer_expired
@@ -165,7 +165,7 @@ const CAP_U_ABORT_REASON_application_timer_expired: CAP_U_ABORT_REASON = CAP_U_A
  * @type {number}
  */
 export
-const application_timer_expired: CAP_U_ABORT_REASON = CAP_U_ABORT_REASON.application_timer_expired; /* SHORT_NAMED_ENUMERATED_VALUE */
+const application_timer_expired = CAP_U_ABORT_REASON.application_timer_expired satisfies CAP_U_ABORT_REASON; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CAP_U_ABORT_REASON_not_allowed_procedures
@@ -181,7 +181,7 @@ const application_timer_expired: CAP_U_ABORT_REASON = CAP_U_ABORT_REASON.applica
  * @type {number}
  */
 export
-const CAP_U_ABORT_REASON_not_allowed_procedures: CAP_U_ABORT_REASON = CAP_U_ABORT_REASON.not_allowed_procedures; /* LONG_NAMED_ENUMERATED_VALUE */
+const CAP_U_ABORT_REASON_not_allowed_procedures = CAP_U_ABORT_REASON.not_allowed_procedures satisfies CAP_U_ABORT_REASON; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary not_allowed_procedures
@@ -197,7 +197,7 @@ const CAP_U_ABORT_REASON_not_allowed_procedures: CAP_U_ABORT_REASON = CAP_U_ABOR
  * @type {number}
  */
 export
-const not_allowed_procedures: CAP_U_ABORT_REASON = CAP_U_ABORT_REASON.not_allowed_procedures; /* SHORT_NAMED_ENUMERATED_VALUE */
+const not_allowed_procedures = CAP_U_ABORT_REASON.not_allowed_procedures satisfies CAP_U_ABORT_REASON; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CAP_U_ABORT_REASON_abnormal_processing
@@ -210,7 +210,7 @@ const not_allowed_procedures: CAP_U_ABORT_REASON = CAP_U_ABORT_REASON.not_allowe
  * @type {number}
  */
 export
-const CAP_U_ABORT_REASON_abnormal_processing: CAP_U_ABORT_REASON = CAP_U_ABORT_REASON.abnormal_processing; /* LONG_NAMED_ENUMERATED_VALUE */
+const CAP_U_ABORT_REASON_abnormal_processing = CAP_U_ABORT_REASON.abnormal_processing satisfies CAP_U_ABORT_REASON; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary abnormal_processing
@@ -223,7 +223,7 @@ const CAP_U_ABORT_REASON_abnormal_processing: CAP_U_ABORT_REASON = CAP_U_ABORT_R
  * @type {number}
  */
 export
-const abnormal_processing: CAP_U_ABORT_REASON = CAP_U_ABORT_REASON.abnormal_processing; /* SHORT_NAMED_ENUMERATED_VALUE */
+const abnormal_processing = CAP_U_ABORT_REASON.abnormal_processing satisfies CAP_U_ABORT_REASON; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CAP_U_ABORT_REASON_congestion
@@ -237,7 +237,7 @@ const abnormal_processing: CAP_U_ABORT_REASON = CAP_U_ABORT_REASON.abnormal_proc
  * @type {number}
  */
 export
-const CAP_U_ABORT_REASON_congestion: CAP_U_ABORT_REASON = CAP_U_ABORT_REASON.congestion; /* LONG_NAMED_ENUMERATED_VALUE */
+const CAP_U_ABORT_REASON_congestion = CAP_U_ABORT_REASON.congestion satisfies CAP_U_ABORT_REASON; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary congestion
@@ -251,7 +251,7 @@ const CAP_U_ABORT_REASON_congestion: CAP_U_ABORT_REASON = CAP_U_ABORT_REASON.con
  * @type {number}
  */
 export
-const congestion: CAP_U_ABORT_REASON = CAP_U_ABORT_REASON.congestion; /* SHORT_NAMED_ENUMERATED_VALUE */
+const congestion = CAP_U_ABORT_REASON.congestion satisfies CAP_U_ABORT_REASON; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CAP_U_ABORT_REASON_invalid_reference
@@ -266,7 +266,7 @@ const congestion: CAP_U_ABORT_REASON = CAP_U_ABORT_REASON.congestion; /* SHORT_N
  * @type {number}
  */
 export
-const CAP_U_ABORT_REASON_invalid_reference: CAP_U_ABORT_REASON = CAP_U_ABORT_REASON.invalid_reference; /* LONG_NAMED_ENUMERATED_VALUE */
+const CAP_U_ABORT_REASON_invalid_reference = CAP_U_ABORT_REASON.invalid_reference satisfies CAP_U_ABORT_REASON; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalid_reference
@@ -281,7 +281,7 @@ const CAP_U_ABORT_REASON_invalid_reference: CAP_U_ABORT_REASON = CAP_U_ABORT_REA
  * @type {number}
  */
 export
-const invalid_reference: CAP_U_ABORT_REASON = CAP_U_ABORT_REASON.invalid_reference; /* SHORT_NAMED_ENUMERATED_VALUE */
+const invalid_reference = CAP_U_ABORT_REASON.invalid_reference satisfies CAP_U_ABORT_REASON; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CAP_U_ABORT_REASON_missing_reference
@@ -296,7 +296,7 @@ const invalid_reference: CAP_U_ABORT_REASON = CAP_U_ABORT_REASON.invalid_referen
  * @type {number}
  */
 export
-const CAP_U_ABORT_REASON_missing_reference: CAP_U_ABORT_REASON = CAP_U_ABORT_REASON.missing_reference; /* LONG_NAMED_ENUMERATED_VALUE */
+const CAP_U_ABORT_REASON_missing_reference = CAP_U_ABORT_REASON.missing_reference satisfies CAP_U_ABORT_REASON; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary missing_reference
@@ -311,7 +311,7 @@ const CAP_U_ABORT_REASON_missing_reference: CAP_U_ABORT_REASON = CAP_U_ABORT_REA
  * @type {number}
  */
 export
-const missing_reference: CAP_U_ABORT_REASON = CAP_U_ABORT_REASON.missing_reference; /* SHORT_NAMED_ENUMERATED_VALUE */
+const missing_reference = CAP_U_ABORT_REASON.missing_reference satisfies CAP_U_ABORT_REASON; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CAP_U_ABORT_REASON_overlapping_dialogue
@@ -327,7 +327,7 @@ const missing_reference: CAP_U_ABORT_REASON = CAP_U_ABORT_REASON.missing_referen
  * @type {number}
  */
 export
-const CAP_U_ABORT_REASON_overlapping_dialogue: CAP_U_ABORT_REASON = CAP_U_ABORT_REASON.overlapping_dialogue; /* LONG_NAMED_ENUMERATED_VALUE */
+const CAP_U_ABORT_REASON_overlapping_dialogue = CAP_U_ABORT_REASON.overlapping_dialogue satisfies CAP_U_ABORT_REASON; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary overlapping_dialogue
@@ -343,7 +343,7 @@ const CAP_U_ABORT_REASON_overlapping_dialogue: CAP_U_ABORT_REASON = CAP_U_ABORT_
  * @type {number}
  */
 export
-const overlapping_dialogue: CAP_U_ABORT_REASON = CAP_U_ABORT_REASON.overlapping_dialogue; /* SHORT_NAMED_ENUMERATED_VALUE */
+const overlapping_dialogue = CAP_U_ABORT_REASON.overlapping_dialogue satisfies CAP_U_ABORT_REASON; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_CAP_U_ABORT_REASON = $._decodeEnumerated;
 export const _encode_CAP_U_ABORT_REASON = $._encodeEnumerated;
 

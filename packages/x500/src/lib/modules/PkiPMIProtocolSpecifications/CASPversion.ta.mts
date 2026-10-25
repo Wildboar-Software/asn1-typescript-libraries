@@ -27,42 +27,42 @@ export type CASPversion = _enum_for_CASPversion | ENUMERATED;
  * @constant
  * @type {number}
  */
-export const CASPversion_v1: CASPversion = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CASPversion_v1 = _enum_for_CASPversion.v1 satisfies CASPversion; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary v1
  * @constant
  * @type {number}
  */
-export const v1: CASPversion = CASPversion_v1; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const v1 = CASPversion_v1 satisfies CASPversion; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CASPversion_v2
  * @constant
  * @type {number}
  */
-export const CASPversion_v2: CASPversion = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CASPversion_v2 = _enum_for_CASPversion.v2 satisfies CASPversion; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary v2
  * @constant
  * @type {number}
  */
-export const v2: CASPversion = CASPversion_v2; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const v2 = CASPversion_v2 satisfies CASPversion; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CASPversion_v3
  * @constant
  * @type {number}
  */
-export const CASPversion_v3: CASPversion = 3; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CASPversion_v3 = _enum_for_CASPversion.v3 satisfies CASPversion; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary v3
  * @constant
  * @type {number}
  */
-export const v3: CASPversion = CASPversion_v3; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const v3 = CASPversion_v3 satisfies CASPversion; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 export const _decode_CASPversion = $._decodeEnumerated;

@@ -72,7 +72,7 @@ type ServiceState = _enum_for_ServiceState | ENUMERATED;
  * @type {number}
  */
 export
-const ServiceState_test: ServiceState = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+const ServiceState_test = _enum_for_ServiceState.test satisfies ServiceState; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary test
@@ -80,7 +80,7 @@ const ServiceState_test: ServiceState = 0; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const test: ServiceState = ServiceState_test; /* SHORT_NAMED_ENUMERATED_VALUE */
+const test = ServiceState_test satisfies ServiceState; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ServiceState_outOfSvc
@@ -94,7 +94,7 @@ const test: ServiceState = ServiceState_test; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const ServiceState_outOfSvc: ServiceState = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const ServiceState_outOfSvc = _enum_for_ServiceState.outOfSvc satisfies ServiceState; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary outOfSvc
@@ -102,7 +102,7 @@ const ServiceState_outOfSvc: ServiceState = 1; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const outOfSvc: ServiceState = ServiceState_outOfSvc; /* SHORT_NAMED_ENUMERATED_VALUE */
+const outOfSvc = ServiceState_outOfSvc satisfies ServiceState; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ServiceState_inSvc
@@ -115,7 +115,7 @@ const outOfSvc: ServiceState = ServiceState_outOfSvc; /* SHORT_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const ServiceState_inSvc: ServiceState = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+const ServiceState_inSvc = _enum_for_ServiceState.inSvc satisfies ServiceState; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary inSvc
@@ -123,7 +123,7 @@ const ServiceState_inSvc: ServiceState = 2; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const inSvc: ServiceState = ServiceState_inSvc; /* SHORT_NAMED_ENUMERATED_VALUE */
+const inSvc = ServiceState_inSvc satisfies ServiceState; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_ServiceState = $._decodeEnumerated;
 export const _encode_ServiceState = $._encodeEnumerated;
 

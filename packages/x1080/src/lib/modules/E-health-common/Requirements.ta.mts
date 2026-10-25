@@ -55,7 +55,7 @@ export type Requirements = _enum_for_Requirements | ENUMERATED;
  * @constant
  * @type {number}
  */
-export const Requirements_none: Requirements = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+export const Requirements_none = _enum_for_Requirements.none satisfies Requirements; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -67,7 +67,7 @@ export const Requirements_none: Requirements = 0; /* LONG_NAMED_ENUMERATED_VALUE
  * @constant
  * @type {number}
  */
-export const none: Requirements = Requirements_none; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const none = Requirements_none satisfies Requirements; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -80,7 +80,7 @@ export const none: Requirements = Requirements_none; /* SHORT_NAMED_ENUMERATED_V
  * @constant
  * @type {number}
  */
-export const Requirements_with_2_way_voice: Requirements = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+export const Requirements_with_2_way_voice = _enum_for_Requirements.with_2_way_voice satisfies Requirements; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -93,7 +93,7 @@ export const Requirements_with_2_way_voice: Requirements = 1; /* LONG_NAMED_ENUM
  * @constant
  * @type {number}
  */
-export const with_2_way_voice: Requirements = Requirements_with_2_way_voice; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const with_2_way_voice = Requirements_with_2_way_voice satisfies Requirements; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -106,7 +106,7 @@ export const with_2_way_voice: Requirements = Requirements_with_2_way_voice; /* 
  * @constant
  * @type {number}
  */
-export const Requirements_with_reverse_video_and_2_way_voice: Requirements = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+export const Requirements_with_reverse_video_and_2_way_voice = _enum_for_Requirements.with_reverse_video_and_2_way_voice satisfies Requirements; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -119,7 +119,7 @@ export const Requirements_with_reverse_video_and_2_way_voice: Requirements = 2; 
  * @constant
  * @type {number}
  */
-export const with_reverse_video_and_2_way_voice: Requirements = Requirements_with_reverse_video_and_2_way_voice; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const with_reverse_video_and_2_way_voice = Requirements_with_reverse_video_and_2_way_voice satisfies Requirements; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -132,7 +132,7 @@ export const with_reverse_video_and_2_way_voice: Requirements = Requirements_wit
  * @constant
  * @type {number}
  */
-export const Requirements_with_2_way_video_and_voice: Requirements = 3; /* LONG_NAMED_ENUMERATED_VALUE */
+export const Requirements_with_2_way_video_and_voice = _enum_for_Requirements.with_2_way_video_and_voice satisfies Requirements; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -145,7 +145,7 @@ export const Requirements_with_2_way_video_and_voice: Requirements = 3; /* LONG_
  * @constant
  * @type {number}
  */
-export const with_2_way_video_and_voice: Requirements = Requirements_with_2_way_video_and_voice; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const with_2_way_video_and_voice = Requirements_with_2_way_video_and_voice satisfies Requirements; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 

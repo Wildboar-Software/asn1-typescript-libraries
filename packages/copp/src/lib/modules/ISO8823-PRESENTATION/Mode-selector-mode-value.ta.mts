@@ -42,7 +42,7 @@ export type Mode_selector_mode_value = INTEGER;
  * @constant
  * @type {number}
  */
-export const Mode_selector_mode_value_x410_1984_mode: Mode_selector_mode_value = 0; /* LONG_NAMED_INTEGER_VALUE */
+export const Mode_selector_mode_value_x410_1984_mode = 0 satisfies Mode_selector_mode_value; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -50,7 +50,7 @@ export const Mode_selector_mode_value_x410_1984_mode: Mode_selector_mode_value =
  * @constant
  * @type {number}
  */
-export const x410_1984_mode: Mode_selector_mode_value = Mode_selector_mode_value_x410_1984_mode; /* SHORT_NAMED_INTEGER_VALUE */
+export const x410_1984_mode = Mode_selector_mode_value_x410_1984_mode satisfies Mode_selector_mode_value; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -62,7 +62,7 @@ export const x410_1984_mode: Mode_selector_mode_value = Mode_selector_mode_value
  * @constant
  * @type {number}
  */
-export const Mode_selector_mode_value_normal_mode: Mode_selector_mode_value = 1; /* LONG_NAMED_INTEGER_VALUE */
+export const Mode_selector_mode_value_normal_mode = 1 satisfies Mode_selector_mode_value; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -70,7 +70,7 @@ export const Mode_selector_mode_value_normal_mode: Mode_selector_mode_value = 1;
  * @constant
  * @type {number}
  */
-export const normal_mode: Mode_selector_mode_value = Mode_selector_mode_value_normal_mode; /* SHORT_NAMED_INTEGER_VALUE */
+export const normal_mode = Mode_selector_mode_value_normal_mode satisfies Mode_selector_mode_value; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 

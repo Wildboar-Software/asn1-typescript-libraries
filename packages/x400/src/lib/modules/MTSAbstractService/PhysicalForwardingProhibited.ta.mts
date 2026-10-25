@@ -70,32 +70,32 @@ export const PhysicalForwardingProhibited = _enum_for_PhysicalForwardingProhibit
  * @constant
  * @type {number}
  */
-export const PhysicalForwardingProhibited_physical_forwarding_allowed: PhysicalForwardingProhibited =
-    PhysicalForwardingProhibited.physical_forwarding_allowed; /* LONG_NAMED_ENUMERATED_VALUE */
+export const PhysicalForwardingProhibited_physical_forwarding_allowed =
+    PhysicalForwardingProhibited.physical_forwarding_allowed satisfies PhysicalForwardingProhibited; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary physical_forwarding_allowed
  * @constant
  * @type {number}
  */
-export const physical_forwarding_allowed: PhysicalForwardingProhibited =
-    PhysicalForwardingProhibited.physical_forwarding_allowed; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const physical_forwarding_allowed =
+    PhysicalForwardingProhibited.physical_forwarding_allowed satisfies PhysicalForwardingProhibited; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PhysicalForwardingProhibited_physical_forwarding_prohibited
  * @constant
  * @type {number}
  */
-export const PhysicalForwardingProhibited_physical_forwarding_prohibited: PhysicalForwardingProhibited =
-    PhysicalForwardingProhibited.physical_forwarding_prohibited; /* LONG_NAMED_ENUMERATED_VALUE */
+export const PhysicalForwardingProhibited_physical_forwarding_prohibited =
+    PhysicalForwardingProhibited.physical_forwarding_prohibited satisfies PhysicalForwardingProhibited; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary physical_forwarding_prohibited
  * @constant
  * @type {number}
  */
-export const physical_forwarding_prohibited: PhysicalForwardingProhibited =
-    PhysicalForwardingProhibited.physical_forwarding_prohibited; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const physical_forwarding_prohibited =
+    PhysicalForwardingProhibited.physical_forwarding_prohibited satisfies PhysicalForwardingProhibited; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 export function _decode_PhysicalForwardingProhibited(el: _Element): PhysicalForwardingProhibited {

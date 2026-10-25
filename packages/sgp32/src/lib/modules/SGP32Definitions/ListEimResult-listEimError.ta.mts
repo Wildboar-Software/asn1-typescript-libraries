@@ -36,7 +36,7 @@ type ListEimResult_listEimError = INTEGER;
  * @type {number}
  */
 export
-const ListEimResult_listEimError_undefinedError: ListEimResult_listEimError = 127; /* LONG_NAMED_INTEGER_VALUE */
+const ListEimResult_listEimError_undefinedError = 127 satisfies ListEimResult_listEimError; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ListEimResult_listEimError_undefinedError
@@ -47,7 +47,7 @@ const ListEimResult_listEimError_undefinedError: ListEimResult_listEimError = 12
  * @type {number}
  */
 export
-const undefinedError: ListEimResult_listEimError = ListEimResult_listEimError_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
+const undefinedError = ListEimResult_listEimError_undefinedError satisfies ListEimResult_listEimError; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_ListEimResult_listEimError: $.ASN1Decoder<ListEimResult_listEimError> = $._decodeInteger;
 export const _encode_ListEimResult_listEimError: $.ASN1Encoder<ListEimResult_listEimError> = $._encodeInteger;
 

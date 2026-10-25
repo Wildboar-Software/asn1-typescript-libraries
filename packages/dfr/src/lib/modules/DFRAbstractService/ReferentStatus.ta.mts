@@ -88,7 +88,7 @@ const ReferentStatus = _enum_for_ReferentStatus;
  * @type {number}
  */
 export
-const ReferentStatus_not_changed_since_produce: ReferentStatus = ReferentStatus.not_changed_since_produce; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReferentStatus_not_changed_since_produce = ReferentStatus.not_changed_since_produce satisfies ReferentStatus; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary not_changed_since_produce
@@ -99,7 +99,7 @@ const ReferentStatus_not_changed_since_produce: ReferentStatus = ReferentStatus.
  * @type {number}
  */
 export
-const not_changed_since_produce: ReferentStatus = ReferentStatus.not_changed_since_produce; /* SHORT_NAMED_ENUMERATED_VALUE */
+const not_changed_since_produce = ReferentStatus.not_changed_since_produce satisfies ReferentStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReferentStatus_changed_since_produce
@@ -110,7 +110,7 @@ const not_changed_since_produce: ReferentStatus = ReferentStatus.not_changed_sin
  * @type {number}
  */
 export
-const ReferentStatus_changed_since_produce: ReferentStatus = ReferentStatus.changed_since_produce; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReferentStatus_changed_since_produce = ReferentStatus.changed_since_produce satisfies ReferentStatus; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary changed_since_produce
@@ -121,7 +121,7 @@ const ReferentStatus_changed_since_produce: ReferentStatus = ReferentStatus.chan
  * @type {number}
  */
 export
-const changed_since_produce: ReferentStatus = ReferentStatus.changed_since_produce; /* SHORT_NAMED_ENUMERATED_VALUE */
+const changed_since_produce = ReferentStatus.changed_since_produce satisfies ReferentStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
 export function _decode_ReferentStatus(el: _Element): ReferentStatus {
     const enumerated = $._decodeEnumerated(el);
     switch (enumerated) {

@@ -49,7 +49,7 @@ type ServiceError_errorClass_definition = INTEGER;
  * @type {number}
  */
 export
-const ServiceError_errorClass_definition_other: ServiceError_errorClass_definition = 0; /* LONG_NAMED_INTEGER_VALUE */
+const ServiceError_errorClass_definition_other = 0 satisfies ServiceError_errorClass_definition; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceError_errorClass_definition_other
@@ -61,7 +61,7 @@ const ServiceError_errorClass_definition_other: ServiceError_errorClass_definiti
  * @type {number}
  */
 export
-const other: ServiceError_errorClass_definition = ServiceError_errorClass_definition_other; /* SHORT_NAMED_INTEGER_VALUE */
+const other = ServiceError_errorClass_definition_other satisfies ServiceError_errorClass_definition; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceError_errorClass_definition_object_undefined
@@ -73,7 +73,7 @@ const other: ServiceError_errorClass_definition = ServiceError_errorClass_defini
  * @type {number}
  */
 export
-const ServiceError_errorClass_definition_object_undefined: ServiceError_errorClass_definition = 1; /* LONG_NAMED_INTEGER_VALUE */
+const ServiceError_errorClass_definition_object_undefined = 1 satisfies ServiceError_errorClass_definition; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceError_errorClass_definition_object_undefined
@@ -85,7 +85,7 @@ const ServiceError_errorClass_definition_object_undefined: ServiceError_errorCla
  * @type {number}
  */
 export
-const object_undefined: ServiceError_errorClass_definition = ServiceError_errorClass_definition_object_undefined; /* SHORT_NAMED_INTEGER_VALUE */
+const object_undefined = ServiceError_errorClass_definition_object_undefined satisfies ServiceError_errorClass_definition; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceError_errorClass_definition_invalid_address
@@ -98,7 +98,7 @@ const object_undefined: ServiceError_errorClass_definition = ServiceError_errorC
  * @type {number}
  */
 export
-const ServiceError_errorClass_definition_invalid_address: ServiceError_errorClass_definition = 2; /* LONG_NAMED_INTEGER_VALUE */
+const ServiceError_errorClass_definition_invalid_address = 2 satisfies ServiceError_errorClass_definition; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceError_errorClass_definition_invalid_address
@@ -111,7 +111,7 @@ const ServiceError_errorClass_definition_invalid_address: ServiceError_errorClas
  * @type {number}
  */
 export
-const invalid_address: ServiceError_errorClass_definition = ServiceError_errorClass_definition_invalid_address; /* SHORT_NAMED_INTEGER_VALUE */
+const invalid_address = ServiceError_errorClass_definition_invalid_address satisfies ServiceError_errorClass_definition; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceError_errorClass_definition_type_unsupported
@@ -124,7 +124,7 @@ const invalid_address: ServiceError_errorClass_definition = ServiceError_errorCl
  * @type {number}
  */
 export
-const ServiceError_errorClass_definition_type_unsupported: ServiceError_errorClass_definition = 3; /* LONG_NAMED_INTEGER_VALUE */
+const ServiceError_errorClass_definition_type_unsupported = 3 satisfies ServiceError_errorClass_definition; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceError_errorClass_definition_type_unsupported
@@ -137,7 +137,7 @@ const ServiceError_errorClass_definition_type_unsupported: ServiceError_errorCla
  * @type {number}
  */
 export
-const type_unsupported: ServiceError_errorClass_definition = ServiceError_errorClass_definition_type_unsupported; /* SHORT_NAMED_INTEGER_VALUE */
+const type_unsupported = ServiceError_errorClass_definition_type_unsupported satisfies ServiceError_errorClass_definition; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceError_errorClass_definition_type_inconsistent
@@ -150,7 +150,7 @@ const type_unsupported: ServiceError_errorClass_definition = ServiceError_errorC
  * @type {number}
  */
 export
-const ServiceError_errorClass_definition_type_inconsistent: ServiceError_errorClass_definition = 4; /* LONG_NAMED_INTEGER_VALUE */
+const ServiceError_errorClass_definition_type_inconsistent = 4 satisfies ServiceError_errorClass_definition; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceError_errorClass_definition_type_inconsistent
@@ -163,7 +163,7 @@ const ServiceError_errorClass_definition_type_inconsistent: ServiceError_errorCl
  * @type {number}
  */
 export
-const type_inconsistent: ServiceError_errorClass_definition = ServiceError_errorClass_definition_type_inconsistent; /* SHORT_NAMED_INTEGER_VALUE */
+const type_inconsistent = ServiceError_errorClass_definition_type_inconsistent satisfies ServiceError_errorClass_definition; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceError_errorClass_definition_object_exists
@@ -175,7 +175,7 @@ const type_inconsistent: ServiceError_errorClass_definition = ServiceError_error
  * @type {number}
  */
 export
-const ServiceError_errorClass_definition_object_exists: ServiceError_errorClass_definition = 5; /* LONG_NAMED_INTEGER_VALUE */
+const ServiceError_errorClass_definition_object_exists = 5 satisfies ServiceError_errorClass_definition; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceError_errorClass_definition_object_exists
@@ -187,7 +187,7 @@ const ServiceError_errorClass_definition_object_exists: ServiceError_errorClass_
  * @type {number}
  */
 export
-const object_exists: ServiceError_errorClass_definition = ServiceError_errorClass_definition_object_exists; /* SHORT_NAMED_INTEGER_VALUE */
+const object_exists = ServiceError_errorClass_definition_object_exists satisfies ServiceError_errorClass_definition; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceError_errorClass_definition_object_attribute_inconsistent
@@ -200,7 +200,7 @@ const object_exists: ServiceError_errorClass_definition = ServiceError_errorClas
  * @type {number}
  */
 export
-const ServiceError_errorClass_definition_object_attribute_inconsistent: ServiceError_errorClass_definition = 6; /* LONG_NAMED_INTEGER_VALUE */
+const ServiceError_errorClass_definition_object_attribute_inconsistent = 6 satisfies ServiceError_errorClass_definition; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceError_errorClass_definition_object_attribute_inconsistent
@@ -213,7 +213,7 @@ const ServiceError_errorClass_definition_object_attribute_inconsistent: ServiceE
  * @type {number}
  */
 export
-const object_attribute_inconsistent: ServiceError_errorClass_definition = ServiceError_errorClass_definition_object_attribute_inconsistent; /* SHORT_NAMED_INTEGER_VALUE */
+const object_attribute_inconsistent = ServiceError_errorClass_definition_object_attribute_inconsistent satisfies ServiceError_errorClass_definition; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_ServiceError_errorClass_definition = $._decodeInteger;
 export const _encode_ServiceError_errorClass_definition = $._encodeInteger;
 

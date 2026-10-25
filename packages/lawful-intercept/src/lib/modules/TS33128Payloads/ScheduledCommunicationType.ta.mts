@@ -91,7 +91,7 @@ const ScheduledCommunicationType = _enum_for_ScheduledCommunicationType;
  * @type {number}
  */
 export
-const ScheduledCommunicationType_downlinkOnly: ScheduledCommunicationType = ScheduledCommunicationType.downlinkOnly; /* LONG_NAMED_ENUMERATED_VALUE */
+const ScheduledCommunicationType_downlinkOnly = ScheduledCommunicationType.downlinkOnly satisfies ScheduledCommunicationType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary downlinkOnly
@@ -99,7 +99,7 @@ const ScheduledCommunicationType_downlinkOnly: ScheduledCommunicationType = Sche
  * @type {number}
  */
 export
-const downlinkOnly: ScheduledCommunicationType = ScheduledCommunicationType.downlinkOnly; /* SHORT_NAMED_ENUMERATED_VALUE */
+const downlinkOnly = ScheduledCommunicationType.downlinkOnly satisfies ScheduledCommunicationType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ScheduledCommunicationType_uplinkOnly
@@ -107,7 +107,7 @@ const downlinkOnly: ScheduledCommunicationType = ScheduledCommunicationType.down
  * @type {number}
  */
 export
-const ScheduledCommunicationType_uplinkOnly: ScheduledCommunicationType = ScheduledCommunicationType.uplinkOnly; /* LONG_NAMED_ENUMERATED_VALUE */
+const ScheduledCommunicationType_uplinkOnly = ScheduledCommunicationType.uplinkOnly satisfies ScheduledCommunicationType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary uplinkOnly
@@ -115,7 +115,7 @@ const ScheduledCommunicationType_uplinkOnly: ScheduledCommunicationType = Schedu
  * @type {number}
  */
 export
-const uplinkOnly: ScheduledCommunicationType = ScheduledCommunicationType.uplinkOnly; /* SHORT_NAMED_ENUMERATED_VALUE */
+const uplinkOnly = ScheduledCommunicationType.uplinkOnly satisfies ScheduledCommunicationType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ScheduledCommunicationType_bidirectional
@@ -123,7 +123,7 @@ const uplinkOnly: ScheduledCommunicationType = ScheduledCommunicationType.uplink
  * @type {number}
  */
 export
-const ScheduledCommunicationType_bidirectional: ScheduledCommunicationType = ScheduledCommunicationType.bidirectional; /* LONG_NAMED_ENUMERATED_VALUE */
+const ScheduledCommunicationType_bidirectional = ScheduledCommunicationType.bidirectional satisfies ScheduledCommunicationType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary bidirectional
@@ -131,7 +131,7 @@ const ScheduledCommunicationType_bidirectional: ScheduledCommunicationType = Sch
  * @type {number}
  */
 export
-const bidirectional: ScheduledCommunicationType = ScheduledCommunicationType.bidirectional; /* SHORT_NAMED_ENUMERATED_VALUE */
+const bidirectional = ScheduledCommunicationType.bidirectional satisfies ScheduledCommunicationType; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_ScheduledCommunicationType: $.ASN1Decoder<ScheduledCommunicationType> = $._decodeEnumerated;
 export const _encode_ScheduledCommunicationType: $.ASN1Encoder<ScheduledCommunicationType> = $._encodeEnumerated;
 

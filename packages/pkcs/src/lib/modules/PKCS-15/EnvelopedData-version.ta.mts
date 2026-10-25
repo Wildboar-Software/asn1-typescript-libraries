@@ -21,7 +21,7 @@ export type EnvelopedData_version = INTEGER;
  * @constant
  * @type {number}
  */
-export const EnvelopedData_version_v0: EnvelopedData_version = 0; /* LONG_NAMED_INTEGER_VALUE */
+export const EnvelopedData_version_v0 = 0 satisfies EnvelopedData_version; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -29,7 +29,7 @@ export const EnvelopedData_version_v0: EnvelopedData_version = 0; /* LONG_NAMED_
  * @constant
  * @type {number}
  */
-export const v0: EnvelopedData_version = EnvelopedData_version_v0; /* SHORT_NAMED_INTEGER_VALUE */
+export const v0 = EnvelopedData_version_v0 satisfies EnvelopedData_version; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -37,7 +37,7 @@ export const v0: EnvelopedData_version = EnvelopedData_version_v0; /* SHORT_NAME
  * @constant
  * @type {number}
  */
-export const EnvelopedData_version_v1: EnvelopedData_version = 1; /* LONG_NAMED_INTEGER_VALUE */
+export const EnvelopedData_version_v1 = 1 satisfies EnvelopedData_version; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -45,7 +45,7 @@ export const EnvelopedData_version_v1: EnvelopedData_version = 1; /* LONG_NAMED_
  * @constant
  * @type {number}
  */
-export const v1: EnvelopedData_version = EnvelopedData_version_v1; /* SHORT_NAMED_INTEGER_VALUE */
+export const v1 = EnvelopedData_version_v1 satisfies EnvelopedData_version; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -53,7 +53,7 @@ export const v1: EnvelopedData_version = EnvelopedData_version_v1; /* SHORT_NAME
  * @constant
  * @type {number}
  */
-export const EnvelopedData_version_v2: EnvelopedData_version = 2; /* LONG_NAMED_INTEGER_VALUE */
+export const EnvelopedData_version_v2 = 2 satisfies EnvelopedData_version; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -61,7 +61,7 @@ export const EnvelopedData_version_v2: EnvelopedData_version = 2; /* LONG_NAMED_
  * @constant
  * @type {number}
  */
-export const v2: EnvelopedData_version = EnvelopedData_version_v2; /* SHORT_NAMED_INTEGER_VALUE */
+export const v2 = EnvelopedData_version_v2 satisfies EnvelopedData_version; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -69,7 +69,7 @@ export const v2: EnvelopedData_version = EnvelopedData_version_v2; /* SHORT_NAME
  * @constant
  * @type {number}
  */
-export const EnvelopedData_version_v3: EnvelopedData_version = 3; /* LONG_NAMED_INTEGER_VALUE */
+export const EnvelopedData_version_v3 = 3 satisfies EnvelopedData_version; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -77,7 +77,7 @@ export const EnvelopedData_version_v3: EnvelopedData_version = 3; /* LONG_NAMED_
  * @constant
  * @type {number}
  */
-export const v3: EnvelopedData_version = EnvelopedData_version_v3; /* SHORT_NAMED_INTEGER_VALUE */
+export const v3 = EnvelopedData_version_v3 satisfies EnvelopedData_version; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -85,7 +85,7 @@ export const v3: EnvelopedData_version = EnvelopedData_version_v3; /* SHORT_NAME
  * @constant
  * @type {number}
  */
-export const EnvelopedData_version_v4: EnvelopedData_version = 4; /* LONG_NAMED_INTEGER_VALUE */
+export const EnvelopedData_version_v4 = 4 satisfies EnvelopedData_version; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -93,7 +93,7 @@ export const EnvelopedData_version_v4: EnvelopedData_version = 4; /* LONG_NAMED_
  * @constant
  * @type {number}
  */
-export const v4: EnvelopedData_version = EnvelopedData_version_v4; /* SHORT_NAMED_INTEGER_VALUE */
+export const v4 = EnvelopedData_version_v4 satisfies EnvelopedData_version; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**

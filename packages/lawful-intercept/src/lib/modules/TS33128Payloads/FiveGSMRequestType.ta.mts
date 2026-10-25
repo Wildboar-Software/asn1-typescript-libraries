@@ -125,7 +125,7 @@ const FiveGSMRequestType = _enum_for_FiveGSMRequestType;
  * @type {number}
  */
 export
-const FiveGSMRequestType_initialRequest: FiveGSMRequestType = FiveGSMRequestType.initialRequest; /* LONG_NAMED_ENUMERATED_VALUE */
+const FiveGSMRequestType_initialRequest = FiveGSMRequestType.initialRequest satisfies FiveGSMRequestType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary initialRequest
@@ -133,7 +133,7 @@ const FiveGSMRequestType_initialRequest: FiveGSMRequestType = FiveGSMRequestType
  * @type {number}
  */
 export
-const initialRequest: FiveGSMRequestType = FiveGSMRequestType.initialRequest; /* SHORT_NAMED_ENUMERATED_VALUE */
+const initialRequest = FiveGSMRequestType.initialRequest satisfies FiveGSMRequestType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary FiveGSMRequestType_existingPDUSession
@@ -141,7 +141,7 @@ const initialRequest: FiveGSMRequestType = FiveGSMRequestType.initialRequest; /*
  * @type {number}
  */
 export
-const FiveGSMRequestType_existingPDUSession: FiveGSMRequestType = FiveGSMRequestType.existingPDUSession; /* LONG_NAMED_ENUMERATED_VALUE */
+const FiveGSMRequestType_existingPDUSession = FiveGSMRequestType.existingPDUSession satisfies FiveGSMRequestType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary existingPDUSession
@@ -149,7 +149,7 @@ const FiveGSMRequestType_existingPDUSession: FiveGSMRequestType = FiveGSMRequest
  * @type {number}
  */
 export
-const existingPDUSession: FiveGSMRequestType = FiveGSMRequestType.existingPDUSession; /* SHORT_NAMED_ENUMERATED_VALUE */
+const existingPDUSession = FiveGSMRequestType.existingPDUSession satisfies FiveGSMRequestType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary FiveGSMRequestType_initialEmergencyRequest
@@ -157,7 +157,7 @@ const existingPDUSession: FiveGSMRequestType = FiveGSMRequestType.existingPDUSes
  * @type {number}
  */
 export
-const FiveGSMRequestType_initialEmergencyRequest: FiveGSMRequestType = FiveGSMRequestType.initialEmergencyRequest; /* LONG_NAMED_ENUMERATED_VALUE */
+const FiveGSMRequestType_initialEmergencyRequest = FiveGSMRequestType.initialEmergencyRequest satisfies FiveGSMRequestType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary initialEmergencyRequest
@@ -165,7 +165,7 @@ const FiveGSMRequestType_initialEmergencyRequest: FiveGSMRequestType = FiveGSMRe
  * @type {number}
  */
 export
-const initialEmergencyRequest: FiveGSMRequestType = FiveGSMRequestType.initialEmergencyRequest; /* SHORT_NAMED_ENUMERATED_VALUE */
+const initialEmergencyRequest = FiveGSMRequestType.initialEmergencyRequest satisfies FiveGSMRequestType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary FiveGSMRequestType_existingEmergencyPDUSession
@@ -173,7 +173,7 @@ const initialEmergencyRequest: FiveGSMRequestType = FiveGSMRequestType.initialEm
  * @type {number}
  */
 export
-const FiveGSMRequestType_existingEmergencyPDUSession: FiveGSMRequestType = FiveGSMRequestType.existingEmergencyPDUSession; /* LONG_NAMED_ENUMERATED_VALUE */
+const FiveGSMRequestType_existingEmergencyPDUSession = FiveGSMRequestType.existingEmergencyPDUSession satisfies FiveGSMRequestType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary existingEmergencyPDUSession
@@ -181,7 +181,7 @@ const FiveGSMRequestType_existingEmergencyPDUSession: FiveGSMRequestType = FiveG
  * @type {number}
  */
 export
-const existingEmergencyPDUSession: FiveGSMRequestType = FiveGSMRequestType.existingEmergencyPDUSession; /* SHORT_NAMED_ENUMERATED_VALUE */
+const existingEmergencyPDUSession = FiveGSMRequestType.existingEmergencyPDUSession satisfies FiveGSMRequestType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary FiveGSMRequestType_modificationRequest
@@ -189,7 +189,7 @@ const existingEmergencyPDUSession: FiveGSMRequestType = FiveGSMRequestType.exist
  * @type {number}
  */
 export
-const FiveGSMRequestType_modificationRequest: FiveGSMRequestType = FiveGSMRequestType.modificationRequest; /* LONG_NAMED_ENUMERATED_VALUE */
+const FiveGSMRequestType_modificationRequest = FiveGSMRequestType.modificationRequest satisfies FiveGSMRequestType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary modificationRequest
@@ -197,7 +197,7 @@ const FiveGSMRequestType_modificationRequest: FiveGSMRequestType = FiveGSMReques
  * @type {number}
  */
 export
-const modificationRequest: FiveGSMRequestType = FiveGSMRequestType.modificationRequest; /* SHORT_NAMED_ENUMERATED_VALUE */
+const modificationRequest = FiveGSMRequestType.modificationRequest satisfies FiveGSMRequestType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary FiveGSMRequestType_reserved
@@ -205,7 +205,7 @@ const modificationRequest: FiveGSMRequestType = FiveGSMRequestType.modificationR
  * @type {number}
  */
 export
-const FiveGSMRequestType_reserved: FiveGSMRequestType = FiveGSMRequestType.reserved; /* LONG_NAMED_ENUMERATED_VALUE */
+const FiveGSMRequestType_reserved = FiveGSMRequestType.reserved satisfies FiveGSMRequestType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary reserved
@@ -213,7 +213,7 @@ const FiveGSMRequestType_reserved: FiveGSMRequestType = FiveGSMRequestType.reser
  * @type {number}
  */
 export
-const reserved: FiveGSMRequestType = FiveGSMRequestType.reserved; /* SHORT_NAMED_ENUMERATED_VALUE */
+const reserved = FiveGSMRequestType.reserved satisfies FiveGSMRequestType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary FiveGSMRequestType_mAPDURequest
@@ -221,7 +221,7 @@ const reserved: FiveGSMRequestType = FiveGSMRequestType.reserved; /* SHORT_NAMED
  * @type {number}
  */
 export
-const FiveGSMRequestType_mAPDURequest: FiveGSMRequestType = FiveGSMRequestType.mAPDURequest; /* LONG_NAMED_ENUMERATED_VALUE */
+const FiveGSMRequestType_mAPDURequest = FiveGSMRequestType.mAPDURequest satisfies FiveGSMRequestType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary mAPDURequest
@@ -229,7 +229,7 @@ const FiveGSMRequestType_mAPDURequest: FiveGSMRequestType = FiveGSMRequestType.m
  * @type {number}
  */
 export
-const mAPDURequest: FiveGSMRequestType = FiveGSMRequestType.mAPDURequest; /* SHORT_NAMED_ENUMERATED_VALUE */
+const mAPDURequest = FiveGSMRequestType.mAPDURequest satisfies FiveGSMRequestType; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_FiveGSMRequestType: $.ASN1Decoder<FiveGSMRequestType> = $._decodeEnumerated;
 export const _encode_FiveGSMRequestType: $.ASN1Encoder<FiveGSMRequestType> = $._encodeEnumerated;
 

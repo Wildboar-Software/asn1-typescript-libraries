@@ -21,7 +21,7 @@ export type PKCS15Token_version = INTEGER;
  * @constant
  * @type {number}
  */
-export const PKCS15Token_version_v1: PKCS15Token_version = 0; /* LONG_NAMED_INTEGER_VALUE */
+export const PKCS15Token_version_v1 = 0 satisfies PKCS15Token_version; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -29,7 +29,7 @@ export const PKCS15Token_version_v1: PKCS15Token_version = 0; /* LONG_NAMED_INTE
  * @constant
  * @type {number}
  */
-export const v1: PKCS15Token_version = PKCS15Token_version_v1; /* SHORT_NAMED_INTEGER_VALUE */
+export const v1 = PKCS15Token_version_v1 satisfies PKCS15Token_version; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 

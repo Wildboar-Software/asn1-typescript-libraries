@@ -133,7 +133,7 @@ const SecurityLevel = _enum_for_SecurityLevel;
  * @type {number}
  */
 export
-const SecurityLevel_level1: SecurityLevel = SecurityLevel.level1; /* LONG_NAMED_ENUMERATED_VALUE */
+const SecurityLevel_level1 = SecurityLevel.level1 satisfies SecurityLevel; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary level1
@@ -152,7 +152,7 @@ const SecurityLevel_level1: SecurityLevel = SecurityLevel.level1; /* LONG_NAMED_
  * @type {number}
  */
 export
-const level1: SecurityLevel = SecurityLevel.level1; /* SHORT_NAMED_ENUMERATED_VALUE */
+const level1 = SecurityLevel.level1 satisfies SecurityLevel; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SecurityLevel_level2
@@ -171,7 +171,7 @@ const level1: SecurityLevel = SecurityLevel.level1; /* SHORT_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const SecurityLevel_level2: SecurityLevel = SecurityLevel.level2; /* LONG_NAMED_ENUMERATED_VALUE */
+const SecurityLevel_level2 = SecurityLevel.level2 satisfies SecurityLevel; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary level2
@@ -190,7 +190,7 @@ const SecurityLevel_level2: SecurityLevel = SecurityLevel.level2; /* LONG_NAMED_
  * @type {number}
  */
 export
-const level2: SecurityLevel = SecurityLevel.level2; /* SHORT_NAMED_ENUMERATED_VALUE */
+const level2 = SecurityLevel.level2 satisfies SecurityLevel; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SecurityLevel_level3
@@ -209,7 +209,7 @@ const level2: SecurityLevel = SecurityLevel.level2; /* SHORT_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const SecurityLevel_level3: SecurityLevel = SecurityLevel.level3; /* LONG_NAMED_ENUMERATED_VALUE */
+const SecurityLevel_level3 = SecurityLevel.level3 satisfies SecurityLevel; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary level3
@@ -228,7 +228,7 @@ const SecurityLevel_level3: SecurityLevel = SecurityLevel.level3; /* LONG_NAMED_
  * @type {number}
  */
 export
-const level3: SecurityLevel = SecurityLevel.level3; /* SHORT_NAMED_ENUMERATED_VALUE */
+const level3 = SecurityLevel.level3 satisfies SecurityLevel; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SecurityLevel_level4
@@ -247,7 +247,7 @@ const level3: SecurityLevel = SecurityLevel.level3; /* SHORT_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const SecurityLevel_level4: SecurityLevel = SecurityLevel.level4; /* LONG_NAMED_ENUMERATED_VALUE */
+const SecurityLevel_level4 = SecurityLevel.level4 satisfies SecurityLevel; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary level4
@@ -266,7 +266,7 @@ const SecurityLevel_level4: SecurityLevel = SecurityLevel.level4; /* LONG_NAMED_
  * @type {number}
  */
 export
-const level4: SecurityLevel = SecurityLevel.level4; /* SHORT_NAMED_ENUMERATED_VALUE */
+const level4 = SecurityLevel.level4 satisfies SecurityLevel; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_SecurityLevel: $.ASN1Decoder<SecurityLevel> = $._decodeEnumerated;

@@ -110,7 +110,7 @@ const V2XUEAuthorizationIndicator = _enum_for_V2XUEAuthorizationIndicator;
  * @type {number}
  */
 export
-const V2XUEAuthorizationIndicator_authorized: V2XUEAuthorizationIndicator = V2XUEAuthorizationIndicator.authorized; /* LONG_NAMED_ENUMERATED_VALUE */
+const V2XUEAuthorizationIndicator_authorized = V2XUEAuthorizationIndicator.authorized satisfies V2XUEAuthorizationIndicator; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary authorized
@@ -124,7 +124,7 @@ const V2XUEAuthorizationIndicator_authorized: V2XUEAuthorizationIndicator = V2XU
  * @type {number}
  */
 export
-const authorized: V2XUEAuthorizationIndicator = V2XUEAuthorizationIndicator.authorized; /* SHORT_NAMED_ENUMERATED_VALUE */
+const authorized = V2XUEAuthorizationIndicator.authorized satisfies V2XUEAuthorizationIndicator; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary V2XUEAuthorizationIndicator_notAuthorized
@@ -138,7 +138,7 @@ const authorized: V2XUEAuthorizationIndicator = V2XUEAuthorizationIndicator.auth
  * @type {number}
  */
 export
-const V2XUEAuthorizationIndicator_notAuthorized: V2XUEAuthorizationIndicator = V2XUEAuthorizationIndicator.notAuthorized; /* LONG_NAMED_ENUMERATED_VALUE */
+const V2XUEAuthorizationIndicator_notAuthorized = V2XUEAuthorizationIndicator.notAuthorized satisfies V2XUEAuthorizationIndicator; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary notAuthorized
@@ -152,7 +152,7 @@ const V2XUEAuthorizationIndicator_notAuthorized: V2XUEAuthorizationIndicator = V
  * @type {number}
  */
 export
-const notAuthorized: V2XUEAuthorizationIndicator = V2XUEAuthorizationIndicator.notAuthorized; /* SHORT_NAMED_ENUMERATED_VALUE */
+const notAuthorized = V2XUEAuthorizationIndicator.notAuthorized satisfies V2XUEAuthorizationIndicator; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_V2XUEAuthorizationIndicator: $.ASN1Decoder<V2XUEAuthorizationIndicator> = $._decodeEnumerated;
 export const _encode_V2XUEAuthorizationIndicator: $.ASN1Encoder<V2XUEAuthorizationIndicator> = $._encodeEnumerated;
 

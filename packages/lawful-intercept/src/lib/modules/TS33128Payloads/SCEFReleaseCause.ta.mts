@@ -81,7 +81,7 @@ const SCEFReleaseCause = _enum_for_SCEFReleaseCause;
  * @type {number}
  */
 export
-const SCEFReleaseCause_mMERelease: SCEFReleaseCause = SCEFReleaseCause.mMERelease; /* LONG_NAMED_ENUMERATED_VALUE */
+const SCEFReleaseCause_mMERelease = SCEFReleaseCause.mMERelease satisfies SCEFReleaseCause; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary mMERelease
@@ -89,7 +89,7 @@ const SCEFReleaseCause_mMERelease: SCEFReleaseCause = SCEFReleaseCause.mMEReleas
  * @type {number}
  */
 export
-const mMERelease: SCEFReleaseCause = SCEFReleaseCause.mMERelease; /* SHORT_NAMED_ENUMERATED_VALUE */
+const mMERelease = SCEFReleaseCause.mMERelease satisfies SCEFReleaseCause; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SCEFReleaseCause_dNRelease
@@ -97,7 +97,7 @@ const mMERelease: SCEFReleaseCause = SCEFReleaseCause.mMERelease; /* SHORT_NAMED
  * @type {number}
  */
 export
-const SCEFReleaseCause_dNRelease: SCEFReleaseCause = SCEFReleaseCause.dNRelease; /* LONG_NAMED_ENUMERATED_VALUE */
+const SCEFReleaseCause_dNRelease = SCEFReleaseCause.dNRelease satisfies SCEFReleaseCause; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary dNRelease
@@ -105,7 +105,7 @@ const SCEFReleaseCause_dNRelease: SCEFReleaseCause = SCEFReleaseCause.dNRelease;
  * @type {number}
  */
 export
-const dNRelease: SCEFReleaseCause = SCEFReleaseCause.dNRelease; /* SHORT_NAMED_ENUMERATED_VALUE */
+const dNRelease = SCEFReleaseCause.dNRelease satisfies SCEFReleaseCause; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SCEFReleaseCause_hSSRelease
@@ -113,7 +113,7 @@ const dNRelease: SCEFReleaseCause = SCEFReleaseCause.dNRelease; /* SHORT_NAMED_E
  * @type {number}
  */
 export
-const SCEFReleaseCause_hSSRelease: SCEFReleaseCause = SCEFReleaseCause.hSSRelease; /* LONG_NAMED_ENUMERATED_VALUE */
+const SCEFReleaseCause_hSSRelease = SCEFReleaseCause.hSSRelease satisfies SCEFReleaseCause; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary hSSRelease
@@ -121,7 +121,7 @@ const SCEFReleaseCause_hSSRelease: SCEFReleaseCause = SCEFReleaseCause.hSSReleas
  * @type {number}
  */
 export
-const hSSRelease: SCEFReleaseCause = SCEFReleaseCause.hSSRelease; /* SHORT_NAMED_ENUMERATED_VALUE */
+const hSSRelease = SCEFReleaseCause.hSSRelease satisfies SCEFReleaseCause; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SCEFReleaseCause_localConfigurationPolicy
@@ -129,7 +129,7 @@ const hSSRelease: SCEFReleaseCause = SCEFReleaseCause.hSSRelease; /* SHORT_NAMED
  * @type {number}
  */
 export
-const SCEFReleaseCause_localConfigurationPolicy: SCEFReleaseCause = SCEFReleaseCause.localConfigurationPolicy; /* LONG_NAMED_ENUMERATED_VALUE */
+const SCEFReleaseCause_localConfigurationPolicy = SCEFReleaseCause.localConfigurationPolicy satisfies SCEFReleaseCause; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary localConfigurationPolicy
@@ -137,7 +137,7 @@ const SCEFReleaseCause_localConfigurationPolicy: SCEFReleaseCause = SCEFReleaseC
  * @type {number}
  */
 export
-const localConfigurationPolicy: SCEFReleaseCause = SCEFReleaseCause.localConfigurationPolicy; /* SHORT_NAMED_ENUMERATED_VALUE */
+const localConfigurationPolicy = SCEFReleaseCause.localConfigurationPolicy satisfies SCEFReleaseCause; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SCEFReleaseCause_unknownCause
@@ -145,7 +145,7 @@ const localConfigurationPolicy: SCEFReleaseCause = SCEFReleaseCause.localConfigu
  * @type {number}
  */
 export
-const SCEFReleaseCause_unknownCause: SCEFReleaseCause = SCEFReleaseCause.unknownCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const SCEFReleaseCause_unknownCause = SCEFReleaseCause.unknownCause satisfies SCEFReleaseCause; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unknownCause
@@ -153,7 +153,7 @@ const SCEFReleaseCause_unknownCause: SCEFReleaseCause = SCEFReleaseCause.unknown
  * @type {number}
  */
 export
-const unknownCause: SCEFReleaseCause = SCEFReleaseCause.unknownCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unknownCause = SCEFReleaseCause.unknownCause satisfies SCEFReleaseCause; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_SCEFReleaseCause: $.ASN1Decoder<SCEFReleaseCause> = $._decodeEnumerated;
 export const _encode_SCEFReleaseCause: $.ASN1Encoder<SCEFReleaseCause> = $._encodeEnumerated;
 

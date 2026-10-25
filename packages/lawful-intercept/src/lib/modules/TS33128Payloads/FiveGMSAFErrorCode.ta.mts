@@ -92,7 +92,7 @@ const FiveGMSAFErrorCode = _enum_for_FiveGMSAFErrorCode;
  * @type {number}
  */
 export
-const FiveGMSAFErrorCode_badRequest400: FiveGMSAFErrorCode = FiveGMSAFErrorCode.badRequest400; /* LONG_NAMED_ENUMERATED_VALUE */
+const FiveGMSAFErrorCode_badRequest400 = FiveGMSAFErrorCode.badRequest400 satisfies FiveGMSAFErrorCode; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary badRequest400
@@ -100,7 +100,7 @@ const FiveGMSAFErrorCode_badRequest400: FiveGMSAFErrorCode = FiveGMSAFErrorCode.
  * @type {number}
  */
 export
-const badRequest400: FiveGMSAFErrorCode = FiveGMSAFErrorCode.badRequest400; /* SHORT_NAMED_ENUMERATED_VALUE */
+const badRequest400 = FiveGMSAFErrorCode.badRequest400 satisfies FiveGMSAFErrorCode; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary FiveGMSAFErrorCode_unauthorized401
@@ -108,7 +108,7 @@ const badRequest400: FiveGMSAFErrorCode = FiveGMSAFErrorCode.badRequest400; /* S
  * @type {number}
  */
 export
-const FiveGMSAFErrorCode_unauthorized401: FiveGMSAFErrorCode = FiveGMSAFErrorCode.unauthorized401; /* LONG_NAMED_ENUMERATED_VALUE */
+const FiveGMSAFErrorCode_unauthorized401 = FiveGMSAFErrorCode.unauthorized401 satisfies FiveGMSAFErrorCode; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unauthorized401
@@ -116,7 +116,7 @@ const FiveGMSAFErrorCode_unauthorized401: FiveGMSAFErrorCode = FiveGMSAFErrorCod
  * @type {number}
  */
 export
-const unauthorized401: FiveGMSAFErrorCode = FiveGMSAFErrorCode.unauthorized401; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unauthorized401 = FiveGMSAFErrorCode.unauthorized401 satisfies FiveGMSAFErrorCode; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary FiveGMSAFErrorCode_notFound404
@@ -124,7 +124,7 @@ const unauthorized401: FiveGMSAFErrorCode = FiveGMSAFErrorCode.unauthorized401; 
  * @type {number}
  */
 export
-const FiveGMSAFErrorCode_notFound404: FiveGMSAFErrorCode = FiveGMSAFErrorCode.notFound404; /* LONG_NAMED_ENUMERATED_VALUE */
+const FiveGMSAFErrorCode_notFound404 = FiveGMSAFErrorCode.notFound404 satisfies FiveGMSAFErrorCode; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary notFound404
@@ -132,7 +132,7 @@ const FiveGMSAFErrorCode_notFound404: FiveGMSAFErrorCode = FiveGMSAFErrorCode.no
  * @type {number}
  */
 export
-const notFound404: FiveGMSAFErrorCode = FiveGMSAFErrorCode.notFound404; /* SHORT_NAMED_ENUMERATED_VALUE */
+const notFound404 = FiveGMSAFErrorCode.notFound404 satisfies FiveGMSAFErrorCode; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary FiveGMSAFErrorCode_unsupportedMediaType415
@@ -140,7 +140,7 @@ const notFound404: FiveGMSAFErrorCode = FiveGMSAFErrorCode.notFound404; /* SHORT
  * @type {number}
  */
 export
-const FiveGMSAFErrorCode_unsupportedMediaType415: FiveGMSAFErrorCode = FiveGMSAFErrorCode.unsupportedMediaType415; /* LONG_NAMED_ENUMERATED_VALUE */
+const FiveGMSAFErrorCode_unsupportedMediaType415 = FiveGMSAFErrorCode.unsupportedMediaType415 satisfies FiveGMSAFErrorCode; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unsupportedMediaType415
@@ -148,7 +148,7 @@ const FiveGMSAFErrorCode_unsupportedMediaType415: FiveGMSAFErrorCode = FiveGMSAF
  * @type {number}
  */
 export
-const unsupportedMediaType415: FiveGMSAFErrorCode = FiveGMSAFErrorCode.unsupportedMediaType415; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unsupportedMediaType415 = FiveGMSAFErrorCode.unsupportedMediaType415 satisfies FiveGMSAFErrorCode; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_FiveGMSAFErrorCode: $.ASN1Decoder<FiveGMSAFErrorCode> = $._decodeEnumerated;
 export const _encode_FiveGMSAFErrorCode: $.ASN1Encoder<FiveGMSAFErrorCode> = $._encodeEnumerated;
 

@@ -32,42 +32,42 @@ export type ServiceProblem = INTEGER;
  * @constant
  * @type {number}
  */
-export const ServiceProblem_busy: ServiceProblem = 0; /* LONG_NAMED_INTEGER_VALUE */
+export const ServiceProblem_busy = 0 satisfies ServiceProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceProblem_busy
  * @constant
  * @type {number}
  */
-export const busy: ServiceProblem = ServiceProblem_busy; /* SHORT_NAMED_INTEGER_VALUE */
+export const busy = ServiceProblem_busy satisfies ServiceProblem; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceProblem_unavailable
  * @constant
  * @type {number}
  */
-export const ServiceProblem_unavailable: ServiceProblem = 1; /* LONG_NAMED_INTEGER_VALUE */
+export const ServiceProblem_unavailable = 1 satisfies ServiceProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceProblem_unavailable
  * @constant
  * @type {number}
  */
-export const unavailable: ServiceProblem = ServiceProblem_unavailable; /* SHORT_NAMED_INTEGER_VALUE */
+export const unavailable = ServiceProblem_unavailable satisfies ServiceProblem; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceProblem_unwilling_to_perform
  * @constant
  * @type {number}
  */
-export const ServiceProblem_unwilling_to_perform: ServiceProblem = 2; /* LONG_NAMED_INTEGER_VALUE */
+export const ServiceProblem_unwilling_to_perform = 2 satisfies ServiceProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceProblem_unwilling_to_perform
  * @constant
  * @type {number}
  */
-export const unwilling_to_perform: ServiceProblem = ServiceProblem_unwilling_to_perform; /* SHORT_NAMED_INTEGER_VALUE */
+export const unwilling_to_perform = ServiceProblem_unwilling_to_perform satisfies ServiceProblem; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_ServiceProblem = $._decodeInteger;

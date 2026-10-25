@@ -70,7 +70,7 @@ const EventTypeBCUSM = _enum_for_EventTypeBCUSM;
  * @type {number}
  */
 export
-const EventTypeBCUSM_componentReceived: EventTypeBCUSM = EventTypeBCUSM.componentReceived; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventTypeBCUSM_componentReceived = EventTypeBCUSM.componentReceived satisfies EventTypeBCUSM; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary componentReceived
@@ -78,7 +78,7 @@ const EventTypeBCUSM_componentReceived: EventTypeBCUSM = EventTypeBCUSM.componen
  * @type {number}
  */
 export
-const componentReceived: EventTypeBCUSM = EventTypeBCUSM.componentReceived; /* SHORT_NAMED_ENUMERATED_VALUE */
+const componentReceived = EventTypeBCUSM.componentReceived satisfies EventTypeBCUSM; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventTypeBCUSM_associationReleaseRequested
@@ -86,7 +86,7 @@ const componentReceived: EventTypeBCUSM = EventTypeBCUSM.componentReceived; /* S
  * @type {number}
  */
 export
-const EventTypeBCUSM_associationReleaseRequested: EventTypeBCUSM = EventTypeBCUSM.associationReleaseRequested; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventTypeBCUSM_associationReleaseRequested = EventTypeBCUSM.associationReleaseRequested satisfies EventTypeBCUSM; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary associationReleaseRequested
@@ -94,7 +94,7 @@ const EventTypeBCUSM_associationReleaseRequested: EventTypeBCUSM = EventTypeBCUS
  * @type {number}
  */
 export
-const associationReleaseRequested: EventTypeBCUSM = EventTypeBCUSM.associationReleaseRequested; /* SHORT_NAMED_ENUMERATED_VALUE */
+const associationReleaseRequested = EventTypeBCUSM.associationReleaseRequested satisfies EventTypeBCUSM; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_EventTypeBCUSM = $._decodeEnumerated;
 export const _encode_EventTypeBCUSM = $._encodeEnumerated;
 

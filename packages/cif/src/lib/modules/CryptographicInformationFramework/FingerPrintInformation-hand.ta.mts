@@ -69,7 +69,7 @@ const FingerPrintInformation_hand = _enum_for_FingerPrintInformation_hand;
  * @type {number}
  */
 export
-const FingerPrintInformation_hand_left: FingerPrintInformation_hand = FingerPrintInformation_hand.left; /* LONG_NAMED_ENUMERATED_VALUE */
+const FingerPrintInformation_hand_left = FingerPrintInformation_hand.left satisfies FingerPrintInformation_hand; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary left
@@ -77,7 +77,7 @@ const FingerPrintInformation_hand_left: FingerPrintInformation_hand = FingerPrin
  * @type {number}
  */
 export
-const left: FingerPrintInformation_hand = FingerPrintInformation_hand.left; /* SHORT_NAMED_ENUMERATED_VALUE */
+const left = FingerPrintInformation_hand.left satisfies FingerPrintInformation_hand; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary FingerPrintInformation_hand_right
@@ -85,7 +85,7 @@ const left: FingerPrintInformation_hand = FingerPrintInformation_hand.left; /* S
  * @type {number}
  */
 export
-const FingerPrintInformation_hand_right: FingerPrintInformation_hand = FingerPrintInformation_hand.right; /* LONG_NAMED_ENUMERATED_VALUE */
+const FingerPrintInformation_hand_right = FingerPrintInformation_hand.right satisfies FingerPrintInformation_hand; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary right
@@ -93,7 +93,7 @@ const FingerPrintInformation_hand_right: FingerPrintInformation_hand = FingerPri
  * @type {number}
  */
 export
-const right: FingerPrintInformation_hand = FingerPrintInformation_hand.right; /* SHORT_NAMED_ENUMERATED_VALUE */
+const right = FingerPrintInformation_hand.right satisfies FingerPrintInformation_hand; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_FingerPrintInformation_hand = $._decodeEnumerated;
 export const _encode_FingerPrintInformation_hand = $._encodeEnumerated;
 

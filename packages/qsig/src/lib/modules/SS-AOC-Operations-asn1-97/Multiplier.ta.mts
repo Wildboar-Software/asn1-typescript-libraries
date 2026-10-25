@@ -105,7 +105,7 @@ const Multiplier = _enum_for_Multiplier;
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-211/
  */
 export
-const Multiplier_oneThousandth: Multiplier = Multiplier.oneThousandth; /* LONG_NAMED_ENUMERATED_VALUE */
+const Multiplier_oneThousandth = Multiplier.oneThousandth satisfies Multiplier; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary oneThousandth
@@ -114,7 +114,7 @@ const Multiplier_oneThousandth: Multiplier = Multiplier.oneThousandth; /* LONG_N
  * @type {number}
  */
 export
-const oneThousandth: Multiplier = Multiplier.oneThousandth; /* SHORT_NAMED_ENUMERATED_VALUE */
+const oneThousandth = Multiplier.oneThousandth satisfies Multiplier; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Multiplier_oneHundredth
@@ -125,7 +125,7 @@ const oneThousandth: Multiplier = Multiplier.oneThousandth; /* SHORT_NAMED_ENUME
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-211/
  */
 export
-const Multiplier_oneHundredth: Multiplier = Multiplier.oneHundredth; /* LONG_NAMED_ENUMERATED_VALUE */
+const Multiplier_oneHundredth = Multiplier.oneHundredth satisfies Multiplier; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary oneHundredth
@@ -134,7 +134,7 @@ const Multiplier_oneHundredth: Multiplier = Multiplier.oneHundredth; /* LONG_NAM
  * @type {number}
  */
 export
-const oneHundredth: Multiplier = Multiplier.oneHundredth; /* SHORT_NAMED_ENUMERATED_VALUE */
+const oneHundredth = Multiplier.oneHundredth satisfies Multiplier; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Multiplier_oneTenth
@@ -145,7 +145,7 @@ const oneHundredth: Multiplier = Multiplier.oneHundredth; /* SHORT_NAMED_ENUMERA
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-211/
  */
 export
-const Multiplier_oneTenth: Multiplier = Multiplier.oneTenth; /* LONG_NAMED_ENUMERATED_VALUE */
+const Multiplier_oneTenth = Multiplier.oneTenth satisfies Multiplier; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary oneTenth
@@ -154,7 +154,7 @@ const Multiplier_oneTenth: Multiplier = Multiplier.oneTenth; /* LONG_NAMED_ENUME
  * @type {number}
  */
 export
-const oneTenth: Multiplier = Multiplier.oneTenth; /* SHORT_NAMED_ENUMERATED_VALUE */
+const oneTenth = Multiplier.oneTenth satisfies Multiplier; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Multiplier_one
@@ -165,7 +165,7 @@ const oneTenth: Multiplier = Multiplier.oneTenth; /* SHORT_NAMED_ENUMERATED_VALU
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-211/
  */
 export
-const Multiplier_one: Multiplier = Multiplier.one; /* LONG_NAMED_ENUMERATED_VALUE */
+const Multiplier_one = Multiplier.one satisfies Multiplier; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary one
@@ -174,7 +174,7 @@ const Multiplier_one: Multiplier = Multiplier.one; /* LONG_NAMED_ENUMERATED_VALU
  * @type {number}
  */
 export
-const one: Multiplier = Multiplier.one; /* SHORT_NAMED_ENUMERATED_VALUE */
+const one = Multiplier.one satisfies Multiplier; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Multiplier_ten
@@ -185,7 +185,7 @@ const one: Multiplier = Multiplier.one; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-211/
  */
 export
-const Multiplier_ten: Multiplier = Multiplier.ten; /* LONG_NAMED_ENUMERATED_VALUE */
+const Multiplier_ten = Multiplier.ten satisfies Multiplier; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ten
@@ -194,7 +194,7 @@ const Multiplier_ten: Multiplier = Multiplier.ten; /* LONG_NAMED_ENUMERATED_VALU
  * @type {number}
  */
 export
-const ten: Multiplier = Multiplier.ten; /* SHORT_NAMED_ENUMERATED_VALUE */
+const ten = Multiplier.ten satisfies Multiplier; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Multiplier_hundred
@@ -205,7 +205,7 @@ const ten: Multiplier = Multiplier.ten; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-211/
  */
 export
-const Multiplier_hundred: Multiplier = Multiplier.hundred; /* LONG_NAMED_ENUMERATED_VALUE */
+const Multiplier_hundred = Multiplier.hundred satisfies Multiplier; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary hundred
@@ -214,7 +214,7 @@ const Multiplier_hundred: Multiplier = Multiplier.hundred; /* LONG_NAMED_ENUMERA
  * @type {number}
  */
 export
-const hundred: Multiplier = Multiplier.hundred; /* SHORT_NAMED_ENUMERATED_VALUE */
+const hundred = Multiplier.hundred satisfies Multiplier; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Multiplier_thousand
@@ -225,7 +225,7 @@ const hundred: Multiplier = Multiplier.hundred; /* SHORT_NAMED_ENUMERATED_VALUE 
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-211/
  */
 export
-const Multiplier_thousand: Multiplier = Multiplier.thousand; /* LONG_NAMED_ENUMERATED_VALUE */
+const Multiplier_thousand = Multiplier.thousand satisfies Multiplier; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary thousand
@@ -234,7 +234,7 @@ const Multiplier_thousand: Multiplier = Multiplier.thousand; /* LONG_NAMED_ENUME
  * @type {number}
  */
 export
-const thousand: Multiplier = Multiplier.thousand; /* SHORT_NAMED_ENUMERATED_VALUE */
+const thousand = Multiplier.thousand satisfies Multiplier; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_Multiplier: $.ASN1Decoder<Multiplier> = $._decodeEnumerated;

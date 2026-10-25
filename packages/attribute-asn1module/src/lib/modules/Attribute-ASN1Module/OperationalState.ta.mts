@@ -87,7 +87,7 @@ const OperationalState = _enum_for_OperationalState;
  * @type {number}
  */
 export
-const OperationalState_disabled: OperationalState = OperationalState.disabled; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationalState_disabled = OperationalState.disabled satisfies OperationalState; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary disabled
@@ -100,7 +100,7 @@ const OperationalState_disabled: OperationalState = OperationalState.disabled; /
  * @type {number}
  */
 export
-const disabled: OperationalState = OperationalState.disabled; /* SHORT_NAMED_ENUMERATED_VALUE */
+const disabled = OperationalState.disabled satisfies OperationalState; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationalState_enabled
@@ -113,7 +113,7 @@ const disabled: OperationalState = OperationalState.disabled; /* SHORT_NAMED_ENU
  * @type {number}
  */
 export
-const OperationalState_enabled: OperationalState = OperationalState.enabled; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationalState_enabled = OperationalState.enabled satisfies OperationalState; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary enabled
@@ -126,7 +126,7 @@ const OperationalState_enabled: OperationalState = OperationalState.enabled; /* 
  * @type {number}
  */
 export
-const enabled: OperationalState = OperationalState.enabled; /* SHORT_NAMED_ENUMERATED_VALUE */
+const enabled = OperationalState.enabled satisfies OperationalState; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 export function _decode_OperationalState(el: _Element): OperationalState {

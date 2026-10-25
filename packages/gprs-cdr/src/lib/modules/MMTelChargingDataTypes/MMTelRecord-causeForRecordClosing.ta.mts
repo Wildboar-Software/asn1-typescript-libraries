@@ -78,7 +78,7 @@ const MMTelRecord_causeForRecordClosing = _enum_for_MMTelRecord_causeForRecordCl
  * @type {number}
  */
 export
-const MMTelRecord_causeForRecordClosing_serviceDeliveryEndSuccessfully: MMTelRecord_causeForRecordClosing = MMTelRecord_causeForRecordClosing.serviceDeliveryEndSuccessfully; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMTelRecord_causeForRecordClosing_serviceDeliveryEndSuccessfully = MMTelRecord_causeForRecordClosing.serviceDeliveryEndSuccessfully satisfies MMTelRecord_causeForRecordClosing; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary serviceDeliveryEndSuccessfully
@@ -86,7 +86,7 @@ const MMTelRecord_causeForRecordClosing_serviceDeliveryEndSuccessfully: MMTelRec
  * @type {number}
  */
 export
-const serviceDeliveryEndSuccessfully: MMTelRecord_causeForRecordClosing = MMTelRecord_causeForRecordClosing.serviceDeliveryEndSuccessfully; /* SHORT_NAMED_ENUMERATED_VALUE */
+const serviceDeliveryEndSuccessfully = MMTelRecord_causeForRecordClosing.serviceDeliveryEndSuccessfully satisfies MMTelRecord_causeForRecordClosing; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMTelRecord_causeForRecordClosing_unSuccessfulServiceDelivery
@@ -94,7 +94,7 @@ const serviceDeliveryEndSuccessfully: MMTelRecord_causeForRecordClosing = MMTelR
  * @type {number}
  */
 export
-const MMTelRecord_causeForRecordClosing_unSuccessfulServiceDelivery: MMTelRecord_causeForRecordClosing = MMTelRecord_causeForRecordClosing.unSuccessfulServiceDelivery; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMTelRecord_causeForRecordClosing_unSuccessfulServiceDelivery = MMTelRecord_causeForRecordClosing.unSuccessfulServiceDelivery satisfies MMTelRecord_causeForRecordClosing; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unSuccessfulServiceDelivery
@@ -102,7 +102,7 @@ const MMTelRecord_causeForRecordClosing_unSuccessfulServiceDelivery: MMTelRecord
  * @type {number}
  */
 export
-const unSuccessfulServiceDelivery: MMTelRecord_causeForRecordClosing = MMTelRecord_causeForRecordClosing.unSuccessfulServiceDelivery; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unSuccessfulServiceDelivery = MMTelRecord_causeForRecordClosing.unSuccessfulServiceDelivery satisfies MMTelRecord_causeForRecordClosing; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMTelRecord_causeForRecordClosing_timeLimit
@@ -110,7 +110,7 @@ const unSuccessfulServiceDelivery: MMTelRecord_causeForRecordClosing = MMTelReco
  * @type {number}
  */
 export
-const MMTelRecord_causeForRecordClosing_timeLimit: MMTelRecord_causeForRecordClosing = MMTelRecord_causeForRecordClosing.timeLimit; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMTelRecord_causeForRecordClosing_timeLimit = MMTelRecord_causeForRecordClosing.timeLimit satisfies MMTelRecord_causeForRecordClosing; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary timeLimit
@@ -118,7 +118,7 @@ const MMTelRecord_causeForRecordClosing_timeLimit: MMTelRecord_causeForRecordClo
  * @type {number}
  */
 export
-const timeLimit: MMTelRecord_causeForRecordClosing = MMTelRecord_causeForRecordClosing.timeLimit; /* SHORT_NAMED_ENUMERATED_VALUE */
+const timeLimit = MMTelRecord_causeForRecordClosing.timeLimit satisfies MMTelRecord_causeForRecordClosing; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMTelRecord_causeForRecordClosing_serviceChange
@@ -126,7 +126,7 @@ const timeLimit: MMTelRecord_causeForRecordClosing = MMTelRecord_causeForRecordC
  * @type {number}
  */
 export
-const MMTelRecord_causeForRecordClosing_serviceChange: MMTelRecord_causeForRecordClosing = MMTelRecord_causeForRecordClosing.serviceChange; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMTelRecord_causeForRecordClosing_serviceChange = MMTelRecord_causeForRecordClosing.serviceChange satisfies MMTelRecord_causeForRecordClosing; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary serviceChange
@@ -134,7 +134,7 @@ const MMTelRecord_causeForRecordClosing_serviceChange: MMTelRecord_causeForRecor
  * @type {number}
  */
 export
-const serviceChange: MMTelRecord_causeForRecordClosing = MMTelRecord_causeForRecordClosing.serviceChange; /* SHORT_NAMED_ENUMERATED_VALUE */
+const serviceChange = MMTelRecord_causeForRecordClosing.serviceChange satisfies MMTelRecord_causeForRecordClosing; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMTelRecord_causeForRecordClosing_managementIntervention
@@ -142,7 +142,7 @@ const serviceChange: MMTelRecord_causeForRecordClosing = MMTelRecord_causeForRec
  * @type {number}
  */
 export
-const MMTelRecord_causeForRecordClosing_managementIntervention: MMTelRecord_causeForRecordClosing = MMTelRecord_causeForRecordClosing.managementIntervention; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMTelRecord_causeForRecordClosing_managementIntervention = MMTelRecord_causeForRecordClosing.managementIntervention satisfies MMTelRecord_causeForRecordClosing; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary managementIntervention
@@ -150,7 +150,7 @@ const MMTelRecord_causeForRecordClosing_managementIntervention: MMTelRecord_caus
  * @type {number}
  */
 export
-const managementIntervention: MMTelRecord_causeForRecordClosing = MMTelRecord_causeForRecordClosing.managementIntervention; /* SHORT_NAMED_ENUMERATED_VALUE */
+const managementIntervention = MMTelRecord_causeForRecordClosing.managementIntervention satisfies MMTelRecord_causeForRecordClosing; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_MMTelRecord_causeForRecordClosing: $.ASN1Decoder<MMTelRecord_causeForRecordClosing> = $._decodeEnumerated;

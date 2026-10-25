@@ -85,16 +85,16 @@ export const ISType = _enum_for_ISType;
  * @constant
  * @type {number}
  */
-export const ISType_level1IS: ISType =
-  ISType.level1IS; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ISType_level1IS =
+  ISType.level1IS satisfies ISType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary level1IS
  * @constant
  * @type {number}
  */
-export const level1IS: ISType =
-  ISType.level1IS; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const level1IS =
+  ISType.level1IS satisfies ISType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ISType_level2IS
@@ -107,16 +107,16 @@ export const level1IS: ISType =
  * @constant
  * @type {number}
  */
-export const ISType_level2IS: ISType =
-  ISType.level2IS; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ISType_level2IS =
+  ISType.level2IS satisfies ISType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary level2IS
  * @constant
  * @type {number}
  */
-export const level2IS: ISType =
-  ISType.level2IS; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const level2IS =
+  ISType.level2IS satisfies ISType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 export function _decode_ISType(el: _Element): ISType {

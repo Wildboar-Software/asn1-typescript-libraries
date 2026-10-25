@@ -44,7 +44,7 @@ type T_BcsmTriggerDetectionPoint = _enum_for_T_BcsmTriggerDetectionPoint | ENUME
  * @type {number}
  */
 export
-const T_BcsmTriggerDetectionPoint_termAttemptAuthorized: T_BcsmTriggerDetectionPoint = 12; /* LONG_NAMED_ENUMERATED_VALUE */
+const T_BcsmTriggerDetectionPoint_termAttemptAuthorized = _enum_for_T_BcsmTriggerDetectionPoint.termAttemptAuthorized satisfies T_BcsmTriggerDetectionPoint; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary termAttemptAuthorized
@@ -52,7 +52,7 @@ const T_BcsmTriggerDetectionPoint_termAttemptAuthorized: T_BcsmTriggerDetectionP
  * @type {number}
  */
 export
-const termAttemptAuthorized: T_BcsmTriggerDetectionPoint = T_BcsmTriggerDetectionPoint_termAttemptAuthorized; /* SHORT_NAMED_ENUMERATED_VALUE */
+const termAttemptAuthorized = T_BcsmTriggerDetectionPoint_termAttemptAuthorized satisfies T_BcsmTriggerDetectionPoint; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary T_BcsmTriggerDetectionPoint_tBusy
@@ -60,7 +60,7 @@ const termAttemptAuthorized: T_BcsmTriggerDetectionPoint = T_BcsmTriggerDetectio
  * @type {number}
  */
 export
-const T_BcsmTriggerDetectionPoint_tBusy: T_BcsmTriggerDetectionPoint = 13; /* LONG_NAMED_ENUMERATED_VALUE */
+const T_BcsmTriggerDetectionPoint_tBusy = _enum_for_T_BcsmTriggerDetectionPoint.tBusy satisfies T_BcsmTriggerDetectionPoint; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tBusy
@@ -68,7 +68,7 @@ const T_BcsmTriggerDetectionPoint_tBusy: T_BcsmTriggerDetectionPoint = 13; /* LO
  * @type {number}
  */
 export
-const tBusy: T_BcsmTriggerDetectionPoint = T_BcsmTriggerDetectionPoint_tBusy; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tBusy = T_BcsmTriggerDetectionPoint_tBusy satisfies T_BcsmTriggerDetectionPoint; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary T_BcsmTriggerDetectionPoint_tNoAnswer
@@ -76,7 +76,7 @@ const tBusy: T_BcsmTriggerDetectionPoint = T_BcsmTriggerDetectionPoint_tBusy; /*
  * @type {number}
  */
 export
-const T_BcsmTriggerDetectionPoint_tNoAnswer: T_BcsmTriggerDetectionPoint = 14; /* LONG_NAMED_ENUMERATED_VALUE */
+const T_BcsmTriggerDetectionPoint_tNoAnswer = _enum_for_T_BcsmTriggerDetectionPoint.tNoAnswer satisfies T_BcsmTriggerDetectionPoint; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tNoAnswer
@@ -84,7 +84,7 @@ const T_BcsmTriggerDetectionPoint_tNoAnswer: T_BcsmTriggerDetectionPoint = 14; /
  * @type {number}
  */
 export
-const tNoAnswer: T_BcsmTriggerDetectionPoint = T_BcsmTriggerDetectionPoint_tNoAnswer; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tNoAnswer = T_BcsmTriggerDetectionPoint_tNoAnswer satisfies T_BcsmTriggerDetectionPoint; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) T_BcsmTriggerDetectionPoint

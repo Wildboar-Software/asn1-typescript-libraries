@@ -44,7 +44,7 @@ type ResponseTimeCategory = _enum_for_ResponseTimeCategory | ENUMERATED;
  * @type {number}
  */
 export
-const ResponseTimeCategory_lowdelay: ResponseTimeCategory = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+const ResponseTimeCategory_lowdelay = _enum_for_ResponseTimeCategory.lowdelay satisfies ResponseTimeCategory; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary lowdelay
@@ -56,7 +56,7 @@ const ResponseTimeCategory_lowdelay: ResponseTimeCategory = 0; /* LONG_NAMED_ENU
  * @type {number}
  */
 export
-const lowdelay: ResponseTimeCategory = ResponseTimeCategory_lowdelay; /* SHORT_NAMED_ENUMERATED_VALUE */
+const lowdelay = ResponseTimeCategory_lowdelay satisfies ResponseTimeCategory; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ResponseTimeCategory_delaytolerant
@@ -68,7 +68,7 @@ const lowdelay: ResponseTimeCategory = ResponseTimeCategory_lowdelay; /* SHORT_N
  * @type {number}
  */
 export
-const ResponseTimeCategory_delaytolerant: ResponseTimeCategory = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const ResponseTimeCategory_delaytolerant = _enum_for_ResponseTimeCategory.delaytolerant satisfies ResponseTimeCategory; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary delaytolerant
@@ -80,7 +80,7 @@ const ResponseTimeCategory_delaytolerant: ResponseTimeCategory = 1; /* LONG_NAME
  * @type {number}
  */
 export
-const delaytolerant: ResponseTimeCategory = ResponseTimeCategory_delaytolerant; /* SHORT_NAMED_ENUMERATED_VALUE */
+const delaytolerant = ResponseTimeCategory_delaytolerant satisfies ResponseTimeCategory; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) ResponseTimeCategory

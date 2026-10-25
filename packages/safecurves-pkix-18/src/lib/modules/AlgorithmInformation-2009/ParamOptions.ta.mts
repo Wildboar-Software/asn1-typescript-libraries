@@ -67,7 +67,7 @@ type ParamOptions = _enum_for_ParamOptions | ENUMERATED;
  * @type {number}
  */
 export
-const ParamOptions_required: ParamOptions = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+const ParamOptions_required = _enum_for_ParamOptions.required satisfies ParamOptions; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -80,7 +80,7 @@ const ParamOptions_required: ParamOptions = 0; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const required: ParamOptions = ParamOptions_required; /* SHORT_NAMED_ENUMERATED_VALUE */
+const required = ParamOptions_required satisfies ParamOptions; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -93,7 +93,7 @@ const required: ParamOptions = ParamOptions_required; /* SHORT_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const ParamOptions_preferredPresent: ParamOptions = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const ParamOptions_preferredPresent = _enum_for_ParamOptions.preferredPresent satisfies ParamOptions; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -106,7 +106,7 @@ const ParamOptions_preferredPresent: ParamOptions = 1; /* LONG_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const preferredPresent: ParamOptions = ParamOptions_preferredPresent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const preferredPresent = ParamOptions_preferredPresent satisfies ParamOptions; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -119,7 +119,7 @@ const preferredPresent: ParamOptions = ParamOptions_preferredPresent; /* SHORT_N
  * @type {number}
  */
 export
-const ParamOptions_preferredAbsent: ParamOptions = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+const ParamOptions_preferredAbsent = _enum_for_ParamOptions.preferredAbsent satisfies ParamOptions; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -132,7 +132,7 @@ const ParamOptions_preferredAbsent: ParamOptions = 2; /* LONG_NAMED_ENUMERATED_V
  * @type {number}
  */
 export
-const preferredAbsent: ParamOptions = ParamOptions_preferredAbsent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const preferredAbsent = ParamOptions_preferredAbsent satisfies ParamOptions; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -145,7 +145,7 @@ const preferredAbsent: ParamOptions = ParamOptions_preferredAbsent; /* SHORT_NAM
  * @type {number}
  */
 export
-const ParamOptions_absent: ParamOptions = 3; /* LONG_NAMED_ENUMERATED_VALUE */
+const ParamOptions_absent = _enum_for_ParamOptions.absent satisfies ParamOptions; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -158,7 +158,7 @@ const ParamOptions_absent: ParamOptions = 3; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const absent: ParamOptions = ParamOptions_absent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const absent = ParamOptions_absent satisfies ParamOptions; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -171,7 +171,7 @@ const absent: ParamOptions = ParamOptions_absent; /* SHORT_NAMED_ENUMERATED_VALU
  * @type {number}
  */
 export
-const ParamOptions_inheritable: ParamOptions = 4; /* LONG_NAMED_ENUMERATED_VALUE */
+const ParamOptions_inheritable = _enum_for_ParamOptions.inheritable satisfies ParamOptions; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -184,7 +184,7 @@ const ParamOptions_inheritable: ParamOptions = 4; /* LONG_NAMED_ENUMERATED_VALUE
  * @type {number}
  */
 export
-const inheritable: ParamOptions = ParamOptions_inheritable; /* SHORT_NAMED_ENUMERATED_VALUE */
+const inheritable = ParamOptions_inheritable satisfies ParamOptions; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -197,7 +197,7 @@ const inheritable: ParamOptions = ParamOptions_inheritable; /* SHORT_NAMED_ENUME
  * @type {number}
  */
 export
-const ParamOptions_optional: ParamOptions = 5; /* LONG_NAMED_ENUMERATED_VALUE */
+const ParamOptions_optional = _enum_for_ParamOptions.optional satisfies ParamOptions; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -210,7 +210,7 @@ const ParamOptions_optional: ParamOptions = 5; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const optional: ParamOptions = ParamOptions_optional; /* SHORT_NAMED_ENUMERATED_VALUE */
+const optional = ParamOptions_optional satisfies ParamOptions; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 

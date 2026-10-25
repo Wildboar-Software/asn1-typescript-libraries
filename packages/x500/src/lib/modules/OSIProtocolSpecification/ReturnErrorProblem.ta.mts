@@ -24,70 +24,70 @@ export type ReturnErrorProblem = INTEGER;
  * @constant
  * @type {number}
  */
-export const ReturnErrorProblem_unrecognizedInvocation: ReturnErrorProblem = 0; /* LONG_NAMED_INTEGER_VALUE */
+export const ReturnErrorProblem_unrecognizedInvocation = 0 satisfies ReturnErrorProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ReturnErrorProblem_unrecognizedInvocation
  * @constant
  * @type {number}
  */
-export const unrecognizedInvocation: ReturnErrorProblem = ReturnErrorProblem_unrecognizedInvocation; /* SHORT_NAMED_INTEGER_VALUE */
+export const unrecognizedInvocation = ReturnErrorProblem_unrecognizedInvocation satisfies ReturnErrorProblem; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ReturnErrorProblem_errorResponseUnexpected
  * @constant
  * @type {number}
  */
-export const ReturnErrorProblem_errorResponseUnexpected: ReturnErrorProblem = 1; /* LONG_NAMED_INTEGER_VALUE */
+export const ReturnErrorProblem_errorResponseUnexpected = 1 satisfies ReturnErrorProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ReturnErrorProblem_errorResponseUnexpected
  * @constant
  * @type {number}
  */
-export const errorResponseUnexpected: ReturnErrorProblem = ReturnErrorProblem_errorResponseUnexpected; /* SHORT_NAMED_INTEGER_VALUE */
+export const errorResponseUnexpected = ReturnErrorProblem_errorResponseUnexpected satisfies ReturnErrorProblem; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ReturnErrorProblem_unrecognizedError
  * @constant
  * @type {number}
  */
-export const ReturnErrorProblem_unrecognizedError: ReturnErrorProblem = 2; /* LONG_NAMED_INTEGER_VALUE */
+export const ReturnErrorProblem_unrecognizedError = 2 satisfies ReturnErrorProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ReturnErrorProblem_unrecognizedError
  * @constant
  * @type {number}
  */
-export const unrecognizedError: ReturnErrorProblem = ReturnErrorProblem_unrecognizedError; /* SHORT_NAMED_INTEGER_VALUE */
+export const unrecognizedError = ReturnErrorProblem_unrecognizedError satisfies ReturnErrorProblem; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ReturnErrorProblem_unexpectedError
  * @constant
  * @type {number}
  */
-export const ReturnErrorProblem_unexpectedError: ReturnErrorProblem = 3; /* LONG_NAMED_INTEGER_VALUE */
+export const ReturnErrorProblem_unexpectedError = 3 satisfies ReturnErrorProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ReturnErrorProblem_unexpectedError
  * @constant
  * @type {number}
  */
-export const unexpectedError: ReturnErrorProblem = ReturnErrorProblem_unexpectedError; /* SHORT_NAMED_INTEGER_VALUE */
+export const unexpectedError = ReturnErrorProblem_unexpectedError satisfies ReturnErrorProblem; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ReturnErrorProblem_mistypedParameter
  * @constant
  * @type {number}
  */
-export const ReturnErrorProblem_mistypedParameter: ReturnErrorProblem = 4; /* LONG_NAMED_INTEGER_VALUE */
+export const ReturnErrorProblem_mistypedParameter = 4 satisfies ReturnErrorProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ReturnErrorProblem_mistypedParameter
  * @constant
  * @type {number}
  */
-export const mistypedParameter: ReturnErrorProblem = ReturnErrorProblem_mistypedParameter; /* SHORT_NAMED_INTEGER_VALUE */
+export const mistypedParameter = ReturnErrorProblem_mistypedParameter satisfies ReturnErrorProblem; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_ReturnErrorProblem = $._decodeInteger;

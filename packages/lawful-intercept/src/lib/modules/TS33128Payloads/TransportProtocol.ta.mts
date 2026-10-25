@@ -113,7 +113,7 @@ const TransportProtocol = _enum_for_TransportProtocol;
  * @type {number}
  */
 export
-const TransportProtocol_uDP: TransportProtocol = TransportProtocol.uDP; /* LONG_NAMED_ENUMERATED_VALUE */
+const TransportProtocol_uDP = TransportProtocol.uDP satisfies TransportProtocol; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary uDP
@@ -127,7 +127,7 @@ const TransportProtocol_uDP: TransportProtocol = TransportProtocol.uDP; /* LONG_
  * @type {number}
  */
 export
-const uDP: TransportProtocol = TransportProtocol.uDP; /* SHORT_NAMED_ENUMERATED_VALUE */
+const uDP = TransportProtocol.uDP satisfies TransportProtocol; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TransportProtocol_tCP
@@ -141,7 +141,7 @@ const uDP: TransportProtocol = TransportProtocol.uDP; /* SHORT_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const TransportProtocol_tCP: TransportProtocol = TransportProtocol.tCP; /* LONG_NAMED_ENUMERATED_VALUE */
+const TransportProtocol_tCP = TransportProtocol.tCP satisfies TransportProtocol; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tCP
@@ -155,7 +155,7 @@ const TransportProtocol_tCP: TransportProtocol = TransportProtocol.tCP; /* LONG_
  * @type {number}
  */
 export
-const tCP: TransportProtocol = TransportProtocol.tCP; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tCP = TransportProtocol.tCP satisfies TransportProtocol; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_TransportProtocol: $.ASN1Decoder<TransportProtocol> = $._decodeEnumerated;
 export const _encode_TransportProtocol: $.ASN1Encoder<TransportProtocol> = $._encodeEnumerated;
 

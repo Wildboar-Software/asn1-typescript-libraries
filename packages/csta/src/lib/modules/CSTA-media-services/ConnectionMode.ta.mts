@@ -120,7 +120,7 @@ const ConnectionMode = _enum_for_ConnectionMode;
  * @type {number}
  */
 export
-const ConnectionMode_consultationConference: ConnectionMode = ConnectionMode.consultationConference; /* LONG_NAMED_ENUMERATED_VALUE */
+const ConnectionMode_consultationConference = ConnectionMode.consultationConference satisfies ConnectionMode; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary consultationConference
@@ -128,7 +128,7 @@ const ConnectionMode_consultationConference: ConnectionMode = ConnectionMode.con
  * @type {number}
  */
 export
-const consultationConference: ConnectionMode = ConnectionMode.consultationConference; /* SHORT_NAMED_ENUMERATED_VALUE */
+const consultationConference = ConnectionMode.consultationConference satisfies ConnectionMode; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ConnectionMode_consultationConferenceHold
@@ -141,7 +141,7 @@ const consultationConference: ConnectionMode = ConnectionMode.consultationConfer
  * @type {number}
  */
 export
-const ConnectionMode_consultationConferenceHold: ConnectionMode = ConnectionMode.consultationConferenceHold; /* LONG_NAMED_ENUMERATED_VALUE */
+const ConnectionMode_consultationConferenceHold = ConnectionMode.consultationConferenceHold satisfies ConnectionMode; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary consultationConferenceHold
@@ -149,7 +149,7 @@ const ConnectionMode_consultationConferenceHold: ConnectionMode = ConnectionMode
  * @type {number}
  */
 export
-const consultationConferenceHold: ConnectionMode = ConnectionMode.consultationConferenceHold; /* SHORT_NAMED_ENUMERATED_VALUE */
+const consultationConferenceHold = ConnectionMode.consultationConferenceHold satisfies ConnectionMode; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ConnectionMode_deflect
@@ -161,7 +161,7 @@ const consultationConferenceHold: ConnectionMode = ConnectionMode.consultationCo
  * @type {number}
  */
 export
-const ConnectionMode_deflect: ConnectionMode = ConnectionMode.deflect; /* LONG_NAMED_ENUMERATED_VALUE */
+const ConnectionMode_deflect = ConnectionMode.deflect satisfies ConnectionMode; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary deflect
@@ -169,7 +169,7 @@ const ConnectionMode_deflect: ConnectionMode = ConnectionMode.deflect; /* LONG_N
  * @type {number}
  */
 export
-const deflect: ConnectionMode = ConnectionMode.deflect; /* SHORT_NAMED_ENUMERATED_VALUE */
+const deflect = ConnectionMode.deflect satisfies ConnectionMode; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ConnectionMode_directedPickup
@@ -181,7 +181,7 @@ const deflect: ConnectionMode = ConnectionMode.deflect; /* SHORT_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const ConnectionMode_directedPickup: ConnectionMode = ConnectionMode.directedPickup; /* LONG_NAMED_ENUMERATED_VALUE */
+const ConnectionMode_directedPickup = ConnectionMode.directedPickup satisfies ConnectionMode; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary directedPickup
@@ -189,7 +189,7 @@ const ConnectionMode_directedPickup: ConnectionMode = ConnectionMode.directedPic
  * @type {number}
  */
 export
-const directedPickup: ConnectionMode = ConnectionMode.directedPickup; /* SHORT_NAMED_ENUMERATED_VALUE */
+const directedPickup = ConnectionMode.directedPickup satisfies ConnectionMode; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ConnectionMode_join
@@ -202,7 +202,7 @@ const directedPickup: ConnectionMode = ConnectionMode.directedPickup; /* SHORT_N
  * @type {number}
  */
 export
-const ConnectionMode_join: ConnectionMode = ConnectionMode.join; /* LONG_NAMED_ENUMERATED_VALUE */
+const ConnectionMode_join = ConnectionMode.join satisfies ConnectionMode; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary join
@@ -210,7 +210,7 @@ const ConnectionMode_join: ConnectionMode = ConnectionMode.join; /* LONG_NAMED_E
  * @type {number}
  */
 export
-const join: ConnectionMode = ConnectionMode.join; /* SHORT_NAMED_ENUMERATED_VALUE */
+const join = ConnectionMode.join satisfies ConnectionMode; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ConnectionMode_singleStepConference
@@ -222,7 +222,7 @@ const join: ConnectionMode = ConnectionMode.join; /* SHORT_NAMED_ENUMERATED_VALU
  * @type {number}
  */
 export
-const ConnectionMode_singleStepConference: ConnectionMode = ConnectionMode.singleStepConference; /* LONG_NAMED_ENUMERATED_VALUE */
+const ConnectionMode_singleStepConference = ConnectionMode.singleStepConference satisfies ConnectionMode; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary singleStepConference
@@ -230,7 +230,7 @@ const ConnectionMode_singleStepConference: ConnectionMode = ConnectionMode.singl
  * @type {number}
  */
 export
-const singleStepConference: ConnectionMode = ConnectionMode.singleStepConference; /* SHORT_NAMED_ENUMERATED_VALUE */
+const singleStepConference = ConnectionMode.singleStepConference satisfies ConnectionMode; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ConnectionMode_singleStepConferenceHold
@@ -242,7 +242,7 @@ const singleStepConference: ConnectionMode = ConnectionMode.singleStepConference
  * @type {number}
  */
 export
-const ConnectionMode_singleStepConferenceHold: ConnectionMode = ConnectionMode.singleStepConferenceHold; /* LONG_NAMED_ENUMERATED_VALUE */
+const ConnectionMode_singleStepConferenceHold = ConnectionMode.singleStepConferenceHold satisfies ConnectionMode; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary singleStepConferenceHold
@@ -250,7 +250,7 @@ const ConnectionMode_singleStepConferenceHold: ConnectionMode = ConnectionMode.s
  * @type {number}
  */
 export
-const singleStepConferenceHold: ConnectionMode = ConnectionMode.singleStepConferenceHold; /* SHORT_NAMED_ENUMERATED_VALUE */
+const singleStepConferenceHold = ConnectionMode.singleStepConferenceHold satisfies ConnectionMode; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ConnectionMode_singleStepTransfer
@@ -262,7 +262,7 @@ const singleStepConferenceHold: ConnectionMode = ConnectionMode.singleStepConfer
  * @type {number}
  */
 export
-const ConnectionMode_singleStepTransfer: ConnectionMode = ConnectionMode.singleStepTransfer; /* LONG_NAMED_ENUMERATED_VALUE */
+const ConnectionMode_singleStepTransfer = ConnectionMode.singleStepTransfer satisfies ConnectionMode; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary singleStepTransfer
@@ -270,7 +270,7 @@ const ConnectionMode_singleStepTransfer: ConnectionMode = ConnectionMode.singleS
  * @type {number}
  */
 export
-const singleStepTransfer: ConnectionMode = ConnectionMode.singleStepTransfer; /* SHORT_NAMED_ENUMERATED_VALUE */
+const singleStepTransfer = ConnectionMode.singleStepTransfer satisfies ConnectionMode; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ConnectionMode_transfer
@@ -282,7 +282,7 @@ const singleStepTransfer: ConnectionMode = ConnectionMode.singleStepTransfer; /*
  * @type {number}
  */
 export
-const ConnectionMode_transfer: ConnectionMode = ConnectionMode.transfer; /* LONG_NAMED_ENUMERATED_VALUE */
+const ConnectionMode_transfer = ConnectionMode.transfer satisfies ConnectionMode; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary transfer
@@ -290,7 +290,7 @@ const ConnectionMode_transfer: ConnectionMode = ConnectionMode.transfer; /* LONG
  * @type {number}
  */
 export
-const transfer: ConnectionMode = ConnectionMode.transfer; /* SHORT_NAMED_ENUMERATED_VALUE */
+const transfer = ConnectionMode.transfer satisfies ConnectionMode; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ConnectionMode_direct
@@ -303,7 +303,7 @@ const transfer: ConnectionMode = ConnectionMode.transfer; /* SHORT_NAMED_ENUMERA
  * @type {number}
  */
 export
-const ConnectionMode_direct: ConnectionMode = ConnectionMode.direct; /* LONG_NAMED_ENUMERATED_VALUE */
+const ConnectionMode_direct = ConnectionMode.direct satisfies ConnectionMode; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary direct
@@ -311,7 +311,7 @@ const ConnectionMode_direct: ConnectionMode = ConnectionMode.direct; /* LONG_NAM
  * @type {number}
  */
 export
-const direct: ConnectionMode = ConnectionMode.direct; /* SHORT_NAMED_ENUMERATED_VALUE */
+const direct = ConnectionMode.direct satisfies ConnectionMode; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 let _cached_decoder_for_ConnectionMode: $.ASN1Decoder<ConnectionMode> | null = null;
 

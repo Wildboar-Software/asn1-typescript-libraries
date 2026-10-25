@@ -38,7 +38,7 @@ export type DataCategory = INTEGER;
  * @constant
  * @type {number}
  */
-export const DataCategory_bits: DataCategory = 0; /* LONG_NAMED_INTEGER_VALUE */
+export const DataCategory_bits = 0 satisfies DataCategory; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DataCategory_bits
@@ -48,7 +48,7 @@ export const DataCategory_bits: DataCategory = 0; /* LONG_NAMED_INTEGER_VALUE */
  * @constant
  * @type {number}
  */
-export const bits: DataCategory = DataCategory_bits; /* SHORT_NAMED_INTEGER_VALUE */
+export const bits = DataCategory_bits satisfies DataCategory; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DataCategory_octets
@@ -58,7 +58,7 @@ export const bits: DataCategory = DataCategory_bits; /* SHORT_NAMED_INTEGER_VALU
  * @constant
  * @type {number}
  */
-export const DataCategory_octets: DataCategory = 1; /* LONG_NAMED_INTEGER_VALUE */
+export const DataCategory_octets = 1 satisfies DataCategory; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DataCategory_octets
@@ -68,7 +68,7 @@ export const DataCategory_octets: DataCategory = 1; /* LONG_NAMED_INTEGER_VALUE 
  * @constant
  * @type {number}
  */
-export const octets: DataCategory = DataCategory_octets; /* SHORT_NAMED_INTEGER_VALUE */
+export const octets = DataCategory_octets satisfies DataCategory; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DataCategory_blocks
@@ -78,7 +78,7 @@ export const octets: DataCategory = DataCategory_octets; /* SHORT_NAMED_INTEGER_
  * @constant
  * @type {number}
  */
-export const DataCategory_blocks: DataCategory = 2; /* LONG_NAMED_INTEGER_VALUE */
+export const DataCategory_blocks = 2 satisfies DataCategory; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DataCategory_blocks
@@ -88,7 +88,7 @@ export const DataCategory_blocks: DataCategory = 2; /* LONG_NAMED_INTEGER_VALUE 
  * @constant
  * @type {number}
  */
-export const blocks: DataCategory = DataCategory_blocks; /* SHORT_NAMED_INTEGER_VALUE */
+export const blocks = DataCategory_blocks satisfies DataCategory; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DataCategory_packets
@@ -98,7 +98,7 @@ export const blocks: DataCategory = DataCategory_blocks; /* SHORT_NAMED_INTEGER_
  * @constant
  * @type {number}
  */
-export const DataCategory_packets: DataCategory = 3; /* LONG_NAMED_INTEGER_VALUE */
+export const DataCategory_packets = 3 satisfies DataCategory; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DataCategory_packets
@@ -108,7 +108,7 @@ export const DataCategory_packets: DataCategory = 3; /* LONG_NAMED_INTEGER_VALUE
  * @constant
  * @type {number}
  */
-export const packets: DataCategory = DataCategory_packets; /* SHORT_NAMED_INTEGER_VALUE */
+export const packets = DataCategory_packets satisfies DataCategory; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_DataCategory = $._decodeInteger;

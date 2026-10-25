@@ -93,8 +93,8 @@ export const ResponseTimeSummarizationMode = _enum_for_ResponseTimeSummarization
  * @constant
  * @type {number}
  */
-export const ResponseTimeSummarizationMode_rawResponseTime: ResponseTimeSummarizationMode =
-    ResponseTimeSummarizationMode.rawResponseTime; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ResponseTimeSummarizationMode_rawResponseTime =
+    ResponseTimeSummarizationMode.rawResponseTime satisfies ResponseTimeSummarizationMode; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary rawResponseTime
@@ -106,8 +106,8 @@ export const ResponseTimeSummarizationMode_rawResponseTime: ResponseTimeSummariz
  * @constant
  * @type {number}
  */
-export const rawResponseTime: ResponseTimeSummarizationMode =
-    ResponseTimeSummarizationMode.rawResponseTime; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const rawResponseTime =
+    ResponseTimeSummarizationMode.rawResponseTime satisfies ResponseTimeSummarizationMode; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ResponseTimeSummarizationMode_responseTimePerBit
@@ -119,8 +119,8 @@ export const rawResponseTime: ResponseTimeSummarizationMode =
  * @constant
  * @type {number}
  */
-export const ResponseTimeSummarizationMode_responseTimePerBit: ResponseTimeSummarizationMode =
-    ResponseTimeSummarizationMode.responseTimePerBit; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ResponseTimeSummarizationMode_responseTimePerBit =
+    ResponseTimeSummarizationMode.responseTimePerBit satisfies ResponseTimeSummarizationMode; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary responseTimePerBit
@@ -132,8 +132,8 @@ export const ResponseTimeSummarizationMode_responseTimePerBit: ResponseTimeSumma
  * @constant
  * @type {number}
  */
-export const responseTimePerBit: ResponseTimeSummarizationMode =
-    ResponseTimeSummarizationMode.responseTimePerBit; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const responseTimePerBit =
+    ResponseTimeSummarizationMode.responseTimePerBit satisfies ResponseTimeSummarizationMode; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 export function _decode_ResponseTimeSummarizationMode(el: _Element): ResponseTimeSummarizationMode {

@@ -55,7 +55,7 @@ type AlertIndicator = _enum_for_AlertIndicator | ENUMERATED;
  * @type {number}
  */
 export
-const AlertIndicator_sent: AlertIndicator = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const AlertIndicator_sent = _enum_for_AlertIndicator.sent satisfies AlertIndicator; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sent
@@ -66,7 +66,7 @@ const AlertIndicator_sent: AlertIndicator = 1; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const sent: AlertIndicator = AlertIndicator_sent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sent = AlertIndicator_sent satisfies AlertIndicator; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AlertIndicator_received
@@ -79,7 +79,7 @@ const sent: AlertIndicator = AlertIndicator_sent; /* SHORT_NAMED_ENUMERATED_VALU
  * @type {number}
  */
 export
-const AlertIndicator_received: AlertIndicator = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+const AlertIndicator_received = _enum_for_AlertIndicator.received satisfies AlertIndicator; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary received
@@ -90,7 +90,7 @@ const AlertIndicator_received: AlertIndicator = 2; /* LONG_NAMED_ENUMERATED_VALU
  * @type {number}
  */
 export
-const received: AlertIndicator = AlertIndicator_received; /* SHORT_NAMED_ENUMERATED_VALUE */
+const received = AlertIndicator_received satisfies AlertIndicator; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AlertIndicator_cancelled
@@ -103,7 +103,7 @@ const received: AlertIndicator = AlertIndicator_received; /* SHORT_NAMED_ENUMERA
  * @type {number}
  */
 export
-const AlertIndicator_cancelled: AlertIndicator = 3; /* LONG_NAMED_ENUMERATED_VALUE */
+const AlertIndicator_cancelled = _enum_for_AlertIndicator.cancelled satisfies AlertIndicator; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary cancelled
@@ -114,7 +114,7 @@ const AlertIndicator_cancelled: AlertIndicator = 3; /* LONG_NAMED_ENUMERATED_VAL
  * @type {number}
  */
 export
-const cancelled: AlertIndicator = AlertIndicator_cancelled; /* SHORT_NAMED_ENUMERATED_VALUE */
+const cancelled = AlertIndicator_cancelled satisfies AlertIndicator; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_AlertIndicator: $.ASN1Decoder<AlertIndicator> = $._decodeEnumerated;
 export const _encode_AlertIndicator: $.ASN1Encoder<AlertIndicator> = $._encodeEnumerated;
 

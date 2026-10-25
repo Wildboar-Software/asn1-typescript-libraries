@@ -42,7 +42,7 @@ type DefaultSMS_Handling = _enum_for_DefaultSMS_Handling | ENUMERATED;
  * @type {number}
  */
 export
-const DefaultSMS_Handling_continueTransaction: DefaultSMS_Handling = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+const DefaultSMS_Handling_continueTransaction = _enum_for_DefaultSMS_Handling.continueTransaction satisfies DefaultSMS_Handling; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary continueTransaction
@@ -50,7 +50,7 @@ const DefaultSMS_Handling_continueTransaction: DefaultSMS_Handling = 0; /* LONG_
  * @type {number}
  */
 export
-const continueTransaction: DefaultSMS_Handling = DefaultSMS_Handling_continueTransaction; /* SHORT_NAMED_ENUMERATED_VALUE */
+const continueTransaction = DefaultSMS_Handling_continueTransaction satisfies DefaultSMS_Handling; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary DefaultSMS_Handling_releaseTransaction
@@ -58,7 +58,7 @@ const continueTransaction: DefaultSMS_Handling = DefaultSMS_Handling_continueTra
  * @type {number}
  */
 export
-const DefaultSMS_Handling_releaseTransaction: DefaultSMS_Handling = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const DefaultSMS_Handling_releaseTransaction = _enum_for_DefaultSMS_Handling.releaseTransaction satisfies DefaultSMS_Handling; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary releaseTransaction
@@ -66,7 +66,7 @@ const DefaultSMS_Handling_releaseTransaction: DefaultSMS_Handling = 1; /* LONG_N
  * @type {number}
  */
 export
-const releaseTransaction: DefaultSMS_Handling = DefaultSMS_Handling_releaseTransaction; /* SHORT_NAMED_ENUMERATED_VALUE */
+const releaseTransaction = DefaultSMS_Handling_releaseTransaction satisfies DefaultSMS_Handling; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) DefaultSMS_Handling

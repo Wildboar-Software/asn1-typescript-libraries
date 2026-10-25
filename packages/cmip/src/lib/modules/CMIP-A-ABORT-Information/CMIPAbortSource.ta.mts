@@ -76,8 +76,8 @@ export const CMIPAbortSource = _enum_for_CMIPAbortSource;
  * @constant
  * @type {number}
  */
-export const CMIPAbortSource_cmiseServiceUser: CMIPAbortSource =
-  CMIPAbortSource.cmiseServiceUser; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CMIPAbortSource_cmiseServiceUser =
+  CMIPAbortSource.cmiseServiceUser satisfies CMIPAbortSource; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -89,8 +89,8 @@ export const CMIPAbortSource_cmiseServiceUser: CMIPAbortSource =
  * @constant
  * @type {number}
  */
-export const cmiseServiceUser: CMIPAbortSource =
-  CMIPAbortSource.cmiseServiceUser; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const cmiseServiceUser =
+  CMIPAbortSource.cmiseServiceUser satisfies CMIPAbortSource; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -103,8 +103,8 @@ export const cmiseServiceUser: CMIPAbortSource =
  * @constant
  * @type {number}
  */
-export const CMIPAbortSource_cmiseServiceProvider: CMIPAbortSource =
-  CMIPAbortSource.cmiseServiceProvider; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CMIPAbortSource_cmiseServiceProvider =
+  CMIPAbortSource.cmiseServiceProvider satisfies CMIPAbortSource; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -116,8 +116,8 @@ export const CMIPAbortSource_cmiseServiceProvider: CMIPAbortSource =
  * @constant
  * @type {number}
  */
-export const cmiseServiceProvider: CMIPAbortSource =
-  CMIPAbortSource.cmiseServiceProvider; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const cmiseServiceProvider =
+  CMIPAbortSource.cmiseServiceProvider satisfies CMIPAbortSource; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 

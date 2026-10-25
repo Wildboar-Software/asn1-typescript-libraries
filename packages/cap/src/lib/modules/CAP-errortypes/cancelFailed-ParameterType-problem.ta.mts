@@ -110,7 +110,7 @@ const cancelFailed_ParameterType_problem = _enum_for_cancelFailed_ParameterType_
  * @type {number}
  */
 export
-const cancelFailed_ParameterType_problem_unknownOperation: cancelFailed_ParameterType_problem = cancelFailed_ParameterType_problem.unknownOperation; /* LONG_NAMED_ENUMERATED_VALUE */
+const cancelFailed_ParameterType_problem_unknownOperation = cancelFailed_ParameterType_problem.unknownOperation satisfies cancelFailed_ParameterType_problem; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unknownOperation
@@ -124,7 +124,7 @@ const cancelFailed_ParameterType_problem_unknownOperation: cancelFailed_Paramete
  * @type {number}
  */
 export
-const unknownOperation: cancelFailed_ParameterType_problem = cancelFailed_ParameterType_problem.unknownOperation; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unknownOperation = cancelFailed_ParameterType_problem.unknownOperation satisfies cancelFailed_ParameterType_problem; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary cancelFailed_ParameterType_problem_tooLate
@@ -139,7 +139,7 @@ const unknownOperation: cancelFailed_ParameterType_problem = cancelFailed_Parame
  * @type {number}
  */
 export
-const cancelFailed_ParameterType_problem_tooLate: cancelFailed_ParameterType_problem = cancelFailed_ParameterType_problem.tooLate; /* LONG_NAMED_ENUMERATED_VALUE */
+const cancelFailed_ParameterType_problem_tooLate = cancelFailed_ParameterType_problem.tooLate satisfies cancelFailed_ParameterType_problem; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tooLate
@@ -154,7 +154,7 @@ const cancelFailed_ParameterType_problem_tooLate: cancelFailed_ParameterType_pro
  * @type {number}
  */
 export
-const tooLate: cancelFailed_ParameterType_problem = cancelFailed_ParameterType_problem.tooLate; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tooLate = cancelFailed_ParameterType_problem.tooLate satisfies cancelFailed_ParameterType_problem; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary cancelFailed_ParameterType_problem_operationNotCancellable
@@ -167,7 +167,7 @@ const tooLate: cancelFailed_ParameterType_problem = cancelFailed_ParameterType_p
  * @type {number}
  */
 export
-const cancelFailed_ParameterType_problem_operationNotCancellable: cancelFailed_ParameterType_problem = cancelFailed_ParameterType_problem.operationNotCancellable; /* LONG_NAMED_ENUMERATED_VALUE */
+const cancelFailed_ParameterType_problem_operationNotCancellable = cancelFailed_ParameterType_problem.operationNotCancellable satisfies cancelFailed_ParameterType_problem; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary operationNotCancellable
@@ -180,7 +180,7 @@ const cancelFailed_ParameterType_problem_operationNotCancellable: cancelFailed_P
  * @type {number}
  */
 export
-const operationNotCancellable: cancelFailed_ParameterType_problem = cancelFailed_ParameterType_problem.operationNotCancellable; /* SHORT_NAMED_ENUMERATED_VALUE */
+const operationNotCancellable = cancelFailed_ParameterType_problem.operationNotCancellable satisfies cancelFailed_ParameterType_problem; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_cancelFailed_ParameterType_problem = $._decodeEnumerated;
 export const _encode_cancelFailed_ParameterType_problem = $._encodeEnumerated;
 

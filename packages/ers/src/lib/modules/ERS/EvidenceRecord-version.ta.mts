@@ -44,7 +44,7 @@ type EvidenceRecord_version = INTEGER;
  * @type {number}
  */
 export
-const EvidenceRecord_version_v1: EvidenceRecord_version = 1; /* LONG_NAMED_INTEGER_VALUE */
+const EvidenceRecord_version_v1 = 1 satisfies EvidenceRecord_version; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -57,7 +57,7 @@ const EvidenceRecord_version_v1: EvidenceRecord_version = 1; /* LONG_NAMED_INTEG
  * @type {number}
  */
 export
-const v1: EvidenceRecord_version = EvidenceRecord_version_v1; /* SHORT_NAMED_INTEGER_VALUE */
+const v1 = EvidenceRecord_version_v1 satisfies EvidenceRecord_version; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 

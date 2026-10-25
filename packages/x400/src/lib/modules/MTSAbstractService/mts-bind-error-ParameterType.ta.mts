@@ -31,70 +31,70 @@ export type mts_bind_error_ParameterType = INTEGER;
  * @constant
  * @type {number}
  */
-export const mts_bind_error_ParameterType_busy: mts_bind_error_ParameterType = 0; /* LONG_NAMED_INTEGER_VALUE */
+export const mts_bind_error_ParameterType_busy = 0 satisfies mts_bind_error_ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary mts_bind_error_ParameterType_busy
  * @constant
  * @type {number}
  */
-export const busy: mts_bind_error_ParameterType = mts_bind_error_ParameterType_busy; /* SHORT_NAMED_INTEGER_VALUE */
+export const busy = mts_bind_error_ParameterType_busy satisfies mts_bind_error_ParameterType; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary mts_bind_error_ParameterType_authentication_error
  * @constant
  * @type {number}
  */
-export const mts_bind_error_ParameterType_authentication_error: mts_bind_error_ParameterType = 2; /* LONG_NAMED_INTEGER_VALUE */
+export const mts_bind_error_ParameterType_authentication_error = 2 satisfies mts_bind_error_ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary mts_bind_error_ParameterType_authentication_error
  * @constant
  * @type {number}
  */
-export const authentication_error: mts_bind_error_ParameterType = mts_bind_error_ParameterType_authentication_error; /* SHORT_NAMED_INTEGER_VALUE */
+export const authentication_error = mts_bind_error_ParameterType_authentication_error satisfies mts_bind_error_ParameterType; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary mts_bind_error_ParameterType_unacceptable_dialogue_mode
  * @constant
  * @type {number}
  */
-export const mts_bind_error_ParameterType_unacceptable_dialogue_mode: mts_bind_error_ParameterType = 3; /* LONG_NAMED_INTEGER_VALUE */
+export const mts_bind_error_ParameterType_unacceptable_dialogue_mode = 3 satisfies mts_bind_error_ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary mts_bind_error_ParameterType_unacceptable_dialogue_mode
  * @constant
  * @type {number}
  */
-export const unacceptable_dialogue_mode: mts_bind_error_ParameterType = mts_bind_error_ParameterType_unacceptable_dialogue_mode; /* SHORT_NAMED_INTEGER_VALUE */
+export const unacceptable_dialogue_mode = mts_bind_error_ParameterType_unacceptable_dialogue_mode satisfies mts_bind_error_ParameterType; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary mts_bind_error_ParameterType_unacceptable_security_context
  * @constant
  * @type {number}
  */
-export const mts_bind_error_ParameterType_unacceptable_security_context: mts_bind_error_ParameterType = 4; /* LONG_NAMED_INTEGER_VALUE */
+export const mts_bind_error_ParameterType_unacceptable_security_context = 4 satisfies mts_bind_error_ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary mts_bind_error_ParameterType_unacceptable_security_context
  * @constant
  * @type {number}
  */
-export const unacceptable_security_context: mts_bind_error_ParameterType = mts_bind_error_ParameterType_unacceptable_security_context; /* SHORT_NAMED_INTEGER_VALUE */
+export const unacceptable_security_context = mts_bind_error_ParameterType_unacceptable_security_context satisfies mts_bind_error_ParameterType; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary mts_bind_error_ParameterType_inadequate_association_confidentiality
  * @constant
  * @type {number}
  */
-export const mts_bind_error_ParameterType_inadequate_association_confidentiality: mts_bind_error_ParameterType = 5; /* LONG_NAMED_INTEGER_VALUE */
+export const mts_bind_error_ParameterType_inadequate_association_confidentiality = 5 satisfies mts_bind_error_ParameterType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary mts_bind_error_ParameterType_inadequate_association_confidentiality
  * @constant
  * @type {number}
  */
-export const inadequate_association_confidentiality: mts_bind_error_ParameterType = mts_bind_error_ParameterType_inadequate_association_confidentiality; /* SHORT_NAMED_INTEGER_VALUE */
+export const inadequate_association_confidentiality = mts_bind_error_ParameterType_inadequate_association_confidentiality satisfies mts_bind_error_ParameterType; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_mts_bind_error_ParameterType = $._decodeInteger;

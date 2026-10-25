@@ -40,7 +40,7 @@ type ScanResponse_scanStatus = INTEGER;
  * @type {number}
  */
 export
-const ScanResponse_scanStatus_success: ScanResponse_scanStatus = 0; /* LONG_NAMED_INTEGER_VALUE */
+const ScanResponse_scanStatus_success = 0 satisfies ScanResponse_scanStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ScanResponse_scanStatus_success
@@ -53,7 +53,7 @@ const ScanResponse_scanStatus_success: ScanResponse_scanStatus = 0; /* LONG_NAME
  * @type {number}
  */
 export
-const success: ScanResponse_scanStatus = ScanResponse_scanStatus_success; /* SHORT_NAMED_INTEGER_VALUE */
+const success = ScanResponse_scanStatus_success satisfies ScanResponse_scanStatus; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ScanResponse_scanStatus_partial_1
@@ -66,7 +66,7 @@ const success: ScanResponse_scanStatus = ScanResponse_scanStatus_success; /* SHO
  * @type {number}
  */
 export
-const ScanResponse_scanStatus_partial_1: ScanResponse_scanStatus = 1; /* LONG_NAMED_INTEGER_VALUE */
+const ScanResponse_scanStatus_partial_1 = 1 satisfies ScanResponse_scanStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ScanResponse_scanStatus_partial_1
@@ -79,7 +79,7 @@ const ScanResponse_scanStatus_partial_1: ScanResponse_scanStatus = 1; /* LONG_NA
  * @type {number}
  */
 export
-const partial_1: ScanResponse_scanStatus = ScanResponse_scanStatus_partial_1; /* SHORT_NAMED_INTEGER_VALUE */
+const partial_1 = ScanResponse_scanStatus_partial_1 satisfies ScanResponse_scanStatus; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ScanResponse_scanStatus_partial_2
@@ -92,7 +92,7 @@ const partial_1: ScanResponse_scanStatus = ScanResponse_scanStatus_partial_1; /*
  * @type {number}
  */
 export
-const ScanResponse_scanStatus_partial_2: ScanResponse_scanStatus = 2; /* LONG_NAMED_INTEGER_VALUE */
+const ScanResponse_scanStatus_partial_2 = 2 satisfies ScanResponse_scanStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ScanResponse_scanStatus_partial_2
@@ -105,7 +105,7 @@ const ScanResponse_scanStatus_partial_2: ScanResponse_scanStatus = 2; /* LONG_NA
  * @type {number}
  */
 export
-const partial_2: ScanResponse_scanStatus = ScanResponse_scanStatus_partial_2; /* SHORT_NAMED_INTEGER_VALUE */
+const partial_2 = ScanResponse_scanStatus_partial_2 satisfies ScanResponse_scanStatus; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ScanResponse_scanStatus_partial_3
@@ -118,7 +118,7 @@ const partial_2: ScanResponse_scanStatus = ScanResponse_scanStatus_partial_2; /*
  * @type {number}
  */
 export
-const ScanResponse_scanStatus_partial_3: ScanResponse_scanStatus = 3; /* LONG_NAMED_INTEGER_VALUE */
+const ScanResponse_scanStatus_partial_3 = 3 satisfies ScanResponse_scanStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ScanResponse_scanStatus_partial_3
@@ -131,7 +131,7 @@ const ScanResponse_scanStatus_partial_3: ScanResponse_scanStatus = 3; /* LONG_NA
  * @type {number}
  */
 export
-const partial_3: ScanResponse_scanStatus = ScanResponse_scanStatus_partial_3; /* SHORT_NAMED_INTEGER_VALUE */
+const partial_3 = ScanResponse_scanStatus_partial_3 satisfies ScanResponse_scanStatus; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ScanResponse_scanStatus_partial_4
@@ -144,7 +144,7 @@ const partial_3: ScanResponse_scanStatus = ScanResponse_scanStatus_partial_3; /*
  * @type {number}
  */
 export
-const ScanResponse_scanStatus_partial_4: ScanResponse_scanStatus = 4; /* LONG_NAMED_INTEGER_VALUE */
+const ScanResponse_scanStatus_partial_4 = 4 satisfies ScanResponse_scanStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ScanResponse_scanStatus_partial_4
@@ -157,7 +157,7 @@ const ScanResponse_scanStatus_partial_4: ScanResponse_scanStatus = 4; /* LONG_NA
  * @type {number}
  */
 export
-const partial_4: ScanResponse_scanStatus = ScanResponse_scanStatus_partial_4; /* SHORT_NAMED_INTEGER_VALUE */
+const partial_4 = ScanResponse_scanStatus_partial_4 satisfies ScanResponse_scanStatus; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ScanResponse_scanStatus_partial_5
@@ -170,7 +170,7 @@ const partial_4: ScanResponse_scanStatus = ScanResponse_scanStatus_partial_4; /*
  * @type {number}
  */
 export
-const ScanResponse_scanStatus_partial_5: ScanResponse_scanStatus = 5; /* LONG_NAMED_INTEGER_VALUE */
+const ScanResponse_scanStatus_partial_5 = 5 satisfies ScanResponse_scanStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ScanResponse_scanStatus_partial_5
@@ -183,7 +183,7 @@ const ScanResponse_scanStatus_partial_5: ScanResponse_scanStatus = 5; /* LONG_NA
  * @type {number}
  */
 export
-const partial_5: ScanResponse_scanStatus = ScanResponse_scanStatus_partial_5; /* SHORT_NAMED_INTEGER_VALUE */
+const partial_5 = ScanResponse_scanStatus_partial_5 satisfies ScanResponse_scanStatus; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ScanResponse_scanStatus_failure
@@ -196,7 +196,7 @@ const partial_5: ScanResponse_scanStatus = ScanResponse_scanStatus_partial_5; /*
  * @type {number}
  */
 export
-const ScanResponse_scanStatus_failure: ScanResponse_scanStatus = 6; /* LONG_NAMED_INTEGER_VALUE */
+const ScanResponse_scanStatus_failure = 6 satisfies ScanResponse_scanStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ScanResponse_scanStatus_failure
@@ -209,7 +209,7 @@ const ScanResponse_scanStatus_failure: ScanResponse_scanStatus = 6; /* LONG_NAME
  * @type {number}
  */
 export
-const failure: ScanResponse_scanStatus = ScanResponse_scanStatus_failure; /* SHORT_NAMED_INTEGER_VALUE */
+const failure = ScanResponse_scanStatus_failure satisfies ScanResponse_scanStatus; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_ScanResponse_scanStatus: $.ASN1Decoder<ScanResponse_scanStatus> = $._decodeInteger;
 export const _encode_ScanResponse_scanStatus: $.ASN1Encoder<ScanResponse_scanStatus> = $._encodeInteger;
 

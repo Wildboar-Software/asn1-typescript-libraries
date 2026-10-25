@@ -86,7 +86,7 @@ const CIUnwantedUserStatus = _enum_for_CIUnwantedUserStatus;
  * @type {number}
  */
 export
-const CIUnwantedUserStatus_unwantedUserIntruded: CIUnwantedUserStatus = CIUnwantedUserStatus.unwantedUserIntruded; /* LONG_NAMED_ENUMERATED_VALUE */
+const CIUnwantedUserStatus_unwantedUserIntruded = CIUnwantedUserStatus.unwantedUserIntruded satisfies CIUnwantedUserStatus; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unwantedUserIntruded
@@ -95,7 +95,7 @@ const CIUnwantedUserStatus_unwantedUserIntruded: CIUnwantedUserStatus = CIUnwant
  * @type {number}
  */
 export
-const unwantedUserIntruded: CIUnwantedUserStatus = CIUnwantedUserStatus.unwantedUserIntruded; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unwantedUserIntruded = CIUnwantedUserStatus.unwantedUserIntruded satisfies CIUnwantedUserStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CIUnwantedUserStatus_unwantedUserIsolated
@@ -112,7 +112,7 @@ const unwantedUserIntruded: CIUnwantedUserStatus = CIUnwantedUserStatus.unwanted
  * @type {number}
  */
 export
-const CIUnwantedUserStatus_unwantedUserIsolated: CIUnwantedUserStatus = CIUnwantedUserStatus.unwantedUserIsolated; /* LONG_NAMED_ENUMERATED_VALUE */
+const CIUnwantedUserStatus_unwantedUserIsolated = CIUnwantedUserStatus.unwantedUserIsolated satisfies CIUnwantedUserStatus; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unwantedUserIsolated
@@ -121,7 +121,7 @@ const CIUnwantedUserStatus_unwantedUserIsolated: CIUnwantedUserStatus = CIUnwant
  * @type {number}
  */
 export
-const unwantedUserIsolated: CIUnwantedUserStatus = CIUnwantedUserStatus.unwantedUserIsolated; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unwantedUserIsolated = CIUnwantedUserStatus.unwantedUserIsolated satisfies CIUnwantedUserStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_CIUnwantedUserStatus: $.ASN1Decoder<CIUnwantedUserStatus> = $._decodeEnumerated;

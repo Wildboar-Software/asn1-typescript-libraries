@@ -126,8 +126,8 @@ export const DenialResponse = _enum_for_DenialResponse;
  * @constant
  * @type {number}
  */
-export const DenialResponse_denyWithResponse: DenialResponse =
-    DenialResponse.denyWithResponse; /* LONG_NAMED_ENUMERATED_VALUE */
+export const DenialResponse_denyWithResponse =
+    DenialResponse.denyWithResponse satisfies DenialResponse; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary denyWithResponse
@@ -138,8 +138,8 @@ export const DenialResponse_denyWithResponse: DenialResponse =
  * @constant
  * @type {number}
  */
-export const denyWithResponse: DenialResponse =
-    DenialResponse.denyWithResponse; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const denyWithResponse =
+    DenialResponse.denyWithResponse satisfies DenialResponse; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary DenialResponse_denyWithoutResponse
@@ -150,8 +150,8 @@ export const denyWithResponse: DenialResponse =
  * @constant
  * @type {number}
  */
-export const DenialResponse_denyWithoutResponse: DenialResponse =
-    DenialResponse.denyWithoutResponse; /* LONG_NAMED_ENUMERATED_VALUE */
+export const DenialResponse_denyWithoutResponse =
+    DenialResponse.denyWithoutResponse satisfies DenialResponse; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary denyWithoutResponse
@@ -162,8 +162,8 @@ export const DenialResponse_denyWithoutResponse: DenialResponse =
  * @constant
  * @type {number}
  */
-export const denyWithoutResponse: DenialResponse =
-    DenialResponse.denyWithoutResponse; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const denyWithoutResponse =
+    DenialResponse.denyWithoutResponse satisfies DenialResponse; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary DenialResponse_abortAssociation
@@ -174,8 +174,8 @@ export const denyWithoutResponse: DenialResponse =
  * @constant
  * @type {number}
  */
-export const DenialResponse_abortAssociation: DenialResponse =
-    DenialResponse.abortAssociation; /* LONG_NAMED_ENUMERATED_VALUE */
+export const DenialResponse_abortAssociation =
+    DenialResponse.abortAssociation satisfies DenialResponse; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary abortAssociation
@@ -186,8 +186,8 @@ export const DenialResponse_abortAssociation: DenialResponse =
  * @constant
  * @type {number}
  */
-export const abortAssociation: DenialResponse =
-    DenialResponse.abortAssociation; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const abortAssociation =
+    DenialResponse.abortAssociation satisfies DenialResponse; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary DenialResponse_denyWithFalseResponse
@@ -199,8 +199,8 @@ export const abortAssociation: DenialResponse =
  * @constant
  * @type {number}
  */
-export const DenialResponse_denyWithFalseResponse: DenialResponse =
-    DenialResponse.denyWithFalseResponse; /* LONG_NAMED_ENUMERATED_VALUE */
+export const DenialResponse_denyWithFalseResponse =
+    DenialResponse.denyWithFalseResponse satisfies DenialResponse; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary denyWithFalseResponse
@@ -212,8 +212,8 @@ export const DenialResponse_denyWithFalseResponse: DenialResponse =
  * @constant
  * @type {number}
  */
-export const denyWithFalseResponse: DenialResponse =
-    DenialResponse.denyWithFalseResponse; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const denyWithFalseResponse =
+    DenialResponse.denyWithFalseResponse satisfies DenialResponse; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 export function _decode_DenialResponse(el: _Element): DenialResponse {

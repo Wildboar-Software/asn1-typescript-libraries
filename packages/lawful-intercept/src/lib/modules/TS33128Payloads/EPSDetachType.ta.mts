@@ -106,7 +106,7 @@ const EPSDetachType = _enum_for_EPSDetachType;
  * @type {number}
  */
 export
-const EPSDetachType_ePSDetach: EPSDetachType = EPSDetachType.ePSDetach; /* LONG_NAMED_ENUMERATED_VALUE */
+const EPSDetachType_ePSDetach = EPSDetachType.ePSDetach satisfies EPSDetachType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ePSDetach
@@ -114,7 +114,7 @@ const EPSDetachType_ePSDetach: EPSDetachType = EPSDetachType.ePSDetach; /* LONG_
  * @type {number}
  */
 export
-const ePSDetach: EPSDetachType = EPSDetachType.ePSDetach; /* SHORT_NAMED_ENUMERATED_VALUE */
+const ePSDetach = EPSDetachType.ePSDetach satisfies EPSDetachType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EPSDetachType_iMSIDetach
@@ -122,7 +122,7 @@ const ePSDetach: EPSDetachType = EPSDetachType.ePSDetach; /* SHORT_NAMED_ENUMERA
  * @type {number}
  */
 export
-const EPSDetachType_iMSIDetach: EPSDetachType = EPSDetachType.iMSIDetach; /* LONG_NAMED_ENUMERATED_VALUE */
+const EPSDetachType_iMSIDetach = EPSDetachType.iMSIDetach satisfies EPSDetachType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary iMSIDetach
@@ -130,7 +130,7 @@ const EPSDetachType_iMSIDetach: EPSDetachType = EPSDetachType.iMSIDetach; /* LON
  * @type {number}
  */
 export
-const iMSIDetach: EPSDetachType = EPSDetachType.iMSIDetach; /* SHORT_NAMED_ENUMERATED_VALUE */
+const iMSIDetach = EPSDetachType.iMSIDetach satisfies EPSDetachType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EPSDetachType_combinedEPSIMSIDetach
@@ -138,7 +138,7 @@ const iMSIDetach: EPSDetachType = EPSDetachType.iMSIDetach; /* SHORT_NAMED_ENUME
  * @type {number}
  */
 export
-const EPSDetachType_combinedEPSIMSIDetach: EPSDetachType = EPSDetachType.combinedEPSIMSIDetach; /* LONG_NAMED_ENUMERATED_VALUE */
+const EPSDetachType_combinedEPSIMSIDetach = EPSDetachType.combinedEPSIMSIDetach satisfies EPSDetachType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary combinedEPSIMSIDetach
@@ -146,7 +146,7 @@ const EPSDetachType_combinedEPSIMSIDetach: EPSDetachType = EPSDetachType.combine
  * @type {number}
  */
 export
-const combinedEPSIMSIDetach: EPSDetachType = EPSDetachType.combinedEPSIMSIDetach; /* SHORT_NAMED_ENUMERATED_VALUE */
+const combinedEPSIMSIDetach = EPSDetachType.combinedEPSIMSIDetach satisfies EPSDetachType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EPSDetachType_reAttachRequired
@@ -154,7 +154,7 @@ const combinedEPSIMSIDetach: EPSDetachType = EPSDetachType.combinedEPSIMSIDetach
  * @type {number}
  */
 export
-const EPSDetachType_reAttachRequired: EPSDetachType = EPSDetachType.reAttachRequired; /* LONG_NAMED_ENUMERATED_VALUE */
+const EPSDetachType_reAttachRequired = EPSDetachType.reAttachRequired satisfies EPSDetachType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary reAttachRequired
@@ -162,7 +162,7 @@ const EPSDetachType_reAttachRequired: EPSDetachType = EPSDetachType.reAttachRequ
  * @type {number}
  */
 export
-const reAttachRequired: EPSDetachType = EPSDetachType.reAttachRequired; /* SHORT_NAMED_ENUMERATED_VALUE */
+const reAttachRequired = EPSDetachType.reAttachRequired satisfies EPSDetachType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EPSDetachType_reAttachNotRequired
@@ -170,7 +170,7 @@ const reAttachRequired: EPSDetachType = EPSDetachType.reAttachRequired; /* SHORT
  * @type {number}
  */
 export
-const EPSDetachType_reAttachNotRequired: EPSDetachType = EPSDetachType.reAttachNotRequired; /* LONG_NAMED_ENUMERATED_VALUE */
+const EPSDetachType_reAttachNotRequired = EPSDetachType.reAttachNotRequired satisfies EPSDetachType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary reAttachNotRequired
@@ -178,7 +178,7 @@ const EPSDetachType_reAttachNotRequired: EPSDetachType = EPSDetachType.reAttachN
  * @type {number}
  */
 export
-const reAttachNotRequired: EPSDetachType = EPSDetachType.reAttachNotRequired; /* SHORT_NAMED_ENUMERATED_VALUE */
+const reAttachNotRequired = EPSDetachType.reAttachNotRequired satisfies EPSDetachType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EPSDetachType_reserved
@@ -186,7 +186,7 @@ const reAttachNotRequired: EPSDetachType = EPSDetachType.reAttachNotRequired; /*
  * @type {number}
  */
 export
-const EPSDetachType_reserved: EPSDetachType = EPSDetachType.reserved; /* LONG_NAMED_ENUMERATED_VALUE */
+const EPSDetachType_reserved = EPSDetachType.reserved satisfies EPSDetachType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary reserved
@@ -194,7 +194,7 @@ const EPSDetachType_reserved: EPSDetachType = EPSDetachType.reserved; /* LONG_NA
  * @type {number}
  */
 export
-const reserved: EPSDetachType = EPSDetachType.reserved; /* SHORT_NAMED_ENUMERATED_VALUE */
+const reserved = EPSDetachType.reserved satisfies EPSDetachType; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_EPSDetachType: $.ASN1Decoder<EPSDetachType> = $._decodeEnumerated;
 export const _encode_EPSDetachType: $.ASN1Encoder<EPSDetachType> = $._encodeEnumerated;
 

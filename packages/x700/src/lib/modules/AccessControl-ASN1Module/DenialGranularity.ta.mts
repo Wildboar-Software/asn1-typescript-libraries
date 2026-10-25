@@ -129,8 +129,8 @@ export const DenialGranularity = _enum_for_DenialGranularity;
  * @constant
  * @type {number}
  */
-export const DenialGranularity_request: DenialGranularity =
-    DenialGranularity.request; /* LONG_NAMED_ENUMERATED_VALUE */
+export const DenialGranularity_request =
+    DenialGranularity.request satisfies DenialGranularity; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary request
@@ -142,8 +142,8 @@ export const DenialGranularity_request: DenialGranularity =
  * @constant
  * @type {number}
  */
-export const request: DenialGranularity =
-    DenialGranularity.request; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const request =
+    DenialGranularity.request satisfies DenialGranularity; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary DenialGranularity_object
@@ -156,8 +156,8 @@ export const request: DenialGranularity =
  * @constant
  * @type {number}
  */
-export const DenialGranularity_object: DenialGranularity =
-    DenialGranularity.object; /* LONG_NAMED_ENUMERATED_VALUE */
+export const DenialGranularity_object =
+    DenialGranularity.object satisfies DenialGranularity; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary object
@@ -169,8 +169,8 @@ export const DenialGranularity_object: DenialGranularity =
  * @constant
  * @type {number}
  */
-export const object: DenialGranularity =
-    DenialGranularity.object; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const object =
+    DenialGranularity.object satisfies DenialGranularity; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary DenialGranularity_attribute
@@ -182,8 +182,8 @@ export const object: DenialGranularity =
  * @constant
  * @type {number}
  */
-export const DenialGranularity_attribute: DenialGranularity =
-    DenialGranularity.attribute; /* LONG_NAMED_ENUMERATED_VALUE */
+export const DenialGranularity_attribute =
+    DenialGranularity.attribute satisfies DenialGranularity; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary attribute
@@ -194,8 +194,8 @@ export const DenialGranularity_attribute: DenialGranularity =
  * @constant
  * @type {number}
  */
-export const attribute: DenialGranularity =
-    DenialGranularity.attribute; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const attribute =
+    DenialGranularity.attribute satisfies DenialGranularity; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 export function _decode_DenialGranularity(el: _Element): DenialGranularity {

@@ -32,7 +32,7 @@ type LocationRoutingNumberQueryStatus = INTEGER;
  * @type {number}
  */
 export
-const LocationRoutingNumberQueryStatus_successfulQuery: LocationRoutingNumberQueryStatus = 1; /* LONG_NAMED_INTEGER_VALUE */
+const LocationRoutingNumberQueryStatus_successfulQuery = 1 satisfies LocationRoutingNumberQueryStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary LocationRoutingNumberQueryStatus_successfulQuery
@@ -40,7 +40,7 @@ const LocationRoutingNumberQueryStatus_successfulQuery: LocationRoutingNumberQue
  * @type {number}
  */
 export
-const successfulQuery: LocationRoutingNumberQueryStatus = LocationRoutingNumberQueryStatus_successfulQuery; /* SHORT_NAMED_INTEGER_VALUE */
+const successfulQuery = LocationRoutingNumberQueryStatus_successfulQuery satisfies LocationRoutingNumberQueryStatus; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary LocationRoutingNumberQueryStatus_noQueryResponseMsg
@@ -48,7 +48,7 @@ const successfulQuery: LocationRoutingNumberQueryStatus = LocationRoutingNumberQ
  * @type {number}
  */
 export
-const LocationRoutingNumberQueryStatus_noQueryResponseMsg: LocationRoutingNumberQueryStatus = 2; /* LONG_NAMED_INTEGER_VALUE */
+const LocationRoutingNumberQueryStatus_noQueryResponseMsg = 2 satisfies LocationRoutingNumberQueryStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary LocationRoutingNumberQueryStatus_noQueryResponseMsg
@@ -56,7 +56,7 @@ const LocationRoutingNumberQueryStatus_noQueryResponseMsg: LocationRoutingNumber
  * @type {number}
  */
 export
-const noQueryResponseMsg: LocationRoutingNumberQueryStatus = LocationRoutingNumberQueryStatus_noQueryResponseMsg; /* SHORT_NAMED_INTEGER_VALUE */
+const noQueryResponseMsg = LocationRoutingNumberQueryStatus_noQueryResponseMsg satisfies LocationRoutingNumberQueryStatus; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary LocationRoutingNumberQueryStatus_queryProtocolErr
@@ -64,7 +64,7 @@ const noQueryResponseMsg: LocationRoutingNumberQueryStatus = LocationRoutingNumb
  * @type {number}
  */
 export
-const LocationRoutingNumberQueryStatus_queryProtocolErr: LocationRoutingNumberQueryStatus = 4; /* LONG_NAMED_INTEGER_VALUE */
+const LocationRoutingNumberQueryStatus_queryProtocolErr = 4 satisfies LocationRoutingNumberQueryStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary LocationRoutingNumberQueryStatus_queryProtocolErr
@@ -72,7 +72,7 @@ const LocationRoutingNumberQueryStatus_queryProtocolErr: LocationRoutingNumberQu
  * @type {number}
  */
 export
-const queryProtocolErr: LocationRoutingNumberQueryStatus = LocationRoutingNumberQueryStatus_queryProtocolErr; /* SHORT_NAMED_INTEGER_VALUE */
+const queryProtocolErr = LocationRoutingNumberQueryStatus_queryProtocolErr satisfies LocationRoutingNumberQueryStatus; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary LocationRoutingNumberQueryStatus_queryResponseDataErr
@@ -80,7 +80,7 @@ const queryProtocolErr: LocationRoutingNumberQueryStatus = LocationRoutingNumber
  * @type {number}
  */
 export
-const LocationRoutingNumberQueryStatus_queryResponseDataErr: LocationRoutingNumberQueryStatus = 5; /* LONG_NAMED_INTEGER_VALUE */
+const LocationRoutingNumberQueryStatus_queryResponseDataErr = 5 satisfies LocationRoutingNumberQueryStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary LocationRoutingNumberQueryStatus_queryResponseDataErr
@@ -88,7 +88,7 @@ const LocationRoutingNumberQueryStatus_queryResponseDataErr: LocationRoutingNumb
  * @type {number}
  */
 export
-const queryResponseDataErr: LocationRoutingNumberQueryStatus = LocationRoutingNumberQueryStatus_queryResponseDataErr; /* SHORT_NAMED_INTEGER_VALUE */
+const queryResponseDataErr = LocationRoutingNumberQueryStatus_queryResponseDataErr satisfies LocationRoutingNumberQueryStatus; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary LocationRoutingNumberQueryStatus_queryRejected
@@ -96,7 +96,7 @@ const queryResponseDataErr: LocationRoutingNumberQueryStatus = LocationRoutingNu
  * @type {number}
  */
 export
-const LocationRoutingNumberQueryStatus_queryRejected: LocationRoutingNumberQueryStatus = 6; /* LONG_NAMED_INTEGER_VALUE */
+const LocationRoutingNumberQueryStatus_queryRejected = 6 satisfies LocationRoutingNumberQueryStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary LocationRoutingNumberQueryStatus_queryRejected
@@ -104,7 +104,7 @@ const LocationRoutingNumberQueryStatus_queryRejected: LocationRoutingNumberQuery
  * @type {number}
  */
 export
-const queryRejected: LocationRoutingNumberQueryStatus = LocationRoutingNumberQueryStatus_queryRejected; /* SHORT_NAMED_INTEGER_VALUE */
+const queryRejected = LocationRoutingNumberQueryStatus_queryRejected satisfies LocationRoutingNumberQueryStatus; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary LocationRoutingNumberQueryStatus_queryNotPerformed
@@ -112,7 +112,7 @@ const queryRejected: LocationRoutingNumberQueryStatus = LocationRoutingNumberQue
  * @type {number}
  */
 export
-const LocationRoutingNumberQueryStatus_queryNotPerformed: LocationRoutingNumberQueryStatus = 9; /* LONG_NAMED_INTEGER_VALUE */
+const LocationRoutingNumberQueryStatus_queryNotPerformed = 9 satisfies LocationRoutingNumberQueryStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary LocationRoutingNumberQueryStatus_queryNotPerformed
@@ -120,7 +120,7 @@ const LocationRoutingNumberQueryStatus_queryNotPerformed: LocationRoutingNumberQ
  * @type {number}
  */
 export
-const queryNotPerformed: LocationRoutingNumberQueryStatus = LocationRoutingNumberQueryStatus_queryNotPerformed; /* SHORT_NAMED_INTEGER_VALUE */
+const queryNotPerformed = LocationRoutingNumberQueryStatus_queryNotPerformed satisfies LocationRoutingNumberQueryStatus; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary LocationRoutingNumberQueryStatus_queryUnsuccessful
@@ -128,7 +128,7 @@ const queryNotPerformed: LocationRoutingNumberQueryStatus = LocationRoutingNumbe
  * @type {number}
  */
 export
-const LocationRoutingNumberQueryStatus_queryUnsuccessful: LocationRoutingNumberQueryStatus = 99; /* LONG_NAMED_INTEGER_VALUE */
+const LocationRoutingNumberQueryStatus_queryUnsuccessful = 99 satisfies LocationRoutingNumberQueryStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary LocationRoutingNumberQueryStatus_queryUnsuccessful
@@ -136,7 +136,7 @@ const LocationRoutingNumberQueryStatus_queryUnsuccessful: LocationRoutingNumberQ
  * @type {number}
  */
 export
-const queryUnsuccessful: LocationRoutingNumberQueryStatus = LocationRoutingNumberQueryStatus_queryUnsuccessful; /* SHORT_NAMED_INTEGER_VALUE */
+const queryUnsuccessful = LocationRoutingNumberQueryStatus_queryUnsuccessful satisfies LocationRoutingNumberQueryStatus; /* SHORT_NAMED_INTEGER_VALUE */
 
 export
 const _decode_LocationRoutingNumberQueryStatus: $.ASN1Decoder<LocationRoutingNumberQueryStatus> = $._decodeInteger;

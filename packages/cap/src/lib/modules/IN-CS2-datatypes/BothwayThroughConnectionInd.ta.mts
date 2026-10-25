@@ -70,7 +70,7 @@ const BothwayThroughConnectionInd = _enum_for_BothwayThroughConnectionInd;
  * @type {number}
  */
 export
-const BothwayThroughConnectionInd_bothwayPathRequired: BothwayThroughConnectionInd = BothwayThroughConnectionInd.bothwayPathRequired; /* LONG_NAMED_ENUMERATED_VALUE */
+const BothwayThroughConnectionInd_bothwayPathRequired = BothwayThroughConnectionInd.bothwayPathRequired satisfies BothwayThroughConnectionInd; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary bothwayPathRequired
@@ -78,7 +78,7 @@ const BothwayThroughConnectionInd_bothwayPathRequired: BothwayThroughConnectionI
  * @type {number}
  */
 export
-const bothwayPathRequired: BothwayThroughConnectionInd = BothwayThroughConnectionInd.bothwayPathRequired; /* SHORT_NAMED_ENUMERATED_VALUE */
+const bothwayPathRequired = BothwayThroughConnectionInd.bothwayPathRequired satisfies BothwayThroughConnectionInd; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary BothwayThroughConnectionInd_bothwayPathNotRequired
@@ -86,7 +86,7 @@ const bothwayPathRequired: BothwayThroughConnectionInd = BothwayThroughConnectio
  * @type {number}
  */
 export
-const BothwayThroughConnectionInd_bothwayPathNotRequired: BothwayThroughConnectionInd = BothwayThroughConnectionInd.bothwayPathNotRequired; /* LONG_NAMED_ENUMERATED_VALUE */
+const BothwayThroughConnectionInd_bothwayPathNotRequired = BothwayThroughConnectionInd.bothwayPathNotRequired satisfies BothwayThroughConnectionInd; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary bothwayPathNotRequired
@@ -94,7 +94,7 @@ const BothwayThroughConnectionInd_bothwayPathNotRequired: BothwayThroughConnecti
  * @type {number}
  */
 export
-const bothwayPathNotRequired: BothwayThroughConnectionInd = BothwayThroughConnectionInd.bothwayPathNotRequired; /* SHORT_NAMED_ENUMERATED_VALUE */
+const bothwayPathNotRequired = BothwayThroughConnectionInd.bothwayPathNotRequired satisfies BothwayThroughConnectionInd; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_BothwayThroughConnectionInd = $._decodeEnumerated;
 export const _encode_BothwayThroughConnectionInd = $._encodeEnumerated;
 

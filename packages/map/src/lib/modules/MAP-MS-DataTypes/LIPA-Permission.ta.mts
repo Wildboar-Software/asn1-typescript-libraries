@@ -89,7 +89,7 @@ const LIPA_Permission = _enum_for_LIPA_Permission;
  * @type {number}
  */
 export
-const LIPA_Permission_lipaProhibited: LIPA_Permission = LIPA_Permission.lipaProhibited; /* LONG_NAMED_ENUMERATED_VALUE */
+const LIPA_Permission_lipaProhibited = LIPA_Permission.lipaProhibited satisfies LIPA_Permission; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary lipaProhibited
@@ -101,7 +101,7 @@ const LIPA_Permission_lipaProhibited: LIPA_Permission = LIPA_Permission.lipaProh
  * @type {number}
  */
 export
-const lipaProhibited: LIPA_Permission = LIPA_Permission.lipaProhibited; /* SHORT_NAMED_ENUMERATED_VALUE */
+const lipaProhibited = LIPA_Permission.lipaProhibited satisfies LIPA_Permission; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LIPA_Permission_lipaOnly
@@ -113,7 +113,7 @@ const lipaProhibited: LIPA_Permission = LIPA_Permission.lipaProhibited; /* SHORT
  * @type {number}
  */
 export
-const LIPA_Permission_lipaOnly: LIPA_Permission = LIPA_Permission.lipaOnly; /* LONG_NAMED_ENUMERATED_VALUE */
+const LIPA_Permission_lipaOnly = LIPA_Permission.lipaOnly satisfies LIPA_Permission; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary lipaOnly
@@ -125,7 +125,7 @@ const LIPA_Permission_lipaOnly: LIPA_Permission = LIPA_Permission.lipaOnly; /* L
  * @type {number}
  */
 export
-const lipaOnly: LIPA_Permission = LIPA_Permission.lipaOnly; /* SHORT_NAMED_ENUMERATED_VALUE */
+const lipaOnly = LIPA_Permission.lipaOnly satisfies LIPA_Permission; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LIPA_Permission_lipaConditional
@@ -137,7 +137,7 @@ const lipaOnly: LIPA_Permission = LIPA_Permission.lipaOnly; /* SHORT_NAMED_ENUME
  * @type {number}
  */
 export
-const LIPA_Permission_lipaConditional: LIPA_Permission = LIPA_Permission.lipaConditional; /* LONG_NAMED_ENUMERATED_VALUE */
+const LIPA_Permission_lipaConditional = LIPA_Permission.lipaConditional satisfies LIPA_Permission; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary lipaConditional
@@ -149,7 +149,7 @@ const LIPA_Permission_lipaConditional: LIPA_Permission = LIPA_Permission.lipaCon
  * @type {number}
  */
 export
-const lipaConditional: LIPA_Permission = LIPA_Permission.lipaConditional; /* SHORT_NAMED_ENUMERATED_VALUE */
+const lipaConditional = LIPA_Permission.lipaConditional satisfies LIPA_Permission; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) LIPA_Permission

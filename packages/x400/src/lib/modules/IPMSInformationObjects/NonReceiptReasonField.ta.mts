@@ -42,28 +42,28 @@ export type NonReceiptReasonField =
  * @constant
  * @type {number}
  */
-export const NonReceiptReasonField_ipm_discarded: NonReceiptReasonField = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+export const NonReceiptReasonField_ipm_discarded = _enum_for_NonReceiptReasonField.ipm_discarded satisfies NonReceiptReasonField; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ipm_discarded
  * @constant
  * @type {number}
  */
-export const ipm_discarded: NonReceiptReasonField = NonReceiptReasonField_ipm_discarded; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const ipm_discarded = NonReceiptReasonField_ipm_discarded satisfies NonReceiptReasonField; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NonReceiptReasonField_ipm_auto_forwarded
  * @constant
  * @type {number}
  */
-export const NonReceiptReasonField_ipm_auto_forwarded: NonReceiptReasonField = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+export const NonReceiptReasonField_ipm_auto_forwarded = _enum_for_NonReceiptReasonField.ipm_auto_forwarded satisfies NonReceiptReasonField; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ipm_auto_forwarded
  * @constant
  * @type {number}
  */
-export const ipm_auto_forwarded: NonReceiptReasonField = NonReceiptReasonField_ipm_auto_forwarded; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const ipm_auto_forwarded = NonReceiptReasonField_ipm_auto_forwarded satisfies NonReceiptReasonField; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 export const _decode_NonReceiptReasonField = $._decodeEnumerated;

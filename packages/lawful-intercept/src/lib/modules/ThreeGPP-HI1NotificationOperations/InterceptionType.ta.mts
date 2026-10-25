@@ -54,7 +54,7 @@ type InterceptionType = _enum_for_InterceptionType | ENUMERATED;
  * @type {number}
  */
 export
-const InterceptionType_voiceIriCc: InterceptionType = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+const InterceptionType_voiceIriCc = _enum_for_InterceptionType.voiceIriCc satisfies InterceptionType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary voiceIriCc
@@ -66,7 +66,7 @@ const InterceptionType_voiceIriCc: InterceptionType = 0; /* LONG_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const voiceIriCc: InterceptionType = InterceptionType_voiceIriCc; /* SHORT_NAMED_ENUMERATED_VALUE */
+const voiceIriCc = InterceptionType_voiceIriCc satisfies InterceptionType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary InterceptionType_voiceIriOnly
@@ -79,7 +79,7 @@ const voiceIriCc: InterceptionType = InterceptionType_voiceIriCc; /* SHORT_NAMED
  * @type {number}
  */
 export
-const InterceptionType_voiceIriOnly: InterceptionType = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const InterceptionType_voiceIriOnly = _enum_for_InterceptionType.voiceIriOnly satisfies InterceptionType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary voiceIriOnly
@@ -91,7 +91,7 @@ const InterceptionType_voiceIriOnly: InterceptionType = 1; /* LONG_NAMED_ENUMERA
  * @type {number}
  */
 export
-const voiceIriOnly: InterceptionType = InterceptionType_voiceIriOnly; /* SHORT_NAMED_ENUMERATED_VALUE */
+const voiceIriOnly = InterceptionType_voiceIriOnly satisfies InterceptionType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary InterceptionType_dataIriCc
@@ -103,7 +103,7 @@ const voiceIriOnly: InterceptionType = InterceptionType_voiceIriOnly; /* SHORT_N
  * @type {number}
  */
 export
-const InterceptionType_dataIriCc: InterceptionType = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+const InterceptionType_dataIriCc = _enum_for_InterceptionType.dataIriCc satisfies InterceptionType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary dataIriCc
@@ -115,7 +115,7 @@ const InterceptionType_dataIriCc: InterceptionType = 2; /* LONG_NAMED_ENUMERATED
  * @type {number}
  */
 export
-const dataIriCc: InterceptionType = InterceptionType_dataIriCc; /* SHORT_NAMED_ENUMERATED_VALUE */
+const dataIriCc = InterceptionType_dataIriCc satisfies InterceptionType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary InterceptionType_dataIriOnly
@@ -128,7 +128,7 @@ const dataIriCc: InterceptionType = InterceptionType_dataIriCc; /* SHORT_NAMED_E
  * @type {number}
  */
 export
-const InterceptionType_dataIriOnly: InterceptionType = 3; /* LONG_NAMED_ENUMERATED_VALUE */
+const InterceptionType_dataIriOnly = _enum_for_InterceptionType.dataIriOnly satisfies InterceptionType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary dataIriOnly
@@ -140,7 +140,7 @@ const InterceptionType_dataIriOnly: InterceptionType = 3; /* LONG_NAMED_ENUMERAT
  * @type {number}
  */
 export
-const dataIriOnly: InterceptionType = InterceptionType_dataIriOnly; /* SHORT_NAMED_ENUMERATED_VALUE */
+const dataIriOnly = InterceptionType_dataIriOnly satisfies InterceptionType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary InterceptionType_voiceAndDataIriCc
@@ -153,7 +153,7 @@ const dataIriOnly: InterceptionType = InterceptionType_dataIriOnly; /* SHORT_NAM
  * @type {number}
  */
 export
-const InterceptionType_voiceAndDataIriCc: InterceptionType = 4; /* LONG_NAMED_ENUMERATED_VALUE */
+const InterceptionType_voiceAndDataIriCc = _enum_for_InterceptionType.voiceAndDataIriCc satisfies InterceptionType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary voiceAndDataIriCc
@@ -165,7 +165,7 @@ const InterceptionType_voiceAndDataIriCc: InterceptionType = 4; /* LONG_NAMED_EN
  * @type {number}
  */
 export
-const voiceAndDataIriCc: InterceptionType = InterceptionType_voiceAndDataIriCc; /* SHORT_NAMED_ENUMERATED_VALUE */
+const voiceAndDataIriCc = InterceptionType_voiceAndDataIriCc satisfies InterceptionType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary InterceptionType_voiceAndDataIriOnly
@@ -178,7 +178,7 @@ const voiceAndDataIriCc: InterceptionType = InterceptionType_voiceAndDataIriCc; 
  * @type {number}
  */
 export
-const InterceptionType_voiceAndDataIriOnly: InterceptionType = 5; /* LONG_NAMED_ENUMERATED_VALUE */
+const InterceptionType_voiceAndDataIriOnly = _enum_for_InterceptionType.voiceAndDataIriOnly satisfies InterceptionType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary voiceAndDataIriOnly
@@ -190,7 +190,7 @@ const InterceptionType_voiceAndDataIriOnly: InterceptionType = 5; /* LONG_NAMED_
  * @type {number}
  */
 export
-const voiceAndDataIriOnly: InterceptionType = InterceptionType_voiceAndDataIriOnly; /* SHORT_NAMED_ENUMERATED_VALUE */
+const voiceAndDataIriOnly = InterceptionType_voiceAndDataIriOnly satisfies InterceptionType; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_InterceptionType: $.ASN1Decoder<InterceptionType> = $._decodeEnumerated;
 export const _encode_InterceptionType: $.ASN1Encoder<InterceptionType> = $._encodeEnumerated;
 

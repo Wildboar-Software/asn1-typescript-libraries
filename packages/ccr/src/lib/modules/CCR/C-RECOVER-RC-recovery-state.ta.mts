@@ -54,7 +54,7 @@ export type C_RECOVER_RC_recovery_state =
  * @constant
  * @type {number}
  */
-export const C_RECOVER_RC_recovery_state_commit: C_RECOVER_RC_recovery_state = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+export const C_RECOVER_RC_recovery_state_commit = _enum_for_C_RECOVER_RC_recovery_state.commit satisfies C_RECOVER_RC_recovery_state; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -62,7 +62,7 @@ export const C_RECOVER_RC_recovery_state_commit: C_RECOVER_RC_recovery_state = 0
  * @constant
  * @type {number}
  */
-export const commit: C_RECOVER_RC_recovery_state = C_RECOVER_RC_recovery_state_commit; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const commit = C_RECOVER_RC_recovery_state_commit satisfies C_RECOVER_RC_recovery_state; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -71,7 +71,7 @@ export const commit: C_RECOVER_RC_recovery_state = C_RECOVER_RC_recovery_state_c
  * @constant
  * @type {number}
  */
-export const C_RECOVER_RC_recovery_state_ready: C_RECOVER_RC_recovery_state = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+export const C_RECOVER_RC_recovery_state_ready = _enum_for_C_RECOVER_RC_recovery_state.ready satisfies C_RECOVER_RC_recovery_state; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -79,7 +79,7 @@ export const C_RECOVER_RC_recovery_state_ready: C_RECOVER_RC_recovery_state = 1;
  * @constant
  * @type {number}
  */
-export const ready: C_RECOVER_RC_recovery_state = C_RECOVER_RC_recovery_state_ready; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const ready = C_RECOVER_RC_recovery_state_ready satisfies C_RECOVER_RC_recovery_state; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -88,7 +88,7 @@ export const ready: C_RECOVER_RC_recovery_state = C_RECOVER_RC_recovery_state_re
  * @constant
  * @type {number}
  */
-export const C_RECOVER_RC_recovery_state_done: C_RECOVER_RC_recovery_state = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+export const C_RECOVER_RC_recovery_state_done = _enum_for_C_RECOVER_RC_recovery_state.done satisfies C_RECOVER_RC_recovery_state; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -96,7 +96,7 @@ export const C_RECOVER_RC_recovery_state_done: C_RECOVER_RC_recovery_state = 2; 
  * @constant
  * @type {number}
  */
-export const done: C_RECOVER_RC_recovery_state = C_RECOVER_RC_recovery_state_done; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const done = C_RECOVER_RC_recovery_state_done satisfies C_RECOVER_RC_recovery_state; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -105,7 +105,7 @@ export const done: C_RECOVER_RC_recovery_state = C_RECOVER_RC_recovery_state_don
  * @constant
  * @type {number}
  */
-export const C_RECOVER_RC_recovery_state_unknown: C_RECOVER_RC_recovery_state = 3; /* LONG_NAMED_ENUMERATED_VALUE */
+export const C_RECOVER_RC_recovery_state_unknown = _enum_for_C_RECOVER_RC_recovery_state.unknown satisfies C_RECOVER_RC_recovery_state; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -113,7 +113,7 @@ export const C_RECOVER_RC_recovery_state_unknown: C_RECOVER_RC_recovery_state = 
  * @constant
  * @type {number}
  */
-export const unknown: C_RECOVER_RC_recovery_state = C_RECOVER_RC_recovery_state_unknown; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const unknown = C_RECOVER_RC_recovery_state_unknown satisfies C_RECOVER_RC_recovery_state; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -122,7 +122,7 @@ export const unknown: C_RECOVER_RC_recovery_state = C_RECOVER_RC_recovery_state_
  * @constant
  * @type {number}
  */
-export const C_RECOVER_RC_recovery_state_retry_later: C_RECOVER_RC_recovery_state = 5; /* LONG_NAMED_ENUMERATED_VALUE */
+export const C_RECOVER_RC_recovery_state_retry_later = _enum_for_C_RECOVER_RC_recovery_state.retry_later satisfies C_RECOVER_RC_recovery_state; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -130,7 +130,7 @@ export const C_RECOVER_RC_recovery_state_retry_later: C_RECOVER_RC_recovery_stat
  * @constant
  * @type {number}
  */
-export const retry_later: C_RECOVER_RC_recovery_state = C_RECOVER_RC_recovery_state_retry_later; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const retry_later = C_RECOVER_RC_recovery_state_retry_later satisfies C_RECOVER_RC_recovery_state; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 

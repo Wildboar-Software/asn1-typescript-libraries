@@ -34,7 +34,7 @@ type LoadCRLResponseError = INTEGER;
  * @type {number}
  */
 export
-const LoadCRLResponseError_invalidSignature: LoadCRLResponseError = 1; /* LONG_NAMED_INTEGER_VALUE */
+const LoadCRLResponseError_invalidSignature = 1 satisfies LoadCRLResponseError; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary LoadCRLResponseError_invalidSignature
@@ -47,7 +47,7 @@ const LoadCRLResponseError_invalidSignature: LoadCRLResponseError = 1; /* LONG_N
  * @type {number}
  */
 export
-const invalidSignature: LoadCRLResponseError = LoadCRLResponseError_invalidSignature; /* SHORT_NAMED_INTEGER_VALUE */
+const invalidSignature = LoadCRLResponseError_invalidSignature satisfies LoadCRLResponseError; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary LoadCRLResponseError_invalidCRLFormat
@@ -60,7 +60,7 @@ const invalidSignature: LoadCRLResponseError = LoadCRLResponseError_invalidSigna
  * @type {number}
  */
 export
-const LoadCRLResponseError_invalidCRLFormat: LoadCRLResponseError = 2; /* LONG_NAMED_INTEGER_VALUE */
+const LoadCRLResponseError_invalidCRLFormat = 2 satisfies LoadCRLResponseError; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary LoadCRLResponseError_invalidCRLFormat
@@ -73,7 +73,7 @@ const LoadCRLResponseError_invalidCRLFormat: LoadCRLResponseError = 2; /* LONG_N
  * @type {number}
  */
 export
-const invalidCRLFormat: LoadCRLResponseError = LoadCRLResponseError_invalidCRLFormat; /* SHORT_NAMED_INTEGER_VALUE */
+const invalidCRLFormat = LoadCRLResponseError_invalidCRLFormat satisfies LoadCRLResponseError; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary LoadCRLResponseError_notEnoughMemorySpace
@@ -86,7 +86,7 @@ const invalidCRLFormat: LoadCRLResponseError = LoadCRLResponseError_invalidCRLFo
  * @type {number}
  */
 export
-const LoadCRLResponseError_notEnoughMemorySpace: LoadCRLResponseError = 3; /* LONG_NAMED_INTEGER_VALUE */
+const LoadCRLResponseError_notEnoughMemorySpace = 3 satisfies LoadCRLResponseError; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary LoadCRLResponseError_notEnoughMemorySpace
@@ -99,7 +99,7 @@ const LoadCRLResponseError_notEnoughMemorySpace: LoadCRLResponseError = 3; /* LO
  * @type {number}
  */
 export
-const notEnoughMemorySpace: LoadCRLResponseError = LoadCRLResponseError_notEnoughMemorySpace; /* SHORT_NAMED_INTEGER_VALUE */
+const notEnoughMemorySpace = LoadCRLResponseError_notEnoughMemorySpace satisfies LoadCRLResponseError; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary LoadCRLResponseError_verificationKeyNotFound
@@ -112,7 +112,7 @@ const notEnoughMemorySpace: LoadCRLResponseError = LoadCRLResponseError_notEnoug
  * @type {number}
  */
 export
-const LoadCRLResponseError_verificationKeyNotFound: LoadCRLResponseError = 4; /* LONG_NAMED_INTEGER_VALUE */
+const LoadCRLResponseError_verificationKeyNotFound = 4 satisfies LoadCRLResponseError; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary LoadCRLResponseError_verificationKeyNotFound
@@ -125,7 +125,7 @@ const LoadCRLResponseError_verificationKeyNotFound: LoadCRLResponseError = 4; /*
  * @type {number}
  */
 export
-const verificationKeyNotFound: LoadCRLResponseError = LoadCRLResponseError_verificationKeyNotFound; /* SHORT_NAMED_INTEGER_VALUE */
+const verificationKeyNotFound = LoadCRLResponseError_verificationKeyNotFound satisfies LoadCRLResponseError; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary LoadCRLResponseError_fresherCrlAlreadyLoaded
@@ -139,7 +139,7 @@ const verificationKeyNotFound: LoadCRLResponseError = LoadCRLResponseError_verif
  * @type {number}
  */
 export
-const LoadCRLResponseError_fresherCrlAlreadyLoaded: LoadCRLResponseError = 5; /* LONG_NAMED_INTEGER_VALUE */
+const LoadCRLResponseError_fresherCrlAlreadyLoaded = 5 satisfies LoadCRLResponseError; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary LoadCRLResponseError_fresherCrlAlreadyLoaded
@@ -153,7 +153,7 @@ const LoadCRLResponseError_fresherCrlAlreadyLoaded: LoadCRLResponseError = 5; /*
  * @type {number}
  */
 export
-const fresherCrlAlreadyLoaded: LoadCRLResponseError = LoadCRLResponseError_fresherCrlAlreadyLoaded; /* SHORT_NAMED_INTEGER_VALUE */
+const fresherCrlAlreadyLoaded = LoadCRLResponseError_fresherCrlAlreadyLoaded satisfies LoadCRLResponseError; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary LoadCRLResponseError_baseCrlMissing
@@ -166,7 +166,7 @@ const fresherCrlAlreadyLoaded: LoadCRLResponseError = LoadCRLResponseError_fresh
  * @type {number}
  */
 export
-const LoadCRLResponseError_baseCrlMissing: LoadCRLResponseError = 6; /* LONG_NAMED_INTEGER_VALUE */
+const LoadCRLResponseError_baseCrlMissing = 6 satisfies LoadCRLResponseError; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary LoadCRLResponseError_baseCrlMissing
@@ -179,7 +179,7 @@ const LoadCRLResponseError_baseCrlMissing: LoadCRLResponseError = 6; /* LONG_NAM
  * @type {number}
  */
 export
-const baseCrlMissing: LoadCRLResponseError = LoadCRLResponseError_baseCrlMissing; /* SHORT_NAMED_INTEGER_VALUE */
+const baseCrlMissing = LoadCRLResponseError_baseCrlMissing satisfies LoadCRLResponseError; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary LoadCRLResponseError_undefinedError
@@ -192,7 +192,7 @@ const baseCrlMissing: LoadCRLResponseError = LoadCRLResponseError_baseCrlMissing
  * @type {number}
  */
 export
-const LoadCRLResponseError_undefinedError: LoadCRLResponseError = 127; /* LONG_NAMED_INTEGER_VALUE */
+const LoadCRLResponseError_undefinedError = 127 satisfies LoadCRLResponseError; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary LoadCRLResponseError_undefinedError
@@ -205,7 +205,7 @@ const LoadCRLResponseError_undefinedError: LoadCRLResponseError = 127; /* LONG_N
  * @type {number}
  */
 export
-const undefinedError: LoadCRLResponseError = LoadCRLResponseError_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
+const undefinedError = LoadCRLResponseError_undefinedError satisfies LoadCRLResponseError; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_LoadCRLResponseError = $._decodeInteger;
 export const _encode_LoadCRLResponseError = $._encodeInteger;
 

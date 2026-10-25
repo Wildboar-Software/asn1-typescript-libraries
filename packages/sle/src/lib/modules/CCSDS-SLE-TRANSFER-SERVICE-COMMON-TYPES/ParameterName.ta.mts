@@ -97,7 +97,7 @@ type ParameterName = INTEGER;
  * @type {number}
  */
 export
-const ParameterName_acquisitionSequenceLength: ParameterName = 201; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterName_acquisitionSequenceLength = 201 satisfies ParameterName; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterName_acquisitionSequenceLength
@@ -109,7 +109,7 @@ const ParameterName_acquisitionSequenceLength: ParameterName = 201; /* LONG_NAME
  * @type {number}
  */
 export
-const acquisitionSequenceLength: ParameterName = ParameterName_acquisitionSequenceLength; /* SHORT_NAMED_INTEGER_VALUE */
+const acquisitionSequenceLength = ParameterName_acquisitionSequenceLength satisfies ParameterName; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterName_apidList
@@ -124,7 +124,7 @@ const acquisitionSequenceLength: ParameterName = ParameterName_acquisitionSequen
  * @type {number}
  */
 export
-const ParameterName_apidList: ParameterName = 2; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterName_apidList = 2 satisfies ParameterName; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterName_apidList
@@ -136,7 +136,7 @@ const ParameterName_apidList: ParameterName = 2; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const apidList: ParameterName = ParameterName_apidList; /* SHORT_NAMED_INTEGER_VALUE */
+const apidList = ParameterName_apidList satisfies ParameterName; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterName_bitLockRequired
@@ -151,7 +151,7 @@ const apidList: ParameterName = ParameterName_apidList; /* SHORT_NAMED_INTEGER_V
  * @type {number}
  */
 export
-const ParameterName_bitLockRequired: ParameterName = 3; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterName_bitLockRequired = 3 satisfies ParameterName; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterName_bitLockRequired
@@ -163,7 +163,7 @@ const ParameterName_bitLockRequired: ParameterName = 3; /* LONG_NAMED_INTEGER_VA
  * @type {number}
  */
 export
-const bitLockRequired: ParameterName = ParameterName_bitLockRequired; /* SHORT_NAMED_INTEGER_VALUE */
+const bitLockRequired = ParameterName_bitLockRequired satisfies ParameterName; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterName_blockingTimeoutPeriod
@@ -178,7 +178,7 @@ const bitLockRequired: ParameterName = ParameterName_bitLockRequired; /* SHORT_N
  * @type {number}
  */
 export
-const ParameterName_blockingTimeoutPeriod: ParameterName = 0; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterName_blockingTimeoutPeriod = 0 satisfies ParameterName; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterName_blockingTimeoutPeriod
@@ -190,7 +190,7 @@ const ParameterName_blockingTimeoutPeriod: ParameterName = 0; /* LONG_NAMED_INTE
  * @type {number}
  */
 export
-const blockingTimeoutPeriod: ParameterName = ParameterName_blockingTimeoutPeriod; /* SHORT_NAMED_INTEGER_VALUE */
+const blockingTimeoutPeriod = ParameterName_blockingTimeoutPeriod satisfies ParameterName; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterName_blockingUsage
@@ -205,7 +205,7 @@ const blockingTimeoutPeriod: ParameterName = ParameterName_blockingTimeoutPeriod
  * @type {number}
  */
 export
-const ParameterName_blockingUsage: ParameterName = 1; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterName_blockingUsage = 1 satisfies ParameterName; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterName_blockingUsage
@@ -217,7 +217,7 @@ const ParameterName_blockingUsage: ParameterName = 1; /* LONG_NAMED_INTEGER_VALU
  * @type {number}
  */
 export
-const blockingUsage: ParameterName = ParameterName_blockingUsage; /* SHORT_NAMED_INTEGER_VALUE */
+const blockingUsage = ParameterName_blockingUsage satisfies ParameterName; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterName_bufferSize
@@ -232,7 +232,7 @@ const blockingUsage: ParameterName = ParameterName_blockingUsage; /* SHORT_NAMED
  * @type {number}
  */
 export
-const ParameterName_bufferSize: ParameterName = 4; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterName_bufferSize = 4 satisfies ParameterName; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterName_bufferSize
@@ -244,7 +244,7 @@ const ParameterName_bufferSize: ParameterName = 4; /* LONG_NAMED_INTEGER_VALUE *
  * @type {number}
  */
 export
-const bufferSize: ParameterName = ParameterName_bufferSize; /* SHORT_NAMED_INTEGER_VALUE */
+const bufferSize = ParameterName_bufferSize satisfies ParameterName; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterName_clcwGlobalVcId
@@ -259,7 +259,7 @@ const bufferSize: ParameterName = ParameterName_bufferSize; /* SHORT_NAMED_INTEG
  * @type {number}
  */
 export
-const ParameterName_clcwGlobalVcId: ParameterName = 202; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterName_clcwGlobalVcId = 202 satisfies ParameterName; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterName_clcwGlobalVcId
@@ -271,7 +271,7 @@ const ParameterName_clcwGlobalVcId: ParameterName = 202; /* LONG_NAMED_INTEGER_V
  * @type {number}
  */
 export
-const clcwGlobalVcId: ParameterName = ParameterName_clcwGlobalVcId; /* SHORT_NAMED_INTEGER_VALUE */
+const clcwGlobalVcId = ParameterName_clcwGlobalVcId satisfies ParameterName; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterName_clcwPhysicalChannel
@@ -286,7 +286,7 @@ const clcwGlobalVcId: ParameterName = ParameterName_clcwGlobalVcId; /* SHORT_NAM
  * @type {number}
  */
 export
-const ParameterName_clcwPhysicalChannel: ParameterName = 203; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterName_clcwPhysicalChannel = 203 satisfies ParameterName; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterName_clcwPhysicalChannel
@@ -298,7 +298,7 @@ const ParameterName_clcwPhysicalChannel: ParameterName = 203; /* LONG_NAMED_INTE
  * @type {number}
  */
 export
-const clcwPhysicalChannel: ParameterName = ParameterName_clcwPhysicalChannel; /* SHORT_NAMED_INTEGER_VALUE */
+const clcwPhysicalChannel = ParameterName_clcwPhysicalChannel satisfies ParameterName; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterName_copCntrFramesRepetition
@@ -313,7 +313,7 @@ const clcwPhysicalChannel: ParameterName = ParameterName_clcwPhysicalChannel; /*
  * @type {number}
  */
 export
-const ParameterName_copCntrFramesRepetition: ParameterName = 300; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterName_copCntrFramesRepetition = 300 satisfies ParameterName; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterName_copCntrFramesRepetition
@@ -325,7 +325,7 @@ const ParameterName_copCntrFramesRepetition: ParameterName = 300; /* LONG_NAMED_
  * @type {number}
  */
 export
-const copCntrFramesRepetition: ParameterName = ParameterName_copCntrFramesRepetition; /* SHORT_NAMED_INTEGER_VALUE */
+const copCntrFramesRepetition = ParameterName_copCntrFramesRepetition satisfies ParameterName; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterName_deliveryMode
@@ -339,7 +339,7 @@ const copCntrFramesRepetition: ParameterName = ParameterName_copCntrFramesRepeti
  * @type {number}
  */
 export
-const ParameterName_deliveryMode: ParameterName = 6; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterName_deliveryMode = 6 satisfies ParameterName; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterName_deliveryMode
@@ -351,7 +351,7 @@ const ParameterName_deliveryMode: ParameterName = 6; /* LONG_NAMED_INTEGER_VALUE
  * @type {number}
  */
 export
-const deliveryMode: ParameterName = ParameterName_deliveryMode; /* SHORT_NAMED_INTEGER_VALUE */
+const deliveryMode = ParameterName_deliveryMode satisfies ParameterName; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterName_directiveInvocation
@@ -366,7 +366,7 @@ const deliveryMode: ParameterName = ParameterName_deliveryMode; /* SHORT_NAMED_I
  * @type {number}
  */
 export
-const ParameterName_directiveInvocation: ParameterName = 7; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterName_directiveInvocation = 7 satisfies ParameterName; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterName_directiveInvocation
@@ -378,7 +378,7 @@ const ParameterName_directiveInvocation: ParameterName = 7; /* LONG_NAMED_INTEGE
  * @type {number}
  */
 export
-const directiveInvocation: ParameterName = ParameterName_directiveInvocation; /* SHORT_NAMED_INTEGER_VALUE */
+const directiveInvocation = ParameterName_directiveInvocation satisfies ParameterName; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterName_directiveInvocationOnline
@@ -393,7 +393,7 @@ const directiveInvocation: ParameterName = ParameterName_directiveInvocation; /*
  * @type {number}
  */
 export
-const ParameterName_directiveInvocationOnline: ParameterName = 108; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterName_directiveInvocationOnline = 108 satisfies ParameterName; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterName_directiveInvocationOnline
@@ -405,7 +405,7 @@ const ParameterName_directiveInvocationOnline: ParameterName = 108; /* LONG_NAME
  * @type {number}
  */
 export
-const directiveInvocationOnline: ParameterName = ParameterName_directiveInvocationOnline; /* SHORT_NAMED_INTEGER_VALUE */
+const directiveInvocationOnline = ParameterName_directiveInvocationOnline satisfies ParameterName; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterName_expectedDirectiveIdentification
@@ -420,7 +420,7 @@ const directiveInvocationOnline: ParameterName = ParameterName_directiveInvocati
  * @type {number}
  */
 export
-const ParameterName_expectedDirectiveIdentification: ParameterName = 8; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterName_expectedDirectiveIdentification = 8 satisfies ParameterName; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterName_expectedDirectiveIdentification
@@ -432,7 +432,7 @@ const ParameterName_expectedDirectiveIdentification: ParameterName = 8; /* LONG_
  * @type {number}
  */
 export
-const expectedDirectiveIdentification: ParameterName = ParameterName_expectedDirectiveIdentification; /* SHORT_NAMED_INTEGER_VALUE */
+const expectedDirectiveIdentification = ParameterName_expectedDirectiveIdentification satisfies ParameterName; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterName_expectedEventInvocationIdentification
@@ -447,7 +447,7 @@ const expectedDirectiveIdentification: ParameterName = ParameterName_expectedDir
  * @type {number}
  */
 export
-const ParameterName_expectedEventInvocationIdentification: ParameterName = 9; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterName_expectedEventInvocationIdentification = 9 satisfies ParameterName; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterName_expectedEventInvocationIdentification
@@ -459,7 +459,7 @@ const ParameterName_expectedEventInvocationIdentification: ParameterName = 9; /*
  * @type {number}
  */
 export
-const expectedEventInvocationIdentification: ParameterName = ParameterName_expectedEventInvocationIdentification; /* SHORT_NAMED_INTEGER_VALUE */
+const expectedEventInvocationIdentification = ParameterName_expectedEventInvocationIdentification satisfies ParameterName; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterName_expectedSlduIdentification
@@ -474,7 +474,7 @@ const expectedEventInvocationIdentification: ParameterName = ParameterName_expec
  * @type {number}
  */
 export
-const ParameterName_expectedSlduIdentification: ParameterName = 10; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterName_expectedSlduIdentification = 10 satisfies ParameterName; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterName_expectedSlduIdentification
@@ -486,7 +486,7 @@ const ParameterName_expectedSlduIdentification: ParameterName = 10; /* LONG_NAME
  * @type {number}
  */
 export
-const expectedSlduIdentification: ParameterName = ParameterName_expectedSlduIdentification; /* SHORT_NAMED_INTEGER_VALUE */
+const expectedSlduIdentification = ParameterName_expectedSlduIdentification satisfies ParameterName; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterName_fopSlidingWindow
@@ -501,7 +501,7 @@ const expectedSlduIdentification: ParameterName = ParameterName_expectedSlduIden
  * @type {number}
  */
 export
-const ParameterName_fopSlidingWindow: ParameterName = 11; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterName_fopSlidingWindow = 11 satisfies ParameterName; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterName_fopSlidingWindow
@@ -513,7 +513,7 @@ const ParameterName_fopSlidingWindow: ParameterName = 11; /* LONG_NAMED_INTEGER_
  * @type {number}
  */
 export
-const fopSlidingWindow: ParameterName = ParameterName_fopSlidingWindow; /* SHORT_NAMED_INTEGER_VALUE */
+const fopSlidingWindow = ParameterName_fopSlidingWindow satisfies ParameterName; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterName_fopState
@@ -528,7 +528,7 @@ const fopSlidingWindow: ParameterName = ParameterName_fopSlidingWindow; /* SHORT
  * @type {number}
  */
 export
-const ParameterName_fopState: ParameterName = 12; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterName_fopState = 12 satisfies ParameterName; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterName_fopState
@@ -540,7 +540,7 @@ const ParameterName_fopState: ParameterName = 12; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const fopState: ParameterName = ParameterName_fopState; /* SHORT_NAMED_INTEGER_VALUE */
+const fopState = ParameterName_fopState satisfies ParameterName; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterName_latencyLimit
@@ -556,7 +556,7 @@ const fopState: ParameterName = ParameterName_fopState; /* SHORT_NAMED_INTEGER_V
  * @type {number}
  */
 export
-const ParameterName_latencyLimit: ParameterName = 15; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterName_latencyLimit = 15 satisfies ParameterName; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterName_latencyLimit
@@ -568,7 +568,7 @@ const ParameterName_latencyLimit: ParameterName = 15; /* LONG_NAMED_INTEGER_VALU
  * @type {number}
  */
 export
-const latencyLimit: ParameterName = ParameterName_latencyLimit; /* SHORT_NAMED_INTEGER_VALUE */
+const latencyLimit = ParameterName_latencyLimit satisfies ParameterName; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterName_mapList
@@ -583,7 +583,7 @@ const latencyLimit: ParameterName = ParameterName_latencyLimit; /* SHORT_NAMED_I
  * @type {number}
  */
 export
-const ParameterName_mapList: ParameterName = 16; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterName_mapList = 16 satisfies ParameterName; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterName_mapList
@@ -595,7 +595,7 @@ const ParameterName_mapList: ParameterName = 16; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const mapList: ParameterName = ParameterName_mapList; /* SHORT_NAMED_INTEGER_VALUE */
+const mapList = ParameterName_mapList satisfies ParameterName; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterName_mapMuxControl
@@ -610,7 +610,7 @@ const mapList: ParameterName = ParameterName_mapList; /* SHORT_NAMED_INTEGER_VAL
  * @type {number}
  */
 export
-const ParameterName_mapMuxControl: ParameterName = 17; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterName_mapMuxControl = 17 satisfies ParameterName; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterName_mapMuxControl
@@ -622,7 +622,7 @@ const ParameterName_mapMuxControl: ParameterName = 17; /* LONG_NAMED_INTEGER_VAL
  * @type {number}
  */
 export
-const mapMuxControl: ParameterName = ParameterName_mapMuxControl; /* SHORT_NAMED_INTEGER_VALUE */
+const mapMuxControl = ParameterName_mapMuxControl satisfies ParameterName; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterName_mapMuxScheme
@@ -637,7 +637,7 @@ const mapMuxControl: ParameterName = ParameterName_mapMuxControl; /* SHORT_NAMED
  * @type {number}
  */
 export
-const ParameterName_mapMuxScheme: ParameterName = 18; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterName_mapMuxScheme = 18 satisfies ParameterName; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterName_mapMuxScheme
@@ -649,7 +649,7 @@ const ParameterName_mapMuxScheme: ParameterName = 18; /* LONG_NAMED_INTEGER_VALU
  * @type {number}
  */
 export
-const mapMuxScheme: ParameterName = ParameterName_mapMuxScheme; /* SHORT_NAMED_INTEGER_VALUE */
+const mapMuxScheme = ParameterName_mapMuxScheme satisfies ParameterName; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterName_maximumFrameLength
@@ -664,7 +664,7 @@ const mapMuxScheme: ParameterName = ParameterName_mapMuxScheme; /* SHORT_NAMED_I
  * @type {number}
  */
 export
-const ParameterName_maximumFrameLength: ParameterName = 19; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterName_maximumFrameLength = 19 satisfies ParameterName; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterName_maximumFrameLength
@@ -676,7 +676,7 @@ const ParameterName_maximumFrameLength: ParameterName = 19; /* LONG_NAMED_INTEGE
  * @type {number}
  */
 export
-const maximumFrameLength: ParameterName = ParameterName_maximumFrameLength; /* SHORT_NAMED_INTEGER_VALUE */
+const maximumFrameLength = ParameterName_maximumFrameLength satisfies ParameterName; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterName_maximumPacketLength
@@ -691,7 +691,7 @@ const maximumFrameLength: ParameterName = ParameterName_maximumFrameLength; /* S
  * @type {number}
  */
 export
-const ParameterName_maximumPacketLength: ParameterName = 20; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterName_maximumPacketLength = 20 satisfies ParameterName; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterName_maximumPacketLength
@@ -703,7 +703,7 @@ const ParameterName_maximumPacketLength: ParameterName = 20; /* LONG_NAMED_INTEG
  * @type {number}
  */
 export
-const maximumPacketLength: ParameterName = ParameterName_maximumPacketLength; /* SHORT_NAMED_INTEGER_VALUE */
+const maximumPacketLength = ParameterName_maximumPacketLength satisfies ParameterName; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterName_maximumSlduLength
@@ -718,7 +718,7 @@ const maximumPacketLength: ParameterName = ParameterName_maximumPacketLength; /*
  * @type {number}
  */
 export
-const ParameterName_maximumSlduLength: ParameterName = 21; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterName_maximumSlduLength = 21 satisfies ParameterName; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterName_maximumSlduLength
@@ -730,7 +730,7 @@ const ParameterName_maximumSlduLength: ParameterName = 21; /* LONG_NAMED_INTEGER
  * @type {number}
  */
 export
-const maximumSlduLength: ParameterName = ParameterName_maximumSlduLength; /* SHORT_NAMED_INTEGER_VALUE */
+const maximumSlduLength = ParameterName_maximumSlduLength satisfies ParameterName; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterName_minimumDelayTime
@@ -745,7 +745,7 @@ const maximumSlduLength: ParameterName = ParameterName_maximumSlduLength; /* SHO
  * @type {number}
  */
 export
-const ParameterName_minimumDelayTime: ParameterName = 204; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterName_minimumDelayTime = 204 satisfies ParameterName; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterName_minimumDelayTime
@@ -757,7 +757,7 @@ const ParameterName_minimumDelayTime: ParameterName = 204; /* LONG_NAMED_INTEGER
  * @type {number}
  */
 export
-const minimumDelayTime: ParameterName = ParameterName_minimumDelayTime; /* SHORT_NAMED_INTEGER_VALUE */
+const minimumDelayTime = ParameterName_minimumDelayTime satisfies ParameterName; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterName_minReportingCycle
@@ -772,7 +772,7 @@ const minimumDelayTime: ParameterName = ParameterName_minimumDelayTime; /* SHORT
  * @type {number}
  */
 export
-const ParameterName_minReportingCycle: ParameterName = 301; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterName_minReportingCycle = 301 satisfies ParameterName; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterName_minReportingCycle
@@ -784,7 +784,7 @@ const ParameterName_minReportingCycle: ParameterName = 301; /* LONG_NAMED_INTEGE
  * @type {number}
  */
 export
-const minReportingCycle: ParameterName = ParameterName_minReportingCycle; /* SHORT_NAMED_INTEGER_VALUE */
+const minReportingCycle = ParameterName_minReportingCycle satisfies ParameterName; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterName_modulationFrequency
@@ -799,7 +799,7 @@ const minReportingCycle: ParameterName = ParameterName_minReportingCycle; /* SHO
  * @type {number}
  */
 export
-const ParameterName_modulationFrequency: ParameterName = 22; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterName_modulationFrequency = 22 satisfies ParameterName; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterName_modulationFrequency
@@ -811,7 +811,7 @@ const ParameterName_modulationFrequency: ParameterName = 22; /* LONG_NAMED_INTEG
  * @type {number}
  */
 export
-const modulationFrequency: ParameterName = ParameterName_modulationFrequency; /* SHORT_NAMED_INTEGER_VALUE */
+const modulationFrequency = ParameterName_modulationFrequency satisfies ParameterName; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterName_modulationIndex
@@ -826,7 +826,7 @@ const modulationFrequency: ParameterName = ParameterName_modulationFrequency; /*
  * @type {number}
  */
 export
-const ParameterName_modulationIndex: ParameterName = 23; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterName_modulationIndex = 23 satisfies ParameterName; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterName_modulationIndex
@@ -838,7 +838,7 @@ const ParameterName_modulationIndex: ParameterName = 23; /* LONG_NAMED_INTEGER_V
  * @type {number}
  */
 export
-const modulationIndex: ParameterName = ParameterName_modulationIndex; /* SHORT_NAMED_INTEGER_VALUE */
+const modulationIndex = ParameterName_modulationIndex satisfies ParameterName; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterName_notificationMode
@@ -853,7 +853,7 @@ const modulationIndex: ParameterName = ParameterName_modulationIndex; /* SHORT_N
  * @type {number}
  */
 export
-const ParameterName_notificationMode: ParameterName = 205; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterName_notificationMode = 205 satisfies ParameterName; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterName_notificationMode
@@ -865,7 +865,7 @@ const ParameterName_notificationMode: ParameterName = 205; /* LONG_NAMED_INTEGER
  * @type {number}
  */
 export
-const notificationMode: ParameterName = ParameterName_notificationMode; /* SHORT_NAMED_INTEGER_VALUE */
+const notificationMode = ParameterName_notificationMode satisfies ParameterName; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterName_permittedControlWordTypeSet
@@ -880,7 +880,7 @@ const notificationMode: ParameterName = ParameterName_notificationMode; /* SHORT
  * @type {number}
  */
 export
-const ParameterName_permittedControlWordTypeSet: ParameterName = 101; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterName_permittedControlWordTypeSet = 101 satisfies ParameterName; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterName_permittedControlWordTypeSet
@@ -892,7 +892,7 @@ const ParameterName_permittedControlWordTypeSet: ParameterName = 101; /* LONG_NA
  * @type {number}
  */
 export
-const permittedControlWordTypeSet: ParameterName = ParameterName_permittedControlWordTypeSet; /* SHORT_NAMED_INTEGER_VALUE */
+const permittedControlWordTypeSet = ParameterName_permittedControlWordTypeSet satisfies ParameterName; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterName_permittedFrameQuality
@@ -906,7 +906,7 @@ const permittedControlWordTypeSet: ParameterName = ParameterName_permittedContro
  * @type {number}
  */
 export
-const ParameterName_permittedFrameQuality: ParameterName = 302; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterName_permittedFrameQuality = 302 satisfies ParameterName; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterName_permittedFrameQuality
@@ -917,7 +917,7 @@ const ParameterName_permittedFrameQuality: ParameterName = 302; /* LONG_NAMED_IN
  * @type {number}
  */
 export
-const permittedFrameQuality: ParameterName = ParameterName_permittedFrameQuality; /* SHORT_NAMED_INTEGER_VALUE */
+const permittedFrameQuality = ParameterName_permittedFrameQuality satisfies ParameterName; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterName_permittedGvcidSet
@@ -932,7 +932,7 @@ const permittedFrameQuality: ParameterName = ParameterName_permittedFrameQuality
  * @type {number}
  */
 export
-const ParameterName_permittedGvcidSet: ParameterName = 24; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterName_permittedGvcidSet = 24 satisfies ParameterName; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterName_permittedGvcidSet
@@ -944,7 +944,7 @@ const ParameterName_permittedGvcidSet: ParameterName = 24; /* LONG_NAMED_INTEGER
  * @type {number}
  */
 export
-const permittedGvcidSet: ParameterName = ParameterName_permittedGvcidSet; /* SHORT_NAMED_INTEGER_VALUE */
+const permittedGvcidSet = ParameterName_permittedGvcidSet satisfies ParameterName; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterName_permittedTcVcidSet
@@ -959,7 +959,7 @@ const permittedGvcidSet: ParameterName = ParameterName_permittedGvcidSet; /* SHO
  * @type {number}
  */
 export
-const ParameterName_permittedTcVcidSet: ParameterName = 102; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterName_permittedTcVcidSet = 102 satisfies ParameterName; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterName_permittedTcVcidSet
@@ -971,7 +971,7 @@ const ParameterName_permittedTcVcidSet: ParameterName = 102; /* LONG_NAMED_INTEG
  * @type {number}
  */
 export
-const permittedTcVcidSet: ParameterName = ParameterName_permittedTcVcidSet; /* SHORT_NAMED_INTEGER_VALUE */
+const permittedTcVcidSet = ParameterName_permittedTcVcidSet satisfies ParameterName; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterName_permittedTransmissionMode
@@ -986,7 +986,7 @@ const permittedTcVcidSet: ParameterName = ParameterName_permittedTcVcidSet; /* S
  * @type {number}
  */
 export
-const ParameterName_permittedTransmissionMode: ParameterName = 107; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterName_permittedTransmissionMode = 107 satisfies ParameterName; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterName_permittedTransmissionMode
@@ -998,7 +998,7 @@ const ParameterName_permittedTransmissionMode: ParameterName = 107; /* LONG_NAME
  * @type {number}
  */
 export
-const permittedTransmissionMode: ParameterName = ParameterName_permittedTransmissionMode; /* SHORT_NAMED_INTEGER_VALUE */
+const permittedTransmissionMode = ParameterName_permittedTransmissionMode satisfies ParameterName; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterName_permittedUpdateModeSet
@@ -1013,7 +1013,7 @@ const permittedTransmissionMode: ParameterName = ParameterName_permittedTransmis
  * @type {number}
  */
 export
-const ParameterName_permittedUpdateModeSet: ParameterName = 103; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterName_permittedUpdateModeSet = 103 satisfies ParameterName; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterName_permittedUpdateModeSet
@@ -1025,7 +1025,7 @@ const ParameterName_permittedUpdateModeSet: ParameterName = 103; /* LONG_NAMED_I
  * @type {number}
  */
 export
-const permittedUpdateModeSet: ParameterName = ParameterName_permittedUpdateModeSet; /* SHORT_NAMED_INTEGER_VALUE */
+const permittedUpdateModeSet = ParameterName_permittedUpdateModeSet satisfies ParameterName; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterName_plop1IdleSequenceLength
@@ -1040,7 +1040,7 @@ const permittedUpdateModeSet: ParameterName = ParameterName_permittedUpdateModeS
  * @type {number}
  */
 export
-const ParameterName_plop1IdleSequenceLength: ParameterName = 206; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterName_plop1IdleSequenceLength = 206 satisfies ParameterName; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterName_plop1IdleSequenceLength
@@ -1052,7 +1052,7 @@ const ParameterName_plop1IdleSequenceLength: ParameterName = 206; /* LONG_NAMED_
  * @type {number}
  */
 export
-const plop1IdleSequenceLength: ParameterName = ParameterName_plop1IdleSequenceLength; /* SHORT_NAMED_INTEGER_VALUE */
+const plop1IdleSequenceLength = ParameterName_plop1IdleSequenceLength satisfies ParameterName; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterName_plopInEffect
@@ -1067,7 +1067,7 @@ const plop1IdleSequenceLength: ParameterName = ParameterName_plop1IdleSequenceLe
  * @type {number}
  */
 export
-const ParameterName_plopInEffect: ParameterName = 25; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterName_plopInEffect = 25 satisfies ParameterName; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterName_plopInEffect
@@ -1079,7 +1079,7 @@ const ParameterName_plopInEffect: ParameterName = 25; /* LONG_NAMED_INTEGER_VALU
  * @type {number}
  */
 export
-const plopInEffect: ParameterName = ParameterName_plopInEffect; /* SHORT_NAMED_INTEGER_VALUE */
+const plopInEffect = ParameterName_plopInEffect satisfies ParameterName; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterName_protocolAbortMode
@@ -1094,7 +1094,7 @@ const plopInEffect: ParameterName = ParameterName_plopInEffect; /* SHORT_NAMED_I
  * @type {number}
  */
 export
-const ParameterName_protocolAbortMode: ParameterName = 207; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterName_protocolAbortMode = 207 satisfies ParameterName; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterName_protocolAbortMode
@@ -1106,7 +1106,7 @@ const ParameterName_protocolAbortMode: ParameterName = 207; /* LONG_NAMED_INTEGE
  * @type {number}
  */
 export
-const protocolAbortMode: ParameterName = ParameterName_protocolAbortMode; /* SHORT_NAMED_INTEGER_VALUE */
+const protocolAbortMode = ParameterName_protocolAbortMode satisfies ParameterName; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterName_reportingCycle
@@ -1121,7 +1121,7 @@ const protocolAbortMode: ParameterName = ParameterName_protocolAbortMode; /* SHO
  * @type {number}
  */
 export
-const ParameterName_reportingCycle: ParameterName = 26; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterName_reportingCycle = 26 satisfies ParameterName; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterName_reportingCycle
@@ -1133,7 +1133,7 @@ const ParameterName_reportingCycle: ParameterName = 26; /* LONG_NAMED_INTEGER_VA
  * @type {number}
  */
 export
-const reportingCycle: ParameterName = ParameterName_reportingCycle; /* SHORT_NAMED_INTEGER_VALUE */
+const reportingCycle = ParameterName_reportingCycle satisfies ParameterName; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterName_requestedControlWordType
@@ -1148,7 +1148,7 @@ const reportingCycle: ParameterName = ParameterName_reportingCycle; /* SHORT_NAM
  * @type {number}
  */
 export
-const ParameterName_requestedControlWordType: ParameterName = 104; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterName_requestedControlWordType = 104 satisfies ParameterName; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterName_requestedControlWordType
@@ -1160,7 +1160,7 @@ const ParameterName_requestedControlWordType: ParameterName = 104; /* LONG_NAMED
  * @type {number}
  */
 export
-const requestedControlWordType: ParameterName = ParameterName_requestedControlWordType; /* SHORT_NAMED_INTEGER_VALUE */
+const requestedControlWordType = ParameterName_requestedControlWordType satisfies ParameterName; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterName_requestedFrameQuality
@@ -1175,7 +1175,7 @@ const requestedControlWordType: ParameterName = ParameterName_requestedControlWo
  * @type {number}
  */
 export
-const ParameterName_requestedFrameQuality: ParameterName = 27; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterName_requestedFrameQuality = 27 satisfies ParameterName; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterName_requestedFrameQuality
@@ -1187,7 +1187,7 @@ const ParameterName_requestedFrameQuality: ParameterName = 27; /* LONG_NAMED_INT
  * @type {number}
  */
 export
-const requestedFrameQuality: ParameterName = ParameterName_requestedFrameQuality; /* SHORT_NAMED_INTEGER_VALUE */
+const requestedFrameQuality = ParameterName_requestedFrameQuality satisfies ParameterName; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterName_requestedGvcid
@@ -1202,7 +1202,7 @@ const requestedFrameQuality: ParameterName = ParameterName_requestedFrameQuality
  * @type {number}
  */
 export
-const ParameterName_requestedGvcid: ParameterName = 28; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterName_requestedGvcid = 28 satisfies ParameterName; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterName_requestedGvcid
@@ -1214,7 +1214,7 @@ const ParameterName_requestedGvcid: ParameterName = 28; /* LONG_NAMED_INTEGER_VA
  * @type {number}
  */
 export
-const requestedGvcid: ParameterName = ParameterName_requestedGvcid; /* SHORT_NAMED_INTEGER_VALUE */
+const requestedGvcid = ParameterName_requestedGvcid satisfies ParameterName; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterName_requestedTcVcid
@@ -1229,7 +1229,7 @@ const requestedGvcid: ParameterName = ParameterName_requestedGvcid; /* SHORT_NAM
  * @type {number}
  */
 export
-const ParameterName_requestedTcVcid: ParameterName = 105; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterName_requestedTcVcid = 105 satisfies ParameterName; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterName_requestedTcVcid
@@ -1241,7 +1241,7 @@ const ParameterName_requestedTcVcid: ParameterName = 105; /* LONG_NAMED_INTEGER_
  * @type {number}
  */
 export
-const requestedTcVcid: ParameterName = ParameterName_requestedTcVcid; /* SHORT_NAMED_INTEGER_VALUE */
+const requestedTcVcid = ParameterName_requestedTcVcid satisfies ParameterName; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterName_requestedUpdateMode
@@ -1256,7 +1256,7 @@ const requestedTcVcid: ParameterName = ParameterName_requestedTcVcid; /* SHORT_N
  * @type {number}
  */
 export
-const ParameterName_requestedUpdateMode: ParameterName = 106; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterName_requestedUpdateMode = 106 satisfies ParameterName; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterName_requestedUpdateMode
@@ -1268,7 +1268,7 @@ const ParameterName_requestedUpdateMode: ParameterName = 106; /* LONG_NAMED_INTE
  * @type {number}
  */
 export
-const requestedUpdateMode: ParameterName = ParameterName_requestedUpdateMode; /* SHORT_NAMED_INTEGER_VALUE */
+const requestedUpdateMode = ParameterName_requestedUpdateMode satisfies ParameterName; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterName_returnTimeoutPeriod
@@ -1284,7 +1284,7 @@ const requestedUpdateMode: ParameterName = ParameterName_requestedUpdateMode; /*
  * @type {number}
  */
 export
-const ParameterName_returnTimeoutPeriod: ParameterName = 29; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterName_returnTimeoutPeriod = 29 satisfies ParameterName; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterName_returnTimeoutPeriod
@@ -1296,7 +1296,7 @@ const ParameterName_returnTimeoutPeriod: ParameterName = 29; /* LONG_NAMED_INTEG
  * @type {number}
  */
 export
-const returnTimeoutPeriod: ParameterName = ParameterName_returnTimeoutPeriod; /* SHORT_NAMED_INTEGER_VALUE */
+const returnTimeoutPeriod = ParameterName_returnTimeoutPeriod satisfies ParameterName; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterName_rfAvailable
@@ -1311,7 +1311,7 @@ const returnTimeoutPeriod: ParameterName = ParameterName_returnTimeoutPeriod; /*
  * @type {number}
  */
 export
-const ParameterName_rfAvailable: ParameterName = 30; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterName_rfAvailable = 30 satisfies ParameterName; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterName_rfAvailable
@@ -1323,7 +1323,7 @@ const ParameterName_rfAvailable: ParameterName = 30; /* LONG_NAMED_INTEGER_VALUE
  * @type {number}
  */
 export
-const rfAvailable: ParameterName = ParameterName_rfAvailable; /* SHORT_NAMED_INTEGER_VALUE */
+const rfAvailable = ParameterName_rfAvailable satisfies ParameterName; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterName_rfAvailableRequired
@@ -1338,7 +1338,7 @@ const rfAvailable: ParameterName = ParameterName_rfAvailable; /* SHORT_NAMED_INT
  * @type {number}
  */
 export
-const ParameterName_rfAvailableRequired: ParameterName = 31; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterName_rfAvailableRequired = 31 satisfies ParameterName; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterName_rfAvailableRequired
@@ -1350,7 +1350,7 @@ const ParameterName_rfAvailableRequired: ParameterName = 31; /* LONG_NAMED_INTEG
  * @type {number}
  */
 export
-const rfAvailableRequired: ParameterName = ParameterName_rfAvailableRequired; /* SHORT_NAMED_INTEGER_VALUE */
+const rfAvailableRequired = ParameterName_rfAvailableRequired satisfies ParameterName; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterName_segmentHeader
@@ -1365,7 +1365,7 @@ const rfAvailableRequired: ParameterName = ParameterName_rfAvailableRequired; /*
  * @type {number}
  */
 export
-const ParameterName_segmentHeader: ParameterName = 32; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterName_segmentHeader = 32 satisfies ParameterName; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterName_segmentHeader
@@ -1377,7 +1377,7 @@ const ParameterName_segmentHeader: ParameterName = 32; /* LONG_NAMED_INTEGER_VAL
  * @type {number}
  */
 export
-const segmentHeader: ParameterName = ParameterName_segmentHeader; /* SHORT_NAMED_INTEGER_VALUE */
+const segmentHeader = ParameterName_segmentHeader satisfies ParameterName; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterName_sequCntrFramesRepetition
@@ -1392,7 +1392,7 @@ const segmentHeader: ParameterName = ParameterName_segmentHeader; /* SHORT_NAMED
  * @type {number}
  */
 export
-const ParameterName_sequCntrFramesRepetition: ParameterName = 303; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterName_sequCntrFramesRepetition = 303 satisfies ParameterName; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterName_sequCntrFramesRepetition
@@ -1404,7 +1404,7 @@ const ParameterName_sequCntrFramesRepetition: ParameterName = 303; /* LONG_NAMED
  * @type {number}
  */
 export
-const sequCntrFramesRepetition: ParameterName = ParameterName_sequCntrFramesRepetition; /* SHORT_NAMED_INTEGER_VALUE */
+const sequCntrFramesRepetition = ParameterName_sequCntrFramesRepetition satisfies ParameterName; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterName_subcarrierToBitRateRatio
@@ -1419,7 +1419,7 @@ const sequCntrFramesRepetition: ParameterName = ParameterName_sequCntrFramesRepe
  * @type {number}
  */
 export
-const ParameterName_subcarrierToBitRateRatio: ParameterName = 34; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterName_subcarrierToBitRateRatio = 34 satisfies ParameterName; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterName_subcarrierToBitRateRatio
@@ -1431,7 +1431,7 @@ const ParameterName_subcarrierToBitRateRatio: ParameterName = 34; /* LONG_NAMED_
  * @type {number}
  */
 export
-const subcarrierToBitRateRatio: ParameterName = ParameterName_subcarrierToBitRateRatio; /* SHORT_NAMED_INTEGER_VALUE */
+const subcarrierToBitRateRatio = ParameterName_subcarrierToBitRateRatio satisfies ParameterName; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterName_throwEventOperation
@@ -1446,7 +1446,7 @@ const subcarrierToBitRateRatio: ParameterName = ParameterName_subcarrierToBitRat
  * @type {number}
  */
 export
-const ParameterName_throwEventOperation: ParameterName = 304; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterName_throwEventOperation = 304 satisfies ParameterName; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterName_throwEventOperation
@@ -1458,7 +1458,7 @@ const ParameterName_throwEventOperation: ParameterName = 304; /* LONG_NAMED_INTE
  * @type {number}
  */
 export
-const throwEventOperation: ParameterName = ParameterName_throwEventOperation; /* SHORT_NAMED_INTEGER_VALUE */
+const throwEventOperation = ParameterName_throwEventOperation satisfies ParameterName; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterName_timeoutType
@@ -1473,7 +1473,7 @@ const throwEventOperation: ParameterName = ParameterName_throwEventOperation; /*
  * @type {number}
  */
 export
-const ParameterName_timeoutType: ParameterName = 35; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterName_timeoutType = 35 satisfies ParameterName; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterName_timeoutType
@@ -1485,7 +1485,7 @@ const ParameterName_timeoutType: ParameterName = 35; /* LONG_NAMED_INTEGER_VALUE
  * @type {number}
  */
 export
-const timeoutType: ParameterName = ParameterName_timeoutType; /* SHORT_NAMED_INTEGER_VALUE */
+const timeoutType = ParameterName_timeoutType satisfies ParameterName; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterName_timerInitial
@@ -1500,7 +1500,7 @@ const timeoutType: ParameterName = ParameterName_timeoutType; /* SHORT_NAMED_INT
  * @type {number}
  */
 export
-const ParameterName_timerInitial: ParameterName = 36; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterName_timerInitial = 36 satisfies ParameterName; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterName_timerInitial
@@ -1512,7 +1512,7 @@ const ParameterName_timerInitial: ParameterName = 36; /* LONG_NAMED_INTEGER_VALU
  * @type {number}
  */
 export
-const timerInitial: ParameterName = ParameterName_timerInitial; /* SHORT_NAMED_INTEGER_VALUE */
+const timerInitial = ParameterName_timerInitial satisfies ParameterName; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterName_transmissionLimit
@@ -1527,7 +1527,7 @@ const timerInitial: ParameterName = ParameterName_timerInitial; /* SHORT_NAMED_I
  * @type {number}
  */
 export
-const ParameterName_transmissionLimit: ParameterName = 37; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterName_transmissionLimit = 37 satisfies ParameterName; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterName_transmissionLimit
@@ -1539,7 +1539,7 @@ const ParameterName_transmissionLimit: ParameterName = 37; /* LONG_NAMED_INTEGER
  * @type {number}
  */
 export
-const transmissionLimit: ParameterName = ParameterName_transmissionLimit; /* SHORT_NAMED_INTEGER_VALUE */
+const transmissionLimit = ParameterName_transmissionLimit satisfies ParameterName; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterName_transmitterFrameSequenceNumber
@@ -1554,7 +1554,7 @@ const transmissionLimit: ParameterName = ParameterName_transmissionLimit; /* SHO
  * @type {number}
  */
 export
-const ParameterName_transmitterFrameSequenceNumber: ParameterName = 38; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterName_transmitterFrameSequenceNumber = 38 satisfies ParameterName; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterName_transmitterFrameSequenceNumber
@@ -1566,7 +1566,7 @@ const ParameterName_transmitterFrameSequenceNumber: ParameterName = 38; /* LONG_
  * @type {number}
  */
 export
-const transmitterFrameSequenceNumber: ParameterName = ParameterName_transmitterFrameSequenceNumber; /* SHORT_NAMED_INTEGER_VALUE */
+const transmitterFrameSequenceNumber = ParameterName_transmitterFrameSequenceNumber satisfies ParameterName; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterName_vcMuxControl
@@ -1581,7 +1581,7 @@ const transmitterFrameSequenceNumber: ParameterName = ParameterName_transmitterF
  * @type {number}
  */
 export
-const ParameterName_vcMuxControl: ParameterName = 39; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterName_vcMuxControl = 39 satisfies ParameterName; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterName_vcMuxControl
@@ -1593,7 +1593,7 @@ const ParameterName_vcMuxControl: ParameterName = 39; /* LONG_NAMED_INTEGER_VALU
  * @type {number}
  */
 export
-const vcMuxControl: ParameterName = ParameterName_vcMuxControl; /* SHORT_NAMED_INTEGER_VALUE */
+const vcMuxControl = ParameterName_vcMuxControl satisfies ParameterName; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterName_vcMuxScheme
@@ -1608,7 +1608,7 @@ const vcMuxControl: ParameterName = ParameterName_vcMuxControl; /* SHORT_NAMED_I
  * @type {number}
  */
 export
-const ParameterName_vcMuxScheme: ParameterName = 40; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterName_vcMuxScheme = 40 satisfies ParameterName; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterName_vcMuxScheme
@@ -1620,7 +1620,7 @@ const ParameterName_vcMuxScheme: ParameterName = 40; /* LONG_NAMED_INTEGER_VALUE
  * @type {number}
  */
 export
-const vcMuxScheme: ParameterName = ParameterName_vcMuxScheme; /* SHORT_NAMED_INTEGER_VALUE */
+const vcMuxScheme = ParameterName_vcMuxScheme satisfies ParameterName; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterName_virtualChannel
@@ -1635,7 +1635,7 @@ const vcMuxScheme: ParameterName = ParameterName_vcMuxScheme; /* SHORT_NAMED_INT
  * @type {number}
  */
 export
-const ParameterName_virtualChannel: ParameterName = 41; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterName_virtualChannel = 41 satisfies ParameterName; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterName_virtualChannel
@@ -1647,7 +1647,7 @@ const ParameterName_virtualChannel: ParameterName = 41; /* LONG_NAMED_INTEGER_VA
  * @type {number}
  */
 export
-const virtualChannel: ParameterName = ParameterName_virtualChannel; /* SHORT_NAMED_INTEGER_VALUE */
+const virtualChannel = ParameterName_virtualChannel satisfies ParameterName; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_ParameterName: $.ASN1Decoder<ParameterName> = $._decodeInteger;
 export const _encode_ParameterName: $.ASN1Encoder<ParameterName> = $._encodeInteger;
 

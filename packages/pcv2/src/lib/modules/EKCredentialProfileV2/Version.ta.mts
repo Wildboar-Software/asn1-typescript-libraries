@@ -41,7 +41,7 @@ type Version = INTEGER;
  * @type {number}
  */
 export
-const Version_v1: Version = 0; /* LONG_NAMED_INTEGER_VALUE */
+const Version_v1 = 0 satisfies Version; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Version_v1
@@ -57,7 +57,7 @@ const Version_v1: Version = 0; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const v1: Version = Version_v1; /* SHORT_NAMED_INTEGER_VALUE */
+const v1 = Version_v1 satisfies Version; /* SHORT_NAMED_INTEGER_VALUE */
 
 export
 const _decode_Version: $.ASN1Decoder<Version> = $._decodeInteger;

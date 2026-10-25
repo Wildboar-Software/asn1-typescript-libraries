@@ -37,7 +37,7 @@ type ChangeDeniedReason = _enum_for_ChangeDeniedReason | ENUMERATED;
  * @type {number}
  */
 export
-const ChangeDeniedReason_waitingVerificationOfClosure: ChangeDeniedReason = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const ChangeDeniedReason_waitingVerificationOfClosure = _enum_for_ChangeDeniedReason.waitingVerificationOfClosure satisfies ChangeDeniedReason; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary waitingVerificationOfClosure
@@ -45,7 +45,7 @@ const ChangeDeniedReason_waitingVerificationOfClosure: ChangeDeniedReason = 1; /
  * @type {number}
  */
 export
-const waitingVerificationOfClosure: ChangeDeniedReason = ChangeDeniedReason_waitingVerificationOfClosure; /* SHORT_NAMED_ENUMERATED_VALUE */
+const waitingVerificationOfClosure = ChangeDeniedReason_waitingVerificationOfClosure satisfies ChangeDeniedReason; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ChangeDeniedReason_troubleReportAlreadyClosed
@@ -53,7 +53,7 @@ const waitingVerificationOfClosure: ChangeDeniedReason = ChangeDeniedReason_wait
  * @type {number}
  */
 export
-const ChangeDeniedReason_troubleReportAlreadyClosed: ChangeDeniedReason = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+const ChangeDeniedReason_troubleReportAlreadyClosed = _enum_for_ChangeDeniedReason.troubleReportAlreadyClosed satisfies ChangeDeniedReason; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary troubleReportAlreadyClosed
@@ -61,7 +61,7 @@ const ChangeDeniedReason_troubleReportAlreadyClosed: ChangeDeniedReason = 2; /* 
  * @type {number}
  */
 export
-const troubleReportAlreadyClosed: ChangeDeniedReason = ChangeDeniedReason_troubleReportAlreadyClosed; /* SHORT_NAMED_ENUMERATED_VALUE */
+const troubleReportAlreadyClosed = ChangeDeniedReason_troubleReportAlreadyClosed satisfies ChangeDeniedReason; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ChangeDeniedReason_activityAuthorizationPending
@@ -69,7 +69,7 @@ const troubleReportAlreadyClosed: ChangeDeniedReason = ChangeDeniedReason_troubl
  * @type {number}
  */
 export
-const ChangeDeniedReason_activityAuthorizationPending: ChangeDeniedReason = 3; /* LONG_NAMED_ENUMERATED_VALUE */
+const ChangeDeniedReason_activityAuthorizationPending = _enum_for_ChangeDeniedReason.activityAuthorizationPending satisfies ChangeDeniedReason; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary activityAuthorizationPending
@@ -77,7 +77,7 @@ const ChangeDeniedReason_activityAuthorizationPending: ChangeDeniedReason = 3; /
  * @type {number}
  */
 export
-const activityAuthorizationPending: ChangeDeniedReason = ChangeDeniedReason_activityAuthorizationPending; /* SHORT_NAMED_ENUMERATED_VALUE */
+const activityAuthorizationPending = ChangeDeniedReason_activityAuthorizationPending satisfies ChangeDeniedReason; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_ChangeDeniedReason = $._decodeEnumerated;
 export const _encode_ChangeDeniedReason = $._encodeEnumerated;
 

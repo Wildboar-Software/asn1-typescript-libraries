@@ -46,7 +46,7 @@ type FailureCauseParam = _enum_for_FailureCauseParam | ENUMERATED;
  * @type {number}
  */
 export
-const FailureCauseParam_limitReachedOnNumberOfConcurrentLocationRequests: FailureCauseParam = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+const FailureCauseParam_limitReachedOnNumberOfConcurrentLocationRequests = _enum_for_FailureCauseParam.limitReachedOnNumberOfConcurrentLocationRequests satisfies FailureCauseParam; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary limitReachedOnNumberOfConcurrentLocationRequests
@@ -60,7 +60,7 @@ const FailureCauseParam_limitReachedOnNumberOfConcurrentLocationRequests: Failur
  * @type {number}
  */
 export
-const limitReachedOnNumberOfConcurrentLocationRequests: FailureCauseParam = FailureCauseParam_limitReachedOnNumberOfConcurrentLocationRequests; /* SHORT_NAMED_ENUMERATED_VALUE */
+const limitReachedOnNumberOfConcurrentLocationRequests = FailureCauseParam_limitReachedOnNumberOfConcurrentLocationRequests satisfies FailureCauseParam; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) FailureCauseParam

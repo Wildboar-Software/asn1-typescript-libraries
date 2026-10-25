@@ -56,7 +56,7 @@ type ReportReason = _enum_for_ReportReason | ENUMERATED;
  * @type {number}
  */
 export
-const ReportReason_timerExpired: ReportReason = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReportReason_timerExpired = _enum_for_ReportReason.timerExpired satisfies ReportReason; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary timerExpired
@@ -67,7 +67,7 @@ const ReportReason_timerExpired: ReportReason = 0; /* LONG_NAMED_ENUMERATED_VALU
  * @type {number}
  */
 export
-const timerExpired: ReportReason = ReportReason_timerExpired; /* SHORT_NAMED_ENUMERATED_VALUE */
+const timerExpired = ReportReason_timerExpired satisfies ReportReason; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReportReason_countThresholdHit
@@ -79,7 +79,7 @@ const timerExpired: ReportReason = ReportReason_timerExpired; /* SHORT_NAMED_ENU
  * @type {number}
  */
 export
-const ReportReason_countThresholdHit: ReportReason = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReportReason_countThresholdHit = _enum_for_ReportReason.countThresholdHit satisfies ReportReason; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary countThresholdHit
@@ -90,7 +90,7 @@ const ReportReason_countThresholdHit: ReportReason = 1; /* LONG_NAMED_ENUMERATED
  * @type {number}
  */
 export
-const countThresholdHit: ReportReason = ReportReason_countThresholdHit; /* SHORT_NAMED_ENUMERATED_VALUE */
+const countThresholdHit = ReportReason_countThresholdHit satisfies ReportReason; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReportReason_pDPComtextDeactivated
@@ -104,7 +104,7 @@ const countThresholdHit: ReportReason = ReportReason_countThresholdHit; /* SHORT
  * @type {number}
  */
 export
-const ReportReason_pDPComtextDeactivated: ReportReason = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReportReason_pDPComtextDeactivated = _enum_for_ReportReason.pDPComtextDeactivated satisfies ReportReason; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pDPComtextDeactivated
@@ -115,7 +115,7 @@ const ReportReason_pDPComtextDeactivated: ReportReason = 2; /* LONG_NAMED_ENUMER
  * @type {number}
  */
 export
-const pDPComtextDeactivated: ReportReason = ReportReason_pDPComtextDeactivated; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pDPComtextDeactivated = ReportReason_pDPComtextDeactivated satisfies ReportReason; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReportReason_pDPContextModification
@@ -128,7 +128,7 @@ const pDPComtextDeactivated: ReportReason = ReportReason_pDPComtextDeactivated; 
  * @type {number}
  */
 export
-const ReportReason_pDPContextModification: ReportReason = 3; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReportReason_pDPContextModification = _enum_for_ReportReason.pDPContextModification satisfies ReportReason; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pDPContextModification
@@ -139,7 +139,7 @@ const ReportReason_pDPContextModification: ReportReason = 3; /* LONG_NAMED_ENUME
  * @type {number}
  */
 export
-const pDPContextModification: ReportReason = ReportReason_pDPContextModification; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pDPContextModification = ReportReason_pDPContextModification satisfies ReportReason; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReportReason_otherOrUnknown
@@ -151,7 +151,7 @@ const pDPContextModification: ReportReason = ReportReason_pDPContextModification
  * @type {number}
  */
 export
-const ReportReason_otherOrUnknown: ReportReason = 4; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReportReason_otherOrUnknown = _enum_for_ReportReason.otherOrUnknown satisfies ReportReason; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary otherOrUnknown
@@ -162,7 +162,7 @@ const ReportReason_otherOrUnknown: ReportReason = 4; /* LONG_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const otherOrUnknown: ReportReason = ReportReason_otherOrUnknown; /* SHORT_NAMED_ENUMERATED_VALUE */
+const otherOrUnknown = ReportReason_otherOrUnknown satisfies ReportReason; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_ReportReason: $.ASN1Decoder<ReportReason> = $._decodeEnumerated;
 export const _encode_ReportReason: $.ASN1Encoder<ReportReason> = $._encodeEnumerated;
 

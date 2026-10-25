@@ -41,7 +41,7 @@ export type ProtocolIntegrityTestResults = INTEGER;
  * @constant
  * @type {number}
  */
-export const ProtocolIntegrityTestResults_wrongPDUResponse: ProtocolIntegrityTestResults = 0; /* LONG_NAMED_INTEGER_VALUE */
+export const ProtocolIntegrityTestResults_wrongPDUResponse = 0 satisfies ProtocolIntegrityTestResults; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProtocolIntegrityTestResults_wrongPDUResponse
@@ -51,7 +51,7 @@ export const ProtocolIntegrityTestResults_wrongPDUResponse: ProtocolIntegrityTes
  * @constant
  * @type {number}
  */
-export const wrongPDUResponse: ProtocolIntegrityTestResults = ProtocolIntegrityTestResults_wrongPDUResponse; /* SHORT_NAMED_INTEGER_VALUE */
+export const wrongPDUResponse = ProtocolIntegrityTestResults_wrongPDUResponse satisfies ProtocolIntegrityTestResults; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProtocolIntegrityTestResults_pDUResponseNotReceived
@@ -61,7 +61,7 @@ export const wrongPDUResponse: ProtocolIntegrityTestResults = ProtocolIntegrityT
  * @constant
  * @type {number}
  */
-export const ProtocolIntegrityTestResults_pDUResponseNotReceived: ProtocolIntegrityTestResults = 1; /* LONG_NAMED_INTEGER_VALUE */
+export const ProtocolIntegrityTestResults_pDUResponseNotReceived = 1 satisfies ProtocolIntegrityTestResults; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProtocolIntegrityTestResults_pDUResponseNotReceived
@@ -71,7 +71,7 @@ export const ProtocolIntegrityTestResults_pDUResponseNotReceived: ProtocolIntegr
  * @constant
  * @type {number}
  */
-export const pDUResponseNotReceived: ProtocolIntegrityTestResults = ProtocolIntegrityTestResults_pDUResponseNotReceived; /* SHORT_NAMED_INTEGER_VALUE */
+export const pDUResponseNotReceived = ProtocolIntegrityTestResults_pDUResponseNotReceived satisfies ProtocolIntegrityTestResults; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_ProtocolIntegrityTestResults = $._decodeInteger;

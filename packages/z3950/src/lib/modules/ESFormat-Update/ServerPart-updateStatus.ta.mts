@@ -42,7 +42,7 @@ type ServerPart_updateStatus = INTEGER;
  * @type {number}
  */
 export
-const ServerPart_updateStatus_success: ServerPart_updateStatus = 1; /* LONG_NAMED_INTEGER_VALUE */
+const ServerPart_updateStatus_success = 1 satisfies ServerPart_updateStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServerPart_updateStatus_success
@@ -54,7 +54,7 @@ const ServerPart_updateStatus_success: ServerPart_updateStatus = 1; /* LONG_NAME
  * @type {number}
  */
 export
-const success: ServerPart_updateStatus = ServerPart_updateStatus_success; /* SHORT_NAMED_INTEGER_VALUE */
+const success = ServerPart_updateStatus_success satisfies ServerPart_updateStatus; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServerPart_updateStatus_partial
@@ -70,7 +70,7 @@ const success: ServerPart_updateStatus = ServerPart_updateStatus_success; /* SHO
  * @type {number}
  */
 export
-const ServerPart_updateStatus_partial: ServerPart_updateStatus = 2; /* LONG_NAMED_INTEGER_VALUE */
+const ServerPart_updateStatus_partial = 2 satisfies ServerPart_updateStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServerPart_updateStatus_partial
@@ -82,7 +82,7 @@ const ServerPart_updateStatus_partial: ServerPart_updateStatus = 2; /* LONG_NAME
  * @type {number}
  */
 export
-const partial: ServerPart_updateStatus = ServerPart_updateStatus_partial; /* SHORT_NAMED_INTEGER_VALUE */
+const partial = ServerPart_updateStatus_partial satisfies ServerPart_updateStatus; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServerPart_updateStatus_failure
@@ -97,7 +97,7 @@ const partial: ServerPart_updateStatus = ServerPart_updateStatus_partial; /* SHO
  * @type {number}
  */
 export
-const ServerPart_updateStatus_failure: ServerPart_updateStatus = 3; /* LONG_NAMED_INTEGER_VALUE */
+const ServerPart_updateStatus_failure = 3 satisfies ServerPart_updateStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServerPart_updateStatus_failure
@@ -109,7 +109,7 @@ const ServerPart_updateStatus_failure: ServerPart_updateStatus = 3; /* LONG_NAME
  * @type {number}
  */
 export
-const failure: ServerPart_updateStatus = ServerPart_updateStatus_failure; /* SHORT_NAMED_INTEGER_VALUE */
+const failure = ServerPart_updateStatus_failure satisfies ServerPart_updateStatus; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_ServerPart_updateStatus: $.ASN1Decoder<ServerPart_updateStatus> = $._decodeInteger;
 export const _encode_ServerPart_updateStatus: $.ASN1Encoder<ServerPart_updateStatus> = $._encodeInteger;
 

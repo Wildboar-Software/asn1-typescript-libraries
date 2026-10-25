@@ -60,7 +60,7 @@ export type CreateCmLeasedCircuitServiceError =
  * @constant
  * @type {number}
  */
-export const CreateCmLeasedCircuitServiceError_contractViolation: CreateCmLeasedCircuitServiceError = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CreateCmLeasedCircuitServiceError_contractViolation = _enum_for_CreateCmLeasedCircuitServiceError.contractViolation satisfies CreateCmLeasedCircuitServiceError; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -68,7 +68,7 @@ export const CreateCmLeasedCircuitServiceError_contractViolation: CreateCmLeased
  * @constant
  * @type {number}
  */
-export const contractViolation: CreateCmLeasedCircuitServiceError = CreateCmLeasedCircuitServiceError_contractViolation; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const contractViolation = CreateCmLeasedCircuitServiceError_contractViolation satisfies CreateCmLeasedCircuitServiceError; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -76,7 +76,7 @@ export const contractViolation: CreateCmLeasedCircuitServiceError = CreateCmLeas
  * @constant
  * @type {number}
  */
-export const CreateCmLeasedCircuitServiceError_dedicatedResourceUnavailable: CreateCmLeasedCircuitServiceError = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CreateCmLeasedCircuitServiceError_dedicatedResourceUnavailable = _enum_for_CreateCmLeasedCircuitServiceError.dedicatedResourceUnavailable satisfies CreateCmLeasedCircuitServiceError; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -84,7 +84,7 @@ export const CreateCmLeasedCircuitServiceError_dedicatedResourceUnavailable: Cre
  * @constant
  * @type {number}
  */
-export const dedicatedResourceUnavailable: CreateCmLeasedCircuitServiceError = CreateCmLeasedCircuitServiceError_dedicatedResourceUnavailable; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const dedicatedResourceUnavailable = CreateCmLeasedCircuitServiceError_dedicatedResourceUnavailable satisfies CreateCmLeasedCircuitServiceError; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -92,7 +92,7 @@ export const dedicatedResourceUnavailable: CreateCmLeasedCircuitServiceError = C
  * @constant
  * @type {number}
  */
-export const CreateCmLeasedCircuitServiceError_incompatibleSLCs: CreateCmLeasedCircuitServiceError = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CreateCmLeasedCircuitServiceError_incompatibleSLCs = _enum_for_CreateCmLeasedCircuitServiceError.incompatibleSLCs satisfies CreateCmLeasedCircuitServiceError; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -100,7 +100,7 @@ export const CreateCmLeasedCircuitServiceError_incompatibleSLCs: CreateCmLeasedC
  * @constant
  * @type {number}
  */
-export const incompatibleSLCs: CreateCmLeasedCircuitServiceError = CreateCmLeasedCircuitServiceError_incompatibleSLCs; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const incompatibleSLCs = CreateCmLeasedCircuitServiceError_incompatibleSLCs satisfies CreateCmLeasedCircuitServiceError; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -108,7 +108,7 @@ export const incompatibleSLCs: CreateCmLeasedCircuitServiceError = CreateCmLease
  * @constant
  * @type {number}
  */
-export const CreateCmLeasedCircuitServiceError_invalidSchedule: CreateCmLeasedCircuitServiceError = 3; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CreateCmLeasedCircuitServiceError_invalidSchedule = _enum_for_CreateCmLeasedCircuitServiceError.invalidSchedule satisfies CreateCmLeasedCircuitServiceError; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -116,7 +116,7 @@ export const CreateCmLeasedCircuitServiceError_invalidSchedule: CreateCmLeasedCi
  * @constant
  * @type {number}
  */
-export const invalidSchedule: CreateCmLeasedCircuitServiceError = CreateCmLeasedCircuitServiceError_invalidSchedule; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const invalidSchedule = CreateCmLeasedCircuitServiceError_invalidSchedule satisfies CreateCmLeasedCircuitServiceError; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -124,7 +124,7 @@ export const invalidSchedule: CreateCmLeasedCircuitServiceError = CreateCmLeased
  * @constant
  * @type {number}
  */
-export const CreateCmLeasedCircuitServiceError_invalidServiceTerminationDate: CreateCmLeasedCircuitServiceError = 4; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CreateCmLeasedCircuitServiceError_invalidServiceTerminationDate = _enum_for_CreateCmLeasedCircuitServiceError.invalidServiceTerminationDate satisfies CreateCmLeasedCircuitServiceError; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -132,7 +132,7 @@ export const CreateCmLeasedCircuitServiceError_invalidServiceTerminationDate: Cr
  * @constant
  * @type {number}
  */
-export const invalidServiceTerminationDate: CreateCmLeasedCircuitServiceError = CreateCmLeasedCircuitServiceError_invalidServiceTerminationDate; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const invalidServiceTerminationDate = CreateCmLeasedCircuitServiceError_invalidServiceTerminationDate satisfies CreateCmLeasedCircuitServiceError; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -140,7 +140,7 @@ export const invalidServiceTerminationDate: CreateCmLeasedCircuitServiceError = 
  * @constant
  * @type {number}
  */
-export const CreateCmLeasedCircuitServiceError_invalidValue: CreateCmLeasedCircuitServiceError = 5; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CreateCmLeasedCircuitServiceError_invalidValue = _enum_for_CreateCmLeasedCircuitServiceError.invalidValue satisfies CreateCmLeasedCircuitServiceError; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -148,7 +148,7 @@ export const CreateCmLeasedCircuitServiceError_invalidValue: CreateCmLeasedCircu
  * @constant
  * @type {number}
  */
-export const invalidValue: CreateCmLeasedCircuitServiceError = CreateCmLeasedCircuitServiceError_invalidValue; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const invalidValue = CreateCmLeasedCircuitServiceError_invalidValue satisfies CreateCmLeasedCircuitServiceError; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -156,7 +156,7 @@ export const invalidValue: CreateCmLeasedCircuitServiceError = CreateCmLeasedCir
  * @constant
  * @type {number}
  */
-export const CreateCmLeasedCircuitServiceError_nonExistentSAP: CreateCmLeasedCircuitServiceError = 6; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CreateCmLeasedCircuitServiceError_nonExistentSAP = _enum_for_CreateCmLeasedCircuitServiceError.nonExistentSAP satisfies CreateCmLeasedCircuitServiceError; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -164,7 +164,7 @@ export const CreateCmLeasedCircuitServiceError_nonExistentSAP: CreateCmLeasedCir
  * @constant
  * @type {number}
  */
-export const nonExistentSAP: CreateCmLeasedCircuitServiceError = CreateCmLeasedCircuitServiceError_nonExistentSAP; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const nonExistentSAP = CreateCmLeasedCircuitServiceError_nonExistentSAP satisfies CreateCmLeasedCircuitServiceError; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -172,7 +172,7 @@ export const nonExistentSAP: CreateCmLeasedCircuitServiceError = CreateCmLeasedC
  * @constant
  * @type {number}
  */
-export const CreateCmLeasedCircuitServiceError_quantitySpecifiedOutOfRange: CreateCmLeasedCircuitServiceError = 7; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CreateCmLeasedCircuitServiceError_quantitySpecifiedOutOfRange = _enum_for_CreateCmLeasedCircuitServiceError.quantitySpecifiedOutOfRange satisfies CreateCmLeasedCircuitServiceError; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -180,7 +180,7 @@ export const CreateCmLeasedCircuitServiceError_quantitySpecifiedOutOfRange: Crea
  * @constant
  * @type {number}
  */
-export const quantitySpecifiedOutOfRange: CreateCmLeasedCircuitServiceError = CreateCmLeasedCircuitServiceError_quantitySpecifiedOutOfRange; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const quantitySpecifiedOutOfRange = CreateCmLeasedCircuitServiceError_quantitySpecifiedOutOfRange satisfies CreateCmLeasedCircuitServiceError; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -188,7 +188,7 @@ export const quantitySpecifiedOutOfRange: CreateCmLeasedCircuitServiceError = Cr
  * @constant
  * @type {number}
  */
-export const CreateCmLeasedCircuitServiceError_requestedBandwidthNotAvailable: CreateCmLeasedCircuitServiceError = 8; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CreateCmLeasedCircuitServiceError_requestedBandwidthNotAvailable = _enum_for_CreateCmLeasedCircuitServiceError.requestedBandwidthNotAvailable satisfies CreateCmLeasedCircuitServiceError; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -196,7 +196,7 @@ export const CreateCmLeasedCircuitServiceError_requestedBandwidthNotAvailable: C
  * @constant
  * @type {number}
  */
-export const requestedBandwidthNotAvailable: CreateCmLeasedCircuitServiceError = CreateCmLeasedCircuitServiceError_requestedBandwidthNotAvailable; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const requestedBandwidthNotAvailable = CreateCmLeasedCircuitServiceError_requestedBandwidthNotAvailable satisfies CreateCmLeasedCircuitServiceError; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -204,7 +204,7 @@ export const requestedBandwidthNotAvailable: CreateCmLeasedCircuitServiceError =
  * @constant
  * @type {number}
  */
-export const CreateCmLeasedCircuitServiceError_requiredParameterNotAvailable: CreateCmLeasedCircuitServiceError = 9; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CreateCmLeasedCircuitServiceError_requiredParameterNotAvailable = _enum_for_CreateCmLeasedCircuitServiceError.requiredParameterNotAvailable satisfies CreateCmLeasedCircuitServiceError; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -212,7 +212,7 @@ export const CreateCmLeasedCircuitServiceError_requiredParameterNotAvailable: Cr
  * @constant
  * @type {number}
  */
-export const requiredParameterNotAvailable: CreateCmLeasedCircuitServiceError = CreateCmLeasedCircuitServiceError_requiredParameterNotAvailable; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const requiredParameterNotAvailable = CreateCmLeasedCircuitServiceError_requiredParameterNotAvailable satisfies CreateCmLeasedCircuitServiceError; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -220,7 +220,7 @@ export const requiredParameterNotAvailable: CreateCmLeasedCircuitServiceError = 
  * @constant
  * @type {number}
  */
-export const CreateCmLeasedCircuitServiceError_sharedResourcesUnavailable: CreateCmLeasedCircuitServiceError = 10; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CreateCmLeasedCircuitServiceError_sharedResourcesUnavailable = _enum_for_CreateCmLeasedCircuitServiceError.sharedResourcesUnavailable satisfies CreateCmLeasedCircuitServiceError; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -228,7 +228,7 @@ export const CreateCmLeasedCircuitServiceError_sharedResourcesUnavailable: Creat
  * @constant
  * @type {number}
  */
-export const sharedResourcesUnavailable: CreateCmLeasedCircuitServiceError = CreateCmLeasedCircuitServiceError_sharedResourcesUnavailable; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const sharedResourcesUnavailable = CreateCmLeasedCircuitServiceError_sharedResourcesUnavailable satisfies CreateCmLeasedCircuitServiceError; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -236,7 +236,7 @@ export const sharedResourcesUnavailable: CreateCmLeasedCircuitServiceError = Cre
  * @constant
  * @type {number}
  */
-export const CreateCmLeasedCircuitServiceError_specifiedLCSAlreadyExists: CreateCmLeasedCircuitServiceError = 11; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CreateCmLeasedCircuitServiceError_specifiedLCSAlreadyExists = _enum_for_CreateCmLeasedCircuitServiceError.specifiedLCSAlreadyExists satisfies CreateCmLeasedCircuitServiceError; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -244,7 +244,7 @@ export const CreateCmLeasedCircuitServiceError_specifiedLCSAlreadyExists: Create
  * @constant
  * @type {number}
  */
-export const specifiedLCSAlreadyExists: CreateCmLeasedCircuitServiceError = CreateCmLeasedCircuitServiceError_specifiedLCSAlreadyExists; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const specifiedLCSAlreadyExists = CreateCmLeasedCircuitServiceError_specifiedLCSAlreadyExists satisfies CreateCmLeasedCircuitServiceError; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -252,7 +252,7 @@ export const specifiedLCSAlreadyExists: CreateCmLeasedCircuitServiceError = Crea
  * @constant
  * @type {number}
  */
-export const CreateCmLeasedCircuitServiceError_unknownServiceDescription: CreateCmLeasedCircuitServiceError = 12; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CreateCmLeasedCircuitServiceError_unknownServiceDescription = _enum_for_CreateCmLeasedCircuitServiceError.unknownServiceDescription satisfies CreateCmLeasedCircuitServiceError; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -260,7 +260,7 @@ export const CreateCmLeasedCircuitServiceError_unknownServiceDescription: Create
  * @constant
  * @type {number}
  */
-export const unknownServiceDescription: CreateCmLeasedCircuitServiceError = CreateCmLeasedCircuitServiceError_unknownServiceDescription; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const unknownServiceDescription = CreateCmLeasedCircuitServiceError_unknownServiceDescription satisfies CreateCmLeasedCircuitServiceError; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -268,7 +268,7 @@ export const unknownServiceDescription: CreateCmLeasedCircuitServiceError = Crea
  * @constant
  * @type {number}
  */
-export const CreateCmLeasedCircuitServiceError_unknownServiceType: CreateCmLeasedCircuitServiceError = 13; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CreateCmLeasedCircuitServiceError_unknownServiceType = _enum_for_CreateCmLeasedCircuitServiceError.unknownServiceType satisfies CreateCmLeasedCircuitServiceError; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -276,7 +276,7 @@ export const CreateCmLeasedCircuitServiceError_unknownServiceType: CreateCmLease
  * @constant
  * @type {number}
  */
-export const unknownServiceType: CreateCmLeasedCircuitServiceError = CreateCmLeasedCircuitServiceError_unknownServiceType; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const unknownServiceType = CreateCmLeasedCircuitServiceError_unknownServiceType satisfies CreateCmLeasedCircuitServiceError; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 let _cached_decoder_for_CreateCmLeasedCircuitServiceError: $.ASN1Decoder<CreateCmLeasedCircuitServiceError> | null = null;

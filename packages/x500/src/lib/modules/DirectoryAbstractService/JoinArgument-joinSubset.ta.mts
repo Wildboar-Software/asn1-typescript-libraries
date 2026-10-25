@@ -36,7 +36,7 @@ export type JoinArgument_joinSubset =
  * @constant
  * @type {number}
  */
-export const JoinArgument_joinSubset_baseObject: JoinArgument_joinSubset = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+export const JoinArgument_joinSubset_baseObject = _enum_for_JoinArgument_joinSubset.baseObject satisfies JoinArgument_joinSubset; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary baseObject
@@ -47,35 +47,35 @@ export const JoinArgument_joinSubset_baseObject: JoinArgument_joinSubset = 0; /*
  * @constant
  * @type {number}
  */
-export const baseObject: JoinArgument_joinSubset = JoinArgument_joinSubset_baseObject; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const baseObject = JoinArgument_joinSubset_baseObject satisfies JoinArgument_joinSubset; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary JoinArgument_joinSubset_oneLevel
  * @constant
  * @type {number}
  */
-export const JoinArgument_joinSubset_oneLevel: JoinArgument_joinSubset = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+export const JoinArgument_joinSubset_oneLevel = _enum_for_JoinArgument_joinSubset.oneLevel satisfies JoinArgument_joinSubset; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary oneLevel
  * @constant
  * @type {number}
  */
-export const oneLevel: JoinArgument_joinSubset = JoinArgument_joinSubset_oneLevel; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const oneLevel = JoinArgument_joinSubset_oneLevel satisfies JoinArgument_joinSubset; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary JoinArgument_joinSubset_wholeSubtree
  * @constant
  * @type {number}
  */
-export const JoinArgument_joinSubset_wholeSubtree: JoinArgument_joinSubset = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+export const JoinArgument_joinSubset_wholeSubtree = _enum_for_JoinArgument_joinSubset.wholeSubtree satisfies JoinArgument_joinSubset; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary wholeSubtree
  * @constant
  * @type {number}
  */
-export const wholeSubtree: JoinArgument_joinSubset = JoinArgument_joinSubset_wholeSubtree; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const wholeSubtree = JoinArgument_joinSubset_wholeSubtree satisfies JoinArgument_joinSubset; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 export const _decode_JoinArgument_joinSubset = $._decodeEnumerated;

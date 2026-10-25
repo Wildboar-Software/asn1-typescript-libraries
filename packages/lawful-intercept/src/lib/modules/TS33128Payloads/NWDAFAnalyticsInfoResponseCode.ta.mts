@@ -127,7 +127,7 @@ const NWDAFAnalyticsInfoResponseCode = _enum_for_NWDAFAnalyticsInfoResponseCode;
  * @type {number}
  */
 export
-const NWDAFAnalyticsInfoResponseCode_oK200: NWDAFAnalyticsInfoResponseCode = NWDAFAnalyticsInfoResponseCode.oK200; /* LONG_NAMED_ENUMERATED_VALUE */
+const NWDAFAnalyticsInfoResponseCode_oK200 = NWDAFAnalyticsInfoResponseCode.oK200 satisfies NWDAFAnalyticsInfoResponseCode; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary oK200
@@ -135,7 +135,7 @@ const NWDAFAnalyticsInfoResponseCode_oK200: NWDAFAnalyticsInfoResponseCode = NWD
  * @type {number}
  */
 export
-const oK200: NWDAFAnalyticsInfoResponseCode = NWDAFAnalyticsInfoResponseCode.oK200; /* SHORT_NAMED_ENUMERATED_VALUE */
+const oK200 = NWDAFAnalyticsInfoResponseCode.oK200 satisfies NWDAFAnalyticsInfoResponseCode; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NWDAFAnalyticsInfoResponseCode_noContent204
@@ -143,7 +143,7 @@ const oK200: NWDAFAnalyticsInfoResponseCode = NWDAFAnalyticsInfoResponseCode.oK2
  * @type {number}
  */
 export
-const NWDAFAnalyticsInfoResponseCode_noContent204: NWDAFAnalyticsInfoResponseCode = NWDAFAnalyticsInfoResponseCode.noContent204; /* LONG_NAMED_ENUMERATED_VALUE */
+const NWDAFAnalyticsInfoResponseCode_noContent204 = NWDAFAnalyticsInfoResponseCode.noContent204 satisfies NWDAFAnalyticsInfoResponseCode; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary noContent204
@@ -151,7 +151,7 @@ const NWDAFAnalyticsInfoResponseCode_noContent204: NWDAFAnalyticsInfoResponseCod
  * @type {number}
  */
 export
-const noContent204: NWDAFAnalyticsInfoResponseCode = NWDAFAnalyticsInfoResponseCode.noContent204; /* SHORT_NAMED_ENUMERATED_VALUE */
+const noContent204 = NWDAFAnalyticsInfoResponseCode.noContent204 satisfies NWDAFAnalyticsInfoResponseCode; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NWDAFAnalyticsInfoResponseCode_badRequest400
@@ -159,7 +159,7 @@ const noContent204: NWDAFAnalyticsInfoResponseCode = NWDAFAnalyticsInfoResponseC
  * @type {number}
  */
 export
-const NWDAFAnalyticsInfoResponseCode_badRequest400: NWDAFAnalyticsInfoResponseCode = NWDAFAnalyticsInfoResponseCode.badRequest400; /* LONG_NAMED_ENUMERATED_VALUE */
+const NWDAFAnalyticsInfoResponseCode_badRequest400 = NWDAFAnalyticsInfoResponseCode.badRequest400 satisfies NWDAFAnalyticsInfoResponseCode; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary badRequest400
@@ -167,7 +167,7 @@ const NWDAFAnalyticsInfoResponseCode_badRequest400: NWDAFAnalyticsInfoResponseCo
  * @type {number}
  */
 export
-const badRequest400: NWDAFAnalyticsInfoResponseCode = NWDAFAnalyticsInfoResponseCode.badRequest400; /* SHORT_NAMED_ENUMERATED_VALUE */
+const badRequest400 = NWDAFAnalyticsInfoResponseCode.badRequest400 satisfies NWDAFAnalyticsInfoResponseCode; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NWDAFAnalyticsInfoResponseCode_unauthorized401
@@ -175,7 +175,7 @@ const badRequest400: NWDAFAnalyticsInfoResponseCode = NWDAFAnalyticsInfoResponse
  * @type {number}
  */
 export
-const NWDAFAnalyticsInfoResponseCode_unauthorized401: NWDAFAnalyticsInfoResponseCode = NWDAFAnalyticsInfoResponseCode.unauthorized401; /* LONG_NAMED_ENUMERATED_VALUE */
+const NWDAFAnalyticsInfoResponseCode_unauthorized401 = NWDAFAnalyticsInfoResponseCode.unauthorized401 satisfies NWDAFAnalyticsInfoResponseCode; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unauthorized401
@@ -183,7 +183,7 @@ const NWDAFAnalyticsInfoResponseCode_unauthorized401: NWDAFAnalyticsInfoResponse
  * @type {number}
  */
 export
-const unauthorized401: NWDAFAnalyticsInfoResponseCode = NWDAFAnalyticsInfoResponseCode.unauthorized401; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unauthorized401 = NWDAFAnalyticsInfoResponseCode.unauthorized401 satisfies NWDAFAnalyticsInfoResponseCode; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NWDAFAnalyticsInfoResponseCode_forbidden403
@@ -191,7 +191,7 @@ const unauthorized401: NWDAFAnalyticsInfoResponseCode = NWDAFAnalyticsInfoRespon
  * @type {number}
  */
 export
-const NWDAFAnalyticsInfoResponseCode_forbidden403: NWDAFAnalyticsInfoResponseCode = NWDAFAnalyticsInfoResponseCode.forbidden403; /* LONG_NAMED_ENUMERATED_VALUE */
+const NWDAFAnalyticsInfoResponseCode_forbidden403 = NWDAFAnalyticsInfoResponseCode.forbidden403 satisfies NWDAFAnalyticsInfoResponseCode; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary forbidden403
@@ -199,7 +199,7 @@ const NWDAFAnalyticsInfoResponseCode_forbidden403: NWDAFAnalyticsInfoResponseCod
  * @type {number}
  */
 export
-const forbidden403: NWDAFAnalyticsInfoResponseCode = NWDAFAnalyticsInfoResponseCode.forbidden403; /* SHORT_NAMED_ENUMERATED_VALUE */
+const forbidden403 = NWDAFAnalyticsInfoResponseCode.forbidden403 satisfies NWDAFAnalyticsInfoResponseCode; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NWDAFAnalyticsInfoResponseCode_notFound404
@@ -207,7 +207,7 @@ const forbidden403: NWDAFAnalyticsInfoResponseCode = NWDAFAnalyticsInfoResponseC
  * @type {number}
  */
 export
-const NWDAFAnalyticsInfoResponseCode_notFound404: NWDAFAnalyticsInfoResponseCode = NWDAFAnalyticsInfoResponseCode.notFound404; /* LONG_NAMED_ENUMERATED_VALUE */
+const NWDAFAnalyticsInfoResponseCode_notFound404 = NWDAFAnalyticsInfoResponseCode.notFound404 satisfies NWDAFAnalyticsInfoResponseCode; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary notFound404
@@ -215,7 +215,7 @@ const NWDAFAnalyticsInfoResponseCode_notFound404: NWDAFAnalyticsInfoResponseCode
  * @type {number}
  */
 export
-const notFound404: NWDAFAnalyticsInfoResponseCode = NWDAFAnalyticsInfoResponseCode.notFound404; /* SHORT_NAMED_ENUMERATED_VALUE */
+const notFound404 = NWDAFAnalyticsInfoResponseCode.notFound404 satisfies NWDAFAnalyticsInfoResponseCode; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NWDAFAnalyticsInfoResponseCode_notAcceptable406
@@ -223,7 +223,7 @@ const notFound404: NWDAFAnalyticsInfoResponseCode = NWDAFAnalyticsInfoResponseCo
  * @type {number}
  */
 export
-const NWDAFAnalyticsInfoResponseCode_notAcceptable406: NWDAFAnalyticsInfoResponseCode = NWDAFAnalyticsInfoResponseCode.notAcceptable406; /* LONG_NAMED_ENUMERATED_VALUE */
+const NWDAFAnalyticsInfoResponseCode_notAcceptable406 = NWDAFAnalyticsInfoResponseCode.notAcceptable406 satisfies NWDAFAnalyticsInfoResponseCode; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary notAcceptable406
@@ -231,7 +231,7 @@ const NWDAFAnalyticsInfoResponseCode_notAcceptable406: NWDAFAnalyticsInfoRespons
  * @type {number}
  */
 export
-const notAcceptable406: NWDAFAnalyticsInfoResponseCode = NWDAFAnalyticsInfoResponseCode.notAcceptable406; /* SHORT_NAMED_ENUMERATED_VALUE */
+const notAcceptable406 = NWDAFAnalyticsInfoResponseCode.notAcceptable406 satisfies NWDAFAnalyticsInfoResponseCode; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NWDAFAnalyticsInfoResponseCode_uRITooLong414
@@ -239,7 +239,7 @@ const notAcceptable406: NWDAFAnalyticsInfoResponseCode = NWDAFAnalyticsInfoRespo
  * @type {number}
  */
 export
-const NWDAFAnalyticsInfoResponseCode_uRITooLong414: NWDAFAnalyticsInfoResponseCode = NWDAFAnalyticsInfoResponseCode.uRITooLong414; /* LONG_NAMED_ENUMERATED_VALUE */
+const NWDAFAnalyticsInfoResponseCode_uRITooLong414 = NWDAFAnalyticsInfoResponseCode.uRITooLong414 satisfies NWDAFAnalyticsInfoResponseCode; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary uRITooLong414
@@ -247,7 +247,7 @@ const NWDAFAnalyticsInfoResponseCode_uRITooLong414: NWDAFAnalyticsInfoResponseCo
  * @type {number}
  */
 export
-const uRITooLong414: NWDAFAnalyticsInfoResponseCode = NWDAFAnalyticsInfoResponseCode.uRITooLong414; /* SHORT_NAMED_ENUMERATED_VALUE */
+const uRITooLong414 = NWDAFAnalyticsInfoResponseCode.uRITooLong414 satisfies NWDAFAnalyticsInfoResponseCode; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NWDAFAnalyticsInfoResponseCode_tooManyRequests429
@@ -255,7 +255,7 @@ const uRITooLong414: NWDAFAnalyticsInfoResponseCode = NWDAFAnalyticsInfoResponse
  * @type {number}
  */
 export
-const NWDAFAnalyticsInfoResponseCode_tooManyRequests429: NWDAFAnalyticsInfoResponseCode = NWDAFAnalyticsInfoResponseCode.tooManyRequests429; /* LONG_NAMED_ENUMERATED_VALUE */
+const NWDAFAnalyticsInfoResponseCode_tooManyRequests429 = NWDAFAnalyticsInfoResponseCode.tooManyRequests429 satisfies NWDAFAnalyticsInfoResponseCode; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tooManyRequests429
@@ -263,7 +263,7 @@ const NWDAFAnalyticsInfoResponseCode_tooManyRequests429: NWDAFAnalyticsInfoRespo
  * @type {number}
  */
 export
-const tooManyRequests429: NWDAFAnalyticsInfoResponseCode = NWDAFAnalyticsInfoResponseCode.tooManyRequests429; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tooManyRequests429 = NWDAFAnalyticsInfoResponseCode.tooManyRequests429 satisfies NWDAFAnalyticsInfoResponseCode; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NWDAFAnalyticsInfoResponseCode_internalServerError500
@@ -271,7 +271,7 @@ const tooManyRequests429: NWDAFAnalyticsInfoResponseCode = NWDAFAnalyticsInfoRes
  * @type {number}
  */
 export
-const NWDAFAnalyticsInfoResponseCode_internalServerError500: NWDAFAnalyticsInfoResponseCode = NWDAFAnalyticsInfoResponseCode.internalServerError500; /* LONG_NAMED_ENUMERATED_VALUE */
+const NWDAFAnalyticsInfoResponseCode_internalServerError500 = NWDAFAnalyticsInfoResponseCode.internalServerError500 satisfies NWDAFAnalyticsInfoResponseCode; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary internalServerError500
@@ -279,7 +279,7 @@ const NWDAFAnalyticsInfoResponseCode_internalServerError500: NWDAFAnalyticsInfoR
  * @type {number}
  */
 export
-const internalServerError500: NWDAFAnalyticsInfoResponseCode = NWDAFAnalyticsInfoResponseCode.internalServerError500; /* SHORT_NAMED_ENUMERATED_VALUE */
+const internalServerError500 = NWDAFAnalyticsInfoResponseCode.internalServerError500 satisfies NWDAFAnalyticsInfoResponseCode; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NWDAFAnalyticsInfoResponseCode_badGateway502
@@ -287,7 +287,7 @@ const internalServerError500: NWDAFAnalyticsInfoResponseCode = NWDAFAnalyticsInf
  * @type {number}
  */
 export
-const NWDAFAnalyticsInfoResponseCode_badGateway502: NWDAFAnalyticsInfoResponseCode = NWDAFAnalyticsInfoResponseCode.badGateway502; /* LONG_NAMED_ENUMERATED_VALUE */
+const NWDAFAnalyticsInfoResponseCode_badGateway502 = NWDAFAnalyticsInfoResponseCode.badGateway502 satisfies NWDAFAnalyticsInfoResponseCode; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary badGateway502
@@ -295,7 +295,7 @@ const NWDAFAnalyticsInfoResponseCode_badGateway502: NWDAFAnalyticsInfoResponseCo
  * @type {number}
  */
 export
-const badGateway502: NWDAFAnalyticsInfoResponseCode = NWDAFAnalyticsInfoResponseCode.badGateway502; /* SHORT_NAMED_ENUMERATED_VALUE */
+const badGateway502 = NWDAFAnalyticsInfoResponseCode.badGateway502 satisfies NWDAFAnalyticsInfoResponseCode; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NWDAFAnalyticsInfoResponseCode_serviceUnavailable503
@@ -303,7 +303,7 @@ const badGateway502: NWDAFAnalyticsInfoResponseCode = NWDAFAnalyticsInfoResponse
  * @type {number}
  */
 export
-const NWDAFAnalyticsInfoResponseCode_serviceUnavailable503: NWDAFAnalyticsInfoResponseCode = NWDAFAnalyticsInfoResponseCode.serviceUnavailable503; /* LONG_NAMED_ENUMERATED_VALUE */
+const NWDAFAnalyticsInfoResponseCode_serviceUnavailable503 = NWDAFAnalyticsInfoResponseCode.serviceUnavailable503 satisfies NWDAFAnalyticsInfoResponseCode; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary serviceUnavailable503
@@ -311,7 +311,7 @@ const NWDAFAnalyticsInfoResponseCode_serviceUnavailable503: NWDAFAnalyticsInfoRe
  * @type {number}
  */
 export
-const serviceUnavailable503: NWDAFAnalyticsInfoResponseCode = NWDAFAnalyticsInfoResponseCode.serviceUnavailable503; /* SHORT_NAMED_ENUMERATED_VALUE */
+const serviceUnavailable503 = NWDAFAnalyticsInfoResponseCode.serviceUnavailable503 satisfies NWDAFAnalyticsInfoResponseCode; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_NWDAFAnalyticsInfoResponseCode: $.ASN1Decoder<NWDAFAnalyticsInfoResponseCode> = $._decodeEnumerated;
 export const _encode_NWDAFAnalyticsInfoResponseCode: $.ASN1Encoder<NWDAFAnalyticsInfoResponseCode> = $._encodeEnumerated;
 

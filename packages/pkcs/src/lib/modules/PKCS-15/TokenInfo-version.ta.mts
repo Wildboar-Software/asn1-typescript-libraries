@@ -21,7 +21,7 @@ export type TokenInfo_version = INTEGER;
  * @constant
  * @type {number}
  */
-export const TokenInfo_version_v1: TokenInfo_version = 0; /* LONG_NAMED_INTEGER_VALUE */
+export const TokenInfo_version_v1 = 0 satisfies TokenInfo_version; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -29,7 +29,7 @@ export const TokenInfo_version_v1: TokenInfo_version = 0; /* LONG_NAMED_INTEGER_
  * @constant
  * @type {number}
  */
-export const v1: TokenInfo_version = TokenInfo_version_v1; /* SHORT_NAMED_INTEGER_VALUE */
+export const v1 = TokenInfo_version_v1 satisfies TokenInfo_version; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 

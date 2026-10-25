@@ -56,84 +56,84 @@ export type ABRT_diagnostic = _enum_for_ABRT_diagnostic | ENUMERATED;
  * @constant
  * @type {number}
  */
-export const ABRT_diagnostic_no_reason_given: ABRT_diagnostic = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ABRT_diagnostic_no_reason_given = _enum_for_ABRT_diagnostic.no_reason_given satisfies ABRT_diagnostic; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary no_reason_given
  * @constant
  * @type {number}
  */
-export const no_reason_given: ABRT_diagnostic = ABRT_diagnostic_no_reason_given; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const no_reason_given = ABRT_diagnostic_no_reason_given satisfies ABRT_diagnostic; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ABRT_diagnostic_protocol_error
  * @constant
  * @type {number}
  */
-export const ABRT_diagnostic_protocol_error: ABRT_diagnostic = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ABRT_diagnostic_protocol_error = _enum_for_ABRT_diagnostic.protocol_error satisfies ABRT_diagnostic; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary protocol_error
  * @constant
  * @type {number}
  */
-export const protocol_error: ABRT_diagnostic = ABRT_diagnostic_protocol_error; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const protocol_error = ABRT_diagnostic_protocol_error satisfies ABRT_diagnostic; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ABRT_diagnostic_authentication_mechanism_name_not_recognized
  * @constant
  * @type {number}
  */
-export const ABRT_diagnostic_authentication_mechanism_name_not_recognized: ABRT_diagnostic = 3; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ABRT_diagnostic_authentication_mechanism_name_not_recognized = _enum_for_ABRT_diagnostic.authentication_mechanism_name_not_recognized satisfies ABRT_diagnostic; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary authentication_mechanism_name_not_recognized
  * @constant
  * @type {number}
  */
-export const authentication_mechanism_name_not_recognized: ABRT_diagnostic = ABRT_diagnostic_authentication_mechanism_name_not_recognized; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const authentication_mechanism_name_not_recognized = ABRT_diagnostic_authentication_mechanism_name_not_recognized satisfies ABRT_diagnostic; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ABRT_diagnostic_authentication_mechanism_name_required
  * @constant
  * @type {number}
  */
-export const ABRT_diagnostic_authentication_mechanism_name_required: ABRT_diagnostic = 4; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ABRT_diagnostic_authentication_mechanism_name_required = _enum_for_ABRT_diagnostic.authentication_mechanism_name_required satisfies ABRT_diagnostic; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary authentication_mechanism_name_required
  * @constant
  * @type {number}
  */
-export const authentication_mechanism_name_required: ABRT_diagnostic = ABRT_diagnostic_authentication_mechanism_name_required; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const authentication_mechanism_name_required = ABRT_diagnostic_authentication_mechanism_name_required satisfies ABRT_diagnostic; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ABRT_diagnostic_authentication_failure
  * @constant
  * @type {number}
  */
-export const ABRT_diagnostic_authentication_failure: ABRT_diagnostic = 5; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ABRT_diagnostic_authentication_failure = _enum_for_ABRT_diagnostic.authentication_failure satisfies ABRT_diagnostic; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary authentication_failure
  * @constant
  * @type {number}
  */
-export const authentication_failure: ABRT_diagnostic = ABRT_diagnostic_authentication_failure; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const authentication_failure = ABRT_diagnostic_authentication_failure satisfies ABRT_diagnostic; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ABRT_diagnostic_authentication_required
  * @constant
  * @type {number}
  */
-export const ABRT_diagnostic_authentication_required: ABRT_diagnostic = 6; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ABRT_diagnostic_authentication_required = _enum_for_ABRT_diagnostic.authentication_required satisfies ABRT_diagnostic; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary authentication_required
  * @constant
  * @type {number}
  */
-export const authentication_required: ABRT_diagnostic = ABRT_diagnostic_authentication_required; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const authentication_required = ABRT_diagnostic_authentication_required satisfies ABRT_diagnostic; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 export const _decode_ABRT_diagnostic = $._decodeEnumerated;

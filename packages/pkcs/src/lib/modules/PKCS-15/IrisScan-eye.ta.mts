@@ -56,8 +56,8 @@ export const IrisScan_eye = _enum_for_IrisScan_eye;
  * @constant
  * @type {number}
  */
-export const IrisScan_eye_left: IrisScan_eye =
-    IrisScan_eye.left; /* LONG_NAMED_ENUMERATED_VALUE */
+export const IrisScan_eye_left =
+    IrisScan_eye.left satisfies IrisScan_eye; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -65,8 +65,8 @@ export const IrisScan_eye_left: IrisScan_eye =
  * @constant
  * @type {number}
  */
-export const left: IrisScan_eye =
-    IrisScan_eye.left; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const left =
+    IrisScan_eye.left satisfies IrisScan_eye; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -74,8 +74,8 @@ export const left: IrisScan_eye =
  * @constant
  * @type {number}
  */
-export const IrisScan_eye_right: IrisScan_eye =
-    IrisScan_eye.right; /* LONG_NAMED_ENUMERATED_VALUE */
+export const IrisScan_eye_right =
+    IrisScan_eye.right satisfies IrisScan_eye; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -83,8 +83,8 @@ export const IrisScan_eye_right: IrisScan_eye =
  * @constant
  * @type {number}
  */
-export const right: IrisScan_eye =
-    IrisScan_eye.right; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const right =
+    IrisScan_eye.right satisfies IrisScan_eye; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 

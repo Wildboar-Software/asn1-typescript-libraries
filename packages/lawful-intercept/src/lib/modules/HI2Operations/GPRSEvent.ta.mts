@@ -224,7 +224,7 @@ type GPRSEvent = _enum_for_GPRSEvent | ENUMERATED;
  * @type {number}
  */
 export
-const GPRSEvent_pDPContextActivation: GPRSEvent = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const GPRSEvent_pDPContextActivation = _enum_for_GPRSEvent.pDPContextActivation satisfies GPRSEvent; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pDPContextActivation
@@ -246,7 +246,7 @@ const GPRSEvent_pDPContextActivation: GPRSEvent = 1; /* LONG_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const pDPContextActivation: GPRSEvent = GPRSEvent_pDPContextActivation; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pDPContextActivation = GPRSEvent_pDPContextActivation satisfies GPRSEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary GPRSEvent_startOfInterceptionWithPDPContextActive
@@ -266,7 +266,7 @@ const pDPContextActivation: GPRSEvent = GPRSEvent_pDPContextActivation; /* SHORT
  * @type {number}
  */
 export
-const GPRSEvent_startOfInterceptionWithPDPContextActive: GPRSEvent = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+const GPRSEvent_startOfInterceptionWithPDPContextActive = _enum_for_GPRSEvent.startOfInterceptionWithPDPContextActive satisfies GPRSEvent; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary startOfInterceptionWithPDPContextActive
@@ -286,7 +286,7 @@ const GPRSEvent_startOfInterceptionWithPDPContextActive: GPRSEvent = 2; /* LONG_
  * @type {number}
  */
 export
-const startOfInterceptionWithPDPContextActive: GPRSEvent = GPRSEvent_startOfInterceptionWithPDPContextActive; /* SHORT_NAMED_ENUMERATED_VALUE */
+const startOfInterceptionWithPDPContextActive = GPRSEvent_startOfInterceptionWithPDPContextActive satisfies GPRSEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary GPRSEvent_pDPContextDeactivation
@@ -305,7 +305,7 @@ const startOfInterceptionWithPDPContextActive: GPRSEvent = GPRSEvent_startOfInte
  * @type {number}
  */
 export
-const GPRSEvent_pDPContextDeactivation: GPRSEvent = 4; /* LONG_NAMED_ENUMERATED_VALUE */
+const GPRSEvent_pDPContextDeactivation = _enum_for_GPRSEvent.pDPContextDeactivation satisfies GPRSEvent; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pDPContextDeactivation
@@ -324,7 +324,7 @@ const GPRSEvent_pDPContextDeactivation: GPRSEvent = 4; /* LONG_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const pDPContextDeactivation: GPRSEvent = GPRSEvent_pDPContextDeactivation; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pDPContextDeactivation = GPRSEvent_pDPContextDeactivation satisfies GPRSEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary GPRSEvent_gPRSAttach
@@ -342,7 +342,7 @@ const pDPContextDeactivation: GPRSEvent = GPRSEvent_pDPContextDeactivation; /* S
  * @type {number}
  */
 export
-const GPRSEvent_gPRSAttach: GPRSEvent = 5; /* LONG_NAMED_ENUMERATED_VALUE */
+const GPRSEvent_gPRSAttach = _enum_for_GPRSEvent.gPRSAttach satisfies GPRSEvent; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary gPRSAttach
@@ -360,7 +360,7 @@ const GPRSEvent_gPRSAttach: GPRSEvent = 5; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const gPRSAttach: GPRSEvent = GPRSEvent_gPRSAttach; /* SHORT_NAMED_ENUMERATED_VALUE */
+const gPRSAttach = GPRSEvent_gPRSAttach satisfies GPRSEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary GPRSEvent_gPRSDetach
@@ -376,7 +376,7 @@ const gPRSAttach: GPRSEvent = GPRSEvent_gPRSAttach; /* SHORT_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const GPRSEvent_gPRSDetach: GPRSEvent = 6; /* LONG_NAMED_ENUMERATED_VALUE */
+const GPRSEvent_gPRSDetach = _enum_for_GPRSEvent.gPRSDetach satisfies GPRSEvent; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary gPRSDetach
@@ -392,7 +392,7 @@ const GPRSEvent_gPRSDetach: GPRSEvent = 6; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const gPRSDetach: GPRSEvent = GPRSEvent_gPRSDetach; /* SHORT_NAMED_ENUMERATED_VALUE */
+const gPRSDetach = GPRSEvent_gPRSDetach satisfies GPRSEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary GPRSEvent_cellOrRAUpdate
@@ -408,7 +408,7 @@ const gPRSDetach: GPRSEvent = GPRSEvent_gPRSDetach; /* SHORT_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const GPRSEvent_cellOrRAUpdate: GPRSEvent = 10; /* LONG_NAMED_ENUMERATED_VALUE */
+const GPRSEvent_cellOrRAUpdate = _enum_for_GPRSEvent.cellOrRAUpdate satisfies GPRSEvent; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary cellOrRAUpdate
@@ -424,7 +424,7 @@ const GPRSEvent_cellOrRAUpdate: GPRSEvent = 10; /* LONG_NAMED_ENUMERATED_VALUE *
  * @type {number}
  */
 export
-const cellOrRAUpdate: GPRSEvent = GPRSEvent_cellOrRAUpdate; /* SHORT_NAMED_ENUMERATED_VALUE */
+const cellOrRAUpdate = GPRSEvent_cellOrRAUpdate satisfies GPRSEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary GPRSEvent_sMS
@@ -442,7 +442,7 @@ const cellOrRAUpdate: GPRSEvent = GPRSEvent_cellOrRAUpdate; /* SHORT_NAMED_ENUME
  * @type {number}
  */
 export
-const GPRSEvent_sMS: GPRSEvent = 11; /* LONG_NAMED_ENUMERATED_VALUE */
+const GPRSEvent_sMS = _enum_for_GPRSEvent.sMS satisfies GPRSEvent; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sMS
@@ -460,7 +460,7 @@ const GPRSEvent_sMS: GPRSEvent = 11; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const sMS: GPRSEvent = GPRSEvent_sMS; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sMS = GPRSEvent_sMS satisfies GPRSEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary GPRSEvent_pDPContextModification
@@ -476,7 +476,7 @@ const sMS: GPRSEvent = GPRSEvent_sMS; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const GPRSEvent_pDPContextModification: GPRSEvent = 13; /* LONG_NAMED_ENUMERATED_VALUE */
+const GPRSEvent_pDPContextModification = _enum_for_GPRSEvent.pDPContextModification satisfies GPRSEvent; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pDPContextModification
@@ -492,7 +492,7 @@ const GPRSEvent_pDPContextModification: GPRSEvent = 13; /* LONG_NAMED_ENUMERATED
  * @type {number}
  */
 export
-const pDPContextModification: GPRSEvent = GPRSEvent_pDPContextModification; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pDPContextModification = GPRSEvent_pDPContextModification satisfies GPRSEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary GPRSEvent_endOfInterceptionWithPDPContextActive
@@ -512,7 +512,7 @@ const pDPContextModification: GPRSEvent = GPRSEvent_pDPContextModification; /* S
  * @type {number}
  */
 export
-const GPRSEvent_endOfInterceptionWithPDPContextActive: GPRSEvent = 14; /* LONG_NAMED_ENUMERATED_VALUE */
+const GPRSEvent_endOfInterceptionWithPDPContextActive = _enum_for_GPRSEvent.endOfInterceptionWithPDPContextActive satisfies GPRSEvent; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary endOfInterceptionWithPDPContextActive
@@ -532,7 +532,7 @@ const GPRSEvent_endOfInterceptionWithPDPContextActive: GPRSEvent = 14; /* LONG_N
  * @type {number}
  */
 export
-const endOfInterceptionWithPDPContextActive: GPRSEvent = GPRSEvent_endOfInterceptionWithPDPContextActive; /* SHORT_NAMED_ENUMERATED_VALUE */
+const endOfInterceptionWithPDPContextActive = GPRSEvent_endOfInterceptionWithPDPContextActive satisfies GPRSEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_GPRSEvent: $.ASN1Decoder<GPRSEvent> = $._decodeEnumerated;
 export const _encode_GPRSEvent: $.ASN1Encoder<GPRSEvent> = $._encodeEnumerated;
 

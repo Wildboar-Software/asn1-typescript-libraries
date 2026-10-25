@@ -38,7 +38,7 @@ type ReturnResultProblem = INTEGER;
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
  */
 export
-const ReturnResultProblem_unrecognisedInvocation: ReturnResultProblem = 0; /* LONG_NAMED_INTEGER_VALUE */
+const ReturnResultProblem_unrecognisedInvocation = 0 satisfies ReturnResultProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary unrecognisedInvocation
@@ -47,7 +47,7 @@ const ReturnResultProblem_unrecognisedInvocation: ReturnResultProblem = 0; /* LO
  * @type {number}
  */
 export
-const unrecognisedInvocation: ReturnResultProblem = ReturnResultProblem_unrecognisedInvocation; /* SHORT_NAMED_INTEGER_VALUE */
+const unrecognisedInvocation = ReturnResultProblem_unrecognisedInvocation satisfies ReturnResultProblem; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ReturnResultProblem_resultResponseUnexpected
@@ -59,7 +59,7 @@ const unrecognisedInvocation: ReturnResultProblem = ReturnResultProblem_unrecogn
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
  */
 export
-const ReturnResultProblem_resultResponseUnexpected: ReturnResultProblem = 1; /* LONG_NAMED_INTEGER_VALUE */
+const ReturnResultProblem_resultResponseUnexpected = 1 satisfies ReturnResultProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary resultResponseUnexpected
@@ -68,7 +68,7 @@ const ReturnResultProblem_resultResponseUnexpected: ReturnResultProblem = 1; /* 
  * @type {number}
  */
 export
-const resultResponseUnexpected: ReturnResultProblem = ReturnResultProblem_resultResponseUnexpected; /* SHORT_NAMED_INTEGER_VALUE */
+const resultResponseUnexpected = ReturnResultProblem_resultResponseUnexpected satisfies ReturnResultProblem; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ReturnResultProblem_mistypedResult
@@ -81,7 +81,7 @@ const resultResponseUnexpected: ReturnResultProblem = ReturnResultProblem_result
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
  */
 export
-const ReturnResultProblem_mistypedResult: ReturnResultProblem = 2; /* LONG_NAMED_INTEGER_VALUE */
+const ReturnResultProblem_mistypedResult = 2 satisfies ReturnResultProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary mistypedResult
@@ -90,7 +90,7 @@ const ReturnResultProblem_mistypedResult: ReturnResultProblem = 2; /* LONG_NAMED
  * @type {number}
  */
 export
-const mistypedResult: ReturnResultProblem = ReturnResultProblem_mistypedResult; /* SHORT_NAMED_INTEGER_VALUE */
+const mistypedResult = ReturnResultProblem_mistypedResult satisfies ReturnResultProblem; /* SHORT_NAMED_INTEGER_VALUE */
 
 export
 const _decode_ReturnResultProblem: $.ASN1Decoder<ReturnResultProblem> = $._decodeInteger;

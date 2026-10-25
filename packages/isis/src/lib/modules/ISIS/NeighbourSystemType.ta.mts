@@ -88,16 +88,16 @@ export const NeighbourSystemType = _enum_for_NeighbourSystemType;
  * @constant
  * @type {number}
  */
-export const NeighbourSystemType_unknown: NeighbourSystemType =
-  NeighbourSystemType.unknown; /* LONG_NAMED_ENUMERATED_VALUE */
+export const NeighbourSystemType_unknown =
+  NeighbourSystemType.unknown satisfies NeighbourSystemType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unknown
  * @constant
  * @type {number}
  */
-export const unknown: NeighbourSystemType =
-  NeighbourSystemType.unknown; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const unknown =
+  NeighbourSystemType.unknown satisfies NeighbourSystemType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NeighbourSystemType_endSystem
@@ -110,16 +110,16 @@ export const unknown: NeighbourSystemType =
  * @constant
  * @type {number}
  */
-export const NeighbourSystemType_endSystem: NeighbourSystemType =
-  NeighbourSystemType.endSystem; /* LONG_NAMED_ENUMERATED_VALUE */
+export const NeighbourSystemType_endSystem =
+  NeighbourSystemType.endSystem satisfies NeighbourSystemType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary endSystem
  * @constant
  * @type {number}
  */
-export const endSystem: NeighbourSystemType =
-  NeighbourSystemType.endSystem; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const endSystem =
+  NeighbourSystemType.endSystem satisfies NeighbourSystemType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NeighbourSystemType_intermediateSystem
@@ -132,16 +132,16 @@ export const endSystem: NeighbourSystemType =
  * @constant
  * @type {number}
  */
-export const NeighbourSystemType_intermediateSystem: NeighbourSystemType =
-  NeighbourSystemType.intermediateSystem; /* LONG_NAMED_ENUMERATED_VALUE */
+export const NeighbourSystemType_intermediateSystem =
+  NeighbourSystemType.intermediateSystem satisfies NeighbourSystemType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary intermediateSystem
  * @constant
  * @type {number}
  */
-export const intermediateSystem: NeighbourSystemType =
-  NeighbourSystemType.intermediateSystem; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const intermediateSystem =
+  NeighbourSystemType.intermediateSystem satisfies NeighbourSystemType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NeighbourSystemType_l1IntermediateSystem
@@ -154,16 +154,16 @@ export const intermediateSystem: NeighbourSystemType =
  * @constant
  * @type {number}
  */
-export const NeighbourSystemType_l1IntermediateSystem: NeighbourSystemType =
-  NeighbourSystemType.l1IntermediateSystem; /* LONG_NAMED_ENUMERATED_VALUE */
+export const NeighbourSystemType_l1IntermediateSystem =
+  NeighbourSystemType.l1IntermediateSystem satisfies NeighbourSystemType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary l1IntermediateSystem
  * @constant
  * @type {number}
  */
-export const l1IntermediateSystem: NeighbourSystemType =
-  NeighbourSystemType.l1IntermediateSystem; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const l1IntermediateSystem =
+  NeighbourSystemType.l1IntermediateSystem satisfies NeighbourSystemType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NeighbourSystemType_l2IntermediateSystem
@@ -176,16 +176,16 @@ export const l1IntermediateSystem: NeighbourSystemType =
  * @constant
  * @type {number}
  */
-export const NeighbourSystemType_l2IntermediateSystem: NeighbourSystemType =
-  NeighbourSystemType.l2IntermediateSystem; /* LONG_NAMED_ENUMERATED_VALUE */
+export const NeighbourSystemType_l2IntermediateSystem =
+  NeighbourSystemType.l2IntermediateSystem satisfies NeighbourSystemType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary l2IntermediateSystem
  * @constant
  * @type {number}
  */
-export const l2IntermediateSystem: NeighbourSystemType =
-  NeighbourSystemType.l2IntermediateSystem; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const l2IntermediateSystem =
+  NeighbourSystemType.l2IntermediateSystem satisfies NeighbourSystemType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 export function _decode_NeighbourSystemType(el: _Element): NeighbourSystemType {

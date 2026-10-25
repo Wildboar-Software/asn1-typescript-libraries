@@ -59,7 +59,7 @@ type MMSStatus = _enum_for_MMSStatus | ENUMERATED;
  * @type {number}
  */
 export
-const MMSStatus_expired: MMSStatus = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMSStatus_expired = _enum_for_MMSStatus.expired satisfies MMSStatus; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary expired
@@ -70,7 +70,7 @@ const MMSStatus_expired: MMSStatus = 0; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const expired: MMSStatus = MMSStatus_expired; /* SHORT_NAMED_ENUMERATED_VALUE */
+const expired = MMSStatus_expired satisfies MMSStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMSStatus_retrieved
@@ -82,7 +82,7 @@ const expired: MMSStatus = MMSStatus_expired; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const MMSStatus_retrieved: MMSStatus = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMSStatus_retrieved = _enum_for_MMSStatus.retrieved satisfies MMSStatus; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary retrieved
@@ -93,7 +93,7 @@ const MMSStatus_retrieved: MMSStatus = 1; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const retrieved: MMSStatus = MMSStatus_retrieved; /* SHORT_NAMED_ENUMERATED_VALUE */
+const retrieved = MMSStatus_retrieved satisfies MMSStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMSStatus_rejected
@@ -104,7 +104,7 @@ const retrieved: MMSStatus = MMSStatus_retrieved; /* SHORT_NAMED_ENUMERATED_VALU
  * @type {number}
  */
 export
-const MMSStatus_rejected: MMSStatus = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMSStatus_rejected = _enum_for_MMSStatus.rejected satisfies MMSStatus; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary rejected
@@ -115,7 +115,7 @@ const MMSStatus_rejected: MMSStatus = 2; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const rejected: MMSStatus = MMSStatus_rejected; /* SHORT_NAMED_ENUMERATED_VALUE */
+const rejected = MMSStatus_rejected satisfies MMSStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMSStatus_deferred
@@ -126,7 +126,7 @@ const rejected: MMSStatus = MMSStatus_rejected; /* SHORT_NAMED_ENUMERATED_VALUE 
  * @type {number}
  */
 export
-const MMSStatus_deferred: MMSStatus = 3; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMSStatus_deferred = _enum_for_MMSStatus.deferred satisfies MMSStatus; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary deferred
@@ -137,7 +137,7 @@ const MMSStatus_deferred: MMSStatus = 3; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const deferred: MMSStatus = MMSStatus_deferred; /* SHORT_NAMED_ENUMERATED_VALUE */
+const deferred = MMSStatus_deferred satisfies MMSStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMSStatus_unrecognised
@@ -148,7 +148,7 @@ const deferred: MMSStatus = MMSStatus_deferred; /* SHORT_NAMED_ENUMERATED_VALUE 
  * @type {number}
  */
 export
-const MMSStatus_unrecognised: MMSStatus = 4; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMSStatus_unrecognised = _enum_for_MMSStatus.unrecognised satisfies MMSStatus; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unrecognised
@@ -159,7 +159,7 @@ const MMSStatus_unrecognised: MMSStatus = 4; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const unrecognised: MMSStatus = MMSStatus_unrecognised; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unrecognised = MMSStatus_unrecognised satisfies MMSStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMSStatus_indeterminate
@@ -170,7 +170,7 @@ const unrecognised: MMSStatus = MMSStatus_unrecognised; /* SHORT_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const MMSStatus_indeterminate: MMSStatus = 5; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMSStatus_indeterminate = _enum_for_MMSStatus.indeterminate satisfies MMSStatus; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary indeterminate
@@ -181,7 +181,7 @@ const MMSStatus_indeterminate: MMSStatus = 5; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const indeterminate: MMSStatus = MMSStatus_indeterminate; /* SHORT_NAMED_ENUMERATED_VALUE */
+const indeterminate = MMSStatus_indeterminate satisfies MMSStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMSStatus_forwarded
@@ -192,7 +192,7 @@ const indeterminate: MMSStatus = MMSStatus_indeterminate; /* SHORT_NAMED_ENUMERA
  * @type {number}
  */
 export
-const MMSStatus_forwarded: MMSStatus = 6; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMSStatus_forwarded = _enum_for_MMSStatus.forwarded satisfies MMSStatus; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary forwarded
@@ -203,7 +203,7 @@ const MMSStatus_forwarded: MMSStatus = 6; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const forwarded: MMSStatus = MMSStatus_forwarded; /* SHORT_NAMED_ENUMERATED_VALUE */
+const forwarded = MMSStatus_forwarded satisfies MMSStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMSStatus_unreachable
@@ -214,7 +214,7 @@ const forwarded: MMSStatus = MMSStatus_forwarded; /* SHORT_NAMED_ENUMERATED_VALU
  * @type {number}
  */
 export
-const MMSStatus_unreachable: MMSStatus = 7; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMSStatus_unreachable = _enum_for_MMSStatus.unreachable satisfies MMSStatus; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unreachable
@@ -225,7 +225,7 @@ const MMSStatus_unreachable: MMSStatus = 7; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const unreachable: MMSStatus = MMSStatus_unreachable; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unreachable = MMSStatus_unreachable satisfies MMSStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_MMSStatus: $.ASN1Decoder<MMSStatus> = $._decodeEnumerated;
 export const _encode_MMSStatus: $.ASN1Encoder<MMSStatus> = $._encodeEnumerated;
 

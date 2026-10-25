@@ -38,7 +38,7 @@ type DeleteResultSetRequest_deleteFunction = INTEGER;
  * @type {number}
  */
 export
-const DeleteResultSetRequest_deleteFunction_list: DeleteResultSetRequest_deleteFunction = 0; /* LONG_NAMED_INTEGER_VALUE */
+const DeleteResultSetRequest_deleteFunction_list = 0 satisfies DeleteResultSetRequest_deleteFunction; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeleteResultSetRequest_deleteFunction_list
@@ -51,7 +51,7 @@ const DeleteResultSetRequest_deleteFunction_list: DeleteResultSetRequest_deleteF
  * @type {number}
  */
 export
-const list: DeleteResultSetRequest_deleteFunction = DeleteResultSetRequest_deleteFunction_list; /* SHORT_NAMED_INTEGER_VALUE */
+const list = DeleteResultSetRequest_deleteFunction_list satisfies DeleteResultSetRequest_deleteFunction; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeleteResultSetRequest_deleteFunction_all
@@ -65,7 +65,7 @@ const list: DeleteResultSetRequest_deleteFunction = DeleteResultSetRequest_delet
  * @type {number}
  */
 export
-const DeleteResultSetRequest_deleteFunction_all: DeleteResultSetRequest_deleteFunction = 1; /* LONG_NAMED_INTEGER_VALUE */
+const DeleteResultSetRequest_deleteFunction_all = 1 satisfies DeleteResultSetRequest_deleteFunction; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeleteResultSetRequest_deleteFunction_all
@@ -79,7 +79,7 @@ const DeleteResultSetRequest_deleteFunction_all: DeleteResultSetRequest_deleteFu
  * @type {number}
  */
 export
-const all: DeleteResultSetRequest_deleteFunction = DeleteResultSetRequest_deleteFunction_all; /* SHORT_NAMED_INTEGER_VALUE */
+const all = DeleteResultSetRequest_deleteFunction_all satisfies DeleteResultSetRequest_deleteFunction; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_DeleteResultSetRequest_deleteFunction: $.ASN1Decoder<DeleteResultSetRequest_deleteFunction> = $._decodeInteger;
 export const _encode_DeleteResultSetRequest_deleteFunction: $.ASN1Encoder<DeleteResultSetRequest_deleteFunction> = $._encodeInteger;
 

@@ -110,7 +110,7 @@ const AMFRegistrationType = _enum_for_AMFRegistrationType;
  * @type {number}
  */
 export
-const AMFRegistrationType_initial: AMFRegistrationType = AMFRegistrationType.initial; /* LONG_NAMED_ENUMERATED_VALUE */
+const AMFRegistrationType_initial = AMFRegistrationType.initial satisfies AMFRegistrationType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary initial
@@ -118,7 +118,7 @@ const AMFRegistrationType_initial: AMFRegistrationType = AMFRegistrationType.ini
  * @type {number}
  */
 export
-const initial: AMFRegistrationType = AMFRegistrationType.initial; /* SHORT_NAMED_ENUMERATED_VALUE */
+const initial = AMFRegistrationType.initial satisfies AMFRegistrationType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AMFRegistrationType_mobility
@@ -126,7 +126,7 @@ const initial: AMFRegistrationType = AMFRegistrationType.initial; /* SHORT_NAMED
  * @type {number}
  */
 export
-const AMFRegistrationType_mobility: AMFRegistrationType = AMFRegistrationType.mobility; /* LONG_NAMED_ENUMERATED_VALUE */
+const AMFRegistrationType_mobility = AMFRegistrationType.mobility satisfies AMFRegistrationType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary mobility
@@ -134,7 +134,7 @@ const AMFRegistrationType_mobility: AMFRegistrationType = AMFRegistrationType.mo
  * @type {number}
  */
 export
-const mobility: AMFRegistrationType = AMFRegistrationType.mobility; /* SHORT_NAMED_ENUMERATED_VALUE */
+const mobility = AMFRegistrationType.mobility satisfies AMFRegistrationType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AMFRegistrationType_periodic
@@ -142,7 +142,7 @@ const mobility: AMFRegistrationType = AMFRegistrationType.mobility; /* SHORT_NAM
  * @type {number}
  */
 export
-const AMFRegistrationType_periodic: AMFRegistrationType = AMFRegistrationType.periodic; /* LONG_NAMED_ENUMERATED_VALUE */
+const AMFRegistrationType_periodic = AMFRegistrationType.periodic satisfies AMFRegistrationType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary periodic
@@ -150,7 +150,7 @@ const AMFRegistrationType_periodic: AMFRegistrationType = AMFRegistrationType.pe
  * @type {number}
  */
 export
-const periodic: AMFRegistrationType = AMFRegistrationType.periodic; /* SHORT_NAMED_ENUMERATED_VALUE */
+const periodic = AMFRegistrationType.periodic satisfies AMFRegistrationType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AMFRegistrationType_emergency
@@ -158,7 +158,7 @@ const periodic: AMFRegistrationType = AMFRegistrationType.periodic; /* SHORT_NAM
  * @type {number}
  */
 export
-const AMFRegistrationType_emergency: AMFRegistrationType = AMFRegistrationType.emergency; /* LONG_NAMED_ENUMERATED_VALUE */
+const AMFRegistrationType_emergency = AMFRegistrationType.emergency satisfies AMFRegistrationType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary emergency
@@ -166,7 +166,7 @@ const AMFRegistrationType_emergency: AMFRegistrationType = AMFRegistrationType.e
  * @type {number}
  */
 export
-const emergency: AMFRegistrationType = AMFRegistrationType.emergency; /* SHORT_NAMED_ENUMERATED_VALUE */
+const emergency = AMFRegistrationType.emergency satisfies AMFRegistrationType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AMFRegistrationType_sNPNOnboarding
@@ -174,7 +174,7 @@ const emergency: AMFRegistrationType = AMFRegistrationType.emergency; /* SHORT_N
  * @type {number}
  */
 export
-const AMFRegistrationType_sNPNOnboarding: AMFRegistrationType = AMFRegistrationType.sNPNOnboarding; /* LONG_NAMED_ENUMERATED_VALUE */
+const AMFRegistrationType_sNPNOnboarding = AMFRegistrationType.sNPNOnboarding satisfies AMFRegistrationType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sNPNOnboarding
@@ -182,7 +182,7 @@ const AMFRegistrationType_sNPNOnboarding: AMFRegistrationType = AMFRegistrationT
  * @type {number}
  */
 export
-const sNPNOnboarding: AMFRegistrationType = AMFRegistrationType.sNPNOnboarding; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sNPNOnboarding = AMFRegistrationType.sNPNOnboarding satisfies AMFRegistrationType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AMFRegistrationType_disasterMobility
@@ -190,7 +190,7 @@ const sNPNOnboarding: AMFRegistrationType = AMFRegistrationType.sNPNOnboarding; 
  * @type {number}
  */
 export
-const AMFRegistrationType_disasterMobility: AMFRegistrationType = AMFRegistrationType.disasterMobility; /* LONG_NAMED_ENUMERATED_VALUE */
+const AMFRegistrationType_disasterMobility = AMFRegistrationType.disasterMobility satisfies AMFRegistrationType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary disasterMobility
@@ -198,7 +198,7 @@ const AMFRegistrationType_disasterMobility: AMFRegistrationType = AMFRegistratio
  * @type {number}
  */
 export
-const disasterMobility: AMFRegistrationType = AMFRegistrationType.disasterMobility; /* SHORT_NAMED_ENUMERATED_VALUE */
+const disasterMobility = AMFRegistrationType.disasterMobility satisfies AMFRegistrationType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AMFRegistrationType_disasterInitial
@@ -206,7 +206,7 @@ const disasterMobility: AMFRegistrationType = AMFRegistrationType.disasterMobili
  * @type {number}
  */
 export
-const AMFRegistrationType_disasterInitial: AMFRegistrationType = AMFRegistrationType.disasterInitial; /* LONG_NAMED_ENUMERATED_VALUE */
+const AMFRegistrationType_disasterInitial = AMFRegistrationType.disasterInitial satisfies AMFRegistrationType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary disasterInitial
@@ -214,7 +214,7 @@ const AMFRegistrationType_disasterInitial: AMFRegistrationType = AMFRegistration
  * @type {number}
  */
 export
-const disasterInitial: AMFRegistrationType = AMFRegistrationType.disasterInitial; /* SHORT_NAMED_ENUMERATED_VALUE */
+const disasterInitial = AMFRegistrationType.disasterInitial satisfies AMFRegistrationType; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_AMFRegistrationType: $.ASN1Decoder<AMFRegistrationType> = $._decodeEnumerated;
 export const _encode_AMFRegistrationType: $.ASN1Encoder<AMFRegistrationType> = $._encodeEnumerated;
 

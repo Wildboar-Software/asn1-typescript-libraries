@@ -33,42 +33,42 @@ export type AuthenticationLevel_basicLevels_level =
  * @constant
  * @type {number}
  */
-export const AuthenticationLevel_basicLevels_level_none: AuthenticationLevel_basicLevels_level = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+export const AuthenticationLevel_basicLevels_level_none = _enum_for_AuthenticationLevel_basicLevels_level.none satisfies AuthenticationLevel_basicLevels_level; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary none
  * @constant
  * @type {number}
  */
-export const none: AuthenticationLevel_basicLevels_level = AuthenticationLevel_basicLevels_level_none; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const none = AuthenticationLevel_basicLevels_level_none satisfies AuthenticationLevel_basicLevels_level; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AuthenticationLevel_basicLevels_level_simple
  * @constant
  * @type {number}
  */
-export const AuthenticationLevel_basicLevels_level_simple: AuthenticationLevel_basicLevels_level = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+export const AuthenticationLevel_basicLevels_level_simple = _enum_for_AuthenticationLevel_basicLevels_level.simple satisfies AuthenticationLevel_basicLevels_level; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary simple
  * @constant
  * @type {number}
  */
-export const simple: AuthenticationLevel_basicLevels_level = AuthenticationLevel_basicLevels_level_simple; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const simple = AuthenticationLevel_basicLevels_level_simple satisfies AuthenticationLevel_basicLevels_level; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AuthenticationLevel_basicLevels_level_strong
  * @constant
  * @type {number}
  */
-export const AuthenticationLevel_basicLevels_level_strong: AuthenticationLevel_basicLevels_level = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+export const AuthenticationLevel_basicLevels_level_strong = _enum_for_AuthenticationLevel_basicLevels_level.strong satisfies AuthenticationLevel_basicLevels_level; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary strong
  * @constant
  * @type {number}
  */
-export const strong: AuthenticationLevel_basicLevels_level = AuthenticationLevel_basicLevels_level_strong; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const strong = AuthenticationLevel_basicLevels_level_strong satisfies AuthenticationLevel_basicLevels_level; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 let _cached_decoder_for_AuthenticationLevel_basicLevels_level: $.ASN1Decoder<AuthenticationLevel_basicLevels_level> | null = null;
 

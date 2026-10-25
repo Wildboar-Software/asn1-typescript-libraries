@@ -34,140 +34,140 @@ export type ProcessingState = INTEGER;
  * @constant
  * @type {number}
  */
-export const ProcessingState_idle: ProcessingState = 0; /* LONG_NAMED_INTEGER_VALUE */
+export const ProcessingState_idle = 0 satisfies ProcessingState; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProcessingState_idle
  * @constant
  * @type {number}
  */
-export const idle: ProcessingState = ProcessingState_idle; /* SHORT_NAMED_INTEGER_VALUE */
+export const idle = ProcessingState_idle satisfies ProcessingState; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProcessingState_processed
  * @constant
  * @type {number}
  */
-export const ProcessingState_processed: ProcessingState = 1; /* LONG_NAMED_INTEGER_VALUE */
+export const ProcessingState_processed = 1 satisfies ProcessingState; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProcessingState_processed
  * @constant
  * @type {number}
  */
-export const processed: ProcessingState = ProcessingState_processed; /* SHORT_NAMED_INTEGER_VALUE */
+export const processed = ProcessingState_processed satisfies ProcessingState; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProcessingState_rejected
  * @constant
  * @type {number}
  */
-export const ProcessingState_rejected: ProcessingState = 2; /* LONG_NAMED_INTEGER_VALUE */
+export const ProcessingState_rejected = 2 satisfies ProcessingState; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProcessingState_rejected
  * @constant
  * @type {number}
  */
-export const rejected: ProcessingState = ProcessingState_rejected; /* SHORT_NAMED_INTEGER_VALUE */
+export const rejected = ProcessingState_rejected satisfies ProcessingState; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProcessingState_name_resolution
  * @constant
  * @type {number}
  */
-export const ProcessingState_name_resolution: ProcessingState = 3; /* LONG_NAMED_INTEGER_VALUE */
+export const ProcessingState_name_resolution = 3 satisfies ProcessingState; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProcessingState_name_resolution
  * @constant
  * @type {number}
  */
-export const name_resolution: ProcessingState = ProcessingState_name_resolution; /* SHORT_NAMED_INTEGER_VALUE */
+export const name_resolution = ProcessingState_name_resolution satisfies ProcessingState; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProcessingState_dl_expansion
  * @constant
  * @type {number}
  */
-export const ProcessingState_dl_expansion: ProcessingState = 4; /* LONG_NAMED_INTEGER_VALUE */
+export const ProcessingState_dl_expansion = 4 satisfies ProcessingState; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProcessingState_dl_expansion
  * @constant
  * @type {number}
  */
-export const dl_expansion: ProcessingState = ProcessingState_dl_expansion; /* SHORT_NAMED_INTEGER_VALUE */
+export const dl_expansion = ProcessingState_dl_expansion satisfies ProcessingState; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProcessingState_redirection
  * @constant
  * @type {number}
  */
-export const ProcessingState_redirection: ProcessingState = 5; /* LONG_NAMED_INTEGER_VALUE */
+export const ProcessingState_redirection = 5 satisfies ProcessingState; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProcessingState_redirection
  * @constant
  * @type {number}
  */
-export const redirection: ProcessingState = ProcessingState_redirection; /* SHORT_NAMED_INTEGER_VALUE */
+export const redirection = ProcessingState_redirection satisfies ProcessingState; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProcessingState_deferred_delivery
  * @constant
  * @type {number}
  */
-export const ProcessingState_deferred_delivery: ProcessingState = 6; /* LONG_NAMED_INTEGER_VALUE */
+export const ProcessingState_deferred_delivery = 6 satisfies ProcessingState; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProcessingState_deferred_delivery
  * @constant
  * @type {number}
  */
-export const deferred_delivery: ProcessingState = ProcessingState_deferred_delivery; /* SHORT_NAMED_INTEGER_VALUE */
+export const deferred_delivery = ProcessingState_deferred_delivery satisfies ProcessingState; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProcessingState_conversion
  * @constant
  * @type {number}
  */
-export const ProcessingState_conversion: ProcessingState = 7; /* LONG_NAMED_INTEGER_VALUE */
+export const ProcessingState_conversion = 7 satisfies ProcessingState; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProcessingState_conversion
  * @constant
  * @type {number}
  */
-export const conversion: ProcessingState = ProcessingState_conversion; /* SHORT_NAMED_INTEGER_VALUE */
+export const conversion = ProcessingState_conversion satisfies ProcessingState; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProcessingState_securityContextCheck
  * @constant
  * @type {number}
  */
-export const ProcessingState_securityContextCheck: ProcessingState = 8; /* LONG_NAMED_INTEGER_VALUE */
+export const ProcessingState_securityContextCheck = 8 satisfies ProcessingState; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProcessingState_securityContextCheck
  * @constant
  * @type {number}
  */
-export const securityContextCheck: ProcessingState = ProcessingState_securityContextCheck; /* SHORT_NAMED_INTEGER_VALUE */
+export const securityContextCheck = ProcessingState_securityContextCheck satisfies ProcessingState; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProcessingState_unknownFunction
  * @constant
  * @type {number}
  */
-export const ProcessingState_unknownFunction: ProcessingState = 9; /* LONG_NAMED_INTEGER_VALUE */
+export const ProcessingState_unknownFunction = 9 satisfies ProcessingState; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProcessingState_unknownFunction
  * @constant
  * @type {number}
  */
-export const unknownFunction: ProcessingState = ProcessingState_unknownFunction; /* SHORT_NAMED_INTEGER_VALUE */
+export const unknownFunction = ProcessingState_unknownFunction satisfies ProcessingState; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_ProcessingState = $._decodeInteger;

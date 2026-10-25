@@ -49,7 +49,7 @@ export type RefuseReason = INTEGER;
  * @constant
  * @type {number}
  */
-export const RefuseReason_rtsBusy: RefuseReason = 0; /* LONG_NAMED_INTEGER_VALUE */
+export const RefuseReason_rtsBusy = 0 satisfies RefuseReason; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -58,7 +58,7 @@ export const RefuseReason_rtsBusy: RefuseReason = 0; /* LONG_NAMED_INTEGER_VALUE
  * @constant
  * @type {number}
  */
-export const rtsBusy: RefuseReason = RefuseReason_rtsBusy; /* SHORT_NAMED_INTEGER_VALUE */
+export const rtsBusy = RefuseReason_rtsBusy satisfies RefuseReason; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -68,7 +68,7 @@ export const rtsBusy: RefuseReason = RefuseReason_rtsBusy; /* SHORT_NAMED_INTEGE
  * @constant
  * @type {number}
  */
-export const RefuseReason_cannotRecover: RefuseReason = 1; /* LONG_NAMED_INTEGER_VALUE */
+export const RefuseReason_cannotRecover = 1 satisfies RefuseReason; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -77,7 +77,7 @@ export const RefuseReason_cannotRecover: RefuseReason = 1; /* LONG_NAMED_INTEGER
  * @constant
  * @type {number}
  */
-export const cannotRecover: RefuseReason = RefuseReason_cannotRecover; /* SHORT_NAMED_INTEGER_VALUE */
+export const cannotRecover = RefuseReason_cannotRecover satisfies RefuseReason; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -87,7 +87,7 @@ export const cannotRecover: RefuseReason = RefuseReason_cannotRecover; /* SHORT_
  * @constant
  * @type {number}
  */
-export const RefuseReason_validationFailure: RefuseReason = 2; /* LONG_NAMED_INTEGER_VALUE */
+export const RefuseReason_validationFailure = 2 satisfies RefuseReason; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -96,7 +96,7 @@ export const RefuseReason_validationFailure: RefuseReason = 2; /* LONG_NAMED_INT
  * @constant
  * @type {number}
  */
-export const validationFailure: RefuseReason = RefuseReason_validationFailure; /* SHORT_NAMED_INTEGER_VALUE */
+export const validationFailure = RefuseReason_validationFailure satisfies RefuseReason; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -106,7 +106,7 @@ export const validationFailure: RefuseReason = RefuseReason_validationFailure; /
  * @constant
  * @type {number}
  */
-export const RefuseReason_unacceptableDialogueMode: RefuseReason = 3; /* LONG_NAMED_INTEGER_VALUE */
+export const RefuseReason_unacceptableDialogueMode = 3 satisfies RefuseReason; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -115,7 +115,7 @@ export const RefuseReason_unacceptableDialogueMode: RefuseReason = 3; /* LONG_NA
  * @constant
  * @type {number}
  */
-export const unacceptableDialogueMode: RefuseReason = RefuseReason_unacceptableDialogueMode; /* SHORT_NAMED_INTEGER_VALUE */
+export const unacceptableDialogueMode = RefuseReason_unacceptableDialogueMode satisfies RefuseReason; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 

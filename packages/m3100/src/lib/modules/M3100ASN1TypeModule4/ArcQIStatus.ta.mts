@@ -69,8 +69,8 @@ export const ArcQIStatus = _enum_for_ArcQIStatus;
  * @constant
  * @type {number}
  */
-export const ArcQIStatus_notApplicable: ArcQIStatus =
-    ArcQIStatus.notApplicable; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ArcQIStatus_notApplicable =
+    ArcQIStatus.notApplicable satisfies ArcQIStatus; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -78,8 +78,8 @@ export const ArcQIStatus_notApplicable: ArcQIStatus =
  * @constant
  * @type {number}
  */
-export const notApplicable: ArcQIStatus =
-    ArcQIStatus.notApplicable; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const notApplicable =
+    ArcQIStatus.notApplicable satisfies ArcQIStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -87,8 +87,8 @@ export const notApplicable: ArcQIStatus =
  * @constant
  * @type {number}
  */
-export const ArcQIStatus_nalmNotReported: ArcQIStatus =
-    ArcQIStatus.nalmNotReported; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ArcQIStatus_nalmNotReported =
+    ArcQIStatus.nalmNotReported satisfies ArcQIStatus; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -96,8 +96,8 @@ export const ArcQIStatus_nalmNotReported: ArcQIStatus =
  * @constant
  * @type {number}
  */
-export const nalmNotReported: ArcQIStatus =
-    ArcQIStatus.nalmNotReported; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const nalmNotReported =
+    ArcQIStatus.nalmNotReported satisfies ArcQIStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -105,8 +105,8 @@ export const nalmNotReported: ArcQIStatus =
  * @constant
  * @type {number}
  */
-export const ArcQIStatus_nalmCountDown: ArcQIStatus =
-    ArcQIStatus.nalmCountDown; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ArcQIStatus_nalmCountDown =
+    ArcQIStatus.nalmCountDown satisfies ArcQIStatus; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -114,8 +114,8 @@ export const ArcQIStatus_nalmCountDown: ArcQIStatus =
  * @constant
  * @type {number}
  */
-export const nalmCountDown: ArcQIStatus =
-    ArcQIStatus.nalmCountDown; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const nalmCountDown =
+    ArcQIStatus.nalmCountDown satisfies ArcQIStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 

@@ -39,7 +39,7 @@ type ECPrivateKey_version = INTEGER;
  * @type {number}
  */
 export
-const ECPrivateKey_version_ecPrivkeyVer1: ECPrivateKey_version = 1; /* LONG_NAMED_INTEGER_VALUE */
+const ECPrivateKey_version_ecPrivkeyVer1 = 1 satisfies ECPrivateKey_version; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ECPrivateKey_version_ecPrivkeyVer1
@@ -51,7 +51,7 @@ const ECPrivateKey_version_ecPrivkeyVer1: ECPrivateKey_version = 1; /* LONG_NAME
  * @type {number}
  */
 export
-const ecPrivkeyVer1: ECPrivateKey_version = ECPrivateKey_version_ecPrivkeyVer1; /* SHORT_NAMED_INTEGER_VALUE */
+const ecPrivkeyVer1 = ECPrivateKey_version_ecPrivkeyVer1 satisfies ECPrivateKey_version; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_ECPrivateKey_version = $._decodeInteger;

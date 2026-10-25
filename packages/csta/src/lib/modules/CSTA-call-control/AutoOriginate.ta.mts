@@ -87,7 +87,7 @@ const AutoOriginate = _enum_for_AutoOriginate;
  * @type {number}
  */
 export
-const AutoOriginate_prompt: AutoOriginate = AutoOriginate.prompt; /* LONG_NAMED_ENUMERATED_VALUE */
+const AutoOriginate_prompt = AutoOriginate.prompt satisfies AutoOriginate; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary prompt
@@ -95,7 +95,7 @@ const AutoOriginate_prompt: AutoOriginate = AutoOriginate.prompt; /* LONG_NAMED_
  * @type {number}
  */
 export
-const prompt: AutoOriginate = AutoOriginate.prompt; /* SHORT_NAMED_ENUMERATED_VALUE */
+const prompt = AutoOriginate.prompt satisfies AutoOriginate; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AutoOriginate_doNotPrompt
@@ -107,7 +107,7 @@ const prompt: AutoOriginate = AutoOriginate.prompt; /* SHORT_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const AutoOriginate_doNotPrompt: AutoOriginate = AutoOriginate.doNotPrompt; /* LONG_NAMED_ENUMERATED_VALUE */
+const AutoOriginate_doNotPrompt = AutoOriginate.doNotPrompt satisfies AutoOriginate; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary doNotPrompt
@@ -115,7 +115,7 @@ const AutoOriginate_doNotPrompt: AutoOriginate = AutoOriginate.doNotPrompt; /* L
  * @type {number}
  */
 export
-const doNotPrompt: AutoOriginate = AutoOriginate.doNotPrompt; /* SHORT_NAMED_ENUMERATED_VALUE */
+const doNotPrompt = AutoOriginate.doNotPrompt satisfies AutoOriginate; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 let _cached_decoder_for_AutoOriginate: $.ASN1Decoder<AutoOriginate> | null = null;
 

@@ -21,7 +21,7 @@ export type TrailerField = INTEGER;
  * @constant
  * @type {number}
  */
-export const TrailerField_trailerFieldBC: TrailerField = 1; /* LONG_NAMED_INTEGER_VALUE */
+export const TrailerField_trailerFieldBC = 1 satisfies TrailerField; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -29,7 +29,7 @@ export const TrailerField_trailerFieldBC: TrailerField = 1; /* LONG_NAMED_INTEGE
  * @constant
  * @type {number}
  */
-export const trailerFieldBC: TrailerField = TrailerField_trailerFieldBC; /* SHORT_NAMED_INTEGER_VALUE */
+export const trailerFieldBC = TrailerField_trailerFieldBC satisfies TrailerField; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 

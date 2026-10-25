@@ -88,16 +88,16 @@ export const VirtualLinkChange = _enum_for_VirtualLinkChange;
  * @constant
  * @type {number}
  */
-export const VirtualLinkChange_deleted: VirtualLinkChange =
-  VirtualLinkChange.deleted; /* LONG_NAMED_ENUMERATED_VALUE */
+export const VirtualLinkChange_deleted =
+  VirtualLinkChange.deleted satisfies VirtualLinkChange; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary deleted
  * @constant
  * @type {number}
  */
-export const deleted: VirtualLinkChange =
-  VirtualLinkChange.deleted; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const deleted =
+  VirtualLinkChange.deleted satisfies VirtualLinkChange; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary VirtualLinkChange_created
@@ -110,16 +110,16 @@ export const deleted: VirtualLinkChange =
  * @constant
  * @type {number}
  */
-export const VirtualLinkChange_created: VirtualLinkChange =
-  VirtualLinkChange.created; /* LONG_NAMED_ENUMERATED_VALUE */
+export const VirtualLinkChange_created =
+  VirtualLinkChange.created satisfies VirtualLinkChange; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary created
  * @constant
  * @type {number}
  */
-export const created: VirtualLinkChange =
-  VirtualLinkChange.created; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const created =
+  VirtualLinkChange.created satisfies VirtualLinkChange; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 export function _decode_VirtualLinkChange(el: _Element): VirtualLinkChange {

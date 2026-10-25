@@ -47,7 +47,7 @@ type CSREvent = _enum_for_CSREvent | ENUMERATED;
  * @type {number}
  */
 export
-const CSREvent_cSREventMessage: CSREvent = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const CSREvent_cSREventMessage = _enum_for_CSREvent.cSREventMessage satisfies CSREvent; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary cSREventMessage
@@ -59,7 +59,7 @@ const CSREvent_cSREventMessage: CSREvent = 1; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const cSREventMessage: CSREvent = CSREvent_cSREventMessage; /* SHORT_NAMED_ENUMERATED_VALUE */
+const cSREventMessage = CSREvent_cSREventMessage satisfies CSREvent; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_CSREvent: $.ASN1Decoder<CSREvent> = $._decodeEnumerated;
 export const _encode_CSREvent: $.ASN1Encoder<CSREvent> = $._encodeEnumerated;
 

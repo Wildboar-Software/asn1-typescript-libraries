@@ -101,7 +101,7 @@ const AppearanceType = _enum_for_AppearanceType;
  * Selected-Standard (ECMA-269 §13.1.2–13.1.4).
  */
 export
-const AppearanceType_selectedStandard: AppearanceType = AppearanceType.selectedStandard; /* LONG_NAMED_ENUMERATED_VALUE */
+const AppearanceType_selectedStandard = AppearanceType.selectedStandard satisfies AppearanceType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary selectedStandard
@@ -111,7 +111,7 @@ const AppearanceType_selectedStandard: AppearanceType = AppearanceType.selectedS
  * Alias of `AppearanceType_selectedStandard`.
  */
 export
-const selectedStandard: AppearanceType = AppearanceType.selectedStandard; /* SHORT_NAMED_ENUMERATED_VALUE */
+const selectedStandard = AppearanceType.selectedStandard satisfies AppearanceType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AppearanceType_basicStandard
@@ -121,7 +121,7 @@ const selectedStandard: AppearanceType = AppearanceType.selectedStandard; /* SHO
  * Basic-Standard (ECMA-269 §13.1.2–13.1.4).
  */
 export
-const AppearanceType_basicStandard: AppearanceType = AppearanceType.basicStandard; /* LONG_NAMED_ENUMERATED_VALUE */
+const AppearanceType_basicStandard = AppearanceType.basicStandard satisfies AppearanceType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary basicStandard
@@ -131,7 +131,7 @@ const AppearanceType_basicStandard: AppearanceType = AppearanceType.basicStandar
  * Alias of `AppearanceType_basicStandard`.
  */
 export
-const basicStandard: AppearanceType = AppearanceType.basicStandard; /* SHORT_NAMED_ENUMERATED_VALUE */
+const basicStandard = AppearanceType.basicStandard satisfies AppearanceType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AppearanceType_basicBridged
@@ -141,7 +141,7 @@ const basicStandard: AppearanceType = AppearanceType.basicStandard; /* SHORT_NAM
  * Basic-Bridged (ECMA-269 §13.1.2–13.1.4).
  */
 export
-const AppearanceType_basicBridged: AppearanceType = AppearanceType.basicBridged; /* LONG_NAMED_ENUMERATED_VALUE */
+const AppearanceType_basicBridged = AppearanceType.basicBridged satisfies AppearanceType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary basicBridged
@@ -151,7 +151,7 @@ const AppearanceType_basicBridged: AppearanceType = AppearanceType.basicBridged;
  * Alias of `AppearanceType_basicBridged`.
  */
 export
-const basicBridged: AppearanceType = AppearanceType.basicBridged; /* SHORT_NAMED_ENUMERATED_VALUE */
+const basicBridged = AppearanceType.basicBridged satisfies AppearanceType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AppearanceType_exclusiveBridged
@@ -161,7 +161,7 @@ const basicBridged: AppearanceType = AppearanceType.basicBridged; /* SHORT_NAMED
  * Exclusive-Bridged (ECMA-269 §13.1.2–13.1.4).
  */
 export
-const AppearanceType_exclusiveBridged: AppearanceType = AppearanceType.exclusiveBridged; /* LONG_NAMED_ENUMERATED_VALUE */
+const AppearanceType_exclusiveBridged = AppearanceType.exclusiveBridged satisfies AppearanceType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary exclusiveBridged
@@ -171,7 +171,7 @@ const AppearanceType_exclusiveBridged: AppearanceType = AppearanceType.exclusive
  * Alias of `AppearanceType_exclusiveBridged`.
  */
 export
-const exclusiveBridged: AppearanceType = AppearanceType.exclusiveBridged; /* SHORT_NAMED_ENUMERATED_VALUE */
+const exclusiveBridged = AppearanceType.exclusiveBridged satisfies AppearanceType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AppearanceType_independentSharedBridged
@@ -181,7 +181,7 @@ const exclusiveBridged: AppearanceType = AppearanceType.exclusiveBridged; /* SHO
  * Independent-Shared-Bridged (ECMA-269 §13.1.2–13.1.4).
  */
 export
-const AppearanceType_independentSharedBridged: AppearanceType = AppearanceType.independentSharedBridged; /* LONG_NAMED_ENUMERATED_VALUE */
+const AppearanceType_independentSharedBridged = AppearanceType.independentSharedBridged satisfies AppearanceType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary independentSharedBridged
@@ -191,7 +191,7 @@ const AppearanceType_independentSharedBridged: AppearanceType = AppearanceType.i
  * Alias of `AppearanceType_independentSharedBridged`.
  */
 export
-const independentSharedBridged: AppearanceType = AppearanceType.independentSharedBridged; /* SHORT_NAMED_ENUMERATED_VALUE */
+const independentSharedBridged = AppearanceType.independentSharedBridged satisfies AppearanceType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AppearanceType_interdependentSharedBridged
@@ -201,7 +201,7 @@ const independentSharedBridged: AppearanceType = AppearanceType.independentShare
  * Interdependent-Shared-Bridged (ECMA-269 §13.1.2–13.1.4).
  */
 export
-const AppearanceType_interdependentSharedBridged: AppearanceType = AppearanceType.interdependentSharedBridged; /* LONG_NAMED_ENUMERATED_VALUE */
+const AppearanceType_interdependentSharedBridged = AppearanceType.interdependentSharedBridged satisfies AppearanceType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary interdependentSharedBridged
@@ -211,7 +211,7 @@ const AppearanceType_interdependentSharedBridged: AppearanceType = AppearanceTyp
  * Alias of `AppearanceType_interdependentSharedBridged`.
  */
 export
-const interdependentSharedBridged: AppearanceType = AppearanceType.interdependentSharedBridged; /* SHORT_NAMED_ENUMERATED_VALUE */
+const interdependentSharedBridged = AppearanceType.interdependentSharedBridged satisfies AppearanceType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 let _cached_decoder_for_AppearanceType: $.ASN1Decoder<AppearanceType> | null = null;
 

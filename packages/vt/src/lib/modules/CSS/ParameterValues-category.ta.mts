@@ -48,7 +48,7 @@ type ParameterValues_category = INTEGER;
  * @type {number}
  */
 export
-const ParameterValues_category_character: ParameterValues_category = 0; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterValues_category_character = 0 satisfies ParameterValues_category; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterValues_category_character
@@ -62,7 +62,7 @@ const ParameterValues_category_character: ParameterValues_category = 0; /* LONG_
  * @type {number}
  */
 export
-const character: ParameterValues_category = ParameterValues_category_character; /* SHORT_NAMED_INTEGER_VALUE */
+const character = ParameterValues_category_character satisfies ParameterValues_category; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterValues_category_boolean_
@@ -76,7 +76,7 @@ const character: ParameterValues_category = ParameterValues_category_character; 
  * @type {number}
  */
 export
-const ParameterValues_category_boolean_: ParameterValues_category = 1; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterValues_category_boolean_ = 1 satisfies ParameterValues_category; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterValues_category_boolean_
@@ -90,7 +90,7 @@ const ParameterValues_category_boolean_: ParameterValues_category = 1; /* LONG_N
  * @type {number}
  */
 export
-const boolean_: ParameterValues_category = ParameterValues_category_boolean_; /* SHORT_NAMED_INTEGER_VALUE */
+const boolean_ = ParameterValues_category_boolean_ satisfies ParameterValues_category; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterValues_category_symbolic
@@ -103,7 +103,7 @@ const boolean_: ParameterValues_category = ParameterValues_category_boolean_; /*
  * @type {number}
  */
 export
-const ParameterValues_category_symbolic: ParameterValues_category = 2; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterValues_category_symbolic = 2 satisfies ParameterValues_category; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterValues_category_symbolic
@@ -116,7 +116,7 @@ const ParameterValues_category_symbolic: ParameterValues_category = 2; /* LONG_N
  * @type {number}
  */
 export
-const symbolic: ParameterValues_category = ParameterValues_category_symbolic; /* SHORT_NAMED_INTEGER_VALUE */
+const symbolic = ParameterValues_category_symbolic satisfies ParameterValues_category; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterValues_category_integer
@@ -128,7 +128,7 @@ const symbolic: ParameterValues_category = ParameterValues_category_symbolic; /*
  * @type {number}
  */
 export
-const ParameterValues_category_integer: ParameterValues_category = 3; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterValues_category_integer = 3 satisfies ParameterValues_category; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterValues_category_integer
@@ -140,7 +140,7 @@ const ParameterValues_category_integer: ParameterValues_category = 3; /* LONG_NA
  * @type {number}
  */
 export
-const integer: ParameterValues_category = ParameterValues_category_integer; /* SHORT_NAMED_INTEGER_VALUE */
+const integer = ParameterValues_category_integer satisfies ParameterValues_category; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterValues_category_transparent
@@ -152,7 +152,7 @@ const integer: ParameterValues_category = ParameterValues_category_integer; /* S
  * @type {number}
  */
 export
-const ParameterValues_category_transparent: ParameterValues_category = 4; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterValues_category_transparent = 4 satisfies ParameterValues_category; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterValues_category_transparent
@@ -164,7 +164,7 @@ const ParameterValues_category_transparent: ParameterValues_category = 4; /* LON
  * @type {number}
  */
 export
-const transparent: ParameterValues_category = ParameterValues_category_transparent; /* SHORT_NAMED_INTEGER_VALUE */
+const transparent = ParameterValues_category_transparent satisfies ParameterValues_category; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_ParameterValues_category = $._decodeInteger;
 export const _encode_ParameterValues_category = $._encodeInteger;
 

@@ -96,8 +96,8 @@ export const TimeStampReportMode = _enum_for_TimeStampReportMode;
  * @constant
  * @type {number}
  */
-export const TimeStampReportMode_timeStampingOff: TimeStampReportMode =
-    TimeStampReportMode.timeStampingOff; /* LONG_NAMED_ENUMERATED_VALUE */
+export const TimeStampReportMode_timeStampingOff =
+    TimeStampReportMode.timeStampingOff satisfies TimeStampReportMode; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary timeStampingOff
@@ -109,8 +109,8 @@ export const TimeStampReportMode_timeStampingOff: TimeStampReportMode =
  * @constant
  * @type {number}
  */
-export const timeStampingOff: TimeStampReportMode =
-    TimeStampReportMode.timeStampingOff; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const timeStampingOff =
+    TimeStampReportMode.timeStampingOff satisfies TimeStampReportMode; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TimeStampReportMode_globalTimeStampOnly
@@ -123,8 +123,8 @@ export const timeStampingOff: TimeStampReportMode =
  * @constant
  * @type {number}
  */
-export const TimeStampReportMode_globalTimeStampOnly: TimeStampReportMode =
-    TimeStampReportMode.globalTimeStampOnly; /* LONG_NAMED_ENUMERATED_VALUE */
+export const TimeStampReportMode_globalTimeStampOnly =
+    TimeStampReportMode.globalTimeStampOnly satisfies TimeStampReportMode; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary globalTimeStampOnly
@@ -137,8 +137,8 @@ export const TimeStampReportMode_globalTimeStampOnly: TimeStampReportMode =
  * @constant
  * @type {number}
  */
-export const globalTimeStampOnly: TimeStampReportMode =
-    TimeStampReportMode.globalTimeStampOnly; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const globalTimeStampOnly =
+    TimeStampReportMode.globalTimeStampOnly satisfies TimeStampReportMode; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TimeStampReportMode_individualTimeStamping
@@ -152,8 +152,8 @@ export const globalTimeStampOnly: TimeStampReportMode =
  * @constant
  * @type {number}
  */
-export const TimeStampReportMode_individualTimeStamping: TimeStampReportMode =
-    TimeStampReportMode.individualTimeStamping; /* LONG_NAMED_ENUMERATED_VALUE */
+export const TimeStampReportMode_individualTimeStamping =
+    TimeStampReportMode.individualTimeStamping satisfies TimeStampReportMode; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary individualTimeStamping
@@ -165,8 +165,8 @@ export const TimeStampReportMode_individualTimeStamping: TimeStampReportMode =
  * @constant
  * @type {number}
  */
-export const individualTimeStamping: TimeStampReportMode =
-    TimeStampReportMode.individualTimeStamping; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const individualTimeStamping =
+    TimeStampReportMode.individualTimeStamping satisfies TimeStampReportMode; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 export function _decode_TimeStampReportMode(el: _Element): TimeStampReportMode {

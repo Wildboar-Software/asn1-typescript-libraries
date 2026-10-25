@@ -44,7 +44,7 @@ export const EventTypeSMS = _enum_for_EventTypeSMS;
  *
  * @constant
  */
-export const EventTypeSMS_sms_CollectedInfo: EventTypeSMS = EventTypeSMS.sms_CollectedInfo;
+export const EventTypeSMS_sms_CollectedInfo = EventTypeSMS.sms_CollectedInfo satisfies EventTypeSMS;
 /**
  * @summary sms_CollectedInfo
  * @description
@@ -54,7 +54,7 @@ export const EventTypeSMS_sms_CollectedInfo: EventTypeSMS = EventTypeSMS.sms_Col
  *
  * @constant
  */
-export const sms_CollectedInfo: EventTypeSMS = EventTypeSMS.sms_CollectedInfo;
+export const sms_CollectedInfo = EventTypeSMS.sms_CollectedInfo satisfies EventTypeSMS;
 /**
  * @summary EventTypeSMS_o_smsFailure
  * @description
@@ -63,7 +63,7 @@ export const sms_CollectedInfo: EventTypeSMS = EventTypeSMS.sms_CollectedInfo;
  *
  * @constant
  */
-export const EventTypeSMS_o_smsFailure: EventTypeSMS = EventTypeSMS.o_smsFailure;
+export const EventTypeSMS_o_smsFailure = EventTypeSMS.o_smsFailure satisfies EventTypeSMS;
 /**
  * @summary o_smsFailure
  * @description
@@ -72,7 +72,7 @@ export const EventTypeSMS_o_smsFailure: EventTypeSMS = EventTypeSMS.o_smsFailure
  *
  * @constant
  */
-export const o_smsFailure: EventTypeSMS = EventTypeSMS.o_smsFailure;
+export const o_smsFailure = EventTypeSMS.o_smsFailure satisfies EventTypeSMS;
 /**
  * @summary EventTypeSMS_o_smsSubmission
  * @description
@@ -81,7 +81,7 @@ export const o_smsFailure: EventTypeSMS = EventTypeSMS.o_smsFailure;
  *
  * @constant
  */
-export const EventTypeSMS_o_smsSubmission: EventTypeSMS = EventTypeSMS.o_smsSubmission;
+export const EventTypeSMS_o_smsSubmission = EventTypeSMS.o_smsSubmission satisfies EventTypeSMS;
 /**
  * @summary o_smsSubmission
  * @description
@@ -90,7 +90,7 @@ export const EventTypeSMS_o_smsSubmission: EventTypeSMS = EventTypeSMS.o_smsSubm
  *
  * @constant
  */
-export const o_smsSubmission: EventTypeSMS = EventTypeSMS.o_smsSubmission;
+export const o_smsSubmission = EventTypeSMS.o_smsSubmission satisfies EventTypeSMS;
 /**
  * @summary EventTypeSMS_sms_DeliveryRequested
  * @description
@@ -100,7 +100,7 @@ export const o_smsSubmission: EventTypeSMS = EventTypeSMS.o_smsSubmission;
  *
  * @constant
  */
-export const EventTypeSMS_sms_DeliveryRequested: EventTypeSMS = EventTypeSMS.sms_DeliveryRequested;
+export const EventTypeSMS_sms_DeliveryRequested = EventTypeSMS.sms_DeliveryRequested satisfies EventTypeSMS;
 /**
  * @summary sms_DeliveryRequested
  * @description
@@ -110,7 +110,7 @@ export const EventTypeSMS_sms_DeliveryRequested: EventTypeSMS = EventTypeSMS.sms
  *
  * @constant
  */
-export const sms_DeliveryRequested: EventTypeSMS = EventTypeSMS.sms_DeliveryRequested;
+export const sms_DeliveryRequested = EventTypeSMS.sms_DeliveryRequested satisfies EventTypeSMS;
 /**
  * @summary EventTypeSMS_t_smsFailure
  * @description
@@ -119,7 +119,7 @@ export const sms_DeliveryRequested: EventTypeSMS = EventTypeSMS.sms_DeliveryRequ
  *
  * @constant
  */
-export const EventTypeSMS_t_smsFailure: EventTypeSMS = EventTypeSMS.t_smsFailure;
+export const EventTypeSMS_t_smsFailure = EventTypeSMS.t_smsFailure satisfies EventTypeSMS;
 /**
  * @summary t_smsFailure
  * @description
@@ -128,7 +128,7 @@ export const EventTypeSMS_t_smsFailure: EventTypeSMS = EventTypeSMS.t_smsFailure
  *
  * @constant
  */
-export const t_smsFailure: EventTypeSMS = EventTypeSMS.t_smsFailure;
+export const t_smsFailure = EventTypeSMS.t_smsFailure satisfies EventTypeSMS;
 /**
  * @summary EventTypeSMS_t_smsDelivery
  * @description
@@ -137,7 +137,7 @@ export const t_smsFailure: EventTypeSMS = EventTypeSMS.t_smsFailure;
  *
  * @constant
  */
-export const EventTypeSMS_t_smsDelivery: EventTypeSMS = EventTypeSMS.t_smsDelivery;
+export const EventTypeSMS_t_smsDelivery = EventTypeSMS.t_smsDelivery satisfies EventTypeSMS;
 /**
  * @summary t_smsDelivery
  * @description
@@ -146,6 +146,6 @@ export const EventTypeSMS_t_smsDelivery: EventTypeSMS = EventTypeSMS.t_smsDelive
  *
  * @constant
  */
-export const t_smsDelivery: EventTypeSMS = EventTypeSMS.t_smsDelivery;
+export const t_smsDelivery = EventTypeSMS.t_smsDelivery satisfies EventTypeSMS;
 export const _decode_EventTypeSMS = $._decodeEnumerated;
 export const _encode_EventTypeSMS = $._encodeEnumerated;

@@ -84,7 +84,7 @@ const EASEventType = _enum_for_EASEventType;
  * @type {number}
  */
 export
-const EASEventType_eASAvailabilityChange: EASEventType = EASEventType.eASAvailabilityChange; /* LONG_NAMED_ENUMERATED_VALUE */
+const EASEventType_eASAvailabilityChange = EASEventType.eASAvailabilityChange satisfies EASEventType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary eASAvailabilityChange
@@ -92,7 +92,7 @@ const EASEventType_eASAvailabilityChange: EASEventType = EASEventType.eASAvailab
  * @type {number}
  */
 export
-const eASAvailabilityChange: EASEventType = EASEventType.eASAvailabilityChange; /* SHORT_NAMED_ENUMERATED_VALUE */
+const eASAvailabilityChange = EASEventType.eASAvailabilityChange satisfies EASEventType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EASEventType_eASDynamicInfoChange
@@ -100,7 +100,7 @@ const eASAvailabilityChange: EASEventType = EASEventType.eASAvailabilityChange; 
  * @type {number}
  */
 export
-const EASEventType_eASDynamicInfoChange: EASEventType = EASEventType.eASDynamicInfoChange; /* LONG_NAMED_ENUMERATED_VALUE */
+const EASEventType_eASDynamicInfoChange = EASEventType.eASDynamicInfoChange satisfies EASEventType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary eASDynamicInfoChange
@@ -108,7 +108,7 @@ const EASEventType_eASDynamicInfoChange: EASEventType = EASEventType.eASDynamicI
  * @type {number}
  */
 export
-const eASDynamicInfoChange: EASEventType = EASEventType.eASDynamicInfoChange; /* SHORT_NAMED_ENUMERATED_VALUE */
+const eASDynamicInfoChange = EASEventType.eASDynamicInfoChange satisfies EASEventType; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_EASEventType: $.ASN1Decoder<EASEventType> = $._decodeEnumerated;
 export const _encode_EASEventType: $.ASN1Encoder<EASEventType> = $._encodeEnumerated;
 

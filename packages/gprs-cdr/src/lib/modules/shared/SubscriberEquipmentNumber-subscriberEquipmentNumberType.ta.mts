@@ -74,7 +74,7 @@ const SubscriberEquipmentNumber_subscriberEquipmentNumberType = _enum_for_Subscr
  * @type {number}
  */
 export
-const SubscriberEquipmentNumber_subscriberEquipmentNumberType_iMEISV: SubscriberEquipmentNumber_subscriberEquipmentNumberType = SubscriberEquipmentNumber_subscriberEquipmentNumberType.iMEISV; /* LONG_NAMED_ENUMERATED_VALUE */
+const SubscriberEquipmentNumber_subscriberEquipmentNumberType_iMEISV = SubscriberEquipmentNumber_subscriberEquipmentNumberType.iMEISV satisfies SubscriberEquipmentNumber_subscriberEquipmentNumberType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary iMEISV
@@ -82,7 +82,7 @@ const SubscriberEquipmentNumber_subscriberEquipmentNumberType_iMEISV: Subscriber
  * @type {number}
  */
 export
-const iMEISV: SubscriberEquipmentNumber_subscriberEquipmentNumberType = SubscriberEquipmentNumber_subscriberEquipmentNumberType.iMEISV; /* SHORT_NAMED_ENUMERATED_VALUE */
+const iMEISV = SubscriberEquipmentNumber_subscriberEquipmentNumberType.iMEISV satisfies SubscriberEquipmentNumber_subscriberEquipmentNumberType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SubscriberEquipmentNumber_subscriberEquipmentNumberType_mAC
@@ -90,7 +90,7 @@ const iMEISV: SubscriberEquipmentNumber_subscriberEquipmentNumberType = Subscrib
  * @type {number}
  */
 export
-const SubscriberEquipmentNumber_subscriberEquipmentNumberType_mAC: SubscriberEquipmentNumber_subscriberEquipmentNumberType = SubscriberEquipmentNumber_subscriberEquipmentNumberType.mAC; /* LONG_NAMED_ENUMERATED_VALUE */
+const SubscriberEquipmentNumber_subscriberEquipmentNumberType_mAC = SubscriberEquipmentNumber_subscriberEquipmentNumberType.mAC satisfies SubscriberEquipmentNumber_subscriberEquipmentNumberType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary mAC
@@ -98,7 +98,7 @@ const SubscriberEquipmentNumber_subscriberEquipmentNumberType_mAC: SubscriberEqu
  * @type {number}
  */
 export
-const mAC: SubscriberEquipmentNumber_subscriberEquipmentNumberType = SubscriberEquipmentNumber_subscriberEquipmentNumberType.mAC; /* SHORT_NAMED_ENUMERATED_VALUE */
+const mAC = SubscriberEquipmentNumber_subscriberEquipmentNumberType.mAC satisfies SubscriberEquipmentNumber_subscriberEquipmentNumberType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SubscriberEquipmentNumber_subscriberEquipmentNumberType_eUI64
@@ -106,7 +106,7 @@ const mAC: SubscriberEquipmentNumber_subscriberEquipmentNumberType = SubscriberE
  * @type {number}
  */
 export
-const SubscriberEquipmentNumber_subscriberEquipmentNumberType_eUI64: SubscriberEquipmentNumber_subscriberEquipmentNumberType = SubscriberEquipmentNumber_subscriberEquipmentNumberType.eUI64; /* LONG_NAMED_ENUMERATED_VALUE */
+const SubscriberEquipmentNumber_subscriberEquipmentNumberType_eUI64 = SubscriberEquipmentNumber_subscriberEquipmentNumberType.eUI64 satisfies SubscriberEquipmentNumber_subscriberEquipmentNumberType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary eUI64
@@ -114,7 +114,7 @@ const SubscriberEquipmentNumber_subscriberEquipmentNumberType_eUI64: SubscriberE
  * @type {number}
  */
 export
-const eUI64: SubscriberEquipmentNumber_subscriberEquipmentNumberType = SubscriberEquipmentNumber_subscriberEquipmentNumberType.eUI64; /* SHORT_NAMED_ENUMERATED_VALUE */
+const eUI64 = SubscriberEquipmentNumber_subscriberEquipmentNumberType.eUI64 satisfies SubscriberEquipmentNumber_subscriberEquipmentNumberType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SubscriberEquipmentNumber_subscriberEquipmentNumberType_modifiedEUI64
@@ -122,7 +122,7 @@ const eUI64: SubscriberEquipmentNumber_subscriberEquipmentNumberType = Subscribe
  * @type {number}
  */
 export
-const SubscriberEquipmentNumber_subscriberEquipmentNumberType_modifiedEUI64: SubscriberEquipmentNumber_subscriberEquipmentNumberType = SubscriberEquipmentNumber_subscriberEquipmentNumberType.modifiedEUI64; /* LONG_NAMED_ENUMERATED_VALUE */
+const SubscriberEquipmentNumber_subscriberEquipmentNumberType_modifiedEUI64 = SubscriberEquipmentNumber_subscriberEquipmentNumberType.modifiedEUI64 satisfies SubscriberEquipmentNumber_subscriberEquipmentNumberType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary modifiedEUI64
@@ -130,7 +130,7 @@ const SubscriberEquipmentNumber_subscriberEquipmentNumberType_modifiedEUI64: Sub
  * @type {number}
  */
 export
-const modifiedEUI64: SubscriberEquipmentNumber_subscriberEquipmentNumberType = SubscriberEquipmentNumber_subscriberEquipmentNumberType.modifiedEUI64; /* SHORT_NAMED_ENUMERATED_VALUE */
+const modifiedEUI64 = SubscriberEquipmentNumber_subscriberEquipmentNumberType.modifiedEUI64 satisfies SubscriberEquipmentNumber_subscriberEquipmentNumberType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_SubscriberEquipmentNumber_subscriberEquipmentNumberType: $.ASN1Decoder<SubscriberEquipmentNumber_subscriberEquipmentNumberType> = $._decodeEnumerated;

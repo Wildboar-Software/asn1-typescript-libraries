@@ -70,7 +70,7 @@ const Incomplete_CDR_Indication_aCRInterimLost = _enum_for_Incomplete_CDR_Indica
  * @type {number}
  */
 export
-const Incomplete_CDR_Indication_aCRInterimLost_no: Incomplete_CDR_Indication_aCRInterimLost = Incomplete_CDR_Indication_aCRInterimLost.no; /* LONG_NAMED_ENUMERATED_VALUE */
+const Incomplete_CDR_Indication_aCRInterimLost_no = Incomplete_CDR_Indication_aCRInterimLost.no satisfies Incomplete_CDR_Indication_aCRInterimLost; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary no
@@ -78,7 +78,7 @@ const Incomplete_CDR_Indication_aCRInterimLost_no: Incomplete_CDR_Indication_aCR
  * @type {number}
  */
 export
-const no: Incomplete_CDR_Indication_aCRInterimLost = Incomplete_CDR_Indication_aCRInterimLost.no; /* SHORT_NAMED_ENUMERATED_VALUE */
+const no = Incomplete_CDR_Indication_aCRInterimLost.no satisfies Incomplete_CDR_Indication_aCRInterimLost; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Incomplete_CDR_Indication_aCRInterimLost_yes
@@ -86,7 +86,7 @@ const no: Incomplete_CDR_Indication_aCRInterimLost = Incomplete_CDR_Indication_a
  * @type {number}
  */
 export
-const Incomplete_CDR_Indication_aCRInterimLost_yes: Incomplete_CDR_Indication_aCRInterimLost = Incomplete_CDR_Indication_aCRInterimLost.yes; /* LONG_NAMED_ENUMERATED_VALUE */
+const Incomplete_CDR_Indication_aCRInterimLost_yes = Incomplete_CDR_Indication_aCRInterimLost.yes satisfies Incomplete_CDR_Indication_aCRInterimLost; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary yes
@@ -94,7 +94,7 @@ const Incomplete_CDR_Indication_aCRInterimLost_yes: Incomplete_CDR_Indication_aC
  * @type {number}
  */
 export
-const yes: Incomplete_CDR_Indication_aCRInterimLost = Incomplete_CDR_Indication_aCRInterimLost.yes; /* SHORT_NAMED_ENUMERATED_VALUE */
+const yes = Incomplete_CDR_Indication_aCRInterimLost.yes satisfies Incomplete_CDR_Indication_aCRInterimLost; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Incomplete_CDR_Indication_aCRInterimLost_unknown
@@ -102,7 +102,7 @@ const yes: Incomplete_CDR_Indication_aCRInterimLost = Incomplete_CDR_Indication_
  * @type {number}
  */
 export
-const Incomplete_CDR_Indication_aCRInterimLost_unknown: Incomplete_CDR_Indication_aCRInterimLost = Incomplete_CDR_Indication_aCRInterimLost.unknown; /* LONG_NAMED_ENUMERATED_VALUE */
+const Incomplete_CDR_Indication_aCRInterimLost_unknown = Incomplete_CDR_Indication_aCRInterimLost.unknown satisfies Incomplete_CDR_Indication_aCRInterimLost; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unknown
@@ -110,7 +110,7 @@ const Incomplete_CDR_Indication_aCRInterimLost_unknown: Incomplete_CDR_Indicatio
  * @type {number}
  */
 export
-const unknown: Incomplete_CDR_Indication_aCRInterimLost = Incomplete_CDR_Indication_aCRInterimLost.unknown; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unknown = Incomplete_CDR_Indication_aCRInterimLost.unknown satisfies Incomplete_CDR_Indication_aCRInterimLost; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_Incomplete_CDR_Indication_aCRInterimLost: $.ASN1Decoder<Incomplete_CDR_Indication_aCRInterimLost> = $._decodeEnumerated;

@@ -85,7 +85,7 @@ const CauseMisc = _enum_for_CauseMisc;
  * @type {number}
  */
 export
-const CauseMisc_controlProcessingOverload: CauseMisc = CauseMisc.controlProcessingOverload; /* LONG_NAMED_ENUMERATED_VALUE */
+const CauseMisc_controlProcessingOverload = CauseMisc.controlProcessingOverload satisfies CauseMisc; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary controlProcessingOverload
@@ -93,7 +93,7 @@ const CauseMisc_controlProcessingOverload: CauseMisc = CauseMisc.controlProcessi
  * @type {number}
  */
 export
-const controlProcessingOverload: CauseMisc = CauseMisc.controlProcessingOverload; /* SHORT_NAMED_ENUMERATED_VALUE */
+const controlProcessingOverload = CauseMisc.controlProcessingOverload satisfies CauseMisc; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CauseMisc_notEnoughUserPlaneProcessingResources
@@ -101,7 +101,7 @@ const controlProcessingOverload: CauseMisc = CauseMisc.controlProcessingOverload
  * @type {number}
  */
 export
-const CauseMisc_notEnoughUserPlaneProcessingResources: CauseMisc = CauseMisc.notEnoughUserPlaneProcessingResources; /* LONG_NAMED_ENUMERATED_VALUE */
+const CauseMisc_notEnoughUserPlaneProcessingResources = CauseMisc.notEnoughUserPlaneProcessingResources satisfies CauseMisc; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary notEnoughUserPlaneProcessingResources
@@ -109,7 +109,7 @@ const CauseMisc_notEnoughUserPlaneProcessingResources: CauseMisc = CauseMisc.not
  * @type {number}
  */
 export
-const notEnoughUserPlaneProcessingResources: CauseMisc = CauseMisc.notEnoughUserPlaneProcessingResources; /* SHORT_NAMED_ENUMERATED_VALUE */
+const notEnoughUserPlaneProcessingResources = CauseMisc.notEnoughUserPlaneProcessingResources satisfies CauseMisc; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CauseMisc_hardwareFailure
@@ -117,7 +117,7 @@ const notEnoughUserPlaneProcessingResources: CauseMisc = CauseMisc.notEnoughUser
  * @type {number}
  */
 export
-const CauseMisc_hardwareFailure: CauseMisc = CauseMisc.hardwareFailure; /* LONG_NAMED_ENUMERATED_VALUE */
+const CauseMisc_hardwareFailure = CauseMisc.hardwareFailure satisfies CauseMisc; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary hardwareFailure
@@ -125,7 +125,7 @@ const CauseMisc_hardwareFailure: CauseMisc = CauseMisc.hardwareFailure; /* LONG_
  * @type {number}
  */
 export
-const hardwareFailure: CauseMisc = CauseMisc.hardwareFailure; /* SHORT_NAMED_ENUMERATED_VALUE */
+const hardwareFailure = CauseMisc.hardwareFailure satisfies CauseMisc; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CauseMisc_oMIntervention
@@ -133,7 +133,7 @@ const hardwareFailure: CauseMisc = CauseMisc.hardwareFailure; /* SHORT_NAMED_ENU
  * @type {number}
  */
 export
-const CauseMisc_oMIntervention: CauseMisc = CauseMisc.oMIntervention; /* LONG_NAMED_ENUMERATED_VALUE */
+const CauseMisc_oMIntervention = CauseMisc.oMIntervention satisfies CauseMisc; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary oMIntervention
@@ -141,7 +141,7 @@ const CauseMisc_oMIntervention: CauseMisc = CauseMisc.oMIntervention; /* LONG_NA
  * @type {number}
  */
 export
-const oMIntervention: CauseMisc = CauseMisc.oMIntervention; /* SHORT_NAMED_ENUMERATED_VALUE */
+const oMIntervention = CauseMisc.oMIntervention satisfies CauseMisc; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CauseMisc_unknownPLMNOrSNPN
@@ -149,7 +149,7 @@ const oMIntervention: CauseMisc = CauseMisc.oMIntervention; /* SHORT_NAMED_ENUME
  * @type {number}
  */
 export
-const CauseMisc_unknownPLMNOrSNPN: CauseMisc = CauseMisc.unknownPLMNOrSNPN; /* LONG_NAMED_ENUMERATED_VALUE */
+const CauseMisc_unknownPLMNOrSNPN = CauseMisc.unknownPLMNOrSNPN satisfies CauseMisc; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unknownPLMNOrSNPN
@@ -157,7 +157,7 @@ const CauseMisc_unknownPLMNOrSNPN: CauseMisc = CauseMisc.unknownPLMNOrSNPN; /* L
  * @type {number}
  */
 export
-const unknownPLMNOrSNPN: CauseMisc = CauseMisc.unknownPLMNOrSNPN; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unknownPLMNOrSNPN = CauseMisc.unknownPLMNOrSNPN satisfies CauseMisc; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CauseMisc_unspecified
@@ -165,7 +165,7 @@ const unknownPLMNOrSNPN: CauseMisc = CauseMisc.unknownPLMNOrSNPN; /* SHORT_NAMED
  * @type {number}
  */
 export
-const CauseMisc_unspecified: CauseMisc = CauseMisc.unspecified; /* LONG_NAMED_ENUMERATED_VALUE */
+const CauseMisc_unspecified = CauseMisc.unspecified satisfies CauseMisc; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unspecified
@@ -173,7 +173,7 @@ const CauseMisc_unspecified: CauseMisc = CauseMisc.unspecified; /* LONG_NAMED_EN
  * @type {number}
  */
 export
-const unspecified: CauseMisc = CauseMisc.unspecified; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unspecified = CauseMisc.unspecified satisfies CauseMisc; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_CauseMisc: $.ASN1Decoder<CauseMisc> = $._decodeEnumerated;
 export const _encode_CauseMisc: $.ASN1Encoder<CauseMisc> = $._encodeEnumerated;
 

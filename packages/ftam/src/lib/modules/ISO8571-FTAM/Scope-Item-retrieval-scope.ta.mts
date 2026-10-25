@@ -38,7 +38,7 @@ export type Scope_Item_retrieval_scope = INTEGER;
  * @constant
  * @type {number}
  */
-export const Scope_Item_retrieval_scope_child: Scope_Item_retrieval_scope = 0; /* LONG_NAMED_INTEGER_VALUE */
+export const Scope_Item_retrieval_scope_child = 0 satisfies Scope_Item_retrieval_scope; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -46,7 +46,7 @@ export const Scope_Item_retrieval_scope_child: Scope_Item_retrieval_scope = 0; /
  * @constant
  * @type {number}
  */
-export const child: Scope_Item_retrieval_scope = Scope_Item_retrieval_scope_child; /* SHORT_NAMED_INTEGER_VALUE */
+export const child = Scope_Item_retrieval_scope_child satisfies Scope_Item_retrieval_scope; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -58,7 +58,7 @@ export const child: Scope_Item_retrieval_scope = Scope_Item_retrieval_scope_chil
  * @constant
  * @type {number}
  */
-export const Scope_Item_retrieval_scope_all: Scope_Item_retrieval_scope = 1; /* LONG_NAMED_INTEGER_VALUE */
+export const Scope_Item_retrieval_scope_all = 1 satisfies Scope_Item_retrieval_scope; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -66,7 +66,7 @@ export const Scope_Item_retrieval_scope_all: Scope_Item_retrieval_scope = 1; /* 
  * @constant
  * @type {number}
  */
-export const all: Scope_Item_retrieval_scope = Scope_Item_retrieval_scope_all; /* SHORT_NAMED_INTEGER_VALUE */
+export const all = Scope_Item_retrieval_scope_all satisfies Scope_Item_retrieval_scope; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 

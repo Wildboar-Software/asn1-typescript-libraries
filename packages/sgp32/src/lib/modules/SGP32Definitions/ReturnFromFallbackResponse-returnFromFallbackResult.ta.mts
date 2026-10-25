@@ -37,7 +37,7 @@ type ReturnFromFallbackResponse_returnFromFallbackResult = INTEGER;
  * @type {number}
  */
 export
-const ReturnFromFallbackResponse_returnFromFallbackResult_ok: ReturnFromFallbackResponse_returnFromFallbackResult = 0; /* LONG_NAMED_INTEGER_VALUE */
+const ReturnFromFallbackResponse_returnFromFallbackResult_ok = 0 satisfies ReturnFromFallbackResponse_returnFromFallbackResult; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ReturnFromFallbackResponse_returnFromFallbackResult_ok
@@ -47,7 +47,7 @@ const ReturnFromFallbackResponse_returnFromFallbackResult_ok: ReturnFromFallback
  * @type {number}
  */
 export
-const ok: ReturnFromFallbackResponse_returnFromFallbackResult = ReturnFromFallbackResponse_returnFromFallbackResult_ok; /* SHORT_NAMED_INTEGER_VALUE */
+const ok = ReturnFromFallbackResponse_returnFromFallbackResult_ok satisfies ReturnFromFallbackResponse_returnFromFallbackResult; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ReturnFromFallbackResponse_returnFromFallbackResult_catBusy
@@ -58,7 +58,7 @@ const ok: ReturnFromFallbackResponse_returnFromFallbackResult = ReturnFromFallba
  * @type {number}
  */
 export
-const ReturnFromFallbackResponse_returnFromFallbackResult_catBusy: ReturnFromFallbackResponse_returnFromFallbackResult = 5; /* LONG_NAMED_INTEGER_VALUE */
+const ReturnFromFallbackResponse_returnFromFallbackResult_catBusy = 5 satisfies ReturnFromFallbackResponse_returnFromFallbackResult; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ReturnFromFallbackResponse_returnFromFallbackResult_catBusy
@@ -68,7 +68,7 @@ const ReturnFromFallbackResponse_returnFromFallbackResult_catBusy: ReturnFromFal
  * @type {number}
  */
 export
-const catBusy: ReturnFromFallbackResponse_returnFromFallbackResult = ReturnFromFallbackResponse_returnFromFallbackResult_catBusy; /* SHORT_NAMED_INTEGER_VALUE */
+const catBusy = ReturnFromFallbackResponse_returnFromFallbackResult_catBusy satisfies ReturnFromFallbackResponse_returnFromFallbackResult; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ReturnFromFallbackResponse_returnFromFallbackResult_fallbackNotAvailable
@@ -79,7 +79,7 @@ const catBusy: ReturnFromFallbackResponse_returnFromFallbackResult = ReturnFromF
  * @type {number}
  */
 export
-const ReturnFromFallbackResponse_returnFromFallbackResult_fallbackNotAvailable: ReturnFromFallbackResponse_returnFromFallbackResult = 6; /* LONG_NAMED_INTEGER_VALUE */
+const ReturnFromFallbackResponse_returnFromFallbackResult_fallbackNotAvailable = 6 satisfies ReturnFromFallbackResponse_returnFromFallbackResult; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ReturnFromFallbackResponse_returnFromFallbackResult_fallbackNotAvailable
@@ -90,7 +90,7 @@ const ReturnFromFallbackResponse_returnFromFallbackResult_fallbackNotAvailable: 
  * @type {number}
  */
 export
-const fallbackNotAvailable: ReturnFromFallbackResponse_returnFromFallbackResult = ReturnFromFallbackResponse_returnFromFallbackResult_fallbackNotAvailable; /* SHORT_NAMED_INTEGER_VALUE */
+const fallbackNotAvailable = ReturnFromFallbackResponse_returnFromFallbackResult_fallbackNotAvailable satisfies ReturnFromFallbackResponse_returnFromFallbackResult; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ReturnFromFallbackResponse_returnFromFallbackResult_commandError
@@ -101,7 +101,7 @@ const fallbackNotAvailable: ReturnFromFallbackResponse_returnFromFallbackResult 
  * @type {number}
  */
 export
-const ReturnFromFallbackResponse_returnFromFallbackResult_commandError: ReturnFromFallbackResponse_returnFromFallbackResult = 7; /* LONG_NAMED_INTEGER_VALUE */
+const ReturnFromFallbackResponse_returnFromFallbackResult_commandError = 7 satisfies ReturnFromFallbackResponse_returnFromFallbackResult; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ReturnFromFallbackResponse_returnFromFallbackResult_commandError
@@ -111,7 +111,7 @@ const ReturnFromFallbackResponse_returnFromFallbackResult_commandError: ReturnFr
  * @type {number}
  */
 export
-const commandError: ReturnFromFallbackResponse_returnFromFallbackResult = ReturnFromFallbackResponse_returnFromFallbackResult_commandError; /* SHORT_NAMED_INTEGER_VALUE */
+const commandError = ReturnFromFallbackResponse_returnFromFallbackResult_commandError satisfies ReturnFromFallbackResponse_returnFromFallbackResult; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ReturnFromFallbackResponse_returnFromFallbackResult_undefinedError
@@ -122,7 +122,7 @@ const commandError: ReturnFromFallbackResponse_returnFromFallbackResult = Return
  * @type {number}
  */
 export
-const ReturnFromFallbackResponse_returnFromFallbackResult_undefinedError: ReturnFromFallbackResponse_returnFromFallbackResult = 127; /* LONG_NAMED_INTEGER_VALUE */
+const ReturnFromFallbackResponse_returnFromFallbackResult_undefinedError = 127 satisfies ReturnFromFallbackResponse_returnFromFallbackResult; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ReturnFromFallbackResponse_returnFromFallbackResult_undefinedError
@@ -132,7 +132,7 @@ const ReturnFromFallbackResponse_returnFromFallbackResult_undefinedError: Return
  * @type {number}
  */
 export
-const undefinedError: ReturnFromFallbackResponse_returnFromFallbackResult = ReturnFromFallbackResponse_returnFromFallbackResult_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
+const undefinedError = ReturnFromFallbackResponse_returnFromFallbackResult_undefinedError satisfies ReturnFromFallbackResponse_returnFromFallbackResult; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_ReturnFromFallbackResponse_returnFromFallbackResult: $.ASN1Decoder<ReturnFromFallbackResponse_returnFromFallbackResult> = $._decodeInteger;
 export const _encode_ReturnFromFallbackResponse_returnFromFallbackResult: $.ASN1Encoder<ReturnFromFallbackResponse_returnFromFallbackResult> = $._encodeInteger;
 

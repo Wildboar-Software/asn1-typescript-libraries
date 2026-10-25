@@ -65,64 +65,64 @@ export const EDIMSEntryType = _enum_for_EDIMSEntryType;
  * @constant
  * @type {number}
  */
-export const EDIMSEntryType_edim: EDIMSEntryType =
-    EDIMSEntryType.edim; /* LONG_NAMED_ENUMERATED_VALUE */
+export const EDIMSEntryType_edim =
+    EDIMSEntryType.edim satisfies EDIMSEntryType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary edim
  * @constant
  * @type {number}
  */
-export const edim: EDIMSEntryType =
-    EDIMSEntryType.edim; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const edim =
+    EDIMSEntryType.edim satisfies EDIMSEntryType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EDIMSEntryType_pn
  * @constant
  * @type {number}
  */
-export const EDIMSEntryType_pn: EDIMSEntryType =
-    EDIMSEntryType.pn; /* LONG_NAMED_ENUMERATED_VALUE */
+export const EDIMSEntryType_pn =
+    EDIMSEntryType.pn satisfies EDIMSEntryType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pn
  * @constant
  * @type {number}
  */
-export const pn: EDIMSEntryType =
-    EDIMSEntryType.pn; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const pn =
+    EDIMSEntryType.pn satisfies EDIMSEntryType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EDIMSEntryType_nn
  * @constant
  * @type {number}
  */
-export const EDIMSEntryType_nn: EDIMSEntryType =
-    EDIMSEntryType.nn; /* LONG_NAMED_ENUMERATED_VALUE */
+export const EDIMSEntryType_nn =
+    EDIMSEntryType.nn satisfies EDIMSEntryType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary nn
  * @constant
  * @type {number}
  */
-export const nn: EDIMSEntryType =
-    EDIMSEntryType.nn; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const nn =
+    EDIMSEntryType.nn satisfies EDIMSEntryType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EDIMSEntryType_fn
  * @constant
  * @type {number}
  */
-export const EDIMSEntryType_fn: EDIMSEntryType =
-    EDIMSEntryType.fn; /* LONG_NAMED_ENUMERATED_VALUE */
+export const EDIMSEntryType_fn =
+    EDIMSEntryType.fn satisfies EDIMSEntryType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary fn
  * @constant
  * @type {number}
  */
-export const fn: EDIMSEntryType =
-    EDIMSEntryType.fn; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const fn =
+    EDIMSEntryType.fn satisfies EDIMSEntryType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 export function _decode_EDIMSEntryType(el: _Element): EDIMSEntryType {

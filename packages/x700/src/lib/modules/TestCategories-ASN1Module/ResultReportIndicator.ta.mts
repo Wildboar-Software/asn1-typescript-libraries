@@ -85,8 +85,8 @@ export const ResultReportIndicator = _enum_for_ResultReportIndicator;
  * @constant
  * @type {number}
  */
-export const ResultReportIndicator_resultReportForPassedSequences: ResultReportIndicator =
-    ResultReportIndicator.resultReportForPassedSequences; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ResultReportIndicator_resultReportForPassedSequences =
+    ResultReportIndicator.resultReportForPassedSequences satisfies ResultReportIndicator; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary resultReportForPassedSequences
@@ -96,8 +96,8 @@ export const ResultReportIndicator_resultReportForPassedSequences: ResultReportI
  * @constant
  * @type {number}
  */
-export const resultReportForPassedSequences: ResultReportIndicator =
-    ResultReportIndicator.resultReportForPassedSequences; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const resultReportForPassedSequences =
+    ResultReportIndicator.resultReportForPassedSequences satisfies ResultReportIndicator; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ResultReportIndicator_noResultReportForPassedSequences
@@ -107,8 +107,8 @@ export const resultReportForPassedSequences: ResultReportIndicator =
  * @constant
  * @type {number}
  */
-export const ResultReportIndicator_noResultReportForPassedSequences: ResultReportIndicator =
-    ResultReportIndicator.noResultReportForPassedSequences; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ResultReportIndicator_noResultReportForPassedSequences =
+    ResultReportIndicator.noResultReportForPassedSequences satisfies ResultReportIndicator; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary noResultReportForPassedSequences
@@ -118,8 +118,8 @@ export const ResultReportIndicator_noResultReportForPassedSequences: ResultRepor
  * @constant
  * @type {number}
  */
-export const noResultReportForPassedSequences: ResultReportIndicator =
-    ResultReportIndicator.noResultReportForPassedSequences; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const noResultReportForPassedSequences =
+    ResultReportIndicator.noResultReportForPassedSequences satisfies ResultReportIndicator; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 export function _decode_ResultReportIndicator(el: _Element): ResultReportIndicator {

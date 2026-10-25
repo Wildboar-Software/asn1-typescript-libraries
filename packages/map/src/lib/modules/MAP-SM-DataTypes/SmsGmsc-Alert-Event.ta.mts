@@ -76,7 +76,7 @@ const SmsGmsc_Alert_Event = _enum_for_SmsGmsc_Alert_Event;
  * @type {number}
  */
 export
-const SmsGmsc_Alert_Event_msAvailableForMtSms: SmsGmsc_Alert_Event = SmsGmsc_Alert_Event.msAvailableForMtSms; /* LONG_NAMED_ENUMERATED_VALUE */
+const SmsGmsc_Alert_Event_msAvailableForMtSms = SmsGmsc_Alert_Event.msAvailableForMtSms satisfies SmsGmsc_Alert_Event; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary msAvailableForMtSms
@@ -88,7 +88,7 @@ const SmsGmsc_Alert_Event_msAvailableForMtSms: SmsGmsc_Alert_Event = SmsGmsc_Ale
  * @type {number}
  */
 export
-const msAvailableForMtSms: SmsGmsc_Alert_Event = SmsGmsc_Alert_Event.msAvailableForMtSms; /* SHORT_NAMED_ENUMERATED_VALUE */
+const msAvailableForMtSms = SmsGmsc_Alert_Event.msAvailableForMtSms satisfies SmsGmsc_Alert_Event; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SmsGmsc_Alert_Event_msUnderNewServingNode
@@ -100,7 +100,7 @@ const msAvailableForMtSms: SmsGmsc_Alert_Event = SmsGmsc_Alert_Event.msAvailable
  * @type {number}
  */
 export
-const SmsGmsc_Alert_Event_msUnderNewServingNode: SmsGmsc_Alert_Event = SmsGmsc_Alert_Event.msUnderNewServingNode; /* LONG_NAMED_ENUMERATED_VALUE */
+const SmsGmsc_Alert_Event_msUnderNewServingNode = SmsGmsc_Alert_Event.msUnderNewServingNode satisfies SmsGmsc_Alert_Event; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary msUnderNewServingNode
@@ -112,7 +112,7 @@ const SmsGmsc_Alert_Event_msUnderNewServingNode: SmsGmsc_Alert_Event = SmsGmsc_A
  * @type {number}
  */
 export
-const msUnderNewServingNode: SmsGmsc_Alert_Event = SmsGmsc_Alert_Event.msUnderNewServingNode; /* SHORT_NAMED_ENUMERATED_VALUE */
+const msUnderNewServingNode = SmsGmsc_Alert_Event.msUnderNewServingNode satisfies SmsGmsc_Alert_Event; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) SmsGmsc_Alert_Event

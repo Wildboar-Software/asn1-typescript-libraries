@@ -38,7 +38,7 @@ type ReturnErrorProblem = INTEGER;
  * @type {number}
  */
 export
-const ReturnErrorProblem_unrecognizedInvocation: ReturnErrorProblem = 0; /* LONG_NAMED_INTEGER_VALUE */
+const ReturnErrorProblem_unrecognizedInvocation = 0 satisfies ReturnErrorProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ReturnErrorProblem_unrecognizedInvocation
@@ -51,7 +51,7 @@ const ReturnErrorProblem_unrecognizedInvocation: ReturnErrorProblem = 0; /* LONG
  * @type {number}
  */
 export
-const unrecognizedInvocation: ReturnErrorProblem = ReturnErrorProblem_unrecognizedInvocation; /* SHORT_NAMED_INTEGER_VALUE */
+const unrecognizedInvocation = ReturnErrorProblem_unrecognizedInvocation satisfies ReturnErrorProblem; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ReturnErrorProblem_errorResponseUnexpected
@@ -64,7 +64,7 @@ const unrecognizedInvocation: ReturnErrorProblem = ReturnErrorProblem_unrecogniz
  * @type {number}
  */
 export
-const ReturnErrorProblem_errorResponseUnexpected: ReturnErrorProblem = 1; /* LONG_NAMED_INTEGER_VALUE */
+const ReturnErrorProblem_errorResponseUnexpected = 1 satisfies ReturnErrorProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ReturnErrorProblem_errorResponseUnexpected
@@ -77,7 +77,7 @@ const ReturnErrorProblem_errorResponseUnexpected: ReturnErrorProblem = 1; /* LON
  * @type {number}
  */
 export
-const errorResponseUnexpected: ReturnErrorProblem = ReturnErrorProblem_errorResponseUnexpected; /* SHORT_NAMED_INTEGER_VALUE */
+const errorResponseUnexpected = ReturnErrorProblem_errorResponseUnexpected satisfies ReturnErrorProblem; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ReturnErrorProblem_unrecognizedError
@@ -90,7 +90,7 @@ const errorResponseUnexpected: ReturnErrorProblem = ReturnErrorProblem_errorResp
  * @type {number}
  */
 export
-const ReturnErrorProblem_unrecognizedError: ReturnErrorProblem = 2; /* LONG_NAMED_INTEGER_VALUE */
+const ReturnErrorProblem_unrecognizedError = 2 satisfies ReturnErrorProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ReturnErrorProblem_unrecognizedError
@@ -103,7 +103,7 @@ const ReturnErrorProblem_unrecognizedError: ReturnErrorProblem = 2; /* LONG_NAME
  * @type {number}
  */
 export
-const unrecognizedError: ReturnErrorProblem = ReturnErrorProblem_unrecognizedError; /* SHORT_NAMED_INTEGER_VALUE */
+const unrecognizedError = ReturnErrorProblem_unrecognizedError satisfies ReturnErrorProblem; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ReturnErrorProblem_unexpectedError
@@ -116,7 +116,7 @@ const unrecognizedError: ReturnErrorProblem = ReturnErrorProblem_unrecognizedErr
  * @type {number}
  */
 export
-const ReturnErrorProblem_unexpectedError: ReturnErrorProblem = 3; /* LONG_NAMED_INTEGER_VALUE */
+const ReturnErrorProblem_unexpectedError = 3 satisfies ReturnErrorProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ReturnErrorProblem_unexpectedError
@@ -129,7 +129,7 @@ const ReturnErrorProblem_unexpectedError: ReturnErrorProblem = 3; /* LONG_NAMED_
  * @type {number}
  */
 export
-const unexpectedError: ReturnErrorProblem = ReturnErrorProblem_unexpectedError; /* SHORT_NAMED_INTEGER_VALUE */
+const unexpectedError = ReturnErrorProblem_unexpectedError satisfies ReturnErrorProblem; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ReturnErrorProblem_mistypedParameter
@@ -142,7 +142,7 @@ const unexpectedError: ReturnErrorProblem = ReturnErrorProblem_unexpectedError; 
  * @type {number}
  */
 export
-const ReturnErrorProblem_mistypedParameter: ReturnErrorProblem = 4; /* LONG_NAMED_INTEGER_VALUE */
+const ReturnErrorProblem_mistypedParameter = 4 satisfies ReturnErrorProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ReturnErrorProblem_mistypedParameter
@@ -155,7 +155,7 @@ const ReturnErrorProblem_mistypedParameter: ReturnErrorProblem = 4; /* LONG_NAME
  * @type {number}
  */
 export
-const mistypedParameter: ReturnErrorProblem = ReturnErrorProblem_mistypedParameter; /* SHORT_NAMED_INTEGER_VALUE */
+const mistypedParameter = ReturnErrorProblem_mistypedParameter satisfies ReturnErrorProblem; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_ReturnErrorProblem: $.ASN1Decoder<ReturnErrorProblem> = $._decodeInteger;
 export const _encode_ReturnErrorProblem: $.ASN1Encoder<ReturnErrorProblem> = $._encodeInteger;
 

@@ -103,7 +103,7 @@ const IMEIStatus = _enum_for_IMEIStatus;
  * @type {number}
  */
 export
-const IMEIStatus_greyListedMobileEquipment: IMEIStatus = IMEIStatus.greyListedMobileEquipment; /* LONG_NAMED_ENUMERATED_VALUE */
+const IMEIStatus_greyListedMobileEquipment = IMEIStatus.greyListedMobileEquipment satisfies IMEIStatus; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary greyListedMobileEquipment
@@ -117,7 +117,7 @@ const IMEIStatus_greyListedMobileEquipment: IMEIStatus = IMEIStatus.greyListedMo
  * @type {number}
  */
 export
-const greyListedMobileEquipment: IMEIStatus = IMEIStatus.greyListedMobileEquipment; /* SHORT_NAMED_ENUMERATED_VALUE */
+const greyListedMobileEquipment = IMEIStatus.greyListedMobileEquipment satisfies IMEIStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary IMEIStatus_blackListedMobileEquipment
@@ -131,7 +131,7 @@ const greyListedMobileEquipment: IMEIStatus = IMEIStatus.greyListedMobileEquipme
  * @type {number}
  */
 export
-const IMEIStatus_blackListedMobileEquipment: IMEIStatus = IMEIStatus.blackListedMobileEquipment; /* LONG_NAMED_ENUMERATED_VALUE */
+const IMEIStatus_blackListedMobileEquipment = IMEIStatus.blackListedMobileEquipment satisfies IMEIStatus; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary blackListedMobileEquipment
@@ -145,7 +145,7 @@ const IMEIStatus_blackListedMobileEquipment: IMEIStatus = IMEIStatus.blackListed
  * @type {number}
  */
 export
-const blackListedMobileEquipment: IMEIStatus = IMEIStatus.blackListedMobileEquipment; /* SHORT_NAMED_ENUMERATED_VALUE */
+const blackListedMobileEquipment = IMEIStatus.blackListedMobileEquipment satisfies IMEIStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary IMEIStatus_nonWhiteListedMobileEquipment
@@ -159,7 +159,7 @@ const blackListedMobileEquipment: IMEIStatus = IMEIStatus.blackListedMobileEquip
  * @type {number}
  */
 export
-const IMEIStatus_nonWhiteListedMobileEquipment: IMEIStatus = IMEIStatus.nonWhiteListedMobileEquipment; /* LONG_NAMED_ENUMERATED_VALUE */
+const IMEIStatus_nonWhiteListedMobileEquipment = IMEIStatus.nonWhiteListedMobileEquipment satisfies IMEIStatus; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary nonWhiteListedMobileEquipment
@@ -173,7 +173,7 @@ const IMEIStatus_nonWhiteListedMobileEquipment: IMEIStatus = IMEIStatus.nonWhite
  * @type {number}
  */
 export
-const nonWhiteListedMobileEquipment: IMEIStatus = IMEIStatus.nonWhiteListedMobileEquipment; /* SHORT_NAMED_ENUMERATED_VALUE */
+const nonWhiteListedMobileEquipment = IMEIStatus.nonWhiteListedMobileEquipment satisfies IMEIStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_IMEIStatus: $.ASN1Decoder<IMEIStatus> = $._decodeEnumerated;

@@ -44,7 +44,7 @@ export type CreateVpnServiceError =
  * @constant
  * @type {number}
  */
-export const CreateVpnServiceError_invalidServiceClasses: CreateVpnServiceError = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CreateVpnServiceError_invalidServiceClasses = _enum_for_CreateVpnServiceError.invalidServiceClasses satisfies CreateVpnServiceError; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -52,7 +52,7 @@ export const CreateVpnServiceError_invalidServiceClasses: CreateVpnServiceError 
  * @constant
  * @type {number}
  */
-export const invalidServiceClasses: CreateVpnServiceError = CreateVpnServiceError_invalidServiceClasses; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const invalidServiceClasses = CreateVpnServiceError_invalidServiceClasses satisfies CreateVpnServiceError; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -60,7 +60,7 @@ export const invalidServiceClasses: CreateVpnServiceError = CreateVpnServiceErro
  * @constant
  * @type {number}
  */
-export const CreateVpnServiceError_duplicatedVPNIdentifier: CreateVpnServiceError = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CreateVpnServiceError_duplicatedVPNIdentifier = _enum_for_CreateVpnServiceError.duplicatedVPNIdentifier satisfies CreateVpnServiceError; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -68,7 +68,7 @@ export const CreateVpnServiceError_duplicatedVPNIdentifier: CreateVpnServiceErro
  * @constant
  * @type {number}
  */
-export const duplicatedVPNIdentifier: CreateVpnServiceError = CreateVpnServiceError_duplicatedVPNIdentifier; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const duplicatedVPNIdentifier = CreateVpnServiceError_duplicatedVPNIdentifier satisfies CreateVpnServiceError; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -76,7 +76,7 @@ export const duplicatedVPNIdentifier: CreateVpnServiceError = CreateVpnServiceEr
  * @constant
  * @type {number}
  */
-export const CreateVpnServiceError_invalidSAG: CreateVpnServiceError = 3; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CreateVpnServiceError_invalidSAG = _enum_for_CreateVpnServiceError.invalidSAG satisfies CreateVpnServiceError; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -84,7 +84,7 @@ export const CreateVpnServiceError_invalidSAG: CreateVpnServiceError = 3; /* LON
  * @constant
  * @type {number}
  */
-export const invalidSAG: CreateVpnServiceError = CreateVpnServiceError_invalidSAG; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const invalidSAG = CreateVpnServiceError_invalidSAG satisfies CreateVpnServiceError; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 

@@ -93,7 +93,7 @@ const AgentWorkingAfterCallEvent_pendingAgentState = _enum_for_AgentWorkingAfter
  * @type {number}
  */
 export
-const AgentWorkingAfterCallEvent_pendingAgentState_notReady: AgentWorkingAfterCallEvent_pendingAgentState = AgentWorkingAfterCallEvent_pendingAgentState.notReady; /* LONG_NAMED_ENUMERATED_VALUE */
+const AgentWorkingAfterCallEvent_pendingAgentState_notReady = AgentWorkingAfterCallEvent_pendingAgentState.notReady satisfies AgentWorkingAfterCallEvent_pendingAgentState; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary notReady
@@ -101,7 +101,7 @@ const AgentWorkingAfterCallEvent_pendingAgentState_notReady: AgentWorkingAfterCa
  * @type {number}
  */
 export
-const notReady: AgentWorkingAfterCallEvent_pendingAgentState = AgentWorkingAfterCallEvent_pendingAgentState.notReady; /* SHORT_NAMED_ENUMERATED_VALUE */
+const notReady = AgentWorkingAfterCallEvent_pendingAgentState.notReady satisfies AgentWorkingAfterCallEvent_pendingAgentState; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AgentWorkingAfterCallEvent_pendingAgentState_ready
@@ -112,7 +112,7 @@ const notReady: AgentWorkingAfterCallEvent_pendingAgentState = AgentWorkingAfter
  * @type {number}
  */
 export
-const AgentWorkingAfterCallEvent_pendingAgentState_ready: AgentWorkingAfterCallEvent_pendingAgentState = AgentWorkingAfterCallEvent_pendingAgentState.ready; /* LONG_NAMED_ENUMERATED_VALUE */
+const AgentWorkingAfterCallEvent_pendingAgentState_ready = AgentWorkingAfterCallEvent_pendingAgentState.ready satisfies AgentWorkingAfterCallEvent_pendingAgentState; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ready
@@ -120,7 +120,7 @@ const AgentWorkingAfterCallEvent_pendingAgentState_ready: AgentWorkingAfterCallE
  * @type {number}
  */
 export
-const ready: AgentWorkingAfterCallEvent_pendingAgentState = AgentWorkingAfterCallEvent_pendingAgentState.ready; /* SHORT_NAMED_ENUMERATED_VALUE */
+const ready = AgentWorkingAfterCallEvent_pendingAgentState.ready satisfies AgentWorkingAfterCallEvent_pendingAgentState; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AgentWorkingAfterCallEvent_pendingAgentState_null_
@@ -131,7 +131,7 @@ const ready: AgentWorkingAfterCallEvent_pendingAgentState = AgentWorkingAfterCal
  * @type {number}
  */
 export
-const AgentWorkingAfterCallEvent_pendingAgentState_null_: AgentWorkingAfterCallEvent_pendingAgentState = AgentWorkingAfterCallEvent_pendingAgentState.null_; /* LONG_NAMED_ENUMERATED_VALUE */
+const AgentWorkingAfterCallEvent_pendingAgentState_null_ = AgentWorkingAfterCallEvent_pendingAgentState.null_ satisfies AgentWorkingAfterCallEvent_pendingAgentState; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary null_
@@ -139,7 +139,7 @@ const AgentWorkingAfterCallEvent_pendingAgentState_null_: AgentWorkingAfterCallE
  * @type {number}
  */
 export
-const null_: AgentWorkingAfterCallEvent_pendingAgentState = AgentWorkingAfterCallEvent_pendingAgentState.null_; /* SHORT_NAMED_ENUMERATED_VALUE */
+const null_ = AgentWorkingAfterCallEvent_pendingAgentState.null_ satisfies AgentWorkingAfterCallEvent_pendingAgentState; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 let _cached_decoder_for_AgentWorkingAfterCallEvent_pendingAgentState: $.ASN1Decoder<AgentWorkingAfterCallEvent_pendingAgentState> | null = null;
 

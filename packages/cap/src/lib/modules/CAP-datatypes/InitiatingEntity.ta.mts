@@ -27,13 +27,13 @@ export enum _enum_for_InitiatingEntity {
 }
 export type InitiatingEntity = _enum_for_InitiatingEntity;
 export const InitiatingEntity = _enum_for_InitiatingEntity;
-export const InitiatingEntity_mobileStation: InitiatingEntity = InitiatingEntity.mobileStation;
-export const mobileStation: InitiatingEntity = InitiatingEntity.mobileStation;
-export const InitiatingEntity_sgsn: InitiatingEntity = InitiatingEntity.sgsn;
-export const sgsn: InitiatingEntity = InitiatingEntity.sgsn;
-export const InitiatingEntity_hlr: InitiatingEntity = InitiatingEntity.hlr;
-export const hlr: InitiatingEntity = InitiatingEntity.hlr;
-export const InitiatingEntity_ggsn: InitiatingEntity = InitiatingEntity.ggsn;
-export const ggsn: InitiatingEntity = InitiatingEntity.ggsn;
+export const InitiatingEntity_mobileStation = InitiatingEntity.mobileStation satisfies InitiatingEntity;
+export const mobileStation = InitiatingEntity.mobileStation satisfies InitiatingEntity;
+export const InitiatingEntity_sgsn = InitiatingEntity.sgsn satisfies InitiatingEntity;
+export const sgsn = InitiatingEntity.sgsn satisfies InitiatingEntity;
+export const InitiatingEntity_hlr = InitiatingEntity.hlr satisfies InitiatingEntity;
+export const hlr = InitiatingEntity.hlr satisfies InitiatingEntity;
+export const InitiatingEntity_ggsn = InitiatingEntity.ggsn satisfies InitiatingEntity;
+export const ggsn = InitiatingEntity.ggsn satisfies InitiatingEntity;
 export const _decode_InitiatingEntity = $._decodeEnumerated;
 export const _encode_InitiatingEntity = $._encodeEnumerated;

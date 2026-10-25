@@ -37,7 +37,7 @@ type GeneralProblem = INTEGER;
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
  */
 export
-const GeneralProblem_unrecognisedPDU: GeneralProblem = 0; /* LONG_NAMED_INTEGER_VALUE */
+const GeneralProblem_unrecognisedPDU = 0 satisfies GeneralProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary unrecognisedPDU
@@ -46,7 +46,7 @@ const GeneralProblem_unrecognisedPDU: GeneralProblem = 0; /* LONG_NAMED_INTEGER_
  * @type {number}
  */
 export
-const unrecognisedPDU: GeneralProblem = GeneralProblem_unrecognisedPDU; /* SHORT_NAMED_INTEGER_VALUE */
+const unrecognisedPDU = GeneralProblem_unrecognisedPDU satisfies GeneralProblem; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary GeneralProblem_mistypedPDU
@@ -59,7 +59,7 @@ const unrecognisedPDU: GeneralProblem = GeneralProblem_unrecognisedPDU; /* SHORT
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
  */
 export
-const GeneralProblem_mistypedPDU: GeneralProblem = 1; /* LONG_NAMED_INTEGER_VALUE */
+const GeneralProblem_mistypedPDU = 1 satisfies GeneralProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary mistypedPDU
@@ -68,7 +68,7 @@ const GeneralProblem_mistypedPDU: GeneralProblem = 1; /* LONG_NAMED_INTEGER_VALU
  * @type {number}
  */
 export
-const mistypedPDU: GeneralProblem = GeneralProblem_mistypedPDU; /* SHORT_NAMED_INTEGER_VALUE */
+const mistypedPDU = GeneralProblem_mistypedPDU satisfies GeneralProblem; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary GeneralProblem_badlyStructuredPDU
@@ -81,7 +81,7 @@ const mistypedPDU: GeneralProblem = GeneralProblem_mistypedPDU; /* SHORT_NAMED_I
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
  */
 export
-const GeneralProblem_badlyStructuredPDU: GeneralProblem = 2; /* LONG_NAMED_INTEGER_VALUE */
+const GeneralProblem_badlyStructuredPDU = 2 satisfies GeneralProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary badlyStructuredPDU
@@ -90,7 +90,7 @@ const GeneralProblem_badlyStructuredPDU: GeneralProblem = 2; /* LONG_NAMED_INTEG
  * @type {number}
  */
 export
-const badlyStructuredPDU: GeneralProblem = GeneralProblem_badlyStructuredPDU; /* SHORT_NAMED_INTEGER_VALUE */
+const badlyStructuredPDU = GeneralProblem_badlyStructuredPDU satisfies GeneralProblem; /* SHORT_NAMED_INTEGER_VALUE */
 
 export
 const _decode_GeneralProblem: $.ASN1Decoder<GeneralProblem> = $._decodeInteger;

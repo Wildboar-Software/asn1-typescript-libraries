@@ -31,56 +31,56 @@ export type DLPolicy_originating_MTA_report = INTEGER;
  * @constant
  * @type {number}
  */
-export const DLPolicy_originating_MTA_report_unchanged: DLPolicy_originating_MTA_report = 0; /* LONG_NAMED_INTEGER_VALUE */
+export const DLPolicy_originating_MTA_report_unchanged = 0 satisfies DLPolicy_originating_MTA_report; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DLPolicy_originating_MTA_report_unchanged
  * @constant
  * @type {number}
  */
-export const unchanged: DLPolicy_originating_MTA_report = DLPolicy_originating_MTA_report_unchanged; /* SHORT_NAMED_INTEGER_VALUE */
+export const unchanged = DLPolicy_originating_MTA_report_unchanged satisfies DLPolicy_originating_MTA_report; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DLPolicy_originating_MTA_report_report
  * @constant
  * @type {number}
  */
-export const DLPolicy_originating_MTA_report_report: DLPolicy_originating_MTA_report = 2; /* LONG_NAMED_INTEGER_VALUE */
+export const DLPolicy_originating_MTA_report_report = 2 satisfies DLPolicy_originating_MTA_report; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DLPolicy_originating_MTA_report_report
  * @constant
  * @type {number}
  */
-export const report: DLPolicy_originating_MTA_report = DLPolicy_originating_MTA_report_report; /* SHORT_NAMED_INTEGER_VALUE */
+export const report = DLPolicy_originating_MTA_report_report satisfies DLPolicy_originating_MTA_report; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DLPolicy_originating_MTA_report_non_delivery_report
  * @constant
  * @type {number}
  */
-export const DLPolicy_originating_MTA_report_non_delivery_report: DLPolicy_originating_MTA_report = 3; /* LONG_NAMED_INTEGER_VALUE */
+export const DLPolicy_originating_MTA_report_non_delivery_report = 3 satisfies DLPolicy_originating_MTA_report; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DLPolicy_originating_MTA_report_non_delivery_report
  * @constant
  * @type {number}
  */
-export const non_delivery_report: DLPolicy_originating_MTA_report = DLPolicy_originating_MTA_report_non_delivery_report; /* SHORT_NAMED_INTEGER_VALUE */
+export const non_delivery_report = DLPolicy_originating_MTA_report_non_delivery_report satisfies DLPolicy_originating_MTA_report; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DLPolicy_originating_MTA_report_audited_report
  * @constant
  * @type {number}
  */
-export const DLPolicy_originating_MTA_report_audited_report: DLPolicy_originating_MTA_report = 4; /* LONG_NAMED_INTEGER_VALUE */
+export const DLPolicy_originating_MTA_report_audited_report = 4 satisfies DLPolicy_originating_MTA_report; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DLPolicy_originating_MTA_report_audited_report
  * @constant
  * @type {number}
  */
-export const audited_report: DLPolicy_originating_MTA_report = DLPolicy_originating_MTA_report_audited_report; /* SHORT_NAMED_INTEGER_VALUE */
+export const audited_report = DLPolicy_originating_MTA_report_audited_report satisfies DLPolicy_originating_MTA_report; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_DLPolicy_originating_MTA_report = $._decodeInteger;

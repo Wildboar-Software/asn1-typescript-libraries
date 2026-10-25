@@ -69,8 +69,8 @@ export const SearchArgumentData_joinType = _enum_for_SearchArgumentData_joinType
  * @constant
  * @type {number}
  */
-export const SearchArgumentData_joinType_innerJoin: SearchArgumentData_joinType =
-    SearchArgumentData_joinType.innerJoin; /* LONG_NAMED_ENUMERATED_VALUE */
+export const SearchArgumentData_joinType_innerJoin =
+    SearchArgumentData_joinType.innerJoin satisfies SearchArgumentData_joinType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary innerJoin
@@ -81,8 +81,8 @@ export const SearchArgumentData_joinType_innerJoin: SearchArgumentData_joinType 
  * @constant
  * @type {number}
  */
-export const innerJoin: SearchArgumentData_joinType =
-    SearchArgumentData_joinType.innerJoin; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const innerJoin =
+    SearchArgumentData_joinType.innerJoin satisfies SearchArgumentData_joinType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SearchArgumentData_joinType_leftOuterJoin
@@ -93,8 +93,8 @@ export const innerJoin: SearchArgumentData_joinType =
  * @constant
  * @type {number}
  */
-export const SearchArgumentData_joinType_leftOuterJoin: SearchArgumentData_joinType =
-    SearchArgumentData_joinType.leftOuterJoin; /* LONG_NAMED_ENUMERATED_VALUE */
+export const SearchArgumentData_joinType_leftOuterJoin =
+    SearchArgumentData_joinType.leftOuterJoin satisfies SearchArgumentData_joinType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary leftOuterJoin
@@ -105,8 +105,8 @@ export const SearchArgumentData_joinType_leftOuterJoin: SearchArgumentData_joinT
  * @constant
  * @type {number}
  */
-export const leftOuterJoin: SearchArgumentData_joinType =
-    SearchArgumentData_joinType.leftOuterJoin; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const leftOuterJoin =
+    SearchArgumentData_joinType.leftOuterJoin satisfies SearchArgumentData_joinType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SearchArgumentData_joinType_fullOuterJoin
@@ -118,8 +118,8 @@ export const leftOuterJoin: SearchArgumentData_joinType =
  * @constant
  * @type {number}
  */
-export const SearchArgumentData_joinType_fullOuterJoin: SearchArgumentData_joinType =
-    SearchArgumentData_joinType.fullOuterJoin; /* LONG_NAMED_ENUMERATED_VALUE */
+export const SearchArgumentData_joinType_fullOuterJoin =
+    SearchArgumentData_joinType.fullOuterJoin satisfies SearchArgumentData_joinType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary fullOuterJoin
@@ -131,8 +131,8 @@ export const SearchArgumentData_joinType_fullOuterJoin: SearchArgumentData_joinT
  * @constant
  * @type {number}
  */
-export const fullOuterJoin: SearchArgumentData_joinType =
-    SearchArgumentData_joinType.fullOuterJoin; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const fullOuterJoin =
+    SearchArgumentData_joinType.fullOuterJoin satisfies SearchArgumentData_joinType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 export function _decode_SearchArgumentData_joinType(el: _Element): SearchArgumentData_joinType {

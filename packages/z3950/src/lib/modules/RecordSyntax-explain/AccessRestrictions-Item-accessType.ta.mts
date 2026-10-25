@@ -40,7 +40,7 @@ type AccessRestrictions_Item_accessType = INTEGER;
  * @type {number}
  */
 export
-const AccessRestrictions_Item_accessType_any_: AccessRestrictions_Item_accessType = 0; /* LONG_NAMED_INTEGER_VALUE */
+const AccessRestrictions_Item_accessType_any_ = 0 satisfies AccessRestrictions_Item_accessType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AccessRestrictions_Item_accessType_any_
@@ -50,7 +50,7 @@ const AccessRestrictions_Item_accessType_any_: AccessRestrictions_Item_accessTyp
  * @type {number}
  */
 export
-const any_: AccessRestrictions_Item_accessType = AccessRestrictions_Item_accessType_any_; /* SHORT_NAMED_INTEGER_VALUE */
+const any_ = AccessRestrictions_Item_accessType_any_ satisfies AccessRestrictions_Item_accessType; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AccessRestrictions_Item_accessType_search
@@ -61,7 +61,7 @@ const any_: AccessRestrictions_Item_accessType = AccessRestrictions_Item_accessT
  * @type {number}
  */
 export
-const AccessRestrictions_Item_accessType_search: AccessRestrictions_Item_accessType = 1; /* LONG_NAMED_INTEGER_VALUE */
+const AccessRestrictions_Item_accessType_search = 1 satisfies AccessRestrictions_Item_accessType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AccessRestrictions_Item_accessType_search
@@ -71,7 +71,7 @@ const AccessRestrictions_Item_accessType_search: AccessRestrictions_Item_accessT
  * @type {number}
  */
 export
-const search: AccessRestrictions_Item_accessType = AccessRestrictions_Item_accessType_search; /* SHORT_NAMED_INTEGER_VALUE */
+const search = AccessRestrictions_Item_accessType_search satisfies AccessRestrictions_Item_accessType; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AccessRestrictions_Item_accessType_present
@@ -82,7 +82,7 @@ const search: AccessRestrictions_Item_accessType = AccessRestrictions_Item_acces
  * @type {number}
  */
 export
-const AccessRestrictions_Item_accessType_present: AccessRestrictions_Item_accessType = 2; /* LONG_NAMED_INTEGER_VALUE */
+const AccessRestrictions_Item_accessType_present = 2 satisfies AccessRestrictions_Item_accessType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AccessRestrictions_Item_accessType_present
@@ -92,7 +92,7 @@ const AccessRestrictions_Item_accessType_present: AccessRestrictions_Item_access
  * @type {number}
  */
 export
-const present: AccessRestrictions_Item_accessType = AccessRestrictions_Item_accessType_present; /* SHORT_NAMED_INTEGER_VALUE */
+const present = AccessRestrictions_Item_accessType_present satisfies AccessRestrictions_Item_accessType; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AccessRestrictions_Item_accessType_specific_elements
@@ -103,7 +103,7 @@ const present: AccessRestrictions_Item_accessType = AccessRestrictions_Item_acce
  * @type {number}
  */
 export
-const AccessRestrictions_Item_accessType_specific_elements: AccessRestrictions_Item_accessType = 3; /* LONG_NAMED_INTEGER_VALUE */
+const AccessRestrictions_Item_accessType_specific_elements = 3 satisfies AccessRestrictions_Item_accessType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AccessRestrictions_Item_accessType_specific_elements
@@ -113,7 +113,7 @@ const AccessRestrictions_Item_accessType_specific_elements: AccessRestrictions_I
  * @type {number}
  */
 export
-const specific_elements: AccessRestrictions_Item_accessType = AccessRestrictions_Item_accessType_specific_elements; /* SHORT_NAMED_INTEGER_VALUE */
+const specific_elements = AccessRestrictions_Item_accessType_specific_elements satisfies AccessRestrictions_Item_accessType; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AccessRestrictions_Item_accessType_extended_services
@@ -124,7 +124,7 @@ const specific_elements: AccessRestrictions_Item_accessType = AccessRestrictions
  * @type {number}
  */
 export
-const AccessRestrictions_Item_accessType_extended_services: AccessRestrictions_Item_accessType = 4; /* LONG_NAMED_INTEGER_VALUE */
+const AccessRestrictions_Item_accessType_extended_services = 4 satisfies AccessRestrictions_Item_accessType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AccessRestrictions_Item_accessType_extended_services
@@ -134,7 +134,7 @@ const AccessRestrictions_Item_accessType_extended_services: AccessRestrictions_I
  * @type {number}
  */
 export
-const extended_services: AccessRestrictions_Item_accessType = AccessRestrictions_Item_accessType_extended_services; /* SHORT_NAMED_INTEGER_VALUE */
+const extended_services = AccessRestrictions_Item_accessType_extended_services satisfies AccessRestrictions_Item_accessType; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AccessRestrictions_Item_accessType_by_database
@@ -145,7 +145,7 @@ const extended_services: AccessRestrictions_Item_accessType = AccessRestrictions
  * @type {number}
  */
 export
-const AccessRestrictions_Item_accessType_by_database: AccessRestrictions_Item_accessType = 5; /* LONG_NAMED_INTEGER_VALUE */
+const AccessRestrictions_Item_accessType_by_database = 5 satisfies AccessRestrictions_Item_accessType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AccessRestrictions_Item_accessType_by_database
@@ -155,7 +155,7 @@ const AccessRestrictions_Item_accessType_by_database: AccessRestrictions_Item_ac
  * @type {number}
  */
 export
-const by_database: AccessRestrictions_Item_accessType = AccessRestrictions_Item_accessType_by_database; /* SHORT_NAMED_INTEGER_VALUE */
+const by_database = AccessRestrictions_Item_accessType_by_database satisfies AccessRestrictions_Item_accessType; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_AccessRestrictions_Item_accessType: $.ASN1Decoder<AccessRestrictions_Item_accessType> = $._decodeInteger;
 export const _encode_AccessRestrictions_Item_accessType: $.ASN1Encoder<AccessRestrictions_Item_accessType> = $._encodeInteger;
 

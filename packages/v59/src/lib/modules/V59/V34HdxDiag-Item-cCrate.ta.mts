@@ -86,7 +86,7 @@ const V34HdxDiag_Item_cCrate = _enum_for_V34HdxDiag_Item_cCrate;
  * @type {number}
  */
 export
-const V34HdxDiag_Item_cCrate_t12R12: V34HdxDiag_Item_cCrate = V34HdxDiag_Item_cCrate.t12R12; /* LONG_NAMED_ENUMERATED_VALUE */
+const V34HdxDiag_Item_cCrate_t12R12 = V34HdxDiag_Item_cCrate.t12R12 satisfies V34HdxDiag_Item_cCrate; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary t12R12
@@ -94,7 +94,7 @@ const V34HdxDiag_Item_cCrate_t12R12: V34HdxDiag_Item_cCrate = V34HdxDiag_Item_cC
  * @type {number}
  */
 export
-const t12R12: V34HdxDiag_Item_cCrate = V34HdxDiag_Item_cCrate.t12R12; /* SHORT_NAMED_ENUMERATED_VALUE */
+const t12R12 = V34HdxDiag_Item_cCrate.t12R12 satisfies V34HdxDiag_Item_cCrate; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary V34HdxDiag_Item_cCrate_t24R24
@@ -106,7 +106,7 @@ const t12R12: V34HdxDiag_Item_cCrate = V34HdxDiag_Item_cCrate.t12R12; /* SHORT_N
  * @type {number}
  */
 export
-const V34HdxDiag_Item_cCrate_t24R24: V34HdxDiag_Item_cCrate = V34HdxDiag_Item_cCrate.t24R24; /* LONG_NAMED_ENUMERATED_VALUE */
+const V34HdxDiag_Item_cCrate_t24R24 = V34HdxDiag_Item_cCrate.t24R24 satisfies V34HdxDiag_Item_cCrate; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary t24R24
@@ -114,7 +114,7 @@ const V34HdxDiag_Item_cCrate_t24R24: V34HdxDiag_Item_cCrate = V34HdxDiag_Item_cC
  * @type {number}
  */
 export
-const t24R24: V34HdxDiag_Item_cCrate = V34HdxDiag_Item_cCrate.t24R24; /* SHORT_NAMED_ENUMERATED_VALUE */
+const t24R24 = V34HdxDiag_Item_cCrate.t24R24 satisfies V34HdxDiag_Item_cCrate; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary V34HdxDiag_Item_cCrate_t12R24
@@ -126,7 +126,7 @@ const t24R24: V34HdxDiag_Item_cCrate = V34HdxDiag_Item_cCrate.t24R24; /* SHORT_N
  * @type {number}
  */
 export
-const V34HdxDiag_Item_cCrate_t12R24: V34HdxDiag_Item_cCrate = V34HdxDiag_Item_cCrate.t12R24; /* LONG_NAMED_ENUMERATED_VALUE */
+const V34HdxDiag_Item_cCrate_t12R24 = V34HdxDiag_Item_cCrate.t12R24 satisfies V34HdxDiag_Item_cCrate; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary t12R24
@@ -134,7 +134,7 @@ const V34HdxDiag_Item_cCrate_t12R24: V34HdxDiag_Item_cCrate = V34HdxDiag_Item_cC
  * @type {number}
  */
 export
-const t12R24: V34HdxDiag_Item_cCrate = V34HdxDiag_Item_cCrate.t12R24; /* SHORT_NAMED_ENUMERATED_VALUE */
+const t12R24 = V34HdxDiag_Item_cCrate.t12R24 satisfies V34HdxDiag_Item_cCrate; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary V34HdxDiag_Item_cCrate_t24R12
@@ -146,7 +146,7 @@ const t12R24: V34HdxDiag_Item_cCrate = V34HdxDiag_Item_cCrate.t12R24; /* SHORT_N
  * @type {number}
  */
 export
-const V34HdxDiag_Item_cCrate_t24R12: V34HdxDiag_Item_cCrate = V34HdxDiag_Item_cCrate.t24R12; /* LONG_NAMED_ENUMERATED_VALUE */
+const V34HdxDiag_Item_cCrate_t24R12 = V34HdxDiag_Item_cCrate.t24R12 satisfies V34HdxDiag_Item_cCrate; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary t24R12
@@ -154,7 +154,7 @@ const V34HdxDiag_Item_cCrate_t24R12: V34HdxDiag_Item_cCrate = V34HdxDiag_Item_cC
  * @type {number}
  */
 export
-const t24R12: V34HdxDiag_Item_cCrate = V34HdxDiag_Item_cCrate.t24R12; /* SHORT_NAMED_ENUMERATED_VALUE */
+const t24R12 = V34HdxDiag_Item_cCrate.t24R12 satisfies V34HdxDiag_Item_cCrate; /* SHORT_NAMED_ENUMERATED_VALUE */
 export function _decode_V34HdxDiag_Item_cCrate(el: _Element): V34HdxDiag_Item_cCrate {
     const enumerated = $._decodeEnumerated(el);
     switch (enumerated) {

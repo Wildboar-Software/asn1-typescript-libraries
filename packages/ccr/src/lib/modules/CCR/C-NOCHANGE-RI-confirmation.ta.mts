@@ -49,7 +49,7 @@ export type C_NOCHANGE_RI_confirmation =
  * @constant
  * @type {number}
  */
-export const C_NOCHANGE_RI_confirmation_not_required: C_NOCHANGE_RI_confirmation = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+export const C_NOCHANGE_RI_confirmation_not_required = _enum_for_C_NOCHANGE_RI_confirmation.not_required satisfies C_NOCHANGE_RI_confirmation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -57,7 +57,7 @@ export const C_NOCHANGE_RI_confirmation_not_required: C_NOCHANGE_RI_confirmation
  * @constant
  * @type {number}
  */
-export const not_required: C_NOCHANGE_RI_confirmation = C_NOCHANGE_RI_confirmation_not_required; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const not_required = C_NOCHANGE_RI_confirmation_not_required satisfies C_NOCHANGE_RI_confirmation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -66,7 +66,7 @@ export const not_required: C_NOCHANGE_RI_confirmation = C_NOCHANGE_RI_confirmati
  * @constant
  * @type {number}
  */
-export const C_NOCHANGE_RI_confirmation_result_requested: C_NOCHANGE_RI_confirmation = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+export const C_NOCHANGE_RI_confirmation_result_requested = _enum_for_C_NOCHANGE_RI_confirmation.result_requested satisfies C_NOCHANGE_RI_confirmation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -74,7 +74,7 @@ export const C_NOCHANGE_RI_confirmation_result_requested: C_NOCHANGE_RI_confirma
  * @constant
  * @type {number}
  */
-export const result_requested: C_NOCHANGE_RI_confirmation = C_NOCHANGE_RI_confirmation_result_requested; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const result_requested = C_NOCHANGE_RI_confirmation_result_requested satisfies C_NOCHANGE_RI_confirmation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 

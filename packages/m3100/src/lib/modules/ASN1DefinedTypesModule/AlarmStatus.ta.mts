@@ -79,8 +79,8 @@ export const AlarmStatus = _enum_for_AlarmStatus;
  * @constant
  * @type {number}
  */
-export const AlarmStatus_cleared: AlarmStatus =
-    AlarmStatus.cleared; /* LONG_NAMED_ENUMERATED_VALUE */
+export const AlarmStatus_cleared =
+    AlarmStatus.cleared satisfies AlarmStatus; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -88,8 +88,8 @@ export const AlarmStatus_cleared: AlarmStatus =
  * @constant
  * @type {number}
  */
-export const cleared: AlarmStatus =
-    AlarmStatus.cleared; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const cleared =
+    AlarmStatus.cleared satisfies AlarmStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -97,8 +97,8 @@ export const cleared: AlarmStatus =
  * @constant
  * @type {number}
  */
-export const AlarmStatus_activeReportable_Indeterminate: AlarmStatus =
-    AlarmStatus.activeReportable_Indeterminate; /* LONG_NAMED_ENUMERATED_VALUE */
+export const AlarmStatus_activeReportable_Indeterminate =
+    AlarmStatus.activeReportable_Indeterminate satisfies AlarmStatus; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -106,8 +106,8 @@ export const AlarmStatus_activeReportable_Indeterminate: AlarmStatus =
  * @constant
  * @type {number}
  */
-export const activeReportable_Indeterminate: AlarmStatus =
-    AlarmStatus.activeReportable_Indeterminate; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const activeReportable_Indeterminate =
+    AlarmStatus.activeReportable_Indeterminate satisfies AlarmStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -115,8 +115,8 @@ export const activeReportable_Indeterminate: AlarmStatus =
  * @constant
  * @type {number}
  */
-export const AlarmStatus_activeReportable_Warning: AlarmStatus =
-    AlarmStatus.activeReportable_Warning; /* LONG_NAMED_ENUMERATED_VALUE */
+export const AlarmStatus_activeReportable_Warning =
+    AlarmStatus.activeReportable_Warning satisfies AlarmStatus; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -124,8 +124,8 @@ export const AlarmStatus_activeReportable_Warning: AlarmStatus =
  * @constant
  * @type {number}
  */
-export const activeReportable_Warning: AlarmStatus =
-    AlarmStatus.activeReportable_Warning; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const activeReportable_Warning =
+    AlarmStatus.activeReportable_Warning satisfies AlarmStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -133,8 +133,8 @@ export const activeReportable_Warning: AlarmStatus =
  * @constant
  * @type {number}
  */
-export const AlarmStatus_activeReportable_Minor: AlarmStatus =
-    AlarmStatus.activeReportable_Minor; /* LONG_NAMED_ENUMERATED_VALUE */
+export const AlarmStatus_activeReportable_Minor =
+    AlarmStatus.activeReportable_Minor satisfies AlarmStatus; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -142,8 +142,8 @@ export const AlarmStatus_activeReportable_Minor: AlarmStatus =
  * @constant
  * @type {number}
  */
-export const activeReportable_Minor: AlarmStatus =
-    AlarmStatus.activeReportable_Minor; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const activeReportable_Minor =
+    AlarmStatus.activeReportable_Minor satisfies AlarmStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -151,8 +151,8 @@ export const activeReportable_Minor: AlarmStatus =
  * @constant
  * @type {number}
  */
-export const AlarmStatus_activeReportable_Major: AlarmStatus =
-    AlarmStatus.activeReportable_Major; /* LONG_NAMED_ENUMERATED_VALUE */
+export const AlarmStatus_activeReportable_Major =
+    AlarmStatus.activeReportable_Major satisfies AlarmStatus; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -160,8 +160,8 @@ export const AlarmStatus_activeReportable_Major: AlarmStatus =
  * @constant
  * @type {number}
  */
-export const activeReportable_Major: AlarmStatus =
-    AlarmStatus.activeReportable_Major; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const activeReportable_Major =
+    AlarmStatus.activeReportable_Major satisfies AlarmStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -169,8 +169,8 @@ export const activeReportable_Major: AlarmStatus =
  * @constant
  * @type {number}
  */
-export const AlarmStatus_activeReportable_Critical: AlarmStatus =
-    AlarmStatus.activeReportable_Critical; /* LONG_NAMED_ENUMERATED_VALUE */
+export const AlarmStatus_activeReportable_Critical =
+    AlarmStatus.activeReportable_Critical satisfies AlarmStatus; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -178,8 +178,8 @@ export const AlarmStatus_activeReportable_Critical: AlarmStatus =
  * @constant
  * @type {number}
  */
-export const activeReportable_Critical: AlarmStatus =
-    AlarmStatus.activeReportable_Critical; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const activeReportable_Critical =
+    AlarmStatus.activeReportable_Critical satisfies AlarmStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -187,8 +187,8 @@ export const activeReportable_Critical: AlarmStatus =
  * @constant
  * @type {number}
  */
-export const AlarmStatus_activePending: AlarmStatus =
-    AlarmStatus.activePending; /* LONG_NAMED_ENUMERATED_VALUE */
+export const AlarmStatus_activePending =
+    AlarmStatus.activePending satisfies AlarmStatus; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -196,8 +196,8 @@ export const AlarmStatus_activePending: AlarmStatus =
  * @constant
  * @type {number}
  */
-export const activePending: AlarmStatus =
-    AlarmStatus.activePending; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const activePending =
+    AlarmStatus.activePending satisfies AlarmStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 

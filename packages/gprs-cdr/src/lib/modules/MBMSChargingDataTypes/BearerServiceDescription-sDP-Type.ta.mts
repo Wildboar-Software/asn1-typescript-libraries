@@ -100,7 +100,7 @@ const BearerServiceDescription_sDP_Type = _enum_for_BearerServiceDescription_sDP
  * @type {number}
  */
 export
-const BearerServiceDescription_sDP_Type_sDP_offer: BearerServiceDescription_sDP_Type = BearerServiceDescription_sDP_Type.sDP_offer; /* LONG_NAMED_ENUMERATED_VALUE */
+const BearerServiceDescription_sDP_Type_sDP_offer = BearerServiceDescription_sDP_Type.sDP_offer satisfies BearerServiceDescription_sDP_Type; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sDP_offer
@@ -115,7 +115,7 @@ const BearerServiceDescription_sDP_Type_sDP_offer: BearerServiceDescription_sDP_
  * @type {number}
  */
 export
-const sDP_offer: BearerServiceDescription_sDP_Type = BearerServiceDescription_sDP_Type.sDP_offer; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sDP_offer = BearerServiceDescription_sDP_Type.sDP_offer satisfies BearerServiceDescription_sDP_Type; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary BearerServiceDescription_sDP_Type_sDP_answer
@@ -130,7 +130,7 @@ const sDP_offer: BearerServiceDescription_sDP_Type = BearerServiceDescription_sD
  * @type {number}
  */
 export
-const BearerServiceDescription_sDP_Type_sDP_answer: BearerServiceDescription_sDP_Type = BearerServiceDescription_sDP_Type.sDP_answer; /* LONG_NAMED_ENUMERATED_VALUE */
+const BearerServiceDescription_sDP_Type_sDP_answer = BearerServiceDescription_sDP_Type.sDP_answer satisfies BearerServiceDescription_sDP_Type; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sDP_answer
@@ -145,7 +145,7 @@ const BearerServiceDescription_sDP_Type_sDP_answer: BearerServiceDescription_sDP
  * @type {number}
  */
 export
-const sDP_answer: BearerServiceDescription_sDP_Type = BearerServiceDescription_sDP_Type.sDP_answer; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sDP_answer = BearerServiceDescription_sDP_Type.sDP_answer satisfies BearerServiceDescription_sDP_Type; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_BearerServiceDescription_sDP_Type: $.ASN1Decoder<BearerServiceDescription_sDP_Type> = $._decodeEnumerated;

@@ -37,7 +37,7 @@ type RpnCapabilities_operators_Item = INTEGER;
  * @type {number}
  */
 export
-const RpnCapabilities_operators_Item_and: RpnCapabilities_operators_Item = 0; /* LONG_NAMED_INTEGER_VALUE */
+const RpnCapabilities_operators_Item_and = 0 satisfies RpnCapabilities_operators_Item; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RpnCapabilities_operators_Item_and
@@ -47,7 +47,7 @@ const RpnCapabilities_operators_Item_and: RpnCapabilities_operators_Item = 0; /*
  * @type {number}
  */
 export
-const and: RpnCapabilities_operators_Item = RpnCapabilities_operators_Item_and; /* SHORT_NAMED_INTEGER_VALUE */
+const and = RpnCapabilities_operators_Item_and satisfies RpnCapabilities_operators_Item; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RpnCapabilities_operators_Item_or
@@ -58,7 +58,7 @@ const and: RpnCapabilities_operators_Item = RpnCapabilities_operators_Item_and; 
  * @type {number}
  */
 export
-const RpnCapabilities_operators_Item_or: RpnCapabilities_operators_Item = 1; /* LONG_NAMED_INTEGER_VALUE */
+const RpnCapabilities_operators_Item_or = 1 satisfies RpnCapabilities_operators_Item; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RpnCapabilities_operators_Item_or
@@ -68,7 +68,7 @@ const RpnCapabilities_operators_Item_or: RpnCapabilities_operators_Item = 1; /* 
  * @type {number}
  */
 export
-const or: RpnCapabilities_operators_Item = RpnCapabilities_operators_Item_or; /* SHORT_NAMED_INTEGER_VALUE */
+const or = RpnCapabilities_operators_Item_or satisfies RpnCapabilities_operators_Item; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RpnCapabilities_operators_Item_and_not
@@ -79,7 +79,7 @@ const or: RpnCapabilities_operators_Item = RpnCapabilities_operators_Item_or; /*
  * @type {number}
  */
 export
-const RpnCapabilities_operators_Item_and_not: RpnCapabilities_operators_Item = 2; /* LONG_NAMED_INTEGER_VALUE */
+const RpnCapabilities_operators_Item_and_not = 2 satisfies RpnCapabilities_operators_Item; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RpnCapabilities_operators_Item_and_not
@@ -89,7 +89,7 @@ const RpnCapabilities_operators_Item_and_not: RpnCapabilities_operators_Item = 2
  * @type {number}
  */
 export
-const and_not: RpnCapabilities_operators_Item = RpnCapabilities_operators_Item_and_not; /* SHORT_NAMED_INTEGER_VALUE */
+const and_not = RpnCapabilities_operators_Item_and_not satisfies RpnCapabilities_operators_Item; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RpnCapabilities_operators_Item_prox
@@ -100,7 +100,7 @@ const and_not: RpnCapabilities_operators_Item = RpnCapabilities_operators_Item_a
  * @type {number}
  */
 export
-const RpnCapabilities_operators_Item_prox: RpnCapabilities_operators_Item = 3; /* LONG_NAMED_INTEGER_VALUE */
+const RpnCapabilities_operators_Item_prox = 3 satisfies RpnCapabilities_operators_Item; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RpnCapabilities_operators_Item_prox
@@ -110,7 +110,7 @@ const RpnCapabilities_operators_Item_prox: RpnCapabilities_operators_Item = 3; /
  * @type {number}
  */
 export
-const prox: RpnCapabilities_operators_Item = RpnCapabilities_operators_Item_prox; /* SHORT_NAMED_INTEGER_VALUE */
+const prox = RpnCapabilities_operators_Item_prox satisfies RpnCapabilities_operators_Item; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_RpnCapabilities_operators_Item: $.ASN1Decoder<RpnCapabilities_operators_Item> = $._decodeInteger;
 export const _encode_RpnCapabilities_operators_Item: $.ASN1Encoder<RpnCapabilities_operators_Item> = $._encodeInteger;
 

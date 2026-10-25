@@ -88,16 +88,16 @@ export const AdjacencyState = _enum_for_AdjacencyState;
  * @constant
  * @type {number}
  */
-export const AdjacencyState_initializing: AdjacencyState =
-  AdjacencyState.initializing; /* LONG_NAMED_ENUMERATED_VALUE */
+export const AdjacencyState_initializing =
+  AdjacencyState.initializing satisfies AdjacencyState; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary initializing
  * @constant
  * @type {number}
  */
-export const initializing: AdjacencyState =
-  AdjacencyState.initializing; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const initializing =
+  AdjacencyState.initializing satisfies AdjacencyState; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AdjacencyState_up
@@ -110,16 +110,16 @@ export const initializing: AdjacencyState =
  * @constant
  * @type {number}
  */
-export const AdjacencyState_up: AdjacencyState =
-  AdjacencyState.up; /* LONG_NAMED_ENUMERATED_VALUE */
+export const AdjacencyState_up =
+  AdjacencyState.up satisfies AdjacencyState; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary up
  * @constant
  * @type {number}
  */
-export const up: AdjacencyState =
-  AdjacencyState.up; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const up =
+  AdjacencyState.up satisfies AdjacencyState; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AdjacencyState_failed
@@ -132,16 +132,16 @@ export const up: AdjacencyState =
  * @constant
  * @type {number}
  */
-export const AdjacencyState_failed: AdjacencyState =
-  AdjacencyState.failed; /* LONG_NAMED_ENUMERATED_VALUE */
+export const AdjacencyState_failed =
+  AdjacencyState.failed satisfies AdjacencyState; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary failed
  * @constant
  * @type {number}
  */
-export const failed: AdjacencyState =
-  AdjacencyState.failed; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const failed =
+  AdjacencyState.failed satisfies AdjacencyState; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AdjacencyState_down
@@ -154,16 +154,16 @@ export const failed: AdjacencyState =
  * @constant
  * @type {number}
  */
-export const AdjacencyState_down: AdjacencyState =
-  AdjacencyState.down; /* LONG_NAMED_ENUMERATED_VALUE */
+export const AdjacencyState_down =
+  AdjacencyState.down satisfies AdjacencyState; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary down
  * @constant
  * @type {number}
  */
-export const down: AdjacencyState =
-  AdjacencyState.down; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const down =
+  AdjacencyState.down satisfies AdjacencyState; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 export function _decode_AdjacencyState(el: _Element): AdjacencyState {

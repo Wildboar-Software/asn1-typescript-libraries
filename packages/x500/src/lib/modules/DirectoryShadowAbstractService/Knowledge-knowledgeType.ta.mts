@@ -64,48 +64,48 @@ export const Knowledge_knowledgeType = _enum_for_Knowledge_knowledgeType;
  * @constant
  * @type {number}
  */
-export const Knowledge_knowledgeType_master: Knowledge_knowledgeType =
-    Knowledge_knowledgeType.master; /* LONG_NAMED_ENUMERATED_VALUE */
+export const Knowledge_knowledgeType_master =
+    Knowledge_knowledgeType.master satisfies Knowledge_knowledgeType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary master
  * @constant
  * @type {number}
  */
-export const master: Knowledge_knowledgeType =
-    Knowledge_knowledgeType.master; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const master =
+    Knowledge_knowledgeType.master satisfies Knowledge_knowledgeType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Knowledge_knowledgeType_shadow
  * @constant
  * @type {number}
  */
-export const Knowledge_knowledgeType_shadow: Knowledge_knowledgeType =
-    Knowledge_knowledgeType.shadow; /* LONG_NAMED_ENUMERATED_VALUE */
+export const Knowledge_knowledgeType_shadow =
+    Knowledge_knowledgeType.shadow satisfies Knowledge_knowledgeType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary shadow
  * @constant
  * @type {number}
  */
-export const shadow: Knowledge_knowledgeType =
-    Knowledge_knowledgeType.shadow; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const shadow =
+    Knowledge_knowledgeType.shadow satisfies Knowledge_knowledgeType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Knowledge_knowledgeType_both
  * @constant
  * @type {number}
  */
-export const Knowledge_knowledgeType_both: Knowledge_knowledgeType =
-    Knowledge_knowledgeType.both; /* LONG_NAMED_ENUMERATED_VALUE */
+export const Knowledge_knowledgeType_both =
+    Knowledge_knowledgeType.both satisfies Knowledge_knowledgeType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary both
  * @constant
  * @type {number}
  */
-export const both: Knowledge_knowledgeType =
-    Knowledge_knowledgeType.both; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const both =
+    Knowledge_knowledgeType.both satisfies Knowledge_knowledgeType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 export function _decode_Knowledge_knowledgeType(el: _Element): Knowledge_knowledgeType {

@@ -36,7 +36,7 @@ export type TestConditions_second = INTEGER;
  * @constant
  * @type {number}
  */
-export const TestConditions_second_customerOverrideTest: TestConditions_second = 0; /* LONG_NAMED_INTEGER_VALUE */
+export const TestConditions_second_customerOverrideTest = 0 satisfies TestConditions_second; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TestConditions_second_customerOverrideTest
@@ -46,7 +46,7 @@ export const TestConditions_second_customerOverrideTest: TestConditions_second =
  * @constant
  * @type {number}
  */
-export const customerOverrideTest: TestConditions_second = TestConditions_second_customerOverrideTest; /* SHORT_NAMED_INTEGER_VALUE */
+export const customerOverrideTest = TestConditions_second_customerOverrideTest satisfies TestConditions_second; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TestConditions_second_noCustomerOverrideTest
@@ -56,7 +56,7 @@ export const customerOverrideTest: TestConditions_second = TestConditions_second
  * @constant
  * @type {number}
  */
-export const TestConditions_second_noCustomerOverrideTest: TestConditions_second = 1; /* LONG_NAMED_INTEGER_VALUE */
+export const TestConditions_second_noCustomerOverrideTest = 1 satisfies TestConditions_second; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TestConditions_second_noCustomerOverrideTest
@@ -66,7 +66,7 @@ export const TestConditions_second_noCustomerOverrideTest: TestConditions_second
  * @constant
  * @type {number}
  */
-export const noCustomerOverrideTest: TestConditions_second = TestConditions_second_noCustomerOverrideTest; /* SHORT_NAMED_INTEGER_VALUE */
+export const noCustomerOverrideTest = TestConditions_second_noCustomerOverrideTest satisfies TestConditions_second; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_TestConditions_second = $._decodeInteger;

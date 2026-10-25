@@ -79,8 +79,8 @@ export const SignalDirection = _enum_for_SignalDirection;
  * @constant
  * @type {number}
  */
-export const SignalDirection_send: SignalDirection =
-    SignalDirection.send; /* LONG_NAMED_ENUMERATED_VALUE */
+export const SignalDirection_send =
+    SignalDirection.send satisfies SignalDirection; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary send
@@ -90,8 +90,8 @@ export const SignalDirection_send: SignalDirection =
  * @constant
  * @type {number}
  */
-export const send: SignalDirection =
-    SignalDirection.send; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const send =
+    SignalDirection.send satisfies SignalDirection; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SignalDirection_receive
@@ -101,8 +101,8 @@ export const send: SignalDirection =
  * @constant
  * @type {number}
  */
-export const SignalDirection_receive: SignalDirection =
-    SignalDirection.receive; /* LONG_NAMED_ENUMERATED_VALUE */
+export const SignalDirection_receive =
+    SignalDirection.receive satisfies SignalDirection; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary receive
@@ -112,8 +112,8 @@ export const SignalDirection_receive: SignalDirection =
  * @constant
  * @type {number}
  */
-export const receive: SignalDirection =
-    SignalDirection.receive; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const receive =
+    SignalDirection.receive satisfies SignalDirection; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 export function _decode_SignalDirection(el: _Element): SignalDirection {

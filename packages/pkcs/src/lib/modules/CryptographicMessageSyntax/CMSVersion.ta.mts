@@ -21,7 +21,7 @@ export type CMSVersion = INTEGER;
  * @constant
  * @type {number}
  */
-export const CMSVersion_v0: CMSVersion = 0; /* LONG_NAMED_INTEGER_VALUE */
+export const CMSVersion_v0 = 0 satisfies CMSVersion; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -29,7 +29,7 @@ export const CMSVersion_v0: CMSVersion = 0; /* LONG_NAMED_INTEGER_VALUE */
  * @constant
  * @type {number}
  */
-export const v0: CMSVersion = CMSVersion_v0; /* SHORT_NAMED_INTEGER_VALUE */
+export const v0 = CMSVersion_v0 satisfies CMSVersion; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -37,7 +37,7 @@ export const v0: CMSVersion = CMSVersion_v0; /* SHORT_NAMED_INTEGER_VALUE */
  * @constant
  * @type {number}
  */
-export const CMSVersion_v1: CMSVersion = 1; /* LONG_NAMED_INTEGER_VALUE */
+export const CMSVersion_v1 = 1 satisfies CMSVersion; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -45,7 +45,7 @@ export const CMSVersion_v1: CMSVersion = 1; /* LONG_NAMED_INTEGER_VALUE */
  * @constant
  * @type {number}
  */
-export const v1: CMSVersion = CMSVersion_v1; /* SHORT_NAMED_INTEGER_VALUE */
+export const v1 = CMSVersion_v1 satisfies CMSVersion; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -53,7 +53,7 @@ export const v1: CMSVersion = CMSVersion_v1; /* SHORT_NAMED_INTEGER_VALUE */
  * @constant
  * @type {number}
  */
-export const CMSVersion_v2: CMSVersion = 2; /* LONG_NAMED_INTEGER_VALUE */
+export const CMSVersion_v2 = 2 satisfies CMSVersion; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -61,7 +61,7 @@ export const CMSVersion_v2: CMSVersion = 2; /* LONG_NAMED_INTEGER_VALUE */
  * @constant
  * @type {number}
  */
-export const v2: CMSVersion = CMSVersion_v2; /* SHORT_NAMED_INTEGER_VALUE */
+export const v2 = CMSVersion_v2 satisfies CMSVersion; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -69,7 +69,7 @@ export const v2: CMSVersion = CMSVersion_v2; /* SHORT_NAMED_INTEGER_VALUE */
  * @constant
  * @type {number}
  */
-export const CMSVersion_v3: CMSVersion = 3; /* LONG_NAMED_INTEGER_VALUE */
+export const CMSVersion_v3 = 3 satisfies CMSVersion; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -77,7 +77,7 @@ export const CMSVersion_v3: CMSVersion = 3; /* LONG_NAMED_INTEGER_VALUE */
  * @constant
  * @type {number}
  */
-export const v3: CMSVersion = CMSVersion_v3; /* SHORT_NAMED_INTEGER_VALUE */
+export const v3 = CMSVersion_v3 satisfies CMSVersion; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -85,7 +85,7 @@ export const v3: CMSVersion = CMSVersion_v3; /* SHORT_NAMED_INTEGER_VALUE */
  * @constant
  * @type {number}
  */
-export const CMSVersion_v4: CMSVersion = 4; /* LONG_NAMED_INTEGER_VALUE */
+export const CMSVersion_v4 = 4 satisfies CMSVersion; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -93,7 +93,7 @@ export const CMSVersion_v4: CMSVersion = 4; /* LONG_NAMED_INTEGER_VALUE */
  * @constant
  * @type {number}
  */
-export const v4: CMSVersion = CMSVersion_v4; /* SHORT_NAMED_INTEGER_VALUE */
+export const v4 = CMSVersion_v4 satisfies CMSVersion; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 

@@ -59,7 +59,7 @@ type EmergencyGroupState_clientEmergencyState = _enum_for_EmergencyGroupState_cl
  * @type {number}
  */
 export
-const EmergencyGroupState_clientEmergencyState_inform: EmergencyGroupState_clientEmergencyState = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const EmergencyGroupState_clientEmergencyState_inform = _enum_for_EmergencyGroupState_clientEmergencyState.inform satisfies EmergencyGroupState_clientEmergencyState; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary inform
@@ -70,7 +70,7 @@ const EmergencyGroupState_clientEmergencyState_inform: EmergencyGroupState_clien
  * @type {number}
  */
 export
-const inform: EmergencyGroupState_clientEmergencyState = EmergencyGroupState_clientEmergencyState_inform; /* SHORT_NAMED_ENUMERATED_VALUE */
+const inform = EmergencyGroupState_clientEmergencyState_inform satisfies EmergencyGroupState_clientEmergencyState; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EmergencyGroupState_clientEmergencyState_response
@@ -84,7 +84,7 @@ const inform: EmergencyGroupState_clientEmergencyState = EmergencyGroupState_cli
  * @type {number}
  */
 export
-const EmergencyGroupState_clientEmergencyState_response: EmergencyGroupState_clientEmergencyState = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+const EmergencyGroupState_clientEmergencyState_response = _enum_for_EmergencyGroupState_clientEmergencyState.response satisfies EmergencyGroupState_clientEmergencyState; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary response
@@ -95,7 +95,7 @@ const EmergencyGroupState_clientEmergencyState_response: EmergencyGroupState_cli
  * @type {number}
  */
 export
-const response: EmergencyGroupState_clientEmergencyState = EmergencyGroupState_clientEmergencyState_response; /* SHORT_NAMED_ENUMERATED_VALUE */
+const response = EmergencyGroupState_clientEmergencyState_response satisfies EmergencyGroupState_clientEmergencyState; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EmergencyGroupState_clientEmergencyState_cancelInform
@@ -109,7 +109,7 @@ const response: EmergencyGroupState_clientEmergencyState = EmergencyGroupState_c
  * @type {number}
  */
 export
-const EmergencyGroupState_clientEmergencyState_cancelInform: EmergencyGroupState_clientEmergencyState = 3; /* LONG_NAMED_ENUMERATED_VALUE */
+const EmergencyGroupState_clientEmergencyState_cancelInform = _enum_for_EmergencyGroupState_clientEmergencyState.cancelInform satisfies EmergencyGroupState_clientEmergencyState; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary cancelInform
@@ -120,7 +120,7 @@ const EmergencyGroupState_clientEmergencyState_cancelInform: EmergencyGroupState
  * @type {number}
  */
 export
-const cancelInform: EmergencyGroupState_clientEmergencyState = EmergencyGroupState_clientEmergencyState_cancelInform; /* SHORT_NAMED_ENUMERATED_VALUE */
+const cancelInform = EmergencyGroupState_clientEmergencyState_cancelInform satisfies EmergencyGroupState_clientEmergencyState; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EmergencyGroupState_clientEmergencyState_cancelResponse
@@ -134,7 +134,7 @@ const cancelInform: EmergencyGroupState_clientEmergencyState = EmergencyGroupSta
  * @type {number}
  */
 export
-const EmergencyGroupState_clientEmergencyState_cancelResponse: EmergencyGroupState_clientEmergencyState = 4; /* LONG_NAMED_ENUMERATED_VALUE */
+const EmergencyGroupState_clientEmergencyState_cancelResponse = _enum_for_EmergencyGroupState_clientEmergencyState.cancelResponse satisfies EmergencyGroupState_clientEmergencyState; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary cancelResponse
@@ -145,7 +145,7 @@ const EmergencyGroupState_clientEmergencyState_cancelResponse: EmergencyGroupSta
  * @type {number}
  */
 export
-const cancelResponse: EmergencyGroupState_clientEmergencyState = EmergencyGroupState_clientEmergencyState_cancelResponse; /* SHORT_NAMED_ENUMERATED_VALUE */
+const cancelResponse = EmergencyGroupState_clientEmergencyState_cancelResponse satisfies EmergencyGroupState_clientEmergencyState; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_EmergencyGroupState_clientEmergencyState: $.ASN1Decoder<EmergencyGroupState_clientEmergencyState> = $._decodeEnumerated;
 export const _encode_EmergencyGroupState_clientEmergencyState: $.ASN1Encoder<EmergencyGroupState_clientEmergencyState> = $._encodeEnumerated;
 

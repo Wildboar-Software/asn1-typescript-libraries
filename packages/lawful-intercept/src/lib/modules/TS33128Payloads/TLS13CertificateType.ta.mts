@@ -69,7 +69,7 @@ const TLS13CertificateType = _enum_for_TLS13CertificateType;
  * @type {number}
  */
 export
-const TLS13CertificateType_x509: TLS13CertificateType = TLS13CertificateType.x509; /* LONG_NAMED_ENUMERATED_VALUE */
+const TLS13CertificateType_x509 = TLS13CertificateType.x509 satisfies TLS13CertificateType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary x509
@@ -77,7 +77,7 @@ const TLS13CertificateType_x509: TLS13CertificateType = TLS13CertificateType.x50
  * @type {number}
  */
 export
-const x509: TLS13CertificateType = TLS13CertificateType.x509; /* SHORT_NAMED_ENUMERATED_VALUE */
+const x509 = TLS13CertificateType.x509 satisfies TLS13CertificateType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TLS13CertificateType_rawPublicKey
@@ -85,7 +85,7 @@ const x509: TLS13CertificateType = TLS13CertificateType.x509; /* SHORT_NAMED_ENU
  * @type {number}
  */
 export
-const TLS13CertificateType_rawPublicKey: TLS13CertificateType = TLS13CertificateType.rawPublicKey; /* LONG_NAMED_ENUMERATED_VALUE */
+const TLS13CertificateType_rawPublicKey = TLS13CertificateType.rawPublicKey satisfies TLS13CertificateType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary rawPublicKey
@@ -93,7 +93,7 @@ const TLS13CertificateType_rawPublicKey: TLS13CertificateType = TLS13Certificate
  * @type {number}
  */
 export
-const rawPublicKey: TLS13CertificateType = TLS13CertificateType.rawPublicKey; /* SHORT_NAMED_ENUMERATED_VALUE */
+const rawPublicKey = TLS13CertificateType.rawPublicKey satisfies TLS13CertificateType; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_TLS13CertificateType: $.ASN1Decoder<TLS13CertificateType> = $._decodeEnumerated;
 export const _encode_TLS13CertificateType: $.ASN1Encoder<TLS13CertificateType> = $._encodeEnumerated;
 

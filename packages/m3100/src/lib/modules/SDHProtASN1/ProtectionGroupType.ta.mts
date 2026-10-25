@@ -71,8 +71,8 @@ export const ProtectionGroupType = _enum_for_ProtectionGroupType;
  * @constant
  * @type {number}
  */
-export const ProtectionGroupType_plus: ProtectionGroupType =
-    ProtectionGroupType.plus; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ProtectionGroupType_plus =
+    ProtectionGroupType.plus satisfies ProtectionGroupType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -80,8 +80,8 @@ export const ProtectionGroupType_plus: ProtectionGroupType =
  * @constant
  * @type {number}
  */
-export const plus: ProtectionGroupType =
-    ProtectionGroupType.plus; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const plus =
+    ProtectionGroupType.plus satisfies ProtectionGroupType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -89,8 +89,8 @@ export const plus: ProtectionGroupType =
  * @constant
  * @type {number}
  */
-export const ProtectionGroupType_colon: ProtectionGroupType =
-    ProtectionGroupType.colon; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ProtectionGroupType_colon =
+    ProtectionGroupType.colon satisfies ProtectionGroupType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -98,8 +98,8 @@ export const ProtectionGroupType_colon: ProtectionGroupType =
  * @constant
  * @type {number}
  */
-export const colon: ProtectionGroupType =
-    ProtectionGroupType.colon; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const colon =
+    ProtectionGroupType.colon satisfies ProtectionGroupType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 

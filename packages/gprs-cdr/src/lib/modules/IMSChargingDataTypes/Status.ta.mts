@@ -99,7 +99,7 @@ const Status = _enum_for_Status;
  * @type {number}
  */
 export
-const Status_fourxx: Status = Status.fourxx; /* LONG_NAMED_ENUMERATED_VALUE */
+const Status_fourxx = Status.fourxx satisfies Status; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary fourxx
@@ -112,7 +112,7 @@ const Status_fourxx: Status = Status.fourxx; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const fourxx: Status = Status.fourxx; /* SHORT_NAMED_ENUMERATED_VALUE */
+const fourxx = Status.fourxx satisfies Status; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Status_fivexx
@@ -125,7 +125,7 @@ const fourxx: Status = Status.fourxx; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const Status_fivexx: Status = Status.fivexx; /* LONG_NAMED_ENUMERATED_VALUE */
+const Status_fivexx = Status.fivexx satisfies Status; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary fivexx
@@ -138,7 +138,7 @@ const Status_fivexx: Status = Status.fivexx; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const fivexx: Status = Status.fivexx; /* SHORT_NAMED_ENUMERATED_VALUE */
+const fivexx = Status.fivexx satisfies Status; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Status_time_out
@@ -152,7 +152,7 @@ const fivexx: Status = Status.fivexx; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const Status_time_out: Status = Status.time_out; /* LONG_NAMED_ENUMERATED_VALUE */
+const Status_time_out = Status.time_out satisfies Status; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary time_out
@@ -166,7 +166,7 @@ const Status_time_out: Status = Status.time_out; /* LONG_NAMED_ENUMERATED_VALUE 
  * @type {number}
  */
 export
-const time_out: Status = Status.time_out; /* SHORT_NAMED_ENUMERATED_VALUE */
+const time_out = Status.time_out satisfies Status; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_Status: $.ASN1Decoder<Status> = $._decodeEnumerated;

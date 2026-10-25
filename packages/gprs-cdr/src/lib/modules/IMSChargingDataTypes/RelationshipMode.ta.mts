@@ -109,7 +109,7 @@ const RelationshipMode = _enum_for_RelationshipMode;
  * @type {number}
  */
 export
-const RelationshipMode_trusted: RelationshipMode = RelationshipMode.trusted; /* LONG_NAMED_ENUMERATED_VALUE */
+const RelationshipMode_trusted = RelationshipMode.trusted satisfies RelationshipMode; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary trusted
@@ -121,7 +121,7 @@ const RelationshipMode_trusted: RelationshipMode = RelationshipMode.trusted; /* 
  * @type {number}
  */
 export
-const trusted: RelationshipMode = RelationshipMode.trusted; /* SHORT_NAMED_ENUMERATED_VALUE */
+const trusted = RelationshipMode.trusted satisfies RelationshipMode; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RelationshipMode_non_trusted
@@ -135,7 +135,7 @@ const trusted: RelationshipMode = RelationshipMode.trusted; /* SHORT_NAMED_ENUME
  * @type {number}
  */
 export
-const RelationshipMode_non_trusted: RelationshipMode = RelationshipMode.non_trusted; /* LONG_NAMED_ENUMERATED_VALUE */
+const RelationshipMode_non_trusted = RelationshipMode.non_trusted satisfies RelationshipMode; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary non_trusted
@@ -149,7 +149,7 @@ const RelationshipMode_non_trusted: RelationshipMode = RelationshipMode.non_trus
  * @type {number}
  */
 export
-const non_trusted: RelationshipMode = RelationshipMode.non_trusted; /* SHORT_NAMED_ENUMERATED_VALUE */
+const non_trusted = RelationshipMode.non_trusted satisfies RelationshipMode; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_RelationshipMode: $.ASN1Decoder<RelationshipMode> = $._decodeEnumerated;

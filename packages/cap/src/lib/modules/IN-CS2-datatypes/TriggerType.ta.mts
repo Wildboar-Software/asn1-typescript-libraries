@@ -108,7 +108,7 @@ const TriggerType = _enum_for_TriggerType;
  * @type {number}
  */
 export
-const TriggerType_featureActivation: TriggerType = TriggerType.featureActivation; /* LONG_NAMED_ENUMERATED_VALUE */
+const TriggerType_featureActivation = TriggerType.featureActivation satisfies TriggerType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary featureActivation
@@ -116,7 +116,7 @@ const TriggerType_featureActivation: TriggerType = TriggerType.featureActivation
  * @type {number}
  */
 export
-const featureActivation: TriggerType = TriggerType.featureActivation; /* SHORT_NAMED_ENUMERATED_VALUE */
+const featureActivation = TriggerType.featureActivation satisfies TriggerType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TriggerType_verticalServiceCode
@@ -124,7 +124,7 @@ const featureActivation: TriggerType = TriggerType.featureActivation; /* SHORT_N
  * @type {number}
  */
 export
-const TriggerType_verticalServiceCode: TriggerType = TriggerType.verticalServiceCode; /* LONG_NAMED_ENUMERATED_VALUE */
+const TriggerType_verticalServiceCode = TriggerType.verticalServiceCode satisfies TriggerType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary verticalServiceCode
@@ -132,7 +132,7 @@ const TriggerType_verticalServiceCode: TriggerType = TriggerType.verticalService
  * @type {number}
  */
 export
-const verticalServiceCode: TriggerType = TriggerType.verticalServiceCode; /* SHORT_NAMED_ENUMERATED_VALUE */
+const verticalServiceCode = TriggerType.verticalServiceCode satisfies TriggerType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TriggerType_customizedAccess
@@ -140,7 +140,7 @@ const verticalServiceCode: TriggerType = TriggerType.verticalServiceCode; /* SHO
  * @type {number}
  */
 export
-const TriggerType_customizedAccess: TriggerType = TriggerType.customizedAccess; /* LONG_NAMED_ENUMERATED_VALUE */
+const TriggerType_customizedAccess = TriggerType.customizedAccess satisfies TriggerType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary customizedAccess
@@ -148,7 +148,7 @@ const TriggerType_customizedAccess: TriggerType = TriggerType.customizedAccess; 
  * @type {number}
  */
 export
-const customizedAccess: TriggerType = TriggerType.customizedAccess; /* SHORT_NAMED_ENUMERATED_VALUE */
+const customizedAccess = TriggerType.customizedAccess satisfies TriggerType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TriggerType_customizedIntercom
@@ -156,7 +156,7 @@ const customizedAccess: TriggerType = TriggerType.customizedAccess; /* SHORT_NAM
  * @type {number}
  */
 export
-const TriggerType_customizedIntercom: TriggerType = TriggerType.customizedIntercom; /* LONG_NAMED_ENUMERATED_VALUE */
+const TriggerType_customizedIntercom = TriggerType.customizedIntercom satisfies TriggerType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary customizedIntercom
@@ -164,7 +164,7 @@ const TriggerType_customizedIntercom: TriggerType = TriggerType.customizedInterc
  * @type {number}
  */
 export
-const customizedIntercom: TriggerType = TriggerType.customizedIntercom; /* SHORT_NAMED_ENUMERATED_VALUE */
+const customizedIntercom = TriggerType.customizedIntercom satisfies TriggerType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TriggerType_emergencyService
@@ -172,7 +172,7 @@ const customizedIntercom: TriggerType = TriggerType.customizedIntercom; /* SHORT
  * @type {number}
  */
 export
-const TriggerType_emergencyService: TriggerType = TriggerType.emergencyService; /* LONG_NAMED_ENUMERATED_VALUE */
+const TriggerType_emergencyService = TriggerType.emergencyService satisfies TriggerType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary emergencyService
@@ -180,7 +180,7 @@ const TriggerType_emergencyService: TriggerType = TriggerType.emergencyService; 
  * @type {number}
  */
 export
-const emergencyService: TriggerType = TriggerType.emergencyService; /* SHORT_NAMED_ENUMERATED_VALUE */
+const emergencyService = TriggerType.emergencyService satisfies TriggerType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TriggerType_aFR
@@ -188,7 +188,7 @@ const emergencyService: TriggerType = TriggerType.emergencyService; /* SHORT_NAM
  * @type {number}
  */
 export
-const TriggerType_aFR: TriggerType = TriggerType.aFR; /* LONG_NAMED_ENUMERATED_VALUE */
+const TriggerType_aFR = TriggerType.aFR satisfies TriggerType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary aFR
@@ -196,7 +196,7 @@ const TriggerType_aFR: TriggerType = TriggerType.aFR; /* LONG_NAMED_ENUMERATED_V
  * @type {number}
  */
 export
-const aFR: TriggerType = TriggerType.aFR; /* SHORT_NAMED_ENUMERATED_VALUE */
+const aFR = TriggerType.aFR satisfies TriggerType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TriggerType_sharedIOTrunk
@@ -204,7 +204,7 @@ const aFR: TriggerType = TriggerType.aFR; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const TriggerType_sharedIOTrunk: TriggerType = TriggerType.sharedIOTrunk; /* LONG_NAMED_ENUMERATED_VALUE */
+const TriggerType_sharedIOTrunk = TriggerType.sharedIOTrunk satisfies TriggerType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sharedIOTrunk
@@ -212,7 +212,7 @@ const TriggerType_sharedIOTrunk: TriggerType = TriggerType.sharedIOTrunk; /* LON
  * @type {number}
  */
 export
-const sharedIOTrunk: TriggerType = TriggerType.sharedIOTrunk; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sharedIOTrunk = TriggerType.sharedIOTrunk satisfies TriggerType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TriggerType_offHookDelay
@@ -220,7 +220,7 @@ const sharedIOTrunk: TriggerType = TriggerType.sharedIOTrunk; /* SHORT_NAMED_ENU
  * @type {number}
  */
 export
-const TriggerType_offHookDelay: TriggerType = TriggerType.offHookDelay; /* LONG_NAMED_ENUMERATED_VALUE */
+const TriggerType_offHookDelay = TriggerType.offHookDelay satisfies TriggerType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary offHookDelay
@@ -228,7 +228,7 @@ const TriggerType_offHookDelay: TriggerType = TriggerType.offHookDelay; /* LONG_
  * @type {number}
  */
 export
-const offHookDelay: TriggerType = TriggerType.offHookDelay; /* SHORT_NAMED_ENUMERATED_VALUE */
+const offHookDelay = TriggerType.offHookDelay satisfies TriggerType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TriggerType_channelSetupPRI
@@ -236,7 +236,7 @@ const offHookDelay: TriggerType = TriggerType.offHookDelay; /* SHORT_NAMED_ENUME
  * @type {number}
  */
 export
-const TriggerType_channelSetupPRI: TriggerType = TriggerType.channelSetupPRI; /* LONG_NAMED_ENUMERATED_VALUE */
+const TriggerType_channelSetupPRI = TriggerType.channelSetupPRI satisfies TriggerType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary channelSetupPRI
@@ -244,7 +244,7 @@ const TriggerType_channelSetupPRI: TriggerType = TriggerType.channelSetupPRI; /*
  * @type {number}
  */
 export
-const channelSetupPRI: TriggerType = TriggerType.channelSetupPRI; /* SHORT_NAMED_ENUMERATED_VALUE */
+const channelSetupPRI = TriggerType.channelSetupPRI satisfies TriggerType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TriggerType_tNoAnswer
@@ -252,7 +252,7 @@ const channelSetupPRI: TriggerType = TriggerType.channelSetupPRI; /* SHORT_NAMED
  * @type {number}
  */
 export
-const TriggerType_tNoAnswer: TriggerType = TriggerType.tNoAnswer; /* LONG_NAMED_ENUMERATED_VALUE */
+const TriggerType_tNoAnswer = TriggerType.tNoAnswer satisfies TriggerType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tNoAnswer
@@ -260,7 +260,7 @@ const TriggerType_tNoAnswer: TriggerType = TriggerType.tNoAnswer; /* LONG_NAMED_
  * @type {number}
  */
 export
-const tNoAnswer: TriggerType = TriggerType.tNoAnswer; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tNoAnswer = TriggerType.tNoAnswer satisfies TriggerType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TriggerType_tBusy
@@ -268,7 +268,7 @@ const tNoAnswer: TriggerType = TriggerType.tNoAnswer; /* SHORT_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const TriggerType_tBusy: TriggerType = TriggerType.tBusy; /* LONG_NAMED_ENUMERATED_VALUE */
+const TriggerType_tBusy = TriggerType.tBusy satisfies TriggerType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tBusy
@@ -276,7 +276,7 @@ const TriggerType_tBusy: TriggerType = TriggerType.tBusy; /* LONG_NAMED_ENUMERAT
  * @type {number}
  */
 export
-const tBusy: TriggerType = TriggerType.tBusy; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tBusy = TriggerType.tBusy satisfies TriggerType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TriggerType_oCalledPartyBusy
@@ -284,7 +284,7 @@ const tBusy: TriggerType = TriggerType.tBusy; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const TriggerType_oCalledPartyBusy: TriggerType = TriggerType.oCalledPartyBusy; /* LONG_NAMED_ENUMERATED_VALUE */
+const TriggerType_oCalledPartyBusy = TriggerType.oCalledPartyBusy satisfies TriggerType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary oCalledPartyBusy
@@ -292,7 +292,7 @@ const TriggerType_oCalledPartyBusy: TriggerType = TriggerType.oCalledPartyBusy; 
  * @type {number}
  */
 export
-const oCalledPartyBusy: TriggerType = TriggerType.oCalledPartyBusy; /* SHORT_NAMED_ENUMERATED_VALUE */
+const oCalledPartyBusy = TriggerType.oCalledPartyBusy satisfies TriggerType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TriggerType_oNoAnswer
@@ -300,7 +300,7 @@ const oCalledPartyBusy: TriggerType = TriggerType.oCalledPartyBusy; /* SHORT_NAM
  * @type {number}
  */
 export
-const TriggerType_oNoAnswer: TriggerType = TriggerType.oNoAnswer; /* LONG_NAMED_ENUMERATED_VALUE */
+const TriggerType_oNoAnswer = TriggerType.oNoAnswer satisfies TriggerType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary oNoAnswer
@@ -308,7 +308,7 @@ const TriggerType_oNoAnswer: TriggerType = TriggerType.oNoAnswer; /* LONG_NAMED_
  * @type {number}
  */
 export
-const oNoAnswer: TriggerType = TriggerType.oNoAnswer; /* SHORT_NAMED_ENUMERATED_VALUE */
+const oNoAnswer = TriggerType.oNoAnswer satisfies TriggerType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TriggerType_originationAttemptAuthorized
@@ -316,7 +316,7 @@ const oNoAnswer: TriggerType = TriggerType.oNoAnswer; /* SHORT_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const TriggerType_originationAttemptAuthorized: TriggerType = TriggerType.originationAttemptAuthorized; /* LONG_NAMED_ENUMERATED_VALUE */
+const TriggerType_originationAttemptAuthorized = TriggerType.originationAttemptAuthorized satisfies TriggerType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary originationAttemptAuthorized
@@ -324,7 +324,7 @@ const TriggerType_originationAttemptAuthorized: TriggerType = TriggerType.origin
  * @type {number}
  */
 export
-const originationAttemptAuthorized: TriggerType = TriggerType.originationAttemptAuthorized; /* SHORT_NAMED_ENUMERATED_VALUE */
+const originationAttemptAuthorized = TriggerType.originationAttemptAuthorized satisfies TriggerType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TriggerType_oAnswer
@@ -332,7 +332,7 @@ const originationAttemptAuthorized: TriggerType = TriggerType.originationAttempt
  * @type {number}
  */
 export
-const TriggerType_oAnswer: TriggerType = TriggerType.oAnswer; /* LONG_NAMED_ENUMERATED_VALUE */
+const TriggerType_oAnswer = TriggerType.oAnswer satisfies TriggerType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary oAnswer
@@ -340,7 +340,7 @@ const TriggerType_oAnswer: TriggerType = TriggerType.oAnswer; /* LONG_NAMED_ENUM
  * @type {number}
  */
 export
-const oAnswer: TriggerType = TriggerType.oAnswer; /* SHORT_NAMED_ENUMERATED_VALUE */
+const oAnswer = TriggerType.oAnswer satisfies TriggerType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TriggerType_oDisconnect
@@ -348,7 +348,7 @@ const oAnswer: TriggerType = TriggerType.oAnswer; /* SHORT_NAMED_ENUMERATED_VALU
  * @type {number}
  */
 export
-const TriggerType_oDisconnect: TriggerType = TriggerType.oDisconnect; /* LONG_NAMED_ENUMERATED_VALUE */
+const TriggerType_oDisconnect = TriggerType.oDisconnect satisfies TriggerType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary oDisconnect
@@ -356,7 +356,7 @@ const TriggerType_oDisconnect: TriggerType = TriggerType.oDisconnect; /* LONG_NA
  * @type {number}
  */
 export
-const oDisconnect: TriggerType = TriggerType.oDisconnect; /* SHORT_NAMED_ENUMERATED_VALUE */
+const oDisconnect = TriggerType.oDisconnect satisfies TriggerType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TriggerType_termAttemptAuthorized
@@ -364,7 +364,7 @@ const oDisconnect: TriggerType = TriggerType.oDisconnect; /* SHORT_NAMED_ENUMERA
  * @type {number}
  */
 export
-const TriggerType_termAttemptAuthorized: TriggerType = TriggerType.termAttemptAuthorized; /* LONG_NAMED_ENUMERATED_VALUE */
+const TriggerType_termAttemptAuthorized = TriggerType.termAttemptAuthorized satisfies TriggerType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary termAttemptAuthorized
@@ -372,7 +372,7 @@ const TriggerType_termAttemptAuthorized: TriggerType = TriggerType.termAttemptAu
  * @type {number}
  */
 export
-const termAttemptAuthorized: TriggerType = TriggerType.termAttemptAuthorized; /* SHORT_NAMED_ENUMERATED_VALUE */
+const termAttemptAuthorized = TriggerType.termAttemptAuthorized satisfies TriggerType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TriggerType_tAnswer
@@ -380,7 +380,7 @@ const termAttemptAuthorized: TriggerType = TriggerType.termAttemptAuthorized; /*
  * @type {number}
  */
 export
-const TriggerType_tAnswer: TriggerType = TriggerType.tAnswer; /* LONG_NAMED_ENUMERATED_VALUE */
+const TriggerType_tAnswer = TriggerType.tAnswer satisfies TriggerType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tAnswer
@@ -388,7 +388,7 @@ const TriggerType_tAnswer: TriggerType = TriggerType.tAnswer; /* LONG_NAMED_ENUM
  * @type {number}
  */
 export
-const tAnswer: TriggerType = TriggerType.tAnswer; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tAnswer = TriggerType.tAnswer satisfies TriggerType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TriggerType_tDisconnect
@@ -396,7 +396,7 @@ const tAnswer: TriggerType = TriggerType.tAnswer; /* SHORT_NAMED_ENUMERATED_VALU
  * @type {number}
  */
 export
-const TriggerType_tDisconnect: TriggerType = TriggerType.tDisconnect; /* LONG_NAMED_ENUMERATED_VALUE */
+const TriggerType_tDisconnect = TriggerType.tDisconnect satisfies TriggerType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tDisconnect
@@ -404,7 +404,7 @@ const TriggerType_tDisconnect: TriggerType = TriggerType.tDisconnect; /* LONG_NA
  * @type {number}
  */
 export
-const tDisconnect: TriggerType = TriggerType.tDisconnect; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tDisconnect = TriggerType.tDisconnect satisfies TriggerType; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_TriggerType = $._decodeEnumerated;
 export const _encode_TriggerType = $._encodeEnumerated;
 

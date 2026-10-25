@@ -98,8 +98,8 @@ export const ScannerActionError = _enum_for_ScannerActionError;
  * @constant
  * @type {number}
  */
-export const ScannerActionError_unspecified: ScannerActionError =
-    ScannerActionError.unspecified; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ScannerActionError_unspecified =
+    ScannerActionError.unspecified satisfies ScannerActionError; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unspecified
@@ -112,8 +112,8 @@ export const ScannerActionError_unspecified: ScannerActionError =
  * @constant
  * @type {number}
  */
-export const unspecified: ScannerActionError =
-    ScannerActionError.unspecified; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const unspecified =
+    ScannerActionError.unspecified satisfies ScannerActionError; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ScannerActionError_administrativeStateLocked
@@ -125,8 +125,8 @@ export const unspecified: ScannerActionError =
  * @constant
  * @type {number}
  */
-export const ScannerActionError_administrativeStateLocked: ScannerActionError =
-    ScannerActionError.administrativeStateLocked; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ScannerActionError_administrativeStateLocked =
+    ScannerActionError.administrativeStateLocked satisfies ScannerActionError; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary administrativeStateLocked
@@ -138,8 +138,8 @@ export const ScannerActionError_administrativeStateLocked: ScannerActionError =
  * @constant
  * @type {number}
  */
-export const administrativeStateLocked: ScannerActionError =
-    ScannerActionError.administrativeStateLocked; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const administrativeStateLocked =
+    ScannerActionError.administrativeStateLocked satisfies ScannerActionError; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ScannerActionError_administrativeStateShuttingDown
@@ -152,8 +152,8 @@ export const administrativeStateLocked: ScannerActionError =
  * @constant
  * @type {number}
  */
-export const ScannerActionError_administrativeStateShuttingDown: ScannerActionError =
-    ScannerActionError.administrativeStateShuttingDown; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ScannerActionError_administrativeStateShuttingDown =
+    ScannerActionError.administrativeStateShuttingDown satisfies ScannerActionError; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary administrativeStateShuttingDown
@@ -166,8 +166,8 @@ export const ScannerActionError_administrativeStateShuttingDown: ScannerActionEr
  * @constant
  * @type {number}
  */
-export const administrativeStateShuttingDown: ScannerActionError =
-    ScannerActionError.administrativeStateShuttingDown; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const administrativeStateShuttingDown =
+    ScannerActionError.administrativeStateShuttingDown satisfies ScannerActionError; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ScannerActionError_scanTerminated
@@ -180,8 +180,8 @@ export const administrativeStateShuttingDown: ScannerActionError =
  * @constant
  * @type {number}
  */
-export const ScannerActionError_scanTerminated: ScannerActionError =
-    ScannerActionError.scanTerminated; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ScannerActionError_scanTerminated =
+    ScannerActionError.scanTerminated satisfies ScannerActionError; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary scanTerminated
@@ -194,8 +194,8 @@ export const ScannerActionError_scanTerminated: ScannerActionError =
  * @constant
  * @type {number}
  */
-export const scanTerminated: ScannerActionError =
-    ScannerActionError.scanTerminated; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const scanTerminated =
+    ScannerActionError.scanTerminated satisfies ScannerActionError; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 export function _decode_ScannerActionError(el: _Element): ScannerActionError {

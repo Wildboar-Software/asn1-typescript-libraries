@@ -38,7 +38,7 @@ export type ErrorCode_Item = INTEGER;
  * @constant
  * @type {number}
  */
-export const ErrorCode_Item_noError: ErrorCode_Item = 0; /* LONG_NAMED_INTEGER_VALUE */
+export const ErrorCode_Item_noError = 0 satisfies ErrorCode_Item; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ErrorCode_Item_noError
@@ -49,7 +49,7 @@ export const ErrorCode_Item_noError: ErrorCode_Item = 0; /* LONG_NAMED_INTEGER_V
  * @constant
  * @type {number}
  */
-export const noError: ErrorCode_Item = ErrorCode_Item_noError; /* SHORT_NAMED_INTEGER_VALUE */
+export const noError = ErrorCode_Item_noError satisfies ErrorCode_Item; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ErrorCode_Item_noScriptError
@@ -62,7 +62,7 @@ export const noError: ErrorCode_Item = ErrorCode_Item_noError; /* SHORT_NAMED_IN
  * @constant
  * @type {number}
  */
-export const ErrorCode_Item_noScriptError: ErrorCode_Item = 1; /* LONG_NAMED_INTEGER_VALUE */
+export const ErrorCode_Item_noScriptError = 1 satisfies ErrorCode_Item; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ErrorCode_Item_noScriptError
@@ -75,7 +75,7 @@ export const ErrorCode_Item_noScriptError: ErrorCode_Item = 1; /* LONG_NAMED_INT
  * @constant
  * @type {number}
  */
-export const noScriptError: ErrorCode_Item = ErrorCode_Item_noScriptError; /* SHORT_NAMED_INTEGER_VALUE */
+export const noScriptError = ErrorCode_Item_noScriptError satisfies ErrorCode_Item; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ErrorCode_Item_scriptRejectedError
@@ -87,7 +87,7 @@ export const noScriptError: ErrorCode_Item = ErrorCode_Item_noScriptError; /* SH
  * @constant
  * @type {number}
  */
-export const ErrorCode_Item_scriptRejectedError: ErrorCode_Item = 2; /* LONG_NAMED_INTEGER_VALUE */
+export const ErrorCode_Item_scriptRejectedError = 2 satisfies ErrorCode_Item; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ErrorCode_Item_scriptRejectedError
@@ -99,7 +99,7 @@ export const ErrorCode_Item_scriptRejectedError: ErrorCode_Item = 2; /* LONG_NAM
  * @constant
  * @type {number}
  */
-export const scriptRejectedError: ErrorCode_Item = ErrorCode_Item_scriptRejectedError; /* SHORT_NAMED_INTEGER_VALUE */
+export const scriptRejectedError = ErrorCode_Item_scriptRejectedError satisfies ErrorCode_Item; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ErrorCode_Item_invalidParameterTypeError
@@ -111,7 +111,7 @@ export const scriptRejectedError: ErrorCode_Item = ErrorCode_Item_scriptRejected
  * @constant
  * @type {number}
  */
-export const ErrorCode_Item_invalidParameterTypeError: ErrorCode_Item = 3; /* LONG_NAMED_INTEGER_VALUE */
+export const ErrorCode_Item_invalidParameterTypeError = 3 satisfies ErrorCode_Item; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ErrorCode_Item_invalidParameterTypeError
@@ -123,7 +123,7 @@ export const ErrorCode_Item_invalidParameterTypeError: ErrorCode_Item = 3; /* LO
  * @constant
  * @type {number}
  */
-export const invalidParameterTypeError: ErrorCode_Item = ErrorCode_Item_invalidParameterTypeError; /* SHORT_NAMED_INTEGER_VALUE */
+export const invalidParameterTypeError = ErrorCode_Item_invalidParameterTypeError satisfies ErrorCode_Item; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ErrorCode_Item_invalidParameterValueError
@@ -135,7 +135,7 @@ export const invalidParameterTypeError: ErrorCode_Item = ErrorCode_Item_invalidP
  * @constant
  * @type {number}
  */
-export const ErrorCode_Item_invalidParameterValueError: ErrorCode_Item = 4; /* LONG_NAMED_INTEGER_VALUE */
+export const ErrorCode_Item_invalidParameterValueError = 4 satisfies ErrorCode_Item; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ErrorCode_Item_invalidParameterValueError
@@ -147,7 +147,7 @@ export const ErrorCode_Item_invalidParameterValueError: ErrorCode_Item = 4; /* L
  * @constant
  * @type {number}
  */
-export const invalidParameterValueError: ErrorCode_Item = ErrorCode_Item_invalidParameterValueError; /* SHORT_NAMED_INTEGER_VALUE */
+export const invalidParameterValueError = ErrorCode_Item_invalidParameterValueError satisfies ErrorCode_Item; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ErrorCode_Item_scriptSyntaxError
@@ -159,7 +159,7 @@ export const invalidParameterValueError: ErrorCode_Item = ErrorCode_Item_invalid
  * @constant
  * @type {number}
  */
-export const ErrorCode_Item_scriptSyntaxError: ErrorCode_Item = 5; /* LONG_NAMED_INTEGER_VALUE */
+export const ErrorCode_Item_scriptSyntaxError = 5 satisfies ErrorCode_Item; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ErrorCode_Item_scriptSyntaxError
@@ -171,7 +171,7 @@ export const ErrorCode_Item_scriptSyntaxError: ErrorCode_Item = 5; /* LONG_NAMED
  * @constant
  * @type {number}
  */
-export const scriptSyntaxError: ErrorCode_Item = ErrorCode_Item_scriptSyntaxError; /* SHORT_NAMED_INTEGER_VALUE */
+export const scriptSyntaxError = ErrorCode_Item_scriptSyntaxError satisfies ErrorCode_Item; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ErrorCode_Item_scriptExecutionFailedError
@@ -183,7 +183,7 @@ export const scriptSyntaxError: ErrorCode_Item = ErrorCode_Item_scriptSyntaxErro
  * @constant
  * @type {number}
  */
-export const ErrorCode_Item_scriptExecutionFailedError: ErrorCode_Item = 6; /* LONG_NAMED_INTEGER_VALUE */
+export const ErrorCode_Item_scriptExecutionFailedError = 6 satisfies ErrorCode_Item; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ErrorCode_Item_scriptExecutionFailedError
@@ -195,7 +195,7 @@ export const ErrorCode_Item_scriptExecutionFailedError: ErrorCode_Item = 6; /* L
  * @constant
  * @type {number}
  */
-export const scriptExecutionFailedError: ErrorCode_Item = ErrorCode_Item_scriptExecutionFailedError; /* SHORT_NAMED_INTEGER_VALUE */
+export const scriptExecutionFailedError = ErrorCode_Item_scriptExecutionFailedError satisfies ErrorCode_Item; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ErrorCode_Item_invalidParmeterNumber
@@ -208,7 +208,7 @@ export const scriptExecutionFailedError: ErrorCode_Item = ErrorCode_Item_scriptE
  * @constant
  * @type {number}
  */
-export const ErrorCode_Item_invalidParmeterNumber: ErrorCode_Item = 7; /* LONG_NAMED_INTEGER_VALUE */
+export const ErrorCode_Item_invalidParmeterNumber = 7 satisfies ErrorCode_Item; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ErrorCode_Item_invalidParmeterNumber
@@ -221,7 +221,7 @@ export const ErrorCode_Item_invalidParmeterNumber: ErrorCode_Item = 7; /* LONG_N
  * @constant
  * @type {number}
  */
-export const invalidParmeterNumber: ErrorCode_Item = ErrorCode_Item_invalidParmeterNumber; /* SHORT_NAMED_INTEGER_VALUE */
+export const invalidParmeterNumber = ErrorCode_Item_invalidParmeterNumber satisfies ErrorCode_Item; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ErrorCode_Item_unauthorizedAccessError
@@ -233,7 +233,7 @@ export const invalidParmeterNumber: ErrorCode_Item = ErrorCode_Item_invalidParme
  * @constant
  * @type {number}
  */
-export const ErrorCode_Item_unauthorizedAccessError: ErrorCode_Item = 8; /* LONG_NAMED_INTEGER_VALUE */
+export const ErrorCode_Item_unauthorizedAccessError = 8 satisfies ErrorCode_Item; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ErrorCode_Item_unauthorizedAccessError
@@ -245,7 +245,7 @@ export const ErrorCode_Item_unauthorizedAccessError: ErrorCode_Item = 8; /* LONG
  * @constant
  * @type {number}
  */
-export const unauthorizedAccessError: ErrorCode_Item = ErrorCode_Item_unauthorizedAccessError; /* SHORT_NAMED_INTEGER_VALUE */
+export const unauthorizedAccessError = ErrorCode_Item_unauthorizedAccessError satisfies ErrorCode_Item; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_ErrorCode_Item = $._decodeInteger;

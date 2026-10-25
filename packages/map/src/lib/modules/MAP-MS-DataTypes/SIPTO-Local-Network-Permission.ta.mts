@@ -84,7 +84,7 @@ const SIPTO_Local_Network_Permission = _enum_for_SIPTO_Local_Network_Permission;
  * @type {number}
  */
 export
-const SIPTO_Local_Network_Permission_siptoAtLocalNetworkAllowed: SIPTO_Local_Network_Permission = SIPTO_Local_Network_Permission.siptoAtLocalNetworkAllowed; /* LONG_NAMED_ENUMERATED_VALUE */
+const SIPTO_Local_Network_Permission_siptoAtLocalNetworkAllowed = SIPTO_Local_Network_Permission.siptoAtLocalNetworkAllowed satisfies SIPTO_Local_Network_Permission; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary siptoAtLocalNetworkAllowed
@@ -92,7 +92,7 @@ const SIPTO_Local_Network_Permission_siptoAtLocalNetworkAllowed: SIPTO_Local_Net
  * @type {number}
  */
 export
-const siptoAtLocalNetworkAllowed: SIPTO_Local_Network_Permission = SIPTO_Local_Network_Permission.siptoAtLocalNetworkAllowed; /* SHORT_NAMED_ENUMERATED_VALUE */
+const siptoAtLocalNetworkAllowed = SIPTO_Local_Network_Permission.siptoAtLocalNetworkAllowed satisfies SIPTO_Local_Network_Permission; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SIPTO_Local_Network_Permission_siptoAtLocalNetworkNotAllowed
@@ -100,7 +100,7 @@ const siptoAtLocalNetworkAllowed: SIPTO_Local_Network_Permission = SIPTO_Local_N
  * @type {number}
  */
 export
-const SIPTO_Local_Network_Permission_siptoAtLocalNetworkNotAllowed: SIPTO_Local_Network_Permission = SIPTO_Local_Network_Permission.siptoAtLocalNetworkNotAllowed; /* LONG_NAMED_ENUMERATED_VALUE */
+const SIPTO_Local_Network_Permission_siptoAtLocalNetworkNotAllowed = SIPTO_Local_Network_Permission.siptoAtLocalNetworkNotAllowed satisfies SIPTO_Local_Network_Permission; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary siptoAtLocalNetworkNotAllowed
@@ -108,7 +108,7 @@ const SIPTO_Local_Network_Permission_siptoAtLocalNetworkNotAllowed: SIPTO_Local_
  * @type {number}
  */
 export
-const siptoAtLocalNetworkNotAllowed: SIPTO_Local_Network_Permission = SIPTO_Local_Network_Permission.siptoAtLocalNetworkNotAllowed; /* SHORT_NAMED_ENUMERATED_VALUE */
+const siptoAtLocalNetworkNotAllowed = SIPTO_Local_Network_Permission.siptoAtLocalNetworkNotAllowed satisfies SIPTO_Local_Network_Permission; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) SIPTO_Local_Network_Permission

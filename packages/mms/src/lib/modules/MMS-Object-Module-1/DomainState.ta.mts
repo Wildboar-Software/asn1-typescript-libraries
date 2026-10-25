@@ -60,7 +60,7 @@ type DomainState = INTEGER;
  * @type {number}
  */
 export
-const DomainState_non_existent: DomainState = 0; /* LONG_NAMED_INTEGER_VALUE */
+const DomainState_non_existent = 0 satisfies DomainState; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DomainState_non_existent
@@ -72,7 +72,7 @@ const DomainState_non_existent: DomainState = 0; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const non_existent: DomainState = DomainState_non_existent; /* SHORT_NAMED_INTEGER_VALUE */
+const non_existent = DomainState_non_existent satisfies DomainState; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DomainState_loading
@@ -84,7 +84,7 @@ const non_existent: DomainState = DomainState_non_existent; /* SHORT_NAMED_INTEG
  * @type {number}
  */
 export
-const DomainState_loading: DomainState = 1; /* LONG_NAMED_INTEGER_VALUE */
+const DomainState_loading = 1 satisfies DomainState; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DomainState_loading
@@ -96,7 +96,7 @@ const DomainState_loading: DomainState = 1; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const loading: DomainState = DomainState_loading; /* SHORT_NAMED_INTEGER_VALUE */
+const loading = DomainState_loading satisfies DomainState; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DomainState_ready
@@ -108,7 +108,7 @@ const loading: DomainState = DomainState_loading; /* SHORT_NAMED_INTEGER_VALUE *
  * @type {number}
  */
 export
-const DomainState_ready: DomainState = 2; /* LONG_NAMED_INTEGER_VALUE */
+const DomainState_ready = 2 satisfies DomainState; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DomainState_ready
@@ -120,7 +120,7 @@ const DomainState_ready: DomainState = 2; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const ready: DomainState = DomainState_ready; /* SHORT_NAMED_INTEGER_VALUE */
+const ready = DomainState_ready satisfies DomainState; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DomainState_in_use
@@ -132,7 +132,7 @@ const ready: DomainState = DomainState_ready; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const DomainState_in_use: DomainState = 3; /* LONG_NAMED_INTEGER_VALUE */
+const DomainState_in_use = 3 satisfies DomainState; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DomainState_in_use
@@ -144,7 +144,7 @@ const DomainState_in_use: DomainState = 3; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const in_use: DomainState = DomainState_in_use; /* SHORT_NAMED_INTEGER_VALUE */
+const in_use = DomainState_in_use satisfies DomainState; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DomainState_complete
@@ -157,7 +157,7 @@ const in_use: DomainState = DomainState_in_use; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const DomainState_complete: DomainState = 4; /* LONG_NAMED_INTEGER_VALUE */
+const DomainState_complete = 4 satisfies DomainState; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DomainState_complete
@@ -170,7 +170,7 @@ const DomainState_complete: DomainState = 4; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const complete: DomainState = DomainState_complete; /* SHORT_NAMED_INTEGER_VALUE */
+const complete = DomainState_complete satisfies DomainState; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DomainState_incomplete
@@ -182,7 +182,7 @@ const complete: DomainState = DomainState_complete; /* SHORT_NAMED_INTEGER_VALUE
  * @type {number}
  */
 export
-const DomainState_incomplete: DomainState = 5; /* LONG_NAMED_INTEGER_VALUE */
+const DomainState_incomplete = 5 satisfies DomainState; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DomainState_incomplete
@@ -194,7 +194,7 @@ const DomainState_incomplete: DomainState = 5; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const incomplete: DomainState = DomainState_incomplete; /* SHORT_NAMED_INTEGER_VALUE */
+const incomplete = DomainState_incomplete satisfies DomainState; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DomainState_d1
@@ -206,7 +206,7 @@ const incomplete: DomainState = DomainState_incomplete; /* SHORT_NAMED_INTEGER_V
  * @type {number}
  */
 export
-const DomainState_d1: DomainState = 7; /* LONG_NAMED_INTEGER_VALUE */
+const DomainState_d1 = 7 satisfies DomainState; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DomainState_d1
@@ -218,7 +218,7 @@ const DomainState_d1: DomainState = 7; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const d1: DomainState = DomainState_d1; /* SHORT_NAMED_INTEGER_VALUE */
+const d1 = DomainState_d1 satisfies DomainState; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DomainState_d2
@@ -230,7 +230,7 @@ const d1: DomainState = DomainState_d1; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const DomainState_d2: DomainState = 8; /* LONG_NAMED_INTEGER_VALUE */
+const DomainState_d2 = 8 satisfies DomainState; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DomainState_d2
@@ -242,7 +242,7 @@ const DomainState_d2: DomainState = 8; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const d2: DomainState = DomainState_d2; /* SHORT_NAMED_INTEGER_VALUE */
+const d2 = DomainState_d2 satisfies DomainState; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DomainState_d3
@@ -254,7 +254,7 @@ const d2: DomainState = DomainState_d2; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const DomainState_d3: DomainState = 9; /* LONG_NAMED_INTEGER_VALUE */
+const DomainState_d3 = 9 satisfies DomainState; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DomainState_d3
@@ -266,7 +266,7 @@ const DomainState_d3: DomainState = 9; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const d3: DomainState = DomainState_d3; /* SHORT_NAMED_INTEGER_VALUE */
+const d3 = DomainState_d3 satisfies DomainState; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DomainState_d4
@@ -278,7 +278,7 @@ const d3: DomainState = DomainState_d3; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const DomainState_d4: DomainState = 10; /* LONG_NAMED_INTEGER_VALUE */
+const DomainState_d4 = 10 satisfies DomainState; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DomainState_d4
@@ -290,7 +290,7 @@ const DomainState_d4: DomainState = 10; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const d4: DomainState = DomainState_d4; /* SHORT_NAMED_INTEGER_VALUE */
+const d4 = DomainState_d4 satisfies DomainState; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DomainState_d5
@@ -302,7 +302,7 @@ const d4: DomainState = DomainState_d4; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const DomainState_d5: DomainState = 11; /* LONG_NAMED_INTEGER_VALUE */
+const DomainState_d5 = 11 satisfies DomainState; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DomainState_d5
@@ -314,7 +314,7 @@ const DomainState_d5: DomainState = 11; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const d5: DomainState = DomainState_d5; /* SHORT_NAMED_INTEGER_VALUE */
+const d5 = DomainState_d5 satisfies DomainState; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DomainState_d6
@@ -326,7 +326,7 @@ const d5: DomainState = DomainState_d5; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const DomainState_d6: DomainState = 12; /* LONG_NAMED_INTEGER_VALUE */
+const DomainState_d6 = 12 satisfies DomainState; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DomainState_d6
@@ -338,7 +338,7 @@ const DomainState_d6: DomainState = 12; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const d6: DomainState = DomainState_d6; /* SHORT_NAMED_INTEGER_VALUE */
+const d6 = DomainState_d6 satisfies DomainState; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DomainState_d7
@@ -350,7 +350,7 @@ const d6: DomainState = DomainState_d6; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const DomainState_d7: DomainState = 13; /* LONG_NAMED_INTEGER_VALUE */
+const DomainState_d7 = 13 satisfies DomainState; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DomainState_d7
@@ -362,7 +362,7 @@ const DomainState_d7: DomainState = 13; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const d7: DomainState = DomainState_d7; /* SHORT_NAMED_INTEGER_VALUE */
+const d7 = DomainState_d7 satisfies DomainState; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DomainState_d8
@@ -374,7 +374,7 @@ const d7: DomainState = DomainState_d7; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const DomainState_d8: DomainState = 14; /* LONG_NAMED_INTEGER_VALUE */
+const DomainState_d8 = 14 satisfies DomainState; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DomainState_d8
@@ -386,7 +386,7 @@ const DomainState_d8: DomainState = 14; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const d8: DomainState = DomainState_d8; /* SHORT_NAMED_INTEGER_VALUE */
+const d8 = DomainState_d8 satisfies DomainState; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DomainState_d9
@@ -398,7 +398,7 @@ const d8: DomainState = DomainState_d8; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const DomainState_d9: DomainState = 15; /* LONG_NAMED_INTEGER_VALUE */
+const DomainState_d9 = 15 satisfies DomainState; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DomainState_d9
@@ -410,7 +410,7 @@ const DomainState_d9: DomainState = 15; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const d9: DomainState = DomainState_d9; /* SHORT_NAMED_INTEGER_VALUE */
+const d9 = DomainState_d9 satisfies DomainState; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_DomainState = $._decodeInteger;
 export const _encode_DomainState = $._encodeInteger;
 

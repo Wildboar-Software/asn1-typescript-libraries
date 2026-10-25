@@ -42,7 +42,7 @@ type DiagFormat_extServices_req = INTEGER;
  * @type {number}
  */
 export
-const DiagFormat_extServices_req_nameInUse: DiagFormat_extServices_req = 1; /* LONG_NAMED_INTEGER_VALUE */
+const DiagFormat_extServices_req_nameInUse = 1 satisfies DiagFormat_extServices_req; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagFormat_extServices_req_nameInUse
@@ -54,7 +54,7 @@ const DiagFormat_extServices_req_nameInUse: DiagFormat_extServices_req = 1; /* L
  * @type {number}
  */
 export
-const nameInUse: DiagFormat_extServices_req = DiagFormat_extServices_req_nameInUse; /* SHORT_NAMED_INTEGER_VALUE */
+const nameInUse = DiagFormat_extServices_req_nameInUse satisfies DiagFormat_extServices_req; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagFormat_extServices_req_noSuchName
@@ -67,7 +67,7 @@ const nameInUse: DiagFormat_extServices_req = DiagFormat_extServices_req_nameInU
  * @type {number}
  */
 export
-const DiagFormat_extServices_req_noSuchName: DiagFormat_extServices_req = 2; /* LONG_NAMED_INTEGER_VALUE */
+const DiagFormat_extServices_req_noSuchName = 2 satisfies DiagFormat_extServices_req; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagFormat_extServices_req_noSuchName
@@ -80,7 +80,7 @@ const DiagFormat_extServices_req_noSuchName: DiagFormat_extServices_req = 2; /* 
  * @type {number}
  */
 export
-const noSuchName: DiagFormat_extServices_req = DiagFormat_extServices_req_noSuchName; /* SHORT_NAMED_INTEGER_VALUE */
+const noSuchName = DiagFormat_extServices_req_noSuchName satisfies DiagFormat_extServices_req; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagFormat_extServices_req_quota
@@ -92,7 +92,7 @@ const noSuchName: DiagFormat_extServices_req = DiagFormat_extServices_req_noSuch
  * @type {number}
  */
 export
-const DiagFormat_extServices_req_quota: DiagFormat_extServices_req = 3; /* LONG_NAMED_INTEGER_VALUE */
+const DiagFormat_extServices_req_quota = 3 satisfies DiagFormat_extServices_req; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagFormat_extServices_req_quota
@@ -104,7 +104,7 @@ const DiagFormat_extServices_req_quota: DiagFormat_extServices_req = 3; /* LONG_
  * @type {number}
  */
 export
-const quota: DiagFormat_extServices_req = DiagFormat_extServices_req_quota; /* SHORT_NAMED_INTEGER_VALUE */
+const quota = DiagFormat_extServices_req_quota satisfies DiagFormat_extServices_req; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagFormat_extServices_req_type_
@@ -117,7 +117,7 @@ const quota: DiagFormat_extServices_req = DiagFormat_extServices_req_quota; /* S
  * @type {number}
  */
 export
-const DiagFormat_extServices_req_type_: DiagFormat_extServices_req = 4; /* LONG_NAMED_INTEGER_VALUE */
+const DiagFormat_extServices_req_type_ = 4 satisfies DiagFormat_extServices_req; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagFormat_extServices_req_type_
@@ -130,7 +130,7 @@ const DiagFormat_extServices_req_type_: DiagFormat_extServices_req = 4; /* LONG_
  * @type {number}
  */
 export
-const type_: DiagFormat_extServices_req = DiagFormat_extServices_req_type_; /* SHORT_NAMED_INTEGER_VALUE */
+const type_ = DiagFormat_extServices_req_type_ satisfies DiagFormat_extServices_req; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_DiagFormat_extServices_req: $.ASN1Decoder<DiagFormat_extServices_req> = $._decodeInteger;
 export const _encode_DiagFormat_extServices_req: $.ASN1Encoder<DiagFormat_extServices_req> = $._encodeInteger;
 

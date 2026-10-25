@@ -32,28 +32,28 @@ export type RequestShadowUpdateArgumentData_requestedStrategy_standard =
  * @constant
  * @type {number}
  */
-export const RequestShadowUpdateArgumentData_requestedStrategy_standard_incremental: RequestShadowUpdateArgumentData_requestedStrategy_standard = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+export const RequestShadowUpdateArgumentData_requestedStrategy_standard_incremental = _enum_for_RequestShadowUpdateArgumentData_requestedStrategy_standard.incremental satisfies RequestShadowUpdateArgumentData_requestedStrategy_standard; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary incremental
  * @constant
  * @type {number}
  */
-export const incremental: RequestShadowUpdateArgumentData_requestedStrategy_standard = RequestShadowUpdateArgumentData_requestedStrategy_standard_incremental; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const incremental = RequestShadowUpdateArgumentData_requestedStrategy_standard_incremental satisfies RequestShadowUpdateArgumentData_requestedStrategy_standard; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RequestShadowUpdateArgumentData_requestedStrategy_standard_total
  * @constant
  * @type {number}
  */
-export const RequestShadowUpdateArgumentData_requestedStrategy_standard_total: RequestShadowUpdateArgumentData_requestedStrategy_standard = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+export const RequestShadowUpdateArgumentData_requestedStrategy_standard_total = _enum_for_RequestShadowUpdateArgumentData_requestedStrategy_standard.total satisfies RequestShadowUpdateArgumentData_requestedStrategy_standard; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary total
  * @constant
  * @type {number}
  */
-export const total: RequestShadowUpdateArgumentData_requestedStrategy_standard = RequestShadowUpdateArgumentData_requestedStrategy_standard_total; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const total = RequestShadowUpdateArgumentData_requestedStrategy_standard_total satisfies RequestShadowUpdateArgumentData_requestedStrategy_standard; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 let _cached_decoder_for_RequestShadowUpdateArgumentData_requestedStrategy_standard: $.ASN1Decoder<RequestShadowUpdateArgumentData_requestedStrategy_standard> | null = null;
 

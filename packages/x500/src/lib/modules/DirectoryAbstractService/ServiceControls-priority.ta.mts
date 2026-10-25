@@ -22,14 +22,14 @@ export type ServiceControls_priority = INTEGER;
  * @constant
  * @type {number}
  */
-export const ServiceControls_priority_low: ServiceControls_priority = 0; /* LONG_NAMED_INTEGER_VALUE */
+export const ServiceControls_priority_low = 0 satisfies ServiceControls_priority; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceControls_priority_low
  * @constant
  * @type {number}
  */
-export const low: ServiceControls_priority = ServiceControls_priority_low; /* SHORT_NAMED_INTEGER_VALUE */
+export const low = ServiceControls_priority_low satisfies ServiceControls_priority; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceControls_priority_medium
@@ -40,7 +40,7 @@ export const low: ServiceControls_priority = ServiceControls_priority_low; /* SH
  * @constant
  * @type {number}
  */
-export const ServiceControls_priority_medium: ServiceControls_priority = 1; /* LONG_NAMED_INTEGER_VALUE */
+export const ServiceControls_priority_medium = 1 satisfies ServiceControls_priority; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceControls_priority_medium
@@ -51,21 +51,21 @@ export const ServiceControls_priority_medium: ServiceControls_priority = 1; /* L
  * @constant
  * @type {number}
  */
-export const medium: ServiceControls_priority = ServiceControls_priority_medium; /* SHORT_NAMED_INTEGER_VALUE */
+export const medium = ServiceControls_priority_medium satisfies ServiceControls_priority; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceControls_priority_high
  * @constant
  * @type {number}
  */
-export const ServiceControls_priority_high: ServiceControls_priority = 2; /* LONG_NAMED_INTEGER_VALUE */
+export const ServiceControls_priority_high = 2 satisfies ServiceControls_priority; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceControls_priority_high
  * @constant
  * @type {number}
  */
-export const high: ServiceControls_priority = ServiceControls_priority_high; /* SHORT_NAMED_INTEGER_VALUE */
+export const high = ServiceControls_priority_high satisfies ServiceControls_priority; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_ServiceControls_priority = $._decodeInteger;

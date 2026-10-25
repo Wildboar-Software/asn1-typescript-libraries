@@ -71,8 +71,8 @@ export const AlarmSeverityCode = _enum_for_AlarmSeverityCode;
  * @constant
  * @type {number}
  */
-export const AlarmSeverityCode_non_alarmed: AlarmSeverityCode =
-    AlarmSeverityCode.non_alarmed; /* LONG_NAMED_ENUMERATED_VALUE */
+export const AlarmSeverityCode_non_alarmed =
+    AlarmSeverityCode.non_alarmed satisfies AlarmSeverityCode; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -80,8 +80,8 @@ export const AlarmSeverityCode_non_alarmed: AlarmSeverityCode =
  * @constant
  * @type {number}
  */
-export const non_alarmed: AlarmSeverityCode =
-    AlarmSeverityCode.non_alarmed; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const non_alarmed =
+    AlarmSeverityCode.non_alarmed satisfies AlarmSeverityCode; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -89,8 +89,8 @@ export const non_alarmed: AlarmSeverityCode =
  * @constant
  * @type {number}
  */
-export const AlarmSeverityCode_minor: AlarmSeverityCode =
-    AlarmSeverityCode.minor; /* LONG_NAMED_ENUMERATED_VALUE */
+export const AlarmSeverityCode_minor =
+    AlarmSeverityCode.minor satisfies AlarmSeverityCode; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -98,8 +98,8 @@ export const AlarmSeverityCode_minor: AlarmSeverityCode =
  * @constant
  * @type {number}
  */
-export const minor: AlarmSeverityCode =
-    AlarmSeverityCode.minor; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const minor =
+    AlarmSeverityCode.minor satisfies AlarmSeverityCode; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -107,8 +107,8 @@ export const minor: AlarmSeverityCode =
  * @constant
  * @type {number}
  */
-export const AlarmSeverityCode_major: AlarmSeverityCode =
-    AlarmSeverityCode.major; /* LONG_NAMED_ENUMERATED_VALUE */
+export const AlarmSeverityCode_major =
+    AlarmSeverityCode.major satisfies AlarmSeverityCode; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -116,8 +116,8 @@ export const AlarmSeverityCode_major: AlarmSeverityCode =
  * @constant
  * @type {number}
  */
-export const major: AlarmSeverityCode =
-    AlarmSeverityCode.major; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const major =
+    AlarmSeverityCode.major satisfies AlarmSeverityCode; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -125,8 +125,8 @@ export const major: AlarmSeverityCode =
  * @constant
  * @type {number}
  */
-export const AlarmSeverityCode_critical: AlarmSeverityCode =
-    AlarmSeverityCode.critical; /* LONG_NAMED_ENUMERATED_VALUE */
+export const AlarmSeverityCode_critical =
+    AlarmSeverityCode.critical satisfies AlarmSeverityCode; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -134,8 +134,8 @@ export const AlarmSeverityCode_critical: AlarmSeverityCode =
  * @constant
  * @type {number}
  */
-export const critical: AlarmSeverityCode =
-    AlarmSeverityCode.critical; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const critical =
+    AlarmSeverityCode.critical satisfies AlarmSeverityCode; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -143,8 +143,8 @@ export const critical: AlarmSeverityCode =
  * @constant
  * @type {number}
  */
-export const AlarmSeverityCode_warning: AlarmSeverityCode =
-    AlarmSeverityCode.warning; /* LONG_NAMED_ENUMERATED_VALUE */
+export const AlarmSeverityCode_warning =
+    AlarmSeverityCode.warning satisfies AlarmSeverityCode; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -152,8 +152,8 @@ export const AlarmSeverityCode_warning: AlarmSeverityCode =
  * @constant
  * @type {number}
  */
-export const warning: AlarmSeverityCode =
-    AlarmSeverityCode.warning; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const warning =
+    AlarmSeverityCode.warning satisfies AlarmSeverityCode; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 

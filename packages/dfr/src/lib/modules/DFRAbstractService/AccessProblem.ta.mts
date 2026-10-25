@@ -89,7 +89,7 @@ const AccessProblem = _enum_for_AccessProblem;
  * @type {number}
  */
 export
-const AccessProblem_inappropriate_object_class: AccessProblem = AccessProblem.inappropriate_object_class; /* LONG_NAMED_ENUMERATED_VALUE */
+const AccessProblem_inappropriate_object_class = AccessProblem.inappropriate_object_class satisfies AccessProblem; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary inappropriate_object_class
@@ -100,7 +100,7 @@ const AccessProblem_inappropriate_object_class: AccessProblem = AccessProblem.in
  * @type {number}
  */
 export
-const inappropriate_object_class: AccessProblem = AccessProblem.inappropriate_object_class; /* SHORT_NAMED_ENUMERATED_VALUE */
+const inappropriate_object_class = AccessProblem.inappropriate_object_class satisfies AccessProblem; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AccessProblem_reserved_by_a_user
@@ -111,7 +111,7 @@ const inappropriate_object_class: AccessProblem = AccessProblem.inappropriate_ob
  * @type {number}
  */
 export
-const AccessProblem_reserved_by_a_user: AccessProblem = AccessProblem.reserved_by_a_user; /* LONG_NAMED_ENUMERATED_VALUE */
+const AccessProblem_reserved_by_a_user = AccessProblem.reserved_by_a_user satisfies AccessProblem; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary reserved_by_a_user
@@ -122,7 +122,7 @@ const AccessProblem_reserved_by_a_user: AccessProblem = AccessProblem.reserved_b
  * @type {number}
  */
 export
-const reserved_by_a_user: AccessProblem = AccessProblem.reserved_by_a_user; /* SHORT_NAMED_ENUMERATED_VALUE */
+const reserved_by_a_user = AccessProblem.reserved_by_a_user satisfies AccessProblem; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AccessProblem_externally_located_object
@@ -133,7 +133,7 @@ const reserved_by_a_user: AccessProblem = AccessProblem.reserved_by_a_user; /* S
  * @type {number}
  */
 export
-const AccessProblem_externally_located_object: AccessProblem = AccessProblem.externally_located_object; /* LONG_NAMED_ENUMERATED_VALUE */
+const AccessProblem_externally_located_object = AccessProblem.externally_located_object satisfies AccessProblem; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary externally_located_object
@@ -144,7 +144,7 @@ const AccessProblem_externally_located_object: AccessProblem = AccessProblem.ext
  * @type {number}
  */
 export
-const externally_located_object: AccessProblem = AccessProblem.externally_located_object; /* SHORT_NAMED_ENUMERATED_VALUE */
+const externally_located_object = AccessProblem.externally_located_object satisfies AccessProblem; /* SHORT_NAMED_ENUMERATED_VALUE */
 export function _decode_AccessProblem(el: _Element): AccessProblem {
     const enumerated = $._decodeEnumerated(el);
     switch (enumerated) {

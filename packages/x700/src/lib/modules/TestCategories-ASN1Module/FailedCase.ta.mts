@@ -82,8 +82,8 @@ export const FailedCase = _enum_for_FailedCase;
  * @constant
  * @type {number}
  */
-export const FailedCase_lineDisconnected: FailedCase =
-    FailedCase.lineDisconnected; /* LONG_NAMED_ENUMERATED_VALUE */
+export const FailedCase_lineDisconnected =
+    FailedCase.lineDisconnected satisfies FailedCase; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary lineDisconnected
@@ -93,8 +93,8 @@ export const FailedCase_lineDisconnected: FailedCase =
  * @constant
  * @type {number}
  */
-export const lineDisconnected: FailedCase =
-    FailedCase.lineDisconnected; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const lineDisconnected =
+    FailedCase.lineDisconnected satisfies FailedCase; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary FailedCase_counterOverflow
@@ -104,8 +104,8 @@ export const lineDisconnected: FailedCase =
  * @constant
  * @type {number}
  */
-export const FailedCase_counterOverflow: FailedCase =
-    FailedCase.counterOverflow; /* LONG_NAMED_ENUMERATED_VALUE */
+export const FailedCase_counterOverflow =
+    FailedCase.counterOverflow satisfies FailedCase; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary counterOverflow
@@ -115,8 +115,8 @@ export const FailedCase_counterOverflow: FailedCase =
  * @constant
  * @type {number}
  */
-export const counterOverflow: FailedCase =
-    FailedCase.counterOverflow; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const counterOverflow =
+    FailedCase.counterOverflow satisfies FailedCase; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 export function _decode_FailedCase(el: _Element): FailedCase {

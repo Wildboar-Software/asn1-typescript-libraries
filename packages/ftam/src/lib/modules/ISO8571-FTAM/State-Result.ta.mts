@@ -44,7 +44,7 @@ export type State_Result = INTEGER;
  * @constant
  * @type {number}
  */
-export const State_Result_success: State_Result = 0; /* LONG_NAMED_INTEGER_VALUE */
+export const State_Result_success = 0 satisfies State_Result; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -52,7 +52,7 @@ export const State_Result_success: State_Result = 0; /* LONG_NAMED_INTEGER_VALUE
  * @constant
  * @type {number}
  */
-export const success: State_Result = State_Result_success; /* SHORT_NAMED_INTEGER_VALUE */
+export const success = State_Result_success satisfies State_Result; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -66,7 +66,7 @@ export const success: State_Result = State_Result_success; /* SHORT_NAMED_INTEGE
  * @constant
  * @type {number}
  */
-export const State_Result_failure: State_Result = 1; /* LONG_NAMED_INTEGER_VALUE */
+export const State_Result_failure = 1 satisfies State_Result; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -74,7 +74,7 @@ export const State_Result_failure: State_Result = 1; /* LONG_NAMED_INTEGER_VALUE
  * @constant
  * @type {number}
  */
-export const failure: State_Result = State_Result_failure; /* SHORT_NAMED_INTEGER_VALUE */
+export const failure = State_Result_failure satisfies State_Result; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 let _cached_decoder_for_State_Result: $.ASN1Decoder<State_Result> | null = null;

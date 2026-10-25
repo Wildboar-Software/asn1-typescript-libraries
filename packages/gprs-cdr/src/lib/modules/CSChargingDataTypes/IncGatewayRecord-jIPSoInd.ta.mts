@@ -30,7 +30,7 @@ type IncGatewayRecord_jIPSoInd = INTEGER;
  * @type {number}
  */
 export
-const IncGatewayRecord_jIPSoInd_lRN_NP_Database: IncGatewayRecord_jIPSoInd = 1; /* LONG_NAMED_INTEGER_VALUE */
+const IncGatewayRecord_jIPSoInd_lRN_NP_Database = 1 satisfies IncGatewayRecord_jIPSoInd; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary IncGatewayRecord_jIPSoInd_lRN_NP_Database
@@ -38,7 +38,7 @@ const IncGatewayRecord_jIPSoInd_lRN_NP_Database: IncGatewayRecord_jIPSoInd = 1; 
  * @type {number}
  */
 export
-const lRN_NP_Database: IncGatewayRecord_jIPSoInd = IncGatewayRecord_jIPSoInd_lRN_NP_Database; /* SHORT_NAMED_INTEGER_VALUE */
+const lRN_NP_Database = IncGatewayRecord_jIPSoInd_lRN_NP_Database satisfies IncGatewayRecord_jIPSoInd; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary IncGatewayRecord_jIPSoInd_switchingSystemData
@@ -46,7 +46,7 @@ const lRN_NP_Database: IncGatewayRecord_jIPSoInd = IncGatewayRecord_jIPSoInd_lRN
  * @type {number}
  */
 export
-const IncGatewayRecord_jIPSoInd_switchingSystemData: IncGatewayRecord_jIPSoInd = 2; /* LONG_NAMED_INTEGER_VALUE */
+const IncGatewayRecord_jIPSoInd_switchingSystemData = 2 satisfies IncGatewayRecord_jIPSoInd; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary IncGatewayRecord_jIPSoInd_switchingSystemData
@@ -54,7 +54,7 @@ const IncGatewayRecord_jIPSoInd_switchingSystemData: IncGatewayRecord_jIPSoInd =
  * @type {number}
  */
 export
-const switchingSystemData: IncGatewayRecord_jIPSoInd = IncGatewayRecord_jIPSoInd_switchingSystemData; /* SHORT_NAMED_INTEGER_VALUE */
+const switchingSystemData = IncGatewayRecord_jIPSoInd_switchingSystemData satisfies IncGatewayRecord_jIPSoInd; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary IncGatewayRecord_jIPSoInd_incomingsignaling
@@ -62,7 +62,7 @@ const switchingSystemData: IncGatewayRecord_jIPSoInd = IncGatewayRecord_jIPSoInd
  * @type {number}
  */
 export
-const IncGatewayRecord_jIPSoInd_incomingsignaling: IncGatewayRecord_jIPSoInd = 3; /* LONG_NAMED_INTEGER_VALUE */
+const IncGatewayRecord_jIPSoInd_incomingsignaling = 3 satisfies IncGatewayRecord_jIPSoInd; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary IncGatewayRecord_jIPSoInd_incomingsignaling
@@ -70,7 +70,7 @@ const IncGatewayRecord_jIPSoInd_incomingsignaling: IncGatewayRecord_jIPSoInd = 3
  * @type {number}
  */
 export
-const incomingsignaling: IncGatewayRecord_jIPSoInd = IncGatewayRecord_jIPSoInd_incomingsignaling; /* SHORT_NAMED_INTEGER_VALUE */
+const incomingsignaling = IncGatewayRecord_jIPSoInd_incomingsignaling satisfies IncGatewayRecord_jIPSoInd; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary IncGatewayRecord_jIPSoInd_unknown
@@ -78,7 +78,7 @@ const incomingsignaling: IncGatewayRecord_jIPSoInd = IncGatewayRecord_jIPSoInd_i
  * @type {number}
  */
 export
-const IncGatewayRecord_jIPSoInd_unknown: IncGatewayRecord_jIPSoInd = 9; /* LONG_NAMED_INTEGER_VALUE */
+const IncGatewayRecord_jIPSoInd_unknown = 9 satisfies IncGatewayRecord_jIPSoInd; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary IncGatewayRecord_jIPSoInd_unknown
@@ -86,7 +86,7 @@ const IncGatewayRecord_jIPSoInd_unknown: IncGatewayRecord_jIPSoInd = 9; /* LONG_
  * @type {number}
  */
 export
-const unknown: IncGatewayRecord_jIPSoInd = IncGatewayRecord_jIPSoInd_unknown; /* SHORT_NAMED_INTEGER_VALUE */
+const unknown = IncGatewayRecord_jIPSoInd_unknown satisfies IncGatewayRecord_jIPSoInd; /* SHORT_NAMED_INTEGER_VALUE */
 
 export
 const _decode_IncGatewayRecord_jIPSoInd: $.ASN1Decoder<IncGatewayRecord_jIPSoInd> = $._decodeInteger;

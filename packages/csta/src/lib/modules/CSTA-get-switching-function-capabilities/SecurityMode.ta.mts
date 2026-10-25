@@ -87,7 +87,7 @@ const SecurityMode = _enum_for_SecurityMode;
  * @type {number}
  */
 export
-const SecurityMode_allEvents: SecurityMode = SecurityMode.allEvents; /* LONG_NAMED_ENUMERATED_VALUE */
+const SecurityMode_allEvents = SecurityMode.allEvents satisfies SecurityMode; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary allEvents
@@ -95,7 +95,7 @@ const SecurityMode_allEvents: SecurityMode = SecurityMode.allEvents; /* LONG_NAM
  * @type {number}
  */
 export
-const allEvents: SecurityMode = SecurityMode.allEvents; /* SHORT_NAMED_ENUMERATED_VALUE */
+const allEvents = SecurityMode.allEvents satisfies SecurityMode; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SecurityMode_allAcks
@@ -103,7 +103,7 @@ const allEvents: SecurityMode = SecurityMode.allEvents; /* SHORT_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const SecurityMode_allAcks: SecurityMode = SecurityMode.allAcks; /* LONG_NAMED_ENUMERATED_VALUE */
+const SecurityMode_allAcks = SecurityMode.allAcks satisfies SecurityMode; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary allAcks
@@ -111,7 +111,7 @@ const SecurityMode_allAcks: SecurityMode = SecurityMode.allAcks; /* LONG_NAMED_E
  * @type {number}
  */
 export
-const allAcks: SecurityMode = SecurityMode.allAcks; /* SHORT_NAMED_ENUMERATED_VALUE */
+const allAcks = SecurityMode.allAcks satisfies SecurityMode; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SecurityMode_allServReqs
@@ -119,7 +119,7 @@ const allAcks: SecurityMode = SecurityMode.allAcks; /* SHORT_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const SecurityMode_allServReqs: SecurityMode = SecurityMode.allServReqs; /* LONG_NAMED_ENUMERATED_VALUE */
+const SecurityMode_allServReqs = SecurityMode.allServReqs satisfies SecurityMode; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary allServReqs
@@ -127,7 +127,7 @@ const SecurityMode_allServReqs: SecurityMode = SecurityMode.allServReqs; /* LONG
  * @type {number}
  */
 export
-const allServReqs: SecurityMode = SecurityMode.allServReqs; /* SHORT_NAMED_ENUMERATED_VALUE */
+const allServReqs = SecurityMode.allServReqs satisfies SecurityMode; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 let _cached_decoder_for_SecurityMode: $.ASN1Decoder<SecurityMode> | null = null;
 

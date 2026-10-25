@@ -69,7 +69,7 @@ const UnfulfilledACProfileReason = _enum_for_UnfulfilledACProfileReason;
  * @type {number}
  */
 export
-const UnfulfilledACProfileReason_eASNotAvailable: UnfulfilledACProfileReason = UnfulfilledACProfileReason.eASNotAvailable; /* LONG_NAMED_ENUMERATED_VALUE */
+const UnfulfilledACProfileReason_eASNotAvailable = UnfulfilledACProfileReason.eASNotAvailable satisfies UnfulfilledACProfileReason; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary eASNotAvailable
@@ -77,7 +77,7 @@ const UnfulfilledACProfileReason_eASNotAvailable: UnfulfilledACProfileReason = U
  * @type {number}
  */
 export
-const eASNotAvailable: UnfulfilledACProfileReason = UnfulfilledACProfileReason.eASNotAvailable; /* SHORT_NAMED_ENUMERATED_VALUE */
+const eASNotAvailable = UnfulfilledACProfileReason.eASNotAvailable satisfies UnfulfilledACProfileReason; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary UnfulfilledACProfileReason_requirementsUnfulfilled
@@ -85,7 +85,7 @@ const eASNotAvailable: UnfulfilledACProfileReason = UnfulfilledACProfileReason.e
  * @type {number}
  */
 export
-const UnfulfilledACProfileReason_requirementsUnfulfilled: UnfulfilledACProfileReason = UnfulfilledACProfileReason.requirementsUnfulfilled; /* LONG_NAMED_ENUMERATED_VALUE */
+const UnfulfilledACProfileReason_requirementsUnfulfilled = UnfulfilledACProfileReason.requirementsUnfulfilled satisfies UnfulfilledACProfileReason; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary requirementsUnfulfilled
@@ -93,7 +93,7 @@ const UnfulfilledACProfileReason_requirementsUnfulfilled: UnfulfilledACProfileRe
  * @type {number}
  */
 export
-const requirementsUnfulfilled: UnfulfilledACProfileReason = UnfulfilledACProfileReason.requirementsUnfulfilled; /* SHORT_NAMED_ENUMERATED_VALUE */
+const requirementsUnfulfilled = UnfulfilledACProfileReason.requirementsUnfulfilled satisfies UnfulfilledACProfileReason; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_UnfulfilledACProfileReason: $.ASN1Decoder<UnfulfilledACProfileReason> = $._decodeEnumerated;
 export const _encode_UnfulfilledACProfileReason: $.ASN1Encoder<UnfulfilledACProfileReason> = $._encodeEnumerated;
 

@@ -51,7 +51,7 @@ type ImplicitFloorReq = _enum_for_ImplicitFloorReq | ENUMERATED;
  * @type {number}
  */
 export
-const ImplicitFloorReq_join: ImplicitFloorReq = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const ImplicitFloorReq_join = _enum_for_ImplicitFloorReq.join satisfies ImplicitFloorReq; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary join
@@ -63,7 +63,7 @@ const ImplicitFloorReq_join: ImplicitFloorReq = 1; /* LONG_NAMED_ENUMERATED_VALU
  * @type {number}
  */
 export
-const join: ImplicitFloorReq = ImplicitFloorReq_join; /* SHORT_NAMED_ENUMERATED_VALUE */
+const join = ImplicitFloorReq_join satisfies ImplicitFloorReq; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ImplicitFloorReq_rejoin
@@ -75,7 +75,7 @@ const join: ImplicitFloorReq = ImplicitFloorReq_join; /* SHORT_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const ImplicitFloorReq_rejoin: ImplicitFloorReq = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+const ImplicitFloorReq_rejoin = _enum_for_ImplicitFloorReq.rejoin satisfies ImplicitFloorReq; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary rejoin
@@ -87,7 +87,7 @@ const ImplicitFloorReq_rejoin: ImplicitFloorReq = 2; /* LONG_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const rejoin: ImplicitFloorReq = ImplicitFloorReq_rejoin; /* SHORT_NAMED_ENUMERATED_VALUE */
+const rejoin = ImplicitFloorReq_rejoin satisfies ImplicitFloorReq; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ImplicitFloorReq_release
@@ -99,7 +99,7 @@ const rejoin: ImplicitFloorReq = ImplicitFloorReq_rejoin; /* SHORT_NAMED_ENUMERA
  * @type {number}
  */
 export
-const ImplicitFloorReq_release: ImplicitFloorReq = 3; /* LONG_NAMED_ENUMERATED_VALUE */
+const ImplicitFloorReq_release = _enum_for_ImplicitFloorReq.release satisfies ImplicitFloorReq; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary release
@@ -111,7 +111,7 @@ const ImplicitFloorReq_release: ImplicitFloorReq = 3; /* LONG_NAMED_ENUMERATED_V
  * @type {number}
  */
 export
-const release: ImplicitFloorReq = ImplicitFloorReq_release; /* SHORT_NAMED_ENUMERATED_VALUE */
+const release = ImplicitFloorReq_release satisfies ImplicitFloorReq; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_ImplicitFloorReq: $.ASN1Decoder<ImplicitFloorReq> = $._decodeEnumerated;
 export const _encode_ImplicitFloorReq: $.ASN1Encoder<ImplicitFloorReq> = $._encodeEnumerated;
 

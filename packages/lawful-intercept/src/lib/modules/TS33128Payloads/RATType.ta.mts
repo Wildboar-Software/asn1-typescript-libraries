@@ -450,7 +450,7 @@ const RATType = _enum_for_RATType;
  * @type {number}
  */
 export
-const RATType_nR: RATType = RATType.nR; /* LONG_NAMED_ENUMERATED_VALUE */
+const RATType_nR = RATType.nR satisfies RATType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary nR
@@ -464,7 +464,7 @@ const RATType_nR: RATType = RATType.nR; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const nR: RATType = RATType.nR; /* SHORT_NAMED_ENUMERATED_VALUE */
+const nR = RATType.nR satisfies RATType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RATType_eUTRA
@@ -478,7 +478,7 @@ const nR: RATType = RATType.nR; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const RATType_eUTRA: RATType = RATType.eUTRA; /* LONG_NAMED_ENUMERATED_VALUE */
+const RATType_eUTRA = RATType.eUTRA satisfies RATType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary eUTRA
@@ -492,7 +492,7 @@ const RATType_eUTRA: RATType = RATType.eUTRA; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const eUTRA: RATType = RATType.eUTRA; /* SHORT_NAMED_ENUMERATED_VALUE */
+const eUTRA = RATType.eUTRA satisfies RATType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RATType_wLAN
@@ -506,7 +506,7 @@ const eUTRA: RATType = RATType.eUTRA; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const RATType_wLAN: RATType = RATType.wLAN; /* LONG_NAMED_ENUMERATED_VALUE */
+const RATType_wLAN = RATType.wLAN satisfies RATType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary wLAN
@@ -520,7 +520,7 @@ const RATType_wLAN: RATType = RATType.wLAN; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const wLAN: RATType = RATType.wLAN; /* SHORT_NAMED_ENUMERATED_VALUE */
+const wLAN = RATType.wLAN satisfies RATType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RATType_virtual
@@ -535,7 +535,7 @@ const wLAN: RATType = RATType.wLAN; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const RATType_virtual: RATType = RATType.virtual; /* LONG_NAMED_ENUMERATED_VALUE */
+const RATType_virtual = RATType.virtual satisfies RATType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary virtual
@@ -550,7 +550,7 @@ const RATType_virtual: RATType = RATType.virtual; /* LONG_NAMED_ENUMERATED_VALUE
  * @type {number}
  */
 export
-const virtual: RATType = RATType.virtual; /* SHORT_NAMED_ENUMERATED_VALUE */
+const virtual = RATType.virtual satisfies RATType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RATType_nBIOT
@@ -564,7 +564,7 @@ const virtual: RATType = RATType.virtual; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const RATType_nBIOT: RATType = RATType.nBIOT; /* LONG_NAMED_ENUMERATED_VALUE */
+const RATType_nBIOT = RATType.nBIOT satisfies RATType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary nBIOT
@@ -578,7 +578,7 @@ const RATType_nBIOT: RATType = RATType.nBIOT; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const nBIOT: RATType = RATType.nBIOT; /* SHORT_NAMED_ENUMERATED_VALUE */
+const nBIOT = RATType.nBIOT satisfies RATType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RATType_wireline
@@ -592,7 +592,7 @@ const nBIOT: RATType = RATType.nBIOT; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const RATType_wireline: RATType = RATType.wireline; /* LONG_NAMED_ENUMERATED_VALUE */
+const RATType_wireline = RATType.wireline satisfies RATType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary wireline
@@ -606,7 +606,7 @@ const RATType_wireline: RATType = RATType.wireline; /* LONG_NAMED_ENUMERATED_VAL
  * @type {number}
  */
 export
-const wireline: RATType = RATType.wireline; /* SHORT_NAMED_ENUMERATED_VALUE */
+const wireline = RATType.wireline satisfies RATType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RATType_wirelineCable
@@ -620,7 +620,7 @@ const wireline: RATType = RATType.wireline; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const RATType_wirelineCable: RATType = RATType.wirelineCable; /* LONG_NAMED_ENUMERATED_VALUE */
+const RATType_wirelineCable = RATType.wirelineCable satisfies RATType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary wirelineCable
@@ -634,7 +634,7 @@ const RATType_wirelineCable: RATType = RATType.wirelineCable; /* LONG_NAMED_ENUM
  * @type {number}
  */
 export
-const wirelineCable: RATType = RATType.wirelineCable; /* SHORT_NAMED_ENUMERATED_VALUE */
+const wirelineCable = RATType.wirelineCable satisfies RATType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RATType_wirelineBBF
@@ -648,7 +648,7 @@ const wirelineCable: RATType = RATType.wirelineCable; /* SHORT_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const RATType_wirelineBBF: RATType = RATType.wirelineBBF; /* LONG_NAMED_ENUMERATED_VALUE */
+const RATType_wirelineBBF = RATType.wirelineBBF satisfies RATType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary wirelineBBF
@@ -662,7 +662,7 @@ const RATType_wirelineBBF: RATType = RATType.wirelineBBF; /* LONG_NAMED_ENUMERAT
  * @type {number}
  */
 export
-const wirelineBBF: RATType = RATType.wirelineBBF; /* SHORT_NAMED_ENUMERATED_VALUE */
+const wirelineBBF = RATType.wirelineBBF satisfies RATType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RATType_lTEM
@@ -677,7 +677,7 @@ const wirelineBBF: RATType = RATType.wirelineBBF; /* SHORT_NAMED_ENUMERATED_VALU
  * @type {number}
  */
 export
-const RATType_lTEM: RATType = RATType.lTEM; /* LONG_NAMED_ENUMERATED_VALUE */
+const RATType_lTEM = RATType.lTEM satisfies RATType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary lTEM
@@ -692,7 +692,7 @@ const RATType_lTEM: RATType = RATType.lTEM; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const lTEM: RATType = RATType.lTEM; /* SHORT_NAMED_ENUMERATED_VALUE */
+const lTEM = RATType.lTEM satisfies RATType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RATType_nRU
@@ -706,7 +706,7 @@ const lTEM: RATType = RATType.lTEM; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const RATType_nRU: RATType = RATType.nRU; /* LONG_NAMED_ENUMERATED_VALUE */
+const RATType_nRU = RATType.nRU satisfies RATType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary nRU
@@ -720,7 +720,7 @@ const RATType_nRU: RATType = RATType.nRU; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const nRU: RATType = RATType.nRU; /* SHORT_NAMED_ENUMERATED_VALUE */
+const nRU = RATType.nRU satisfies RATType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RATType_eUTRAU
@@ -734,7 +734,7 @@ const nRU: RATType = RATType.nRU; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const RATType_eUTRAU: RATType = RATType.eUTRAU; /* LONG_NAMED_ENUMERATED_VALUE */
+const RATType_eUTRAU = RATType.eUTRAU satisfies RATType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary eUTRAU
@@ -748,7 +748,7 @@ const RATType_eUTRAU: RATType = RATType.eUTRAU; /* LONG_NAMED_ENUMERATED_VALUE *
  * @type {number}
  */
 export
-const eUTRAU: RATType = RATType.eUTRAU; /* SHORT_NAMED_ENUMERATED_VALUE */
+const eUTRAU = RATType.eUTRAU satisfies RATType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RATType_trustedN3GA
@@ -762,7 +762,7 @@ const eUTRAU: RATType = RATType.eUTRAU; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const RATType_trustedN3GA: RATType = RATType.trustedN3GA; /* LONG_NAMED_ENUMERATED_VALUE */
+const RATType_trustedN3GA = RATType.trustedN3GA satisfies RATType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary trustedN3GA
@@ -776,7 +776,7 @@ const RATType_trustedN3GA: RATType = RATType.trustedN3GA; /* LONG_NAMED_ENUMERAT
  * @type {number}
  */
 export
-const trustedN3GA: RATType = RATType.trustedN3GA; /* SHORT_NAMED_ENUMERATED_VALUE */
+const trustedN3GA = RATType.trustedN3GA satisfies RATType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RATType_trustedWLAN
@@ -790,7 +790,7 @@ const trustedN3GA: RATType = RATType.trustedN3GA; /* SHORT_NAMED_ENUMERATED_VALU
  * @type {number}
  */
 export
-const RATType_trustedWLAN: RATType = RATType.trustedWLAN; /* LONG_NAMED_ENUMERATED_VALUE */
+const RATType_trustedWLAN = RATType.trustedWLAN satisfies RATType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary trustedWLAN
@@ -804,7 +804,7 @@ const RATType_trustedWLAN: RATType = RATType.trustedWLAN; /* LONG_NAMED_ENUMERAT
  * @type {number}
  */
 export
-const trustedWLAN: RATType = RATType.trustedWLAN; /* SHORT_NAMED_ENUMERATED_VALUE */
+const trustedWLAN = RATType.trustedWLAN satisfies RATType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RATType_uTRA
@@ -818,7 +818,7 @@ const trustedWLAN: RATType = RATType.trustedWLAN; /* SHORT_NAMED_ENUMERATED_VALU
  * @type {number}
  */
 export
-const RATType_uTRA: RATType = RATType.uTRA; /* LONG_NAMED_ENUMERATED_VALUE */
+const RATType_uTRA = RATType.uTRA satisfies RATType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary uTRA
@@ -832,7 +832,7 @@ const RATType_uTRA: RATType = RATType.uTRA; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const uTRA: RATType = RATType.uTRA; /* SHORT_NAMED_ENUMERATED_VALUE */
+const uTRA = RATType.uTRA satisfies RATType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RATType_gERA
@@ -846,7 +846,7 @@ const uTRA: RATType = RATType.uTRA; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const RATType_gERA: RATType = RATType.gERA; /* LONG_NAMED_ENUMERATED_VALUE */
+const RATType_gERA = RATType.gERA satisfies RATType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary gERA
@@ -860,7 +860,7 @@ const RATType_gERA: RATType = RATType.gERA; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const gERA: RATType = RATType.gERA; /* SHORT_NAMED_ENUMERATED_VALUE */
+const gERA = RATType.gERA satisfies RATType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RATType_nRLEO
@@ -874,7 +874,7 @@ const gERA: RATType = RATType.gERA; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const RATType_nRLEO: RATType = RATType.nRLEO; /* LONG_NAMED_ENUMERATED_VALUE */
+const RATType_nRLEO = RATType.nRLEO satisfies RATType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary nRLEO
@@ -888,7 +888,7 @@ const RATType_nRLEO: RATType = RATType.nRLEO; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const nRLEO: RATType = RATType.nRLEO; /* SHORT_NAMED_ENUMERATED_VALUE */
+const nRLEO = RATType.nRLEO satisfies RATType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RATType_nRMEO
@@ -902,7 +902,7 @@ const nRLEO: RATType = RATType.nRLEO; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const RATType_nRMEO: RATType = RATType.nRMEO; /* LONG_NAMED_ENUMERATED_VALUE */
+const RATType_nRMEO = RATType.nRMEO satisfies RATType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary nRMEO
@@ -916,7 +916,7 @@ const RATType_nRMEO: RATType = RATType.nRMEO; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const nRMEO: RATType = RATType.nRMEO; /* SHORT_NAMED_ENUMERATED_VALUE */
+const nRMEO = RATType.nRMEO satisfies RATType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RATType_nRGEO
@@ -930,7 +930,7 @@ const nRMEO: RATType = RATType.nRMEO; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const RATType_nRGEO: RATType = RATType.nRGEO; /* LONG_NAMED_ENUMERATED_VALUE */
+const RATType_nRGEO = RATType.nRGEO satisfies RATType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary nRGEO
@@ -944,7 +944,7 @@ const RATType_nRGEO: RATType = RATType.nRGEO; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const nRGEO: RATType = RATType.nRGEO; /* SHORT_NAMED_ENUMERATED_VALUE */
+const nRGEO = RATType.nRGEO satisfies RATType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RATType_nROTHERSAT
@@ -958,7 +958,7 @@ const nRGEO: RATType = RATType.nRGEO; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const RATType_nROTHERSAT: RATType = RATType.nROTHERSAT; /* LONG_NAMED_ENUMERATED_VALUE */
+const RATType_nROTHERSAT = RATType.nROTHERSAT satisfies RATType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary nROTHERSAT
@@ -972,7 +972,7 @@ const RATType_nROTHERSAT: RATType = RATType.nROTHERSAT; /* LONG_NAMED_ENUMERATED
  * @type {number}
  */
 export
-const nROTHERSAT: RATType = RATType.nROTHERSAT; /* SHORT_NAMED_ENUMERATED_VALUE */
+const nROTHERSAT = RATType.nROTHERSAT satisfies RATType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RATType_nRREDCAP
@@ -986,7 +986,7 @@ const nROTHERSAT: RATType = RATType.nROTHERSAT; /* SHORT_NAMED_ENUMERATED_VALUE 
  * @type {number}
  */
 export
-const RATType_nRREDCAP: RATType = RATType.nRREDCAP; /* LONG_NAMED_ENUMERATED_VALUE */
+const RATType_nRREDCAP = RATType.nRREDCAP satisfies RATType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary nRREDCAP
@@ -1000,7 +1000,7 @@ const RATType_nRREDCAP: RATType = RATType.nRREDCAP; /* LONG_NAMED_ENUMERATED_VAL
  * @type {number}
  */
 export
-const nRREDCAP: RATType = RATType.nRREDCAP; /* SHORT_NAMED_ENUMERATED_VALUE */
+const nRREDCAP = RATType.nRREDCAP satisfies RATType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RATType_wBEUTRANLEO
@@ -1014,7 +1014,7 @@ const nRREDCAP: RATType = RATType.nRREDCAP; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const RATType_wBEUTRANLEO: RATType = RATType.wBEUTRANLEO; /* LONG_NAMED_ENUMERATED_VALUE */
+const RATType_wBEUTRANLEO = RATType.wBEUTRANLEO satisfies RATType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary wBEUTRANLEO
@@ -1028,7 +1028,7 @@ const RATType_wBEUTRANLEO: RATType = RATType.wBEUTRANLEO; /* LONG_NAMED_ENUMERAT
  * @type {number}
  */
 export
-const wBEUTRANLEO: RATType = RATType.wBEUTRANLEO; /* SHORT_NAMED_ENUMERATED_VALUE */
+const wBEUTRANLEO = RATType.wBEUTRANLEO satisfies RATType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RATType_wBEUTRANMEO
@@ -1042,7 +1042,7 @@ const wBEUTRANLEO: RATType = RATType.wBEUTRANLEO; /* SHORT_NAMED_ENUMERATED_VALU
  * @type {number}
  */
 export
-const RATType_wBEUTRANMEO: RATType = RATType.wBEUTRANMEO; /* LONG_NAMED_ENUMERATED_VALUE */
+const RATType_wBEUTRANMEO = RATType.wBEUTRANMEO satisfies RATType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary wBEUTRANMEO
@@ -1056,7 +1056,7 @@ const RATType_wBEUTRANMEO: RATType = RATType.wBEUTRANMEO; /* LONG_NAMED_ENUMERAT
  * @type {number}
  */
 export
-const wBEUTRANMEO: RATType = RATType.wBEUTRANMEO; /* SHORT_NAMED_ENUMERATED_VALUE */
+const wBEUTRANMEO = RATType.wBEUTRANMEO satisfies RATType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RATType_wBEUTRANGEO
@@ -1070,7 +1070,7 @@ const wBEUTRANMEO: RATType = RATType.wBEUTRANMEO; /* SHORT_NAMED_ENUMERATED_VALU
  * @type {number}
  */
 export
-const RATType_wBEUTRANGEO: RATType = RATType.wBEUTRANGEO; /* LONG_NAMED_ENUMERATED_VALUE */
+const RATType_wBEUTRANGEO = RATType.wBEUTRANGEO satisfies RATType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary wBEUTRANGEO
@@ -1084,7 +1084,7 @@ const RATType_wBEUTRANGEO: RATType = RATType.wBEUTRANGEO; /* LONG_NAMED_ENUMERAT
  * @type {number}
  */
 export
-const wBEUTRANGEO: RATType = RATType.wBEUTRANGEO; /* SHORT_NAMED_ENUMERATED_VALUE */
+const wBEUTRANGEO = RATType.wBEUTRANGEO satisfies RATType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RATType_wBEUTRANOTHERSAT
@@ -1098,7 +1098,7 @@ const wBEUTRANGEO: RATType = RATType.wBEUTRANGEO; /* SHORT_NAMED_ENUMERATED_VALU
  * @type {number}
  */
 export
-const RATType_wBEUTRANOTHERSAT: RATType = RATType.wBEUTRANOTHERSAT; /* LONG_NAMED_ENUMERATED_VALUE */
+const RATType_wBEUTRANOTHERSAT = RATType.wBEUTRANOTHERSAT satisfies RATType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary wBEUTRANOTHERSAT
@@ -1112,7 +1112,7 @@ const RATType_wBEUTRANOTHERSAT: RATType = RATType.wBEUTRANOTHERSAT; /* LONG_NAME
  * @type {number}
  */
 export
-const wBEUTRANOTHERSAT: RATType = RATType.wBEUTRANOTHERSAT; /* SHORT_NAMED_ENUMERATED_VALUE */
+const wBEUTRANOTHERSAT = RATType.wBEUTRANOTHERSAT satisfies RATType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RATType_nBIOTLEO
@@ -1126,7 +1126,7 @@ const wBEUTRANOTHERSAT: RATType = RATType.wBEUTRANOTHERSAT; /* SHORT_NAMED_ENUME
  * @type {number}
  */
 export
-const RATType_nBIOTLEO: RATType = RATType.nBIOTLEO; /* LONG_NAMED_ENUMERATED_VALUE */
+const RATType_nBIOTLEO = RATType.nBIOTLEO satisfies RATType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary nBIOTLEO
@@ -1140,7 +1140,7 @@ const RATType_nBIOTLEO: RATType = RATType.nBIOTLEO; /* LONG_NAMED_ENUMERATED_VAL
  * @type {number}
  */
 export
-const nBIOTLEO: RATType = RATType.nBIOTLEO; /* SHORT_NAMED_ENUMERATED_VALUE */
+const nBIOTLEO = RATType.nBIOTLEO satisfies RATType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RATType_nBIOTMEO
@@ -1154,7 +1154,7 @@ const nBIOTLEO: RATType = RATType.nBIOTLEO; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const RATType_nBIOTMEO: RATType = RATType.nBIOTMEO; /* LONG_NAMED_ENUMERATED_VALUE */
+const RATType_nBIOTMEO = RATType.nBIOTMEO satisfies RATType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary nBIOTMEO
@@ -1168,7 +1168,7 @@ const RATType_nBIOTMEO: RATType = RATType.nBIOTMEO; /* LONG_NAMED_ENUMERATED_VAL
  * @type {number}
  */
 export
-const nBIOTMEO: RATType = RATType.nBIOTMEO; /* SHORT_NAMED_ENUMERATED_VALUE */
+const nBIOTMEO = RATType.nBIOTMEO satisfies RATType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RATType_nBIOTGEO
@@ -1182,7 +1182,7 @@ const nBIOTMEO: RATType = RATType.nBIOTMEO; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const RATType_nBIOTGEO: RATType = RATType.nBIOTGEO; /* LONG_NAMED_ENUMERATED_VALUE */
+const RATType_nBIOTGEO = RATType.nBIOTGEO satisfies RATType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary nBIOTGEO
@@ -1196,7 +1196,7 @@ const RATType_nBIOTGEO: RATType = RATType.nBIOTGEO; /* LONG_NAMED_ENUMERATED_VAL
  * @type {number}
  */
 export
-const nBIOTGEO: RATType = RATType.nBIOTGEO; /* SHORT_NAMED_ENUMERATED_VALUE */
+const nBIOTGEO = RATType.nBIOTGEO satisfies RATType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RATType_nBIOTOTHERSAT
@@ -1210,7 +1210,7 @@ const nBIOTGEO: RATType = RATType.nBIOTGEO; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const RATType_nBIOTOTHERSAT: RATType = RATType.nBIOTOTHERSAT; /* LONG_NAMED_ENUMERATED_VALUE */
+const RATType_nBIOTOTHERSAT = RATType.nBIOTOTHERSAT satisfies RATType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary nBIOTOTHERSAT
@@ -1224,7 +1224,7 @@ const RATType_nBIOTOTHERSAT: RATType = RATType.nBIOTOTHERSAT; /* LONG_NAMED_ENUM
  * @type {number}
  */
 export
-const nBIOTOTHERSAT: RATType = RATType.nBIOTOTHERSAT; /* SHORT_NAMED_ENUMERATED_VALUE */
+const nBIOTOTHERSAT = RATType.nBIOTOTHERSAT satisfies RATType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RATType_lTEMLEO
@@ -1238,7 +1238,7 @@ const nBIOTOTHERSAT: RATType = RATType.nBIOTOTHERSAT; /* SHORT_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const RATType_lTEMLEO: RATType = RATType.lTEMLEO; /* LONG_NAMED_ENUMERATED_VALUE */
+const RATType_lTEMLEO = RATType.lTEMLEO satisfies RATType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary lTEMLEO
@@ -1252,7 +1252,7 @@ const RATType_lTEMLEO: RATType = RATType.lTEMLEO; /* LONG_NAMED_ENUMERATED_VALUE
  * @type {number}
  */
 export
-const lTEMLEO: RATType = RATType.lTEMLEO; /* SHORT_NAMED_ENUMERATED_VALUE */
+const lTEMLEO = RATType.lTEMLEO satisfies RATType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RATType_lTEMMEO
@@ -1266,7 +1266,7 @@ const lTEMLEO: RATType = RATType.lTEMLEO; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const RATType_lTEMMEO: RATType = RATType.lTEMMEO; /* LONG_NAMED_ENUMERATED_VALUE */
+const RATType_lTEMMEO = RATType.lTEMMEO satisfies RATType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary lTEMMEO
@@ -1280,7 +1280,7 @@ const RATType_lTEMMEO: RATType = RATType.lTEMMEO; /* LONG_NAMED_ENUMERATED_VALUE
  * @type {number}
  */
 export
-const lTEMMEO: RATType = RATType.lTEMMEO; /* SHORT_NAMED_ENUMERATED_VALUE */
+const lTEMMEO = RATType.lTEMMEO satisfies RATType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RATType_lTEMGEO
@@ -1294,7 +1294,7 @@ const lTEMMEO: RATType = RATType.lTEMMEO; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const RATType_lTEMGEO: RATType = RATType.lTEMGEO; /* LONG_NAMED_ENUMERATED_VALUE */
+const RATType_lTEMGEO = RATType.lTEMGEO satisfies RATType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary lTEMGEO
@@ -1308,7 +1308,7 @@ const RATType_lTEMGEO: RATType = RATType.lTEMGEO; /* LONG_NAMED_ENUMERATED_VALUE
  * @type {number}
  */
 export
-const lTEMGEO: RATType = RATType.lTEMGEO; /* SHORT_NAMED_ENUMERATED_VALUE */
+const lTEMGEO = RATType.lTEMGEO satisfies RATType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RATType_lTEMOTHERSAT
@@ -1322,7 +1322,7 @@ const lTEMGEO: RATType = RATType.lTEMGEO; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const RATType_lTEMOTHERSAT: RATType = RATType.lTEMOTHERSAT; /* LONG_NAMED_ENUMERATED_VALUE */
+const RATType_lTEMOTHERSAT = RATType.lTEMOTHERSAT satisfies RATType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary lTEMOTHERSAT
@@ -1336,7 +1336,7 @@ const RATType_lTEMOTHERSAT: RATType = RATType.lTEMOTHERSAT; /* LONG_NAMED_ENUMER
  * @type {number}
  */
 export
-const lTEMOTHERSAT: RATType = RATType.lTEMOTHERSAT; /* SHORT_NAMED_ENUMERATED_VALUE */
+const lTEMOTHERSAT = RATType.lTEMOTHERSAT satisfies RATType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RATType_nREREDCAP
@@ -1350,7 +1350,7 @@ const lTEMOTHERSAT: RATType = RATType.lTEMOTHERSAT; /* SHORT_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const RATType_nREREDCAP: RATType = RATType.nREREDCAP; /* LONG_NAMED_ENUMERATED_VALUE */
+const RATType_nREREDCAP = RATType.nREREDCAP satisfies RATType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary nREREDCAP
@@ -1364,7 +1364,7 @@ const RATType_nREREDCAP: RATType = RATType.nREREDCAP; /* LONG_NAMED_ENUMERATED_V
  * @type {number}
  */
 export
-const nREREDCAP: RATType = RATType.nREREDCAP; /* SHORT_NAMED_ENUMERATED_VALUE */
+const nREREDCAP = RATType.nREREDCAP satisfies RATType; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_RATType: $.ASN1Decoder<RATType> = $._decodeEnumerated;
 export const _encode_RATType: $.ASN1Encoder<RATType> = $._encodeEnumerated;
 

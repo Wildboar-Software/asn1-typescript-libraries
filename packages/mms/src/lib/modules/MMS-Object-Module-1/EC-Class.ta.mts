@@ -45,7 +45,7 @@ type EC_Class = INTEGER;
  * @type {number}
  */
 export
-const EC_Class_network_triggered: EC_Class = 0; /* LONG_NAMED_INTEGER_VALUE */
+const EC_Class_network_triggered = 0 satisfies EC_Class; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EC_Class_network_triggered
@@ -58,7 +58,7 @@ const EC_Class_network_triggered: EC_Class = 0; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const network_triggered: EC_Class = EC_Class_network_triggered; /* SHORT_NAMED_INTEGER_VALUE */
+const network_triggered = EC_Class_network_triggered satisfies EC_Class; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EC_Class_monitored
@@ -71,7 +71,7 @@ const network_triggered: EC_Class = EC_Class_network_triggered; /* SHORT_NAMED_I
  * @type {number}
  */
 export
-const EC_Class_monitored: EC_Class = 1; /* LONG_NAMED_INTEGER_VALUE */
+const EC_Class_monitored = 1 satisfies EC_Class; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EC_Class_monitored
@@ -84,7 +84,7 @@ const EC_Class_monitored: EC_Class = 1; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const monitored: EC_Class = EC_Class_monitored; /* SHORT_NAMED_INTEGER_VALUE */
+const monitored = EC_Class_monitored satisfies EC_Class; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_EC_Class = $._decodeInteger;
 export const _encode_EC_Class = $._encodeInteger;
 

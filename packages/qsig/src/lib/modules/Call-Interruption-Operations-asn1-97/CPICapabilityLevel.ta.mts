@@ -103,7 +103,7 @@ const CPICapabilityLevel = _enum_for_CPICapabilityLevel;
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-264/
  */
 export
-const CPICapabilityLevel_interruptionLowPriority: CPICapabilityLevel = CPICapabilityLevel.interruptionLowPriority; /* LONG_NAMED_ENUMERATED_VALUE */
+const CPICapabilityLevel_interruptionLowPriority = CPICapabilityLevel.interruptionLowPriority satisfies CPICapabilityLevel; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary interruptionLowPriority
@@ -112,7 +112,7 @@ const CPICapabilityLevel_interruptionLowPriority: CPICapabilityLevel = CPICapabi
  * @type {number}
  */
 export
-const interruptionLowPriority: CPICapabilityLevel = CPICapabilityLevel.interruptionLowPriority; /* SHORT_NAMED_ENUMERATED_VALUE */
+const interruptionLowPriority = CPICapabilityLevel.interruptionLowPriority satisfies CPICapabilityLevel; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CPICapabilityLevel_interruptionMediumPriority
@@ -125,7 +125,7 @@ const interruptionLowPriority: CPICapabilityLevel = CPICapabilityLevel.interrupt
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-264/
  */
 export
-const CPICapabilityLevel_interruptionMediumPriority: CPICapabilityLevel = CPICapabilityLevel.interruptionMediumPriority; /* LONG_NAMED_ENUMERATED_VALUE */
+const CPICapabilityLevel_interruptionMediumPriority = CPICapabilityLevel.interruptionMediumPriority satisfies CPICapabilityLevel; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary interruptionMediumPriority
@@ -134,7 +134,7 @@ const CPICapabilityLevel_interruptionMediumPriority: CPICapabilityLevel = CPICap
  * @type {number}
  */
 export
-const interruptionMediumPriority: CPICapabilityLevel = CPICapabilityLevel.interruptionMediumPriority; /* SHORT_NAMED_ENUMERATED_VALUE */
+const interruptionMediumPriority = CPICapabilityLevel.interruptionMediumPriority satisfies CPICapabilityLevel; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CPICapabilityLevel_interruptionHighPriority
@@ -148,7 +148,7 @@ const interruptionMediumPriority: CPICapabilityLevel = CPICapabilityLevel.interr
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-264/
  */
 export
-const CPICapabilityLevel_interruptionHighPriority: CPICapabilityLevel = CPICapabilityLevel.interruptionHighPriority; /* LONG_NAMED_ENUMERATED_VALUE */
+const CPICapabilityLevel_interruptionHighPriority = CPICapabilityLevel.interruptionHighPriority satisfies CPICapabilityLevel; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary interruptionHighPriority
@@ -157,7 +157,7 @@ const CPICapabilityLevel_interruptionHighPriority: CPICapabilityLevel = CPICapab
  * @type {number}
  */
 export
-const interruptionHighPriority: CPICapabilityLevel = CPICapabilityLevel.interruptionHighPriority; /* SHORT_NAMED_ENUMERATED_VALUE */
+const interruptionHighPriority = CPICapabilityLevel.interruptionHighPriority satisfies CPICapabilityLevel; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_CPICapabilityLevel: $.ASN1Decoder<CPICapabilityLevel> = $._decodeEnumerated;

@@ -31,28 +31,28 @@ export type SignatureGeneration = INTEGER;
  * @constant
  * @type {number}
  */
-export const SignatureGeneration_generated: SignatureGeneration = 1; /* LONG_NAMED_INTEGER_VALUE */
+export const SignatureGeneration_generated = 1 satisfies SignatureGeneration; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SignatureGeneration_generated
  * @constant
  * @type {number}
  */
-export const generated: SignatureGeneration = SignatureGeneration_generated; /* SHORT_NAMED_INTEGER_VALUE */
+export const generated = SignatureGeneration_generated satisfies SignatureGeneration; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SignatureGeneration_non_generated
  * @constant
  * @type {number}
  */
-export const SignatureGeneration_non_generated: SignatureGeneration = 2; /* LONG_NAMED_INTEGER_VALUE */
+export const SignatureGeneration_non_generated = 2 satisfies SignatureGeneration; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SignatureGeneration_non_generated
  * @constant
  * @type {number}
  */
-export const non_generated: SignatureGeneration = SignatureGeneration_non_generated; /* SHORT_NAMED_INTEGER_VALUE */
+export const non_generated = SignatureGeneration_non_generated satisfies SignatureGeneration; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_SignatureGeneration = $._decodeInteger;

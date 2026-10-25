@@ -104,8 +104,8 @@ export const DeniedMeteringAction = _enum_for_DeniedMeteringAction;
  * @constant
  * @type {number}
  */
-export const DeniedMeteringAction_canNotStart: DeniedMeteringAction =
-    DeniedMeteringAction.canNotStart; /* LONG_NAMED_ENUMERATED_VALUE */
+export const DeniedMeteringAction_canNotStart =
+    DeniedMeteringAction.canNotStart satisfies DeniedMeteringAction; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -118,8 +118,8 @@ export const DeniedMeteringAction_canNotStart: DeniedMeteringAction =
  * @constant
  * @type {number}
  */
-export const canNotStart: DeniedMeteringAction =
-    DeniedMeteringAction.canNotStart; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const canNotStart =
+    DeniedMeteringAction.canNotStart satisfies DeniedMeteringAction; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -132,8 +132,8 @@ export const canNotStart: DeniedMeteringAction =
  * @constant
  * @type {number}
  */
-export const DeniedMeteringAction_canNotSuspend: DeniedMeteringAction =
-    DeniedMeteringAction.canNotSuspend; /* LONG_NAMED_ENUMERATED_VALUE */
+export const DeniedMeteringAction_canNotSuspend =
+    DeniedMeteringAction.canNotSuspend satisfies DeniedMeteringAction; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -146,8 +146,8 @@ export const DeniedMeteringAction_canNotSuspend: DeniedMeteringAction =
  * @constant
  * @type {number}
  */
-export const canNotSuspend: DeniedMeteringAction =
-    DeniedMeteringAction.canNotSuspend; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const canNotSuspend =
+    DeniedMeteringAction.canNotSuspend satisfies DeniedMeteringAction; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -160,8 +160,8 @@ export const canNotSuspend: DeniedMeteringAction =
  * @constant
  * @type {number}
  */
-export const DeniedMeteringAction_canNotResume: DeniedMeteringAction =
-    DeniedMeteringAction.canNotResume; /* LONG_NAMED_ENUMERATED_VALUE */
+export const DeniedMeteringAction_canNotResume =
+    DeniedMeteringAction.canNotResume satisfies DeniedMeteringAction; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -174,8 +174,8 @@ export const DeniedMeteringAction_canNotResume: DeniedMeteringAction =
  * @constant
  * @type {number}
  */
-export const canNotResume: DeniedMeteringAction =
-    DeniedMeteringAction.canNotResume; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const canNotResume =
+    DeniedMeteringAction.canNotResume satisfies DeniedMeteringAction; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 

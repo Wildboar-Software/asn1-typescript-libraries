@@ -31,7 +31,7 @@ export type AuthenReasonSyntax = INTEGER;
  * @constant
  * @type {number}
  */
-export const AuthenReasonSyntax_unknownUser: AuthenReasonSyntax = 0; /* LONG_NAMED_INTEGER_VALUE */
+export const AuthenReasonSyntax_unknownUser = 0 satisfies AuthenReasonSyntax; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AuthenReasonSyntax_unknownUser
@@ -42,21 +42,21 @@ export const AuthenReasonSyntax_unknownUser: AuthenReasonSyntax = 0; /* LONG_NAM
  * @constant
  * @type {number}
  */
-export const unknownUser: AuthenReasonSyntax = AuthenReasonSyntax_unknownUser; /* SHORT_NAMED_INTEGER_VALUE */
+export const unknownUser = AuthenReasonSyntax_unknownUser satisfies AuthenReasonSyntax; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AuthenReasonSyntax_incorrectPassword
  * @constant
  * @type {number}
  */
-export const AuthenReasonSyntax_incorrectPassword: AuthenReasonSyntax = 1; /* LONG_NAMED_INTEGER_VALUE */
+export const AuthenReasonSyntax_incorrectPassword = 1 satisfies AuthenReasonSyntax; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AuthenReasonSyntax_incorrectPassword
  * @constant
  * @type {number}
  */
-export const incorrectPassword: AuthenReasonSyntax = AuthenReasonSyntax_incorrectPassword; /* SHORT_NAMED_INTEGER_VALUE */
+export const incorrectPassword = AuthenReasonSyntax_incorrectPassword satisfies AuthenReasonSyntax; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AuthenReasonSyntax_inaccessiblePassword
@@ -67,7 +67,7 @@ export const incorrectPassword: AuthenReasonSyntax = AuthenReasonSyntax_incorrec
  * @constant
  * @type {number}
  */
-export const AuthenReasonSyntax_inaccessiblePassword: AuthenReasonSyntax = 2; /* LONG_NAMED_INTEGER_VALUE */
+export const AuthenReasonSyntax_inaccessiblePassword = 2 satisfies AuthenReasonSyntax; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AuthenReasonSyntax_inaccessiblePassword
@@ -78,7 +78,7 @@ export const AuthenReasonSyntax_inaccessiblePassword: AuthenReasonSyntax = 2; /*
  * @constant
  * @type {number}
  */
-export const inaccessiblePassword: AuthenReasonSyntax = AuthenReasonSyntax_inaccessiblePassword; /* SHORT_NAMED_INTEGER_VALUE */
+export const inaccessiblePassword = AuthenReasonSyntax_inaccessiblePassword satisfies AuthenReasonSyntax; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AuthenReasonSyntax_passwordVerificationLoop
@@ -89,7 +89,7 @@ export const inaccessiblePassword: AuthenReasonSyntax = AuthenReasonSyntax_inacc
  * @constant
  * @type {number}
  */
-export const AuthenReasonSyntax_passwordVerificationLoop: AuthenReasonSyntax = 3; /* LONG_NAMED_INTEGER_VALUE */
+export const AuthenReasonSyntax_passwordVerificationLoop = 3 satisfies AuthenReasonSyntax; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AuthenReasonSyntax_passwordVerificationLoop
@@ -100,7 +100,7 @@ export const AuthenReasonSyntax_passwordVerificationLoop: AuthenReasonSyntax = 3
  * @constant
  * @type {number}
  */
-export const passwordVerificationLoop: AuthenReasonSyntax = AuthenReasonSyntax_passwordVerificationLoop; /* SHORT_NAMED_INTEGER_VALUE */
+export const passwordVerificationLoop = AuthenReasonSyntax_passwordVerificationLoop satisfies AuthenReasonSyntax; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AuthenReasonSyntax_unrecognizedUser
@@ -111,7 +111,7 @@ export const passwordVerificationLoop: AuthenReasonSyntax = AuthenReasonSyntax_p
  * @constant
  * @type {number}
  */
-export const AuthenReasonSyntax_unrecognizedUser: AuthenReasonSyntax = 4; /* LONG_NAMED_INTEGER_VALUE */
+export const AuthenReasonSyntax_unrecognizedUser = 4 satisfies AuthenReasonSyntax; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AuthenReasonSyntax_unrecognizedUser
@@ -122,7 +122,7 @@ export const AuthenReasonSyntax_unrecognizedUser: AuthenReasonSyntax = 4; /* LON
  * @constant
  * @type {number}
  */
-export const unrecognizedUser: AuthenReasonSyntax = AuthenReasonSyntax_unrecognizedUser; /* SHORT_NAMED_INTEGER_VALUE */
+export const unrecognizedUser = AuthenReasonSyntax_unrecognizedUser satisfies AuthenReasonSyntax; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_AuthenReasonSyntax = $._decodeInteger;

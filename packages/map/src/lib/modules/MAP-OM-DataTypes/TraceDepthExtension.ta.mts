@@ -47,7 +47,7 @@ type TraceDepthExtension = _enum_for_TraceDepthExtension | ENUMERATED;
  * @type {number}
  */
 export
-const TraceDepthExtension_minimumWithoutVendorSpecificExtension: TraceDepthExtension = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+const TraceDepthExtension_minimumWithoutVendorSpecificExtension = _enum_for_TraceDepthExtension.minimumWithoutVendorSpecificExtension satisfies TraceDepthExtension; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary minimumWithoutVendorSpecificExtension
@@ -60,7 +60,7 @@ const TraceDepthExtension_minimumWithoutVendorSpecificExtension: TraceDepthExten
  * @type {number}
  */
 export
-const minimumWithoutVendorSpecificExtension: TraceDepthExtension = TraceDepthExtension_minimumWithoutVendorSpecificExtension; /* SHORT_NAMED_ENUMERATED_VALUE */
+const minimumWithoutVendorSpecificExtension = TraceDepthExtension_minimumWithoutVendorSpecificExtension satisfies TraceDepthExtension; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TraceDepthExtension_mediumWithoutVendorSpecificExtension
@@ -73,7 +73,7 @@ const minimumWithoutVendorSpecificExtension: TraceDepthExtension = TraceDepthExt
  * @type {number}
  */
 export
-const TraceDepthExtension_mediumWithoutVendorSpecificExtension: TraceDepthExtension = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const TraceDepthExtension_mediumWithoutVendorSpecificExtension = _enum_for_TraceDepthExtension.mediumWithoutVendorSpecificExtension satisfies TraceDepthExtension; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary mediumWithoutVendorSpecificExtension
@@ -86,7 +86,7 @@ const TraceDepthExtension_mediumWithoutVendorSpecificExtension: TraceDepthExtens
  * @type {number}
  */
 export
-const mediumWithoutVendorSpecificExtension: TraceDepthExtension = TraceDepthExtension_mediumWithoutVendorSpecificExtension; /* SHORT_NAMED_ENUMERATED_VALUE */
+const mediumWithoutVendorSpecificExtension = TraceDepthExtension_mediumWithoutVendorSpecificExtension satisfies TraceDepthExtension; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TraceDepthExtension_maximumWithoutVendorSpecificExtension
@@ -99,7 +99,7 @@ const mediumWithoutVendorSpecificExtension: TraceDepthExtension = TraceDepthExte
  * @type {number}
  */
 export
-const TraceDepthExtension_maximumWithoutVendorSpecificExtension: TraceDepthExtension = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+const TraceDepthExtension_maximumWithoutVendorSpecificExtension = _enum_for_TraceDepthExtension.maximumWithoutVendorSpecificExtension satisfies TraceDepthExtension; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary maximumWithoutVendorSpecificExtension
@@ -112,7 +112,7 @@ const TraceDepthExtension_maximumWithoutVendorSpecificExtension: TraceDepthExten
  * @type {number}
  */
 export
-const maximumWithoutVendorSpecificExtension: TraceDepthExtension = TraceDepthExtension_maximumWithoutVendorSpecificExtension; /* SHORT_NAMED_ENUMERATED_VALUE */
+const maximumWithoutVendorSpecificExtension = TraceDepthExtension_maximumWithoutVendorSpecificExtension satisfies TraceDepthExtension; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) TraceDepthExtension

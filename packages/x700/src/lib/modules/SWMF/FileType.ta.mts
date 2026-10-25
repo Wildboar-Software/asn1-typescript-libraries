@@ -46,7 +46,7 @@ export type FileType = INTEGER;
  * @constant
  * @type {number}
  */
-export const FileType_unstructuredText: FileType = 0; /* LONG_NAMED_INTEGER_VALUE */
+export const FileType_unstructuredText = 0 satisfies FileType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary FileType_unstructuredText
@@ -57,7 +57,7 @@ export const FileType_unstructuredText: FileType = 0; /* LONG_NAMED_INTEGER_VALU
  * @constant
  * @type {number}
  */
-export const unstructuredText: FileType = FileType_unstructuredText; /* SHORT_NAMED_INTEGER_VALUE */
+export const unstructuredText = FileType_unstructuredText satisfies FileType; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary FileType_unstructuredBinary
@@ -68,7 +68,7 @@ export const unstructuredText: FileType = FileType_unstructuredText; /* SHORT_NA
  * @constant
  * @type {number}
  */
-export const FileType_unstructuredBinary: FileType = 1; /* LONG_NAMED_INTEGER_VALUE */
+export const FileType_unstructuredBinary = 1 satisfies FileType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary FileType_unstructuredBinary
@@ -79,7 +79,7 @@ export const FileType_unstructuredBinary: FileType = 1; /* LONG_NAMED_INTEGER_VA
  * @constant
  * @type {number}
  */
-export const unstructuredBinary: FileType = FileType_unstructuredBinary; /* SHORT_NAMED_INTEGER_VALUE */
+export const unstructuredBinary = FileType_unstructuredBinary satisfies FileType; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary FileType_blockSpecial
@@ -89,7 +89,7 @@ export const unstructuredBinary: FileType = FileType_unstructuredBinary; /* SHOR
  * @constant
  * @type {number}
  */
-export const FileType_blockSpecial: FileType = 2; /* LONG_NAMED_INTEGER_VALUE */
+export const FileType_blockSpecial = 2 satisfies FileType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary FileType_blockSpecial
@@ -99,7 +99,7 @@ export const FileType_blockSpecial: FileType = 2; /* LONG_NAMED_INTEGER_VALUE */
  * @constant
  * @type {number}
  */
-export const blockSpecial: FileType = FileType_blockSpecial; /* SHORT_NAMED_INTEGER_VALUE */
+export const blockSpecial = FileType_blockSpecial satisfies FileType; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_FileType = $._decodeInteger;

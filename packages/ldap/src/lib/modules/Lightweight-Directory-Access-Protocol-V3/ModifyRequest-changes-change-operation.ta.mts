@@ -54,7 +54,7 @@ export type ModifyRequest_changes_change_operation =
  * @constant
  * @type {number}
  */
-export const ModifyRequest_changes_change_operation_add: ModifyRequest_changes_change_operation = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ModifyRequest_changes_change_operation_add = _enum_for_ModifyRequest_changes_change_operation.add satisfies ModifyRequest_changes_change_operation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -66,7 +66,7 @@ export const ModifyRequest_changes_change_operation_add: ModifyRequest_changes_c
  * @constant
  * @type {number}
  */
-export const add: ModifyRequest_changes_change_operation = ModifyRequest_changes_change_operation_add; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const add = ModifyRequest_changes_change_operation_add satisfies ModifyRequest_changes_change_operation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -79,7 +79,7 @@ export const add: ModifyRequest_changes_change_operation = ModifyRequest_changes
  * @constant
  * @type {number}
  */
-export const ModifyRequest_changes_change_operation_delete_: ModifyRequest_changes_change_operation = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ModifyRequest_changes_change_operation_delete_ = _enum_for_ModifyRequest_changes_change_operation.delete_ satisfies ModifyRequest_changes_change_operation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -92,7 +92,7 @@ export const ModifyRequest_changes_change_operation_delete_: ModifyRequest_chang
  * @constant
  * @type {number}
  */
-export const delete_: ModifyRequest_changes_change_operation = ModifyRequest_changes_change_operation_delete_; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const delete_ = ModifyRequest_changes_change_operation_delete_ satisfies ModifyRequest_changes_change_operation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -105,7 +105,7 @@ export const delete_: ModifyRequest_changes_change_operation = ModifyRequest_cha
  * @constant
  * @type {number}
  */
-export const ModifyRequest_changes_change_operation_replace: ModifyRequest_changes_change_operation = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ModifyRequest_changes_change_operation_replace = _enum_for_ModifyRequest_changes_change_operation.replace satisfies ModifyRequest_changes_change_operation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -118,7 +118,7 @@ export const ModifyRequest_changes_change_operation_replace: ModifyRequest_chang
  * @constant
  * @type {number}
  */
-export const replace: ModifyRequest_changes_change_operation = ModifyRequest_changes_change_operation_replace; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const replace = ModifyRequest_changes_change_operation_replace satisfies ModifyRequest_changes_change_operation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**

@@ -33,42 +33,42 @@ export type RefusalReason = INTEGER;
  * @constant
  * @type {number}
  */
-export const RefusalReason_facility_unavailable: RefusalReason = 0; /* LONG_NAMED_INTEGER_VALUE */
+export const RefusalReason_facility_unavailable = 0 satisfies RefusalReason; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RefusalReason_facility_unavailable
  * @constant
  * @type {number}
  */
-export const facility_unavailable: RefusalReason = RefusalReason_facility_unavailable; /* SHORT_NAMED_INTEGER_VALUE */
+export const facility_unavailable = RefusalReason_facility_unavailable satisfies RefusalReason; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RefusalReason_facility_not_subscribed
  * @constant
  * @type {number}
  */
-export const RefusalReason_facility_not_subscribed: RefusalReason = 1; /* LONG_NAMED_INTEGER_VALUE */
+export const RefusalReason_facility_not_subscribed = 1 satisfies RefusalReason; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RefusalReason_facility_not_subscribed
  * @constant
  * @type {number}
  */
-export const facility_not_subscribed: RefusalReason = RefusalReason_facility_not_subscribed; /* SHORT_NAMED_INTEGER_VALUE */
+export const facility_not_subscribed = RefusalReason_facility_not_subscribed satisfies RefusalReason; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RefusalReason_parameter_unacceptable
  * @constant
  * @type {number}
  */
-export const RefusalReason_parameter_unacceptable: RefusalReason = 2; /* LONG_NAMED_INTEGER_VALUE */
+export const RefusalReason_parameter_unacceptable = 2 satisfies RefusalReason; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RefusalReason_parameter_unacceptable
  * @constant
  * @type {number}
  */
-export const parameter_unacceptable: RefusalReason = RefusalReason_parameter_unacceptable; /* SHORT_NAMED_INTEGER_VALUE */
+export const parameter_unacceptable = RefusalReason_parameter_unacceptable satisfies RefusalReason; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_RefusalReason = $._decodeInteger;

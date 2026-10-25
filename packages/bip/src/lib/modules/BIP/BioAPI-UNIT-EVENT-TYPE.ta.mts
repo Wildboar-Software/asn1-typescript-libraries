@@ -53,7 +53,7 @@ export type BioAPI_UNIT_EVENT_TYPE =
  * @constant
  * @type {number}
  */
-export const BioAPI_UNIT_EVENT_TYPE_insert: BioAPI_UNIT_EVENT_TYPE = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+export const BioAPI_UNIT_EVENT_TYPE_insert = _enum_for_BioAPI_UNIT_EVENT_TYPE.insert satisfies BioAPI_UNIT_EVENT_TYPE; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -61,7 +61,7 @@ export const BioAPI_UNIT_EVENT_TYPE_insert: BioAPI_UNIT_EVENT_TYPE = 0; /* LONG_
  * @constant
  * @type {number}
  */
-export const insert: BioAPI_UNIT_EVENT_TYPE = BioAPI_UNIT_EVENT_TYPE_insert; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const insert = BioAPI_UNIT_EVENT_TYPE_insert satisfies BioAPI_UNIT_EVENT_TYPE; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -69,7 +69,7 @@ export const insert: BioAPI_UNIT_EVENT_TYPE = BioAPI_UNIT_EVENT_TYPE_insert; /* 
  * @constant
  * @type {number}
  */
-export const BioAPI_UNIT_EVENT_TYPE_remove: BioAPI_UNIT_EVENT_TYPE = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+export const BioAPI_UNIT_EVENT_TYPE_remove = _enum_for_BioAPI_UNIT_EVENT_TYPE.remove satisfies BioAPI_UNIT_EVENT_TYPE; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -77,7 +77,7 @@ export const BioAPI_UNIT_EVENT_TYPE_remove: BioAPI_UNIT_EVENT_TYPE = 1; /* LONG_
  * @constant
  * @type {number}
  */
-export const remove: BioAPI_UNIT_EVENT_TYPE = BioAPI_UNIT_EVENT_TYPE_remove; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const remove = BioAPI_UNIT_EVENT_TYPE_remove satisfies BioAPI_UNIT_EVENT_TYPE; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -85,7 +85,7 @@ export const remove: BioAPI_UNIT_EVENT_TYPE = BioAPI_UNIT_EVENT_TYPE_remove; /* 
  * @constant
  * @type {number}
  */
-export const BioAPI_UNIT_EVENT_TYPE_fault: BioAPI_UNIT_EVENT_TYPE = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+export const BioAPI_UNIT_EVENT_TYPE_fault = _enum_for_BioAPI_UNIT_EVENT_TYPE.fault satisfies BioAPI_UNIT_EVENT_TYPE; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -93,7 +93,7 @@ export const BioAPI_UNIT_EVENT_TYPE_fault: BioAPI_UNIT_EVENT_TYPE = 2; /* LONG_N
  * @constant
  * @type {number}
  */
-export const fault: BioAPI_UNIT_EVENT_TYPE = BioAPI_UNIT_EVENT_TYPE_fault; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const fault = BioAPI_UNIT_EVENT_TYPE_fault satisfies BioAPI_UNIT_EVENT_TYPE; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -101,7 +101,7 @@ export const fault: BioAPI_UNIT_EVENT_TYPE = BioAPI_UNIT_EVENT_TYPE_fault; /* SH
  * @constant
  * @type {number}
  */
-export const BioAPI_UNIT_EVENT_TYPE_sourcePresent: BioAPI_UNIT_EVENT_TYPE = 3; /* LONG_NAMED_ENUMERATED_VALUE */
+export const BioAPI_UNIT_EVENT_TYPE_sourcePresent = _enum_for_BioAPI_UNIT_EVENT_TYPE.sourcePresent satisfies BioAPI_UNIT_EVENT_TYPE; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -109,7 +109,7 @@ export const BioAPI_UNIT_EVENT_TYPE_sourcePresent: BioAPI_UNIT_EVENT_TYPE = 3; /
  * @constant
  * @type {number}
  */
-export const sourcePresent: BioAPI_UNIT_EVENT_TYPE = BioAPI_UNIT_EVENT_TYPE_sourcePresent; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const sourcePresent = BioAPI_UNIT_EVENT_TYPE_sourcePresent satisfies BioAPI_UNIT_EVENT_TYPE; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -117,7 +117,7 @@ export const sourcePresent: BioAPI_UNIT_EVENT_TYPE = BioAPI_UNIT_EVENT_TYPE_sour
  * @constant
  * @type {number}
  */
-export const BioAPI_UNIT_EVENT_TYPE_sourceRemoved: BioAPI_UNIT_EVENT_TYPE = 4; /* LONG_NAMED_ENUMERATED_VALUE */
+export const BioAPI_UNIT_EVENT_TYPE_sourceRemoved = _enum_for_BioAPI_UNIT_EVENT_TYPE.sourceRemoved satisfies BioAPI_UNIT_EVENT_TYPE; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -125,7 +125,7 @@ export const BioAPI_UNIT_EVENT_TYPE_sourceRemoved: BioAPI_UNIT_EVENT_TYPE = 4; /
  * @constant
  * @type {number}
  */
-export const sourceRemoved: BioAPI_UNIT_EVENT_TYPE = BioAPI_UNIT_EVENT_TYPE_sourceRemoved; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const sourceRemoved = BioAPI_UNIT_EVENT_TYPE_sourceRemoved satisfies BioAPI_UNIT_EVENT_TYPE; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 

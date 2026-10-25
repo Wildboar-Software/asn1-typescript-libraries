@@ -33,14 +33,14 @@ export type NNUserDiagnosticField = INTEGER;
  * @constant
  * @type {number}
  */
-export const NNUserDiagnosticField_compression_unsupported: NNUserDiagnosticField = 1; /* LONG_NAMED_INTEGER_VALUE */
+export const NNUserDiagnosticField_compression_unsupported = 1 satisfies NNUserDiagnosticField; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NNUserDiagnosticField_compression_unsupported
  * @constant
  * @type {number}
  */
-export const compression_unsupported: NNUserDiagnosticField = NNUserDiagnosticField_compression_unsupported; /* SHORT_NAMED_INTEGER_VALUE */
+export const compression_unsupported = NNUserDiagnosticField_compression_unsupported satisfies NNUserDiagnosticField; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_NNUserDiagnosticField = $._decodeInteger;

@@ -83,7 +83,7 @@ const CallBarringCause = _enum_for_CallBarringCause;
  * @type {number}
  */
 export
-const CallBarringCause_barringServiceActive: CallBarringCause = CallBarringCause.barringServiceActive; /* LONG_NAMED_ENUMERATED_VALUE */
+const CallBarringCause_barringServiceActive = CallBarringCause.barringServiceActive satisfies CallBarringCause; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary barringServiceActive
@@ -96,7 +96,7 @@ const CallBarringCause_barringServiceActive: CallBarringCause = CallBarringCause
  * @type {number}
  */
 export
-const barringServiceActive: CallBarringCause = CallBarringCause.barringServiceActive; /* SHORT_NAMED_ENUMERATED_VALUE */
+const barringServiceActive = CallBarringCause.barringServiceActive satisfies CallBarringCause; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CallBarringCause_operatorBarring
@@ -108,7 +108,7 @@ const barringServiceActive: CallBarringCause = CallBarringCause.barringServiceAc
  * @type {number}
  */
 export
-const CallBarringCause_operatorBarring: CallBarringCause = CallBarringCause.operatorBarring; /* LONG_NAMED_ENUMERATED_VALUE */
+const CallBarringCause_operatorBarring = CallBarringCause.operatorBarring satisfies CallBarringCause; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary operatorBarring
@@ -120,7 +120,7 @@ const CallBarringCause_operatorBarring: CallBarringCause = CallBarringCause.oper
  * @type {number}
  */
 export
-const operatorBarring: CallBarringCause = CallBarringCause.operatorBarring; /* SHORT_NAMED_ENUMERATED_VALUE */
+const operatorBarring = CallBarringCause.operatorBarring satisfies CallBarringCause; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) CallBarringCause

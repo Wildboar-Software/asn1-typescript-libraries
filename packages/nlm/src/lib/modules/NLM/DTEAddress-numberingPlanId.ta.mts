@@ -86,8 +86,8 @@ export const DTEAddress_numberingPlanId = _enum_for_DTEAddress_numberingPlanId;
  * @constant
  * @type {number}
  */
-export const DTEAddress_numberingPlanId_unknown: DTEAddress_numberingPlanId =
-    DTEAddress_numberingPlanId.unknown; /* LONG_NAMED_ENUMERATED_VALUE */
+export const DTEAddress_numberingPlanId_unknown =
+    DTEAddress_numberingPlanId.unknown satisfies DTEAddress_numberingPlanId; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -101,8 +101,8 @@ export const DTEAddress_numberingPlanId_unknown: DTEAddress_numberingPlanId =
  * @constant
  * @type {number}
  */
-export const unknown: DTEAddress_numberingPlanId =
-    DTEAddress_numberingPlanId.unknown; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const unknown =
+    DTEAddress_numberingPlanId.unknown satisfies DTEAddress_numberingPlanId; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -116,8 +116,8 @@ export const unknown: DTEAddress_numberingPlanId =
  * @constant
  * @type {number}
  */
-export const DTEAddress_numberingPlanId_x121: DTEAddress_numberingPlanId =
-    DTEAddress_numberingPlanId.x121; /* LONG_NAMED_ENUMERATED_VALUE */
+export const DTEAddress_numberingPlanId_x121 =
+    DTEAddress_numberingPlanId.x121 satisfies DTEAddress_numberingPlanId; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -131,8 +131,8 @@ export const DTEAddress_numberingPlanId_x121: DTEAddress_numberingPlanId =
  * @constant
  * @type {number}
  */
-export const x121: DTEAddress_numberingPlanId =
-    DTEAddress_numberingPlanId.x121; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const x121 =
+    DTEAddress_numberingPlanId.x121 satisfies DTEAddress_numberingPlanId; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -146,8 +146,8 @@ export const x121: DTEAddress_numberingPlanId =
  * @constant
  * @type {number}
  */
-export const DTEAddress_numberingPlanId_e164: DTEAddress_numberingPlanId =
-    DTEAddress_numberingPlanId.e164; /* LONG_NAMED_ENUMERATED_VALUE */
+export const DTEAddress_numberingPlanId_e164 =
+    DTEAddress_numberingPlanId.e164 satisfies DTEAddress_numberingPlanId; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -161,8 +161,8 @@ export const DTEAddress_numberingPlanId_e164: DTEAddress_numberingPlanId =
  * @constant
  * @type {number}
  */
-export const e164: DTEAddress_numberingPlanId =
-    DTEAddress_numberingPlanId.e164; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const e164 =
+    DTEAddress_numberingPlanId.e164 satisfies DTEAddress_numberingPlanId; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 

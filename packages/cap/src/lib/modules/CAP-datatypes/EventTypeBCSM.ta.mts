@@ -77,7 +77,7 @@ export const EventTypeBCSM = _enum_for_EventTypeBCSM;
  *
  * @constant
  */
-export const EventTypeBCSM_collectedInfo: EventTypeBCSM = EventTypeBCSM.collectedInfo;
+export const EventTypeBCSM_collectedInfo = EventTypeBCSM.collectedInfo satisfies EventTypeBCSM;
 /**
  * @summary collectedInfo
  * @description
@@ -86,7 +86,7 @@ export const EventTypeBCSM_collectedInfo: EventTypeBCSM = EventTypeBCSM.collecte
  *
  * @constant
  */
-export const collectedInfo: EventTypeBCSM = EventTypeBCSM.collectedInfo;
+export const collectedInfo = EventTypeBCSM.collectedInfo satisfies EventTypeBCSM;
 /**
  * @summary EventTypeBCSM_analyzedInformation
  * @description
@@ -96,7 +96,7 @@ export const collectedInfo: EventTypeBCSM = EventTypeBCSM.collectedInfo;
  *
  * @constant
  */
-export const EventTypeBCSM_analyzedInformation: EventTypeBCSM = EventTypeBCSM.analyzedInformation;
+export const EventTypeBCSM_analyzedInformation = EventTypeBCSM.analyzedInformation satisfies EventTypeBCSM;
 /**
  * @summary analyzedInformation
  * @description
@@ -106,7 +106,7 @@ export const EventTypeBCSM_analyzedInformation: EventTypeBCSM = EventTypeBCSM.an
  *
  * @constant
  */
-export const analyzedInformation: EventTypeBCSM = EventTypeBCSM.analyzedInformation;
+export const analyzedInformation = EventTypeBCSM.analyzedInformation satisfies EventTypeBCSM;
 /**
  * @summary EventTypeBCSM_routeSelectFailure
  * @description
@@ -115,7 +115,7 @@ export const analyzedInformation: EventTypeBCSM = EventTypeBCSM.analyzedInformat
  *
  * @constant
  */
-export const EventTypeBCSM_routeSelectFailure: EventTypeBCSM = EventTypeBCSM.routeSelectFailure;
+export const EventTypeBCSM_routeSelectFailure = EventTypeBCSM.routeSelectFailure satisfies EventTypeBCSM;
 /**
  * @summary routeSelectFailure
  * @description
@@ -124,7 +124,7 @@ export const EventTypeBCSM_routeSelectFailure: EventTypeBCSM = EventTypeBCSM.rou
  *
  * @constant
  */
-export const routeSelectFailure: EventTypeBCSM = EventTypeBCSM.routeSelectFailure;
+export const routeSelectFailure = EventTypeBCSM.routeSelectFailure satisfies EventTypeBCSM;
 /**
  * @summary EventTypeBCSM_oCalledPartyBusy
  * @description
@@ -133,7 +133,7 @@ export const routeSelectFailure: EventTypeBCSM = EventTypeBCSM.routeSelectFailur
  *
  * @constant
  */
-export const EventTypeBCSM_oCalledPartyBusy: EventTypeBCSM = EventTypeBCSM.oCalledPartyBusy;
+export const EventTypeBCSM_oCalledPartyBusy = EventTypeBCSM.oCalledPartyBusy satisfies EventTypeBCSM;
 /**
  * @summary oCalledPartyBusy
  * @description
@@ -142,7 +142,7 @@ export const EventTypeBCSM_oCalledPartyBusy: EventTypeBCSM = EventTypeBCSM.oCall
  *
  * @constant
  */
-export const oCalledPartyBusy: EventTypeBCSM = EventTypeBCSM.oCalledPartyBusy;
+export const oCalledPartyBusy = EventTypeBCSM.oCalledPartyBusy satisfies EventTypeBCSM;
 /**
  * @summary EventTypeBCSM_oNoAnswer
  * @description
@@ -151,7 +151,7 @@ export const oCalledPartyBusy: EventTypeBCSM = EventTypeBCSM.oCalledPartyBusy;
  *
  * @constant
  */
-export const EventTypeBCSM_oNoAnswer: EventTypeBCSM = EventTypeBCSM.oNoAnswer;
+export const EventTypeBCSM_oNoAnswer = EventTypeBCSM.oNoAnswer satisfies EventTypeBCSM;
 /**
  * @summary oNoAnswer
  * @description
@@ -160,7 +160,7 @@ export const EventTypeBCSM_oNoAnswer: EventTypeBCSM = EventTypeBCSM.oNoAnswer;
  *
  * @constant
  */
-export const oNoAnswer: EventTypeBCSM = EventTypeBCSM.oNoAnswer;
+export const oNoAnswer = EventTypeBCSM.oNoAnswer satisfies EventTypeBCSM;
 /**
  * @summary EventTypeBCSM_oAnswer
  * @description
@@ -169,7 +169,7 @@ export const oNoAnswer: EventTypeBCSM = EventTypeBCSM.oNoAnswer;
  *
  * @constant
  */
-export const EventTypeBCSM_oAnswer: EventTypeBCSM = EventTypeBCSM.oAnswer;
+export const EventTypeBCSM_oAnswer = EventTypeBCSM.oAnswer satisfies EventTypeBCSM;
 /**
  * @summary oAnswer
  * @description
@@ -178,7 +178,7 @@ export const EventTypeBCSM_oAnswer: EventTypeBCSM = EventTypeBCSM.oAnswer;
  *
  * @constant
  */
-export const oAnswer: EventTypeBCSM = EventTypeBCSM.oAnswer;
+export const oAnswer = EventTypeBCSM.oAnswer satisfies EventTypeBCSM;
 /**
  * @summary EventTypeBCSM_oMidCall
  * @description
@@ -187,7 +187,7 @@ export const oAnswer: EventTypeBCSM = EventTypeBCSM.oAnswer;
  *
  * @constant
  */
-export const EventTypeBCSM_oMidCall: EventTypeBCSM = EventTypeBCSM.oMidCall;
+export const EventTypeBCSM_oMidCall = EventTypeBCSM.oMidCall satisfies EventTypeBCSM;
 /**
  * @summary oMidCall
  * @description
@@ -196,7 +196,7 @@ export const EventTypeBCSM_oMidCall: EventTypeBCSM = EventTypeBCSM.oMidCall;
  *
  * @constant
  */
-export const oMidCall: EventTypeBCSM = EventTypeBCSM.oMidCall;
+export const oMidCall = EventTypeBCSM.oMidCall satisfies EventTypeBCSM;
 /**
  * @summary EventTypeBCSM_oDisconnect
  * @description
@@ -205,7 +205,7 @@ export const oMidCall: EventTypeBCSM = EventTypeBCSM.oMidCall;
  *
  * @constant
  */
-export const EventTypeBCSM_oDisconnect: EventTypeBCSM = EventTypeBCSM.oDisconnect;
+export const EventTypeBCSM_oDisconnect = EventTypeBCSM.oDisconnect satisfies EventTypeBCSM;
 /**
  * @summary oDisconnect
  * @description
@@ -214,7 +214,7 @@ export const EventTypeBCSM_oDisconnect: EventTypeBCSM = EventTypeBCSM.oDisconnec
  *
  * @constant
  */
-export const oDisconnect: EventTypeBCSM = EventTypeBCSM.oDisconnect;
+export const oDisconnect = EventTypeBCSM.oDisconnect satisfies EventTypeBCSM;
 /**
  * @summary EventTypeBCSM_oAbandon
  * @description
@@ -223,7 +223,7 @@ export const oDisconnect: EventTypeBCSM = EventTypeBCSM.oDisconnect;
  *
  * @constant
  */
-export const EventTypeBCSM_oAbandon: EventTypeBCSM = EventTypeBCSM.oAbandon;
+export const EventTypeBCSM_oAbandon = EventTypeBCSM.oAbandon satisfies EventTypeBCSM;
 /**
  * @summary oAbandon
  * @description
@@ -232,7 +232,7 @@ export const EventTypeBCSM_oAbandon: EventTypeBCSM = EventTypeBCSM.oAbandon;
  *
  * @constant
  */
-export const oAbandon: EventTypeBCSM = EventTypeBCSM.oAbandon;
+export const oAbandon = EventTypeBCSM.oAbandon satisfies EventTypeBCSM;
 /**
  * @summary EventTypeBCSM_termAttemptAuthorized
  * @description
@@ -242,7 +242,7 @@ export const oAbandon: EventTypeBCSM = EventTypeBCSM.oAbandon;
  *
  * @constant
  */
-export const EventTypeBCSM_termAttemptAuthorized: EventTypeBCSM = EventTypeBCSM.termAttemptAuthorized;
+export const EventTypeBCSM_termAttemptAuthorized = EventTypeBCSM.termAttemptAuthorized satisfies EventTypeBCSM;
 /**
  * @summary termAttemptAuthorized
  * @description
@@ -252,7 +252,7 @@ export const EventTypeBCSM_termAttemptAuthorized: EventTypeBCSM = EventTypeBCSM.
  *
  * @constant
  */
-export const termAttemptAuthorized: EventTypeBCSM = EventTypeBCSM.termAttemptAuthorized;
+export const termAttemptAuthorized = EventTypeBCSM.termAttemptAuthorized satisfies EventTypeBCSM;
 /**
  * @summary EventTypeBCSM_tBusy
  * @description
@@ -261,7 +261,7 @@ export const termAttemptAuthorized: EventTypeBCSM = EventTypeBCSM.termAttemptAut
  *
  * @constant
  */
-export const EventTypeBCSM_tBusy: EventTypeBCSM = EventTypeBCSM.tBusy;
+export const EventTypeBCSM_tBusy = EventTypeBCSM.tBusy satisfies EventTypeBCSM;
 /**
  * @summary tBusy
  * @description
@@ -270,7 +270,7 @@ export const EventTypeBCSM_tBusy: EventTypeBCSM = EventTypeBCSM.tBusy;
  *
  * @constant
  */
-export const tBusy: EventTypeBCSM = EventTypeBCSM.tBusy;
+export const tBusy = EventTypeBCSM.tBusy satisfies EventTypeBCSM;
 /**
  * @summary EventTypeBCSM_tNoAnswer
  * @description
@@ -279,7 +279,7 @@ export const tBusy: EventTypeBCSM = EventTypeBCSM.tBusy;
  *
  * @constant
  */
-export const EventTypeBCSM_tNoAnswer: EventTypeBCSM = EventTypeBCSM.tNoAnswer;
+export const EventTypeBCSM_tNoAnswer = EventTypeBCSM.tNoAnswer satisfies EventTypeBCSM;
 /**
  * @summary tNoAnswer
  * @description
@@ -288,7 +288,7 @@ export const EventTypeBCSM_tNoAnswer: EventTypeBCSM = EventTypeBCSM.tNoAnswer;
  *
  * @constant
  */
-export const tNoAnswer: EventTypeBCSM = EventTypeBCSM.tNoAnswer;
+export const tNoAnswer = EventTypeBCSM.tNoAnswer satisfies EventTypeBCSM;
 /**
  * @summary EventTypeBCSM_tAnswer
  * @description
@@ -297,7 +297,7 @@ export const tNoAnswer: EventTypeBCSM = EventTypeBCSM.tNoAnswer;
  *
  * @constant
  */
-export const EventTypeBCSM_tAnswer: EventTypeBCSM = EventTypeBCSM.tAnswer;
+export const EventTypeBCSM_tAnswer = EventTypeBCSM.tAnswer satisfies EventTypeBCSM;
 /**
  * @summary tAnswer
  * @description
@@ -306,7 +306,7 @@ export const EventTypeBCSM_tAnswer: EventTypeBCSM = EventTypeBCSM.tAnswer;
  *
  * @constant
  */
-export const tAnswer: EventTypeBCSM = EventTypeBCSM.tAnswer;
+export const tAnswer = EventTypeBCSM.tAnswer satisfies EventTypeBCSM;
 /**
  * @summary EventTypeBCSM_tMidCall
  * @description
@@ -315,7 +315,7 @@ export const tAnswer: EventTypeBCSM = EventTypeBCSM.tAnswer;
  *
  * @constant
  */
-export const EventTypeBCSM_tMidCall: EventTypeBCSM = EventTypeBCSM.tMidCall;
+export const EventTypeBCSM_tMidCall = EventTypeBCSM.tMidCall satisfies EventTypeBCSM;
 /**
  * @summary tMidCall
  * @description
@@ -324,7 +324,7 @@ export const EventTypeBCSM_tMidCall: EventTypeBCSM = EventTypeBCSM.tMidCall;
  *
  * @constant
  */
-export const tMidCall: EventTypeBCSM = EventTypeBCSM.tMidCall;
+export const tMidCall = EventTypeBCSM.tMidCall satisfies EventTypeBCSM;
 /**
  * @summary EventTypeBCSM_tDisconnect
  * @description
@@ -333,7 +333,7 @@ export const tMidCall: EventTypeBCSM = EventTypeBCSM.tMidCall;
  *
  * @constant
  */
-export const EventTypeBCSM_tDisconnect: EventTypeBCSM = EventTypeBCSM.tDisconnect;
+export const EventTypeBCSM_tDisconnect = EventTypeBCSM.tDisconnect satisfies EventTypeBCSM;
 /**
  * @summary tDisconnect
  * @description
@@ -342,7 +342,7 @@ export const EventTypeBCSM_tDisconnect: EventTypeBCSM = EventTypeBCSM.tDisconnec
  *
  * @constant
  */
-export const tDisconnect: EventTypeBCSM = EventTypeBCSM.tDisconnect;
+export const tDisconnect = EventTypeBCSM.tDisconnect satisfies EventTypeBCSM;
 /**
  * @summary EventTypeBCSM_tAbandon
  * @description
@@ -351,7 +351,7 @@ export const tDisconnect: EventTypeBCSM = EventTypeBCSM.tDisconnect;
  *
  * @constant
  */
-export const EventTypeBCSM_tAbandon: EventTypeBCSM = EventTypeBCSM.tAbandon;
+export const EventTypeBCSM_tAbandon = EventTypeBCSM.tAbandon satisfies EventTypeBCSM;
 /**
  * @summary tAbandon
  * @description
@@ -360,7 +360,7 @@ export const EventTypeBCSM_tAbandon: EventTypeBCSM = EventTypeBCSM.tAbandon;
  *
  * @constant
  */
-export const tAbandon: EventTypeBCSM = EventTypeBCSM.tAbandon;
+export const tAbandon = EventTypeBCSM.tAbandon satisfies EventTypeBCSM;
 /**
  * @summary EventTypeBCSM_oTermSeized
  * @description
@@ -369,7 +369,7 @@ export const tAbandon: EventTypeBCSM = EventTypeBCSM.tAbandon;
  *
  * @constant
  */
-export const EventTypeBCSM_oTermSeized: EventTypeBCSM = EventTypeBCSM.oTermSeized;
+export const EventTypeBCSM_oTermSeized = EventTypeBCSM.oTermSeized satisfies EventTypeBCSM;
 /**
  * @summary oTermSeized
  * @description
@@ -378,7 +378,7 @@ export const EventTypeBCSM_oTermSeized: EventTypeBCSM = EventTypeBCSM.oTermSeize
  *
  * @constant
  */
-export const oTermSeized: EventTypeBCSM = EventTypeBCSM.oTermSeized;
+export const oTermSeized = EventTypeBCSM.oTermSeized satisfies EventTypeBCSM;
 /**
  * @summary EventTypeBCSM_callAccepted
  * @description
@@ -387,7 +387,7 @@ export const oTermSeized: EventTypeBCSM = EventTypeBCSM.oTermSeized;
  *
  * @constant
  */
-export const EventTypeBCSM_callAccepted: EventTypeBCSM = EventTypeBCSM.callAccepted;
+export const EventTypeBCSM_callAccepted = EventTypeBCSM.callAccepted satisfies EventTypeBCSM;
 /**
  * @summary callAccepted
  * @description
@@ -396,7 +396,7 @@ export const EventTypeBCSM_callAccepted: EventTypeBCSM = EventTypeBCSM.callAccep
  *
  * @constant
  */
-export const callAccepted: EventTypeBCSM = EventTypeBCSM.callAccepted;
+export const callAccepted = EventTypeBCSM.callAccepted satisfies EventTypeBCSM;
 /**
  * @summary EventTypeBCSM_oChangeOfPosition
  * @description
@@ -405,7 +405,7 @@ export const callAccepted: EventTypeBCSM = EventTypeBCSM.callAccepted;
  *
  * @constant
  */
-export const EventTypeBCSM_oChangeOfPosition: EventTypeBCSM = EventTypeBCSM.oChangeOfPosition;
+export const EventTypeBCSM_oChangeOfPosition = EventTypeBCSM.oChangeOfPosition satisfies EventTypeBCSM;
 /**
  * @summary oChangeOfPosition
  * @description
@@ -414,7 +414,7 @@ export const EventTypeBCSM_oChangeOfPosition: EventTypeBCSM = EventTypeBCSM.oCha
  *
  * @constant
  */
-export const oChangeOfPosition: EventTypeBCSM = EventTypeBCSM.oChangeOfPosition;
+export const oChangeOfPosition = EventTypeBCSM.oChangeOfPosition satisfies EventTypeBCSM;
 /**
  * @summary EventTypeBCSM_tChangeOfPosition
  * @description
@@ -423,7 +423,7 @@ export const oChangeOfPosition: EventTypeBCSM = EventTypeBCSM.oChangeOfPosition;
  *
  * @constant
  */
-export const EventTypeBCSM_tChangeOfPosition: EventTypeBCSM = EventTypeBCSM.tChangeOfPosition;
+export const EventTypeBCSM_tChangeOfPosition = EventTypeBCSM.tChangeOfPosition satisfies EventTypeBCSM;
 /**
  * @summary tChangeOfPosition
  * @description
@@ -432,7 +432,7 @@ export const EventTypeBCSM_tChangeOfPosition: EventTypeBCSM = EventTypeBCSM.tCha
  *
  * @constant
  */
-export const tChangeOfPosition: EventTypeBCSM = EventTypeBCSM.tChangeOfPosition;
+export const tChangeOfPosition = EventTypeBCSM.tChangeOfPosition satisfies EventTypeBCSM;
 /**
  * @summary EventTypeBCSM_oServiceChange
  * @description
@@ -441,7 +441,7 @@ export const tChangeOfPosition: EventTypeBCSM = EventTypeBCSM.tChangeOfPosition;
  *
  * @constant
  */
-export const EventTypeBCSM_oServiceChange: EventTypeBCSM = EventTypeBCSM.oServiceChange;
+export const EventTypeBCSM_oServiceChange = EventTypeBCSM.oServiceChange satisfies EventTypeBCSM;
 /**
  * @summary oServiceChange
  * @description
@@ -450,7 +450,7 @@ export const EventTypeBCSM_oServiceChange: EventTypeBCSM = EventTypeBCSM.oServic
  *
  * @constant
  */
-export const oServiceChange: EventTypeBCSM = EventTypeBCSM.oServiceChange;
+export const oServiceChange = EventTypeBCSM.oServiceChange satisfies EventTypeBCSM;
 /**
  * @summary EventTypeBCSM_tServiceChange
  * @description
@@ -459,7 +459,7 @@ export const oServiceChange: EventTypeBCSM = EventTypeBCSM.oServiceChange;
  *
  * @constant
  */
-export const EventTypeBCSM_tServiceChange: EventTypeBCSM = EventTypeBCSM.tServiceChange;
+export const EventTypeBCSM_tServiceChange = EventTypeBCSM.tServiceChange satisfies EventTypeBCSM;
 /**
  * @summary tServiceChange
  * @description
@@ -468,6 +468,6 @@ export const EventTypeBCSM_tServiceChange: EventTypeBCSM = EventTypeBCSM.tServic
  *
  * @constant
  */
-export const tServiceChange: EventTypeBCSM = EventTypeBCSM.tServiceChange;
+export const tServiceChange = EventTypeBCSM.tServiceChange satisfies EventTypeBCSM;
 export const _decode_EventTypeBCSM = $._decodeEnumerated;
 export const _encode_EventTypeBCSM = $._encodeEnumerated;

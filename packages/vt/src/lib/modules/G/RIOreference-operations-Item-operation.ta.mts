@@ -41,7 +41,7 @@ type RIOreference_operations_Item_operation = INTEGER;
  * @type {number}
  */
 export
-const RIOreference_operations_Item_operation_executeRecord: RIOreference_operations_Item_operation = 0; /* LONG_NAMED_INTEGER_VALUE */
+const RIOreference_operations_Item_operation_executeRecord = 0 satisfies RIOreference_operations_Item_operation; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RIOreference_operations_Item_operation_executeRecord
@@ -52,7 +52,7 @@ const RIOreference_operations_Item_operation_executeRecord: RIOreference_operati
  * @type {number}
  */
 export
-const executeRecord: RIOreference_operations_Item_operation = RIOreference_operations_Item_operation_executeRecord; /* SHORT_NAMED_INTEGER_VALUE */
+const executeRecord = RIOreference_operations_Item_operation_executeRecord satisfies RIOreference_operations_Item_operation; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RIOreference_operations_Item_operation_callRecord
@@ -63,7 +63,7 @@ const executeRecord: RIOreference_operations_Item_operation = RIOreference_opera
  * @type {number}
  */
 export
-const RIOreference_operations_Item_operation_callRecord: RIOreference_operations_Item_operation = 1; /* LONG_NAMED_INTEGER_VALUE */
+const RIOreference_operations_Item_operation_callRecord = 1 satisfies RIOreference_operations_Item_operation; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RIOreference_operations_Item_operation_callRecord
@@ -74,7 +74,7 @@ const RIOreference_operations_Item_operation_callRecord: RIOreference_operations
  * @type {number}
  */
 export
-const callRecord: RIOreference_operations_Item_operation = RIOreference_operations_Item_operation_callRecord; /* SHORT_NAMED_INTEGER_VALUE */
+const callRecord = RIOreference_operations_Item_operation_callRecord satisfies RIOreference_operations_Item_operation; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_RIOreference_operations_Item_operation = $._decodeInteger;
 export const _encode_RIOreference_operations_Item_operation = $._encodeInteger;
 

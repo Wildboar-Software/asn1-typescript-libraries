@@ -80,7 +80,7 @@ const ResourceUnavailableReason = _enum_for_ResourceUnavailableReason;
  * @type {number}
  */
 export
-const ResourceUnavailableReason_shortTermResourceLimitation: ResourceUnavailableReason = ResourceUnavailableReason.shortTermResourceLimitation; /* LONG_NAMED_ENUMERATED_VALUE */
+const ResourceUnavailableReason_shortTermResourceLimitation = ResourceUnavailableReason.shortTermResourceLimitation satisfies ResourceUnavailableReason; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary shortTermResourceLimitation
@@ -93,7 +93,7 @@ const ResourceUnavailableReason_shortTermResourceLimitation: ResourceUnavailable
  * @type {number}
  */
 export
-const shortTermResourceLimitation: ResourceUnavailableReason = ResourceUnavailableReason.shortTermResourceLimitation; /* SHORT_NAMED_ENUMERATED_VALUE */
+const shortTermResourceLimitation = ResourceUnavailableReason.shortTermResourceLimitation satisfies ResourceUnavailableReason; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ResourceUnavailableReason_longTermResourceLimitation
@@ -106,7 +106,7 @@ const shortTermResourceLimitation: ResourceUnavailableReason = ResourceUnavailab
  * @type {number}
  */
 export
-const ResourceUnavailableReason_longTermResourceLimitation: ResourceUnavailableReason = ResourceUnavailableReason.longTermResourceLimitation; /* LONG_NAMED_ENUMERATED_VALUE */
+const ResourceUnavailableReason_longTermResourceLimitation = ResourceUnavailableReason.longTermResourceLimitation satisfies ResourceUnavailableReason; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary longTermResourceLimitation
@@ -119,7 +119,7 @@ const ResourceUnavailableReason_longTermResourceLimitation: ResourceUnavailableR
  * @type {number}
  */
 export
-const longTermResourceLimitation: ResourceUnavailableReason = ResourceUnavailableReason.longTermResourceLimitation; /* SHORT_NAMED_ENUMERATED_VALUE */
+const longTermResourceLimitation = ResourceUnavailableReason.longTermResourceLimitation satisfies ResourceUnavailableReason; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) ResourceUnavailableReason

@@ -26,7 +26,7 @@ export type ProtectionRequest = INTEGER;
  * @constant
  * @type {number}
  */
-export const ProtectionRequest_none: ProtectionRequest = 0; /* LONG_NAMED_INTEGER_VALUE */
+export const ProtectionRequest_none = 0 satisfies ProtectionRequest; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProtectionRequest_none
@@ -37,7 +37,7 @@ export const ProtectionRequest_none: ProtectionRequest = 0; /* LONG_NAMED_INTEGE
  * @constant
  * @type {number}
  */
-export const none: ProtectionRequest = ProtectionRequest_none; /* SHORT_NAMED_INTEGER_VALUE */
+export const none = ProtectionRequest_none satisfies ProtectionRequest; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProtectionRequest_signed
@@ -48,7 +48,7 @@ export const none: ProtectionRequest = ProtectionRequest_none; /* SHORT_NAMED_IN
  * @constant
  * @type {number}
  */
-export const ProtectionRequest_signed: ProtectionRequest = 1; /* LONG_NAMED_INTEGER_VALUE */
+export const ProtectionRequest_signed = 1 satisfies ProtectionRequest; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProtectionRequest_signed
@@ -59,7 +59,7 @@ export const ProtectionRequest_signed: ProtectionRequest = 1; /* LONG_NAMED_INTE
  * @constant
  * @type {number}
  */
-export const signed: ProtectionRequest = ProtectionRequest_signed; /* SHORT_NAMED_INTEGER_VALUE */
+export const signed = ProtectionRequest_signed satisfies ProtectionRequest; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_ProtectionRequest = $._decodeInteger;

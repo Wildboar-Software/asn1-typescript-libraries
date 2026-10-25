@@ -35,7 +35,7 @@ type LpaeActivationResponse_lpaeActivationResult = INTEGER;
  * @type {number}
  */
 export
-const LpaeActivationResponse_lpaeActivationResult_ok: LpaeActivationResponse_lpaeActivationResult = 0; /* LONG_NAMED_INTEGER_VALUE */
+const LpaeActivationResponse_lpaeActivationResult_ok = 0 satisfies LpaeActivationResponse_lpaeActivationResult; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary LpaeActivationResponse_lpaeActivationResult_ok
@@ -47,7 +47,7 @@ const LpaeActivationResponse_lpaeActivationResult_ok: LpaeActivationResponse_lpa
  * @type {number}
  */
 export
-const ok: LpaeActivationResponse_lpaeActivationResult = LpaeActivationResponse_lpaeActivationResult_ok; /* SHORT_NAMED_INTEGER_VALUE */
+const ok = LpaeActivationResponse_lpaeActivationResult_ok satisfies LpaeActivationResponse_lpaeActivationResult; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary LpaeActivationResponse_lpaeActivationResult_notSupported
@@ -59,7 +59,7 @@ const ok: LpaeActivationResponse_lpaeActivationResult = LpaeActivationResponse_l
  * @type {number}
  */
 export
-const LpaeActivationResponse_lpaeActivationResult_notSupported: LpaeActivationResponse_lpaeActivationResult = 1; /* LONG_NAMED_INTEGER_VALUE */
+const LpaeActivationResponse_lpaeActivationResult_notSupported = 1 satisfies LpaeActivationResponse_lpaeActivationResult; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary LpaeActivationResponse_lpaeActivationResult_notSupported
@@ -71,7 +71,7 @@ const LpaeActivationResponse_lpaeActivationResult_notSupported: LpaeActivationRe
  * @type {number}
  */
 export
-const notSupported: LpaeActivationResponse_lpaeActivationResult = LpaeActivationResponse_lpaeActivationResult_notSupported; /* SHORT_NAMED_INTEGER_VALUE */
+const notSupported = LpaeActivationResponse_lpaeActivationResult_notSupported satisfies LpaeActivationResponse_lpaeActivationResult; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_LpaeActivationResponse_lpaeActivationResult = $._decodeInteger;
 export const _encode_LpaeActivationResponse_lpaeActivationResult = $._encodeInteger;
 

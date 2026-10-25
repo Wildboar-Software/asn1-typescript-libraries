@@ -107,7 +107,7 @@ const CMState = _enum_for_CMState;
  * @type {number}
  */
 export
-const CMState_idle: CMState = CMState.idle; /* LONG_NAMED_ENUMERATED_VALUE */
+const CMState_idle = CMState.idle satisfies CMState; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary idle
@@ -121,7 +121,7 @@ const CMState_idle: CMState = CMState.idle; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const idle: CMState = CMState.idle; /* SHORT_NAMED_ENUMERATED_VALUE */
+const idle = CMState.idle satisfies CMState; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CMState_connected
@@ -135,7 +135,7 @@ const idle: CMState = CMState.idle; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const CMState_connected: CMState = CMState.connected; /* LONG_NAMED_ENUMERATED_VALUE */
+const CMState_connected = CMState.connected satisfies CMState; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary connected
@@ -149,7 +149,7 @@ const CMState_connected: CMState = CMState.connected; /* LONG_NAMED_ENUMERATED_V
  * @type {number}
  */
 export
-const connected: CMState = CMState.connected; /* SHORT_NAMED_ENUMERATED_VALUE */
+const connected = CMState.connected satisfies CMState; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_CMState: $.ASN1Decoder<CMState> = $._decodeEnumerated;
 export const _encode_CMState: $.ASN1Encoder<CMState> = $._encodeEnumerated;
 

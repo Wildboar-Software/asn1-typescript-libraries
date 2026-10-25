@@ -51,7 +51,7 @@ type MediaModification = _enum_for_MediaModification | ENUMERATED;
  * @type {number}
  */
 export
-const MediaModification_add: MediaModification = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const MediaModification_add = _enum_for_MediaModification.add satisfies MediaModification; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary add
@@ -63,7 +63,7 @@ const MediaModification_add: MediaModification = 1; /* LONG_NAMED_ENUMERATED_VAL
  * @type {number}
  */
 export
-const add: MediaModification = MediaModification_add; /* SHORT_NAMED_ENUMERATED_VALUE */
+const add = MediaModification_add satisfies MediaModification; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MediaModification_remove
@@ -76,7 +76,7 @@ const add: MediaModification = MediaModification_add; /* SHORT_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const MediaModification_remove: MediaModification = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+const MediaModification_remove = _enum_for_MediaModification.remove satisfies MediaModification; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary remove
@@ -88,7 +88,7 @@ const MediaModification_remove: MediaModification = 2; /* LONG_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const remove: MediaModification = MediaModification_remove; /* SHORT_NAMED_ENUMERATED_VALUE */
+const remove = MediaModification_remove satisfies MediaModification; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MediaModification_change
@@ -101,7 +101,7 @@ const remove: MediaModification = MediaModification_remove; /* SHORT_NAMED_ENUME
  * @type {number}
  */
 export
-const MediaModification_change: MediaModification = 3; /* LONG_NAMED_ENUMERATED_VALUE */
+const MediaModification_change = _enum_for_MediaModification.change satisfies MediaModification; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary change
@@ -113,7 +113,7 @@ const MediaModification_change: MediaModification = 3; /* LONG_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const change: MediaModification = MediaModification_change; /* SHORT_NAMED_ENUMERATED_VALUE */
+const change = MediaModification_change satisfies MediaModification; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MediaModification_unknown
@@ -125,7 +125,7 @@ const change: MediaModification = MediaModification_change; /* SHORT_NAMED_ENUME
  * @type {number}
  */
 export
-const MediaModification_unknown: MediaModification = 4; /* LONG_NAMED_ENUMERATED_VALUE */
+const MediaModification_unknown = _enum_for_MediaModification.unknown satisfies MediaModification; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unknown
@@ -137,7 +137,7 @@ const MediaModification_unknown: MediaModification = 4; /* LONG_NAMED_ENUMERATED
  * @type {number}
  */
 export
-const unknown: MediaModification = MediaModification_unknown; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unknown = MediaModification_unknown satisfies MediaModification; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_MediaModification: $.ASN1Decoder<MediaModification> = $._decodeEnumerated;
 export const _encode_MediaModification: $.ASN1Encoder<MediaModification> = $._encodeEnumerated;
 

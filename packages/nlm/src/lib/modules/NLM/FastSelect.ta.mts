@@ -99,8 +99,8 @@ export const FastSelect = _enum_for_FastSelect;
  * @constant
  * @type {number}
  */
-export const FastSelect_notSpecified: FastSelect =
-    FastSelect.notSpecified; /* LONG_NAMED_ENUMERATED_VALUE */
+export const FastSelect_notSpecified =
+    FastSelect.notSpecified satisfies FastSelect; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -114,8 +114,8 @@ export const FastSelect_notSpecified: FastSelect =
  * @constant
  * @type {number}
  */
-export const notSpecified: FastSelect =
-    FastSelect.notSpecified; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const notSpecified =
+    FastSelect.notSpecified satisfies FastSelect; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -129,8 +129,8 @@ export const notSpecified: FastSelect =
  * @constant
  * @type {number}
  */
-export const FastSelect_fastSelect: FastSelect =
-    FastSelect.fastSelect; /* LONG_NAMED_ENUMERATED_VALUE */
+export const FastSelect_fastSelect =
+    FastSelect.fastSelect satisfies FastSelect; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -144,8 +144,8 @@ export const FastSelect_fastSelect: FastSelect =
  * @constant
  * @type {number}
  */
-export const fastSelect: FastSelect =
-    FastSelect.fastSelect; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const fastSelect =
+    FastSelect.fastSelect satisfies FastSelect; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -159,8 +159,8 @@ export const fastSelect: FastSelect =
  * @constant
  * @type {number}
  */
-export const FastSelect_fastSelectWithRestrictedResponse: FastSelect =
-    FastSelect.fastSelectWithRestrictedResponse; /* LONG_NAMED_ENUMERATED_VALUE */
+export const FastSelect_fastSelectWithRestrictedResponse =
+    FastSelect.fastSelectWithRestrictedResponse satisfies FastSelect; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -174,8 +174,8 @@ export const FastSelect_fastSelectWithRestrictedResponse: FastSelect =
  * @constant
  * @type {number}
  */
-export const fastSelectWithRestrictedResponse: FastSelect =
-    FastSelect.fastSelectWithRestrictedResponse; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const fastSelectWithRestrictedResponse =
+    FastSelect.fastSelectWithRestrictedResponse satisfies FastSelect; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -189,8 +189,8 @@ export const fastSelectWithRestrictedResponse: FastSelect =
  * @constant
  * @type {number}
  */
-export const FastSelect_noFastSelect: FastSelect =
-    FastSelect.noFastSelect; /* LONG_NAMED_ENUMERATED_VALUE */
+export const FastSelect_noFastSelect =
+    FastSelect.noFastSelect satisfies FastSelect; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -204,8 +204,8 @@ export const FastSelect_noFastSelect: FastSelect =
  * @constant
  * @type {number}
  */
-export const noFastSelect: FastSelect =
-    FastSelect.noFastSelect; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const noFastSelect =
+    FastSelect.noFastSelect satisfies FastSelect; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 

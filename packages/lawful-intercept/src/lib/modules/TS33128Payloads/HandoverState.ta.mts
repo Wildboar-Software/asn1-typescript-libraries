@@ -102,7 +102,7 @@ const HandoverState = _enum_for_HandoverState;
  * @type {number}
  */
 export
-const HandoverState_none: HandoverState = HandoverState.none; /* LONG_NAMED_ENUMERATED_VALUE */
+const HandoverState_none = HandoverState.none satisfies HandoverState; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary none
@@ -110,7 +110,7 @@ const HandoverState_none: HandoverState = HandoverState.none; /* LONG_NAMED_ENUM
  * @type {number}
  */
 export
-const none: HandoverState = HandoverState.none; /* SHORT_NAMED_ENUMERATED_VALUE */
+const none = HandoverState.none satisfies HandoverState; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary HandoverState_preparing
@@ -118,7 +118,7 @@ const none: HandoverState = HandoverState.none; /* SHORT_NAMED_ENUMERATED_VALUE 
  * @type {number}
  */
 export
-const HandoverState_preparing: HandoverState = HandoverState.preparing; /* LONG_NAMED_ENUMERATED_VALUE */
+const HandoverState_preparing = HandoverState.preparing satisfies HandoverState; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary preparing
@@ -126,7 +126,7 @@ const HandoverState_preparing: HandoverState = HandoverState.preparing; /* LONG_
  * @type {number}
  */
 export
-const preparing: HandoverState = HandoverState.preparing; /* SHORT_NAMED_ENUMERATED_VALUE */
+const preparing = HandoverState.preparing satisfies HandoverState; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary HandoverState_prepared
@@ -134,7 +134,7 @@ const preparing: HandoverState = HandoverState.preparing; /* SHORT_NAMED_ENUMERA
  * @type {number}
  */
 export
-const HandoverState_prepared: HandoverState = HandoverState.prepared; /* LONG_NAMED_ENUMERATED_VALUE */
+const HandoverState_prepared = HandoverState.prepared satisfies HandoverState; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary prepared
@@ -142,7 +142,7 @@ const HandoverState_prepared: HandoverState = HandoverState.prepared; /* LONG_NA
  * @type {number}
  */
 export
-const prepared: HandoverState = HandoverState.prepared; /* SHORT_NAMED_ENUMERATED_VALUE */
+const prepared = HandoverState.prepared satisfies HandoverState; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary HandoverState_completed
@@ -150,7 +150,7 @@ const prepared: HandoverState = HandoverState.prepared; /* SHORT_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const HandoverState_completed: HandoverState = HandoverState.completed; /* LONG_NAMED_ENUMERATED_VALUE */
+const HandoverState_completed = HandoverState.completed satisfies HandoverState; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary completed
@@ -158,7 +158,7 @@ const HandoverState_completed: HandoverState = HandoverState.completed; /* LONG_
  * @type {number}
  */
 export
-const completed: HandoverState = HandoverState.completed; /* SHORT_NAMED_ENUMERATED_VALUE */
+const completed = HandoverState.completed satisfies HandoverState; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary HandoverState_cancelled
@@ -166,7 +166,7 @@ const completed: HandoverState = HandoverState.completed; /* SHORT_NAMED_ENUMERA
  * @type {number}
  */
 export
-const HandoverState_cancelled: HandoverState = HandoverState.cancelled; /* LONG_NAMED_ENUMERATED_VALUE */
+const HandoverState_cancelled = HandoverState.cancelled satisfies HandoverState; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary cancelled
@@ -174,7 +174,7 @@ const HandoverState_cancelled: HandoverState = HandoverState.cancelled; /* LONG_
  * @type {number}
  */
 export
-const cancelled: HandoverState = HandoverState.cancelled; /* SHORT_NAMED_ENUMERATED_VALUE */
+const cancelled = HandoverState.cancelled satisfies HandoverState; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_HandoverState: $.ASN1Decoder<HandoverState> = $._decodeEnumerated;
 export const _encode_HandoverState: $.ASN1Encoder<HandoverState> = $._encodeEnumerated;
 

@@ -108,7 +108,7 @@ const AccessRights = _enum_for_AccessRights;
  * @type {number}
  */
 export
-const AccessRights_read: AccessRights = AccessRights.read; /* LONG_NAMED_ENUMERATED_VALUE */
+const AccessRights_read = AccessRights.read satisfies AccessRights; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary read
@@ -121,7 +121,7 @@ const AccessRights_read: AccessRights = AccessRights.read; /* LONG_NAMED_ENUMERA
  * @type {number}
  */
 export
-const read: AccessRights = AccessRights.read; /* SHORT_NAMED_ENUMERATED_VALUE */
+const read = AccessRights.read satisfies AccessRights; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AccessRights_extended_read
@@ -133,7 +133,7 @@ const read: AccessRights = AccessRights.read; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const AccessRights_extended_read: AccessRights = AccessRights.extended_read; /* LONG_NAMED_ENUMERATED_VALUE */
+const AccessRights_extended_read = AccessRights.extended_read satisfies AccessRights; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary extended_read
@@ -145,7 +145,7 @@ const AccessRights_extended_read: AccessRights = AccessRights.extended_read; /* 
  * @type {number}
  */
 export
-const extended_read: AccessRights = AccessRights.extended_read; /* SHORT_NAMED_ENUMERATED_VALUE */
+const extended_read = AccessRights.extended_read satisfies AccessRights; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AccessRights_read_modify
@@ -159,7 +159,7 @@ const extended_read: AccessRights = AccessRights.extended_read; /* SHORT_NAMED_E
  * @type {number}
  */
 export
-const AccessRights_read_modify: AccessRights = AccessRights.read_modify; /* LONG_NAMED_ENUMERATED_VALUE */
+const AccessRights_read_modify = AccessRights.read_modify satisfies AccessRights; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary read_modify
@@ -173,7 +173,7 @@ const AccessRights_read_modify: AccessRights = AccessRights.read_modify; /* LONG
  * @type {number}
  */
 export
-const read_modify: AccessRights = AccessRights.read_modify; /* SHORT_NAMED_ENUMERATED_VALUE */
+const read_modify = AccessRights.read_modify satisfies AccessRights; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AccessRights_read_modify_delete
@@ -186,7 +186,7 @@ const read_modify: AccessRights = AccessRights.read_modify; /* SHORT_NAMED_ENUME
  * @type {number}
  */
 export
-const AccessRights_read_modify_delete: AccessRights = AccessRights.read_modify_delete; /* LONG_NAMED_ENUMERATED_VALUE */
+const AccessRights_read_modify_delete = AccessRights.read_modify_delete satisfies AccessRights; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary read_modify_delete
@@ -199,7 +199,7 @@ const AccessRights_read_modify_delete: AccessRights = AccessRights.read_modify_d
  * @type {number}
  */
 export
-const read_modify_delete: AccessRights = AccessRights.read_modify_delete; /* SHORT_NAMED_ENUMERATED_VALUE */
+const read_modify_delete = AccessRights.read_modify_delete satisfies AccessRights; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AccessRights_owner
@@ -212,7 +212,7 @@ const read_modify_delete: AccessRights = AccessRights.read_modify_delete; /* SHO
  * @type {number}
  */
 export
-const AccessRights_owner: AccessRights = AccessRights.owner; /* LONG_NAMED_ENUMERATED_VALUE */
+const AccessRights_owner = AccessRights.owner satisfies AccessRights; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary owner
@@ -225,7 +225,7 @@ const AccessRights_owner: AccessRights = AccessRights.owner; /* LONG_NAMED_ENUME
  * @type {number}
  */
 export
-const owner: AccessRights = AccessRights.owner; /* SHORT_NAMED_ENUMERATED_VALUE */
+const owner = AccessRights.owner satisfies AccessRights; /* SHORT_NAMED_ENUMERATED_VALUE */
 export function _decode_AccessRights(el: _Element): AccessRights {
     const enumerated = $._decodeEnumerated(el);
     switch (enumerated) {

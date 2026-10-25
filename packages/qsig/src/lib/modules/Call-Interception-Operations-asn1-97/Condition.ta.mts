@@ -57,7 +57,7 @@ type Condition = INTEGER;
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-221/
  */
 export
-const Condition_unknown: Condition = 0; /* LONG_NAMED_INTEGER_VALUE */
+const Condition_unknown = 0 satisfies Condition; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary unknown
@@ -66,7 +66,7 @@ const Condition_unknown: Condition = 0; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const unknown: Condition = Condition_unknown; /* SHORT_NAMED_INTEGER_VALUE */
+const unknown = Condition_unknown satisfies Condition; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Condition_cintBus
@@ -78,7 +78,7 @@ const unknown: Condition = Condition_unknown; /* SHORT_NAMED_INTEGER_VALUE */
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-221/
  */
 export
-const Condition_cintBus: Condition = 2; /* LONG_NAMED_INTEGER_VALUE */
+const Condition_cintBus = 2 satisfies Condition; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary cintBus
@@ -87,7 +87,7 @@ const Condition_cintBus: Condition = 2; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const cintBus: Condition = Condition_cintBus; /* SHORT_NAMED_INTEGER_VALUE */
+const cintBus = Condition_cintBus satisfies Condition; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Condition_cintCug
@@ -99,7 +99,7 @@ const cintBus: Condition = Condition_cintBus; /* SHORT_NAMED_INTEGER_VALUE */
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-221/
  */
 export
-const Condition_cintCug: Condition = 3; /* LONG_NAMED_INTEGER_VALUE */
+const Condition_cintCug = 3 satisfies Condition; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary cintCug
@@ -108,7 +108,7 @@ const Condition_cintCug: Condition = 3; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const cintCug: Condition = Condition_cintCug; /* SHORT_NAMED_INTEGER_VALUE */
+const cintCug = Condition_cintCug satisfies Condition; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Condition_cintDnd
@@ -120,7 +120,7 @@ const cintCug: Condition = Condition_cintCug; /* SHORT_NAMED_INTEGER_VALUE */
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-221/
  */
 export
-const Condition_cintDnd: Condition = 4; /* LONG_NAMED_INTEGER_VALUE */
+const Condition_cintDnd = 4 satisfies Condition; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary cintDnd
@@ -129,7 +129,7 @@ const Condition_cintDnd: Condition = 4; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const cintDnd: Condition = Condition_cintDnd; /* SHORT_NAMED_INTEGER_VALUE */
+const cintDnd = Condition_cintDnd satisfies Condition; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Condition_cintIbd
@@ -141,7 +141,7 @@ const cintDnd: Condition = Condition_cintDnd; /* SHORT_NAMED_INTEGER_VALUE */
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-221/
  */
 export
-const Condition_cintIbd: Condition = 5; /* LONG_NAMED_INTEGER_VALUE */
+const Condition_cintIbd = 5 satisfies Condition; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary cintIbd
@@ -150,7 +150,7 @@ const Condition_cintIbd: Condition = 5; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const cintIbd: Condition = Condition_cintIbd; /* SHORT_NAMED_INTEGER_VALUE */
+const cintIbd = Condition_cintIbd satisfies Condition; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Condition_cintInn
@@ -162,7 +162,7 @@ const cintIbd: Condition = Condition_cintIbd; /* SHORT_NAMED_INTEGER_VALUE */
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-221/
  */
 export
-const Condition_cintInn: Condition = 6; /* LONG_NAMED_INTEGER_VALUE */
+const Condition_cintInn = 6 satisfies Condition; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary cintInn
@@ -171,7 +171,7 @@ const Condition_cintInn: Condition = 6; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const cintInn: Condition = Condition_cintInn; /* SHORT_NAMED_INTEGER_VALUE */
+const cintInn = Condition_cintInn satisfies Condition; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Condition_cintMob1
@@ -183,7 +183,7 @@ const cintInn: Condition = Condition_cintInn; /* SHORT_NAMED_INTEGER_VALUE */
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-221/
  */
 export
-const Condition_cintMob1: Condition = 7; /* LONG_NAMED_INTEGER_VALUE */
+const Condition_cintMob1 = 7 satisfies Condition; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary cintMob1
@@ -192,7 +192,7 @@ const Condition_cintMob1: Condition = 7; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const cintMob1: Condition = Condition_cintMob1; /* SHORT_NAMED_INTEGER_VALUE */
+const cintMob1 = Condition_cintMob1 satisfies Condition; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Condition_cintMob2
@@ -204,7 +204,7 @@ const cintMob1: Condition = Condition_cintMob1; /* SHORT_NAMED_INTEGER_VALUE */
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-221/
  */
 export
-const Condition_cintMob2: Condition = 8; /* LONG_NAMED_INTEGER_VALUE */
+const Condition_cintMob2 = 8 satisfies Condition; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary cintMob2
@@ -213,7 +213,7 @@ const Condition_cintMob2: Condition = 8; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const cintMob2: Condition = Condition_cintMob2; /* SHORT_NAMED_INTEGER_VALUE */
+const cintMob2 = Condition_cintMob2 satisfies Condition; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Condition_cintMob3
@@ -225,7 +225,7 @@ const cintMob2: Condition = Condition_cintMob2; /* SHORT_NAMED_INTEGER_VALUE */
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-221/
  */
 export
-const Condition_cintMob3: Condition = 9; /* LONG_NAMED_INTEGER_VALUE */
+const Condition_cintMob3 = 9 satisfies Condition; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary cintMob3
@@ -234,7 +234,7 @@ const Condition_cintMob3: Condition = 9; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const cintMob3: Condition = Condition_cintMob3; /* SHORT_NAMED_INTEGER_VALUE */
+const cintMob3 = Condition_cintMob3 satisfies Condition; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Condition_cintNcmp
@@ -248,7 +248,7 @@ const cintMob3: Condition = Condition_cintMob3; /* SHORT_NAMED_INTEGER_VALUE */
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-220/
  */
 export
-const Condition_cintNcmp: Condition = 10; /* LONG_NAMED_INTEGER_VALUE */
+const Condition_cintNcmp = 10 satisfies Condition; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary cintNcmp
@@ -257,7 +257,7 @@ const Condition_cintNcmp: Condition = 10; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const cintNcmp: Condition = Condition_cintNcmp; /* SHORT_NAMED_INTEGER_VALUE */
+const cintNcmp = Condition_cintNcmp satisfies Condition; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Condition_cintNcong
@@ -269,7 +269,7 @@ const cintNcmp: Condition = Condition_cintNcmp; /* SHORT_NAMED_INTEGER_VALUE */
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-221/
  */
 export
-const Condition_cintNcong: Condition = 11; /* LONG_NAMED_INTEGER_VALUE */
+const Condition_cintNcong = 11 satisfies Condition; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary cintNcong
@@ -278,7 +278,7 @@ const Condition_cintNcong: Condition = 11; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const cintNcong: Condition = Condition_cintNcong; /* SHORT_NAMED_INTEGER_VALUE */
+const cintNcong = Condition_cintNcong satisfies Condition; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Condition_cintOos
@@ -292,7 +292,7 @@ const cintNcong: Condition = Condition_cintNcong; /* SHORT_NAMED_INTEGER_VALUE *
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-220/
  */
 export
-const Condition_cintOos: Condition = 13; /* LONG_NAMED_INTEGER_VALUE */
+const Condition_cintOos = 13 satisfies Condition; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary cintOos
@@ -301,7 +301,7 @@ const Condition_cintOos: Condition = 13; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const cintOos: Condition = Condition_cintOos; /* SHORT_NAMED_INTEGER_VALUE */
+const cintOos = Condition_cintOos satisfies Condition; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Condition_cintRrs
@@ -314,7 +314,7 @@ const cintOos: Condition = Condition_cintOos; /* SHORT_NAMED_INTEGER_VALUE */
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-221/
  */
 export
-const Condition_cintRrs: Condition = 14; /* LONG_NAMED_INTEGER_VALUE */
+const Condition_cintRrs = 14 satisfies Condition; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary cintRrs
@@ -323,7 +323,7 @@ const Condition_cintRrs: Condition = 14; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const cintRrs: Condition = Condition_cintRrs; /* SHORT_NAMED_INTEGER_VALUE */
+const cintRrs = Condition_cintRrs satisfies Condition; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Condition_cintTrans
@@ -335,7 +335,7 @@ const cintRrs: Condition = Condition_cintRrs; /* SHORT_NAMED_INTEGER_VALUE */
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-221/
  */
 export
-const Condition_cintTrans: Condition = 17; /* LONG_NAMED_INTEGER_VALUE */
+const Condition_cintTrans = 17 satisfies Condition; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary cintTrans
@@ -344,7 +344,7 @@ const Condition_cintTrans: Condition = 17; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const cintTrans: Condition = Condition_cintTrans; /* SHORT_NAMED_INTEGER_VALUE */
+const cintTrans = Condition_cintTrans satisfies Condition; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Condition_cintUpl
@@ -356,7 +356,7 @@ const cintTrans: Condition = Condition_cintTrans; /* SHORT_NAMED_INTEGER_VALUE *
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-221/
  */
 export
-const Condition_cintUpl: Condition = 18; /* LONG_NAMED_INTEGER_VALUE */
+const Condition_cintUpl = 18 satisfies Condition; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary cintUpl
@@ -365,7 +365,7 @@ const Condition_cintUpl: Condition = 18; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const cintUpl: Condition = Condition_cintUpl; /* SHORT_NAMED_INTEGER_VALUE */
+const cintUpl = Condition_cintUpl satisfies Condition; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Condition_cintInvDiv
@@ -377,7 +377,7 @@ const cintUpl: Condition = Condition_cintUpl; /* SHORT_NAMED_INTEGER_VALUE */
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-221/
  */
 export
-const Condition_cintInvDiv: Condition = 19; /* LONG_NAMED_INTEGER_VALUE */
+const Condition_cintInvDiv = 19 satisfies Condition; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary cintInvDiv
@@ -386,7 +386,7 @@ const Condition_cintInvDiv: Condition = 19; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const cintInvDiv: Condition = Condition_cintInvDiv; /* SHORT_NAMED_INTEGER_VALUE */
+const cintInvDiv = Condition_cintInvDiv satisfies Condition; /* SHORT_NAMED_INTEGER_VALUE */
 
 export
 const _decode_Condition = (el: _Element): Condition => {

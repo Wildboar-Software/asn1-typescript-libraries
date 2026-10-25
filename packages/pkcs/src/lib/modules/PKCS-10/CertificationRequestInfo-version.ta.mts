@@ -21,7 +21,7 @@ export type CertificationRequestInfo_version = INTEGER;
  * @constant
  * @type {number}
  */
-export const CertificationRequestInfo_version_v1: CertificationRequestInfo_version = 0; /* LONG_NAMED_INTEGER_VALUE */
+export const CertificationRequestInfo_version_v1 = 0 satisfies CertificationRequestInfo_version; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -29,7 +29,7 @@ export const CertificationRequestInfo_version_v1: CertificationRequestInfo_versi
  * @constant
  * @type {number}
  */
-export const v1: CertificationRequestInfo_version = CertificationRequestInfo_version_v1; /* SHORT_NAMED_INTEGER_VALUE */
+export const v1 = CertificationRequestInfo_version_v1 satisfies CertificationRequestInfo_version; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 

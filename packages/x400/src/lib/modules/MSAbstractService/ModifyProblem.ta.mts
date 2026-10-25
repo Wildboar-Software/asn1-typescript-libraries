@@ -34,70 +34,70 @@ export type ModifyProblem = INTEGER;
  * @constant
  * @type {number}
  */
-export const ModifyProblem_attribute_not_present: ModifyProblem = 0; /* LONG_NAMED_INTEGER_VALUE */
+export const ModifyProblem_attribute_not_present = 0 satisfies ModifyProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ModifyProblem_attribute_not_present
  * @constant
  * @type {number}
  */
-export const attribute_not_present: ModifyProblem = ModifyProblem_attribute_not_present; /* SHORT_NAMED_INTEGER_VALUE */
+export const attribute_not_present = ModifyProblem_attribute_not_present satisfies ModifyProblem; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ModifyProblem_value_not_present
  * @constant
  * @type {number}
  */
-export const ModifyProblem_value_not_present: ModifyProblem = 1; /* LONG_NAMED_INTEGER_VALUE */
+export const ModifyProblem_value_not_present = 1 satisfies ModifyProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ModifyProblem_value_not_present
  * @constant
  * @type {number}
  */
-export const value_not_present: ModifyProblem = ModifyProblem_value_not_present; /* SHORT_NAMED_INTEGER_VALUE */
+export const value_not_present = ModifyProblem_value_not_present satisfies ModifyProblem; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ModifyProblem_attribute_or_value_already_exists
  * @constant
  * @type {number}
  */
-export const ModifyProblem_attribute_or_value_already_exists: ModifyProblem = 2; /* LONG_NAMED_INTEGER_VALUE */
+export const ModifyProblem_attribute_or_value_already_exists = 2 satisfies ModifyProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ModifyProblem_attribute_or_value_already_exists
  * @constant
  * @type {number}
  */
-export const attribute_or_value_already_exists: ModifyProblem = ModifyProblem_attribute_or_value_already_exists; /* SHORT_NAMED_INTEGER_VALUE */
+export const attribute_or_value_already_exists = ModifyProblem_attribute_or_value_already_exists satisfies ModifyProblem; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ModifyProblem_invalid_position
  * @constant
  * @type {number}
  */
-export const ModifyProblem_invalid_position: ModifyProblem = 3; /* LONG_NAMED_INTEGER_VALUE */
+export const ModifyProblem_invalid_position = 3 satisfies ModifyProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ModifyProblem_invalid_position
  * @constant
  * @type {number}
  */
-export const invalid_position: ModifyProblem = ModifyProblem_invalid_position; /* SHORT_NAMED_INTEGER_VALUE */
+export const invalid_position = ModifyProblem_invalid_position satisfies ModifyProblem; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ModifyProblem_modify_restriction_problem
  * @constant
  * @type {number}
  */
-export const ModifyProblem_modify_restriction_problem: ModifyProblem = 4; /* LONG_NAMED_INTEGER_VALUE */
+export const ModifyProblem_modify_restriction_problem = 4 satisfies ModifyProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ModifyProblem_modify_restriction_problem
  * @constant
  * @type {number}
  */
-export const modify_restriction_problem: ModifyProblem = ModifyProblem_modify_restriction_problem; /* SHORT_NAMED_INTEGER_VALUE */
+export const modify_restriction_problem = ModifyProblem_modify_restriction_problem satisfies ModifyProblem; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_ModifyProblem = $._decodeInteger;

@@ -75,8 +75,8 @@ export const RealizationParameter_realization_type = _enum_for_RealizationParame
  * @constant
  * @type {number}
  */
-export const RealizationParameter_realization_type_association_service: RealizationParameter_realization_type =
-  RealizationParameter_realization_type.association_service; /* LONG_NAMED_ENUMERATED_VALUE */
+export const RealizationParameter_realization_type_association_service =
+  RealizationParameter_realization_type.association_service satisfies RealizationParameter_realization_type; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -85,8 +85,8 @@ export const RealizationParameter_realization_type_association_service: Realizat
  * @constant
  * @type {number}
  */
-export const association_service: RealizationParameter_realization_type =
-  RealizationParameter_realization_type.association_service; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const association_service =
+  RealizationParameter_realization_type.association_service satisfies RealizationParameter_realization_type; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -95,8 +95,8 @@ export const association_service: RealizationParameter_realization_type =
  * @constant
  * @type {number}
  */
-export const RealizationParameter_realization_type_transfer_service: RealizationParameter_realization_type =
-  RealizationParameter_realization_type.transfer_service; /* LONG_NAMED_ENUMERATED_VALUE */
+export const RealizationParameter_realization_type_transfer_service =
+  RealizationParameter_realization_type.transfer_service satisfies RealizationParameter_realization_type; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -105,8 +105,8 @@ export const RealizationParameter_realization_type_transfer_service: Realization
  * @constant
  * @type {number}
  */
-export const transfer_service: RealizationParameter_realization_type =
-  RealizationParameter_realization_type.transfer_service; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const transfer_service =
+  RealizationParameter_realization_type.transfer_service satisfies RealizationParameter_realization_type; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 let _cached_decoder_for_RealizationParameter_realization_type: $.ASN1Decoder<RealizationParameter_realization_type> | null = null;

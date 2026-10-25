@@ -87,16 +87,16 @@ export const AdjacencyUsage = _enum_for_AdjacencyUsage;
  * @constant
  * @type {number}
  */
-export const AdjacencyUsage_undefined: AdjacencyUsage =
-  AdjacencyUsage.undefined; /* LONG_NAMED_ENUMERATED_VALUE */
+export const AdjacencyUsage_undefined =
+  AdjacencyUsage.undefined satisfies AdjacencyUsage; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary undefined
  * @constant
  * @type {number}
  */
-export const undefined: AdjacencyUsage =
-  AdjacencyUsage.undefined; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const undefined =
+  AdjacencyUsage.undefined satisfies AdjacencyUsage; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AdjacencyUsage_level1
@@ -109,16 +109,16 @@ export const undefined: AdjacencyUsage =
  * @constant
  * @type {number}
  */
-export const AdjacencyUsage_level1: AdjacencyUsage =
-  AdjacencyUsage.level1; /* LONG_NAMED_ENUMERATED_VALUE */
+export const AdjacencyUsage_level1 =
+  AdjacencyUsage.level1 satisfies AdjacencyUsage; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary level1
  * @constant
  * @type {number}
  */
-export const level1: AdjacencyUsage =
-  AdjacencyUsage.level1; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const level1 =
+  AdjacencyUsage.level1 satisfies AdjacencyUsage; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AdjacencyUsage_level2
@@ -131,16 +131,16 @@ export const level1: AdjacencyUsage =
  * @constant
  * @type {number}
  */
-export const AdjacencyUsage_level2: AdjacencyUsage =
-  AdjacencyUsage.level2; /* LONG_NAMED_ENUMERATED_VALUE */
+export const AdjacencyUsage_level2 =
+  AdjacencyUsage.level2 satisfies AdjacencyUsage; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary level2
  * @constant
  * @type {number}
  */
-export const level2: AdjacencyUsage =
-  AdjacencyUsage.level2; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const level2 =
+  AdjacencyUsage.level2 satisfies AdjacencyUsage; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AdjacencyUsage_level1and2
@@ -153,16 +153,16 @@ export const level2: AdjacencyUsage =
  * @constant
  * @type {number}
  */
-export const AdjacencyUsage_level1and2: AdjacencyUsage =
-  AdjacencyUsage.level1and2; /* LONG_NAMED_ENUMERATED_VALUE */
+export const AdjacencyUsage_level1and2 =
+  AdjacencyUsage.level1and2 satisfies AdjacencyUsage; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary level1and2
  * @constant
  * @type {number}
  */
-export const level1and2: AdjacencyUsage =
-  AdjacencyUsage.level1and2; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const level1and2 =
+  AdjacencyUsage.level1and2 satisfies AdjacencyUsage; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 export function _decode_AdjacencyUsage(el: _Element): AdjacencyUsage {

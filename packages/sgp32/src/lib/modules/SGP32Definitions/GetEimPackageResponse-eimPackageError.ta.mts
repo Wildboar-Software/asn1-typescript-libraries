@@ -40,7 +40,7 @@ type GetEimPackageResponse_eimPackageError = INTEGER;
  * @type {number}
  */
 export
-const GetEimPackageResponse_eimPackageError_noEimPackageAvailable: GetEimPackageResponse_eimPackageError = 1; /* LONG_NAMED_INTEGER_VALUE */
+const GetEimPackageResponse_eimPackageError_noEimPackageAvailable = 1 satisfies GetEimPackageResponse_eimPackageError; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary GetEimPackageResponse_eimPackageError_noEimPackageAvailable
@@ -50,7 +50,7 @@ const GetEimPackageResponse_eimPackageError_noEimPackageAvailable: GetEimPackage
  * @type {number}
  */
 export
-const noEimPackageAvailable: GetEimPackageResponse_eimPackageError = GetEimPackageResponse_eimPackageError_noEimPackageAvailable; /* SHORT_NAMED_INTEGER_VALUE */
+const noEimPackageAvailable = GetEimPackageResponse_eimPackageError_noEimPackageAvailable satisfies GetEimPackageResponse_eimPackageError; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary GetEimPackageResponse_eimPackageError_eidNotFound
@@ -61,7 +61,7 @@ const noEimPackageAvailable: GetEimPackageResponse_eimPackageError = GetEimPacka
  * @type {number}
  */
 export
-const GetEimPackageResponse_eimPackageError_eidNotFound: GetEimPackageResponse_eimPackageError = 2; /* LONG_NAMED_INTEGER_VALUE */
+const GetEimPackageResponse_eimPackageError_eidNotFound = 2 satisfies GetEimPackageResponse_eimPackageError; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary GetEimPackageResponse_eimPackageError_eidNotFound
@@ -71,7 +71,7 @@ const GetEimPackageResponse_eimPackageError_eidNotFound: GetEimPackageResponse_e
  * @type {number}
  */
 export
-const eidNotFound: GetEimPackageResponse_eimPackageError = GetEimPackageResponse_eimPackageError_eidNotFound; /* SHORT_NAMED_INTEGER_VALUE */
+const eidNotFound = GetEimPackageResponse_eimPackageError_eidNotFound satisfies GetEimPackageResponse_eimPackageError; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary GetEimPackageResponse_eimPackageError_invalidEid
@@ -83,7 +83,7 @@ const eidNotFound: GetEimPackageResponse_eimPackageError = GetEimPackageResponse
  * @type {number}
  */
 export
-const GetEimPackageResponse_eimPackageError_invalidEid: GetEimPackageResponse_eimPackageError = 3; /* LONG_NAMED_INTEGER_VALUE */
+const GetEimPackageResponse_eimPackageError_invalidEid = 3 satisfies GetEimPackageResponse_eimPackageError; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary GetEimPackageResponse_eimPackageError_invalidEid
@@ -94,7 +94,7 @@ const GetEimPackageResponse_eimPackageError_invalidEid: GetEimPackageResponse_ei
  * @type {number}
  */
 export
-const invalidEid: GetEimPackageResponse_eimPackageError = GetEimPackageResponse_eimPackageError_invalidEid; /* SHORT_NAMED_INTEGER_VALUE */
+const invalidEid = GetEimPackageResponse_eimPackageError_invalidEid satisfies GetEimPackageResponse_eimPackageError; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary GetEimPackageResponse_eimPackageError_missingEid
@@ -105,7 +105,7 @@ const invalidEid: GetEimPackageResponse_eimPackageError = GetEimPackageResponse_
  * @type {number}
  */
 export
-const GetEimPackageResponse_eimPackageError_missingEid: GetEimPackageResponse_eimPackageError = 4; /* LONG_NAMED_INTEGER_VALUE */
+const GetEimPackageResponse_eimPackageError_missingEid = 4 satisfies GetEimPackageResponse_eimPackageError; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary GetEimPackageResponse_eimPackageError_missingEid
@@ -115,7 +115,7 @@ const GetEimPackageResponse_eimPackageError_missingEid: GetEimPackageResponse_ei
  * @type {number}
  */
 export
-const missingEid: GetEimPackageResponse_eimPackageError = GetEimPackageResponse_eimPackageError_missingEid; /* SHORT_NAMED_INTEGER_VALUE */
+const missingEid = GetEimPackageResponse_eimPackageError_missingEid satisfies GetEimPackageResponse_eimPackageError; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary GetEimPackageResponse_eimPackageError_undefinedError
@@ -126,7 +126,7 @@ const missingEid: GetEimPackageResponse_eimPackageError = GetEimPackageResponse_
  * @type {number}
  */
 export
-const GetEimPackageResponse_eimPackageError_undefinedError: GetEimPackageResponse_eimPackageError = 127; /* LONG_NAMED_INTEGER_VALUE */
+const GetEimPackageResponse_eimPackageError_undefinedError = 127 satisfies GetEimPackageResponse_eimPackageError; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary GetEimPackageResponse_eimPackageError_undefinedError
@@ -137,7 +137,7 @@ const GetEimPackageResponse_eimPackageError_undefinedError: GetEimPackageRespons
  * @type {number}
  */
 export
-const undefinedError: GetEimPackageResponse_eimPackageError = GetEimPackageResponse_eimPackageError_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
+const undefinedError = GetEimPackageResponse_eimPackageError_undefinedError satisfies GetEimPackageResponse_eimPackageError; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_GetEimPackageResponse_eimPackageError: $.ASN1Decoder<GetEimPackageResponse_eimPackageError> = $._decodeInteger;
 export const _encode_GetEimPackageResponse_eimPackageError: $.ASN1Encoder<GetEimPackageResponse_eimPackageError> = $._encodeInteger;
 

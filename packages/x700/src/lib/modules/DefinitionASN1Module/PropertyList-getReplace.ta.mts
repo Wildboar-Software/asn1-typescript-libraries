@@ -75,8 +75,8 @@ export const PropertyList_getReplace = _enum_for_PropertyList_getReplace;
  * @constant
  * @type {number}
  */
-export const PropertyList_getReplace_gET: PropertyList_getReplace =
-    PropertyList_getReplace.gET; /* LONG_NAMED_ENUMERATED_VALUE */
+export const PropertyList_getReplace_gET =
+    PropertyList_getReplace.gET satisfies PropertyList_getReplace; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -87,8 +87,8 @@ export const PropertyList_getReplace_gET: PropertyList_getReplace =
  * @constant
  * @type {number}
  */
-export const gET: PropertyList_getReplace =
-    PropertyList_getReplace.gET; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const gET =
+    PropertyList_getReplace.gET satisfies PropertyList_getReplace; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -99,8 +99,8 @@ export const gET: PropertyList_getReplace =
  * @constant
  * @type {number}
  */
-export const PropertyList_getReplace_rEPLACE: PropertyList_getReplace =
-    PropertyList_getReplace.rEPLACE; /* LONG_NAMED_ENUMERATED_VALUE */
+export const PropertyList_getReplace_rEPLACE =
+    PropertyList_getReplace.rEPLACE satisfies PropertyList_getReplace; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -111,8 +111,8 @@ export const PropertyList_getReplace_rEPLACE: PropertyList_getReplace =
  * @constant
  * @type {number}
  */
-export const rEPLACE: PropertyList_getReplace =
-    PropertyList_getReplace.rEPLACE; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const rEPLACE =
+    PropertyList_getReplace.rEPLACE satisfies PropertyList_getReplace; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -123,8 +123,8 @@ export const rEPLACE: PropertyList_getReplace =
  * @constant
  * @type {number}
  */
-export const PropertyList_getReplace_gET_REPLACE: PropertyList_getReplace =
-    PropertyList_getReplace.gET_REPLACE; /* LONG_NAMED_ENUMERATED_VALUE */
+export const PropertyList_getReplace_gET_REPLACE =
+    PropertyList_getReplace.gET_REPLACE satisfies PropertyList_getReplace; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -135,8 +135,8 @@ export const PropertyList_getReplace_gET_REPLACE: PropertyList_getReplace =
  * @constant
  * @type {number}
  */
-export const gET_REPLACE: PropertyList_getReplace =
-    PropertyList_getReplace.gET_REPLACE; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const gET_REPLACE =
+    PropertyList_getReplace.gET_REPLACE satisfies PropertyList_getReplace; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 

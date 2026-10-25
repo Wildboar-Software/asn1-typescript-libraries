@@ -120,7 +120,7 @@ const EvaluationStatus = _enum_for_EvaluationStatus;
  * @type {number}
  */
 export
-const EvaluationStatus_designedToMeet: EvaluationStatus = EvaluationStatus.designedToMeet; /* LONG_NAMED_ENUMERATED_VALUE */
+const EvaluationStatus_designedToMeet = EvaluationStatus.designedToMeet satisfies EvaluationStatus; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary designedToMeet
@@ -136,7 +136,7 @@ const EvaluationStatus_designedToMeet: EvaluationStatus = EvaluationStatus.desig
  * @type {number}
  */
 export
-const designedToMeet: EvaluationStatus = EvaluationStatus.designedToMeet; /* SHORT_NAMED_ENUMERATED_VALUE */
+const designedToMeet = EvaluationStatus.designedToMeet satisfies EvaluationStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EvaluationStatus_evaluationInProgress
@@ -152,7 +152,7 @@ const designedToMeet: EvaluationStatus = EvaluationStatus.designedToMeet; /* SHO
  * @type {number}
  */
 export
-const EvaluationStatus_evaluationInProgress: EvaluationStatus = EvaluationStatus.evaluationInProgress; /* LONG_NAMED_ENUMERATED_VALUE */
+const EvaluationStatus_evaluationInProgress = EvaluationStatus.evaluationInProgress satisfies EvaluationStatus; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary evaluationInProgress
@@ -168,7 +168,7 @@ const EvaluationStatus_evaluationInProgress: EvaluationStatus = EvaluationStatus
  * @type {number}
  */
 export
-const evaluationInProgress: EvaluationStatus = EvaluationStatus.evaluationInProgress; /* SHORT_NAMED_ENUMERATED_VALUE */
+const evaluationInProgress = EvaluationStatus.evaluationInProgress satisfies EvaluationStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EvaluationStatus_evaluationCompleted
@@ -184,7 +184,7 @@ const evaluationInProgress: EvaluationStatus = EvaluationStatus.evaluationInProg
  * @type {number}
  */
 export
-const EvaluationStatus_evaluationCompleted: EvaluationStatus = EvaluationStatus.evaluationCompleted; /* LONG_NAMED_ENUMERATED_VALUE */
+const EvaluationStatus_evaluationCompleted = EvaluationStatus.evaluationCompleted satisfies EvaluationStatus; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary evaluationCompleted
@@ -200,7 +200,7 @@ const EvaluationStatus_evaluationCompleted: EvaluationStatus = EvaluationStatus.
  * @type {number}
  */
 export
-const evaluationCompleted: EvaluationStatus = EvaluationStatus.evaluationCompleted; /* SHORT_NAMED_ENUMERATED_VALUE */
+const evaluationCompleted = EvaluationStatus.evaluationCompleted satisfies EvaluationStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_EvaluationStatus: $.ASN1Decoder<EvaluationStatus> = $._decodeEnumerated;

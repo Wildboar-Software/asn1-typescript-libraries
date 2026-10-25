@@ -32,56 +32,56 @@ export type VideotexSyntax = INTEGER;
  * @constant
  * @type {number}
  */
-export const VideotexSyntax_ids: VideotexSyntax = 0; /* LONG_NAMED_INTEGER_VALUE */
+export const VideotexSyntax_ids = 0 satisfies VideotexSyntax; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary VideotexSyntax_ids
  * @constant
  * @type {number}
  */
-export const ids: VideotexSyntax = VideotexSyntax_ids; /* SHORT_NAMED_INTEGER_VALUE */
+export const ids = VideotexSyntax_ids satisfies VideotexSyntax; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary VideotexSyntax_data_syntax1
  * @constant
  * @type {number}
  */
-export const VideotexSyntax_data_syntax1: VideotexSyntax = 1; /* LONG_NAMED_INTEGER_VALUE */
+export const VideotexSyntax_data_syntax1 = 1 satisfies VideotexSyntax; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary VideotexSyntax_data_syntax1
  * @constant
  * @type {number}
  */
-export const data_syntax1: VideotexSyntax = VideotexSyntax_data_syntax1; /* SHORT_NAMED_INTEGER_VALUE */
+export const data_syntax1 = VideotexSyntax_data_syntax1 satisfies VideotexSyntax; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary VideotexSyntax_data_syntax2
  * @constant
  * @type {number}
  */
-export const VideotexSyntax_data_syntax2: VideotexSyntax = 2; /* LONG_NAMED_INTEGER_VALUE */
+export const VideotexSyntax_data_syntax2 = 2 satisfies VideotexSyntax; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary VideotexSyntax_data_syntax2
  * @constant
  * @type {number}
  */
-export const data_syntax2: VideotexSyntax = VideotexSyntax_data_syntax2; /* SHORT_NAMED_INTEGER_VALUE */
+export const data_syntax2 = VideotexSyntax_data_syntax2 satisfies VideotexSyntax; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary VideotexSyntax_data_syntax3
  * @constant
  * @type {number}
  */
-export const VideotexSyntax_data_syntax3: VideotexSyntax = 3; /* LONG_NAMED_INTEGER_VALUE */
+export const VideotexSyntax_data_syntax3 = 3 satisfies VideotexSyntax; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary VideotexSyntax_data_syntax3
  * @constant
  * @type {number}
  */
-export const data_syntax3: VideotexSyntax = VideotexSyntax_data_syntax3; /* SHORT_NAMED_INTEGER_VALUE */
+export const data_syntax3 = VideotexSyntax_data_syntax3 satisfies VideotexSyntax; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_VideotexSyntax = $._decodeInteger;

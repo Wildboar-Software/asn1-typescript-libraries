@@ -72,7 +72,7 @@ type MuxType = _enum_for_MuxType | ENUMERATED;
  * @type {number}
  */
 export
-const MuxType_h221: MuxType = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+const MuxType_h221 = _enum_for_MuxType.h221 satisfies MuxType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary h221
@@ -80,7 +80,7 @@ const MuxType_h221: MuxType = 0; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const h221: MuxType = MuxType_h221; /* SHORT_NAMED_ENUMERATED_VALUE */
+const h221 = MuxType_h221 satisfies MuxType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MuxType_h223
@@ -92,7 +92,7 @@ const h221: MuxType = MuxType_h221; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const MuxType_h223: MuxType = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const MuxType_h223 = _enum_for_MuxType.h223 satisfies MuxType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary h223
@@ -100,7 +100,7 @@ const MuxType_h223: MuxType = 1; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const h223: MuxType = MuxType_h223; /* SHORT_NAMED_ENUMERATED_VALUE */
+const h223 = MuxType_h223 satisfies MuxType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MuxType_h226
@@ -112,7 +112,7 @@ const h223: MuxType = MuxType_h223; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const MuxType_h226: MuxType = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+const MuxType_h226 = _enum_for_MuxType.h226 satisfies MuxType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary h226
@@ -120,7 +120,7 @@ const MuxType_h226: MuxType = 2; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const h226: MuxType = MuxType_h226; /* SHORT_NAMED_ENUMERATED_VALUE */
+const h226 = MuxType_h226 satisfies MuxType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MuxType_v76
@@ -132,7 +132,7 @@ const h226: MuxType = MuxType_h226; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const MuxType_v76: MuxType = 3; /* LONG_NAMED_ENUMERATED_VALUE */
+const MuxType_v76 = _enum_for_MuxType.v76 satisfies MuxType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary v76
@@ -140,7 +140,7 @@ const MuxType_v76: MuxType = 3; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const v76: MuxType = MuxType_v76; /* SHORT_NAMED_ENUMERATED_VALUE */
+const v76 = MuxType_v76 satisfies MuxType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MuxType_nx64k
@@ -153,7 +153,7 @@ const v76: MuxType = MuxType_v76; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const MuxType_nx64k: MuxType = 4; /* LONG_NAMED_ENUMERATED_VALUE */
+const MuxType_nx64k = _enum_for_MuxType.nx64k satisfies MuxType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary nx64k
@@ -161,7 +161,7 @@ const MuxType_nx64k: MuxType = 4; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const nx64k: MuxType = MuxType_nx64k; /* SHORT_NAMED_ENUMERATED_VALUE */
+const nx64k = MuxType_nx64k satisfies MuxType; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_MuxType = $._decodeEnumerated;
 export const _encode_MuxType = $._encodeEnumerated;
 

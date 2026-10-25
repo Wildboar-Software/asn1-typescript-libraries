@@ -61,7 +61,7 @@ type TargetType = _enum_for_TargetType | ENUMERATED;
  * @type {number}
  */
 export
-const TargetType_mSISDN: TargetType = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+const TargetType_mSISDN = _enum_for_TargetType.mSISDN satisfies TargetType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary mSISDN
@@ -73,7 +73,7 @@ const TargetType_mSISDN: TargetType = 0; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const mSISDN: TargetType = TargetType_mSISDN; /* SHORT_NAMED_ENUMERATED_VALUE */
+const mSISDN = TargetType_mSISDN satisfies TargetType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TargetType_iMSI
@@ -86,7 +86,7 @@ const mSISDN: TargetType = TargetType_mSISDN; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const TargetType_iMSI: TargetType = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const TargetType_iMSI = _enum_for_TargetType.iMSI satisfies TargetType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary iMSI
@@ -98,7 +98,7 @@ const TargetType_iMSI: TargetType = 1; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const iMSI: TargetType = TargetType_iMSI; /* SHORT_NAMED_ENUMERATED_VALUE */
+const iMSI = TargetType_iMSI satisfies TargetType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TargetType_iMEI
@@ -111,7 +111,7 @@ const iMSI: TargetType = TargetType_iMSI; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const TargetType_iMEI: TargetType = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+const TargetType_iMEI = _enum_for_TargetType.iMEI satisfies TargetType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary iMEI
@@ -123,7 +123,7 @@ const TargetType_iMEI: TargetType = 2; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const iMEI: TargetType = TargetType_iMEI; /* SHORT_NAMED_ENUMERATED_VALUE */
+const iMEI = TargetType_iMEI satisfies TargetType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TargetType_e164_Format
@@ -136,7 +136,7 @@ const iMEI: TargetType = TargetType_iMEI; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const TargetType_e164_Format: TargetType = 3; /* LONG_NAMED_ENUMERATED_VALUE */
+const TargetType_e164_Format = _enum_for_TargetType.e164_Format satisfies TargetType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary e164_Format
@@ -148,7 +148,7 @@ const TargetType_e164_Format: TargetType = 3; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const e164_Format: TargetType = TargetType_e164_Format; /* SHORT_NAMED_ENUMERATED_VALUE */
+const e164_Format = TargetType_e164_Format satisfies TargetType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TargetType_nAI
@@ -160,7 +160,7 @@ const e164_Format: TargetType = TargetType_e164_Format; /* SHORT_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const TargetType_nAI: TargetType = 4; /* LONG_NAMED_ENUMERATED_VALUE */
+const TargetType_nAI = _enum_for_TargetType.nAI satisfies TargetType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary nAI
@@ -172,7 +172,7 @@ const TargetType_nAI: TargetType = 4; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const nAI: TargetType = TargetType_nAI; /* SHORT_NAMED_ENUMERATED_VALUE */
+const nAI = TargetType_nAI satisfies TargetType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TargetType_sip_URI
@@ -185,7 +185,7 @@ const nAI: TargetType = TargetType_nAI; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const TargetType_sip_URI: TargetType = 5; /* LONG_NAMED_ENUMERATED_VALUE */
+const TargetType_sip_URI = _enum_for_TargetType.sip_URI satisfies TargetType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sip_URI
@@ -197,7 +197,7 @@ const TargetType_sip_URI: TargetType = 5; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const sip_URI: TargetType = TargetType_sip_URI; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sip_URI = TargetType_sip_URI satisfies TargetType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TargetType_tel_URI
@@ -210,7 +210,7 @@ const sip_URI: TargetType = TargetType_sip_URI; /* SHORT_NAMED_ENUMERATED_VALUE 
  * @type {number}
  */
 export
-const TargetType_tel_URI: TargetType = 6; /* LONG_NAMED_ENUMERATED_VALUE */
+const TargetType_tel_URI = _enum_for_TargetType.tel_URI satisfies TargetType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tel_URI
@@ -222,7 +222,7 @@ const TargetType_tel_URI: TargetType = 6; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const tel_URI: TargetType = TargetType_tel_URI; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tel_URI = TargetType_tel_URI satisfies TargetType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TargetType_iMPU
@@ -235,7 +235,7 @@ const tel_URI: TargetType = TargetType_tel_URI; /* SHORT_NAMED_ENUMERATED_VALUE 
  * @type {number}
  */
 export
-const TargetType_iMPU: TargetType = 7; /* LONG_NAMED_ENUMERATED_VALUE */
+const TargetType_iMPU = _enum_for_TargetType.iMPU satisfies TargetType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary iMPU
@@ -247,7 +247,7 @@ const TargetType_iMPU: TargetType = 7; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const iMPU: TargetType = TargetType_iMPU; /* SHORT_NAMED_ENUMERATED_VALUE */
+const iMPU = TargetType_iMPU satisfies TargetType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TargetType_iMPI
@@ -260,7 +260,7 @@ const iMPU: TargetType = TargetType_iMPU; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const TargetType_iMPI: TargetType = 8; /* LONG_NAMED_ENUMERATED_VALUE */
+const TargetType_iMPI = _enum_for_TargetType.iMPI satisfies TargetType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary iMPI
@@ -272,7 +272,7 @@ const TargetType_iMPI: TargetType = 8; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const iMPI: TargetType = TargetType_iMPI; /* SHORT_NAMED_ENUMERATED_VALUE */
+const iMPI = TargetType_iMPI satisfies TargetType; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_TargetType: $.ASN1Decoder<TargetType> = $._decodeEnumerated;
 export const _encode_TargetType: $.ASN1Encoder<TargetType> = $._encodeEnumerated;
 

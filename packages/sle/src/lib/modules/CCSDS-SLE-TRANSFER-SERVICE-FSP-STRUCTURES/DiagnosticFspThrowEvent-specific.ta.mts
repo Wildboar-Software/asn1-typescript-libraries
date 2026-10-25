@@ -40,7 +40,7 @@ type DiagnosticFspThrowEvent_specific = INTEGER;
  * @type {number}
  */
 export
-const DiagnosticFspThrowEvent_specific_operationNotSupported: DiagnosticFspThrowEvent_specific = 0; /* LONG_NAMED_INTEGER_VALUE */
+const DiagnosticFspThrowEvent_specific_operationNotSupported = 0 satisfies DiagnosticFspThrowEvent_specific; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagnosticFspThrowEvent_specific_operationNotSupported
@@ -52,7 +52,7 @@ const DiagnosticFspThrowEvent_specific_operationNotSupported: DiagnosticFspThrow
  * @type {number}
  */
 export
-const operationNotSupported: DiagnosticFspThrowEvent_specific = DiagnosticFspThrowEvent_specific_operationNotSupported; /* SHORT_NAMED_INTEGER_VALUE */
+const operationNotSupported = DiagnosticFspThrowEvent_specific_operationNotSupported satisfies DiagnosticFspThrowEvent_specific; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagnosticFspThrowEvent_specific_eventIdentificationOutOfSequence
@@ -67,7 +67,7 @@ const operationNotSupported: DiagnosticFspThrowEvent_specific = DiagnosticFspThr
  * @type {number}
  */
 export
-const DiagnosticFspThrowEvent_specific_eventIdentificationOutOfSequence: DiagnosticFspThrowEvent_specific = 1; /* LONG_NAMED_INTEGER_VALUE */
+const DiagnosticFspThrowEvent_specific_eventIdentificationOutOfSequence = 1 satisfies DiagnosticFspThrowEvent_specific; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagnosticFspThrowEvent_specific_eventIdentificationOutOfSequence
@@ -79,7 +79,7 @@ const DiagnosticFspThrowEvent_specific_eventIdentificationOutOfSequence: Diagnos
  * @type {number}
  */
 export
-const eventIdentificationOutOfSequence: DiagnosticFspThrowEvent_specific = DiagnosticFspThrowEvent_specific_eventIdentificationOutOfSequence; /* SHORT_NAMED_INTEGER_VALUE */
+const eventIdentificationOutOfSequence = DiagnosticFspThrowEvent_specific_eventIdentificationOutOfSequence satisfies DiagnosticFspThrowEvent_specific; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagnosticFspThrowEvent_specific_noSuchEvent
@@ -92,7 +92,7 @@ const eventIdentificationOutOfSequence: DiagnosticFspThrowEvent_specific = Diagn
  * @type {number}
  */
 export
-const DiagnosticFspThrowEvent_specific_noSuchEvent: DiagnosticFspThrowEvent_specific = 2; /* LONG_NAMED_INTEGER_VALUE */
+const DiagnosticFspThrowEvent_specific_noSuchEvent = 2 satisfies DiagnosticFspThrowEvent_specific; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagnosticFspThrowEvent_specific_noSuchEvent
@@ -104,7 +104,7 @@ const DiagnosticFspThrowEvent_specific_noSuchEvent: DiagnosticFspThrowEvent_spec
  * @type {number}
  */
 export
-const noSuchEvent: DiagnosticFspThrowEvent_specific = DiagnosticFspThrowEvent_specific_noSuchEvent; /* SHORT_NAMED_INTEGER_VALUE */
+const noSuchEvent = DiagnosticFspThrowEvent_specific_noSuchEvent satisfies DiagnosticFspThrowEvent_specific; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_DiagnosticFspThrowEvent_specific: $.ASN1Decoder<DiagnosticFspThrowEvent_specific> = $._decodeInteger;
 export const _encode_DiagnosticFspThrowEvent_specific: $.ASN1Encoder<DiagnosticFspThrowEvent_specific> = $._encodeInteger;
 

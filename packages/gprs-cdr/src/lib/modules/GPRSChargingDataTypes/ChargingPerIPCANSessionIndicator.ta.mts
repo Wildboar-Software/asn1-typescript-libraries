@@ -89,7 +89,7 @@ const ChargingPerIPCANSessionIndicator = _enum_for_ChargingPerIPCANSessionIndica
  * @type {number}
  */
 export
-const ChargingPerIPCANSessionIndicator_inactive: ChargingPerIPCANSessionIndicator = ChargingPerIPCANSessionIndicator.inactive; /* LONG_NAMED_ENUMERATED_VALUE */
+const ChargingPerIPCANSessionIndicator_inactive = ChargingPerIPCANSessionIndicator.inactive satisfies ChargingPerIPCANSessionIndicator; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary inactive
@@ -97,7 +97,7 @@ const ChargingPerIPCANSessionIndicator_inactive: ChargingPerIPCANSessionIndicato
  * @type {number}
  */
 export
-const inactive: ChargingPerIPCANSessionIndicator = ChargingPerIPCANSessionIndicator.inactive; /* SHORT_NAMED_ENUMERATED_VALUE */
+const inactive = ChargingPerIPCANSessionIndicator.inactive satisfies ChargingPerIPCANSessionIndicator; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ChargingPerIPCANSessionIndicator_active
@@ -105,7 +105,7 @@ const inactive: ChargingPerIPCANSessionIndicator = ChargingPerIPCANSessionIndica
  * @type {number}
  */
 export
-const ChargingPerIPCANSessionIndicator_active: ChargingPerIPCANSessionIndicator = ChargingPerIPCANSessionIndicator.active; /* LONG_NAMED_ENUMERATED_VALUE */
+const ChargingPerIPCANSessionIndicator_active = ChargingPerIPCANSessionIndicator.active satisfies ChargingPerIPCANSessionIndicator; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary active
@@ -113,7 +113,7 @@ const ChargingPerIPCANSessionIndicator_active: ChargingPerIPCANSessionIndicator 
  * @type {number}
  */
 export
-const active: ChargingPerIPCANSessionIndicator = ChargingPerIPCANSessionIndicator.active; /* SHORT_NAMED_ENUMERATED_VALUE */
+const active = ChargingPerIPCANSessionIndicator.active satisfies ChargingPerIPCANSessionIndicator; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_ChargingPerIPCANSessionIndicator: $.ASN1Decoder<ChargingPerIPCANSessionIndicator> = $._decodeEnumerated;

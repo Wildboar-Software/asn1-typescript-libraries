@@ -108,7 +108,7 @@ type TimeStampQualifier = _enum_for_TimeStampQualifier | ENUMERATED;
  * @type {number}
  */
 export
-const TimeStampQualifier_unknown: TimeStampQualifier = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+const TimeStampQualifier_unknown = _enum_for_TimeStampQualifier.unknown satisfies TimeStampQualifier; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unknown
@@ -125,7 +125,7 @@ const TimeStampQualifier_unknown: TimeStampQualifier = 0; /* LONG_NAMED_ENUMERAT
  * @type {number}
  */
 export
-const unknown: TimeStampQualifier = TimeStampQualifier_unknown; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unknown = TimeStampQualifier_unknown satisfies TimeStampQualifier; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TimeStampQualifier_timeOfInterception
@@ -142,7 +142,7 @@ const unknown: TimeStampQualifier = TimeStampQualifier_unknown; /* SHORT_NAMED_E
  * @type {number}
  */
 export
-const TimeStampQualifier_timeOfInterception: TimeStampQualifier = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const TimeStampQualifier_timeOfInterception = _enum_for_TimeStampQualifier.timeOfInterception satisfies TimeStampQualifier; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary timeOfInterception
@@ -159,7 +159,7 @@ const TimeStampQualifier_timeOfInterception: TimeStampQualifier = 1; /* LONG_NAM
  * @type {number}
  */
 export
-const timeOfInterception: TimeStampQualifier = TimeStampQualifier_timeOfInterception; /* SHORT_NAMED_ENUMERATED_VALUE */
+const timeOfInterception = TimeStampQualifier_timeOfInterception satisfies TimeStampQualifier; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TimeStampQualifier_timeOfMediation
@@ -176,7 +176,7 @@ const timeOfInterception: TimeStampQualifier = TimeStampQualifier_timeOfIntercep
  * @type {number}
  */
 export
-const TimeStampQualifier_timeOfMediation: TimeStampQualifier = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+const TimeStampQualifier_timeOfMediation = _enum_for_TimeStampQualifier.timeOfMediation satisfies TimeStampQualifier; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary timeOfMediation
@@ -193,7 +193,7 @@ const TimeStampQualifier_timeOfMediation: TimeStampQualifier = 2; /* LONG_NAMED_
  * @type {number}
  */
 export
-const timeOfMediation: TimeStampQualifier = TimeStampQualifier_timeOfMediation; /* SHORT_NAMED_ENUMERATED_VALUE */
+const timeOfMediation = TimeStampQualifier_timeOfMediation satisfies TimeStampQualifier; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TimeStampQualifier_timeOfAggregation
@@ -211,7 +211,7 @@ const timeOfMediation: TimeStampQualifier = TimeStampQualifier_timeOfMediation; 
  * @type {number}
  */
 export
-const TimeStampQualifier_timeOfAggregation: TimeStampQualifier = 3; /* LONG_NAMED_ENUMERATED_VALUE */
+const TimeStampQualifier_timeOfAggregation = _enum_for_TimeStampQualifier.timeOfAggregation satisfies TimeStampQualifier; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary timeOfAggregation
@@ -229,7 +229,7 @@ const TimeStampQualifier_timeOfAggregation: TimeStampQualifier = 3; /* LONG_NAME
  * @type {number}
  */
 export
-const timeOfAggregation: TimeStampQualifier = TimeStampQualifier_timeOfAggregation; /* SHORT_NAMED_ENUMERATED_VALUE */
+const timeOfAggregation = TimeStampQualifier_timeOfAggregation satisfies TimeStampQualifier; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_TimeStampQualifier: $.ASN1Decoder<TimeStampQualifier> = $._decodeEnumerated;
 export const _encode_TimeStampQualifier: $.ASN1Encoder<TimeStampQualifier> = $._encodeEnumerated;
 

@@ -45,7 +45,7 @@ type EE_Duration = INTEGER;
  * @type {number}
  */
 export
-const EE_Duration_current: EE_Duration = 0; /* LONG_NAMED_INTEGER_VALUE */
+const EE_Duration_current = 0 satisfies EE_Duration; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EE_Duration_current
@@ -57,7 +57,7 @@ const EE_Duration_current: EE_Duration = 0; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const current: EE_Duration = EE_Duration_current; /* SHORT_NAMED_INTEGER_VALUE */
+const current = EE_Duration_current satisfies EE_Duration; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EE_Duration_permanent
@@ -69,7 +69,7 @@ const current: EE_Duration = EE_Duration_current; /* SHORT_NAMED_INTEGER_VALUE *
  * @type {number}
  */
 export
-const EE_Duration_permanent: EE_Duration = 1; /* LONG_NAMED_INTEGER_VALUE */
+const EE_Duration_permanent = 1 satisfies EE_Duration; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EE_Duration_permanent
@@ -81,7 +81,7 @@ const EE_Duration_permanent: EE_Duration = 1; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const permanent: EE_Duration = EE_Duration_permanent; /* SHORT_NAMED_INTEGER_VALUE */
+const permanent = EE_Duration_permanent satisfies EE_Duration; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_EE_Duration = $._decodeInteger;
 export const _encode_EE_Duration = $._encodeInteger;
 

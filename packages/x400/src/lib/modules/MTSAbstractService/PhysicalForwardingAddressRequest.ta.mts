@@ -73,32 +73,32 @@ export const PhysicalForwardingAddressRequest = _enum_for_PhysicalForwardingAddr
  * @constant
  * @type {number}
  */
-export const PhysicalForwardingAddressRequest_physical_forwarding_address_not_requested: PhysicalForwardingAddressRequest =
-    PhysicalForwardingAddressRequest.physical_forwarding_address_not_requested; /* LONG_NAMED_ENUMERATED_VALUE */
+export const PhysicalForwardingAddressRequest_physical_forwarding_address_not_requested =
+    PhysicalForwardingAddressRequest.physical_forwarding_address_not_requested satisfies PhysicalForwardingAddressRequest; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary physical_forwarding_address_not_requested
  * @constant
  * @type {number}
  */
-export const physical_forwarding_address_not_requested: PhysicalForwardingAddressRequest =
-    PhysicalForwardingAddressRequest.physical_forwarding_address_not_requested; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const physical_forwarding_address_not_requested =
+    PhysicalForwardingAddressRequest.physical_forwarding_address_not_requested satisfies PhysicalForwardingAddressRequest; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PhysicalForwardingAddressRequest_physical_forwarding_address_requested
  * @constant
  * @type {number}
  */
-export const PhysicalForwardingAddressRequest_physical_forwarding_address_requested: PhysicalForwardingAddressRequest =
-    PhysicalForwardingAddressRequest.physical_forwarding_address_requested; /* LONG_NAMED_ENUMERATED_VALUE */
+export const PhysicalForwardingAddressRequest_physical_forwarding_address_requested =
+    PhysicalForwardingAddressRequest.physical_forwarding_address_requested satisfies PhysicalForwardingAddressRequest; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary physical_forwarding_address_requested
  * @constant
  * @type {number}
  */
-export const physical_forwarding_address_requested: PhysicalForwardingAddressRequest =
-    PhysicalForwardingAddressRequest.physical_forwarding_address_requested; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const physical_forwarding_address_requested =
+    PhysicalForwardingAddressRequest.physical_forwarding_address_requested satisfies PhysicalForwardingAddressRequest; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 let _cached_decoder_for_PhysicalForwardingAddressRequest: $.ASN1Decoder<PhysicalForwardingAddressRequest> | null = null;
 

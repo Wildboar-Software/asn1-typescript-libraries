@@ -50,7 +50,7 @@ type LogicalStatus = INTEGER;
  * @type {number}
  */
 export
-const LogicalStatus_state_changes_allowed: LogicalStatus = 0; /* LONG_NAMED_INTEGER_VALUE */
+const LogicalStatus_state_changes_allowed = 0 satisfies LogicalStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary LogicalStatus_state_changes_allowed
@@ -63,7 +63,7 @@ const LogicalStatus_state_changes_allowed: LogicalStatus = 0; /* LONG_NAMED_INTE
  * @type {number}
  */
 export
-const state_changes_allowed: LogicalStatus = LogicalStatus_state_changes_allowed; /* SHORT_NAMED_INTEGER_VALUE */
+const state_changes_allowed = LogicalStatus_state_changes_allowed satisfies LogicalStatus; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary LogicalStatus_no_state_changes_allowed
@@ -76,7 +76,7 @@ const state_changes_allowed: LogicalStatus = LogicalStatus_state_changes_allowed
  * @type {number}
  */
 export
-const LogicalStatus_no_state_changes_allowed: LogicalStatus = 1; /* LONG_NAMED_INTEGER_VALUE */
+const LogicalStatus_no_state_changes_allowed = 1 satisfies LogicalStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary LogicalStatus_no_state_changes_allowed
@@ -89,7 +89,7 @@ const LogicalStatus_no_state_changes_allowed: LogicalStatus = 1; /* LONG_NAMED_I
  * @type {number}
  */
 export
-const no_state_changes_allowed: LogicalStatus = LogicalStatus_no_state_changes_allowed; /* SHORT_NAMED_INTEGER_VALUE */
+const no_state_changes_allowed = LogicalStatus_no_state_changes_allowed satisfies LogicalStatus; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary LogicalStatus_limited_services_permitted
@@ -101,7 +101,7 @@ const no_state_changes_allowed: LogicalStatus = LogicalStatus_no_state_changes_a
  * @type {number}
  */
 export
-const LogicalStatus_limited_services_permitted: LogicalStatus = 2; /* LONG_NAMED_INTEGER_VALUE */
+const LogicalStatus_limited_services_permitted = 2 satisfies LogicalStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary LogicalStatus_limited_services_permitted
@@ -113,7 +113,7 @@ const LogicalStatus_limited_services_permitted: LogicalStatus = 2; /* LONG_NAMED
  * @type {number}
  */
 export
-const limited_services_permitted: LogicalStatus = LogicalStatus_limited_services_permitted; /* SHORT_NAMED_INTEGER_VALUE */
+const limited_services_permitted = LogicalStatus_limited_services_permitted satisfies LogicalStatus; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary LogicalStatus_support_services_allowed
@@ -126,7 +126,7 @@ const limited_services_permitted: LogicalStatus = LogicalStatus_limited_services
  * @type {number}
  */
 export
-const LogicalStatus_support_services_allowed: LogicalStatus = 3; /* LONG_NAMED_INTEGER_VALUE */
+const LogicalStatus_support_services_allowed = 3 satisfies LogicalStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary LogicalStatus_support_services_allowed
@@ -139,7 +139,7 @@ const LogicalStatus_support_services_allowed: LogicalStatus = 3; /* LONG_NAMED_I
  * @type {number}
  */
 export
-const support_services_allowed: LogicalStatus = LogicalStatus_support_services_allowed; /* SHORT_NAMED_INTEGER_VALUE */
+const support_services_allowed = LogicalStatus_support_services_allowed satisfies LogicalStatus; /* SHORT_NAMED_INTEGER_VALUE */
 
 let _cached_decoder_for_LogicalStatus: $.ASN1Decoder<LogicalStatus> | null = null;
 

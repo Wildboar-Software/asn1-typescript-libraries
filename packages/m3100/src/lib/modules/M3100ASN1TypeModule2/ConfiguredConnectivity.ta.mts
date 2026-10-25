@@ -73,8 +73,8 @@ export const ConfiguredConnectivity = _enum_for_ConfiguredConnectivity;
  * @constant
  * @type {number}
  */
-export const ConfiguredConnectivity_sourceConnect: ConfiguredConnectivity =
-    ConfiguredConnectivity.sourceConnect; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ConfiguredConnectivity_sourceConnect =
+    ConfiguredConnectivity.sourceConnect satisfies ConfiguredConnectivity; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -82,8 +82,8 @@ export const ConfiguredConnectivity_sourceConnect: ConfiguredConnectivity =
  * @constant
  * @type {number}
  */
-export const sourceConnect: ConfiguredConnectivity =
-    ConfiguredConnectivity.sourceConnect; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const sourceConnect =
+    ConfiguredConnectivity.sourceConnect satisfies ConfiguredConnectivity; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -91,8 +91,8 @@ export const sourceConnect: ConfiguredConnectivity =
  * @constant
  * @type {number}
  */
-export const ConfiguredConnectivity_sinkConnect: ConfiguredConnectivity =
-    ConfiguredConnectivity.sinkConnect; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ConfiguredConnectivity_sinkConnect =
+    ConfiguredConnectivity.sinkConnect satisfies ConfiguredConnectivity; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -100,8 +100,8 @@ export const ConfiguredConnectivity_sinkConnect: ConfiguredConnectivity =
  * @constant
  * @type {number}
  */
-export const sinkConnect: ConfiguredConnectivity =
-    ConfiguredConnectivity.sinkConnect; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const sinkConnect =
+    ConfiguredConnectivity.sinkConnect satisfies ConfiguredConnectivity; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -109,8 +109,8 @@ export const sinkConnect: ConfiguredConnectivity =
  * @constant
  * @type {number}
  */
-export const ConfiguredConnectivity_bidirectionalConnect: ConfiguredConnectivity =
-    ConfiguredConnectivity.bidirectionalConnect; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ConfiguredConnectivity_bidirectionalConnect =
+    ConfiguredConnectivity.bidirectionalConnect satisfies ConfiguredConnectivity; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -118,8 +118,8 @@ export const ConfiguredConnectivity_bidirectionalConnect: ConfiguredConnectivity
  * @constant
  * @type {number}
  */
-export const bidirectionalConnect: ConfiguredConnectivity =
-    ConfiguredConnectivity.bidirectionalConnect; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const bidirectionalConnect =
+    ConfiguredConnectivity.bidirectionalConnect satisfies ConfiguredConnectivity; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -127,8 +127,8 @@ export const bidirectionalConnect: ConfiguredConnectivity =
  * @constant
  * @type {number}
  */
-export const ConfiguredConnectivity_noConnect: ConfiguredConnectivity =
-    ConfiguredConnectivity.noConnect; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ConfiguredConnectivity_noConnect =
+    ConfiguredConnectivity.noConnect satisfies ConfiguredConnectivity; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -136,8 +136,8 @@ export const ConfiguredConnectivity_noConnect: ConfiguredConnectivity =
  * @constant
  * @type {number}
  */
-export const noConnect: ConfiguredConnectivity =
-    ConfiguredConnectivity.noConnect; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const noConnect =
+    ConfiguredConnectivity.noConnect satisfies ConfiguredConnectivity; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 

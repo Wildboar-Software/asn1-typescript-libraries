@@ -30,7 +30,7 @@ type CscaMasterListVersion = INTEGER;
  * @type {number}
  */
 export
-const CscaMasterListVersion_v0: CscaMasterListVersion = 0; /* LONG_NAMED_INTEGER_VALUE */
+const CscaMasterListVersion_v0 = 0 satisfies CscaMasterListVersion; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * Short name for {@link CscaMasterListVersion_v0}.
@@ -39,7 +39,7 @@ const CscaMasterListVersion_v0: CscaMasterListVersion = 0; /* LONG_NAMED_INTEGER
  * @type {number}
  */
 export
-const v0: CscaMasterListVersion = CscaMasterListVersion_v0; /* SHORT_NAMED_INTEGER_VALUE */
+const v0 = CscaMasterListVersion_v0 satisfies CscaMasterListVersion; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_CscaMasterListVersion = $._decodeInteger;
 export const _encode_CscaMasterListVersion = $._encodeInteger;
 

@@ -29,7 +29,7 @@ export type SinglePubInfo_pubMethod = INTEGER;
  * @constant
  * @type {number}
  */
-export const SinglePubInfo_pubMethod_dontCare: SinglePubInfo_pubMethod = 0; /* LONG_NAMED_INTEGER_VALUE */
+export const SinglePubInfo_pubMethod_dontCare = 0 satisfies SinglePubInfo_pubMethod; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -42,7 +42,7 @@ export const SinglePubInfo_pubMethod_dontCare: SinglePubInfo_pubMethod = 0; /* L
  * @constant
  * @type {number}
  */
-export const dontCare: SinglePubInfo_pubMethod = SinglePubInfo_pubMethod_dontCare; /* SHORT_NAMED_INTEGER_VALUE */
+export const dontCare = SinglePubInfo_pubMethod_dontCare satisfies SinglePubInfo_pubMethod; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -55,7 +55,7 @@ export const dontCare: SinglePubInfo_pubMethod = SinglePubInfo_pubMethod_dontCar
  * @constant
  * @type {number}
  */
-export const SinglePubInfo_pubMethod_x500: SinglePubInfo_pubMethod = 1; /* LONG_NAMED_INTEGER_VALUE */
+export const SinglePubInfo_pubMethod_x500 = 1 satisfies SinglePubInfo_pubMethod; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -68,7 +68,7 @@ export const SinglePubInfo_pubMethod_x500: SinglePubInfo_pubMethod = 1; /* LONG_
  * @constant
  * @type {number}
  */
-export const x500: SinglePubInfo_pubMethod = SinglePubInfo_pubMethod_x500; /* SHORT_NAMED_INTEGER_VALUE */
+export const x500 = SinglePubInfo_pubMethod_x500 satisfies SinglePubInfo_pubMethod; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -81,7 +81,7 @@ export const x500: SinglePubInfo_pubMethod = SinglePubInfo_pubMethod_x500; /* SH
  * @constant
  * @type {number}
  */
-export const SinglePubInfo_pubMethod_web: SinglePubInfo_pubMethod = 2; /* LONG_NAMED_INTEGER_VALUE */
+export const SinglePubInfo_pubMethod_web = 2 satisfies SinglePubInfo_pubMethod; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -94,7 +94,7 @@ export const SinglePubInfo_pubMethod_web: SinglePubInfo_pubMethod = 2; /* LONG_N
  * @constant
  * @type {number}
  */
-export const web: SinglePubInfo_pubMethod = SinglePubInfo_pubMethod_web; /* SHORT_NAMED_INTEGER_VALUE */
+export const web = SinglePubInfo_pubMethod_web satisfies SinglePubInfo_pubMethod; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -107,7 +107,7 @@ export const web: SinglePubInfo_pubMethod = SinglePubInfo_pubMethod_web; /* SHOR
  * @constant
  * @type {number}
  */
-export const SinglePubInfo_pubMethod_ldap: SinglePubInfo_pubMethod = 3; /* LONG_NAMED_INTEGER_VALUE */
+export const SinglePubInfo_pubMethod_ldap = 3 satisfies SinglePubInfo_pubMethod; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -120,7 +120,7 @@ export const SinglePubInfo_pubMethod_ldap: SinglePubInfo_pubMethod = 3; /* LONG_
  * @constant
  * @type {number}
  */
-export const ldap: SinglePubInfo_pubMethod = SinglePubInfo_pubMethod_ldap; /* SHORT_NAMED_INTEGER_VALUE */
+export const ldap = SinglePubInfo_pubMethod_ldap satisfies SinglePubInfo_pubMethod; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 

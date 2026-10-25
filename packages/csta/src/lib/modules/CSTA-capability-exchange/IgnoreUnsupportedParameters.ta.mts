@@ -86,7 +86,7 @@ const IgnoreUnsupportedParameters = _enum_for_IgnoreUnsupportedParameters;
  * §13.1.2–13.1.4).
  */
 export
-const IgnoreUnsupportedParameters_ignoreParameters: IgnoreUnsupportedParameters = IgnoreUnsupportedParameters.ignoreParameters; /* LONG_NAMED_ENUMERATED_VALUE */
+const IgnoreUnsupportedParameters_ignoreParameters = IgnoreUnsupportedParameters.ignoreParameters satisfies IgnoreUnsupportedParameters; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ignoreParameters
@@ -96,7 +96,7 @@ const IgnoreUnsupportedParameters_ignoreParameters: IgnoreUnsupportedParameters 
  * Alias of `IgnoreUnsupportedParameters_ignoreParameters`.
  */
 export
-const ignoreParameters: IgnoreUnsupportedParameters = IgnoreUnsupportedParameters.ignoreParameters; /* SHORT_NAMED_ENUMERATED_VALUE */
+const ignoreParameters = IgnoreUnsupportedParameters.ignoreParameters satisfies IgnoreUnsupportedParameters; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary IgnoreUnsupportedParameters_rejectMessage
@@ -107,7 +107,7 @@ const ignoreParameters: IgnoreUnsupportedParameters = IgnoreUnsupportedParameter
  * (ECMA-269 §13.1.2–13.1.4).
  */
 export
-const IgnoreUnsupportedParameters_rejectMessage: IgnoreUnsupportedParameters = IgnoreUnsupportedParameters.rejectMessage; /* LONG_NAMED_ENUMERATED_VALUE */
+const IgnoreUnsupportedParameters_rejectMessage = IgnoreUnsupportedParameters.rejectMessage satisfies IgnoreUnsupportedParameters; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary rejectMessage
@@ -117,7 +117,7 @@ const IgnoreUnsupportedParameters_rejectMessage: IgnoreUnsupportedParameters = I
  * Alias of `IgnoreUnsupportedParameters_rejectMessage`.
  */
 export
-const rejectMessage: IgnoreUnsupportedParameters = IgnoreUnsupportedParameters.rejectMessage; /* SHORT_NAMED_ENUMERATED_VALUE */
+const rejectMessage = IgnoreUnsupportedParameters.rejectMessage satisfies IgnoreUnsupportedParameters; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 let _cached_decoder_for_IgnoreUnsupportedParameters: $.ASN1Decoder<IgnoreUnsupportedParameters> | null = null;
 

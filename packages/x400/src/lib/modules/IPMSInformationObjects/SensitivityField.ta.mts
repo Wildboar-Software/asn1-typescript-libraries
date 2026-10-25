@@ -69,48 +69,48 @@ export const SensitivityField = _enum_for_SensitivityField;
  * @constant
  * @type {number}
  */
-export const SensitivityField_personal: SensitivityField =
-    SensitivityField.personal; /* LONG_NAMED_ENUMERATED_VALUE */
+export const SensitivityField_personal =
+    SensitivityField.personal satisfies SensitivityField; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary personal
  * @constant
  * @type {number}
  */
-export const personal: SensitivityField =
-    SensitivityField.personal; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const personal =
+    SensitivityField.personal satisfies SensitivityField; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SensitivityField_private_
  * @constant
  * @type {number}
  */
-export const SensitivityField_private_: SensitivityField =
-    SensitivityField.private_; /* LONG_NAMED_ENUMERATED_VALUE */
+export const SensitivityField_private_ =
+    SensitivityField.private_ satisfies SensitivityField; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary private_
  * @constant
  * @type {number}
  */
-export const private_: SensitivityField =
-    SensitivityField.private_; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const private_ =
+    SensitivityField.private_ satisfies SensitivityField; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SensitivityField_company_confidential
  * @constant
  * @type {number}
  */
-export const SensitivityField_company_confidential: SensitivityField =
-    SensitivityField.company_confidential; /* LONG_NAMED_ENUMERATED_VALUE */
+export const SensitivityField_company_confidential =
+    SensitivityField.company_confidential satisfies SensitivityField; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary company_confidential
  * @constant
  * @type {number}
  */
-export const company_confidential: SensitivityField =
-    SensitivityField.company_confidential; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const company_confidential =
+    SensitivityField.company_confidential satisfies SensitivityField; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 export function _decode_SensitivityField(el: _Element): SensitivityField {

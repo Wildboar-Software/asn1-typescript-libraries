@@ -120,7 +120,7 @@ const ScreeningIndicator = _enum_for_ScreeningIndicator;
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
  */
 export
-const ScreeningIndicator_userProvidedNotScreened: ScreeningIndicator = ScreeningIndicator.userProvidedNotScreened; /* LONG_NAMED_ENUMERATED_VALUE */
+const ScreeningIndicator_userProvidedNotScreened = ScreeningIndicator.userProvidedNotScreened satisfies ScreeningIndicator; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary userProvidedNotScreened
@@ -129,7 +129,7 @@ const ScreeningIndicator_userProvidedNotScreened: ScreeningIndicator = Screening
  * @type {number}
  */
 export
-const userProvidedNotScreened: ScreeningIndicator = ScreeningIndicator.userProvidedNotScreened; /* SHORT_NAMED_ENUMERATED_VALUE */
+const userProvidedNotScreened = ScreeningIndicator.userProvidedNotScreened satisfies ScreeningIndicator; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ScreeningIndicator_userProvidedVerifiedAndPassed
@@ -143,7 +143,7 @@ const userProvidedNotScreened: ScreeningIndicator = ScreeningIndicator.userProvi
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
  */
 export
-const ScreeningIndicator_userProvidedVerifiedAndPassed: ScreeningIndicator = ScreeningIndicator.userProvidedVerifiedAndPassed; /* LONG_NAMED_ENUMERATED_VALUE */
+const ScreeningIndicator_userProvidedVerifiedAndPassed = ScreeningIndicator.userProvidedVerifiedAndPassed satisfies ScreeningIndicator; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary userProvidedVerifiedAndPassed
@@ -154,7 +154,7 @@ const ScreeningIndicator_userProvidedVerifiedAndPassed: ScreeningIndicator = Scr
  * @type {number}
  */
 export
-const userProvidedVerifiedAndPassed: ScreeningIndicator = ScreeningIndicator.userProvidedVerifiedAndPassed; /* SHORT_NAMED_ENUMERATED_VALUE */
+const userProvidedVerifiedAndPassed = ScreeningIndicator.userProvidedVerifiedAndPassed satisfies ScreeningIndicator; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ScreeningIndicator_userProvidedVerifiedAndFailed
@@ -166,7 +166,7 @@ const userProvidedVerifiedAndPassed: ScreeningIndicator = ScreeningIndicator.use
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
  */
 export
-const ScreeningIndicator_userProvidedVerifiedAndFailed: ScreeningIndicator = ScreeningIndicator.userProvidedVerifiedAndFailed; /* LONG_NAMED_ENUMERATED_VALUE */
+const ScreeningIndicator_userProvidedVerifiedAndFailed = ScreeningIndicator.userProvidedVerifiedAndFailed satisfies ScreeningIndicator; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary userProvidedVerifiedAndFailed
@@ -177,7 +177,7 @@ const ScreeningIndicator_userProvidedVerifiedAndFailed: ScreeningIndicator = Scr
  * @type {number}
  */
 export
-const userProvidedVerifiedAndFailed: ScreeningIndicator = ScreeningIndicator.userProvidedVerifiedAndFailed; /* SHORT_NAMED_ENUMERATED_VALUE */
+const userProvidedVerifiedAndFailed = ScreeningIndicator.userProvidedVerifiedAndFailed satisfies ScreeningIndicator; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ScreeningIndicator_networkProvided
@@ -190,7 +190,7 @@ const userProvidedVerifiedAndFailed: ScreeningIndicator = ScreeningIndicator.use
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
  */
 export
-const ScreeningIndicator_networkProvided: ScreeningIndicator = ScreeningIndicator.networkProvided; /* LONG_NAMED_ENUMERATED_VALUE */
+const ScreeningIndicator_networkProvided = ScreeningIndicator.networkProvided satisfies ScreeningIndicator; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary networkProvided
@@ -199,7 +199,7 @@ const ScreeningIndicator_networkProvided: ScreeningIndicator = ScreeningIndicato
  * @type {number}
  */
 export
-const networkProvided: ScreeningIndicator = ScreeningIndicator.networkProvided; /* SHORT_NAMED_ENUMERATED_VALUE */
+const networkProvided = ScreeningIndicator.networkProvided satisfies ScreeningIndicator; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_ScreeningIndicator: $.ASN1Decoder<ScreeningIndicator> = $._decodeEnumerated;

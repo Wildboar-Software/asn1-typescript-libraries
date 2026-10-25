@@ -112,7 +112,7 @@ const NetworkResource = _enum_for_NetworkResource;
  * @type {number}
  */
 export
-const NetworkResource_plmn: NetworkResource = NetworkResource.plmn; /* LONG_NAMED_ENUMERATED_VALUE */
+const NetworkResource_plmn = NetworkResource.plmn satisfies NetworkResource; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary plmn
@@ -124,7 +124,7 @@ const NetworkResource_plmn: NetworkResource = NetworkResource.plmn; /* LONG_NAME
  * @type {number}
  */
 export
-const plmn: NetworkResource = NetworkResource.plmn; /* SHORT_NAMED_ENUMERATED_VALUE */
+const plmn = NetworkResource.plmn satisfies NetworkResource; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NetworkResource_hlr
@@ -136,7 +136,7 @@ const plmn: NetworkResource = NetworkResource.plmn; /* SHORT_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const NetworkResource_hlr: NetworkResource = NetworkResource.hlr; /* LONG_NAMED_ENUMERATED_VALUE */
+const NetworkResource_hlr = NetworkResource.hlr satisfies NetworkResource; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary hlr
@@ -148,7 +148,7 @@ const NetworkResource_hlr: NetworkResource = NetworkResource.hlr; /* LONG_NAMED_
  * @type {number}
  */
 export
-const hlr: NetworkResource = NetworkResource.hlr; /* SHORT_NAMED_ENUMERATED_VALUE */
+const hlr = NetworkResource.hlr satisfies NetworkResource; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NetworkResource_vlr
@@ -160,7 +160,7 @@ const hlr: NetworkResource = NetworkResource.hlr; /* SHORT_NAMED_ENUMERATED_VALU
  * @type {number}
  */
 export
-const NetworkResource_vlr: NetworkResource = NetworkResource.vlr; /* LONG_NAMED_ENUMERATED_VALUE */
+const NetworkResource_vlr = NetworkResource.vlr satisfies NetworkResource; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary vlr
@@ -172,7 +172,7 @@ const NetworkResource_vlr: NetworkResource = NetworkResource.vlr; /* LONG_NAMED_
  * @type {number}
  */
 export
-const vlr: NetworkResource = NetworkResource.vlr; /* SHORT_NAMED_ENUMERATED_VALUE */
+const vlr = NetworkResource.vlr satisfies NetworkResource; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NetworkResource_pvlr
@@ -184,7 +184,7 @@ const vlr: NetworkResource = NetworkResource.vlr; /* SHORT_NAMED_ENUMERATED_VALU
  * @type {number}
  */
 export
-const NetworkResource_pvlr: NetworkResource = NetworkResource.pvlr; /* LONG_NAMED_ENUMERATED_VALUE */
+const NetworkResource_pvlr = NetworkResource.pvlr satisfies NetworkResource; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pvlr
@@ -196,7 +196,7 @@ const NetworkResource_pvlr: NetworkResource = NetworkResource.pvlr; /* LONG_NAME
  * @type {number}
  */
 export
-const pvlr: NetworkResource = NetworkResource.pvlr; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pvlr = NetworkResource.pvlr satisfies NetworkResource; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NetworkResource_controllingMSC
@@ -208,7 +208,7 @@ const pvlr: NetworkResource = NetworkResource.pvlr; /* SHORT_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const NetworkResource_controllingMSC: NetworkResource = NetworkResource.controllingMSC; /* LONG_NAMED_ENUMERATED_VALUE */
+const NetworkResource_controllingMSC = NetworkResource.controllingMSC satisfies NetworkResource; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary controllingMSC
@@ -220,7 +220,7 @@ const NetworkResource_controllingMSC: NetworkResource = NetworkResource.controll
  * @type {number}
  */
 export
-const controllingMSC: NetworkResource = NetworkResource.controllingMSC; /* SHORT_NAMED_ENUMERATED_VALUE */
+const controllingMSC = NetworkResource.controllingMSC satisfies NetworkResource; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NetworkResource_vmsc
@@ -232,7 +232,7 @@ const controllingMSC: NetworkResource = NetworkResource.controllingMSC; /* SHORT
  * @type {number}
  */
 export
-const NetworkResource_vmsc: NetworkResource = NetworkResource.vmsc; /* LONG_NAMED_ENUMERATED_VALUE */
+const NetworkResource_vmsc = NetworkResource.vmsc satisfies NetworkResource; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary vmsc
@@ -244,7 +244,7 @@ const NetworkResource_vmsc: NetworkResource = NetworkResource.vmsc; /* LONG_NAME
  * @type {number}
  */
 export
-const vmsc: NetworkResource = NetworkResource.vmsc; /* SHORT_NAMED_ENUMERATED_VALUE */
+const vmsc = NetworkResource.vmsc satisfies NetworkResource; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NetworkResource_eir
@@ -256,7 +256,7 @@ const vmsc: NetworkResource = NetworkResource.vmsc; /* SHORT_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const NetworkResource_eir: NetworkResource = NetworkResource.eir; /* LONG_NAMED_ENUMERATED_VALUE */
+const NetworkResource_eir = NetworkResource.eir satisfies NetworkResource; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary eir
@@ -268,7 +268,7 @@ const NetworkResource_eir: NetworkResource = NetworkResource.eir; /* LONG_NAMED_
  * @type {number}
  */
 export
-const eir: NetworkResource = NetworkResource.eir; /* SHORT_NAMED_ENUMERATED_VALUE */
+const eir = NetworkResource.eir satisfies NetworkResource; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NetworkResource_rss
@@ -280,7 +280,7 @@ const eir: NetworkResource = NetworkResource.eir; /* SHORT_NAMED_ENUMERATED_VALU
  * @type {number}
  */
 export
-const NetworkResource_rss: NetworkResource = NetworkResource.rss; /* LONG_NAMED_ENUMERATED_VALUE */
+const NetworkResource_rss = NetworkResource.rss satisfies NetworkResource; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary rss
@@ -292,7 +292,7 @@ const NetworkResource_rss: NetworkResource = NetworkResource.rss; /* LONG_NAMED_
  * @type {number}
  */
 export
-const rss: NetworkResource = NetworkResource.rss; /* SHORT_NAMED_ENUMERATED_VALUE */
+const rss = NetworkResource.rss satisfies NetworkResource; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) NetworkResource

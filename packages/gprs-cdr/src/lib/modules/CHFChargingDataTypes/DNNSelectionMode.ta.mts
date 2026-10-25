@@ -67,7 +67,7 @@ const DNNSelectionMode = _enum_for_DNNSelectionMode;
  * @type {number}
  */
 export
-const DNNSelectionMode_uEorNetworkProvidedSubscriptionVerified: DNNSelectionMode = DNNSelectionMode.uEorNetworkProvidedSubscriptionVerified; /* LONG_NAMED_ENUMERATED_VALUE */
+const DNNSelectionMode_uEorNetworkProvidedSubscriptionVerified = DNNSelectionMode.uEorNetworkProvidedSubscriptionVerified satisfies DNNSelectionMode; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary uEorNetworkProvidedSubscriptionVerified
@@ -75,7 +75,7 @@ const DNNSelectionMode_uEorNetworkProvidedSubscriptionVerified: DNNSelectionMode
  * @type {number}
  */
 export
-const uEorNetworkProvidedSubscriptionVerified: DNNSelectionMode = DNNSelectionMode.uEorNetworkProvidedSubscriptionVerified; /* SHORT_NAMED_ENUMERATED_VALUE */
+const uEorNetworkProvidedSubscriptionVerified = DNNSelectionMode.uEorNetworkProvidedSubscriptionVerified satisfies DNNSelectionMode; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary DNNSelectionMode_uEProvidedSubscriptionNotVerified
@@ -83,7 +83,7 @@ const uEorNetworkProvidedSubscriptionVerified: DNNSelectionMode = DNNSelectionMo
  * @type {number}
  */
 export
-const DNNSelectionMode_uEProvidedSubscriptionNotVerified: DNNSelectionMode = DNNSelectionMode.uEProvidedSubscriptionNotVerified; /* LONG_NAMED_ENUMERATED_VALUE */
+const DNNSelectionMode_uEProvidedSubscriptionNotVerified = DNNSelectionMode.uEProvidedSubscriptionNotVerified satisfies DNNSelectionMode; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary uEProvidedSubscriptionNotVerified
@@ -91,7 +91,7 @@ const DNNSelectionMode_uEProvidedSubscriptionNotVerified: DNNSelectionMode = DNN
  * @type {number}
  */
 export
-const uEProvidedSubscriptionNotVerified: DNNSelectionMode = DNNSelectionMode.uEProvidedSubscriptionNotVerified; /* SHORT_NAMED_ENUMERATED_VALUE */
+const uEProvidedSubscriptionNotVerified = DNNSelectionMode.uEProvidedSubscriptionNotVerified satisfies DNNSelectionMode; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary DNNSelectionMode_networkProvidedSubscriptionNotVerified
@@ -99,7 +99,7 @@ const uEProvidedSubscriptionNotVerified: DNNSelectionMode = DNNSelectionMode.uEP
  * @type {number}
  */
 export
-const DNNSelectionMode_networkProvidedSubscriptionNotVerified: DNNSelectionMode = DNNSelectionMode.networkProvidedSubscriptionNotVerified; /* LONG_NAMED_ENUMERATED_VALUE */
+const DNNSelectionMode_networkProvidedSubscriptionNotVerified = DNNSelectionMode.networkProvidedSubscriptionNotVerified satisfies DNNSelectionMode; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary networkProvidedSubscriptionNotVerified
@@ -107,7 +107,7 @@ const DNNSelectionMode_networkProvidedSubscriptionNotVerified: DNNSelectionMode 
  * @type {number}
  */
 export
-const networkProvidedSubscriptionNotVerified: DNNSelectionMode = DNNSelectionMode.networkProvidedSubscriptionNotVerified; /* SHORT_NAMED_ENUMERATED_VALUE */
+const networkProvidedSubscriptionNotVerified = DNNSelectionMode.networkProvidedSubscriptionNotVerified satisfies DNNSelectionMode; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_DNNSelectionMode: $.ASN1Decoder<DNNSelectionMode> = $._decodeEnumerated;

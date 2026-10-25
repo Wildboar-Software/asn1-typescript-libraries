@@ -34,126 +34,126 @@ export type DeliveryServiceType = INTEGER;
  * @constant
  * @type {number}
  */
-export const DeliveryServiceType_mhs_delivery: DeliveryServiceType = 0; /* LONG_NAMED_INTEGER_VALUE */
+export const DeliveryServiceType_mhs_delivery = 0 satisfies DeliveryServiceType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeliveryServiceType_mhs_delivery
  * @constant
  * @type {number}
  */
-export const mhs_delivery: DeliveryServiceType = DeliveryServiceType_mhs_delivery; /* SHORT_NAMED_INTEGER_VALUE */
+export const mhs_delivery = DeliveryServiceType_mhs_delivery satisfies DeliveryServiceType; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeliveryServiceType_physical_delivery
  * @constant
  * @type {number}
  */
-export const DeliveryServiceType_physical_delivery: DeliveryServiceType = 1; /* LONG_NAMED_INTEGER_VALUE */
+export const DeliveryServiceType_physical_delivery = 1 satisfies DeliveryServiceType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeliveryServiceType_physical_delivery
  * @constant
  * @type {number}
  */
-export const physical_delivery: DeliveryServiceType = DeliveryServiceType_physical_delivery; /* SHORT_NAMED_INTEGER_VALUE */
+export const physical_delivery = DeliveryServiceType_physical_delivery satisfies DeliveryServiceType; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeliveryServiceType_telex_delivery
  * @constant
  * @type {number}
  */
-export const DeliveryServiceType_telex_delivery: DeliveryServiceType = 2; /* LONG_NAMED_INTEGER_VALUE */
+export const DeliveryServiceType_telex_delivery = 2 satisfies DeliveryServiceType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeliveryServiceType_telex_delivery
  * @constant
  * @type {number}
  */
-export const telex_delivery: DeliveryServiceType = DeliveryServiceType_telex_delivery; /* SHORT_NAMED_INTEGER_VALUE */
+export const telex_delivery = DeliveryServiceType_telex_delivery satisfies DeliveryServiceType; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeliveryServiceType_teletex_delivery
  * @constant
  * @type {number}
  */
-export const DeliveryServiceType_teletex_delivery: DeliveryServiceType = 3; /* LONG_NAMED_INTEGER_VALUE */
+export const DeliveryServiceType_teletex_delivery = 3 satisfies DeliveryServiceType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeliveryServiceType_teletex_delivery
  * @constant
  * @type {number}
  */
-export const teletex_delivery: DeliveryServiceType = DeliveryServiceType_teletex_delivery; /* SHORT_NAMED_INTEGER_VALUE */
+export const teletex_delivery = DeliveryServiceType_teletex_delivery satisfies DeliveryServiceType; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeliveryServiceType_g3_facsimile_delivery
  * @constant
  * @type {number}
  */
-export const DeliveryServiceType_g3_facsimile_delivery: DeliveryServiceType = 4; /* LONG_NAMED_INTEGER_VALUE */
+export const DeliveryServiceType_g3_facsimile_delivery = 4 satisfies DeliveryServiceType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeliveryServiceType_g3_facsimile_delivery
  * @constant
  * @type {number}
  */
-export const g3_facsimile_delivery: DeliveryServiceType = DeliveryServiceType_g3_facsimile_delivery; /* SHORT_NAMED_INTEGER_VALUE */
+export const g3_facsimile_delivery = DeliveryServiceType_g3_facsimile_delivery satisfies DeliveryServiceType; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeliveryServiceType_g4_facsimile_delivery
  * @constant
  * @type {number}
  */
-export const DeliveryServiceType_g4_facsimile_delivery: DeliveryServiceType = 5; /* LONG_NAMED_INTEGER_VALUE */
+export const DeliveryServiceType_g4_facsimile_delivery = 5 satisfies DeliveryServiceType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeliveryServiceType_g4_facsimile_delivery
  * @constant
  * @type {number}
  */
-export const g4_facsimile_delivery: DeliveryServiceType = DeliveryServiceType_g4_facsimile_delivery; /* SHORT_NAMED_INTEGER_VALUE */
+export const g4_facsimile_delivery = DeliveryServiceType_g4_facsimile_delivery satisfies DeliveryServiceType; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeliveryServiceType_videotex_delivery
  * @constant
  * @type {number}
  */
-export const DeliveryServiceType_videotex_delivery: DeliveryServiceType = 6; /* LONG_NAMED_INTEGER_VALUE */
+export const DeliveryServiceType_videotex_delivery = 6 satisfies DeliveryServiceType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeliveryServiceType_videotex_delivery
  * @constant
  * @type {number}
  */
-export const videotex_delivery: DeliveryServiceType = DeliveryServiceType_videotex_delivery; /* SHORT_NAMED_INTEGER_VALUE */
+export const videotex_delivery = DeliveryServiceType_videotex_delivery satisfies DeliveryServiceType; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeliveryServiceType_telephone_delivery
  * @constant
  * @type {number}
  */
-export const DeliveryServiceType_telephone_delivery: DeliveryServiceType = 7; /* LONG_NAMED_INTEGER_VALUE */
+export const DeliveryServiceType_telephone_delivery = 7 satisfies DeliveryServiceType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeliveryServiceType_telephone_delivery
  * @constant
  * @type {number}
  */
-export const telephone_delivery: DeliveryServiceType = DeliveryServiceType_telephone_delivery; /* SHORT_NAMED_INTEGER_VALUE */
+export const telephone_delivery = DeliveryServiceType_telephone_delivery satisfies DeliveryServiceType; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeliveryServiceType_other_delivery
  * @constant
  * @type {number}
  */
-export const DeliveryServiceType_other_delivery: DeliveryServiceType = 8; /* LONG_NAMED_INTEGER_VALUE */
+export const DeliveryServiceType_other_delivery = 8 satisfies DeliveryServiceType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeliveryServiceType_other_delivery
  * @constant
  * @type {number}
  */
-export const other_delivery: DeliveryServiceType = DeliveryServiceType_other_delivery; /* SHORT_NAMED_INTEGER_VALUE */
+export const other_delivery = DeliveryServiceType_other_delivery satisfies DeliveryServiceType; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_DeliveryServiceType = $._decodeInteger;

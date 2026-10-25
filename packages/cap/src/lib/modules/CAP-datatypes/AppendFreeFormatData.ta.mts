@@ -27,9 +27,9 @@ export enum _enum_for_AppendFreeFormatData {
 }
 export type AppendFreeFormatData = _enum_for_AppendFreeFormatData;
 export const AppendFreeFormatData = _enum_for_AppendFreeFormatData;
-export const AppendFreeFormatData_overwrite: AppendFreeFormatData = AppendFreeFormatData.overwrite;
-export const overwrite: AppendFreeFormatData = AppendFreeFormatData.overwrite;
-export const AppendFreeFormatData_append: AppendFreeFormatData = AppendFreeFormatData.append;
-export const append: AppendFreeFormatData = AppendFreeFormatData.append;
+export const AppendFreeFormatData_overwrite = AppendFreeFormatData.overwrite satisfies AppendFreeFormatData;
+export const overwrite = AppendFreeFormatData.overwrite satisfies AppendFreeFormatData;
+export const AppendFreeFormatData_append = AppendFreeFormatData.append satisfies AppendFreeFormatData;
+export const append = AppendFreeFormatData.append satisfies AppendFreeFormatData;
 export const _decode_AppendFreeFormatData = $._decodeEnumerated;
 export const _encode_AppendFreeFormatData = $._encodeEnumerated;

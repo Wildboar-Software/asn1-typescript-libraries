@@ -32,15 +32,15 @@ export type AttCertVersion = INTEGER;
  * @constant
  * @type {number}
  */
-export const AttCertVersion_v2: AttCertVersion = 1; /* LONG_NAMED_INTEGER_VALUE */
+export const AttCertVersion_v2 = 1 satisfies AttCertVersion; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AttCertVersion_v2
  * @constant
  * @type {number}
  */
-export const v2: AttCertVersion =
-    AttCertVersion_v2; /* SHORT_NAMED_INTEGER_VALUE */
+export const v2 =
+    AttCertVersion_v2 satisfies AttCertVersion; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) AttCertVersion

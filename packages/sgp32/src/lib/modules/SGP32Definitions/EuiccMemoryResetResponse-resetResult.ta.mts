@@ -42,7 +42,7 @@ type EuiccMemoryResetResponse_resetResult = INTEGER;
  * resetDefaultSmdpAddress is set, ok also means that address reset succeeded.
  */
 export
-const EuiccMemoryResetResponse_resetResult_ok: EuiccMemoryResetResponse_resetResult = 0; /* LONG_NAMED_INTEGER_VALUE */
+const EuiccMemoryResetResponse_resetResult_ok = 0 satisfies EuiccMemoryResetResponse_resetResult; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EuiccMemoryResetResponse_resetResult_ok
@@ -52,7 +52,7 @@ const EuiccMemoryResetResponse_resetResult_ok: EuiccMemoryResetResponse_resetRes
  * At least one Profile was deleted (SGP.32 v1.2, section 5.9.5).
  */
 export
-const ok: EuiccMemoryResetResponse_resetResult = EuiccMemoryResetResponse_resetResult_ok; /* SHORT_NAMED_INTEGER_VALUE */
+const ok = EuiccMemoryResetResponse_resetResult_ok satisfies EuiccMemoryResetResponse_resetResult; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EuiccMemoryResetResponse_resetResult_nothingToDelete
@@ -64,7 +64,7 @@ const ok: EuiccMemoryResetResponse_resetResult = EuiccMemoryResetResponse_resetR
  * succeeded.
  */
 export
-const EuiccMemoryResetResponse_resetResult_nothingToDelete: EuiccMemoryResetResponse_resetResult = 1; /* LONG_NAMED_INTEGER_VALUE */
+const EuiccMemoryResetResponse_resetResult_nothingToDelete = 1 satisfies EuiccMemoryResetResponse_resetResult; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EuiccMemoryResetResponse_resetResult_nothingToDelete
@@ -74,7 +74,7 @@ const EuiccMemoryResetResponse_resetResult_nothingToDelete: EuiccMemoryResetResp
  * No Profile was deleted (SGP.32 v1.2, section 5.9.5).
  */
 export
-const nothingToDelete: EuiccMemoryResetResponse_resetResult = EuiccMemoryResetResponse_resetResult_nothingToDelete; /* SHORT_NAMED_INTEGER_VALUE */
+const nothingToDelete = EuiccMemoryResetResponse_resetResult_nothingToDelete satisfies EuiccMemoryResetResponse_resetResult; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EuiccMemoryResetResponse_resetResult_catBusy
@@ -87,7 +87,7 @@ const nothingToDelete: EuiccMemoryResetResponse_resetResult = EuiccMemoryResetRe
  * itself and queue REFRESH.
  */
 export
-const EuiccMemoryResetResponse_resetResult_catBusy: EuiccMemoryResetResponse_resetResult = 5; /* LONG_NAMED_INTEGER_VALUE */
+const EuiccMemoryResetResponse_resetResult_catBusy = 5 satisfies EuiccMemoryResetResponse_resetResult; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EuiccMemoryResetResponse_resetResult_catBusy
@@ -98,7 +98,7 @@ const EuiccMemoryResetResponse_resetResult_catBusy: EuiccMemoryResetResponse_res
  * v1.2, section 5.9.5).
  */
 export
-const catBusy: EuiccMemoryResetResponse_resetResult = EuiccMemoryResetResponse_resetResult_catBusy; /* SHORT_NAMED_INTEGER_VALUE */
+const catBusy = EuiccMemoryResetResponse_resetResult_catBusy satisfies EuiccMemoryResetResponse_resetResult; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EuiccMemoryResetResponse_resetResult_ecallActive
@@ -109,7 +109,7 @@ const catBusy: EuiccMemoryResetResponse_resetResult = EuiccMemoryResetResponse_r
  * (SGP.32 v1.2, sections 5.9.5 and 2.11.2.1).
  */
 export
-const EuiccMemoryResetResponse_resetResult_ecallActive: EuiccMemoryResetResponse_resetResult = 104; /* LONG_NAMED_INTEGER_VALUE */
+const EuiccMemoryResetResponse_resetResult_ecallActive = 104 satisfies EuiccMemoryResetResponse_resetResult; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EuiccMemoryResetResponse_resetResult_ecallActive
@@ -120,7 +120,7 @@ const EuiccMemoryResetResponse_resetResult_ecallActive: EuiccMemoryResetResponse
  * v1.2, section 5.9.5).
  */
 export
-const ecallActive: EuiccMemoryResetResponse_resetResult = EuiccMemoryResetResponse_resetResult_ecallActive; /* SHORT_NAMED_INTEGER_VALUE */
+const ecallActive = EuiccMemoryResetResponse_resetResult_ecallActive satisfies EuiccMemoryResetResponse_resetResult; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EuiccMemoryResetResponse_resetResult_undefinedError
@@ -131,7 +131,7 @@ const ecallActive: EuiccMemoryResetResponse_resetResult = EuiccMemoryResetRespon
  * does not further define the condition that produces it.
  */
 export
-const EuiccMemoryResetResponse_resetResult_undefinedError: EuiccMemoryResetResponse_resetResult = 127; /* LONG_NAMED_INTEGER_VALUE */
+const EuiccMemoryResetResponse_resetResult_undefinedError = 127 satisfies EuiccMemoryResetResponse_resetResult; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EuiccMemoryResetResponse_resetResult_undefinedError
@@ -142,7 +142,7 @@ const EuiccMemoryResetResponse_resetResult_undefinedError: EuiccMemoryResetRespo
  * condition that produces it.
  */
 export
-const undefinedError: EuiccMemoryResetResponse_resetResult = EuiccMemoryResetResponse_resetResult_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
+const undefinedError = EuiccMemoryResetResponse_resetResult_undefinedError satisfies EuiccMemoryResetResponse_resetResult; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_EuiccMemoryResetResponse_resetResult: $.ASN1Decoder<EuiccMemoryResetResponse_resetResult> = $._decodeInteger;
 export const _encode_EuiccMemoryResetResponse_resetResult: $.ASN1Encoder<EuiccMemoryResetResponse_resetResult> = $._encodeInteger;
 

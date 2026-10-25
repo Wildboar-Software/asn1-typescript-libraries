@@ -38,7 +38,7 @@ type EuiccMemoryResetResponse_resetResult = INTEGER;
  * @type {number}
  */
 export
-const EuiccMemoryResetResponse_resetResult_ok: EuiccMemoryResetResponse_resetResult = 0; /* LONG_NAMED_INTEGER_VALUE */
+const EuiccMemoryResetResponse_resetResult_ok = 0 satisfies EuiccMemoryResetResponse_resetResult; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EuiccMemoryResetResponse_resetResult_ok
@@ -50,7 +50,7 @@ const EuiccMemoryResetResponse_resetResult_ok: EuiccMemoryResetResponse_resetRes
  * @type {number}
  */
 export
-const ok: EuiccMemoryResetResponse_resetResult = EuiccMemoryResetResponse_resetResult_ok; /* SHORT_NAMED_INTEGER_VALUE */
+const ok = EuiccMemoryResetResponse_resetResult_ok satisfies EuiccMemoryResetResponse_resetResult; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EuiccMemoryResetResponse_resetResult_nothingToDelete
@@ -62,7 +62,7 @@ const ok: EuiccMemoryResetResponse_resetResult = EuiccMemoryResetResponse_resetR
  * @type {number}
  */
 export
-const EuiccMemoryResetResponse_resetResult_nothingToDelete: EuiccMemoryResetResponse_resetResult = 1; /* LONG_NAMED_INTEGER_VALUE */
+const EuiccMemoryResetResponse_resetResult_nothingToDelete = 1 satisfies EuiccMemoryResetResponse_resetResult; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EuiccMemoryResetResponse_resetResult_nothingToDelete
@@ -74,7 +74,7 @@ const EuiccMemoryResetResponse_resetResult_nothingToDelete: EuiccMemoryResetResp
  * @type {number}
  */
 export
-const nothingToDelete: EuiccMemoryResetResponse_resetResult = EuiccMemoryResetResponse_resetResult_nothingToDelete; /* SHORT_NAMED_INTEGER_VALUE */
+const nothingToDelete = EuiccMemoryResetResponse_resetResult_nothingToDelete satisfies EuiccMemoryResetResponse_resetResult; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EuiccMemoryResetResponse_resetResult_catBusy
@@ -86,7 +86,7 @@ const nothingToDelete: EuiccMemoryResetResponse_resetResult = EuiccMemoryResetRe
  * @type {number}
  */
 export
-const EuiccMemoryResetResponse_resetResult_catBusy: EuiccMemoryResetResponse_resetResult = 5; /* LONG_NAMED_INTEGER_VALUE */
+const EuiccMemoryResetResponse_resetResult_catBusy = 5 satisfies EuiccMemoryResetResponse_resetResult; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EuiccMemoryResetResponse_resetResult_catBusy
@@ -98,7 +98,7 @@ const EuiccMemoryResetResponse_resetResult_catBusy: EuiccMemoryResetResponse_res
  * @type {number}
  */
 export
-const catBusy: EuiccMemoryResetResponse_resetResult = EuiccMemoryResetResponse_resetResult_catBusy; /* SHORT_NAMED_INTEGER_VALUE */
+const catBusy = EuiccMemoryResetResponse_resetResult_catBusy satisfies EuiccMemoryResetResponse_resetResult; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EuiccMemoryResetResponse_resetResult_undefinedError
@@ -110,7 +110,7 @@ const catBusy: EuiccMemoryResetResponse_resetResult = EuiccMemoryResetResponse_r
  * @type {number}
  */
 export
-const EuiccMemoryResetResponse_resetResult_undefinedError: EuiccMemoryResetResponse_resetResult = 127; /* LONG_NAMED_INTEGER_VALUE */
+const EuiccMemoryResetResponse_resetResult_undefinedError = 127 satisfies EuiccMemoryResetResponse_resetResult; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EuiccMemoryResetResponse_resetResult_undefinedError
@@ -122,7 +122,7 @@ const EuiccMemoryResetResponse_resetResult_undefinedError: EuiccMemoryResetRespo
  * @type {number}
  */
 export
-const undefinedError: EuiccMemoryResetResponse_resetResult = EuiccMemoryResetResponse_resetResult_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
+const undefinedError = EuiccMemoryResetResponse_resetResult_undefinedError satisfies EuiccMemoryResetResponse_resetResult; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_EuiccMemoryResetResponse_resetResult = $._decodeInteger;
 export const _encode_EuiccMemoryResetResponse_resetResult = $._encodeInteger;
 

@@ -41,7 +41,7 @@ export type UpdateProblem = INTEGER;
  * @constant
  * @type {number}
  */
-export const UpdateProblem_namingViolation: UpdateProblem = 1; /* LONG_NAMED_INTEGER_VALUE */
+export const UpdateProblem_namingViolation = 1 satisfies UpdateProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary UpdateProblem_namingViolation
@@ -53,7 +53,7 @@ export const UpdateProblem_namingViolation: UpdateProblem = 1; /* LONG_NAMED_INT
  * @constant
  * @type {number}
  */
-export const namingViolation: UpdateProblem = UpdateProblem_namingViolation; /* SHORT_NAMED_INTEGER_VALUE */
+export const namingViolation = UpdateProblem_namingViolation satisfies UpdateProblem; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary UpdateProblem_objectClassViolation
@@ -65,7 +65,7 @@ export const namingViolation: UpdateProblem = UpdateProblem_namingViolation; /* 
  * @constant
  * @type {number}
  */
-export const UpdateProblem_objectClassViolation: UpdateProblem = 2; /* LONG_NAMED_INTEGER_VALUE */
+export const UpdateProblem_objectClassViolation = 2 satisfies UpdateProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary UpdateProblem_objectClassViolation
@@ -77,7 +77,7 @@ export const UpdateProblem_objectClassViolation: UpdateProblem = 2; /* LONG_NAME
  * @constant
  * @type {number}
  */
-export const objectClassViolation: UpdateProblem = UpdateProblem_objectClassViolation; /* SHORT_NAMED_INTEGER_VALUE */
+export const objectClassViolation = UpdateProblem_objectClassViolation satisfies UpdateProblem; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary UpdateProblem_notAllowedOnNonLeaf
@@ -88,7 +88,7 @@ export const objectClassViolation: UpdateProblem = UpdateProblem_objectClassViol
  * @constant
  * @type {number}
  */
-export const UpdateProblem_notAllowedOnNonLeaf: UpdateProblem = 3; /* LONG_NAMED_INTEGER_VALUE */
+export const UpdateProblem_notAllowedOnNonLeaf = 3 satisfies UpdateProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary UpdateProblem_notAllowedOnNonLeaf
@@ -99,7 +99,7 @@ export const UpdateProblem_notAllowedOnNonLeaf: UpdateProblem = 3; /* LONG_NAMED
  * @constant
  * @type {number}
  */
-export const notAllowedOnNonLeaf: UpdateProblem = UpdateProblem_notAllowedOnNonLeaf; /* SHORT_NAMED_INTEGER_VALUE */
+export const notAllowedOnNonLeaf = UpdateProblem_notAllowedOnNonLeaf satisfies UpdateProblem; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary UpdateProblem_notAllowedOnRDN
@@ -110,7 +110,7 @@ export const notAllowedOnNonLeaf: UpdateProblem = UpdateProblem_notAllowedOnNonL
  * @constant
  * @type {number}
  */
-export const UpdateProblem_notAllowedOnRDN: UpdateProblem = 4; /* LONG_NAMED_INTEGER_VALUE */
+export const UpdateProblem_notAllowedOnRDN = 4 satisfies UpdateProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary UpdateProblem_notAllowedOnRDN
@@ -121,7 +121,7 @@ export const UpdateProblem_notAllowedOnRDN: UpdateProblem = 4; /* LONG_NAMED_INT
  * @constant
  * @type {number}
  */
-export const notAllowedOnRDN: UpdateProblem = UpdateProblem_notAllowedOnRDN; /* SHORT_NAMED_INTEGER_VALUE */
+export const notAllowedOnRDN = UpdateProblem_notAllowedOnRDN satisfies UpdateProblem; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary UpdateProblem_entryAlreadyExists
@@ -133,7 +133,7 @@ export const notAllowedOnRDN: UpdateProblem = UpdateProblem_notAllowedOnRDN; /* 
  * @constant
  * @type {number}
  */
-export const UpdateProblem_entryAlreadyExists: UpdateProblem = 5; /* LONG_NAMED_INTEGER_VALUE */
+export const UpdateProblem_entryAlreadyExists = 5 satisfies UpdateProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary UpdateProblem_entryAlreadyExists
@@ -145,7 +145,7 @@ export const UpdateProblem_entryAlreadyExists: UpdateProblem = 5; /* LONG_NAMED_
  * @constant
  * @type {number}
  */
-export const entryAlreadyExists: UpdateProblem = UpdateProblem_entryAlreadyExists; /* SHORT_NAMED_INTEGER_VALUE */
+export const entryAlreadyExists = UpdateProblem_entryAlreadyExists satisfies UpdateProblem; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary UpdateProblem_affectsMultipleDSAs
@@ -156,7 +156,7 @@ export const entryAlreadyExists: UpdateProblem = UpdateProblem_entryAlreadyExist
  * @constant
  * @type {number}
  */
-export const UpdateProblem_affectsMultipleDSAs: UpdateProblem = 6; /* LONG_NAMED_INTEGER_VALUE */
+export const UpdateProblem_affectsMultipleDSAs = 6 satisfies UpdateProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary UpdateProblem_affectsMultipleDSAs
@@ -167,7 +167,7 @@ export const UpdateProblem_affectsMultipleDSAs: UpdateProblem = 6; /* LONG_NAMED
  * @constant
  * @type {number}
  */
-export const affectsMultipleDSAs: UpdateProblem = UpdateProblem_affectsMultipleDSAs; /* SHORT_NAMED_INTEGER_VALUE */
+export const affectsMultipleDSAs = UpdateProblem_affectsMultipleDSAs satisfies UpdateProblem; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary UpdateProblem_objectClassModificationProhibited
@@ -178,7 +178,7 @@ export const affectsMultipleDSAs: UpdateProblem = UpdateProblem_affectsMultipleD
  * @constant
  * @type {number}
  */
-export const UpdateProblem_objectClassModificationProhibited: UpdateProblem = 7; /* LONG_NAMED_INTEGER_VALUE */
+export const UpdateProblem_objectClassModificationProhibited = 7 satisfies UpdateProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary UpdateProblem_objectClassModificationProhibited
@@ -189,7 +189,7 @@ export const UpdateProblem_objectClassModificationProhibited: UpdateProblem = 7;
  * @constant
  * @type {number}
  */
-export const objectClassModificationProhibited: UpdateProblem = UpdateProblem_objectClassModificationProhibited; /* SHORT_NAMED_INTEGER_VALUE */
+export const objectClassModificationProhibited = UpdateProblem_objectClassModificationProhibited satisfies UpdateProblem; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary UpdateProblem_noSuchSuperior
@@ -200,7 +200,7 @@ export const objectClassModificationProhibited: UpdateProblem = UpdateProblem_ob
  * @constant
  * @type {number}
  */
-export const UpdateProblem_noSuchSuperior: UpdateProblem = 8; /* LONG_NAMED_INTEGER_VALUE */
+export const UpdateProblem_noSuchSuperior = 8 satisfies UpdateProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary UpdateProblem_noSuchSuperior
@@ -211,7 +211,7 @@ export const UpdateProblem_noSuchSuperior: UpdateProblem = 8; /* LONG_NAMED_INTE
  * @constant
  * @type {number}
  */
-export const noSuchSuperior: UpdateProblem = UpdateProblem_noSuchSuperior; /* SHORT_NAMED_INTEGER_VALUE */
+export const noSuchSuperior = UpdateProblem_noSuchSuperior satisfies UpdateProblem; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary UpdateProblem_notAncestor
@@ -222,7 +222,7 @@ export const noSuchSuperior: UpdateProblem = UpdateProblem_noSuchSuperior; /* SH
  * @constant
  * @type {number}
  */
-export const UpdateProblem_notAncestor: UpdateProblem = 9; /* LONG_NAMED_INTEGER_VALUE */
+export const UpdateProblem_notAncestor = 9 satisfies UpdateProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary UpdateProblem_notAncestor
@@ -233,7 +233,7 @@ export const UpdateProblem_notAncestor: UpdateProblem = 9; /* LONG_NAMED_INTEGER
  * @constant
  * @type {number}
  */
-export const notAncestor: UpdateProblem = UpdateProblem_notAncestor; /* SHORT_NAMED_INTEGER_VALUE */
+export const notAncestor = UpdateProblem_notAncestor satisfies UpdateProblem; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary UpdateProblem_parentNotAncestor
@@ -245,7 +245,7 @@ export const notAncestor: UpdateProblem = UpdateProblem_notAncestor; /* SHORT_NA
  * @constant
  * @type {number}
  */
-export const UpdateProblem_parentNotAncestor: UpdateProblem = 10; /* LONG_NAMED_INTEGER_VALUE */
+export const UpdateProblem_parentNotAncestor = 10 satisfies UpdateProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary UpdateProblem_parentNotAncestor
@@ -257,7 +257,7 @@ export const UpdateProblem_parentNotAncestor: UpdateProblem = 10; /* LONG_NAMED_
  * @constant
  * @type {number}
  */
-export const parentNotAncestor: UpdateProblem = UpdateProblem_parentNotAncestor; /* SHORT_NAMED_INTEGER_VALUE */
+export const parentNotAncestor = UpdateProblem_parentNotAncestor satisfies UpdateProblem; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary UpdateProblem_hierarchyRuleViolation
@@ -269,7 +269,7 @@ export const parentNotAncestor: UpdateProblem = UpdateProblem_parentNotAncestor;
  * @constant
  * @type {number}
  */
-export const UpdateProblem_hierarchyRuleViolation: UpdateProblem = 11; /* LONG_NAMED_INTEGER_VALUE */
+export const UpdateProblem_hierarchyRuleViolation = 11 satisfies UpdateProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary UpdateProblem_hierarchyRuleViolation
@@ -281,7 +281,7 @@ export const UpdateProblem_hierarchyRuleViolation: UpdateProblem = 11; /* LONG_N
  * @constant
  * @type {number}
  */
-export const hierarchyRuleViolation: UpdateProblem = UpdateProblem_hierarchyRuleViolation; /* SHORT_NAMED_INTEGER_VALUE */
+export const hierarchyRuleViolation = UpdateProblem_hierarchyRuleViolation satisfies UpdateProblem; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary UpdateProblem_familyRuleViolation
@@ -292,7 +292,7 @@ export const hierarchyRuleViolation: UpdateProblem = UpdateProblem_hierarchyRule
  * @constant
  * @type {number}
  */
-export const UpdateProblem_familyRuleViolation: UpdateProblem = 12; /* LONG_NAMED_INTEGER_VALUE */
+export const UpdateProblem_familyRuleViolation = 12 satisfies UpdateProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary UpdateProblem_familyRuleViolation
@@ -303,7 +303,7 @@ export const UpdateProblem_familyRuleViolation: UpdateProblem = 12; /* LONG_NAME
  * @constant
  * @type {number}
  */
-export const familyRuleViolation: UpdateProblem = UpdateProblem_familyRuleViolation; /* SHORT_NAMED_INTEGER_VALUE */
+export const familyRuleViolation = UpdateProblem_familyRuleViolation satisfies UpdateProblem; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary UpdateProblem_insufficientPasswordQuality
@@ -315,7 +315,7 @@ export const familyRuleViolation: UpdateProblem = UpdateProblem_familyRuleViolat
  * @constant
  * @type {number}
  */
-export const UpdateProblem_insufficientPasswordQuality: UpdateProblem = 13; /* LONG_NAMED_INTEGER_VALUE */
+export const UpdateProblem_insufficientPasswordQuality = 13 satisfies UpdateProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary UpdateProblem_insufficientPasswordQuality
@@ -327,7 +327,7 @@ export const UpdateProblem_insufficientPasswordQuality: UpdateProblem = 13; /* L
  * @constant
  * @type {number}
  */
-export const insufficientPasswordQuality: UpdateProblem = UpdateProblem_insufficientPasswordQuality; /* SHORT_NAMED_INTEGER_VALUE */
+export const insufficientPasswordQuality = UpdateProblem_insufficientPasswordQuality satisfies UpdateProblem; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary UpdateProblem_passwordInHistory
@@ -338,7 +338,7 @@ export const insufficientPasswordQuality: UpdateProblem = UpdateProblem_insuffic
  * @constant
  * @type {number}
  */
-export const UpdateProblem_passwordInHistory: UpdateProblem = 14; /* LONG_NAMED_INTEGER_VALUE */
+export const UpdateProblem_passwordInHistory = 14 satisfies UpdateProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary UpdateProblem_passwordInHistory
@@ -349,7 +349,7 @@ export const UpdateProblem_passwordInHistory: UpdateProblem = 14; /* LONG_NAMED_
  * @constant
  * @type {number}
  */
-export const passwordInHistory: UpdateProblem = UpdateProblem_passwordInHistory; /* SHORT_NAMED_INTEGER_VALUE */
+export const passwordInHistory = UpdateProblem_passwordInHistory satisfies UpdateProblem; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary UpdateProblem_noPasswordSlot
@@ -360,7 +360,7 @@ export const passwordInHistory: UpdateProblem = UpdateProblem_passwordInHistory;
  * @constant
  * @type {number}
  */
-export const UpdateProblem_noPasswordSlot: UpdateProblem = 15; /* LONG_NAMED_INTEGER_VALUE */
+export const UpdateProblem_noPasswordSlot = 15 satisfies UpdateProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary UpdateProblem_noPasswordSlot
@@ -371,7 +371,7 @@ export const UpdateProblem_noPasswordSlot: UpdateProblem = 15; /* LONG_NAMED_INT
  * @constant
  * @type {number}
  */
-export const noPasswordSlot: UpdateProblem = UpdateProblem_noPasswordSlot; /* SHORT_NAMED_INTEGER_VALUE */
+export const noPasswordSlot = UpdateProblem_noPasswordSlot satisfies UpdateProblem; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_UpdateProblem = $._decodeInteger;

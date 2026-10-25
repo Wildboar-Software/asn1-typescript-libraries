@@ -50,7 +50,7 @@ type Rejection_reason = INTEGER;
  * @type {number}
  */
 export
-const Rejection_reason_rejected_by_responder: Rejection_reason = 0; /* LONG_NAMED_INTEGER_VALUE */
+const Rejection_reason_rejected_by_responder = 0 satisfies Rejection_reason; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary rejected_by_responder
@@ -66,7 +66,7 @@ const Rejection_reason_rejected_by_responder: Rejection_reason = 0; /* LONG_NAME
  * @type {number}
  */
 export
-const rejected_by_responder: Rejection_reason = Rejection_reason_rejected_by_responder; /* SHORT_NAMED_INTEGER_VALUE */
+const rejected_by_responder = Rejection_reason_rejected_by_responder satisfies Rejection_reason; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Rejection_reason_called_presentation_address_unknown
@@ -81,7 +81,7 @@ const rejected_by_responder: Rejection_reason = Rejection_reason_rejected_by_res
  * @type {number}
  */
 export
-const Rejection_reason_called_presentation_address_unknown: Rejection_reason = 1; /* LONG_NAMED_INTEGER_VALUE */
+const Rejection_reason_called_presentation_address_unknown = 1 satisfies Rejection_reason; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary called_presentation_address_unknown
@@ -96,7 +96,7 @@ const Rejection_reason_called_presentation_address_unknown: Rejection_reason = 1
  * @type {number}
  */
 export
-const called_presentation_address_unknown: Rejection_reason = Rejection_reason_called_presentation_address_unknown; /* SHORT_NAMED_INTEGER_VALUE */
+const called_presentation_address_unknown = Rejection_reason_called_presentation_address_unknown satisfies Rejection_reason; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Rejection_reason_local_limit_exceeded
@@ -111,7 +111,7 @@ const called_presentation_address_unknown: Rejection_reason = Rejection_reason_c
  * @type {number}
  */
 export
-const Rejection_reason_local_limit_exceeded: Rejection_reason = 3; /* LONG_NAMED_INTEGER_VALUE */
+const Rejection_reason_local_limit_exceeded = 3 satisfies Rejection_reason; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary local_limit_exceeded
@@ -126,7 +126,7 @@ const Rejection_reason_local_limit_exceeded: Rejection_reason = 3; /* LONG_NAMED
  * @type {number}
  */
 export
-const local_limit_exceeded: Rejection_reason = Rejection_reason_local_limit_exceeded; /* SHORT_NAMED_INTEGER_VALUE */
+const local_limit_exceeded = Rejection_reason_local_limit_exceeded satisfies Rejection_reason; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Rejection_reason_protocol_version_not_supported
@@ -141,7 +141,7 @@ const local_limit_exceeded: Rejection_reason = Rejection_reason_local_limit_exce
  * @type {number}
  */
 export
-const Rejection_reason_protocol_version_not_supported: Rejection_reason = 4; /* LONG_NAMED_INTEGER_VALUE */
+const Rejection_reason_protocol_version_not_supported = 4 satisfies Rejection_reason; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary protocol_version_not_supported
@@ -156,7 +156,7 @@ const Rejection_reason_protocol_version_not_supported: Rejection_reason = 4; /* 
  * @type {number}
  */
 export
-const protocol_version_not_supported: Rejection_reason = Rejection_reason_protocol_version_not_supported; /* SHORT_NAMED_INTEGER_VALUE */
+const protocol_version_not_supported = Rejection_reason_protocol_version_not_supported satisfies Rejection_reason; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_Rejection_reason: $.ASN1Decoder<Rejection_reason> = $._decodeInteger;
 export const _encode_Rejection_reason: $.ASN1Encoder<Rejection_reason> = $._encodeInteger;
 

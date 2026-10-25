@@ -46,7 +46,7 @@ export type probe_ResultType = _enum_for_probe_ResultType | ENUMERATED;
  * @constant
  * @type {number}
  */
-export const probe_ResultType_running: probe_ResultType = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+export const probe_ResultType_running = _enum_for_probe_ResultType.running satisfies probe_ResultType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -55,7 +55,7 @@ export const probe_ResultType_running: probe_ResultType = 0; /* LONG_NAMED_ENUME
  * @constant
  * @type {number}
  */
-export const running: probe_ResultType = probe_ResultType_running; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const running = probe_ResultType_running satisfies probe_ResultType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -64,7 +64,7 @@ export const running: probe_ResultType = probe_ResultType_running; /* SHORT_NAME
  * @constant
  * @type {number}
  */
-export const probe_ResultType_finished: probe_ResultType = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+export const probe_ResultType_finished = _enum_for_probe_ResultType.finished satisfies probe_ResultType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -73,7 +73,7 @@ export const probe_ResultType_finished: probe_ResultType = 1; /* LONG_NAMED_ENUM
  * @constant
  * @type {number}
  */
-export const finished: probe_ResultType = probe_ResultType_finished; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const finished = probe_ResultType_finished satisfies probe_ResultType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -82,7 +82,7 @@ export const finished: probe_ResultType = probe_ResultType_finished; /* SHORT_NA
  * @constant
  * @type {number}
  */
-export const probe_ResultType_unknown: probe_ResultType = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+export const probe_ResultType_unknown = _enum_for_probe_ResultType.unknown satisfies probe_ResultType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -91,7 +91,7 @@ export const probe_ResultType_unknown: probe_ResultType = 2; /* LONG_NAMED_ENUME
  * @constant
  * @type {number}
  */
-export const unknown: probe_ResultType = probe_ResultType_unknown; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const unknown = probe_ResultType_unknown satisfies probe_ResultType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 

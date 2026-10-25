@@ -66,8 +66,8 @@ export const SwitchStatus = _enum_for_SwitchStatus;
  * @constant
  * @type {number}
  */
-export const SwitchStatus_pending: SwitchStatus =
-    SwitchStatus.pending; /* LONG_NAMED_ENUMERATED_VALUE */
+export const SwitchStatus_pending =
+    SwitchStatus.pending satisfies SwitchStatus; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -75,8 +75,8 @@ export const SwitchStatus_pending: SwitchStatus =
  * @constant
  * @type {number}
  */
-export const pending: SwitchStatus =
-    SwitchStatus.pending; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const pending =
+    SwitchStatus.pending satisfies SwitchStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -84,8 +84,8 @@ export const pending: SwitchStatus =
  * @constant
  * @type {number}
  */
-export const SwitchStatus_completed: SwitchStatus =
-    SwitchStatus.completed; /* LONG_NAMED_ENUMERATED_VALUE */
+export const SwitchStatus_completed =
+    SwitchStatus.completed satisfies SwitchStatus; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -93,8 +93,8 @@ export const SwitchStatus_completed: SwitchStatus =
  * @constant
  * @type {number}
  */
-export const completed: SwitchStatus =
-    SwitchStatus.completed; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const completed =
+    SwitchStatus.completed satisfies SwitchStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -102,8 +102,8 @@ export const completed: SwitchStatus =
  * @constant
  * @type {number}
  */
-export const SwitchStatus_operateFailed: SwitchStatus =
-    SwitchStatus.operateFailed; /* LONG_NAMED_ENUMERATED_VALUE */
+export const SwitchStatus_operateFailed =
+    SwitchStatus.operateFailed satisfies SwitchStatus; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -111,8 +111,8 @@ export const SwitchStatus_operateFailed: SwitchStatus =
  * @constant
  * @type {number}
  */
-export const operateFailed: SwitchStatus =
-    SwitchStatus.operateFailed; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const operateFailed =
+    SwitchStatus.operateFailed satisfies SwitchStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 

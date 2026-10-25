@@ -46,7 +46,7 @@ type IST_SupportIndicator = _enum_for_IST_SupportIndicator | ENUMERATED;
  * @type {number}
  */
 export
-const IST_SupportIndicator_basicISTSupported: IST_SupportIndicator = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+const IST_SupportIndicator_basicISTSupported = _enum_for_IST_SupportIndicator.basicISTSupported satisfies IST_SupportIndicator; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary basicISTSupported
@@ -58,7 +58,7 @@ const IST_SupportIndicator_basicISTSupported: IST_SupportIndicator = 0; /* LONG_
  * @type {number}
  */
 export
-const basicISTSupported: IST_SupportIndicator = IST_SupportIndicator_basicISTSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
+const basicISTSupported = IST_SupportIndicator_basicISTSupported satisfies IST_SupportIndicator; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary IST_SupportIndicator_istCommandSupported
@@ -72,7 +72,7 @@ const basicISTSupported: IST_SupportIndicator = IST_SupportIndicator_basicISTSup
  * @type {number}
  */
 export
-const IST_SupportIndicator_istCommandSupported: IST_SupportIndicator = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const IST_SupportIndicator_istCommandSupported = _enum_for_IST_SupportIndicator.istCommandSupported satisfies IST_SupportIndicator; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary istCommandSupported
@@ -86,7 +86,7 @@ const IST_SupportIndicator_istCommandSupported: IST_SupportIndicator = 1; /* LON
  * @type {number}
  */
 export
-const istCommandSupported: IST_SupportIndicator = IST_SupportIndicator_istCommandSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
+const istCommandSupported = IST_SupportIndicator_istCommandSupported satisfies IST_SupportIndicator; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) IST_SupportIndicator

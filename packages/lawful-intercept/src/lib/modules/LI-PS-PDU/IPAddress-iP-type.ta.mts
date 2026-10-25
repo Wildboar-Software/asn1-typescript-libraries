@@ -80,7 +80,7 @@ type IPAddress_iP_type = _enum_for_IPAddress_iP_type | ENUMERATED;
  * @type {number}
  */
 export
-const IPAddress_iP_type_iPV4: IPAddress_iP_type = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+const IPAddress_iP_type_iPV4 = _enum_for_IPAddress_iP_type.iPV4 satisfies IPAddress_iP_type; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary iPV4
@@ -96,7 +96,7 @@ const IPAddress_iP_type_iPV4: IPAddress_iP_type = 0; /* LONG_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const iPV4: IPAddress_iP_type = IPAddress_iP_type_iPV4; /* SHORT_NAMED_ENUMERATED_VALUE */
+const iPV4 = IPAddress_iP_type_iPV4 satisfies IPAddress_iP_type; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary IPAddress_iP_type_iPV6
@@ -113,7 +113,7 @@ const iPV4: IPAddress_iP_type = IPAddress_iP_type_iPV4; /* SHORT_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const IPAddress_iP_type_iPV6: IPAddress_iP_type = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const IPAddress_iP_type_iPV6 = _enum_for_IPAddress_iP_type.iPV6 satisfies IPAddress_iP_type; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary iPV6
@@ -130,7 +130,7 @@ const IPAddress_iP_type_iPV6: IPAddress_iP_type = 1; /* LONG_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const iPV6: IPAddress_iP_type = IPAddress_iP_type_iPV6; /* SHORT_NAMED_ENUMERATED_VALUE */
+const iPV6 = IPAddress_iP_type_iPV6 satisfies IPAddress_iP_type; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_IPAddress_iP_type: $.ASN1Decoder<IPAddress_iP_type> = $._decodeEnumerated;
 export const _encode_IPAddress_iP_type: $.ASN1Encoder<IPAddress_iP_type> = $._encodeEnumerated;
 

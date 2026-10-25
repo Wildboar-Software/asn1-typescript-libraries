@@ -66,8 +66,8 @@ export const ValidControlType = _enum_for_ValidControlType;
  * @constant
  * @type {number}
  */
-export const ValidControlType_momentaryOnly: ValidControlType =
-    ValidControlType.momentaryOnly; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ValidControlType_momentaryOnly =
+    ValidControlType.momentaryOnly satisfies ValidControlType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -75,8 +75,8 @@ export const ValidControlType_momentaryOnly: ValidControlType =
  * @constant
  * @type {number}
  */
-export const momentaryOnly: ValidControlType =
-    ValidControlType.momentaryOnly; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const momentaryOnly =
+    ValidControlType.momentaryOnly satisfies ValidControlType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -84,8 +84,8 @@ export const momentaryOnly: ValidControlType =
  * @constant
  * @type {number}
  */
-export const ValidControlType_continuousOnly: ValidControlType =
-    ValidControlType.continuousOnly; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ValidControlType_continuousOnly =
+    ValidControlType.continuousOnly satisfies ValidControlType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -93,8 +93,8 @@ export const ValidControlType_continuousOnly: ValidControlType =
  * @constant
  * @type {number}
  */
-export const continuousOnly: ValidControlType =
-    ValidControlType.continuousOnly; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const continuousOnly =
+    ValidControlType.continuousOnly satisfies ValidControlType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -102,8 +102,8 @@ export const continuousOnly: ValidControlType =
  * @constant
  * @type {number}
  */
-export const ValidControlType_both: ValidControlType =
-    ValidControlType.both; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ValidControlType_both =
+    ValidControlType.both satisfies ValidControlType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -111,8 +111,8 @@ export const ValidControlType_both: ValidControlType =
  * @constant
  * @type {number}
  */
-export const both: ValidControlType =
-    ValidControlType.both; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const both =
+    ValidControlType.both satisfies ValidControlType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 

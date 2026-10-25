@@ -37,84 +37,84 @@ export type BuiltInContentType = INTEGER;
  * @constant
  * @type {number}
  */
-export const BuiltInContentType_unidentified: BuiltInContentType = 0; /* LONG_NAMED_INTEGER_VALUE */
+export const BuiltInContentType_unidentified = 0 satisfies BuiltInContentType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary BuiltInContentType_unidentified
  * @constant
  * @type {number}
  */
-export const unidentified: BuiltInContentType = BuiltInContentType_unidentified; /* SHORT_NAMED_INTEGER_VALUE */
+export const unidentified = BuiltInContentType_unidentified satisfies BuiltInContentType; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary BuiltInContentType_external
  * @constant
  * @type {number}
  */
-export const BuiltInContentType_external: BuiltInContentType = 1; /* LONG_NAMED_INTEGER_VALUE */
+export const BuiltInContentType_external = 1 satisfies BuiltInContentType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary BuiltInContentType_external
  * @constant
  * @type {number}
  */
-export const external: BuiltInContentType = BuiltInContentType_external; /* SHORT_NAMED_INTEGER_VALUE */
+export const external = BuiltInContentType_external satisfies BuiltInContentType; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary BuiltInContentType_interpersonal_messaging_1984
  * @constant
  * @type {number}
  */
-export const BuiltInContentType_interpersonal_messaging_1984: BuiltInContentType = 2; /* LONG_NAMED_INTEGER_VALUE */
+export const BuiltInContentType_interpersonal_messaging_1984 = 2 satisfies BuiltInContentType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary BuiltInContentType_interpersonal_messaging_1984
  * @constant
  * @type {number}
  */
-export const interpersonal_messaging_1984: BuiltInContentType = BuiltInContentType_interpersonal_messaging_1984; /* SHORT_NAMED_INTEGER_VALUE */
+export const interpersonal_messaging_1984 = BuiltInContentType_interpersonal_messaging_1984 satisfies BuiltInContentType; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary BuiltInContentType_interpersonal_messaging_1988
  * @constant
  * @type {number}
  */
-export const BuiltInContentType_interpersonal_messaging_1988: BuiltInContentType = 22; /* LONG_NAMED_INTEGER_VALUE */
+export const BuiltInContentType_interpersonal_messaging_1988 = 22 satisfies BuiltInContentType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary BuiltInContentType_interpersonal_messaging_1988
  * @constant
  * @type {number}
  */
-export const interpersonal_messaging_1988: BuiltInContentType = BuiltInContentType_interpersonal_messaging_1988; /* SHORT_NAMED_INTEGER_VALUE */
+export const interpersonal_messaging_1988 = BuiltInContentType_interpersonal_messaging_1988 satisfies BuiltInContentType; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary BuiltInContentType_edi_messaging
  * @constant
  * @type {number}
  */
-export const BuiltInContentType_edi_messaging: BuiltInContentType = 35; /* LONG_NAMED_INTEGER_VALUE */
+export const BuiltInContentType_edi_messaging = 35 satisfies BuiltInContentType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary BuiltInContentType_edi_messaging
  * @constant
  * @type {number}
  */
-export const edi_messaging: BuiltInContentType = BuiltInContentType_edi_messaging; /* SHORT_NAMED_INTEGER_VALUE */
+export const edi_messaging = BuiltInContentType_edi_messaging satisfies BuiltInContentType; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary BuiltInContentType_voice_messaging
  * @constant
  * @type {number}
  */
-export const BuiltInContentType_voice_messaging: BuiltInContentType = 40; /* LONG_NAMED_INTEGER_VALUE */
+export const BuiltInContentType_voice_messaging = 40 satisfies BuiltInContentType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary BuiltInContentType_voice_messaging
  * @constant
  * @type {number}
  */
-export const voice_messaging: BuiltInContentType = BuiltInContentType_voice_messaging; /* SHORT_NAMED_INTEGER_VALUE */
+export const voice_messaging = BuiltInContentType_voice_messaging satisfies BuiltInContentType; /* SHORT_NAMED_INTEGER_VALUE */
 
 let _cached_decoder_for_BuiltInContentType: $.ASN1Decoder<BuiltInContentType> | null = null;
 

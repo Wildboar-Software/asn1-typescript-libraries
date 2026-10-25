@@ -45,7 +45,7 @@ type BlockingUsage = INTEGER;
  * @type {number}
  */
 export
-const BlockingUsage_permitted: BlockingUsage = 0; /* LONG_NAMED_INTEGER_VALUE */
+const BlockingUsage_permitted = 0 satisfies BlockingUsage; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary BlockingUsage_permitted
@@ -56,7 +56,7 @@ const BlockingUsage_permitted: BlockingUsage = 0; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const permitted: BlockingUsage = BlockingUsage_permitted; /* SHORT_NAMED_INTEGER_VALUE */
+const permitted = BlockingUsage_permitted satisfies BlockingUsage; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary BlockingUsage_notPermitted
@@ -71,7 +71,7 @@ const permitted: BlockingUsage = BlockingUsage_permitted; /* SHORT_NAMED_INTEGER
  * @type {number}
  */
 export
-const BlockingUsage_notPermitted: BlockingUsage = 1; /* LONG_NAMED_INTEGER_VALUE */
+const BlockingUsage_notPermitted = 1 satisfies BlockingUsage; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary BlockingUsage_notPermitted
@@ -82,7 +82,7 @@ const BlockingUsage_notPermitted: BlockingUsage = 1; /* LONG_NAMED_INTEGER_VALUE
  * @type {number}
  */
 export
-const notPermitted: BlockingUsage = BlockingUsage_notPermitted; /* SHORT_NAMED_INTEGER_VALUE */
+const notPermitted = BlockingUsage_notPermitted satisfies BlockingUsage; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_BlockingUsage: $.ASN1Decoder<BlockingUsage> = $._decodeInteger;
 export const _encode_BlockingUsage: $.ASN1Encoder<BlockingUsage> = $._encodeInteger;
 

@@ -29,7 +29,7 @@ export type HOBRole = INTEGER;
  * @constant
  * @type {number}
  */
-export const HOBRole_superior: HOBRole = 0; /* LONG_NAMED_INTEGER_VALUE */
+export const HOBRole_superior = 0 satisfies HOBRole; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary HOBRole_superior
@@ -41,7 +41,7 @@ export const HOBRole_superior: HOBRole = 0; /* LONG_NAMED_INTEGER_VALUE */
  * @constant
  * @type {number}
  */
-export const superior: HOBRole = HOBRole_superior; /* SHORT_NAMED_INTEGER_VALUE */
+export const superior = HOBRole_superior satisfies HOBRole; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary HOBRole_subordinate
@@ -52,7 +52,7 @@ export const superior: HOBRole = HOBRole_superior; /* SHORT_NAMED_INTEGER_VALUE 
  * @constant
  * @type {number}
  */
-export const HOBRole_subordinate: HOBRole = 1; /* LONG_NAMED_INTEGER_VALUE */
+export const HOBRole_subordinate = 1 satisfies HOBRole; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary HOBRole_subordinate
@@ -63,7 +63,7 @@ export const HOBRole_subordinate: HOBRole = 1; /* LONG_NAMED_INTEGER_VALUE */
  * @constant
  * @type {number}
  */
-export const subordinate: HOBRole = HOBRole_subordinate; /* SHORT_NAMED_INTEGER_VALUE */
+export const subordinate = HOBRole_subordinate satisfies HOBRole; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_HOBRole = $._decodeInteger;

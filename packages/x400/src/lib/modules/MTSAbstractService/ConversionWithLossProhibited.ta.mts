@@ -71,32 +71,32 @@ export const ConversionWithLossProhibited = _enum_for_ConversionWithLossProhibit
  * @constant
  * @type {number}
  */
-export const ConversionWithLossProhibited_conversion_with_loss_allowed: ConversionWithLossProhibited =
-    ConversionWithLossProhibited.conversion_with_loss_allowed; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ConversionWithLossProhibited_conversion_with_loss_allowed =
+    ConversionWithLossProhibited.conversion_with_loss_allowed satisfies ConversionWithLossProhibited; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary conversion_with_loss_allowed
  * @constant
  * @type {number}
  */
-export const conversion_with_loss_allowed: ConversionWithLossProhibited =
-    ConversionWithLossProhibited.conversion_with_loss_allowed; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const conversion_with_loss_allowed =
+    ConversionWithLossProhibited.conversion_with_loss_allowed satisfies ConversionWithLossProhibited; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ConversionWithLossProhibited_conversion_with_loss_prohibited
  * @constant
  * @type {number}
  */
-export const ConversionWithLossProhibited_conversion_with_loss_prohibited: ConversionWithLossProhibited =
-    ConversionWithLossProhibited.conversion_with_loss_prohibited; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ConversionWithLossProhibited_conversion_with_loss_prohibited =
+    ConversionWithLossProhibited.conversion_with_loss_prohibited satisfies ConversionWithLossProhibited; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary conversion_with_loss_prohibited
  * @constant
  * @type {number}
  */
-export const conversion_with_loss_prohibited: ConversionWithLossProhibited =
-    ConversionWithLossProhibited.conversion_with_loss_prohibited; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const conversion_with_loss_prohibited =
+    ConversionWithLossProhibited.conversion_with_loss_prohibited satisfies ConversionWithLossProhibited; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 export function _decode_ConversionWithLossProhibited(el: _Element): ConversionWithLossProhibited {

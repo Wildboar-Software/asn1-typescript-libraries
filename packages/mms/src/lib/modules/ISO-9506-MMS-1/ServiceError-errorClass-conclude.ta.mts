@@ -44,7 +44,7 @@ type ServiceError_errorClass_conclude = INTEGER;
  * @type {number}
  */
 export
-const ServiceError_errorClass_conclude_other: ServiceError_errorClass_conclude = 0; /* LONG_NAMED_INTEGER_VALUE */
+const ServiceError_errorClass_conclude_other = 0 satisfies ServiceError_errorClass_conclude; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceError_errorClass_conclude_other
@@ -56,7 +56,7 @@ const ServiceError_errorClass_conclude_other: ServiceError_errorClass_conclude =
  * @type {number}
  */
 export
-const other: ServiceError_errorClass_conclude = ServiceError_errorClass_conclude_other; /* SHORT_NAMED_INTEGER_VALUE */
+const other = ServiceError_errorClass_conclude_other satisfies ServiceError_errorClass_conclude; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceError_errorClass_conclude_further_communication_required
@@ -69,7 +69,7 @@ const other: ServiceError_errorClass_conclude = ServiceError_errorClass_conclude
  * @type {number}
  */
 export
-const ServiceError_errorClass_conclude_further_communication_required: ServiceError_errorClass_conclude = 1; /* LONG_NAMED_INTEGER_VALUE */
+const ServiceError_errorClass_conclude_further_communication_required = 1 satisfies ServiceError_errorClass_conclude; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceError_errorClass_conclude_further_communication_required
@@ -82,7 +82,7 @@ const ServiceError_errorClass_conclude_further_communication_required: ServiceEr
  * @type {number}
  */
 export
-const further_communication_required: ServiceError_errorClass_conclude = ServiceError_errorClass_conclude_further_communication_required; /* SHORT_NAMED_INTEGER_VALUE */
+const further_communication_required = ServiceError_errorClass_conclude_further_communication_required satisfies ServiceError_errorClass_conclude; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_ServiceError_errorClass_conclude = $._decodeInteger;
 export const _encode_ServiceError_errorClass_conclude = $._encodeInteger;
 

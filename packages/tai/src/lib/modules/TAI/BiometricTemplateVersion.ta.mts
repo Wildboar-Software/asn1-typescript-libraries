@@ -41,7 +41,7 @@ type BiometricTemplateVersion = INTEGER;
  * @type {number}
  */
 export
-const BiometricTemplateVersion_v0: BiometricTemplateVersion = 0; /* LONG_NAMED_INTEGER_VALUE */
+const BiometricTemplateVersion_v0 = 0 satisfies BiometricTemplateVersion; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary BiometricTemplateVersion_v0
@@ -53,7 +53,7 @@ const BiometricTemplateVersion_v0: BiometricTemplateVersion = 0; /* LONG_NAMED_I
  * @type {number}
  */
 export
-const v0: BiometricTemplateVersion = BiometricTemplateVersion_v0; /* SHORT_NAMED_INTEGER_VALUE */
+const v0 = BiometricTemplateVersion_v0 satisfies BiometricTemplateVersion; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_BiometricTemplateVersion = $._decodeInteger;
 export const _encode_BiometricTemplateVersion = $._encodeInteger;
 

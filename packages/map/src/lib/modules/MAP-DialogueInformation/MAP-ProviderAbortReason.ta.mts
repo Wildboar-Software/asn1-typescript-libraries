@@ -86,7 +86,7 @@ const MAP_ProviderAbortReason = _enum_for_MAP_ProviderAbortReason;
  * @type {number}
  */
 export
-const MAP_ProviderAbortReason_abnormalDialogue: MAP_ProviderAbortReason = MAP_ProviderAbortReason.abnormalDialogue; /* LONG_NAMED_ENUMERATED_VALUE */
+const MAP_ProviderAbortReason_abnormalDialogue = MAP_ProviderAbortReason.abnormalDialogue satisfies MAP_ProviderAbortReason; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary abnormalDialogue
@@ -99,7 +99,7 @@ const MAP_ProviderAbortReason_abnormalDialogue: MAP_ProviderAbortReason = MAP_Pr
  * @type {number}
  */
 export
-const abnormalDialogue: MAP_ProviderAbortReason = MAP_ProviderAbortReason.abnormalDialogue; /* SHORT_NAMED_ENUMERATED_VALUE */
+const abnormalDialogue = MAP_ProviderAbortReason.abnormalDialogue satisfies MAP_ProviderAbortReason; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MAP_ProviderAbortReason_invalidPDU
@@ -114,7 +114,7 @@ const abnormalDialogue: MAP_ProviderAbortReason = MAP_ProviderAbortReason.abnorm
  * @type {number}
  */
 export
-const MAP_ProviderAbortReason_invalidPDU: MAP_ProviderAbortReason = MAP_ProviderAbortReason.invalidPDU; /* LONG_NAMED_ENUMERATED_VALUE */
+const MAP_ProviderAbortReason_invalidPDU = MAP_ProviderAbortReason.invalidPDU satisfies MAP_ProviderAbortReason; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidPDU
@@ -127,7 +127,7 @@ const MAP_ProviderAbortReason_invalidPDU: MAP_ProviderAbortReason = MAP_Provider
  * @type {number}
  */
 export
-const invalidPDU: MAP_ProviderAbortReason = MAP_ProviderAbortReason.invalidPDU; /* SHORT_NAMED_ENUMERATED_VALUE */
+const invalidPDU = MAP_ProviderAbortReason.invalidPDU satisfies MAP_ProviderAbortReason; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) MAP_ProviderAbortReason

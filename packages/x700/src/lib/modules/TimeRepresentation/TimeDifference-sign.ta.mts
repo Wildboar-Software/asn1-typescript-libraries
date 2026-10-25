@@ -77,16 +77,16 @@ export const TimeDifference_sign = _enum_for_TimeDifference_sign;
  * @constant
  * @type {number}
  */
-export const TimeDifference_sign_positive: TimeDifference_sign =
-    TimeDifference_sign.positive; /* LONG_NAMED_ENUMERATED_VALUE */
+export const TimeDifference_sign_positive =
+    TimeDifference_sign.positive satisfies TimeDifference_sign; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary positive
  * @constant
  * @type {number}
  */
-export const positive: TimeDifference_sign =
-    TimeDifference_sign.positive; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const positive =
+    TimeDifference_sign.positive satisfies TimeDifference_sign; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TimeDifference_sign_negative
@@ -97,16 +97,16 @@ export const positive: TimeDifference_sign =
  * @constant
  * @type {number}
  */
-export const TimeDifference_sign_negative: TimeDifference_sign =
-    TimeDifference_sign.negative; /* LONG_NAMED_ENUMERATED_VALUE */
+export const TimeDifference_sign_negative =
+    TimeDifference_sign.negative satisfies TimeDifference_sign; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary negative
  * @constant
  * @type {number}
  */
-export const negative: TimeDifference_sign =
-    TimeDifference_sign.negative; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const negative =
+    TimeDifference_sign.negative satisfies TimeDifference_sign; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 export function _decode_TimeDifference_sign(el: _Element): TimeDifference_sign {

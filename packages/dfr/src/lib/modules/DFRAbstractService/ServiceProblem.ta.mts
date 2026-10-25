@@ -109,7 +109,7 @@ const ServiceProblem = _enum_for_ServiceProblem;
  * @type {number}
  */
 export
-const ServiceProblem_server_busy: ServiceProblem = ServiceProblem.server_busy; /* LONG_NAMED_ENUMERATED_VALUE */
+const ServiceProblem_server_busy = ServiceProblem.server_busy satisfies ServiceProblem; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary server_busy
@@ -120,7 +120,7 @@ const ServiceProblem_server_busy: ServiceProblem = ServiceProblem.server_busy; /
  * @type {number}
  */
 export
-const server_busy: ServiceProblem = ServiceProblem.server_busy; /* SHORT_NAMED_ENUMERATED_VALUE */
+const server_busy = ServiceProblem.server_busy satisfies ServiceProblem; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ServiceProblem_server_unavailable
@@ -131,7 +131,7 @@ const server_busy: ServiceProblem = ServiceProblem.server_busy; /* SHORT_NAMED_E
  * @type {number}
  */
 export
-const ServiceProblem_server_unavailable: ServiceProblem = ServiceProblem.server_unavailable; /* LONG_NAMED_ENUMERATED_VALUE */
+const ServiceProblem_server_unavailable = ServiceProblem.server_unavailable satisfies ServiceProblem; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary server_unavailable
@@ -142,7 +142,7 @@ const ServiceProblem_server_unavailable: ServiceProblem = ServiceProblem.server_
  * @type {number}
  */
 export
-const server_unavailable: ServiceProblem = ServiceProblem.server_unavailable; /* SHORT_NAMED_ENUMERATED_VALUE */
+const server_unavailable = ServiceProblem.server_unavailable satisfies ServiceProblem; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ServiceProblem_operation_too_complex
@@ -153,7 +153,7 @@ const server_unavailable: ServiceProblem = ServiceProblem.server_unavailable; /*
  * @type {number}
  */
 export
-const ServiceProblem_operation_too_complex: ServiceProblem = ServiceProblem.operation_too_complex; /* LONG_NAMED_ENUMERATED_VALUE */
+const ServiceProblem_operation_too_complex = ServiceProblem.operation_too_complex satisfies ServiceProblem; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary operation_too_complex
@@ -164,7 +164,7 @@ const ServiceProblem_operation_too_complex: ServiceProblem = ServiceProblem.oper
  * @type {number}
  */
 export
-const operation_too_complex: ServiceProblem = ServiceProblem.operation_too_complex; /* SHORT_NAMED_ENUMERATED_VALUE */
+const operation_too_complex = ServiceProblem.operation_too_complex satisfies ServiceProblem; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ServiceProblem_resource_limit_exceeded
@@ -175,7 +175,7 @@ const operation_too_complex: ServiceProblem = ServiceProblem.operation_too_compl
  * @type {number}
  */
 export
-const ServiceProblem_resource_limit_exceeded: ServiceProblem = ServiceProblem.resource_limit_exceeded; /* LONG_NAMED_ENUMERATED_VALUE */
+const ServiceProblem_resource_limit_exceeded = ServiceProblem.resource_limit_exceeded satisfies ServiceProblem; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary resource_limit_exceeded
@@ -186,7 +186,7 @@ const ServiceProblem_resource_limit_exceeded: ServiceProblem = ServiceProblem.re
  * @type {number}
  */
 export
-const resource_limit_exceeded: ServiceProblem = ServiceProblem.resource_limit_exceeded; /* SHORT_NAMED_ENUMERATED_VALUE */
+const resource_limit_exceeded = ServiceProblem.resource_limit_exceeded satisfies ServiceProblem; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ServiceProblem_maximum_length_exceeded
@@ -197,7 +197,7 @@ const resource_limit_exceeded: ServiceProblem = ServiceProblem.resource_limit_ex
  * @type {number}
  */
 export
-const ServiceProblem_maximum_length_exceeded: ServiceProblem = ServiceProblem.maximum_length_exceeded; /* LONG_NAMED_ENUMERATED_VALUE */
+const ServiceProblem_maximum_length_exceeded = ServiceProblem.maximum_length_exceeded satisfies ServiceProblem; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary maximum_length_exceeded
@@ -208,7 +208,7 @@ const ServiceProblem_maximum_length_exceeded: ServiceProblem = ServiceProblem.ma
  * @type {number}
  */
 export
-const maximum_length_exceeded: ServiceProblem = ServiceProblem.maximum_length_exceeded; /* SHORT_NAMED_ENUMERATED_VALUE */
+const maximum_length_exceeded = ServiceProblem.maximum_length_exceeded satisfies ServiceProblem; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ServiceProblem_cannot_continue
@@ -219,7 +219,7 @@ const maximum_length_exceeded: ServiceProblem = ServiceProblem.maximum_length_ex
  * @type {number}
  */
 export
-const ServiceProblem_cannot_continue: ServiceProblem = ServiceProblem.cannot_continue; /* LONG_NAMED_ENUMERATED_VALUE */
+const ServiceProblem_cannot_continue = ServiceProblem.cannot_continue satisfies ServiceProblem; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary cannot_continue
@@ -230,7 +230,7 @@ const ServiceProblem_cannot_continue: ServiceProblem = ServiceProblem.cannot_con
  * @type {number}
  */
 export
-const cannot_continue: ServiceProblem = ServiceProblem.cannot_continue; /* SHORT_NAMED_ENUMERATED_VALUE */
+const cannot_continue = ServiceProblem.cannot_continue satisfies ServiceProblem; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ServiceProblem_unclassified_server_error
@@ -241,7 +241,7 @@ const cannot_continue: ServiceProblem = ServiceProblem.cannot_continue; /* SHORT
  * @type {number}
  */
 export
-const ServiceProblem_unclassified_server_error: ServiceProblem = ServiceProblem.unclassified_server_error; /* LONG_NAMED_ENUMERATED_VALUE */
+const ServiceProblem_unclassified_server_error = ServiceProblem.unclassified_server_error satisfies ServiceProblem; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unclassified_server_error
@@ -252,7 +252,7 @@ const ServiceProblem_unclassified_server_error: ServiceProblem = ServiceProblem.
  * @type {number}
  */
 export
-const unclassified_server_error: ServiceProblem = ServiceProblem.unclassified_server_error; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unclassified_server_error = ServiceProblem.unclassified_server_error satisfies ServiceProblem; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ServiceProblem_function_set_violation
@@ -263,7 +263,7 @@ const unclassified_server_error: ServiceProblem = ServiceProblem.unclassified_se
  * @type {number}
  */
 export
-const ServiceProblem_function_set_violation: ServiceProblem = ServiceProblem.function_set_violation; /* LONG_NAMED_ENUMERATED_VALUE */
+const ServiceProblem_function_set_violation = ServiceProblem.function_set_violation satisfies ServiceProblem; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary function_set_violation
@@ -274,7 +274,7 @@ const ServiceProblem_function_set_violation: ServiceProblem = ServiceProblem.fun
  * @type {number}
  */
 export
-const function_set_violation: ServiceProblem = ServiceProblem.function_set_violation; /* SHORT_NAMED_ENUMERATED_VALUE */
+const function_set_violation = ServiceProblem.function_set_violation satisfies ServiceProblem; /* SHORT_NAMED_ENUMERATED_VALUE */
 export function _decode_ServiceProblem(el: _Element): ServiceProblem {
     const enumerated = $._decodeEnumerated(el);
     switch (enumerated) {

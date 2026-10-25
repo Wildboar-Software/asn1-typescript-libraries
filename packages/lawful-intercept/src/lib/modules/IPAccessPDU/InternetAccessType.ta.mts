@@ -74,7 +74,7 @@ type InternetAccessType = _enum_for_InternetAccessType | ENUMERATED;
  * @type {number}
  */
 export
-const InternetAccessType_undefined: InternetAccessType = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+const InternetAccessType_undefined = _enum_for_InternetAccessType.undefined satisfies InternetAccessType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary undefined
@@ -86,7 +86,7 @@ const InternetAccessType_undefined: InternetAccessType = 0; /* LONG_NAMED_ENUMER
  * @type {number}
  */
 export
-const undefined: InternetAccessType = InternetAccessType_undefined; /* SHORT_NAMED_ENUMERATED_VALUE */
+const undefined = InternetAccessType_undefined satisfies InternetAccessType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary InternetAccessType_dialUp
@@ -101,7 +101,7 @@ const undefined: InternetAccessType = InternetAccessType_undefined; /* SHORT_NAM
  * @type {number}
  */
 export
-const InternetAccessType_dialUp: InternetAccessType = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const InternetAccessType_dialUp = _enum_for_InternetAccessType.dialUp satisfies InternetAccessType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary dialUp
@@ -113,7 +113,7 @@ const InternetAccessType_dialUp: InternetAccessType = 1; /* LONG_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const dialUp: InternetAccessType = InternetAccessType_dialUp; /* SHORT_NAMED_ENUMERATED_VALUE */
+const dialUp = InternetAccessType_dialUp satisfies InternetAccessType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary InternetAccessType_xDSL
@@ -129,7 +129,7 @@ const dialUp: InternetAccessType = InternetAccessType_dialUp; /* SHORT_NAMED_ENU
  * @type {number}
  */
 export
-const InternetAccessType_xDSL: InternetAccessType = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+const InternetAccessType_xDSL = _enum_for_InternetAccessType.xDSL satisfies InternetAccessType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary xDSL
@@ -141,7 +141,7 @@ const InternetAccessType_xDSL: InternetAccessType = 2; /* LONG_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const xDSL: InternetAccessType = InternetAccessType_xDSL; /* SHORT_NAMED_ENUMERATED_VALUE */
+const xDSL = InternetAccessType_xDSL satisfies InternetAccessType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary InternetAccessType_cableModem
@@ -156,7 +156,7 @@ const xDSL: InternetAccessType = InternetAccessType_xDSL; /* SHORT_NAMED_ENUMERA
  * @type {number}
  */
 export
-const InternetAccessType_cableModem: InternetAccessType = 3; /* LONG_NAMED_ENUMERATED_VALUE */
+const InternetAccessType_cableModem = _enum_for_InternetAccessType.cableModem satisfies InternetAccessType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary cableModem
@@ -168,7 +168,7 @@ const InternetAccessType_cableModem: InternetAccessType = 3; /* LONG_NAMED_ENUME
  * @type {number}
  */
 export
-const cableModem: InternetAccessType = InternetAccessType_cableModem; /* SHORT_NAMED_ENUMERATED_VALUE */
+const cableModem = InternetAccessType_cableModem satisfies InternetAccessType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary InternetAccessType_lAN
@@ -181,7 +181,7 @@ const cableModem: InternetAccessType = InternetAccessType_cableModem; /* SHORT_N
  * @type {number}
  */
 export
-const InternetAccessType_lAN: InternetAccessType = 4; /* LONG_NAMED_ENUMERATED_VALUE */
+const InternetAccessType_lAN = _enum_for_InternetAccessType.lAN satisfies InternetAccessType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary lAN
@@ -193,7 +193,7 @@ const InternetAccessType_lAN: InternetAccessType = 4; /* LONG_NAMED_ENUMERATED_V
  * @type {number}
  */
 export
-const lAN: InternetAccessType = InternetAccessType_lAN; /* SHORT_NAMED_ENUMERATED_VALUE */
+const lAN = InternetAccessType_lAN satisfies InternetAccessType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary InternetAccessType_wirelessLAN
@@ -210,7 +210,7 @@ const lAN: InternetAccessType = InternetAccessType_lAN; /* SHORT_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const InternetAccessType_wirelessLAN: InternetAccessType = 5; /* LONG_NAMED_ENUMERATED_VALUE */
+const InternetAccessType_wirelessLAN = _enum_for_InternetAccessType.wirelessLAN satisfies InternetAccessType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary wirelessLAN
@@ -222,7 +222,7 @@ const InternetAccessType_wirelessLAN: InternetAccessType = 5; /* LONG_NAMED_ENUM
  * @type {number}
  */
 export
-const wirelessLAN: InternetAccessType = InternetAccessType_wirelessLAN; /* SHORT_NAMED_ENUMERATED_VALUE */
+const wirelessLAN = InternetAccessType_wirelessLAN satisfies InternetAccessType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary InternetAccessType_fTTx
@@ -235,7 +235,7 @@ const wirelessLAN: InternetAccessType = InternetAccessType_wirelessLAN; /* SHORT
  * @type {number}
  */
 export
-const InternetAccessType_fTTx: InternetAccessType = 6; /* LONG_NAMED_ENUMERATED_VALUE */
+const InternetAccessType_fTTx = _enum_for_InternetAccessType.fTTx satisfies InternetAccessType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary fTTx
@@ -247,7 +247,7 @@ const InternetAccessType_fTTx: InternetAccessType = 6; /* LONG_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const fTTx: InternetAccessType = InternetAccessType_fTTx; /* SHORT_NAMED_ENUMERATED_VALUE */
+const fTTx = InternetAccessType_fTTx satisfies InternetAccessType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary InternetAccessType_wIMAX_HIPERMAN
@@ -260,7 +260,7 @@ const fTTx: InternetAccessType = InternetAccessType_fTTx; /* SHORT_NAMED_ENUMERA
  * @type {number}
  */
 export
-const InternetAccessType_wIMAX_HIPERMAN: InternetAccessType = 7; /* LONG_NAMED_ENUMERATED_VALUE */
+const InternetAccessType_wIMAX_HIPERMAN = _enum_for_InternetAccessType.wIMAX_HIPERMAN satisfies InternetAccessType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary wIMAX_HIPERMAN
@@ -272,7 +272,7 @@ const InternetAccessType_wIMAX_HIPERMAN: InternetAccessType = 7; /* LONG_NAMED_E
  * @type {number}
  */
 export
-const wIMAX_HIPERMAN: InternetAccessType = InternetAccessType_wIMAX_HIPERMAN; /* SHORT_NAMED_ENUMERATED_VALUE */
+const wIMAX_HIPERMAN = InternetAccessType_wIMAX_HIPERMAN satisfies InternetAccessType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary InternetAccessType_satellite
@@ -285,7 +285,7 @@ const wIMAX_HIPERMAN: InternetAccessType = InternetAccessType_wIMAX_HIPERMAN; /*
  * @type {number}
  */
 export
-const InternetAccessType_satellite: InternetAccessType = 8; /* LONG_NAMED_ENUMERATED_VALUE */
+const InternetAccessType_satellite = _enum_for_InternetAccessType.satellite satisfies InternetAccessType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary satellite
@@ -298,7 +298,7 @@ const InternetAccessType_satellite: InternetAccessType = 8; /* LONG_NAMED_ENUMER
  * @type {number}
  */
 export
-const satellite: InternetAccessType = InternetAccessType_satellite; /* SHORT_NAMED_ENUMERATED_VALUE */
+const satellite = InternetAccessType_satellite satisfies InternetAccessType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary InternetAccessType_wireless_other
@@ -311,7 +311,7 @@ const satellite: InternetAccessType = InternetAccessType_satellite; /* SHORT_NAM
  * @type {number}
  */
 export
-const InternetAccessType_wireless_other: InternetAccessType = 9; /* LONG_NAMED_ENUMERATED_VALUE */
+const InternetAccessType_wireless_other = _enum_for_InternetAccessType.wireless_other satisfies InternetAccessType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary wireless_other
@@ -324,7 +324,7 @@ const InternetAccessType_wireless_other: InternetAccessType = 9; /* LONG_NAMED_E
  * @type {number}
  */
 export
-const wireless_other: InternetAccessType = InternetAccessType_wireless_other; /* SHORT_NAMED_ENUMERATED_VALUE */
+const wireless_other = InternetAccessType_wireless_other satisfies InternetAccessType; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_InternetAccessType: $.ASN1Decoder<InternetAccessType> = $._decodeEnumerated;
 export const _encode_InternetAccessType: $.ASN1Encoder<InternetAccessType> = $._encodeEnumerated;
 

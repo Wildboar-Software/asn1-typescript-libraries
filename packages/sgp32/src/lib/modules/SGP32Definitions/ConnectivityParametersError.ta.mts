@@ -39,7 +39,7 @@ type ConnectivityParametersError = INTEGER;
  * @type {number}
  */
 export
-const ConnectivityParametersError_parametersNotAvailable: ConnectivityParametersError = 1; /* LONG_NAMED_INTEGER_VALUE */
+const ConnectivityParametersError_parametersNotAvailable = 1 satisfies ConnectivityParametersError; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ConnectivityParametersError_parametersNotAvailable
@@ -51,7 +51,7 @@ const ConnectivityParametersError_parametersNotAvailable: ConnectivityParameters
  * @type {number}
  */
 export
-const parametersNotAvailable: ConnectivityParametersError = ConnectivityParametersError_parametersNotAvailable; /* SHORT_NAMED_INTEGER_VALUE */
+const parametersNotAvailable = ConnectivityParametersError_parametersNotAvailable satisfies ConnectivityParametersError; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ConnectivityParametersError_undefinedError
@@ -63,7 +63,7 @@ const parametersNotAvailable: ConnectivityParametersError = ConnectivityParamete
  * @type {number}
  */
 export
-const ConnectivityParametersError_undefinedError: ConnectivityParametersError = 127; /* LONG_NAMED_INTEGER_VALUE */
+const ConnectivityParametersError_undefinedError = 127 satisfies ConnectivityParametersError; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ConnectivityParametersError_undefinedError
@@ -75,7 +75,7 @@ const ConnectivityParametersError_undefinedError: ConnectivityParametersError = 
  * @type {number}
  */
 export
-const undefinedError: ConnectivityParametersError = ConnectivityParametersError_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
+const undefinedError = ConnectivityParametersError_undefinedError satisfies ConnectivityParametersError; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_ConnectivityParametersError: $.ASN1Decoder<ConnectivityParametersError> = $._decodeInteger;
 export const _encode_ConnectivityParametersError: $.ASN1Encoder<ConnectivityParametersError> = $._encodeInteger;
 

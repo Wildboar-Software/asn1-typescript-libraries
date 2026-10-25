@@ -27,7 +27,7 @@ export type ShadowingRole = INTEGER;
  * @constant
  * @type {number}
  */
-export const ShadowingRole_supplier: ShadowingRole = 0; /* LONG_NAMED_INTEGER_VALUE */
+export const ShadowingRole_supplier = 0 satisfies ShadowingRole; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ShadowingRole_supplier
@@ -38,7 +38,7 @@ export const ShadowingRole_supplier: ShadowingRole = 0; /* LONG_NAMED_INTEGER_VA
  * @constant
  * @type {number}
  */
-export const supplier: ShadowingRole = ShadowingRole_supplier; /* SHORT_NAMED_INTEGER_VALUE */
+export const supplier = ShadowingRole_supplier satisfies ShadowingRole; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ShadowingRole_consumer
@@ -49,7 +49,7 @@ export const supplier: ShadowingRole = ShadowingRole_supplier; /* SHORT_NAMED_IN
  * @constant
  * @type {number}
  */
-export const ShadowingRole_consumer: ShadowingRole = 1; /* LONG_NAMED_INTEGER_VALUE */
+export const ShadowingRole_consumer = 1 satisfies ShadowingRole; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ShadowingRole_consumer
@@ -60,7 +60,7 @@ export const ShadowingRole_consumer: ShadowingRole = 1; /* LONG_NAMED_INTEGER_VA
  * @constant
  * @type {number}
  */
-export const consumer: ShadowingRole = ShadowingRole_consumer; /* SHORT_NAMED_INTEGER_VALUE */
+export const consumer = ShadowingRole_consumer satisfies ShadowingRole; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_ShadowingRole = $._decodeInteger;

@@ -62,7 +62,7 @@ const ReceivedStatus = _enum_for_ReceivedStatus;
  * @type {number}
  */
 export
-const ReceivedStatus_messageComplete: ReceivedStatus = ReceivedStatus.messageComplete; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReceivedStatus_messageComplete = ReceivedStatus.messageComplete satisfies ReceivedStatus; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary messageComplete
@@ -70,7 +70,7 @@ const ReceivedStatus_messageComplete: ReceivedStatus = ReceivedStatus.messageCom
  * @type {number}
  */
 export
-const messageComplete: ReceivedStatus = ReceivedStatus.messageComplete; /* SHORT_NAMED_ENUMERATED_VALUE */
+const messageComplete = ReceivedStatus.messageComplete satisfies ReceivedStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReceivedStatus_messageInterrupted
@@ -78,7 +78,7 @@ const messageComplete: ReceivedStatus = ReceivedStatus.messageComplete; /* SHORT
  * @type {number}
  */
 export
-const ReceivedStatus_messageInterrupted: ReceivedStatus = ReceivedStatus.messageInterrupted; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReceivedStatus_messageInterrupted = ReceivedStatus.messageInterrupted satisfies ReceivedStatus; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary messageInterrupted
@@ -86,7 +86,7 @@ const ReceivedStatus_messageInterrupted: ReceivedStatus = ReceivedStatus.message
  * @type {number}
  */
 export
-const messageInterrupted: ReceivedStatus = ReceivedStatus.messageInterrupted; /* SHORT_NAMED_ENUMERATED_VALUE */
+const messageInterrupted = ReceivedStatus.messageInterrupted satisfies ReceivedStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReceivedStatus_messageTimeOut
@@ -94,7 +94,7 @@ const messageInterrupted: ReceivedStatus = ReceivedStatus.messageInterrupted; /*
  * @type {number}
  */
 export
-const ReceivedStatus_messageTimeOut: ReceivedStatus = ReceivedStatus.messageTimeOut; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReceivedStatus_messageTimeOut = ReceivedStatus.messageTimeOut satisfies ReceivedStatus; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary messageTimeOut
@@ -102,7 +102,7 @@ const ReceivedStatus_messageTimeOut: ReceivedStatus = ReceivedStatus.messageTime
  * @type {number}
  */
 export
-const messageTimeOut: ReceivedStatus = ReceivedStatus.messageTimeOut; /* SHORT_NAMED_ENUMERATED_VALUE */
+const messageTimeOut = ReceivedStatus.messageTimeOut satisfies ReceivedStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 function _decode_ReceivedStatus(el: _Element): ReceivedStatus {

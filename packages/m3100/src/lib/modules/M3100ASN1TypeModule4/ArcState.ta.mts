@@ -70,8 +70,8 @@ export const ArcState = _enum_for_ArcState;
  * @constant
  * @type {number}
  */
-export const ArcState_alm: ArcState =
-    ArcState.alm; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ArcState_alm =
+    ArcState.alm satisfies ArcState; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -79,7 +79,7 @@ export const ArcState_alm: ArcState =
  * @constant
  * @type {number}
  */
-export const alm: ArcState = ArcState.alm; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const alm = ArcState.alm satisfies ArcState; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -87,8 +87,8 @@ export const alm: ArcState = ArcState.alm; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @constant
  * @type {number}
  */
-export const ArcState_nalm: ArcState =
-    ArcState.nalm; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ArcState_nalm =
+    ArcState.nalm satisfies ArcState; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -96,7 +96,7 @@ export const ArcState_nalm: ArcState =
  * @constant
  * @type {number}
  */
-export const nalm: ArcState = ArcState.nalm; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const nalm = ArcState.nalm satisfies ArcState; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -104,8 +104,8 @@ export const nalm: ArcState = ArcState.nalm; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @constant
  * @type {number}
  */
-export const ArcState_nalmQualifiedInhibit: ArcState =
-    ArcState.nalmQualifiedInhibit; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ArcState_nalmQualifiedInhibit =
+    ArcState.nalmQualifiedInhibit satisfies ArcState; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -113,8 +113,8 @@ export const ArcState_nalmQualifiedInhibit: ArcState =
  * @constant
  * @type {number}
  */
-export const nalmQualifiedInhibit: ArcState =
-    ArcState.nalmQualifiedInhibit; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const nalmQualifiedInhibit =
+    ArcState.nalmQualifiedInhibit satisfies ArcState; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -122,8 +122,8 @@ export const nalmQualifiedInhibit: ArcState =
  * @constant
  * @type {number}
  */
-export const ArcState_nalmTimedInhibit: ArcState =
-    ArcState.nalmTimedInhibit; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ArcState_nalmTimedInhibit =
+    ArcState.nalmTimedInhibit satisfies ArcState; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -131,8 +131,8 @@ export const ArcState_nalmTimedInhibit: ArcState =
  * @constant
  * @type {number}
  */
-export const nalmTimedInhibit: ArcState =
-    ArcState.nalmTimedInhibit; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const nalmTimedInhibit =
+    ArcState.nalmTimedInhibit satisfies ArcState; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 

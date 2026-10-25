@@ -63,7 +63,7 @@ const SDP_Type = _enum_for_SDP_Type;
  * @type {number}
  */
 export
-const SDP_Type_sDP_offer: SDP_Type = SDP_Type.sDP_offer; /* LONG_NAMED_ENUMERATED_VALUE */
+const SDP_Type_sDP_offer = SDP_Type.sDP_offer satisfies SDP_Type; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sDP_offer
@@ -71,7 +71,7 @@ const SDP_Type_sDP_offer: SDP_Type = SDP_Type.sDP_offer; /* LONG_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const sDP_offer: SDP_Type = SDP_Type.sDP_offer; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sDP_offer = SDP_Type.sDP_offer satisfies SDP_Type; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SDP_Type_sDP_answer
@@ -79,7 +79,7 @@ const sDP_offer: SDP_Type = SDP_Type.sDP_offer; /* SHORT_NAMED_ENUMERATED_VALUE 
  * @type {number}
  */
 export
-const SDP_Type_sDP_answer: SDP_Type = SDP_Type.sDP_answer; /* LONG_NAMED_ENUMERATED_VALUE */
+const SDP_Type_sDP_answer = SDP_Type.sDP_answer satisfies SDP_Type; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sDP_answer
@@ -87,7 +87,7 @@ const SDP_Type_sDP_answer: SDP_Type = SDP_Type.sDP_answer; /* LONG_NAMED_ENUMERA
  * @type {number}
  */
 export
-const sDP_answer: SDP_Type = SDP_Type.sDP_answer; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sDP_answer = SDP_Type.sDP_answer satisfies SDP_Type; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_SDP_Type: $.ASN1Decoder<SDP_Type> = $._decodeEnumerated;

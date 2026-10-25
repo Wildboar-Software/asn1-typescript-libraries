@@ -68,32 +68,32 @@ export const DLExpansionProhibited = _enum_for_DLExpansionProhibited;
  * @constant
  * @type {number}
  */
-export const DLExpansionProhibited_dl_expansion_allowed: DLExpansionProhibited =
-    DLExpansionProhibited.dl_expansion_allowed; /* LONG_NAMED_ENUMERATED_VALUE */
+export const DLExpansionProhibited_dl_expansion_allowed =
+    DLExpansionProhibited.dl_expansion_allowed satisfies DLExpansionProhibited; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary dl_expansion_allowed
  * @constant
  * @type {number}
  */
-export const dl_expansion_allowed: DLExpansionProhibited =
-    DLExpansionProhibited.dl_expansion_allowed; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const dl_expansion_allowed =
+    DLExpansionProhibited.dl_expansion_allowed satisfies DLExpansionProhibited; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary DLExpansionProhibited_dl_expansion_prohibited
  * @constant
  * @type {number}
  */
-export const DLExpansionProhibited_dl_expansion_prohibited: DLExpansionProhibited =
-    DLExpansionProhibited.dl_expansion_prohibited; /* LONG_NAMED_ENUMERATED_VALUE */
+export const DLExpansionProhibited_dl_expansion_prohibited =
+    DLExpansionProhibited.dl_expansion_prohibited satisfies DLExpansionProhibited; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary dl_expansion_prohibited
  * @constant
  * @type {number}
  */
-export const dl_expansion_prohibited: DLExpansionProhibited =
-    DLExpansionProhibited.dl_expansion_prohibited; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const dl_expansion_prohibited =
+    DLExpansionProhibited.dl_expansion_prohibited satisfies DLExpansionProhibited; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 export function _decode_DLExpansionProhibited(el: _Element): DLExpansionProhibited {

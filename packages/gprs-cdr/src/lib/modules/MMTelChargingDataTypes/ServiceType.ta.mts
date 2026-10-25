@@ -79,7 +79,7 @@ type ServiceType = INTEGER;
  * @type {number}
  */
 export
-const ServiceType_oIPresentation: ServiceType = 0; /* LONG_NAMED_INTEGER_VALUE */
+const ServiceType_oIPresentation = 0 satisfies ServiceType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary oIPresentation
@@ -92,7 +92,7 @@ const ServiceType_oIPresentation: ServiceType = 0; /* LONG_NAMED_INTEGER_VALUE *
  * @type {number}
  */
 export
-const oIPresentation: ServiceType = ServiceType_oIPresentation; /* SHORT_NAMED_INTEGER_VALUE */
+const oIPresentation = ServiceType_oIPresentation satisfies ServiceType; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceType_oIRestriction
@@ -111,7 +111,7 @@ const oIPresentation: ServiceType = ServiceType_oIPresentation; /* SHORT_NAMED_I
  * @type {number}
  */
 export
-const ServiceType_oIRestriction: ServiceType = 1; /* LONG_NAMED_INTEGER_VALUE */
+const ServiceType_oIRestriction = 1 satisfies ServiceType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary oIRestriction
@@ -124,7 +124,7 @@ const ServiceType_oIRestriction: ServiceType = 1; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const oIRestriction: ServiceType = ServiceType_oIRestriction; /* SHORT_NAMED_INTEGER_VALUE */
+const oIRestriction = ServiceType_oIRestriction satisfies ServiceType; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceType_tIPresentation
@@ -142,7 +142,7 @@ const oIRestriction: ServiceType = ServiceType_oIRestriction; /* SHORT_NAMED_INT
  * @type {number}
  */
 export
-const ServiceType_tIPresentation: ServiceType = 2; /* LONG_NAMED_INTEGER_VALUE */
+const ServiceType_tIPresentation = 2 satisfies ServiceType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary tIPresentation
@@ -155,7 +155,7 @@ const ServiceType_tIPresentation: ServiceType = 2; /* LONG_NAMED_INTEGER_VALUE *
  * @type {number}
  */
 export
-const tIPresentation: ServiceType = ServiceType_tIPresentation; /* SHORT_NAMED_INTEGER_VALUE */
+const tIPresentation = ServiceType_tIPresentation satisfies ServiceType; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceType_tIRestriction
@@ -175,7 +175,7 @@ const tIPresentation: ServiceType = ServiceType_tIPresentation; /* SHORT_NAMED_I
  * @type {number}
  */
 export
-const ServiceType_tIRestriction: ServiceType = 3; /* LONG_NAMED_INTEGER_VALUE */
+const ServiceType_tIRestriction = 3 satisfies ServiceType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary tIRestriction
@@ -188,7 +188,7 @@ const ServiceType_tIRestriction: ServiceType = 3; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const tIRestriction: ServiceType = ServiceType_tIRestriction; /* SHORT_NAMED_INTEGER_VALUE */
+const tIRestriction = ServiceType_tIRestriction satisfies ServiceType; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceType_hOLD
@@ -208,7 +208,7 @@ const tIRestriction: ServiceType = ServiceType_tIRestriction; /* SHORT_NAMED_INT
  * @type {number}
  */
 export
-const ServiceType_hOLD: ServiceType = 4; /* LONG_NAMED_INTEGER_VALUE */
+const ServiceType_hOLD = 4 satisfies ServiceType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary hOLD
@@ -220,7 +220,7 @@ const ServiceType_hOLD: ServiceType = 4; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const hOLD: ServiceType = ServiceType_hOLD; /* SHORT_NAMED_INTEGER_VALUE */
+const hOLD = ServiceType_hOLD satisfies ServiceType; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceType_cBarring
@@ -243,7 +243,7 @@ const hOLD: ServiceType = ServiceType_hOLD; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const ServiceType_cBarring: ServiceType = 5; /* LONG_NAMED_INTEGER_VALUE */
+const ServiceType_cBarring = 5 satisfies ServiceType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary cBarring
@@ -255,7 +255,7 @@ const ServiceType_cBarring: ServiceType = 5; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const cBarring: ServiceType = ServiceType_cBarring; /* SHORT_NAMED_INTEGER_VALUE */
+const cBarring = ServiceType_cBarring satisfies ServiceType; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceType_cDIVersion
@@ -286,7 +286,7 @@ const cBarring: ServiceType = ServiceType_cBarring; /* SHORT_NAMED_INTEGER_VALUE
  * @type {number}
  */
 export
-const ServiceType_cDIVersion: ServiceType = 6; /* LONG_NAMED_INTEGER_VALUE */
+const ServiceType_cDIVersion = 6 satisfies ServiceType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary cDIVersion
@@ -299,7 +299,7 @@ const ServiceType_cDIVersion: ServiceType = 6; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const cDIVersion: ServiceType = ServiceType_cDIVersion; /* SHORT_NAMED_INTEGER_VALUE */
+const cDIVersion = ServiceType_cDIVersion satisfies ServiceType; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceType_cWaiting
@@ -322,7 +322,7 @@ const cDIVersion: ServiceType = ServiceType_cDIVersion; /* SHORT_NAMED_INTEGER_V
  * @type {number}
  */
 export
-const ServiceType_cWaiting: ServiceType = 8; /* LONG_NAMED_INTEGER_VALUE */
+const ServiceType_cWaiting = 8 satisfies ServiceType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary cWaiting
@@ -334,7 +334,7 @@ const ServiceType_cWaiting: ServiceType = 8; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const cWaiting: ServiceType = ServiceType_cWaiting; /* SHORT_NAMED_INTEGER_VALUE */
+const cWaiting = ServiceType_cWaiting satisfies ServiceType; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceType_mWaitingIndic
@@ -354,7 +354,7 @@ const cWaiting: ServiceType = ServiceType_cWaiting; /* SHORT_NAMED_INTEGER_VALUE
  * @type {number}
  */
 export
-const ServiceType_mWaitingIndic: ServiceType = 9; /* LONG_NAMED_INTEGER_VALUE */
+const ServiceType_mWaitingIndic = 9 satisfies ServiceType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary mWaitingIndic
@@ -367,7 +367,7 @@ const ServiceType_mWaitingIndic: ServiceType = 9; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const mWaitingIndic: ServiceType = ServiceType_mWaitingIndic; /* SHORT_NAMED_INTEGER_VALUE */
+const mWaitingIndic = ServiceType_mWaitingIndic satisfies ServiceType; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceType_cONF
@@ -403,7 +403,7 @@ const mWaitingIndic: ServiceType = ServiceType_mWaitingIndic; /* SHORT_NAMED_INT
  * @type {number}
  */
 export
-const ServiceType_cONF: ServiceType = 10; /* LONG_NAMED_INTEGER_VALUE */
+const ServiceType_cONF = 10 satisfies ServiceType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary cONF
@@ -415,7 +415,7 @@ const ServiceType_cONF: ServiceType = 10; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const cONF: ServiceType = ServiceType_cONF; /* SHORT_NAMED_INTEGER_VALUE */
+const cONF = ServiceType_cONF satisfies ServiceType; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceType_fLexibleAlerting
@@ -442,7 +442,7 @@ const cONF: ServiceType = ServiceType_cONF; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const ServiceType_fLexibleAlerting: ServiceType = 11; /* LONG_NAMED_INTEGER_VALUE */
+const ServiceType_fLexibleAlerting = 11 satisfies ServiceType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary fLexibleAlerting
@@ -454,7 +454,7 @@ const ServiceType_fLexibleAlerting: ServiceType = 11; /* LONG_NAMED_INTEGER_VALU
  * @type {number}
  */
 export
-const fLexibleAlerting: ServiceType = ServiceType_fLexibleAlerting; /* SHORT_NAMED_INTEGER_VALUE */
+const fLexibleAlerting = ServiceType_fLexibleAlerting satisfies ServiceType; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceType_cCBS
@@ -475,7 +475,7 @@ const fLexibleAlerting: ServiceType = ServiceType_fLexibleAlerting; /* SHORT_NAM
  * @type {number}
  */
 export
-const ServiceType_cCBS: ServiceType = 12; /* LONG_NAMED_INTEGER_VALUE */
+const ServiceType_cCBS = 12 satisfies ServiceType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary cCBS
@@ -488,7 +488,7 @@ const ServiceType_cCBS: ServiceType = 12; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const cCBS: ServiceType = ServiceType_cCBS; /* SHORT_NAMED_INTEGER_VALUE */
+const cCBS = ServiceType_cCBS satisfies ServiceType; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceType_cCNR
@@ -509,7 +509,7 @@ const cCBS: ServiceType = ServiceType_cCBS; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const ServiceType_cCNR: ServiceType = 13; /* LONG_NAMED_INTEGER_VALUE */
+const ServiceType_cCNR = 13 satisfies ServiceType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary cCNR
@@ -522,7 +522,7 @@ const ServiceType_cCNR: ServiceType = 13; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const cCNR: ServiceType = ServiceType_cCNR; /* SHORT_NAMED_INTEGER_VALUE */
+const cCNR = ServiceType_cCNR satisfies ServiceType; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceType_mCID
@@ -554,7 +554,7 @@ const cCNR: ServiceType = ServiceType_cCNR; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const ServiceType_mCID: ServiceType = 14; /* LONG_NAMED_INTEGER_VALUE */
+const ServiceType_mCID = 14 satisfies ServiceType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary mCID
@@ -567,7 +567,7 @@ const ServiceType_mCID: ServiceType = 14; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const mCID: ServiceType = ServiceType_mCID; /* SHORT_NAMED_INTEGER_VALUE */
+const mCID = ServiceType_mCID satisfies ServiceType; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceType_cAT
@@ -589,7 +589,7 @@ const mCID: ServiceType = ServiceType_mCID; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const ServiceType_cAT: ServiceType = 15; /* LONG_NAMED_INTEGER_VALUE */
+const ServiceType_cAT = 15 satisfies ServiceType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary cAT
@@ -601,7 +601,7 @@ const ServiceType_cAT: ServiceType = 15; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const cAT: ServiceType = ServiceType_cAT; /* SHORT_NAMED_INTEGER_VALUE */
+const cAT = ServiceType_cAT satisfies ServiceType; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceType_cUG
@@ -631,7 +631,7 @@ const cAT: ServiceType = ServiceType_cAT; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const ServiceType_cUG: ServiceType = 16; /* LONG_NAMED_INTEGER_VALUE */
+const ServiceType_cUG = 16 satisfies ServiceType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary cUG
@@ -643,7 +643,7 @@ const ServiceType_cUG: ServiceType = 16; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const cUG: ServiceType = ServiceType_cUG; /* SHORT_NAMED_INTEGER_VALUE */
+const cUG = ServiceType_cUG satisfies ServiceType; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceType_pNM
@@ -664,7 +664,7 @@ const cUG: ServiceType = ServiceType_cUG; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const ServiceType_pNM: ServiceType = 17; /* LONG_NAMED_INTEGER_VALUE */
+const ServiceType_pNM = 17 satisfies ServiceType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary pNM
@@ -676,7 +676,7 @@ const ServiceType_pNM: ServiceType = 17; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const pNM: ServiceType = ServiceType_pNM; /* SHORT_NAMED_INTEGER_VALUE */
+const pNM = ServiceType_pNM satisfies ServiceType; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceType_cRS
@@ -697,7 +697,7 @@ const pNM: ServiceType = ServiceType_pNM; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const ServiceType_cRS: ServiceType = 18; /* LONG_NAMED_INTEGER_VALUE */
+const ServiceType_cRS = 18 satisfies ServiceType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary cRS
@@ -709,7 +709,7 @@ const ServiceType_cRS: ServiceType = 18; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const cRS: ServiceType = ServiceType_cRS; /* SHORT_NAMED_INTEGER_VALUE */
+const cRS = ServiceType_cRS satisfies ServiceType; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceType_aoC
@@ -730,7 +730,7 @@ const cRS: ServiceType = ServiceType_cRS; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const ServiceType_aoC: ServiceType = 19; /* LONG_NAMED_INTEGER_VALUE */
+const ServiceType_aoC = 19 satisfies ServiceType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary aoC
@@ -742,7 +742,7 @@ const ServiceType_aoC: ServiceType = 19; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const aoC: ServiceType = ServiceType_aoC; /* SHORT_NAMED_INTEGER_VALUE */
+const aoC = ServiceType_aoC satisfies ServiceType; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceType_eCT
@@ -783,7 +783,7 @@ const aoC: ServiceType = ServiceType_aoC; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const ServiceType_eCT: ServiceType = 20; /* LONG_NAMED_INTEGER_VALUE */
+const ServiceType_eCT = 20 satisfies ServiceType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary eCT
@@ -796,7 +796,7 @@ const ServiceType_eCT: ServiceType = 20; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const eCT: ServiceType = ServiceType_eCT; /* SHORT_NAMED_INTEGER_VALUE */
+const eCT = ServiceType_eCT satisfies ServiceType; /* SHORT_NAMED_INTEGER_VALUE */
 
 export
 const _decode_ServiceType: $.ASN1Decoder<ServiceType> = $._decodeInteger;

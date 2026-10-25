@@ -66,64 +66,64 @@ export const ProcessedLevel = _enum_for_ProcessedLevel;
  * @constant
  * @type {number}
  */
-export const ProcessedLevel_no_value_available: ProcessedLevel =
-  ProcessedLevel.no_value_available; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ProcessedLevel_no_value_available =
+  ProcessedLevel.no_value_available satisfies ProcessedLevel; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary no_value_available
  * @constant
  * @type {number}
  */
-export const no_value_available: ProcessedLevel =
-  ProcessedLevel.no_value_available; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const no_value_available =
+  ProcessedLevel.no_value_available satisfies ProcessedLevel; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ProcessedLevel_raw
  * @constant
  * @type {number}
  */
-export const ProcessedLevel_raw: ProcessedLevel =
-  ProcessedLevel.raw; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ProcessedLevel_raw =
+  ProcessedLevel.raw satisfies ProcessedLevel; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary raw
  * @constant
  * @type {number}
  */
-export const raw: ProcessedLevel =
-  ProcessedLevel.raw; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const raw =
+  ProcessedLevel.raw satisfies ProcessedLevel; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ProcessedLevel_intermediate
  * @constant
  * @type {number}
  */
-export const ProcessedLevel_intermediate: ProcessedLevel =
-  ProcessedLevel.intermediate; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ProcessedLevel_intermediate =
+  ProcessedLevel.intermediate satisfies ProcessedLevel; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary intermediate
  * @constant
  * @type {number}
  */
-export const intermediate: ProcessedLevel =
-  ProcessedLevel.intermediate; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const intermediate =
+  ProcessedLevel.intermediate satisfies ProcessedLevel; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ProcessedLevel_processed
  * @constant
  * @type {number}
  */
-export const ProcessedLevel_processed: ProcessedLevel =
-  ProcessedLevel.processed; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ProcessedLevel_processed =
+  ProcessedLevel.processed satisfies ProcessedLevel; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary processed
  * @constant
  * @type {number}
  */
-export const processed: ProcessedLevel =
-  ProcessedLevel.processed; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const processed =
+  ProcessedLevel.processed satisfies ProcessedLevel; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 export const _decode_ProcessedLevel = $._decodeEnumerated;

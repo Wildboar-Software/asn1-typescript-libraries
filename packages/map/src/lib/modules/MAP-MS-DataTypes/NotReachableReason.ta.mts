@@ -90,7 +90,7 @@ const NotReachableReason = _enum_for_NotReachableReason;
  * @type {number}
  */
 export
-const NotReachableReason_msPurged: NotReachableReason = NotReachableReason.msPurged; /* LONG_NAMED_ENUMERATED_VALUE */
+const NotReachableReason_msPurged = NotReachableReason.msPurged satisfies NotReachableReason; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary msPurged
@@ -102,7 +102,7 @@ const NotReachableReason_msPurged: NotReachableReason = NotReachableReason.msPur
  * @type {number}
  */
 export
-const msPurged: NotReachableReason = NotReachableReason.msPurged; /* SHORT_NAMED_ENUMERATED_VALUE */
+const msPurged = NotReachableReason.msPurged satisfies NotReachableReason; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NotReachableReason_imsiDetached
@@ -114,7 +114,7 @@ const msPurged: NotReachableReason = NotReachableReason.msPurged; /* SHORT_NAMED
  * @type {number}
  */
 export
-const NotReachableReason_imsiDetached: NotReachableReason = NotReachableReason.imsiDetached; /* LONG_NAMED_ENUMERATED_VALUE */
+const NotReachableReason_imsiDetached = NotReachableReason.imsiDetached satisfies NotReachableReason; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary imsiDetached
@@ -126,7 +126,7 @@ const NotReachableReason_imsiDetached: NotReachableReason = NotReachableReason.i
  * @type {number}
  */
 export
-const imsiDetached: NotReachableReason = NotReachableReason.imsiDetached; /* SHORT_NAMED_ENUMERATED_VALUE */
+const imsiDetached = NotReachableReason.imsiDetached satisfies NotReachableReason; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NotReachableReason_restrictedArea
@@ -138,7 +138,7 @@ const imsiDetached: NotReachableReason = NotReachableReason.imsiDetached; /* SHO
  * @type {number}
  */
 export
-const NotReachableReason_restrictedArea: NotReachableReason = NotReachableReason.restrictedArea; /* LONG_NAMED_ENUMERATED_VALUE */
+const NotReachableReason_restrictedArea = NotReachableReason.restrictedArea satisfies NotReachableReason; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary restrictedArea
@@ -150,7 +150,7 @@ const NotReachableReason_restrictedArea: NotReachableReason = NotReachableReason
  * @type {number}
  */
 export
-const restrictedArea: NotReachableReason = NotReachableReason.restrictedArea; /* SHORT_NAMED_ENUMERATED_VALUE */
+const restrictedArea = NotReachableReason.restrictedArea satisfies NotReachableReason; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NotReachableReason_notRegistered
@@ -162,7 +162,7 @@ const restrictedArea: NotReachableReason = NotReachableReason.restrictedArea; /*
  * @type {number}
  */
 export
-const NotReachableReason_notRegistered: NotReachableReason = NotReachableReason.notRegistered; /* LONG_NAMED_ENUMERATED_VALUE */
+const NotReachableReason_notRegistered = NotReachableReason.notRegistered satisfies NotReachableReason; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary notRegistered
@@ -174,7 +174,7 @@ const NotReachableReason_notRegistered: NotReachableReason = NotReachableReason.
  * @type {number}
  */
 export
-const notRegistered: NotReachableReason = NotReachableReason.notRegistered; /* SHORT_NAMED_ENUMERATED_VALUE */
+const notRegistered = NotReachableReason.notRegistered satisfies NotReachableReason; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) NotReachableReason

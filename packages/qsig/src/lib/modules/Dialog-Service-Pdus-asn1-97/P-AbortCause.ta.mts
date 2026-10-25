@@ -44,7 +44,7 @@ type P_AbortCause = INTEGER;
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
  */
 export
-const P_AbortCause_unrecognisedDseApdu: P_AbortCause = 0; /* LONG_NAMED_INTEGER_VALUE */
+const P_AbortCause_unrecognisedDseApdu = 0 satisfies P_AbortCause; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary unrecognisedDseApdu
@@ -53,7 +53,7 @@ const P_AbortCause_unrecognisedDseApdu: P_AbortCause = 0; /* LONG_NAMED_INTEGER_
  * @type {number}
  */
 export
-const unrecognisedDseApdu: P_AbortCause = P_AbortCause_unrecognisedDseApdu; /* SHORT_NAMED_INTEGER_VALUE */
+const unrecognisedDseApdu = P_AbortCause_unrecognisedDseApdu satisfies P_AbortCause; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary P_AbortCause_unrecognisedDialogId
@@ -66,7 +66,7 @@ const unrecognisedDseApdu: P_AbortCause = P_AbortCause_unrecognisedDseApdu; /* S
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
  */
 export
-const P_AbortCause_unrecognisedDialogId: P_AbortCause = 1; /* LONG_NAMED_INTEGER_VALUE */
+const P_AbortCause_unrecognisedDialogId = 1 satisfies P_AbortCause; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary unrecognisedDialogId
@@ -75,7 +75,7 @@ const P_AbortCause_unrecognisedDialogId: P_AbortCause = 1; /* LONG_NAMED_INTEGER
  * @type {number}
  */
 export
-const unrecognisedDialogId: P_AbortCause = P_AbortCause_unrecognisedDialogId; /* SHORT_NAMED_INTEGER_VALUE */
+const unrecognisedDialogId = P_AbortCause_unrecognisedDialogId satisfies P_AbortCause; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary P_AbortCause_badlyFormattedDseApdu
@@ -88,7 +88,7 @@ const unrecognisedDialogId: P_AbortCause = P_AbortCause_unrecognisedDialogId; /*
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
  */
 export
-const P_AbortCause_badlyFormattedDseApdu: P_AbortCause = 2; /* LONG_NAMED_INTEGER_VALUE */
+const P_AbortCause_badlyFormattedDseApdu = 2 satisfies P_AbortCause; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary badlyFormattedDseApdu
@@ -97,7 +97,7 @@ const P_AbortCause_badlyFormattedDseApdu: P_AbortCause = 2; /* LONG_NAMED_INTEGE
  * @type {number}
  */
 export
-const badlyFormattedDseApdu: P_AbortCause = P_AbortCause_badlyFormattedDseApdu; /* SHORT_NAMED_INTEGER_VALUE */
+const badlyFormattedDseApdu = P_AbortCause_badlyFormattedDseApdu satisfies P_AbortCause; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary P_AbortCause_incorrectDseApdu
@@ -110,7 +110,7 @@ const badlyFormattedDseApdu: P_AbortCause = P_AbortCause_badlyFormattedDseApdu; 
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
  */
 export
-const P_AbortCause_incorrectDseApdu: P_AbortCause = 3; /* LONG_NAMED_INTEGER_VALUE */
+const P_AbortCause_incorrectDseApdu = 3 satisfies P_AbortCause; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary incorrectDseApdu
@@ -119,7 +119,7 @@ const P_AbortCause_incorrectDseApdu: P_AbortCause = 3; /* LONG_NAMED_INTEGER_VAL
  * @type {number}
  */
 export
-const incorrectDseApdu: P_AbortCause = P_AbortCause_incorrectDseApdu; /* SHORT_NAMED_INTEGER_VALUE */
+const incorrectDseApdu = P_AbortCause_incorrectDseApdu satisfies P_AbortCause; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary P_AbortCause_resourceLimitation
@@ -132,7 +132,7 @@ const incorrectDseApdu: P_AbortCause = P_AbortCause_incorrectDseApdu; /* SHORT_N
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
  */
 export
-const P_AbortCause_resourceLimitation: P_AbortCause = 4; /* LONG_NAMED_INTEGER_VALUE */
+const P_AbortCause_resourceLimitation = 4 satisfies P_AbortCause; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary resourceLimitation
@@ -141,7 +141,7 @@ const P_AbortCause_resourceLimitation: P_AbortCause = 4; /* LONG_NAMED_INTEGER_V
  * @type {number}
  */
 export
-const resourceLimitation: P_AbortCause = P_AbortCause_resourceLimitation; /* SHORT_NAMED_INTEGER_VALUE */
+const resourceLimitation = P_AbortCause_resourceLimitation satisfies P_AbortCause; /* SHORT_NAMED_INTEGER_VALUE */
 
 let _cached_decoder_for_P_AbortCause: $.ASN1Decoder<P_AbortCause> | null = null;
 

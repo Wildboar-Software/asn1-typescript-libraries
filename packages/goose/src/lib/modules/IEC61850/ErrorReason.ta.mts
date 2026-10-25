@@ -27,7 +27,7 @@ type ErrorReason = INTEGER;
  * @type {number}
  */
 export
-const ErrorReason_other: ErrorReason = 0; /* LONG_NAMED_INTEGER_VALUE */
+const ErrorReason_other = 0 satisfies ErrorReason; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ErrorReason_other
@@ -35,7 +35,7 @@ const ErrorReason_other: ErrorReason = 0; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const other: ErrorReason = ErrorReason_other; /* SHORT_NAMED_INTEGER_VALUE */
+const other = ErrorReason_other satisfies ErrorReason; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ErrorReason_notFound
@@ -43,7 +43,7 @@ const other: ErrorReason = ErrorReason_other; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const ErrorReason_notFound: ErrorReason = 1; /* LONG_NAMED_INTEGER_VALUE */
+const ErrorReason_notFound = 1 satisfies ErrorReason; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ErrorReason_notFound
@@ -51,7 +51,7 @@ const ErrorReason_notFound: ErrorReason = 1; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const notFound: ErrorReason = ErrorReason_notFound; /* SHORT_NAMED_INTEGER_VALUE */
+const notFound = ErrorReason_notFound satisfies ErrorReason; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_ErrorReason: $.ASN1Decoder<ErrorReason> = $._decodeInteger;
 export const _encode_ErrorReason: $.ASN1Encoder<ErrorReason> = $._encodeInteger;
 

@@ -48,7 +48,7 @@ type AccessNetworkProtocolId = _enum_for_AccessNetworkProtocolId | ENUMERATED;
  * @type {number}
  */
 export
-const AccessNetworkProtocolId_ts3G_48006: AccessNetworkProtocolId = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const AccessNetworkProtocolId_ts3G_48006 = _enum_for_AccessNetworkProtocolId.ts3G_48006 satisfies AccessNetworkProtocolId; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ts3G_48006
@@ -61,7 +61,7 @@ const AccessNetworkProtocolId_ts3G_48006: AccessNetworkProtocolId = 1; /* LONG_N
  * @type {number}
  */
 export
-const ts3G_48006: AccessNetworkProtocolId = AccessNetworkProtocolId_ts3G_48006; /* SHORT_NAMED_ENUMERATED_VALUE */
+const ts3G_48006 = AccessNetworkProtocolId_ts3G_48006 satisfies AccessNetworkProtocolId; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AccessNetworkProtocolId_ts3G_25413
@@ -74,7 +74,7 @@ const ts3G_48006: AccessNetworkProtocolId = AccessNetworkProtocolId_ts3G_48006; 
  * @type {number}
  */
 export
-const AccessNetworkProtocolId_ts3G_25413: AccessNetworkProtocolId = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+const AccessNetworkProtocolId_ts3G_25413 = _enum_for_AccessNetworkProtocolId.ts3G_25413 satisfies AccessNetworkProtocolId; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ts3G_25413
@@ -87,7 +87,7 @@ const AccessNetworkProtocolId_ts3G_25413: AccessNetworkProtocolId = 2; /* LONG_N
  * @type {number}
  */
 export
-const ts3G_25413: AccessNetworkProtocolId = AccessNetworkProtocolId_ts3G_25413; /* SHORT_NAMED_ENUMERATED_VALUE */
+const ts3G_25413 = AccessNetworkProtocolId_ts3G_25413 satisfies AccessNetworkProtocolId; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) AccessNetworkProtocolId

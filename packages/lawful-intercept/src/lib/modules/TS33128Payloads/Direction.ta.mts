@@ -87,7 +87,7 @@ const Direction = _enum_for_Direction;
  * @type {number}
  */
 export
-const Direction_fromTarget: Direction = Direction.fromTarget; /* LONG_NAMED_ENUMERATED_VALUE */
+const Direction_fromTarget = Direction.fromTarget satisfies Direction; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary fromTarget
@@ -95,7 +95,7 @@ const Direction_fromTarget: Direction = Direction.fromTarget; /* LONG_NAMED_ENUM
  * @type {number}
  */
 export
-const fromTarget: Direction = Direction.fromTarget; /* SHORT_NAMED_ENUMERATED_VALUE */
+const fromTarget = Direction.fromTarget satisfies Direction; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Direction_toTarget
@@ -103,7 +103,7 @@ const fromTarget: Direction = Direction.fromTarget; /* SHORT_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const Direction_toTarget: Direction = Direction.toTarget; /* LONG_NAMED_ENUMERATED_VALUE */
+const Direction_toTarget = Direction.toTarget satisfies Direction; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary toTarget
@@ -111,7 +111,7 @@ const Direction_toTarget: Direction = Direction.toTarget; /* LONG_NAMED_ENUMERAT
  * @type {number}
  */
 export
-const toTarget: Direction = Direction.toTarget; /* SHORT_NAMED_ENUMERATED_VALUE */
+const toTarget = Direction.toTarget satisfies Direction; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_Direction: $.ASN1Decoder<Direction> = $._decodeEnumerated;
 export const _encode_Direction: $.ASN1Encoder<Direction> = $._encodeEnumerated;
 

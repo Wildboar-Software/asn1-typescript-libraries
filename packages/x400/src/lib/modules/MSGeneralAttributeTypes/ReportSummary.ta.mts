@@ -94,128 +94,128 @@ export const ReportSummary = _enum_for_ReportSummary;
  * @constant
  * @type {number}
  */
-export const ReportSummary_no_report_requested: ReportSummary =
-    ReportSummary.no_report_requested; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ReportSummary_no_report_requested =
+    ReportSummary.no_report_requested satisfies ReportSummary; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary no_report_requested
  * @constant
  * @type {number}
  */
-export const no_report_requested: ReportSummary =
-    ReportSummary.no_report_requested; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const no_report_requested =
+    ReportSummary.no_report_requested satisfies ReportSummary; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReportSummary_no_report_received
  * @constant
  * @type {number}
  */
-export const ReportSummary_no_report_received: ReportSummary =
-    ReportSummary.no_report_received; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ReportSummary_no_report_received =
+    ReportSummary.no_report_received satisfies ReportSummary; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary no_report_received
  * @constant
  * @type {number}
  */
-export const no_report_received: ReportSummary =
-    ReportSummary.no_report_received; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const no_report_received =
+    ReportSummary.no_report_received satisfies ReportSummary; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReportSummary_report_outstanding
  * @constant
  * @type {number}
  */
-export const ReportSummary_report_outstanding: ReportSummary =
-    ReportSummary.report_outstanding; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ReportSummary_report_outstanding =
+    ReportSummary.report_outstanding satisfies ReportSummary; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary report_outstanding
  * @constant
  * @type {number}
  */
-export const report_outstanding: ReportSummary =
-    ReportSummary.report_outstanding; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const report_outstanding =
+    ReportSummary.report_outstanding satisfies ReportSummary; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReportSummary_delivery_cancelled
  * @constant
  * @type {number}
  */
-export const ReportSummary_delivery_cancelled: ReportSummary =
-    ReportSummary.delivery_cancelled; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ReportSummary_delivery_cancelled =
+    ReportSummary.delivery_cancelled satisfies ReportSummary; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary delivery_cancelled
  * @constant
  * @type {number}
  */
-export const delivery_cancelled: ReportSummary =
-    ReportSummary.delivery_cancelled; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const delivery_cancelled =
+    ReportSummary.delivery_cancelled satisfies ReportSummary; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReportSummary_delivery_report_from_another_recipient
  * @constant
  * @type {number}
  */
-export const ReportSummary_delivery_report_from_another_recipient: ReportSummary =
-    ReportSummary.delivery_report_from_another_recipient; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ReportSummary_delivery_report_from_another_recipient =
+    ReportSummary.delivery_report_from_another_recipient satisfies ReportSummary; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary delivery_report_from_another_recipient
  * @constant
  * @type {number}
  */
-export const delivery_report_from_another_recipient: ReportSummary =
-    ReportSummary.delivery_report_from_another_recipient; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const delivery_report_from_another_recipient =
+    ReportSummary.delivery_report_from_another_recipient satisfies ReportSummary; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReportSummary_non_delivery_report_from_another_recipient
  * @constant
  * @type {number}
  */
-export const ReportSummary_non_delivery_report_from_another_recipient: ReportSummary =
-    ReportSummary.non_delivery_report_from_another_recipient; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ReportSummary_non_delivery_report_from_another_recipient =
+    ReportSummary.non_delivery_report_from_another_recipient satisfies ReportSummary; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary non_delivery_report_from_another_recipient
  * @constant
  * @type {number}
  */
-export const non_delivery_report_from_another_recipient: ReportSummary =
-    ReportSummary.non_delivery_report_from_another_recipient; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const non_delivery_report_from_another_recipient =
+    ReportSummary.non_delivery_report_from_another_recipient satisfies ReportSummary; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReportSummary_delivery_report_from_intended_recipient
  * @constant
  * @type {number}
  */
-export const ReportSummary_delivery_report_from_intended_recipient: ReportSummary =
-    ReportSummary.delivery_report_from_intended_recipient; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ReportSummary_delivery_report_from_intended_recipient =
+    ReportSummary.delivery_report_from_intended_recipient satisfies ReportSummary; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary delivery_report_from_intended_recipient
  * @constant
  * @type {number}
  */
-export const delivery_report_from_intended_recipient: ReportSummary =
-    ReportSummary.delivery_report_from_intended_recipient; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const delivery_report_from_intended_recipient =
+    ReportSummary.delivery_report_from_intended_recipient satisfies ReportSummary; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReportSummary_non_delivery_report_from_intended_recipient
  * @constant
  * @type {number}
  */
-export const ReportSummary_non_delivery_report_from_intended_recipient: ReportSummary =
-    ReportSummary.non_delivery_report_from_intended_recipient; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ReportSummary_non_delivery_report_from_intended_recipient =
+    ReportSummary.non_delivery_report_from_intended_recipient satisfies ReportSummary; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary non_delivery_report_from_intended_recipient
  * @constant
  * @type {number}
  */
-export const non_delivery_report_from_intended_recipient: ReportSummary =
-    ReportSummary.non_delivery_report_from_intended_recipient; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const non_delivery_report_from_intended_recipient =
+    ReportSummary.non_delivery_report_from_intended_recipient satisfies ReportSummary; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 export function _decode_ReportSummary(el: _Element): ReportSummary {

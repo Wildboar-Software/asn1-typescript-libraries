@@ -40,7 +40,7 @@ type ShortMessageTextType = INTEGER;
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-325/
  */
 export
-const ShortMessageTextType_iA5Coded: ShortMessageTextType = 0; /* LONG_NAMED_INTEGER_VALUE */
+const ShortMessageTextType_iA5Coded = 0 satisfies ShortMessageTextType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary iA5Coded
@@ -49,7 +49,7 @@ const ShortMessageTextType_iA5Coded: ShortMessageTextType = 0; /* LONG_NAMED_INT
  * @type {number}
  */
 export
-const iA5Coded: ShortMessageTextType = ShortMessageTextType_iA5Coded; /* SHORT_NAMED_INTEGER_VALUE */
+const iA5Coded = ShortMessageTextType_iA5Coded satisfies ShortMessageTextType; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ShortMessageTextType_octetCoded
@@ -62,7 +62,7 @@ const iA5Coded: ShortMessageTextType = ShortMessageTextType_iA5Coded; /* SHORT_N
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-325/
  */
 export
-const ShortMessageTextType_octetCoded: ShortMessageTextType = 1; /* LONG_NAMED_INTEGER_VALUE */
+const ShortMessageTextType_octetCoded = 1 satisfies ShortMessageTextType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary octetCoded
@@ -71,7 +71,7 @@ const ShortMessageTextType_octetCoded: ShortMessageTextType = 1; /* LONG_NAMED_I
  * @type {number}
  */
 export
-const octetCoded: ShortMessageTextType = ShortMessageTextType_octetCoded; /* SHORT_NAMED_INTEGER_VALUE */
+const octetCoded = ShortMessageTextType_octetCoded satisfies ShortMessageTextType; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ShortMessageTextType_uniCoded
@@ -84,7 +84,7 @@ const octetCoded: ShortMessageTextType = ShortMessageTextType_octetCoded; /* SHO
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-325/
  */
 export
-const ShortMessageTextType_uniCoded: ShortMessageTextType = 2; /* LONG_NAMED_INTEGER_VALUE */
+const ShortMessageTextType_uniCoded = 2 satisfies ShortMessageTextType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary uniCoded
@@ -93,7 +93,7 @@ const ShortMessageTextType_uniCoded: ShortMessageTextType = 2; /* LONG_NAMED_INT
  * @type {number}
  */
 export
-const uniCoded: ShortMessageTextType = ShortMessageTextType_uniCoded; /* SHORT_NAMED_INTEGER_VALUE */
+const uniCoded = ShortMessageTextType_uniCoded satisfies ShortMessageTextType; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ShortMessageTextType_compressedCoded
@@ -107,7 +107,7 @@ const uniCoded: ShortMessageTextType = ShortMessageTextType_uniCoded; /* SHORT_N
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-325/
  */
 export
-const ShortMessageTextType_compressedCoded: ShortMessageTextType = 3; /* LONG_NAMED_INTEGER_VALUE */
+const ShortMessageTextType_compressedCoded = 3 satisfies ShortMessageTextType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary compressedCoded
@@ -116,7 +116,7 @@ const ShortMessageTextType_compressedCoded: ShortMessageTextType = 3; /* LONG_NA
  * @type {number}
  */
 export
-const compressedCoded: ShortMessageTextType = ShortMessageTextType_compressedCoded; /* SHORT_NAMED_INTEGER_VALUE */
+const compressedCoded = ShortMessageTextType_compressedCoded satisfies ShortMessageTextType; /* SHORT_NAMED_INTEGER_VALUE */
 
 export
 const _decode_ShortMessageTextType = (el: _Element): ShortMessageTextType => {

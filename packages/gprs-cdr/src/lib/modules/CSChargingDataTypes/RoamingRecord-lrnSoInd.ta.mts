@@ -30,7 +30,7 @@ type RoamingRecord_lrnSoInd = INTEGER;
  * @type {number}
  */
 export
-const RoamingRecord_lrnSoInd_lRN_NP_Database: RoamingRecord_lrnSoInd = 1; /* LONG_NAMED_INTEGER_VALUE */
+const RoamingRecord_lrnSoInd_lRN_NP_Database = 1 satisfies RoamingRecord_lrnSoInd; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RoamingRecord_lrnSoInd_lRN_NP_Database
@@ -38,7 +38,7 @@ const RoamingRecord_lrnSoInd_lRN_NP_Database: RoamingRecord_lrnSoInd = 1; /* LON
  * @type {number}
  */
 export
-const lRN_NP_Database: RoamingRecord_lrnSoInd = RoamingRecord_lrnSoInd_lRN_NP_Database; /* SHORT_NAMED_INTEGER_VALUE */
+const lRN_NP_Database = RoamingRecord_lrnSoInd_lRN_NP_Database satisfies RoamingRecord_lrnSoInd; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RoamingRecord_lrnSoInd_switchingSystemData
@@ -46,7 +46,7 @@ const lRN_NP_Database: RoamingRecord_lrnSoInd = RoamingRecord_lrnSoInd_lRN_NP_Da
  * @type {number}
  */
 export
-const RoamingRecord_lrnSoInd_switchingSystemData: RoamingRecord_lrnSoInd = 2; /* LONG_NAMED_INTEGER_VALUE */
+const RoamingRecord_lrnSoInd_switchingSystemData = 2 satisfies RoamingRecord_lrnSoInd; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RoamingRecord_lrnSoInd_switchingSystemData
@@ -54,7 +54,7 @@ const RoamingRecord_lrnSoInd_switchingSystemData: RoamingRecord_lrnSoInd = 2; /*
  * @type {number}
  */
 export
-const switchingSystemData: RoamingRecord_lrnSoInd = RoamingRecord_lrnSoInd_switchingSystemData; /* SHORT_NAMED_INTEGER_VALUE */
+const switchingSystemData = RoamingRecord_lrnSoInd_switchingSystemData satisfies RoamingRecord_lrnSoInd; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RoamingRecord_lrnSoInd_incomingsignaling
@@ -62,7 +62,7 @@ const switchingSystemData: RoamingRecord_lrnSoInd = RoamingRecord_lrnSoInd_switc
  * @type {number}
  */
 export
-const RoamingRecord_lrnSoInd_incomingsignaling: RoamingRecord_lrnSoInd = 3; /* LONG_NAMED_INTEGER_VALUE */
+const RoamingRecord_lrnSoInd_incomingsignaling = 3 satisfies RoamingRecord_lrnSoInd; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RoamingRecord_lrnSoInd_incomingsignaling
@@ -70,7 +70,7 @@ const RoamingRecord_lrnSoInd_incomingsignaling: RoamingRecord_lrnSoInd = 3; /* L
  * @type {number}
  */
 export
-const incomingsignaling: RoamingRecord_lrnSoInd = RoamingRecord_lrnSoInd_incomingsignaling; /* SHORT_NAMED_INTEGER_VALUE */
+const incomingsignaling = RoamingRecord_lrnSoInd_incomingsignaling satisfies RoamingRecord_lrnSoInd; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RoamingRecord_lrnSoInd_unknown
@@ -78,7 +78,7 @@ const incomingsignaling: RoamingRecord_lrnSoInd = RoamingRecord_lrnSoInd_incomin
  * @type {number}
  */
 export
-const RoamingRecord_lrnSoInd_unknown: RoamingRecord_lrnSoInd = 9; /* LONG_NAMED_INTEGER_VALUE */
+const RoamingRecord_lrnSoInd_unknown = 9 satisfies RoamingRecord_lrnSoInd; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RoamingRecord_lrnSoInd_unknown
@@ -86,7 +86,7 @@ const RoamingRecord_lrnSoInd_unknown: RoamingRecord_lrnSoInd = 9; /* LONG_NAMED_
  * @type {number}
  */
 export
-const unknown: RoamingRecord_lrnSoInd = RoamingRecord_lrnSoInd_unknown; /* SHORT_NAMED_INTEGER_VALUE */
+const unknown = RoamingRecord_lrnSoInd_unknown satisfies RoamingRecord_lrnSoInd; /* SHORT_NAMED_INTEGER_VALUE */
 
 export
 const _decode_RoamingRecord_lrnSoInd: $.ASN1Decoder<RoamingRecord_lrnSoInd> = $._decodeInteger;

@@ -41,7 +41,7 @@ type ASQcontent_either = INTEGER;
  * @type {number}
  */
 export
-const ASQcontent_either_a_mode: ASQcontent_either = 0; /* LONG_NAMED_INTEGER_VALUE */
+const ASQcontent_either_a_mode = 0 satisfies ASQcontent_either; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ASQcontent_either_a_mode
@@ -52,7 +52,7 @@ const ASQcontent_either_a_mode: ASQcontent_either = 0; /* LONG_NAMED_INTEGER_VAL
  * @type {number}
  */
 export
-const a_mode: ASQcontent_either = ASQcontent_either_a_mode; /* SHORT_NAMED_INTEGER_VALUE */
+const a_mode = ASQcontent_either_a_mode satisfies ASQcontent_either; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ASQcontent_either_s_mode
@@ -62,7 +62,7 @@ const a_mode: ASQcontent_either = ASQcontent_either_a_mode; /* SHORT_NAMED_INTEG
  * @type {number}
  */
 export
-const ASQcontent_either_s_mode: ASQcontent_either = 1; /* LONG_NAMED_INTEGER_VALUE */
+const ASQcontent_either_s_mode = 1 satisfies ASQcontent_either; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ASQcontent_either_s_mode
@@ -72,7 +72,7 @@ const ASQcontent_either_s_mode: ASQcontent_either = 1; /* LONG_NAMED_INTEGER_VAL
  * @type {number}
  */
 export
-const s_mode: ASQcontent_either = ASQcontent_either_s_mode; /* SHORT_NAMED_INTEGER_VALUE */
+const s_mode = ASQcontent_either_s_mode satisfies ASQcontent_either; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_ASQcontent_either = $._decodeInteger;
 export const _encode_ASQcontent_either = $._encodeInteger;
 

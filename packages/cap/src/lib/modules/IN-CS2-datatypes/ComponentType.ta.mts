@@ -73,7 +73,7 @@ const ComponentType = _enum_for_ComponentType;
  * @type {number}
  */
 export
-const ComponentType_any_: ComponentType = ComponentType.any_; /* LONG_NAMED_ENUMERATED_VALUE */
+const ComponentType_any_ = ComponentType.any_ satisfies ComponentType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary any_
@@ -81,7 +81,7 @@ const ComponentType_any_: ComponentType = ComponentType.any_; /* LONG_NAMED_ENUM
  * @type {number}
  */
 export
-const any_: ComponentType = ComponentType.any_; /* SHORT_NAMED_ENUMERATED_VALUE */
+const any_ = ComponentType.any_ satisfies ComponentType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ComponentType_invoke
@@ -89,7 +89,7 @@ const any_: ComponentType = ComponentType.any_; /* SHORT_NAMED_ENUMERATED_VALUE 
  * @type {number}
  */
 export
-const ComponentType_invoke: ComponentType = ComponentType.invoke; /* LONG_NAMED_ENUMERATED_VALUE */
+const ComponentType_invoke = ComponentType.invoke satisfies ComponentType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invoke
@@ -97,7 +97,7 @@ const ComponentType_invoke: ComponentType = ComponentType.invoke; /* LONG_NAMED_
  * @type {number}
  */
 export
-const invoke: ComponentType = ComponentType.invoke; /* SHORT_NAMED_ENUMERATED_VALUE */
+const invoke = ComponentType.invoke satisfies ComponentType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ComponentType_rResult
@@ -105,7 +105,7 @@ const invoke: ComponentType = ComponentType.invoke; /* SHORT_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const ComponentType_rResult: ComponentType = ComponentType.rResult; /* LONG_NAMED_ENUMERATED_VALUE */
+const ComponentType_rResult = ComponentType.rResult satisfies ComponentType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary rResult
@@ -113,7 +113,7 @@ const ComponentType_rResult: ComponentType = ComponentType.rResult; /* LONG_NAME
  * @type {number}
  */
 export
-const rResult: ComponentType = ComponentType.rResult; /* SHORT_NAMED_ENUMERATED_VALUE */
+const rResult = ComponentType.rResult satisfies ComponentType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ComponentType_rError
@@ -121,7 +121,7 @@ const rResult: ComponentType = ComponentType.rResult; /* SHORT_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const ComponentType_rError: ComponentType = ComponentType.rError; /* LONG_NAMED_ENUMERATED_VALUE */
+const ComponentType_rError = ComponentType.rError satisfies ComponentType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary rError
@@ -129,7 +129,7 @@ const ComponentType_rError: ComponentType = ComponentType.rError; /* LONG_NAMED_
  * @type {number}
  */
 export
-const rError: ComponentType = ComponentType.rError; /* SHORT_NAMED_ENUMERATED_VALUE */
+const rError = ComponentType.rError satisfies ComponentType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ComponentType_rReject
@@ -137,7 +137,7 @@ const rError: ComponentType = ComponentType.rError; /* SHORT_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const ComponentType_rReject: ComponentType = ComponentType.rReject; /* LONG_NAMED_ENUMERATED_VALUE */
+const ComponentType_rReject = ComponentType.rReject satisfies ComponentType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary rReject
@@ -145,7 +145,7 @@ const ComponentType_rReject: ComponentType = ComponentType.rReject; /* LONG_NAME
  * @type {number}
  */
 export
-const rReject: ComponentType = ComponentType.rReject; /* SHORT_NAMED_ENUMERATED_VALUE */
+const rReject = ComponentType.rReject satisfies ComponentType; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_ComponentType = $._decodeEnumerated;
 export const _encode_ComponentType = $._encodeEnumerated;
 

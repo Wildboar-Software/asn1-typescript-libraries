@@ -62,48 +62,48 @@ export const TypeOfAddress = _enum_for_TypeOfAddress;
  * @constant
  * @type {number}
  */
-export const TypeOfAddress_national: TypeOfAddress =
-    TypeOfAddress.national; /* LONG_NAMED_ENUMERATED_VALUE */
+export const TypeOfAddress_national =
+    TypeOfAddress.national satisfies TypeOfAddress; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary national
  * @constant
  * @type {number}
  */
-export const national: TypeOfAddress =
-    TypeOfAddress.national; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const national =
+    TypeOfAddress.national satisfies TypeOfAddress; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TypeOfAddress_international
  * @constant
  * @type {number}
  */
-export const TypeOfAddress_international: TypeOfAddress =
-    TypeOfAddress.international; /* LONG_NAMED_ENUMERATED_VALUE */
+export const TypeOfAddress_international =
+    TypeOfAddress.international satisfies TypeOfAddress; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary international
  * @constant
  * @type {number}
  */
-export const international: TypeOfAddress =
-    TypeOfAddress.international; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const international =
+    TypeOfAddress.international satisfies TypeOfAddress; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TypeOfAddress_private_
  * @constant
  * @type {number}
  */
-export const TypeOfAddress_private_: TypeOfAddress =
-    TypeOfAddress.private_; /* LONG_NAMED_ENUMERATED_VALUE */
+export const TypeOfAddress_private_ =
+    TypeOfAddress.private_ satisfies TypeOfAddress; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary private_
  * @constant
  * @type {number}
  */
-export const private_: TypeOfAddress =
-    TypeOfAddress.private_; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const private_ =
+    TypeOfAddress.private_ satisfies TypeOfAddress; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 export const _decode_TypeOfAddress = $._decodeEnumerated;

@@ -110,7 +110,7 @@ const FiveGProSeAuthorizationIndicator = _enum_for_FiveGProSeAuthorizationIndica
  * @type {number}
  */
 export
-const FiveGProSeAuthorizationIndicator_authorized: FiveGProSeAuthorizationIndicator = FiveGProSeAuthorizationIndicator.authorized; /* LONG_NAMED_ENUMERATED_VALUE */
+const FiveGProSeAuthorizationIndicator_authorized = FiveGProSeAuthorizationIndicator.authorized satisfies FiveGProSeAuthorizationIndicator; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary authorized
@@ -124,7 +124,7 @@ const FiveGProSeAuthorizationIndicator_authorized: FiveGProSeAuthorizationIndica
  * @type {number}
  */
 export
-const authorized: FiveGProSeAuthorizationIndicator = FiveGProSeAuthorizationIndicator.authorized; /* SHORT_NAMED_ENUMERATED_VALUE */
+const authorized = FiveGProSeAuthorizationIndicator.authorized satisfies FiveGProSeAuthorizationIndicator; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary FiveGProSeAuthorizationIndicator_notAuthorized
@@ -138,7 +138,7 @@ const authorized: FiveGProSeAuthorizationIndicator = FiveGProSeAuthorizationIndi
  * @type {number}
  */
 export
-const FiveGProSeAuthorizationIndicator_notAuthorized: FiveGProSeAuthorizationIndicator = FiveGProSeAuthorizationIndicator.notAuthorized; /* LONG_NAMED_ENUMERATED_VALUE */
+const FiveGProSeAuthorizationIndicator_notAuthorized = FiveGProSeAuthorizationIndicator.notAuthorized satisfies FiveGProSeAuthorizationIndicator; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary notAuthorized
@@ -152,7 +152,7 @@ const FiveGProSeAuthorizationIndicator_notAuthorized: FiveGProSeAuthorizationInd
  * @type {number}
  */
 export
-const notAuthorized: FiveGProSeAuthorizationIndicator = FiveGProSeAuthorizationIndicator.notAuthorized; /* SHORT_NAMED_ENUMERATED_VALUE */
+const notAuthorized = FiveGProSeAuthorizationIndicator.notAuthorized satisfies FiveGProSeAuthorizationIndicator; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_FiveGProSeAuthorizationIndicator: $.ASN1Decoder<FiveGProSeAuthorizationIndicator> = $._decodeEnumerated;
 export const _encode_FiveGProSeAuthorizationIndicator: $.ASN1Encoder<FiveGProSeAuthorizationIndicator> = $._encodeEnumerated;
 
